@@ -2,22 +2,22 @@
 title: Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 02d2dd74031f280808027df1c0b7b78a90e6cd52
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 543b0e714343cdb8078861ceb31e4f8035e20afd
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664110"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321213"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 
-Narzędzie do śledzenia usług Windows Communication Foundation (WCF) pomaga analizować dane śledzenia diagnostycznego, które są generowane przez architekturę WCF. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, przeglądać i filtrować komunikaty śledzenia w dzienniku, aby zdiagnozować, naprawy i sprawdź problemów z usługą WCF.
+Narzędzie Podgląd śledzenia usługi Windows Communication Foundation (WCF) ułatwia analizowanie śladów diagnostycznych generowanych przez funkcję WCF. Przeglądarka śledzenia usługi umożliwia łatwe scalanie, wyświetlanie i filtrowanie komunikatów śledzenia w dzienniku, co umożliwia diagnozowanie, naprawianie i weryfikowanie problemów z usługą WCF.
 
 ## <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 
-Dane śledzenia diagnostycznego zapewniają informacje, które wskazują na to, co się dzieje w całym działania aplikacji. Jak wskazuje nazwa, można wykonać operacji z ich źródła do miejsca docelowego, a także pośrednich punktów.
+Ślady diagnostyczne zawierają informacje, które pokazują, co dzieje się w całej operacji aplikacji. Jak nazywa się to, można wykonać operacje ze źródła do miejsca docelowego i również za pośrednictwem punktów pośrednich.
 
-Można skonfigurować śledzenie z użyciem pliku konfiguracji aplikacji — albo plik Web.config dla aplikacji hostowanych w sieci Web, lub *Appname*.config samodzielnie hostowanej aplikacji. Oto przykład:
+Śledzenie można skonfigurować przy użyciu pliku konfiguracji aplikacji — plik Web. config dla aplikacji hostowanych w sieci Web lub pliku *nazwa_aplikacji*. config dla aplikacji samodzielnych. Oto przykład:
 
 ```xml
 <system.diagnostics>
@@ -36,94 +36,94 @@ Można skonfigurować śledzenie z użyciem pliku konfiguracji aplikacji — alb
 </system.diagnostics>
 ```
 
-W tym przykładzie określono nazwę i typ odbiornik śledzenia. Odbiornik o nazwie `sdt` i standardowy odbiornik śledzenia .NET Framework (System.Diagnostics.XmlWriterTraceListener) jest dodawany jako typu. `initializeData` Atrybut jest używany, aby ustawić nazwę pliku dziennika dla tego odbiornika jako `SdrConfigExample.e2e`. Dla pliku dziennika można zastąpić w pełni kwalifikowaną ścieżkę do nazwy pliku prostego.
+W tym przykładzie określono nazwę i typ odbiornika śledzenia. Odbiornik ma nazwę `sdt`, a w polu Typ należy dodać odbiornik śledzenia standardowego .NET Framework (System. Diagnostics. XmlWriterTraceListener). Atrybut `initializeData` służy do ustawiania nazwy pliku dziennika dla tego odbiornika jako `SdrConfigExample.e2e`. W przypadku pliku dziennika można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
 
-Ten przykład tworzy plik w katalogu głównym o nazwie SdrConfigExample.e2e. Gdy używasz przeglądarki danych śledzenia można otworzyć pliku, zgodnie z opisem w sekcji "Otwieranie i wyświetlanie WCF pliki śledzenia", widać wszystkie komunikaty, które zostały wysłane.
+Przykład tworzy plik w katalogu głównym o nazwie SdrConfigExample. e2e. W przypadku używania podglądu śledzenia do otwierania pliku zgodnie z opisem w sekcji "Otwieranie i przeglądanie plików śledzenia WCF" można zobaczyć wszystkie wysłane komunikaty.
 
-Poziom śledzenia jest kontrolowane przez `switchValue` ustawienie. Poziomy śledzenia dostępne są opisane w poniższej tabeli.
+Poziom śledzenia jest kontrolowany przez ustawienie `switchValue`. Dostępne poziomy śledzenia są opisane w poniższej tabeli.
 
 |Poziom śledzenia|Opis|
 |-----------------|-----------------|
-|Krytyczny|-Rejestruje wpisy dziennika zdarzeń i bezawaryjną i informacje o śledzeniu korelacji. Poniżej przedstawiono kilka przykładów, gdy można na przykład poziom krytyczny:<br />-AppDomain zakończył działanie z powodu nieobsługiwanego wyjątku.<br />-Aplikacja nie powiedzie się rozpocząć.<br />-Komunikat, który spowodował awarię, pochodzi z procesu MyApp.exe.|
-|Błąd|— Rejestruje wszystkie wyjątki. Możesz użyć poziom błędu w następujących sytuacjach:<br />-Kod uległ awarii z powodu wyjątku Nieprawidłowe rzutowanie.<br />Wyjątek "nie można utworzyć punktu końcowego" powoduje awarię podczas uruchamiania aplikacji.|
-|Ostrzeżenie|-Istnieje warunek, który następnie może spowodować błąd lub błąd krytyczny. Możesz użyć tego poziomu w następujących sytuacjach:<br />— Aplikacja odbiera więcej żądań nie zezwala na jego ustawienia ograniczenia przepustowości.<br />-Odbieranie kolejka jest w 98 procent jego skonfigurowaną pojemność.|
-|Informacje|-Komunikaty przydatne do monitorowania i diagnozowania stanu systemu, pomiaru wydajności lub profilowania są generowane. Korzystanie z takich informacji o pojemności planowanie i zarządzanie wydajnością. Możesz użyć tego poziomu w następujących sytuacjach:<br />— Wystąpił błąd po wiadomości osiągnięto domeny aplikacji i została przeprowadzona.<br />-Błąd wystąpił podczas tworzenia powiązania protokołu HTTP.|
-|Pełny|Debugowanie poziomie śledzenia dla obu kod użytkownika i obsługi. Ustaw to poziom po:<br />— Nie masz pewności, którą metodę w kodzie została wywołana, gdy wystąpił błąd.<br />-Masz nieprawidłowy punkt końcowy z konfiguracją i usługę udało się uruchomić, ponieważ wpis w magazynie rezerwacji jest zablokowany.|
-|ActivityTracing|Zdarzenia przepływ między działaniami przetwarzania i składników.<br /><br /> Ten poziom umożliwia administratorów i deweloperów skorelować aplikacji w tej samej domenie aplikacji.<br /><br /> -Ślady działania granice: uruchamianie/zatrzymywanie.<br />-Ślady transferów.|
+|Krytyczny|-Rejestruje błędy i wpisy dziennika zdarzeń, a następnie śledzi informacje o korelacji. Poniżej przedstawiono kilka przykładów sytuacji, w których można użyć poziomu krytycznego:<br />-Twoja domena aplikacji powiodła się z powodu nieobsługiwanego wyjątku.<br />-Nie można uruchomić aplikacji.<br />-Komunikat, który spowodował błąd pochodzący z procesu MojaApl. exe.|
+|Błąd|-Rejestruje wszystkie wyjątki. Poziomu błędu można użyć w następujących sytuacjach:<br />-Twój kod uległ awarii z powodu nieprawidłowego wyjątku rzutowania.<br />-"Nie można utworzyć punktu końcowego" powoduje niepowodzenie aplikacji podczas uruchamiania.|
+|Ostrzeżenie|-Istnieje warunek, który może spowodować błąd lub krytyczny błąd. Tego poziomu można użyć w następujących sytuacjach:<br />-Aplikacja otrzymuje więcej żądań, niż pozwala na to jej ustawienia ograniczania.<br />-Kolejka otrzymująca jest 98 procent skonfigurowanej pojemności.|
+|Informacje|— Komunikaty przydatne do monitorowania i diagnozowania stanu systemu, mierzenia wydajności lub profilowania. Te informacje można wykorzystać do planowania pojemności i zarządzania wydajnością. Tego poziomu można użyć w następujących sytuacjach:<br />-Wystąpił błąd, gdy wiadomość dotarła do domeny AppDomain i została przeprowadzona deserializacji.<br />-Wystąpił błąd podczas tworzenia powiązania HTTP.|
+|Pełny|— Śledzenie na poziomie debugowania zarówno dla kodu użytkownika, jak i obsługi. Ustaw ten poziom w następujący sposób:<br />— Nie masz pewności, która metoda w kodzie została wywołana w przypadku wystąpienia błędu.<br />-Masz skonfigurowany nieprawidłowy punkt końcowy i nie można uruchomić usługi, ponieważ wpis w magazynie rezerwacji jest zablokowany.|
+|ActivityTracing|Przepływ zdarzeń między działaniami przetwarzania i składnikami.<br /><br /> Na tym poziomie Administratorzy i deweloperzy mogą skorelować aplikacje w tej samej domenie aplikacji.<br /><br /> -Ślady dla granic działania: Uruchamianie/zatrzymywanie.<br />— Ślady dla transferów.|
 
- Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W przykładzie konfiguracji, odbiornik o nazwie `sdt` i standardowy odbiornik śledzenia .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) jest dodawany jako typu. Użyj `initializeData` można ustawić nazwę pliku dziennika dla tego odbiornika. Ponadto można zastąpić w pełni kwalifikowaną ścieżkę do nazwy pliku prostego.
+ Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W przykładowej konfiguracji odbiornik ma nazwę `sdt` i odbiornik standardowego .NET Framework śledzenia (`System.Diagnostics.XmlWriterTraceListener`) jest dodawany jako typ. Użyj `initializeData`, aby ustawić nazwę pliku dziennika dla tego odbiornika. Ponadto można zastąpić w pełni kwalifikowaną ścieżkę dla prostej nazwy pliku.
 
-Począwszy od programu .NET Framework 4.8 kontrolek ComboBox niektóre kompozycje o wysokim kontraście są wyświetlane w prawidłowy kolor. Możesz wyłączyć tę zmianę, usuwając następujące ustawienie na podstawie *svcTraceViewer.exe.config* pliku:
+Począwszy od .NET Framework 4,8, kontrolki ComboBox w niektórych kompozycjach o dużym kontraście są wyświetlane w prawidłowym kolorze. Tę zmianę można wyłączyć, usuwając następujące ustawienie z pliku *svcTraceViewer. exe. config* :
 
 ```xml
 <AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
 ```
 
-## <a name="using-the-service-trace-viewer-tool"></a>Za pomocą narzędzia podglądu śledzenia usług
+## <a name="using-the-service-trace-viewer-tool"></a>Korzystanie z narzędzia Podgląd śledzenia usług
 
-### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i wyświetlanie plików śledzenia WCF
+### <a name="opening-and-viewing-wcf-trace-files"></a>Otwieranie i przeglądanie plików śledzenia WCF
 
-Przeglądarki danych śledzenia usługi obsługuje trzy typy plików:
+Przeglądarka śledzenia usług obsługuje trzy typy plików:
 
-- Usługi WCF (.svcLog) pliku śledzenia
+- Plik śledzenia WCF (. svcLog)
 
-- Zdarzenia śledzenia w pliku (.etl)
+- Plik śledzenia zdarzeń (ETL)
 
-- Plik śledzenia crismon
+- Plik śledzenia użycie Crismon
 
- Przeglądarki danych śledzenia usługi umożliwia Otwórz każdy plik śledzenia obsługiwanych, dodać i integracja śledzenia dodatkowe pliki, lub otworzyć i jednocześnie scalania grupy plików śledzenia.
+ Przeglądarka śledzenia usługi umożliwia otwieranie dowolnego obsługiwanego pliku śledzenia, Dodawanie i integrowanie dodatkowych plików śledzenia lub otwieranie i scalanie grup plików śledzenia jednocześnie.
 
 ##### <a name="to-open-a-trace-file"></a>Aby otworzyć plik śledzenia
 
-1. Rozpocznij przeglądarki danych śledzenia usługi za pomocą okno polecenia przejdź do lokalizacji instalacji usługi WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.
+1. Uruchom podgląd śledzenia usługi przy użyciu okna wiersza polecenia, aby przejść do lokalizacji instalacji programu WCF (C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin), a następnie wpisz `SvcTraceViewer.exe`.
 
 > [!NOTE]
-> Narzędzie przeglądarki danych śledzenia usługi można skojarzyć z dwóch typów plików: .svclog i .stvproj. Dwa parametry wiersza polecenia umożliwia rejestrowanie i wyrejestrowywanie rozszerzeń plików.
+> Narzędzie Podgląd śledzenia usług można skojarzyć z dwoma typami plików:. svclog i. stvproj. Aby zarejestrować i wyrejestrować rozszerzenia plików, można użyć dwóch parametrów w wierszu polecenia.
 >
-> / register: zarejestrowanie stowarzyszenia rozszerzenia pliku ".svclog" i ".stvproj" SvcTraceViewer.exe
+> /Register: Zarejestruj skojarzenie rozszerzeń plików ". svclog" i ". stvproj" z SvcTraceViewer. exe
 >
-> / unregister: unregister skojarzenie rozszerzenia pliku ".svclog" i ".stvproj" SvcTraceViewer.exe
+> /Unregister: Wyrejestrowywanie skojarzenia rozszerzeń plików ". svclog" i ". stvproj" z plikiem SvcTraceViewer. exe
 
-1. Po uruchomieniu przeglądarki danych śledzenia usługi kliknij **pliku** i wskaż **Otwórz**. Przejdź do lokalizacji, w którym są przechowywane pliki śledzenia.
+1. Po uruchomieniu podglądu śledzenia usług kliknij pozycję **plik** , a następnie wskaż polecenie **Otwórz**. Przejdź do lokalizacji, w której są przechowywane pliki śledzenia.
 
 2. Kliknij dwukrotnie plik śledzenia, który chcesz otworzyć.
 
     > [!NOTE]
-    > Naciśnij klawisz SHIFT podczas klikania wielu plików śledzenia, wybierz i otwórz je jednocześnie. Przeglądarki danych śledzenia usługi Scala zawartość wszystkich plików i przedstawia jeden widok. Na przykład możesz otworzyć pliki śledzenia zarówno klient, jak i usługi. Jest to przydatne, gdy włączono rejestrowanie i działania Propagacja komunikatów w konfiguracji. W ten sposób można sprawdzić w wymianie wiadomości między klientem a usługą. Można również przeciągnąć wielu plików w przeglądarce lub użyj **projektu** kartę. Zobacz sekcję Zarządzanie projektu, aby uzyskać więcej informacji.
+    > Naciśnij klawisz SHIFT podczas klikania wielu plików śledzenia, aby wybrać i otworzyć je jednocześnie. Podgląd śledzenia usług Scala zawartość wszystkich plików i wyświetla jeden widok. Można na przykład otworzyć pliki śledzenia zarówno klienta, jak i usługi. Jest to przydatne, gdy włączono rejestrowanie komunikatów i propagację działań w konfiguracji. W ten sposób można przeanalizować wymianę komunikatów między klientem i usługą. Możesz również przeciągnąć wiele plików do przeglądarki lub użyć karty **projekt** . Aby uzyskać więcej informacji, zobacz sekcję Zarządzanie projektem.
 
-3. Aby dodać pliki śledzenia dodatkowych kolekcji, która jest otwarta, kliknij **pliku** i wskaż **Dodaj**. W otwartym oknie przejdź do lokalizacji plików śledzenia, a następnie kliknij dwukrotnie plik, który chcesz dodać.
+3. Aby dodać więcej plików śledzenia do kolekcji, która jest otwarta, kliknij pozycję **plik** , a następnie wskaż polecenie **Dodaj**. W otwartym oknie przejdź do lokalizacji plików śledzenia i kliknij dwukrotnie plik, który chcesz dodać.
 
 > [!CAUTION]
-> Nie zaleca się załadowanie pliku dziennika śledzenia większy niż 200MB. Jeśli użytkownik podejmie próbę załadowania pliku przekracza ten limit, proces ładowania może potrwać długo zależnie od zasobu komputera. Narzędzie przeglądarki danych śledzenia usługi może nie być dynamiczny przez długi czas lub go może wyczerpać pamięci maszyny. Zaleca się konfigurowania ładowania częściowego, aby tego uniknąć. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz sekcję "Podczas ładowania dużych śledzenia Files".
+> Nie zaleca się ładowania pliku dziennika śledzenia większego niż 200 MB. Jeśli spróbujesz załadować plik większy niż ten limit, proces ładowania może zająć dużo czasu, w zależności od zasobu komputera. Narzędzie przeglądarka śledzenia usługi może nie reagować przez dłuższy czas lub może spowodować wyczerpanie pamięci maszyny. Zaleca się skonfigurowanie ładowania częściowego w celu uniknięcia tego. Aby uzyskać więcej informacji o tym, jak to zrobić, zobacz sekcję "Ładowanie dużych plików śledzenia".
 
-#### <a name="event-tracing-and-crimson-tracing"></a>Śledzenie zdarzeń i śledzenia Crismon
+#### <a name="event-tracing-and-crimson-tracing"></a>Śledzenie zdarzeń i śledzenie użycie Crismon
 
-Podgląd w formacie natywnym jest format śledzenie aktywności, który emituje WCF. Dane śledzenia emitowane w innym formacie muszą zostać przekonwertowane, zanim przeglądarka wyświetla je. Obecnie oprócz format śledzenie aktywności, przeglądarka obsługuje śledzenie zdarzeń i śledzenia crismon.
+Format natywny przeglądarki jest formatem śledzenia aktywności, który emituje WCF. Ślady emitowane w innym formacie muszą zostać przekonwertowane przed wyświetleniem ich przez przeglądarkę. Obecnie oprócz formatu śledzenia działania przeglądarka obsługuje śledzenie zdarzeń i śledzenie użycie Crismon.
 
-Podczas otwierania pliku, który nie zawiera ślady działania przeglądarki próbuje przekonwertować plik. Należy określić nazwę i lokalizację pliku, który będzie zawierał dane śledzenia przekonwertowana. Po konwersji danych przeglądarka wyświetla zawartość nowego pliku.
+Po otwarciu pliku, który nie zawiera śladów aktywności, przeglądarka próbuje skonwertować plik. Należy określić nazwę i lokalizację pliku, który będzie zawierać skonwertowane dane śledzenia. Po przeprowadzeniu konwersji danych przeglądarka wyświetli zawartość nowego pliku.
 
 > [!NOTE]
-> Konwersja wymaga miejsca na dysku do przechowywania danych śledzenia przekonwertowana. Upewnij się, że masz wystarczającą ilość miejsca na dysku do przechowywania danych, przed rozpoczęciem konwersji. W przeciwnym razie konwersji nie powiedzie się.
+> Konwersja wymaga miejsca na dysku do przechowywania przekonwertowanych danych śledzenia. Upewnij się, że na dysku jest dostępna wystarczająca ilość miejsca do przechowywania danych przed rozpoczęciem konwersji. W przeciwnym razie konwersja nie powiedzie się.
 
 ### <a name="managing-projects"></a>Zarządzanie projektami
 
-Przeglądarka obsługuje projekty, aby ułatwić wyświetlanie wielu plików śledzenia. Na przykład jeśli masz plik śledzenia klienta i plik śledzenia usługi, można je dodać do projektu. Następnie za każdym razem, gdy otworzysz projekt, wszystkie pliki śledzenia w projekcie są ładowane jednocześnie.
+Przeglądarka obsługuje projekty w celu ułatwienia wyświetlania wielu plików śledzenia. Na przykład jeśli masz plik śledzenia klienta i plik śledzenia usługi, możesz dodać je do projektu. Następnie przy każdym otwarciu projektu wszystkie pliki śledzenia w projekcie są ładowane jednocześnie.
 
 Istnieją dwa sposoby zarządzania projektami:
 
-- W **pliku** menu, można otworzyć, Zapisz i zamknij projektów.
+- W menu **plik** można otworzyć, zapisać i zamknąć projekty.
 
-- W **projektu** karcie, można dodać pliki do projektu.
+- Na karcie **projekt** można dodać pliki do projektu.
 
-### <a name="viewing-wcf-traces"></a>Wyświetlanie WCF śladów
+### <a name="viewing-wcf-traces"></a>Wyświetlanie śladów WCF
 
-Usługi WCF emituje danych śledzenia przy użyciu formatu śledzenie aktywności. W modelu śledzenie aktywności w poszczególnych ślady są grupowane w działania zgodnie z ich celem. Przepływ sterowania logiczne są przesyłane między działaniami. Na przykład w okresie istnienia aplikacji, wiele "działania wysyłania komunikatu" pojawiają się i znikają. Aby uzyskać więcej informacji dotyczących przeglądania danych śledzenia i działań i interfejsu użytkownika przeglądarki danych śledzenia usługi zbyt zobacz [za pomocą przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów z](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).
+Funkcja WCF emituje ślady przy użyciu formatu śledzenia działań. W modelu śledzenia aktywności poszczególne ślady są pogrupowane w działania zgodnie z ich przeznaczeniem. Przepływ kontroli logicznej jest przesyłany między działaniami. Na przykład w okresie istnienia aplikacji wiele pojawiających się i znikających działań wysyłania komunikatów. Aby uzyskać więcej informacji o wyświetlaniu śladów i działań oraz interfejsie użytkownika przeglądarki śledzenia usługi, zobacz [Używanie przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md).
 
 #### <a name="switching-to-different-views"></a>Przełączanie do różnych widoków
 
-Przeglądarki danych śledzenia usługi udostępnia następujące widoki. Są wyświetlane jako karty w lewym okienku podglądu, a także jest możliwy z **widoku** menu.
+Podgląd śledzenia usług udostępnia następujące różne widoki. Są one wyświetlane jako karty w lewym okienku przeglądarki i dostępne również z menu **Widok** .
 
-- Wyświetl działania
+- Widok działania
 
 - Widok projektu
 
@@ -131,374 +131,374 @@ Przeglądarki danych śledzenia usługi udostępnia następujące widoki. Są wy
 
 - Widok wykresu
 
-##### <a name="activity-view"></a>Wyświetl działania
+##### <a name="activity-view"></a>Widok działania
 
-Po otwarciu plików śledzenia są widoczne ślady, pogrupowane według działań i wyświetlane w **działania** widoku w okienku po lewej stronie.
+Po otwarciu plików śledzenia można zobaczyć ślady pogrupowane w działania i wyświetlane w widoku **działania** w okienku po lewej stronie.
 
-**Działania** nazwy działań Wyświetla widok, Liczba śladów w działaniu, czas trwania godzina rozpoczęcia, czas zakończenia.
+W widoku **działania** są wyświetlane nazwy działań, liczba śladów w działaniu, czas trwania, godzina rozpoczęcia i godzina zakończenia.
 
-Klikając dowolny działania wymienione na liście, dane śledzenia w przypadku tego działania są wyświetlane w okienku śledzenia, po prawej stronie. Następnie możesz wybrać śledzenia, aby wyświetlić jego szczegóły.
+Po kliknięciu dowolnego z wymienionych działań ślady w tym działaniu są wyświetlane w okienku śledzenia po prawej stronie. Następnie możesz wybrać ślad, aby wyświetlić jego szczegóły.
 
-Możesz wybrać wiele działań, naciskając klawisz **Ctrl** lub **Shift** klucz i klikając odpowiednią działań. W okienku śledzenia są wyświetlane wszystkie ślady wybrane działania.
+Możesz wybrać wiele działań, naciskając klawisz **Ctrl** lub **SHIFT** i klikając odpowiednie działania. W okienku śledzenia zostaną wyświetlone wszystkie ślady wybranych działań.
 
-Możesz kliknąć dwukrotnie działanie, aby wyświetlić ją w **wykres** widoku. Alternatywna metoda polega na wybierz działanie, a następnie przejdź do **wykres** widoku.
+Możesz kliknąć dwukrotnie działanie, aby wyświetlić je w widoku **wykresu** . Alternatywnym sposobem jest wybranie działania i przełączenie do widoku **wykresu** .
 
 > [!NOTE]
-> Działanie "000000000000" jest specjalnym działaniu, które nie mogą być wyświetlane w widoku wykresu. Ponieważ inne działania są z nim połączone, wyświetlanie to działanie ma wpływ zmniejszenie wydajności.
+> Działanie "000000000000" to działanie specjalne, którego nie można wyświetlić w widoku wykresu. Ze względu na to, że wszystkie inne działania są z nim powiązane, wyświetlanie tego działania ma poważny wpływ na wydajność.
 
-Możesz kliknąć tytuł kolumny, aby posortować listę działań. Działania, które zawierają zapisy ostrzeżeń mają żółte tło i tych, które zawierają zapisy błędów ma jeden czerwony.
+Możesz kliknąć tytuł kolumny, aby posortować listę działań. Działania zawierające ślady ostrzeżeń mają żółte tło, a te, które zawierają ślady błędów, mają kolor czerwony.
 
-Istnieją różne typy działań i każdy typ odnosi się do ikony po lewej stronie każdego działania. Mogą odwoływać się w sekcji ikony śledzenia opis ich znaczenia.
+Istnieją różne rodzaje działań i każdy typ odpowiada ikonie po lewej stronie każdego działania. W tym celu można zapoznać się z sekcją Omówienie ikon śledzenia.
 
 ##### <a name="project-view"></a>Widok projektu
 
-Ten widok umożliwia zarządzanie pliki śledzenia w bieżącym projekcie. Zobacz sekcję Zarządzanie projektu, aby uzyskać więcej informacji.
+Ten widok umożliwia zarządzanie plikami śledzenia w bieżącym projekcie. Aby uzyskać więcej informacji, zobacz sekcję Zarządzanie projektem.
 
 ##### <a name="message-view"></a>Widok komunikatów
 
-Ten widok umożliwia wyświetlanie wszystkich dziennik komunikatów ślady, łącznie z procesu akcji, daty/godziny, Acivity i w, / i przejdź do szczegółów śladu skojarzone komunikatu dziennika. Możesz grupować danych śledzenia dziennika komunikatów Hranice Aktivity, proces/wątek lub wysyłania i odbierania dla zapewnienia łatwiejszej nawigacji przepływu wiadomości.
+Ten widok umożliwia wyświetlenie wszystkich śladów dzienników komunikatów, w tym akcji, daty/godziny, procesu, aktywności i od/do, a następnie przejście do szczegółów skojarzonego śledzenia dziennika komunikatów. Można grupować ślady dziennika komunikatów według granicy działania, procesu/wątku lub wysyłania & odbierania w celu łatwiejszego nawigowania w przepływie komunikatów.
 
 ##### <a name="graph-view"></a>Widok wykresu
 
-Ten widok przedstawia dane śledzenia dla konkretnych działań w formie wykresu. Formularz wykresu umożliwia Zobacz stopniową wykonywania zdarzeń i współzależności między wiele działań, gdy dane są przenoszone między nimi.
+Ten widok przedstawia dane śledzenia dla danego działania w formularzu wykresu. Formularz wykresu pozwala zobaczyć krokowe wykonywanie zdarzeń oraz współzależności między wieloma działaniami, ponieważ dane są przenoszone między nimi.
 
-Aby przełączyć się do **wykres** wyświetlić, wybierz działanie w **działania** wyświetlić, a następnie kliknij przycisk **działania** karty lub komunikatów dziennika śledzenia w **komunikat**Widoku. Jeśli wiele plików śledzenia są ładowane i działanie polega na ślady z więcej niż jeden plik, wszystkie istotne dane śledzenia są wyświetlane w widoku wykresu. Ponadto dwukrotne kliknięcie działań i danych śledzenia dziennika komunikatów prowadzi Cię do **wykres** widoku.
+Aby przełączyć się do widoku **wykresu** , wybierz działanie w widoku **działania** , a następnie kliknij kartę **działanie** lub śledzenie dziennika komunikatów w widoku **komunikatów** . W przypadku załadowania wielu plików śledzenia, gdy działanie obejmuje ślady z więcej niż jednego pliku, wszystkie odpowiednie ślady są wyświetlane w widoku wykresu. Dwukrotne kliknięcie działań i ślady dziennika komunikatów również prowadzi do widoku **wykresu** .
 
-W **wykres** widoku w poszczególnych kolumnach reprezentuje działanie, a każdy blok, w kolumnie — śledzenia. Działania są pogrupowane według procesu (lub wątku). Małe strzałki między działaniami reprezentują transferu. Big strzałki między procesami reprezentują wymianę komunikatów. Działania w zaznaczenie jest zawsze na żółto.
+W widoku **wykresu** każda pionowa kolumna reprezentuje działanie, a każdy blok w kolumnie reprezentuje wynik śledzenia. Działania są pogrupowane według procesu (lub wątku). Małe strzałki między działaniami reprezentują transfery. Duże strzałki między procesami reprezentują wymianę komunikatów. Działanie w zaznaczeniu jest zawsze żółte.
 
-###### <a name="selecting-traces-in-the-graph"></a>Wybieranie ślady na wykresie
+###### <a name="selecting-traces-in-the-graph"></a>Wybieranie śladów na wykresie
 
-1. Kliknij blok na wykresie.
+1. Kliknij blok na grafie.
 
-2. W górę i w dół kluczy, aby wybrać jej sąsiednich ślady.
+2. Użyj klawiszy w górę i w dół, aby wybrać swoje sąsiednie ślady.
 
-3. Sprawdź informacje o śledzeniu w okienku śledzenia i okienka szczegółów.
+3. Obserwuj informacje o śledzeniu w okienku śledzenia i okienku szczegółów.
 
-###### <a name="expanding-or-collapsing-activity-transfers"></a>Rozwijanie lub zwijanie transferów działań
+###### <a name="expanding-or-collapsing-activity-transfers"></a>Rozszerzanie lub zwijanie transferów działań
 
-Podczas działania w zaznaczeniu przenosi się do kolejnego działania, można rozwinąć transferów działań. Pozwala ona do wykonania transferu.
+Można rozwinąć transfery działań, gdy działanie w obszarze wybór zostanie przetransferowane do innego działania. Dzięki temu można postępować zgodnie z transferami.
 
-Aby rozwinąć lub zwinąć transferów działań
+Aby rozwinąć lub zwinąć transfery działań,
 
-1. Znajdź śledzenia transferu znakiem "+" po lewej stronie ikony transferu.
+1. Znajdź ślad transferu ze znakiem "+" po lewej stronie ikony transferu.
 
-2. Kliknij przycisk "+" lub naciśnij **Ctrl** i "+" za pomocą klawiatury.
+2. Kliknij "+" lub naciśnij **klawisze CTRL** i "+" przy użyciu klawiatury.
 
-3. Następne działanie jest wyświetlana na wykresie.
+3. Następne działanie pojawia się na wykresie.
 
-4. Element "-" pojawia się po lewej stronie ikony transferu. Kliknij przycisk "-" Zaloguj się i nacisnąć klawisz Ctrl i "-", zwija transferu działania.
+4. "-" Pojawia się po lewej stronie ikony transferu. Kliknij znak "-" lub naciśnij klawisze CTRL i "-", aby przenieść działanie.
 
 > [!NOTE]
-> Gdy działanie ma wiele przeniesienia do niego i jedną przeniesień Rozwiń, są wyświetlane działań, które powoduje nowe działanie z działania głównego. Te nowe działania są wyświetlane w formularzu zwinięty. Jeśli chcesz wyświetlić szczegóły tych działań, powiększyć je w pionie, klikając ikonę rozwijania w nagłówku wykresu.
+> Gdy działanie ma wiele transferów, i zostanie rozwinięte jedno z transferów, zostaną wyświetlone działania, które prowadzą do nowego działania z działania głównego. Te nowe działania są wyświetlane w zwiniętym formularzu. Jeśli chcesz zobaczyć szczegóły tych działań, rozwiń je pionowo, klikając ikonę rozwijania w nagłówku wykresu.
 
 ###### <a name="expanding-or-collapsing-activities-vertically"></a>Rozwijanie lub zwijanie działań w pionie
 
-Podgląd Ukrywa niepotrzebne szczegółowo wykres aktywności, zwijając działań. W przypadku zwinięty działania śledzenia poszczególnych nie są wyświetlane. Są wyświetlane tylko transfery śledzenia. Jeśli chcesz wyświetlić wszystkie ślady w działaniu, rozwiń węzeł działania w pionie klikając symbol rozwijania działalności w nagłówku wykresu.
+Przeglądarka ukrywa niepotrzebne szczegóły na grafie aktywności przez zwijanie działań. W działaniu zwiniętym pojedyncze ślady nie są wyświetlane. Wyświetlane są tylko ślady transferu. Aby wyświetlić wszystkie ślady w działaniu, rozwiń aktywność w pionie, klikając symbol rozwinięcia działania w nagłówku grafu.
 
-Aby rozwinąć lub zwinąć działań w pionie
+Aby rozwinąć lub zwinąć działania w pionie,
 
-1. Kliknij ikonę "+" w nagłówku działania, aby rozwinąć działania w pionie.
+1. Kliknij ikonę "+" w nagłówku działania, aby rozwinąć aktywność w pionie.
 
-2. Należy zauważyć, że wszystkie ślady są wyświetlane na wykresie.
+2. Zauważ, że wszystkie ślady są wyświetlane na wykresie.
 
-3. Kliknij przycisk "-" ikona w nagłówku działania, aby zwinąć działania w pionie.
+3. Kliknij ikonę "-" w nagłówku działania, aby zwinąć aktywność w pionie.
 
-4. Zwróć uwagę że tylko ważne w przypadku transferów komunikatu dzienników, ostrzeżenie i śledzenia wyjątków są wyświetlane w działaniu.
+4. Należy zauważyć, że w działaniu są wyświetlane tylko ważne transfery, dzienniki komunikatów, ostrzeżenia i ślady wyjątków.
 
 ###### <a name="options"></a>Opcje
 
-Można wybrać dwie opcje z **opcja** menu w widoku wykresu.
+Możesz wybrać dwie opcje z menu **opcji** w widoku wykresu.
 
-- Pokaż działanie granic ślady po usunięciu zaznaczenia Ignoruj ślady granic działania na wykresie.
+- Pokaż ślady granicy działania, które po usunięciu zaznaczenia ignorują ślady granicy działania na wykresie.
 
-- Pokaż pełne ślady Non komunikat, który w przypadku usunięcia zaznaczenia Ignoruj pełne poziomu ślady, z wyjątkiem komunikatów śledzenia. W większości przypadków pełne śledzenie poziomu są mniej ważne w przypadku analizy. Ta opcja jest przydatna, gdy użytkownik nie chce analizować pełne śledzenie poziomu i tylko chcesz skupić się na bardziej ważne ślady.
+- Pokaż pełne ślady niebędące wiadomościami, które po usunięciu zaznaczenia opcji Ignoruj pełne ślady poziomu, z wyjątkiem śladów komunikatów. W większości przypadków ślady poziomu verbose są mniej ważne dla analizy. Ta opcja jest przydatna, gdy nie chcesz analizować śladów pełnego poziomu i chcesz skupić się tylko na bardziej ważnych śladach.
 
 ###### <a name="layout-mode"></a>Tryb układu
 
-Podgląd w dwóch trybach układu: **Proces** i **wątku**. To ustawienie określa Największa jednostka organizacji. Wartość domyślna jest w trybie układu **procesu**, co oznacza, że działania są pogrupowane według procesów na wykresie.
+Przeglądarka ma dwa tryby układu: **proces** i **wątek**. To ustawienie definiuje największą jednostkę organizacji. Domyślnym trybem układu jest **proces**, co oznacza, że działania są pogrupowane według procesów na grafie.
 
 ###### <a name="execution-list"></a>Lista wykonywania
 
-Możesz wybrać, który proces lub wątek do wyświetlenia na wykresie z tej listy rozwijanej. Na przykład jeśli masz pliki śledzenia dwóch klientów (A i B) i jedną usługę, otwarte, a tylko mają być wyświetlane na wykresie usługi i klienta A, możesz usunąć zaznaczenie klienta B z listy.
+Możesz wybrać proces lub wątek, który ma być wyświetlany na wykresie z tej listy rozwijanej. Na przykład, jeśli masz pliki śledzenia dwóch klientów (a i B), a jedna usługa została otwarta i chcesz tylko wyświetlić usługę i klienta A na grafie, możesz usunąć z listy opcję Klient B.
 
-#### <a name="viewing-trace-details"></a>Szczegóły śladu wyświetlania
+#### <a name="viewing-trace-details"></a>Wyświetlanie szczegółów śledzenia
 
-Aby wyświetlić szczegóły śledzenia, należy wybrać śledzenia w okienku śledzenia. Szczegółowe informacje są wyświetlane w okienku szczegółów.
+Aby wyświetlić szczegóły śledzenia, wybierz śledzenie w okienku śledzenie. Szczegóły są wyświetlane w okienku szczegółów.
 
 ##### <a name="trace-pane"></a>Okienko śledzenia
 
-Górnym okienku po prawej stronie w podglądzie śledzenia usługi to okienko śledzenia. Wyświetla listę wszystkich śladów w wybrane działanie zawierającego dodatkowe informacje, na przykład poziom śledzenia, identyfikator wątku i nazwę procesu.
+Górne okienko w podglądzie śledzenia usługi jest okienkiem śledzenia. Wyświetla on wszystkie ślady w wybranym działaniu z dodatkowymi informacjami, na przykład poziom śledzenia, identyfikator wątku i nazwa procesu.
 
-Nieprzetworzonym kodzie XML śledzenia można skopiować do Schowka, kliknij prawym przyciskiem myszy śledzenia i wybierając **śledzenia kopiowania do Schowka**.
+Możesz skopiować nieprzetworzony kod XML śledzenia do schowka, klikając prawym przyciskiem myszy ślad i wybierając **Kopiuj ślad do schowka**.
 
-##### <a name="detail-pane"></a>Okienko Szczegóły
+##### <a name="detail-pane"></a>Okienko szczegółów
 
-Dolne okienko po lewej stronie w podglądzie śledzenia usługi jest w okienku szczegółów. Zawiera trzy karty, aby wyświetlić szczegóły śledzenia.
+Lewe dolne okienko w podglądzie śledzenia usługi jest okienkiem szczegółowym. Zawiera trzy karty do wyświetlania szczegółów śledzenia.
 
-**Sformatowany** widoku są wyświetlane informacje w sposób bardziej zorganizowane. Wyświetla listę wszystkich znanych elementów XML w tabelach i drzewa, dzięki czemu łatwiej odczytywać i zrozumienie informacji.
+W widoku **sformatowanym** są wyświetlane informacje w bardziej zorganizowany sposób. Zawiera listę wszystkich znanych elementów XML w tabelach i drzewach, ułatwiając odczytywanie i zrozumienie informacji.
 
-**XML** widoku są wyświetlane XML odpowiadający wybranej śledzenia. Obsługuje ona kolor wyróżnienia i składni. Kiedy używasz **znaleźć** wyszukiwać ciągi, zawiera opis wyników wyszukiwania.
+W widoku **XML** zostanie wyświetlony kod XML odpowiadający wybranemu śledzeniu. Obsługuje ona podświetlanie i kolor składni. W przypadku używania **Find** do wyszukiwania ciągów wyróżniane są wyniki wyszukiwania.
 
-**Komunikat** widok zawiera część wiadomości XML danych śledzenia dziennika komunikatów. Może to być niewidoczne, po wybraniu śledzenia bez wiadomości.
+Widok **komunikatów** wyświetla część wiadomości XML w obszarze ślady dziennika komunikatów. Jest on niewidoczny w przypadku wybrania śledzenia bez komunikatów.
 
-### <a name="filtering-wcf-traces"></a>Filtrowanie śledzenia WCF
+### <a name="filtering-wcf-traces"></a>Filtrowanie śladów WCF
 
-Aby ułatwić analiza śledzenia, można filtrować je w następujący sposób:
+Aby ułatwić analizę śledzenia, można je filtrować w następujący sposób:
 
-- Na pasku narzędzi filtru zapewnia dostęp do wstępnie zdefiniowanych i niestandardowych filtrów. Można ją włączyć za pomocą **widoku** menu.
+- Pasek narzędzi filtru zapewnia dostęp do wstępnie zdefiniowanych i niestandardowych filtrów. Można ją włączyć za pomocą menu **Widok** .
 
-- Wstępnie zdefiniowany filtr podglądu można selektywnie filtrować części śledzenia WCF. Domyślnie ustawiono zezwalająca na wszystkie ślady infrastruktury do przekazywania. Ustawienie tego filtru są zdefiniowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.
+- Wstępnie zdefiniowany filtr podglądu może służyć do selektywnego filtrowania części śladów WCF. Domyślnie jest ono ustawione tak, aby zezwalać na przekazywanie wszystkich śladów infrastruktury. Ustawienia tego filtru są zdefiniowane w podmenu **Opcje filtru** w menu **Widok** .
 
-- Filtry niestandardowe wyrażenie XPath użytkownikom pełną kontrolę nad filtrowania. Można zdefiniować w **niestandardowy filtr** w obszarze **widoku** menu.
+- Niestandardowe filtry XPath zapewniają użytkownikom pełną kontrolę nad filtrowaniem. Można je zdefiniować w **filtrze niestandardowym** w menu **Widok** .
 
-Zostanie wyświetlona tylko tych śladów, które przechodzi przez wszystkie filtry.
+Wyświetlane są tylko ślady przekazywane przez wszystkie filtry.
 
-#### <a name="using-the-filter-toolbar"></a>Używanie paska narzędzi filtru
+#### <a name="using-the-filter-toolbar"></a>Korzystanie z paska narzędzi filtru
 
-Pasek narzędzi Filtr pojawia się u góry tego narzędzia. Jeśli nie jest obecny, możesz to zrobić w **widoku** menu. Pasek ma trzy składniki:
+Pasek narzędzi filtru pojawia się u góry narzędzia. Jeśli nie istnieje, możesz ją aktywować w menu **Widok** . Pasek ma trzy składniki:
 
-- Szukać: **Wyszukaj** definiuje do przeszukania operacja filtru tematu. Na przykład, jeśli chcesz znaleźć wszystkie ślady, które są emitowane w kontekście procesu X, Ustaw to pole na X i **wyszukiwania w** pole "Proces Name". Wybrano tej zmiany w kontrolce selektora daty/godziny, gdy filtr na podstawie czasu.
+- Wyszukaj: **Wyszukiwanie** definiuje temat, który ma być wyszukiwany w operacji filtrowania. Na przykład jeśli chcesz znaleźć wszystkie ślady, które były emitowane w kontekście procesu X, ustaw to pole na X i pole **wyszukiwania w** polu Nazwa procesu. To pole jest zmieniane na Kontrolka selektora daty/godziny, gdy jest wybrany filtr oparty na czasie.
 
-- Szukaj w: To pole określa typ filtru do zastosowania.
+- Wyszukaj w: to pole definiuje typ filtru, który ma zostać zastosowany.
 
-- Poziom: Ustawienie poziomie definiuje minimalny poziom śledzenia może za pomocą filtru. Na przykład jeśli poziom jest ustawiona, aby wskazywał błąd i w górę, są wyświetlane tylko dane śledzenia na poziomie błędu i krytyczne. Ten filtr łączy się z kryteriami, wyszukaj i wyszukaj w.
+- Poziom: ustawienie poziomu definiuje minimalny poziom śledzenia dozwolony przez filtr. Na przykład, jeśli poziom jest ustawiony na błąd i w górę, wyświetlane są tylko ślady na poziomie błędu i krytycznym. Ten filtr łączy z kryteriami określonymi przez wyszukiwanie i wyszukiwanie.
 
-**Filtr teraz** przycisk uruchamia operację filtrowania. Niektóre filtry, szczególnie w przypadku, gdy są one stosowane do dużych zestawów danych potrwać bardzo długo. Operacja filtru można anulować, naciskając klawisz **zatrzymać** znajdujący się na pasku stanu w obszarze **operacji** menu.
+Przycisk **Filtruj teraz** uruchamia operację filtrowania. Niektóre filtry, zwłaszcza gdy są stosowane do dużego zestawu danych, potrwają dużo czasu. Możesz anulować operację filtrowania, naciskając przycisk **Zatrzymaj** , który pojawia się na pasku stanu w menu **operacje** .
 
-**Wyczyść** przycisk resetuje wstępnie zdefiniowanych i niestandardowych filtrów, aby zezwolić na wszystkie ślady dopuszczone.
+Przycisk **Wyczyść** resetuje wstępnie zdefiniowane i niestandardowe filtry, aby umożliwić przekazywanie wszystkich śladów.
 
 #### <a name="filter-options"></a>Opcje filtru
 
-Podgląd automatycznie usunąć śledzenia WCF z widoku. Można usunąć wybrane dane śledzenia emitowane przez określonych obszarach usług WCF, na przykład, usunięcie transakcji związane z ślady z widoku.
+Przeglądarka może automatycznie usuwać dane śledzenia WCF z widoku. Umożliwia selektywne usuwanie śladów emitowanych przez określone obszary programu WCF, na przykład usuwanie śladów związanych z transakcjami z widoku.
 
-Ustawienie tego filtru są zdefiniowane w **opcje filtrowania** podmenu w obszarze **widoku** menu.
+Ustawienia tego filtru są zdefiniowane w podmenu **Opcje filtru** w menu **Widok** .
 
 #### <a name="custom-filters"></a>Filtry niestandardowe
 
-Jeśli znasz język ścieżki XML (XPath) służy do tworzenia niestandardowych filtrów do wyszukiwania danych śledzenia dla każdego elementu XML zainteresowania. Filtry są dostępne za pośrednictwem narzędzi filtru.
+Jeśli znasz język ścieżki XML (XPath), możesz użyć go do skonstruowania filtrów niestandardowych, aby przeszukiwać dane śledzenia dowolnego interesującego elementu XML. Filtry są dostępne za pomocą paska narzędzi filtru.
 
-Filtry niestandardowe mogą zawierać parametrów. Można również zaimportować istniejące filtry niestandardowe.
+Filtry niestandardowe mogą zawierać parametry. Można również zaimportować istniejące wcześniej filtry niestandardowe.
 
-##### <a name="creating-a-custom-filter"></a>Tworzenie niestandardowego filtru
+##### <a name="creating-a-custom-filter"></a>Tworzenie filtru niestandardowego
 
 Filtry można tworzyć na dwa sposoby:
 
-###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Utworzenie filtru niestandardowego za pomocą Kreatora szablonu
+###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Tworzenie niestandardowego filtru przy użyciu Kreatora szablonu
 
-Można kliknąć istniejących śledzenia i utworzyć filtr oparty na strukturze śledzenia. W tym przykładzie tworzy niestandardowy filtr oparty na identyfikator wątku.
+Możesz kliknąć istniejący ślad i utworzyć filtr oparty na strukturze śledzenia. Ten przykład umożliwia utworzenie niestandardowego filtru na podstawie identyfikatora wątku.
 
-1. W okienku śledzenia w prawym górnym obszarze podglądu wybierz śledzenia, który zawiera element, którego chcesz filtrować.
+1. W okienku śledzenie w prawym górnym rogu okna podglądu wybierz ślad zawierający element, którego ma dotyczyć filtr.
 
-2. Kliknij przycisk **utworzyć niestandardowy filtr** znajdujący się w górnej części okienka śledzenia.
+2. Kliknij przycisk **Utwórz filtr niestandardowy** znajdujący się w górnej części okienka śledzenia.
 
-3. W oknie dialogowym Wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID`. Można również podać opis filtru.
+3. W wyświetlonym oknie dialogowym wprowadź nazwę filtru. W tym przykładzie wprowadź `Thread ID`. Możesz również podać opis filtra.
 
-4. Widok drzewa po lewej stronie wyświetla strukturę rekord śledzenia, który został wybrany w kroku 1. Przejdź do elementu, którego chcesz utworzyć warunek. W tym przykładzie, przejdź do ThreadID muszą znajdować się w wyrażenie XPath: /E2ETraceEvent/System/Execution/@ThreadID węzła. Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.
+4. Widok drzewa po lewej stronie wyświetla strukturę rekordu śledzenia wybranego w kroku 1. Przejdź do elementu, dla którego chcesz utworzyć warunek. W tym przykładzie przejdź do ThreadID, który ma znajdować się w węźle XPath: /E2ETraceEvent/System/Execution/@ThreadID. Kliknij dwukrotnie atrybut ThreadID w widoku drzewa. Spowoduje to utworzenie wyrażenia dla atrybutu po prawej stronie okna dialogowego.
 
-5. Zmień wartość pola parametrów dla warunku ThreadID z Brak, aby "{0}". Ten krok powoduje włączenie wartość ThreadID skonfigurowane, po zastosowaniu filtru. (Zobacz jak zastosować sekcja filtru) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.
+5. Zmień wartość pola Parameter dla warunku ThreadID z none na "{0}". Ten krok umożliwia skonfigurowanie wartości ThreadID podczas stosowania filtru. (Zobacz sekcję jak zastosować filtr) Można zdefiniować maksymalnie cztery parametry. Warunki są łączone za pomocą operatora OR.
 
-6. Kliknij przycisk **Ok** do utworzenia filtru.
+6. Kliknij przycisk **OK** , aby utworzyć filtr.
 
 > [!NOTE]
-> Po utworzeniu filtru przy użyciu Kreatora szablonów, można ją edytować tylko ręcznie. Nie jest możliwe uruchomić Kreatora tworzenia filtru, który został utworzony wcześniej. Ponadto warunki filtr XPath w Kreatorze szablonu są łączone za pomocą operatora OR. Jeśli potrzebujesz i operacji, można edytować wyrażenie filtru, po jego utworzeniu.
+> Po utworzeniu filtru za pomocą Kreatora szablonu można go edytować tylko ręcznie. Nie można aktywować kreatora dla filtru, który został wcześniej utworzony. Ponadto warunki filtru XPath utworzonego w Kreatorze szablonów są łączone za pomocą operatora OR. Jeśli wymagana jest operacja i, można edytować wyrażenie filtru po jego utworzeniu.
 
-###### <a name="creating-a-custom-filter-manually"></a>Ręczne tworzenie niestandardowego filtru
+###### <a name="creating-a-custom-filter-manually"></a>Ręczne tworzenie filtru niestandardowego
 
-Menu niestandardowe filtry umożliwia ręczne wprowadzenie filtrach XPath.
+Menu Filtry niestandardowe pozwala na ręczne wprowadzanie filtrów XPath.
 
-1. W menu Widok, kliknij przycisk **niestandardowe filtry** elementu menu.
+1. W menu Widok kliknij element menu **filtry niestandardowe** .
 
-2. W wyświetlonym oknie dialogowym kliknij **nowy.**
+2. W wyświetlonym oknie dialogowym kliknij pozycję **Nowy.**
 
-3. Minimum Określ nazwę filtru i XPath wyrażenia.
+3. Określ nazwę filtru i wyrażenie XPath przy minimalnej wartości.
 
 4. Kliknij przycisk **OK**.
 
-###### <a name="applying-a-custom-filter"></a>Stosowanie niestandardowego filtru
+###### <a name="applying-a-custom-filter"></a>Stosowanie filtru niestandardowego
 
-Po utworzeniu niestandardowego filtru jest dostępny do narzędzi filtru. Wybierz filtr, który chcesz zastosować w **wyszukiwania w** pole filtru paska narzędzi. W poprzednim przykładzie należy wybrać identyfikator wątku.
+Po utworzeniu filtru niestandardowego jest on dostępny za pośrednictwem paska narzędzi filtru. Wybierz filtr, który ma zostać zastosowany w polu **Wyszukaj w** pasku narzędzi filtru. W poprzednim przykładzie wybierz pozycję "Identyfikator wątku".
 
-1. Określ wartość, którego szukasz w **Znajdź** pola. W tym przykładzie należy wprowadzić identyfikator wątku, który chcesz wyszukać.
+1. Określ wartość, której szukasz, w polu **Znajdź** . W naszym przykładzie wprowadź identyfikator wątku, który chcesz wyszukać.
 
-2. Kliknij przycisk **filtr teraz**i sprawdź, czy wynik operacji.
+2. Kliknij pozycję **Filtruj teraz**i obserwuj wynik operacji.
 
-Jeśli filtr korzysta z wielu parametrów, wprowadź je przy użyciu ";" jako separator w **Znajdź** pola. Na przykład następujący ciąg definiuje 3 parametry: "1; findValue tekst". Podgląd dotyczy '1' {0} parametru filtru. 'findValue' i 'text' są stosowane do {1} i {2} odpowiednio.
+Jeśli filtr używa wielu parametrów, wprowadź je za pomocą znaku ";" jako separatora w polu **Znajdź** . Na przykład następujący ciąg definiuje 3 parametry: ' 1; findValue; text '. Przeglądarka stosuje wartość "1" do parametru {0} filtru. wartości "findValue" i "text" są stosowane odpowiednio do {1} i {2}.
 
-###### <a name="sharing-custom-filters"></a>Udostępnianie filtry niestandardowe
+###### <a name="sharing-custom-filters"></a>Udostępnianie filtrów niestandardowych
 
-Filtry niestandardowe mogą być współużytkowane w różnych sesjach i różnych użytkowników. Możesz wyeksportować filtry do pliku definicji i zaimportować ten plik w innej lokalizacji.
+Filtry niestandardowe mogą być współużytkowane między różnymi sesjami i różnymi użytkownikami. Możesz wyeksportować filtry do pliku definicji i zaimportować ten plik w innej lokalizacji.
 
  Aby zaimportować filtr niestandardowy:
 
-1. W **widoku** menu, kliknij przycisk **niestandardowe filtry**.
+1. W menu **Widok** kliknij pozycję **filtry niestandardowe**.
 
-2. W wyświetlonym oknie dialogowym kliknij **importu** przycisku.
+2. W otwartym oknie dialogowym kliknij przycisk **Importuj** .
 
-3. Przejdź do pliku niestandardowego filtru (.stvcf), kliknij plik, a następnie kliknij przycisk **Otwórz** przycisku.
+3. Przejdź do pliku filtru niestandardowego (. stvcf), kliknij plik, a następnie kliknij przycisk **Otwórz** .
 
-Aby wyeksportować niestandardowy filtr:
+Aby wyeksportować filtr niestandardowy:
 
-1. W menu Widok, kliknij przycisk **niestandardowe filtry**.
+1. W menu Widok kliknij pozycję **filtry niestandardowe**.
 
-2. W wyświetlonym oknie dialogowym Wybierz filtr, który chcesz wyeksportować.
+2. W otwartym oknie dialogowym Wybierz filtr, który chcesz wyeksportować.
 
-3. Kliknij przycisk **wyeksportować** przycisku.
+3. Kliknij przycisk **Eksportuj** .
 
-4. Określ nazwę i lokalizację pliku definicji niestandardowego filtru (.stvcf), a następnie kliknij przycisk **Zapisz** przycisku.
+4. Określ nazwę i lokalizację pliku definicji filtru niestandardowego (. stvcf), a następnie kliknij przycisk **Zapisz** .
 
 > [!NOTE]
-> Te filtry niestandardowe można tylko zaimportować i wyeksportować z przeglądarki danych śledzenia usługi. Nie można ich odczytać, za pomocą innych narzędzi.
+> Te filtry niestandardowe można importować i eksportować tylko z przeglądarki śledzenia usługi. Nie mogą być odczytane przez inne narzędzia.
 
 ### <a name="finding-data"></a>Znajdowanie danych
 
-Podgląd oferuje następujące sposoby znajdowania danych:
+Przeglądarka udostępnia następujące metody znajdowania danych:
 
-- Pasek narzędzi wyszukiwania zapewnia szybki dostęp do najbardziej typowe opcje wyszukiwania.
+- Pasek narzędzi Znajdź zapewnia szybki dostęp do najczęściej używanych opcji znajdowania.
 
-- Okno dialogowe znajdowania umożliwia znaleźć więcej opcji. Nie jest dostępny za pośrednictwem **Edytuj** menu lub przez krótki klawiszy Ctrl + F.
+- Okno dialogowe znajdowania zawiera więcej opcji znajdowania. Jest dostępny za pomocą menu **Edytuj** lub przez krótki klawisz Ctrl + F.
 
-Pasek narzędzi wyszukiwania pojawia się u góry strony podglądu. Jeśli nie jest obecny, możesz to zrobić w **widoku** menu. Pasek ma dwa składniki:
+Pasek narzędzi Znajdź pojawia się u góry okna podglądu. Jeśli nie istnieje, możesz ją aktywować w menu **Widok** . Pasek ma dwa składniki:
 
-- Znajdź: Umożliwia wprowadzenie słowa kluczowe do wyszukania.
+- Znajdź: umożliwia wprowadzenie słowa kluczowego wyszukiwania.
 
-- Szukaj w: Umożliwia wprowadzenie zakresu wyszukiwania. Możesz wybrać, czy do wyszukania we wszystkich działaniach lub bieżące działanie.
+- Szukaj w: umożliwia wprowadzenie zakresu wyszukiwania. Można wybrać, czy mają być wyszukiwane wszystkie działania, czy tylko bieżące działanie.
 
-Okno dialogowe znajdowania oferuje dwie opcje dodatkowe:
+W oknie dialogowym Znajdowanie dostępne są dwie dodatkowe opcje:
 
 - Znajdź element docelowy:
 
-  - Opcji "nieprzetworzonych danych dzienników dane" przeszukuje wszystkie nieprzetworzone dane słowo kluczowe.
+  - Opcja "nieprzetworzone dane dziennika" przeszukuje słowo kluczowe we wszystkich danych pierwotnych.
 
-  - Opcji "XML Text" i "Atrybut XML" Wyszukiwanie tylko w elementach XML.
+  - Opcje "tekst XML" i "atrybut XML" przeszukują tylko elementy XML.
 
-  - Opcja "Rejestrowany komunikat" przeszukuje słowo kluczowe tylko w wiadomości.
+  - Opcja "zalogowany komunikat" przeszukuje słowo kluczowe tylko w komunikatach.
 
-- Ignoruj działanie główne: Wyszukiwanie ignoruje ślady w działaniu "000000000000". Zwiększa wydajność w plikach dużych śledzenia w czasie działania głównego zawiera tysiące ślady, z których większość czy opłata za transfery.
+- Ignoruj działanie główne: wyszukiwanie ignoruje ślady w działaniu "000000000000". Poprawia to wydajność w dużych plikach śledzenia, gdy działanie główne ma tysiące śladów, z których większość jest transferowana.
 
-### <a name="navigating-traces"></a>Nawigacja śladów
+### <a name="navigating-traces"></a>Nawigowanie po śladach
 
-Ponieważ dane śledzenia są zapisywane krok po kroku podczas wykonywania aplikacji, przechodząc ślady mogą pomóc debugowania aplikacji. Przeglądarki danych śledzenia usługi udostępnia różne sposoby do nawigowania po danych śledzenia.
+Ponieważ ślady są rejestrowane krok po kroku w czasie wykonywania aplikacji, przechodzenie między śladami może ułatwić debugowanie aplikacji. Przeglądarka śledzenia usługi oferuje różne sposoby nawigowania w śladach.
 
-#### <a name="step-forward-or-backward"></a>Krok do przodu lub Wstecz
+#### <a name="step-forward-or-backward"></a>Krok do przodu lub do tyłu
 
-Należy wziąć pod uwagę każdego śledzenia jako linię kodu w programie, przechodzenie do przodu jest bardzo podobny do "Przekrocz nad" w Visual Studio rozwoju środowiska IDE (Integrated). Różnica polega na tym, że można również przejść do tyłu w śladach. Przechodzenie do przodu polega na przejściu do następnej śledzenia w działaniu.
+Jeśli wszystkie ślady są rozpatrywane jako wiersz kodu w programie, przechodzenie do przodu jest bardzo podobne do "krok po kroku" w zintegrowanym środowisku programistycznym (IDE) programu Visual Studio. Różnica polega na tym, że można również przejść do tyłu w śladach. Przechodzenie do przodu oznacza przejście do następnego śladu w działaniu.
 
-- Step Forward: Użyj **działania** menu lub naciśnij pozycję "F10". Można również używać klucza strzałkę "nie działa", w okienku śledzenia.
+- Przejdź do przodu: Użyj menu **działania** lub naciśnij klawisz "F10". W okienku śledzenia można także użyć klawisza Strzałka w dół.
 
-- Krok do tyłu Użyj **działania** menu lub naciśnij pozycję "F9". Można również używać klucza strzałkę "up", w okienku śledzenia.
-
-> [!NOTE]
-> Może to potrwać należy do działania wykonywane w ramach innego procesu lub nawet na innym komputerze, ponieważ komunikatów WCF może wykonywać działania identyfikatorów, które rozciągają się maszyn.
-
-#### <a name="follow-transfer"></a>Postępuj zgodnie z przeniesienia
-
-Transfer danych śledzenia są specjalne śledzenia w pliku śledzenia. Działanie może przesyłać do kolejnego działania, śledzenia transferu. Na przykład "Działanie A", mogą przesyłać do "Działanie B". W takiej sytuacji istnieje śledzenia transferu działalność"A" o nazwie "do: Działanie"i ikona transferu. Ślad transferu jest łącze między dwoma ślady. W "Działanie B" mogą również istnieć ślad transferu na koniec działania, aby przesłać "Działanie A". Jest to podobne do wywołania funkcji w programach: Wywołuje usługę B, następnie B zwraca.
-
-"Follow transferu" przypomina "Krok po kroku" w debugerze. Następuje przeniesienie od A do B. Nie ma żadnego wpływu na pozostałe dane śledzenia.
-
-Istnieją dwa sposoby, aby wykonać przeniesienie: myszy lub klawiatury:
-
-- Przez myszy: Kliknij dwukrotnie śledzenia transferu w okienku śledzenia.
-
-- Przez klawiatury: Wybierz śledzenia transferu i użyj "Transfer postępuj zgodnie z" w **działania** menu lub naciśnij pozycję "F11"
+- Przejdź do tyłu: Użyj menu **działania** lub naciśnij klawisz F9. W okienku śledzenia można także użyć klawisza Strzałka w górę.
 
 > [!NOTE]
-> W wielu przypadkach przesyłania działanie A do B działania działanie A czeka, aż działanie B przesyła powrót do działania A. Oznacza to, że działanie A ma bez śledzenia zarejestrowane w trakcie okresu, gdy działanie B jest aktywnie śledzenia. Jednak jest również możliwe, że działanie A nie czeka i ślady dzienników w dalszym ciągu. Istnieje również możliwość, że działanie B nie są przekazywane do działania A. W związku z tym, transferów działań nadal różnią się od wywołania funkcji w tym sensie. Możesz zrozumieć działanie transferów w widoku wykresu.
+> Może to potrwać do działania w innym procesie lub nawet na innym komputerze, ponieważ komunikaty programu WCF mogą zawierać identyfikatory działań, które obejmują maszyny.
 
-#### <a name="jump-to-next-or-previous-transfer"></a>Przejdź do następnej lub poprzedniej transferu
+#### <a name="follow-transfer"></a>Postępuj zgodnie z transferem
 
-Podczas analizy bieżącego działania lub wybrane działania po wybraniu wielu działań, możesz szybko znaleźć działań, które przekazuje go do. "Skok do przesyłania dalej" umożliwia umieszczanie dalej śledzenia transferu w działaniu. Po odnalezieniu śledzenia transferu służy "Follow transferu" Aby wejść do następnego działania.
+Ślady transferu to specjalne ślady w pliku śledzenia. Działanie może zostać przeniesione do innego działania przez śledzenie transferu. Na przykład "działanie A" może zostać przeniesione do "Activity B". W takim przypadku istnieje śledzenie transferu w "Activity A" o nazwie "to: Activity" i ikonie transferu. Ten ślad transferu jest łączem między dwoma śladami. W obszarze "aktywność B" może być również śledzony transfer na końcu działania, aby można było przesłać z powrotem do "działania A". Jest to podobne do wywołań funkcji w programach: wywołania B, a następnie B zwracają.
 
-- Przejdź do następnego przeniesienia: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F10".
+"Śledź transfer" przypomina "krok po kroku" w debugerze. Następuje przeniesienie od A do B. Nie ma żadnego wpływu na inne ślady.
 
-- Przejdź do poprzedniego transferu: Użyj **działania** menu lub naciśnij pozycję "Ctrl + F9".
+Istnieją dwa sposoby postępowania z transferem: według myszy lub klawiatury:
+
+- Za pomocą myszy: kliknij dwukrotnie ślad transferu w okienku śledzenie.
+
+- Za pomocą klawiatury: Wybierz śledzenie transferu i użyj polecenia "śledź transfer" w menu **działania** lub naciśnij klawisz "F11"
+
+> [!NOTE]
+> W wielu przypadkach, gdy działanie przenosi do działania B, aktywność A oczekuje do momentu, aż aktywność B przeniesie z powrotem do działania A. Oznacza to, że działanie A nie ma śledzenia rejestrowane w okresie, gdy działanie B jest aktywnie śledzone. Jednak jest to możliwe również, że działanie A nie czeka i kontynuuje rejestrowanie śladów. Istnieje również możliwość, że działanie B nie przeniesie z powrotem do działania A. W związku z tym transfery aktywności nadal różnią się od wywołań funkcji w tym sensie. W widoku wykresu można lepiej zrozumieć transfery działań.
+
+#### <a name="jump-to-next-or-previous-transfer"></a>Przejdź do następnego lub poprzedniego transferu
+
+Podczas analizowania bieżącego działania lub wybranych działań w przypadku wybrania wielu działań warto szybko znaleźć działania, do których są przesyłane. "Przeskocz do następnego transferu" pozwala zlokalizować następny ślad transferu w działaniu. Po znalezieniu śledzenia transferu można użyć polecenia "śledź transfer", aby przejść do następnego działania.
+
+- Przejdź do następnego transferu: Użyj menu **działania** lub naciśnij klawisze "CTRL + F10".
+
+- Przejdź do poprzedniego transferu: Użyj menu **działania** lub naciśnij klawisze "Ctrl + F9".
 
 #### <a name="navigate-in-graph-view"></a>Nawigowanie w widoku wykresu
 
-Mimo że nawigacja w okienku śledzenia i okienku aktywności jest podobne do debugowania, za pomocą **wykres** widok zawiera dużo lepiej w nawigacji. Zobacz sekcję "Widoku wykresu", aby uzyskać więcej informacji.
+Chociaż nawigowanie w okienku działanie i w okienku śledzenia jest podobne do debugowania, Używanie widoku **wykresu** zapewnia znacznie lepsze środowisko nawigacji. Aby uzyskać więcej informacji, zobacz sekcję "widok wykresu".
 
-### <a name="loading-large-trace-files"></a>Trwa ładowanie plików śledzenia duże
+### <a name="loading-large-trace-files"></a>Ładowanie dużych plików śledzenia
 
-Pliki śledzenia mogą być bardzo duże. Na przykład w przypadku równoczesnego włączenia śledzenia na poziomie "Pełne", wynikowy plik śledzenia dla uruchamiania za kilka minut można łatwo można kilkuset megabajtów lub jeszcze większym, w zależności od wzorca szybkość i komunikacji sieciowej.
+Pliki śledzenia mogą być bardzo duże. Na przykład, jeśli włączysz śledzenie na poziomie "verbose", wynikowy plik śledzenia do uruchomienia kilku minut może być w łatwy w użyciu setki megabajtów lub nawet większy, w zależności od szybkości sieci i wzorca komunikacji.
 
-Po otwarciu pliku śledzenia bardzo duże w podglądzie śledzenia usługi wydajność systemu może negatywnie wpłynąć na. Szybkość ładowania i czas odpowiedzi po załadowaniu może działać powoli. Rzeczywista szybkość różni się od czasu do czasu, w zależności od konfiguracji sprzętu. W większości komputerów podczas ładowania pliku śledzenia jest większy niż 200M powoduje znaczne pogorszenie wydajności. Ślady plików większych niż 1G narzędzie może zużyć całą dostępną pamięć lub przestanie odpowiadać bardzo długi czas.
+Po otwarciu bardzo dużego pliku śledzenia w podglądzie śledzenia usług może to mieć negatywny wpływ na wydajność systemu. Szybkość ładowania i czas odpowiedzi po załadowaniu mogą być wolne. Rzeczywista szybkość różni się od czasu do czasu, w zależności od konfiguracji sprzętowej. W większości komputerów ładowanie pliku śledzenia większego niż 200M ma poważny wpływ na wydajność. W przypadku śledzenia plików większych niż 1G narzędzie może korzystać z całej dostępnej pamięci lub przestać odpowiadać przez bardzo długi czas.
 
-Aby uniknąć powolne ładowanie i czas odpowiedzi w analizie śledzenia duże pliki, przeglądarki danych śledzenia usługi zawiera funkcję o nazwie "Częściowe ładowanie", które są ładowane są tylko niewielką część śledzenia w czasie. Na przykład masz plik śledzenia ponad 1GB, uruchomione przez kilka dni na serwerze. Jeśli wystąpiły błędy, można analizować śledzenia nie jest potrzebne do otwierania pliku całego śledzenia. Zamiast tego należy załadować śladów w przedziale czasu, gdy może wystąpić błąd. Ponieważ zakres jest mniejszy, narzędzie przeglądarki danych śledzenia usługi można wczytać pliku — szybciej i można zidentyfikować błędy przy użyciu mniejszy zestaw danych.
+Aby uniknąć wolnego czasu ładowania i odpowiedzi podczas analizowania dużych plików śledzenia, przeglądarka śledzenia usług udostępnia funkcję o nazwie "częściowe ładowanie", która ładuje jedynie niewielką część śledzenia w danym momencie. Na przykład może istnieć plik śledzenia o rozmiarze 1 GB, uruchomiony przez kilka dni na serwerze. Gdy wystąpią jakieś błędy i chcesz analizować ślad, nie trzeba otwierać całego pliku śledzenia. Zamiast tego można załadować ślady w określonym czasie, gdy wystąpi błąd. Ze względu na to, że zakres jest mniejszy, narzędzie Podgląd śledzenia usługi może załadować plik szybciej i można zidentyfikować błędy przy użyciu mniejszego zestawu danych.
 
-#### <a name="enabling-partial-loading"></a>Włączenie ładowania częściowego
+#### <a name="enabling-partial-loading"></a>Włączanie ładowania częściowego
 
-Nie musisz ręcznie włączyć ładowania częściowego. Jeśli całkowity rozmiar plików śledzenia, który podejmie próbę załadowania przekracza 40 MB, przeglądarki danych śledzenia usługi automatycznie wyświetla ładowania częściowego okno dialogowe umożliwiające wybranie part, który chcesz załadować.
+Nie jest konieczne ręczne włączenie ładowania częściowego. Jeśli łączny rozmiar plików śledzenia, które próbujesz załadować, przekracza 40MB, przeglądarka śledzenia usługi automatycznie wyświetli okno dialogowe ładowania częściowego umożliwiające wybranie części, która ma zostać załadowana.
 
 > [!NOTE]
-> Ponieważ dane śledzenia nie mogą być rozproszone równomiernie w czasie zakresu, długość okresu, który określisz częściowe ładowania narzędzi może nie być proporcjonalny do rozmiaru ładowania widocznego. Rozmiar rzeczywisty ładowanie może być mniejszy niż szacowany rozmiar w oknie dialogowym ładowania częściowego.
+> Ponieważ ślady nie mogą być dystrybuowane równomiernie w przedziale czasu, długość okresu określonego na pasku narzędzi do częściowego ładowania może nie być proporcjonalna do pokazanego rozmiaru ładowania. Rzeczywisty rozmiar ładowania może być mniejszy niż szacowany rozmiar w oknie dialogowym częściowego ładowania.
 
 #### <a name="adjusting-partial-loading"></a>Dostosowywanie ładowania częściowego
 
-Po załadowaniu częściowo pliku śledzenia, można zmienić ładowany zestaw danych. Aby to zrobić przez dostosowanie narzędzi ładowania częściowego, u góry okna podglądu.
+Po załadowaniu pliku śledzenia częściowo można zmienić ładowany zestaw danych. Można to zrobić, dopasowując częściowy pasek narzędzi ładowania w górnej części okna podglądu.
 
-1. Przesuń pasek narzędzi, myszy, lub wprowadź godzinę rozpoczęcia i zakończenia.
+1. Przenieś pasek narzędzi według myszy lub wprowadź godzinę rozpoczęcia i zakończenia.
 
-2. Kliknij przycisk **Dostosuj** przycisku.
+2. Kliknij przycisk **Dostosuj** .
 
-## <a name="understanding-trace-icons"></a>Omówienie śledzenia ikon
+## <a name="understanding-trace-icons"></a>Omówienie ikon śledzenia
 
-Poniżej przedstawiono listę ikon używanych przez narzędzie przeglądarki danych śledzenia usługi w **działania** widoku **wykres** widoku i **śledzenia** reprezentują różne elementy w okienku.
+Poniżej znajduje się lista ikon używanych przez narzędzie Podgląd śledzenia usług w widoku **działania** , widoku **wykresu** i w okienku **śledzenia** do reprezentowania różnych elementów.
 
 > [!NOTE]
-> Niektóre dane śledzenia, które nie są podzielone (na przykład, "komunikat zostanie zamknięte") ma nie ikony.
+> Niektóre ślady, które nie zostały skategoryzowane (na przykład "komunikat jest zamknięty") nie ma ikony.
 
-### <a name="activity-tracing-traces"></a>Działania śledzenia śladów
-
-|Ikona|Opis|
-|----------|-----------------|
-|![Ostrzeżenie śledzenia](../../../docs/framework/wcf/media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Ostrzeżenie śledzenia: Śledzenia, który jest emitowane na poziomie ostrzeżenia|
-|![Błąd śledzenia](../../../docs/framework/wcf/media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Błąd śledzenia: Śledzenie, który jest emitowane na poziomie błędu.|
-|![Działanie Rozpocznij śledzenie:](../../../docs/framework/wcf/media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Ślad rozpoczęcia działania: Śledzenie, która oznacza początek działania. Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie, Rozpocznij śledzenie na identyfikator działania na proces lub wątek.<br /><br /> Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, następnie widać wielu rozpoczyna się dla tego samego identyfikatora aktywności (po jednej na źródła śledzenia). Rozpocznij śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Działanie Zatrzymaj śledzenie](../../../docs/framework/wcf/media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Działanie Zatrzymaj śledzenie: Śledzenie, który oznacza koniec działania. . Zawiera on nazwę działania. Projektant aplikacji lub dla deweloperów należy zdefiniować jedno działanie Zatrzymaj śledzenie według identyfikatorów aktywności dla źródła śledzenia. Nie śladów ze źródła śledzenia danego są wyświetlane po działaniu Stop emitowane przez to źródło śledzenia, z wyjątkiem, jeśli stopień szczegółowości czasu śledzenia nie jest wystarczająco mała. Jeśli tak się stanie, być przemieszane dwóch ślady z tym samym czasie, w tym zatrzymania, podczas wyświetlania. Jeśli identyfikator działania są propagowane przez źródła śledzenia do śledzenia korelacji, zostanie wyświetlony wielu zatrzyma się na tym samym identyfikatorze aktywności (po jednej na źródła śledzenia). Zatrzymaj śledzenie jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Działanie Suspend śledzenia](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Działanie Suspend śledzenia: Śledzenie oznaczający razem, gdy działanie zostało wstrzymane. Ślady są emitowane w działanie wstrzymaną, dopóki nie wznawia działania. Działanie wstrzymaną oznacza działań wykonywanych w działania w zakresie źródła śledzenia nie przetwarzania. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wstrzymaj śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Działanie wznowienia śledzenia](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Ślad wznowienie działania: Śledzenie, oznaczający czas działania zostanie wznowione po jego została wstrzymana. Ślady mogą ponownie wyemitowane w tym działaniu. Wstrzymywanie/wznawianie ślady są przydatne do profilowania. Wznów śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transfer: Śledzenie, który jest emitowane, gdy przepływ sterowania logicznych jest przenoszona z jednego działania na inny. Działanie, które pochodzi transfer może w dalszym ciągu wykonują pracę równolegle do działania, których przeniesienie przechodzi do. Transfer śledzenia jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
-|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Przenosić: Śledzenie, definiujący transfer z innego działania do bieżącego działania.|
-|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Przenieś do: Śledzenie, definiujący przeniesienia przepływu sterowania logicznych z bieżącego działania do kolejnego działania.|
-
-### <a name="wcf-traces"></a>Dane śledzenia WCF
+### <a name="activity-tracing-traces"></a>Ślady śledzenia działań
 
 |Ikona|Opis|
 |----------|-----------------|
-|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Śledzenie dziennik komunikatów: Śledzenia, które są emitowane po wiadomości WCF jest rejestrowane za pomocą funkcji rejestrowania komunikatów podczas `System.ServiceModel.MessageLogging` źródła śledzenia jest włączona. Kliknięcie tego powoduje wyświetlenie komunikatu. Istnieją cztery punkty rejestrowania można skonfigurować wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, który może być również określony przez `messageSource` atrybutu w śledzenie dziennik komunikatów.|
-|![Komunikat śledzenia odebrane](../../../docs/framework/wcf/media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c")|Śledzenie odebranych komunikatów: Śledzenia, które są emitowane po odebraniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|
-|![Komunikat śledzenia wysłane](../../../docs/framework/wcf/media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4c12-9405-677e995ac387")|Śledzenie wysłanych komunikatów: Śledzenia, który jest emitowane po wysłaniu wiadomości WCF, jeśli `System.ServiceModel` źródła śledzenia jest włączona na poziomie informacji lub pełne. Ślad ma zasadnicze znaczenie dla wyświetlanie strzałek korelacji wiadomości w działaniu **wykres** widoku.|
+|![Ostrzeżenie śledzenia](./media/7457c4ed-8383-4ac7-bada-bcb27409da58.gif "7457c4ed-8383-4ac7-bada-bcb27409da58")|Śledzenie ostrzeżeń: ślad, który jest emitowany na poziomie ostrzeżenia|
+|![Śledzenie błędów](./media/7d908807-4967-4f6d-9226-d52125db69ca.gif "7d908807-4967-4f6d-9226-d52125db69ca")|Śledzenie błędów: ślad, który jest emitowany na poziomie błędu.|
+|![Śledzenie rozpoczęcia działania:](./media/8a728f91-5f80-4a95-afe8-0b6acd6e0317.gif "8a728f91-5f80-4a95-afe8-0b6acd6e0317")|Śledzenie rozpoczęcia działania: ślad, który oznacza początek działania. Zawiera nazwę działania. Jako projektant aplikacji lub deweloper, należy zdefiniować jedno śledzenie uruchamiania działań dla każdego procesu lub wątku.<br /><br /> Jeśli identyfikator działania jest propagowany między źródłami śledzenia dla korelacji śledzenia, można zobaczyć wiele uruchomień dla tego samego identyfikatora działania (jeden na źródło śledzenia). Śledzenie uruchamiania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![Śledzenie zatrzymania działania](./media/a0493e95-653e-4af8-84a4-4d09a400bc31.gif "a0493e95-653e-4af8-84a4-4d09a400bc31")|Śledzenie zatrzymania działania: ślad, który oznacza koniec działania. . Zawiera nazwę działania. Jako projektant aplikacji lub deweloper należy zdefiniować jeden ślad zatrzymania działania dla każdego identyfikatora działania dla źródła śledzenia. Po zatrzymaniu działania przez to źródło śledzenia nie są wyświetlane żadne ślady z danego źródła śledzenia, z wyjątkiem tego, czy stopień szczegółowości czasu śledzenia nie jest wystarczająco mały. W takim przypadku dwa ślady z tym samym czasem, łącznie z zatrzymaniem, mogą zostać przeplatane po wyświetleniu. Jeśli identyfikator działania jest propagowany między źródłami śledzenia dla korelacji śledzenia, można zobaczyć wiele zatrzymań dla tego samego identyfikatora działania (jeden na źródło śledzenia). Śledzenie zatrzymania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|(./media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32") ![śledzenia wstrzymania działania]|Śledzenie wstrzymania działania: ślad, który oznacza czas wstrzymania działania. Żadne ślady nie są emitowane w zawieszonej aktywności do momentu wznowienia działania. Działanie zawieszone oznacza, że żadne przetwarzanie nie odbywa się w tym działaniu w zakresie źródła śledzenia. Śledzenie zawieszania/wznawiania jest przydatne do profilowania. Śledzenie wstrzymania jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![Śledzenie wznowienia działania](./media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4E0A-9988-cdc2f7030f17")|Śledzenie wznawiania działania: ślad oznaczający czas wznowienia działania po jego wstrzymaniu. Ślady mogą być emitowane ponownie w ramach tego działania. Śledzenie zawieszania/wznawiania jest przydatne do profilowania. Ślad wznawiania jest emitowany, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![](./media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "B2d9850e-f362-4ae5-bb8d-9f6f3ca036a5") transferu|Transfer: ślad, który jest emitowany, gdy przepływ kontroli logicznej jest transferowany z jednego działania do innego. Działanie, z którego pochodzi transfer, może nadal wykonywać pracę równolegle do działania, do którego przejdzie transfer. Śledzenie transferu jest emitowane, jeśli ActivityTracing jest włączona dla źródła śledzenia.|
+|![Transfer z](./media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Prześlij z: ślad, który definiuje transfer z innego działania do bieżącego działania.|
+|![Przenieś do](./media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Prześlij do: ślad, który definiuje transfer przepływu sterowania logicznego z bieżącego działania do innego działania.|
+
+### <a name="wcf-traces"></a>Ślady WCF
+
+|Ikona|Opis|
+|----------|-----------------|
+|(./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197") ![śledzenia dziennika komunikatów]|Śledzenie dziennika komunikatów: ślad, który jest emitowany, gdy komunikat WCF jest rejestrowany przez funkcję rejestrowania komunikatów, gdy włączone jest źródło śledzenia `System.ServiceModel.MessageLogging`. Kliknięcie tego śladu wyświetla komunikat. Istnieją cztery konfigurowalne punkty rejestrowania dla wiadomości: ServiceLevelSendRequest, TransportSend, TransportReceive i ServiceLevelReceiveRequest, które mogą być również określane przez atrybut `messageSource` w śladie dziennika komunikatów.|
+|![Komunikat](./media/de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c.gif "de4f586c-c5dd-41ec-b1c3-ac56b4dfa35c") śledzenia|Komunikat otrzymany ślad: ślad, który jest emitowany po odebraniu komunikatu WCF, jeśli źródło śledzenia `System.ServiceModel` jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
+|![Wysłany komunikat](./media/558943c4-17cf-4c12-9405-677e995ac387.gif "558943c4-17cf-4C12-9405-677e995ac387") śledzenia|Komunikat wysłany do śledzenia: ślad, który jest emitowany, gdy zostanie wysłany komunikat WCF, jeśli źródło śledzenia `System.ServiceModel` jest włączone na poziomie informacji lub szczegółowości. Ten ślad jest istotny do wyświetlania strzałki korelacji komunikatów w widoku **wykresu** aktywności.|
 
 ### <a name="activities"></a>Kategoria Activities
 
 |Ikona|Opis|
 |----------|-----------------|
-|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działania: Wskazuje, że bieżące działanie jest ogólne działanie.|
-|![Główny działania](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Działania głównego: Wskazuje działania głównego procesu.|
+|![](./media/wcfc-defaultactivityc.gif "Wcfc_defaultActivityc") działania|Działanie: wskazuje, że bieżące działanie jest działaniem ogólnym.|
+|(./media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9") ![działania głównego]|Działanie główne: wskazuje działanie główne procesu.|
 
-### <a name="wcf-activities"></a>Działania usługi WCF
+### <a name="wcf-activities"></a>Działania WCF
 
 |Ikona|Opis|
 |----------|-----------------|
-|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: Działanie, które umożliwia tworzenie, spowoduje otwarcie lub zamknięcie klienta lub hosta usługi WCF. Błędy, które wystąpiło podczas tych faz pojawi się w przypadku tego działania.|
-|![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działania: Działanie, które dzienniki śledzenia związane z odbiornika. Wewnątrz tego działania możemy wyświetlić żądania informacji i połączenie odbiornika.|
-|![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Odbieranie bajtów działania: Działanie, który grupuje wszystkie ślady dotyczące odbierania Bajty przychodzące połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do korelacji z działaniami transportu, które propagowania ich identyfikator działania, takie jak sterownik http.sys. Błędy połączeń, takie jak przerwań pojawi się w przypadku tego działania.|
-|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Proces działania komunikatu: Działanie, które grupy danych śledzenia dotyczących tworzenia komunikatów WCF. Błędy z powodu nieprawidłowych koperty lub nieprawidłowo sformułowany komunikat pojawi się w działania. Wewnątrz tego działania możemy sprawdzić nagłówki wiadomości, aby zobaczyć, jeśli identyfikator działania został rozpropagowany od elementu wywołującego. Jeśli jest to wartość true, w przypadku, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać do tego działania propagowany działania identyfikator korelacji między obiektami wywołującym i śladów funkcji.|
-|![Komunikat śledzenia dziennika](../../../docs/framework/wcf/media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197")|Działanie działania procesu: Działanie, który grupuje wszystkie ślady związane z żądaniem WCF między dwoma punktami końcowymi. Jeśli `propagateActivity` ustawiono `true` zarówno punkty końcowe w konfiguracji wszystkie ślady z obu punktów końcowych są scalane w jedno działanie, aby uzyskać bezpośredni wpływ. Takie działanie będzie zawierać błędy spowodowane transportu lub zabezpieczeń, przetwarzanie, rozszerzając na granicy kod użytkownika i utworzyć kopię (jeśli istnieje odpowiedzi).|
-|![Przetwarzanie komunikatu działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Wykonaj działania użytkownika kodu: Działanie, który grupuje ślady kod użytkownika do przetworzenia żądania.|
+|(./media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1") ![działania środowiska]|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka hosta lub klienta WCF. W tym działaniu pojawią się błędy, które wystąpiły w trakcie tych faz.|
+|(./media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "D7b135f6-ec7d-45d7-9913-037ab30e4c26") ![aktywności nasłuchiwania]|Działanie nasłuchiwania: działanie, które rejestruje ślady związane z odbiornikiem. Wewnątrz tego działania możemy wyświetlać informacje o odbiorniku i żądania połączeń.|
+|(./media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e") ![aktywności odbierania bajtów]|Aktywność odbierania bajtów: działanie grupujące wszystkie ślady związane z odbieraniem przychodzących bajtów w ramach połączenia między dwoma punktami końcowymi. To działanie jest niezbędne do skorelowania z działaniami transportowymi, które propagują ich identyfikator działania, takich jak http. sys. W tym działaniu będą wyświetlane błędy połączeń, takie jak przerwania.|
+|![Proces działania komunikatu](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Działanie przetwarzania komunikatu: działanie grupujące dane śledzenia związane z tworzeniem komunikatów WCF. Błędy spowodowane złą kopertą lub źle sformułowany komunikat pojawi się w tym działaniu. Wewnątrz tego działania możemy sprawdzić nagłówki wiadomości, aby sprawdzić, czy identyfikator działania został rozpropagowany z obiektu wywołującego. Jeśli ta wartość jest równa true, w przypadku przechodzenia do działania dotyczącego akcji (kolejnej ikony) można także przypisać do tego działania propagowany identyfikator działania dla korelacji między ślady wywołujące i wywoływane.|
+|(./media/7c66e994-2476-4260-a0db-98948b9af197.gif "7c66e994-2476-4260-a0db-98948b9af197") ![śledzenia dziennika komunikatów]|Działanie działania procesu: działanie grupujące wszystkie ślady związane z żądaniem programu WCF w dwóch punktach końcowych. Jeśli `propagateActivity` jest ustawiona na `true` dla obu punktów końcowych w konfiguracji, wszystkie ślady z obu punktów końcowych zostaną scalone w jedno działanie dla bezpośredniej korelacji. Takie działanie będzie zawierać błędy spowodowane transportem lub przetwarzaniem zabezpieczeń, rozszerzając do granicy kodu użytkownika i z powrotem (Jeśli odpowiedź istnieje).|
+|![Proces działania komunikatu](./media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Działanie wykonywania kodu użytkownika: działanie grupujące dane śledzenia kodu użytkownika na potrzeby przetwarzania żądania.|
 
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów
 
-Jeśli nie masz uprawnień do zapisu w rejestrze, otrzymasz następujący komunikat o błędzie "Microsoft Service przeglądarka śledzenia nie został zarejestrowany w systemie" Kiedy używać "`svctraceviewer /register`" polecenie, aby zarejestrować narzędzia. W takiej sytuacji należy rejestrować przy użyciu konta które ma dostęp do zapisu do rejestru.
+Jeśli użytkownik nie ma uprawnień do zapisu w rejestrze, zostanie wyświetlony następujący komunikat o błędzie "w przypadku użycia polecenia" `svctraceviewer /register` "Podgląd śledzenia usługi firmy Microsoft nie został zarejestrowany w systemie, gdy do zarejestrowania tego narzędzia jest używane polecenie" {0} ". W takim przypadku należy zalogować się przy użyciu konta, które ma dostęp do zapisu w rejestrze.
 
-Ponadto narzędzie przeglądarki danych śledzenia usługi zapisuje niektóre ustawienia (na przykład niestandardowe filtry i opcje filtrowania) do pliku SvcTraceViewer.exe.settings w folderze zestawu. Jeśli nie masz uprawnień do odczytu dla pliku, nadal można uruchomić narzędzie, ale nie można załadować ustawień.
+Ponadto narzędzie Podgląd śledzenia usług zapisuje niektóre ustawienia (na przykład filtry niestandardowe i opcje filtru) do pliku SvcTraceViewer. exe. Settings w folderze zestawu. Jeśli nie masz uprawnienia do odczytu pliku, możesz nadal uruchamiać narzędzie, ale nie można załadować ustawień.
 
-Jeśli otrzymasz komunikat o błędzie "Wystąpił nieznany błąd podczas przetwarzania śladów co najmniej jeden" podczas otwierania pliku etl, oznacza to, że format plik etl jest nieprawidłowy.
+Jeśli zostanie wyświetlony komunikat o błędzie "Wystąpił nieznany błąd podczas przetwarzania co najmniej jednego śladu" podczas otwierania pliku. etl, oznacza to, że format pliku ETL jest nieprawidłowy.
 
-Po otwarciu dziennika śledzenia utworzone za pomocą arabskim systemie operacyjnym, możesz zauważyć, że nie działa filtr czasu. Na przykład roku 2005 odnosi się do roku 1427 w języku arabskim kalendarzu. Zakres czasu, obsługiwane przez przeglądarki danych śledzenia usługi filtr narzędzie nie obsługuje jednak daty wcześniejszej niż 1752. To oznacza, że nie jest możliwe wybrać poprawną datę w filtrze. Aby rozwiązać ten problem, należy utworzyć filtr niestandardowy (**widok/niestandardowe filtry**) za pomocą wyrażenia XPath do uwzględnienia w określonym zakresie czasu.
+Jeśli otworzysz dziennik śledzenia utworzony przy użyciu arabskiej systemu operacyjnego, możesz zauważyć, że filtr czasu nie działa. Na przykład rok 2005 odpowiada roku 1427 w kalendarzu arabskim. Jednak zakres czasu obsługiwany przez filtr narzędzia Podgląd śledzenia usług nie obsługuje daty wcześniejszej niż 1752. Może to oznaczać, że nie można wybrać prawidłowej daty w filtrze. Aby rozwiązać ten problem, można utworzyć filtr niestandardowy (**Widok/filtry niestandardowe**) przy użyciu wyrażenia XPath, aby uwzględnić określony zakres czasu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](./diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Konfigurowanie śledzenia](./diagnostics/tracing/configuring-tracing.md)
 - [Kompleksowe śledzenie](./diagnostics/tracing/end-to-end-tracing.md)

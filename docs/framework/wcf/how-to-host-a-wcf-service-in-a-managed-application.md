@@ -5,91 +5,91 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e3adcad6ba70aa64b797325cd45a043301d7e680
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637580"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320977"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji
 
-Aby hostować usługi w ramach zarządzaną aplikację, Osadź kod dla usługi w kodzie aplikacji zarządzanej, albo obowiązkowo w kodzie, w sposób deklaratywny za pośrednictwem konfiguracji lub przy użyciu domyślnych punktów końcowych, definiowanie punktu końcowego usługi, a następnie utwórz wystąpienie <xref:System.ServiceModel.ServiceHost>.
+Aby hostować usługę wewnątrz zarządzanej aplikacji, należy osadzić kod usługi w kodzie zarządzanej aplikacji, zdefiniować punkt końcowy usługi w sposób bezwzględny w kodzie, deklaratywnie za pośrednictwem konfiguracji lub użyć domyślnych punktów końcowych, a następnie utworzyć wystąpienie <xref:System.ServiceModel.ServiceHost>.
 
-Aby rozpocząć odbieranie komunikatów, należy wywołać <xref:System.ServiceModel.ICommunicationObject.Open%2A> na <xref:System.ServiceModel.ServiceHost>. Umożliwia utworzenie i otwiera odbiornika dla usługi. Usługi w ten sposób hostingu często nazywa się "hostingu samodzielnego", ponieważ aplikacja zarządzana wykonuje utwór hostingu. Aby zamknąć tę usługę, należy wywołać <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.ServiceHost>.
+Aby rozpocząć otrzymywanie komunikatów, wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A> w <xref:System.ServiceModel.ServiceHost>. Spowoduje to utworzenie i otwarcie odbiornika dla usługi. Hosting usługi w ten sposób jest często określany jako "hosting samodzielny", ponieważ zarządzana aplikacja wykonuje działania hostingowe. Aby zamknąć usługę, wywołaj <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType> w <xref:System.ServiceModel.ServiceHost>.
 
-Usługa może też być hostowana w zarządzanych usług Windows, w Internet Information Services (IIS) lub w Windows Process Activation Service (WAS). Aby uzyskać więcej informacji na temat opcji usługi hostingu, zobacz [usług obsługującego](../../../docs/framework/wcf/hosting-services.md).
+Usługa może być również hostowana w usłudze zarządzanej systemu Windows, w Internet Information Services (IIS) lub w usłudze aktywacji procesów systemu Windows (WAS). Aby uzyskać więcej informacji na temat opcji hostingu dla usługi, zobacz [usługi hostingu](hosting-services.md).
 
-Usługi w zarządzanej aplikacji hosta jest najbardziej elastyczna opcja, ponieważ wymaga co najmniej infrastruktury do wdrożenia. Aby uzyskać więcej informacji o hostingu usług w zarządzanych aplikacjach, zobacz [hostowanie w aplikacji Managed](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
+Hostowanie usługi w aplikacji zarządzanej jest najbardziej elastyczną opcją, ponieważ wymaga ona najmniejszej infrastruktury do wdrożenia. Aby uzyskać więcej informacji na temat usług hostingu w zarządzanych aplikacjach, zobacz [hosting w aplikacji zarządzanej](./feature-details/hosting-in-a-managed-application.md).
 
-Poniższa procedura demonstruje sposób implementacji usługi samodzielnie hostowanej w aplikacji konsoli.
+Poniższa procedura przedstawia sposób implementacji usługi samodzielnej w aplikacji konsolowej.
 
-## <a name="create-a-self-hosted-service"></a>Tworzenie własnego usługi
+## <a name="create-a-self-hosted-service"></a>Tworzenie usługi samodzielnej
 
-1. Utwórz nową aplikację konsoli:
+1. Utwórz nową aplikację konsolową:
 
-   1. Otwórz program Visual Studio i wybierz **New** > **projektu** z **pliku** menu.
+   1. Otwórz program Visual Studio i wybierz pozycję **Nowy** **projekt**  >  z menu **plik** .
 
-   2. W **zainstalowane szablony** listy wybierz **Visual C#** lub **języka Visual Basic**, a następnie wybierz pozycję **pulpitu Windows**.
+   2. Na liście **zainstalowane szablony** wybierz pozycję **Visual C#**  lub **Visual Basic**, a następnie wybierz pozycję **Windows Desktop**.
 
-   3. Wybierz **aplikacja Konsolowa** szablonu. Typ `SelfHost` w **nazwa** pole, a następnie wybierz **OK**.
+   3. Wybierz szablon **aplikacja konsoli** . Wpisz `SelfHost` w polu **Nazwa** , a następnie wybierz przycisk **OK**.
 
-2. Kliknij prawym przyciskiem myszy **host własny** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie**. Wybierz **System.ServiceModel** z **.NET** kartę, a następnie wybierz **OK**.
+2. Kliknij prawym przyciskiem myszy pozycję **SelfHost** w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj odwołanie**. Wybierz **System. ServiceModel** z karty **.NET** , a następnie wybierz przycisk **OK**.
 
     > [!TIP]
-    > Jeśli **Eksploratora rozwiązań** okno nie jest widoczny, wybierz opcję **Eksploratora rozwiązań** z **widoku** menu.
+    > Jeśli okno **Eksplorator rozwiązań** nie jest widoczne, wybierz pozycję **Eksplorator rozwiązań** z menu **Widok** .
 
-3. Kliknij dwukrotnie **Program.cs** lub **Module1.vb** w **Eksploratora rozwiązań** aby otworzyć go w oknie kodu, jeśli nie jest jeszcze otwarty. Dodaj następujące instrukcje w górnej części pliku:
+3. Kliknij dwukrotnie pozycję **program.cs** lub **Module1. vb** w **Eksplorator rozwiązań** , aby otworzyć ją w oknie kodu, jeśli nie jest jeszcze otwarta. Dodaj następujące instrukcje w górnej części pliku:
 
      [!code-csharp[CFX_SelfHost4#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#1)]
      [!code-vb[CFX_SelfHost4#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#1)]
 
-4. Definiowanie i implementowanie kontraktu usługi. Ten przykład definiuje `HelloWorldService` , zwraca komunikat na podstawie danych wejściowych do usługi.
+4. Zdefiniuj i zaimplementuj kontrakt usługi. W tym przykładzie zdefiniowano `HelloWorldService`, która zwraca komunikat na podstawie danych wejściowych usługi.
 
      [!code-csharp[CFX_SelfHost4#2](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#2)]
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > Aby uzyskać więcej informacji o tym, jak definiować ani implementować interfejsu usługi, zobacz [jak: Definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) i [jak: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md).
+    > Aby uzyskać więcej informacji na temat sposobu definiowania i implementowania interfejsu usługi, zobacz [How to: define a Service Contract](how-to-define-a-wcf-service-contract.md) and [How to: Implementuj kontrakt usługi](how-to-implement-a-wcf-contract.md).
 
-5. W górnej części `Main` metody, Utwórz wystąpienie obiektu <xref:System.Uri> klasy przy użyciu podstawowego adresu usługi.
+5. W górnej części metody `Main` Utwórz wystąpienie klasy <xref:System.Uri> z adresem podstawowym usługi.
 
      [!code-csharp[CFX_SelfHost4#3](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#3)]
      [!code-vb[CFX_SelfHost4#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#3)]
 
-6. Utwórz wystąpienie obiektu <xref:System.ServiceModel.ServiceHost> klasy, przekazując <xref:System.Type> który reprezentuje typ usługi, a podstawą adresu identyfikator (URI) do <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>. Włączanie publikowania metadanych, a następnie wywołaj <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody <xref:System.ServiceModel.ServiceHost> do inicjowania usługi i przygotować je do odbierania komunikatów.
+6. Utwórz wystąpienie klasy <xref:System.ServiceModel.ServiceHost>, przekazując <xref:System.Type> reprezentujące typ usługi i adres podstawowy Uniform Resource Identifier (URI) do <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Type%2CSystem.Uri%5B%5D%29>. Włącz Publikowanie metadanych, a następnie Wywołaj metodę <xref:System.ServiceModel.ICommunicationObject.Open%2A> na <xref:System.ServiceModel.ServiceHost> w celu zainicjowania usługi i przygotowania jej do odbierania komunikatów.
 
      [!code-csharp[CFX_SelfHost4#4](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#4)]
      [!code-vb[CFX_SelfHost4#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#4)]
 
     > [!NOTE]
-    > W tym przykładzie użyto domyślnych punktów końcowych, a plik konfiguracji nie jest wymagana dla tej usługi. Jeśli punkty końcowe nie są skonfigurowane, środowisko uruchomieniowe tworzy jeden punkt końcowy dla każdego adresu podstawowego dla każdej umowy serwisowej implementowane przez usługę. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+    > W tym przykładzie są stosowane domyślne punkty końcowe i plik konfiguracji nie jest wymagany dla tej usługi. Jeśli nie skonfigurowano żadnych punktów końcowych, środowisko uruchomieniowe tworzy jeden punkt końcowy dla każdego adresu podstawowego dla każdego kontraktu usługi zaimplementowanego przez usługę. Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](./samples/simplified-configuration-for-wcf-services.md).
 
-7. Naciśnij klawisz **Ctrl**+**Shift**+**B** do skompilowania rozwiązania.
+7. Naciśnij **klawisze Ctrl**+**SHIFT**+**B** , aby skompilować rozwiązanie.
 
 ## <a name="test-the-service"></a>Testowanie usługi
 
-1. Naciśnij klawisz **Ctrl**+**F5** do uruchamiania usługi.
+1. Naciśnij **klawisze Ctrl**+**F5** , aby uruchomić usługę.
 
 2. Otwórz **klienta testowego WCF**.
 
     > [!TIP]
-    > Aby otworzyć **klienta testowego WCF**, otwórz wiersz polecenia dla deweloperów programu Visual Studio i wykonywanie **WcfTestClient.exe**.
+    > Aby otworzyć **klienta testowego WCF**, Otwórz wiersz polecenia dla deweloperów dla programu Visual Studio i wykonaj **WcfTestClient. exe**.
 
-3. Wybierz **Dodaj usługę** z **pliku** menu.
+3. Wybierz pozycję **Dodaj usługę** z menu **plik** .
 
-4. Typ `http://localhost:8080/hello` w polu adresu i kliknij przycisk **OK**.
+4. Wpisz `http://localhost:8080/hello` w polu adres i kliknij przycisk **OK**.
 
     > [!TIP]
-    > Upewnij się, że usługa jest uruchomiona. w przeciwnym razie ten krok zakończy się niepowodzeniem. Jeśli zmienisz adres podstawowy w kodzie, użyj zmodyfikowany adres podstawowy, w tym kroku.
+    > Upewnij się, że usługa jest uruchomiona, lub w przeciwnym razie ten krok nie powiedzie się. Jeśli zmieniono adres podstawowy w kodzie, należy użyć zmodyfikowanego adresu podstawowego w tym kroku.
 
-5. Kliknij dwukrotnie **SayHello** w obszarze **Moje projekty usług** węzła. Wpisz nazwę w **wartość** kolumny w **żądania** listy, a następnie kliknij przycisk **Invoke**.
+5. Kliknij dwukrotnie pozycję **sayHello** w węźle **Moje projekty usług** . Wpisz swoją nazwę w kolumnie **wartość** na liście **żądanie** , a następnie kliknij pozycję **Wywołaj**.
 
-   W odpowiedzi zostanie wyświetlony komunikat **odpowiedzi** listy.
+   Na liście **odpowiedzi** zostanie wyświetlony komunikat odpowiedzi.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy <xref:System.ServiceModel.ServiceHost> obiektu do hostowania usługi typu `HelloWorldService`, a następnie wywołuje <xref:System.ServiceModel.ICommunicationObject.Open%2A> metody w <xref:System.ServiceModel.ServiceHost>. Adres podstawowy jest zawarte w kodzie, włączono publikowanie metadanych i domyślne punkty końcowe są używane.
+Poniższy przykład tworzy obiekt <xref:System.ServiceModel.ServiceHost> w celu hostowania usługi typu `HelloWorldService`, a następnie wywołuje metodę <xref:System.ServiceModel.ICommunicationObject.Open%2A> w <xref:System.ServiceModel.ServiceHost>. Adres podstawowy jest podany w kodzie, funkcja publikowania metadanych jest włączona, a domyślne punkty końcowe są używane.
 
 [!code-csharp[CFX_SelfHost4#5](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_selfhost4/cs/program.cs#5)]
 [!code-vb[CFX_SelfHost4#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#5)]
@@ -99,11 +99,11 @@ Poniższy przykład tworzy <xref:System.ServiceModel.ServiceHost> obiektu do hos
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [Instrukcje: Hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [Host samodzielny](../../../docs/framework/wcf/samples/self-host.md)
-- [Usługi hostingowe](../../../docs/framework/wcf/hosting-services.md)
-- [Instrukcje: Definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
-- [Instrukcje: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
-- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Powiązania dostarczane przez system](../../../docs/framework/wcf/system-provided-bindings.md)
+- [Instrukcje: hostowanie usługi WCF w programie IIS](./feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Host samodzielny](./samples/self-host.md)
+- [Usługi hostingowe](hosting-services.md)
+- [Instrukcje: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)
+- [Instrukcje: implementowanie kontraktu usługi](how-to-implement-a-wcf-contract.md)
+- [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)
+- [Powiązania dostarczane przez system](system-provided-bindings.md)

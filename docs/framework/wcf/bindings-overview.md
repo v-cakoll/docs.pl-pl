@@ -4,59 +4,59 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 8c1e44609a0a20ffcec55af43e49ee62b0842378
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348201"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320755"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
-Powiązania to obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy usługi WCF wymaga powiązania do być poprawnie określona. W tym temacie opisano rodzaje komunikacji szczegółowe informacje, które definiują powiązania, elementy powiązania, jakie powiązania znajdują się w programie WCF i jak można określić powiązanie dla punktu końcowego.  
+Powiązania są obiektami, które są używane do określania szczegółów komunikacji, które są wymagane do nawiązania połączenia z punktem końcowym usługi Windows Communication Foundation (WCF). Każdy punkt końcowy w usłudze WCF wymaga, aby powiązanie było prawidłowo określone. W tym temacie opisano typy szczegółów komunikacji zdefiniowane przez powiązania, elementy powiązania, jakie powiązania są zawarte w programie WCF oraz jak można określić powiązanie dla punktu końcowego.  
   
-## <a name="what-a-binding-defines"></a>Definiuje powiązanie  
- Informacje przedstawione w powiązaniu może być bardzo podstawowe lub bardzo złożone. Podstawowe powiązanie określa tylko protokół transportu (np. HTTP) używany do łączenia z punktu końcowego. Ogólnie rzecz biorąc powiązanie zawiera informacje o tym, jak połączyć się z punktem końcowym należy do jednej z następujących kategorii:  
+## <a name="what-a-binding-defines"></a>Co definiuje powiązanie  
+ Informacje w powiązaniu mogą być bardzo podstawowe lub bardzo złożone. Najbardziej podstawowe powiązanie określa tylko protokół transportowy (na przykład HTTP), który musi zostać użyty do nawiązania połączenia z punktem końcowym. Ogólnie rzecz biorąc, informacje, które wiążą się z tym, jak nawiązać połączenie z punktem końcowym, znajdują się w jednej z następujących kategorii:  
   
- **Protokoły**  
- Określa mechanizm zabezpieczeń używane: niezawodne możliwości obsługi komunikatów lub ustawienia przepływu kontekstu transakcji.  
+ **Protokołów**  
+ Określa używany mechanizm zabezpieczeń: niezawodne możliwości obsługi komunikatów lub ustawienia przepływu kontekstu transakcji.  
   
- **Kodowanie**  
- Określa kodowanie komunikatu (na przykład tekst lub dane binarne).  
+ **Kody**  
+ Określa kodowanie wiadomości (na przykład tekst lub binarny).  
   
- **Transport**  
- Określa podstawowy protokół transportu do użycia (na przykład, TCP lub HTTP).  
+ **Transportu**  
+ Określa podstawowy protokół transportowy do użycia (na przykład TCP lub HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Elementy powiązania  
- Powiązanie po prostu składa się z uporządkowanej stosu powiązania elementów, z których każdy określa część informacji komunikacji wymagane do połączenia z punktu końcowego usługi. Dwie najniższej warstwy ze stosu są wymagane. Podstawową stosu jest element powiązania transportu i tuż nad tym jest elementem, który zawiera specyfikacje Kodowanie komunikatu. Elementy opcjonalne powiązania, określających inne protokoły komunikacyjne są warstwowe powyżej tych dwóch wymaganych elementów. Aby uzyskać więcej informacji o tych elementów powiązania i poprawne porządkowanie zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Powiązanie zasadniczo składa się z uporządkowanego stosu elementów powiązania, z których każdy określa część informacji o komunikacji wymaganych do nawiązania połączenia z punktem końcowym usługi. Wymagane są dwie najniższe warstwy w stosie. Na początku stosu jest elementem powiązania transportu i tuż powyżej jest element, który zawiera specyfikacje kodowania komunikatów. Opcjonalne elementy powiązania, które określają inne protokoły komunikacyjne, są nakładane powyżej tych dwóch wymaganych elementów. Aby uzyskać więcej informacji na temat tych elementów powiązania i ich prawidłowej kolejności, zobacz [powiązania niestandardowe](./extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
- Informacje przedstawione w powiązaniu może być złożonym procesem, a niektóre ustawienia mogą nie być zgodne z innymi osobami. Z tego powodu WCF zawiera zestaw powiązań dostarczanych przez system. Te powiązania są przeznaczone do obejmuje większość wymagań aplikacji. Następujące klasy reprezentują kilka przykładów powiązania dostarczane przez system:  
+ Informacje w powiązaniu mogą być złożone, a niektóre ustawienia mogą nie być zgodne z innymi. Z tego powodu WCF obejmuje zestaw powiązań dostarczonych przez system. Te powiązania zostały zaprojektowane w celu pokrycia większości wymagań aplikacji. Poniższe klasy reprezentują kilka przykładów powiązań dostarczonych przez system:  
   
-- <xref:System.ServiceModel.BasicHttpBinding>: Protokół HTTP powiązanie odpowiednie do łączenia się z usługami sieci Web, który jest zgodny z WS-I specyfikacja profilu podstawowego (na przykład, sieci Web platformy ASP.NET opartego na usługach usługi).  
+- <xref:System.ServiceModel.BasicHttpBinding>: powiązanie protokołu HTTP odpowiednie do łączenia się z usługami sieci Web, które są zgodne ze specyfikacją profilu usługi WS-I (na przykład ASP.NET usługi sieci Web).  
   
-- <xref:System.ServiceModel.WSHttpBinding>: Interoperacyjne powiązanie odpowiednie do nawiązywania połączenia z punktami końcowymi, które odpowiadają WS-* protokołów.  
+- <xref:System.ServiceModel.WSHttpBinding>: powiązanie interoperacyjne odpowiednie do łączenia się z punktami końcowymi, które są zgodne z protokołami WS-*.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Używa programu .NET Framework, aby nawiązać połączenie z innymi punktami końcowymi programu WCF na tym samym komputerze.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: używa .NET Framework do nawiązywania połączenia z innymi punktami końcowymi WCF na tym samym komputerze.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Używa programu .NET Framework do tworzenia w kolejce komunikatów połączeń z innymi punktami końcowymi programu WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: używa .NET Framework do tworzenia połączeń komunikatów umieszczonych w kolejce z innymi punktami końcowymi WCF.  
 
-- <xref:System.ServiceModel.NetTcpBinding>: To powiązanie oferuje wyższą wydajność niż powiązania protokołu HTTP i stanowi idealne rozwiązanie w sieci lokalnej.
+- <xref:System.ServiceModel.NetTcpBinding>: to powiązanie oferuje wyższą wydajność niż powiązania HTTP i jest idealnym rozwiązaniem do użycia w sieci lokalnej.
   
- Aby uzyskać pełną listę, z opisami wszystkich dostarczone do usług WCF powiązań, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md).  
+ Aby uzyskać pełną listę z opisami wszystkich powiązań dostarczonych przez funkcję WCF, zobacz [powiązania dostarczone przez system](system-provided-bindings.md).  
   
-## <a name="using-your-own-bindings"></a>Za pomocą własnych powiązań.  
- Jeśli żaden z powiązań dostarczanych przez system, dołączone zawiera odpowiedniej kombinacji funkcje, których wymaga aplikacja usługi, możesz utworzyć własne powiązania. Istnieją dwa sposoby, aby to zrobić. Możesz utworzyć nowe powiązanie z istniejące elementy powiązania przy użyciu <xref:System.ServiceModel.Channels.CustomBinding> obiektu, albo można utworzyć powiązania całkowicie zdefiniowane przez użytkownika, wynikające z <xref:System.ServiceModel.Channels.Binding> powiązania. Aby uzyskać więcej informacji na temat tworzenia własnego powiązania, za pomocą tych dwóch metod, zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md) i [powiązania Creating User-Defined](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
+## <a name="using-your-own-bindings"></a>Korzystanie z własnych powiązań  
+ Jeśli żadne z dołączonych do systemu powiązań nie ma odpowiedniej kombinacji funkcji wymaganych przez aplikację usługi, możesz utworzyć własne powiązanie. Istnieją dwa sposoby, aby to zrobić. Można utworzyć nowe powiązanie z istniejących elementów powiązania przy użyciu obiektu <xref:System.ServiceModel.Channels.CustomBinding> lub można utworzyć całkowicie zdefiniowane przez użytkownika powiązanie, pobierając je z powiązania <xref:System.ServiceModel.Channels.Binding>. Aby uzyskać więcej informacji na temat tworzenia własnego powiązania przy użyciu tych dwóch metod, zobacz [niestandardowe powiązania](./extending/custom-bindings.md) i [Tworzenie powiązań zdefiniowanych przez użytkownika](./extending/creating-user-defined-bindings.md).  
   
-## <a name="using-bindings"></a>Za pomocą powiązań  
- Za pomocą powiązań pociąga za sobą dwa podstawowe kroki:  
+## <a name="using-bindings"></a>Używanie powiązań  
+ Używanie powiązań obejmuje dwa podstawowe kroki:  
   
-1. Wybierz lub zdefiniuj powiązania. Jest to najłatwiejsza metoda wybierz jedno z powiązań dostarczanych przez system, dołączone do programu WCF i użyć go przy użyciu ustawień domyślnych. Możesz również wybrać powiązania dostarczane przez system i resetowania wartości właściwości ze swoimi potrzebami. Alternatywnie można utworzyć powiązania niestandardowego lub powiązania zdefiniowane przez użytkownika mają wyższy stopień kontroli i dostosowywania.  
+1. Wybierz lub Zdefiniuj powiązanie. Najprostszą metodą jest wybranie jednego z powiązań dostarczonych przez system z programem WCF i użycie go z ustawieniami domyślnymi. Możesz również wybrać powiązanie dostarczone przez system i zresetować jego wartości właściwości zgodnie z wymaganiami. Alternatywnie można utworzyć niestandardowe powiązanie lub powiązanie zdefiniowane przez użytkownika w celu uzyskania większej liczby stopni kontroli i dostosowywania.  
   
-2. Tworzenie punktu końcowego, który używa powiązania wybrane lub zdefiniowany.  
+2. Utwórz punkt końcowy, który używa wybranego lub zdefiniowanego powiązania.  
   
-## <a name="code-and-configuration"></a>Kod i Konfiguracja  
- Można zdefiniować powiązania na dwa sposoby: za pomocą kodu lub konfiguracji. Te dwie metody nie są zależne od tego, czy przy użyciu powiązania dostarczane przez system lub niestandardowego powiązania. Ogólnie rzecz biorąc przy użyciu kodu zapewnia pełną kontrolę nad definicji powiązania w czasie projektowania. Z drugiej strony, przy użyciu konfiguracji umożliwia administratora systemu lub użytkownika usługi WCF lub klienta w celu zmiany parametrów powiązania, bez konieczności ponownego kompilowania aplikacji usługi. Ta elastyczność często jest pożądane, ponieważ nie istnieje żaden sposób przewidzieć wymagania dotyczące określonego komputera, na których ma zostać wdrożona aplikacja WCF. Zachowanie powiązania (i adresowania) informacji z kodu pozwala im można zmienić bez konieczności ponownej kompilacji lub ponownego wdrażania aplikacji. Należy pamiętać, że powiązań zdefiniowanych w kodzie są tworzone po powiązania określone w konfiguracji, dzięki czemu powiązań zdefiniowanych przez kod zastąpić wszelkie powiązań zdefiniowanych przez konfigurację.  
+## <a name="code-and-configuration"></a>Kod i konfiguracja  
+ Powiązania można definiować na dwa sposoby: za poorednictwem kodu lub przez konfigurację. Te dwa podejścia nie zależą od tego, czy używasz powiązania dostarczonego przez system czy niestandardowego powiązania. Ogólnie rzecz biorąc, przy użyciu kodu zapewnia pełną kontrolę nad definicją powiązania w czasie projektowania. Przy użyciu konfiguracji, z drugiej strony, umożliwia administratorowi systemu lub użytkownikowi usługi lub klientowi WCF zmianę parametrów powiązania bez konieczności ponownego kompilowania aplikacji usługi. Taka elastyczność jest często pożądana, ponieważ nie ma możliwości przewidywania konkretnych wymagań dotyczących maszyn, na których ma zostać wdrożona aplikacja WCF. Przechowywanie informacji o powiązaniach (i adresowania) poza kodem pozwala im zmieniać bez konieczności ponownej kompilacji lub ponownego wdrożenia aplikacji. Należy zauważyć, że powiązania zdefiniowane w kodzie są tworzone po powiązaniach określonych w konfiguracji, umożliwiając powiązanie ze zdefiniowanymi kodem, aby zastąpić wszystkie powiązania zdefiniowane w konfiguracji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)

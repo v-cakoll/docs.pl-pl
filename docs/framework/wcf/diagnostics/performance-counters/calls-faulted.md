@@ -2,19 +2,19 @@
 title: Wywołania zwracające błędy
 ms.date: 03/30/2017
 ms.assetid: bb9e8045-6aeb-4b7f-a825-8283c44252a1
-ms.openlocfilehash: 63181078da4ce75b5b5f68a2d40ad5338a687968
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 864f3b85ea7890c47aaca81063bfead5afd6f567
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797387"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321069"
 ---
 # <a name="calls-faulted"></a>Wywołania zwracające błędy
-Nazwa komputera: Wywołania zwracające błędy  
+Nazwa licznika: wywołania z błędami  
   
 ## <a name="description"></a>Opis  
- Liczba wywołań na tę operację, która zwróceniem. W aplikacjach Windows Communication Foundation (WCF) metody usługi komunikują się przy użyciu protokołu SOAP wiadomości błędu informacje o błędzie przetwarzania. Błędy protokołu SOAP są typy komunikatów, które są zawarte w metadanych dla operacji usługowej i z tego względu utworzyć kontrakt błędu, w której klienci mogą używać się ich wykonanie, bardziej niezawodne lub interaktywne. Ponieważ błędach SOAP są wyrażone klientom w postaci XML, są one bardzo międzyoperacyjnych.  
+ Liczba wywołań tej operacji, które zwróciły błędy. W aplikacjach Windows Communication Foundation (WCF) metody usługi komunikują przetwarzanie informacji o błędach przy użyciu komunikatów błędów protokołu SOAP. Błędy protokołu SOAP to typy komunikatów, które są zawarte w metadanych dla operacji usługi, dlatego należy utworzyć kontrakt błędów, którego klienci mogą używać do bardziej niezawodnego lub interaktywnego wykonania. Ponieważ błędy protokołu SOAP są wyrażane dla klientów w formularzu XML, są one wysoce interoperacyjne.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Określanie i obsługa błędów w kontraktach i usługach](../../specifying-and-handling-faults-in-contracts-and-services.md)

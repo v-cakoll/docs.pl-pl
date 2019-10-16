@@ -2,15 +2,15 @@
 title: Obsługa błędów programu WCF
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: eba0894d6352bc1aea3596ee9d196b386e1eafef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e5c65da3fa13a3640c7a6948f1284d0c6ffdfc4
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645440"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319934"
 ---
 # <a name="wcf-error-handling"></a>Obsługa błędów programu WCF
-Błędy napotykane przez aplikację WCF należeć do jednej z trzech grup:  
+Błędy napotykane przez aplikację WCF należą do jednej z trzech grup:  
   
 1. Błędy komunikacji  
   
@@ -18,33 +18,33 @@ Błędy napotykane przez aplikację WCF należeć do jednej z trzech grup:
   
 3. Błędy aplikacji  
   
- Błędy komunikacji występują, gdy sieć jest niedostępny, klient używa niepoprawny adres lub host usługi nie nasłuchuje przychodzących wiadomości. Błędy tego typu są zwracane do klienta jako <xref:System.ServiceModel.CommunicationException> lub <xref:System.ServiceModel.CommunicationException>-klas pochodnych.  
+ Błędy komunikacji występują, gdy sieć jest niedostępna, klient używa nieprawidłowego adresu lub host usługi nie nasłuchuje komunikatów przychodzących. Błędy tego typu są zwracane do klienta jako <xref:System.ServiceModel.CommunicationException> lub @no__t klas pochodnych -1.  
   
- Błędy serwera proxy/kanału błędów występujących w ramach kanału lub serwera proxy. Błędy tego typu obejmują: Podjęto próbę użycia serwera proxy lub kanału, który został zamknięty, niezgodnością kontraktu istnieje między klientem a usługą lub poświadczenia klienta są odrzucane przez usługę. Istnieje wiele różnych typów błędów w tej kategorii zbyt wiele elementów do wyświetlenia w tym miejscu. Błędy tego typu są zwracane do klienta jako — jest (nie przekształcania odbywa się w obiektach wyjątków).  
+ Błędy serwera proxy/kanału to błędy występujące w kanale lub serwerze proxy. Błędy tego typu obejmują: próba użycia serwera proxy lub kanału, który został zamknięty, występuje niezgodność kontraktu między klientem a usługą lub poświadczenia klienta są odrzucane przez usługę. W tej kategorii istnieje wiele typów błędów, które są zbyt duże, aby można je było wyświetlić w tym miejscu. Błędy tego typu są zwracane do klienta w taki sam sposób, w jaki jest (nie są wykonywane żadne przekształcenia w obiektach wyjątków).  
   
- Występują błędy aplikacji podczas wykonywania operacji usługi. Błędy tego rodzaju są wysyłane do klienta jako <xref:System.ServiceModel.FaultException> lub <xref:System.ServiceModel.FaultException%601>.  
+ Błędy aplikacji występują podczas wykonywania operacji usługi. Błędy tego rodzaju są wysyłane do klienta jako <xref:System.ServiceModel.FaultException> lub <xref:System.ServiceModel.FaultException%601>.  
   
- Obsługa błędów w WCF odbywa się co najmniej jeden z następujących czynności:  
+ Obsługa błędów w programie WCF jest wykonywana przez co najmniej jedną z następujących czynności:  
   
-- Bezpośrednio obsługi wyjątku. Jest to wykonywane tylko dla komunikacji i błędy kanału/serwera proxy.  
+- Bezpośrednie obsługiwanie zgłoszonego wyjątku. Jest to wykonywane tylko w przypadku błędów komunikacji i serwera proxy/kanału.  
   
-- Używanie kontraktów błędów  
+- Korzystanie z umów dotyczących błędów  
   
-- Implementowanie <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejsu  
+- Implementowanie interfejsu <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
   
-- Obsługa <xref:System.ServiceModel.ServiceHost> zdarzenia  
+- Obsługa zdarzeń <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Kontrakty błędów  
- Kontrakty błędów umożliwiają definiowanie błędów, które mogą wystąpić podczas operacji usługi na platformie sposób niezależny. Domyślnie wszystkie wyjątki zgłaszane z w ramach operacji usługi zostanie zwrócony do klienta jako <xref:System.ServiceModel.FaultException> obiektu. <xref:System.ServiceModel.FaultException> Obiektu będzie zawierać informacje bardzo mała. Informacje wysyłane do klienta, definiując kontrakt błędu i zwraca błąd, ponieważ możesz kontrolować <xref:System.ServiceModel.FaultException%601>. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
+ Umowy dotyczące usterek umożliwiają definiowanie błędów, które mogą wystąpić podczas operacji na platformie w niezależny sposób. Domyślnie wszystkie wyjątki zgłoszone w ramach operacji usługi zostaną zwrócone do klienta jako obiekt <xref:System.ServiceModel.FaultException>. Obiekt <xref:System.ServiceModel.FaultException> będzie zawierać bardzo mało informacji. Informacje wysyłane do klienta można kontrolować przez zdefiniowanie kontraktu błędu i zwrócenie błędu jako <xref:System.ServiceModel.FaultException%601>. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](specifying-and-handling-faults-in-contracts-and-services.md).  
   
 ## <a name="ierrorhandler"></a>IErrorHandler  
- <xref:System.ServiceModel.Dispatcher.IErrorHandler> Interfejs umożliwia większą kontrolę nad jak aplikację WCF reaguje na błędy.  Daje pełną kontrolę nad komunikat o błędzie, jest zwracana do klienta, która umożliwia wykonywanie przetwarzania, takich jak rejestrowanie błędów niestandardowych.  Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Dispatcher.IErrorHandler> i [rozszerzanie kontroli nad obsługę błędów i raportowanie](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
+ Interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler> umożliwia większą kontrolę nad sposobem, w jaki aplikacja WCF reaguje na błędy.  Zapewnia pełną kontrolę nad komunikatem o błędzie, który jest zwracany do klienta i umożliwia wykonywanie niestandardowych operacji przetwarzania, takich jak rejestrowanie.  Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Dispatcher.IErrorHandler> i [rozszerzania kontroli nad obsługą błędów i raportowaniem](./samples/extending-control-over-error-handling-and-reporting.md)  
   
-## <a name="servicehost-events"></a>ServiceHost Events  
- <xref:System.ServiceModel.ServiceHost> Klasy usług hostów i definiuje kilka zdarzeń, które mogą być potrzebne do obsługi błędów. Na przykład:  
+## <a name="servicehost-events"></a>Zdarzenia ServiceHost  
+ Klasa <xref:System.ServiceModel.ServiceHost> zawiera usługi i definiuje kilka zdarzeń, które mogą być używane do obsługi błędów. Na przykład:  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- Aby uzyskać więcej informacji zobacz <xref:System.ServiceModel.ServiceHost>
+ Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.ServiceHost>

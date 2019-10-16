@@ -8,31 +8,31 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 1c16c0936f729636aaa56e6e50c33e18c2b0f788
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37e014aad44cf15e04ed3aa03a8367f5a44ceb96
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929340"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319809"
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
-Ta sekcja zawiera tematy, które zapewniają wskazówki dotyczące tworzenia aplikacji Windows Communication Foundation (WCF).  
+Ta sekcja zawiera tematy, które zawierają wskazówki dotyczące tworzenia aplikacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Najlepsze rozwiązania: Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- Wyjaśnia, jak i kiedy utworzyć kontraktów danych, które nie przerywają działania podczas tworzenia przyszłych wersji.  
+ [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](best-practices-data-contract-versioning.md)  
+ Wyjaśnia, jak i kiedy tworzyć Kontrakty danych, które nie są przerywane podczas tworzenia przyszłych wersji.  
   
- [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md)  
- Wyjaśnia, jak należy wziąć pod uwagę przechowywanie wersji w programie WCF. Po wdrożeniu usługi (i punktów końcowych eksponowanie) może być konieczne do można zmienić, na przykład, aby spełnić zmiany wymagań biznesowych lub wymagań IT lub w celu rozwiązywania problemów. Każda zmiana wprowadza nową wersję usługi.  
+ [Przechowywanie wersji usługi](service-versioning.md)  
+ Wyjaśnia, jak rozważyć przechowywanie wersji w programie WCF. Po wdrożeniu może zajść konieczność zmiany usług (i punktów końcowych, które ujawniają), na przykład w celu zaspokojenia zmieniających się wymagań firmy lub wymagań dotyczących zgodności z przepisami lub rozwiązania problemów. Każda zmiana wprowadza nową wersję usługi.  
   
- [Równoważenie obciążenia](../../../docs/framework/wcf/load-balancing.md)  
- Zawiera wskazówki dotyczące równoważenia obciążenia za pomocą farmy sieci Web.  
+ [Równoważenie obciążenia](load-balancing.md)  
+ Wyświetla listę wytycznych dotyczących równoważenia obciążenia w kolektywie serwerów sieci Web.  
   
- [Kontrolowanie zużycia zasobów i zwiększanie wydajności](../../../docs/framework/wcf/controlling-resource-consumption-and-improving-performance.md)  
- Opisuje właściwości, które pomagają zapobiec zużycia zasobów zatrudniany oraz poprawę zabezpieczeń i wskazuje na bardziej szczegółowe informacje dotyczące ich używania.  
+ [Kontrolowanie zużycia zasobów i zwiększanie wydajności](controlling-resource-consumption-and-improving-performance.md)  
+ Opisuje właściwości, które są przeznaczone do zapobiegania niepotrzebnemu zużyciu zasobów i zwiększania bezpieczeństwa i wskazuje na pełniejsze informacje o ich użyciu.  
   
- [Wdrażanie aplikacji WCF za pomocą technologii ClickOnce](../../../docs/framework/wcf/deploying-wcf-applications-with-clickonce.md)  
- W tym artykule opisano zagadnienia, które ma zostać wykonane podczas korzystania z funkcji ClickOnce.  
+ [Wdrażanie aplikacji WCF za pomocą technologii ClickOnce](deploying-wcf-applications-with-clickonce.md)  
+ Opisuje kwestie, które należy wykonać podczas korzystania z funkcji ClickOnce.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -40,13 +40,13 @@ Ta sekcja zawiera tematy, które zapewniają wskazówki dotyczące tworzenia apl
  <xref:System.Runtime.Serialization>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Omówienie pojęć](conceptual-overview.md)  
   
- [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Co to jest program Windows Communication Foundation](whats-wcf.md)
 - [Przykłady Windows Communication Foundation (WCF)](./samples/index.md)
-- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)
-- [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)
+- [Omówienie pojęć](conceptual-overview.md)
+- [Kompilowanie klientów](building-clients.md)

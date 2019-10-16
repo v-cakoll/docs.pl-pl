@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)'
+title: 'Instrukcje: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6fd9a1083cca941422eb89cd6bf23328fc8b5f6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593491"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320564"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (Visual Basic)
+# <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Instrukcje: dołączanie zawartości z niepodobnych plików (LINQ) (Visual Basic)
 
-W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych przecinkami, które mają wspólne wartość, która jest używana jako zgodnego klucza. Ta technika może być przydatne, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego i z plikiem innego formatu, który ma do nowego pliku. Można zmodyfikować przykładu tak, aby pracować z dowolnym rodzajem tekstu ze strukturą.  
+Ten przykład pokazuje, jak połączyć dane z dwóch rozdzielanych przecinkami plików, które mają wspólną wartość używaną jako pasujący klucz. Ta technika może być przydatna, jeśli trzeba połączyć dane z dwóch arkuszy kalkulacyjnych lub z arkusza kalkulacyjnego oraz z pliku, który ma inny format, do nowego pliku. Możesz zmodyfikować przykład, aby współpracować z dowolnym rodzajem tekstu strukturalnego.  
   
 ## <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
   
-1. Skopiuj następujące wiersze do pliku, który nosi nazwę scores.csv i zapisz go do folderu projektu. Plik reprezentuje dane w arkuszu. Kolumna 1 jest Identyfikatorem Studenta, a kolumny od 2 do 5 są wyniki testów.  
+1. Skopiuj następujące wiersze do pliku o nazwie Scores. csv i Zapisz go w folderze projektu. Plik reprezentuje dane arkusza kalkulacyjnego. Kolumna 1 jest IDENTYFIKATORem studenta, a kolumny od 2 do 5 są wynikami testów.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -32,9 +32,9 @@ W tym przykładzie pokazano, jak połączyć dane z dwóch plików rozdzielanych
     122, 94, 92, 91, 91  
     ```  
   
-2. Skopiuj następujące wiersze do pliku, który nosi nazwę names.csv i zapisz go do folderu projektu. Plik reprezentuje arkusz kalkulacyjny zawierający identyfikatora dla uczniów, imię i nazwisko studenta  
+2. Skopiuj następujące wiersze do pliku o nazwie Names. csv i Zapisz go w folderze projektu. Ten plik reprezentuje arkusz kalkulacyjny zawierający nazwisko, imię i nazwisko ucznia.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  

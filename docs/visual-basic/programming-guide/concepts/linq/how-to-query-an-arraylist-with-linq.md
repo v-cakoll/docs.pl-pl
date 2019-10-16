@@ -1,28 +1,28 @@
 ---
-title: 'Instrukcje: Zapytanie w ArrayList za pomocą LINQ (Visual Basic)'
+title: 'Instrukcje: wykonywanie zapytań do ArrayList za pomocą LINQ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
-ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9cc86c6f74c8edc628050c911474bf515784180
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908170"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320309"
 ---
-# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Instrukcje: Zapytanie w ArrayList za pomocą LINQ (Visual Basic)
-Gdy za pomocą LINQ do kwerendy nieogólnego <xref:System.Collections.IEnumerable> kolekcji, takie jak <xref:System.Collections.ArrayList>, należy jawnie zadeklarować rodzaj zmiennej zakresu w celu odzwierciedlenia określonego typu obiektów w kolekcji. Na przykład, jeśli masz <xref:System.Collections.ArrayList> z `Student` obiektów, Twoje [klauzuli From](../../../../visual-basic/language-reference/queries/from-clause.md) powinien wyglądać następująco:  
+# <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>Instrukcje: wykonywanie zapytań do ArrayList za pomocą LINQ (Visual Basic)
+Używając LINQ do wykonywania zapytań dotyczących nieogólnych kolekcji <xref:System.Collections.IEnumerable>, takich jak <xref:System.Collections.ArrayList>, należy jawnie zadeklarować typ zmiennej zakresu w celu odzwierciedlenia określonego typu obiektów w kolekcji. Jeśli na przykład masz <xref:System.Collections.ArrayList> obiektów `Student`, [klauzula FROM](../../../../visual-basic/language-reference/queries/from-clause.md) powinna wyglądać następująco:  
   
-```  
+```vb  
 Dim query = From student As Student In arrList   
-...  
+'...  
 ```  
   
- Przez określenie typu zmiennej zakresu, są rzutowanie każdego elementu w <xref:System.Collections.ArrayList> do `Student`.  
+ Określając typ zmiennej zakresu, rzutuje każdy element w <xref:System.Collections.ArrayList> do `Student`.  
   
- Użycie zmiennej zakresu jawnie wpisanych w wyrażeniu zapytania jest równoważne z wywoływaniem <xref:System.Linq.Enumerable.Cast%2A> metody. <xref:System.Linq.Enumerable.Cast%2A> zgłasza wyjątek, jeśli nie można wykonać określone rzutowanie. <xref:System.Linq.Enumerable.Cast%2A> i <xref:System.Linq.Enumerable.OfType%2A> są dwie metody standardowej kwerendy operatora, które działają w nieogólnej <xref:System.Collections.IEnumerable> typów. W języku Visual Basic należy jawnie wywołać <xref:System.Linq.Enumerable.Cast%2A> metody w źródle danych, aby upewnić się, typu zmiennej zakresu określonego. Aby uzyskać więcej informacji, zobacz [relacje typu w operacjach zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
+ Użycie jawnie wpisanej zmiennej zakresu w wyrażeniu zapytania jest równoznaczne z wywołaniem metody <xref:System.Linq.Enumerable.Cast%2A>. <xref:System.Linq.Enumerable.Cast%2A> zgłasza wyjątek, jeśli nie można wykonać określonego rzutowania. <xref:System.Linq.Enumerable.Cast%2A> i <xref:System.Linq.Enumerable.OfType%2A> to dwie metody standardowego operatora zapytań, które działają na nieogólnych typach <xref:System.Collections.IEnumerable>. W Visual Basic należy jawnie wywołać metodę <xref:System.Linq.Enumerable.Cast%2A> w źródle danych, aby upewnić się, że określony typ zmiennej zakresu. Aby uzyskać więcej informacji, zobacz [relacje typu w operacjach zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia proste zapytanie <xref:System.Collections.ArrayList>. Należy pamiętać, że w tym przykładzie używa inicjatorów obiektów, gdy kod wywołuje <xref:System.Collections.ArrayList.Add%2A> metody, ale nie jest wymagane.  
+ W poniższym przykładzie pokazano proste zapytanie dla <xref:System.Collections.ArrayList>. Należy zauważyć, że w tym przykładzie są używane Inicjatory obiektów, gdy kod wywołuje metodę <xref:System.Collections.ArrayList.Add%2A>, ale nie jest to wymagane.  
   
 ```vb  
 Imports System.Collections  

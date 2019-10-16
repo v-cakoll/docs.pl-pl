@@ -2,19 +2,19 @@
 title: Wywołania zakończone niepowodzeniem
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
-ms.openlocfilehash: e8646adf08e2e6141c6117da7129f348c92105a7
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 47496e38d5cbab23c06b82f392a59ef053f8b01d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422148"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321096"
 ---
 # <a name="calls-failed"></a>Wywołania zakończone niepowodzeniem
-Nazwa komputera: Wywołania zakończone niepowodzeniem  
+Nazwa licznika: wywołania zakończone niepowodzeniem  
   
 ## <a name="description"></a>Opis  
- Liczba wywołań z nieobsługiwanych wyjątków w tej operacji. Ten licznik jest zwiększany za każdym razem, gdy zostanie nieobsługiwany wyjątek w tej operacji.  
+ Liczba wywołań z nieobsługiwanymi wyjątkami w tej operacji. Licznik jest zwiększany za każdym razem, gdy w tej operacji występuje nieobsługiwany wyjątek.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Określanie i obsługa błędów w kontraktach i usługach](../../specifying-and-handling-faults-in-contracts-and-services.md)

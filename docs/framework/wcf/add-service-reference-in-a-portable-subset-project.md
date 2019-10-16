@@ -2,48 +2,48 @@
 title: Dodawanie odwołania usługi w projekcie obsługującym podzestaw przenośny
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 764ce487d8f2673eb2c75f8cd05da4ccbae3c935
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782424"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320851"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Dodawanie odwołania usługi w projekcie obsługującym podzestaw przenośny
-Projekty obsługującym podzestaw przenośny umożliwiają deweloperom zestawu .NET do utrzymywania drzewa pojedyncze źródło i systemu kompilacji, nadal obsługując wiele implementacji .NET (pulpitu, Silverlight, Windows Phone i XBOX). Projekty obsługującym podzestaw przenośny tylko odwołania do bibliotek przenośnych platformy .NET, będące zestaw .NET framework, używanym w implementacji .NET.  
+Przenośne projekty podzestawów umożliwiają programistom zestawu .NET utrzymywanie jednego drzewa źródłowego i systemu kompilacji przy zachowaniu obsługi wielu implementacji platformy .NET (Desktop, Silverlight, Windows Phone i XBOX). Przenośne projekty podzestawów odwołują się tylko do przenośnych bibliotek platformy .NET, które są zestawami programu .NET Framework, które mogą być używane w dowolnej implementacji platformy .NET.  
   
-## <a name="add-service-reference-details"></a>Dodaj szczegóły usługi  
- Podczas dodawania odwołania do usługi w projekcie obsługującym podzestaw przenośny obowiązują następujące ograniczenia:  
+## <a name="add-service-reference-details"></a>Szczegóły Dodaj odwołanie do usługi  
+ Podczas dodawania odwołania do usługi w projekcie podzestawu przenośnego są wymuszane następujące ograniczenia:  
   
-1. Aby uzyskać <xref:System.Xml.Serialization.XmlSerializer>, dozwolone są tylko literał kodowania. Kodowania SOAP generuje błąd podczas importowania.  
+1. W przypadku <xref:System.Xml.Serialization.XmlSerializer> dozwolone są tylko kodowania literałów. Kodowanie protokołu SOAP generuje błąd podczas importowania.  
   
-2. Dla usługi używające <xref:System.Runtime.Serialization.DataContractSerializer> scenariuszy, danych zastępcza Umowa znajduje się w celu zapewnienia, że typy ponownie pochodzić tylko z obsługującym podzestaw przenośny.  
+2. W przypadku usług korzystających z scenariuszy <xref:System.Runtime.Serialization.DataContractSerializer> jest dostarczany Surogat kontraktu danych w celu zapewnienia, że ponownie używane typy są dostępne tylko z podzestawem przenośnym.  
   
-3. Punkty końcowe, które zależą od powiązania nie są obsługiwane w przenośnych bibliotekach (wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> bez przepływu transakcji, niezawodnej sesji lub kodowanie MTOM i powiązań niestandardowych równoważne) są ignorowane.  
+3. Punkty końcowe, które opierają się na powiązaniach, nie są obsługiwane w przenośnych bibliotekach (wszystkie powiązania z wyjątkiem <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> bez przepływu transakcji, sesji niezawodnych lub kodowania MTOM oraz równoważne powiązania niestandardowe) są ignorowane.  
   
-4. Nagłówki wiadomości są usuwane z wszystkie opisy wiadomości we wszystkich operacjach przed zaimportowaniem.  
+4. Nagłówki wiadomości są usuwane ze wszystkich opisów komunikatów we wszystkich operacjach przed zaimportowaniem.  
   
-5. Atrybuty nieprzenośne <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute>, i <xref:System.ServiceModel.TransactionFlowAttribute> są usuwane z kodu serwera proxy wygenerowanego klienta.  
+5. Atrybuty inne niż przenośne <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> i <xref:System.ServiceModel.TransactionFlowAttribute> są usuwane z wygenerowanego kodu serwera proxy klienta.  
   
-6. Nieprzenośne właściwości ProtectionLevel, SessionMode, IsInitiating i IsTerminating są usuwane z <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, i <xref:System.ServiceModel.FaultContractAttribute>.  
+6. Właściwości nieprzenośne ProtectionLevel, SessionMode, isisinitiating, iskończona są usuwane z <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute> i <xref:System.ServiceModel.FaultContractAttribute>.  
   
-7. Wszystkie operacje usługi są generowane jako operacji asynchronicznych na serwerze proxy klienta.  
+7. Wszystkie operacje usługi są generowane jako operacje asynchroniczne na serwerze proxy klienta.  
   
-8. Konstruktor wygenerowanego klienta, który używa typów nieprzenośne są usuwane.  
+8. Wygenerowane konstruktory klienta, które używają typów nieprzenośnych, są usuwane.  
   
-9. A <xref:System.Net.CookieContainer> wystąpienia jest uwidaczniany w wygenerowanego klienta.  
+9. Wystąpienie <xref:System.Net.CookieContainer> jest uwidocznione na wygenerowanym kliencie.  
   
-10. Komentarz zostanie wstawione w górnej części pliku zestawu i wersję generatora kodu:`// This code was auto-generated by Microsoft.VisualStudio.Portable.AddServiceReference, version 1.0.0.0`  
+10. W górnej części pliku zostanie wstawiony komentarz identyfikujący zestaw i wersję generatora kodu: `// This code was auto-generated by Microsoft.VisualStudio.Portable.AddServiceReference, version 1.0.0.0`  
   
-11. <xref:System.Runtime.Serialization.ISerializable> Interfejs nie jest obsługiwany.  
+11. Interfejs <xref:System.Runtime.Serialization.ISerializable> nie jest obsługiwany.  
   
-12. Powiązania Net.Tcp i PollingDuplex nie są obsługiwane.  
+12. Powiązania net. TCP i PollingDuplex nie są obsługiwane  
   
-13. <xref:System.Runtime.Serialization.DataContractSerializer> Będzie zawsze używana dla błędów.  
+13. @No__t-0 będzie zawsze używana w przypadku błędów.  
   
-14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> nie jest obsługiwane w projektach obsługującym podzestaw przenośny.  
+14. <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> nie jest obsługiwane w projektach podzestawu przenośnych.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
+- [Uzyskiwanie dostępu do usług za pomocą klienta WCF](accessing-services-using-a-wcf-client.md)
 - [Biblioteka klas przenośnych](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

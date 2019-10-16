@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: c43ba119b92d4dc1a50b03d6359555ad25f37d08
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e6d680097a63f3a7acc919c8503b9d18a09fcff0
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971561"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319738"
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 
@@ -65,11 +65,11 @@ Jeśli inny projekt w aplikacji odwołuje się do wersji 1.0.0.0 tego samego zes
 
 `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`
 
-Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jest przeznaczona dla starszych wersji .NET Framework. To zachowanie domyślne można przesłonić, dostarczając informacje o przekierowaniu powiązań w pliku App. config dla dowolnego zestawu lub wyłączając funkcję przekierowywania powiązań. Aby uzyskać informacje na temat włączania lub wyłączania tej funkcji [, zobacz How to: Włączanie i wyłączanie automatycznego przekierowywania](how-to-enable-and-disable-automatic-binding-redirection.md)powiązań.
+Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jest przeznaczona dla starszych wersji .NET Framework. To zachowanie domyślne można przesłonić, dostarczając informacje o przekierowaniu powiązań w pliku App. config dla dowolnego zestawu lub wyłączając funkcję przekierowywania powiązań. Aby uzyskać informacje na temat włączania lub wyłączania tej funkcji, zobacz [jak: Włączanie i wyłączanie automatycznego przekierowywania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md).
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Pomijanie zasad wydawcy
- W razie potrzeby można zastąpić zasady wydawcy w pliku konfiguracji aplikacji. Na przykład nowe wersje zestawów, które są zgodne z poprzednimi wersjami, mogą nadal przerwać aplikację. Aby obejść zasady wydawcy, Dodaj [ \<element publisherPolicy Apply >](./file-schema/runtime/publisherpolicy-element.md) do [ \<elementu dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) w pliku konfiguracji aplikacji, a następnie ustaw dla atrybutu **Zastosuj** wartość **nie**. zastępuje wszystkie poprzednie ustawienia **tak** .
+ W razie potrzeby można zastąpić zasady wydawcy w pliku konfiguracji aplikacji. Na przykład nowe wersje zestawów, które są zgodne z poprzednimi wersjami, mogą nadal przerwać aplikację. Aby obejść zasady wydawcy, Dodaj element [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) do elementu [> \<dependentAssembly](./file-schema/runtime/dependentassembly-element.md) w pliku konfiguracyjnym aplikacji, a następnie ustaw dla atrybutu **Zastosuj** wartość **nie**, który zastępuje wszystkie poprzednie **Ustawienia** .
 
  `<publisherPolicy apply="no" />`
 
@@ -81,11 +81,11 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Określanie powiązania zestawu w plikach konfiguracji
- Ten sam format XML służy do określania przekierowań powiązań niezależnie od tego, czy znajduje się on w pliku konfiguracji aplikacji, pliku konfiguracji komputera czy pliku zasad wydawcy. Aby przekierować jedną wersję zestawu do innej, użyj [ \<elementu bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . Atrybut **oldVersion** może określać jedną wersję zestawu lub zakres wersji. Ten `newVersion` atrybut powinien określać jedną wersję.  Na przykład `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` określa, że środowisko uruchomieniowe ma używać wersji 2.0.0.0 zamiast wersji zestawu między 1.1.0.0 i 1.2.0.0.
+ Ten sam format XML służy do określania przekierowań powiązań niezależnie od tego, czy znajduje się on w pliku konfiguracji aplikacji, pliku konfiguracji komputera czy pliku zasad wydawcy. Aby przekierować jedną wersję zestawu do innej, użyj [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) elementu. Atrybut **oldVersion** może określać jedną wersję zestawu lub zakres wersji. Atrybut `newVersion` powinien określać jedną wersję.  Na przykład `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` Określa, że środowisko uruchomieniowe ma używać wersji 2.0.0.0 zamiast wersji zestawu między 1.1.0.0 i 1.2.0.0.
 
- Poniższy przykład kodu demonstruje różne scenariusze przekierowania powiązań. W tym przykładzie określono przekierowanie dla zakresu wersji programu `myAssembly`oraz przekierowanie pojedynczego powiązania dla. `mySecondAssembly` W przykładzie określono również, że plik zasad wydawcy nie przesłania przekierowań powiązań dla programu `myThirdAssembly`.
+ Poniższy przykład kodu demonstruje różne scenariusze przekierowania powiązań. W przykładzie określono przekierowanie dla zakresu wersji dla `myAssembly` i przekierowanie pojedynczego powiązania dla `mySecondAssembly`. W przykładzie określono również, że plik zasad wydawcy nie zastępuje przekierowań powiązań dla `myThirdAssembly`.
 
- Aby powiązać zestaw, należy określić ciąg "urn: schematys-Microsoft-com: ASM. v1" z atrybutem **xmlns** w [ \<tagu > zestawubinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
+ Aby powiązać zestaw, należy określić ciąg "urn: schematys-Microsoft-com: ASM. v1" z atrybutem **xmlns** w tagu [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
 
 ```xml
 <configuration>
@@ -99,7 +99,7 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
           publisher policy, or machine configuration files. -->
         <bindingRedirect oldVersion="1.0.0.0-2.0.0.0" newVersion="3.0.0.0" />
       </dependentAssembly>
-  <dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="mySecondAssembly"
           publicKeyToken="32ab4ba45e0a69a1"
           culture="en-us" />
@@ -119,7 +119,7 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 ```
 
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ograniczanie powiązań zestawu do określonej wersji
- Można użyć atrybutu **AppliesTo** w [ \<elemencie assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) w pliku konfiguracyjnym aplikacji, aby przekierować odwołania do powiązań zestawów do określonej wersji .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework, aby wskazać, której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony, [\<assemblyBinding>](./file-schema/runtime/assemblybinding-element-for-runtime.md) element ma zastosowanie do wszystkich wersji programu .NET Framework.
+ Można użyć atrybutu **AppliesTo** w [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) elementu w pliku konfiguracyjnym aplikacji, aby przekierować odwołania do powiązań zestawów do określonej wersji .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework, aby wskazać, której wersji dotyczy. Jeśli nie określono atrybutu **AppliesTo** , element [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) ma zastosowanie do wszystkich wersji .NET Framework.
 
  Na przykład aby przekierować powiązanie zestawu dla zestawu .NET Framework 3,5, należy dołączyć następujący kod XML do pliku konfiguracji aplikacji.
 
@@ -154,8 +154,8 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Włączanie i wyłączanie automatycznego przekierowywania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<bindingRedirect> Element](./file-schema/runtime/bindingredirect-element.md)
+- [Instrukcje: włączanie i wyłączanie automatycznego przekierowania powiązań](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [\<bindingRedirect > elementu](./file-schema/runtime/bindingredirect-element.md)
 - [Uprawnienia zabezpieczeń przekierowania powiązania zestawu](assembly-binding-redirection-security-permission.md)
 - [Zestawy w środowisku .NET](../../standard/assembly/index.md)
 - [Programowanie za pomocą zestawów](../../standard/assembly/program.md)
@@ -163,4 +163,4 @@ Automatyczne przekierowywanie powiązań można włączyć, jeśli aplikacja jes
 - [Konfigurowanie aplikacji](index.md)
 - [Schemat ustawień środowiska uruchomieniowego](./file-schema/runtime/index.md)
 - [Schemat pliku konfiguracji](./file-schema/index.md)
-- [Instrukcje: Tworzenie zasad wydawcy](how-to-create-a-publisher-policy.md)
+- [Instrukcje: tworzenie zasad wydawcy](how-to-create-a-publisher-policy.md)

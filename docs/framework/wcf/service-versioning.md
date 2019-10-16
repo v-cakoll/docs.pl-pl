@@ -2,12 +2,12 @@
 title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: f3cb01531c594df5262963567438b47cbbed58a2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923016"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321489"
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i punkty końcowe, które ujawniają) mogą wymagać zmiany z różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub inne rozwiązanie luk. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak rozważyć przechowywanie wersji w programie Windows Communication Foundation (WCF).  
@@ -15,15 +15,15 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
 ## <a name="four-categories-of-service-changes"></a>Cztery kategorie zmian usługi  
  Zmiany w usługach, które mogą być wymagane, mogą być klasyfikowane do czterech kategorii:  
   
-- Zmiany kontraktu: Na przykład może zostać dodana operacja lub element danych w komunikacie może zostać dodany lub zmieniony.  
+- Zmiany kontraktu: na przykład może zostać dodana operacja lub element danych w komunikacie może zostać dodany lub zmieniony.  
   
-- Zmiany adresów: Na przykład usługa przechodzi do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
+- Zmiany adresów: na przykład usługa przechodzi do innej lokalizacji, gdzie punkty końcowe mają nowe adresy.  
   
-- Zmiany powiązań: Na przykład mechanizm zabezpieczeń zmienia się lub jego ustawienia zmienią się.  
+- Zmiany powiązań: na przykład zmiana mechanizmu zabezpieczeń lub zmiana jego ustawień.  
   
-- Zmiany implementacji: Na przykład podczas zmiany wewnętrznej implementacji metody.  
+- Zmiany implementacji: na przykład podczas zmiany wewnętrznej implementacji metody.  
   
- Niektóre z tych zmian są nazywane "uszkodzeniem", a inne to "nieprzerywanie". Zmiana jest nieprzerwana, jeśli wszystkie komunikaty, które zostały pomyślnie przetworzone w poprzedniej wersji, zostały pomyślnie przetworzone w nowej wersji. Wszelkie zmiany, które nie spełniają tego kryterium, są istotną zmianą.  
+ Niektóre z tych zmian są nazywane "uszkodzeniem", a inne to "nieprzerywanie". Zmiana jest *nieprzerwana* , jeśli wszystkie komunikaty, które zostały pomyślnie przetworzone w poprzedniej wersji, zostały pomyślnie przetworzone w nowej wersji. Wszelkie zmiany, które nie spełniają tego kryterium, są istotną *zmianą* .  
   
 ## <a name="service-orientation-and-versioning"></a>Orientacja i przechowywanie wersji usługi  
  Jedną z założeniaych usług jest to, że usługi i klienci są autonomiczni (lub niezależnie). Oznacza to, że deweloperzy usług nie mogą założyć, że mogą oni kontrolować lub nawet wiedzieć o wszystkich klientach usługi. Eliminuje to możliwość odbudowy i ponownego wdrożenia wszystkich klientów w przypadku zmiany wersji usługi. W tym temacie przyjęto założenie, że usługa jest zgodna z tym cechą i dlatego należy ją zmienić lub "w wersji" niezależnie od jej klientów.  
@@ -38,7 +38,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  W przypadku kontraktów dotyczących danych zgodność oznacza nowe definicje typów schematów, ale nie można zmienić istniejących definicji typów schematów na różne sposoby. Istotne zmiany mogą obejmować usunięcie elementów członkowskich danych lub zmianę ich typu danych incompatibly. Ta funkcja umożliwia korzystanie z usługi w niektórych systemach Latitude w przypadku zmiany wersji jej umów bez przerywania klientów. W następnych dwóch sekcjach objaśniono nieprzerwane i istotne zmiany, które można wprowadzać w ramach kontraktów dotyczących danych i usług WCF.  
   
 ## <a name="data-contract-versioning"></a>Przechowywanie wersji kontraktów danych  
- Ta sekcja zajmuje się przechowywaniem wersji danych przy użyciu <xref:System.Runtime.Serialization.DataContractSerializer> klas <xref:System.Runtime.Serialization.DataContractAttribute> i.  
+ Ta sekcja zajmuje się przechowywaniem wersji danych przy użyciu klas <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.DataContractAttribute>.  
   
 ### <a name="strict-versioning"></a>Dokładne przechowywanie wersji  
  W wielu scenariuszach, gdy zmiana wersji jest problemem, Deweloper usługi nie ma kontroli nad klientami i w związku z tym nie może tworzyć założeń dotyczących sposobu reagowania na zmiany w kodzie XML lub schemacie wiadomości. W takich przypadkach należy zagwarantować, że nowe wiadomości będą weryfikowane względem starego schematu, z dwóch powodów:  
@@ -58,12 +58,12 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
   
  Jest to łatwe w użyciu, gdyż dodanie nowego elementu członkowskiego nie spowoduje przerwania istniejących klientów. Jeśli nie masz pewności, że wszyscy klienci mogą obsługiwać przechowywanie wersji swobodny, zalecenie polega na użyciu ścisłych wytycznych dotyczących wersji i traktuje Kontrakty danych jako niezmienne.  
   
- Aby uzyskać szczegółowe wytyczne dotyczące swobodny i ścisłej wersji umów dotyczących danych, zobacz [najlepsze rozwiązania: Przechowywanie wersji](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)kontraktu danych.  
+ Aby uzyskać szczegółowe wytyczne dotyczące swobodny i ścisłej wersji umów dotyczących danych, zobacz [najlepsze rozwiązania: przechowywanie wersji kontraktu danych](best-practices-data-contract-versioning.md).  
   
 ### <a name="distinguishing-between-data-contract-and-net-types"></a>Rozróżnianie między kontraktem danych i typami .NET  
- Klasy lub struktury platformy .NET mogą być rzutowane jako kontrakt danych przez zastosowanie <xref:System.Runtime.Serialization.DataContractAttribute> atrybutu do klasy. Projekty typu .NET i jego Kontrakty danych są dwa odrębne zagadnienia. Istnieje możliwość, że istnieje wiele typów .NET z tą samą projekcją kontraktu danych. To rozróżnienie jest szczególnie przydatne w przypadku, gdy pozwala na zmianę typu .NET przy zachowaniu prognozowanych kontraktów danych, dzięki czemu zapewnia to zgodność z istniejącymi klientami nawet w ścisłym znaczeniu tego wyrazu. Istnieją dwie rzeczy, które zawsze należy wykonać, aby zachować rozróżnienie między typem .NET i umową dotyczącą danych:  
+ Klasy lub struktury platformy .NET mogą być rzutowane jako kontrakt danych przez zastosowanie atrybutu <xref:System.Runtime.Serialization.DataContractAttribute> do klasy. Projekty typu .NET i jego Kontrakty danych są dwa odrębne zagadnienia. Istnieje możliwość, że istnieje wiele typów .NET z tą samą projekcją kontraktu danych. To rozróżnienie jest szczególnie przydatne w przypadku, gdy pozwala na zmianę typu .NET przy zachowaniu prognozowanych kontraktów danych, dzięki czemu zapewnia to zgodność z istniejącymi klientami nawet w ścisłym znaczeniu tego wyrazu. Istnieją dwie rzeczy, które zawsze należy wykonać, aby zachować rozróżnienie między typem .NET i umową dotyczącą danych:  
   
-- <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> Określ i .<xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A> Należy zawsze określić nazwę i przestrzeń nazw kontraktu danych, aby zapobiec ujawnieniu nazwy i przestrzeni nazw typu .NET w kontrakcie. W ten sposób w przypadku późniejszej zmiany przestrzeni nazw lub nazwy typu platformy .NET kontrakt danych pozostaje taki sam.  
+- Określ <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> i <xref:System.Runtime.Serialization.DataContractAttribute.Namespace%2A>. Należy zawsze określić nazwę i przestrzeń nazw kontraktu danych, aby zapobiec ujawnieniu nazwy i przestrzeni nazw typu .NET w kontrakcie. W ten sposób w przypadku późniejszej zmiany przestrzeni nazw lub nazwy typu platformy .NET kontrakt danych pozostaje taki sam.  
   
 - Określ <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>. Należy zawsze określić nazwę członków danych, aby zapobiec ujawnieniu nazwy członka platformy .NET w kontrakcie. W ten sposób w przypadku późniejszej zmiany nazwy platformy .NET elementu członkowskiego kontrakt danych pozostaje taki sam.  
   
@@ -77,7 +77,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
 ### <a name="round-trips-of-unknown-data"></a>Rundy nieznanych danych  
  W niektórych scenariuszach istnieje potrzeba "rundy", które pochodzą z elementów członkowskich dodanych w nowej wersji. Na przykład usługa "versionNew" wysyła dane z nowo dodanych członków do klienta "versionOld". Klient ignoruje nowo dodane elementy członkowskie podczas przetwarzania komunikatu, ale ponownie wysyła te same dane, w tym nowo dodane elementy członkowskie, z powrotem do usługi versionNew. Typowym scenariuszem jest aktualizacja danych, w której dane są pobierane z usługi, zmienione i zwracane.  
   
- Aby włączyć funkcję okrężną dla określonego typu, typ musi implementować <xref:System.Runtime.Serialization.IExtensibleDataObject> interfejs. Interfejs zawiera jedną właściwość, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> która <xref:System.Runtime.Serialization.ExtensionDataObject> zwraca typ. Właściwość służy do przechowywania danych z przyszłych wersji kontraktu danych, który jest nieznany dla bieżącej wersji. Te dane są nieprzezroczyste dla klienta, ale gdy wystąpienie jest serializowane, zawartość <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> właściwości jest zapisywana z pozostałymi danymi członków kontraktu danych.  
+ Aby włączyć funkcję okrężną dla określonego typu, typ musi implementować interfejs <xref:System.Runtime.Serialization.IExtensibleDataObject>. Interfejs zawiera jedną właściwość, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, która zwraca typ <xref:System.Runtime.Serialization.ExtensionDataObject>. Właściwość służy do przechowywania danych z przyszłych wersji kontraktu danych, który jest nieznany dla bieżącej wersji. Te dane są nieprzezroczyste dla klienta, ale gdy wystąpienie jest serializowane, zawartość właściwości <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> jest zapisywana z pozostałymi danymi członków kontraktu danych.  
   
  Zaleca się, aby wszystkie typy implementują ten interfejs w celu uwzględnienia nowych i nieznanych przyszłych członków.  
   
@@ -85,10 +85,10 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  Mogą istnieć biblioteki kontraktów danych, w których kontrakt jest publikowany w centralnym repozytorium, a implementacje usług i typów implementują i uwidaczniają Kontrakty danych z tego repozytorium. W takim przypadku po opublikowaniu kontraktu danych w repozytorium nie ma kontroli nad tym, kto tworzy typy implementujące go. W tym celu nie można modyfikować kontraktu po jego opublikowaniu, dlatego renderowanie go efektywnie jest niezmienne.  
   
 ### <a name="when-using-the-xmlserializer"></a>Przy użyciu elementu XmlSerializer  
- Te same zasady przechowywania wersji są stosowane podczas korzystania <xref:System.Xml.Serialization.XmlSerializer> z klasy. Gdy wymagane jest dokładne przechowywanie wersji, Traktuj Kontrakty danych jako niezmienne i Utwórz nowe kontrakty danych z unikatowymi, kwalifikowanymi nazwami dla nowych wersji. Jeśli masz pewność, że można użyć wersji swobodny, możesz dodać nowych możliwych do serializacji członków w nowych wersjach, ale nie zmieniać ani usuwać istniejących członków.  
+ Te same zasady przechowywania wersji są stosowane w przypadku używania klasy <xref:System.Xml.Serialization.XmlSerializer>. Gdy wymagane jest dokładne przechowywanie wersji, Traktuj Kontrakty danych jako niezmienne i Utwórz nowe kontrakty danych z unikatowymi, kwalifikowanymi nazwami dla nowych wersji. Jeśli masz pewność, że można użyć wersji swobodny, możesz dodać nowych możliwych do serializacji członków w nowych wersjach, ale nie zmieniać ani usuwać istniejących członków.  
   
 > [!NOTE]
-> Używa atrybutów i<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>, aby zapewnić obsługę rundy nieznanych danych. <xref:System.Xml.Serialization.XmlAnyElementAttribute> <xref:System.Xml.Serialization.XmlSerializer>  
+> @No__t-0 używa atrybutów <xref:System.Xml.Serialization.XmlAnyElementAttribute> i <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> do obsługi rundy nieznanych danych.  
   
 ## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktu komunikatów  
  Wskazówki dotyczące przechowywania wersji kontraktu są bardzo podobne do wersji umów dotyczących danych. Jeśli jest wymagana ścisła wersja, nie należy zmieniać treści wiadomości, ale zamiast tego utworzyć nowy kontrakt wiadomości z unikatową kwalifikowaną nazwą. Jeśli wiesz, że możesz użyć wersji swobodny, możesz dodać nowe części treści wiadomości, ale nie zmieniać ani usuwać istniejących. Te wskazówki dotyczą umów dotyczących komunikatów zarówno od zera, jak i opakowanych.  
@@ -99,7 +99,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  Podobnie jak w przypadku wersji kontraktu danych, wersja kontraktu usług obejmuje także dodawanie, zmienianie i usuwanie operacji.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Określanie nazwy, przestrzeni nazw i akcji  
- Domyślnie nazwą kontraktu usługi jest nazwa interfejsu. Jego domyślna przestrzeń nazw to http://tempuri.org"", a każda akcja operacji to "http://tempuri.org/contractname/methodname". Zaleca się jawnie określić nazwę i obszar nazw dla kontraktu usługi oraz akcję dla każdej operacji, aby uniknąć używania "http://tempuri.org" i aby zapobiec ujawnieniu nazw interfejsów i metod w kontrakcie usługi.  
+ Domyślnie nazwą kontraktu usługi jest nazwa interfejsu. Jego domyślną przestrzenią nazw jest "http://tempuri.org", a każda akcja operacji to "http://tempuri.org/contractname/methodname". Zaleca się jawnie określić nazwę i obszar nazw dla kontraktu usługi oraz akcję dla każdej operacji, aby uniknąć używania "http://tempuri.org" i aby zapobiec ujawnieniu nazw interfejsów i metod w kontrakcie usługi.  
   
 ### <a name="adding-parameters-and-operations"></a>Dodawanie parametrów i operacji  
  Dodawanie operacji usługi ujawnionych przez usługę to zmiana nieprzerwana, ponieważ istniejący klienci nie muszą być zainteresowani tymi nowymi operacjami.  
@@ -114,7 +114,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  Usuwanie operacji jest również istotną zmianą. Aby wprowadzić taką zmianę, należy zdefiniować nowy kontrakt usługi i udostępnić go w nowym punkcie końcowym.  
   
 ### <a name="fault-contracts"></a>Kontrakty błędów  
- Ten <xref:System.ServiceModel.FaultContractAttribute> atrybut umożliwia deweloperowi kontraktu usługi Określanie informacji o błędach, które mogą być zwracane z operacji kontraktu.  
+ Atrybut <xref:System.ServiceModel.FaultContractAttribute> umożliwia deweloperowi kontraktu usługi Określanie informacji o błędach, które mogą być zwracane z operacji kontraktu.  
   
  Lista błędów opisanych w kontrakcie usługi nie jest uważana za wyczerpującą. W dowolnym momencie operacja może zwracać błędy, które nie zostały opisane w jego kontrakcie. W związku z tym zmiana zestawu błędów opisanych w kontrakcie nie jest uważana za przerywanie. Na przykład dodanie nowego błędu do kontraktu przy użyciu <xref:System.ServiceModel.FaultContractAttribute> lub usunięcie istniejącego błędu z kontraktu.  
   
@@ -125,12 +125,12 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  Zmiany adresu i powiązania punktu końcowego są przerywane, chyba że klienci będą mogli dynamicznie odnajdywać nowy adres lub powiązanie punktu końcowego. Jednym z mechanizmów implementowania tej funkcji jest użycie rejestru Universal Discovery Description and Integration (UDDI) i wzorca wywołania usług UDDI, w którym klient próbuje komunikować się z punktem końcowym, a w przypadku niepowodzenia wysyła zapytania do dobrze znanych usług UDDI Rejestr dla bieżących metadanych punktu końcowego. Klient używa następnie adresu i powiązania z tych metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja powiedzie się, Klient buforuje adres i informacje o powiązaniu do użytku w przyszłości.  
   
 ## <a name="routing-service-and-versioning"></a>Usługa routingu i przechowywanie wersji  
- Jeśli zmiany wprowadzone do usługi są istotne i należy mieć co najmniej dwie różne wersje usługi uruchomionej jednocześnie, można użyć usługi routingu WCF do kierowania komunikatów do odpowiedniego wystąpienia usługi. Usługa routingu WCF używa routingu opartego na zawartości, innymi słowy używa informacji w komunikacie, aby określić, gdzie należy skierować komunikat. Aby uzyskać więcej informacji na temat usługi routingu WCF, zobacz [Usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład korzystania z usługi routingu WCF w celu przechowywania wersji usług — zobacz [How to: Przechowywanie wersji](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)usługi.  
+ Jeśli zmiany wprowadzone do usługi są istotne i należy mieć co najmniej dwie różne wersje usługi uruchomionej jednocześnie, można użyć usługi routingu WCF do kierowania komunikatów do odpowiedniego wystąpienia usługi. Usługa routingu WCF używa routingu opartego na zawartości, innymi słowy używa informacji w komunikacie, aby określić, gdzie należy skierować komunikat. Aby uzyskać więcej informacji na temat usługi routingu WCF, zobacz [Usługa routingu](./feature-details/routing-service.md). Przykład korzystania z usługi routingu WCF na potrzeby obsługi wersji usługi można znaleźć w temacie [How to: Versioning Service](./feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Dodatek  
  Ogólne wskazówki dotyczące obsługi wersji kontraktu danych, gdy jest wymagana ścisła wersja, to traktowanie umów danych jako niezmienne i tworzenie nowych, gdy wymagane są zmiany. Należy utworzyć nową klasę dla każdego nowego kontraktu danych, więc mechanizm jest potrzebny, aby uniknąć konieczności podawania istniejącego kodu, który został napisany w rozumieniu starej klasy kontraktu danych i ponownie napisać go pod względem nowej klasy kontraktu danych.  
   
- Jednym z tych mechanizmów jest użycie interfejsów do definiowania elementów członkowskich każdego kontraktu danych i zapis wewnętrzny kod implementacji pod względem interfejsów, a nie klas kontraktów danych, które implementują interfejsy. Poniższy kod dla wersji 1 usługi zawiera `IPurchaseOrderV1` Interfejs `PurchaseOrderV1`i:  
+ Jednym z tych mechanizmów jest użycie interfejsów do definiowania elementów członkowskich każdego kontraktu danych i zapis wewnętrzny kod implementacji pod względem interfejsów, a nie klas kontraktów danych, które implementują interfejsy. Poniższy kod dla wersji 1 usługi zawiera interfejs `IPurchaseOrderV1` i `PurchaseOrderV1`:  
   
 ```  
 public interface IPurchaseOrderV1  
@@ -151,7 +151,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
 }  
 ```  
   
- Mimo że operacje kontraktu usługi są zapisywane w warunkach `PurchaseOrderV1`, rzeczywista logika biznesowa będzie w `IPurchaseOrderV1`warunkach. Następnie w wersji 2 może istnieć nowy `IPurchaseOrderV2` interfejs i Nowa `PurchaseOrderV2` Klasa, jak pokazano w poniższym kodzie:  
+ Mimo że operacje kontraktu usługi są zapisywane w warunkach `PurchaseOrderV1`, rzeczywista logika biznesowa miałaby `IPurchaseOrderV1`. Następnie w wersji 2 można uzyskać nowy interfejs `IPurchaseOrderV2` i nową klasę `PurchaseOrderV2`, jak pokazano w poniższym kodzie:  
   
 ```  
 public interface IPurchaseOrderV2  
@@ -173,7 +173,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 }  
 ```  
   
- Kontrakt usługi zostanie zaktualizowany w taki sposób, aby obejmował nowe operacje, które są zapisywane `PurchaseOrderV2`w warunkach. Istniejąca logika biznesowa, `IPurchaseOrderV1` która jest zapisywana w `PurchaseOrderV2` warunkach, będzie kontynuowała pracę dla `OrderDate` i nową logikę biznesową, `IPurchaseOrderV2`która wymaga, aby właściwość była zapisywana w warunkach.  
+ Kontrakt usługi zostanie zaktualizowany w taki sposób, aby obejmował nowe operacje, które są zapisywane w odniesieniu do `PurchaseOrderV2`. Istniejąca logika biznesowa zapisywana w `IPurchaseOrderV1` będzie nadal działać dla `PurchaseOrderV2` i nowej logiki biznesowej, która wymaga, aby Właściwość `OrderDate` była zapisywana w zakresie `IPurchaseOrderV2`.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -187,5 +187,5 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Równoważność kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
+- [Równoważność kontraktów danych](./feature-details/data-contract-equivalence.md)
+- [Wywołania zwrotne serializacji z tolerancją dla wersji](./feature-details/version-tolerant-serialization-callbacks.md)

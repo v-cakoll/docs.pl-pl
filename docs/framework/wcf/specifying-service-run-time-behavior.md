@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 087aaf5ebc69046d5404765114cfaecd28798915
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875988"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321377"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
-Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji środowisko wykonawcze usług. Ten temat zawiera omówienie usług dostarczanych przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas gdy niektóre zachowania są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
+Po zaprojektowaniu kontraktu usługi ([Projektowanie kontraktów usług](designing-service-contracts.md)) i zaimplementowaniu kontraktu dotyczącego usługi ([implementowanie kontraktów usług](implementing-service-contracts.md)) można skonfigurować zachowanie operacji dla środowiska uruchomieniowego usługi. W tym temacie omówiono zachowania usługi i działania udostępniane przez system oraz opisano, gdzie znaleźć więcej informacji na potrzeby tworzenia nowych zachowań. Niektóre zachowania są stosowane jako atrybuty, ale wiele są stosowane przy użyciu pliku konfiguracyjnego aplikacji lub programowo. Aby uzyskać więcej informacji na temat konfigurowania aplikacji usługi, zobacz [Konfigurowanie usług](configuring-services.md).  
   
 ## <a name="overview"></a>Omówienie  
- Kontrakt definiuje danych wejściowych, danych wyjściowych, typów danych i możliwości usługi tego typu. Implementowanie kontraktu usługi tworzy klasę, gdy skonfigurowano powiązania pod adresem spełnia kontraktu implementuje. Zobowiązania umowne, powiązania oraz informacji dotyczących adresów są wszystkie znane przez klienta; bez nich, klient nie może wprowadzać korzystanie z usługi.  
+ Kontrakt definiuje dane wejściowe, dane wyjściowe, typy danych i możliwości usługi tego typu. Implementacja kontraktu usługi tworzy klasę, która w przypadku skonfigurowania powiązania pod adresem spełnia kontrakt, który implementuje. Informacje o umowie, powiązaniu i adresie są znane przez klienta; bez nich klient nie może korzystać z usługi.  
   
- Szczegóły operacji, takich jak wątki problemy lub Zarządzanie wystąpieniami są jednak nieprzezroczysta dla klientów. Po wdrożeniu usługi kontraktu usługi, można skonfigurować dużą liczbę operacji właściwości, za pomocą *zachowania*. Zachowania są obiekty, które modyfikują środowiska uruchomieniowego Windows Communication Foundation (WCF), ustawiając właściwość środowiska uruchomieniowego lub przez wstawienie typu dostosowania w czasie wykonywania. Aby uzyskać więcej informacji na temat modyfikowania środowiska uruchomieniowego, tworząc zachowań zdefiniowanych przez użytkownika, zobacz [rozszerzanie elementu ServiceHost i warstwy modelu usług](../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md).  
+ Jednak specyficzne dla operacji, takie jak problemy z wątkiem lub Zarządzanie wystąpieniami, są nieprzezroczyste dla klientów. Po wdrożeniu kontraktu usługi można skonfigurować dużą liczbę cech operacji przy użyciu *zachowań*. Zachowania są obiektami modyfikującymi środowisko uruchomieniowe Windows Communication Foundation (WCF) przez ustawienie właściwości środowiska uruchomieniowego lub wstawienie typu dostosowania do środowiska uruchomieniowego. Aby uzyskać więcej informacji na temat modyfikowania środowiska uruchomieniowego przez tworzenie zachowań zdefiniowanych przez użytkownika, zobacz [Rozszerzanie elementu ServiceHost i warstwy modelu usług](./extending/extending-servicehost-and-the-service-model-layer.md).  
   
- <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> atrybuty są najczęściej przydatne zachowania i udostępniają najczęściej wymagane funkcje operacji. Ponieważ są one atrybutów, można je zastosować do implementacji usługi lub operacji. Innych zachowań, takich jak <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, są zazwyczaj stosowane przy użyciu pliku konfiguracji aplikacji, chociaż można używać je programowo.  
+ Atrybuty <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType> i <xref:System.ServiceModel.OperationBehaviorAttribute?displayProperty=nameWithType> to najczęściej przydatne zachowania i uwidaczniają najczęściej wymagane funkcje operacji. Ponieważ są to atrybuty, należy je zastosować do implementacji usługi lub operacji. Inne zachowania, takie jak <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior?displayProperty=nameWithType>, są zwykle stosowane przy użyciu pliku konfiguracyjnego aplikacji, chociaż można ich programowo używać.  
   
- Ten temat zawiera omówienie <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów, w tym artykule opisano różne zakresy, w których może działać zachowania i zawiera krótki opis wielu dostarczane przez system zachowań w różnych zakresach, które mogą być zainteresowania deweloperów usług WCF.  
+ Ten temat zawiera omówienie atrybutów <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute>, opis różnych zakresów, w których mogą działać zachowania i zawiera krótki opis wielu zachowań zapewnianych przez system w różnych zakresach, które mogą być przydatne w przypadku usługi WCF. tworząc.  
   
-## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute i gdy  
- Czy najważniejszych zachowań <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów, których można użyć do sterowania:  
+## <a name="servicebehaviorattribute-and-operationbehaviorattribute"></a>ServiceBehaviorAttribute i OperationBehaviorAttribute będący  
+ Najważniejszymi zachowaniami są atrybuty <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute>, których można użyć do sterowania:  
   
 - Okresy istnienia wystąpienia  
   
@@ -37,7 +37,7 @@ Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../.
   
 - Zachowanie serializacji  
   
-- Przekształcenie metadanych  
+- Przekształcanie metadanych  
   
 - Okres istnienia sesji  
   
@@ -45,82 +45,82 @@ Po zaprojektowaniu kontraktu usługi ([projektowanie kontraktów usług](../../.
   
 - Personifikacja  
   
-- Aby korzystać z tych atrybutów, oznacz implementacji usługi lub operacji za pomocą atrybutu odpowiednie dla danego zakresu, a następnie ustaw właściwości. Na przykład, poniższy kod przedstawia implementację operacji, która używa <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType> właściwości, aby wymagać, że obiekty wywołujące tej operacji obsługuje personifikacji.  
+- Aby użyć tych atrybutów, należy oznaczyć implementację usługi lub operacji przy użyciu atrybutu właściwego dla tego zakresu i ustawić właściwości. Na przykład poniższy kod ilustruje implementację operacji, która używa właściwości <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A?displayProperty=nameWithType>, aby wymagać od wywołujących tej operacji personifikacji.  
   
  [!code-csharp[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/operationbehaviorattribute_impersonation/cs/services.cs#1)]
  [!code-vb[OperationBehaviorAttribute_Impersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/operationbehaviorattribute_impersonation/vb/services.vb#1)]  
   
- Wiele właściwości potrzebujesz dodatkowej pomocy technicznej firmy powiązania. Na przykład operacja, która wymaga transakcji od klienta musi być skonfigurowany do użycia powiązania, który obsługuje transakcje przesłanej.  
+ Wiele właściwości wymaga dodatkowego wsparcia dla powiązania. Na przykład operacja wymagająca transakcji od klienta musi być skonfigurowana do użycia powiązania, które obsługuje przepływy transakcji.  
   
-### <a name="well-known-singleton-services"></a>Usługami Singleton dobrze znane  
- Możesz użyć <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybuty kontrolować pewne okresy istnienia, oba <xref:System.ServiceModel.InstanceContext> i obiekty usługi, które implementują operacji.  
+### <a name="well-known-singleton-services"></a>Dobrze znane usługi pojedyncze  
+ Można użyć atrybutów <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> do kontrolowania określonych okresów istnienia, obu <xref:System.ServiceModel.InstanceContext> i obiektów usługi, które implementują operacje.  
   
- Na przykład <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość określa, jak często <xref:System.ServiceModel.InstanceContext> jest zwalniana, a <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> właściwości formantu, kiedy obiekt usługi jest zwolniony.  
+ Na przykład właściwość <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> kontroluje, jak często <xref:System.ServiceModel.InstanceContext> jest wydana, a właściwości <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> i <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A?displayProperty=nameWithType> kontrolują, kiedy obiekt usługi jest wydawany.  
   
- Można również utworzyć obiekt usługi samodzielnie i Utwórz hosta usługi przy użyciu tego obiektu. Aby to zrobić, należy także ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.InstanceContextMode.Single> lub wyjątek jest zgłaszany, gdy host usługi jest otwarty.  
+ Można jednak również utworzyć obiekt usługi samodzielnie i utworzyć hosta usługi za pomocą tego obiektu. W tym celu należy również ustawić właściwość <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> na <xref:System.ServiceModel.InstanceContextMode.Single> lub wyjątek jest zgłaszany podczas otwierania hosta usługi.  
   
- Użyj <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> Konstruktor do tworzenia takiej usługi. Jego stanowi alternatywę dla implementacji niestandardowego <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> po możesz podać wystąpienie określonego obiektu do użytku przez usługi singleton. Możesz użyć tego przeciążenia danego typu wdrożenia usługi jest trudne do konstruowania (na przykład, jeśli nie implementuje domyślnego konstruktora publicznego, który nie ma parametrów).  
+ Użyj konstruktora <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType>, aby utworzyć taką usługę. Jest to alternatywa dla implementacji niestandardowego <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType>, jeśli chcesz podać konkretne wystąpienie obiektu do użycia przez pojedynczą usługę. Można użyć tego przeciążenia, gdy typ implementacji usługi jest trudny do skonstruowania (na przykład jeśli nie implementuje domyślnego konstruktora publicznego, który nie ma parametrów).  
   
- Należy pamiętać, że jeśli obiekt znajduje się do tego konstruktora, niektóre funkcje związane z do Windows Communication Foundation (WCF) wystąpień zachowanie działają inaczej. Na przykład, wywołanie <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> nie obowiązuje, gdy wystąpienie obiektu dobrze znanych została podana. Podobnie inny mechanizm wersji wystąpienia jest ignorowany. <xref:System.ServiceModel.ServiceHost> Klasy zawsze zachowuje się tak, jakby <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> właściwość jest ustawiona na <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> dla wszystkich operacji.  
+ Należy pamiętać, że gdy obiekt jest dostarczany do tego konstruktora, niektóre funkcje związane z zachowaniem wystąpienia Windows Communication Foundation (WCF) działają inaczej. Na przykład wywołanie <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> nie ma wpływu, jeśli jest podane dobrze znane wystąpienie obiektu. Podobnie wszystkie inne mechanizmy zwalniania wystąpień są ignorowane. Klasa <xref:System.ServiceModel.ServiceHost> zawsze zachowuje się tak, jakby Właściwość <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> została ustawiona na <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> dla wszystkich operacji.  
   
-## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Inne usługi, punkt końcowy, kontrakt i zachowania operacji  
- Usługa zachowań, takich jak <xref:System.ServiceModel.ServiceBehaviorAttribute> atrybutu, działającego przez całą usługę. Na przykład jeśli ustawisz <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> właściwość <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType> problemów z synchronizacją wątku wewnątrz każdej operacji w tej usłudze musi obsługiwać samodzielnie. Zachowań punktu końcowego działającego przez punkt końcowy; wiele zachowań dostarczane przez system punktu końcowego to funkcji klienta. Kontrakt zachowania działają na poziomie kontraktu i zachowania operację Modyfikuj dostarczania operacji.  
+## <a name="other-service-endpoint-contract-and-operation-behaviors"></a>Inne zachowania usługi, punktu końcowego, kontraktu i operacji  
+ Zachowania usługi, takie jak atrybut <xref:System.ServiceModel.ServiceBehaviorAttribute>, działają w całej usłudze. Na przykład, jeśli właściwość <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A?displayProperty=nameWithType> zostanie ustawiona na wartość <xref:System.ServiceModel.ConcurrencyMode.Multiple?displayProperty=nameWithType>, należy samodzielnie obsłużyć problemy z synchronizacją wątków w ramach każdej operacji w tej usłudze. Zachowania punktu końcowego działają w punkcie końcowym; wiele zachowań punktu końcowego dostarczonych przez system dotyczy funkcjonalności klienta. Zachowania kontraktów działają na poziomie kontraktu, a zachowania operacji modyfikują dostarczanie operacji.  
   
- Wiele z tych zachowań są implementowane w atrybutach i wprowadzisz korzystać z nich, tak jak <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> atrybutów — dzięki zastosowaniu ich do implementacji klasy lub operacji odpowiednią usługę. Innych zachowań, takich jak <xref:System.ServiceModel.Description.ServiceMetadataBehavior> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior> obiektów, są zazwyczaj stosowane przy użyciu pliku konfiguracji aplikacji, jednak również mogą być używane programowo.  
+ Wiele z tych zachowań jest implementowanych na atrybutach i są używane w ramach atrybutów <xref:System.ServiceModel.ServiceBehaviorAttribute> i <xref:System.ServiceModel.OperationBehaviorAttribute> — przez zastosowanie ich do odpowiedniej klasy usług lub implementacji operacji. Inne zachowania, takie jak obiekty <xref:System.ServiceModel.Description.ServiceMetadataBehavior> lub <xref:System.ServiceModel.Description.ServiceDebugBehavior>, są zwykle stosowane przy użyciu pliku konfiguracyjnego aplikacji, chociaż mogą być również używane programowo.  
   
- Na przykład publikacji metadanych jest konfigurowana przy użyciu <xref:System.ServiceModel.Description.ServiceMetadataBehavior> obiektu. Następujący plik konfiguracji aplikacji przedstawia najbardziej typowe obciążenie.  
+ Na przykład publikacja metadanych jest konfigurowana przy użyciu obiektu <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Poniższy plik konfiguracyjny aplikacji przedstawia najbardziej typowe użycie.  
   
  [!code-xml[ServiceMetadataBehavior#1](../../../samples/snippets/csharp/VS_Snippets_CFX/servicemetadatabehavior/cs/hostapplication.exe.config#1)]  
   
- W poniższych sekcjach opisano wiele najbardziej przydatne zachowań dostarczane przez system, które służy do modyfikowania dostarczania środowiska uruchomieniowego usługi lub klienta. Zobacz temat referencyjny, aby określić sposób użycia każdej z nich.  
+ W poniższych sekcjach opisano wiele najbardziej przydatnych zachowań dostarczonych przez system, których można użyć do modyfikacji dostarczania usługi lub klienta w czasie wykonywania. Zapoznaj się z tematem referencyjnym, aby określić, jak korzystać z każdej z nich.  
   
-### <a name="service-behaviors"></a>Zachowania usług  
- Następujące zachowania działają w usługach.  
+### <a name="service-behaviors"></a>Zachowania usługi  
+ Poniższe zachowania działają na usługach.  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Stosowane do usługi WCF w celu wskazania, czy usługi mogą być uruchamiane w trybie zgodności w programie ASP.NET.  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>., Zastosowano do usługi WCF, aby wskazać, czy ta usługa może być uruchamiana w trybie zgodności ASP.NET.  
   
-- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Określa, jak usługa autoryzuje oświadczenia klienta.  
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>., Kontroluje sposób, w jaki usługa autoryzuje oświadczenia klienta.  
   
-- <xref:System.ServiceModel.Description.ServiceCredentials>. Określa poświadczenia usługi. Użyj tej klasy, aby określić poświadczenia dla usługi, takie jak certyfikat X.509.  
+- <xref:System.ServiceModel.Description.ServiceCredentials>., Konfiguruje poświadczenia usługi. Użyj tej klasy, aby określić poświadczenia dla usługi, takie jak certyfikat X. 509.  
   
-- <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Włącza debugowanie i Pomóż funkcje informacji dla usługi WCF.  
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>., Włącza debugowanie i funkcje informacji pomocy dla usługi WCF.  
   
-- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Określa publikację usługi metadanych i skojarzonych informacji.  
+- <xref:System.ServiceModel.Description.ServiceMetadataBehavior>., Kontroluje publikację metadanych usługi i skojarzonych z nią informacji.  
   
-- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Określa zachowanie inspekcji zdarzeń zabezpieczeń.  
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>., Określa zachowanie inspekcji zdarzeń zabezpieczeń.  
   
-- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Konfiguruje ustawienia środowiska wykonawczego przepływności, umożliwiające dostosowywanie wydajności usługi.  
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>., Konfiguruje ustawienia przepływności w czasie wykonywania, które umożliwiają dostosowanie wydajności usługi.  
   
-### <a name="endpoint-behaviors"></a>Zachowań punktu końcowego  
- Następujące zachowania działają w punktach końcowych. Wiele z tych zachowań są używane w aplikacjach klienckich.  
+### <a name="endpoint-behaviors"></a>Zachowania punktu końcowego  
+ Poniższe zachowania działają na punktach końcowych. Wiele z tych zachowań jest używanych w aplikacjach klienckich.  
   
-- <xref:System.ServiceModel.CallbackBehaviorAttribute>. Konfiguruje implementacji usługi wywołania zwrotnego w aplikacji klienckiej dwukierunkowego.  
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>., Konfiguruje implementację usługi wywołania zwrotnego w aplikacji klienckiej dupleksowej.  
   
-- <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Włącza usługę debugowania dla obiektu wywołania zwrotnego WCF.  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior>., Włącza debugowanie usługi dla obiektu wywołania zwrotnego WCF.  
   
-- <xref:System.ServiceModel.Description.ClientCredentials>. Zezwala użytkownikowi na konfigurowanie poświadczeń klienta i usługi, a także usługi ustawienia uwierzytelniania poświadczeń do użycia na komputerze klienckim.  
+- <xref:System.ServiceModel.Description.ClientCredentials>., Umożliwia użytkownikowi skonfigurowanie poświadczeń klienta i usługi oraz ustawień uwierzytelniania poświadczeń usługi, które mają być używane na komputerze klienckim.  
   
-- <xref:System.ServiceModel.Description.ClientViaBehavior>. Używane przez klientów, aby określić identyfikator (URI) dla której należy utworzyć kanał transportu.  
+- <xref:System.ServiceModel.Description.ClientViaBehavior>., Używane przez klientów do określania Uniform Resource Identifier (URI), dla których należy utworzyć kanał transportu.  
   
-- <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Powoduje, że usługi WCF w celu wyłączenia `MustUnderstand` przetwarzania.  
+- <xref:System.ServiceModel.Description.MustUnderstandBehavior>., Nakazuje programowi WCF wyłączenie przetwarzania `MustUnderstand`.  
   
-- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Powoduje, że środowiska uruchomieniowego do użycia przez synchroniczny otrzymywać proces kanałów.  
+- <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>., Powoduje, że środowisko uruchomieniowe będzie używać synchronicznego procesu odbierania dla kanałów.  
   
-- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Optymalizuje operacji odbierania dla transportu, które odbiera transakcyjnych pomocy technicznej.  
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>., Optymalizuje operacje odbioru dla transportów, które obsługują odbieranie transakcyjne.  
   
-### <a name="contract-behaviors"></a>Zachowania kontraktu  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Określa wymagania dotyczące funkcji, które powiązania musi dostarczyć implementację usługi lub klienta.  
+### <a name="contract-behaviors"></a>Zachowania kontraktów  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>., Określa wymagania funkcji, które powiązania muszą zapewnić dla implementacji usługi lub klienta.  
   
-### <a name="operation-behaviors"></a>Operacja zachowania  
- Następujące zachowania operacji Określanie sterowania serializacji i transakcji, dla operacji.  
+### <a name="operation-behaviors"></a>Zachowania operacji  
+ Poniższe zachowania operacji określają serializacji i kontroli transakcji dla operacji.  
   
-- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Reprezentuje zachowanie środowiska wykonawczego <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.  
+- <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>., Reprezentuje zachowanie <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> w czasie wykonywania.  
   
-- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Kontroluje zachowanie w czasie wykonywania `XmlSerializer` i kojarzy ją z operacją.  
+- <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>., Kontroluje zachowanie `XmlSerializer` w czasie wykonywania i kojarzy je z operacją.  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute>. Określa poziom, w którym operacji usługi akceptuje Nagłówek transakcji.  
+- <xref:System.ServiceModel.TransactionFlowAttribute>., Określa poziom, w którym operacja usługi akceptuje Nagłówek transakcji.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md)
-- [Instrukcje: Tworzenie wystąpienia usługi kontroli](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [Konfigurowanie usług](configuring-services.md)
+- [Instrukcje: tworzenie wystąpienia usługi kontroli](./feature-details/how-to-control-service-instancing.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9e26fb36b77e38c81273ccda370a203dd3388e5c
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291740"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320006"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. potoki w środowisku .NET
 
@@ -55,13 +55,13 @@ Aby rozwiązać powyższe problemy, wymagane są następujące zmiany:
 
 * Buforuj dane przychodzące do momentu znalezienia nowego wiersza.
 * Przeanalizuj wszystkie wiersze zwrócone w buforze.
-* Istnieje możliwość, że wiersz jest większy niż 1 KB (1024 bajtów). Kod musi zmienić rozmiar buforu wejściowego. zostanie znaleziony kompletny wiersz.
+* Istnieje możliwość, że wiersz jest większy niż 1 KB (1024 bajtów). Kod musi zmienić rozmiar buforu wejściowego do momentu, w którym zostanie znaleziony ogranicznik, aby dopasować cały wiersz w buforze.
 
   * Jeśli rozmiar buforu jest zmieniany, w danych wejściowych są umieszczane więcej kopii buforów.
   * Aby zmniejszyć ilość zajętego miejsca, należy skompaktować bufor używany do odczytywania wierszy.
 
 * Rozważ użycie puli buforów, aby uniknąć wielokrotnego przydzielania pamięci.
-* Poniższy kod dotyczy niektórych następujących problemów:
+* Poniższy kod dotyczy niektórych z następujących problemów:
 
 [!code-csharp[](~/samples/snippets/csharp/pipelines/ProcessLinesAsync.cs?name=snippet)]
 
@@ -342,6 +342,6 @@ Poprzednia metoda pisania używa buforów dostarczonych przez `PipeWriter`. Alte
 
  W przeciwieństwie do `Pipe`, który zawiera `PipeReader` i `PipeWriter`, `IDuplexPipe` reprezentuje jedną część połączenia pełnego dupleksu. Oznacza to, co jest zapisywane w `PipeWriter` nie zostanie odczytany z `PipeReader`.
 
-## <a name="streams"></a>Strumieni
+## <a name="streams"></a>Strumienie
 
 Podczas odczytywania lub zapisywania danych strumienia zwykle dane są odczytywane przy użyciu deserializatora i zapisu danych przy użyciu serializatora. Większość z tych interfejsów API odczytu i zapisu ma parametr `Stream`. Aby ułatwić integrację z tymi istniejącymi interfejsami API, `PipeReader` i `PipeWriter` uwidacznia <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> zwraca implementację `Stream` wokół `PipeReader` lub `PipeWriter`.

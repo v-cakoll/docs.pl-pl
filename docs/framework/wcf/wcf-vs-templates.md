@@ -2,12 +2,12 @@
 title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 8f7eb9ef5175c41a3378201f2f25f1fd914aef55
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916788"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320488"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 Windows Communication Foundation (WCF) szablony programu Visual Studio są wstępnie zdefiniowanymi szablonami projektu i elementów, których można użyć w programie Visual Studio, aby szybko tworzyć usługi WCF i otaczające aplikacje.  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
 - Plik konfiguracji aplikacji (App. config). Plik konfiguracji zawiera podstawowe elementy modelu usługi WCF z bezpiecznym powiązaniem HTTP. Zawiera również punkt końcowy usługi i umożliwia wymianę metadanych.  
   
 > [!NOTE]
-> Program Visual Studio jest skonfigurowany do rozpoznawania pliku App. config jako plik konfiguracji projektu, gdy jest uruchamiany przy użyciu [hosta usługi WCF (WcfSvcHost. exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), który jest domyślną konfiguracją. Jeśli Biblioteka usług jest hostowana w pliku wykonywalnym, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, ponieważ pliki konfiguracji bibliotek DLL są nieprawidłowe.  
+> Program Visual Studio jest skonfigurowany do rozpoznawania pliku App. config jako plik konfiguracji projektu, gdy jest uruchamiany przy użyciu [hosta usługi WCF (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md), który jest domyślną konfiguracją. Jeśli Biblioteka usług jest hostowana w pliku wykonywalnym, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, ponieważ pliki konfiguracji bibliotek DLL są nieprawidłowe.  
   
 ### <a name="wcf-service-application-template"></a>Szablon aplikacji usługi WCF  
  Szablon aplikacji usługi WCF jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C#\WCF** i **Visual Basic\WCF**.  
@@ -59,12 +59,12 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  Plik hosta usługi (Service1. svc) jest również tworzony, jeśli istniejący projekt jest projektem sieci Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projekt usługi WCF WF i szablon elementu.  
- Te szablony tworzą usługi WCF obsługujące usługę przepływu pracy, która jest przepływem pracy, który można uzyskać dostęp do usługi sieci Web. Istnieją osobne szablony dla języka XAML lub bezwzględnych modeli programistycznych. Za pomocą szablonów można utworzyć sekwencyjny przepływ pracy automatu lub stanu. Aby uzyskać więcej informacji na temat tego typu przepływu pracy [, zobacz How to: Utwórz przepływ pracy](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [Tworzenie starszych projektów przepływu pracy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Te szablony tworzą usługi WCF obsługujące usługę przepływu pracy, która jest przepływem pracy, który można uzyskać dostęp do usługi sieci Web. Istnieją osobne szablony dla języka XAML lub bezwzględnych modeli programistycznych. Za pomocą szablonów można utworzyć sekwencyjny przepływ pracy automatu lub stanu. Aby uzyskać więcej informacji na temat tego typu przepływu pracy, zobacz [How to: Create a Workflow](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [Tworzenie starszych projektów przepływu pracy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
  Program Visual Studio Designer jest bardziej reagujący, gdy są używane przepływy pracy typu XOML zamiast kodu. Przepływ pracy XOML jest domyślnym typem przepływu pracy, który ma zostać utworzony.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Szablon biblioteki usługi zespalania programu WCF  
- Ten szablon umożliwia udostępnienie kanału informacyjnego w formacie RSS lub ATOM jako usługi WCF. Aby uzyskać więcej informacji, zobacz temat [zespalanie WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
+ Ten szablon umożliwia udostępnienie kanału informacyjnego w formacie RSS lub ATOM jako usługi WCF. Aby uzyskać więcej informacji, zobacz temat [zespalanie WCF](./feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Zmiana adresu kanału informacyjnego  
  Szablon zespalania używa programu Internet Explorer podczas wykonywania. Po kliknięciu prawym przyciskiem myszy projektu w **Eksploratorze rozwiązań** w programie Visual Studio wybierz pozycję **Właściwości**, a następnie wybierz kartę **debugowanie** i sprawdź, czy jest wyświetlany domyślny adres szablonu. Program Internet Explorer podejmie próbę otwarcia kanału informacyjnego pod tym adresem.  
@@ -80,9 +80,9 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  Aby uzyskać dostęp do tego szablonu, kliknij prawym przyciskiem myszy witrynę sieci Web lub projekt aplikacji sieci Web w **Eksplorator rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij pozycję **usługa WCF z włączoną obsługą Silverlight**.  
   
 > [!NOTE]
-> Usługa WCF obsługująca program Silverlight uwidacznia `basicHttpBinding` punkt końcowy bez włączania żadnych ustawień zabezpieczeń. W związku z tym informacje o usłudze mogą zostać uzyskane przez wszystkich klientów, którzy łączą się z tą usługą. Komunikaty wymieniane między usługą a klientem również nie są podpisane ani zaszyfrowane. Aby prawidłowo zabezpieczyć punkt końcowy, należy użyć uwierzytelniania ASP.NET, protokołu HTTPS lub innych mechanizmów.  
+> Usługa WCF z włączoną obsługą technologii Silverlight uwidacznia punkt końcowy `basicHttpBinding` bez włączania żadnych ustawień zabezpieczeń. W związku z tym informacje o usłudze mogą zostać uzyskane przez wszystkich klientów, którzy łączą się z tą usługą. Komunikaty wymieniane między usługą a klientem również nie są podpisane ani zaszyfrowane. Aby prawidłowo zabezpieczyć punkt końcowy, należy użyć uwierzytelniania ASP.NET, protokołu HTTPS lub innych mechanizmów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
-- [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+- [Host usługi WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)
+- [Testowy klient WCF (WcfTestClient.exe)](wcf-test-client-wcftestclient-exe.md)

@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 68b427a81104d0f5102915002025103ef8d35dc4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9a8db0670fff604cc9db8279ab1566e6e3fd3c8d
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928590"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320675"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Skonfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfiguracji zapewnia elastyczność udostępniania punktów końcowych i danych zachowania usługi w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie opisano dostępne podstawowe techniki.  
   
- Usługę WCF można skonfigurować za pomocą technologii konfiguracji .NET Framework. Najczęściej elementy XML są dodawane do pliku Web. config dla witryny Internet Information Services (IIS), która hostuje usługę WCF. Elementy umożliwiają zmianę szczegółów, takich jak adresy punktów końcowych (rzeczywiste adresy używane do komunikowania się z usługą) na poszczególnych komputerach. Ponadto program WCF zawiera kilka elementów dostępnych w systemie, które umożliwiają szybkie wybieranie najbardziej podstawowych funkcji usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]programu, platforma WCF udostępnia nowy domyślny model konfiguracji, który upraszcza wymagania dotyczące konfiguracji programu WCF. Jeśli nie podasz żadnej konfiguracji WCF dla określonej usługi, środowisko uruchomieniowe automatycznie skonfiguruje usługę przy użyciu standardowych punktów końcowych oraz domyślnego powiązania/zachowania. W tym przypadku Zapisywanie konfiguracji jest główną częścią programowania aplikacji WCF.  
+ Usługę WCF można skonfigurować za pomocą technologii konfiguracji .NET Framework. Najczęściej elementy XML są dodawane do pliku Web. config dla witryny Internet Information Services (IIS), która hostuje usługę WCF. Elementy umożliwiają zmianę szczegółów, takich jak adresy punktów końcowych (rzeczywiste adresy używane do komunikowania się z usługą) na poszczególnych komputerach. Ponadto program WCF zawiera kilka elementów dostępnych w systemie, które umożliwiają szybkie wybieranie najbardziej podstawowych funkcji usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF jest dostarczany z nowym domyślnym modelem konfiguracji, który upraszcza wymagania dotyczące konfiguracji programu WCF. Jeśli nie podasz żadnej konfiguracji WCF dla określonej usługi, środowisko uruchomieniowe automatycznie skonfiguruje usługę przy użyciu standardowych punktów końcowych oraz domyślnego powiązania/zachowania. W tym przypadku Zapisywanie konfiguracji jest główną częścią programowania aplikacji WCF.  
   
- Aby uzyskać więcej informacji, zobacz [Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Aby uzyskać listę najczęściej używanych elementów, zobacz [powiązania dostarczone przez system](../../../docs/framework/wcf/system-provided-bindings.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Aby uzyskać więcej informacji, zobacz [Konfigurowanie powiązań dla usług](configuring-bindings-for-wcf-services.md). Aby uzyskać listę najczęściej używanych elementów, zobacz [powiązania dostarczone przez system](system-provided-bindings.md). Aby uzyskać więcej informacji na temat domyślnych punktów końcowych, powiązań i zachowań, zobacz [Uproszczona konfiguracja](simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](./samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 > W przypadku wdrażania w wielu różnych wersjach usługi, należy określić częściowe nazwy zestawów, do których istnieją odwołania w plikach konfiguracji. Wynika to z faktu, że plik konfiguracji jest współużytkowany przez wszystkie wersje usługi i może być uruchomiony w różnych wersjach .NET Framework.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web. config i App. config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System. Configuration: Web. config i App. config  
  Usługa WCF używa systemu konfiguracji system. Configuration .NET Framework.  
   
  Podczas konfigurowania usługi w programie Visual Studio należy określić ustawienia za pomocą pliku Web. config lub pliku App. config. Wybór nazwy pliku konfiguracji jest określany przez środowisko hostingu wybrane dla usługi. Jeśli używasz usług IIS do hostowania usługi, użyj pliku Web. config. Jeśli używasz innego środowiska hostingu, użyj pliku App. config.  
   
  W programie Visual Studio plik o nazwie App. config jest używany do tworzenia końcowego pliku konfiguracji. Końcowa nazwa aktualnie używana na potrzeby konfiguracji zależy od nazwy zestawu. Na przykład zestaw o nazwie "cohowinery. exe" ma ostateczną nazwę pliku konfiguracji "cohowinery. exe. config". Jednak wystarczy zmodyfikować plik App. config. Zmiany wprowadzone w tym pliku są automatycznie wprowadzane do ostatecznego pliku konfiguracji aplikacji w czasie kompilacji.  
   
- W przypadku korzystania z pliku App. config system konfiguracji Scala plik App. config z zawartością pliku Machine. config, gdy aplikacja zostanie uruchomiona, a konfiguracja zostanie zastosowana. Ten mechanizm umożliwia zdefiniowanie ustawień całego komputera w pliku Machine. config. Plik App. config może służyć do zastępowania ustawień pliku Machine. config; Możesz również zablokować ustawienia w pliku Machine. config, tak aby były używane. W pliku Web. config system konfiguracji scala pliki Web. config we wszystkich katalogach, które pomogą do katalogu aplikacji, do konfiguracji, która zostanie zastosowana. Aby uzyskać więcej informacji na temat konfiguracji i priorytetów ustawień, zobacz tematy w <xref:System.Configuration> przestrzeni nazw.  
+ W przypadku korzystania z pliku App. config system konfiguracji Scala plik App. config z zawartością pliku Machine. config, gdy aplikacja zostanie uruchomiona, a konfiguracja zostanie zastosowana. Ten mechanizm umożliwia zdefiniowanie ustawień całego komputera w pliku Machine. config. Plik App. config może służyć do zastępowania ustawień pliku Machine. config; Możesz również zablokować ustawienia w pliku Machine. config, tak aby były używane. W pliku Web. config system konfiguracji scala pliki Web. config we wszystkich katalogach, które pomogą do katalogu aplikacji, do konfiguracji, która zostanie zastosowana. Aby uzyskać więcej informacji na temat konfiguracji i priorytetów ustawień, zobacz tematy w przestrzeni nazw <xref:System.Configuration>.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Główne sekcje pliku konfiguracji  
  Główne sekcje w pliku konfiguracji obejmują następujące elementy.  
@@ -66,57 +66,57 @@ Skonfigurowanie usługi Windows Communication Foundation (WCF) z plikiem konfigu
 > [!NOTE]
 > Sekcje powiązania i zachowania są opcjonalne i są uwzględniane tylko w razie potrzeby.  
   
-### <a name="the-services-element"></a>Element \<> usług  
- `services` Element zawiera specyfikacje dla wszystkich usług, które są obsługiwane przez aplikację. Począwszy od uproszczonego modelu konfiguracji w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]programie, ta sekcja jest opcjonalna.  
+### <a name="the-services-element"></a>@No__t-0services > elementu  
+ Element `services` zawiera specyfikacje dla wszystkich usług, które są obsługiwane przez aplikację. Począwszy od uproszczonego modelu konfiguracji w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ta sekcja jest opcjonalna.  
   
- [\<> usług](../../../docs/framework/configure-apps/file-schema/wcf/services.md)  
+ [@no__t — 1services >](../configure-apps/file-schema/wcf/services.md)  
   
-### <a name="the-service-element"></a>Element \<> usługi  
+### <a name="the-service-element"></a>@No__t-0Service > elementu  
  Każda usługa ma następujące atrybuty:  
   
-- `name`. Określa typ, który zapewnia implementację kontraktu usługi. Jest to w pełni kwalifikowana nazwa, która składa się z przestrzeni nazw, kropki, a następnie nazwy typu. Na przykład `"MyNameSpace.myServiceType"`.  
+- `name`., Określa typ, który zapewnia implementację kontraktu usługi. Jest to w pełni kwalifikowana nazwa, która składa się z przestrzeni nazw, kropki, a następnie nazwy typu. Na przykład `"MyNameSpace.myServiceType"`.  
   
-- `behaviorConfiguration`. Określa nazwę jednego z `behavior` elementów znalezionych `behaviors` w elemencie. Określone zachowanie zarządza akcjami, takimi jak czy usługa zezwala na personifikację. Jeśli wartość jest wartością pustą lub nie `behaviorConfiguration` jest podana, do usługi zostanie dodany domyślny zestaw zachowań usługi.  
+- `behaviorConfiguration`., Określa nazwę jednego z elementów `behavior` znalezionych w elemencie `behaviors`. Określone zachowanie zarządza akcjami, takimi jak czy usługa zezwala na personifikację. Jeśli wartość jest pustą nazwą lub nie `behaviorConfiguration`, zostanie dodany domyślny zestaw zachowań usługi do usługi.  
   
-- [\<> usługi](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
+- [@no__t — 1service >](../configure-apps/file-schema/wcf/service.md)  
   
-### <a name="the-endpoint-element"></a>Element \<> punktu końcowego  
+### <a name="the-endpoint-element"></a>@No__t-0endpoint > elementu  
  Każdy punkt końcowy wymaga adresu, powiązania i kontraktu, które są reprezentowane przez następujące atrybuty:  
   
-- `address`. Określa Uniform Resource Identifier usługi (URI), który może być adresem bezwzględnym lub taki, który jest określony względem adresu podstawowego usługi. W przypadku wybrania pustego ciągu wskazuje, że punkt końcowy jest dostępny pod adresem podstawowym określonym podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
+- `address`., Określa Uniform Resource Identifier usługi (URI), który może być adresem bezwzględnym lub taki, który jest określony względem adresu podstawowego usługi. W przypadku wybrania pustego ciągu wskazuje, że punkt końcowy jest dostępny pod adresem podstawowym określonym podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
   
-- `binding`. Zwykle określa powiązanie dostarczone z systemem, takie <xref:System.ServiceModel.WSHttpBinding>jak, ale może również określać powiązanie zdefiniowane przez użytkownika. Określone powiązanie określa typ transportu, używanego zabezpieczenia i kodowanie oraz to, czy niezawodne sesje, transakcje lub przesyłanie strumieniowe są obsługiwane lub włączone.  
+- `binding`., Zwykle określa powiązanie dostarczone z systemem, takie jak <xref:System.ServiceModel.WSHttpBinding>, ale może również określać powiązanie zdefiniowane przez użytkownika. Określone powiązanie określa typ transportu, używanego zabezpieczenia i kodowanie oraz to, czy niezawodne sesje, transakcje lub przesyłanie strumieniowe są obsługiwane lub włączone.  
   
-- `bindingConfiguration`. Jeśli wartości domyślne powiązania muszą być modyfikowane, można to zrobić przez skonfigurowanie odpowiedniego `binding` elementu `bindings` w elemencie. Ten atrybut powinien mieć taką samą wartość jak `name` atrybut `binding` elementu, który jest używany do zmiany wartości domyślnych. Jeśli nie podano nazwy lub nie `bindingConfiguration` określono w powiązaniu, to domyślne powiązanie typu powiązania jest używane w punkcie końcowym.  
+- `bindingConfiguration`., Jeśli wartości domyślne powiązania muszą być modyfikowane, można to zrobić przez skonfigurowanie odpowiedniego elementu `binding` w elemencie `bindings`. Ten atrybut powinien mieć taką samą wartość jak atrybut `name` elementu `binding`, który jest używany do zmiany wartości domyślnych. Jeśli nie podano nazwy lub w powiązaniu nie określono `bindingConfiguration`, to domyślne powiązanie typu powiązania jest używane w punkcie końcowym.  
   
-- `contract`. Określa interfejs, który definiuje kontrakt. Jest to interfejs zaimplementowany w typie środowiska uruchomieniowego języka wspólnego (CLR) określony przez `name` atrybut `service` elementu.  
+- `contract`., Określa interfejs, który definiuje kontrakt. Jest to interfejs zaimplementowany w typie środowiska uruchomieniowego języka wspólnego (CLR) określony przez atrybut `name` elementu `service`.  
   
-- [\<> punktu końcowego](../configure-apps/file-schema/wcf/endpoint-element.md)  
+- [@no__t — 1endpoint >](../configure-apps/file-schema/wcf/endpoint-element.md)  
   
-### <a name="the-bindings-element"></a>Element \<powiązań >  
- `bindings` Element zawiera specyfikacje dla wszystkich powiązań, które mogą być używane przez dowolny punkt końcowy zdefiniowany w dowolnej usłudze.  
+### <a name="the-bindings-element"></a>@No__t-0bindings > elementu  
+ Element `bindings` zawiera specyfikacje dla wszystkich powiązań, które mogą być używane przez dowolny punkt końcowy zdefiniowany w dowolnej usłudze.  
   
- [\<> powiązań](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)  
+ [@no__t — 1bindings >](../configure-apps/file-schema/wcf/bindings.md)  
   
-### <a name="the-binding-element"></a>Element \<> powiązania  
- Elementy zawarte [](../../../docs/framework/wcf/extending/custom-bindings.md)w elemencie mogą być jednym z powiązań dostarczonych przez system (zobacz [powiązania dostarczone z systemem](../../../docs/framework/wcf/system-provided-bindings.md)) lub powiązaniem niestandardowym (zobacz powiązania niestandardowe). `bindings` `binding` Element ma atrybut, który skorelowanie powiązania z punktem końcowym określonym `endpoint` w `bindingConfiguration` atrybucie elementu. `name` `binding` Jeśli nazwa nie zostanie określona, to powiązanie odnosi się do wartości domyślnej tego typu powiązania.  
+### <a name="the-binding-element"></a>@No__t-0binding > elementu  
+ Elementy `binding` zawarte w elemencie `bindings` mogą być jednym z powiązań dostarczonych przez system (patrz [powiązania dostarczone z systemem](system-provided-bindings.md)) lub powiązaniem niestandardowym (zobacz [powiązania niestandardowe](./extending/custom-bindings.md)). Element `binding` ma atrybut `name`, który skorelowanie powiązania z punktem końcowym określonym w atrybucie `bindingConfiguration` elementu `endpoint`. Jeśli nazwa nie zostanie określona, to powiązanie odnosi się do wartości domyślnej tego typu powiązania.  
   
 Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zobacz [Konfigurowanie usług WCF](configuring-services.md).
   
- [\<> powiązania](../../../docs/framework/misc/binding.md)  
+ [@no__t — 1binding >](../misc/binding.md)  
   
-### <a name="the-behaviors-element"></a>Elementy \<> zachowań  
- Jest to element kontenera dla `behavior` elementów, które definiują zachowania dla usługi.  
+### <a name="the-behaviors-element"></a>@No__t-0behaviors > elementu  
+ Jest to element kontenera dla elementów `behavior`, które definiują zachowania dla usługi.  
   
- [\<> zachowań](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
+ [@no__t — 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)  
   
-### <a name="the-behavior-element"></a>\<Zachowanie > elementu  
- Każdy `behavior` element jest identyfikowany `name` przez atrybut i zapewnia zachowanie dostarczone przez system, takie jak <`throttling`> lub niestandardowe zachowanie. Jeśli nazwa nie zostanie określona, ten element zachowania odnosi się do domyślnego zachowania usługi lub punktu końcowego.  
+### <a name="the-behavior-element"></a>@No__t-0behavior > elementu  
+ Każdy element `behavior` jest identyfikowany przez atrybut `name` i zapewnia zachowanie dostarczone przez system, takie jak < `throttling` > lub niestandardowe zachowanie. Jeśli nazwa nie zostanie określona, ten element zachowania odnosi się do domyślnego zachowania usługi lub punktu końcowego.  
   
- [\<> zachowania](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [@no__t — 1behavior >](../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Jak używać konfiguracji powiązań i zachowań  
- Program WCF ułatwia udostępnianie konfiguracji między punktami końcowymi przy użyciu systemu odniesienia w konfiguracji. Zamiast bezpośrednio przypisywać wartości konfiguracyjne do punktu końcowego, wartości konfiguracyjne powiązane z powiązaniem `bindingConfiguration` są pogrupowane `<binding>` w elementach w sekcji. Konfiguracja powiązania to nazwana grupa ustawień dla powiązania. Punkty końcowe mogą następnie odwoływać się do `bindingConfiguration` nazwy.  
+ Program WCF ułatwia udostępnianie konfiguracji między punktami końcowymi przy użyciu systemu odniesienia w konfiguracji. Zamiast bezpośredniego przypisywania wartości konfiguracyjnych do punktu końcowego wartości konfiguracyjne powiązane z powiązaniem są pogrupowane w `bindingConfiguration` elementów w sekcji `<binding>`. Konfiguracja powiązania to nazwana grupa ustawień dla powiązania. Punkty końcowe mogą następnie odwoływać się do `bindingConfiguration` według nazwy.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,9 +148,9 @@ Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zoba
 </configuration>  
 ```  
   
- `name` Element`bindingConfiguration` jest ustawiony w`<binding>` elemencie. Musi być unikatowym ciągiem w zakresie typu powiązania — w tym przypadku [< BasicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)lub pustej wartości, aby odwołać się do powiązania domyślnego. `name` Punkt końcowy łączy się z konfiguracją przez ustawienie `bindingConfiguration` atrybutu na ten ciąg.  
+ @No__t-0 `bindingConfiguration` jest ustawiony w elemencie `<binding>`. @No__t-0 musi być unikatowym ciągiem w zakresie typu powiązania — w tym przypadku [< BasicHttpBinding @ no__t-2](../configure-apps/file-schema/wcf/basichttpbinding.md)lub pustą wartość, aby odwołać się do powiązania domyślnego. Punkt końcowy łączy się z konfiguracją przez ustawienie atrybutu `bindingConfiguration` na ten ciąg.  
   
- `behaviorConfiguration` Jest zaimplementowana w taki sam sposób, jak pokazano w poniższym przykładzie.  
+ @No__t-0 jest zaimplementowana w taki sam sposób, jak pokazano w poniższym przykładzie.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -181,14 +181,14 @@ Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zoba
 </configuration>  
 ```  
   
- Należy zauważyć, że domyślny zestaw zachowań usługi jest dodawany do usługi. Ten system umożliwia używanie punktów końcowych do udostępniania wspólnych konfiguracji bez ponownego definiowania ustawień. Jeśli wymagany jest zakres całego komputera, należy utworzyć konfigurację powiązania lub zachowania w pliku Machine. config. Ustawienia konfiguracji są dostępne we wszystkich plikach App. config. [Narzędzie edytora konfiguracji (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) ułatwia tworzenie konfiguracji.  
+ Należy zauważyć, że domyślny zestaw zachowań usługi jest dodawany do usługi. Ten system umożliwia używanie punktów końcowych do udostępniania wspólnych konfiguracji bez ponownego definiowania ustawień. Jeśli wymagany jest zakres całego komputera, należy utworzyć konfigurację powiązania lub zachowania w pliku Machine. config. Ustawienia konfiguracji są dostępne we wszystkich plikach App. config. [Narzędzie edytora konfiguracji (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md) ułatwia tworzenie konfiguracji.  
   
 ## <a name="behavior-merge"></a>Scalanie zachowań  
  Funkcja scalania zachowań ułatwia zarządzanie zachowaniami, gdy istnieje potrzeba spójnego stosowania zestawu typowych zachowań. Ta funkcja umożliwia określenie zachowań na różnych poziomach w hierarchii konfiguracji, a usługi dziedziczą zachowania z wielu poziomów hierarchii konfiguracji. Aby zilustrować, jak to działa, Załóżmy, że w usługach IIS znajduje się następujący układ katalogu wirtualnego:  
   
  `~\Web.config~\Service.svc~\Child\Web.config~\Child\Service.svc`
   
- `~\Web.config` A plik ma następującą zawartość:  
+ A plik `~\Web.config` ma następującą zawartość:  
   
 ```xml  
 <configuration>  
@@ -222,7 +222,7 @@ Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zoba
   
  Usługa znajdująca się w lokalizacji ~ \Child\Service.svc będzie zachowywać się tak, jakby miała zarówno zachowanie serviceDebug, jak i ServiceMetadata. Usługa zlokalizowana w lokalizacji ~ \Service.svc będzie miała tylko zachowanie serviceDebug. Dzieje się tak, aby dwie kolekcje zachowań o tej samej nazwie (w tym przypadku pusty ciąg) zostały scalone.  
   
- Możesz również wyczyścić kolekcje zachowań przy użyciu \<tagu Clear > i usunąć pojedyncze zachowania z kolekcji przy \<użyciu tagu Remove >. Na przykład następujące dwie wyniki konfiguracji w usłudze podrzędnej mają tylko zachowanie usługi ServiceMetadata:  
+ Możesz również wyczyścić kolekcje zachowań przy użyciu tagu \<clear > i usunąć pojedyncze zachowania z kolekcji przy użyciu tagu \<remove >. Na przykład następujące dwie wyniki konfiguracji w usłudze podrzędnej mają tylko zachowanie usługi ServiceMetadata:  
   
 ```xml  
 <configuration>  
@@ -260,11 +260,11 @@ Aby uzyskać więcej informacji na temat konfigurowania usług i klientów, zoba
   
  Scalanie zachowań dotyczy zarówno zachowań punktu końcowego, jak i zachowań usługi w konfiguracji.  
   
- Jeśli kolekcja zachowań podrzędnych zawiera zachowanie, które jest już obecne w kolekcji zachowań nadrzędnych, zachowanie podrzędne zastępuje element nadrzędny. Tak więc, jeśli kolekcja zachowań nadrzędnych miała `<serviceMetadata httpGetEnabled="False" />` , a kolekcja zachowań podrzędnych miała `<serviceMetadata httpGetEnabled="True" />`wartość, zachowanie potomne przesłoni zachowanie nadrzędne w kolekcji zachowań i HttpGetEnabled będzie "true".  
+ Jeśli kolekcja zachowań podrzędnych zawiera zachowanie, które jest już obecne w kolekcji zachowań nadrzędnych, zachowanie podrzędne zastępuje element nadrzędny. Dlatego jeśli nadrzędna kolekcja zachowań miała `<serviceMetadata httpGetEnabled="False" />`, a kolekcja zachowań podrzędnych miała `<serviceMetadata httpGetEnabled="True" />`, zachowanie potomne przesłoni zachowanie nadrzędne w kolekcji zachowań, a httpGetEnabled będzie "true".  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)
+- [Uproszczona konfiguracja](simplified-configuration.md)
 - [Konfigurowanie usług WCF](configuring-services.md)
-- [\<> usługi](../../../docs/framework/configure-apps/file-schema/wcf/service.md)
-- [\<> powiązania](../../../docs/framework/misc/binding.md)
+- [@no__t — 1service >](../configure-apps/file-schema/wcf/service.md)
+- [@no__t — 1binding >](../misc/binding.md)

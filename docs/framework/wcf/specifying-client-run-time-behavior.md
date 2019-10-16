@@ -7,42 +7,42 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 738aadf93b726569eb59fc281cca2e482bace0bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 075f62526ace1ac49d12e1bdec39d8df4b0a3ff1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645183"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321410"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Określanie zachowania klienta w czasie wykonywania
-Klienci Windows Communication Foundation (WCF), podobnie jak usługi Windows Communication Foundation (WCF), można skonfigurować do modyfikowania zachowania w czasie wykonywania do własnych aplikacji klienckiej. Trzy atrybuty są dostępne dla Określanie zachowania klienta w czasie wykonywania. Obiekty klienta dwustronnego wywołania zwrotnego można użyć <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> atrybutów, które mają modyfikowanie ich zachowania w czasie wykonywania. Ten atrybut <xref:System.ServiceModel.Description.ClientViaBehavior>, może służyć do oddzielania logiczne miejsce docelowe z docelowym bezpośredniej sieci. Ponadto klienta dwustronnego wywołania zwrotnego typów mogą korzystać z niektórych zachowań po stronie usługi. Aby uzyskać więcej informacji, zobacz [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
+Klienci programu Windows Communication Foundation (WCF), np. usługi Windows Communication Foundation (WCF), można skonfigurować w celu zmodyfikowania zachowania w czasie wykonywania w celu dostosowania go do aplikacji klienckiej. Trzy atrybuty są dostępne do określenia zachowania klienta w czasie wykonywania. Obiekty wywołania zwrotnego klienta dupleksu mogą używać atrybutów <xref:System.ServiceModel.CallbackBehaviorAttribute> i <xref:System.ServiceModel.Description.CallbackDebugBehavior> do modyfikowania ich zachowania w czasie wykonywania. Innym atrybutem, <xref:System.ServiceModel.Description.ClientViaBehavior>, można użyć do oddzielenia logicznego miejsca docelowego od bezpośredniej lokalizacji docelowej sieci. Ponadto typy wywołania zwrotnego klienta dupleksowego mogą używać niektórych zachowań po stronie usług. Aby uzyskać więcej informacji, zobacz [Określanie zachowania usługi w czasie wykonywania](specifying-service-run-time-behavior.md).  
   
-## <a name="using-the-callbackbehaviorattribute"></a>Za pomocą CallbackBehaviorAttribute  
- Można skonfigurować lub rozszerzanie zachowanie wykonania implementacji kontrakt wywołania zwrotnego, w aplikacji klienckiej za pomocą <xref:System.ServiceModel.CallbackBehaviorAttribute> klasy. Ten atrybut pełni funkcję podobną do klasy wywołania zwrotnego, co <xref:System.ServiceModel.ServiceBehaviorAttribute> klasy, z wyjątkiem tworzenia wystąpienia ustawienia zachowania i transakcji.  
+## <a name="using-the-callbackbehaviorattribute"></a>Korzystanie z CallbackBehaviorAttribute  
+ Można skonfigurować lub zwiększyć zachowanie wykonywania implementacji kontraktu wywołania zwrotnego w aplikacji klienckiej przy użyciu klasy <xref:System.ServiceModel.CallbackBehaviorAttribute>. Ten atrybut wykonuje podobną funkcję dla klasy wywołania zwrotnego jako Klasa <xref:System.ServiceModel.ServiceBehaviorAttribute>, z wyjątkiem zachowań wystąpienia i ustawień transakcji.  
   
- <xref:System.ServiceModel.CallbackBehaviorAttribute> Klasy muszą być stosowane do klasy, który implementuje ten kontrakt wywołania zwrotnego. Jeśli stosowane do implementacji obsługującej zamówienia, <xref:System.InvalidOperationException> wyjątek w czasie wykonywania. Poniższy kod przedstawia przykład <xref:System.ServiceModel.CallbackBehaviorAttribute> klasy na obiektu wywołania zwrotnego, który używa <xref:System.Threading.SynchronizationContext> obiektu wątku do organizowania, <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> właściwości, aby wymusić komunikat sprawdzania poprawności, a <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> właściwości do zwrócenia Wyjątki jako <xref:System.ServiceModel.FaultException> obiektów do usługi w celu debugowania.  
+ Klasy <xref:System.ServiceModel.CallbackBehaviorAttribute> należy zastosować do klasy implementującej kontrakt wywołania zwrotnego. W przypadku zastosowania do implementacji kontraktu niedupleksowego w czasie wykonywania jest generowany wyjątek <xref:System.InvalidOperationException>. Poniższy przykład kodu przedstawia klasę <xref:System.ServiceModel.CallbackBehaviorAttribute> w obiekcie wywołania zwrotnego, który używa obiektu <xref:System.Threading.SynchronizationContext> do określenia wątku, do którego należy kierowanie, właściwość <xref:System.ServiceModel.CallbackBehaviorAttribute.ValidateMustUnderstand%2A> w celu wymuszenia walidacji wiadomości i Właściwość <xref:System.ServiceModel.CallbackBehaviorAttribute.IncludeExceptionDetailInFaults%2A> do zwracania wyjątków jako <xref:System.ServiceModel.FaultException> obiektów do Usługa do celów debugowania.  
   
  [!code-csharp[CallbackBehaviorAttribute#3](../../../samples/snippets/csharp/VS_Snippets_CFX/callbackbehaviorattribute/cs/client.cs#3)]
  [!code-vb[CallbackBehaviorAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/callbackbehaviorattribute/vb/client.vb#3)]  
   
-## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Włącz przepływ informacji o zarządzanych wyjątku przy użyciu CallbackDebugBehavior  
- Można włączyć przepływ informacji o zarządzanych wyjątku w obiekcie klienta wywołania zwrotnego do usługi w celu debugowania, ustawiając <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość `true` pliku albo programowo, albo z konfiguracji aplikacji.  
+## <a name="using-callbackdebugbehavior-to-enable-the-flow-of-managed-exception-information"></a>Włączanie przepływu informacji o zarządzanych wyjątkach przy użyciu CallbackDebugBehavior  
+ Można włączyć przepływ informacji o zarządzanym wyjątku w obiekcie wywołania zwrotnego klienta z powrotem do usługi na potrzeby debugowania przez ustawienie właściwości <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> na `true` programowo lub z pliku konfiguracyjnego aplikacji.  
   
- Zwraca informacje o zarządzanym wyjątku do usług może stanowić zagrożenie bezpieczeństwa, ponieważ szczegóły wyjątku spowodować ujawnienie informacji o wewnętrznego klienta można użyć implementacji nieautoryzowane usługi. Ponadto mimo że <xref:System.ServiceModel.Description.CallbackDebugBehavior> właściwości można także programowo ustawić, można łatwo zapomnieć o wyłączenie <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> podczas wdrażania.  
+ Zwrócenie informacji o wyjątku zarządzanym do usług może stanowić zagrożenie bezpieczeństwa, ponieważ szczegóły wyjątku ujawniają informacje o wewnętrznej implementacji klienta, które mogą być używane przez nieautoryzowane usługi. Ponadto, mimo że właściwości <xref:System.ServiceModel.Description.CallbackDebugBehavior> można również skonfigurować programowo, można łatwo zapomnieć, aby wyłączyć <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> podczas wdrażania.  
   
- Ze względu na zagadnień związanych z zabezpieczeniami zdecydowanie zalecane jest:  
+ Ze względu na problemy związane z bezpieczeństwem zdecydowanie zaleca się, aby:  
   
-- Przy użyciu pliku konfiguracji aplikacji można ustawić wartość <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość `true`.  
+- Użyj pliku konfiguracji aplikacji, aby ustawić wartość właściwości <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> na `true`.  
   
-- Możesz robić tylko w kontrolowany debugowania scenariuszy.  
+- Można to zrobić tylko w scenariuszach z kontrolowanym debugowaniem.  
   
- Poniższy przykład kodu pokazuje klienta pliku konfiguracji, która instruuje usługę WCF, aby zwrócić informacje o zarządzanym wyjątku w kliencie obiektu wywołania zwrotnego w komunikaty protokołu SOAP.  
+ Poniższy przykład kodu przedstawia plik konfiguracji klienta, który instruuje program WCF, aby zwracał informacje o zarządzanym wyjątku z obiektu wywołania zwrotnego klienta w komunikatach protokołu SOAP.  
   
  [!code-xml[SCA.CallbackContract#4](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.callbackcontract/cs/client.exe.config#4)]  
  
-## <a name="using-the-clientviabehavior-behavior"></a>Używając zachowania ClientViaBehavior  
- Możesz użyć <xref:System.ServiceModel.Description.ClientViaBehavior> zachowanie, aby określić Uniform Resource Identifier, dla którego należy utworzyć kanał transportu. Należy użyć tego zachowania, gdy docelowy bezpośredniej sieci nie jest zamierzone procesora wiadomość. Dzięki temu konwersacje wielu przeskoków, gdy aplikacja wywołująca nie zna ultimate docelowego lub miejsce docelowe `Via` nagłówka nie jest adresem.  
+## <a name="using-the-clientviabehavior-behavior"></a>Korzystanie z zachowania ClientViaBehavior  
+ Możesz użyć zachowania <xref:System.ServiceModel.Description.ClientViaBehavior>, aby określić Uniform Resource Identifier, dla którego należy utworzyć kanał transportu. Użyj tego zachowania, gdy bezpośrednie miejsce docelowe sieci nie jest zamierzonym procesorem komunikatu. Umożliwia to konwersacje z wieloma przeskokami, gdy aplikacja wywołująca nie musi znać ostatecznego miejsca docelowego lub gdy nagłówek `Via` docelowy nie jest adresem.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Określanie zachowania środowiska uruchomieniowego usługi](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+- [Określanie zachowania środowiska uruchomieniowego usługi](specifying-service-run-time-behavior.md)

@@ -7,34 +7,34 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 06a59c7457c0367d421cb46e33cb67f8fa039c7d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: eb1cd12c45a276d5c3cb14f89205fff618121abc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879183"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320131"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I
-Aby skonfigurować punkt końcowy usługi WCF do współdziałać z klientami usługi ASP.NET w sieci Web:  
+Aby skonfigurować punkt końcowy usługi WCF do współdziałania z klientami usługi sieci Web ASP.NET:  
   
-- Użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typ jako typ powiązania punktu końcowego usługi.  
+- Użyj typu <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> jako typu powiązania dla punktu końcowego usługi.  
   
-- Nie używaj wywołania zwrotnego i funkcje kontraktu sesji lub zachowania transakcji do punktu końcowego usługi  
+- Nie używaj funkcji wywołania zwrotnego i kontraktu sesji ani zachowań transakcji w punkcie końcowym usługi  
   
- Opcjonalnie można włączyć obsługę protokołu HTTPS i uwierzytelniania klienta na poziomie transportu w powiązaniu.  
+ Opcjonalnie można włączyć obsługę uwierzytelniania przy użyciu protokołu HTTPS i klienta na poziomie transportu.  
   
- Poniższe funkcje <xref:System.ServiceModel.BasicHttpBinding> klasy wymagają funkcji równoważenia obciążenia po przekroczeniu WS-I Basic Profile 1.1:  
+ Następujące funkcje klasy <xref:System.ServiceModel.BasicHttpBinding> wymagają funkcji poza WS-I Basic Profile 1,1:  
   
-- Kodowanie komunikatu mechanizmu optymalizacji transmisji (MTOM) komunikatu w wartości clientauthtrustmode <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> właściwości. Pozostaw tę właściwość jako wartość domyślną, czyli <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> nieużywanie MTOM.  
+- Kodowanie komunikatów mechanizmu optymalizacji transmisji wiadomości (MTOM) kontrolowane przez właściwość <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>. Pozostaw tę właściwość domyślną wartością, która jest <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>, aby nie używać MTOM.  
   
-- Zabezpieczenia w wartości clientauthtrustmode wiadomości <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> wartość zapewnia obsługę protokołu WS-Security zgodne z protokołu WS-I Basic 1.0 profilu zabezpieczeń. Pozostaw tę właściwość jako wartość domyślną, czyli <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> nieużywanie WS-Security.  
+- Zabezpieczenia komunikatów kontrolowane przez wartość <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> zapewnia obsługę WS-Security zgodną z profilem zabezpieczeń WS-I Basic 1,0. Pozostaw tę właściwość domyślną wartością, która jest <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType>, aby nie używać usługi WS-Security.  
   
- Aby udostępnić metadanych dla usługi WCF do platformy ASP.NET, należy użyć narzędzia generowania klienta usługi sieci Web: [Narzędzia języka opisu usługi (Wsdl.exe) w sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29), [narzędzia odnajdywania usług sieci Web (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)i `Add Web Reference` funkcja w programie Visual Studio; należy włączyć publikowanie metadanych. Aby uzyskać więcej informacji, zobacz [publikowanie punktów końcowych metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Aby uzyskać dostęp do metadanych usługi WCF ASP.NET, użyj narzędzi do generowania klienta usługi sieci Web: [narzędzia Web Services Description Language (WSDL. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29), narzędzia do [odnajdywania usług sieci Web (Disco. exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)i funkcji `Add Web Reference` w programie Visual Studio; należy włączyć publikację metadanych. Aby uzyskać więcej informacji, zobacz [Publikowanie punktów końcowych metadanych](publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład kodu pokazuje, jak można dodać punktu końcowego WCF, która jest zgodna z klientami usługi sieci Web platformy ASP.NET w kodzie, a także w pliku konfiguracji.  
+ Poniższy przykładowy kod pokazuje, jak dodać punkt końcowy WCF, który jest zgodny z klientami usługi sieci Web ASP.NET w kodzie i, Alternatywnie, w pliku konfiguracji.  
   
 ### <a name="code"></a>Kod  
  [!code-csharp[C_HowTo-WCFServiceAndASMXClient#0](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/cs/program.cs#0)]
@@ -43,4 +43,4 @@ Aby skonfigurować punkt końcowy usługi WCF do współdziałać z klientami us
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Współdziałanie z usługami ASP.NET w sieci Web](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+- [Współdziałanie z usługami ASP.NET w sieci Web](./feature-details/interop-with-aspnet-web-services.md)

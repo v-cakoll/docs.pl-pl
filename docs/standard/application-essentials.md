@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d993042cbb435826b92bbcc62f1320a310a02627
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627895"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320019"
 ---
 # <a name="net-framework-application-essentials"></a>Podstawy aplikacji .NET Framework
 Ta część dokumentacji środowiska .NET Framework zawiera informacje dotyczące podstawowych zadań tworzenia aplikacji w tym środowisku.  
@@ -28,7 +28,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  Opis funkcji Ogólne, w tym ogólnych kolekcji, delegatów i interfejsów udostępnianych przez środowisko .NET Framework. Łącza do dokumentacji funkcji języków C#, Visual Basic i Visual C++, a także do wspierających technologii, takich jak odbicie.  
   
  [Wartości numeryczne](../../docs/standard/numerics.md)  
- W tym artykule opisano typy liczbowe w programie .NET Framework.  
+ Opisuje typy liczbowe w .NET Framework.  
   
  [Zdarzenia](../../docs/standard/events/index.md)  
  Omówienie modelu zdarzeń w środowisku .NET Framework.  
@@ -37,7 +37,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  Opisu obsług błędów w środowisku .NET Framework oraz podstaw obsługi wyjątków.  
   
  [We/Wy plików i strumieni](../../docs/standard/io/index.md)  
- Wyjaśnia, jak można wykonać pliku synchroniczne i asynchroniczne i dostęp do strumienia danych oraz sposób używania wydzielonej pamięci masowej.  
+ Wyjaśnia, w jaki sposób można wykonywać synchroniczny i asynchroniczny dostęp do strumienia danych oraz jak używać go w odizolowanym magazynie.  
   
  [Daty, godziny i strefy czasowe](../../docs/standard/datetime/index.md)  
  Opis pracy ze strefami czasowymi oraz konwersjami stref czasowych w aplikacjach uwzględniających strefy czasowe.  
@@ -54,8 +54,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Globalizacja i lokalizacja](../../docs/standard/globalization-localization/index.md)  
  Informacje ułatwiające projektowanie i tworzenie aplikacji gotowych do wydania.  
   
- Ułatwienia dostępu  
- Informacje dotyczące Microsoft UI Automation — platformy dostępności uwzględniającej potrzeby produktów technologii pomocniczych i platform testów automatycznych. Umożliwia ona programowy dostęp do informacji o interfejsie użytkownika.  
+ [Ułatwienia dostępu](../../docs/framework/ui-automation/index.md) Zawiera informacje o automatyzacji interfejsu użytkownika firmy Microsoft, który jest strukturą dostępności, która dotyczy potrzeb produktów technologii pomocniczej i zautomatyzowanych platform testowych, zapewniając programistyczny dostęp do informacji o interfejsie użytkownika.  
   
  [Atrybuty](../../docs/standard/attributes/index.md)  
  Omówienie dostosowywania metadanych za pomocą atrybutów.  
@@ -67,5 +66,5 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Podręcznik programowania](../../docs/framework/development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.  
   
- [Zabezpieczenia](../../docs/standard/security/index.md)  
+ [Security](../../docs/standard/security/index.md)  
  Informacje o klasach i usługach w środowisku uruchomieniowym języka wspólnego i środowisku .NET Framework, które umożliwiają tworzenie bezpiecznych aplikacji.

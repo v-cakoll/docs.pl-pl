@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
-ms.openlocfilehash: 2e99e561c1d479412c7c5cd2a19563446b872049
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0f809c5a0707f2e6575cb8bca1b2a312f6daeb
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051302"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321325"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Instrukcje: Pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)
-W tym temacie przedstawiono <xref:System.Xml.Linq.XElement.Attributes%2A> metody. Ta metoda pobiera atrybuty elementu.  
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-visual-basic"></a>Instrukcje: pobieranie kolekcji atrybutów (LINQ to XML) (Visual Basic)
+W tym temacie wprowadzono metodę <xref:System.Xml.Linq.XElement.Attributes%2A>. Ta metoda pobiera atrybuty elementu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak do iteracji przez kolekcję atrybutów elementu.  
+ Poniższy przykład pokazuje, jak wykonać iterację kolekcji atrybutów elementu.  
   
 ```vb  
 Dim val = _  
@@ -28,7 +28,7 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 ID="1243"  
 Type="int"  
 ConvertableTo="double"  
@@ -36,4 +36,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ do osi XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [Osie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

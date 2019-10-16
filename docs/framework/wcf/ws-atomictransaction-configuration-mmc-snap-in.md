@@ -1,15 +1,15 @@
 ---
-title: Przystawka programu MMC do konfiguracji protokołu WS-AtomicTransaction
+title: Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 926332ac1873db89ce9332075380effdfdc1fc37
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 04380a2a30aba85efb98ee8f9e24d0a6223a18a3
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291508"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320329"
 ---
-# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfiguracji protokołu WS-AtomicTransaction
+# <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
 Przystawka programu MMC Konfiguracja protokołu WS-AtomicTransaction służy do konfigurowania części ustawień protokołu WS-AtomicTransaction na maszynach lokalnych i zdalnych.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -31,9 +31,9 @@ regasm.exe /codebase WsatUI.dll
   
  Za pomocą tego narzędzia można modyfikować podstawowe ustawienia protokołu WS-AtomicTransaction. Można na przykład włączyć i wyłączyć obsługę protokołu WS-AtomicTransaction, skonfigurować porty HTTP dla usługi WS-AT, powiązać certyfikat protokołu SSL z portem HTTP, skonfigurować certyfikaty przez określenie nazw podmiotów certyfikatów, wybrać tryb śledzenia i ustawić domyślne i maksymalne limity czasu.  
   
- Jeśli musisz skonfigurować obsługę protokołu WS-AtomicTransaction tylko na komputerze lokalnym, możesz użyć wersji wiersza polecenia tego narzędzia. Aby uzyskać więcej informacji na temat narzędzia wiersza polecenia, zobacz temat [Narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .  
+ Jeśli musisz skonfigurować obsługę protokołu WS-AtomicTransaction tylko na komputerze lokalnym, możesz użyć wersji wiersza polecenia tego narzędzia. Aby uzyskać więcej informacji na temat narzędzia wiersza polecenia, zobacz temat [Narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md) .  
   
- Należy pamiętać, że zarówno przystawka programu MMC, jak i narzędzie wiersza polecenia nie obsługują konfigurowania wszystkich ustawień usługi WS-AT. Te ustawienia można edytować tylko poprzez bezpośrednie Modyfikowanie rejestru. Aby uzyskać więcej informacji na temat tych ustawień rejestru, zobacz [Konfigurowanie obsługi transakcji WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md).  
+ Należy pamiętać, że zarówno przystawka programu MMC, jak i narzędzie wiersza polecenia nie obsługują konfigurowania wszystkich ustawień usługi WS-AT. Te ustawienia można edytować tylko poprzez bezpośrednie Modyfikowanie rejestru. Aby uzyskać więcej informacji na temat tych ustawień rejestru, zobacz [Konfigurowanie obsługi transakcji WS-AT](./feature-details/configuring-ws-atomic-transaction-support.md).  
   
 ### <a name="user-interface-description"></a>Opis interfejsu użytkownika  
  **Włącz obsługę sieci WS-Bioatom transakcji**:  
@@ -84,10 +84,10 @@ regasm.exe /codebase WsatUI.dll
 > [!NOTE]
 > Gdy inny odbiorca śledzenia korzysta z dostawcy śledzenia WS-AT, nie można utworzyć nowej sesji rejestrowania dla zdarzeń śledzenia. Każda próba skonfigurowania rejestrowania w tym czasie powoduje, że w komunikacie o błędzie "nie można włączyć dostawcy. Kod błędu: 1 ".  
   
- Aby uzyskać więcej informacji na temat śledzenia i rejestrowania, zobacz [administrowanie i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md).  
+ Aby uzyskać więcej informacji na temat śledzenia i rejestrowania, zobacz [administrowanie i Diagnostyka](./diagnostics/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie obsługi transakcji WS-AT](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [Narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [Administracja i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)
+- [Konfigurowanie obsługi protokołu WS-Atomic Transaction](./feature-details/configuring-ws-atomic-transaction-support.md)
+- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Administracja i diagnostyka](./diagnostics/index.md)

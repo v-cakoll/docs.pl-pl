@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe578ba3c655c9c9ea8398b9b2e4d4f974153c8e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782411"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320826"
 ---
 # <a name="basic-programming-lifecycle"></a>Podstawowy cykl życia programowania
-Windows Communication Foundation (WCF) umożliwia aplikacjom komunikowanie się, czy są one na tym samym komputerze w Internecie lub na platformach innej aplikacji. W tym temacie opisano zadania, które są wymagane do kompilowania aplikacji WCF. Pracy przykładowej aplikacji, zobacz [Samouczek wprowadzający](../../../docs/framework/wcf/getting-started-tutorial.md).  
+Windows Communication Foundation (WCF) umożliwia aplikacjom komunikowanie się, czy znajdują się na tym samym komputerze, za pośrednictwem Internetu czy na różnych platformach aplikacji. Ten temat zawiera opis zadań, które są wymagane do utworzenia aplikacji WCF. Aby uzyskać działającą przykładową aplikację, zobacz [samouczek wprowadzenie](getting-started-tutorial.md).  
   
 ## <a name="the-basic-tasks"></a>Podstawowe zadania  
- Podstawowe zadania do wykonania są w kolejności:  
+ Podstawowe zadania do wykonania to:  
   
-1. Definiowanie kontraktu usługi. Kontrakt usługi Określa podpis usługi, który wymienia dane i inne dane zobowiązana na mocy umowy wymagane. Aby uzyskać więcej informacji, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md).  
+1. Zdefiniuj kontrakt usługi. Kontrakt usługi określa sygnaturę usługi, dane, które wymienia, oraz inne dane wymagane z umową. Aby uzyskać więcej informacji, zobacz [Projektowanie kontraktów usług](designing-service-contracts.md).  
   
-2. Zaimplementuj umowy. Implementowanie kontraktu usługi, utworzyć klasę, która implementuje ten kontrakt i określić niestandardowe zachowania, którzy powinni je posiadać środowiska uruchomieniowego. Aby uzyskać więcej informacji, zobacz [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
+2. Zaimplementuj kontrakt. Aby zaimplementować kontrakt usługi, należy utworzyć klasę, która implementuje kontrakt i określić zachowania niestandardowe, które powinien mieć środowisko uruchomieniowe. Aby uzyskać więcej informacji, zobacz [implementowanie kontraktów usług](implementing-service-contracts.md).  
   
-3. Skonfiguruj usługę, określając punkty końcowe oraz inne informacje zachowanie. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  
+3. Skonfiguruj usługę, określając punkty końcowe i inne informacje o zachowaniu. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usług](configuring-services.md).  
   
-4. Hostować usługę. Aby uzyskać więcej informacji, zobacz [usług obsługującego](../../../docs/framework/wcf/hosting-services.md).  
+4. Hostowanie usługi. Aby uzyskać więcej informacji, zobacz [usługi hostingu](hosting-services.md).  
   
-5. Tworzenie aplikacji klienckiej. Aby uzyskać więcej informacji, zobacz [kompilowanie klientów](../../../docs/framework/wcf/building-clients.md).  
+5. Tworzenie aplikacji klienckiej. Aby uzyskać więcej informacji, zobacz [Kompilowanie klientów](building-clients.md).  
   
- Mimo że tematy w tej sekcji należy wykonać to zamówienie, niektóre scenariusze nie są uruchamiane na początku. Na przykład jeśli chcesz skompilować klienta istniejące usługi, możesz rozpocząć od kroku 5. Lub jeśli opracowujesz usługi, które inni użytkownicy będą używać, możesz pominąć krok 5.  
+ Mimo że tematy w tej sekcji są zgodne z tą kolejnością, niektóre scenariusze nie zaczynają się od początku. Na przykład jeśli chcesz skompilować klienta dla istniejącej usługi, Zacznij od kroku 5. Lub jeśli tworzysz usługę, która będzie używana przez inne osoby, możesz pominąć krok 5.  
   
- Gdy zaczynasz programować kontraktów usług, możesz przeczytać [wprowadzenie do rozszerzalności](../../../docs/framework/wcf/introduction-to-extensibility.md). Jeśli masz problemy z usługą, sprawdź [Szybki Start Rozwiązywanie problemów z architekturą WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) aby zobaczyć, czy inne osoby mają takie same lub podobne problemy.  
+ Po zapoznaniu się z projektowaniem kontraktów usług można także zapoznać [się z wprowadzeniem do rozszerzalności](introduction-to-extensibility.md). Jeśli masz problemy z usługą, sprawdź rozwiązanie do [rozwiązywania problemów](wcf-troubleshooting-quickstart.md) z programem WCF, aby sprawdzić, czy inne osoby mają takie same lub podobne problemy.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [Implementowanie kontraktów usług](implementing-service-contracts.md)

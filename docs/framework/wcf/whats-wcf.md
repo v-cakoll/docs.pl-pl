@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 21a01c5d59d30ac89f6baa19dbcdcf718a1b7d88
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834851"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320216"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 Windows Communication Foundation (WCF) to platforma służąca do tworzenia aplikacji zorientowanych na usługę. Korzystając z programu WCF, można wysyłać dane jako komunikaty asynchroniczne z jednego punktu końcowego usługi do innego. Punkt końcowy usługi może być częścią stale dostępnej usługi hostowanej przez usługi IIS lub może być usługą hostowaną w aplikacji. Punktem końcowym może być klient usługi, która żąda danych z punktu końcowego usługi. Komunikaty mogą być proste jako pojedynczy znak lub słowo wysyłane jako XML lub jako strumień danych binarnych. Oto kilka przykładowych scenariuszy:
@@ -32,7 +32,7 @@ Podczas tworzenia takich aplikacji było możliwe przed istnieniem programu WCF,
 
 ## <a name="features-of-wcf"></a>Funkcje programu WCF
 
-Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informacji, zobacz [Szczegóły funkcji usługi WCF](../../../docs/framework/wcf/feature-details/index.md).
+Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informacji, zobacz [Szczegóły funkcji usługi WCF](./feature-details/index.md).
 
 - **Orientacja usługi**
 
@@ -40,15 +40,15 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
 - **Współdziałanie**
 
-     Funkcja WCF implementuje nowoczesne standardy dla współdziałania usługi sieci Web. Aby uzyskać więcej informacji o obsługiwanych standardach, zobacz [współdziałanie i integracja](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md).
+     Funkcja WCF implementuje nowoczesne standardy dla współdziałania usługi sieci Web. Aby uzyskać więcej informacji o obsługiwanych standardach, zobacz [współdziałanie i integracja](./feature-details/interoperability-and-integration.md).
 
 - **Wzorzec wielu komunikatów**
 
-     Komunikaty są wymieniane w jednym z kilku wzorców. Najbardziej typowym wzorcem jest wzorzec żądania/odpowiedzi, gdzie jeden punkt końcowy żąda danych z drugiego punktu końcowego. Odpowiedzi drugiego punktu końcowego. Istnieją inne wzorce, takie jak jednokierunkowa wiadomość, w której jeden punkt końcowy wysyła komunikat bez oczekiwania na odpowiedź. Bardziej skomplikowanym wzorcem jest wzorzec wymiany dwukierunkowej, w którym dwa punkty końcowe nawiązują połączenie i wysyłają dane ponownie, podobnie jak program obsługi wiadomości błyskawicznych. Aby uzyskać więcej informacji o implementowaniu różnych wzorców wymiany komunikatów przy użyciu usług WCF, zobacz [kontrakt](../../../docs/framework/wcf/feature-details/contracts.md).
+     Komunikaty są wymieniane w jednym z kilku wzorców. Najbardziej typowym wzorcem jest wzorzec żądania/odpowiedzi, gdzie jeden punkt końcowy żąda danych z drugiego punktu końcowego. Odpowiedzi drugiego punktu końcowego. Istnieją inne wzorce, takie jak jednokierunkowa wiadomość, w której jeden punkt końcowy wysyła komunikat bez oczekiwania na odpowiedź. Bardziej skomplikowanym wzorcem jest wzorzec wymiany dwukierunkowej, w którym dwa punkty końcowe nawiązują połączenie i wysyłają dane ponownie, podobnie jak program obsługi wiadomości błyskawicznych. Aby uzyskać więcej informacji o implementowaniu różnych wzorców wymiany komunikatów przy użyciu usług WCF, zobacz [kontrakt](./feature-details/contracts.md).
 
 - **Metadane usługi**
 
-     Program WCF obsługuje Publikowanie metadanych usługi przy użyciu formatów określonych w standardach branżowych, takich jak WSDL, schemat XML i WS-Policy. Przy użyciu tych metadanych można automatycznie generować i konfigurować klientów na potrzeby uzyskiwania dostępu do usług WCF. Metadane można publikować za pośrednictwem protokołów HTTP i HTTPS albo przy użyciu standardu wymiany metadanych usługi sieci Web. Aby uzyskać więcej informacji, zobacz [metadane](../../../docs/framework/wcf/feature-details/metadata.md).
+     Program WCF obsługuje Publikowanie metadanych usługi przy użyciu formatów określonych w standardach branżowych, takich jak WSDL, schemat XML i WS-Policy. Przy użyciu tych metadanych można automatycznie generować i konfigurować klientów na potrzeby uzyskiwania dostępu do usług WCF. Metadane można publikować za pośrednictwem protokołów HTTP i HTTPS albo przy użyciu standardu wymiany metadanych usługi sieci Web. Aby uzyskać więcej informacji, zobacz [metadane](./feature-details/metadata.md).
 
 - **Kontrakty danych**
 
@@ -56,23 +56,23 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
 - **Security**
 
-     Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelniania się przed zezwoleniem na odbieranie komunikatów. Zabezpieczenia można zaimplementować przy użyciu dobrze znanych standardów, takich jak SSL lub WS-SecureConversation. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md).
+     Komunikaty mogą być szyfrowane, aby chronić prywatność i można wymagać od użytkowników uwierzytelniania się przed zezwoleniem na odbieranie komunikatów. Zabezpieczenia można zaimplementować przy użyciu dobrze znanych standardów, takich jak SSL lub WS-SecureConversation. Aby uzyskać więcej informacji, zobacz [zabezpieczenia](./feature-details/security.md).
 
 - **Wiele transportów i kodowań**
 
-     Komunikaty mogą być wysyłane przy użyciu dowolnego z kilku wbudowanych protokołów i kodowań transportowych. Najbardziej typowym protokołem i kodowaniem jest wysyłanie komunikatów SOAP zakodowanych przy użyciu protokołu HTTP (HyperText Transfer Protocol) do użycia w World Wide Web. Alternatywnie Funkcja WCF umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub przy użyciu zoptymalizowanego formatu binarnego.  Dane binarne można wydajnie wysyłać przy użyciu standardu MTOM. Jeśli żadna z podanych transportów lub kodowań nie odpowiada Twoim potrzebom, możesz utworzyć własne, niestandardowe transport lub kodowanie. Aby uzyskać więcej informacji na temat transportów i kodowań obsługiwanych przez WCF, zobacz [Transports](../../../docs/framework/wcf/feature-details/transports.md).
+     Komunikaty mogą być wysyłane przy użyciu dowolnego z kilku wbudowanych protokołów i kodowań transportowych. Najbardziej typowym protokołem i kodowaniem jest wysyłanie komunikatów SOAP zakodowanych przy użyciu protokołu HTTP (HyperText Transfer Protocol) do użycia w World Wide Web. Alternatywnie Funkcja WCF umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub przy użyciu zoptymalizowanego formatu binarnego.  Dane binarne można wydajnie wysyłać przy użyciu standardu MTOM. Jeśli żadna z podanych transportów lub kodowań nie odpowiada Twoim potrzebom, możesz utworzyć własne, niestandardowe transport lub kodowanie. Aby uzyskać więcej informacji na temat transportów i kodowań obsługiwanych przez WCF, zobacz [Transports](./feature-details/transports.md).
 
 - **Niezawodne i kolejkowane komunikaty**
 
-     Program WCF obsługuje niezawodną wymianę komunikatów przy użyciu niezawodnych sesji implementowanych za pośrednictwem usługi WS-niezawodny i przy użyciu usługi MSMQ Aby uzyskać więcej informacji na temat obsługi komunikatów niezawodnych i w kolejce w ramach usługi WCF, zobacz [kolejki i sesje niezawodne](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md).
+     Program WCF obsługuje niezawodną wymianę komunikatów przy użyciu niezawodnych sesji implementowanych za pośrednictwem usługi WS-niezawodny i przy użyciu usługi MSMQ Aby uzyskać więcej informacji na temat obsługi komunikatów niezawodnych i w kolejce w ramach usługi WCF, zobacz [kolejki i sesje niezawodne](./feature-details/queues-and-reliable-sessions.md).
 
 - **Komunikaty trwałe**
 
-     Trwały komunikat to taki, który nigdy nie jest tracony ze względu na zakłócenia komunikacji. Komunikaty ze wzorca wiadomości w postaci trwałej są zawsze zapisywane w bazie danych. Jeśli wystąpi zakłócenie, baza danych umożliwia wznowienie wymiany komunikatów po przywróceniu połączenia. Możesz również utworzyć trwały komunikat przy użyciu Windows Workflow Foundation (WF). Aby uzyskać więcej informacji, zobacz [usługi Workflow Services](../../../docs/framework/wcf/feature-details/workflow-services.md).
+     Trwały komunikat to taki, który nigdy nie jest tracony ze względu na zakłócenia komunikacji. Komunikaty ze wzorca wiadomości w postaci trwałej są zawsze zapisywane w bazie danych. Jeśli wystąpi zakłócenie, baza danych umożliwia wznowienie wymiany komunikatów po przywróceniu połączenia. Możesz również utworzyć trwały komunikat przy użyciu Windows Workflow Foundation (WF). Aby uzyskać więcej informacji, zobacz [usługi Workflow Services](./feature-details/workflow-services.md).
 
 - **Transakcje**
 
-     WCF obsługuje również transakcje przy użyciu jednego z trzech modeli transakcji: WS-AtomicTransaction, interfejsów API w przestrzeni nazw <xref:System.Transactions> i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji na temat obsługi transakcji w programie WCF, zobacz [transakcje](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF obsługuje również transakcje przy użyciu jednego z trzech modeli transakcji: WS-AtomicTransaction, interfejsów API w przestrzeni nazw <xref:System.Transactions> i Microsoft Distributed Transaction Coordinator. Aby uzyskać więcej informacji na temat obsługi transakcji w programie WCF, zobacz [transakcje](./feature-details/transactions-in-wcf.md).
 
 - **Obsługa technologii AJAX i REST**
 
@@ -80,7 +80,7 @@ Program WCF obejmuje następujący zestaw funkcji. Aby uzyskać więcej informac
 
 - **Rozszerzalność**
 
-     Architektura WCF ma wiele punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje kilka punktów wejścia, które umożliwiają dostosowanie zachowania usługi. Aby uzyskać więcej informacji na temat dostępnych punktów rozszerzalności, zobacz [rozszerzanie WCF](../../../docs/framework/wcf/extending/index.md).
+     Architektura WCF ma wiele punktów rozszerzalności. Jeśli wymagana jest dodatkowa możliwość, istnieje kilka punktów wejścia, które umożliwiają dostosowanie zachowania usługi. Aby uzyskać więcej informacji na temat dostępnych punktów rozszerzalności, zobacz [rozszerzanie WCF](./extending/index.md).
 
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integracja WCF z innymi technologiami firmy Microsoft
 
@@ -97,10 +97,10 @@ Funkcje hostingu serwera aplikacji systemu Windows Server AppFabric są przeznac
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.ServiceModel>
-- [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
-- [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)
-- [Wskazówki i najlepsze rozwiązania](../../../docs/framework/wcf/guidelines-and-best-practices.md)
-- [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md)
-- [Przewodnik po dokumentacji](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Podstawowe pojęcia programu Windows Communication Foundation](fundamental-concepts.md)
+- [Architektura WCF (Windows Communication Foundation)](architecture.md)
+- [Wskazówki i najlepsze rozwiązania](guidelines-and-best-practices.md)
+- [Wprowadzenie — samouczek](getting-started-tutorial.md)
+- [Przewodnik po dokumentacji](guide-to-the-documentation.md)
+- [Podstawy programowania przy użyciu programu WCF](basic-wcf-programming.md)
 - [Windows Communication Foundation — przykłady](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

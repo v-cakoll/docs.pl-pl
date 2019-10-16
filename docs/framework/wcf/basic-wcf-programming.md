@@ -8,40 +8,40 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4212ca0b86e1c4e4dc74e4b68767b2ce866c9ee
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000119"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320810"
 ---
 # <a name="basic-wcf-programming"></a>Podstawy programowania przy użyciu programu WCF
-W tej sekcji przedstawiono podstawy do tworzenia aplikacji Windows Communication Foundation (WCF).  
+W tej sekcji przedstawiono podstawowe informacje na temat tworzenia aplikacji Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- W tym artykule opisano cykl życia projektowania, kompilowania i wdrażania aplikacji usługi i klienta WCF.  
+ [Podstawowy cykl życia programowania](basic-programming-lifecycle.md)  
+ Opisuje cykl życia projektowania, kompilowania i wdrażania usług i aplikacji klienckich WCF.  
   
- [Projektowanie i implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- W tym artykule opisano, jak projektowanie i implementowanie kontraktu usługi, wybierz wymiany komunikatów, określ kontrakt błędu i innych aspektów podstawowych usług.  
+ [Projektowanie i implementowanie usług](designing-and-implementing-services.md)  
+ Opisuje, jak projektować i implementować kontrakt usługi, wybierać wzorzec wymiany komunikatów, określić umowę o błędach i inne podstawowe aspekty usług.  
   
- [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md)  
- W tym artykule opisano sposób konfigurowania usługi WCF w celu spełnienia wymagań kontraktu, dostosować zachowanie lokalne środowisko uruchomieniowe i wskazywać adres, aby opublikować usługę.  
+ [Konfigurowanie usług](configuring-services.md)  
+ Opisuje sposób konfigurowania usługi WCF do obsługi wymagań kontraktu, dostosowywania lokalnego działania środowiska uruchomieniowego i wskazywania adresu do publikowania usługi.  
   
- [Usługi hostingowe](../../../docs/framework/wcf/hosting-services.md)  
- W tym artykule opisano podstawowe informacje dotyczące hostingu usług w aplikacji.  
+ [Usługi hostingowe](hosting-services.md)  
+ Opisuje podstawy usług hostingu w aplikacji.  
   
- [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)  
- W tym artykule opisano, jak uzyskać metadanych z usługi, konwertować, kod klienta WCF, obsługi problemów z zabezpieczeniami, tworzenia, konfigurowania i obsługi klienta programu WCF.  
+ [Kompilowanie klientów](building-clients.md)  
+ Zawiera opis sposobu uzyskiwania metadanych z usług, konwertowania ich na kod klienta WCF, obsługi problemów z zabezpieczeniami oraz kompilowania, konfigurowania i hostowania klienta WCF.  
   
- [Wprowadzenie do rozszerzalności](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- Zawiera opis sposobu rozszerzenia WCF w celu tworzenia niestandardowych rozwiązań.  
+ [Wprowadzenie do rozszerzalności](introduction-to-extensibility.md)  
+ Opisuje sposób rozbudowania programu WCF w celu utworzenia niestandardowych rozwiązań.  
   
- [Szybki start: rozwiązywanie problemów z architekturą WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- Opisano niektóre z najczęściej występujących problemów, co można zrobić w celu rozwiązania tych problemów i gdzie można znaleźć więcej informacji na temat problemu.  
+ [Szybki start: rozwiązywanie problemów z architekturą WCF](wcf-troubleshooting-quickstart.md)  
+ W tym artykule opisano niektóre typowe problemy, które można wykonać, aby je rozwiązać, oraz znaleźć więcej informacji o problemie.  
   
- [Internetowy interfejs API programu WCF i platformy ASP.NET](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- W tym artykule omówiono te dwie technologie, jak odnoszą się ze sobą i kiedy ich używać.  
+ [Internetowy interfejs API programu WCF i platformy ASP.NET](wcf-and-aspnet-web-api.md)  
+ Omawia dwie technologie, jak są ze sobą powiązane i kiedy należy ich używać.  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.ServiceModel>  
@@ -51,20 +51,20 @@ W tej sekcji przedstawiono podstawy do tworzenia aplikacji Windows Communication
  <xref:System.ServiceModel.Description>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wymagania systemowe](../../../docs/framework/wcf/wcf-system-requirements.md)  
+ [Wymagania systemowe](wcf-system-requirements.md)  
   
- [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
+ [Omówienie pojęć](conceptual-overview.md)  
   
- [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Wprowadzenie — samouczek](getting-started-tutorial.md)  
   
- [Wskazówki i najlepsze rozwiązania](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [Wskazówki i najlepsze rozwiązania](guidelines-and-best-practices.md)  
   
- [Narzędzia programu Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
+ [Narzędzia programu Windows Communication Foundation](tools.md)  
   
  [Przykłady Windows Communication Foundation (WCF)](./samples/index.md)  
   
- [Wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [Wprowadzenie](./samples/getting-started-sample.md)  
   
- [Hostowanie usług IIS przy użyciu kodu wbudowanego](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [Hostowanie usług IIS przy użyciu kodu wbudowanego](./samples/iis-hosting-using-inline-code.md)  
   
- [Host samodzielny](../../../docs/framework/wcf/samples/self-host.md)
+ [Host samodzielny](./samples/self-host.md)

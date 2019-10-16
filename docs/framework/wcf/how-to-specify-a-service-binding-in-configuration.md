@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Określanie powiązania usługi w konfiguracji'
+title: 'Instrukcje: Określanie wiązania usługi w konfiguracji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: d3224b1d732fb82ffe68e8ce0bd410850004cb95
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9790d3fb5fc20b3d2c6ce776070274ef0403732
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967154"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319875"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Instrukcje: Określanie powiązania usługi w konfiguracji
-W tym przykładzie `ICalculator` jest definiowana umowa dla podstawowej usługi kalkulatora, usługa jest zaimplementowana `CalculatorService` w klasie, a następnie jej punkt końcowy jest skonfigurowany w pliku Web. config, gdzie jest określony <xref:System.ServiceModel.BasicHttpBinding> , że usługa używa . Opis sposobu konfigurowania tej usługi przy użyciu kodu zamiast konfiguracji można znaleźć w temacie [How to: Określ powiązanie usługi w kodzie](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Instrukcje: Określanie wiązania usługi w konfiguracji
+W tym przykładzie kontrakt `ICalculator` został zdefiniowany dla podstawowej usługi kalkulatora, usługa jest zaimplementowana w klasie `CalculatorService`, a następnie jej punkt końcowy jest skonfigurowany w pliku Web. config, gdzie zostanie określony, że usługa używa <xref:System.ServiceModel.BasicHttpBinding>. Opis sposobu konfigurowania tej usługi przy użyciu kodu zamiast konfiguracji można znaleźć [w temacie How to: Określanie powiązania usługi w kodzie](how-to-specify-a-service-binding-in-code.md).  
   
  Zazwyczaj najlepszym rozwiązaniem jest określenie informacji o powiązaniach i adresie w konfiguracji, a nie w sposób konieczny w kodzie. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi są zwykle inne niż te używane podczas tworzenia usługi. Ogólnie rzecz biorąc, przechowywanie informacji o powiązaniach i adresach poza kodem pozwala na ich zmianę bez konieczności ponownego kompilowania lub wdrażania aplikacji.  
   
- Wszystkie poniższe kroki konfiguracji można wykonać za pomocą [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Wszystkie poniższe kroki konfiguracji można wykonać za pomocą [Narzędzia Edytora konfiguracji (SvcConfigEditor. exe)](configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Aby uzyskać kopię źródła tego przykładu, [](../../../docs/framework/wcf/samples/basicbinding.md)Zobacz temat BasicBinding.  
+ Aby uzyskać kopię źródła tego przykładu, zobacz temat [BasicBinding](./samples/basicbinding.md).  
   
-### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Aby określić BasicHttpBinding do użycia w celu skonfigurowania usługi  
+## <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Aby określić BasicHttpBinding do użycia w celu skonfigurowania usługi  
   
 1. Zdefiniuj kontrakt usługi dla typu usługi.  
   
@@ -36,7 +36,7 @@ W tym przykładzie `ICalculator` jest definiowana umowa dla podstawowej usługi 
     > [!NOTE]
     > Nie określono informacji o adresie lub powiązaniu w implementacji usługi. Ponadto kod nie musi być zapisany, aby można było pobrać te informacje z pliku konfiguracyjnego.  
   
-3. Utwórz plik Web. config, aby skonfigurować punkt końcowy dla programu `CalculatorService` , który używa <xref:System.ServiceModel.WSHttpBinding>programu.  
+3. Utwórz plik Web. config, aby skonfigurować punkt końcowy dla `CalculatorService`, który używa <xref:System.ServiceModel.WSHttpBinding>.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -79,9 +79,9 @@ W tym przykładzie `ICalculator` jest definiowana umowa dla podstawowej usługi 
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Aby zmodyfikować wartości domyślne właściwości powiązania  
+## <a name="to-modify-the-default-values-of-the-binding-properties"></a>Aby zmodyfikować wartości domyślne właściwości powiązania  
   
-1. Aby zmodyfikować jedną z domyślnych wartości <xref:System.ServiceModel.WSHttpBinding>właściwości, Utwórz nową nazwę konfiguracji powiązania — `<binding name="Binding1">` w obrębie elementu [ \<WSHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) i Ustaw nowe wartości atrybutów powiązania w ramach tego powiązania. postaci. Na przykład aby zmienić domyślne wartości limitu czasu otwierania i zamykania z 1 minuty na 2 minuty, Dodaj następujący kod do pliku konfiguracji.  
+1. Aby zmodyfikować jedną z domyślnych wartości właściwości <xref:System.ServiceModel.WSHttpBinding>, Utwórz nową nazwę konfiguracji powiązania — `<binding name="Binding1">` — w ramach elementu [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) i Ustaw nowe wartości atrybutów powiązania w tym elemencie powiązania. Na przykład aby zmienić domyślne wartości limitu czasu otwierania i zamykania z 1 minuty na 2 minuty, Dodaj następujący kod do pliku konfiguracji.  
   
     ```xml  
     <wsHttpBinding>  
@@ -94,5 +94,5 @@ W tym przykładzie `ICalculator` jest definiowana umowa dla podstawowej usługi 
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md)
+- [Konfigurowanie usług i klientów za pomocą powiązań](using-bindings-to-configure-services-and-clients.md)
+- [Określanie adresu punktu końcowego](specifying-an-endpoint-address.md)

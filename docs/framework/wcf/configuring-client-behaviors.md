@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: df5b32fa-e73b-4e8e-b66f-357c748e0173
-ms.openlocfilehash: 83fdc77bd17115f9952f2ca6c494ed0eb873cd9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca466af71f62ef72e021753b132afdc847f75d76
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608778"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320695"
 ---
 # <a name="configuring-client-behaviors"></a>Konfigurowanie zachowań klienta
-Windows Communication Foundation (WCF) umożliwia skonfigurowanie zachowania na dwa sposoby: przy odwoływaniu się do konfiguracji zachowanie — które są zdefiniowane w `<behavior>` sekcję pliku konfiguracji aplikacji klienta — lub programowo w wywołania aplikacja. W tym temacie opisano oba podejścia.  
+Windows Communication Foundation (WCF) konfiguruje zachowania na dwa sposoby: w odniesieniu do konfiguracji zachowania — które są zdefiniowane w sekcji `<behavior>` pliku konfiguracyjnego aplikacji klienckiej — lub programowo w aplikacji wywołującej. W tym temacie opisano oba podejścia.  
   
- Korzystając z pliku konfiguracji, konfiguracji zachowanie jest nazwany zestaw ustawień konfiguracji. Nazwa każdej konfiguracji zachowanie musi być unikatowa. Ten ciąg jest używany podczas `behaviorConfiguration` atrybutu konfiguracji punktu końcowego do łączenia punktu końcowego do zachowania.  
+ W przypadku korzystania z pliku konfiguracji, konfiguracja zachowania jest nazwaną kolekcją ustawień konfiguracji. Nazwa każdej konfiguracji zachowania musi być unikatowa. Ten ciąg jest używany w atrybucie `behaviorConfiguration` konfiguracji punktu końcowego w celu połączenia punktu końcowego z zachowaniem.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod konfiguracji definiuje zachowanie nazywane `myBehavior`. Punkt końcowy klienta odwołuje się do zachowania w `behaviorConfiguration` atrybutu.  
+ Poniższy kod konfiguracji definiuje zachowanie o nazwie `myBehavior`. Punkt końcowy klienta odwołuje się do tego zachowania w atrybucie `behaviorConfiguration`.  
   
 ```xml  
 <configuration>  
@@ -42,15 +42,15 @@ Windows Communication Foundation (WCF) umożliwia skonfigurowanie zachowania na 
 </configuration>  
 ```  
   
-## <a name="using-behaviors-programmatically"></a>Programowo za pomocą zachowań  
- Można również skonfigurować lub programowe Wstawianie zachowania, znajdując odpowiednie `Behaviors` właściwości w obiekcie klienta usługi Windows Communication Foundation (WCF) lub na obiekt fabryki kanału klienta przed otwarciem klienta.  
+## <a name="using-behaviors-programmatically"></a>Programistyczne używanie zachowań  
+ Można również programowo skonfigurować lub wstawić zachowania poprzez znalezienie odpowiedniej właściwości `Behaviors` w obiekcie klienta Windows Communication Foundation (WCF) lub w obiekcie fabryki kanału klienta przed otwarciem klienta.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak programowe Wstawianie zachowania, uzyskując dostęp do <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> właściwość <xref:System.ServiceModel.Description.ServiceEndpoint> zwróciło <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> właściwości przed utworzenia obiektu kanału.  
+ Poniższy przykład kodu pokazuje, jak programowo wstawić zachowanie, uzyskując dostęp do właściwości <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> na <xref:System.ServiceModel.Description.ServiceEndpoint> zwróconym przez właściwość <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> przed utworzeniem obiektu kanału.  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<zachowania >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [@no__t — 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)

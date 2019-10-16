@@ -2,26 +2,26 @@
 title: Konfigurowanie usług WCF w kodzie
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: d2ef7b2095bf7f238a25f2db0e5d3cf47e885550
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: c6bcf08511470d28e1087108d95e477683b0338b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855642"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320642"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Konfigurowanie usług WCF w kodzie
-Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samoobsługowych, <xref:System.ServiceModel.ServiceHost> Klasa może skonfigurować punkty końcowe i zachowania przed wywołaniem ServiceHost. Open. Jednak w scenariuszach hostowanych w sieci Web nie masz bezpośredniego dostępu do <xref:System.ServiceModel.ServiceHost> klasy. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć `System.ServiceModel.ServiceHostFactory` <xref:System.ServiceModel.Activation.ServiceHostFactory> utworzoną przez siebie i wykonać dowolną wymaganą konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie.  
+Windows Communication Foundation (WCF) umożliwia deweloperom Konfigurowanie usług przy użyciu plików konfiguracyjnych lub kodu.  Pliki konfiguracji są przydatne, gdy usługa musi zostać skonfigurowana po wdrożeniu. W przypadku korzystania z plików konfiguracji Specjalista IT musi tylko zaktualizować plik konfiguracji, nie jest wymagana ponowna kompilacja. Pliki konfiguracji mogą jednak być skomplikowane i trudne do utrzymania. Nie ma obsługi debugowania plików konfiguracji i elementów konfiguracji, do których odwołują się nazwy, co sprawia, że pliki konfiguracji tworzenia są podatne na błędy i trudne. Funkcja WCF umożliwia również Konfigurowanie usług w kodzie. We wcześniejszych wersjach programu WCF (4,0 i starszych) Konfigurowanie usług w kodzie było łatwe w scenariuszach samoobsługowych, ale Klasa <xref:System.ServiceModel.ServiceHost> umożliwia konfigurowanie punktów końcowych i zachowań przed wywołaniem ServiceHost. Open. Jednak w scenariuszach hostowanych w sieci Web nie masz bezpośredniego dostępu do klasy <xref:System.ServiceModel.ServiceHost>. Aby skonfigurować usługę hostowaną w sieci Web, należy utworzyć `System.ServiceModel.ServiceHostFactory`, która utworzyła <xref:System.ServiceModel.Activation.ServiceHostFactory> i wykonać dowolną wymaganą konfigurację. Począwszy od platformy .NET 4,5, WCF oferuje łatwiejszy sposób konfigurowania usług samodzielnych i hostowanych w sieci Web w kodzie.  
   
 ## <a name="the-configure-method"></a>Metoda Configure  
- Po prostu Zdefiniuj publiczną metodę statyczną o nazwie `Configure` z następującym podpisem w klasie implementacji usługi:  
+ Po prostu Zdefiniuj publiczną metodę statyczną o nazwie `Configure` z następującą sygnaturą w klasie implementacji usługi:  
   
 ```csharp  
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Metoda Configure przyjmuje <xref:System.ServiceModel.ServiceConfiguration> wystąpienie umożliwiające deweloperowi Dodawanie punktów końcowych i zachowań. Ta metoda jest wywoływana przez funkcję WCF przed otwarciem hosta usługi. Po zdefiniowaniu wszystkie ustawienia konfiguracji usługi określone w pliku App. config lub Web. config zostaną zignorowane.  
+ Metoda Configure przyjmuje wystąpienie <xref:System.ServiceModel.ServiceConfiguration>, które umożliwia deweloperom Dodawanie punktów końcowych i zachowań. Ta metoda jest wywoływana przez funkcję WCF przed otwarciem hosta usługi. Po zdefiniowaniu wszystkie ustawienia konfiguracji usługi określone w pliku App. config lub Web. config zostaną zignorowane.  
   
- Poniższy fragment kodu ilustruje sposób definiowania `Configure` metody i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
+ Poniższy fragment kodu ilustruje sposób definiowania metody `Configure` i dodawania punktu końcowego usługi, zachowania punktu końcowego i zachowań usługi:  
   
 ```csharp  
 public class Service1 : IService1  
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Ustawienia w sekcji > <`protocolMappings`są używane tylko wtedy, <xref:System.ServiceModel.ServiceConfiguration> gdy żadne punkty końcowe aplikacji nie są dodawane programistycznie. Opcjonalnie możesz załadować konfigurację usługi z domyślnego pliku konfiguracyjnego aplikacji, wywołując <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , a następnie zmieniając ustawienia. <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> Klasa umożliwia również ładowanie konfiguracji z poziomu scentralizowanej konfiguracji. Poniższy kod ilustruje sposób implementacji:  
+ Ustawienia w sekcji < `protocolMappings` > są używane tylko wtedy, gdy żadne punkty końcowe aplikacji nie są dodawane do programu programistycznego <xref:System.ServiceModel.ServiceConfiguration>. Opcjonalnie można załadować konfigurację usługi z domyślnego pliku konfiguracyjnego aplikacji, wywołując <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A>, a następnie zmieniając ustawienia. Klasa <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> umożliwia również ładowanie konfiguracji z poziomu scentralizowanej konfiguracji. Poniższy kod ilustruje sposób implementacji:  
   
 ```csharp
 public class Service1 : IService1   
@@ -91,18 +91,18 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
-> Należy zauważyć <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> , że`host`ignoruje < > ustawień`service`w tagu`system.serviceModel`< > < >. W <`host`> jest informacje o konfiguracji hosta, a nie konfiguracji usługi i są ładowane przed wykonaniem metody Configure.  
+> Należy zauważyć, że <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> ignoruje < `host` > Ustawienia w < `service` > <. Koncepcyjnie < `host` > jest informacje o konfiguracji hosta, a nie konfiguracji usługi i jest ładowany przed wykonaniem metody Configure.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Konfigurowanie usług za pomocą plików konfiguracji](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
-- [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)
-- [Konfiguracja](../../../docs/framework/wcf/samples/configuration-sample.md)
-- [Aktywacja oparta na konfiguracji w usługach IIS i WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)
-- [Konfiguracja i obsługa metadanych](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
-- [Konfiguracja](../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)
-- [Instrukcje: Określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [Instrukcje: Tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [Instrukcje: Publikowanie metadanych dla usługi za pomocą pliku konfiguracji](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [Instrukcje: Określanie powiązania klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)
+- [Konfigurowanie zachowań klienta](configuring-client-behaviors.md)
+- [Uproszczona konfiguracja](simplified-configuration.md)
+- [Konfiguracja](./samples/configuration-sample.md)
+- [Aktywacja oparta na konfiguracji w usługach IIS i WAS](./feature-details/configuration-based-activation-in-iis-and-was.md)
+- [Konfiguracja i obsługa metadanych](./extending/configuration-and-metadata-support.md)
+- [Konfiguracja](./diagnostics/exceptions-reference/configuration.md)
+- [Instrukcje: określanie powiązania usługi w konfiguracji](how-to-specify-a-service-binding-in-configuration.md)
+- [Instrukcje: tworzenie punktu końcowego usługi w konfiguracji](./feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Instrukcje: publikowanie metadanych dla usługi za pomocą pliku konfiguracji](./feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Instrukcje: określanie powiązań klienta w konfiguracji](how-to-specify-a-client-binding-in-configuration.md)

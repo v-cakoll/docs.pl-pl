@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: 806d85df2a7fff63704db755400b81cc2dc5c37b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7f21cd7ea600277461146387b962a89ea0a8472b
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652091"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320625"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>Kontrolowanie automatycznego uruchamiania hosta programu WCF
-Podczas debugowania innego projektu w tym samym rozwiązaniu Visual Studio zawierającą wiele projektów, można kontrolować możliwości automatycznego uruchamiania hosta usługi Windows Communication Foundation (WCF) (WcfSvcHost.exe) w projekcie biblioteki usługi WCF.  
+Można kontrolować funkcję autouruchamiania hosta usługi Windows Communication Foundation (WCF) (WcfSvcHost. exe) dla projektu biblioteki usług WCF, podczas debugowania innego projektu w tym samym rozwiązaniu programu Visual Studio zawierającym wiele projektów.  
   
- Aby to zrobić, kliknij prawym przyciskiem myszy projekt usługi WCF w **Eksploratora rozwiązań**, wybierz **właściwości**i kliknij przycisk **opcje WCF** kartę. **Start podczas debugowania innego projektu w tym samym rozwiązaniu Host usługi WCF** pole wyboru jest domyślnie włączona. Można wyczyść pole, tak aby Host usługi WCF dla tego określonego projektu nie jest uruchamiane, gdy inny projekt jest debugowany, w tym samym rozwiązaniu.  
+ Aby to zrobić, kliknij prawym przyciskiem myszy projekt usługi WCF w **Eksplorator rozwiązań**, wybierz polecenie **Właściwości**, a następnie kliknij kartę **Opcje WCF** . **Uruchom hosta usługi WCF podczas debugowania innego projektu w tym samym rozwiązaniu** pole wyboru jest domyślnie włączone. Możesz wyczyścić to pole, aby Host usługi WCF dla danego projektu nie był uruchamiany, gdy inny projekt jest debugowany w tym samym rozwiązaniu.  
   
- To zachowanie nie ma wpływu na debugowanie F5 lub funkcje Dodaj odwołanie do usługi dla tego projektu.  
+ To zachowanie nie ma wpływu na Debugowanie F5 ani Dodaj odwołanie do usługi funkcji dla tego projektu.  
   
- Ta opcja jest dostępna w następujących projektach:  
+ Ta opcja jest dostępna dla następujących projektów:  
   
-- Projekt biblioteki usługi WCF.  
+- Projekt biblioteki usług WCF.  
   
-- Projekt Biblioteka usługi sekwencyjnego przepływu pracy.  
+- Projekt biblioteki usługi sekwencyjnego przepływu pracy.  
   
-- Projekt biblioteki usługi przepływu pracy automatu stanów.  
+- Projekt biblioteki usługi przepływu pracy automatu Stanów.  
   
-- Projekt Biblioteka usługi syndykacji.  
+- Projekt biblioteki usługi zespolonej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
+- [Host usługi WCF (WcfSvcHost.exe)](wcf-service-host-wcfsvchost-exe.md)

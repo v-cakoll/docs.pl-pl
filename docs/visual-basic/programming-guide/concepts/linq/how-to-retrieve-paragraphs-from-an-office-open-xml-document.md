@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Pobieranie akapitów z dokumentu Office Open XML (Visual Basic)'
+title: 'Instrukcje: pobieranie akapitów z dokumentu Office Open XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: 325f0d981c4988379938385fbfff5d36d0f5bff8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42b6779fd3f9254fb1d57c44282809de462078db
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054474"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320441"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Instrukcje: Pobieranie akapitów z dokumentu Office Open XML (Visual Basic)
-W tym temacie przedstawiono przykład, który spowoduje otwarcie dokumentu Office Open XML, a następnie pobiera zbiór wszystkich akapitów w dokumencie.  
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>Instrukcje: pobieranie akapitów z dokumentu Office Open XML (Visual Basic)
+W tym temacie przedstawiono przykład, który otwiera dokument Office Open XML i pobiera kolekcję wszystkich akapitów w dokumencie.  
   
- Aby uzyskać więcej informacji na temat Office Open XML, zobacz [Eric oficjalny Blog](http://www.ericwhite.com).  
+ Aby uzyskać więcej informacji na temat pakietu Office Open XML, zobacz [blog Eric biały](http://www.ericwhite.com).  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie otwiera pakietu Office Open XML, używa relacji w pakiecie Open XML można znaleźć w dokumencie i części stylu. Następnie wykonuje zapytanie dokumentu projekcji zbiór typ anonimowy, który zawiera akapit <xref:System.Xml.Linq.XElement> węzła, nazwę stylu każdego akapitu, a tekst każdego akapitu.  
+ Ten przykład otwiera pakiet Office Open XML, używa relacji w otwartym pakiecie XML do znajdowania dokumentu i części stylu. Następnie wysyła zapytanie do dokumentu, projekcję kolekcji typu anonimowego, która zawiera akapit <xref:System.Xml.Linq.XElement> węzła, nazwę stylu każdego akapitu i tekst każdego akapitu.  
   
- W przykładzie użyto metody rozszerzenia o nazwie `StringConcatenate`, który również jest dostarczany w przykładzie.  
+ W przykładzie zastosowano metodę rozszerzającą o nazwie `StringConcatenate`, która jest również podana w przykładzie.  
   
- Aby uzyskać szczegółowy samouczek, który objaśnia, jak działa ten przykład, zobacz [czystego funkcjonalności przekształcenia XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Aby zapoznać się z szczegółowym samouczkiem wyjaśniającym sposób działania tego przykładu, zobacz [czyste przekształceń języka XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
- W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -152,9 +152,9 @@ Module Module1
 End Module  
 ```  
   
- Uruchamiania przy użyciu przykładowy dokument Open XML opisanego w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md), ten przykład generuje następujące wyniki:  
+ W przypadku uruchomienia z przykładowym otwartym dokumentem XML opisanym w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)ten przykład generuje następujące dane wyjściowe:  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  

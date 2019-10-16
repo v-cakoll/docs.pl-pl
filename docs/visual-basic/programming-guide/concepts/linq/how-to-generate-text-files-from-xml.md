@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Generowanie plików tekstowych z pliku XML (Visual Basic)'
+title: 'Instrukcje: generowanie plików tekstowych z pliku XML (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 6273152995b458da110a2bda56ebdc35d49b6769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780331"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320536"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Instrukcje: Generowanie plików tekstowych z pliku XML (Visual Basic)
-W tym przykładzie pokazano, jak można wygenerować pliku wartości rozdzielanych przecinkami (CSV) z pliku XML.  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Instrukcje: generowanie plików tekstowych z pliku XML (Visual Basic)
+Ten przykład pokazuje, jak generować plik wartości rozdzielanych przecinkami (CSV) z pliku XML.  
   
 ## <a name="example"></a>Przykład  
- Wersja języka Visual Basic używa kod proceduralny agregacji Kolekcja ciągów w jeden ciąg.  
+ Wersja Visual Basic używa kodu proceduralnego do agregowania kolekcji ciągów do jednego ciągu.  
   
- W tym przykładzie użyto następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -44,7 +44,7 @@ Console.WriteLine(sb.ToString())
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
 HUNGC,Hungry Coyote Import Store,Yoshi Latimer,Sales Representative,(503) 555-6874,City Center Plaza 516 Main St.,Elgin,OR,97827,USA  
 LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orchestra Terrace,Walla Walla,WA,99362,USA  

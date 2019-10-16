@@ -9,36 +9,36 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: e67ac9c452337b6f490d99ea4430ec2a02b952a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 328d47a583a4f047fd54589a82d339de2cb1a16f
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625804"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320989"
 ---
 # <a name="how-to-examine-the-security-context"></a>Instrukcje: Badanie kontekstu zabezpieczeń
-Podczas programowania usług Windows Communication Foundation (WCF), Usługa kontekstu zabezpieczeń umożliwia określenie szczegółowe informacje dotyczące poświadczeń klienta i oświadczeń używany do uwierzytelniania w usłudze. Jest to wykonywane przy użyciu właściwości <xref:System.ServiceModel.ServiceSecurityContext> klasy.  
+Podczas programowania usług Windows Communication Foundation (WCF) kontekst zabezpieczenia usługi umożliwia określenie szczegółowych informacji o poświadczeniach klienta i oświadczeniach używanych do uwierzytelniania w usłudze. Jest to realizowane przy użyciu właściwości klasy <xref:System.ServiceModel.ServiceSecurityContext>.  
   
- Na przykład, można pobrać tożsamości bieżącego klienta za pomocą <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> lub <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> właściwości. Aby określić, czy klient jest anonimowe, użyj <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> właściwości.  
+ Na przykład można pobrać tożsamość bieżącego klienta przy użyciu właściwości <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> lub <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>. Aby określić, czy klient jest anonimowy, użyj właściwości <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>.  
   
- Możesz również określić, jakie oświadczenia są wykonywane w imieniu klienta przez iteracji w kolekcji oświadczeń w <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> właściwości.  
+ Można również określić, jakie oświadczenia są wykonywane w imieniu klienta przez iterację kolekcji oświadczeń we właściwości <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>.  
   
 ### <a name="to-get-the-current-security-context"></a>Aby uzyskać bieżący kontekst zabezpieczeń  
   
-- Dostęp do właściwości statycznej <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> można pobrać bieżącego kontekstu zabezpieczeń. Sprawdź właściwości bieżącego kontekstu z odwołania.  
+- Uzyskaj dostęp do właściwości statycznej <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>, aby uzyskać bieżący kontekst zabezpieczeń. Przeanalizuj wszystkie właściwości bieżącego kontekstu z odwołania.  
   
-### <a name="to-determine-the-identity-of-the-caller"></a>Aby ustalić tożsamość elementu wywołującego  
+### <a name="to-determine-the-identity-of-the-caller"></a>Aby określić tożsamość obiektu wywołującego  
   
-1. Drukuj wartość <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> właściwości.  
+1. Drukuj wartość właściwości <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>.  
   
-### <a name="to-parse-the-claims-of-a-caller"></a>Aby przeanalizować oświadczenia obiekt wywołujący  
+### <a name="to-parse-the-claims-of-a-caller"></a>Aby przeanalizować oświadczenia obiektu wywołującego  
   
-1. Zwraca bieżący <xref:System.IdentityModel.Policy.AuthorizationContext> klasy. Użyj <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwość zwraca bieżący kontekst zabezpieczeń usługi, a następnie wrócisz `AuthorizationContext` przy użyciu <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A> właściwości.  
+1. Zwróć bieżącą klasę <xref:System.IdentityModel.Policy.AuthorizationContext>. Użyj właściwości <xref:System.ServiceModel.ServiceSecurityContext.Current%2A>, aby zwrócić bieżący kontekst zabezpieczeń usługi, a następnie Zwróć `AuthorizationContext` przy użyciu właściwości <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>.  
   
-2. Analizowanie kolekcję <xref:System.IdentityModel.Claims.ClaimSet> obiektów zwróconych przez <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> właściwość <xref:System.IdentityModel.Policy.AuthorizationContext> klasy.  
+2. Przeanalizuj kolekcję obiektów <xref:System.IdentityModel.Claims.ClaimSet> zwracanych przez właściwość <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> klasy <xref:System.IdentityModel.Policy.AuthorizationContext>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład drukuje wartości <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> właściwości bieżącego kontekstu zabezpieczeń i <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> właściwość, wartość zasobu, oświadczenia, a <xref:System.IdentityModel.Claims.Claim.Right%2A> właściwości każdego oświadczenia w bieżącym zabezpieczeń kontekst.  
+ Poniższy przykład drukuje wartości właściwości <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> i <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> bieżącego kontekstu zabezpieczeń oraz Właściwość <xref:System.IdentityModel.Claims.Claim.ClaimType%2A>, wartość zasobu dla żądania oraz Właściwość <xref:System.IdentityModel.Claims.Claim.Right%2A> każdego żądania w bieżącym kontekście zabezpieczeń.  
   
  [!code-csharp[c_PrincipalPermissionAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#4)]
  [!code-vb[c_PrincipalPermissionAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#4)]  
@@ -56,5 +56,5 @@ Podczas programowania usług Windows Communication Foundation (WCF), Usługa kon
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)
-- [Uwierzytelnianie i tożsamość usług](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [Zabezpieczanie usług](securing-services.md)
+- [Uwierzytelnianie i tożsamość usług](./feature-details/service-identity-and-authentication.md)

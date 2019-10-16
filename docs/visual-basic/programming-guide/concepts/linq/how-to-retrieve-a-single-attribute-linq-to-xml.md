@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (Visual Basic)'
+title: 'Instrukcje: Pobieranie pojedynczego atrybutu (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 635644783153765d61aff3c00fe16860642c29f1
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f56ec18933856d862f9ef9630ce3d33805f96894
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710527"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321317"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Instrukcje: Pobierz pojedynczy atrybut (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Instrukcje: Pobieranie pojedynczego atrybutu (LINQ to XML) (Visual Basic)
 W tym temacie wyjaśniono, jak pobrać pojedynczy atrybut elementu, pod nazwą atrybutu. Jest to przydatne w przypadku pisania wyrażeń zapytania, gdzie chcesz znaleźć element, który ma określony atrybut.  
   
- <xref:System.Xml.Linq.XElement.Attribute%2A> Metoda klasy<xref:System.Xml.Linq.XElement> zwraca z<xref:System.Xml.Linq.XAttribute> określoną nazwą.  
+ Metoda <xref:System.Xml.Linq.XElement.Attribute%2A> klasy <xref:System.Xml.Linq.XElement> zwraca <xref:System.Xml.Linq.XAttribute> z określoną nazwą.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zastosowano <xref:System.Xml.Linq.XElement.Attribute%2A> metodę.  
+ W poniższym przykładzie zastosowano metodę <xref:System.Xml.Linq.XElement.Attribute%2A>.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -32,13 +32,13 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 home  
 work  
 ```  
   
 ## <a name="example"></a>Przykład  
- Jeśli chcesz pobrać wartość atrybutu, możesz go rzutować, tak jak w przypadku <xref:System.Xml.Linq.XElement> obiektów. Poniższy przykład ilustruje to.  
+ Jeśli chcesz pobrać wartość atrybutu, możesz go rzutować, tak jak w przypadku obiektów <xref:System.Xml.Linq.XElement>. Poniższy przykład ilustruje to.  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -55,12 +55,12 @@ Next
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 home  
 work  
 ```  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zapewnia jawne Operatory rzutowania dla <xref:System.Xml.Linq.XAttribute> klasy do `string` `int` `bool?` `bool` `int?`,, ,,`long?`,, ,,,`uint?` `uint` `long` `ulong`, `ulong?` ,`float?` ,,`TimeSpan`, ,`decimal?`, ,,`TimeSpan?`,, ,`GUID`i `float` `double` `DateTime` `double?` `decimal` `DateTime?`  `GUID?`.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zapewnia jawne Operatory rzutowania dla klasy <xref:System.Xml.Linq.XAttribute> do `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, 0, 1, 2, 3, 4, 5, 6, 7, 8 , 9, 0, 1, 2, 3 i 4.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje ten sam kod dla atrybutu, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
@@ -87,7 +87,7 @@ End Module
   
  Ten kod generuje następujące dane wyjściowe:  
   
-```  
+```console  
 home  
 work  
 ```  

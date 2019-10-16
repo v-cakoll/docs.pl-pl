@@ -2,71 +2,71 @@
 title: Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959848"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321047"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretowanie kodów błędów zwróconych przez program wsatConfig.exe
-W tym temacie wymieniono wszystkie kody błędów wygenerowanych przez narzędzie konfiguracji WS-AtomicTransaction (wsatConfig.exe) i zalecane akcje do wykonania.  
+W tym temacie wymieniono wszystkie kody błędów wygenerowane przez narzędzie konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe) oraz zalecane akcje do wykonania.  
   
-## <a name="list-of-error-codes"></a>Listę kodów błędów  
+## <a name="list-of-error-codes"></a>Lista kodów błędów  
   
 |Kod błędu|Opis|Zalecana akcja do wykonania|  
 |----------------|-----------------|------------------------------------|  
 |0|Operacja zakończyła się pomyślnie|Brak|  
-|1|Nieoczekiwany błąd|Kontakt z firmą Microsoft|  
-|2|Wystąpił nieoczekiwany błąd podczas próby nawiązania kontaktu z MSDTC można pobrać jej ustawienia zabezpieczeń.|Upewnij się, że usługa MSDTC nie jest wyłączona i rozwiązać wszystkie problemy na liście zwrócony wyjątek.|  
-|3|Konto, z którego uruchomiono WsatConfig.exe nie miał wystarczających uprawnień do odczytu ustawień zabezpieczeń sieci.|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
-|4|Włącz "Dostęp sieciowy DTC" MSDTC, przed podjęciem próby włączyć obsługę WS-AT.|Włącz "Dostęp sieciowy DTC" dla usługi MSDTC i ponownie uruchom narzędzie.|  
-|5|Wprowadzony port jest poza zakresem. Wartość musi być z zakresu od 1 do 65535.|Popraw `-port:<portNum>`<br /><br /> Opcja wiersza polecenia, zgodnie z instrukcjami w komunikacie o błędzie.|  
-|6|Certyfikat nieprawidłowy punkt końcowy został określony w wierszu polecenia.  Nie można odnaleźć certyfikatu lub nie przeszedł weryfikacji.|Popraw `-endpointCert` opcji wiersza polecenia. Upewnij się, że certyfikat ma klucz prywatny, jest przeznaczona do użytku z ServerAuthentication i rozszerzenie, jest zainstalowany w magazynie certyfikatów LocalMachine\MY i jest w pełni zaufany.|  
-|7|Certyfikat nieprawidłowych kont została określona w wierszu polecenia.|Popraw `-accountsCerts` opcji wiersza polecenia. Określony certyfikat albo został niepoprawnie określony lub nie można go znaleźć.|  
-|8|Domyślny limit czasu został określony poza zakresem od 1 do 3600 sekund.|Wprowadź wartość limitu czasu poprawną wartość domyślną, wskazane.|  
-|10|Wystąpił nieoczekiwany błąd podczas próby uzyskania dostępu do rejestru.|Sprawdź komunikat o błędzie i kod błędu dla elementów z możliwością wykonywania akcji|  
-|11|Nie można zapisać do rejestru.|Upewnij się, że klucz komunikat o błędzie na liście zdolność do obsługi dostępu do rejestru od konta którego WsatConfig.exe została wykonana w ścieżce.|  
-|12|Wystąpił nieoczekiwany błąd podczas próby uzyskania dostępu do magazynu certyfikatów.|Użyj kod błędu zwrócony do mapowania na błąd systemowy odpowiednie.|  
-|13|Nie można skonfigurować http.sys. Nie można utworzyć nowe zastrzeżenie port HTTPS dla usługi MSDTC.|Użyj kod błędu zwrócony do mapowania na błąd systemowy odpowiednie.|  
-|14|Nie można skonfigurować http.sys. Nie można usunąć poprzedniej rezerwacji portu HTTPS do usługi MSDTC.|Użyj kod błędu zwrócony do mapowania na błąd systemowy odpowiednie.|  
-|15|Nie można skonfigurować http.sys. Poprzednie rezerwacji portu HTTPS już istnieje dla określonego portu.|Inna aplikacja miała już własności określonego portu. Zmień na innym porcie lub odinstalować lub ponownie skonfigurować bieżącej aplikacji.|  
-|16|Nie można skonfigurować http.sys. Nie można powiązać certyfikat z określonego portu.|Umożliwia mapowania na błąd systemowy odpowiedni kod błędu zwrócony komunikat o błędzie|  
-|17|Nie można skonfigurować http.sys. Nie można usunąć powiązania certyfikatu SSL z poprzedniego portu.|Umożliwia mapowania na błąd systemowy odpowiedni kod błędu zwrócony komunikat o błędzie. Jeśli to konieczne, użyj httpcfg.exe lub netsh.exe, aby usunąć rezerwacje błędne portu.|  
-|18|Nie można skonfigurować http.sys. Nie można powiązać określony certyfikat z portem, ponieważ poprzednie SSL powiązanie już istnieje.|Inna aplikacja miała już własności określonego portu. Zmień na innym porcie lub odinstalować lub ponownie skonfigurować bieżącej aplikacji.|  
-|19|Ponowne uruchamianie usługi MSDTC nie powiodło się.|Ręcznie uruchom ponownie usługi MSDTC, jeśli to konieczne. Jeśli problem będzie się powtarzać, skontaktuj się z pomocą firmy Microsoft.|  
-|20|WinFX nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|WinFX należy zainstalować na tym komputerze.|  
-|21|Konfiguracja zdalnego nie powiodło się z powodu limitu czasu operacji.|Wywołania do skonfigurowania WS-AT na maszynie zdalnej powinna trwać dłużej niż 90 sekund.|  
-|22|WinFX nie jest zainstalowany na zdalnym komputerze lub nie został poprawnie zainstalowany.|WinFX należy zainstalować na tym komputerze.|  
-|23|Konfiguracja zdalnego nie powiodło się z powodu wyjątku na komputerze zdalnym.|Sprawdź komunikat o błędzie dla elementów z możliwością wykonywania akcji|  
-|26|Do WsatConfig.exe przekazano nieprawidłowy argument.|Sprawdź wiersz polecenia dla błędów.|  
-|27|`-accounts` Opcji wiersza polecenia jest nieprawidłowy.|Popraw`accounts` opcji wiersza polecenia, aby prawidłowo określić konto użytkownika.|  
-|28|`-network` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-network` opcji wiersza polecenia, prawidłowo określać "Włącz" lub "Wyłącz".|  
-|29|`-maxTimeout` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-maxTimeout` opcji wiersza polecenia, jak wskazano.|  
-|30|`-timeout` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-timeout` opcji wiersza polecenia, jak wskazano.|  
-|31|`-traceLevel` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-traceLevel` opcję wiersza polecenia, aby określić prawidłową wartość z następujących wartości,<br /><br /> — Wyłączone<br />— Błąd<br />-Krytyczne<br />-Ostrzeżenie<br />-Informacje<br />-Verbose<br />— Wszystkie|  
-|32|`-traceActivity` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-traceActivity` opcji wiersza polecenia, określając wartość "Włącz" lub "Wyłącz".|  
-|33|`-traceProp` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-traceProp` opcji wiersza polecenia, określając wartość "Włącz" lub "Wyłącz".|  
-|34|`-tracePII` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-tracePII` opcji wiersza polecenia, określając wartość "Włącz" lub "Wyłącz".|  
-|37|WsatConfig.exe nie był w stanie określić certyfikat komputera dokładne. Może się to zdarzyć, gdy istnieje więcej niż jeden Release candidate lub jeśli żadna nie istnieje.|Określ odcisk palca certyfikatu lub parę Issuer\SubjectName poprawnie zidentyfikować dokładny certyfikatu umożliwiającego skonfigurowanie.|  
-|38|Proces lub użytkownik nie ma wystarczających uprawnień do zmiany konfiguracji zapory.|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
-|39|WsatConfig.exe napotkał błąd podczas aktualizowania konfiguracji zapory.|Sprawdź komunikat o błędzie dla elementów z możliwością wykonywania akcji.|  
-|40|WsatConfig.exe nie będzie mógł udzielić dostępu do odczytu usługi MSDTC do pliku klucza prywatnego certyfikatu|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
-|41|Nie instalacji WinFX można odnaleźć albo odnaleźć wersji jest niezgodny co narzędzie jest w stanie Konfigurowanie.|Upewnij się, że WinFX jest poprawnie zainstalowane, a tylko za pomocą narzędzia WsatConfig.exe, dołączony do tej wersji WinFX, aby skonfigurować WS-AT.|  
-|42|Argument została określona więcej niż raz w wierszu polecenia.|Tylko raz określić każdy argument podczas wykonywania WsatConfig.exe.|  
-|43|WsatConfig.exe nie można zaktualizować ustawień WS-AT, jeśli nie włączono WS-AT.|Określ `-network:enable` jako argument wiersza polecenia.|  
-|44|Brakuje wymaganej poprawki i nie można skonfigurować WS-AT, dopóki nie zostanie zainstalowana poprawka.|Zobacz WinFX wersji, aby uzyskać instrukcje dotyczące instalowania wymaganej poprawki.|  
-|45|`-virtualServer` Opcji wiersza polecenia jest nieprawidłowy.|Popraw `-virtualServer` opcji wiersza polecenia, określając nazwę sieciową zasobu klastra, w której chcesz skonfigurować.|  
-|46|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia zdarzeń systemu Windows|Użyj kod błędu zwrócony do mapowania na błąd systemowy odpowiednie.|  
-|47|Proces lub użytkownik nie ma wystarczających uprawnień, aby włączyć sesji śledzenia zdarzeń systemu Windows.|Wykonywanie WsatConfig.exe w ramach konta administratora.|  
-|48|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
-|49|Nie można utworzyć nowy plik dziennika z powodu niewystarczającej ilości miejsca na % systemdrive %|Upewnij się, że % systemdrive % ma wystarczającej ilości miejsca dla pliku dziennika.|  
-|51|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
-|52|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
-|53|Kopia zapasowa poprzedniej pliku dziennika sesji funkcji ETW nie powiodło się.|Upewnij się, czy Twoje dysk % systemdrive % ma wystarczającej ilości miejsca dla pliku dziennika i kopia zapasowa poprzedniej pliku dziennika (jeśli istnieje). Usuń poprzedni plik dziennika ręcznie, jeśli to konieczne.|  
-|55|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
-|56|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesję śledzenia funkcji ETW.|Kontakt z firmą Microsoft.|  
+|1|Nieoczekiwany błąd|Skontaktuj się z firmą Microsoft|  
+|2|Wystąpił nieoczekiwany błąd podczas próby skontaktowania się z koordynatorem MSDTC w celu pobrania jego ustawień zabezpieczeń.|Upewnij się, że usługa MSDTC nie jest wyłączona, i Rozwiąż wszystkie problemy wymienione w zwróconym wyjątku.|  
+|3|Konto, na którym uruchomiono program WsatConfig. exe, nie ma wystarczających uprawnień do odczytu ustawień zabezpieczeń sieci.|Wykonaj WsatConfig. exe w ramach konta użytkownika administratora.|  
+|4|Przed włączeniem obsługi WS-AT Włącz opcję "dostęp do sieci usługi MSDTC".|Włącz opcję "dostęp do usługi Network DTC" dla usługi MSDTC i ponownie uruchom narzędzie.|  
+|5|Wprowadzony port jest poza zakresem. Wartość musi należeć do zakresu od 1 do 65535.|Popraw `-port:<portNum>`<br /><br /> Opcja wiersza polecenia określona w komunikacie o błędzie.|  
+|6|W wierszu polecenia określono nieprawidłowy certyfikat punktu końcowego.  Nie można znaleźć certyfikatu lub nie przeszedł weryfikacji.|Popraw opcję wiersza polecenia `-endpointCert`. Upewnij się, że certyfikat ma klucz prywatny, który jest przeznaczony do użycia zarówno w rozszerzenie, jak i ServerAuthentication, jest instalowany w magazynie certyfikatów LocalMachine\MY i jest w pełni zaufany.|  
+|7|W wierszu polecenia określono nieprawidłowy certyfikat konta.|Popraw opcję wiersza polecenia `-accountsCerts`. Określony certyfikat jest nieprawidłowo określony lub nie można go znaleźć.|  
+|8|Określono domyślny limit czasu poza zakresem od 1 do 3600 sekund.|Wprowadź poprawną domyślną wartość limitu czasu zgodnie z podaną wartością.|  
+|10|Wystąpił nieoczekiwany błąd podczas próby uzyskania dostępu do rejestru.|Sprawdź komunikat o błędzie i kod błędu dla elementów do wykonania akcji|  
+|11|Nie można zapisać do rejestru.|Upewnij się, że klucz wymieniony w komunikacie o błędzie jest w stanie obsługiwać dostęp do rejestru z konta WsatConfig. exe zostało wykonane w ramach.|  
+|12|Wystąpił nieoczekiwany błąd podczas próby uzyskania dostępu do magazynu certyfikatów.|Użyj kodu błędu zwróconego do mapowania na odpowiedni błąd systemu.|  
+|13|Nie można skonfigurować pliku http. sys. Nie można utworzyć nowej rezerwacji portu HTTPS dla usługi MSDTC.|Użyj kodu błędu zwróconego do mapowania na odpowiedni błąd systemu.|  
+|14,5|Nie można skonfigurować pliku http. sys. Nie można usunąć poprzedniej rezerwacji portu HTTPS dla usługi MSDTC.|Użyj kodu błędu zwróconego do mapowania na odpowiedni błąd systemu.|  
+|15000|Nie można skonfigurować pliku http. sys. Poprzednia rezerwacja portu HTTPS już istnieje dla określonego portu.|Inna aplikacja już przejmuje własność określonego portu. Zmień na inny port lub Odinstaluj lub ponownie skonfiguruj bieżącą aplikację.|  
+|16|Nie można skonfigurować pliku http. sys. Nie można powiązać określonego certyfikatu z portem.|Użyj kodu błędu zwróconego w komunikacie o błędzie, aby zamapować na odpowiedni błąd systemu|  
+|7|Nie można skonfigurować pliku http. sys. Nie można usunąć powiązania certyfikatu SSL z poprzedniego portu.|Użyj kodu błędu zwróconego w komunikacie o błędzie, aby zamapować na odpowiedni błąd systemu. W razie potrzeby użyj HttpCfg. exe lub netsh. exe, aby usunąć błędne rezerwacje portów.|  
+|postanowienia|Nie można skonfigurować pliku http. sys. Nie można powiązać określonego certyfikatu z portem, ponieważ poprzednie powiązanie SSL już istnieje.|Inna aplikacja już przejmuje własność określonego portu. Zmień na inny port lub Odinstaluj lub ponownie skonfiguruj bieżącą aplikację.|  
+|19|Ponowne uruchamianie usługi MSDTC nie powiodło się|Jeśli to konieczne, należy ręcznie ponownie uruchomić usługę MSDTC. Jeśli problem będzie się powtarzać, skontaktuj się z firmą Microsoft.|  
+|20|Program WinFX nie jest zainstalowany na maszynie zdalnej lub nie został poprawnie zainstalowany.|Zainstaluj program WinFX na komputerze.|  
+|43|Konfiguracja zdalna nie powiodła się z powodu przekroczenia limitu czasu operacji.|Wywołanie konfiguracji usługi WS-AT na maszynie zdalnej powinno trwać dłużej niż 90 sekund.|  
+|22|Program WinFX nie jest zainstalowany na maszynie zdalnej lub nie został poprawnie zainstalowany.|Zainstaluj program WinFX na komputerze.|  
+|233|Konfiguracja zdalna nie powiodła się z powodu wyjątku na maszynie zdalnej.|Sprawdź komunikat o błędzie dla elementów z możliwością działania|  
+|25|Przekazano nieprawidłowy argument do WsatConfig. exe.|Sprawdź błędy w wierszu polecenia.|  
+|27|Opcja wiersza polecenia `-accounts` była nieprawidłowa.|Popraw opcję wiersza polecenia-`accounts`, aby poprawnie określić konto użytkownika.|  
+|28|Opcja wiersza polecenia `-network` była nieprawidłowa.|Popraw opcję wiersza polecenia `-network`, aby poprawnie określić wartość "Enable" lub "Disable".|  
+|dnia|Opcja wiersza polecenia `-maxTimeout` była nieprawidłowa.|Popraw opcję wiersza polecenia `-maxTimeout` zgodnie z opisem.|  
+|0,30|Opcja wiersza polecenia `-timeout` była nieprawidłowa.|Popraw opcję wiersza polecenia `-timeout` zgodnie z opisem.|  
+|niż|Opcja wiersza polecenia `-traceLevel` była nieprawidłowa.|Popraw opcję wiersza polecenia `-traceLevel`, aby określić prawidłową wartość z następujących wartości:<br /><br /> -Wył.<br />-Błąd<br />-Krytyczny<br />-Ostrzeżenie<br />-Informacje<br />-Verbose<br />-Wszystkie|  
+|32|Opcja wiersza polecenia `-traceActivity` była nieprawidłowa.|Popraw opcję wiersza polecenia `-traceActivity`, określając opcję "Włącz" lub "Wyłącz".|  
+|33|Opcja wiersza polecenia `-traceProp` była nieprawidłowa.|Popraw opcję wiersza polecenia `-traceProp`, określając opcję "Włącz" lub "Wyłącz".|  
+|34|Opcja wiersza polecenia `-tracePII` była nieprawidłowa.|Popraw opcję wiersza polecenia `-tracePII`, określając opcję "Włącz" lub "Wyłącz".|  
+|37|WsatConfig. exe nie mógł określić dokładnego certyfikatu komputera. Może się tak zdarzyć, gdy istnieje więcej niż jeden kandydat lub jeśli nie istnieje.|Określ odcisk palca certyfikatu lub parę Issuer\SubjectName, aby poprawnie zidentyfikować dokładny certyfikat do skonfigurowania.|  
+|38|Proces lub użytkownik nie ma wystarczających uprawnień, aby zmienić konfigurację zapory.|Wykonaj WsatConfig. exe w ramach konta użytkownika administratora.|  
+|39|WsatConfig. exe napotkał błąd podczas aktualizowania konfiguracji zapory.|Sprawdź komunikat o błędzie dla elementów do wykonania.|  
+|40|WsatConfig. exe nie może udzielić dostępu do odczytu usługi MSDTC do pliku klucza prywatnego certyfikatu|Wykonaj WsatConfig. exe w ramach konta użytkownika administratora.|  
+|41|Nie można znaleźć instalacji programu WinFX lub znaleziona wersja nie jest zgodna z możliwościami konfiguracji narzędzia.|Upewnij się, że model WinFX jest prawidłowo zainstalowany i użyj narzędzia WsatConfig. exe, które było dołączone do tej wersji programu WinFX, aby skonfigurować usługę WS-AT.|  
+|42|Argument został określony więcej niż raz w wierszu polecenia.|Każdy argument należy określić tylko raz podczas wykonywania WsatConfig. exe.|  
+|43|WsatConfig. exe nie może zaktualizować ustawień usługi WS-AT, jeśli Usługa WS-AT nie jest włączona.|Określ `-network:enable` jako dodatkowy argument wiersza polecenia.|  
+|44|Brak wymaganej poprawki i Usługa WS-AT nie może zostać skonfigurowana do momentu zainstalowania poprawki.|Zobacz informacje o wersji programu WinFX, aby uzyskać instrukcje dotyczące instalowania wymaganej poprawki.|  
+|45|Opcja wiersza polecenia `-virtualServer` była nieprawidłowa.|Popraw opcję wiersza polecenia `-virtualServer`, określając nazwę sieciową zasobu klastra, w którym ma zostać skonfigurowana konfiguracja.|  
+|46|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW|Użyj kodu błędu zwróconego do mapowania na odpowiedni błąd systemu.|  
+|47|Proces lub użytkownik nie ma wystarczających uprawnień, aby włączyć sesję śledzenia ETW.|Wykonaj WsatConfig. exe w ramach konta użytkownika administratora.|  
+|48|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW.|Skontaktuj się z firmą Microsoft.|  
+|49|Nie można utworzyć nowego pliku dziennika z powodu niewystarczającej ilości miejsca na dysku% SystemDrive%|Upewnij się, że dysk% systemdrive% ma wystarczającą ilość miejsca na plik dziennika.|  
+|51|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW.|Skontaktuj się z firmą Microsoft.|  
+|52|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW.|Skontaktuj się z firmą Microsoft.|  
+|53|Wykonanie kopii zapasowej poprzedniego pliku dziennika sesji ETW nie powiodło się.|Upewnij się, że dysk% systemdrive% ma wystarczającą ilość miejsca na plik dziennika i kopię zapasową poprzedniego pliku dziennika (jeśli istnieje). Jeśli to konieczne, należy ręcznie usunąć poprzedni plik dziennika.|  
+|55|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW.|Skontaktuj się z firmą Microsoft.|  
+|56|Wystąpił nieoczekiwany błąd podczas próby uruchomienia sesji śledzenia ETW.|Skontaktuj się z firmą Microsoft.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

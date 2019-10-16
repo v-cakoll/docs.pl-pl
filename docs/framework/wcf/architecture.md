@@ -6,46 +6,46 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f34a05a436dd021f0d1fcc05f3a12a058123acdc
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782456"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72320838"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architektura WCF (Windows Communication Foundation)
-Poniższa ilustracja przedstawia główne warstwy architektury usługi Windows Communication Foundation (WCF).  
+Na poniższej ilustracji przedstawiono główne warstwy architektury Windows Communication Foundation (WCF).  
   
-## <a name="wcf-architecture"></a>Architektura programu WCF  
- ![Architektura WCF](../../../docs/framework/wcf/media/wcf-architecture.gif "WCF_Architecture")  
+## <a name="wcf-architecture"></a>Architektura WCF  
+ ![Architektura WCF](./media/wcf-architecture.gif "WCF_Architecture")  
   
-### <a name="contracts-and-descriptions"></a>Kontrakty wraz z opisami  
- Kontrakty definiują różne aspekty systemu wiadomości. Kontrakt danych w tym artykule opisano każdy parametr, który sprawia, że każdy komunikat, że usługa może tworzyć lub korzystać. Parametry komunikatu są definiowane przez dokumentów języka (XSD) definicji schematu XML, włączenie dowolnego systemu, który rozumie XML do przetworzenia w dokumentach. Kontrakt komunikatów definiuje części szczegółowy komunikat o błędzie przy użyciu protokołów SOAP i umożliwia bardziej szczegółowej kontroli nad części wiadomości, w przypadku, gdy współdziałanie zapotrzebowania na takie dokładności. Kontrakt usługi określa rzeczywiste sygnatury usługi i jest rozpowszechniany jako interfejs w jeden z obsługiwanych języków programowania, takich jak Visual Basic lub Visual C#.  
+### <a name="contracts-and-descriptions"></a>Kontrakty i opisy  
+ Kontrakty definiują różne aspekty systemu komunikatów. W umowie dotyczącej danych opisano każdy parametr, który obejmuje każdy komunikat, który usługa może utworzyć lub wykorzystać. Parametry wiadomości są definiowane przez dokumenty języka definicji schematu XML (XSD), co umożliwia dowolnemu systemowi zrozumienie kodu XML do przetwarzania dokumentów. Kontrakt wiadomości definiuje konkretne części komunikatów korzystające z protokołów SOAP i umożliwia dokładniejszą kontrolę nad częściami komunikatu, gdy współdziałanie wymaga takiej precyzji. Kontrakt usługi określa rzeczywiste podpisy metody usługi i jest dystrybuowany jako interfejs w jednym z obsługiwanych języków programowania, takich jak Visual Basic lub wizualizacji C#.  
   
- Zasady i powiązania określać warunki wymagane do komunikacji z usługą.  Na przykład powiązanie (co najmniej) podaj transportu (na przykład HTTP lub TCP) i kodowania. Zasady zawierają wymagania dotyczące zabezpieczeń i innych warunków, które muszą zostać spełnione do komunikowania się z usługą.  
+ Zasady i powiązania określają warunki wymagane do komunikacji z usługą.  Na przykład powiązanie musi (co najmniej) określać używany transport (na przykład HTTP lub TCP) i kodowanie. Zasady obejmują wymagania dotyczące zabezpieczeń i inne warunki, które muszą zostać spełnione, aby komunikować się z usługą.  
   
-### <a name="service-runtime"></a>Środowisko wykonawcze usług  
- Warstwa środowiska uruchomieniowego usługi zawiera zachowania, które występują tylko podczas bieżącej operacji usługę, oznacza to, zachowania środowiska uruchomieniowego usługi. Ograniczanie pozwala kontrolować, ile komunikatów są przetwarzane, którego można zmieniać Jeśli wzrośnie zapotrzebowanie na usługi, wstępnie ustawionego limitu. To zachowanie błąd Określa, co występuje, gdy występuje błąd wewnętrzny w usłudze, na przykład, kontrolując, jakie informacje są przekazywane do klienta. (Zbyt wiele informacji można nadać złośliwemu użytkownikowi korzyści w instalowaniu ataku.) Kontroluje zachowanie metadanych jak oraz tego, czy metadane staje się dostępny dla świata zewnętrznego. Zachowanie wystąpienia określa, ile wystąpień usługi można uruchamiać (na przykład wzorzec singleton określa tylko jedno wystąpienie, aby przetworzyć wszystkie komunikaty). Zachowanie transakcji umożliwia wycofywania operacji transakcyjnych, jeśli wystąpi awaria. Zachowanie wysyłania jest kontroli jak komunikat jest przetwarzany przez infrastrukturę usługi WCF.  
+### <a name="service-runtime"></a>Środowisko uruchomieniowe usługi  
+ Warstwa środowiska uruchomieniowego usługi zawiera zachowania, które są wykonywane tylko podczas rzeczywistej pracy usługi, czyli zachowania środowiska uruchomieniowego usługi. Ograniczanie przepływności kontroluje liczbę przetwarzanych komunikatów, co może być zróżnicowane w przypadku, gdy zapotrzebowanie na usługę osiągnie ustawiony limit. Zachowanie błędu określa, co się dzieje w przypadku wystąpienia błędu wewnętrznego w usłudze, na przykład przez kontrolowanie, jakie informacje są przekazywane Klientowi. (Zbyt wiele informacji może dać złośliwemu użytkownikowi korzyść w instalowaniu ataku). Zachowanie metadanych reguluje sposób i informacje o tym, czy metadane są udostępniane na świecie zewnętrznym. Zachowanie wystąpienia określa, ile wystąpień usługi może być uruchomionych (na przykład pojedyncze określa tylko jedno wystąpienie do przetwarzania wszystkich komunikatów). Zachowanie transakcji umożliwia wycofanie operacji transakcyjnych w przypadku wystąpienia błędu. Zachowanie wysyłania to Kontrola sposobu przetwarzania komunikatów przez infrastrukturę WCF.  
   
- Rozszerzalność umożliwia dostosowywanie procesów w czasie wykonywania. Na przykład funkcji, aby sprawdzić części wiadomości jest inspekcja wiadomości i filtrowanie parametr umożliwia predefiniowanych akcji nastąpi w oparciu o filtry działający w nagłówkach wiadomości.  
+ Rozszerzalność umożliwia dostosowanie procesów środowiska uruchomieniowego. Na przykład Inspekcja komunikatów jest funkcją do sprawdzania części komunikatu, a filtrowanie parametrów umożliwia wykonywanie wstępnie ustawionych akcji na podstawie filtrów działających na nagłówkach komunikatów.  
   
-### <a name="messaging"></a>Obsługa wiadomości  
- Warstwa obsługi komunikatów składa się z *kanały*. Kanał jest składnikiem, który przetwarza wiadomości w jakiś sposób, na przykład, korzystając z uwierzytelniania wiadomości. Zbiór kanałów jest także znana jako *stosu kanału*. Kanały działają na wiadomości i nagłówków wiadomości. To różni się od warstwy środowiska uruchomieniowego usługi, która jest głównie zajmującym się przetwarzaniem zawartość treści wiadomości.  
+### <a name="messaging"></a>Obsługa komunikatów  
+ Warstwa komunikatów składa się z *kanałów*. Kanał to składnik, który przetwarza komunikat w jakiś sposób, na przykład przez uwierzytelnienie komunikatu. Zestaw kanałów jest również nazywany *stosem kanału*. Kanały działają na komunikatach i nagłówkach komunikatów. Różni się to od warstwy środowiska uruchomieniowego usługi, która jest przede wszystkim zaangażowana w przetwarzanie zawartości treści komunikatów.  
   
- Istnieją dwa typy usługi kanały: transportu kanałów i kanały protokołów.  
+ Istnieją dwa typy kanałów: kanały transportu i kanały protokołu.  
   
- Kanały transportu odczytu i zapisu wiadomości z sieci (lub w pewnym momencie komunikacji ze światem zewnętrznym). Niektóre transportów umożliwia koder konwertować wiadomości, (które są reprezentowane jako XML Infosets) do i z reprezentacji strumień bajtów używanej przez sieć. Przykłady transportu HTTP, nazwanych potoków, TCP i usługi MSMQ. Przykłady kodowań XML i zoptymalizowanego pliku binarnego.  
+ Kanały transportu odczytują i zapisują wiadomości z sieci (lub innego punktu komunikacji z zewnętrznym światem). Niektóre transporty wykorzystują koder do konwertowania komunikatów (które są reprezentowane jako XML Infosets) do i z reprezentacji strumienia bajtów używanych przez sieć. Przykładami transportami są HTTP, nazwane potoki, TCP i MSMQ. Przykłady kodowań są XML i zoptymalizowane jako dane binarne.  
   
- Kanały protokołów implementacji protokołów przetwarzania komunikatów, często przez odczyt lub zapis dodatkowe nagłówki do wiadomości. Przykładami takich protokołów WS-Security i usługi WS-niezawodności.  
+ Kanały protokołu implementują protokoły przetwarzania komunikatów, często poprzez odczytywanie lub zapisywanie dodatkowych nagłówków w komunikacie. Przykładami takich protokołów są protokoły WS-Security i WS-niezawodność.  
   
- Warstwa obsługi komunikatów ilustruje możliwych formatów i wzorce wymiany danych. WS-Security jest implementacją specyfikacji WS-Security włączenie zabezpieczeń w warstwie wiadomości. Kanał WS-Reliable Messaging umożliwia gwarancji dostarczanie komunikatów. Kodery przedstawiają różne kodowania, który może służyć do potrzeb wiadomości. Kanał HTTP określa, że protokołu służy do dostarczania wiadomości. Kanału TCP określa podobnie protokołu TCP. Przepływ transakcji kanału decyduje wzorców wiadomości transakcyjne. Kanał nazwanego potoku umożliwia komunikacji międzyprocesowej. Kanał usługi MSMQ umożliwia współdziałanie z aplikacjami usługi MSMQ.  
+ Warstwa obsługi wiadomości ilustruje możliwe formaty i wzorce wymiany danych. WS-Security to implementacja specyfikacji WS-Security, która umożliwia zabezpieczenia w warstwie komunikatów. Kanał obsługi komunikatów w usłudze WS-niezawodny umożliwia gwarancję dostarczania wiadomości. Kodery składają się z różnych kodowań, które mogą być używane do zaspokajania potrzeb wiadomości. Kanał HTTP określa, że protokół transportu hipertekstowego jest używany do dostarczania komunikatów. Kanałem TCP w podobny sposób określa protokół TCP. Kanał przepływu transakcji zarządza wzorcami komunikatów transakcyjnych. Kanał nazwanego potoku umożliwia komunikację międzyprocesową. Kanał usługi MSMQ umożliwia współdziałanie z aplikacjami usługi MSMQ.  
   
-### <a name="hosting-and-activation"></a>Hostowanie i aktywacja  
- W postaci końcowego usługi jest program. Podobnie jak inne programy usługa musi zostać uruchomiony w pliku wykonywalnego. Jest to nazywane *może być samodzielnie hostowane* usługi.  
+### <a name="hosting-and-activation"></a>Hosting i aktywacja  
+ W swojej końcowej formie usługa jest programem. Podobnie jak w przypadku innych programów, usługa musi być uruchomiona w pliku wykonywalnym. Jest to tzw. Usługa *samodzielna* .  
   
- Można też usług *hostowane*, lub w pliku wykonywalnym, zarządzane przez agenta zewnętrznych, takich jak usługi IIS lub Windows Activation Service (WAS). BYŁA WCF umożliwia aplikacjom aktywowana automatycznie podczas wdrażania na komputerze z systemem. Usługi można również ręcznie uruchomić jako pliki wykonywalne (pliki .exe). Usługi można również uruchomić automatycznie jako usługę Windows. Składniki modelu COM +, może też być hostowana w odróżnieniu od usług WCF.  
+ Usługi mogą być również *hostowane*lub uruchamiane w pliku wykonywalnym zarządzanym przez agenta zewnętrznego, takiego jak usługi IIS lub usługa aktywacji systemu Windows (was). Program umożliwia automatyczne Aktywowanie aplikacji WCF po wdrożeniu na komputerze z systemem. Usługi można również uruchamiać ręcznie jako pliki wykonywalne (. exe). Usługa może być również uruchamiana automatycznie jako usługa systemu Windows. Składniki modelu COM+ mogą być również hostowane jako usługi WCF.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)
+- [Co to jest program Windows Communication Foundation](whats-wcf.md)
+- [Podstawowe pojęcia programu Windows Communication Foundation](fundamental-concepts.md)

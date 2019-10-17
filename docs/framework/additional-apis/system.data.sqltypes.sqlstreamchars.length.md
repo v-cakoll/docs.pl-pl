@@ -1,5 +1,5 @@
 ---
-title: Właściwość SqlStreamChars.Length (System.Data.SqlTypes)
+title: SqlStreamChars. Length — właściwość (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8f318f593237dc555d546858152bb03546c8306b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2171b10d1c0eb7bcad894cc44c5103bdab18b0a5
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634451"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395607"
 ---
-# <a name="sqlstreamcharslength-property"></a>SqlStreamChars.Length Property
+# <a name="sqlstreamcharslength-property"></a>SqlStreamChars. Length — właściwość
 
-W przypadku przesłonięcia w klasie pochodnej pobiera długość strumienia bieżącego. Zestaw, który zawiera właściwość ta ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, pobiera długość bieżącego strumienia. Zestaw, który zawiera tę właściwość, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,14 +38,14 @@ Długość strumienia.
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Length` Właściwość jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Właściwość `SqlStreamChars.Length` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje użycia tej właściwości w aplikacji produkcyjnej w żadnym przypadku.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

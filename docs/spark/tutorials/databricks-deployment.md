@@ -4,18 +4,18 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 035a3c36337413153ee0370aec154d48b84a4711
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 570f6bdb8eda462b815dfc7c45f6e9a3a515f0ad
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957254"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395885"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 
 W tym samouczku przedstawiono sposób wdrażania programu .NET dla aplikacji Apache Spark w kostkach.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -67,11 +67,11 @@ Przed rozpoczęciem wykonaj następujące czynności:
    - `<your app>.zip`
    - Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
 
-## <a name="deploy-to-databricks"></a>Wdróż w kostkach
+## <a name="deploy-to-databricks"></a>Wdrażanie w usłudze Databricks
 
 [Datakostki](https://databricks.com) to platforma, która zapewnia oparte na chmurze przetwarzanie danych Big Data przy użyciu Apache Spark.
 
-> [!Note] 
+> [!NOTE]
 > [Azure Databricks](https://azure.microsoft.com/services/databricks/) i [AWS datakostki](https://databricks.com/aws) są oparte na systemie Linux. W związku z tym, Jeśli interesuje Cię wdrażanie aplikacji w kostkach, upewnij się, że aplikacja jest .NET Standard zgodna i że używasz [kompilatora .NET Core](https://dotnet.microsoft.com/download) do kompilowania aplikacji.
 
 Usługi datakostki umożliwiają przesyłanie programu .NET dla aplikacji Apache Spark do istniejącego aktywnego klastra lub tworzenie nowego klastra przy każdym uruchomieniu zadania. Wymaga to zainstalowania **programu Microsoft. Spark. Worker** przed przesłaniem aplikacji platformy .net dla Apache Spark.
@@ -103,7 +103,7 @@ Ten krok jest wymagany tylko raz dla klastra.
 
    ![Obraz akcji skryptu](./media/databricks-deployment/deployment-databricks-init-script.png)
 
-## <a name="run-your-app"></a>Uruchamianie aplikacji 
+## <a name="run-your-app"></a>Uruchamianie aplikacji
 
 Aby przesłać zadanie do danych, można użyć `set JAR` lub `spark-submit`.
 
@@ -122,7 +122,7 @@ Aby przesłać zadanie do danych, można użyć `set JAR` lub `spark-submit`.
    | Parametr   | Wartość                                                |
    |-------------|------------------------------------------------------|
    | Klasa główna  | org. Apache. Spark. deploy. dotnet. DotnetRunner          |
-   | Argumenty   | /dBfs/Apps/< nazwę aplikacji >. zip < Twojej klasy głównej aplikacji > |
+   | Argumenty   | /dBfs/Apps/\<your-App-Name >. zip \<your-App-Main-Class > |
 
 4. Skonfiguruj **klaster** tak, aby wskazywał istniejący klaster, który utworzył **skrypt init** dla programu w poprzedniej sekcji.
 
@@ -130,27 +130,27 @@ Aby przesłać zadanie do danych, można użyć `set JAR` lub `spark-submit`.
 
 1. Użyj [interfejsu wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html) , aby przekazać aplikację do klastra datakostks.
 
-      ```bash
-      cd <path-to-your-app-publish-directory>
-      databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
-      ```
+    ```bash
+    cd <path-to-your-app-publish-directory>
+    databricks fs cp <your-app-name>.zip dbfs:/apps/<your-app-name>.zip
+    ```
 
 2. Ten krok jest wymagany tylko wtedy, gdy zestawy aplikacji (na przykład biblioteki DLL, które zawierają funkcje zdefiniowane przez użytkownika wraz z ich zależnościami), muszą być umieszczone w katalogu roboczym każdego **Microsoft. Spark. Worker**.
 
    - Przekazywanie zestawów aplikacji do klastra datakostki
-      
+
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
    - Usuń komentarz i Zmodyfikuj sekcję zależności aplikacji w programie [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) , aby wskazywała ścieżkę zależności aplikacji i przekazać ją do klastra datakostki.
-   
+
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
-   
+
    - Uruchom ponownie klaster.
 
 3. Przejdź do klastra datacegły w obszarze roboczym datakostki. W obszarze **zadania**wybierz zadanie, a następnie wybierz pozycję **Uruchom teraz** , aby uruchomić zadanie.
@@ -163,9 +163,9 @@ Polecenie [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applica
 
 2. Skonfiguruj `spark-submit` z następującymi parametrami:
 
-      ```bash
-      ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
-      ```
+    ```bash
+    ["--files","/dbfs/<path-to>/<app assembly/file to deploy to worker>","--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/<path-to>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar","/dbfs/<path-to>/<app name>.zip","<app bin name>","app arg1","app arg2"]
+    ```
 
 3. Przejdź do klastra datacegły w obszarze roboczym datakostki. W obszarze **zadania**wybierz zadanie, a następnie wybierz pozycję **Uruchom teraz** , aby uruchomić zadanie.
 

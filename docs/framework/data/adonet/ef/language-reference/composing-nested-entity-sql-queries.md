@@ -2,12 +2,12 @@
 title: Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: 0ab92c1e41c89f141c3cbd37be3e1e18e64d9666
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: cd41c36853f50597a32d511d455148d649d9eb64
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833915"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395560"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zagnieżdżonych zapytań w języku Entity SQL
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to bogaty język funkcjonalny. Blok konstrukcyjny [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażeniem. W przeciwieństwie do konwencjonalnych SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczony do tabelarycznego zestawu wyników: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje redagowanie złożonych wyrażeń, które mogą mieć literały, parametry lub wyrażenia zagnieżdżone. Wartość w wyrażeniu może być sparametryzowane lub składać się z innego wyrażenia.  
@@ -49,7 +49,7 @@ FROM … );
  W poniższym przykładzie pokazano, jak prawidłowo zagnieżdżać wyrażenia w [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order Union of dwa zapytania](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).  
   
 ## <a name="nested-queries-in-projection"></a>Zagnieżdżone zapytania w projekcji  
- Zagnieżdżone zapytania w klauzuli Project mogą zostać przetłumaczone na zapytania dotyczące produktu kartezjańskiego na serwerze. W przypadku niektórych serwerów zaplecza, w tym serwera magazynem, może to spowodować, że tabela TempDB będzie bardzo duża, co może negatywnie wpłynąć na wydajność serwera.  
+ Zagnieżdżone zapytania w klauzuli Project mogą zostać przetłumaczone na zapytania dotyczące produktu kartezjańskiego na serwerze. W przypadku niektórych serwerów zaplecza, w tym SQL Server, może to spowodować, że tabela TempDB będzie bardzo duża, co może negatywnie wpłynąć na wydajność serwera.  
   
  Oto przykład takiego zapytania:  
   

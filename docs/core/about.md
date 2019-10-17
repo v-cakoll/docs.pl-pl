@@ -2,18 +2,18 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 1baad9d6611a4c4340012b9a467d3499ad9ab834
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8b96e1e8f882ee69bcf7db58ca7a5eeab89fb4fd
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181916"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395180"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
 Platforma .NET Core ma następujące cechy:
 
-- **Na wielu platformach:** Działa w [systemach operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS i Linux.
+- Na **wielu platformach:** Działa w [systemach operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS i Linux.
 - **Spójne między architekturami:** Uruchamia kod z zachowaniem tego samego zachowania w wielu architekturach, w tym x64, x86 i ARM.
 - **Narzędzia wiersza polecenia:**  Obejmuje łatwe w użyciu narzędzia wiersza polecenia, które mogą być używane do lokalnego programowania i w scenariuszach ciągłej integracji.
 - **Elastyczne wdrożenie:** Mogą być dołączane do aplikacji lub instalowane obok siebie (instalacje dla całego użytkownika lub systemu). Może być używany z [kontenerami platformy Docker](docker/index.md).
@@ -38,9 +38,9 @@ Platforma .NET Core udostępnia interfejsy API dla wielu scenariuszy, a kilka z 
 
 - Typy pierwotne, takie jak [bool](../csharp/language-reference/keywords/bool.md) i [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
 - Kolekcje, takie jak <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
-- Typy narzędzi, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>, i <xref:System.IO.FileStream?displayProperty=nameWithType>.
-- Typy danych, takie jak <xref:System.Data.DataSet?displayProperty=nameWithType>i [nieogólnymi](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
-- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> [potoki](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
+- Typy narzędzi, takie jak <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> i <xref:System.IO.FileStream?displayProperty=nameWithType>.
+- Typy danych, takie jak <xref:System.Data.DataSet?displayProperty=nameWithType> i [nieogólnymi](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
+- Typy wysokiej wydajności, takie jak <xref:System.Numerics.Vector?displayProperty=nameWithType> i [potoków](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/).
 
 Platforma .NET Core zapewnia zgodność z interfejsami API .NET Framework i mono, implementując specyfikację [.NET Standard](../standard/net-standard.md) .
 
@@ -81,7 +81,7 @@ Ludzie często pytają, w jaki sposób platforma .NET Core jest zaimplementowana
 
 Na poniższym wykresie można zobaczyć, że większość [CoreFX](https://github.com/dotnet/corefx) jest kodem niezależnym od platformy, który jest udostępniany na wszystkich platformach. Kod neutralny dla platformy można zaimplementować jako pojedynczy zestaw przenośny, który jest używany na wszystkich platformach.
 
-![CoreFX: Wiersze kodu na platformę](../images/corefx-platforms-loc.png)
+![CoreFX: wiersze kodu na platformę](../images/corefx-platforms-loc.png)
 
 Implementacje systemów Windows i UNIX mają podobne rozmiary. System Windows ma większą implementację, ponieważ CoreFX implementuje niektóre funkcje tylko dla systemu Windows, takie jak [Microsoft. Win32. Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) , ale nie implementuje jeszcze wielu koncepcji tylko dla systemu UNIX. Zobaczysz również, że większość implementacji systemów Linux i macOS jest współdzielona przez implementację systemu UNIX, podczas gdy implementacje specyficzne w systemach Linux i macOS są w przybliżeniu podobne do wielkości.
 
@@ -113,7 +113,7 @@ Ponieważ .NET Core obsługuje instalację równoczesną, a jej środowisko uruc
 
 ### <a name="comparison-with-mono"></a>Porównanie z mono
 
-[Mono](https://www.mono-project.com/) to oryginalna platforma platformy .NET. Jest ona uruchamiana jako alternatywa dla programu .NET Framework i przeniesiona na urządzenia przenośne jako wersja [niestandardowa]([open-source](https://github.com/mono/mono)) . Można to traktować jako klony społeczności .NET Framework. Zespół projektu mono opierał się na otwartych [standardach .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (zwłaszcza ECMA 335) opublikowanych przez firmę Microsoft w celu zapewnienia zgodnej implementacji.
+[Mono](https://www.mono-project.com/) to oryginalna platforma platformy .NET. [Jest ona](https://github.com/mono/mono)uruchamiana jako alternatywa dla .NET Framework i przechodzenia do urządzeń przenośnych, ponieważ urządzenia z systemami iOS i Android stały się popularne. Można to traktować jako klony społeczności .NET Framework. Zespół projektu mono opierał się na otwartych [standardach .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (zwłaszcza ECMA 335) opublikowanych przez firmę Microsoft w celu zapewnienia zgodnej implementacji.
 
 Główne różnice między programami .NET Core i mono:
 

@@ -1,5 +1,5 @@
 ---
-title: Metoda SqlStreamChars.Write (Char [], Int32, Int32) (System.Data.SqlTypes)
+title: SqlStreamChars. Write (Char [], Int32, Int32) Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4084c7161eaa91d78eab32f1c14624e0032cdfcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d952041122ceb3824712bd81cab7ce4789c9db8
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705912"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395578"
 ---
-# <a name="sqlstreamcharswritechar-int32-int32-method"></a>Metoda SqlStreamChars.Write (Char [], Int32, Int32)
+# <a name="sqlstreamcharswritechar-int32-int32-method"></a>SqlStreamChars. Write (Char [], Int32, Int32) — Metoda
 
-W przypadku przesłonięcia w klasie pochodnej, zapisuje sekwencji znaków do bieżącego strumienia i przesuwa bieżącą pozycję w tym strumieniu według liczby znaków zapisanych. Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, zapisuje sekwencję znaków w bieżącym strumieniu i przesuwa bieżącą pozycję w tym strumieniu o liczbę pisanych znaków. Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ```csharp
 public abstract void Write (char[] buffer, int offset, int count);
@@ -30,25 +30,25 @@ public abstract void Write (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Parametry
 
 `buffer`  
-Tablicy znaków do zapisania.
+Tablica znaków do zapisania.
 
 `offset`  
-Przesunięcie względem źródła.
+Przesunięcie względem pochodzenia.
 
 `count`  
-Liczba znaków, które mają być zapisywane do strumienia bieżącego.
+Liczba znaków, które mają być zapisywane w bieżącym strumieniu.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Write` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Metoda `SqlStreamChars.Write` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej metody zapisu w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

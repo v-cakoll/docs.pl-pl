@@ -1,5 +1,5 @@
 ---
-title: Metoda SqlStreamChars.Read (Char [], Int32, Int32) (System.Data.SqlTypes)
+title: SqlStreamChars. Read (Char [], Int32, Int32) Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634319"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395753"
 ---
-# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>Metoda SqlStreamChars.Read (Char [], Int32, Int32)
+# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars. Read (Char [], Int32, Int32) — Metoda
 
-W przypadku przesłonięcia w klasie pochodnej, odczytuje następny zestaw znaków ze strumienia wejściowego. Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, odczytuje następny zestaw znaków ze strumienia wejściowego. Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -30,30 +30,30 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>Parametry
 
 `buffer`\
-Tablicy znaków do odczytania.
+Tablica znaków do odczytania.
 
 `offset`\
-Przesunięcie względem źródła.
+Przesunięcie względem pochodzenia.
 
 `count`\
-Liczba znaków, które mają być odczytywane z bieżącego strumienia.
+Liczba znaków, które mają być odczytane z bieżącego strumienia.
 
 ## <a name="returns"></a>Zwraca
 
 <xref:System.Int32>\
-Całkowita liczba znaków czytanych w buforze.
+Całkowita liczba znaków odczytywanych w buforze.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Read` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Metoda `SqlStreamChars.Read` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

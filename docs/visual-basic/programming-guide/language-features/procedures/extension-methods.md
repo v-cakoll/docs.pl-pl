@@ -7,17 +7,17 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: b5ad066fe9ec40d715702ed99537f45b21c558cf
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d988ab36703bc20e6960d4b8ecc7a476d95ee9bc
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701058"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396012"
 ---
 # <a name="extension-methods-visual-basic"></a>Metody rozszerzeń (Visual Basic)
 
 Metody rozszerzające pozwalają deweloperom dodawać niestandardowe funkcje do typów danych, które są już zdefiniowane bez tworzenia nowego typu pochodnego. Metody rozszerzające umożliwiają napisanie metody, która może być wywoływana, tak jakby była to metoda wystąpienia istniejącego typu.
-  
+
 ## <a name="remarks"></a>Uwagi
 
 Metoda rozszerzenia może być tylko procedurą `Sub` lub `Function`. Nie można zdefiniować właściwości rozszerzenia, pola lub zdarzenia. Wszystkie metody rozszerzenia muszą być oznaczone atrybutem rozszerzenia `<Extension>` z przestrzeni nazw <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> i muszą być zdefiniowane w [module](../../../language-reference/statements/module-statement.md). Jeśli Metoda rozszerzenia jest zdefiniowana poza modułem, kompilator Visual Basic generuje błąd [BC36551](../../../misc/bc36551.md), "metody rozszerzające można definiować tylko w modułach".
@@ -29,7 +29,7 @@ Atrybut `Extension` może być stosowany tylko do Visual Basic [`Module`](../../
 ## <a name="example"></a>Przykład
 
 W poniższym przykładzie zdefiniowano rozszerzenie `Print` dla typu danych <xref:System.String>. Metoda używa `Console.WriteLine` do wyświetlania ciągu. Parametr metody `Print` `aString` oznacza, że metoda rozszerza klasę <xref:System.String>.
-  
+
 [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]
 
 Zauważ, że definicja metody rozszerzenia jest oznaczona atrybutem rozszerzenia `<Extension()>`. Oznaczanie modułu, w którym jest zdefiniowana Metoda jest opcjonalne, ale każda Metoda rozszerzenia musi być oznaczona. Aby można było uzyskać dostęp do atrybutu rozszerzenia, należy zaimportować <xref:System.Runtime.CompilerServices>.
@@ -45,7 +45,6 @@ Następny przykład, `PrintAndPunctuate`, jest również rozszerzeniem dla <xref
 Metoda jest wywoływana przez wysłanie w argumencie ciągu dla `punc`: `example.PrintAndPunctuate(".")`
 
 Poniższy przykład pokazuje `Print` i `PrintAndPunctuate` zdefiniowane i wywołane. <xref:System.Runtime.CompilerServices> jest zaimportowana w module definicji w celu umożliwienia dostępu do atrybutu rozszerzenia.
-
 
 ```vb
 Imports System.Runtime.CompilerServices

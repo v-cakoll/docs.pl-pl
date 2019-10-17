@@ -1,65 +1,65 @@
 ---
-title: 'Instrukcje: Porównywanie ciągów - C# przewodnik'
-description: Dowiedz się, jak porównywanie i kolejność wartości ciągu, z lub bez niego z lub bez kultury określonej kolejności, w przypadku
+title: 'Instrukcje: Porównywanie ciągów- C# Przewodnik'
+description: Dowiedz się, jak porównywać i zamawiać wartości ciągów, z lub bez wielkości liter, z lub bez określania kolejności specyficznej dla kultury
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3e5f8dd9cfac809aafc2533463390cd5a64e0d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672201"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395454"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Sposób porównywania ciągów w języku C\#
+# <a name="how-to-compare-strings-in-c"></a>Jak porównać ciągi w języku C @ no__t-0
 
-Można porównać ciągi odpowiedzi na jedno z dwóch pytań: "Czy te dwa ciągi równy?" lub "W jakiej kolejności tych ciągów będzie umieszczona podczas sortowania ich?"
+Można porównać ciągi, aby odpowiedzieć na jedno z dwóch pytań: "czy te dwa ciągi są równe?" lub "w jakiej kolejności te ciągi mają być umieszczane podczas sortowania?"
 
-Czynniki mające wpływ na porównania ciągów są skomplikowany te dwa pytania:
+Te dwa pytania są skomplikowane przez czynniki wpływające na porównania ciągów:
 
-- Możesz wybrać porównania porządkowego lub językową.
-- Możesz wybrać, jeśli przypadek ma znaczenie.
-- Możesz wybrać właściwe dla kultury porównań.
-- Porównania są kultury i zależnych od platformy.
+- Można wybrać porównanie porządkowe lub językowe.
+- Możesz wybrać opcję jeśli sprawa ma znaczenie.
+- Można wybrać porównania specyficzne dla kultury.
+- Porównania językowe są zależne od kultury i platformy.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-Podczas porównywania ciągów należy zdefiniować kolejność między nimi. Porównania są używane do sortowania sekwencji ciągów. Po sekwencję w kolejności znanych łatwiej wyszukiwać, zarówno w zakresie oprogramowania oraz ludzi. Pozostałych porównań może sprawdzić, czy ciągi są takie same. Te sprawdzenia symetryczność są podobne do porównania, ale niektóre różnice, takie jak wielkość różnic, można zignorować.
+Podczas porównywania ciągów należy zdefiniować kolejność między nimi. Porównania są używane do sortowania sekwencji ciągów. Gdy sekwencja jest w znanej kolejności, łatwiejsze wyszukiwanie, zarówno w przypadku oprogramowania, jak i dla ludzi. Inne porównania mogą sprawdzić, czy ciągi są takie same. Te same kontrole są podobne do równość, ale niektóre różnice, takie jak różnice wielkości liter, mogą zostać zignorowane.
 
-## <a name="default-ordinal-comparisons"></a>Porównania liczb porządkowych domyślne
+## <a name="default-ordinal-comparisons"></a>Domyślne porównania porządkowe
 
-Najbardziej typowe operacje:
+Domyślnie najbardziej typowe operacje:
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> i <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>, czyli [Operatory równości `==` i `!=`](../language-reference/operators/equality-operators.md#string-equality)odpowiednio
 
-Użyj porównania porządkowego porównania uwzględniającego wielkość liter, a używają bieżącej kultury. Wyniki są wyświetlane w następującym przykładzie:
+Wykonaj porównanie porządkowe z uwzględnieniem wielkości liter i, jeśli to konieczne, Użyj bieżącej kultury. Poniższy przykład pokazuje, że:
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-Porównanie porządkowe nie przyjmuje językowej domyślne zasady pod uwagę podczas porównywania ciągów. Porównuje wartość binarną każdego <xref:System.Char> obiektu w dwóch ciągów. W wyniku porównania porządkowego domyślna jest również wielkość liter. 
+Domyślne porównanie porządkowe nie uwzględnia reguł lingwistycznych podczas porównywania ciągów. Porównuje wartość binarną każdego obiektu <xref:System.Char> w dwóch ciągach. W związku z tym domyślne porównanie porządkowe uwzględnia wielkość liter.
 
-Należy pamiętać, że test pod kątem równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i <xref:System.String.op_Equality%2A?displayProperty=nameWithType> różni się od za pomocą porównania ciągu <xref:System.String.CompareTo%2A?displayProperty=nameWithType> i <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> metody. Podczas testów pod kątem równości wykonać liter porównanie porządkowe, metodę porównywania wykonać porównanie uwzględniającą wielkość liter, wrażliwość na ustawienia kulturowe przy użyciu bieżącej kultury. Ponieważ domyślne metody porównania często wykonywanie różnych rodzajów porównań, zalecamy zawsze tworzyć celem kod czyszczenia, wywołując przeciążenie, które jawnie określa typ porównania do wykonania.
+Należy zauważyć, że test dla równości z <xref:System.String.Equals%2A?displayProperty=nameWithType> i operatory `==` i `!=` różnią się od porównania ciągów przy użyciu metod <xref:System.String.CompareTo%2A?displayProperty=nameWithType> i <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>. Chociaż testy pod kątem równości wykonują porównanie porządkowe z uwzględnieniem wielkości liter, metody porównania wykonują porównanie z uwzględnieniem wielkości liter, z których korzysta bieżąca kultura. Ponieważ domyślne metody porównywania często wykonują różne typy porównań, zalecamy, aby zawsze upewnić się, że zamierzenia kodu jest jasne, wywołując Przeciążenie, które jawnie określa typ porównania do wykonania.
 
-## <a name="case-insensitive-ordinal-comparisons"></a>Porównania liczb porządkowych bez uwzględniania wielkości liter
+## <a name="case-insensitive-ordinal-comparisons"></a>Porównanie porządkowe bez uwzględniania wielkości liter
 
-<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> Metody umożliwia określenie <xref:System.StringComparison> wartość <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
-Porównanie porządkowe bez uwzględniania wielkości liter. Również jest element statyczny <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> metodę, która wykonuje porównania bez uwzględniania porządkowe, jeśli określona wartość <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dla <xref:System.StringComparison> argumentu. Są one wyświetlane w poniższym kodzie:
+Metoda <xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> umożliwia określenie <xref:System.StringComparison> wartości <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+w przypadku porównania porządkowego bez uwzględniania wielkości liter. Istnieje również statyczna metoda <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType>, która wykonuje porównanie porządkowe bez uwzględniania wielkości liter, jeśli dla argumentu <xref:System.StringComparison> określono wartość <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>. Są one wyświetlane w następującym kodzie:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
-Podczas przeprowadzania porównania bez uwzględniania porządkowe, metody te za pomocą Konwencji obudowy [niezmiennej kultury](xref:System.Globalization.CultureInfo.InvariantCulture).
+W przypadku porównywania liczb porządkowych bez uwzględniania wielkości liter te metody wykorzystują konwencje wielkości liter [kultury niezmiennej](xref:System.Globalization.CultureInfo.InvariantCulture).
 
-## <a name="linguistic-comparisons"></a>Porównania
+## <a name="linguistic-comparisons"></a>Porównania lingwistyczne
 
-Ciągi również może zostać określona za pomocą reguł językowej dla bieżącej kultury.
-To jest czasami określane jako "kolejność sortowania słowo". Podczas wykonywania lingwistyczne porównanie, niektóre znaki niealfanumeryczne Unicode mogą mieć specjalnie przypisane wagi. Na przykład łącznik "-" może być bardzo małą wagę, przypisane do niego "zawiera" i "coop" będą wyświetlane obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być odpowiednikiem sekwencji <xref:System.Char> wystąpień. W poniższym przykładzie użyto frazę "One za na ulicy." w języku niemieckim (U + 0073 U + 0073) w jednym ciągu "ss" i "ß" (U + 00DF) w innym. Językowo (w Windows), "ss" jest równy Esszet niemiecki: znak "ß" w "en US" i "de-DE" kultur.
+Ciągi mogą być również uporządkowane przy użyciu reguł lingwistycznych dla bieżącej kultury.
+Jest to czasami nazywane "kolejnością sortowania wyrazów". W przypadku przeprowadzania porównania w języku niektóre znaki niealfanumeryczne Unicode mogą mieć przypisane specjalne wagi. Na przykład łącznik "-" może mieć przypisaną bardzo małą wagę, tak aby "współ" i "coop" były widoczne obok siebie w kolejności sortowania. Ponadto niektóre znaki Unicode mogą być równoważne sekwencji wystąpień <xref:System.Char>. Poniższy przykład używa frazy "odpowiedzialna w ulicy". w języku niemieckim z "SS" (U + 0073 U + 0073) w jednym ciągu i "ß" (U + 00DF) w innej. Językowo (w systemie Windows) "SS" jest równa niemieckiej Esszet: "ß" w przypadku kultur "en-US" i "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
-Niniejszy przykład pokazuje charakter porównań lingwistycznych zależnym od systemu operacyjnego. Host dla okno interaktywne to hoście z systemem Linux. Analiza językowa i porządkowego porównania działają tak samo. Po uruchomieniu tej samej próbki na hoście Windows będzie widoczne następujące wyniki:
+W tym przykładzie przedstawiono charakter porównania językowe zależne od systemu operacyjnego. Host dla okna interaktywnego jest hostem systemu Linux. Porównania lingwistyczne i porządkowe dają te same wyniki. Jeśli ten sam przykład został uruchomiony na hoście z systemem Windows, zobaczysz następujące dane wyjściowe:
 
 ```console
 <coop> is less than <co-op> using invariant culture
@@ -70,18 +70,18 @@ Niniejszy przykład pokazuje charakter porównań lingwistycznych zależnym od s
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Windows, kolejność sortowania "Kopiuj", "coop" oraz "co-OP będą" Zmień na gdy zmienią się z porównania lingwistyczne porównanie porządkowe. Dwa zdania niemieckiego również porównać różnie przy użyciu typów porównanie różnych.
+W systemie Windows kolejność sortowania "COP", "coop" i "współ-op" zmienia się w przypadku zmiany języka w porównaniu z porównaniem do liczby porządkowej. Dwa zdania niemiecki są również porównywane inaczej przy użyciu różnych typów porównania.
 
 ## <a name="comparisons-using-specific-cultures"></a>Porównania przy użyciu określonych kultur
 
-W tym przykładzie przechowuje <xref:System.Globalization.CultureInfo> obiektów dla kultury en US i de-DE.
-Porównania są wykonywane przy użyciu <xref:System.Globalization.CultureInfo> obiektu w celu zapewnienia porównania specyficzne dla kultury.
+Ten przykład przechowuje <xref:System.Globalization.CultureInfo> obiektów dla kultur en-US i de-DE.
+Porównania są wykonywane przy użyciu obiektu <xref:System.Globalization.CultureInfo> w celu zapewnienia porównania specyficznego dla kultury.
 
-Kultury, używane dotyczy porównań lingwistycznych. Poniższy przykład przedstawia wyniki porównując dwa zdania niemieckiego przy użyciu kultury "en US" i "de-DE" kultura:
+Kultura, która ma wpływ na porównania językowe. Poniższy przykład pokazuje wyniki porównania dwóch zdań niemieckich przy użyciu kultury "pl-US" i kultury "de-DE":
 
 [!code-csharp-interactive[Comparing strings across cultures](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#4)]
 
-Zależne od kultury porównań są zwykle używane do porównywania i sortowania ciągów w danych wejściowych przez użytkowników z innymi ciągami, danych wejściowych przez użytkowników. Znaki i konwencji sortowania te ciągi mogą się różnić w zależności od ustawień regionalnych komputera użytkownika. Nawet ciągi, które zawierają identyczne znaki mogą sortować inaczej w zależności od kultury bieżącego wątku. Ponadto, wypróbuj ten przykładowy kod lokalnie na komputerze Windows, i zostaną następujące wyniki:
+Porównania wrażliwe na kulturę są zwykle używane do porównywania i sortowania ciągów wejściowych przez użytkowników z innymi ciągami wejściowymi przez użytkowników. Znaki i konwencje sortowania tych ciągów mogą się różnić w zależności od ustawień regionalnych komputera użytkownika. Nawet ciągi zawierające identyczne znaki mogą być sortowane w różny sposób w zależności od kultury bieżącego wątku. Dodatkowo Wypróbuj ten przykładowy kod lokalnie na komputerze z systemem Windows i uzyskasz następujące wyniki:
 
 ```console
 <coop> is less than <co-op> using en-US culture
@@ -92,44 +92,44 @@ Zależne od kultury porównań są zwykle używane do porównywania i sortowania
 <co-op> is less than <cop> using ordinal comparison
 ```
 
-Porównania są zależne od bieżącej kultury i są zależne systemu operacyjnego. Należy wykonać, pod uwagę podczas pracy z porównania ciągów.
+Porównania językowe są zależne od bieżącej kultury i są zależne od systemu operacyjnego. Należy wziąć pod uwagę podczas pracy z porównaniami ciągów.
 
-## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Językowej wyszukiwania i sortowania ciągów w tablicach
+## <a name="linguistic-sorting-and-searching-strings-in-arrays"></a>Sortowanie lingwistyczne i wyszukiwanie ciągów w tablicach
 
-W poniższych przykładach pokazano, jak sortować i wyszukiwać ciągi w tablicy przy użyciu lingwistyczne porównanie zależne od bieżącej kultury. Używa się statycznej <xref:System.Array> metod, które przyjmują <xref:System.StringComparer?displayProperty=nameWithType> parametru.
+W poniższych przykładach pokazano, jak sortować i wyszukiwać ciągi w tablicy przy użyciu porównania językowej zależnej od bieżącej kultury. Używasz statycznych metod <xref:System.Array>, które pobierają parametr <xref:System.StringComparer?displayProperty=nameWithType>.
 
-W tym przykładzie pokazano, jak do posortowania tablicy ciągów przy użyciu bieżącej kultury:
+Ten przykład pokazuje, jak sortować tablicę ciągów przy użyciu bieżącej kultury:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
-Gdy tablica jest posortowana, możesz wyszukać wpisów za pomocą wyszukiwania binarnego. Binarny wyszukiwanie rozpoczyna się w środku kolekcji, aby określić, w którym połowa kolekcja będzie zawierać ciąg używanych. Każde kolejne porównanie dzieli pozostała część kolekcji o połowę.  Tablica jest posortowana przy użyciu <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. Funkcja lokalna `ShowWhere` Wyświetla informacje o którym ten ciąg został znaleziony. Jeśli ciąg nie został znaleziony, zwracana wartość wskazuje, gdzie będzie, jeśli je znaleziono.
+Po posortowaniu tablicy można wyszukać wpisy przy użyciu wyszukiwania binarnego. Wyszukiwanie binarne zaczyna się w środku kolekcji, aby określić, która połowa kolekcji będzie zawierać szukany ciąg. Każde kolejne porównanie dzieli pozostałą część kolekcji na pół.  Tablica jest sortowana przy użyciu <xref:System.StringComparer.CurrentCulture?displayProperty=nameWithType>. Funkcja lokalna `ShowWhere` wyświetla informacje o tym, gdzie znaleziono ciąg. Jeśli ciąg nie został odnaleziony, zwrócona wartość wskazuje, gdzie zostanie znaleziona.
 
 [!code-csharp-interactive[Searching in a sorted array](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#6)]
 
-## <a name="ordinal-sorting-and-searching-in-collections"></a>Porządkowe sortowanie i wyszukiwanie w kolekcjach
+## <a name="ordinal-sorting-and-searching-in-collections"></a>Sortowanie porządkowe i wyszukiwanie w kolekcjach
 
-Poniższy kod używa <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> klasy kolekcji do przechowywania ciągów. Ciągi są sortowane przy użyciu <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> metody. Ta metoda musi mieć obiekt delegowany, porównywania i porządkowania dwa ciągi. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metoda zapewnia tę funkcję porównywania. Uruchamianie aplikacji przykładowej i obserwuj kolejności. Ta operacja sortowania korzysta z uwzględnieniem wielkości liter sortowania porządkowego. Używa się statycznej <xref:System.String.Compare%2A?displayProperty=nameWithType> określenie reguł porównania różnych metod.
+Poniższy kod używa klasy kolekcji <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> do przechowywania ciągów. Ciągi są sortowane przy użyciu metody <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>. Ta metoda wymaga delegata, który porównuje i porządkuje dwa ciągi. Metoda <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zapewnia tę funkcję porównania. Uruchom przykład i zaobserwuj zamówienie. Ta operacja sortowania używa sortowania z uwzględnieniem wielkości liter. Aby określić różne reguły porównywania, należy użyć statycznych metod <xref:System.String.Compare%2A?displayProperty=nameWithType>.
 
 [!code-csharp-interactive[Sorting a list of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#7)]
 
-Po sortować listę ciągów można przeszukiwać za pomocą wyszukiwania binarnego. Poniższy przykład pokazuje sposób wyszukiwania sortowany wyświetlane przy użyciu tych samych funkcji porównywania. Funkcja lokalna `ShowWhere` pokazuje, gdzie lub byłoby używanych tekstu:
+Po posortowaniu lista ciągów może być wyszukiwana przy użyciu wyszukiwania binarnego. Poniższy przykład pokazuje, jak przeszukiwać posortowane listy przy użyciu tej samej funkcji porównywania. Funkcja lokalna `ShowWhere` pokazuje, gdzie poszukiwany tekst to lub:
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Zawsze upewnij się, że ten sam typ porównania na użytek wyszukiwania i sortowania. Przy użyciu porównanie różnych typów, do sortowania i wyszukiwania daje nieoczekiwane wyniki.
+Zawsze upewnij się, że używasz tego samego typu porównania do sortowania i wyszukiwania. Użycie różnych typów porównania do sortowania i wyszukiwania powoduje utworzenie nieoczekiwanych wyników.
 
-Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ma konstruktorów przyjmujących <xref:System.StringComparer?displayProperty=nameWithType> parametr, gdy typ elementów i kluczy to `string`. Ogólnie rzecz biorąc, należy używać tych konstruktorów, jeśli to możliwe oraz określ <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
+Klasy kolekcji, takie jak <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> mają konstruktory przyjmujące <xref:System.StringComparer?displayProperty=nameWithType> parametr, gdy typ elementów lub kluczy jest `string`. Ogólnie rzecz biorąc, należy używać tych konstruktorów, jeśli jest to możliwe, i określić wartość <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> lub <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
-## <a name="reference-equality-and-string-interning"></a>Równość odniesienia i wewnętrzne przygotowanie ciągu
+## <a name="reference-equality-and-string-interning"></a>Równość odwołania i ciąg InterNIC
 
-Brak próbek używanych <xref:System.Object.ReferenceEquals%2A>. Ta metoda określa, czy dwa ciągi są tego samego obiektu. Może to prowadzić do niespójnych wyników w porównaniach ciągów znaków. W poniższym przykładzie pokazano *wewnętrzne przygotowanie ciągu* funkcji języka C#. Gdy program deklaruje co najmniej dwóch zmiennych identyczne ciągu, kompilator są przechowywane w tej samej lokalizacji. Przez wywołanie metody <xref:System.Object.ReferenceEquals%2A> metody, zobaczysz, że dwa ciągi faktycznie odnoszą się do tego samego obiektu w pamięci. Użyj <xref:System.String.Copy%2A?displayProperty=nameWithType> metody w celu uniknięcia wewnętrzne przygotowanie. Po dokonaniu kopii dwa ciągi mają lokalizacje innego magazynu, mimo że mają taką samą wartość. Uruchom poniższy przykład pokazanie ciągi `a` i `b` są *interned* oznacza mają tego samego magazynu. Ciągi `a` i `c` nie są.
+Żadna z próbek nie została użyta <xref:System.Object.ReferenceEquals%2A>. Ta metoda określa, czy dwa ciągi są tego samego obiektu. Może to prowadzić do niespójnych wyników w porównaniach ciągów. Poniższy przykład demonstruje funkcję *InterNIC* C#. Gdy program deklaruje co najmniej dwie identyczne zmienne ciągów, kompilator przechowuje je wszystkie w tej samej lokalizacji. Wywołując metodę <xref:System.Object.ReferenceEquals%2A>, można zobaczyć, że dwa ciągi rzeczywiście odwołują się do tego samego obiektu w pamięci. Aby uniknąć InterNIC, użyj metody <xref:System.String.Copy%2A?displayProperty=nameWithType>. Po wykonaniu kopii te dwa ciągi mają różne lokalizacje przechowywania, nawet jeśli mają tę samą wartość. Uruchom Poniższy przykład, aby pokazać, że ciągi `a` i `b` są *InterNIC* , że korzystają z tego samego magazynu. Ciągi `a` i `c` nie są.
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
 > [!NOTE]
-> Podczas testowania pod kątem równości ciągów, należy użyć metody, które jawnie określić, jakiego rodzaju porównania, których zamierzasz wykonać. Kod jest znacznie łatwiejsze w obsłudze i do odczytu. Użyj przeciążeń metody <xref:System.String?displayProperty=nameWithType> i <xref:System.Array?displayProperty=nameWithType> klasy, które trwają <xref:System.StringComparison> parametr wyliczenia. Należy określić typ porównania do wykonania. Unikaj używania `==` i `!=` operatorów podczas testowania pod kątem równości. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> Metod wystąpienia zawsze wykonuj porównania porządkowego uwzględniana wielkość liter. Są one głównie odpowiednie porządkowania ciągów w kolejności alfabetycznej.
+> Podczas testowania pod kątem równości ciągów należy użyć metod, które jawnie określają rodzaj porównania, który ma być wykonywany. Kod jest znacznie bardziej czytelny i możliwy do odczytania. Użyj przeciążeń metod <xref:System.String?displayProperty=nameWithType> i <xref:System.Array?displayProperty=nameWithType>, które pobierają parametr wyliczenia <xref:System.StringComparison>. Należy określić typ porównania do wykonania. Unikaj używania operatorów `==` i `!=` podczas testowania pod kątem równości. Metody wystąpienia <xref:System.String.CompareTo%2A?displayProperty=nameWithType> zawsze wykonują porządkową wielkość liter. Są one głównie odpowiednie do porządkowania ciągów alfabetycznie.
 
-Można intern ciąg lub pobrania odwołania do istniejącego ciągu interned przez wywołanie metody <xref:System.String.Intern%2A?displayProperty=nameWithType> metody. Aby ustalić, czy ciąg jest interned, należy wywołać <xref:System.String.IsInterned%2A?displayProperty=nameWithType> metody.
+Można skontaktować się z ciągiem lub pobrać odwołanie do istniejącego ciągu InterNIC, wywołując metodę <xref:System.String.Intern%2A?displayProperty=nameWithType>. Aby określić, czy ciąg jest InterNIC, wywołaj metodę <xref:System.String.IsInterned%2A?displayProperty=nameWithType>.
 
 ## <a name="see-also"></a>Zobacz także
 

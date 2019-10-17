@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 53d7bbf214a71daff9372efcd5978f34c066c657
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320006"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395932"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. potoki w środowisku .NET
 
@@ -23,6 +23,7 @@ ms.locfileid: "72320006"
 <a name="solve"></a>
 
 ## <a name="what-problem-does-systemiopipelines-solve"></a>Jaki problem rozwiązuje system. IO. potoki
+
 <!-- corner case doesn't MT (machine translate)   -->
 Aplikacje, które analizują dane przesyłane strumieniowo, składają się z kodu standardowego, który ma wiele wyspecjalizowanych i nietypowych przepływów kodu. Kod standardowy i szczególny przypadek jest skomplikowany i trudny do utrzymania.
 
@@ -38,7 +39,7 @@ async Task ProcessLinesAsync(NetworkStream stream)
 {
     var buffer = new byte[1024];
     await stream.ReadAsync(buffer, 0, buffer.Length);
-    
+
     // Process a single line from the buffer
     ProcessLine(buffer);
 }
@@ -97,7 +98,7 @@ W drugiej pętli `PipeReader` zużywa bufory zapisywane przez `PipeWriter`. Bufo
 * Zwraca wartość <xref:System.IO.Pipelines.ReadResult> zawierającą dwie ważne informacje:
 
   * Dane, które zostały odczytane w formie `ReadOnlySequence<byte>`.
-  * Wartość logiczna `IsCompleted` wskazuje, czy osiągnięto koniec danych (EOF). 
+  * Wartość logiczna `IsCompleted` wskazuje, czy osiągnięto koniec danych (EOF).
 
 Po znalezieniu ogranicznika końca wiersza (EOL) i przeanalizowaniu wiersza:
 
@@ -304,7 +305,7 @@ Podczas pisania pomocników odczytujących bufor należy skopiować wszystkie zw
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0 zarządza buforami do zapisu w imieniu obiektu wywołującego. `PipeWriter` implementuje [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter`1). `IBufferWriter<byte>` umożliwia uzyskanie dostępu do buforów w celu wykonywania operacji zapisu bez dodatkowych kopii buforów.
+@No__t-0 zarządza buforami do zapisu w imieniu obiektu wywołującego. `PipeWriter` implementuje [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` umożliwia uzyskanie dostępu do buforów w celu wykonywania operacji zapisu bez dodatkowych kopii buforów.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 

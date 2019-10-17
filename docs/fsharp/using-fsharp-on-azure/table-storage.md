@@ -3,14 +3,14 @@ title: Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F
 description: Przechowuj dane strukturalne w chmurze przy użyciu usługi Azure Table Storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 509435d47231040362586fa263fbecb1125f862b
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182597"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395208"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F\#
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F @ no__t-0
 
 Azure Table Storage to usługa, która przechowuje strukturalne dane NoSQL w chmurze. Magazyn tabel jest magazynem kluczy/atrybutów z projektem bez schematu. Ponieważ magazyn tabel jest bezschematowy, można łatwo dostosować dane w miarę rozwoju aplikacji. Dostęp do danych jest szybki i opłacalny dla wszystkich rodzajów aplikacji. Magazyn tabel jest zwykle znacząco niższy niż tradycyjny kod SQL dla podobnych ilości danych.
 
@@ -38,13 +38,13 @@ Aby skorzystać z tego przewodnika, musisz najpierw [utworzyć konto usługi Azu
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz F# skrypt i uruchom F# interaktywny
 
-Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z `.fsx` rozszerzeniem, na przykład `tables.fsx`w środowisku F# deweloperskim.
+Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z rozszerzeniem `.fsx`, na przykład `tables.fsx` w środowisku F# deweloperskim.
 
-Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [](https://www.nuget.org/) `WindowsAzure.Storage` NuGet, aby zainstalować `#r` pakiet i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy. Zrób to ponownie `Microsoft.WindowsAzure.ConfigurationManager` w celu uzyskania przestrzeni nazw Microsoft. Azure.
+Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`. Zrób to ponownie dla `Microsoft.WindowsAzure.ConfigurationManager` w celu uzyskania przestrzeni nazw Microsoft. Azure.
 
 ### <a name="add-namespace-declarations"></a>Dodawanie deklaracji przestrzeni nazw
 
-Dodaj następujące `open` instrukcje na początku `tables.fsx` pliku:
+Dodaj następujące instrukcje `open` na początku pliku `tables.fsx`:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L1-L5)]
 
@@ -54,7 +54,7 @@ W przypadku nawiązywania połączenia z usługą Azure Storage Table service po
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Pobierz parametry połączenia Azure Cosmos DB
 
-W przypadku nawiązywania połączenia z usługą Azure Cosmos DB potrzebne są parametry połączenia dla tego samouczka. Parametry połączenia można skopiować z Azure Portal. W Azure Portal na koncie Cosmos DB przejdź do pozycji **Ustawienia** > **Parametry połączenia**, a następnie kliknij przycisk **Kopiuj** , aby skopiować podstawowe parametry połączenia. 
+W przypadku nawiązywania połączenia z usługą Azure Cosmos DB potrzebne są parametry połączenia dla tego samouczka. Parametry połączenia można skopiować z Azure Portal. W Azure Portal na koncie Cosmos DB przejdź do pozycji **ustawienia** > **Parametry połączenia**, a następnie kliknij przycisk **Kopiuj** , aby skopiować podstawowe parametry połączenia. 
 
 Dla samouczka wprowadź parametry połączenia w skrypcie, jak w poniższym przykładzie:
 
@@ -66,7 +66,7 @@ W przypadku prawdziwych aplikacji najlepszym sposobem obsługi parametrów poł�
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak `ConfigurationManager` typ .NET Framework.
+Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizowanie parametrów połączenia
 
@@ -74,11 +74,11 @@ Aby przeanalizować parametry połączenia, użyj:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L21-L22)]
 
-Spowoduje to zwrócenie `CloudStorageAccount`elementu.
+Zwraca `CloudStorageAccount`.
 
 ### <a name="create-the-table-service-client"></a>Tworzenie klienta Table service
 
-`CloudTableClient` Klasa umożliwia pobieranie tabel i jednostek w magazynie tabel. Oto jeden ze sposobów tworzenia klienta usługi:
+Klasa `CloudTableClient` umożliwia pobieranie tabel i jednostek w magazynie tabel. Oto jeden ze sposobów tworzenia klienta usługi:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
@@ -92,15 +92,15 @@ Ten przykład pokazuje, jak utworzyć tabelę, jeśli jeszcze nie istnieje:
 
 ### <a name="add-an-entity-to-a-table"></a>Dodawanie jednostki do tabeli
 
-Jednostka musi mieć typ, który dziedziczy z `TableEntity`. Możesz to zrobić wdowolnysposób,aletypmusimiećkonstruktorabez`TableEntity` parametrów. Tylko właściwości, które mają `get` oba `set` te i są przechowywane w tabeli platformy Azure.
+Jednostka musi mieć typ, który dziedziczy po `TableEntity`. @No__t-0 można rozciągnąć w dowolny sposób, ale typ *musi* mieć konstruktora bez parametrów. W tabeli platformy Azure są przechowywane tylko właściwości `get` i `set`.
 
 Partycja i klucz wiersza jednostki jednoznacznie identyfikują jednostkę w tabeli. Jednostki z tym samym kluczem partycji mogą być przeszukiwane szybciej niż te z różnymi kluczami partycji, ale użycie różnych kluczy partycji umożliwia zwiększenie skalowalności operacji równoległych.
 
-Oto przykład `Customer` , który `lastName` używa jako klucza partycji i `firstName` klucza wiersza.
+Oto przykład `Customer`, który używa `lastName` jako klucza partycji i `firstName` jako klucza wiersza.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Teraz Dodaj `Customer` do tabeli. W tym celu należy utworzyć obiekt `TableOperation` , który jest wykonywany na tabeli. W takim przypadku należy utworzyć `Insert` operację.
+Teraz Dodaj `Customer` do tabeli. W tym celu należy utworzyć `TableOperation`, która jest wykonywana na tabeli. W takim przypadku należy utworzyć operację `Insert`.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
@@ -119,7 +119,7 @@ Oto kod, który łączy dwa wstawienia w operację wsadową:
 
 ### <a name="retrieve-all-entities-in-a-partition"></a>Pobieranie wszystkich jednostek w partycji
 
-Aby wykonać zapytanie dotyczące tabeli dla wszystkich jednostek w partycji, użyj `TableQuery` obiektu. Tutaj należy odfiltrować jednostki, w których "Smith" jest kluczem partycji.
+Aby wykonać zapytanie dotyczące tabeli dla wszystkich jednostek w partycji, użyj obiektu `TableQuery`. Tutaj należy odfiltrować jednostki, w których "Smith" jest kluczem partycji.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L77-L82)]
 
@@ -139,7 +139,7 @@ Wyniki są teraz drukowane:
 
 ### <a name="retrieve-a-single-entity"></a>Pobieranie pojedynczej jednostki
 
-Można napisać zapytanie w celu pobrania pojedynczej określonej jednostki. W tym miejscu należy użyć `TableOperation` , aby określić klienta "Ben Kowalski". Zamiast kolekcji, odwracasz `Customer`. Określenie zarówno klucza partycji, jak i klucza wiersza w zapytaniu jest najszybszym sposobem na pobranie pojedynczej jednostki z Table service.
+Można napisać zapytanie w celu pobrania pojedynczej określonej jednostki. W tym miejscu należy użyć `TableOperation`, aby określić klienta "Ben Kowalski". Zamiast kolekcji można wrócić `Customer`. Określenie zarówno klucza partycji, jak i klucza wiersza w zapytaniu jest najszybszym sposobem na pobranie pojedynczej jednostki z Table service.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -149,13 +149,13 @@ Wyniki są teraz drukowane:
 
 ### <a name="replace-an-entity"></a>Zastępowanie jednostki
 
-Aby zaktualizować jednostkę, pobierz ją z Table Service, zmodyfikuj obiekt Entity, a następnie Zapisz zmiany z powrotem do Table Service przy użyciu `Replace` operacji. Powoduje to, że jednostka zostanie całkowicie zastąpiona na serwerze, chyba że jednostka na serwerze zmieniła się od czasu jej pobrania. w takim przypadku operacja nie powiedzie się. Ten błąd uniemożliwia aplikacji przypadkowe zastąpienie zmian z innych źródeł.
+Aby zaktualizować jednostkę, pobierz ją z Table service, zmodyfikuj obiekt Entity, a następnie Zapisz zmiany z powrotem do Table service przy użyciu operacji `Replace`. Powoduje to, że jednostka zostanie całkowicie zastąpiona na serwerze, chyba że jednostka na serwerze zmieniła się od czasu jej pobrania. w takim przypadku operacja nie powiedzie się. Ten błąd uniemożliwia aplikacji przypadkowe zastąpienie zmian z innych źródeł.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L121-L128)]
 
 ### <a name="insert-or-replace-an-entity"></a>Wstawianie lub zastępowanie jednostki
 
-Czasami nie wiadomo, czy jednostka istnieje w tabeli. A jeśli tak, bieżące wartości przechowywane w niej nie są już potrzebne. Można użyć `InsertOrReplace` do utworzenia jednostki lub zamienić ją, jeśli istnieje, niezależnie od jej stanu.
+Czasami nie wiadomo, czy jednostka istnieje w tabeli. A jeśli tak, bieżące wartości przechowywane w niej nie są już potrzebne. Za pomocą `InsertOrReplace` można utworzyć jednostkę lub zastąpić ją, jeśli istnieje, niezależnie od jej stanu.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
@@ -196,4 +196,3 @@ Teraz, gdy znasz już podstawowe informacje o usłudze Table Storage, Skorzystaj
 - [Dostawca typów usługi Azure Storage](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog zespołu usługi Azure Storage](https://blogs.msdn.microsoft.com/windowsazurestorage/)
 - [Konfigurowanie parametrów połączenia](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
-- [Wprowadzenie z usługą Azure Table Storage w środowisku .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

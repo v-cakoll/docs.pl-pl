@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 586e50818fc8ceaad5ca1925c0636b31015d81d4
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925373"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395148"
 ---
 # <a name="virtual-c-reference"></a>virtual (odwołanie w C#)
 
-`virtual` Słowo kluczowe jest używane do modyfikacji deklaracji metody, właściwości, indeksatora lub zdarzenia i umożliwia jej zastąpienie w klasie pochodnej. Na przykład ta metoda może zostać przesłonięta przez dowolną klasę, która ją dziedziczy:
+Słowo kluczowe `virtual` służy do modyfikowania metody, właściwości, indeksatora lub deklaracji zdarzenia i umożliwia jej zastąpienie w klasie pochodnej. Na przykład ta metoda może zostać przesłonięta przez dowolną klasę, która ją dziedziczy:
 
 ```csharp
 public virtual double Area() 
@@ -26,7 +26,7 @@ public virtual double Area()
 }
 ```
 
-Implementację wirtualnego elementu członkowskiego można zmienić przez [zastępujący element członkowski](override.md) w klasie pochodnej. Aby uzyskać więcej informacji na temat sposobu używania `virtual` słowa kluczowego, zobacz [przechowywanie wersji z przesłonięciami i nowymi słowami kluczowymi](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [wiedzą, kiedy używać przesłonięć i nowych słów kluczowych](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
+Implementację wirtualnego elementu członkowskiego można zmienić przez [zastępujący element członkowski](override.md) w klasie pochodnej. Aby uzyskać więcej informacji na temat używania słowa kluczowego `virtual`, zobacz [przechowywanie wersji z przesłonięciami i nowymi słowami kluczowymi](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) i [wiedzą, kiedy używać przesłonięć i nowych słów kluczowych](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -34,27 +34,27 @@ Gdy wywoływana jest metoda wirtualna, typ czasu wykonywania obiektu jest sprawd
 
 Domyślnie metody nie są wirtualne. Nie można zastąpić metody innej niż wirtualna.
 
-Nie `virtual` można użyć modyfikatora `abstract` `static`z modyfikatorami, `private`,, `override` lub. W poniższym przykładzie przedstawiono Właściwość wirtualną:
+Nie można użyć modyfikatora `virtual` z modyfikatorami `static`, `abstract`, `private` lub `override`. W poniższym przykładzie przedstawiono Właściwość wirtualną:
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-Właściwości wirtualne zachowują się jak metody abstrakcyjne, z wyjątkiem różnic w składni deklaracji i wywołania.
+Właściwości wirtualne zachowują się jak metody wirtualne, z wyjątkiem różnic w składni deklaracji i wywołania.
 
-- Wystąpił błąd podczas używania `virtual` modyfikatora dla właściwości statycznej.
+- Wystąpił błąd podczas używania modyfikatora `virtual` właściwości statycznej.
 
-- Wirtualną Właściwość dziedziczoną można zastąpić w klasie pochodnej przez dołączenie deklaracji właściwości, która używa `override` modyfikatora.
+- Wirtualną Właściwość dziedziczoną można zastąpić w klasie pochodnej przez dołączenie deklaracji właściwości, która używa modyfikatora `override`.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie `Shape` Klasa zawiera dwie współrzędne `x`, `y`i `Area()` metodę wirtualną. Różne klasy kształtu, takie `Circle`jak `Cylinder`, i `Sphere` dziedziczą `Shape` klasę, a obszar powierzchni jest obliczany dla każdego rysunku. Każda klasa pochodna ma własną implementację `Area()`zastępującą.
+W tym przykładzie Klasa `Shape` zawiera dwa współrzędne `x`, `y` i metodę wirtualną `Area()`. Różne klasy kształtu, takie jak `Circle`, `Cylinder` i `Sphere` dziedziczą klasę `Shape`, a obszar powierzchni jest obliczany dla każdego rysunku. Każda klasa pochodna ma własną implementację zastępującą `Area()`.
 
-Zwróć uwagę, że dziedziczone `Circle`klasy `Sphere`, i `Cylinder` wszystkie używają konstruktorów, które inicjują klasę bazową, jak pokazano w poniższej deklaracji.
+Zwróć uwagę, że klasy dziedziczone `Circle`, `Sphere` i `Cylinder` używają konstruktorów, które inicjują klasę bazową, jak pokazano w poniższej deklaracji.
 
 ```csharp
 public Cylinder(double r, double h): base(r, h) {}
 ```
 
-Poniższy program oblicza i wyświetla odpowiedni obszar dla każdego rysunku przez wywoływanie odpowiedniej implementacji `Area()` metody, zgodnie z obiektem, który jest skojarzony z metodą.
+Poniższy program oblicza i wyświetla odpowiedni obszar dla każdego rysunku przez wywoływanie odpowiedniej implementacji metody `Area()`, zgodnie z obiektem, który jest skojarzony z metodą.
 
 [!code-csharp[csrefKeywordsModifiers#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#23)]
 

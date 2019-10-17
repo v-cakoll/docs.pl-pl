@@ -4,12 +4,12 @@ description: Dowiedz się więcej o istotnych zmianach w każdej wersji platform
 ms.date: 08/12/2019
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc057c41850a4cc0c0806af607990c7dcae51fdc
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 94dd59865afbde73c82f6e1b61a2f054cc188c72
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216437"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72393636"
 ---
 # <a name="net-core-breaking-changes"></a>Podstawowe zmiany w programie .NET Core
 
@@ -17,8 +17,8 @@ Poniższy selektor wersji zawiera przefiltrowaną listę istotnych zmian dla pla
 
 Można również wyświetlić poszczególne problemy, które opisują istotne zmiany wprowadzone w programie .NET Core 3,0 w następujących repozytoriach usługi GitHub:
 
-- W przypadku platformy .NET Core — repozytorium [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
-- W przypadku ASP.NET Core repozytorium [ASPNET/AspNetCore](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
+- W przypadku platformy .NET Core, repozytorium [dotnet/docs](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
+- Dla ASP.NET Core, repozytorium [ASPNET/anonsów](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) .
 - W przypadku Entity Framework Core repozytorium [ASPNET/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) .
 
 ## <a name="breaking-changes-by-version"></a>Istotne zmiany w wersji

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych'
+title: 'Porady: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - forms [Windows Forms], creating resizable
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-ms.openlocfilehash: 1b27c0e67aae1935c4216654d9f3ddf557719572
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: aeab1b506b9ded4c3c2ab527f07a8655a44cad2b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588940"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72396028"
 ---
-# <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Instrukcje: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych
-Dobre układ odpowiada również zmiany w wymiarach jego formularza nadrzędnego. Możesz użyć <xref:System.Windows.Forms.TableLayoutPanel> kontroli do układu formularza w taki sposób, aby zmienić rozmiar i położenie formantów w spójny sposób zmianami Wymiary formularza. <xref:System.Windows.Forms.TableLayoutPanel> Kontroli jest również przydatne w przypadku gdy zmienia się w zawartości kontrolki Przyczyna zmiany w układzie. Proces omówione w tej procedurze, możesz to zrobić w środowisku Visual Studio.  Zobacz też [instruktażu: Tworzenie formularza Windows o zmiennych rozmiarach dla wpisywania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  
+# <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Porady: tworzenie formularza systemu Windows o zmiennych rozmiarach do wpisywania danych
+Dobry układ reaguje na zmiany w wymiarach jego formularza nadrzędnego. Za pomocą kontrolki <xref:System.Windows.Forms.TableLayoutPanel> można rozmieścić układ formularza w celu zmiany rozmiaru i położenia kontrolek w spójny sposób. Formant <xref:System.Windows.Forms.TableLayoutPanel> jest również przydatny, gdy zmiany w zawartości formantów powodują zmiany w układzie. Proces objęty tą procedurą można wykonać w środowisku programu Visual Studio.  Zobacz też [Przewodnik: Tworzenie formularza systemu Windows o zmiennym rozmiarze do wprowadzania danych](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje sposób użycia <xref:System.Windows.Forms.TableLayoutPanel> kontrolki do tworzenia układu, który odpowiada również, gdy użytkownik zmienia rozmiar formularza. Ilustruje też układ, dobrze reagującego na lokalizację.  
+ Poniższy przykład ilustruje sposób używania kontrolki <xref:System.Windows.Forms.TableLayoutPanel> do kompilowania układu, który reaguje, gdy użytkownik zmienia rozmiar formularza. Przedstawiono w nim również układ, który reaguje na lokalizację.  
   
  [!code-cpp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/cpp/basicdataentryform.cpp#1)]
  [!code-csharp[System.Windows.Forms.TableLayoutPanel.DataEntryForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.DataEntryForm/CS/basicdataentryform.cs#1)]
@@ -31,12 +31,11 @@ Dobre układ odpowiada również zmiany w wymiarach jego formularza nadrzędnego
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  Ten przykład wymaga:  
   
-- Odwołania do zestawów systemu, dane systemowe i System.Drawing oraz przestrzeń nazw System.Windows.Forms.  
+- Odwołania do zestawów system, system. Data, system. Drawing i system. Windows. Forms.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [Instrukcje: Zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [Instrukcje: Projektowanie układu formularzy Windows dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)
-- [Środowisko użytkownika Microsoft Windows, oficjalnych wytycznych dotyczących projektanci i deweloperzy interfejsu użytkownika. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [Instrukcje: projektowanie układu formularzy Windows Forms dobrze reagującego na lokalizację](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)

@@ -1,5 +1,5 @@
 ---
-title: Metoda SqlStreamChars.Close (System.Data.SqlTypes)
+title: SqlStreamChars. Close — Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 942ee987f1c56abe2cb1718347886dd397e7217e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c33c60842d181be7011528ca7550f3d09f291f43
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634343"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395635"
 ---
-# <a name="sqlstreamcharsclose-method"></a>Metoda SqlStreamChars.Close
+# <a name="sqlstreamcharsclose-method"></a>SqlStreamChars. Close — Metoda
 
-Powoduje zamknięcie bieżącego strumienia i zwalnia wszystkie zasoby systemu, skojarzone ze strumienia. Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Zamyka bieżący strumień i zwalnia wszystkie zasoby systemowe skojarzone ze strumieniem. Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ```csharp
 public virtual void Close ();
@@ -30,14 +30,14 @@ public virtual void Close ();
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Close` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Metoda `SqlStreamChars.Close` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

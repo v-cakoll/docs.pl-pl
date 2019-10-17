@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush Method (System.Data.SqlTypes)
+title: SqlStreamChars. Flush — Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634334"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395626"
 ---
-# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush Method
+# <a name="sqlstreamcharsflush-method"></a>SqlStreamChars. Flush — Metoda
 
-W przypadku przesłonięcia w klasie pochodnej, czyści wszystkie bufory tego strumienia i powoduje, że wszystkie buforowane dane są zapisywane w odpowiednie urządzenia. Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, czyści wszystkie bufory dla tego strumienia i powoduje, że wszystkie buforowane dane są zapisywane na podstawowym urządzeniu. Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,14 +32,14 @@ public abstract void Flush ();
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Flush` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Metoda `SqlStreamChars.Flush` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

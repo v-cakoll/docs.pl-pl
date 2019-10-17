@@ -1,5 +1,5 @@
 ---
-title: Metoda SqlStreamChars.Dispose(Boolean) (System.Data.SqlTypes)
+title: SqlStreamChars. Dispose (Boolean) — Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 2cad6015c1c4d72300d8413b7accead12f79a0be
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 44dc97835b8a7141064e8de4d2d5325c40be5a34
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634302"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395763"
 ---
-# <a name="sqlstreamcharsdisposeboolean-method"></a>Metoda SqlStreamChars.Dispose(Boolean)
+# <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars. Dispose (Boolean) — Metoda
 
-W przypadku przesłonięcia w klasie pochodnej, zwalnia zasoby używane przez strumień. Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, zwalnia zasoby używane przez strumień. Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ```csharp
 protected virtual void Dispose (bool disposing);
@@ -30,19 +30,19 @@ protected virtual void Dispose (bool disposing);
 ## <a name="parameters"></a>Parametry
 
 `disposing`\
-`true` Aby zwolnić zasoby zarządzane i niezarządzane; `false` aby zwolnić tylko niezarządzane zasoby.
+`true` w celu zwolnienia zasobów zarządzanych i niezarządzanych; `false` do zwolnienia tylko zasobów niezarządzanych.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.Dispose` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Metoda `SqlStreamChars.Dispose` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 32caf87435e23008f9f300d231c2705e7894280f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 7826bbfca09cce7508d7352c647bafae93504e58
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291465"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395843"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] na globalnym rynku. Elementy programistyczne globalizacji są zdefiniowane w .NET w przestrzeni nazw <xref:System.Globalization>.
@@ -23,7 +23,7 @@ Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę pod
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Odwołania do znaków
-Odwołanie do znaku daje jednostkę kodu UTF16 określonego znaku [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)], który reprezentuje, w postaci dziesiętnej lub szesnastkowej. W poniższym przykładzie pokazano odwołanie do znaku dziesiętnego dla COPTIC wielkiej litery, lub "Ϩ":
+Odwołanie do znaku daje jednostkę kodu UTF16 określonego znaku Unicode, który reprezentuje, w postaci dziesiętnej lub szesnastkowej. W poniższym przykładzie pokazano odwołanie do znaku dziesiętnego dla COPTIC wielkiej litery, lub "Ϩ":
 
 ```
 &#1000;
@@ -36,8 +36,8 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
- Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to ASCII, [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] UTF-16 i UTF-8. Instrukcja Encoding znajduje się na początku dokumentu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. Poniższy przykład ilustruje sposób określania kodowania UTF-8 w pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+### <a name="encoding"></a>Kody
+ Kodowanie obsługiwane przez [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] to ASCII, Unicode UTF-16 i UTF-8. Instrukcja Encoding znajduje się na początku dokumentu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli żaden atrybut kodowania nie istnieje i nie ma kolejności bajtów, Analizator domyślnie używa kodowania UTF-8. Kodowanie UTF-8 i UTF-16 są preferowanymi kodowaniami. Kodowanie UTF-7 nie jest obsługiwane. Poniższy przykład ilustruje sposób określania kodowania UTF-8 w pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
 ?xml encoding="UTF-8"?
@@ -47,7 +47,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ### <a name="language-attribute"></a>Atrybut Language
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] używa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) do reprezentowania atrybutu języka elementu.  Aby skorzystać z klasy <xref:System.Globalization.CultureInfo>, wartość atrybutu języka musi być jedną z nazw kultur wstępnie zdefiniowanych przez <xref:System.Globalization.CultureInfo>. [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) można dziedziczyć w drzewie elementów (według reguł XML, niekoniecznie ze względu na dziedziczenie właściwości zależności), a jego wartość domyślna to pusty ciąg, jeśli nie jest on jawnie przypisany.
 
- Atrybut Language jest bardzo przydatny do określania dialektów. Na przykład francuski ma inną pisownię, słownictwo i wymowę w Francji, Quebec, Belgii i Szwajcarii. W [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)] można także użyć języka chińskiego, japońskiego i koreańskiego, ale kształty ideograficzne różnią się od siebie i używają całkowicie różnych czcionek.
+ Atrybut Language jest bardzo przydatny do określania dialektów. Na przykład francuski ma inną pisownię, słownictwo i wymowę w Francji, Quebec, Belgii i Szwajcarii. W standardzie Unicode, a także w językach chińskim, japońskim i koreańskim, ale kształty ideograficzne różnią się od siebie i używają całkowicie różnych czcionek.
 
  Poniższy [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] przykład używa atrybutu języka `fr-CA` w celu określenia kanadyjskiej wartości francuskiej.
 
@@ -57,7 +57,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="unicode"></a>
 ### <a name="unicode"></a>Unicode
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] obsługuje wszystkie funkcje [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], w tym surogaty. Tak długo, jak zestaw znaków można zamapować na [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)], jest obsługiwany. Na przykład GB18030 wprowadza pewne znaki, które są mapowane na rozszerzenia w języku chińskim, japońskim i koreańskim (CFK) a i B i pary dwuskładnikowe, dlatego jest w pełni obsługiwane. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] może używać <xref:System.Globalization.StringInfo> do manipulowania ciągami bez względu na to, czy mają one pary dwuskładnikowe, czy łączenia znaków.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] obsługuje wszystkie funkcje Unicode, w tym surogaty. Tak długo, jak zestaw znaków można zamapować na Unicode, jest obsługiwany. Na przykład GB18030 wprowadza pewne znaki, które są mapowane na rozszerzenia w języku chińskim, japońskim i koreańskim (CFK) a i B i pary dwuskładnikowe, dlatego jest w pełni obsługiwane. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] może używać <xref:System.Globalization.StringInfo> do manipulowania ciągami bez względu na to, czy mają one pary dwuskładnikowe, czy łączenia znaków.
 
 <a name="design_intl_ui_with_xaml"></a>
 ## <a name="designing-an-international-user-interface-with-xaml"></a>Projektowanie międzynarodowego interfejsu użytkownika przy użyciu języka XAML
@@ -77,7 +77,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Pisanych
 
-- Grecki
+- grecki
 
 - Gudżarati
 
@@ -111,7 +111,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Tybetański
 
- \* W tej wersji jest obsługiwane wyświetlanie i edytowanie tekstu w języku tajlandzkim; dzielenie wyrazów nie jest dozwolone.
+ * W tej wersji jest obsługiwane wyświetlanie i edytowanie tekstu w języku tajlandzkim; dzielenie wyrazów nie jest dozwolone.
 
  Następujące skrypty nie są obecnie obsługiwane:
 
@@ -119,13 +119,13 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 - Stary Hangul koreański
 
-- Myanmar
+- Mjanma
 
 - Syngaleski
 
  Wszystkie aparaty systemu pisania obsługują czcionki OpenType. Czcionki OpenType mogą zawierać tabele układu OpenType, które umożliwiają twórcom czcionek projektowanie lepszych, międzynarodowych i wysokiej klasy czcionek typograficznych. Tabele układu czcionek OpenType zawierają informacje dotyczące podstawiania glifów, pozycjonowania glifów, justowania i pozycjonowania linii bazowej, umożliwiając aplikacjom do przetwarzania tekstu ulepszanie układu tekstu.
 
- Czcionki OpenType umożliwiają obsługę dużych zestawów glifów przy użyciu kodowania [!INCLUDE[TLA2#tla_unicode](../../../../includes/tla2sharptla-unicode-md.md)]. Takie kodowanie włącza szeroką pomoc techniczną, a także dla wariantów symboli typograficznych.
+ Czcionki OpenType umożliwiają obsługę dużych zestawów glifów przy użyciu kodowania Unicode. Takie kodowanie włącza szeroką pomoc techniczną, a także dla wariantów symboli typograficznych.
 
  renderowanie tekstu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest obsługiwane przez technologię Microsoft ClearType w pikselach, która obsługuje niezależność rozwiązań. Znacznie poprawia to czytelność i zapewnia możliwość obsługi dokumentów w stylu magazynu o wysokiej jakości dla wszystkich skryptów.
 
@@ -180,4 +180,4 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przegląd globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)
+- [Przeglądanie globalizacji i lokalizacji WPF](wpf-globalization-and-localization-overview.md)

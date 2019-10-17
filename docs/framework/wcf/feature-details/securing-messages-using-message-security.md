@@ -2,15 +2,15 @@
 title: Korzystanie z zabezpieczeń komunikatów
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911777"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395714"
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
-W tej części omówiono zabezpieczenia komunikatów WCF podczas <xref:System.ServiceModel.NetMsmqBinding>korzystania z programu.  
+W tej części omówiono zabezpieczenia komunikatów WCF podczas korzystania z <xref:System.ServiceModel.NetMsmqBinding>.  
   
 > [!NOTE]
 > Przed przeczytaniem z tego tematu zaleca się zapoznanie się z [pojęciami dotyczącymi zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
@@ -19,7 +19,7 @@ W tej części omówiono zabezpieczenia komunikatów WCF podczas <xref:System.Se
   
  zagadnienia dotyczące zabezpieczeń transportu.  
   
- ![Diagram aplikacji] znajdujących się w kolejce (../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Rozproszona-queueed-Figure")  
+ ![Diagram aplikacji znajdujących się w kolejce](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Rozproszona-Queueed-Figure")  
   
  Podczas wysyłania komunikatów umieszczonych w kolejce przy użyciu programu WCF komunikat WCF jest dołączany jako treść komunikatu usługi kolejkowania komunikatów (MSMQ). Chociaż zabezpieczenia transportu zabezpieczają cały komunikat MSMQ, zabezpieczenia komunikatów (lub SOAP) zabezpieczają tylko treść wiadomości MSMQ.  
   
@@ -28,9 +28,9 @@ W tej części omówiono zabezpieczenia komunikatów WCF podczas <xref:System.Se
  Funkcja zabezpieczenia komunikatów WCF dodaje nagłówki zabezpieczeń do wiadomości WCF, która integruje się z istniejącymi infrastrukturami zabezpieczeń, takimi jak certyfikat lub protokół Kerberos.  
   
 ## <a name="message-credential-type"></a>Typ poświadczeń wiadomości  
- Korzystając z zabezpieczeń komunikatów, usługa i klient mogą przedstawić poświadczenia do wzajemnego uwierzytelniania. Możesz wybrać opcję Zabezpieczenia komunikatów, ustawiając <xref:System.ServiceModel.NetMsmqBinding.Security%2A> tryb na `Message` lub `Both` (to oznacza, że są używane zabezpieczenia transportu i zabezpieczenia komunikatów).  
+ Korzystając z zabezpieczeń komunikatów, usługa i klient mogą przedstawić poświadczenia do wzajemnego uwierzytelniania. Aby wybrać opcję Zabezpieczenia komunikatów, należy ustawić tryb <xref:System.ServiceModel.NetMsmqBinding.Security%2A> na `Message` lub `Both` (to jest użycie zabezpieczeń transport i zabezpieczenia komunikatów).  
   
- Usługa może użyć <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> właściwości, aby sprawdzić poświadczenie używane do uwierzytelniania klienta. Można go również użyć do dalszej kontroli autoryzacji, którą usługa wybiera do wdrożenia.  
+ Usługa może użyć właściwości <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> do sprawdzenia poświadczeń używanych do uwierzytelniania klienta. Można go również użyć do dalszej kontroli autoryzacji, którą usługa wybiera do wdrożenia.  
   
  W tej sekcji objaśniono różne typy poświadczeń i sposoby ich używania z kolejkami.  
   
@@ -52,7 +52,7 @@ W tej części omówiono zabezpieczenia komunikatów WCF podczas <xref:System.Se
   
  Należy pamiętać, że w przypadku korzystania z tego typu poświadczeń usługa musi być uruchomiona w ramach konta usługi.  
   
- Protokół Kerberos jest używany domyślnie podczas wybierania poświadczeń wiadomości. Aby uzyskać więcej informacji, zobacz [Eksplorowanie protokołu Kerberos, protokół dla zabezpieczeń rozproszonych w systemie Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Protokół Kerberos jest używany domyślnie podczas wybierania poświadczeń wiadomości.
   
 ### <a name="username-password"></a>Hasło użytkownika  
  Korzystając z tej właściwości, klient może uwierzytelniać się na serwerze przy użyciu hasła użytkownika w nagłówku zabezpieczeń wiadomości.  

@@ -4,23 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 917797700c3e403971ce6f48174a282b1102f127
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 32a31a881573cc9dc481fc07fc4067569a96a963
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799322"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395828"
 ---
 # <a name="string-functions-visual-basic"></a>Funkcje ciągów (Visual Basic)
 
-Poniższa tabela zawiera listę funkcji, które Visual Basic zapewnia w <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> klasie w celu wyszukiwania ciągów i manipulowania nimi. Mogą być uznawane za Visual Basic funkcje wewnętrzne; oznacza to, że nie trzeba wywoływać ich jako jawnych elementów członkowskich klasy, jak pokazano w przykładzie. Dodatkowe metody, a w niektórych przypadkach metody uzupełniające są dostępne w <xref:System.String?displayProperty=nameWithType> klasie. 
+Poniższa tabela zawiera listę funkcji, które Visual Basic zapewnia w klasie <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> do wyszukiwania ciągów i manipulowania nimi. Mogą być uznawane za Visual Basic funkcje wewnętrzne; oznacza to, że nie trzeba wywoływać ich jako jawnych elementów członkowskich klasy, jak pokazano w przykładzie. Dodatkowe metody, a w niektórych przypadkach metody uzupełniające są dostępne w klasie <xref:System.String?displayProperty=nameWithType>. 
   
 |.NET Framework, Metoda|Opis|  
 |---------------------------|-----------------|  
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|`Integer` Zwraca wartość reprezentującą kod znaku odpowiadający znakowi.|  
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Zwraca wartość `Integer` reprezentującą kod znaku odpowiadający znakowi.|  
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Zwraca znak skojarzony z podanym kodem znaku.|  
 |<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Zwraca tablicę opartą na zero, zawierającą podzbiór `String` tablicy na podstawie określonych kryteriów filtrowania.|  
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Zwraca ciąg sformatowany zgodnie z instrukcjami zawartymi w wyrażeniu formatu `String` .|  
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Zwraca ciąg sformatowany zgodnie z instrukcjami zawartymi w formacie `String` wyrażenia.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Zwraca wyrażenie sformatowane jako wartość walutowa przy użyciu symbolu waluty zdefiniowanego w panelu sterowania systemem.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Zwraca wyrażenie ciągu reprezentujące wartość daty/godziny.|  
 |<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Zwraca wyrażenie sformatowane jako liczba.|  
@@ -47,43 +47,43 @@ Poniższa tabela zawiera listę funkcji, które Visual Basic zapewnia w <xref:Mi
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji wiodących i końcowych.|  
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Zwraca ciąg lub znak zawierający określony ciąg przekonwertowany na wielkie litery.|  
   
- Możesz użyć instrukcji [Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) , aby określić, czy ciągi są porównywane przy użyciu kolejności sortowania tekstu nieuwzględniającego wielkości liter, określonego przez ustawienia regionalne systemu`Text`() lub wewnętrzne reprezentacje binarne znaków (`Binary`). Domyślną metodą porównywania tekstu jest `Binary`.  
+ Możesz użyć instrukcji [Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) , aby określić, czy ciągi są porównywane przy użyciu kolejności sortowania tekstu nieuwzględniającego wielkości liter, określonego przez ustawienia regionalne systemu (`Text`) lub wewnętrzne reprezentacje binarne znaków (`Binary`). Domyślna metoda porównywania tekstu to `Binary`.  
   
 ## <a name="example-ucase"></a>Przykład: UCase
 
-Ten przykład używa funkcji `UCase` , aby zwrócić wielką wersję ciągu.  
+W tym przykładzie funkcja `UCase` zwraca wielką wersję ciągu.  
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]  
   
-## <a name="example-ltrim"></a>Przykład: Dawaj
+## <a name="example-ltrim"></a>Przykład: LTrim
 
-Ten przykład używa funkcji `LTrim` , aby rozdzielić wiodące spacje i funkcję, `RTrim` aby rozdzielić spacje ze zmiennej ciągu. Używa funkcji, `Trim` aby rozdzielić oba typy spacji.  
+W tym przykładzie funkcja `LTrim` służy do rozdzielania spacji wiodących i funkcji `RTrim`, aby rozdzielić spacje z zmiennej ciągu. Używa funkcji `Trim` w celu rozdzielenia obu typów spacji.  
   
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]  
   
-## <a name="example-mid"></a>Przykład: MID
+## <a name="example-mid"></a>Przykład: Mid
 
-W tym przykładzie `Mid` funkcja Zwraca określoną liczbę znaków z ciągu.  
+W tym przykładzie funkcja `Mid` zwraca określoną liczbę znaków z ciągu.  
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]  
 
-## <a name="example-len"></a>Przykład: Funkcja
+## <a name="example-len"></a>Przykład: Len
 
-Ten przykład używa `Len` do zwracania liczby znaków w ciągu.  
+W tym przykładzie używa `Len`, aby zwrócić liczbę znaków w ciągu.  
   
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]  
   
 ## <a name="example-instr"></a>Przykład: InStr
 
-Ten przykład używa funkcji `InStr` , aby zwrócić pozycję pierwszego wystąpienia jednego ciągu w innym.  
+W tym przykładzie funkcja `InStr` zwraca pozycję pierwszego wystąpienia jednego ciągu w innym.  
   
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]  
   
-## <a name="example-format"></a>Przykład: Format
+## <a name="example-format"></a>Przykład: format
 
-W tym przykładzie pokazano różne zastosowania `Format` funkcji do formatowania wartości `String` przy użyciu formatów i formatów zdefiniowanych przez użytkownika. W przypadku separatora daty`/`(), separatora`:`czasu () i wskaźników am/pm (`t` i `tt`) rzeczywiste sformatowane dane wyjściowe wyświetlane przez system są zależne od ustawień regionalnych, których używa kod. Gdy godziny i daty są wyświetlane w środowisku deweloperskim, używany jest format krótki czas i krótki format daty dla ustawień regionalnych.  
+W tym przykładzie przedstawiono różne zastosowania funkcji `Format` do formatowania wartości przy użyciu zarówno formatów `String`, jak i formatów zdefiniowanych przez użytkownika. W przypadku separatora daty (`/`), separatora czasu (`:`) i wskaźników AM/PM (`t` i `tt`) rzeczywiste sformatowane dane wyjściowe wyświetlane przez system zależą od ustawień regionalnych, których używa kod. Gdy godziny i daty są wyświetlane w środowisku deweloperskim, używany jest format krótki czas i krótki format daty dla ustawień regionalnych.  
   
 > [!NOTE]
-> Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki am/pm (`t` i `tt`) nie wyświetlają niczego.  
+> Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki AM/PM (`t` i `tt`) nie wyświetlają niczego.  
   
  [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]  
   
@@ -92,4 +92,4 @@ W tym przykładzie pokazano różne zastosowania `Format` funkcji do formatowani
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Manipulowanie ciągami — podsumowanie](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [Metody klasy System. String]<xref:System.String#methods?displayProperty=nameWithType>
+- [Metody klasy System. String](xref:System.String#methods)

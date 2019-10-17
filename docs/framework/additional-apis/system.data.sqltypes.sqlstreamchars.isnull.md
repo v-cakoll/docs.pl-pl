@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.IsNull Property (System.Data.SqlTypes)
+title: SqlStreamChars. IsNull — Właściwość (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
@@ -13,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 03b702b0ffe258eb8cad0a1ece5314b363f9a0d0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d80f653724b3ef0a1cadb69a5f72b1d9455597d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634614"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395733"
 ---
-# <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars.IsNull Property
+# <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars. IsNull — Właściwość
 
-W przypadku przesłonięcia w klasie pochodnej pobiera wartość wskazującą, czy strumień jest `null`. Zestaw, który zawiera właściwość ta ma relację zaprzyjaźniona z SQLAccess.dll. Jest przeznaczony do użytku przez program SQL Server. W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.
+Gdy jest zastępowany w klasie pochodnej, pobiera wartość wskazującą, czy strumień jest `null`. Zestaw, który zawiera tę właściwość, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll. Jest on przeznaczony do użycia przez SQL Server. W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,19 +33,19 @@ public abstract bool IsNull { get; }
 ## <a name="property-value"></a>Wartość właściwości
 
 <xref:System.Boolean>\
-`true` Jeśli strumień jest `null`; w przeciwnym razie `false`.
+`true`, jeśli strumień jest `null`; w przeciwnym razie `false`.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!WARNING]
-> `SqlStreamChars.IsNull` Właściwość jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Właściwość `SqlStreamChars.IsNull` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
 >
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje użycia tej właściwości w aplikacji produkcyjnej w żadnym przypadku.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Data.SqlTypes>
+**Przestrzeń nazw:** <xref:System.Data.SqlTypes>
 
-**Zestaw:** Dane systemowe (w System.Data.dll)
+**Zestaw:** System. Data (w pliku System. Data. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

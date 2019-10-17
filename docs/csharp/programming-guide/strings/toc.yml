@@ -1,5 +1,0 @@
-- name: Ciągi
-  href: index.md
-  items:
-    - name: 'Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową'
-      href: how-to-determine-whether-a-string-represents-a-numeric-value.md

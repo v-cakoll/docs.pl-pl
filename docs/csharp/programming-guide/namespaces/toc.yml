@@ -1,7 +1,0 @@
-- name: Namespaces
-  href: index.md
-  items:
-    - name: Korzystanie z przestrzeni nazw
-      href: using-namespaces.md
-    - name: 'Instrukcje: korzystanie z przestrzeni nazw typu My'
-      href: how-to-use-the-my-namespace.md

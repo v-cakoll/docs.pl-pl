@@ -128,9 +128,9 @@
             - name: Dodatki i rozszerzalność
               tocHref: /dotnet/framework/add-ins/
               topicHref: /dotnet/framework/add-ins/index
-            - name: Dodatkowe biblioteki klas i interfejsy API
-              tocHref: /dotnet/framework/additional-steps/
-              topicHref: /dotnet/framework/additional-steps/index
+            - name: Dodatkowe interfejsy API
+              tocHref: /dotnet/framework/additional-apis/
+              topicHref: /dotnet/framework/additional-apis/index
             - name: Domeny aplikacji i zestawy
               tocHref: /dotnet/framework/app-domains/
               topicHref: /dotnet/framework/app-domains/index

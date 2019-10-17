@@ -1,5 +1,5 @@
 ---
-title: SqlStreamChars.Flush Method (System.Data.SqlTypes)
+title: SqlStreamChars. Flush — Metoda (System. Data. SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
@@ -12,34 +12,34 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 38ade5ce38cfe5003b2d06c0d8bb2db1a20bc05b
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634334"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395626"
 ---
-# <a name="sqlstreamcharsflush-method"></a><span data-ttu-id="ad877-102">SqlStreamChars.Flush Method</span><span class="sxs-lookup"><span data-stu-id="ad877-102">SqlStreamChars.Flush Method</span></span>
+# <a name="sqlstreamcharsflush-method"></a><span data-ttu-id="0933c-102">SqlStreamChars. Flush — Metoda</span><span class="sxs-lookup"><span data-stu-id="0933c-102">SqlStreamChars.Flush Method</span></span>
 
-<span data-ttu-id="ad877-103">W przypadku przesłonięcia w klasie pochodnej, czyści wszystkie bufory tego strumienia i powoduje, że wszystkie buforowane dane są zapisywane w odpowiednie urządzenia.</span><span class="sxs-lookup"><span data-stu-id="ad877-103">When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</span></span> <span data-ttu-id="ad877-104">Zestaw, który zawiera tę metodę ma relację zaprzyjaźniona z SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="ad877-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="ad877-105">Jest przeznaczony do użytku przez program SQL Server.</span><span class="sxs-lookup"><span data-stu-id="ad877-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="ad877-106">W przypadku innych baz danych użyj mechanizmu hostowania, pod warunkiem, że ta baza danych.</span><span class="sxs-lookup"><span data-stu-id="ad877-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="0933c-103">Gdy jest zastępowany w klasie pochodnej, czyści wszystkie bufory dla tego strumienia i powoduje, że wszystkie buforowane dane są zapisywane na podstawowym urządzeniu.</span><span class="sxs-lookup"><span data-stu-id="0933c-103">When overridden in a derived class, clears all buffers for this stream and causes any buffered data to be written to the underlying device.</span></span> <span data-ttu-id="0933c-104">Zestaw, który zawiera tę metodę, ma relację zaprzyjaźnioną z obiektem sqlaccess. dll.</span><span class="sxs-lookup"><span data-stu-id="0933c-104">The assembly that contains this method has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="0933c-105">Jest on przeznaczony do użycia przez SQL Server.</span><span class="sxs-lookup"><span data-stu-id="0933c-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="0933c-106">W przypadku innych baz danych Użyj mechanizmu hostingu dostarczonego przez tę bazę danych.</span><span class="sxs-lookup"><span data-stu-id="0933c-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ad877-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="ad877-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="0933c-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="0933c-107">Syntax</span></span>
 
 ```csharp
 public abstract void Flush ();
 ```
 
-## <a name="remarks"></a><span data-ttu-id="ad877-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ad877-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0933c-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0933c-108">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="ad877-109">`SqlStreamChars.Flush` Metoda jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="ad877-109">The `SqlStreamChars.Flush` method is private and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="0933c-109">Metoda `SqlStreamChars.Flush` jest prywatna i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="0933c-109">The `SqlStreamChars.Flush` method is private and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="ad877-110">Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.</span><span class="sxs-lookup"><span data-stu-id="ad877-110">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="0933c-110">Firma Microsoft nie obsługuje korzystania z tej metody w aplikacji produkcyjnej w żadnej sytuacji.</span><span class="sxs-lookup"><span data-stu-id="0933c-110">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ad877-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ad877-111">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="0933c-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0933c-111">Requirements</span></span>
 
-<span data-ttu-id="ad877-112">**Namespace:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="ad877-112">**Namespace:** <xref:System.Data.SqlTypes></span></span>
+<span data-ttu-id="0933c-112">**Przestrzeń nazw:** <xref:System.Data.SqlTypes></span><span class="sxs-lookup"><span data-stu-id="0933c-112">**Namespace:** <xref:System.Data.SqlTypes></span></span>
 
-<span data-ttu-id="ad877-113">**Zestaw:** Dane systemowe (w System.Data.dll)</span><span class="sxs-lookup"><span data-stu-id="ad877-113">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="0933c-113">**Zestaw:** System. Data (w pliku System. Data. dll)</span><span class="sxs-lookup"><span data-stu-id="0933c-113">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="ad877-114">**Wersje programu .NET framework:** Dostępne od wersji 2.0.</span><span class="sxs-lookup"><span data-stu-id="ad877-114">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="0933c-114">**.NET Framework wersje:** Dostępne od 2,0.</span><span class="sxs-lookup"><span data-stu-id="0933c-114">**.NET Framework versions:** Available since 2.0.</span></span>

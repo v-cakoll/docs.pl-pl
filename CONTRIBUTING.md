@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 23501575fb34f0291b3a6b795c197f45a86fd512
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955971"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315871"
 ---
 # <a name="contributing"></a>Udział
 
@@ -42,7 +42,7 @@ Możesz również wybrać spośród istniejących problemów, dla których wkła
 
 - **Konserwacja**. Ta kategoria obejmuje dość proste wkłady, takie jak Naprawianie uszkodzonych lub nieprawidłowych linków, Dodawanie brakujących przykładów kodu lub Rozwiązywanie problemów z zawartością. W niektórych przypadkach te problemy mogą dotyczyć dużej liczby plików. W takim przypadku należy poinformować nas, co chcesz zrobić, zanim zaczniesz.
 
-- **Aktualizacje zawartości**. Po enormity zestawu dokumentów zawartość jest łatwo przestarzała i wymaga poprawki. Ponadto z różnych przyczyn część zawartości została zduplikowana lub nawet triplicated. Aktualizacja zawartości polega na tym, że poszczególne tematy są aktualne lub poprawiają zawartość w obszarze funkcji w celu wyeliminowania duplikatów i zapewnienia, że cała unikatowa zawartość jest zachowywana w mniejszych zestawach dokumentacji.
+- **Aktualizacje zawartości**. Po enormity zestawu dokumentów zawartość jest łatwo przestarzała i wymaga poprawki. Ponadto, z wielu powodów, pewna zawartość została zduplikowana lub nawet triplicated. Aktualizacja zawartości polega na tym, że poszczególne tematy są aktualne lub poprawiają zawartość w obszarze funkcji w celu wyeliminowania duplikatów i zapewnienia, że cała unikatowa zawartość jest zachowywana w mniejszych zestawach dokumentacji.
 
 - **Tworzenie nowej zawartości**. Jeśli interesuje Cię Tworzenie własnego tematu, te problemy mogą zostać dodane do naszego zestawu dokumentów. Daj nam znać przed rozpoczęciem pracy z tematem. Jeśli interesuje Cię pisanie tematu, którego nie ma na liście, Otwórz problem.
 

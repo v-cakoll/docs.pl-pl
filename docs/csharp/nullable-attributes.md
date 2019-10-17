@@ -2,12 +2,12 @@
 title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
 description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
 ms.date: 07/31/2019
-ms.openlocfilehash: fedd701fb7a3bcdff96fc1abc5451cc59c01f34f
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291318"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319069"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania
 
@@ -86,9 +86,9 @@ Reguły interfejsów API mogą być bardziej skomplikowane, jak pokazano w scena
 - [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Argument wejściowy dopuszczający wartość null nigdy nie powinien mieć wartości null.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): niedopuszczający wartości null argument `out` lub `ref` może mieć wartość null, gdy wartość zwracana spełnia warunek.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): argument `out` lub `ref` nie może mieć wartości null, gdy wartość zwracana spełnia warunek.
-- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy dopuszczający wartość null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
+- [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument dla określonego parametru nie ma wartości null.
 
 Powyższe opisy stanowią krótkie informacje o tym, co robi każdy atrybut. W poniższych sekcjach opisano zachowanie i ich znaczenie.
 
@@ -216,7 +216,7 @@ Należy określić warunki końcowe bezwarunkowe, korzystając z następujących
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
 
-## <a name="specify-conditional-post-conditions-notnullwhen-and-maybenullwhen"></a>Określ warunkowe warunki końcowe: `NotNullWhen` i `MaybeNullWhen`
+## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>Określ warunkowe warunki końcowe: `NotNullWhen`, `MaybeNullWhen` i `NotNullIfNotNull`
 
 Najkorzystniej znasz metodę `string` <xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>. Ta metoda zwraca `true`, gdy argument ma wartość null lub jest pustym ciągiem. Jest to forma sprawdzania wartości null: obiekty wywołujące nie muszą mieć wartości null — Sprawdź argument, jeśli metoda zwraca `false`. Aby zapewnić metodę taką jak ta, która dopuszcza wartość null, należy ustawić argument na typ dopuszczający wartość null i dodać atrybut `NotNullWhen`:
 
@@ -276,8 +276,8 @@ Wartość zwracana i argument mają adnotację z `?` wskazującą, że może by�
 
 Należy określić warunkowe warunki końcowe przy użyciu następujących atrybutów:
 
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): niedopuszczający wartości null argument `out` lub `ref` może mieć wartość null, gdy wartość zwracana spełnia warunek.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): argument `out` lub `ref` nie może mieć wartości null, gdy wartość zwracana spełnia warunek.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy dopuszczający wartość null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.
 
 ## <a name="generic-definitions-and-nullability"></a>Definicje generyczne i wartości null
@@ -290,7 +290,7 @@ Oznacza to, że nie można użyć `T?` w ogólnej klasie lub deklaracji metody b
 
 Możesz chcieć ograniczyć typy używane dla argumentu typu ogólnego jako niedopuszczające wartości null. Można to zrobić przez dodanie ograniczenia `notnull` dla tego argumentu typu. Po zastosowaniu tego ograniczenia argument typu nie może być typem dopuszczającym wartość null.
 
-## <a name="conclusions"></a>Zawarte
+## <a name="conclusions"></a>Wnioski
 
 Dodanie typów referencyjnych dopuszczających wartość null zapewnia wstępne słownictwo do opisywania oczekiwań interfejsów API dla zmiennych, które mogą być `null`. Dodatkowe atrybuty zapewniają bogatszy słownictwo do opisania stanu wartości null zmiennych jako warunków wstępnych i warunki końcowe. Te atrybuty bardziej wyraźnie opisują oczekiwania i zapewniają lepszy komfort używania interfejsów API przez deweloperów.
 
@@ -300,6 +300,6 @@ Podczas aktualizowania bibliotek dla kontekstu dopuszczającego wartość null n
 - [DisallowNull](xref:System.Diagnostics.CodeAnalysis.DisallowNullAttribute): Argument wejściowy dopuszczający wartość null nigdy nie powinien mieć wartości null.
 - [MaybeNull](xref:System.Diagnostics.CodeAnalysis.MaybeNullAttribute): wartość zwracana niedopuszczający wartości null może być równa null.
 - [NotNull](xref:System.Diagnostics.CodeAnalysis.NotNullAttribute): wartość zwracana do wartości null nigdy nie będzie równa null.
-- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): niedopuszczający wartości null argument `out` lub `ref` może mieć wartość null, gdy wartość zwracana spełnia warunek.
-- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): argument `out` lub `ref` nie może mieć wartości null, gdy wartość zwracana spełnia warunek.
+- [MaybeNullWhen](xref:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute): Argument wejściowy, który nie dopuszcza wartości null, może mieć wartość null, gdy metoda zwraca określoną wartość `bool`.
+- [NotNullWhen](xref:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute): Argument wejściowy dopuszczający wartość null nie będzie miał wartości null, gdy metoda zwróci określoną wartość `bool`.
 - [NotNullIfNotNull](xref:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute): wartość zwracana nie ma wartości null, jeśli argument wejściowy dla określonego parametru nie ma wartości null.

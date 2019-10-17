@@ -2,29 +2,29 @@
 title: 'Usługa: Wywołania zakończone niepowodzeniami na sekundę'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: d87d5f06d0c9a3849ec80a3d1c7badefde7cf372
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5431144a4618b146a10dfaa3bbdaae34c519319e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915684"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72315785"
 ---
 # <a name="service-calls-failed-per-second"></a>Usługa: Wywołania zakończone niepowodzeniami na sekundę
-Nazwa komputera: Wywołania zakończone niepowodzeniami na sekundę.  
+Nazwa licznika: wywołania zakończone niepowodzeniem na sekundę.  
   
 ## <a name="description"></a>Opis  
- Liczba wywołań, ma nieobsługiwane wyjątki, które są odbierane przez tę usługę na sekundę.  
+ Liczba wywołań, które mają Nieobsłużone wyjątki i są odbierane przez tę usługę w drugim.  
   
- Ten licznik jest typ licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.  
+ Ten licznik jest typem licznika wydajności [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), którego wartość jest obliczana przy użyciu następującej formuły.  
   
- (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
+ (N 1-N 0)/((D 1-D 0)/F)  
   
- W zarządzanym kodzie są zgłaszane wyjątki, gdy wystąpią błędy.  
+ W kodzie zarządzanym wyjątki są generowane, gdy wystąpią błędy.  
   
- W zarządzanym kodzie są zgłaszane wyjątki, gdy wystąpią błędy.  
+ W kodzie zarządzanym wyjątki są generowane, gdy wystąpią błędy.  
   
- Ten licznik jest zwiększany za każdym razem, gdy zostanie nieobsługiwany wyjątek w tej usłudze.  
+ Licznik jest zwiększany za każdym razem, gdy w tej usłudze występuje nieobsługiwany wyjątek.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Określanie i obsługa błędów w kontraktach i usługach](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [Określanie i obsługa błędów w kontraktach i usługach](../../specifying-and-handling-faults-in-contracts-and-services.md)

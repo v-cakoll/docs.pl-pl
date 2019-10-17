@@ -1,0 +1,145 @@
+- name: Przewodnik po środowisku .NET Standard
+  href: index.md
+- name: Wprowadzenie do platformy .NET
+  href: get-started.md
+- name: Przewodnik po środowisku .NET
+  href: tour.md
+- name: Składniki architektury .NET
+  href: components.md
+- name: .NET Standard
+  href: net-standard.md
+  items:
+    - name: Co nowego w programie .NET Standard
+      href: whats-new/whats-new-in-dotnet-standard.md
+- name: Platformy docelowe
+  href: frameworks.md
+- name: Słownik platformy .NET
+  href: glossary.md
+- name: Wskazówki dotyczące biblioteki typu open source
+  href: library-guidance/
+- name: Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych
+  href: choosing-core-framework-server.md
+- name: Co to jest „kod zarządzany”?
+  href: managed-code.md
+  items:
+    - name: Automatyczne zarządzanie pamięcią
+      href: automatic-memory-management.md
+- name: Środowisko uruchomieniowe języka wspólnego (CLR)
+  href: clr.md
+- name: Niezależność od języka
+  href: language-independence.md
+  items:
+    - name: Niezależność od języka i elementy niezależne od języka
+      href: language-independence-and-language-independent-components.md
+- name: Biblioteki platformy
+  href: framework-libraries.md
+  items:
+    - name: Przegląd biblioteki klas
+      href: class-library-overview.md
+    - name: Typy podstawowe
+      href: base-types/
+- name: Biblioteki klas .NET
+  href: class-libraries.md
+- name: Analizatory
+  href: analyzers/index.md
+  items:
+    - name: Analizator interfejsu API
+      href: analyzers/api-analyzer.md
+    - name: Analizator przenośności
+      href: analyzers/portability-analyzer.md
+    - name: Analizator struktury
+      href: analyzers/framework-analyzer.md
+- name: Obsługa i zgłaszanie wyjątków
+  href: exceptions/
+- name: Zestawy w środowisku .NET
+  href: assembly/
+- name: Odzyskiwanie pamięci
+  href: garbage-collection/
+- name: Typy ogólne
+  href: generics.md
+- name: Delegaci i wyrażenia lambda
+  href: delegates-lambdas.md
+- name: LINQ
+  href: using-linq.md
+- name: System typu wspólnego i specyfikacja języka wspólnego
+  href: common-type-system.md
+- name: 'Przetwarzanie równoległe, współbieżność i asynchroniczność'
+  href: parallel-processing-and-concurrency.md
+  items:
+    - name: Programowanie asynchroniczne
+      href: async.md
+      items:
+        - name: Programowanie asynchroniczne — omówienie szczegółowe
+          href: async-in-depth.md
+        - name: Wzorce programowania asynchronicznego
+          href: asynchronous-programming-patterns/
+    - name: Programowanie równoległe
+      href: parallel-programming/
+    - name: Wątkowość
+      href: threading/
+- name: Pamięć i typy związane z zakresem
+  href: memory-and-spans/index.md
+  items:
+    - name: Wytyczne dotyczące użycia struktur Memory<T> i Span<T>
+      href: memory-and-spans/memory-t-usage-guidelines.md
+- name: Współdziałanie natywne
+  href: native-interop/index.md
+  items:
+    - name: P/Invoke
+      href: native-interop/pinvoke.md
+    - name: Marshaling typów
+      href: native-interop/type-marshaling.md
+    - name: Dostosowywanie marshalingu struktur
+      href: native-interop/customize-struct-marshaling.md
+    - name: Dostosowywanie marshalingu parametrów
+      href: native-interop/customize-parameter-marshaling.md
+    - name: Wskazówki dotyczące międzyoperacyjności
+      href: native-interop/best-practices.md
+    - name: Zestawy znaków i marshaling
+      href: native-interop/charset.md
+    - name: COM Interop
+      href: native-interop/cominterop.md
+      items:
+        - name: Otoki COM
+          href: native-interop/com-wrappers.md
+          items:
+            - name: Wywoływana otoka środowiska uruchomieniowego
+              href: native-interop/runtime-callable-wrapper.md
+            - name: Wywoływana otoka COM
+              href: native-interop/com-callable-wrapper.md
+        - name: Kwalifikowanie typów .NET do usługi międzyoperacyjnej modelu COM
+          href: native-interop/qualify-net-types-for-interoperation.md
+    - name: Stosowanie atrybutów międzyoperacyjności
+      href: native-interop/apply-interop-attributes.md
+- name: Kolekcje i struktury danych
+  href: collections/
+- name: Wartości numeryczne na platformie .NET
+  href: numerics.md
+- name: 'Daty, godziny i strefy czasowe'
+  href: datetime/
+- name: Zdarzenia
+  href: events/
+- name: Proces zarządzanego wykonania
+  href: managed-execution-process.md
+- name: Składniki samoopisujące się i metadane
+  href: metadata-and-self-describing-components.md
+- name: Tworzenie aplikacji konsolowych
+  href: building-console-apps.md
+- name: Podstawy aplikacji
+  href: application-essentials.md
+- name: We/Wy plików i strumieni
+  href: io/index.md
+- name: Lokalizacja i globalizacja
+  href: globalization-localization/
+- name: Atrybuty
+  href: attributes/
+- name: Framework — zalecenia dotyczące projektowania
+  href: design-guidelines/
+- name: Dokumenty i dane XML
+  href: data/xml/
+- name: Zabezpieczenia
+  href: security/
+- name: Serializacja
+  href: serialization/
+- name: Tworzenie aplikacji dla wielu platform
+  href: cross-platform/

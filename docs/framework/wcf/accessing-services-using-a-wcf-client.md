@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
-ms.openlocfilehash: ae589e1c418b1cf13fe9f5b34648bdf7a2210eed
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 462d9a3923009f0124c2b90b6fa86dfa9869a3c5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855673"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72316532"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 
@@ -26,10 +26,10 @@ Następnym krokiem po utworzeniu usługi jest utworzenie serwera proxy klienta p
 
 3. Tworzenie wystąpienia serwera proxy klienta WCF.
 
-Serwer proxy klienta WCF można wygenerować ręcznie przy użyciu narzędzia metadanych modelu usług (SvcUtil. exe), aby uzyskać więcej informacji, zobacz [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Serwer proxy klienta WCF można również wygenerować w programie Visual Studio przy użyciu funkcji **Dodaj odwołanie do usługi** . Aby wygenerować serwer proxy klienta WCF przy użyciu dowolnej metody, musi być uruchomiona usługa. Jeśli usługa jest samoobsługowa, należy uruchomić hosta. Jeśli usługa jest hostowana w programie IIS/nie trzeba wykonywać żadnych innych czynności.
+Serwer proxy klienta WCF można wygenerować ręcznie przy użyciu narzędzia metadanych modelu usług (SvcUtil. exe), aby uzyskać więcej informacji, zobacz [Narzędzie narzędzia metadanych ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md). Serwer proxy klienta WCF można również wygenerować w programie Visual Studio przy użyciu funkcji **Dodaj odwołanie do usługi** . Aby wygenerować serwer proxy klienta WCF przy użyciu dowolnej metody, musi być uruchomiona usługa. Jeśli usługa jest samoobsługowa, należy uruchomić hosta. Jeśli usługa jest hostowana w programie IIS/nie trzeba wykonywać żadnych innych czynności.
 
 ## <a name="servicemodel-metadata-utility-tool"></a>Narzędzie do przesyłania metadanych ServiceModel
- [Narzędzie do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) jest narzędziem wiersza polecenia do generowania kodu z metadanych. Poniżej przedstawiono przykład podstawowego polecenia Svcutil. exe.
+ [Narzędzie do przesyłania metadanych modelu ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) jest narzędziem wiersza polecenia do generowania kodu z metadanych. Poniżej przedstawiono przykład podstawowego polecenia Svcutil. exe.
 
 ```console
 Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
@@ -49,14 +49,14 @@ Svcutil.exe <list of WSDL and XSD files on file system>
 Svcutil.exe <file1 [,file2]>
 ```
 
- Jeśli podano tylko jedną nazwę pliku, która jest nazwą pliku wyjściowego. Jeśli podano dwie nazwy plików, pierwszy plik jest plikiem konfiguracji wejściowej, którego zawartość jest scalana z wygenerowaną konfiguracją i zapisywana w drugim pliku. Aby uzyskać więcej informacji na temat konfiguracji, zobacz [Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md).
+ Jeśli podano tylko jedną nazwę pliku, która jest nazwą pliku wyjściowego. Jeśli podano dwie nazwy plików, pierwszy plik jest plikiem konfiguracji wejściowej, którego zawartość jest scalana z wygenerowaną konfiguracją i zapisywana w drugim pliku. Aby uzyskać więcej informacji na temat konfiguracji, zobacz [Konfigurowanie powiązań dla usług](configuring-bindings-for-wcf-services.md).
 
 > [!IMPORTANT]
-> Niezabezpieczone żądania metadanych stanowią pewne zagrożenia w taki sam sposób, w jaki wszystkie niezabezpieczone żądania sieciowe: Jeśli nie masz pewności, że punkt końcowy, z którym nawiązujesz połączenie, jest on widoczny, a pobierane informacje mogą być metadanymi ze złośliwej usługi.
+> Niezabezpieczone żądania metadanych stanowią pewne zagrożenia w taki sam sposób, w jaki wszystkie niezabezpieczone żądania sieciowe: Jeśli nie masz pewności, że punkt końcowy, z którym nawiązujesz połączenie, jest to, że informacje pobierane mogą być metadanymi ze złośliwej usługi.
 
 ## <a name="add-service-reference-in-visual-studio"></a>Dodaj odwołanie do usługi w programie Visual Studio
 
- Po uruchomieniu usługi kliknij prawym przyciskiem myszy projekt, który będzie zawierać serwer proxy klienta WCF i wybierz polecenie **Dodaj** > **odwołanie do usługi**. W **oknie dialogowym Dodaj odwołanie do usługi**wpisz adres URL usługi, którą chcesz wywołać, a następnie kliknij przycisk **Przejdź** . W oknie dialogowym zostanie wyświetlona lista usług dostępnych pod określonym adresem. Kliknij dwukrotnie usługę, aby wyświetlić dostępne kontrakty i operacje, określ przestrzeń nazw dla wygenerowanego kodu, a następnie kliknij przycisk **OK** .
+ Po uruchomieniu usługi kliknij prawym przyciskiem myszy projekt, który będzie zawierać serwer proxy klienta WCF i wybierz polecenie **dodaj** > **odwołanie do usługi**. W **oknie dialogowym Dodaj odwołanie do usługi**wpisz adres URL usługi, którą chcesz wywołać, a następnie kliknij przycisk **Przejdź** . W oknie dialogowym zostanie wyświetlona lista usług dostępnych pod określonym adresem. Kliknij dwukrotnie usługę, aby wyświetlić dostępne kontrakty i operacje, określ przestrzeń nazw dla wygenerowanego kodu, a następnie kliknij przycisk **OK** .
 
 ## <a name="example"></a>Przykład
  Poniższy przykład kodu przedstawia kontrakt usługi utworzony dla usługi.
@@ -82,7 +82,7 @@ Public Interface ICalculator
 End Interface
 ```
 
- Narzędzie do przesyłania metadanych ServiceModel i **Dodaj odwołanie do usługi** w programie Visual Studio generuje następujące klasy klienta WCF. Klasa dziedziczy z klasy generycznej <xref:System.ServiceModel.ClientBase%601> i `ICalculator` implementuje interfejs. Narzędzie generuje `ICalculator` również interfejs (nie pokazano tutaj).
+ Narzędzie do przesyłania metadanych ServiceModel i **Dodaj odwołanie do usługi** w programie Visual Studio generuje następujące klasy klienta WCF. Klasa dziedziczy z klasy generycznej <xref:System.ServiceModel.ClientBase%601> i implementuje interfejs `ICalculator`. Narzędzie generuje również interfejs `ICalculator` (nie pokazano tutaj).
 
 ```csharp
 public partial class CalculatorClient : System.ServiceModel.ClientBase<ICalculator>, ICalculator
@@ -178,22 +178,22 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 Wiele wyjątków zgłoszonych przez klienta WCF jest spowodowanych przez wyjątek w usłudze. Oto kilka przykładów:
 
-- <xref:System.Net.Sockets.SocketException>: Istniejące połączenie zostało wymuszone przez hosta zdalnego.
+- <xref:System.Net.Sockets.SocketException>: wykryto, że istniejące połączenie zostało wymuszone przez hosta zdalnego.
 
-- <xref:System.ServiceModel.CommunicationException>: Połączenie bazowe zostało nieoczekiwanie zamknięte.
+- <xref:System.ServiceModel.CommunicationException>: połączenie bazowe zostało nieoczekiwanie zamknięte.
 
-- <xref:System.ServiceModel.CommunicationObjectAbortedException>: Połączenie gniazda zostało przerwane. Może to być spowodowane błędem przetwarzania komunikatu, przekroczeniem limitu czasu odbierania przez hosta zdalnego lub problemem związanym z zasobami sieciowymi.
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>: połączenie gniazda zostało przerwane. Może to być spowodowane błędem przetwarzania komunikatu, przekroczeniem limitu czasu odbierania przez hosta zdalnego lub problemem związanym z zasobami sieciowymi.
 
-W przypadku wystąpienia tego typu wyjątków najlepszym sposobem rozwiązania problemu jest włączenie śledzenia po stronie usługi i określenie, który wyjątek wystąpił. Aby uzyskać więcej informacji na temat śledzenia, zobacz [śledzenie](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [Używanie śledzenia w celu rozwiązywania problemów z aplikacją](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
+W przypadku wystąpienia tego typu wyjątków najlepszym sposobem rozwiązania problemu jest włączenie śledzenia po stronie usługi i określenie, który wyjątek wystąpił. Aby uzyskać więcej informacji na temat śledzenia, zobacz [śledzenie](./diagnostics/tracing/index.md) i [Używanie śledzenia w celu rozwiązywania problemów z aplikacją](./diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [Instrukcje: Dostęp do usług za pomocą kontraktu dupleksowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Instrukcje: Asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Instrukcje: Dostęp do usług za pomocą kontraktów jednokierunkowych i odpowiedzi na żądanie](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Instrukcje: Dostęp do usługi WSE 3,0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Opis wygenerowanego kodu klienta](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)
-- [Instrukcje: Zwiększenie czasu uruchamiania aplikacji klienckich WCF przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
-- [Określanie zachowania klienta w czasie wykonywania](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md)
+- [Instrukcje: tworzenie klienta](how-to-create-a-wcf-client.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](./feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Instrukcje: asynchroniczne wywoływanie operacji usługi](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”](./feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [Instrukcje: dostęp do usługi WSE 3.0](./feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Opis wygenerowanego kodu klienta](./feature-details/understanding-generated-client-code.md)
+- [Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer](./feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Określanie zachowania klienta w czasie wykonywania](specifying-client-run-time-behavior.md)
+- [Konfigurowanie zachowań klienta](configuring-client-behaviors.md)

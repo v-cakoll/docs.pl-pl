@@ -1,9 +1,0 @@
-- name: Main() i argumenty wiersza polecenia
-  href: index.md
-  items:
-    - name: Argumenty wiersza polecenia
-      href: command-line-arguments.md
-    - name: 'Instrukcje: wyświetlanie argumentów wiersza polecenia'
-      href: how-to-display-command-line-arguments.md
-    - name: Main() — zwracane wartości
-      href: main-return-values.md

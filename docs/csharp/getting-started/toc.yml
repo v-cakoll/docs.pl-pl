@@ -1,6 +1,0 @@
-- name: Wprowadzenie
-  items:
-    - name: Jak korzystać z tego przewodnika
-      href: index.md
-    - name: 'Wprowadzenie do języka C# i systemu .NET Framework'
-      href: introduction-to-the-csharp-language-and-the-net-framework.md

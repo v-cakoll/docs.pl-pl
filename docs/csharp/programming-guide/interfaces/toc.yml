@@ -1,9 +1,0 @@
-- name: Interfejsy
-  href: index.md
-  items:
-    - name: Implementacja interfejsu jawnego
-      href: explicit-interface-implementation.md
-    - name: 'Instrukcje: Jawne implementowanie elementów interfejsu'
-      href: how-to-explicitly-implement-interface-members.md
-    - name: 'Instrukcje: Jawne implementowanie elementów dwóch interfejsów'
-      href: how-to-explicitly-implement-members-of-two-interfaces.md

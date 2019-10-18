@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587852"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523375"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 
@@ -43,9 +43,9 @@ Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, któr
 
   - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu. Na przykład system. Int32 lub system. TypedReference.
 
-  - ELEMENT_TYPE_PTR jest reprezentowane jako "\*" po zmodyfikowanym typie.
+  - ELEMENT_TYPE_PTR jest reprezentowany jako "\*" po zmodyfikowanym typie.
 
-  - ELEMENT_TYPE_BYREF jest reprezentowane jako "\@" po zmodyfikowanym typie.
+  - ELEMENT_TYPE_BYREF jest reprezentowany jako "\@" po zmodyfikowanym typie.
 
   - ELEMENT_TYPE_PINNED jest reprezentowany jako "^" po zmodyfikowanym typie. C# Kompilator nigdy nie generuje tego.
 
@@ -57,9 +57,9 @@ Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, któr
 
   - ELEMENT_TYPE_GENERICARRAY jest reprezentowane jako "[?]" po typie elementu tablicy. C# Kompilator nigdy nie generuje tego.
 
-  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*:`size`,*lowerbound*:`size`], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
+  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*: `size`,*lowerbound*: `size`], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
 
-  - ELEMENT_TYPE_FNPTR jest reprezentowane jako "= Func:`type`(*Signature*)", gdzie `type` jest typem zwracanym, a *Signature* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_FNPTR jest reprezentowane jako "= FUNC: `type` (*Signature*)", gdzie `type` jest typem zwracanym, a *Signature* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. C# Kompilator nigdy nie generuje tego.
 
     Następujące składniki podpisu nie są reprezentowane, ponieważ nie są nigdy używane do odróżniania przeciążonych metod:
 
@@ -73,9 +73,9 @@ Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, któr
 
 - W przypadku typów ogólnych, nazwa typu następuje przez nieskończoność, a następnie liczbę, która wskazuje liczbę parametrów typu ogólnego. Na przykład:
 
-     ``<member name="T:SampleClass`2">``jest tagiem dla typu, który jest zdefiniowany jako `public class SampleClass<T, U>`.
+     ``<member name="T:SampleClass`2">`` jest tagiem dla typu, który jest zdefiniowany jako `public class SampleClass<T, U>`.
 
-     Dla metod przyjmujących typy ogólne jako parametry parametry typu generycznego są określane jako liczby poprzedzone znakami kreski (na przykład \`0,\`1). Każda liczba reprezentująca notację tablicową opartą na zero dla ogólnych parametrów typu.
+     W przypadku metod, które pobierają typy ogólne jako parametry, parametry typu generycznego są określone jako liczby poprzedzone znakami kreskowych (na przykład \`0, \`1). Każda liczba reprezentująca notację tablicową opartą na zero dla ogólnych parametrów typu.
 
 ## <a name="examples"></a>Przykłady
 
@@ -86,5 +86,5 @@ W poniższych przykładach pokazano, jak generowane są ciągi identyfikatorów 
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
-- [/doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [-doc (C# opcje kompilatora)](../../language-reference/compiler-options/doc-compiler-option.md)
 - [Komentarze dokumentacji XML](./index.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c62eab6b1fb1ba1cc7de83c12d7205cf0bbe46fa
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664200"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524721"
 ---
-# <a name="param-visual-basic"></a>\<param > (Visual Basic)
-Określa nazwę parametru i opis.  
+# <a name="param-visual-basic"></a>> \<param (Visual Basic)
+Definiuje nazwę i opis parametru.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,24 +23,24 @@ Określa nazwę parametru i opis.
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru metody. Nazwę należy ująć w znaki podwójnego cudzysłowu ("").  
+ Nazwa parametru metody. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
  `description`  
  Opis parametru.  
   
 ## <a name="remarks"></a>Uwagi  
- `<param>` Używany tag w komentarzu do deklaracji metody do opisania jeden z parametrów dla metody.  
+ Tag `<param>` powinien być używany w komentarzu dla deklaracji metody, aby opisać jeden z parametrów dla metody.  
   
- Tekst dla `<param>` tag pojawi się w następujących lokalizacjach:  
+ Tekst dla tagu `<param>` pojawi się w następujących lokalizacjach:  
   
-- Informacje o parametrach IntelliSense. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).  
+- Informacje o parametrach funkcji IntelliSense. Aby uzyskać więcej informacji, zobacz [Korzystanie z funkcji IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Przeglądarka obiektów. Aby uzyskać więcej informacji, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
+- Przeglądarka obiektów. Aby uzyskać więcej informacji, zobacz [Wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<param>` tag do opisania `id` parametru.  
+ W tym przykładzie za pomocą tagu `<param>` można opisać parametr `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

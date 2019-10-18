@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 7333d4a4d051c157f6732224da0fffe4d7cd35ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940832"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524703"
 ---
-# <a name="permission-visual-basic"></a>\<uprawnienie > (Visual Basic)
-Określa wymagane uprawnienia dla elementu członkowskiego.  
+# <a name="permission-visual-basic"></a>> \<permission (Visual Basic)
+Określa wymagane uprawnienie dla elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Określa wymagane uprawnienia dla elementu członkowskiego.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- Odwołanie do elementu członkowskiego lub pola, które są dostępne do wywoływania z bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i wykonuje translację `member` nazwę kanoniczną element w danych wyjściowych XML. Ujmij `member` w znaki cudzysłowu ("").  
+ Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. Ujmij `member` w cudzysłów ("").  
   
  `description`  
  Opis dostępu do elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<permission>` tag do dokumentu jest dostęp do elementu członkowskiego. Użyj <xref:System.Security.PermissionSet> klasy w celu określenia dostępu do elementu członkowskiego.  
+ Użyj znacznika `<permission>`, aby udokumentować dostęp do elementu członkowskiego. Użyj klasy <xref:System.Security.PermissionSet>, aby określić dostęp do elementu członkowskiego.  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<permission>` tag do opisywania, które <xref:System.Security.Permissions.FileIOPermission> jest wymagana przez `ReadFile` metody.  
+ W tym przykładzie używa znacznika `<permission>`, aby opisać, że <xref:System.Security.Permissions.FileIOPermission> jest wymagany przez metodę `ReadFile`.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

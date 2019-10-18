@@ -1,5 +1,5 @@
 ---
-title: <exception> - C# Przewodnik programowania
+title: <exception> — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 639e3a345fc8ed3d348461718f73ead6167158db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675926"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523474"
 ---
-# <a name="exception-c-programming-guide"></a>\<wyjątek > (C# Programming Guide)
+# <a name="exception-c-programming-guide"></a>\<exception > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -24,20 +24,20 @@ ms.locfileid: "61675926"
 ```  
   
 ## <a name="parameters"></a>Parametry  
- cref = " `member`"  
- Odwołanie do wyjątek, który jest dostępny w bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany wyjątek istnieje i czy tłumaczy `member` nazwę kanoniczną element w danych wyjściowych XML. `member` musi znajdować się w znaki podwójnego cudzysłowu ("").  
+ cref = "`member`"  
+ Odwołanie do wyjątku, które jest dostępne w bieżącym środowisku kompilacji. Kompilator sprawdza, czy dany wyjątek istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. `member` musi znajdować się w podwójnym cudzysłowie ("").  
   
- Aby uzyskać więcej informacji na temat formatowania `member` Aby odwołać się do ogólnego typu, zobacz [przetwarzanie pliku XML](processing-the-xml-file.md).
+ Aby uzyskać więcej informacji na temat sposobu formatowania `member` w celu odwoływania się do typu ogólnego, zobacz [przetwarzanie pliku XML](processing-the-xml-file.md).
   
  `description`  
  Opis wyjątku.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Wyjątku > należy określić, które wyjątki mogą zostać wygenerowane. Ten tag można zastosować do definicji dla metody, właściwości, zdarzeń i indeksatorów.  
+ Tag \<exception > pozwala określić, które wyjątki mogą być zgłaszane. Ten tag można zastosować do definicji metod, właściwości, zdarzeń i indeksatorów.  
   
- Kompiluj przy użyciu [/doc](../../language-reference/compiler-options/doc-compiler-option.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
- Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [wyjątków i wyjątków](../exceptions/index.md).  
+ Aby uzyskać więcej informacji na temat obsługi wyjątków, zobacz [wyjątki i obsługa wyjątków](../exceptions/index.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  

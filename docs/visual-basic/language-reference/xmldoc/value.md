@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 516ff6ba534478d066b8ca06baee46bdd4b35265
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940741"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524604"
 ---
-# <a name="value-visual-basic"></a>\<wartość > (Visual Basic)
+# <a name="value-visual-basic"></a>> \<value (Visual Basic)
 Określa opis właściwości.  
   
 ## <a name="syntax"></a>Składnia  
@@ -26,12 +26,12 @@ Określa opis właściwości.
  Opis właściwości.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<value>` tag do opisywania właściwości. Należy pamiętać, że podczas dodawania właściwości, za pomocą Kreatora kodów w środowisku programowania Visual Studio, spowoduje to dodanie [ \<podsumowania >](../../../visual-basic/language-reference/xmldoc/summary.md) tag w przypadku nowej właściwości. Następnie należy ręcznie dodać `<value>` tag do opisania wartość, która reprezentuje właściwość.  
+ Użyj znacznika `<value>`, aby opisać właściwość. Należy pamiętać, że po dodaniu właściwości przy użyciu kreatora kodu w środowisku deweloperskim programu Visual Studio zostanie dodany tag [> \<summary](../../../visual-basic/language-reference/xmldoc/summary.md) dla nowej właściwości. Następnie należy ręcznie dodać tag `<value>`, aby opisać wartość, którą reprezentuje właściwość.  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<value>` tag do opisania wartość, jaką `Counter` przechowuje właściwości.  
+ W tym przykładzie używa znacznika `<value>` do opisania wartości właściwości `Counter`.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

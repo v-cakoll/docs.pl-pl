@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 4d67da34cf692133df95480a7f0215943337a34e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3d0a90a57c2b1c2759b8420e74c284668d54e9cb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003003"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526765"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Zduplikowane interfejsy API zostały usunięte z Windows Forms
 
-Niektóre interfejsy API przypadkowo zduplikowane w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=fullName>, zaczynające się na platformie .NET Core 3,0 Preview 4, zostały usunięte w programie .NET Core 3,0 RC1. 
+Niektóre interfejsy API przypadkowo zduplikowane w przestrzeni nazw <xref:System.Windows.Forms?displayProperty=fullName>, zaczynające się na platformie .NET Core 3,0 Preview 4, zostały usunięte w programie .NET Core 3,0 RC1.
 
 #### <a name="change-description"></a>Zmień opis
 
@@ -38,7 +38,7 @@ Windows Forms
 
 - Nie wykrywalne za pośrednictwem analizy interfejsu API.
 
-<!-- 
+<!--
 
 ### Affected APIs
 

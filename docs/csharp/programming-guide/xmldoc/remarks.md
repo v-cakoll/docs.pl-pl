@@ -9,14 +9,14 @@ helpviewer_keywords:
 - remarks C# XML tag
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
-ms.openlocfilehash: 822ca8feafe48402f8217c10ef37fcdb1576c27a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 508201fed57fce93b64691de55dce45780adc13c
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587751"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523357"
 ---
-# <a name="remarks-c-programming-guide"></a>\<uwagi > (C# Przewodnik programowania)
+# <a name="remarks-c-programming-guide"></a>\<remarks > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,9 +28,9 @@ ms.locfileid: "69587751"
  Opis elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag uwagi > służy do dodawania informacji o typie, uzupełnienie informacji określonych za pomocą [ \<> podsumowania.](./summary.md) \< Te informacje są wyświetlane w oknie Przeglądarka obiektów.  
+ Tag > \<remarks jest używany do dodawania informacji o typie, uzupełnienie informacji określonych za pomocą [\<summary >](./summary.md). Te informacje są wyświetlane w oknie Przeglądarka obiektów.  
   
- Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]  

@@ -7,12 +7,12 @@ ms.date: 09/23/2019
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 026224ca2941e7694fc1b80939e6d283d75db32e
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
-ms.translationtype: MT
+ms.openlocfilehash: bb07df382974bdbb185ce7d52117729eaa638869
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214440"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523876"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -58,7 +58,7 @@ Jednak w przypadku mniejszych wersji .NET Standard wprowadzono kilka zależnośc
 Istnieją dwie podstawowe reguły obsługi wersji:
 
 - Dodatek: wersje .NET Standard są logicznie skoncentrowane koła: wyższe wersje obejmują wszystkie interfejsy API z poprzednich wersji. Nie ma żadnych istotnych zmian między wersjami.
-- Immutable Po wysłaniu wersje .NET Standard są zamrożone. Nowe interfejsy API najpierw stają się dostępne w określonych implementacjach platformy .NET, takich jak .NET Core. Jeśli na tablicy przeglądu .NET Standard warto udostępnić nowe interfejsy API dla wszystkich implementacji platformy .NET, są one dodawane w nowej wersji .NET Standard.
+- Niezmienne: po wysłaniu wersje .NET Standard są zamrożone. Nowe interfejsy API najpierw stają się dostępne w określonych implementacjach platformy .NET, takich jak .NET Core. Jeśli na tablicy przeglądu .NET Standard warto udostępnić nowe interfejsy API dla wszystkich implementacji platformy .NET, są one dodawane w nowej wersji .NET Standard.
 
 ## <a name="specification"></a>Specyfikacja
 
@@ -84,9 +84,9 @@ Są udostępniane artefakty pochodne umożliwiające wygodniejsze odczytywanie i
 
 Podstawowym nośnikiem dystrybucji dla zestawów odwołań .NET Standard są [pakiety NuGet](../core/packages.md). Implementacje są dostarczane na różne sposoby, odpowiednie dla każdej implementacji platformy .NET.
 
-Pakiety NuGet mają co najmniej jedną [platformę](frameworks.md). Pakiety .NET Standard są przeznaczone dla struktury ".NET Standard". Można kierować platformą .NET standard przy użyciu `netstandard` [TFM kompaktowy](frameworks.md) `netstandard1.4`(na przykład). Biblioteki przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych powinny wskazywać tę strukturę. Dla najszerszego zestawu interfejsów API, miejsce `netstandard2.0` docelowe, ponieważ liczba dostępnych interfejsów API jest większa niż dwa .NET standard 1,6 i 2,0.
+Pakiety NuGet mają co najmniej jedną [platformę](frameworks.md). Pakiety .NET Standard są przeznaczone dla struktury ".NET Standard". Możesz określić platformę .NET Standard przy użyciu `netstandard` [kompaktowy TFM](frameworks.md) (na przykład `netstandard1.4`). Biblioteki przeznaczone do uruchamiania w wielu środowiskach uruchomieniowych powinny wskazywać tę strukturę. Dla najszerszego zestawu interfejsów API docelowy `netstandard2.0` od liczby dostępnych interfejsów API więcej niż dwa razy między .NET Standard 1,6 i 2,0.
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) Pakiet webpackage odwołuje się do kompletnego zestawu pakietów NuGet, które definiują .NET Standard.  Najbardziej typowym sposobem docelowym `netstandard` jest odwołanie do tego pakietu. Opisuje i zapewnia dostęp do bibliotek platformy .NET ~ 40 i skojarzonych z nimi interfejsów API, które definiują .NET Standard. Możesz odwoływać się do dodatkowych pakietów `netstandard` , których celem jest uzyskanie dostępu do dodatkowych interfejsów API.
+Pakiet [`NETStandard.Library`binding](https://www.nuget.org/packages/NETStandard.Library/) odwołuje się do kompletnego zestawu pakietów NuGet, które definiują .NET Standard.  Najbardziej typowym sposobem na `netstandard` jest odwołujące się do tego pakietu. Opisuje i zapewnia dostęp do bibliotek platformy .NET ~ 40 i skojarzonych z nimi interfejsów API, które definiują .NET Standard. Aby uzyskać dostęp do dodatkowych interfejsów API, można odwoływać się do dodatkowych pakietów, których celem jest `netstandard`.
 
 ### <a name="versioning"></a>Przechowywanie wersji
 
@@ -104,7 +104,7 @@ Obsługa wersji .NET Standard jest ważna w przypadku użycia. Mając .NET Stand
 
 ## <a name="targeting-net-standard"></a>.NET Standard określania wartości docelowej
 
-Można [tworzyć biblioteki .NET Standard](../core/tutorials/libraries.md) przy użyciu kombinacji `netstandard` struktury i pakietu. Przykłady [ukierunkowane na .NET standard za pomocą narzędzi .NET Core Tools](../core/packages.md)można znaleźć w temacie.
+Można [tworzyć .NET Standard bibliotek](../core/tutorials/libraries.md) przy użyciu kombinacji środowiska `netstandard` i programu w wersji Standard. Library. Przykłady [ukierunkowane na .NET standard za pomocą narzędzi .NET Core Tools](../core/packages.md)można znaleźć w temacie.
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework tryb zgodności
 
@@ -143,24 +143,25 @@ Wynikających
 
 Zgodność PCL oparta na profilach jest zapewniana przez pakiet NuGet [Microsoft. Core. Portable. Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) . Ta zależność jest wymagana w przypadku odwoływania się do pakietów NuGet, które zawierają PCLs oparte na profilach.
 
-PCLs spakowane na podstawie profilu jako `netstandard` łatwiejsze do użycia niż zwykle spakowane PCLs oparte na profilach. `netstandard`Pakowanie jest zgodne z istniejącymi użytkownikami.
+PCLs oparte na profilach spakowane jako `netstandard` są łatwiejsze do użycia niż zwykle spakowane PCLs oparte na profilach. `netstandard` pakowanie jest zgodne z istniejącymi użytkownikami.
 
 Można wyświetlić zestaw profilów PCL, które są zgodne z .NET Standard:
 
 | Profil PCL | .NET Standard | Platformy PCL
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
+| Profile7    | 1.1           | .NET Framework 4,5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8,1
-| Profile32   | 1.2           | Windows 8.1, Windows Phone 8,1
-| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
+| Profile32   | 1,2           | Windows 8.1, Windows Phone 8,1
+| Profile44   | 1,2           | .NET Framework 4.5.1, Windows 8.1
 | Profile49   | 1.0           | .NET Framework 4,5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4,5, Windows 8, Windows Phone Silverlight 8
 | Profile84   | 1.0           | Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile111  | 1.1           | .NET Framework 4,5, Windows 8, Windows Phone 8,1
-| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
+| Profile151  | 1,2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8,1
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8,1, Windows Phone Silverlight 8,1
 | Profile259  | 1.0           | .NET Framework 4,5, Windows 8, Windows Phone 8,1, Windows Phone Silverlight 8
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wersje .NET Standard](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [Kompilowanie biblioteki .NET Standard](../core/tutorials/library-with-visual-studio.md)

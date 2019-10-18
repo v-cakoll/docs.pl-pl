@@ -5,15 +5,15 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbd99997fed33c192a2160fb45a739addbae254a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940754"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524621"
 ---
-# <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
-Definiuje typ parametru nazwę i opis.  
+# <a name="typeparam-visual-basic"></a>> \<typeparam (Visual Basic)
+Definiuje nazwę i opis parametru typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Definiuje typ parametru nazwę i opis.
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- Nazwa parametru typu. Nazwę należy ująć w znaki podwójnego cudzysłowu ("").  
+ Nazwa parametru typu. Ujmij nazwę w znaki podwójnego cudzysłowu ("").  
   
  `description`  
  Opis parametru typu.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<typeparam>` tagu w komentarz dla typu ogólnego lub deklaracji ogólnej składowej, opisujący jeden z parametrów typu.  
+ Użyj znacznika `<typeparam>` w komentarzu dla typu ogólnego lub ogólnej deklaracji elementu członkowskiego, aby opisać jeden z parametrów typu.  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<typeparam>` tag do opisania `id` parametru.  
+ W tym przykładzie za pomocą tagu `<typeparam>` można opisać parametr `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   

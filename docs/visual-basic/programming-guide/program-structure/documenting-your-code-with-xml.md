@@ -6,50 +6,50 @@ helpviewer_keywords:
 - XML comments, Visual Basic
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
-ms.openlocfilehash: 6b9fe9994b7bdf2259dcdb1ecef906e0f9955c8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58c8716450fd8310b81050c86dc297c5b7527761
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785505"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524506"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Dokumentowanie kodu za pomocą XML (Visual Basic)
 
-W języku Visual Basic można udokumentować kod za pomocą języka XML
+W Visual Basic można udokumentować kod za pomocą XML
 
 ## <a name="xml-documentation-comments"></a>Komentarze dokumentacji XML
 
-Zapewnia prosty sposób automatycznego tworzenia dokumentacji XML dla projektów w Visual Basic. Automatycznie Generuj szkielet XML dla typów i elementów członkowskich i następnie podaj podsumowania, dokumentacja opisową dla każdego parametru i inne uwagi. W przypadku odpowiedniej konfiguracji dokumentacji XML są automatycznie emitowane do pliku XML z taką samą nazwę jak projekt i rozszerzenie .xml. Aby uzyskać więcej informacji, zobacz [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic zapewnia łatwy sposób automatycznego tworzenia dokumentacji XML dla projektów. Można automatycznie wygenerować szkielet XML dla typów i składowych, a następnie podać podsumowania, opisową dokumentację dla każdego parametru oraz inne uwagi. Po wybraniu odpowiedniej konfiguracji dokumentacja XML jest automatycznie emitowana do pliku XML o takiej samej nazwie jak nazwa projektu i rozszerzenie. XML. Aby uzyskać więcej informacji, zobacz [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-Plik XML można używane lub w przeciwnym razie modyfikowane jako XML. Ten plik znajduje się w tym samym katalogu co plik .exe lub .dll danych wyjściowych projektu.
+Plik XML można wykorzystać lub w inny sposób manipulować jako XML. Ten plik znajduje się w tym samym katalogu, w którym znajduje się plik Output. exe lub. dll projektu.
 
-Dokumentacja XML, który rozpoczyna się od `'''`. Przetwarzanie te komentarze mają pewne ograniczenia:
+Dokumentacja XML rozpoczyna się od `'''`. Przetwarzanie tych komentarzy ma pewne ograniczenia:
 
-- Dokumentacja musi być poprawnie sformułowany XML. Jeśli plik XML nie jest poprawnie sformułowany, generowane jest ostrzeżenie, a plik dokumentacji zawiera komentarz informujący o tym, że wystąpił błąd podczas.
+- Dokumentacja musi być poprawnie sformułowanym plikiem XML. Jeśli kod XML nie jest poprawnie sformułowany, generowane jest ostrzeżenie, a plik dokumentacji zawiera komentarz informujący o wystąpieniu błędu.
 
-- Deweloperzy są bezpłatne tworzenie własnych zestawów tagów. Jest zalecany zestaw znaczników (patrz "Sekcje pokrewne" w tym temacie). Niektóre zalecane tagi mają specjalne znaczenie:
+- Deweloperzy mogą bezpłatnie tworzyć własne zestawy tagów. Istnieje zalecany zestaw tagów (zobacz sekcję "sekcje pokrewne" w tym temacie). Niektóre z zalecanych tagów mają specjalne znaczenie:
 
-  - \<Param > tag jest używany do opisania parametrów. Jeśli używane, kompilator sprawdzi, czy parametr istnieje i czy wszystkie parametry są opisane w dokumentacji. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie.
+  - Tag > \<param jest używany do opisywania parametrów. Jeśli jest używany, kompilator sprawdzi, czy parametr istnieje i że wszystkie parametry zostały opisane w dokumentacji. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie.
 
-  - `cref` Atrybutu mogą być dołączane do każdego znacznika, aby zapewnić odwołanie do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie. Kompilator również stosuje się do dowolnej `Imports` instrukcji podczas wyszukiwania dla typu z opisem w temacie `cref` atrybutu.
+  - Atrybut `cref` może być dołączany do dowolnego tagu w celu udostępnienia odwołania do elementu kodu. Kompilator sprawdza, czy ten element kodu istnieje. Jeśli weryfikacja zakończy się niepowodzeniem, kompilator generuje ostrzeżenie. Kompilator uwzględnia również wszystkie instrukcje `Imports` podczas wyszukiwania typu opisanego w atrybucie `cref`.
 
-  - \<Podsumowania > tag jest używany przez funkcję IntelliSense w programie Visual Studio, aby wyświetlić dodatkowe informacje na temat typu lub elementu członkowskiego.
+  - Tag > \<summary jest używany przez funkcję IntelliSense w programie Visual Studio do wyświetlania dodatkowych informacji na temat typu lub elementu członkowskiego.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-Aby uzyskać szczegółowe informacje na temat tworzenia pliku XML z komentarzami dokumentacji zobacz następujące tematy:
+Aby uzyskać szczegółowe informacje na temat tworzenia pliku XML z komentarzami dokumentacji, zobacz następujące tematy:
 
-- [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
+- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)
 
 - [Przetwarzanie pliku XML](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
 
-- [Instrukcje: Tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [Instrukcje: tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 
 - [Narzędzia XML w Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie aplikacji za pomocą języka Visual Basic](../../../visual-basic/developing-apps/index.md)
-- [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)
+- [Tworzenie aplikacji za pomocą Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Przewodnik programowania Visual Basic](../../../visual-basic/programming-guide/index.md)

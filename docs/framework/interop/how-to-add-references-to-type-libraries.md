@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Dodawanie odwołań do bibliotek typów'
+title: 'Porady: dodawanie odwołań do bibliotek typów'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - importing type library
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a666c0e079fb30ecdd32aad64f44434d8253acf4
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4908653b650f05bd25a7893d104040802f34d7e4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971903"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523821"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a>Instrukcje: Dodawanie odwołań do bibliotek typów
+# <a name="how-to-add-references-to-type-libraries"></a>Porady: dodawanie odwołań do bibliotek typów
 Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane podczas dodawania odwołania do biblioteki typów. Jeśli jest dostępny podstawowy zestaw międzyoperacyjny, program Visual Studio używa istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.  
   
 ### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a>Aby dodać odwołanie do biblioteki typów w programie Visual Studio  
@@ -29,7 +29,7 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane po
   
 4. Wybierz bibliotekę typów z listy lub Wyszukaj plik. tlb.  
   
-5. Wybierz **OK**.  
+5. Wybierz **przycisk OK**.  
   
 6. W Eksplorator rozwiązań otwórz menu skrótów dla właśnie dodanego odwołania, a następnie wybierz polecenie **Właściwości**.  
   
@@ -40,14 +40,14 @@ Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane po
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Aby dodać odwołanie do biblioteki typów dla kompilacji wiersza polecenia  
   
-1. Generowanie zestawu międzyoperacyjnego zgodnie z opisem [w temacie How to: Generuj zestawy międzyoperacyjnych z](how-to-generate-interop-assemblies-from-type-libraries.md)bibliotek typów.  
+1. Generowanie zestawu międzyoperacyjnego zgodnie z opisem w temacie [How to: Generate Assembly Interop from Library Type](how-to-generate-interop-assemblies-from-type-libraries.md)librarys.  
   
-2. Do osadzenia informacji o typie dla typów COM w plikach wykonywalnych Użyj opcji kompilatora [/link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) z nazwą zestawu międzyoperacyjnego.  
+2. Użyj opcji [-link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) z nazwą zestawu międzyoperacyjnego, aby osadzić informacje o typie dla typów com w plikach wykonywalnych.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)
 - [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
-- [/Link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md) 
+- [-Link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

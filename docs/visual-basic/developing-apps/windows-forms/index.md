@@ -5,96 +5,107 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: f1b70209d6daf412be56949f349c242a83578e71
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487791"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524760"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
-Ważną częścią programu Visual Basic jest możliwość tworzenia aplikacji Windows Forms, które działają lokalnie na komputerach użytkowników. Visual Studio umożliwia tworzenie aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasy z <xref:System.Windows.Forms> przestrzeni nazw.  
-  
-## <a name="designing-windows-forms-applications"></a>Aplikacje projektowania Windows Forms  
- Windows Forms i aplikacji usług Windows można utworzyć za pomocą programu Visual Studio. Więcej informacji znajduje się w następujących tematach:  
-  
-- [Wprowadzenie do formularzy Windows](../../../framework/winforms/getting-started-with-windows-forms.md). Zawiera informacje dotyczące sposobu tworzenia i programu Windows Forms.  
-   
-- [Kontrolki formularzy Windows Forms](../../../framework/winforms/controls/index.md). Kolekcja tematów szczegółowych informacji na temat użytkowania kontrolek formularzy Windows Forms.  
-  
-- [Windows, usługi aplikacji](../../../framework/windows-services/index.md). Wyświetla listę tematów, które opisują sposób tworzenia usług Windows.  
-  
-## <a name="building-rich-interactive-user-interfaces"></a>Interfejsy użytkownika bogate, interaktywne tworzenie  
- Windows Forms jest składnikiem inteligentnych klientów programu .NET Framework, zbiór bibliotek zarządzanych, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Używanie środowiska programistycznego, takimi jak Visual Studio, możesz tworzyć aplikacje Windows Forms, do wyświetlania informacji, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
-  
- W formularzach Windows Forms formularz jest powierzchnią wizualną, na którym możesz wyświetlić informacje do użytkownika. Często możesz tworzyć aplikacje Windows Forms, umieszczając formantów na formularzach i tworzenia odpowiedzi na działania użytkownika, takich jak kliknięcia lub naciśnięcia klawiszy. A *kontroli* jest element interfejsu użytkownika dyskretnych, który wyświetla dane lub akceptuje dane wejściowe.  
-  
-### <a name="events"></a>Zdarzenia  
- Gdy użytkownik wykona coś do formularza lub jego formantów, generuje zdarzenie. Aplikacja reaguje na zdarzenia przy użyciu kodu i przetwarza zdarzenia w momencie ich wystąpienia. Aby uzyskać więcej informacji, zobacz [tworzenie obsługi zdarzeń w formularzach Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).  
-  
-### <a name="controls"></a>Formanty  
- Windows Forms zawiera szereg formantów, które można umieścić w formularzach: formantów, które wyświetlają pola tekstowe, przyciski, pola listy rozwijanej, przyciski radiowe i nawet stron sieci Web. Aby uzyskać listę wszystkich kontrolek, można użyć w formularzu, zobacz [kontrolki do użycia w formularzach Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Jeśli formant nie spełnia Twoich potrzeb, formularze Windows obsługuje również tworzenie własnych niestandardowych kontrolek przy użyciu <xref:System.Windows.Forms.UserControl> klasy.  
-  
- Formularze Windows ma zaawansowanych kontrolek interfejsu użytkownika, które emulują funkcji wysokiej jakości aplikacji, takie jak Microsoft Office. Za pomocą <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip> kontrolki, możesz utworzyć pasków narzędzi i menu, które zawierają tekst i obrazy, wyświetlić podmenu i hostują inne kontrolki, takie jak pola tekstowe i pola kombi.  
-  
- Za pomocą projektanta formularzy przeciągnij i upuść programu Visual Studio, możesz łatwo tworzyć aplikacje Windows Forms: po prostu wybierz kontrolki, należy umieścić kursor i umieść je w miejscu w formularzu. Projektant udostępnia narzędzia, takie jak linii siatki i "linii przyciągania" Aby uprości wyrównywanie formantów. Czy przy użyciu programu Visual Studio lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układy przy użyciu minimalnego czasu i wysiłku.  
-  
-### <a name="custom-ui-elements"></a>Elementy interfejsu użytkownika  
- Na koniec, jeśli musisz utworzyć własne niestandardowe elementy interfejsu użytkownika <xref:System.Drawing> przestrzeń nazw zawiera wszystkie klasy, należy renderować linii, okręgi i inne kształty bezpośrednio na formularzu.  
-  
- Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz następujące tematy Pomocy.  
-  
-|Zadanie|Zobacz|  
-|--------|---------|  
-|Tworzenie nowej aplikacji Windows Forms przy użyciu programu Visual Studio|[Samouczek 1: Tworzenie przeglądarki obrazów](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
-|Użyj kontrolek na formularzach|[Instrukcje: Dodawanie formantów do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Tworzenia grafiki przy użyciu <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
-|Tworzenie niestandardowych formantów|[Instrukcje: Dziedziczenie z klasy UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
-  
-## <a name="displaying-and-manipulating-data"></a>Wyświetlanie i manipulowanie danymi  
- Wiele aplikacji, musisz wyświetlić dane z bazy danych, plik XML, usługi XML sieci Web lub innego źródła danych. Formularze Windows udostępnia elastyczną kontrolę, wywoływana <xref:System.Windows.Forms.DataGridView> kontroli renderowania takich danych tabelarycznych w tradycyjnych formacie wierszy i kolumn, tak aby każdy element danych zajmował komórki. Za pomocą <xref:System.Windows.Forms.DataGridView> można dostosować wygląd pojedyncze komórki, dowolnego wierszy i kolumn w miejscu i wyświetlić złożonych kontrolek w komórkach, m.in.  
-  
- Łączenie ze źródłami danych za pośrednictwem sieci jest prostym zadaniem przy użyciu klienci inteligentni Windows Forms. <xref:System.Windows.Forms.BindingSource> Składnika nowe za pomocą formularzy Windows w programie Visual Studio 2005 i .NET Framework 2.0, reprezentuje połączenie ze źródłem danych i udostępnia metody dla powiązania danych z kontrolkami, przejdź do poprzedniego dalej rekordy i edytowanie rekordów, a Zapisywanie zmian z oryginalnego źródła. <xref:System.Windows.Forms.BindingNavigator> Kontroli udostępnia prosty interfejs, za pośrednictwem <xref:System.Windows.Forms.BindingSource> składnika umożliwiające użytkownikom przechodzenie między rekordami.  
-  
-### <a name="data-bound-controls"></a>Formanty powiązane z danymi  
- Możesz utworzyć formanty powiązane z danymi za pomocą okna źródeł danych, który wyświetla źródła danych, takich jak bazy danych, usług sieci Web i obiekty w projekcie. Można utworzyć formanty powiązane z danymi przez przeciąganie elementów z tego okna na formularze w projekcie. Użytkownik może również wiązania danych istniejących kontrolek z danymi przez przeciąganie obiektów z okna źródeł danych na istniejące kontrolki.  
-  
-### <a name="settings"></a>Ustawienia  
- Inny typ wiązania danych, którymi można zarządzać w formularzach Windows Forms jest ustawień. Większość inteligentnych aplikacji klienckich należy zachować pewne informacje o ich stanie w czasie wykonywania, takie jak rozmiar Ostatnia znana formularzy i Zachowaj dane preferencje użytkownika, takie jak domyślne lokalizacje zapisane pliki. Ustawienia aplikacji funkcji rozwiązuje te wymagania, zapewniając łatwy sposób przechowywania oba rodzaje ustawień na komputerze klienckim. Po zdefiniowaniu, za pomocą programu Visual Studio lub Edytor kodu, te ustawienia są utrwalane w formacie XML i automatycznie odczytywać powrotem do pamięci w czasie wykonywania.  
-  
- Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz następujące tematy Pomocy.  
-  
-|Zadanie|Zobacz|  
-|--------|---------|  
-|Użyj <xref:System.Windows.Forms.BindingSource> składnika|[Instrukcje: Powiązywanie kontrolek formularzy Windows ze składnikiem BindingSource przy użyciu narzędzia Projektant](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Praca ze źródłami danych ADO.NET|[Instrukcje: Sortowanie i filtrowanie danych ADO.NET za pomocą Windows składnika BindingSource formularzy](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Korzystanie z okna źródeł danych|[Przewodnik: Wyświetlanie danych w formularzu Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
-  
-## <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich  
- Napisana aplikacja trzeba wysłać ją do użytkowników, tak, aby zainstalować i uruchomić ją na komputerach klienckich. Przy użyciu technologii ClickOnce, można wdrażać aplikacje z poziomu programu Visual Studio za pomocą kilku kliknięć i udostępniać użytkownikom adres URL wskazujący aplikację w sieci Web. ClickOnce zarządza wszystkie elementy i zależności w aplikacji, a także zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
-  
- Aplikacje ClickOnce może być skonfigurowany do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchomić zarówno w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, ClickOnce dodaje łącze do aplikacji w użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
-  
- Podczas aktualizacji aplikacji, możesz opublikować nowy manifest wdrożenia i nową kopię aplikacji na serwerze sieci Web. ClickOnce wykryje, że nie jest dostępna aktualizacja i uaktualnień instalacji przez użytkownika; nie niestandardowych programów jest wymagany do zaktualizowania starej zestawów.  
-  
- Aby uzyskać pełne wprowadzenie do technologii ClickOnce, zobacz [wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz poniższe tematy pomocy:  
-  
-|Zadanie|Zobacz|  
-|--------|---------|  
-|Wdrażanie aplikacji za pomocą technologii ClickOnce|[Instrukcje: Publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|Aktualizacja składników wdrożenia ClickOnce|[Instrukcje: Zarządzanie aktualizacjami dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Zarządzanie zabezpieczeniami za pomocą technologii ClickOnce|[Instrukcje: Włączanie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
-  
-## <a name="other-controls-and-features"></a>Inne formanty i funkcje  
- Istnieje wiele innych funkcji w formularzach Windows Forms, wchodzące Implementowanie typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodając pomocy i dokumentacji i lokalizowanie aplikacji na wiele języków. Ponadto formularze Windows opiera się na niezawodne zabezpieczenia systemu .NET Framework, dzięki czemu można zwolnić bardziej bezpieczne aplikacje swoim klientom.  
-  
- Aby uzyskać szczegółowe informacje na temat korzystania z tych funkcji zobacz poniższe tematy pomocy:  
-  
-|Zadanie|Zobacz|  
-|--------|---------|  
-|Drukowanie zawartości formularza|[Instrukcje: Drukowanie grafiki w formularzach Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Instrukcje: Podglądu wydruku w formularzach Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
-|Więcej informacji na temat zabezpieczeń Windows Forms|[Przegląd zabezpieczeń w formularzach Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  
-  
+
+Ważną częścią Visual Basic jest możliwość tworzenia Windows Forms aplikacji, które są uruchamiane lokalnie na komputerach użytkowników. Możesz użyć programu Visual Studio do utworzenia aplikacji i interfejsu użytkownika przy użyciu Windows Forms. Aplikacja Windows Forms jest oparta na klasach z przestrzeni nazw <xref:System.Windows.Forms>.
+
+## <a name="designing-windows-forms-applications"></a>Projektowanie aplikacji Windows Forms
+
+Możesz tworzyć Windows Forms i aplikacje usług systemu Windows za pomocą programu Visual Studio. Więcej informacji znajduje się w następujących tematach:
+
+- [Wprowadzenie z Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Zawiera informacje dotyczące sposobu tworzenia i programu Windows Forms.
+
+- [Kontrolki Windows Forms](../../../framework/winforms/controls/index.md). Zbiór tematów opisujących sposób używania formantów Windows Forms.
+
+- [Aplikacje usług systemu Windows](../../../framework/windows-services/index.md). Zawiera listę tematów, które wyjaśniają sposób tworzenia usług systemu Windows.
+
+## <a name="building-rich-interactive-user-interfaces"></a>Tworzenie rozbudowanych, interaktywnych interfejsów użytkownika
+
+Windows Forms jest składnikiem inteligentnego klienta .NET Framework, zestawu bibliotek zarządzanych, które umożliwiają wykonywanie typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Za pomocą środowiska programistycznego, takiego jak Visual Studio, można tworzyć Windows Forms aplikacje, które wyświetlają informacje, żądają danych wejściowych od użytkowników i komunikują się z komputerami zdalnymi za pośrednictwem sieci.
+
+W Windows Forms formularz jest obszarem wizualnym, na którym są wyświetlane informacje dla użytkownika. Często tworzysz Windows Forms aplikacje, umieszczając kontrolki na formularzach i opracowując odpowiedzi do akcji użytkownika, takich jak kliknięcia myszą lub naciśnięcia klawiszy. *Kontrolka* to dyskretny element interfejsu użytkownika, który wyświetla dane lub akceptuje dane wejściowe.
+
+### <a name="events"></a>Zdarzenia
+
+Gdy użytkownik robi coś w formularzu lub jednej z jego kontrolek, generuje zdarzenie. Aplikacja reaguje na te zdarzenia za pomocą kodu i przetwarza zdarzenia, gdy wystąpią. Aby uzyskać więcej informacji, zobacz [Tworzenie programów obsługi zdarzeń w Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
+
+### <a name="controls"></a>Formanty
+
+Windows Forms zawiera różne kontrolki, które można umieścić w formularzach: kontrolki, które wyświetlają pola tekstowe, przyciski, pola rozwijane, przyciski radiowe i nawet strony sieci Web. Aby uzyskać listę wszystkich kontrolek, których można użyć na formularzu, zobacz [kontrolki do użycia na Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Jeśli istniejący formant nie spełnia Twoich potrzeb, Windows Forms również obsługuje tworzenie własnych niestandardowych formantów przy użyciu klasy <xref:System.Windows.Forms.UserControl>.
+
+Windows Forms ma rozbudowane kontrolki interfejsu użytkownika, które emulują funkcje aplikacji wysokiej klasy, takich jak Microsoft Office. Za pomocą kontrolki <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip>, można tworzyć paski narzędzi i menu, które zawierają tekst i obrazy, wyświetlać podmenu i hostować inne kontrolki, takie jak pola tekstowe i pola kombi.
+
+Za pomocą narzędzia do przeciągania i upuszczania formularzy programu Visual Studio możesz łatwo tworzyć Windows Forms aplikacje: po prostu wybierz kontrolki z kursorem i umieść je w dowolnym miejscu w formularzu. Projektant udostępnia narzędzia takie jak linie siatki i "Przyciągaj linie", aby zastanowić się, że nie można dostosować formantów. Niezależnie od tego, czy używasz programu Visual Studio, czy kompilować w wierszu polecenia, można użyć formantów <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> do tworzenia zaawansowanych układów formularzy o minimalnym czasie i wysiłku.
+
+### <a name="custom-ui-elements"></a>Niestandardowe elementy interfejsu użytkownika
+
+Na koniec, jeśli trzeba utworzyć własne niestandardowe elementy interfejsu użytkownika, przestrzeń nazw <xref:System.Drawing> zawiera wszystkie klasy potrzebne do renderowania linii, okręgów i innych kształtów bezpośrednio w formularzu.
+
+Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć w następujących tematach pomocy.
+
+|Do|Zobacz|
+|--------|---------|
+|Tworzenie nowej aplikacji Windows Forms przy użyciu programu Visual Studio|[Samouczek 1: Tworzenie przeglądarki obrazów](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
+|Używanie formantów na formularzach|[Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Tworzenie grafiki przy użyciu <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
+|Tworzenie niestandardowych kontrolek|[Instrukcje: dziedziczenie z klasy UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+
+## <a name="displaying-and-manipulating-data"></a>Wyświetlanie i manipulowanie danymi
+
+Wiele aplikacji musi wyświetlać dane z bazy danych, pliku XML, usługi sieci Web XML lub innego źródła danych. Windows Forms zapewnia elastyczną kontrolkę o nazwie kontrolkę <xref:System.Windows.Forms.DataGridView> do renderowania takich danych tabelarycznych w tradycyjnym formacie wiersza i kolumny, tak aby każda część danych zajmowała swoją własną komórkę. Za pomocą <xref:System.Windows.Forms.DataGridView> można dostosować wygląd poszczególnych komórek, zablokować dowolne wiersze i kolumny w miejscu oraz wyświetlać złożone kontrolki wewnątrz komórek, między innymi.
+
+Łączenie ze źródłami danych za pośrednictwem sieci to proste zadanie z Windows Forms inteligentnymi klientami. Składnik <xref:System.Windows.Forms.BindingSource>, nowy z Windows Forms w programie Visual Studio 2005 i .NET Framework 2,0, reprezentuje połączenie ze źródłem danych i udostępnia metody wiązania danych z kontrolkami, nawigowanie do poprzednich i następnych rekordów, edytowanie rekordów i zapisywanie zmiany z powrotem do oryginalnego źródła. Kontrolka <xref:System.Windows.Forms.BindingNavigator> udostępnia prosty interfejs między składnikiem <xref:System.Windows.Forms.BindingSource>, aby umożliwić użytkownikom Nawigowanie między rekordami.
+
+### <a name="data-bound-controls"></a>Formanty powiązane z danymi
+
+Kontrolki powiązane z danymi można łatwo tworzyć przy użyciu okna źródła danych, w którym są wyświetlane źródła danych, takie jak bazy danych, usługi sieci Web i obiekty w projekcie. Formanty powiązane z danymi można tworzyć, przeciągając elementy z tego okna na formularze w projekcie. Dane można także powiązać z danymi istniejącymi kontrolkami, przeciągając obiekty z okna źródła danych do istniejących kontrolek.
+
+### <a name="settings"></a>Ustawienia
+
+Innym typem powiązania danych, którymi można zarządzać w Windows Forms jest ustawienia. Większość aplikacji inteligentnych klienta musi przechowywać pewne informacje o stanie czasu wykonywania, takie jak ostatni znany rozmiar formularzy i zachować dane preferencji użytkownika, takie jak domyślne lokalizacje plików zapisanych. Funkcja ustawienia aplikacji eliminuje te wymagania, udostępniając łatwy sposób przechowywania obu typów ustawień na komputerze klienckim. Po zdefiniowaniu przy użyciu programu Visual Studio lub edytora kodu te ustawienia są utrwalane jako XML i automatycznie odczytywane w pamięci w czasie wykonywania.
+
+Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć w następujących tematach pomocy.
+
+|Do|Zobacz|
+|--------|---------|
+|Korzystanie ze składnika <xref:System.Windows.Forms.BindingSource>|[Instrukcje: powiązywanie kontrolek formularzy Windows Forms ze składnikiem BindingSource przy użyciu narzędzia Projektant](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Współpraca ze źródłami danych ADO.NET|[Instrukcje: filtrowanie i sortowanie danych ADO.NET za pomocą składnika BindingSource formularzy Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Korzystanie z okna źródła danych|[Przewodnik: wyświetlanie danych w formularzu systemu Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|
+
+## <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich
+
+Po napisaniu aplikacji należy wysłać ją do użytkowników, aby mogli ją zainstalować i uruchamiać na własnych komputerach klienckich. Korzystając z technologii ClickOnce, można wdrażać aplikacje z poziomu programu Visual Studio za pomocą zaledwie kilku kliknięć i udostępnić użytkownikom adresy URL wskazujące aplikację w sieci Web. Technologia ClickOnce zarządza wszystkimi elementami i zależnościami w aplikacji i gwarantuje, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.
+
+Aplikacje ClickOnce można skonfigurować tak, aby były uruchamiane tylko wtedy, gdy użytkownik jest połączony z siecią lub do uruchamiania w trybie online i offline. Po określeniu, że aplikacja powinna obsługiwać działanie w trybie offline, ClickOnce dodaje link do aplikacji w menu **Start** użytkownika, dzięki czemu użytkownik może ją otworzyć bez użycia adresu URL.
+
+Po zaktualizowaniu aplikacji należy opublikować nowy manifest wdrożenia i nową kopię aplikacji na serwerze sieci Web. Technologia ClickOnce wykrywa, czy jest dostępna aktualizacja i uaktualnia instalację użytkownika. do aktualizowania starych zestawów nie jest wymagane programowanie niestandardowe.
+
+Aby zapoznać się z pełnym wprowadzeniem do technologii ClickOnce, zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć w następujących tematach pomocy:
+
+|Do|Zobacz|
+|--------|---------|
+|Wdrażanie aplikacji przy użyciu technologii ClickOnce|[Instrukcje: publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Aktualizowanie wdrożenia ClickOnce|[Instrukcje: zarządzanie aktualizacji dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Zarządzanie zabezpieczeniami przy użyciu technologii ClickOnce|[Instrukcje: włączenie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+
+## <a name="other-controls-and-features"></a>Inne kontrolki i funkcje
+
+W Windows Forms istnieje wiele innych funkcji, które umożliwiają szybkie i łatwe wdrażanie typowych zadań, takich jak obsługa tworzenia okien dialogowych, drukowanie, Dodawanie pomocy i dokumentacji oraz lokalizowanie aplikacji w wielu językach. Ponadto Windows Forms opiera się na niezawodnym systemie zabezpieczeń .NET Framework, co pozwala na wydawanie klientom bardziej bezpiecznych aplikacji.
+
+Informacje krok po kroku dotyczące korzystania z tych funkcji można znaleźć w następujących tematach pomocy:
+
+|Do|Zobacz|
+|--------|---------|
+|Drukowanie zawartości formularza|[Instrukcje: drukowanie grafiki w formularzach Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Instrukcje: wyświetlanie podglądu wydruku w formularzach Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Dowiedz się więcej o zabezpieczeniach Windows Forms|[Przegląd zabezpieczeń w formularzach Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>

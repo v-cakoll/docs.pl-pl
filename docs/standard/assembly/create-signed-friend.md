@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Utwórz podpisane zaprzyjaźnione zestawy'
+title: 'Instrukcje: Tworzenie podpisanych zestawów zaprzyjaźnionych'
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 19c301c6b96e1070447401af9105fba2e0f0837f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3bf71adc694f3c6e072990717198b4f2003cd503
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973363"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523886"
 ---
-# <a name="how-to-create-signed-friend-assemblies"></a>Instrukcje: Utwórz podpisane zaprzyjaźnione zestawy
+# <a name="how-to-create-signed-friend-assemblies"></a>Instrukcje: Tworzenie podpisanych zestawów zaprzyjaźnionych
 Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o silnych nazwach. Oba zestawy muszą mieć silną nazwę. Chociaż oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
   
 ## <a name="create-a-signed-assembly-and-a-friend-assembly"></a>Tworzenie podpisanego zestawu i zestawu zaprzyjaźnionego  
@@ -33,7 +33,7 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
   
          `sn -tp FriendAssemblies.publickey`  
   
-3. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_A* , który zawiera poniższy kod. Kod używa <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutu, aby zadeklarować *friend_signed_B* jako zestaw zaprzyjaźniony.  
+3. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_A* , który zawiera poniższy kod. Kod używa atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>, aby zadeklarować *friend_signed_B* jako zestaw zaprzyjaźniony.  
    
    Narzędzie silnej nazwy generuje nowy klucz publiczny przy każdym uruchomieniu. W związku z tym należy zastąpić klucz publiczny w poniższym kodzie kluczem publicznym, który został właśnie wygenerowany, jak pokazano w poniższym przykładzie.  
    
@@ -79,7 +79,7 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
    Vbc -target:library -keyfile:FriendAssemblies.snk friend_signed_A.vb  
    ```  
    
-5. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_B* , który zawiera poniższy kod. Ponieważ *friend_signed_A* określa *friend_signed_B* jako zestaw zaprzyjaźniony, kod w *friend_signed_B* ma `internal` dostęp (C#) lub `Friend` (Visual Basic) typów i członków z *friend_signed_A*. Plik zawiera poniższy kod.  
+5. Utwórz plik C# lub Visual Basic o nazwie *friend_signed_B* , który zawiera poniższy kod. Ponieważ *friend_signed_A* określa *friend_signed_B* jako zestaw zaprzyjaźniony, kod w *friend_signed_B* ma dostęp do `internal` (C#) lub `Friend` (Visual Basic) typów i członków z *friend_signed_A*. Plik zawiera poniższy kod.  
    
    ```csharp  
    // friend_signed_B.cs  
@@ -117,22 +117,22 @@ Ten przykład pokazuje, jak używać zespołów zaprzyjaźnionych z zestawami o 
    vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
    ```  
    
-   Nazwa zestawu wygenerowanego przez kompilator musi być zgodna z nazwą znajomego zestawu przekazaną <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> do atrybutu. Należy jawnie określić nazwę zestawu wyjściowego ( *. exe* lub *. dll*) przy użyciu `/out` opcji kompilatora. Aby uzyskać więcej informacji, zobacz [/outC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
+   Nazwa zestawu wygenerowanego przez kompilator musi być zgodna z nazwą znajomego zestawu przekazaną do atrybutu <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>. Należy jawnie określić nazwę zestawu wyjściowego ( *. exe* lub *. dll*) przy użyciu opcji kompilatora `/out`. Aby uzyskać więcej informacji, zobacz [/outC# (opcje kompilatora)](../../csharp/language-reference/compiler-options/out-compiler-option.md) lub [-out (Visual Basic)](../../visual-basic/reference/command-line-compiler/out.md).  
    
 7. Uruchom plik *friend_signed_B. exe* .  
    
    Program wyprowadza ciąg **Class1. test**.  
   
 ## <a name="net-security"></a>Zabezpieczenia platformy .NET  
- Istnieją podobieństwa między <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atrybutem <xref:System.Security.Permissions.StrongNameIdentityPermission> a klasą. Główną różnicą jest to <xref:System.Security.Permissions.StrongNameIdentityPermission> , że może to wymagać uprawnień zabezpieczeń do uruchomienia określonej sekcji kodu, <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> natomiast `internal` atrybut kontroluje widoczność (C#) lub `Friend` (Visual Basic) typów i elementów członkowskich.  
+ Istnieją podobieństwa między atrybutem <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> a klasą <xref:System.Security.Permissions.StrongNameIdentityPermission>. Główną różnicą jest to, że <xref:System.Security.Permissions.StrongNameIdentityPermission> mogą wymagać uprawnień zabezpieczeń do uruchamiania określonej sekcji kodu, natomiast atrybut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> kontroluje widoczność typów i składowych `internal`C#() lub `Friend` (Visual Basic).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Zestawy w środowisku .NET](index.md)
 - [Zaprzyjaźnione zestawy](friend.md)
-- [Instrukcje: Utwórz niepodpisane zestawy zaprzyjaźnione](create-unsigned-friend.md)
-- [/keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [Instrukcje: Tworzenie nieoznaczonych zaprzyjaźnionych zestawów](create-unsigned-friend.md)
+- [-keyfile (C#)](../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [-keyfile (Visual Basic)](../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [SN. exe (Narzędzie silnej nazwy)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Tworzenie i używanie zestawów o silnych nazwach](create-use-strong-named.md)

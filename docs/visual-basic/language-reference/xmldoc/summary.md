@@ -5,14 +5,14 @@ helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25a0b307756401bed4d4c77d3668c2af53ba8b42
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940767"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524631"
 ---
-# <a name="summary-visual-basic"></a>\<Podsumowanie > (Visual Basic)
+# <a name="summary-visual-basic"></a>> \<summary (Visual Basic)
 Określa podsumowanie elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
@@ -26,14 +26,14 @@ Określa podsumowanie elementu członkowskiego.
  Podsumowanie obiektu.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<summary>` znaczników do opisu typu lub składowej typu. Użyj [ \<Uwagi >](../../../visual-basic/language-reference/xmldoc/remarks.md) można dodać dodatkowe informacje do opisu typu.  
+ Użyj znacznika `<summary>`, aby opisać typ lub element członkowski typu. Użyj [> \<remarks](../../../visual-basic/language-reference/xmldoc/remarks.md) , aby dodać informacje uzupełniające do opisu typu.  
   
- Tekst dla `<summary>` tagu to jedyne źródło informacji o typie w technologii IntelliSense i jest wyświetlany w przeglądarce obiektów. Aby uzyskać informacje o przeglądarce obiektów, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
+ Tekst dla tagu `<summary>` jest jedynym źródłem informacji o typie w technologii IntelliSense i jest również wyświetlany w Przeglądarka obiektów. Aby uzyskać informacje na temat Przeglądarka obiektów, zobacz [Wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<summary>` tag do opisania `ResetCounter` metody i `Counter` właściwości.  
+ W tym przykładzie za pomocą tagu `<summary>` można opisać metodę `ResetCounter` i Właściwość `Counter`.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

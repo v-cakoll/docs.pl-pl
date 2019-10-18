@@ -1,42 +1,42 @@
 ---
-title: Środowisko uruchomieniowe przenoszenia do przodu dla platformy .NET Core aplikację samodzielną wdrożeń.
-description: Dowiedz się więcej o dotnet publikowania zmian w przypadku wdrożeń niezależna.
+title: Przewinięcie środowiska uruchomieniowego do funkcji samodzielnego wdrażania aplikacji platformy .NET Core.
+description: Dowiedz się więcej na temat dotnet publish zmian w przypadku wdrożeń samodzielnych.
 author: KathleenDollard
 ms.date: 05/31/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9af1454ede03b277f9b1a10e1d99a997e38809ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613563"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522088"
 ---
-# <a name="self-contained-deployment-runtime-roll-forward"></a>Niezależne wdrożenia środowiska uruchomieniowego przenoszenia do przodu
+# <a name="self-contained-deployment-runtime-roll-forward"></a>Przenoszenie do przodu w czasie samodzielnego środowiska uruchomieniowego wdrożenia
 
-.NET core [niezależna acji](index.md) biblioteki .NET Core i środowisko uruchomieniowe platformy .NET Core. Począwszy od .NET Core 2.1 SDK (wersja 2.1.300), wdrożenie aplikacji niezależna [publikuje najwyższy runtime poprawki na swojej maszynie](https://github.com/dotnet/designs/pull/36). Domyślnie [ `dotnet publish` ](../tools/dotnet-publish.md) dla wdrożenia niezależna wybiera najnowszej wersji, instalowany jako część zestawu SDK na maszynie publikowania. Dzięki temu Twojej wdrożonej aplikacji do uruchamiania przy użyciu poprawek zabezpieczeń (i inne poprawki) dostępnych w trakcie `publish`. Aplikacja musi być opublikowany ponownie w celu uzyskania nowych poprawek. Aplikacje samodzielne są tworzone przez określenie `-r <RID>` na `dotnet publish` polecenia lub określając [identyfikator środowiska uruchomieniowego (RID)](../rid-catalog.md) w pliku projektu (csproj / vbproj) lub w wierszu polecenia.
+[Wstępnie zawarte wdrożenia aplikacji](index.md) .NET Core obejmują zarówno biblioteki .NET Core, jak i środowisko uruchomieniowe platformy .NET Core. Począwszy od zestawu .NET Core 2,1 SDK (wersja 2.1.300), samodzielne wdrożenie aplikacji [publikuje najwyższe środowisko uruchomieniowe poprawek na komputerze](https://github.com/dotnet/designs/pull/36). Domyślnie, [`dotnet publish`](../tools/dotnet-publish.md) dla wdrożenia z własnym rozmieszczeniem wybiera najnowszą wersję zainstalowaną jako część zestawu SDK na maszynie publikacji. Dzięki temu wdrożona aplikacja będzie działać z poprawkami zabezpieczeń (i innymi poprawkami) dostępnymi podczas `publish`. Aby można było uzyskać nową poprawkę, należy ponownie opublikować aplikację. Aplikacje samodzielne są tworzone przez określenie `-r <RID>` w `dotnet publish` polecenie lub przez określenie [identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md) w pliku projektu (csproj/vbproj) lub w wierszu polecenia.
 
-## <a name="patch-version-roll-forward-overview"></a>Omówienie do przodu roll wersja poprawki
+## <a name="patch-version-roll-forward-overview"></a>Omówienie przekazujące wersje poprawek
 
-[`restore`](../tools/dotnet-restore.md), [ `build` ](../tools/dotnet-build.md) i [ `publish` ](../tools/dotnet-publish.md) są `dotnet` poleceń, które można uruchomić osobno. Wybór środowiska uruchomieniowego jest częścią `restore` operacji nie `publish` lub `build`. Jeśli wywołasz `publish`, najnowsza wersja poprawki zostanie wybrany. Jeśli wywołasz `publish` z `--no-restore` argumentu, możesz nie zawierają wersji poprawki żądaną ponieważ wcześniej `restore` nie mogło zostać wykonane za pomocą nowej aplikacji niezależna publikowania zasad. W tym przypadku błąd kompilacji jest generowany z tekstem podobny do następującego:
+[`restore`](../tools/dotnet-restore.md), [`build`](../tools/dotnet-build.md) i [`publish`](../tools/dotnet-publish.md) są poleceniami `dotnet`, które mogą być uruchamiane oddzielnie. Wybór środowiska uruchomieniowego jest częścią operacji `restore`, a nie `publish` lub `build`. W przypadku wywołania `publish` zostanie wybrana Najnowsza wersja poprawki. Jeśli wywołasz `publish` z argumentem `--no-restore`, możesz nie uzyskać odpowiedniej wersji poprawki, ponieważ wcześniejsze `restore` mogły nie zostać wykonane przy użyciu nowych zasad publikowania samodzielnych aplikacji. W takim przypadku generowany jest błąd kompilacji z tekstem podobnym do poniższego:
 
-  "Projektu zostało przywrócone, za pomocą wersji 2.0.0 pakietów Microsoft.NETCore.App, ale z bieżącymi ustawieniami wersji 2.0.6 będzie używana zamiast tego. Aby rozwiązać ten problem, upewnij się, że te same ustawienia są stosowane do przywracania i kolejne operacje, takie jak kompilacja lub opublikować. Zazwyczaj ten problem może wystąpić, jeśli RuntimeIdentifier zostaje ustalona podczas tworzenia lub opublikować, ale nie podczas przywracania."
+  "Projekt został przywrócony przy użyciu programu Microsoft. servicecore. App w wersji 2.0.0, ale z bieżącymi ustawieniami w zamian zostanie użyta wersja 2.0.6. Aby rozwiązać ten problem, upewnij się, że te same ustawienia są używane do przywracania i dla kolejnych operacji, takich jak Kompilowanie lub publikowanie. Zazwyczaj ten problem może wystąpić, jeśli właściwość RuntimeIdentifier jest ustawiona podczas kompilowania lub publikowania, ale nie podczas przywracania.
 
 > [!NOTE]
-> `restore` i `build` mogą być uruchamiane niejawnie jako część innego polecenia, takie jak `publish`. Po uruchomieniu niejawnie jako część innego polecenia, są one wyposażone dodatkowy kontekst, aby odpowiednie artefakty są tworzone. Gdy możesz `publish` aparatu plików wykonywalnych (na przykład `dotnet publish -r linux-x64`), niejawny `restore` przywraca pakietów dla środowiska uruchomieniowego x64 systemu linux. Jeśli wywołasz `restore` jawnie, nie są przywracane pakiety środowiska uruchomieniowego domyślnie, ponieważ nie ma tego kontekstu.
+> `restore` i `build` mogą być uruchamiane niejawnie jako część innego polecenia, takiego jak `publish`. Gdy program jest uruchamiany niejawnie jako część innego polecenia, są one dostarczane z dodatkowym kontekstem, dzięki czemu tworzone są odpowiednie artefakty. W przypadku `publish` ze środowiskiem uruchomieniowym (na przykład `dotnet publish -r linux-x64`) niejawne `restore` przywraca pakiety dla środowiska uruchomieniowego systemu Linux x64. Jeśli wywołajesz `restore` jawnie, nie przywraca domyślnie pakietów środowiska uruchomieniowego, ponieważ nie ma tego kontekstu.
 
-## <a name="how-to-avoid-restore-during-publish"></a>Jak unikać przywracania podczas publikowania
+## <a name="how-to-avoid-restore-during-publish"></a>Jak uniknąć przywracania podczas publikowania
 
-Uruchamianie `restore` jako część `publish` operacji może być niepożądane dla danego scenariusza. Aby uniknąć `restore` podczas `publish` podczas tworzenia aplikacji niezależna, wykonaj następujące czynności:
+Uruchamianie `restore` w ramach operacji `publish` może być niepożądane dla Twojego scenariusza. Aby uniknąć `restore` `publish` podczas tworzenia aplikacji samodzielnych, należy wykonać następujące czynności:
 
-* Ustaw `RuntimeIdentifiers` właściwość rozdzieloną średnikami listę wszystkich [RID](../rid-catalog.md) do opublikowania.
-* Ustaw `TargetLatestRuntimePatch` właściwość `true`.
+- Ustaw właściwość `RuntimeIdentifiers` na listę oddzielonych średnikami wszystkich [identyfikatorów RID](../rid-catalog.md) do opublikowania.
+- Ustaw właściwość `TargetLatestRuntimePatch` na `true`.
 
-## <a name="no-restore-argument-with-dotnet-publish-options"></a>Opcje publikowania argument bez przywracania za pomocą polecenia dotnet
+## <a name="no-restore-argument-with-dotnet-publish-options"></a>Nie przywracaj argumentu z opcjami dotnet publish
 
-Jeśli chcesz tworzyć aplikacje zarówno niezależna i [zależny od struktury aplikacji](index.md) przy użyciu tego samego pliku projektu, i chcesz używać `--no-restore` argumentu `dotnet publish`, a następnie wybierz jedno z następujących czynności:
+Jeśli chcesz utworzyć zarówno aplikacje samodzielne, jak i [aplikacje zależne od platformy](index.md) , przy użyciu tego samego pliku projektu, i chcesz użyć argumentu `--no-restore` z `dotnet publish`, wybierz jedną z następujących wartości:
 
-1. Preferuj zachowań zależnych od framework. Jeśli aplikacja jest zależny od struktury, jest to zachowanie domyślne. Jeśli aplikacja jest niezależna i można używać bez 2.1.0 lokalne środowisko uruchomieniowe, ustaw `TargetLatestRuntimePatch` do `false` w pliku projektu.
+1. Preferuj zachowanie zależne od platformy. Jeśli aplikacja jest zależna od struktury, jest to zachowanie domyślne. Jeśli aplikacja jest samodzielna i może użyć nie2.1.0ego lokalnego środowiska uruchomieniowego, ustaw `TargetLatestRuntimePatch` na `false` w pliku projektu.
 
-2. Preferuj niezależna zachowanie. Jeśli aplikacja jest niezależny, jest to zachowanie domyślne. Jeśli aplikacja jest zależny od struktury i wymaga Najnowsza zainstalowana poprawka, ustaw `TargetLatestRuntimePatch` do `true` w pliku projektu.
+2. Preferuj zachowanie samodzielne. Jeśli aplikacja jest samodzielna, jest to zachowanie domyślne. Jeśli aplikacja jest zależna od struktury i wymaga zainstalowanej najnowszej poprawki, ustaw `TargetLatestRuntimePatch` na `true` w pliku projektu.
 
-3. Wykonaj jawną kontrolę framework w wersji środowiska uruchomieniowego, ustawiając `RuntimeFrameworkVersion` do wersji poprawki określonych w pliku projektu.
+3. Przejęcie jawnej kontroli wersji struktury środowiska uruchomieniowego przez ustawienie `RuntimeFrameworkVersion` do określonej wersji poprawki w pliku projektu.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: fbe3634d1fbc03acd56ef7276d65fd54493b9806
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: dd98b45d75ff421dc81666ed47695132a49bfa3a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002415"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524480"
 ---
 # <a name="-addmodule"></a>-addmodule
 Powoduje, że kompilator udostępnił wszystkie informacje o typie z określonych plików dla aktualnie kompilowanego projektu.  
@@ -33,7 +33,7 @@ Powoduje, że kompilator udostępnił wszystkie informacje o typie z określonyc
   
  Jeśli określisz (niejawnie lub jawnie) opcję[docelową (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) inną niż `-target:module` z `-addmodule`, pliki przekazywane do `-addmodule` staną się częścią zestawu projektu. Zestaw jest wymagany do uruchomienia pliku wyjściowego, który ma co najmniej jeden plik dodany z `-addmodule`.  
   
- Użyj [/Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) do zaimportowania metadanych z pliku, który zawiera zestaw.  
+ Użyj [parametru-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) do zaimportowania metadanych z pliku, który zawiera zestaw.  
   
 > [!NOTE]
 > Opcja `-addmodule` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  

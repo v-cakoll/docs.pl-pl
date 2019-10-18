@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: e131b39e05badf0bb90fbbb14761571003156f85
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005512"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523978"
 ---
 # <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Powoduje, że kompilator udostępnia informacje o typie COM w określonych zestawach, które są dostępne dla aktualnie kompilowanego projektu.  
@@ -59,7 +59,7 @@ lub
   
  Użyj [-LIBPATH](libpath.md) , aby określić katalog, w którym znajduje się co najmniej jedno odwołanie do zestawu.  
   
- Podobnie jak w przypadku opcji kompilatora [/Reference](reference.md) , opcja kompilatora `-link` używa pliku odpowiedzi VBC. rsp, który odwołuje się do często używanych zestawów .NET Framework. Użyj opcji kompilatora [-noconfig](noconfig.md) , jeśli nie chcesz, aby kompilator używał pliku VBC. rsp.  
+ Podobnie jak w przypadku opcji kompilatora [referencyjnego](reference.md) , opcja kompilatora `-link` używa pliku odpowiedzi VBC. rsp, który odwołuje się do często używanych .NET Framework zestawów. Użyj opcji kompilatora [-noconfig](noconfig.md) , jeśli nie chcesz, aby kompilator używał pliku VBC. rsp.  
   
  Krótka forma `-link` jest `-l`.  
   

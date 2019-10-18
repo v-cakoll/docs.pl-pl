@@ -2,14 +2,14 @@
 title: polecenie kompilacji dotnet
 description: Polecenie kompilacji dotnet kompiluje projekt i wszystkie jego zależności.
 ms.date: 10/07/2019
-ms.openlocfilehash: db353feebab920dc8f63b9854d14f050adeb0b79
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 0a3e2c0e441cfdd1cb8266bc77dc1aba08af84d6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250192"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522780"
 ---
-# <a name="dotnet-build"></a>Kompilacja dotnet
+# <a name="dotnet-build"></a>dotnet build
 
 **Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
 
@@ -66,85 +66,85 @@ Plik projektu lub rozwiązania do skompilowania. Jeśli plik projektu lub rozwi�
 
 ## <a name="options"></a>Opcje
 
-* **`-c|--configuration {CONFIGURATION}`**
+- **`-c|--configuration {Debug|Release}`**
 
   Definiuje konfigurację kompilacji. Wartość domyślna dla większości projektów to `Debug`, ale można zastąpić ustawienia konfiguracji kompilacji w projekcie.
 
-* **`-f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   Kompiluje dla określonej [struktury](../../standard/frameworks.md). Struktura musi być zdefiniowana w [pliku projektu](csproj.md).
 
-* **`--force`**
+- **`--force`**
 
   Wymusza rozpoznanie wszystkich zależności, nawet jeśli ostatnie przywracanie zakończyło się pomyślnie. Określenie tej flagi jest takie samo jak usuwanie pliku *Project. assets. JSON* . Dostępne od wersji .NET Core 2,0 SDK.
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   Drukuje krótką pomoc dla polecenia.
 
-* **`--interactive`**
+- **`--interactive`**
 
   Zezwala na zatrzymanie polecenia i oczekiwanie na dane wejściowe użytkownika lub akcję. Na przykład, aby ukończyć uwierzytelnianie. Dostępne od wersji .NET Core 3,0 SDK.
 
-* **`--no-dependencies`**
+- **`--no-dependencies`**
 
   Ignoruje odwołania między projektami i projektami (P2P) i kompiluje tylko określony projekt główny.
 
-* **`--no-incremental`**
+- **`--no-incremental`**
 
   Oznacza kompilację jako niebezpieczną dla kompilacji przyrostowej. Ta flaga powoduje wyłączenie kompilacji przyrostowej i wymuszenie czystej odbudowy wykresu zależności projektu.
 
-* **`--no-restore`**
+- **`--no-restore`**
 
   Nie wykonuje przywracania niejawnego podczas kompilacji. Dostępne od wersji .NET Core 2,0 SDK.
 
-* **`--nologo`**
+- **`--nologo`**
 
   Nie wyświetla transparentu początkowego ani komunikatu o prawach autorskich. Dostępne od wersji .NET Core 3,0 SDK.
 
-* **`-o|--output <OUTPUT_DIRECTORY>`**
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
   Katalog, w którym mają zostać umieszczone skompilowane pliki binarne. Należy również zdefiniować `--framework` po określeniu tej opcji. Jeśli nie zostanie określony, domyślną ścieżką jest `./bin/<configuration>/<framework>/`.
 
-* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
+- **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   Określa docelowy środowisko uruchomieniowe. Aby uzyskać listę identyfikatorów środowiska uruchomieniowego (RID), zobacz [wykaz identyfikatorów RID](../rid-catalog.md).
 
-* **`-v|--verbosity <LEVEL>`**
+- **`-v|--verbosity <LEVEL>`**
 
   Ustawia poziom szczegółowości programu MSBuild. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` i `diag[nostic]`. Wartość domyślna to `minimal`.
 
-* **`--version-suffix <VERSION_SUFFIX>`**
+- **`--version-suffix <VERSION_SUFFIX>`**
 
   Ustawia wartość właściwości `$(VersionSuffix)`, która ma być używana podczas kompilowania projektu. Działa to tylko wtedy, gdy właściwość `$(Version)` nie jest ustawiona. Następnie `$(Version)` jest ustawiona na `$(VersionPrefix)` połączone z `$(VersionSuffix)`, oddzielone kreską.
 
 ## <a name="examples"></a>Przykłady
 
-* Kompiluj projekt i jego zależności:
+- Kompiluj projekt i jego zależności:
 
   ```dotnetcli
   dotnet build
   ```
 
-* Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
+- Kompilowanie projektu i jego zależności przy użyciu konfiguracji wydania:
 
   ```dotnetcli
   dotnet build --configuration Release
   ```
 
-* Kompiluj projekt i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18,04):
+- Kompiluj projekt i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 18,04):
 
   ```dotnetcli
   dotnet build --runtime ubuntu.18.04-x64
   ```
 
-* Kompiluj projekt i Użyj określonego źródła pakietu NuGet podczas operacji przywracania (zestaw .NET Core 2,0 SDK i nowsze wersje):
+- Kompiluj projekt i Użyj określonego źródła pakietu NuGet podczas operacji przywracania (zestaw .NET Core 2,0 SDK i nowsze wersje):
 
   ```dotnetcli
   dotnet build --source c:\packages\mypackages
   ```
 
-* Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu [opcji programu MSBuild](#msbuild)`-p`:
+- Skompiluj projekt i ustaw wersję 1.2.3.4 jako parametr kompilacji przy użyciu [opcji programu MSBuild](#msbuild)`-p`:
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

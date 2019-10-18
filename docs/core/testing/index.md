@@ -5,12 +5,12 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 835e7c0cffbcd5857c33694586b4d63511ecadb8
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 006ccf0370f8014e5021275c4d38cc50bf1c076f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926295"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522912"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testy jednostkowe w .NET Core i .NET Standard
 
@@ -39,30 +39,30 @@ Więcej informacji na temat testów jednostkowych w projektach .NET Core:
 
 Projekty testów jednostkowych programu .NET Core są obsługiwane w przypadku:
 
-* [C#](../../csharp/index.md)
-* [F#](../../fsharp/index.md)
-* [Visual Basic](../../visual-basic/index.md) 
+- [C#](../../csharp/index.md)
+- [F#](../../fsharp/index.md)
+- [Visual Basic](../../visual-basic/index.md) 
 
 Możesz również wybrać między:
 
-* [xUnit](https://xunit.github.io) 
-* [NUnit](https://nunit.org)
-* [MSTest](https://github.com/Microsoft/testfx-docs)
+- [xUnit](https://xunit.github.io) 
+- [NUnit](https://nunit.org)
+- [MSTest](https://github.com/Microsoft/testfx-docs)
 
 Więcej informacji można znaleźć w następujących przewodnikach:
 
-* Utwórz testy jednostkowe za pomocą [ *xUnit* i *C#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *nunit* i *C#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *MSTest* i *C#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *xUnit* i *F#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *nunit* i *F#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *MSTest* i *F#* z interfejs wiersza polecenia platformy .NET Core.
-* Utwórz testy jednostkowe za pomocą [ *xUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
-* Utwórz testy jednostkowe za pomocą [ *NUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-nunit.md).
-* Utwórz testy jednostkowe za pomocą [ *MSTest* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-mstest.md).
+- Utwórz testy jednostkowe za pomocą [ *xUnit* i *C#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-with-dotnet-test.md).
+- Utwórz testy jednostkowe za pomocą [ *nunit* i *C#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-with-nunit.md).
+- Utwórz testy jednostkowe za pomocą [ *MSTest* i *C#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-with-mstest.md).
+- Utwórz testy jednostkowe za pomocą [ *xUnit* i *F#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+- Utwórz testy jednostkowe za pomocą [ *nunit* i *F#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-nunit.md).
+- Utwórz testy jednostkowe za pomocą [ *MSTest* i *F#* z interfejs wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-mstest.md).
+- Utwórz testy jednostkowe za pomocą [ *xUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+- Utwórz testy jednostkowe za pomocą [ *NUnit* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-nunit.md).
+- Utwórz testy jednostkowe za pomocą [ *MSTest* i *Visual Basic* z interfejs wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 Więcej informacji można znaleźć w następujących artykułach:
 
-* Visual Studio Enterprise oferuje doskonałe narzędzia do testowania dla platformy .NET Core. Sprawdź [Live Unit Testing](/visualstudio/test/live-unit-testing) lub [pokrycie kodu](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) , aby dowiedzieć się więcej.
-* Aby uzyskać więcej informacji na temat uruchamiania selektywnych testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](selective-unit-tests.md)lub [uwzględnianie i wykluczanie testów w programie Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* [Jak używać xUnit z platformą .NET Core i programem Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
+- Visual Studio Enterprise oferuje doskonałe narzędzia do testowania dla platformy .NET Core. Sprawdź [Live Unit Testing](/visualstudio/test/live-unit-testing) lub [pokrycie kodu](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage) , aby dowiedzieć się więcej.
+- Aby uzyskać więcej informacji na temat uruchamiania selektywnych testów jednostkowych, zobacz [Uruchamianie selektywnych testów jednostkowych](selective-unit-tests.md)lub [uwzględnianie i wykluczanie testów w programie Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+- [Jak używać xUnit z platformą .NET Core i programem Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).

@@ -1,24 +1,24 @@
 ---
-title: 'Przewodnik: Osadź typy z zestawów zarządzanych w programie Visual Studio'
+title: 'Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio'
 ms.date: 08/19/2019
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1f32bd840efa97b62097a2d051c25d519785b381
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1a37a3bcc3b1bc352d6a2f59691819e0b2403d3d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973272"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523896"
 ---
-# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Przewodnik: Osadź typy z zestawów zarządzanych w programie Visual Studio
+# <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio
 
 Jeśli osadzisz informacje o typie z zestawu o silnej nazwie zarządzanej, możesz luźno połączyć typy w aplikacji, aby osiągnąć niezależność wersji. Oznacza to, że program można napisać tak, aby używał typów z dowolnej wersji biblioteki zarządzanej bez konieczności ponownego kompilowania każdej nowej wersji.
 
 Osadzanie typów jest często używane z międzyoperacyjnym modelem COM, takim jak aplikacja, która korzysta z obiektów automatyzacji z Microsoft Office. Osadzanie informacji o typie umożliwia tej samej kompilacji programu do pracy z różnymi wersjami Microsoft Office na różnych komputerach. Można jednak również użyć osadzania typu z w pełni zarządzanych rozwiązań.
 
-Po określeniu interfejsów publicznych, które mogą być osadzone, należy utworzyć klasy środowiska uruchomieniowego, które implementują te interfejsy. Program kliencki może osadzić informacje o typie dla interfejsów w czasie projektowania, odwołując się do zestawu, który zawiera interfejsy publiczne i ustawiając `Embed Interop Types` Właściwość odwołania na. `True` Następnie program kliencki może ładować wystąpienia obiektów środowiska uruchomieniowego, które zostały wpisane jako te interfejsy. Jest to równoznaczne z użyciem kompilatora wiersza polecenia i odwołującego się do zestawu `/link` przy użyciu opcji kompilatora. 
+Po określeniu interfejsów publicznych, które mogą być osadzone, należy utworzyć klasy środowiska uruchomieniowego, które implementują te interfejsy. Program kliencki może osadzić informacje o typie dla interfejsów w czasie projektowania, odwołując się do zestawu, który zawiera interfejsy publiczne i ustawiając właściwość `Embed Interop Types` odwołania do `True`. Następnie program kliencki może ładować wystąpienia obiektów środowiska uruchomieniowego, które zostały wpisane jako te interfejsy. Jest to równoznaczne z użyciem kompilatora wiersza polecenia i odwołującego się do zestawu przy użyciu opcji kompilatora `/link`. 
 
 Jeśli utworzysz nową wersję zestawu o silnej nazwie środowiska uruchomieniowego, nie trzeba ponownie kompilować programu klienckiego. Program kliencki nadal korzysta z niezależnej wersji zestawu środowiska uruchomieniowego, przy użyciu informacji o typie osadzonym dla interfejsów publicznych.
 
@@ -37,27 +37,27 @@ W tym instruktażu zawarto następujące instrukcje:
 Informacje o typie można osadzić z zestawu w następujących warunkach: 
 
 - Zestaw uwidacznia co najmniej jeden interfejs publiczny.
-- Interfejsy osadzone mają adnotacje z `ComImport` atrybutami i `Guid` atrybutami o unikatowych identyfikatorach GUID.
-- Zestaw jest oznaczony `ImportedFromTypeLib` atrybutem `PrimaryInteropAssembly` lub atrybutem i atrybutem na poziomie `Guid` zestawu. Szablony projektu C# wizualizacji i Visual Basic zawierają domyślnie atrybut na poziomie `Guid` zestawu.
+- Interfejsy osadzone są opatrzone adnotacjami `ComImport` atrybuty i `Guid` atrybutów z unikatowymi identyfikatorami GUID.
+- Zestaw jest oznaczony atrybutem `ImportedFromTypeLib` lub atrybutem `PrimaryInteropAssembly` i atrybutem `Guid` na poziomie zestawu. Szablony projektu C# wizualizacji i Visual Basic zawierają domyślnie atrybut `Guid` na poziomie zestawu.
 
 Ponieważ podstawową funkcją osadzania typu jest obsługa zestawów międzyoperacyjnych COM, podczas osadzania informacji o typie w w pełni zarządzanym rozwiązaniu obowiązują następujące ograniczenia:
 
 - Osadzone są tylko atrybuty charakterystyczne dla międzyoperacyjnych modelu COM. Inne atrybuty są ignorowane.
 - Jeśli typ korzysta z parametrów ogólnych, a typ parametru generycznego jest typem osadzonym, ten typ nie może być używany między granicami zestawu. Przykłady przekroczenia granicy zestawu obejmują wywołanie metody z innego zestawu lub pochodny typ z typu zdefiniowanego w innym zestawie.
 - Stałe nie są osadzone.
-- <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> Klasa nie obsługuje osadzonego typu jako klucza. Możesz zaimplementować własny typ słownika, aby obsługiwał typ osadzony jako klucz.
+- Klasa <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> nie obsługuje osadzonego typu jako klucza. Możesz zaimplementować własny typ słownika, aby obsługiwał typ osadzony jako klucz.
 
 ## <a name="create-an-interface"></a>Tworzenie interfejsu
 
 Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu. 
 
-1. W programie Visual Studio, wybierz **pliku** > **New** > **projektu**.
+1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
    
 1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **bibliotekę klas vb (.NET Framework)** , a następnie wybierz przycisk **dalej**. 
    
 1. W oknie dialogowym **Konfigurowanie nowego projektu** w obszarze **Nazwa projektu**wpisz *TypeEquivalenceInterface*, a następnie wybierz pozycję **Utwórz**. Nowy projekt zostanie utworzony.
    
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Class1.cs* lub *Class1. vb* , wybierz polecenie **Zmień nazwę**, a następnie zmień nazwę pliku z *Class1* na *ISampleInterface*. Należy **odpowiedzieć na** monit, aby zmienić nazwę klasy na `ISampleInterface`. Ta klasa reprezentuje interfejs publiczny dla klasy.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Class1.cs* lub *Class1. vb* , wybierz polecenie **Zmień nazwę**, a następnie zmień nazwę pliku z *Class1* na *ISampleInterface*. Aby zmienić nazwę klasy na `ISampleInterface`, należy odpowiedzieć na monit **tak** . Ta klasa reprezentuje interfejs publiczny dla klasy.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** , a następnie wybierz polecenie **Właściwości**. 
    
@@ -67,7 +67,7 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
    
 1. W oknie dialogowym **Tworzenie klucza o silnej nazwie** w obszarze **Nazwa pliku klucza**wpisz polecenie *Key. snk*. Usuń zaznaczenie pola wyboru **Chroń mój klucz plik hasłem** , a następnie wybierz przycisk **OK**.
    
-1. Otwórz plik klasy *ISampleInterface* w edytorze kodu i Zastąp jego zawartość następującym kodem, aby utworzyć `ISampleInterface` interfejs:
+1. Otwórz plik klasy *ISampleInterface* w edytorze kodu i Zastąp jego zawartość następującym kodem, aby utworzyć interfejs `ISampleInterface`:
    
    ```csharp
    using System;
@@ -98,7 +98,7 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
    
 1. W menu **Narzędzia** wybierz pozycję **Utwórz identyfikator GUID**, a następnie w oknie dialogowym **Tworzenie identyfikatora GUID** wybierz pozycję **Format rejestru**. Wybierz pozycję **Kopiuj**, a następnie wybierz pozycję **Zakończ**.
    
-1. W atrybucie kodu Zastąp przykładowy identyfikator GUID identyfikatorem, który został skopiowany, i Usuń nawiasy klamrowe ( **{}** ). `Guid`
+1. W atrybucie `Guid` kodu Zastąp przykładowy identyfikator GUID identyfikatorem, który został skopiowany, i Usuń nawiasy klamrowe ( **{}** ).
    
 1. W **Eksplorator rozwiązań**rozwiń folder **Właściwości** i wybierz plik *AssemblyInfo.cs* lub *AssemblyInfo. vb* . W edytorze kodu Dodaj następujący atrybut do pliku:
    
@@ -110,7 +110,7 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
    <Assembly: ImportedFromTypeLib("")>
    ```
    
-1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Kompiluj**. Plik DLL biblioteki klas jest kompilowany i zapisywany w określonej ścieżce danych wyjściowych kompilacji, na przykład *C:\TypeEquivalenceSample*.
 
@@ -118,13 +118,13 @@ Pierwszym krokiem jest utworzenie zestawu interfejsu równoważność typu.
 
 Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
 
-1. W programie Visual Studio, wybierz **pliku** > **New** > **projektu**.
+1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
    
 1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Biblioteka klas* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **bibliotekę klas vb (.NET Framework)** , a następnie wybierz przycisk **dalej**. 
    
 1. W oknie dialogowym **Konfigurowanie nowego projektu** w obszarze **Nazwa projektu**wpisz *TypeEquivalenceRuntime*, a następnie wybierz pozycję **Utwórz**. Nowy projekt zostanie utworzony.
    
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Class1.cs* lub *Class1. vb* , wybierz polecenie **Zmień nazwę**, a następnie zmień nazwę pliku z *Class1* na *SampleClass*. Należy **odpowiedzieć na** monit, aby zmienić nazwę klasy na `SampleClass`. Ta klasa implementuje `ISampleInterface` interfejs.
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy plik *Class1.cs* lub *Class1. vb* , wybierz polecenie **Zmień nazwę**, a następnie zmień nazwę pliku z *Class1* na *SampleClass*. Aby zmienić nazwę klasy na `SampleClass`, należy odpowiedzieć na monit **tak** . Ta klasa implementuje interfejs `ISampleInterface`.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Właściwości**. 
    
@@ -134,13 +134,13 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
    
 1. W oknie dialogowym **Tworzenie klucza o silnej nazwie** w obszarze **Nazwa pliku klucza**wpisz polecenie *Key. snk*. Usuń zaznaczenie pola wyboru **Chroń mój klucz plik hasłem** , a następnie wybierz przycisk **OK**.
    
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Dodaj** > **odwołanie**. 
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Dodaj**  > **odwołanie**. 
    
 1. W oknie dialogowym **Menedżer odwołań** wybierz **Przeglądaj** i przejdź do folderu Ścieżka wyjściowa. Wybierz plik *TypeEquivalenceInterface. dll* , wybierz pozycję **Dodaj**, a następnie wybierz przycisk **OK**.
    
 1. W **Eksplorator rozwiązań**rozwiń folder **odwołania** i wybierz odwołanie **TypeEquivalenceInterface** . W okienku **Właściwości** Ustaw **określoną wersję** na **false** , jeśli nie została jeszcze wybrana.
    
-1. Otwórz plik klasy *SampleClass* w edytorze kodu i Zastąp jego zawartość następującym kodem, aby utworzyć `SampleClass` klasę:
+1. Otwórz plik klasy *SampleClass* w edytorze kodu i Zastąp jego zawartość następującym kodem, aby utworzyć klasę `SampleClass`:
    
    ```csharp
    using System;
@@ -185,7 +185,7 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
    End Class
    ```
    
-1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Kompiluj**. Plik DLL biblioteki klas zostanie skompilowany i zapisany w określonej ścieżce danych wyjściowych kompilacji.
 
@@ -193,7 +193,7 @@ Następnie Utwórz klasę środowiska uruchomieniowego typu równoważność.
 
 Na koniec Utwórz program kliencki typu równoważność, który odwołuje się do zestawu interfejsu.
 
-1. W programie Visual Studio, wybierz **pliku** > **New** > **projektu**.
+1. W programie Visual Studio wybierz pozycję **plik**  > **Nowy**  > **projekt**.
    
 1. W oknie dialogowym **Utwórz nowy projekt** wpisz *Console* w polu **Wyszukaj szablony** . Wybierz z listy C# szablon lub **aplikację konsolową vb (.NET Framework)** , a następnie wybierz przycisk **dalej**. 
    
@@ -203,9 +203,9 @@ Na koniec Utwórz program kliencki typu równoważność, który odwołuje się 
    
 1. Wybierz opcję **Kompiluj** w lewym okienku ekranu **Właściwości** , a następnie ustaw **ścieżkę wyjściową** do tej samej lokalizacji, która została użyta dla projektu TypeEquivalenceInterface, na przykład *C:\TypeEquivalenceSample*.
    
-1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceClient** i wybierz polecenie **Dodaj** > **odwołanie**. 
+1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceClient** i wybierz polecenie **Dodaj**  > **odwołanie**. 
    
-1. W oknie dialogowym **Menedżer odwołań** , jeśli plik **TypeEquivalenceInterface. dll** jest już wymieniony, zaznacz go. W przeciwnym razie wybierz pozycję **Przeglądaj**, przejdź do folderu Ścieżka wyjściowa, wybierz plik *TypeEquivalenceInterface. dll* (nie *TypeEquivalenceRuntime. dll*), a następnie wybierz pozycję **Dodaj**. Kliknij przycisk **OK**.
+1. W oknie dialogowym **Menedżer odwołań** , jeśli plik **TypeEquivalenceInterface. dll** jest już wymieniony, zaznacz go. W przeciwnym razie wybierz pozycję **Przeglądaj**, przejdź do folderu Ścieżka wyjściowa, wybierz plik *TypeEquivalenceInterface. dll* (nie *TypeEquivalenceRuntime. dll*), a następnie wybierz pozycję **Dodaj**. Wybierz **przycisk OK**.
    
 1. W **Eksplorator rozwiązań**rozwiń folder **odwołania** i wybierz odwołanie **TypeEquivalenceInterface** . W okienku **Właściwości** ustaw opcję **Osadź typy międzyoperacyjności** na **wartość true**.
    
@@ -256,15 +256,15 @@ Na koniec Utwórz program kliencki typu równoważność, który odwołuje się 
    End Module
    ```
    
-1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
    
-1. Naciśnij klawisz **Ctrl**+**F5** , aby skompilować i uruchomić program. Zwróć uwagę, że dane wyjściowe konsoli zwracają zestaw w wersji **1.0.0.0**. 
+1. Naciśnij klawisz **Ctrl** +**F5** , aby skompilować i uruchomić program. Zwróć uwagę, że dane wyjściowe konsoli zwracają zestaw w wersji **1.0.0.0**. 
    
 ## <a name="modify-the-interface"></a>Modyfikowanie interfejsu
 
 Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję. 
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Otwórz** > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceInterface** .
+1. W programie Visual Studio wybierz pozycję **plik**  > **Otwórz**  > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceInterface** .
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Właściwości**. 
    
@@ -272,7 +272,7 @@ Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
    
 1. W oknie dialogowym **Informacje o zestawie** Zmień **wersję zestawu** i wartość **wersji pliku** na *2.0.0.0*, a następnie wybierz przycisk **OK**.
    
-1. Otwórz plik *SampleInterface.cs* lub *SampleInterface. vb* i Dodaj następujący wiersz `ISampleInterface` kodu do interfejsu:
+1. Otwórz plik *SampleInterface.cs* lub *SampleInterface. vb* i Dodaj następujący wiersz kodu do interfejsu `ISampleInterface`:
    
    ```csharp
    DateTime GetDate();
@@ -282,7 +282,7 @@ Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
    Function GetDate() As Date
    ```
    
-1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceInterface** i wybierz polecenie **Kompiluj**. Nowa wersja pliku DLL biblioteki klas jest kompilowana i zapisywana w ścieżce danych wyjściowych kompilacji.
 
@@ -290,7 +290,7 @@ Teraz zmodyfikuj zestaw interfejsów i zmień jego wersję.
 
 Należy również zmodyfikować klasę środowiska uruchomieniowego i zaktualizować jej wersję. 
 
-1. W programie Visual Studio wybierz pozycję **plik** > **Otwórz** > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceRuntime** .
+1. W programie Visual Studio wybierz pozycję **plik**  > **Otwórz**  > **projekt/rozwiązanie**, a następnie otwórz projekt **TypeEquivalenceRuntime** .
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Właściwości**. 
    
@@ -298,7 +298,7 @@ Należy również zmodyfikować klasę środowiska uruchomieniowego i zaktualizo
    
 1. W oknie dialogowym **Informacje o zestawie** Zmień **wersję zestawu** i wartość **wersji pliku** na *2.0.0.0*, a następnie wybierz przycisk **OK**.
    
-1. Otwórz plik *SampleClass.cs* lub *SampleClass. vb* i Dodaj następujący `SampleClass` kod do klasy:
+1. Otwórz plik *SampleClass.cs* lub *SampleClass. vb* i Dodaj następujący kod do klasy `SampleClass`:
    
    ```csharp
     public DateTime GetDate()
@@ -313,18 +313,18 @@ Należy również zmodyfikować klasę środowiska uruchomieniowego i zaktualizo
    End Function
    ```
    
-1. Wybierz pozycję **plik** > **Zapisz wszystko** lub naciśnij **klawisze CTRL**+**SHIFT**+**S** , aby zapisać pliki i projekt.
+1. Wybierz pozycję **plik**  > **Zapisz wszystko** lub naciśnij **klawisze CTRL** +**SHIFT** +**S** , aby zapisać pliki i projekt.
    
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy projekt **TypeEquivalenceRuntime** i wybierz polecenie **Kompiluj**. Nowa wersja pliku DLL biblioteki klas jest kompilowana i zapisywana w ścieżce danych wyjściowych kompilacji.
 
 ## <a name="run-the-updated-client-program"></a>Uruchom zaktualizowany program kliencki 
 
-Przejdź do lokalizacji folderu danych wyjściowych kompilacji i uruchom *TypeEquivalenceClient. exe*. Zwróć uwagę, że dane wyjściowe konsoli teraz odzwierciedlają nową wersję `TypeEquivalenceRuntime` zestawu, *2.0.0.0*, bez ponownej kompilacji programu.
+Przejdź do lokalizacji folderu danych wyjściowych kompilacji i uruchom *TypeEquivalenceClient. exe*. Zwróć uwagę, że dane wyjściowe konsoli teraz odzwierciedlają nową wersję zestawu `TypeEquivalenceRuntime`, *2.0.0.0*, bez ponownej kompilacji programu.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [/Link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
+- [-Link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [-Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [C#Przewodnik programowania](../../csharp/programming-guide/index.md)
 - [Koncepcje programowania (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
 - [Program z zestawami](program.md)

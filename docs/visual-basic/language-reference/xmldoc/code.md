@@ -1,19 +1,19 @@
 ---
-title: '&lt;Kod&gt; (Visual Basic)'
+title: <code> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - code XML tag
 - <code> XML tag
 ms.assetid: 925e5342-be05-45f2-bf66-7398bbd6710e
-ms.openlocfilehash: 8a4708a7b50b0e221c1ebe7f95d4f8ff80cd1ebe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4e887e3bbbc01e4cef5278f67b8c4afe273bf28
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566310"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524033"
 ---
-# <a name="ltcodegt-visual-basic"></a>&lt;Kod&gt; (Visual Basic)
-Wskazuje, że tekst jest wiele wierszy kodu.  
+# <a name="code-visual-basic"></a>> \<code (Visual Basic)
+Wskazuje, że tekst jest wieloma wierszami kodu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -21,19 +21,20 @@ Wskazuje, że tekst jest wiele wierszy kodu.
 <code>content</code>  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry  
  `content`  
- Tekst, aby oznaczyć jako kod.  
+ Tekst, który ma zostać oznaczony jako kod.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<code>` tag, aby wskazać wiele wierszy, jako kod. Użyj [ \<c >](../../../visual-basic/language-reference/xmldoc/c.md) do wskazania, że tekst w opis powinien być oznaczony jako kod.  
+ Użyj znacznika `<code>`, aby wskazać wiele wierszy jako kod. Użyj [> \<c](../../../visual-basic/language-reference/xmldoc/c.md) , aby wskazać, że tekst w opisie powinien być oznaczony jako kod.  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto \<kodu > tag obejmujący przykładowy kod dla przy użyciu `ID` pola.  
+ W tym przykładzie użyto znacznika > \<code, aby dołączyć przykładowy kod do użycia pola `ID`.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/code_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
+
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

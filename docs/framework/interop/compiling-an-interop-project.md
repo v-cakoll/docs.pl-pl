@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85841491ace5b8959c3517f407c14069b34733a7
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5bc92eb9d4b7b0ae5db56303f3fbfa991c58e06a
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969091"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523834"
 ---
 # <a name="compiling-an-interop-project"></a>Kompilowanie projektu międzyoperacyjnego
 
@@ -24,15 +24,15 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 
  Istnieją dwa sposoby odwoływania się do zestawów międzyoperacyjnych:
 
-- Osadzone typy międzyoperacyjnych: Począwszy od .NET Framework 4 i programu Visual Studio 2010, można nakazać kompilatorowi osadzenie informacji o typie z zestawu międzyoperacyjnego do pliku wykonywalnego. Jest to zalecana technika.
+- Osadzone typy międzyoperacyjnych: począwszy od .NET Framework 4 i programu Visual Studio 2010, można wydać kompilatorowi możliwość osadzenia informacji o typie z zestawu międzyoperacyjnego w pliku wykonywalnym. Jest to zalecana technika.
 
-- Wdrażanie zestawów międzyoperacyjnych: Można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W takim przypadku zestaw międzyoperacyjny musi zostać wdrożony wraz z aplikacją.
+- Wdrażanie zestawów międzyoperacyjnych: można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W takim przypadku zestaw międzyoperacyjny musi zostać wdrożony wraz z aplikacją.
 
  Różnice między tymi dwoma technikami zostały omówione bardziej szczegółowo w temacie [Korzystanie z typów com w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100)).
 
- Osadzanie typów międzyoperacyjnych w programie Visual Studio jest [zademonstrowane w przewodniku: Osadzanie typów z zarządzanych zestawów w programie Visual](../../standard/assembly/embed-types-visual-studio.md)Studio.
+ Osadzanie typów międzyoperacyjnych w programie Visual Studio jest zademonstrowane w [przewodniku: osadzanie typów z zestawów zarządzanych w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md).
 
- Aby odwołać się do zestawu międzyoperacyjnego przy użyciu kompilatora wiersza polecenia i informacje o typie osadzania w plikach wykonywalnych, należy użyć [opcji/link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub/ [/lub/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) kompilatora i określić nazwę zestawu międzyoperacyjnego.
+ Aby odwołać się do zestawu międzyoperacyjnego przy użyciu kompilatora wiersza polecenia i informacje o typie osadzania w plikach wykonywalnych, użyj [łącza-link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub przełącznika [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) i określ nazwę zestawu międzyoperacyjnego.
 
 > [!NOTE]
 > Aplikacje C++ wizualne nie mogą osadzić informacji o typie, ale mogą współdziałać z aplikacjami lub dodatkami, które wykonują operacje.
@@ -44,5 +44,5 @@ Projekty międzyoperacyjności modelu COM, które odwołują się do co najmniej
 - [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)
 - [Niezależność od języka i składniki niezależne od języka](../../standard/language-independence-and-language-independent-components.md)
 - [Używanie typów COM w kodzie zarządzanym](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Przewodnik: Osadzanie typów z zestawów zarządzanych w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
+- [Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio](../../standard/assembly/embed-types-visual-studio.md)
 - [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

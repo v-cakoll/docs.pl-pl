@@ -1,37 +1,37 @@
 ---
-ms.openlocfilehash: dab6b435a885d862d08f94dd31de79625f19bcc0
-ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
+ms.openlocfilehash: 2872c5909b382e01fdd231019a12970caa3b77d2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67870509"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72526766"
 ---
-## <a name="installation-instructions---visual-studio-installer"></a>Instrukcje dotyczące instalacji — Instalatora programu Visual Studio
+## <a name="installation-instructions---visual-studio-installer"></a>Instrukcje dotyczące instalacji — Instalator programu Visual Studio
 
-Istnieją dwa różne sposoby, aby znaleźć **zestawu SDK platformy kompilatora .NET** w **Instalatora programu Visual Studio**:
+Istnieją dwa różne sposoby znajdowania **zestawu SDK .NET compiler platform** w **Instalator programu Visual Studio**:
 
-### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Instalowanie przy użyciu Instalatora programu Visual Studio — Wyświetlanie obciążeń
+### <a name="install-using-the-visual-studio-installer---workloads-view"></a>Instalowanie przy użyciu widoku Instalator programu Visual Studio — obciążenia
 
-Zestaw SDK platformy kompilatora .NET nie jest automatycznie wybierany jako część obciążenia projektowania rozszerzenia programu Visual Studio. Musisz wybrać go jako składnik opcjonalny.
+Zestaw .NET Compiler Platform SDK nie jest automatycznie wybierany jako część obciążenia programowania rozszerzeń programu Visual Studio. Należy zaznaczyć go jako składnik opcjonalny.
 
-1. Uruchom **Instalatora programu Visual Studio** 
-1. Wybierz **zmodyfikować** 
-1. Sprawdź **programowanie rozszerzeń programu Visual Studio** obciążenia.
-1. Otwórz **programowanie rozszerzeń programu Visual Studio** węzeł w drzewie podsumowania.
-1. Pole wyboru dla **zestawu SDK platformy kompilatora .NET**. Znajdziesz go ostatnio w ramach opcjonalnych składników.
+1. Uruchom **Instalator programu Visual Studio**
+1. Wybieranie opcji **Modyfikuj**
+1. Sprawdź obciążenie **programowanie rozszerzenia programu Visual Studio** .
+1. Otwórz węzeł **programowanie rozszerzeń programu Visual Studio** w drzewie podsumowującym.
+1. Zaznacz pole wyboru **.NET COMPILER Platform SDK**. Znajdziesz go jako ostatni w obszarze opcjonalnych składników.
 
-Opcjonalnie można też **Edytor DGML** do wyświetlania wykresów w wizualizatorze:
+Opcjonalnie, aby **Edytor DGML** wyświetlał wykresy w wizualizatorze:
 
-1. Otwórz **poszczególne składniki** węzeł w drzewie podsumowania.
-1. Pole wyboru dla **Edytor DGML**
+1. Otwórz węzeł **poszczególne składniki** w drzewie podsumowania.
+1. Zaznacz pole wyboru dla **edytora DGML**
 
-### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Instalowanie przy użyciu Instalatora programu Visual Studio — karcie poszczególne składniki
+### <a name="install-using-the-visual-studio-installer---individual-components-tab"></a>Instalowanie przy użyciu karty Instalator programu Visual Studio poszczególnych składników
 
-1. Uruchom **Instalatora programu Visual Studio** 
-1. Wybierz **zmodyfikować** 
-1. Wybierz **poszczególne składniki** kartę 
-1. Pole wyboru dla **zestawu SDK platformy kompilatora .NET**. Znajdziesz ją u góry strony, w obszarze **kompilatory, narzędzia do kompilacji i środowiska uruchomieniowe** sekcji.
+1. Uruchom **Instalator programu Visual Studio**
+1. Wybieranie opcji **Modyfikuj**
+1. Wybierz kartę **poszczególne składniki**
+1. Zaznacz pole wyboru **.NET COMPILER Platform SDK**. Znajdziesz go u góry w sekcji **kompilatory, narzędzia kompilacji i środowiska uruchomieniowe** .
 
-Opcjonalnie można też **Edytor DGML** do wyświetlania wykresów w wizualizatorze:
+Opcjonalnie, aby **Edytor DGML** wyświetlał wykresy w wizualizatorze:
 
-1. Pole wyboru dla **Edytor DGML**. Znajdziesz go w folderze **kodu narzędzia** sekcji.
+1. Zaznacz pole wyboru **Edytor DGML**. Znajdziesz go w sekcji **Narzędzia kodu** .

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: e9eb50394f01072a194d3f746577707f89ba65dd
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587882"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523397"
 ---
-# <a name="permission-c-programming-guide"></a>\<> uprawnień (C# Przewodnik programowania)
+# <a name="permission-c-programming-guide"></a>\<permission > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -24,18 +24,18 @@ ms.locfileid: "69587882"
 ```  
   
 ## <a name="parameters"></a>Parametry  
- cref = " `member`"  
+ cref = "`member`"  
  Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. *składowa* musi znajdować się w podwójnym cudzysłowie ("").  
   
- Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [ \<temat >](./see.md).  
+ Aby uzyskać informacje na temat sposobu tworzenia odwołania cref do typu ogólnego, zobacz [\<see >](./see.md).  
   
  `description`  
  Opis dostępu do elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<> uprawnień umożliwia dokumentowanie dostępu do elementu członkowskiego. <xref:System.Security.PermissionSet> Klasa pozwala określić dostęp do elementu członkowskiego.  
+ Tag \<permission > umożliwia dokumentowanie dostępu do elementu członkowskiego. Klasa <xref:System.Security.PermissionSet> pozwala określić dostęp do elementu członkowskiego.  
   
- Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]  

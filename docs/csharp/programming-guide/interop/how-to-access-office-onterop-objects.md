@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 3399d1aad8a2118775f7779727d4d03ee2002547
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f0b763ad6b65c74b8c406fe006ef4036e70a99d4
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834210"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523566"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)
 
@@ -67,7 +67,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]
 
-2. Dodaj następujący kod do metody `Main`, aby utworzyć listę `bankAccounts` zawierającą dwa konta.
+2. Dodaj następujący kod do metody `Main` w celu utworzenia listy `bankAccounts` zawierającej dwa konta.
 
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]
 
@@ -91,11 +91,11 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]
 
-     Starsze wersje C# wymagają jawnego rzutowania dla tych operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` to metoda programu Excel <xref:Microsoft.Office.Interop.Excel.Range>. W poniższych wierszach przedstawiono rzutowanie.
+     Wcześniejsze wersje programu C# wymagają jawnego rzutowania tych operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` to metoda <xref:Microsoft.Office.Interop.Excel.Range> programu Excel. W poniższych wierszach przedstawiono rzutowanie.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
-     C#4 i nowsze wersje konwertują zwrócone `Object` do `dynamic` automatycznie, jeśli odwołuje się do zestawu opcję kompilatora [/link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy międzyoperacyjna** programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
+     C#4 i nowsze wersje konwertuje zwracane `Object` do `dynamic` automatycznie, jeśli odwołanie do zestawu jest przywoływane przez opcję kompilatora [-link](../../language-reference/compiler-options/link-compiler-option.md) lub, równoważne, jeśli właściwość " **Osadź typy międzyoperacyjna** programu Excel" ma wartość true. Wartość true jest wartością domyślną dla tej właściwości.
 
 ## <a name="to-run-the-project"></a>Aby uruchomić projekt
 
@@ -111,11 +111,11 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. Aby zilustrować dodatkowe sposoby, w których C# 4 i nowsze wersje rozszerzają Programowanie Office, poniższy kod otwiera aplikację Word i tworzy ikonę, która łączy się z arkuszem programu Excel.
 
-     Wklej metodę `CreateIconInWordDoc`, która znajduje się w dalszej części tego kroku, do klasy `Program`. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych, aby zmniejszyć złożoność wywołań metod do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania obejmują dwie inne nowe funkcje wprowadzone w C# 4, które upraszczają wywołania metod com, które mają parametry referencyjne. Najpierw można wysłać argumenty do parametrów odwołania, tak jakby były one parametrami wartości. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmiennej dla każdego parametru odwołania. Kompilator generuje zmienne tymczasowe do przechowywania wartości argumentów i odrzuca zmienne po powrocie z wywołania. Następnie można pominąć słowo kluczowe `ref` na liście argumentów.
+     Wklej metodę `CreateIconInWordDoc`, która znajduje się w dalszej części tego kroku, do klasy `Program`. `CreateIconInWordDoc` używa argumentów nazwanych i opcjonalnych w celu zmniejszenia złożoności wywołań metod do <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> i <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Te wywołania obejmują dwie inne nowe funkcje wprowadzone w C# 4, które upraszczają wywołania metod com, które mają parametry referencyjne. Najpierw można wysłać argumenty do parametrów odwołania, tak jakby były one parametrami wartości. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmiennej dla każdego parametru odwołania. Kompilator generuje zmienne tymczasowe do przechowywania wartości argumentów i odrzuca zmienne po powrocie z wywołania. Następnie można pominąć słowo kluczowe `ref` na liście argumentów.
 
      Metoda `Add` ma cztery parametry referencyjne, z których wszystkie są opcjonalne. W C# 4,0 i nowszych wersjach można pominąć argumenty dla dowolnego lub wszystkich parametrów, jeśli chcesz użyć ich wartości domyślnych. W C# 3,0 i wcześniejszych wersjach argument musi być podany dla każdego parametru, a argument musi być zmienną, ponieważ parametry są parametrami odwołania.
 
-     Metoda `PasteSpecial` Wstawia zawartość schowka. Metoda ma siedem parametrów referencyjnych, z których wszystkie są opcjonalne. Poniższy kod określa argumenty dla dwóch z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka i `DisplayAsIcon`, aby wyświetlić łącze jako ikonę. W C# 4,0 i nowszych wersjach, można użyć nazwanych argumentów dla tych dwóch i pominąć pozostałe. Chociaż są to parametry odwołania, nie trzeba używać słowa kluczowego `ref` ani do tworzenia zmiennych, które mają być wysyłane jako argumenty. Można wysłać wartości bezpośrednio. W C# 3,0 i wcześniejszych wersjach, należy podać zmienną argumentu dla każdego parametru odwołania.
+     Metoda `PasteSpecial` Wstawia zawartość schowka. Metoda ma siedem parametrów referencyjnych, z których wszystkie są opcjonalne. Poniższy kod określa argumenty dla dwóch z nich: `Link`, aby utworzyć łącze do źródła zawartości Schowka, a `DisplayAsIcon`, aby wyświetlić łącze jako ikonę. W C# 4,0 i nowszych wersjach, można użyć nazwanych argumentów dla tych dwóch i pominąć pozostałe. Chociaż są to parametry odwołania, nie trzeba używać słowa kluczowego `ref` ani do tworzenia zmiennych, które mają być wysyłane jako argumenty. Można wysłać wartości bezpośrednio. W C# 3,0 i wcześniejszych wersjach, należy podać zmienną argumentu dla każdego parametru odwołania.
 
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]
 
@@ -139,9 +139,9 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 1. Dodatkowe ulepszenia są możliwe w przypadku wywołania typu COM, który nie wymaga podstawowego zestawu międzyoperacyjnego (PIA) w czasie wykonywania. Usunięcie zależności od zestawów Pia powoduje niezależność wersji i łatwiejsze wdrażanie. Aby uzyskać więcej informacji na temat korzyści z programowania bez zestawów Pia, zobacz [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).
 
-     Ponadto programowanie jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody modelu COM mogą być reprezentowane za pomocą typu `dynamic` zamiast `Object`. Zmienne o typie `dynamic` nie są oceniane do czasu uruchomienia, co eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [Korzystanie z typu dynamicznego](../types/using-type-dynamic.md).
+     Ponadto programowanie jest łatwiejsze, ponieważ typy, które są wymagane i zwracane przez metody modelu COM mogą być reprezentowane przy użyciu typu `dynamic`, a nie `Object`. Zmienne o typie `dynamic` nie są oceniane do czasu uruchomienia, co eliminuje konieczność jawnego rzutowania. Aby uzyskać więcej informacji, zobacz [Korzystanie z typu dynamicznego](../types/using-type-dynamic.md).
 
-     W C# 4, osadzanie informacji o typie zamiast używania zestawów PIA jest zachowaniem domyślnym. Ze względu na to, że niektóre z powyższych przykładów są uproszczone, ponieważ jawne rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywana jako `Excel._Worksheet workSheet = excelApp.ActiveSheet`, a nie `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metodzie również wymagają jawnego rzutowania bez użycia domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` to metoda programu Excel. Poniższy kod przedstawia rzutowanie.
+     W C# 4, osadzanie informacji o typie zamiast używania zestawów PIA jest zachowaniem domyślnym. Ze względu na to, że niektóre z powyższych przykładów są uproszczone, ponieważ jawne rzutowanie nie jest wymagane. Na przykład deklaracja `worksheet` w `DisplayInExcel` jest zapisywana jako `Excel._Worksheet workSheet = excelApp.ActiveSheet` a nie `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Wywołania `AutoFit` w tej samej metodzie również wymagają jawnego rzutowania bez użycia domyślnego, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, a `AutoFit` jest metodą programu Excel. Poniższy kod przedstawia rzutowanie.
 
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]
 
@@ -149,7 +149,7 @@ Aby ukończyć ten przewodnik, musisz mieć Microsoft Office Excel 2007 i Micros
 
 3. Jeśli nie widzisz okna **Właściwości** , naciśnij klawisz **F4**.
 
-4. Znajdź **Osadź typy międzyoperacyjności** na liście właściwości i zmień jej wartość na **false**. Równoważne, można skompilować przy użyciu opcji kompilatora [/Reference](../../language-reference/compiler-options/reference-compiler-option.md) zamiast [/link](../../language-reference/compiler-options/link-compiler-option.md) w wierszu polecenia.
+4. Znajdź **Osadź typy międzyoperacyjności** na liście właściwości i zmień jej wartość na **false**. Analogicznie, można skompilować przy użyciu opcji kompilatora [-Reference](../../language-reference/compiler-options/reference-compiler-option.md) zamiast [-link](../../language-reference/compiler-options/link-compiler-option.md) w wierszu polecenia.
 
 ## <a name="to-add-additional-formatting-to-the-table"></a>Aby dodać dodatkowe formatowanie do tabeli
 

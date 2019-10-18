@@ -7,202 +7,204 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: 6ceebc3af01c13474affa6e728c49d6d246eb331
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5870a9a3a598c67badc9868af1486b52c76a9906
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701195"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523909"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania
-Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane przed ukończeniem wywołania. Rozważ zastosowanie operatora "await" do wyniku wywołania.  
-  
- Bieżąca metoda wywołuje metodę asynchroniczną, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i nie stosuje operatora [await](../../../visual-basic/language-reference/operators/await-operator.md) do wyniku. Wywołanie metody asynchronicznej uruchamia zadanie asynchroniczne. Ponieważ jednak żaden operator `Await` nie jest stosowany, program kontynuuje działanie bez oczekiwania na ukończenie zadania. W większości przypadków takie zachowanie nie jest oczekiwane. Zwykle inne aspekty metody wywołującej zależą od wyników wywołania lub, co najmniej metody wywoływanej, należy wykonać przed zwróceniem z metody, która zawiera wywołanie.  
-  
- Równie ważnym problemem jest to, co się dzieje z wyjątkami, które są wywoływane w wywołaniu metody asynchronicznej. Wyjątek, który jest wywoływany w metodzie, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> jest przechowywany w zwróconym zadaniu. Jeśli nie oczekujesz na zadanie lub jawnie sprawdzisz wyjątki, wyjątek zostanie utracony. Jeśli zaczekasz na zadanie, jego wyjątek zostanie ponownie wygenerowany.  
-  
- Najlepszym rozwiązaniem jest zawsze oczekiwanie na wywołanie.  
-  
- Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
-  
- **Identyfikator błędu:** BC42358  
-  
-### <a name="to-address-this-warning"></a>Aby rozwiązać ten komunikat ostrzegawczy  
-  
-- Należy rozważyć pominięcie ostrzeżenia tylko wtedy, gdy na pewno nie chcesz czekać na zakończenie wywołania asynchronicznego i że wywołana metoda nie zgłosi żadnych wyjątków. W takim przypadku można pominąć ostrzeżenie, przypisując wynik zadania wywołania zmiennej.  
-  
-     Poniższy przykład pokazuje, jak wywołać ostrzeżenie, jak go pominąć i jak oczekiwać na wywołanie.  
-  
-    ```vb  
-    Async Function CallingMethodAsync() As Task  
-  
-        ResultsTextBox.Text &= vbCrLf & "  Entering calling method."  
-  
-        ' Variable delay is used to slow down the called method so that you  
-        ' can distinguish between awaiting and not awaiting in the program's output.   
-        ' You can adjust the value to produce the output that this topic shows   
-        ' after the code.  
-        Dim delay = 5000  
-  
-        ' Call #1.  
-        ' Call an async method. Because you don't await it, its completion isn't   
-        ' coordinated with the current method, CallingMethodAsync.  
-        ' The following line causes the warning.  
-        CalledMethodAsync(delay)  
-  
-        ' Call #2.  
-        ' To suppress the warning without awaiting, you can assign the   
-        ' returned task to a variable. The assignment doesn't change how  
-        ' the program runs. However, the recommended practice is always to  
-        ' await a call to an async method.  
-        ' Replace Call #1 with the following line.  
-        'Task delayTask = CalledMethodAsync(delay)  
-  
-        ' Call #3  
-        ' To contrast with an awaited call, replace the unawaited call   
-        ' (Call #1 or Call #2) with the following awaited call. The best   
-        ' practice is to await the call.  
-  
-        'Await CalledMethodAsync(delay)  
-  
-        ' If the call to CalledMethodAsync isn't awaited, CallingMethodAsync  
-        ' continues to run and, in this example, finishes its work and returns  
-        ' to its caller.  
-        ResultsTextBox.Text &= vbCrLf & "  Returning from calling method."  
-    End Function  
-  
-    Async Function CalledMethodAsync(howLong As Integer) As Task  
-  
-        ResultsTextBox.Text &= vbCrLf & "    Entering called method, starting and awaiting Task.Delay."  
-        ' Slow the process down a little so you can distinguish between awaiting  
-        ' and not awaiting. Adjust the value for howLong if necessary.  
-        Await Task.Delay(howLong)  
-        ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."  
-    End Function  
-    ```  
-  
-     W przykładzie, jeśli wybierzesz Wywołaj #1 lub wywołaj #2, nieoczekiwana Metoda async (`CalledMethodAsync`) zakończy się po wykonaniu obu zadań wywołujących (`CallingMethodAsync`) i wywołujących wywołujących (`StartButton_Click`). Ostatni wiersz w poniższych danych wyjściowych pokazuje, kiedy wywołana metoda zostanie ukończona. Wejście i wyjście z programu obsługi zdarzeń, które wywołuje `CallingMethodAsync` w pełnym przykładzie są oznaczone w danych wyjściowych.  
-  
-    ```console  
-    Entering the Click event handler.  
-      Entering calling method.  
-        Entering called method, starting and awaiting Task.Delay.  
-      Returning from calling method.  
-    Exiting the Click event handler.  
-        Task.Delay is finished--returning from called method.  
-    ```  
-  
-## <a name="example"></a>Przykład  
- Następująca aplikacja Windows Presentation Foundation (WPF) zawiera metody z poprzedniego przykładu. Poniższe kroki konfigurują aplikację.  
-  
-1. Utwórz aplikację WPF i nadaj jej nazwę `AsyncWarning`.  
-  
-2. W edytorze Visual Studio Code wybierz kartę **MainWindow. XAML** .  
-  
-     Jeśli karta nie jest widoczna, otwórz menu skrótów dla MainWindow. XAML w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Wyświetl kod**.  
-  
-3. Zastąp kod w widoku **XAML** MainWindow. XAML poniższym kodem.  
-  
-    ```vb  
-    <Window x:Class="MainWindow"  
-            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
-            Title="MainWindow" Height="350" Width="525">  
-        <Grid>  
-            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="214,28,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Center" FontWeight="Bold" FontFamily="Aharoni" Click="StartButton_Click" />  
-            <TextBox x:Name="ResultsTextBox" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>  
-        </Grid>  
-    </Window>  
-    ```  
-  
-     Proste okno zawierające przycisk i pole tekstowe pojawia się w widoku **projekt** MainWindow. XAML.  
-  
-     Aby uzyskać więcej informacji na temat projektant XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu Projektant XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby uzyskać informacje na temat tworzenia własnego prostego interfejsu użytkownika, zobacz sekcję "aby utworzyć aplikację WPF" i "aby zaprojektować prostą sekcję WPF MainWindow" [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
-  
-4. Zastąp kod w MainWindow. XAML. vb następującym kodem.  
-  
-    ```vb  
-    Class MainWindow   
-  
-        Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)  
-  
-            ResultsTextBox.Text &= vbCrLf & "Entering the Click event handler."  
-            Await CallingMethodAsync()  
-            ResultsTextBox.Text &= vbCrLf & "Exiting the Click event handler."  
-        End Sub  
-  
-        Async Function CallingMethodAsync() As Task  
-  
-            ResultsTextBox.Text &= vbCrLf & "  Entering calling method."  
-  
-            ' Variable delay is used to slow down the called method so that you  
-            ' can distinguish between awaiting and not awaiting in the program's output.   
-            ' You can adjust the value to produce the output that this topic shows   
-            ' after the code.  
-            Dim delay = 5000  
-  
-            ' Call #1.  
-            ' Call an async method. Because you don't await it, its completion isn't   
-            ' coordinated with the current method, CallingMethodAsync.  
-            ' The following line causes the warning.  
-            CalledMethodAsync(delay)  
-  
-            ' Call #2.  
-            ' To suppress the warning without awaiting, you can assign the   
-            ' returned task to a variable. The assignment doesn't change how  
-            ' the program runs. However, the recommended practice is always to  
-            ' await a call to an async method.  
-  
-            ' Replace Call #1 with the following line.  
-            'Task delayTask = CalledMethodAsync(delay)  
-  
-            ' Call #3  
-            ' To contrast with an awaited call, replace the unawaited call   
-            ' (Call #1 or Call #2) with the following awaited call. The best   
-            ' practice is to await the call.  
-  
-            'Await CalledMethodAsync(delay)  
-  
-            ' If the call to CalledMethodAsync isn't awaited, CallingMethodAsync  
-            ' continues to run and, in this example, finishes its work and returns  
-            ' to its caller.  
-            ResultsTextBox.Text &= vbCrLf & "  Returning from calling method."  
-        End Function  
-  
-        Async Function CalledMethodAsync(howLong As Integer) As Task  
-  
-            ResultsTextBox.Text &= vbCrLf & "    Entering called method, starting and awaiting Task.Delay."  
-            ' Slow the process down a little so you can distinguish between awaiting  
-            ' and not awaiting. Adjust the value for howLong if necessary.  
-            Await Task.Delay(howLong)  
-            ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."  
-        End Function  
-  
-    End Class  
-  
-    ' Output  
-  
-    ' Entering the Click event handler.  
-    '   Entering calling method.  
-    '     Entering called method, starting and awaiting Task.Delay.  
-    '   Returning from calling method.  
-    ' Exiting the Click event handler.  
-    '     Task.Delay is finished--returning from called method.  
-  
-    ' Output  
-  
-    ' Entering the Click event handler.  
-    '   Entering calling method.  
-    '     Entering called method, starting and awaiting Task.Delay.  
-    '     Task.Delay is finished--returning from called method.  
-    '   Returning from calling method.  
-    ' Exiting the Click event handler.  
-    ```  
-  
-5. Wybierz klawisz F5, aby uruchomić program, a następnie wybierz przycisk **Start** .  
-  
-     Oczekiwane dane wyjściowe pojawiają się na końcu kodu.  
-  
+
+Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane przed ukończeniem wywołania. Rozważ zastosowanie operatora "await" do wyniku wywołania.
+
+Bieżąca metoda wywołuje metodę asynchroniczną, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i nie stosuje operatora [await](../../../visual-basic/language-reference/operators/await-operator.md) do wyniku. Wywołanie metody asynchronicznej uruchamia zadanie asynchroniczne. Ponieważ jednak żaden operator `Await` nie zostanie zastosowany, program kontynuuje działanie bez oczekiwania na ukończenie zadania. W większości przypadków takie zachowanie nie jest oczekiwane. Zwykle inne aspekty metody wywołującej zależą od wyników wywołania lub, co najmniej metody wywoływanej, należy wykonać przed zwróceniem z metody, która zawiera wywołanie.
+
+Równie ważnym problemem jest to, co się dzieje z wyjątkami, które są wywoływane w wywołaniu metody asynchronicznej. Wyjątek, który jest wywoływany w metodzie, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> jest przechowywany w zwracanym zadaniu. Jeśli nie oczekujesz na zadanie lub jawnie sprawdzisz wyjątki, wyjątek zostanie utracony. Jeśli zaczekasz na zadanie, jego wyjątek zostanie ponownie wygenerowany.
+
+Najlepszym rozwiązaniem jest zawsze oczekiwanie na wywołanie.
+
+Domyślnie ten komunikat jest ostrzeżeniem. Aby uzyskać więcej informacji na temat ukrywania ostrzeżeń lub leczenia ostrzeżeń jako błędów, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).
+
+**Identyfikator błędu:** BC42358
+
+### <a name="to-address-this-warning"></a>Aby rozwiązać ten komunikat ostrzegawczy
+
+- Należy rozważyć pominięcie ostrzeżenia tylko wtedy, gdy na pewno nie chcesz czekać na zakończenie wywołania asynchronicznego i że wywołana metoda nie zgłosi żadnych wyjątków. W takim przypadku można pominąć ostrzeżenie, przypisując wynik zadania wywołania zmiennej.
+
+     Poniższy przykład pokazuje, jak wywołać ostrzeżenie, jak go pominąć i jak oczekiwać na wywołanie.
+
+    ```vb
+    Async Function CallingMethodAsync() As Task
+
+        ResultsTextBox.Text &= vbCrLf & "  Entering calling method."
+
+        ' Variable delay is used to slow down the called method so that you
+        ' can distinguish between awaiting and not awaiting in the program's output.
+        ' You can adjust the value to produce the output that this topic shows
+        ' after the code.
+        Dim delay = 5000
+
+        ' Call #1.
+        ' Call an async method. Because you don't await it, its completion isn't
+        ' coordinated with the current method, CallingMethodAsync.
+        ' The following line causes the warning.
+        CalledMethodAsync(delay)
+
+        ' Call #2.
+        ' To suppress the warning without awaiting, you can assign the
+        ' returned task to a variable. The assignment doesn't change how
+        ' the program runs. However, the recommended practice is always to
+        ' await a call to an async method.
+        ' Replace Call #1 with the following line.
+        'Task delayTask = CalledMethodAsync(delay)
+
+        ' Call #3
+        ' To contrast with an awaited call, replace the unawaited call
+        ' (Call #1 or Call #2) with the following awaited call. The best
+        ' practice is to await the call.
+
+        'Await CalledMethodAsync(delay)
+
+        ' If the call to CalledMethodAsync isn't awaited, CallingMethodAsync
+        ' continues to run and, in this example, finishes its work and returns
+        ' to its caller.
+        ResultsTextBox.Text &= vbCrLf & "  Returning from calling method."
+    End Function
+
+    Async Function CalledMethodAsync(howLong As Integer) As Task
+
+        ResultsTextBox.Text &= vbCrLf & "    Entering called method, starting and awaiting Task.Delay."
+        ' Slow the process down a little so you can distinguish between awaiting
+        ' and not awaiting. Adjust the value for howLong if necessary.
+        Await Task.Delay(howLong)
+        ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."
+    End Function
+    ```
+
+     W przykładzie, jeśli wybierzesz Wywołaj #1 lub wywołaj #2, nieoczekiwana Metoda async (`CalledMethodAsync`) kończy się po wykonaniu obu zadań wywołujących (`CallingMethodAsync`) i wywołujących wywołujących (`StartButton_Click`). Ostatni wiersz w poniższych danych wyjściowych pokazuje, kiedy wywołana metoda zostanie ukończona. Wejście i wyjście z programu obsługi zdarzeń, które wywołuje `CallingMethodAsync` w pełnym przykładzie, są oznaczone w danych wyjściowych.
+
+    ```console
+    Entering the Click event handler.
+      Entering calling method.
+        Entering called method, starting and awaiting Task.Delay.
+      Returning from calling method.
+    Exiting the Click event handler.
+        Task.Delay is finished--returning from called method.
+    ```
+
+## <a name="example"></a>Przykład
+
+Następująca aplikacja Windows Presentation Foundation (WPF) zawiera metody z poprzedniego przykładu. Poniższe kroki konfigurują aplikację.
+
+1. Utwórz aplikację WPF i nadaj jej nazwę `AsyncWarning`.
+
+2. W edytorze Visual Studio Code wybierz kartę **MainWindow. XAML** .
+
+     Jeśli karta nie jest widoczna, otwórz menu skrótów dla MainWindow. XAML w **Eksplorator rozwiązań**, a następnie wybierz polecenie **Wyświetl kod**.
+
+3. Zastąp kod w widoku **XAML** MainWindow. XAML poniższym kodem.
+
+    ```vb
+    <Window x:Class="MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            Title="MainWindow" Height="350" Width="525">
+        <Grid>
+            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="214,28,0,0" VerticalAlignment="Top" Width="75" HorizontalContentAlignment="Center" FontWeight="Bold" FontFamily="Aharoni" Click="StartButton_Click" />
+            <TextBox x:Name="ResultsTextBox" Margin="0,80,0,0" TextWrapping="Wrap" FontFamily="Lucida Console"/>
+        </Grid>
+    </Window>
+    ```
+
+     Proste okno zawierające przycisk i pole tekstowe pojawia się w widoku **projekt** MainWindow. XAML.
+
+     Aby uzyskać więcej informacji na temat projektant XAML, zobacz [Tworzenie interfejsu użytkownika przy użyciu Projektant XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Aby uzyskać informacje na temat tworzenia własnego prostego interfejsu użytkownika, zobacz sekcję "aby utworzyć aplikację WPF" i "aby zaprojektować prostą sekcję WPF MainWindow" [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+
+4. Zastąp kod w MainWindow. XAML. vb następującym kodem.
+
+    ```vb
+    Class MainWindow
+
+        Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+
+            ResultsTextBox.Text &= vbCrLf & "Entering the Click event handler."
+            Await CallingMethodAsync()
+            ResultsTextBox.Text &= vbCrLf & "Exiting the Click event handler."
+        End Sub
+
+        Async Function CallingMethodAsync() As Task
+
+            ResultsTextBox.Text &= vbCrLf & "  Entering calling method."
+
+            ' Variable delay is used to slow down the called method so that you
+            ' can distinguish between awaiting and not awaiting in the program's output.
+            ' You can adjust the value to produce the output that this topic shows
+            ' after the code.
+            Dim delay = 5000
+
+            ' Call #1.
+            ' Call an async method. Because you don't await it, its completion isn't
+            ' coordinated with the current method, CallingMethodAsync.
+            ' The following line causes the warning.
+            CalledMethodAsync(delay)
+
+            ' Call #2.
+            ' To suppress the warning without awaiting, you can assign the
+            ' returned task to a variable. The assignment doesn't change how
+            ' the program runs. However, the recommended practice is always to
+            ' await a call to an async method.
+
+            ' Replace Call #1 with the following line.
+            'Task delayTask = CalledMethodAsync(delay)
+
+            ' Call #3
+            ' To contrast with an awaited call, replace the unawaited call
+            ' (Call #1 or Call #2) with the following awaited call. The best
+            ' practice is to await the call.
+
+            'Await CalledMethodAsync(delay)
+
+            ' If the call to CalledMethodAsync isn't awaited, CallingMethodAsync
+            ' continues to run and, in this example, finishes its work and returns
+            ' to its caller.
+            ResultsTextBox.Text &= vbCrLf & "  Returning from calling method."
+        End Function
+
+        Async Function CalledMethodAsync(howLong As Integer) As Task
+
+            ResultsTextBox.Text &= vbCrLf & "    Entering called method, starting and awaiting Task.Delay."
+            ' Slow the process down a little so you can distinguish between awaiting
+            ' and not awaiting. Adjust the value for howLong if necessary.
+            Await Task.Delay(howLong)
+            ResultsTextBox.Text &= vbCrLf & "    Task.Delay is finished--returning from called method."
+        End Function
+
+    End Class
+
+    ' Output
+
+    ' Entering the Click event handler.
+    '   Entering calling method.
+    '     Entering called method, starting and awaiting Task.Delay.
+    '   Returning from calling method.
+    ' Exiting the Click event handler.
+    '     Task.Delay is finished--returning from called method.
+
+    ' Output
+
+    ' Entering the Click event handler.
+    '   Entering calling method.
+    '     Entering called method, starting and awaiting Task.Delay.
+    '     Task.Delay is finished--returning from called method.
+    '   Returning from calling method.
+    ' Exiting the Click event handler.
+    ```
+
+5. Wybierz klawisz F5, aby uruchomić program, a następnie wybierz przycisk **Start** .
+
+     Oczekiwane dane wyjściowe pojawiają się na końcu kodu.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)

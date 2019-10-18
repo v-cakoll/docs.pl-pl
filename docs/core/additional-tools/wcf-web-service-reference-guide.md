@@ -4,12 +4,12 @@ description: Przegląd narzędzia Microsoft WCF Web Service Reference Provider, 
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 11a18161db0fde522442e2412c4522811c5dd40a
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c5759dcc0f428c763eddb84f3d3652fbc548cb2
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926461"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522234"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>Korzystanie z narzędzia dostawcy odwołań usługi sieci Web programu WCF
 
@@ -20,16 +20,16 @@ W ciągu lat wiele deweloperów programu Visual Studio korzystało z wydajności
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-* [Visual Studio 2017 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lub nowsza wersja
+- [Visual Studio 2017 15,5](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lub nowsza wersja
 
 ## <a name="how-to-use-the-extension"></a>Jak używać rozszerzenia
 
 > [!NOTE]
 > Opcja **odwołania do usługi sieci Web programu WCF** ma zastosowanie do projektów utworzonych przy użyciu następujących szablonów projektu:
 >
-> * **Visual C#**  >  **.NET Core**
-> * **.NET standard C#wizualizacji**   > 
-> * **C#** **Aplikacja internetowa** programu  > Visual **Web** > ASP.NET Core
+> - **Visual C#**   >  **.NET Core**
+> - **Visual C#**   >  **.NET Standard**
+> - **Aplikacja internetowa**  **C# programu Visual**  > **Web**  >  ASP.NET Core
 
 Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym artykule opisano sposób dodawania do projektu odwołania do usługi WCF:
 
@@ -45,7 +45,7 @@ Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym ar
 
 3. Wybierz usługę.
 
-    3a. W kreatorze **konfiguracji odwołania usługi sieci Web programu WCF** dostępne są kilka opcji wyszukiwania usług:
+    art. W kreatorze **konfiguracji odwołania usługi sieci Web programu WCF** dostępne są kilka opcji wyszukiwania usług:
 
      * Aby wyszukać usługi zdefiniowane w bieżącym rozwiązaniu, kliknij przycisk **odkryj** .
      * Aby wyszukać usługi hostowane w określonym adresie, wprowadź adres URL usługi w polu **adres** , a następnie kliknij przycisk **Przejdź** .
@@ -53,7 +53,7 @@ Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym ar
 
     3b. Wybierz usługę z listy wyników wyszukiwania w polu **usługi** . W razie potrzeby wprowadź przestrzeń nazw dla wygenerowanego kodu w polu tekstowym odpowiadające mu **przestrzeń nazw** .
 
-    3c. Kliknij przycisk **dalej** , aby otworzyć **Opcje typu danych** i strony **Opcje klienta** . Alternatywnie kliknij przycisk **Zakończ** , aby użyć opcji domyślnych.
+    3C. Kliknij przycisk **dalej** , aby otworzyć **Opcje typu danych** i strony **Opcje klienta** . Alternatywnie kliknij przycisk **Zakończ** , aby użyć opcji domyślnych.
 
 4. Formularz **Opcje typu danych** umożliwia uściślenie ustawień konfiguracji wygenerowanych odwołań do usługi:
 
@@ -68,9 +68,9 @@ Korzystając z szablonu projektu **ASP.NET Core aplikacji sieci Web** , w tym ar
 
 Podczas wyświetlania postępu narzędzie:
 
-* Pobiera metadane z usługi WCF.
-* Generuje kod odwołania do usługi w pliku o nazwie *Reference.cs*i dodaje go do projektu w węźle **usługi połączone** .
-* Aktualizuje plik projektu (. csproj) odwołania do pakietów NuGet wymagane do kompilowania i uruchamiania na platformie docelowej.
+- Pobiera metadane z usługi WCF.
+- Generuje kod odwołania do usługi w pliku o nazwie *Reference.cs*i dodaje go do projektu w węźle **usługi połączone** .
+- Aktualizuje plik projektu (. csproj) odwołania do pakietów NuGet wymagane do kompilowania i uruchamiania na platformie docelowej.
 
 ![Okno postępu programu Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
@@ -84,4 +84,4 @@ Jeśli masz jakieś pytania lub opinie, [Otwórz problem w usłudze GitHub](http
 
 ### <a name="release-notes"></a>Uwagi do wersji
 
-* Zapoznaj się z informacjami o [wersji](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) dotyczącymi zaktualizowanych informacji o wersji, w tym znanych problemów.
+- Zapoznaj się z informacjami o [wersji](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) dotyczącymi zaktualizowanych informacji o wersji, w tym znanych problemów.

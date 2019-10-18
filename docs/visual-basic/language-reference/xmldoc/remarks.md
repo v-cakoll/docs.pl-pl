@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: c5c088472ae09a416953d9c0829cad1cb48646b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38549b2fcce0740b2b9cfd42d950e56b343e7a30
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940819"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524678"
 ---
-# <a name="remarks-visual-basic"></a>\<Remarks > (Visual Basic)
-Określa sekcji uwag, elementu członkowskiego.  
+# <a name="remarks-visual-basic"></a>> \<remarks (Visual Basic)
+Określa sekcję Uwagi dla elementu członkowskiego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,14 +26,14 @@ Określa sekcji uwag, elementu członkowskiego.
  Opis elementu członkowskiego.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `<remarks>` tag, aby dodać informacje o typie, uzupełniające informacje określony za pomocą [ \<podsumowania >](../../../visual-basic/language-reference/xmldoc/summary.md).  
+ Użyj znacznika `<remarks>`, aby dodać informacje o typie, uzupełniając informacje określone za pomocą [\<summary >](../../../visual-basic/language-reference/xmldoc/summary.md).  
   
- Te informacje są wyświetlane w przeglądarce obiektów. Aby uzyskać informacje o przeglądarce obiektów, zobacz [wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
+ Te informacje są wyświetlane w Przeglądarka obiektów. Aby uzyskać informacje na temat Przeglądarka obiektów, zobacz [Wyświetlanie struktury kodu](/visualstudio/ide/viewing-the-structure-of-code).  
   
- Kompiluj przy użyciu [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) do Przetwarzaj komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie użyto `<remarks>` tag, aby wyjaśnić, co `UpdateRecord` metody.  
+ W tym przykładzie używa znacznika `<remarks>`, aby wyjaśnić, jak działa Metoda `UpdateRecord`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

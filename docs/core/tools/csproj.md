@@ -2,12 +2,12 @@
 title: Dodatki do formatu csproj dla platformy .NET Core
 description: Dowiedz się więcej o różnicach między istniejącymi a plikami csproj programu .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 2ec1aaff88754848d844a56b1744beb2efa4cd89
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291234"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522790"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -29,21 +29,21 @@ Elementy pakietu są niejawnie przywoływane na podstawie platform docelowych ok
  </PropertyGroup>
  ```
 
-### <a name="recommendations"></a>Polecane elementy
+### <a name="recommendations"></a>Mając
 
 Ponieważ do `Microsoft.NETCore.App` lub `NETStandard.Library` pakiety są niejawnie przywoływane, zalecane są następujące najlepsze rozwiązania:
 
-* W przypadku określania wartości docelowej .NET Core lub .NET Standard nigdy nie ma jawnego odwołania do @no__t pakietów dla `Microsoft.NETCore.App` lub `NETStandard.Library` w pliku projektu.
-* Jeśli potrzebna jest określona wersja środowiska uruchomieniowego w przypadku określania wartości docelowej .NET Core, należy użyć właściwości `<RuntimeFrameworkVersion>` w projekcie (na przykład `1.0.4`) zamiast odwoływać się do pakietu.
-  * Taka sytuacja może wystąpić, jeśli używasz [własnych wdrożeń](../deploying/index.md#self-contained-deployments-scd) i potrzebujesz określonej wersji poprawki środowiska uruchomieniowego 1.0.0 LTS, na przykład.
-* Jeśli potrzebujesz określonej wersji `NETStandard.Library` pakietu dla elementu docelowego .NET Standard, możesz użyć właściwości `<NetStandardImplicitPackageVersion>` i ustawić wymaganą wersję.
-* Nie należy jawnie dodawać ani aktualizować odwołań do pakietu "`Microsoft.NETCore.App`" lub `NETStandard.Library` w projektach .NET Framework. Jeśli dowolna wersja `NETStandard.Library` jest wymagana podczas korzystania z pakietu NuGet opartego na .NET Standard, pakiet NuGet automatycznie zainstaluje tę wersję.
+- W przypadku określania wartości docelowej .NET Core lub .NET Standard nigdy nie ma jawnego odwołania do `Microsoft.NETCore.App` lub `NETStandard.Library` `<PackageReference>` pakietów w pliku projektu.
+- Jeśli potrzebna jest określona wersja środowiska uruchomieniowego w przypadku określania wartości docelowej .NET Core, należy użyć właściwości `<RuntimeFrameworkVersion>` w projekcie (na przykład `1.0.4`) zamiast odwoływać się do pakietu.
+  - Taka sytuacja może wystąpić, jeśli używasz [własnych wdrożeń](../deploying/index.md#self-contained-deployments-scd) i potrzebujesz określonej wersji poprawki środowiska uruchomieniowego 1.0.0 LTS, na przykład.
+- Jeśli potrzebujesz określonej wersji `NETStandard.Library` pakietu dla elementu docelowego .NET Standard, możesz użyć właściwości `<NetStandardImplicitPackageVersion>` i ustawić wymaganą wersję.
+- Nie należy jawnie dodawać ani aktualizować odwołań do pakietu "`Microsoft.NETCore.App`" lub `NETStandard.Library` w projektach .NET Framework. Jeśli dowolna wersja `NETStandard.Library` jest wymagana podczas korzystania z pakietu NuGet opartego na .NET Standard, pakiet NuGet automatycznie zainstaluje tę wersję.
 
 ## <a name="implicit-version-for-some-package-references"></a>Niejawna wersja dla niektórych odwołań do pakietów
 
 Większość użycia [`<PackageReference>`](#packagereference) wymaga ustawienia atrybutu `Version`, aby określić wersję pakietu NuGet do użycia. W przypadku korzystania z platformy .NET Core 2,1 lub 2,2 i odwoływania się do [Microsoft. AspNetCore. app](/aspnet/core/fundamentals/metapackage-app) lub [Microsoft. AspNetCore. All](/aspnet/core/fundamentals/metapackage), jednak atrybut jest zbędny. Zestaw .NET Core SDK może automatycznie wybrać wersję tych pakietów, które mają być używane.
 
-### <a name="recommendation"></a>Zalecenie
+### <a name="recommendation"></a>Zaleca
 
 W przypadku odwoływania się do pakietów `Microsoft.AspNetCore.App` lub `Microsoft.AspNetCore.All` nie należy określać ich wersji. Jeśli określona jest wersja, zestaw SDK może generować ostrzeżenie NETSDK1071. Aby usunąć to ostrzeżenie, Usuń wersję pakietu, taką jak w poniższym przykładzie:
 
@@ -59,8 +59,8 @@ Te odwołania do ASP.NET Core pakietu są nieco inne niż w przypadku większoś
 
 Jeśli określona *jest* wersja, jest ona traktowana jako *minimalna* wersja ASP.NET Core udostępnionej platformy dla wdrożeń zależnych od platformy i jako *dokładna* wersja wdrożeń samodzielnych. Może to mieć następujące konsekwencje:
 
-* Jeśli wersja ASP.NET Core zainstalowana na serwerze jest mniejsza niż wersja określona w PackageReference, uruchomienie procesu platformy .NET Core kończy się niepowodzeniem. Aktualizacje pakietu NuGet.org są często dostępne na platformie Microsoft, zanim zostaną udostępnione aktualizacje w środowiskach hostingu, takich jak Azure. Zaktualizowanie wersji na PackageReference w celu ASP.NET Core może spowodować niepowodzenie wdrożonej aplikacji.
-* Jeśli aplikacja jest wdrażana jako [wdrożenie samodzielne](../deploying/index.md#self-contained-deployments-scd), aplikacja może nie zawierać najnowszych aktualizacji zabezpieczeń do programu .NET Core. Jeśli wersja nie jest określona, zestaw SDK może automatycznie dołączać najnowszą wersję ASP.NET Core w samodzielnym wdrożeniu.
+- Jeśli wersja ASP.NET Core zainstalowana na serwerze jest mniejsza niż wersja określona w PackageReference, uruchomienie procesu platformy .NET Core kończy się niepowodzeniem. Aktualizacje pakietu NuGet.org są często dostępne na platformie Microsoft, zanim zostaną udostępnione aktualizacje w środowiskach hostingu, takich jak Azure. Zaktualizowanie wersji na PackageReference w celu ASP.NET Core może spowodować niepowodzenie wdrożonej aplikacji.
+- Jeśli aplikacja jest wdrażana jako [wdrożenie samodzielne](../deploying/index.md#self-contained-deployments-scd), aplikacja może nie zawierać najnowszych aktualizacji zabezpieczeń do programu .NET Core. Jeśli wersja nie jest określona, zestaw SDK może automatycznie dołączać najnowszą wersję ASP.NET Core w samodzielnym wdrożeniu.
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>Domyślna kompilacja obejmuje projekty .NET Core
 
@@ -72,12 +72,12 @@ W poniższej tabeli przedstawiono, który element i które [elementy globalne](h
 
 | Element           | Uwzględnij globalizowania                              | Wyklucz globalizowania                                                  | Usuń globalizowania              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Opracowania           | \* @ no__t-1 @ no__t-2\*.cs (lub inne rozszerzenia językowe) | \* @ no__t-1 @ no__t-2\*.user;  \* @ no__t-5 @ no__t-6 @ no__t-7. \*proj;  \* @ no__t-10 @ no__t-11\*2.sln;  3 @ no__t-14 @ no__t-15 @ no__t-16. VSSSCC  | ND                      |
-| EmbeddedResource  | \* @ no__t-1 @ no__t-2\*.resx                              | \* @ no__t-1 @ no__t-2\*.user; \* @ no__t-5 @ no__t-6 @ no__t-7. \*proj; \* @ no__t-10 @ no__t-11\*2.sln; 3 @ no__t-14 @ no__t-15 @ no__t-16. VSSSCC     | ND                      |
-| Brak              | \*\*/\*                                   | \* @ no__t-1 @ no__t-2\*.user; \* @ no__t-5 @ no__t-6 @ no__t-7. \*proj; \* @ no__t-10 @ no__t-11\*2.sln; 3 @ no__t-14 @ no__t-15 @ no__t-16. VSSSCC     | \* @ no__t-1 @ no__t-2\*.cs; \* @ no__t-5 @ no__t-6\*.resx   |
+| Opracowania           | \* \* / \*. cs (lub inne rozszerzenia językowe) | \* \* / \*. User;   \* \* / \*. \*proj;   \* 0 1 2. sln;   3 4 5 6. VSSSCC  | Brak                      |
+| EmbeddedResource  | \* \* / \*. resx                              | \* \* / \*. User;  \* \* / \*. \*proj;  \* 0 1 2. sln;  3 4 5 6. VSSSCC     | Brak                      |
+| Brak              | \*\*/\*                                   | \* \* / \*. User;  \* \* / \*. \*proj;  \* 0 1 2. sln;  3 4 5 6. VSSSCC     | \* \* / \*. cs;  \* \* / \*. resx   |
 
 > [!NOTE]
-> Właściwość **exclude globalizowania** zawsze wyklucza foldery `./bin` i `./obj`, które są reprezentowane odpowiednio przez `$(BaseOutputPath)` i @no__t programu MSBuild. Jako całość wszystkie wykluczenia są reprezentowane przez `$(DefaultItemExcludes)`.
+> Właściwość **exclude globalizowania** zawsze wyklucza foldery `./bin` i `./obj`, które są reprezentowane odpowiednio przez `$(BaseOutputPath)` i `$(BaseIntermediateOutputPath)` właściwości programu MSBuild. Jako całość wszystkie wykluczenia są reprezentowane przez `$(DefaultItemExcludes)`.
 
 Jeśli masz elementy globalne w projekcie i spróbujesz skompilować go przy użyciu najnowszego zestawu SDK, zostanie wyświetlony następujący błąd:
 
@@ -133,7 +133,7 @@ Element główny `<Project>` pliku *. csproj* ma nowy atrybut o nazwie `Sdk`. `S
 4. Usługa programu .NET Core Worker o IDENTYFIKATORze `Microsoft.NET.Sdk.Worker` (od platformy .NET Core 3,0)
 5. Podstawowe WinForms i WPF platformy .NET o IDENTYFIKATORze `Microsoft.NET.Sdk.WindowsDesktop` (od platformy .NET Core 3,0)
 
-Aby można było użyć narzędzi .NET Core i skompilować kod, musisz mieć ustawiony atrybut `Sdk` dla jednego z tych @no__t identyfikatorów.
+Aby można było użyć narzędzi .NET Core i skompilować kod, należy mieć atrybut `Sdk` ustawiony na jeden z tych `<Project>` identyfikatorów.
 
 ### <a name="packagereference"></a>PackageReference
 
@@ -145,7 +145,7 @@ Element `<PackageReference>` Określa [zależność NuGet w projekcie](/nuget/co
 
 #### <a name="version"></a>Wersja
 
-Wymagany atrybut `Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie wartości `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
+Wymagany atrybut `Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets i PrivateAssets
 
@@ -160,19 +160,20 @@ atrybut `PrivateAssets` Określa, które zasoby należące do pakietu określone
 
 Te atrybuty mogą zawierać co najmniej jeden z następujących elementów, oddzielonych średnikami `;` znak, jeśli jest wyświetlany więcej niż jeden:
 
-* `Compile` — zawartość folderu lib jest dostępna do skompilowania.
-* `Runtime` — zawartość folderu środowiska uruchomieniowego jest dystrybuowana.
-* `ContentFiles` — zawartość folderu *contentfiles* jest używana.
-* `Build` — używane są elementy props/targets w folderze Build.
-* `Native` — zawartość z zasobów natywnych jest kopiowana do folderu wyjściowego dla środowiska uruchomieniowego.
-* `Analyzers` — analizatory są używane.
+- `Compile` — zawartość folderu *lib* jest dostępna do skompilowania.
+- `Runtime` — zawartość folderu *środowiska uruchomieniowego* jest dystrybuowana.
+- `ContentFiles` — zawartość folderu *contentfiles* jest używana.
+- `Build` — używane są elementy props/targets w folderze *Build* .
+- `Native` — zawartość z zasobów natywnych jest kopiowana do folderu *wyjściowego* dla środowiska uruchomieniowego.
+- `Analyzers` — analizatory są używane.
 
 Alternatywnie, atrybut może zawierać:
 
-* `None` — żaden z elementów zawartości nie jest używany.
-* `All` — wszystkie zasoby są używane.
+- `None` — żaden z elementów zawartości nie jest używany.
+- `All` — wszystkie zasoby są używane.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
+
 Element `<DotNetCliToolReference>` określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Jest to zamiennik dla węzła `tools` w pliku *Project. JSON*.
 
 ```xml
@@ -181,7 +182,7 @@ Element `<DotNetCliToolReference>` określa narzędzie interfejsu wiersza polece
 
 #### <a name="version"></a>Wersja
 
-`Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/create-packages/dependency-versions#version-ranges) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie wartości `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
+`Version` określa wersję pakietu do przywrócenia. Ten atrybut przestrzega reguł schematu obsługi wersji programu [NuGet](/nuget/create-packages/dependency-versions#version-ranges) . Zachowanie domyślne jest dokładnym dopasowaniem wersji. Na przykład określenie `Version="1.2.3"` jest równoznaczne z notacją NuGet `[1.2.3]` dla dokładnej wersji 1.2.3 pakietu.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
@@ -224,7 +225,7 @@ W poniższym przykładzie określono rezerwy tylko dla elementu docelowego `netc
 
 ## <a name="nuget-metadata-properties"></a>Właściwości metadanych NuGet
 
-Po przeniesieniu do programu MSBuild przeniesiono metadane wejściowe, które są używane podczas pakowania pakietu NuGet z pliku *Project. JSON* do plików *. csproj* . Dane wejściowe są właściwościami programu MSBuild, dzięki czemu muszą one znajdować się w grupie `<PropertyGroup>`. Poniżej znajduje się lista właściwości, które są używane jako dane wejściowe procesu pakowania przy użyciu polecenia `dotnet pack` lub docelowego programu MSBuild `Pack`, który jest częścią zestawu SDK.
+Po przeniesieniu do programu MSBuild przeniesiono metadane wejściowe, które są używane podczas pakowania pakietu NuGet z pliku *Project. JSON* do plików *. csproj* . Dane wejściowe są właściwościami programu MSBuild, dzięki czemu muszą one znajdować się w grupie `<PropertyGroup>`. Poniżej znajduje się lista właściwości, które są używane jako dane wejściowe procesu pakowania przy użyciu polecenia `dotnet pack` lub `Pack` celu programu MSBuild, który jest częścią zestawu SDK:
 
 ### <a name="ispackable"></a>Ispacking
 
@@ -254,7 +255,7 @@ Długi opis pakietu do wyświetlania interfejsu użytkownika.
 
 Długi opis zestawu. Jeśli nie określono `PackageDescription`, ta właściwość jest również używana jako Opis pakietu.
 
-### <a name="copyright"></a>Prawa autorskie
+### <a name="copyright"></a>Prawo
 
 Szczegóły dotyczące praw autorskich pakietu.
 
@@ -416,11 +417,11 @@ Każdy atrybut ma właściwość, która kontroluje jej zawartość i drugą do 
 
 Uwagi:
 
-* `AssemblyVersion` i `FileVersion` domyślnie przyjmuje wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, wartość będzie `1.2.3`.
-* wartość domyślna `InformationalVersion` jest równa `$(Version)`.
-* Jeśli właściwość jest obecna, `InformationalVersion` ma `$(SourceRevisionId)`. Można go wyłączyć przy użyciu `IncludeSourceRevisionInInformationalVersion`.
-* Właściwości `Copyright` i `Description` są również używane dla metadanych narzędzia NuGet.
-* `Configuration` jest współużytkowany ze wszystkimi procesami kompilacji i ustawiany przez parametr `--configuration` poleceń `dotnet`.
+- `AssemblyVersion` i `FileVersion` domyślnie przyjmuje wartość `$(Version)` bez sufiksu. Na przykład jeśli `$(Version)` jest `1.2.3-beta.4`, wartość będzie `1.2.3`.
+- wartość domyślna `InformationalVersion` jest równa `$(Version)`.
+- Jeśli właściwość jest obecna, `InformationalVersion` ma `$(SourceRevisionId)`. Można go wyłączyć przy użyciu `IncludeSourceRevisionInInformationalVersion`.
+- Właściwości `Copyright` i `Description` są również używane dla metadanych narzędzia NuGet.
+- `Configuration` jest współużytkowany ze wszystkimi procesami kompilacji i ustawiany przez parametr `--configuration` poleceń `dotnet`.
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

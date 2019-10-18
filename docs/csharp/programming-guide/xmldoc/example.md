@@ -9,14 +9,14 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: e81a95102100d3b0f3fdc84cf2113abf6ae35351
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 17956838c20a4342873478869c07c6382f037fcb
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588129"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523512"
 ---
-# <a name="example-c-programming-guide"></a>\<przykład > (C# Przewodnik programowania)
+# <a name="example-c-programming-guide"></a>\<example > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,9 +28,9 @@ ms.locfileid: "69588129"
  Opis przykładu kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- \<Przykładowy tag > pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Zwykle obejmuje to użycie [ \<tagu Code >](./code.md) .  
+ Tag \<example > pozwala określić przykład użycia metody lub innego elementu członkowskiego biblioteki. Ten proces często obejmuje użycie tagu [> \<code](./code.md) .  
   
- Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]  

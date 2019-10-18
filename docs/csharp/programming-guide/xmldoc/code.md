@@ -9,14 +9,14 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: e73f79eedff9001f2b186fb7d3924837e3353021
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588154"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523517"
 ---
-# <a name="code-c-programming-guide"></a>\<Code > (C# Przewodnik programowania)
+# <a name="code-c-programming-guide"></a>\<code > (C# Przewodnik programowania)
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
@@ -28,12 +28,12 @@ ms.locfileid: "69588154"
  Tekst, który ma zostać oznaczony jako kod.  
   
 ## <a name="remarks"></a>Uwagi  
- Tag \<> kodu umożliwia wskazanie wielu wierszy jako kodu. Użyj języka c >, aby wskazać, że tekst w opisie powinien być oznaczony jako kod. [ \<](./code-inline.md)  
+ Tag \<code > umożliwia wskazanie wielu wierszy jako kodu. Użyj [> \<c](./code-inline.md) , aby wskazać, że tekst w opisie powinien być oznaczony jako kod.  
   
- Kompiluj z [/doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Kompiluj z [-doc](../../language-reference/compiler-options/doc-compiler-option.md) , aby przetwarzać komentarze dokumentacji do pliku.  
   
 ## <a name="example"></a>Przykład  
- Zapoznaj się z przykładowym tematem \<> w temacie jak używać tagów > kodu. [ \<](./example.md)  
+ Zapoznaj się z przykładem dotyczącym używania tagu \<code > w temacie [\<example >](./example.md) .  
   
 ## <a name="see-also"></a>Zobacz także
 

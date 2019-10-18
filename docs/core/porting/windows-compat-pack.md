@@ -4,12 +4,12 @@ description: Dowiedz się więcej o pakiecie zgodności systemu Windows i jak mo
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202565"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521283"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Używanie pakietu zgodności systemu Windows do przenoszenia kodu do programu .NET Core
 
@@ -25,23 +25,23 @@ Ten pakiet jest logicznym [rozszerzeniem .NET Standard 2,0](../whats-new/dotnet-
 
 Zawiera on około 20 000 interfejsów API, w tym Windows-only i międzyplatformowych interfejsów API, z następujących obszarów technologii:
 
-* Strony kodowe
-* CodeDom
-* Konfiguracja
-* Usługi katalogowe
-* Rysowania
-* ODBC
-* Uprawnienia
-* Porty
-* Listy Access Control systemu Windows (ACL)
-* Windows Communication Foundation (WCF)
-* Kryptografia systemu Windows
-* Dziennik zdarzeń systemu Windows
-* Instrumentacja zarządzania Windows (WMI)
-* Liczniki wydajności systemu Windows
-* Rejestr systemu Windows
-* Buforowanie środowisko wykonawcze systemu Windows
-* Usługi systemu Windows
+- Strony kodowe
+- CodeDom
+- Konfiguracja
+- Usługi katalogowe
+- Rysowania
+- ODBC
+- Uprawnienia
+- Porty
+- Listy Access Control systemu Windows (ACL)
+- Windows Communication Foundation (WCF)
+- Kryptografia systemu Windows
+- Dziennik zdarzeń systemu Windows
+- Instrumentacja zarządzania Windows (WMI)
+- Liczniki wydajności systemu Windows
+- Rejestr systemu Windows
+- Buforowanie środowisko wykonawcze systemu Windows
+- Usługi systemu Windows
 
 Aby uzyskać więcej informacji, zobacz [specyfikację pakietu zgodności](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 

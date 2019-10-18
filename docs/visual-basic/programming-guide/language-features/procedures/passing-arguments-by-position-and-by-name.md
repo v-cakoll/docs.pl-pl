@@ -22,63 +22,66 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fa07a4ecf31b9dc0fee91593e793f3b00c5a83b
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791888"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524437"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Przekazywanie argumentów według pozycji i według nazwy (Visual Basic)
-Gdy wywołujesz `Sub` lub `Function` procedury, można przekazać argumenty *według pozycji* — w kolejności, w jakiej są wyświetlane w definicji procedury — lub przekazać je *według nazwy*, bez uwzględniając pozycji.  
-  
- Podczas przekazywania argumentu przez nazwę, należy określić argument deklarowana przez nazwę, a następnie dwukropek i znak równości (`:=`), a następnie wartość argumentu. Możesz podać Argumenty nazwane w dowolnej kolejności.  
-  
- Na przykład następująca `Sub` procedury przyjmuje trzy argumenty:  
-  
- [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
-  
- Po wywołaniu tej procedury, można podać argumentów według pozycji według nazwy lub przy użyciu kombinacji obu.  
-  
-## <a name="passing-arguments-by-position"></a>Przekazywanie argumentów według pozycji  
- Możesz wywołać `Display` metody z argumentami przekazywane według pozycji i rozdzielone przecinkami, jak pokazano w poniższym przykładzie:  
-  
-[!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
-  
- Jeżeli pominięto opcjonalny argument na liście argumentów pozycyjnych muszą przechowywać jej miejscu za pomocą przecinka. Poniższy przykład wywołuje `Display` metody bez `age` argumentu:  
-  
-[!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)] 
-  
-## <a name="passing-arguments-by-name"></a>Przekazywanie argumentów według nazwy  
- Ewentualnie możesz wywołać `Display` argumenty przekazywane według nazwy, również rozdzielone przecinkami, jak pokazano w poniższym przykładzie:  
-  
-[!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- Przekazywanie argumentów według nazwy w ten sposób jest szczególnie przydatne w przypadku, gdy wywołujesz procedurę, która ma więcej niż jeden opcjonalny argument. Jeśli podasz argumentów według nazwy, ma oznaczają brakujące argumenty pozycyjne przy użyciu następujących po sobie przecinków. Przekazywanie argumentów według nazwy również ułatwia do śledzenia argumentów, które kończy się sukcesem i pomijanie te, które.  
-  
-## <a name="mixing-arguments-by-position-and-by-name"></a>Mieszanie argumentów według pozycji i według nazwy  
+Po wywołaniu procedury `Sub` lub `Function` można przekazać argumenty *według położenia* — w kolejności, w jakiej są wyświetlane w definicji procedury — lub można przekazać je *według nazwy*, bez względu na położenie.
 
-Można podać argumentów według pozycji i według nazwy w wywołaniu samą procedurą, jak pokazano w poniższym przykładzie:  
-  
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
-  
- W powyższym przykładzie nie dodatkowy przecinek jest niezbędne do przechowywania miejsca pominięty `age` argumentu, ponieważ `birth` jest przekazywany przez nazwę.  
-  
-W wersji programu Visual Basic przed 15.5 podczas podawania argumenty przez kombinację pozycji i nazwy, argumentów pozycyjnych muszą wszystkich umieszczone jako pierwsze. Gdy podasz argument według nazwy, wszelkie pozostałe argumenty muszą wszystkie być przekazywane według nazwy.  Na przykład, następujące wywołanie do `Display` metoda wyświetla błąd kompilatora [BC30241: Oczekiwano argumentu nazwanego](../../../misc/bc30241.md).
+W przypadku przekazania argumentu według nazwy należy określić zadeklarowaną nazwę argumentu, po którym następuje dwukropek i znak równości (`:=`), a następnie wartość argumentu. Argumenty nazwane można podawać w dowolnej kolejności.
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
+Na przykład następująca procedura `Sub` przyjmuje trzy argumenty:
 
-Począwszy od wersji 15.5 programu Visual Basic, argumenty pozycyjne wykonać argumenty nazwane jeśli końcowa argumenty pozycyjne są w poprawnej pozycji. Jeśli skompilowany w wersji 15.5 programu Visual Basic, poprzednie wywołanie `Display` metoda pomyślnie wykonuje kompilację i już nie generuje błąd kompilatora [BC30241](../../../misc/bc30241.md).  
+[!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-Ta możliwość mieszanie i dopasowywanie argumentów nazwanych i pozycyjnych w dowolnej kolejności jest szczególnie przydatne, jeśli chcesz użyć nazwanego argumentu, aby zwiększyć czytelność kodu. Na przykład następująca `Person` konstruktora klasy wymaga dwóch argumentów typu `Person`, które mogą być `Nothing`. 
+Po wywołaniu tej procedury można podać argumenty według pozycji według nazwy lub kombinacji obu tych metod.
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
+## <a name="passing-arguments-by-position"></a>Przekazywanie argumentów według pozycji
 
-Za pomocą mieszanego argumentów nazwanych i pozycyjnych, które ułatwia celem kod, usuń zaznaczenie, gdy wartość `father` i `mother` argumenty są `Nothing`:
+Można wywołać metodę `Display` z argumentami przekazane według pozycji i rozdzielonymi przecinkami, jak pokazano w następującym przykładzie:
 
-[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
+[!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-Aby skorzystać z argumentów pozycyjnych z argumentami nazwanego, należy dodać następujący element do projektu języka Visual Basic (\*.vbproj) pliku:
+W przypadku pominięcia opcjonalnego argumentu na liście argumentów pozycyjnych należy trzymać miejsce z przecinkiem. Poniższy przykład wywołuje metodę `Display` bez argumentu `age`:
+
+[!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
+
+## <a name="passing-arguments-by-name"></a>Przekazywanie argumentów według nazwy
+
+Alternatywnie można wywołać `Display` z argumentami przekazaną przez nazwę, również rozdzielonymi przecinkami, jak pokazano w następującym przykładzie:
+
+[!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
+
+Przekazywanie argumentów według nazwy w ten sposób jest szczególnie przydatne w przypadku wywołania procedury, która ma więcej niż jeden argument opcjonalny. Jeśli podasz argumenty według nazwy, nie trzeba używać kolejnych przecinków do określenia brakujących argumentów pozycyjnych. Przekazywanie argumentów według nazwy ułatwia również śledzenie argumentów, które są przekazywane i które są pomijane.
+
+## <a name="mixing-arguments-by-position-and-by-name"></a>Mieszanie argumentów według pozycji i według nazwy
+
+Argumenty można podawać zarówno według pozycji, jak i według nazwy w ramach pojedynczego wywołania procedury, jak pokazano w następującym przykładzie:
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
+
+W poprzednim przykładzie żaden dodatkowy przecinek nie jest wymagany do przechowania argumentu pominiętego `age`, ponieważ `birth` jest przenoszona według nazwy.
+
+W wersjach Visual Basic przed 15,5, gdy podasz argumenty przy użyciu kombinacji pozycji i nazwy, argumenty pozycyjne muszą być wszystkie. Po podaniu argumentu według nazwy wszystkie pozostałe argumenty muszą być przekazane przez nazwę.  Na przykład następujące wywołanie metody `Display` wyświetla błąd kompilatora [BC30241: Oczekiwano argumentu nazwanego](../../../misc/bc30241.md).
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
+
+Począwszy od Visual Basic 15,5, argumenty pozycyjne mogą następować po nazwanych argumentach, jeśli końcowe argumenty pozycyjne znajdują się w poprawnej pozycji. W przypadku skompilowania w obszarze Visual Basic 15,5 poprzednie wywołanie metody `Display` kompiluje się pomyślnie i nie generuje już błędu kompilatora [BC30241](../../../misc/bc30241.md).
+
+Ta możliwość mieszania i dopasowywania argumentów nazwanych i pozycyjnych w dowolnej kolejności jest szczególnie przydatna, gdy chcesz użyć argumentu nazwanego, aby kod był bardziej czytelny. Na przykład następujący Konstruktor klasy `Person` wymaga dwóch argumentów typu `Person`, które mogą być `Nothing`.
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
+
+Użycie mieszanych argumentów o nazwach i pozycyjnej pomaga w pomyślnym zamierzeniu kodu, gdy wartość `father` i `mother` argumenty są `Nothing`:
+
+[!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
+
+Aby użyć argumentów pozycyjnych z nazwanymi argumentami, należy dodać następujący element do pliku projektu Visual Basic (\*. vbproj):
 
 ```xml
 <PropertyGroup>
@@ -86,19 +89,19 @@ Aby skorzystać z argumentów pozycyjnych z argumentami nazwanego, należy doda�
 </PropertyGroup>
 ```
 
-Aby uzyskać więcej informacji, zobacz [ustawienie wersji języka Visual Basic](../../../language-reference/configure-language-version.md).
+Aby uzyskać więcej informacji [, zobacz Ustawianie wersji językowej Visual Basic](../../../language-reference/configure-language-version.md).
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>Ograniczenia dotyczące podanie argumentów według nazwy  
+## <a name="restrictions-on-supplying-arguments-by-name"></a>Ograniczenia dotyczące dostarczania argumentów według nazwy
 
-Nie można przekazywać argumentów według nazwy, aby uniknąć wpisywania wymaganych argumentów. Można pominąć opcjonalne argumenty.  
-  
-Tablica parametrów nie można przekazać według nazwy. Jest to spowodowane po wywołaniu procedury, podaj nieskończona liczba rozdzielonych przecinkami argumenty tablicą parametrów, a kompilator nie można skojarzyć więcej niż jeden argument nazwą jednego.  
-  
+Nie można przekazać argumentów według nazwy, aby uniknąć wprowadzania wymaganych argumentów. Można pominąć tylko opcjonalne argumenty.
+
+Nie można przekazać tablicy parametrów według nazwy. Jest to spowodowane tym, że po wywołaniu procedury należy podać nieokreśloną liczbę argumentów oddzielonych przecinkami dla tablicy parametrów, a kompilator nie może skojarzyć więcej niż jednego argumentu z pojedynczą nazwą.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
 - [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
 - [Parametry opcjonalne](./optional-parameters.md)
 - [Tablice parametrów](./parameter-arrays.md)

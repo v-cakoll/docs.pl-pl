@@ -12,43 +12,43 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: 6f867742aef5e5a56daa9e4557036d5b17b61f48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef85f695de9ba11fbab20bad82fa6b28663f9e27
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949412"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72523851"
 ---
-# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="823b6-102">Funkcje konwersji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="823b6-102">Conversion functions (Visual Basic)</span></span>
+# <a name="conversion-functions-visual-basic"></a><span data-ttu-id="272a9-102">Funkcje konwersji (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="272a9-102">Conversion functions (Visual Basic)</span></span>
 
-<xref:Microsoft.VisualBasic.Strings.Asc%2A>   
-<xref:Microsoft.VisualBasic.Strings.AscW%2A>   
-<span data-ttu-id="823b6-103">[CBool-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-103">[CBool Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-104">[CByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-104">[CByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-105">[Cchar-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-105">[CChar Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-106">[CDate-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-106">[CDate Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-107">[CDbl-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-107">[CDbl Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-108">[CDec-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-108">[CDec Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<xref:Microsoft.VisualBasic.Strings.Chr%2A>   
-<xref:Microsoft.VisualBasic.Strings.ChrW%2A>   
-<span data-ttu-id="823b6-109">[CInt-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-109">[CInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-110">[CLng-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-110">[CLng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-111">[CObj — funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-111">[CObj Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-112">[Csbyte-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-112">[CSByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-113">[CShort — funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-113">[CShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-114">[CSng-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-114">[CSng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-115">[Funkcji CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-115">[CStr Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-116">[CType — funkcja](../../../visual-basic/language-reference/functions/ctype-function.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-116">[CType Function](../../../visual-basic/language-reference/functions/ctype-function.md) </span></span>  
-<span data-ttu-id="823b6-117">[CUInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-117">[CUInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-118">[Culng-funkcja](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-118">[CULng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<span data-ttu-id="823b6-119">[CUShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span><span class="sxs-lookup"><span data-stu-id="823b6-119">[CUShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md) </span></span>  
-<xref:Microsoft.VisualBasic.Strings.Format%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Hex%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Oct%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Str%2A>   
-<xref:Microsoft.VisualBasic.Conversion.Val%2A>
+- <xref:Microsoft.VisualBasic.Strings.Asc%2A>
+- <xref:Microsoft.VisualBasic.Strings.AscW%2A>
+- [<span data-ttu-id="272a9-103">CBool, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-103">CBool Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-104">CByte, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-104">CByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-105">CChar, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-105">CChar Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-106">CDate — funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-106">CDate Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-107">CDbl, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-107">CDbl Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-108">CDec, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-108">CDec Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- <xref:Microsoft.VisualBasic.Strings.Chr%2A>
+- <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
+- [<span data-ttu-id="272a9-109">Funkcja CInt</span><span class="sxs-lookup"><span data-stu-id="272a9-109">CInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-110">CLng, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-110">CLng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-111">CObj, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-111">CObj Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-112">CSByte, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-112">CSByte Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-113">CShort, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-113">CShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-114">CSng, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-114">CSng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-115">CStr, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-115">CStr Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-116">Funkcja CType</span><span class="sxs-lookup"><span data-stu-id="272a9-116">CType Function</span></span>](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [<span data-ttu-id="272a9-117">CUInt, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-117">CUInt Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-118">CULng, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-118">CULng Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-119">CUShort, funkcja</span><span class="sxs-lookup"><span data-stu-id="272a9-119">CUShort Function</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- <xref:Microsoft.VisualBasic.Strings.Format%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Str%2A>
+- <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 
-## <a name="see-also"></a><span data-ttu-id="823b6-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="823b6-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="272a9-120">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="272a9-120">See also</span></span>
 
-- [<span data-ttu-id="823b6-121">Funkcje konwersji typu</span><span class="sxs-lookup"><span data-stu-id="823b6-121">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [<span data-ttu-id="823b6-122">Konwertowanie typów danych</span><span class="sxs-lookup"><span data-stu-id="823b6-122">Converting Data Types</span></span>](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [<span data-ttu-id="272a9-121">Funkcje konwersji typu</span><span class="sxs-lookup"><span data-stu-id="272a9-121">Type Conversion Functions</span></span>](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [<span data-ttu-id="272a9-122">Konwertowanie typów danych</span><span class="sxs-lookup"><span data-stu-id="272a9-122">Converting Data Types</span></span>](../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)

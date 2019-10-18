@@ -7,33 +7,34 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: f19b8cd5f80ba9fd6d1f5a9162b04ee409e24e28
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06dc6f1532fecefba4e507bd0cc24aadc936d137
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921137"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72524372"
 ---
-# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="994e1-102">Operand 'IsNot' typu „typename” można porównać tylko z elementem „Nothing”, ponieważ typ „typename” jest typem zerowalnym</span><span class="sxs-lookup"><span data-stu-id="994e1-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
-<span data-ttu-id="994e1-103">Zmienna zadeklarowana jako dopuszczającego wartość null ma zostały porównane z wyrażeniem innych niż `Nothing` przy użyciu `IsNot` operatora.</span><span class="sxs-lookup"><span data-stu-id="994e1-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>  
-  
- <span data-ttu-id="994e1-104">**Identyfikator błędu:** BC32128</span><span class="sxs-lookup"><span data-stu-id="994e1-104">**Error ID:** BC32128</span></span>  
-  
-## <a name="to-correct-this-error"></a><span data-ttu-id="994e1-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="994e1-105">To correct this error</span></span>  
-  
-1. <span data-ttu-id="994e1-106">Do innych niż porównania typu dopuszczającego wartość null do wyrażenia `Nothing` przy użyciu `IsNot` operator, wywołanie `GetType` metody na typ dopuszczający wartość null i porównanie wyniku do wyrażenia, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="994e1-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>  
-  
-```vb  
-Dim number? As Integer = 5  
-  
-If number IsNot Nothing Then  
-  If number.GetType() IsNot Type.GetType("System.Int32") Then   
-  
-  End If  
-End If  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="994e1-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="994e1-107">See also</span></span>
+# <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a><span data-ttu-id="c9a69-102">Operand 'IsNot' typu „typename” można porównać tylko z elementem „Nothing”, ponieważ typ „typename” jest typem zerowalnym</span><span class="sxs-lookup"><span data-stu-id="c9a69-102">'IsNot' operand of type 'typename' can only be compared to 'Nothing', because 'typename' is a nullable type</span></span>
 
-- [<span data-ttu-id="994e1-108">Typy wartości dopuszczających wartości null</span><span class="sxs-lookup"><span data-stu-id="994e1-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="994e1-109">IsNot, operator</span><span class="sxs-lookup"><span data-stu-id="994e1-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)
+<span data-ttu-id="c9a69-103">Zmienna zadeklarowana jako Nullable została porównana z wyrażeniem innym niż `Nothing` przy użyciu operatora `IsNot`.</span><span class="sxs-lookup"><span data-stu-id="c9a69-103">A variable declared as nullable has been compared to an expression other than `Nothing` using the `IsNot` operator.</span></span>
+
+<span data-ttu-id="c9a69-104">**Identyfikator błędu:** BC32128</span><span class="sxs-lookup"><span data-stu-id="c9a69-104">**Error ID:** BC32128</span></span>
+
+## <a name="to-correct-this-error"></a><span data-ttu-id="c9a69-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="c9a69-105">To correct this error</span></span>
+
+<span data-ttu-id="c9a69-106">Aby porównać typ dopuszczający wartość null z wyrażeniem innym niż `Nothing` przy użyciu operatora `IsNot`, wywołaj metodę `GetType` dla typu dopuszczającego wartość null i porównaj wynik z wyrażeniem, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="c9a69-106">To compare a nullable type to an expression other than `Nothing` by using the `IsNot` operator, call the `GetType` method on the nullable type and compare the result to the expression, as shown in the following example.</span></span>
+
+```vb
+Dim number? As Integer = 5
+
+If number IsNot Nothing Then
+  If number.GetType() IsNot Type.GetType("System.Int32") Then
+
+  End If
+End If
+```
+
+## <a name="see-also"></a><span data-ttu-id="c9a69-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c9a69-107">See also</span></span>
+
+- [<span data-ttu-id="c9a69-108">Typy wartości dopuszczających wartości null</span><span class="sxs-lookup"><span data-stu-id="c9a69-108">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="c9a69-109">IsNot, operator</span><span class="sxs-lookup"><span data-stu-id="c9a69-109">IsNot Operator</span></span>](../../../visual-basic/language-reference/operators/isnot-operator.md)

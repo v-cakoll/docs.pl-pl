@@ -4,12 +4,12 @@ description: Application Insights to platforma diagnostyki bezserwerowej, która
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 1f5b99fba448c2c1c12139524ffdcd3708b3c956
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676845"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522748"
 ---
 # <a name="telemetry-with-application-insights"></a>Dane telemetryczne z Application Insights
 
@@ -19,12 +19,12 @@ ms.locfileid: "68676845"
 
 Dodawanie Application Insights do istniejących aplikacji jest tak proste jak dodanie klucza instrumentacji do ustawień aplikacji. Za pomocą Application Insights można:
 
-* Tworzenie niestandardowych wykresów i alertów na podstawie metryk, takich jak liczba wywołań funkcji, czas potrzebny do uruchomienia funkcji i wyjątków
-* Analizowanie błędów i wyjątków serwera
-* Przechodzenie do szczegółów wydajności według operacji i mierzenie czasu potrzebnego do wywołania zależności innych firm
-* Monitoruj użycie procesora CPU, pamięci i szybkości na wszystkich serwerach, które obsługują aplikacje funkcji
-* Wyświetl strumień na żywo metryk, w tym liczbę żądań i czas oczekiwania dla aplikacji funkcji
-* Korzystanie z [analizy](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) do wyszukiwania, wykonywania zapytań i tworzenia niestandardowych wykresów za pośrednictwem danych funkcji
+- Tworzenie niestandardowych wykresów i alertów na podstawie metryk, takich jak liczba wywołań funkcji, czas potrzebny do uruchomienia funkcji i wyjątków
+- Analizowanie błędów i wyjątków serwera
+- Przechodzenie do szczegółów wydajności według operacji i mierzenie czasu potrzebnego do wywołania zależności innych firm
+- Monitoruj użycie procesora CPU, pamięci i szybkości na wszystkich serwerach, które obsługują aplikacje funkcji
+- Wyświetl strumień na żywo metryk, w tym liczbę żądań i czas oczekiwania dla aplikacji funkcji
+- Korzystanie z [analizy](https://docs.microsoft.com/azure/application-insights/app-insights-analytics) do wyszukiwania, wykonywania zapytań i tworzenia niestandardowych wykresów za pośrednictwem danych funkcji
 
 ![Eksplorator metryk](./media/metrics-explorer.png)
 
@@ -58,5 +58,5 @@ Application Insights zapewnia zaawansowany i wygodny sposób rejestrowania szcze
 Aby uzyskać więcej informacji, zobacz [Monitor Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring).
 
 >[!div class="step-by-step"]
->[Poprzedni](azure-functions.md)Następny
->[](logic-apps.md)
+>[Poprzedni](azure-functions.md)
+>[Następny](logic-apps.md)

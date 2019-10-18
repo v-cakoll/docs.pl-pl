@@ -2,12 +2,12 @@
 title: Wzorzec bramy interfejsu API w porównaniu z bezpośrednią komunikacją klient-do-mikrousług
 description: Zapoznaj się z różnicami i wykorzystaniem wzorca usługi API Gateway oraz bezpośredniej komunikacji klient-do-mikrousług.
 ms.date: 01/07/2019
-ms.openlocfilehash: d895ae50e50ade2f8285117491733d5c9814b732
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834436"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522946"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API w porównaniu z bezpośrednią komunikacją klient-do-mikrousług
 
@@ -17,7 +17,7 @@ W architekturze mikrousług każda mikrousługa udostępnia zestaw (zazwyczaj) s
 
 Możliwym podejściem jest użycie bezpośredniej architektury komunikacji klient-mikrousług. W tym podejściu aplikacja kliencka może wprowadzać żądania bezpośrednio do niektórych mikrousług, jak pokazano na rysunku 4-12.
 
-![Diagram przedstawiający architekturę komunikacji klient-mikrousług.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/direct-client-to-microservice-communication.png)
+![Diagram przedstawiający architekturę komunikacji klient-mikrousług.](./media/direct-client-to-microservice-communication.png)
 
 **Rysunek 4-12**. Korzystanie z bezpośredniej architektury komunikacji klient-mikrousług
 
@@ -121,10 +121,10 @@ Aby uzyskać więcej informacji, zobacz [wzorzec odciążania bramy](https://doc
 
 W zależności od implementacji można uzyskać wiele dodatkowych zagadnień związanych z obcinaniem, które są oferowane przez bramy interfejsu API. Będziemy tutaj eksplorować następujące informacje:
 
-- [Azure API Management](https://azure.microsoft.com/services/api-management/)
+- [API Management platformy Azure](https://azure.microsoft.com/services/api-management/)
 - [Ocelot](https://github.com/ThreeMammals/Ocelot)
 
-### <a name="azure-api-management"></a>Usługa Azure API Management
+### <a name="azure-api-management"></a>API Management platformy Azure
 
 [API Management platformy Azure](https://azure.microsoft.com/services/api-management/) (jak pokazano na rysunku 4-14) nie tylko rozwiązuje potrzeby bramy interfejsu API, ale udostępnia funkcje, takie jak gromadzenie szczegółowych informacji z interfejsów API. W przypadku korzystania z rozwiązania do zarządzania INTERFEJSami API Brama interfejsu API jest tylko składnikiem tego pełnego rozwiązania do zarządzania interfejsem API.
 
@@ -168,21 +168,21 @@ Po wstępnym rozpoczęciu architektury i wzorców sekcjach w następnych sekcjac
 
 - Jeśli Brama interfejsu API jest opracowana przez jednego zespołu, może to być wąskie gardło. Jest to kolejny powód, dla którego lepszym rozwiązaniem jest posiadanie kilku bram interfejsów API z ograniczeniami, które reagują na różne potrzeby klientów. Bramę interfejsu API można również podzielić wewnętrznie na wiele obszarów lub warstw, które są własnością różnych zespołów pracujących nad mikrousługami wewnętrznymi.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Krzysztof Richardson. Wzorzec: Brama interfejsu API/zaplecze dla frontonu** \
+- **Krzysztof Richardson. Wzorzec: Brama interfejsu API/zaplecze dla frontonu**  \
   <https://microservices.io/patterns/apigateway.html>
 
-- **Wzorzec bramy interfejsu API** \
+- **Wzorzec bramy interfejsu API**  \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Agregacja i wzorzec kompozycji** \
+- **Agregacja i wzorzec kompozycji**  \
   <https://microservices.io/patterns/data/api-composition.html>
 
-- **Usługa Azure API Management**@no__t — 1
+- @No__t_1 **API Management platformy Azure**
   <https://azure.microsoft.com/services/api-management/>
 
-- **UDI Dahan. Składowe zorientowane na usługę** \
+- **UDI Dahan. @No__t_1 kompozycji zorientowanej na usługę**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Blogu Clemensa. Obsługa komunikatów i mikrousług w programie GOTO 2016 (wideo)**  \
@@ -193,4 +193,4 @@ Po wstępnym rozpoczęciu architektury i wzorców sekcjach w następnych sekcjac
 
 >[!div class="step-by-step"]
 >[Poprzedni](identify-microservice-domain-model-boundaries.md)
->[dalej](communication-in-microservice-architecture.md)
+>[Następny](communication-in-microservice-architecture.md)

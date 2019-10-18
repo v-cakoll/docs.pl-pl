@@ -2,12 +2,12 @@
 title: Asynchroniczna komunikacja oparta na komunikatach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Asynchroniczna komunikacja oparta na komunikatach to podstawowe koncepcje w architekturze mikrousług, ponieważ jest to najlepszy sposób, aby mikrousługi były niezależne od siebie, a także ostatecznie zsynchronizowane.
 ms.date: 09/20/2018
-ms.openlocfilehash: 58fe387c6bc9e1dcca519a200d3f8988f327a39c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394575"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522760"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchroniczna komunikacja oparta na komunikatach
 
@@ -77,7 +77,7 @@ Wyzwanie w przypadku implementowania architektury opartej na zdarzeniach w wielu
 
 - Używanie wzorca [pozyskiwania pełnego zdarzenia](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) .
 
-- Używanie [wzorca skrzynki nadawczej](http://gistlabs.com/2014/05/the-outbox/): transakcyjna tabela bazy danych jako kolejka komunikatów, która będzie podstawą dla składnika Event-Creator, który utworzy zdarzenie i opublikuje je.
+- Używanie [wzorca skrzynki nadawczej](http://www.kamilgrzybek.com/design/the-outbox-pattern/): transakcyjna tabela bazy danych jako kolejka komunikatów, która będzie podstawą dla składnika Event-Creator, który utworzy zdarzenie i opublikuje je.
 
 Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komunikacji asynchronicznej, to idempotentność komunikatów i Deduplikacja komunikatów. Te tematy zostały omówione w sekcji [implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) w dalszej części tego przewodnika.
 

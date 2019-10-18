@@ -4,14 +4,14 @@ description: Dowiedz się bezserwerowo Dzięki praktycznemu podejściu, uzyskuj�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 7024a33f8a7fccd6afa51c126454afedd87cceee
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834301"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522388"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe bezserwerowe i przypadki użycia
+# <a name="serverless-business-scenarios-and-use-cases"></a>Scenariusze biznesowe i przypadki użycia bez korzystania z serwera
 
 Istnieje wiele przypadków użycia i scenariuszy dotyczących aplikacji bezserwerowych. Ten rozdział zawiera przykłady ilustrujące różne scenariusze. Scenariusze obejmują linki do powiązanej dokumentacji i repozytoriów kodu publicznego. Przykłady w tym rozdziale umożliwiają rozpoczęcie pracy nad tworzeniem i implementowaniem rozwiązań bezserwerowych.
 
@@ -85,18 +85,18 @@ Przykład składa się z IoT Hub platformy Azure i funkcji platformy Azure. Nowy
 
 Aby uzyskać więcej informacji, zobacz [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/).
 
-## <a name="recommended-resources"></a>Polecane zasoby
+## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Generator mozaiki zdjęć Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-* [Usługa Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
-* [Usługa Azure Storage dla aplikacji .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-* [Przenoszenie własnej aplikacji](https://github.com/JeremyLikness/bring-own-app-connect-17)
-* [Laboratorium importowania woluminów CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-* [Przyklejanie do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue)
-* [Implementowanie prostej funkcji platformy Azure przy użyciu klienta Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
-* [Podnieś i Przenieś za pomocą usługi Azure Functions bez serwera](https://channel9.msdn.com/Events/Connect/2017/E102)
-* [Shortener adres URL bezserwerowy](https://github.com/jeremylikness/serverless-url-shortener)
+- [Generator mozaiki zdjęć Azure Functions](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
+- [Usługa Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Usługa Azure Storage dla aplikacji .NET bezserwerowych w ciągu kilku minut](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
+- [Przenoszenie własnej aplikacji](https://github.com/JeremyLikness/bring-own-app-connect-17)
+- [Laboratorium importowania woluminów CSV](https://github.com/JeremyLikness/azure-fn-file-process-hol)
+- [Przyklejanie do siatki zdarzeń](https://github.com/JeremyLikness/Event-Grid-Glue)
+- [Implementowanie prostej funkcji platformy Azure przy użyciu klienta Xamarin. Forms](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Podnieś i Przenieś za pomocą usługi Azure Functions bez serwera](https://channel9.msdn.com/Events/Connect/2017/E102)
+- [Shortener adres URL bezserwerowy](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
 >[Poprzedni](orchestration-patterns.md)
->[dalej](serverless-conclusion.md)
+>[Następny](serverless-conclusion.md)

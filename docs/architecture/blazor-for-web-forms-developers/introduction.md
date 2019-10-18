@@ -4,12 +4,12 @@ description: Wprowadzenie do Blazor i pisania aplikacji sieci Web na całym stos
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 922e72514f0283b66de971d679fab0af436f1c75
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183848"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520303"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET
 
@@ -62,25 +62,25 @@ Ponadto możliwość uruchamiania kodu platformy .NET w przeglądarce nie zapewn
 
 Blazor ma wspaniałe narzędzia obsługiwane w programie Visual Studio i Visual Studio Code. Struktura zawiera również pełny model składników interfejsu użytkownika i oferuje wbudowane funkcje programu:
 
-* Formularze i walidacja
-* Wstrzykiwanie zależności
-* Routing po stronie klienta
-* Układy
-* Debugowanie w przeglądarce
-* Międzyoperacyjność w języku JavaScript
+- Formularze i walidacja
+- Wstrzykiwanie zależności
+- Routing po stronie klienta
+- Układy
+- Debugowanie w przeglądarce
+- Międzyoperacyjność w języku JavaScript
 
 Blazor ma wiele wspólnych metod ASP.NET Web Forms. Obie te platformy oferują modele programowania opartego na składnikach, sterowanych zdarzeniami. Główną różnicą architektury jest to, że ASP.NET Web Forms działa tylko na serwerze. Blazor można uruchomić na kliencie w przeglądarce. Ale jeśli korzystasz z tła ASP.NET formularzy sieci Web, istnieje wiele Blazor, które będą znane. Blazor to naturalne rozwiązanie dla deweloperów formularzy sieci Web ASP.NET, które chcą korzystać z funkcji tworzenia aplikacji po stronie klienta i środowiska typu open-source na platformie .NET.
 
 Ta książka zawiera wprowadzenie do Blazor, które są przeznaczone dla deweloperów ASP.NET Web Forms. Poszczególne koncepcje Blazor są prezentowane w kontekście analogicznych funkcji i praktyk formularzy sieci Web ASP.NET. Na koniec tej książki znajdziesz następujące informacje:
 
-* Jak kompilować aplikacje Blazor.
-* Jak działa Blazor.
-* Jak Blazor odnosi się do programu .NET Core.
-* Odpowiednie strategie migrowania istniejących aplikacji ASP.NET Web Forms do Blazor, tam gdzie to możliwe.
+- Jak kompilować aplikacje Blazor.
+- Jak działa Blazor.
+- Jak Blazor odnosi się do programu .NET Core.
+- Odpowiednie strategie migrowania istniejących aplikacji ASP.NET Web Forms do Blazor, tam gdzie to możliwe.
 
 ## <a name="get-started-with-blazor"></a>Wprowadzenie do Blazor
 
-Rozpoczynanie pracy z usługą Blazor jest łatwe. Przejdź do <https://blazor.net> obszaru i postępuj zgodnie z linkami, aby zainstalować odpowiednie zestaw .NET Core SDK i szablony projektu Blazor. Znajdziesz również instrukcje dotyczące konfigurowania narzędzi Blazor w programie Visual Studio lub Visual Studio Code.
+Rozpoczynanie pracy z usługą Blazor jest łatwe. Przejdź do <https://blazor.net> i postępuj zgodnie z linkami, aby zainstalować odpowiednie szablony projektów zestaw .NET Core SDK i Blazor. Znajdziesz również instrukcje dotyczące konfigurowania narzędzi Blazor w programie Visual Studio lub Visual Studio Code.
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)

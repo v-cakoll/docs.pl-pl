@@ -4,12 +4,12 @@ description: Dowiedz się, jak architektury ASP.NET Web Forms i Blazor Compare.
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 1137218e1cd99a39240592be415f734223e90b77
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 8ff733178e684666b69859bfab8b79fbad1fdff6
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183960"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520313"
 ---
 # <a name="architecture-comparison-of-aspnet-web-forms-and-blazor"></a>Porównanie architektury ASP.NET Web Forms i Blazor
 
@@ -23,18 +23,18 @@ Struktura formularzy sieci Web ASP.NET jest oparta na architekturze zorientowane
 
 Strony składają się z następujących składników:
 
-* Znaczniki HTML
-* C#lub kod Visual Basic
-* Klasy związane z kodem zawierające funkcje logiki i obsługi zdarzeń
-* Formanty
+- Znaczniki HTML
+- C#lub kod Visual Basic
+- Klasy związane z kodem zawierające funkcje logiki i obsługi zdarzeń
+- Formanty
 
 Formanty to jednostki interfejsu użytkownika sieci Web wielokrotnego użytku, które mogą być programowo umieszczane i współpracujące ze sobą na stronie. Strony składają się z plików kończących się na *. aspx* zawierających znaczniki, kontrolki i kod. Klasy związane z kodem znajdują się w plikach o tej samej nazwie podstawowej i rozszerzeniu *. aspx.cs* lub *. aspx. vb* , w zależności od używanego języka programowania. W interesującej sytuacji serwer sieci Web interpretuje zawartość plików *. aspx* i kompiluje je przy każdej zmianie. Ta ponowna kompilacja występuje nawet wtedy, gdy serwer sieci Web jest już uruchomiony.
 
-Formanty mogą być kompilowane przy użyciu znaczników i dostarczanych jako kontrolki użytkownika. Kontrolka użytkownika pochodzi z `UserControl` klasy i ma podobną strukturę do strony. Znaczniki dla kontrolek użytkownika są przechowywane w pliku *. ascx* . Towarzysząca Klasa znajdująca się w kodzie znajduje się w pliku *. ascx.cs* lub *. ascx. vb* . Kontrolki można także kompilować całkowicie przy użyciu kodu, dziedzicząc z `WebControl` klasy podstawowej lub. `CompositeControl`
+Formanty mogą być kompilowane przy użyciu znaczników i dostarczanych jako kontrolki użytkownika. Kontrolka użytkownika pochodzi z klasy `UserControl` i ma podobną strukturę do strony. Znaczniki dla kontrolek użytkownika są przechowywane w pliku *. ascx* . Towarzysząca Klasa znajdująca się w kodzie znajduje się w pliku *. ascx.cs* lub *. ascx. vb* . Kontrolki można także kompilować całkowicie z kodem, przez dziedziczenie z klasy bazowej `WebControl` lub `CompositeControl`.
 
 Strony mają również rozległy cykl życia zdarzeń. Każda Strona zgłasza zdarzenia dla zdarzeń inicjalizacji, ładowania, wyprerender i zwolnienia, które występują, gdy środowisko uruchomieniowe ASP.NET wykonuje kod strony dla każdego żądania.
 
-Kontrolki na stronie są zwykle umieszczane na tej samej stronie, która przedstawiła formant i przenoszą razem z nimi ładunek z pola ukrytego formularza o nazwie `ViewState`. `ViewState` Pole zawiera informacje o stanie kontrolek w czasie, gdy zostały renderowane i przedstawione na stronie, co umożliwia środowisko uruchomieniowe ASP.NET w celu porównania i identyfikowania zmian zawartości przesłanej do serwera.
+Kontrolki na stronie są zwykle umieszczane na tej samej stronie, która przedstawiła formant i przenoszą razem z nimi ładunek z ukrytego pola formularza o nazwie `ViewState`. Pole `ViewState` zawiera informacje o stanie kontrolek w czasie, gdy zostały renderowane i przedstawione na stronie, co umożliwia środowisko uruchomieniowe ASP.NET w celu porównania i identyfikowania zmian w zawartości przesłanej do serwera.
 
 ## <a name="blazor"></a>Blazor
 
@@ -48,11 +48,11 @@ Sposób, w jaki użytkownik określa, gdzie mają być renderowane składniki, o
 
 [Składniki](components.md) Blazor są klasami .NET, które reprezentują element interfejsu użytkownika wielokrotnego użytku. Każdy składnik utrzymuje własny stan i określa własną logikę renderowania, która może obejmować renderowanie innych składników. Składniki określają programy obsługi zdarzeń dla konkretnych interakcji użytkowników w celu zaktualizowania stanu składnika.
 
-Gdy składnik obsługuje zdarzenie, Blazor renderuje składnik i śledzi zmiany w renderowanych danych wyjściowych. Składniki nie są renderowane bezpośrednio do Document Object Model (DOM). Zamiast tego są one renderowane do reprezentacji w pamięci modelu dom o nazwie `RenderTree` a, tak aby Blazor można było śledzić zmiany. Blazor porównuje nowo renderowane dane wyjściowe z poprzednimi danymi wyjściowymi, aby obliczyć różnice między interfejsem użytkownika, który następnie jest wydajnie stosowany do modelu DOM.
+Gdy składnik obsługuje zdarzenie, Blazor renderuje składnik i śledzi zmiany w renderowanych danych wyjściowych. Składniki nie są renderowane bezpośrednio do Document Object Model (DOM). Zamiast tego są one renderowane do reprezentacji w pamięci modelu DOM o nazwie `RenderTree`, tak aby Blazor można było śledzić zmiany. Blazor porównuje nowo renderowane dane wyjściowe z poprzednimi danymi wyjściowymi, aby obliczyć różnice między interfejsem użytkownika, który następnie jest wydajnie stosowany do modelu DOM.
 
 ![Blazor DOM](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Składniki mogą również ręcznie wskazywać, że powinny być renderowane, jeśli ich stan zmieni się poza normalnym zdarzeniem interfejsu użytkownika. Blazor używa w `SynchronizationContext` celu wymuszenia pojedynczego wątku logicznego wykonywania. W tym `SynchronizationContext`przypadku są wykonywane metody cyklu życia składnika i wszystkie wywołania zwrotne zdarzeń wywoływane przez Blazor.
+Składniki mogą również ręcznie wskazywać, że powinny być renderowane, jeśli ich stan zmieni się poza normalnym zdarzeniem interfejsu użytkownika. Blazor używa `SynchronizationContext` w celu wymuszenia pojedynczego wątku logicznego wykonywania. Metody cyklu życia składnika i wszystkie wywołania zwrotne zdarzeń wywoływane przez Blazor są wykonywane na tym `SynchronizationContext`.
 
 >[!div class="step-by-step"]
 >[Poprzedni](introduction.md)

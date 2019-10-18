@@ -4,12 +4,12 @@ description: Trwałe funkcje platformy Azure zwiększają środowisko uruchomien
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: f7ee74926d6658042120113b49dc763383881423
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676773"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522863"
 ---
 # <a name="durable-azure-functions"></a>Trwałe funkcje platformy Azure
 
@@ -27,7 +27,7 @@ Bezstanowe przepływy pracy w Durable Functions można podzielić na dwa składn
 
 Aranżacje są unikatowe w porównaniu z innymi stylami operacji wyzwalanych w Azure Functions. Durable Functions włącza wykonywanie funkcji, które mogą trwać kilka godzin, a nawet dni. Ten typ zachowania jest konieczny, aby można było sprawdzić stan uruchomionej aranżacji, zapobiegawczo przerwać lub wysyłać powiadomienia o zdarzeniach zewnętrznych.
 
-W takich przypadkach rozszerzenie Durable Functions udostępnia `DurableOrchestrationClient` klasę, która pozwala na współdziałanie z funkcjami zorganizowanymi przez organizację. Dostęp do klienta aranżacji uzyskuje się za pomocą `OrchestrationClientAttribute` powiązania. Ogólnie rzecz biorąc, należy uwzględnić ten atrybut z innym typem wyzwalacza, takim `HttpTrigger` jak `ServiceBusTrigger`lub. Po wyzwoleniu funkcji źródłowej można użyć klienta aranżacji do uruchomienia funkcji programu Orchestrator.
+W takich przypadkach rozszerzenie Durable Functions udostępnia klasę `DurableOrchestrationClient`, która pozwala na współdziałanie z funkcjami zorganizowanymi przez organizację. Dostęp do klienta aranżacji uzyskuje się za pomocą powiązania `OrchestrationClientAttribute`. Ogólnie rzecz biorąc, należy uwzględnić ten atrybut z innym typem wyzwalacza, takim jak `HttpTrigger` lub `ServiceBusTrigger`. Po wyzwoleniu funkcji źródłowej można użyć klienta aranżacji do uruchomienia funkcji programu Orchestrator.
 
 ```csharp
 [FunctionName("KickOff")]
@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Dodawanie adnotacji do funkcji z OrchestrationTriggerAttribute w Azure Functions oznacza, że działa jako funkcja programu Orchestrator. Jest on odpowiedzialny za zarządzanie różnymi działaniami, które tworzą swój stanowy przepływ pracy.
 
-Funkcje programu Orchestrator nie mogą używać powiązań innych niż OrchestrationTriggerAttribute. Tego atrybutu można używać tylko z typem parametru DurableOrchestrationContext. Nie można używać innych danych wejściowych, ponieważ deserializacja wejść w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta aranżacji, należy użyć metody\<getinput T\> .
+Funkcje programu Orchestrator nie mogą używać powiązań innych niż OrchestrationTriggerAttribute. Tego atrybutu można używać tylko z typem parametru DurableOrchestrationContext. Nie można używać innych danych wejściowych, ponieważ deserializacja wejść w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta aranżacji, należy użyć metody getinput \<T \>.
 
 Ponadto zwracane typy funkcji aranżacji muszą mieć wartość void, Task lub można serializować wartości JSON.
 
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-Wiele wystąpień aranżacji można uruchomić i uruchomić w tym samym czasie. `StartNewAsync` Wywołanie metody`DurableOrchestrationClient` na uruchamia nowe wystąpienie aranżacji. Metoda zwraca `Task<string>` , która kończy się po rozpoczęciu aranżacji. Wyjątek typu `TimeoutException` jest zgłaszany, jeśli aranżacja nie została uruchomiona w ciągu 30 sekund.
+Wiele wystąpień aranżacji można uruchomić i uruchomić w tym samym czasie. Wywołanie metody `StartNewAsync` na `DurableOrchestrationClient` uruchamia nowe wystąpienie aranżacji. Metoda zwraca `Task<string>`, która kończy się po rozpoczęciu aranżacji. Wyjątek typu `TimeoutException` jest zgłaszany, jeśli aranżacja nie została uruchomiona w ciągu 30 sekund.
 
-Wykonany `Task<string>` z`StartNewAsync` powinien zawierać unikatowy identyfikator wystąpienia aranżacji. Tego identyfikatora wystąpienia można użyć do wywołania operacji dla danej aranżacji. W ramach aranżacji można wykonywać zapytania dotyczące stanu lub powiadomień o zdarzeniach wysłanych.
+Ukończony `Task<string>` od `StartNewAsync` powinien zawierać unikatowy identyfikator wystąpienia aranżacji. Tego identyfikatora wystąpienia można użyć do wywołania operacji dla danej aranżacji. W ramach aranżacji można wykonywać zapytania dotyczące stanu lub powiadomień o zdarzeniach wysłanych.
 
 ### <a name="the-activity-functions"></a>Funkcje działania
 
 Funkcje działania to dyskretne operacje, które są tworzone razem w ramach funkcji aranżacji w celu utworzenia przepływu pracy. Oto miejsce, w którym ma miejsce najwięcej rzeczywistej pracy. Reprezentują one logikę biznesową, długotrwałe procesy i elementy układanki do większych rozwiązań.
 
-Służy do dodawania adnotacji do parametru funkcji typu `DurableActivityContext`. `ActivityTriggerAttribute` Użycie adnotacji informuje środowisko uruchomieniowe, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania są pobierane przy użyciu `GetInput<T>` metody `DurableActivityContext` parametru.
+@No__t_0 jest używany do dodawania adnotacji do parametru funkcji typu `DurableActivityContext`. Użycie adnotacji informuje środowisko uruchomieniowe, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania są pobierane przy użyciu metody `GetInput<T>` parametru `DurableActivityContext`.
 
 Podobnie jak w przypadku funkcji aranżacji, zwracane typy funkcji działania muszą być typu void, Task lub wartości możliwy do serializacji JSON.
 
-Wszystkie Nieobsłużone wyjątki, które są zgłaszane w ramach funkcji działania, będą wysyłane do wywoływania funkcji programu Orchestrator i prezentowane `TaskFailedException`jako. W tym momencie błąd może zostać przechwycony i zarejestrowany w programie Orchestrator, a działanie może być ponowione.
+Wszystkie Nieobsłużone wyjątki, które są zgłaszane w ramach funkcji działania, będą wysyłane do wywoływania funkcji programu Orchestrator i prezentowane jako `TaskFailedException`. W tym momencie błąd może zostać przechwycony i zarejestrowany w programie Orchestrator, a działanie może być ponowione.
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,10 +96,10 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Powiązania dla Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-* [Zarządzanie wystąpieniami w Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Powiązania dla Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [Zarządzanie wystąpieniami w Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
->[Poprzedni](event-grid.md)Następny
->[](orchestration-patterns.md)
+>[Poprzedni](event-grid.md)
+>[Następny](orchestration-patterns.md)

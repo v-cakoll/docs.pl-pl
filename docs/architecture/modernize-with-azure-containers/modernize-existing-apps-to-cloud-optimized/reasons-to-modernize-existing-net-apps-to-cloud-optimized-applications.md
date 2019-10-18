@@ -2,12 +2,12 @@
 title: Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 ms.date: 04/28/2018
-ms.openlocfilehash: c86b9ec4d4a92b8daa0fceef0531ed955b9bb2bf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318536"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522936"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
@@ -41,7 +41,7 @@ Poniższa lista zawiera opis głównych założenia lub praktyk dla aplikacji zo
 
 Rysunek 4-2 przedstawia główne, opcjonalne filary aplikacji zoptymalizowanej pod kątem chmury. Im więcej filarów zaimplementowano, tym readier, że aplikacja będzie działać pomyślnie w zaspokajaniu oczekiwań klientów.
 
-![Tworzenie diagramów z nazwami głównych filarów aplikacji zoptymalizowanej pod kątem chmury.](./media/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications/main-pillars-cloud-optimized-application.png)
+![Tworzenie diagramów z nazwami głównych filarów aplikacji zoptymalizowanej pod kątem chmury.](./media/main-pillars-cloud-optimized-application.png)
 
 **Rysunek 4-2.** Główne filary aplikacji zoptymalizowanej pod kątem chmury
 

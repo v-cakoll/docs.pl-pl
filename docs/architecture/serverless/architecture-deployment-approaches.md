@@ -4,14 +4,14 @@ description: Przewodnik dotyczący różnych rozwiązań dla przedsiębiorstw je
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4cc8442509fc8a0e2cc0eb797365423458e77684
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: c745a4eb1c6f4a00bf139100b02f31cf3327d01e
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834335"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522730"
 ---
-# <a name="architecture-deployment-approaches"></a>Podejście do wdrożenia architektury
+# <a name="architecture-deployment-approaches"></a>Podejścia do wdrażania architektury
 
 Niezależnie od metody architektury używanej do projektowania aplikacji biznesowej, implementacja lub wdrożenie tych aplikacji może się różnić. Firmy obsługują aplikacje na wszystkich urządzeniach fizycznych niż w przypadku funkcji bezserwerowych.
 
@@ -19,38 +19,38 @@ Niezależnie od metody architektury używanej do projektowania aplikacji bizneso
 
 [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier) to dojrzała architektura i po prostu odwołuje się do aplikacji, które oddzielają różne warstwy logiczne do oddzielnych warstw fizycznych. Architektura n-warstwowa jest fizyczną implementacją architektury N-warstwowej. Najbardziej typowa implementacja tej architektury obejmuje:
 
-* Warstwa prezentacji, na przykład aplikacja internetowa.
-* Warstwa dostępu do interfejsu API lub danych, taka jak interfejs API REST.
-* Warstwa danych, na przykład baza danych SQL.
+- Warstwa prezentacji, na przykład aplikacja internetowa.
+- Warstwa dostępu do interfejsu API lub danych, taka jak interfejs API REST.
+- Warstwa danych, na przykład baza danych SQL.
 
 ![Architektura N-warstwowa](./media/n-tier-architecture.png)
 
 Rozwiązania N-warstwowe mają następujące cechy:
 
-* Projekty są zwykle wyrównane z warstwami.
-* Testowanie może się różnić w zależności od warstwy.
-* Warstwy zapewniają warstwy abstrakcji, na przykład warstwa prezentacji zazwyczaj ignorujących szczegóły implementacji warstwy danych.
-* Zazwyczaj warstwy współpracują tylko z sąsiednimi warstwami.
-* Wersje są często zarządzane w projekcie, dlatego poziom. Prosta zmiana interfejsu API może wymagać nowej wersji całej warstwy środkowej.
+- Projekty są zwykle wyrównane z warstwami.
+- Testowanie może się różnić w zależności od warstwy.
+- Warstwy zapewniają warstwy abstrakcji, na przykład warstwa prezentacji zazwyczaj ignorujących szczegóły implementacji warstwy danych.
+- Zazwyczaj warstwy współpracują tylko z sąsiednimi warstwami.
+- Wersje są często zarządzane w projekcie, dlatego poziom. Prosta zmiana interfejsu API może wymagać nowej wersji całej warstwy środkowej.
 
 Takie podejście zapewnia kilka korzyści, w tym:
 
-* Izolacja bazy danych (często fronton nie ma bezpośredniego dostępu do zaplecza bazy danych).
-* Ponowne użycie interfejsu API (na przykład klientów aplikacji mobilnych, klasycznych i internetowych może ponownie używać tych samych interfejsów API).
-* Możliwość skalowania w poziomie warstw niezależnie od siebie.
-* Izolacja refaktoryzacji: jedna warstwa może być Refaktoryzacja bez wpływu na inne warstwy.
+- Izolacja bazy danych (często fronton nie ma bezpośredniego dostępu do zaplecza bazy danych).
+- Ponowne użycie interfejsu API (na przykład klientów aplikacji mobilnych, klasycznych i internetowych może ponownie używać tych samych interfejsów API).
+- Możliwość skalowania w poziomie warstw niezależnie od siebie.
+- Izolacja refaktoryzacji: jedna warstwa może być Refaktoryzacja bez wpływu na inne warstwy.
 
 ## <a name="on-premises-and-infrastructure-as-a-service-iaas"></a>Lokalna i infrastruktura jako usługa (IaaS)
 
 Tradycyjne podejście do hostingu aplikacji wymaga zakupu sprzętu i zarządzania wszystkimi instalacjami oprogramowania, w tym systemem operacyjnym. Pierwotnie to dotyczyło kosztownych centrów danych i sprzętu fizycznego. Problemy związane z sprzętem fizycznym to wiele, w tym:
 
-* Konieczność kupowania nadmiarowych scenariuszy "just in case" lub szczytowego zapotrzebowania na żądania.
-* Zabezpieczanie fizycznego dostępu do sprzętu.
-* Odpowiedzialność za awarie sprzętu (na przykład awaria dysku).
-* Stosować.
-* Konfigurowanie routerów i modułów równoważenia obciążenia.
-* Nadmiarowość.
-* Zabezpieczanie dostępu do oprogramowania.
+- Konieczność kupowania nadmiarowych scenariuszy "just in case" lub szczytowego zapotrzebowania na żądania.
+- Zabezpieczanie fizycznego dostępu do sprzętu.
+- Odpowiedzialność za awarie sprzętu (na przykład awaria dysku).
+- Stosować.
+- Konfigurowanie routerów i modułów równoważenia obciążenia.
+- Nadmiarowość.
+- Zabezpieczanie dostępu do oprogramowania.
 
 ![Podejście IaaS](./media/iaas-approach.png)
 
@@ -68,10 +68,10 @@ Platforma jako usługa (PaaS) oferuje skonfigurowane rozwiązania, które dewelo
 
 PaaS zaspokaja wyzwania typowe dla IaaS. PaaS umożliwia deweloperom skoncentrowanie się na kodzie lub schemacie bazy danych, a nie w porównaniu z ich wdrożeniem. Zalety PaaS obejmują:
 
-* Płatność za korzystanie z modeli, które eliminują nakłady inwestycyjne w odniesieniu do bezczynnych maszyn.
-* Bezpośrednie wdrożenie i udoskonalone DevOps, ciągłej integracji (CI) i ciągłe dostarczanie (CD).
-* Automatyczne uaktualnienia, aktualizacje i poprawki zabezpieczeń.
-* Wypchnij przycisk w poziomie i Skaluj w górę (elastyczne skalowanie).
+- Płatność za korzystanie z modeli, które eliminują nakłady inwestycyjne w odniesieniu do bezczynnych maszyn.
+- Bezpośrednie wdrożenie i udoskonalone DevOps, ciągłej integracji (CI) i ciągłe dostarczanie (CD).
+- Automatyczne uaktualnienia, aktualizacje i poprawki zabezpieczeń.
+- Wypchnij przycisk w poziomie i Skaluj w górę (elastyczne skalowanie).
 
 Główną wadą PaaS tradycyjnie jest blokada dostawcy. Na przykład niektórzy dostawcy PaaS obsługują tylko ASP.NET, Node. js i inne określone Języki i platformy. Produkty takie jak Azure App Service uległy rozwojem wielu platform i obsługują różne języki i struktury do hostowania aplikacji sieci Web.
 
@@ -89,11 +89,11 @@ Kontenery to interesujące rozwiązanie, które zapewnia korzyści podobne do Pa
 
 Zalety kontenerów obejmują:
 
-* Lekki i przenośny
-* Samodzielny, więc nie trzeba instalować zależności
-* Zapewnianie spójnego środowiska bez względu na to, że host (działa tak samo na laptopie jak na serwerze w chmurze)
-* Możliwość szybkiego aprowizacji w celu skalowania w poziomie
-* Można szybko uruchomić ponownie, aby odzyskać sprawność po awarii
+- Lekki i przenośny
+- Samodzielny, więc nie trzeba instalować zależności
+- Zapewnianie spójnego środowiska bez względu na to, że host (działa tak samo na laptopie jak na serwerze w chmurze)
+- Możliwość szybkiego aprowizacji w celu skalowania w poziomie
+- Można szybko uruchomić ponownie, aby odzyskać sprawność po awarii
 
 Kontener jest uruchamiany na hoście kontenera (który z kolei może działać na komputerze bez systemu operacyjnego lub maszynie wirtualnej). Wiele kontenerów lub wystąpień tych samych kontenerów może działać na jednym hoście. W przypadku prawdziwej pracy awaryjnej i odporności kontenery muszą być skalowane między hostami.
 
@@ -109,7 +109,7 @@ Aby uzyskać więcej informacji o aranżacji, zobacz [Kubernetes na platformie A
 
 Funkcja jako usługa (FaaS) to wyspecjalizowana Usługa kontenera, która jest podobna do bezserwerowej. Określona implementacja FaaS o nazwie [OpenFaaS](https://github.com/openfaas/faas)znajduje się na szczycie kontenerów w celu zapewnienia bezserwerowych funkcji. OpenFaaS udostępnia szablony, które pakują wszystkie zależności kontenera niezbędne do uruchomienia fragmentu kodu. Używanie szablonów upraszcza proces wdrażania kodu jako jednostki funkcjonalnej. OpenFaaS docelowe architektury, które zawierają już kontenery i Koordynatory, ponieważ mogą korzystać z istniejącej infrastruktury programu. Chociaż oferuje ona funkcje bezserwerowe, w tym celu należy użyć platformy Docker i programu Orchestrator.
 
-## <a name="serverless"></a>Bez serwerów
+## <a name="serverless"></a>Bezserwerowej
 
 Architektura bezserwerowa zapewnia wyraźne rozdzielenie kodu i jego środowiska hostingu. Zaimplementuj kod w *funkcji* , która jest wywoływana przez *wyzwalacz*. Po zakończeniu tej funkcji wszystkie jej zasoby muszą być zwolnione. Wyzwalacz może być ręczny, proces przekroczenia limitu czasu, żądanie HTTP lub przekazywanie pliku. Wynikiem wyzwalacza jest wykonanie kodu. Chociaż platformy bezserwerowe różnią się, większość zapewniają dostęp do wstępnie zdefiniowanych interfejsów API i powiązań, aby usprawnić zadania, takie jak zapisywanie w bazie danych lub kolejkowanie wyników.
 
@@ -125,10 +125,10 @@ Na poniższej ilustracji przedstawiono wykresy czterech składników bezserwerow
 
 Zalety serwera obejmują:
 
-* **Wysoka gęstość.** Wiele wystąpień tego samego kodu bezserwerowego można uruchomić na tym samym hoście w porównaniu z kontenerami lub maszynami wirtualnymi. Wystąpienia są skalowane na wielu hostach w poziomie i w odporności.
-* **Rozliczanie**. Większość dostawców bezserwerowych jest rozliczana na podstawie wykonań bezserwerowych, co zapewnia duże oszczędności kosztów w niektórych scenariuszach.
-* **Natychmiastowa Skala**. Bezserwerowe skalowanie może być skalowane w celu automatycznego i szybkiego dopasowania obciążeń.
-* **Krótszy czas wprowadzenia na rynek** Deweloperzy koncentrują się na kodzie i wdrażają bezpośrednio na platformie bezserwerowej. Składniki mogą być wydzierżawione niezależnie od siebie.
+- **Wysoka gęstość.** Wiele wystąpień tego samego kodu bezserwerowego można uruchomić na tym samym hoście w porównaniu z kontenerami lub maszynami wirtualnymi. Wystąpienia są skalowane na wielu hostach w poziomie i w odporności.
+- **Rozliczanie.** Większość dostawców bezserwerowych jest rozliczana na podstawie wykonań bezserwerowych, co zapewnia duże oszczędności kosztów w niektórych scenariuszach.
+- **Natychmiastowa Skala.** Bezserwerowe skalowanie może być skalowane w celu automatycznego i szybkiego dopasowania obciążeń.
+- **Krótszy czas wprowadzenia na rynek.** Deweloperzy koncentrują się na kodzie i wdrażają bezpośrednio na platformie bezserwerowej. Składniki mogą być wydzierżawione niezależnie od siebie.
 
 Bezserwerowe jest najczęściej omawiane w kontekście obliczeń, ale mogą również dotyczyć danych. Na przykład baza danych [SQL platformy Azure i usługa](https://docs.microsoft.com/azure/sql-database) [Cosmos DB](https://docs.microsoft.com/azure/cosmos-db) są w chmurze, które nie wymagają konfigurowania maszyn lub klastrów hostów. Ta książka koncentruje się na obliczeniach bezserwerowych.
 
@@ -136,35 +136,35 @@ Bezserwerowe jest najczęściej omawiane w kontekście obliczeń, ale mogą rów
 
 Istnieje szeroki zakres dostępnych opcji architektury, w tym podejście hybrydowe. Bezserwerowy upraszcza podejście, zarządzanie i koszt funkcji aplikacji przy kosztach kontroli i przenośności. Jednak wiele platform bezserwerowych uwidacznia konfigurację, aby ułatwić dostosowanie rozwiązania. Dobre praktyki programistyczne mogą również prowadzić do bardziej przenośnego kodu i mniejszej blokady platformy bezserwerowej. W poniższej tabeli przedstawiono podejścia do architektury obok siebie. Wybierz opcję bezserwerowa zależna od potrzeb skalowania, niezależnie od tego, czy chcesz zarządzać środowiskiem uruchomieniowym, a także jak można przerwać obciążenia w małych składnikach. Zapoznaj się z potencjalnymi wyzwaniami dotyczącymi bezserwerowych i innych decyzji w następnym rozdziale.
 
-|         |IaaS     |PaaS     |Kontener|Bez serwerów|
+|         |IaaS     |PaaS     |wbudowane|Bezserwerowej|
 |---------|---------|---------|---------|----------|
-|**Skalowanie**|VM       |Wystąpienie |aplikacja      |Funkcja  |
+|**Zasięgu**|MASZYN       |Wystąpienie |Aplikacje      |Funkcja  |
 |**Streszczenia**|Sprzęt|Platforma|Host systemu operacyjnego|Środowisko uruchomieniowe   |
-|**Jednostka** |VM       |Project  |Image (Obraz)    |Kod      |
-|**Okres istnienia**|Miesiące|Dni do miesięcy|Minuty na dni|Milisekundy na minuty|
+|**Jednostka** |MASZYN       |Projekt  |Obraz    |Kod      |
+|**Cykl życia**|Od|Dni do miesięcy|Minuty na dni|Milisekundy na minuty|
 |**Odpowiedzialność za**|Aplikacje, zależności, środowisko uruchomieniowe i system operacyjny|Aplikacje i zależności|Aplikacje, zależności i środowisko uruchomieniowe|Funkcja
 
-* **Skala** odnosi się do jednostki, która jest używana do skalowania aplikacji.
-* **Streszczenia** odnosi się do warstwy, która jest abstrakcyjna przez implementację
-* **Jednostka** odnosi się do zakresu wdrożenia
-* **Okres istnienia** dotyczy typowego środowiska uruchomieniowego określonego wystąpienia
-* **Odpowiedzialność** dotyczy narzutów związanych z kompilowaniem, wdrażaniem i konserwacją aplikacji
+- **Skala** odnosi się do jednostki, która jest używana do skalowania aplikacji.
+- **Streszczenia** odnosi się do warstwy, która jest abstrakcyjna przez implementację
+- **Jednostka** odnosi się do zakresu wdrożenia
+- **Okres istnienia** dotyczy typowego środowiska uruchomieniowego określonego wystąpienia
+- **Odpowiedzialność** dotyczy narzutów związanych z kompilowaniem, wdrażaniem i konserwacją aplikacji
 
 Następny rozdział koncentruje się na architekturze bezserwerowej, przypadków użycia i wzorcach projektowych.
 
-## <a name="recommended-resources"></a>Polecane zasoby
+## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Przewodnik po architekturze aplikacji platformy Azure](https://docs.microsoft.com/azure/architecture/guide/)
-* [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-* [Azure SQL](https://docs.microsoft.com/azure/sql-database)
-* [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
-* [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
-* [Mikrousługi](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
-* [Architektura referencyjna N-warstwowej maszyny wirtualnej](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
-* [Maszyny wirtualne](https://docs.microsoft.com/azure/virtual-machines/)
-* [Co to jest platforma Docker?](../microservices/container-docker-introduction/docker-defined.md)
-* [Wingtip bilety SaaS aplikacji](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
+- [Przewodnik po architekturze aplikacji platformy Azure](https://docs.microsoft.com/azure/architecture/guide/)
+- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
+- [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
+- [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+- [Mikrousług](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)
+- [Architektura referencyjna N-warstwowej maszyny wirtualnej](https://docs.microsoft.com/azure/architecture/reference-architectures/virtual-machines-windows/n-tier)
+- [Maszyny wirtualne](https://docs.microsoft.com/azure/virtual-machines/)
+- [Co to jest Docker?](../microservices/container-docker-introduction/docker-defined.md)
+- [Wingtip bilety SaaS aplikacji](https://docs.microsoft.com/azure/sql-database/saas-tenancy-welcome-wingtip-tickets-app)
 
 >[!div class="step-by-step"]
 >[Poprzedni](architecture-approaches.md)
->[dalej](serverless-architecture.md)
+>[Następny](serverless-architecture.md)

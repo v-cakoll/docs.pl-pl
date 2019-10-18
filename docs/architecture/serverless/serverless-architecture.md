@@ -4,16 +4,16 @@ description: Eksploracja różnych architektur i aplikacji, które są obsługiw
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 838dcd7b41df0d8297e1ae10f9c04a8d5b83b332
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676722"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522408"
 ---
 # <a name="serverless-architecture"></a>Architektura bezserwerowa
 
-Istnieje wiele metod korzystania z architektur [](https://azure.com/serverless) bezserwerowych. W tym rozdziale przedstawiono przykłady typowych architektur, które integrują bezserwerowo. Obejmuje to również problemy, które mogą powodować dodatkowe wyzwania lub wymagać dodatkowej uwagi podczas implementowania bezserwerowego. Na koniec przedstawiono kilka przykładów projektowania, które ilustrują różne przypadki użycia serwera.
+Istnieje wiele metod korzystania z architektur [bezserwerowych](https://azure.com/serverless) . W tym rozdziale przedstawiono przykłady typowych architektur, które integrują bezserwerowo. Obejmuje to również problemy, które mogą powodować dodatkowe wyzwania lub wymagać dodatkowej uwagi podczas implementowania bezserwerowego. Na koniec przedstawiono kilka przykładów projektowania, które ilustrują różne przypadki użycia serwera.
 
 Hosty bezserwerowe często używają istniejącej warstwy opartej na kontenerze lub PaaS do zarządzania wystąpieniami bezserwerowymi. Na przykład Azure Functions jest oparta na [Azure App Service](https://docs.microsoft.com/azure/app-service/). App Service jest używany do skalowania wystąpień i zarządzania środowiskiem uruchomieniowym, które wykonuje Azure Functions kodzie. W przypadku funkcji opartych na systemie Windows Host działa jako PaaS i skaluje środowisko uruchomieniowe platformy .NET. W przypadku funkcji opartych na systemie Linux Host wykorzystuje kontenery.
 
@@ -27,12 +27,12 @@ Niektóre projekty mogą korzystać z metody "All-in" do bezserwerowego. Aplikac
 
 Pełny zaplecza bezserwerowego jest idealnym rozwiązaniem dla kilku typów scenariuszy, szczególnie podczas tworzenia nowych lub "zielonych pól". Aplikacja o dużym obszarze interfejsów API może korzystać z implementacji każdego interfejsu API jako funkcji bezserwerowej. Aplikacje, które są oparte na architekturze mikrousług, są kolejnym przykładem, który można zaimplementować jako pełny zaplecza bezserwerowego. Mikrousługi komunikują się między sobą za pośrednictwem różnych protokołów. Określone scenariusze obejmują:
 
-* SaaS produkty oparte na interfejsie API (przykład: procesor płatności finansowych).
-* Aplikacje sterowane komunikatami (przykład: rozwiązanie do monitorowania urządzeń).
-* Aplikacje ukierunkowane na integrację usług (przykład: aplikacja do rezerwacji linii lotniczych).
-* Procesy, które są uruchamiane okresowo (przykład: Oczyszczanie bazy danych oparte na czasomierzu).
-* Aplikacje ukierunkowane na Przekształcanie danych (przykład: import wyzwolony przez przekazywanie plików).
-* Wyodrębnij procesy transformacji i ładowania (ETL).
+- SaaS produkty oparte na interfejsie API (przykład: procesor płatności finansowych).
+- Aplikacje sterowane komunikatami (przykład: rozwiązanie do monitorowania urządzeń).
+- Aplikacje ukierunkowane na integrację usług (przykład: aplikacja do rezerwacji linii lotniczych).
+- Procesy, które są uruchamiane okresowo (przykład: Oczyszczanie bazy danych oparte na czasomierzu).
+- Aplikacje ukierunkowane na Przekształcanie danych (przykład: import wyzwolony przez przekazywanie plików).
+- Wyodrębnij procesy transformacji i ładowania (ETL).
 
 Istnieją inne, bardziej szczegółowe przypadki użycia, które zostały omówione w dalszej części tego dokumentu.
 
@@ -42,7 +42,7 @@ Typowym wyzwaniem jest Migrowanie istniejącej aplikacji monolitycznej do chmury
 
 ![Migracja monolitu bezserwerowa](./media/serverless-monolith-migration.png)
 
-Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj film wideo: [Przenieś swoją aplikację do chmury, korzystając z bezserwerowego Azure Functions](https://channel9.msdn.com/Events/Connect/2017/E102).
+Aby dowiedzieć się więcej na temat tego podejścia, Obejrzyj wideo: [Przenieś swoją aplikację do chmury, korzystając z Azure Functions bezserwerowych](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Aplikacje internetowe
 
@@ -66,13 +66,13 @@ IoT odnosi się do obiektów fizycznych, które są połączone ze sobą. Są on
 
 Zawiera ilość urządzeń i informacji często wymusza architekturę opartą na zdarzeniach, aby kierować i przetwarzać komunikaty. Bezserwerowy jest idealnym rozwiązaniem z kilku powodów:
 
-* Umożliwia skalowanie w miarę wzrostu ilości urządzeń i danych.
-* Służy do dodawania nowych punktów końcowych w celu obsługi nowych urządzeń i czujników.
-* Ułatwia niezależne przechowywanie wersji, dzięki czemu deweloperzy mogą aktualizować logikę biznesową dla określonego urządzenia bez konieczności wdrażania całego systemu.
-* Odporność i mniej przestojów.
+- Umożliwia skalowanie w miarę wzrostu ilości urządzeń i danych.
+- Służy do dodawania nowych punktów końcowych w celu obsługi nowych urządzeń i czujników.
+- Ułatwia niezależne przechowywanie wersji, dzięki czemu deweloperzy mogą aktualizować logikę biznesową dla określonego urządzenia bez konieczności wdrażania całego systemu.
+- Odporność i mniej przestojów.
 
 W efekcie usługi IoT wystąpiły różne produkty bezserwerowe, które koncentrują się na obawach IoT, takich jak [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Bezserwerowy automatyzuje zadania, takie jak rejestrowanie urządzeń, wymuszanie zasad, śledzenie i nawet Wdrażanie kodu na urządzeniach na *brzegu*. Brzeg odnosi się do urządzeń, takich jak czujniki i siłowniky, które są połączone z, ale nie z aktywną częścią, Internetu.
 
 >[!div class="step-by-step"]
->[Poprzedni](architecture-approaches.md)Następny
->[](serverless-architecture-considerations.md)
+>[Poprzedni](architecture-approaches.md)
+>[Następny](serverless-architecture-considerations.md)

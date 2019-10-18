@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Korzystanie z Azure Monitor w celu uzyskania wglądu w system działa.
 ms.date: 09/23/2019
-ms.openlocfilehash: 20048792e95ef1f6e75551cdd0d3571f972f6c14
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214094"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72521027"
 ---
 # <a name="azure-monitor"></a>Azure Monitor 
 
@@ -15,8 +15,8 @@ ms.locfileid: "71214094"
 
 Żaden inny dostawca chmury nie jest gotowy do monitorowania aplikacji w chmurze, który znajduje się na platformie Azure. Azure Monitor to nazwa parasola kolekcji narzędzi zaprojektowanych w celu zapewnienia wglądu w stan systemu, wglądu w wszystkie problemy i optymalizację aplikacji. 
 
-![Azure Monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze. **Rysunek 7-9**. ](./media/azure-monitor.png)
- Azure Monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze.
+![Azure monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze. ](./media/azure-monitor.png)
+**rysunek 7-9**. Azure Monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze.
 
 ## <a name="gathering-logs-and-metrics"></a>Zbieranie dzienników i metryk
 
@@ -42,8 +42,8 @@ StormEvents
 | render piechart 
 ```
 
-![Wynik Application Insights](./media/azure-monitor.png)
-**rysunku 7-10**. Wynik zapytania Application Insights.
+![The wynik zapytania Application Insights ](./media/azure-monitor.png)
+**rysunek 7-10**. Wynik zapytania Application Insights.
 
 Istnieje [plac zabaw do eksperymentowania z](https://dataexplorer.azure.com/clusters/help/databases/Samples) zapytaniami Kusto, które są fantastycznie miejsce na godzinę lub dwa. Odczytywanie [przykładowych zapytań](https://docs.microsoft.com/azure/kusto/query/samples) może być również instrukcją.
 
@@ -51,23 +51,23 @@ Istnieje [plac zabaw do eksperymentowania z](https://dataexplorer.azure.com/clus
 
 Istnieje kilka różnych technologii pulpitu nawigacyjnego, które mogą być używane do prezentowania informacji z Azure Monitor. Prawdopodobnie najprostszym sposobem jest tylko uruchomienie zapytań w Application Insights i [wykreślenie danych na wykresie](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards). 
 
-![Przykład Application Insights wykresów osadzonych na głównym rysunku pulpitu nawigacyjnego](./media/azure-monitor.png)
-platformy Azure**7-11**. Przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure.
+![An przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure ](./media/azure-monitor.png)
+**rysunku 7-11**. Przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure.
 
 Te wykresy można następnie osadzić w Azure Portal w odpowiedni sposób przy użyciu funkcji pulpitu nawigacyjnego. Dla użytkowników mających dokładniejsze wymagania, takie jak możliwość przejścia do kilku warstw danych Azure Monitor dane są dostępne do [Power BI](https://powerbi.microsoft.com/). Power BI to wiodąca w branży Klasa korporacyjna, Narzędzie analizy biznesowej, które umożliwia agregowanie danych z wielu różnych źródeł danych.
 
-![Przykład Power BI pulpitu nawigacyjnego](./media/azure-monitor.png)
-**7-12**. Przykład Power BI pulpitu nawigacyjnego.
+przykład ![An Power BI pulpitu nawigacyjnego ](./media/azure-monitor.png)
+**rysunek 7-12**. Przykład Power BI pulpitu nawigacyjnego.
 
 ## <a name="alerts"></a>Alerty
 
 Czasami posiadanie pulpitów nawigacyjnych danych jest niewystarczające. Jeśli nikt nie będzie w stanie obejrzeć pulpitów nawigacyjnych, może to potrwać kilka godzin, zanim problem zostanie rozwiązany, a nawet wykryty. W tym celu Azure Monitor również zawiera pierwsze rozwiązanie do tworzenia [alertów](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview). Alerty mogą być wyzwalane przez szeroki zakres warunków, w tym:
 
-* Wartości metryk
-* Zapytania wyszukiwania w dzienniku
-* Zdarzenia dziennika aktywności
-* Kondycja podstawowej platformy platformy Azure
-* Testy dostępności witryny sieci Web
+- Wartości metryk
+- Zapytania wyszukiwania w dzienniku
+- Zdarzenia dziennika aktywności
+- Kondycja podstawowej platformy platformy Azure
+- Testy dostępności witryny sieci Web
 
 Po wyzwoleniu alerty mogą wykonywać wiele różnych zadań. Po stronie prostej alerty mogą po prostu wysłać powiadomienie e-mail do listy adresowej lub wiadomości tekstowej do osoby. Bardziej powiązane alerty mogą wyzwolić przepływ pracy w narzędziu, takim jak usługi PagerDuty, który ma świadomość, kto jest w wywołaniu dla określonej aplikacji. Alerty mogą wyzwalać akcje w [Microsoft Flow](https://flow.microsoft.com/) odblokowywanie w bliskich nieograniczonych możliwościach dla przepływów pracy.
 

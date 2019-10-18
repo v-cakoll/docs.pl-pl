@@ -4,12 +4,12 @@ description: Usługa Azure trwałe funkcje
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 18e13c5355490ef4a019ceda459114bdb6bfd539
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676737"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522635"
 ---
 # <a name="orchestration-patterns"></a>Wzorce aranżacji
 
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-W poprzednim przykładzie `CallActivityAsync` kodu funkcja jest odpowiedzialna za uruchamianie danego działania na maszynie wirtualnej w centrum danych. Po zakończeniu operacji "await" i "bazowego" zadanie zostanie zarejestrowane w tabeli historii. Kod w funkcji programu Orchestrator może korzystać z dowolnego znanego konstrukcji biblioteki zadań równoległych i słów kluczowych async/await.
+W poprzednim przykładzie kodu funkcja `CallActivityAsync` jest odpowiedzialna za uruchamianie danego działania na maszynie wirtualnej w centrum danych. Po zakończeniu operacji "await" i "bazowego" zadanie zostanie zarejestrowane w tabeli historii. Kod w funkcji programu Orchestrator może korzystać z dowolnego znanego konstrukcji biblioteki zadań równoległych i słów kluczowych async/await.
 
-Poniższy kod stanowi uproszczony przykład sposobu, `ProcessPayment` w jaki Metoda może wyglądać następująco:
+Poniższy kod stanowi uproszczony przykład sposobu, w jaki Metoda `ProcessPayment` może wyglądać następująco:
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 W niektórych przypadkach przepływy pracy mogą zawierać działania, które trwają stosunkowo długi czas. Wyobraź sobie proces, który umożliwia rozpoczęcie tworzenia kopii zapasowych plików multimedialnych w usłudze BLOB Storage. W zależności od rozmiaru i liczby plików multimedialnych proces tworzenia kopii zapasowej może trwać kilka godzin.
 
-W tym scenariuszu `DurableOrchestrationClient`można użyć możliwości sprawdzenia stanu uruchomionego przepływu pracy. Przy użyciu `HttpTrigger` do uruchomienia przepływu pracy `CreateCheckStatusResponse` , Metoda może być używana `HttpResponseMessage`do zwracania wystąpienia. Ta odpowiedź zapewnia klientowi identyfikator URI w ładunku, którego można użyć do sprawdzenia stanu uruchomionego procesu.
+W tym scenariuszu `DurableOrchestrationClient` możliwości sprawdzenia stanu uruchomionego przepływu pracy staną się przydatne. Przy użyciu `HttpTrigger` do uruchomienia przepływu pracy, Metoda `CreateCheckStatusResponse` może być używana do zwracania wystąpienia `HttpResponseMessage`. Ta odpowiedź zapewnia klientowi identyfikator URI w ładunku, którego można użyć do sprawdzenia stanu uruchomionego procesu.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -101,11 +101,11 @@ Korzystając z preferowanego klienta HTTP, można uzyskać żądania GET do iden
 }
 ```
 
-W miarę kontynuowania procesu odpowiedź stanu zmieni się na niepowodzenie lub **zakończenie**. Po pomyślnym zakończeniu wartość właściwości **Output** w ładunku będzie zawierać wszystkie zwrócone dane.
+W miarę kontynuowania procesu odpowiedź stanu zmieni się na **Niepowodzenie** lub **zakończenie**. Po pomyślnym zakończeniu wartość właściwości **Output** w ładunku będzie zawierać wszystkie zwrócone dane.
 
 ## <a name="monitoring"></a>Monitorowanie
 
-W przypadku prostych zadań cyklicznych Azure Functions zapewnia `TimerTrigger` , że można zaplanować planowanie w oparciu o wyrażenie firmy cronus. Czasomierz działa dobrze w przypadku prostych, krótkoterminowych zadań, ale mogą istnieć scenariusze, w których jest wymagana większa elastyczność planowania. Ten scenariusz występuje, gdy wzorzec monitorowania i Durable Functions mogą pomóc.
+W przypadku prostych zadań cyklicznych Azure Functions zapewnia `TimerTrigger`, które mogą być zaplanowane w oparciu o wyrażenie firmy cronus. Czasomierz działa dobrze w przypadku prostych, krótkoterminowych zadań, ale mogą istnieć scenariusze, w których jest wymagana większa elastyczność planowania. Ten scenariusz występuje, gdy wzorzec monitorowania i Durable Functions mogą pomóc.
 
 Durable Functions umożliwia elastyczne interwały planowania, zarządzanie okresem istnienia oraz tworzenie wielu procesów monitorowania z poziomu pojedynczej funkcji aranżacji. Jednym przypadkiem użycia dla tej funkcji może być utworzenie obserwatorów dla zmian cen akcji, które ukończą po spełnieniu określonego progu.
 
@@ -149,13 +149,13 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext``CreateTimer` Metoda ustawia harmonogram następnego wywołania pętli w celu sprawdzenia, czy zmieniają się ceny giełdowe. `DurableOrchestrationContext`ma `CurrentUtcDateTime` również właściwość, aby uzyskać bieżącą wartość DateTime w formacie UTC. Lepiej jest używać tej właściwości zamiast `DateTime.UtcNow` ponieważ jest ona łatwo zastosowana do testowania.
+`DurableOrchestrationContext` `CreateTimer` Metoda konfiguruje harmonogram następnego wywołania pętli w celu sprawdzenia, czy zmieniają się ceny giełdowe. `DurableOrchestrationContext` ma również właściwość `CurrentUtcDateTime`, aby uzyskać bieżącą wartość DateTime w formacie UTC. Lepiej jest używać tej właściwości zamiast `DateTime.UtcNow`, ponieważ jest ona łatwo zastosowana do testowania.
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Durable Functions platformy Azure](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-* [Testy jednostkowe w .NET Core i .NET Standard](../../core/testing/index.md)
+- [Durable Functions platformy Azure](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [Testy jednostkowe w .NET Core i .NET Standard](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
->[Poprzedni](durable-azure-functions.md)Następny
->[](serverless-business-scenarios.md)
+>[Poprzedni](durable-azure-functions.md)
+>[Następny](serverless-business-scenarios.md)

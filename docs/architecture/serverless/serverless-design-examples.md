@@ -4,12 +4,12 @@ description: Zapoznaj się z różnymi scenariuszami obsługiwanymi przez archit
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 096dce6ef23bde5ef9c6ca65769f4dcc7e08a904
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f7d3ec50608848b725d813ae2a9ee59ae9532ef3
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676674"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72522351"
 ---
 # <a name="serverless-design-examples"></a>Przykłady projektów bezserwerowych
 
@@ -77,17 +77,17 @@ Brama interfejsu API zapewnia pojedynczy punkt wejścia dla klientów, a następ
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
-* [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-* [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices/architect-microservice-container-applications/distributed-data-management.md)
-* [Projektowanie mikrousług: Identyfikowanie granic mikrousług](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-* [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
-* [Wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
-* [Implementowanie wzorca wyłącznika](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
-* [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
-* [Service Bus](https://docs.microsoft.com/azure/service-bus)
-* [Praca ze zmianą Obsługa kanału informacyjnego w usłudze Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
+- [IoT Hub platformy Azure](https://docs.microsoft.com/azure/iot-hub)
+- [Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices/architect-microservice-container-applications/distributed-data-management.md)
+- [Projektowanie mikrousług: Identyfikowanie granic mikrousług](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
+- [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Wzorzec określania źródła zdarzeń](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [Implementowanie wzorca wyłącznika](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
+- [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
+- [Service Bus](https://docs.microsoft.com/azure/service-bus)
+- [Praca z obsługą kanału informacyjnego zmian w Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
->[Poprzedni](serverless-architecture-considerations.md)Następny
->[](azure-serverless-platform.md)
+>[Poprzedni](serverless-architecture-considerations.md)
+>[Następny](azure-serverless-platform.md)

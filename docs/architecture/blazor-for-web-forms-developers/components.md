@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: c9fb9b3ff59986ebaf64ecb19277ffbbc8696fed
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: ab9697bcb12ec17528415b3ad4d850803f472b36
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031796"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520332"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -19,10 +19,10 @@ Jednym z atrakcyjnych elementów formularzy sieci Web ASP.NET jest to, jak umoż
 
 Blazor obsługuje także hermetyzację interfejsu użytkownika za poorednictwem *składników*. Składnik:
 
-* Jest samodzielnym fragmentem interfejsu użytkownika.
-* Utrzymuje własny stan i logikę renderowania.
-* Można zdefiniować procedury obsługi zdarzeń interfejsu użytkownika, powiązać dane wejściowe i zarządzać własnym cyklem życia.
-* Jest zazwyczaj definiowana w pliku *Razor* przy użyciu składnia Razor.
+- Jest samodzielnym fragmentem interfejsu użytkownika.
+- Utrzymuje własny stan i logikę renderowania.
+- Można zdefiniować procedury obsługi zdarzeń interfejsu użytkownika, powiązać dane wejściowe i zarządzać własnym cyklem życia.
+- Jest zazwyczaj definiowana w pliku *Razor* przy użyciu składnia Razor.
 
 ## <a name="an-introduction-to-razor"></a>Wprowadzenie do Razor
 
@@ -62,12 +62,12 @@ Można też wygenerować listę elementów przy użyciu zwykłej C# pętli `fore
 
 Dyrektywy Razor, podobnie jak dyrektywy w ASP.NET Web Forms, kontrolują wiele aspektów sposobu kompilowania składnika Razor. Przykłady obejmują:
 
-* Przestrzeń nazw
-* Klasa bazowa
-* Zaimplementowane interfejsy
-* Parametry ogólne
-* Zaimportowane przestrzenie nazw
-* Rozsyłan
+- Przestrzeń nazw
+- Klasa bazowa
+- Zaimplementowane interfejsy
+- Parametry ogólne
+- Zaimportowane przestrzenie nazw
+- Rozsyłan
 
 Dyrektywy Razor zaczynają się od znaku `@` i są zwykle używane na początku nowego wiersza na początku pliku. Na przykład dyrektywa `@namespace` definiuje przestrzeń nazw składnika:
 
@@ -145,8 +145,8 @@ Oprócz normalnego HTML składniki mogą również używać innych składników 
 
 W przeciwieństwie do ASP.NET formularzy sieci Web, składników w Blazor:
 
-* Nie używaj prefiksu elementu (na przykład `asp:`).
-* Nie wymagaj rejestracji na stronie lub w *pliku Web. config*.
+- Nie używaj prefiksu elementu (na przykład `asp:`).
+- Nie wymagaj rejestracji na stronie lub w *pliku Web. config*.
 
 Należy wziąć pod uwagę składniki Razor, takie jak typy .NET, ponieważ dokładnie te elementy są. Jeśli zestaw zawierający składnik jest przywoływany, składnik jest dostępny do użycia. Aby przenieść przestrzeń nazw składnika do zakresu, Zastosuj dyrektywę `@using`:
 
@@ -166,7 +166,7 @@ Jeśli przestrzeń nazw składnika nie znajduje się w zakresie, możesz określ
 
 ## <a name="component-parameters"></a>Parametry składnika
 
-W formularzach sieci Web ASP.NET można przepływać parametry i dane do kontrolek przy użyciu właściwości publicznych. Te właściwości można ustawić w znacznikach przy użyciu atrybutów lub ustawionych bezpośrednio w kodzie. Składniki Blazor działają w podobny sposób, chociaż właściwości składnika również muszą być oznaczone atrybutem `[Parameter]`, aby można je było traktować jako parametry składnika.
+W formularzach sieci Web ASP.NET można przepływać parametry i dane do kontrolek przy użyciu właściwości publicznych. Te właściwości można ustawić w znacznikach przy użyciu atrybutów lub ustawionych bezpośrednio w kodzie. Składniki Blazor działają w podobny sposób, chociaż właściwości składnika również muszą być oznaczone atrybutem `[Parameter]`, który ma być traktowany jako parametry składnika.
 
 Poniższy składnik `Counter` definiuje parametr składnika o nazwie `IncrementAmount`, którego można użyć do określenia kwoty, którą `Counter` należy zwiększyć za każdym razem, gdy przycisk zostanie kliknięty.
 
@@ -437,7 +437,7 @@ Wszystkie metody cyklu życia składnika Blazor mają wersje synchroniczne i asy
 
 ### <a name="oninitialized"></a>OnInitialized
 
-Metody `OnInitialized` i `OnInitializedAsync` są używane do inicjowania składnika. Składnik jest zazwyczaj inicjowany po pierwszym renderowaniu. Po zainicjowaniu składnika można go renderować wiele razy, zanim zostanie ostatecznie usunięty. Metoda `OnInitialized` jest podobna do zdarzenia `Page_Load` na stronach i kontrolkach formularzy sieci Web ASP.NET.
+Metody `OnInitialized` i `OnInitializedAsync` są używane do inicjowania składnika. Składnik jest zazwyczaj inicjowany po pierwszym renderowaniu. Po zainicjowaniu składnika można go renderować wiele razy, zanim zostanie ostatecznie usunięty. Metoda `OnInitialized` jest podobna do zdarzenia `Page_Load` na stronach i formantach formularzy sieci Web ASP.NET.
 
 ```csharp
 protected override void OnInitialized() { ... }
@@ -527,7 +527,7 @@ Składniki Blazor mogą przechwytywać odwołania do elementu. W przeciwieństwi
 
 W formularzach sieci Web ASP.NET można tworzyć *kontrolki z szablonami*. Kontrolki z szablonami umożliwiają deweloperowi określenie fragmentu kodu HTML służącego do renderowania kontrolki kontenera. Mechanics kompilowania formantów serwera są złożone, ale zapewniają zaawansowane scenariusze renderowania danych w sposób dostosowywalny przez użytkownika. Przykłady formantów opartych na szablonach obejmują `Repeater` i `DataList`. 
 
-Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub `RenderFragment<T>`. @No__t-0 reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. @No__t-0 to fragment znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
+Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub `RenderFragment<T>`. @No__t_0 reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. @No__t_0 jest fragmentem znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
 
 ### <a name="child-content"></a>Zawartość podrzędna
 

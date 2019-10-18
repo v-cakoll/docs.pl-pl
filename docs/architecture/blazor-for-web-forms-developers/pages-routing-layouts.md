@@ -1,17 +1,17 @@
 ---
-title: Strony, Routing i układy
+title: Strony, routing i układy
 description: Dowiedz się, jak tworzyć strony w Blazor, korzystać z routingu po stronie klienta i zarządzać układami stron.
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: c31544156250a9e97ff8c0b17338f418817b21d2
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 693eee270a46ccb56ed5fef8fced1d4a1cf1974f
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275829"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520231"
 ---
-# <a name="pages-routing-and-layouts"></a>Strony, Routing i układy
+# <a name="pages-routing-and-layouts"></a>Strony, routing i układy
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -158,10 +158,10 @@ Zwracanie odpowiedzi przekierowania nie jest zazwyczaj możliwe w Blazor. Blazor
 
 Blazor zapewnia usługę `NavigationManager`, która może służyć do:
 
-* Pobierz bieżący adres przeglądarki
-* Pobierz adres podstawowy
-* Wywołaj nawigację
-* Otrzymuj powiadomienia o zmianie adresu
+- Pobierz bieżący adres przeglądarki
+- Pobierz adres podstawowy
+- Wywołaj nawigację
+- Otrzymuj powiadomienia o zmianie adresu
 
 Aby przejść do innego adresu, użyj metody `NavigateTo`:
 
@@ -282,4 +282,4 @@ Składniki w Blazor, w tym strony, nie mogą renderować tagów `<script>`. To o
 
 >[!div class="step-by-step"]
 >[Poprzedni](components.md)
->[dalej](state-management.md)
+>[Następny](state-management.md)

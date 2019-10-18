@@ -2,12 +2,12 @@
 title: Odporność na platformę Azure
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Odporność infrastruktury chmurowej na platformę Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 7f148588be97fa6bf8a055f5f5bed8e23908277f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
+ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214201"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72520770"
 ---
 # <a name="azure-platform-resiliency"></a>Odporność na platformę Azure
 
@@ -68,13 +68,13 @@ Chmura jest w trakcie skalowania. Możliwość zwiększenia/zmniejszenia zasobó
 
 - *Skorzystaj z funkcji skalowania automatycznego platformy.* Korzystaj z wbudowanych funkcji skalowania automatycznego, jeśli jest to możliwe, a nie mechanizmów niestandardowych lub innych firm. Jeśli to możliwe, Użyj reguł skalowania zaplanowanego, aby upewnić się, że zasoby są dostępne bez opóźnień uruchamiania, ale Dodaj aktywne Skalowanie automatyczne do odpowiednich reguł, aby sprostać nieoczekiwanym zmianom popytu. Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące skalowania](https://docs.microsoft.com/azure/architecture/best-practices/auto-scaling)automatycznego.
 
-- *Agresywne skalowanie w górę.* Ostatecznym celem jest agresywne skalowanie w górę, dzięki czemu można szybko zaspokoić natychmiastowe wzrosty ruchu bez utraty firmy. A następnie skalowanie w dół (czyli usuwanie niepotrzebnych zasobów) jest bardziej ostrożne, aby zapewnić stabilny system. Prostym sposobem wdrożenia tego ustawienia jest ustawienie okresu dla chłodzenia, czyli czasu oczekiwania między operacjami skalowania, do pięciu minut w przypadku dodawania zasobów oraz do 15 minut na usuwanie wystąpień.
+- *Agresywne skalowanie w poziomie.* Ostatecznym celem jest agresywne skalowanie w poziomie, dzięki czemu można szybko zaspokoić natychmiastowe wzrosty ruchu bez utraty firmy. A następnie Skaluj w dół (czyli usunąć niepotrzebne wystąpienia), aby zachować stabilność systemu. Prostym sposobem wdrożenia tego ustawienia jest ustawienie okresu dla chłodzenia, czyli czasu oczekiwania między operacjami skalowania, do pięciu minut w przypadku dodawania zasobów oraz do 15 minut na usuwanie wystąpień.
 
 ## <a name="built-in-retry-in-services"></a>Wbudowane ponawianie próby w usługach
 
 Zachęcamy do stosowania najlepszych rozwiązań dotyczących implementowania operacji ponownych prób w poprzedniej sekcji. Należy pamiętać, że wiele usług platformy Azure i odpowiadających im zestawów SDK klienta obejmuje również mechanizm ponawiania prób. Poniższa lista zawiera podsumowanie funkcji ponawiania prób w wielu usługach platformy Azure omówionych w tej książce:
 
-- *Azure Cosmos DB.* <xref:Microsoft.Azure.Documents.Client.DocumentClient> Klasa z interfejsu API klienta automatycznie ponawia nieudane próby. Liczba ponownych prób i maksymalny czas oczekiwania można skonfigurować. Wyjątki zgłoszone przez interfejs API klienta to żądania, które przekraczają zasady ponawiania lub błędy nieprzejściowe.
+- *Azure Cosmos DB.* Klasa <xref:Microsoft.Azure.Documents.Client.DocumentClient> z interfejsu API klienta automatycznie ponawia nieudane próby. Liczba ponownych prób i maksymalny czas oczekiwania można skonfigurować. Wyjątki zgłoszone przez interfejs API klienta to żądania, które przekraczają zasady ponawiania lub błędy nieprzejściowe.
 
 - *Azure Redis Cache.* Klient programu Redis StackExchange używa klasy Menedżera połączeń, która obejmuje ponawianie prób przy nieudanych próbach. Można skonfigurować liczbę ponownych prób, konkretne zasady ponawiania i czas oczekiwania.
 

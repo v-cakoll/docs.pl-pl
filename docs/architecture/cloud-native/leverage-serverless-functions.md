@@ -2,24 +2,24 @@
 title: Korzystanie z funkcji bezserwerowych
 description: Korzystanie z bezserwerowych i Azure Functions w aplikacjach natywnych w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 61bf4db6d61160c7ec11ffa3f178cc3917ae6cf9
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: c79f611b83f63079634fb2bac037c99f851f18ab
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182826"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578923"
 ---
 # <a name="leveraging-serverless-functions"></a>Korzystanie z funkcji bezserwerowych
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-W spektrum zarządzania pełnymi maszynami i systemami operacyjnymi, aby korzystać z możliwości chmury, bez użycia serwera na najwyższej stronie, gdzie tylko ty jest odpowiedzialny za kod i płacisz tylko za swój kod. Azure Functions zapewnia sposób tworzenia funkcji bezserwerowych w aplikacjach. 
+W spektrum zarządzania pełnymi maszynami i systemami operacyjnymi, aby korzystać z możliwości chmury, bez użycia serwera na najwyższej stronie, w którym użytkownik jest odpowiedzialny za kod, i płacisz tylko wtedy, gdy kod jest uruchomiony. Azure Functions zapewnia sposób tworzenia funkcji bezserwerowych w aplikacjach. 
 
 ## <a name="what-is-serverless"></a>Co to jest bezserwerowe?
 
 Obliczanie bezserwerowe nie oznacza, że nie jest to serwer z uruchomioną aplikacją — kod nadal działa na serwerze. Rozróżnienie polega na tym, że zespół programistyczny aplikacji nie musi już zagospodarować infrastrukturą serwera. Rozwiązania do przetwarzania bezserwerowe, takie jak Azure Functions ułatwienia, zwiększają produktywność i umożliwiają organizacjom Optymalizowanie swoich zasobów i skoncentrowanie się na dostarczaniu rozwiązań.
 
-Obliczenia bez użycia serwera używają bezstanowych kontenerów wyzwalanych przez zdarzenia do hostowania aplikacji lub części aplikacji. Platformy bezserwerowe można skalować w górę i w dół w taki sposób, aby spełniały zapotrzebowanie w miarę potrzeb. Platformy, takie jak Azure Functions, mają łatwy bezpośredni dostęp do innych usług platformy Azure, takich jak kolejki, zdarzenia i magazyn.
+Obliczenia bez użycia serwera używają bezstanowych kontenerów wyzwalanych przez zdarzenia do hostowania aplikacji lub części aplikacji. Platformy bezserwerowe mogą skalować w poziomie i w programie, aby zaspokoić zapotrzebowanie w miarę potrzeb. Platformy, takie jak Azure Functions, mają łatwy bezpośredni dostęp do innych usług platformy Azure, takich jak kolejki, zdarzenia i magazyn.
 
 ## <a name="what-challenges-are-solved-by-serverless"></a>Jakie wyzwania są rozwiązywane przez serwer?
 
@@ -45,10 +45,10 @@ Wiele aplikacji ma długotrwałe procesy w ramach przepływów pracy. Często te
 
 ## <a name="when-should-you-avoid-serverless"></a>Kiedy należy unikać bezserwerowego?
 
-Operacje obliczeniowe bez użycia serwera są najlepszym rozwiązaniem w przypadku zadań, które nie blokują interfejsu użytkownika. Oznacza to, że nie są idealnym rozwiązaniem do bezpośredniego hostowania aplikacji sieci Web ani interfejsów API sieci Web. Głównym powodem tego jest to, że rozwiązania bezserwerowe są obsługiwane i skalowane na żądanie. Gdy potrzebne jest nowe wystąpienie funkcji, zwanej *zimnym rozpoczęciem*, zajmie czas udostępniania. Ten czas jest zwykle kilka sekund, ale może być dłuższy w zależności od różnych czynników. Pojedyncze wystąpienie może być często utrzymywane na czas nieokreślony (na przykład przez okresowe zgłaszanie żądania), ale problem z zimnym rozpoczęciem ma wpływ na to, czy liczba wystąpień potrzebna do skalowania w górę.
+Operacje obliczeniowe bez użycia serwera są najlepszym rozwiązaniem w przypadku zadań, które nie blokują interfejsu użytkownika. Oznacza to, że nie są idealnym rozwiązaniem do bezpośredniego hostowania aplikacji sieci Web ani interfejsów API sieci Web. Głównym powodem tego jest to, że rozwiązania bezserwerowe są obsługiwane i skalowane na żądanie. Gdy potrzebne jest nowe wystąpienie funkcji, zwanej *zimnym rozpoczęciem*, zajmie czas udostępniania. Ten czas jest zwykle kilka sekund, ale może być dłuższy w zależności od różnych czynników. Pojedyncze wystąpienie może często być utrzymywane na czas nieokreślony (na przykład przez okresowe zgłaszanie żądania), ale problem zimnego startu pozostaje, jeśli liczba wystąpień potrzebna do skalowania w górę.
 
-![Rysunek zimny i](./media/cold-start-warm-start.png)
-rozgrzany początek**3-10**. Zimne rozpoczęcie i rozgrzane.
+![Cold w przeciwieństwie do ](./media/cold-start-warm-start.png)
+ Rozpocznij**rysunek 3-10**. Zimne rozpoczęcie i rozgrzane.
 
 Jeśli potrzebujesz uniknąć całkowitego startu, możesz wybrać opcję przełączenia z [planu zużycia do dedykowanego planu](https://azure.microsoft.com/blog/understanding-serverless-cold-start/). Możesz również [skonfigurować co najmniej jedno wystąpienie wstępnie rozgrzane](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances) w planie Premium, aby móc dodać kolejne wystąpienia, które jest już gotowe do użycia. Te opcje mogą złagodzić jedno z najważniejszych problemów związanych z przetwarzaniem bez użycia serwera.
 

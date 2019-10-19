@@ -9,38 +9,41 @@ helpviewer_keywords:
 - + operator [Visual Basic], concatenation
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
-ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 789478cafc4ed7506d34fb4198531d437683075d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864941"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583296"
 ---
-# <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="f6135-102">Operatory łączenia w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6135-102">Concatenation Operators in Visual Basic</span></span>
-<span data-ttu-id="f6135-103">Concatenation — operatory Dołącz do wielu ciągów w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="f6135-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="f6135-104">Istnieją dwa operatory łączenia, `+` i `&`.</span><span class="sxs-lookup"><span data-stu-id="f6135-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="f6135-105">Zarówno przeprowadzenie operacji łączenia podstawowe, jak w poniższym przykładzie pokazano.</span><span class="sxs-lookup"><span data-stu-id="f6135-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>  
-  
-```vb
-Dim x As String = "Mic" & "ro" & "soft" 
-Dim y As String = "Mic" + "ro" + "soft" 
-' The preceding statements set both x and y to "Microsoft".
-```  
-  
- <span data-ttu-id="f6135-106">Te operatory również można łączyć ze sobą `String` zmiennych, jak w poniższym przykładzie pokazano.</span><span class="sxs-lookup"><span data-stu-id="f6135-106">These operators can also concatenate `String` variables, as the following example shows.</span></span>  
-  
- [!code-vb[VbVbalrOperators#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#76)]  
-  
-## <a name="differences-between-the-two-concatenation-operators"></a><span data-ttu-id="f6135-107">Różnice między dwa operatory łączenia</span><span class="sxs-lookup"><span data-stu-id="f6135-107">Differences Between the Two Concatenation Operators</span></span>  
- <span data-ttu-id="f6135-108">[+ — Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) ma głównym celem dodanie dwóch liczb.</span><span class="sxs-lookup"><span data-stu-id="f6135-108">The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers.</span></span> <span data-ttu-id="f6135-109">Jednak można również połączyć operandy liczbową argumentów ciągu.</span><span class="sxs-lookup"><span data-stu-id="f6135-109">However, it can also concatenate numeric operands with string operands.</span></span> <span data-ttu-id="f6135-110">`+` Operator ma złożonego zestawu reguł, które określają, czy dodawanie, łączenie, zasygnalizować błąd kompilatora lub zgłosić środowiska wykonawczego <xref:System.InvalidCastException> wyjątku.</span><span class="sxs-lookup"><span data-stu-id="f6135-110">The `+` operator has a complex set of rules that determine whether to add, concatenate, signal a compiler error, or throw a run-time <xref:System.InvalidCastException> exception.</span></span>  
-  
- <span data-ttu-id="f6135-111">[& — Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) jest zdefiniowane tylko dla `String` argumentów i zawsze rozszerza się jego operandy `String`, niezależnie od ustawienia `Option Strict`.</span><span class="sxs-lookup"><span data-stu-id="f6135-111">The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`.</span></span> <span data-ttu-id="f6135-112">`&` Operator jest zalecane dla ciągów, ponieważ zdefiniowano wyłącznie dla ciągów i zmniejsza ryzyko generowania konwersję niezamierzone.</span><span class="sxs-lookup"><span data-stu-id="f6135-112">The `&` operator is recommended for string concatenation because it is defined exclusively for strings and reduces your chances of generating an unintended conversion.</span></span>  
-  
-## <a name="performance-string-and-stringbuilder"></a><span data-ttu-id="f6135-113">Wydajność: Parametry i StringBuilder</span><span class="sxs-lookup"><span data-stu-id="f6135-113">Performance: String and StringBuilder</span></span>  
- <span data-ttu-id="f6135-114">Jeśli to zrobisz, znaczna liczba manipulacje na ciąg, takie jak konkatenacji, usuwania i zamiany, wydajność może być zysk z <xref:System.Text.StringBuilder> klasy w <xref:System.Text> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="f6135-114">If you do a significant number of manipulations on a string, such as concatenations, deletions, and replacements, your performance might profit from the <xref:System.Text.StringBuilder> class in the <xref:System.Text> namespace.</span></span> <span data-ttu-id="f6135-115">Zajmuje dodatkowy instrukcji, aby utworzyć i zainicjować <xref:System.Text.StringBuilder> obiekt i innej instrukcji jego końcowa wartość, aby przekonwertować `String`, ale może odzyskać to czas, ponieważ <xref:System.Text.StringBuilder> może działać szybciej.</span><span class="sxs-lookup"><span data-stu-id="f6135-115">It takes an extra instruction to create and initialize a <xref:System.Text.StringBuilder> object, and another instruction to convert its final value to a `String`, but you might recover this time because <xref:System.Text.StringBuilder> can perform faster.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="f6135-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f6135-116">See also</span></span>
+# <a name="concatenation-operators-in-visual-basic"></a><span data-ttu-id="d222e-102">Operatory łączenia w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d222e-102">Concatenation Operators in Visual Basic</span></span>
 
-- [<span data-ttu-id="f6135-117">Option Strict, instrukcja</span><span class="sxs-lookup"><span data-stu-id="f6135-117">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [<span data-ttu-id="f6135-118">Typy metod manipulowania ciągami w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6135-118">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
-- [<span data-ttu-id="f6135-119">Operatory arytmetyczne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6135-119">Arithmetic Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [<span data-ttu-id="f6135-120">Operatory porównania w języku Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6135-120">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
-- [<span data-ttu-id="f6135-121">Operatory logiczne i bitowe w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="f6135-121">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+<span data-ttu-id="d222e-103">Operatory łączenia sprzęga wiele ciągów w jeden ciąg.</span><span class="sxs-lookup"><span data-stu-id="d222e-103">Concatenation operators join multiple strings into a single string.</span></span> <span data-ttu-id="d222e-104">Istnieją dwa operatory łączenia, `+` i `&`.</span><span class="sxs-lookup"><span data-stu-id="d222e-104">There are two concatenation operators, `+` and `&`.</span></span> <span data-ttu-id="d222e-105">Oba te elementy wykonują podstawową operację łączenia, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="d222e-105">Both carry out the basic concatenation operation, as the following example shows.</span></span>
+
+```vb
+Dim x As String = "Mic" & "ro" & "soft"
+Dim y As String = "Mic" + "ro" + "soft"
+' The preceding statements set both x and y to "Microsoft".
+```
+
+<span data-ttu-id="d222e-106">Te operatory mogą również łączyć zmienne `String`, jak pokazano w poniższym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="d222e-106">These operators can also concatenate `String` variables, as the following example shows.</span></span>
+
+[!code-vb[VbVbalrOperators#76](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#76)]
+
+## <a name="differences-between-the-two-concatenation-operators"></a><span data-ttu-id="d222e-107">Różnice między dwoma operatorami łączenia</span><span class="sxs-lookup"><span data-stu-id="d222e-107">Differences Between the Two Concatenation Operators</span></span>
+
+<span data-ttu-id="d222e-108">[Operator +](../../../../visual-basic/language-reference/operators/addition-operator.md) ma podstawowy cel dodawania dwóch liczb.</span><span class="sxs-lookup"><span data-stu-id="d222e-108">The [+ Operator](../../../../visual-basic/language-reference/operators/addition-operator.md) has the primary purpose of adding two numbers.</span></span> <span data-ttu-id="d222e-109">Może jednak również łączyć argumenty operacji numerycznych z argumentami operacji ciągu.</span><span class="sxs-lookup"><span data-stu-id="d222e-109">However, it can also concatenate numeric operands with string operands.</span></span> <span data-ttu-id="d222e-110">Operator `+` ma złożony zestaw reguł, które określają, czy dodać, połączyć, sygnalizować błąd kompilatora lub zgłosić wyjątek <xref:System.InvalidCastException> czasu wykonywania.</span><span class="sxs-lookup"><span data-stu-id="d222e-110">The `+` operator has a complex set of rules that determine whether to add, concatenate, signal a compiler error, or throw a run-time <xref:System.InvalidCastException> exception.</span></span>
+
+<span data-ttu-id="d222e-111">[Operator &](../../../../visual-basic/language-reference/operators/concatenation-operator.md) jest zdefiniowany tylko dla argumentów operacji `String` i zawsze rozszerza jego operandy do `String`, niezależnie od ustawienia `Option Strict`.</span><span class="sxs-lookup"><span data-stu-id="d222e-111">The [& Operator](../../../../visual-basic/language-reference/operators/concatenation-operator.md) is defined only for `String` operands, and it always widens its operands to `String`, regardless of the setting of `Option Strict`.</span></span> <span data-ttu-id="d222e-112">Operator `&` jest zalecany w przypadku łączenia ciągów, ponieważ jest zdefiniowany wyłącznie dla ciągów i zmniejsza szanse na wygenerowanie niezamierzonej konwersji.</span><span class="sxs-lookup"><span data-stu-id="d222e-112">The `&` operator is recommended for string concatenation because it is defined exclusively for strings and reduces your chances of generating an unintended conversion.</span></span>
+
+## <a name="performance-string-and-stringbuilder"></a><span data-ttu-id="d222e-113">Wydajność: ciąg i StringBuilder</span><span class="sxs-lookup"><span data-stu-id="d222e-113">Performance: String and StringBuilder</span></span>
+
+<span data-ttu-id="d222e-114">Jeśli wykonasz znaczną liczbę operacji manipulowania dla ciągu, takich jak łączenie, usuwanie i zamiany, wydajność może wynikać z klasy <xref:System.Text.StringBuilder> w przestrzeni nazw <xref:System.Text>.</span><span class="sxs-lookup"><span data-stu-id="d222e-114">If you do a significant number of manipulations on a string, such as concatenations, deletions, and replacements, your performance might profit from the <xref:System.Text.StringBuilder> class in the <xref:System.Text> namespace.</span></span> <span data-ttu-id="d222e-115">Wykonanie dodatkowej instrukcji w celu utworzenia i zainicjowania obiektu <xref:System.Text.StringBuilder> oraz innej instrukcji w celu przekonwertowania jej końcowej wartości na `String`, ale może to spowodować, że <xref:System.Text.StringBuilder> może działać szybciej.</span><span class="sxs-lookup"><span data-stu-id="d222e-115">It takes an extra instruction to create and initialize a <xref:System.Text.StringBuilder> object, and another instruction to convert its final value to a `String`, but you might recover this time because <xref:System.Text.StringBuilder> can perform faster.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="d222e-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d222e-116">See also</span></span>
+
+- [<span data-ttu-id="d222e-117">Option Strict, instrukcja</span><span class="sxs-lookup"><span data-stu-id="d222e-117">Option Strict Statement</span></span>](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="d222e-118">Typy metod manipulowania ciągami w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d222e-118">Types of String Manipulation Methods in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)
+- [<span data-ttu-id="d222e-119">Operatory arytmetyczne w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d222e-119">Arithmetic Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [<span data-ttu-id="d222e-120">Operatory porównania w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d222e-120">Comparison Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [<span data-ttu-id="d222e-121">Operatory logiczne i bitowe w Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d222e-121">Logical and Bitwise Operators in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

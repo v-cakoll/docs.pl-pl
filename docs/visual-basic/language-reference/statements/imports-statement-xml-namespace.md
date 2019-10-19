@@ -1,5 +1,5 @@
 ---
-title: Imports, instrukcja - Namespace XML (Visual Basic)
+title: Imports — przestrzeń nazw XML (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImportsXmlns
@@ -9,88 +9,94 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fca0caecfd69580510a539317856209108e5a32
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638960"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581771"
 ---
-# <a name="imports-statement-xml-namespace"></a><span data-ttu-id="2ac5f-102">Imports — Instrukcja (przestrzeń nazw XML)</span><span class="sxs-lookup"><span data-stu-id="2ac5f-102">Imports Statement (XML Namespace)</span></span>
-<span data-ttu-id="2ac5f-103">Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwości osi XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-103">Imports XML namespace prefixes for use in XML literals and XML axis properties.</span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="2ac5f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2ac5f-104">Syntax</span></span>  
-  
-```  
-Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">  
-```  
-  
-## <a name="parts"></a><span data-ttu-id="2ac5f-105">Części</span><span class="sxs-lookup"><span data-stu-id="2ac5f-105">Parts</span></span>  
- `xmlNamespacePrefix`  
- <span data-ttu-id="2ac5f-106">Opcjonalna.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-106">Optional.</span></span> <span data-ttu-id="2ac5f-107">Ciąg, który XML elementy i atrybuty mogą odwoływać się do `xmlNamespaceName`.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-107">The string by which XML elements and attributes can refer to `xmlNamespaceName`.</span></span> <span data-ttu-id="2ac5f-108">Jeśli nie `xmlNamespacePrefix` jest podany, importowanych przestrzeni nazw XML jest domyślny obszar nazw XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-108">If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace.</span></span> <span data-ttu-id="2ac5f-109">Musi być prawidłowym identyfikatorem XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-109">Must be a valid XML identifier.</span></span> <span data-ttu-id="2ac5f-110">Aby uzyskać więcej informacji, zobacz [nazwy z zadeklarowane elementy i atrybuty XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="2ac5f-110">For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>  
-  
- `xmlNamespaceName`  
- <span data-ttu-id="2ac5f-111">Wymagana.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-111">Required.</span></span> <span data-ttu-id="2ac5f-112">Ciąg identyfikujący importowanych przestrzeni nazw XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-112">The string identifying the XML namespace being imported.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="2ac5f-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2ac5f-113">Remarks</span></span>  
- <span data-ttu-id="2ac5f-114">Możesz użyć `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML, korzystających z literały XML i właściwości osi XML lub przekazywane jako parametry do `GetXmlNamespace` operatora.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-114">You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator.</span></span> <span data-ttu-id="2ac5f-115">(Aby uzyskać informacje o używaniu `Imports` instrukcję, aby zaimportować alias, który może służyć użycia nazwy typów w kodzie, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Składnia deklaracji przestrzeni nazw XML przy użyciu `Imports` instrukcja jest taka sama jak składnią używaną w formacie XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-115">(For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML.</span></span> <span data-ttu-id="2ac5f-116">W związku z tym, możesz skopiować deklarację przestrzeni nazw z pliku XML i korzystać z niej w `Imports` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-116">Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.</span></span>  
-  
- <span data-ttu-id="2ac5f-117">Prefiksy przestrzeni nazw XML są przydatne, jeśli chcesz regularnie tworzyć elementy XML, które pochodzą z tej samej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-117">XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace.</span></span> <span data-ttu-id="2ac5f-118">Prefiks przestrzeni nazw XML zadeklarowane za pomocą `Imports` instrukcja jest globalne w tym sensie, że jest ona dostępna dla całego kodu w pliku.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-118">The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file.</span></span> <span data-ttu-id="2ac5f-119">Można użyć go po utworzeniu literały — element XML i jeśli uzyskujesz dostęp do właściwości osi XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-119">You can use it when you create XML element literals and when you access XML axis properties.</span></span> <span data-ttu-id="2ac5f-120">Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) i [właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md).</span><span class="sxs-lookup"><span data-stu-id="2ac5f-120">For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).</span></span>  
-  
- <span data-ttu-id="2ac5f-121">Jeśli zdefiniujesz globalnej przestrzeni nazw XML bez prefiksu przestrzeni nazw (na przykład `Imports <xmlns="http://SomeNameSpace>"`), przestrzeń nazw jest traktowane jako domyślny obszar nazw XML.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-121">If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace.</span></span> <span data-ttu-id="2ac5f-122">Domyślny obszar nazw XML jest używany dla literałów — element XML i właściwości osi atrybutu XML, które nie są określone jawnie przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-122">The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace.</span></span> <span data-ttu-id="2ac5f-123">Domyślny obszar nazw jest również używana, gdy określonego obszaru nazw jest pusta przestrzeń nazw (czyli `xmlns=""`).</span><span class="sxs-lookup"><span data-stu-id="2ac5f-123">The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`).</span></span> <span data-ttu-id="2ac5f-124">Domyślny obszar nazw XML nie ma zastosowania do atrybutów XML w literałach XML lub do właściwości osi atrybutu XML, które nie mają przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-124">The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.</span></span>  
-  
- <span data-ttu-id="2ac5f-125">Obszary nazw XML, które są zdefiniowane w pliku XML literału, są one nazywane *lokalne obszary nazw XML*, pierwszeństwo przestrzeni nazw XML, które są zdefiniowane przez `Imports` instrukcję jako globalne.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-125">XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global.</span></span> <span data-ttu-id="2ac5f-126">Przestrzenie nazw XML, które są definiowane przez `Imports` instrukcji mają pierwszeństwo przed przestrzeni nazw XML zaimportowane dla projektów języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-126">XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project.</span></span> <span data-ttu-id="2ac5f-127">Jeśli literał XML definiuje obszar nazw XML, że lokalną przestrzeń nazw nie ma zastosowania do wyrażenia osadzone.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-127">If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.</span></span>  
-  
- <span data-ttu-id="2ac5f-128">Globalnej przestrzeni nazw XML, wykonaj te same reguły zakresu i definicji jako przestrzeni nazw .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-128">Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces.</span></span> <span data-ttu-id="2ac5f-129">W rezultacie mogą obejmować `Imports` instrukcji, aby zdefiniować globalnej przestrzeni nazw XML dowolnym miejscu importujesz przestrzeń nazw .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-129">As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace.</span></span> <span data-ttu-id="2ac5f-130">Obejmuje to zarówno pliki kodu, jak i na poziomie projektu importowanych przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-130">This includes both code files and project-level imported namespaces.</span></span> <span data-ttu-id="2ac5f-131">Aby uzyskać informacji na temat importowanych przestrzeni nazw na poziomie projektu, zobacz [strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="2ac5f-131">For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span></span>  
-  
- <span data-ttu-id="2ac5f-132">Każdy plik źródłowy może zawierać dowolną liczbę `Imports` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-132">Each source file can contain any number of `Imports` statements.</span></span> <span data-ttu-id="2ac5f-133">Te należy wykonać, opcja deklaracji, takich jak `Option Strict` instrukcji, dlatego musi poprzedzać deklaracji elementu programowania, takich jak `Module` lub `Class` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-133">These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="2ac5f-134">Przykład</span><span class="sxs-lookup"><span data-stu-id="2ac5f-134">Example</span></span>  
- <span data-ttu-id="2ac5f-135">Następujący przykład importuje, domyślnej przestrzeni nazw XML i zidentyfikowanego za prefiks przestrzeni nazw XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-135">The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`.</span></span> <span data-ttu-id="2ac5f-136">Następnie tworzy ona literałach XML, które używają obu tych przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-136">It then creates XML literals that use both namespaces.</span></span>  
-  
- [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
-  
- <span data-ttu-id="2ac5f-137">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="2ac5f-137">This code displays the following text:</span></span>  
-  
-```xml  
-<ns:outer xmlns="http://DefaultNamespace"   
-          xmlns:ns="http://NewNamespace">  
-  <ns:innerElement></ns:innerElement>  
-  <siblingElement></siblingElement>  
-  <innerElement />  
-</ns:outer>  
-```  
-  
-## <a name="example"></a><span data-ttu-id="2ac5f-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="2ac5f-138">Example</span></span>  
- <span data-ttu-id="2ac5f-139">Następujący przykład importuje prefiks przestrzeni nazw XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-139">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="2ac5f-140">Następnie tworzy literał XML używa prefiksu przestrzeni nazw, która wyświetla formularz końcowego elementu.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-140">It then creates an XML literal that uses the namespace prefix and displays the element's final form.</span></span>  
-  
- [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
-  
- <span data-ttu-id="2ac5f-141">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="2ac5f-141">This code displays the following text:</span></span>  
-  
-```xml  
-<ns:outer xmlns:ns="http://SomeNamespace">  
-  <ns:middle xmlns:ns="http://NewNamespace">  
-    <ns:inner1 />  
-    <inner2 xmlns="http://SomeNamespace" />  
-  </ns:middle>  
-</ns:outer>  
-```  
-  
- <span data-ttu-id="2ac5f-142">Zwróć uwagę, kompilator przekonwertować prefiks przestrzeni nazw XML z globalnego prefiksu, do definicji lokalnego prefiks.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-142">Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="2ac5f-143">Przykład</span><span class="sxs-lookup"><span data-stu-id="2ac5f-143">Example</span></span>  
- <span data-ttu-id="2ac5f-144">Następujący przykład importuje prefiks przestrzeni nazw XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-144">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="2ac5f-145">Następnie używa prefiksu przestrzeni nazw tworzenie literałów XML i dostępem pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="2ac5f-145">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name `ns:name`.</span></span>  
-  
- [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
-  
- <span data-ttu-id="2ac5f-146">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="2ac5f-146">This code displays the following text:</span></span>  
-  
- `Patrick Hines`  
-  
-## <a name="see-also"></a><span data-ttu-id="2ac5f-147">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="2ac5f-147">See also</span></span>
+# <a name="imports-statement-xml-namespace"></a><span data-ttu-id="065fb-102">Imports — Instrukcja (przestrzeń nazw XML)</span><span class="sxs-lookup"><span data-stu-id="065fb-102">Imports Statement (XML Namespace)</span></span>
 
-- [<span data-ttu-id="2ac5f-148">Literał elementu XML</span><span class="sxs-lookup"><span data-stu-id="2ac5f-148">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="2ac5f-149">Właściwości osi XML</span><span class="sxs-lookup"><span data-stu-id="2ac5f-149">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
-- [<span data-ttu-id="2ac5f-150">Nazwy deklarowanych elementów i atrybutów XML</span><span class="sxs-lookup"><span data-stu-id="2ac5f-150">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
-- [<span data-ttu-id="2ac5f-151">GetXmlNamespace, operator</span><span class="sxs-lookup"><span data-stu-id="2ac5f-151">GetXmlNamespace Operator</span></span>](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+<span data-ttu-id="065fb-103">Importuje prefiksy przestrzeni nazw XML do użycia w literałach XML i właściwościach osi XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-103">Imports XML namespace prefixes for use in XML literals and XML axis properties.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="065fb-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="065fb-104">Syntax</span></span>
+
+```vb
+Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
+```
+
+## <a name="parts"></a><span data-ttu-id="065fb-105">Części</span><span class="sxs-lookup"><span data-stu-id="065fb-105">Parts</span></span>
+
+`xmlNamespacePrefix`  
+<span data-ttu-id="065fb-106">Opcjonalny.</span><span class="sxs-lookup"><span data-stu-id="065fb-106">Optional.</span></span> <span data-ttu-id="065fb-107">Ciąg, przez który elementy i atrybuty XML mogą się odwoływać do `xmlNamespaceName`.</span><span class="sxs-lookup"><span data-stu-id="065fb-107">The string by which XML elements and attributes can refer to `xmlNamespaceName`.</span></span> <span data-ttu-id="065fb-108">Jeśli nie podano `xmlNamespacePrefix`, importowana przestrzeń nazw XML jest domyślną przestrzenią nazw XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-108">If no `xmlNamespacePrefix` is supplied, the imported XML namespace is the default XML namespace.</span></span> <span data-ttu-id="065fb-109">Musi być prawidłowym identyfikatorem XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-109">Must be a valid XML identifier.</span></span> <span data-ttu-id="065fb-110">Aby uzyskać więcej informacji, zobacz [nazwy zadeklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span><span class="sxs-lookup"><span data-stu-id="065fb-110">For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).</span></span>
+
+`xmlNamespaceName`  
+<span data-ttu-id="065fb-111">Wymagany.</span><span class="sxs-lookup"><span data-stu-id="065fb-111">Required.</span></span> <span data-ttu-id="065fb-112">Ciąg identyfikujący importowaną przestrzeń nazw XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-112">The string identifying the XML namespace being imported.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="065fb-113">Uwagi</span><span class="sxs-lookup"><span data-stu-id="065fb-113">Remarks</span></span>
+
+<span data-ttu-id="065fb-114">Za pomocą instrukcji `Imports` można definiować globalne przestrzenie nazw XML, których można używać z literałami XML i właściwościami osi XML, lub jako parametry przesłane do operatora `GetXmlNamespace`.</span><span class="sxs-lookup"><span data-stu-id="065fb-114">You can use the `Imports` statement to define global XML namespaces that you can use with XML literals and XML axis properties, or as parameters passed to the `GetXmlNamespace` operator.</span></span> <span data-ttu-id="065fb-115">(Aby uzyskać informacje na temat używania instrukcji `Imports` do importowania aliasu, którego można użyć w przypadku używania nazw typów w kodzie, zobacz [Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Składnia do deklarowania przestrzeni nazw XML przy użyciu instrukcji `Imports` jest taka sama jak składnia użyta w kodzie XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-115">(For information about using the `Imports` statement to import an alias that can be used where type names are used in your code, see [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) The syntax for declaring an XML namespace by using the `Imports` statement is identical to the syntax used in XML.</span></span> <span data-ttu-id="065fb-116">W związku z tym można skopiować deklarację przestrzeni nazw z pliku XML i użyć jej w instrukcji `Imports`.</span><span class="sxs-lookup"><span data-stu-id="065fb-116">Therefore, you can copy a namespace declaration from an XML file and use it in an `Imports` statement.</span></span>
+
+<span data-ttu-id="065fb-117">Prefiksy przestrzeni nazw XML są przydatne, gdy chcesz wielokrotnie tworzyć elementy XML, które są z tego samego obszaru nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-117">XML namespace prefixes are useful when you want to repeatedly create XML elements that are from the same namespace.</span></span> <span data-ttu-id="065fb-118">Prefiks przestrzeni nazw XML zadeklarowany za pomocą instrukcji `Imports` jest globalnie w sensie, że jest dostępny dla całego kodu w pliku.</span><span class="sxs-lookup"><span data-stu-id="065fb-118">The XML namespace prefix declared with the `Imports` statement is global in the sense that it is available to all code in the file.</span></span> <span data-ttu-id="065fb-119">Można jej użyć podczas tworzenia literałów elementu XML i uzyskiwania dostępu do właściwości osi XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-119">You can use it when you create XML element literals and when you access XML axis properties.</span></span> <span data-ttu-id="065fb-120">Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) i [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md).</span><span class="sxs-lookup"><span data-stu-id="065fb-120">For more information, see [XML Element Literal](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) and [XML Axis Properties](../../../visual-basic/language-reference/xml-axis/index.md).</span></span>
+
+<span data-ttu-id="065fb-121">Jeśli zdefiniujesz globalną przestrzeń nazw XML bez prefiksu przestrzeni nazw (na przykład `Imports <xmlns="http://SomeNameSpace>"`), ta przestrzeń nazw jest traktowana jako domyślna przestrzeń nazw XML.</span><span class="sxs-lookup"><span data-stu-id="065fb-121">If you define a global XML namespace without a namespace prefix (for example, `Imports <xmlns="http://SomeNameSpace>"`), that namespace is considered the default XML namespace.</span></span> <span data-ttu-id="065fb-122">Domyślna przestrzeń nazw XML jest używana dla wszystkich literałów elementu XML lub właściwości osi XML, które nie określają jawnie przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-122">The default XML namespace is used for any XML element literals or XML attribute axis properties that do not explicitly specify a namespace.</span></span> <span data-ttu-id="065fb-123">Domyślna przestrzeń nazw jest również używana, jeśli określona przestrzeń nazw jest pustą przestrzenią nazw (czyli `xmlns=""`).</span><span class="sxs-lookup"><span data-stu-id="065fb-123">The default namespace is also used if the specified namespace is the empty namespace (that is, `xmlns=""`).</span></span> <span data-ttu-id="065fb-124">Domyślna przestrzeń nazw XML nie ma zastosowania do atrybutów XML w literałach XML ani do właściwości osi atrybutu XML, które nie mają przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-124">The default XML namespace does not apply to XML attributes in XML literals or to XML attribute axis properties that do not have a namespace.</span></span>
+
+<span data-ttu-id="065fb-125">Przestrzenie nazw XML, które są zdefiniowane w literale XML, które są nazywane *lokalnymi przestrzeniami nazw XML*, mają pierwszeństwo przed przestrzeniami nazw XML, które są zdefiniowane przez instrukcję `Imports` jako globalną.</span><span class="sxs-lookup"><span data-stu-id="065fb-125">XML namespaces that are defined in an XML literal, which are called *local XML namespaces*, take precedence over XML namespaces that are defined by the `Imports` statement as global.</span></span> <span data-ttu-id="065fb-126">Przestrzenie nazw XML, które są zdefiniowane przez instrukcję `Imports`, mają pierwszeństwo przed przestrzeniami nazw XML importowanymi dla projektu Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="065fb-126">XML namespaces that are defined by the `Imports` statement take precedence over XML namespaces imported for a Visual Basic project.</span></span> <span data-ttu-id="065fb-127">Jeśli literał XML definiuje przestrzeń nazw XML, ta lokalna przestrzeń nazw nie ma zastosowania do wyrażeń osadzonych.</span><span class="sxs-lookup"><span data-stu-id="065fb-127">If an XML literal defines an XML namespace, that local namespace does not apply to embedded expressions.</span></span>
+
+<span data-ttu-id="065fb-128">Globalne przestrzenie nazw XML są zgodne z tymi samymi regułami określania zakresu i definicji co .NET Framework przestrzenie nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-128">Global XML namespaces follow the same scoping and definition rules as .NET Framework namespaces.</span></span> <span data-ttu-id="065fb-129">W związku z tym można dołączyć instrukcję `Imports`, aby zdefiniować globalną przestrzeń nazw XML w dowolnym miejscu, w którym można zaimportować .NET Framework przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-129">As a result, you can include an `Imports` statement to define a global XML namespace anywhere you can import a .NET Framework namespace.</span></span> <span data-ttu-id="065fb-130">Dotyczy to zarówno plików kodu, jak i importowanych przestrzeni nazw na poziomie projektu.</span><span class="sxs-lookup"><span data-stu-id="065fb-130">This includes both code files and project-level imported namespaces.</span></span> <span data-ttu-id="065fb-131">Aby uzyskać informacje na temat importowanych przestrzeni nazw na poziomie projektu, zobacz [Strona odwołań, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="065fb-131">For information about project-level imported namespaces, see [References Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic).</span></span>
+
+<span data-ttu-id="065fb-132">Każdy plik źródłowy może zawierać dowolną liczbę instrukcji `Imports`.</span><span class="sxs-lookup"><span data-stu-id="065fb-132">Each source file can contain any number of `Imports` statements.</span></span> <span data-ttu-id="065fb-133">Muszą one być zgodne z deklaracjami opcji, takimi jak instrukcja `Option Strict`, i muszą poprzedzać deklaracje elementu programistycznego, takie jak instrukcje `Module` lub `Class`.</span><span class="sxs-lookup"><span data-stu-id="065fb-133">These must follow option declarations, such as the `Option Strict` statement, and they must precede programming element declarations, such as `Module` or `Class` statements.</span></span>
+
+## <a name="example"></a><span data-ttu-id="065fb-134">Przykład</span><span class="sxs-lookup"><span data-stu-id="065fb-134">Example</span></span>
+
+<span data-ttu-id="065fb-135">Poniższy przykład importuje domyślną przestrzeń nazw XML i przestrzeń nazw XML zidentyfikowaną z prefiksem `ns`.</span><span class="sxs-lookup"><span data-stu-id="065fb-135">The following example imports a default XML namespace and an XML namespace identified with the prefix `ns`.</span></span> <span data-ttu-id="065fb-136">Następnie tworzy literały XML używające obu przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="065fb-136">It then creates XML literals that use both namespaces.</span></span>
+
+[!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]
+
+<span data-ttu-id="065fb-137">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="065fb-137">This code displays the following text:</span></span>
+
+```xml
+<ns:outer xmlns="http://DefaultNamespace"
+          xmlns:ns="http://NewNamespace">
+  <ns:innerElement></ns:innerElement>
+  <siblingElement></siblingElement>
+  <innerElement />
+</ns:outer>
+```
+
+## <a name="example"></a><span data-ttu-id="065fb-138">Przykład</span><span class="sxs-lookup"><span data-stu-id="065fb-138">Example</span></span>
+
+<span data-ttu-id="065fb-139">Poniższy przykład importuje prefiks przestrzeni nazw XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="065fb-139">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="065fb-140">Następnie tworzy literał XML, który używa prefiksu przestrzeni nazw i wyświetla ostateczną postać elementu.</span><span class="sxs-lookup"><span data-stu-id="065fb-140">It then creates an XML literal that uses the namespace prefix and displays the element's final form.</span></span>
+
+[!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]
+
+<span data-ttu-id="065fb-141">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="065fb-141">This code displays the following text:</span></span>
+
+```xml
+<ns:outer xmlns:ns="http://SomeNamespace">
+  <ns:middle xmlns:ns="http://NewNamespace">
+    <ns:inner1 />
+    <inner2 xmlns="http://SomeNamespace" />
+  </ns:middle>
+</ns:outer>
+```
+
+<span data-ttu-id="065fb-142">Zwróć uwagę, że kompilator przekonwertował prefiks przestrzeni nazw XML z globalnego prefiksu na definicję prefiksu lokalnego.</span><span class="sxs-lookup"><span data-stu-id="065fb-142">Notice that the compiler converted the XML namespace prefix from a global prefix to a local prefix definition.</span></span>
+
+## <a name="example"></a><span data-ttu-id="065fb-143">Przykład</span><span class="sxs-lookup"><span data-stu-id="065fb-143">Example</span></span>
+
+<span data-ttu-id="065fb-144">Poniższy przykład importuje prefiks przestrzeni nazw XML `ns`.</span><span class="sxs-lookup"><span data-stu-id="065fb-144">The following example imports the XML namespace prefix `ns`.</span></span> <span data-ttu-id="065fb-145">Następnie używa prefiksu przestrzeni nazw, aby utworzyć literał XML i uzyskać dostęp do pierwszego węzła podrzędnego przy użyciu kwalifikowanej nazwy `ns:name`.</span><span class="sxs-lookup"><span data-stu-id="065fb-145">It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name `ns:name`.</span></span>
+
+[!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]
+
+<span data-ttu-id="065fb-146">Ten kod wyświetla następujący tekst:</span><span class="sxs-lookup"><span data-stu-id="065fb-146">This code displays the following text:</span></span>
+
+`Patrick Hines`
+
+## <a name="see-also"></a><span data-ttu-id="065fb-147">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="065fb-147">See also</span></span>
+
+- [<span data-ttu-id="065fb-148">Literał elementu XML</span><span class="sxs-lookup"><span data-stu-id="065fb-148">XML Element Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="065fb-149">Właściwości osi XML</span><span class="sxs-lookup"><span data-stu-id="065fb-149">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
+- [<span data-ttu-id="065fb-150">Nazwy deklarowanych elementów i atrybutów XML</span><span class="sxs-lookup"><span data-stu-id="065fb-150">Names of Declared XML Elements and Attributes</span></span>](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [<span data-ttu-id="065fb-151">GetXmlNamespace, operator</span><span class="sxs-lookup"><span data-stu-id="065fb-151">GetXmlNamespace Operator</span></span>](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

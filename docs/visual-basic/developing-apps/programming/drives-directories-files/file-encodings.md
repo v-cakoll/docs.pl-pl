@@ -7,34 +7,37 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d73226c58d39c970ec02c32a2c188f2747a7d87e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960189"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583465"
 ---
 # <a name="file-encodings-visual-basic"></a>Kodowanie pliku (Visual Basic)
-Określ kodowanie pliku, znany także jako kodowanie znaków do reprezentowania znaków, kiedy przetwarzanie tekstu. Jednego formatu kodowania może być preferowane zamiast innego pod względem znaki języków, które mogą lub nie może obsłużyć, mimo że Unicode jest zwykle preferowany.  
-  
- Gdy odczytujemy ze zmiennej czy zapisywanie w plikach, nieprawidłowo dopasowania kodowanie pliku może spowodować wyjątków lub niepoprawne wyniki.  
-  
-## <a name="types-of-encodings"></a>Typy kodowania  
- Unicode jest preferowaną metodę kodowania, podczas pracy z plikami. Unicode jest na całym świecie standard kodowania znaków, który używa wartości 16-bitowego kodu, który reprezentuje wszystkie znaki, które są stosowane w nowoczesnych obliczeń, w tym techniczne symboli i znaków specjalnych, używane podczas publikowania w.  
-  
- Wcześniejsze standardy kodowania znaków składa się z zestawów znaków tradycyjnych, takich jak zestawu znaków Windows ANSI, który używa wartości 8-bitowego kodu lub kombinacji wartości 8-bitowych, który reprezentuje znaki używane w określonym języku lub regionu geograficznego.  
-  
-## <a name="encoding-class"></a>Klasa kodowania  
- <xref:System.Text.Encoding> Klasa reprezentuje kodowania znaków. Ta tabela zawiera typ kodowania dostępne i zawiera opis każdego.  
-  
+
+Kodowanie plików, znane także jako kodowania znaków, określają sposób reprezentowania znaków podczas przetwarzania tekstu. Jedno kodowanie może być preferowane przez inne warunki języka, które może lub nie może obsłużyć, chociaż standard Unicode jest zazwyczaj preferowany.
+
+Podczas odczytywania z plików lub zapisywania do nich niewłaściwie dopasowane kodowania plików mogą spowodować wyjątki lub nieprawidłowe wyniki.
+
+## <a name="types-of-encodings"></a>Typy kodowań
+
+Unicode jest preferowanym kodowaniem podczas pracy z plikami. Unicode to ogólnoświatowy standard kodowania znaków, który używa wartości 16-bitowych kodu do reprezentowania wszystkich znaków używanych w nowoczesnych obliczeniach, w tym symboli technicznych i znaków specjalnych używanych do publikowania.
+
+Poprzednie standardy kodowania znaków składają się z tradycyjnych zestawów znaków, takich jak zestaw znaków ANSI systemu Windows, który używa wartości 8-bitowych lub kombinacji wartości 8-bitowych, aby reprezentować znaki używane w konkretnym języku lub regionie geograficznym.
+
+## <a name="encoding-class"></a>Klasa kodowania
+
+Klasa <xref:System.Text.Encoding> reprezentuje kodowanie znaków. W tej tabeli przedstawiono typ dostępnych kodowań i opisano poszczególne z nich.
+
 |Nazwa|Opis|
-|---|---|    
-|<xref:System.Text.ASCIIEncoding>|Reprezentuje kodowania znaków ASCII znaków Unicode.|  
-|<xref:System.Text.UnicodeEncoding>|Reprezentuje kodowanie UTF-16 znaków Unicode.|  
-|<xref:System.Text.UTF32Encoding>|Reprezentuje kodowania UTF-32 znaków Unicode.|  
-|<xref:System.Text.UTF7Encoding>|Reprezentuje kodowania UTF-7 znaków Unicode.|  
-|<xref:System.Text.UTF8Encoding>|Reprezentuje kodowania UTF-8 znaków Unicode.|  
-  
+|---|---|
+|<xref:System.Text.ASCIIEncoding>|Reprezentuje kodowanie znaków ASCII znaków Unicode.|
+|<xref:System.Text.UnicodeEncoding>|Reprezentuje kodowanie UTF-16 znaków Unicode.|
+|<xref:System.Text.UTF32Encoding>|Reprezentuje kodowanie UTF-32 znaków Unicode.|
+|<xref:System.Text.UTF7Encoding>|Reprezentuje kodowanie UTF-7 znaków Unicode.|
+|<xref:System.Text.UTF8Encoding>|Reprezentuje kodowanie UTF-8 znaków Unicode.|
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Odczyt z plików](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

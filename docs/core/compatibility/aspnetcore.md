@@ -1,20 +1,17 @@
 ---
 title: ASP.NET Core istotne zmiany — .NET Core
 description: Wyświetla listę istotnych zmian w ASP.NET Core.
-ms.date: 10/16/2019
+ms.date: 10/17/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 2b9ef4cd53772e30198ab2b4171f78503088ae83
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: HT
+ms.openlocfilehash: 4a382fc94eac656605260f628f3eaa5b41bc24da
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522885"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579985"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core istotne zmiany
-
-> [!IMPORTANT]
-> Ten artykuł jest w fazie tworzenia. Nie jest to kompletna lista ASP.NET Corech istotnych zmian. Aby uzyskać więcej informacji na temat ASP.NET Core zmian, możesz zapoznać się [ze wszystkimi problemami dotyczącymi zmiany](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) w repozytorium dotnet/docs w witrynie GitHub.
 
 Poniżej znajduje się lista ASP.NET Core istotne zmiany wprowadzone przez ASP.NET Core wersji. ASP.NET Core udostępnia funkcje deweloperskie aplikacji sieci Web używane przez platformę .NET Core.
 

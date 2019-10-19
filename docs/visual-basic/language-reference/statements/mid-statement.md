@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: 212ce1f06a01c39acbce43d8d069dae3526b1b4d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ea22af2eb896542bfc329e087101608e08c45107
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963551"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581475"
 ---
 # <a name="mid-statement"></a>Mid — Instrukcja
-Zastępuje określoną liczbę znaków w `String` zmiennej znakami z innego ciągu.  
+Zastępuje określoną liczbę znaków w zmiennej `String` znakami z innego ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Mid( _  
    ByRef Target As String, _  
    ByVal Start As Integer, _  
@@ -32,42 +32,42 @@ Mid( _
   
 ## <a name="parts"></a>Części  
  `Target`  
- Wymagany. `String` Nazwa zmiennej do zmodyfikowania.  
+ Wymagany. Nazwa zmiennej `String` do zmodyfikowania.  
   
  `Start`  
- Wymagany. `Integer`wyrażenia. Pozycja znaku w `Target` miejscu, w którym rozpoczyna się zastępowanie tekstu. `Start`używa indeksu jednego.  
+ Wymagany. wyrażenie `Integer`. Pozycja znaku w `Target`, w którym rozpoczyna się zastępowanie tekstu. `Start` używa indeksu jednego z nich.  
   
  `Length`  
- Opcjonalny. `Integer`wyrażenia. Liczba znaków do zastąpienia. W przypadku pominięcia `String` zostanie użyta wartość wszystkie.  
+ Opcjonalny. wyrażenie `Integer`. Liczba znaków do zastąpienia. W przypadku pominięcia zostanie użyta cała `String`.  
   
  `StringExpression`  
- Wymagane. `String`wyrażenie, które zastępuje część `Target`elementu.  
+ Wymagany. wyrażenie `String`, które zastępuje część `Target`.  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|`Start`< = 0 lub `Length` < 0.|  
+|<xref:System.ArgumentException>|`Start` < = 0 lub `Length` < 0.|  
   
 ## <a name="remarks"></a>Uwagi  
  Liczba zastąpionych znaków jest zawsze mniejsza lub równa liczbie znaków w `Target`.  
   
- Visual Basic ma <xref:Microsoft.VisualBasic.Strings.Mid%2A> funkcję `Mid` i instrukcję. Te elementy działają na określonej liczbie znaków w ciągu, ale `Mid` funkcja zwraca znaki, `Mid` gdy instrukcja zastępuje znaki. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic zawiera funkcję <xref:Microsoft.VisualBasic.Strings.Mid%2A> i instrukcję `Mid`. Te elementy działają na określonej liczbie znaków w ciągu, ale funkcja `Mid` zwraca znaki, a instrukcja `Mid` zastępuje znaki. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> `MidB` Instrukcja wcześniejszych wersji Visual Basic zastępuje podciąg w bajtach, a nie znaki. Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS). Wszystkie ciągi Visual Basic są w formacie Unicode i `MidB` nie są już obsługiwane.  
+> Instrukcja `MidB` wcześniejszych wersji Visual Basic zastępuje podciąg w bajtach, a nie znaki. Służy przede wszystkim do konwersji ciągów w aplikacjach z zestawami dwubajtowych znaków (znaków DBCS). Wszystkie ciągi Visual Basic są w formacie Unicode, a `MidB` nie jest już obsługiwane.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie używa `Mid` instrukcji, aby zastąpić określoną liczbę znaków w zmiennej ciągu znakami z innego ciągu.  
+ W tym przykładzie używamy instrukcji `Mid`, aby zastąpić określoną liczbę znaków w zmiennej ciągu znakami z innego ciągu.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>Wymagania  
- **Obszaru** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **Przestrzeń nazw:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Moduł:** `Strings`  
   
- **Hamulc** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
+ **Zestaw:** Biblioteka środowiska uruchomieniowego Visual Basic (w pliku Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: c39272d53fea136c83a5a09444b65a594fe3b7a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e92e12908c89bb7a0bf385a2122b0c8f1eb8a6f7
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625511"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581755"
 ---
 # <a name="inherits-statement"></a>Inherits — Instrukcja
-Powoduje, że bieżącą klasę lub interfejs dziedziczy atrybuty, zmiennych, właściwości, procedur i zdarzeń z innej klasy lub zestawu interfejsów.  
+Powoduje, że bieżąca Klasa lub interfejs dziedziczy atrybuty, zmienne, właściwości, procedury i zdarzenia z innej klasy lub zestawu interfejsów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Inherits basetypenames  
 ```  
   
@@ -28,40 +28,40 @@ Inherits basetypenames
   
 |Termin|Definicja|  
 |---|---|  
-|`basetypenames`|Wymagana. Nazwa klasy, z której pochodzi ta klasa.<br /><br /> —lub—<br /><br /> Nazwy interfejsów, z których pochodzi ten interfejs. Użyj przecinków do oddzielenia wielu nazw.|  
+|`basetypenames`|Wymagany. Nazwa klasy, z której pochodzi ta klasa.<br /><br /> —lub—<br /><br /> Nazwy interfejsów, z których pochodzi ten interfejs. Użyj przecinków, aby rozdzielić wiele nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używane, `Inherits` instrukcja musi być pierwszy wiersz nie jest pusty, bez komentarza w definicji klasy lub interfejsu. Należy natychmiast wykonać `Class` lub `Interface` instrukcji.  
+ Jeśli jest używana, instrukcja `Inherits` musi być pierwszym niepustym wierszem bez komentarza w definicji klasy lub interfejsu. Należy od razu przestrzegać instrukcji `Class` lub `Interface`.  
   
- Możesz użyć `Inherits` tylko w klasie lub interfejsie. Oznacza to, że kontekst deklaracji dla dziedziczenia nie może być plik źródłowy, przestrzeń nazw, struktury, moduł, procedurę lub blok.  
+ @No__t_0 można użyć tylko w klasie lub interfejsie. Oznacza to, że kontekst deklaracji dziedziczenia nie może być plikiem źródłowym, przestrzenią nazw, strukturą, modułem, procedurą lub blokiem.  
   
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Przepisy  
   
-- **Dziedziczenie klas.** Jeśli korzysta z klasy `Inherits` instrukcji, można określić tylko jedną klasę bazową.  
+- **Dziedziczenie klas.** Jeśli Klasa używa instrukcji `Inherits`, można określić tylko jedną klasę bazową.  
   
-     Klasa nie może też dziedziczyć z klasy w niej zagnieżdżonej.  
+     Klasa nie może dziedziczyć z klasy zagnieżdżonej w tym elemencie.  
   
-- **Interfejs dziedziczenia.** Jeśli korzysta z interfejsu `Inherits` instrukcji, można określić jeden lub więcej podstawowych interfejsów. Dwa interfejsy mogą dziedziczyć, nawet wtedy, gdy każda definiują element członkowski o takiej samej nazwie. Jeśli to zrobisz, więc w kodzie implementującym musi być określona elementu członkowskiego, który implementuje kwantyfikacja nazwy.  
+- **Dziedziczenie interfejsu.** Jeśli interfejs używa instrukcji `Inherits`, można określić jeden lub więcej interfejsów podstawowych. Można dziedziczyć z dwóch interfejsów, nawet jeśli każda z nich definiuje element członkowski o tej samej nazwie. W takim przypadku kod implementujący musi używać kwalifikacji nazw, aby określić, który element członkowski jest wdrażany.  
   
-     Interfejs nie może dziedziczyć z innego interfejsu z bardziej restrykcyjny poziom dostępu. Na przykład `Public` interfejs nie może dziedziczyć `Friend` interfejsu.  
+     Interfejs nie może dziedziczyć z innego interfejsu z bardziej restrykcyjnym poziomem dostępu. Na przykład interfejs `Public` nie może dziedziczyć po interfejsie `Friend`.  
   
-     Interfejs nie może dziedziczyć z interfejsu w nim zagnieżdżony.  
+     Interfejs nie może dziedziczyć z interfejsu zagnieżdżonego w nim.  
   
- Na przykład dziedziczenia klas w programie .NET Framework <xref:System.ArgumentException> klasy, która dziedziczy po elemencie <xref:System.SystemException> klasy. Dzięki temu można <xref:System.ArgumentException> wszystkich wstępnie zdefiniowanych właściwości i procedur wymaganych przez wyjątki systemowe, takie jak <xref:System.Exception.Message%2A> właściwości i <xref:System.Exception.ToString%2A> metody.  
+ Przykładem dziedziczenia klasy w .NET Framework jest Klasa <xref:System.ArgumentException>, która dziedziczy z klasy <xref:System.SystemException>. Dzięki temu <xref:System.ArgumentException> wszystkie wstępnie zdefiniowane właściwości i procedury wymagane przez wyjątki systemowe, takie jak Właściwość <xref:System.Exception.Message%2A> i Metoda <xref:System.Exception.ToString%2A>.  
   
- Na przykład dziedziczenia interfejsu w programie .NET Framework <xref:System.Collections.ICollection> interfejs, który dziedziczy z <xref:System.Collections.IEnumerable> interfejsu. Powoduje to, że <xref:System.Collections.ICollection> dziedziczenia definicji enumerator musieli przemierzają kolekcję.  
+ Przykładem dziedziczenia interfejsów w .NET Framework jest interfejs <xref:System.Collections.ICollection>, który dziedziczy po interfejsie <xref:System.Collections.IEnumerable>. Powoduje to, że <xref:System.Collections.ICollection> dziedziczyć definicję modułu wyliczającego wymaganego do przechodzenia do kolekcji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Inherits` instrukcję, aby pokazać, jak klasę o nazwie `thisClass` może dziedziczyć wszystkie elementy członkowskie klasa bazowa o nazwie `anotherClass`.  
+ Poniższy przykład używa instrukcji `Inherits`, aby pokazać, jak Klasa o nazwie `thisClass` może odziedziczyć wszystkie elementy członkowskie klasy bazowej o nazwie `anotherClass`.  
   
  [!code-vb[VbVbalrStatements#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#37)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje dziedziczenie z wielu interfejsów.  
+ Poniższy przykład pokazuje dziedziczenie wielu interfejsów.  
   
  [!code-vb[VbVbalrStatements#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#38)]  
   
- Interfejs o nazwie `thisInterface` zawiera teraz wszystkie definicje w <xref:System.IComparable>, <xref:System.IDisposable>, i <xref:System.IFormattable> interfejsów dziedziczone elementy Członkowskie zapewniają odpowiednio specyficznych dla typu porównanie dwóch obiektów, zwalniając przydzielone zasoby oraz wartość obiektu jako `String`. Klasa, która implementuje `thisInterface` musi implementować każdy członek każdy interfejs podstawowy.  
+ Interfejs o nazwie `thisInterface` teraz zawiera wszystkie definicje w <xref:System.IComparable>, <xref:System.IDisposable> i <xref:System.IFormattable> interfejsy dziedziczone elementy członkowskie odpowiednio dla porównywania określonego typu dla dwóch obiektów, zwalniania przyznanych zasobów i wyrażania wartości obiekt jako `String`. Klasa implementująca `thisInterface` musi implementować każdy element członkowski każdego z interfejsów podstawowych.  
   
 ## <a name="see-also"></a>Zobacz także
 

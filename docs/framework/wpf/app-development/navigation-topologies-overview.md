@@ -9,18 +9,18 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: b62432d64393f4fb749af2e25c42e2e0161de219
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5d9b09085ed8057f53cae9f9177682b01e698f6d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950746"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72580707"
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
-<a name="introduction"></a>To omówienie zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie. Trzy popularne topologie nawigacji wraz z przykładami zostały omówione w dalszej części.  
+<a name="introduction"></a>To omówienie zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Trzy popularne topologie nawigacji wraz z przykładami zostały omówione w dalszej części.  
   
 > [!NOTE]
-> Przed przeczytaniem tego tematu należy zapoznać się z koncepcją nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] strukturalnej przy użyciu funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [Omówienie nawigacji strukturalnej](structured-navigation-overview.md).  
+> Przed przeczytaniem tego tematu należy zapoznać się z koncepcją nawigacyjną strukturalną w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przy użyciu funkcji strony. Aby uzyskać więcej informacji na temat obu tych tematów, zobacz [Omówienie nawigacji strukturalnej](structured-navigation-overview.md).  
   
  Ten temat zawiera następujące sekcje:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "69950746"
   
 <a name="Navigation_Topologies"></a>   
 ## <a name="navigation-topologies"></a>Topologie nawigacji  
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie Nawigacja zwykle składa się ze<xref:System.Windows.Controls.Page>stron () za<xref:System.Windows.Documents.Hyperlink>pomocą hiperlinków (), które przeprowadzą do innych stron po kliknięciu. Strony, do których prowadzi przechodzenie, są [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] identyfikowane przez (zobacz [identyfikatory URI pakietu w WPF](pack-uris-in-wpf.md)). Rozważmy następujący prosty przykład pokazujący strony, hiperłącza i [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]:  
+ W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Nawigacja zwykle składa się ze stron (<xref:System.Windows.Controls.Page>) z hiperłączami (<xref:System.Windows.Documents.Hyperlink>), które przejdą do innych stron po kliknięciu. Strony, które są przeznaczone do programu są identyfikowane przez identyfikatory URI (Uniform Resource Identifier) (zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md)). Rozważmy następujący prosty przykład pokazujący strony, hiperłącza i Uniform Resource Identifier (URI):  
   
  [!code-xaml[NavigationTopologiesOverviewSnippets#Page1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationTopologiesOverviewSnippets/CS/Page1.xaml#page1)]  
   
@@ -44,7 +44,7 @@ ms.locfileid: "69950746"
   
  Te strony są rozmieszczone w *topologii nawigacyjnej* , której struktura jest określana w sposób, w jaki można przechodzić między stronami. Ta topologia nawigacji jest odpowiednia w prostych scenariuszach, chociaż Nawigacja może wymagać bardziej złożonych topologii, a niektóre z nich można zdefiniować tylko wtedy, gdy aplikacja jest uruchomiona.  
   
- W tym temacie opisano trzy popularne topologie nawigacji: *stałe liniowe*, *stałe*, hierarchiczne i *dynamicznie generowane*. Każda topologia nawigacji jest przedstawiona przy użyciu przykładu [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , który ma taki sam sposób jak ten, który jest przedstawiony na poniższym rysunku:  
+ W tym temacie opisano trzy popularne topologie nawigacji: *stałe liniowe*, *stałe, hierarchiczne*i *dynamicznie generowane*. Każda topologia nawigacji jest przedstawiana z przykładem, który ma [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jak ten, który jest przedstawiony na poniższej ilustracji:  
   
  ![Strony zadań z elementami danych i przyciskami nawigacji.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69950746"
   
  Typowe zachowania w przypadku nawigowania po ustalonej topologii liniowej obejmują następujące elementy:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
@@ -94,7 +94,7 @@ ms.locfileid: "69950746"
   
  Mimo że przechodzenie między stronami w stałej strukturze hierarchicznej jest określane w czasie wykonywania, środowisko użytkownika jest takie samo jak środowisko użytkownika dla stałej topologii liniowej:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   
@@ -124,7 +124,7 @@ ms.locfileid: "69950746"
   
  Sekwencja nawigacji jest znana jako topologia generowana dynamicznie. Dla użytkownika, podobnie jak w przypadku innych topologii nawigacyjnej, środowisko użytkownika jest takie samo, jak w przypadku poprzednich topologii:  
   
-- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-less <xref:System.Windows.Navigation.PageFunction%601>) nie jest wymagana, ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
+- Nawigowanie ze strony wywołującej do strony uruchamiania, która inicjuje kreatora i przechodzi do pierwszej strony kreatora. Strona uruchamiania (<xref:System.Windows.Navigation.PageFunction%601> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie jest wymagana), ponieważ strona wywołująca może bezpośrednio wywołać pierwszą stronę kreatora. Za pomocą strony uruchamiania można jednak uprościć inicjowanie kreatora, szczególnie jeśli Inicjalizacja jest złożona.  
   
 - Użytkownicy mogą przechodzić między stronami przy użyciu przycisków Wstecz i dalej (lub hiperlinków).  
   

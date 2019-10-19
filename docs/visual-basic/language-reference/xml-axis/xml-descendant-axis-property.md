@@ -10,55 +10,55 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: bc1dff6dc3b580079087f370212b7d3acd30e4fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938674"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582229"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 
-Zapewnia dostęp do obiektów podrzędnych z następujących czynności: <xref:System.Xml.Linq.XElement> obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.
+Zapewnia dostęp do elementów podrzędnych następujących: obiektu <xref:System.Xml.Linq.XElement>, obiektu <xref:System.Xml.Linq.XDocument>, kolekcji obiektów <xref:System.Xml.Linq.XElement> lub kolekcji obiektów <xref:System.Xml.Linq.XDocument>.
 
 ## <a name="syntax"></a>Składnia
 
-```
+```vb
 object...<descendant>
 ```
 
 ## <a name="parts"></a>Części
 
-`object` Wymagane. <xref:System.Xml.Linq.XElement> Obiektu <xref:System.Xml.Linq.XDocument> object, zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.
+Wymagane `object`. Obiekt <xref:System.Xml.Linq.XElement>, obiekt <xref:System.Xml.Linq.XDocument>, kolekcja obiektów <xref:System.Xml.Linq.XElement> lub kolekcja obiektów <xref:System.Xml.Linq.XDocument>.
 
-`...<` Wymagane. Oznacza początek właściwości osi elementu podrzędnego.
+Wymagane `...<`. Wskazuje początek właściwości osi elementu podrzędnego.
 
-`descendant` Wymagane. Nazwy węzłów podrzędnych dostępu, w postaci [`prefix:]name`.
+Wymagane `descendant`. Nazwa węzłów podrzędnych, do których można uzyskać dostęp, w postaci [`prefix:]name`.
 
-|Część|Opis|
+|Części|Opis|
 |----------|-----------------|
-|`prefix`|Opcjonalna. Prefiks przestrzeni nazw XML dla elementów podrzędnych węzła. Musi być globalnej przestrzeni nazw XML, która jest zdefiniowana za pomocą `Imports` instrukcji.|
-|`name`|Wymagana. Lokalna nazwa elementu podrzędnego węzła. Zobacz [nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Opcjonalny. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi to być globalna przestrzeń nazw XML, która jest definiowana przy użyciu instrukcji `Imports`.|
+|`name`|Wymagany. Nazwa lokalna węzła podrzędnego. Zobacz [nazwy zadeklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Wymagane. Oznacza koniec właściwości osi elementu podrzędnego.
+Wymagane `>`. Oznacza koniec właściwości osi elementu podrzędnego.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Kolekcja <xref:System.Xml.Linq.XElement> obiektów.
+Kolekcja obiektów <xref:System.Xml.Linq.XElement>.
 
 ## <a name="remarks"></a>Uwagi
 
-Właściwości osi descendant XML umożliwia dostęp do węzłów podrzędnych za pomocą nazwy z <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> obiektu, lub z kolekcji <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> obiektów. Użyj pliku XML `Value` właściwość, aby uzyskać dostęp do wartości pierwszego elementu podrzędnego węzła w zwrócona kolekcja. Aby uzyskać więcej informacji, zobacz [właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+Aby uzyskać dostęp do węzłów podrzędnych według nazwy z obiektu <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> lub z kolekcji obiektów <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>, można użyć właściwości osi elementu podrzędnego XML. Użyj właściwości `Value` XML, aby uzyskać dostęp do wartości pierwszego węzła podrzędnego w zwróconej kolekcji. Aby uzyskać więcej informacji, zobacz [Właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-Kompilator Visual Basic konwertuje właściwości osi elementu podrzędnego do wywołania <xref:System.Xml.Linq.XContainer.Descendants%2A> metody.
+Kompilator Visual Basic konwertuje właściwości osi elementu podrzędnego na wywołania metody <xref:System.Xml.Linq.XContainer.Descendants%2A>.
 
-## <a name="xml-namespaces"></a>Obszary nazw XML
+## <a name="xml-namespaces"></a>Przestrzenie nazw XML
 
-Nazwa właściwości osi elementu podrzędnego można użyć tylko obszary nazw XML globalnie zadeklarowane za pomocą `Imports` instrukcji. Nie może używać przestrzeni nazw XML zadeklarowany lokalnie w literałach — element XML. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+Nazwa we właściwości osi zależnej może używać tylko przestrzeni nazw XML zadeklarowanych globalnie za pomocą instrukcji `Imports`. Nie można używać przestrzeni nazw XML zadeklarowanych lokalnie w literałach elementu XML. Aby uzyskać więcej informacji, zobacz [Imports — Instrukcja (przestrzeń nazw XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak uzyskać dostęp do wartości pierwszego elementu podrzędnego węzła o nazwie `name` i wartości wszystkich podrzędnych węzłów o nazwie `phone` z `contacts` obiektu.
+Poniższy przykład pokazuje, jak uzyskać dostęp do wartości pierwszego węzła podrzędnego o nazwie `name` i wartości wszystkich węzłów podrzędnych o nazwie `phone` z obiektu `contacts`.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
@@ -70,7 +70,7 @@ Ten kod wyświetla następujący tekst:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje `ns` jako prefiks przestrzeni nazw XML. Następnie używa prefiksu przestrzeni nazw tworzenie literałów XML i dostęp do wartości pierwszy węzeł podrzędny o nazwie kwalifikowanej `ns:name`.
+Poniższy przykład deklaruje `ns` jako prefiks przestrzeni nazw XML. Następnie używa prefiksu przestrzeni nazw w celu utworzenia literału XML i uzyskania dostępu do wartości pierwszego węzła podrzędnego przy użyciu kwalifikowanej nazwy `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
@@ -83,5 +83,5 @@ Ten kod wyświetla następujący tekst:
 - <xref:System.Xml.Linq.XElement>
 - [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/index.md)
 - [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Tworzenie kodu XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

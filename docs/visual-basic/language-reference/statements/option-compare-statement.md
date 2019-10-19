@@ -1,5 +1,5 @@
 ---
-title: Option Compare — instrukcja (Visual Basic)
+title: Option Compare — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d3faf3a6630cd308913ce2325a5f7fe96e474c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583515"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581584"
 ---
 # <a name="option-compare-statement"></a>Option Compare — Instrukcja
-Deklaruje domyślną metodę porównywania do użycia podczas porównywania danych ciągu.  
+Deklaruje domyślną metodę porównania do użycia podczas porównywania danych ciągu.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Option Compare { Binary | Text }  
 ```  
   
@@ -38,52 +38,52 @@ Option Compare { Binary | Text }
   
 |Termin|Definicja|  
 |---|---|  
-|`Binary`|Opcjonalna. Wynikiem porównania ciągów, w oparciu o kolejność sortowania jest pochodną wewnętrzne binarne reprezentacje znaków.<br /><br /> Ten typ porównania przydaje się zwłaszcza, jeśli ciągi mogą zawierać znaków, które nie mają być interpretowane jako tekst. W takim przypadku możesz zrezygnować z obciążenia porównania z wartością alfabetycznej równoważności, takie jak ignorowanie wielkości liter.|  
-|`Text`|Opcjonalna. Wyniki w porównań ciągów, w oparciu o kolejność sortowania bez uwzględniania wielkości liter tekstu, określane przez ustawienia regionalne Twojego systemu.<br /><br /> Ten typ porównania jest przydatne, jeśli Twoimi ciągami, zawierać wszystkie znaki, tekst, a chcesz porównać ich równoważniki alfabetyczne konta, takie jak ignorowanie wielkości liter i cyfr ściśle powiązanych z uwzględnieniem. Na przykład możesz chcieć należy wziąć pod uwagę `A` i `a` równe, i `Ä` i `ä` przed `B` i `b`.|  
+|`Binary`|Opcjonalny. Wyniki porównywania ciągów na podstawie kolejności sortowania pochodzącej z wewnętrznych reprezentacji binarnych znaków.<br /><br /> Ten typ porównania jest przydatny zwłaszcza wtedy, gdy ciągi mogą zawierać znaki, które nie są interpretowane jako tekst. W tym przypadku nie chcesz porównań z odpowiednikami alfabetycznymi, na przykład bez uwzględniania wielkości liter.|  
+|`Text`|Opcjonalny. Wyniki porównywania ciągów na podstawie kolejności sortowania tekstu niezależnego od wielkości liter, ustalonej przez ustawienia regionalne systemu.<br /><br /> Ten typ porównania jest przydatny, jeśli ciągi zawierają wszystkie znaki tekstowe i chcesz je porównać przy uwzględnieniu równoważności alfabetycznej, takich jak nieuwzględnianie wielkości liter i ściśle powiązane litery. Przykładowo warto rozważyć, `A` i `a` być równe, a `Ä` i `ä` przed `B` i `b`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli używane, `Option Compare` instrukcja musi znajdować się w pliku przed wszystkimi innymi instrukcjami kodu źródłowego.  
+ Jeśli jest używana, instrukcja `Option Compare` musi znajdować się w pliku przed wszelkimi innymi instrukcjami kodu źródłowego.  
   
- `Option Compare` Instrukcja określa metodę porównywania ciągów (`Binary` lub `Text`).  Domyślna metoda porównania tekstu jest `Binary`.  
+ Instrukcja `Option Compare` określa metodę porównania ciągów (`Binary` lub `Text`).  Domyślna metoda porównywania tekstu to `Binary`.  
   
- A `Binary` porównania porównuje wartość liczbową Unicode każdego znaku w każdym ciągu. A `Text` porównania porównuje każdego znaku Unicode, oparte na ich leksykalne znaczenia w bieżącej kultury.  
+ Porównanie `Binary` porównuje wartość liczbową Unicode każdego znaku w każdym ciągu. Porównanie `Text` porównuje każdy znak Unicode w oparciu o jego leksykalne znaczenie w bieżącej kulturze.  
   
- W Microsoft Windows kolejność sortowania jest określana przez stronę kodową. Aby uzyskać więcej informacji, zobacz [stron kodowych](/cpp/c-runtime-library/code-pages).  
+ W systemie Microsoft Windows kolejność sortowania jest określana przez stronę kodową. Aby uzyskać więcej informacji, zobacz [stronę kodową](/cpp/c-runtime-library/code-pages).  
   
- W poniższym przykładzie znaków na stronie kodowej angielski/Europejskiego (ANSI 1252) są sortowane za pomocą `Option Compare Binary`, która generuje typowych binarny porządek sortowania.  
+ W poniższym przykładzie znaki na stronie kodowej angielski/Europa (ANSI 1252) są sortowane przy użyciu `Option Compare Binary`, co daje typowy binarny porządek sortowania.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Kiedy te same znaki w tej samej stronie kodowej są sortowane za pomocą `Option Compare Text`, generowany jest tekstowy porządek sortowania.  
+ Gdy te same znaki na tej samej stronie kodowej są sortowane przy użyciu `Option Compare Text`, generowany jest następujący porządek sortowania tekstu.  
   
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-## <a name="when-an-option-compare-statement-is-not-present"></a>W przypadku opcji Option Compare instrukcja nie jest obecny  
- Jeśli kod źródłowy nie zawiera `Option Compare` instrukcji **Option Compare** ustawienie [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) jest używany. Jeśli używasz kompilatora wiersza polecenia, ustawienia określone przez [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) — opcja kompilatora jest używany.  
+## <a name="when-an-option-compare-statement-is-not-present"></a>Gdy nie ma instrukcji Compare  
+ Jeśli kod źródłowy nie zawiera instrukcji `Option Compare`, zostanie użyta **opcja porównanie** ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli używasz kompilatora wiersza polecenia, ustawienie określone przez opcję kompilatora [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) jest używane.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-#### <a name="to-set-option-compare-in-the-ide"></a>Można ustawić opcji Option Compare w środowisku IDE  
+#### <a name="to-set-option-compare-in-the-ide"></a>Aby ustawić opcję Porównaj w środowisku IDE  
   
-1. W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**.  
+1. W **Eksplorator rozwiązań**wybierz projekt. W menu **projekt** kliknij polecenie **Właściwości**.  
   
-2. Kliknij przycisk **skompilować** kartę.  
+2. Kliknij kartę **kompilacja** .  
   
-3. Ustaw wartość w **Option Compare** pole.  
+3. Ustaw wartość w polu **Compare (porównanie opcji** ).  
   
- Podczas tworzenia projektu, **Option Compare** ustawienie **skompilować** karta jest ustawiona na **Option Compare** w **opcje** okno dialogowe. Aby zmienić to ustawienie, na **narzędzia** menu, kliknij przycisk **opcje**. W **opcje** okna dialogowego rozwiń **projekty i rozwiązania**, a następnie kliknij przycisk **ustawienia domyślne VB**. Ustawieniem domyślnym początkowej w **ustawienia domyślne VB** jest **binarne**.  
+ Podczas tworzenia projektu **opcja Porównaj** ustawienie na karcie **kompilowania** jest ustawiona na **opcję Porównaj** ustawienia w oknie dialogowym **Opcje** . Aby zmienić to ustawienie, w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** jest wartością **binarną**.  
   
-#### <a name="to-set-option-compare-on-the-command-line"></a>Można ustawić opcji Option Compare, w wierszu polecenia  
+#### <a name="to-set-option-compare-on-the-command-line"></a>Aby ustawić opcję Compare w wierszu polecenia  
   
-- Obejmują [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) w — opcja kompilatora **vbc** polecenia.  
+- Dołącz opcję kompilatora [/optioncompare —](../../../visual-basic/reference/command-line-compiler/optioncompare.md) do polecenia **VBC** .  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Option Compare` instrukcję, aby ustawić porównanie binarne jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, usuń znaczniki komentarza `Option Compare Binary` instrukcji i umieścić go w górnej części pliku źródłowego.  
+ Poniższy przykład używa instrukcji `Option Compare`, aby ustawić porównanie binarne jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, Usuń komentarz instrukcji `Option Compare Binary` i umieść go w górnej części pliku źródłowego.  
   
  [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto `Option Compare` instrukcję, aby ustawić kolejność sortowania bez uwzględniania wielkości liter tekstu jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, usuń znaczniki komentarza `Option Compare Text` instrukcji i umieścić go w górnej części pliku źródłowego.  
+ Poniższy przykład używa instrukcji `Option Compare`, aby ustawić kolejność sortowania tekstu bez uwzględniania wielkości liter jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, Usuń komentarz instrukcji `Option Compare Text` i umieść go w górnej części pliku źródłowego.  
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operatory porównania w języku Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Funkcje ciągów](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

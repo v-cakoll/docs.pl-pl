@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: d286cc811c87f2d45d5a9e6d4e8acd9c430ff346
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835250"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581966"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -26,34 +26,49 @@ Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Visual Basic 15,8/Visual Studio 2017 wersja 15,8 dla nowych funkcji, zobacz [Visual Basic 15,8](#visual-basic-158).
+Visual Basic 15,8/Visual Studio 2017 wersja 15,8  
+Aby poznać nowe funkcje, zobacz [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 wersja 15,5 dla nowych funkcji, zobacz [Visual Basic 15,5](#visual-basic-155).
+Visual Basic 15,5/Visual Studio 2017 wersja 15,5  
+Aby poznać nowe funkcje, zobacz [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 wersja 15,3 dla nowych funkcji, zobacz [Visual Basic 15,3](#visual-basic-153).
+Visual Basic 15,3/Visual Studio 2017 wersja 15,3  
+Aby poznać nowe funkcje, zobacz [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017 dla nowych funkcji, zobacz [Visual Basic 2017](#visual-basic-2017).
+Visual Basic 2017/Visual Studio 2017  
+Aby poznać nowe funkcje, zobacz [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015 dla nowych funkcji, zobacz [Visual Basic 14](#visual-basic-14).
+Visual Basic/Visual Studio 2015  
+Aby poznać nowe funkcje, zobacz [Visual Basic 14](#visual-basic-14).
 
-Wersje zapoznawcze Visual Basic/Visual Studio 2013 technologii .NET Compiler Platform ("Roslyn")
+Visual Basic/Visual Studio 2013  
+Wersje zapoznawcze technologii .NET Compiler Platform ("Roslyn")
 
-Visual Basic/Visual Studio 2012 `Async` i `await` słowa kluczowe, Iteratory, atrybuty informacji o wywołującym
+Visual Basic/Visual Studio 2012  
+`Async` i `await` słowa kluczowe, Iteratory, atrybuty informacji o wywołującym
 
-Visual Basic, zaimplementowane przez program Visual Studio 2010 właściwości, Inicjatory kolekcji, niejawne kontynuacje wierszy, dynamiczne, ogólne odchylenie co/przeciwstawne, globalny dostęp do przestrzeni nazw
+Visual Basic, Visual Studio 2010  
+Właściwości zaimplementowane przez autoimplementację, Inicjatory kolekcji, niejawne kontynuacja wiersza, dynamiczne, ogólne, proste/odchylenia, globalny dostęp do przestrzeni nazw
 
-Visual Basic/Visual Studio 2008 Language Integrated Query (LINQ), literały XML, wnioskowanie o typie lokalnym, Inicjatory obiektów, typy anonimowe, metody rozszerzające, lokalne `var` wnioskowanie, wyrażenia lambda, operator `if`, metody częściowe, nullable typy wartości
+Visual Basic/Visual Studio 2008  
+Language Integrated Query (LINQ), literały XML, wnioskowanie o typie lokalnym, Inicjatory obiektów, typy anonimowe, metody rozszerzające, wnioskowanie typu lokalnego `var`, wyrażenia lambda, operator `if`, metody częściowe, typy wartości null
 
-Visual Basic/Visual Studio 2005 typ `My` i typy pomocników (dostęp do aplikacji, komputera, systemu plików, sieci)
+Visual Basic/Visual Studio 2005  
+Typ `My` i typy pomocnika (dostęp do aplikacji, komputera, systemu plików, sieci)
 
-Visual Basic/operatory programu Visual Studio .NET 2003 bit Shift, deklaracja zmiennej pętli
+Visual Basic/Visual Studio .NET 2003  
+Operatory przesunięcia bitowego, deklaracja zmiennej pętli
 
-Visual Basic/Visual Studio .NET 2002 — pierwsza wersja Visual Basic .NET
+Visual Basic/Visual Studio .NET 2002  
+Pierwsze wydanie Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
-Visual Basic 16,0 koncentruje się na dostarczaniu większej liczby funkcji środowiska uruchomieniowego Visual Basic (Microsoft. VisualBasic. dll) do programu .NET Core i to pierwsza wersja Visual Basic skoncentrowana na platformie .NET Core. Wiele części środowiska uruchomieniowego Visual Basic jest zależne od WinForms i zostaną dodane do nowszej wersji Visual Basic. 
 
-**Komentarze są dozwolone w większej liczbie miejsc w instrukcjach** W Visual Basic 15,8 i wcześniejszych wersjach Komentarze są dozwolone tylko w pustych wierszach, na końcu instrukcji lub w określonych miejscach w instrukcji, w których niejawna kontynuacja wiersza jest dozwolona. Począwszy od Visual Basic 16,0, komentarze są również dozwolone po jawnej kontynuacji wiersza i wewnątrz instrukcji w wierszu rozpoczynającym się od znaku podkreślenia.
+Visual Basic 16,0 koncentruje się na dostarczaniu większej liczby funkcji środowiska uruchomieniowego Visual Basic (Microsoft. VisualBasic. dll) do programu .NET Core i to pierwsza wersja Visual Basic skoncentrowana na platformie .NET Core. Wiele części środowiska uruchomieniowego Visual Basic jest zależne od WinForms i zostaną dodane do nowszej wersji Visual Basic.
+
+**Komentarze są dozwolone w większej liczbie miejsc w instrukcjach**
+
+W Visual Basic 15,8 i wcześniejszych wersjach Komentarze są dozwolone tylko w pustych wierszach, na końcu instrukcji lub w określonych miejscach w instrukcji, w których niejawna kontynuacja wiersza jest dozwolona. Począwszy od Visual Basic 16,0, komentarze są również dozwolone po jawnej kontynuacji wiersza i wewnątrz instrukcji w wierszu rozpoczynającym się od znaku podkreślenia.
 
 ```vb
 Public Sub Main()
@@ -110,19 +125,19 @@ Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między 
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-[Modyfikator dostępu składowej `Private Protected`](../language-reference/modifiers/private-protected.md)
+[Modyfikator dostępu `Private Protected` składowej](../language-reference/modifiers/private-protected.md)
 
-Ta nowa kombinacja słów kluczowych definiuje element członkowski, który jest dostępny dla wszystkich elementów członkowskich w jego klasie zawierającej, a także typów pochodzących od klasy zawierającej, ale tylko wtedy, gdy znajdują się one również w zawierającym go zestawie. Ponieważ struktury nie mogą być dziedziczone, `Private Protected` może być stosowane tylko do elementów członkowskich klasy.
+Ta nowa kombinacja słów kluczowych definiuje element członkowski, który jest dostępny dla wszystkich elementów członkowskich w jego klasie zawierającej, a także typów pochodzących od klasy zawierającej, ale tylko wtedy, gdy znajdują się one również w zawierającym go zestawie. Ponieważ struktury nie mogą być dziedziczone, `Private Protected` mogą być stosowane tylko do elementów członkowskich klasy.
 
 **Wiodący separator szesnastkowy/binarny**
 
-Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separator cyfr. Począwszy od Visual Basic 15,5, można użyć znaku podkreślenia jako wiodącego separatora między cyframi prefiksu i szesnastkowym, dwójkowym lub ósemkowym. W poniższym przykładzie zastosowano wiodący separator cyfr, aby zdefiniować 3 271 948 384 jako liczbę szesnastkową:
+Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separatora cyfr. Począwszy od Visual Basic 15,5, można użyć znaku podkreślenia jako wiodącego separatora między cyframi prefiksu i szesnastkowym, dwójkowym lub ósemkowym. W poniższym przykładzie zastosowano wiodący separator cyfr, aby zdefiniować 3 271 948 384 jako liczbę szesnastkową:
 
 ```vb
 Dim number As Integer = &H_C305_F860
 ```
 
-Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (@no__t -0. vbproj):
+Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*. vbproj):
 
 ```xml
 <PropertyGroup>
@@ -140,7 +155,7 @@ Podczas przypisywania wartości elementów krotki ze zmiennych, Visual Basic wni
 
 **Dodatkowe przełączniki kompilatora**
 
-Kompilator wiersza polecenia Visual Basic obsługuje teraz opcje kompilatora [**-opcji refout**](../reference/command-line-compiler/refout-compiler-option.md) i [**-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) , aby kontrolować dane wyjściowe zestawów referencyjnych. **-opcji refout** definiuje katalog wyjściowy zestawu referencyjnego i **-refonly** określa, że tylko zestaw odwołania ma być wyprowadzany przez kompilację.
+Kompilator wiersza polecenia Visual Basic obsługuje teraz opcje kompilatora [ **-opcji refout**](../reference/command-line-compiler/refout-compiler-option.md) i [ **-refonly**](../reference/command-line-compiler/refonly-compiler-option.md) , aby kontrolować dane wyjściowe zestawów referencyjnych. **-opcji refout** definiuje katalog wyjściowy zestawu referencyjnego i **-refonly** określa, że tylko zestaw odwołania ma być wyprowadzany przez kompilację.
 
 ## <a name="visual-basic-2017"></a>Visual Basic 2017
 
@@ -150,7 +165,7 @@ Krotki są prostą strukturą danych, najczęściej używaną do zwracania wielu
 
 - Zdefiniuj typ niestandardowy (`Class` lub `Structure`). Jest to bardzo ciężki rozwiązanie.
 
-- Zdefiniuj co najmniej jeden `ByRef` parametrów (oprócz zwracania wartości z metody).
+- Zdefiniuj co najmniej jeden `ByRef` parametry, oprócz zwracania wartości z metody.
 
 Obsługa Visual Basic kroteks umożliwia szybkie Definiowanie krotek, opcjonalnie przypisanie nazw semantycznych do wartości i szybkie pobranie wartości. Poniższy przykład otacza wywołanie metody <xref:System.Int32.TryParse%2A> i zwraca spójną krotkę.
 
@@ -162,7 +177,7 @@ Następnie można wywołać metodę i obsłużyć zwróconą krotkę z kodem pod
 
 **Literały binarne i separatory cyfr**
 
-Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub `&b`. Ponadto można użyć znaku podkreślenia, `_`, jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji, aby przypisać wartość `Byte` i wyświetlić ją jako liczbę dziesiętną, szesnastkową i binarną.
+Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub `&b`. Ponadto można użyć znaku podkreślenia, `_` jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji do przypisywania wartości `Byte` i wyświetlania jej jako liczby dziesiętnej, szesnastkowej i binarnej.
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
@@ -180,7 +195,7 @@ W najprostszej postaci można modyfikować wyraz znaleziony w zdaniu przy użyci
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#1)]
 
-Wystąpił problem z tym kodem, chociaż jest to, że jeśli dopasowanie nie zostanie znalezione, metoda zwraca pierwszy wyraz. Ponieważ przykład nie sprawdza wartości argumentu `Boolean` w celu ustalenia, czy dopasowanie zostanie znalezione, modyfikuje pierwszy wyraz, jeśli nie ma żadnego dopasowania. Poniższy przykład rozwiązuje ten problem, zastępując pierwszy wyraz własnym, jeśli nie ma żadnego dopasowania.
+Wystąpił problem z tym kodem, chociaż jest to, że jeśli dopasowanie nie zostanie znalezione, metoda zwraca pierwszy wyraz. Ponieważ przykład nie sprawdza wartości argumentu `Boolean`, aby określić, czy dopasowanie zostanie znalezione, modyfikuje pierwsze słowo, jeśli nie ma żadnego dopasowania. Poniższy przykład rozwiązuje ten problem, zastępując pierwszy wyraz własnym, jeśli nie ma żadnego dopasowania.
 
 [!code-vb[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-return.vb#2)]
 
@@ -214,7 +229,7 @@ Komentarze można umieszczać po niejawnej kontynuacji wierszy, wewnątrz wyraż
 
 **Inteligentniejsze w pełni kwalifikowane rozpoznawanie nazw**
 
-Podany kod, taki jak `Threading.Thread.Sleep(1000)`, Visual Basic używany do wyszukiwania przestrzeni nazw "Threading", odkrywał, że był niejednoznaczny między system. Threading i system. Windows. Threading, a następnie Zgłoś błąd.  Visual Basic teraz traktuje jednocześnie wszystkie możliwe przestrzenie nazw.  Jeśli zostanie wyświetlona lista uzupełniania, Edytor programu Visual Studio Wyświetla listę członków z obu typów na liście uzupełniania.
+Podany kod, taki jak `Threading.Thread.Sleep(1000)`, Visual Basic używany do wyszukiwania przestrzeni nazw "Threading", odkrywał, że był niejednoznaczny między system. Threading i system. Windows. Threading, a następnie zgłasza błąd.  Visual Basic teraz traktuje jednocześnie wszystkie możliwe przestrzenie nazw.  Jeśli zostanie wyświetlona lista uzupełniania, Edytor programu Visual Studio Wyświetla listę członków z obu typów na liście uzupełniania.
 
 **Literały daty od początku roku**
 
@@ -224,17 +239,17 @@ Możesz mieć literały dat w formacie RRRR-MM-DD, `#2015-03-17 16:10 PM#`.
 
 Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właściwości ReadWrite.  Interfejs gwarantuje minimalną funkcjonalność i nie zatrzymuje klasy implementującej, umożliwiając ustawienie właściwości.
 
-[TypeOf \<expr > IsNot @no__t 2type >](../../visual-basic/language-reference/operators/typeof-operator.md)
+[@No__t_1expr TypeOf > IsNot \<type >](../../visual-basic/language-reference/operators/typeof-operator.md)
 
 Aby zwiększyć czytelność kodu, można teraz używać `TypeOf` z `IsNot`.
 
-[#Disable ostrzeżenie \<ID > i #Enable ostrzeżenie \<ID >](../../visual-basic/language-reference/directives/index.md)
+[#Disable \<ID ostrzeżeń > i #Enable ostrzeżeń \<ID >](../../visual-basic/language-reference/directives/index.md)
 
 Można wyłączyć i włączyć określone ostrzeżenia dla regionów w pliku źródłowym.
 
 **Ulepszenia komentarzy w dokumencie XML**
 
-Podczas pisania komentarzy do dokumentu uzyskasz Inteligentny edytor i kompilację do walidacji nazw parametrów, prawidłowej obsługi `crefs` (rodzajowe, operatory itp.), kolorowanie i Refaktoryzacja.
+Podczas pisania komentarzy do dokumentów, możesz uzyskać obsługę edytora inteligentnego i kompilacji do walidacji nazw parametrów, prawidłowej obsługi `crefs` (typów ogólnych, operatorów itp.), kolorowania i refaktoryzacji.
 
 [Częściowe definicje modułów i interfejsów](../../visual-basic/language-reference/modifiers/partial.md)
 
@@ -254,7 +269,7 @@ Kompilator używany do wydawania błędu, który CObj (...) nie był stałą, gd
 
 **Deklarowanie i używanie niejednoznacznych metod z różnych interfejsów**
 
-Wcześniej Poniższy kod zgłosił błędy, które uniemożliwiły zadeklarowanie `IMock` lub wywołania `GetDetails` (jeśli zostały zadeklarowane w C#):
+Wcześniej Poniższy kod zgłosił błędy, które uniemożliwiły zadeklarowanie `IMock` lub wywołanie `GetDetails` (jeśli zostały zadeklarowane w C#):
 
 ```vb
 Interface ICustomer
@@ -273,7 +288,7 @@ Interface IMock2 : Inherits ICustomer, ITime
 End Interface
 ```
 
-Teraz kompilator użyje zasad normalnego rozpoznawania przeciążenia, aby wybrać najbardziej odpowiednie `GetDetails` do wywołania i można zadeklarować relacje interfejsu w Visual Basic, jak te, które przedstawiono w przykładzie.
+Teraz kompilator będzie używać normalnych reguł rozpoznawania przeciążenia, aby wybrać najbardziej odpowiednie `GetDetails` do wywołania, i można zadeklarować relacje interfejsu w Visual Basic, jak te, które przedstawiono w przykładzie.
 
 ## <a name="see-also"></a>Zobacz także
 

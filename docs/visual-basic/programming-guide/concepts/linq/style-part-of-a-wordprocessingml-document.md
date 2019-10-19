@@ -1,29 +1,29 @@
 ---
-title: Część stylu WordprocessingML Document2
+title: Część stylu elementu WordprocessingML Document2
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907858"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582885"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>Część stylu dokumentu WordprocessingML
-W tym temacie przedstawiono przykład część stylu dokumentu Office Open XML WordprocessingML.  
+W tym temacie przedstawiono przykład części stylu dokumentu Office Open XML WordprocessingML.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład jest plik XML, który stanowi część stylu dokumentu Office Open XML WordprocessingML.  
+ Poniższy przykład to kod XML, który stanowi część stylu dokumentu Office Open XML WordprocessingML.  
   
- Domyślnego stylu akapitu zawiera element z następujących otwierający tag:  
+ Domyślny styl akapitu ma element z następującym tagiem otwierającym:  
   
-```  
+```xml  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
- Musisz znać te informacje, kiedy piszesz zapytanie, aby znaleźć identyfikator domyślny styl tak, aby zapytanie można zidentyfikować styl akapitów, które mają domyślny styl.  
+ Musisz znać te informacje podczas pisania zapytania, aby znaleźć domyślny identyfikator stylu, aby zapytanie mogło identyfikować styl akapitów, które mają styl domyślny.  
   
- Należy pamiętać, że te dokumenty są bardzo proste, w porównaniu do typowych dokumentach, które generuje programie Microsoft Word. W wielu przypadkach program Word zapisuje dużym stopniem dodatkowe informacje, dodatkowego formatowania i metadanych. Ponadto słowa nie formatuje wiersze, które mają być czytelny, jak w poniższym przykładzie; Zamiast tego kod XML jest zapisywana bez wcięcia. Jednak wszystkich dokumentów WordprocessingML udostępnianie tego samego podstawowego kształtu XML. W związku z tym zapytania znajdujące się w tym samouczku będą działać z dokumentami bardziej skomplikowane.  
+ Należy pamiętać, że te dokumenty są bardzo proste w porównaniu z typowymi dokumentami wygenerowanymi przez program Microsoft Word. W wielu przypadkach program Word zapisuje znaczną część dodatkowych informacji, dodatkowego formatowania i metadanych. Ponadto program Word nie sformatuje wierszy, aby można je było łatwo odczytać, jak w tym przykładzie. Zamiast tego, kod XML jest zapisywany bez wcięcia. Jednak wszystkie dokumenty WordprocessingML korzystają z tego samego podstawowego kształtu XML. Z tego powodu zapytania przedstawione w tym samouczku będą działały z bardziej skomplikowanymi dokumentami.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -142,4 +142,4 @@ W tym temacie przedstawiono przykład część stylu dokumentu Office Open XML W
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Szczegóły dotyczące dokumentów Office Open XML WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

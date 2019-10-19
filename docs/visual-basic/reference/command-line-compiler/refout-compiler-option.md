@@ -7,16 +7,16 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: f2cdd228d8ce1912abbbe888c29c42f29299ebba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788794"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582871"
 ---
 # <a name="-refout-visual-basic"></a>-opcji refout (Visual Basic)
 
-**- Opcji refout** opcja określa ścieżkę pliku, gdzie zestaw odwołania powinny być danych wyjściowych.
+Opcja **-opcji refout** określa ścieżkę pliku, w którym zestaw odniesienia powinien być wyjściowy.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,20 +28,21 @@ ms.locfileid: "61788794"
 
 ## <a name="arguments"></a>Argumenty
 
- `filepath` Ścieżka i nazwa pliku zestawu odwołania. Ogólnie należy się w podfolderze podstawowego zestawu. Zalecane Konwencji (używane przez program MSBuild) jest umieszczenie zestawu odwołania w "ref /" podfolder względem podstawowego zestawu. Wszystkie foldery w `filepath` musi istnieć; kompilator nie tworzy je. 
+`filepath`  
+Ścieżka i nazwa pliku zestawu odwołania. Zwykle powinien znajdować się w podfolderze podstawowego zestawu. Zalecaną konwencją (używaną przez program MSBuild) jest umieszczenie zestawu odwołania w podfolderze "ref/" względem podstawowego zestawu. Wszystkie foldery w `filepath` muszą istnieć; Kompilator nie tworzy ich.
 
 ## <a name="remarks"></a>Uwagi
 
-Obsługa języka Visual Basic `-refout` przełącznika, począwszy od wersji 15.3.
+Visual Basic obsługuje przełącznik `-refout`, zaczynając od wersji 15,3.
 
-Zestawy referencyjne są tylko metadane zestawów, które zawierają metadane, ale bez kodu realizacji. Obejmują one informacje typów i elementów członkowskich dla wszystkim, z wyjątkiem typów anonimowych. Ich treść metody są zastępowane za pomocą jednego `throw null` instrukcji. Przyczyna przy użyciu `throw null` treści metod (w przeciwieństwie do treści) jest tak, aby PEVerify można uruchomić i przekazać (dlatego sprawdzanie poprawności kompletność metadanych).
+Zestawy referencyjne są zestawami zawierającymi tylko metadane, które zawierają metadane, ale nie mają kodu implementacji. Zawierają one informacje o typie i elemencie członkowskim dla wszystkiego, z wyjątkiem typów anonimowych. Ich treści metod są zastępowane pojedynczą instrukcją `throw null`. Przyczyną użycia `throw null` metod treści (w przeciwieństwie do braku treści) jest to, że PEVerify może być uruchomiona i zakończyła się powodzeniem (w związku z tym sprawdzanie kompletności metadanych).
 
-Zestawy referencyjne zawierają poziomie zestawu [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atrybutu. Ten atrybut może być określony w źródle (następnie kompilator nie będzie konieczne jej syntetyzowania). Z powodu tego atrybutu środowisk wykonawczych odmawiał załadowania zestawy referencyjne do wykonania (ale nadal może być załadowany w kontekstu reflection-only). Narzędzia, które odzwierciedlają zestawów, należy upewnić się, że są one ładowane odwołań do zestawów jako tylko do odbicia. w przeciwnym wypadku środowisko wykonawcze zgłasza <xref:System.BadImageFormatException>.
+Zestawy referencyjne zawierają atrybut [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) na poziomie zestawu. Ten atrybut może być określony w źródle (a następnie kompilator nie będzie musiał przeprowadzić jego syntezy). Ze względu na ten atrybut środowiska uruchomieniowe odmawiają załadowania zestawów referencyjnych na potrzeby wykonywania (ale nadal mogą być ładowane w kontekście "tylko odbicie"). Narzędzia odzwierciedlające zestawy muszą mieć pewność, że ładują zestawy referencyjne jako odbicie. w przeciwnym razie środowisko uruchomieniowe zgłosi <xref:System.BadImageFormatException>.
 
-`-refout` i [ `-refonly` ](refonly-compiler-option.md) opcje wykluczają się wzajemnie.
+Opcje `-refout` i [`-refonly`](refonly-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [-refonly](refonly-compiler-option.md)
-- [Kompilator wiersza polecenia programu Visual Basic](index.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

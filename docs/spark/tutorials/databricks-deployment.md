@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 570f6bdb8eda462b815dfc7c45f6e9a3a515f0ad
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 55fa9b42e04a540deb245887d601e6cce0e6e623
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395885"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583522"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-databricks"></a>Wdrażanie aplikacji platformy .NET dla Apache Spark w kostkach
 
@@ -19,17 +19,17 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
-> - Przygotuj pakiet Microsoft. Spark. Worker
-> - Publikowanie aplikacji platformy .NET Spark
-> - Wdrażanie aplikacji w kostkach danych
-> - Uruchamianie aplikacji
+> * Przygotuj pakiet Microsoft. Spark. Worker
+> * Publikowanie aplikacji platformy .NET Spark
+> * Wdrażanie aplikacji w kostkach danych
+> * Uruchamianie aplikacji
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
 Przed rozpoczęciem wykonaj następujące czynności:
 
-- Pobierz [interfejs wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
-- Pobierz [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) na komputer lokalny. Jest to skrypt pomocnika używany później do kopiowania programu .NET pod kątem Apache Spark plików zależnych do węzłów procesu roboczego klastra platformy Spark.
+* Pobierz [interfejs wiersza polecenia datakosteks](https://docs.databricks.com/user-guide/dev-tools/databricks-cli.html).
+* Pobierz [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) na komputer lokalny. Jest to skrypt pomocnika używany później do kopiowania programu .NET pod kątem Apache Spark plików zależnych do węzłów procesu roboczego klastra platformy Spark.
 
 ## <a name="prepare-worker-dependencies"></a>Przygotowanie zależności procesu roboczego
 
@@ -63,9 +63,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 4. Przekaż następujące polecenie do rozproszonego systemu plików (na przykład DBFS), do którego klaster ma dostęp:
 
-   - `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: ten jar jest dołączony jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
-   - `<your app>.zip`
-   - Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: ten plik JAR jest dołączony jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
+   * `<your app>.zip`
+   * Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
 
 ## <a name="deploy-to-databricks"></a>Wdrażanie w usłudze Databricks
 
@@ -137,21 +137,21 @@ Aby przesłać zadanie do danych, można użyć `set JAR` lub `spark-submit`.
 
 2. Ten krok jest wymagany tylko wtedy, gdy zestawy aplikacji (na przykład biblioteki DLL, które zawierają funkcje zdefiniowane przez użytkownika wraz z ich zależnościami), muszą być umieszczone w katalogu roboczym każdego **Microsoft. Spark. Worker**.
 
-   - Przekazywanie zestawów aplikacji do klastra datakostki
+   * Przekazywanie zestawów aplikacji do klastra datakostki
 
       ```bash
       cd <path-to-your-app-publish-directory>
       databricks fs cp <assembly>.dll dbfs:/apps/dependencies
       ```
 
-   - Usuń komentarz i Zmodyfikuj sekcję zależności aplikacji w programie [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) , aby wskazywała ścieżkę zależności aplikacji i przekazać ją do klastra datakostki.
+   * Usuń komentarz i Zmodyfikuj sekcję zależności aplikacji w programie [DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) , aby wskazywała ścieżkę zależności aplikacji i przekazać ją do klastra datakostki.
 
       ```bash
       cd <path-to-db-init-and-install-worker>
       databricks fs cp db-init.sh dbfs:/spark-dotnet/db-init.sh
       ```
 
-   - Uruchom ponownie klaster.
+   * Uruchom ponownie klaster.
 
 3. Przejdź do klastra datacegły w obszarze roboczym datakostki. W obszarze **zadania**wybierz zadanie, a następnie wybierz pozycję **Uruchom teraz** , aby uruchomić zadanie.
 

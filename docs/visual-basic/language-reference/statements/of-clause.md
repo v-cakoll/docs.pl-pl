@@ -17,20 +17,20 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: 880570c714292b0c11eef4e2cd4c4b410bb075f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784153"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583512"
 ---
 # <a name="of-clause-visual-basic"></a>Of — Klauzula (Visual Basic)
-Wprowadza `Of` klauzula, która identyfikuje *parametr typu* na *ogólny* klasy, struktury, interfejsu, delegata lub procedury. Aby uzyskać informacji na temat typów ogólnych, zobacz [typów ogólnych w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Wprowadza klauzulę `Of`, która identyfikuje *parametr typu* dla klasy *ogólnej* , struktury, interfejsu, delegata lub procedury. Aby uzyskać informacje na temat typów ogólnych, zobacz [typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
 ## <a name="using-the-of-keyword"></a>Za pomocą słowa kluczowego  
- Poniższy przykład kodu wykorzystuje `Of` — słowo kluczowe do zdefiniowania konturu klasę, która przyjmuje dwa parametry typu. Jego *ogranicza* `keyType` parametru przez <xref:System.IComparable> interfejsu, co oznacza, że kod konsumencki należy podać argument typu, który implementuje <xref:System.IComparable>. Jest to konieczne, aby `add` można wywołać procedury <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji na temat ograniczeń, zobacz [lista typów](../../../visual-basic/language-reference/statements/type-list.md).  
+ Poniższy przykład kodu używa słowa kluczowego `Of` do definiowania konspektu klasy, która przyjmuje dwa parametry typu. *Ogranicza* parametr `keyType` przez interfejs <xref:System.IComparable>, co oznacza, że kod zużywający musi dostarczyć argument typu, który implementuje <xref:System.IComparable>. Jest to konieczne, aby procedura `add` mogła wywołać metodę <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Aby uzyskać więcej informacji o ograniczeniach, zobacz [Type list](../../../visual-basic/language-reference/statements/type-list.md).  
   
-```  
+```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
     Public Sub add(ByVal e As entryType, ByVal k As keyType)  
         Dim dk As keyType  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Po wykonaniu poprzednich definicji klasy, można utworzyć szereg `dictionary` klas z niego. Typy użytkownika `entryType` i `keyType` ustalić, jakiego typu wejścia tej klasy przechowuje i jakiego rodzaju klucz kojarzy z każdego wpisu. Ze względu na ograniczenia, należy podać do `keyType` typu, który implementuje <xref:System.IComparable>.  
+ Jeśli poprzednia definicja klasy zostanie ukończona, można utworzyć w niej wiele klas `dictionary`. Typy, które podasz, `entryType` i `keyType` określają typ wpisu, który zawiera Klasa, oraz typ klucza, który jest kojarzony z każdym wpisem. Ze względu na ograniczenie należy podać, aby `keyType` typ, który implementuje <xref:System.IComparable>.  
   
- Poniższy przykład kodu tworzy obiekt, który zawiera `String` wpisy i kojarzy `Integer` kluczy z każdej z nich. `Integer` implementuje <xref:System.IComparable> i w związku z tym spełnia ograniczenia na `keyType`.  
+ Poniższy przykład kodu tworzy obiekt, który przechowuje `String` wpisy i kojarzy klucz `Integer` z każdym z nich. `Integer` implementuje <xref:System.IComparable> i w związku z tym spełnia ograniczenie `keyType`.  
   
-```  
+```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- Słowa kluczowego `Of` można używać w następujących kontekstach:  
+ Słowa kluczowego `Of` można użyć w tych kontekstach:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -58,7 +58,7 @@ Dim d As New dictionary(Of String, Integer)
   
  [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)  
   
- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
@@ -69,5 +69,5 @@ Dim d As New dictionary(Of String, Integer)
 - <xref:System.IComparable>
 - [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)
 - [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
-- [limit](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)
+- [Podczas](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [Określoną](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)

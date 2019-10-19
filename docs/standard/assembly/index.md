@@ -14,18 +14,18 @@ helpviewer_keywords:
 - type boundaries
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 903a553b5383620f15cce274c61a440b7bbb1d7d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5fb809b564df17d6320b7ffce3d757fa0fee7639
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970014"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583011"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 
 Zestawy stanowią podstawowe jednostki wdrożenia, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla programu. Aplikacje oparte na sieci. Zestaw jest kolekcją typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Zestawy mają postać plików wykonywalnych (*exe*) lub bibliotek dołączanych dynamicznie ( *. dll*) i są blokami konstrukcyjnymi aplikacji .NET. Udostępniają one środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Zestaw można traktować jako kolekcję typów i zasobów, które tworzą logiczną jednostkę funkcjonalności i są zbudowane do współdziałania ze sobą.
 
-W programie .NET Core i .NET Framework można skompilować zestaw z jednego lub większej liczby plików kodu źródłowego. W .NET Framework zestawy mogą zawierać co najmniej jeden moduł. Pozwala to na zaplanowanie większych projektów w taki sposób, aby kilku deweloperów mógł działać na oddzielnych plikach kodu źródłowego lub w modułach, które są łączone w celu utworzenia jednego zestawu. Aby uzyskać więcej informacji o modułach [, zobacz How to: Kompiluj zestaw](../../framework/app-domains/build-multifile-assembly.md)wieloplikowy.
+W programie .NET Core i .NET Framework można skompilować zestaw z jednego lub większej liczby plików kodu źródłowego. W .NET Framework zestawy mogą zawierać co najmniej jeden moduł. Pozwala to na zaplanowanie większych projektów w taki sposób, aby kilku deweloperów mógł działać na oddzielnych plikach kodu źródłowego lub w modułach, które są łączone w celu utworzenia jednego zestawu. Aby uzyskać więcej informacji o modułach, zobacz [How to: Build a wieloplikowego zestawu](../../framework/app-domains/build-multifile-assembly.md).
 
 Zestawy mają następujące właściwości:
 
@@ -37,7 +37,7 @@ Zestawy mają następujące właściwości:
 
 - Można programowo uzyskać informacje o zestawie przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [odbicie (C#)](../../csharp/programming-guide/concepts/reflection.md) lub [odbicie (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Możesz załadować zestaw, aby sprawdzić go przy użyciu <xref:System.Reflection.MetadataLoadContext> klasy w .NET Core <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> i metody lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> w programie .NET Core i .NET Framework.
+- Możesz załadować zestaw po prostu, aby sprawdzić go przy użyciu klasy <xref:System.Reflection.MetadataLoadContext> w programie .NET Core i <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> metody w .NET Core i .NET Framework.
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 
@@ -45,11 +45,11 @@ Zestawy zapewniają środowisko uruchomieniowe języka wspólnego z informacjami
 
 Zestaw definiuje następujące informacje:  
   
-- Kod wykonywany przez środowisko uruchomieniowe języka wspólnego. Należy zauważyć, że każdy zestaw może mieć tylko jeden punkt `DllMain`wejścia `WinMain`:, `Main`, lub.
+- Kod wykonywany przez środowisko uruchomieniowe języka wspólnego. Należy pamiętać, że każdy zestaw może mieć tylko jeden punkt wejścia: `DllMain`, `WinMain` lub `Main`.
   
 - Granica zabezpieczeń. Zestaw jest jednostką, w której uprawnienia są żądane i udzielane. Aby uzyskać więcej informacji na temat granic zabezpieczeń w zestawach, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md).  
   
-- Granica typu. Każda tożsamość typu zawiera nazwę zestawu, w którym znajduje się. Typ o nazwie `MyType` , który jest ładowany w zakresie jednego zestawu, nie jest taki sam jak typ o nazwie `MyType` , który jest ładowany w zakresie innego zestawu. 
+- Granica typu. Każda tożsamość typu zawiera nazwę zestawu, w którym znajduje się. Typ o nazwie `MyType`, który jest ładowany w zakresie jednego zestawu, nie jest taki sam jak typ o nazwie `MyType`, który jest ładowany w zakresie innego zestawu. 
   
 - Granica zakresu odwołania. [Manifest zestawu](#assembly-manifest) zawiera metadane, który jest używany do rozpoznawania typów i spełniania żądań zasobów. Manifest określa typy i zasoby, które mają zostać ujawnione poza zestawem, i wylicza inne zestawy, na których zależą. Kod języka pośredniego (MSIL) firmy Microsoft w przenośnym pliku wykonywalnym (PE) nie zostanie wykonany, chyba że ma skojarzony [manifest zestawu](#assembly-manifest).
   
@@ -63,7 +63,7 @@ Zestaw definiuje następujące informacje:
 
 Zestawy mogą być statyczne lub dynamiczne. Zestawy statyczne są przechowywane na dysku w przenośnych plikach wykonywalnych (PE). Zestawy statyczne mogą zawierać interfejsy, klasy i zasoby, takie jak mapy bitowe, pliki JPEG i inne pliki zasobów. Można również tworzyć zestawy dynamiczne, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed wykonaniem. Zestawy dynamiczne można zapisać na dysku po ich wykonaniu.  
 
-Istnieje kilka sposobów tworzenia zestawów. Możesz użyć narzędzi programistycznych, takich jak Visual Studio, które mogą tworzyć pliki *. dll* lub *. exe* . Korzystając z narzędzi dostępnych w Windows SDK, można tworzyć zestawy z modułami z innych środowisk programistycznych. Możesz również używać interfejsów API środowiska uruchomieniowego języka wspólnego, <xref:System.Reflection.Emit?displayProperty=nameWithType>takich jak, do tworzenia zestawów dynamicznych. 
+Istnieje kilka sposobów tworzenia zestawów. Możesz użyć narzędzi programistycznych, takich jak Visual Studio, które mogą tworzyć pliki *. dll* lub *. exe* . Korzystając z narzędzi dostępnych w Windows SDK, można tworzyć zestawy z modułami z innych środowisk programistycznych. Do tworzenia zestawów dynamicznych można także używać interfejsów API środowiska uruchomieniowego języka wspólnego, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>. 
 
 Kompiluj zestawy, tworząc je w programie Visual Studio, tworząc je przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core lub tworząc zestawy .NET Framework przy użyciu kompilatora wiersza polecenia. Aby uzyskać więcej informacji na temat kompilowania zestawów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core, zobacz [Narzędzia interfejsu wiersza polecenia platformy .NET Core](../../core/tools/index.md). Do kompilowania zestawów przy użyciu kompilatorów wiersza polecenia, zobacz wiersza polecenia [kompilacja z CSC. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) dla C#lub [kompiluj z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) dla Visual Basic.
 
@@ -87,7 +87,7 @@ Ponieważ zestawy zawierają informacje o zawartości, wersji i zależnościach,
 Aby użyć zestawu w aplikacji, należy dodać do niego odwołanie. Po przywoływaniu zestawu wszystkie dostępne typy, właściwości, metody i inne elementy członkowskie jego przestrzeni nazw są dostępne dla aplikacji, tak jakby ich kod był częścią pliku źródłowego.
 
 > [!NOTE]
-> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj [ \<element PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodaj odwołanie** w programie Visual Studio lub przy użyciu `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
+> Większość zestawów z biblioteki klas .NET jest przywoływana automatycznie. Jeśli zestaw systemowy nie jest automatycznie przywoływany, w przypadku platformy .NET Core można dodać odwołanie do pakietu NuGet, który zawiera zestaw. Użyj Menedżera pakietów NuGet w programie Visual Studio lub Dodaj [\<PackageReference element >](../../core/tools/dependencies.md#the-new-packagereference-element) dla zestawu do projektu *. csproj* lub *. vbproj* . W .NET Framework można dodać odwołanie do zestawu przy użyciu okna dialogowego **Dodawanie odwołania** w programie Visual Studio lub za pomocą `-reference` opcji wiersza polecenia dla kompilatorów [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) lub [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) .
 
 W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../csharp/language-reference/keywords/extern-alias.md).
 
@@ -115,6 +115,7 @@ W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej apli
 - [Format pliku zestawu .NET](file-format.md)
 - [Zestawy w środowisku .NET](index.md)
 - [Zaprzyjaźnione zestawy](friend.md)
-- [Instrukcje: Ładowanie i zwalnianie zestawów](load-unload.md)
-- [Instrukcje: Używanie i debugowanie zestawu do odciążania w programie .NET Core](unloadability.md)
-- [Instrukcje: Ustal, czy plik jest zestawem](identify.md)
+- [Zestawy odwołań](reference-assemblies.md)
+- [Instrukcje: ładowanie i zwalnianie zestawów](load-unload.md)
+- [Instrukcje: używanie i debugowanie zestawu do odciążania w programie .NET Core](unloadability.md)
+- [Instrukcje: ustalanie, czy plik jest zestawem](identify.md)

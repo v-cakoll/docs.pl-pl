@@ -9,19 +9,19 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: a2bd6ca11072113d8acff78032c19d48c30933c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e981ee727b66ecda392014fd3ee8ca6f1526cd2e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615127"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72578896"
 ---
 # <a name="synclock-statement"></a>SyncLock — Instrukcja
-Uzyskuje blokady na wyłączność dla bloku instrukcji, przed wykonaniem tego bloku.  
+Uzyskuje blokadę na wyłączność dla bloku instrukcji przed wykonaniem bloku.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 SyncLock lockobject  
     [ block ]  
 End SyncLock  
@@ -29,62 +29,62 @@ End SyncLock
   
 ## <a name="parts"></a>Części  
  `lockobject`  
- Wymagana. Wyrażenie, którego wynikiem jest odwołanie do obiektu.  
+ Wymagany. Wyrażenie, którego wynikiem jest odwołanie do obiektu.  
   
  `block`  
- Opcjonalna. Blok instrukcji, które są do wykonania, gdy jest blokada.  
+ Opcjonalny. Blok instrukcji, które mają zostać wykonane po pozyskaniu blokady.  
   
  `End SyncLock`  
  Kończy blok `SyncLock`.  
   
 ## <a name="remarks"></a>Uwagi  
- `SyncLock` Instrukcji zapewnia, że wiele wątków nie wykonuje bloku instrukcji w tym samym czasie. `SyncLock` Każdy wątek uniemożliwia wprowadzanie bloku, dopóki go wykonuje nie innych wątków.  
+ Instrukcja `SyncLock` zapewnia, że wiele wątków nie wykonuje w tym samym czasie bloku instrukcji. `SyncLock` uniemożliwia każdemu wątkowi przejście do bloku, dopóki nie zostanie on uruchomiony przez inny wątek.  
   
- Najbardziej powszechnym zastosowaniem programu `SyncLock` jest ochrona danych przed jest aktualizowana przez więcej niż jeden wątek jednocześnie. Jeśli instrukcji, które manipulowania danymi muszą przejść do zakończenia bez przeszkód, umieść je wewnątrz `SyncLock` bloku.  
+ Typowym zastosowaniem `SyncLock` jest ochrona danych przed aktualizacją przez więcej niż jeden wątek jednocześnie. Jeśli instrukcje dotyczące manipulowania danymi muszą przejść do zakończenia bez zakłóceń, umieścić je wewnątrz bloku `SyncLock`.  
   
- Blok instrukcji, chronione przez blokady na wyłączność jest czasami nazywane *sekcję krytyczną*.  
+ Blok instrukcji chroniony przez blokadę wyłączną jest czasami nazywany *sekcją krytyczną*.  
   
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Przepisy  
   
-- Podręcznik rozgałęziania. Nie można rozgałęzić do `SyncLock` uniemożliwiaj poza blokiem.  
+- Rozgałęzianie. Nie można rozgałęzić do bloku `SyncLock` spoza bloku.  
   
-- Wartość obiektu blokady. Wartość `lockobject` nie może być `Nothing`. Należy utworzyć obiekt blokady, zanim użyjesz go w `SyncLock` instrukcji.  
+- Wartość blokady obiektu. Nie można `Nothing` wartości `lockobject`. Należy utworzyć obiekt blokady przed użyciem go w instrukcji `SyncLock`.  
   
-     Nie można zmienić wartość `lockobject` podczas wykonywania `SyncLock` bloku. Mechanizm wymaga, aby zablokować obiektu pozostają niezmienione.  
+     Nie można zmienić wartości `lockobject` podczas wykonywania bloku `SyncLock`. Mechanizm wymaga, aby obiekt blokady pozostał niezmieniony.  
   
-- Nie można użyć [Await](../../../visual-basic/language-reference/operators/await-operator.md) operatora w `SyncLock` bloku.  
+- Nie można użyć operatora [await](../../../visual-basic/language-reference/operators/await-operator.md) w bloku `SyncLock`.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- Mechanizm. Gdy wątek osiągnie `SyncLock` instrukcji, ocenia `lockobject` wyrażenia i zawiesza wykonywanie, dopóki nie otrzymuje blokady na wyłączność w obiekcie zwracanym przez wyrażenie. Gdy inny wątek osiągnie `SyncLock` instrukcji, go nie uzyskania blokady do momentu pierwszego wątek `End SyncLock` instrukcji.  
+- Ustanawia. Gdy wątek osiągnie instrukcję `SyncLock`, oblicza wyrażenie `lockobject` i wstrzymuje wykonywanie do momentu uzyskania blokady na wyłączność obiektu zwróconego przez wyrażenie. Gdy inny wątek osiągnie instrukcję `SyncLock`, nie uzyskuje blokady do momentu wykonania instrukcji `End SyncLock` przez pierwszy wątek.  
   
-- Chronione dane. Jeśli `lockobject` jest `Shared` zmiennej blokady na wyłączność zapobiega wątku w żadnym wystąpieniu klasy wykonywania `SyncLock` blokowania podczas jego wykonywania innych wątków. Chroni to dane, które jest współużytkowana przez wszystkie wystąpienia.  
+- Chronione dane. Jeśli `lockobject` jest zmienną `Shared`, blokada wyłączna zapobiega wykonywaniu przez wątek w jakimkolwiek wystąpieniu klasy `SyncLock` bloku, gdy wykonuje inny wątek. Chroni to dane, które są współużytkowane przez wszystkie wystąpienia.  
   
-     Jeśli `lockobject` jest zmienną instance (nie `Shared`), Blokada zapobiega wątku działającego w ramach bieżącego wystąpienia wykonania `SyncLock` bloku, w tym samym czasie jako inny wątek w tym samym wystąpieniu. Chroni to danych obsługiwanych przez poszczególne wystąpienia.  
+     Jeśli `lockobject` jest zmienną wystąpienia (nie `Shared`), blokada uniemożliwia `SyncLock` wykonywanie wątku uruchomionego w bieżącym wystąpieniu w tym samym czasie co inny wątek w tym samym wystąpieniu. Zapewnia to ochronę danych przechowywanych przez poszczególne wystąpienia.  
   
-- Pozyskiwanie i wersji. A `SyncLock` blok, który zachowuje się jak `Try...Finally` konstrukcji, w którym `Try` bloku uzyskuje blokady na wyłączność w `lockobject` i `Finally` bloku zwalnia go. W związku z tym `SyncLock` bloku gwarantuje wydanie lock, niezależnie od tego, jak zamknąć blok. Ta zasada obowiązuje nawet w przypadku nieobsługiwanego wyjątku.  
+- Pozyskiwanie i wydanie. Blok `SyncLock` zachowuje się jak konstrukcja `Try...Finally`, w której blok `Try` uzyskuje blokadę na wyłączność na `lockobject` i zwalnia ją przez blok `Finally`. W związku z tym blok `SyncLock` gwarantuje wydanie blokady bez względu na sposób zamykania bloku. Jest to prawdziwe nawet w przypadku nieobsłużonego wyjątku.  
   
-- Struktura wywołuje. `SyncLock` Blok uzyskuje i zwalnia blokady na wyłączność przez wywołanie metody `Enter` i `Exit` metody `Monitor` klasy w <xref:System.Threading> przestrzeni nazw.  
+- Wywołania struktury. Blok `SyncLock` uzyskuje i zwalnia blokadę wyłączną, wywołując metody `Enter` i `Exit` klasy `Monitor` w przestrzeni nazw <xref:System.Threading>.  
   
-## <a name="programming-practices"></a>Programowanie rozwiązań  
- `lockobject` Wyrażenia zawsze powinna być obiekt, który należy wyłącznie do swojej klasy. Należy zadeklarować `Private` zmiennej obiektu, aby chronić dane należące do bieżącego wystąpienia lub `Private Shared` zmiennej obiektu, aby chronić dane wspólne dla wszystkich wystąpień.  
+## <a name="programming-practices"></a>Praktyki programowania  
+ Wyrażenie `lockobject` powinno zawsze być oceniane do obiektu, który należy wyłącznie do klasy. Należy zadeklarować zmienną obiektu `Private`, aby chronić dane należące do bieżącego wystąpienia, lub zmienną obiektu `Private Shared` do ochrony danych wspólnych dla wszystkich wystąpień.  
   
- Nie należy używać `Me` — słowo kluczowe, aby zapewnić blokadę dla wystąpienia obiektu danych. Jeśli kod zewnętrzny klasy zawiera odwołanie do wystąpienia klasy, można użyć tego odwołania jako obiekt blokady dla `SyncLock` bloku zupełnie inne niż należy do Ciebie, ochrony danych. W ten sposób klasy i inne klasy może zablokować wzajemnie wykonanie ich niepowiązanych `SyncLock` bloków. Podobnie blokowania na ciąg może być problematyczne, ponieważ każdy inny kod proces, korzystając z tych samych parametrach współużytkują ten sam blokady.  
+ Nie należy używać słowa kluczowego `Me`, aby zapewnić obiekt blokady dla danych wystąpienia. Jeśli kod zewnętrzny dla klasy ma odwołanie do wystąpienia klasy, może użyć tego odwołania jako obiektu blokady dla bloku `SyncLock` całkowicie innego niż ty, chroniąc różne dane. W ten sposób Klasa i inna Klasa mogą blokować wykonywanie ich niepowiązanych bloków `SyncLock`. Podobne blokowanie na ciągu może być problematyczne, ponieważ jakikolwiek inny kod w procesie, który używa tego samego ciągu, będzie współużytkować tę samą blokadę.  
   
- Ponadto nie należy korzystać z `Me.GetType` metody w celu zapewnienia obiektu blokady dla udostępnionych danych. Jest to spowodowane `GetType` zawsze zwraca wartość taka sama `Type` obiektu dla nazwy danej klasy. Można wywołać kod zewnętrzny `GetType` na klasie i uzyskania tego samego obiektu blokady są używane. Spowodowałoby to dwie klasy blokuje wzajemnie z ich `SyncLock` bloków.  
+ Nie należy również używać metody `Me.GetType`, aby zapewnić obiekt blokady dla danych udostępnionych. Jest to spowodowane tym, że `GetType` zawsze zwraca ten sam obiekt `Type` dla danej nazwy klasy. Kod zewnętrzny może wywoływać `GetType` w klasie i uzyskać ten sam obiekt blokady, którego używasz. Spowoduje to, że dwie klasy blokują siebie nawzajem z ich bloków `SyncLock`.  
   
 ## <a name="examples"></a>Przykłady  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład przedstawia klasę zawierającą prostą listę komunikatów. Przechowuje komunikaty w tablicy, a ostatnio używany element tablicy w zmiennej. `addAnotherMessage` Procedury zwiększa ostatni element i zapisuje nowy komunikat. Te dwie operacje są chronione przez `SyncLock` i `End SyncLock` instrukcji, ponieważ po ostatnim elemencie została zwiększona, Nowa wiadomość musi być przechowywany przed innych wątków można zwiększyć po ostatnim elemencie ponownie.  
+ Poniższy przykład przedstawia klasę, która utrzymuje prostą listę komunikatów. Przechowuje komunikaty w tablicy i ostatni używany element tej tablicy w zmiennej. Procedura `addAnotherMessage` zwiększa ostatni element i zapisuje nowy komunikat. Te dwie operacje są chronione przez instrukcje `SyncLock` i `End SyncLock`, ponieważ po zwiększeniu ostatniego elementu nowy komunikat musi być przechowywany przed ponownym zwiększeniem ostatniego elementu.  
   
- Jeśli `simpleMessageList` klasy udostępnione jedną listę komunikatów między wszystkie jego wystąpienia, zmienne `messagesList` i `messagesLast` może być zadeklarowana jako `Shared`. W tym przypadku zmienna `messagesLock` powinny być `Shared`, dzięki czemu będzie obiektem pojedynczego blokady używany przez każde wystąpienie.  
+ Jeśli Klasa `simpleMessageList` udostępnia jedną listę komunikatów między wszystkimi wystąpieniami, zmienne `messagesList` i `messagesLast` byłyby zadeklarowane jako `Shared`. W takim przypadku zmienna `messagesLock` powinna być również `Shared`, dzięki czemu będzie on miał pojedynczy obiekt blokady używany przez każde wystąpienie.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/Class1.vb#1)]  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie użyto wątków i `SyncLock`. Tak długo, jak `SyncLock` instrukcji, blok instrukcji to sekcja krytycznego i `balance` nigdy nie stanie się liczbą ujemną. Możesz przekształcić w komentarz `SyncLock` i `End SyncLock` instrukcje, aby zobaczyć efekt pomijając `SyncLock` — słowo kluczowe.  
+ W poniższym przykładzie są wykorzystywane wątki i `SyncLock`. Tak długo, jak jest obecna instrukcja `SyncLock`, blok instrukcji jest sekcją krytyczną, a `balance` nigdy nie będzie liczbą ujemną. Można skomentować instrukcje `SyncLock` i `End SyncLock`, aby zobaczyć efekt opuszczania słowa kluczowego `SyncLock`.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbalrThreading#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrThreading/VB/class2.vb#21)]  

@@ -6,51 +6,53 @@ helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: cdd425970442e284d6fd6488bbb13394c12e939a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: fad674c6d56011afcccbe9ce2a88e7af411fe0a2
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596451"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579152"
 ---
 # <a name="interface-properties-c-programming-guide"></a>Właściwości interfejsu (Przewodnik programowania w języku C#)
-Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). Oto przykład metody dostępu do właściwości interfejsu:  
-  
- [!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]  
-  
- Metoda dostępu do właściwości interfejsu nie ma treści. W tym celu metody dostępu wskazują, czy właściwość jest tylko do odczytu i zapisu, tylko do odczytu, czy tylko do zapisu.  
-  
-## <a name="example"></a>Przykład  
- W tym przykładzie interfejs `IEmployee` ma `Name`właściwość do odczytu i zapisu oraz właściwość tylko do `Counter`odczytu. `Employee` Klasa`IEmployee` implementuje interfejs i używa tych dwóch właściwości. Program odczytuje nazwę nowego pracownika oraz bieżącą liczbę pracowników i wyświetla nazwę pracownika oraz obliczony numer pracownika.  
-  
- Można użyć w pełni kwalifikowanej nazwy właściwości, która odwołuje się do interfejsu, w którym jest zadeklarowany element członkowski. Na przykład:  
-  
- [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
-  
- Ta nazwa jest nazywana [jawnym implementacją interfejsu](../interfaces/explicit-interface-implementation.md). `Employee` Na przykład jeśli klasa implementuje dwa interfejsy `ICitizen` i `IEmployee` oba interfejsy mają `Name` właściwość, wymagana jest Jawna implementacja elementu członkowskiego interfejsu. Oznacza to, że następująca deklaracja właściwości:  
-  
- [!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]  
-  
- `Name` implementuje właściwość `IEmployee` w interfejsie, podczas gdy następująca deklaracja:  
-  
- [!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]  
-  
- `Name` implementuje właściwość `ICitizen` w interfejsie.  
-  
- [!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]  
-  
-  **`210 Hazem Abolrous`**    
-## <a name="sample-output"></a>Przykładowe dane wyjściowe  
- `Enter number of employees: 210`  
-  
- `Enter the name of the new employee: Hazem Abolrous`  
-  
- `The employee information:`  
-  
- `Employee number: 211`  
-  
- `Employee name: Hazem Abolrous`  
-  
+
+Właściwości można zadeklarować w [interfejsie](../../language-reference/keywords/interface.md). Oto przykład metody dostępu do właściwości interfejsu:
+
+[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+
+Metoda dostępu do właściwości interfejsu nie ma treści. W tym celu metody dostępu wskazują, czy właściwość jest tylko do odczytu i zapisu, tylko do odczytu, czy tylko do zapisu.
+
+## <a name="example"></a>Przykład
+
+W tym przykładzie interfejs `IEmployee` ma właściwość do odczytu i zapisu, `Name` i właściwość tylko do odczytu, `Counter`. Klasa `Employee` implementuje interfejs `IEmployee` i używa tych dwóch właściwości. Program odczytuje nazwę nowego pracownika oraz bieżącą liczbę pracowników i wyświetla nazwę pracownika oraz obliczony numer pracownika.
+
+Można użyć w pełni kwalifikowanej nazwy właściwości, która odwołuje się do interfejsu, w którym jest zadeklarowany element członkowski. Na przykład:
+
+[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+
+Ta nazwa jest nazywana [jawnym implementacją interfejsu](../interfaces/explicit-interface-implementation.md). Na przykład jeśli Klasa `Employee` implementuje dwa interfejsy `ICitizen` i `IEmployee` i oba interfejsy mają właściwość `Name`, wymagana jest Jawna implementacja elementów członkowskich interfejsu. Oznacza to, że następująca deklaracja właściwości:
+
+[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+
+implementuje Właściwość `Name` w interfejsie `IEmployee`, podczas gdy następująca deklaracja:
+
+[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+
+implementuje Właściwość `Name` w interfejsie `ICitizen`.
+
+[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+
+**`210 Hazem Abolrous`**
+
+## <a name="sample-output"></a>Przykładowe dane wyjściowe
+
+```console
+Enter number of employees: 210
+Enter the name of the new employee: Hazem Abolrous
+The employee information:
+Employee number: 211
+Employee name: Hazem Abolrous
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)

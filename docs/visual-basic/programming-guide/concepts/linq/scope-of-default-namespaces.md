@@ -2,15 +2,15 @@
 title: Zakres domyślnych przestrzeni nazw w Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: a08d140cfc68c36c26487ab47fc82dd3bf522fa8
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710353"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581881"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a>Zakres domyślnych przestrzeni nazw w Visual Basic
-Domyślne przestrzenie nazw reprezentowane w drzewie XML nie znajdują się w zakresie zapytań. Jeśli masz kod XML, który znajduje się w domyślnym obszarze nazw, nadal musisz zadeklarować <xref:System.Xml.Linq.XNamespace> zmienną i połączyć ją z nazwą lokalną, aby określić kwalifikowaną nazwę do użycia w zapytaniu.  
+Domyślne przestrzenie nazw reprezentowane w drzewie XML nie znajdują się w zakresie zapytań. Jeśli masz kod XML, który znajduje się w domyślnym obszarze nazw, nadal musisz zadeklarować zmienną <xref:System.Xml.Linq.XNamespace> i połączyć ją z lokalną nazwą, aby nazwa kwalifikowana była używana w zapytaniu.  
   
  Jednym z najczęstszych problemów związanych z kwerendą drzewa XML jest to, że jeśli drzewo XML ma domyślną przestrzeń nazw, deweloper czasami zapisuje zapytanie tak, jakby kod XML nie był w przestrzeni nazw.  
   
@@ -50,7 +50,7 @@ End Module
 ### <a name="comments"></a>Komentarze  
  Ten przykład generuje następujący wynik:  
   
-```  
+```console  
 Result set follows:  
 End of result set  
 ```  
@@ -91,7 +91,7 @@ End Module
 ### <a name="comments"></a>Komentarze  
  Ten przykład generuje następujący wynik:  
   
-```  
+```console  
 Result set follows:  
 1  
 2  

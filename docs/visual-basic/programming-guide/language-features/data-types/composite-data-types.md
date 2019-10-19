@@ -11,40 +11,40 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: 65ee23c59958eefb94c7ab0c6bef4a7e992a121c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 768559c7a6caf064f7529786675e51ce19667d6b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601177"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581716"
 ---
 # <a name="composite-data-types-visual-basic"></a>Złożone typy danych (Visual Basic)
-Oprócz danych podstawowych typów języka Visual Basic dostaw, również można grupować elementy o różnych typach, aby utworzyć *złożone typy danych* takich jak klasy, tablic i struktur. Możesz tworzyć złożone typy danych, z typów podstawowych i z innych typów złożonych. Na przykład można zdefiniować tablicę elementy struktury lub struktury z tablicy elementów członkowskich.  
+Oprócz podstawowych typów danych Visual Basic dostaw, można także złożyć elementy różnych typów w celu utworzenia *złożonych typów danych* , takich jak struktury, tablice i klasy. Można tworzyć złożone typy danych z typów podstawowych i z innych typów złożonych. Na przykład można zdefiniować tablicę elementów struktury lub strukturę z elementami członkowskimi tablicy.  
   
 ## <a name="data-types"></a>Typy danych  
- Typ złożony różni się od typu danych żadnej z jej składników. Na przykład tablica `Integer` nie ma elementów `Integer` typu danych.  
+ Typ złożony różni się od typu danych któregokolwiek z jego składników. Na przykład tablica elementów `Integer` nie jest typu danych `Integer`.  
   
- Typ danych tablicy jest zwykle reprezentowany za pomocą typu elementu, nawiasy i przecinki, zgodnie z potrzebami. Na przykład Jednowymiarowa tablica `String` elementy są reprezentowane jako `String()`i dwuwymiarową tablicę `Boolean` elementy są reprezentowane jako `Boolean(,)`.  
+ Typ danych tablicy jest zwykle reprezentowany przy użyciu typu elementu, nawiasów i przecinków w razie potrzeby. Na przykład Jednowymiarowa tablica elementów `String` jest reprezentowana jako `String()`, a Dwuwymiarowa tablica elementów `Boolean` jest reprezentowana jako `Boolean(,)`.  
   
 ## <a name="structure-types"></a>Typy struktur  
- Nie ma żadnych single — typ danych obejmujące wszystkie struktury. Zamiast tego każda definicja struktury reprezentuje typ unikatowe dane, nawet wtedy, gdy dwie struktury zdefiniować identyczne elementy w tej samej kolejności. Jednak jeśli tworzysz tę samą strukturę co najmniej dwóch wystąpień, Visual Basic traktuje je tego samego typu danych.  
+ Nie istnieje pojedynczy typ danych obejmujący wszystkie struktury. Zamiast tego każda definicja struktury reprezentuje unikatowy typ danych, nawet jeśli dwie struktury definiują identyczne elementy w tej samej kolejności. Jeśli jednak tworzysz dwa lub więcej wystąpień tej samej struktury, Visual Basic uznaje ich za tego samego typu danych.  
   
 ## <a name="tuples"></a>Krotki
 
-Spójna Kolekcja to lekki strukturę, która zawiera dwa lub więcej pól, których typy są wstępnie zdefiniowane. Spójne kolekcje są obsługiwane, począwszy od programu Visual Basic w 2017 r. Kolekcje są najczęściej używane zwracanie wielu wartości w pojedynczym wywołaniu metody bez konieczności przekazywać argumentów przez odwołanie lub spakowanie zwracanego pola w bardziej ciężki klasy lub struktury. Zobacz [krotek](tuples.md) tematu, aby uzyskać więcej informacji na temat krotek.
+Krotka jest strukturą uproszczoną, która zawiera co najmniej dwa pola, których typy są wstępnie zdefiniowane. Krotki są obsługiwane począwszy od Visual Basic 2017. Krotki są najczęściej używane do zwracania wielu wartości z pojedynczej metody wywołania bez konieczności przekazywania argumentów przez odwołanie lub pakowanie zwracanych pól w bardziej ciężkich klasach lub strukturach. Aby uzyskać więcej informacji na temat krotek, zobacz temat [krotki](tuples.md) .
 
 ## <a name="array-types"></a>Typy tablic  
- Nie ma żadnych single — typ danych wchodzących w skład wszystkich tablic. Typ danych konkretnego wystąpienia tablicy jest określana przez następujące elementy:  
+ Nie istnieje pojedynczy typ danych składający się ze wszystkich tablic. Typ danych określonego wystąpienia tablicy jest określany na podstawie następujących elementów:  
   
-- Fakt jest tablicą  
+- Fakt, że jest tablicą  
   
-- Ranga tablicy (liczba wymiarów)  
+- Ranga (liczba wymiarów) tablicy  
   
 - Typ elementu tablicy  
   
  W szczególności długość danego wymiaru nie jest częścią typu danych wystąpienia. Ilustruje to poniższy przykład.  
   
-```  
+```vb  
 Dim arrayA( ) As Byte = New Byte(12) {}  
 Dim arrayB( ) As Byte = New Byte(100) {}  
 Dim arrayC( ) As Short = New Short(100) {}  
@@ -52,12 +52,12 @@ Dim arrayD( , ) As Short
 Dim arrayE( , ) As Short = New Short(4, 10) {}  
 ```  
   
- W poprzednim przykładzie, tablica zmienne `arrayA` i `arrayB` są traktowane jako typu danych — `Byte()` — nawet jeśli są one inicjowane na różne długości. Zmienne `arrayB` i `arrayC` nie są tego samego typu, ponieważ ich typy elementów są różne. Zmienne `arrayC` i `arrayD` nie są tego samego typu, ponieważ różnią się ich rangę. Zmienne `arrayD` i `arrayE` mieć taki sam typ — `Short(,)` — ponieważ ich rangę i typów elementów są takie same, nawet jeśli `arrayD` nie została jeszcze zainicjowana.  
+ W poprzednim przykładzie Zmienne tablicowe `arrayA` i `arrayB` są uważane za takie same typy danych — `Byte()` — nawet jeśli są zainicjowane do różnych długości. Zmienne `arrayB` i `arrayC` nie są tego samego typu, ponieważ ich typy elementów są różne. Zmienne `arrayC` i `arrayD` nie są tego samego typu, ponieważ ich Range różnią się od siebie. Zmienne `arrayD` i `arrayE` mają ten sam typ — `Short(,)` — ponieważ ich Range i typy elementów są takie same, nawet jeśli `arrayD` nie została jeszcze zainicjowana.  
   
- Aby uzyskać więcej informacji na temat tablic, zobacz [tablic](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Aby uzyskać więcej informacji na temat tablic, zobacz [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="class-types"></a>Typy klas  
- Nie ma żadnych single — typ danych wchodzących w skład wszystkich klas. Mimo że jednej klasy mogą dziedziczyć z innej klasy, każdy jest typem osobne dane. Wiele wystąpień tej samej klasy są tego samego typu danych. Jeśli przypiszesz jednej zmiennej wystąpienia klasy do innego nie tylko mają ten sam typ danych, wskazują na tym samym wystąpieniu klasy w pamięci.  
+ Nie istnieje pojedynczy typ danych składający się ze wszystkich klas. Chociaż jedna klasa może dziedziczyć z innej klasy, każda z nich jest osobnym typem danych. Wiele wystąpień tej samej klasy ma ten sam typ danych. W przypadku przypisania jednej zmiennej wystąpienia klasy do innej nie tylko mają one ten sam typ danych, wskazują na to samo wystąpienie klasy w pamięci.  
   
  Aby uzyskać więcej informacji na temat klas, zobacz [obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
@@ -67,7 +67,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
 - [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Instrukcje: utrzymywanie więcej niż jednej wartości w zmiennej](../../../../visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Przechodzenie do strony'
+title: 'Instrukcje: nawigowanie do strony'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25a0dbbc609c7b6f8f2878d2068e61e492a59c7e
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966029"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582537"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Instrukcje: Przechodzenie do strony
+# <a name="how-to-navigate-to-a-page"></a>Instrukcje: nawigowanie do strony
 Ten przykład ilustruje kilka sposobów, w których można przechodzić do strony z <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Przykład  
- Możliwe <xref:System.Windows.Navigation.NavigationWindow> jest przechodzenie do strony przy użyciu jednego z następujących elementów:  
+ Możliwe jest <xref:System.Windows.Navigation.NavigationWindow> przechodzenie do strony przy użyciu jednego z następujących elementów:  
   
-- <xref:System.Windows.Navigation.NavigationWindow.Source%2A> Właściwość.  
+- Właściwość <xref:System.Windows.Navigation.NavigationWindow.Source%2A>.  
   
-- <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A> Metoda.  
+- Metoda <xref:System.Windows.Navigation.NavigationWindow.Navigate%2A>.  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatetopagecode)]
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
-> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]może być względna lub bezwzględna. Aby uzyskać więcej informacji, zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md).  
+> Uniform Resource Identifier (URI) może być względna lub bezwzględna. Aby uzyskać więcej informacji, zobacz [identyfikatory URI pakietów w WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,46 +2,46 @@
 title: Pobieranie akapitów i ich stylów (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d9ed2238-d38e-4ad4-b88b-db7859df9bde
-ms.openlocfilehash: 3c6554c44c95db13aada0d9edf96cc2df595c6d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bc20556fb668db2db3e6bcfa42e96cc0d963b93
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787039"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582149"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-visual-basic"></a>Pobieranie akapitów i ich stylów (Visual Basic)
-W tym przykładzie napiszemy zapytanie, które pobiera węzły akapit w dokumencie WordprocessingML. Określa on styl każdego akapitu.  
+W tym przykładzie napiszemy zapytanie, które pobiera węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu.  
   
- To zapytanie jest oparta na zapytania w poprzednim przykładzie [znajdowanie domyślnego stylu akapitu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), która pobiera domyślnego stylu z listy stylów. Te informacje są wymagane, aby zapytanie można zidentyfikować styl akapitów, które nie mają jawnie ustawić stylu. Style są ustawiane za pomocą `w:pPr` element; Jeśli akapitu nie zawiera tego elementu, jest formatowana przy użyciu domyślnego stylu.  
+ To zapytanie kompiluje zapytanie w poprzednim przykładzie, [wyszukując domyślny styl akapitu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md), który Pobiera domyślny styl z listy stylów. Te informacje są wymagane, aby zapytanie mogło identyfikować styl akapitów, w których styl nie został jawnie ustawiony. Style akapitu są ustawiane za pomocą elementu `w:pPr`; Jeśli akapit nie zawiera tego elementu, zostanie sformatowany przy użyciu stylu domyślnego.  
   
- W tym temacie wyjaśniono znaczenie niektóre elementy zapytania, a następnie wyświetla kwerendy jako część zakończeniu praktyczny przykład.  
+ W tym temacie wyjaśniono znaczenie niektórych fragmentów zapytania, a następnie przedstawiono zapytanie w ramach kompletnego, działającego przykładu.  
   
 ## <a name="example"></a>Przykład  
- Źródło zapytanie, aby pobrać wszystkie akapitów w dokumencie i ich stylów jest następująca:  
+ Źródło zapytania do pobrania wszystkich akapitów w dokumencie i ich stylów jest następująca:  
   
 ```vb  
 xDoc.Root.<w:body>...<w:p>  
 ```  
   
- To wyrażenie jest podobny do źródła zapytania w poprzednim przykładzie [znajdowanie stylu akapitu domyślne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Główną różnicą jest to, że używa on <xref:System.Xml.Linq.XContainer.Descendants%2A> osi zamiast <xref:System.Xml.Linq.XContainer.Elements%2A> osi. Zapytanie używa <xref:System.Xml.Linq.XContainer.Descendants%2A> osi, ponieważ w dokumentach, które mają sekcje, akapitów, nie będzie bezpośrednie elementy podrzędne elementu body; zamiast akapitów zostaną dwa poziomy w dół w hierarchii. Za pomocą <xref:System.Xml.Linq.XContainer.Descendants%2A> osi, ten kod będzie działać z czy dokument używa sekcje.  
+ To wyrażenie jest podobne do źródła zapytania w poprzednim przykładzie, co umożliwia [znalezienie domyślnego stylu akapitu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-the-default-paragraph-style.md). Główną różnicą jest to, że używa osi <xref:System.Xml.Linq.XContainer.Descendants%2A> zamiast osi <xref:System.Xml.Linq.XContainer.Elements%2A>. Zapytanie używa osi <xref:System.Xml.Linq.XContainer.Descendants%2A>, ponieważ w dokumentach zawierających sekcje akapity nie będą bezpośrednimi elementami podrzędnymi elementu body. Zamiast tego akapity będą znajdować się na poziomie dwóch poziomów w hierarchii. Korzystając z osi <xref:System.Xml.Linq.XContainer.Descendants%2A>, kod będzie działał niezależnie od tego, czy dokument korzysta z sekcji.  
   
 ## <a name="example"></a>Przykład  
- Zapytanie używa `Let` klauzuli, aby określić element, który zawiera węzeł style. Jeśli nie ma żadnego elementu, następnie `styleNode` ustawiono `Nothing`:  
+ Zapytanie używa klauzuli `Let`, aby określić element, który zawiera węzeł stylu. Jeśli nie ma elementu, `styleNode` jest ustawiona na `Nothing`:  
   
 ```vb  
 Let styleNode As XElement = para.<w:pPr>.<w:pStyle>.FirstOrDefault()  
 ```  
   
- `Let` Najpierw używa klauzuli <xref:System.Xml.Linq.XContainer.Elements%2A> osi, aby znaleźć wszystkie elementy o nazwie `pPr`, następnie używa <xref:System.Xml.Linq.Extensions.Elements%2A> metodę rozszerzenia, aby znaleźć wszystkie elementy podrzędne, o nazwie `pStyle`, a na koniec używa <xref:System.Linq.Enumerable.FirstOrDefault%2A> standardowej kwerendy Operator do przekonwertowania kolekcji na wzorzec singleton. Jeśli kolekcja jest pusta, `styleNode` ustawiono `Nothing`. Jest to przydatne idiom do wyszukania `pStyle` podrzędnego. Należy pamiętać, że jeśli `pPr` węzeł podrzędny nie istnieje, kod nie ani nie zakończyć się niepowodzeniem, zostanie zgłoszony wyjątek; zamiast tego `styleNode` ustawiono `Nothing`, czyli żądane zachowanie tego `Let` klauzuli.  
+ Klauzula `Let` najpierw używa osi <xref:System.Xml.Linq.XContainer.Elements%2A> do znajdowania wszystkich elementów o nazwie `pPr`, a następnie używa metody rozszerzenia <xref:System.Xml.Linq.Extensions.Elements%2A> do znajdowania wszystkich elementów podrzędnych o nazwie `pStyle`, a na koniec używa standardowego operatora zapytań <xref:System.Linq.Enumerable.FirstOrDefault%2A> do konwertowania kolekcji na pojedynczą. Jeśli kolekcja jest pusta, `styleNode` jest ustawiona na `Nothing`. Jest to przydatny idiom do wyszukiwania `pStyle` węzła podrzędnego. Należy pamiętać, że jeśli węzeł podrzędny `pPr` nie istnieje, kod nie powiedzie się, ponieważ zgłasza wyjątek; Zamiast tego `styleNode` jest ustawiona na `Nothing`, co jest pożądanym zachowaniem tej klauzuli `Let`.  
   
- Zapytanie projektów kolekcji typu anonimowego z dwoma elementami członkowskimi, `StyleName` i `ParagraphNode`.  
+ Zapytanie projektuje kolekcję typu anonimowego z dwoma elementami członkowskimi, `StyleName` i `ParagraphNode`.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przetwarza dokumentu WordprocessingML pobieranie węzłów akapit w dokumencie WordprocessingML. Określa on styl każdego akapitu. W tym przykładzie opiera się na poprzednich przykładach w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach, w poniższym kodzie.  
+ Ten przykład przetwarza dokument WordprocessingML, pobierając węzły akapitu z dokumentu WordprocessingML. Identyfikuje także styl każdego akapitu. Ten przykład kompiluje się zgodnie z poprzednimi przykładami w tym samouczku. Nowe zapytanie jest wywoływane w komentarzach w poniższym kodzie.  
   
- Można znaleźć instrukcje dotyczące tworzenia dokumentu źródłowego, w tym przykładzie w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Instrukcje dotyczące tworzenia dokumentu źródłowego dla tego przykładu można znaleźć w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
- W tym przykładzie użyto klasy znalezione w zestawie WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ Ten przykład używa klas znalezionych w zestawie 'Windowsbase. Używa typów w przestrzeni nazw <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
 ```vb  
 Imports <xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">  
@@ -111,9 +111,9 @@ Module Module1
 End Module  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe po zastosowaniu do dokumentu opisano w [tworzenie źródłowego dokumentu pakietu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ Ten przykład generuje następujące dane wyjściowe w przypadku zastosowania do dokumentu opisanego w temacie [Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
-```  
+```console  
 StyleName:Heading1  
 StyleName:Normal  
 StyleName:Normal  
@@ -132,8 +132,8 @@ StyleName:Code
 ```  
   
 ## <a name="next-steps"></a>Następne kroki  
- W następnym temacie [pobieranie tekstu akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), utworzysz zapytanie, aby pobrać tekstu akapitów.  
+ W następnym temacie, [pobierając tekst akapitów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), utworzysz zapytanie w celu pobrania tekstu akapitów.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Samouczek: manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

@@ -1,36 +1,36 @@
 ---
-title: Operatory warunkowe null (Visual Basic)
+title: Operatory warunkowe o wartości null (Visual Basic)
 ms.date: 10/19/2018
 helpviewer_keywords:
 - null-conditional operators [Visual Basic]
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 4815fe7ad337634cfb56127fbd24a47a37fdd74b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 40cb63705eda563b4c3cfd30fa9836a8f632dccf
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062945"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581634"
 ---
-# <a name="-and--null-conditional-operators-visual-basic"></a>?. i? Operatory warunkowe null () (Visual Basic)
+# <a name="-and--null-conditional-operators-visual-basic"></a>?. lub? () operatory warunkowe o wartości null (Visual Basic)
 
-Sprawdza wartość operandu po lewej stronie w przypadku wartości null (`Nothing`) przed wykonaniem dostęp do elementu członkowskiego (`?.`) lub indeksu (`?()`) operacja; zwraca `Nothing` Jeśli po lewej stronie operand ma wartość `Nothing`. Należy pamiętać, że w wyrażeniach, które normalnie zwracane typy wartości, operatorów warunkowych działających z wartością null zwraca <xref:System.Nullable%601>.
+Testuje wartość operandu po lewej stronie dla wartości null (`Nothing`) przed wykonaniem operacji dostępu do elementu członkowskiego (`?.`) lub indeksu (`?()`). zwraca `Nothing`, jeśli argument operacji po lewej stronie szacuje się na `Nothing`. Należy zauważyć, że w wyrażeniach, które zwykle zwracają typy wartości, operator warunkowy NULL zwraca <xref:System.Nullable%601>.
 
-Te operatory pomóc w pisaniu mniejszej ilości kodu do obsługi sprawdzanie wartości null, szczególnie w przypadku, gdy malejąco do struktur danych. Na przykład:
+Te operatory ułatwiają pisanie mniejszego kodu do obsługi kontroli wartości null, szczególnie w przypadku malejących struktur danych. Na przykład:
 
 ```vb
-' Nothing if customers is Nothing  
-Dim length As Integer? = customers?.Length  
+' Nothing if customers is Nothing
+Dim length As Integer? = customers?.Length
 
 ' Nothing if customers is Nothing
 Dim first As Customer = customers?(0)
 
 ' Nothing if customers, the first customer, or Orders is Nothing
-Dim count As Integer? = customers?(0)?.Orders?.Count()   
+Dim count As Integer? = customers?(0)?.Orders?.Count()
 ```
 
-Dla porównania alternatywnych kod dla pierwszego dnia te wyrażenia bez operatorów warunkowych działających z wartością null jest:
+W celu porównania kod alternatywny dla pierwszego z tych wyrażeń bez operatora warunkowego null jest następujący:
 
 ```vb
 Dim length As Integer
@@ -39,35 +39,35 @@ If customers IsNot Nothing Then
 End If
 ```
 
-Czasami zachodzi potrzeba wykonania akcji na obiekt, który może mieć wartości null, oparte na wartość logiczną elementu członkowskiego obiektu, na którym (takie jak właściwość typu Boolean `IsAllowedFreeShipping` w poniższym przykładzie):
+Czasami trzeba wykonać akcję na obiekcie, który może mieć wartość null, na podstawie wartości logicznej składowej tego obiektu (podobnie jak właściwość logiczna `IsAllowedFreeShipping` w poniższym przykładzie):
 
 ```vb
-  Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
-  
-  If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
-   ApplyFreeShippingToOrders(customer)
-  End If
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer IsNot Nothing AndAlso customer.IsAllowedFreeShipping Then
+  ApplyFreeShippingToOrders(customer)
+End If
 ```
 
-Można skrócić kodu i uniknąć ręczne sprawdzanie wartości null za pomocą operatorów warunkowych działających z wartością null w następujący sposób:
+Możesz skrócić swój kod i unikać ręcznego sprawdzania wartości null przy użyciu operatora warunkowego null w następujący sposób:
 
 ```vb
- Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
- 
- If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
+Dim customer = FindCustomerByID(123) 'customer will be Nothing if not found.
+
+If customer?.IsAllowedFreeShipping Then ApplyFreeShippingToOrders(customer)
 ```
 
-Operatory warunkowe `null` skracają łańcuch wykonywania operacji.  Jeśli jedna operacja w łańcuchu operacji dostępu i indeks warunkowa składowa zwraca `Nothing`, pozostała część zatrzymuje wykonywanie łańcucha.  W poniższym przykładzie `C(E)` nie jest oceniany, jeśli `A`, `B`, lub `C` daje w wyniku `Nothing`.
+Operatory warunkowe o wartości null są krótkimi obwodami.  Jeśli jedna operacja w łańcuchu warunkowych operacji dostępu i indeksowania zwraca `Nothing`, pozostała część wykonania łańcucha zostanie zatrzymana.  W poniższym przykładzie `C(E)` nie jest oceniane, jeśli `A`, `B` lub `C` szacuje się na `Nothing`.
 
 ```vb
 A?.B?.C?(E);
 ```
 
-Innym zastosowaniem uzyskać dostęp do elementu członkowskiego warunkowe null jest wywoływać delegatów w sposób wątkowo ze znacznie mniejszej ilości kodu.  W poniższym przykładzie zdefiniowano dwa typy `NewsBroadcaster` i `NewsReceiver`. Elementy wiadomości są wysyłane do odbiorcy przez `NewsBroadcaster.SendNews` delegować.
+Innym zastosowaniem dostępu do składowych o wartości null jest wywoływanie delegatów w sposób bezpieczny dla wątków z znacznie mniejszym kodem.  W poniższym przykładzie zdefiniowano dwa typy, `NewsBroadcaster` i `NewsReceiver`. Elementy wiadomości są wysyłane do odbiorcy przez delegata `NewsBroadcaster.SendNews`.
 
 ```vb
 Public Module NewsBroadcaster
-   Dim SendNews As Action(Of String) 
+   Dim SendNews As Action(Of String)
 
    Public Sub Main()
       Dim rec As New NewsReceiver()
@@ -91,26 +91,26 @@ Public Class NewsReceiver
 End Class
 ```
 
-Jeśli nie ma elementów w `SendNews` listy wywołań `SendNews` delegować zgłasza <xref:System.NullReferenceException>. Przed operatory warunkowe null, kod tak, jak zapewnić następujące listy wywołanie delegata nie była `Nothing`:
+Jeśli na liście wywołań `SendNews` nie ma elementów, delegat `SendNews` zgłosi <xref:System.NullReferenceException>. Przed operatorami warunkowymi null, kod podobny do poniższego upewnił się, że lista wywołań delegata nie została `Nothing`:
 
-```vb  
-SendNews = SendNews.Combine({SendNews, client})  
-If SendNews IsNot Nothing Then 
+```vb
+SendNews = SendNews.Combine({SendNews, client})
+If SendNews IsNot Nothing Then
    SendNews("Just in...")
 End If
 ```
 
-Nowy sposób jest znacznie prostszy:  
+Nowy sposób jest znacznie prostszy:
 
 ```vb
-SendNews = SendNews.Combine({SendNews, client})  
+SendNews = SendNews.Combine({SendNews, client})
 SendNews?.Invoke("Just in...")
 ```
 
-Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod, aby sprawdzić stan `SendNews` tylko jeden raz, a następnie zapisuje wynik w zmiennej tymczasowej. Metodę `Invoke`trzeba wywołać jawnie, ponieważ nie istnieje składnia `SendNews?(String)` do wywołania delegata przy użyciu operatora warunkowego „null”.  
+Nowy sposób jest bezpieczny wątkowo, ponieważ kompilator generuje kod służący do oszacowania `SendNews` tylko jeden raz, utrzymując wynik w zmiennej tymczasowej. Należy jawnie wywołać metodę `Invoke`, ponieważ nie istnieje składnia wywołania delegata warunkowego o wartości null `SendNews?(String)`.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory (Visual Basic)](index.md)
-- [Przewodnik programowania w języku Visual Basic](../../../visual-basic/programming-guide/index.md)
+- [Przewodnik programowania Visual Basic](../../../visual-basic/programming-guide/index.md)
 - [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

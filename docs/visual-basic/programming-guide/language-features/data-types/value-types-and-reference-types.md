@@ -10,52 +10,52 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 466bb5386235917705344d35c5141c8bf779218d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504878"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582646"
 ---
 # <a name="value-types-and-reference-types"></a>Typy wartości i odwołań
-Istnieją dwa rodzaje typów w języku Visual Basic: typy referencyjne i typy wartości. W zmiennych typu referencyjnego są przechowywane odwołania do ich danych (obiekty), a zmienne typu wartości zawierają bezpośrednio swoje dane. W przypadku typów referencyjnych dwie zmienne mogą odwoływać się do jednego obiektu, a więc operacje wykonane na jednej zmiennych mogą mieć wpływ na obiekt, do którego odwołuje się druga zmienna. Z typami wartości każda zmienna ma własną kopię danych i nie jest możliwe dla operacji na jednej zmiennej miały wpływ na inne (z wyjątkiem w przypadku właściwości [ByRef modyfikator parametrów](../../../language-reference/modifiers/byref.md)).
+Istnieją dwa rodzaje typów w Visual Basic: typy referencyjne i typy wartości. W zmiennych typu referencyjnego są przechowywane odwołania do ich danych (obiekty), a zmienne typu wartości zawierają bezpośrednio swoje dane. W przypadku typów referencyjnych dwie zmienne mogą odwoływać się do jednego obiektu, a więc operacje wykonane na jednej zmiennych mogą mieć wpływ na obiekt, do którego odwołuje się druga zmienna. W przypadku typów wartości Każda zmienna ma własną kopię danych i nie jest możliwe wykonywanie operacji na jednej zmiennej, która ma wpływ na drugą (z wyjątkiem przypadków [modyfikatora ByRef w przypadku parametrów](../../../language-reference/modifiers/byref.md)).
   
 ## <a name="value-types"></a>Typy wartości  
- Typ danych jest *typu wartości* Jeśli przechowuje dane w obrębie własnej alokacji pamięci. Typy wartości są następujące:  
+ Typ danych jest *typem wartości* , jeśli przechowuje dane w ramach alokacji pamięci. Dostępne są następujące typy wartości:  
   
-- Wszystkie typy danych numerycznych  
+- Wszystkie typy danych liczbowych  
   
-- `Boolean`, `Char`, i `Date`  
+- `Boolean`, `Char` i `Date`  
   
-- Wszystkie struktury, nawet jeśli ich elementy członkowskie są typami odwołań  
+- Wszystkie struktury, nawet jeśli ich składowe są typami odwołań  
   
-- Wyliczenia, ponieważ jego typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger`, lub `ULong`  
+- Wyliczenia, ponieważ ich typ podstawowy jest zawsze `SByte`, `Short`, `Integer`, `Long`, `Byte`, `UShort`, `UInteger` lub `ULong`  
   
- Co struktura jest typem wartości, nawet wtedy, gdy zawiera on elementy członkowskie typu odwołania. Z tego powodu wartość typy takie jak `Char` i `Integer` są implementowane przez struktury .NET Framework.  
+ Każda struktura jest typem wartości, nawet jeśli zawiera elementy członkowskie typu referencyjnego. Z tego powodu typy wartości, takie jak `Char` i `Integer`, są implementowane przez .NET Framework struktur.  
   
- Typ wartości można zadeklarować za pomocą zastrzeżonego słowa kluczowego, na przykład `Decimal`. Można również użyć `New` — słowo kluczowe można zainicjować typu wartości. Jest to szczególnie przydatne, jeśli typ ma konstruktora przyjmującego parametry. Na przykład <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29> konstruktora, który tworzy nową `Decimal` wartości z części podane.  
+ Typ wartości można zadeklarować przy użyciu zastrzeżonego słowa kluczowego, na przykład `Decimal`. Możesz również użyć słowa kluczowego `New`, aby zainicjować typ wartości. Jest to szczególnie przydatne, jeśli typ ma konstruktora, który pobiera parametry. Przykładem jest Konstruktor <xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>, który kompiluje nową wartość `Decimal` z dostarczonych części.  
   
 ## <a name="reference-types"></a>Typy odwołań  
- A *odwołania do typu* przechowuje odwołania do jego danych. Typy odwołań są następujące:  
+ *Typ referencyjny* przechowuje odwołanie do swoich danych. Typy odwołań obejmują następujące elementy:  
   
 - `String`  
   
 - Wszystkie tablice, nawet jeśli ich elementy są typami wartości  
   
-- Klasa typów, takich jak <xref:System.Windows.Forms.Form>  
+- Typy klas, takie jak <xref:System.Windows.Forms.Form>  
   
 - Delegaty  
   
- Klasa jest *odwołania do typu*. Należy pamiętać, że każda tablica typu odwołania, nawet jeśli jego członkowie są typami wartości.  
+ Klasa jest *typem referencyjnym*. Należy zauważyć, że każda tablica jest typem referencyjnym, nawet jeśli jego elementy członkowskie są typami wartości.  
   
- Ponieważ każdy typ odniesienia reprezentuje podstawowej klasy .NET Framework, należy użyć [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe, podczas jego inicjowania. Poniższa instrukcja inicjuje tablicę.  
+ Ponieważ każdy typ referencyjny reprezentuje bazową klasę .NET Framework, należy użyć słowa kluczowego [New](../../../../visual-basic/language-reference/operators/new-operator.md) podczas inicjowania. Poniższa instrukcja Inicjuje tablicę.  
   
-```  
+```vb  
 Dim totals() As Single = New Single(8) {}  
 ```  
   
 ## <a name="elements-that-are-not-types"></a>Elementy, które nie są typami  
- Następujące elementy programowania nie kwalifikują się jako typów, ponieważ nie można określić dowolny z nich jako element zadeklarowany typ danych:  
+ Następujące elementy programistyczne nie kwalifikują się jako typy, ponieważ nie można określić żadnego z nich jako typu danych dla zadeklarowanego elementu:  
   
 - Namespaces  
   
@@ -68,14 +68,14 @@ Dim totals() As Single = New Single(8) {}
 - Zmienne, stałe i pola  
   
 ## <a name="working-with-the-object-data-type"></a>Praca z typem danych obiektu  
- Można przypisać do zmiennej typu odwołania lub typu wartościowego `Object` typu danych. `Object` Zmiennej zawsze zawiera odwołanie do danych, nigdy nie dane. Jednak jeśli przypisujesz typ wartości do `Object` zmiennej działa tak, jakby posiada własnych danych. Aby uzyskać więcej informacji, zobacz [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
+ Do zmiennej typu danych `Object` można przypisać typ referencyjny lub typ wartości. Zmienna `Object` zawsze przechowuje odwołanie do danych, nigdy nie same same dane. Jeśli jednak przypiszesz typ wartości do zmiennej `Object`, zachowuje się tak, jakby przechowywać własne dane. Aby uzyskać więcej informacji, zobacz [Typ danych obiektu](../../../../visual-basic/language-reference/data-types/object-data-type.md).  
   
- Można dowiedzieć się, czy `Object` zmiennej działa jako typu odwołania lub typu wartościowego przez przekazanie jej do <xref:Microsoft.VisualBasic.Information.IsReference%2A> method in Class metoda <xref:Microsoft.VisualBasic.Information> klasy <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Zwraca `True` Jeśli zawartość `Object` zmienna reprezentuje typ odwołania.  
+ Można dowiedzieć się, czy zmienna `Object` działa jako typ referencyjny czy typ wartości poprzez przekazanie go do metody <xref:Microsoft.VisualBasic.Information.IsReference%2A> w klasie <xref:Microsoft.VisualBasic.Information> <xref:Microsoft.VisualBasic?displayProperty=nameWithType> przestrzeni nazw. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> zwraca `True`, jeśli zawartość zmiennej `Object` reprezentuje typ referencyjny.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy wartości dopuszczających wartości null](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Konwersje typów w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure, instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Skuteczne stosowanie typów danych](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
 - [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)

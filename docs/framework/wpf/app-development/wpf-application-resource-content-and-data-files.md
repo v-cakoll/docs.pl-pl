@@ -17,25 +17,25 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 57eae5067a72777db2c19331029b6df679a9fdce
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956196"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581728"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]Aplikacje często zależą od plików, które zawierają dane niewykonywalne, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]takie jak obrazy, wideo i dźwięk. Windows Presentation Foundation (WPF) oferuje specjalną obsługę konfigurowania, identyfikowania i korzystania z tych typów plików danych, które są nazywane plikami danych aplikacji. Ta obsługa dotyczy określonego zestawu typów plików danych aplikacji, w tym:  
+aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] często zależą od plików, które zawierają dane niewykonywalne, takie jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i dźwięk. Windows Presentation Foundation (WPF) oferuje specjalną obsługę konfigurowania, identyfikowania i korzystania z tych typów plików danych, które są nazywane plikami danych aplikacji. Ta obsługa dotyczy określonego zestawu typów plików danych aplikacji, w tym:  
   
-- **Pliki zasobów**: Pliki danych, które są kompilowane w zestawie plików wykonywalnych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] lub bibliotek.  
+- **Pliki zasobów**: pliki danych, które są kompilowane do pliku wykonywalnego lub biblioteki [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawu.  
   
-- **Pliki zawartości**: Autonomiczne pliki danych z jawnym skojarzeniem z zestawem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wykonywalnym.  
+- **Pliki zawartości**: autonomiczne pliki danych z jawnym skojarzeniem z wykonywalnym zestawem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
-- **Lokacja plików pochodzenia**: Autonomiczne pliki danych, które nie są powiązane z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zestawem wykonywalnym.  
+- **Lokacja plików początkowych**: autonomiczne pliki danych, które nie mają skojarzenia z wykonywalnym zestawem [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
- Jednym z ważnych różnic między tymi trzema typami plików jest to, że pliki zasobów i zawartości są znane w czasie kompilacji; zestaw ma jawną wiedzę o nich. Jednak w przypadku lokacji z plikami początkowymi zestaw może nie mieć w ogóle informacji o nich ani niejawnej wiedzy za pomocą odwołania [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] do pakietu; w przypadku tej ostatniej nie ma gwarancji, że przywoływana lokacja pliku pierwotnego już istnieje.  
+ Jednym z ważnych różnic między tymi trzema typami plików jest to, że pliki zasobów i zawartości są znane w czasie kompilacji; zestaw ma jawną wiedzę o nich. Jednak w przypadku lokacji z plikami pochodzenia zestaw może nie mieć w ogóle informacji o nich ani niejawnej wiedzy za pomocą odwołania URI (Uniform Resource Identifier). w przypadku tej ostatniej nie ma gwarancji, że w rzeczywistości istnieje przywoływana lokacja pliku pierwotnego.  
   
- Aby odwoływać się do plików danych aplikacji, Windows Presentation Foundation (WPF) [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] używa schematu pakietu, który jest szczegółowo opisany w artykule [identyfikatory URI pakietu w WPF](pack-uris-in-wpf.md)).  
+ Aby odwoływać się do plików danych aplikacji, Windows Presentation Foundation (WPF) używa schematu identyfikatora URI (Uniform Resource Identifier), który jest szczegółowo opisany w artykule [identyfikatory URI pakietu w WPF](pack-uris-in-wpf.md)).  
   
  W tym temacie opisano sposób konfigurowania plików danych aplikacji i korzystania z nich.  
 
@@ -55,7 +55,7 @@ ms.locfileid: "69956196"
 > Pliki zasobów opisane w tej sekcji są inne niż pliki zasobów opisane w obszarze [zasoby XAML](../advanced/xaml-resources.md) i różne od osadzonych lub połączonych zasobów opisanych w temacie [Zarządzanie zasobami aplikacji (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Konfigurowanie plików zasobów  
- W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]programie plik zasobów jest plikiem, który jest zawarty w projekcie Microsoft Build Engine (MSBuild) `Resource` jako element.  
+ W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], plik zasobów jest plikiem, który jest zawarty w projekcie Microsoft Build Engine (MSBuild) jako element `Resource`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -68,21 +68,21 @@ ms.locfileid: "69956196"
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]programie utworzysz plik zasobów przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Resource`.  
+> W [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] tworzysz plik zasobów przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Resource`.  
   
  Po skompilowaniu projektu MSBuild kompiluje zasób do zestawu.  
   
 ### <a name="using-resource-files"></a>Korzystanie z plików zasobów  
- Aby załadować plik zasobów, można wywołać <xref:System.Windows.Application.GetResourceStream%2A> metodę <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , który identyfikuje żądany plik zasobów. <xref:System.Windows.Application.GetResourceStream%2A>zwraca obiekt, który udostępnia plik zasobu <xref:System.IO.Stream> jako i opisuje jego typ zawartości. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Aby załadować plik zasobów, można wywołać metodę <xref:System.Windows.Application.GetResourceStream%2A> klasy <xref:System.Windows.Application>, przekazując identyfikator URI pakietu, który identyfikuje żądany plik zasobów. <xref:System.Windows.Application.GetResourceStream%2A> zwraca obiekt <xref:System.Windows.Resources.StreamResourceInfo>, który udostępnia plik zasobów jako <xref:System.IO.Stream> i opisuje jego typ zawartości.  
   
- Na przykład poniższy kod pokazuje, jak <xref:System.Windows.Application.GetResourceStream%2A> użyć do <xref:System.Windows.Controls.Page> załadowania pliku zasobów i ustawienia go <xref:System.Windows.Controls.Frame> jako zawartości (`pageFrame`):  
+ Na przykład poniższy kod ilustruje sposób użycia <xref:System.Windows.Application.GetResourceStream%2A> do załadowania <xref:System.Windows.Controls.Page> pliku zasobów i ustawienia go jako zawartości <xref:System.Windows.Controls.Frame> (`pageFrame`):  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Podczas gdy <xref:System.Windows.Application.GetResourceStream%2A> wywoływanie daje dostęp <xref:System.IO.Stream>do, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, z którą zostanie ona ustawiona. Zamiast tego możesz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] postanowić się <xref:System.IO.Stream> nad otwarciem i konwersją przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetResourceStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
- Poniższy przykład pokazuje, jak załadować element <xref:System.Windows.Controls.Page> bezpośrednio <xref:System.Windows.Controls.Frame> do (`pageFrame`) za pomocą kodu.  
+ Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadpageresourcefilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadpageresourcefilefromcode)]  
@@ -92,11 +92,11 @@ ms.locfileid: "69956196"
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Pliki kodu aplikacji jako pliki zasobów  
- Do specjalnego zestawu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plików kodu aplikacji można odwoływać się za pomocą [!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]pakietu, w tym systemu Windows, stron, dokumentów przepływu i słowników zasobów. Na przykład można ustawić <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> właściwość z pakietem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , który odwołuje się do okna lub strony, które chcesz załadować podczas uruchamiania aplikacji.  
+ Do specjalnego zestawu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] plików kodu aplikacji można odwoływać się za pomocą identyfikatorów URI pakietów, takich jak Windows, strony, dokumenty przepływu i słowniki zasobów. Na przykład można ustawić właściwość <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> z identyfikatorem URI pakietu, który odwołuje się do okna lub strony, które chcesz załadować podczas uruchamiania aplikacji.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
- Można to zrobić, gdy plik XAML jest zawarty w projekcie MSBuild jako `Page` element.  
+ Można to zrobić, gdy plik XAML zostanie uwzględniony w projekcie MSBuild jako element `Page`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -109,12 +109,12 @@ ms.locfileid: "69956196"
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]programie dodano nowy <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, `Page`lub do projektu ,`Build Action` dla którego plik znaczników będzie domyślnie. <xref:System.Windows.ResourceDictionary> <xref:System.Windows.Documents.FlowDocument>  
+> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] dodano nowe <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> lub <xref:System.Windows.ResourceDictionary> do projektu, `Build Action` dla pliku znaczników zostanie domyślnie `Page`.  
   
- Po skompilowaniu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] projektu `Page` z elementami elementy są konwertowane na format binarny i kompilowane w skojarzonym zestawie. W związku z tym te pliki mogą być używane w taki sam sposób jak w przypadku typowych plików zasobów.  
+ Po skompilowaniu projektu z `Page` elementy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementy są konwertowane na format binarny i kompilowane w skojarzonym zestawie. W związku z tym te pliki mogą być używane w taki sam sposób jak w przypadku typowych plików zasobów.  
   
 > [!NOTE]
-> Jeśli plik jest skonfigurowany `Resource` jako element i nie ma pliku związanego z kodem, pierwotny [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest kompilowany do zestawu, a nie do wersji binarnej RAW [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
+> Jeśli plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest skonfigurowany jako element `Resource` i nie ma pliku związanego z kodem, nieprzetworzony [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest kompilowany do zestawu, a nie jako wersja binarna nieprzetworzonej [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Content_Files"></a>   
 ## <a name="content-files"></a>Pliki zawartości  
@@ -123,7 +123,7 @@ ms.locfileid: "69956196"
  Plików zawartości należy używać, gdy aplikacja wymaga określonego zestawu plików danych aplikacji, które mają być w stanie aktualizować bez ponownego kompilowania zestawu, który go używa.  
   
 ### <a name="configuring-content-files"></a>Konfigurowanie plików zawartości  
- Aby dodać plik zawartości do projektu, plik danych aplikacji musi być dołączony jako `Content` element. Ponadto, ponieważ plik zawartości nie jest kompilowany bezpośrednio do zestawu, należy ustawić element metadanych MSBuild `CopyToOutputDirectory` , aby określić, że plik zawartości jest kopiowany do lokalizacji względnej dla skompilowanego zestawu. Jeśli zasób ma być kopiowany do folderu danych wyjściowych kompilacji przy każdym skompilowaniu projektu, należy ustawić `CopyToOutputDirectory` element metadanych `Always` z wartością. W przeciwnym razie można upewnić się, że tylko Najnowsza wersja zasobu jest kopiowana do folderu danych wyjściowych kompilacji przy `PreserveNewest` użyciu wartości.  
+ Aby dodać plik zawartości do projektu, plik danych aplikacji musi być dołączony jako element `Content`. Ponadto, ponieważ plik zawartości nie jest kompilowany bezpośrednio do zestawu, należy ustawić element metadanych `CopyToOutputDirectory` MSBuild, aby określić, że plik zawartości jest kopiowany do lokalizacji względnej dla skompilowanego zestawu. Jeśli zasób ma być kopiowany do folderu danych wyjściowych kompilacji przy każdym skompilowaniu projektu, należy ustawić `CopyToOutputDirectory` element metadanych z wartością `Always`. W przeciwnym razie można upewnić się, że tylko Najnowsza wersja zasobu jest kopiowana do folderu danych wyjściowych kompilacji przy użyciu wartości `PreserveNewest`.  
   
  Poniżej przedstawiono plik skonfigurowany jako plik zawartości, który jest kopiowany do folderu danych wyjściowych kompilacji tylko wtedy, gdy nowa wersja zasobu zostanie dodana do projektu.  
   
@@ -140,29 +140,29 @@ ms.locfileid: "69956196"
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]programie tworzysz plik zawartości przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Content`, a następnie ustaw jego `PreserveNewest` `Copy to Output Directory` `Copy always` wartość (tak jak `Always`) i `Copy if newer` (analogicznie jak).  
+> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] tworzysz plik zawartości przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Content` i ustaw jego `Copy to Output Directory` na `Copy always` (analogicznie jak `Always`) i `Copy if newer` (analogicznie jak `PreserveNewest`).  
   
- Po skompilowaniu <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> projektu atrybut jest kompilowany do metadanych zestawu dla każdego pliku zawartości.  
+ Podczas kompilowania projektu, <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut jest kompilowany do metadanych zestawu dla każdego pliku zawartości.  
   
  `[assembly: AssemblyAssociatedContentFile("ContentFile.xaml")]`  
   
- Wartość <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> wskazuje ścieżkę do pliku zawartości względem jego położenia w projekcie. Na przykład, jeśli plik zawartości znajduje się w podfolderze projektu, dodatkowe informacje o ścieżce zostaną włączone do <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> wartości.  
+ Wartość <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> oznacza ścieżkę do pliku zawartości względem jego położenia w projekcie. Na przykład, jeśli plik zawartości znajduje się w podfolderze projektu, dodatkowe informacje o ścieżce zostaną włączone do wartości <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>.  
   
  `[assembly: AssemblyAssociatedContentFile("Resources/ContentFile.xaml")]`  
   
- <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> Wartość jest również wartością ścieżki do pliku zawartości w folderze danych wyjściowych kompilacji.  
+ Wartość <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> jest również wartością ścieżki do pliku zawartości w folderze danych wyjściowych kompilacji.  
   
 ### <a name="using-content-files"></a>Korzystanie z plików zawartości  
- Aby załadować plik zawartości, można wywołać <xref:System.Windows.Application.GetContentStream%2A> metodę <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , który identyfikuje żądany plik zawartości. <xref:System.Windows.Application.GetContentStream%2A>zwraca obiekt, który udostępnia plik zawartości <xref:System.IO.Stream> jako i opisuje jego typ zawartości. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Aby załadować plik zawartości, można wywołać metodę <xref:System.Windows.Application.GetContentStream%2A> klasy <xref:System.Windows.Application>, przekazując identyfikator URI pakietu, który identyfikuje żądany plik zawartości. <xref:System.Windows.Application.GetContentStream%2A> zwraca obiekt <xref:System.Windows.Resources.StreamResourceInfo>, który uwidacznia plik zawartości jako <xref:System.IO.Stream> i opisuje jego typ zawartości.  
   
- Na przykład poniższy kod pokazuje, jak <xref:System.Windows.Application.GetContentStream%2A> użyć do <xref:System.Windows.Controls.Page> załadowania pliku zawartości i ustawienia go <xref:System.Windows.Controls.Frame> jako zawartości (`pageFrame`).  
+ Na przykład poniższy kod ilustruje sposób użycia <xref:System.Windows.Application.GetContentStream%2A> do załadowania <xref:System.Windows.Controls.Page> pliku zawartości i ustawienia go jako zawartości <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Podczas gdy <xref:System.Windows.Application.GetContentStream%2A> wywoływanie daje dostęp <xref:System.IO.Stream>do, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, z którą zostanie ona ustawiona. Zamiast tego możesz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] postanowić się <xref:System.IO.Stream> nad otwarciem i konwersją przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetContentStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
- Poniższy przykład pokazuje, jak załadować element <xref:System.Windows.Controls.Page> bezpośrednio <xref:System.Windows.Controls.Frame> do (`pageFrame`) za pomocą kodu.  
+ Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadpagecontentfilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageContentFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadpagecontentfilefromcode)]  
@@ -173,7 +173,7 @@ ms.locfileid: "69956196"
   
 <a name="Site_of_Origin_Files"></a>   
 ## <a name="site-of-origin-files"></a>Lokacja plików pochodzenia  
- Pliki zasobów mają jawną relację z zestawami, które są dystrybuowane razem, zgodnie z <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>definicją przez. Ale istnieją przypadki, w których można określić niejawną lub nieistniejącą relację między zestawem a plikiem danych aplikacji, w tym:  
+ Pliki zasobów mają jawną relację z zestawami, które są dystrybuowane razem, zgodnie z definicją <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>. Ale istnieją przypadki, w których można określić niejawną lub nieistniejącą relację między zestawem a plikiem danych aplikacji, w tym:  
   
 - Plik nie istnieje w czasie kompilacji.  
   
@@ -183,21 +183,21 @@ ms.locfileid: "69956196"
   
 - Aplikacja używa dużych plików danych, takich jak audio i wideo, i chcesz, aby użytkownicy mogli je pobrać, jeśli zdecydują się na to.  
   
- Istnieje możliwość załadowania tych typów plików przy użyciu tradycyjnych [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] schematów, takich jak schematy File:///i http://.  
+ Istnieje możliwość załadowania tych typów plików przy użyciu tradycyjnych schematów URI, takich jak schematy file:///i http://.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Jednak schematy file:///i http://wymagają, aby aplikacja miała pełne zaufanie. Jeśli aplikacja jest [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] uruchomiona z Internetu lub intranetu i żąda tylko zestawu uprawnień, które są dozwolone dla aplikacji uruchomionych z tych lokalizacji, luźne pliki można ładować tylko z lokacji źródłowej aplikacji ( Lokalizacja uruchamiania). Takie pliki są znane jako *lokacja plików pochodzenia* .  
+ Jednak schematy file:///i http://wymagają, aby aplikacja miała pełne zaufanie. Jeśli aplikacja jest [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], która została uruchomiona z Internetu lub intranetu, i żąda tylko zestawu uprawnień, które są dozwolone dla aplikacji uruchomionych z tych lokalizacji, luźne pliki mogą być ładowane tylko z lokacji źródłowej aplikacji. Lokalizacja). Takie pliki są znane jako *lokacja plików pochodzenia* .  
   
  Lokacja plików pochodzenia jest jedyną opcją dla aplikacji częściowo zaufanych, chociaż nie są ograniczone do aplikacji częściowo zaufanych. Aplikacje z pełnym zaufaniem mogą nadal potrzebować załadowania plików danych aplikacji, które nie są znane w czasie kompilacji; gdy aplikacje z pełnym zaufaniem mogą korzystać z file:///, prawdopodobnie pliki danych aplikacji zostaną zainstalowane w tym samym folderze co lub w podfolderze zestawu aplikacji. W takim przypadku użycie funkcji odwołującej się do lokalizacji jest łatwiejsze niż używanie file:///, ponieważ użycie file:///wymaga wykonania pełnej ścieżki do pliku.  
   
 > [!NOTE]
-> Lokacja plików pochodzenia nie jest buforowana [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] na komputerze klienckim, a pliki zawartości to. W związku z tym są pobierane tylko wtedy, gdy jest to wymagane. [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] Jeśli aplikacja ma duże pliki multimedialne, skonfigurowanie ich jako lokacji plików pochodzenia oznacza, że początkowe uruchomienie aplikacji jest znacznie szybsze i pliki są pobierane na żądanie.  
+> Lokacja plików pochodzenia nie jest buforowana przy użyciu [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] na komputerze klienckim, podczas gdy pliki zawartości to. W związku z tym są pobierane tylko wtedy, gdy jest to wymagane. Jeśli aplikacja [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] ma duże pliki multimedialne, skonfigurowanie ich jako lokacji plików pochodzenia oznacza, że początkowe uruchomienie aplikacji jest znacznie szybsze i pliki są pobierane na żądanie.  
   
 ### <a name="configuring-site-of-origin-files"></a>Konfigurowanie lokacji plików pochodzenia  
- Jeśli witryna plików pochodzenia jest nieistniejąca lub nieznana w czasie kompilacji, należy użyć tradycyjnych mechanizmów wdrażania, aby upewnić się, że wymagane pliki są dostępne w czasie wykonywania, w tym przy `XCopy` użyciu programu wiersza polecenia lub [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
+ Jeśli witryna plików pochodzenia jest nieistniejąca lub nieznana w czasie kompilacji, należy użyć tradycyjnych mechanizmów wdrażania, aby upewnić się, że wymagane pliki są dostępne w czasie wykonywania, w tym przy użyciu programu wiersza polecenia `XCopy` lub [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Jeśli wiesz, jak w czasie kompilacji pliki, które mają znajdować się w lokacji pochodzenia, ale nadal chcesz uniknąć jawnej zależności, możesz dodać te pliki do projektu MSBuild jako `None` element. Podobnie jak w przypadku plików zawartości, należy ustawić atrybut MSBuild `CopyToOutputDirectory` , aby określić, że lokacja pliku pochodzenia jest kopiowana do lokalizacji względnej dla skompilowanego zestawu, określając `Always` wartość lub `PreserveNewest` wartość.  
+ Jeśli wiesz, jak w czasie kompilacji pliki, które mają znajdować się w lokacji pochodzenia, ale nadal chcesz uniknąć jawnej zależności, możesz dodać te pliki do projektu MSBuild jako element `None`. Podobnie jak w przypadku plików zawartości, należy ustawić atrybut `CopyToOutputDirectory` MSBuild, aby określić, że lokacja pliku pochodzenia jest kopiowana do lokalizacji, która jest względna w stosunku do skompilowanego zestawu, przez określenie wartości `Always` lub wartości `PreserveNewest`.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -210,21 +210,21 @@ ms.locfileid: "69956196"
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]programie utworzysz lokację pliku źródłowego, dodając plik do projektu i `Build Action` ustawiając go na `None`.  
+> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] można utworzyć witrynę pliku pierwotnego, dodając plik do projektu i ustawiając jego `Build Action` na `None`.  
   
  Po skompilowaniu projektu, MSBuild kopiuje określone pliki do folderu danych wyjściowych kompilacji.  
   
 ### <a name="using-site-of-origin-files"></a>Korzystanie z lokalizacji plików pochodzenia  
- Aby załadować lokację pliku pierwotnego, można wywołać <xref:System.Windows.Application.GetRemoteStream%2A> metodę <xref:System.Windows.Application> klasy, przekazując pakiet [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] , który identyfikuje żądaną lokację pliku pierwotnego. <xref:System.Windows.Application.GetRemoteStream%2A>zwraca obiekt, który uwidacznia lokację pliku pierwotnego <xref:System.IO.Stream> jako i opisuje jego typ zawartości. <xref:System.Windows.Resources.StreamResourceInfo>  
+ Aby załadować lokację pliku pierwotnego, można wywołać metodę <xref:System.Windows.Application.GetRemoteStream%2A> klasy <xref:System.Windows.Application>, przekazując identyfikator URI pakietu, który identyfikuje żądaną lokację pliku pierwotnego. <xref:System.Windows.Application.GetRemoteStream%2A> zwraca obiekt <xref:System.Windows.Resources.StreamResourceInfo>, który uwidacznia lokację pliku źródłowego jako <xref:System.IO.Stream> i opisuje jego typ zawartości.  
   
- Na przykład poniższy kod pokazuje, jak <xref:System.Windows.Application.GetRemoteStream%2A> użyć do <xref:System.Windows.Controls.Page> załadowania lokacji pliku źródłowego i ustawienia jej <xref:System.Windows.Controls.Frame> jako zawartości (`pageFrame`).  
+ Na przykład poniższy kod ilustruje sposób użycia <xref:System.Windows.Application.GetRemoteStream%2A> do załadowania lokacji <xref:System.Windows.Controls.Page> pliku pierwotnego i ustawienia jej jako zawartości <xref:System.Windows.Controls.Frame> (`pageFrame`).  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Podczas gdy <xref:System.Windows.Application.GetRemoteStream%2A> wywoływanie daje dostęp <xref:System.IO.Stream>do, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, z którą zostanie ona ustawiona. Zamiast tego możesz [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] postanowić się <xref:System.IO.Stream> nad otwarciem i konwersją przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
+ Podczas wywoływania <xref:System.Windows.Application.GetRemoteStream%2A> zapewnia dostęp do <xref:System.IO.Stream>, należy wykonać dodatkową ilość pracy, aby przekonwertować ją na typ właściwości, za pomocą której zostanie on ustawiony. Zamiast tego można zezwolić [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] na otwieranie i konwertowanie <xref:System.IO.Stream> przez załadowanie pliku zasobów bezpośrednio do właściwości typu za pomocą kodu.  
   
- Poniższy przykład pokazuje, jak załadować element <xref:System.Windows.Controls.Page> bezpośrednio <xref:System.Windows.Controls.Frame> do (`pageFrame`) za pomocą kodu.  
+ Poniższy przykład pokazuje, jak załadować <xref:System.Windows.Controls.Page> bezpośrednio do <xref:System.Windows.Controls.Frame> (`pageFrame`) przy użyciu kodu.  
   
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadpagesoofilefromcode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadPageSOOFileFromCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadpagesoofilefromcode)]  

@@ -1,47 +1,47 @@
 ---
-title: Wartości zwracane REF (Visual Basic)
+title: Wartości zwracane ref (Visual Basic)
 ms.date: 04/28/2017
 helpviewer_keywords:
 - variables [Visual Basic]
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: d0600f7d9030324160343e800c37e0f5e68bff61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7401fdd0fa876d21a87dbe9faf9d979e6b3bdc5c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791810"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581125"
 ---
-# <a name="support-for-reference-return-values-visual-basic"></a>Obsługa wartości zwracane odwołanie (Visual Basic)
+# <a name="support-for-reference-return-values-visual-basic"></a>Obsługa wartości zwracanych przez odwołanie (Visual Basic)
 
-Począwszy od C# 7.0, C# obsługuje język *odwoływać się do wartości zwracane*. Jednym ze sposobów, aby zrozumieć wartości zwracane odwołanie jest możliwość ich przeciwieństwo argumenty, które są przekazywane przez odwołanie do metody. Po zmodyfikowaniu argument przekazywany przez odwołanie, zmiany są odzwierciedlane w wartości zmiennej na obiekcie wywołującym. Modyfikacje wprowadzone do odwołania wartość zwracana przez obiekt wywołujący metodę zawiera wartość zwracaną odwołanie do elementu wywołującego, są odzwierciedlane w danych o nazwie metody.
+Począwszy od C# 7,0, C# język obsługuje *wartości zwracane przez odwołanie*. Jednym ze sposobów zrozumienia zwracanych wartości odwołania jest to, że są one przeciwieństwem argumentów, które są przekazane przez odwołanie do metody. Gdy argument przekazane przez odwołanie jest modyfikowany, zmiany zostaną odzwierciedlone w wartości zmiennej w obiekcie wywołującym. Gdy metoda udostępnia wartość zwracaną odwołanie do obiektu wywołującego, modyfikacje wartości zwracanej odwołania przez wywołującego są odzwierciedlone w danych wywołanej metody.
 
-Visual Basic nie zezwala na umożliwia tworzenie metod z odwołaniem do wartości zwracane, ale go zezwala na używanie wartości zwracane odwołanie. Innymi słowy można wywołać metody zawierającej określenie zwracanej wartości odniesienia i modyfikować tej wartości zwracanej, a zmiany na wartość zwracaną odwołania są uwzględniane w danych o nazwie metody.
+Visual Basic nie pozwala na tworzenie metod za pomocą zwracanych wartości, ale umożliwia korzystanie z wartości zwracanych przez odwołanie. Innymi słowy, można wywołać metodę z wartością zwracaną przez odwołanie i zmodyfikować tę wartość zwracaną, a zmiany wartości zwracanej odwołania są odzwierciedlone w danych wywołanej metody.
 
-## <a name="modifying-the-ref-return-value-directly"></a>Modyfikowanie bezpośrednio zwracana wartość ref
+## <a name="modifying-the-ref-return-value-directly"></a>Bezpośrednie modyfikowanie ref zwracanej wartości
 
-Dla metod, które zawsze powiedzie się i nie mają `ByRef` parametry, zwracana wartość odniesienia można zmodyfikować bezpośrednio. W tym celu przypisywania nową wartość do wyrażenia, które zwraca wartość zwracaną odwołania. 
+Dla metod, które zawsze kończą się powodzeniem i nie mają parametrów `ByRef`, można zmodyfikować wartość zwracaną bezpośrednio odwołania. Można to zrobić, przypisując nową wartość do wyrażeń, które zwracają wartość zwracaną przez odwołanie.
 
-Następujące C# przykładzie zdefiniowano `NumericValue.IncrementValue` metodę, która zwiększa wartość będącą liczbą wewnętrzny i zwraca go jako odwołanie zwracają wartość. 
+W poniższym C# przykładzie zdefiniowano metodę `NumericValue.IncrementValue`, która zwiększa wartość wewnętrzną i zwraca ją jako wartość zwracaną przez odwołanie.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/ref-returns1.cs)]
 
-Odwołanie zwracana wartość jest następnie modyfikowana przez obiekt wywołujący w poniższym przykładzie w języku Visual Basic. Należy pamiętać, że wiersz z `NumericValue.IncrementValue` wywołanie metody nie przypisuje wartość do metody. Zamiast tego przypisuje wartość do wartości zwracane odwołanie zwracany przez metodę.
+Wartość zwracana odwołania jest następnie modyfikowana przez obiekt wywołujący w poniższym przykładzie Visual Basic. Należy zauważyć, że wiersz z wywołaniem metody `NumericValue.IncrementValue` nie przypisuje wartości do metody. Zamiast tego przypisuje wartość do wartości zwracanej odwołania zwracanej przez metodę.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/procedures/use-ref-returns1.vb)]
 
-## <a name="using-a-helper-method"></a>Za pomocą innej metody pomocnika
+## <a name="using-a-helper-method"></a>Korzystanie z metody pomocnika
 
-W innych przypadkach modyfikując wartość zwracaną odwołanie do wywołania metody bezpośrednio może nie zawsze jest pożądane. Na przykład metoda wyszukiwania, które zwraca ciąg może nie zawsze znaleźć dopasowania. W takim przypadku chcesz zmodyfikować zwracanej wartości odniesienia, tylko w przypadku, jeśli wyszukiwanie zakończy się pomyślnie.
+W innych przypadkach modyfikowanie wartości zwracanej przez wywołanie metody bezpośrednio może być niewskazane. Na przykład Metoda wyszukiwania zwracająca ciąg może nie zawsze znaleźć dopasowania. W takim przypadku należy zmodyfikować wartość zwrotną odwołania tylko wtedy, gdy wyszukiwanie zakończyło się pomyślnie.
 
-Następujące C# przykład ilustruje ten scenariusz. Definiuje on `Sentence` klasy w C# obejmuje `FindNext` metodę, która umożliwia znalezienie następnego wyrazu w zdaniu, zaczynającą się podanym podciągiem. Ten ciąg jest zwracany jako wartość zwracana przez odwołanie, a `Boolean` zmiennej przekazywany przez odwołanie do metody wskazuje, czy wyszukiwanie zakończyło się pomyślnie. Dokumentacja zwracana wartość wskazuje, czy wywołujący można nie tylko do odczytu zwrócona wartość; on również zmodyfikować go, a tej zmiany jest widoczny w danych znajdujących się wewnętrznie w `Sentence` klasy.
+Poniższy C# przykład ilustruje ten scenariusz. Definiuje klasę `Sentence`, która jest zapisywana w C# systemie, zawiera metodę `FindNext`, która umożliwia znalezienie następnego wyrazu w zdaniu rozpoczynającym się od określonego podciągu. Ciąg jest zwracany jako wartość zwracana przez odwołanie, a zmienna `Boolean` przekazana przez odwołanie do metody wskazuje, czy wyszukiwanie zakończyło się pomyślnie. Zwracana wartość odwołania wskazuje, że obiekt wywołujący nie może odczytać zwracanej wartości; może także ją modyfikować i modyfikacja jest odzwierciedlana w danych zawartych wewnętrznie w klasie `Sentence`.
 
 [!code-csharp[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 
-Bezpośrednie modyfikowanie odwołanie zwracana wartość w tym przypadku nie są wiarygodne, ponieważ wywołania metody które może się nie powieść znaleźć dopasowania i powrócić pierwszy wyraz w zdaniu. W takim przypadku obiekt wywołujący przypadkowo zmodyfikuje pierwszy wyraz zdania. Można to zapobiegać przez obiekt wywołujący, zwracając `null` (lub `Nothing` w języku Visual Basic). Ale w takim przypadku próby zmodyfikowania ciągu, którego wartością jest `Nothing` zgłasza <xref:System.NullReferenceException>. Jeśli również można zapobiegać przez obiekt wywołujący, zwracając <xref:System.String.Empty?displayProperty=nameWithType>, ale wymaga to, że obiekt wywołujący definiowania zmiennej ciągu, którego wartością jest <xref:System.String.Empty?displayProperty=nameWithType>. Gdy obiekt wywołujący może zmodyfikować te parametry, modyfikacji, sama służy nie, ponieważ modyfikacji ciągu nie ma relacji wyrazy w zdaniu przechowywane przez `Sentence` klasy.
+Bezpośrednie modyfikowanie referencyjnej wartości zwracanej w tym przypadku nie jest niezawodne, ponieważ wywołanie metody może nie znaleźć dopasowania i zwrócić pierwsze słowo w zdaniu. W takim przypadku obiekt wywołujący będzie przypadkowo modyfikować pierwszy wyraz zdania. Może to uniemożliwić wywołującemu zwrócenie `null` (lub `Nothing` w Visual Basic). Ale w tym przypadku próbuje zmodyfikować ciąg, którego wartość jest `Nothing` zgłasza <xref:System.NullReferenceException>. Jeśli może być również uniemożliwione przez obiekt wywołujący, zwraca <xref:System.String.Empty?displayProperty=nameWithType>, ale wymaga, aby obiekt wywołujący definiował zmienną ciągu, której wartość jest <xref:System.String.Empty?displayProperty=nameWithType>. Obiekt wywołujący może zmodyfikować ten ciąg, ale modyfikacja nie będzie miało zastosowania, ponieważ zmodyfikowany ciąg nie ma relacji do wyrazów w zdaniu przechowywanym przez klasę `Sentence`.
 
-Najlepszym sposobem obsługi tego scenariusza jest przekazać odwołanie wartość zwracaną przez odwołanie do metody pomocnika. Metoda pomocnika zawiera następnie logika do określenia, czy wywołanie metody powiodło się, a jeśli go tak, aby zmodyfikować odwołania zwracają wartość. W poniższym przykładzie przedstawiono potencjalne zastosowanie.
+Najlepszym sposobem obsługi tego scenariusza jest przekazanie wartości zwracanej odwołania przez odwołanie do metody pomocnika. Metoda pomocnika zawiera następnie logikę, aby określić, czy wywołanie metody powiodło się, a jeśli tak, aby zmodyfikować wartość zwracaną przez odwołanie. W poniższym przykładzie przedstawiono możliwe wdrożenie.
 
 [!code-vb[Ref-Return](../../../../../samples/snippets/visualbasic/getting-started/ref-return-helper.vb#1)]
 

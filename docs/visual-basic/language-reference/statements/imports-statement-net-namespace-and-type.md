@@ -16,21 +16,21 @@ helpviewer_keywords:
 - aliases [Visual Basic], import
 - declared elements [Visual Basic], container elements
 ms.assetid: 7062f8aa-d890-4232-9eed-92836e13fb6e
-ms.openlocfilehash: a0b7a6a5fd16dc0daa620e6b490ddfdeb0e7c80e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 62b208d4795d0370cb6eace7f45ef42551e6960f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912388"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581778"
 ---
 # <a name="imports-statement-net-namespace-and-type"></a>Imports — Instrukcja (.NET Namespace i Type)
 Umożliwia odwoływanie się do nazw typów bez kwalifikacji przestrzeni nazw.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Imports [ aliasname = ] namespace  
--or-  
+' -or-  
 Imports [ aliasname = ] namespace.element  
 ```  
   
@@ -38,61 +38,61 @@ Imports [ aliasname = ] namespace.element
   
 |Termin|Definicja|  
 |---|---|  
-|`aliasname`|Opcjonalna. Alias lub nazwa *importu* , do `namespace` którego kod może odwoływać się zamiast pełnego ciągu kwalifikacji. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`namespace`|Wymagane. W pełni kwalifikowana nazwa importowanej przestrzeni nazw. Może być ciągiem przestrzeni nazw zagnieżdżonych na dowolnym poziomie.|  
+|`aliasname`|Opcjonalny. *Alias importu* lub nazwa, za pomocą którego kod może odwoływać się do `namespace` zamiast pełnego ciągu kwalifikacji. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`namespace`|Wymagany. W pełni kwalifikowana nazwa importowanej przestrzeni nazw. Może być ciągiem przestrzeni nazw zagnieżdżonych na dowolnym poziomie.|  
 |`element`|Opcjonalny. Nazwa elementu programowania zadeklarowanego w przestrzeni nazw. Może być dowolnym elementem kontenera.|  
   
 ## <a name="remarks"></a>Uwagi  
- `Imports` Instrukcja włącza typy, które są zawarte w danej przestrzeni nazw, mają być bezpośrednio przywoływane.  
+ Instrukcja `Imports` umożliwia bezpośrednie wywoływanie typów zawartych w danej przestrzeni nazw.  
   
- Można podać nazwę pojedynczej przestrzeni nazw lub ciąg zagnieżdżonych przestrzeni nazw. Każda zagnieżdżona przestrzeń nazw jest oddzielona od kolejnej przestrzeni nazw wyższego`.`poziomu o kropkę (), jak pokazano w poniższym przykładzie.  
+ Można podać nazwę pojedynczej przestrzeni nazw lub ciąg zagnieżdżonych przestrzeni nazw. Każda zagnieżdżona przestrzeń nazw jest oddzielona od kolejnej przestrzeni nazw wyższego poziomu przez okres (`.`), jak pokazano w poniższym przykładzie.  
   
  `Imports System.Collections.Generic`  
   
- Każdy plik źródłowy może zawierać dowolną liczbę `Imports` instrukcji. Muszą one być zgodne z dowolnymi deklaracjami `Option Strict` opcji, takimi jak instrukcja, i muszą poprzedzać deklaracje `Module` elementów `Class` programistycznych, takich jak lub instrukcji.  
+ Każdy plik źródłowy może zawierać dowolną liczbę instrukcji `Imports`. Muszą one być zgodne z dowolnymi deklaracjami opcji, takimi jak instrukcja `Option Strict`, i muszą poprzedzać deklaracje elementów programistycznych, takie jak `Module` lub `Class` instrukcji.  
   
- Można używać `Imports` tylko na poziomie pliku. Oznacza to, że kontekst deklaracji dla importu musi być plikiem źródłowym i nie może być przestrzenią nazw, klasą, strukturą, modułem, interfejsem, procedurą lub blokiem.  
+ @No__t_0 można użyć tylko na poziomie pliku. Oznacza to, że kontekst deklaracji dla importu musi być plikiem źródłowym i nie może być przestrzenią nazw, klasą, strukturą, modułem, interfejsem, procedurą lub blokiem.  
   
- Należy zauważyć, `Imports` że instrukcja nie udostępnia elementów z innych projektów i zestawów dostępnych dla projektu. Importowanie nie ma miejsca na ustawienie odwołania. Tylko eliminuje konieczność kwalifikowania nazw, które są już dostępne dla projektu. Aby uzyskać więcej informacji, zobacz "Importowanie zawierających elementy" w odniesieniu [do zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+ Należy zauważyć, że instrukcja `Imports` nie sprawia, że elementy z innych projektów i zestawów są dostępne dla projektu. Importowanie nie ma miejsca na ustawienie odwołania. Tylko eliminuje konieczność kwalifikowania nazw, które są już dostępne dla projektu. Aby uzyskać więcej informacji, zobacz "Importowanie zawierających elementy" w [odniesieniu do zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 > [!NOTE]
-> Niejawne `Imports` instrukcje można definiować przy użyciu [strony odwołania, projektanta projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Aby uzyskać więcej informacji, zobacz [jak: Dodaj lub Usuń zaimportowane przestrzenie nazw](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)(Visual Basic).  
+> Niejawne instrukcje `Imports` można definiować przy użyciu [strony odwołania, projektanta projektu (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic). Aby uzyskać więcej informacji, zobacz [jak: Dodawanie lub usuwanie importowanych przestrzeni nazw (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic).  
   
 ## <a name="import-aliases"></a>Zaimportuj aliasy  
  *Alias importu* definiuje alias dla przestrzeni nazw lub typu. Aliasy importu są przydatne, gdy trzeba użyć elementów o tej samej nazwie, które są zadeklarowane w co najmniej jednym obszarze nazw. Aby uzyskać więcej informacji i zapoznać się z przykładem, zobacz "Kwalifikowanie nazwy elementu" w [odwołaniach do zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
- Nie należy deklarować elementu członkowskiego na poziomie modułu o tej samej nazwie co `aliasname`. Jeśli to zrobisz, kompilator Visual Basic używa `aliasname` tylko dla zadeklarowanego elementu członkowskiego i nie rozpoznaje go już jako aliasu importu.  
+ Nie należy deklarować elementu członkowskiego na poziomie modułu o takiej samej nazwie jak `aliasname`. W takim przypadku kompilator Visual Basic używa `aliasname` tylko dla zadeklarowanego elementu członkowskiego i nie rozpoznaje go jako aliasu importu.  
   
  Mimo że składnia używana do deklarowania aliasu importu jest taka sama jak ta, która jest używana do importowania prefiksu przestrzeni nazw XML, wyniki są różne. Alias importu może służyć jako wyrażenie w kodzie, natomiast prefiks przestrzeni nazw XML może być używany tylko w literałach XML lub właściwościach osi XML jako prefiks dla kwalifikowanego elementu lub nazwy atrybutu.  
   
 ### <a name="element-names"></a>Nazwy elementów  
- Jeśli dostarczasz `element`, musi reprezentować *element kontenera*, czyli element programistyczny, który może zawierać inne elementy. Elementy kontenera obejmują klasy, struktury, moduły, interfejsy i wyliczenia.  
+ Jeśli podasz `element`, musi on reprezentować *element kontenera*, czyli element programistyczny, który może zawierać inne elementy. Elementy kontenera obejmują klasy, struktury, moduły, interfejsy i wyliczenia.  
   
- Zakres elementów udostępnianych przez `Imports` instrukcję zależy od tego, czy określono. `element` Jeśli określisz tylko `namespace`, wszystkie jednoznacznie nazwane elementy członkowskie tej przestrzeni nazw i elementy członkowskie elementów kontenera w tej przestrzeni nazw są dostępne bez kwalifikacji. W przypadku określenia obu `namespace` elementów `element`i, tylko elementy członkowskie tego elementu są dostępne bez kwalifikacji.  
+ Zakres elementów udostępnianych przez instrukcję `Imports` zależy od tego, czy określono `element`. Jeśli określisz tylko `namespace`, wszystkie jednoznacznie nazwane elementy członkowskie tej przestrzeni nazw oraz członkowie elementów kontenera w tej przestrzeni nazw są dostępne bez kwalifikacji. Jeśli określisz zarówno `namespace` i `element`, tylko elementy członkowskie tego elementu są dostępne bez kwalifikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwraca wszystkie foldery w C:\ Katalog przy użyciu <xref:System.IO.DirectoryInfo> klasy.  
+ Poniższy przykład zwraca wszystkie foldery w C:\ Katalog przy użyciu klasy <xref:System.IO.DirectoryInfo>.  
   
- Kod nie zawiera żadnych `Imports` instrukcji w górnej części pliku. W związku z tym,, <xref:Microsoft.VisualBasic.ControlChars.CrLf> i odwołania są całkowicie kwalifikowane do przestrzeni nazw. `DirectoryInfo` <xref:System.Text.StringBuilder>  
+ Kod nie zawiera instrukcji `Imports` w górnej części pliku. W związku z tym odwołania `DirectoryInfo`, <xref:System.Text.StringBuilder> i <xref:Microsoft.VisualBasic.ControlChars.CrLf> są całkowicie kwalifikowane do przestrzeni nazw.  
   
  [!code-vb[VbVbalrStatements#152](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#152)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera `Imports` instrukcje dla przestrzeni nazw, do których się odwołuje. W związku z tym typy nie muszą być w pełni kwalifikowane z przestrzeniami nazw.  
+ Poniższy przykład zawiera instrukcje `Imports` dla przestrzeni nazw, do których się odwołuje. W związku z tym typy nie muszą być w pełni kwalifikowane z przestrzeniami nazw.  
   
  [!code-vb[VbVbalrStatements#153](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#153)]  
   
  [!code-vb[VbVbalrStatements#154](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#154)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera `Imports` instrukcje tworzące aliasy dla przestrzeni nazw, do których się odwołuje. Typy są kwalifikowane przy użyciu aliasów.  
+ Poniższy przykład zawiera instrukcje `Imports`, które tworzą aliasy dla przywoływanych przestrzeni nazw. Typy są kwalifikowane przy użyciu aliasów.  
   
  [!code-vb[VbVbalrStatements#155](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#155)]  
   
  [!code-vb[VbVbalrStatements#156](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#156)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera `Imports` instrukcje tworzące aliasy dla typów, do których istnieją odwołania. Aliasy są używane do określania typów.  
+ Poniższy przykład zawiera instrukcje `Imports`, które tworzą aliasy dla typów, do których istnieją odwołania. Aliasy są używane do określania typów.  
   
  [!code-vb[VbVbalrStatements#157](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class12.vb#157)]  
   

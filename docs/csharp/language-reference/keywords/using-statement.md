@@ -1,59 +1,70 @@
 ---
-title: za pomocą instrukcji - C# odwołania
+title: using — C# odwołanie
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: e1a1a960fa69be593ea01cab51be576b0055fd5e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632899"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579180"
 ---
-# <a name="using-statement-c-reference"></a>Using — instrukcja (C# odwołania)
+# <a name="using-statement-c-reference"></a>using — instrukcjaC# (Reference)
 
-Miejsce wygodnej składni, która zapewnia prawidłowe użycie <xref:System.IDisposable> obiektów.
+Zapewnia wygodną składnię, która zapewnia poprawne korzystanie z <xref:System.IDisposable> obiektów.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak używać `using` instrukcji.
+Poniższy przykład pokazuje, jak używać instrukcji `using`.
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
+Począwszy od C# 8,0, można użyć następującej składni alternatywnej dla instrukcji `using`, która nie wymaga nawiasów klamrowych:
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
 ## <a name="remarks"></a>Uwagi
 
-<xref:System.IO.File> i <xref:System.Drawing.Font> to przykłady typów zarządzanych, uzyskujących dostęp do niezarządzanych zasobów (w tym dojścia do plików wielkości liter i konteksty urządzenia). Istnieje wiele innych rodzajów zasobów niezarządzanych i typy biblioteki klas, które hermetyzują je. Typy takie musi implementować <xref:System.IDisposable> interfejsu.
+<xref:System.IO.File> i <xref:System.Drawing.Font> są przykładami typów zarządzanych, które uzyskują dostęp do niezarządzanych zasobów (w tym przypadku dojścia do plików i konteksty urządzenia). Istnieje wiele innych rodzajów niezarządzanych zasobów i typów bibliotek klas, które hermetyzują. Wszystkie takie typy muszą implementować interfejs <xref:System.IDisposable>.
 
-Gdy okres istnienia `IDisposable` obiektu jest ograniczona do jednej metody, należy zadeklarować i Utwórz wystąpienie w `using` instrukcji. `using` Instrukcja wywołuje <xref:System.IDisposable.Dispose%2A> metody na obiekt w prawidłowy sposób i (Jeśli używasz tego jak pokazano wcześniej) powoduje także sam wykraczać poza zakres obiekt zaraz <xref:System.IDisposable.Dispose%2A> jest wywoływana. W ramach `using` bloku, obiekt jest tylko do odczytu i nie można zmodyfikować ani ponownie przypisane.
+Gdy okres istnienia obiektu `IDisposable` jest ograniczony do pojedynczej metody, należy zadeklarować ją i utworzyć jej wystąpienie w instrukcji `using`. Instrukcja `using` wywołuje metodę <xref:System.IDisposable.Dispose%2A> na obiekcie w prawidłowy sposób i (gdy jest używana wcześniej), powoduje również, że obiekt nie wyjdzie poza zakres od razu po wywołaniu <xref:System.IDisposable.Dispose%2A>. W bloku `using` obiekt jest tylko do odczytu i nie można go modyfikować ani ponownie przypisywać.
 
-`using` Instrukcji zapewnia, że <xref:System.IDisposable.Dispose%2A> jest wywoływana, nawet jeśli wystąpi wyjątek w obrębie `using` bloku. Ten sam efekt można osiągnąć, umieszczając w obiekcie wewnątrz właściwości `try` bloku, a następnie wywołując <xref:System.IDisposable.Dispose%2A> w `finally` zablokować; w rzeczywistości jest to sposób, w jaki `using` instrukcji jest tłumaczony przez kompilator. W przykładzie kodu wcześniej rozwija następujący kod w czasie kompilacji (Uwaga: bardzo nawiasy klamrowe, aby utworzyć ograniczony zakres dla obiektu "):
+Instrukcja `using` zapewnia, że <xref:System.IDisposable.Dispose%2A> jest wywoływana, nawet jeśli wystąpi wyjątek w bloku `using`. Można osiągnąć ten sam wynik, umieszczając obiekt wewnątrz bloku `try`, a następnie wywołując <xref:System.IDisposable.Dispose%2A> w bloku `finally`; w rzeczywistości jest to sposób tłumaczenia instrukcji `using` przez kompilator. Przykładowy kod jest rozwinięty do poniższego kodu w czasie kompilacji (należy zwrócić uwagę na dodatkowe nawiasy klamrowe, aby utworzyć ograniczony zakres dla obiektu):
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-Aby uzyskać więcej informacji na temat `try` - `finally` poufności informacji, zobacz [try-finally](try-finally.md) tematu.
+Nowsza składnia instrukcji `using` Wykonuje translację na bardzo podobny kod. Zostanie otwarty blok `try`, w którym jest zadeklarowana zmienna. Blok `finally` jest dodawany w pobliżu otaczającego bloku, na ogół na końcu metody.
 
-Wiele wystąpień tego typu może być zadeklarowana w `using` instrukcji, jak pokazano w poniższym przykładzie:
+Aby uzyskać więcej informacji na temat instrukcji `try` - `finally`, zobacz temat [try-finally](try-finally.md) .
+
+W instrukcji `using` można zadeklarować wiele wystąpień typu, jak pokazano w następującym przykładzie:
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
 
-Można utworzyć wystąpienia obiektu zasobu, a następnie przekaż zmienną `using` instrukcji, ale nie jest najlepszym rozwiązaniem. W takim przypadku po liście kontroli `using` zablokować, pozostaje obiekt w zakresie, ale prawdopodobnie nie ma dostępu do niezarządzanych zasobów. Innymi słowy nie są w pełni inicjalizacji dłużej. Jeśli spróbujesz użyć obiektu poza `using` zablokować ryzyka powoduje zgłoszenie wyjątku. Z tego powodu zaleca ogólnie do utworzenia wystąpienia obiektu w `using` instrukcji i jego zakres, aby ograniczyć `using` bloku.
+Można połączyć wiele deklaracji tego samego typu, używając nowej składni wprowadzonej przy użyciu C# również 8. Pokazano to w następującym przykładzie:
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
+
+Można utworzyć wystąpienie obiektu zasobu, a następnie przekazać zmienną do instrukcji `using`, ale nie jest to najlepsze rozwiązanie. W takim przypadku, gdy kontrolka opuszcza blok `using`, obiekt pozostaje w zakresie, ale prawdopodobnie nie ma dostępu do jego niezarządzanych zasobów. Innymi słowy, nie jest już w pełni zainicjowany. Jeśli spróbujesz użyć obiektu poza blokiem `using`, istnieje ryzyko, że zostanie zgłoszony wyjątek. Z tego powodu zwykle lepiej jest utworzyć wystąpienie obiektu w instrukcji `using` i ograniczyć jego zakres do bloku `using`.
 
 [!code-csharp[csrefKeywordsNamespace#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#7)]
 
-Aby uzyskać więcej informacji na temat usuwania `IDisposable` obiekty, zobacz [używanie obiektów implementujących interfejs IDisposable](../../../standard/garbage-collection/using-objects.md).
+Aby uzyskać więcej informacji na temat usuwania obiektów `IDisposable`, zobacz [Używanie obiektów implementujących interfejs IDisposable](../../../standard/garbage-collection/using-objects.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](~/_csharplang/spec/statements.md#the-using-statement) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [instrukcja using](~/_csharplang/spec/statements.md#the-using-statement) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [using, dyrektywa](using-directive.md)
 - [Odzyskiwanie pamięci](../../../standard/garbage-collection/index.md)
 - [Używanie obiektów implementujących interfejs IDisposable](../../../standard/garbage-collection/using-objects.md)
 - [Interfejs IDisposable](xref:System.IDisposable)
+- [Instrukcja Using w C# 8,0](~/_csharplang/proposals/csharp-8.0/using.md)

@@ -4,54 +4,54 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d874788830ad15325ad93858e48c16cce20056cb
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590402"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581956"
 ---
 # <a name="visual-basic-guide"></a>Przewodnik po Visual Basic
 
-Visual Basic służy do efektywnego tworzenia bezpiecznych i zorientowanych obiektowo aplikacji. Pozwala on deweloperom tworzyć aplikacje przeznaczone dla systemu Windows, przeglądarek i urządzeń przenośnych. Tak jak w przypadku wszystkich języków dla platformy Microsoft .NET Framework, programy napisane w Visual Basic korzystają z ulepszonych zabezpieczeń i możliwości języka w zakresie współdziałania.  
-  
-Obecna generacja języka Visual Basic jest wierna tej tradycji, umożliwiając szybkie i łatwe tworzenie aplikacji opartych na platformie .NET Framework.  
+Visual Basic jest tworzony w celu wydajnego tworzenia bezpiecznych aplikacji typu i zorientowanych obiektowo. Visual Basic pozwala deweloperom na kierowanie urządzeń z systemem Windows, sieci Web i urządzeniami przenośnymi. Podobnie jak w przypadku wszystkich języków przeznaczonych dla platformy Microsoft .NET, programy w Visual Basic korzystać z zabezpieczeń i współdziałania języka.
 
-Jeśli nie masz jeszcze programu Visual Basic, możesz pobrać bezpłatną wersję programu Visual Studio, który zawiera Visual Basic z [programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lokacji.
+Ta generacja Visual Basic kontynuuje tradycję zapewniania szybkiego i łatwego tworzenia aplikacji opartych na .NET Framework.
 
-## <a name="in-this-section"></a>W tej sekcji  
+Jeśli nie masz jeszcze Visual Basic, możesz pobrać bezpłatną wersję programu Visual Studio, która zawiera Visual Basic z witryny [programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) .
 
-[Wprowadzenie](../visual-basic/getting-started/index.md)\
-Ułatwia rozpoczęcie pracy dzięki liście nowości oraz funkcji dostępnych w różnych wersjach produktu.  
-   
-[Pojęcia związane z programowaniem](../visual-basic/programming-guide/concepts/index.md)\
-Przedstawia informacje o koncepcje językowe, które są najbardziej przydatne dla programistów Visual Basic.
+## <a name="in-this-section"></a>W tej sekcji
 
-[Struktura programu i konwencje](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)\
-Zawiera dokumentację podstawowych konwencji dotyczących struktury i kodu języka Visual Basic, takich jak konwencje nazewnictwa, komentarze w kodzie i ograniczenia w języku Visual Basic.  
-  
-[Funkcje języka Visual Basic](../visual-basic/programming-guide/language-features/index.md)\
-Zawiera linki do tematów, w których przedstawiono i omówiono ważne funkcje języka Visual Basic, w tym literały LINQ i XML.  
-   
-[Odwołanie w Visual Basic](../visual-basic/reference/index.md)\
-Zawiera informacje o języku i kompilatorze Visual Basic.  
+- [Wprowadzenie](../visual-basic/getting-started/index.md)  
+  Pomaga rozpocząć pracę, tworząc listę nowości i dostępnych w różnych wersjach produktu.
 
-[Tworzenie aplikacji za pomocą języka Visual Basic](../visual-basic/developing-apps/index.md)\
-Zawiera omówienie różnych aspektów programowania w języku Visual Basic, takie jak zabezpieczenia, obsługa wyjątków i korzystanie z biblioteki klas .NET Framework.
+- [Pojęcia związane z programowaniem](../visual-basic/programming-guide/concepts/index.md)  
+  Przedstawia koncepcje języka, które są najbardziej przydatne do Visual Basic programistów.
 
-[Usługa międzyoperacyjna modelu COM](../visual-basic/programming-guide/com-interop/index.md)\
-Wyjaśnia, współdziałanie skojarzone z tworzenia i używania składnika object model (COM) obiektów za pomocą Visual Basic.  
-  
-[Przykłady](../visual-basic/sample-applications.md)\
-Zawiera informacje o przykładach.  
-  
-[Instruktaże](../visual-basic/walkthroughs.md)\
-Zawiera linki do szczegółowych instrukcji dla typowych scenariuszy.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
+- [Struktura programu i konwencje związane z kodami](../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+  Zawiera dokumentację na temat podstawowej struktury i Konwencji kodów Visual Basic takich jak konwencje nazewnictwa, komentarze w kodzie i ograniczenia w ramach Visual Basic.
 
-[Rozpocznij tworzenie aplikacji za pomocą programu Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)\
-Zawiera linki do tematów dotyczących podstaw programu Visual Studio.  
-  
-[Przeglądarka interfejsu API .NET](../../api/index.md)\
-Zawiera wejście do biblioteki klas, interfejsów i typów wartości, które znajdują się w Microsoft .NET Framework SDK.
+- [Funkcje języka Visual Basic](../visual-basic/programming-guide/language-features/index.md)  
+  Zawiera łącza do tematów, które wprowadzają i omawiają ważne funkcje Visual Basic, w tym literały LINQ i XML.
+
+- [Informacje Visual Basic](../visual-basic/reference/index.md)  
+  Zawiera Visual Basic informacji o języku i kompilatorze.
+
+- [Tworzenie aplikacji za pomocą Visual Basic](../visual-basic/developing-apps/index.md)  
+  Omawia różne aspekty programowania w Visual Basic, takie jak zabezpieczenia, obsługa wyjątków i korzystanie z biblioteki klas .NET Framework.
+
+- [Usługa międzyoperacyjna modelu COM](../visual-basic/programming-guide/com-interop/index.md)  
+  Wyjaśnia problemy ze współdziałaniem związane z tworzeniem i używaniem obiektów COM (Component Object Model) z Visual Basic.
+
+- [Przykłady](../visual-basic/sample-applications.md)  
+  Zawiera informacje o przykładach.
+
+- [Przewodniki](../visual-basic/walkthroughs.md)  
+  Zawiera łącza do instrukcji krok po kroku dla typowych scenariuszy.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+- [Wprowadzenie do programowania w programie Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
+  Zawiera łącza do tematów, które ułatwiają zapoznanie się z podstawą programu Visual Studio.
+
+- [Przeglądarka interfejsów API platformy .NET](../../api/index.md)  
+  Zawiera wpis do biblioteki klas, interfejsów i typów wartości, które są zawarte w zestawie Microsoft .NET Framework SDK.

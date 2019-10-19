@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat scenariuszy Apache Spark i danych Big
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: ccf41f08df3c68a039210320f14219e6b6229a64
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72396237"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583485"
 ---
 # <a name="what-is-apache-spark"></a>Co to jest Apache Spark?
 
@@ -69,30 +69,30 @@ Każdy wykonawca lub węzeł procesu roboczego odbiera zadanie ze sterownika i w
 
 Menedżer klastra komunikuje się zarówno z sterownikiem, jak i modułami wykonującymi:
 
-- Zarządzanie alokacją zasobów
-- Zarządzanie dzieleniem programu
-- Zarządzanie wykonywaniem programu
+* Zarządzanie alokacją zasobów
+* Zarządzanie dzieleniem programu
+* Zarządzanie wykonywaniem programu
 
 ## <a name="language-support"></a>Obsługa języków
 
 Apache Spark obsługuje następujące języki programowania:
 
-- Scala
-- Python
-- Java
-- SQL
-- R
-- .NET
+* Scala
+* Python
+* Java
+* SQL
+* R
+* .NET
 
 ## <a name="spark-apis"></a>Interfejsy API platformy Spark
 
 Apache Spark obsługuje następujące interfejsy API:
 
-- [Interfejs API platformy Spark Scala](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
-- [Interfejs API języka Java platformy Spark](https://spark.apache.org/docs/2.2.0/api/java/index.html)
-- [Interfejs API języka Python platformy Spark](https://spark.apache.org/docs/2.2.0/api/python/index.html)
-- [Interfejs API platformy Spark języka R](https://spark.apache.org/docs/2.2.0/api/R/index.html)
-- [Platforma Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funkcje wbudowane
+* [Interfejs API platformy Spark Scala](https://spark.apache.org/docs/2.2.0/api/scala/index.html)
+* [Interfejs API języka Java platformy Spark](https://spark.apache.org/docs/2.2.0/api/java/index.html)
+* [Interfejs API języka Python platformy Spark](https://spark.apache.org/docs/2.2.0/api/python/index.html)
+* [Interfejs API platformy Spark języka R](https://spark.apache.org/docs/2.2.0/api/R/index.html)
+* [Platforma Spark SQL](https://spark.apache.org/docs/latest/api/sql/index.html), funkcje wbudowane
 
 ## <a name="next-steps"></a>Następne kroki
 

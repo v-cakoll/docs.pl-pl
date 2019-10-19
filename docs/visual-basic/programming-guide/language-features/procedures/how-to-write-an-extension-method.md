@@ -6,12 +6,12 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d01596d50db8ba1078e8ac82caa951418645c977
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 4671728330614f0f3da23fd90f5e635ddcf46578
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004617"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581156"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Porady: zapisywanie metody rozszerzenia (Visual Basic)
 
@@ -32,8 +32,8 @@ Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Metod
     ```vb
     <Extension()>
     ```
- 
-   Należy zauważyć, że atrybut `Extension` może być stosowany tylko do metody (`Sub` lub `Function` procedury) w [Module](../../../language-reference/statements/module-statement.md)Visual Basic. Jeśli zastosujesz go do metody w `Class` lub `Structure`, kompilator Visual Basic generuje błąd [BC36551](../../../misc/bc36551.md), "metody rozszerzające można definiować tylko w modułach".
+
+    Należy zauważyć, że atrybut `Extension` może być stosowany tylko do metody (`Sub` lub `Function` procedury) w [Module](../../../language-reference/statements/module-statement.md)Visual Basic. Jeśli zastosujesz go do metody w `Class` lub `Structure`, kompilator Visual Basic generuje błąd [BC36551](../../../misc/bc36551.md), "metody rozszerzające można definiować tylko w modułach".
 
 4. Zadeklaruj metodę w zwykły sposób, z tą różnicą, że typ pierwszego parametru musi być typem danych, który ma zostać rozszerzona.
 
@@ -46,8 +46,8 @@ Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Metod
 
 ## <a name="example"></a>Przykład
 
- Poniższy przykład deklaruje metodę rozszerzenia w module `StringExtensions`. Drugi moduł, `Module1`, importuje `StringExtensions` i wywołuje metodę. Metoda rozszerzająca musi znajdować się w zakresie, gdy jest wywoływana. Metoda rozszerzająca `PrintAndPunctuate` rozszerza klasę <xref:System.String> za pomocą metody, która wyświetla wystąpienie ciągu, po którym następuje ciąg symboli interpunkcyjnych wysłanych jako parametr.
-  
+Poniższy przykład deklaruje metodę rozszerzenia w module `StringExtensions`. Drugi moduł, `Module1`, importuje `StringExtensions` i wywołuje metodę. Metoda rozszerzająca musi znajdować się w zakresie, gdy jest wywoływana. Metoda rozszerzająca `PrintAndPunctuate` rozszerza klasę <xref:System.String> za pomocą metody, która wyświetla wystąpienie ciągu, po którym następuje ciąg symboli interpunkcyjnych wysłanych jako parametr.
+
 ```vb
 ' Declarations will typically be in a separate module.
 Imports System.Runtime.CompilerServices
@@ -68,23 +68,23 @@ End Module
 Imports ConsoleApplication2.StringExtensions
 
 Module Module1
-  
+
     Sub Main()
         Dim example = "Hello"
         example.PrintAndPunctuate("?")
         example.PrintAndPunctuate("!!!!")
     End Sub
-    
+
 End Module
 ```
-  
- Należy zauważyć, że metoda jest zdefiniowana z dwoma parametrami i wywoływana z tylko jedną. Pierwszy parametr, `aString`, w definicji metody jest powiązany z `example`, wystąpieniem `String`, który wywołuje metodę. Dane wyjściowe przykładu są następujące:
-  
- ```console
- Hello?
- Hello!!!!
- ```
-  
+
+Należy zauważyć, że metoda jest zdefiniowana z dwoma parametrami i wywoływana z tylko jedną. Pierwszy parametr, `aString`, w definicji metody jest powiązany z `example`, wystąpieniem `String`, który wywołuje metodę. Dane wyjściowe przykładu są następujące:
+
+```console
+Hello?
+Hello!!!!
+```
+
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>

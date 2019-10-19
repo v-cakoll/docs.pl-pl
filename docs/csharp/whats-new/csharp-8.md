@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 6b5602db6ee61b1d9db4c906d6a14ea2f918ad0a
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275782"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579134"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -23,7 +23,7 @@ C#8,0 dodaje do C# języka następujące funkcje i ulepszenia:
 - [Korzystanie z deklaracji](#using-declarations)
 - [Statyczne funkcje lokalne](#static-local-functions)
 - [Nierozporządzalne struktury ref](#disposable-ref-structs)
-- [Typy odwołań dopuszczających wartość null](#nullable-reference-types)
+- [Typy referencyjne dopuszczające wartość null](#nullable-reference-types)
 - [Strumienie asynchroniczne](#asynchronous-streams)
 - [Indeksy i zakresy](#indices-and-ranges)
 - [Przypisanie do łączenia o wartości null](#null-coalescing-assignment)
@@ -36,7 +36,7 @@ W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są
 1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
 1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
 1. Ustaw bieżący katalog na podkatalog *csharp8* dla repozytorium *try-Samples* .
-1. Uruchom polecenie `dotnet try`.
+1. Uruchom `dotnet try`.
 
 ## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
 
@@ -137,7 +137,7 @@ Poniżej przedstawiono kilka ulepszeń składni:
 
 - Zmienna jest wcześniejsza niż słowo kluczowe `switch`. Inna kolejność ułatwia odróżnienie wyrażenia Switch od instrukcji switch.
 - Elementy `case` i `:` są zastępowane `=>`. Jest to bardziej zwięzłe i intuicyjne.
-- Przypadek `default` jest zastępowany `_` Odrzuć.
+- Przypadek `default` jest zastępowany `_` odrzucania.
 - Treść to wyrażenia, a nie instrukcje.
 
 Przeciwieństwo tego samego kodu przy użyciu klasycznej instrukcji `switch`:
@@ -261,25 +261,36 @@ Techniki dopasowania wzorców można eksplorować w tym [zaawansowanym samouczku
 **Deklaracja using** jest deklaracją zmiennej poprzedzoną słowem kluczowym `using`. Informuje kompilator, że zadeklarowana zmienna powinna zostać usunięta na końcu otaczającego zakresu. Rozważmy na przykład następujący kod, który zapisuje plik tekstowy:
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
+    // Notice how we declare skippedLines after the using statement.
+    int skippedLines = 0;
     foreach (string line in lines)
     {
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
         }
+        else
+        {
+            skippedLines++;
+        }
     }
-// file is disposed here
+    // Notice how skippedLines is in scope here.
+    return skippedLines;
+    // file is disposed here
 }
 ```
 
 W poprzednim przykładzie plik jest usuwany po osiągnięciu zamykającego nawiasu klamrowego dla metody. Jest to koniec zakresu, w którym zadeklarowano `file`. Poprzedni kod jest odpowiednikiem poniższego kodu, który używa klasycznej [instrukcji using](../language-reference/keywords/using-statement.md):
 
 ```csharp
-static void WriteLinesToFile(IEnumerable<string> lines)
+static int WriteLinesToFile(IEnumerable<string> lines)
 {
+    // We must declare the variable outside of the using block
+    // so that it is in scope to be returned.
+    int skippedLines = 0;
     using (var file = new System.IO.StreamWriter("WriteLines2.txt"))
     {
         foreach (string line in lines)
@@ -288,8 +299,13 @@ static void WriteLinesToFile(IEnumerable<string> lines)
             {
                 file.WriteLine(line);
             }
+            else
+            {
+                skippedLines++;
+            }
         }
     } // file is disposed here
+    return skippedLines;
 }
 ```
 
@@ -329,9 +345,9 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Nierozporządzalne struktury ref
 
-@No__t-0 zadeklarowana za pomocą modyfikatora `ref` nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym, aby umożliwić pozbycie `ref struct`, musi on mieć dostępną metodę `void Dispose()`. Dotyczy to również deklaracji `readonly ref struct`.
+@No__t_0 zadeklarowana z modyfikatorem `ref` nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym, aby umożliwić pozbycie `ref struct`, musi on mieć dostępną metodę `void Dispose()`. Dotyczy to również deklaracji `readonly ref struct`.
 
-## <a name="nullable-reference-types"></a>Typy odwołań dopuszczających wartość null
+## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
 Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za **typ referencyjny, który nie ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z `?`, aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
 
@@ -349,7 +365,7 @@ Począwszy od C# 8,0, można tworzyć strumienie i korzystać z nich asynchronic
 1. Zwraca <xref:System.Collections.Generic.IAsyncEnumerable%601>.
 1. Metoda zawiera instrukcje `yield return` zwracające kolejne elementy w strumieniu asynchronicznym.
 
-Zużywanie strumienia asynchronicznego wymaga dodania słowa kluczowego `await` przed słowem kluczowym `foreach` podczas wyliczania elementów strumienia. Dodanie słowa kluczowego `await` wymaga metody, która wylicza strumień asynchroniczny, który ma zostać zadeklarowany za pomocą modyfikatora `async` i zwraca typ dozwolony dla metody `async`. Zwykle oznacza to zwrócenie <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Może to być <xref:System.Threading.Tasks.ValueTask> lub <xref:System.Threading.Tasks.ValueTask%601>. Metoda może jednocześnie zużywać i generować strumień asynchroniczny, co oznacza, że zwróci <xref:System.Collections.Generic.IAsyncEnumerable%601>. Poniższy kod generuje sekwencję z przedziału od 0 do 19, oczekującą 100 ms między generowaniem każdej liczby:
+Zużywanie strumienia asynchronicznego wymaga dodania słowa kluczowego `await` przed słowem kluczowym `foreach` podczas wyliczania elementów strumienia. Dodanie słowa kluczowego `await` wymaga metody, która wylicza strumień asynchroniczny, który ma zostać zadeklarowany za pomocą modyfikatora `async` i zwraca typ dozwolony dla metody `async`. Zwykle oznacza to zwrócenie <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>. Może to być również <xref:System.Threading.Tasks.ValueTask> lub <xref:System.Threading.Tasks.ValueTask%601>. Metoda może jednocześnie zużywać i generować strumień asynchroniczny, co oznacza, że zwróci <xref:System.Collections.Generic.IAsyncEnumerable%601>. Poniższy kod generuje sekwencję z przedziału od 0 do 19, oczekującą 100 ms między generowaniem każdej liczby:
 
 ```csharp
 public static async System.Collections.Generic.IAsyncEnumerable<int> GenerateSequence()
@@ -384,7 +400,7 @@ Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 - <xref:System.Range?displayProperty=nameWithType> reprezentuje Podzakres sekwencji.
 - Operator zakresu `..`, który określa początek i koniec zakresu jako jego operandy.
 
-Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` zgłasza wyjątek, podobnie jak `sequence[sequence.Length]`. Dla dowolnej liczby `n` indeks `^n` jest taki sam jak `sequence.Length - n`.
+Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` generuje wyjątek, tak jak `sequence[sequence.Length]`. Dla dowolnej liczby `n` indeks `^n` jest taka sama jak `sequence.Length - n`.
 
 Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres.
 
@@ -419,7 +435,7 @@ Poniższy kod tworzy Podzakres słowami "Quick", "brązowy" i "Fox". Zawiera `wo
 var quickBrownFox = words[1..4];
 ```
 
-Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Obejmuje `words[^2]` i `words[^1]`. Indeks końcowy `words[^0]` nie jest uwzględniony:
+Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Zawiera `words[^2]` i `words[^1]`. @No__t_0 indeksu końcowego nie jest uwzględniony:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -439,7 +455,7 @@ Można również zadeklarować zakresy jako zmienne:
 Range phrase = 1..4;
 ```
 
-Zakres może być następnie używany wewnątrz znaków `[` i `]`:
+Zakres może być następnie używany wewnątrz `[` i `]` znaków:
 
 ```csharp
 var text = words[phrase];
@@ -496,7 +512,7 @@ Aby uzyskać więcej informacji, zobacz [typy niezarządzane](../language-refere
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc w wyrażeniach zagnieżdżonych
 
-Począwszy od C# 8,0, jeśli wynikiem wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) jest typ <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, można użyć wyrażenia `stackalloc` w innych wyrażeniach:
+Rozpoczynając od C# 8,0, jeśli wynik wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) ma typ <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, można użyć wyrażenia `stackalloc` w innych wyrażeniach:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };

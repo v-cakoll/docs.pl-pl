@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie struktury (Visual Basic)'
+title: 'Porady: deklarowanie struktury (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,38 +7,38 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3090b5b8e53e5a5a990ae11c91464797bde9803
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906714"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582306"
 ---
-# <a name="how-to-declare-a-structure-visual-basic"></a>Instrukcje: Deklarowanie struktury (Visual Basic)
-Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-basic/language-reference/statements/structure-statement.md), i kończy z `End Structure` instrukcji. Między te dwie instrukcje należy zadeklarować co najmniej jeden *elementu*. Elementy mogą być dowolnego typu danych, ale co najmniej jedna musi być zmienną nieudostępnionych lub nieudostępnionych, niestandardowych zdarzeń.  
+# <a name="how-to-declare-a-structure-visual-basic"></a>Porady: deklarowanie struktury (Visual Basic)
+Należy rozpocząć deklarację struktury za pomocą [instrukcji Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)i zakończyć ją za pomocą instrukcji `End Structure`. Między tymi dwiema instrukcjami należy zadeklarować co najmniej jeden *element*. Elementy mogą być dowolnego typu danych, ale co najmniej jeden musi być zmienną nieudostępnioną lub niestandardowym zdarzeniem.  
   
- Nie można zainicjować elementy struktury w deklaracji struktury. Kiedy Deklarujesz zmienną typu struktury, należy przypisać wartości do elementów, uzyskując dostęp do nich za pośrednictwem zmiennej.  
+ Nie można zainicjować któregokolwiek z elementów struktury w deklaracji struktury. Podczas deklarowania zmiennej jako typu struktury, należy przypisać wartości do elementów, uzyskując dostęp do nich za pomocą zmiennej.  
   
- Omówienie różnic między strukturami i klasami, zobacz [struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ Aby zapoznać się z omówieniem różnic między strukturami i klasami, zobacz [struktury i klasy](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Dla celów demonstracyjnych Rozważmy sytuację, w miejscu do śledzenia nazwa, numer wewnętrzny i wynagrodzenia pracownika. Struktura umożliwia to zrobić w pojedynczej zmiennej.  
+ W celach demonstracyjnych Rozważmy sytuację, w której chcesz śledzić nazwisko pracownika, numer telefonu i wynagrodzenie. Struktura pozwala wykonać tę czynność w jednej zmiennej.  
   
 ### <a name="to-declare-a-structure"></a>Aby zadeklarować strukturę  
   
-1. Utwórz początkowy i końcowy instrukcji w strukturze.  
+1. Utwórz instrukcje początkowe i końcowe dla struktury.  
   
-     Można określić poziom dostępu przy użyciu struktury [publicznych](../../../../visual-basic/language-reference/modifiers/public.md), [chronione](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe lub można pozwolić, aby go Domyślnie `Public`.  
+     Możesz określić poziom dostępu struktury za pomocą [publicznego](../../../../visual-basic/language-reference/modifiers/public.md), [chronionego](../../../../visual-basic/language-reference/modifiers/protected.md), [przyjaznego](../../../../visual-basic/language-reference/modifiers/friend.md)lub [prywatnego](../../../../visual-basic/language-reference/modifiers/private.md) słowa kluczowego lub można zezwolić na `Public`.  
   
-    ```  
+    ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Dodawanie elementów do treści struktury.  
+2. Dodaj elementy do treści struktury.  
   
-     Struktura musi mieć co najmniej jeden element. Musisz zadeklarować każdego elementu i określić poziom dostępu dla niego. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, domyślnie dostępność `Public`.  
+     Struktura musi mieć co najmniej jeden element. Należy zadeklarować każdy element i określić dla niego poziom dostępu. Jeśli używasz [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) bez żadnych słów kluczowych, dostępność jest domyślnie `Public`.  
   
-    ```  
+    ```vb  
     Private Structure employee  
         Public givenName As String  
         Public familyName As String  
@@ -51,9 +51,9 @@ Rozpocznij deklaracji struktury z [Structure — instrukcja](../../../../visual-
     End Structure  
     ```  
   
-     `salary` Pole w powyższym przykładzie jest `Private`, co oznacza, że jest niedostępny poza struktury, nawet z zawierający klasy. Jednak `giveRaise` procedura jest `Public`, dzięki czemu mogą być wywoływane z poza struktury. Podobnie, można podnieść `salaryReviewTime` zdarzenie z poza struktury.  
+     Pole `salary` w poprzednim przykładzie jest `Private`, co oznacza, że jest niedostępne poza strukturą, nawet z klasy zawierającej. Jednakże procedura `giveRaise` jest `Public`, dlatego można ją wywołać spoza struktury. Podobnie można wywołać zdarzenie `salaryReviewTime` spoza struktury.  
   
-     Oprócz zmiennych `Sub` procedur i zdarzeń, można również zdefiniować stałych, `Function` procedur i właściwości w strukturze. Możesz wyznaczyć co najwyżej jedną właściwość jako *właściwość domyślna*, o ile trwa co najmniej jednego argumentu. Można obsługiwać zdarzenia z [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` procedury. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     Oprócz zmiennych, procedur `Sub` i zdarzeń, można także definiować stałe, procedury `Function` i właściwości w strukturze. Można wyznaczyć najwyżej jedną właściwość jako *Właściwość domyślną*, pod warunkiem, że przyjmuje co najmniej jeden argument. Można obsłużyć zdarzenie z użyciem procedury `Sub` [udostępnionej](../../../../visual-basic/language-reference/modifiers/shared.md) . Aby uzyskać więcej informacji, zobacz [jak: deklarowanie i wywoływanie właściwości domyślnej w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

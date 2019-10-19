@@ -7,32 +7,33 @@ f1_keywords:
 helpviewer_keywords:
 - BC30506
 ms.assetid: 5b66f6a8-f050-4e03-a57f-a64e85f80cb5
-ms.openlocfilehash: 04c94d3d32660d1a186a9bb377c49a53e1451be6
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 191415408f607d0ff768e50c41fa9b3c4405a688
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512732"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582824"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a>Klauzula Handles wymaga zmiennej WithEvents zdefiniowanej w zawierającym ją typie lub jednym z jej typów podstawowych
-W klauzuli nie podano `WithEvents`zmiennej `Handles` . Słowo kluczowe na końcu deklaracji procedury powoduje obsługę zdarzeń wywoływanych przez zmienną obiektu zadeklarowaną `WithEvents` za pomocą słowa kluczowego. `Handles`
-  
- **Identyfikator błędu:** BC30506
+
+W klauzuli `Handles` nie podano zmiennej `WithEvents`. Słowo kluczowe `Handles` na końcu deklaracji procedury powoduje obsługę zdarzeń wywoływanych przez zmienną obiektu zadeklarowaną za pomocą słowa kluczowego `WithEvents`.
+
+**Identyfikator błędu:** BC30506
 
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
-  
-- Podaj wymaganą `WithEvents` zmienną.
-  
+
+Podaj niezbędną zmienną `WithEvents`.
+
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie Visual Basic generuje błąd `BC30506` kompilatora, ponieważ słowo kluczowe [WithEvents](../modifiers/withevents.md) nie jest używane w definicji <xref:System.Timers.Timer?displayProperty=nameWithType> wystąpienia.
+W poniższym przykładzie Visual Basic generuje błąd kompilatora `BC30506`, ponieważ słowo kluczowe [WithEvents](../modifiers/withevents.md) nie jest używane w definicji wystąpienia <xref:System.Timers.Timer?displayProperty=nameWithType>.
 
 ```vb
 Imports System.Timers
 
 Module Module1
     Private _timer1 As New Timer() With {.Interval = 1000, .Enabled = True}
-    
+
     Sub Main()
         Console.WriteLine("Press any key to start the timer...")
         Console.ReadKey()
@@ -46,7 +47,7 @@ Module Module1
 End Module
 ```
 
-Poniższy przykład kompiluje się pomyślnie, ponieważ `_timer1` zmienna jest zdefiniowana `WithEvents` za pomocą słowa kluczowego:
+Poniższy przykład kompiluje się pomyślnie, ponieważ zmienna `_timer1` jest zdefiniowana za pomocą słowa kluczowego `WithEvents`:
 
 ```vb
 Imports System.Timers
@@ -70,4 +71,4 @@ End Module
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Realizuj](../../../visual-basic/language-reference/statements/handles-clause.md)

@@ -1,6 +1,6 @@
 ---
 title: Dodatkowe biblioteki klas i interfejsy API
-ms.date: 10/09/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - Additional class libraries
 - Additional managed libraries
@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: b869ca2f5e17db9a204a8b757b5e24ebb209d7c5
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395662"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579117"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Dodatkowe biblioteki klas i interfejsy API
 
@@ -57,20 +57,21 @@ Te interfejsy API obsługują infrastrukturę produktu i nie są przeznaczone do
 * [System. Data. SqlTypes. SqlStreamChars. SetLength — Metoda](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write — Metoda](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .NET. Connection — Klasa](connection.md)
-* [System .NET. Connection. m @ no__t-1WriteList pole](m_writelist.md)
+* [Pole System .NET. Connection. m \_WriteList](m_writelist.md)
 * [System .NET. Connection — Klasa](connectiongroup.md)
-* [System .NET. Connections. m @ no__t-1ConnectionList Field](m_connectionlist.md)
+* [System .NET. Connections. m \_ConnectionList pole](m_connectionlist.md)
 * [System .NET. CoreResponseData, Klasa](coreresponsedata.md)
-* [System .NET. CoreResponseData. m @ no__t-1ResponseHeaders pole](coreresponsedata_m_responseheaders.md)
-* [System .NET. CoreResponseData. m @ no__t-1StatusCode pole](coreresponsedata_m_statuscode.md)
-* [System .NET. HttpWebRequest. @no__t — pole 1AutoRedirects](_autoredirects.md)
-* [System .NET. HttpWebRequest. @no__t — pole 1CoreResponse](httpwebrequest__coreresponse.md)
-* [System .NET. HttpWebRequest. @no__t — pole 1HttpResponse](_httpresponse.md)
-* [System .NET. ServicePoint. m @ no__t-1ConnectionGroupList pole](m_connectiongrouplist.md)
-* [System .NET. ServicePointManager. s @ no__t-1ServicePointTable pole](s_servicepointtable.md)
-* [System. Windows. Diagnostics. VisualDiagnostics. s @ no__t-1isDebuggerCheckDisabledForTestPurposes pole](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Pole System .NET. CoreResponseData. m \_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [Pole System .NET. CoreResponseData. m \_StatusCode](coreresponsedata_m_statuscode.md)
+* [Pole System .NET. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
+* [Pole System .NET. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
+* [Pole System .NET. HttpWebRequest. \_HttpResponse](_httpresponse.md)
+* [Pole System .NET. ServicePoint. m \_ConnectionGroupList](m_connectiongrouplist.md)
+* [Pole \_ServicePointTable systemu .NET. ServicePointManager. s](s_servicepointtable.md)
+* [Pole System. Windows. Diagnostics. VisualDiagnostics. s \_isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor — Klasa](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. Datamemberfieldeditor — Klasa](datamemberlisteditor-class.md)
+* [System. XML. XmlReader. CreateSqlReader — Metoda](system.xml.xmlreader.createsqlreader.md)
 * [ADODB. Interfejs połączenia](adodb.connection.md)
 * [ADODB. Wyliczenie EventReason](adodb.eventreasonenum.md)
 * [ADODB. Wyliczenie obiektu EventStatus](adodb.eventstatusenum.md)

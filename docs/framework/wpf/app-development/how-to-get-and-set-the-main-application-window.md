@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Pobieranie i ustawianie okna głównego aplikacji'
+title: 'Instrukcje: pobieranie i Ustawianie głównego okna aplikacji'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - windows objects [WPF], getting
 - getting windows objects [WPF]
 ms.assetid: ec902bc4-4a59-46f5-8ec1-963b46789356
-ms.openlocfilehash: ea8333aa82f1159afb438215940ee1e7c2605e96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5894761c4b6258cbf90d369a722ffc5abca51885
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947800"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582557"
 ---
-# <a name="how-to-get-and-set-the-main-application-window"></a>Instrukcje: Pobieranie i ustawianie okna głównego aplikacji
-Ten przykład pokazuje, jak pobieranie i Ustawianie okna głównego aplikacji.  
+# <a name="how-to-get-and-set-the-main-application-window"></a>Instrukcje: pobieranie i Ustawianie głównego okna aplikacji
+Ten przykład pokazuje, jak uzyskać i ustawić główne okno aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Pierwszy <xref:System.Windows.Window> , zostanie uruchomiony w ramach Windows Presentation Foundation (WPF) aplikacji jest automatycznie ustawiana przez <xref:System.Windows.Application> jako okna głównego aplikacji. Pierwszy <xref:System.Windows.Window> być wystąpieniami będzie najczęściej być okna, który jest określony jako startowy [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] (zobacz <xref:System.Windows.Application.StartupUri%2A>).  
+ Pierwsze <xref:System.Windows.Window>, które są tworzone w ramach aplikacji Windows Presentation Foundation (WPF), są automatycznie ustawiane przez <xref:System.Windows.Application> jako główne okno aplikacji. Pierwszy <xref:System.Windows.Window>, który ma zostać utworzony, będzie prawdopodobnie oknem określonym jako początkowy identyfikator URI (zobacz <xref:System.Windows.Application.StartupUri%2A>).  
   
- Pierwszy <xref:System.Windows.Window> również mogła zostać utworzona przy użyciu kodu. Przykładem jest otwarcie okna podczas uruchamiania aplikacji, jak pokazano poniżej:  
+ Pierwsze <xref:System.Windows.Window> można również utworzyć przy użyciu kodu. Jeden przykład otwiera okno podczas uruchamiania aplikacji, tak jak w następujących przypadkach:  
   
  [!code-csharp[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/App.xaml.cs#firstwindowusingcodecodebehind)]
  [!code-vb[HOWTOWindowManagementSnippets#FirstWindowUsingCodeCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/application.xaml.vb#firstwindowusingcodecodebehind)]  
   
- Czasami pierwszego wystąpienia <xref:System.Windows.Window> jest rzeczywiście okna głównego aplikacji, np. ekran powitalny. W takim przypadku można określić w głównym oknie aplikacji przy użyciu znaczników, jak pokazano poniżej:  
+ Czasami pierwsze wystąpienie <xref:System.Windows.Window> nie jest faktycznie głównym oknem aplikacji, na przykład ekran powitalny. W takim przypadku można określić główne okno aplikacji przy użyciu znacznika, tak jak poniżej:  
   
  [!code-xaml[ApplicationMainWindowSnippets#SetApplicationMainWindowXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/ApplicationMainWindowSnippets/XAML/App.xaml#setapplicationmainwindowxaml)]  
   
- Czy okno główne jest określony, automatycznie lub ręcznie, możesz uzyskać głównego okna z <xref:System.Windows.Application.MainWindow%2A> używając następującego kodu, podobnie do poniższego:  
+ Niezależnie od tego, czy okno główne jest określone automatycznie, czy ręcznie, można uzyskać główne okno z <xref:System.Windows.Application.MainWindow%2A> przy użyciu poniższego kodu, takiego jak następujące:  
   
  [!code-csharp[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/ApplicationMainWindowSnippets/CSharp/App.xaml.cs#getapplicationmainwindowcode)]
  [!code-vb[ApplicationMainWindowSnippets#GetApplicationMainWindowCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ApplicationMainWindowSnippets/visualbasic/application.xaml.vb#getapplicationmainwindowcode)]

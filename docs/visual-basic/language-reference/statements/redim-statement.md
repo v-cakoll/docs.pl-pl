@@ -1,5 +1,5 @@
 ---
-title: ReDim, instrukcja (Visual Basic)
+title: ReDim — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,19 +26,19 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: e8689820d13db173950f8df45431011968899bed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582898"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582087"
 ---
-# <a name="redim-statement-visual-basic"></a>ReDim, instrukcja (Visual Basic)
-Przydziela ponownie obszar przechowywania dla zmiennej tablicowej.  
+# <a name="redim-statement-visual-basic"></a>ReDim — Instrukcja (Visual Basic)
+Ponownie przydziela miejsce do magazynowania dla zmiennej tablicowej.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]  
 ```  
   
@@ -46,59 +46,59 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Termin|Definicja|  
 |----------|----------------|  
-|`Preserve`|Opcjonalna. Modyfikator używany w celu zachowania danych w istniejącej tablicy, gdy zmieniany jest rozmiar tylko ostatniego wymiaru.|  
-|`name`|Wymagana. Nazwa zmiennej tablicowej. Zobacz [Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Wymagana. Lista granic każdego wymiaru dla ponownie definiowanej tablicy.|  
+|`Preserve`|Opcjonalny. Modyfikator używany do zachowania danych w istniejącej tablicy po zmianie rozmiaru tylko ostatniego wymiaru.|  
+|`name`|Wymagany. Nazwa zmiennej tablicowej. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Wymagany. Lista granic każdego wymiaru ponownie zdefiniowanej tablicy.|  
   
 ## <a name="remarks"></a>Uwagi  
- Za pomocą instrukcji `ReDim` można zmienić rozmiar co najmniej jednego wymiaru tablicy, która została już zadeklarowana. Jeśli tablica jest duża i niektóre z jej elementów nie są już potrzebne, instrukcja `ReDim` może zwolnić pamięć, zmniejszając rozmiar tablicy. Z drugiej strony, jeśli tablica wymaga więcej elementów, instrukcja `ReDim` może je dodać.  
+ Za pomocą instrukcji `ReDim` można zmienić rozmiar co najmniej jednego wymiaru tablicy, która została już zadeklarowana. Jeśli masz dużą tablicę i nie potrzebujesz już niektórych jej elementów, `ReDim` może zwolnić pamięć, zmniejszając rozmiar tablicy. Z drugiej strony, jeśli tablica wymaga więcej elementów, `ReDim` mogą je dodać.  
   
- Instrukcja `ReDim` jest przeznaczona tylko dla tablic. Nie jest odpowiednia dla właściwości skalarnych (zmienne, które zawierają tylko jedną wartość), kolekcji ani struktur. Pamiętaj, że jeśli deklarujesz zmienną typu `Array`, instrukcja `ReDim` nie ma wystarczających informacji o typie, aby utworzyć nową tablicę.  
+ Instrukcja `ReDim` jest przeznaczona tylko dla tablic. Nie jest on prawidłowy w przypadku wartości skalarnych (zmiennych, które zawierają tylko jedną wartość), kolekcji lub struktur. Należy pamiętać, że Jeśli zadeklarujesz zmienną do typu `Array`, instrukcja `ReDim` nie zawiera wystarczających informacji o typie, aby utworzyć nową tablicę.  
   
- Instrukcji `ReDim` można używać tylko na poziomie procedury. W związku z tym, kontekstem deklaracji zmiennej musi być procedura, a nie plik źródłowy, przestrzeń nazw, interfejs, klasa, struktura, moduł czy blok. Aby uzyskać więcej informacji, zobacz [Kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ @No__t_0 można użyć tylko na poziomie procedury. W związku z tym, kontekst deklaracji dla zmiennej musi być procedurą; nie może być plikiem źródłowym, przestrzenią nazw, interfejsem, klasą, strukturą, modułem lub blokiem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="rules"></a>reguły  
+## <a name="rules"></a>Przepisy  
   
-- **Wiele zmiennych.** Można zmienić rozmiar kilku zmiennych tablicowych w tej samej instrukcji deklaracji oraz określić części `name` i `boundlist` dla każdej zmiennej. Wiele zmiennych rozdziela się przecinkami.  
+- **Wiele zmiennych.** Można zmienić rozmiar kilku zmiennych tablicowych w jednej instrukcji deklaracji i określić `name` i `boundlist` części dla każdej zmiennej. Wiele zmiennych jest oddzielonych przecinkami.  
   
-- **Granice tablicy.** Każdy wpis w części `boundlist` może określać dolną i górną granicę tego wymiaru. Dolna granica jest zawsze równa 0 (zero). Górna granica jest najwyższą możliwą wartością indeksu dla tego wymiaru, a nie długością wymiaru (która jest większa o jeden od górnej granicy). Indeks dla każdego wymiaru może się zmieniać od 0 do górnej wartości.  
+- **Granice tablicy.** Każdy wpis w `boundlist` może określać dolną i górną granicę tego wymiaru. Dolna granica jest zawsze równa 0 (zero). Górna granica to najwyższa możliwa wartość indeksu dla tego wymiaru, a nie długość wymiaru (jest to górna granica plus jeden). Indeks każdego wymiaru może się różnić od 0 za pośrednictwem jego górnej wartości powiązanej.  
   
-     Liczba wymiarów w części `boundlist` musi być zgodna z oryginalną liczbą wymiarów (rangą) tablicy.  
+     Liczba wymiarów w `boundlist` musi być zgodna z oryginalną liczbą wymiarów (rangą) tablicy.  
   
-- **Typy danych.** Instrukcja `ReDim` nie może zmieniać typu danych zmiennej tablicowej ani jej elementów.  
+- **Typy danych.** Instrukcja `ReDim` nie może zmienić typu danych zmiennej tablicowej ani jej elementów.  
   
-- **Inicjowanie.** Instrukcja `ReDim` nie może podawać nowych wartości inicjalizacji dla elementów tablicy.  
+- **Zainicjować.** Instrukcja `ReDim` nie może udostępniać nowych wartości inicjujących dla elementów tablicy.  
   
-- **Ranga.** Instrukcja `ReDim` nie może zmienić rangi (liczby wymiarów) tablicy.  
+- **Stopni.** Instrukcja `ReDim` nie może zmienić rangi (liczby wymiarów) tablicy.  
   
-- **Zmiana rozmiaru z zachowaniem zawartości.** Jeśli używasz części `Preserve`, możesz zmienić rozmiar tylko ostatniego wymiaru tablicy. Dla wszystkich pozostałych wymiarów musisz określić granicę istniejącej tablicy.  
+- **Zmienianie rozmiarów przy zachowaniu.** Jeśli używasz `Preserve`, możesz zmienić rozmiar tylko ostatniego wymiaru tablicy. Dla każdego innego wymiaru należy określić granicę istniejącej tablicy.  
   
-     Na przykład jeśli tablica ma tylko jeden wymiar, możesz zmienić rozmiar tego wymiaru i nadal zachować całą zawartość tablicy, ponieważ zmieniasz ostatni i jedyny wymiar. Jednak jeśli Twoja tablica ma co najmniej dwa wymiary, korzystając z części `Preserve` możesz zmienić rozmiar tylko ostatniego wymiaru.  
+     Na przykład jeśli tablica ma tylko jeden wymiar, można zmienić rozmiar tego wymiaru i nadal zachować całą zawartość tablicy, ponieważ zmieniany jest ostatni i tylko wymiar. Jeśli jednak tablica ma dwa lub więcej wymiarów, można zmienić rozmiar tylko ostatniego wymiaru, jeśli używasz `Preserve`.  
   
-- **Właściwości.** Instrukcji `ReDim` można użyć dla właściwości, która przechowuje tablicę wartości.  
+- **Aœciwoœci.** @No__t_0 można użyć na właściwości, która przechowuje tablicę wartości.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- **Zamiana tablicy.** Instrukcja `ReDim` zwalnia istniejącą tablicę i tworzy nową tablicę o tej samej randze. Nowa tablica zastępuje zwalnianą tablicę w zmiennej tablicowej.  
+- **Zastępowanie tablicy.** `ReDim` zwalnia istniejącą tablicę i tworzy nową tablicę o tej samej rangi. Nowa tablica zastępuje wydaną tablicę w zmiennej tablicowej.  
   
-- **Inicjowanie bez zachowania zawartości.** Jeśli nie określisz części `Preserve`, instrukcja `ReDim` zainicjuje elementy nowej tablicy, używając domyślnej wartości dla ich typu danych.  
+- **Inicjalizacja bez zachowania.** Jeśli nie określisz `Preserve`, `ReDim` inicjuje elementy nowej tablicy przy użyciu wartości domyślnej dla ich typu danych.  
   
-- **Inicjowanie z zachowaniem zawartości** Jeśli określisz część `Preserve`, język Visual Basic skopiuje elementy z istniejącej tablicy do nowej tablicy.  
+- **Inicjowanie z zachowaniem.** Jeśli określisz `Preserve`, Visual Basic Kopiuje elementy z istniejącej tablicy do nowej tablicy.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie jest pokazane zwiększenie rozmiaru ostatniego wymiaru tablicy dynamicznej bez utraty istniejących danych w tablicy, a następnie zmniejszenie rozmiaru z częściową utratą danych. Na koniec następuje zmniejszenie rozmiaru do oryginalnej wartości i ponownie inicjowanie wszystkich elementów tablicy.  
+ Poniższy przykład zwiększa rozmiar ostatniego wymiaru tablicy dynamicznej bez utraty istniejących danych w tablicy, a następnie zmniejsza rozmiar ze częściową utratą danych. Na koniec zmniejsza rozmiar z powrotem do pierwotnej wartości i ponownie inicjuje wszystkie elementy tablicy.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- Instrukcja `Dim` tworzy nową tablicę z trzema wymiarami. Każdy wymiar jest zadeklarowany z granicą 10, więc indeks tablicy dla każdego wymiaru może wynosić od 0 do 10. W poniższym omówieniu te trzy wymiary są określane jako warstwa, wiersz i kolumna.  
+ Instrukcja `Dim` tworzy nową tablicę z trzema wymiarami. Każdy wymiar jest zadeklarowany z granicą 10, więc indeks tablicy dla każdego wymiaru może nastąpić z przedziału od 0 do 10. W poniższej dyskusji trzy wymiary są określane jako warstwy, wiersze i kolumny.  
   
- Pierwsza instrukcja `ReDim` tworzy nową tablicę, która zastępuje istniejącą tablicę w zmiennej `intArray`. Instrukcja `ReDim` kopiuje wszystkie elementy z istniejącej tablicy do nowej tablicy. Dodaje również dodatkowe 10 kolumn na końcu każdego wiersza w każdej warstwie i inicjuje elementy w tych nowych kolumnach z wartością 0 (wartość domyślna `Integer`, który jest typem elementu tablicy).  
+ Pierwszy `ReDim` tworzy nową tablicę, która zastępuje istniejącą tablicę w zmiennej `intArray`. `ReDim` kopiuje wszystkie elementy z istniejącej tablicy do nowej tablicy. Dodaje także 10 większej liczby kolumn do końca każdego wiersza w każdej warstwie i inicjuje elementy w tych nowych kolumnach do 0 (wartość domyślna `Integer`, która jest typem elementu tablicy).  
   
- Druga instrukcja `ReDim` tworzy kolejną nową tablicę i kopiuje wszystkie mieszczące się elementy. Jednak pięć kolumn od końca każdego wiersza w każdej warstwie jest traconych. Nie stanowi to problemu, jeśli już nie używasz tych kolumn. Zmniejszenie rozmiaru dużej tablicy może zwolnić pamięć, której już nie potrzebujesz.  
+ Druga `ReDim` tworzy kolejną nową tablicę i kopiuje wszystkie elementy, które pasują do siebie. Jednak pięć kolumn zostanie utraconych od końca każdego wiersza w każdej warstwie. Nie jest to problem, Jeśli zakończysz korzystanie z tych kolumn. Zmniejszenie rozmiaru dużej tablicy może zwolnić pamięć, która nie jest już potrzebna.  
   
- Trzecia instrukcja `ReDim` tworzy kolejną nową tablicę i usuwa kolejne pięć kolumn od końca każdego wiersza w każdej warstwie. Tym razem nie kopiuje żadnych istniejących elementów. Ta instrukcja przywraca tablicę do jej oryginalnego rozmiaru. Ponieważ instrukcja nie zawiera modyfikatora `Preserve`, ustawia wszystkie elementy tablicy na pierwotne wartości domyślne.  
+ Trzeci `ReDim` tworzy kolejną nową tablicę i usuwa kolejne pięć kolumn z końca każdego wiersza w każdej warstwie. Tym razem nie kopiuje żadnych istniejących elementów. Ta instrukcja przywraca pierwotny rozmiar tablicy. Ponieważ instrukcja nie zawiera modyfikatora `Preserve`, ustawia wszystkie elementy tablicy na ich pierwotne wartości domyślne.  
   
- Aby uzyskać dodatkowe przykłady, zobacz [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Aby uzyskać więcej przykładów, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

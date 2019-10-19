@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kontrolowanie zakresu zmiennej (Visual Basic)'
+title: 'Porady: kontrolowanie zakresu zmiennej (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic], scope
@@ -12,55 +12,55 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 7f1d671f6657c7810ec605533493a340baac39c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 23a10bd2d6c0c9f3a13bff864559460c48927e01
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610342"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582600"
 ---
-# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Instrukcje: Kontrolowanie zakresu zmiennej (Visual Basic)
-Zazwyczaj jest zmienną *zakres*, lub widoczny dla odwołania w całym regionie, w którym trzeba je zadeklarować. W niektórych przypadkach zmienna firmy *poziom dostępu* mogą mieć wpływ na jego zakres.  
+# <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Porady: kontrolowanie zakresu zmiennej (Visual Basic)
+Zwykle zmienna znajduje się w *zakresie*lub jest widoczna dla odwołania w całym regionie, w którym jest zadeklarowana. W niektórych przypadkach *poziom dostępu* zmiennej może mieć wpływ na jego zakres.  
   
  Aby uzyskać więcej informacji, zobacz [zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
-## <a name="scope-at-block-or-procedure-level"></a>Zakresu na poziomie bloku lub procedury  
+## <a name="scope-at-block-or-procedure-level"></a>Zakres na poziomie bloku lub procedury  
   
-#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Aby uwidocznić zmienną tylko w obrębie bloku  
+#### <a name="to-make-a-variable-visible-only-within-a-block"></a>Aby zmienna była widoczna tylko w bloku  
   
-- Miejsce [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) zmiennej między inicjowanie i kończenie instrukcje deklaracji tego bloku, na przykład między `For` i `Next` instrukcje `For` pętli.  
+- Umieść [instrukcję Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) dla zmiennej między instrukcjami inicjującymi i kończącymi deklaracji tego bloku, na przykład między instrukcjami `For` i `Next` pętli `For`.  
   
-     Można odwołać się do zmiennej tylko z w obrębie bloku.  
+     Można odwołać się do zmiennej tylko z poziomu bloku.  
   
-#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Aby uwidocznić zmienną tylko w obrębie procedury  
+#### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>Aby zmienna była widoczna tylko w ramach procedury  
   
-- Miejsce `Dim` instrukcji dla zmiennej wewnątrz procedury, ale poza bloku (takie jak `With`... `End With` bloku).  
+- Umieść instrukcję `Dim` dla zmiennej wewnątrz procedury, ale poza blokami (takimi jak `With`... `End With` bloku).  
   
-     Można odwołać się do zmiennej tylko z w ramach procedury, między innymi wewnątrz bloku znajdujących się w procedurze.  
+     Można odwołać się do zmiennej tylko z wewnątrz procedury, w tym w dowolnym bloku zawartym w procedurze.  
   
-## <a name="scope-at-module-or-namespace-level"></a>Zakresu na poziomie Namespace lub modułu  
- Dla wygody pojedynczego terminu *poziom modułu* stosuje się jednakowo do modułów, klas i struktur. Poziom dostępu zmiennej poziomu modułu określa jego zakres. Przestrzeń nazw zawierająca modułu, klasy lub struktury również wpływ na zakres.  
+## <a name="scope-at-module-or-namespace-level"></a>Zakres na poziomie modułu lub przestrzeni nazw  
+ Dla wygody poziom jednoterminowego *modułu* jest stosowany równomiernie dla modułów, klas i struktur. Poziom dostępu zmiennej poziomu modułu określa jej zakres. Przestrzeń nazw, która zawiera moduł, klasę lub strukturę, ma także wpływ na zakres.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Aby uwidocznić zmienną w całym modułu, klasy lub struktury  
+#### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Aby uczynić zmienną widoczną w całym module, klasie lub strukturze  
   
-1. Miejsce `Dim` instrukcji dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza programem dowolnej procedury.  
+1. Umieść instrukcję `Dim` dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza jakąkolwiek procedurą.  
   
-2. Obejmują [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) — słowo kluczowe w `Dim` instrukcji.  
+2. Dołącz [prywatne](../../../../visual-basic/language-reference/modifiers/private.md) słowo kluczowe do instrukcji `Dim`.  
   
-3. Można odwołać się do zmiennej z dowolnego miejsca w ramach modułu, klasy lub struktury, ale nie z poza nim.  
+3. Możesz odwołać się do zmiennej z dowolnego miejsca w module, klasie lub strukturze, ale nie spoza niej.  
   
-#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Aby uwidocznić zmienną w całej przestrzeni nazw  
+#### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Aby uczynić zmienną widoczną w całym obszarze nazw  
   
-1. Miejsce `Dim` instrukcji dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza programem dowolnej procedury.  
+1. Umieść instrukcję `Dim` dla zmiennej wewnątrz modułu, klasy lub struktury, ale poza jakąkolwiek procedurą.  
   
-2. Obejmują [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) lub [publicznych](../../../../visual-basic/language-reference/modifiers/public.md) — słowo kluczowe w `Dim` instrukcji.  
+2. Dołącz słowo kluczowe [zaprzyjaźnione](../../../../visual-basic/language-reference/modifiers/friend.md) lub [publiczne](../../../../visual-basic/language-reference/modifiers/public.md) w instrukcji `Dim`.  
   
-3. Można odwołać się do zmiennej z dowolnego miejsca w przestrzeni nazw, zawierające modułu, klasy lub struktury.  
+3. Możesz odwołać się do zmiennej z dowolnego miejsca w przestrzeni nazw zawierającej moduł, klasę lub strukturę.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład deklaruje zmienną na poziomie modułu i ogranicza jego widoczność dla kodu w module.  
+ Poniższy przykład deklaruje zmienną na poziomie modułu i ogranicza jej widoczność do kodu w module.  
   
-```  
+```vb  
 Module demonstrateScope  
     Private strMsg As String  
     Sub initializePrivateVariable()  
@@ -72,25 +72,25 @@ Module demonstrateScope
 End Module  
 ```  
   
- W poprzednim przykładzie, wszystkie procedury zdefiniowanego w module `demonstrateScope` mogą odwoływać się do `String` zmiennej `strMsg`. Gdy `usePrivateVariable` procedura jest wywoływana, wyświetla się zawartość zmiennej ciągu `strMsg` w oknie dialogowym.  
+ W poprzednim przykładzie wszystkie procedury zdefiniowane w module `demonstrateScope` mogą odwoływać się do zmiennej `String` `strMsg`. Po wywołaniu procedury `usePrivateVariable` zostanie wyświetlona zawartość zmiennej ciągu `strMsg` w oknie dialogowym.  
   
- Z następującą modyfikacją do poprzedniego przykładu, zmiennej ciągu `strMsg` mogą być przywoływane przez kod w dowolnym miejscu w przestrzeni nazw w jego deklaracji.  
+ Przy następujących zmianach do poprzedniego przykładu zmienna ciągu `strMsg` może być określana przez kod w dowolnym miejscu w przestrzeni nazw swojej deklaracji.  
   
-```  
+```vb  
 Public strMsg As String  
 ```  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Im bardziej doprecyzowane zakres zmiennej, mniej możliwości, jakie masz przypadkowo odwołując się do niego zamiast inną zmienną o takiej samej nazwie. Można także zminimalizować problemy, odwołanie do dopasowania.  
+ Im węższy zakres zmiennej, tym mniej możliwości odwołujące się do nich zamiast innej zmiennej o tej samej nazwie. Możesz również zminimalizować problemy pasujące do odwołania.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Im bardziej doprecyzowane zakres zmiennej z niego korzystać mniejszy szanse, że złośliwy kod może być niepoprawne.  
+ Im węższy zakres zmiennej, tym mniejsze prawdopodobieństwo, że złośliwy kod może być niewłaściwym użyciem.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Poziomy dostępu w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)

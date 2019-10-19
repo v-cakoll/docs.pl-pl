@@ -7,33 +7,33 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: bf3eb6476dc1485faeddab475f29e508175d3378
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638197"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72583388"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase — Instrukcja (Visual Basic)
-Służy do zwalniania zmiennych tablicy i cofania przydziału pamięci używanej dla ich elementów.  
+Używane do zwalniania zmiennych tablicowych i cofania alokacji pamięci używanej dla ich elementów.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 Erase arraylist  
 ```  
   
 ## <a name="parts"></a>Części  
  `arraylist`  
- Wymagane. Lista zmiennych tablicy do usunięcia. W przypadku wielu zmiennych są one oddzielane przecinkami.  
+ Wymagany. Lista zmiennych tablicowych, które mają zostać wymazane. Wiele zmiennych jest oddzielonych przecinkami.  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja `Erase` może wystąpić tylko na poziomie procedury. Oznacza to, że można zwolnić tablice wewnątrz procedury, ale nie na poziomie klasy ani modułu.  
+ Instrukcja `Erase` może występować tylko na poziomie procedury. Oznacza to, że można zwolnić tablice wewnątrz procedury, ale nie na poziomie klasy lub modułu.  
   
- Instrukcja `Erase` jest równoważna z przypisywaniem wartości `Nothing` do każdej zmiennej tablicy.  
+ Instrukcja `Erase` jest równoważna przypisaniu `Nothing` do każdej zmiennej tablicowej.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto instrukcji `Erase`, aby wyczyścić dwie tablice i zwolnić ich pamięć (odpowiednio 1000 i 100 elementów pamięci). Następnie instrukcja `ReDim` przypisuje nową instancję tablicy do tablicy trójwymiarowej.  
+ Poniższy przykład używa instrukcji `Erase`, aby wyczyścić dwie tablice i zwolnić pamięć (odpowiednio 1000 i 100 elementów magazynu). Następnie instrukcja `ReDim` przypisuje nowe wystąpienie tablicy do trójwymiarowej tablicy.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

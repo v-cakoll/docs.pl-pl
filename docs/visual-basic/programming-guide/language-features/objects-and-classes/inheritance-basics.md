@@ -20,128 +20,133 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: a31f69459465368dc7519b5126c6c4eb72e25d29
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a75b75ef9acb4c89f4c7d05f1410d4ca70e680b
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662996"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582744"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Podstawowe informacje o dziedziczeniu (Visual Basic)
-`Inherits` Instrukcja jest używane do deklarowania nową klasę o nazwie *klasy pochodnej*zgodnie z istniejącej klasy, znane jako *klasy bazowej*. Klasy pochodne dziedziczenie i można rozszerzyć, właściwości, metody, zdarzenia, pola i stałe zdefiniowane w klasie bazowej. W poniższej sekcji opisano niektóre z reguł do obsługi dziedziczenia i modyfikatorów, których można użyć, aby zmienić sposób klasy dziedziczą lub są dziedziczone:  
-  
-- Domyślnie wszystkie klasy są dziedziczone, o ile nie jest oznaczona za pomocą `NotInheritable` — słowo kluczowe. Klasy mogą dziedziczyć z innych klas w projekcie lub klas w innych zestawach, do których odwołuje się do projektu.  
-  
-- W odróżnieniu od języków, które umożliwiają wielokrotne dziedziczenie Visual Basic umożliwia tylko pojedyncze dziedziczenie w klasach; oznacza to klasy pochodne mogą mieć tylko jedną klasę bazową. Mimo że wielokrotne dziedziczenie jest niedozwolona w klasach i klas można zaimplementować wiele interfejsów, które skutecznie można osiągnąć ten sam kończy się.  
-  
-- Aby uniemożliwić udostępnianie ograniczonych elementów w klasie bazowej, typ dostępu dla klasy pochodnej musi być większa lub równa bardziej restrykcyjny niż jej klasy bazowej. Na przykład `Public` klasa nie może dziedziczyć `Friend` lub `Private` klasy, a `Friend` klasa nie może dziedziczyć `Private` klasy.  
-  
-## <a name="inheritance-modifiers"></a>Modyfikatory dziedziczenia  
- Visual Basic wprowadza następujące instrukcje na poziomie klasy i Modyfikatory do obsługi dziedziczenia:  
-  
-- `Inherits` Instrukcja — określa klasę bazową.  
-  
-- `NotInheritable` Modyfikator — powstrzymuje programistów przed za pomocą klasy jako klasę bazową.  
-  
-- `MustInherit` Modyfikator — Określa, że klasa jest przeznaczona do użytku jako klasę bazową tylko. Wystąpienia elementu `MustInherit` klasy nie można utworzyć bezpośrednio; one mogą być tworzone tylko podstawowego wystąpienia klasy pochodnej klasy. (Innych języków programowania, takich jak C++ i C#, używany jest termin *abstrakcyjna klasa* do opisania tych klas.)  
-  
-## <a name="overriding-properties-and-methods-in-derived-classes"></a>Zastępowanie właściwości i metod w klasach pochodnych  
- Domyślnie Klasa pochodna dziedziczy właściwości i metody w swojej klasie podstawowej. Jeśli właściwość dziedziczona lub metoda ma zachowują się odmiennie w klasie pochodnej może być *zastąpione*. Oznacza to można zdefiniować nową metodę implementacji metody w klasie pochodnej. Następujące Modyfikatory są używane do kontrolowania, jak zastąpić właściwości i metod:  
-  
-- `Overridable` — Umożliwia właściwość lub metoda klasy został nadpisany w klasie pochodnej.  
-  
-- `Overrides` — Zastępuje `Overridable` właściwości lub metody zdefiniowanej w klasie bazowej.  
-  
-- `NotOverridable` — Uniemożliwia właściwości lub metody są przesłonięcia w klasie dziedziczącej. Domyślnie `Public` metody są `NotOverridable`.  
-  
-- `MustOverride` — Wymaga, że klasa pochodna zastąpienie właściwości lub metody. Gdy `MustOverride` słowo kluczowe jest używane, definicję metody składa się z tylko `Sub`, `Function`, lub `Property` instrukcji. Są dozwolone nie inne instrukcje, a w szczególności istnieje nie `End Sub` lub `End Function` instrukcji. `MustOverride` metody musi być zadeklarowana w `MustInherit` klasy.  
-  
- Załóżmy, że chcesz zdefiniować klasy do obsługi płac. Można zdefiniować ogólnego `Payroll` klasę, która zawiera `RunPayroll` metodę, która oblicza płac dla typowych tygodnia. Następnie można użyć `Payroll` jako klasę bazową dla bardziej wyspecjalizowane `BonusPayroll` klasy, który może być używany podczas dystrybucji premie pracownika.  
-  
- `BonusPayroll` Klasy mogą dziedziczyć i zastąpić, `PayEmployee` metody zdefiniowane w bazowym `Payroll` klasy.  
-  
- W poniższym przykładzie zdefiniowano klasę bazową `Payroll,` i Klasa pochodna `BonusPayroll`, który zastępuje metody dziedziczonej, `PayEmployee`. W procedurze `RunPayroll`, tworzy, a następnie przekazuje `Payroll` obiektu i `BonusPayroll` obiektu do funkcji, `Pay`, który wykonuje `PayEmployee` metoda obu obiektów.  
-  
- [!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]  
-  
-## <a name="the-mybase-keyword"></a>MyBase — słowo kluczowe  
- `MyBase` — Słowo kluczowe zachowuje się jak zmienna obiektu, który odwołuje się do klasy bazowej bieżącego wystąpienia klasy. `MyBase` często używane do dostępu do składowych klasy bazowej, które zostały zastąpione lub pada w klasie pochodnej. W szczególności `MyBase.New` służy do jawnie wywołać konstruktora klasy bazowej w konstruktorze klasy pochodnej.  
-  
- Na przykład załóżmy, że projektujesz Klasa pochodna, która zastępuje metodę dziedziczone z klasy podstawowej. Zastąpione metody można wywołać metodę w klasie bazowej i zmodyfikować zwracanej wartości, jak pokazano na następujący fragment kodu:  
-  
- [!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]  
-  
- Na poniższej liście opisano ograniczenia dotyczące używania `MyBase`:  
-  
-- `MyBase` odnosi się do natychmiastowego klasy podstawowej i jej dziedziczone elementy członkowskie. Nie można użyć do dostępu `Private` elementów członkowskich w klasie.  
-  
-- `MyBase` jest słowem kluczowym rzeczywistego obiektu. `MyBase` Nie można przypisać do zmiennej, przekazany do procedury ani wykorzystywać w `Is` porównania.  
-  
-- Metoda, `MyBase` kwalifikuje się nie musi być zdefiniowany w klasie bazowej natychmiastowego; zamiast tego może być zdefiniowana w klasie bazowej pośrednio dziedziczone. Aby odwołanie kwalifikowana przez `MyBase` skompilować poprawnie, niektóre klasa bazowa musi zawierać pasujących do nazwy i typy parametrów, które pojawiają się w wywołaniu metody.  
-  
-- Nie można użyć `MyBase` do wywołania `MustOverride` metody klasy bazowej.  
-  
-- `MyBase` nie może służyć do samego zakwalifikowania. W związku z tym poniższy kod jest nieprawidłowy:  
-  
-     `MyBase.MyBase.BtnOK_Click()`  
-  
-- `MyBase` Nie można używać w modułach.  
-  
-- `MyBase` Nie można użyć do dostępu do składowych klasy bazowej, które są oznaczone jako `Friend` Jeśli klasa podstawowa jest w innym zestawie.  
-  
- Aby uzyskać więcej informacji i inny przykład, zobacz [jak: Dostęp do zmiennej ukrytej przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
-  
-## <a name="the-myclass-keyword"></a>MyClass — słowo kluczowe  
- `MyClass` — Słowo kluczowe zachowuje się jak zmienna obiektu, który odwołuje się do bieżącego wystąpienia klasy pierwotnie zaimplementowanych. `MyClass` przypomina `Me`, ale co metod i właściwości wywołać w `MyClass` jest traktowany tak, jakby były metodę lub właściwość [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). W związku z tym metody lub właściwości nie występuje przez zastąpienie w klasie pochodnej.  
-  
-- `MyClass` jest słowem kluczowym rzeczywistego obiektu. `MyClass` Nie można przypisać do zmiennej, przekazany do procedury ani wykorzystywać w `Is` porównania.  
-  
-- `MyClass` odnosi się do klasy zawierającego i jego dziedziczone elementy członkowskie.  
-  
-- `MyClass` mogą być używane jako kwalifikator dla `Shared` elementów członkowskich.  
-  
-- `MyClass` Nie można używać wewnątrz `Shared` metody, ale mogą być używane do dostępu do udostępnionej składowej klasy wewnątrz metody wystąpienia.  
-  
-- `MyClass` Nie można używać w modułach standardowych.  
-  
-- `MyClass` może służyć do kwalifikowania metodę, która jest zdefiniowana w klasie bazowej, a która nie ma implementacji metody dostarczone przez tę klasę. Takie odwołanie, ma takie samo znaczenie jak `MyBase.` *metoda*.  
-  
- W poniższym przykładzie porównano `Me` i `MyClass`.  
-  
+
+Instrukcja `Inherits` służy do deklarowania nowej klasy, zwanej *klasą pochodną*, na podstawie istniejącej klasy, znanej jako *Klasa bazowa*. Klasy pochodne dziedziczą i mogą być rozszerzone, właściwości, metody, zdarzenia, pola i stałe zdefiniowane w klasie bazowej. W poniższej sekcji opisano niektóre reguły dziedziczenia oraz modyfikatory, których można użyć do zmiany metod dziedziczonych lub dziedziczonych przez klasy:
+
+- Domyślnie wszystkie klasy są dziedziczone, chyba że oznaczono za pomocą słowa kluczowego `NotInheritable`. Klasy mogą dziedziczyć z innych klas w projekcie lub z klas w innych zestawach, do których odwołuje się projekt.
+
+- W przeciwieństwie do języków, które zezwalają na wielokrotne dziedziczenie, Visual Basic zezwala tylko na jedno dziedziczenie w klasach. oznacza to, że klasy pochodne mogą mieć tylko jedną klasę bazową. Chociaż nie jest dozwolone wielokrotne dziedziczenie w klasach, klasy mogą implementować wiele interfejsów, co może efektywnie wykonywać te same punkty końcowe.
+
+- Aby zapobiec ujawnieniu elementów z ograniczeniami w klasie bazowej, typ dostępu klasy pochodnej musi być równy lub bardziej restrykcyjny niż jego Klasa bazowa. Na przykład Klasa `Public` nie może dziedziczyć `Friend` lub klasy `Private`, a Klasa `Friend` nie może dziedziczyć klasy `Private`.
+
+## <a name="inheritance-modifiers"></a>Modyfikatory dziedziczenia
+
+Visual Basic wprowadza następujące instrukcje i Modyfikatory na poziomie klasy do obsługi dziedziczenia:
+
+- Instrukcja `Inherits` — określa klasę bazową.
+
+- modyfikator `NotInheritable` — uniemożliwia programistom Używanie klasy jako klasy bazowej.
+
+- modyfikator `MustInherit` — określa, że Klasa jest przeznaczona do użycia tylko jako klasa bazowa. Wystąpienia klas `MustInherit` nie mogą być tworzone bezpośrednio; mogą być tworzone tylko jako wystąpienia klasy bazowej klasy pochodnej. (Inne języki programowania, takie jak C++ i C#, używają *klasy abstrakcyjnej* do opisywania takiej klasy).
+
+## <a name="overriding-properties-and-methods-in-derived-classes"></a>Zastępowanie właściwości i metod w klasach pochodnych
+
+Domyślnie Klasa pochodna dziedziczy właściwości i metody z klasy bazowej. Jeśli dziedziczona właściwość lub metoda musi zachowywać się inaczej w klasie pochodnej, można ją *przesłonić*. Oznacza to, że można zdefiniować nową implementację metody w klasie pochodnej. Poniższe Modyfikatory służą do kontrolowania sposobu przesłania właściwości i metod:
+
+- `Overridable` — umożliwia zastąpienie właściwości lub metody w klasie pochodnej w klasie.
+
+- `Overrides` — przesłania Właściwość `Overridable` lub metodę zdefiniowaną w klasie bazowej.
+
+- `NotOverridable` — zapobiega przesłanianiu przez właściwość lub metodę w klasie dziedziczenia. Domyślnie `NotOverridable` metody `Public` są.
+
+- `MustOverride` — wymaga, aby Klasa pochodna przesłaniał właściwość lub metodę. Gdy używane jest słowo kluczowe `MustOverride`, definicja metody składa się tylko z instrukcji `Sub`, `Function` lub `Property`. Żadne inne instrukcje nie są dozwolone i nie ma żadnej instrukcji `End Sub` ani `End Function`. Metody `MustOverride` muszą być zadeklarowane w klasach `MustInherit`.
+
+Załóżmy, że chcesz zdefiniować klasy do obsługi listy płac. Można zdefiniować generyczną klasę `Payroll`, która zawiera metodę `RunPayroll`, która oblicza listę płac dla typowego tygodnia. Następnie można użyć `Payroll` jako klasy bazowej dla bardziej wyspecjalizowanej klasy `BonusPayroll`, która może być używana do dystrybucji premii pracowników.
+
+Klasa `BonusPayroll` może dziedziczyć i przesłonić metodę `PayEmployee` zdefiniowaną w klasie podstawowej `Payroll`.
+
+W poniższym przykładzie zdefiniowano klasę bazową, `Payroll,` i klasę pochodną `BonusPayroll`, która zastępuje metodę dziedziczoną, `PayEmployee`. Procedura `RunPayroll`, tworzy, a następnie przekazuje obiekt `Payroll` i obiekt `BonusPayroll` do funkcji, `Pay`, która wykonuje metodę `PayEmployee` obu obiektów.
+
+[!code-vb[VbVbalrOOP#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#28)]
+
+## <a name="the-mybase-keyword"></a>Słowo kluczowe MyBase
+
+Słowo kluczowe `MyBase` zachowuje się jak zmienna obiektu odwołująca się do klasy podstawowej bieżącego wystąpienia klasy. `MyBase` jest często używana do uzyskiwania dostępu do składowych klasy bazowej, które są zastępowane lub zasłonięte w klasie pochodnej. W szczególności `MyBase.New` jest używany do jawnego wywoływania konstruktora klasy bazowej z konstruktora klasy pochodnej.
+
+Załóżmy na przykład, że projektujesz klasę pochodną, która zastępuje metodę dziedziczoną z klasy bazowej. Zastąpiona metoda może wywołać metodę w klasie bazowej i zmodyfikować wartość zwracaną, jak pokazano w poniższym fragmencie kodu:
+
+[!code-vb[VbVbalrOOP#109](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#109)]
+
+Poniższa lista zawiera opis ograniczeń dotyczących używania `MyBase`:
+
+- `MyBase` odwołuje się do bezpośredniej klasy podstawowej i jej dziedziczonych elementów członkowskich. Nie można jej użyć w celu uzyskania dostępu do `Private` elementów członkowskich w klasie.
+
+- `MyBase` jest słowem kluczowym, a nie obiektem rzeczywistym. `MyBase` nie można przypisać do zmiennej, przekazywać do procedur ani używać w porównaniu `Is`.
+
+- Metoda, która `MyBase` kwalifikatory, nie musi być zdefiniowana w bezpośredniej klasie podstawowej; może być zdefiniowana w niejawnie dziedziczonej klasie bazowej. Aby dokumentacja kwalifikowana przez `MyBase` była skompilowana prawidłowo, pewna klasa bazowa musi zawierać metodę zgodną z nazwą i typami parametrów, które są wyświetlane w wywołaniu.
+
+- Nie można użyć `MyBase` do wywołania `MustOverride` metod klasy bazowej.
+
+- `MyBase` nie może być używana do kwalifikowania się samego siebie. W związku z tym następujący kod jest nieprawidłowy:
+
+  `MyBase.MyBase.BtnOK_Click()`
+
+- nie można używać `MyBase` w modułach.
+
+- nie można użyć `MyBase`, aby uzyskać dostęp do składowych klasy bazowej, które są oznaczone jako `Friend`, jeśli klasa bazowa znajduje się w innym zestawie.
+
+Aby uzyskać więcej informacji i inny przykład, zobacz [jak: dostęp do zmiennej ukrytej przez klasę pochodną](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).
+
+## <a name="the-myclass-keyword"></a>Słowo kluczowe MyClass
+
+Słowo kluczowe `MyClass` zachowuje się jak zmienna obiektu, która odwołuje się do bieżącego wystąpienia klasy jako pierwotnie zaimplementowane. `MyClass` przypomina `Me`, ale każde wywołanie metody i właściwości na `MyClass` jest traktowane jakby Metoda lub właściwość były [NotOverridable](../../../../visual-basic/language-reference/modifiers/notoverridable.md). W związku z tym metoda lub właściwość nie ma wpływ na zastępowanie w klasie pochodnej.
+
+- `MyClass` jest słowem kluczowym, a nie obiektem rzeczywistym. `MyClass` nie można przypisać do zmiennej, przekazywać do procedur ani używać w porównaniu `Is`.
+
+- `MyClass` odwołuje się do klasy zawierającej i jej dziedziczonych elementów członkowskich.
+
+- `MyClass` może służyć jako kwalifikator dla członków `Shared`.
+
+- nie można użyć `MyClass` wewnątrz metody `Shared`, ale może być używana wewnątrz metody wystąpienia, aby uzyskać dostęp do współużytkowanej składowej klasy.
+
+- nie można używać `MyClass` w modułach standardowych.
+
+- `MyClass` może służyć do kwalifikowania metody, która jest zdefiniowana w klasie bazowej i która nie ma implementacji metody podanej w tej klasie. Takie odwołanie ma takie samo znaczenie jak*metoda*`MyBase.`.
+
+Poniższy przykład porównuje `Me` i `MyClass`.
+
 ```vb
-Class baseClass  
-    Public Overridable Sub testMethod()  
-        MsgBox("Base class string")  
-    End Sub  
-    Public Sub useMe()  
-        ' The following call uses the calling class's method, even if   
-        ' that method is an override.  
-        Me.testMethod()  
-    End Sub  
-    Public Sub useMyClass()  
-        ' The following call uses this instance's method and not any  
-        ' override.  
-        MyClass.testMethod()  
-    End Sub  
-End Class  
-Class derivedClass : Inherits baseClass  
-    Public Overrides Sub testMethod()  
-        MsgBox("Derived class string")  
-    End Sub  
-End Class  
-Class testClasses  
-    Sub startHere()  
-        Dim testObj As derivedClass = New derivedClass()  
-        ' The following call displays "Derived class string".  
-        testObj.useMe()  
-        ' The following call displays "Base class string".  
-        testObj.useMyClass()  
-    End Sub  
-End Class  
-```  
-  
- Mimo że `derivedClass` zastępuje `testMethod`, `MyClass` — słowo kluczowe w `useMyClass` nullifies skutki zastępowanie i rozwiązuje kompilatora wywołanie klasy bazowej wersję `testMethod`.  
-  
+Class baseClass
+    Public Overridable Sub testMethod()
+        MsgBox("Base class string")
+    End Sub
+    Public Sub useMe()
+        ' The following call uses the calling class's method, even if
+        ' that method is an override.
+        Me.testMethod()
+    End Sub
+    Public Sub useMyClass()
+        ' The following call uses this instance's method and not any
+        ' override.
+        MyClass.testMethod()
+    End Sub
+End Class
+Class derivedClass : Inherits baseClass
+    Public Overrides Sub testMethod()
+        MsgBox("Derived class string")
+    End Sub
+End Class
+Class testClasses
+    Sub startHere()
+        Dim testObj As derivedClass = New derivedClass()
+        ' The following call displays "Derived class string".
+        testObj.useMe()
+        ' The following call displays "Base class string".
+        testObj.useMyClass()
+    End Sub
+End Class
+```
+
+Mimo że `derivedClass` przesłania `testMethod`, słowo kluczowe `MyClass` w `useMyClass` NULLIFIES efekty przesłaniania, a kompilator rozpoznaje wywołanie do wersji klasy bazowej programu `testMethod`.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Inherits, instrukcja](../../../../visual-basic/language-reference/statements/inherits-statement.md)

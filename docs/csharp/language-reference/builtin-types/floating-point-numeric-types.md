@@ -1,7 +1,7 @@
 ---
 title: Typy liczbowe zmiennoprzecinkowe — C# odwołanie
 description: Przegląd wbudowanych typów C# zmiennoprzecinkowych
-ms.date: 06/30/2019
+ms.date: 10/18/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 17ae154780679dd1f42f43f1ec345cdc722815d3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002197"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72579367"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
-**Typy zmiennoprzecinkowe** są podzbiorem **typów prostych** i mogą być inicjowane za pomocą [*literałów*](#floating-point-literals). Wszystkie typy zmiennoprzecinkowe są również typami wartości. Wszystkie zmiennoprzecinkowe typy liczbowe obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [porównania i równości](../operators/equality-operators.md) .
+**Typy zmiennoprzecinkowe** są podzbiorem **typów prostych** i mogą być inicjowane za pomocą [*literałów*](#real-literals). Wszystkie typy zmiennoprzecinkowe są również typami wartości. Wszystkie zmiennoprzecinkowe typy liczbowe obsługują operatory [arytmetyczne](../operators/arithmetic-operators.md), [porównania](../operators/comparison-operators.md)i [równości](../operators/equality-operators.md) .
 
 ## <a name="characteristics-of-the-floating-point-types"></a>Charakterystyki typów zmiennoprzecinkowych
 
@@ -52,8 +52,8 @@ Ponieważ typ `decimal` ma większą precyzję i mniejszy zakres niż `float` i 
 
 W wyrażeniu można mieszać typy [całkowite](integral-numeric-types.md) i typy zmiennoprzecinkowe. W takim przypadku typy całkowite są konwertowane na typy zmiennoprzecinkowe. Obliczanie wyrażenia jest wykonywane zgodnie z następującymi regułami:
 
-- Jeśli jeden z typów zmiennoprzecinkowych ma wartość `double`, wyrażenie oblicza do `double` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych lub porównaniach dla równości.
-- Jeśli w wyrażeniu nie ma żadnego typu `double`, wyrażenie zwróci wartość `float` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych lub porównaniach dla równości.
+- Jeśli jeden z typów zmiennoprzecinkowych jest `double`, wyrażenie oblicza do `double` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych i równości.
+- Jeśli w wyrażeniu nie ma `double` typu, wyrażenie zwróci `float` lub do wartości [logicznej](../keywords/bool.md) w porównaniach relacyjnych i równości.
 
 Wyrażenie zmiennoprzecinkowe może zawierać następujące zestawy wartości:
 
@@ -66,23 +66,41 @@ Aby uzyskać więcej informacji na temat tych wartości, zobacz IEEE Standard fo
 
 Aby sformatować wartość zmiennoprzecinkową, można użyć [standardowych ciągów formatu liczb](../../../standard/base-types/standard-numeric-format-strings.md) lub [niestandardowych ciągów formatu liczbowego](../../../standard/base-types/custom-numeric-format-strings.md) .
 
-## <a name="floating-point-literals"></a>Literały zmiennoprzecinkowe
+## <a name="real-literals"></a>Literały prawdziwe
 
-Domyślnie literał liczbowy zmiennoprzecinkowy po prawej stronie operatora przypisania jest traktowany jako `double`. Można użyć sufiksów do przekonwertowania literału zmiennoprzecinkowego lub całkowitego na określony typ:
+Typ literału rzeczywistego jest określany na podstawie jego sufiksu w następujący sposób:
 
-- Sufiks `d` lub `D` konwertuje literał na `double`.
-- Sufiks `f` lub `F` konwertuje literał na `float`.
-- Sufiks `m` lub `M` konwertuje literał na `decimal`.
+- Literał bez sufiksu lub z sufiksem `d` lub `D` jest typu `double`
+- Literał z sufiksem `f` lub `F` jest typu `float`
+- Literał z sufiksem `m` lub `M` jest typu `decimal`
 
-W poniższych przykładach pokazano każdy sufiks:
+Poniższy kod ilustruje przykład każdego z nich:
 
 ```csharp
 double d = 3D;
 d = 4d;
-float f = 3.5F;
+d = 3.934_001;
+
+float f = 3_000.5F;
 f = 5.4f;
-decimal myMoney = 300.5m;
+
+decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
+```
+
+W powyższym przykładzie przedstawiono również użycie `_` jako *separatora cyfr*, który jest obsługiwany od C# 7,0. Można użyć separatora cyfr z wszystkimi rodzajami literałów liczbowych.
+
+Można również użyć notacji wykładniczej, czyli określić część wykładnika rzeczywistego literału, jak pokazano na poniższym przykładzie:
+
+```csharp-interactive
+double d = 0.42e2;
+Console.WriteLine(d);  // output 42;
+
+float f = 134.45E-2f;
+Console.WriteLine(f);  // output: 1.3445
+
+decimal m = 1.5E6m;
+Console.WriteLine(m);  // output: 1500000
 ```
 
 ## <a name="conversions"></a>Konwersje
@@ -95,15 +113,21 @@ Aby uzyskać więcej informacji na temat niejawnych konwersji liczbowych, zobacz
 
 Aby uzyskać więcej informacji na temat jawnych konwersji liczbowych, zobacz [jawna tabela konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md).
 
+## <a name="c-language-specification"></a>specyfikacja języka C#
+
+Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+
+- [Typy zmiennoprzecinkowe](~/_csharplang/spec/types.md#floating-point-types)
+- [Typ dziesiętny](~/_csharplang/spec/types.md#the-decimal-type)
+- [Literały prawdziwe](~/_csharplang/spec/lexical-structure.md#real-literals)
+
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [C#odwoła](../index.md)
 - [Typy całkowite](integral-numeric-types.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)
 - [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)
-- [Tabela niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md)
-- [Tabela jawnych konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)

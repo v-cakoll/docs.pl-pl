@@ -13,19 +13,19 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 3034c84684e94dfe8c334107a16df8cbd227c4d4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5cce56dfdd2bdc7e068aadbc18b92bba269d
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912449"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72581819"
 ---
 # <a name="goto-statement"></a>GoTo — Instrukcja
 Rozgałęzienia bezwarunkowo do określonego wiersza procedury.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```vb  
 GoTo line  
 ```  
   
@@ -34,30 +34,30 @@ GoTo line
  Wymagany. Dowolna etykieta wiersza.  
   
 ## <a name="remarks"></a>Uwagi  
- `GoTo` Instrukcja może rozgałęziać tylko do wierszy w procedurze, w której występuje. Wiersz musi mieć etykietę wiersza, która `GoTo` może odwoływać się do. Aby uzyskać więcej informacji, zobacz [jak: Instrukcje](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)etykiet.  
+ Instrukcja `GoTo` może rozgałęziać tylko do wierszy w procedurze, w której występuje. Wiersz musi mieć etykietę linii, do której może odwoływać się `GoTo`. Aby uzyskać więcej informacji, zobacz [instrukcje: etykietowanie instrukcji](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md).  
   
 > [!NOTE]
-> `GoTo`instrukcje mogą utrudniać odczytywanie i konserwację kodu. Jeśli to możliwe, zamiast tego użyj struktury formantu. Aby uzyskać więcej informacji, zobacz [sterowanie przepływem](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
+> instrukcje `GoTo` mogą utrudniać odczytywanie i konserwację kodu. Jeśli to możliwe, zamiast tego użyj struktury formantu. Aby uzyskać więcej informacji, zobacz [sterowanie przepływem](../../../visual-basic/programming-guide/language-features/control-flow/index.md).  
   
- Nie można użyć `GoTo` instrukcji do rozgałęzienia spoza elementu `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, `With`... `End With` lub`Using`... `End Using` konstrukcja do etykiety wewnątrz.  
+ Nie można użyć instrukcji `GoTo` do rozgałęzienia spoza `For`... `Next`, `For Each`... `Next`, `SyncLock`... `End SyncLock`, `Try`... `Catch`... `Finally`, 0... 1 lub 2... 3 konstrukcja do etykiety wewnątrz.  
   
 ## <a name="branching-and-try-constructions"></a>Rozgałęzianie i próba konstrukcji  
- `Try`W... `Catch`... w celu rozgałęziania `GoTo` instrukcji należy zastosować następujące reguły. `Finally`  
+ W `Try`... `Catch`... `Finally` konstrukcja, następujące reguły mają zastosowanie do rozgałęziania przy użyciu instrukcji `GoTo`.  
   
 |Blok lub region|Rozgałęzianie od zewnątrz|Rozgałęzianie od wewnątrz|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try`odblokowan|Tylko z `Catch` bloku tej samej konstrukcji <sup>1</sup>|Tylko poza całością konstrukcji|  
-|`Catch`odblokowan|Nigdy niedozwolone|Tylko poza całościową budową lub `Try` blokiem tej samej konstrukcji <sup>1</sup>|  
-|`Finally`odblokowan|Nigdy niedozwolone|Nigdy niedozwolone|  
+|blok `Try`|Tylko z bloku `Catch` tej samej konstrukcji <sup>1</sup>|Tylko poza całością konstrukcji|  
+|blok `Catch`|Nigdy niedozwolone|Tylko poza całościową budową lub do bloku `Try` tej samej konstrukcji <sup>1</sup>|  
+|blok `Finally`|Nigdy niedozwolone|Nigdy niedozwolone|  
   
- <sup>1</sup> , jeśli `Try`jeden... `Catch`... konstrukcja jest zagnieżdżona w innym `Catch` , `Try` blok może odgałęzić się do bloku na jego własnym poziomie zagnieżdżenia, ale nie w `Try` żadnym innym bloku. `Finally` Zagnieżdżony `Try`... `Catch`... konstrukcja musi być całkowicie zawarta `Try` w `Catch` bloku lub konstrukcji, w której jest zagnieżdżona. `Finally`  
+ <sup>1</sup> , jeśli jeden `Try`... `Catch`... `Finally` konstrukcja jest zagnieżdżona w innym, blok `Catch` może rozgałęzić do bloku `Try` na swoim własnym poziomie zagnieżdżenia, ale nie w żadnym innym bloku `Try`. Zagnieżdżona `Try`... `Catch`... Konstrukcja `Finally` musi być całkowicie zawarta w bloku `Try` lub `Catch` konstrukcji, w ramach której jest zagnieżdżony.  
   
- Na poniższej ilustracji przedstawiono jedną `Try` konstrukcję zagnieżdżoną w innej. Różne gałęzie między blokami dwóch konstrukcji są wskazywane jako prawidłowe lub nieprawidłowe.  
+ Na poniższej ilustracji przedstawiono jedną `Try` konstrukcji zagnieżdżoną w innej. Różne gałęzie między blokami dwóch konstrukcji są wskazywane jako prawidłowe lub nieprawidłowe.  
   
  ![Diagram graficzny rozgałęzień w konstrukcjach try](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa `GoTo` instrukcji do rozgałęziania etykiet linii w procedurze.  
+ Poniższy przykład używa instrukcji `GoTo`, aby rozgałęziać etykiety linii w procedurze.  
   
  [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
@@ -66,8 +66,8 @@ GoTo line
 - [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Instrukcja Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [Select...Case, instrukcja](../../../visual-basic/language-reference/statements/select-case-statement.md)
 - [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
 - [With...End With, instrukcja](../../../visual-basic/language-reference/statements/with-end-with-statement.md)

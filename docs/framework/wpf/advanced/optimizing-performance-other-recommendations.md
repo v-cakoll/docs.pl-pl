@@ -1,5 +1,5 @@
 ---
-title: 'Optymalizacja wydajności: Inne zalecenia'
+title: 'Optymalizacja wydajności: inne zalecenia'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,66 +11,66 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 9757a8c8327feb40018387473b479e467149f0ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611909"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582452"
 ---
-# <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: Inne zalecenia
-<a name="introduction"></a> Ten temat zawiera zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizowania wydajności aplikacji WPF](optimizing-wpf-application-performance.md) sekcji.  
+# <a name="optimizing-performance-other-recommendations"></a>Optymalizacja wydajności: inne zalecenia
+<a name="introduction"></a>Ten temat zawiera zalecenia dotyczące wydajności, a także te, które zostały omówione w sekcji [Optymalizacja wydajności aplikacji WPF](optimizing-wpf-application-performance.md) .  
   
  Ten temat zawiera następujące sekcje:  
   
-- [Nieprzezroczystość na pędzle i przezroczystość elementów](#Opacity)  
+- [Nieprzezroczystość pędzli i nieprzezroczystość elementów](#Opacity)  
   
 - [Nawigacja do obiektu](#Navigation_Objects)  
   
-- [Test na dużych powierzchni 3D trafienia](#Hit_Testing)  
+- [Testowanie trafień na dużych powierzchniach 3W](#Hit_Testing)  
   
-- [Zdarzenie CompositionTarget.Rendering](#CompositionTarget_Rendering_Event)  
+- [Zdarzenie CompositionTarget. renderingu](#CompositionTarget_Rendering_Event)  
   
-- [Unikaj używania scrollbarvisibility — = Auto](#Avoid_Using_ScrollBarVisibility)  
+- [Unikaj używania ScrollBarVisibility =](#Avoid_Using_ScrollBarVisibility)  
   
-- [Konfigurowanie usługi pamięci podręcznej czcionki skrócić czas uruchamiania](#FontCache)  
+- [Konfigurowanie Cache Service czcionki w celu skrócenia czasu uruchamiania](#FontCache)  
   
 <a name="Opacity"></a>   
-## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Nieprzezroczystość na pędzle i przezroczystość elementów  
- Kiedy używasz <xref:System.Windows.Media.Brush> można ustawić <xref:System.Windows.Shapes.Shape.Fill%2A> lub <xref:System.Windows.Shapes.Shape.Stroke%2A> elementu, to lepiej ustawić <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType> wartości zamiast ustawienie elementu <xref:System.Windows.UIElement.Opacity%2A> właściwości. Modyfikowanie elementu <xref:System.Windows.UIElement.Opacity%2A> może spowodować, że właściwość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do utworzenia tymczasowego powierzchni.  
+## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>Nieprzezroczystość pędzli i nieprzezroczystość elementów  
+ W przypadku używania <xref:System.Windows.Media.Brush> do ustawiania <xref:System.Windows.Shapes.Shape.Fill%2A> lub <xref:System.Windows.Shapes.Shape.Stroke%2A> elementu, lepiej jest ustawić wartość <xref:System.Windows.Media.Brush.Opacity%2A?displayProperty=nameWithType>, a nie ustawienie właściwości <xref:System.Windows.UIElement.Opacity%2A> elementu. Modyfikacja właściwości <xref:System.Windows.UIElement.Opacity%2A> elementu może spowodować, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utworzyć tymczasową powierzchnię.  
   
 <a name="Navigation_Objects"></a>   
 ## <a name="navigation-to-object"></a>Nawigacja do obiektu  
- <xref:System.Windows.Navigation.NavigationWindow> Pochodzi od klasy obiektu <xref:System.Windows.Window> i rozszerza je z obsługą nawigowania po zawartości, przede wszystkim przez agregowanie <xref:System.Windows.Navigation.NavigationService> i dziennika. Możesz zaktualizować obszaru klienckiego <xref:System.Windows.Navigation.NavigationWindow> , określając opcję [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] lub obiektu. Poniższy przykład pokazuje obie metody:  
+ Obiekt <xref:System.Windows.Navigation.NavigationWindow> pochodzi od <xref:System.Windows.Window> i rozszerza go o obsługę nawigacji zawartości, głównie poprzez agregowanie <xref:System.Windows.Navigation.NavigationService> i dziennika. Obszar klienta <xref:System.Windows.Navigation.NavigationWindow> można zaktualizować, określając identyfikator URI (Uniform Resource Identifier) lub obiekt. Poniższy przykład pokazuje obie metody:  
   
  [!code-csharp[Performance#PerformanceSnippet14](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/TestNavigation.xaml.cs#performancesnippet14)]
  [!code-vb[Performance#PerformanceSnippet14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/testnavigation.xaml.vb#performancesnippet14)]  
   
- Każdy <xref:System.Windows.Navigation.NavigationWindow> obiekt ma dziennika, która zawiera rekordy historii nawigacji dla danego użytkownika w tym oknie. Jednym z celów dziennika jest Zezwalaj użytkownikom na odtwarzanie ich kroki.  
+ Każdy obiekt <xref:System.Windows.Navigation.NavigationWindow> ma arkusz, który rejestruje historię przeglądania użytkownika w tym oknie. Jednym z celów tego dziennika jest umożliwienie użytkownikom śledzenia ich kroków.  
   
- Po przejściu przy użyciu [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)], dziennika są przechowywane tylko [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] odwołania. Oznacza to, że zawsze ponownie stronę, go jest dynamicznie odtworzone, które mogą być dużo czasu w zależności od złożoności strony. W tym przypadku koszt przechowywania dziennika jest niska, ale czas do odtworzenia strony jest potencjalnie wysoki.  
+ W przypadku nawigowania przy użyciu identyfikatora URI (Uniform Resource Identifier) w dzienniku jest przechowywany tylko odwołanie Uniform Resource Identifier (URI). Oznacza to, że za każdym razem, gdy ponownie odwiedzasz stronę, jest ona dynamicznie ponownie skonstruowana, co może być czasochłonne w zależności od złożoności strony. W takim przypadku koszt magazynu dziennika jest niski, ale czas na odtworzenia strony jest potencjalnie wysoki.  
   
- Po przejściu przy użyciu obiektu, arkusz przechowuje całe drzewo wizualne obiektu. Oznacza to, każdym razem odwiedzisz stronie renderowania bezpośrednio bez konieczności odtworzony. W tym przypadku koszt przechowywania dziennika jest wysoka, ale mało czasu do odtworzenia na stronie.  
+ Podczas nawigowania przy użyciu obiektu, w dzienniku jest przechowywane całe drzewo wizualne obiektu. Oznacza to, że za każdym razem, gdy ponownie zostanie wyświetlona strona, jest ona renderowana natychmiast bez konieczności ponownego konstruowania. W takim przypadku koszt magazynu dziennika jest wysoki, ale czas na odtworzenia strony jest niski.  
   
- Kiedy używasz <xref:System.Windows.Navigation.NavigationWindow> obiektu, należy pamiętać, jak obsługa rejestrowanie ma wpływ na wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [Nawigacja — omówienie](../app-development/navigation-overview.md).  
+ W przypadku korzystania z obiektu <xref:System.Windows.Navigation.NavigationWindow> należy pamiętać, że obsługa rejestrowania wpływa na wydajność aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](../app-development/navigation-overview.md).  
   
 <a name="Hit_Testing"></a>   
-## <a name="hit-testing-on-large-3d-surfaces"></a>Test na dużych powierzchni 3D trafienia  
- Testowanie trafień na dużych powierzchni 3D jest to intensywna operacja bardzo wydajności pod kątem użycia procesora CPU. Jest to szczególnie istotne w przypadku, gdy jest animowanie powierzchni 3D. Jeśli nie potrzebujesz testowania trafień na te powierzchnie, wyłącz, testowanie trafień. Obiekty, które są uzyskiwane z <xref:System.Windows.UIElement> można wyłączyć testowania trafień, ustawiając <xref:System.Windows.UIElement.IsHitTestVisible%2A> właściwość `false`.  
+## <a name="hit-testing-on-large-3d-surfaces"></a>Testowanie trafień na dużych powierzchniach 3W  
+ Testowanie trafień na dużych powierzchniach 3W jest bardzo intensywną operacją w zakresie użycia procesora CPU. Jest to szczególnie prawdziwe, gdy powierzchnia 3W jest animowana. Jeśli na tych powierzchni nie jest wymagane testowanie trafień, wyłącz testowanie trafień. Obiekty pochodzące z <xref:System.Windows.UIElement> mogą wyłączyć testowanie trafień, ustawiając właściwość <xref:System.Windows.UIElement.IsHitTestVisible%2A> na `false`.  
   
 <a name="CompositionTarget_Rendering_Event"></a>   
-## <a name="compositiontargetrendering-event"></a>Zdarzenie CompositionTarget.Rendering  
- <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> Powoduje, że zdarzenie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stale animować. Jeśli używasz tego zdarzenia, można go odłączyć przy każdej okazji.  
+## <a name="compositiontargetrendering-event"></a>Zdarzenie CompositionTarget. renderingu  
+ Zdarzenie <xref:System.Windows.Media.CompositionTarget.Rendering?displayProperty=nameWithType> powoduje ciągłą animację [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Jeśli używasz tego zdarzenia, odłączaj je w każdej okazji.  
   
 <a name="Avoid_Using_ScrollBarVisibility"></a>   
-## <a name="avoid-using-scrollbarvisibilityauto"></a>Unikaj używania scrollbarvisibility — = Auto  
- Jeśli to możliwe, należy unikać <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> wartość `HorizontalScrollBarVisibility` i `VerticalScrollBarVisibility` właściwości. Te właściwości są zdefiniowane dla <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer>, i <xref:System.Windows.Controls.TextBox> obiektów, a jako dołączoną właściwość dla <xref:System.Windows.Controls.ListBox> obiektu. Zamiast tego należy ustawić <xref:System.Windows.Controls.ScrollBarVisibility> do <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden>, lub <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
+## <a name="avoid-using-scrollbarvisibilityauto"></a>Unikaj używania ScrollBarVisibility =  
+ Jeśli to możliwe, Unikaj używania wartości <xref:System.Windows.Controls.ScrollBarVisibility.Auto?displayProperty=nameWithType> dla właściwości `HorizontalScrollBarVisibility` i `VerticalScrollBarVisibility`. Te właściwości są zdefiniowane dla obiektów <xref:System.Windows.Controls.RichTextBox>, <xref:System.Windows.Controls.ScrollViewer> i <xref:System.Windows.Controls.TextBox> oraz jako właściwość dołączona do obiektu <xref:System.Windows.Controls.ListBox>. Zamiast tego należy ustawić <xref:System.Windows.Controls.ScrollBarVisibility> na <xref:System.Windows.Controls.ScrollBarVisibility.Disabled>, <xref:System.Windows.Controls.ScrollBarVisibility.Hidden> lub <xref:System.Windows.Controls.ScrollBarVisibility.Visible>.  
   
- <xref:System.Windows.Controls.ScrollBarVisibility.Auto> Wartość jest przeznaczona dla przypadków, gdy liczba miejsc jest ograniczona i paski przewijania powinien być wyświetlany, gdy jest to konieczne. Na przykład, być może warto użyć tej funkcji <xref:System.Windows.Controls.ScrollBarVisibility> wartością <xref:System.Windows.Controls.ListBox> 30 elementów, w przeciwieństwie do <xref:System.Windows.Controls.TextBox> wraz z setkami wierszy tekstu.  
+ Wartość <xref:System.Windows.Controls.ScrollBarVisibility.Auto> jest przeznaczona dla przypadków, gdy ilość miejsca jest ograniczona, a paski przewijania powinny być wyświetlane tylko w razie potrzeby. Na przykład przydatne może być użycie tej <xref:System.Windows.Controls.ScrollBarVisibility> wartości z <xref:System.Windows.Controls.ListBox> 30 elementów, a nie <xref:System.Windows.Controls.TextBox> z setkami wierszy tekstu.  
   
 <a name="FontCache"></a>   
-## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurowanie usługi pamięci podręcznej czcionki skrócić czas uruchamiania  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Czcionki Cache service udostępnia dane czcionki między [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji. Pierwszy [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, możesz uruchomić rozpoczyna się tej usługi, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], można ustawić usługę "Windows Presentation Foundation (WPF) czcionki pamięć podręczną 3.0.0.0" od "Ręczny" (wartość domyślna) "Automatycznie (opóźnione uruchomienie)" w celu skrócenia czasu początkowego rozruchu z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.  
+## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Konfigurowanie Cache Service czcionki w celu skrócenia czasu uruchamiania  
+ Usługa [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] buforowania czcionek udostępnia dane czcionki między aplikacjami [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Pierwsza uruchomiona aplikacja [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uruchamia tę usługę, jeśli usługa nie jest już uruchomiona. Jeśli używasz [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], możesz ustawić opcję "Windows Presentation Foundation (WPF) 3.0.0.0 pamięci podręcznej czcionek" z "ręczne" (domyślnie) na "Automatyczne (opóźnione uruchomienie)", aby skrócić początkowy czas uruchamiania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,6 +17,8 @@
       href: file-format.md
     - name: 'Instrukcje: używanie i debugowanie funkcji zwolnienia zestawu w programie .NET Core'
       href: unloadability.md
+    - name: Odwoływanie się do zestawów
+      href: reference-assemblies.md
     - name: Rozwiązywanie załadowań zestawów
       href: resolve-loads.md
     - name: Programowanie przy użyciu zestawów

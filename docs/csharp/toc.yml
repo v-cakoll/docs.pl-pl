@@ -1,6 +1,6 @@
 - name: 'Przewodnik dla języka C#'
   href: index.md
-- name: Rozpoczęcie pracy
+- name: Rozpocznij
   items:
     - name: Jak korzystać z tego przewodnika
       href: getting-started/index.md
@@ -14,7 +14,7 @@
       items:
         - name: Wybieranie pierwszej lekcji
           href: tutorials/intro-to-csharp/index.md
-        - name: Witaj świecie
+        - name: Hello world
           href: tutorials/intro-to-csharp/hello-world.yml
         - name: 'Liczby w języku C#'
           href: tutorials/intro-to-csharp/numbers-in-csharp.yml
@@ -56,7 +56,7 @@
       href: tutorials/generate-consume-asynchronous-stream.md
     - name: Zwiększanie możliwości danych za pomocą dopasowania wzorca
       href: tutorials/pattern-matching.md
-    - name: Aplikacja konsolowa
+    - name: Aplikacja konsoli
       href: tutorials/console-teleprompter.md
     - name: Klient REST
       href: tutorials/console-webapiclient.md
@@ -120,7 +120,7 @@
       href: nullable-references.md
     - name: Opisywanie interfejsów API dopuszczających wartość null przy użyciu atrybutów i ograniczeń
       href: nullable-attributes.md
-    - name: Przestrzenie nazw
+    - name: Namespaces
       href: programming-guide/namespaces/index.md
     - name: Typy podstawowe
       href: basic-types.md
@@ -140,7 +140,7 @@
       href: programming-guide/statements-expressions-operators/lambda-expressions.md
     - name: Właściwości
       href: properties.md
-    - name: Indexers (Indeksatory)
+    - name: Indeksatory
       href: indexers.md
     - name: Odrzucenia
       href: discards.md
@@ -236,7 +236,7 @@
       href: programming-guide/interop/index.md
     - name: Dokumentowanie kodu
       href: codedoc.md
-    - name: Obsługa wersji
+    - name: Przechowywanie wersji
       href: versioning.md
 - name: 'Tematy z instrukcjami dotyczącymi języka C#'
   items:
@@ -1094,7 +1094,7 @@
           href: programming-guide/strings/index.md
         - name: 'Instrukcje: Określanie, czy ciąg reprezentuje wartość liczbową'
           href: programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md
-    - name: Indexers (Indeksatory)
+    - name: Indeksatory
       items:
         - name: Omówienie
           href: programming-guide/indexers/index.md
@@ -1144,7 +1144,7 @@
           href: programming-guide/generics/generics-and-reflection.md
         - name: Typy ogólne i atrybuty
           href: programming-guide/generics/generics-and-attributes.md
-    - name: Przestrzenie nazw
+    - name: Namespaces
       items:
         - name: Omówienie
           href: programming-guide/namespaces/index.md
@@ -1298,14 +1298,16 @@
               items:
                 - name: Funkcje typów wartości
                   href: language-reference/keywords/value-types.md
-                - name: bool
-                  href: language-reference/keywords/bool.md
                 - name: Typy liczb całkowitych
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
                 - name: Zmiennoprzecinkowe rodzaje wartości numerycznych
-                  displayName: 'float, decimal, double, rational, real'
+                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                - name: Wbudowane konwersje liczbowe
+                  href: language-reference/builtin-types/numeric-conversions.md
+                - name: bool
+                  href: language-reference/keywords/bool.md
                 - name: char
                   href: language-reference/keywords/char.md
                 - name: enum
@@ -1316,11 +1318,11 @@
               items:
                 - name: Funkcje typów odwołań
                   href: language-reference/keywords/reference-types.md
-                - name: class
-                  href: language-reference/keywords/class.md
                 - name: Wbudowane typy referencyjne
                   displayName: 'object, delegate, dynamic, string'
                   href: language-reference/builtin-types/reference-types.md
+                - name: class
+                  href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
             - name: void
@@ -1337,10 +1339,6 @@
                   href: language-reference/keywords/value-types-table.md
                 - name: Tabela wartości domyślnych
                   href: language-reference/keywords/default-values-table.md
-                - name: Tabela niejawnych konwersji liczbowych
-                  href: language-reference/keywords/implicit-numeric-conversions-table.md
-                - name: Tabela jawnych konwersji liczbowych
-                  href: language-reference/keywords/explicit-numeric-conversions-table.md
                 - name: Formatowanie tabeli wyników liczbowych
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: Modyfikatory
@@ -1492,7 +1490,7 @@
           items:
             - name: base
               href: language-reference/keywords/base.md
-            - name: względem tego ruchu
+            - name: this
               href: language-reference/keywords/this.md
         - name: Słowa kluczowe literału
           items:
@@ -1522,7 +1520,7 @@
               href: language-reference/keywords/set.md
             - name: when (warunek filtru)
               href: language-reference/keywords/when.md
-            - name: wartość
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1808,5 +1806,5 @@
       href: language-reference/specification/
     - name: 'Propozycje dotyczące języka C# 7.0–8.0'
       href: language-reference/proposals/
-- name: Przewodniki
+- name: Wskazówki
   href: walkthroughs.md

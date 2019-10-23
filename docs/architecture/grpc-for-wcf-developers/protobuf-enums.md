@@ -3,20 +3,20 @@ title: Wyliczenia protobuf — gRPC dla deweloperów WCF
 description: Dowiedz się, jak deklarować wyliczenia i korzystać z nich w protobuf.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: d93319b713588129a19246976a82bb03a90ce680
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184240"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771645"
 ---
-# <a name="protobuf-enumerations"></a>Wyliczenia protobuf
+# <a name="protobuf-enumerations"></a>Wyliczenia Protobuf
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Protobuf obsługuje typy wyliczeniowe, jak pokazano w poprzedniej sekcji, w której Wyliczenie zostało użyte do określenia typu `oneof` pola. Można zdefiniować własne typy wyliczeniowe, a protobuf będzie kompilować je C# do typów wyliczeniowych. Ponieważ protobuf można używać w różnych językach, konwencje nazewnictwa dla wyliczeń różnią się C# od konwencji. Jednak generator kodu jest sprytne i konwertuje nazwy do tradycyjnego C# przypadku. Jeśli odpowiednik w przypadku języka Pascala nazwy pola rozpoczyna się od nazwy wyliczenia, zostanie usunięty.
+Protobuf obsługuje typy wyliczeniowe, jak pokazano w poprzedniej sekcji, w której Wyliczenie zostało użyte do określenia typu pola `oneof`. Można zdefiniować własne typy wyliczeniowe, a protobuf będzie kompilować je C# do typów wyliczeniowych. Ponieważ protobuf można używać w różnych językach, konwencje nazewnictwa dla wyliczeń różnią się C# od konwencji. Jednak generator kodu jest sprytne i konwertuje nazwy do tradycyjnego C# przypadku. Jeśli odpowiednik w przypadku języka Pascala nazwy pola rozpoczyna się od nazwy wyliczenia, zostanie usunięty.
 
-Na przykład w tym wyliczeniu protobuf pola są poprzedzone prefiksem, który jest odpowiednikiem nazwy wyliczenia przypadku w `ACCOUNT_STATUS`języku `AccountStatus`Pascal:.
+Na przykład w tym wyliczeniu protobuf pola są poprzedzone `ACCOUNT_STATUS`, co jest równoznaczne z nazwą wyliczenia przypadku w języku Pascal: `AccountStatus`.
 
 ```protobuf
 enum AccountStatus {
@@ -41,7 +41,7 @@ public enum AccountStatus
 }
 ```
 
-Definicje wyliczenia protobuf **muszą** mieć stałą zero jako swoje pierwsze pole. Jak w C#programie, można zadeklarować wiele pól o tej samej wartości, ale należy jawnie włączyć tę opcję przy użyciu `allow_alias` opcji w wyliczeniu:
+Definicje wyliczenia protobuf **muszą** mieć stałą zero jako swoje pierwsze pole. Podobnie jak C#w programie, można zadeklarować wiele pól o tej samej wartości, ale należy jawnie włączyć tę opcję przy użyciu opcji `allow_alias` w wyliczeniu:
 
 ```protobuf
 enum AccountStatus {
@@ -55,7 +55,7 @@ enum AccountStatus {
 }
 ```
 
-Wyliczenia można zadeklarować na najwyższym poziomie `.proto` pliku lub zagnieżdżać w ramach definicji wiadomości. Wyliczenia zagnieżdżone — takie jak komunikaty zagnieżdżone — zostaną zadeklarowane w obrębie `.Types` klasy statycznej w wygenerowanej klasie komunikatów.
+Wyliczenia można zadeklarować na najwyższym poziomie w pliku `.proto` lub zagnieżdżać w ramach definicji komunikatu. Wyliczenia zagnieżdżone — takie jak komunikaty zagnieżdżone — zostaną zadeklarowane w obrębie klasy statycznej `.Types` w wygenerowanej klasie komunikatów.
 
 Nie ma sposobu zastosowania atrybutu [[flags]](xref:System.FlagsAttribute) do wyliczenia wygenerowanego przez protobuf, a protobuf nie rozpoznaje bitowych kombinacji wyliczeniowych. Zapoznaj się z poniższym przykładem:
 
@@ -69,13 +69,13 @@ enum Region {
 }
 
 message Product {
-  Region availableIn = 1;
+  Region available_in = 1;
 }
 ```
 
-Jeśli ustawisz `product.AvailableIn` `Region.NorthAmerica | Region.SouthAmerica`opcję, zostanie ona zserializowana jako wartość `3`całkowita. Gdy klient lub serwer próbuje zdeserializować wartości, nie znajdzie dopasowania w definicji wyliczenia dla `3` i wynik `Region.None`będzie.
+Jeśli ustawisz `product.AvailableIn` na `Region.NorthAmerica | Region.SouthAmerica`, zostanie ona zserializowana jako wartość całkowita `3`. Gdy klient lub serwer próbuje zdeserializować wartości, nie znajdzie dopasowania w definicji wyliczenia dla `3`, a wynik zostanie `Region.None`.
 
-Najlepszym sposobem pracy z wieloma wartościami wyliczenia w protobuf jest użycie `repeated` pola typu wyliczeniowego.
+Najlepszym sposobem pracy z wieloma wartościami wyliczenia w protobuf jest użycie pola `repeated` typu wyliczeniowego.
 
 >[!div class="step-by-step"]
 >[Poprzedni](protobuf-any-oneof.md)

@@ -3,14 +3,14 @@ title: Migrowanie usług programu WCF Duplex do gRPC-gRPC dla deweloperów progr
 description: Dowiedz się, jak migrować różne formy usługi programu WCF Duplex do usługi gRPC Streaming Services.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 525dc3006c45f773242ab08b112dba72087a2e3f
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1c3f87b035cea367188e8357f4755c7b6786ab77
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834516"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770392"
 ---
-# <a name="migrate-wcf-duplex-services-to-grpc"></a>Migrowanie usług programu WCF Duplex do gRPC
+# <a name="migrate-wcf-duplex-services-to-grpc"></a>Migrowanie usług dwukierunkowych WCF do usługi gRPC
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -37,7 +37,7 @@ public interface ISimpleStockTickerService
 }
 ```
 
-Usługa ma jedną metodę bez zwracanego typu, ponieważ będzie używać interfejsu wywołania zwrotnego `ISimpleStockTickerCallback` w celu wysyłania danych do klienta w czasie rzeczywistym.
+Usługa ma pojedynczą metodę bez zwracanego typu, ponieważ będzie używać interfejsu wywołania zwrotnego `ISimpleStockTickerCallback` do wysyłania danych do klienta w czasie rzeczywistym.
 
 #### <a name="the-callback-interface"></a>Interfejs wywołania zwrotnego
 
@@ -56,7 +56,7 @@ Implementacje tych interfejsów można znaleźć w rozwiązaniu wraz z niektóry
 
 GRPC sposób obsługi danych w czasie rzeczywistym jest różny. Wywołanie z klienta do serwera może utworzyć trwały strumień, który może być monitorowany w przypadku komunikatów przychodzących asynchronicznie. Pomimo różnic między strumieniami może być bardziej intuicyjny sposób postępowania z danymi i są one bardziej istotne w nowoczesnych programowaniu, z naciskiem na LINQ, reaktywne strumienie, programowanie funkcjonalne i tak dalej.
 
-Definicja usługi wymaga dwóch komunikatów: jeden dla żądania oraz jeden dla strumienia. Usługa zwraca strumień komunikatu `StockTickerUpdate` przy użyciu słowa kluczowego `stream` w deklaracji `return`. Zaleca się dodanie `Timestamp` do aktualizacji w celu wyświetlenia dokładnego czasu zmiany ceny.
+Definicja usługi wymaga dwóch komunikatów: jeden dla żądania oraz jeden dla strumienia. Usługa zwraca strumień komunikatu `StockTickerUpdate` za pomocą słowa kluczowego `stream` w swojej deklaracji `return`. Zaleca się dodanie `Timestamp` do aktualizacji w celu pokazywania dokładnego czasu zmiany ceny.
 
 #### <a name="simple_stock_tickerproto"></a>simple_stock_ticker. proto
 
@@ -79,14 +79,14 @@ message SubscribeRequest {
 
 message StockTickerUpdate {
   string symbol = 1;
-  int32 priceCents = 2;
+  int32 price_cents = 2;
   google.protobuf.Timestamp time = 3;
 }
 ```
 
 ### <a name="implement-the-simplestockticker"></a>Implementowanie SimpleStockTicker
 
-Ponownie Użyj fałszywej `StockPriceSubscriber` z projektu WCF, kopiując trzy klasy z biblioteki klas `TraderSys.StockMarket` do nowej biblioteki klas .NET Standard w rozwiązaniu docelowym. Aby lepiej przestrzegać najlepszych rozwiązań, Dodaj typ `Factory`, aby utworzyć wystąpienia go i zarejestrować `IStockPriceSubscriberFactory` z usługami iniekcji zależności ASP.NET Core.
+Ponownie Użyj fałszywej `StockPriceSubscriber` z projektu WCF, kopiując trzy klasy z biblioteki klas `TraderSys.StockMarket` do nowej biblioteki klas .NET Standard w rozwiązaniu docelowym. Aby lepiej stosować najlepsze rozwiązania, Dodaj `Factory` typ, aby utworzyć wystąpienia go i zarejestrować `IStockPriceSubscriberFactory` za pomocą usług iniekcji zależności ASP.NET Core.
 
 #### <a name="the-factory-implementation"></a>Implementacja fabryki
 
@@ -166,19 +166,19 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-Jak widać, chociaż deklaracja w pliku `.proto` wskazuje, że metoda "zwraca" strumień komunikatów `StockTickerUpdate`, w rzeczywistości zwraca ciąg waniliny `Task`. Zadanie tworzenia strumienia jest obsługiwane przez wygenerowany kod i biblioteki środowiska uruchomieniowego gRPC, które zapewniają strumień odpowiedzi `IServerStreamWriter<StockTickerUpdate>`, gotowy do użycia.
+Jak widać, chociaż deklaracja w pliku `.proto` informuje o metodzie "zwraca" strumień komunikatów `StockTickerUpdate`, w rzeczywistości zwraca `Task` Wanili. Zadanie tworzenia strumienia jest obsługiwane przez wygenerowany kod i biblioteki środowiska uruchomieniowego gRPC, które zapewniają strumień odpowiedzi `IServerStreamWriter<StockTickerUpdate>`, gotowy do użycia.
 
 W przeciwieństwie do usługi WCF Duplex, w której wystąpienie klasy usługi jest utrzymywane, gdy połączenie jest otwarte, usługa gRPC używa zwracanego zadania, aby zachować aktywność usługi. Zadanie nie powinno zostać ukończone do momentu zamknięcia połączenia.
 
-Usługa może określić, kiedy klient zamknął połączenie, używając `CancellationToken` z `ServerCallContext`. Prosta metoda statyczna, `AwaitCancellation`, służy do tworzenia zadania, które kończy się po anulowaniu tokenu.
+Usługa może określić, kiedy klient zamknął połączenie przy użyciu `CancellationToken` z `ServerCallContext`. Prosta metoda statyczna `AwaitCancellation` jest używana do tworzenia zadania, które kończy się po anulowaniu tokenu.
 
-W metodzie `Subscribe` Pobierz `StockPriceSubscriber` i Dodaj program obsługi zdarzeń, który zapisuje dane w strumieniu odpowiedzi. Następnie poczekaj na zamknięcie połączenia przed natychmiastowe usunięciem `subscriber`, aby zapobiec próbie zapisu danych do zamkniętego strumienia.
+W metodzie `Subscribe` należy uzyskać `StockPriceSubscriber` i dodać program obsługi zdarzeń, który zapisuje dane w strumieniu odpowiedzi. Następnie poczekaj na zamknięcie połączenia przed natychmiastowe usunięciem `subscriber`, aby zapobiec próbie zapisu danych do zamkniętego strumienia.
 
-Metoda `WriteUpdateAsync` ma blok `try` @ no__t-2 @ no__t-3 do obsługi wszelkich błędów, które mogą wystąpić podczas zapisywania komunikatu w strumieniu. Jest to ważne zagadnienie w przypadku trwałych połączeń za pośrednictwem sieci, które mogą być uszkodzone w dowolnym milisekundach, niezależnie od tego, czy wystąpił błąd w dowolnym miejscu.
+Metoda `WriteUpdateAsync` ma `try` / `catch` bloku, aby obsłużyć wszelkie błędy, które mogą wystąpić podczas zapisywania komunikatu w strumieniu. Jest to ważne zagadnienie w przypadku trwałych połączeń za pośrednictwem sieci, które mogą być uszkodzone w dowolnym milisekundach, niezależnie od tego, czy wystąpił błąd w dowolnym miejscu.
 
 ### <a name="using-the-stocktickerservice-from-a-client-application"></a>Korzystanie z StockTickerService z aplikacji klienckiej
 
-Wykonaj te same kroki w poprzedniej sekcji, aby utworzyć bibliotekę klas klienta możliwej do udostępnienia z pliku `.proto`. W przykładzie znajduje się Aplikacja konsolowa programu .NET Core 3,0, która pokazuje, jak korzystać z klienta programu.
+Wykonaj te same czynności w poprzedniej sekcji, aby utworzyć bibliotekę klas klienta możliwej do udostępnienia z pliku `.proto`. W przykładzie znajduje się Aplikacja konsolowa programu .NET Core 3,0, która pokazuje, jak korzystać z klienta programu.
 
 #### <a name="example-programcs"></a>Przykład Program.cs
 
@@ -207,18 +207,18 @@ class Program
 }
 ```
 
-W takim przypadku Metoda `Subscribe` na wygenerowanym kliencie nie jest asynchroniczna. Strumień jest tworzony i możliwy do użytku od razu, ponieważ jego Metoda `MoveNext` jest asynchroniczna i po raz pierwszy jest wywoływana, dopóki połączenie nie będzie aktywne.
+W takim przypadku Metoda `Subscribe` wygenerowanego klienta nie jest asynchroniczna. Strumień jest tworzony i można go używać od razu, ponieważ jego Metoda `MoveNext` jest asynchroniczna i po raz pierwszy jest wywoływana, dopóki połączenie nie będzie aktywne.
 
 Strumień jest przesyłany do asynchronicznej metody `DisplayAsync`; aplikacja czeka, aż użytkownik naciśnie klawisz, a następnie anuluje metodę `DisplayAsync` i czeka na ukończenie zadania przed wyjściem.
 
 > [!NOTE]
-> Ten kod używa składni New C# 8 "Using deklaracji", aby usunąć strumień i kanał po zakończeniu metody `Main`. Jest to mała zmiana, ale całkiem taka, która zmniejsza wcięcia i puste wiersze.
+> Ten kod używa składni New C# 8 "Using deklaracji", aby usunąć strumień i kanał, gdy metoda `Main` zostanie zakończona. Jest to mała zmiana, ale całkiem taka, która zmniejsza wcięcia i puste wiersze.
 
 #### <a name="consume-the-stream"></a>Korzystanie z strumienia
 
 Funkcja WCF użyła interfejsów wywołania zwrotnego, aby umożliwić serwerowi wywoływanie metod bezpośrednio na kliencie. strumienie gRPC działają inaczej. Klient wykonuje iterację na zwracanym strumieniu i przetwarza komunikaty, tak jakby były zwracane z metody lokalnej zwracającej `IEnumerable`.
 
-Typ `IAsyncStreamReader<T>` działa podobnie jak `IEnumerator<T>`: istnieje metoda `MoveNext`, która zwróci wartość PRAWDA, o ile istnieje więcej danych, i Właściwość `Current`, która zwraca najnowszą wartość. Jedyną różnicą jest to, że metoda `MoveNext` zwraca `Task<bool>` zamiast tylko `bool`. Metoda rozszerzenia `ReadAllAsync` otacza strumień w standardowym C# 8 `IAsyncEnumerable`, który może być używany z nową składnią `await foreach`.
+Typ `IAsyncStreamReader<T>` działa podobnie do `IEnumerator<T>`: istnieje metoda `MoveNext`, która zwróci wartość PRAWDA, o ile istnieje więcej danych, a właściwość `Current`, która zwraca najnowszą wartość. Jedyną różnicą jest to, że metoda `MoveNext` zwraca `Task<bool>` zamiast tylko `bool`. Metoda rozszerzenia `ReadAllAsync` otacza strumień w standardowym C# 8 `IAsyncEnumerable`, który może być używany z nową składnią `await foreach`.
 
 ```csharp
 static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, CancellationToken token)
@@ -242,7 +242,7 @@ static async Task DisplayAsync(IAsyncStreamReader<StockTickerUpdate> stream, Can
 ```
 
 > [!TIP]
-> Sekcja dotycząca [bibliotek klienckich](client-libraries.md#iobservable) na końcu tego rozdziału przedstawia sposób dodawania metody rozszerzenia i klas do oblewania `IAsyncStreamReader<T>` w `IObservable<T>` dla deweloperów korzystających z reaktywnych wzorców programistycznych.
+> Sekcja [biblioteki klienckie](client-libraries.md#iobservable) na końcu tego rozdziału przedstawia sposób dodawania metody rozszerzenia i klas do zawijania `IAsyncStreamReader<T>` w `IObservable<T>` dla deweloperów korzystających z reaktywnych wzorców programistycznych.
 
 Ponownie należy zachować ostrożność, aby przechwytywać wyjątki w tym miejscu ze względu na możliwość awarii sieci, a także <xref:System.OperationCanceledException>, które będą nieuniknione, ponieważ kod używa <xref:System.Threading.CancellationToken> do przerwania pętli. Typ `RpcException` zawiera wiele przydatnych informacji o błędach środowiska uruchomieniowego gRPC, w tym `StatusCode`. Aby uzyskać więcej informacji, zobacz [ *Obsługa błędów* w rozdziale 4](error-handling.md).
 
@@ -250,7 +250,7 @@ Ponownie należy zachować ostrożność, aby przechwytywać wyjątki w tym miej
 
 Usługa WCF Full-Duplex umożliwia asynchroniczne wysyłanie komunikatów w czasie rzeczywistym w obu kierunkach. W przykładzie przesyłania strumieniowego serwera klient uruchamia żądanie, a następnie odbiera strumień aktualizacji. Lepsza wersja tej usługi pozwala klientowi dodawać i usuwać zasoby z listy bez konieczności zatrzymywania i tworzenia nowej subskrypcji. Ta funkcja została zaimplementowana w [przykładowym rozwiązaniu FullStockTicker](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/wcf/FullStockTicker).
 
-Interfejs `IFullStockTickerService` zawiera trzy metody:
+Interfejs `IFullStockTickerService` udostępnia trzy metody:
 
 - `Subscribe` uruchamia połączenie.
 - `AddSymbol` dodaje symbol giełdowy do obserwowania.
@@ -273,9 +273,9 @@ public interface IFullStockTickerService
 
 Interfejs wywołania zwrotnego pozostaje taki sam.
 
-Implementacja tego wzorca w gRPC jest mniej prosta, ponieważ istnieją teraz dwa strumienie danych z przekazywaniem komunikatów: jeden z klienta do serwera, a drugi z serwera do klienta. Nie jest możliwe użycie wielu metod w celu zaimplementowania operacji dodawania i usuwania, ale więcej niż jeden typ komunikatu można przesłać na pojedynczy strumień, używając typu `Any` lub słowa kluczowego `oneof`, które zostały omówione w [rozdziale 3](protobuf-any-oneof.md).
+Implementacja tego wzorca w gRPC jest mniej prosta, ponieważ istnieją teraz dwa strumienie danych z przekazywaniem komunikatów: jeden z klienta do serwera, a drugi z serwera do klienta. Nie jest możliwe użycie wielu metod w celu zaimplementowania operacji dodawania i usuwania, ale więcej niż jeden typ komunikatu może być przekazano do pojedynczego strumienia przy użyciu typu `Any` lub słowa kluczowego `oneof`, które zostały omówione w [rozdziale 3](protobuf-any-oneof.md).
 
-W przypadku gdy istnieje konkretny zestaw typów, które są akceptowalne, `oneof` to lepszy sposób. Użyj `ActionMessage`, który może zawierać `AddSymbolRequest` lub `RemoveSymbolRequest`.
+W przypadku gdy istnieje konkretny zestaw typów, które są akceptowalne, `oneof` jest lepszym rozwiązaniem. Użyj `ActionMessage`, która może zawierać `AddSymbolRequest` lub `RemoveSymbolRequest`.
 
 ```protobuf
 message ActionMessage {
@@ -294,7 +294,7 @@ message RemoveSymbolRequest {
 }
 ```
 
-Zadeklaruj dwukierunkową usługę przesyłania strumieniowego, która pobiera strumienie komunikatów `ActionMessage`.
+Zadeklaruj dwukierunkową usługę przesyłania strumieniowego, która pobiera strumień komunikatów `ActionMessage`.
 
 ```protobuf
 service FullStockTicker {
@@ -302,7 +302,7 @@ service FullStockTicker {
 }
 ```
 
-Implementacja tej usługi jest podobna do powyższego przykładu, z tą różnicą, że pierwszy parametr metody `Subscribe` jest teraz `IAsyncStreamReader<ActionMessage>`, który może być używany do obsługi żądań `Add` i `Remove`.
+Implementacja tej usługi jest podobna do powyższego przykładu, z wyjątkiem pierwszego parametru metody `Subscribe` jest teraz `IAsyncStreamReader<ActionMessage>`, która może służyć do obsługi żądań `Add` i `Remove`.
 
 ```csharp
 public override async Task Subscribe(IAsyncStreamReader<ActionMessage> requestStream, IServerStreamWriter<StockTickerUpdate> responseStream, ServerCallContext context)
@@ -348,7 +348,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-Klasa `ActionMessage`, która gRPC wygenerowała gwarancje dla Stanów Zjednoczonych, że można ustawić tylko jedną z właściwości `Add` i `Remove` oraz ustalić, która z nich nie jest `null` jest prawidłowym sposobem na znalezienie, który typ komunikatu jest używany, ale istnieje lepszy sposób. Generowanie kodu spowodowało również utworzenie `enum ActionOneOfCase` w klasie `ActionMessage`, która wygląda następująco:
+Klasa `ActionMessage`, która gRPC wygenerowała gwarancje dla Stanów Zjednoczonych, że można ustawić tylko jedną z właściwości `Add` i `Remove` oraz znaleźć, która z nich nie `null` jest prawidłowym sposobem wyszukiwania, który typ komunikatu jest używany , ale istnieje lepszy sposób. Generowanie kodu spowodowało również utworzenie `enum ActionOneOfCase` w klasie `ActionMessage`, która wygląda następująco:
 
 ```csharp
 public enum ActionOneofCase {
@@ -385,7 +385,7 @@ private async Task HandleActions(IAsyncStreamReader<ActionMessage> requestStream
 ```
 
 > [!TIP]
-> W instrukcji `switch` występuje `default`, co oznacza, że w przypadku napotkania nieznanej wartości `ActionOneOfCase` zostanie wyświetlone ostrzeżenie. Może to być przydatne w przypadku, gdy klient korzysta z nowszej wersji pliku `.proto`, który dodał więcej akcji. Jest to jeden z powodów, dla których użycie `switch` jest lepsze niż testowanie dla `null` w znanych polach.
+> W instrukcji `switch` występuje `default` przypadek, który rejestruje ostrzeżenie w przypadku napotkania nieznanej wartości `ActionOneOfCase`. Może to być przydatne w przypadku, gdy klient korzysta z nowszej wersji pliku `.proto`, który dodał więcej akcji. Jest to jeden z powodów, dla których użycie `switch` jest lepszym rozwiązaniem niż testowanie `null` w znanych polach.
 
 ### <a name="use-the-fullstocktickerservice-from-a-client-application"></a>Korzystanie z FullStockTickerService z aplikacji klienckiej
 
@@ -413,9 +413,9 @@ public class MainWindowViewModel : IAsyncDisposable, INotifyPropertyChanged
     }
 ```
 
-Obiekt zwrócony przez metodę `client.Subscribe()` jest teraz wystąpieniem typu biblioteki gRPC `AsyncDuplexStreamingCall<TRequest, TResponse>`, który zapewnia `RequestStream` do wysyłania żądań do serwera i `ResponseStream` do obsługi odpowiedzi.
+Obiekt zwrócony przez metodę `client.Subscribe()` jest teraz wystąpieniem typu biblioteki gRPC `AsyncDuplexStreamingCall<TRequest, TResponse>`, który udostępnia `RequestStream` do wysyłania żądań do serwera i `ResponseStream` do obsługi odpowiedzi.
 
-Strumień żądania jest używany z niektórych metod `ICommand` platformy WPF do dodawania i usuwania symboli. Dla każdej operacji Ustaw odpowiednie pole na obiekcie `ActionMessage`:
+Strumień żądania jest używany z niektórych metod `ICommand` WPF do dodawania i usuwania symboli. Dla każdej operacji Ustaw odpowiednie pole na `ActionMessage` obiekcie:
 
 ```csharp
 private async Task Add()
@@ -436,7 +436,7 @@ public async Task Remove(PriceViewModel priceViewModel)
 > [!IMPORTANT]
 > Ustawienie wartości pola `oneof` w komunikacie automatycznie czyści wszystkie pola, które zostały wcześniej ustawione.
 
-Strumień odpowiedzi jest obsługiwany w metodzie `async`, a `Task` zwraca wartość, która ma zostać usunięta po zamknięciu okna.
+Strumień odpowiedzi jest obsługiwany w metodzie `async`, a `Task` zwracana jest zatrzymywana do usunięcia, gdy okno zostanie zamknięte.
 
 ```csharp
 private async Task HandleResponsesAsync(CancellationToken token)
@@ -465,7 +465,7 @@ private async Task HandleResponsesAsync(CancellationToken token)
 
 ### <a name="client-clean-up"></a>Czyszczenie klienta
 
-Po zamknięciu okna i usunięciu `MainWindowViewModel` (z `Closed` zdarzenia `MainWindow`) zaleca się poprawne usuwanie obiektu `AsyncDuplexStreamingCall`. W szczególności Metoda `CompleteAsync` na `RequestStream` powinna zostać wywołana, aby bezpiecznie zamknąć strumień na serwerze. Poniższy przykład przedstawia metodę `DisposeAsync` z przykładowego widoku — model:
+Po zamknięciu okna i usunięciu `MainWindowViewModel` (ze zdarzenia `Closed` `MainWindow`) zaleca się poprawne usuwanie obiektu `AsyncDuplexStreamingCall`. W szczególności Metoda `CompleteAsync` na `RequestStream` powinna zostać wywołana, aby bezpiecznie zamknąć strumień na serwerze. Poniższy przykład przedstawia metodę `DisposeAsync` z widoku przykład-model:
 
 ```csharp
 public ValueTask DisposeAsync()
@@ -486,4 +486,4 @@ Zamykające strumienie żądań umożliwia serwerowi usuwanie własnych zasobów
 
 >[!div class="step-by-step"]
 >[Poprzedni](migrate-request-reply.md)
->[dalej](streaming-versus-repeated.md)
+>[Następny](streaming-versus-repeated.md)

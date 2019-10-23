@@ -2,12 +2,12 @@
 title: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
 ms.date: 10/08/2018
-ms.openlocfilehash: df304ffbe2406323e3dcf42b9eb989b02a62b28b
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249743"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771119"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 
@@ -107,7 +107,7 @@ Typowym wzorcem rejestrowania typów w kontenerze IoC jest zarejestrowanie pary 
 
 W przypadku korzystania z funkcji DI w oprogramowaniu .NET Core warto mieć możliwość skanowania zestawu i automatycznego rejestrowania jego typów według Konwencji. Ta funkcja nie jest obecnie dostępna w ASP.NET Core. Można jednak użyć biblioteki [Scrutor](https://github.com/khellang/Scrutor) dla tego programu. Takie podejście jest wygodne, gdy masz dziesiątki typów, które muszą być zarejestrowane w kontenerze IoC.
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Matthew króla. Rejestrowanie usług z Scrutor** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
@@ -162,7 +162,7 @@ Typ zakresu wystąpienia określa, jak wystąpienie jest udostępniane między �
 
 - Pojedyncze wystąpienie współużytkowane przez wszystkie obiekty używające kontenera IoC (określane w kontenerze ASP.NET Core IoC jako *pojedyncze*).
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Wprowadzenie do iniekcji zależności w ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
@@ -181,7 +181,7 @@ Wzorzec polecenia jest wewnętrznie związany ze wzorcem CQRS, który został wp
 
 Jak pokazano na rysunku 7-24, wzorzec opiera się na akceptowaniu poleceń po stronie klienta, przetwarzaniu ich na podstawie reguł modelu domeny i na końcu utrzymywania Stanów z transakcjami.
 
-![Widok wysokiego poziomu po stronie zapisu w CQRS: aplikacja interfejsu użytkownika wysyła polecenie za pomocą interfejsu API, który jest przeznaczony do CommandHandler — obiekt, który zależy od modelu domeny i infrastruktury w celu aktualizacji bazy danych.](./media/image21.png)
+![Widok wysokiego poziomu po stronie zapisu w CQRS: aplikacja interfejsu użytkownika wysyła polecenie za pomocą interfejsu API, który jest przeznaczony do CommandHandler — obiekt, który zależy od modelu domeny i infrastruktury w celu zaktualizowania bazy danych.](./media/image21.png)
 
 **Rysunek 7-24**. Widok wysokiego poziomu poleceń lub "Strona transakcyjna" w wzorcu CQRS
 
@@ -392,7 +392,7 @@ Są to dodatkowe kroki, które powinien wykonać procedura obsługi polecenia:
 
 - Jeśli wynik operacji agregacji zakończy się pomyślnie i po zakończeniu transakcji, zgłoś zdarzenia integracji. (Mogą one być również zgłaszane przez klasy infrastruktury, takie jak repozytoria).
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Oznacz Seemann. W granicach aplikacje nie są zorientowane obiektowo** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
@@ -451,9 +451,9 @@ W związku z tym, możliwość odpowiedzi na klienta po zweryfikowaniu komunikat
 
 Ponadto polecenia asynchroniczne są poleceniami jednokierunkowymi, które w wielu przypadkach mogą nie być konieczne, jak wyjaśniono w następującej interesującej wymianie między Burtsev Alexey i Gregem młodych w [konwersacji online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
-> \[Burtsev Alexey @ no__t-1 mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jeden sposób obsługi komunikatów z poleceniami, bez względu na to, aby to zrobić (nie wykonują długotrwałych operacji, nie wykonują zewnętrznych kodów asynchronicznych, ale nie są nawet między aplikacjami). granica, która ma być używana przez magistralę komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
+> \[Burtsev Alexey \] mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jeden sposób obsługi komunikatów z poleceniami bez żadnych powodów (nie wykonują długotrwałej operacji, nie wykonują zewnętrznego kodu asynchronicznego, ale nie są nawet między aplikacjami). granica, która ma być używana przez magistralę komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
 >
-> @no__t 0Greg Young @ no__t-1 \[... \] polecenie asynchroniczne nie istnieje; jest to w rzeczywistości inne zdarzenie. Jeśli muszę zaakceptować to, co wyślę, i zgłosić wydarzenie, jeśli nie zgadzam się, nie ma już więcej informacji o tym, co należy zrobić, \[that to nie jest polecenie @ no__t-1. Poinformujemy Cię o tym, że coś zostało już zrobione. Wydaje się to bardzo niewielką różnicą w pierwszej kolejności, ale ma wiele konsekwencji.
+> \[Greg młodych \] \[... \] polecenie asynchroniczne nie istnieje; jest to w rzeczywistości inne zdarzenie. Jeśli muszę zaakceptować to, co wysłałeś, i zgłosić wydarzenie, jeśli nie, już nie wiesz, jak to zrobić, \[that nie jest to polecenie \]. Poinformujemy Cię o tym, że coś zostało już zrobione. Wydaje się to bardzo niewielką różnicą w pierwszej kolejności, ale ma wiele konsekwencji.
 
 Asynchroniczne polecenia znacznie zwiększają złożoność systemu, ponieważ nie ma prostego sposobu wskazywania niepowodzeń. W związku z tym polecenia asynchroniczne nie są zalecane, niż w przypadku gdy wymagania dotyczące skalowania są wymagane lub w szczególnych przypadkach podczas komunikacji mikrousług wewnętrznych przy użyciu komunikatów. W takich przypadkach należy zaprojektować oddzielny system raportowania i odzyskiwania pod kątem błędów.
 
@@ -586,7 +586,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Ponieważ IdentifiedCommand działa podobnie jak forma polecenia biznesowego, gdy trzeba przetworzyć polecenie biznesowe, ponieważ nie jest to powtórzony identyfikator, to wykonuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej. Uruchamianie `_mediator.Send(message.Command)` z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Ponieważ IdentifiedCommand działa podobnie jak forma polecenia biznesowego, gdy trzeba przetworzyć polecenie biznesowe, ponieważ nie jest to powtórzony identyfikator, to wykonuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej. Uruchamianie `_mediator.Send(message.Command)`, z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 W takim przypadku spowoduje to połączenie i uruchomienie programu obsługi poleceń firmy, w tym przypadku [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) , w którym są uruchomione transakcje względem bazy danych porządkowania, jak pokazano w poniższym kodzie.
 
@@ -793,7 +793,7 @@ Można utworzyć dodatkowe walidacje. Jest to bardzo czysty i elegancki sposób 
 
 W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspektów lub obaw związanych z wycinaniem, które mają być stosowane do poleceń podczas ich obsługi.
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 ##### <a name="the-mediator-pattern"></a>Wzorzec mediator
 
@@ -838,4 +838,4 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-application-layer-web-api-design.md)
-> [dalej](../implement-resilient-applications/index.md)
+> [Następny](../implement-resilient-applications/index.md)

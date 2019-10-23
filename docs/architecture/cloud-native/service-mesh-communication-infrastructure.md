@@ -3,12 +3,12 @@ title: Infrastruktura komunikacji z siatką usług
 description: Dowiedz się więcej na temat sposobu, w jaki technologie sieci w chmurze upraszczają natywną komunikację mikrousług
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: 884b3bf9afd80144a36d3328af916f1c1f12bf4f
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214346"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771027"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>Infrastruktura komunikacji z siatką usług
 
@@ -26,9 +26,9 @@ Kluczowym elementem siatki usługi jest serwer proxy. W aplikacji natywnej w chm
 
 **Rysunek 4-23**. Siatka usług z samochodem bocznym
 
-Zwróć uwagę na powyższym rysunku, w jaki sposób komunikaty są przechwytywane przez serwer proxy, który jest uruchamiany razem z każdą mikrousługą. Każdy serwer proxy można skonfigurować przy użyciu reguł ruchu specyficznych dla mikrousługi. Umożliwia ona zrozumienie komunikatów i pozwala na ich kierowanie w ramach usług i na zewnątrz. 
+Zwróć uwagę na powyższym rysunku, w jaki sposób komunikaty są przechwytywane przez serwer proxy, który jest uruchamiany razem z każdą mikrousługą. Każdy serwer proxy można skonfigurować przy użyciu reguł ruchu specyficznych dla mikrousługi. Umożliwia ona zrozumienie komunikatów i pozwala na ich kierowanie w ramach usług i na zewnątrz.
 
-Wraz z zarządzaniem komunikacją między usługami usługa ta umożliwia obsługę odnajdywania usług i równoważenia obciążenia. 
+Wraz z zarządzaniem komunikacją między usługami usługa ta umożliwia obsługę odnajdywania usług i równoważenia obciążenia.
 
 Po skonfigurowaniu usługi siatka jest wysoce funkcjonalna. Siatka pobiera odpowiednią pulę wystąpień z punktu końcowego odnajdowania usług. Wysyła żądanie do określonego wystąpienia usługi, rejestrując czas oczekiwania i typ odpowiedzi wyniku. Wybiera wystąpienie najlepiej zwracające szybką odpowiedź na podstawie różnych czynników, w tym zaobserwowanych opóźnień dla ostatnich żądań.
 
@@ -38,7 +38,7 @@ W rozdziale 6 szczegółowe się z technologiami siatki usług, w tym w dyskusja
 
 ## <a name="summary"></a>Podsumowanie
 
-W tym rozdziale omówiono wzorce komunikacji natywnej w chmurze. Rozpoczęto badanie, jak klienci frontonu komunikują się z mikrousługami zaplecza. Dzięki temu będziemy mówić o platformach usługi API Gateway i komunikacji w czasie rzeczywistym. Następnie przeglądamy, jak mikrousługi komunikują się z innymi usługami zaplecza. Oglądamy synchroniczną komunikację HTTP i asynchroniczną obsługę komunikatów między usługami. Firma Microsoft pogRPCa, nadchodząca technologia w świecie macierzystym w chmurze. Wreszcie wprowadziliśmy nową i błyskawicznie rozwijający się technologię, która może usprawnić komunikację mikrousług. 
+W tym rozdziale omówiono wzorce komunikacji natywnej w chmurze. Rozpoczęto badanie, jak klienci frontonu komunikują się z mikrousługami zaplecza. Dzięki temu będziemy mówić o platformach usługi API Gateway i komunikacji w czasie rzeczywistym. Następnie przeglądamy, jak mikrousługi komunikują się z innymi usługami zaplecza. Oglądamy synchroniczną komunikację HTTP i asynchroniczną obsługę komunikatów między usługami. Firma Microsoft pogRPCa, nadchodząca technologia w świecie macierzystym w chmurze. Wreszcie wprowadziliśmy nową i błyskawicznie rozwijający się technologię, która może usprawnić komunikację mikrousług.
 
 Szczególny nacisk na zarządzane usługi platformy Azure, które mogą pomóc w zaimplementowaniu komunikacji w systemach natywnych w chmurze:
 
@@ -48,29 +48,29 @@ Szczególny nacisk na zarządzane usługi platformy Azure, które mogą pomóc w
 - [Kolejki usługi Azure Storage](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
+- [Centrum zdarzeń platformy Azure](https://azure.microsoft.com/services/event-hubs/)
 
 Następnie następnym przejdziemy do danych rozproszonych w systemach natywnych w chmurze oraz korzyści i wyzwania.
 
-### <a name="references"></a>Odwołania 
+### <a name="references"></a>Odwołania
 
-- [Mikrousługi .NET: Architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
-  
+- [Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+
 - [Projektowanie komunikacji międzyusługowej dla mikrousług](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
 - [Usługa Azure Signal Service — w pełni zarządzana usługa umożliwiająca dodawanie funkcji w czasie rzeczywistym](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
-  
+
 - [Kontroler usługi transferu danych w usłudze Azure API Gateway](https://azure.github.io/application-gateway-kubernetes-ingress/)
-  
+
 - [Informacje o ruchu przychodzącego w usłudze Azure Kubernetes Service (AKS)](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
- 
+
 - [Praktyczne gRPC](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
 
 - [Dokumentacja gRPC](https://grpc.io/docs/guides/)
 
-- [gRPC dla deweloperów WCF](https://bing.com) [Oznacz jako książkę gRPC]
-  
-- [Porównanie usług gRPC z interfejsami API protokołu HTTP](https://docs.microsoft.com/en-us/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [gRPC for WCF Developers](https://bing.com) [Mark gRPC Book]
+
+- [Porównanie usług gRPC z interfejsami API protokołu HTTP](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
 >[!div class="step-by-step"]
 >[Poprzedni](rest-grpc.md)

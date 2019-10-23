@@ -2,12 +2,12 @@
 title: Kontenery, obrazy i rejestry platformy Docker
 description: Poznaj rolę klucza, którą rejestry odgrywają ogólnie w programie Docker w celu wdrożenia aplikacji.
 ms.date: 02/15/2019
-ms.openlocfilehash: 32240ac4f6dec67531d8e618cff153d235c073c7
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394604"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770927"
 ---
 # <a name="docker-containers-images-and-registries"></a>Kontenery, obrazy i rejestry platformy Docker
 

@@ -2,12 +2,12 @@
 title: Co to jest Docker?
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Co to jest platforma Docker?
 ms.date: 08/31/2018
-ms.openlocfilehash: 7f7844f51e96914c1432332d9b641ea65bf48f07
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 6fb08157a78bfaee48e0bf919fc5942eadf0f287
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296188"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771344"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -81,5 +81,5 @@ Obraz można traktować jako pomocniczy dysk twardy tylko do odczytu gotowy do z
 Podobnie można traktować kontener jako "komputer" z zainstalowanym dyskiem twardym obrazu. Kontener, podobnie jak komputer, może być włączony lub wyłączony.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](docker-terminology.md)
+>[Poprzedni](index.md)
+>[Następny](docker-terminology.md)

@@ -1,15 +1,15 @@
 ---
-title: Testowanie usług ASP.NET Core i aplikacji sieci Web
+title: Testowanie aplikacji internetowych i usług ASP.NET Core
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj architekturę testowania ASP.NET Core usług i aplikacji sieci Web w kontenerach.
 ms.date: 10/02/2018
-ms.openlocfilehash: 042f7a6171a88025d3d4a8e37c4deceb416e5711
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291284"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772014"
 ---
-# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie usług ASP.NET Core i aplikacji sieci Web
+# <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
 
 Kontrolery są centralną częścią dowolnych ASP.NET Core usługi interfejsu API i aplikacji sieci Web ASP.NET MVC. W związku z tym należy mieć pewność, że zachowanie jest zamierzone dla aplikacji. Testy automatyczne mogą zapewnić Ci pewność i wykryć błędy przed osiągnięciem ich w środowisku produkcyjnym.
 
@@ -31,7 +31,7 @@ Podczas testowania jednostek akcji kontrolera Pamiętaj, aby skoncentrować się
 
 Testy jednostkowe są implementowane na podstawie platform testowych, takich jak xUnit.net, MSTest, MOQ lub NUnit. W przypadku przykładowej aplikacji eShopOnContainers korzystamy z xUnit.
 
-Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego New w C @ no__t-0, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
+Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego New w języku C \#, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
 
 ```csharp
 [Fact]
@@ -99,7 +99,7 @@ public class PrimeWebDefaultRequestShould
 }
 ```
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Steve Smith. Kontrolery testowania** (ASP.NET Core) \
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
@@ -198,7 +198,7 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 
 Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylko mikrousług Redis, RabbitMQ, SQL Server i MongoDB.
 
-### <a name="additional-resources"></a>Zasoby dodatkowe
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Testuje plik Readme** w repozytorium eShopOnContainers w witrynie GitHub \
     <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
@@ -208,4 +208,4 @@ Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylk
 
 > [!div class="step-by-step"]
 > [Poprzedni](subscribe-events.md)
-> [dalej](background-tasks-with-ihostedservice.md)
+> [Następny](background-tasks-with-ihostedservice.md)

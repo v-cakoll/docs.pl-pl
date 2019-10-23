@@ -2,12 +2,12 @@
 title: Co to jest Docker?
 description: Zapoznaj się z bardziej szczegółowymi informacjami na temat platformy Docker, ale proste analogowe rozwiązanie może Ci pomóc.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7747c4985af27be0a073fad2f22622f697f4ce27
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295611"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770722"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
@@ -35,7 +35,7 @@ Obrazy dla tych kontenerów są tworzone i działają w taki sam sposób. Różn
 
 Rysunek 1-3 przedstawia porównanie między maszynami wirtualnymi i kontenerami platformy Docker.
 
-![W przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta, w dolnej części: infrastruktura, system operacyjny hosta i funkcja hypervisor oraz na wszystkich maszynach wirtualnych, które mają własny system operacyjny i wszystkie niezbędne biblioteki. Z drugiej strony, w przypadku platformy Docker, serwer hosta ma tylko infrastrukturę i system operacyjny oraz na tym, że aparat kontenera utrzymuje izolowany kontener, ale udostępnia podstawowe usługi systemu operacyjnego.](./media/image3.png)
+![W przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta, w dolnej części: infrastruktura, system operacyjny hosta i funkcja hypervisor oraz na wszystkich maszynach wirtualnych, które mają własny system operacyjny i wszystkie niezbędne biblioteki. Z drugiej strony, w przypadku platformy Docker, serwer hosta ma tylko infrastrukturę i system operacyjny oraz w tym, że aparat kontenera utrzymuje izolowany kontener, ale udostępnia podstawowe usługi systemu operacyjnego.](./media/image3.png)
 
 **Rysunek 1-3**. Porównanie tradycyjnych maszyn wirtualnych z kontenerami platformy Docker
 
@@ -78,5 +78,5 @@ Obraz można traktować jako pomocniczy dysk twardy tylko do odczytu gotowy do z
 Podobnie można traktować kontener jako "komputer" z zainstalowanym dyskiem twardym obrazu. Kontener, podobnie jak komputer, może być włączony lub wyłączony.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](docker-terminology.md)
+>[Poprzedni](index.md)
+>[Następny](docker-terminology.md)

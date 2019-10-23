@@ -2,12 +2,12 @@
 title: Projektowanie aplikacji opartej na mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z korzyściami i downsidesami aplikacji zorientowanych na mikrousługach, aby móc podejmować świadome decyzje.
 ms.date: 10/02/2018
-ms.openlocfilehash: dc3c8ccd95505cb828383f499b9bf950e7c12a30
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039814"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72772061"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 
@@ -59,13 +59,13 @@ Mikrousługi są opracowywane i wdrażane jako kontenery niezależnie od siebie.
 
 Każda mikrousługa ma własną bazę danych, dzięki czemu można ją całkowicie oddzielić od innych mikrousług. W razie potrzeby spójność między bazami danych z różnych mikrousług zostaje osiągnięta przy użyciu zdarzeń integracji na poziomie aplikacji (za pośrednictwem logicznej magistrali zdarzeń), jak zostało to obsłużone w Command and Query Responsibility Segregation (CQRS). Z tego względu ograniczenia biznesowe muszą obejmować spójność ostateczną między wieloma mikrousługami i powiązanymi bazami danych.
 
-### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: Aplikacja referencyjna dla platformy .NET Core i mikrousług wdrożona przy użyciu kontenerów
+### <a name="eshoponcontainers-a-reference-application-for-net-core-and-microservices-deployed-using-containers"></a>eShopOnContainers: aplikacja referencyjna dla platformy .NET Core i mikrousług wdrożona przy użyciu kontenerów
 
 Dzięki temu można skoncentrować się na architekturze i technologiach, zamiast zastanawiać się nad hipotetyczną domeną biznesową, która może nie być znana, dlatego została wybrana dobrze znana domena biznesowa — a mianowicie uproszczona aplikacja e-Handle (e-Shop), która prezentuje wykaz z produktów, program przyjmuje zamówienia od klientów, weryfikuje spis i wykonuje inne funkcje biznesowe. Ten kod źródłowy aplikacji opartej na kontenerze jest dostępny w repozytorium GitHub [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) .
 
 Aplikacja składa się z wielu podsystemów, w tym kilku frontonów interfejsu użytkownika magazynu (aplikacji sieci Web i natywnej aplikacji mobilnej) oraz mikrousług i kontenerów zaplecza dla wszystkich wymaganych operacji po stronie serwera z kilkoma bramami interfejsu API jako skonsolidowane punkty wejścia do mikrousług wewnętrznych. Rysunek 6-1 przedstawia architekturę aplikacji referencyjnej.
 
-![Klienci mobilni i SPA komunikują się z punktami końcowymi bramy interfejsu API Single, które następnie komunikują się z mikrousługami. Tradycyjni klienci sieci Web komunikują się z mikrousługą MVC, która komunikuje się z mikrousługami](./media/image1.png)
+![Klienci mobilni i SPA komunikują się z punktami końcowymi bramy interfejsu API, które następnie komunikują się z mikrousługami. Tradycyjni klienci sieci Web komunikują się z mikrousługą MVC, która komunikuje się z mikrousługami](./media/image1.png)
 
 **Rysunek 6-1**. Architektura aplikacji eShopOnContainers Reference dla środowiska programistycznego
 
@@ -89,7 +89,7 @@ W związku z tym jednostki wdrożenia dla mikrousług (a nawet dla baz danych w 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **eShopOnContainers GitHub repo. Kod źródłowy aplikacji referencyjnej** \
+- **eShopOnContainers repozytorium GitHub. Kod źródłowy aplikacji odniesienia**  \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Zalety rozwiązań opartych na mikrousługach
@@ -124,7 +124,7 @@ Rozwiązanie oparte na mikrousługach, takie jak to również ma pewne wady:
 
 **Transakcje niepodzielne**. Transakcje niepodzielne między wieloma mikrousługami zwykle nie są możliwe. Wymagania biznesowe muszą obejmować spójność ostateczną między wieloma mikrousługami.
 
-**Zwiększone potrzeby zasobów globalnych** (całkowita pamięć, dyski i zasoby sieciowe dla wszystkich serwerów lub hostów). W wielu przypadkach, gdy zastąpisz wbudowaną aplikację z podejściem mikrousług, ilość początkowych zasobów globalnych wymaganych przez nową aplikację opartą na mikrousługach będzie większa niż potrzeby infrastruktury oryginalnej aplikacji monolitycznej. Wynika to z tego, że wyższy stopień szczegółowości i usług rozproszonych wymaga większej liczby zasobów globalnych. Jednak ze względu na niski koszt zasobów i korzyści wynikające z możliwości skalowania w poziomie tylko określonych obszarów aplikacji w porównaniu do długoterminowych kosztów podczas rozwoju aplikacji monolitycznych zwiększone wykorzystanie zasobów jest zwykle dobrym kompromisem dla dużych, długoterminowe aplikacje.
+**Zwiększono potrzeby zasobów globalnych** (całkowita pamięć, dyski i zasoby sieciowe dla wszystkich serwerów lub hostów). W wielu przypadkach, gdy zastąpisz wbudowaną aplikację z podejściem mikrousług, ilość początkowych zasobów globalnych wymaganych przez nową aplikację opartą na mikrousługach będzie większa niż potrzeby infrastruktury oryginalnej aplikacji monolitycznej. Wynika to z tego, że wyższy stopień szczegółowości i usług rozproszonych wymaga większej liczby zasobów globalnych. Jednak ze względu na niski koszt zasobów i korzyści wynikające z możliwości skalowania w poziomie tylko określonych obszarów aplikacji w porównaniu do długoterminowych kosztów podczas rozwoju aplikacji monolitycznych zwiększone wykorzystanie zasobów jest zwykle dobrym kompromisem dla dużych, długoterminowe aplikacje.
 
 **Problemy związane z bezpośrednią komunikacją z klientem do mikrousług**. Gdy aplikacja jest duża, z szeroką częścią mikrousług, istnieją problemy i ograniczenia, jeśli aplikacja wymaga bezpośredniej komunikacji z klientem do mikrousług. Jednym z problemów jest potencjalna niezgodność między potrzebami klienta i interfejsami API udostępnianymi przez poszczególne mikrousługi. W niektórych przypadkach aplikacja kliencka może potrzebować wielu oddzielnych żądań, aby utworzyć interfejs użytkownika, który może być nieefektywny przez Internet i byłoby niepraktyczny w odniesieniu do sieci komórkowej. W związku z tym należy zminimalizować żądania z aplikacji klienckiej do systemu zaplecza.
 
@@ -146,7 +146,7 @@ Zewnętrzna architektura to architektura mikrousług złożona przez wiele usłu
 
 Przykładowo w naszym *eShopOnContainers* przykładzie, wykaz, koszyk i mikrousługi profilu użytkownika są proste (zasadniczo CRUD podsystemy). W związku z tym ich wewnętrzna architektura i projekt są proste. Mogą jednak istnieć inne mikrousługi, takie jak mikrousługa porządkowania, która jest bardziej złożona i reprezentuje wszelkie zmiany reguł firmy o wysokim stopniu złożoności domeny. W takich przypadkach można zaimplementować bardziej zaawansowane wzorce w ramach konkretnej mikrousługi, takie jak te, które zostały zdefiniowane z podejściem projektowania opartym na domenie (DDD), tak jak w przypadku mikrousługi porządkowania *eShopOnContainers* . (W dalszej części omówiono implementację mikrousługi porządkowania *eShopOnContainers* ).
 
-Kolejną przyczyną innej technologii na mikrousługi może być charakter każdej mikrousługi. Na przykład lepszym rozwiązaniem jest użycie języka programowania funkcjonalnego, takiego jak F\#, a nawet języka, takiego jak R, w przypadku docelowych domen systemu AI i usługi Machine Learning zamiast bardziej zorientowanego obiektowo języka programowania, takiego\#jak C.
+Kolejną przyczyną innej technologii na mikrousługi może być charakter każdej mikrousługi. Na przykład lepszym rozwiązaniem jest użycie języka programowania funkcjonalnego, takiego jak F \#, a nawet języka, takiego jak R, w przypadku docelowych domen systemu AI i uczenia maszynowego zamiast bardziej zorientowanego obiektowo języka programowania, takiego jak C \#.
 
 Dolna linia polega na tym, że każda mikrousługa może mieć inną architekturę wewnętrzną opartą na różnych wzorcach projektowych. Nie wszystkie mikrousługi powinny być implementowane przy użyciu zaawansowanych wzorców DDD, ponieważ byłyby one przekroczenia inżynierów. Podobnie złożone mikrousługi z kiedykolwiek zmieniającą się logiką biznesową nie należy implementować jako składniki CRUD lub można zakończyć przy użyciu kodu o niskiej jakości.
 
@@ -160,13 +160,13 @@ Istnieje wiele wzorców architektonicznych używanych przez architektów oprogra
 
 - [Projektowanie oparte na domenie N warstwowo](https://devblogs.microsoft.com/cesardelatorre/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 
-- [Czysta architektura](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (używany z [eShopOnWeb](https://aka.ms/WebAppArchitecture))
+- [Czysta architektura](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) (używana z [eShopOnWeb](https://aka.ms/WebAppArchitecture))
 
 - [Command and Query Responsibility Segregation](https://martinfowler.com/bliki/CQRS.html) (CQRS).
 
 - [Architektura sterowana zdarzeniami](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
-Można również tworzyć mikrousługi z wieloma technologiami i językami, takimi jak ASP.NET Core interfejsów API sieci Web, NancyFx, ASP.NET Core sygnalizujący (dostępne z .NET Core 2\#), F, Node. js, Python C++, Java,, GoLang i inne.
+Można również tworzyć mikrousługi z wieloma technologiami i językami, takimi jak ASP.NET Core Web API, NancyFx, ASP.NET Core Signaler (dostępne z .NET Core 2), F \#, Node. js, Python, Java C++,, GoLang i inne.
 
 Ważnym punktem jest to, że żaden wzorzec architektury lub styl ani żadna konkretna technologia nie są odpowiednie dla wszystkich sytuacji. Rysunek 6-3 zawiera kilka metod i technologii (choć nie w określonej kolejności), które mogą być używane w różnych mikrousługach.
 
@@ -183,5 +183,5 @@ Szczególnie w przypadku, gdy zajmujesz się dużymi aplikacjami składającymi 
 Dla każdego z tych przypadków nie ma punktora Silver lub odpowiedniego wzorca architektury. Nie można mieć "jednego wzorca architektury, aby była dla nich stosowana reguła". W zależności od priorytetów każdej mikrousługi należy wybrać różne podejście dla każdej z nich, jak wyjaśniono w poniższych sekcjach.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](data-driven-crud-microservice.md)
+>[Poprzedni](index.md)
+>[Następny](data-driven-crud-microservice.md)

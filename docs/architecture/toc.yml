@@ -5,6 +5,8 @@
   items:
     - name: Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Microsoft Azure
       href: modern-web-apps-azure/
+    - name: Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
+      href: grpc-for-wcf-developers/
     - name: Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows
       href: modernize-with-azure-containers/
     - name: Cykl życia konteneryzowanych aplikacji platformy Docker korzystających z platformy i narzędzi firmy Microsoft
@@ -20,5 +22,3 @@
       href: cloud-native/
     - name: Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
       href: blazor-for-web-forms-developers/
-    - name: Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
-      href: grpc-for-wcf-developers/

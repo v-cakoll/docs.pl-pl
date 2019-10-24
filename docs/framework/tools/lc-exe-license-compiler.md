@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 2e66534cac1edcc6759321c3024effa4990faeda
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044492"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774202"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Kompilator licencji)
 Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowaniu i tworzy plik binarny, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -34,43 +34,43 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
   
 ```console
       lc /target:  
-targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [-outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/complist:** *Nazwa pliku*|Określa nazwę pliku zawierającego listę licencjonowanych składników, która ma zostać umieszczona w pliku licenses. W odwołaniu do każdego składnika musi być używana jego pełna nazwa, a w wierszu może znajdować się tylko jeden składnik.<br /><br /> Użytkownicy wiersza polecenia mogą określić osobny plik dla każdego formularza w projekcie. Program LC.exe akceptuje wiele plików wejściowych i tworzy jeden plik licenses.|  
-|**/h** [**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/complist:** *filename*|Określa nazwę pliku zawierającego listę licencjonowanych składników, która ma zostać umieszczona w pliku licenses. W odwołaniu do każdego składnika musi być używana jego pełna nazwa, a w wierszu może znajdować się tylko jeden składnik.<br /><br /> Użytkownicy wiersza polecenia mogą określić osobny plik dla każdego formularza w projekcie. Program LC.exe akceptuje wiele plików wejściowych i tworzy jeden plik licenses.|  
+|**/h**[**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/i:** *moduł*|Określa moduły zawierające składniki wymienione w pliku **/complist** . Aby określić więcej niż jeden moduł, Użyj wielu flag **/i** .|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/OutDir:** *ścieżka*|Określa katalog, w którym ma zostać umieszczony wyjściowy plik licenses.|  
 |**/target:** *targetPE*|Określa plik wykonywalny, dla którego jest generowany plik licenses.|  
-|**/v**|Określa tryb pełny; wyświetla informacje o postępie kompilacji.|  
-|**@** *plik*|Określa plik odpowiedzi (. RSP).|  
+|**przełącznika**|Określa tryb pełny; wyświetla informacje o postępie kompilacji.|  
+|*plik* @|Określa plik odpowiedzi (. RSP).|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="example"></a>Przykład  
   
-1. `MyCompany.Samples.LicControl1` Jeśli używasz licencjonowanej kontroli zawartej w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* możesz utworzyć `HostAppLic.txt` , która zawiera poniższe elementy.  
+1. Jeśli używasz licencjonowanej `MyCompany.Samples.LicControl1` kontroli zawartej w `Samples.DLL` w aplikacji o nazwie `HostApp.exe` *,* możesz utworzyć `HostAppLic.txt`, która zawiera poniższe elementy.  
   
     ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2. Utwórz plik. licenses o `HostApp.exe.licenses` nazwie przy użyciu następującego polecenia.  
+2. Utwórz plik licenses o nazwie `HostApp.exe.licenses` przy użyciu następującego polecenia.  
   
     ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3. Kompilacja `HostApp.exe` obejmująca plik. licenses jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
+3. @No__t_0 kompilacji, w tym plik. licenses jako zasób. W przypadku kompilowania aplikacji w języku C# należy użyć następującego polecenia, aby skompilować aplikację.  
   
     ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
- Następujące polecenie kompiluje `myApp.licenses` z list licencjonowanych składników określonych przez `hostapplic.txt`, `hostapplic2.txt` i `hostapplic3.txt`. `modulesList` Argument określa moduły zawierające licencjonowane składniki.  
+ Poniższe polecenie kompiluje `myApp.licenses` z list licencjonowanych składników określonych przez `hostapplic.txt`, `hostapplic2.txt` i `hostapplic3.txt`. @No__t_0 argument określa moduły zawierające licencjonowane składniki.  
   
 ```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
@@ -86,7 +86,7 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
 /outdir:"C:\My Folder"  
 ```  
   
- Poniższy wiersz polecenia używa `response.rsp` pliku.  
+ Poniższy wiersz polecenia używa pliku `response.rsp`.  
   
 ```console  
 lc @response.rsp  

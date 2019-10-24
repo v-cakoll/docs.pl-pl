@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: afe2181e031a651767e6a6eec0397300b03fce50
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 8b7dfcfa394ed2c45adec9661ee1ea5823435223
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582570"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775443"
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
 Ogranicza niejawne konwersje typów danych tylko w celu poszerzenia konwersji, nie zezwala na późne wiązanie i nie zezwala na niejawne wpisywanie w wyniku `Object` typu.  
@@ -104,7 +104,7 @@ Option Strict { On | Off }
 ## <a name="when-an-option-strict-statement-is-not-present"></a>Gdy nie ma instrukcji Option Strict  
  Jeśli kod źródłowy nie zawiera instrukcji `Option Strict`, używane jest ustawienie **Option Strict** na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . **Strona kompilacja** zawiera ustawienia, które zapewniają dodatkową kontrolę nad warunkami, które generują błąd.  
   
- Jeśli używasz kompilatora wiersza polecenia, możesz użyć opcji kompilatora [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , aby określić ustawienie dla `Option Strict`.  
+ Jeśli używasz kompilatora wiersza polecenia, możesz użyć opcji kompilatora [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) , aby określić ustawienie dla `Option Strict`.  
   
 ### <a name="to-set-option-strict-in-the-ide"></a>Aby ustawić ustawienie Option Strict w środowisku IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -132,7 +132,7 @@ Option Strict { On | Off }
  Aby ustawić `Option Strict` w tym oknie dialogowym, w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** domyślnie jest `Off`.  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>Aby ustawić Option Strict w wierszu polecenia  
- Dołącz opcję kompilatora [/optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md) do polecenia **VBC** .  
+ Dołącz opcję kompilatora [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md) w poleceniu **VBC** .  
   
 ## <a name="example"></a>Przykład  
  W poniższych przykładach przedstawiono błędy czasu kompilowania spowodowane przez niejawne konwersje typów, które są zawężające konwersje. Ta kategoria błędów odpowiada warunkowi **niejawnej konwersji** na **stronie kompilowania**.  
@@ -162,5 +162,5 @@ Option Strict { On | Off }
 - [Wyrażenia osadzone w XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Późne powiązania w rozwiązaniach pakietu Office](/visualstudio/vsto/late-binding-in-office-solutions)
-- [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
 - [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

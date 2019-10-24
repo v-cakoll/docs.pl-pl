@@ -5,12 +5,12 @@ f1_keywords:
 - NETSDK1045
 ms.custom: updateeachvsrelease
 ms.date: 09/20/2019
-ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 6885f6c853efb0dcb2cb64b83f07e12b1dc2e3cf
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591672"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771956"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -27,8 +27,8 @@ Ponadto, Jeśli opracowujesz system Windows przy użyciu programu Visual Studio,
 Następujące artykuły zawierają pełną listę obsługiwanych systemów operacyjnych .NET Core na wersję:
 
 * [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
-* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
-* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+* [.NET Core 2,2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
+* [.NET Core 2,1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
 
 Aby uzyskać linki do pobrania i więcej informacji, zobacz artykuł [pobieranie z platformy .NET](https://dotnet.microsoft.com/download) , aby pobrać najnowszą wersję lub [archiwum pobierania programu .NET](https://dotnet.microsoft.com/download/archives#dotnet-core) dla starszych wersji.
 
@@ -44,14 +44,14 @@ Aby uzyskać linki do pobrania i więcej informacji, zobacz artykuł [pobieranie
 > [!NOTE]
 > **W przypadku Windows 8.1 i starszych wersji lub systemu Windows Server 2012 R2 i starszych wersji:**
 >
-> Upewnij się, że instalacja systemu Windows jest aktualna i zawiera [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), które można zainstalować za Windows Update. Jeśli ta aktualizacja nie została zainstalowana, podczas uruchamiania aplikacji .NET Core zobaczysz błąd podobny do poniższego:`The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Upewnij się, że instalacja systemu Windows jest aktualna i zawiera [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows), które można zainstalować za Windows Update. Jeśli ta aktualizacja nie została zainstalowana, podczas uruchamiania aplikacji .NET Core zobaczysz błąd podobny do poniższego: `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Dla systemu Windows 7 lub Windows Server 2008 R2:**
 >
-> Oprócz KB2999226 upewnij się, że zainstalowano również [poprawki KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) . Jeśli ta aktualizacja nie została zainstalowana, podczas uruchamiania aplikacji platformy .NET Core zobaczysz błąd podobny do poniższego: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
+> Oprócz KB2999226 upewnij się, że zainstalowano również [poprawki KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) . Jeśli ta aktualizacja nie została zainstalowana, podczas uruchamiania aplikacji .NET Core zostanie wyświetlony komunikat o błędzie podobny do poniższego: `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`.
 
 ## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Wymagania wstępne dotyczące opracowywania aplikacji platformy .NET Core za pomocą programu Visual Studio
-    
+
 Mimo że można użyć dowolnego edytora do tworzenia aplikacji platformy .NET Core przy użyciu zestaw .NET Core SDK, program Visual Studio 2017 i jego nowsze wersje zapewniają zintegrowane środowisko programistyczne dla aplikacji platformy .NET Core w systemie Windows.
 
 <a name="vs-mapping"></a>
@@ -63,11 +63,11 @@ Każda wersja programu .NET Core ma wymaganą minimalną wersję programu Visual
 
 W poniższej tabeli wymieniono minimalną wersję każdego zestawu SDK:
 
-| Wersja zestaw .NET Core SDK | Visual Studio w wersji                      |
+| Wersja zestaw .NET Core SDK | Wersja programu Visual Studio                      |
 | --------------------- | ------------------------------------------ |
 | 3.0                   | Program Visual Studio 2019 w wersji 16,3 lub nowszej. |
-| 2.2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
-| 2.1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
+| 2,2                   | Program Visual Studio 2017 w wersji 15,9 lub nowszej. |
+| 2,1                   | Program Visual Studio 2017 w wersji 15,7 lub nowszej. |
 | 1.x                   | Program Visual Studio 2017 w wersji 15,0 lub nowszej. |
 
 <!-- markdownlint-disable MD025 -->
@@ -86,7 +86,7 @@ Na poniższej ilustracji przedstawiono obciążenie **Międzyplatformowe platfor
 
 ![Zrzut ekranu instalacji programu Visual Studio 2019 z wybranym obciążeniem "Programowanie dla wielu platform" platformy .NET Core](./media/windows-prerequisites/vs-2019-workloads.jpg)
 
-Program Visual Studio 2019 16,3 domyślnie używa programu .NET Core 3,0 SDK po zainstalowaniu dowolnego z tych obciążeń.
+Program Visual Studio 2019 w wersji 16,3 domyślnie używa programu .NET Core 3,0 SDK po zainstalowaniu dowolnego z tych obciążeń.
 
 Jeśli chcesz, aby istniejące projekty korzystały z najnowszego środowiska uruchomieniowego platformy .NET Core, Przekieruj każdy istniejący projekt .NET Core do programu .NET Core 3,0, korzystając z następujących instrukcji:
 
@@ -101,17 +101,17 @@ Po skonfigurowaniu programu Visual Studio przy użyciu zestawu SDK platformy .NE
 * Przekieruj projekty platformy .NET Core 1. x i 2. x do platformy .NET Core 3,0, kompilacji i uruchomienia.
 * Utwórz nowe projekty platformy .NET Core 3,0.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2. x](#tab/netcore2x)
 
 Aby tworzyć aplikacje platformy .NET Core w programie Visual Studio 2017 przy użyciu zestawu SDK programu .NET Core 2,2:
 
 * [Pobierz i zainstaluj program Visual Studio 2019 w wersji 16,3 lub nowszej](/visualstudio/install/install-visual-studio) przy użyciu obciążenia **międzyplatformowego platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
-* [Pobierz i zainstaluj program Visual Studio 2017 w wersji 15.9.0 lub nowszej](/visualstudio/install/install-visual-studio) z wybranym obciążeniem międzyplatformowym **platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
+* [Pobierz i zainstaluj program Visual Studio 2017 w wersji 15.9.0 lub nowszej](/visualstudio/install/install-visual-studio) z wybranym obciążeniem **międzyplatformowym platformy .NET Core** (w sekcji **inne zestawy narzędzi** ).
 
 ![Zrzut ekranu instalacji programu Visual Studio 2017 z wybranym obciążeniem "Programowanie dla wielu platform" platformy .NET Core](./media/windows-prerequisites/vs-2017-workloads.jpg)
 
 Po zainstalowaniu zestawu narzędzi do **tworzenia aplikacji dla wielu platform platformy .NET Core** program Visual Studio zwykle instaluje poprzednią wersję zestaw .NET Core SDK.
-Na przykład program Visual Studio 2017 15,9 domyślnie używa programu .NET Core 2,1 SDK po zainstalowaniu obciążenia.
+Na przykład program Visual Studio 2017 w wersji 15,9 domyślnie używa programu .NET Core 2,1 SDK po zainstalowaniu obciążenia.
 
 Aby zaktualizować program Visual Studio do korzystania z zestawu SDK programu .NET Core 2,2:
 

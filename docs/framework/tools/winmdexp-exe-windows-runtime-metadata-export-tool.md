@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b3cf60d670e7fdfa624599bc0eeddc99219c202
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0ce98912e579e0dd570822c1f7c2133bb05ed491
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044019"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773966"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)
 Narzędzie do eksportu metadanych środowisko wykonawcze systemu Windows (Winmdexp. exe) przekształca moduł .NET Framework do pliku, który zawiera środowisko wykonawcze systemu Windows metadane. Chociaż zestawy .NET Framework i środowisko wykonawcze systemu Windows pliki metadanych używają tego samego formatu fizycznego, istnieją różnice w zawartości tabel metadanych, co oznacza, że zestawy .NET Framework nie są automatycznie używane jako składniki środowisko wykonawcze systemu Windows . Proces przekształcania modułu .NET Framework do składnika środowisko wykonawcze systemu Windows jest określany jako *Eksportowanie*. W .NET Framework 4,5 i .NET Framework 4.5.1 utworzony plik metadanych systemu Windows (WinMD) zawiera metadane i implementację.  
@@ -33,22 +33,22 @@ winmdexp [options] winmdmodule
   
 |Argument lub opcja|Opis|  
 |------------------------|-----------------|  
-|`winmdmodule`|Określa moduł (winmdobj) do wyeksportowania. Dozwolony jest tylko jeden moduł. Aby utworzyć ten moduł, użyj `/target` opcji kompilatora `winmdobj` z elementem docelowym. Zobacz [/target: winmdobj (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) lub [/Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`winmdmodule`|Określa moduł (winmdobj) do wyeksportowania. Dozwolony jest tylko jeden moduł. Aby utworzyć ten moduł, użyj opcji kompilatora `/target` z elementem docelowym `winmdobj`. Zobacz [-target: winmdobj (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) lub [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:``docfile`<br /><br /> `/d:``docfile`|Określa wyjściowy plik dokumentacji XML, który zostanie wygenerowany przez Winmdexp.exe. W .NET Framework 4,5 plik wyjściowy jest zasadniczo taki sam jak plik wejściowy dokumentacji XML.|  
-|`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Określa nazwę pliku dokumentacji XML, z `winmdmodule`którym kompilator został utworzony.|  
+|`/moduledoc:``docfile`<br /><br /> `/md:``docfile`|Określa nazwę pliku dokumentacji XML, który kompilator wygenerował z `winmdmodule`.|  
 |`/modulepdb:``symbolfile`<br /><br /> `/mp:``symbolfile`|Określa nazwę pliku bazy danych programu (PDB), który zawiera symbole dla `winmdmodule`.|  
 |`/nowarn:``warning`|Wyłącza ostrzeżenie o podanym numerze. Aby uzyskać *Ostrzeżenie*, podaj tylko część numeryczną kodu błędu bez zer wiodących.|  
 |`/out:``file`<br /><br /> `/o:``file`|Określa nazwę wyjściowego pliku metadanych systemu Windows (winmd).|  
 |`/pdb:``symbolfile`<br /><br /> `/p:``symbolfile`|Określa nazwę wyjściowego pliku bazy danych programu (PDB), który będzie zawierał symbole dla eksportowanego pliku metadanych systemu Windows (winmd).|  
-|`/reference:``winmd`<br /><br /> `/r:``winmd`|Określa plik metadanych (winmd lub zestaw) jako plik referencyjny podczas eksportowania. Jeśli używasz zestawów referencyjnych w "\Program Files (x86) \Reference Assemblies\Microsoft\Framework\\. NETCore\v4.5 "(" \Program Files\\... " na komputerach 32-bitowych) Uwzględnij odwołania do plików system. Runtime. dll i mscorlib. dll.|  
+|`/reference:``winmd`<br /><br /> `/r:``winmd`|Określa plik metadanych (winmd lub zestaw) jako plik referencyjny podczas eksportowania. Jeśli używasz zestawów referencyjnych w "\Program Files (x86) \Reference Assemblies\Microsoft\Framework \\. NETCore\v4.5" ("\Program Files \\..." na 32-bitowych komputerach), Dołącz odwołania do plików system. Runtime. dll i mscorlib. dll.|  
 |`/utf8output`|Określa, że komunikaty wyjściowe powinny mieć kodowanie UTF-8.|  
 |`/warnaserror+`|Określa, że wszystkie ostrzeżenia powinny być traktowane jako błędy.|  
 |**@** `responsefile`|Określa plik odpowiedzi (. RSP), który zawiera opcje (i opcjonalnie `winmdmodule`). Każdy wiersz w `responsefile` powinien zawierać pojedynczy argument lub opcję.|  
   
 ## <a name="remarks"></a>Uwagi  
- Winmdexp.exe nie jest przeznaczony do konwertowania dowolnego zestawu .NET Framework do pliku winmd. Wymaga modułu, który jest kompilowany z `/target:winmdobj` opcją, i obowiązują dodatkowe ograniczenia. Najważniejsze te ograniczenia polegają na tym, że wszystkie typy, które są widoczne w obszarze interfejsu API zestawu, muszą być typu środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz sekcję "deklarowanie typów w składnikach środowisko wykonawcze systemu Windows" [w artykule tworzenie środowisko wykonawcze systemu Windows składników C# w programie i Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) w centrum deweloperów systemu Windows.  
+ Winmdexp.exe nie jest przeznaczony do konwertowania dowolnego zestawu .NET Framework do pliku winmd. Wymaga modułu, który jest kompilowany przy użyciu opcji `/target:winmdobj`, i obowiązują dodatkowe ograniczenia. Najważniejsze te ograniczenia polegają na tym, że wszystkie typy, które są widoczne w obszarze interfejsu API zestawu, muszą być typu środowisko wykonawcze systemu Windows. Aby uzyskać więcej informacji, zobacz sekcję "deklarowanie typów w składnikach środowisko wykonawcze systemu Windows" [w artykule tworzenie środowisko wykonawcze systemu Windows składników C# w programie i Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) w centrum deweloperów systemu Windows.  
   
- Gdy piszesz [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikację lub składnik środowisko wykonawcze systemu Windows za pomocą C# lub Visual Basic, .NET Framework zapewnia pomoc techniczną w celu zapewnienia programowania z środowisko wykonawcze systemu Windows bardziej naturalny. W tym artykule omówiono [.NET Framework pomocy technicznej dla aplikacji ze sklepu Windows i środowisko wykonawcze systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). W procesie niektóre często używane typy środowisko wykonawcze systemu Windows są mapowane na typy .NET Framework. Winmdexp. exe odwraca ten proces i tworzy powierzchnię interfejsu API korzystającą z odpowiednich typów środowisko wykonawcze systemu Windows. Na przykład typy, które są zbudowane z <xref:System.Collections.Generic.IList%601> mapy interfejsu do typów, które są zbudowane z środowisko wykonawcze systemu Windows interfejs[>\<IVector T](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
+ Po napisaniu aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] lub składnika środowisko wykonawcze systemu Windows z C# lub Visual Basic .NET Framework zapewnia wsparcie w celu zapewnienia, że programowanie z środowisko wykonawcze systemu Windows bardziej naturalne. W tym artykule omówiono [.NET Framework pomocy technicznej dla aplikacji ze sklepu Windows i środowisko wykonawcze systemu Windows](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). W procesie niektóre często używane typy środowisko wykonawcze systemu Windows są mapowane na typy .NET Framework. Winmdexp. exe odwraca ten proces i tworzy powierzchnię interfejsu API korzystającą z odpowiednich typów środowisko wykonawcze systemu Windows. Na przykład typy, które są zbudowane z mapowania interfejsu <xref:System.Collections.Generic.IList%601> do typów, które są zbudowane z środowisko wykonawcze systemu Windows[IVector \<T interfejs >](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
 ## <a name="see-also"></a>Zobacz także
 

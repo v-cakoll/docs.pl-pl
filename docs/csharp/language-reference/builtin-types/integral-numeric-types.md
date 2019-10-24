@@ -1,7 +1,7 @@
 ---
 title: Całkowite typy liczbowe — C# odwołanie
 description: Poznaj zakres, rozmiar magazynu i użycie dla każdego z typów całkowitych.
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - byte
 - byte_CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 3d4f3164d67a000123417619f3be6be455d5ab87
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c255711e4b165fdca27d50c6bd0f2debfe15ae25
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579195"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773865"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Całkowite typy liczbowe (C# odwołanie)
 
@@ -100,7 +100,7 @@ Typ literału liczby całkowitej jest określany na podstawie jego sufiksu w nas
 
 Jeśli wartość reprezentowana przez literał liczby całkowitej przekracza <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, wystąpi błąd kompilatora [CS1021](../../misc/cs1021.md) .
 
-Wartość reprezentowana przez literał liczby całkowitej może być niejawnie konwertowana na typ z mniejszym zakresem niż określony typ literału. Jest to możliwe, gdy wartość znajduje się w zakresie typu docelowego:
+Jeśli określony typ literału liczby całkowitej jest `int` a wartość znajduje się w zakresie typu docelowego, wartość reprezentowana przez literał może zostać niejawnie przekonwertowana na `sbyte`, `byte`, `short`, `ushort` , `uint` lub `ulong`:
 
 ```csharp
 byte a = 17;
@@ -118,9 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>Konwersje
 
-Istnieje niejawna konwersja (nazywana *konwersją rozszerzającą*) między dwoma typami całkowitymi, w których typ docelowy może przechowywać wszystkie wartości typu źródłowego. Na przykład istnieje niejawna konwersja z `int` do `long`, ponieważ zakres `int` wartości jest prawidłowym podzbiorem `long`. Istnieją niejawne konwersje z mniejszego niepodpisanego typu całkowitego na większy typ całkowity ze znakiem. Istnieje również niejawna konwersja z dowolnego typu całkowitego na dowolny typ zmiennoprzecinkowy.  Nie istnieje niejawna konwersja z dowolnego podpisanego typu całkowitego do dowolnego niepodpisanego typu całkowitego.
-
-Należy użyć jawnego rzutowania do przekonwertowania jednego typu całkowitego na inny typ całkowity, gdy niejawna konwersja nie jest zdefiniowana z typu źródłowego na typ docelowy. Jest to tzw. *Konwersja na wąskie*. Jawny przypadek jest wymagany, ponieważ konwersja może spowodować utratę danych.
+Można skonwertować dowolny całkowity typ liczbowy do dowolnego innego typu liczb całkowitych. Jeśli typ docelowy może przechowywać wszystkie wartości typu źródła, konwersja jest niejawna. W przeciwnym razie należy użyć [operatora rzutowania `()`](../operators/type-testing-and-cast.md#cast-operator-) do wywołania jawnej konwersji. Aby uzyskać więcej informacji, zobacz [wbudowane konwersje numeryczne](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -132,8 +130,7 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 ## <a name="see-also"></a>Zobacz także
 
 - [C#odwoła](../index.md)
-- [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
-- [Tabela wartości domyślnych](../keywords/default-values-table.md)
-- [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
+- [Typy zmiennoprzecinkowe](floating-point-numeric-types.md)
+- [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)

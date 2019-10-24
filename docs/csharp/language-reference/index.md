@@ -1,5 +1,5 @@
 ---
-title: C#Odwoła
+title: C#odwoła
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,33 +8,35 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: df56287d161f7760e136eb80aa1a9171966df794
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275800"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771843"
 ---
-# <a name="c-reference"></a>C#Odwoła
+# <a name="c-reference"></a>C#odwoła
+
 Ta sekcja zawiera materiały referencyjne C# dotyczące słów kluczowych, operatorów, znaków specjalnych, dyrektyw preprocesora, opcji kompilatora i błędów i ostrzeżeń kompilatora.  
   
-## <a name="in-this-section"></a>W tej sekcji  
- [C#Służąc](./keywords/index.md)  
+## <a name="in-this-section"></a>W tej sekcji
+
+ [Słowa kluczowe języka C#](./keywords/index.md)  
  Zawiera łącza do informacji o C# słowach kluczowych i składni.  
   
- [C#Zainteresowanych](./operators/index.md)  
+ [Operatory języka C#](./operators/index.md)  
  Zawiera łącza do informacji na C# temat operatorów i składni.  
 
- [C#Znaki specjalne](./tokens/index.md)  
+ [Znaki specjalne języka C#](./tokens/index.md)  
  Zawiera łącza do informacji na temat specjalnych znaków kontekstowych w programie C# i ich użycia.  
 
- [C#Dyrektywy preprocesora](./preprocessor-directives/index.md)  
+ [Dyrektywy preprocesora C#](./preprocessor-directives/index.md)  
  Zawiera łącza do informacji o poleceniach kompilatora osadzania w C# kodzie źródłowym.  
   
- [C#Opcje kompilatora](./compiler-options/index.md)  
+ [Opcje kompilatora C#](./compiler-options/index.md)  
  Zawiera informacje o opcjach kompilatora i sposobach ich użycia.  
   
- [C#Błędy kompilatora](./compiler-messages/index.md)  
+ [Błędy kompilatora C#](./compiler-messages/index.md)  
  Zawiera fragmenty kodu, które pokazują przyczynę i korekcję C# błędów i ostrzeżeń kompilatora.  
   
  [C#Specyfikacja języka](../../../_csharplang/spec/introduction.md)  
@@ -59,11 +61,11 @@ Funkcje, które zostały zaimplementowane w C# wersjach po 6,0 są reprezentowan
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
- [C#Prowadzą](../index.md)  
+ [Przewodnik dla języka C#](../index.md)  
  Udostępnia Portal dokumentacji wizualnej C# .  
   
- [Używanie środowiska programistycznego Visual Studio dla programuC#](/visualstudio/get-started/csharp)  
+ [Używanie środowiska programistycznego Visual Studio dla C#](/visualstudio/get-started/csharp)  
  Zawiera łącza do tematów dotyczących pojęć i zadań, które opisują środowisko IDE i edytor.  
   
- [C#Przewodnik programowania](../programming-guide/index.md)  
+ [Przewodnik programowania w języku C#](../programming-guide/index.md)  
  Zawiera informacje o sposobach korzystania z C# języka programowania.

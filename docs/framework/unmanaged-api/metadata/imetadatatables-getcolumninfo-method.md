@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo — Metoda
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c0755cb2a91d61725338562cb1fe249a9cfacc38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781513"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774255"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo — Metoda
-Pobiera dane o określonej kolumny w określonej tabeli.  
+Pobiera dane dotyczące określonej kolumny w określonej tabeli.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,33 +40,61 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-## <a name="parameters"></a>Parametry  
+## <a name="parameters"></a>Parametry
+=======
+
  `ixTbl`  
- [in] Indeks tabeli, którą chcesz.  
+ podczas Indeks żądanej tabeli.  
   
  `ixCol`  
- [in] Indeks żądanej kolumny.  
+ podczas Indeks żądanej kolumny.  
   
  `poCol`  
- [out] Wskaźnik do przesunięcia kolumny w wierszu.  
+ określoną Wskaźnik do przesunięcia kolumny w wierszu.  
   
  `pcbCol`  
- [out] Wskaźnik do rozmiaru, w bajtach dla kolumny.  
+ określoną Wskaźnik do rozmiaru, w bajtach, kolumny.  
   
  `pType`  
- [out] Wskaźnik do typu wartości w kolumnie.  
+ określoną Wskaźnik do typu wartości w kolumnie.  
   
  `ppName`  
- [out] Wskaźnik do wskaźnika na nazwę kolumny.  
-  
+ określoną Wskaźnik do wskaźnika do nazwy kolumny.  
+ 
+## <a name="remarks"></a>Uwagi
+
+Zwracany typ kolumny znajduje się w zakresie wartości:
+
+| pType                    | Opis   | Funkcja pomocnika                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`.. `iRidMax`<br>(0.. 63)   | Objęte           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`.. `iCodedTokenMax`<br>(64.. 95) | Zakodowany token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **Isfixedtype**                   |
+| `iUSHORT` (97)           | UInt16        | **Isfixedtype**                   |
+| `iLONG` (98)             | Int32         | **Isfixedtype**                   |
+| `iULONG` (99)            | UInt32        | **Isfixedtype**                   |
+| `iBYTE` (100)            | Byte          | **Isfixedtype**                   |
+| `iSTRING` (101)          | String        | **Issterta**                    |
+| `iGUID` (102)            | Ident          | **Issterta**                    |
+| `iBLOB` (103)            | Tworzenia          | **Issterta**                    |
+
+Wartości, które są przechowywane w *stercie* (`IsHeapType == true`) można odczytać przy użyciu:
+
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GETguid**
+- `iBLOB`: **IMetadataTables. GetBlob**
+
+> [!IMPORTANT]
+> Aby użyć stałych zdefiniowanych w powyższej tabeli, należy uwzględnić dyrektywę `#define _DEFINE_META_DATA_META_CONSTANTS` dostarczoną przez plik nagłówkowy *cor. h* .
+
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Biblioteka:** Używany jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

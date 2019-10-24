@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań związanych z pakietem
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9cf30fa41af2d31e416bae1d75d8880ece7dde3e
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895211"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775309"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -21,7 +21,7 @@ NuGet jest menedżerem pakietów dla ekosystemu .NET i jest głównym sposobem, 
 
 Pakiet NuGet (`*.nupkg`) to plik zip, który zawiera zestawy .NET i skojarzone metadane.
 
-Istnieją dwa podstawowe sposoby tworzenia pakietu NuGet. Nowszym i zalecanym sposobem jest utworzenie pakietu z projektu w stylu zestawu SDK (plik projektu, którego zawartość zaczyna się `<Project Sdk="Microsoft.NET.Sdk">`od). Zestawy i cele są automatycznie dodawane do pakietu, a pozostałe metadane są dodawane do pliku programu MSBuild, takiego jak nazwa pakietu i numer wersji. Kompilowanie za [`dotnet pack`](../../core/tools/dotnet-pack.md) pomocą polecenia `*.nupkg` wyprowadza plik zamiast zestawów.
+Istnieją dwa podstawowe sposoby tworzenia pakietu NuGet. Nowszym i zalecanym sposobem jest utworzenie pakietu z projektu w stylu zestawu SDK (plik projektu, którego zawartość zaczyna się od `<Project Sdk="Microsoft.NET.Sdk">`). Zestawy i cele są automatycznie dodawane do pakietu, a pozostałe metadane są dodawane do pliku programu MSBuild, takiego jak nazwa pakietu i numer wersji. Kompilowanie za pomocą polecenia [`dotnet pack`](../../core/tools/dotnet-pack.md) wyprowadza plik `*.nupkg` zamiast zestawów.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,7 +34,7 @@ Istnieją dwa podstawowe sposoby tworzenia pakietu NuGet. Nowszym i zalecanym sp
 </Project>
 ```
 
-Starszym sposobem tworzenia pakietu NuGet jest `*.nuspec` plik `nuget.exe` i narzędzie wiersza polecenia. Plik NUSPEC daje doskonałą kontrolę, ale należy starannie określić, które zestawy i elementy docelowe mają być uwzględnione w końcowym pakiecie NuGet. W przypadku wprowadzania zmian łatwo jest wprowadzić błąd lub ktoś zapomni, aby zaktualizować nuspec. Zaletą nuspec jest możliwość tworzenia pakietów NuGet dla struktur, które nie obsługują jeszcze pliku projektu w stylu zestawu SDK.
+Starszym sposobem tworzenia pakietu NuGet jest plik `*.nuspec` i narzędzie wiersza polecenia `nuget.exe`. Plik NUSPEC daje doskonałą kontrolę, ale należy starannie określić, które zestawy i elementy docelowe mają być uwzględnione w końcowym pakiecie NuGet. W przypadku wprowadzania zmian łatwo jest wprowadzić błąd lub ktoś zapomni, aby zaktualizować nuspec. Zaletą nuspec jest możliwość tworzenia pakietów NuGet dla struktur, które nie obsługują jeszcze pliku projektu w stylu zestawu SDK.
 
 **✔️ rozważyć** użycie pliku projektu w stylu zestawu SDK, aby utworzyć pakiet NuGet.
 
@@ -50,13 +50,13 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | Identyfikator pakietu. Prefiks z identyfikatora może być zarezerwowany, jeśli spełnia [kryteria](/nuget/reference/id-prefix-reservation). |
 | `PackageVersion`                   | `version`                  | Wersja pakietu NuGet. Aby uzyskać więcej informacji, zobacz [wersja pakietu NuGet](./versioning.md#nuget-package-version).             |
-| `Title`                            | `title`                    | Przyjazny dla człowieka tytuł pakietu. Domyślnie jest to `PackageId`.             |
+| `Title`                            | `title`                    | Przyjazny dla człowieka tytuł pakietu. Wartość domyślna to `PackageId`.             |
 | `Description`                      | `description`              | Długi opis pakietu wyświetlanego w interfejsie użytkownika.             |
 | `Authors`                          | `authors`                  | Rozdzielana przecinkami lista autorów pakietów pasujących do nazw profilów w nuget.org.             |
 | `PackageTags`                      | `tags`                     | Rozdzielana spacjami Lista tagów i słów kluczowych, które opisują pakiet. Tagi są używane podczas wyszukiwania pakietów.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Adres URL obrazu, który będzie używany jako ikona pakietu. Adres URL powinien być adresem HTTPS, a obraz powinien być 64x64 i mieć przezroczyste tło.             |
 | `PackageProjectUrl`                | `projectUrl`               | Adres URL dla strony głównej projektu lub repozytorium źródłowego.             |
-| `PackageLicenseExpression`         | `license`                  | [Identyfikator SPDX](https://spdx.org/licenses/)licencji projektu. Tylko zatwierdzone licencje OSI i FSF mogą używać identyfikatora. Inne licencje powinny być `PackageLicenseFile`używane. Przeczytaj więcej na temat [ `license` metadanych](/nuget/reference/nuspec#license). |
+| `PackageLicenseExpression`         | `license`                  | [Identyfikator SPDX](https://spdx.org/licenses/)licencji projektu. Tylko zatwierdzone licencje OSI i FSF mogą używać identyfikatora. Inne licencje powinny używać `PackageLicenseFile`. Przeczytaj więcej na temat [metadanych `license`](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
 > Projekt bez licencji jest domyślnie nieuprawniony do korzystania z [praw autorskich](https://choosealicense.com/no-permission/).
@@ -92,16 +92,16 @@ Pakiety NuGet z sufiksem wersji są uważane za [wersję wstępną](/nuget/creat
 
 ## <a name="symbol-packages"></a>Pakiety symboli
 
-Pliki symboli (`*.pdb`) są generowane przez kompilator .NET obok zestawów. Pliki symboli mapują lokalizacje wykonywania na oryginalny kod źródłowy, dzięki czemu można przechodzić przez kod źródłowy, ponieważ jest on uruchamiany przy użyciu debugera. Pakiet NuGet obsługuje [generowanie oddzielnego pakietu symboli`*.snupkg`()](/nuget/create-packages/symbol-packages-snupkg) zawierającego pliki symboli obok głównego pakietu zawierającego zestawy .NET. Pomysł dotyczący pakietów symboli jest hostowany na serwerze symboli i pobierany tylko przez narzędzie, takie jak Visual Studio na żądanie.
+Pliki symboli (`*.pdb`) są generowane przez kompilator .NET wraz z zestawami. Pliki symboli mapują lokalizacje wykonywania na oryginalny kod źródłowy, dzięki czemu można przechodzić przez kod źródłowy, ponieważ jest on uruchamiany przy użyciu debugera. Pakiet NuGet obsługuje [generowanie oddzielnego pakietu symboli (`*.snupkg`)](/nuget/create-packages/symbol-packages-snupkg) zawierającego pliki symboli obok głównego pakietu zawierającego zestawy .NET. Pomysł dotyczący pakietów symboli jest hostowany na serwerze symboli i pobierany tylko przez narzędzie, takie jak Visual Studio na żądanie.
 
-NuGet.org hostuje własne [repozytorium serwerów symboli](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Deweloperzy mogą używać symboli opublikowanych na serwerze symboli NuGet.org przez dodanie `https://symbols.nuget.org/download/symbols` ich do [źródeł symboli w programie Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
+NuGet.org hostuje własne [repozytorium serwerów symboli](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server). Deweloperzy mogą używać symboli opublikowanych na serwerze symboli NuGet.org przez dodawanie `https://symbols.nuget.org/download/symbols` do ich [źródeł symboli w programie Visual Studio](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger).
 
 > [!IMPORTANT]
 > Serwer symboli NuGet.org obsługuje tylko nowe [pliki symboli przenośnych](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) utworzone przez projekty w stylu zestawu SDK.
 >
-> Aby użyć serwera symboli NuGet.org podczas debugowania biblioteki .NET, deweloperzy muszą mieć program Visual Studio 2017 15,9 lub nowszy.
+> Aby użyć serwera symboli NuGet.org podczas debugowania biblioteki .NET, deweloperzy muszą mieć program Visual Studio 2017 w wersji 15,9 lub nowszej.
 
-Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w głównym pakiecie NuGet. Główny pakiet NuGet będzie większy, ale osadzone pliki symboli oznaczają, że deweloperzy nie muszą konfigurować serwera symboli NuGet.org. Jeśli tworzysz pakiet NuGet przy użyciu projektu w stylu zestawu SDK, możesz osadzić pliki symboli, ustawiając `AllowedOutputExtensionsInPackageBuildOutputFolder` Właściwość:
+Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w głównym pakiecie NuGet. Główny pakiet NuGet będzie większy, ale osadzone pliki symboli oznaczają, że deweloperzy nie muszą konfigurować serwera symboli NuGet.org. Jeśli tworzysz pakiet NuGet przy użyciu projektu w stylu zestawu SDK, możesz osadzić pliki symboli, ustawiając właściwość `AllowedOutputExtensionsInPackageBuildOutputFolder`:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -114,12 +114,12 @@ Alternatywą dla tworzenia pakietu symboli jest osadzanie plików symboli w gł�
 
 Minusem osadzania plików symboli polega na tym, że zwiększają rozmiar pakietu o około 30% dla bibliotek .NET skompilowanych za pomocą projektów w stylu zestawu SDK. Jeśli rozmiar pakietu jest istotny, należy zamiast tego opublikować symbole w pakiecie symboli.
 
-**✔️ rozważyć** opublikowanie symboli jako pakietu symboli (`*.snupkg`) do NuGet.org
+**✔️ należy rozważyć** opublikowanie symboli jako pakietu symboli (`*.snupkg`) do NuGet.org
 
-> Pakiety symboli (`*.snupkg`) zapewniają deweloperom dobry komfort debugowania na żądanie, bez przeładowania głównego rozmiaru pakietu i wpływając na wydajność przywracania dla tych, którzy nie będą mogli debugować pakietu NuGet.
+> Pakiety symboli (`*.snupkg`) zapewniają deweloperom dobry komfort debugowania na żądanie, bez przeładowania głównego rozmiaru pakietu i wpływającego na wydajność przywracania dla tych, którzy nie zamierzają debugować pakietu NuGet.
 >
 > Zastrzeżenie polega na tym, że użytkownicy mogą potrzebować znaleźć i skonfigurować serwer symboli NuGet w swoim środowisku IDE (jako jednorazową konfigurację), aby uzyskać pliki symboli. Program Visual Studio 2019 w wersji 16,1 dodał NuGet. serwer symboli organizacji do listy domyślnych serwerów symboli.
 
 >[!div class="step-by-step"]
->[Poprzedni](strong-naming.md)Następny
->[](dependencies.md)
+>[Poprzedni](strong-naming.md)
+>[Następny](dependencies.md)

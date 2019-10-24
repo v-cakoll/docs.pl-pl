@@ -2,12 +2,12 @@
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Dowiedz się, jak obsługiwać błędy HTTP za pomocą Polly i HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 82b3b0d37815e2f16ed3be1b1e7de37019b08ee8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318409"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798815"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Zaimplementuj ponowne próby wywołania HTTP przy użyciu wykładniczej wycofywania z zasadami HttpClientFactory i Polly
 
@@ -53,17 +53,20 @@ Za pomocą Polly można zdefiniować zasady ponawiania z liczbą ponownych prób
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii o wahaniu do zasad ponowień
 
-Regularne zasady ponawiania mogą mieć wpływ na system w przypadku dużej współbieżności i skalowalności oraz w przypadku dużej rywalizacji. Aby przezwyciężyć szczyty podobnych ponownych prób pochodzących z wielu klientów w przypadku częściowego przestoju, dobrym rozwiązaniem jest dodanie strategii o wahaniu do algorytmu/zasad ponowień. Może to poprawić ogólną wydajność systemu kompleksowego, dodając losowość do wykładniczej wycofywania. Powoduje to rozłożenie skoków w przypadku wystąpienia problemów. W przypadku używania zwykłych zasad Polly kod do implementacji wahania może wyglądać podobnie do poniższego przykładu:
+Regularne zasady ponawiania mogą mieć wpływ na system w przypadku dużej współbieżności i skalowalności oraz w przypadku dużej rywalizacji. Aby przezwyciężyć szczyty podobnych ponownych prób pochodzących z wielu klientów w przypadku częściowego przestoju, dobrym rozwiązaniem jest dodanie strategii o wahaniu do algorytmu/zasad ponowień. Może to poprawić ogólną wydajność systemu kompleksowego, dodając losowość do wykładniczej wycofywania. Powoduje to rozłożenie skoków w przypadku wystąpienia problemów. Zasada jest zilustrowana przy użyciu poniższego przykładu:
 
 ```csharp
 Random jitterer = new Random(); 
-Policy
-  .Handle<HttpResponseException>() // etc
-  .WaitAndRetry(5,    // exponential back-off plus some jitter
-      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
-  );
+var retryWithJitterPolicy = HttpPolicyExtensions
+    .HandleTransientHttpError()
+    .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+    .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
+        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+    );
 ```
+
+Polly zapewnia algorytmy wahania produkcji w środowisku produkcyjnym za pośrednictwem witryny sieci Web projektu.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -75,6 +78,9 @@ Policy
 
 - **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  
   <https://github.com/App-vNext/Polly>
+
+- **Polly: ponów próbę z wahaniem**  
+  <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
 - **Brooker wytłoczyn. Wahanie: zwiększanie losowości**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>

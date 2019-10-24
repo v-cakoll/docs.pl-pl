@@ -2,12 +2,12 @@
 title: Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 199b7ce2cb8b3f3b8e220f9e2bab7e9c39a8d033
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 466ff3ba4cdb627143b3ffc988ae4a16348e6ca6
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351989"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775535"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Obsługa współużytkowania wątkowości w aplikacjach asynchronicznych (Visual Basic)
 
@@ -15,6 +15,9 @@ Po dołączeniu kodu asynchronicznego do aplikacji należy rozważyć i prawdopo
 
 > [!NOTE]
 > Aby uruchomić przykład, musisz mieć zainstalowany na komputerze program Visual Studio 2012 lub nowszy oraz .NET Framework 4,5 lub nowszy.
+
+> [!NOTE]
+> Transport Layer Security (TLS) w wersji 1,2 jest teraz minimalną wersją do użycia podczas opracowywania aplikacji. Jeśli aplikacja jest przeznaczona dla programu .NET Framework w wersji wcześniejszej niż 4,7, zapoznaj się z poniższym artykułem dotyczącym [Transport Layer Security (TLS) Best Practices with the .NET Framework](../../../../framework/network-programming/tls.md) 
 
 ## <a name="BKMK_RecognizingReentrancy"></a>Rozpoznawanie współużytkowania wątkowości
 
@@ -92,9 +95,9 @@ Możesz obsłużyć współużytkowania wątkowości na różne sposoby, w zale�
 
 ### <a name="BKMK_DisableTheStartButton"></a>Wyłącz przycisk Start
 
-Można zablokować przycisk **Start** , gdy operacja jest uruchomiona, wyłączając przycisk w górnej części procedury obsługi zdarzeń `StartButton_Click`. Następnie można ponownie włączyć przycisk z poziomu bloku `Finally`, gdy operacja zostanie ukończona, aby umożliwić użytkownikom ponowne uruchomienie aplikacji.
+Można zablokować przycisk **Start** , gdy operacja jest uruchomiona, wyłączając przycisk w górnej części procedury obsługi zdarzeń `StartButton_Click`. Następnie można ponownie włączyć przycisk z poziomu bloku `Finally` po zakończeniu operacji, aby umożliwić użytkownikom ponowne uruchomienie aplikacji.
 
-Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami. Możesz dodać zmiany do kodu na końcu tego tematu lub można pobrać ukończoną aplikację z przykładów @no__t 0Async: Współużytkowania wątkowości w aplikacjach klasycznych platformy .NET @ no__t-0. Nazwa projektu to DisableStartButton.
+Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami. Możesz dodać zmiany do kodu na końcu tego tematu lub można pobrać ukończoną aplikację z [przykładów asynchronicznych: współużytkowania wątkowości w aplikacjach klasycznych platformy .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa projektu to DisableStartButton.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -125,7 +128,7 @@ Zamiast wyłączać przycisk **Start** , można zachować aktywny przycisk, ale 
 
 Aby uzyskać więcej informacji na temat anulowania, zobacz [dostrajanie aplikacji asynchronicznej (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Aby skonfigurować ten scenariusz, wprowadź następujące zmiany w kodzie podstawowym, który jest dostępny podczas [przeglądania i uruchamiania przykładowej aplikacji](#BKMD_SettingUpTheExample). Możesz również pobrać ukończoną aplikację z przykładów @no__t 0Async: Współużytkowania wątkowości w aplikacjach klasycznych platformy .NET @ no__t-0. Nazwa tego projektu to CancelAndRestart.
+Aby skonfigurować ten scenariusz, wprowadź następujące zmiany w kodzie podstawowym, który jest dostępny podczas [przeglądania i uruchamiania przykładowej aplikacji](#BKMD_SettingUpTheExample). Możesz również pobrać ukończoną aplikację z [przykładów asynchronicznych: współużytkowania wątkowości w aplikacjach klasycznych platformy .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06). Nazwa tego projektu to CancelAndRestart.
 
 1. Zadeklaruj zmienną <xref:System.Threading.CancellationTokenSource>, `cts`, która znajduje się w zakresie dla wszystkich metod.
 
@@ -203,7 +206,7 @@ W `AccessTheWebAsync` wprowadź następujące zmiany.
 
 - Użyj metody <xref:System.Net.Http.HttpClient.GetAsync%2A>, aby pobrać witryny sieci Web, ponieważ `GetAsync` akceptuje argument <xref:System.Threading.CancellationToken>.
 
-- Przed wywołaniem `DisplayResults` w celu wyświetlenia wyników dla każdej pobranej witryny sieci Web sprawdź `ct`, aby sprawdzić, czy bieżąca operacja nie została anulowana.
+- Przed wywołaniem `DisplayResults`, aby wyświetlić wyniki dla każdej pobranej witryny sieci Web, należy sprawdzić `ct`, aby sprawdzić, czy bieżąca operacja nie została anulowana.
 
  Poniższy kod przedstawia te zmiany, które są oznaczone gwiazdkami.
 
@@ -279,7 +282,7 @@ Aby wyeliminować częściowe listy, Usuń komentarz z pierwszego wiersza kodu w
 
 Trzeci przykład to najbardziej skomplikowany sposób, w jaki aplikacja uruchamia kolejną operację asynchroniczną za każdym razem, gdy użytkownik wybierze przycisk **Start** , a wszystkie operacje są wykonywane do ukończenia. Wszystkie żądane operacje pobierają witryny sieci Web z listy asynchronicznie, ale dane wyjściowe operacji są prezentowane sekwencyjnie. Oznacza to, że rzeczywista czynność pobierania jest przeplatana, ponieważ dane wyjściowe [rozpoznawania współużytkowania wątkowości](#BKMK_RecognizingReentrancy) są wyświetlane, ale lista wyników dla każdej grupy jest prezentowana osobno.
 
-Operacje współużytkują globalny <xref:System.Threading.Tasks.Task>, `pendingWork`, który służy jako strażnik dla procesu wyświetlania.
+Operacje współużytkują globalne <xref:System.Threading.Tasks.Task>, `pendingWork`, który służy jako strażnik dla procesu wyświetlania.
 
 Możesz uruchomić ten przykład, wklejając zmiany do kodu w trakcie [tworzenia aplikacji](#BKMK_BuildingTheApp), lub postępuj zgodnie z instrukcjami w temacie [Pobieranie aplikacji](#BKMK_DownloadingTheApp) , aby pobrać przykład, a następnie Uruchom projekt QueueResults.
 
@@ -375,11 +378,11 @@ Class MainWindow    ' Class MainPage in Windows Store app.
     Private group As Char = ChrW(AscW("A") - 1)
 ```
 
-Zmienna `Task`, `pendingWork`, widzi proces wyświetlania i uniemożliwia każdej grupie przerwanie operacji wyświetlania innej grupy. Zmienna znaku `group`, etykiety danych wyjściowych z różnych grup, aby sprawdzić, czy wyniki są wyświetlane w oczekiwanej kolejności.
+Zmienna `Task`, `pendingWork`, widzi proces wyświetlania i uniemożliwia każdej grupie przerwanie operacji wyświetlania innej grupy. Zmienna znakowa, `group`, etykietuje dane wyjściowe z różnych grup, aby sprawdzić, czy wyniki są wyświetlane w oczekiwanej kolejności.
 
 #### <a name="the-click-event-handler"></a>Procedura obsługi zdarzeń kliknięcia
 
-Program obsługi zdarzeń, `StartButton_Click`, zwiększa literę grupy za każdym razem, gdy użytkownik wybierze przycisk **Start** . Następnie procedura obsługi wywołuje `AccessTheWebAsync`, aby uruchomić operację pobierania.
+Procedura obsługi zdarzeń, `StartButton_Click`, zwiększa literę grupy za każdym razem, gdy użytkownik wybierze przycisk **Start** . Następnie procedura obsługi wywołuje `AccessTheWebAsync`, aby uruchomić operację pobierania.
 
 ```vb
 Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
@@ -403,7 +406,7 @@ Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-#### <a name="the-accessthewebasync-method"></a>The AccessTheWebAsync Method
+#### <a name="the-accessthewebasync-method"></a>Metoda AccessTheWebAsync
 
 Ten przykład dzieli `AccessTheWebAsync` na dwie metody. Pierwsza metoda, `AccessTheWebAsync`, uruchamia wszystkie zadania pobierania dla grupy i konfiguruje `pendingWork` w celu sterowania procesem wyświetlania. Metoda używa języka Integrated Query (zapytanie LINQ) i <xref:System.Linq.Enumerable.ToArray%2A> do uruchamiania wszystkich zadań pobierania w tym samym czasie.
 
@@ -513,7 +516,7 @@ Dane wyjściowe przedstawiają następujące wzorce.
   TOTAL bytes returned:  915908
   ```
 
-- Zadanie `pendingWork` jest `Nothing` na początku `FinishOneGroupAsync` tylko dla grupy A, która rozpoczęła się w pierwszej kolejności. Grupa A nie zakończyła się jeszcze wyrażeniem await, gdy osiągnie `FinishOneGroupAsync`. W związku z tym formant nie zwrócił do `AccessTheWebAsync` i nie wystąpiło pierwsze przypisanie do `pendingWork`.
+- Zadanie `pendingWork` jest `Nothing` na początku `FinishOneGroupAsync` tylko dla grupy A, która rozpoczęła się w pierwszej kolejności. Grupa A jeszcze nie ukończyła wyrażenia await, gdy osiągnie `FinishOneGroupAsync`. W związku z tym formant nie został zwrócony do `AccessTheWebAsync` i pierwsze przypisanie do `pendingWork` nie miało.
 
 - Dwa następujące wiersze są zawsze wyświetlane razem w danych wyjściowych. Kod nigdy nie zostanie przerwany między rozpoczęciem operacji grupy w `StartButton_Click` i przypisaniem zadania dla grupy do `pendingWork`.
 
@@ -522,7 +525,7 @@ Dane wyjściowe przedstawiają następujące wzorce.
   #Task assigned for group B. Download tasks are active.
   ```
 
-  Po przejściu grupy `StartButton_Click` operacja nie zakończy wyrażenia await, dopóki operacja nie zostanie przedłużona `FinishOneGroupAsync`. W związku z tym żadna inna operacja nie może uzyskać kontroli podczas tego segmentu kodu.
+  Gdy grupa wejdzie `StartButton_Click`, operacja nie zakończy wyrażenia await, dopóki operacja nie zostanie `FinishOneGroupAsync`. W związku z tym żadna inna operacja nie może uzyskać kontroli podczas tego segmentu kodu.
 
 ## <a name="BKMD_SettingUpTheExample"></a>Przeglądanie i uruchamianie przykładowej aplikacji
 
@@ -533,7 +536,7 @@ Aby lepiej zrozumieć przykładową aplikację, możesz ją pobrać, skompilowa�
 
 ### <a name="BKMK_DownloadingTheApp"></a>Pobieranie aplikacji
 
-1. Pobierz skompresowany plik z przykładów @no__t 0Async: Współużytkowania wątkowości w aplikacjach klasycznych platformy .NET @ no__t-0.
+1. Pobierz skompresowany plik z [próbek asynchronicznych: współużytkowania wątkowości w aplikacjach klasycznych platformy .NET](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06).
 
 2. Dekompresuj pobrany plik, a następnie uruchom program Visual Studio.
 
@@ -553,15 +556,15 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
 1. Uruchom program Visual Studio.
 
-2. Na pasku menu wybierz **pliku**, **New**, **projektu**.
+2. Na pasku menu wybierz **plik**, **Nowy**, **projekt**.
 
-     **Nowy projekt** zostanie otwarte okno dialogowe.
+     Zostanie otwarte okno dialogowe **Nowy projekt** .
 
 3. W okienku **zainstalowane szablony** rozwiń węzeł **Visual Basic**, a następnie rozwiń pozycję **Windows**.
 
 4. Na liście typów projektów wybierz pozycję **Aplikacja WPF**.
 
-5. Nazwij projekt `WebsiteDownloadWPF`, a następnie wybierz przycisk **OK** .
+5. Nazwij projekt `WebsiteDownloadWPF`, wybierz pozycję .NET Framework wersja 4,6 lub nowsza, a następnie kliknij przycisk **OK** .
 
      Nowy projekt zostanie wyświetlony w **Eksplorator rozwiązań**.
 
@@ -589,7 +592,9 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
      Proste okno zawierające pole tekstowe i przycisk pojawia się w widoku **projekt** MainWindow. XAML.
 
-8. Dodaj odwołanie do <xref:System.Net.Http>.
+8. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **odwołania** i wybierz polecenie **Dodaj odwołanie**.
+
+     Dodaj odwołanie do <xref:System.Net.Http>, jeśli nie zostało jeszcze wybrane.
 
 9. W **Eksplorator rozwiązań**Otwórz menu skrótów dla MainWindow. XAML. vb, a następnie wybierz polecenie **Wyświetl kod**.
 
@@ -603,6 +608,8 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
     Class MainWindow
 
         Private Async Sub StartButton_Click(sender As Object, e As RoutedEventArgs)
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.ServicePointManager.SecurityProtocol Or System.Net.SecurityProtocolType.Tls12
+
             ' This line is commented out to make the results clearer in the output.
             'ResultsTextBox.Text = ""
 
@@ -677,5 +684,5 @@ Poniższa sekcja zawiera kod służący do kompilowania przykładu jako aplikacj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

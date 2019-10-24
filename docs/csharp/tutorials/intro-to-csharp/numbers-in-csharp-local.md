@@ -3,14 +3,14 @@ title: Cyfry w C# programie — wprowadzenie C# do samouczka
 description: Poznaj C# typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 731824fefcf4966a885c53be8f71e77140541383
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e9d8b09bde6e87edf9f483c0c296dbb256343f58
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834098"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774025"
 ---
-# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C @ no__t-0
+# <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C \#
 
 Ten samouczek zawiera informacje o typach liczbowych w C# sposób interaktywny. Zapiszesz małe ilości kodu, a następnie utworzysz i uruchomisz ten kod. Samouczek zawiera serię lekcji, które eksplorują liczby i operacje matematyczne C#w programie. Te lekcje uczyją się podstaw C# języka.
 
@@ -20,7 +20,7 @@ Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowan
 
 Utwórz katalog o nazwie *Numbers — szybki start*. Upewnij się, że bieżący katalog i uruchomiono `dotnet new console -n NumbersInCSharp -o .`.
 
-Otwórz *program.cs* w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującym:
+Otwórz *program.cs* w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującymi elementami:
 
 ```csharp
 int a = 18;
@@ -56,7 +56,7 @@ Możesz również eksperymentować, wykonując wiele operacji matematycznych w t
 > Podczas eksplorowania C# (lub dowolnego języka programowania) nastąpi pomyłki podczas pisania kodu. **Kompilator** odnajdzie te błędy i zgłosi je do użytkownika. Gdy dane wyjściowe zawierają komunikaty o błędach, dokładnie zapoznaj się z przykładowym kodem i kodem w oknie, aby zobaczyć, co należy naprawić.
 > To ćwiczenie pomoże Ci poznać strukturę C# kodu.
 
-Wykonano pierwszy krok. Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę metody `Main` na `WorkingWithIntegers` i Napisz nową metodę `Main`, która wywołuje `WorkingWithIntegers`. Po zakończeniu kod powinien wyglądać następująco:
+Wykonano pierwszy krok. Przed rozpoczęciem następnej sekcji przechodźmy bieżący kod w oddzielną metodę. Ułatwia to rozpoczęcie pracy z nowym przykładem. Zmień nazwę metody `Main`, aby `WorkingWithIntegers` i napisać nową metodę `Main`, która wywoła `WorkingWithIntegers`. Po zakończeniu kod powinien wyglądać następująco:
 
 ```csharp
 using System;
@@ -95,7 +95,7 @@ Dodaj komentarz do wywołania `WorkingWithIntegers()`. Dane wyjściowe będą mn
 //WorkingWithIntegers();
 ```
 
-@No__t-0 uruchamia **komentarz** w C#. Komentarze są dowolnym tekstem, który chcesz zachować w kodzie źródłowym, ale nie można go wykonać jako kod. Kompilator nie generuje żadnego kodu wykonywalnego z komentarzy.
+@No__t_0 uruchamia **komentarz** w C#. Komentarze są dowolnym tekstem, który chcesz zachować w kodzie źródłowym, ale nie można go wykonać jako kod. Kompilator nie generuje żadnego kodu wykonywalnego z komentarzy.
 
 C# Język definiuje kolejność różnych operacji matematycznych z regułami spójnymi z regułami, które zostały uzyskane w postaci matematyki.
 Mnożenie i dzielenie mają pierwszeństwo przed dodaniem i odejmowaniem.
@@ -118,7 +118,7 @@ d = (a + b) * c;
 Console.WriteLine(d);
 ```
 
-Dowiedz się więcej, łącząc wiele różnych operacji. Dodaj coś przypominającego następujące wiersze w dolnej części metody `Main`. Spróbuj ponownie wykonać `dotnet run`.
+Dowiedz się więcej, łącząc wiele różnych operacji. Dodaj coś przypominającego następujące wiersze w dolnej części metody `Main`. Spróbuj ponownie `dotnet run`.
 
 ```csharp
 d = (a + b) - 6 * c + (12 * 4) / 3 + 12;
@@ -127,7 +127,7 @@ Console.WriteLine(d);
 
 Być może zauważono interesujące zachowanie dla liczb całkowitych. Dzielenie liczb całkowitych zawsze generuje wynik w postaci liczby całkowitej, nawet gdy oczekuje się, że wynik będzie zawierać część dziesiętną lub ułamkową.
 
-Jeśli takie zachowanie nie zostało zaobserwowane, wypróbuj następujący kod na końcu metody `Main`:
+Jeśli takie zachowanie nie zostało obserwowane, wypróbuj następujący kod na końcu metody `Main`:
 
 ```csharp
 int e = 7;
@@ -279,7 +279,7 @@ Wiadomo, że powtarzające się `0.3` nie są dokładnie takie same, jak `1/3`.
 
 Wypróbuj inne obliczenia z dużymi liczbami, małymi liczbami, mnożeniem i dzieleniem przy użyciu typu `double`. Wypróbuj bardziej skomplikowane obliczenia.
 
-Po pewnym czasie z wezwaniem Zrób wpisany kod i umieść go w nowej metodzie. Nazwa nowej metody `WorkWithDoubles`.
+Po pewnym czasie z wezwaniem Zrób wpisany kod i umieść go w nowej metodzie. Nadaj nazwę nowej metodzie `WorkWithDoubles`.
 
 ## <a name="work-with-fixed-point-types"></a>Pracuj z stałymi typami punktów
 
@@ -320,8 +320,6 @@ Ukończono Przewodnik Szybki Start dotyczący liczb C#. Możesz kontynuować pra
 
 Więcej informacji na temat numerów C# można znaleźć w następujących tematach:
 
-- [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)
-- [Tabela typów zmiennoprzecinkowych](../../language-reference/builtin-types/floating-point-numeric-types.md)
-- [Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)
-- [Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Całkowite typy liczbowe](../../language-reference/builtin-types/integral-numeric-types.md)
+- [Zmiennoprzecinkowe typy liczbowe](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [Wbudowane konwersje numeryczne](../../language-reference/builtin-types/numeric-conversions.md)

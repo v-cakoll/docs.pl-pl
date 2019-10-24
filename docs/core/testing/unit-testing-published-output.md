@@ -5,22 +5,22 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 93b2e1a433b5d5b9694257d4d12e47d9107f4cd7
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117024"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771925"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testowanie opublikowanych danych wyjściowych przy użyciu VSTest dotnet
 
-Można uruchomić testy dla już opublikowanych danych wyjściowych za pomocą `dotnet vstest` polecenia. Będzie to działało na testach xUnit, MSTest i NUnit. Po prostu zlokalizuj plik DLL, który był częścią opublikowanych danych wyjściowych, i uruchom:
+Można uruchomić testy dla już opublikowanych danych wyjściowych za pomocą polecenia `dotnet vstest`. Będzie to działało na testach xUnit, MSTest i NUnit. Po prostu zlokalizuj plik DLL, który był częścią opublikowanych danych wyjściowych, i uruchom:
 
 ```dotnetcli
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-Gdzie `<MyPublishedTests>` to nazwa opublikowanego projektu testowego.
+Gdzie `<MyPublishedTests>` jest nazwą opublikowanego projektu testowego.
 
 ## <a name="example"></a>Przykład
 
@@ -34,7 +34,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> Uwaga: Jeśli aplikacja jest ukierunkowana na platformę inną `netcoreapp` niż nadal można `dotnet vstest` uruchomić polecenie, przekazując w platformę docelową flagę platformy. Na przykład `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. W programie Visual Studio 2017 Update 5 żądana platforma jest wykrywana automatycznie.
+> Uwaga: Jeśli aplikacja jest ukierunkowana na platformę inną niż `netcoreapp`, można nadal uruchomić polecenie `dotnet vstest`, przekazując w platformę docelową flagę platformy. Na przykład `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. W programie Visual Studio 2017 Update 5 i nowszych zostanie automatycznie wykryta pożądana struktura.
 
 ## <a name="see-also"></a>Zobacz także
 

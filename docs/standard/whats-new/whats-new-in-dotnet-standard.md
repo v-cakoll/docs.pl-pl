@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476b6047fe9872f13f2f0298fb331eb7d888a73d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: f69dfe77e5d485c4c7ffcbf2b98657eab87d452d
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117859"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775220"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Co nowego w programie .NET Standard
 
@@ -39,19 +39,19 @@ Najnowsza wersja .NET Standard to 2,0. Jest on zawarty w zestawie SDK platformy 
 
 W wersji 1,6, .NET Standard obejmowały niewielki podzbiór interfejsów API. Wśród tych wykluczonych było wiele interfejsów API, które były często używane w .NET Framework lub Xamarin. To komplikuje programowanie, ponieważ wymaga, aby deweloperzy znalazły odpowiednie zamienniki dla znanych interfejsów API podczas opracowywania aplikacji i bibliotek przeznaczonych dla wielu implementacji platformy .NET. .NET Standard 2,0 dotyczy tego ograniczenia przez dodanie ponad 20 000 więcej interfejsów API niż w .NET Standard 1,6, poprzedniej wersji Standard. Aby uzyskać listę interfejsów API, które zostały dodane do .NET Standard 2,0, zobacz [.NET Standard 2,0 vs 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
-Niektóre dodatki do <xref:System> przestrzeni nazw w .NET Standard 2,0 obejmują:
+Niektóre dodatki do przestrzeni nazw <xref:System> w .NET Standard 2,0 obejmują:
 
-- <xref:System.AppDomain> Obsługa klasy.
-- Lepsza obsługa pracy z tablicami z dodatkowych elementów członkowskich w <xref:System.Array> klasie.
-- Lepsza obsługa pracy z atrybutami z dodatkowych elementów członkowskich w <xref:System.Attribute> klasie.
-- Lepsza obsługa kalendarza i dodatkowe opcje formatowania dla <xref:System.DateTime> wartości.
-- Dodatkowe <xref:System.Decimal> funkcje zaokrąglania.
-- Dodatkowe funkcje w <xref:System.Environment> klasie.
-- Rozszerzona kontrola nad modułem wyrzucania elementów bezużytecznych za pośrednictwem <xref:System.GC> klasy.
-- Ulepszona obsługa porównywania ciągów, wyliczania i normalizacji w <xref:System.String> klasie.
-- Obsługa zmian czasu letnich i czasów przejścia w <xref:System.TimeZoneInfo.AdjustmentRule> klasach i. <xref:System.TimeZoneInfo.TransitionTime>
-- Znacznie ulepszone funkcje w <xref:System.Type> klasie.
-- Lepsza obsługa deserializacji obiektów wyjątków przez dodanie konstruktora wyjątków z <xref:System.Runtime.Serialization.SerializationInfo> parametrami i. <xref:System.Runtime.Serialization.StreamingContext>
+- Obsługa klasy <xref:System.AppDomain>.
+- Lepsza obsługa pracy z tablicami z dodatkowych elementów członkowskich w klasie <xref:System.Array>.
+- Lepsza obsługa pracy z atrybutami z dodatkowych elementów członkowskich w klasie <xref:System.Attribute>.
+- Lepsza obsługa kalendarza i dodatkowe opcje formatowania dla wartości <xref:System.DateTime>.
+- Dodatkowe funkcje zaokrąglania <xref:System.Decimal>.
+- Dodatkowa funkcjonalność klasy <xref:System.Environment>.
+- Rozszerzona kontrola nad modułem wyrzucania elementów bezużytecznych za pośrednictwem klasy <xref:System.GC>.
+- Ulepszona obsługa porównywania ciągów, wyliczania i normalizacji w klasie <xref:System.String>.
+- Obsługa zmian czasu letnich i czasów przejścia w klasach <xref:System.TimeZoneInfo.AdjustmentRule> i <xref:System.TimeZoneInfo.TransitionTime>.
+- Znacznie rozszerzona funkcjonalność klasy <xref:System.Type>.
+- Lepsza obsługa deserializacji obiektów wyjątków przez dodanie konstruktora wyjątków z parametrami <xref:System.Runtime.Serialization.SerializationInfo> i <xref:System.Runtime.Serialization.StreamingContext>.
 
 ### <a name="support-for-net-framework-libraries"></a>Obsługa bibliotek .NET Framework
 

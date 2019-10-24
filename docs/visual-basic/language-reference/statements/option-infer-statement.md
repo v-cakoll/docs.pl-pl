@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 52da5d059369f8f5a85c23d1ed5ade97523a0e78
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582630"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775458"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 
@@ -62,7 +62,7 @@ Aby uzyskać dodatkowe informacje, zobacz temat [wnioskowanie o typie lokalnym](
 
 ## <a name="when-an-option-infer-statement-is-not-present"></a>Gdy nie ma instrukcji wnioskowania o opcji
 
-Jeśli kod źródłowy nie zawiera instrukcji `Option Infer`, zostanie użyta **opcja wnioskowanie** dotyczące ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli używany jest kompilator wiersza polecenia, opcja kompilatora [/optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md) jest używana.
+Jeśli kod źródłowy nie zawiera instrukcji `Option Infer`, zostanie użyta **opcja wnioskowanie** dotyczące ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli jest używany kompilator wiersza polecenia, opcja kompilatora [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) jest używana.
 
 #### <a name="to-set-option-infer-in-the-ide"></a>Aby ustawić wnioskowanie opcji w środowisku IDE
 
@@ -76,7 +76,7 @@ Podczas tworzenia nowego projektu, **opcja wnioskowanie opcji** na karcie **Komp
 
 #### <a name="to-set-option-infer-on-the-command-line"></a>Aby ustawić wnioskowanie opcji w wierszu polecenia
 
-Dołącz opcję kompilatora [/optioninfer —](../../../visual-basic/reference/command-line-compiler/optioninfer.md) do polecenia **VBC** .
+Dołącz opcję kompilatora [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) w poleceniu **VBC** .
 
 ## <a name="default-data-types-and-values"></a>Domyślne typy danych i wartości
 
@@ -109,5 +109,5 @@ Poniższy przykład pokazuje, że typ czasu wykonywania może się różnić, gd
 - [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
 - [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Domyślne ustawienia programu Visual Basic, Projekty, Opcje — okno dialogowe](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

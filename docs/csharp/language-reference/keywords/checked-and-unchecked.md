@@ -1,5 +1,5 @@
 ---
-title: Checked i Unchecked — C# odwołania
+title: Zaznaczone i niezaznaczone — C# odwołanie
 ms.custom: seodec18
 ms.date: 05/15/2018
 helpviewer_keywords:
@@ -10,35 +10,35 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7abc19e0657330752e7798d060516c48aa402297
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592990"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771776"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>checked i unchecked (odwołanie w C#)
-Instrukcje języka C# można wykonać w kontekście zaznaczony lub niezaznaczony. W kontekście sprawdzanym przepełnienie arytmetyczne zgłasza wyjątek. W kontekście niesprawdzanym przepełnienie arytmetyczne jest ignorowana, a wynik został obcięty przez odrzucenie wszelkich najbardziej znaczących bitów, które nie mieszczą się w typie docelowym.  
+C#instrukcje mogą być wykonywane w kontekście zaznaczonym lub niezaznaczonym. W kontekście, przepełnienie arytmetyczne wywołuje wyjątek. W kontekście niesprawdzonym przepełnienie arytmetyczne jest ignorowane, a wynik zostanie obcięty przez odrzucenie wszystkich bitów o dużej kolejności, które nie mieszczą się w typie docelowym.  
   
-- [zaznaczone](checked.md) kontekstu Określ zaznaczone.  
+- [zaznaczone](checked.md) Określ sprawdzony kontekst.  
   
-- [unchecked](unchecked.md) kontekście niesprawdzanym Określ.  
+- [niezaznaczone](unchecked.md) Określ kontekst niesprawdzony.  
   
- Następujące operacje dotyczy sprawdzanie przepełnienia:  
+ Sprawdzanie przepełnienia ma wpływ na następujące operacje:  
   
-- Za pomocą następujących operatorów wstępnie zdefiniowane na typach całkowitoliczbowych wyrażenia:  
+- Wyrażenia wykorzystujące następujące wstępnie zdefiniowane operatory w typach całkowitych:  
   
-     `++`, `--`, jednoargumentowe `-`, `+`, `-`, `*`, `/`  
+     `++`, `--`, `-` jednoargumentowy, `+`, `-`, `*`, `/`  
   
-- Jawnych konwersji liczbowych między typami całkowitymi lub z `float` lub `double` na typ całkowitoliczbowy.  
+- Jawne konwersje liczbowe między typami całkowitymi lub z `float` lub `double` do typu całkowitego.  
   
- Jeśli żadna `checked` ani `unchecked` określono domyślny kontekst dla wyrażenia stałą (wyrażeń, które są oceniane w czasie wykonywania) jest definiowany przez wartość [-zaznaczone](../compiler-options/checked-compiler-option.md) — opcja kompilatora. Domyślnie ustawiono wartość tej opcji, a operacje arytmetyczne są wykonywane w kontekście niesprawdzanym.
+ Jeśli nie `checked` ani `unchecked` jest określony, domyślny kontekst dla wyrażeń niestałych (wyrażenia, które są oceniane w czasie wykonywania) jest zdefiniowany przez wartość opcji kompilatora [-Checked](../compiler-options/checked-compiler-option.md) . Domyślnie wartość tej opcji to unoptional, a operacje arytmetyczne są wykonywane w niesprawdzonym kontekście.
  
- Domyślny kontekst zawsze jest sprawdzane dla wyrażeń stałych (wyrażenia, które mogą być w pełni obliczane w czasie kompilacji). O ile nie jest wyrażeniem stałym jawnie znajduje się w kontekście niesprawdzanym, przepełnienia, które występują podczas obliczania kompilacji wyrażenia spowodować błędy kompilacji.
+ W przypadku wyrażeń stałych (wyrażenia, które mogą być w pełni oceniane w czasie kompilacji), domyślnym kontekstem jest zawsze zaznaczone. Jeśli wyrażenie stałe nie jest jawnie umieszczane w niesprawdzonym kontekście, przepełnienie następuje podczas obliczania czasu kompilacji wyrażenia powodującego błędy czasu kompilacji.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Słowa kluczowe instrukcji](statement-keywords.md)

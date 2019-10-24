@@ -8,103 +8,89 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 31593fa8b0cc2670b9d59b8cd61ae66efd219269
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da0914c9d2d4dc1220ede5d6fa9f1aa6b43426a
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659752"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775298"
 ---
-# <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw My w Visual Basic
-`My` Przestrzeni nazw w języku Visual Basic udostępnia właściwości i metod, które umożliwiają użytkownikowi łatwo korzystać z możliwości programu .NET Framework. `My` Przestrzeni nazw upraszcza typowe problemy programowania, często zmniejszanie trudne do jednego wiersza kodu. Ponadto `My` przestrzeń nazw jest całkowicie rozszerzalny, dzięki czemu możesz dostosować zachowanie `My` i dodawanie nowych usług do swojej hierarchii w celu dostosowania do potrzeb konkretnej aplikacji. W tym temacie omówiono zarówno jak dostosować istniejący członkowie `My` przestrzeni nazw oraz sposób dodawania niestandardowych klas do `My` przestrzeni nazw.  
+# <a name="extending-the-my-namespace-in-visual-basic"></a>Rozszerzanie przestrzeni nazw `My` w Visual Basic
+
+Przestrzeń nazw `My` w Visual Basic udostępnia właściwości i metody, które pozwalają łatwo wykorzystać możliwości .NET Framework. Przestrzeń nazw `My` upraszcza typowe problemy z programowaniem, często skracając trudnym zadaniem do jednego wiersza kodu. Ponadto przestrzeń nazw `My` jest w pełni rozszerzalna, aby można było dostosować zachowanie `My` i dodać nowe usługi do swojej hierarchii, aby dostosować je do konkretnych potrzeb aplikacji. W tym temacie omówiono sposób dostosowywania istniejących członków przestrzeni nazw `My` i sposobu dodawania własnych klas niestandardowych do przestrzeni nazw `My`.
+
+## <a name="customizing-existing-my-namespace-members"></a>Dostosowywanie istniejących członków przestrzeni nazw `My`
+
+Przestrzeń nazw `My` w Visual Basic uwidacznia często używane informacje o aplikacji, komputerze i innych. Aby zapoznać się z pełną listą obiektów w przestrzeni nazw `My`, zobacz [Moje odwołanie](../../language-reference/keywords/my-reference.md). Może być konieczne dostosowanie istniejących członków przestrzeni nazw `My`, aby lepiej odpowiadały potrzebom aplikacji. Każda właściwość obiektu w przestrzeni nazw `My`, która nie jest tylko do odczytu, może być ustawiona na wartość niestandardową.
+
+Załóżmy na przykład, że często używasz obiektu `My.User`, aby uzyskać dostęp do bieżącego kontekstu zabezpieczeń dla użytkownika, na którym uruchomiono aplikację. Jednak firma używa niestandardowego obiektu użytkownika w celu udostępnienia dodatkowych informacji i możliwości dla użytkowników w firmie. W tym scenariuszu można zastąpić wartość domyślną właściwości `My.User.CurrentPrincipal` przy użyciu wystąpienia własnego niestandardowego obiektu podmiotu zabezpieczeń, jak pokazano w następującym przykładzie:
+
+[!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]
+
+Ustawienie właściwości `CurrentPrincipal` obiektu `My.User` zmienia tożsamość, w której działa aplikacja. Obiekt `My.User`, z kolei zwraca informacje o nowo określonym użytkowniku.
   
- **Zawartość tematów**  
+## <a name="adding-members-to-my-objects"></a>Dodawanie elementów członkowskich do `My` obiektów
+
+Typy zwracane z `My.Application` i `My.Computer` są zdefiniowane jako klasy `Partial`. W związku z tym można rozciągnąć `My.Application` i `My.Computer` obiekty przez utworzenie klasy `Partial` o nazwie `MyApplication` lub `MyComputer`. Klasa nie może być klasą `Private`. W przypadku określenia klasy jako części przestrzeni nazw `My` można dodać właściwości i metody, które zostaną dołączone do obiektów `My.Application` lub `My.Computer`.
+
+Poniższy przykład dodaje właściwość o nazwie `DnsServerIPAddresses` do obiektu `My.Computer`:
+
+[!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]
+
+## <a name="adding-custom-objects-to-the-my-namespace"></a>Dodawanie niestandardowych obiektów do przestrzeni nazw `My`
+
+Chociaż przestrzeń nazw `My` zawiera rozwiązania dla wielu typowych zadań programistycznych, mogą wystąpić zadania, które nie są adresami `My` przestrzeni nazw. Na przykład aplikacja może uzyskiwać dostęp do niestandardowych usług katalogowych dla danych użytkownika lub aplikacja może korzystać z zestawów, które nie są instalowane domyślnie z Visual Basic. Można zwiększyć przestrzeń nazw `My`, aby uwzględnić niestandardowe rozwiązania typowych zadań, które są specyficzne dla danego środowiska. Przestrzeń nazw `My` można łatwo rozszerzyć, aby dodać nowych członków w celu spełnienia rosnących potrzeb aplikacji. Ponadto można wdrożyć rozszerzenia przestrzeni nazw `My` dla innych deweloperów jako szablon Visual Basic.
   
-- [Dostosowywanie istniejących członków mojego Namespace](#customizing)  
-  
-- [Dodawanie członków do mojego obiektów](#addingtoobjects)  
-  
-- [Dodawanie niestandardowych obiektów do mojego Namespace](#addingcustom)  
-  
-- [Dodawanie członków do mojego Namespace](#addingtonamespace)  
-  
-- [Dodawanie zdarzeń do niestandardowego Moje obiekty](#addingevents)  
-  
-- [Wytyczne dotyczące projektowania](#design)  
-  
-- [Projektowanie bibliotek klas dla mojego](#designing)  
-  
-- [Pakowanie i wdrażanie rozszerzeń](#packaging)  
-  
-## <a name="customizing"></a> Dostosowywanie istniejących członków mojego Namespace  
- `My` Przestrzeni nazw w Visual Basic ujawnia często używane informacje o aplikacji i komputera. Aby uzyskać pełną listę obiektów w `My` przestrzeni nazw, zobacz [Moje odwołanie](../../../visual-basic/language-reference/keywords/my-reference.md). Być może trzeba dostosować istniejący członkowie `My` przestrzeni nazw, dzięki czemu mogą lepiej odpowiadały potrzebom aplikacji. Wszystkie właściwości obiektu w `My` przestrzeni nazw, który nie jest tylko do odczytu można ustawić na wartość niestandardową.  
-  
- Na przykład, załóżmy, że często `My.User` obiektu do uzyskania dostępu bieżącego kontekstu zabezpieczeń dla użytkownika uruchamiającego aplikację. Jednak firma korzysta z obiektem użytkownika niestandardowego do udostępnienia dodatkowych informacji i możliwości dla użytkowników w firmie. W tym scenariuszu możesz zastąpić wartość domyślną `My.User.CurrentPrincipal` właściwości z wystąpieniem własny niestandardowy obiekt podmiotu zabezpieczeń, jak pokazano w poniższym przykładzie.  
-  
- [!code-vb[VbVbcnExtendingMy#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#1)]  
-  
- Ustawienie `CurrentPrincipal` właściwość `My.User` zmianach obiektu tożsamości, w ramach której działa aplikacja. `My.User` Obiektu, z kolei zwraca informacje o nowo określonego użytkownika.  
-  
-## <a name="addingtoobjects"></a> Dodawanie członków do mojego obiektów  
- Typy zwracane z `My.Application` i `My.Computer` są definiowane jako `Partial` klasy. W związku z tym, można rozszerzyć `My.Application` i `My.Computer` obiektów, tworząc `Partial` klasę o nazwie `MyApplication` lub `MyComputer`. Klasa nie może być `Private` klasy. W przypadku określenia klasy jako część `My` przestrzeni nazw, można dodać właściwości i metod, które będą dołączone `My.Application` lub `My.Computer` obiektów.  
-  
- Na przykład, poniższy przykład dodaje właściwość o nazwie `DnsServerIPAddresses` do `My.Computer` obiektu.  
-  
- [!code-vb[VbVbcnExtendingMy#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class2.vb#2)]  
-  
-## <a name="addingcustom"></a> Dodawanie niestandardowych obiektów do mojego Namespace  
- Mimo że `My` przestrzeń nazw zapewnia rozwiązania typowych zadań programistycznych, możesz napotkać zadania, `My` nie rozwiążą przestrzeni nazw. Na przykład aplikacja może uzyskać dostęp do usług katalogu niestandardowego dla danych użytkownika lub aplikacja może używać zestawów, które nie są instalowane domyślnie w języku Visual Basic. Możesz rozszerzyć `My` namespace, aby uwzględnić niestandardowe rozwiązania do typowych zadań, które są specyficzne dla danego środowiska. `My` Przestrzeni nazw można łatwo rozszerzyć, aby dodawać nowych członków do rosnących potrzeb aplikacji. Ponadto, możesz wdrażać swoje `My` rozszerzenia nazw, aby inni deweloperzy jako szablon, Visual Basic.  
-  
-### <a name="addingtonamespace"></a> Dodawanie członków do mojego Namespace  
- Ponieważ `My` jest przestrzenią nazw, takich jak inne przestrzeni nazw, można dodać właściwości najwyższego poziomu do niego tylko dodanie modułu i określając `Namespace` z `My`. Dodawanie adnotacji do modułu za pomocą `HideModuleName` atrybutu, jak pokazano w poniższym przykładzie. `HideModuleName` Atrybutu gwarantuje, że IntelliSense nie będą wyświetlane Nazwa modułu, gdy Wyświetla elementy członkowskie `My` przestrzeni nazw.  
-  
- [!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]  
-  
- Aby dodać członków do `My` przestrzeni nazw, Dodaj właściwości, zgodnie z potrzebami w module. Dla każdej właściwości dodawane do `My` przestrzeni nazw, Dodaj pole private typu `ThreadSafeObjectProvider(Of T)`, których typem jest typ zwracany przez właściwości niestandardowej. To pole służy do tworzenia wystąpienia obiektu wątkowo ma zostać zwrócona przez właściwość przez wywołanie metody `GetInstance` metody. W rezultacie każdego wątku, który uzyskuje dostęp do właściwości rozszerzonej odbiera własne wystąpienie typu zwracanego. Poniższy przykład dodaje właściwość o nazwie `SampleExtension` jest typu `SampleExtension` do `My` przestrzeni nazw:  
-  
- [!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]  
-  
-## <a name="addingevents"></a> Dodawanie zdarzeń do niestandardowego Moje obiekty  
- Możesz użyć `My.Application` obiektu do udostępnienia zdarzenia dla niestandardowych `My` obiektów, rozszerzając `MyApplication` klasy częściowej w `My` przestrzeni nazw. Dla projektów z systemem Windows, możesz kliknąć dwukrotnie **mój projekt** węzeł w projekcie w **Eksploratora rozwiązań**. W języku Visual Basic **projektanta projektu**, kliknij przycisk `Application` kartę, a następnie kliknij przycisk `View Application Events` przycisku. Zostanie utworzony nowy plik o nazwie ApplicationEvents.vb. Zawiera on następujący kod do rozszerzania `MyApplication` klasy.  
-  
- [!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]  
-  
- Można dodać procedury obsługi zdarzeń dla niestandardowych `My` obiektów przez dodanie programów obsługi zdarzeń niestandardowych do `MyApplication` klasy. Zdarzenia niestandardowe umożliwiają Dodaj kod, który będzie wykonywać, gdy program obsługi zdarzeń jest dodane, usunięte, lub zdarzenie jest wywoływane. Należy pamiętać, że `AddHandler` kod zdarzenia niestandardowego jest uruchamiane tylko wtedy, gdy kod jest dodawany przez użytkownika, aby obsłużyć zdarzenie. Rozważmy na przykład, który `SampleExtension` obiekt z poprzedniej sekcji, ma `Load` zdarzenia, które chcesz dodać niestandardowy program obsługi zdarzeń dla. Poniższy przykład kodu pokazuje niestandardowy program obsługi zdarzeń o nazwie `SampleExtensionLoad` który będzie wywoływany, gdy `My.SampleExtension.Load` wystąpi zdarzenie. Gdy kod jest dodawany do obsługi nowej `My.SampleExtensionLoad` zdarzenia `AddHandler` części niniejszego Kodeksu zdarzenia niestandardowego jest wykonywany. `MyApplication_SampleExtensionLoad` Metoda znajduje się w przykładzie kodu, aby wyświetlić przykład program obsługi zdarzeń, który obsługuje `My.SampleExtensionLoad` zdarzeń. Należy pamiętać, że `SampleExtensionLoad` zdarzenia będą dostępne po wybraniu **Moje zdarzenia aplikacji** opcji na liście po lewej stronie listy rozwijanej powyżej edytora kodu podczas edycji pliku ApplicationEvents.vb.  
-  
- [!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]  
-  
-## <a name="design"></a> Wytyczne dotyczące projektowania  
- Podczas opracowywania rozszerzeń `My` przestrzeni nazw, skorzystaj z poniższych wskazówek w celu ułatwienia zminimalizowania kosztów konserwacji składniki rozszerzenia.  
-  
-- **Zawiera tylko logiki rozszerzenia.** Logika objęte `My` rozszerzenie przestrzeni nazw powinien zawierać tylko kod, który jest potrzebny do udostępnienia wymaganej funkcjonalności w `My` przestrzeni nazw. Ponieważ rozszerzenia będą znajdować się w projektach użytkownika jako kod źródłowy, aktualizowanie składnika rozszerzenia ponosi kosztów utrzymania wysokiej i jeśli to możliwe należy unikać.  
-  
-- **Minimalizuj założeń projektowych.** Podczas tworzenia usługi rozszerzeń `My` przestrzeni nazw, nie należy zakładać, zestaw odwołania, instrukcji imports na poziomie projektu lub Ustawienia kompilatora określonych (na przykład `Option Strict` wyłączone). Zamiast tego należy zminimalizować zależności i pełnej kwalifikacji wszystkich odwołań do typu przy użyciu `Global` — słowo kluczowe. Upewnij się również, że rozszerzenie kompiluje się przy użyciu `Option Strict` włączone, aby zminimalizować błędy w rozszerzeniu.  
-  
-- **Izolowanie kod rozszerzenia.** Wprowadzenie do kodu w jednym pliku sprawia, że rozszerzenie łatwo można wdrożyć jako szablon elementu programu Visual Studio. Aby uzyskać więcej informacji zobacz "Pakowanie i wdrażanie rozszerzenia" w dalszej części tego tematu. Wprowadzenie do wszystkich `My` kod rozszerzenia przestrzeni nazw w jednym pliku lub oddzielnego folderu w projekcie pomoże użytkownikom znajdowanie `My` rozszerzenie przestrzeni nazw.  
-  
-## <a name="designing"></a> Projektowanie bibliotek klas dla mojego  
- Podobnie jak w przypadku większości modeli obiektów, niektóre wzorce projektowe działają poprawnie w `My` przestrzeni nazw, a inne nie. Podczas projektowania rozszerzenie `My` przestrzeni nazw, należy wziąć pod uwagę następujące zasady:  
-  
-- **Metody bezstanowe.** Metody `My` przestrzeni nazw powinien zapewnić kompletne rozwiązanie do konkretnego zadania. Upewnij się, że wartości parametrów, które są przekazywane do metody zawierają wszystkie dane wejściowe wymagane do ukończenia danego zadania. Unikaj tworzenia metody, które zależą od poprzedniego stanu, takich jak otwieranie połączenia z zasobami.  
-  
-- **Globalnego wystąpienia.** Tylko stan, który jest zachowywany w `My` przestrzeni nazw jest globalna do projektu. Na przykład `My.Application.Info` hermetyzuje stan, który jest udostępniany w całej aplikacji.  
-  
-- **Typy proste parametrów.** Zachować ich prostotę, unikając typy złożone parametrów. Zamiast tego utworzyć metod, dla których albo braku parametrów wejściowych lub które wymagają prostych typów wejściowych, takich jak ciągi, typy pierwotne i tak dalej.  
-  
-- **Metody fabryki.** Niektóre typy są zawsze trudne do utworzenia wystąpienia. Zapewnianie metodami factory jako rozszerzenia `My` przestrzeń nazw umożliwia łatwiejsze odkrycie i używanie typów, które należą do tej kategorii. Na przykład metoda fabryki, które działa dobrze `My.Computer.FileSystem.OpenTextFileReader`. Istnieje kilka typów usługi stream, dostępne w programie .NET Framework. Określając pliki tekstowe, w szczególności `OpenTextFileReader` pomaga użytkownikom zrozumieć, które strumienia do wykorzystania.  
-  
- Te wytyczne nie wyklucza ogólnego projektowania dla bibliotek klas. Przeciwnie są one zaleceń, które są zoptymalizowane dla deweloperów, którzy są w języku Visual Basic i `My` przestrzeni nazw. Aby zasady ogólne projektowania do tworzenia biblioteki klas, zobacz [wytyczne dotyczące projektowania Framework](../../../standard/design-guidelines/index.md).  
-  
-## <a name="packaging"></a> Pakowanie i wdrażanie rozszerzeń  
- Możesz uwzględnić `My` rozszerzenia nazw szablon projektu Visual Studio lub można pakietu rozszerzeń i wdrażanie ich jako szablon elementu programu Visual Studio. Gdy pakiet usługi `My` rozszerzenia nazw jako szablon elementu programu Visual Studio, możesz korzystać z zalet dodatkowe funkcje udostępniane przez program Visual Basic. Te funkcje umożliwiają objęcie rozszerzenia, gdy projekt odwołuje się do określonego zestawu lub umożliwić użytkownikom jawnie dodać swoje `My` rozszerzenie przestrzeni nazw za pomocą **Moje rozszerzenia** strony języka Visual Basic Projektant projektu.  
-  
- Aby uzyskać szczegółowe informacje o sposobie wdrażania `My` rozszerzenia przestrzeni nazw, zobacz [pakowanie i wdrażanie niestandardowych rozszerzeń Moje](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).  
-  
+### <a name="adding-members-to-the-my-namespace"></a>Dodawanie członków do przestrzeni nazw `My`
+
+Ponieważ `My` jest przestrzenią nazw, taką jak jakakolwiek inna przestrzeń nazw, można dodać do niej właściwości najwyższego poziomu, dodając moduł i określając `Namespace` `My`. Dodaj adnotację do modułu z atrybutem `HideModuleName`, jak pokazano w poniższym przykładzie. Atrybut `HideModuleName` zapewnia, że funkcja IntelliSense nie będzie wyświetlała nazwy modułu podczas wyświetlania elementów członkowskich `My` przestrzeni nazw.
+
+[!code-vb[VbVbcnExtendingMy#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#3)]
+
+Aby dodać elementy członkowskie do przestrzeni nazw `My`, Dodaj do modułu odpowiednie właściwości. Dla każdej właściwości dodanej do przestrzeni nazw `My` Dodaj pole private typu `ThreadSafeObjectProvider(Of T)`, gdzie typ jest typem zwracanym przez właściwość niestandardową. To pole służy do tworzenia wystąpień obiektów bezpiecznych dla wątków, które mają być zwracane przez właściwość przez wywołanie metody `GetInstance`. W związku z tym każdy wątek, który uzyskuje dostęp do właściwości rozszerzonej, odbiera własne wystąpienie zwróconego typu. Poniższy przykład dodaje właściwość o nazwie `SampleExtension`, która jest typu `SampleExtension` do przestrzeni nazw `My`:
+
+[!code-vb[VbVbcnExtendingMy#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#4)]
+
+## <a name="adding-events-to-custom-my-objects"></a>Dodawanie zdarzeń do niestandardowych obiektów `My`
+
+Można użyć obiektu `My.Application`, aby uwidocznić zdarzenia dla niestandardowych obiektów `My`, rozszerzając klasę `MyApplication` częściową w przestrzeni nazw `My`. W przypadku projektów opartych na systemie Windows można kliknąć dwukrotnie węzeł **mój projekt** w programie dla projektu w **Eksplorator rozwiązań**. W **projektancie projektu**Visual Basic kliknij kartę **aplikacja** , a następnie kliknij przycisk **Wyświetl zdarzenia aplikacji** . Zostanie utworzony nowy plik o nazwie *ApplicationEvents. vb* . Zawiera poniższy kod rozszerzający klasę `MyApplication`:
+
+[!code-vb[VbVbcnExtendingMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#5)]
+
+Obsługę zdarzeń można dodać do niestandardowych obiektów `My`, dodając niestandardowe programy obsługi zdarzeń do klasy `MyApplication`. Zdarzenia niestandardowe umożliwiają dodanie kodu, który będzie wykonywany po dodaniu lub usunięciu procedury obsługi zdarzeń. Należy zauważyć, że kod `AddHandler` dla zdarzenia niestandardowego jest uruchamiany tylko wtedy, gdy użytkownik dodaliśmy kod, aby obsłużyć zdarzenie. Rozważmy na przykład, że obiekt `SampleExtension` z poprzedniej sekcji ma zdarzenie `Load`, dla którego chcesz dodać obsługę zdarzeń niestandardowych. Poniższy przykład kodu pokazuje niestandardowy program obsługi zdarzeń o nazwie `SampleExtensionLoad`, który zostanie wywołany, gdy wystąpi zdarzenie `My.SampleExtension.Load`. Po dodaniu kodu do obsługi nowego zdarzenia `My.SampleExtensionLoad` jest wykonywany `AddHandler` część tego niestandardowego kodu zdarzenia. Metoda `MyApplication_SampleExtensionLoad` jest dołączona do przykładu kodu, aby pokazać przykład programu obsługi zdarzeń, który obsługuje zdarzenie `My.SampleExtensionLoad`. Należy pamiętać, że zdarzenie `SampleExtensionLoad` będzie dostępne po wybraniu opcji **Moje zdarzenia aplikacji** z lewej listy rozwijanej powyżej edytora kodu podczas edytowania pliku *ApplicationEvents. vb* .
+
+[!code-vb[VbVbcnExtendingMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnExtendingMy/VB/Class1.vb#6)]
+
+## <a name="design-guidelines"></a>Wytyczne dotyczące projektowania
+
+Podczas tworzenia rozszerzeń do przestrzeni nazw `My` należy skorzystać z poniższych wskazówek, aby zminimalizować koszty konserwacji składników rozszerzeń:
+
+- **Uwzględnij tylko logikę rozszerzenia.** Logika uwzględniona w rozszerzeniu przestrzeni nazw `My` powinna zawierać tylko kod, który jest potrzebny do udostępnienia wymaganych funkcji w przestrzeni nazw `My`. Ponieważ Twoje rozszerzenie będzie znajdować się w projektach użytkownika jako kod źródłowy, aktualizowanie składnika rozszerzenia wiąże się z wysokim kosztem konserwacji i należy je unikać, jeśli jest to możliwe.
+- **Minimalizuj założenia projektu.** Podczas tworzenia rozszerzeń przestrzeni nazw `My` nie należy przyjmować zestawu odwołań, importów na poziomie projektu ani ustawień określonego kompilatora (na przykład `Option Strict` wyłączone). Zamiast tego należy zminimalizować zależności i w pełni kwalifikować wszystkie odwołania do typu za pomocą słowa kluczowego `Global`. Ponadto upewnij się, że rozszerzenie kompiluje się z `Option Strict` on, aby zminimalizować błędy w rozszerzeniu.
+- **Izoluj kod rozszerzenia.** Umieszczenie kodu w pojedynczym pliku sprawia, że rozszerzenie jest łatwo wdrożone jako szablon elementu programu Visual Studio. Aby uzyskać więcej informacji, zobacz sekcję "Pakowanie i wdrażanie rozszerzeń" w dalszej części tego tematu. Umieszczenie całego kodu rozszerzenia przestrzeni nazw `My` w jednym pliku lub oddzielnym folderze w projekcie ułatwi użytkownikom znalezienie rozszerzenia `My` przestrzeni nazw.
+
+## <a name="designing-class-libraries-for-my"></a>Projektowanie bibliotek klas dla `My`
+
+Podobnie jak w przypadku większości modeli obiektów, niektóre wzorce projektowania działają prawidłowo w przestrzeni nazw `My` i inne nie. Podczas projektowania rozszerzenia do przestrzeni nazw `My` należy wziąć pod uwagę następujące zasady:
+
+- **Metody bezstanowe.** Metody w przestrzeni nazw `My` powinny dostarczyć kompletne rozwiązanie do określonego zadania. Upewnij się, że wartości parametrów, które są przesyłane do metody, zapewniają wszystkie dane wejściowe wymagane do ukończenia określonego zadania. Należy unikać tworzenia metod, które są zależne od wcześniejszego stanu, na przykład otwartych połączeń z zasobami.
+- **Wystąpienia globalne.** Jedynym stanem obsługiwanym w przestrzeni nazw `My` jest globalny dla projektu. Na przykład `My.Application.Info` hermetyzuje stan współużytkowany przez aplikację.
+- **Proste typy parametrów.** Zachowaj prostotę, unikając złożonych typów parametrów. Zamiast tego należy utworzyć metody, które nie przyjmują danych wejściowych parametrów ani mają proste typy wejściowe, takie jak ciągi, typy pierwotne i tak dalej.
+- **Metody fabryki.** Niektóre typy muszą być trudne do wystąpienia. Dostarczanie metod fabrycznych jako rozszerzeń przestrzeni nazw `My` umożliwia łatwiejsze odnajdywanie i używanie typów, które należą do tej kategorii. Przykładem metody fabryki, która działa prawidłowo, jest `My.Computer.FileSystem.OpenTextFileReader`. Istnieje kilka typów strumieni dostępnych w .NET Framework. Dzięki określeniu plików tekstowych `OpenTextFileReader` pomaga użytkownikowi zrozumieć, którego strumienia użyć.
+
+Te wytyczne nie uniemożliwiają ogólnych zasad projektowania bibliotek klas. Nie są to zalecenia zoptymalizowane pod kątem deweloperów korzystających z Visual Basic i przestrzeni nazw `My`. Ogólne zasady projektowania dotyczące tworzenia bibliotek klas można znaleźć w temacie [wskazówki dotyczące projektowania struktury](../../../standard/design-guidelines/index.md).
+
+## <a name="packaging-and-deploying-extensions"></a>Pakowanie i wdrażanie rozszerzeń
+
+Można uwzględnić rozszerzenia przestrzeni nazw `My` w szablonie projektu programu Visual Studio lub można spakować rozszerzenia i wdrożyć je jako szablon elementu programu Visual Studio. W przypadku pakowania rozszerzeń przestrzeni nazw `My` jako szablonu elementu programu Visual Studio możesz skorzystać z dodatkowych możliwości zapewnianych przez Visual Basic. Te możliwości umożliwiają dołączenie rozszerzenia, gdy projekt odwołuje się do określonego zestawu, lub umożliwia użytkownikom jawne dodanie rozszerzenia przestrzeni nazw `My` przy użyciu strony **Moje rozszerzenia** w projektancie projektu Visual Basic.
+
+Aby uzyskać szczegółowe informacje na temat wdrażania rozszerzeń przestrzeni nazw `My`, zobacz [pakowanie i wdrażanie niestandardowych rozszerzeń](packaging-and-deploying-custom-my-extensions.md).
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Pakowanie i wdrażanie niestandardowych rozszerzeń My](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
-- [Rozszerzanie modelu aplikacji Visual Basic](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
-- [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [Pakowanie i wdrażanie niestandardowych rozszerzeń My](packaging-and-deploying-custom-my-extensions.md)
+- [Rozszerzanie modelu aplikacji Visual Basic](extending-the-visual-basic-application-model.md)
+- [Dostosowywanie, które obiekty są dostępne w My](customizing-which-objects-are-available-in-my.md)
 - [Strona Moje rozszerzenia, Projektant projektu](/visualstudio/ide/reference/my-extensions-page-project-designer-visual-basic)
 - [Strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
-- [Partial](../../../visual-basic/language-reference/modifiers/partial.md)
+- [Partial](../../language-reference/modifiers/partial.md)

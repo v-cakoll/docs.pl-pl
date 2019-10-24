@@ -4,18 +4,18 @@ description: Dowiedz się, jak uruchomić aplikację .NET dla Apache Spark przy 
 ms.date: 06/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c4dbce74d0d8c0a682250a8021d983ef2990971f
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 19efc8412d834d73069c61e1cc1ccd9e5eb8593b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250324"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774375"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>Samouczek: Rozpoczynanie pracy z platformą .NET dla Apache Spark
 
 W tym samouczku przedstawiono sposób uruchamiania aplikacji platformy .NET dla Apache Spark przy użyciu platformy .NET Core w systemie Windows.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -35,7 +35,7 @@ Przed rozpoczęciem upewnij się, że można uruchomić `dotnet`, `java`, `mvn`,
       * Programowanie aplikacji klasycznych dla platformy .NET
           * Wszystkie wymagane składniki
           * Narzędzia programistyczne .NET Framework 4.6.1
-      * Tworzenie aplikacji dla wielu platform w środowisku .NET Core
+      * Programowanie dla wielu platform w środowisku .NET Core
           * Wszystkie wymagane składniki
 
 3. Zainstaluj [środowisko Java 1,8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
@@ -44,9 +44,9 @@ Przed rozpoczęciem upewnij się, że można uruchomić `dotnet`, `java`, `mvn`,
     * Aby zweryfikować instalację, użyj polecenia programu PowerShell `java -version`.
 
 4. Zainstaluj program [Apache Maven 3.6.0 +](https://maven.apache.org/download.cgi).
-    * Pobierz [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip).
-    * Wyodrębnij do katalogu lokalnego. Na przykład `c:\bin\apache-maven-3.6.0\`.
-    * Dodaj Maven Apache do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia do `c:\bin\apache-maven-3.6.0\` należy dodać do ścieżki `c:\bin\apache-maven-3.6.0\bin`.
+    * Pobierz [Apache Maven 3.6.2](http://mirror.metrocast.net/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.zip).
+    * Wyodrębnij do katalogu lokalnego. Na przykład `c:\bin\apache-maven-3.6.2\`.
+    * Dodaj Maven Apache do [zmiennej środowiskowej PATH](https://www.java.com/en/download/help/path.xml). W przypadku wyodrębnienia do `c:\bin\apache-maven-3.6.2\` należy dodać `c:\bin\apache-maven-3.6.2\bin` do ścieżki.
     * Aby zweryfikować instalację, użyj polecenia programu PowerShell `mvn -version`.
 
 5. Zainstaluj [Apache Spark 2.3 +](https://spark.apache.org/downloads.html). Apache Spark 2.4 + nie jest obsługiwana.
@@ -58,8 +58,8 @@ Przed rozpoczęciem upewnij się, że można uruchomić `dotnet`, `java`, `mvn`,
 6. Skonfiguruj [WinUtils](https://github.com/steveloughran/winutils).
     * Pobierz plik binarny **winutils. exe** z [repozytorium winutils](https://github.com/steveloughran/winutils). Wybierz wersję usługi Hadoop, z którą została skompilowana dystrybucja platformy Spark. Na przykład użyjesz usługi **Hadoop-2.7.1** dla **platformy Spark 2.3.2**. Wersja usługi Hadoop znajduje się na końcu nazwy folderu instalacji platformy Spark.
     * Zapisz plik binarny **winutils. exe** w wybranym katalogu. Na przykład `c:\hadoop\bin`.
-    * Ustaw `HADOOP_HOME`, aby odzwierciedlić katalog z **winutils. exe** bez `bin`. Na przykład `c:\hadoop`.
-    * Ustaw zmienną środowiskową PATH, aby uwzględnić `%HADOOP_HOME%\bin`.
+    * Ustaw `HADOOP_HOME`, aby odzwierciedlał katalog z **winutils. exe** bez `bin`. Na przykład `c:\hadoop`.
+    * Ustaw zmienną środowiskową PATH do uwzględnienia `%HADOOP_HOME%\bin`.
 
 Przed przejściem do następnej sekcji Sprawdź, czy można uruchomić `dotnet`, `java`, `mvn`, `spark-shell` z poziomu wiersza polecenia.
 
@@ -119,11 +119,11 @@ git clone https://github.com/dotnet/spark.git c:\github\dotnet-spark
     dotnet HelloSpark.dll
     ```
 
-Gratulacje! Pomyślnie utworzono i uruchomiono aplikację .NET dla Apache Spark.
+Nabycia! Pomyślnie utworzono i uruchomiono aplikację .NET dla Apache Spark.
 
 ## <a name="next-steps"></a>Następne kroki
 
-W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > [!div class="checklist"]
 >
 > * Przygotuj środowisko systemu Windows dla platformy .NET dla Apache Spark

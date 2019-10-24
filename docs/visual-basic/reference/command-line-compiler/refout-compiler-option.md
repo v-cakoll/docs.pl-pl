@@ -7,12 +7,12 @@ helpviewer_keywords:
 - refout compiler option [Visual Basic]
 - /refout compiler option [Visual Basic]
 - -refout compiler option [Visual Basic]
-ms.openlocfilehash: c11d83ff37da41faa3dc6b66a87e2c52c5f6c7ac
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 552e611f222bfcc3ce12520ecdb891fd7b8b21de
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582871"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775547"
 ---
 # <a name="-refout-visual-basic"></a>-opcji refout (Visual Basic)
 
@@ -35,9 +35,7 @@ Opcja **-opcji refout** określa ścieżkę pliku, w którym zestaw odniesienia 
 
 Visual Basic obsługuje przełącznik `-refout`, zaczynając od wersji 15,3.
 
-Zestawy referencyjne są zestawami zawierającymi tylko metadane, które zawierają metadane, ale nie mają kodu implementacji. Zawierają one informacje o typie i elemencie członkowskim dla wszystkiego, z wyjątkiem typów anonimowych. Ich treści metod są zastępowane pojedynczą instrukcją `throw null`. Przyczyną użycia `throw null` metod treści (w przeciwieństwie do braku treści) jest to, że PEVerify może być uruchomiona i zakończyła się powodzeniem (w związku z tym sprawdzanie kompletności metadanych).
-
-Zestawy referencyjne zawierają atrybut [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) na poziomie zestawu. Ten atrybut może być określony w źródle (a następnie kompilator nie będzie musiał przeprowadzić jego syntezy). Ze względu na ten atrybut środowiska uruchomieniowe odmawiają załadowania zestawów referencyjnych na potrzeby wykonywania (ale nadal mogą być ładowane w kontekście "tylko odbicie"). Narzędzia odzwierciedlające zestawy muszą mieć pewność, że ładują zestawy referencyjne jako odbicie. w przeciwnym razie środowisko uruchomieniowe zgłosi <xref:System.BadImageFormatException>.
+Zestawy referencyjne są specjalnym typem zestawu, który zawiera tylko minimalną ilość metadanych wymaganą do reprezentowania publicznej powierzchni interfejsu API biblioteki. Obejmują one deklaracje dla wszystkich elementów członkowskich, które są istotne w przypadku odwoływania się do zestawu w narzędziach kompilacji, ale wyklucza wszystkie implementacje składowych i deklaracje prywatnych członków, którzy nie mają zauważalnego wpływu na ich kontrakt interfejsu API. Aby uzyskać więcej informacji, zobacz [zestawy referencyjne](../../../standard/assembly/reference-assemblies.md) w przewodniku .NET.
 
 Opcje `-refout` i [`-refonly`](refonly-compiler-option.md) wykluczają się wzajemnie.
 

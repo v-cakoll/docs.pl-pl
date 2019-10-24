@@ -3,12 +3,12 @@ title: Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabil
 description: Dowiedz się, w jaki sposób używać programowania probabilistyczne z Infer.NET do tworzenia aplikacji listy rozgrywki gry na podstawie uproszczonej wersji programu TrueSkill.
 ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f6f91aecfe7fdeffb7e8913309046c7942ecbab7
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957211"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774544"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Tworzenie gry do aplikacji z listą z programowaniem Infer.NET i probabilistyczne
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-Polecenie `dotnet` tworzy aplikację `new` typu `console`. Parametr `-o` tworzy katalog o nazwie `myApp`, w którym jest przechowywana aplikacja i wypełnia je wymaganymi plikami. Polecenie `cd myApp` przełączy Cię do nowo utworzonego katalogu aplikacji.
+@No__t_0 polecenie tworzy `new` aplikacji typu `console`. Parametr `-o` tworzy katalog o nazwie `myApp`, w którym jest przechowywana aplikacja i wypełnia je wymaganymi plikami. Polecenie `cd myApp` przełączy Cię do nowo utworzonego katalogu aplikacji.
 
 ## <a name="install-infernet-package"></a>Zainstaluj pakiet Infer.NET
 
@@ -45,7 +45,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>Projektowanie modelu
 
-Przykładowy przykład używa tabeli tenis lub Foosball, które są odtwarzane w biurze. Masz uczestników i wynik każdego dopasowania.  Chcesz wywnioskować umiejętności gracza z tych danych. Załóżmy, że każdy gracz ma zwykle rozłożoną, niezrównaną umiejętność, a ich wydajność jest w tej samej wersji. Dane ograniczają wydajność zwycięzcy do większej niż wydajność Loser. Jest to uproszczona wersja popularnego modelu [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) , który również obsługuje zespoły, rysuje i inne rozszerzenia. [Zaawansowana wersja](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) tego modelu jest używana do Matchmaking w najlepszej sprzedaży tytułów gry i narzędzia wojny.
+Przykładowy przykład używa tabeli tenis lub Foosball, które są odtwarzane w biurze. Masz uczestników i wynik każdego dopasowania.  Chcesz wywnioskować umiejętności gracza z tych danych. Załóżmy, że każdy gracz ma zwykle rozłożoną, niezrównaną umiejętność, a ich wydajność jest w tej samej wersji. Dane ograniczają wydajność zwycięzcy do większej niż wydajność Loser. Jest to uproszczona wersja popularnego modelu [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/) , który również obsługuje zespoły, rysuje i inne rozszerzenia. [Zaawansowana wersja](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/) tego modelu jest używana do Matchmaking w najlepszej sprzedaży tytułów gry i narzędzia wojny.
 
 Należy wystawić umiejętności z tytułu odroczonego odtwarzacza wraz z ich wariancją — miarą niepewności wokół umiejętności.
 

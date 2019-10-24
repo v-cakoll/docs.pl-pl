@@ -5,23 +5,23 @@ helpviewer_keywords:
 - conditional compilation [Visual Basic], about conditional compilation
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
-ms.openlocfilehash: 1bee64568ff92468e29226a395f7e5335387e256
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0767b2054697735c3f5190b6e30a2c80ea5288bc
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945584"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775703"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Kompilacja warunkowa w Visual Basic
 W *kompilacji warunkowej*poszczególne bloki kodu w programie są kompilowane wybiórczo, podczas gdy inne są ignorowane.  
   
  Na przykład możesz chcieć napisać instrukcje debugowania, które porównują szybkość różnych podejść do tego samego zadania programistycznego, lub można zlokalizować aplikację dla wielu języków. Instrukcje kompilacji warunkowej są przeznaczone do uruchamiania w czasie kompilacji, a nie w czasie wykonywania.  
   
- Należy zauważyć, `#If...Then...#Else` że bloki kodu mają być warunkowo kompilowane z dyrektywą. Aby na przykład utworzyć wersje językowe języka francuskiego i niemieckiego tej samej aplikacji z tego samego kodu źródłowego, segmenty kodu specyficzne dla platformy można osadzić `#If...Then` w instrukcjach korzystających `FrenchVersion` ze `GermanVersion`wstępnie zdefiniowanych stałych i. W poniższym przykładzie pokazano, jak:  
+ Należy zauważyć, że bloki kodu mają być warunkowo kompilowane za pomocą dyrektywy `#If...Then...#Else`. Aby na przykład utworzyć wersje języka francuskiego i niemieckiego tej samej aplikacji z tego samego kodu źródłowego, segmenty kodu specyficzne dla platformy można osadzić w instrukcjach `#If...Then` przy użyciu wstępnie zdefiniowanych stałych `FrenchVersion` i `GermanVersion`. W poniższym przykładzie pokazano, jak:  
   
  [!code-vb[VbVbalrConditionalComp#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#5)]  
   
- Jeśli ustawisz wartość `FrenchVersion` stałej kompilacji warunkowej na `True` w czasie kompilacji, zostanie skompilowany kod warunkowy dla wersji francuskiej. Jeśli wartość `GermanVersion` stała jest ustawiona na `True`, kompilator używa wersji niemieckiej. Jeśli żaden z nich nie `True`jest ustawiony na, kod w `Else` ostatnim bloku zostanie uruchomiony.  
+ Jeśli ustawisz wartość `FrenchVersion` stałej kompilacji warunkowej na `True` w czasie kompilacji, zostanie skompilowany kod warunkowy dla wersji francuskiej. Jeśli ustawisz wartość `GermanVersion` stałej do `True`, kompilator używa wersji niemieckiej. Jeśli żaden z nich nie jest ustawiony na `True`, kod w ostatnim `Else` bloku zostanie uruchomiony.  
   
 > [!NOTE]
 > Funkcja autouzupełniania nie będzie działać podczas edytowania kodu i stosowania dyrektyw warunkowej kompilacji, jeśli kod nie jest częścią bieżącej gałęzi.  
@@ -41,7 +41,7 @@ W *kompilacji warunkowej*poszczególne bloki kodu w programie są kompilowane wy
 |---|---|  
 |**Projektant projektu**|Publiczny dla wszystkich plików w projekcie|  
 |Wiersz polecenia|Publiczny dla wszystkich plików przesłanych do kompilatora wiersza polecenia|  
-|`#Const`Instrukcja w kodzie|Prywatny do pliku, w którym jest zadeklarowany|  
+|Instrukcja `#Const` w kodzie|Prywatny do pliku, w którym jest zadeklarowany|  
   
 |Aby ustawić stałe w projektancie projektu|  
 |---|  
@@ -49,7 +49,7 @@ W *kompilacji warunkowej*poszczególne bloki kodu w programie są kompilowane wy
   
 |Aby ustawić stałe w wierszu polecenia|  
 |---|  
-|-Użyj **/d** przełącznika, aby wprowadzić stałe kompilacji warunkowej, jak w poniższym przykładzie:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Między przełącznikiem **/d** i pierwszą stałą nie jest wymagane żadne miejsce. Aby uzyskać więcej informacji, zobacz [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Deklaracje wiersza polecenia przesłaniają deklaracje wprowadzone w **projektancie projektu**, ale nie są wymazywane. Argumenty ustawione w **projektancie projektu** obowiązują dla kolejnych kompilacji.<br />     Podczas pisania stałych w samym kodzie nie istnieją ścisłe reguły dotyczące ich umieszczania, ponieważ ich zakresem jest cały moduł, w którym są one zadeklarowane.|  
+|— Użyj przełącznika **-d** , aby wprowadzić stałe kompilacji warunkowej, jak w poniższym przykładzie:<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     Między przełącznikiem **-d** i pierwszą stałą nie jest wymagane miejsce. Aby uzyskać więcej informacji, zobacz [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md).<br />     Deklaracje wiersza polecenia przesłaniają deklaracje wprowadzone w **projektancie projektu**, ale nie są wymazywane. Argumenty ustawione w **projektancie projektu** obowiązują dla kolejnych kompilacji.<br />     Podczas pisania stałych w samym kodzie nie istnieją ścisłe reguły dotyczące ich umieszczania, ponieważ ich zakresem jest cały moduł, w którym są one zadeklarowane.|  
   
 |Aby ustawić stałe w kodzie|  
 |---|  
@@ -59,11 +59,11 @@ W *kompilacji warunkowej*poszczególne bloki kodu w programie są kompilowane wy
   
 |Tytuł|Opis|  
 |---|---|  
-|[Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Zawiera sugestie ułatwiające odczytywanie i konserwowanie kodu.|  
+|[Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)|Zawiera sugestie ułatwiające odczytywanie i konserwowanie kodu.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
   
  [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+ [-Definiuj (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)

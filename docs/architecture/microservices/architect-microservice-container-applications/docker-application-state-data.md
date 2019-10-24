@@ -2,18 +2,18 @@
 title: Stan i dane w aplikacjach platformy Docker
 description: Zarządzanie stanem i danymi w aplikacjach platformy Docker. Wystąpienia mikrousług są expendablee, ale dane nie są, jak obsługiwać je za pomocą mikrousług.
 ms.date: 09/20/2018
-ms.openlocfilehash: 193ac143ca0cc42c248f449b1e1a1339af6f69d1
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1157ea3c4ca8fc389769308cc0a1141b5f92bb88
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834426"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771439"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Stan i dane w aplikacjach platformy Docker
 
 W większości przypadków można traktować kontener jako wystąpienie procesu. Proces nie zachowuje trwałego stanu. Kontener może być zapisany w magazynie lokalnym, przy założeniu, że wystąpienie będzie się znajdować na około czas nieokreślony, przy założeniu, że pojedyncza lokalizacja w pamięci będzie trwała. Należy założyć, że obrazy kontenerów, takie jak procesy, mają wiele wystąpień lub ostatecznie zostaną skasowane. Jeśli są one zarządzane przy użyciu koordynatora kontenerów, należy założyć, że mogą one zostać przeniesione z jednego węzła lub maszyny wirtualnej do innego.
 
-Następujące rozwiązania służą do zarządzania trwałymi danymi w aplikacjach platformy Docker:
+Następujące rozwiązania są używane do zarządzania danymi w aplikacjach platformy Docker:
 
 Z poziomu hosta platformy Docker jako [woluminów platformy Docker](https://docs.docker.com/engine/admin/volumes/):
 
@@ -31,19 +31,19 @@ Z magazynu zdalnego:
 
 Z kontenera Docker:
 
-> Platforma Docker udostępnia funkcję o nazwie *system plików nakładki*. Implementuje to zadanie kopiowania przy zapisie, które przechowuje zaktualizowane informacje do głównego systemu plików kontenera. Te informacje są uzupełnieniem oryginalnego obrazu, na którym bazuje kontener. Jeśli kontener zostanie usunięty z systemu, te zmiany zostaną utracone. W związku z tym, chociaż istnieje możliwość zapisania stanu kontenera w magazynie lokalnym, zaprojektowanie systemu powoduje konflikt z lokalnym projektem kontenera, który domyślnie jest bezstanowy.
->
-> Wcześniej wprowadzone woluminy platformy Docker są obecnie preferowanym sposobem obsługi platformy Docker Data. Jeśli potrzebujesz więcej informacji na temat magazynu w kontenerach, zapoznaj się z tematem [sterowniki magazynu Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) i [sterowniki magazynu](https://docs.docker.com/storage/storagedriver/).
+- **System plików nakładki**. Ta funkcja platformy Docker implementuje zadanie kopiowania przy zapisie, które przechowuje zaktualizowane informacje do głównego systemu plików kontenera. Te informacje są "na początku" oryginalnego obrazu, na którym bazuje kontener. Jeśli kontener zostanie usunięty z systemu, te zmiany zostaną utracone. W związku z tym, chociaż istnieje możliwość zapisania stanu kontenera w magazynie lokalnym, zaprojektowanie systemu powoduje konflikt z lokalnym projektem kontenera, który domyślnie jest bezstanowy.
+
+Jednak używanie woluminów platformy Docker jest teraz preferowanym sposobem obsługi danych lokalnych w platformie Docker. Jeśli potrzebujesz więcej informacji na temat magazynu w kontenerach, zapoznaj się z tematem [sterowniki magazynu Docker](https://docs.docker.com/storage/storagedriver/select-storage-driver/) i [sterowniki magazynu](https://docs.docker.com/storage/storagedriver/).
 
 Poniżej przedstawiono bardziej szczegółowe informacje na temat tych opcji:
 
 **Woluminy** są katalogami mapowanymi z systemu operacyjnego hosta do katalogów w kontenerach. Gdy kod w kontenerze ma dostęp do katalogu, dostęp jest w rzeczywistości do katalogu w systemie operacyjnym hosta. Ten katalog nie jest powiązany z okresem istnienia samego kontenera, a katalog jest zarządzany przez platformę Docker i izolowany od podstawowych funkcji komputera hosta. Z tego względu woluminy danych są przeznaczone do utrwalania danych niezależnie od okresu istnienia kontenera. Po usunięciu kontenera lub obrazu z hosta platformy Docker dane utrwalane w woluminie danych nie są usuwane.
 
-Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewolucją **kontenerów woluminów danych** i ułatwiają udostępnianie danych między kontenerami. Woluminy obsługują również sterowniki woluminów, które umożliwiają przechowywanie danych na hostach zdalnych między innymi opcjami.
+Woluminy mogą mieć nazwy lub anonimowe (domyślnie). Nazwane woluminy są ewolucją **kontenerów woluminów danych** i ułatwiają udostępnianie danych między kontenerami. Woluminy obsługują również sterowniki woluminów umożliwiające przechowywanie danych na hostach zdalnych między innymi opcjami.
 
 **Instalacje wiązania** są dostępne od dawna dawno temu i umożliwiają mapowanie dowolnego folderu do punktu instalacji w kontenerze. Instalacje powiązań mają więcej ograniczeń niż woluminy i niektóre ważne problemy z zabezpieczeniami, dlatego zalecaną opcją są woluminy.
 
-**instalacje tmpfs** są jedynymi folderami wirtualnymi, które znajdują się tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. Są one szybkie i bezpieczne, ale wykorzystują pamięć i są przeznaczone wyłącznie dla danych nietrwałych.
+**instalacje tmpfs** są jedynymi folderami wirtualnymi, które znajdują się tylko w pamięci hosta i nigdy nie są zapisywane w systemie plików. Są one szybkie i bezpieczne, ale wykorzystują pamięć i są przeznaczone wyłącznie dla danych tymczasowych, nietrwałych.
 
 Jak pokazano na rysunku 4-5, regularne woluminy platformy Docker mogą być przechowywane poza kontenerami, ale w granicach fizycznych serwera hosta lub maszyny wirtualnej. Kontenery platformy Docker nie mogą jednak uzyskać dostępu do woluminu z jednego serwera hosta lub maszyny wirtualnej do innej. Innymi słowy, z tymi woluminami nie jest możliwe zarządzanie danymi udostępnionymi między kontenerami, które działają na różnych hostach platformy Docker, chociaż można je osiągnąć za pomocą sterownika woluminu obsługującego hosty zdalne.
 
@@ -57,7 +57,7 @@ Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym ho
 
 **Usługa Azure Storage.** Dane biznesowe zwykle trzeba umieścić w zasobach zewnętrznych lub bazach danych, takich jak usługa Azure Storage. Usługa Azure Storage w konkretnym przypadku udostępnia następujące usługi w chmurze:
 
-- Magazyn obiektów BLOB przechowuje dane obiektu bez struktury. Obiekt BLOB może być dowolnego typu danych tekstowych lub binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów Blob jest także nazywany magazynem obiektów.
+- Magazyn obiektów BLOB przechowuje dane obiektu bez struktury. Obiekt BLOB może być dowolnego typu danych tekstowych lub binarnych, takich jak pliki dokumentów lub plików multimedialnych (obrazy, pliki audio i wideo). Magazyn obiektów BLOB jest również określany jako Storage Object.
 
 - Magazyn plików oferuje udostępniony magazyn dla starszych aplikacji używających standardowego protokołu SMB. Usługa Azure Virtual Machines i usługi w chmurze mogą udostępniać dane plików między składnikami aplikacji za pośrednictwem zainstalowanych udziałów. Aplikacje lokalne mogą uzyskiwać dostęp do danych plików w udziale za pośrednictwem interfejsu API REST usługi plików.
 
@@ -67,4 +67,4 @@ Woluminy mogą być udostępniane między kontenerami, ale tylko na tym samym ho
 
 >[!div class="step-by-step"]
 >[Poprzedni](containerize-monolithic-applications.md)
->[dalej](service-oriented-architecture.md)
+>[Następny](service-oriented-architecture.md)

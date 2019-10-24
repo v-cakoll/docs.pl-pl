@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: c8e193a8cb4d4dbc7515c32139bad9dce8b48ed7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005614"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775668"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -40,7 +40,7 @@ Poniższa tabela zawiera podsumowanie wpływu opcji `-errorreport`.
 
 Kompilator wysyła dane, które obejmują stos w momencie błędu, co zwykle zawiera kod źródłowy. Jeśli `-errorreport` jest używany z opcją [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , zostanie wysłany cały plik źródłowy.
 
-Ta opcja jest najlepiej używana z opcją [/bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ponieważ umożliwia inżynierom firmy Microsoft łatwiejsze odtwarzanie błędu.
+Ta opcja jest najlepiej używana z opcją [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) , ponieważ umożliwia inżynierom firmy Microsoft łatwiejsze odtwarzanie błędu.
 
 > [!NOTE]
 > Opcja `-errorreport` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.

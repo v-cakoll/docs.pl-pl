@@ -1,5 +1,5 @@
 ---
-title: -jest opcja SET refonly (Visual Basic)
+title: -refonly (Visual Basic)
 ms.date: 03/16/2018
 f1_keywords:
 - -refonly
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - /refonly compiler option [Visual Basic]
 - -refonly compiler option [Visual Basic]
 - refonly compiler option [Visual Basic]
-ms.openlocfilehash: 4093e98738cf6e41cd450229d82e3672fe9687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e64989ac1410b51991027ffcb33e8dae0c0284b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788872"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775566"
 ---
-# <a name="-refonly-visual-basic"></a>-jest opcja SET refonly (Visual Basic)
+# <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-**Jest opcja refonly -** opcja wskazuje, że główny wynik kompilacji należy zamiast zestawu implementacji zestawu odwołania. `-refonly` Parametr dyskretnie wyłącza podawania plików PDB, ponieważ zestawy odwołań nie można wykonać.
+Opcja **-refonly** wskazuje, że podstawowe dane wyjściowe kompilacji powinny być zestawem referencyjnym, a nie zestawem implementacji. Parametr `-refonly` dyskretnie wyłącza umieszczanie plików PDB, ponieważ nie można wykonać zestawów referencyjnych.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,16 +28,14 @@ ms.locfileid: "61788872"
 
 ## <a name="remarks"></a>Uwagi
 
-Obsługa języka Visual Basic `-refout` przełącznika, począwszy od wersji 15.3.
+Visual Basic obsługuje przełącznik `-refonly`, zaczynając od wersji 15,3.
 
-Zestawy referencyjne są tylko metadane zestawów, które zawierają metadane, ale bez kodu realizacji. Obejmują one informacje typów i elementów członkowskich dla wszystkim, z wyjątkiem typów anonimowych. Przyczyna przy użyciu `throw null` treści (w przeciwieństwie do treści) jest tak, aby PEVerify można uruchomić i przekazać (dlatego sprawdzanie poprawności kompletność metadanych).
+Zestawy referencyjne są specjalnym typem zestawu, który zawiera tylko minimalną ilość metadanych wymaganą do reprezentowania publicznej powierzchni interfejsu API biblioteki. Obejmują one deklaracje dla wszystkich elementów członkowskich, które są istotne w przypadku odwoływania się do zestawu w narzędziach kompilacji, ale wyklucza wszystkie implementacje składowych i deklaracje prywatnych członków, którzy nie mają zauważalnego wpływu na ich kontrakt interfejsu API. Aby uzyskać więcej informacji, zobacz [zestawy referencyjne](../../../standard/assembly/reference-assemblies.md) w przewodniku .NET.
 
-Zestawy referencyjne zawierają poziomie zestawu [ReferenceAssembly](xref:System.Runtime.CompilerServices.ReferenceAssemblyAttribute) atrybutu. Ten atrybut może być określony w źródle (następnie kompilator nie będzie konieczne jej syntetyzowania). Z powodu tego atrybutu środowisk wykonawczych będzie odmawiał załadowania zestawy referencyjne do wykonania (ale nadal może być załadowany w kontekstu reflection-only). Narzędzia, które odzwierciedlają zestawów, należy upewnić się, że są one ładowane odwołań do zestawów jako tylko do odbicia. w przeciwnym wypadku środowisko wykonawcze zgłasza <xref:System.BadImageFormatException>.
-
-`-refonly` i [ `-refout` ](refout-compiler-option.md) opcje wykluczają się wzajemnie.
+Opcje `-refonly` i [`-refout`](refout-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [-refout](refout-compiler-option.md)
-- [Kompilator wiersza polecenia programu Visual Basic](index.md)
+- [Kompilator wiersza polecenia Visual Basic](index.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

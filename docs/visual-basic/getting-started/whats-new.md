@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 64f8d536212cd379337ad437c1e15ae356890ddb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581966"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774917"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -21,45 +21,45 @@ Ten temat zawiera listę najważniejszych nazw funkcji dla każdej wersji Visual
 
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic 16,0/Visual Studio 2019 wersja 16,0  
+Visual Basic 16,0/Visual Studio 2019 wersja 16,0 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 16,0](#visual-basic-160).
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Visual Basic 15,8/Visual Studio 2017 wersja 15,8  
+Visual Basic 15,8/Visual Studio 2017 wersja 15,8 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 15,8](#visual-basic-158).
 
-Visual Basic 15,5/Visual Studio 2017 wersja 15,5  
+Visual Basic 15,5/Visual Studio 2017 wersja 15,5 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 15,5](#visual-basic-155).
 
-Visual Basic 15,3/Visual Studio 2017 wersja 15,3  
+Visual Basic 15,3/Visual Studio 2017 wersja 15,3 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 15,3](#visual-basic-153).
 
-Visual Basic 2017/Visual Studio 2017  
+Visual Basic 2017/Visual Studio 2017 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 2017](#visual-basic-2017).
 
-Visual Basic/Visual Studio 2015  
+Visual Basic/Visual Studio 2015 \
 Aby poznać nowe funkcje, zobacz [Visual Basic 14](#visual-basic-14).
 
-Visual Basic/Visual Studio 2013  
+Visual Basic/Visual Studio 2013 \
 Wersje zapoznawcze technologii .NET Compiler Platform ("Roslyn")
 
-Visual Basic/Visual Studio 2012  
+Visual Basic/Visual Studio 2012 \
 `Async` i `await` słowa kluczowe, Iteratory, atrybuty informacji o wywołującym
 
-Visual Basic, Visual Studio 2010  
+Visual Basic, Visual Studio 2010 \
 Właściwości zaimplementowane przez autoimplementację, Inicjatory kolekcji, niejawne kontynuacja wiersza, dynamiczne, ogólne, proste/odchylenia, globalny dostęp do przestrzeni nazw
 
-Visual Basic/Visual Studio 2008  
+Visual Basic/Visual Studio 2008 \
 Language Integrated Query (LINQ), literały XML, wnioskowanie o typie lokalnym, Inicjatory obiektów, typy anonimowe, metody rozszerzające, wnioskowanie typu lokalnego `var`, wyrażenia lambda, operator `if`, metody częściowe, typy wartości null
 
-Visual Basic/Visual Studio 2005  
+Visual Basic/Visual Studio 2005 \
 Typ `My` i typy pomocnika (dostęp do aplikacji, komputera, systemu plików, sieci)
 
-Visual Basic/Visual Studio .NET 2003  
+Visual Basic/Visual Studio .NET 2003 \
 Operatory przesunięcia bitowego, deklaracja zmiennej pętli
 
-Visual Basic/Visual Studio .NET 2002  
+Visual Basic/Visual Studio .NET 2002 \
 Pierwsze wydanie Visual Basic .NET
 
 ## <a name="visual-basic-160"></a>Visual Basic 16,0
@@ -108,7 +108,6 @@ Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
 Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
 Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
 Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
-
 ```
 
 Należy zauważyć, że to obcina zamiast zaokrąglania wartości zmiennoprzecinkowych.
@@ -237,7 +236,7 @@ Możesz mieć literały dat w formacie RRRR-MM-DD, `#2015-03-17 16:10 PM#`.
 
 **Właściwości interfejsu tylko do odczytu**
 
-Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właściwości ReadWrite.  Interfejs gwarantuje minimalną funkcjonalność i nie zatrzymuje klasy implementującej, umożliwiając ustawienie właściwości.
+Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właściwości ReadWrite. Interfejs gwarantuje minimalną funkcjonalność i nie zatrzymuje klasy implementującej, umożliwiając ustawienie właściwości.
 
 [@No__t_1expr TypeOf > IsNot \<type >](../../visual-basic/language-reference/operators/typeof-operator.md)
 

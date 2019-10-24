@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d1a8cc80db9e17000880c006ac1d7c1bd12fec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5c0b3c9d13267abe50ee187bce0c56485be29613
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631343"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775281"
 ---
 # <a name="applying-interop-attributes"></a>Stosowanie atrybutów międzyoperacyjności
-<xref:System.Runtime.InteropServices> Przestrzeń nazw zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu com.  
+Przestrzeń nazw <xref:System.Runtime.InteropServices> zawiera trzy kategorie atrybutów specyficznych dla współdziałania: te stosowane w czasie projektowania, które są stosowane przez narzędzia i interfejsy API międzyoperacyjności modelu COM w procesie konwersji i są stosowane przez użytkownika lub międzyoperacyjność modelu COM.  
   
  Jeśli nie znasz zadania dotyczącego stosowania atrybutów do kodu zarządzanego, zobacz [Rozszerzanie metadanych przy użyciu atrybutów](../../../docs/standard/attributes/index.md). Podobnie jak w przypadku innych atrybutów niestandardowych, można zastosować atrybuty dotyczące międzyoperacyjności do typów, metod, właściwości, parametrów, pól i innych elementów członkowskich.  
   
@@ -40,7 +40,8 @@ ms.locfileid: "68631343"
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|Identyfikuje interfejsy, które są źródła zdarzeń dla klasy.<br /><br /> Narzędzia międzyoperacyjności modelu COM mogą zastosować ten atrybut.|  
 |<xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>|Wskazuje, że metoda powinna być wywoływana, gdy zestaw jest wyrejestrowany z modelu COM, dzięki czemu kod zapisany przez użytkownika może być wykonywany podczas procesu.|  
 |<xref:System.Runtime.InteropServices.ComVisibleAttribute>|Renderuje typy niewidoczne do modelu COM, gdy wartość atrybutu jest równa **false**. Ten atrybut może być stosowany do pojedynczego typu lub do całego zestawu, aby kontrolować widoczność modelu COM. Domyślnie widoczne są wszystkie typy zarządzane, publiczne. Ten atrybut nie jest wymagany, aby były widoczne.|  
-|<xref:System.Runtime.InteropServices.DispIdAttribute>|Określa identyfikator wysyłania COM (DISPID) metody lub pola. Ten atrybut zawiera identyfikator DISPID dla metody, pola lub właściwości, która opisuje.<br /><br /> Narzędzia międzyoperacyjności modelu COM mogą zastosować ten atrybut.|  
+|<xref:System.Runtime.InteropServices.DispIdAttribute>|Określa identyfikator wysyłania COM (DISPID) metody lub pola. Ten atrybut zawiera identyfikator DISPID dla metody, pola lub właściwości, która opisuje.<br /><br /> Narzędzia międzyoperacyjności modelu COM mogą zastosować ten atrybut.| 
+|<xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute>|Wskazuje domyślny interfejs dla klasy COM wdrożony w środowisku .NET.<br /><br /> Narzędzia międzyoperacyjności modelu COM mogą zastosować ten atrybut.|
 |<xref:System.Runtime.InteropServices.FieldOffsetAttribute>|Wskazuje fizyczną pozycję każdego pola w klasie, gdy jest używany z **StructLayoutAttribute**, a **LayoutKind** jest ustawiona na wartość explicit.|  
 |<xref:System.Runtime.InteropServices.GuidAttribute>|Określa unikatowy identyfikator globalny (GUID) klasy, interfejsu lub całej biblioteki typów. Ciąg przesłany do atrybutu musi być formatem, który jest akceptowalnym argumentem konstruktora dla typu **System. GUID**.<br /><br /> Narzędzia międzyoperacyjności modelu COM mogą zastosować ten atrybut.|  
 |<xref:System.Runtime.InteropServices.IDispatchImplAttribute>|Wskazuje, która implementacja interfejsu **IDispatch** używa środowiska uruchomieniowego języka wspólnego podczas udostępniania podwójnych interfejsów i dispinterfaces do modelu com.|  

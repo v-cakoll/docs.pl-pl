@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c0fa0e2c59856beda65ec5804b8896352db98b3
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2c1b73108227160aaff28525beeca7f3bd4cb5f8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180194"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775324"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
 
@@ -50,7 +50,7 @@ Poniższa lista zawiera podsumowanie ważnych pojęć dotyczących pamięci śro
 
 - Pamięć wirtualna może mieć trzy stany:
 
-  - Bezpłatnie. Blok pamięci nie ma odwołań do niego i jest dostępny do alokacji.
+  - Zwolniony. Blok pamięci nie ma odwołań do niego i jest dostępny do alokacji.
 
   - Rezerwacj. Blok pamięci jest dostępny do użycia i nie może być używany w żadnym innym żądaniu alokacji. Nie można jednak przechowywać danych w tym bloku pamięci, dopóki nie zostanie on zatwierdzony.
 
@@ -125,7 +125,7 @@ Wyrzucanie elementów bezużytecznych odbywa się w określonych generacjach, gd
 
 Obiekty, które nie są odzyskiwane w wyrzucaniu elementów bezużytecznych, są znane jako osoby do wygenerowania i są promowane do następnej generacji. Obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 0, zostały podwyższone do generacji 1; obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 1, są podwyższane do generacji 2; i obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 2, pozostają w generacji 2.
 
-Gdy moduł wyrzucania elementów bezużytecznych wykryje, że stopień przeżycia jest wysoki w generacji, zwiększa próg alokacji dla tej generacji, więc Następna kolekcja pobiera znaczny rozmiar odzyskiwanej pamięci. Środowisko CLR ciągle równoważy dwa priorytety: nie pozwala to na zbyt duży zestaw roboczy aplikacji, co nie pozwala na wyrzucanie elementów bezużytecznych.
+Gdy moduł wyrzucania elementów bezużytecznych wykryje, że stopień przeżycia jest wysoki w generacji, zwiększa próg alokacji dla tej generacji, więc Następna kolekcja pobiera znaczny rozmiar odzyskiwanej pamięci. Środowisko CLR ciągle równoważy dwa priorytety: nie pozwala to na zbyt duże działanie zestawu roboczego przez opóźnione wyrzucanie elementów bezużytecznych i niezezwalanie na wyrzucanie elementów bezużytecznych.
 
 ### <a name="ephemeral-generations-and-segments"></a>Pokoleń tymczasowych i segmentów
 
@@ -135,7 +135,7 @@ Pokoleń tymczasowych należy przydzielić w segmencie pamięci, który jest zna
 
 Rozmiar segmentu tymczasowych różni się w zależności od tego, czy system jest 32-czy 64-bitowy, i na typie modułu wyrzucania elementów bezużytecznych, który jest uruchomiony. Wartości domyślne są pokazane w poniższej tabeli.
 
-||32 — bit|64 — bit|
+||32-bitowa|64-bitowy|
 |-|-------------|-------------|
 |Stacja robocza GC|16 MB|256 MB|
 |Serwer GC|64 MB|4 GB|
@@ -176,7 +176,7 @@ Przed uruchomieniem odzyskiwania pamięci wszystkie zarządzane wątki są zawie
 
 Na poniższej ilustracji przedstawiono wątek wyzwalający wyrzucanie elementów bezużytecznych i powoduje zawieszenie innych wątków.
 
-![Gdy wątek wyzwala wyrzucanie elementów bezużytecznych],(../../../docs/standard/garbage-collection/media/gc-triggered.png "gdy wątek wyzwala wyrzucanie elementów bezużytecznych")
+![Gdy wątek wyzwala odzyskiwanie pamięci](../../../docs/standard/garbage-collection/media/gc-triggered.png "Gdy wątek wyzwala odzyskiwanie pamięci")
 
 [Powrót do początku](#top)
 
@@ -208,7 +208,7 @@ Moduł wyrzucania elementów bezużytecznych jest samodostrajania i może wspó�
 
 Na poniższej ilustracji przedstawiono dedykowane wątki, które wykonują wyrzucanie elementów bezużytecznych na serwerze.
 
-Wątki odzyskiwania ![pamięci serwera wątki](../../../docs/standard/garbage-collection/media/gc-server.png "odzyskiwania pamięci serwera")
+![Wątki odzyskiwania pamięci serwera](../../../docs/standard/garbage-collection/media/gc-server.png "Wątki odzyskiwania pamięci serwera")
 
 ### <a name="configuring-garbage-collection"></a>Konfigurowanie wyrzucania elementów bezużytecznych
 
@@ -262,7 +262,7 @@ Współbieżne wyrzucanie elementów bezużytecznych ma nieco większy zestaw ro
 
 Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezużytecznych wykonywane w osobnym dedykowanym wątku.
 
-Współbieżne wątki ![wyrzucania elementów bezużytecznych],(../../../docs/standard/garbage-collection/media/gc-concurrent.png "współbieżne odzyskiwanie pamięci")
+![Współbieżne wątki odzyskiwania pamięci](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Współbieżne wątki odzyskiwania pamięci")
 
 [Powrót do początku](#top)
 

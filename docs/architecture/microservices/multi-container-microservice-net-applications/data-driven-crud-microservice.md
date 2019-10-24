@@ -2,12 +2,12 @@
 title: Tworzenie prostej mikrousługi CRUD na podstawie danych
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z tworzeniem prostej mikrousługi CRUD (opartej na danych) w kontekście aplikacji mikrousług.
 ms.date: 01/07/2019
-ms.openlocfilehash: 74d9022ffa70ade6ae6e7d405403524dfbc2145a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039913"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771205"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostej mikrousługi CRUD na podstawie danych
 
@@ -49,7 +49,7 @@ Po utworzeniu projektu można zaimplementować kontrolery MVC w taki sam sposób
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementowanie usług interfejsu API sieci Web CRUD za pomocą Entity Framework Core
 
-Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej technologii dostępu do danych — Entity Framework. EF Core to Mapowanie obiektowo-relacyjne (ORM), które umożliwia deweloperom platformy .NET współdziałanie z bazą danych przy użyciu obiektów .NET.
+Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej Entity Framework technologii dostępu do danych. EF Core to Mapowanie obiektowo-relacyjne (ORM), które umożliwia deweloperom platformy .NET współdziałanie z bazą danych przy użyciu obiektów .NET.
 
 Mikrousługa katalogu używa EF i dostawcy SQL Server, ponieważ jego baza danych działa w kontenerze z SQL Server dla obrazu platformy Docker systemu Linux. Jednak bazę danych można wdrożyć w dowolnym SQL Server, na przykład lokalnie lub w usłudze Azure SQL DB. Jedyną czynnością, którą należy zmienić, są parametry połączenia w mikrousłudze ASP.NET Web API.
 
@@ -96,9 +96,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-Możesz mieć dodatkowe `DbContext` implementacje. Przykładowo w przypadku mikrousługi przykładowej katalogu. API istnieje druga `DbContext` nazwa `CatalogContextSeed` , gdzie automatycznie wypełnia przykładowe dane podczas pierwszego próby dostępu do bazy danych. Ta metoda jest przydatna w przypadku danych demonstracyjnych i scenariuszy zautomatyzowanych testów.
+Możesz mieć dodatkowe implementacje `DbContext`. Przykładowo w przypadku mikrousługi przykładowej katalogu. API istnieje druga `DbContext` o nazwie `CatalogContextSeed`, w której program automatycznie wypełnia przykładowe dane przy pierwszej próbie uzyskania dostępu do bazy danych. Ta metoda jest przydatna w przypadku danych demonstracyjnych i scenariuszy zautomatyzowanych testów.
 
-W programie można `OnModelCreating` użyć metody ,abydostosowaćmapowaniajednostekobiektów/bazdanychorazinnepunktyrozszerzalnościEF.`DbContext` [](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)
+W `DbContext` Użyj metody `OnModelCreating`, aby dostosować mapowania jednostek obiektów/baz danych oraz inne [punkty rozszerzalności EF](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Wykonywanie zapytań dotyczących danych z kontrolerów interfejsu API sieci Web
 
@@ -118,7 +118,7 @@ public class CatalogController : ControllerBase
         ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService 
+        _catalogIntegrationEventService = catalogIntegrationEventService
             ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
 
         _settings = settings.Value;
@@ -155,7 +155,7 @@ public class CatalogController : ControllerBase
 
 ##### <a name="saving-data"></a>Zapisywanie danych
 
-Dane są tworzone, usuwane i modyfikowane w bazie danych za pomocą wystąpień klas jednostek. Do kontrolerów interfejsu API sieci Web można dodać kod podobny do poniższego zakodowanego przykładu (w tym przypadku dane są w tym przypadku).
+Dane są tworzone, usuwane i modyfikowane w bazie danych przy użyciu wystąpień klas jednostek. Do kontrolerów interfejsu API sieci Web można dodać kod podobny do poniższego zakodowanego przykładu (w tym przypadku dane są w tym przypadku).
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
@@ -168,9 +168,9 @@ _context.SaveChanges();
 
 W ASP.NET Core można użyć iniekcji zależności (DI) poza ramką. Nie jest konieczne skonfigurowanie kontenera kontroli (IoC) innej firmy, ale w razie potrzeby można podłączyć preferowany kontener IoC do infrastruktury ASP.NET Core. W takim przypadku oznacza to, że można bezpośrednio wstrzyknąć wymagane, EF DbContext lub dodatkowe repozytoria za pośrednictwem konstruktora kontrolera.
 
-W powyższym `CatalogController` przykładzie klasy wprowadzamy `CatalogContext` obiekt typu `CatalogController()` plus inne obiekty za pomocą konstruktora.
+W powyższym przykładzie klasy `CatalogController` wprowadzamy obiekt typu `CatalogContext` i innych obiektów za pomocą konstruktora `CatalogController()`.
 
-Ważną konfiguracją skonfigurowaną w projekcie interfejsu API sieci Web jest rejestracja klasy DbContext w kontenerze IoC usługi. Zwykle jest to wykonywane w `Startup` klasie przez `services.AddDbContext<DbContext>()` wywołanie metody wewnątrz `ConfigureServices()` metody, jak pokazano w następującym przykładzie:
+Ważną konfiguracją skonfigurowaną w projekcie interfejsu API sieci Web jest rejestracja klasy DbContext w kontenerze IoC usługi. Zwykle jest to wykonywane w klasie `Startup` przez wywołanie metody `services.AddDbContext<DbContext>()` wewnątrz metody `ConfigureServices()`, jak pokazano w następującym przykładzie:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -205,10 +205,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wykonywanie zapytania dotyczącego danych** \
+- **Wykonywanie zapytań dotyczących danych**  \
   [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
-- **Zapisywanie danych** \
+- **Zapisywanie  \ danych**
   [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Parametry połączenia bazy danych i zmienne środowiskowe używane przez kontenery platformy Docker
@@ -248,7 +248,7 @@ catalog.api:
 
 Pliki Docker-Compose. yml na poziomie rozwiązania nie są bardziej elastyczne niż pliki konfiguracyjne na poziomie projektu lub mikrousług, ale również bezpieczniej, jeśli zastąpisz zmienne środowiskowe zadeklarowane w plikach tworzenia platformy Docker z wartościami ustawionymi z narzędzia do wdrażania, takie jak Azure DevOps Services zadań wdrażania platformy Docker.
 
-Na koniec można uzyskać tę wartość z kodu za pomocą konfiguracji\["ConnectionString"\], jak pokazano w metodzie ConfigureServices w poprzednim przykładzie kodu.
+Na koniec można uzyskać tę wartość z kodu przy użyciu \[ konfiguracji "ConnectionString" \], jak pokazano w metodzie ConfigureServices w poprzednim przykładzie kodu.
 
 Jednak w przypadku środowisk produkcyjnych warto zapoznać się z dodatkowymi sposobami przechowywania wpisów tajnych, takich jak parametry połączenia. Doskonałym sposobem na zarządzanie wpisami tajnymi aplikacji jest użycie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
@@ -289,13 +289,13 @@ Ten mechanizm przechowywania wersji jest prosty i zależy od serwera routingu ż
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Scott Hanselman. Łatwość ASP.NET Core RESTful internetowego interfejsu API** \
+- **Scott Hanselman. Łatwe  \ ASP.NET Core RESTful internetowego interfejsu API**
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Przechowywanie wersji interfejsu API sieci Web RESTful** \
+- **Przechowywanie wersji RESTful internetowego interfejsu API**  \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy. Przechowywanie wersji, nośniki i REST** \
+- **Roy. Przechowywanie wersji, przenośnika i REST**  \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generowanie metadanych opisu struktury Swagger z internetowego interfejsu API ASP.NET Core
@@ -306,7 +306,7 @@ Sercem struktury Swagger jest specyfikacja struktury Swagger, która jest metada
 
 Specyfikacja jest podstawą specyfikacji OpenAPI (OAS) i jest opracowana w postaci otwartej, przejrzystej i współpracy ze współpracownikami w celu standaryzacji sposobu definiowania interfejsów RESTful.
 
-Specyfikacja definiuje strukturę sposobu odnajdowania usługi i sposobu jej zrozumienia. Aby uzyskać więcej informacji, w tym Edytor sieci Web i przykłady specyfikacji struktury Swagger z firm takich jak Spotify, Uber, zapasy i Microsoft, zobacz witrynę<https://swagger.io>programu Swagger ().
+Specyfikacja definiuje strukturę sposobu odnajdowania usługi i sposobu jej zrozumienia. Aby uzyskać więcej informacji, w tym Edytor sieci Web i przykłady specyfikacji struktury Swagger z firm takich jak Spotify, Uber, zapasy i Microsoft, zobacz witrynę programu Swagger (<https://swagger.io>).
 
 ### <a name="why-use-swagger"></a>Dlaczego warto używać struktury Swagger?
 
@@ -328,7 +328,7 @@ Metadane struktury Swagger to Microsoft Flow, PowerApps i Azure Logic Apps używ
 
 Istnieje kilka opcji automatyzowania generowania metadanych struktury Swagger dla ASP.NET Core aplikacji interfejsu API REST, w formie stron pomocy interfejsu API funkcji, opartych na strukturze *Swagger-UI*.
 
-Prawdopodobnie najlepszą wiedzą, że jest to [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , która jest obecnie używana w [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) i w tym przewodniku zajmiemy się bardziej szczegółowo, ale jest również dostępna opcja użycia [NSwag](https://github.com/RSuter/NSwag), która może generować\# klientów interfejsu API języka TypeScript i języka C, tak jak Podobnie jak w\# przypadku kontrolerów języka C, ze specyfikacją Swagger lub openapi, a nawet przez skanowanie pliku DLL zawierającego kontrolery przy użyciu [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
+Prawdopodobnie najlepszą wiedzą, że jest to [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , która jest obecnie używana w [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) i w tym przewodniku zajmiemy się bardziej szczegółowym, ale również opcją użycia [NSwag](https://github.com/RSuter/NSwag), która może generować klientów języka TypeScript i języka C \#, a także Kontrolery \# C, ze specyfikacją Swagger lub OpenAPI, a nawet przez skanowanie pliku DLL zawierającego kontrolery przy użyciu [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Jak zautomatyzować generowanie metadanych struktury Swagger interfejsu API za pomocą pakietu NuGet Swashbuckle
 
@@ -399,7 +399,7 @@ Po wykonaniu tej czynności możesz uruchomić aplikację i przeglądać następ
   http://<your-root-url>/swagger/
 ```
 
-Wygenerowany interfejs użytkownika utworzony przez Swashbuckle został wcześniej wyświetlony dla adresu URL, `http://<your-root-url>/swagger`takiego jak. Na rysunku 6-9 można także sprawdzić, jak można testować dowolną metodę interfejsu API.
+Wygenerowany interfejs użytkownika utworzony przez Swashbuckle został wcześniej wyświetlony dla adresu URL, takiego jak `http://<your-root-url>/swagger`. Na rysunku 6-9 można także sprawdzić, jak można testować dowolną metodę interfejsu API.
 
 ![W szczegółach interfejsu API interfejsu użytkownika programu Swagger przedstawiono przykład odpowiedzi i można go użyć do wykonania rzeczywistego interfejsu API, który jest doskonałym rozwiązaniem do odnajdywania deweloperów.](./media/image10.png)
 
@@ -415,15 +415,15 @@ Jest to proste. I ponieważ jest generowany automatycznie, podczas dodawania wi�
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Strony pomocy interfejsu API sieci Web ASP.NET korzystające z programu Swagger** \
+- **ASP.NET stron pomocy interfejsu API sieci Web przy użyciu struktury Swagger**  \
   [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
-- **Wprowadzenie do Swashbuckle i ASP.NET Core** \
+- **Wprowadzenie do Swashbuckle i ASP.NET Core**  \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
-- **Wprowadzenie do NSwag i ASP.NET Core** \
+- **Wprowadzenie do NSwag i ASP.NET Core**  \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
-> [Poprzedni](microservice-application-design.md)Następny
-> [](multi-container-applications-docker-compose.md)
+> [Poprzedni](microservice-application-design.md)
+> [Następny](multi-container-applications-docker-compose.md)

@@ -3,12 +3,12 @@ title: Metadata — gRPC dla deweloperów WCF
 description: Jak metadane są używane w gRPC do przekazywania dodatkowego kontekstu między klientami i serwerami
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1a2131fa3ee3112eaa3c3e7f7c97017fea6b1004
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
-ms.translationtype: MT
+ms.openlocfilehash: 71ac60cd4c389277675dd452430735fb698fd342
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184331"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72770482"
 ---
 # <a name="metadata"></a>Metadane
 
@@ -16,11 +16,11 @@ ms.locfileid: "71184331"
 
 "Metadane" to dodatkowe dane, które mogą być przydatne podczas przetwarzania żądań i odpowiedzi, ale nie są częścią rzeczywistych danych aplikacji. Metadane mogą obejmować tokeny uwierzytelniania, identyfikatory żądań i Tagi do celów monitorowania lub informacje o danych, takie jak liczba rekordów w zestawie danych.
 
-Istnieje możliwość dodania ogólnych nagłówków klucz/wartość do komunikatów WCF przy użyciu <xref:System.ServiceModel.OperationContextScope> <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> i i obsłużenia ich przy użyciu <xref:System.ServiceModel.Channels.MessageProperties>.
+Istnieje możliwość dodania ogólnych nagłówków klucz/wartość do komunikatów WCF przy użyciu <xref:System.ServiceModel.OperationContextScope> i właściwości <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> i obsłużenia ich przy użyciu <xref:System.ServiceModel.Channels.MessageProperties>.
 
-wywołania gRPC i odpowiedzi mogą również zawierać metadane podobne do nagłówków HTTP. Są one w większości niewidoczne do gRPC i są przenoszone przez program w celu przetworzenia przez kod aplikacji lub oprogramowanie pośredniczące. Metadane są reprezentowane jako pary klucz/wartość, gdzie klucz jest ciągiem, a wartością jest ciąg lub dane binarne. Nie musisz określać metadanych w `.proto` pliku.
+wywołania gRPC i odpowiedzi mogą również zawierać metadane podobne do nagłówków HTTP. Są one w większości niewidoczne do gRPC i są przenoszone przez program w celu przetworzenia przez kod aplikacji lub oprogramowanie pośredniczące. Metadane są reprezentowane jako pary klucz/wartość, gdzie klucz jest ciągiem, a wartością jest ciąg lub dane binarne. Nie musisz określać metadanych w pliku `.proto`.
 
-Metadane są obsługiwane przy użyciu `Metadata` klasy z pakietu NuGet [GRPC. Core](https://www.nuget.org/packages/Grpc.Core/) . Ta klasa może być używana z składnią inicjatora kolekcji.
+Metadane są obsługiwane za pomocą klasy `Metadata` z pakietu NuGet [GRPC. Core. API](https://www.nuget.org/packages/Grpc.Core.Api/) . Ta klasa może być używana z składnią inicjatora kolekcji.
 
 Poniższy przykład pokazuje, jak dodać metadane do wywołania z C# klienta:
 
@@ -38,7 +38,7 @@ var request = new GetPortfolioRequest
 var response = await client.GetPortfolioAsync(request, metadata);
 ```
 
-usługi gRPC mogą uzyskać dostęp do metadanych `ServerCallContext` przy użyciu `RequestHeaders` właściwości argumentu:
+usługi gRPC mogą uzyskać dostęp do metadanych przy użyciu właściwości `RequestHeaders` `ServerCallContext` argumentu:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -52,7 +52,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-Usługi mogą wysyłać metadane do klientów przy użyciu `ResponseTrailers` `ServerCallContext`właściwości:
+Usługi mogą wysyłać metadane do klientów przy użyciu właściwości `ResponseTrailers` `ServerCallContext`:
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)

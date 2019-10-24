@@ -1,6 +1,6 @@
 ---
-title: Bitowe i operatory przesunięcia - C# odwołania
-description: Dowiedz się więcej o C# operatorów, które wykonują bitowe logicznej lub operacje przesunięcia z argumentów operacji typu całkowitoliczbowego.
+title: Operatory bitowe i przesunięcia C# — odwołanie
+description: Dowiedz C# się więcej na temat operatorów, które wykonują bitowe operacje logiczne lub przesunięcia przy użyciu operandów typów całkowitych.
 ms.date: 04/18/2019
 author: pkulikov
 f1_keywords:
@@ -29,158 +29,158 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: c18a06971887049a443f0bd1af7c77610a787a27
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 0a251e8d04f31a736ee6acbf4b8e913cfb8ca6df
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609944"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771723"
 ---
-# <a name="bitwise-and-shift-operators-c-reference"></a>Bitowe i operatory przesunięcia (C# odwołania)
+# <a name="bitwise-and-shift-operators-c-reference"></a>Operatory bitowe i przesunięciaC# (odwołanie)
 
-Następujące operatory bitowe wykonywania lub shift operacji przy użyciu argumentów operacji [typów całkowitych](../builtin-types/integral-numeric-types.md):
+Następujące operatory wykonują operacje bitowe lub przesunięcia przy użyciu operandów [typów całkowitych](../builtin-types/integral-numeric-types.md):
 
-- Jednoargumentowy [ `~` (dopełnienia bitowego)](#bitwise-complement-operator-) — operator
-- Binarny [ `<<` (przesunięcia w lewo)](#left-shift-operator-) i [ `>>` (przesunięcia bitowego w prawo)](#right-shift-operator-) operatory przesunięcia
-- Binarny [ `&` (operator logiczny oraz)](#logical-and-operator-), [ `|` (operator logiczny lub)](#logical-or-operator-), i [ `^` (logiczne OR wyłączne)](#logical-exclusive-or-operator-) operatorów
+- Operator jednoargumentowy [`~` (uzupełnienie bitowe)](#bitwise-complement-operator-)
+- Operatory przesunięcia `<<` binarnych [(LEFT SHIFT)](#left-shift-operator-) i [`>>` (prawy shift)](#right-shift-operator-)
+- Binarne [`&` (logiczne i)](#logical-and-operator-), [`|` (logiczne lub)](#logical-or-operator-)i [`^` (logiczne wyłącznych lub)](#logical-exclusive-or-operator-)
 
-Te operatory są zdefiniowane dla `int`, `uint`, `long`, i `ulong` typów. Gdy oba operandy są inne typy całkowitoliczbowe (`sbyte`, `byte`, `short`, `ushort`, lub `char`), ich wartości są konwertowane na `int` typ, który jest również typ wyniku operacji. W przypadku argumentów operacji z różnymi typami całkowitymi, ich wartości są konwertowane do najbliższego zawierającego typu całkowitego. Aby uzyskać więcej informacji, zobacz [promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Te operatory są zdefiniowane dla typów `int`, `uint`, `long` i `ulong`. Gdy oba operandy są innymi typami całkowitymi (`sbyte`, `byte`, `short`, `ushort` lub `char`), ich wartości są konwertowane na typ `int`, który jest również typem wyniku operacji. Gdy operandy są różnymi typami całkowitymi, ich wartości są konwertowane na najbliższy typ całkowity. Aby uzyskać więcej informacji, zobacz sekcję " [promocje liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions) " [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-`&`, `|`, I `^` operatory są również określone w przypadku argumentów operacji `bool` typu. Aby uzyskać więcej informacji, zobacz [logiczna operatorów logicznych](boolean-logical-operators.md).
+Operatory `&`, `|` i `^` są również zdefiniowane dla argumentów operacji typu `bool`. Aby uzyskać więcej informacji, zobacz logiczne [Operatory logiczne](boolean-logical-operators.md).
 
-Bitowe OR i operacje przesunięcia nigdy nie spowodować przepełnienie działają tak samo w [checked i unchecked](../keywords/checked-and-unchecked.md) kontekstów.
+Operacje bitowe i przesunięcia nigdy nie powodują przepełnienia i tworzą te same wyniki w kontekstach [zaewidencjonowanych i](../keywords/checked-and-unchecked.md) niezaznaczone.
 
-## <a name="bitwise-complement-operator-"></a>Operator dopełnienia bitowego ~
+## <a name="bitwise-complement-operator-"></a>Operator uzupełnienia bitowego ~
 
-`~` Operator wytwarza bitowe uzupełnienie swojego operandu odwracając każdy bit:
+Operator `~` generuje bitowe uzupełnienie jego operandu przez odwrócenie każdego bitu:
 
 [!code-csharp-interactive[bitwise NOT](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseComplement)]
 
-Można również użyć `~` symbolu, aby zadeklarować finalizatorów. Aby uzyskać więcej informacji, zobacz [finalizatory](../../programming-guide/classes-and-structs/destructors.md).
+Można również użyć symbolu `~`, aby zadeklarować finalizatory. Aby uzyskać więcej informacji, zobacz [finalizatory](../../programming-guide/classes-and-structs/destructors.md).
 
-## <a name="left-shift-operator-"></a>Operator przesunięcia w lewo \<\<
+## <a name="left-shift-operator-"></a>Operator przesunięcia w lewo \< \<
 
-`<<` Operator przenosi swojego operandu po lewej stronie, w lewo o liczbę bitów zdefiniowane przez jej argument po prawej stronie.
+Operator `<<` przesuwa swój lewy argument operacji w lewo o liczbę bitów określoną przez jego operand po prawej stronie.
 
-Operacja przesunięcia w lewo odrzuca najbardziej znaczących bitów, które są poza zakresem typu wyniku i ustawia pozycje bitów pusty niskiego rzędu na zero, co ilustruje poniższy przykład:
+Operacja przesunięcia w lewo odrzuca bity o wysokim stopniu, które znajdują się poza zakresem wyników, i ustawia puste pozycje bitu w porządku o wartości zero, jak pokazano w poniższym przykładzie:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Ponieważ operatory przesunięcia, są zdefiniowane tylko w przypadku `int`, `uint`, `long`, i `ulong` typów, wynik operacji zawsze zawiera co najmniej 32-bitowy. Jeśli argument po lewej stronie jest innego typu całkowitego (`sbyte`, `byte`, `short`, `ushort`, lub `char`), jego wartość jest konwertowana na `int` typu, co ilustruje poniższy przykład:
+Ponieważ operatory przesunięcia są zdefiniowane tylko dla typów `int`, `uint`, `long` i `ulong`, wynik operacji zawsze zawiera co najmniej 32 bitów. Jeśli argument operacji po lewej stronie jest innego typu całkowitego (`sbyte`, `byte`, `short`, `ushort` lub `char`), jego wartość jest konwertowana na typ `int`, jak pokazano na poniższym przykładzie:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Aby uzyskać informacje na temat prawostronny operand `<<` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
+Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora `<<` definiuje liczbę przesunięć, zobacz [Liczba przesunięć w sekcji operatory przesunięcia](#shift-count-of-the-shift-operators) .
 
-## <a name="right-shift-operator-"></a>Operator przesunięcia w prawo >>
+## <a name="right-shift-operator-"></a>Operator przesunięcia w prawo > >
 
-`>>` Operator przenosi jego lewostronny operand bezpośrednio przez liczbę bitów zdefiniowane przez jej argument po prawej stronie.
+Operator `>>` przesuwa swój lewy argument operacji bezpośrednio przez liczbę bitów zdefiniowanych przez swój operand z prawej strony.
 
-Operacja przesunięcia w prawo powoduje odrzucenie mniej znaczące bity, co ilustruje poniższy przykład:
+Operacja przesunięcia w prawo powoduje odrzucenie bitów o niskiej kolejności, jak pokazano w poniższym przykładzie:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Pozycje bitów pusty wyższego rzędu jest ustawiona na podstawie typ operandu po lewej stronie w następujący sposób:
+Puste pozycje w dużej kolejności są ustawiane na podstawie typu operandu po lewej stronie w następujący sposób:
 
-- Jeśli lewostronny operand jest typu [int](../builtin-types/integral-numeric-types.md) lub [długie](../builtin-types/integral-numeric-types.md), wykonuje operator przesunięcia w prawo *arytmetyczne* shift: wartość najbardziej znaczący bit (bit znaku) z Lewostronny operand jest propagowana do pozycji bitów pusty wyższego rzędu. Oznacza to, pozycje bitów pusty wyższego rzędu są ustawiane na zero, jeśli argument po lewej stronie jest ujemna i ustawiony na wartość 1, jeśli jest ujemna.
+- Jeśli argument operacji po lewej stronie jest typu [int](../builtin-types/integral-numeric-types.md) lub [Long](../builtin-types/integral-numeric-types.md), operator przesunięcia w prawo wykonuje *arytmetyczną* zmianę: wartość najbardziej znaczącego bitu (bit znaku) operandu po lewej stronie jest propagowana do pustych pozycji o dużej liczbie bitów. Oznacza to, że puste pozycje bitu o wysokim stopniu kolejności są ustawione na zero, jeśli argument operacji po lewej stronie jest nieujemny i ustawiony na jeden, jeśli jest ujemny.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Lewostronny operand jest typu [uint](../builtin-types/integral-numeric-types.md) lub [ulong](../builtin-types/integral-numeric-types.md), operator przesunięcia w prawo wykonuje *logiczne* shift: pozycje bitów pusty wyższego rzędu są zawsze ustawione na zero.
+- Jeśli argument operacji po lewej stronie jest typu [uint](../builtin-types/integral-numeric-types.md) lub [ULONG](../builtin-types/integral-numeric-types.md), operator przesunięcia w prawo wykonuje *logiczne* przesunięcie: wartość pustych pozycji w kolejności pustej jest zawsze równa zero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Aby uzyskać informacje na temat prawostronny operand `>>` operator definiuje licznik przesunięć, zobacz [licznik operatory przesunięcia przesunięć](#shift-count-of-the-shift-operators) sekcji.
+Aby uzyskać informacje o tym, jak argument operacji po prawej stronie operatora `>>` definiuje liczbę przesunięć, zobacz [Liczba przesunięć w sekcji operatory przesunięcia](#shift-count-of-the-shift-operators) .
 
-## <a name="logical-and-operator-"></a> Operator logiczny AND &amp;
+## <a name="logical-and-operator-"></a>Operatory logiczne i &amp;
 
-`&` Operator oblicza iloczynu bitowego AND logiczne z argumentów:
+Operator `&` oblicza koniunkcję bitową i jej operandy:
 
 [!code-csharp-interactive[bitwise AND](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseAnd)]
 
-Dla argumentów operacji `bool` typu `&` oblicza operator [operator logiczny oraz](boolean-logical-operators.md#logical-and-operator-) z argumentów. Jednoargumentowy `&` operator jest [operatora address-of](pointer-related-operators.md#address-of-operator-).
+Dla operandów typu `bool` operator `&` oblicza wartość [logiczną i](boolean-logical-operators.md#logical-and-operator-) jej operandów. Operator jednoargumentowy `&` jest operatorem [Address-of](pointer-related-operators.md#address-of-operator-).
 
-## <a name="logical-exclusive-or-operator-"></a>Operator logiczny OR wyłączne ^
+## <a name="logical-exclusive-or-operator-"></a>Operator wyłączny logicznego OR ^
 
-`^` Operator oblicza wyłączny sumy bitowej dla logicznej lub znany także jako bitowe XOR logiczne z argumentów:
+Operator `^` oblicza koniunkcję bitową na wyłączność lub, znaną również jako bitowe koniunkcja logiczna XOR, argumentów operacji:
 
 [!code-csharp-interactive[bitwise XOR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseXor)]
 
-Dla argumentów operacji `bool` typu `^` oblicza operator [logiczne OR wyłączne](boolean-logical-operators.md#logical-exclusive-or-operator-) z argumentów.
+Dla operandów typu `bool` operator `^` oblicza wartość [logiczną na wyłączność lub](boolean-logical-operators.md#logical-exclusive-or-operator-) z jej argumentów operacji.
 
 ## <a name="logical-or-operator-"></a>Operator logiczny OR |
 
-`|` Operator oblicza bitowe OR logiczne z argumentów:
+Operator `|` oblicza bitowe logiczne lub jego operandy:
 
 [!code-csharp-interactive[bitwise OR](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#BitwiseOr)]
 
-Dla argumentów operacji `bool` typu `|` oblicza operator [logiczne OR](boolean-logical-operators.md#logical-or-operator-) z argumentów.
+Dla operandów typu `bool` operator `|` oblicza wartość [logiczną lub](boolean-logical-operators.md#logical-or-operator-) argumentów operacji.
 
-## <a name="compound-assignment"></a>Przydział złożony
+## <a name="compound-assignment"></a>Przypisanie złożone
 
-Dla operatora binarnego `op`, wyrażenie przypisania złożonego formularza
+Dla operatora binarnego `op` wyrażenie złożonego przypisania formularza
 
 ```csharp
 x op= y
 ```
 
-odpowiada wyrażeniu
+jest równoważny
 
 ```csharp
 x = x op y
 ```
 
-z tą różnicą, że `x` jest obliczany tylko raz.
+z tą różnicą, że `x` jest obliczana tylko raz.
 
-Poniższy przykład ilustruje użycie przydział złożony przy użyciu bitowego operatora i operatory przesunięcia:
+Poniższy przykład ilustruje użycie przypisania złożonego z operatory bitowe i przesunięcia:
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-Z powodu [promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions), wynikiem `op` operacji może nie być niejawnie konwertowane na typ `T` z `x`. W takim przypadku jeśli `op` jest wstępnie zdefiniowanego operatora, a wynik operacji jest jawnie konwertowany na typ `T` z `x`, wyrażenia przypisania złożonego w postaci `x op= y` jest odpowiednikiem `x = (T)(x op y)`, z wyjątkiem które `x` jest oceniane tylko raz. Poniższy przykład przedstawia tego zachowania:
+Ze względu na [promocje liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)wynik operacji `op` może nie być niejawnie konwertowany na typ `T` `x`. W takim przypadku, jeśli `op` jest wstępnie zdefiniowanym operatorem, a wynik operacji jest jawnie konwertowany na typ `T` `x`, wyrażenie złożonego przypisania formularza `x op= y` jest równoważne `x = (T)(x op y)` , z tą różnicą, że `x` jest oceniane tylko raz. Poniższy przykład ilustruje takie zachowanie:
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
 ## <a name="operator-precedence"></a>Pierwszeństwo operatorów
 
-Następujące listy zamówienia bitowe i operatory przesunięcia od najwyższy priorytet, do najniższego:
+Poniższa lista porządkuje operatory bitowe i przesunięcia, rozpoczynając od najwyższego priorytetu do najniższego:
 
-- Operator dopełnienia bitowego `~`
+- @No__t_0 operatora uzupełniania bitowego
 - Operatory przesunięcia `<<` i `>>`
-- Operator logiczny AND `&`
-- Operator logiczny OR wyłączne `^`
-- Operator logiczny OR `|`
+- Operatory logiczne i `&`
+- @No__t_0 operatora logicznego wyłącznego OR
+- @No__t_0 operatora logicznego OR
 
-Użyj nawiasów, `()`, aby zmienić kolejność oceny nałożonych przez pierwszeństwo operatorów:
+Użyj nawiasów, `()`, aby zmienić kolejność oceny nałożona przez pierwszeństwo operatorów:
 
 [!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#Precedence)]
 
-Aby uzyskać pełną listę C# operatory uporządkowane według poziomu priorytetu, zobacz [ C# operatory](index.md).
+Aby uzyskać pełną listę C# operatorów uporządkowanych według poziomu pierwszeństwa, zobacz [ C# operatory](index.md).
 
-## <a name="shift-count-of-the-shift-operators"></a>Licznik przesunięć operatorów przesunięcia
+## <a name="shift-count-of-the-shift-operators"></a>Liczba przesunięć operatorów przesunięcia
 
-Dla operatorów przesunięcia `<<` i `>>`, typ prawostronny operand musi być [int](../builtin-types/integral-numeric-types.md) lub typ, który ma [wstępnie zdefiniowane niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md) do `int`.
+Dla operatorów przesunięcia `<<` i `>>` typ operandu po prawej stronie musi być liczbą [int](../builtin-types/integral-numeric-types.md) lub typem, który ma [wstępnie zdefiniowaną niejawną konwersję liczbową](../builtin-types/numeric-conversions.md#implicit-numeric-conversions) do `int`.
 
-Aby uzyskać `x << count` i `x >> count` wyrażeń, licznik przesunięć rzeczywistego zależy od rodzaju `x` w następujący sposób:
+W przypadku wyrażeń `x << count` i `x >> count` rzeczywista liczba przesunięć zależy od typu `x` w następujący sposób:
 
-- Jeśli typ `x` jest [int](../builtin-types/integral-numeric-types.md) lub [uint](../builtin-types/integral-numeric-types.md), licznik przesunięć jest definiowany przez niskiego rzędu *pięć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
+- Jeśli typ `x` ma wartość [int](../builtin-types/integral-numeric-types.md) lub [uint](../builtin-types/integral-numeric-types.md), liczba przesunięć jest definiowana przez *pięć* bitów z prawej strony. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x1F` (lub `count & 0b_1_1111`).
 
-- Jeśli typ `x` jest [długie](../builtin-types/integral-numeric-types.md) lub [ulong](../builtin-types/integral-numeric-types.md), licznik przesunięć jest definiowany przez niskiego rzędu *sześć* bitów prawostronny operand. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
+- Jeśli typ `x` ma wartość [Long](../builtin-types/integral-numeric-types.md) lub [ULONG](../builtin-types/integral-numeric-types.md), liczba przesunięć jest definiowana przez *szóste* bity operandu po prawej stronie. Oznacza to, że licznik przesunięć jest obliczany na podstawie `count & 0x3F` (lub `count & 0b_11_1111`).
 
-Poniższy przykład przedstawia tego zachowania:
+Poniższy przykład ilustruje takie zachowanie:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
-## <a name="enumeration-logical-operators"></a>Operatory logiczne wyliczenia
+## <a name="enumeration-logical-operators"></a>Wyliczanie operatorów logicznych
 
-`~`, `&`, `|`, I `^` operatory również są zdefiniowane dla dowolnego [wyliczenie](../keywords/enum.md) typu. Operandy typu wyliczenia operacji logicznej jest wykonywane na odpowiadające im wartości bazowego typu całkowitego. Na przykład dla dowolnego `x` i `y` typu wyliczeniowego `T` z typu podstawowego `U`, `x & y` wyrażenie daje ten sam wynik jako `(T)((U)x & (U)y)` wyrażenia.
+Operatory `~`, `&`, `|` i `^` są również zdefiniowane dla dowolnego typu [wyliczenia](../keywords/enum.md) . Dla operandów tego samego typu wyliczeniowy jest wykonywana operacja logiczna na odpowiednich wartościach bazowego typu całkowitego. Na przykład dla dowolnych `x` i `y` typu wyliczenia `T` z typem podstawowym `U`, wyrażenie `x & y` generuje ten sam wynik jako wyrażenie `(T)((U)x & (U)y)`.
 
-Zazwyczaj używa się operatory logiczne bitowe dla typu wyliczenia, która jest zdefiniowana za pomocą [flagi](xref:System.FlagsAttribute) atrybutu. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe jako znaczniki bitowe](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) części [Typy wyliczeniowe](../../programming-guide/enumeration-types.md) artykułu.
+Zwykle używane są bitowe operatory logiczne z typem wyliczenia, który jest zdefiniowany przy użyciu atrybutu [flags](xref:System.FlagsAttribute) . Aby uzyskać więcej informacji, zobacz sekcję [typy wyliczeniowe jako flagi bitowe](../../programming-guide/enumeration-types.md#enumeration-types-as-bit-flags) artykułu [typy wyliczeniowe](../../programming-guide/enumeration-types.md) .
 
-## <a name="operator-overloadability"></a>Overloadability — operator
+## <a name="operator-overloadability"></a>Przeciążanie operatora
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `~`, `<<`, `>>`, `&`, `|`, i `^` operatorów. Gdy jest przeciążony operator binarny, odpowiedniego operatora przypisania złożonego jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć operator przypisania złożonego.
+Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operatory `~`, `<<`, `>>`, `&`, `|` i `^`. Gdy operator binarny jest przeciążony, odpowiadający mu operator przypisania złożonego jest również niejawnie przeciążony. Typ zdefiniowany przez użytkownika nie może jawnie przeciążać złożonego operatora przypisania.
 
-Jeśli typ zdefiniowany przez użytkownika `T` przeciążenia `<<` lub `>>` operatora, typ lewostronny operand musi być `T` i typ prawostronny operand musi być `int`.
+Jeśli typ zdefiniowany przez użytkownika `T` przeciążania operatora `<<` lub `>>`, typem operandu po lewej stronie musi być `T`, a typ operacji po prawej stronie musi być `int`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -189,11 +189,11 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 - [Operator dopełnienia bitowego](~/_csharplang/spec/expressions.md#bitwise-complement-operator)
 - [Operatory przesunięcia](~/_csharplang/spec/expressions.md#shift-operators)
 - [Operatory logiczne](~/_csharplang/spec/expressions.md#logical-operators)
-- [Przydział złożony](~/_csharplang/spec/expressions.md#compound-assignment)
-- [Promocji na liczbowe](~/_csharplang/spec/expressions.md#numeric-promotions)
+- [Przypisanie złożone](~/_csharplang/spec/expressions.md#compound-assignment)
+- [Promocje numeryczne](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwołanie](../index.md)
+- [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
-- [Operatory logiczne logiczne](boolean-logical-operators.md)
+- [Operatory logiczne Boolean](boolean-logical-operators.md)

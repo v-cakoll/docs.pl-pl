@@ -1,5 +1,5 @@
 ---
-title: <supportPortability>, element
+title: <supportPortability> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - supportPortability element
@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7a76c378038a19d3edb9fe0c5e61012cc854c1b7
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252304"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773927"
 ---
-# <a name="supportportability-element"></a>\<Tag supportportability, element >
+# <a name="supportportability-element"></a>\<element > Tag supportportability
 Określa, że aplikacja może odwoływać się do tego samego zestawu w dwóch różnych implementacjach .NET Framework, przez wyłączenie domyślnego zachowania, które traktuje zestawy jako równoważne do celów przenośności aplikacji.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Tag supportportability >**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zestawubinding**](assemblybinding-element-for-runtime.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tag supportportability >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -60,16 +60,16 @@ Brak.
   
 ## <a name="remarks"></a>Uwagi  
 
-Począwszy od .NET Framework 4, pomoc techniczna jest świadczona automatycznie dla aplikacji, które mogą korzystać z jednej z dwóch implementacji .NET Framework, na przykład implementacji .NET Framework lub .NET Framework dla implementacji Silverlight. Dwie implementacje określonego zestawu .NET Framework są uważane za równoważne przez spinacz zestawu. W kilku scenariuszach ta funkcja przenośności aplikacji powoduje problemy. W tych scenariuszach `<supportPortability>` element może być używany do wyłączania tej funkcji.  
+Począwszy od .NET Framework 4, pomoc techniczna jest świadczona automatycznie dla aplikacji, które mogą korzystać z jednej z dwóch implementacji .NET Framework, na przykład implementacji .NET Framework lub .NET Framework dla implementacji Silverlight. Dwie implementacje określonego zestawu .NET Framework są uważane za równoważne przez spinacz zestawu. W kilku scenariuszach ta funkcja przenośności aplikacji powoduje problemy. W tych scenariuszach element `<supportPortability>` może być używany do wyłączania funkcji.  
   
 Taki scenariusz jest zestawem, który musi odwoływać się zarówno do implementacji .NET Framework, jak i .NET Framework do implementacji Silverlight dla określonego zestawu odwołania. Na przykład Projektant XAML zapisany w Windows Presentation Foundation (WPF) może potrzebować odwoływać się zarówno do implementacji pulpitu WPF, interfejsu użytkownika projektanta, jak i podzbioru WPF, który jest zawarty w implementacji Silverlight. Domyślnie oddzielne odwołania powodują wystąpienie błędu kompilatora, ponieważ powiązanie zestawu widzi dwa zestawy jako równoważne. Ten element wyłącza zachowanie domyślne i zezwala na pomyślne Kompilowanie.  
   
 > [!IMPORTANT]
-> Aby kompilator przeszedł informacje do logiki wiązania zestawu środowiska uruchomieniowego języka wspólnego, należy użyć `/appconfig` opcji kompilatora, aby określić lokalizację pliku App. config, który zawiera ten element.  
+> Aby kompilator przeszedł informacje do logiki wiązania zestawu środowiska uruchomieniowego języka wspólnego, należy użyć opcji kompilatora `/appconfig`, aby określić lokalizację pliku App. config, który zawiera ten element.  
   
 ## <a name="example"></a>Przykład  
 
-Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. Aby określić lokalizację pliku App. config, należy użyć opcji kompilatora.`/appconfig`  
+Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET Framework i .NET Framework dla implementacji Silverlight dowolnego zestawu .NET Framework, który istnieje w obu implementacjach. Aby określić lokalizację pliku App. config, należy użyć opcji kompilatora `/appconfig`.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Poniższy przykład umożliwia aplikacji odwoływanie się do implementacji .NET
   
 ## <a name="see-also"></a>Zobacz także
 
-- [/AppConfig (C# opcje kompilatora)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [-AppConfig (C# opcje kompilatora)](../../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)
 - [Przegląd dezjednoczenia zestawu .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

@@ -7,18 +7,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 09/22/2019
-ms.openlocfilehash: c10023cf8cee358db41a3b90a9a0a1020c5462eb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 758c8fd30fbd2e5ce8ace997005b91d6872a06d1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395434"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72773894"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
 W tym artykule opisano nowości w programie .NET Core 3,0. Jednym z największych ulepszeń jest obsługa aplikacji klasycznych systemu Windows (tylko system Windows). Korzystając z pulpitu systemu Windows składnika zestawu SDK platformy .NET Core 3,0, można przenieść aplikacje Windows Forms i Windows Presentation Foundation (WPF). Aby można było wyczyścić, składnik pulpitu systemu Windows jest obsługiwany i uwzględniany w systemie Windows. Aby uzyskać więcej informacji, zobacz sekcję [pulpitu systemu Windows](#windows-desktop) w dalszej części tego artykułu.
 
-Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019), [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview)lub [Visual Studio Code](https://code.visualstudio.com/) z  **C# rozszerzeniem**.
+Program .NET Core 3,0 dodaje obsługę C# 8,0. Zdecydowanie zaleca się używanie [programu Visual Studio 2019 w wersji 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) lub nowszej, [Visual Studio dla komputerów Mac 8,3](/visualstudio/mac/install-preview) lub nowszego lub [Visual Studio Code](https://code.visualstudio.com/) z najnowszym  **C# rozszerzeniem**.
 
 [Pobierz i Rozpocznij pracę z platformą .NET Core 3,0](https://aka.ms/netcore3download) teraz w systemie Windows, MacOS lub Linux.
 
@@ -231,9 +231,9 @@ Należy określić jedną z następujących wartości. Jeśli ustawienie zostani
 
 - **LatestPatch**\
 Przewinięcie do najwyższej wersji poprawki. Spowoduje to wyłączenie wycofywania wersji pomocniczej.
-- @No__t **pomocnicze**-1
+- \ **pomocnicze**
 Przewinięcie do najmniejszej wyższej wersji pomocniczej, jeśli brakuje wymaganej wersji pomocniczej. Jeśli jest obecna żądana wersja pomocnicza, zostaną użyte zasady **LatestPatch** .
-- @No__t **główna**— 1
+- \ **Główne**
 Zaczekaj na najmniejszą wyższą wersję główną i najniższą wersję pomocniczą, jeśli brakuje żądanej wersji głównej. Jeśli jest obecna żądana wersja główna, są używane zasady **pomocnicze** .
 - **LatestMinor**\
 Przewinięcie do przodu do najwyższej wersji pomocniczej, nawet jeśli jest obecna żądana wersja pomocnicza. Przeznaczone do scenariuszy hostingu składników.
@@ -297,7 +297,7 @@ Aby uzyskać więcej informacji na temat trybów wysokiej rozdzielczości DPI, z
 
 ## <a name="ranges-and-indices"></a>Zakresy i indeksy
 
-Nowy typ <xref:System.Index?displayProperty=nameWithType> może służyć do indeksowania. Można utworzyć jeden z `int`, które liczą od początku lub z prefiksem `^` (C#), który liczy się od końca:
+Nowy typ <xref:System.Index?displayProperty=nameWithType> może służyć do indeksowania. Można utworzyć jeden z `int`, który liczy od początku lub z prefiksem `^` (C#), który liczy się od końca:
 
 ```csharp
 Index i1 = 3;  // number 3 from beginning
@@ -346,10 +346,10 @@ Poprawki dotyczące analizowania i formatowania obejmują:
 
 Nowe interfejsy API <xref:System.Math?displayProperty=nameWithType> obejmują:
 
-- <xref:System.Math.BitIncrement(System.Double)> i <xref:System.Math.BitDecrement(System.Double)> @ no__t-2
+- <xref:System.Math.BitIncrement(System.Double)> i <xref:System.Math.BitDecrement(System.Double)>\
 Odpowiada za operacje IEEE `nextUp` i `nextDown`. Zwracają one najmniejszą liczbę zmiennoprzecinkową, która porównuje większe lub mniejsze niż dane wejściowe (odpowiednio). Na przykład `Math.BitIncrement(0.0)` zwróci `double.Epsilon`.
 
-- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> i <xref:System.Math.MinMagnitude(System.Double,System.Double)> @ no__t-2
+- <xref:System.Math.MaxMagnitude(System.Double,System.Double)> i <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
 Odpowiada za operacje IEEE `maxNumMag` i `minNumMag`, zwracają wartość, która jest większa lub mniejsza o wielkości dwóch danych wejściowych (odpowiednio). Na przykład `Math.MaxMagnitude(2.0, -3.0)` zwróci `-3.0`.
 
 - <xref:System.Math.ILogB(System.Double)>\
@@ -375,7 +375,7 @@ Nowa Wbudowana obsługa JSON to wysoka wydajność, niska alokacja i oparta na `
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> to czytnik o wysokiej wydajności i niskiej alokacji, który jest przeznaczony tylko do przesyłania dalej dla tekstu JSON zakodowanego w formacie UTF-8, odczytana z `ReadOnlySpan<byte>`. @No__t-0 to podstawowy typ niskiego poziomu, który może służyć do tworzenia niestandardowych analizatorów i deserializacji. Odczytywanie za pośrednictwem ładunku JSON przy użyciu nowego `Utf8JsonReader` jest szybsze niż używanie czytnika z **JSON.NET**. Nie jest przydzielany do momentu, gdy wymagane jest actualize tokenów JSON jako ciągów (UTF-16).
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=nameWithType> to czytnik o wysokiej wydajności i niskiej alokacji, który jest przeznaczony tylko do przesyłania dalej dla tekstu JSON zakodowanego w formacie UTF-8, odczytana z `ReadOnlySpan<byte>`. `Utf8JsonReader` jest podstawą i typem niskiego poziomu, który może służyć do tworzenia niestandardowych analizatorów i deserializacji. Odczytywanie za pośrednictwem ładunku JSON przy użyciu nowego `Utf8JsonReader` jest szybsze niż używanie czytnika z **JSON.NET**. Nie jest przydzielany do momentu, gdy wymagane jest actualize tokenów JSON jako ciągów (UTF-16).
 
 Oto przykład odczytywania za pomocą pliku [**Launch. JSON**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) utworzonego przez Visual Studio Code:
 
@@ -385,11 +385,11 @@ Oto przykład odczytywania za pomocą pliku [**Launch. JSON**](https://github.co
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> zapewnia wysoką wydajność, niebuforowaną, tylko do przodu sposób pisania zakodowanego tekstu JSON w formacie UTF-8 ze wspólnych typów .NET, takich jak `String`, `Int32` i `DateTime`. Podobnie jak w przypadku czytnika, moduł zapisujący jest podstawą typu, który może służyć do tworzenia serializatorów niestandardowych. Pisanie ładunku JSON przy użyciu nowego `Utf8JsonWriter` to 30-80% szybciej niż przy użyciu składnika zapisywania z **JSON.NET** i nie jest przydzielany.
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=nameWithType> zapewnia wysoką wydajność, niebuforowaną, tylko do przodu sposób pisania zakodowanego tekstu JSON w formacie UTF-8 ze wspólnych typów .NET, takich jak `String`, `Int32` i `DateTime`. Podobnie jak w przypadku czytnika, moduł zapisujący jest podstawą typu, który może służyć do tworzenia serializatorów niestandardowych. Zapis ładunku JSON przy użyciu nowego `Utf8JsonWriter` to 30-80% szybciej niż przy użyciu składnika zapisywania z **JSON.NET** i nie jest przydzielany.
 
 ### <a name="jsondocument"></a>JsonDocument
 
-<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> jest oparta na `Utf8JsonReader`. @No__t-0 umożliwia analizowanie danych JSON i tworzenie Document Object Model (DOM) tylko do odczytu, które mogą być zapytania do obsługi losowego dostępu i wyliczania. Do elementów JSON, które tworzą dane, można uzyskać dostęp za pośrednictwem typu <xref:System.Text.Json.JsonElement>, który jest udostępniany przez `JsonDocument` jako właściwość o nazwie `RootElement`. @No__t-0 zawiera tablicę JSON i moduł wyliczający obiektów oraz interfejsy API służące do konwertowania tekstu JSON na popularne typy .NET. Analizowanie typowego ładunku JSON i uzyskiwanie dostępu do wszystkich jego elementów członkowskich przy użyciu `JsonDocument` jest szybsze niż **JSON.NET** z mniejszymi alokacjami dla danych, których rozmiar jest rozsądny (czyli < 1 MB).
+<xref:System.Text.Json.JsonDocument?displayProperty=nameWithType> jest oparta na `Utf8JsonReader`. `JsonDocument` umożliwia analizowanie danych JSON i tworzenie Document Object Model (DOM) tylko do odczytu, które mogą być zapytania do obsługi losowego dostępu i wyliczania. Do elementów JSON, które tworzą dane, można uzyskać dostęp za pośrednictwem typu <xref:System.Text.Json.JsonElement>, który jest udostępniany przez `JsonDocument` jako właściwość o nazwie `RootElement`. `JsonElement` zawiera tablicę JSON i moduł wyliczający obiektów oraz interfejsy API służące do konwertowania tekstu JSON na popularne typy .NET. Analizowanie typowego ładunku JSON i uzyskiwanie dostępu do wszystkich jego elementów członkowskich przy użyciu `JsonDocument` jest szybsze niż **JSON.NET** z mniejszymi alokacjami dla danych, których rozmiar jest rozsądny (czyli < 1 MB).
 
 Poniżej przedstawiono przykładowe użycie `JsonDocument` i `JsonElement`, które mogą być używane jako punkt początkowy:
 

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f31c5155dd3ca59b1a370599b3ffabb2648791b1
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318532"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774450"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -30,7 +30,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 ## <a name="pre-requisites"></a>Wymagania wstępne
 
-- [Program Visual Studio 2017 15,6 lub nowszy](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform" platformy .NET Core.
+- [Program Visual Studio 2017 w wersji 15,6 lub nowszej](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core".
 - [Pakiet NuGet Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Pakiet NuGet Microsoft. ML. ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Pakiet NuGet Microsoft. ML. OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -110,7 +110,7 @@ Teraz, gdy masz ogólne informacje o tym, co ONNX się i jak mała YOLOv2 dział
     tar -xvzf tiny_yolov2.tar.gz
     ```
 
-1. Skopiuj wyodrębniony plik `model.onnx` z katalogu, który nie jest już spakowany w katalogu projektu programu *ObjectDetection* `assets\Model` i zmień jego nazwę na `TinyYolo2_model.onnx`. Ten katalog zawiera model wymagany dla tego samouczka.
+1. Skopiuj wyodrębniony plik `model.onnx` z katalogu, który nie jest już spakowany w katalogu projektu programu *ObjectDetection* `assets\Model`, i zmień jego nazwę na `TinyYolo2_model.onnx`. Ten katalog zawiera model wymagany dla tego samouczka.
 
 1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy każdy plik w katalogu zasobów i podkatalogach i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
 
@@ -167,7 +167,7 @@ Utwórz klasę predykcyjną w katalogu *struktury* danych.
 
     [!code-csharp [ImageNetPredictionClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/DataStructures/ImageNetPrediction.cs#L5-L9)]
 
-    `ImageNetPrediction` jest klasą przewidywania i ma następujące `float[]` pole:
+    `ImageNetPrediction` jest klasą przewidywania i ma następujące pole `float[]`:
 
     - `PredictedLabel` zawiera wymiary, wynik obiektu i prawdopodobieństwa zajęć dla każdego z pól, które zostały wykryte w obrazie.
 
@@ -185,7 +185,7 @@ Model segmentuje obraz do siatki `13 x 13`, gdzie każda komórka siatki jest `3
 
 ![Przykład siatki po lewej stronie i pole ograniczenia ramki po prawej stronie](./media/object-detection-onnx/model-output-description.png)
 
-- @no__t – 0 pozycja x środka pola ograniczenia względem komórki siatki, z którą jest skojarzona.
+- `x` położenie osi x środka pola powiązanego względem komórki siatki, z którą jest skojarzona.
 - `y` pozycja y środka ramki granicznej względem komórki siatki, z którą jest skojarzona.
 - `w` szerokość pola ograniczenia.
 - `h` wysokość pola ograniczenia.
@@ -264,7 +264,7 @@ Teraz, gdy tworzone są klasy wymiarów i pól powiązanych, czas na utworzenie 
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
-    - `ROW_COUNT` to liczba wierszy w siatce, w której jest podzielony obraz.
+    - `ROW_COUNT` to liczba wierszy w siatce, do których jest podzielona ilustracja.
     - `COL_COUNT` to liczba kolumn w siatce, w której jest podzielony obraz.
     - `CHANNEL_COUNT` to łączna liczba wartości zawartych w jednej komórce siatki.
     - `BOXES_PER_CELL` to liczba pól ograniczenia w komórce.

@@ -1,7 +1,7 @@
 ---
 title: Typy liczbowe zmiennoprzecinkowe — C# odwołanie
 description: Przegląd wbudowanych typów C# zmiennoprzecinkowych
-ms.date: 10/18/2019
+ms.date: 10/22/2019
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: fa6cbb869d90113414cc6f8ffe231386c3596b1d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579367"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771903"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Zmiennoprzecinkowe typy liczbowe (C# odwołanie)
 
@@ -105,13 +105,7 @@ Console.WriteLine(m);  // output: 1500000
 
 ## <a name="conversions"></a>Konwersje
 
-Istnieje niejawna konwersja (nazywana *konwersją rozszerzającą*) z `float` do `double`, ponieważ zakres `float` wartości jest prawidłowym podzbiorem `double` i nie ma żadnej utraty dokładności od `float` do `double`.
-
-Należy użyć jawnego rzutowania do przekonwertowania jednego typu zmiennoprzecinkowego na inny typ zmiennoprzecinkowy, gdy niejawna konwersja nie jest zdefiniowana z typu źródłowego na typ docelowy. Jest to tzw. *Konwersja na wąskie*. Jawny przypadek jest wymagany, ponieważ konwersja może spowodować utratę danych. Nie istnieje niejawna konwersja między innymi typami zmiennoprzecinkowymi a typem `decimal`, ponieważ typ `decimal` ma większą precyzję niż `float` lub `double`.
-
-Aby uzyskać więcej informacji na temat niejawnych konwersji liczbowych, zobacz [tabela niejawnych konwersji liczbowych](../keywords/implicit-numeric-conversions-table.md).
-
-Aby uzyskać więcej informacji na temat jawnych konwersji liczbowych, zobacz [jawna tabela konwersji liczbowych](../keywords/explicit-numeric-conversions-table.md).
+Istnieje tylko jedna niejawna konwersja między typami liczb zmiennoprzecinkowych: od `float` do `double`. Można jednak skonwertować dowolnego typu zmiennoprzecinkowego na inny typ zmiennoprzecinkowy z [jawnym rzutem](../operators/type-testing-and-cast.md#cast-operator-). Aby uzyskać więcej informacji, zobacz [wbudowane konwersje numeryczne](numeric-conversions.md).
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -124,10 +118,9 @@ Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji j
 ## <a name="see-also"></a>Zobacz także
 
 - [C#odwoła](../index.md)
-- [Typy całkowite](integral-numeric-types.md)
 - [Tabela typów wbudowanych](../keywords/built-in-types-table.md)
-- [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)
-- [Rzutowanie i konwersje typów](../../programming-guide/types/casting-and-type-conversions.md)
-- <xref:System.Numerics.Complex?displayProperty=nameWithType>
+- [Typy całkowite](integral-numeric-types.md)
 - [Formatowanie tabeli wyników liczbowych](../keywords/formatting-numeric-results-table.md)
 - [Standardowe ciągi formatujące liczby](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Wartości numeryczne na platformie .NET](../../../standard/numerics.md)
+- <xref:System.Numerics.Complex?displayProperty=nameWithType>

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
 ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "72005240"
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
@@ -63,7 +63,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst wyświetla górne indeksy dla czcionki Palatino Linotype.  
   
- ![Tekst korzystający z tekstu nadindeksowego OpenType](./media/opentype-font-features/opentype-superscripts.gif "przy użyciu górnych skryptów OpenType")  
+ ![Tekst przy użyciu górnych skryptów OpenType](./media/opentype-font-features/opentype-superscripts.gif "Tekst przy użyciu górnych skryptów OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować indeks górny dla czcionki Palatino Linotype przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -71,7 +71,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst przedstawia indeksy dla czcionki Palatino Linotype.  
   
- ![Tekst używający tekstu indeksów OpenType](./media/opentype-font-features/opentype-subscripts.gif "przy użyciu indeksu OpenType")  
+ ![Tekst używający indeksów OpenType](./media/opentype-font-features/opentype-subscripts.gif "Tekst używający indeksów OpenType")  
   
  Poniższy przykład znacznika ilustruje sposób definiowania indeksów dolnych dla czcionki Palatino Linotype przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -80,7 +80,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="decorative-uses-of-superscripts-and-subscripts"></a>Dekoracyjne zastosowania górnych skryptów i indeksów dolnych  
  Można również użyć górnych skryptów i indeksów dolnych, aby utworzyć ozdobne efekty mieszanego przypadku tekstu. Poniższy tekst wyświetla indeks górny i dolny dla czcionki Palatino Linotype. Należy pamiętać, że nie ma to żadnego na wielkie litery.  
   
- ![Tekst korzystający]z górnych skryptów OpenType i indeksu dolnego przy użyciu górnych skryptów(./media/opentype-font-features/opentype-superscripts-subscripts.gif "OpenType i indeksów") dolnych  
+ ![Tekst przy użyciu górnych skryptów OpenType i indeksów dolnych](./media/opentype-font-features/opentype-superscripts-subscripts.gif "Tekst przy użyciu górnych skryptów OpenType i indeksów dolnych")  
 
  Poniższy przykład znacznika pokazuje, jak definiować indeksy górne i dolne dla czcionki przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -92,7 +92,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Następujący tekst zawiera standardowe litery dla czcionki Pescadero, a następnie litery, które są pisane jako "SmallCaps" i "AllSmallCaps". W takim przypadku ten sam rozmiar czcionki jest używany dla wszystkich trzech wyrazów.  
   
- ![Tekst wykorzystujący wielkie litery OpenType](./media/opentype-font-features/opentype-capitals.gif "przy użyciu wielkich liter OpenType")  
+ ![Tekst używający wersalików OpenType](./media/opentype-font-features/opentype-capitals.gif "Tekst używający wersalików OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować wielkie litery dla czcionki Pescadero przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>. Gdy używany jest format "SmallCaps", każda wiodąca litera jest ignorowana.  
   
@@ -101,7 +101,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="titling-capitals"></a>Wielkie litery  
  Wielkie litery są lżejsze i proporcjonalne i zaprojektowane w celu uzyskania bardziej eleganckiego wyglądu niż zwykłych wersalików. Litery nagłówkowe są zwykle używane w większych rozmiarach czcionki jako nagłówki. Poniższy tekst przedstawia zwykłe i tytułowe wersaliki dla czcionki Pescadero. Zauważ, że węższe szerokości łodyg tekstu w drugim wierszu.  
   
- ![Tekst z tekstem z tytułami "OpenType]" przy użyciu wersalików dla(./media/opentype-font-features/opentype-titling-capitals.gif "tekstu OpenType")  
+ ![Tekst przy użyciu inicjałów z tytułami OpenType](./media/opentype-font-features/opentype-titling-capitals.gif "Tekst przy użyciu inicjałów z tytułami OpenType")  
   
  Poniższy przykład znacznika ilustruje sposób definiowania tytułów wersalików dla czcionki Pescadero przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -110,7 +110,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="capital-spacing"></a>Odstępy w Wielkiej litery  
  Interlinia to funkcja, która pozwala na zapewnienie większej ilości interlinii w przypadku używania wersalików w tekście. Wielkie litery są zwykle przeznaczone do mieszania z małymi literami. Odstępy, które pojawiają się w sposób atrakcyjny od litery i małe litery, mogą wyglądać zbyt mocno, gdy są używane wszystkie wielkie litery. Poniższy tekst przedstawia normalne i wielkie litery dla czcionki Pescadero.  
   
- ![Tekst korzystający z tekstu w Wielkiej litery OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "przy użyciu odstępów w Wielkiej litery OpenType")  
+ ![Tekst używający odstępów w postaci OpenType](./media/opentype-font-features/opentype-capital-spacing.gif "Tekst używający odstępów w postaci OpenType")  
  
  Poniższy przykład znacznika pokazuje, jak zdefiniować odstępy dla czcionki Pescadero przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -130,7 +130,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst przedstawia standardowe symbole ligatur dla czcionki Pericles.  
   
- ![Tekst używający tekstu ligatur standardowych OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "przy użyciu standardowych ligatur OpenType")  
+ ![Tekst korzystający z ligatur standardowych OpenType](./media/opentype-font-features/opentype-standard-ligatures.gif "Tekst korzystający z ligatur standardowych OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować standardowe symbole ligatur dla czcionki Pericles przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -138,7 +138,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst przedstawia własne symbole ligatury dla czcionki Pericles.  
   
- ![Tekst przy użyciu tekstu ligatur ozdobnych typu OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "przy użyciu ligatur ozdobnych typu OpenType")  
+ ![Tekst wykorzystujący Ligatury ozdobne OpenType](./media/opentype-font-features/opentype-discretionary-ligatures.gif "Tekst wykorzystujący Ligatury ozdobne OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować glify ligatury dla czcionki Pericles przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -146,11 +146,11 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Domyślnie czcionki OpenType w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] włączają Ligatury standardowe. Na przykład jeśli używasz czcionki Palatino Linotype, standardowe ligatury "Fi", "FF" i "FL" są wyświetlane jako symbol połączonego znaku. Należy zauważyć, że para znaków dla każdej standardowej ligatury dotyka siebie nawzajem.  
   
- ![Tekst korzystający z ligatur standardowych OpenType z tekstem Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "przy użyciu ligatur standardowych OpenType z Palatino Linotype")    
+ ![Tekst korzystający z ligatur standardowych OpenType z Palatino Linotype](./media/opentype-font-features/opentype-standard-ligatures-palatino.gif "Tekst korzystający z ligatur standardowych OpenType z Palatino Linotype")    
    
  Można jednak wyłączyć standardowe ligatury, aby standardowe ligatury, takie jak "FF", były wyświetlane jako dwa oddzielne glify, a nie jako symbol symbolu połączonego.  
   
- ![Tekst używający wyłączonych ligatur standardowych OpenType](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "przy użyciu wyłączonych ligatur standardowych OpenType")  
+ ![Tekst używający wyłączonych ligatur standardowych OpenType](./media/opentype-font-features/disabled-opentype-standard-ligatures.gif "Tekst używający wyłączonych ligatur standardowych OpenType")  
     
  Poniższy przykład znacznika pokazuje, jak wyłączyć standardowe symbole ligatur dla czcionki Linotype Palatino, używając właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -160,11 +160,11 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ## <a name="swashes"></a>Znaki kaligraficzne  
  Znaki kaligraficzne to dekoracyjne glify, które używają wyrafinowanych elementów ozdobnych często skojarzonych z Calligraphy. Poniższy tekst zawiera standardowe i kaligraficzne glify dla czcionki Pescadero.  
   
- ![Tekst używający tekstu symboli standardowych i kaligraficzne OpenType](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "przy użyciu standardowych glifów OpenType i symboli kaligraficzne")  
+ ![Tekst korzystający z symboli standardowych i kaligraficzne OpenType](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "Tekst korzystający z symboli standardowych i kaligraficzne OpenType")  
 
  Znaki kaligraficzne są często używane jako elementy dekoracyjne w krótkich frazach, takich jak anonse zdarzeń. Poniższy tekst używa znaków kaligraficzne, aby wyróżnić wielkie litery nazwy zdarzenia.  
   
- ![Tekst korzystający z tekstu kaligraficzne OpenType](./media/opentype-font-features/opentype-swashes.gif "przy użyciu kaligraficzne czcionki OpenType")  
+ ![Tekst z użyciem kaligraficzne OpenType](./media/opentype-font-features/opentype-swashes.gif "Tekst z użyciem kaligraficzne OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować znaki kaligraficzne dla czcionki przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -173,7 +173,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="contextual-swashes"></a>Kontekstowe znaki kaligraficzne  
  Niektóre kombinacje symboli kaligraficzne mogą spowodować nieatrakcyjny wygląd, na przykład nakładające się dolne na sąsiednie litery. Użycie kontekstowego elementu kaligraficzne pozwala na użycie zastępczego glifu kaligraficzne, który zapewnia lepszy wygląd. Poniższy tekst zawiera ten sam wyraz przed i po zastosowaniu kontekstowego elementu kaligraficzne.  
   
- ![Tekst wykorzystujący kontekstowe znaki kaligraficzne OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "z użyciem tekstu kaligraficzne kontekstowe OpenType")  
+ ![Tekst wykorzystujący znaki kaligraficzne kontekstowe OpenType](./media/opentype-font-features/opentype-contextual-swashes.gif "Tekst wykorzystujący znaki kaligraficzne kontekstowe OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak zdefiniować kontekstowe znaki kaligraficzne dla czcionki Pescadero przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -183,11 +183,11 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ## <a name="alternates"></a>Wersje alternatywne  
  Alternatywy są glifami, które można zastąpić symbolem standardowym. Czcionki OpenType, takie jak czcionka Pericles używana w poniższych przykładach, mogą zawierać alternatywne glify, których można użyć do tworzenia różnych wyglądów tekstu. Poniższy tekst wyświetla standardowe glify dla czcionki Pericles.  
   
- ![Tekst używający standardowych symboli OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "przy użyciu standardowych symboli OpenType")  
+ ![Tekst przy użyciu standardowych symboli OpenType](./media/opentype-font-features/opentype-standard-glyphs.gif "Tekst przy użyciu standardowych symboli OpenType")  
 
  Czcionka Pericles OpenType zawiera dodatkowe glify, które udostępniają alternatywy stylistyczne dla standardowego zestawu symboli. Następujący tekst zawiera stylistyczne glify alternatywne.  
   
- ![Tekst przy użyciu alternatywnych symboli glifów OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "przy użyciu alternatywnych glifów OpenType")  
+ ![Tekst przy użyciu alternatywnych symboli OpenType](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "Tekst przy użyciu alternatywnych symboli OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak definiować alternatywne glify dla czcionki Pericles przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -195,7 +195,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst zawiera kilka innych glifów alternatywnych dla czcionki Pericles.  
   
- ![Tekst z zastosowaniem alternatywnych symboli OpenType dla tekstu czcionki Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "przy użyciu alternatywnych glifów OpenType dla czcionki Pericles")
+ ![Tekst korzystający z stylistycznych alternatywnych symboli OpenType dla czcionki Pericles](./media/opentype-font-features/opentype-stylistic-alternate-glyphs-pericles.gif "Tekst korzystający z stylistycznych alternatywnych symboli OpenType dla czcionki Pericles")
 
  Poniższy przykład znacznika pokazuje, jak zdefiniować te inne glify alternatywne.  
   
@@ -204,7 +204,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="random-contextual-alternates"></a>Losowe alternatywy kontekstowe  
  Losowe alternatywy kontekstowe zapewniają wiele zastępczych glifów dla pojedynczego znaku. W przypadku zaimplementowania za pomocą czcionek typu Script funkcja ta umożliwia symulowanie pisma ręcznego przy użyciu zestawu losowo wybranych glifów z niewielkimi różnicami w wyglądzie. Następujący tekst używa losowych kontekstowych alternatyw dla czcionki Lindsey. Zauważ, że litera "a" różni się nieco w wyglądzie  
   
- ![Tekst korzystający z losowego kontekstowego tekstu alternatywnego],(./media/opentype-font-features/opentype-random-contextual-alternates.gif "przy użyciu losowych kontekstowych odmian OpenType")  
+ ![Tekst używający losowych alternatyw kontekstowych OpenType](./media/opentype-font-features/opentype-random-contextual-alternates.gif "Tekst używający losowych alternatyw kontekstowych OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak zdefiniować losowe alternatywy kontekstowe dla czcionki Lindsey przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -213,7 +213,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="historical-forms"></a>Formularze historyczne  
  Formularze historyczne to konwencje typograficzne, które były wspólne w przeszłości. Poniższy tekst przedstawia frazę "Boston, Massachusetts", używając historycznej formy symboli dla czcionki Palatino Linotype.  
   
- ![Tekst za pomocą historycznych formularzy OpenType](./media/opentype-font-features/opentype-historical-forms.gif "przy użyciu formularzy historycznych OpenType")  
+ ![Tekst korzystający z formularzy historycznych OpenType](./media/opentype-font-features/opentype-historical-forms.gif "Tekst korzystający z formularzy historycznych OpenType")  
    
  Poniższy przykład znacznika pokazuje, jak definiować formularze historyczne dla czcionki Palatino Linotype przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -228,7 +228,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst wyświetla style ułamków dla czcionki Linotype Palatino.  
   
- ![Tekst korzystający z ukośników typu OpenType i skumulowanych ułamków](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "tekstu przy użyciu ukośników OpenType i skumulowanych ułamków")  
+ ![Tekst przy użyciu ukośników OpenType i skumulowanych ułamkowych](./media/opentype-font-features/opentype-slashed-stacked-fractions.gif "Tekst przy użyciu ukośników OpenType i skumulowanych ułamkowych")  
    
  Poniższy przykład znacznika pokazuje, jak definiować style ułamków dla czcionki Linotype Palatino, używając właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -237,11 +237,11 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 ### <a name="old-style-numerals"></a>Stare cyfry stylów  
  Czcionki OpenType obsługują stary format liczbowy stylu. Ten format jest przydatny do wyświetlania liczb w stylach, które nie są już standardowe. Następujący tekst przedstawia 18-dniową datę w formatach liczbowych w stylu Standard i Old dla czcionki Palatino Linotype.  
   
- ![Tekst używający cyfr w starym stylu OpenType], które(./media/opentype-font-features/opentype-old-style-numerals.gif "używają cyfr w starym stylu OpenType")  
+ ![Tekst używający cyfr w starym stylu OpenType](./media/opentype-font-features/opentype-old-style-numerals.gif "Tekst używający cyfr w starym stylu OpenType")  
     
  Poniższy tekst wyświetla standardowe cyfry dla czcionki Linotype Palatino, a następnie stare cyfry stylów.  
   
- ![Tekst z zastosowaniem stylu OpenType z cyframi], które są ustawiane jako(./media/opentype-font-features/opentype-old-style-numeral-sets.gif "tekst przy użyciu starych zestawów liczb stylu OpenType")  
+ ![Tekst korzystający ze starych zestawów liczbowych stylów OpenType](./media/opentype-font-features/opentype-old-style-numeral-sets.gif "Tekst korzystający ze starych zestawów liczbowych stylów OpenType")  
   
  Poniższy przykład znacznika pokazuje, jak zdefiniować stare cyfry stylów dla czcionki Linotype Palatino, używając właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -252,7 +252,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst przedstawia dwie proporcjonalne cyfry w pierwszej kolumnie przy użyciu czcionki Miramonte. Zwróć uwagę na różnicę między cyframi "5" i "1". W drugiej kolumnie są wyświetlane te same wartości liczbowe o szerokościach skorygowanych przy użyciu funkcji tabelarycznej.  
   
- ![Tekst z zastosowaniem & OpenType proporcjonalnie](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "do tekstu przy użyciu proporcji OpenType i tabelarycznych")  
+ ![Tekst przy użyciu proporcji OpenType & tabelarycznych](./media/opentype-font-features/opentype-proportional-tabular-figures.gif "Tekst przy użyciu proporcji OpenType i tabelarycznych")  
     
  Poniższy przykład znacznika ilustruje sposób definiowania proporcjonalnych i tabelarycznych liczb dla czcionki Miramonte przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -263,7 +263,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Poniższy tekst przedstawia przykładowy identyfikator kolejności przy użyciu czcionki Miramonte. Pierwszy wiersz używa standardowych liczb. Drugi wiersz używa ukośników o wartości zero, aby zapewnić lepszy kontrast z wielką literą "O".  
   
- ![Tekst korzystający z tekstu liczbowego z ukośnikiem OpenType](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "z zerem z ukośnikiem OpenType")  
+ ![Tekst korzystający z zer z ukośnikiem OpenType](./media/opentype-font-features/opentype-slashed-zero-numerals.gif "Tekst korzystający z zer z ukośnikiem OpenType")  
     
  Poniższy przykład znacznika pokazuje, jak zdefiniować ukośniki zerowe dla czcionki Miramonte przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>.  
   
@@ -275,7 +275,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
   
  Następujący tekst zawiera standardowe litery dla czcionki Pescadero, a następnie litery, które są pisane jako "SmallCaps" i "AllSmallCaps". W takim przypadku ten sam rozmiar czcionki jest używany dla wszystkich trzech wyrazów.  
   
- ![Tekst wykorzystujący wielkie litery OpenType](./media/opentype-font-features/opentype-capitals.gif "przy użyciu wielkich liter OpenType")  
+ ![Tekst używający wersalików OpenType](./media/opentype-font-features/opentype-capitals.gif "Tekst używający wersalików OpenType")  
     
  Poniższy przykład znacznika pokazuje, jak definiować wielkie litery dla czcionki Pescadero przy użyciu właściwości obiektu <xref:System.Windows.Documents.Typography>. Gdy używany jest format "SmallCaps", każda wiodąca litera jest ignorowana.  
   
@@ -300,7 +300,7 @@ Ten temat zawiera omówienie niektórych kluczowych funkcji technologii czcionek
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|Wartość liczbowa-bajt|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; 0 &#124; 2 &#124; 4 &#124; 6 &#124; 8|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124;<xref:System.Windows.FontEastAsianLanguage.Jis04>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis78>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis83>&#124;<xref:System.Windows.FontEastAsianLanguage.Jis90>&#124;<xref:System.Windows.FontEastAsianLanguage.NlcKanji>&#124; &#124;<xref:System.Windows.FontEastAsianLanguage.Normal><xref:System.Windows.FontEastAsianLanguage.Simplified><xref:System.Windows.FontEastAsianLanguage.Traditional>&#124; &#124;|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Gałęzie i pętle wC#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 42d9784b9aa35fbb739e09dd79d72996b0f15950
-  ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
+  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/12/2019
-  ms.locfileid: "72291370"
+  ms.lasthandoff: 10/22/2019
+  ms.locfileid: "72774012"
 items:
 - durationInMinutes: 1
   content: >
@@ -421,12 +421,8 @@ items:
     Więcej informacji na temat numerów C# można znaleźć w następujących tematach:
 
 
-    - [Typy całkowite](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [Całkowite typy liczbowe](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [Tabela typów zmiennoprzecinkowych](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [Zmiennoprzecinkowe typy liczbowe](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
-    - [Tabela typów wbudowanych](../../language-reference/keywords/built-in-types-table.md)
-
-    - [Tabela niejawnych konwersji liczbowych](../../language-reference/keywords/implicit-numeric-conversions-table.md)
-
-    - [Tabela jawnych konwersji liczbowych](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+    - [Wbudowane konwersje numeryczne](../../language-reference/builtin-types/numeric-conversions.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 1a0e94f40a9dc861b32e6a1c12935faadda9921b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921808"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774181"
 ---
 # <a name="expressions-c-programming-guide"></a>Wyrażenia (Przewodnik programowania w języku C#)
 
@@ -27,13 +27,13 @@ System.Convert.ToInt32("35");
   
 ## <a name="expression-values"></a>Wartości wyrażeń
 
- W większości kontekstów, w których są używane wyrażenia, na przykład w instrukcjach lub parametrach metod, oczekiwane jest wyrażenie do obliczenia wartości. Jeśli x i y są liczbami całkowitymi, `x + y` wyrażenie daje w wyniku wartość liczbową. Wyrażenie `new MyClass()` oblicza odwołanie do nowego wystąpienia `MyClass` klasy. Wyrażenie `myClass.ToString()` daje w wyniku ciąg, ponieważ jest typem zwracanym metody. Mimo że nazwa przestrzeni nazw jest sklasyfikowana jako wyrażenie, nie jest ona szacowana jako wartość i w związku z tym nie może być ostatnim wynikiem żadnego wyrażenia. Nie można przekazać nazwy przestrzeni nazw do parametru metody lub użyć jej w nowym wyrażeniu lub przypisać do zmiennej. Można go użyć tylko jako wyrażenia podrzędnego w większym wyrażeniu. To samo jest prawdziwe dla typów (odrębnie od <xref:System.Type?displayProperty=nameWithType> obiektów), nazw grup metod (jako odrębnych od określonych metod), a także do [dodawania](../../language-reference/keywords/add.md) i [usuwania](../../language-reference/keywords/remove.md) zdarzeń.  
+ W większości kontekstów, w których są używane wyrażenia, na przykład w instrukcjach lub parametrach metod, oczekiwane jest wyrażenie do obliczenia wartości. Jeśli x i y są liczbami całkowitymi, wyrażenie `x + y` oblicza wartość liczbową. Wyrażenie `new MyClass()` oblicza odwołanie do nowego wystąpienia klasy `MyClass`. Wyrażenie `myClass.ToString()` zwraca ciąg, ponieważ jest typem zwracanym metody. Mimo że nazwa przestrzeni nazw jest sklasyfikowana jako wyrażenie, nie jest ona szacowana jako wartość i w związku z tym nie może być ostatnim wynikiem żadnego wyrażenia. Nie można przekazać nazwy przestrzeni nazw do parametru metody lub użyć jej w nowym wyrażeniu lub przypisać do zmiennej. Można go użyć tylko jako wyrażenia podrzędnego w większym wyrażeniu. Ta sama wartość dotyczy typów (w odróżnieniu od obiektów <xref:System.Type?displayProperty=nameWithType>), nazw grup metod (jako odrębnych od określonych metod), a także do [dodawania](../../language-reference/keywords/add.md) i [usuwania](../../language-reference/keywords/remove.md) zdarzeń.  
   
- Każda wartość ma skojarzony typ. Na przykład jeśli x i y są zmienne typu `int`, wartość wyrażenia `x + y` jest również wpisywana jako `int`. Jeśli wartość jest przypisana do zmiennej innego typu lub jeśli x i y są różne typy, stosowane są reguły konwersji typów. Aby uzyskać więcej informacji na temat tego, jak te konwersje działają, zobacz [rzutowanie i konwersje typów](../types/casting-and-type-conversions.md).  
+ Każda wartość ma skojarzony typ. Na przykład jeśli x i y są zmiennymi typu `int`, wartość wyrażenia `x + y` jest również wpisana jako `int`. Jeśli wartość jest przypisana do zmiennej innego typu lub jeśli x i y są różne typy, stosowane są reguły konwersji typów. Aby uzyskać więcej informacji na temat tego, jak te konwersje działają, zobacz [rzutowanie i konwersje typów](../types/casting-and-type-conversions.md).  
   
 ## <a name="overflows"></a>Przepełnienia
 
- Wyrażenia liczbowe mogą spowodować przepełnienie, jeśli wartość jest większa niż wartość maksymalna typu wartości. Aby uzyskać więcej informacji, Zobacz tabele [Checked i](../../language-reference/keywords/checked-and-unchecked.md) unchecked oraz [jawne konwersje liczbowe](../../language-reference/keywords/explicit-numeric-conversions-table.md).  
+ Wyrażenia liczbowe mogą spowodować przepełnienie, jeśli wartość jest większa niż wartość maksymalna typu wartości. Aby uzyskać więcej informacji, zobacz sekcję [Checked i unchecked](../../language-reference/keywords/checked-and-unchecked.md) i [jawne konwersje liczbowe](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions) [wbudowanego artykułu konwersji liczbowych](../../language-reference/builtin-types/numeric-conversions.md) .
   
 ## <a name="operator-precedence-and-associativity"></a>Pierwszeństwo operatorów i łączność
 
@@ -43,13 +43,13 @@ System.Convert.ToInt32("35");
   
 ## <a name="literals-and-simple-names"></a>Literały i nazwy proste
 
- Dwa najprostsze typy wyrażeń to literały i proste nazwy. Literał jest wartością stałą, która nie ma nazwy. Na przykład, w poniższym przykładzie kodu, obie `5` i `"Hello World"` są wartościami literału:  
+ Dwa najprostsze typy wyrażeń to literały i proste nazwy. Literał jest wartością stałą, która nie ma nazwy. Na przykład w poniższym przykładzie kodu zarówno `5`, jak i `"Hello World"` są wartościami literału:  
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
  Aby uzyskać więcej informacji na temat literałów, zobacz [typy](../../language-reference/keywords/types.md).  
   
- W poprzednim przykładzie obie `i` i `s` są prostymi nazwami, które identyfikują zmienne lokalne. Gdy zmienne są używane w wyrażeniu, nazwa zmiennej jest obliczana do wartości, która jest aktualnie przechowywana w lokalizacji zmiennej w pamięci. Jest to pokazane w poniższym przykładzie:  
+ W poprzednim przykładzie zarówno `i`, jak i `s` są prostymi nazwami, które identyfikują zmienne lokalne. Gdy zmienne są używane w wyrażeniu, nazwa zmiennej jest obliczana do wartości, która jest aktualnie przechowywana w lokalizacji zmiennej w pamięci. Pokazano to w następującym przykładzie:  
   
  [!code-csharp[csProgGuideStatements#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#3)]
 
@@ -61,7 +61,7 @@ System.Convert.ToInt32("35");
 DoWork();  
 ```  
   
- Wywołanie metody wymaga nazwy metody, jako nazwy, jak w poprzednim przykładzie, lub jako wynik innego wyrażenia, po którym następuje nawias i wszystkie parametry metody. Aby uzyskać więcej informacji, zobacz [metody](../classes-and-structs/methods.md). Wywołanie delegata używa nazwy delegata i parametrów metody w nawiasie. Aby uzyskać więcej informacji, [](../delegates/index.md)Zobacz delegats. Wywołania metod i delegatów wywołań są oceniane do wartości zwracanej metody, jeśli metoda zwraca wartość. Metody zwracające typ void nie mogą być używane zamiast wartości w wyrażeniu.  
+ Wywołanie metody wymaga nazwy metody, jako nazwy, jak w poprzednim przykładzie, lub jako wynik innego wyrażenia, po którym następuje nawias i wszystkie parametry metody. Aby uzyskać więcej informacji, zobacz [metody](../classes-and-structs/methods.md). Wywołanie delegata używa nazwy delegata i parametrów metody w nawiasie. Aby uzyskać więcej informacji, zobacz [delegats](../delegates/index.md). Wywołania metod i delegatów wywołań są oceniane do wartości zwracanej metody, jeśli metoda zwraca wartość. Metody zwracające typ void nie mogą być używane zamiast wartości w wyrażeniu.  
 
 ## <a name="query-expressions"></a>Wyrażenia zapytań
 
@@ -77,7 +77,7 @@ Drzewa wyrażeń umożliwiają wyrażenia, które mają być reprezentowane jako
   
 ## <a name="expression-body-definitions"></a>Definicje treści wyrażenia
 
-C#obsługuje składowe w postaci *wyrażeń*, które umożliwiają dostarczenie zwięzłej definicji treści wyrażenia dla metod, konstruktorów, finalizatorów, właściwości i indeksatorów. Aby uzyskać więcej informacji, zobacz [elementy członkowskie z wyrażeniami](expression-bodied-members.md).
+C#obsługuje *składowe*w postaci wyrażeń, które umożliwiają dostarczenie zwięzłej definicji treści wyrażenia dla metod, konstruktorów, finalizatorów, właściwości i indeksatorów. Aby uzyskać więcej informacji, zobacz [elementy członkowskie z wyrażeniami](expression-bodied-members.md).
 
 ## <a name="remarks"></a>Uwagi
 
@@ -85,13 +85,13 @@ C#obsługuje składowe w postaci *wyrażeń*, które umożliwiają dostarczenie 
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [](~/_csharplang/spec/expressions.md) sekcję Expressions w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [Expressions](~/_csharplang/spec/expressions.md) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
 - [Operatory](../../language-reference/operators/index.md)
 - [Metody](../classes-and-structs/methods.md)
-- [Delegaty](../delegates/index.md)
+- [Delegaci](../delegates/index.md)
 - [Typy](../types/index.md)
 - [LINQ](../../linq/index.md)

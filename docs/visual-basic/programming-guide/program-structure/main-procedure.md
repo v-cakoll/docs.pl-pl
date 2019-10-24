@@ -8,34 +8,34 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1c76e3ade0b383727c3241fdaf5ae44b677559c8
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962773"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72775698"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedura główna w Visual Basic
-Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta procedura służy jako punkt wyjścia i ogólna kontrola aplikacji. .NET Framework wywołuje `Main` procedurę po załadowaniu aplikacji i jest gotowa do przekazania kontroli do niej. Jeśli tworzysz aplikację Windows Forms, musisz napisać `Main` procedurę dla aplikacji, które działają samodzielnie.
+Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta procedura służy jako punkt wyjścia i ogólna kontrola aplikacji. .NET Framework wywołuje procedurę `Main`, gdy załadowała swoją aplikację i jest gotowa do przekazania kontroli do niej. Jeśli tworzysz aplikację Windows Forms, musisz napisać procedurę `Main` dla aplikacji, które działają samodzielnie.
 
- `Main`zawiera kod, który jest uruchamiany jako pierwszy. W `Main`programie można określić, który formularz ma zostać załadowany jako pierwszy podczas uruchamiania programu, sprawdzić, czy kopia aplikacji jest już uruchomiona w systemie, ustalić zestaw zmiennych dla aplikacji lub otworzyć bazę danych wymaganą przez aplikację.
+ `Main` zawiera kod, który jest uruchamiany jako pierwszy. W `Main`można określić, który formularz ma zostać załadowany jako pierwszy podczas uruchamiania programu, sprawdzić, czy kopia aplikacji jest już uruchomiona w systemie, ustalić zestaw zmiennych dla aplikacji lub otworzyć bazę danych wymaganą przez aplikację.
 
 ## <a name="requirements-for-the-main-procedure"></a>Wymagania dotyczące głównej procedury
- Plik, który jest uruchamiany samodzielnie (zazwyczaj z rozszerzeniem. exe), `Main` musi zawierać procedurę. Biblioteka (na przykład z rozszerzeniem dll) nie jest uruchamiana samodzielnie i nie wymaga `Main` wykonania procedury. Poniżej przedstawiono wymagania dotyczące różnych typów projektów, które można utworzyć:
+ Plik, który jest uruchamiany samodzielnie (zazwyczaj z rozszerzeniem. exe), musi zawierać procedurę `Main`. Biblioteka (na przykład z rozszerzeniem dll) nie jest uruchamiana samodzielnie i nie wymaga procedury `Main`. Poniżej przedstawiono wymagania dotyczące różnych typów projektów, które można utworzyć:
 
-- Aplikacje konsolowe działają we własnym zakresie i należy podać co najmniej jedną `Main` procedurę.
+- Aplikacje konsolowe działają we własnym zakresie i należy podać co najmniej jedną procedurę `Main`.
 
-- Windows Forms aplikacje są uruchamiane samodzielnie. Jednak kompilator Visual Basic automatycznie generuje `Main` procedurę w takiej aplikacji i nie trzeba jej pisać.
+- Windows Forms aplikacje są uruchamiane samodzielnie. Jednak kompilator Visual Basic automatycznie generuje procedurę `Main` w takiej aplikacji i nie trzeba jej pisać.
 
-- Biblioteki klas nie wymagają `Main` wykonania procedury. Należą do nich biblioteki formantów systemu Windows i biblioteki formantów sieci Web. Aplikacje sieci Web są wdrażane jako biblioteki klas.
+- Biblioteki klas nie wymagają procedury `Main`. Należą do nich biblioteki formantów systemu Windows i biblioteki formantów sieci Web. Aplikacje sieci Web są wdrażane jako biblioteki klas.
 
 ## <a name="declaring-the-main-procedure"></a>Deklarowanie głównej procedury
- Istnieją cztery sposoby zadeklarować `Main` procedurę. Może przyjmować argumenty i nie może zwracać wartości.
+ Istnieją cztery sposoby zadeklarować procedurę `Main`. Może przyjmować argumenty i nie może zwracać wartości.
 
 > [!NOTE]
-> Jeśli deklarujesz `Main` w klasie, musisz `Shared` użyć słowa kluczowego. W module `Main` nie musi być `Shared`.
+> Jeśli zadeklarujesz `Main` w klasie, musisz użyć słowa kluczowego `Shared`. W module nie trzeba `Shared``Main`.
 
-- Najprostszym sposobem jest zadeklarowanie `Sub` procedury, która nie przyjmuje argumentów ani nie zwraca wartości.
+- Najprostszym sposobem jest zadeklarowanie procedury `Sub`, która nie przyjmuje argumentów ani nie zwraca wartości.
 
     ```vb
     Module mainModule
@@ -47,7 +47,7 @@ Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta proc
     End Module
     ```
 
-- `Main`może również zwrócić `Integer` wartość, której system operacyjny używa jako kodu zakończenia dla programu. Inne programy mogą testować ten kod, sprawdzając wartość Windows ERRORLEVEL. Aby zwrócić kod zakończenia, należy zadeklarować `Main` `Function` jako procedurę zamiast `Sub` procedury.
+- `Main` może również zwrócić wartość `Integer`, której system operacyjny używa jako kodu zakończenia dla programu. Inne programy mogą testować ten kod, sprawdzając wartość Windows ERRORLEVEL. Aby zwrócić kod zakończenia, należy zadeklarować `Main` jako procedurę `Function` zamiast procedury `Sub`.
 
     ```vb
     Module mainModule
@@ -64,7 +64,7 @@ Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta proc
     End Module
     ```
 
-- `Main`można również pobrać `String` tablicę jako argument. Każdy ciąg w tablicy zawiera jeden z argumentów wiersza polecenia użytych do wywołania programu. W zależności od ich wartości można wykonać różne akcje.
+- `Main` może również przyjmować tablicę `String` jako argument. Każdy ciąg w tablicy zawiera jeden z argumentów wiersza polecenia użytych do wywołania programu. W zależności od ich wartości można wykonać różne akcje.
 
     ```vb
     Module mainModule
@@ -88,7 +88,7 @@ Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta proc
     End Module
     ```
 
-- Można zadeklarować `Main` , aby przeanalizować argumenty wiersza polecenia, ale nie zwracać kodu zakończenia w następujący sposób.
+- Można zadeklarować `Main`, aby przeanalizować argumenty wiersza polecenia, ale nie zwracać kodu zakończenia w następujący sposób.
 
     ```vb
     Module mainModule
@@ -114,7 +114,7 @@ Każda aplikacja Visual Basic musi zawierać procedurę o nazwie `Main`. Ta proc
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
 - [Struktura programu Visual Basic](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [/main](../../../visual-basic/reference/command-line-compiler/main.md)
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)

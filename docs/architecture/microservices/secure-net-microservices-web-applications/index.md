@@ -4,12 +4,12 @@ description: Zabezpieczenia w mikrousługach .NET i aplikacjach sieci Web — Uz
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0894465858e3503e2eddb5299b404f7ba95fdd6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296476"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798855"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Tworzenie bezpiecznych mikrousług i aplikacji sieci Web platformy .NET
 
@@ -33,7 +33,7 @@ W przypadku uzyskiwania dostępu do usług można korzystać z usługi uwierzyte
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Uwierzytelnianie za pomocą tożsamości ASP.NET Core
 
-Podstawowym mechanizmem w ASP.NET Core do identyfikowania użytkowników aplikacji jest system członkostwa [tożsamości ASP.NET Core](/aspnet/core/security/authentication/identity) . ASP.NET Core Identity przechowuje informacje o użytkowniku (w tym informacje dotyczące logowania, role i oświadczenia) w magazynie danych skonfigurowanym przez dewelopera. Zwykle magazyn danych tożsamości ASP.NET Core jest magazynem Entity Framework udostępnionym w `Microsoft.AspNetCore.Identity.EntityFrameworkCore` pakiecie. Jednak magazyny niestandardowe lub inne pakiety innych firm mogą służyć do przechowywania informacji o tożsamościach w usłudze Azure Table Storage, CosmosDB lub innych lokalizacjach.
+Podstawowym mechanizmem w ASP.NET Core do identyfikowania użytkowników aplikacji jest system członkostwa [tożsamości ASP.NET Core](/aspnet/core/security/authentication/identity) . ASP.NET Core Identity przechowuje informacje o użytkowniku (w tym informacje dotyczące logowania, role i oświadczenia) w magazynie danych skonfigurowanym przez dewelopera. Zwykle magazyn danych tożsamości ASP.NET Core jest magazynem Entity Framework udostępnionym w pakiecie `Microsoft.AspNetCore.Identity.EntityFrameworkCore`. Jednak magazyny niestandardowe lub inne pakiety innych firm mogą służyć do przechowywania informacji o tożsamościach w usłudze Azure Table Storage, CosmosDB lub innych lokalizacjach.
 
 Poniższy kod jest pobierany z szablonu projektu aplikacji sieci Web ASP.NET Core z wybranym indywidualnym uwierzytelnianiem konta użytkownika. Przedstawiono w nim sposób konfigurowania tożsamości ASP.NET Core przy użyciu EntityFramework. Core w metodzie Startup. ConfigureServices.
 
@@ -45,13 +45,13 @@ services.AddDbContext<ApplicationDbContext>(options =>
         .AddDefaultTokenProviders();
 ```
 
-Po skonfigurowaniu tożsamości ASP.NET Core można ją włączyć, wywołując aplikację. UseIdentity w `Startup.Configure` metodzie usługi.
+Po skonfigurowaniu tożsamości ASP.NET Core można ją włączyć, wywołując aplikację. UseIdentity w metodzie `Startup.Configure` usługi.
 
 Korzystanie z ASP.NET Core Identity umożliwia wykonywanie kilku scenariuszy:
 
 - Utwórz nowe informacje o użytkowniku przy użyciu typu Usermanager (usermanager. setasync).
 
-- Uwierzytelnianie użytkowników przy użyciu typu SignInManager. Możesz użyć `signInManager.SignInAsync` do logowania się bezpośrednio lub `signInManager.PasswordSignInAsync` potwierdzić, że hasło użytkownika jest poprawne, a następnie podpisz.
+- Uwierzytelnianie użytkowników przy użyciu typu SignInManager. Możesz użyć `signInManager.SignInAsync`, aby zalogować się bezpośrednio, lub `signInManager.PasswordSignInAsync` potwierdzić, że hasło użytkownika jest poprawne, a następnie podpisz.
 
 - Zidentyfikuj użytkownika na podstawie informacji przechowywanych w pliku cookie (który jest odczytywany przez oprogramowanie ASP.NET Core Identity), aby kolejne żądania z przeglądarki obejmowały tożsamość i oświadczenia zalogowanego użytkownika.
 
@@ -67,16 +67,16 @@ Aby można było korzystać z uwierzytelniania zewnętrznego, należy uwzględni
 
 W poniższej tabeli przedstawiono popularne zewnętrzne dostawcy uwierzytelniania i powiązane z nimi pakiety NuGet.
 
-| **Dostawca**  | **Pakiet**                                          |
+| **Dostawcy**  | **Pakiet**                                          |
 | ------------- | ---------------------------------------------------- |
-| **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
-| **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
-| **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
-| **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
+| **Programu** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
+| **Usłudze**    | **Microsoft. AspNetCore. Authentication. Google**           |
+| **Serwis**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
+| **Ekran**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
 
-We wszystkich przypadkach oprogramowanie pośredniczące jest zarejestrowane z wywołaniem metody rejestracji podobnej do `app.Use{ExternalProvider}Authentication` programu. `Startup.Configure` Te metody rejestracji przyjmują obiekt Options, który zawiera identyfikator aplikacji i informacje o kluczu tajnym (na przykład hasło), zgodnie z wymaganiami dostawcy. Zewnętrzni dostawcy uwierzytelniania wymagają rejestracji aplikacji (zgodnie z opisem w [dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/)), dzięki czemu mogą poinformować użytkownika, jakie aplikacje żąda dostępu do ich tożsamości.
+We wszystkich przypadkach oprogramowanie pośredniczące jest zarejestrowane z wywołaniem metody rejestracji podobnej do `app.Use{ExternalProvider}Authentication` w `Startup.Configure`. Te metody rejestracji przyjmują obiekt Options, który zawiera identyfikator aplikacji i informacje o kluczu tajnym (na przykład hasło), zgodnie z wymaganiami dostawcy. Zewnętrzni dostawcy uwierzytelniania wymagają rejestracji aplikacji (zgodnie z opisem w [dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/)), dzięki czemu mogą poinformować użytkownika, jakie aplikacje żąda dostępu do ich tożsamości.
 
-Po zarejestrowaniu oprogramowania pośredniczącego `Startup.Configure`w programie możesz monitować użytkowników o zalogowanie się z dowolnego działania kontrolera. W tym celu należy utworzyć `AuthenticationProperties` obiekt, który zawiera nazwę dostawcy uwierzytelniania i adres URL przekierowania. Następnie zwracasz odpowiedź wyzwania, która przekazuje `AuthenticationProperties` obiekt. Poniższy kod przedstawia przykład tego elementu.
+Po zarejestrowaniu oprogramowania pośredniczącego w `Startup.Configure` możesz monitować użytkowników o zalogowanie się z dowolnego działania kontrolera. W tym celu należy utworzyć obiekt `AuthenticationProperties`, który zawiera nazwę dostawcy uwierzytelniania i adres URL przekierowania. Następnie zwracasz odpowiedź wyzwania, która przekazuje obiekt `AuthenticationProperties`. Poniższy kod przedstawia przykład tego elementu.
 
 ```csharp
 var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
@@ -211,7 +211,7 @@ Jeśli wolisz wydawać tokeny zabezpieczające dla lokalnych użytkowników toż
 
    - Mechanizm magazynowania dla informacji o użytkowniku, na przykład [tożsamość ASP.NET Core](https://identityserver4.readthedocs.io/en/latest/quickstarts/0_overview.html) lub alternatywa.
 
-Po określeniu klientów i zasobów do użycia przez usługi identityserver4 można przekazać <xref:System.Collections.Generic.IEnumerable%601> kolekcję odpowiednich typów do metod, które przyjmują klientów lub magazyny zasobów w pamięci. Lub w przypadku bardziej złożonych scenariuszy można dostarczyć klienta lub typy dostawcy zasobów za pomocą iniekcji zależności.
+Po określeniu klientów i zasobów do użycia przez usługi identityserver4 można przekazać kolekcję <xref:System.Collections.Generic.IEnumerable%601> odpowiedniego typu do metod, które pobierają klientów lub magazyny zasobów w pamięci. Lub w przypadku bardziej złożonych scenariuszy można dostarczyć klienta lub typy dostawcy zasobów za pomocą iniekcji zależności.
 
 Przykładowa konfiguracja usługi identityserver4 do używania zasobów w pamięci i klientów dostarczanych przez niestandardowy typ IClientStore może wyglądać podobnie do poniższego przykładu:
 
@@ -264,42 +264,39 @@ public void ConfigureServices(IServiceCollection services)
 
 Parametry w tym wykorzystaniu są następujące:
 
-- `Audience`reprezentuje odbiorcę przychodzącego tokenu lub zasobu, do którego token udziela dostępu. Jeśli wartość określona w tym parametrze nie pasuje do parametru w tokenie, token zostanie odrzucony.
+- `Audience` reprezentuje odbiorcę przychodzącego tokenu lub zasobu, do którego token udziela dostępu. Jeśli wartość określona w tym parametrze nie pasuje do parametru w tokenie, token zostanie odrzucony.
 
-- `Authority`jest adresem serwera uwierzytelniania wystawiającego tokeny. Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT używa tego identyfikatora URI do uzyskania klucza publicznego, którego można użyć do zweryfikowania podpisu tokenu. Oprogramowanie pośredniczące potwierdza również, że parametr `iss` w tokenie jest zgodny z tym identyfikatorem URI.
+- `Authority` jest adresem serwera uwierzytelniania wystawiającego tokeny. Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT używa tego identyfikatora URI do uzyskania klucza publicznego, którego można użyć do zweryfikowania podpisu tokenu. Oprogramowanie pośredniczące potwierdza również, że parametr `iss` w tokenie jest zgodny z tym identyfikatorem URI.
 
-Inny parametr `RequireHttpsMetadata`,,, jest przydatny do celów testowych. ten parametr należy ustawić na wartość false, aby można było testować w środowiskach, w których nie masz certyfikatów. W rzeczywistych wdrożeniach tokeny okaziciela JWT powinny zawsze być przesyłane tylko za pośrednictwem protokołu HTTPS.
+Inny parametr, `RequireHttpsMetadata`, jest przydatny do celów testowych. Ten parametr należy ustawić na wartość false, aby można było testować w środowiskach, w których nie masz certyfikatów. W rzeczywistych wdrożeniach tokeny okaziciela JWT powinny zawsze być przesyłane tylko za pośrednictwem protokołu HTTPS.
 
-W przypadku tego oprogramowania pośredniczącego tokeny JWT są automatycznie wyodrębniane z nagłówków autoryzacji. Są one następnie deserializowane, weryfikowane (przy użyciu wartości w `Audience` parametrach i `Authority` ) i przechowywane jako informacje o użytkowniku, do których odwołuje się później za pomocą akcji MVC lub filtrów autoryzacji.
+W przypadku tego oprogramowania pośredniczącego tokeny JWT są automatycznie wyodrębniane z nagłówków autoryzacji. Są one następnie deserializowane, zweryfikowane (przy użyciu wartości z parametrów `Audience` i `Authority`) i przechowywane jako informacje o użytkowniku, do których odwołuje się później za pomocą akcji MVC lub filtrów autoryzacji.
 
-Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT może również obsługiwać bardziej zaawansowane scenariusze, takie jak użycie certyfikatu lokalnego do walidacji tokenu, jeśli Urząd nie jest dostępny. W tym scenariuszu można określić `TokenValidationParameters` obiekt `JwtBearerOptions` w obiekcie.
+Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT może również obsługiwać bardziej zaawansowane scenariusze, takie jak użycie certyfikatu lokalnego do walidacji tokenu, jeśli Urząd nie jest dostępny. W tym scenariuszu można określić obiekt `TokenValidationParameters` w obiekcie `JwtBearerOptions`.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Udostępnianie plików cookie między aplikacjami** \
+- **Udostępnianie plików cookie między aplikacjami**  \
   [https://docs.microsoft.com/aspnet/core/security/cookie-sharing](/aspnet/core/security/cookie-sharing)
 
-- **Wprowadzenie do tożsamości** \
+- **Wprowadzenie do tożsamości**  \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Uwierzytelnianie dwuskładnikowe za pomocą wiadomości SMS** \
+- **Rick Anderson. Uwierzytelnianie dwuskładnikowe za pomocą SMS**  \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
-- **Włączanie uwierzytelniania przy użyciu usługi Facebook, Google i innych dostawców zewnętrznych** \
+- **Włączanie uwierzytelniania przy użyciu usługi Facebook, Google i innych dostawców zewnętrznych**  \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. Wprowadzenie do uwierzytelniania OAuth 2** \
+- **Michell Anicas. Wprowadzenie do  \ uwierzytelniania OAuth 2**
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **ASPNET. Security. OAuth. Providers** (repozytorium GitHub dla dostawców ASP.NET OAuth) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Danny Strockis. Integrowanie usługi Azure AD z aplikacją sieci Web ASP.NET Core** \
-  <https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/>
-
-- **IdentityServer4. Oficjalna dokumentacja** \
+- **Usługi identityserver4. Oficjalna dokumentacja**  \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
->[Poprzedni](../implement-resilient-applications/monitor-app-health.md)Następny
->[](authorization-net-microservices-web-applications.md)
+>[Poprzedni](../implement-resilient-applications/monitor-app-health.md)
+>[Następny](authorization-net-microservices-web-applications.md)

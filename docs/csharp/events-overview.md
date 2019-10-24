@@ -1,66 +1,66 @@
 ---
 title: Wprowadzenie do zdarzeń
-description: Dowiedz się więcej o zdarzeniach w .NET Core i cele projektu języka firmy Microsoft zdarzeń w tym omówieniu.
+description: Zapoznaj się z informacjami o zdarzeniach w programie .NET Core i naszych celach projektowania języka dla zdarzeń w tym omówieniu.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051942"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72771918"
 ---
 # <a name="introduction-to-events"></a>Wprowadzenie do zdarzeń
 
-[Poprzednie](delegates-patterns.md)
+[Ubiegł](delegates-patterns.md)
 
-Zdarzenia są takie jak delegatów, *późnym wiązaniu* mechanizm. W rzeczywistości zdarzenia są tworzone na temat obsługi języków dla obiektów delegowanych.
+Zdarzenia są takie jak Delegaty, mechanizm *późnego wiązania* . W rzeczywistości zdarzenia są tworzone w oparciu o obsługę języka dla delegatów.
 
-Zdarzenia są sposób obiektowi emisji (do wszystkich zainteresowanych składników w systemie), że coś się stało. Jakikolwiek inny składnik może być subskrybowana przez zdarzenie, a otrzymasz powiadomienie, gdy wydarzenie jest podniesione.
+Zdarzenia są sposobem na wyemitowanie obiektu (do wszystkich zainteresowanych składników w systemie), które wystąpiły. Każdy inny składnik może subskrybować zdarzenie i otrzymywać powiadomienia o zdarzeniu.
 
-Prawdopodobnie wykorzystano zdarzenia w niektórych z programowania. Wiele systemów graficzne mają model zdarzeń na interakcję z użytkownikiem raportu. Te zdarzenia będą raportów ruchów myszy, naciśnięcie przycisku i podobne interakcje. Jest to jeden z najbardziej typowych, ale na pewno nie tylko scenariusz użycia zdarzenia.
+Prawdopodobnie wykorzystano zdarzenia w niektórych programowaniu. Wiele systemów graficznych ma model zdarzeń służący do zgłaszania interakcji z użytkownikiem. Te zdarzenia spowodują przemieszczenie myszy, naciśnięcie przycisków i podobne interakcje. Jest to jeden z najczęstszych, ale nie jedyny scenariusz, w którym są używane zdarzenia.
 
-Można zdefiniować zdarzenia, które powinien być wywoływany dla swojej klasy. Ważnym zagadnieniem podczas pracy ze zdarzeniami jest to, że może być dowolny obiekt zarejestrowane dla określonego zdarzenia. Należy napisać kod, aby nie zgłaszała zdarzenia w przypadku odbiorników nie są skonfigurowane.
+Można zdefiniować zdarzenia, które powinny być zgłaszane dla klas. Ważnym zagadnieniem podczas pracy ze zdarzeniami jest fakt, że nie istnieje żaden obiekt zarejestrowany dla danego zdarzenia. Należy napisać kod, aby nie zgłaszał zdarzeń, gdy nie skonfigurowano żadnych odbiorników.
 
-Subskrybowanie zdarzenia tworzy sprzężenie między dwoma obiektami (źródło zdarzenia i obiekt sink zdarzenia). Należy upewnić się, że obiekt sink zdarzenia anuluje subskrypcje ze źródła zdarzeń, gdy nie jest już są Państwo zainteresowani zdarzenia.
+Subskrybowanie zdarzenia również tworzy sprzężenie między dwoma obiektami (źródłem zdarzenia i ujścia zdarzeń). Musisz się upewnić, że obiekt ujścia zdarzeń anuluje subskrypcję źródła zdarzeń, gdy nie będą już zainteresowani zdarzeniami.
 
-## <a name="design-goals-for-event-support"></a>Cele projektu do obsługi zdarzeń
+## <a name="design-goals-for-event-support"></a>Cele projektu dotyczące obsługi zdarzeń
 
-Projektowanie języków dla zdarzeń jest przeznaczony dla tych celów.
+Projektowanie języka dla zdarzeń przeznaczonych dla tych celów.
 
-Najpierw należy włączyć minimalny sprzężenia między źródłem zdarzeń i obiekt sink zdarzenia. Te dwa składniki nie może zapisywać w tej samej organizacji, a nawet mogą być aktualizowane zgodnie z harmonogramami coś zupełnie innego.
+Najpierw włącz bardzo minimalne sprzęganie między źródłem zdarzenia a obiektem sink zdarzenia. Te dwa składniki mogą nie być zapisywane w tej samej organizacji i mogą nawet być aktualizowane w odniesieniu do całkowicie różnych harmonogramów.
 
-Po drugie powinny być bardzo prosty, aby subskrybować zdarzenia i zrezygnować z tego samego zdarzenia.
+Po drugie, powinno być bardzo proste, aby subskrybować wydarzenie i anulować subskrypcję tego samego zdarzenia.
 
-I wreszcie źródła zdarzeń powinien obsługiwać wielu subskrybentów zdarzeń. Powinien również obsługiwać, posiadające żadnych subskrybentów zdarzeń dołączonych.
+Ponadto źródła zdarzeń powinny obsługiwać wielu subskrybentów zdarzeń. Dział IT powinien również obsługiwać niedołączone Subskrybenci zdarzeń.
 
-Widać, że cele dotyczące zdarzenia są bardzo podobne do celów dla obiektów delegowanych.
-Dlatego obsługę języka zdarzeń jest oparta na obsługę języka delegata.
+Można zobaczyć, że cele dla zdarzeń są bardzo podobne do celów delegatów.
+Dlatego obsługa języka zdarzeń jest oparta na obsłudze języka delegatów.
 
 ## <a name="language-support-for-events"></a>Obsługa języka dla zdarzeń
 
-Składnia służąca do definiowania zdarzenia, subskrypcji i anulowanie subskrypcji zdarzeń jest rozszerzeniem składni dla obiektów delegowanych.
+Składnia do definiowania zdarzeń oraz subskrybowanie lub anulowanie subskrypcji zdarzeń jest rozszerzeniem składni dla delegatów.
 
-Aby zdefiniować określone zdarzenie, możesz użyć `event` — słowo kluczowe:
+Aby zdefiniować zdarzenie, użyj słowa kluczowego `event`:
 
 ```csharp
 public event EventHandler<FileListArgs> Progress;
 ```
 
-Typ zdarzenia (`EventHandler<FileListArgs>` w tym przykładzie) musi być typem delegowanym. Istnieje szereg Konwencji, które należy wykonać podczas deklarowania zdarzenie. Zazwyczaj typ delegata zdarzenia ma zwracany typ void.
-Deklaracje zdarzeń powinna być czasownikiem lub frazy zlecenie.
-Użyj przeszłym (w tym przykładzie), gdy zdarzenie zgłasza coś, co się stało. Użyj zlecenie teraźniejszego (na przykład `Closing`) do zgłaszania coś, co się stanie. Często przy użyciu teraźniejszego wskazuje, że klasa obsługuje pewnego rodzaju dostosowywania zachowania. Jednym z najbardziej typowych scenariuszy jest aby zapewnić obsługę anulowania. Na przykład `Closing` zdarzeń może zawierać argument, który będzie wskazywać, jeśli operacja zamykania należy kontynuować, lub nie.  Inne scenariusze mogą umożliwiać wywołań zmodyfikować zachowanie, aktualizując właściwości argumentów zdarzenia. Może wywołać zdarzenie, aby wskazać proponowane następnej akcji, który zajmie algorytm. Program obsługi zdarzeń może uzasadniają różne akcje, modyfikując właściwości argumentu zdarzenia.
+Typ zdarzenia (`EventHandler<FileListArgs>` w tym przykładzie) musi być typem delegata. Podczas deklarowania zdarzenia należy przestrzegać kilku Konwencji. Zwykle typ delegata zdarzenia ma zwracaną wartość void.
+Deklaracje zdarzeń powinny być czasownikiem lub wyrażeniem orzeczenia.
+Użyj minionych natężeń, gdy zdarzenie zgłosi coś, co się stało. Użyj obecnego zlecenia dwuprzyciskowego (na przykład `Closing`), aby zgłosić coś, co się dzieje. Często użycie obecnego dwustopniowego oznacza, że Klasa obsługuje pewne zachowanie w zakresie dostosowywania. Jednym z najczęstszych scenariuszy jest obsługa anulowania. Na przykład zdarzenie `Closing` może zawierać argument, który wskazuje, czy operacja zamknięcia powinna być kontynuowana, czy nie.  Inne scenariusze mogą umożliwić wywoływanie obiektów wywołujących w celu zmodyfikowania zachowania przez zaktualizowanie Właściwości argumentów zdarzeń. Możesz zgłosić zdarzenie, aby wskazać proponowaną następną akcję do wykonania przez algorytm. Program obsługi zdarzeń może wykonać inną akcję przez modyfikację właściwości argumentu zdarzenia.
 
-Jeśli chcesz zgłosić zdarzenie, wywołujesz procedury obsługi zdarzeń przy użyciu składni wywołania delegata:
+Aby zgłosić zdarzenie, należy wywołać programy obsługi zdarzeń przy użyciu składni delegata wywołania:
 
 ```csharp
 Progress?.Invoke(this, new FileListArgs(file));
 ```
 
-Zgodnie z opisem w sekcji na [delegatów](delegates-patterns.md),?.
-Operator ułatwia zapewnienie, że należy próbować zgłosić zdarzenie, gdy istnieją nie subskrybenci tego zdarzenia.
+Zgodnie z opisem w sekcji [delegatów](delegates-patterns.md),?.
+ułatwia to zapewnienie, że nie próbujesz podnieść zdarzenia, gdy nie ma subskrybentów tego zdarzenia.
  
-Subskrybowanie zdarzenia przy użyciu `+=` operator:
+Subskrybujesz zdarzenie przy użyciu operatora `+=`:
 
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
@@ -69,17 +69,17 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-Metody obsługi zwykle jest prefiksem "On" następuje nazwa zdarzenia, jak pokazano powyżej.
+Metoda obsługi zazwyczaj jest prefiksem "on", po którym następuje nazwa zdarzenia, jak pokazano powyżej.
 
-Anulowanie subskrypcji przy użyciu `-=` operator:
+Anulowanie subskrypcji przy użyciu operatora `-=`:
 
 ```csharp
 fileLister.Progress -= onProgress;
 ```
 
-Należy zauważyć, że uznana za zmienną lokalną dla wyrażenia, który reprezentuje program obsługi zdarzeń. Dzięki temu usuwa Anuluj subskrypcję programu obsługi.
-Jeśli zamiast tego użyto treść wyrażenia lambda, którą chcesz usunąć program obsługi, który nigdy nie został dołączony, która nie wykonuje żadnych działań.
+Należy zauważyć, że zadeklarowano zmienną lokalną dla wyrażenia, które reprezentuje procedurę obsługi zdarzeń. Dzięki temu anulowanie subskrypcji spowoduje usunięcie programu obsługi.
+Jeśli zamiast tego użyto treści wyrażenia lambda, podjęto próbę usunięcia programu obsługi, który nigdy nie został dołączony, co nic nie robi.
 
-W następnym artykule dowiesz się więcej na temat zdarzeń typowych wzorców i różne odmiany w tym przykładzie.
+W następnym artykule dowiesz się więcej na temat typowych wzorców zdarzeń i różnej zmienności w tym przykładzie.
 
 [Next](event-pattern.md)

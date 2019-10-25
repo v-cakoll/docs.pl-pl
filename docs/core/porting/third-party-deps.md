@@ -2,28 +2,40 @@
 title: Analizowanie zależności w kodzie portu do programu .NET Core
 description: Dowiedz się, jak analizować zależności zewnętrzne w celu przenoszenia projektu z .NET Framework do programu .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: 36d1c1d2090a0fb9e6f48fe519d15897579df2d5
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5fa5a20e9a2b5427401835a0c1c6e1845d86c3ef
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521472"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798795"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Analizowanie zależności w kodzie portu do programu .NET Core
 
-Aby przenieść kod do programu .NET Core lub .NET Standard, musisz zrozumieć zależności. Zależności zewnętrzne to [pakiety NuGet](#analyze-referenced-nuget-packages-in-your-projects) lub [biblioteki DLL](#analyze-dependencies-that-arent-nuget-packages) , do których odwołuje się w projekcie, ale nie są kompilowane. Oceń każdą zależność i opracowuj plan awaryjny dla tych, które nie są zgodne z platformą .NET Core. Oto jak ustalić, czy zależność jest zgodna z platformą .NET Core.
+Aby przenieść kod do programu .NET Core lub .NET Standard, musisz zrozumieć zależności. Zależności zewnętrzne to pakiety NuGet lub `.dll`s, do których odwołuje się projekt, ale nie kompilujesz siebie.
 
-## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Analizowanie przywoływanych pakietów NuGet w projektach
+## <a name="migrate-your-nuget-packages-to-packagereference"></a>Migrowanie pakietów NuGet do `PackageReference`
 
-W przypadku odwoływania się do pakietów NuGet w projekcie należy sprawdzić, czy są one zgodne z platformą .NET Core.
-Istnieją dwa sposoby osiągnięcia tego:
+Program .NET Core używa [PackageReference](/nuget/consume-packages/package-references-in-project-files) , aby określić zależności pakietów. Jeśli używasz [pliku Packages. config](/nuget/reference/packages-config) do określania pakietów w projekcie, musisz przekonwertować go do formatu `PackageReference`, ponieważ `packages.config` nie jest obsługiwana w programie .NET Core.
 
-- [Korzystanie z aplikacji Eksplorator pakietów NuGet](#analyze-nuget-packages-using-nuget-package-explorer)
-- [Korzystanie z witryny nuget.org](#analyze-nuget-packages-using-nugetorg)
+Aby dowiedzieć się, jak przeprowadzić migrację, zobacz artykuł [Migrowanie z pliku Packages. config do PackageReference](/nuget/reference/migrate-packages-config-to-package-reference) .
 
-Po przeanalizowaniu pakietów, jeśli nie są zgodne z platformą .NET Core i są przeznaczone tylko dla .NET Framework, można sprawdzić, czy [.NET Framework tryb zgodności](#net-framework-compatibility-mode) może ułatwić proces przenoszenia.
+## <a name="upgrade-your-nuget-packages"></a>Uaktualnianie pakietów NuGet
+
+Po przeprowadzeniu migracji projektu do formatu `PackageReference` należy sprawdzić, czy pakiety są zgodne z platformą .NET Core.
+
+Najpierw Uaktualnij pakiety do najnowszej wersji. Można to zrobić za pomocą interfejsu użytkownika Menedżera pakietów NuGet w programie Visual Studio. Prawdopodobnie nowsze wersje zależności pakietu są już zgodne z platformą .NET Core.
+
+## <a name="analyze-your-package-dependencies"></a>Analizowanie zależności pakietu
+
+Jeśli nie zweryfikowano jeszcze, że przekonwertowane i uaktualnione zależności pakietów działają w programie .NET Core, istnieje kilka sposobów na osiągnięcie tego:
+
+### <a name="analyze-nuget-packages-using-nugetorg"></a>Analizowanie pakietów NuGet przy użyciu nuget.org
+
+Możesz zobaczyć monikery platformy docelowej (TFMs), które każdy pakiet obsługuje na [NuGet.org](https://www.nuget.org/) w sekcji **zależności** strony pakietu.
+
+Chociaż korzystanie z lokacji jest łatwiejsze w celu sprawdzenia zgodności, informacje o **zależnościach** nie są dostępne w lokacji dla wszystkich pakietów.
 
 ### <a name="analyze-nuget-packages-using-nuget-package-explorer"></a>Analizowanie pakietów NuGet przy użyciu Eksploratora pakietów NuGet
 
@@ -37,27 +49,7 @@ Najprostszym sposobem sprawdzenia folderów pakietów NuGet jest użycie narzęd
 4. Wybierz nazwę pakietu z wyników wyszukiwania, a następnie kliknij przycisk **Otwórz**.
 5. Rozwiń folder *lib* po prawej stronie i Sprawdź nazwy folderów.
 
-Poszukaj folderu z dowolną z następujących nazw:
-
-```
-netstandard1.0
-netstandard1.1
-netstandard1.2
-netstandard1.3
-netstandard1.4
-netstandard1.5
-netstandard1.6
-netstandard2.0
-netcoreapp1.0
-netcoreapp1.1
-netcoreapp2.0
-netcoreapp2.1
-netcoreapp2.2
-portable-net45-win8
-portable-win8-wpa8
-portable-net451-win81
-portable-net45-win8-wpa8-wpa81
-```
+Poszukaj folderu z nazwami przy użyciu jednego z następujących wzorców: `netstandardX.Y` lub `netcoreappX.Y`.
 
 Te wartości są [monikerami struktury docelowej (TFMs)](../../standard/frameworks.md) , które są mapowane na wersje [.NET Standard](../../standard/net-standard.md), .NET Core i tradycyjnych profilów biblioteki klas przenośnych (PCL), które są zgodne z platformą .NET Core.
 
@@ -65,15 +57,9 @@ Te wartości są [monikerami struktury docelowej (TFMs)](../../standard/framewor
 > Podczas przeglądania TFMs, który obsługuje pakiet, należy pamiętać, że `netcoreapp*`, chociaż jest zgodny, jest przeznaczony tylko dla projektów .NET Core, a nie dla projektów .NET Standard.
 > Biblioteka przeznaczona tylko dla `netcoreapp*` i nie `netstandard*` może być używana przez inne aplikacje platformy .NET Core.
 
-### <a name="analyze-nuget-packages-using-nugetorg"></a>Analizowanie pakietów NuGet przy użyciu nuget.org
+## <a name="net-framework-compatibility-mode"></a>.NET Framework tryb zgodności
 
-Alternatywnie można zobaczyć TFMs, że każdy pakiet obsługuje w [NuGet.org](https://www.nuget.org/) w sekcji **zależności** strony pakietu.
-
-Chociaż korzystanie z lokacji jest łatwiejsze w celu sprawdzenia zgodności, informacje o **zależnościach** nie są dostępne w lokacji dla wszystkich pakietów.
-
-### <a name="net-framework-compatibility-mode"></a>.NET Framework tryb zgodności
-
-Po przeanalizowaniu pakietów NuGet może się okazać, że są one przeznaczone tylko do .NET Framework, jak większość pakietów NuGet.
+Po przeanalizowaniu pakietów NuGet może się okazać, że są one przeznaczone tylko dla .NET Framework.
 
 Począwszy od .NET Standard 2,0, wprowadzono .NET Framework tryb zgodności. Ten tryb zgodności umożliwia projektom .NET Standard i .NET Core odwoływanie się do bibliotek .NET Framework. Odwoływanie się do bibliotek .NET Framework nie działa dla wszystkich projektów, takich jak jeśli biblioteka używa interfejsów API Windows Presentation Foundation (WPF), ale odblokowuje wiele scenariuszy przenoszenia.
 
@@ -92,12 +78,6 @@ Aby pominąć ostrzeżenie przez edytowanie pliku projektu, Znajdź wpis `Packag
 ```
 
 Aby uzyskać więcej informacji na temat pomijania ostrzeżeń kompilatora w programie Visual Studio, zobacz [pomijanie ostrzeżeń dla pakietów NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
-
-## <a name="port-your-packages-to-packagereference"></a>Przenoszenie pakietów do `PackageReference`
-
-Program .NET Core używa [PackageReference](/nuget/consume-packages/package-references-in-project-files) , aby określić zależności pakietów. Jeśli używasz [pliku Packages. config](/nuget/reference/packages-config) do określania pakietów, musisz przekonwertować go na `PackageReference`.
-
-Więcej informacji można znaleźć w części [Migrowanie z pliku Packages. config do PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Co zrobić, gdy zależność pakietu NuGet nie jest uruchamiana na platformie .NET Core
 

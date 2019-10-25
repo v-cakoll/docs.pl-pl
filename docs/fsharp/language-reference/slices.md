@@ -2,18 +2,18 @@
 title: WycinkiF#()
 description: Informacje na temat używania wycinków dla istniejących F# typów danych oraz sposobu definiowania własnych wycinków dla innych typów danych.
 ms.date: 01/22/2019
-ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cbff1b055ea99ef708f9db191be49275e630ee90
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627146"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798906"
 ---
 # <a name="slices"></a>Wycinki
 
-W F#programie wycinek jest podzbiorem typu danych. Aby można było uzyskać wycinka z typu danych, typ danych musi definiować `GetSlice` metodę lub w rozszerzeniu [typu](type-extensions.md) , który znajduje się w zakresie. W tym artykule wyjaśniono, jak korzystać z F# wycinków z istniejących typów i jak definiować własne.
+W F#programie wycinek jest podzbiorem typu danych. Aby można było uzyskać wycinka z typu danych, typ danych musi definiować metodę `GetSlice` lub w [rozszerzeniu typu](type-extensions.md) , który znajduje się w zakresie. W tym artykule wyjaśniono, jak korzystać z F# wycinków z istniejących typów i jak definiować własne.
 
-Wycinki są podobne [](./members/indexed-properties.md)do indeksatorów, ale zamiast zwracać jedną wartość z bazowej struktury danych, uzyskują wiele z nich.
+Wycinki są podobne do [indeksatorów](./members/indexed-properties.md), ale zamiast zwracać jedną wartość z bazowej struktury danych, uzyskują wiele z nich.
 
 F#obecnie ma wewnętrzną obsługę ciągów wycinków, list, tablic i tablic 2D.
 
@@ -89,19 +89,19 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-Biblioteka F# podstawowa nie definiuje `GetSlice`dla tablic 3W. Jeśli chcesz wyrównać te lub inne tablice o większej liczbie wymiarów, musisz samodzielnie `GetSlice` zdefiniować element członkowski.
+Biblioteka F# podstawowa nie definiuje`GetSlice`dla tablic 3W. Jeśli chcesz wyrównać te lub inne tablice o większej liczbie wymiarów, musisz samodzielnie zdefiniować element członkowski `GetSlice`.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definiowanie wycinków dla innych struktur danych
 
 Biblioteka F# podstawowa definiuje wycinki dla ograniczonego zestawu typów. Jeśli chcesz zdefiniować wycinki dla większej liczby typów danych, możesz to zrobić w samej definicji typu lub w rozszerzeniu typu.
 
-Na przykład poniżej przedstawiono sposób definiowania wycinków <xref:System.ArraySegment%601> klasy umożliwiającej wygodne manipulowanie danymi:
+Na przykład poniżej przedstawiono sposób definiowania wycinków dla klasy <xref:System.ArraySegment%601>, aby umożliwić manipulowanie danymi:
 
 ```fsharp
 open System
 
 type ArraySegment<'TItem> with
-    member segment.GetSlice(?start, ?finish) =
+    member segment.GetSlice(start, finish) =
         let start = defaultArg start 0
         let finish = defaultArg finish segment.Count
         ArraySegment(segment.Array, segment.Offset + start, finish - start)
@@ -112,7 +112,7 @@ let slice = arr.[2..5] //[ 3; 4; 5]
 
 ### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Użyj funkcji tworzenia konspektu, aby uniknąć pakowania, jeśli jest to konieczne
 
-W przypadku definiowania wycinków dla typu, który jest w rzeczywistości strukturą, zalecamy, aby `inline` użytkownik `GetSlice` był członkiem. F# Kompilator optymalizuje argumenty opcjonalne, unikając wszelkich alokacji sterty w wyniku wycinka. Jest to istotne znaczenie dla konstrukcji wycinków, takich jak <xref:System.Span%601> , których nie można przydzielić na stercie.
+W przypadku definiowania wycinków dla typu, który jest w rzeczywistości strukturą zaleca się `inline` członkiem `GetSlice`. F# Kompilator optymalizuje argumenty opcjonalne, unikając wszelkich alokacji sterty w wyniku wycinka. Jest to istotne znaczenie dla konstrukcji wycinków, takich jak <xref:System.Span%601>, których nie można przydzielić na stercie.
 
 ```fsharp
 open System

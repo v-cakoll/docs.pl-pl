@@ -1,54 +1,52 @@
 ---
-title: Kod portu z .NET Framework do programu .NET Core
+title: Port z .NET Framework do platformy .NET Core
 description: Poznaj proces przenoszenia i odnajdywanie narzędzi, które mogą okazać się przydatne podczas przenoszenia projektu .NET Framework do programu .NET Core.
 author: cartermp
-ms.date: 09/13/2019
+ms.date: 10/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: c349f7df3726e7a9814e5ad5e738742ab1bb9ff8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 0684be25cee6ae3f778e7134b4c3a29ac87caf25
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522990"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798808"
 ---
-# <a name="port-your-code-from-net-framework-to-net-core"></a>Przenoszenie kodu z .NET Framework do programu .NET Core
+# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Przegląd procesu przenoszenia z .NET Framework do platformy .NET Core
 
-Jeśli masz kod, który jest uruchamiany na .NET Framework, możesz chcieć również uruchomić kod na platformie .NET Core. Poniżej przedstawiono omówienie procesu przenoszenia i listy narzędzi, które mogą być przydatne podczas przenoszenia kodu do programu .NET Core.
+Być może masz kod, który jest obecnie uruchomiony na .NET Framework, które interesują się portem .NET Core. Ten artykuł zawiera następujące informacje:
+
+* Przegląd procesu przenoszenia.
+* Lista narzędzi, które mogą być przydatne podczas przenoszenia kodu do programu .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Przegląd procesu przenoszenia
 
-Jest to proces, który zalecamy podczas przenoszenia projektu do programu .NET Core. Każdy krok procesu został szczegółowo omówiony w dalszych artykułach.
+Zalecamy użycie następującego procesu podczas przenoszenia projektu do programu .NET Core:
 
-1. Zidentyfikuj i zapoznaj się z zależnościami innych firm.
-
-   Ten krok polega na zrozumieniu zależności od innych firm, sposobach ich zawieszania, sposobie sprawdzania, czy są one również uruchamiane na platformie .NET Core, oraz czynności, które można wykonać, jeśli nie. Opisano w nim również, jak można migrować zależności do formatu [PackageReference](/nuget/consume-packages/package-references-in-project-files) , który jest używany w programie .NET Core.
-
-2. Przekieruj wszystkie projekty, które chcesz przenieść, aby określić .NET Framework 4.7.2 lub wyższy.
+1. Przekieruj wszystkie projekty, które chcesz przenieść, aby określić .NET Framework 4.7.2 lub wyższy.
 
    Ten krok zapewnia, że można użyć alternatywnych interfejsów API dla konkretnych .NET Framework docelowych, gdy platforma .NET Core nie obsługuje określonego interfejsu API.
 
-3. Użyj [analizatora przenośności platformy .NET](../../standard/analyzers/portability-analyzer.md) do analizowania zestawów i opracowywania planu na potrzeby portów na podstawie jego wyników.
+2. Użyj [analizatora przenośności platformy .NET](../../standard/analyzers/portability-analyzer.md) do analizowania zestawów i sprawdź, czy są one przenośne do programu .NET Core.
 
-   Narzędzie analizatora przenośności API analizuje skompilowane zestawy i generuje raport, który pokazuje podsumowanie wysokiego poziomu przenośności oraz podział wszystkich używanych interfejsów API, które nie są dostępne na stronie publicznej platformy .NET Core. Możesz użyć tego raportu wraz z analizą bazy kodu, aby opracować plan na potrzeby przenoszenia kodu.
+   Narzędzie analizatora przenośności API analizuje skompilowane zestawy i generuje raport. Ten raport przedstawia podsumowanie wysokiego poziomu dotyczące przenoszenia i podział wszystkich używanych interfejsów API, które nie są dostępne w systemie NET Core.
 
-4. Gdy plik projektu zostanie przekonwertowany na wersję docelową platformy .NET Core, można użyć [analizatora API platformy .NET](../../standard/analyzers/api-analyzer.md) opartego na Roslyn, aby identyfikować interfejsy API, które zgłaszają <xref:System.PlatformNotSupportedException> na niektórych platformach i inne potencjalne problemy ze zgodnością.
+3. Zainstaluj [Analizator interfejsów API platformy .NET](../../standard/analyzers/api-analyzer.md) w swoich projektach, aby identyfikować interfejsy API zgłaszające <xref:System.PlatformNotSupportedException> na niektórych platformach oraz inne potencjalne problemy ze zgodnością.
 
-5. Przenoszenie kodu testów.
+   To narzędzie jest podobne do analizatora przenośności, ale zamiast analizowania, jeśli elementy mogą być kompilowane na platformie .NET Core, zostaną przeanalizowane, jeśli używasz interfejsu API w sposób, który będzie generować <xref:System.PlatformNotSupportedException> w czasie wykonywania. Chociaż nie jest to typowe w przypadku przechodzenia z .NET Framework 4.7.2 lub wyższym, warto sprawdzić.
 
-   Ponieważ przenoszenie do programu .NET Core jest taka znacząca zmiana w bazie kodu, zdecydowanie zaleca się przeprowadzenie testów do portu, dzięki czemu można uruchamiać testy podczas przenoszenia kodu do programu. MSTest, xUnit i NUnit obsługują platformę .NET Core.
+4. Przekonwertuj wszystkie zależności `packages.config` na format [PackageReference](/nuget/consume-packages/package-references-in-project-files) za pomocą [narzędzia konwersji w programie Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
-6. Wykonaj swój plan na potrzeby przenoszenia.
+   Ten krok obejmuje przekonwertowanie zależności ze starszego formatu `packages.config`. `packages.config` nie działa w oprogramowaniu .NET Core, dlatego ta konwersja jest wymagana, jeśli istnieją zależności pakietów.
 
-Poniższa lista zawiera narzędzia przydatne do użycia podczas procesu przenoszenia:
+5. Utwórz nowe projekty dla platformy .NET Core i skopiuj pliki źródłowe lub spróbuj skonwertować istniejący plik projektu za pomocą narzędzia.
 
-- Analizator przenośności .NET — [Narzędzie wiersza polecenia](https://github.com/Microsoft/dotnet-apiport/releases) lub [rozszerzenie programu Visual Studio](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), narzędzie, które może generować raport dotyczący sposobu, w jaki przenośny kod jest między .NET Framework i docelową platformą .NET Core. Raport zawiera podział zestawu na zestaw dla typu i interfejsów API, których brakuje na docelowej platformie .NET Core. Aby uzyskać więcej informacji, zobacz [Analizator przenośności platformy .NET](../../standard/analyzers/portability-analyzer.md). Zaleca się uruchomienie narzędzia analizatora przenośności platformy .NET przed rozpoczęciem przenoszenia, ponieważ ułatwi to zidentyfikowanie wszelkich luk w brakujących interfejsach API na określonej stronie publicznej platformy .NET.
-- Analizator interfejsu API platformy .NET — Analizator Roslyny, który odnajduje .NET Standard interfejs API, który zgłasza <xref:System.PlatformNotSupportedException> na niektórych platformach, wykrywa wywołania przestarzałych interfejsów API i odkryje inne potencjalne C# zagrożenia ze zgodnością dla interfejsów API na różnych platformach. Aby uzyskać więcej informacji, zobacz [.NET API Analyzer](../../standard/analyzers/api-analyzer.md). Ten analizator jest pomocny po utworzeniu projektu .NET Core, aby identyfikować różnice w działaniu środowiska uruchomieniowego na różnych platformach.
-- Wyszukiwanie pakietów wstecznych — [przydatna usługa sieci Web](https://packagesearch.azurewebsites.net) , która umożliwia wyszukiwanie typu i znajdowanie pakietów zawierających ten typ.
+   W przypadku programu .NET Core jest stosowany uproszczony (i różny) [Format pliku projektu](../tools/csproj.md) niż .NET Framework. Aby kontynuować, musisz przekonwertować pliki projektu w ten format.
 
-Ponadto możesz próbować przenieść mniejsze rozwiązania lub pojedyncze projekty do formatu pliku projektu .NET Core za pomocą narzędzia [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) .
+6. Port kodu testu.
 
-> [!WARNING]
-> CsprojToVs2017 jest narzędziem innej firmy. Nie ma gwarancji, że będzie ona działała we wszystkich projektach i może spowodować drobne zmiany w zachowaniu, od którego zależy. CsprojToVs2017 powinien być używany jako _punkt wyjścia_ , który automatyzuje podstawowe elementy, które mogą być zautomatyzowane. Nie jest to gwarantowane rozwiązanie do migrowania formatów plików projektu.
+   Ponieważ przenoszenie do programu .NET Core jest taka znacząca zmiana w bazie kodu, zdecydowanie zaleca się przeprowadzenie testów do portu, dzięki czemu można uruchamiać testy podczas przenoszenia kodu do programu. MSTest, xUnit i NUnit działają na platformie .NET Core.
+
+Ponadto możesz próbować przenieść mniejsze rozwiązania lub pojedyncze projekty do formatu pliku projektu .NET Core za pomocą narzędzia [dotnet try-Convert](https://github.com/dotnet/try-convert) w ramach jednej operacji. `dotnet try-convert` nie jest guaranteedto dla wszystkich projektów i może spowodować drobne zmiany w zachowaniu, które mogą się okazać zależne. Powinien być używany jako _punkt wyjścia_ , który automatyzuje podstawowe elementy, które mogą być zautomatyzowane. Nie jest to gwarantowane rozwiązanie do migracji projektu.
 
 >[!div class="step-by-step"]
 >[Next](net-framework-tech-unavailable.md)

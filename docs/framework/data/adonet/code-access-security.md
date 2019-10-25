@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 6340bc3fb2291601ba2a9812e0a438839f0718bc
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 41a0885f828e45e1216805533a977fc3d5eaf5cb
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971817"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798892"
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje zabezpieczenia oparte na rolach, a także zabezpieczenia dostępu kodu (CAS), które są implementowane przy użyciu wspólnej infrastruktury dostarczanej przez środowisko uruchomieniowe języka wspólnego (CLR). W świecie kodu niezarządzanego większość aplikacji jest wykonywanych z uprawnieniami użytkownika lub podmiotu zabezpieczeń. W związku z tym systemy komputerowe mogą być uszkodzone, a dane prywatne zostały naruszone, gdy złośliwe lub błędne oprogramowanie jest uruchamiane przez użytkownika z podniesionymi uprawnieniami.  
@@ -27,16 +27,16 @@ ms.locfileid: "70971817"
   
  Istnieją trzy typy uprawnień dostępu kodu:  
   
-- `Code access permissions`pochodny od <xref:System.Security.CodeAccessPermission> klasy. Uprawnienia są wymagane w celu uzyskania dostępu do chronionych zasobów, takich jak pliki i zmienne środowiskowe, oraz do wykonywania operacji chronionych, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
+- `Code access permissions` pochodzić od klasy <xref:System.Security.CodeAccessPermission>. Uprawnienia są wymagane w celu uzyskania dostępu do chronionych zasobów, takich jak pliki i zmienne środowiskowe, oraz do wykonywania operacji chronionych, takich jak uzyskiwanie dostępu do kodu niezarządzanego.  
   
-- `Identity permissions`reprezentuje charakterystykę identyfikującą zestaw. Uprawnienia są przyznawane zestawowi w oparciu o dowód, który może zawierać elementy, takie jak podpis cyfrowy lub kod pochodzący z programu. Uprawnienia tożsamości pochodzą także od <xref:System.Security.CodeAccessPermission> klasy bazowej.  
+- `Identity permissions` reprezentuje charakterystykę identyfikującą zestaw. Uprawnienia są przyznawane zestawowi w oparciu o dowód, który może zawierać elementy, takie jak podpis cyfrowy lub kod pochodzący z programu. Uprawnienia tożsamości pochodzą także od klasy bazowej <xref:System.Security.CodeAccessPermission>.  
   
-- `Role-based security permissions`są zależne od tego, czy podmiot zabezpieczeń ma określoną tożsamość, czy jest członkiem określonej roli. <xref:System.Security.Permissions.PrincipalPermission> Klasa umożliwia zarówno deklaratywne, jak i bezwzględne sprawdzanie uprawnień względem aktywnego podmiotu zabezpieczeń.  
+- `Role-based security permissions` są zależne od tego, czy podmiot zabezpieczeń ma określoną tożsamość, czy jest członkiem określonej roli. Klasa <xref:System.Security.Permissions.PrincipalPermission> umożliwia zarówno deklaratywne, jak i bezwzględne sprawdzanie uprawnień względem aktywnego podmiotu zabezpieczeń.  
   
- Aby ustalić, czy kod jest autoryzowany do uzyskania dostępu do zasobu lub wykonywania operacji, system zabezpieczeń środowiska uruchomieniowego przechodzi przez stos wywołań, porównując przyznane uprawnienia każdego wywołującego z wymaganym uprawnieniem. Jeśli jakikolwiek obiekt wywołujący w stosie wywołań nie ma wymaganego uprawnienia, <xref:System.Security.SecurityException> zgłaszany jest wyjątek i dostęp zostaje odrzucony.  
+ Aby ustalić, czy kod jest autoryzowany do uzyskania dostępu do zasobu lub wykonywania operacji, system zabezpieczeń środowiska uruchomieniowego przechodzi przez stos wywołań, porównując przyznane uprawnienia każdego wywołującego z wymaganym uprawnieniem. Jeśli jakikolwiek obiekt wywołujący w stosie wywołań nie ma wymaganego uprawnienia, zostanie zgłoszony <xref:System.Security.SecurityException> i nastąpiła odmowa dostępu.  
   
 ### <a name="requesting-permissions"></a>Żądanie uprawnień  
- Celem żądania uprawnień jest informowanie środowiska uruchomieniowego o uprawnieniach wymaganych przez aplikację w celu ich uruchomienia i upewnienia się, że otrzymuje tylko uprawnienia, których rzeczywiście potrzebuje. Na przykład, jeśli aplikacja wymaga zapisu danych na dysku lokalnym, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli to uprawnienie nie zostało przyznane, aplikacja zakończy się niepowodzeniem podczas próby zapisu na dysku. Jeśli jednak aplikacja nie udzieliła `FileIOPermission` żądań, a to uprawnienie nie zostało przyznane, aplikacja będzie generować wyjątek na początku i nie będzie ładować.  
+ Celem żądania uprawnień jest informowanie środowiska uruchomieniowego o uprawnieniach wymaganych przez aplikację w celu ich uruchomienia i upewnienia się, że otrzymuje tylko uprawnienia, których rzeczywiście potrzebuje. Na przykład, jeśli aplikacja wymaga zapisu danych na dysku lokalnym, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli to uprawnienie nie zostało przyznane, aplikacja zakończy się niepowodzeniem podczas próby zapisu na dysku. Jeśli jednak aplikacja zażąda `FileIOPermission` i to uprawnienie nie zostało przyznane, aplikacja będzie generować wyjątek na początku i nie będzie ładować.  
   
  W scenariuszu, w którym aplikacja musi tylko odczytywać dane z dysku, można zażądać, aby nigdy nie mieć uprawnień do zapisu. W przypadku usterki lub złośliwego ataku kod nie może uszkodzić danych, na których działa. Aby uzyskać więcej informacji, zobacz [żądanie uprawnień](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).  
   
@@ -58,27 +58,27 @@ ms.locfileid: "70971817"
  Silne nazewnictwo zestawu daje aplikacji lub składnikowi unikatową tożsamość, która może być używana przez inne oprogramowanie do jawnego odwoływania się do niego. Zestawy chroniące silne nazewnictwo przed fałszowaniem przez zestaw, który zawiera kod nieszkodliwy. Silne nazewnictwo zapewnia także spójność wersji między różnymi wersjami składnika. Należy wdrożyć zestawy o silnych nazwach, które zostaną wdrożone w globalnej pamięci podręcznej zestawów (GAC). Aby uzyskać więcej informacji, zobacz [Tworzenie i używanie zestawów o silnej nazwie](../../../standard/assembly/create-use-strong-named.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Częściowe zaufanie w ADO.NET 2,0  
- W ADO.NET 2,0 Dostawca danych .NET Framework, SQL Server .NET Framework Dostawca danych dla OLE DB, .NET Framework dostawca danych dla ODBC, a .NET Framework dostawca danych dla programu Oracle można teraz uruchamiać w częściowo zaufanych środowiskach. W poprzednich wersjach .NET Framework były obsługiwane tylko <xref:System.Data.SqlClient> w mniej niż aplikacje w pełni zaufane.  
+ W ADO.NET 2,0 Dostawca danych .NET Framework, SQL Server .NET Framework Dostawca danych dla OLE DB, .NET Framework dostawca danych dla ODBC, a .NET Framework dostawca danych dla programu Oracle można teraz uruchamiać w częściowo zaufanych środowiskach. W poprzednich wersjach .NET Framework tylko <xref:System.Data.SqlClient> były obsługiwane w mniej niż aplikacje w pełni zaufane.  
   
- Co najmniej częściowo zaufana Aplikacja korzystająca z dostawcy SQL Server musi mieć uprawnienia wykonywania <xref:System.Data.SqlClient.SqlClientPermission> i uprawnień.  
+ Co najmniej częściowo zaufana Aplikacja korzystająca z dostawcy SQL Server musi mieć uprawnienia wykonywanie i <xref:System.Data.SqlClient.SqlClientPermission>.  
   
 ### <a name="permission-attribute-properties-for-partial-trust"></a>Właściwości atrybutu uprawnienia dla częściowej relacji zaufania  
- W przypadku scenariuszy częściowej relacji zaufania można <xref:System.Data.SqlClient.SqlClientPermissionAttribute> użyć elementów członkowskich, aby dodatkowo ograniczyć możliwości dostępne dla dostawca danych .NET Framework SQL Server.  
+ W przypadku scenariuszy częściowej relacji zaufania można użyć elementów członkowskich <xref:System.Data.SqlClient.SqlClientPermissionAttribute>, aby dodatkowo ograniczyć możliwości dostępne dla .NET Framework Dostawca danych SQL Server.  
   
- W poniższej tabeli wymieniono dostępne <xref:System.Data.SqlClient.SqlClientPermissionAttribute> właściwości i ich opisy:  
+ Poniższa tabela zawiera listę dostępnych właściwości <xref:System.Data.SqlClient.SqlClientPermissionAttribute> i ich opisy:  
   
 |Właściwość atrybutu uprawnienia|Opis|  
 |-----------------------------------|-----------------|  
 |`Action`|Pobiera lub ustawia akcję zabezpieczeń. Dziedziczone z <xref:System.Security.Permissions.SecurityAttribute>.|  
-|`AllowBlankPassword`|Włącza lub wyłącza użycie pustego hasła w parametrach połączenia. Prawidłowe wartości to `true` (aby umożliwić korzystanie z pustych haseł) i `false` (Aby wyłączyć używanie pustych haseł). Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`AllowBlankPassword`|Włącza lub wyłącza użycie pustego hasła w parametrach połączenia. Prawidłowe wartości to `true` (aby umożliwić korzystanie z pustych haseł) i `false` (Aby wyłączyć korzystanie z pustych haseł). Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|Identyfikuje dozwolone parametry połączenia. Można zidentyfikować wiele parametrów połączenia. **Uwaga:**  W parametrach połączenia nie należy umieszczać identyfikatora użytkownika ani hasła. W tej wersji nie można zmienić ograniczeń parametrów połączenia za pomocą narzędzia konfiguracji .NET Framework. <br /><br /> Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Określa parametry parametrów połączenia, które są dozwolone lub niedozwolone. Parametry parametrów połączenia są identyfikowane w  *\<nazwie parametru formularza > =* . Można określić wiele parametrów, rozdzielając je przy użyciu średnika (;). **Uwaga:**  Jeśli nie określisz `KeyRestrictions`, ale ustawisz `KeyRestrictionBehavior` właściwość na `AllowOnly` lub `PreventUsage`, nie są dozwolone dodatkowe parametry parametrów połączenia. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Identyfikuje parametry parametrów połączenia jako jedyne dozwolone dodatkowe parametry (`AllowOnly`) lub identyfikuje dodatkowe parametry, które nie są dozwolone (`PreventUsage`). `AllowOnly`jest wartością domyślną. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Określa parametry parametrów połączenia, które są dozwolone lub niedozwolone. Parametry parametrów połączenia są identyfikowane w postaci *\<Nazwa parametru > =* . Można określić wiele parametrów, rozdzielając je przy użyciu średnika (;). **Uwaga:**  Jeśli nie określisz `KeyRestrictions`, ale ustawisz właściwość `KeyRestrictionBehavior` na `AllowOnly` lub `PreventUsage`, nie są dozwolone dodatkowe parametry parametrów połączenia. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Identyfikuje parametry parametrów połączenia jako jedyne dodatkowe parametry dozwolone (`AllowOnly`) lub identyfikuje dodatkowe parametry, które nie są dozwolone (`PreventUsage`). `AllowOnly` jest wartością domyślną. Dziedziczone z <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Pobiera unikatowy identyfikator dla tego atrybutu, gdy jest zaimplementowany w klasie pochodnej. Dziedziczone z <xref:System.Attribute>.|  
 |`Unrestricted`|Wskazuje, czy nieograniczone uprawnienia do zasobu są zadeklarowane. Dziedziczone z <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Składnia ConnectionString  
- Poniższy przykład pokazuje, `connectionStrings` jak używać elementu pliku konfiguracji, aby zezwalać na użycie tylko określonych parametrów połączenia. Zobacz [parametry połączeń](connection-strings.md) , aby uzyskać więcej informacji na temat przechowywania i pobierania parametrów połączenia z plików konfiguracji.  
+ Poniższy przykład ilustruje sposób użycia elementu `connectionStrings` w pliku konfiguracji, aby zezwolić na użycie tylko określonych parametrów połączenia. Zobacz [parametry połączeń](connection-strings.md) , aby uzyskać więcej informacji na temat przechowywania i pobierania parametrów połączenia z plików konfiguracji.  
   
 ```xml  
 <connectionStrings>  
@@ -89,7 +89,7 @@ ms.locfileid: "70971817"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>Składnia ograniczeń dla  
- Poniższy przykład włącza te same parametry połączenia, umożliwia korzystanie z `Encrypt` opcji i `Packet Size` parametrów połączenia, ale ogranicza użycie innych opcji parametrów połączenia.  
+ Poniższy przykład włącza te same parametry połączenia, umożliwia korzystanie z opcji parametrów połączenia `Encrypt` i `Packet Size`, ale ogranicza użycie innych opcji parametrów połączenia.  
   
 ```xml  
 <connectionStrings>  
@@ -102,7 +102,7 @@ ms.locfileid: "70971817"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-preventusage-syntax"></a>KeyRestrictionBehavior z składnią PreventUsage  
- W poniższym przykładzie są włączane te same parametry połączenia i można je wszystkie inne parametrów `User Id`połączenia `Password` z `Persist Security Info`wyjątkiem dla i.  
+ W poniższym przykładzie są włączane te same parametry połączenia i są dla nich polaczenie inne, z wyjątkiem `User Id`, `Password` i `Persist Security Info`.  
   
 ```xml  
 <connectionStrings>  
@@ -115,7 +115,7 @@ ms.locfileid: "70971817"
 ```  
   
 #### <a name="keyrestrictionbehavior-with-allowonly-syntax"></a>KeyRestrictionBehavior z składnią AllowOnly  
- Poniższy przykład włącza dwa parametry połączenia, które zawierają `Initial Catalog`również parametry, `Encrypt` `Connection Timeout`, i `Packet Size` . Wszystkie inne parametry parametrów połączenia są ograniczone.  
+ W poniższym przykładzie są włączane dwa parametry połączenia, które zawierają również `Initial Catalog`, `Connection Timeout`, `Encrypt`i `Packet Size` parametrów. Wszystkie inne parametry parametrów połączenia są ograniczone.  
   
 ```xml  
 <connectionStrings>  
@@ -136,7 +136,7 @@ ms.locfileid: "70971817"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Włączanie częściowej relacji zaufania z niestandardowym zestawem uprawnień  
- Aby umożliwić korzystanie z <xref:System.Data.SqlClient> uprawnień dla określonej strefy, administrator systemu musi utworzyć niestandardowy zestaw uprawnień i ustawić go jako uprawnienie ustawione dla określonej strefy. Domyślne zestawy uprawnień, takie jak `LocalIntranet`, nie mogą być modyfikowane. <xref:System.Data.SqlClient> Na przykład aby uwzględnić uprawnienia dla kodu, który <xref:System.Security.Policy.Zone> ma `LocalIntranet`, administrator systemu może skopiować zestaw uprawnień dla `LocalIntranet`, zmienić nazwę na "CustomLocalIntranet", dodać <xref:System.Data.SqlClient> uprawnienia, zaimportować uprawnienie CustomLocalIntranet ustawia się za pomocą [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../tools/caspol-exe-code-access-security-policy-tool.md)i ustawia zestaw `LocalIntranet_Zone` uprawnień do CustomLocalIntranet.  
+ Aby umożliwić korzystanie z <xref:System.Data.SqlClient> uprawnień dla określonej strefy, administrator systemu musi utworzyć niestandardowy zestaw uprawnień i ustawić go jako uprawnienie ustawione dla określonej strefy. Domyślne zestawy uprawnień, takie jak `LocalIntranet`, nie mogą być modyfikowane. Aby na przykład uwzględnić uprawnienia <xref:System.Data.SqlClient> dla kodu, który ma <xref:System.Security.Policy.Zone> `LocalIntranet`, administrator systemu może skopiować zestaw uprawnień dla `LocalIntranet`, zmienić jego nazwę na "CustomLocalIntranet", dodać uprawnienia <xref:System.Data.SqlClient>, zaimportować CustomLocalIntranet zestaw uprawnień przy użyciu [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../../tools/caspol-exe-code-access-security-policy-tool.md)i ustaw zestaw uprawnień `LocalIntranet_Zone` na CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Przykładowy zestaw uprawnień  
  Poniżej znajduje się przykładowy zestaw uprawnień dla Dostawca danych .NET Framework w przypadku SQL Server w częściowo zaufanym scenariuszu. Aby uzyskać informacje na temat tworzenia niestandardowych zestawów uprawnień, zobacz [konfigurowanie zestawów uprawnień przy użyciu Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
@@ -160,15 +160,15 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Weryfikowanie dostępu kodu ADO.NET przy użyciu uprawnień zabezpieczeń  
- W przypadku scenariuszy częściowej relacji zaufania można wymagać uprawnień urzędów certyfikacji dla określonych metod w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>a. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami, przed uruchomieniem kodu zostanie zgłoszony wyjątek. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, Zobacz najlepsze rozwiązania dotyczące [zarządzania zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) i [zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
+ W przypadku scenariuszy częściowej relacji zaufania można wymagać uprawnień urzędów certyfikacji dla określonych metod w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie nie jest dozwolone przez zasady zabezpieczeń z ograniczeniami, przed uruchomieniem kodu zostanie zgłoszony wyjątek. Aby uzyskać więcej informacji na temat zasad zabezpieczeń, Zobacz najlepsze rozwiązania dotyczące [zarządzania zasadami zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) i [zasad zabezpieczeń](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
   
 ### <a name="example"></a>Przykład  
- Poniższy przykład ilustruje sposób pisania kodu, który wymaga określonych parametrów połączenia. Symuluje odrzucanie nieograniczonych uprawnień <xref:System.Data.SqlClient>do, które mogą zostać wdrożone przez administratora systemu przy użyciu zasad CAS w świecie rzeczywistym.  
+ Poniższy przykład ilustruje sposób pisania kodu, który wymaga określonych parametrów połączenia. Symuluje odrzucanie nieograniczonych uprawnień do <xref:System.Data.SqlClient>, które mogą zostać wdrożone przez administratora systemu przy użyciu zasad CAS w świecie rzeczywistym.  
   
 > [!IMPORTANT]
 > Podczas projektowania uprawnień urzędów certyfikacji dla ADO.NET, prawidłowym wzorcem jest rozpoczęcie od najbardziej restrykcyjnego przypadku (bez uprawnień w ogóle), a następnie dodanie określonych uprawnień, które są wymagane dla konkretnego zadania, które kod musi wykonać. Wzorzec odwrotny, zaczynający się od wszystkich uprawnień, a następnie odmawiający określonego uprawnienia, nie jest zabezpieczony, ponieważ istnieje wiele sposobów wyrażania tych samych parametrów połączenia. Jeśli na przykład zaczniesz korzystać z wszystkich uprawnień, a następnie spróbujesz odrzucić użycie parametrów połączenia "serwer = someserver", ciąg "Server = someserver. webcompany. com" nadal będzie dozwolony. Zawsze, gdy w ogóle nie przyznano żadnych uprawnień, zmniejszasz prawdopodobieństwo wystąpienia w zestawie uprawnień.  
   
- Poniższy kod demonstruje, jak `SqlClient` program wykonuje żądanie zabezpieczeń, które <xref:System.Security.SecurityException> zgłasza, czy nie są odpowiednie uprawnienia do urzędów certyfikacji. <xref:System.Security.SecurityException> Dane wyjściowe są wyświetlane w oknie konsoli.  
+ Poniższy kod ilustruje, w jaki sposób `SqlClient` wykonuje żądanie zabezpieczeń, które zgłasza <xref:System.Security.SecurityException> w przypadku braku odpowiednich uprawnień CAS. Dane wyjściowe <xref:System.Security.SecurityException> są wyświetlane w oknie konsoli.  
   
  [!code-csharp[DataWorks SqlClient.CAS#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.CAS#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.CAS/VB/source.vb#1)]  
@@ -192,7 +192,7 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  Kod, który jest uruchamiany poza środowiskiem CLR, jest nazywany kodem niezarządzanym. Z tego względu mechanizmy zabezpieczeń, takie jak urzędy certyfikacji, nie mogą być stosowane do kodu niezarządzanego. Składniki COM, interfejsy ActiveX i funkcje interfejsu API systemu Windows to przykłady kodu niezarządzanego. Specjalne kwestie dotyczące zabezpieczeń są stosowane podczas wykonywania kodu niezarządzanego, aby nie zagrażać ogólnym zabezpieczeniom aplikacji. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../interop/index.md).  
   
- .NET Framework obsługuje również zgodność z poprzednimi wersjami z istniejącymi składnikami COM przez zapewnienie dostępu za pomocą międzyoperacyjności modelu COM. Składniki COM można dołączać do aplikacji .NET Framework przy użyciu narzędzi międzyoperacyjnych modelu COM do importowania odpowiednich typów COM. Po zaimportowaniu typy COM są gotowe do użycia. Współdziałanie modelu COM umożliwia również klientom COM dostęp do kodu zarządzanego przez wyeksportowanie metadanych zestawu do biblioteki typów i zarejestrowanie składnika zarządzanego jako składnika modelu COM. Aby uzyskać więcej informacji, zobacz [Zaawansowane współdziałanie com](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ .NET Framework obsługuje również zgodność z poprzednimi wersjami z istniejącymi składnikami COM przez zapewnienie dostępu za pomocą międzyoperacyjności modelu COM. Składniki COM można dołączać do aplikacji .NET Framework przy użyciu narzędzi międzyoperacyjnych modelu COM do importowania odpowiednich typów COM. Po zaimportowaniu typy COM są gotowe do użycia. Współdziałanie modelu COM umożliwia również klientom COM dostęp do kodu zarządzanego przez wyeksportowanie metadanych zestawu do biblioteki typów i zarejestrowanie składnika zarządzanego jako składnika modelu COM. Aby uzyskać więcej informacji, zobacz [Zaawansowane współdziałanie com](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz także
 

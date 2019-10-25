@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 12e41a3bca981d04f7b29970eba1f737254f2b58
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
+ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579134"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798923"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -28,7 +28,7 @@ C#8,0 dodaje do C# języka następujące funkcje i ulepszenia:
 - [Indeksy i zakresy](#indices-and-ranges)
 - [Przypisanie do łączenia o wartości null](#null-coalescing-assignment)
 - [Niezarządzane typy skonstruowane](#unmanaged-constructed-types)
-- [stackalloc w wyrażeniach zagnieżdżonych](#stackalloc-in-nested-expressions)
+- [Stackalloc w wyrażeniach zagnieżdżonych](#stackalloc-in-nested-expressions)
 - [Ulepszenie interpolowanych ciągów Verbatim](#enhancement-of-interpolated-verbatim-strings)
 
 W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są dostępne szczegółowe artykuły, znajdują się linki do samouczków i przeglądów. Te funkcje można eksplorować w środowisku przy użyciu narzędzia globalnego `dotnet try`:
@@ -73,7 +73,9 @@ Kompilator ostrzega o tym, gdy musi utworzyć kopię obronną.  Właściwość `
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Należy zauważyć, że modyfikator `readonly` jest konieczny dla właściwości tylko do odczytu. Kompilator nie zakłada, że metody dostępu `get` nie modyfikują stanu; należy zadeklarować jawnie `readonly`. Kompilator wymusza zasadę, której elementy członkowskie `readonly` nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że zostanie usunięty modyfikator `readonly`:
+Należy zauważyć, że modyfikator `readonly` jest konieczny dla właściwości tylko do odczytu. Kompilator nie zakłada, że metody dostępu `get` nie modyfikują stanu; należy zadeklarować jawnie `readonly`. Zaimplementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie zaimplementowane metody pobierające jako tylko do odczytu, więc nie ma potrzeby dodawania modyfikatora `readonly` do właściwości `X` i `Y`.
+
+Kompilator wymusza zasadę, której elementy członkowskie `readonly` nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że zostanie usunięty modyfikator `readonly`:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -400,7 +402,7 @@ Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 - <xref:System.Range?displayProperty=nameWithType> reprezentuje Podzakres sekwencji.
 - Operator zakresu `..`, który określa początek i koniec zakresu jako jego operandy.
 
-Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` generuje wyjątek, tak jak `sequence[sequence.Length]`. Dla dowolnej liczby `n` indeks `^n` jest taka sama jak `sequence.Length - n`.
+Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` generuje wyjątek, tak jak `sequence[sequence.Length]`. Dla dowolnej liczby `n`indeks `^n` jest taka sama jak `sequence.Length - n`.
 
 Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres.
 
@@ -435,7 +437,7 @@ Poniższy kod tworzy Podzakres słowami "Quick", "brązowy" i "Fox". Zawiera `wo
 var quickBrownFox = words[1..4];
 ```
 
-Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Zawiera `words[^2]` i `words[^1]`. @No__t_0 indeksu końcowego nie jest uwzględniony:
+Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Zawiera `words[^2]` i `words[^1]`. `words[^0]` indeksu końcowego nie jest uwzględniony:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -461,7 +463,7 @@ Zakres może być następnie używany wewnątrz `[` i `]` znaków:
 var text = words[phrase];
 ```
 
-Nie tylko tablice obsługują indeksy i zakresy. Można również użyć indeksów i zakresów z [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601> lub <xref:System.ReadOnlySpan%601>. Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
+Nie tylko tablice obsługują indeksy i zakresy. Można również użyć indeksów i zakresów z [ciągiem](../language-reference/builtin-types/reference-types.md#the-string-type), <xref:System.Span%601>lub <xref:System.ReadOnlySpan%601>. Aby uzyskać więcej informacji, zobacz [Obsługa typów indeksów i zakresów](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges).
 
 Więcej informacji o indeksach i zakresach można dowiedzieć się w samouczku dotyczącym [indeksów i zakresów](../tutorials/ranges-indexes.md).
 
@@ -512,7 +514,7 @@ Aby uzyskać więcej informacji, zobacz [typy niezarządzane](../language-refere
 
 ## <a name="stackalloc-in-nested-expressions"></a>stackalloc w wyrażeniach zagnieżdżonych
 
-Rozpoczynając od C# 8,0, jeśli wynik wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) ma typ <xref:System.Span%601?displayProperty=nameWithType> lub <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, można użyć wyrażenia `stackalloc` w innych wyrażeniach:
+Rozpoczynając od C# 8,0, jeśli wynik wyrażenia [stackalloc](../language-reference/operators/stackalloc.md) ma typ<xref:System.Span%601?displayProperty=nameWithType>lub<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, można użyć wyrażenia`stackalloc`w innych wyrażeniach:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };

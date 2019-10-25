@@ -10,12 +10,12 @@ ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
-ms.openlocfilehash: 809ac026244b24aee69ec0d6c40c10a1248c234c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 4b47847e9d6e9424d4442d655c40a637383c7229
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579117"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72847078"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Dodatkowe biblioteki klas i interfejsy API
 
@@ -57,18 +57,22 @@ Te interfejsy API obsługują infrastrukturę produktu i nie są przeznaczone do
 * [System. Data. SqlTypes. SqlStreamChars. SetLength — Metoda](system.data.sqltypes.sqlstreamchars.setlength.md)
 * [System. Data. SqlTypes. SqlStreamChars. Write — Metoda](system.data.sqltypes.sqlstreamchars.write.md)
 * [System .NET. Connection — Klasa](connection.md)
-* [Pole System .NET. Connection. m \_WriteList](m_writelist.md)
+* [System .NET. Connection. m\_pole WriteList](m_writelist.md)
 * [System .NET. Connection — Klasa](connectiongroup.md)
-* [System .NET. Connections. m \_ConnectionList pole](m_connectionlist.md)
+* [System .NET. Connections. m\_pole ConnectionList](m_connectionlist.md)
+* [Właściwość system .NET. ConnectStream. Connection](system.net.connectstream.connection.md)
 * [System .NET. CoreResponseData, Klasa](coreresponsedata.md)
-* [Pole System .NET. CoreResponseData. m \_ResponseHeaders](coreresponsedata_m_responseheaders.md)
-* [Pole System .NET. CoreResponseData. m \_StatusCode](coreresponsedata_m_statuscode.md)
-* [Pole System .NET. HttpWebRequest. \_AutoRedirects](_autoredirects.md)
-* [Pole System .NET. HttpWebRequest. \_CoreResponse](httpwebrequest__coreresponse.md)
-* [Pole System .NET. HttpWebRequest. \_HttpResponse](_httpresponse.md)
-* [Pole System .NET. ServicePoint. m \_ConnectionGroupList](m_connectiongrouplist.md)
-* [Pole \_ServicePointTable systemu .NET. ServicePointManager. s](s_servicepointtable.md)
-* [Pole System. Windows. Diagnostics. VisualDiagnostics. s \_isDebuggerCheckDisabledForTestPurposes](s-isdebuggercheckdisabledfortestpurposes-field.md)
+* [Pole System .NET. CoreResponseData. m\_ResponseHeaders](coreresponsedata_m_responseheaders.md)
+* [System .NET. CoreResponseData. m\_pole StatusCode](coreresponsedata_m_statuscode.md)
+* [Pole System .NET. HttpWebRequest.\_autoredirects](_autoredirects.md)
+* [Pole System .NET. HttpWebRequest.\_CoreResponse](httpwebrequest__coreresponse.md)
+* [Pole System .NET. HttpWebRequest.\_HttpResponse](_httpresponse.md)
+* [System .NET. PooledStream. NetworkStream — Właściwość](system.net.pooledstream.networkstream.md)
+* [Pole System .NET. ServicePoint. m\_ConnectionGroupList](m_connectiongrouplist.md)
+* [System .NET. ServicePointManager. s\_pole ServicePoint](s_servicepointtable.md)
+* [Pole System .NET. TlsStream. m_Worker](system.net.tlsstream.m_worker.md)
+* [System .NET. Security. SslState. SslProtocol — Właściwość](system.net.security.sslstate.sslprotocol.md)
+* [System. Windows. Diagnostics. VisualDiagnostics. s\_isDebuggerCheckDisabledForTestPurposes pole](s-isdebuggercheckdisabledfortestpurposes-field.md)
 * [System. Windows. Forms. Design. DataMemberFieldEditor — Klasa](datamemberfieldeditor-class.md)
 * [System. Windows. Forms. Design. Datamemberfieldeditor — Klasa](datamemberlisteditor-class.md)
 * [System. XML. XmlReader. CreateSqlReader — Metoda](system.xml.xmlreader.createsqlreader.md)

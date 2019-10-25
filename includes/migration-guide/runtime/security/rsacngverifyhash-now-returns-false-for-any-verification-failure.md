@@ -1,19 +1,18 @@
 ---
-ms.openlocfilehash: 7d60578ac2913037e1cdeda329f06f9a4986574d
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: fc315faef750d93d914104dd568078aa3fc430d4
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67857515"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72887816"
 ---
-### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>Jakiekolwiek niepowodzenie weryfikacji RSACng.VerifyHash teraz zwraca wartość False
+### <a name="rsacngverifyhash-now-returns-false-for-any-verification-failure"></a>RSACng. VerifyHash teraz zwraca wartość false dla dowolnego błędu weryfikacji
 
 |   |   |
 |---|---|
-|Szczegóły|Począwszy od programu .NET Framework 4.6.2, Metoda ta zwraca <strong>False</strong> jeśli sam podpis jest źle sformatowany. Obecnie zwraca wartość false dla jakiekolwiek niepowodzenie weryfikacji. W .NET Framework 4.6 i 4.6.1, metoda zgłasza <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> jeśli sam podpis jest źle sformatowany.|
-|Sugestia|Jakiegokolwiek kodu, których wykonanie zależy od obsługi <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> zamiast tego powinien zostać wykonany, jeśli weryfikacja zakończy się niepowodzeniem i metoda zwraca <strong>False</strong>.|
-|Scope|Mały|
+|Szczegóły|Rozpoczynając od .NET Framework 4.6.2, ta metoda zwraca **wartość false** , jeśli podpis jest nieprawidłowo sformatowany. Teraz zwraca wartość false dla dowolnego błędu weryfikacji. W .NET Framework 4,6 i 4.6.1 Metoda zgłasza <xref:System.Security.Cryptography.CryptographicException?displayProperty=name>, jeśli podpis jest nieprawidłowo sformatowany.|
+|Sugestia|Każdy kod, którego wykonywanie zależy od obsługi <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> należy zamiast tego wykonać, jeśli Walidacja nie powiedzie się, a metoda zwróci **wartość false**.|
+|Zakres|Mały|
 |Wersja|4.6.2|
 |Typ|Środowisko uruchomieniowe|
 |Dotyczy interfejsów API|<ul><li><xref:System.Security.Cryptography.RSACng.VerifyHash(System.Byte[],System.Byte[],System.Security.Cryptography.HashAlgorithmName,System.Security.Cryptography.RSASignaturePadding)?displayProperty=nameWithType></li></ul>|
-

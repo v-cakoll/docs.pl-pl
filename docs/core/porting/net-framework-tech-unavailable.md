@@ -2,34 +2,33 @@
 title: Technologie .NET Framework niedostępne w programie .NET Core
 description: Informacje na temat technologii .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
-ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660602"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846813"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework niedostępne w programie .NET Core
 
-Niektóre technologie dostępne dla bibliotek .NET Framework nie są dostępne do użycia z platformą .NET Core, takich jak AppDomains, komunikacja zdalna, zabezpieczenia dostępu kodu (CAS) i przezroczystość zabezpieczeń. Jeśli biblioteki są zależne od co najmniej jednej z tych technologii, weź pod uwagę alternatywne podejścia opisane poniżej. Aby uzyskać więcej informacji na temat zgodności interfejsu API, zespół CoreFX przechowuje [listę zmian zachowań/przerw w działaniu i przestarzałych/starszych interfejsów API](https://github.com/dotnet/corefx/wiki/ApiCompat) w serwisie GitHub.
+Niektóre technologie dostępne dla bibliotek .NET Framework nie są dostępne do użycia z platformą .NET Core, takich jak AppDomains, komunikacja zdalna, zabezpieczenia dostępu kodu (CAS) i przezroczystość zabezpieczeń. Jeśli biblioteki są zależne od co najmniej jednej z tych technologii, weź pod uwagę alternatywne podejścia opisane poniżej. Aby uzyskać więcej informacji na temat zgodności interfejsów API, zobacz artykuł [podstawowe zmiany w programie .NET Core](../compatibility/breaking-changes.md) .
 
-Tylko ponieważ interfejs API lub technologia nie jest obecnie zaimplementowana, nie oznacza to, że jest celowo nieobsługiwana. Najpierw należy przeszukać repozytoria usługi GitHub dla platformy .NET Core, aby zobaczyć, czy konkretny problem występuje w drodze projektu, ale jeśli nie można znaleźć takiego wskaźnika, należy zgłosić problem z [repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub w celu poproszenia o określone interfejsy API i informacyjn. [Przenoszenie żądań w ramach problemów](https://github.com/dotnet/corefx/labels/port-to-core) jest oznaczone `port-to-core` etykietą.
+Tylko ponieważ interfejs API lub technologia nie jest obecnie zaimplementowana, nie oznacza to, że jest celowo nieobsługiwana. Najpierw należy przeszukać repozytoria usługi GitHub dla platformy .NET Core, aby zobaczyć, czy konkretny problem występuje w drodze projektu, ale jeśli nie można znaleźć takiego wskaźnika, należy zgłosić problem z [repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub w celu poproszenia o określone interfejsy API i informacyjn. [Żądania przenoszenia w ramach problemów](https://github.com/dotnet/corefx/labels/port-to-core) są oznaczane etykietą `port-to-core`.
 
-## <a name="appdomains"></a>AppDomains
+## <a name="appdomains"></a>Domen aplikacji
 
-Domeny aplikacji (AppDomains) izolują aplikacje od siebie. Domeny aplikacji wymagają obsługi środowiska uruchomieniowego i są zwykle dość kosztowne. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane. Nie planujemy dodawania tej funkcji w przyszłości. W przypadku izolacji kodu zaleca się oddzielne procesy lub używanie kontenerów jako alternatywy. W przypadku dynamicznego ładowania zestawów zalecamy nową <xref:System.Runtime.Loader.AssemblyLoadContext> klasę.
+Domeny aplikacji (AppDomains) izolują aplikacje od siebie. Domeny aplikacji wymagają obsługi środowiska uruchomieniowego i są zwykle dość kosztowne. Tworzenie dodatkowych domen aplikacji nie jest obsługiwane. Nie planujemy dodawania tej funkcji w przyszłości. W przypadku izolacji kodu zaleca się oddzielne procesy lub używanie kontenerów jako alternatywy. W przypadku dynamicznego ładowania zestawów zalecamy nową klasę <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-Aby ułatwić migrację kodu z .NET Framework, środowisko .NET Core uwidacznia część <xref:System.AppDomain> powierzchni interfejsu API. Niektóre z interfejsów API działają normalnie (na <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>przykład), niektórzy członkowie nie wykonują żadnych operacji (na <xref:System.AppDomain.SetCachePath%2A>przykład), <xref:System.PlatformNotSupportedException> a niektóre z nich zgłaszają (na <xref:System.AppDomain.CreateDomain%2A>przykład). Sprawdź typy, które są używane [ `System.AppDomain` ](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) w odniesieniu do źródła odwołania w repozytorium usługi [GitHub/corefx](https://github.com/dotnet/corefx)w serwisie, pamiętaj, aby wybrać gałąź zgodną z zaimplementowaną wersją.
+Aby ułatwić migrację kodu z .NET Framework, platforma .NET Core uwidacznia część <xref:System.AppDomain>j powierzchni interfejsu API. Niektóre z funkcji API działają normalnie (na przykład <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>), niektórzy członkowie nie wykonują żadnych operacji (na przykład <xref:System.AppDomain.SetCachePath%2A>), a niektóre z nich zgłaszają <xref:System.PlatformNotSupportedException> (na przykład <xref:System.AppDomain.CreateDomain%2A>). Sprawdź typy, które są używane w odniesieniu do [`System.AppDomain`go źródła odwołania](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) w [repozytorium GitHub/corefx](https://github.com/dotnet/corefx)w serwisie, a następnie wybierz gałąź zgodną z zaimplementowaną wersją.
 
 ## <a name="remoting"></a>Komunikacji zdalnej
 
 Komunikacja zdalna .NET została zidentyfikowana jako problematyczna architektura. Jest on używany do komunikacji między domenami, która nie jest już obsługiwana. Ponadto komunikacja zdalna wymaga obsługi środowiska uruchomieniowego, co jest kosztowne do utrzymania. Z tego względu komunikacja zdalna .NET nie jest obsługiwana w przypadku platformy .NET Core i nie planuje się jej dodawania w przyszłości.
 
-W przypadku komunikacji między procesami należy wziąć pod uwagę mechanizmy komunikacji między procesami (IPC) jako alternatywę dla usług zdalnych <xref:System.IO.Pipes> , takich <xref:System.IO.MemoryMappedFiles.MemoryMappedFile> jak lub klasy.
+W przypadku komunikacji między procesami należy wziąć pod uwagę mechanizmy komunikacji między procesami (IPC) jako alternatywę dla komunikacji zdalnej, na przykład <xref:System.IO.Pipes> lub klasy <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
 
-Na wielu maszynach Użyj rozwiązania sieciowego jako alternatywy. Najlepiej użyć niskiego obciążenia protokołu zwykłego tekstu, takiego jak HTTP. Serwer [sieci Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), serwer sieci Web używany przez ASP.NET Core, jest opcją w tym miejscu. Należy również rozważyć <xref:System.Net.Sockets> użycie w przypadku scenariuszy opartych na sieci i wielu maszynach. Aby uzyskać więcej informacji, [Zobacz projekty deweloperskie programu .NET Open Source: Obsługa](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging)komunikatów.
+Na wielu maszynach Użyj rozwiązania sieciowego jako alternatywy. Najlepiej użyć niskiego obciążenia protokołu zwykłego tekstu, takiego jak HTTP. Serwer [sieci Web Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), serwer sieci Web używany przez ASP.NET Core, jest opcją w tym miejscu. Należy również rozważyć użycie <xref:System.Net.Sockets> na potrzeby scenariuszy międzymaszynowych opartych na sieci. Aby uzyskać więcej opcji, zobacz [projekty programu .NET Open Source Developer projects: Messaging](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging).
 
 ## <a name="code-access-security-cas"></a>Zabezpieczenia dostępu kodu (CAS)
 
@@ -43,7 +42,7 @@ Podobnie jak w przypadku urzędów certyfikacji, przezroczystość zabezpieczeń
 
 Użyj granic zabezpieczeń zapewnianych przez system operacyjny, takich jak wirtualizacja, kontenery lub konta użytkowników do uruchamiania procesów z najmniej określonym zestawem uprawnień.
 
-## <a name="systementerpriseservices"></a>System.EnterpriseServices
+## <a name="systementerpriseservices"></a>System. EnterpriseServices
 
 System. EnterpriseServices (COM+) nie jest obsługiwany przez platformę .NET Core.
 

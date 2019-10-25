@@ -2,12 +2,12 @@
 title: Typy referencyjne dopuszczające wartość null
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczających wartość null C# , które dodano w 8,0. Dowiesz się, jak funkcja zapewnia bezpieczeństwo przed wyjątkami odwołania o wartości null dla nowych i istniejących projektów.
 ms.date: 02/19/2019
-ms.openlocfilehash: a108c73064b40171a58df0796d4a0b75eddebbff
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 2c2148b3ae50ce6c00e523390ea02686d9106b8b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319055"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846762"
 ---
 # <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
@@ -63,7 +63,7 @@ Kontekst adnotacji dopuszczający wartość null i kontekst ostrzeżenia dopuszc
 - `warnings`: kontekst adnotacji dopuszczający wartość null jest **wyłączony**. Kontekst ostrzegawczy dopuszczający wartość null jest **włączony**.
   - Zmienne typu referencyjnego to Oblivious. Wszystkie ostrzeżenia o wartości null są włączone.
 - `annotations`: kontekst adnotacji dopuszczający wartość null jest **włączony**. Kontekst ostrzegawczy dopuszczający wartość null jest **wyłączony**.
-  - Zmienne typu referencyjnego to Oblivious. Wszystkie ostrzeżenia o wartości null są wyłączone.
+  - Zmienne typu referencyjnego, ciąg na przykład, nie dopuszczają wartości null. Wszystkie ostrzeżenia o wartości null są wyłączone.
 - `disable`: kontekst adnotacji dopuszczający wartość null jest **wyłączony**. Kontekst ostrzegawczy dopuszczający wartość null jest **wyłączony**.
   - Zmienne typu referencyjnego to Oblivious, podobnie jak w przypadku wcześniejszych wersji C#programu. Wszystkie ostrzeżenia o wartości null są wyłączone.
 
@@ -99,7 +99,7 @@ Kompilator używa następujących reguł w włączonym kontekście adnotacji dop
 - Dowolny typ referencyjny dopuszczający wartość null (zanotowany przez `?` po typie w deklaracji zmiennej) może mieć wartość null. Analiza statyczna określa, czy wartość jest znana jako inna niż null, gdy jest ona wywoływać. W przeciwnym razie kompilator wyświetli ostrzeżenie.
 - Można użyć operatora null-łagodniejszej, aby zadeklarować, że odwołanie dopuszczające wartość null nie ma wartości null.
 
-W włączonym kontekście dopuszczającym wartość null, znak `?` dołączany do typu referencyjnego deklaruje **typ referencyjny dopuszczający wartość null**. @No__t **operator łagodniejszej o wartości null** -1 może być dołączany do wyrażenia w celu stwierdzenia, że wyrażenie nie ma wartości null.
+W włączonym kontekście dopuszczającym wartość null, znak `?` dołączany do typu referencyjnego deklaruje **typ referencyjny dopuszczający wartość null**. `!` **operatora o wartości null** może być dołączany do wyrażenia w celu stwierdzenia, że wyrażenie nie ma wartości null.
 
 ## <a name="nullable-warning-context"></a>Kontekst ostrzegawczy dopuszczający wartość null
 

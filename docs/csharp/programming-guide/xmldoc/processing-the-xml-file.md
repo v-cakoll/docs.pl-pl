@@ -6,20 +6,20 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: bb713fbc5ddd3737cb629c5c09c25ff2980c73dc
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523375"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846933"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 
 Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat znakowania kodu, zobacz [zalecane Tagi dla komentarzy do dokumentacji](./recommended-tags-for-documentation-comments.md)). Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy, które przetwarzają plik XML, mogą używać ciągu identyfikatora do identyfikowania odpowiednich .NET Framework metadanych/elementu odbicia, do których odnosi się dokumentacja.
 
- Plik XML nie jest hierarchiczną reprezentacją kodu; jest to płaska lista, która ma wygenerowany identyfikator dla każdego elementu.
+Plik XML nie jest hierarchiczną reprezentacją kodu; jest to płaska lista, która ma wygenerowany identyfikator dla każdego elementu.
 
- Podczas generowania ciągów identyfikatorów kompilator przestrzega następujących reguł:
+Podczas generowania ciągów identyfikatorów kompilator przestrzega następujących reguł:
 
 - Brak białego znaku w ciągu.
 
@@ -41,7 +41,7 @@ Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, któr
 
   - Typy podstawowe. Zwykłe typy (ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE) są reprezentowane jako w pełni kwalifikowana nazwa typu.
 
-  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF. i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu. Na przykład system. Int32 lub system. TypedReference.
+  - Typy wewnętrzne (na przykład ELEMENT_TYPE_I4, ELEMENT_TYPE_OBJECT, ELEMENT_TYPE_STRING, ELEMENT_TYPE_TYPEDBYREF i ELEMENT_TYPE_VOID) są reprezentowane jako w pełni kwalifikowana nazwa odpowiedniego pełnego typu. Na przykład system. Int32 lub system. TypedReference.
 
   - ELEMENT_TYPE_PTR jest reprezentowany jako "\*" po zmodyfikowanym typie.
 
@@ -57,9 +57,9 @@ Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, któr
 
   - ELEMENT_TYPE_GENERICARRAY jest reprezentowane jako "[?]" po typie elementu tablicy. C# Kompilator nigdy nie generuje tego.
 
-  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*: `size`,*lowerbound*: `size`], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
+  - ELEMENT_TYPE_ARRAY jest reprezentowane jako [*lowerbound*:`size`,*lowerbound*:`size`], gdzie liczba przecinków jest rangą 1, a dolne granice i rozmiar każdego wymiaru, jeśli są znane, są reprezentowane w postaci dziesiętnej. Jeśli Dolna granica nie zostanie określona, zostanie ona po prostu pominięta. Jeśli Dolna granica i rozmiar określonego wymiaru zostaną pominięte, znak ":" również zostanie pominięty. Na przykład tablica 2-wymiarową z 1 jako dolne granice i nieokreślone rozmiary to [1:, 1:].
 
-  - ELEMENT_TYPE_FNPTR jest reprezentowane jako "= FUNC: `type` (*Signature*)", gdzie `type` jest typem zwracanym, a *Signature* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. C# Kompilator nigdy nie generuje tego.
+  - ELEMENT_TYPE_FNPTR jest reprezentowane jako "= FUNC:`type`(*Signature*)", gdzie `type` jest typem zwracanym, a *Signature* jest argumentami metody. Jeśli nie ma żadnych argumentów, nawiasy są pomijane. C# Kompilator nigdy nie generuje tego.
 
     Następujące składniki podpisu nie są reprezentowane, ponieważ nie są nigdy używane do odróżniania przeciążonych metod:
 

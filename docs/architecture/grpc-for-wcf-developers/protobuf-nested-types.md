@@ -3,16 +3,14 @@ title: Protobuf typy zagnieżdżone — gRPC dla deweloperów WCF
 description: Dowiedz się więcej o zagnieżdżonych typach komunikatów w protobuf i gRPC i sposobach ich generowania C#.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 39bc52b37cc9e57cfe0ed5a5118c348de5f014d8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184191"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846314"
 ---
-# <a name="protobuf-nested-types"></a>Protobuf typy zagnieżdżone
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="protobuf-nested-types"></a>Typy zagnieżdżone Protobuf
 
 Podobnie jak C# w przypadku programu można zadeklarować klasy wewnątrz innych klas, protobuf umożliwia zagnieżdżanie definicji komunikatów w innych wiadomościach. Poniższy przykład przedstawia sposób tworzenia zagnieżdżonych typów komunikatów:
 
@@ -25,7 +23,7 @@ message Outer {
 }
 ```
 
-C# W wygenerowanym kodzie, `Inner` typ zostanie zadeklarowany w zagnieżdżonej klasie `Types` `HelloRequest` statycznej w klasie:
+W wygenerowanym C# kodzie typ`Inner`zostanie zadeklarowany w zagnieżdżonej klasie`Types`statycznej w klasie`HelloRequest`:
 
 ```csharp
 var inner = new Outer.Types.Inner { Text = "Hello" };

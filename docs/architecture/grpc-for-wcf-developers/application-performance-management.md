@@ -3,16 +3,14 @@ title: Zarządzanie wydajnością aplikacji — gRPC dla deweloperów WCF
 description: Rejestrowanie, metryki i śledzenie dla ASP.NET Core aplikacji gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6e4c32d057c1ac143e18a4a3ddc83dd8b1f62800
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184611"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846722"
 ---
 # <a name="application-performance-management"></a>Zarządzanie wydajnością aplikacji
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W nowoczesnych środowiskach produkcyjnych, takich jak Kubernetes, bardzo ważne jest, aby monitorować aplikacje w celu zapewnienia optymalnego działania. Problemy, takie jak rejestrowanie i metryki, nigdy nie były ważniejsze. ASP.NET Core, w tym gRPC, ma wbudowaną obsługę tworzenia komunikatów dziennika i danych metryk oraz zarządzania nimi, a także *śledzenia* danych. Ta sekcja zawiera szczegółowe informacje dotyczące tych obszarów.
 
@@ -56,7 +54,7 @@ Aby uzyskać więcej informacji na temat pisania komunikatów dziennika i dostę
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>Metryki w ASP.NET Core gRPC
 
-Środowisko uruchomieniowe programu .NET Core udostępnia zestaw składników do emitowania i obserwacji metryk, które obejmują interfejsy API, takie <xref:System.Diagnostics.Tracing.EventSource> jak <xref:System.Diagnostics.Tracing.EventCounter> klasy i. Za pomocą tych interfejsów API można emitować podstawowe dane liczbowe, które mogą być używane przez procesy zewnętrzne, takie jak [globalne narzędzie liczników dotnet](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)lub śledzenie zdarzeń systemu Windows. Aby uzyskać więcej informacji na `EventCounter` temat używania w własnym kodzie, zobacz samouczek [wprowadzenie do EventCounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) .
+Środowisko uruchomieniowe programu .NET Core udostępnia zestaw składników służących do emitowania i obserwowania metryk, które obejmują interfejsy API, takie jak <xref:System.Diagnostics.Tracing.EventSource> i klasy <xref:System.Diagnostics.Tracing.EventCounter>. Za pomocą tych interfejsów API można emitować podstawowe dane liczbowe, które mogą być używane przez procesy zewnętrzne, takie jak [globalne narzędzie liczników dotnet](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)lub śledzenie zdarzeń systemu Windows. Aby uzyskać więcej informacji na temat używania `EventCounter` w własnym kodzie, zobacz samouczek [wprowadzenie do EventCounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) .
 
 W przypadku bardziej zaawansowanych metryk i zapisywania danych metryk w szerszym zakresie magazynów danych istnieje doskonały projekt typu "open source" o nazwie [metryki aplikacji](https://www.app-metrics.io). Ten pakiet bibliotek zawiera rozbudowany zestaw typów służący do Instrumentacji kodu. Oferuje również pakiety do zapisywania metryk do różnych rodzajów obiektów docelowych, które obejmują bazy danych szeregów czasowych, takich jak Prometheus i InfluxDB, [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)i wiele innych. Pakiet NuGet [App. Metrics. AspNetCore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) dodatkowo dodaje kompleksowy zestaw podstawowych metryk, które są automatycznie generowane przez integrację z platformą ASP.NET Core, a witryna sieci Web udostępnia [Szablony](https://www.app-metrics.io/samples/grafana/) do wyświetlania tych metryk za pomocą platformy wizualizacji [Grafana](https://grafana.com/) .
 
@@ -69,12 +67,12 @@ Większość platform metryk obsługuje pięć podstawowych typów metryk, któr
 | Typ metryki | Opis |
 | ----------- | ----------- |
 | Licznik     | Śledzi, jak często coś się dzieje, takich jak żądania, błędy i tak dalej. |
-| Wskaźnik       | Rejestruje pojedynczą wartość, która zmienia się w czasie, na przykład aktywne połączenia. |
-| Histogram   | Mierzy rozkład wartości w ramach dowolnych limitów. Na przykład histogram może śledzić rozmiar zestawu danych, zliczać, ile zawiera < 10 rekordów, liczbę 11-100 i 101-1000 i > 1000 rekordów. |
+| Urządzeń       | Rejestruje pojedynczą wartość, która zmienia się w czasie, na przykład aktywne połączenia. |
+| Razem   | Mierzy rozkład wartości w ramach dowolnych limitów. Na przykład histogram może śledzić rozmiar zestawu danych, zliczać, ile zawiera < 10 rekordów, liczbę 11-100 i 101-1000 i > 1000 rekordów. |
 | Wyższy       | Mierzy szybkość, z jaką zdarzenie występuje w różnych przedziałach czasowych. |
 | Czasomierz       | Śledzi czas trwania zdarzeń i szybkość ich występowania, przechowywane jako histogram. |
 
-Przy użyciu `IMetrics` *metryk aplikacji*interfejs może być uzyskiwany za pomocą iniekcji zależności i używany do rejestrowania dowolnej z tych metryk dla usługi gRPC. Poniższy przykład pokazuje, jak zliczyć liczbę `Get` żądań wykonanych w czasie:
+Korzystając z *metryk aplikacji*, interfejs `IMetrics` może zostać uzyskany za pośrednictwem iniekcji zależności i używany do rejestrowania dowolnej z tych metryk dla usługi gRPC. Poniższy przykład pokazuje, jak zliczyć liczbę `Get` żądań wykonywanych w czasie:
 
 ```csharp
 public class StockData : Stocks.StocksBase
@@ -127,9 +125,9 @@ Mimo że nadal jest obszar technologii Nascent, rozproszone śledzenie szybko si
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>Śledzenie rozproszone z DiagnosticSource
 
-Platforma .NET Core ma wewnętrzny moduł, który jest dobrze mapowany na rozproszone ślady i zakresy: [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Jak również zapewnić prostą metodę tworzenia i korzystania z diagnostyki w ramach procesu, `DiagnosticSource` moduł ma koncepcję *działania*, która jest efektywnie implementacją rozproszonego śledzenia lub zakresu w śladzie. Elementy wewnętrzne modułu wykorzystują działania nadrzędne i podrzędne, w tym przydzielanie identyfikatorów. Aby uzyskać więcej informacji na temat `Activity` korzystania z typu, zobacz [Podręcznik użytkownika działania w witrynie GitHub](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)
+Platforma .NET Core ma wewnętrzny moduł, który jest dobrze mapowany do dystrybuowanych śladów i zakresów: [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide). Jak również zapewnić prostą metodę tworzenia i korzystania z diagnostyki w ramach procesu, moduł `DiagnosticSource` ma koncepcję *działania*, która jest efektywnie implementacją rozproszonego śledzenia lub zakresu w śladzie. Elementy wewnętrzne modułu wykorzystują działania nadrzędne i podrzędne, w tym przydzielanie identyfikatorów. Więcej informacji o używaniu typu `Activity` można znaleźć w [podręczniku użytkownika działania w witrynie GitHub](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)
 
-Ponieważ DiagnosticSource jest częścią podstawowego środowiska, jest obsługiwana przez kilka podstawowych składników, w tym <xref:System.Net.Http.HttpClient>Entity Framework Core i ASP.NET Core, w tym do jawnej obsługi w strukturze gRPC. Gdy ASP.NET Core odbiera żądanie, sprawdza parę nagłówków HTTP zgodnych ze standardem [kontekstu śledzenia W3C](https://www.w3.org/TR/trace-context) . Jeśli nagłówki zostaną znalezione, działanie jest uruchamiane przy użyciu wartości tożsamości i kontekstu z nagłówków. Jeśli nie zostaną znalezione żadne nagłówki, działanie jest uruchamiane z wygenerowanymi wartościami tożsamości, które pasują do formatu standardowego. Wszystkie diagnostyki generowane przez platformę lub przez kod aplikacji w okresie istnienia tego działania mogą być otagowane przy użyciu identyfikatorów śledzenia i zakresu. `HttpClient` Pomoc techniczna rozszerza to w ten sposób, sprawdzając bieżącą aktywność dla każdego żądania i automatycznie dodając nagłówki śledzenia do żądania wychodzącego.
+Ponieważ DiagnosticSource jest częścią podstawowego środowiska, jest obsługiwana przez kilka podstawowych składników, w tym <xref:System.Net.Http.HttpClient>, Entity Framework Core i ASP.NET Core, w tym z jawną obsługą w strukturze gRPC. Gdy ASP.NET Core odbiera żądanie, sprawdza parę nagłówków HTTP zgodnych ze standardem [kontekstu śledzenia W3C](https://www.w3.org/TR/trace-context) . Jeśli nagłówki zostaną znalezione, działanie jest uruchamiane przy użyciu wartości tożsamości i kontekstu z nagłówków. Jeśli nie zostaną znalezione żadne nagłówki, działanie jest uruchamiane z wygenerowanymi wartościami tożsamości, które pasują do formatu standardowego. Wszystkie diagnostyki generowane przez platformę lub przez kod aplikacji w okresie istnienia tego działania mogą być otagowane przy użyciu identyfikatorów śledzenia i zakresu. Pomoc techniczna `HttpClient` rozszerza to więcej, sprawdzając, czy są obecne działania na każdym żądaniu i automatycznie dodając nagłówki śledzenia do żądania wychodzącego.
 
 Biblioteka gRPC klienta i serwera zawiera jawną obsługę DiagnosticSource i działania, a ASP.NET Core także tworzy działania i automatycznie stosuje informacje nagłówka.
 
@@ -138,7 +136,7 @@ Biblioteka gRPC klienta i serwera zawiera jawną obsługę DiagnosticSource i dz
 
 ### <a name="add-your-own-diagnosticsources-and-activities"></a>Dodawanie własnych DiagnosticSources i działań
 
-Mimo że dobra ilość danych jest generowana automatycznie przez ASP.NET Core, w tym gRPC, a także Entity Framework Core i `HttpClient`, możesz chcieć dodać własną diagnostykę lub utworzyć jawne zakresy w kodzie aplikacji. Aby uzyskać szczegółowe informacje na temat implementowania własnej diagnostyki, zapoznaj się z podręcznikiem użytkownika [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) i [podręcznikiem użytkownika](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage) dotyczącym działania.
+Mimo że dobra ilość danych jest generowana automatycznie przez ASP.NET Core, w tym gRPC, a także Entity Framework Core i `HttpClient`, można dodać własną diagnostykę lub utworzyć jawne zakresy w kodzie aplikacji. Aby uzyskać szczegółowe informacje na temat implementowania własnej diagnostyki, zapoznaj się z podręcznikiem użytkownika [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener) i [podręcznikiem użytkownika](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage) dotyczącym działania.
 
 ### <a name="store-distributed-trace-data"></a>Przechowywanie danych śledzenia rozproszonego
 
@@ -148,7 +146,7 @@ Interfejs API OpenTracing został opisany poniżej. Jeśli wolisz używać nowsz
 
 #### <a name="use-the-opentracing-package-to-store-distributed-trace-data"></a>Przechowywanie danych śledzenia rozproszonego przy użyciu pakietu OpenTracing
 
-[Pakiet NuGet OpenTracing](https://www.nuget.org/packages/OpenTracing/) , który obsługuje wszystkie plecze zgodne z OpenTracing (które mogą być używane niezależnie od `DiagnosticSource`systemu). Istnieje dodatkowy pakiet z projektu OpenTracings API [OpenTracing. contrib. Core](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/), który dodaje `DiagnosticSource` odbiornik i automatycznie zapisuje zdarzenia i działania na zapleczu. Włączenie tego pakietu jest proste, ponieważ instalowanie go z narzędzia NuGet i dodawanie go jako usługi w `Startup` klasie.
+[Pakiet NuGet OpenTracing](https://www.nuget.org/packages/OpenTracing/) , który obsługuje wszystkie plecze zgodne z OpenTracing (które mogą być używane niezależnie od `DiagnosticSource`). Istnieje dodatkowy pakiet z projektu OpenTracing API [OpenTracing. contrib. Core](https://www.nuget.org/packages/OpenTracing.Contrib.NetCore/), który dodaje odbiornik `DiagnosticSource` i automatycznie zapisuje zdarzenia i działania na zapleczu. Włączenie tego pakietu jest proste, ponieważ instalowanie go z narzędzia NuGet i dodawanie go jako usługi w klasie `Startup`.
 
 ```csharp
 public class Startup

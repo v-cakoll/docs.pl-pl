@@ -3,16 +3,14 @@ title: Równoważenie obciążenia gRPC-gRPC dla deweloperów WCF
 description: Wybieranie modułu równoważenia obciążenia do pracy z usługami gRPC Services.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5d4a9be9b8f4e511a72af6b68d8a005604fd984d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 18965b9c4765ac693c6ba36ad3ea9848ce858a5c
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184394"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846623"
 ---
 # <a name="load-balancing-grpc"></a>Równoważenie obciążenia gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Typowe wdrożenie aplikacji gRPC obejmuje wiele identycznych wystąpień usługi, zapewniając odporność i skalowalność w poziomie. Równoważenie obciążenia rozproszone żądania przychodzące w tych wystąpieniach w celu zapewnienia pełnego użycia wszystkich dostępnych zasobów. Aby ta funkcja równoważenia obciążenia była niewidoczna dla klienta, często używany jest serwer usługi równoważenia obciążenia proxy do obsługi żądań od klientów i kierowania ich do wystąpień zaplecza.
 

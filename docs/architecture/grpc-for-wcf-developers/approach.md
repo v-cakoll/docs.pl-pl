@@ -3,16 +3,14 @@ title: Jak gRPC podejście RPC-gRPC dla deweloperów WCF
 description: Porównanie najważniejszych funkcji usługi WCF z gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 36d51b96796f274811bfeea64c159afcc9bce301
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 3da28968f8c8bd6c4fdba7432ffc8458d8340457
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770684"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846690"
 ---
 # <a name="how-grpc-approaches-rpc"></a>Obsługa zdalnych wywołań procedur przez usługę gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Windows Communication Foundation (WCF) i gRPC są zarówno implementacjami wzorca *zdalnego wywołania procedury* (RPC), które mają na celu wykonywanie wywołań do usług uruchomionych na innym komputerze lub w innym procesie, tak jakby były tylko wywołania metody w aplikacji klienckiej. Chociaż cele WCF i gRPC są takie same, szczegóły implementacji są zupełnie inne.
 

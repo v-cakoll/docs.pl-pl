@@ -3,16 +3,14 @@ title: Migrowanie rozwiązania WCF do gRPC-gRPC dla deweloperów WCF
 description: Jak migrować różne typy usługi WCF do wartości równoważnej w gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 77bcb1412803b371778943763308c3010ed35aac
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: HT
+ms.openlocfilehash: 65c30b777d9981cb3291b846f698f2a69b4498fc
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770112"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846592"
 ---
 # <a name="migrate-a-wcf-solution-to-grpc"></a>Migrowanie rozwiązania WCF do usługi gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W tym rozdziale zawarto informacje na temat pracy z projektami ASP.NET Core gRPC 3,0 i zademonstrowania migracji różnych typów usług WCF do gRPC równoważnej:
 

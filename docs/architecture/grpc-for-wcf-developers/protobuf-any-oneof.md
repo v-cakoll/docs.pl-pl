@@ -3,24 +3,22 @@ title: Protobuf wszystkie pola i oneof dla typów wariantów — gRPC dla dewelo
 description: Dowiedz się, jak używać dowolnego typu i słowa kluczowego oneof do reprezentowania typów obiektów Variant w komunikatach.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 9e730e96bfdb25ef6e07ee10967921408c6f2e84
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184282"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846388"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf wszystkie pola i oneof dla typów wariantów
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 Obsługa typów właściwości dynamicznych (czyli właściwości typu `object`) w programie WCF jest skomplikowana. Należy określić serializatory, należy podać atrybuty [KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute) i tak dalej.
 
-Protobuf udostępnia dwie prostsze opcje do pracy z wartościami, które mogą mieć więcej niż jeden typ. Typ może reprezentować dowolny znany typ komunikatu protobuf, `oneof` podczas gdy słowo kluczowe pozwala określić, że tylko jeden z zakresów pól może być ustawiony w danym komunikacie. `Any`
+Protobuf udostępnia dwie prostsze opcje do pracy z wartościami, które mogą mieć więcej niż jeden typ. Typ `Any` może reprezentować dowolny znany typ komunikatu protobuf, podczas gdy słowo kluczowe `oneof` pozwala określić, że tylko jeden z zakresów pól można ustawić w danym komunikacie.
 
-## <a name="any"></a>Any
+## <a name="any"></a>Ile
 
-`Any`jest jednym z "dobrze znanych typów protobuf": Kolekcja przydatnych typów wiadomości wielokrotnego użytku z implementacjami we wszystkich obsługiwanych językach. Aby użyć tego `Any` typu, należy `google/protobuf/any.proto` zaimportować definicję.
+`Any` to jeden z "dobrze znanych typów protobuf": Kolekcja przydatnych typów wiadomości wielokrotnego użytku z implementacjami we wszystkich obsługiwanych językach. Aby użyć typu `Any`, należy zaimportować definicję `google/protobuf/any.proto`.
 
 ```protobuf
 syntax "proto3"
@@ -41,7 +39,7 @@ message ChangeNotification {
 }
 ```
 
-W C# kodzie `Any` Klasa zawiera metody służące do ustawiania pola, wyodrębniania komunikatu i sprawdzania typu.
+W C# kodzie Klasa`Any`dostarcza metody służące do ustawiania pola, wyodrębniania komunikatu i sprawdzania typu.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -61,11 +59,11 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Pole statyczne w każdym wygenerowanym typie jest używane przez wewnętrzny kod odbicia protobuf w `Any` celu rozpoznania typów pól. `Descriptor` Istnieje również `TryUnpack<T>` Metoda, ale która tworzy niezainicjowane `T` wystąpienie nawet wtedy, gdy nie powiedzie się, więc lepiej jest użyć `Is` metody, jak pokazano powyżej.
+Pole statyczne `Descriptor` w każdym wygenerowanym typie jest używane przez wewnętrzny kod odbicia protobuf w celu rozpoznania `Any` typów pól. Istnieje również Metoda `TryUnpack<T>`, ale która tworzy niezainicjowane wystąpienie `T` nawet wtedy, gdy nie powiedzie się, dlatego lepiej jest użyć metody `Is`, jak pokazano powyżej.
 
 ## <a name="oneof"></a>Oneof
 
-Pola oneof są funkcją języka: `oneof` słowo kluczowe jest obsługiwane przez kompilator podczas generowania klasy komunikatów. Użycie `oneof` do`ChangeNotification` określenia komunikatu może wyglądać następująco:
+Pola oneof są funkcją języka: słowo kluczowe `oneof` jest obsługiwane przez kompilator podczas generowania klasy komunikatów. Użycie `oneof` do określenia `ChangeNotification` komunikat może wyglądać następująco:
 
 ```protobuf
 message Stock {
@@ -85,9 +83,9 @@ message ChangeNotification {
 }
 ```
 
-Pola w `oneof` zestawie muszą mieć unikatowe numery pól w całej deklaracji komunikatu.
+Pola w ramach zestawu `oneof` muszą mieć unikatowe numery pól w całej deklaracji komunikatu.
 
-Gdy używasz `oneof`, wygenerowany C# kod zawiera wyliczenie, które określa, które z pól zostały ustawione. Możesz przetestować Wyliczenie, aby znaleźć pole, które zostało ustawione. Pola, które nie ustawiają `null` wartości zwracanej lub domyślnej, zamiast zgłaszać wyjątek.
+Gdy używasz `oneof`, wygenerowany C# kod zawiera wyliczenie, które określa, które z pól zostały ustawione. Możesz przetestować Wyliczenie, aby znaleźć pole, które zostało ustawione. Pola, które nie ustawiają zwracanych `null` lub wartości domyślnej, zamiast zgłaszać wyjątek.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)
@@ -108,7 +106,7 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Ustawienie dowolnego pola, które jest częścią `oneof` zestawu, spowoduje automatyczne wyczyszczenie innych pól w zestawie. Nie można używać `repeated` z `oneof`. Zamiast tego można utworzyć zagnieżdżony komunikat z powtarzającym się polem lub `oneof` zestawem, aby obejść to ograniczenie.
+Ustawienie dowolnego pola, które jest częścią zestawu `oneof`, spowoduje automatyczne wyczyszczenie innych pól w zestawie. Nie można użyć `repeated` z `oneof`. Zamiast tego można utworzyć zagnieżdżony komunikat z powtarzającym się polem lub `oneof` ustawionym na obejście tego ograniczenia.
 
 >[!div class="step-by-step"]
 >[Poprzedni](protobuf-reserved.md)

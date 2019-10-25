@@ -3,16 +3,14 @@ title: Zabezpieczenia w aplikacjach gRPC — gRPC dla deweloperów WCF
 description: Omówienie uwierzytelniania wywołań i kanałów oraz autoryzacji w programie gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f3d32817ccb5d9f278d256c0ee135f0e2a17cf2
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d0b7ff5bef755c5eeb9b3c419dcda1cb75ac4031
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184142"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846232"
 ---
 # <a name="security-in-grpc-applications"></a>Zabezpieczenia w aplikacjach gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W dowolnym rzeczywistym scenariuszu Zabezpieczanie aplikacji i usług jest niezbędne. Zabezpieczenia obejmują trzy kluczowe obszary: szyfrowanie ruchu sieciowego w celu uniemożliwienia jego przechwytywania przez złe uczestników; Uwierzytelnianie klientów i serwerów w celu ustanowienia tożsamości i zaufania; i Autoryzuj klientów do kontrolowania dostępu do systemów i stosowania uprawnień na podstawie tożsamości.
 
@@ -23,7 +21,7 @@ Ten rozdział obejmuje funkcje uwierzytelniania i autoryzacji w programie gRPC d
 
 ## <a name="wcf-authentication-and-authorization"></a>Uwierzytelnianie i autoryzacja w programie WCF
 
-W programie WCF uwierzytelnianie i autoryzacja zostały obsłużone na różne sposoby w zależności od używanych transportów i powiązań. Obsługiwane są różne standardy protokołu\* WS-Security, a także uwierzytelnianie systemu Windows dla usług http uruchomionych w usługach IIS lub NetTCP Services między systemami Windows.
+W programie WCF uwierzytelnianie i autoryzacja zostały obsłużone na różne sposoby w zależności od używanych transportów i powiązań. Obsługiwane są różne standardy zabezpieczeń WS-\*, a także uwierzytelnianie systemu Windows dla usług HTTP uruchomionych w usługach IIS lub NetTCP Services między systemami Windows.
 
 ## <a name="grpc-authentication-and-authorization"></a>uwierzytelnianie i autoryzacja gRPC
 
@@ -37,7 +35,7 @@ ASP.NET Core implementacja gRPC obsługuje uwierzytelnianie i autoryzację przy 
   - Token okaziciela JWT
   - OAuth 2,0
   - OpenID Connect połączenie
-  - WS-Federation
+  - Usługa WS-Federation
 - Uwierzytelnianie kanałów
   - Certyfikat klienta
 

@@ -3,22 +3,20 @@ title: Szyfrowanie i zabezpieczenia sieci — gRPC dla deweloperów WCF
 description: Niektóre uwagi dotyczące zabezpieczeń sieci i szyfrowania w programie gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 8a115b59337003669b4e5436edffe239489ca79e
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 67ee1ffaf00ea0cc6b771ede9f49b6a691af0968
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184464"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846674"
 ---
 # <a name="encryption-and-network-security"></a>Szyfrowanie i zabezpieczenia sieci
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Model zabezpieczeń sieci WCF jest obszerny i skomplikowany, w tym zabezpieczenia na poziomie transportu za pośrednictwem protokołu HTTPS lub TLS-over-TCP i zabezpieczenia na poziomie komunikatów przy użyciu specyfikacji WS-Security do szyfrowania poszczególnych komunikatów.
 
 gRPC pozostawia zabezpieczone sieci do podstawowego protokołu HTTP/2, który można zabezpieczyć przy użyciu zwykłych certyfikatów TLS.
 
-Przeglądarki sieci Web Niemniej korzystają z połączeń TLS dla protokołu HTTP/2, ale większość klientów programistycznych, w tym. Sieć może korzystać z protokołu HTTP/2 za pośrednictwem nieszyfrowanych połączeń. `HttpClient` `HttpClient`Domyślnie *wymaga szyfrowania* , ale można je zastąpić przy użyciu <xref:System.AppContext> przełącznika.
+Przeglądarki sieci Web Niemniej korzystają z połączeń TLS dla protokołu HTTP/2, ale większość klientów programistycznych, w tym. `HttpClient`sieci, mogą używać protokołu HTTP/2 za pośrednictwem nieszyfrowanych połączeń. `HttpClient` *Domyślnie* wymaga szyfrowania, ale można je zastąpić przy użyciu przełącznika <xref:System.AppContext>.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);

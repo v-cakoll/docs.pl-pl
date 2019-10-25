@@ -3,16 +3,14 @@ title: Protobuf typy danych skalarnych — gRPC dla deweloperów WCF
 description: Dowiedz się więcej o podstawowych i dobrze znanych typach danych obsługiwanych przez protobuf i gRPC w programie .NET Core.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 8c8db795e927a44e9f75ec828336630ec9978eb6
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cae9cc483ffb791a9b53e6a2d9d7c0924d725a67
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184268"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846351"
 ---
-# <a name="protobuf-scalar-data-types"></a>Protobuf typy danych skalarnych
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="protobuf-scalar-data-types"></a>Typy danych skalarnych Protobuf
 
 Protobuf obsługuje zakres natywnych typów wartości skalarnych. W poniższej tabeli wymieniono wszystkie ich typy równoważne C# :
 
@@ -36,16 +34,16 @@ Protobuf obsługuje zakres natywnych typów wartości skalarnych. W poniższej t
 
 ## <a name="notes"></a>Uwagi
 
-1. Standardowe kodowanie dla `int32` i `int64` jest niewydajne podczas pracy z podpisanymi wartościami. Jeśli pole może zawierać liczby ujemne, użyj `sint32` lub `sint64` zamiast. Oba typy są C# `int` mapowane na typy `long` i, odpowiednio.
-2. `fixed` Pola zawsze używają tej samej liczby bajtów niezależnie od tego, co jest wartością. Takie zachowanie powoduje szybsze wykonywanie serializacji i deserializacji w przypadku większych wartości.
+1. Standardowe kodowanie dla `int32` i `int64` jest niewydajne podczas pracy z podpisanymi wartościami. Jeśli pole może zawierać liczby ujemne, zamiast tego użyj `sint32` lub `sint64`. Oba typy są C# mapowane odpowiednio do`int`i`long`.
+2. Pola `fixed` zawsze używają tej samej liczby bajtów niezależnie od tego, co jest wartością. Takie zachowanie powoduje szybsze wykonywanie serializacji i deserializacji w przypadku większych wartości.
 3. Ciągi protobuf są kodowane w UTF-8 (lub 7-bitowym formacie ASCII), a zakodowana długość nie może być większa niż 2<sup>32</sup>.
-4. Środowisko uruchomieniowe protobuf zapewnia `ByteString` typ, który umożliwia łatwe mapowanie do C# `byte[]` i z tablic.
+4. Środowisko uruchomieniowe protobuf udostępnia typ `ByteString`, który umożliwia łatwe mapowanie do C# i z`byte[]`tablic.
 
 ## <a name="other-net-primitive-types"></a>Inne typy pierwotne platformy .NET
 
 ### <a name="dates-and-times"></a>Daty i godziny
 
-Natywne typy skalarne nie zapewniają wartości daty i godziny, równoważne z C# <xref:System.DateTimeOffset>, <xref:System.DateTime>i <xref:System.TimeSpan>. Te typy można określić przy użyciu niektórych rozszerzeń "dobrze znane typy" firmy Google, które zapewniają obsługę generowania kodu i środowiska uruchomieniowego dla bardziej złożonych typów pól na obsługiwanych platformach. W poniższej tabeli przedstawiono typy daty i godziny:
+Natywne typy skalarne nie zapewniają wartości daty i godziny, równoważne C#<xref:System.DateTimeOffset>,<xref:System.DateTime>i<xref:System.TimeSpan>. Te typy można określić przy użyciu niektórych rozszerzeń "dobrze znane typy" firmy Google, które zapewniają obsługę generowania kodu i środowiska uruchomieniowego dla bardziej złożonych typów pól na obsługiwanych platformach. W poniższej tabeli przedstawiono typy daty i godziny:
 
 | C#Wprowadź | Nieznany typ protobuf |
 | ------- | ------------------------ |
@@ -68,7 +66,7 @@ message Meeting {
 }  
 ```
 
-Wygenerowane właściwości w C# klasie nie są typami dat i godzin platformy .NET. Właściwości używają `Timestamp` klas i `DateTime` `DateTimeOffset` `TimeSpan`w przestrzeni nazw, które zapewniają metody konwersji do i z, i. `Google.Protobuf.WellKnownTypes` `Duration`
+Wygenerowane właściwości w C# klasie nie są typami dat i godzin platformy .NET. Właściwości używają klas `Timestamp` i `Duration` w przestrzeni nazw `Google.Protobuf.WellKnownTypes`, które zapewniają metody konwersji do i z `DateTimeOffset`, `DateTime`i `TimeSpan`.
 
 ```csharp
 // Create Timestamp and Duration from .NET DateTimeOffset and TimeSpan
@@ -84,15 +82,15 @@ TimeSpan? duration = meeting.Duration?.ToTimeSpan();
 ```
 
 > [!NOTE]
-> `Timestamp` Typ działa z czasem UTC; wartości zawsze mają przesunięcie zero, `DateTime.Kind` a właściwość zawsze `DateTimeKind.Utc`będzie. `DateTimeOffset`
+> Typ `Timestamp` działa z czasem UTC; wartości `DateTimeOffset` zawsze mają przesunięcie zero, a właściwość `DateTime.Kind` będzie zawsze `DateTimeKind.Utc`.
 
-### <a name="systemguid"></a>System.Guid
+### <a name="systemguid"></a>System. GUID
 
-Typ, znany jako `UUID` na innych platformach, nie jest bezpośrednio obsługiwany przez protobuf i nie ma dobrze znanego typu. <xref:System.Guid> `Guid` Najlepszym podejściem jest obsłużenie wartości jako `string` pola przy użyciu standardowego `8-4-4-4-12` formatu szesnastkowego (na przykład `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`), który może być analizowany przez wszystkie języki i platformy. Nie używaj `bytes` `Guid` pola wartości, ponieważ problemy z przypisaniami mogą spowodować błędne zachowanie podczas pracy z innymi platformami, takimi jak Java.
+Typ <xref:System.Guid>, znany jako `UUID` na innych platformach, nie jest bezpośrednio obsługiwany przez protobuf i nie ma dobrze znanego typu. Najlepszym podejściem jest obsłużenie `Guid` wartości jako pola `string` przy użyciu standardowego `8-4-4-4-12` formacie szesnastkowym (na przykład `45a9fda3-bd01-47a9-8460-c1cd7484b0b3`), który może być analizowany przez wszystkie języki i platformy. Nie używaj `bytes` pola do `Guid` wartości, ponieważ problemy z przypisaniami mogą spowodować błędne zachowanie podczas współpracy z innymi platformami, takimi jak Java.
 
 ### <a name="nullable-types"></a>Typy dopuszczające wartości null
 
-Generowanie kodu protobuf dla programu C# używa typów natywnych, takich jak `int` for `int32`. Oznacza to, że wartości są zawsze uwzględniane i nie mogą mieć wartości null. Dla wartości, które wymagają jawnej wartości null, `int?` takich jak C# użycie w kodzie, protobuf "dobrze znane typy" obejmuje otoki, które są kompilowane C# na typy dopuszczające wartości null. Aby go użyć, `wrappers.proto` zaimportuj `.proto` do pliku, tak jak to:
+Generowanie kodu protobuf dla programu C# używa typów natywnych, takich jak`int``int32`. Oznacza to, że wartości są zawsze uwzględniane i nie mogą mieć wartości null. Dla wartości, które wymagają jawnej wartości null, takich jak używanie C# `int?` w kodzie, protobuf "dobrze znane typy" obejmują otoki, które są kompilowane C# na typy dopuszczające wartości null. Aby ich użyć, zaimportuj `wrappers.proto` do pliku `.proto`, tak jak to:
 
 ```protobuf  
 syntax = "proto3"
@@ -107,7 +105,7 @@ message Person {
 }
 ```
 
-Protobuf będzie używać prostego `T?` (na `int?`przykład) dla wygenerowanej właściwości wiadomości.
+Protobuf będzie używać prostej `T?` (na przykład `int?`) dla wygenerowanej właściwości wiadomości.
 
 W poniższej tabeli przedstawiono pełną listę typów otoki o równoważnym C# typie:
 
@@ -120,17 +118,17 @@ W poniższej tabeli przedstawiono pełną listę typów otoki o równoważnym C#
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-Dobrze znane typy `Timestamp` i `Duration` są reprezentowane w programie .NET jako klasy, więc nie ma potrzeby stosowania wersji dopuszczających wartość null, ale ważne jest, aby sprawdzić, czy właściwości tych typów są puste w przypadku konwertowania `DateTimeOffset` na `TimeSpan`lub.
+Dobrze znane typy `Timestamp` i `Duration` są reprezentowane w programie .NET jako klasy, więc nie ma potrzeby stosowania wersji dopuszczających wartości null, ale ważne jest, aby sprawdzić, czy właściwości tych typów są puste w przypadku konwertowania na `DateTimeOffset` lub `TimeSpan`.
 
-## <a name="decimals"></a>Miejsca dziesiętne
+## <a name="decimals"></a>miejsca dziesiętne
 
-Protobuf nie obsługuje natywnie typu .NET `decimal` , tylko `double` i `float`. W projekcie protobuf istnieje trwająca dyskusja dotycząca możliwości dodawania typu standardowego `Decimal` do dobrze znanych typów, z obsługą platformy dla języków i struktur, które go obsługują, ale nic nie zostało jeszcze zaimplementowane.
+Protobuf nie obsługuje natywnie typu `decimal` .NET, po prostu `double` i `float`. W projekcie protobuf istnieje trwająca dyskusja dotycząca możliwości dodawania standardowego typu `Decimal` do dobrze znanych typów, z obsługą platformy dla języków i struktur, które go obsługują, ale nic nie zostało jeszcze zaimplementowane.
 
-Istnieje możliwość utworzenia definicji komunikatu reprezentującej `decimal` typ, który będzie działał do bezpiecznej serializacji między klientami i serwerami platformy .NET, ale deweloperzy na innych platformach będą musieli zrozumieć używany format i zaimplementować własny Obsługa dla tego programu.
+Istnieje możliwość utworzenia definicji komunikatu reprezentującej typ `decimal`, który będzie działał do bezpiecznej serializacji między klientami i serwerami platformy .NET, ale deweloperzy na innych platformach będą musieli zrozumieć używany format i wdrożyć własną obsługę dla niego.
 
 ### <a name="creating-a-custom-decimal-type-for-protobuf"></a>Tworzenie niestandardowego typu dziesiętnego dla protobuf
 
-Bardzo prosta implementacja może być podobna do niestandardowym `Money` typem używanym przez niektóre interfejsy API Google, bez tego `currency` pola.
+Bardzo prosta implementacja może być podobna do niestandardowym typem `Money` używanym przez niektóre interfejsy API usługi Google, bez pola `currency`.
 
 ```protobuf
 package CustomTypes;
@@ -147,12 +145,12 @@ message Decimal {
 }
 ```
 
-Pole reprezentuje wartości z `0.999_999_999` do `-0.999_999_999`. `nanos` Na przykład `decimal` wartość `1.5m` będzie reprezentowana jako `{ units = 1, nanos = 500_000_000 }` ( `nanos` dlategow`int32` polu w tym przykładzie jest używany Typ,którykodujebardziejwydajneniżwprzypadkuwiększychwartości).`sfixed32` Jeśli pole jest ujemne, pole powinno również być ujemne. `nanos` `units`
+Pole `nanos` reprezentuje wartości z `0.999_999_999` do `-0.999_999_999`. Na przykład `decimal` wartość `1.5m` byłaby reprezentowana jako `{ units = 1, nanos = 500_000_000 }` (dlatego w polu `nanos` w tym przykładzie jest używany typ `sfixed32`, który koduje bardziej wydajny niż `int32` dla większych wartości). Jeśli pole `units` ma wartość ujemną, pole `nanos` powinno również być ujemne.
 
 > [!NOTE]
-> Istnieje wiele innych algorytmów kodowania `decimal` wartości jako ciągi bajtowe, ale ten komunikat jest znacznie łatwiejszy do zrozumienia, a wartości nie wpływają na różne platformy. *[](https://en.wikipedia.org/wiki/Endianness)*
+> Istnieje wiele innych algorytmów kodowania `decimal` wartości jako ciągi bajtów, ale ten komunikat jest znacznie łatwiejszy do zrozumienia, a wartości nie *[wpływają na różne](https://en.wikipedia.org/wiki/Endianness)* platformy.
 
-Konwersję między tym typem a typem `decimal` BCL można zaimplementować w C# taki sam sposób.
+Konwersję między tym typem i typem `decimal` BCL można zaimplementować w C# taki sam sposób.
 
 ```csharp
 namespace CustomTypes
@@ -185,7 +183,7 @@ namespace CustomTypes
 ```
 
 > [!IMPORTANT]
-> Za każdym razem, gdy korzystasz z niestandardowych typów komunikatów narzędzi takich jak to, **musisz** udokumentować je przy użyciu komentarzy w `.proto` tak, aby inni deweloperzy mogli zaimplementować konwersję do i z równoważnego typu w własnym języku lub strukturze.
+> Za każdym razem, gdy korzystasz z niestandardowych typów komunikatów narzędzi takich jak to, **musisz udokumentować** je za pomocą komentarzy w `.proto`, tak aby inni deweloperzy mogli zaimplementować konwersję do i z odpowiedniego typu w własnym języku lub strukturze.
 
 >[!div class="step-by-step"]
 >[Poprzedni](protobuf-messages.md)

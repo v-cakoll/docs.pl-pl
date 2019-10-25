@@ -3,16 +3,14 @@ title: Wyliczenia protobuf — gRPC dla deweloperów WCF
 description: Dowiedz się, jak deklarować wyliczenia i korzystać z nich w protobuf.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 37fd55e4cbc3c1e1e96e32875ddb3dcae0ca8355
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f18196f54caba824d7101782a88cf3bf699560d5
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771645"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846343"
 ---
 # <a name="protobuf-enumerations"></a>Wyliczenia Protobuf
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Protobuf obsługuje typy wyliczeniowe, jak pokazano w poprzedniej sekcji, w której Wyliczenie zostało użyte do określenia typu pola `oneof`. Można zdefiniować własne typy wyliczeniowe, a protobuf będzie kompilować je C# do typów wyliczeniowych. Ponieważ protobuf można używać w różnych językach, konwencje nazewnictwa dla wyliczeń różnią się C# od konwencji. Jednak generator kodu jest sprytne i konwertuje nazwy do tradycyjnego C# przypadku. Jeśli odpowiednik w przypadku języka Pascala nazwy pola rozpoczyna się od nazwy wyliczenia, zostanie usunięty.
 
@@ -41,7 +39,7 @@ public enum AccountStatus
 }
 ```
 
-Definicje wyliczenia protobuf **muszą** mieć stałą zero jako swoje pierwsze pole. Podobnie jak C#w programie, można zadeklarować wiele pól o tej samej wartości, ale należy jawnie włączyć tę opcję przy użyciu opcji `allow_alias` w wyliczeniu:
+Definicje wyliczenia protobuf **muszą** mieć stałą zero jako swoje pierwsze pole. Podobnie jak C#w programie, można zadeklarować wiele pól o tej samej wartości, ale należy jawnie włączyć tę opcję przy użyciu opcji`allow_alias`w wyliczeniu:
 
 ```protobuf
 enum AccountStatus {

@@ -3,16 +3,14 @@ title: Poświadczenia kanału — gRPC dla deweloperów WCF
 description: Jak zaimplementować i używać poświadczeń kanału gRPC w ASP.NET Core 3,0.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61305ee47a2c09a0b2a0fd866beb9b7c102ffeaa
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184583"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846708"
 ---
-# <a name="channel-credentials"></a>Poświadczenia kanału
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="channel-credentials"></a>Poświadczenia kanałów
 
 Jak wskazuje nazwa, poświadczenia kanału są dołączane do bazowego kanału gRPC. Standardowa forma poświadczeń kanału używa uwierzytelniania certyfikatu klienta, gdy klient udostępnia certyfikat TLS, gdy nastąpi połączenie, które jest weryfikowane przez serwer przed zezwoleniem na wykonywanie jakichkolwiek wywołań.
 
@@ -28,7 +26,7 @@ Należy skonfigurować uwierzytelnianie certyfikatu zarówno na poziomie hosta, 
 
 ### <a name="configuring-certificate-validation-on-kestrel"></a>Konfigurowanie weryfikacji certyfikatu na Kestrel
 
-Można skonfigurować Kestrel (serwer HTTP ASP.NET Core), aby wymagał certyfikatu klienta i opcjonalnie przeprowadzić weryfikację podanego certyfikatu przed zaakceptowaniem połączeń przychodzących. Ta konfiguracja jest wykonywana w `CreateWebHostBuilder` metodzie `Program` klasy, a nie w `Startup`.
+Można skonfigurować Kestrel (serwer HTTP ASP.NET Core), aby wymagał certyfikatu klienta i opcjonalnie przeprowadzić weryfikację podanego certyfikatu przed zaakceptowaniem połączeń przychodzących. Ta konfiguracja jest wykonywana w metodzie `CreateWebHostBuilder` klasy `Program`, a nie w `Startup`.
 
 ```csharp
 public static IHostBuilder CreateHostBuilder(string[] args) =>
@@ -51,13 +49,13 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-To `ClientCertificateMode.RequireCertificate` ustawienie spowoduje natychmiastowe odrzucanie wszystkich żądań połączenia, które nie zawierają certyfikatu klienta, ale nie sprawdza poprawności certyfikatu. Dodanie wywołania zwrotnego umożliwia Kestrel Weryfikowanie certyfikatu klienta (w tym przypadku, aby upewnić się, że został wystawiony przez ten sam *urząd certyfikacji* co certyfikat serwera) w momencie nawiązywania połączenia przed ASP.NET Core `ClientCertificateValidation` potok jest zajęty.
+Ustawienie `ClientCertificateMode.RequireCertificate` spowoduje natychmiastowe odrzucanie wszystkich żądań połączenia, które nie zawierają certyfikatu klienta, ale nie sprawdza poprawności certyfikatu. Dodanie wywołania zwrotnego `ClientCertificateValidation` umożliwia Kestrel Weryfikowanie certyfikatu klienta (w tym przypadku, aby upewnić się, że został wystawiony przez ten sam *urząd certyfikacji* co certyfikat serwera) w momencie nawiązywania połączenia, przed potokiem ASP.NET Core jest zaangażowany.
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>Dodawanie ASP.NET Core uwierzytelniania certyfikatów
 
 Uwierzytelnianie przy użyciu certyfikatu jest dostarczane przez pakiet NuGet [Microsoft. AspNetCore. Authentication. Certificate](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.Certificate) .
 
-Dodaj usługę uwierzytelniania certyfikatów w `ConfigureServices` metodzie i Dodaj uwierzytelnianie i autoryzację do potoku ASP.NET Core `Configure` w metodzie.
+Dodaj usługę uwierzytelniania certyfikatów w metodzie `ConfigureServices` i Dodaj uwierzytelnianie i autoryzację do potoku ASP.NET Core w metodzie `Configure`.
 
 ```csharp
 public class Startup
@@ -98,7 +96,7 @@ public class Startup
 
 ## <a name="providing-channel-credentials-in-the-client-application"></a>Dostarczanie poświadczeń kanału w aplikacji klienckiej
 
-W pakiecie certyfikaty są konfigurowane <xref:System.Net.Http.HttpClient> w wystąpieniu, `GrpcChannel` które jest dostarczane do użytego połączenia. `Grpc.Net.Client`
+W pakiecie `Grpc.Net.Client` certyfikaty są konfigurowane w wystąpieniu <xref:System.Net.Http.HttpClient>, który jest dostarczany `GrpcChannel` używanym do nawiązywania połączenia.
 
 ```csharp
 class Program
@@ -129,7 +127,7 @@ class Program
 
 Serwer można skonfigurować tak, aby korzystał z uwierzytelniania certyfikatów i tokenów, stosując zmiany certyfikatu na serwerze Kestrel i używając oprogramowania pośredniczącego okaziciela JWT w ASP.NET Core.
 
-Aby zapewnić zarówno ChannelCredentials, jak i CallCredentials na kliencie, użyj `ChannelCredentials.Create` metody, aby zastosować poświadczenia wywołania. Nadal należy zastosować uwierzytelnianie certyfikatu przy użyciu <xref:System.Net.Http.HttpClient> wystąpienia: w przypadku przekazania jakichkolwiek argumentów `SslCredentials` do konstruktora wewnętrzny kod klienta zgłasza wyjątek. Parametr jest uwzględniany tylko `Grpc.Net.Client` w `Create` metodzie pakietu, aby zachować zgodność z `Grpc.Core` pakietem. `SslCredentials`
+Aby zapewnić zarówno ChannelCredentials, jak i CallCredentials na kliencie, użyj metody `ChannelCredentials.Create`, aby zastosować poświadczenia wywołania. Nadal należy zastosować uwierzytelnianie certyfikatu przy użyciu wystąpienia <xref:System.Net.Http.HttpClient>: w przypadku przekazania jakichkolwiek argumentów do konstruktora `SslCredentials` wewnętrzny kod klienta zgłasza wyjątek. Parametr `SslCredentials` jest uwzględniany tylko w metodzie `Create` pakietu `Grpc.Net.Client`, aby zachować zgodność z pakietem `Grpc.Core`.
 
 ```csharp
 var handler = new HttpClientHandler();
@@ -154,7 +152,7 @@ var grpc = new Portfolios.PortfoliosClient(channel);
 ```
 
 > [!TIP]
-> Możesz użyć `ChannelCredentials.Create` metody dla klienta bez uwierzytelniania przy użyciu certyfikatu, ponieważ jest to przydatny sposób przekazywania poświadczeń tokenu przy każdym wywołaniu w kanale.
+> Metody `ChannelCredentials.Create` można użyć dla klienta bez uwierzytelniania przy użyciu certyfikatu, ponieważ jest to przydatny sposób przekazywania poświadczeń tokenu przy każdym wywołaniu w kanale.
 
 W serwisie GitHub została [dodana wersja przykładowej aplikacji GRPC FullStockTicker z uwierzytelnianiem przy użyciu certyfikatu](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/FullStockTickerSample/grpc/FullStockTickerAuth/FullStockTicker) .
 

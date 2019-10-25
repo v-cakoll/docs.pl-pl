@@ -3,20 +3,18 @@ title: Wywołania poświadczeń — gRPC dla deweloperów WCF
 description: Jak zaimplementować i używać poświadczeń wywołań gRPC w ASP.NET Core 3,0.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 483f540a0ed3849883c07cc70f0e3d45a6b121ad
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184597"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846686"
 ---
-# <a name="call-credentials"></a>Poświadczenia wywołania
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+# <a name="call-credentials"></a>Poświadczenia wywołań
 
 Poświadczenia wywołań są wszystkie na podstawie pewnego rodzaju tokenu przekazaną w metadanych przy użyciu każdego żądania.
 
-## <a name="ws-federation"></a>WS-Federation
+## <a name="ws-federation"></a>Usługa WS-Federation
 
 ASP.NET Core obsługuje protokół WS-Federation przy użyciu pakietu NuGet [WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) . Usługa WS-Federation to najbliższa dostępna alternatywa dla uwierzytelniania systemu Windows, która nie jest obsługiwana w przypadku protokołu HTTP/2. Użytkownicy są uwierzytelniani przy użyciu Active Directory Federation Services (AD FS), która zapewnia token, którego można użyć do uwierzytelniania za pomocą ASP.NET Core.
 
@@ -60,7 +58,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-`IssuerSigningKey` Właściwość wymaga`Microsoft.IdentityModels.Tokens.SecurityKey` implementacji z danymi kryptograficznymi niezbędnymi do zweryfikowania podpisanych tokenów. Ten token powinien być bezpiecznie przechowywany na *serwerze tajnym* , takim jak Magazyn kluczy platformy Azure.
+Właściwość `IssuerSigningKey` wymaga implementacji `Microsoft.IdentityModels.Tokens.SecurityKey` z danymi kryptograficznymi niezbędnymi do zweryfikowania podpisanych tokenów. Ten token powinien być bezpiecznie przechowywany na *serwerze tajnym* , takim jak Magazyn kluczy platformy Azure.
 
 Następnie Dodaj usługę autoryzacji, która kontroluje dostęp do systemu.
 
@@ -79,7 +77,7 @@ Następnie Dodaj usługę autoryzacji, która kontroluje dostęp do systemu.
 > [!TIP]
 > Uwierzytelnianie i autoryzacja to dwa oddzielne kroki. Uwierzytelnianie służy do określenia tożsamości użytkownika. Autoryzacja decyduje, czy użytkownik może uzyskać dostęp do różnych części systemu.
 
-Teraz Dodaj oprogramowanie pośredniczące uwierzytelniania i autoryzacji do potoku ASP.NET Core w `Configure` metodzie.
+Teraz Dodaj oprogramowanie pośredniczące uwierzytelniania i autoryzacji do potoku ASP.NET Core w metodzie `Configure`.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -102,7 +100,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 }
 ```
 
-Na koniec zastosuj `[Authorize]` atrybut do dowolnych usług lub metod, które mają być zabezpieczone, `User` i Użyj właściwości z `HttpContext` bazowego, aby zweryfikować uprawnienia.
+Na koniec zastosuj atrybut `[Authorize]` do dowolnych usług lub metod, które mają być zabezpieczone, i Użyj właściwości `User` z bazowego `HttpContext`, aby zweryfikować uprawnienia.
 
 ```csharp
 [Authorize]

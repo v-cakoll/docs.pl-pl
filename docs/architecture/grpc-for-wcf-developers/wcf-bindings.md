@@ -3,16 +3,14 @@ title: Powiązania i transporty WCF — gRPC dla deweloperów programu WCF
 description: Dowiedz się, w jaki sposób różne powiązania i transporty WCF są porównywane z gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f1866fe379dd307ede8128b43cf8f70c8b4caf69
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771607"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846052"
 ---
 # <a name="wcf-bindings-and-transports"></a>Transporty i powiązania WCF
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Funkcja WCF ma wiele różnych wbudowanych *powiązań* , które określają różne protokoły sieciowe, formaty przewodowe i inne szczegóły implementacji. gRPC wydajnie ma tylko jeden protokół sieciowy i jeden format sieci (technicznie można *dostosować format przewodu* , ale jest on poza zakresem tej książki). Prawdopodobnie odkryjesz, że gRPC oferuje najlepsze rozwiązanie w większości przypadków. Poniżej przedstawiono krótką dyskusję na temat najbardziej odpowiednich powiązań WCF oraz sposób ich porównania z ich odpowiednikiem w gRPC.
 

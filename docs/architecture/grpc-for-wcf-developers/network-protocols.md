@@ -3,16 +3,14 @@ title: Protokoły sieciowe — gRPC dla deweloperów WCF
 description: Omówienie protokołów sieciowych gRPC.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: a176d3e84f5f454f746273c9cc7e7afe7c7f9d8a
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: cf99b2608d576765856c992679b93b6f21e796cf
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184289"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846394"
 ---
 # <a name="network-protocols"></a>Protokoły sieciowe
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W przeciwieństwie do WCF, gRPC używa protokołu HTTP/2 jako podstawy dla sieci. Zapewnia to znaczne zalety usług WCF i SOAP, które działają tylko w przypadku protokołu HTTP/1.1. Deweloperzy chcą korzystać z gRPC, ponieważ nie istnieje alternatywa dla protokołu HTTP/2. wydaje się to idealnym momentem do eksplorowania protokołu HTTP/2 i zidentyfikowania dodatkowych korzyści związanych z korzystaniem z gRPC.
 

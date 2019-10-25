@@ -3,16 +3,14 @@ title: Porównanie funkcji WCF z gRPC-gRPC dla deweloperów WCF
 description: Porównanie struktur WCF i gRPC na potrzeby tworzenia aplikacji rozproszonych.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: c763048d09e7ed5ca0a3d5240f6b3cf5262f897c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184044"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846067"
 ---
 # <a name="comparing-wcf-to-grpc"></a>Porównywanie WCF z gRPC
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Poprzedni rozdział powinien mieć zapewnioną dobrą postać protobuf oraz sposób, w jaki gRPC obsługuje komunikaty. Przed rozpoczęciem pracy w ramach szczegółowej konwersji z programu WCF do gRPC należy zwrócić uwagę na to, jak zakres funkcji dostępnych obecnie w programie WCF jest obsługiwany w gRPC i jakie obejścia, których można użyć, gdy nie wydaje się, że nie jest odpowiednikiem gRPC. W szczególności ten rozdział będzie obejmować następujące tematy:
 
@@ -21,11 +19,11 @@ Poprzedni rozdział powinien mieć zapewnioną dobrą postać protobuf oraz spos
 - Typy wywołań RPC
 - Metadane
 - Obsługa błędów
-- WS-\* Protocols
+- Protokoły WS-\*
 
 ## <a name="grpc-example"></a>przykład gRPC
 
-Podczas tworzenia nowego projektu ASP.NET Core gRPC 3,0 z programu Visual Studio 2019 lub wiersza polecenia zostanie wygenerowany odpowiednik gRPC "Hello world". Składa się z `greeter.proto` pliku, który definiuje usługę i jej komunikaty `GreeterService.cs` oraz plik z implementacją usługi.
+Podczas tworzenia nowego projektu ASP.NET Core gRPC 3,0 z programu Visual Studio 2019 lub wiersza polecenia zostanie wygenerowany odpowiednik gRPC "Hello world". Składa się z pliku `greeter.proto`, który definiuje usługę i jej komunikaty, oraz plik `GreeterService.cs` z implementacją usługi.
 
 ```protobuf
 syntax = "proto3";

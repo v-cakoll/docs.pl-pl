@@ -3,16 +3,14 @@ title: Docker-gRPC dla deweloperów WCF
 description: Tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2ed3e823c83d8f11fb7290ba6c343b4b47e68e0b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770546"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846682"
 ---
 # <a name="docker"></a>Docker
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Ta sekcja będzie obejmować tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC, gotowych do uruchamiania w środowiskach Docker, Kubernetes i innych kontenerach. Przykładowa aplikacja używana z aplikacją sieci Web ASP.NET Core MVC i usługą gRPC jest dostępna w repozytorium [dotnet-Architecture/gRPC-for-WCF-Developers](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/KubernetesSample) w witrynie GitHub.
 
@@ -117,7 +115,7 @@ W przypadku rozwiązania z pojedynczą aplikacją, a tym samym pliku dockerfile,
 docker build --tag stockdata .
 ```
 
-Flaga `--tag` o niewłaściwej nazwie (którą można skrócić do `-t`) określa pełną nazwę obrazu, w *tym* rzeczywisty tag, jeśli został określony. @No__t_0 na końcu określa *kontekst* , w którym kompilacja będzie uruchamiana; bieżący katalog roboczy dla poleceń `COPY` w pliku dockerfile.
+Flaga `--tag` o niewłaściwej nazwie (którą można skrócić do `-t`) określa pełną nazwę obrazu, w *tym* rzeczywisty tag, jeśli został określony. `.` na końcu określa *kontekst* , w którym kompilacja będzie uruchamiana; bieżący katalog roboczy dla poleceń `COPY` w pliku dockerfile.
 
 Jeśli masz wiele aplikacji w ramach jednego rozwiązania, możesz zachować pliku dockerfile dla każdej aplikacji w swoim folderze, obok pliku `.csproj`, ale nadal należy uruchomić polecenie `docker build` z katalogu podstawowego, aby upewnić się, że rozwiązanie i wszystkie projekty są kopiowane do obrazu. Można określić pliku dockerfile pod bieżącym katalogiem przy użyciu flagi `--file` (lub `-f`).
 
@@ -133,7 +131,7 @@ Aby uruchomić obraz w lokalnym wystąpieniu platformy Docker, użyj polecenia `
 docker run -ti -p 5000:80 stockdata
 ```
 
-Flaga `-ti` łączy bieżący terminal z terminalem kontenera i działa w trybie interaktywnym. @No__t_0 publikuje (łącza) port 80 w kontenerze do portu 80 w interfejsie sieciowym hosta lokalnego.
+Flaga `-ti` łączy bieżący terminal z terminalem kontenera i działa w trybie interaktywnym. `-p 5000:80` publikuje (łącza) port 80 w kontenerze do portu 80 w interfejsie sieciowym hosta lokalnego.
 
 ## <a name="push-the-image-to-a-registry"></a>Wypchnij obraz do rejestru
 

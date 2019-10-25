@@ -3,16 +3,14 @@ title: Wprowadzenie — gRPC dla deweloperów WCF
 description: Wprowadzenie
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 2782f28e8a99fa7c0bde69f757d14e96e91f5cd4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184422"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846628"
 ---
 # <a name="introduction"></a>Wprowadzenie
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Pomoc dla maszyn komunikujących się ze sobą jest jednym z podstawowych postanowień w wieku cyfrowym. W szczególności istnieje ciągły nakład na określenie optymalnego mechanizmu komunikacji zdalnej, który będzie odpowiadał wymaganiom związanym z współdziałaniem bieżącej infrastruktury. Jak można wyobrazić, ten mechanizm zmienia się w zależności od potrzeb lub infrastruktury.
 
@@ -39,7 +37,7 @@ Protokół SOAP definiuje reguły, za pomocą których elementy rozproszone apli
 
 Windows Communication Foundation to struktura do kompilowania usług. Została zaprojektowana na wczesnych wersjach 2000, aby ułatwić deweloperom korzystanie z wczesnego SOA do zarządzania złożonością pracy z protokołem SOAP. Mimo że eliminuje wymóg tworzenia własnych protokołów SOAP przez dewelopera, usługa WCF nadal używa protokołu SOAP do zapewnienia współdziałania z innymi systemami. Program WCF został również zaprojektowany w celu dostarczania rozwiązań między wieloma protokołami (HTTP/1.1, NetTCP itd.).
 
-## <a name="microservices"></a>Mikrousługi
+## <a name="microservices"></a>Mikrousług
 
 W przypadku architektur mikrousług duże aplikacje są kompilowane jako kolekcja mniejszych usług modułowych. Każdy składnik wykonuje określone zadanie lub proces, a składniki są przeznaczone do pracy, ale mogą być odizolowane w razie potrzeby.
 

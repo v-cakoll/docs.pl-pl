@@ -3,16 +3,14 @@ title: Protobuf messages — gRPC dla deweloperów WCF
 description: Dowiedz się, w jaki sposób komunikaty protobuf są zdefiniowane w C#IDL i generowane w.
 author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 1fdbedaadb33ac3eb99ca360018beb36ac7a8d78
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 9943478698acfbb54b3e1dd0e6a856d11b9266c3
+ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771623"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72846339"
 ---
 # <a name="protobuf-messages"></a>Komunikaty Protobuf
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 W tej sekcji opisano sposób deklarowania komunikatów protobuf w plikach `.proto`, objaśniono podstawowe pojęcia dotyczące numerów pól i typów oraz Sprawdzamy C# kod generowany przez kompilator `protoc`. Pozostała część rozdziału zawiera bardziej szczegółowe informacje na temat sposobu reprezentowania różnych typów danych w protobuf.
 

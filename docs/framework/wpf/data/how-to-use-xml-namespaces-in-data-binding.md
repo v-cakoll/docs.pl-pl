@@ -1,34 +1,34 @@
 ---
-title: 'Instrukcje: Używanie przestrzeni nazw XML w powiązaniu danych'
+title: Jak użyć przestrzeni nazw XML w powiązaniu danych
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML [WPF], namespaces
 - data binding [WPF], XML namespaces
 - namespaces [WPF], XML
 ms.assetid: a47c832f-dc84-48f2-96d5-cde18fc4284b
-ms.openlocfilehash: 38bf6e8f88b0325193d49148cd6c33031f7b0a6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d8ddc5445bac28c68cd6cc99acf3313613a8c7f
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931914"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919667"
 ---
-# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Instrukcje: Używanie przestrzeni nazw XML w powiązaniu danych
-## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak obsługiwać przestrzenie nazw określony w swojej [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] źródło wiążące.  
-  
- Jeśli Twoje [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych ma [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] definicję przestrzeni nazw:  
-  
- `<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">`  
-  
- Możesz użyć <xref:System.Windows.Data.XmlNamespaceMapping> element do mapowania na przestrzeń nazw w celu <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, jak w poniższym przykładzie. Następnie można użyć <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> do odwoływania się do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] przestrzeni nazw. <xref:System.Windows.Controls.ListBox> w tym przykładzie wyświetla *tytuł* i *dc:date* każdego *elementu*.  
-  
- [!code-xaml[XmlnsBindSnippet#XmlNamespaceMapping](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBindSnippet/CS/Window1.xaml#xmlnamespacemapping)]  
-  
- Należy pamiętać, że <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> określasz, że nie ma odpowiadający komentarzowi użytemu w [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] źródła; Jeśli zmieni się prefiks [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] źródła wciąż działa mapowanie.  
-  
- W tym konkretnym przykładzie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane pochodzą z usługi sieci web, ale <xref:System.Windows.Data.XmlNamespaceMapping> element współpracuje również z wbudowanego [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] lub [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] osadzonego pliku danych.  
-  
+# <a name="how-to-use-xml-namespaces-in-data-binding"></a>Jak użyć przestrzeni nazw XML w powiązaniu danych
+## <a name="example"></a>Przykład
+ Ten przykład pokazuje, jak obsługiwać przestrzenie nazw określone w źródle powiązania [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].
+
+ Jeśli dane [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] mają następującą [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] definicji przestrzeni nazw:
+
+ `<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">`
+
+ Można użyć elementu <xref:System.Windows.Data.XmlNamespaceMapping> do mapowania przestrzeni nazw na <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, jak w poniższym przykładzie. Następnie można użyć <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A>, aby odwołać się do przestrzeni nazw [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. <xref:System.Windows.Controls.ListBox> w tym przykładzie wyświetla *tytuł* i *kontroler domeny: Data* każdego *elementu*.
+
+ [!code-xaml[XmlnsBindSnippet#XmlNamespaceMapping](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlnsBindSnippet/CS/Window1.xaml#xmlnamespacemapping)]
+
+ Należy zauważyć, że określony <xref:System.Windows.Data.XmlNamespaceMapping.Prefix%2A> nie musi być zgodny z użytym w źródle [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]; Jeśli prefiks zmieni się w źródle [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Twoje mapowanie nadal działa.
+
+ W tym konkretnym przykładzie dane [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] pochodzą z usługi sieci Web, ale element <xref:System.Windows.Data.XmlNamespaceMapping> działa również z wbudowanymi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] lub [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danymi w osadzonym pliku.
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)

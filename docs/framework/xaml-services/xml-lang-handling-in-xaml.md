@@ -7,15 +7,15 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 6495e980beea8731c47a774589919f160b4551ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3af85f298f7581146b5ecc8a559b185f1a01e54c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053603"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919999"
 ---
 # <a name="xmllang-handling-in-xaml"></a>xml:lang — Obsługa w XAML
-`xml:lang` Atrybut jest [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]-zdefiniowany atrybut deklarujący informacje języka i kultury dla elementu w pliku XML. To takie samo znaczenie atrybut będzie nadal występował w XAML; jednak dodatkowe zagadnienia do rozważenia.  
+Atrybut `xml:lang` jest atrybutem zdefiniowanym przez [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], który deklaruje informacje o języku i kulturze dla elementu w formacie XML. Takie samo znaczenie atrybutu utrzymuje się w języku XAML; Niektóre dodatkowe zagadnienia są jednak stosowane.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -27,21 +27,21 @@ ms.locfileid: "62053603"
   
 |||  
 |-|-|  
-|*rfc3066lang*|Ciąg, który jest tworzony na podstawie [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) standardowe i identyfikuje języka lub obszarem języka. Gdy jest to ten ostatni, język i region są oddzielone pojedynczy łącznik. Zobacz <xref:System.Windows.Markup.XmlLanguage> Aby uzyskać więcej informacji na temat wartości i formatu.|  
+|*rfc3066lang*|Ciąg pochodzący ze standardu [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) i identyfikujący język lub region języka. Gdy jest to ostatni, język i region są rozdzielone pojedynczym łącznikiem. Aby uzyskać więcej informacji na temat wartości i formatu, zobacz <xref:System.Windows.Markup.XmlLanguage>.|  
   
 ## <a name="remarks"></a>Uwagi  
- Definicja `xml:lang` atrybutu w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] jest tworzony na podstawie `xml:lang` zgodnie z definicją jako "specjalne atrybutu" [!INCLUDE[TLA#tla_w3c](../../../includes/tlasharptla-w3c-md.md)] dla [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Informacje o języku i kulturze potencjalnie jest przetwarzany na różne sposoby przez elementy, w zależności od ich implementacji; jednak nie jest domyślnie [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] przetwarzanie `xml:lang` atrybutu.  
+ Definicja atrybutu `xml:lang` w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] pochodzi od `xml:lang`, jak określono jako "atrybut specjalny" przez organizacja World Wide Web Consortium (W3C) dla [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)]. Informacje o języku i kulturze mogą być przetwarzane na różne sposoby według elementów, w zależności od ich implementacji; nie ma jednak domyślnego przetwarzania [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] atrybutu `xml:lang`.  
   
- Wartość domyślna `xml:lang` atrybut jest pusty ciąg na poziomie atrybutu.  
+ Wartość domyślna atrybutu `xml:lang` jest ciągiem pustym na poziomie atrybutu.  
   
- `xml:lang` Efekty atrybutu i wartość atrybutu zazwyczaj są perpetuated do elementów podrzędnych, kiedy interpretowane przez systemy, które działają w `xml:lang` wartości.  
+ `xml:lang` efekty atrybutu i wartość atrybutu są zwykle perpetuated do elementów podrzędnych, gdy są interpretowane przez systemy, które działają na wartościach `xml:lang`.  
   
- Kiedy interpretowane przez autorów XAML usług .NET Framework XAML, `xml:lang` można utworzyć wartości <xref:System.Windows.Markup.XmlLanguage> lub <xref:System.Globalization.CultureInfo> obiektów w źródłowym obiekcie reprezentacji; jednak to zachowanie zależy od tego, czy wartość określona dla `xml:lang`składa się z prawidłową dla tych klas.  
+ W przypadku interpretowania przez autorów XAML .NET Framework usług XAML, `xml:lang` wartość może tworzyć obiekty <xref:System.Windows.Markup.XmlLanguage> lub <xref:System.Globalization.CultureInfo> w reprezentacji bazowego obiektu; jednak takie zachowanie zależy od tego, czy wartość określona dla `xml:lang` jest prawidłową konstrukcją dla tych klas.  
   
- Platformy można utworzyć skojarzenia między właściwościami zdefiniowanych i znaczenie `xml:lang` w formacie XML, stosując <xref:System.Windows.Markup.XmlLangPropertyAttribute> do właściwości.  
+ Struktury programu mogą tworzyć skojarzenia między właściwościami zdefiniowanymi przez platformę i znaczenie `xml:lang` w kodzie XML przez zastosowanie <xref:System.Windows.Markup.XmlLangPropertyAttribute> do właściwości.  
   
 ## <a name="wpf-usage-nodes"></a>Węzły użycia WPF  
- Dla elementów, które są pochodne klasy <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>, można użyć odpowiednik <xref:System.Windows.FrameworkElement.Language%2A> właściwość zależności zamiast `xml:lang` atrybutu. Domyślnie <xref:System.Windows.FrameworkElement.Language%2A> właściwość używa "en US", jeśli nie jest w przeciwnym razie ustawiona, za pomocą właściwości lub za pośrednictwem przetwarzania `xml:lang` atrybutu.  
+ Dla elementów, które są klasami pochodnymi <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement>, można użyć równoważnej właściwości zależności <xref:System.Windows.FrameworkElement.Language%2A> zamiast atrybutu `xml:lang`. Domyślnie właściwość <xref:System.Windows.FrameworkElement.Language%2A> używa wartości "pl-US", jeśli nie została ustawiona inaczej, przez właściwość lub poprzez przetwarzanie atrybutu `xml:lang`.  
   
 ## <a name="see-also"></a>Zobacz także
 

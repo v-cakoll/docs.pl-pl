@@ -12,17 +12,17 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: be8dcfce44347e8099e8cfa693bcee341514de2b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 150b742c2195c07abf2b2823871627b0ba827580
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291439"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919995"
 ---
 # <a name="graphics-and-multimedia"></a>Grafika i multimedia
 
 <a name="introduction"></a>
- @ no__t-2 zapewnia obsługę multimediów, grafiki wektorowej, animacji i kompozycji zawartości, dzięki czemu deweloperzy mogą łatwo tworzyć interesujące interfejsy użytkownika i zawartość. Za pomocą [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] można tworzyć grafiki wektorowe lub złożone animacje oraz integrować multimedia z aplikacjami.
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia obsługę multimediów, grafiki wektorowej, animacji i kompozycji zawartości, ułatwiając deweloperom tworzenie interesujących interfejsów użytkownika i zawartości. Za pomocą programu Visual Studio można tworzyć grafiki wektorowe lub złożone animacje oraz integrować multimedia z aplikacjami.
 
 W tym temacie przedstawiono funkcje grafiki, animacji i multimediów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], które umożliwiają dodawanie grafiki, efektów przejścia, dźwięku i wideo do aplikacji.
 
@@ -37,7 +37,7 @@ Wprowadzono kilka zmian dotyczących grafiki i animacji.
 
 - Zaokrąglenie układu
 
-  Gdy brzeg obiektu znajduje się w środku urządzenia pikselowego, niezależny od DPI system grafiki może tworzyć artefakty renderowania, takie jak rozmyte lub częściowo przezroczyste krawędzie. Poprzednie wersje WPF obejmowały przyciąganie pikseli do obsługi tego przypadku. Program Silverlight 2 wprowadził zaokrąglenie układu, który jest innym sposobem przenoszenia elementów tak, aby krawędzie mieściły się w całej krawędzi pikseli. WPF obsługuje teraz zaokrąglanie układu z właściwością dołączoną <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> w <xref:System.Windows.FrameworkElement>.
+  Gdy brzeg obiektu znajduje się w środku urządzenia pikselowego, niezależny od DPI system grafiki może tworzyć artefakty renderowania, takie jak rozmyte lub częściowo przezroczyste krawędzie. Poprzednie wersje WPF obejmowały przyciąganie pikseli do obsługi tego przypadku. Program Silverlight 2 wprowadził zaokrąglenie układu, który jest innym sposobem przenoszenia elementów tak, aby krawędzie mieściły się w całej krawędzi pikseli. Funkcja WPF obsługuje teraz zaokrąglanie układu z właściwością dołączone <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> w <xref:System.Windows.FrameworkElement>.
 
 - Buforowana kompozycja
 
@@ -47,7 +47,7 @@ Wprowadzono kilka zmian dotyczących grafiki i animacji.
 
   Program WPF 4 jest oparty na obsłudze <xref:System.Windows.Media.Effects.ShaderEffect> programu WPF 3,5 SP1, umożliwiając aplikacjom pisanie efektów przy użyciu programu Pixel Shader (PS) w wersji 3,0. Model cieniowania PS 3,0 jest bardziej zaawansowany niż PS 2,0, co pozwala na jeszcze większy wpływ na obsługiwany sprzęt.
 
-- Funkcje krzywej napięcia
+- Zwalnianie funkcji
 
   Możesz wzbogacić animacje za pomocą funkcji, które zapewniają dodatkową kontrolę nad zachowaniem animacji. Na przykład można zastosować <xref:System.Windows.Media.Animation.ElasticEase> do animacji, aby nadać animacji zachowanie sprężynowe. Aby uzyskać więcej informacji, zobacz Typy krzywych napięcia w przestrzeni nazw <xref:System.Windows.Media.Animation>.
 
@@ -63,7 +63,7 @@ WPF obejmuje obsługę grafiki 2-D o wysokiej jakości. Funkcje obejmują pędzl
 
 ![Diagram przedstawiający wielokropek i prostokąty.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
-Te kształty wewnętrzne [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] nie są tylko kształtami: są elementami programowalnymi, które implementują wiele funkcji, których oczekujesz od najbardziej typowych kontrolek, takich jak klawiatura i mysz. Poniższy przykład pokazuje, jak obsłużyć zdarzenie <xref:System.Windows.UIElement.MouseUp> wywoływane przez kliknięcie elementu <xref:System.Windows.Shapes.Ellipse>.
+Te wewnętrzne [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] kształty nie są tylko kształtami: są to elementy programowalne, które implementują wiele funkcji, których oczekujesz od najbardziej typowych kontrolek, które obejmują wprowadzanie klawiatury i myszy. Poniższy przykład pokazuje, jak obsłużyć zdarzenie <xref:System.Windows.UIElement.MouseUp> wywoływane przez kliknięcie elementu <xref:System.Windows.Shapes.Ellipse>.
 
 ```xaml
 <Window
@@ -93,7 +93,7 @@ Partial Public Class Window1
 End Class
 ```
 
-Na poniższej ilustracji przedstawiono dane wyjściowe dla poprzedniego znacznika [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i kodu.
+Na poniższej ilustracji przedstawiono dane wyjściowe dla poprzedniego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i kodu.
 
 ![Okno komunikatu z informacją "kliknięto elipsę!"](./media/index/messagebox-text-output.png)
 
@@ -101,7 +101,7 @@ Aby uzyskać więcej informacji, zobacz temat [kształty i podstawowe Rysowanie 
 
 ### <a name="2-d-geometries"></a>Geometrie 2-D
 
-Gdy kształty 2-D zawierające [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] są niewystarczające, można użyć obsługi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dla geometrie i ścieżek, aby utworzyć własne. Na poniższej ilustracji przedstawiono, jak można użyć geometrie do tworzenia kształtów, jako pędzla rysowania i obcinania innych elementów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+Gdy kształty 2-D, które [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewniają, nie są wystarczające, można użyć obsługi [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dla geometrie i ścieżek, aby utworzyć własne. Na poniższej ilustracji przedstawiono, jak można użyć geometrie do tworzenia kształtów, jako pędzla rysowania i obcinania innych [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] elementów.
 
 ![Zrzut ekranu przedstawiający sposób tworzenia kształtów za pomocą geometrie.](./media/index/use-geometries-create-shapes.png)
 
@@ -109,7 +109,7 @@ Aby uzyskać więcej informacji, zobacz [Omówienie geometrii](geometry-overview
 
 ### <a name="2-d-effects"></a>Efekty 2-D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia bibliotekę klas 2-D, których można użyć do tworzenia rozmaitych efektów. Funkcja renderowania 2-D [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie elementów [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], które mają gradienty, mapy bitowe, rysunki i wideo. i do manipulowania nimi przy użyciu rotacji, skalowania i skośności. Na poniższej ilustracji przedstawiono przykład wielu efektów, które można osiągnąć przy użyciu pędzli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia bibliotekę klas 2-D, których można użyć do tworzenia rozmaitych efektów. Możliwość renderowania 2-D [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia malowanie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów, które mają gradienty, mapy bitowe, rysunki i wideo. i do manipulowania nimi przy użyciu rotacji, skalowania i skośności. Na poniższej ilustracji przedstawiono przykład wielu efektów, które można osiągnąć przy użyciu pędzli [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
 ![Ilustracja przedstawiająca różne pędzle WPF i elementy programu Paint.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ Aby uzyskać więcej informacji, zobacz [Omówienie pędzli WPF](wpf-brushes-ove
 
 ## <a name="3-d-rendering"></a>Renderowanie 3-D
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia zestaw funkcji renderowania trójwymiarowego, które integrują się z obsługą grafiki 2-D w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], aby można było tworzyć bardziej atrakcyjne funkcje układu, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i wizualizacji danych. Na jednym końcu spektrum [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia renderowanie obrazów 2-D na powierzchni trójwymiarowych kształtów, które przedstawiono na poniższej ilustracji.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia zestaw funkcji renderowania trójwymiarowych, które integrują się z obsługą grafiki 2-D w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], aby można było tworzyć bardziej atrakcyjne wizualizacje układu, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]i danych. Na jednym końcu spektrum [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umożliwia renderowanie obrazów 2-D na powierzchni trójwymiarowych kształtów, które przedstawiono na poniższej ilustracji.
 
 ![Zrzut ekranu przedstawiający przykład pokazujący kształty trójwymiarowe z różnymi teksturami.](./media/index/visual-three-dimensional-shape.png)
 
@@ -127,7 +127,7 @@ Aby uzyskać więcej informacji, zobacz temat [Omówienie grafiki trójwymiarowe
 
 <a name="animation"></a>
 
-## <a name="animation"></a>Odtwarzania
+## <a name="animation"></a>Animacja
 
 Używaj animacji, aby tworzyć, wstrząsać, obracać i przerastać elementy. i aby tworzyć interesujące przejścia stron i nie tylko. Ponieważ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] pozwala animować większość właściwości, nie tylko można animować większość obiektów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], można także użyć [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] do animowania tworzonych obiektów niestandardowych.
 
@@ -137,7 +137,7 @@ Aby uzyskać więcej informacji, zobacz [Omówienie animacji](animation-overview
 
 <a name="media"></a>
 
-## <a name="media"></a>Multimedia
+## <a name="media"></a>Multimedialny
 
 Obrazy, wideo i audio to bogate w multimedia sposoby przekazywania informacji i środowiska użytkownika.
 
@@ -145,7 +145,7 @@ Obrazy, wideo i audio to bogate w multimedia sposoby przekazywania informacji i 
 
 Obrazy, takie jak ikony, tła i nawet części animacji, są podstawową częścią większości aplikacji. Ze względu na to, że często trzeba używać obrazów, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uwidacznia możliwość pracy z nimi na różne sposoby. Na poniższej ilustracji przedstawiono tylko jeden z tych sposobów.
 
-![Przykładowy StylingIntro_EventTriggers zrzutu ekranu](../controls/./media/stylingintro-eventtriggers.png "")
+![Przykładowy zrzut ekranu z stylem](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 Aby uzyskać więcej informacji, zobacz [Omówienie tworzenia obrazu](imaging-overview.md).
 
@@ -167,9 +167,9 @@ Aby uzyskać więcej informacji, zobacz [Omówienie multimediów](multimedia-ove
 - <xref:System.Windows.Media.Animation>
 - <xref:System.Windows.Media.Media3D>
 - [Grafika 2D i obrazowanie](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [Kształty i podstawowe Rysowanie w WPF — Omówienie](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Malowanie przy użyciu pełnych kolorów i gradientów — Omówienie](painting-with-solid-colors-and-gradients-overview.md)
-- [Malowanie przy użyciu obrazów, rysunków i wizualizacji](painting-with-images-drawings-and-visuals.md)
+- [Kształty i podstawowe rysowanie w programie WPF — przegląd](shapes-and-basic-drawing-in-wpf-overview.md)
+- [Malowanie jednolitymi kolorami i gradientami — przegląd](painting-with-solid-colors-and-gradients-overview.md)
+- [Malowanie przy użyciu obrazów, rysowania i wizualizacji](painting-with-images-drawings-and-visuals.md)
 - [Animacja i chronometraż — Tematy porad](animation-and-timing-how-to-topics.md)
-- [Grafika trójwymiarowa — Omówienie](3-d-graphics-overview.md)
-- [Omówienie multimediów](multimedia-overview.md)
+- [Grafika 3D — przegląd](3-d-graphics-overview.md)
+- [Multimedia — przegląd](multimedia-overview.md)

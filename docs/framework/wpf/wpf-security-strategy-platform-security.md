@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 925250a2284a47d0f9caf93158e2e23d9283aef3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: fdeb40f1e092f8c7e96e9d59e1b07673201fbe9d
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774742"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920374"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy łączą się, aby zapewnić [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] silnego, kompleksowego modelu zabezpieczeń, który próbuje uniknąć wszelkich single point of failure, jak pokazano na poniższym rysunku:  
@@ -165,7 +165,7 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- ClickOnce to kompleksowa technologia wdrażania dołączona do .NET Framework i integruje się z [!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)] (zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) , aby uzyskać szczegółowe informacje). Autonomiczne aplikacje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] można wdrożyć przy użyciu technologii ClickOnce, natomiast aplikacje hostowane w przeglądarce muszą być wdrażane za pomocą technologii ClickOnce.  
+ ClickOnce to kompleksowa technologia wdrażania dołączona do .NET Framework i integruje się z programem Visual Studio (zobacz [Zabezpieczenia technologii ClickOnce i wdrażanie](/visualstudio/deployment/clickonce-security-and-deployment) , aby uzyskać szczegółowe informacje). Autonomiczne aplikacje [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] można wdrożyć przy użyciu technologii ClickOnce, natomiast aplikacje hostowane w przeglądarce muszą być wdrażane za pomocą technologii ClickOnce.  
   
  Aplikacje wdrożone przy użyciu technologii ClickOnce mają dodatkową warstwę zabezpieczeń w porównaniu z zabezpieczeniami dostępu kodu (CAS); zasadniczo aplikacje wdrożone ClickOnce żądają wymaganych uprawnień. Te uprawnienia są udzielane tylko wtedy, gdy nie przekraczają zestawu uprawnień dla strefy, z której aplikacja jest wdrażana. Zmniejszając zestaw uprawnień tylko do tych, które są niezbędne, nawet jeśli są one mniejsze niż te podane przez zestaw uprawnień strefy uruchamiania, liczba zasobów, do których aplikacja ma dostęp, jest ograniczona do minimum od zera. W związku z tym, jeśli aplikacja zostanie przejęta, potencjalne uszkodzenie komputera klienckiego jest ograniczone.  
   

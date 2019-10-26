@@ -9,50 +9,50 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: d633111c5abc572b0fc27c1a5b32050681504073
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753011"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920248"
 ---
-# <a name="get-started-with-ink-in-wpf"></a>Rozpoczynanie pracy z usługą pisma odręcznego na platformie WPF
+# <a name="get-started-with-ink-in-wpf"></a>Wprowadzenie do pisma odręcznego w WPF
 
-Windows Presentation Foundation (WPF) zawiera funkcję pisma odręcznego, ułatwiająca włączenie cyfrowy atrament w swojej aplikacji.
+Windows Presentation Foundation (WPF) zawiera funkcję atramentu, która ułatwia włączenie cyfrowego atramentu do aplikacji.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby użyć poniższych przykładów, należy najpierw zainstalować [programu Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Pomaga również wiedzieć, jak napisać podstawowych aplikacji WPF. Aby uzyskać pomoc, wprowadzenie do WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aby skorzystać z poniższych przykładów, należy najpierw zainstalować [program Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Pomaga również dowiedzieć się, jak napisać podstawowe aplikacje WPF. Aby uzyskać pomoc dotyczącą rozpoczynania pracy z programem WPF, zobacz [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Przewodnik Szybki Start
+## <a name="quick-start"></a>Szybki start
 
-Ta sekcja ułatwia pisanie prostą aplikację WPF, która gromadzi pisma odręcznego.
+Ta sekcja ułatwia pisanie prostej aplikacji WPF, która zbiera pismo odręczne.
 
-### <a name="got-ink"></a>Masz pisma odręcznego?
+### <a name="got-ink"></a>Masz atrament?
 
-Aby utworzyć aplikację WPF, która obsługuje pisma odręcznego:
+Aby utworzyć aplikację WPF, która obsługuje pismo odręczne:
 
 1. Otwórz program Visual Studio.
 
-2. Utwórz nową **aplikacja WPF**.
+2. Utwórz nową **aplikację WPF**.
 
-   W **nowy projekt** okna dialogowego, rozwiń węzeł **zainstalowane** > **Visual C#** lub **języka Visual Basic**  >   **Windows Desktop** kategorii. Następnie wybierz **aplikacja WPF (.NET Framework)** szablonu aplikacji. Wprowadź nazwę, a następnie wybierz **OK**.
+   W oknie dialogowym **Nowy projekt** rozwiń węzeł **zainstalowana** > **Wizualizacja C#**  lub **Visual Basic** > kategorii **pulpitu systemu Windows** . Następnie wybierz szablon aplikacji **Aplikacja WPF (.NET Framework)** . Wprowadź nazwę, a następnie wybierz przycisk **OK**.
 
-   Program Visual Studio tworzy projekt, a *MainWindow.xaml* zostanie otwarty w projektancie.
+   Program Visual Studio tworzy projekt, a *MainWindow. XAML* zostanie otwarty w projektancie.
 
-3. Typ `<InkCanvas/>` między `<Grid>` tagów.
+3. Wpisz `<InkCanvas/>` między tagami `<Grid>`.
 
    ![Projektant XAML z tagiem InkCanvas](./media/getting-started-with-ink/inkcanvas-xaml.png)
 
-4. Naciśnij klawisz **F5** do uruchomienia aplikacji w debugerze.
+4. Naciśnij klawisz **F5** , aby uruchomić aplikację w debugerze.
 
-5. Za pomocą pióra lub mysz, zapis **Witaj, świecie** w oknie.
+5. Za pomocą pióra lub myszy Napisz **Hello World** w oknie.
 
-Napisanych pisma odręcznego wielokrotność aplikację "hello world" przy użyciu tylko 12 naciśnięć klawiszy!
+Napisano odpowiednik atramentu aplikacji "Hello World" tylko przez 12 naciśnięć klawiszy.
 
-### <a name="spice-up-your-app"></a>Popraw aplikacji w górę
+### <a name="spice-up-your-app"></a>Przyprawa do aplikacji
 
-Przyjrzyjmy się korzystać z niektórych funkcji WPF. Zastąp wszystkie między otwierającym i zamykającym \<okna > Znaczniki następującym kodem:
+Skorzystajmy z niektórych funkcji WPF. Zastąp wszystko między tagiem otwierającym i zamykającym \<> tagów z następującą adiustacją:
 
 ```xaml
 <Page>
@@ -68,45 +68,45 @@ Przyjrzyjmy się korzystać z niektórych funkcji WPF. Zastąp wszystkie między
 </Page>
 ```
 
-Ta XAML tworzy pędzla gradientu tła powierzchni pisma odręcznego.
+Ten kod XAML tworzy tło pędzla gradientu na powierzchni odręcznej.
 
-![Gradient kolorów na pisma odręcznego narażonego na ataki w aplikacji WPF](./media/getting-started-with-ink/gradient-colors.png)
+![Kolory gradientowe na powierzchni odręcznej w aplikacji WPF](./media/getting-started-with-ink/gradient-colors.png)
 
-### <a name="add-some-code-behind-the-xaml"></a>Dodawanie kodu za XAML
+### <a name="add-some-code-behind-the-xaml"></a>Dodaj kod za kodem XAML
 
-Gdy XAML sprawia, że można łatwo projektować interfejs użytkownika, dowolnej aplikacji w rzeczywistych warunkach musi dodać kod do obsługi zdarzeń. Poniżej przedstawiono prosty przykład, który powiększa pisma odręcznego w odpowiedzi kliknij prawym przyciskiem myszy z myszy.
+Chociaż XAML ułatwia projektowanie interfejsu użytkownika, dowolna aplikacja rzeczywista musi dodać kod do obsługi zdarzeń. Oto prosty przykład, który powiększa się w odniesieniu do atramentu w odpowiedzi na kliknięcie prawym przyciskiem myszy.
 
-1. Ustaw `MouseRightButtonUp` obsługi w swojej XAML:
+1. Ustaw procedurę obsługi `MouseRightButtonUp` w kodzie XAML:
 
    [!code-xaml[DigitalInkTopics#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#3)]
 
-1. W **Eksploratora rozwiązań**, rozwiń węzeł MainWindow.xaml i Otwórz plik związany z kodem (MainWindow.xaml.cs lub MainWindow.xaml.vb). Dodaj następujący kod procedury obsługi zdarzeń:
+1. W **Eksplorator rozwiązań**rozwiń węzeł MainWindow. XAML i Otwórz plik związany z kodem (MainWindow.XAML.cs lub MainWindow. XAML. vb). Dodaj następujący kod procedury obsługi zdarzeń:
 
    [!code-csharp[DigitalInkTopics#4](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml.cs#4)]
    [!code-vb[DigitalInkTopics#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window2.xaml.vb#4)]
 
-1. Uruchom aplikację. Dodaj część pisma odręcznego, a następnie kliknij prawym przyciskiem myszy, za pomocą myszy lub wykonać odpowiednik naciśnięcie i przytrzymanie za pomocą pióra.
+1. Uruchom aplikację. Dodaj pismo odręczne, a następnie kliknij prawym przyciskiem myszy myszą lub naciśnij odpowiednik pióra.
 
-   Wyświetlanie powiększa za każdym razem, który kliknięto prawym przyciskiem myszy.
+   Widok zostanie powiększony za każdym razem, gdy klikniesz prawym przyciskiem myszy.
 
-### <a name="use-procedural-code-instead-of-xaml"></a>Zamiast kod proceduralny XAML
+### <a name="use-procedural-code-instead-of-xaml"></a>Użyj kodu proceduralnego zamiast języka XAML
 
-Można uzyskać dostęp do wszystkich funkcji środowiska WPF z kodu proceduralnego. Wykonaj następujące kroki, aby utworzyć aplikację "Hello pisma odręcznego World" dla WPF, który nie używa żadnych XAML w ogóle.
+Dostęp do wszystkich funkcji WPF można uzyskać z kodu proceduralnego. Wykonaj następujące kroki, aby utworzyć aplikację "Hello Ink World" dla platformy WPF, która nie korzysta ze wszystkich języków XAML.
 
-1. Utwórz nowy projekt aplikacji konsoli w programie Visual Studio.
+1. Utwórz nowy projekt aplikacji konsolowej w programie Visual Studio.
 
-   W **nowy projekt** okna dialogowego, rozwiń węzeł **zainstalowane** > **Visual C#** lub **języka Visual Basic**  >   **Windows Desktop** kategorii. Następnie wybierz **Aplikacja konsoli (.NET Framework)** szablonu aplikacji. Wprowadź nazwę, a następnie wybierz **OK**.
+   W oknie dialogowym **Nowy projekt** rozwiń węzeł **zainstalowana** > **Wizualizacja C#**  lub **Visual Basic** > kategorii **pulpitu systemu Windows** . Następnie wybierz szablon aplikacji **Aplikacja konsolowa (.NET Framework)** . Wprowadź nazwę, a następnie wybierz przycisk **OK**.
 
-1. Wklej następujący kod do pliku Program.cs lub Program.vb:
+1. Wklej następujący kod do pliku Program.cs lub program. vb:
 
    [!code-csharp[InkCanvasConsoleApp#1](~/samples/snippets/csharp/VS_Snippets_Wpf/InkCanvasConsoleApp/CSharp/Program.cs#1)]
    [!code-vb[InkCanvasConsoleApp#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]
 
-1. Dodaj odwołania do zestawów PresentationCore PresentationFramework i WindowsBase, klikając prawym przyciskiem myszy **odwołania** w **Eksploratora rozwiązań** i wybierając pozycję **Dodaj odwołanie**.
+1. Dodaj odwołania do zestawów 'Presentationcore, platformie docelowej i 'Windowsbase, klikając prawym przyciskiem myszy pozycję **odwołania** w **Eksplorator rozwiązań** i wybierając pozycję **Dodaj odwołanie**.
 
-   ![Menadżer odwołań PresentationCore i PresentationFramework](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
+   ![Menedżer odwołań przedstawiający 'Presentationcore i platformie docelowej](./media/getting-started-with-ink/reference-manager-presentationcore-presentationframework.png)
 
-1. Kompiluj aplikację, naciskając klawisz **F5**.
+1. Skompiluj aplikację, naciskając klawisz **F5**.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: 2bf815a5b34726b8316eea53786811abec00f5bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e50f542086aadc2f61412fe409d7df0f49422718
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581728"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920363"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] często zależą od plików, które zawierają dane niewykonywalne, takie jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i dźwięk. Windows Presentation Foundation (WPF) oferuje specjalną obsługę konfigurowania, identyfikowania i korzystania z tych typów plików danych, które są nazywane plikami danych aplikacji. Ta obsługa dotyczy określonego zestawu typów plików danych aplikacji, w tym:  
@@ -68,7 +68,7 @@ aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] cz
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] tworzysz plik zasobów przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Resource`.  
+> W programie Visual Studio tworzysz plik zasobów, dodając plik do projektu i ustawiając jego `Build Action`, aby `Resource`.  
   
  Po skompilowaniu projektu MSBuild kompiluje zasób do zestawu.  
   
@@ -109,7 +109,7 @@ aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] cz
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] dodano nowe <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument> lub <xref:System.Windows.ResourceDictionary> do projektu, `Build Action` dla pliku znaczników zostanie domyślnie `Page`.  
+> W programie Visual Studio dodano nowe <xref:System.Windows.Window>, <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.FlowDocument>lub <xref:System.Windows.ResourceDictionary> do projektu, `Build Action` do pliku znaczników zostanie domyślnie `Page`.  
   
  Po skompilowaniu projektu z `Page` elementy [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementy są konwertowane na format binarny i kompilowane w skojarzonym zestawie. W związku z tym te pliki mogą być używane w taki sam sposób jak w przypadku typowych plików zasobów.  
   
@@ -140,7 +140,7 @@ aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] cz
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] tworzysz plik zawartości przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Content` i ustaw jego `Copy to Output Directory` na `Copy always` (analogicznie jak `Always`) i `Copy if newer` (analogicznie jak `PreserveNewest`).  
+> W programie Visual Studio można utworzyć plik zawartości przez dodanie pliku do projektu i ustawienie jego `Build Action` na `Content`i ustawić `Copy to Output Directory` na `Copy always` (analogicznie jak `Always`) i `Copy if newer` (analogicznie jak `PreserveNewest`).  
   
  Podczas kompilowania projektu, <xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute> atrybut jest kompilowany do metadanych zestawu dla każdego pliku zawartości.  
   
@@ -187,7 +187,7 @@ aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] cz
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- Jednak schematy file:///i http://wymagają, aby aplikacja miała pełne zaufanie. Jeśli aplikacja jest [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], która została uruchomiona z Internetu lub intranetu, i żąda tylko zestawu uprawnień, które są dozwolone dla aplikacji uruchomionych z tych lokalizacji, luźne pliki mogą być ładowane tylko z lokacji źródłowej aplikacji. Lokalizacja). Takie pliki są znane jako *lokacja plików pochodzenia* .  
+ Jednak schematy file:///i http://wymagają, aby aplikacja miała pełne zaufanie. Jeśli aplikacja jest [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] uruchamiana z Internetu lub intranetu i żąda tylko zestawu uprawnień, które są dozwolone dla aplikacji uruchomionych z tych lokalizacji, luźne pliki mogą być ładowane tylko z lokacji źródłowej aplikacji ( Lokalizacja uruchamiania). Takie pliki są znane jako *lokacja plików pochodzenia* .  
   
  Lokacja plików pochodzenia jest jedyną opcją dla aplikacji częściowo zaufanych, chociaż nie są ograniczone do aplikacji częściowo zaufanych. Aplikacje z pełnym zaufaniem mogą nadal potrzebować załadowania plików danych aplikacji, które nie są znane w czasie kompilacji; gdy aplikacje z pełnym zaufaniem mogą korzystać z file:///, prawdopodobnie pliki danych aplikacji zostaną zainstalowane w tym samym folderze co lub w podfolderze zestawu aplikacji. W takim przypadku użycie funkcji odwołującej się do lokalizacji jest łatwiejsze niż używanie file:///, ponieważ użycie file:///wymaga wykonania pełnej ścieżki do pliku.  
   
@@ -210,7 +210,7 @@ aplikacje [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] cz
 ```  
   
 > [!NOTE]
-> W [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] można utworzyć witrynę pliku pierwotnego, dodając plik do projektu i ustawiając jego `Build Action` na `None`.  
+> W programie Visual Studio możesz utworzyć lokację pliku pierwotnego, dodając plik do projektu i ustawiając jego `Build Action`, aby `None`.  
   
  Po skompilowaniu projektu, MSBuild kopiuje określone pliki do folderu danych wyjściowych kompilacji.  
   

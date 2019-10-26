@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 405a8d3c8b922d0f74e522e85ea3096d989c478e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582502"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920214"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a>Windows Presentation Foundation (WPF) to struktura prezentacji, za pomocą której można opracowywać następujące typy aplikacji:  
@@ -46,7 +46,7 @@ ms.locfileid: "72582502"
   
 - Zarządzanie oknami w aplikacjach autonomicznych.  
   
-- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i autonomicznych aplikacjach z oknami nawigacji i ramkami.  
+- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]i autonomicznych aplikacjach z oknami nawigacji i ramkami.  
   
  Te możliwości są implementowane przez klasę <xref:System.Windows.Application>, która jest dodawana do aplikacji przy użyciu *definicji aplikacji*.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "72582502"
   
 <a name="Windows_and_Dialog_Boxes"></a>   
 ## <a name="windows-and-dialog-boxes"></a>Okna i okna dialogowe  
- Użytkownicy współpracują z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonomicznymi aplikacjami za pomocą systemu Windows. Przeznaczeniem okna jest hostowanie zawartości aplikacji i Uwidacznianie funkcjonalności aplikacji, która zwykle umożliwia użytkownikom współdziałanie z zawartością. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] systemu Windows są hermetyzowane przez klasę <xref:System.Windows.Window>, która obsługuje:  
+ Użytkownicy współpracują z [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autonomicznymi aplikacjami za pomocą systemu Windows. Przeznaczeniem okna jest hostowanie zawartości aplikacji i Uwidacznianie funkcjonalności aplikacji, która zwykle umożliwia użytkownikom współdziałanie z zawartością. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]systemu Windows są hermetyzowane przez klasę <xref:System.Windows.Window>, która obsługuje:  
   
 - Tworzenie i wyświetlanie okien.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72582502"
   
  <xref:System.Windows.Window> obsługuje możliwość tworzenia specjalnego typu okna znanego jako okno dialogowe. Można utworzyć zarówno modalne, jak i niemodalne typy okien dialogowych.  
   
- Dla wygody i korzyści ze stosowania i spójnego środowiska użytkownika w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uwidacznia trzy podstawowe okna dialogowe systemu Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog> i <xref:System.Windows.Controls.PrintDialog>.  
+ Dla wygody i korzyści ze stosowania i spójnego środowiska użytkownika w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] uwidacznia trzy podstawowe okna dialogowe systemu Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>i <xref:System.Windows.Controls.PrintDialog>.  
   
  Okno komunikatu jest specjalnym typem okna dialogowego służącym do wyświetlania ważnych informacji tekstowych dla użytkowników, a w przypadku pytania proste tak/nie/OK/Anuluj. Za pomocą klasy <xref:System.Windows.MessageBox> można tworzyć i wyświetlać okna komunikatów.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "72582502"
   
  Aby ułatwić nawigację, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje następujące elementy:  
   
-- <xref:System.Windows.Navigation.NavigationService> udostępniony aparat nawigacyjny do przetwarzania żądań nawigacji, które są używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji wewnątrz aplikacji.  
+- <xref:System.Windows.Navigation.NavigationService>udostępniony aparat nawigacyjny do przetwarzania żądań nawigacji, które są używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji wewnątrz aplikacji.  
   
 - Metody nawigacji umożliwiające zainicjowanie nawigacji.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "72582502"
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Wdróż i konfiguruj  
- Chociaż proste aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mogą być kompilowane z wiersza polecenia przy użyciu kompilatorów wiersza polecenia, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integruje się z [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], aby zapewnić dodatkową pomoc techniczną, która uprości proces tworzenia i kompilowania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
+ Chociaż proste aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] mogą być kompilowane z wiersza polecenia przy użyciu kompilatorów wiersza polecenia, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integruje się z programem Visual Studio, aby zapewnić dodatkową pomoc techniczną, która uprości proces tworzenia i kompilowania. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
  W zależności od typu skompilowanej aplikacji istnieje co najmniej jedna opcja wdrażania do wyboru. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji WPF](deploying-a-wpf-application-wpf.md).  
   

@@ -184,8 +184,6 @@
           href: deploying-wcf-applications-with-clickonce.md
     - name: Administracja i diagnostyka
       href: diagnostics/
-    - name: Wymagania systemowe
-      href: wcf-system-requirements.md
     - name: Zasoby systemu operacyjnego wymagane przez architekturę WCF
       href: operating-system-resources-required-by-wcf.md
     - name: Rozwiązywanie problemów dotyczących konfiguracji

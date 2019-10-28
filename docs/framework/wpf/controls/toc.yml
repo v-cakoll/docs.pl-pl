@@ -1,4 +1,4 @@
-- name: Formanty
+- name: Kontrolki
   href: index.md
   items:
     - name: Kontrolki według kategorii
@@ -15,7 +15,7 @@
               href: how-to-animate-a-borderthickness-value.md
         - name: BulletDecorator
           href: bulletdecorator.md
-        - name: Przycisk
+        - name: Button
           href: button.md
           items:
             - name: Tworzenie przycisku mającego obraz
@@ -133,7 +133,7 @@
           items:
             - name: Definiowanie szablonu GroupBox
               href: how-to-define-a-groupbox-template.md
-        - name: Obraz
+        - name: Image (Obraz)
           href: image.md
           items:
             - name: — Tematy porad
@@ -147,7 +147,7 @@
                   href: how-to-crop-an-image.md
                 - name: Obracanie obrazu
                   href: how-to-rotate-an-image.md
-        - name: Etykieta
+        - name: Label
           href: label.md
           items:
             - name: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu
@@ -389,7 +389,7 @@
           items:
             - name: Stosowanie właściwości rozciągania do zawartości okna widoku
               href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
-    - name: ' — Style i szablony'
+    - name: — Style i szablony
       href: styles-and-templates.md
       items:
         - name: Tworzenie szablonów i stylów
@@ -497,7 +497,7 @@
         - name: 'Przewodniki: Tworzenie niestandardowego przycisku animowanego'
           href: walkthroughs-create-a-custom-animated-button.md
           items:
-            - name: Tworzenie przycisku przy użyciu programu Microsoft Expression Blend
+            - name: Tworzenie przycisku przy użyciu narzędzia Blend
               href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-            - name: Tworzenie przycisku przy użyciu języka XAML
+            - name: Utwórz przyciska przy użyciu XAML
               href: walkthrough-create-a-button-by-using-xaml.md

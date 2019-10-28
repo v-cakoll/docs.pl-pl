@@ -2,12 +2,12 @@
 title: Co nowego w C# 8,0 — C# Przewodnik
 description: Zapoznaj się z omówieniem nowych funkcji dostępnych w C# 8,0.
 ms.date: 09/20/2019
-ms.openlocfilehash: 335ae37b20f752f4181a4d1828cb2a1f02c0fa9e
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: e6a2357f4405b4eb31b12a1e3faa6896a31c21a1
+ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798923"
+ms.lasthandoff: 10/26/2019
+ms.locfileid: "72960828"
 ---
 # <a name="whats-new-in-c-80"></a>Co nowego w C# 8,0
 
@@ -40,7 +40,7 @@ W pozostałej części tego artykułu krótko opisano te funkcje. Tam, gdzie są
 
 ## <a name="readonly-members"></a>Elementy członkowskie tylko do odczytu
 
-Można zastosować modyfikator `readonly` do dowolnego elementu członkowskiego struktury. Wskazuje, że element członkowski nie modyfikuje stanu. Jest to bardziej szczegółowe niż stosowanie modyfikatora `readonly` do deklaracji `struct`.  Weź pod uwagę następującą niemodyfikowalną strukturę:
+Do elementów członkowskich struktury można zastosować modyfikator `readonly`. Wskazuje, że element członkowski nie modyfikuje stanu. Jest to bardziej szczegółowe niż stosowanie modyfikatora `readonly` do deklaracji `struct`.  Weź pod uwagę następującą niemodyfikowalną strukturę:
 
 ```csharp
 public struct Point
@@ -61,21 +61,21 @@ public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-Poprzednia zmiana generuje ostrzeżenie kompilatora, ponieważ `ToString` uzyskuje dostęp do właściwości `Distance`, która nie jest oznaczona jako `readonly`:
+Poprzednia zmiana generuje ostrzeżenie kompilatora, ponieważ `ToString` uzyskuje dostęp do właściwości `Distance`, która nie jest oznaczona `readonly`:
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-Kompilator ostrzega o tym, gdy musi utworzyć kopię obronną.  Właściwość `Distance` nie zmienia stanu, dlatego można naprawić to ostrzeżenie przez dodanie modyfikatora `readonly` do deklaracji:
+Kompilator ostrzega o tym, gdy musi utworzyć kopię obronną.  Właściwość `Distance` nie zmienia stanu, więc możesz naprawić to ostrzeżenie, dodając modyfikator `readonly` do deklaracji:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-Należy zauważyć, że modyfikator `readonly` jest konieczny dla właściwości tylko do odczytu. Kompilator nie zakłada, że metody dostępu `get` nie modyfikują stanu; należy zadeklarować jawnie `readonly`. Zaimplementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie zaimplementowane metody pobierające jako tylko do odczytu, więc nie ma potrzeby dodawania modyfikatora `readonly` do właściwości `X` i `Y`.
+Należy zauważyć, że modyfikator `readonly` jest konieczny dla właściwości tylko do odczytu. Kompilator nie zakłada, `get` metody dostępu nie modyfikują stanu; należy zadeklarować `readonly` jawnie. Zaimplementowane właściwości są wyjątkiem; kompilator będzie traktować wszystkie zaimplementowane metody pobierające jako tylko do odczytu, więc nie ma potrzeby dodawania modyfikatora `readonly` do właściwości `X` i `Y`.
 
-Kompilator wymusza zasadę, której elementy członkowskie `readonly` nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że zostanie usunięty modyfikator `readonly`:
+Kompilator wymusza zasadę, która `readonly` członkowie nie modyfikują stanu. Następująca metoda nie zostanie skompilowana, chyba że usuniesz modyfikator `readonly`:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -85,7 +85,7 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-Ta funkcja umożliwia określenie zamierzonego projektu, aby kompilator mógł go wymusić i dokonać optymalizacji na podstawie tego zamiaru.
+Ta funkcja umożliwia określenie zamierzonego projektu, aby kompilator mógł go wymusić i dokonać optymalizacji na podstawie tego zamiaru. Więcej informacji o elementach członkowskich w trybie tylko do odczytu znajduje się w artykule Skorowidz języka na [`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples).
 
 ## <a name="default-interface-methods"></a>Domyślne metody interfejsu
 
@@ -347,13 +347,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>Nierozporządzalne struktury ref
 
-@No__t_0 zadeklarowana z modyfikatorem `ref` nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym, aby umożliwić pozbycie `ref struct`, musi on mieć dostępną metodę `void Dispose()`. Dotyczy to również deklaracji `readonly ref struct`.
+`struct` zadeklarowana z modyfikatorem `ref` nie może implementować żadnych interfejsów i dlatego nie może implementować <xref:System.IDisposable>. W związku z tym, aby umożliwić pozbycie `ref struct`, musi on mieć dostępną metodę `void Dispose()`. Ta funkcja dotyczy również deklaracji `readonly ref struct`.
 
 ## <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
 Wewnątrz bezwartościowego kontekstu adnotacji Każda zmienna typu referencyjnego jest uważana za **typ referencyjny, który nie ma wartości null**. Aby wskazać, że zmienna może mieć wartość null, należy dołączyć nazwę typu z `?`, aby zadeklarować zmienną jako **typ referencyjny dopuszczający wartość null**.
 
-W przypadku typów referencyjnych, które nie mają wartości null, kompilator używa analizy przepływu, aby upewnić się, że zmienne lokalne są inicjowane do wartości innej niż null, gdy zostanie zadeklarowana. Pola muszą być inicjowane podczas konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiona przez wywołanie do któregokolwiek z dostępnych konstruktorów lub inicjatora. Ponadto nie można przypisać wartości, która może mieć wartość null.
+W przypadku typów referencyjnych, które nie mają wartości null, kompilator używa analizy przepływu, aby upewnić się, że zmienne lokalne są inicjowane do wartości innej niż null, gdy zostanie zadeklarowana. Pola muszą być inicjowane podczas konstruowania. Kompilator generuje ostrzeżenie, jeśli zmienna nie jest ustawiana przez wywołanie do któregokolwiek z dostępnych konstruktorów lub inicjatora. Ponadto nie można przypisać wartości, która może mieć wartość null.
 
 Typy odwołań dopuszczających wartość null nie są sprawdzane w celu zapewnienia, że nie są przypisane ani zainicjowane do wartości null. Jednak kompilator używa analizy przepływu, aby upewnić się, że jakakolwiek zmienna typu referencyjnego null jest sprawdzana pod kątem wartości null przed uzyskaniem dostępu lub przypisaniem do niezerowego typu odwołania.
 
@@ -404,7 +404,7 @@ Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 
 Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` generuje wyjątek, tak jak `sequence[sequence.Length]`. Dla dowolnej liczby `n`indeks `^n` jest taka sama jak `sequence.Length - n`.
 
-Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *koniec* nie jest uwzględniony w zakresie. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres.
+Zakres określa *początek* i *koniec* zakresu. Początek zakresu jest włączony, ale koniec zakresu jest na wyłączność, co oznacza, że *początek* znajduje się w zakresie, ale *końcowy* nie należy do zakresu. Zakres `[0..^0]` reprezentuje cały zakres, podobnie jak `[0..sequence.Length]` reprezentuje cały zakres.
 
 Przyjrzyjmy się kilku przykładom. Rozważmy następującą tablicę zawierającą adnotację z jej indeksem od początku i od końca:
 

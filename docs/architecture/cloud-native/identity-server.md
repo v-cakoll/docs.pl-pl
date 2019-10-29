@@ -2,12 +2,12 @@
 title: IdentityServer dla natywnych aplikacji w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: 6217f6093d8dc9df6ab058ebdbf99197752aee0c
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b2f162cd4e09ead520438f664a51bee7d6dacaf4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214022"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035681"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>IdentityServer dla aplikacji natywnych w chmurze
 
@@ -25,8 +25,8 @@ Zazwyczaj aplikacje muszą obsługiwać niektóre lub wszystkie z następującyc
 - Inne aplikacje uzyskujące dostęp do interfejsów API sieci Web zaplecza (bez aktywnego użytkownika lub interfejsu użytkownika).
 - Każda aplikacja może wymagać współdziałania z innymi interfejsami API sieci Web przy użyciu własnej tożsamości lub delegowania do tożsamości użytkownika.
 
-![Typy aplikacji i scenariusze](./media/application-types.png)
-—**rysunek 8-1**. Typy aplikacji i scenariusze.
+![typy aplikacji i scenariusze](./media/application-types.png)
+**rysunku 8-1**. Typy aplikacji i scenariusze.
 
 W każdym z tych scenariuszy uwidocznione funkcje muszą być zabezpieczone przed nieautoryzowanym użyciem. Minimalnym wymaganiem jest zazwyczaj uwierzytelnianie użytkownika lub podmiotu zabezpieczeń wysyłającego żądanie dotyczące zasobu. Uwierzytelnianie może korzystać z jednego z kilku popularnych protokołów, takich jak SAML2p, WS-karmione lub OpenID Connect Connect. Komunikowanie się z interfejsami API zwykle używa protokołu OAuth2 oraz obsługi tokenów zabezpieczających. Oddzielenie tych krytycznych zagadnień związanych z bezpieczeństwem i ich implementacji z aplikacji zapewnia spójność i zwiększa bezpieczeństwo i łatwość utrzymania. Podniesieniu tych problemów do dedykowanego produktu, takiego jak IdentityServer, ułatwia wymagania dla każdej aplikacji, aby rozwiązać te problemy.
 
@@ -47,7 +47,7 @@ Usługi identityserver4 to "open source" i bezpłatna do użycia. Możesz dodać
 
 ## <a name="configuration"></a>Konfiguracja
 
-Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w `Startup` klasie aplikacji ASP.NET Core `ConfigureServices` w metodzie. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Na rysunku 8-2 przedstawiono przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika szybkiego startu usługi identityserver4:
+Program IdentityServer obsługuje różne rodzaje protokołów i dostawców uwierzytelniania społecznościowego, które można skonfigurować w ramach każdej instalacji niestandardowej. Jest to zazwyczaj wykonywane w klasie `Startup` aplikacji ASP.NET Core w metodzie `ConfigureServices`. Konfiguracja obejmuje określenie obsługiwanych protokołów i ścieżek do serwerów i punktów końcowych, które będą używane. Na rysunku 8-2 przedstawiono przykładową konfigurację wykonywaną w projekcie interfejsu użytkownika szybkiego startu usługi identityserver4:
 
 ```csharp
 public class Startup
@@ -92,15 +92,15 @@ public class Startup
 
 **Rysunek 8-2**. Konfigurowanie IdentityServer.
 
-IdentityServer również udostępnia publiczną witrynę demonstracyjną, która może służyć do testowania różnych protokołów i konfiguracji. Znajduje się on w [https://demo.identityserver.io/](https://demo.identityserver.io/) systemie i zawiera informacje dotyczące sposobu konfigurowania jego zachowania na podstawie `client_id` dostarczonego do niego działania.
+IdentityServer również udostępnia publiczną witrynę demonstracyjną, która może służyć do testowania różnych protokołów i konfiguracji. Znajduje się on w [https://demo.identityserver.io/](https://demo.identityserver.io/) i zawiera informacje dotyczące sposobu konfigurowania jego zachowania na podstawie podanego `client_id`.
 
 ## <a name="javascript-clients"></a>Klienci języka JavaScript
 
-Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwera i rozbudowanych aplikacji jednostronicowych klienta (aplikacji jednostronicowych) na frontonie. IdentityServer dostarcza [klient JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) za pośrednictwem npm, który można dodać do aplikacji jednostronicowych, aby umożliwić im używanie IdentityServer do logowania, wylogowywania i uwierzytelniania opartych na tokenach interfejsów API sieci Web.
+Wiele aplikacji natywnych w chmurze korzysta z interfejsów API po stronie serwera i rozbudowanych aplikacji jednostronicowych klienta (aplikacji jednostronicowych) na frontonie. IdentityServer dostarcza [klient JavaScript](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html) (`oidc-client.js`) za pośrednictwem npm, który można dodać do aplikacji jednostronicowych, aby umożliwić im używanie IdentityServer do logowania, wylogowywania i uwierzytelniania interfejsów API sieci Web.
 
 ## <a name="references"></a>Odwołania
 
-- [Dokumentacja IdentityServer](http://docs.identityserver.io/)
+- [Dokumentacja IdentityServer](http://docs.identityserver.io/en/latest/)
 - [Typy aplikacji](https://docs.microsoft.com/azure/active-directory/develop/app-types)
 - [Klient JavaScript OIDC](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
 

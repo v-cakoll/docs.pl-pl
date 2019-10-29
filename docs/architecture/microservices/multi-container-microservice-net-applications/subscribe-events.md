@@ -2,20 +2,20 @@
 title: Subskrybowanie zdarzeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami dotyczącymi publikowania i subskrypcji zdarzeń integracji.
 ms.date: 10/02/2018
-ms.openlocfilehash: ac9715c7c282be845e1e47516d06945c31f70209
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039780"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035639"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
 Pierwszym krokiem przy korzystaniu z magistrali zdarzeń jest subskrybowanie mikrousług do zdarzeń, które chcą odebrać. Należy to zrobić w mikrousługach odbiornika.
 
-Poniższy prosty kod przedstawia, co każda mikrousługa odbiornika musi zaimplementować podczas uruchamiania usługi (czyli w `Startup` klasie), więc subskrybuje potrzebne zdarzenia. W takim przypadku `basket.api` mikrousługa musi `ProductPriceChangedIntegrationEvent` subskrybować i `OrderStartedIntegrationEvent` wiadomości.
+Poniższy prosty kod pokazuje, co każda mikrousługa odbiornika musi zaimplementować podczas uruchamiania usługi (czyli w klasie `Startup`), dzięki czemu subskrybuje potrzebne zdarzenia. W takim przypadku `basket.api` mikrousługa musi subskrybować `ProductPriceChangedIntegrationEvent` i wiadomości `OrderStartedIntegrationEvent`.
 
-Na przykład podczas subskrybowania `ProductPriceChangedIntegrationEvent` zdarzenia, dzięki czemu usługa koszyka wie o wszelkich zmianach w cenie produktu i pozwala mu ostrzec użytkownika o zmianie, jeśli ten produkt znajduje się w koszyku użytkownika.
+Na przykład podczas subskrybowania zdarzenia `ProductPriceChangedIntegrationEvent`, dzięki czemu usługa koszyka wie o wszelkich zmianach w cenie produktu i umożliwia mu ostrzeganie użytkownika o zmianie, jeśli ten produkt znajduje się w koszyku użytkownika.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
@@ -87,7 +87,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 W takim przypadku, ponieważ mikrousługa jest prostą CRUD, ten kod jest umieszczany bezpośrednio w kontrolerze interfejsu API sieci Web.
 
-W bardziej zaawansowanych mikrousługach, takich jak użycie podejścia CQRS, można je zaimplementować w `CommandHandler` klasie w `Handle()` ramach metody.
+W bardziej zaawansowanych mikrousługach, takich jak użycie podejścia CQRS, można je zaimplementować w klasie `CommandHandler` w ramach metody `Handle()`.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Projektowanie niepodzielności i odporności podczas publikowania w usłudze Event Bus
 
@@ -97,7 +97,7 @@ W zasadzie mikrousługi są używane do tworzenia skalowalnych i wysoko dostępn
 
 W przypadku architektur opartych na mikrousługach należy wybrać dostępność i tolerancję, a także wyróżnić silną spójność. W związku z tym w większości nowoczesnych aplikacji opartych na mikrousługach zwykle nie ma potrzeby korzystania z transakcji rozproszonych w ramach komunikatów, tak jak podczas implementowania [transakcji rozproszonych](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) w oparciu o Distributed Transaction Coordinator systemu Windows (DTC). z [usługą MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
-Wróć do początkowego problemu i jego przykładu. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku bezpośrednio po wierszu kodu z \_kontekstem). SaveChangesAsync ()), ale przed opublikowaniem zdarzenia integracji, ogólny system może stać się niespójny. Może to być krytyczne dla firmy, w zależności od konkretnej operacji biznesowej.
+Wróć do początkowego problemu i jego przykładu. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku bezpośrednio po wierszu kodu z kontekstem \_. SaveChangesAsync ()), ale przed opublikowaniem zdarzenia integracji, ogólny system może stać się niespójny. Może to być krytyczne dla firmy, w zależności od konkretnej operacji biznesowej.
 
 Jak wspomniano wcześniej w sekcji architektura, można mieć kilka metod postępowania z tym problemem:
 
@@ -105,9 +105,9 @@ Jak wspomniano wcześniej w sekcji architektura, można mieć kilka metod postę
 
 - Korzystanie z [wyszukiwania w dzienniku transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
-- Przy użyciu [wzorca skrzynki nadawczej](http://gistlabs.com/2014/05/the-outbox/). Jest to tabela transakcyjna do przechowywania zdarzeń integracji (rozszerzających transakcję lokalną).
+- Przy użyciu [wzorca skrzynki nadawczej](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Jest to tabela transakcyjna do przechowywania zdarzeń integracji (rozszerzających transakcję lokalną).
 
-W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
+W tym scenariuszu należy użyć wzorca źródeł pełnych zdarzeń, *Jeśli nie jest to najlepsze rozwiązanie.* Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
 
 Opcja korzystania z wyszukiwania w dzienniku transakcji początkowo wygląda bardzo przejrzysta. Aby jednak korzystać z tego podejścia, mikrousługa musi być dołączona do dziennika transakcji RDBMS, na przykład dziennika transakcji SQL Server. Prawdopodobnie nie jest to pożądane. Kolejną wadą jest to, że aktualizacje niskiego poziomu rejestrowane w dzienniku transakcji mogą nie znajdować się na tym samym poziomie co zdarzenia integracji wysokiego poziomu. W takim przypadku proces odtwarzania tych operacji dziennika transakcji może być trudny.
 
@@ -322,34 +322,34 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Rozwidlenie eShopOnContainers przy użyciu NServiceBus (szczególne oprogramowanie)**  \
+- **EShopOnContainers z rozwidleniem przy użyciu NServiceBus (konkretne oprogramowanie)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **Obsługa komunikatów opartych na zdarzeniach** \
-    [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+    <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refaktoryzacja względem odporności: Ocenianie sprzęgu** \
+- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena sprzęgu** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Publikowanie/subskrybowanie kanału** \
+-  \ **kanału publikowania/subskrybowania**
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Komunikacja między kontekstami ograniczonymi** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Spójność ostateczna** \
+-  \ **spójności ostatecznej**
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Philip brązowy. Strategie integracji ograniczonych kontekstów** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Krzysztof Richardson. Opracowywanie mikrousług transakcyjnych przy użyciu agregacji, pochodzenia zdarzeń i CQRS — część 2** \
+- **Krzysztof Richardson. Opracowywanie mikrousług transakcyjnych przy użyciu agregacji, pochodzenia zdarzeń i CQRS części 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **Krzysztof Richardson. Wzorzec określania źródła zdarzeń** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Wprowadzenie do określania źródła zdarzeń** \
+- **Wprowadzenie \ źródłem zdarzeń**
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Baza danych magazynu zdarzeń**. Oficjalna lokacja. \
@@ -358,27 +358,27 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
 - **Patryk Nommensen. Zarządzanie danymi oparte na zdarzeniach dla mikrousług** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
-- **Theorem zakończenia** \
+-  \ **zakończenia theorem**
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **Co to jest theorem CAP?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **Podstawy spójności danych** \
+-  \er **spójności danych**
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. Theorem zakończenia: Dlaczego "wszystko jest różne" z chmurą i Internetem** \
+- **Rick Saling. Theorem zakończenia: Dlaczego "wszystko jest różne" z chmurą i Internet** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. Później, dwanaście lat: Jak zmieniono reguły** \
+- **Eric Brewer. Od 12 lat później: jak zmieniono "reguły"**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Przewodnik dotyczący niezawodności** (Dokumentacja RabbitMQ) \
+- **Przewodnik dotyczący niezawodności** (dokumentacja RabbitMQ) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 > [!div class="step-by-step"]
-> [Poprzedni](rabbitmq-event-bus-development-test-environment.md)Następny
-> [](test-aspnet-core-services-web-apps.md)
+> [Poprzedni](rabbitmq-event-bus-development-test-environment.md)
+> [Następny](test-aspnet-core-services-web-apps.md)

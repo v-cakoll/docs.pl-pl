@@ -961,10 +961,10 @@
           href: language-reference/error-messages/bad-file-name-or-number.md
         - name: Zła długość rekordu
           href: language-reference/error-messages/bad-record-length.md
-        - name: 'Ponieważ to wywołanie nie jest oczekiwane, wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania'
-          href: language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
-        - name: 'Nie można przekonwertować typu anonimowego na drzewo wyrażenia, ponieważ zawiera on pole wykorzystywane w inicjowaniu innego pola'
-          href: language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+        - name: 'To wywołanie nie jest oczekiwane, dlatego wykonywanie bieżącej metody będzie kontynuowane do czasu ukończenia wywołania'
+          href: language-reference/error-messages/bc42358.md
+        - name: 'Nie można przekonwertować typu anonimowego na drzewo wyrażenia, ponieważ właściwość typu jest używana do inicjowania innej właściwości'
+          href: language-reference/error-messages/bc36548.md
         - name: Nie można utworzyć składnika ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Nie można odwołać się do elementu „<name>”, ponieważ jest to składowa pola „<name>”, którego typem jest typ wartości, z klasy „<classname>”, której klasą podstawową jest „System.MarshalByRefObject”.'

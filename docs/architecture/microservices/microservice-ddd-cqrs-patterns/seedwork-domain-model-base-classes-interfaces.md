@@ -2,12 +2,12 @@
 title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj koncepcji seedwork jako punktu wyjścia, aby rozpocząć implementację modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: a49f9e0b40ea306a846d9fb472bac388eedbfe02
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "70296811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093803"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 
@@ -30,9 +30,9 @@ Poniższy kod jest przykładem klasy podstawowej jednostki, w której można umi
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;    
+    int _Id;
     private List<INotification> _domainEvents;
-    public virtual int Id 
+    public virtual int Id
     {
         get
         {
@@ -44,7 +44,7 @@ public abstract class Entity
         }
     }
 
-    public List<INotification> DomainEvents => _domainEvents;        
+    public List<INotification> DomainEvents => _domainEvents;
     public void AddDomainEvent(INotification eventItem)
     {
         _domainEvents = _domainEvents ?? new List<INotification>();
@@ -141,5 +141,5 @@ public interface IRepository<T> where T : IAggregateRoot
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
->[Poprzedni](net-core-microservice-domain-model.md)Następny
->[](implement-value-objects.md)
+>[Poprzedni](net-core-microservice-domain-model.md)
+>[Następny](implement-value-objects.md)

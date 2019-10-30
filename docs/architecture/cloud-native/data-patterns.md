@@ -2,12 +2,12 @@
 title: Wzorce danych natywnych w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Wzorce danych natywnych w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 8fc5a09dca61e6644fdcaa692ff1a21f40ebf179
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183414"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087699"
 ---
 # <a name="cloud-native-data-patterns"></a>Wzorce danych natywnych w chmurze
 
@@ -127,13 +127,13 @@ Bazy danych NoSQL są dystrybuowane i często skalowane na serwerach asortymentu
 
 Jest to znana [spójność ostateczna](https://www.cloudcomputingpatterns.org/eventual_consistency/), charakterystyczną dla rozproszonych systemów danych, w której nie są obsługiwane transakcje kwasowe. Jest to krótkie opóźnienie między aktualizacją elementu danych i czasu potrzebnego do propagowania tej aktualizacji do poszczególnych węzłów repliki. W przypadku zaktualizowania elementu produktu w bazie danych NoSQL w Stany Zjednoczone, ale w tym samym czasie zapytanie o ten sam element danych z węzła repliki w Europie, można pobrać wcześniejsze informacje o produkcie — do momentu zaktualizowania węzła Europejskiego przy zmianie produktu. W związku z tym, że jest to spowodowane [silną spójnością](https://en.wikipedia.org/wiki/Strong_consistency), oczekiwanie na zaktualizowanie wszystkich węzłów repliki przed zwróceniem wyników zapytania, można obsługiwać ogromny rozmiar i ilość ruchu sieciowego, ale z możliwością przedsprzedaży starszych danych.
 
-Bazy danych NoSQL można klasyfikować według następujących czterech modeli: 
+Bazy danych NoSQL można klasyfikować według następujących czterech modeli:
 
 - *Magazyn dokumentów* (MongoDB, CouchDB, Couchbase): dane (i odpowiadające im metadane) są przechowywane w nierelacyjny sposób w nieznormalizowanych dokumentach opartych na notacji JSON w bazie danych.
 
 - *Magazyn kluczy/wartości* (Redis, Riak, Memcached): dane są przechowywane w prostych parach klucz-wartość z operacjami systemu wykonywanymi przy użyciu unikatowego klucza dostępu, który jest mapowany na wartość danych użytkownika.
 
-- *Magazyn szerokiej kolumny* (HBase, Cassandra): powiązane dane są przechowywane w formacie kolumnowy jako zestaw par zagnieżdżonych/wartości w jednej kolumnie z danymi, które są zwykle pobierane jako pojedyncze jednostki bez konieczności sprzęgania wielu tabel jednocześnie.
+- *Magazyn szerokiej kolumny* (HBase, Cassandra): powiązane dane są przechowywane w formacie kolumnowy jako zestaw par klucz-wartość w jednej kolumnie z danymi, które są zwykle pobierane jako pojedyncze jednostki bez konieczności sprzęgania wielu tabel.
 
 - *Sklepy grafów* (Neo4j, Titan): dane są przechowywane jako graficzna reprezentacja w węźle wraz z krawędziami określającymi relację między węzłami.
 

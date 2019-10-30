@@ -4,12 +4,12 @@ description: Dowiedz się, jak podejście do migracji istniejącej aplikacji ASP
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: 78742fc0d998a70c6e3992041d1fa62f2fe53f39
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1680c3ccd496029cbdefc38119cf89bae0a777a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087921"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrowanie z formularzy sieci Web ASP.NET do Blazor
 
@@ -552,7 +552,7 @@ W Blazor odpowiednik znacznika jest dostarczany w pliku *Create. Razor* :
             <ValidationMessage For="(() => _item.Name)" />
         </div>
     </div>
-    
+
     ...
 </EditForm>
 ```

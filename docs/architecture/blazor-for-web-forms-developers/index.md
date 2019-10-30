@@ -4,18 +4,18 @@ description: Dowiedz się, jak tworzyć aplikacje sieci Web w pełnym stosie prz
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 936f85d4fda9c5396a6586810735877488226157
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 394d11038b59f4cbe9e9955df43b6198eb5daaf8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088130"
 ---
 # <a name="blazor-for-aspnet-web-forms-developers"></a>Platforma Blazor dla deweloperów technologii ASP.NET Web Forms
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-![Zrzut ekranu przedstawiający stronę obejmującą książkę elektroniczną aplikacji bezserwerowych.](./media/index/blazor-for-web-forms-developers-cover.png)
+![Zrzut ekranu przedstawiający centrum poczty elektronicznej aplikacji bezserwerowych.](./media/index/blazor-for-web-forms-developers-cover.png)
 
 > Pobieranie dostępne o: <https://aka.ms/blazor-ebook>
 
@@ -75,7 +75,7 @@ Ta książka stanowi wprowadzenie do Blazor, a nie przewodnika po migracji. Choc
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-Oficjalną stronę główną Blazor i dokumentację można znaleźć pod adresem <https://blazor.net>.
+Oficjalną stronę główną Blazor i dokumentację można znaleźć na stronie <https://blazor.net>.
 
 ## <a name="send-your-feedback"></a>Wyślij opinię
 

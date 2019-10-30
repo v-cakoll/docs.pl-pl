@@ -2,12 +2,12 @@
 title: Kontenery jako podstawa współpracy w metodyce DevOps
 description: Poznaj kluczową rolę kontenerów w celu usprawnienia DevOps.
 ms.date: 02/15/2019
-ms.openlocfilehash: 16cccef0545f0da14128e31dc8f7ad78369cf23a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8258f4331212d92376d64fef318adcdff492f61f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094497"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Kontenery jako podstawa współpracy w metodyce DevOps
 
@@ -51,7 +51,7 @@ Te wyzwania pozwalają utworzyć nowe wymagania w przypadku korzystania z narzę
 
 - Jak można używać narzędzi/platform Open Source dla kontenerów w Microsoft Azure?
 
-Jeśli możesz odpowiedzieć na wszystkie pytania, możesz lepiej przystąpić do przenoszenia aplikacji (istniejących lub nowych aplikacji) do kontenerów platformy Docker. 
+Jeśli możesz odpowiedzieć na wszystkie pytania, możesz lepiej przystąpić do przenoszenia aplikacji (istniejących lub nowych aplikacji) do kontenerów platformy Docker.
 
 ## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Wprowadzenie do ogólnego przepływu pracy cyklu życia aplikacji platformy Docker
 

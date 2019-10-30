@@ -2,12 +2,12 @@
 title: Magazyn danych na platformie Azure
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Magazyn danych na platformie Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 6834e47e11c4941735343e3f6bfbfe4cb642e0dd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521113"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087764"
 ---
 # <a name="data-storage-in-azure"></a>Magazyn danych na platformie Azure
 
@@ -15,7 +15,7 @@ ms.locfileid: "72521113"
 
 Jak widać w tej książce, Chmura zmienia sposób, w jaki aplikacje są zaprojektowane, wdrażane i zarządzane. W przypadku przejścia do chmury pytanie krytyczne polega na tym, jak przenieść dane? Na szczęście usługa Azure Cloud oferuje wiele opcji.
 
-Możesz jedynie zainicjować obsługę administracyjną maszyny wirtualnej platformy Azure i zainstalować wybraną bazę danych. Jest to tzw. [infrastruktura jako usługa (IaaS)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas). Takie podejście upraszcza przeniesienie lokalnej bazy danych do chmury. jest to możliwe, ale przenosi to obciążenie związane z zarządzaniem maszyną wirtualną i bazą danych.  
+Możesz jedynie zainicjować obsługę administracyjną maszyny wirtualnej platformy Azure i zainstalować wybraną bazę danych. Jest to tzw. [infrastruktura jako usługa (IaaS)](https://www.techopedia.com/definition/141/infrastructure-as-a-service-iaas). Takie podejście upraszcza przeniesienie lokalnej bazy danych do chmury. jest to możliwe, ale przenosi to obciążenie związane z zarządzaniem maszyną wirtualną i bazą danych.
 
 Zamiast tego jest lepszym rozwiązaniem w pełni zarządzana [baza danych jako usługa (DBaaS)](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/) . Użytkownik otrzymuje wiele wbudowanych funkcji, gdy hosting, konserwacja i Licencjonowanie są zarządzane przez firmę Microsoft. Platforma Azure oferuje różne rodzaje w pełni zarządzanych opcji przechowywania danych, z których każdy ma określone zalety. Wszystkie te działy obsługują funkcję just in Time oraz model płatność zgodnie z rzeczywistym użyciem.
 
@@ -23,7 +23,7 @@ Będziemy dalej korzystać z opcji DBaaS dostępnych na platformie Azure. Zobacz
 
 ## <a name="azure-sql-database"></a>Azure SQL Database
 
-[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) to rozbudowana funkcja relacyjnej bazy danych ogólnego przeznaczenia jako usługi (DBaaS) oparta na aparacie Microsoft SQL Server Database. Jest ona w pełni zarządzana przez firmę Microsoft i jest wysoce wydajną, niezawodną i bezpieczną bazą danych w chmurze. Usługa udostępnia wiele funkcji dostępnych w lokalnej wersji programu SQL Server. 
+[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/) to rozbudowana funkcja relacyjnej bazy danych ogólnego przeznaczenia jako usługi (DBaaS) oparta na aparacie Microsoft SQL Server Database. Jest ona w pełni zarządzana przez firmę Microsoft i jest wysoce wydajną, niezawodną i bezpieczną bazą danych w chmurze. Usługa udostępnia wiele funkcji dostępnych w lokalnej wersji programu SQL Server.
 
 Serwer SQL Database i bazę danych można zainicjować w kilka minut. Gdy zapotrzebowanie na aplikację rośnie od kilku klientów do milionów, Azure SQL Database skalowanie na bieżąco przy minimalnym przestoju. Można dynamicznie dodawać i usuwać zasoby, w tym moc procesora CPU, pamięć, przepływność we/wy i magazyn przydzieloną do baz danych.
 
@@ -47,7 +47,7 @@ Azure SQL Database obejmuje [wbudowane funkcje monitorowania i inteligentnego do
 
 [Azure SQL Database bezserwerowe](https://docs.microsoft.com/azure/sql-database/sql-database-serverless) (dostępne w wersji zapoznawczej w czasie pisania tej książki) jest warstwą obliczeniową dla pojedynczych baz danych, które są automatycznie skalowane na podstawie zapotrzebowania na obciążenie, a opłaty są naliczane za ilość używanych obliczeń na sekundę. Warstwa obliczeniowa bezserwerowa również automatycznie wstrzymuje bazy danych w trakcie okresów nieaktywnych, aby rozliczać tylko opłaty za magazyn. Wznawia się automatycznie po powrocie działania.
 
-Na koniec jest dostępna nowa warstwa cenowa [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) . Jest on obsługiwany przez wysoce skalowalną architekturę magazynu i umożliwia zwiększenie wydajności bazy danych w miarę potrzeb, eliminując konieczność wstępnego udostępnienia zasobów magazynu. Zasoby obliczeniowe i magazynowe można skalować niezależnie, zapewniając elastyczność optymalizacji wydajności dla każdego obciążenia. Skalowanie Azure SQL Database jest zoptymalizowane pod kątem przetwarzania [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) i obciążeń analitycznych o wysokiej przepływności z magazynem do 100 TB.  W przypadku obciążeń intensywnie korzystających z odczytu skalowanie umożliwia szybkie skalowanie w poziomie przez inicjowanie obsługi dodatkowych replik odczytu w miarę potrzeb do odciążania operacji odczytu. 
+Na koniec jest dostępna nowa warstwa cenowa [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) . Jest on obsługiwany przez wysoce skalowalną architekturę magazynu i umożliwia zwiększenie wydajności bazy danych w miarę potrzeb, eliminując konieczność wstępnego udostępnienia zasobów magazynu. Zasoby obliczeniowe i magazynowe można skalować niezależnie, zapewniając elastyczność optymalizacji wydajności dla każdego obciążenia. Skalowanie Azure SQL Database jest zoptymalizowane pod kątem przetwarzania [OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing) i obciążeń analitycznych o wysokiej przepływności z magazynem do 100 TB.  W przypadku obciążeń intensywnie korzystających z odczytu skalowanie umożliwia szybkie skalowanie w poziomie przez inicjowanie obsługi dodatkowych replik odczytu w miarę potrzeb do odciążania operacji odczytu.
 
 Oprócz tradycyjnego stosu Microsoft SQL Server platforma Azure oferuje także zarządzane wersje kilku popularnych baz danych typu open source.
 
@@ -59,7 +59,7 @@ Oprócz tradycyjnego stosu Microsoft SQL Server platforma Azure oferuje także z
 
 - Wbudowana [wysoka dostępność](https://docs.microsoft.com/azure/mysql/concepts-high-availability).
 
-- Przewidywalna wydajność przy użyciu [cen z płatnością zgodnie z rzeczywistym](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)użyciem. 
+- Przewidywalna wydajność przy użyciu [cen z płatnością zgodnie z rzeczywistym](https://docs.microsoft.com/azure/mysql/concepts-pricing-tiers)użyciem.
 
 - [Skalowanie](https://docs.microsoft.com/azure/mysql/concepts-high-availability) w razie konieczności w ciągu kilku sekund.
 
@@ -69,7 +69,7 @@ Oprócz tradycyjnego stosu Microsoft SQL Server platforma Azure oferuje także z
 
 - Bezpieczeństwo i zgodność klasy korporacyjnej.
 
-Te wbudowane funkcje PaaS są ważne dla organizacji, które mają setki baz danych "taktycznych" (niestrategicznych) w swoich centrach danych, ale nie mają zasobów do wykonywania poprawek, kopii zapasowych, zabezpieczeń i monitorowania wydajności. 
+Te wbudowane funkcje PaaS są ważne dla organizacji, które mają setki baz danych "taktycznych" (niestrategicznych) w swoich centrach danych, ale nie mają zasobów do wykonywania poprawek, kopii zapasowych, zabezpieczeń i monitorowania wydajności.
 
 Ponadto [usługa migracji danych platformy Azure](https://azure.microsoft.com/services/database-migration/) może migrować dane z wielu źródeł baz danych na platformy danych platformy Azure z minimalnym czasem przestoju. Usługa generuje raporty oceny i zawiera zalecenia, które przeprowadzą Cię przez zmiany wymagane do przeprowadzenia migracji, zarówno małych, jak i dużych.
 
@@ -87,8 +87,8 @@ MariaDB jest silnie stosowana i jest używana przez wiele dużych przedsiębiors
 
 - Wbudowana [wysoka dostępność](https://docs.microsoft.com/azure/mariadb/concepts-high-availability).
 
-- Przewidywalna wydajność przy użyciu [cen z płatnością zgodnie z rzeczywistym](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)użyciem. 
- 
+- Przewidywalna wydajność przy użyciu [cen z płatnością zgodnie z rzeczywistym](https://docs.microsoft.com/azure/mariadb/concepts-pricing-tiers)użyciem.
+
 - [Skalowanie](https://docs.microsoft.com/azure/mariadb/concepts-high-availability) w razie konieczności w ciągu kilku sekund.
 
 - Zabezpieczona ochrona poufnych danych przechowywanych i ruchowo.
@@ -97,7 +97,7 @@ MariaDB jest silnie stosowana i jest używana przez wiele dużych przedsiębiors
 
 - Bezpieczeństwo i zgodność klasy korporacyjnej.
 
-## <a name="azure-database-for-postgresql"></a>Azure Database for PostgreSQL 
+## <a name="azure-database-for-postgresql"></a>Azure Database for PostgreSQL
 
 [PostgreSQL](https://www.postgresql.org/) to kolejna popularna relacyjna baza danych typu open source, która jest w ciągu 30 lat aktywnego programowania. Jest to system zarządzania bazami danych ogólnego przeznaczenia i obiektu. Jego Licencjonowanie jest uznawane za "zliberalizowane", a produkt jest bezpłatny do używania, modyfikowania i dystrybucji w dowolnej postaci. Wiele dużych przedsiębiorstw, takich jak Apple, Red Hat i Fujitsu, są zbudowane jako produkty korzystające z usługi PostgreSQL.
 
@@ -163,7 +163,7 @@ Wcześniej w sekcji *relacyjnej i NoSQL* został omówiony temat *spójności da
 
 Większość rozproszonych baz danych umożliwia deweloperom wybór dwóch modeli spójności: [silną spójność](https://en.wikipedia.org/wiki/Strong_consistency) i [spójność ostateczna](https://en.wikipedia.org/wiki/Eventual_consistency). *Silna spójność* to złoty standard programowania danych. Gwarantuje to, że wynik zapytania zawsze zwróci najbardziej aktualne dane, nawet jeśli system musi nawiązać opóźnienie oczekujące na przereplikację aktualizacji we wszystkich kopiach baz danych. Z drugiej strony system skonfigurowany pod kątem *spójności ostatecznej* zwróci dane natychmiast, nawet jeśli te dane nie są najbardziej aktualną kopią. Ta opcja zapewnia wyższą dostępność, większą skalę i zwiększoną wydajność.
 
-Azure Cosmos DB oferuje szeroki zakres [pięciu dobrze zdefiniowanych modeli spójności](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) przedstawionych na rysunku 5-16. Te opcje umożliwiają precyzyjne wybór i szczegółowe kompromisy w odniesieniu do dostępności i wydajności w zależności od potrzeb aplikacji. Modele te są dobrze zdefiniowane, intuicyjne i obsługiwane przez umowy dotyczące poziomu usług (umowy SLA). 
+Azure Cosmos DB oferuje szeroki zakres [pięciu dobrze zdefiniowanych modeli spójności](https://docs.microsoft.com/azure/cosmos-db/consistency-levels) przedstawionych na rysunku 5-16. Te opcje umożliwiają precyzyjne wybór i szczegółowe kompromisy w odniesieniu do dostępności i wydajności w zależności od potrzeb aplikacji. Modele te są dobrze zdefiniowane, intuicyjne i obsługiwane przez umowy dotyczące poziomu usług (umowy SLA).
 
 ![Cosmos DB poziomów spójności](./media/cosmos-db-consistency-levels.png)
 
@@ -171,7 +171,7 @@ Azure Cosmos DB oferuje szeroki zakres [pięciu dobrze zdefiniowanych modeli sp�
 
 ### <a name="partitioning"></a>Partycjonowanie
 
-Azure Cosmos DB używa automatycznego [partycjonowania](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) do skalowania bazy danych w celu spełnienia wymagań dotyczących wydajności aplikacji. 
+Azure Cosmos DB używa automatycznego [partycjonowania](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) do skalowania bazy danych w celu spełnienia wymagań dotyczących wydajności aplikacji.
 
 Zarządzanie danymi w Cosmos DB danych przez tworzenie [baz danych, kontenerów i elementów](https://docs.microsoft.com/azure/cosmos-db/databases-containers-items)przedstawiono na rysunku 5-17.
 
@@ -193,7 +193,7 @@ Wewnętrznie program Cosmos DB automatycznie zarządza umieszczaniem [partycji l
 
 ## <a name="azure-redis-cache"></a>Azure Redis Cache
 
-Zalety buforowania w celu poprawy wydajności i skalowalności. 
+Zalety buforowania w celu poprawy wydajności i skalowalności.
 
 W przypadku aplikacji natywnej w chmurze wspólna lokalizacja służąca do dodawania buforowania znajduje się wewnątrz bramy interfejsu API. Brama służy jako fronton dla wszystkich żądań przychodzących. Dzięki dodaniu buforowania można zwiększyć wydajność i czas odpowiedzi, zwracając dane w pamięci podręcznej i unikając operacji rundy do lokalnej bazy danych lub usługi podrzędnej. Rysunek 5-19 przedstawia architekturę pamięci podręcznej dla aplikacji natywnej w chmurze.
 

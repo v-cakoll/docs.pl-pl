@@ -2,12 +2,12 @@
 title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 997b32e51272be2126bd824de1f8f026d77ca203
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318661"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089558"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 
@@ -154,11 +154,11 @@ Produkty na platformie Azure obsługujące kontenery, które w tym samym czasie 
 
 - **Azure App Service**
 - **Usługa Azure Kubernetes Service (AKS i ACS)**
-- **Azure Batch** 
+- **Azure Batch**
 
 Następnie Azure Container Registry to wysoce skalowalny rejestr kontenerów hostowany na platformie Azure, z którego można korzystać ze wszystkich poprzednich produktów podczas rejestrowania i wdrażania niestandardowych obrazów kontenerów.
 
-Ponadto z kontenerów można korzystać z innych usług zarządzanych na platformie Azure, takich jak Azure SQL Database, pamięć podręczna Redis Azure, Azure Cosmos DB itd. Dodatkowo dostępne są rozwiązania/platformy innych firm w witrynie Azure Marketplace, takie jak Cloud Foundry i OpenShift, gdzie można również używać kontenerów na platformie Azure. 
+Ponadto z kontenerów można korzystać z innych usług zarządzanych na platformie Azure, takich jak Azure SQL Database, pamięć podręczna Redis Azure, Azure Cosmos DB itd. Dodatkowo dostępne są rozwiązania/platformy innych firm w witrynie Azure Marketplace, takie jak Cloud Foundry i OpenShift, gdzie można również używać kontenerów na platformie Azure.
 
 W następnych sekcjach można zapoznać się z zaleceniami firmy Microsoft dotyczącymi używania poszczególnych produktów i rozwiązań platformy Azure, które są przeznaczone dla kontenerów systemu Windows.
 

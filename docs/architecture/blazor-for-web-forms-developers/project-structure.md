@@ -4,12 +4,12 @@ description: Dowiedz się, w jaki sposób struktura projektu ASP.NET formularzy 
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: aa9157bd8627e7a03e33872c3023f91ba3d66951
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520222"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087863"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Struktura projektu dla aplikacji Blazor
 
@@ -145,7 +145,7 @@ Gdzie znajdują się strony w aplikacjach Blazor? Blazor nie definiuje oddzielne
 @page "/counter"
 ```
 
-Routing w Blazor jest obsługiwany po stronie klienta, a nie na serwerze. Gdy użytkownik nawiguje w przeglądarce, Blazor przechwytuje nawigację, a następnie renderuje składnik przy użyciu pasującej trasy. 
+Routing w Blazor jest obsługiwany po stronie klienta, a nie na serwerze. Gdy użytkownik nawiguje w przeglądarce, Blazor przechwytuje nawigację, a następnie renderuje składnik przy użyciu pasującej trasy.
 
 Trasy składników nie są obecnie wywnioskowane przez lokalizację pliku składnika, tak jak w przypadku stron *. aspx* . Ta funkcja może zostać dodana w przyszłości. Poszczególne trasy muszą być jawnie określone w składniku. Przechowywanie składników rutowanych w folderze *Pages* nie ma specjalnego znaczenia i jest czysto Konwencji.
 

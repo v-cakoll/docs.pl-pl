@@ -2,18 +2,18 @@
 title: Monitorowanie i kondycja
 description: Monitorowanie i kondycja
 ms.date: 09/23/2019
-ms.openlocfilehash: 6e62c0dad3bdac9bed8eccfadd9011f9b6256efc
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6274040318b5442478e9cc291c4f223bdf533110
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184975"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094510"
 ---
 # <a name="monitoring-and-health"></a>Monitorowanie i kondycja
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Mikrousługi i aplikacje natywne w chmurze są dostępne z dobrymi praktykami DevOps. DevOps jest wiele rzeczy dla wielu osób, ale być może jedna z lepszych definicji pochodzi z ambasadorów w chmurze i DevOps propagator Donovan Brown: 
+Mikrousługi i aplikacje natywne w chmurze są dostępne z dobrymi praktykami DevOps. DevOps jest wiele rzeczy dla wielu osób, ale być może jedna z lepszych definicji pochodzi z ambasadorów w chmurze i DevOps propagator Donovan Brown:
 
 "DevOps to związek ludzi, procesów i produktów, który umożliwia ciągłe dostarczanie wartości naszym użytkownikom końcowym".
 

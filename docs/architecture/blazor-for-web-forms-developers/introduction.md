@@ -4,12 +4,12 @@ description: Wprowadzenie do Blazor i pisania aplikacji sieci Web na całym stos
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 66b6d57b718c19b0f271c6b3a62a9d4a22d77ae0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6c045cd9c4378bd19f97dd722db054c969491d0b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520303"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087926"
 ---
 # <a name="an-introduction-to-blazor-for-aspnet-web-forms-developers"></a>Wprowadzenie do Blazor dla deweloperów formularzy sieci Web ASP.NET
 
@@ -21,7 +21,7 @@ W ciągu lat firma Microsoft wprowadziła nowe platformy sieci Web opartych na A
 
 W momencie pisania niemal połowa milionów deweloperów sieci Web używa ASP.NET formularzy sieci Web co miesiąc. Struktura formularzy sieci Web ASP.NET jest stabilna w przypadku, gdy dokumenty, przykłady, książki i wpisy w blogu z dekady temu pozostaną przydatne i istotne. W przypadku wielu deweloperów sieci Web platformy .NET "ASP.NET" jest nadal synonimem "ASP.NET Web Forms", tak jak podczas pierwszego opracowywania programu .NET. Argumenty dotyczące informatyków i wad formularzy sieci Web ASP.NET w porównaniu z innymi nowymi platformami sieci Web platformy .NET mogą próg. Formularze sieci Web ASP.NET są popularnym środowiskiem do tworzenia aplikacji sieci Web.
 
-Nawet innowacje w programowaniu oprogramowania nie spowalniają pracy. Wszyscy deweloperzy oprogramowania muszą korzystać z nowych technologii i trendów. Rozważane są dwa trendy w szczególności: 
+Nawet innowacje w programowaniu oprogramowania nie spowalniają pracy. Wszyscy deweloperzy oprogramowania muszą korzystać z nowych technologii i trendów. Rozważane są dwa trendy w szczególności:
 
 1. Zmiana na typ Open Source i Międzyplatformowy
 2. Zmiana logiki aplikacji na klienta

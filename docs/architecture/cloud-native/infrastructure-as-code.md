@@ -2,12 +2,12 @@
 title: Infrastruktura jako kod
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Infrastruktura jako kod
 ms.date: 06/30/2019
-ms.openlocfilehash: e395db28bdeff785251b91ed643f9920873d26e8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 3957da68ac28774f899f49fb181a29c2435902f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183015"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087245"
 ---
 # <a name="infrastructure-as-code"></a>Infrastruktura jako kod
 
@@ -37,7 +37,7 @@ Szablony Azure Resource Manager to język oparty na notacji JSON służący do d
 **Rysunek 11-10** — schemat szablonu Menedżer zasobów
 
 W ramach tego szablonu, jeden może zdefiniować kontener magazynu w sekcji Resources, tak więc:
- 
+
 ```json
 "resources": [
     {
@@ -66,7 +66,7 @@ Szablony Menedżer zasobów można uruchamiać na wiele sposobów. Prawdopodobni
 
 Postrzegana wada Menedżer zasobów szablonów polega na tym, że są one specyficzne dla chmury platformy Azure. Nie ma potrzeby tworzenia aplikacji, które obejmują zasoby z więcej niż jednej chmury, ale w przypadkach, w których działalność biznesowa opiera się na spektakularnych czasowym, koszt obsługi wielu chmur może być wartościowa. W przypadku użycia jednego języka tworzenia szablonów, który może być używany w każdej chmurze, można także zapewnić, że kwalifikacje deweloperów będą znacznie bardziej przenośne.
 
-Istnieje kilka technologii, które wystarczy! Najbardziej dojrzała oferta w tym miejscu jest znana jako [Terraform](https://www.terraform.io/). Usługa Terraform obsługuje każdy główny odtwarzacz w chmurze, taki jak Azure, Google Cloud Platform, AWS i AliCloud, a także obsługuje dziesiątki drobnych odtwarzaczy, takich jak Heroku i DigitalOcean. Zamiast używać formatu JSON jako języka definicji szablonu, wykorzystuje nieco więcej zwięzła YAML. 
+Istnieje kilka technologii, które wystarczy! Najbardziej dojrzała oferta w tym miejscu jest znana jako [Terraform](https://www.terraform.io/). Usługa Terraform obsługuje każdy główny odtwarzacz w chmurze, taki jak Azure, Google Cloud Platform, AWS i AliCloud, a także obsługuje dziesiątki drobnych odtwarzaczy, takich jak Heroku i DigitalOcean. Zamiast używać formatu JSON jako języka definicji szablonu, wykorzystuje nieco więcej zwięzła YAML.
 
 Przykładowy plik Terraform, który jest taki sam jak poprzedni szablon Menedżer zasobów (Rysunek 11-11) przedstawiono na rysunku 11-12:
 

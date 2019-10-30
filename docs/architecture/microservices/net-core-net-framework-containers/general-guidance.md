@@ -2,12 +2,12 @@
 title: Wskazówki ogólne
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Ogólne wskazówki
 ms.date: 09/11/2018
-ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089648"
 ---
 # <a name="general-guidance"></a>Wskazówki ogólne
 
@@ -37,12 +37,12 @@ Używanie .NET Framework na platformie Docker może ulepszyć środowisko wdraż
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **eBook: Modernizacja istniejących aplikacji .NET Framework przy użyciu platformy Azure i kontenerów systemu Windows**  
+- **Książka elektroniczna: modernizowanie istniejących aplikacji .NET Framework przy użyciu platformy Azure i kontenerów systemu Windows**  
     https://aka.ms/liftandshiftwithcontainersebook
 
 - **Przykładowe aplikacje: Modernizacja starszych aplikacji internetowych ASP.NET przy użyciu kontenerów systemu Windows**  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](net-core-container-scenarios.md)
+>[Poprzedni](index.md)
+>[Następny](net-core-container-scenarios.md)

@@ -4,18 +4,18 @@ description: Dowiedz się, jak tworzyć formularze z walidacją po stronie klien
 author: danroth27
 ms.author: daroth
 ms.date: 09/19/2019
-ms.openlocfilehash: 9062e0ab106b7e647646bf5d206106153d7d9009
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: c30db5e06d36a6d15301835fe782b21058a80592
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088084"
 ---
 # <a name="forms-and-validation"></a>Formularze i walidacja
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Struktura formularzy sieci Web ASP.NET zawiera zestaw kontrolek serwera weryfikacji, które obsługują sprawdzanie poprawności danych wprowadzonych przez użytkownika do`RequiredFieldValidator`formularza `CompareValidator`( `RangeValidator`,,, itd.). Struktura formularzy sieci Web ASP.NET obsługuje również powiązanie modelu i sprawdzanie poprawności modelu na podstawie adnotacji danych`[Required]`( `[StringLength]`, `[Range]`,, itd.). Logikę walidacji można wymusić zarówno na serwerze, jak i na kliencie przy użyciu niezauważalnej weryfikacji opartej na języku JavaScript. Formant `ValidationSummary` serwera służy do wyświetlania podsumowania błędów walidacji dla użytkownika.
+Struktura formularzy sieci Web ASP.NET zawiera zestaw kontrolek serwera weryfikacji, które obsługują sprawdzanie poprawności danych wprowadzonych przez użytkownika do formularza (`RequiredFieldValidator`, `CompareValidator`, `RangeValidator`itd.). Struktura formularzy sieci Web ASP.NET obsługuje również powiązanie modelu i sprawdzanie poprawności modelu na podstawie adnotacji danych (`[Required]`, `[StringLength]`, `[Range]`itd.). Logikę walidacji można wymusić zarówno na serwerze, jak i na kliencie przy użyciu niezauważalnej weryfikacji opartej na języku JavaScript. Formant serwera `ValidationSummary` służy do wyświetlania podsumowania błędów walidacji dla użytkownika.
 
 Blazor obsługuje udostępnianie logiki walidacji między klientem a serwerem. ASP.NET zapewnia wstępnie skompilowane implementacje języka JavaScript wielu typowych walidacji serwera. W wielu przypadkach deweloper nadal musi napisać kod JavaScript w celu pełnego zaimplementowania logiki walidacji specyficznej dla aplikacji. Te same typy modeli, adnotacje danych i logikę walidacji mogą być używane zarówno na serwerze, jak i na komputerze klienckim.
 
@@ -30,9 +30,9 @@ Blazor zawiera zestaw składników wejściowych. Składniki wejściowe obsługuj
 |`InputText`    |`<input>`                |
 |`InputTextArea`|`<textarea>`             |
 
-Składnik otacza te składniki wejściowe i organizuje proces weryfikacji `EditContext`za pomocą. `EditForm` Podczas tworzenia `EditForm`należy określić, jakie wystąpienie modelu ma być powiązane z `Model` użyciem parametru. Sprawdzanie poprawności jest zwykle wykonywane przy użyciu adnotacji danych i rozszerzalne. Aby włączyć weryfikację opartą na adnotacji danych `DataAnnotationsValidator` , należy dodać składnik jako element `EditForm`podrzędny. Składnik zapewnia wygodne zdarzenie do obsługi`OnValidSubmit`prawidłowych () i nieprawidłowych`OnInvalidSubmit`() przesłanych elementów. `EditForm` Istnieje również bardziej generyczne `OnSubmit` zdarzenie, które pozwala na samodzielne wyzwalacze i obsługę walidacji.
+Składnik `EditForm` otacza te składniki wejściowe i organizuje proces sprawdzania poprawności przez `EditContext`. Podczas tworzenia `EditForm`należy określić, jakie wystąpienie modelu ma być powiązane z użyciem `Model` parametru. Sprawdzanie poprawności jest zwykle wykonywane przy użyciu adnotacji danych i rozszerzalne. Aby włączyć weryfikację opartą na adnotacji danych, Dodaj składnik `DataAnnotationsValidator` jako element podrzędny `EditForm`. Składnik `EditForm` zapewnia wygodne zdarzenie do obsługi prawidłowych (`OnValidSubmit`) i nieprawidłowych (`OnInvalidSubmit`) przesłania. Istnieje również bardziej ogólne zdarzenie `OnSubmit`, które pozwala na samodzielne wyzwalanie i obsługę walidacji.
 
-Aby wyświetlić podsumowanie błędu walidacji, użyj `ValidationSummary` składnika. Aby wyświetlić komunikaty o walidacji dla określonego pola wejściowego, `ValidationMessage` Użyj składnika, określając wyrażenie lambda `For` dla parametru, który wskazuje odpowiedni element członkowski modelu.
+Aby wyświetlić podsumowanie błędu walidacji, użyj składnika `ValidationSummary`. Aby wyświetlić komunikaty o walidacji dla określonego pola wejściowego, należy użyć składnika `ValidationMessage`, określając wyrażenie lambda dla parametru `For`, który wskazuje odpowiedni element członkowski modelu.
 
 Następujący typ modelu definiuje kilka reguł walidacji przy użyciu adnotacji danych:
 
@@ -43,7 +43,7 @@ using System.ComponentModel.DataAnnotations;
 public class Starship
 {
     [Required]
-    [StringLength(16, 
+    [StringLength(16,
         ErrorMessage = "Identifier too long (16 character limit).")]
     public string Identifier { get; set; }
 
@@ -52,12 +52,12 @@ public class Starship
     [Required]
     public string Classification { get; set; }
 
-    [Range(1, 100000, 
+    [Range(1, 100000,
         ErrorMessage = "Accommodation invalid (1-100000).")]
     public int MaximumAccommodation { get; set; }
 
     [Required]
-    [Range(typeof(bool), "true", "true", 
+    [Range(typeof(bool), "true", "true",
         ErrorMessage = "This form disallows unapproved ships.")]
     public bool IsValidatedDesign { get; set; }
 
@@ -66,7 +66,7 @@ public class Starship
 }
 ```
 
-Poniższy składnik ilustruje Kompilowanie formularza w Blazor na podstawie `Starship` typu modelu:
+Poniższy składnik ilustruje Kompilowanie formularza w Blazor na podstawie typu modelu `Starship`:
 
 ```razor
 <h1>New Ship Entry Form</h1>

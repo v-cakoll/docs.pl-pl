@@ -2,12 +2,12 @@
 title: Terminologia platformy Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Terminologia platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: a5f78ea0e848ef14f6b37e2d97d7546df20096c2
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090055"
 ---
 # <a name="docker-terminology"></a>Terminologia platformy Docker
 
@@ -17,7 +17,7 @@ W tej sekcji przedstawiono terminy i definicje, z którymi należy zapoznać si�
 
 **Pliku dockerfile**: plik tekstowy, który zawiera instrukcje dotyczące sposobu tworzenia obrazu platformy Docker. Podobnie jak skrypt wsadowy, pierwszy wiersz określa podstawowy obraz, a następnie postępuje zgodnie z instrukcjami w celu zainstalowania wymaganych programów, skopiowania plików i tak dalej, aż do momentu uzyskania potrzebnego środowiska roboczego.
 
-**Kompilacja**: Akcja tworzenia obrazu kontenera na podstawie informacji i kontekstu dostarczonych przez jego pliku dockerfile oraz dodatkowych plików w folderze, w którym utworzono obraz. Możesz tworzyć obrazy za pomocą polecenia Docker **Docker Build** . 
+**Kompilacja**: Akcja tworzenia obrazu kontenera na podstawie informacji i kontekstu dostarczonych przez jego pliku dockerfile oraz dodatkowych plików w folderze, w którym utworzono obraz. Możesz tworzyć obrazy za pomocą polecenia Docker **Docker Build** .
 
 **Container**: wystąpienie obrazu platformy Docker. Kontener reprezentuje wykonywanie pojedynczej aplikacji, procesu lub usługi. Składa się z zawartości obrazu platformy Docker, środowiska wykonawczego i standardowego zestawu instrukcji. W przypadku skalowania usługi należy utworzyć wiele wystąpień kontenera z tego samego obrazu. Lub zadanie usługi Batch może utworzyć wiele kontenerów z tego samego obrazu, przekazując różne parametry do każdego wystąpienia.
 
@@ -47,8 +47,8 @@ Obraz z obsługą **wielodostępności**: w przypadku architektury wieloarchitek
 
 **Klaster**: Kolekcja hostów platformy Docker uwidoczniona tak, jakby była jednym wirtualnym hostem platformy Docker, dzięki czemu aplikacja może być skalowana do wielu wystąpień usług rozmieszczonych na wielu hostach w klastrze. Klastry platformy Docker można tworzyć za pomocą Kubernetes, Azure Service Fabric, Docker Swarm i mesosphere DC/OS.
 
-**Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku. 
+**Orchestrator**: Narzędzie upraszczające Zarządzanie klastrami i hostami platformy Docker. Koordynatorzy umożliwiają zarządzanie obrazami, kontenerami i hostami za pomocą interfejsu wiersza polecenia (CLI) lub graficznego interfejsu użytkownika. Można zarządzać sieciami kontenera, konfiguracjami, równoważeniem obciążenia, odnajdywaniem usług, wysoką dostępnością, konfiguracją hosta platformy Docker i innymi. Koordynator jest odpowiedzialny za uruchamianie, dystrybuowanie, skalowanie i korygowanie obciążeń w kolekcji węzłów. Zazwyczaj produkty Orchestrator są tymi samymi produktami, które zapewniają infrastrukturę klastra, taką jak Kubernetes i Azure Service Fabric, między innymi ofertami na rynku.
 
 >[!div class="step-by-step"]
 >[Poprzedni](docker-defined.md)
->[dalej](docker-containers-images-registries.md)
+>[Następny](docker-containers-images-registries.md)

@@ -2,20 +2,20 @@
 title: Implementowanie wzorca wyłącznika
 description: Dowiedz się, jak zaimplementować wzorzec wyłącznika jako uzupełniający system do ponawiania prób http.
 ms.date: 10/16/2018
-ms.openlocfilehash: eec14273cb9480df51d6e5865106ccfc045845c4
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094115"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
 Jak wspomniano wcześniej, należy obsłużyć błędy, które mogą potrwać zmienną ilość czasu na odzyskanie z programu, tak jak w przypadku próby nawiązania połączenia ze zdalną usługą lub zasobem. Obsługa tego typu błędu może poprawić stabilność i odporność aplikacji.
 
-W środowisku rozproszonym wywołania do zdalnych zasobów i usług mogą kończyć się niepowodzeniem z powodu przejściowych błędów, takich jak wolne połączenia sieciowe i limity czasu, lub jeśli zasoby reagują powoli lub są tymczasowo niedostępne. Te błędy są zwykle poprawiane po krótkim czasie, a niezawodna aplikacja w chmurze powinna zostać przygotowana do obsługi ich przy użyciu strategii podobnej do "wzorca ponawiania prób". 
+W środowisku rozproszonym wywołania do zdalnych zasobów i usług mogą kończyć się niepowodzeniem z powodu przejściowych błędów, takich jak wolne połączenia sieciowe i limity czasu, lub jeśli zasoby reagują powoli lub są tymczasowo niedostępne. Te błędy są zwykle poprawiane po krótkim czasie, a niezawodna aplikacja w chmurze powinna zostać przygotowana do obsługi ich przy użyciu strategii podobnej do "wzorca ponawiania prób".
 
-Mogą jednak wystąpić sytuacje, w których błędy są spowodowane nieoczekiwanymi zdarzeniami, których naprawa może trwać znacznie dłużej. Te błędy mogą mieć różne wagi od częściowej utraty łączności z pełną awarią usługi. W takich sytuacjach może się zdarzyć, że aplikacja będzie stale ponawiać próbę wykonania operacji, która prawdopodobnie nie powiedzie się. 
+Mogą jednak wystąpić sytuacje, w których błędy są spowodowane nieoczekiwanymi zdarzeniami, których naprawa może trwać znacznie dłużej. Te błędy mogą mieć różne wagi od częściowej utraty łączności z pełną awarią usługi. W takich sytuacjach może się zdarzyć, że aplikacja będzie stale ponawiać próbę wykonania operacji, która prawdopodobnie nie powiedzie się.
 
 Zamiast tego aplikacja powinna być zakodowana w celu zaakceptowania, że operacja zakończyła się niepowodzeniem i odpowiednio obsłużyć błąd.
 
@@ -42,9 +42,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetCircuitBreakerPolicy());
 ```
 
-Metoda dodaje zasady `HttpClient` do obiektów, które będą używane. `AddPolicyHandler()` W takim przypadku dodawana jest zasada Polly dla wyłącznika.
+`AddPolicyHandler()` Metoda dodaje zasady do obiektów `HttpClient`, które będą używane. W takim przypadku dodawana jest zasada Polly dla wyłącznika.
 
-Aby uzyskać bardziej modularne podejście, zasady wyłącznika są zdefiniowane w oddzielnej metodzie o `GetCircuitBreakerPolicy()`nazwie, jak pokazano w poniższym kodzie:
+Aby uzyskać bardziej modularne podejście, zasady wyłącznika są zdefiniowane w oddzielnej metodzie o nazwie `GetCircuitBreakerPolicy()`, jak pokazano w poniższym kodzie:
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
@@ -57,11 +57,11 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 W powyższym przykładzie kodu zasady wyłącznika są skonfigurowane w taki sposób, że przerywają lub otwierają obwód, gdy wystąpią pięć kolejnych błędów podczas ponawiania żądań HTTP. Gdy tak się stanie, obwód zostanie przerwany przez 30 sekund: w tym czasie wywołania będą kończyły się niepowodzeniem natychmiast po wyłączniku, a nie w rzeczywistości.  Zasady automatycznie interpretują [odpowiednie wyjątki i kody stanu HTTP](/aspnet/core/fundamentals/http-requests#handle-transient-faults) jako błędy.  
 
-Wyłączniki powinny być również używane do przekierowywania żądań do infrastruktury rezerwowej, jeśli występują problemy w konkretnym zasobie, który jest wdrażany w innym środowisku niż aplikacja kliencka lub usługa wykonująca wywołanie HTTP. Dzięki temu w przypadku awarii w centrum danych, która ma wpływ tylko na mikrousługi zaplecza, ale nie aplikacji klienckich, aplikacje klienckie mogą przekierować do usługi rezerwowej. Polly planowania nowych zasad w celu zautomatyzowania tego scenariusza [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) . 
+Wyłączniki powinny być również używane do przekierowywania żądań do infrastruktury rezerwowej, jeśli występują problemy w konkretnym zasobie, który jest wdrażany w innym środowisku niż aplikacja kliencka lub usługa wykonująca wywołanie HTTP. Dzięki temu w przypadku awarii w centrum danych, która ma wpływ tylko na mikrousługi zaplecza, ale nie aplikacji klienckich, aplikacje klienckie mogą przekierować do usługi rezerwowej. Polly planowania nowych zasad w celu zautomatyzowania tego scenariusza [zasad trybu failover](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) .
 
-Wszystkie te funkcje są przeznaczone dla przypadków, w których zarządzanie trybem failover odbywa się z poziomu kodu .NET, w przeciwieństwie do tego, że jest ono zarządzane automatycznie przez platformę Azure, z przezroczystością lokalizacji. 
+Wszystkie te funkcje są przeznaczone dla przypadków, w których zarządzanie trybem failover odbywa się z poziomu kodu .NET, w przeciwieństwie do tego, że jest ono zarządzane automatycznie przez platformę Azure, z przezroczystością lokalizacji.
 
-Z punktu widzenia użycia w przypadku korzystania z HttpClient nie trzeba dodawać żadnych nowych informacji w tym miejscu, ponieważ kod jest taki sam, jak w przypadku używania HttpClient z HttpClientFactory, jak pokazano w poprzednich sekcjach. 
+Z punktu widzenia użycia w przypadku korzystania z HttpClient nie trzeba dodawać żadnych nowych informacji w tym miejscu, ponieważ kod jest taki sam, jak w przypadku używania HttpClient z HttpClientFactory, jak pokazano w poprzednich sekcjach.
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Testowanie ponownych prób http i wyłączników w eShopOnContainers
 
@@ -69,7 +69,7 @@ Za każdym razem, gdy zostanie uruchomione rozwiązanie eShopOnContainers na ho�
 
 Ten typ błędu może być również wyświetlany podczas uruchamiania aplikacji w chmurze. W takim przypadku koordynatorzy mogą przenosić kontenery z jednego węzła lub maszyny wirtualnej do innego (czyli do uruchamiania nowych wystąpień) w przypadku zrównoważenia liczby kontenerów w węzłach klastra.
 
-Sposób "eShopOnContainers" rozwiązuje te problemy podczas uruchamiania wszystkich kontenerów jest za pomocą wzorca ponawiania prób przedstawiony wcześniej. 
+Sposób "eShopOnContainers" rozwiązuje te problemy podczas uruchamiania wszystkich kontenerów jest za pomocą wzorca ponawiania prób przedstawiony wcześniej.
 
 ### <a name="test-the-circuit-breaker-in-eshoponcontainers"></a>Testowanie wyłącznika w eShopOnContainers
 
@@ -90,7 +90,7 @@ Innym rozwiązaniem jest użycie niestandardowego oprogramowania pośredniczące
 
 Na przykład, gdy aplikacja jest uruchomiona, można włączyć oprogramowanie pośredniczące, wykonując żądanie przy użyciu poniższego identyfikatora URI w dowolnej przeglądarce. Należy zauważyć, że mikrousługa porządkowania używa portu 5103.
 
-`http://localhost:5103/failing?enable` 
+`http://localhost:5103/failing?enable`
 
 Następnie można sprawdzić stan przy użyciu identyfikatora URI `http://localhost:5103/failing`, jak pokazano na rysunku 8-5.
 
@@ -100,7 +100,7 @@ Następnie można sprawdzić stan przy użyciu identyfikatora URI `http://localh
 
 W tym momencie mikrousługa koszyka reaguje na kod stanu 500 przy każdym wywołaniu metody Invoke.
 
-Po uruchomieniu oprogramowania pośredniczącego możesz spróbować wykonać zamówienie z poziomu aplikacji sieci Web MVC. Ponieważ żądania kończą się niepowodzeniem, obwód zostanie otwarty. 
+Po uruchomieniu oprogramowania pośredniczącego możesz spróbować wykonać zamówienie z poziomu aplikacji sieci Web MVC. Ponieważ żądania kończą się niepowodzeniem, obwód zostanie otwarty.
 
 W poniższym przykładzie widać, że aplikacja sieci Web MVC ma blok catch w logice do umieszczania zamówienia.  Jeśli kod przechwytuje wyjątek typu "Open Circuit", pokazuje użytkownikowi przyjazny komunikat informujący o tym, że czeka.
 
@@ -138,13 +138,13 @@ Oto podsumowanie. Zasady ponawiania próbją kilka razy wykonać żądanie HTTP 
 
 **Rysunek 8-6**. Wyłącznik zwraca błąd do interfejsu użytkownika
 
-Można zaimplementować różne logiki, gdy należy otworzyć/przerwać obwód. Możesz też wypróbować żądanie HTTP względem innej mikrousługi zaplecza, jeśli istnieje rezerwowy centrum danych lub nadmiarowy system zaplecza. 
+Można zaimplementować różne logiki, gdy należy otworzyć/przerwać obwód. Możesz też wypróbować żądanie HTTP względem innej mikrousługi zaplecza, jeśli istnieje rezerwowy centrum danych lub nadmiarowy system zaplecza.
 
-Kolejną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (które wymuszają otwieranie obwodu przez otwieranie i utrzymywanie) oraz `Reset` (które zamyka je ponownie). Mogą one służyć do tworzenia punktów końcowych HTTP narzędzi, które wywołuje izolowanie i resetuje bezpośrednio na zasadzie.  Taki punkt końcowy HTTP może być również używany, odpowiednio zabezpieczony, w środowisku produkcyjnym w celu tymczasowego wyizolowania systemu podrzędnego, na przykład wtedy, gdy chcesz go uaktualnić. Można też ręcznie wypróbować obwód w celu ochrony systemu podrzędnego, który podejrzewa, że wystąpi błąd.
+Kolejną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (które wymuszają otwieranie obwodu przez otwarte i przechowywane) oraz `Reset` (co spowoduje jego zamknięcie). Mogą one służyć do tworzenia punktów końcowych HTTP narzędzi, które wywołuje izolowanie i resetuje bezpośrednio na zasadzie.  Taki punkt końcowy HTTP może być również używany, odpowiednio zabezpieczony, w środowisku produkcyjnym w celu tymczasowego wyizolowania systemu podrzędnego, na przykład wtedy, gdy chcesz go uaktualnić. Można też ręcznie wypróbować obwód w celu ochrony systemu podrzędnego, który podejrzewa, że wystąpi błąd.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wzorzec wyłącznika**\
+- **Wzorzec Wyłącznika**\
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]

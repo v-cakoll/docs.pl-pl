@@ -2,29 +2,29 @@
 title: Mikrousługi platformy .NET. architektura konteneryzowanych aplikacji .NET
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Mikrousługi są modularne i niezależnie do wdrożenia usługi. Kontenery platformy Docker (dla systemów Linux i Windows) upraszczają wdrażanie i testowanie poprzez zgrupowanie usługi i jej zależności w pojedynczą jednostkę, która jest uruchamiana w środowisku izolowanym.
 ms.date: 01/07/2019
-ms.openlocfilehash: dcfff8b06dc77b47e6586ea82c82acc30a5cf3df
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848867"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089908"
 ---
-# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi .NET: architektura konteneryzowanych aplikacji .NET
+# <a name="net-microservices-architecture-for-containerized-net-applications"></a>Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET
 
 ![Pokrycie książki](./media/cover-small.png)
 
 **Wersja 2.2** — zaktualizowane do ASP.NET Core 2,2
 
-Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono podejścia projektowania i implementacji architektury przy użyciu programu .NET Core i kontenerów platformy Docker. 
+Ten przewodnik stanowi wprowadzenie do tworzenia aplikacji opartych na mikrousługach i zarządzania nimi przy użyciu kontenerów. Omówiono podejścia projektowania i implementacji architektury przy użyciu programu .NET Core i kontenerów platformy Docker.
 
 Aby ułatwić rozpoczęcie pracy, przewodnik koncentruje się na odniesieniu do aplikacji opartej na kontenerach i mikrousługach, które można eksplorować. Aplikacja referencyjna jest dostępna w repozytorium GitHub [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) .
 
 ## <a name="action-links"></a>Linki akcji
 
-- Pobierz tę książkę elektroniczną w wybranym formacie: | [Plik PDF](https://aka.ms/microservicesebook) [](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) [mobi](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi)EPUB  |  |  |
+- Pobierz tę książkę elektroniczną w wybranym formacie (tylko w języku angielskim): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
 
 - Klonowanie/rozwidlenie aplikacji referencyjnej [eShopOnContainers w witrynie GitHub](https://github.com/dotnet-architecture/eShopOnContainers)
- 
+
 - Obejrzyj [film wprowadzający w witrynie Channel 9](https://aka.ms/microservices-video)
 
 - Uzyskaj informacje o [architekturze mikrousług](https://aka.ms/MicroservicesArchitecture) od razu
@@ -47,7 +47,7 @@ Po przeprowadzeniu tego przewodnika następnym krokiem jest zapoznanie się z mi
 
 ## <a name="version"></a>Wersja
 
-Ten przewodnik został zmieniony w taki sposób, aby objęł **platformę .NET Core 2,2** i wiele dodatkowych aktualizacji odnoszących się do tych samych "technologii". Platformę Azure i dodatkowe technologie innych firm, które są zgodne z platformą .NET Core 2,2. Dlatego też wersja książki została zaktualizowana do wersji **2,2**. 
+Ten przewodnik został zmieniony w taki sposób, aby objęł **platformę .NET Core 2,2** i wiele dodatkowych aktualizacji odnoszących się do tych samych "technologii". Platformę Azure i dodatkowe technologie innych firm, które są zgodne z platformą .NET Core 2,2. Dlatego też wersja książki została zaktualizowana do wersji **2,2**.
 
 ## <a name="what-this-guide-does-not-cover"></a>Czym nie obejmuje ten przewodnik
 
@@ -55,7 +55,7 @@ Ten przewodnik nie koncentruje się na potoku cyklu życia aplikacji, DevOps, ci
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Cykl życia aplikacji platformy Docker w kontenerze i narzędziach firmy Microsoft** (książka elektroniczna do pobrania)  
+- **Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami firmy Microsoft (do** pobrania książek elektronicznych)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
@@ -72,7 +72,7 @@ Druga część przewodnika rozpoczyna się od [procesu opracowywania aplikacji o
 
 ## <a name="related-microservice-and-container-based-reference-application-eshoponcontainers"></a>Powiązana mikrousługa i aplikacja referencyjna oparta na kontenerach: eShopOnContainers
 
-Aplikacja eShopOnContainers to aplikacja referencyjna Open Source dla platformy .NET Core i mikrousług, która została zaprojektowana do wdrożenia przy użyciu kontenerów platformy Docker. Aplikacja składa się z wielu podsystemów, w tym kilku frontonów interfejsu użytkownika w postaci elektronicznej (aplikacji sieci Web MVC, SPA sieci Web i natywnej aplikacji mobilnej). Obejmuje ona również mikrousługi i kontenery zaplecza dla wszystkich wymaganych operacji po stronie serwera. 
+Aplikacja eShopOnContainers to aplikacja referencyjna Open Source dla platformy .NET Core i mikrousług, która została zaprojektowana do wdrożenia przy użyciu kontenerów platformy Docker. Aplikacja składa się z wielu podsystemów, w tym kilku frontonów interfejsu użytkownika w postaci elektronicznej (aplikacji sieci Web MVC, SPA sieci Web i natywnej aplikacji mobilnej). Obejmuje ona również mikrousługi i kontenery zaplecza dla wszystkich wymaganych operacji po stronie serwera.
 
 Celem aplikacji jest zaprezentowanie wzorców architektonicznych. **Nie jest to szablon gotowy** do uruchomienia aplikacji w rzeczywistości. W rzeczywistości aplikacja jest w stanie stałego stanu beta, ponieważ jest również używana do testowania nowych potencjalnie interesujących technologii w miarę ich wyświetlania.
 
@@ -82,7 +82,7 @@ Utworzyliśmy ten przewodnik, aby ułatwić zrozumienie architektury aplikacji i
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>Napisy końcowe
+## <a name="credits"></a>środki
 
 Współautorzy:
 
@@ -150,7 +150,7 @@ Uczestnicy i recenzenci:
 
 ## <a name="copyright"></a>Prawo
 
-Pobieranie dostępne o:<https://aka.ms/microservicesebook>
+Pobieranie dostępne o: <https://aka.ms/microservicesebook>
 
 OPUBLIKOWANO PRZEZ
 
@@ -170,11 +170,11 @@ Ta książka jest świadczona w postaci "AS-IS" i zawiera widoki i opinie autora
 
 Niektóre przykłady opisane w niniejszym dokumencie są dostępne tylko dla ilustracji i są fikcyjne. Żadne prawdziwe skojarzenie lub połączenie nie jest zamierzone ani nie powinno zostać wywnioskowane.
 
-Firma Microsoft i znaki towarowe <https://www.microsoft.com> wymienione na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
+Firma Microsoft i znaki towarowe wymienione w <https://www.microsoft.com> na stronie "znaki towarowe" są znakami towarowymi grupy firm Microsoft.
 
 Komputery Mac i macOS są znakami towarowymi firmy Apple Inc.
 
-Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. Używane przez uprawnienie.
+Logo Docker Whale jest zastrzeżonym znakiem towarowym platformy Docker, Inc. używanym przez uprawnienie.
 
 Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 

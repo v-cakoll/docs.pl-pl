@@ -2,12 +2,12 @@
 title: Korzystanie z kontenerów i orkiestratorów
 description: Korzystanie z kontenerów platformy Docker i koordynatorów Kubernetes na platformie Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 62aaa68b2ada0725f33df62e97f1ca3216b91ccf
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087231"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>Korzystanie z kontenerów i orkiestratorów
 
@@ -53,7 +53,7 @@ Co więcej, kontenery są definiowane przez proste pliki, które można zaewiden
 
 Kontenery są niezmienne. Po zdefiniowaniu kontenera można ponownie utworzyć ten kontener i uruchomić go dokładnie tak samo. Ta niezmienności nadają się do projektowania opartego na składnikach. Jeśli niektóre części aplikacji nie zmieniają się tak często jak inne osoby, dlatego po prostu wdrożyć całą aplikację, gdy można tylko wdrożyć części, które ulegają zmianie najczęściej? Różne funkcje i zagadnienia dotyczące krzyżowego nacięcia aplikacji można podzielić na oddzielne jednostki. Rysunek 3-2 pokazuje, jak aplikacja monolityczna może korzystać z kontenerów i mikrousług przez delegowanie niektórych funkcji lub funkcji. Pozostałe funkcje w samej aplikacji również zostały zakontenerne.
 
-@no__t — 0Breaking aplikację monolityczną w celu używania mikrousług w zapleczu. ](./media/breaking-up-monolith-with-backend-microservices.png)
+![rozdzielania aplikacji monolitycznej na używanie mikrousług w zapleczu.](./media/breaking-up-monolith-with-backend-microservices.png)
 **rysunek 3-2**. Rozdzielenie aplikacji monolitycznej na korzystanie z mikrousług w zapleczu.
 
 Aplikacje natywne w chmurze skompilowane przy użyciu osobnych kontenerów mogą w razie potrzeby wdrażać dowolną lub niewielką część aplikacji. Poszczególne usługi mogą być hostowane na węzłach mających zasoby odpowiednie dla każdej usługi. Środowisko, w którym są uruchamiane poszczególne usługi, jest niezmienne, może być współużytkowane przez programowanie, testowanie i produkcję oraz może być łatwo w wersji. Sprzęganie różnych obszarów aplikacji występuje jawnie jako wywołania lub komunikaty między usługami, a nie zależności czasu kompilacji w ramach monolitu. Każda z tych części ogólnej aplikacji może wybrać technologię, która najbardziej wykrywa tę funkcję lub możliwość, bez konieczności wprowadzania zmian w pozostałej części aplikacji.
@@ -62,7 +62,7 @@ Aplikacje natywne w chmurze skompilowane przy użyciu osobnych kontenerów mogą
 
 Usługi oparte na kontenerach mogą korzystać z zalet skalowania zapewnianych przez narzędzia Orchestration, takie jak Kubernetes. Za pomocą kontenerów projektowych są znane tylko informacje o sobie. Po rozpoczęciu pracy z wieloma kontenerami, które muszą współdziałać, można wartościowa je na wyższym poziomie. Organizowanie dużej liczby kontenerów i ich współużytkowanych zależności, takich jak konfiguracja sieci, polega na tym, że narzędzia aranżacji są dostępne w celu zapisania tego dnia. Kubernetes to platforma aranżacji kontenerów zaprojektowana w celu zautomatyzowania wdrażania, skalowania i zarządzania aplikacjami z kontenerami. Tworzy warstwę abstrakcji na podstawie grup kontenerów i organizuje je do *zasobników*. W przypadku maszyn roboczych, które są nazywane *węzłami*, są uruchamiane. Cała zorganizowana grupa jest określana jako *klaster*. Rysunek 3-3 przedstawia różne składniki klastra Kubernetes.
 
-składniki klastra @no__t 0Kubernetes. ](./media/kubernetes-cluster-components.png)
+![składniki klastra Kubernetes.](./media/kubernetes-cluster-components.png)
 **rysunek 3-3**. Składniki klastra Kubernetes.
 
 Kubernetes ma wbudowaną obsługę skalowania klastrów w celu spełnienia wymagań. Dzięki połączeniu z mikrousługą kontenerów zapewnia aplikacje natywne dla chmury z możliwością szybkiego i efektywnego reagowania na popyt na żądanie z dodatkowymi zasobami, gdy są one konieczne.
@@ -117,7 +117,7 @@ Organizacje, które wdrażają i muszą w dalszym ciągu obsługiwać dużą lic
 
 ## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>Kiedy należy unikać używania kontenerów i koordynatorów?
 
-Jeśli nie będziesz mieć możliwości kompilowania aplikacji lub nie możesz jej skompilować po wykorzystaniu zasad aplikacji 12-składnikowych, prawdopodobnie lepiej będzie uniknąć unikania kontenerów i Orchestrator. W takich przypadkach najlepszym rozwiązaniem może być przechodzenie do przodu przy użyciu platformy hostingu opartej na maszynach wirtualnych lub w niektórych systemach hybrydowych, w których można wyłączyć niektóre elementy funkcji w oddzielnych kontenerach, a nawet funkcji bezserwerowych. 
+Jeśli nie będziesz mieć możliwości kompilowania aplikacji lub nie możesz jej skompilować po wykorzystaniu zasad aplikacji 12-składnikowych, prawdopodobnie lepiej będzie uniknąć unikania kontenerów i Orchestrator. W takich przypadkach najlepszym rozwiązaniem może być przechodzenie do przodu przy użyciu platformy hostingu opartej na maszynach wirtualnych lub w niektórych systemach hybrydowych, w których można wyłączyć niektóre elementy funkcji w oddzielnych kontenerach, a nawet funkcji bezserwerowych.
 
 ## <a name="development-resources"></a>Zasoby programistyczne
 

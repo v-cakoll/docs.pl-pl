@@ -2,12 +2,12 @@
 title: Wzorzec bramy interfejsu API w porównaniu z bezpośrednią komunikacją klient-do-mikrousług
 description: Zapoznaj się z różnicami i wykorzystaniem wzorca usługi API Gateway oraz bezpośredniej komunikacji klient-do-mikrousług.
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b42650b2dbce093f12fe02b1605c95076dc8592
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 47e9a383c1fcb6c9fec38cb376b60a4ab839077d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522946"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090134"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Wzorzec bramy interfejsu API w porównaniu z bezpośrednią komunikacją klient-do-mikrousług
 
@@ -132,7 +132,7 @@ W zależności od implementacji można uzyskać wiele dodatkowych zagadnień zwi
 
 **Rysunek 4-14**. Korzystanie z API Management platformy Azure dla bramy interfejsu API
 
-Usługa Azure API Management rozwiązuje zarówno bramę interfejsu API, jak i potrzeby związane z zarządzaniem, takie jak rejestrowanie, zabezpieczenia, pomiary itp. W tym przypadku, gdy korzystasz z produktu, takiego jak Azure API Management, oznacza to, że użytkownik może mieć pojedynczą bramę interfejsu API, ponieważ nie jest to ryzykowne, ponieważ tego rodzaju bramy interfejsu API są "cieńsze" C# , co oznacza, że nie implementuje niestandardowego kodu, który może się rozwijać monolityczny składnik. 
+Usługa Azure API Management rozwiązuje zarówno bramę interfejsu API, jak i potrzeby związane z zarządzaniem, takie jak rejestrowanie, zabezpieczenia, pomiary itp. W tym przypadku, gdy korzystasz z produktu, takiego jak Azure API Management, oznacza to, że użytkownik może mieć pojedynczą bramę interfejsu API, ponieważ nie jest to ryzykowne, ponieważ tego rodzaju bramy interfejsu API są "cieńsze" C# , co oznacza, że nie implementuje niestandardowego kodu, który może się rozwijać monolityczny składnik.
 
 Produkty bramy interfejsu API zwykle działają podobnie jak zwrotny serwer proxy dla komunikacji przychodzącej, gdzie można również filtrować interfejsy API z wewnętrznych mikrousług i stosować autoryzację do opublikowanych interfejsów API w tej pojedynczej warstwie.
 
@@ -179,10 +179,10 @@ Po wstępnym rozpoczęciu architektury i wzorców sekcjach w następnych sekcjac
 - **Agregacja i wzorzec kompozycji**  \
   <https://microservices.io/patterns/data/api-composition.html>
 
-- @No__t_1 **API Management platformy Azure**
+-  \ **API Management platformy Azure**
   <https://azure.microsoft.com/services/api-management/>
 
-- **UDI Dahan. @No__t_1 kompozycji zorientowanej na usługę**
+- **UDI Dahan. \ kompozycji zorientowanej na usługę**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Blogu Clemensa. Obsługa komunikatów i mikrousług w programie GOTO 2016 (wideo)**  \

@@ -4,12 +4,12 @@ description: Dowiedz się, jak tworzyć składniki interfejsu użytkownika wielo
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: ab9697bcb12ec17528415b3ad4d850803f472b36
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520332"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088100"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Kompiluj składniki interfejsu użytkownika wielokrotnego użytku z Blazor
 
@@ -237,7 +237,7 @@ Procedury obsługi zdarzeń mogą akceptować opcjonalny, specyficzny dla zdarze
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    void OnClick(MouseEventArgs e) 
+    void OnClick(MouseEventArgs e)
     {
         Console.WriteLine($"Mouse clicked at {e.ScreenX}, {e.ScreenY}.");
     }
@@ -259,7 +259,7 @@ Procedury obsługi zdarzeń mogą być wykonywane synchronicznie lub asynchronic
 <button @onclick="OnClick">Click me!</button>
 
 @code {
-    async Task OnClick() 
+    async Task OnClick()
     {
         var result = await Http.GetAsync("api/values");
     }
@@ -283,7 +283,7 @@ Po obsłudze zdarzenia składnik jest renderowany w celu uwzględnienia zmian st
     }
 }
 
-@code 
+@code
 {
     bool showMessage = false;
     string message;
@@ -343,9 +343,9 @@ Składniki mogą również obsługiwać powiązanie danych z parametrami. Aby po
 *PasswordBox. Razor*
 
 ```razor
-Password: <input 
-    value="@Password" 
-    @oninput="OnPasswordChanged" 
+Password: <input
+    value="@Password"
+    @oninput="OnPasswordChanged"
     type="@(showPassword ? "text" : "password")" />
 
 <label><input type="checkbox" @bind="showPassword" />Show password</label>
@@ -431,7 +431,7 @@ public partial class Counter : System.Web.UI.UserControl
 }
 ```
 
-Składniki Blazor mają również dobrze zdefiniowany cykl życia. Cykl życia składnika może służyć do inicjowania stanu składnika i implementowania zaawansowanych zachowań składników. 
+Składniki Blazor mają również dobrze zdefiniowany cykl życia. Cykl życia składnika może służyć do inicjowania stanu składnika i implementowania zaawansowanych zachowań składników.
 
 Wszystkie metody cyklu życia składnika Blazor mają wersje synchroniczne i asynchroniczne. Renderowanie składnika jest synchroniczne. Nie można uruchomić logiki asynchronicznej jako części renderowania składnika. Wszystkie logiki asynchroniczne muszą zostać wykonane w ramach metody cyklu życia `async`.
 
@@ -455,7 +455,7 @@ protected override async Task OnParametersSetAsync() { await ... }
 
 ### <a name="onafterrender"></a>OnAfterRender
 
-Metody `OnAfterRender` i `OnAfterRenderAsync` są wywoływane po zakończeniu renderowania składnika. Odwołania do elementów i składników są wypełniane w tym punkcie (więcej informacji znajduje się poniżej). W tym momencie jest włączona funkcja interaktywność z przeglądarką. Interakcje z obsługą DOM i wykonanie kodu JavaScript mogą być bezpiecznie wykonywane. 
+Metody `OnAfterRender` i `OnAfterRenderAsync` są wywoływane po zakończeniu renderowania składnika. Odwołania do elementów i składników są wypełniane w tym punkcie (więcej informacji znajduje się poniżej). W tym momencie jest włączona funkcja interaktywność z przeglądarką. Interakcje z obsługą DOM i wykonanie kodu JavaScript mogą być bezpiecznie wykonywane.
 
 ```csharp
 protected override void OnAfterRender(bool firstRender)
@@ -525,9 +525,9 @@ Składniki Blazor mogą przechwytywać odwołania do elementu. W przeciwieństwi
 
 ## <a name="templated-components"></a>Składniki z szablonami
 
-W formularzach sieci Web ASP.NET można tworzyć *kontrolki z szablonami*. Kontrolki z szablonami umożliwiają deweloperowi określenie fragmentu kodu HTML służącego do renderowania kontrolki kontenera. Mechanics kompilowania formantów serwera są złożone, ale zapewniają zaawansowane scenariusze renderowania danych w sposób dostosowywalny przez użytkownika. Przykłady formantów opartych na szablonach obejmują `Repeater` i `DataList`. 
+W formularzach sieci Web ASP.NET można tworzyć *kontrolki z szablonami*. Kontrolki z szablonami umożliwiają deweloperowi określenie fragmentu kodu HTML służącego do renderowania kontrolki kontenera. Mechanics kompilowania formantów serwera są złożone, ale zapewniają zaawansowane scenariusze renderowania danych w sposób dostosowywalny przez użytkownika. Przykłady formantów opartych na szablonach obejmują `Repeater` i `DataList`.
 
-Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub `RenderFragment<T>`. @No__t_0 reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. @No__t_0 jest fragmentem znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
+Składniki Blazor można także definiować za pomocą definiowania parametrów składnika typu `RenderFragment` lub `RenderFragment<T>`. `RenderFragment` reprezentuje fragment znacznika Razor, który będzie następnie renderowany przez składnik. `RenderFragment<T>` jest fragmentem znacznika Razor, który przyjmuje parametr, który można określić podczas renderowania fragmentu renderowania.
 
 ### <a name="child-content"></a>Zawartość podrzędna
 
@@ -626,7 +626,7 @@ Składnik Blazor jest zwykle tworzony w pojedynczym pliku *Razor* . Można jedna
 *Counter.razor.cs*
 
 ```csharp
-public class CounterBase : ComponentBase 
+public class CounterBase : ComponentBase
 {
     protected int currentCount = 0;
 

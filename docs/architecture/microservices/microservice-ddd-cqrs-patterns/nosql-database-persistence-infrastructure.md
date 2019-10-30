@@ -2,12 +2,12 @@
 title: Korzystanie z baz danych NoSQL jako infrastruktury trwałości
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Informacje ogólne na temat używania baz danych NoSql, a w szczególności Azure Cosmos DB jako opcji wdrożenia utrwalania.
 ms.date: 10/08/2018
-ms.openlocfilehash: d96d72fe675dfa830029e4311f2cf165a305c328
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b184586dede6331e0babfa976c6fd641933d018e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089867"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>Korzystanie z baz danych NoSQL jako infrastruktury trwałości
 
@@ -58,7 +58,7 @@ Na przykład poniższy kod JSON to Przykładowa implementacja agregacji zamówie
 
 **Rysunek 7-19**. Azure Cosmos DB dystrybucji globalnej
 
-W przypadku używania modelu języka\# C do implementowania agregacji, która ma być używana przez interfejs API Azure Cosmos DB, agregacja może być podobna\# do klas C poco używanych z EF Core. Różnica polega na sposobie korzystania z nich z warstw aplikacji i infrastruktury, jak w poniższym kodzie:
+W przypadku używania modelu języka C\# do zaimplementowania agregacji, która ma być używana przez interfejs API Azure Cosmos DB, agregacja może być podobna do klas POCO języka\# C używanych z EF Core. Różnica polega na sposobie korzystania z nich z warstw aplikacji i infrastruktury, jak w poniższym kodzie:
 
 ```csharp
 // C# EXAMPLE OF AN ORDER AGGREGATE BEING PERSISTED WITH AZURE COSMOS DB API
@@ -122,7 +122,7 @@ Jednak w przypadku utrwalania modelu w bazie danych NoSQL zmiana kodu i interfej
 
 Dostęp do Azure Cosmos DB baz danych można uzyskać z kodu platformy .NET działającego w kontenerach, podobnie jak w przypadku dowolnej innej aplikacji platformy .NET. Na przykład w programie eShopOnContainers są implementowane mikrousługi lokalizacji. API i marketingu. API, dzięki czemu mogą korzystać z Azure Cosmos DB baz danych.
 
-Istnieje jednak ograniczenie Azure Cosmos DB z punktu widzenia środowiska projektowania platformy Docker. Nawet wtedy, gdy [Azure Cosmos DB emulatora](https://docs.microsoft.com/azure/cosmos-db/local-emulator) lokalnego można uruchomić na lokalnym komputerze deweloperskim (na przykład na komputerze), od momentu do późnego 2017, tylko system Windows, a nie Linux. 
+Istnieje jednak ograniczenie Azure Cosmos DB z punktu widzenia środowiska projektowania platformy Docker. Nawet wtedy, gdy [Azure Cosmos DB emulatora](https://docs.microsoft.com/azure/cosmos-db/local-emulator) lokalnego można uruchomić na lokalnym komputerze deweloperskim (na przykład na komputerze), od momentu do późnego 2017, tylko system Windows, a nie Linux.
 
 Istnieje również możliwość uruchomienia tego emulatora na platformie Docker, ale tylko w kontenerach systemu Windows, a nie w przypadku kontenerów z systemem Linux. Jest to wstępna niepełnosprawność środowiska programistycznego, jeśli aplikacja jest wdrażana jako kontenery systemu Linux, ponieważ obecnie nie można wdrażać kontenerów systemów Linux i Windows na Docker for Windows w tym samym czasie. Wszystkie wdrażane kontenery muszą być przeznaczone dla systemu Linux lub Windows.
 
@@ -150,9 +150,9 @@ Niestandardowe kontenery programu .NET Core można uruchamiać na lokalnym hośc
 
 Oczywistą zaletą korzystania z interfejsu API MongoDB jest to, że rozwiązanie może działać zarówno w aparatach baz danych, MongoDB, jak i Azure Cosmos DB, dzięki czemu migracja do różnych środowisk powinna być łatwa. Jednak czasami jest wartościowa użycie natywnego interfejsu API (jest to natywny interfejs API Cosmos DB) w celu pełnego wykorzystania możliwości określonego aparatu bazy danych.
 
-Aby uzyskać dalsze porównanie między zwykłym użyciem MongoDB a Cosmos DB w chmurze, zobacz [zalety korzystania z Azure Cosmos DB na tej stronie](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction). 
+Aby uzyskać dalsze porównanie między zwykłym użyciem MongoDB a Cosmos DB w chmurze, zobacz [zalety korzystania z Azure Cosmos DB na tej stronie](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction).
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizuj podejście do aplikacji produkcyjnych: Interfejs API MongoDB a Interfejs API Cosmos DB
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie podejścia do aplikacji produkcyjnych: MongoDB API a interfejs API Cosmos DB
 
 W eShopOnContainers korzystamy z interfejsu API MongoDB, ponieważ naszym priorytetem było podstawowe środowisko deweloperskie/testowe przy użyciu bazy danych NoSQL, która może również współejść z Azure Cosmos DB.
 
@@ -162,7 +162,7 @@ Klastry MongoDB można również używać jako produkcyjnej bazy danych w chmurz
 
 Zasadniczo jest to tylko oświadczenie stwierdzające, że nie należy zawsze używać interfejsu API MongoDB w odniesieniu do Azure Cosmos DB, tak jak w eShopOnContainers, ponieważ było to wygodne rozwiązanie dla kontenerów systemu Linux. Decyzja powinna być oparta na określonych wymaganiach i testach, które należy wykonać w przypadku aplikacji produkcyjnej.
 
-### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Kod: Korzystanie z interfejsu API MongoDB w aplikacjach .NET Core
+### <a name="the-code-use-mongodb-api-in-net-core-applications"></a>Kod: Użyj interfejsu API MongoDB w aplikacjach .NET Core
 
 Interfejs API MongoDB dla platformy .NET jest oparty na pakietach NuGet, które należy dodać do projektów, takich jak w projekcie Locations. API pokazane na poniższej ilustracji.
 
@@ -194,12 +194,12 @@ public class Locations
     public string Description { get; set; }
     public double Latitude { get; set; }
     public double Longitude { get; set; }
-    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location 
+    public GeoJsonPoint<GeoJson2DGeographicCoordinates> Location
                                                              { get; private set; }
-    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon 
+    public GeoJsonPolygon<GeoJson2DGeographicCoordinates> Polygon
                                                              { get; private set; }
     public void SetLocation(double lon, double lat) => SetPosition(lon, lat);
-    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList) 
+    public void SetArea(List<GeoJson2DGeographicCoordinates> coordinatesList)
                                                     => SetPolygon(coordinatesList);
 
     private void SetPosition(double lon, double lat)
@@ -246,13 +246,13 @@ public class LocationsContext
         {
             return _database.GetCollection<Locations>("Locations");
         }
-    }       
+    }
 }
 ```
 
 #### <a name="retrieve-the-data"></a>Pobieranie danych
 
-W C# kodzie, takim jak kontrolery interfejsu API sieci Web lub implementacji niestandardowych repozytoriów, można napisać podobny kod do poniższego zapytania przy użyciu interfejsu API MongoDB. Należy zauważyć, `_context` że obiekt jest wystąpieniem poprzedniej `LocationsContext` klasy.
+W C# kodzie, takim jak kontrolery interfejsu API sieci Web lub implementacji niestandardowych repozytoriów, można napisać podobny kod do poniższego zapytania przy użyciu interfejsu API MongoDB. Należy zauważyć, że obiekt `_context` jest wystąpieniem poprzedniej klasy `LocationsContext`.
 
 ```csharp
 public async Task<Locations> GetAsync(int locationId)
@@ -266,7 +266,7 @@ public async Task<Locations> GetAsync(int locationId)
 
 #### <a name="use-an-env-var-in-the-docker-composeoverrideyml-file-for-the-mongodb-connection-string"></a>Użyj funkcji ENV-var w pliku Docker-Compose. override. yml dla parametrów połączenia MongoDB
 
-Podczas tworzenia obiektu MongoClient musi on mieć podstawowy parametr, który jest precyzyjnym `ConnectionString` parametrem wskazującym odpowiednią bazę danych. W przypadku eShopOnContainers parametry połączenia mogą wskazywać lokalny kontener platformy Docker MongoDB lub do bazy danych Azure Cosmos DB produkcyjnych.  Te parametry połączenia pochodzą ze zmiennych środowiskowych zdefiniowanych w `docker-compose.override.yml` plikach używanych podczas wdrażania przy użyciu platformy Docker-redagowanie lub programu Visual Studio, jak w poniższym kodzie YML.
+Podczas tworzenia obiektu MongoClient musi on mieć podstawowy parametr, który jest precyzyjnym parametrem `ConnectionString` wskazującym odpowiednią bazę danych. W przypadku eShopOnContainers parametry połączenia mogą wskazywać lokalny kontener platformy Docker MongoDB lub do bazy danych Azure Cosmos DB produkcyjnych.  Te parametry połączenia pochodzą ze zmiennych środowiskowych zdefiniowanych w plikach `docker-compose.override.yml` używanych podczas wdrażania przy użyciu platformy Docker-redagowanie lub Visual Studio, jak w poniższym kodzie YML.
 
 ```yml
 # docker-compose.override.yml
@@ -280,9 +280,9 @@ services:
 
 ```
 
-Zmienna `ConnectionString` środowiskowa jest rozpoznawana w następujący sposób: `.env` Jeśli zmienna `ESHOP_AZURE_COSMOSDB` globalna jest zdefiniowana w pliku z parametrami połączenia Azure Cosmos DB, będzie ona używać go do uzyskiwania dostępu do bazy danych Azure Cosmos DB w chmurze. Jeśli ta `mongodb://nosql.data` wartość nie jest zdefiniowana, zostanie ona przestosowana i będzie używać kontenera MongoDB Development.
+Zmienna środowiskowa `ConnectionString` jest rozwiązywana w ten sposób: Jeśli `ESHOP_AZURE_COSMOSDB` zmienna globalna jest zdefiniowana w pliku `.env` z Azure Cosmos DB parametrów połączenia, będzie używać jej do uzyskiwania dostępu do bazy danych Azure Cosmos DB w chmurze. Jeśli nie jest on zdefiniowany, zajmie `mongodb://nosql.data` wartość i użyje kontenera Development MongoDB.
 
-Poniższy kod przedstawia `.env` plik Azure Cosmos DB z eShopOnContainersą globalną zmienną środowiskową parametrów połączenia, zgodnie z zaimplementowaną w programie:
+Poniższy kod ilustruje `.env` plik ze zmienną środowiskową globalną ciąg połączenia Azure Cosmos DB, zgodnie z zaimplementowaną w eShopOnContainers:
 
 ```yml
 # .env file, in eShopOnContainers root folder
@@ -301,7 +301,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 Należy usunąć komentarz z wiersza ESHOP_AZURE_COSMOSDB i zaktualizować go przy użyciu parametrów połączenia Azure Cosmos DB uzyskanych z Azure Portal, jak wyjaśniono w temacie [łączenie aplikacji MongoDB do Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account).
 
-Jeśli zmienna `.env` globalna jest pusta, co oznacza, że jest oznaczona jako komentarz do pliku, kontener używa domyślnych parametrów połączenia MongoDB wskazujących lokalny kontener MongoDB wdrożony w eShopOnContainers o nazwie `ESHOP_AZURE_COSMOSDB` `nosql.data`i został zdefiniowany w pliku Docker-Zredaguj, jak pokazano w poniższym kodzie. yml. 
+Jeśli `ESHOP_AZURE_COSMOSDB` zmienna globalna jest pusta, co oznacza, że jest oznaczona jako komentarz w pliku `.env`, kontener używa domyślnych parametrów połączenia MongoDB wskazujących na lokalny kontener MongoDB wdrożony w eShopOnContainers o nazwie `nosql.data` i był zdefiniowane w pliku Docker-Zredaguj, jak pokazano w poniższym kodzie. yml.
 
 ``` yml
 # docker-compose.yml
@@ -314,22 +314,22 @@ services:
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Modelowanie danych dokumentu dla baz danych NoSQL** \
+- **Dane dokumentu modelowania dla baz danych NoSQL** \
   <https://docs.microsoft.com/azure/cosmos-db/modeling-data>
 
 - **Vaughn Vernon. Idealny magazyn agregacji projektu opartego na domenie?** \
   <https://kalele.io/blog-posts/the-ideal-domain-driven-design-aggregate-store/>
 
-- **Wprowadzenie do Azure Cosmos DB: Interfejs API dla usługi MongoDB**  \
+- **Wprowadzenie do Azure Cosmos DB: interfejs API dla MongoDB**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction>
 
-- **Azure Cosmos DB: Tworzenie aplikacji sieci Web interfejsu API MongoDB za pomocą platformy .NET i Azure Portal**  \
+- **Azure Cosmos DB: Tworzenie aplikacji internetowej interfejsu API MongoDB za pomocą platformy .NET i Azure Portal**  \
   <https://docs.microsoft.com/azure/cosmos-db/create-mongodb-dotnet>
 
-- **Korzystanie z emulatora Azure Cosmos DB na potrzeby lokalnego tworzenia i testowania**  \
+- **Użyj emulatora Azure Cosmos DB na potrzeby lokalnego tworzenia i testowania**  \
   <https://docs.microsoft.com/azure/cosmos-db/local-emulator>
 
-- **Łączenie aplikacji MongoDB z usługą Azure Cosmos DB**  \
+- **Połącz aplikację MongoDB z Azure Cosmos DB**  \
   <https://docs.microsoft.com/azure/cosmos-db/connect-mongodb-account>
 
 - **Obraz Cosmos DB Docker emulatora (kontener systemu Windows)**   \
@@ -338,9 +338,9 @@ services:
 - **Obraz platformy Docker MongoDB (kontener Linux i Windows)**   \
   <https://hub.docker.com/_/mongo/>
 
-- **Użyj korzystanie programu mongochef (Studio 3T) z Azure Cosmos DB: Interfejs API dla konta MongoDB**  \
+- **Użyj korzystanie programu mongochef (Studio 3T) z Azure Cosmos DB: interfejs API dla konta MongoDB**  \
   <https://docs.microsoft.com/azure/cosmos-db/mongodb-mongochef>
 
 >[!div class="step-by-step"]
->[Poprzedni](infrastructure-persistence-layer-implemenation-entity-framework-core.md)Następny
->[](microservice-application-layer-web-api-design.md)
+>[Poprzedni](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Następny](microservice-application-layer-web-api-design.md)

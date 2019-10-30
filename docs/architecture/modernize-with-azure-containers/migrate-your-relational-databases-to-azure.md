@@ -2,16 +2,16 @@
 title: Migrowanie relacyjnych baz danych do platformy Azure
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Migrowanie relacyjnych baz danych do platformy Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: b2153e65a12706b97fae11c5f23846c83bcd6642
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374093"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093612"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych do platformy Azure
 
-Została Platforma Azure oferuje najbardziej kompleksową migrację bazy danych.
+Wizja: platforma Azure oferuje najbardziej kompleksową migrację bazy danych.
 
 Na platformie Azure można migrować serwery baz danych bezpośrednio do maszyn wirtualnych IaaS (czysty dźwig i Shift) lub można migrować do Azure SQL Database, aby uzyskać dodatkowe korzyści. Azure SQL Database oferuje dostępne wystąpienia zarządzane i pełne bazy danych jako usługi (DBaaS). Rysunek 3-1 przedstawia wiele ścieżek migracji relacyjnej bazy danych dostępnych na platformie Azure.
 
@@ -90,7 +90,7 @@ Obecnie Microsoft Azure obsługuje do [331 różnych serwerów baz danych](https
 
 Może istnieć kilka przypadków, w których nadal trzeba przeprowadzić migrację do SQL Server jako zwykłej maszyny wirtualnej. Przykładowy scenariusz jest potrzebny do użycia SQL Server Reporting Services. W większości przypadków, Azure SQL Database wystąpienie zarządzane może zapewnić wszystko, czego potrzebujesz do migracji z lokalnych serwerów SQL, aby migracja do maszyny wirtualnej SQL Server powinna być ostatnią możliwością.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych do platformy Azure za pomocą Azure Database Migration Service 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych do platformy Azure za pomocą Azure Database Migration Service
 
 Za pomocą Azure Database Migration Service można migrować relacyjne bazy danych, takie jak SQL Server, Oracle i MySQL na platformę Azure, niezależnie od tego, czy docelowa baza danych jest Azure SQL Database, Azure SQL Database wystąpieniem zarządzanym lub SQL Server na maszynie wirtualnej platformy Azure.
 
@@ -112,7 +112,7 @@ Aby dowiedzieć się, jak migrować bazy danych za pomocą Azure Database Migrat
 
     <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **Migracja bazy danych programu SQL Server do bazy danych SQL w chmurze**
+- **SQL Server migrację bazy danych do SQL Database w chmurze**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
@@ -125,5 +125,5 @@ Aby dowiedzieć się, jak migrować bazy danych za pomocą Azure Database Migrat
     <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](lift-and-shift-existing-apps-azure-iaas.md)Następny
-> [](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->
+> [Poprzedni](lift-and-shift-existing-apps-azure-iaas.md)
+> [Następny](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

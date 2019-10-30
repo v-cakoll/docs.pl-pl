@@ -3,12 +3,12 @@ title: Aplikacje kandydujące dla chmury natywnej
 description: Dowiedz się, które typy aplikacji korzystają z podejścia natywnego w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: e8d520e0a1ad5ab8854d0628daa56a390de523cd
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291223"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087682"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplikacje kandydujące dla chmury natywnej
 
@@ -30,7 +30,7 @@ Jakiego typu aplikacja może być kandydatem dla natywnej chmury?
 
 - Aplikacja ze składnikami, które muszą być skalowane niezależnie
 
-Następnie istnieją starsze systemy. Mimo że chcielibyśmy utworzyć nowe aplikacje, często są odpowiedzialni za modernizację starszych obciążeń, które mają kluczowe znaczenie dla działalności firmy. W czasie Starsza aplikacja może zostać rozłączona do mikrousług, kontenerów i ostatecznie "replatformowo" do architektury natywnej w chmurze.  
+Następnie istnieją starsze systemy. Mimo że chcielibyśmy utworzyć nowe aplikacje, często są odpowiedzialni za modernizację starszych obciążeń, które mają kluczowe znaczenie dla działalności firmy. W czasie Starsza aplikacja może zostać rozłączona do mikrousług, kontenerów i ostatecznie "replatformowo" do architektury natywnej w chmurze.
 
 ### <a name="modernizing-legacy-apps"></a>Modernizacja starszych aplikacji
 
@@ -40,7 +40,7 @@ Bezpłatna książka elektroniczna firmy Microsoft umożliwia [modernizację ist
 
 **Rysunek 1-10**. Strategie migracji starszych obciążeń
 
-Wbudowane aplikacje, które nie mają krytycznego znaczenia, korzystają z szybkiej migracji podnoszenia i przesunięć ([gotowej do infrastruktury w chmurze](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). W tym miejscu obciążenie lokalne jest hostowane na maszynie wirtualnej opartej na chmurze bez zmian. To podejście używa [modelu IaaS (infrastruktura jako usługa)](https://azure.microsoft.com/overview/what-is-iaas/). Platforma Azure oferuje kilka narzędzi, takich jak ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)i [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), aby ułatwić takie przenoszenie. Chociaż ta strategia może przynieść pewne oszczędności, takie aplikacje zwykle nie zostały zaprojektowane w celu odblokowania i wykorzystania zalet chmury obliczeniowej. 
+Wbudowane aplikacje, które nie mają krytycznego znaczenia, korzystają z szybkiej migracji podnoszenia i przesunięć ([gotowej do infrastruktury w chmurze](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). W tym miejscu obciążenie lokalne jest hostowane na maszynie wirtualnej opartej na chmurze bez zmian. To podejście używa [modelu IaaS (infrastruktura jako usługa)](https://azure.microsoft.com/overview/what-is-iaas/). Platforma Azure oferuje kilka narzędzi, takich jak ([Azure Migrate](https://aka.ms/azuremigrate), [Azure Site Recovery](https://azure.microsoft.com/services/site-recovery/)i [Azure Database Migration Service](https://azure.microsoft.com/campaigns/database-migration/)), aby ułatwić takie przenoszenie. Chociaż ta strategia może przynieść pewne oszczędności, takie aplikacje zwykle nie zostały zaprojektowane w celu odblokowania i wykorzystania zalet chmury obliczeniowej.
 
 Monolityczne aplikacje mające kluczowe znaczenie dla korzyści z często biznesowej z rozszerzonej migracji podniesienia i przesunięcia (*zoptymalizowane pod kątem chmury*). Takie podejście obejmuje optymalizacje wdrożenia, które umożliwiają korzystanie z kluczowych usług Cloud Services — bez konieczności zmiany podstawowej architektury aplikacji. Na przykład możesz [konteneryzowanie](https://docs.microsoft.com/virtualization/windowscontainers/about/) aplikację i wdrożyć ją w usłudze Orchestrator Containers, takiej jak [usługi Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/), omówionej w dalszej części tej książki. W chmurze aplikacja może korzystać z innych usług w chmurze, takich jak bazy danych, kolejki komunikatów, monitorowanie i rozproszone buforowanie.
 
@@ -70,7 +70,7 @@ W tym rozdziale wprowadziliśmy przetwarzanie natywne w chmurze. Firma Microsoft
 
 Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w chmurę w chmurze.
 
-### <a name="references"></a>Informacje
+### <a name="references"></a>Odwołania
 
 - [Natywna platforma obliczeniowa w chmurze](https://www.cncf.io/)
 
@@ -94,4 +94,4 @@ Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w 
 
 >[!div class="step-by-step"]
 >[Poprzedni](definition.md)
->[dalej](introduce-eshoponcontainers-reference-app.md)
+>[Następny](introduce-eshoponcontainers-reference-app.md)

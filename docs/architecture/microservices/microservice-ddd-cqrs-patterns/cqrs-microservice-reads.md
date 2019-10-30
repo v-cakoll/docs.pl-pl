@@ -1,13 +1,13 @@
 ---
-title: Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
+title: Implementowanie odczytów i zapytań w mikrousłudze CQRS
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z implementacją zapytania CQRS na mikrousłudze porządkowania w eShopOnContainers przy użyciu Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: c39a42b7f5200208a0f812665a2d1c87b4433ba9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275788"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094064"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
 
@@ -35,7 +35,7 @@ Zwrócone dane (ViewModel) mogą wynikać z dołączania danych z wielu jednoste
 
 Modele widoków mogą być typami statycznymi zdefiniowanymi w klasach. Lub mogą być tworzone dynamicznie na podstawie zapytań wykonanych (zgodnie z implementacją mikrousługi porządkowania), które są bardzo elastyczne dla deweloperów.
 
-## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Używanie Dapper jako mikroorm do wykonywania zapytań 
+## <a name="use-dapper-as-a-micro-orm-to-perform-queries"></a>Używanie Dapper jako mikroorm do wykonywania zapytań
 
 Do wykonywania zapytań można użyć dowolnego mikroorm, Entity Framework Core lub nawet zwykłego ADO.NET. W przykładowej aplikacji Dapper został wybrany dla mikrousługi porządkowania w eShopOnContainers jako dobry przykład popularnego mikroorm. Może uruchamiać zwykłe zapytania SQL o doskonałej wydajności, ponieważ jest to bardzo lekka struktura. Za pomocą Dapper można napisać zapytanie SQL, które może uzyskać dostęp do wielu tabel i dołączyć do nich.
 
@@ -119,16 +119,16 @@ public class OrderQueries : IOrderQueries
         {
             connection.Open();
             return await connection.QueryAsync<OrderSummary>(
-                  @"SELECT o.[Id] as ordernumber, 
-                  o.[OrderDate] as [date],os.[Name] as [status], 
+                  @"SELECT o.[Id] as ordernumber,
+                  o.[OrderDate] as [date],os.[Name] as [status],
                   SUM(oi.units*oi.unitprice) as total
                   FROM [ordering].[Orders] o
-                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid 
+                  LEFT JOIN[ordering].[orderitems] oi ON  o.Id = oi.orderid
                   LEFT JOIN[ordering].[orderstatus] os on o.OrderStatusId = os.Id
                   GROUP BY o.[Id], o.[OrderDate], os.[Name]
                   ORDER BY o.[Id]");
         }
-    } 
+    }
 }
 ```
 
@@ -183,7 +183,7 @@ Na poniższej ilustracji widać, jak interfejs użytkownika struktury Swagger wy
 
 Na obrazie można zobaczyć więcej przykładowych wartości na podstawie typów ViewModel oraz możliwych kodów stanu HTTP, które mogą być zwracane.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
@@ -191,9 +191,9 @@ Na obrazie można zobaczyć więcej przykładowych wartości na podstawie typów
 - **Julie Lerman. Punkty danych — Dapper, Entity Framework i aplikacje hybrydowe (artykuł z magazynu MSDN)**  
   <https://msdn.microsoft.com/magazine/mt703432>
 
-- **ASP.NET Core stronach pomocy interfejsu API sieci Web przy użyciu programu Swagger**  
+- **Strony pomocy dla interfejsu Web API platformy ASP.NET Core korzystające z programu Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md)
->[dalej](ddd-oriented-microservice.md)
+>[Następny](ddd-oriented-microservice.md)

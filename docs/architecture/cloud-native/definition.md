@@ -3,12 +3,12 @@ title: Definiowanie rozwiązań natywnych dla chmury
 description: Poznaj filary podstawowe, które zapewniają nimi dla systemów natywnych w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: aec199aee52a4ab3202c3ec0ceb769fecd168cfe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 27191a67b2964ac2e1636a4d7dc55d5314b78439
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087542"
 ---
 # <a name="defining-cloud-native"></a>Definiowanie natywnego chmury
 
@@ -18,7 +18,7 @@ Zatrzymywanie działania i tekstu 10 Twoich współpracowników. Poproś ich o z
 
 W chmurze wszystkie informacje na temat zmieniania sposobu konstruowania krytycznych systemów firmy.
 
-Systemy natywne w chmurze zostały zaprojektowane w celu przeprowadzenia szybkiej zmiany, dużej skali i odporności. 
+Systemy natywne w chmurze zostały zaprojektowane w celu przeprowadzenia szybkiej zmiany, dużej skali i odporności.
 
 Natywna platforma obliczeniowa w chmurze zapewnia [oficjalną definicję](https://github.com/cncf/foundation/blob/master/charter.md):
 
@@ -28,14 +28,14 @@ Natywna platforma obliczeniowa w chmurze zapewnia [oficjalną definicję](https:
 
 Aplikacje stają się coraz bardziej skomplikowane z użytkownikami wymagającymi więcej i więcej. Użytkownicy oczekują szybkiego reagowania, innowacyjnych funkcji i zerowego przestoju. Problemy z wydajnością, błędy cykliczne i niezdolność do przenoszenia szybko nie są już akceptowalne. Użytkownicy będą mogli w łatwy sposób przejść do konkurencji.
 
-Natywna Chmura zapewnia dużą *szybkość* i *elastyczność*. Systemy biznesowe są rozwijane z możliwością korzystania z funkcji firmy w celu wyróżnienia strategii strategicznej, przyspieszania i zwiększania szybkości działania firmy. Koniecznie należy natychmiast uzyskać pomysły na rynek. 
+Natywna Chmura zapewnia dużą *szybkość* i *elastyczność*. Systemy biznesowe są rozwijane z możliwością korzystania z funkcji firmy w celu wyróżnienia strategii strategicznej, przyspieszania i zwiększania szybkości działania firmy. Koniecznie należy natychmiast uzyskać pomysły na rynek.
 
 Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczności i skalowalności, które zostały osiągnięte.
 
-| Przedsiębiorstwo | Systemu | 
+| Przedsiębiorstwo | Systemu |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Ma ponad 600 usług w środowisku produkcyjnym. Wdraża setki razy dziennie. |
-| [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. | 
+| [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. |
 | [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | Obejmuje 300 usług w środowisku produkcyjnym. Wykonuje niemal 1 000 zmian dziennie. |
 
 Jak widzisz, Netflix, Uber i WeChat uwidaczniają systemy, które składają się z setek niezależnych mikrousług. Ten styl architektoniczny umożliwia im szybkie reagowanie na warunki rynkowe. Mogą natychmiast aktualizować małe obszary aplikacji działającej na żywo, złożonej i indywidualnie skalować te obszary zgodnie z wymaganiami.
@@ -132,6 +132,7 @@ Jak usługa będzie identyfikować użytkowników, którzy mają do nich dostęp
 Tożsamość jest szczegółowo omówione w rozdziale 8, *tożsamość*.
 
 ## <a name="microservices"></a>Mikrousług
+
 Systemy natywne w chmurze uwzględniają mikrousługi, popularny styl architektoniczny służący do konstruowania nowoczesnych aplikacji.
 
 Zbudowany jako rozproszony zestaw małych, niezależnych usług, które współpracują ze wspólną siecią szkieletową, mikrousługi mają następujące cechy:
@@ -160,7 +161,7 @@ Należy zauważyć, jak mikrousługi promują zasadę "jedna baza kodu, jedna ap
 
 Mikrousługi zapewniają elastyczność.
 
-Wcześniej w rozdziale porównano aplikację handlu elektronicznego utworzoną jako monolitu z mikrousługami. W tym przykładzie znaleźliśmy jasne korzyści: 
+Wcześniej w rozdziale porównano aplikację handlu elektronicznego utworzoną jako monolitu z mikrousługami. W tym przykładzie znaleźliśmy jasne korzyści:
 
 - Każda mikrousługa ma autonomiczny cykl życia i może się od siebie samodzielnie rozwijać i wdrażać. Nie musisz czekać na wydanie kwartalne, aby wdrożyć nowe funkcje lub aktualizację. Możesz zaktualizować niewielki obszar złożonej aplikacji z mniejszym ryzykiem zakłócenia całego systemu.
 
@@ -174,9 +175,9 @@ Mikrousługi można tworzyć przy użyciu dowolnej nowoczesnej platformy program
 
 Platforma Microsoft .NET Core to doskonały wybór. Bezpłatna i open source ma wiele wbudowanych funkcji upraszczających programowanie mikrousług. Platforma .NET Core jest dla wielu platform. Aplikacje można budować i uruchamiać w systemach Windows, macOS i większości systemów Linux.
 
-Program .NET Core jest wysoce wydajny i został dobrze oceniony w porównaniu do środowiska Node. js i innych konkurujących platform. Z tego względu [TechEmpower](https://www.techempower.com/) przeprowadził rozbudowany zestaw [testów wydajności](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) na wielu platformach aplikacji sieci Web i strukturach. Platforma .NET Core została oceniona w 10 najlepszych ponad platformie Node. js i innych konkurencyjnych platformach. 
+Program .NET Core jest wysoce wydajny i został dobrze oceniony w porównaniu do środowiska Node. js i innych konkurujących platform. Z tego względu [TechEmpower](https://www.techempower.com/) przeprowadził rozbudowany zestaw [testów wydajności](https://www.techempower.com/benchmarks/#section=data-r17&hw=ph&test=plaintext) na wielu platformach aplikacji sieci Web i strukturach. Platforma .NET Core została oceniona w 10 najlepszych ponad platformie Node. js i innych konkurencyjnych platformach.
 
-Platforma .NET Core jest obsługiwana przez firmę Microsoft i społeczność programu .NET w witrynie GitHub. 
+Platforma .NET Core jest obsługiwana przez firmę Microsoft i społeczność programu .NET w witrynie GitHub.
 
 ## <a name="containers"></a>Kontenery
 
@@ -188,11 +189,11 @@ W razie konieczności można przekształcić obraz w uruchomione wystąpienie ko
 
 Rysunek 1-5 przedstawia trzy różne mikrousługi, z których każdy w własnym kontenerze działa na jednym hoście.
 
-![Wiele kontenerów uruchomionych na hoście kontenera](./media/hosting-mulitple-containers.png)  
+![Wiele kontenerów uruchomionych na hoście kontenera](./media/hosting-mulitple-containers.png)
 
 **Rysunek 1-5**. Wiele kontenerów uruchomionych na hoście kontenera
 
-Zwróć uwagę na to, jak każdy kontener utrzymuje własny zestaw zależności i środowiska uruchomieniowego, które mogą być różne. W tym miejscu widzimy różne wersje mikrousługi produktu uruchomione na tym samym hoście. Każdy kontener udostępnia wycinek bazowego systemu operacyjnego hosta, pamięci i procesora, ale jest odizolowany od siebie. 
+Zwróć uwagę na to, jak każdy kontener utrzymuje własny zestaw zależności i środowiska uruchomieniowego, które mogą być różne. W tym miejscu widzimy różne wersje mikrousługi produktu uruchomione na tym samym hoście. Każdy kontener udostępnia wycinek bazowego systemu operacyjnego hosta, pamięci i procesora, ale jest odizolowany od siebie.
 
 Zwróć uwagę na to, jak dobrze model kontenera obejmuje zasadę "zależności" z [aplikacji 12-składnikowej](https://12factor.net/).
 
@@ -204,7 +205,7 @@ Chociaż istnieje kilku dostawców kontenerów, platforma Docker przechwyciła u
 
 ### <a name="why-containers"></a>Dlaczego kontenery?
 
-Kontenery umożliwiają przenoszenie i gwarantowanie spójności w różnych środowiskach. Hermetyzując wszystko w jednym pakiecie, można *izolować* mikrousługę i jej zależności od podstawowej infrastruktury. 
+Kontenery umożliwiają przenoszenie i gwarantowanie spójności w różnych środowiskach. Hermetyzując wszystko w jednym pakiecie, można *izolować* mikrousługę i jej zależności od podstawowej infrastruktury.
 
 Ten sam kontener można wdrożyć w dowolnym środowisku, które ma aparat środowiska uruchomieniowego Docker. Obciążenia kontenerów eliminują również koszty wstępnej konfiguracji każdego środowiska przy użyciu struktur, bibliotek oprogramowania i aparatów środowiska uruchomieniowego.
 
@@ -212,7 +213,7 @@ Udostępniając podstawowy system operacyjny i zasoby hosta, kontenery mają zna
 
 ### <a name="container-orchestration"></a>Aranżacja kontenera
 
-Chociaż narzędzia takie jak Docker umożliwiają tworzenie obrazów i uruchamianie kontenerów, potrzebne są również narzędzia do zarządzania nimi. Zarządzanie kontenerami odbywa się przy użyciu specjalnego programu oprogramowania zwanego koordynatorem kontenera. W przypadku działania na dużą skalę organizacja kontenera jest istotna. 
+Chociaż narzędzia takie jak Docker umożliwiają tworzenie obrazów i uruchamianie kontenerów, potrzebne są również narzędzia do zarządzania nimi. Zarządzanie kontenerami odbywa się przy użyciu specjalnego programu oprogramowania zwanego koordynatorem kontenera. W przypadku działania na dużą skalę organizacja kontenera jest istotna.
 
 Rysunek 1-6 przedstawia zadania zarządzania, które zapewnia koordynatorów kontenerów.
 
@@ -239,7 +240,7 @@ Należy zauważyć, jak usługi Orchestrator wdrażają zasady disposability i w
 
 > *Współczynnik \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie skalowanie pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
 
-Chociaż istnieje kilka koordynatorów kontenerów, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) stał się de facto standardem dla świata natywnego w chmurze. Jest to przenośna, rozszerzalna platforma typu "open source" do zarządzania obciążeniami kontenera. 
+Chociaż istnieje kilka koordynatorów kontenerów, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) stał się de facto standardem dla świata natywnego w chmurze. Jest to przenośna, rozszerzalna platforma typu "open source" do zarządzania obciążeniami kontenera.
 
 Możesz hostować własne wystąpienie Kubernetes, ale następnie ponosisz odpowiedzialność za aprowizacji i zarządzanie swoimi zasobami, które mogą być złożone. Funkcje chmury platformy Azure Kubernetes jako usługa zarządzana, [usługa Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/). Usługa zarządzana umożliwia pełne wykorzystanie jej funkcji bez konieczności instalowania i konserwowania.
 
@@ -287,7 +288,7 @@ Przy użyciu IaC można zautomatyzować Inicjowanie obsługi platformy i wdraża
 
 ### <a name="automating-infrastructure"></a>Automatyzacja infrastruktury
 
-Narzędzia, takie jak [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform i [interfejs wiersza polecenia platformy Azure](https://docs.microsoft.com/cli/azure/), umożliwiają deklaratywne skrypt wymaganej infrastruktury chmurowej. Nazwy zasobów, lokalizacje, pojemności i wpisy tajne są sparametryzowane i dynamiczne. Skrypt ma wersję i zaewidencjonowano kontrolę źródła jako artefakt projektu. Skrypt jest wywoływany w celu zapewnienia spójnej i powtarzalnej infrastruktury w środowiskach systemowych, takich jak pytania i odpowiedzi, przygotowanie i produkcja. 
+Narzędzia, takie jak [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/), Terraform i [interfejs wiersza polecenia platformy Azure](https://docs.microsoft.com/cli/azure/), umożliwiają deklaratywne skrypt wymaganej infrastruktury chmurowej. Nazwy zasobów, lokalizacje, pojemności i wpisy tajne są sparametryzowane i dynamiczne. Skrypt ma wersję i zaewidencjonowano kontrolę źródła jako artefakt projektu. Skrypt jest wywoływany w celu zapewnienia spójnej i powtarzalnej infrastruktury w środowiskach systemowych, takich jak pytania i odpowiedzi, przygotowanie i produkcja.
 
 Pod okapem, IaC to idempotentne, co oznacza, że można uruchomić ten sam skrypt w czasie, bez efektów ubocznych. Jeśli zespół musi wprowadzić zmianę, edytuje i ponownie uruchamia skrypt. Dotyczy to tylko zaktualizowanych zasobów.
 
@@ -299,7 +300,7 @@ W artykule [co to jest infrastruktura jako kod](https://docs.microsoft.com/azure
 
 > *Współczynnik \#5* określa, że "Każde wydanie musi wymusić ścisłe oddzielenie między kompilacją, wydaniem i etapami uruchomienia. Każdy z nich powinien być oznaczony unikatowym IDENTYFIKATORem i obsługiwać możliwość wycofywania ".
 
-Nowoczesne systemy ciągłej integracji/ciągłego wdrażania pomagają spełnić tę zasadę. Zapewniają one oddzielne kroki wdrażania i zapewniają spójny i jakościowy kod, który jest łatwo dostępny dla użytkowników. 
+Nowoczesne systemy ciągłej integracji/ciągłego wdrażania pomagają spełnić tę zasadę. Zapewniają one oddzielne kroki wdrażania i zapewniają spójny i jakościowy kod, który jest łatwo dostępny dla użytkowników.
 
 Rysunek 1-8 pokazuje separację w procesie wdrażania.
 
@@ -307,17 +308,17 @@ Rysunek 1-8 pokazuje separację w procesie wdrażania.
 
 **Rysunek 1-8**. Kroki wdrażania w potoku ciągłej integracji/ciągłego dostarczania
 
-Na powyższym rysunku należy zwrócić szczególną uwagę na rozdzielenie zadań. 
+Na powyższym rysunku należy zwrócić szczególną uwagę na rozdzielenie zadań.
 
-Deweloper tworzy funkcję w środowisku programistycznym, Iterowanie przez to, co jest nazywane "pętlą wewnętrzną" kodu, uruchomienia i debugowania. Po zakończeniu ten kod jest *wypychany* do repozytorium kodu, takiego jak GitHub, Azure DevOps lub BitBucket. 
+Deweloper tworzy funkcję w środowisku programistycznym, Iterowanie przez to, co jest nazywane "pętlą wewnętrzną" kodu, uruchomienia i debugowania. Po zakończeniu ten kod jest *wypychany* do repozytorium kodu, takiego jak GitHub, Azure DevOps lub BitBucket.
 
-Wypychanie wyzwala etap kompilacji, który przekształca kod w artefakt binarny. Prace są implementowane za pomocą potoku [ciągłej integracji (ci)](https://martinfowler.com/articles/continuousIntegration.html) . Automatycznie kompiluje, testuje i pakuje aplikację. 
+Wypychanie wyzwala etap kompilacji, który przekształca kod w artefakt binarny. Prace są implementowane za pomocą potoku [ciągłej integracji (ci)](https://martinfowler.com/articles/continuousIntegration.html) . Automatycznie kompiluje, testuje i pakuje aplikację.
 
 Etap wydania pobiera artefakt binarny, stosuje zewnętrzne informacje o konfiguracji aplikacji i środowiska oraz tworzy niezmienne wydanie. Wydanie jest wdrażane w określonym środowisku. Prace są implementowane za pomocą potoku [ciągłego dostarczania (CD)](https://martinfowler.com/bliki/ContinuousDelivery.html) . Każde wydanie powinno być możliwe do zidentyfikowania. Możesz powiedzieć, "to wdrożenie działa w wersji 2.1.1 aplikacji".
 
-Na koniec wydana funkcja jest uruchamiana w docelowym środowisku wykonawczym. Wersje są niezmienne, co oznacza, że jakakolwiek zmiana musi utworzyć nową wersję. 
+Na koniec wydana funkcja jest uruchamiana w docelowym środowisku wykonawczym. Wersje są niezmienne, co oznacza, że jakakolwiek zmiana musi utworzyć nową wersję.
 
-Stosując te praktyki, organizacje mają radykalnie rozwój oprogramowania. Wiele przeniesiono od kwartalnych wersji do aktualizacji na żądanie. Celem jest przechwycenie problemów wczesnych w cyklu programowania, gdy są one tańsze do naprawienia. Im dłuższy czas między integracją, tym bardziej kosztowne problemy mają być rozwiązywane.  Ze spójnością w procesie integracji zespoły mogą częściej zatwierdzić zmiany kodu, co prowadzi do lepszej współpracy i jakości oprogramowania.  
+Stosując te praktyki, organizacje mają radykalnie rozwój oprogramowania. Wiele przeniesiono od kwartalnych wersji do aktualizacji na żądanie. Celem jest przechwycenie problemów wczesnych w cyklu programowania, gdy są one tańsze do naprawienia. Im dłuższy czas między integracją, tym bardziej kosztowne problemy mają być rozwiązywane.  Ze spójnością w procesie integracji zespoły mogą częściej zatwierdzić zmiany kodu, co prowadzi do lepszej współpracy i jakości oprogramowania.
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 

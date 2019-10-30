@@ -2,12 +2,12 @@
 title: Monitorowanie kondycji
 description: Poznaj jeden ze sposobów implementacji monitorowania kondycji.
 ms.date: 01/07/2019
-ms.openlocfilehash: 3b81537ca8e0c5cc7ce15ab64ab3235b699dc7a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71040056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094079"
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -44,11 +44,11 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-W poprzednim kodzie `services.AddHealthChecks()` Metoda konfiguruje podstawową kontrolę http, która zwraca kod stanu **200** z "dobra".  Ponadto Metoda `SqlConnectionHealthCheck` rozszerzania konfiguruje niestandardowy, który sprawdza kondycję powiązanej SQL Database. `AddCheck()`
+W poprzednim kodzie Metoda `services.AddHealthChecks()` konfiguruje podstawową kontrolę HTTP, która zwraca kod stanu **200** z "zdrowy".  Ponadto Metoda rozszerzenia `AddCheck()` służy do konfigurowania niestandardowego `SqlConnectionHealthCheck`, który sprawdza kondycję powiązanej SQL Database.
 
-Metoda dodaje nową kontrolę kondycji z określoną nazwą i implementacją typu `IHealthCheck`. `AddCheck()` Można dodać wiele kontroli kondycji za pomocą metody ADDCHECK, aby mikrousługa nie zapewniała stanu "zdrowy" do momentu, gdy wszystkie jego sprawdzenia nie będą w dobrej kondycji.
+Metoda `AddCheck()` dodaje nową kontrolę kondycji z określoną nazwą i implementacją typu `IHealthCheck`. Można dodać wiele kontroli kondycji za pomocą metody ADDCHECK, aby mikrousługa nie zapewniała stanu "zdrowy" do momentu, gdy wszystkie jego sprawdzenia nie będą w dobrej kondycji.
 
-`SqlConnectionHealthCheck`jest klasą niestandardową `IHealthCheck`, która implementuje, która przyjmuje parametry połączenia jako parametr konstruktora i wykonuje proste zapytanie, aby sprawdzić, czy połączenie z bazą danych SQL zostało pomyślnie zakończone. Zwraca `HealthCheckResult.Healthy()` , jeśli zapytanie zostało wykonane pomyślnie `FailureStatus` , a z faktycznym wyjątkiem, gdy zakończy się niepowodzeniem.
+`SqlConnectionHealthCheck` jest klasą niestandardową implementującą `IHealthCheck`, która przyjmuje parametry połączenia jako parametr konstruktora i wykonuje proste zapytanie w celu sprawdzenia, czy połączenie z bazą danych SQL zostało pomyślnie zakończone. Zwraca `HealthCheckResult.Healthy()`, jeśli zapytanie zostało wykonane pomyślnie, a `FailureStatus` z rzeczywistym wyjątkiem, gdy kończy się niepowodzeniem.
 
 ```csharp
 // Sample SQL Connection Health Check
@@ -98,7 +98,7 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-Należy zauważyć, że w poprzednim kodzie `Select 1` jest zapytanie używane do sprawdzania kondycji bazy danych. Aby monitorować dostępność mikrousług, program Orchestrator, taki jak Kubernetes, i Service Fabric okresowo przeprowadza kontrolę kondycji, wysyłając żądania przetestowania mikrousług. Ważne jest, aby zachować wydajność zapytań bazy danych, aby te operacje były szybkie i nie powodowały większego użycia zasobów.
+Należy pamiętać, że w poprzednim kodzie `Select 1` jest zapytaniem używanym do sprawdzania kondycji bazy danych. Aby monitorować dostępność mikrousług, program Orchestrator, taki jak Kubernetes, i Service Fabric okresowo przeprowadza kontrolę kondycji, wysyłając żądania przetestowania mikrousług. Ważne jest, aby zachować wydajność zapytań bazy danych, aby te operacje były szybkie i nie powodowały większego użycia zasobów.
 
 Na koniec Utwórz oprogramowanie pośredniczące odpowiadające ścieżce URL "/HC":
 
@@ -110,18 +110,18 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     //…
     app.UseHealthChecks("/hc");
     //…
-} 
+}
 ```
 
-Gdy punkt końcowy `<yourmicroservice>/hc` jest wywoływany, uruchamia wszystkie kontrole kondycji, które są skonfigurowane `AddHealthChecks()` w metodzie klasy uruchomieniowej i wyświetla wynik.
+Po wywołaniu `<yourmicroservice>/hc` punktu końcowego program uruchamia wszystkie kontrole kondycji, które są skonfigurowane w metodzie `AddHealthChecks()` w klasie startowej i wyświetla wynik.
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>Implementacja HealthChecks w eShopOnContainers
 
-Mikrousługi w eShopOnContainers polegają na wielu usługach do wykonywania zadań. Na przykład `Catalog.API` mikrousługa z eShopOnContainers zależy od wielu usług, takich jak Azure Blob Storage, SQL Server i RabbitMQ. W związku z tym ma kilka testów kondycji dodanych za pomocą `AddCheck()` metody. Dla każdej usługi zależnej należy dodać `IHealthCheck` implementację niestandardową, która określa jej odpowiedni stan kondycji.
+Mikrousługi w eShopOnContainers polegają na wielu usługach do wykonywania zadań. Na przykład `Catalog.API` mikrousługa z eShopOnContainers zależy od wielu usług, takich jak Azure Blob Storage, SQL Server i RabbitMQ. W związku z tym ma kilka testów kondycji dodanych za pomocą metody `AddCheck()`. Dla każdej usługi zależnej należy dodać niestandardową implementację `IHealthCheck`, która definiuje jej odpowiedni stan kondycji.
 
 Projekt Open Source [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) rozwiązuje ten problem, dostarczając niestandardowe implementacje sprawdzania kondycji dla każdej z tych usług przedsiębiorstwa, które są oparte na platformie .net Core 2,2. Każde Sprawdzanie kondycji jest dostępne jako pojedynczy pakiet NuGet, który można łatwo dodać do projektu. eShopOnContainers wykorzystują je w szerokim stopniu we wszystkich mikrousługach.
 
-Na przykład w `Catalog.API` mikrousłudze dodano następujące pakiety NuGet:
+Na przykład w mikrousłudze `Catalog.API` dodano następujące pakiety NuGet:
 
 ![Widok Eksploratora rozwiązań w projekcie katalogu. API, gdzie są przywoływane pakiety NuGet AspNetCore. Diagnostics. HealthChecks](./media/image6.png)
 
@@ -189,17 +189,17 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 ### <a name="query-your-microservices-to-report-about-their-health-status"></a>Zbadaj mikrousługi, aby zgłosić ich stan kondycji
 
-Po skonfigurowaniu kontroli kondycji zgodnie z opisem w tym artykule, gdy w programie Docker jest uruchomiona mikrousługa, możesz bezpośrednio sprawdzić ją z poziomu przeglądarki, jeśli jest w dobrej kondycji. Należy opublikować port kontenera na hoście platformy Docker, aby można było uzyskać dostęp do kontenera za pomocą adresu IP zewnętrznego hosta platformy Docker lub przez `localhost`program, jak pokazano na rysunku 8-8.
+Po skonfigurowaniu kontroli kondycji zgodnie z opisem w tym artykule, gdy w programie Docker jest uruchomiona mikrousługa, możesz bezpośrednio sprawdzić ją z poziomu przeglądarki, jeśli jest w dobrej kondycji. Należy opublikować port kontenera na hoście platformy Docker, aby można było uzyskać dostęp do kontenera za pomocą adresu IP zewnętrznego hosta platformy Docker lub za pomocą `localhost`, jak pokazano na rysunku 8-8.
 
 ![Widok przeglądarki odpowiedzi JSON zwróconej przez kontrolę kondycji](./media/image7.png)
 
 **Rysunek 8-8**. Sprawdzanie stanu kondycji pojedynczej usługi z poziomu przeglądarki
 
-W tym teście można zobaczyć, że `Catalog.API` mikrousługa (uruchomiona na porcie 5101) jest w dobrej kondycji, zwracająca stan http 200 i informacje o stanie w formacie JSON. Usługa sprawdza również kondycję SQL Server zależność bazy danych i RabbitMQ, więc Sprawdzenie kondycji zgłoszone w dobrej kondycji.
+W tym teście można zobaczyć, że `Catalog.API` mikrousługa (działająca na porcie 5101) jest w dobrej kondycji, zwracając stan HTTP 200 i informacje o stanie w formacie JSON. Usługa sprawdza również kondycję SQL Server zależność bazy danych i RabbitMQ, więc Sprawdzenie kondycji zgłoszone w dobrej kondycji.
 
 ## <a name="use-watchdogs"></a>Użyj licznika alarmów
 
-Licznik alarm jest oddzielną usługą, która może oglądać kondycję i ładować różne usługi, a także zgłaszać kondycję dotyczącą mikrousług `HealthChecks` , wykonując zapytania z przemieszczoną wcześniej biblioteką. Może to pomóc zapobiec błędom, które nie zostaną wykryte w oparciu o Widok jednej usługi. Licznik alarmy jest również dobrym miejscem do kodu hosta, który może wykonywać akcje naprawcze dla znanych warunków bez interakcji z użytkownikiem.
+Licznik alarm jest oddzielną usługą, która może oglądać kondycję i ładować w ramach usług oraz zgłaszać informacje o mikrousługach za pomocą zapytania z zamieszczoną wcześniej biblioteką `HealthChecks`. Może to pomóc zapobiec błędom, które nie zostaną wykryte w oparciu o Widok jednej usługi. Licznik alarmy jest również dobrym miejscem do kodu hosta, który może wykonywać akcje naprawcze dla znanych warunków bez interakcji z użytkownikiem.
 
 Przykład eShopOnContainers zawiera stronę sieci Web, która wyświetla przykładowe raporty sprawdzania kondycji, jak pokazano na rysunku 8-9. Jest to najprostsza wartość licznika alarmowego, która może być dostępna, ponieważ pokazuje jedynie stan mikrousług i aplikacji sieci Web w eShopOnContainers. Zazwyczaj licznik alarmowy wykonuje także akcje w przypadku wykrycia stanu złej kondycji.
 
@@ -276,12 +276,12 @@ Na koniec, Jeśli przechowujesz wszystkie strumienie zdarzeń, możesz użyć pr
 - **Interfejs użytkownika HealthChecks i HealthChecks dla ASP.NET Core** \
   <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
-- **Wprowadzenie do monitorowania kondycji Service Fabric** \
+- **Wprowadzenie do Service Fabric monitorowania kondycji** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 - **Azure Monitor**  
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-circuit-breaker-pattern.md)Następny
->[](../secure-net-microservices-web-applications/index.md)
+>[Poprzedni](implement-circuit-breaker-pattern.md)
+>[Następny](../secure-net-microservices-web-applications/index.md)

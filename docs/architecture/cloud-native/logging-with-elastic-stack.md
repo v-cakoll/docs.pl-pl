@@ -2,18 +2,19 @@
 title: Rejestrowanie przy użyciu elastycznego stosu
 description: Rejestrowanie przy użyciu Elastic Stack, logstash i Kibana
 ms.date: 09/23/2019
-ms.openlocfilehash: 62115edc3f64d87d2c3e84a7b5319ce42cbe729b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087066"
 ---
-# <a name="logging-with-elastic-stack"></a>Rejestrowanie przy użyciu elastycznego stosu 
+# <a name="logging-with-elastic-stack"></a>Rejestrowanie przy użyciu elastycznego stosu
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Istnieje wiele dobrych narzędzi do rejestrowania, które różnią się kosztami od bezpłatnych, dostępnych narzędzi "open source" do bardziej kosztownych opcji. W wielu przypadkach bezpłatne narzędzia są tak dobre, jak w przypadku płatnych ofert. Jedno z tych narzędzi jest kombinacją trzech składników typu "open source": Elastic Search, logstash i Kibana. Zbiorowo te narzędzia są nazywane stosem elastycznym lub stosem ELK.
+Istnieje wiele dobrych narzędzi do rejestrowania, które różnią się kosztami od bezpłatnych, dostępnych narzędzi "open source" do bardziej kosztownych opcji. W wielu przypadkach bezpłatne narzędzia są tak dobre, jak w przypadku płatnych ofert. Jedno z tych narzędzi jest kombinacją trzech składników typu "open source": Elastic Search, logstash i Kibana.
+Zbiorowo te narzędzia są nazywane stosem elastycznym lub stosem ELK.
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>Jakie są zalety elastycznego stosu?
 
@@ -21,19 +22,19 @@ Elastyczny stos umożliwia scentralizowane rejestrowanie w niedrogim, skalowalny
 
 ## <a name="logstash"></a>Logstash
 
-Pierwszy składnik to [logstash](https://www.elastic.co/products/logstash). To narzędzie służy do zbierania informacji o dziennikach z wielu różnych źródeł. Na przykład logstash może odczytywać dzienniki z dysku, a także odbierać komunikaty z bibliotek rejestrowania, takich jak [Serilog](https://serilog.net/). Logstash może wykonywać pewne podstawowe filtrowanie i rozszerzanie dzienników w miarę ich odbierania. Na przykład, Jeśli dzienniki zawierają adresy IP, logstash może być skonfigurowany do przeszukiwania geograficznego i uzyskania kraju lub nawet miejscowości pochodzenia dla tego komunikatu. 
+Pierwszy składnik to [logstash](https://www.elastic.co/products/logstash). To narzędzie służy do zbierania informacji o dziennikach z wielu różnych źródeł. Na przykład logstash może odczytywać dzienniki z dysku, a także odbierać komunikaty z bibliotek rejestrowania, takich jak [Serilog](https://serilog.net/). Logstash może wykonywać pewne podstawowe filtrowanie i rozszerzanie dzienników w miarę ich odbierania. Na przykład, Jeśli dzienniki zawierają adresy IP, logstash może być skonfigurowany do przeszukiwania geograficznego i uzyskania kraju lub nawet miejscowości pochodzenia dla tego komunikatu.
 
 Serilog to biblioteka rejestrowania dla języków .NET, która umożliwia rejestrowanie sparametryzowane. Zamiast generowania komunikatu dziennika tekstowego, który osadza pola, parametry są przechowywane oddzielnie. Pozwala to na bardziej inteligentne filtrowanie i wyszukiwanie. Przykładowa konfiguracja Serilog do zapisu do logstash pojawia się na rysunku 7-2.
 
 ```csharp
-var log = new LoggerConfiguration()   
+var log = new LoggerConfiguration()
          .WriteTo.Http("http://localhost:8080")
          .CreateLogger();
 ```
 
 **Rysunek 7-2** Serilog konfiguracja do zapisywania informacji dziennika bezpośrednio do logstash za pośrednictwem protokołu HTTP
 
-Logstash użyje konfiguracji podobnej do przedstawionej na rysunku 7-3. 
+Logstash użyje konfiguracji podobnej do przedstawionej na rysunku 7-3.
 
 ```
 input {
@@ -59,7 +60,7 @@ Po zebraniu dzienników przez logstash należy je umieścić w miejscu. Choć lo
 
 ## <a name="elastic-search"></a>Wyszukiwanie elastyczne
 
-Wyszukiwanie elastyczne to zaawansowany aparat wyszukiwania, który umożliwia indeksowanie dzienników w miarę ich odbierania. Umożliwia szybkie wykonywanie zapytań dotyczących dzienników. Wyszukiwanie elastyczne może obsługiwać duże ilości dzienników i w skrajnych przypadkach może być skalowane w wielu węzłach. 
+Wyszukiwanie elastyczne to zaawansowany aparat wyszukiwania, który umożliwia indeksowanie dzienników w miarę ich odbierania. Umożliwia szybkie wykonywanie zapytań dotyczących dzienników. Wyszukiwanie elastyczne może obsługiwać duże ilości dzienników i w skrajnych przypadkach może być skalowane w wielu węzłach.
 
 Komunikaty dziennika, które zostały spreparowane w celu zawierają parametry lub które zostały poddane podzielenia między nimi za pośrednictwem przetwarzania logstash, można zbadać bezpośrednio, ponieważ Elasticsearch zachowuje te informacje.
 
@@ -85,11 +86,11 @@ Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@exampl
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>Wizualizacja informacji przy użyciu pulpitów nawigacyjnych sieci Web Kibana
 
-Końcowym składnikiem stosu jest Kibana. To narzędzie służy do udostępniania interaktywnych wizualizacji na pulpicie nawigacyjnym sieci Web. Pulpity nawigacyjne mogą być przygotowane nawet przez użytkowników, którzy nie są techniczne. Większość danych znajdujących się w indeksie Elasticsearch można dołączać do pulpitów nawigacyjnych Kibana. Indywidualni użytkownicy mogą korzystać z różnych pulpitów nawigacyjnych i Kibana umożliwia to dostosowanie przez umożliwienie pulpitów nawigacyjnych specyficznych dla użytkownika. 
+Końcowym składnikiem stosu jest Kibana. To narzędzie służy do udostępniania interaktywnych wizualizacji na pulpicie nawigacyjnym sieci Web. Pulpity nawigacyjne mogą być przygotowane nawet przez użytkowników, którzy nie są techniczne. Większość danych znajdujących się w indeksie Elasticsearch można dołączać do pulpitów nawigacyjnych Kibana. Indywidualni użytkownicy mogą korzystać z różnych pulpitów nawigacyjnych i Kibana umożliwia to dostosowanie przez umożliwienie pulpitów nawigacyjnych specyficznych dla użytkownika.
 
 ## <a name="installing-elastic-stack-on-azure"></a>Instalowanie elastycznego stosu na platformie Azure
 
-Stos elastyczny można zainstalować na platformie Azure na wiele sposobów. Jak zawsze, możliwe jest [udostępnienie maszyn wirtualnych i bezpośrednie zainstalowanie na nich elastycznego stosu](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Ta opcja jest preferowana przez niektórych doświadczonych użytkowników, ponieważ oferuje ona najwyższy stopień szerszym. Wdrożenie w ramach infrastruktury jako usługi wprowadza znaczące narzuty związane z zarządzaniem wymuszające, że ta ścieżka przejęcie na własność wszystkich zadań związanych z infrastrukturą jako usługą, takich jak Zabezpieczanie maszyn i aktualizowanie ich przy użyciu poprawek. 
+Stos elastyczny można zainstalować na platformie Azure na wiele sposobów. Jak zawsze, możliwe jest [udostępnienie maszyn wirtualnych i bezpośrednie zainstalowanie na nich elastycznego stosu](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-elasticsearch). Ta opcja jest preferowana przez niektórych doświadczonych użytkowników, ponieważ oferuje ona najwyższy stopień szerszym. Wdrożenie w ramach infrastruktury jako usługi wprowadza znaczące narzuty związane z zarządzaniem wymuszające, że ta ścieżka przejęcie na własność wszystkich zadań związanych z infrastrukturą jako usługą, takich jak Zabezpieczanie maszyn i aktualizowanie ich przy użyciu poprawek.
 
 Opcja o mniejszej obciążeniu polega na użyciu jednego z wielu kontenerów platformy Docker, na którym został już skonfigurowany Stos elastyczny. Te kontenery można porzucić w istniejącym klastrze Kubernetes i uruchamiać wraz z kodem aplikacji. Kontener [sebp/Elk](https://elk-docker.readthedocs.io/) to dobrze udokumentowany i przetestowany kontener stosu elastycznego.
 

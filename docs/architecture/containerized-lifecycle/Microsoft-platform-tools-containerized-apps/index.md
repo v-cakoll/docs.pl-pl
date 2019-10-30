@@ -2,20 +2,20 @@
 title: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
 description: Uzyskaj informacje o ofertach firmy Microsoft w celu obsługi cyklu życia aplikacji platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295871"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094456"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji w kontenerze
 
-*Została Można stworzyć dostosowywalny cykl życia aplikacji klasy korporacyjnej, który obejmuje rozwój, operacje IT i zarządzanie produkcyjne.*
+*Wizja: Utwórz dostosowywalny cykl życia aplikacji klasy korporacyjnej, który obejmuje rozwój, operacje IT i zarządzanie produkcyjne.*
 
 Rysunek 3-1 przedstawia główne filary w cyklu życia aplikacji platformy Docker sklasyfikowane według typu pracy dostarczonej przez wiele zespołów (Programowanie aplikacji, procesy infrastruktury DevOps oraz zarządzanie i operacje IT). Zwykle w przedsiębiorstwie profile "osoba" odpowiadające za poszczególne obszary są różne. Są to ich umiejętności.
 
-![Narzędzia firmy Microsoft. W przypadku obciążeń tworzenia/projektowania: Aparat platformy Docker dla systemu Windows, VS i VS Code, .NET Core, Azure Kubernetes Service. Dla obciążeń kompilowania/testowania/dostarczania: Azure DevOps, Team Foundation Server, interfejs wiersza polecenia platformy Docker, usługa Azure Kubernetes Service. Dla obciążenia Uruchom/Monitoruj/Zarządzaj: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, inne koordynatorzy.](./media/image1.png)
+![Narzędzia firmy Microsoft. W przypadku obciążeń projektowanie/projektowanie: aparat platformy Docker dla systemu Windows, VS i VS Code, .NET Core, Azure Kubernetes Service. W przypadku obciążeń kompilowania/testowania/dostarczania: Azure DevOps, Team Foundation Server, interfejsu wiersza polecenia platformy Docker i usługi Azure Kubernetes. W przypadku uruchamiania/monitorowania/zarządzania obciążeniem: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, inne koordynatorzy.](./media/image1.png)
 
 **Rysunek 3-1.** Główne filary w cyklu życia dla kontenerów platformy Docker z platformą i narzędziami firmy Microsoft
 
@@ -28,7 +28,7 @@ Tabela 3-1 pokazuje, że zamiarem programu Microsoft DevOps dla kontenerów plat
 | Host | Technologie firmy Microsoft | Inne firmy — Podłączanie platformy Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> • Azure Container Registry<br /> | • Dowolny edytor kodu (na przykład subwapno)<br /> • Dowolny język (Node. js, Java, go itp.)<br /> • Wszystkie usługi Orchestrator i Scheduler<br /> • Dowolny rejestr platformy Docker<br /> |
-| DevOps dla aplikacji platformy Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Usługa Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Lokalne centrum danych platformy Docker, Docker Swarm, Mesos DC/OS, Kubernetes itd.<br /> |
+| DevOps dla aplikacji platformy Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Usługa Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> | • GitHub, Git, Subversion itp.<br /> • Jenkins, Chef, Puppet, prędkość, CircleCI, TravisCI itd.<br /> • Lokalne centrum danych platformy Docker, Docker Swarm, Mesos DC/OS, Kubernetes itd.<br /> |
 | Zarządzanie i monitorowanie  | • Azure Monitor | • Marathon, Chronos itp.<br />|
 
 Platforma i narzędzia firmy Microsoft dla kontenerów platformy Docker, zgodnie z definicją w tabeli 3-1, składają się z następujących składników:
@@ -41,18 +41,18 @@ Platforma i narzędzia firmy Microsoft dla kontenerów platformy Docker, zgodnie
 
 - **Zarządzanie i monitorowanie** Umożliwia ona zarządzanie i monitorowanie aplikacji i usług produkcyjnych na kilka sposobów, co umożliwia integrację obu perspektyw w skonsolidowanym środowisku.
 
-  - **Azure Portal w przypadku**korzystania z programów Orchestrator-source, Azure Kubernetes Service (AKS), Service Fabric i innych koordynatorów ułatwiają konfigurowanie i konserwowanie środowisk platformy Docker.  Jeśli używasz usługi Azure Service Fabric, narzędzie Service Fabric Explorer umożliwia wizualizację i konfigurację klastra.
+  - **Azure Portal** w przypadku korzystania z programów Orchestrator-source, Azure Kubernetes Service (AKS), Service Fabric i innych koordynatorów ułatwiają konfigurowanie i konserwowanie środowisk platformy Docker. Jeśli używasz usługi Azure Service Fabric, narzędzie Service Fabric Explorer umożliwia wizualizację i konfigurację klastra.
 
-  - **Narzędzia platformy Docker**umożliwiajązarządzanieaplikacjamikontenerazapomocąznanychnarzędzi . Nie trzeba zmieniać istniejących praktyk zarządzania platformy Docker, aby przenosić obciążenia kontenerów do chmury. Skorzystaj z narzędzi do zarządzania aplikacjami, które są już znane, i Połącz się za pośrednictwem standardowych punktów końcowych interfejsu API dla wybranego koordynatora. Można również użyć innych narzędzi innych firm do zarządzania aplikacjami platformy Docker, takimi jak centrum danych platformy Docker lub narzędzia Docker interfejsu wiersza polecenia. 
+  - **Narzędzia platformy docker** można zarządzać aplikacjami kontenera za pomocą znanych narzędzi. Nie trzeba zmieniać istniejących praktyk zarządzania platformy Docker, aby przenosić obciążenia kontenerów do chmury. Skorzystaj z narzędzi do zarządzania aplikacjami, które są już znane, i Połącz się za pośrednictwem standardowych punktów końcowych interfejsu API dla wybranego koordynatora. Można również użyć innych narzędzi innych firm do zarządzania aplikacjami platformy Docker, takimi jak centrum danych platformy Docker lub narzędzia Docker interfejsu wiersza polecenia.
 
     Nawet jeśli znasz polecenia systemu Linux, możesz zarządzać aplikacjami kontenera przy użyciu systemu Microsoft Windows i programu PowerShell z systemem operacyjnym z systemem Linux oraz z systemami (Docker, Kubernetes...) uruchomionymi w tej funkcji podsystemu Linux. Dowiesz się więcej na temat używania tych narzędzi w podsystemie Linux przy użyciu ulubionego systemu operacyjnego Microsoft Windows w dalszej części tego podręcznika.
 
-  - **Narzędzia typu "open source"** , ponieważ AKS udostępnia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, najpopularniejsze narzędzia są zgodne z AKS i, w większości przypadków, będą z niego korzystać — w tym Wizualizatory, monitorowanie i narzędzia wiersza polecenia  , a nawet przyszłe narzędzia, gdy staną się dostępne.
+  - **Narzędzia typu "open source"**  , ponieważ AKS uwidacznia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, najpopularniejsze narzędzia są zgodne z AKS i, w większości przypadków, będą z niego korzystać — w tym Wizualizatory, monitorowanie, narzędzia wiersza polecenia. a nawet przyszłe narzędzia, gdy staną się dostępne.
 
   - **Azure monitor** To rozwiązanie platformy Azure do monitorowania każdego kąta w środowisku produkcyjnym. Aby monitorować produkcyjne aplikacje platformy Docker, wystarczy skonfigurować swój zestaw SDK w swoich usługach, aby można było uzyskać dane dziennika generowane przez system z aplikacji.
 
 W związku z tym firma Microsoft oferuje kompletną podstawę do kompleksowego cyklu życia aplikacji platformy Docker. Jest to jednak *zbiór produktów i technologii, które umożliwiają opcjonalne Wybieranie i integrację z istniejącymi narzędziami i procesami*. Elastyczność w szerokim podejściu wraz z siłą na głębokości funkcji umieszczaj firmę Microsoft w silnym położeniu dla tworzenia kontenerów aplikacji platformy Docker.
 
 >[!div class="step-by-step"]
->[Poprzedni](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)Następny
->[](../design-develop-containerized-apps/index.md)
+>[Poprzedni](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[Następny](../design-develop-containerized-apps/index.md)

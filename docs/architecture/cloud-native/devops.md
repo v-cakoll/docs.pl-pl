@@ -2,12 +2,12 @@
 title: Natywna DevOps w chmurze
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna DevOps w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 84d37d14af8a68a51088568ded05ceef2e5e11fb
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393726"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087544"
 ---
 # <a name="cloud-native-devops"></a>Natywna DevOps w chmurze
 
@@ -25,7 +25,7 @@ Teraz dość dobrze jest ustalić, że umożliwienie szybszego wydawania oprogra
 
 Wzorce i praktyki, które umożliwiają szybsze, bardziej niezawodne wydania do dostarczania wartości do firmy, są określane zbiorczo jako DevOps. Składają się one z szerokiego zakresu pomysłów obejmujących cały cykl życia opracowywania oprogramowania od określania aplikacji w taki sposób, aby można było dostarczać i obdziałać tę aplikację.
 
-DevOpse przed mikrousługami i prawdopodobne jest, że przemieszczanie się w kierunku mniejszych usług nie byłoby możliwe bez DevOps, aby zwolnić i obsłużyć nie tylko jedną, ale wiele aplikacji w środowisku produkcyjnym. 
+DevOpse przed mikrousługami i prawdopodobne jest, że przemieszczanie się w kierunku mniejszych usług nie byłoby możliwe bez DevOps, aby zwolnić i obsłużyć nie tylko jedną, ale wiele aplikacji w środowisku produkcyjnym.
 
 ![Rysunek 11-0 trendów wyszukiwania pokazuje, że wzrost w mikrousługach nie rozpoczyna się do momentu, gdy DevOps jest dość dobrze ustalone.](./media/microservices-vs-devops.png)
 
@@ -41,7 +41,7 @@ Usługa Azure DevOps jest podzielona na pięć głównych składników:
 
 ![Rysunek 11-1 pięć głównych obszarów usługi Azure DevOps](./media/devops-components.png)
 
-**Azure Boards** — zawiera narzędzie do śledzenia problemu i elementów roboczych, które ma na celu umożliwienie użytkownikom wyboru przepływów pracy, które najlepiej odpowiadają. Zawiera ona wiele wstępnie skonfigurowanych szablonów, w tym te, które obsługują style SCRUM i Kanban rozwoju. 
+**Azure Boards** — zawiera narzędzie do śledzenia problemu i elementów roboczych, które ma na celu umożliwienie użytkownikom wyboru przepływów pracy, które najlepiej odpowiadają. Zawiera ona wiele wstępnie skonfigurowanych szablonów, w tym te, które obsługują style SCRUM i Kanban rozwoju.
 
 **Azure Repos** — Zarządzanie kodem źródłowym, które obsługuje Venerable Kontrola wersji serwera Team Foundation (TFVC) oraz ulubioną w branży usługę git. Żądania ściągnięcia umożliwiają umożliwienie kodowania społecznościowego poprzez wspieranie dyskusji o zmianach w miarę ich wprowadzania.
 
@@ -78,9 +78,9 @@ Na pierwszy rzut oka wygląda to najbardziej logiczne podejście do dzielenia ko
 
 Jednym z kluczowych koncepcji związanych z mikrousługą jest to, że usługi powinny być przesłonięte i oddzielone od siebie. W przypadku korzystania z projektu opartego na domenie w celu określenia granic dla usług usługi działają jako granice transakcyjne. Aktualizacje bazy danych nie mogą obejmować wielu usług. Ta kolekcja powiązanych danych jest nazywana kontekstem ograniczonym.  Ten pomysł jest odzwierciedlony przez izolację danych mikrousług w oddzielnym i niezależnym od reszty usług. Jest to bardzo duże rozwiązanie do przeprowadzenia tego pomysłu w sposób umożliwiający przechodzenie do kodu źródłowego.
 
-Jednak takie podejście nie ma żadnych problemów. Jednym z bardziej gnarlyych problemów programistycznych jest zarządzanie zależnościami. Weź pod uwagę liczbę plików, które składają się na średni katalog `node_modules`. Nowa instalacja czegoś takiego jak `create-react-app` może przynieść tysiące pakietów. Pytanie, jak zarządzać tymi zależnościami, jest trudne. 
+Jednak takie podejście nie ma żadnych problemów. Jednym z bardziej gnarlyych problemów programistycznych jest zarządzanie zależnościami. Weź pod uwagę liczbę plików, które składają się na średni katalog `node_modules`. Nowa instalacja czegoś takiego jak `create-react-app` może przynieść tysiące pakietów. Pytanie, jak zarządzać tymi zależnościami, jest trudne.
 
-W przypadku zaktualizowania zależności, pakiety podrzędne muszą także aktualizować Tę zależność. Niestety, dzięki czemu Praca programistyczna niezmiennie, katalog `node_modules` zostaje zakończony z wieloma wersjami jednego pakietu, a każda z nich jest zależna od innego pakietu, który ma wersję w nieco innym erze. W przypadku wdrażania aplikacji należy użyć wersji zależności? Wersja, która jest obecnie w środowisku produkcyjnym? Wersja, która jest obecnie w wersji beta, ale może być w środowisku produkcyjnym przez czas, przez który odbiorca wprowadza do produkcji? Trudne problemy, które nie są rozwiązywane przez użycie mikrousług.
+W przypadku zaktualizowania zależności, pakiety podrzędne muszą także aktualizować Tę zależność. Niestety, dzięki czemu Praca programistyczna niezmiennie, katalog `node_modules` jest zakończony z wieloma wersjami jednego pakietu, każda z nich jest zależna od innego pakietu, który jest w niewielkim stopniu różny erze. W przypadku wdrażania aplikacji należy użyć wersji zależności? Wersja, która jest obecnie w środowisku produkcyjnym? Wersja, która jest obecnie w wersji beta, ale może być w środowisku produkcyjnym przez czas, przez który odbiorca wprowadza do produkcji? Trudne problemy, które nie są rozwiązywane przez użycie mikrousług.
 
 Istnieją biblioteki, które są zależne od wielu różnych projektów. Dzieląc mikrousługi z jednym w każdym repozytorium, można najlepiej rozwiązać wewnętrzne zależności przy użyciu wewnętrznego repozytorium, Azure Artifacts. Kompilacje dla bibliotek spowodują wypchnięcie najnowszych wersji do Azure Artifacts na użytek wewnętrzny. Projekt podrzędny należy nadal zaktualizować ręcznie, aby wziąć zależność od nowo zaktualizowanych pakietów.
 
@@ -195,7 +195,7 @@ steps:
   displayName: 'NuGet restore'
   inputs:
     restoreSolution: '$(solution)'
-    
+
 - task: VSBuild@1
   displayName: 'Build solution'
   inputs:

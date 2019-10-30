@@ -2,16 +2,16 @@
 title: Używanie klas wyliczeń zamiast typów wyliczeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wyczyść, w jaki sposób można używać klas wyliczenia, zamiast wyliczeniowych, w celu rozwiązania niektórych ograniczeń dotyczących tego ostatniego.
 ms.date: 10/08/2018
-ms.openlocfilehash: 575757b6022a9e7468c0ffc5d576dd16de3018f5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 255bccab0e1fe71e00c0d0b47c8af05f80cb760b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039931"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093861"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Użyj klas wyliczenia zamiast typów wyliczeniowych
 
-[Wyliczenia](../../../csharp/language-reference/keywords/enum.md) (lub *typy wyliczeniowe* jako krótkie) są otoką języka cienkiego wokół typu całkowitego. Możesz chcieć ograniczyć ich użycie do momentu przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (mały, średni, duży) jest dobrym przykładem. Korzystanie z wyliczeń dla przepływu sterowania lub bardziej niezawodnych abstrakcji może być [zapachem kodu](https://deviq.com/code-smells/). Ten typ użycia prowadzi do delikatnego kodu z wieloma instrukcjami przepływu sterowania, sprawdzając wartości wyliczenia.
+[Wyliczenia](../../../csharp/language-reference/keywords/enum.md) (lub *typy wyliczeniowe* dla krótki) są otoką języka cienkiego wokół typu całkowitego. Możesz chcieć ograniczyć ich użycie do momentu przechowywania jednej wartości z zamkniętego zestawu wartości. Klasyfikacja oparta na rozmiarach (mały, średni, duży) jest dobrym przykładem. Korzystanie z wyliczeń dla przepływu sterowania lub bardziej niezawodnych abstrakcji może być [zapachem kodu](https://deviq.com/code-smells/). Ten typ użycia prowadzi do delikatnego kodu z wieloma instrukcjami przepływu sterowania, sprawdzając wartości wyliczenia.
 
 Zamiast tego można tworzyć klasy wyliczenia, które umożliwiają wszystkie bogate funkcje języka zorientowanego na obiekt.
 
@@ -28,28 +28,28 @@ public abstract class Enumeration : IComparable
 
     public int Id { get; private set; }
 
-    protected Enumeration(int id, string name) 
+    protected Enumeration(int id, string name)
     {
-        Id = id; 
-        Name = name; 
+        Id = id;
+        Name = name;
     }
 
     public override string ToString() => Name;
 
     public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var fields = typeof(T).GetFields(BindingFlags.Public | 
-                                         BindingFlags.Static | 
-                                         BindingFlags.DeclaredOnly); 
+        var fields = typeof(T).GetFields(BindingFlags.Public |
+                                         BindingFlags.Static |
+                                         BindingFlags.DeclaredOnly);
 
         return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
-    public override bool Equals(object obj) 
+    public override bool Equals(object obj)
     {
-        var otherValue = obj as Enumeration; 
+        var otherValue = obj as Enumeration;
 
-        if (otherValue == null) 
+        if (otherValue == null)
             return false;
 
         var typeMatches = GetType().Equals(obj.GetType());
@@ -58,13 +58,13 @@ public abstract class Enumeration : IComparable
         return typeMatches && valueMatches;
     }
 
-    public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id); 
+    public int CompareTo(object other) => Id.CompareTo(((Enumeration)other).Id);
 
-    // Other utility methods ... 
+    // Other utility methods ...
 }
 ```
 
-Tej klasy można użyć jako typu w dowolnej jednostce lub obiekcie wartości, tak jak w przypadku następujących `CardType` : `Enumeration` Klasa:
+Tej klasy można użyć jako typu w dowolnej jednostce lub obiekcie wartości, tak jak w przypadku następujących `CardType`: `Enumeration` Class:
 
 ```csharp
 public class CardType : Enumeration
@@ -85,13 +85,13 @@ public class CardType : Enumeration
 - **Wyliczenia to akcja — aktualizacja** \
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel. Jak jest rozłożona choroba i sposób jej pozyskiwania** \
+- **Daniel. Jak są rozłożone choroby i jak można ją wyznaczyć** \
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard. Klasy wyliczeniowe** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. Warianty wyliczenia wC#**  \
+- **Steve Smith. Warianty wyliczenia C# w** \
   <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs.** Podstawowa klasa wyliczenia w eShopOnContainers \
@@ -104,5 +104,5 @@ public class CardType : Enumeration
   <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-value-objects.md)Następny
->[](domain-model-layer-validations.md)
+>[Poprzedni](implement-value-objects.md)
+>[Następny](domain-model-layer-validations.md)

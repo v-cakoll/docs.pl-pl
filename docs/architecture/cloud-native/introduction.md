@@ -1,16 +1,16 @@
 ---
-title: Wprowadzenie do aplikacji natywnych w chmurze
+title: Wprowadzenie do natywnych aplikacji w chmurze
 description: Informacje na temat przetwarzania natywnego w chmurze
 author: robvet
 ms.date: 08/26/2019
-ms.openlocfilehash: a99e4b5599efee8b171c48a5b17e75b9e6cd63ca
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 1d3679c7f1ab940d7ab3e194c200483b63276883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182854"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087236"
 ---
-# <a name="introduction-to-cloud-native-applications"></a>Wprowadzenie do aplikacji natywnych w chmurze
+# <a name="introduction-to-cloud-native-applications"></a>Wprowadzenie do natywnych aplikacji w chmurze
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -18,7 +18,7 @@ Inny dzień w biurze, praca nad "następną wielką rzeczyą".
 
 Pierścienie Cellphone. Jest to Twój przyjazny pracownik, który dzwoni dwa razy dziennie o nowe zadania.
 
-Jednak ten czas jest inny: Rozpoczęcie, kapitał i wiele funduszy.
+Jednak ten czas jest inny: rozpoczęcie, kapitał i wiele funduszy.
 
 Informacje o technologii w chmurze i rozcięciu są przekazywane przez brzeg.
 
@@ -34,11 +34,11 @@ Jeśli skorzystasz ze wskazówek z ostatnich 15 lat, najprawdopodobniej utworzys
 
 Tworzysz dużą podstawową aplikację, która zawiera całą logikę domeny. Obejmuje to moduły, takie jak tożsamość, wykaz, porządkowanie i inne. Aplikacja podstawowa komunikuje się z dużą relacyjną bazą danych. Podstawowa funkcja udostępnia funkcje za pośrednictwem interfejsu HTML.
 
-Gratulacje!  Właśnie utworzono aplikację monolityczną.
+Nabycia!  Właśnie utworzono aplikację monolityczną.
 
 Nie wszystkie są nieprawidłowe. Monolitów oferują pewne różne zalety. Na przykład są one proste w...
 
-- kompilacja 
+- kompilacja
 - test
 - Wdrażanie
 - Usunąć
@@ -76,7 +76,7 @@ W krótkim czasie natywne chmury stają się trendem w branży oprogramowania. J
 
 W przeciwieństwie do ciągłego pogłoskami narosłymiów, które są przeznaczone dla naszych branż, natywne chmury to "*for-Real*". Weź pod uwagę [chmurę natywną dla przedsiębiorstw obliczeniowych](https://www.cncf.io/) (CNCF), konsorcjum ponad 300 głównych korporacji z kartą umożliwiającą korzystanie z natywnych rozwiązań w chmurze w różnych technologiach i stosach w chmurze. Jedną z najbardziej potrzebnych grup typu "open source" jest hostowanie wielu najszybszych projektów typu "open source" w witrynie GitHub. Obejmują one takie projekty, jak [Kubernetes](https://kubernetes.io/), [Prometheus](https://prometheus.io/), [Helm](https://helm.sh/), [wysłannika](https://www.envoyproxy.io/)i [gRPC](https://grpc.io/).
 
-CNCF wspiera ekosystem typu "open source" i neutralność dostawcy. Po tym potencjalni klienci przedstawimy zasady, wzorce i najlepsze rozwiązania w chmurze, które są niezależny od technologii. W tym samym czasie omawiamy usługi i infrastrukturę dostępną w chmurze Microsoft Azure na potrzeby tworzenia systemów natywnych w chmurze. 
+CNCF wspiera ekosystem typu "open source" i neutralność dostawcy. Po tym potencjalni klienci przedstawimy zasady, wzorce i najlepsze rozwiązania w chmurze, które są niezależny od technologii. W tym samym czasie omawiamy usługi i infrastrukturę dostępną w chmurze Microsoft Azure na potrzeby tworzenia systemów natywnych w chmurze.
 
 Co dokładnie jest chmurą natywną? Wykorzystaj, niech i Pomóż nam poznać ten nowy świat.
 

@@ -2,12 +2,12 @@
 title: Rozproszone dane
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Rozproszone dane dla natywnych aplikacji w chmurze
 ms.date: 06/30/2019
-ms.openlocfilehash: 92086c52b02360e90461aea9ad23a2068224e187
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b715ae5203264a023bc9f911aa74ee222afe3d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183134"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087448"
 ---
 # <a name="distributed-data-for-cloud-native-apps"></a>Rozproszone dane dla aplikacji natywnych w chmurze
 
@@ -15,7 +15,7 @@ ms.locfileid: "71183134"
 
 Podczas konstruowania systemu natywnego w chmurze, który składa się z wielu niezależnych mikrousług, w zależności od tego, jak sądzisz o zmianach w magazynie danych.
 
-Tradycyjne aplikacje monolityczne preferują scentralizowany magazyn danych przedstawiony na rysunku 5-1. 
+Tradycyjne aplikacje monolityczne preferują scentralizowany magazyn danych przedstawiony na rysunku 5-1.
 
 ![Pojedyncza monolityczna baza danych](./media/single-monolithic-database.png)
 
@@ -32,7 +32,7 @@ Systemy natywne w chmurze preferują architekturę danych pokazaną na rysunku 5
 **Rysunek 5-2**. Wiele baz danych w mikrousługach
 
 Zwróć uwagę na to, jak na poprzedniej ilustracji każda mikrousługa posiada i hermetyzuje magazyn danych IT i udostępnia tylko dane na świecie zewnętrznym ze swojego publicznego interfejsu API.
- 
+
 Ten model umożliwia samodzielne rozdzielenie każdej mikrousług bez konieczności koordynowania zmian schematu danych z innymi mikrousługami. Każda mikrousługa jest bezpłatna do wdrożenia magazynu danych (relacyjnej bazy danych, bazy danych dokumentów, magazynu klucz-wartość), który najlepiej odpowiada potrzebom. W czasie wykonywania każda mikrousługa może odpowiednio skalować swoje dane. Jest to pokazane na rysunku 5-3:
 
 ![Trwałość danych Polyglot](./media/polyglot-data-persistence.png)

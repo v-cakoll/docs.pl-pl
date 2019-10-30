@@ -2,20 +2,20 @@
 title: Azure Monitor
 description: Korzystanie z Azure Monitor w celu uzyskania wglądu w system działa.
 ms.date: 09/23/2019
-ms.openlocfilehash: 4d7d556f030500ea6e0f608e3bdfd16d22d9eb1d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: fa7b4e103f4d1245710f88319271a9e8b7a24b04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521027"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087691"
 ---
-# <a name="azure-monitor"></a>Azure Monitor 
+# <a name="azure-monitor"></a>Azure Monitor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Żaden inny dostawca chmury nie jest gotowy do monitorowania aplikacji w chmurze, który znajduje się na platformie Azure. Azure Monitor to nazwa parasola kolekcji narzędzi zaprojektowanych w celu zapewnienia wglądu w stan systemu, wglądu w wszystkie problemy i optymalizację aplikacji. 
+Żaden inny dostawca chmury nie jest gotowy do monitorowania aplikacji w chmurze, który znajduje się na platformie Azure. Azure Monitor to nazwa parasola kolekcji narzędzi zaprojektowanych w celu zapewnienia wglądu w stan systemu, wglądu w wszystkie problemy i optymalizację aplikacji.
 
-![Azure monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze. ](./media/azure-monitor.png)
+![Azure Monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze.](./media/azure-monitor.png)
 **rysunek 7-9**. Azure Monitor, kolekcja służąca do uzyskiwania wglądu w sposób działania aplikacji natywnej w chmurze.
 
 ## <a name="gathering-logs-and-metrics"></a>Zbieranie dzienników i metryk
@@ -35,28 +35,28 @@ Nie będzie można ukończyć nowoczesnej aplikacji bez konieczności sztucznej 
 Application Insights zapewnia zaawansowany język zapytań o nazwie Kusto, który może służyć do znajdowania rekordów, podsumowywania ich, a nawet wykresów wykresu. Na przykład to zapytanie zlokalizuje wszystkie rekordy w miesiącu z listopada 2007, pogrupuj je według stanu i Wykreśl 10 pierwszych jako wykres kołowy.
 
 ```
-StormEvents 
+StormEvents
 | where StartTime >= datetime(2007-11-01) and StartTime < datetime(2007-12-01)
 | summarize count() by State
 | top 10 by count_
-| render piechart 
+| render piechart
 ```
 
-![The wynik zapytania Application Insights ](./media/azure-monitor.png)
+![wynik zapytania Application Insights](./media/azure-monitor.png)
 **rysunek 7-10**. Wynik zapytania Application Insights.
 
 Istnieje [plac zabaw do eksperymentowania z](https://dataexplorer.azure.com/clusters/help/databases/Samples) zapytaniami Kusto, które są fantastycznie miejsce na godzinę lub dwa. Odczytywanie [przykładowych zapytań](https://docs.microsoft.com/azure/kusto/query/samples) może być również instrukcją.
 
 ## <a name="dashboards"></a>Pulpity nawigacyjne
 
-Istnieje kilka różnych technologii pulpitu nawigacyjnego, które mogą być używane do prezentowania informacji z Azure Monitor. Prawdopodobnie najprostszym sposobem jest tylko uruchomienie zapytań w Application Insights i [wykreślenie danych na wykresie](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards). 
+Istnieje kilka różnych technologii pulpitu nawigacyjnego, które mogą być używane do prezentowania informacji z Azure Monitor. Prawdopodobnie najprostszym sposobem jest tylko uruchomienie zapytań w Application Insights i [wykreślenie danych na wykresie](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards).
 
-![An przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure ](./media/azure-monitor.png)
+![przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure](./media/azure-monitor.png)
 **rysunku 7-11**. Przykład Application Insights wykresów osadzonych na głównym pulpicie nawigacyjnym platformy Azure.
 
 Te wykresy można następnie osadzić w Azure Portal w odpowiedni sposób przy użyciu funkcji pulpitu nawigacyjnego. Dla użytkowników mających dokładniejsze wymagania, takie jak możliwość przejścia do kilku warstw danych Azure Monitor dane są dostępne do [Power BI](https://powerbi.microsoft.com/). Power BI to wiodąca w branży Klasa korporacyjna, Narzędzie analizy biznesowej, które umożliwia agregowanie danych z wielu różnych źródeł danych.
 
-przykład ![An Power BI pulpitu nawigacyjnego ](./media/azure-monitor.png)
+![przykład Power BI pulpitu nawigacyjnego](./media/azure-monitor.png)
 **rysunek 7-12**. Przykład Power BI pulpitu nawigacyjnego.
 
 ## <a name="alerts"></a>Alerty
@@ -71,9 +71,9 @@ Czasami posiadanie pulpitów nawigacyjnych danych jest niewystarczające. Jeśli
 
 Po wyzwoleniu alerty mogą wykonywać wiele różnych zadań. Po stronie prostej alerty mogą po prostu wysłać powiadomienie e-mail do listy adresowej lub wiadomości tekstowej do osoby. Bardziej powiązane alerty mogą wyzwolić przepływ pracy w narzędziu, takim jak usługi PagerDuty, który ma świadomość, kto jest w wywołaniu dla określonej aplikacji. Alerty mogą wyzwalać akcje w [Microsoft Flow](https://flow.microsoft.com/) odblokowywanie w bliskich nieograniczonych możliwościach dla przepływów pracy.
 
-W miarę identyfikowania typowych przyczyn alertów można rozszerzyć alerty z szczegółowymi przyczynami alertów i czynnościami, które należy podjąć w celu ich rozwiązania. Długoterminowe wdrożenia aplikacji natywnych w chmurze mogą zrezygnować z wykonywania zadań samonaprawiania, które wykonują takie działania, jak usuwanie węzłów zakończonych niepowodzeniem z zestawu skalowania lub wyzwalanie działania skalowania automatycznego. Na koniec nie jest już konieczne wznawianie pracy w ramach usługi –: 00, aby rozwiązać problem związany z witryną na żywo, ponieważ system będzie mógł dopasować się do co najmniej Limp, dopóki ktoś się nie dotrze do następnego dnia. 
+W miarę identyfikowania typowych przyczyn alertów można rozszerzyć alerty z szczegółowymi przyczynami alertów i czynnościami, które należy podjąć w celu ich rozwiązania. Długoterminowe wdrożenia aplikacji natywnych w chmurze mogą zrezygnować z wykonywania zadań samonaprawiania, które wykonują takie działania, jak usuwanie węzłów zakończonych niepowodzeniem z zestawu skalowania lub wyzwalanie działania skalowania automatycznego. Na koniec nie jest już konieczne wznawianie pracy w ramach usługi –: 00, aby rozwiązać problem związany z witryną na żywo, ponieważ system będzie mógł dopasować się do co najmniej Limp, dopóki ktoś się nie dotrze do następnego dnia.
 
-Azure Monitor automatycznie wykorzystuje Uczenie maszynowe do zrozumienia normalnych parametrów operacyjnych wdrożonych aplikacji. Dzięki temu można wykryć usługi, które działają poza ich normalnymi parametrami. Na przykład typowy ruch w dniu tygodnia w witrynie może wynosić 10 000 żądań na minutę. A następnie w danym tygodniu nagle liczba żądań trafi o wysoce nietypowe żądania 20 000 na minutę. [Inteligentne wykrywanie](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) będzie zauważyć takie odróżnienie od normy i wyzwolenie alertu. W tym samym czasie analiza trendu jest na tyle inteligentna, aby uniknąć zapłonu fałszywych wartości dodatnich, gdy oczekiwane jest obciążenie ruchem.  
+Azure Monitor automatycznie wykorzystuje Uczenie maszynowe do zrozumienia normalnych parametrów operacyjnych wdrożonych aplikacji. Dzięki temu można wykryć usługi, które działają poza ich normalnymi parametrami. Na przykład typowy ruch w dniu tygodnia w witrynie może wynosić 10 000 żądań na minutę. A następnie w danym tygodniu nagle liczba żądań trafi o wysoce nietypowe żądania 20 000 na minutę. [Inteligentne wykrywanie](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics) będzie zauważyć takie odróżnienie od normy i wyzwolenie alertu. W tym samym czasie analiza trendu jest na tyle inteligentna, aby uniknąć zapłonu fałszywych wartości dodatnich, gdy oczekiwane jest obciążenie ruchem.
 
 >[!div class="step-by-step"]
 >[Poprzedni](monitoring-azure-kubernetes.md)

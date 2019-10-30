@@ -2,12 +2,12 @@
 title: Implementowanie ponownych prób wywołania HTTP wykonywanych przy użyciu wycofywania wykładniczego usługi Polly
 description: Dowiedz się, jak obsługiwać błędy HTTP za pomocą Polly i HttpClientFactory.
 ms.date: 01/07/2019
-ms.openlocfilehash: 9988f70513959c099c771fcc0221bba7e2e70200
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089957"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Zaimplementuj ponowne próby wywołania HTTP przy użyciu wykładniczej wycofywania z zasadami HttpClientFactory i Polly
 
@@ -15,7 +15,7 @@ Zalecanym podejściem do ponawiania prób przy użyciu wykładniczej wycofywania
 
 Polly to biblioteka platformy .NET, która zapewnia możliwości odporności i obsługi błędów przejściowych. Można zaimplementować te funkcje, stosując zasady Polly, takie jak ponawianie próby, wyłącznika, izolacja grodziowa, limit czasu i rezerwa. Polly targets .NET Framework 4. x i .NET Standard 1,0, 1,1 i 2,0 (które obsługują platformę .NET Core).
 
-Jednak zapisanie własnego niestandardowego kodu do używania biblioteki Polly z HttpClient może być znacząco skomplikowane. W pierwotnej wersji programu eShopOnContainers istniał [blok konstrukcyjny ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) oparty na Polly. Jednak w przypadku wersji [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)implementacja odpornej komunikacji http z Pollyem została znacznie prostsza, tak że blok konstrukcyjny został uznany za przestarzały z eShopOnContainers. 
+Jednak zapisanie własnego niestandardowego kodu do używania biblioteki Polly z HttpClient może być znacząco skomplikowane. W pierwotnej wersji programu eShopOnContainers istniał [blok konstrukcyjny ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) oparty na Polly. Jednak w przypadku wersji [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)implementacja odpornej komunikacji http z Pollyem została znacznie prostsza, tak że blok konstrukcyjny został uznany za przestarzały z eShopOnContainers.
 
 W poniższych krokach pokazano, jak można użyć ponownych prób http z Polly zintegrowanym z HttpClientFactory, co zostało wyjaśnione w poprzedniej sekcji.
 
@@ -49,20 +49,20 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-Za pomocą Polly można zdefiniować zasady ponawiania z liczbą ponownych prób, wykładniczą konfiguracją wycofywania i akcjami, które należy wykonać w przypadku wystąpienia wyjątku HTTP, takiego jak rejestrowanie błędu. W takim przypadku zasady są skonfigurowane do wypróbowania sześć razy z ponowieniem wykładniczym, rozpoczynając od dwóch sekund. 
+Za pomocą Polly można zdefiniować zasady ponawiania z liczbą ponownych prób, wykładniczą konfiguracją wycofywania i akcjami, które należy wykonać w przypadku wystąpienia wyjątku HTTP, takiego jak rejestrowanie błędu. W takim przypadku zasady są skonfigurowane do wypróbowania sześć razy z ponowieniem wykładniczym, rozpoczynając od dwóch sekund.
 
 ## <a name="add-a-jitter-strategy-to-the-retry-policy"></a>Dodawanie strategii o wahaniu do zasad ponowień
 
 Regularne zasady ponawiania mogą mieć wpływ na system w przypadku dużej współbieżności i skalowalności oraz w przypadku dużej rywalizacji. Aby przezwyciężyć szczyty podobnych ponownych prób pochodzących z wielu klientów w przypadku częściowego przestoju, dobrym rozwiązaniem jest dodanie strategii o wahaniu do algorytmu/zasad ponowień. Może to poprawić ogólną wydajność systemu kompleksowego, dodając losowość do wykładniczej wycofywania. Powoduje to rozłożenie skoków w przypadku wystąpienia problemów. Zasada jest zilustrowana przy użyciu poniższego przykładu:
 
 ```csharp
-Random jitterer = new Random(); 
+Random jitterer = new Random();
 var retryWithJitterPolicy = HttpPolicyExtensions
     .HandleTransientHttpError()
     .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
     .WaitAndRetryAsync(6,    // exponential back-off plus some jitter
         retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
-                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+                      + TimeSpan.FromMilliseconds(jitterer.Next(0, 100))
     );
 ```
 

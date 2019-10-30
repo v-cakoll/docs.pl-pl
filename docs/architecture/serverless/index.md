@@ -4,16 +4,16 @@ description: Przewodnik dotyczący architektury bezserwerowej. Dowiedz się, kie
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: af930ba3d704e9bbf22f03ad6a4a547c5fbff4d3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522845"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093545"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Aplikacje bezserwerowe: architektura, wzorce i implementacja platformy Azure
 
-![Zrzut ekranu przedstawiający stronę obejmującą książkę elektroniczną aplikacji bezserwerowych.](./media/index/serverless-apps-cover.jpg)
+![Zrzut ekranu przedstawiający centrum poczty elektronicznej aplikacji bezserwerowych.](./media/index/serverless-apps-cover.jpg)
 
 > Pobieranie dostępne o: <https://aka.ms/serverless-ebook>
 
@@ -43,17 +43,17 @@ Wszystkie inne znaczniki i logo są własnością odpowiednich właścicieli.
 
 Tworzone
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)** , wirtualizacja deweloperów rozwiązań w chmurze, Apex, Microsoft Corp.
+> **[Jeremy Likness](https://twitter.com/jeremylikness)** , starszy ambasador w chmurze, Microsoft Corp.
 
 Trybu
 
-> **[Cecil Phillip](https://twitter.com/cecilphillip)** , Ambasador deweloperów rozwiązań w chmurze II, Apex, Microsoft Corp.
+> **[Cecil Phillip](https://twitter.com/cecilphillip)** , starszy ambasador w chmurze, Microsoft Corp.
 
 Edytory
 
-> **[Bill Wagner](https://twitter.com/billwagner)** , Starszy programista ds. zawartości, Apex, Microsoft Corp.
+> **[Bill Wagner](https://twitter.com/billwagner)** , Starszy programista ds. zawartości, Microsoft Corp.
 
-> **[Maira Wenzel](https://twitter.com/mairacw)** , Starszy programista ds. zawartości, Apex, Microsoft Corp.
+> **[Maira Wenzel](https://twitter.com/mairacw)** , Starszy programista ds. zawartości, Microsoft Corp.
 
 Uczestnicy i recenzenci:
 

@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać .NET Framework kontenerów platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 575af1bc1966a25a01acdcfe106870ad1b7c477d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039645"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093763"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -27,7 +27,7 @@ Ponadto [pakiet zgodności systemu Windows](../../../core/porting/windows-compat
 
 Jednak nawet w przypadku nadzwyczajnych postępów od .NET Standard 2,0 i .NET Core 2,1 mogą wystąpić sytuacje, w których niektóre pakiety NuGet wymagają uruchomienia systemu Windows i mogą nie obsługiwać platformy .NET Core. Jeśli te pakiety mają krytyczne znaczenie dla aplikacji, należy użyć .NET Framework w kontenerach systemu Windows.
 
-## <a name="using-net-technologies-not-available-for-net-core"></a>Korzystanie z technologii .NET niedostępne dla platformy .NET Core 
+## <a name="using-net-technologies-not-available-for-net-core"></a>Korzystanie z technologii .NET niedostępne dla platformy .NET Core
 
 Niektóre technologie .NET Framework nie są dostępne w bieżącej wersji programu .NET Core (wersja 2,2). Niektóre z nich będą dostępne w nowszych wersjach platformy .NET Core (.NET Core 2. x), ale inne nie mają zastosowania do nowych wzorców aplikacji przeznaczonych dla platformy .NET Core i mogą być nigdy niedostępne.
 
@@ -57,11 +57,11 @@ W międzyczasie, jeśli jakakolwiek platforma lub usługa na platformie Azure na
 - **Przenoszenie z .NET Framework do platformy .NET Core**  
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **.NET Core w przewodniku Docker**[https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **.NET Core w przewodniku docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
 - **Przegląd składników platformy .NET**  
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]
->[Poprzedni](net-core-container-scenarios.md)Następny
->[](container-framework-choice-factors.md)
+>[Poprzedni](net-core-container-scenarios.md)
+>[Następny](container-framework-choice-factors.md)

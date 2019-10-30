@@ -2,12 +2,12 @@
 title: Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 ms.date: 04/28/2018
-ms.openlocfilehash: 3154f9a9e11b42330fcc753ffd961316e4ada335
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093634"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 
@@ -19,7 +19,7 @@ Konieczność ciągłego tworzenia innowacji w biznesie umożliwia wypchnięcie 
 
 Dolna linia polega na tym, że gdy organizacja kompiluje i zarządza aplikacjami, które są zoptymalizowane pod kątem chmury, może szybciej wprowadzać rozwiązania do klientów i wprowadzać nowe pomysły na rynek, gdy mają one zastosowanie.
 
-## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowane pod kątem chmury i założenia 
+## <a name="cloud-optimized-application-principles-and-tenets"></a>Zasady aplikacji zoptymalizowane pod kątem chmury i założenia
 
 Ulepszenia w chmurze są głównie skoncentrowane na spełnieniu dwóch celów: redukcja kosztów i poprawa rozwoju firmy dzięki ulepszaniu elastyczności. Cele te są osiągane przez uproszczenie procesów i zmniejszenie liczby problemów podczas dostarczania i wysyłania aplikacji.
 

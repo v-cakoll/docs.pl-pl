@@ -2,12 +2,12 @@
 title: Zdarzenia domeny. Projektowanie i implementacja
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Uzyskaj szczegółowy widok zdarzeń domeny, kluczową koncepcję do ustanowienia komunikacji między agregacjami.
 ms.date: 10/08/2018
-ms.openlocfilehash: 4fe0c1fa04bbecb64783e070838ab796de4f90d6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031841"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73093952"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia w domenie: projektowanie i implementacja
 
@@ -145,9 +145,9 @@ Podejście odroczone to eShopOnContainers, z których korzystają. Najpierw Doda
 ```csharp
 public abstract class Entity
 {
-     //... 
+     //...
      private List<INotification> _domainEvents;
-     public List<INotification> DomainEvents => _domainEvents; 
+     public List<INotification> DomainEvents => _domainEvents;
 
      public void AddDomainEvent(INotification eventItem)
      {
@@ -194,7 +194,7 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.        
+        // compensatory actions in case of failures.
         await _mediator.DispatchDomainEventsAsync(this);
 
         // After this line runs, all the changes (from the Command Handler and Domain
@@ -208,7 +208,7 @@ Za pomocą tego kodu wysyłasz zdarzenia jednostki do odpowiednich programów ob
 
 Ogólny wynik polega na tym, że zostało oddzielone podnoszenie poziomu zdarzenia domeny (proste dodanie do listy w pamięci) od wysłania go do programu obsługi zdarzeń. Ponadto, w zależności od używanego rodzaju dyspozytora, można wysyłać zdarzenia synchronicznie lub asynchronicznie.
 
-Należy pamiętać, że granice transakcyjne są znacznie dostępne w tym miejscu. Jeśli jednostka pracy i transakcji może obejmować więcej niż jedną wartość zagregowaną (jak w przypadku używania EF Core i relacyjnej bazy danych), może to być dobre. Ale jeśli transakcja nie może obejmować agregacji, na przykład gdy korzystasz z bazy danych NoSQL, takiej jak Azure CosmosDB, musisz zaimplementować dodatkowe kroki, aby osiągnąć spójność. Jest to kolejny powód, dla którego trwałość ignorujących nie jest uniwersalna; jest to zależne od używanego systemu magazynu. 
+Należy pamiętać, że granice transakcyjne są znacznie dostępne w tym miejscu. Jeśli jednostka pracy i transakcji może obejmować więcej niż jedną wartość zagregowaną (jak w przypadku używania EF Core i relacyjnej bazy danych), może to być dobre. Ale jeśli transakcja nie może obejmować agregacji, na przykład gdy korzystasz z bazy danych NoSQL, takiej jak Azure CosmosDB, musisz zaimplementować dodatkowe kroki, aby osiągnąć spójność. Jest to kolejny powód, dla którego trwałość ignorujących nie jest uniwersalna; jest to zależne od używanego systemu magazynu.
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Pojedyncza transakcja w agregacjach i ostateczna spójność w agregacjach
 
@@ -218,13 +218,13 @@ Pytanie, czy wykonać pojedynczą transakcję w ramach agregacji, w przeciwieńs
 
 Vaughn Vernon jest następująca w [skutecznym, zagregowanym projekcie. Część II: wykonywanie zagregowanych zadań jednocześnie](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
-> W takim przypadku, jeśli wykonanie polecenia w jednym wystąpieniu agregującym wymaga, aby dodatkowe reguły biznesowe były wykonywane na co najmniej jednej agregacji, należy użyć spójności ostatecznej \[... \] istnieje praktyczny sposób zapewnienia spójności ostatecznej w modelu DDD. Metoda agregująca publikuje zdarzenie domeny, które jest w czasie dostarczane do co najmniej jednego subskrybenta asynchronicznego.
+> W takim przypadku, jeśli wykonywanie polecenia w jednym wystąpieniu agregującym wymaga, aby dodatkowe reguły biznesowe były wykonywane na co najmniej jednej wartości zagregowanej, korzystać z \[spójności ostatecznej...\] istnieje praktyczny sposób zapewnienia spójności ostatecznej w modelu DDD. Metoda agregująca publikuje zdarzenie domeny, które jest w czasie dostarczane do co najmniej jednego subskrybenta asynchronicznego.
 
 To uzasadnienie opiera się na uwzględnieniu szczegółowych transakcji zamiast transakcji obejmujących wiele zagregowanych lub jednostek. Dobrym pomysłem jest to, że w drugim przypadku liczba blokad baz danych będzie znacząca w aplikacjach o dużej skali o wysokiej skalowalności. W przypadku, gdy wysoce skalowalne aplikacje nie muszą mieć natychmiastowej spójności transakcyjnej między wieloma agregacjami, pomaga zaakceptować koncepcję spójności ostatecznej. Zmiany niepodzielne często nie są wymagane przez firmę, a w każdym przypadku odpowiedzialność ekspertów domeny może powiedzieć, czy określone operacje wymagają niepodzielnych transakcji. Jeśli operacja zawsze wymaga niepodzielnej transakcji między wieloma agregacjami, może wystąpić pytanie, czy wartość zagregowana powinna być większa czy nie została prawidłowo zaprojektowana.
 
 Jednak inni deweloperzy i architekty, takie jak Jimmy Bogard, są w trakcie łączenia jednej transakcji z wieloma agregacjami, ale tylko wtedy, gdy te dodatkowe agregaty są powiązane z efektami ubocznymi tego samego oryginalnego polecenia. Przykładowo w przypadku [lepszego wzorca zdarzeń domeny](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)Bogard brzmi:
 
-> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie do podniesienia poziomu zdarzenia domeny \[... \] przed zatwierdzeniem naszej transakcji, wysyłamy nasze zdarzenia do odpowiednich programy obsługi.
+> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie podnoszenie poziomu zdarzenia domeny \[...\] tuż przed zatwierdzeniem naszej transakcji, wyślemy nasze zdarzenia do swoich odpowiednie programy obsługi.
 
 Jeśli wysyłasz zdarzenia domeny bezpośrednio *przed* zatwierdzeniem oryginalnej transakcji, jest to spowodowane tym, że efekty uboczne tych zdarzeń mają być uwzględnione w tej samej transakcji. Na przykład jeśli metoda EF DbContext metody SaveChanges nie powiedzie się, transakcja wycofa wszystkie zmiany, w tym wynik wszelkich operacji ubocznych wdrożonych przez powiązane procedury obsługi zdarzeń domeny. Wynika to z faktu, że zakres istnienia kontekstu DbContext jest domyślnie zdefiniowany jako "objęty zakresem". W związku z tym obiekt DbContext jest współużytkowany przez wiele obiektów repozytorium, które są tworzone w ramach tego samego zakresu lub grafu obiektów. Ta sama zbieżność z zakresem HttpRequest podczas opracowywania aplikacji sieci Web API lub MVC.
 
@@ -303,7 +303,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
@@ -321,7 +321,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
                                        orderStartedEvent.CardExpiration,
                                        orderStartedEvent.Order.Id);
 
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer)
                                                                       : _buyerRepository.Add(buyer);
 
         await _buyerRepository.UnitOfWork

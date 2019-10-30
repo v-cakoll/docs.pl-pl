@@ -4,12 +4,12 @@ description: Poznaj różne sposoby hostowania aplikacji Blazor, w tym w przegl�
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
-ms.openlocfilehash: 82628976bcb1f1cee3089aa25488396af44d0f1a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5bf55fa686691acc25508d3d9a6dfaf8aca321ca
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088054"
 ---
 # <a name="blazor-app-hosting-models"></a>Modele hostingu aplikacji Blazor
 
@@ -18,13 +18,13 @@ ms.locfileid: "72520298"
 Aplikacje Blazor mogą być hostowane w usługach IIS, podobnie jak aplikacje ASP.NET Web Forms. Aplikacje Blazor mogą być również hostowane w jeden z następujących sposobów:
 
 - Po stronie klienta w przeglądarce w programie webassembly.
-- Po stronie serwera w aplikacji ASP.NET Core. 
+- Po stronie serwera w aplikacji ASP.NET Core.
 
 ## <a name="blazor-webassembly-apps"></a>Blazor aplikacje webassembly
 
-Blazor aplikacje webassembly są wykonywane bezpośrednio w przeglądarce w środowisku uruchomieniowym .NET opartym na zestawie. Blazor aplikacje webassembly działają w podobny sposób do platform języka JavaScript frontonu, takich jak kątowy lub reagowanie. Jednak zamiast pisania kodu JavaScript, należy napisać C#. Środowisko uruchomieniowe platformy .NET jest pobierane wraz z aplikacją wraz z zestawem aplikacji i wszystkimi wymaganymi zależnościami. Nie są wymagane żadne wtyczki ani rozszerzenia przeglądarki. 
+Blazor aplikacje webassembly są wykonywane bezpośrednio w przeglądarce w środowisku uruchomieniowym .NET opartym na zestawie. Blazor aplikacje webassembly działają w podobny sposób do platform języka JavaScript frontonu, takich jak kątowy lub reagowanie. Jednak zamiast pisania kodu JavaScript, należy napisać C#. Środowisko uruchomieniowe platformy .NET jest pobierane wraz z aplikacją wraz z zestawem aplikacji i wszystkimi wymaganymi zależnościami. Nie są wymagane żadne wtyczki ani rozszerzenia przeglądarki.
 
-Pobrane zestawy są normalnymi zestawami .NET, tak jak w przypadku innych aplikacji platformy .NET. Ponieważ środowisko uruchomieniowe obsługuje .NET Standard, można użyć istniejących bibliotek .NET Standard z aplikacją Blazor webassembly. Jednak te zestawy będą nadal wykonywane w piaskownicy zabezpieczeń przeglądarki. Niektóre funkcje mogą zgłosić <xref:System.PlatformNotSupportedException>, takich jak próba uzyskania dostępu do systemu plików lub otwarcie dowolnych połączeń sieciowych. 
+Pobrane zestawy są normalnymi zestawami .NET, tak jak w przypadku innych aplikacji platformy .NET. Ponieważ środowisko uruchomieniowe obsługuje .NET Standard, można użyć istniejących bibliotek .NET Standard z aplikacją Blazor webassembly. Jednak te zestawy będą nadal wykonywane w piaskownicy zabezpieczeń przeglądarki. Niektóre funkcje mogą zgłosić <xref:System.PlatformNotSupportedException>, takich jak próba uzyskania dostępu do systemu plików lub otwarcie dowolnych połączeń sieciowych.
 
 Po załadowaniu aplikacji środowisko uruchomieniowe platformy .NET jest uruchamiane i wskazywane w zestawie aplikacji. Zostanie uruchomiona logika uruchamiania aplikacji i są renderowane składniki główne. Blazor oblicza aktualizacje interfejsu użytkownika w oparciu o renderowane dane wyjściowe ze składników. Następnie są stosowane aktualizacje modelu DOM.
 

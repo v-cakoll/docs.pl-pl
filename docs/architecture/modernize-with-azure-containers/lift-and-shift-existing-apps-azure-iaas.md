@@ -2,16 +2,16 @@
 title: Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows.
 ms.date: 04/28/2018
-ms.openlocfilehash: ae181784e7de5f66b34d2dc38c6e9ec2e004a0c3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: c7638a034dbb27baea1b097bdb66175bfb5a71f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373987"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089636"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Podnieś i Przenieś istniejące aplikacje .NET do usługi Azure IaaS (infrastruktura chmury — gotowe)
 
-> Została Pierwszym krokiem jest zredukowanie inwestycji lokalnych i łącznego kosztu konserwacji sprzętu i sieci, a po prostu ponowne hostowanie istniejących aplikacji w chmurze.
+> Wizja: najpierw w celu zredukowania inwestycji lokalnych i łącznego kosztu konserwacji sprzętu i sieci należy po prostu zahostować istniejące aplikacje w chmurze.
 
 Przed przystąpieniem *do* migrowania istniejących aplikacji do platformy Azure infrastruktura jako usługa (IaaS), ważne jest przeanalizowanie *przyczyn, dla których chcesz* migrować bezpośrednio do IaaS na platformie Azure. Scenariusz na tym poziomie operacji modernizacji zasadniczo ma rozpocząć korzystanie z maszyn wirtualnych w chmurze, zamiast korzystać z bieżącej infrastruktury lokalnej.
 
@@ -35,11 +35,11 @@ Okazało się również, że aplikacje są łatwiejsze do modernizacji i w przys
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Kiedy należy migrować do IaaS zamiast PaaS
 
-W następnych sekcjach omówiono aplikacje zoptymalizowane pod kątem chmury, które są głównie oparte na platformach i usługach PaaS. Te aplikacje zapewniają największą korzyść z migracji do chmury. 
+W następnych sekcjach omówiono aplikacje zoptymalizowane pod kątem chmury, które są głównie oparte na platformach i usługach PaaS. Te aplikacje zapewniają największą korzyść z migracji do chmury.
 
-Jeśli celem jest po prostu przeniesienie istniejących aplikacji do chmury, najpierw Zidentyfikuj istniejące aplikacje, które nie wymagają znaczącej modyfikacji do uruchomienia w Azure App Service. Aplikacje te powinny być pierwszymi kandydatami do zoptymalizowania pod kątem chmury. 
+Jeśli celem jest po prostu przeniesienie istniejących aplikacji do chmury, najpierw Zidentyfikuj istniejące aplikacje, które nie wymagają znaczącej modyfikacji do uruchomienia w Azure App Service. Aplikacje te powinny być pierwszymi kandydatami do zoptymalizowania pod kątem chmury.
 
-Następnie w przypadku aplikacji, które nadal nie mogą przejść do kontenerów systemu Windows i PaaS takich jak App Service lub Orchestrator, takich jak usługa Azure Kubernetes, należy przeprowadzić migrację do prostych zwykłych maszyn wirtualnych (IaaS). 
+Następnie w przypadku aplikacji, które nadal nie mogą przejść do kontenerów systemu Windows i PaaS takich jak App Service lub Orchestrator, takich jak usługa Azure Kubernetes, należy przeprowadzić migrację do prostych zwykłych maszyn wirtualnych (IaaS).
 
 Należy jednak pamiętać, że prawidłowe Konfigurowanie, zabezpieczanie i konserwowanie maszyn wirtualnych wymaga znacznie więcej czasu i wiedza IT w porównaniu z użyciem usług PaaS Services na platformie Azure. Jeśli rozważasz platformę Azure Virtual Machines, pamiętaj, aby wziąć pod uwagę trwającą pracę konserwacyjną wymaganą na potrzeby poprawek, aktualizacji i zarządzania środowiskiem maszyn wirtualnych. Virtual Machines platformy Azure to IaaS.
 
@@ -106,5 +106,5 @@ Rysunek 2-3 przedstawia wykonywanie wielu migracji maszyn wirtualnych przy użyc
     <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->
+>[Poprzedni](index.md)
+>[Następny](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

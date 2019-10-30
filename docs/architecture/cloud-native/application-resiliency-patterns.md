@@ -2,18 +2,18 @@
 title: Wzorce odporności aplikacji
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Wzorce odporności aplikacji
 ms.date: 06/30/2019
-ms.openlocfilehash: 67ae20f14a67f3a96d6c74cad727afe680ff3178
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315946"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087759"
 ---
 # <a name="application-resiliency-patterns"></a>Wzorce odporności aplikacji
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Pierwszym wierszem obrony jest odporność aplikacji z włączoną obsługą oprogramowania. 
+Pierwszym wierszem obrony jest odporność aplikacji z włączoną obsługą oprogramowania.
 
 Chociaż można zainwestować znaczną czas pisania własnej struktury odporności, takie produkty już istnieją. Na przykład [Polly](http://www.thepollyproject.org/) jest kompleksową biblioteką odporności platformy .NET i obsługi błędów przejściowych, która pozwala deweloperom na wyznaczanie zasad odporności w sposób bezpieczny dla bezpieczeństwa i bezpiecznego wątkowo. Polly są obiektami docelowymi utworzonymi za pomocą pełnej .NET Framework lub platformy .NET Core. Rysunek 6-2 przedstawia zasady odporności (czyli funkcje) dostępne w bibliotece Polly. Te zasady można stosować pojedynczo lub wspólnie ze sobą.
 

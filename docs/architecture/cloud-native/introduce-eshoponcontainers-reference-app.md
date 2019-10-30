@@ -2,12 +2,12 @@
 title: Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 description: Wprowadzenie do aplikacji referencyjnej dla mikrousług eShopOnContainers Cloud Native dla ASP.NET Core i platformy Azure.
 ms.date: 06/30/2019
-ms.openlocfilehash: 20f9175ada2e5439be363781a2b187c10ba86d37
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73087253"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>Wprowadzenie do aplikacji referencyjnej eShopOnContainers
 
@@ -32,16 +32,16 @@ Zacznijmy od przejrzenia funkcji i wymagań aplikacji. Aplikacja eShopOnContaine
 - Edytuj lub Usuń elementy z koszyka
 - Realizacji
 - Rejestrowanie konta
-- Logowanie
+- Rejestrowanie
 - Wyloguj
 - Przejrzyj zamówienia
 
 Aplikacja ma również następujące wymagania niefunkcjonalne:
 
-- Musi być wysoce dostępny i należy ją skalować automatycznie, aby zaspokoić zwiększony ruch (i przeskalować je ponownie po podłączeniu ruchu). 
-- Powinno to ułatwić szybkie korzystanie z monitorowania kondycji i dzienników diagnostycznych, aby pomóc w rozwiązywaniu wszelkich napotkanych problemów. 
-- Powinien obsługiwać proces programowania Agile, w tym obsługę ciągłej integracji i wdrażania (CI/CD). 
-- Oprócz dwóch frontonów sieci Web (aplikacja tradycyjna i jednostronicowa) aplikacja musi również obsługiwać aplikacje klienckie mobilne z różnymi rodzajami systemów operacyjnych. 
+- Musi być wysoce dostępny i należy ją skalować automatycznie, aby zaspokoić zwiększony ruch (i przeskalować je ponownie po podłączeniu ruchu).
+- Powinno to ułatwić szybkie korzystanie z monitorowania kondycji i dzienników diagnostycznych, aby pomóc w rozwiązywaniu wszelkich napotkanych problemów.
+- Powinien obsługiwać proces programowania Agile, w tym obsługę ciągłej integracji i wdrażania (CI/CD).
+- Oprócz dwóch frontonów sieci Web (aplikacja tradycyjna i jednostronicowa) aplikacja musi również obsługiwać aplikacje klienckie mobilne z różnymi rodzajami systemów operacyjnych.
 - Powinien obsługiwać hosting na wielu platformach i Międzyplatformowe programowanie.
 
 ![Architektura tworzenia aplikacji eShopOnContainers Reference.](./media/eshoponcontainers-development-architecture.png)
@@ -70,7 +70,7 @@ Kod jest zorganizowany do obsługi różnych mikrousług, a w każdej mikrousłu
 
 ## <a name="understanding-microservices"></a>Informacje o mikrousługach
 
-Ta książka koncentruje się na aplikacjach natywnych w chmurze utworzonych przy użyciu technologii platformy Azure. Aby dowiedzieć się więcej o najlepszych rozwiązaniach mikrousług i sposobach tworzenia architektury aplikacji opartych na mikrousługach, [przeczytaj książkę pomocniczą, mikrousługi platformy .NET: Architektura dla kontenerów aplikacji](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture).NET. Książka jest dostępna w trybie online, w formatach PDF lub eReader.
+Ta książka koncentruje się na aplikacjach natywnych w chmurze utworzonych przy użyciu technologii platformy Azure. Aby dowiedzieć się więcej o najlepszych rozwiązaniach mikrousług i sposobach tworzenia architektury aplikacji opartych na mikrousługach, przeczytaj książkę pomocniczą i [mikrousługi platformy .NET: architektura dla kontenerów aplikacji .NET](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture). Książka jest dostępna w trybie online, w formatach PDF lub eReader.
 
 >[!div class="step-by-step"]
 >[Poprzedni](candidate-apps.md)

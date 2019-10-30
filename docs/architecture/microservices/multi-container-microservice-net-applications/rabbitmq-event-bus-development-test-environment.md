@@ -2,12 +2,12 @@
 title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj RabbitMQ, aby zaimplementować obsługę komunikatów usługi Event Bus dla zdarzeń integracji dla środowisk programistycznych lub testowych.
 ms.date: 10/02/2018
-ms.openlocfilehash: af02208bb9e680403a04377ccb740a8b15be29bc
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296563"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089742"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 
@@ -35,7 +35,7 @@ RabbitMQ implementacja przykładowej magistrali zdarzeń do tworzenia/testowania
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementowanie prostej metody publikacji z RabbitMQ
 
-Poniższy kod jest ***uproszczoną*** wersją implementacji usługi Event Bus dla RabbitMQ, aby zaprezentować cały scenariusz. W ten sposób nie obsługujesz połączenia w ten sposób. Aby wyświetlić pełną implementację, zobacz rzeczywisty kod w repozytorium [dotnet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) . 
+Poniższy kod jest ***uproszczoną*** wersją implementacji usługi Event Bus dla RabbitMQ, aby zaprezentować cały scenariusz. W ten sposób nie obsługujesz połączenia w ten sposób. Aby wyświetlić pełną implementację, zobacz rzeczywisty kod w repozytorium [dotnet-Architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) .
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -82,7 +82,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
         where TH : IIntegrationEventHandler<T>
     {
         var eventName = _subsManager.GetEventKey<T>();
-        
+
         var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
         if (!containsKey)
         {
@@ -109,5 +109,5 @@ Każdy typ zdarzenia ma powiązany kanał, aby uzyskać zdarzenia z RabbitMQ. W 
 Metoda Subskrybuj akceptuje obiekt IIntegrationEventHandler, który przypomina metodę wywołania zwrotnego w bieżącej mikrousłudze oraz powiązany obiekt IntegrationEvent. Następnie kod dodaje ten program obsługi zdarzeń do listy programów obsługi zdarzeń, które każdy typ zdarzenia integracji może mieć dla mikrousługi klienta. Jeśli kod klienta nie został jeszcze objęty subskrypcją zdarzenia, kod tworzy kanał dla typu zdarzenia, dzięki czemu może odbierać zdarzenia w stylu push z RabbitMQ, gdy to zdarzenie jest publikowane z poziomu innej usługi.
 
 >[!div class="step-by-step"]
->[Poprzedni](integration-event-based-microservice-communications.md)Następny
->[](subscribe-events.md)
+>[Poprzedni](integration-event-based-microservice-communications.md)
+>[Następny](subscribe-events.md)

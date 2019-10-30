@@ -3,12 +3,12 @@ title: Siatki usług — gRPC dla deweloperów WCF
 description: Kierowanie i równoważenie żądań do usług gRPC w klastrze Kubernetes przy użyciu sieci siatkowej usługi.
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 18c12af787f32988bbf17b1561d4ba1fb4deaf41
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090176"
 ---
 # <a name="service-meshes"></a>Siatki usług
 
@@ -42,9 +42,9 @@ Siatki usług dotyczą tylko ruchu w klastrze. W przypadku klientów zewnętrzny
 
 Istnieją trzy implementacje usług ogólnego przeznaczenia, które są obecnie dostępne do użycia z Kubernetes: Istio, Konsolidatored i Consul Connect. Wszystkie trzy żądania routingu/proxy żądań, szyfrowania ruchu, odporności, uwierzytelniania hosta do hosta i kontroli ruchu.
 
-Wybór sieci usług zależy od wielu czynników: 
+Wybór sieci usług zależy od wielu czynników:
 
-- Specyficzne dla organizacji wymagania dotyczące kosztów, zgodności, płatnych planów pomocy technicznej itd. 
+- Specyficzne dla organizacji wymagania dotyczące kosztów, zgodności, płatnych planów pomocy technicznej itd.
 - Charakter klastra, jego rozmiar, liczba wdrożonych usług i ilość ruchu sieciowego w sieci klastra.
 - Łatwość wdrażania i zarządzania siatką oraz używania jej z usługami.
 

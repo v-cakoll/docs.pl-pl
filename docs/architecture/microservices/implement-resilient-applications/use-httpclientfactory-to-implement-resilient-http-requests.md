@@ -2,12 +2,12 @@
 title: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 description: Dowiedz się, jak korzystać z HttpClientFactory, dostępnego od platformy .NET Core 2,1, do tworzenia wystąpień `HttpClient`, ułatwiając korzystanie z nich w aplikacjach.
 ms.date: 08/08/2019
-ms.openlocfilehash: 3f9b3b18cede07e4c5c56600634ae230c0e251bb
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72578913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094000"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 
@@ -21,7 +21,7 @@ Podczas pierwszego problemu, gdy ta klasa jest używana, używanie jej z instruk
 
 W związku z tym `HttpClient` jest przeznaczony do tworzenia wystąpień jednokrotnie i ponownie używane przez cały czas życia aplikacji. Utworzenie wystąpienia klasy `HttpClient` dla każdego żądania spowoduje wyczerpanie liczby gniazd dostępnych w ramach dużych obciążeń. Ten problem spowoduje błędy `SocketException`. Możliwe podejścia do rozwiązania tego problemu opierają się na tworzeniu obiektu `HttpClient` jako singleton lub static, jak wyjaśniono w tym [artykule firmy Microsoft w sprawie użycia HttpClient](../../../csharp/tutorials/console-webapiclient.md).
 
-Jednak występuje drugi problem z `HttpClient`, który można mieć, gdy jest używany jako obiekt pojedynczy lub statyczny. W takim przypadku pojedyncze lub statyczne `HttpClient` nie respektują zmian DNS, jak wyjaśniono w tym [problemie](https://github.com/dotnet/corefx/issues/11224) w repozytorium GitHub/corefx. 
+Jednak występuje drugi problem z `HttpClient`, który można mieć, gdy jest używany jako obiekt pojedynczy lub statyczny. W takim przypadku pojedyncze lub statyczne `HttpClient` nie respektują zmian DNS, jak wyjaśniono w tym [problemie](https://github.com/dotnet/corefx/issues/11224) w repozytorium GitHub/corefx.
 
 Aby rozwiązać wspomniane problemy i ułatwić zarządzanie wystąpieniami `HttpClient`, w środowisku .NET Core 2,1 wprowadzono nowy `HttpClientFactory`, który może być również używany do implementowania odpornych wywołań HTTP przez integrację z nią Polly.
 
@@ -35,6 +35,9 @@ Aby rozwiązać wspomniane problemy i ułatwić zarządzanie wystąpieniami `Htt
 - Codify koncepcji wychodzącego oprogramowania pośredniczącego przez delegowanie programów obsługi w `HttpClient` i implementowanie oprogramowania pośredniczącego opartego na Pollyach, aby wykorzystać zasady dotyczące odporności Polly.
 - `HttpClient` już ma koncepcję delegowania programów obsługi, które mogą być połączone ze sobą w przypadku wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
 - Zarządzaj okresem istnienia `HttpClientMessageHandlers`, aby uniknąć wspomnianych problemów i problemów, które mogą wystąpić podczas samodzielnego zarządzania `HttpClient` okresów istnienia.
+
+> [!NOTE]
+> `HttpClientFactory` jest ściśle powiązany z implementacją iniekcji zależności w pakiecie `Microsoft.Extensions.DependencyInjection` NuGet. Aby uzyskać więcej informacji na temat korzystania z innych kontenerów iniekcji zależności, zobacz tę [dyskusję](https://github.com/aspnet/Extensions/issues/1345)w witrynie GitHub.
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>Wiele sposobów używania HttpClientFactory
 
@@ -63,7 +66,7 @@ W następnym kodzie można zobaczyć, jak `AddHttpClient()` może służyć do r
 
 ```csharp
 // Startup.cs
-//Add http client services at ConfigureServices(IServiceCollection services) 
+//Add http client services at ConfigureServices(IServiceCollection services)
 services.AddHttpClient<ICatalogService, CatalogService>();
 services.AddHttpClient<IBasketService, BasketService>();
 services.AddHttpClient<IOrderingService, OrderingService>();
@@ -102,10 +105,10 @@ Za każdym razem, gdy otrzymujesz obiekt `HttpClient` z `IHttpClientFactory`, zo
 
 Buforowanie programów obsługi jest pożądane, ponieważ każdy program obsługi zazwyczaj zarządza własnymi połączeniami HTTP; Utworzenie większej liczby programów obsługi niż to konieczne może skutkować opóźnieniami połączeń. Niektóre programy obsługi powodują również, że połączenia są otwarte w nieskończoność, co może uniemożliwić obsłużenie zmian DNS przez program obsługi.
 
-@No__t_0 obiektów w puli ma okres istnienia równy czasowi, w którym można ponownie użyć wystąpienia `HttpMessageHandler` w puli. Wartość domyślna to dwie minuty, ale można ją przesłonić dla poszczególnych klientów. Aby zastąpić ten element, wywołaj `SetHandlerLifetime()` na `IHttpClientBuilder`, który jest zwracany podczas tworzenia klienta, jak pokazano w poniższym kodzie:
+`HttpMessageHandler` obiektów w puli ma okres istnienia równy czasowi, w którym można ponownie użyć wystąpienia `HttpMessageHandler` w puli. Wartość domyślna to dwie minuty, ale można ją przesłonić dla poszczególnych klientów. Aby zastąpić ten element, wywołaj `SetHandlerLifetime()` na `IHttpClientBuilder`, który jest zwracany podczas tworzenia klienta, jak pokazano w poniższym kodzie:
 
 ```csharp
-//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client 
+//Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
 services.AddHttpClient<ICatalogService, CatalogService>()
     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
 ```
@@ -127,10 +130,10 @@ public class CatalogService : ICatalogService
         _httpClient = httpClient;
     }
 
-    public async Task<Catalog> GetCatalogItems(int page, int take, 
+    public async Task<Catalog> GetCatalogItems(int page, int take,
                                                int? brand, int? type)
     {
-        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl, 
+        var uri = API.Catalog.GetAllCatalogItems(_remoteServiceBaseUrl,
                                                  page, take, brand, type);
 
         var responseString = await _httpClient.GetStringAsync(uri);
@@ -180,14 +183,17 @@ Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Używanie HttpClientFactory w programie .NET Core**  \
+- **Używanie HttpClientFactory w programie .NET Core**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **HttpClientFactory repozytorium GitHub**  \
+- **Kod źródłowy HttpClientFactory w repozytorium GitHub `aspnet/Extensions`**  
   <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
 
-- **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  \
+- **Polly (odporność platformy .NET i Biblioteka obsługi błędów przejściowych)**  
   <http://www.thepollyproject.org/>
+  
+- **Korzystanie z HttpClientFactory bez iniekcji zależności (problem z usługą GitHub)**  
+  <https://github.com/aspnet/Extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)

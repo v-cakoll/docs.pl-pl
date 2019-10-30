@@ -3,12 +3,12 @@ title: Komunikacja między usługami
 description: Dowiedz się, jak mikrousługi zaplecza w chmurze komunikują się z innymi mikrousługami zaplecza.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 0917ae8bf38b117619cec63411ea8f4f084ae6f2
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315865"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094624"
 ---
 # <a name="service-to-service-communication"></a>Komunikacja między usługami
 
@@ -60,13 +60,13 @@ Popularną opcją usunięcia sprzęgu mikrousług jest [wzorzec widoku materiał
 
 ### <a name="service-aggregator-pattern"></a>Wzorzec agregatora usług
 
-Kolejną opcją wyeliminowania mikrousług na mikrousługach jest mikrousługa [agregatora](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), pokazana w kolorze purpurowym na rysunku 4-10. 
+Kolejną opcją wyeliminowania mikrousług na mikrousługach jest mikrousługa [agregatora](https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), pokazana w kolorze purpurowym na rysunku 4-10.
 
 ![Usługa agregatora](./media/aggregator-service.png)
 
 **Rysunek 4-10**. Mikrousługa agregatora
 
-Wzorzec izoluje operację, która polega na wywołaniach do wielu mikrousług zaplecza, co pozwala na scentralizowanie jej logiki do wyspecjalizowanej mikrousługi.  Fioletowa funkcja agregatora wyewidencjonowania na poprzedniej ilustracji organizuje przepływ pracy dla operacji wyewidencjonowania. Obejmuje to wywołania kilku mikrousług zaplecza w kolejności sekwencyjnej. Dane z przepływu pracy są agregowane i zwracane do obiektu wywołującego. Mimo że nadal implementuje bezpośrednie wywołania protokołu HTTP, mikrousługa agregatora zmniejsza bezpośrednie zależności między mikrousługami zaplecza. 
+Wzorzec izoluje operację, która polega na wywołaniach do wielu mikrousług zaplecza, co pozwala na scentralizowanie jej logiki do wyspecjalizowanej mikrousługi.  Fioletowa funkcja agregatora wyewidencjonowania na poprzedniej ilustracji organizuje przepływ pracy dla operacji wyewidencjonowania. Obejmuje to wywołania kilku mikrousług zaplecza w kolejności sekwencyjnej. Dane z przepływu pracy są agregowane i zwracane do obiektu wywołującego. Mimo że nadal implementuje bezpośrednie wywołania protokołu HTTP, mikrousługa agregatora zmniejsza bezpośrednie zależności między mikrousługami zaplecza.
 
 ### <a name="requestreply-pattern"></a>Wzorzec żądania/odpowiedzi
 
@@ -80,7 +80,7 @@ W tym miejscu producent komunikatu tworzy komunikat oparty na zapytaniach zawier
 
 ## <a name="commands"></a>Polecenia
 
-Innym typem interakcji komunikacji jest *polecenie*. Mikrousługa może potrzebować innej mikrousługi do wykonania akcji. Mikrousługa porządkowania może potrzebować mikrousługi wysyłkowej w celu utworzenia wysyłki dla zatwierdzonej kolejności. Na rysunku 4-12 jedna mikrousługa, nazywana producentem, wysyła komunikat do innej mikrousługi, a konsument, polecenia, aby wykonać coś. 
+Innym typem interakcji komunikacji jest *polecenie*. Mikrousługa może potrzebować innej mikrousługi do wykonania akcji. Mikrousługa porządkowania może potrzebować mikrousługi wysyłkowej w celu utworzenia wysyłki dla zatwierdzonej kolejności. Na rysunku 4-12 jedna mikrousługa, nazywana producentem, wysyła komunikat do innej mikrousługi, a konsument, polecenia, aby wykonać coś.
 
 ![Interakcja z poleceniem z kolejką](./media/command-interaction-with-queue.png)
 
@@ -88,7 +88,7 @@ Innym typem interakcji komunikacji jest *polecenie*. Mikrousługa może potrzebo
 
 Najczęściej producenci nie wymagają odpowiedzi i mogą ją *uruchamiać i zapominać* . Jeśli wymagana jest odpowiedź, odbiorca wysyła oddzielny komunikat z powrotem do producenta w innym kanale. Komunikat polecenia jest najlepiej wysyłany asynchronicznie z kolejką komunikatów. obsługiwane przez uproszczony Broker komunikatów. Na poprzednim diagramie należy zwrócić uwagę, jak Kolejka oddzieli i oddziela obie usługi.
 
-Kolejka komunikatów to pośrednik pośredniczący, za pomocą którego producent i odbiorca przekazują komunikat. Kolejki implementują wzorzec komunikatów typu punkt-punkt. Producent wie, gdzie należy odpowiednio wysłać polecenie i trasy. Kolejka gwarantuje, że komunikat jest przetwarzany dokładnie jednym z wystąpień konsumenta odczytywanych z kanału. W tym scenariuszu Usługa producent lub konsument może skalować w poziomie bez wpływu na inne. Technologie te mogą być również różne po obu stronach, co oznacza, że firma Microsoft może korzystać z mikrousługi w języku Java wywołującej mikrousługę [golang](https://golang.org) . 
+Kolejka komunikatów to pośrednik pośredniczący, za pomocą którego producent i odbiorca przekazują komunikat. Kolejki implementują wzorzec komunikatów typu punkt-punkt. Producent wie, gdzie należy odpowiednio wysłać polecenie i trasy. Kolejka gwarantuje, że komunikat jest przetwarzany dokładnie jednym z wystąpień konsumenta odczytywanych z kanału. W tym scenariuszu Usługa producent lub konsument może skalować w poziomie bez wpływu na inne. Technologie te mogą być również różne po obu stronach, co oznacza, że firma Microsoft może korzystać z mikrousługi w języku Java wywołującej mikrousługę [golang](https://golang.org) .
 
 W rozdziale 1 zostały omówione *usługi zapasowe*. Usługi zapasowe są zasobami dodatkowymi, na których zależą systemy natywne w chmurze. Kolejki komunikatów to usługi zapasowe. Chmura systemu Azure obsługuje dwa typy kolejek komunikatów, których systemy natywne w chmurze mogą wykorzystać do implementacji komunikatów poleceń: kolejki usługi Azure Storage i kolejki Azure Service Bus.
 
@@ -116,7 +116,7 @@ Rysunek 4-13 przedstawia hierarchię kolejki usługi Azure Storage.
 
 Na poprzedniej ilustracji Zauważ, jak kolejki magazynu przechowują swoje wiadomości na podstawowym koncie usługi Azure Storage.
 
-W przypadku deweloperów firma Microsoft udostępnia kilka bibliotek po stronie klienta i serwera na potrzeby przetwarzania kolejki magazynu. Obsługiwane są większość najważniejszych platform, w tym .NET, Java, JavaScript, Ruby, Python i go. Deweloperzy nigdy nie muszą komunikować się bezpośrednio z tymi bibliotekami. Spowoduje to ścisłe przełączenie kodu mikrousług do usługa kolejki usługi Azure Storage. Lepszym rozwiązaniem jest izolowanie szczegółów implementacji interfejsu API. Wprowadzenie do warstwy biokorekty lub pośredniego interfejsu API, który uwidacznia operacje ogólne i hermetyzuje konkretną bibliotekę. Ten luźny sprzężenie umożliwia zamianę jednej usługi kolejkowania na inną bez konieczności wprowadzania zmian w kodzie usługi linii głównej. 
+W przypadku deweloperów firma Microsoft udostępnia kilka bibliotek po stronie klienta i serwera na potrzeby przetwarzania kolejki magazynu. Obsługiwane są większość najważniejszych platform, w tym .NET, Java, JavaScript, Ruby, Python i go. Deweloperzy nigdy nie muszą komunikować się bezpośrednio z tymi bibliotekami. Spowoduje to ścisłe przełączenie kodu mikrousług do usługa kolejki usługi Azure Storage. Lepszym rozwiązaniem jest izolowanie szczegółów implementacji interfejsu API. Wprowadzenie do warstwy biokorekty lub pośredniego interfejsu API, który uwidacznia operacje ogólne i hermetyzuje konkretną bibliotekę. Ten luźny sprzężenie umożliwia zamianę jednej usługi kolejkowania na inną bez konieczności wprowadzania zmian w kodzie usługi linii głównej.
 
 Kolejki usługi Azure Storage to ekonomiczne rozwiązanie do implementowania komunikatów poleceń w aplikacjach natywnych w chmurze. Szczególnie w przypadku, gdy rozmiar kolejki przekroczy 80 GB lub jest akceptowalny prosty zestaw funkcji. Płacisz tylko za magazyn komunikatów; nie są naliczane żadne opłaty godzinowe.
 
@@ -146,9 +146,9 @@ Na poprzedniej ilustracji należy zwrócić uwagę na relację punkt-punkt. Dwa 
 
 ## <a name="events"></a>Zdarzenia
 
-Usługa kolejkowania komunikatów jest efektywnym sposobem na wdrożenie komunikacji, w której producent może asynchronicznie wysyłać do niego wiadomość. Jednak co się stanie, gdy *wielu różnych konsumentów* interesuje ten sam komunikat? Dedykowana kolejka komunikatów dla każdego konsumenta nie będzie dobrze skalowana i utrudnia zarządzanie nimi. 
+Usługa kolejkowania komunikatów jest efektywnym sposobem na wdrożenie komunikacji, w której producent może asynchronicznie wysyłać do niego wiadomość. Jednak co się stanie, gdy *wielu różnych konsumentów* interesuje ten sam komunikat? Dedykowana kolejka komunikatów dla każdego konsumenta nie będzie dobrze skalowana i utrudnia zarządzanie nimi.
 
-Aby rozwiązać ten scenariusz, przejdziemy do innego typu interakcji z komunikatem, *zdarzenie*. Jedna mikrousług ogłasza, że wystąpiła akcja. Inne mikrousługi, jeśli są zainteresowane, reagują na działanie lub zdarzenie. 
+Aby rozwiązać ten scenariusz, przejdziemy do innego typu interakcji z komunikatem, *zdarzenie*. Jedna mikrousług ogłasza, że wystąpiła akcja. Inne mikrousługi, jeśli są zainteresowane, reagują na działanie lub zdarzenie.
 
 Tworzenie zdarzeń jest procesem dwuetapowym. Dla danej zmiany stanu mikrousługa publikuje zdarzenie w brokerze komunikatów, udostępniając go innym zainteresowanym mikrousługom. Zainteresowana mikrousługa jest powiadamiana przez zasubskrybowanie zdarzenia w brokerze komunikatów. Wzorzec [publikowania/subskrybowania](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber) służy do implementowania [komunikacji opartej na zdarzeniach](https://docs.microsoft.com/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications).
 
@@ -226,7 +226,7 @@ Event Hubs implementuje przesyłanie strumieniowe komunikatów za pomocą [party
 
 **Rysunek 4-19**. Partycjonowanie centrum zdarzeń
 
-Zamiast odczytywania z tego samego zasobu, każda grupa odbiorców odczytuje między podzbiorem lub partycją strumienia komunikatów. 
+Zamiast odczytywania z tego samego zasobu, każda grupa odbiorców odczytuje między podzbiorem lub partycją strumienia komunikatów.
 
 W przypadku aplikacji natywnych w chmurze, które muszą przesyłać strumieniowo dużą liczbę zdarzeń, usługa Azure Event Hub może być niezawodna i niedrogie rozwiązanie.
 

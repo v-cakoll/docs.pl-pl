@@ -2,12 +2,12 @@
 title: Modyfikowanie generowania kodu SQL
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 94b6c3c97e8255db2dc4d72bae6c6c12905d9710
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b6c1b71effba17d33c035d0f1df386bf56d405b5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854289"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039897"
 ---
 # <a name="modification-sql-generation"></a>Modyfikowanie generowania kodu SQL
 
@@ -29,7 +29,7 @@ DbModificationCommandTree to reprezentacja modelu obiektów przez operację mody
 
 DbModificationCommandTree i jego implementacje, które są tworzone przez Entity Framework zawsze reprezentują pojedynczy wiersz operacji. W tej sekcji opisano te typy z ograniczeniami w .NET Framework w wersji 3,5.
 
-![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![4b](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
 DbModificationCommandTree ma właściwość docelową, która reprezentuje zestaw docelowy dla operacji modyfikacji. Właściwość wyrażenia elementu docelowego, która definiuje zestaw danych wejściowych, jest zawsze DbScanExpression.  DbScanExpression może reprezentować tabelę lub widok lub zestaw danych zdefiniowany za pomocą zapytania, jeśli właściwość metadanych "definiujące zapytanie" jego obiektu docelowego jest inna niż null.
 
@@ -62,9 +62,7 @@ Wartość zwracana określa rzutowanie wyników do zwrócenia na podstawie wstaw
 
 Setklauzule określa listę klauzul INSERT lub Update Set definiujących operację INSERT lub Update.
 
-```
-The elements of the list are specified as type DbModificationClause, which specifies a single clause in an insert or update modification operation. DbSetClause inherits from DbModificationClause and specifies the clause in a modification operation that sets the value of a property. Beginning in version 3.5 of the .NET Framework, all elements in SetClauses are of type SetClause.
-```
+Elementy listy są określone jako typ DbModificationClause, który określa pojedynczą klauzulę w operacji INSERT lub modyfikacji Update. DbSetClause dziedziczy z DbModificationClause i określa klauzulę w operacji modyfikacji, która ustawia wartość właściwości. Począwszy od wersji 3,5 .NET Framework, wszystkie elementy w klauzulach setklauzule są typu setklauzuli.
 
 Właściwość określa właściwość, która ma zostać zaktualizowana. Zawsze jest to DbPropertyExpression w DbVariableReferenceExpression, który reprezentuje odwołanie do elementu docelowego odpowiedniego DbModificationCommandTree.
 
@@ -82,11 +80,11 @@ Predykat określa predykat używany do określenia, które elementy członkowski
 
 - DbPropertyExpression nad DbVariableReferenceExpression reprezentującą odwołanie do elementu docelowego odpowiedniego DbModificationCommandTree.
 
-- DbAndExpression
+- Metoda DbAndExpression
 
-- DbNotExpression
+- Obiekt DbNotExpression
 
-- DbOrExpression
+- Obiekt DbOrExpression
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Modyfikowanie generowania kodu SQL w przykładowym dostawcy
 
@@ -100,7 +98,7 @@ ExpressionTranslator służy jako wspólny lekki Translator dla wszystkich wła�
 
 Poniższe informacje omawiają odwiedzanie określonych typów wyrażeń (węzły z prostymi tłumaczeniami są pomijane).
 
-### <a name="dbcomparisonexpression"></a>DbComparisonExpression
+### <a name="dbcomparisonexpression"></a>Obiekt DbComparisonExpression
 
 Gdy ExpressionTranslator jest konstruowany przy użyciu preserveMemberValues = true, a gdy stała z prawej strony jest DbConstantExpression (zamiast DbNullExpression), kojarzy z lewym operandem (DbPropertyExpressions) DbConstantExpression. Jest używany, jeśli instrukcja return SELECT musi zostać wygenerowana, aby zidentyfikować odnośny wiersz.
 
@@ -116,7 +114,7 @@ Ponieważ wystąpienie elementu DbPropertyExpression zawsze reprezentuje tabelę
 
 W przypadku danego DbInsertCommandTree w dostawcy przykładowym wygenerowanym poleceniem INSERT następuje jeden z dwóch szablonów wstawiania poniżej.
 
-Pierwszy szablon zawiera polecenie do wykonania Wstaw dane wartości z listy setklauzuls i instrukcji SELECT do zwracania właściwości określonych we właściwości return dla wstawionego wiersza, jeśli właściwość zwracająca wartość nie jest równa null. Element predykatu "\@ @ROWCOUNT > 0" ma wartość true, jeśli wiersz został wstawiony. Element predykatu "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" przyjmuje kształt "keyMemberI = SCOPE_IDENTITY ()" tylko wtedy, gdy keyMemberI jest kluczem wygenerowanym przez magazyn, ponieważ SCOPE_IDENTITY () zwraca ostatnią wartość tożsamości wstawioną do tożsamości ( kolumna wygenerowana przez magazyn).
+Pierwszy szablon zawiera polecenie do wykonania Wstaw dane wartości z listy setklauzuls i instrukcji SELECT do zwracania właściwości określonych we właściwości return dla wstawionego wiersza, jeśli właściwość zwracająca wartość nie jest równa null. Element predykatu "\@@ROWCOUNT > 0" ma wartość true, jeśli wiersz został wstawiony. Element predykatu "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" przyjmuje kształt "keyMemberI = SCOPE_IDENTITY ()" tylko wtedy, gdy keyMemberI jest kluczem wygenerowanym przez magazyn, ponieważ SCOPE_IDENTITY () zwraca ostatnią wartość tożsamości wstawioną do tożsamości ( kolumna wygenerowana przez magazyn).
 
 ```sql
 -- first insert Template
@@ -160,7 +158,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Ten kod tworzy następujące drzewo poleceń, które jest przesyłane do dostawcy:
 
-```
+```output
 DbInsertCommandTree
 |_Parameters
 |_Target : 'target'
@@ -212,7 +210,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-Klauzula SET ma fałszywą klauzulę Set ("@i = 0") tylko wtedy, gdy nie określono żadnych klauzul Set. Ma to na celu upewnienie się, że wszystkie kolumny obliczane przez magazyn są ponownie obliczane.
+Klauzula SET ma zainstalowaną klauzulę "@i = 0") tylko wtedy, gdy nie określono żadnych klauzul Set. Ma to na celu upewnienie się, że wszystkie kolumny obliczane przez magazyn są ponownie obliczane.
 
 Tylko wtedy, gdy właściwość zwracająca nie ma wartości null, generowana jest instrukcja SELECT zwracająca właściwości określone we właściwości zwracanej.
 
@@ -230,7 +228,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Ten kod użytkownika generuje następujące drzewo poleceń, które jest przesyłane do dostawcy:
 
-```
+```output
 DbUpdateCommandTree
 |_Parameters
 |_Target : 'target'
@@ -281,7 +279,7 @@ using (NorthwindEntities northwindContext = new NorthwindEntities()) {
 
 Ten kod użytkownika generuje następujące drzewo poleceń, które jest przesyłane do dostawcy.
 
-```
+```output
 DbDeleteCommandTree
 |_Parameters
 |_Target : 'target'

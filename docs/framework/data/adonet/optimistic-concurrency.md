@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794683"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039817"
 ---
 # <a name="optimistic-concurrency"></a>Optymistyczna współbieżność
-W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie danych: optymistyczne współbieżność i pesymistyczne współbieżności. <xref:System.Data.DataSet> Obiekt został zaprojektowany, aby zachęcić do korzystania z optymistycznej współbieżności dla długotrwałych działań, takich jak dane dotyczące komunikacji zdalnej i manipulowania danymi.  
+W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie danych: optymistyczne współbieżność i pesymistyczne współbieżności. Obiekt <xref:System.Data.DataSet> został zaprojektowany, aby zachęcić do użycia optymistycznej współbieżności dla długotrwałych działań, takich jak dane dotyczące komunikacji zdalnej i manipulowania danymi.  
   
  Współbieżność pesymistyczna polega na zablokowaniu wierszy w źródle danych, aby uniemożliwić innym użytkownikom modyfikowanie danych w taki sposób, który ma wpływ na bieżącego użytkownika. W modelu pesymistycznym, gdy użytkownik wykonuje akcję, która powoduje stosowanie blokady, inni użytkownicy nie mogą wykonać akcji, które mogłyby spowodować konflikt z blokadą do momentu jego zwolnienia przez właściciela. Ten model jest używany głównie w środowiskach, w których istnieje intensywna rywalizacja o dane, dzięki czemu koszt ochrony danych z blokadami jest niższy niż koszt wycofywania transakcji w przypadku wystąpienia konfliktów współbieżności.  
   
@@ -37,8 +37,8 @@ W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nazwisk|Nazwisk|Nazwisk|  
-|FirstName|Bob|Bob|Bob|  
+|Nazwisko|Nazwisk|Nazwisk|Nazwisk|  
+|Imię|Wiadomość|Wiadomość|Wiadomość|  
   
  O godzinie 1:01, 13:00 odczytuje ten sam wiersz.  
   
@@ -47,8 +47,8 @@ W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nazwisk|Nazwisk|Nazwisk|  
-|FirstName|Bob|Robert|Bob|  
+|Nazwisko|Nazwisk|Nazwisk|Nazwisk|  
+|Imię|Wiadomość|Robert|Wiadomość|  
   
  Aktualizacja powiedzie się, ponieważ wartości w bazie danych w czasie aktualizacji pasują do oryginalnych wartości, które mają wartość od.  
   
@@ -57,8 +57,8 @@ W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie
 |Nazwa kolumny|Oryginalna wartość|Bieżąca wartość|Wartość w bazie danych|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Nazwisk|Nazwisk|Nazwisk|  
-|FirstName|Bob|Tomasz|Robert|  
+|Nazwisko|Nazwisk|Nazwisk|Nazwisk|  
+|Imię|Wiadomość|Tomasz|Robert|  
   
  W tym momencie Użytkownik1 napotyka optymistyczne naruszenie współbieżności, ponieważ wartość w bazie danych ("Robert") nie jest już zgodna z oryginalną wartością oczekiwaną przez Użytkownik1 ("Robert"). Naruszenie współbieżności pozwala stwierdzić, że aktualizacja nie powiodła się. Należy teraz podjąć decyzję, czy zastąpić zmiany wprowadzone przez użytkownika, wprowadzając zmiany podane przez Użytkownik1, lub aby anulować zmiany przez Użytkownik1.  
   
@@ -67,13 +67,13 @@ W środowisku wielodostępnym istnieją dwa modele aktualizowania danych w bazie
   
  Inna technika testowania dla optymistycznego naruszenia współbieżności polega na sprawdzeniu, czy wszystkie oryginalne wartości kolumn w wierszu nadal pasują do nazw znalezionych w bazie danych. Rozważmy na przykład następujące zapytanie:  
   
-```  
+```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
  Aby sprawdzić optymistyczne naruszenie współbieżności podczas aktualizowania wiersza w tabeli **Tabela1**, należy wydać następującą instrukcję AKTUALIZUJĄCĄ:  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
               Set Col2 = @NewCol2Value,  
               Set Col3 = @NewCol3Value  
@@ -88,7 +88,7 @@ WHERE Col1 = @OldCol1Value AND
   
  Jeśli kolumna w źródle danych dopuszcza wartości null, może być konieczne przeciągnięcie klauzuli WHERE, aby sprawdzić pasujące odwołanie o wartości null w lokalnej tabeli i w źródle danych. Na przykład następująca instrukcja UPDATE sprawdza, czy odwołanie o wartości null w wierszu lokalnym nadal pasuje do odwołania o wartości null w źródle danych lub czy wartość w wierszu lokalnym nadal pasuje do wartości w źródle danych.  
   
-```  
+```sql
 UPDATE Table1 Set Col1 = @NewVal1  
   WHERE (@OldVal1 IS NULL AND Col1 IS NULL) OR Col1 = @OldVal1  
 ```  
@@ -96,7 +96,7 @@ UPDATE Table1 Set Col1 = @NewVal1
  Można również zastosować mniej restrykcyjne kryteria przy użyciu optymistycznego modelu współbieżności. Na przykład użycie tylko kolumn klucza podstawowego w klauzuli WHERE powoduje zastąpienie danych bez względu na to, czy inne kolumny zostały zaktualizowane od czasu ostatniego zapytania. Można również zastosować klauzulę WHERE tylko do określonych kolumn, co spowoduje zastąpienie danych, chyba że określone pola zostały zaktualizowane od czasu ostatniego zapytania.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Zdarzenie DataAdapter. RowUpdated  
- Zdarzenie<xref:System.Data.Common.DataAdapter> **RowUpdated** obiektu może być używane w połączeniu z opisanymi wcześniej technikami w celu dostarczenia powiadomienia do aplikacji optymistyczne naruszenia współbieżności. **RowUpdated** występuje po każdej próbie zaktualizowania **zmodyfikowanego** wiersza z **zestawu danych**. Dzięki temu można dodać specjalny kod obsługi, w tym przetwarzanie w przypadku wystąpienia wyjątku, dodanie niestandardowych informacji o błędzie, dodanie logiki ponawiania i tak dalej. Obiekt zwraca Właściwość RecordsAffected zawierającą liczbę wierszy, na które miało wpływ określone polecenie Update dla zmodyfikowanego wiersza w tabeli. <xref:System.Data.Common.RowUpdatedEventArgs> Ustawiając polecenie Update do testowania optymistycznej współbieżności, właściwość **RecordsAffected** będzie w efekcie zwracać wartość 0 w przypadku wystąpienia naruszenia optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. W takim przypadku zostanie zgłoszony wyjątek. Zdarzenie **RowUpdated** umożliwia obsługę tego wystąpienia i uniknięcie wyjątku przez ustawienie odpowiedniej wartości **RowUpdatedEventArgs. status** , takiej jak **UpdateStatus. SkipCurrentRow**. Aby uzyskać więcej informacji o zdarzeniu **RowUpdated** , zobacz [Obsługa zdarzeń DataAdapter](handling-dataadapter-events.md).  
+ Zdarzenie **RowUpdated** obiektu <xref:System.Data.Common.DataAdapter> może być używane w połączeniu z opisanymi wcześniej technikami w celu dostarczenia powiadomienia do aplikacji optymistycznych naruszeń współbieżności. **RowUpdated** występuje po każdej próbie zaktualizowania **zmodyfikowanego** wiersza z **zestawu danych**. Dzięki temu można dodać specjalny kod obsługi, w tym przetwarzanie w przypadku wystąpienia wyjątku, dodanie niestandardowych informacji o błędzie, dodanie logiki ponawiania i tak dalej. Obiekt <xref:System.Data.Common.RowUpdatedEventArgs> zwraca właściwość **RecordsAffected** zawierającą liczbę wierszy, na które miało wpływ określone polecenie Update dla zmodyfikowanego wiersza w tabeli. Ustawiając polecenie Update do testowania optymistycznej współbieżności, właściwość **RecordsAffected** będzie w efekcie zwracać wartość 0 w przypadku wystąpienia naruszenia optymistycznej współbieżności, ponieważ żadne rekordy nie zostały zaktualizowane. W takim przypadku zostanie zgłoszony wyjątek. Zdarzenie **RowUpdated** umożliwia obsługę tego wystąpienia i uniknięcie wyjątku przez ustawienie odpowiedniej wartości **RowUpdatedEventArgs. status** , takiej jak **UpdateStatus. SkipCurrentRow**. Aby uzyskać więcej informacji o zdarzeniu **RowUpdated** , zobacz [Obsługa zdarzeń DataAdapter](handling-dataadapter-events.md).  
   
  Opcjonalnie można ustawić **Właściwość DataAdapter. ContinueUpdateOnError** na **wartość true**, przed wywołaniem funkcji **Update**, a następnie odpowiedzieć na informacje o błędzie przechowywane we właściwości **RowError** określonego wiersza po zakończeniu **aktualizacji** . Aby uzyskać więcej informacji, zobacz [wiersz informacje o błędzie](./dataset-datatable-dataview/row-error-information.md).  
   

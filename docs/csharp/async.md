@@ -3,14 +3,15 @@ title: Programowanie asynchroniczne —C#
 description: Dowiedz się C# więcej o modelu programowania asynchronicznego na poziomie języka udostępnianym przez platformę .NET Core.
 author: cartermp
 ms.date: 06/20/2016
+ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: 246046fb5ac9b0c03df7df71ef426dc2ac6f0617
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168811"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037684"
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
@@ -20,17 +21,17 @@ C#ma model programowania asynchronicznego na poziomie języka, który umożliwia
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Podstawowe omówienie modelu asynchronicznego
 
-Podstawowym programowaniem asynchronicznym są `Task` obiekty i `Task<T>` , które modelują operacje asynchroniczne.  Są one obsługiwane przez `async` słowa kluczowe i. `await`  Model jest dość prosty w większości przypadków:
+Podstawowym programowaniem asynchronicznym są obiekty `Task` i `Task<T>`, które są modelami operacji asynchronicznych.  Są one obsługiwane przez `async` i `await` słowa kluczowe.  Model jest dość prosty w większości przypadków:
 
-Dla kodu powiązanego we/wy `await` jest operacją, która `Task` zwraca lub `Task<T>` wewnątrz `async` metody.
+W przypadku kodu powiązanego we/wy `await` operacji zwracającej `Task` lub `Task<T>` wewnątrz metody `async`.
 
-W przypadku kodu `await` powiązanego z procesorem operacja uruchamiana w wątku w tle `Task.Run` za pomocą metody.
+W przypadku kodu powiązanego z PROCESORem `await` operacji, która jest uruchamiana w wątku w tle z metodą `Task.Run`.
 
-`await` Słowo kluczowe to miejsce, w którym występuje magiczna. Zwraca kontrolę do obiektu wywołującego metody, która została wykonana `await`, i ostatecznie umożliwia interfejsowi użytkownika reagowanie lub na elastyczność usługi.
+Słowo kluczowe `await` to miejsce, w którym występuje magiczna. Zwraca kontrolę do obiektu wywołującego metody, która została wykonana `await`, i ostatecznie pozwala na reagowanie interfejsu użytkownika lub na usługę elastyczną.
 
-Istnieją inne sposoby podejścia do kodu asynchronicznego niż `async` `await` opisano w artykule TAP połączonym powyżej, ale ten dokument koncentruje się na konstrukcjach poziomu języka od tego momentu.
+Istnieją inne sposoby podejścia do kodu asynchronicznego niż `async` i `await` opisane w artykule TAP połączonym powyżej, ale ten dokument będzie skoncentrowane na konstrukcjach poziomu języka od tego momentu.
 
-### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Przykład z ograniczeniami we/wy: Pobieranie danych z usługi sieci Web
+### <a name="io-bound-example-downloading-data-from-a-web-service"></a>Przykład powiązania we/wy: pobieranie danych z usługi sieci Web
 
 Może być konieczne pobranie niektórych danych z usługi sieci Web po naciśnięciu przycisku, ale nie chcesz blokować wątku interfejsu użytkownika. Można to zrobić w następujący sposób:
 
@@ -50,11 +51,11 @@ downloadButton.Clicked += async (o, e) =>
 
 I to wszystko! Kod wyraża zamiar (trwa pobieranie danych asynchronicznie) bez pobierania ugrzęźnięcia z obiektów zadań.
 
-### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Przykład związany z PROCESORem: Wykonywanie obliczeń dla gry
+### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>Przykład związany z PROCESORem: wykonywanie obliczeń dla gry
 
 Załóżmy, że nastąpi napisanie gry mobilnej, gdzie naciśnięcie przycisku może spowodować uszkodzenie wielu Enemies na ekranie.  Wykonywanie obliczeń uszkodzeń może być kosztowne, a wykonanie tej operacji w wątku interfejsu użytkownika spowoduje, że gra zostanie wstrzymana w miarę wykonywania obliczeń.
 
-Najlepszym sposobem obsługi tego jest uruchomienie wątku w tle, który wykonuje pracę przy użyciu `Task.Run`i `await` jego wynik.  Dzięki temu interfejs użytkownika może być niezakłócony podczas wykonywania pracy.
+Najlepszym sposobem obsługi tego jest uruchomienie wątku w tle, który wykonuje pracę przy użyciu `Task.Run`i `await` jego wyniku.  Dzięki temu interfejs użytkownika może być niezakłócony podczas wykonywania pracy.
 
 ```csharp
 private DamageResult CalculateDamageDone()
@@ -78,23 +79,23 @@ I to wszystko!  Ten kod czyści przeznaczenie zdarzenia kliknięcia przycisku, n
 
 ### <a name="what-happens-under-the-covers"></a>Co się dzieje w obszarze okładek
 
-Istnieje wiele elementów, w których dane są wykonywane asynchronicznie.  Jeśli chcesz wiedzieć się o to `Task` [](../standard/async-in-depth.md) `Task<T>`, co się dzieje poniżej, zapoznaj się z nim, aby uzyskać więcej informacji.
+Istnieje wiele elementów, w których dane są wykonywane asynchronicznie.  Jeśli chcesz wiedzieć się o to `Task<T>``Task`, co się dzieje poniżej [, zapoznaj](../standard/async-in-depth.md) się z informacjami o tym, co się stało, aby uzyskać więcej informacji.
 
-Po C# stronie elementów kompilator przekształca kod na maszynę stanu, która śledzi elementy, takie jak wykonywanie operacji, gdy `await` zostanie osiągnięty i wznowiono wykonywanie po zakończeniu zadania w tle.
+Po C# stronie elementów kompilator przekształca kod na maszynę stanu, która śledzi elementy, takie jak wykonywanie operacji, gdy`await`zostanie osiągnięty, i wznowić wykonywanie po zakończeniu zadania w tle.
 
 Dla teoretycznie nachylonego elementu jest to implementacja [modelu Promise asynchroniczności](https://en.wikipedia.org/wiki/Futures_and_promises).
 
 ## <a name="key-pieces-to-understand"></a>Najważniejsze elementy do zrozumienia
 
 * Kod asynchroniczny może być używany zarówno dla kodu powiązanego we/wy, jak i związanego z PROCESORem, ale różnią się w zależności od każdego scenariusza.
-* Kod asynchroniczny `Task<T>` używa `Task`i, które są konstrukcjami używanymi do modelowania pracy wykonywanej w tle.
-* Słowo kluczowe zamienia metodę na metodę asynchroniczną, która umożliwia `await` użycie słowa kluczowego w treści. `async`
-* `await` Gdy słowo kluczowe jest stosowane, wstrzymuje metodę wywołującą i zwraca kontrolę do jej obiektu wywołującego do momentu ukończenia zadania.
-* `await`można go używać tylko wewnątrz metody asynchronicznej.
+* Kod asynchroniczny używa `Task<T>` i `Task`, które są konstrukcjami używanymi do modelowania pracy wykonywanej w tle.
+* Słowo kluczowe `async` przekształca metodę w metodę asynchroniczną, która umożliwia użycie słowa kluczowego `await` w treści.
+* Po zastosowaniu słowa kluczowego `await` wstrzymuje metodę wywołującą i przekazuje kontrolę do obiektu wywołującego do momentu ukończenia zadania.
+* `await` można używać tylko wewnątrz metody asynchronicznej.
 
 ## <a name="recognize-cpu-bound-and-io-bound-work"></a>Rozpoznawanie pracy powiązanej z PROCESORem i operacji we/wy
 
-Pierwsze dwa przykłady tego przewodnika pokazują, jak można korzystać `async` z programu oraz `await` w przypadku pracy związanej we/wy i związanej z procesorem.  Jest to klucz, który można określić, gdy zadanie, które należy wykonać, jest powiązane z elementem we/wy lub PROCESORem, ponieważ może znacznie wpływać na wydajność kodu i potencjalnie spowodować błędne użycie niektórych konstrukcji.
+W pierwszych dwóch przykładach tego przewodnika pokazano, jak używać `async` i `await` w przypadku pracy związanej ze współdziałaniem i z PROCESORem.  Jest to klucz, który można określić, gdy zadanie, które należy wykonać, jest powiązane z elementem we/wy lub PROCESORem, ponieważ może znacznie wpływać na wydajność kodu i potencjalnie spowodować błędne użycie niektórych konstrukcji.
 
 Poniżej przedstawiono dwa pytania, które należy zadać przed pisaniem dowolnego kodu:
 
@@ -106,9 +107,9 @@ Poniżej przedstawiono dwa pytania, które należy zadać przed pisaniem dowolne
 
     Jeśli otrzymasz odpowiedź "tak", Twoja służba jest **powiązana z procesorem**.
 
-Jeśli posiadana pracy jest **związana z we/wy**, użyj `async` `await` i *bez* `Task.Run`.  *Nie należy* używać biblioteki zadań równoległych.  Przyczynę tego problemu opisano w [artykule](../standard/async-in-depth.md)dotyczącym kompleksów.
+Jeśli osiągnięta jest **powiązana z nią funkcja we/wy**, użyj `async` i `await` *bez* `Task.Run`.  *Nie należy* używać biblioteki zadań równoległych.  Przyczynę tego problemu opisano w artykule dotyczącym [kompleksów](../standard/async-in-depth.md).
 
-Jeśli praca, którą dysponujesz, jest zależna od **procesora** i masz informacje o czasie `async` reakcji `await` , użyj i ale Powiąż ją z innym wątkiem *z* `Task.Run`.  Jeśli prace są odpowiednie dla współbieżności i równoległości, należy również rozważyć użycie [biblioteki zadań równoległych](../standard/parallel-programming/task-parallel-library-tpl.md).
+Jeśli posiadana praca jest **zależna od procesora** i masz informacje o czasie reakcji, użyj `async` i `await` ale należy zduplikować działanie w innym wątku *przy użyciu* `Task.Run`.  Jeśli prace są odpowiednie dla współbieżności i równoległości, należy również rozważyć użycie [biblioteki zadań równoległych](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Dodatkowo należy zawsze mierzyć wykonywanie kodu.  Można na przykład wyszukać siebie w sytuacji, w której ilość pracy związanej z PROCESORem jest zbyt mała w porównaniu z kosztami przełączeń kontekstu w przypadku wielowątkowości.  Każdy wybór ma swoje wady i należy wybrać odpowiednią kompromis dla danej sytuacji.
 
@@ -168,9 +169,9 @@ private async void SeeTheDotNets_Click(object sender, RoutedEventArgs e)
 
 ### <a name="waiting-for-multiple-tasks-to-complete"></a>Oczekiwanie na zakończenie wielu zadań
 
-Możesz się zastanowić w sytuacji, w której konieczne jest pobranie wielu danych jednocześnie.  Interfejs API zawiera dwie metody `Task.WhenAny` , `Task.WhenAll` które pozwalają pisać kod asynchroniczny, który wykonuje operację nieblokującą w przypadku wielu zadań w tle. `Task`
+Możesz się zastanowić w sytuacji, w której konieczne jest pobranie wielu danych jednocześnie.  Interfejs API `Task` zawiera dwie metody, `Task.WhenAll` i `Task.WhenAny`, które umożliwiają pisanie kodu asynchronicznego, który wykonuje operację nieblokującą w przypadku wielu zadań w tle.
 
-Ten przykład pokazuje, jak można `User` pobrać dane dla `userId`zestawu s.
+Ten przykład pokazuje, jak można uzyskać `User` danych dla zestawu `userId`s.
 
 ```csharp
 public async Task<User> GetUserAsync(int userId)
@@ -212,27 +213,27 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 }
 ```
 
-Chociaż nie jest to mniej kodu, weź pod uwagę podczas mieszania LINQ z kodem asynchronicznym.  Ponieważ LINQ korzysta z odroczonego (opóźnionego) wykonywania, wywołania asynchroniczne nie będą wykonywane natychmiast, dopóki nie `foreach()` wymusisz wygenerowania sekwencji iteracji z `.ToList()` wywołaniem lub `.ToArray()`.
+Chociaż nie jest to mniej kodu, weź pod uwagę podczas mieszania LINQ z kodem asynchronicznym.  Ponieważ LINQ korzysta z odroczonego (opóźnionego) wykonywania, wywołania asynchroniczne nie będą wykonywane natychmiast, gdy wykonują pętlę `foreach()`, chyba że wygenerowała sekwencja nie będzie mogła wykonać iteracji w wywołaniu `.ToList()` lub `.ToArray()`.
 
 ## <a name="important-info-and-advice"></a>Ważne informacje i porady
 
 Chociaż programowanie asynchroniczne jest stosunkowo proste, istnieją pewne szczegółowe informacje, które mogą uniemożliwić nieoczekiwane zachowanie.
 
-* `async`**metody muszą mieć** **słowo kluczowe w swojej treści lub nigdy nie da!** `await`
+* **metody `async` muszą mieć** **słowo kluczowe `await` w swojej treści lub nigdy nie będą one dostępne!**
 
-Jest to ważne, aby mieć świadomość.  Jeśli `await` nie jest używany w treści `async` metody, C# kompilator generuje ostrzeżenie, ale kod zostanie skompilowany i uruchomiony tak, jakby był normalną metodą.  Należy zauważyć, że może to również być niezwykle niewydajne, ponieważ komputer stanu wygenerowany przez C# kompilator dla metody asynchronicznej nie będzie wykonywać żadnych czynności.
+Jest to ważne, aby mieć świadomość.  Jeśli `await` nie jest używany w treści metody `async`, C# kompilator generuje ostrzeżenie, ale kod zostanie skompilowany i uruchomiony tak, jakby był normalną metodą.  Należy zauważyć, że może to również być niezwykle niewydajne, ponieważ komputer stanu wygenerowany przez C# kompilator dla metody asynchronicznej nie będzie wykonywać żadnych czynności.
 
 * **Należy dodać "Async" jako sufiks każdej zapisywanych nazw metod asynchronicznych.**
 
 Jest to Konwencja używana w programie .NET do łatwiejszego odróżnienia metod synchronicznych i asynchronicznych. Należy zauważyć, że niektóre metody, które nie są jawnie wywoływane przez kod (takie jak procedury obsługi zdarzeń lub metody kontrolera sieci Web), nie muszą być stosowane. Ponieważ nie są one jawnie wywoływane przez kod, jawny opis jego nazewnictwa nie jest ważny.
 
-* `async void`**powinien być używany tylko dla programów obsługi zdarzeń.**
+* `async void` **należy używać tylko dla programów obsługi zdarzeń.**
 
-`async void`jest jedynym sposobem zezwalania na działanie programów obsługi zdarzeń asynchronicznych, ponieważ zdarzenia nie mają zwracanych typów (w związku z czym `Task` nie `Task<T>`mogą korzystać z i). Inne użycie `async void` nie jest zgodne z modelem TAP i może być trudne do użycia, takie jak:
+`async void` jest jedynym sposobem zezwalania na działanie programów obsługi zdarzeń asynchronicznych, ponieważ zdarzenia nie mają zwracanych typów (w związku z tym nie mogą korzystać z `Task` i `Task<T>`). Inne użycie `async void` nie jest zgodne z modelem TAP i może być trudne do użycia, takie jak:
 
-* Wyjątki zgłoszone w `async void` metodzie nie mogą być przechwytywane poza tą metodą.
-* `async void`metody są bardzo trudne do przetestowania.
-* `async void`metody mogą spowodować złe skutki uboczne, jeśli obiekt wywołujący nie oczekuje, że będzie on asynchroniczny.
+* Wyjątki zgłoszone w metodzie `async void` nie mogą być przechwytywane poza tą metodą.
+* Metody `async void` są bardzo trudne do przetestowania.
+* Metody `async void` mogą spowodować złe skutki uboczne, jeśli obiekt wywołujący nie oczekuje, że będzie on asynchroniczny.
 
 * **Dokładne użycie asynchronicznych wyrażeń lambda w wyrażeniach LINQ**
 

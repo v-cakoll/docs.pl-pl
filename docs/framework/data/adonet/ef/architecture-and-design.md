@@ -2,24 +2,24 @@
 title: Architektura i projekt
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 50fc643fecf4b188123c556d754b3cbfa529e5e9
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 35fbc39db23a2b08ab926e122d2f1eb1806a369b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251716"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040024"
 ---
 # <a name="architecture-and-design"></a>Architektura i projekt
 
 Moduł generowania kodu SQL w ramach [dostawcy przykładu](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) jest zaimplementowany jako gość w drzewie wyrażenia, który reprezentuje drzewo poleceń. Generowanie jest wykonywane w jednym przebiegu w drzewie wyrażenia.
 
-Węzły drzewa są przetwarzane od dołu do góry. Najpierw jest generowana struktura pośrednia: SqlSelectStatement lub SqlBuilder, zarówno implementujące ISqlFragment. Następnie instrukcja SQL String jest generowana z tej struktury. Istnieją dwie przyczyny dla struktury pośredniej:
+Węzły drzewa są przetwarzane od dołu do góry. Najpierw jest generowana struktura pośrednia: SqlSelectStatement lub SqlBuilder, implementująca ISqlFragment. Następnie instrukcja SQL String jest generowana z tej struktury. Istnieją dwie przyczyny dla struktury pośredniej:
 
 - Logicznie instrukcja SELECT języka SQL jest wypełniana poza kolejnością. Węzły, które uczestniczą w klauzuli FROM, są odwiedzane przed węzłami, które uczestniczą w klauzuli WHERE, GROUP BY i ORDER BY.
 
 - Aby zmienić nazwy aliasów, należy zidentyfikować wszystkie używane aliasy, aby uniknąć kolizji podczas zmiany nazwy. Aby odroczyć opcje zmiany nazwy w elemencie SqlBuilder, Użyj obiektów symboli do reprezentowania kolumn, które są kandydatami do zmiany nazwy.
 
-![Diagram](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
+![4b](./media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")
 
 W pierwszej fazie, podczas odwiedzania drzewa wyrażenia, wyrażenia są pogrupowane w SqlSelectStatements, sprzężenia są spłaszczone i aliasy sprzężenia są spłaszczone. W trakcie tego przebiegu obiekty symboli reprezentują kolumny lub aliasy wejściowe, których nazwy można zmienić.
 
@@ -161,7 +161,7 @@ NameToExtent ma wszystkie zakresy w ExtentList jako słownik. IsNestedJoin słu�
 
 Wszystkie listy są ustawiane dokładnie raz, a następnie używane do wyszukiwania lub wyliczania.
 
-#### <a name="symboltable"></a>SymbolTable
+#### <a name="symboltable"></a>Symbol
 
 Symbol jest używany do rozpoznawania nazw zmiennych do symboli. Symbol jest zaimplementowany jako stos z nowym wpisem dla każdego zakresu. Wyszukiwania wyszukują od góry stosu do dołu do momentu znalezienia wpisu.
 
@@ -221,7 +221,7 @@ Za każdym razem, gdy nowa SqlSelectStatement jest uruchomiona, a bieżąca jest
 
 ### <a name="join-flattening"></a>Przyłączanie spłaszczania
 
-Właściwość IsParentAJoin pomaga określić, czy dany element Join może być spłaszczony. W szczególności IsParentAJoin zwraca `true` tylko dla lewego elementu podrzędnego sprzężenia i dla każdego DbScanExpression, który jest bezpośrednim wejściem do sprzężenia, w takim przypadku węzeł podrzędny ponownie używa tego samego SqlSelectStatement, którego element nadrzędny mógłby później użyć. Aby uzyskać więcej informacji, zobacz "wyrażenia sprzężenia".
+Właściwość IsParentAJoin pomaga określić, czy dany element Join może być spłaszczony. W szczególności IsParentAJoin zwraca `true` tylko dla lewego elementu podrzędnego sprzężenia i dla każdego DbScanExpression, który jest bezpośrednim wejściem do sprzężenia, w takim przypadku ten węzeł podrzędny ponownie używa tego samego SqlSelectStatement, którego obiekt nadrzędny mógłby później użyć. Aby uzyskać więcej informacji, zobacz "wyrażenia sprzężenia".
 
 ### <a name="input-alias-redirecting"></a>Przekierowanie wejściowej aliasu
 
@@ -229,13 +229,13 @@ Przekierowanie aliasu wejściowego jest realizowane przy użyciu tabeli symboli.
 
 Aby wyjaśnić Przekierowywanie aliasów wejściowych, zapoznaj się z pierwszym przykładem [generowania kodu SQL z drzew poleceń — najlepsze rozwiązania](generating-sql-from-command-trees-best-practices.md).  W projekcji należy przekierować "a" do "b".
 
-Po utworzeniu obiektu SqlSelectStatement zakres, który jest wejściem do węzła, jest umieszczany we właściwości From SqlSelectStatement. Symbol (\<symbol_b >) jest tworzony na podstawie nazwy powiązania wejściowego ("b"), aby reprezentować ten zakres i "AS \<" + symbol_b > jest dołączany do klauzuli FROM.  Symbol jest również dodawany do właściwości FromExtents.
+Po utworzeniu obiektu SqlSelectStatement zakres, który jest wejściem do węzła, jest umieszczany we właściwości From SqlSelectStatement. Symbol (\<symbol_b >) jest tworzony na podstawie nazwy powiązania wejściowego ("b"), aby reprezentować ten zakres i "AS" + \<symbol_b > jest dołączany do klauzuli FROM.  Symbol jest również dodawany do właściwości FromExtents.
 
 Symbol jest również dodawany do tabeli symboli, aby połączyć nazwę powiązania wejściowego ("b", \<symbol_b >).
 
 Jeśli kolejny węzeł ponownie używa tego SqlSelectStatement, dodaje wpis do tabeli symboli, aby połączyć jego nazwę powiązania wejściowego z tym symbolem. W naszym przykładzie DbProjectExpression z nazwą powiązania wejściowego "a" spowoduje ponowne użycie SqlSelectStatement i dodanie ("a", \< symbol_b >) do tabeli.
 
-Gdy wyrażenia odwołują się do nazwy powiązania wejściowego węzła, który jest używany SqlSelectStatement, odwołanie jest rozwiązane przy użyciu tabeli symboli do prawidłowego przekierowanego symbolu. Gdy "a" z "a. x" jest rozpoznawany podczas odwiedzania DbVariableReferenceExpression reprezentującego "a", zostanie on \<rozpoznany jako symbol symbol_b >.
+Gdy wyrażenia odwołują się do nazwy powiązania wejściowego węzła, który jest używany SqlSelectStatement, odwołanie jest rozwiązane przy użyciu tabeli symboli do prawidłowego przekierowanego symbolu. Gdy "a" z "a. x" jest rozpoznawany podczas odwiedzania DbVariableReferenceExpression reprezentującego "a", zostanie on rozpoznany jako symbol \<symbol_b >.
 
 ### <a name="join-alias-flattening"></a>Przyłączanie spłaszczania aliasów
 
@@ -243,9 +243,9 @@ Spłaszczanie aliasów sprzężenia jest osiągane podczas odwiedzania DbPropert
 
 ### <a name="column-name-and-extent-alias-renaming"></a>Zmiana nazwy kolumny i zakresu aliasu
 
-Nazwa kolumny i alias zakresu zmiany nazwy są rozwiązywane przy użyciu symboli, które są zastępowane aliasami w drugiej fazie generacji opisanej w sekcji druga faza generowania kodu SQL: Generowanie ciągu polecenia.
+Nazwa kolumny i alias zakresu zmiany nazwy są rozwiązywane przy użyciu symboli, które są zastępowane aliasami w drugiej fazie generacji opisanej w sekcji druga faza generowania kodu SQL: generowanie ciągu polecenia.
 
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowania kodu SQL: Odwiedzanie drzewa wyrażeń
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Pierwsza faza generowania kodu SQL: odwiedzanie drzewa wyrażeń
 
 W tej sekcji opisano pierwszą fazę generowania kodu SQL, gdy wyrażenie reprezentujące zapytanie jest odwiedzane i jest generowana struktura pośrednia (SqlSelectStatement lub SqlBuilder).
 
@@ -259,7 +259,7 @@ Następujące typy wyrażeń obsługują węzły, które nie są przyłączane:
 
 - DbFilterExpression
 
-- DbGroupByExpression
+- DbGroupAggregate
 
 - DbLimitExpression
 
@@ -313,7 +313,7 @@ Następujące są uznawane za wyrażenia sprzężenia i są przetwarzane w typow
 
 - DbJoinExpression
 
-- DbCrossJoinExpression
+- Obiekt DbCrossJoinExpression
 
 Poniżej przedstawiono kroki przedstawione poniżej:
 
@@ -345,7 +345,7 @@ Zestawy Operations DbUnionAllExpression, wyrażenia DbExceptExpression i DbInter
 <leftSqlSelectStatement> <setOp> <rightSqlSelectStatement>
 ```
 
-Gdzie \<leftSqlSelectStatement > i \<rightSqlSelectStatement > są SqlSelectStatements uzyskane przez odwiedzenie poszczególnych danych wejściowych, \<a setOp > jest odpowiednią operacją (Union All na przykład).
+Gdzie \<leftSqlSelectStatement > i \<rightSqlSelectStatement > są SqlSelectStatements uzyskane przez odwiedzenie poszczególnych danych wejściowych, a \<setOp > jest odpowiednią operacją (UNION ALL na przykład).
 
 ### <a name="dbscanexpression"></a>DbScanExpression
 
@@ -367,7 +367,7 @@ Właściwość instance jest najpierw odwiedzana, a wynikiem jest symbol, JoinSy
 
 - Jeśli symbol jest zwracany, Metoda odwiedzania zwraca metodę SqlBuilder z tym wystąpieniem jako alias oraz nazwę właściwości jako nazwę kolumny.
 
-### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
+### <a name="dbnewinstanceexpression"></a>Obiekt DbNewInstanceExpression
 
 Gdy jest używana jako właściwość projekcji elementu DbProjectExpression, obiekt DbNewInstanceExpression tworzy listę oddzielonych przecinkami argumentów do reprezentowania prognozowanych kolumn.
 
@@ -375,9 +375,9 @@ Gdy obiekt DbNewInstanceExpression ma zwracany typ kolekcji i definiuje nową ko
 
 - Jeśli obiekt DbNewInstanceExpression ma DbElementExpression jako jedyny argument, jest przetłumaczony w następujący sposób:
 
-    ```
-    NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
-    ```
+```sql
+NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X
+```
 
 Jeśli obiekt DbNewInstanceExpression nie ma argumentów (reprezentuje pustą tabelę), obiekt DbNewInstanceExpression jest przetłumaczony na:
 
@@ -395,7 +395,7 @@ UNION ALL …
 UNION ALL SELECT <visit-result-argN> as X
 ```
 
-### <a name="dbfunctionexpression"></a>DbFunctionExpression
+### <a name="dbfunctionexpression"></a>Obiekcie DbFunctionExpression
 
 Funkcje kanoniczne i wbudowane są przetwarzane w taki sam sposób: Jeśli potrzebują specjalnej obsługi (przecinanie (String) do LTRIM (RTRIM (String), na przykład, zostanie wywołana odpowiednia procedura obsługi. W przeciwnym razie są tłumaczone na FunctionName (arg1, arg2,..., argn).
 
@@ -411,16 +411,16 @@ Metoda, która odwiedza DbElementExpression, jest wywoływana tylko do odwiedzan
 
 W zależności od typu wyrażenia (dowolne lub wszystkie) DbQuantifierExpression jest przetłumaczony jako:
 
-```
+```sql
 Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))
 ```
 
-### <a name="dbnotexpression"></a>DbNotExpression
+### <a name="dbnotexpression"></a>Obiekt DbNotExpression
 
 W niektórych przypadkach można zwinąć tłumaczenie obiekt DbNotExpression z wyrażeniem wejściowym. Na przykład:
 
-```
+```sql
 Not(IsNull(a)) =>  "a IS NOT NULL"
 Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(input, not(x))
 ```
@@ -431,11 +431,11 @@ Przyczyną jest to, że drugi zwinięty jest wykonywany, ponieważ podczas tłum
 
 DbIsEmptyExpression jest przetłumaczony jako:
 
-```
+```sql
 IsEmpty(input) = Not Exists(input)
 ```
 
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Druga faza generowania kodu SQL: Generowanie ciągu polecenia
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Druga faza generowania kodu SQL: generowanie ciągu polecenia
 
 Podczas generowania ciągu polecenia SQL, SqlSelectStatement tworzy rzeczywiste aliasy dla symboli, które odnoszą się do błędu zmiany nazwy kolumny i zakresu aliasu.
 
@@ -443,7 +443,7 @@ Zmiana nazwy aliasu zakresu występuje podczas zapisywania obiektu SqlSelectStat
 
 Zmiana nazwy kolumny występuje podczas zapisywania obiektu symbol w ciągu. AddDefaultColumns w pierwszej fazie ustalił, czy nazwa określonego symbolu kolumny jest konieczna. W drugiej fazie tylko zmiana nazwy odbywa się w celu upewnienia się, że nazwa utworzona nie powoduje konfliktu z żadną nazwą używaną w AllColumnNames
 
-Aby utworzyć unikatowe nazwy zarówno dla aliasów zakresu, jak i dla \<kolumn, należy użyć existing_name > _N, gdzie n jest najmniejszym aliasem, który nie był jeszcze używany. Globalna lista wszystkich aliasów zwiększa potrzebę operacji kaskadowych.
+Aby utworzyć unikatowe nazwy zarówno dla aliasów zakresu, jak i dla kolumn, użyj \<existing_name > _N, gdzie n jest najmniejszym aliasem, który nie był jeszcze używany. Globalna lista wszystkich aliasów zwiększa potrzebę operacji kaskadowych.
 
 ## <a name="see-also"></a>Zobacz także
 

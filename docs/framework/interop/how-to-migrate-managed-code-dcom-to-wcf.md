@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42edce63856b629511faeb165362da18ea3cecad
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 6fdd5c9b285bdc948af876c72e85590500dd41c8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833631"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039593"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Instrukcje: migrowanie zarządzanego kodu DCOM do WCF
 Windows Communication Foundation (WCF) to zalecany i bezpieczny wybór dla rozproszonych Component Object Model (DCOM) dla wywołań kodu zarządzanego między serwerami i klientami w środowisku rozproszonym. W tym artykule przedstawiono sposób migrowania kodu z modelu DCOM do usługi WCF w następujących scenariuszach.  
@@ -165,6 +165,7 @@ public class CustomerService: ICustomerManager
                 address="http://localhost:8083/CustomerManager"   
                 binding="basicHttpBinding"   
                 contract="Shared.ICustomerManager"/>  
+    </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
@@ -215,7 +216,7 @@ public interface ICustomerManager
 ### <a name="add-code-to-the-client-that-sends-a-by-value-object"></a>Dodawanie kodu do klienta wysyłającego obiekt przez wartość  
  Poniższy kod pokazuje, jak klient tworzy nowy obiekt klienta według wartości, tworzy kanał do komunikacji z usługą `ICustomerManager` i wysyła do niego obiekt klienta.  
   
- Obiekt klienta zostanie Zserializowany i wysłany do usługi, w którym zostanie odszeregowany przez usługę w nowej kopii tego obiektu.  Wszystkie metody wywołania usługi na tym obiekcie będą wykonywane tylko lokalnie na serwerze. Należy zauważyć, że ten kod ilustruje wysyłanie typu pochodnego (`PremiumCustomer`).  Kontrakt usługi oczekuje obiektu `Customer`, ale kontrakt danych usługi używa atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>], aby wskazać, że `PremiumCustomer` jest również dozwolone.  Funkcja WCF nie będzie podejmować próby serializacji lub deserializacji dowolnego innego typu za pośrednictwem tego interfejsu usługi.  
+ Obiekt klienta zostanie Zserializowany i wysłany do usługi, w którym zostanie odszeregowany przez usługę w nowej kopii tego obiektu.  Wszystkie metody wywołania usługi na tym obiekcie będą wykonywane tylko lokalnie na serwerze. Należy pamiętać, że ten kod ilustruje wysyłanie typu pochodnego (`PremiumCustomer`).  Kontrakt usługi oczekuje obiektu `Customer`, ale kontrakt danych usługi używa atrybutu [<xref:System.Runtime.Serialization.KnownTypeAttribute>], aby wskazać, że `PremiumCustomer` jest również dozwolone.  Funkcja WCF nie będzie podejmować próby serializacji lub deserializacji dowolnego innego typu za pośrednictwem tego interfejsu usługi.  
   
 ```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
@@ -235,9 +236,9 @@ customerManager.StoreCustomer(customer);
 ## <a name="the-service-returns-an-object-by-reference"></a>Usługa zwraca obiekt przez odwołanie  
  W tym scenariuszu aplikacja kliencka wysyła wywołanie do usługi zdalnej, a metoda zwraca obiekt, który jest przesyłany przez odwołanie z usługi do klienta.  
   
- Jak wspomniano wcześniej, usługi WCF zawsze zwracają obiekt według wartości.  Można jednak osiągnąć podobny wynik przy użyciu klasy <xref:System.ServiceModel.EndpointAddress10>.  @No__t-0 to obiekt możliwy do serializacji przez wartość, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu odniesienia.  
+ Jak wspomniano wcześniej, usługi WCF zawsze zwracają obiekt według wartości.  Można jednak osiągnąć podobny wynik przy użyciu klasy <xref:System.ServiceModel.EndpointAddress10>.  <xref:System.ServiceModel.EndpointAddress10> jest możliwy do serializacji obiekt o wartości, który może być używany przez klienta w celu uzyskania na serwerze sesji na podstawie obiektu odniesienia.  
   
- Zachowanie obiektu przez odwołanie w programie WCF przedstawionym w tym scenariuszu różni się od modelu DCOM.  W modelu DCOM serwer może bezpośrednio zwrócić do klienta obiekt przez odwołanie, a klient może wywołać metody tego obiektu, które są wykonywane na serwerze.  W programie WCF jednak zwracany obiekt jest zawsze przez wartość.  Klient musi wykonać ten obiekt przez wartość, reprezentowany przez <xref:System.ServiceModel.EndpointAddress10> i użyć go do utworzenia własnej sesji na obiekt-odwołanie.  Metoda kliencka wywołuje na serwerze. Innymi słowy, ten obiekt odwołujący się do programu WCF to normalna usługa WCF, która jest skonfigurowana do sesji.  
+ Zachowanie obiektu przez odwołanie w programie WCF przedstawionym w tym scenariuszu różni się od modelu DCOM.  W modelu DCOM serwer może bezpośrednio zwrócić do klienta obiekt przez odwołanie, a klient może wywołać metody tego obiektu, które są wykonywane na serwerze.  W programie WCF jednak zwracany obiekt jest zawsze przez wartość.  Klient musi wykonać ten obiekt przez wartość, reprezentowane przez <xref:System.ServiceModel.EndpointAddress10> i użyć go do utworzenia własnej sesji przez obiekt-odwołanie.  Metoda kliencka wywołuje na serwerze. Innymi słowy, ten obiekt odwołujący się do programu WCF to normalna usługa WCF, która jest skonfigurowana do sesji.  
   
  W programie WCF sesja jest sposobem skorelowania wielu wiadomości przesyłanych między dwoma punktami końcowymi.  Oznacza to, że gdy klient uzyska połączenie z tą usługą, zostanie ustanowiona sesja między klientem a serwerem.  Klient będzie używać jednego unikatowego wystąpienia obiektu po stronie serwera dla wszystkich jego interakcji w ramach jednej sesji. Umowy WCF dotyczące sesji są podobne do wzorców żądań i odpowiedzi sieciowych zorientowanych na połączenia.  
   
@@ -253,7 +254,7 @@ public interface IRemoteService
 ### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Krok 1. Definiowanie sesji interfejsu i implementacji usługi WCF  
  Najpierw Zdefiniuj interfejs usługi WCF, który zawiera obiekt session.  
   
- W tym kodzie obiekt sesji jest oznaczony atrybutem `ServiceContract`, który identyfikuje go jako zwykły interfejs usługi WCF.  Ponadto Właściwość <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> ma ustawioną wartość wskazującą, że będzie to usługa sesji.  
+ W tym kodzie obiekt sesji jest oznaczony atrybutem `ServiceContract`, który identyfikuje go jako zwykły interfejs usługi WCF.  Ponadto Właściwość <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> jest ustawiona na wartość wskazującą, że będzie to usługa sesji.  
   
 ```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -302,7 +303,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- Poniżej przedstawiono implementację tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesji.  Po wywołaniu `GetInstanceAddress` tworzy kanał i tworzy obiekt <xref:System.ServiceModel.EndpointAddress10>, który wskazuje na adres zdalny skojarzony z tym kanałem.   <xref:System.ServiceModel.EndpointAddress10> to typ danych, który może być zwracany do klienta przez wartość.
+ Poniżej przedstawiono implementację tej usługi. Ta implementacja obsługuje pojedyncze fabryki kanałów do tworzenia obiektów sesji.  Gdy `GetInstanceAddress` jest wywoływana, tworzy kanał i tworzy obiekt <xref:System.ServiceModel.EndpointAddress10>, który wskazuje na adres zdalny skojarzony z tym kanałem.   <xref:System.ServiceModel.EndpointAddress10> to typ danych, który może być zwracany do klienta przez wartość.
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,7 +326,7 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>Krok 3. Konfigurowanie i uruchamianie usług WCF  
  Aby hostować te usługi, należy wprowadzić następujące dodatki do pliku konfiguracji serwera (Web. config).  
   
-1. Dodaj sekcję `<client>` opisującą punkt końcowy dla obiektu sesji.  W tym scenariuszu serwer działa również jako klient i musi być skonfigurowany, aby go włączyć.  
+1. Dodaj `<client>` sekcję opisującą punkt końcowy dla obiektu sesji.  W tym scenariuszu serwer działa również jako klient i musi być skonfigurowany, aby go włączyć.  
   
 2. W sekcji `<services>` Zadeklaruj punkty końcowe usługi dla obiektu fabryki i sesji.  Dzięki temu Klient może komunikować się z punktami końcowymi usługi, uzyskać <xref:System.ServiceModel.EndpointAddress10> i utworzyć kanał sesji.  
   
@@ -392,11 +393,11 @@ sessionBoundServiceHost.Open();
   
 1. Utwórz kanał dla usługi `ISessionBoundFactory`.  
   
-2. Użyj kanału, aby wywołać usługę `ISessionBoundFactory` i uzyskać obiekt <xref:System.ServiceModel.EndpointAddress10>.  
+2. Użyj kanału, aby wywołać usługę `ISessionBoundFactory` uzyskać <xref:System.ServiceModel.EndpointAddress10> obiektu.  
   
 3. Użyj <xref:System.ServiceModel.EndpointAddress10>, aby utworzyć kanał do uzyskania obiektu sesji.  
   
-4. Wywołaj metody `SetCurrentValue` i `GetCurrentValue`, aby pokazać, że to samo wystąpienie obiektu jest używane w wielu wywołaniach.  
+4. Wywołaj metody `SetCurrentValue` i `GetCurrentValue`, aby pokazać, że jest to samo wystąpienie obiektu używane w wielu wywołaniach.  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  

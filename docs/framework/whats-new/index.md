@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2150351c97f6deae18177be642e6c3009422960
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 8c9bdb3149834cd3dd04c7627bca440925f5273f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393717"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040767"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
 
@@ -193,7 +193,7 @@ Aby włączyć obsługę skalowania wysokiej rozdzielczości DPI w trybie miesza
 
 **Ulepszenia programu Ngen**. Środowisko uruchomieniowe poprawiło zarządzanie pamięcią dla obrazów [natywnego generatora obrazów](../tools/ngen-exe-native-image-generator.md) (Ngen), dzięki czemu dane mapowane z obrazów NGen nie są rezydentem pamięci. Pozwala to zmniejszyć ilość miejsca dostępnego na ataki próbujące wykonać dowolny kod, modyfikując pamięć, która zostanie wykonana.
 
-**Skanowanie w poszukiwaniu złośliwego oprogramowania dla wszystkich zestawów**. W poprzednich wersjach .NET Framework środowisko uruchomieniowe skanuje wszystkie zestawy ładowane z dysku przy użyciu programu Windows Defender lub oprogramowania chroniącego przed złośliwym kodem. Jednak zestawy ładowane z innych źródeł, na przykład przez metodę <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, nie są skanowane i mogą potencjalnie zawierać niewykryte złośliwe oprogramowanie. Począwszy od .NET Framework 4,8 uruchomionego w systemie Windows 10 środowisko uruchomieniowe wyzwala skanowanie przez rozwiązania chroniące przed złośliwym kodem [(AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
+**Skanowanie w poszukiwaniu złośliwego oprogramowania dla wszystkich zestawów**. W poprzednich wersjach .NET Framework środowisko uruchomieniowe skanuje wszystkie zestawy ładowane z dysku przy użyciu programu Windows Defender lub oprogramowania chroniącego przed złośliwym kodem. Jednak zestawy załadowane z innych źródeł, na przykład przez metodę <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, nie są skanowane i mogą potencjalnie zawierać niewykryte złośliwe oprogramowanie. Począwszy od .NET Framework 4,8 uruchomionego w systemie Windows 10 środowisko uruchomieniowe wyzwala skanowanie przez rozwiązania chroniące przed złośliwym kodem [(AMSI)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 
@@ -310,7 +310,7 @@ End Function
 
 **Obsługa kluczy tymczasowych**
 
-Import PFX może opcjonalnie załadować klucze prywatne bezpośrednio z pamięci, pomijając dysk twardy.Gdy nowa flaga <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> jest określona w konstruktorze <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> lub jednym z przeciążeń metody <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, klucze prywatne zostaną załadowane jako klucze tymczasowe. Zapobiega to widocznym kluczom na dysku. Ale
+Import PFX może opcjonalnie załadować klucze prywatne bezpośrednio z pamięci, pomijając dysk twardy. Po określeniu nowej flagi <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> w konstruktorze <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> lub jednym z przeciążeń metody <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> klucze prywatne zostaną załadowane jako klucze tymczasowe. Zapobiega to widocznym kluczom na dysku. Ale
 
 - Ponieważ klucze nie są utrwalane na dysku, certyfikaty załadowane z tą flagą nie są dobrym kandydatami do dodania do X509Store.
 
@@ -330,7 +330,7 @@ Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.Pkc
 
 **Pozostawienie opakowanego strumienia otwartego po usunięciu CryptoStream**
 
-Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.CryptoStream> ma dodatkowy Konstruktor, który umożliwia <xref:System.Security.Cryptography.CryptoStream.Dispose%2A>, aby nie zamykać opakowanego strumienia.Aby opuścić zawinięty strumień otwarty po usunięciu wystąpienia <xref:System.Security.Cryptography.CryptoStream>, wywołaj nowy Konstruktor <xref:System.Security.Cryptography.CryptoStream> w następujący sposób:
+Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.CryptoStream> ma dodatkowy Konstruktor, który umożliwia <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> nie zamyka zapakowanego strumienia. Aby opuścić zawinięty strumień otwarty po usunięciu wystąpienia <xref:System.Security.Cryptography.CryptoStream>, wywołaj nowy Konstruktor <xref:System.Security.Cryptography.CryptoStream> w następujący sposób:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -356,20 +356,20 @@ Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączo
 
 - Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Metody są następujące:
 
-  - [Public bool HashSet — @ no__t-1T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-  - [Public bool SortedSet @ no__t-1T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+  - [Public bool HashSet —\<T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+  - [Public bool SortedSet\<T >. TryGetValue (T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- Metody rozszerzenia `Enumerable.To*`, które konwertują kolekcję na <xref:System.Collections.Generic.HashSet%601>:
+- `Enumerable.To*` metody rozszerzające, które konwertują kolekcję na <xref:System.Collections.Generic.HashSet%601>:
 
-  - [publiczne statyczne HashSet — @ no__t-1TSource > ToHashSet @ no__t-2TSource > (this IEnumerable @ no__t-3TSource > Source)](xref:System.Linq.Enumerable.ToHashSet%2A)
-  - [publiczne statyczne HashSet — @ no__t-1TSource > ToHashSet @ no__t-2TSource > (this IEnumerable @ no__t-3TSource > source, IEqualityComparer @ no__t-4TSource > porównując)](xref:System.Linq.Enumerable.ToHashSet%2A)
+  - [publiczne statyczne HashSet —\<TSource > ToHashSet\<TSource > (ten interfejs IEnumerable\<TSource > Źródło)](xref:System.Linq.Enumerable.ToHashSet%2A)
+  - [publiczne statyczne HashSet —\<TSource > ToHashSet\<TSource > (The IEnumerable\<TSource > source, IEqualityComparer\<TSource > porównując)](xref:System.Linq.Enumerable.ToHashSet%2A)
 
-- Nowe <xref:System.Collections.Generic.HashSet%601> konstruktorów, które umożliwiają ustawienie pojemności kolekcji, która daje korzyść wydajności, gdy wiadomo, że rozmiar <xref:System.Collections.Generic.HashSet%601> z wyprzedzeniem:
+- Nowe <xref:System.Collections.Generic.HashSet%601> konstruktorów, które umożliwiają ustawienie pojemności kolekcji, która daje korzyść wydajności, gdy wiadomo, że <xref:System.Collections.Generic.HashSet%601> z wyprzedzeniem:
 
   - [Public HashSet — (int)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-  - [Public HashSet — (int, IEqualityComparer @ no__t-1T >, funkcja porównująca)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
+  - [Public HashSet — (int, IEqualityComparer\<T > porównując)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
-Klasa <xref:System.Collections.Concurrent.ConcurrentDictionary%602> zawiera nowe przeciążenia metod <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, aby pobrać wartość ze słownika lub dodać ją, jeśli nie zostanie znaleziona, i dodać wartość do słownika lub zaktualizować ją, jeśli już istnieje.
+Klasa <xref:System.Collections.Concurrent.ConcurrentDictionary%602> obejmuje nowe przeciążenia metod <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, aby pobrać wartość ze słownika lub dodać ją, jeśli nie zostanie znaleziona, i dodać wartość do słownika lub zaktualizować ją, jeśli już istnieje.
 
 ```csharp
 public TValue AddOrUpdate<TArg>(TKey key, Func<TKey, TArg, TValue> addValueFactory, Func<TKey, TValue, TArg, TValue> updateValueFactory, TArg factoryArgument)
@@ -430,7 +430,7 @@ Można dodać SameSite dla plików cookie <xref:System.Web.Security.FormsAuthent
          <!-- ...   -->
       </forms>
    <authentication />
-   <sessionSate cookieSameSite="Lax"></sessionState>
+   <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
@@ -499,13 +499,13 @@ Podstawowy przepływ Always Encrypted opartych na enklawy to:
 
 **Znajdowanie ResourceDictionaries według źródła**
 
-Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może zlokalizować parametr @ no__t-0, który został utworzony na podstawie danego źródłowego identyfikatora URI.(Ta funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, umożliwia użytkownikowi edytowanie ResourceDictionary z zamiarem, że zmiany zostaną zastosowane do uruchomionej aplikacji. Jednym z kroków osiągnięcia tego celu jest znalezienie wszystkich ResourceDictionaries, że uruchomiona aplikacja została utworzona na podstawie edytowanego słownika. Na przykład aplikacja może zadeklarować element ResourceDictionary, którego zawartość jest kopiowana z danego źródłowego identyfikatora URI:
+Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może zlokalizować <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>, które zostały utworzone na podstawie danego źródłowego identyfikatora URI. (Ta funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, umożliwia użytkownikowi edytowanie ResourceDictionary z zamiarem, że zmiany zostaną zastosowane do uruchomionej aplikacji. Jednym z kroków osiągnięcia tego celu jest znalezienie wszystkich ResourceDictionaries, że uruchomiona aplikacja została utworzona na podstawie edytowanego słownika. Na przykład aplikacja może zadeklarować element ResourceDictionary, którego zawartość jest kopiowana z danego źródłowego identyfikatora URI:
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-Asystent diagnostyczny, który edytuje oryginalny znacznik w *MyRD. xaml* can Użyj nowej funkcji, aby zlokalizować słownik.Funkcja jest implementowana przez nową metodę statyczną <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Asystent diagnostyczny wywołuje nową metodę przy użyciu bezwzględnego identyfikatora URI, który identyfikuje oryginalne znaczniki, jak pokazano w poniższym kodzie:
+Asystent diagnostyczny, który edytuje oryginalny znacznik w *MyRD. xaml* can Użyj nowej funkcji, aby zlokalizować słownik. Funkcja jest implementowana przez nową metodę statyczną, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Asystent diagnostyczny wywołuje nową metodę przy użyciu bezwzględnego identyfikatora URI, który identyfikuje oryginalne znaczniki, jak pokazano w poniższym kodzie:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -515,11 +515,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-Metoda zwraca puste wartości wyliczalne, chyba że jest włączona wartość @ no__t-0 i zostanie ustawiona zmienna [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) environment.
+Metoda zwraca puste wartości wyliczalne, chyba że <xref:System.Windows.Diagnostics.VisualDiagnostics> jest włączona i jest ustawiona zmienna środowiskowa [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) .
 
 **Znajdowanie właścicieli ResourceDictionary**
 
-Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może zlokalizować właścicieli danego <xref:Windows.UI.Xaml.ResourceDictionary>.(Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Za każdym razem, gdy zostanie wprowadzona zmiana w <xref:Windows.UI.Xaml.ResourceDictionary>, WPF automatycznie odnajdzie wszystkie odwołania [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , które mogą mieć wpływ na zmianę.
+Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może zlokalizować właścicieli danego <xref:Windows.UI.Xaml.ResourceDictionary>. (Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Za każdym razem, gdy zostanie wprowadzona zmiana w <xref:Windows.UI.Xaml.ResourceDictionary>, WPF automatycznie odnajdzie wszystkie odwołania [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , które mogą mieć wpływ na zmianę.
 
 Asystent diagnostyczny, taki jak obiekt "Edytuj i Kontynuuj" programu Visual Studio, może chcieć przedłużyć ten sposób, aby obsługiwał odwołania [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Pierwszym krokiem w tym procesie jest znalezienie właścicieli słownika; oznacza to, że aby znaleźć wszystkie obiekty, których właściwość `Resources` odwołuje się do słownika (bezpośrednio lub pośrednio za pośrednictwem właściwości <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). Trzy nowe metody statyczne zaimplementowane dla klasy <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType>, po jednej dla każdego z typów podstawowych, które mają właściwość `Resources`, obsługują ten krok:
 
@@ -529,11 +529,11 @@ Asystent diagnostyczny, taki jak obiekt "Edytuj i Kontynuuj" programu Visual Stu
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-Te metody zwracają pustą wartość wyliczalną, chyba że jest włączona wartość @ no__t-0 i zostanie ustawiona zmienna [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) environment.
+Te metody zwracają pustą wartość wyliczalną, chyba że <xref:System.Windows.Diagnostics.VisualDiagnostics> jest włączona i ustawiono zmienną środowiskową [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) .
 
 **Znajdowanie odwołań StaticResource**
 
-Asystent diagnostyczny może teraz odbierać powiadomienie za każdym razem, gdy zostanie rozpoznane odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) .(Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, może chcieć zaktualizować wszystkie zastosowania zasobu, gdy jego wartość zostanie zmieniona na <xref:Windows.UI.Xaml.ResourceDictionary>. WPF robi to automatycznie w odniesieniu do [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , ale celowo nie robi to w odniesieniu do [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może użyć tych powiadomień, aby zlokalizować te zastosowania zasobu statycznego.
+Asystent diagnostyczny może teraz odbierać powiadomienie za każdym razem, gdy zostanie rozpoznane odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . (Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, może chcieć zaktualizować wszystkie zastosowania zasobu, gdy jego wartość zostanie zmieniona na <xref:Windows.UI.Xaml.ResourceDictionary>. WPF robi to automatycznie w odniesieniu do [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , ale celowo nie robi to w odniesieniu do [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może użyć tych powiadomień, aby zlokalizować te zastosowania zasobu statycznego.
 
 Powiadomienie jest implementowane przez nowe zdarzenie <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -545,7 +545,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-To zdarzenie jest wywoływane za każdym razem, gdy środowisko uruchomieniowe rozwiązuje odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) .Argumenty <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> opisują rozdzielczość i wskazują obiekt i właściwość, która hostuje odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) oraz @ no__t-2 i klucz używany do rozwiązywania:
+To zdarzenie jest wywoływane za każdym razem, gdy środowisko uruchomieniowe rozwiązuje odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Argumenty <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> opisują rozdzielczość i wskazują obiekt i właściwość, które obsługują odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) i <xref:Windows.UI.Xaml.ResourceDictionary> i klucz używany do rozwiązania:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -569,7 +569,7 @@ Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
 End Class
 ```
 
-Zdarzenie nie jest wywoływane (a jego metoda dostępu `add` jest ignorowana), chyba że jest włączona wartość @ no__t-1 i zostanie ustawiona zmienna [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) environment.
+Zdarzenie nie jest wywoływane (i jego metoda dostępu `add` jest ignorowana), chyba że <xref:System.Windows.Diagnostics.VisualDiagnostics> jest włączona i zmienna środowiskowa [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) jest ustawiona.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -608,11 +608,11 @@ Ponadto najważniejszym fokusem w .NET Framework 4.7.1 jest ulepszony ułatwieni
 
 Konstruktory konfiguracji pozwalają deweloperom na dynamiczne Wstawianie i kompilowanie ustawień konfiguracji aplikacji w czasie wykonywania. Konstruktory konfiguracji niestandardowej mogą służyć do modyfikowania istniejących danych w sekcji konfiguracyjnej lub do tworzenia sekcji konfiguracyjnej w całości od podstaw. Bez konstruktorów konfiguracji, pliki. config są statyczne, a ich ustawienia są definiowane jakiś czas przed uruchomieniem aplikacji.
 
-Aby utworzyć niestandardowy Konstruktor konfiguracji, należy poprowadzić konstruktora z klasy abstrakcyjnej <xref:System.Configuration.ConfigurationBuilder> i zastąpić jej <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> i <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>. Możesz również zdefiniować kompilacje w pliku. config. Aby uzyskać więcej informacji, zobacz sekcję "konstruktorzy konfiguracji" w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) post.
+Aby utworzyć niestandardowy Konstruktor konfiguracji, należy uzyskać swój Konstruktor z klasy abstrakcyjnej <xref:System.Configuration.ConfigurationBuilder> i zastąpić jej <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> i <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>. Możesz również zdefiniować kompilacje w pliku. config. Aby uzyskać więcej informacji, zobacz sekcję "konstruktorzy konfiguracji" w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) post.
 
 **Wykrywanie funkcji w czasie wykonywania**
 
-Klasa <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> udostępnia mechanizm umożliwiający określenie, czy wstępnie zdefiniowana funkcja jest obsługiwana w danej implementacji platformy .NET w czasie kompilacji czy w czasie wykonywania. W czasie kompilacji kompilator może sprawdzić, czy określone pole istnieje, aby określić, czy funkcja jest obsługiwana; Jeśli tak, może to emitować kod, który korzysta z tej funkcji. W czasie wykonywania aplikacja może wywołać metodę <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> przed emitowaniem kodu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dodawanie metody pomocnika do opisywania funkcji obsługiwanych przez środowisko uruchomieniowe](https://github.com/dotnet/corefx/issues/17116).
+Klasa <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> udostępnia mechanizm umożliwiający określenie, czy wstępnie zdefiniowana funkcja jest obsługiwana w danej implementacji platformy .NET w czasie kompilacji czy w czasie wykonywania. W czasie kompilacji kompilator może sprawdzić, czy określone pole istnieje, aby określić, czy funkcja jest obsługiwana; Jeśli tak, może to emitować kod, który korzysta z tej funkcji. W czasie wykonywania aplikacja może wywołać metodę <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> przed wyemitowaniem kodu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dodawanie metody pomocnika do opisywania funkcji obsługiwanych przez środowisko uruchomieniowe](https://github.com/dotnet/corefx/issues/17116).
 
 **Typy krotek wartości można serializować**
 
@@ -648,7 +648,7 @@ ASP.NET przetwarza żądania we wstępnie zdefiniowanym potoku zawierającym 23 
 
 **Analiza ASP.NET HttpCookie**
 
-.NET Framework 4.7.1 obejmuje nową metodę, <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, która zapewnia ustandaryzowany sposób tworzenia obiektu <xref:System.Web.HttpCookie> z ciągu i dokładne przypisanie wartości cookie, takich jak data wygaśnięcia i ścieżka. Aby uzyskać więcej informacji, zobacz "Analiza ASP.NET HttpCookie" w blogu [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
+.NET Framework 4.7.1 obejmuje nową metodę, <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, która zapewnia ustandaryzowany sposób tworzenia obiektu <xref:System.Web.HttpCookie> z ciągu i dokładnie przypisywania wartości cookie, takich jak Data i godzina wygaśnięcia. Aby uzyskać więcej informacji, zobacz "Analiza ASP.NET HttpCookie" w blogu [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
 
 **Opcje wyznaczania wartości skrótu SHA-2 dla poświadczeń uwierzytelniania ASP.NET Forms**
 
@@ -687,11 +687,11 @@ Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4,7, zoba
 
 .NET Framework 4,7 zwiększa serializację przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
-**Rozszerzona funkcjonalność przy użyciu kryptografii eliptyczna Cryptography (ECC)***
+**Rozszerzona funkcjonalność przy użyciu kryptografii eliptyczna Cryptography (ECC)** *
 
 W .NET Framework 4,7 metody `ImportParameters(ECParameters)` zostały dodane do klas <xref:System.Security.Cryptography.ECDsa> i <xref:System.Security.Cryptography.ECDiffieHellman>, aby umożliwić obiektowi reprezentowania już ustanowionego klucza. Dodano również metodę `ExportParameters(Boolean)` do eksportowania klucza przy użyciu jawnych parametrów krzywej.
 
-.NET Framework 4,7 dodaje również obsługę dodatkowych krzywych (w tym zestawu krzywej Brainpool) i dodał wstępnie zdefiniowane definicje w celu ułatwienia tworzenia przy użyciu nowych metod fabrycznych <xref:System.Security.Cryptography.ECDsa.Create%2A> i <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A>.
+.NET Framework 4,7 dodaje również obsługę dodatkowych krzywych (w tym zestawu krzywej Brainpool) i dodał wstępnie zdefiniowane definicje w celu ułatwienia tworzenia przez nowe <xref:System.Security.Cryptography.ECDsa.Create%2A> i <xref:System.Security.Cryptography.ECDiffieHellman.Create%2A> metody fabryki.
 
 [Przykład ulepszeń kryptografii .NET Framework 4,7](https://gist.github.com/richlander/5a182899895a87a296c21ada97f7a54e) w serwisie GitHub.
 
@@ -723,7 +723,7 @@ Począwszy od .NET Framework 4,7, ASP.NET dodaje nowy zestaw interfejsów API, k
 
 - **Monitorowanie pamięci**. Domyślny monitor pamięci w programie ASP.NET powiadamia aplikacje, gdy działają w pobliżu skonfigurowanego limitu bajtów prywatnych dla tego procesu lub gdy na komputerze jest mało dostępnej fizycznej pamięci RAM. Gdy te limity zbliżają się, powiadomienia są wywoływane. W przypadku niektórych aplikacji powiadomienia są wywoływane zbyt blisko skonfigurowanych limitów, aby umożliwić korzystanie z przydatnych reakcji. Deweloperzy mogą teraz pisać własne monitory pamięci, aby zamienić wartość domyślną przy użyciu właściwości <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>.
 
-- **Reakcje z limitem pamięci**. Domyślnie ASP.NET próbuje przyciąć pamięć podręczną obiektów i okresowo wywoływać <xref:System.GC.Collect%2A?displayProperty=nameWithType>, gdy limit procesu prywatnego bajtów jest bliski. W przypadku niektórych aplikacji częstotliwość wywołań <xref:System.GC.Collect%2A?displayProperty=nameWithType> lub ilość pamięci podręcznej, która jest przycinana, jest nieskuteczna. Deweloperzy mogą teraz zastąpić lub uzupełnić zachowanie domyślne, subskrybując implementacje **IObserver** do monitora pamięci aplikacji.
+- **Reakcje z limitem pamięci**. Domyślnie ASP.NET próbuje przyciąć pamięć podręczną obiektów i okresowo wywoływać <xref:System.GC.Collect%2A?displayProperty=nameWithType>, gdy zbliża się limit procesu bajtów prywatnych. W przypadku niektórych aplikacji częstotliwość wywołań <xref:System.GC.Collect%2A?displayProperty=nameWithType> lub ilość pamięci podręcznej, która jest przycinana, jest nieefektywna. Deweloperzy mogą teraz zastąpić lub uzupełnić zachowanie domyślne, subskrybując implementacje **IObserver** do monitora pamięci aplikacji.
 
 <a name="wcf47" />
 
@@ -814,7 +814,7 @@ W .NET Framework 4.6.2 ASP.NET obejmuje następujące udoskonalenia:
 
 Moduły sprawdzania poprawności adnotacji danych umożliwiają wykonanie walidacji przez dodanie jednego lub większej liczby atrybutów do właściwości klasy. Element <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> atrybutu definiuje tekst komunikatu o błędzie, jeśli Walidacja nie powiedzie się. Począwszy od .NET Framework 4.6.2, ASP.NET ułatwia lokalizowanie komunikatów o błędach. Komunikaty o błędach będą lokalizowane, jeśli:
 
-1. @No__t-0 jest podany w atrybucie walidacji.
+1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> podano w atrybucie walidacji.
 
 2. Plik zasobów jest przechowywany w folderze App_LocalResources.
 
@@ -879,17 +879,17 @@ End Interface
 
 - Klasa <xref:System.Web.Caching.OutputCacheUtility>, która zapewnia metody pomocnika do konfigurowania wyjściowej pamięci podręcznej.
 
-- 18 nowych metod w klasie <xref:System.Web.HttpCachePolicy?displayProperty=nameWithType>. Należą do nich <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, 0, 1, 2,-13 i 4.
+- 18 nowych metod w klasie <xref:System.Web.HttpCachePolicy?displayProperty=nameWithType>. Należą do nich <xref:System.Web.HttpCachePolicy.GetCacheability%2A>, <xref:System.Web.HttpCachePolicy.GetCacheExtensions%2A>, <xref:System.Web.HttpCachePolicy.GetETag%2A>, <xref:System.Web.HttpCachePolicy.GetETagFromFileDependencies%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetNoStore%2A>, <xref:System.Web.HttpCachePolicy.GetNoTransforms%2A>, <xref:System.Web.HttpCachePolicy.GetOmitVaryStar%2A>, <xref:System.Web.HttpCachePolicy.GetProxyMaxAge%2A>, <xref:System.Web.HttpCachePolicy.GetRevalidation%2A>, <xref:System.Web.HttpCachePolicy.GetUtcLastModified%2A>, <xref:System.Web.HttpCachePolicy.GetVaryByCustom%2A>, <xref:System.Web.HttpCachePolicy.HasSlidingExpiration%2A>i <xref:System.Web.HttpCachePolicy.IsValidUntilExpires%2A>.
 
-- 2 nowe metody klasy <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> i <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.
+- 2 nowe metody w klasie <xref:System.Web.HttpCacheVaryByContentEncodings?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByContentEncodings.GetContentEncodings%2A> i <xref:System.Web.HttpCacheVaryByContentEncodings.SetContentEncodings%2A>.
 
-- 2 nowe metody klasy <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> i <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.
+- 2 nowe metody w klasie <xref:System.Web.HttpCacheVaryByHeaders?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByHeaders.GetHeaders%2A> i <xref:System.Web.HttpCacheVaryByHeaders.SetHeaders%2A>.
 
-- 2 nowe metody klasy <xref:System.Web.HttpCacheVaryByParams?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> i <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.
+- 2 nowe metody w klasie <xref:System.Web.HttpCacheVaryByParams?displayProperty=nameWithType>: <xref:System.Web.HttpCacheVaryByParams.GetParams%2A> i <xref:System.Web.HttpCacheVaryByParams.SetParams%2A>.
 
 - W klasie <xref:System.Web.Caching.AggregateCacheDependency?displayProperty=nameWithType> Metoda <xref:System.Web.Caching.AggregateCacheDependency.GetFileDependencies%2A>.
 
-- W <xref:System.Web.Caching.CacheDependency>, Metoda <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A>.
+- W <xref:System.Web.Caching.CacheDependency>Metoda <xref:System.Web.Caching.CacheDependency.GetFileDependencies%2A>.
 
 <a name="Strings" />
 
@@ -897,7 +897,7 @@ End Interface
 
 Znaki w .NET Framework 4.6.2 są klasyfikowane na podstawie [standardu Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). W .NET Framework 4,6 i .NET Framework 4.6.1, znaki zostały sklasyfikowane w oparciu o kategorie znaków Unicode 6,3.
 
-Obsługa standardu Unicode 8,0 jest ograniczona do klasyfikacji znaków przez klasę <xref:System.Globalization.CharUnicodeInfo> i do typów i metod, które są od niego zależne. Obejmują one klasę <xref:System.Globalization.StringInfo>, przeciążoną metodę <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> oraz [klasy znaków](../../standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych .NET Framework.  Ta zmiana nie ma wpływ na porównanie znaków i ciągów, a także w systemach Windows 7 — w przypadku danych znakowych dostarczonych przez .NET Framework.
+Obsługa standardu Unicode 8,0 jest ograniczona do klasyfikacji znaków przez klasę <xref:System.Globalization.CharUnicodeInfo> i do typów i metod, które są od niego zależne. Obejmują one klasę <xref:System.Globalization.StringInfo>, przeciążoną metodę <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> i [klasy znaków](../../standard/base-types/character-classes-in-regular-expressions.md) rozpoznawane przez aparat wyrażeń regularnych .NET Framework.  Ta zmiana nie ma wpływ na porównanie znaków i ciągów, a także w systemach Windows 7 — w przypadku danych znakowych dostarczonych przez .NET Framework.
 
 Zmiany w kategoriach znakowych z Unicode 6,0 na Unicode 7,0 można znaleźć [w standardzie Unicode w wersji 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/) w witrynie internetowej konsorcjum Unicode Consortium. Aby uzyskać zmiany z Unicode 7,0 na Unicode 8,0, zobacz [standard Unicode w wersji 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) w witrynie sieci Web programu Unicode Consortium.
 
@@ -1061,7 +1061,7 @@ Okres blokowania puli połączeń jest zawsze wyłączony.
 
 Klient SQL wprowadza dwa ulepszenia dla Always Encrypted:
 
-- Aby poprawić wydajność zapytań parametrycznych względem kolumn zaszyfrowanych baz danych, metadane szyfrowania dla parametrów zapytania są teraz buforowane. Właściwość <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> ma wartość `true` (która jest wartością domyślną), jeśli to samo zapytanie jest wywoływane wiele razy, Klient pobiera metadane parametrów z serwera tylko raz.
+- Aby poprawić wydajność zapytań parametrycznych względem kolumn zaszyfrowanych baz danych, metadane szyfrowania dla parametrów zapytania są teraz buforowane. Właściwość <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled%2A?displayProperty=nameWithType> ustawiona na `true` (która jest wartością domyślną), jeśli to samo zapytanie jest wywoływane wielokrotnie, Klient pobiera metadane parametrów z serwera tylko raz.
 
 - Wpisy kluczy szyfrowania kolumn w pamięci podręcznej kluczy są teraz wykluczone po konfigurowalnym przedziale czasu, ustawiane za pomocą właściwości <xref:System.Data.SqlClient.SqlConnection.ColumnEncryptionKeyCacheTtl%2A?displayProperty=nameWithType>.
 
@@ -1152,7 +1152,7 @@ Aplikacja, która używa obiektu <xref:System.Windows.Data.CollectionView> do gr
 
 Aby można było obsłużyć sortowanie grup, nowe właściwości <xref:System.ComponentModel.GroupDescription.SortDescriptions%2A?displayProperty=nameWithType> i <xref:System.ComponentModel.GroupDescription.CustomSort%2A?displayProperty=nameWithType> opisują sposób sortowania kolekcji grup utworzonych przez obiekt <xref:System.ComponentModel.GroupDescription>. Jest to analogiczne do sposobu, w jaki właściwości <xref:System.Windows.Data.ListCollectionView> o identycznej nazwie opisują sposób sortowania elementów danych.
 
-Dwie nowe statyczne właściwości klasy <xref:System.Windows.Data.PropertyGroupDescription>, <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> i <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>, mogą być używane w przypadku najczęstszych przypadków.
+Dwie nowe właściwości statyczne klasy <xref:System.Windows.Data.PropertyGroupDescription>, <xref:System.Windows.Data.PropertyGroupDescription.CompareNameAscending%2A> i <xref:System.Windows.Data.PropertyGroupDescription.CompareNameDescending%2A>mogą być używane dla najczęstszych przypadków.
 
 Na przykład poniższe dane grup XAML są uporządkowane według wieku, sortowania grupy wiekowe w kolejności rosnącej oraz grupowania elementów w każdej grupie wiekowej według nazwiska.
 
@@ -1214,7 +1214,7 @@ Jeśli ten scenariusz nie jest włączony, uruchomienie aplikacji w dalszym cią
 
 **Udoskonalenia przepływu pracy podczas korzystania z aktualizacji dynamicznej w programie Visual Studio Projektant przepływu pracy**
 
-Projektant przepływu pracy, Projektant działań FlowChart oraz inne Projektanci działań przepływu pracy pomyślnie ładują i wyświetlają przepływy pracy, które zostały zapisane po wywołaniu metody <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>. W wersjach .NET Framework przed .NET Framework 4.6.2, ładujących plik XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
+Projektant przepływu pracy, Projektant działań FlowChart oraz inne Projektanci działań przepływu pracy pomyślnie ładują i wyświetlają przepływy pracy, które zostały zapisane po wywołaniu metody <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>. W wersjach .NET Framework przed .NET Framework 4.6.2, ładowanie pliku XAML w programie Visual Studio dla przepływu pracy, który został zapisany po wywołaniu <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> może spowodować następujące problemy:
 
 - Projektant przepływu pracy nie może poprawnie załadować pliku XAML (gdy <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> znajduje się na końcu wiersza).
 
@@ -1300,9 +1300,9 @@ ADO.NET obsługuje teraz przechowywanie kluczy głównych kolumn Always Encrypte
 
 Klienci muszą zainstalować dostawcę usług kryptograficznych dostarczonych przez dostawcę modułu HSM lub dostawców magazynu kluczy CNG na serwerach aplikacji lub komputerach klienckich w celu uzyskania dostępu do danych Always Encrypted chronionych przy użyciu kluczy głównych kolumn przechowywanych w module HSM.
 
-**Ulepszone zachowanie połączenia <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> dla funkcji AlwaysOn**
+**Ulepszone zachowanie <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> połączenia dla funkcji AlwaysOn**
 
-Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja wymagała ustawienia parametrów połączenia w celu uwzględnienia `"MultisubnetFailover=true"` w celu wskazania, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia do `true` w przypadku nawiązywania połączenia z grupą dostępności zawsze może wystąpić limit czasu aplikacji. W tej wersji aplikacja *nie musi już* ustawiać <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> do `true`. Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja wymagała ustawienia parametrów połączenia w celu uwzględnienia `"MultisubnetFailover=true"` w celu wskazania, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia do `true` w przypadku nawiązywania połączenia z grupą dostępności zawsze może wystąpić limit czasu aplikacji. W tej wersji aplikacja *nie musi ustawiać* <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>, aby `true`. Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1318,7 +1318,7 @@ Opóźnienie w przypadku uruchamiania zdarzeń Touch zostało rozwiązane w .NET
 
 Moduł sprawdzania pisowni w programie WPF został zaktualizowany w Windows 8.1 i nowszych wersjach, aby można było korzystać z obsługi systemu operacyjnego w przypadku dodatkowych języków sprawdzania pisowni.  Nie wprowadzono zmian w wersjach systemu Windows starszych niż Windows 8.1.
 
-Podobnie jak w poprzednich wersjach .NET Framework, język dla bloku @no__t ora kontroli <xref:System.Windows.Controls.RichTextBox> jest wykrywany przez wyszukiwanie informacji w następującej kolejności:
+Podobnie jak w poprzednich wersjach .NET Framework, język dla bloku <xref:System.Windows.Controls.TextBox> sterowania ora <xref:System.Windows.Controls.RichTextBox> jest wykrywany przez wyszukiwanie informacji w następującej kolejności:
 
 - `xml:lang`, jeśli jest obecny.
 
@@ -1357,7 +1357,7 @@ WPF zawiera [pakiet NuGet](https://go.microsoft.com/fwlink/?LinkID=691342) , kt�
 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation: transakcje
 
-Metoda <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> może teraz korzystać z programu Distributed Transaction Manager innego niż MSDTC w celu podwyższenia poziomu transakcji. W tym celu należy określić identyfikator GUID promotora transakcji dla nowego przeciążenia <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType>. W przypadku pomyślnego wykonania tej operacji istnieją ograniczenia dotyczące możliwości transakcji. Po zapisaniu podwyższania poziomu usługi MSDTC następujące metody zwracają <xref:System.Transactions.TransactionPromotionException>, ponieważ te metody wymagają podwyższania poziomu do usługi MSDTC:
+Metoda <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> może teraz korzystać z programu Distributed Transaction Manager innego niż MSDTC, aby podwyższyć poziom transakcji. W tym celu należy określić identyfikator identyfikatora podwyższania transakcji dla nowego przeciążenia <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType>. W przypadku pomyślnego wykonania tej operacji istnieją ograniczenia dotyczące możliwości transakcji. Po zapisaniu podwyższania poziomu usługi MSDTC następujące metody zwracają <xref:System.Transactions.TransactionPromotionException>, ponieważ te metody wymagają podwyższania poziomu do usługi MSDTC:
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
 
@@ -1367,9 +1367,9 @@ Metoda <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?disp
 
 - <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=nameWithType>
 
-Po zapisaniu podwyższania poziomu usługi MSDTC należy go używać na potrzeby przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. @No__t-0 elementu promowania transakcji można uzyskać przy użyciu właściwości <xref:System.Transactions.Transaction.PromoterType%2A>. Gdy transakcja promuje, podwyższanie poziomu transakcji zapewnia tablicę <xref:System.Byte>, która reprezentuje podwyższony token. Aplikacja może uzyskać podwyższony token dla transakcji, która nie jest podwyższana dla usługi MSDTC, za pomocą metody <xref:System.Transactions.Transaction.GetPromotedToken%2A>.
+Po zapisaniu podwyższania poziomu usługi MSDTC należy go używać na potrzeby przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. <xref:System.Guid> podwyższania poziomu transakcji można uzyskać za pomocą właściwości <xref:System.Transactions.Transaction.PromoterType%2A>. Gdy transakcja promuje, podwyższanie poziomu transakcji zapewnia tablicę <xref:System.Byte>, która reprezentuje podwyższony token. Aplikacja może uzyskać podwyższony token dla transakcji, która nie jest podwyższana dla usługi MSDTC, za pomocą metody <xref:System.Transactions.Transaction.GetPromotedToken%2A>.
 
-Użytkownicy nowego przeciążenia <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> muszą wykonać określoną sekwencję wywołań, aby operacja podwyższania została ukończona pomyślnie. Te reguły są udokumentowane w dokumentacji metody.
+Użytkownicy nowego przeciążenia <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> muszą wykonać określoną sekwencję wywołań, aby można było pomyślnie ukończyć operację podwyższania poziomu. Te reguły są udokumentowane w dokumentacji metody.
 
 <a name="Profile461" />
 
@@ -1415,7 +1415,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Powiązanie modelu obsługuje metody zwracające zadania**
 
-    W .NET Framework 4,5 ASP.NET dodano funkcję powiązania modelu, która umożliwiła rozszerzalne podejście ukierunkowane na CRUD operacji na danych na stronach formularzy sieci Web i w kontrolkach użytkownika. System powiązań modelu obsługuje teraz @no__t -0-zwracające metody powiązań modelu. Ta funkcja umożliwia deweloperom formularzy sieci Web uzyskanie korzyści z skalowalności asynchronicznej przy użyciu systemu powiązań danych w przypadku używania nowszych wersji programu ORMs, w tym Entity Framework.
+    W .NET Framework 4,5 ASP.NET dodano funkcję powiązania modelu, która umożliwiła rozszerzalne podejście ukierunkowane na CRUD operacji na danych na stronach formularzy sieci Web i w kontrolkach użytkownika. System powiązań modelu obsługuje teraz metody powiązań modelu zwracające <xref:System.Threading.Tasks.Task>. Ta funkcja umożliwia deweloperom formularzy sieci Web uzyskanie korzyści z skalowalności asynchronicznej przy użyciu systemu powiązań danych w przypadku używania nowszych wersji programu ORMs, w tym Entity Framework.
 
     Powiązanie modelu asynchronicznego jest kontrolowane przez ustawienie konfiguracji `aspnet:EnableAsyncModelBinding`.
 
@@ -1433,7 +1433,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
     Protokół HTTP/2 jest również obsługiwany i domyślnie włączony w przypadku aplikacji z systemem Windows 10 platforma uniwersalna systemu Windows (platformy UWP), które używają interfejsu API <xref:System.Net.Http.HttpClient?displayProperty=nameWithType>.
 
-    Aby umożliwić korzystanie z funkcji [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) w aplikacjach ASP.NET, do klasy <xref:System.Web.HttpResponse> dodano nową metodę z dwoma przeciążeń, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> i <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>.
+    Aby zapewnić możliwość korzystania z funkcji [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) w aplikacjach ASP.NET, do klasy <xref:System.Web.HttpResponse> dodano nową metodę z dwoma przeciążeń, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> i <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>.
 
     > [!NOTE]
     > Mimo że ASP.NET Core obsługuje protokół HTTP/2, obsługa funkcji WYPYCHANia PROMISe nie została jeszcze dodana.
@@ -1476,7 +1476,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Dodano wiele nowych interfejsów API do .NET Framework 4,6, aby umożliwić korzystanie z kluczowych scenariuszy. Należą do nich następujące zmiany i Dodatki:
 
-  - **IReadOnlyCollection @ no__t-1T implementacje >**
+  - **Implementacje > IReadOnlyCollection\<T**
 
     Dodatkowe kolekcje implementują <xref:System.Collections.Generic.IReadOnlyCollection%601>, takie jak <xref:System.Collections.Generic.Queue%601> i <xref:System.Collections.Generic.Stack%601>.
 
@@ -1590,11 +1590,11 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Zmiany wzorca asynchronicznego opartego na zadaniach (TAP)**
 
-    W przypadku aplikacji, które są przeznaczone dla .NET Framework 4,6, <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kulturę i kultury interfejsu użytkownika wątku wywołującego. Nie dotyczy to zachowania aplikacji przeznaczonych dla poprzednich wersji .NET Framework lub nie przeznaczonych dla określonej wersji .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję "kultury i operacje asynchroniczne oparte na zadaniach" w temacie dotyczącym klas <xref:System.Globalization.CultureInfo>.
+    W przypadku aplikacji przeznaczonych dla .NET Framework 4,6, <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kulturę i kultury interfejsu użytkownika wątku wywołującego. Nie dotyczy to zachowania aplikacji przeznaczonych dla poprzednich wersji .NET Framework lub nie przeznaczonych dla określonej wersji .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję "kultury i operacje asynchroniczne oparte na zadaniach" w temacie dotyczącym klas <xref:System.Globalization.CultureInfo>.
 
     Klasa <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> pozwala reprezentować dane otoczenia, które są lokalne dla danego przepływu kontroli asynchronicznej, takie jak Metoda `async`. Może służyć do utrwalania danych w wątkach. Można również zdefiniować metodę wywołania zwrotnego, która jest przekazywana za każdym razem, gdy dane otoczenia ulegną zmianie, ponieważ właściwość <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> została jawnie zmieniona lub wątek napotkał przejście kontekstu.
 
-    Trzy wygodne metody, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType>, zostały dodane do wzorca asynchronicznego opartego na zadaniach (TAP) w celu zwrócenia ukończonych zadań w określonym stanie.
+    Trzy wygodne metody, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType>i <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType>zostały dodane do wzorca asynchronicznego opartego na zadaniach (TAP) w celu zwrócenia ukończonych zadań w określonym stanie.
 
     Klasa <xref:System.IO.Pipes.NamedPipeClientStream> obsługuje teraz asynchroniczną komunikację z nowym <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>. Method.
 
@@ -1729,11 +1729,11 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Obsługa międzynarodowych nazw domen i formacie Punycode**
 
-    Do klasy <xref:System.Uri> dodano nową właściwość, <xref:System.Uri.IdnHost%2A>, aby lepiej obsługiwać międzynarodowe nazwy domen i formacie Punycode.
+    Nowa właściwość, <xref:System.Uri.IdnHost%2A>, została dodana do klasy <xref:System.Uri>, aby lepiej obsługiwała międzynarodowe nazwy domen i formacie Punycode.
 
 - **Zmienianie rozmiarów w kontrolkach Windows Forms.**
 
-  Ta funkcja została rozwinięta w .NET Framework 4,6, aby uwzględnić <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.ToolStripSplitButton> typów oraz prostokąt określony przez właściwość <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> używane podczas rysowania <xref:System.Drawing.Design.UITypeEditor>.
+  Ta funkcja została rozwinięta w .NET Framework 4,6, aby uwzględnić typy <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.ToolStripSplitButton> oraz prostokąt określony przez właściwość <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> używaną podczas rysowania <xref:System.Drawing.Design.UITypeEditor>.
 
   Jest to funkcja opcjonalna. Aby ją włączyć, ustaw dla elementu `EnableWindowsFormsHighDpiAutoResizing` wartość `true` w pliku konfiguracji aplikacji (App. config):
 
@@ -1763,11 +1763,11 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 ## <a name="whats-new-in-net-framework-452"></a>Co nowego w .NET Framework 4.5.2
 
-- **Nowe interfejsy API dla aplikacji ASP.NET.** Nowe metody <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> i <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> umożliwiają sprawdzanie i modyfikowanie nagłówków odpowiedzi oraz kodu stanu, ponieważ odpowiedź jest opróżniana do aplikacji klienckiej. Rozważ użycie tych metod zamiast zdarzeń <xref:System.Web.HttpApplication.PreSendRequestHeaders> i <xref:System.Web.HttpApplication.PreSendRequestContent>; są one bardziej wydajne i niezawodne.
+- **Nowe interfejsy API dla aplikacji ASP.NET.** Nowe metody <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType> i <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType> umożliwiają inspekcję i modyfikowanie nagłówków odpowiedzi oraz kodu stanu, gdy odpowiedź jest opróżniana do aplikacji klienckiej. Rozważ użycie tych metod zamiast zdarzeń <xref:System.Web.HttpApplication.PreSendRequestHeaders> i <xref:System.Web.HttpApplication.PreSendRequestContent>; są one bardziej wydajne i niezawodne.
 
   Metoda <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType> umożliwia zaplanowanie niewielkich elementów roboczych w tle. ASP.NET śledzi te elementy i uniemożliwia nieoczekiwane zakończenie procesu roboczego przez usługi IIS do momentu zakończenia wszystkich elementów roboczych w tle. Tej metody nie można wywołać poza domenę aplikacji zarządzanej przez ASP.NET.
 
-  Nowe właściwości <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> i <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> zwracają wartości logiczne, które wskazują, czy nagłówki odpowiedzi zostały zapisaniu. Możesz użyć tych właściwości, aby upewnić się, że wywołania interfejsów API, takie jak <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (które generują wyjątki, jeśli nagłówki zostały zapisaniu) powiedzie się.
+  Nowe właściwości <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType> i <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType> zwracają wartości logiczne, które wskazują, czy nagłówki odpowiedzi zostały zapisaniu. Możesz użyć tych właściwości, aby upewnić się, że wywołania interfejsów API, takie jak <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (które generują wyjątki, jeśli nagłówki zostały zapisaną) powiedzie się.
 
 - **Zmienianie rozmiarów w kontrolkach Windows Forms.** Ta funkcja została rozszerzona. Teraz można użyć ustawienia DPI systemu, aby zmienić rozmiar składników następujących dodatkowych kontrolek (na przykład strzałkę rozwijaną w polach kombi):
 
@@ -1786,13 +1786,13 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
   </appSettings>
   ```
 
-- **Nowa funkcja przepływu pracy.** Menedżer zasobów korzystający z metody <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (w związku z tym implementujący interfejs <xref:System.Transactions.IPromotableSinglePhaseNotification>) może użyć nowej metody <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>, aby zażądać następujących metod:
+- **Nowa funkcja przepływu pracy.** Menedżer zasobów używający metody <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A> (i w związku z tym implementujący interfejs <xref:System.Transactions.IPromotableSinglePhaseNotification>) może użyć nowej metody <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> do żądania następujących czynności:
 
   - Podnieś poziom transakcji do transakcji usługi Microsoft Distributed Transaction Coordinator (MSDTC).
 
   - Zastąp <xref:System.Transactions.IPromotableSinglePhaseNotification> za<xref:System.Transactions.ISinglePhaseNotification>, który jest trwałą rejestracją, która obsługuje zatwierdzanie pojedynczej fazy.
 
-  Można to zrobić w ramach tej samej domeny aplikacji i nie jest wymagany żaden dodatkowy kod niezarządzany do współpracy z usługą MSDTC w celu przeprowadzenia promocji. Nową metodę można wywołać tylko wtedy, gdy istnieje oczekujące wywołanie z <xref:System.Transactions?displayProperty=nameWithType> do metody <xref:System.Transactions.IPromotableSinglePhaseNotification> @ no__t-2, która jest implementowana przez rejestrację promocji.
+  Można to zrobić w ramach tej samej domeny aplikacji i nie jest wymagany żaden dodatkowy kod niezarządzany do współpracy z usługą MSDTC w celu przeprowadzenia promocji. Nową metodę można wywołać tylko wtedy, gdy istnieje oczekujące wywołanie z <xref:System.Transactions?displayProperty=nameWithType> do metody <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote`, która jest implementowana przez rejestrację promocji.
 
 - **Udoskonalenia profilowania.** Następujące nowe niezarządzane interfejsy API profilowania zapewniają bardziej niezawodne profilowanie:
 
@@ -1878,7 +1878,7 @@ Ulepszenia Windows Forms obejmują:
   - <xref:System.Windows.Forms.TreeView>
   - Niektóre aspekty <xref:System.Windows.Forms.DataGridView> (zobacz [nowe funkcje w 4.5.2 w](#v452) przypadku dodatkowych formantów)
 
-  Aby włączyć tę funkcję, Dodaj nowy element \<appSettings > do pliku konfiguracji (App. config) i ustaw dla niego @no__t element `EnableWindowsFormsHighDpiAutoResizing`:
+  Aby włączyć tę funkcję, Dodaj nowy \<appSettings > elementu do pliku konfiguracji (App. config) i Ustaw element `EnableWindowsFormsHighDpiAutoResizing` na `true`:
 
   ```xml
   <appSettings>
@@ -1894,9 +1894,9 @@ Ulepszenia podczas debugowania aplikacji .NET Framework w Visual Studio 2013 obe
 
 - Debugowanie z obsługą asynchroniczną. Aby ułatwić debugowanie asynchronicznych aplikacji w Visual Studio 2013, stos wywołań ukrywa kod infrastruktury dostarczony przez kompilatory do obsługi asynchronicznego programowania, a także łańcuchuje w logicznych klatkach nadrzędnych, dzięki czemu można wykonać więcej czynności po wykonaniu programu logicznego zrozumiał. Okno zadań zastępuje okno zadania równoległe i wyświetla zadania, które odnoszą się do określonego punktu przerwania, a także wyświetla wszystkie inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji można znaleźć w sekcji "debugowanie z obsługą asynchroniczną" [anonsu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Lepsza obsługa wyjątków dla składników środowisko wykonawcze systemu Windows. W [!INCLUDE[win81](../../../includes/win81-md.md)] wyjątki, które powstają w aplikacjach ze sklepu Windows, zachowują informacje o błędzie, który spowodował wyjątek, nawet między granicami języka. Informacje o tej funkcji można znaleźć w sekcji "Programowanie aplikacji ze sklepu Windows" w [ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Lepsza obsługa wyjątków dla składników środowisko wykonawcze systemu Windows. W [!INCLUDE[win81](../../../includes/win81-md.md)]wyjątki, które powstają w aplikacjach ze sklepu Windows, zachowują informacje o błędzie, który spowodował wyjątek, nawet między granicami języka. Informacje o tej funkcji można znaleźć w sekcji "Programowanie aplikacji ze sklepu Windows" w [ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-Począwszy od Visual Studio 2013, można użyć narzędzia do optymalizacji opartej na [profilach zarządzanych (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) do optymalizowania aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], a także aplikacji klasycznych.
+Począwszy od Visual Studio 2013, można użyć narzędzia do optymalizacji opartej na [profilach zarządzanych (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) do optymalizowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, a także aplikacji klasycznych.
 
 Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and Web Tools for Visual Studio 2013 informacji o wersji](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1928,7 +1928,7 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 - Możliwość dostosowania kontekstu odbicia w celu przesłania domyślnego zachowania odbicia za pomocą klasy <xref:System.Reflection.Context.CustomReflectionContext>.
 
-- Obsługa wersji 2008 międzynarodowych nazw domen w aplikacjach (IDNA) standard, gdy Klasa <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> jest używana w [!INCLUDE[win8](../../../includes/win8-md.md)].
+- Obsługa wersji 2008 międzynarodowych nazw domen w programie Applications (IDNA) standard, gdy Klasa <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> jest używana w [!INCLUDE[win8](../../../includes/win8-md.md)].
 
 - Delegowanie porównania ciągów do systemu operacyjnego, który implementuje Unicode 6,0, gdy .NET Framework jest używany w [!INCLUDE[win8](../../../includes/win8-md.md)]. W przypadku uruchamiania na innych platformach .NET Framework obejmuje własne dane porównania ciągów, które implementują standard Unicode 5. x. Zapoznaj się z klasą <xref:System.String> i sekcją uwagi klasy <xref:System.Globalization.SortVersion>.
 
@@ -1960,7 +1960,7 @@ W .NET Framework 4,5 nowe funkcje asynchroniczne zostały dodane do języków C#
 
 W .NET Framework 4,5, Generator plików zasobów (Resgen. exe) umożliwia utworzenie pliku. resw do użycia w aplikacjach [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] z pliku Resources osadzonego w zestawie .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen. exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md).
 
-Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skrócenie czasu uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepływność przez optymalizację zestawów obrazów natywnych. Narzędzie wiersza polecenia generuje dane profilowe dla zestawów aplikacji obrazu natywnego. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], a także aplikacji klasycznych.
+Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skrócenie czasu uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepływność przez optymalizację zestawów obrazów natywnych. Narzędzie wiersza polecenia generuje dane profilowe dla zestawów aplikacji obrazu natywnego. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, a także aplikacji klasycznych.
 
 <a name="parallel" />
 
@@ -1978,7 +1978,7 @@ ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsł
 
 - [Platforma ASP.NET i narzędzia Web Tools dla programu Visual Studio 2013 — informacje o wersji](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>@No__t sieci-0
+### <a name="networking-a-namenetworking-"></a><a name="networking" /> sieci
 
 .NET Framework 4,5 udostępnia nowy interfejs programowania dla aplikacji HTTP. Aby uzyskać więcej informacji, zobacz nowe przestrzenie nazw <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
@@ -2120,11 +2120,11 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Workflow Foundation
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-aplikacje [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] są przeznaczone do określonych rodzajów formularzy i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla systemu Windows za pomocą programu C# lub Visual Basic. Ten podzbiór jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [przeglądzie](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
+aplikacje [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] są przeznaczone do określonych współczynników formularzy i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla systemu Windows za pomocą programu C# lub Visual Basic. Ten podzbiór jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [omówieniu](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Przenośne biblioteki klas <a name="portable" />
 
-Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Korzystając z projektu biblioteki klas przenośnych, należy wybrać platformy (takie jak Windows Phone i [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) umożliwia pisanie i kompilowanie zestawów zarządzanych, które działają na wielu platformach .NET Framework. Za pomocą przenośnego projektu biblioteki klas należy wybrać platformy (takie jak Windows Phone i [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) do celów. Dostępne typy i elementy członkowskie w projekcie są automatycznie ograniczone do wspólnych typów i elementów członkowskich na tych platformach. Aby uzyskać więcej informacji, zobacz [Przenośna biblioteka klas](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Zobacz także
 

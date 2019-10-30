@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784804"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040396"
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do typizowanych elementów DataSet
-Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:System.Data.DataSet> bez modyfikowania bazowego schematu. Modyfikacja nazw elementów w schemacie źródłowym spowoduje, że określony **zestaw danych** odwołuje się do obiektów, które nie istnieją w źródle danych, a także utraci odwołanie do obiektów, które istnieją w źródle danych.  
+Adnotacje umożliwiają modyfikowanie nazw elementów w wpisanych <xref:System.Data.DataSet> bez modyfikowania bazowego schematu. Modyfikacja nazw elementów w schemacie źródłowym spowoduje, że określony **zestaw danych** odwołuje się do obiektów, które nie istnieją w źródle danych, a także utraci odwołanie do obiektów, które istnieją w źródle danych.  
   
- Przy użyciu adnotacji można dostosować nazwy obiektów w określonym **zestawie danych** o bardziej zrozumiałych nazwach, zwiększyć czytelność kodu i ułatwić klientom korzystanie z tego **zestawu danych** , pozostawiając jednocześnie nienaruszony schemat. Na przykład następujący element schematu dla tabeli **Customers** w bazie danych **Northwind** spowoduje powstanie <xref:System.Data.DataRowCollection> nazwy obiektu **DataRow** **CustomersRow** i nazwanych **klientów**.  
+ Przy użyciu adnotacji można dostosować nazwy obiektów w określonym **zestawie danych** o bardziej zrozumiałych nazwach, zwiększyć czytelność kodu i ułatwić klientom korzystanie z tego **zestawu danych** , pozostawiając jednocześnie nienaruszony schemat. Na przykład następujący element schematu dla tabeli **Customers** w bazie danych **Northwind** spowoduje, że nazwa obiektu **DataRow** **CustomersRow** i <xref:System.Data.DataRowCollection> nazwanych **klientów**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -45,7 +45,7 @@ Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
-|**typedName**|Nazwa obiektu.|  
+|**typname**|Nazwa obiektu.|  
 |**typedPlural**|Nazwa kolekcji obiektów.|  
 |**typedParent**|Nazwa obiektu, gdy jest on określony w relacji nadrzędnej.|  
 |**typedChildren**|Nazwa metody zwracającej obiekty z relacji podrzędnej.|  
@@ -55,7 +55,7 @@ Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:
   
 |nullValue wartość|Opis|  
 |---------------------|-----------------|  
-|*Wartość zastępcza*|Określ wartość, która ma zostać zwrócona. Zwracana wartość musi być zgodna z typem elementu. Na przykład użyj `nullValue="0"` , aby zwrócić 0 dla pól o wartości null.|  
+|*Wartość zastępcza*|Określ wartość, która ma zostać zwrócona. Zwracana wartość musi być zgodna z typem elementu. Na przykład użyj `nullValue="0"`, aby zwrócić 0 dla pól o wartości null.|  
 |**_throw**|Zgłoś wyjątek. Domyślnie włączone.|  
 |**_null**|Zwraca odwołanie o wartości null lub Zgłoś wyjątek, jeśli napotkany jest typ pierwotny.|  
 |**_empty**|W przypadku ciągów zwraca **ciąg. Empty**, w przeciwnym razie zwraca obiekt utworzony na podstawie pustego konstruktora. Jeśli zostanie napotkany typ pierwotny, Zgłoś wyjątek.|  
@@ -65,18 +65,18 @@ Adnotacje umożliwiają modyfikowanie nazw elementów w określonym typie <xref:
 |Obiekt/Metoda/zdarzenie|Domyślny|Adnotacja|  
 |---------------------------|-------------|----------------|  
 |**Columns**|TableNameDataTable|typedPlural|  
-|**Tabela DataTable** Form|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
-|**DataRowCollection**|TableName|typedPlural|  
-|**DataRow**|TableNameRow|typedName|  
-|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
+|**Tabela DataTable** Form|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typname|  
+|**Obiekt DataRowcollection**|tableName|typedPlural|  
+|**DataRow**|TableNameRow|typname|  
+|**DataColumn**|DataTable. ColumnNameColumn<br /><br /> DataRow. ColumnName|typname|  
+|**Wartość**|Funkcja|typname|  
 |**Element podrzędny** Metoda|GetChildTableNameRows|typedChildren|  
 |**Element nadrzędny** Metoda|TableNameRow|typedParent|  
-|**Zestaw danych** Wydarzeniach|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**Zestaw danych** Wydarzeniach|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typname|  
   
- Aby użyć wpisanych adnotacji **zestawu danych** , należy uwzględnić następujące odwołanie **xmlns** w schemacie języka definicji schematu XML (XSD). Aby utworzyć XSD z tabel baz danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Working with datasetss in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
+ Aby użyć wpisanych adnotacji **zestawu danych** , należy uwzględnić następujące odwołanie **xmlns** w schemacie języka definicji schematu XML (XSD). Aby utworzyć XSD z tabeli bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Working with datasetss in Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio).  
   
-```  
+```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- Poniższy przykład kodu używa jednoznacznie określonego **zestawu danych** utworzonego na podstawie przykładowego schematu. Używa one <xref:System.Data.SqlClient.SqlDataAdapter> do wypełniania tabeli **Customers** , a <xref:System.Data.SqlClient.SqlDataAdapter> druga do wypełniania tabeli **Orders** . **Zestaw danych** o jednoznacznie określonym typie definiuje **relacje DataRelations**.  
+ Poniższy przykład kodu używa jednoznacznie określonego **zestawu danych** utworzonego na podstawie przykładowego schematu. Używa jednego <xref:System.Data.SqlClient.SqlDataAdapter>, aby wypełnić tabelę **Customers** i inne <xref:System.Data.SqlClient.SqlDataAdapter> do wypełnienia tabeli **Orders** . **Zestaw danych** o jednoznacznie określonym typie definiuje **relacje DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  

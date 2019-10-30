@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7d69528804cf0cee1302fd62fa2301e06076897a
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579203"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039016"
 ---
 # <a name="c-operators-c-reference"></a>C#Operatory (C# odwołanie)
 
@@ -57,7 +57,7 @@ Poniższa tabela zawiera listę C# operatorów zaczynających się od najwyższe
 | [x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | OR warunkowe |
 | [x? t](null-coalescing-operator.md) | Operator łączenia wartości null |
 | [s? t: f](conditional-operator.md) | Operator warunkowy |
-| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), x [< < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [4](lambda-operator.md) | Przypisanie i Deklaracja lambda |
+| [x = y](assignment-operator.md), [x + = y](arithmetic-operators.md#compound-assignment), [x-= y](arithmetic-operators.md#compound-assignment), [x * = y](arithmetic-operators.md#compound-assignment), [x/= y](arithmetic-operators.md#compound-assignment), [x% = y](arithmetic-operators.md#compound-assignment), [x & = y](boolean-logical-operators.md#compound-assignment), [x &#124;= y](boolean-logical-operators.md#compound-assignment), [x ^ = y](boolean-logical-operators.md#compound-assignment), x [< < = y](bitwise-and-shift-operators.md#compound-assignment), [x > > = y](bitwise-and-shift-operators.md#compound-assignment), [x?? = y](null-coalescing-operator.md), [=>](lambda-operator.md) | Przypisanie i Deklaracja lambda |
 
 ## <a name="operator-associativity"></a>Łączność operatora
 
@@ -85,7 +85,7 @@ Niepowiązane z pierwszeństwem operatora i łączność, operandy w wyrażeniu 
 |`a / b + c * d`|a, b,/, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +,/, d, *|
 
-Zazwyczaj są oceniane wszystkie operandy operatora. Niektóre operatory jednocześnie szacują operandy. Oznacza to, że wartość pierwszego operandu takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) i [(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , [Operatory łączenia wartości null `??` i `??=`](null-coalescing-operator.md), [Operatory warunkowe o wartości null `?.` i `?[]`](member-access-operators.md#null-conditional-operators--and-) [i operator warunkowy 1](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
+Zazwyczaj są oceniane wszystkie operandy operatora. Jednak niektóre operatory jednocześnie obliczają operandy. Oznacza to, że wartość operandu z lewej strony takiego operatora definiuje, czy należy ocenić inne operandy. Operatory te są operatorami logicznymi [i (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) i [(`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , [Operatory łączenia wartości null `??` i `??=`](null-coalescing-operator.md), [Operatory warunkowe o wartości null `?.` i `?[]`](member-access-operators.md#null-conditional-operators--and-) [i operator warunkowy `?:`](conditional-operator.md). Aby uzyskać więcej informacji, zobacz opis każdego operatora.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

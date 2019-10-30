@@ -2,13 +2,14 @@
 title: Zaktualizowany wzorzec zdarzeń platformy .NET Core
 description: Dowiedz się, w jaki sposób wzorzec zdarzeń platformy .NET Core umożliwia elastyczność z poprzednią zgodnością i jak zaimplementować bezpieczne przetwarzanie zdarzeń za pomocą subskrybentów asynchronicznych.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 85fa4fd111a9eab01c1d32949d9fcc5f6300e33c
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798881"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039794"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Zaktualizowany wzorzec zdarzeń platformy .NET Core
 

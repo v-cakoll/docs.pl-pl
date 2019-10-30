@@ -2,28 +2,28 @@
 title: Zarządzanie współbieżnością za pomocą DependentTransaction
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
-ms.openlocfilehash: 62cbb8825171628b29a5519ca9e3ae31c2058a03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8de7cc6257317ff7128f25968a9dcf80ae5af89d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662961"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040428"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>Zarządzanie współbieżnością za pomocą DependentTransaction
-<xref:System.Transactions.Transaction> Obiekt zostanie utworzony przy użyciu <xref:System.Transactions.Transaction.DependentClone%2A> metody. Jej jedyny ma na celu zagwarantowania, że transakcji nie można zatwierdzić, podczas gdy niektóre części kodu (na przykład wątku roboczego) są nadal wykonując pracę w transakcji. Podczas pracy w ramach transakcji sklonowanym jest gotowy do można zatwierdzić, można go powiadomić twórca za pomocą transakcji <xref:System.Transactions.DependentTransaction.Complete%2A> metody. W związku z tym można zachować spójności i poprawności danych.  
+<xref:System.Transactions.Transaction> Obiekt zostanie utworzony przy użyciu <xref:System.Transactions.Transaction.DependentClone%2A> metody. Jedynym celem jest zagwarantowanie, że transakcja nie może zostać zatwierdzona, a niektóre inne fragmenty kodu (na przykład wątek roboczy) nadal wykonują prace nad transakcją. Gdy działanie wykonane w ramach sklonowanej transakcji zostanie ukończone i gotowe do zatwierdzenia, może powiadomić twórcę transakcji przy użyciu metody <xref:System.Transactions.DependentTransaction.Complete%2A>. W związku z tym można zachować spójności i poprawności danych.  
   
- <xref:System.Transactions.DependentTransaction> Klasy można również zarządzać współbieżności między zadania asynchronicznego. W tym scenariuszu nadrzędnego można kontynuować wykonywania żadnych kodu podczas klon zależny działa na własnych zadań. Innymi słowy wykonywanie element nadrzędny nie jest zablokowany ukończenia zależne od.  
+ <xref:System.Transactions.DependentTransaction> Klasy można również zarządzać współbieżności między zadania asynchronicznego. W tym scenariuszu nadrzędnego można kontynuować wykonywania żadnych kodu podczas klon zależny działa na własnych zadań. Innymi słowy, wykonanie elementu nadrzędnego nie jest blokowane do momentu zakończenia zależnego.  
   
 ## <a name="creating-a-dependent-clone"></a>Tworzenie klon zależny  
  Aby utworzyć zależne transakcji, należy wywołać <xref:System.Transactions.Transaction.DependentClone%2A> metody i przekazać <xref:System.Transactions.DependentCloneOption> wyliczenia jako parametr. Ten parametr określa zachowanie transakcji, jeśli `Commit` jest wywoływana w transakcji nadrzędnej przed klon zależny wskazuje, że jest gotowa na zatwierdzenie transakcji (przez wywołanie metody <xref:System.Transactions.DependentTransaction.Complete%2A> metody). Następujące wartości są prawidłowe dla tego parametru:  
   
-- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> Tworzy zależne transakcji, która blokuje proces zatwierdzania transakcji nadrzędnej do godziny transakcji nadrzędnej limit lub aż <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana na wszystkie zależności wskazujący ich zakończenia. Jest to przydatne, gdy klient nie chce, aby zatwierdzenie do czasu ukończenia transakcji zależne transakcji nadrzędnej. Jeśli element nadrzędny zakończy pracę starszych niż zależne transakcji i wywołuje <xref:System.Transactions.CommittableTransaction.Commit%2A> dla transakcji, proces zatwierdzania jest zablokowany w stanie, w którym dodatkowe pracy można wykonać na transakcji i można było utworzyć nowe rejestracji, aż wszystkie wywołania zależności <xref:System.Transactions.DependentTransaction.Complete%2A>. Jako ukończony je wszystkie jego pracę, a następnie wywołać <xref:System.Transactions.DependentTransaction.Complete%2A>, rozpocznie się proces zatwierdzania dla transakcji.  
+- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> tworzy transakcję zależną, która blokuje proces zatwierdzania transakcji nadrzędnych do momentu przełączenia transakcji nadrzędnej lub do momentu wywołania <xref:System.Transactions.DependentTransaction.Complete%2A> na wszystkich zależnościach wskazujących ich zakończenie. Jest to przydatne, gdy klient nie chce, aby transakcja nadrzędna została zatwierdzona do momentu zakończenia transakcji zależnych. Jeśli element nadrzędny zakończy pracę starszych niż zależne transakcji i wywołuje <xref:System.Transactions.CommittableTransaction.Commit%2A> dla transakcji, proces zatwierdzania jest zablokowany w stanie, w którym dodatkowe pracy można wykonać na transakcji i można było utworzyć nowe rejestracji, aż wszystkie wywołania zależności <xref:System.Transactions.DependentTransaction.Complete%2A>. Jako ukończony je wszystkie jego pracę, a następnie wywołać <xref:System.Transactions.DependentTransaction.Complete%2A>, rozpocznie się proces zatwierdzania dla transakcji.  
   
-- <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, z drugiej strony, tworzy zależne transakcji, która automatycznie przerywa Jeśli <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana w transakcji nadrzędnej przed <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana. W takim przypadku wszystkie prace wykonane w transakcji zależne jest prawidłowa w ramach jednej transakcji okres istnienia i nie jest Państwo przekazać tylko jego części.  
+- <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>, z drugiej strony, tworzy transakcję zależną, która automatycznie przerywa, jeśli <xref:System.Transactions.CommittableTransaction.Commit%2A> jest wywoływana w transakcji nadrzędnej przed wywołaniem <xref:System.Transactions.DependentTransaction.Complete%2A>. W takim przypadku wszystkie prace wykonane w transakcji zależne jest prawidłowa w ramach jednej transakcji okres istnienia i nie jest Państwo przekazać tylko jego części.  
   
- <xref:System.Transactions.DependentTransaction.Complete%2A> Metoda musi zostać wywołana tylko raz, kiedy aplikacja zakończy pracę w transakcji zależnych; w przeciwnym razie <xref:System.InvalidOperationException> zgłaszany. Po wywołaniu to wywołanie, nie należy spróbować żadnych dodatkowych działań w transakcji lub wyjątku.  
+ Metoda <xref:System.Transactions.DependentTransaction.Complete%2A> musi być wywoływana tylko raz, gdy aplikacja zakończy pracę w transakcji zależnej; w przeciwnym razie zostanie zgłoszony <xref:System.InvalidOperationException>. Po wywołaniu to wywołanie, nie należy spróbować żadnych dodatkowych działań w transakcji lub wyjątku.  
   
- Poniższy przykład kodu pokazuje sposób tworzenia zależnych transakcji do zarządzania dwóch zadań jednoczesnych klonowanie zależne transakcji i przekazywania go do wątku roboczego.  
+ Poniższy przykład kodu pokazuje, jak utworzyć transakcję zależną, aby zarządzać dwoma współbieżnymi zadaniami przez klonowanie transakcji zależnej i przekazanie jej do wątku roboczego.  
   
 ```csharp  
 public class WorkerThread  
@@ -70,14 +70,14 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` Metoda wykonuje na nowy wątek. Klient uruchamia nowy wątek, przekazywania zależne transakcji jako `ThreadMethod` parametru.  
   
- Ponieważ zależne transakcji jest tworzone z <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, ma gwarancji, że nie można zatwierdzić transakcji, aż wszystkie transakcyjnych zadań wykonywanych na sekundę wątek został zakończony i <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana w transakcji zależnych. Oznacza to, że jeśli kończy zakres klienta (podczas próby usunięcia obiektu transakcji na końcu **przy użyciu** instrukcji) przed nowe wywołania wątku <xref:System.Transactions.DependentTransaction.Complete%2A> w transakcji zależnych, kod klienta blokuje aż do <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana w elementach dependent. Następnie transakcji może zakończyć przekazywanie lub przerywanie.  
+ Ponieważ zależne transakcji jest tworzone z <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>, ma gwarancji, że nie można zatwierdzić transakcji, aż wszystkie transakcyjnych zadań wykonywanych na sekundę wątek został zakończony i <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana w transakcji zależnych. Oznacza to, że jeśli kończy zakres klienta (podczas próby usunięcia obiektu transakcji na końcu `using` instrukcji) przed nowe wywołania wątku <xref:System.Transactions.DependentTransaction.Complete%2A> dla transakcji zależnych, kod klienta blokuje aż do <xref:System.Transactions.DependentTransaction.Complete%2A> jest wywoływana w elementach dependent. Następnie transakcji może zakończyć przekazywanie lub przerywanie.  
   
 ## <a name="concurrency-issues"></a>Problemy z współbieżności  
  Istnieje kilka problemów współbieżności dodatkowe, które należy zwrócić uwagę podczas korzystania z <xref:System.Transactions.DependentTransaction> klasy:  
   
 - Jeśli wątku roboczego powoduje wycofanie transakcji, ale nadrzędnego próbuje zatwierdzić, <xref:System.Transactions.TransactionAbortedException> zgłaszany.  
   
-- Należy utworzyć nowy klon zależny dla każdego wątku roboczego w transakcji. Nie przekazuj tej samej klon zależny na wiele wątków, ponieważ tylko jeden z nich można wywołać <xref:System.Transactions.DependentTransaction.Complete%2A> na nim.  
+- Należy utworzyć nowy klon zależny dla każdego wątku roboczego w transakcji. Nie przekazuj tego samego klonu zależnego do wielu wątków, ponieważ tylko jeden z nich może wywoływać <xref:System.Transactions.DependentTransaction.Complete%2A> na nim.  
   
 - Jeśli wątku roboczego spawns nowego wątku roboczego, upewnij się, że tworzenie klon zależny od klon zależny i przekazywanie ich do nowego wątku.  
   

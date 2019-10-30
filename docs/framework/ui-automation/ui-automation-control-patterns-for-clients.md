@@ -5,42 +5,42 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 320833bf147fa16889cd188c7c729cd4dc028843
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042524"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039446"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- W tym omówieniu przedstawiono wzorce kontroli dla klientów automatyzacji interfejsu użytkownika. Zawiera informacje dotyczące sposobu, w jaki klient automatyzacji interfejsu użytkownika może używać wzorców kontroli w celu uzyskania [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]dostępu do informacji na temat.  
+ W tym omówieniu przedstawiono wzorce kontroli dla klientów automatyzacji interfejsu użytkownika. Zawiera informacje o tym, jak klient automatyzacji interfejsu użytkownika może używać wzorców kontroli w celu uzyskania dostępu do informacji o [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
- Wzorce kontrolek umożliwiają kategoryzowanie i Uwidacznianie funkcjonalności formantu niezależnie od typu formantu lub wyglądu kontrolki. Klienci automatyzacji interfejsu użytkownika mogą przeanalizować <xref:System.Windows.Automation.AutomationElement> , aby określić, które wzorce kontroli są obsługiwane, i zapewnić zachowanie formantu.  
+ Wzorce kontrolek umożliwiają kategoryzowanie i Uwidacznianie funkcjonalności formantu niezależnie od typu formantu lub wyglądu kontrolki. Klienci automatyzacji interfejsu użytkownika mogą przeanalizować <xref:System.Windows.Automation.AutomationElement>, aby określić, które wzorce kontroli są obsługiwane, i zapewnić zachowanie kontrolki.  
   
  Aby uzyskać pełną listę wzorców kontrolek, zobacz [Omówienie wzorców kontrolek automatyzacji interfejsu użytkownika](ui-automation-control-patterns-overview.md).  
   
 <a name="uiautomation_getting_control_patterns"></a>   
 ## <a name="getting-control-patterns"></a>Pobieranie wzorców kontrolek  
- Klienci pobierają wzorzec kontroli z elementu <xref:System.Windows.Automation.AutomationElement> przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
+ Klienci pobierają wzorzec kontroli z <xref:System.Windows.Automation.AutomationElement>, wywołując <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A?displayProperty=nameWithType>.  
   
- Klienci mogą używać <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> metody lub <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>pojedynczej `IsPatternAvailable` właściwości (na przykład) w celu określenia, czy wzorzec <xref:System.Windows.Automation.AutomationElement>lub Grupa wzorców są obsługiwane w. Jednak bardziej wydajną próbą jest uzyskanie wzorca kontroli i testu dla `null` odwołania niż sprawdzenie obsługiwanych właściwości i pobranie wzorca kontrolki, ponieważ powoduje to zmniejszenie liczby wywołań między procesami.  
+ Klienci mogą używać metody <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> lub pojedynczej właściwości `IsPatternAvailable` (na przykład <xref:System.Windows.Automation.AutomationElement.IsTextPatternAvailableProperty>), aby określić, czy wzorzec lub Grupa wzorców są obsługiwane na <xref:System.Windows.Automation.AutomationElement>. Jednak bardziej wydajną próbą jest uzyskanie wzorca kontroli i testu dla odwołania `null` niż w celu sprawdzenia obsługiwanych właściwości i pobrania wzorca kontrolki, ponieważ powoduje to zmniejszenie liczby wywołań między procesami.  
   
- Poniższy przykład ilustruje, jak uzyskać <xref:System.Windows.Automation.TextPattern> wzorzec formantu <xref:System.Windows.Automation.AutomationElement>z.  
+ Poniższy przykład ilustruje, jak uzyskać <xref:System.Windows.Automation.TextPattern> wzorzec formantu z <xref:System.Windows.Automation.AutomationElement>.  
   
  [!code-csharp[UIATextPattern_snip#1037](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATextPattern_snip/CSharp/SearchWindow.cs#1037)]  
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Pobieranie właściwości dla wzorców formantów  
- Klienci mogą pobrać wartości właściwości w wzorcach kontroli przez wywołanie albo <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowanie obiektu zwróconego do odpowiedniego typu. Aby uzyskać więcej informacji [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] na temat właściwości, zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
+ Klienci mogą pobierać wartości właściwości w wzorcach kontroli przez wywołanie <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> lub <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> i rzutowanie obiektu zwróconego na odpowiedni typ. Aby uzyskać więcej informacji na temat właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [właściwości automatyzacji interfejsu użytkownika dla klientów](ui-automation-properties-for-clients.md).  
   
- Poza `GetPropertyValue` metodami wartości właściwości można pobierać za pomocą metod dostępu środowiska uruchomieniowego języka wspólnego (CLR), aby [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] uzyskać dostęp do właściwości wzorca.  
+ Poza metodami `GetPropertyValue` wartości właściwości można pobrać za pomocą metod dostępu środowiska uruchomieniowego języka wspólnego (CLR), aby uzyskać dostęp do właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wzorca.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Kontrolki ze wzorcami zmiennych  
- Niektóre typy formantów obsługują różne wzorce w zależności od ich stanu lub sposobu, w jaki formant jest używany. Przykłady formantów, które mogą mieć wzorce zmiennych, to widoki listy (miniatury, kafelki, ikony, lista, [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] szczegóły), wykresy (wykres kołowy, linia, słupek, wartość komórki [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]z formułą), obszar dokumentu (normalny, układ sieci Web, konspekt, układ wydruku, drukowanie Wersja zapoznawcza [!INCLUDE[TLA#tla_wmp](../../../includes/tlasharptla-wmp-md.md)] ) i karnacje.  
+ Niektóre typy formantów obsługują różne wzorce w zależności od ich stanu lub sposobu, w jaki formant jest używany. Przykładami formantów, które mogą mieć wzorce zmiennych, są widoki list (miniatury, kafelki, ikony, listy, szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresy (kołowy, liniowy, słupkowy, wartość komórki z formułą), obszar dokumentu [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normalny, układ sieci Web, konspekt, układ wydruku, Podgląd wydruku) i Karnacje programu Microsoft Windows Media Player.  
   
  Kontrolki implementujące niestandardowe typy kontrolek mogą mieć dowolny zestaw wzorców kontroli, które są potrzebne do reprezentowania ich funkcjonalności.  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 412f133c7cf23642ba92d54272287cb708dddc92
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 73523297454be37716acedad13498954ef9a89a0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784363"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040348"
 ---
 # <a name="navigating-datarelations"></a>Nawigowanie w elementach DataRelation
-Jedną z podstawowych funkcji <xref:System.Data.DataRelation> programu jest umożliwienie nawigacji od jednego <xref:System.Data.DataTable> do drugiego w obrębie <xref:System.Data.DataSet>. Dzięki temu <xref:System.Data.DataRow> można pobrać wszystkie powiązane obiekty w jednej **DataTable** , gdy podaje jeden element **DataRow** z powiązanej **tabeli DataTable**. Na przykład po ustaleniu **relacji** między tabelą klientów a tabelą zamówień można pobrać wszystkie wiersze zamówienia dla danego wiersza klienta przy użyciu **GetChildRows**.  
+Jedną z podstawowych funkcji <xref:System.Data.DataRelation> jest umożliwienie nawigowania z jednego <xref:System.Data.DataTable> do innego w <xref:System.Data.DataSet>. Dzięki temu można pobrać wszystkie powiązane obiekty <xref:System.Data.DataRow> w jednej **DataTable** , gdy podaje jeden element **DataRow** z powiązanej **tabeli DataTable**. Na przykład po ustaleniu **relacji** między tabelą klientów a tabelą zamówień można pobrać wszystkie wiersze zamówienia dla danego wiersza klienta przy użyciu **GetChildRows**.  
   
  Poniższy przykład kodu tworzy **relację** między tabelą **Customers** i tabelą **Orders** **zestawu danych** i zwraca wszystkie zamówienia dla każdego klienta.  
   
@@ -24,11 +24,11 @@ Jedną z podstawowych funkcji <xref:System.Data.DataRelation> programu jest umo�
   
  Rozwinięty przykład zwraca również wartości z tabel **OrderDetails** i **Products** . Tabela **Orders** jest powiązana z tabelą **OrderDetails** przy użyciu funkcji **IDZamówienia** , aby określić, jakie produkty i ilości zostały uporządkowane według kolejności. Ponieważ tabela **OrderDetails** zawiera tylko identyfikator **ProductID** uporządkowanego produktu, **OrderDetails** jest związana z **produktami** przy użyciu klasy **ProductID** w celu zwrócenia **ProductName**. W tej relacji tabela **Products** jest elementem nadrzędnym, a tabela **Order Details** jest elementem podrzędnym. W związku z tym podczas iterowania za pomocą tabeli **OrderDetails** zostaje wywołana funkcja **GetParentRow** w celu pobrania pokrewnej wartości **ProductName** .  
   
- Należy zauważyć, że po utworzeniu **relacji** dla tabel **Customers** i **Orders** nie określono żadnej wartości dla flagi **xmlconstraint** (wartość domyślna to **true**). Przyjęto założenie, że wszystkie wiersze w tabeli **Orders** mają wartość **CustomerID** , która istnieje w tabeli nadrzędnych **klientów** . Jeśli element **CustomerID** istnieje w tabeli **Orders** , która nie istnieje w tabeli <xref:System.Data.ForeignKeyConstraint> Customers, powoduje to wystąpienie wyjątku.  
+ Należy zauważyć, że po utworzeniu **relacji** dla tabel **Customers** i **Orders** nie określono żadnej wartości dla flagi **xmlconstraint** (wartość domyślna to **true**). Przyjęto założenie, że wszystkie wiersze w tabeli **Orders** mają wartość **CustomerID** , która istnieje w tabeli nadrzędnych **klientów** . Jeśli element **CustomerID** istnieje w tabeli **Orders** , która nie istnieje w tabeli **Customers** , <xref:System.Data.ForeignKeyConstraint> powoduje zgłoszenie wyjątku.  
   
  Gdy kolumna podrzędna może zawierać wartości, których kolumna nadrzędna nie zawiera, ustaw dla flagi " **isconstraint** **" wartość false** podczas dodawania **relacji**między elementami. W przykładzie flaga **"** **isconstraint** " ma wartość false dla **relacji** między tabelą **Orders** i tabelą **OrderDetails** . Dzięki temu aplikacja zwróci wszystkie rekordy z tabeli **OrderDetails** i tylko podzestaw rekordów z tabeli **Orders** bez generowania wyjątku w czasie wykonywania. Rozwinięty przykład generuje dane wyjściowe w następującym formacie.  
   
-```  
+```output  
 Customer ID: NORTS  
   Order ID: 10517  
         Order Date: 4/24/1997 12:00:00 AM  

@@ -1,17 +1,17 @@
 ---
-title: <ImpliesType>— Element (.NET Native)
+title: Element <ImpliesType> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 38bdfc974a6942596e9778cabb87b275f1e51db8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049675"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039533"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType, element > (.NET Native)
+# <a name="impliestype-element-net-native"></a>\<element > ImpliesType (.NET Native)
 Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego je typu lub metody.  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,9 +42,9 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
 |`Browse`|Odbicie|Atrybut opcjonalny. Steruje wykonywaniem zapytań dotyczących informacji o elementach programu, ale nie umożliwia dostępu do środowiska uruchomieniowego.|  
 |`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|  
 |`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interop|Atrybut opcjonalny. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|  
 |`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|  
 |`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami dotyczącymi organizowania typów wartości na kod natywny.|  
@@ -53,13 +53,13 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*type_name*|Nazwa typu. Jeśli typ reprezentowany przez ten `<ImpliesType>` element znajduje się w tej samej przestrzeni nazw co element zawierający `<Type>` , *TYPE_NAME* może zawierać nazwę typu bez jego przestrzeni nazw. W przeciwnym razie *TYPE_NAME* musi zawierać w pełni kwalifikowaną nazwę typu.|  
+|*type_name*|Nazwa typu. Jeśli typ reprezentowany przez ten element `<ImpliesType>` znajduje się w tej samej przestrzeni nazw co element zawierający `<Type>`, *TYPE_NAME* może zawierać nazwę typu bez jego przestrzeni nazw. W przeciwnym razie *TYPE_NAME* musi zawierać w pełni kwalifikowaną nazwę typu.|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad. Możliwe wartości to `All`, `Auto` `Excluded` ,,`Public` ,,`Required All`, i. `PublicAndInternal` `Required Public` `Required PublicAndInternal` Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`i `Required All`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -68,12 +68,12 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
-|[\<> Metody](method-element-net-native.md)|Stosuje zasady odbicia do metody.|  
+|[Typ\<](type-element-net-native.md)|Stosuje zasady odbicia do typu i wszystkich jego elementów członkowskich.|  
+|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego i wszystkich jego członków.|  
+|[> metody\<](method-element-net-native.md)|Stosuje zasady odbicia do metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<ImpliesType>` Element jest przeznaczony głównie do użytku przez biblioteki. Dotyczy to następujących scenariuszy:  
+ Element `<ImpliesType>` jest przeznaczony głównie do użytku przez biblioteki. Dotyczy to następujących scenariuszy:  
   
 - Jeśli procedura musi być odzwierciedlona na jednym typie, konieczna jest potrzeba odbicia w drugim typie.  
   
@@ -81,7 +81,7 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
   
  Najczęściej istnieją dwa typy to ogólne wystąpienia z argumentami typu współużytkowanego.  
   
- Element został zdefiniowany z założeniem, że potrzeba odbicia w typie określonym przez jego element nadrzędny oznacza potrzebę odbicia w typie określonym `<ImpliesType>` przez element. `<ImpliesType>` Na przykład następujące dyrektywy odbicia mają zastosowanie do dwóch typów `Explicit<T>` i. `Implicit<T>`  
+ Element `<ImpliesType>` został zdefiniowany z założeniem, że konieczność odbicia w typie określonym przez jego element nadrzędny oznacza potrzebę odbicia w typie określonym przez element `<ImpliesType>`. Na przykład następujące dyrektywy odbicia mają zastosowanie do dwóch typów, `Explicit<T>` i `Implicit<T>`.  
   
 ```xml  
 <Type Name="Explicit{ET}">  
@@ -89,9 +89,9 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
 </Type>  
 ```  
   
- Ta dyrektywa nie działa, chyba że w przypadku wystąpienia `Explicit` ma zdefiniowane `Dynamic` ustawienie zasad. Na przykład, jeśli jest to przypadek dla `Explicit<Int32>`, `Implicit<Int32>` zostanie utworzone wystąpienie z publicznymi składowymi, a ich metadane są udostępniane do programowania dynamicznego.  
+ Ta dyrektywa nie działa, chyba że wystąpienie `Explicit` ma zdefiniowane ustawienie zasad `Dynamic`. Na przykład, jeśli ma to zastosowanie w przypadku `Explicit<Int32>`, `Implicit<Int32>` zostanie utworzone wystąpienie z publicznymi składowymi, a ich metadane są udostępniane do programowania dynamicznego.  
   
- Poniżej znajduje się przykład rzeczywistego, który ma zastosowanie do co najmniej jednego serializatora. Dyrektywy przechwytują wymaganie, które odzwierciedlają coś, co `IList<`zostało wpisane, ponieważ`>` zawiera również odbicie `List<` *w odpowiadającym* `>` mu *typie, bez* konieczności Adnotacja dla aplikacji.  
+ Poniżej znajduje się przykład rzeczywistego, który ma zastosowanie do co najmniej jednego serializatora. Dyrektywy przechwytują wymaganie, które odzwierciedlają coś, co zostało wpisane jako `IList<`*coś*`>` obejmuje również odzwierciedlenie odpowiedniego `List<`*elementu*`>` typ bez konieczności stosowania żadnej aplikacji wskazani.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -99,13 +99,13 @@ Stosuje zasady do typu, jeśli te zasady zostały zastosowane do zawierającego 
 </Type>  
 ```  
   
- Element może również znajdować się `<Method>` w obrębie elementu, ponieważ w niektórych przypadkach wystąpienie metody ogólnej implikuje odzwierciedlenie w wystąpieniu typu. `<ImpliesType>` Załóżmy na przykład, że metoda `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` ogólna, do której dana biblioteka będzie uzyskiwać dostęp dynamicznie wraz ze skojarzonymi <xref:System.Collections.Generic.List%601> i <xref:System.Array> typami. Może to być wyrażone jako:  
+ Element `<ImpliesType>` może również znajdować się w obrębie elementu `<Method>`, ponieważ w niektórych przypadkach wystąpienie metody ogólnej implikuje odzwierciedlenie w wystąpieniu typu. Załóżmy na przykład, że metoda ogólna `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`, że dana biblioteka będzie uzyskiwać dostęp dynamicznie wraz ze skojarzonymi typami <xref:System.Collections.Generic.List%601> i <xref:System.Array>. Może to być wyrażone jako:  
   
 ```xml  
 <Type Name="MyType">  
     <Method Name="MakeEnumerable{T}" Signature="(System.String, T)" Dynamic="Included">  
         <ImpliesType Name="T[]" Dynamic="Public" />  
-        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public">  
+        <ImpliesType Name="System.Collections.Generic.List{T}" Dynamic="Public" />  
     </Method>  
 </Type>  
 ```  

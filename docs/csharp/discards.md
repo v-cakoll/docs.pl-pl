@@ -1,87 +1,87 @@
 ---
-title: Odrzuca — Przewodnik po języku C#
-description: Opisano obsługę języka C# w odrzucenia, które są nieprzypisane, discardable zmienne i sposoby, w którym można odrzucenia.
+title: Odrzuty — C# Przewodnik
+description: Opisuje C#obsługę odrzuconych, które są nieprzypisanymi, zmiennymi odrzuconymi i sposobami, w których można używać odrzutów.
 author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
-ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 783266b6893a597d790af82db50b4f52a00ad0bf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646673"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037344"
 ---
-# <a name="discards---c-guide"></a>Odrzuca — Przewodnik po języku C#
+# <a name="discards---c-guide"></a>Odrzuty — C# Przewodnik
 
-Począwszy od języka C# 7.0, C# obsługuje odrzuca, służą do tymczasowego, fikcyjnego zmiennych, które są celowo nieużywane w kodzie aplikacji. Odrzuca są równoważne nieprzypisane zmiennych; nie mają wartości. Ponieważ jest zmienną pojedynczego odrzucenia, a tej zmiennej nie może jeszcze być alokowana magazynu, odrzucenia może zmniejszyć alokacji pamięci. Ponieważ ich zamiar zwykłego kodu, zwiększyć jego czytelność i łatwość konserwacji.
+Począwszy od C# 7,0, C# obsługuje odrzuty, które są tymczasowymi, fikcyjnymi, które są celowo nieużywane w kodzie aplikacji. Odrzucenia są równoważne z nieprzypisanymi zmiennymi; nie mają wartości. Ponieważ istnieje tylko jedna zmienna odrzucona, a ta zmienna nie może nawet być przydzielone magazynem, odrzucanie może zmniejszyć alokacje pamięci. Ponieważ sprawiają, że zamierzenie kodu jest jasne, zwiększa czytelność i łatwość utrzymania.
 
-Można wskazać, że zmienna jest odrzucenia, przypisując go znak podkreślenia (`_`) jako jego nazwę. Na przykład, następujące wywołanie metody zwraca 3-krotka, w którym wartości pierwszego i drugiego to odrzutów i *obszaru* poprzednio zadeklarowana zmienna, należy ustawić odpowiadającego składnika trzeciej zwrócony przez  *GetCityInformation*:
+Wskazujesz, że zmienna jest odrzucana przez przypisanie do niej znaku podkreślenia (`_`) jako nazwy. Na przykład następujące wywołanie metody zwraca 3-krotkę, w której pierwsze i drugie wartości są odrzucane, a *obszar* jest wcześniej zadeklarowaną zmienną, która ma być ustawiona na odpowiedni trzeci składnik zwrócony przez *GetCityInformation*:
 
 ```csharp
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-W języku C# 7.0 odrzucenia są obsługiwane w przypisania w następujących okolicznościach:
+W C# 7,0, odrzucenia są obsługiwane w przypisaniach w następujących kontekstach:
 
-- Krotki i obiekt [dekonstrukcja](deconstruct.md).
-- Za pomocą dopasowywania do wzorca [jest](language-reference/keywords/is.md) i [Przełącz](language-reference/keywords/switch.md).
-- Wywołania do metod z `out` parametrów.
-- Autonomiczny `_` gdy nie `_` znajduje się w zakresie.
+- Krotka i [dekonstrukcja](deconstruct.md)obiektu.
+- Zgodne ze wzorcem [parametrem](language-reference/keywords/switch.md) [is](language-reference/keywords/is.md) i switch.
+- Wywołania metod z parametrami `out`.
+- Autonomiczna `_`, gdy nie ma `_` w zakresie.
 
-Gdy `_` jest prawidłowy odrzucenia próby pobrania jej wartość lub użyj jej w operacji przypisania generuje błąd kompilatora CS0301, "Nazwa"\_"nie istnieje w bieżącym kontekście". Jest to spowodowane `_` nie jest przypisywana wartość i nie może jeszcze być przypisany lokalizacji magazynu. W przypadku rzeczywista zmienna, nie może odrzucić więcej niż jedną wartość, tak jak w poprzednim przykładzie.
+Gdy `_` jest prawidłowym odrzucaniem, próba pobrania jego wartości lub użycia w operacji przypisania generuje błąd kompilatora CS0301, "nazwa"\_"nie istnieje w bieżącym kontekście". Wynika to z faktu, że `_` nie ma przypisanej wartości i może nie mieć przypisanej lokalizacji magazynu. Jeśli była to zmienna rzeczywista, nie można odrzucić więcej niż jednej wartości, jak w poprzednim przykładzie.
 
-## <a name="tuple-and-object-deconstruction"></a>Dekonstrukcja krotki i obiektu
+## <a name="tuple-and-object-deconstruction"></a>Krotka i dekonstrukcja obiektu
 
-Odrzuca są szczególnie przydatne w pracy z krotek, gdy kod aplikacji używa niektórych elementów krotki, ale ignoruje inne osoby. Na przykład następująca `QueryCityDataForYears` metoda zwraca 6-krotka nazwą miasta, jego obszaru, roku, to miasto populację na potrzeby tego roku, drugiego roku i miasta populację na potrzeby tego drugiego roku. W przykładzie pokazano zmianę populacji między te dwa lata. Dane udostępniła spójnej kolekcji, jesteśmy unconcerned z obszarem miasta i wiemy, nazwę miasta i dwiema datami w czasie projektowania. W rezultacie firma Microsoft interesują jedynie wartości dwóch populacji, przechowywane w spójnej kolekcji i może obsługiwać jego pozostałe wartości jako odrzucenia.  
+Odrzucenia są szczególnie przydatne podczas pracy z krotkami, gdy kod aplikacji używa niektórych elementów krotki, ale ignoruje inne. Na przykład Poniższa metoda `QueryCityDataForYears` zwraca wartość 6-krotki z nazwą miasta, jego obszarem, rokiem, populacją miasta dla tego roku, drugi rok i populacją miasta dla tego drugiego roku. W przykładzie pokazano zmianę populacji między tymi dwoma latami. Danych dostępnych w spójnej kolekcji nie ma w tym obszarze miasta i wiemy, że imię i nazwisko miasto oraz dwie daty w czasie projektowania. W związku z tym interesuje tylko dwie wartości populacji przechowywane w spójnej kolekcji i mogą obsługiwać pozostałe wartości jako odrzucenia.  
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-Aby uzyskać więcej informacji na temat dekonstrukcja krotek przy użyciu odrzucenia, zobacz [Dekonstrukcja krotek i innych typów](deconstruct.md#deconstructing-tuple-elements-with-discards).
+Aby uzyskać więcej informacji na temat dekonstrukcji krotek z odrzuconymi, zobacz [dekonstrukcja krotek i inne typy](deconstruct.md#deconstructing-tuple-elements-with-discards).
 
-`Deconstruct` Metody klasy, struktury lub interfejsu umożliwia również pobrać i dekonstruować określonego zestawu danych z obiektu. Możesz użyć odrzucenia, jeśli interesują Cię Praca z podzbiorem śródwierszową wartości. Poniższy przykład deconstructs `Person` obiektu do czterech ciągów (imiona i nazwiska, miasta i stanu), ale odrzuca nazwisko i stanu.
+Metoda `Deconstruct` klasy, struktury lub interfejsu umożliwia również pobieranie i dekonstrukcja określonego zestawu danych z obiektu. Można użyć odrzuconych, gdy interesuje Cię pracę tylko z podzbiorem wartości, które zostały zbudowane. Poniższy przykład dekonstruuje obiekt `Person` w czterech ciągach (imię i nazwisko, miasto i stan), ale odrzuca ostatnią nazwę i stan.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 
-Aby uzyskać więcej informacji na temat dekonstrukcja typy zdefiniowane przez użytkownika przy użyciu odrzucenia, zobacz [Dekonstrukcja krotek i innych typów](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
+Aby uzyskać więcej informacji na temat dekonstruowania typów zdefiniowanych przez użytkownika z odrzuconymi, zobacz [dekonstrukcja kroteks i innych typów](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
-## <a name="pattern-matching-with-switch-and-is"></a>Za pomocą dopasowywania do wzorca `switch` i `is`
+## <a name="pattern-matching-with-switch-and-is"></a>Dopasowanie wzorca do `switch` i `is`
 
-*Odrzucić wzorzec* mogą być używane w dopasowywania do wzorca z [jest](language-reference/keywords/is.md) i [Przełącz](language-reference/keywords/switch.md) słów kluczowych. Każde wyrażenie zawsze zgodny ze wzorcem odrzucenia.
+*Wzorca Discard* można używać w połączeniu ze wzorcem ze słowami kluczowymi [is](language-reference/keywords/is.md) i [Switch](language-reference/keywords/switch.md) . Każde wyrażenie jest zawsze zgodne ze wzorcem odrzucania.
 
-W poniższym przykładzie zdefiniowano `ProvidesFormatInfo` metody, która używa [jest](language-reference/keywords/is.md) instrukcje, aby określić, czy zawiera obiekt <xref:System.IFormatProvider> implementacji i testów czy obiekt jest `null`. Używa również wzorca odrzucania obsługi obiektów innych niż null innego typu.
+W poniższym przykładzie zdefiniowano metodę `ProvidesFormatInfo`, która używa instrukcji [is](language-reference/keywords/is.md) , aby określić, czy obiekt udostępnia implementację <xref:System.IFormatProvider> i sprawdza, czy obiekt jest `null`. Używa również wzorca odrzucania do obsługi obiektów innych niż null dla innych typów.
 
 [!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 
-## <a name="calls-to-methods-with-out-parameters"></a>Wywołania metod za pomocą parametrów out
+## <a name="calls-to-methods-with-out-parameters"></a>Wywołania metod z parametrami out
 
-Podczas wywoływania `Deconstruct` metody typu zdefiniowanego przez użytkownika (wystąpienia klasy, struktury lub interfejsu), możesz odrzucić wartości poszczególnych dekonstruować `out` argumentów. Ale można również odrzucić wartość `out` argumentów podczas wywoływania dowolnej metody z parametrem out.
+Podczas wywoływania metody `Deconstruct` w celu odtworzenia typu zdefiniowanego przez użytkownika (wystąpienie klasy, struktury lub interfejsu) można odrzucić wartości poszczególnych argumentów `out`. Ale można również odrzucić wartość `out` argumentów podczas wywoływania dowolnej metody z parametrem out.
 
-Poniższy przykład wywołuje [DateTime.TryParse (ciąg, out daty/godziny)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) metodę, aby określić, czy reprezentacją ciągu daty jest nieprawidłowy w bieżącej kultury. Ponieważ przykład dotyczy tylko w przypadku sprawdzania poprawności ciągu daty i nie ich w celu wyodrębnienia Data, analizowania `out` argument do metody jest odrzucenia.
+Poniższy przykład wywołuje metodę [DateTime. TryParse (String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) , aby określić, czy ciąg reprezentujący datę jest prawidłowy w bieżącej kulturze. Ponieważ przykład dotyczy tylko walidacji ciągu daty i nie jest analizowany w celu wyodrębnienia daty, argument `out` metody jest odrzucany.
 
 [!code-csharp[discard-with-out](../../samples/snippets/csharp/programming-guide/discards/discard-out1.cs)]
 
-## <a name="a-standalone-discard"></a>Odrzuć autonomiczny
+## <a name="a-standalone-discard"></a>Odrzucanie autonomiczne
 
-Odrzucenia autonomiczny służy do wskazania jakakolwiek zmienna, która zostanie zignorowany. W poniższym przykładzie użyto odrzucenia autonomiczne do ignorowania <xref:System.Threading.Tasks.Task> obiektu zwróconego przez operację asynchroniczną. Skutkuje to pomijania wyjątek, który zgłasza operacji, jak zbliża się zakończyć.
+Możesz użyć odrzucania autonomicznego, aby wskazać dowolną zmienną, która ma być ignorowana. W poniższym przykładzie jest stosowane autonomiczne odrzucanie w celu ignorowania <xref:System.Threading.Tasks.Task> obiektu zwróconego przez operację asynchroniczną. Ma to wpływ na pominięcie wyjątku, który operacja zgłasza, gdy zostanie zakończone.
 
 [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard1.cs)]
 
-Należy pamiętać, że `_` jest również prawidłowym identyfikatorem. Gdy jest używana poza kontekstem obsługiwanych, `_` jest traktowany jako prawidłową zmienną, ale nie jako odrzucenia. Jeśli nazwany identyfikator `_` jest już w zakresie użytkowania `_` jako autonomiczny odrzucenia może doprowadzić do:
+Należy pamiętać, że `_` jest również prawidłowym identyfikatorem. Gdy jest używana poza obsługiwanym kontekstem, `_` jest traktowana jako odrzucenie, ale jako prawidłowa zmienna. Jeśli identyfikator o nazwie `_` znajduje się już w zakresie, użycie `_` jako odrzucanie autonomiczne może skutkować:
 
-- Przypadkowe modyfikacji wartości w zakresie `_` zmiennej, przypisując jej wartość zamierzony odrzucenia. Na przykład:
+- Przypadkowe modyfikowanie wartości zmiennej `_` w zakresie przez przypisanie jej wartości zamierzonego odrzucenia. Na przykład:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- Błąd kompilatora za naruszenie bezpieczeństwa typu. Na przykład:
+- Błąd kompilatora dotyczący naruszania bezpieczeństwa typów. Na przykład:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- Błąd kompilatora CS0136, "element lokalny lub parametr o nazwie"\_"nie można zadeklarować w tym zakresie, ponieważ w tym nazwa jest używana w otaczającym zakresie lokalnym do zdefiniowania elementu lokalnego lub parametru." Na przykład:
+- Błąd kompilatora CS0136, "nie można zadeklarować lokalnego lub parametru o nazwie"\_"w tym zakresie, ponieważ ta nazwa jest używana w otaczającym zakresie lokalnym w celu zdefiniowania lokalnego lub parametru". Na przykład:
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Dekonstrukcja krotek i innych typów](deconstruct.md)
-- [`is` Słowo kluczowe](language-reference/keywords/is.md)
-- [`switch` Słowo kluczowe](language-reference/keywords/switch.md)
+- [`is` — słowo kluczowe](language-reference/keywords/is.md)
+- [`switch` — słowo kluczowe](language-reference/keywords/switch.md)

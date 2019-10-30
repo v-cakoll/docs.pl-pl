@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: a2cc7cb1b6da860a2c27bc8d2fe74e0ffde5f5e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053277"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039342"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
-Interfejs zawiera definicje dla grupy powiązanych funkcji, które może zaimplementować [Klasa](../../language-reference/keywords/class.md) lub [Struktura](../../language-reference/keywords/struct.md) .
+Interfejs zawiera definicje dla grupy powiązanych funkcji, które muszą implementować [Klasa](../../language-reference/keywords/class.md) nieabstrat lub [Struktura](../../language-reference/keywords/struct.md) .
   
 Korzystając z interfejsów, można na przykład uwzględnić zachowanie z wielu źródeł w klasie. Ta funkcja jest ważna w C# przypadku, gdy język nie obsługuje wielokrotnego dziedziczenia klas. Ponadto należy użyć interfejsu, jeśli chcesz symulować dziedziczenie dla struktur, ponieważ nie może faktycznie dziedziczyć z innej struktury lub klasy.  
   
@@ -23,11 +23,11 @@ Interfejs można zdefiniować za pomocą słowa kluczowego [Interface](../../lan
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-Nazwa struktury musi być prawidłową C# [nazwą identyfikatora](../inside-a-program/identifier-names.md). Według Konwencji nazwy interfejsów zaczynają się od Wielkiej `I`litery.
+Nazwa struktury musi być prawidłową C# [nazwą identyfikatora](../inside-a-program/identifier-names.md). Według Konwencji nazwy interfejsów zaczynają się od `I`wielkiej litery.
 
-Każda klasa lub struktura implementująca <xref:System.IEquatable%601> interfejs musi zawierać definicję <xref:System.IEquatable%601.Equals%2A> metody, która pasuje do sygnatury określanej przez interfejs. W związku z tym można obliczyć na klasie implementującej `IEquatable<T>` `Equals` metodę, za pomocą której wystąpienie klasy może określić, czy jest ono równe innemu wystąpieniu tej samej klasy.  
+Każda klasa lub struktura implementująca interfejs <xref:System.IEquatable%601> musi zawierać definicję metody <xref:System.IEquatable%601.Equals%2A>, która pasuje do sygnatury określanej przez interfejs. W związku z tym można obliczyć na klasie, która implementuje `IEquatable<T>`, aby zawierała metodę `Equals`, z którą wystąpienie klasy może określić, czy jest ono równe innemu wystąpieniu tej samej klasy.  
   
-Definicja `IEquatable<T>` nie zawiera implementacji dla programu `Equals`. Klasa lub struktura może implementować wiele interfejsów, ale Klasa może dziedziczyć tylko z pojedynczej klasy.
+Definicja `IEquatable<T>` nie zapewnia implementacji dla `Equals`. Klasa lub struktura może implementować wiele interfejsów, ale Klasa może dziedziczyć tylko z pojedynczej klasy.
   
 Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -37,11 +37,11 @@ Aby zaimplementować element członkowski interfejsu, odpowiadający mu element 
   
 Gdy Klasa lub struktura implementuje interfejs, Klasa lub struktura musi dostarczyć implementację dla wszystkich elementów członkowskich, które definiuje interfejs. Sam interfejs nie udostępnia funkcji, które Klasa lub struktura może dziedziczyć w sposób, w jaki może dziedziczyć funkcje klasy podstawowej. Jeśli jednak Klasa bazowa implementuje interfejs, każda klasa, która jest pochodną klasy bazowej, dziedziczy tę implementację.  
   
-Poniższy przykład pokazuje implementację <xref:System.IEquatable%601> interfejsu. Implementacja klasy, `Car`, musi dostarczyć implementację <xref:System.IEquatable%601.Equals%2A> metody.  
+W poniższym przykładzie przedstawiono implementację interfejsu <xref:System.IEquatable%601>. Klasa implementująca, `Car`, musi dostarczyć implementację metody <xref:System.IEquatable%601.Equals%2A>.  
   
  [!code-csharp[csProgGuideInheritance#48](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#48)]  
   
-Właściwości i indeksatory klasy mogą definiować dodatkowe metody dostępu do właściwości lub indeksatora zdefiniowanego w interfejsie. Na przykład interfejs może deklarować właściwość, która ma metodę dostępu [Get](../../language-reference/keywords/get.md) . Klasa implementująca interfejs może zadeklarować tę samą Właściwość zarówno jako `get` akcesora, jak i [zestawu](../../language-reference/keywords/set.md) . Jeśli jednak właściwość lub indeksator używa jawnej implementacji, metody dostępu muszą być zgodne. Aby uzyskać więcej informacji na temat implementacji jawnej, zobacz [jawne implementacje interfejsu](explicit-interface-implementation.md) i [Właściwości interfejsu](../classes-and-structs/interface-properties.md).  
+Właściwości i indeksatory klasy mogą definiować dodatkowe metody dostępu do właściwości lub indeksatora zdefiniowanego w interfejsie. Na przykład interfejs może deklarować właściwość, która ma metodę dostępu [Get](../../language-reference/keywords/get.md) . Klasa implementująca interfejs może zadeklarować tę samą właściwość z elementem dostępu `get` i [Set](../../language-reference/keywords/set.md) . Jeśli jednak właściwość lub indeksator używa jawnej implementacji, metody dostępu muszą być zgodne. Aby uzyskać więcej informacji na temat implementacji jawnej, zobacz [jawne implementacje interfejsu](explicit-interface-implementation.md) i [Właściwości interfejsu](../classes-and-structs/interface-properties.md).  
 
 Interfejsy mogą dziedziczyć z innych interfejsów. Klasa może zawierać wiele razy interfejs za pomocą klas bazowych, które dziedziczy lub przez interfejsy, które dziedziczy inne interfejsy. Jednak Klasa może zapewnić implementację interfejsu tylko jeden raz i tylko wtedy, gdy Klasa deklaruje interfejs jako część definicji klasy (`class ClassName : InterfaceName`). Jeśli interfejs jest dziedziczony, ponieważ dziedziczy Klasa bazowa implementująca interfejs, Klasa bazowa zapewnia implementację elementów członkowskich interfejsu. Jednak Klasa pochodna może zaimplementować wszystkie elementy członkowskie interfejsu wirtualnego zamiast korzystać z dziedziczonej implementacji.  
   
@@ -62,17 +62,17 @@ Interfejs ma następujące właściwości:
 [Implementacja interfejsu jawnego](explicit-interface-implementation.md)  
  Wyjaśnia, jak utworzyć element członkowski klasy, który jest specyficzny dla interfejsu.  
   
- [Instrukcje: Jawnie Implementuj składowe interfejsu](how-to-explicitly-implement-interface-members.md)  
+ [Instrukcje: jawne implementowanie elementów interfejsu](how-to-explicitly-implement-interface-members.md)  
  Przedstawia przykład sposobu jawnego implementowania elementów członkowskich interfejsów.  
   
- [Instrukcje: Jawne implementowanie elementów członkowskich dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Instrukcje: jawne implementowanie elementów dwóch interfejsów](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Przedstawia przykład sposobu jawnego implementowania elementów członkowskich interfejsów przy użyciu dziedziczenia.  
   
 ## <a name="BKMK_RelatedSections"></a>Sekcje pokrewne
 
 - [Właściwości interfejsu](../classes-and-structs/interface-properties.md)  
 - [Indeksatory w interfejsach](../indexers/indexers-in-interfaces.md)  
-- [Instrukcje:  Implementowanie zdarzeń interfejsu](../events/how-to-implement-interface-events.md)  
+- [Instrukcje: implementowanie zdarzeń interfejsu](../events/how-to-implement-interface-events.md)  
 - [Klasy i struktury](../classes-and-structs/index.md)  
 - [Dziedziczenie](../classes-and-structs/inheritance.md)  
 - [Metody](../classes-and-structs/methods.md)  
@@ -82,9 +82,9 @@ Interfejs ma następujące właściwości:
 - [Zdarzenia](../events/index.md)  
 - [Indeksatory](../indexers/index.md)  
   
-## <a name="featured-book-chapter"></a>Polecany rozdział książki
+## <a name="featured-book-chapter"></a>polecany rozdział książki
 
-[Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczeniu C# 3,0: Główne podstawy C# 3,0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Interfejsy](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) w [uczeniu C# 3,0: główne C# podstawy 3,0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,76 +14,82 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1548f7850c68bc3c5422cf9d8d3d30eaa4aa8f3
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828103"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035886"
 ---
 # <a name="access-levels-in-visual-basic"></a>Poziomy dostępu w Visual Basic
-*Poziom dostępu* zadeklarowanych elementów jest w zakresie możliwości dostępu do niego, oznacza to, jaki kod ma uprawnienia do jego odczytu lub zapisanie w nim. Jest to ustalane nie tylko, jak zadeklarować elementu, ale z poziomem dostępu do kontenera elementu. Kod, który nie może uzyskać dostępu zawierającego element nie może uzyskać dostępu do dowolnego z jego zawartych elementów, nawet te zadeklarowane jako `Public`. Na przykład `Public` zmienną `Private` struktury jest możliwy z wewnątrz klasy, która zawiera strukturę, ale nie z spoza tej klasy.  
-  
-## <a name="public"></a>Public  
- [Publicznych](../../../../visual-basic/language-reference/modifiers/public.md) słowo kluczowe w instrukcji deklaracji określa, czy element jest możliwy z kodu w dowolnym miejscu w tym samym projekcie, inne projekty, które odwołują się projektu i z dowolnego zestawu zbudowany z projektu. Poniższy kod przedstawia przykład `Public` deklaracji.  
-  
-```vb  
-Public Class classForEverybody  
-```  
-  
- Możesz użyć `Public` tylko na poziomie modułu, interfejsu lub przestrzeni nazw. Oznacza to, że można zadeklarować elementu publicznego na poziomie pliku źródłowego lub obszaru nazw, lub wewnątrz interfejsu, modułu, klasy lub struktury, ale nie w procedurze.  
-  
-## <a name="protected"></a>Protected  
- [Chronione](../../../../visual-basic/language-reference/modifiers/protected.md) słowo kluczowe w instrukcji deklaracji określa, czy element jest możliwy tylko z w ramach tej samej klasy lub z klasy pochodzącej od tej klasy. Poniższy kod przedstawia przykład `Protected` deklaracji.  
-  
-```vb  
-Protected Class classForMyHeirs  
-```  
-  
- Możesz użyć `Protected` tylko w klasie poziomu i tylko po zadeklarowaniu składową klasy. Oznacza to, że można zadeklarować elementu chronionego w klasie, ale nie na poziomie pliku źródłowego lub obszaru nazw lub wewnątrz interfejsu, moduł, struktura lub procedury.  
-  
-## <a name="friend"></a>Friend  
- [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) słowo kluczowe w instrukcji deklaracji określa, czy element jest możliwy z w obrębie tego samego zestawu, ale nie z spoza zestawu. Poniższy kod przedstawia przykład `Friend` deklaracji.  
-  
-```vb  
-Friend stringForThisProject As String  
-```  
-  
- Możesz użyć `Friend` tylko na poziomie modułu, interfejsu lub przestrzeni nazw. Oznacza to, że możesz deklarować elementu przyjaznego na poziomie pliku źródłowego lub obszaru nazw, lub wewnątrz interfejsu, modułu, klasy lub struktury, ale nie w procedurze.  
-  
-## <a name="protected-friend"></a>Chronione Friend  
- [Protected Friend](../../../language-reference/modifiers/protected-friend.md) kombinacja słów kluczowych w instrukcji deklaracji określa, czy element jest możliwy z klasy pochodnej lub z poziomu tego samego zestawu lub obie. Poniższy kod przedstawia przykład `Protected Friend` deklaracji.  
-  
-```vb  
-Protected Friend stringForProjectAndHeirs As String  
-```  
-  
- Możesz użyć `Protected Friend` tylko w klasie poziomu i tylko po zadeklarowaniu składową klasy. Oznacza to, że możesz deklarować elementu przyjaznego chronionych w klasie, ale nie na poziomie pliku źródłowego lub obszaru nazw lub wewnątrz interfejsu, moduł, struktura lub procedury.  
-  
-## <a name="private"></a>Private  
- [Prywatnej](../../../../visual-basic/language-reference/modifiers/private.md) słowo kluczowe w instrukcji deklaracji określa, czy element jest możliwy tylko z w obrębie tego samego modułu, klasy lub struktury. Poniższy kod przedstawia przykład `Private` deklaracji.  
-  
-```vb  
-Private numberForMeOnly As Integer  
-```  
-  
- Możesz użyć `Private` tylko na poziomie modułu. Oznacza to, że można zadeklarować elementu prywatnej wewnątrz modułu, klasy lub struktury, ale nie na poziomie pliku źródłowego lub obszaru nazw, wewnątrz interfejs lub w procedurze.  
-  
- Na poziomie modułu `Dim` instrukcję bez żadnych słów kluczowych do poziomu dostępu jest odpowiednikiem `Private` deklaracji. Jednakże, możesz chcieć użyć `Private` — słowo kluczowe, aby ułatwić odczytanie i interpretację swój kod.  
 
-## <a name="private-protected"></a>Prywatny chroniony
+*Poziom dostępu* zadeklarowanego elementu to zakres możliwości dostępu do niego, czyli kod, który ma uprawnienia do odczytu lub zapisu. Jest to ustalane nie tylko w przypadku deklarowania samego elementu, ale również według poziomu dostępu kontenera elementu. Kod, który nie może uzyskać dostępu do elementu zawierającego, nie może uzyskać dostępu do żadnego z zawartych w nim elementów, nawet tych zadeklarowanych jako `Public`. Na przykład można uzyskać dostęp do zmiennej `Public` w strukturze `Private` z wnętrza klasy, która zawiera strukturę, ale nie spoza tej klasy.
 
-[Private Protected](../../../language-reference/modifiers/private-protected.md) kombinacja słów kluczowych w instrukcji deklaracji określa, czy element jest możliwy tylko z w ramach tej samej klasy, a także od klas pochodnych, w tym samym zestawie co klasa zawierająca. `Private Protected` Modyfikator dostępu jest obsługiwane począwszy od wersji 15.5 programu Visual Basic.
+## <a name="public"></a>Public
 
-W poniższym przykładzie przedstawiono `Private Protected` deklaracji:
+[Publiczne](../../../language-reference/modifiers/public.md) słowo kluczowe w instrukcji deklaracji określa, że do elementu można uzyskać dostęp z dowolnego miejsca w tym samym projekcie, od innych projektów odwołujących się do projektu oraz z dowolnego zestawu skompilowanego z projektu. Poniższy kod przedstawia przykładową deklarację `Public`:
+
+```vb
+Public Class ClassForEverybody
+```
+
+`Public` można używać tylko na poziomie modułu, interfejsu lub przestrzeni nazw. Oznacza to, że można zadeklarować element publiczny na poziomie pliku źródłowego lub przestrzeni nazw albo wewnątrz interfejsu, modułu, klasy lub struktury, ale nie w procedurze.
+  
+## <a name="protected"></a>Protected
+
+[Chronione](../../../language-reference/modifiers/protected.md) słowo kluczowe w instrukcji deklaracji określa, że do elementu można uzyskać dostęp tylko z tej samej klasy lub z klasy pochodnej tej klasy. Poniższy kod przedstawia przykładową deklarację `Protected`:
+
+```vb
+Protected Class ClassForMyHeirs
+```
+
+`Protected` można używać tylko na poziomie klasy i tylko wtedy, gdy deklarujesz składową klasy. Oznacza to, że można zadeklarować element chroniony w klasie, ale nie na poziomie pliku źródłowego lub przestrzeni nazw lub wewnątrz interfejsu, modułu, struktury lub procedury.
+
+## <a name="friend"></a>Friend
+
+Słowo kluczowe [zaprzyjaźnione](../../../language-reference/modifiers/friend.md) w instrukcji deklaracji określa, że do elementu można uzyskać dostęp z tego samego zestawu, ale nie z spoza zestawu. Poniższy kod przedstawia przykładową deklarację `Friend`:
+
+```vb
+Friend stringForThisProject As String
+```
+
+`Friend` można używać tylko na poziomie modułu, interfejsu lub przestrzeni nazw. Oznacza to, że można zadeklarować zaprzyjaźniony element na poziomie pliku źródłowego lub przestrzeni nazw albo wewnątrz interfejsu, modułu, klasy lub struktury, ale nie w procedurze.
+
+## <a name="protected-friend"></a>Protected Friend
+
+Kombinacja [chronionych słów kluczowych zaprzyjaźniona](../../../language-reference/modifiers/protected-friend.md) w instrukcji deklaracji określa, że do elementu można uzyskać dostęp z klas pochodnych lub z tego samego zestawu lub obu tych elementów. Poniższy kod przedstawia przykładową deklarację `Protected Friend`:
+
+```vb
+Protected Friend stringForProjectAndHeirs As String
+```
+
+`Protected Friend` można używać tylko na poziomie klasy i tylko wtedy, gdy deklarujesz składową klasy. Oznacza to, że można zadeklarować chroniony element zaprzyjaźniony w klasie, ale nie na poziomie pliku źródłowego lub przestrzeni nazw lub wewnątrz interfejsu, modułu, struktury lub procedury.
+
+## <a name="private"></a>Private
+
+[Prywatne](../../../language-reference/modifiers/private.md) słowo kluczowe w instrukcji deklaracji określa, że do elementu można uzyskać dostęp tylko z tego samego modułu, klasy lub struktury. Poniższy kod przedstawia przykładową deklarację `Private`:
+
+```vb
+Private _numberForMeOnly As Integer
+```
+
+`Private` można używać tylko na poziomie modułu. Oznacza to, że można zadeklarować element prywatny wewnątrz modułu, klasy lub struktury, ale nie na poziomie pliku źródłowego lub przestrzeni nazw, wewnątrz interfejsu lub w procedurze.
+
+Na poziomie modułu instrukcja `Dim` bez żadnych słów kluczowych poziomu dostępu jest równoważna z deklaracją `Private`. Można jednak użyć słowa kluczowego `Private`, aby ułatwić odczytywanie i interpretację kodu.
+
+## <a name="private-protected"></a>Private Protected
+
+[Prywatna kombinacja prywatnych](../../../language-reference/modifiers/private-protected.md) słów kluczowych w instrukcji deklaracji określa, że element jest dostępny tylko w obrębie tej samej klasy, a także z klas pochodnych, które znajdują się w tym samym zestawie, co Klasa zawierająca. Modyfikator dostępu `Private Protected` jest obsługiwany począwszy od Visual Basic 15,5.
+
+W poniższym przykładzie pokazano `Private Protected` deklaracji:
 
 ```vb
 Private Protected internalValue As Integer
 ```
 
-Można zadeklarować `Private Protected` element tylko wewnątrz klasy. Nie można zadeklarować ją w ramach interfejsu lub struktury, nie można zadeklarować je na poziomie pliku źródłowego lub obszaru nazw, wewnątrz interfejsu lub struktury lub w procedurze.
+Element `Private Protected` można zadeklarować tylko wewnątrz klasy. Nie można zadeklarować go w obrębie interfejsu lub struktury ani nie można go zadeklarować na poziomie pliku źródłowego lub przestrzeni nazw, wewnątrz interfejsu lub struktury lub w procedurze.
 
-`Private Protected` Modyfikator dostępu jest obsługiwane w wersji 15.5 programu Visual Basic lub nowszy. Aby go użyć, Dodaj następujący element do pliku projektu (*.vbproj) języka Visual Basic. Jak długo, jak 15.5 Visual Basic lub nowszy jest zainstalowany w systemie, umożliwia korzystanie z zalet wszystkich funkcji językowych obsługiwanych przez najnowszą wersję kompilatora języka Visual Basic:
+Modyfikator dostępu `Private Protected` jest obsługiwany przez Visual Basic 15,5 i nowsze. Aby go użyć, należy dodać następujący element do pliku projektu Visual Basic ( *\*. vbproj*). Tak długo, jak Visual Basic 15,5 lub nowszy jest zainstalowany w systemie, umożliwia korzystanie ze wszystkich funkcji językowych obsługiwanych przez najnowszą wersję kompilatora Visual Basic:
 
 ```xml
 <PropertyGroup>
@@ -91,7 +97,7 @@ Można zadeklarować `Private Protected` element tylko wewnątrz klasy. Nie moż
 </PropertyGroup>
 ```
 
-Aby użyć `Private Protected` modyfikator dostępu, należy dodać następujący element do pliku projektu (*.vbproj) języka Visual Basic:
+Aby użyć modyfikatora dostępu `Private Protected`, należy dodać następujący element do pliku projektu Visual Basic ( *\*. vbproj*):
 
 ```xml
 <PropertyGroup>
@@ -99,30 +105,30 @@ Aby użyć `Private Protected` modyfikator dostępu, należy dodać następując
 </PropertyGroup>
 ```
 
-Aby uzyskać więcej informacji, zobacz [ustawienie wersji języka Visual Basic](../../../language-reference/configure-language-version.md).
+Aby uzyskać więcej informacji [, zobacz Ustawianie wersji językowej Visual Basic](../../../language-reference/configure-language-version.md).
 
-## <a name="access-modifiers"></a>Modyfikatory dostępu  
+## <a name="access-modifiers"></a>Modyfikatory dostępu
 
-Słowa kluczowe, które określają poziom dostępu są nazywane *modyfikatorach dostępu*. W poniższej tabeli porównano modyfikatorami dostępu.  
-  
-|Modyfikator dostępu|Poziom dostępu przyznane|Elementy można zadeklarować za pomocą tego poziomu dostępu|Kontekst deklaracji, w którym można użyć ten modyfikator|  
-|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|  
-|`Public`|Bez ograniczeń:<br /><br /> Wszelki kod, który można zobaczyć element publiczny dostęp do niego|Interfejsy<br /><br /> Moduły<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Plik źródłowy<br /><br /> Przestrzeń nazw<br /><br /> Interface<br /><br /> Moduł<br /><br /> Class<br /><br /> Struktura|  
-|`Protected`|Derivational:<br /><br /> Możesz pisać kod w klasie, która deklaruje, że chroniony element lub klasę pochodną, mogą uzyskiwać dostęp do elementu|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|  
-|`Friend`|Zestaw:<br /><br /> Kod w zestawie, który deklaruje, że element znajomego do niego dostęp|Interfejsy<br /><br /> Moduły<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Plik źródłowy<br /><br /> Przestrzeń nazw<br /><br /> Interface<br /><br /> Moduł<br /><br /> Class<br /><br /> Struktura|  
-|`Protected``Friend`|Złożenia z `Protected` i `Friend`:<br /><br /> Możesz pisać kod w tej samej klasie lub tego samego zestawu jako element friend chronionej lub w dowolnej klasie pochodnej z klasy elementu, można uzyskać do niego dostęp|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|  
-|`Private`|Kontekst deklaracji:<br /><br /> Kod w typie, który deklaruje, że element prywatne, łącznie z kodem w ramach zamkniętego typów mogą uzyskiwać dostęp do elementu|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Moduł<br /><br /> Class<br /><br /> Struktura|
-|`Private Protected`|Kod w klasie, która deklaruje element prywatny chroniony lub kod w klasie pochodnej, w tym samym zestawie co klasa bas.|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne Członkowskie<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
-  
+Słowa kluczowe określające poziom dostępu są nazywane *modyfikatorami dostępu*. W poniższej tabeli porównano Modyfikatory dostępu:
+
+|Modyfikator dostępu|Udzielony poziom dostępu|Elementy, które można zadeklarować przy użyciu tego poziomu dostępu|Kontekst deklaracji, w ramach którego można użyć tego modyfikatora|
+|---------------------|--------------------------|-----------------------------------------------------|----------------------------------------------------------------|
+|`Public`|Nieograniczone<br /><br /> Każdy kod, który może zobaczyć element publiczny, może uzyskać do niego dostęp|Interfejsy<br /><br /> Moduły<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Plik źródłowy<br /><br /> Przestrzeń nazw<br /><br /> Interface<br /><br /> Moduł<br /><br /> Class<br /><br /> Struktura|
+|`Protected`|Tworzenie pochodne:<br /><br /> Kod w klasie, która deklaruje chroniony element lub Klasa pochodna, może uzyskać dostęp do elementu|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
+|`Friend`|Zestaw:<br /><br /> Kod w zestawie, który deklaruje element zaprzyjaźniony, może uzyskać do niego dostęp|Interfejsy<br /><br /> Moduły<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Plik źródłowy<br /><br /> Przestrzeń nazw<br /><br /> Interface<br /><br /> Moduł<br /><br /> Class<br /><br /> Struktura|
+|`Protected``Friend`|Unia `Protected` i `Friend`:<br /><br /> Kod znajdujący się w tej samej klasie lub w tym samym zestawie, co chroniony element zaprzyjaźniony, lub w dowolnej klasie pochodnej klasy elementu, może uzyskać do niej dostęp|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
+|`Private`|Kontekst deklaracji:<br /><br /> Kod w typie, który deklaruje prywatny element, łącznie z kodem w zawartych typach, może uzyskać dostęp do elementu|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Elementy członkowskie struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Moduł<br /><br /> Class<br /><br /> Struktura|
+|`Private Protected`|Kod w klasie, która deklaruje prywatny element chroniony lub kod w klasie pochodnej znaleziono w tym samym zestawie, co Klasa bas.|Interfejsy<br /><br /> Klasy<br /><br /> Struktury<br /><br /> Procedury<br /><br /> Właściwości<br /><br /> Zmienne składowe<br /><br /> Stałe<br /><br /> Wyliczenia<br /><br /> Zdarzenia<br /><br /> Deklaracje zewnętrzne<br /><br /> Delegaty|Class|
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Dim, instrukcja](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Static](../../../../visual-basic/language-reference/modifiers/static.md)
-- [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
-- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Instrukcje: Kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md)
-- [Zmienne](../../../../visual-basic/programming-guide/language-features/variables/index.md)
-- [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Dim, instrukcja](../../../language-reference/statements/dim-statement.md)
+- [Static](../../../language-reference/modifiers/static.md)
+- [Nazwy zadeklarowanych elementów](declared-element-names.md)
+- [Odwołania do elementów zadeklarowanych](references-to-declared-elements.md)
+- [Charakterystyka zadeklarowanych elementów](declared-element-characteristics.md)
+- [Okres istnienia w Visual Basic](lifetime.md)
+- [Zakres w Visual Basic](scope.md)
+- [Instrukcje: kontrolowanie dostępności zmiennej](how-to-control-the-availability-of-a-variable.md)
+- [Zmienne](../variables/index.md)
+- [Deklaracja zmiennej](../variables/variable-declaration.md)

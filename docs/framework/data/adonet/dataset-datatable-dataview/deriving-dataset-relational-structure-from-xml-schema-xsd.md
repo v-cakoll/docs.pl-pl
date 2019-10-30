@@ -2,19 +2,19 @@
 title: Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: d15aa02b41b9a34b00298aeb32d2e3998de8feba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ef77030b4e847f91fea074b68e223ac622539048
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786331"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040106"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)
-Ta sekcja zawiera omówienie sposobu kompilowania schematu `DataSet` relacyjnego z dokumentu schematu języka definicji schematu XML (XSD). Ogólnie rzecz biorąc dla każdego `complexType` elementu podrzędnego elementu schematu tabela jest generowana `DataSet`w. Struktura tabeli jest określana na podstawie definicji typu złożonego. Tabele są tworzone w programie `DataSet` dla elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko dla elementu najwyższego poziomu `complexType` , `complexType` gdy element jest zagnieżdżony wewnątrz innego `complexType` elementu, w którym to `DataTable` przypadku `DataSet`zagnieżdżony `complexType` element jest mapowany do wewnątrz.  
+Ta sekcja zawiera omówienie sposobu kompilowania schematu relacyjnego `DataSet` z dokumentu schematu języka definicji schematu XML (XSD). Ogólnie rzecz biorąc dla każdego `complexType` elementu podrzędnego elementu schematu tabela jest generowana w `DataSet`. Struktura tabeli jest określana na podstawie definicji typu złożonego. Tabele są tworzone w `DataSet` dla elementów najwyższego poziomu w schemacie. Jednak tabela jest tworzona tylko dla elementu `complexType` najwyższego poziomu, gdy element `complexType` jest zagnieżdżony wewnątrz innego `complexType` elementu, w którym to przypadku zagnieżdżony element `complexType` jest mapowany na `DataTable` w `DataSet`.  
   
- Aby uzyskać więcej informacji na temat XSD, zobacz temat schemat XML organizacja World Wide Web Consortium [(W3C), część 0: Zalecenie](https://www.w3.org/TR/xmlschema-0/) podstawowe[, część schematu XML 1: Zalecenia](https://www.w3.org/TR/xmlschema-1/)dotyczące struktur [oraz część 2 schematu XML: Zalecenie](https://www.w3.org/TR/xmlschema-2/)dotyczące typów danych.  
+ Aby uzyskać więcej informacji na temat pliku XSD, zobacz temat schemat XML organizacja World Wide Web Consortium (W3C), [część 0: zalecenie podstawowe](https://www.w3.org/TR/xmlschema-0/), [część schematu XML 1: rekomendacja struktur](https://www.w3.org/TR/xmlschema-1/)i [schemat XML schematu część 2: rekomendacja typów](https://www.w3.org/TR/xmlschema-2/)danych.  
   
- Poniższy przykład ilustruje schemat XML, gdzie `customers` jest elementem `MyDataSet` podrzędnym elementu, który jest elementem **DataSet** .  
+ Poniższy przykład ilustruje schemat XML, gdzie `customers` jest elementem podrzędnym elementu `MyDataSet`, który jest elementem **DataSet** .  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -43,16 +43,16 @@ Ta sekcja zawiera omówienie sposobu kompilowania schematu `DataSet` relacyjnego
   
  W poprzednim przykładzie element `customers` jest elementem typu złożonego. W związku z tym definicja typu złożonego jest analizowana, a proces mapowania tworzy poniższą tabelę.  
   
-```  
-Customers (CustomerID , CompanyName, Phone)  
+```text  
+Customers (CustomerID, CompanyName, Phone)  
 ```  
   
  Typ danych każdej kolumny w tabeli pochodzi od typu schematu XML określonego elementu lub atrybutu.  
   
 > [!NOTE]
-> Jeśli element `customers` składa się z prostego typu danych schematu XML, takiego jak **Integer**, nie jest generowana żadna tabela. Tabele są tworzone tylko dla elementów najwyższego poziomu, które są typami złożonymi.  
+> Jeśli element `customers` ma prostego typu danych schematu XML, takiego jak **Integer**, nie jest generowana żadna tabela. Tabele są tworzone tylko dla elementów najwyższego poziomu, które są typami złożonymi.  
   
- W poniższym schemacie XML element **schematu** ma dwa elementy podrzędne `InStateCustomers` elementów i. `OutOfStateCustomers`  
+ W poniższym schemacie XML element **Schema** ma dwa elementy podrzędne, `InStateCustomers` i `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -75,26 +75,26 @@ Customers (CustomerID , CompanyName, Phone)
  </xs:schema>  
 ```  
   
- `InStateCustomers` Elementy podrzędne`OutOfStateCustomers` i są elementami typu złożonego (`customerType`). W związku z tym proces mapowania generuje następujące dwie identyczne tabele w `DataSet`.  
+ Elementy podrzędne `InStateCustomers` i `OutOfStateCustomers` są elementami typu złożonego (`customerType`). W związku z tym proces mapowania generuje następujące dwie identyczne tabele w `DataSet`.  
   
-```  
-InStateCustomers (CustomerID , CompanyName, Phone)  
-OutOfStateCustomers (CustomerID , CompanyName, Phone)  
+```text  
+InStateCustomers (CustomerID, CompanyName, Phone)  
+OutOfStateCustomers (CustomerID, CompanyName, Phone)  
 ```  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- Opisuje elementy schematu XML używane do tworzenia ograniczeń unique i FOREIGN KEY w `DataSet`.  
+ Opisuje elementy schematu XML używane do tworzenia ograniczeń unikatowych i obcych kluczy w `DataSet`.  
   
  [Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Opisuje elementy schematu XML używane do tworzenia relacji między kolumnami tabeli w `DataSet`.  
   
  [Relacje i ograniczenia schematu XML](xml-schema-constraints-and-relationships.md)  
- Opisuje, `DataSet`w jaki sposób relacje są tworzone niejawnie podczas używania elementów schematu XML do tworzenia ograniczeń w.  
+ Opisuje, w jaki sposób relacje są tworzone niejawnie podczas używania elementów schematu XML do tworzenia ograniczeń w `DataSet`.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Używanie języka XML w elemencie DataSet](using-xml-in-a-dataset.md)  
- Opisuje sposób ładowania i utrwalania relacyjnej struktury i danych w `DataSet` postaci danych XML.  
+ Opisuje sposób ładowania i utrwalania relacyjnej struktury i danych w `DataSet` jako dane XML.  
   
 ## <a name="see-also"></a>Zobacz także
 

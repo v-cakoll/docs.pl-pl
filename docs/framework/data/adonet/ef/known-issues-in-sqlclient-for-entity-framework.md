@@ -2,12 +2,12 @@
 title: Znane problemy klienta SQL dla programu Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 0938c57f48a062082fe973a670eb6a9b9fc4ed3c
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f42ef8dfa1c3041faf7179665cced3c2b9fcf3a6
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395520"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039972"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy klienta SQL dla programu Entity Framework
 W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych dla SQL Server (SqlClient).  
@@ -18,7 +18,7 @@ W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych d
  Jeśli musisz mieć spacje końcowe w ciągu, rozważ dołączenie znaku odstępu na końcu, tak aby SQL Server nie przycinał ciągu. Jeśli spacje końcowe nie są wymagane, powinny być obcinane przed przekazaniem potoku zapytania.  
   
 ## <a name="right-function"></a>RIGHT — funkcja  
- Jeśli wartość `null` jest przekazana jako pierwszy argument, a 0 jest przekazana jako drugi argument do `RIGHT(nvarchar(max)`, 0 @ no__t-2 lub `RIGHT(varchar(max)`, 0 @ no__t-4, zostanie zwrócona wartość `NULL` zamiast ciągu `empty`.  
+ Jeśli wartość`null` jest przekazana jako pierwszy argument, a 0 jest przekazana jako drugi argument do `RIGHT(nvarchar(max)`, 0`)` lub `RIGHT(varchar(max)`, 0`)`, zostanie zwrócona wartość `NULL` zamiast ciągu `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Operatory zastosowania krzyżowe i zewnętrzne  
  Operatory zastosowania krzyżowe i zewnętrzne zostały wprowadzone w SQL Server 2005. W niektórych przypadkach potok zapytania może utworzyć instrukcję języka Transact-SQL, która zawiera operator Apply i/lub OUTER APPLY. Ponieważ niektórzy dostawcy zaplecza, w tym wersje SQL Server wcześniejsze niż SQL Server 2005, nie obsługują tych operatorów, takie zapytania nie mogą być wykonywane w tych dostawcach zaplecza.  
@@ -27,7 +27,7 @@ W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych d
   
 - Skorelowane podzapytanie ze stronicowaniem.  
   
-- @No__t-0 w przypadku skorelowanego podzapytania lub kolekcji utworzonej przez nawigację.  
+- `AnyElement` za pośrednictwem skorelowanego podzapytania lub kolekcji utworzonej przez nawigację.  
   
 - Zapytania LINQ używające metod grupowania, które akceptują selektor elementu.  
   
@@ -38,7 +38,7 @@ W tej sekcji opisano znane problemy związane z .NET Framework Dostawca danych d
 ## <a name="skip-operator"></a>Operator SKIP  
  W przypadku korzystania z SQL Server 2000 przy użyciu polecenia Pomiń z KOLEJNOŚCIą według w przypadku kolumn niebędących kolumnami klucza mogą zostać zwrócone nieprawidłowe wyniki. Jeśli kolumna niebędąca kluczem zawiera zduplikowane dane, może zostać pominięta więcej niż określona liczba wierszy. Wynika to z tego, jak POMIJAnie jest tłumaczone dla SQL Server 2000. Na przykład w poniższym zapytaniu można pominąć więcej niż pięć wierszy, jeśli `E.NonKeyColumn` ma zduplikowane wartości:  
   
-```  
+```sql  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
@@ -52,7 +52,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
   
  Poniżej znajduje się przykład zagnieżdżonego zapytania w klauzuli projekcji:  
   
-```  
+```sql  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   

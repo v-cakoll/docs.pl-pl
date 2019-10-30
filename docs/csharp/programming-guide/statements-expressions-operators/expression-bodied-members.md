@@ -1,5 +1,5 @@
 ---
-title: Elementy członkowskie z wyrażeniem - C# Programming Guide
+title: Składowe w postaci wyrażeń — C# Przewodnik programowania
 ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
@@ -7,92 +7,92 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c282157639a6a60270ce8dbebbc91dd0e0a3f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b336834dcc021b986d79f09d2a9440de0b102f78
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709994"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039761"
 ---
-# <a name="expression-bodied-members-c-programming-guide"></a>Elementy członkowskie z wyrażeniem (C# Podręcznik programowania)
+# <a name="expression-bodied-members-c-programming-guide"></a>Elementy członkowskie z wyrażeniami (C# Przewodnik programowania)
 
-Wyrażenie treści definicji umożliwiają zapewnienie implementacja członka w formie bardzo zwięzły, czytelny. Definicja treści wyrażenia można użyć w każdym przypadku, gdy logiki dla dowolnego z obsługiwanych elementów członkowskich, takich jak metody lub właściwości, składa się z pojedynczego wyrażenia. Definicja treści wyrażenia ma następującą składnię ogólne:
+Definicje treści wyrażenia pozwalają zapewnić implementację elementu członkowskiego w bardzo zwięzłej, czytelnej postaci. Można użyć definicji treści wyrażenia za każdym razem, gdy logika dowolnego obsługiwanego elementu członkowskiego, takiego jak metoda lub właściwość, składa się z jednego wyrażenia. Definicja treści wyrażenia ma następującą składnię ogólną:
 
 ```csharp
 member => expression;
 ```
 
-gdzie *wyrażenie* jest prawidłowym wyrażeniem.
+*wyrażenie* WHERE jest prawidłowym wyrażeniem.
 
-Wprowadzono obsługę definicji treści wyrażenia dla metod i właściwości tylko do odczytu w C# 6 i został rozszerzony w C# 7.0. Wyrażenie treści definicje mogą być używane z elementy członkowskie typu wymienione w poniższej tabeli:
+Obsługa definicji treści wyrażenia została wprowadzona dla metod i właściwości tylko do odczytu w C# 6 i została rozwinięta w C# 7,0. Definicje treści wyrażenia mogą być używane z elementami członkowskimi typu wymienionymi w poniższej tabeli:
 
-|Element członkowski  |Obsługiwane, począwszy od... |
+|Element członkowski  |Obsługiwane przez... |
 |---------|---------|
-|[— Metoda](#methods)  |C# 6 |
+|[Method](#methods)  |C# 6 |
 |[Właściwość tylko do odczytu](#read-only-properties)   |C# 6  |
-|[Property](#properties)  |C# 7.0 |
-|[Konstruktor](#constructors)   |C# 7.0 |
+|[Wartość](#properties)  |C# 7.0 |
+|[Konstruktora](#constructors)   |C# 7.0 |
 |[Finalizator](#finalizers)     |C# 7.0 |
-|[Indeksator](#indexers)       |C# 7.0 |
+|[Indeksatora](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Metody
 
-Metoda z wyrażeniem składa się pojedyncze wyrażenie, które zwraca wartość, którego typ jest zgodny typ zwracany metody lub, w przypadku metod zwracających `void`, który wykonuje pewne operacje. Na przykład typy zastąpienie <xref:System.Object.ToString%2A> metoda zazwyczaj zawierać pojedyncze wyrażenie, które zwraca ciąg reprezentujący bieżący obiekt.
+Metoda zabudowana wyrażenia składa się z pojedynczego wyrażenia, które zwraca wartość, której typ pasuje do typu zwracanego metody, lub dla metod, które zwracają `void`, który wykonuje pewne operacje. Na przykład typy, które zastępują metodę <xref:System.Object.ToString%2A>, zazwyczaj zawierają pojedyncze wyrażenie, które zwraca reprezentację ciągu bieżącego obiektu.
 
-W poniższym przykładzie zdefiniowano `Person` klasę, która zastępuje <xref:System.Object.ToString%2A> metody za pomocą definicji treści wyrażenia. Umożliwia on również definiowanie `DisplayName` metodę, która wyświetla nazwę do konsoli. Należy pamiętać, że `return` — słowo kluczowe nie jest używany w `ToString` definicja treści wyrażenia.
+W poniższym przykładzie zdefiniowano klasę `Person`, która zastępuje metodę <xref:System.Object.ToString%2A> z definicją treści wyrażenia. Definiuje również metodę `DisplayName`, która wyświetla nazwę konsoli programu. Należy zauważyć, że słowo kluczowe `return` nie jest używane w definicji treści wyrażenia `ToString`.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
-Aby uzyskać więcej informacji, zobacz [Methods (C# Programming Guide)](../classes-and-structs/methods.md).
+Aby uzyskać więcej informacji, zobacz [metodyC# (Przewodnik programowania)](../classes-and-structs/methods.md).
 
 ## <a name="read-only-properties"></a>Właściwości tylko do odczytu
 
-Począwszy od C# 6, można użyć definicji treści wyrażenia do zaimplementowania właściwość tylko do odczytu. Aby to zrobić, użyj następującej składni:
+Począwszy od C# 6, można użyć definicji treści wyrażenia, aby zaimplementować właściwość tylko do odczytu. W tym celu należy użyć następującej składni:
 
 ```csharp
 PropertyType PropertyName => expression;
 ```
 
-W poniższym przykładzie zdefiniowano `Location` klasy, których tylko do odczytu `Name` właściwość jest implementowany jako definicja treści wyrażenia, która zwraca wartość prywatna `locationName` pola:
+W poniższym przykładzie zdefiniowano klasę `Location`, której Właściwość `Name` tylko do odczytu jest zaimplementowana jako definicja treści wyrażenia, która zwraca wartość pola `locationName` prywatnego:
 
 [!code-csharp[expression-bodied-read-only-property](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
 
-Aby uzyskać więcej informacji o właściwościach, zobacz [właściwości (C# Programming Guide)](../classes-and-structs/properties.md).
+Aby uzyskać więcej informacji na temat właściwości, zobacz [właściwości (C# Przewodnik programowania)](../classes-and-structs/properties.md).
 
 ## <a name="properties"></a>Właściwości
 
-Począwszy od C# 7.0, można użyć definicji treści wyrażenia do zaimplementowania właściwość `get` i `set` metod dostępu. Poniższy przykład pokazuje, jak to zrobić:
+Począwszy od C# 7,0, można użyć definicji treści wyrażenia do implementowania właściwości`get`i`set`metod dostępu. Poniższy przykład ilustruje, jak to zrobić:
 
 [!code-csharp[expression-bodied-property-get-set](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]
 
-Aby uzyskać więcej informacji o właściwościach, zobacz [właściwości (C# Programming Guide)](../classes-and-structs/properties.md).
+Aby uzyskać więcej informacji na temat właściwości, zobacz [właściwości (C# Przewodnik programowania)](../classes-and-structs/properties.md).
 
 ## <a name="constructors"></a>Konstruktorów
 
-Definicja treści wyrażenia dla konstruktora zwykle składa się z wyrażenia przypisania pojedynczego lub wywołanie metody, która obsługuje argumentów konstruktora lub inicjuje wystąpienie przechodzi w stan.
+Definicja treści wyrażenia dla konstruktora zwykle składa się z pojedynczego wyrażenia przypisania lub wywołania metody, które obsługuje argumenty konstruktora lub inicjuje stan wystąpienia.
 
-W poniższym przykładzie zdefiniowano `Location` klasy, której Konstruktor ma jeden ciąg parametr o nazwie *nazwa*. Definicja treści wyrażenia przypisuje argument `Name` właściwości.
+W poniższym przykładzie zdefiniowano klasę `Location`, której Konstruktor ma jeden parametr ciągu o nazwie *name*. Definicja treści wyrażenia przypisuje argument do właściwości `Name`.
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 
-Aby uzyskać więcej informacji, zobacz [konstruktorów (C# Programming Guide)](../classes-and-structs/constructors.md).
+Aby uzyskać więcej informacji, zobacz [konstruktory (C# Przewodnik programowania)](../classes-and-structs/constructors.md).
 
 ## <a name="finalizers"></a>Finalizatory
 
-Definicja treści wyrażenia dla finalizatora zazwyczaj zawiera instrukcje czyszczenia, na przykład instrukcji, które zwolnić niezarządzane zasoby.
+Definicja treści wyrażenia dla finalizatora zwykle zawiera instrukcje czyszczenia, takie jak instrukcje zwalniania niezarządzanych zasobów.
 
-W poniższym przykładzie zdefiniowano finalizator, który używa definicja treści wyrażenia, aby wskazać, że finalizator została wywołana.
+W poniższym przykładzie zdefiniowano finalizator, który używa definicji treści wyrażenia, aby wskazać, że finalizator został wywołany.
 
 [!code-csharp[expression-bodied-finalizer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-destructor.cs#1)]  
 
-Aby uzyskać więcej informacji, zobacz [finalizatory (C# Programming Guide)](../classes-and-structs/destructors.md).
+Aby uzyskać więcej informacji, zobacz [finalizatoryC# (Przewodnik programowania)](../classes-and-structs/destructors.md).
 
 ## <a name="indexers"></a>Indeksatory
 
-Podobnie jak właściwości indeksatora get i set metod dostępu składają się z definicji treści wyrażenia metody dostępu get składa się z pojedynczej instrukcji, która zwraca wartość typu lub metody dostępu set wykonuje przypisanie proste.
+Podobnie jak w przypadku właściwości, `get` indeksatora i Akcesory `set` składają się z definicji treści wyrażenia, jeśli metoda dostępu `get` składa się z jednego wyrażenia, które zwraca wartość lub metoda dostępu `set` wykonuje proste przypisanie.
 
-W poniższym przykładzie zdefiniowano klasę o nazwie `Sports` zawierającą wewnętrzną <xref:System.String> tablicy, która zawiera nazwiska wielu dyscyplin sportowych. Zarówno indeksatora get, jak i metody dostępu set są implementowane jako definicje treść wyrażenia.
+W poniższym przykładzie zdefiniowano klasę o nazwie `Sports`, która zawiera wewnętrzną tablicę <xref:System.String>, która zawiera nazwy wielu sportów. Zarówno metody dostępu indeksatora `get`, jak i `set` są implementowane jako definicje treści wyrażenia.
 
 [!code-csharp[expression-bodied-indexer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-indexers.cs#1)]
 
-Aby uzyskać więcej informacji, zobacz [indeksatorów (C# Programming Guide)](../indexers/index.md).
+Aby uzyskać więcej informacji, zobacz [IndeksatoryC# (Przewodnik programowania)](../indexers/index.md).

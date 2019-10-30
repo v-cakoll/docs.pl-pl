@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: b9aa3f4e386ca5de79fe028b10d0d68343aba06b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: e62825a88858a63984860cbc8a1c570f784f663f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920032"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040861"
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundation (WPF) za pomocą systemu Windows. Głównym celem okna jest hostowanie zawartości, która wizualizuje dane i umożliwia użytkownikom współdziałanie z danymi. Autonomiczne aplikacje [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewniają własne okna przy użyciu klasy <xref:System.Windows.Window>. Ten temat zawiera wprowadzenie <xref:System.Windows.Window> przed rozpoczęciem omawiania podstaw tworzenia i zarządzania oknami w aplikacjach autonomicznych.  
@@ -442,7 +442,7 @@ Użytkownicy pracują z autonomicznymi aplikacjami Windows Presentation Foundati
  [!code-xaml[WindowsOverviewSnippets#WindowStyleWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/WindowStyleWindow.xaml#windowstylewindowmarkup1)]  
   
 #### <a name="non-rectangular-window-style"></a>Styl okna bez prostokąta  
- Istnieją również sytuacje, w których style obramowania, które <xref:System.Windows.Window.WindowStyle%2A> mogą być niewystarczające. Na przykład możesz chcieć utworzyć aplikację z obramowaniem nieprostokątnym, np. [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)].  
+ Istnieją również sytuacje, w których style obramowania, które <xref:System.Windows.Window.WindowStyle%2A> mogą być niewystarczające. Na przykład możesz chcieć utworzyć aplikację z nieprostokątnym obramowaniem, np. Microsoft Windows Media Player.  
   
  Rozważmy na przykład okno dymek mowy pokazane na poniższym rysunku:  
   

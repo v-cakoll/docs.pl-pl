@@ -1,27 +1,28 @@
 ---
 title: Podsumowanie drzew wyrażeń
-description: Podsumowania, jak można użyć drzew wyrażeń do tworzenia dynamicznych programów, które interpretacji kodu jako dane oraz tworzyć nowe funkcje, w oparciu o ten kod.
+description: Ponowne użycie drzew wyrażeń do tworzenia programów dynamicznych, które interpretują kod jako dane i tworzą nowe funkcje na podstawie tego kodu.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43715c94b70f1cd7f758cde91ae7c8d1b2f70f9f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646569"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036755"
 ---
 # <a name="expression-trees-summary"></a>Podsumowanie drzew wyrażeń
 
-[Poprzednie — Translacja wyrażeń](expression-trees-translating.md)
+[Poprzednie — tłumaczenie wyrażeń](expression-trees-translating.md)
 
-W tej serii przedstawiono sposób korzystania *drzew wyrażeń* do tworzenia dynamicznych programów, które interpretacji kodu jako dane oraz tworzyć nowe funkcje, w oparciu o ten kod.
+W tej serii pokazano, jak można używać *drzew wyrażeń* do tworzenia programów dynamicznych, które interpretują kod jako dane i tworzą nowe funkcje na podstawie tego kodu.
 
-Można sprawdzić w drzewach wyrażeń w celu zrozumienia intencji algorytmu. Ten kod nie może tylko sprawdzić. Można tworzyć nowe drzew wyrażeń, które reprezentują zmodyfikowanej wersji oryginalnego kodu.
+Można sprawdzić drzewa wyrażeń, aby zrozumieć intencję algorytmu. Nie można przeanalizować tego kodu. Można utworzyć nowe drzewa wyrażeń, które reprezentują zmodyfikowane wersje oryginalnego kodu.
 
-Można również używanie drzew wyrażeń do wzięcia pod algorytmu i tłumaczenie tego algorytmu innego języka lub środowiska. 
+Można również użyć drzew wyrażeń do przyjrzeć się algorytmowi i przetłumaczyć ten algorytm na inny język lub środowisko. 
 
 ## <a name="limitations"></a>Ograniczenia
 
-Brak niektórych nowszych C# elementów języka, które nie je łatwo przekształcić w drzewach wyrażeń. Drzewa wyrażeń nie może zawierać `await` wyrażeń, lub `async` wyrażenia lambda. Funkcje dodane w wielu C# wersji 6 nie pojawiają się dokładnie tak jak napisane w drzewach wyrażeń. Zamiast tego nowsze funkcje zostaną ujawnione w drzewach wyrażeń w składni jego odpowiednika, wcześniej. To może nie być tyle to ograniczenie może myśląc. W rzeczywistości oznacza to, że swój kod, który interpretuje drzew wyrażeń będzie prawdopodobnie nadal działać tak samo, gdy zostaną wprowadzone nowe funkcje języka.
+Istnieją pewne nowsze C# elementy języka, które nie są poprawnie tłumaczone na drzewa wyrażeń. Drzewa wyrażeń nie mogą zawierać wyrażeń `await` ani `async` wyrażeń lambda. Wiele funkcji dodanych w C# 6 Release nie pojawia się dokładnie jako zapisywana w drzewach wyrażeń. Zamiast tego nowe funkcje zostaną uwidocznione w drzewach wyrażeń w równoważnej, wcześniejszej składni. Może to nie być tak samo, jak to możliwe. W rzeczywistości oznacza to, że kod, który interpretuje drzewa wyrażeń prawdopodobnie nadal będzie działał tak samo, gdy zostaną wprowadzone nowe funkcje językowe.
 
-Nawet w przypadku tych ograniczeń drzew wyrażeń umożliwiają tworzenie dynamicznych algorytmy, które opierają się na interpretowaniu i modyfikowania kodu, który jest reprezentowany jako struktury danych. Jest zaawansowanym narzędziem, i jest jedną z funkcji ekosystemu .NET, która umożliwia zaawansowane biblioteki, takim jak Entity Framework, aby osiągnąć, co robią.
+Nawet przy tych ograniczeniach drzewa wyrażeń umożliwiają tworzenie algorytmów dynamicznych, które opierają się na interpretowaniu i modyfikowaniu kodu, który jest reprezentowany jako struktura danych. Jest to zaawansowane narzędzie i jest jednym z funkcji ekosystemu .NET, które umożliwiają rozbudowane biblioteki, takie jak Entity Framework, do wykonywania tych czynności.

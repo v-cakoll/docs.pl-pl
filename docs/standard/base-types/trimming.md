@@ -17,75 +17,81 @@ helpviewer_keywords:
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c694a6792168f37e1f134cf965658e8a058e240a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965168"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037870"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Przycinanie i usuwanie znaków z ciągów w programie .NET
-Jeśli zdania są analizy do poszczególnych wyrazów, może być na końcu słowa, które mają puste miejsca (nazywane również białych znaków) na jednym z końców słowa. W takiej sytuacji można użyć jednej z metod przycinania w **System.String** klasy, aby usunąć dowolną liczbę spacji lub inne znaki od określonej pozycji w ciągu. W poniższej tabeli opisano dostępne metody przycinania.  
+Jeśli analizujesz zdanie w poszczególnych słowach, możesz kończyć się wyrazami z pustymi spacjami (nazywanymi również białymi spacjami) na dowolnym końcu słowa. W takiej sytuacji można użyć jednej z metod przycinania w klasie **System. String** , aby usunąć dowolną liczbę spacji lub innych znaków z określonej pozycji w ciągu. W poniższej tabeli opisano dostępne metody przycinania.  
   
 |Nazwa metody|Zastosowanie|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|Usuwa spacje lub znaki określone w tablicy znaków od początku i końca ciągu.|  
-|<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Usuwa określone w tablicy znaków od końca ciągu znaków.|  
-|<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|Usuwa określone w tablicy znaków od początku ciągu znaków.|  
-|<xref:System.String.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków od pozycji określonym indeksie w ciągu.|  
+|<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|Usuwa znaki określone w tablicy znaków od końca ciągu.|  
+|<xref:System.String.TrimStart%2A?displayProperty=nameWithType>|Usuwa znaki określone w tablicy znaków od początku ciągu.|  
+|<xref:System.String.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków z podanej pozycji indeksu w ciągu.|  
   
-## <a name="trim"></a>TRIM  
- Można łatwo usunąć spacji z obydwu końców ciąg, przy użyciu <xref:System.String.Trim%2A?displayProperty=nameWithType> metodzie, jak pokazano w poniższym przykładzie.  
+## <a name="trim"></a>Trim
+
+ Można łatwo usunąć białe znaki z obu punktów końcowych ciągu za pomocą metody <xref:System.String.Trim%2A?displayProperty=nameWithType>, jak pokazano w poniższym przykładzie.  
   
  [!code-cpp[Conceptual.String.BasicOps#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#17)]
  [!code-csharp[Conceptual.String.BasicOps#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#17)]
  [!code-vb[Conceptual.String.BasicOps#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#17)]  
   
- Można również usunąć znaki, które są określone w tablicy znaków od początku i końca ciągu. Poniższy przykład usuwa białe znaki, kropki i gwiazdki.  
+ Można również usunąć znaki określone w tablicy znaków od początku i końca ciągu. Poniższy przykład usuwa znaki odstępu, kropki i gwiazdki.  
   
  [!code-csharp[Conceptual.String.BasicOps#22](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trim2.cs#22)]
  [!code-vb[Conceptual.String.BasicOps#22](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trim2.vb#22)]  
   
-## <a name="trimend"></a>Metoda TrimEnd  
- **String.TrimEnd** metoda usuwa znaków od końca ciągu, utworzenie nowego obiektu ciągu. Tablica znaków jest przekazywany do tej metody, aby określić znaków, który ma zostać usunięty. Kolejność elementów w tablicy znaków nie ma wpływu na operację przycinania. Trim zatrzymuje, gdy znajduje się znak nie jest określone w tablicy.  
+## <a name="trimend"></a>Metoda TrimEnd
+
+ Metoda **String. TrimEnd** usuwa znaki z końca ciągu, tworząc nowy obiekt ciągu. Tablica znaków jest przenoszona do tej metody w celu określenia znaków do usunięcia. Kolejność elementów w tablicy znaków nie ma wpływu na operację przycinania. Przycinanie zostaje zatrzymane, gdy zostanie znaleziony znak nieokreślony w tablicy.  
   
- Poniższy przykład umożliwia usunięcie ostatniej litery w ciągu przy użyciu **trimend —** metody. W tym przykładzie położenie `'r'` znak i `'W'` znak zostały cofnięte, aby zilustrować, że kolejność znaków w tablicy nie ma znaczenia. Należy zauważyć, że ten kod usuwa ostatni wyraz z `MyString` plus część pierwsza.  
+ Poniższy przykład usuwa ostatnie litery ciągu przy użyciu metody **TrimEnd** . W tym przykładzie pozycja znaku `'r'` i znaku `'W'` są odwracane w celu zilustrowania, że kolejność znaków w tablicy nie ma znaczenia. Zauważ, że ten kod usuwa ostatni wyraz `MyString` i część pierwszej.  
   
  [!code-cpp[Conceptual.String.BasicOps#18](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#18)]
  [!code-csharp[Conceptual.String.BasicOps#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#18)]
  [!code-vb[Conceptual.String.BasicOps#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#18)]  
   
- Ten kod wyświetla `He` do konsoli.  
+ Ten kod wyświetla `He` konsoli programu.  
   
- Poniższy przykład usuwa ostatni wyraz w ciągu przy użyciu **trimend —** metody. W tym kodzie przecinek następuje wyraz `Hello` i ponieważ przecinek nie została określona w tablicy znaków można przycięcia, trim kończy się przecinkiem.  
+ Poniższy przykład usuwa ostatni wyraz ciągu przy użyciu metody **TrimEnd** . W tym kodzie przecinek następuje po słowie `Hello` i, ponieważ przecinek nie jest określony w tablicy znaków do przycinania, przycinanie następuje w przecinek.  
   
  [!code-cpp[Conceptual.String.BasicOps#19](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#19)]
  [!code-csharp[Conceptual.String.BasicOps#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#19)]
  [!code-vb[Conceptual.String.BasicOps#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#19)]  
   
- Ten kod wyświetla `Hello,` do konsoli.  
+ Ten kod wyświetla `Hello,` konsoli programu.  
   
-## <a name="trimstart"></a>Metoda TrimStart  
- **String.TrimStart** metoda jest podobna do **String.TrimEnd** metody, z wyjątkiem że utworzy nowy ciąg przez usunięcie znaków od początku istniejący obiekt ciągu. Tablica znaków jest przekazywany do **trimstart —** metodę, aby określić znaków, który ma zostać usunięty. Podobnie jak w przypadku **trimend —** metody, kolejność elementów w tablicy znaków nie ma wpływu na operację przycinania. Trim zatrzymuje, gdy znajduje się znak nie jest określone w tablicy.  
+## <a name="trimstart"></a>Metoda TrimStart
+
+ Metoda **String. TrimStart** jest podobna do metody **String. TrimEnd** , z tą różnicą, że tworzy nowy ciąg przez usunięcie znaków z początku istniejącego obiektu ciągu. Tablica znaków jest przenoszona do metody **TrimStart** w celu określenia znaków do usunięcia. Podobnie jak w przypadku metody **TrimEnd** , kolejność elementów w tablicy znaków nie ma wpływu na operację przycinania. Przycinanie zostaje zatrzymane, gdy zostanie znaleziony znak nieokreślony w tablicy.  
   
- Poniższy przykład usuwa pierwszy wyraz w ciągu. W tym przykładzie położenie `'l'` znak i `'H'` znak zostały cofnięte, aby zilustrować, że kolejność znaków w tablicy nie ma znaczenia.  
+ Poniższy przykład usuwa pierwsze słowo ciągu. W tym przykładzie pozycja znaku `'l'` i znaku `'H'` są odwracane w celu zilustrowania, że kolejność znaków w tablicy nie ma znaczenia.  
   
  [!code-cpp[Conceptual.String.BasicOps#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#20)]
  [!code-csharp[Conceptual.String.BasicOps#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#20)]
  [!code-vb[Conceptual.String.BasicOps#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#20)]  
   
- Ten kod wyświetla `World!` do konsoli.  
+ Ten kod wyświetla `World!` konsoli programu.  
   
-## <a name="remove"></a>Usuń  
- <xref:System.String.Remove%2A?displayProperty=nameWithType> Metoda usuwa określoną liczbę znaków, które zaczynają się na określonej pozycji w istniejących parametrów. Ta metoda przyjmuje liczony od zera indeks.  
+## <a name="remove"></a>Usuń 
+
+ Metoda <xref:System.String.Remove%2A?displayProperty=nameWithType> usuwa określoną liczbę znaków, zaczynając od określonej pozycji w istniejącym ciągu. Ta metoda przyjmuje indeks oparty na wartości zero.  
   
- Poniższy przykład usuwa dziesięć znaków od początku ciągu w położeniu pięciu liczony od zera indeks w ciągu.  
+ Poniższy przykład usuwa dziesięć znaków z ciągu, zaczynając od pozycji piątej indeksu ciągu od zera.  
   
  [!code-cpp[Conceptual.String.BasicOps#21](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/trimming.cpp#21)]
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
- Można również usunąć określony znak lub podciągów z ciągu, wywołując <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> metody i określając ciąg pusty (<xref:System.String.Empty?displayProperty=nameWithType>) do zamiany. Poniższy przykład usuwa wszystkie przecinkami z ciągu.  
+## <a name="replace"></a>stępować
+
+ Można również usunąć określony znak lub podciąg z ciągu, wywołując metodę <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> i określając pusty ciąg (<xref:System.String.Empty?displayProperty=nameWithType>) jako zamiennik. Poniższy przykład usuwa wszystkie przecinki z ciągu.  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  

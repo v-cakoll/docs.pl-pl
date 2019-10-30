@@ -1,13 +1,14 @@
 ---
 title: Tworzenie typów domieszki przy użyciu domyślnych metod interfejsu
 description: Przy użyciu domyślnych elementów członkowskich interfejsu można rozciągnąć interfejsy z opcjonalnymi implementacjami domyślnymi dla realizatorów.
+ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 4dee97226420139d9cd09ad75d7c8caf4967273d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321625"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039273"
 ---
 # <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Samouczek: mieszanie funkcji podczas tworzenia klas przy użyciu interfejsów z domyślnymi metodami interfejsu
 
@@ -94,7 +95,7 @@ Nowy typ światła, `LEDLight` obsługuje zarówno funkcję Timer, jak i funkcj�
 
 [!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
-@No__t-0 może obsługiwać jednocześnie funkcje migotania i czasomierza:
+`ExtraFancyLight` może obsługiwać jednocześnie funkcje migotania i czasomierza:
 
 [!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 

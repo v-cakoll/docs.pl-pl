@@ -1,53 +1,54 @@
 ---
 title: Drzewa wyrażeń
-description: Więcej informacji na temat drzew wyrażeń w .NET Core i jak z nich korzystać, aby reprezentować struktur, które można zbadać, modyfikowania i wykonywanie kodu.
+description: Informacje o drzewach wyrażeń w oprogramowaniu .NET Core i sposobach ich użycia do reprezentowania kodu jako struktur, które można sprawdzić, zmodyfikować i wykonać.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614352"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036320"
 ---
 # <a name="expression-trees"></a>Drzewa wyrażeń
 
-Jeśli używano LINQ, gdy potrafisz dzięki rozbudowanej bibliotece gdzie `Func` typy są częścią zestawu interfejsów API. (Jeśli nie jesteś zaznajomiony z LINQ, prawdopodobnie chcesz odczytać [samouczek LINQ](linq/index.md) i artykuł na temat [wyrażeń lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) przed to.) *Drzewa wyrażeń* zapewniają bardziej rozbudowane interakcji z argumentów, które są funkcjami.
+Jeśli używasz LINQ, masz doświadczenie w korzystaniu z rozbudowanej biblioteki, w której typy `Func` są częścią zestawu interfejsów API. (Jeśli nie znasz programu LINQ, prawdopodobnie chcesz przeczytać [samouczek LINQ](linq/index.md) i artykuł dotyczący [wyrażeń lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) przed tym.) *Drzewa wyrażeń* zapewniają bogatsze interakcje z argumentami, które są funkcjami.
 
-Można napisać argumentów funkcji, zazwyczaj przy użyciu wyrażeń Lambda, podczas tworzenia zapytania LINQ. W typowych zapytań LINQ te argumenty funkcji są przekształcane do delegata, który kompilator tworzy. 
+Podczas tworzenia zapytań LINQ można pisać argumenty funkcji, zwykle wykorzystując wyrażenia lambda. W typowej kwerendzie LINQ te argumenty funkcji są przekształcane na delegata tworzonego przez kompilator. 
 
-Umożliwia bogatszych interakcję, należy użyć *drzew wyrażeń*.
-Drzewa wyrażeń reprezentują kodu struktury, można przejrzeć, zmodyfikować lub wykonywania. Te narzędzia umożliwiają do manipulowania kodu w czasie wykonywania. Można napisać kod, który sprawdza, czy uruchamianie algorytmów lub wprowadza nowe funkcje. W bardziej zaawansowanych scenariuszy można modyfikować, uruchamianie algorytmów i nawet tłumaczenie C# wyrażeń do innej formy do wykonania w innym środowisku.
+Jeśli chcesz mieć bogatsze interakcje, musisz używać *drzew wyrażeń*.
+Drzewa wyrażeń reprezentują kod jako strukturę, którą można testować, modyfikować lub wykonywać. Te narzędzia umożliwiają manipulowanie kodem w czasie wykonywania. Można napisać kod, który analizuje uruchomione algorytmy, lub wprowadza nowe możliwości. W bardziej zaawansowanych scenariuszach można modyfikować uruchomione algorytmy, a nawet przetłumaczyć C# wyrażenia na inny formularz do wykonania w innym środowisku.
 
-Kod, który używa drzew wyrażeń prawdopodobnie zostały już zapisane. Interfejsy API programu Entity Framework LINQ zaakceptować drzew wyrażeń jako argumenty do wzorca wyrażenia zapytań LINQ.
-Który umożliwia [Entity Framework](/ef/) do translacji zapytania zapisane w C# SQL, który jest wykonywany w aparacie bazy danych. Innym przykładem jest [Moq](https://github.com/Moq/moq), czyli popularnego środowiska pozorowania dla platformy .NET.
+Już właśnie Zapisano kod, który używa drzew wyrażeń. Interfejsy API LINQ Entity Framework akceptują drzewa wyrażeń jako argumenty wzorca wyrażenia zapytania LINQ.
+Dzięki temu [Entity Framework](/ef/) tłumaczenie zapytania, które zostało napisane w C# języku SQL, który jest wykonywany w aparacie bazy danych. Innym przykładem jest [MOQ](https://github.com/Moq/moq), który jest popularną strukturą dla platformy .NET.
 
-Pozostałe sekcje w tym samouczku będzie zapoznaj się z drzewa wyrażeń są, sprawdź klasy framework, które obsługują drzew wyrażeń, a dowiesz się, jak pracować z drzewa wyrażeń. Dowiesz się, jak odczytać drzew wyrażeń, sposób tworzenia drzew wyrażeń, sposób tworzenia drzew wyrażeń zmodyfikowane i jak wykonywać kod reprezentowany przez drzew wyrażeń. Po czytania, wszystko będzie gotowe do użycia te struktury do tworzenia rozbudowanych adaptacyjnych algorytmów.
+Pozostałe sekcje w tym samouczku zapoznają się z drzewami wyrażeń, sprawdzają klasy struktury obsługujące drzewa wyrażeń i pokazują, jak korzystać z drzew wyrażeń. Dowiesz się, jak czytać drzewa wyrażeń, jak tworzyć drzewa wyrażeń, jak tworzyć zmodyfikowane drzewa wyrażeń i jak wykonywać kod reprezentowany przez drzewa wyrażeń. Po przeczytaniu będzie można używać tych struktur do tworzenia rozbudowanych algorytmów adaptacyjnych.
 
 1. [Drzewa wyrażeń — objaśnienie](expression-trees-explained.md)
 
-    Omówienie struktury i pojęcia dotyczące *drzew wyrażeń*.
+    Zapoznaj się ze strukturą i pojęciami związanymi z *drzewami wyrażeń*.
     
 2. [Typy platform obsługujące drzewa wyrażeń](expression-classes.md)
     
-    Więcej informacji na temat struktur i klas definiujących i manipulowania drzew wyrażeń.
+    Dowiedz się więcej o strukturach i klasach, które definiują drzewa wyrażeń i manipulowania nimi.
     
 3. [Wykonywanie wyrażeń](expression-trees-execution.md)
 
-    Dowiedz się, jak można przekonwertować na drzewo wyrażenia, w postaci wyrażenia Lambda do delegata, a następnie wykonaj wynikowego delegata.
+    Dowiedz się, jak przekonwertować drzewo wyrażenia reprezentowane jako wyrażenie lambda na delegata i wykonać delegata będącego wynikiem.
 
 4. [Interpretowanie wyrażeń](expression-trees-interpreting.md)
 
-    Dowiedz się, jak przejść i zbadaj *drzew wyrażeń* Aby zrozumieć, co kod drzewa wyrażenie reprezentuje.
+    Dowiedz się, jak przechodzenie i sprawdzanie *drzew wyrażeń* , aby zrozumieć, jaki kod jest reprezentowany przez drzewo wyrażeń.
 
 5. [Tworzenie wyrażeń](expression-trees-building.md)
 
-    Dowiedz się, jak utworzyć węzłów do drzewa wyrażenie i tworzenia drzew wyrażeń.
+    Dowiedz się, jak utworzyć węzły dla drzewa wyrażenia i drzewa wyrażeń kompilacji.
 
 6. [Translacja wyrażeń](expression-trees-translating.md)
 
-    Dowiedz się, jak tworzyć zmodyfikowanej kopii drzewo wyrażenia lub drzewa wyrażenie przekłada się na inny format.
+    Dowiedz się, jak utworzyć zmodyfikowaną kopię drzewa wyrażenia lub przetłumaczyć drzewo wyrażenia na inny format.
 
-7. [Podsumowanie](expression-trees-summary.md)
+7. [Sumowanie](expression-trees-summary.md)
 
     Zapoznaj się z informacjami w drzewach wyrażeń.

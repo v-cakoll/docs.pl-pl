@@ -2,12 +2,12 @@
 title: Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 9859c7df941ae6681c991001e0d1e5a50c7ffc60
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 869722b91550855a184a74e706271c3e2d417b84
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855006"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039995"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie kodu SQL na podstawie drzew poleceń — najlepsze praktyki
 
@@ -31,7 +31,7 @@ Możliwe tłumaczenie drzewa poleceń zapytania do instrukcji SQL SELECT spowodu
 
 Rozważmy na przykład następujące drzewo poleceń zapytania
 
-```
+```csharp
 Project (
 a.x,
    a = Filter(
@@ -68,7 +68,7 @@ Jednym z przypadków agregowania wielu węzłów w jednej instrukcji SQL SELECT 
 
 Lewe sprzężenie z lewej strony (sprzężenia, które pojawiają się jako lewy element podrzędny innego sprzężenia), można łatwiej spłaszczyć do jednej instrukcji SELECT języka SQL. Rozważmy na przykład następujące drzewo poleceń zapytania:
 
-```
+```csharp
 InnerJoin(
    a = LeftOuterJoin(
    b = Extent("TableA")
@@ -90,7 +90,7 @@ INNER JOIN TableC as d ON b.y = d.z
 
 Nielewe sprzężenia kręgosłupa nie mogą być jednak w łatwy sposób spłaszczone i nie należy próbować ich spłaszczać. Na przykład sprzężenia w następującym drzewie poleceń zapytania:
 
-```
+```csharp
 InnerJoin(
    a = Extent("TableA")
    b = LeftOuterJoin(
@@ -121,7 +121,7 @@ Każdy z tych typów ma jedną lub więcej właściwości wejściowych, które o
 
 Podczas agregowania bardziej relacyjnych węzłów wyrażeń do pojedynczej instrukcji SELECT języka SQL i oceniania wyrażenia, które jest częścią wyrażenia relacyjnego (na przykład część właściwości projekcji DbProjectExpression), zmienna powiązania, której używa może nie jest taki sam jak alias danych wejściowych, ponieważ wiele powiązań wyrażeń może być przekierowanych do jednego zakresu.  Ten problem jest nazywany zmiana nazw aliasu.
 
-Rozważmy pierwszy przykład w tym temacie. Jeśli wykonujesz translację algorytmie i przetłumaczmy projekcję a. x (DbPropertyExpression (a, x)), jest ona poprawna `a.x` , aby przetłumaczyć ją na ponieważ dane wejściowe są oznaczone jako "a" jako zgodne ze zmienną powiązania.  Jednak podczas agregowania węzłów do pojedynczej instrukcji SELECT języka SQL należy przetłumaczyć te same DbPropertyExpression na `b.x`, ponieważ dane wejściowe mają alias "b".
+Rozważmy pierwszy przykład w tym temacie. Jeśli wykonujesz translację algorytmie i przetłumaczmy projekcję a. x (DbPropertyExpression (a, x)), jest ona poprawna, aby przetłumaczyć ją na `a.x`, ponieważ jako "a" aliasuje dane wejściowe w celu dopasowania do zmiennej powiązania.  Jednak podczas agregowania węzłów do pojedynczej instrukcji SELECT języka SQL należy przetłumaczyć te same DbPropertyExpression na `b.x`, ponieważ dane wejściowe mają alias "b".
 
 ## <a name="join-alias-flattening"></a>Przyłączanie spłaszczania aliasów
 
@@ -145,7 +145,7 @@ Wyrażenia mogą być ponownie używane w drzewie poleceń zapytania przekazanym
 
 ## <a name="mapping-primitive-types"></a>Mapowanie typów pierwotnych
 
-Podczas mapowania typów koncepcyjnych (EDM) na typy dostawców należy mapować do najszerszego typu (Int32), aby można było dopasować wszystkie możliwe wartości. Ponadto należy unikać mapowania do typów, które nie mogą być używane dla wielu operacji, takich jak typy obiektów BLOB `ntext` (na przykład w SQL Server).
+Podczas mapowania typów koncepcyjnych (EDM) na typy dostawców należy mapować do najszerszego typu (Int32), aby można było dopasować wszystkie możliwe wartości. Należy również unikać mapowania do typów, które nie mogą być używane dla wielu operacji, takich jak typy obiektów BLOB (na przykład `ntext` w SQL Server).
 
 ## <a name="see-also"></a>Zobacz także
 

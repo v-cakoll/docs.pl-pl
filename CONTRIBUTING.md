@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 624814e40c361c30e251a9388f1444734a276c0a
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72315871"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035456"
 ---
 # <a name="contributing"></a>Udział
 
@@ -79,7 +79,7 @@ docs
 
 **Krok 4.** Prześlij żądanie ściągnięcia z gałęzi do `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` lub `dotnet/samples/master`.
 
-Żądanie ściągnięcia powinno *zawsze* wskazywać główną gałąź. *Nigdy nie* należy otwierać żądania ściągnięcia, które jest przeznaczone dla aktywnej gałęzi.
+Żądanie ściągnięcia powinno *zawsze* wskazywać domyślną gałąź repozytorium (chyba że Pracujesz w gałęzi wydania). W przypadku dotnet/docs gałąź główna jest gałęzią domyślną. W przypadku zlokalizowanych repozytoriów aktywna gałąź jest domyślną. *Nigdy nie* należy otwierać żądania ściągnięcia, które jest przeznaczone dla aktywnej gałęzi w programie dotnet/docs.
 
 Każdy element żądania ściągnięcia powinien zwykle dotyczyć jednego problemu w danym momencie. Żądanie ściągnięcia może zmodyfikować jeden lub wiele plików. W przypadku rozwiązywania wielu poprawek w różnych plikach preferowane są osobne żądań ściągnięcia.
 
@@ -140,14 +140,14 @@ C# Interaktywny proces zmienia sposób pracy z przykładami. Odwiedzający mogą
 
 Na poniższej liście przedstawiono niektóre reguły identyfikatorów GUID, które należy wziąć pod uwagę podczas korzystania z dokumentacji programu .NET:
 
-- **Nie ryzykuj** nas z dużymi żądaniami ściągnięcia. Zamiast tego należy rozwiązać problem i zacząć dyskusję, dzięki czemu możemy wyrazić zgodę na kierunek przed zainwestowaniem dużej ilości czasu.
+- **Nie ryzykuj** nas z dużymi żądaniami ściągnięcia. Zamiast tego należy rozwiązać problem i zacząć dyskusję, dzięki czemu możemy wyrazić zgodę na kierunek przed zainwestowaniem dużej ilości czasu. W przypadku zmian zbiorczych należy przerwać działanie w mniejszych żądań ściągnięcia (do 100 plików).
 - **Przeczytaj** [Przewodnik po stylu](./styleguide/template.md) i wskazówki dotyczące [głosu i tonu](./styleguide/voice-tone.md) .
 - **Użyj pliku** [szablonu](./styleguide/template.md) jako punktu początkowego pracy.
 - Przed rozpoczęciem pracy z artykułami utwórz oddzielną gałąź w rozwidleniu.
 - **Postępuj zgodnie z** [przepływem pracy przepływu usługi GitHub](https://guides.github.com/introduction/flow/).
 - Bądź **na blogu i** tweety (lub niezależnie od tego) o Twoje wkłady — często!
 
-> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w całej lokacji. Sprawdź listę [otwartych problemów](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Aguidelines-adherence) , które obecnie są śledzone dla tego konkretnego celu.
+> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w całej lokacji.
 
 ## <a name="contributor-license-agreement"></a>Umowa licencyjna współautora
 

@@ -2,13 +2,14 @@
 title: Interpolacja ciągów wC#
 description: Dowiedz się, jak dołączać sformatowane wyniki wyrażenia w C# ciągu wynikowym przy użyciu interpolacji ciągów.
 author: pkulikov
+ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
-ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252926"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039212"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolacja ciągów w języku C\#
 
@@ -20,7 +21,7 @@ W tym samouczku pokazano, jak używać [interpolacji ciągów](../language-refer
 
 Funkcja [interpolacji ciągu](../language-reference/tokens/interpolated.md) jest tworzona na podstawie funkcji [formatowania złożonego](../../standard/base-types/composite-formatting.md) i zapewnia bardziej czytelną i wygodną składnię, aby dołączać sformatowane wyniki wyrażeń do ciągu wynikowego.
 
-Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go `$` symbolem. Można osadzić dowolne prawidłowe C# Wyrażenie zwracające wartość w ciągu interpolowanym. W poniższym przykładzie, zaraz po obliczeniu wyrażenia, jego wynik jest konwertowany na ciąg i uwzględniony w ciągu wynikowym:
+Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go symbolem `$`. Można osadzić dowolne prawidłowe C# Wyrażenie zwracające wartość w ciągu interpolowanym. W poniższym przykładzie, zaraz po obliczeniu wyrażenia, jego wynik jest konwertowany na ciąg i uwzględniony w ciągu wynikowym:
 
 [!code-csharp-interactive[string interpolation example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#1)]
 
@@ -30,7 +31,7 @@ Jak pokazano w przykładzie, można uwzględnić wyrażenie w ciągu interpolowa
 {<interpolationExpression>}
 ```
 
-Ciągi interpolowane obsługują wszystkie możliwości funkcji [formatowania złożonego w ciągu](../../standard/base-types/composite-formatting.md) . Sprawia, że są one bardziej czytelną alternatywą dla użycia <xref:System.String.Format%2A?displayProperty=nameWithType> metody.
+Ciągi interpolowane obsługują wszystkie możliwości funkcji [formatowania złożonego w ciągu](../../standard/base-types/composite-formatting.md) . Sprawia, że są one bardziej czytelną alternatywą dla użycia metody <xref:System.String.Format%2A?displayProperty=nameWithType>.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>Jak określić ciąg formatu dla wyrażenia interpolacji
 
@@ -74,7 +75,7 @@ Aby uzyskać więcej informacji, zobacz sekcję [wyrównania składnika](../../s
 
 Ciągi interpolowane obsługują wszystkie sekwencje unikowe, które mogą być używane w zwykłych literałach ciągu. Aby uzyskać więcej informacji, zobacz [Sekwencje ucieczki ciągów](../programming-guide/strings/index.md#string-escape-sequences).
 
-Aby interpretować sekwencje ucieczki dosłownie, użyj literału ciągu [Verbatim](../language-reference/tokens/verbatim.md) . Interpolowany ciąg Verbatim rozpoczyna się od znaku `$` , po którym następuje `@` znak. Począwszy od C# 8,0, można użyć `$` tokenów i `@` w dowolnej kolejności: oba `$@"..."` i `@$"..."` są prawidłowymi interpolowanymi ciągami Verbatim.
+Aby interpretować sekwencje ucieczki dosłownie, użyj literału ciągu [Verbatim](../language-reference/tokens/verbatim.md) . Interpolacja Verbatim ciąg rozpoczyna się od znaku `$`, po którym następuje znak `@`. Począwszy od C# 8,0, można użyć tokenów`$`i`@`w dowolnej kolejności: zarówno `$@"..."`, jak i`@$"..."`są prawidłowymi interpolowanymi ciągami Verbatim.
 
 Aby dołączyć nawias klamrowy "{" lub "}" w ciągu wynikowym, użyj dwóch nawiasów klamrowych "{{" lub "}}". Aby uzyskać więcej informacji, zobacz sekcję [ucieczki nawiasów klamrowych](../../standard/base-types/composite-formatting.md#escaping-braces) tematu [formatowanie złożone](../../standard/base-types/composite-formatting.md) .
 
@@ -82,7 +83,7 @@ Poniższy przykład pokazuje, jak uwzględnić nawiasy klamrowe w ciągu wynikow
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Jak używać operatora `?:` warunkowego Trzyelementowy w wyrażeniu interpolacji
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>Jak używać operatora warunkowego Trzyelementowy `?:` w wyrażeniu interpolacji
 
 Ponieważ dwukropek (":") ma specjalne znaczenie w elemencie z wyrażeniem interpolacji, aby użyć [operatora warunkowego](../language-reference/operators/conditional-operator.md) w wyrażeniu, należy ująć go w nawiasy, jak pokazano na poniższym przykładzie:
 
@@ -90,15 +91,15 @@ Ponieważ dwukropek (":") ma specjalne znaczenie w elemencie z wyrażeniem inter
 
 ## <a name="how-to-create-a-culture-specific-result-string-with-string-interpolation"></a>Jak utworzyć ciąg wyniku specyficzny dla kultury przy użyciu interpolacji ciągów
 
-Domyślnie ciąg interpolowany używa bieżącej kultury zdefiniowanej przez <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> właściwość dla wszystkich operacji formatowania. Użyj niejawnej konwersji ciągu interpolowanego na <xref:System.FormattableString?displayProperty=nameWithType> wystąpienie i <xref:System.FormattableString.ToString(System.IFormatProvider)> Wywołaj metodę, aby utworzyć ciąg wyniku specyficzny dla kultury. Poniższy przykład pokazuje, jak to zrobić:
+Domyślnie ciąg interpolowany używa bieżącej kultury zdefiniowanej przez właściwość <xref:System.Globalization.CultureInfo.CurrentCulture?displayProperty=nameWithType> dla wszystkich operacji formatowania. Użyj niejawnej konwersji ciągu interpolowanego na wystąpienie <xref:System.FormattableString?displayProperty=nameWithType> i Wywołaj metodę <xref:System.FormattableString.ToString(System.IFormatProvider)>, aby utworzyć ciąg wyniku specyficzny dla kultury. Poniższy przykład pokazuje, jak to zrobić:
 
 [!code-csharp-interactive[specify different cultures](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#6)]
 
-Jak pokazano w przykładzie, można użyć jednego <xref:System.FormattableString> wystąpienia do generowania wielu ciągów wynikowych dla różnych kultur.
+Jak pokazano w przykładzie, można użyć jednego wystąpienia <xref:System.FormattableString>, aby wygenerować wiele ciągów wynikowych dla różnych kultur.
 
 ## <a name="how-to-create-a-result-string-using-the-invariant-culture"></a>Jak utworzyć ciąg wynikowy przy użyciu niezmiennej kultury
 
-Wraz z <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> metodą można użyć statycznej <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metody do rozpoznawania ciągu interpolowanego do ciągu wynikowego dla <xref:System.Globalization.CultureInfo.InvariantCulture>. Poniższy przykład pokazuje, jak to zrobić:
+Podobnie jak w przypadku metody <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> można użyć statycznej metody <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType>, aby rozpoznać ciąg interpolowany do ciągu wynikowego dla <xref:System.Globalization.CultureInfo.InvariantCulture>. Poniższy przykład pokazuje, jak to zrobić:
 
 [!code-csharp-interactive[format with invariant culture](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#7)]
 

@@ -2,13 +2,14 @@
 title: Struktury — C# Przewodnik
 description: Dowiedz się więcej na temat typu struktury i sposobu ich tworzenia
 ms.date: 10/12/2016
+ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: e0974b7dcf3c0888cb52bea81b07a58e3a98640b
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a7cdd84677cb84038aae89da9774c6e365275963
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396122"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039742"
 ---
 # <a name="structs"></a>Struktury
 
@@ -26,7 +27,7 @@ Ale deklaruję i przypisujesz wartości do nich, tak jakby były to proste typy 
   
 [!code-csharp[Assign Values](../../samples/snippets/csharp/concepts/structs/assign-value.cs)] 
   
-Typy wartości są *zapieczętowane*, co oznacza, że nie można utworzyć typu z <xref:System.Int32> i nie można zdefiniować struktury dziedziczonej z żadnej klasy lub struktury zdefiniowanej przez użytkownika, ponieważ struktura może dziedziczyć tylko po <xref:System.ValueType>. Jednak struktura może zaimplementować jeden lub więcej interfejsów. Typ struktury można rzutować na typ interfejsu; powoduje *to, że operacja opakowywania* otacza strukturę wewnątrz obiektu typu odwołania na zarządzanym stosie. Operacje pakowania są wykonywane, gdy przekazujesz typ wartości do metody, która przyjmuje <xref:System.Object> jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](./programming-guide/types/boxing-and-unboxing.md ).  
+Typy wartości są *zapieczętowane*, co oznacza, że na przykład nie można utworzyć typu z <xref:System.Int32>i nie można zdefiniować struktury dziedziczonej z żadnej klasy lub struktury zdefiniowanej przez użytkownika, ponieważ struktura może dziedziczyć tylko po <xref:System.ValueType>. Jednak struktura może zaimplementować jeden lub więcej interfejsów. Typ struktury można rzutować na typ interfejsu; powoduje *to, że operacja opakowywania* otacza strukturę wewnątrz obiektu typu odwołania na zarządzanym stosie. Operacje pakowania są wykonywane, gdy przekazujesz typ wartości do metody, która przyjmuje <xref:System.Object> jako parametr wejściowy. Aby uzyskać więcej informacji, zobacz [opakowanie i rozpakowywanie](./programming-guide/types/boxing-and-unboxing.md ).  
   
 Za pomocą słowa kluczowego [struct](./language-reference/keywords/struct.md) można tworzyć własne niestandardowe typy wartości. Zazwyczaj struktura jest używana jako kontener dla małego zestawu powiązanych zmiennych, jak pokazano w następującym przykładzie:  
   
@@ -48,15 +49,15 @@ Struktury współużytkują większość tej samej składni co klasy, chociaż s
   
 - Struktury mogą deklarować konstruktory z parametrami.  
   
-- Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Wszystkie struktury dziedziczą bezpośrednio z <xref:System.ValueType>, które dziedziczy po <xref:System.Object>.  
+- Struktura nie może dziedziczyć z innej struktury lub klasy i nie może być podstawą klasy. Wszystkie struktury dziedziczą bezpośrednio z <xref:System.ValueType>, które dziedziczą z <xref:System.Object>.  
   
 - Struktura może implementować interfejsy.
 
 ## <a name="literal-values"></a>Wartości literału
 
-W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator będzie wywnioskować typ `double` dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](./language-reference/keywords/value-types.md).  
+W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator wykryje typ `double` dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](./language-reference/keywords/value-types.md).  
   
-Ponieważ wpisywane są literały, a wszystkie typy wynikają z wartości <xref:System.Object>, można napisać i skompilować kod, taki jak następujące:  
+Ponieważ wpisywane są literały, a wszystkie typy są ostatecznie z <xref:System.Object>, można napisać i skompilować kod, taki jak następujące:  
   
 [!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
 
@@ -64,9 +65,9 @@ W ostatnich dwóch przykładach przedstawiono funkcje języka wprowadzone C# w 7
 
 Druga ilustruje *literały binarne*, które umożliwiają bezpośrednie Określanie wzorców bitowych zamiast używania notacji szesnastkowej.
 
-## <a name="nullable-value-types"></a>Typy wartości null
+## <a name="nullable-value-types"></a>Typy wartości dopuszczające wartość null
 
-Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` to typ `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](programming-guide/nullable-types/index.md).
+Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](programming-guide/nullable-types/index.md).
 
 ## <a name="see-also"></a>Zobacz także
 

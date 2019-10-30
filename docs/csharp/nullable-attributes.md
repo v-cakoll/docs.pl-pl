@@ -1,13 +1,14 @@
 ---
 title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
 description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
+ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: c51ec81f77bb1d31168848d8d51e68a08965d42c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319069"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039377"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania
 
@@ -171,7 +172,7 @@ Załóżmy, że masz metodę o następującej sygnaturze:
 public Customer FindCustomer(string lastName, string firstName)
 ```
 
-Prawdopodobnie Zapisano metodę podobną do tej, aby zwracała `null`, gdy nie znaleziono nazwy. @No__t-0 jasno wskazuje, że nie znaleziono rekordu. W tym przykładzie można zmienić typ zwracany z `Customer` na `Customer?`. Deklarowanie wartości zwracanej jako typ referencyjny dopuszczający wartość null Określa zamiar tego interfejsu API jasno. 
+Prawdopodobnie Zapisano metodę podobną do tej, aby zwracała `null`, gdy nie znaleziono nazwy. `null` jasno wskazuje, że nie znaleziono rekordu. W tym przykładzie można zmienić typ zwracany z `Customer` na `Customer?`. Deklarowanie wartości zwracanej jako typ referencyjny dopuszczający wartość null Określa zamiar tego interfejsu API jasno. 
 
 Z przyczyn objętych [definicjami ogólnymi i wartością null](#generic-definitions-and-nullability) ta technika nie działa z metodami ogólnymi. Może istnieć Metoda ogólna, która następuje po podobnym wzorcu:
 
@@ -282,11 +283,11 @@ Należy określić warunkowe warunki końcowe przy użyciu następujących atryb
 
 ## <a name="generic-definitions-and-nullability"></a>Definicje generyczne i wartości null
 
-Poprawne powiadamianie o stanie null typów ogólnych i metod ogólnych wymaga szczególnej uwagi. Wynika to z faktu, że typ wartości null i typ referencyjny dopuszczający wartość null są zasadniczo różne. @No__t-0 jest synonimem dla `Nullable<int>`, natomiast `string?` jest `string` z atrybutem dodanym przez kompilator. W efekcie kompilator nie może wygenerować poprawnego kodu dla `T?` bez znajomości, czy `T` jest `class` czy `struct`. 
+Poprawne powiadamianie o stanie null typów ogólnych i metod ogólnych wymaga szczególnej uwagi. Wynika to z faktu, że typ wartości null i typ referencyjny dopuszczający wartość null są zasadniczo różne. `int?` jest synonimem dla `Nullable<int>`, a `string?` jest `string` z atrybutem dodanym przez kompilator. W efekcie kompilator nie może wygenerować poprawnego kodu dla `T?` bez znajomości, czy `T` jest `class` czy `struct`. 
 
 Nie oznacza to, że nie można użyć typu dopuszczającego wartości null (typu wartości lub typu referencyjnego) jako argumentu typu dla zamkniętego typu ogólnego. Zarówno `List<string?>`, jak i `List<int?>` są prawidłowymi wystąpieniami `List<T>`. 
 
-Oznacza to, że nie można użyć `T?` w ogólnej klasie lub deklaracji metody bez ograniczeń. Na przykład <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> nie zostanie zmieniony na Return `T?`. To ograniczenie można rozwiązać, dodając ograniczenie `struct` lub `class`. Z dowolnego z tych ograniczeń kompilator wie, jak generować kod dla `T` i `T?`.
+Oznacza to, że nie można użyć `T?` w ogólnej klasie lub deklaracji metody bez ograniczeń. Na przykład <xref:System.Linq.Enumerable.FirstOrDefault%60%601(System.Collections.Generic.IEnumerable%7B%60%600%7D)?displayProperty=nameWithType> nie zostanie zmieniony na zwraca `T?`. To ograniczenie można rozwiązać, dodając ograniczenie `struct` lub `class`. Z dowolnego z tych ograniczeń kompilator wie, jak generować kod dla `T` i `T?`.
 
 Możesz chcieć ograniczyć typy używane dla argumentu typu ogólnego jako niedopuszczające wartości null. Można to zrobić przez dodanie ograniczenia `notnull` dla tego argumentu typu. Po zastosowaniu tego ograniczenia argument typu nie może być typem dopuszczającym wartość null.
 

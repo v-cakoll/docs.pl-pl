@@ -1,49 +1,50 @@
 ---
 title: Wyróżniające się obiekty delegowane i zdarzenia
-description: Różnice między delegaci i zdarzenia i kiedy należy używać każdego z tych funkcji platformy .NET Core.
+description: Zapoznaj się z różnicą między delegatami i zdarzeniami oraz kiedy korzystać z każdej z tych funkcji platformy .NET Core.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 2f9c26519d93314f4991829191723df5426b23b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646647"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037320"
 ---
 # <a name="distinguishing-delegates-and-events"></a>Wyróżniające się obiekty delegowane i zdarzenia
 
-[Poprzednie](modern-events.md)
+[Ubiegł](modern-events.md)
 
-Deweloperzy, które są często jesteś nowym użytkownikiem platformy .NET Core mieć trudności podczas podejmowania decyzji o między projektu na podstawie `delegates` i projekty na podstawie `events`. Jest to koncepcja trudne, ponieważ funkcje językowe dwa są bardzo podobne. Zdarzenia nawet są tworzone przy użyciu języka pomocy technicznej dla obiektów delegowanych. 
+Deweloperzy, którzy są nowością dla platformy .NET Core, często podejmują decyzje dotyczące projektowania na podstawie `delegates` i projektu opartego na `events`. Jest to trudne koncepcje, ponieważ dwie funkcje języka są bardzo podobne. Zdarzenia są nawet kompilowane przy użyciu obsługi języka dla delegatów. 
 
-Oferują scenariusza późne powiązania: umożliwiają one scenariusze, w którym składnik komunikuje się przez wywołanie metody, która jest znane tylko w czasie wykonywania. Obsługiwane są też obu metod pojedynczych i wielu subskrybentów. Może się okazać tej obsługi są nazywane singlecast i multiemisji. Obie obsługują podobnej składni umożliwiającą Dodawanie i usuwanie programów obsługi. Na koniec podnoszenie zdarzenia i wywoływać metodę delegata Użyj dokładnie tej samej składni wywołania metody. Oba nawet obsługują te same `Invoke()` składni metody do użytku z programem `?.` operatora.
+Obie te funkcje oferują scenariusz późnego wiązania: włączają scenariusze, w których składnik komunikuje się, wywołując metodę, która jest znana tylko w czasie wykonywania. Obsługują one metody jednego i wielu subskrybentów. Może to być nazywane singlecast i obsługą multiemisji. Obie te funkcje obsługują podobną składnię do dodawania i usuwania programów obsługi. Na koniec, podnoszenie poziomu zdarzenia i wywołanie delegata używa dokładnie tej samej składni wywołania metody. Obsługują one również tę samą składnię metody `Invoke()` do użycia z operatorem `?.`.
 
-Za pomocą tych podobieństwa jest łatwe do problemów z ustaleniem, kiedy je stosować.
+W przypadku wszystkich tych podobieństw można łatwo mieć problemy z ustaleniem, kiedy należy używać tego programu.
 
 ## <a name="listening-to-events-is-optional"></a>Nasłuchiwanie zdarzeń jest opcjonalne
 
-Najważniejsze brany pod uwagę przy określaniu funkcji języka jest lub nie musi być subskrybentem dołączone. Jeśli kod musi wywoływać kod dostarczonych przez subskrybenta, należy użyć projektu, oparte na delegatach. Jeśli Twój kod może wykonać swoją pracę bez wywoływania żadnych subskrybentów, należy użyć projektu na podstawie zdarzeń. 
+Najważniejszym zagadnieniem przy określaniu, które funkcje języka mają być używane, jest to, czy musi być dołączonym subskrybentem. Jeśli kod musi wywoływać kod dostarczony przez subskrybenta, należy użyć projektu opartego na delegatach. Jeśli kod może zakończyć całą pracę bez wywoływania subskrybentów, należy użyć projektu opartego na zdarzeniach. 
 
-Należy wziąć pod uwagę przykłady utworzone w tej sekcji. Kod zostanie skompilowany przy użyciu `List.Sort()` należy zachować szczególną funkcję porównującą aby można było poprawnie sortować elementy. Zapytania LINQ, należy podać przy użyciu delegatów w celu ustalenia, jakie elementy do zwrócenia. Jest używany zarówno projektu utworzonych za pomocą obiektów delegowanych.
+Rozważ przykłady skompilowane w tej sekcji. Kod utworzony przy użyciu `List.Sort()` musi mieć funkcję porównującą, aby poprawnie sortować elementy. Zapytania LINQ muszą zostać dostarczone z delegatami w celu ustalenia, jakie elementy mają być zwracane. Oba używane projekty skompilowane z delegatami.
 
-Należy wziąć pod uwagę `Progress` zdarzeń. Wysyła raporty postęp zadania.
-Zadania w dalszym ciągu kontynuować informację określającą, czy istnieją żadnych odbiorników.
-`FileSearcher` Jest inny przykład. Będzie on nadal wyszukiwania i znajdowania wszystkich plików, które zostały poszukiwane, nawet w przypadku subskrybentów zdarzeń dołączonych.
-Kontrolki interfejsu użytkownika nadal działają poprawnie, nawet wtedy, gdy istnieją żadnych subskrybentów nasłuchiwanie zdarzenia. Obie używają projekty na podstawie zdarzeń.
+Rozważ zdarzenie `Progress`. Raportuje postęp zadania.
+Zadanie kontynuuje działanie niezależnie od tego, czy istnieją odbiorniki.
+`FileSearcher` jest kolejnym przykładem. Nadal będzie można wyszukiwać i znajdować wszystkie pliki, które zostały uzyskane, nawet jeśli nie załączono żadnych subskrybentów zdarzeń.
+Formanty środowiska użytkownika nadal działają poprawnie, nawet jeśli nie ma subskrybentów nasłuchujących zdarzeń. Oba używają projektów opartych na zdarzeniach.
 
 ## <a name="return-values-require-delegates"></a>Wartości zwracane wymagają delegatów
 
-Kolejna kwestia jest związana prototypu metody, które mają swoje metody delegata. Jak wiesz, delegatów, używane dla wszystkich zdarzeń ma zwracać typ void. Również wiesz, że nie istnieją idiomy do tworzenia programów obsługi zdarzeń, które przekazują informacje do źródła zdarzeń przez modyfikowanie właściwości obiektu argumentu zdarzenia. Podczas tych idiomy będą działać, nie są one jako naturalnego jako zwracanie wartości z metody.
+Innym zagadnieniem jest prototyp metody dla metody delegata. Jak widać, delegatów używanych dla zdarzeń wszystkie mają typ zwracany void. Zobaczysz również, że istnieją idiomy do tworzenia programów obsługi zdarzeń, które przekazują informacje z powrotem do źródeł zdarzeń przez modyfikowanie właściwości obiektu argumentu zdarzenia. Chociaż te idiomy pracują, nie są tak naturalne jak zwracanie wartości z metody.
 
-Zwróć uwagę, że te dwa algorytmy heurystyczne mogą często być obecne jednocześnie: Jeśli Twoje metody delegata zwróci wartość, prawdopodobnie będzie miało wpływ algorytm w jakiś sposób.
+Należy zauważyć, że te dwa heurystyke mogą często być obecne: Jeśli metoda Delegate zwraca wartość, prawdopodobnie będzie to miało wpływ na algorytm.
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>Odbiorniki zdarzeń często mają dłuższe okresy istnienia 
+## <a name="event-listeners-often-have-longer-lifetimes"></a>Detektory zdarzeń często mają dłuższe okresy istnienia 
 
-Jest to nieco mniejsze uzasadnienie. Jednak może się okazać oparte na zdarzeniach projekty są bardziej naturalne, gdy źródło zdarzenia będą wywoływanie zdarzeń w długim okresie czasu. Widać to przykłady formantów interfejsu użytkownika w wielu systemach. Gdy zasubskrybujesz zdarzenia, źródło zdarzenia mogą zgłaszać zdarzenia w okresie istnienia programu.
-(Możesz anulować subskrypcję zdarzenia, gdy nie są już potrzebne.)
+Jest to nieco słabsze uzasadnienie. Jednak można stwierdzić, że projekty oparte na zdarzeniach są bardziej naturalne, gdy źródło zdarzeń będzie w długim czasie podnieść zdarzenia. Przykłady tego elementu można zobaczyć w przypadku formantów środowiska użytkownika w wielu systemach. Po zasubskrybowaniu zdarzenia Źródło zdarzenia może zgłosić zdarzenia przez cały okres istnienia programu.
+(Możesz anulować subskrypcję zdarzeń, gdy nie są już potrzebne.)
 
-Natomiast, o wiele projektów opartych na delegacie, gdy obiekt delegowany jest używana jako argument do metody, i delegata nie jest używana, po powrocie z tej metody.
+Kontrast, który ma wiele projektów opartych na delegatach, gdzie delegat jest używany jako argument do metody i delegat nie jest używany po powrocie tej metody.
 
-## <a name="evaluate-carefully"></a>Dokładnie oceń
+## <a name="evaluate-carefully"></a>Dokładnie Oceń
 
-Powyższe zagadnienia, nie są reguły trudny i szybkie. Zamiast tego stanowią one wskazówki, które mogą pomóc zdecydować, rozwiązanie jest najlepsze dla określonego użycia. Ponieważ są one podobne, można nawet prototypu zarówno i należy wziąć pod uwagę będzie stosować bardziej naturalne chcesz pracować. Obie obsługują scenariusze późne powiązania dobrze. Użyj przepływu, który komunikuje się projektu najlepsze.
+Powyższe uwagi nie są regułami twardymi i szybkimi. Zamiast tego przedstawiają wskazówki, które mogą pomóc zdecydować, który wybór jest najlepszy dla danego użycia. Ze względu na to, że są podobne, można nawet prototypować i zastanowić się, że będzie bardziej naturalna współpraca z nimi. Oba obsługują również scenariusze późnego wiązania. Użyj tego, który komunikuje się z projektem najlepiej.

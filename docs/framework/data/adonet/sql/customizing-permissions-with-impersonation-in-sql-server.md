@@ -2,12 +2,12 @@
 title: Dostosowywanie uprawnień personifikacji w programie SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: b5dcef80afffa7bb3722a09020c5445dbc47f16a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d5e62019ae8806a7a182919fa06819a08d01301
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782471"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040452"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Dostosowywanie uprawnień personifikacji w programie SQL Server
 Wiele aplikacji korzysta z procedur składowanych w celu uzyskania dostępu do danych, opierając się na łańcuchu własności, aby ograniczyć dostęp do tabel podstawowych. Można przyznać uprawnienia wykonywania w procedurach składowanych, odwoływaniu lub odmowie uprawnień do tabel podstawowych. SQL Server nie sprawdza uprawnień obiektu wywołującego, jeśli procedura składowana i tabele mają tego samego właściciela. Jednak tworzenie łańcucha własności nie działa, jeśli obiekty mają różnych właścicieli lub w przypadku dynamicznego języka SQL.  
@@ -17,12 +17,12 @@ Wiele aplikacji korzysta z procedur składowanych w celu uzyskania dostępu do d
 ## <a name="context-switching-with-the-execute-as-statement"></a>Przełączanie kontekstu za pomocą instrukcji EXECUTE AS  
  Instrukcja EXECUTE AS języka Transact-SQL umożliwia przełączenie kontekstu wykonywania instrukcji przez personifikację innego identyfikatora logowania lub użytkownika bazy danych. Jest to przydatna technika testowania zapytań i procedur jako inny użytkownik.  
   
-```  
+```sql  
 EXECUTE AS LOGIN = 'loginName';  
 EXECUTE AS USER = 'userName';  
 ```  
   
- Użytkownik musi mieć uprawnienia PERSONIFIKACJi w przypadku personifikowanej nazwy logowania lub użytkownika. To uprawnienie jest implikowane `sysadmin` dla wszystkich baz danych i `db_owner` członków roli w bazach danych, których są właścicielami.  
+ Użytkownik musi mieć uprawnienia PERSONIFIKACJi w przypadku personifikowanej nazwy logowania lub użytkownika. To uprawnienie jest implikowane dla `sysadmin` dla wszystkich baz danych i `db_owner` członków roli w bazach danych, których są właścicielami.  
   
 ## <a name="granting-permissions-with-the-execute-as-clause"></a>Przyznawanie uprawnień za pomocą klauzuli EXECUTE AS  
  Można użyć klauzuli EXECUTE AS w nagłówku definicji procedury składowanej, wyzwalacza lub funkcji zdefiniowanej przez użytkownika (z wyjątkiem wbudowanych funkcji zwracających tabele). Powoduje to wykonanie procedury w kontekście nazwy użytkownika lub słowa kluczowego określonego w klauzuli EXECUTE AS. W bazie danych, która nie jest zamapowana na nazwę logowania, można utworzyć użytkownika proxy, przyznając mu tylko niezbędne uprawnienia do obiektów, do których uzyskuje się dostęp za pomocą tej procedury. Tylko użytkownik serwera proxy określony w klauzuli EXECUTE AS musi mieć uprawnienia do wszystkich obiektów, do których uzyskuje dostęp ten moduł.  
@@ -36,7 +36,7 @@ EXECUTE AS USER = 'userName';
   
 1. Utwórz użytkownika serwera proxy w bazie danych, która nie jest zamapowana na nazwę logowania. Nie jest to wymagane, ale ułatwia zarządzanie uprawnieniami.  
   
-```  
+```sql
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
@@ -44,7 +44,7 @@ CREATE USER proxyUser WITHOUT LOGIN
   
 2. Dodaj klauzulę EXECUTE AS do procedury składowanej lub funkcji zdefiniowanej przez użytkownika.  
   
-```  
+```sql
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  
 ```  
   
@@ -54,16 +54,16 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Używanie polecenia EXECUTE AS z opcją Revert  
  Możesz użyć instrukcji przywracania Transact-SQL, aby przywrócić pierwotny kontekst wykonania.  
   
- Opcjonalna klauzula bez przywracania pliku cookie = @variableName, umożliwia przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego, @variableName Jeśli zmienna zawiera poprawną wartość. Pozwala to na przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego w środowiskach, w których jest używane pule połączeń. Ponieważ wartość @variableName jest znana tylko obiektowi wywołującemu instrukcji EXECUTE AS, obiekt wywołujący może zagwarantować, że kontekst wykonywania nie może zostać zmieniony przez użytkownika końcowego, który wywoła aplikację. Gdy połączenie jest zamknięte, zostanie zwrócone do puli. Aby uzyskać więcej informacji na temat puli połączeń w programie ADO.NET, zobacz [SQL Servering pooling (ADO.NET)](../sql-server-connection-pooling.md).  
+ Opcjonalna klauzula bez przywracania pliku COOKIE = @variableNameumożliwia przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego, jeśli zmienna @variableName zawiera poprawną wartość. Pozwala to na przełączenie kontekstu wykonywania z powrotem do obiektu wywołującego w środowiskach, w których jest używane pule połączeń. Ponieważ wartość @variableName jest znana tylko obiektowi wywołującemu instrukcji EXECUTE AS, obiekt wywołujący może zagwarantować, że kontekst wykonywania nie może zostać zmieniony przez użytkownika końcowego, który wywoła aplikację. Gdy połączenie jest zamknięte, zostanie zwrócone do puli. Aby uzyskać więcej informacji na temat puli połączeń w programie ADO.NET, zobacz [SQL Servering pooling (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Określanie kontekstu wykonywania  
  Oprócz określania użytkownika można również użyć słowa kluczowego EXECUTE jako z dowolnym z następujących słów kluczowych.  
   
-- OBIEKT WYWOŁUJĄCY. Wykonywanie jako obiekt wywołujący jest wartością domyślną; Jeśli żadna inna opcja nie zostanie określona, procedura jest wykonywana w kontekście zabezpieczeń obiektu wywołującego.  
+- Obiekt wywołujący. Wykonywanie jako obiekt wywołujący jest wartością domyślną; Jeśli żadna inna opcja nie zostanie określona, procedura jest wykonywana w kontekście zabezpieczeń obiektu wywołującego.  
   
-- WŁAOCICIELA. Wykonywanie jako właściciel wykonuje procedurę w kontekście właściciela procedury. Jeśli procedura jest tworzona w schemacie `dbo` lub właścicielu bazy danych, procedura zostanie wykonana z nieograniczonymi uprawnieniami.  
+- Właociciela. Wykonywanie jako właściciel wykonuje procedurę w kontekście właściciela procedury. Jeśli procedura jest tworzona w schemacie należącym do `dbo` lub właściciela bazy danych, procedura zostanie wykonana z nieograniczonymi uprawnieniami.  
   
-- SELF. Wykonywanie jako samodziałanie w kontekście zabezpieczeń twórcy procedury składowanej. Jest to równoważne wykonywaniu przez określonego użytkownika, gdzie określony użytkownik jest osobą tworzącą lub zmieniającą procedurę.  
+- Automatycznej. Wykonywanie jako samodziałanie w kontekście zabezpieczeń twórcy procedury składowanej. Jest to równoważne wykonywaniu przez określonego użytkownika, gdzie określony użytkownik jest osobą tworzącą lub zmieniającą procedurę.  
   
 ## <a name="see-also"></a>Zobacz także
 

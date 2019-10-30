@@ -2,12 +2,12 @@
 title: Uwierzytelnianie w programie SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 49835ebf8ebe4d5bd200ed771477edc8af580b7d
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794295"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040268"
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie w programie SQL Server
 SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i tryb mieszany.  
@@ -19,10 +19,10 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
 > [!IMPORTANT]
 > Zalecamy używanie uwierzytelniania systemu Windows wszędzie tam, gdzie to możliwe. Uwierzytelnianie systemu Windows korzysta z serii zaszyfrowanych komunikatów do uwierzytelniania użytkowników w SQL Server. Gdy są używane SQL Server logowania, nazwy logowania SQL Server i szyfrowane hasła są przesyłane przez sieć, co sprawia, że są one mniej bezpieczne.  
   
- W przypadku uwierzytelniania systemu Windows użytkownicy są już zalogowani do systemu Windows i nie muszą logować się oddzielnie do SQL Server. Poniżej `SqlConnection.ConnectionString` określono uwierzytelnianie systemu Windows bez konieczności podawania nazwy użytkownika lub hasła.  
+ W przypadku uwierzytelniania systemu Windows użytkownicy są już zalogowani do systemu Windows i nie muszą logować się oddzielnie do SQL Server. Poniższe `SqlConnection.ConnectionString` określają uwierzytelnianie systemu Windows bez konieczności podawania nazwy użytkownika lub hasła.  
   
-```  
-"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
+```csharp  
+"Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
 ```  
   
 > [!NOTE]
@@ -64,12 +64,12 @@ SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu 
  Jeśli konieczne jest użycie uwierzytelniania w trybie mieszanym, należy utworzyć SQL Server nazwy logowania, które są przechowywane w SQL Server. Następnie należy podać nazwę użytkownika SQL Server i hasło w czasie wykonywania.  
   
 > [!IMPORTANT]
-> SQL Server instalowany przy użyciu SQL Server logowania o `sa` nazwie (skrót "administrator systemu"). Przypisz silne hasło do `sa` nazwy logowania i nie `sa` Używaj nazwy logowania w aplikacji. Dane `sa` logowania są mapowane `sysadmin` na stałą rolę serwera, która ma nieodwołalne poświadczenia administracyjne na całym serwerze. Jeśli osoba atakująca uzyska dostęp jako administrator systemu, nie ma żadnych ograniczeń dotyczących potencjalnego uszkodzenia. Wszyscy członkowie grupy systemu Windows `BUILTIN\Administrators` (grupa administratorów lokalnych) są domyślnie członkami `sysadmin` roli, ale można ją usunąć z tej roli.  
+> SQL Server instalowany przy użyciu SQL Server logowania o nazwie `sa` (skrót "administrator systemu"). Przypisz silne hasło do `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` logowania są mapowane na stałą rolę serwera `sysadmin`, która ma nieodwołalne poświadczenia administracyjne na całym serwerze. Jeśli osoba atakująca uzyska dostęp jako administrator systemu, nie ma żadnych ograniczeń dotyczących potencjalnego uszkodzenia. Wszyscy członkowie grupy `BUILTIN\Administrators` systemu Windows (grupy administratorów lokalnych) są domyślnie członkami roli `sysadmin`, ale można ją usunąć z tej roli.  
   
- SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania, gdy jest uruchomiona [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] w systemie lub nowszym. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] używane w programie w przypadku haseł używanych wewnątrz SQL Server.  
+ SQL Server zapewnia mechanizmy zasad haseł systemu Windows dla SQL Server logowania, gdy jest uruchomiona w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszych wersjach. Zasady złożoności haseł zaprojektowano w celu powstrzymania ataków na ataki przez zwiększenie liczby możliwych haseł. SQL Server mogą zastosować te same zasady złożoności i wygasania używane w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] do haseł używanych wewnątrz SQL Server.  
   
 > [!IMPORTANT]
-> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj, <xref:System.Data.SqlClient.SqlConnectionStringBuilder> aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
+> Łączenie parametrów połączenia z danymi wejściowymi użytkownika może spowodować zagrożenie dla ataku polegającego na iniekcji parametrów połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder>, aby utworzyć składniowo prawidłowe parametry połączenia w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [konstruktory parametrów połączenia](../connection-string-builders.md).  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji, zobacz następujące zasoby.  

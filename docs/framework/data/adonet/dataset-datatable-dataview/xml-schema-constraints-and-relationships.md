@@ -2,15 +2,15 @@
 title: Relacje i ograniczenia schematu XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 76af1c2e9d85d18a68b8c0a947dfba3b3291326c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784188"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040032"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Relacje i ograniczenia schematu XML
-W schemacie języka definicji schematu XML (XSD) można określić ograniczenia (ograniczenia UNIQUE, Key i keyref) oraz relacje (przy użyciu adnotacji **msdata: Relationship** ). W tym temacie wyjaśniono, jak są interpretowane ograniczenia i relacje określone w schemacie XML <xref:System.Data.DataSet>w celu wygenerowania.  
+W schemacie języka definicji schematu XML (XSD) można określić ograniczenia (ograniczenia UNIQUE, Key i keyref) oraz relacje (przy użyciu adnotacji **msdata: Relationship** ). W tym temacie wyjaśniono, jak są interpretowane ograniczenia i relacje określone w schemacie XML w celu wygenerowania <xref:System.Data.DataSet>.  
   
  Ogólnie rzecz biorąc, w schemacie XML należy określić adnotację **msdata: Relationship** , jeśli chcesz wygenerować tylko relacje w **zestawie danych**. Aby uzyskać więcej informacji, zobacz [generowanie relacji zestawu danych z schematu XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Należy określić ograniczenia (unikatowy, klucz i keyref), jeśli chcesz wygenerować ograniczenia w **zestawie danych**. Należy zauważyć, że ograniczenia Key i keyref są również używane do generowania relacji, jak wyjaśniono w dalszej części tego tematu.  
   
@@ -61,7 +61,7 @@ W schemacie języka definicji schematu XML (XSD) można określić ograniczenia 
   
  **Zestaw danych** , który jest generowany podczas procesu mapowania schematu XML, zawiera tabele **Order** i **OrderDetail** . Ponadto **zestaw danych** zawiera relacje i ograniczenia. W poniższym przykładzie przedstawiono relacje i ograniczenia. Należy zauważyć, że schemat nie określa adnotacji **msdata: Relationship** ; Zamiast tego ograniczenia Key i keyref są używane do generowania relacji.  
   
-```  
+```text
 ....ConstraintName: OrderNumberKey  
 ....Type: UniqueConstraint  
 ....Table: Order  
@@ -131,14 +131,14 @@ W schemacie języka definicji schematu XML (XSD) można określić ograniczenia 
   
  **Zestaw danych** wynikający z procesu mapowania schematu XML obejmuje dwie tabele:  
   
-```  
+```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
  **Zestaw danych** zawiera również dwie relacje (jedna oparta na **msdata:** adnotacja relacji i inne na podstawie ograniczeń klucza i elementu keyref) i różne ograniczenia. W poniższym przykładzie przedstawiono relacje i ograniczenia.  
   
-```  
+```text
 ..RelationName: Order_OrderDetail  
 ..ParentTable: Order  
 ..ParentColumns: Order_Id  

@@ -1,61 +1,62 @@
 ---
 title: Standardowe wzorce zdarzeń platformy .NET
-description: Więcej informacji na temat wzorce zdarzeń platformy .NET oraz jak utworzyć źródła zdarzeń w wersji standard i subskrybowanie i przetworzyć standardowych zdarzeń w kodzie.
+description: Dowiedz się więcej o wzorcach zdarzeń .NET i sposobach tworzenia standardowych źródeł zdarzeń oraz subskrybowania i przetwarzania standardowych zdarzeń w kodzie.
 ms.date: 06/20/2016
+ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062969"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037171"
 ---
 # <a name="standard-net-event-patterns"></a>Standardowe wzorce zdarzeń platformy .NET
 
-[Poprzednie](events-overview.md)
+[Ubiegł](events-overview.md)
 
-Zdarzenia .NET zazwyczaj korzystają z kilku znanych wzorców. Standaryzacji na tych wzorców oznacza, że deweloperzy mogą korzystać z wiedzy na temat tych standardowe wzorce, które mogą być stosowane do dowolnego programu zdarzenia platformy .NET.
+Zdarzenia platformy .NET zwykle są zgodne z kilkoma znanymi wzorcami. Ujednolicenie tych wzorców oznacza, że deweloperzy mogą korzystać z wiedzy o standardowych wzorcach, które można zastosować do dowolnego programu zdarzeń platformy .NET.
 
-Przejdźmy przez te standardowe wzorce, dzięki czemu będziesz mieć wiedzy umożliwiających tworzenie źródła zdarzeń w wersji standard i subskrybowanie i przetwarzanie standardowych zdarzeń w kodzie.
+Przyjrzyjmy się tym standardowym wzorcem, dzięki czemu będziesz mieć wszystkie informacje potrzebne do tworzenia standardowych źródeł zdarzeń oraz subskrybować i przetwarzać standardowe zdarzenia w kodzie.
 
-## <a name="event-delegate-signatures"></a>Podpisy delegata zdarzenia
+## <a name="event-delegate-signatures"></a>Sygnatury delegatów zdarzeń
 
-Standardowa podpis delegata zdarzenia platformy .NET jest:
+Podpis standardowy dla delegata zdarzenia .NET to:
 
 ```csharp
 void OnEventRaised(object sender, EventArgs args);
 ```
 
-Typ zwracany jest typ void. Zdarzenia są oparte na delegatach i są obiekty delegowane multiemisji. Dla dowolnego źródła zdarzeń, który obsługuje wielu subskrybentów. Pojedynczą wartość zwracana z metody nie przeprowadzać skalowanie do wielu subskrybentów zdarzeń. Które zwracają wartość jest adresem źródła zdarzeń po podnoszenie zdarzenia? Później w tym artykule pokazano, jak utworzyć protokołów zdarzeń, które obsługują subskrybentów zdarzeń tych informacji raportu, aby źródło zdarzenia.
+Zwracany typ to void. Zdarzenia są oparte na delegatach i są delegatami multiemisji. Obsługuje wielu subskrybentów dla każdego źródła zdarzeń. Pojedyncza wartość zwracana z metody nie jest skalowana do wielu subskrybentów zdarzeń. Która wartość zwracana jest wyświetlana przez Źródło zdarzenia po podwyższeniu poziomu zdarzenia? W dalszej części tego artykułu zobaczysz, jak utworzyć protokoły zdarzeń obsługujące Subskrybenci zdarzeń, które zgłaszają informacje do źródła zdarzeń.
 
-Lista argumentów zawiera dwa argumenty: nadawcy i argumenty zdarzeń. Typ czasu kompilacji `sender` jest `System.Object`, nawet jeśli wiesz, prawdopodobnie bardziej pochodnego typu, które zawsze są poprawne. Zgodnie z Konwencją, należy użyć `object`.
+Lista argumentów zawiera dwa argumenty: nadawca i argumenty zdarzenia. Typ czasu kompilacji `sender` jest `System.Object`, nawet jeśli prawdopodobnie znasz bardziej pochodny typ, który zawsze będzie prawidłowy. Zgodnie z Konwencją Użyj `object`.
 
-Drugi argument zazwyczaj został typ, który jest tworzony na podstawie `System.EventArgs`. (Znajduje się w [następnej sekcji](modern-events.md) , ta Konwencja przestaną być wymuszane.) Jeśli danego typu zdarzenia nie wymaga żadnych dodatkowych argumentów, nadal zapewni obu argumentów.
-Jest wartością specjalną `EventArgs.Empty` o konieczności użycia, aby wskazać, że zdarzenia nie zawiera żadnych dodatkowych informacji.
+Drugi argument jest zazwyczaj typem, który jest pochodną `System.EventArgs`. (Zobaczysz w [następnej sekcji](modern-events.md) , że ta konwencja nie jest już wymuszana). Jeśli typ zdarzenia nie wymaga żadnych dodatkowych argumentów, nadal będą dostępne oba argumenty.
+Istnieje specjalna wartość `EventArgs.Empty`, która powinna być używana do określenia, że zdarzenie nie zawiera żadnych dodatkowych informacji.
 
-Utwórzmy klasę, która wyświetla listę plików w katalogu lub jego podkatalogach, które wzorca. Ten składnik wywołuje zdarzenie, dla każdego pliku wykrył, że pasuje do wzorca.
+Utwórzmy klasę, która wyświetla listę plików w katalogu lub dowolnego podkatalogów, które są zgodne ze wzorcem. Ten składnik zgłasza zdarzenie dla każdego znalezionego pliku, który pasuje do wzorca.
 
-Przy użyciu modelu zdarzeń zapewnia kilka korzyści projektu. Możesz utworzyć wiele odbiorników zdarzeń, które wykonują różne akcje, gdy zostanie znaleziony używanych plików. Łączenie różnych odbiorników można tworzyć bardziej niezawodne algorytmy.
+Korzystanie z modelu zdarzeń zapewnia pewne zalety projektowania. Można utworzyć wiele detektorów zdarzeń, które wykonują różne akcje po znalezieniu szukanego pliku. Łącząc różne detektory, można tworzyć bardziej niezawodne algorytmy.
 
-Poniżej przedstawiono deklaracji argumentów zdarzenie początkowe służące do znajdowania używanych plików: 
+Oto początkowa deklaracja argumentu zdarzenia do znajdowania szukanego pliku: 
 
 [!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
-Mimo że ten typ wygląda typu małe, tylko dane, postępuj zgodnie z Konwencją i przywołać (`class`) typu. Oznacza to obiekt argument zostanie przekazany przez odwołanie, a wszelkie aktualizacje danych ma być wyświetlana przez wszystkich subskrybentów. Pierwsza wersja jest obiektem niezmienne. Wolisz należy wprowadzić właściwości w swojej typ argumentu zdarzenia niezmiennego. W ten sposób jednego abonenta nie można zmienić wartości, zanim zobaczy innego subskrybenta, ich. (Istnieją wyjątki od tego, jak można zauważyć poniżej.)  
+Mimo że ten typ wygląda jak mały typ danych, należy przestrzegać Konwencji i wprowadzić jako typ odwołania (`class`). Oznacza to, że obiekt argumentu zostanie przesłany przez odwołanie, a wszystkie aktualizacje danych będą widoczne dla wszystkich subskrybentów. Pierwsza wersja jest niezmiennym obiektem. Należy preferować, aby właściwości w typie argumentu zdarzenia były niezmienne. Dzięki temu jeden subskrybent nie może zmienić wartości przed ich wyświetleniem przez innego subskrybenta. (Istnieją wyjątki dotyczące tego, jak pokazano poniżej).  
 
-Następnie należy utworzyć deklaracja zdarzenia w klasie FileSearcher. Wykorzystując `EventHandler<T>` typ oznacza, że nie trzeba utworzyć kolejny definicji typu. Po prostu użyć ogólnego specjalizacji.
+Następnie musimy utworzyć deklarację zdarzenia w klasie FileSearcher. Korzystanie z typu `EventHandler<T>` oznacza, że nie trzeba tworzyć jeszcze innej definicji typu. Wystarczy użyć ogólnej specjalizacji.
 
-Spróbujmy Wypełnij klasy FileSearcher do wyszukiwania plików, które pasują do wzorca i zgłoś zdarzenie prawidłowe, gdy dopasowanie jest odnalezione.
+Wypełnijmy klasę FileSearcher, aby wyszukać pliki pasujące do wzorca, i podnieść poprawne zdarzenie, gdy zostanie odnalezione dopasowanie.
 
 [!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
-## <a name="defining-and-raising-field-like-events"></a>Definiowanie i wywoływanie zdarzenia podobne do pól
+## <a name="defining-and-raising-field-like-events"></a>Definiowanie i podnoszenie zdarzeń przypominających pola
 
-Najprostszym sposobem, aby dodać wydarzenie do klasy jest można zadeklarować tego zdarzenia jako pole publiczne, jak w poprzednim przykładzie:
+Najprostszym sposobem dodania zdarzenia do klasy jest zadeklarowanie tego zdarzenia jako pola publicznego, jak w poprzednim przykładzie:
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-To wygląda na to jest zadeklarowanie, publiczne pola, które wydają się być złym zwyczajem zorientowane obiektowo. Chcesz chronić dostęp do danych za pomocą właściwości lub metody. Chociaż może to wyglądać jak złym zwyczajem, kod wygenerowany przez kompilator tworzenie otok, tak aby obiekty zdarzeń może zostać oceniony jedynie w bezpieczny sposób. Tylko operacje dostępne dla zdarzenia podobne do pól są Dodaj program obsługi:
+Wygląda na to, że deklaruje pole publiczne, które wydaje się być niewłaściwym sposobem postępowania zorientowanego obiektowo. Chcesz chronić dostęp do danych za poorednictwem właściwości lub metod. Chociaż może to wyglądać jak niewłaściwe rozwiązanie, kod wygenerowany przez kompilator tworzy otoki, tak aby obiekty zdarzeń były dostępne tylko w bezpieczny sposób. Jedyne operacje dostępne na zdarzeniu podobnym do pola to procedura obsługi dodawania:
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
@@ -63,31 +64,31 @@ i Usuń procedurę obsługi:
 
 [!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
-Zwróć uwagę, że zmienna lokalna dla programu obsługi. Jeśli używasz treść wyrażenia lambda, Usuń nie będzie działać poprawnie. Może być inne wystąpienie delegata i dyskretnie nic nie rób.
+Należy zauważyć, że dla programu obsługi istnieje zmienna lokalna. Jeśli użyto treści wyrażenia lambda, usuwanie nie będzie działało poprawnie. Będzie ono innym wystąpieniem delegata i w trybie dyskretnym nic nie rób.
 
-Kodu spoza klasy nie mogą wywoływać zdarzenia, nie można wykonać żadnych innych operacji.
+Kod poza klasą nie może zgłosić zdarzenia, ani nie może wykonać żadnych innych operacji.
 
-## <a name="returning-values-from-event-subscribers"></a>Zwracanie wartości od subskrybentów zdarzeń
+## <a name="returning-values-from-event-subscribers"></a>Zwracanie wartości z subskrybentów zdarzeń
 
-Proste wersji działa prawidłowo. Dodajmy kolejną funkcją: Anulowanie.
+Twoja wersja prosta działa prawidłowo. Dodajmy kolejną funkcję: anulowanie.
 
-Po podniesieniu znalezionych zdarzeń odbiorników powinno być możliwe zatrzymać dalsze przetwarzanie, jeśli ten plik jest, że ostatni poszukiwania.
+Po podniesieniu wykrytego zdarzenia odbiorniki powinny być w stanie przerwać dalsze przetwarzanie, jeśli ten plik jest ostatnim z nich.
 
-Programy obsługi zdarzeń nie zwracają wartości, więc należy do komunikowania się, że w inny sposób. Wzorzec standardowych zdarzeń używa obiektu EventArgs podczas dołączania pól, które zdarzenie subskrybenci mogą używać do komunikowania się Anuluj.
+Programy obsługi zdarzeń nie zwracają wartości, dlatego należy komunikować się w inny sposób. Standardowy wzorzec zdarzeń używa obiektu EventArgs do dołączania pól, których Subskrybenci mogą używać do komunikowania się z anulowaniem.
 
-Istnieją dwa różne wzorce, które mogłyby zostać użyte, oparte na semantyce zamówienia, Anuluj. W obu przypadkach dodasz pola logicznych do EventArguments wydarzeniu znaleziony plik. 
+Istnieją dwa różne wzorce, których można użyć na podstawie semantyki kontraktu anulowania. W obu przypadkach należy dodać pole Boolean do EventArguments dla znalezionego zdarzenia pliku. 
 
-Jednym ze wzorców pozwoliłoby każdy jeden subskrybent anulować operację.
-Dla tego wzoru nowego pola jest ustawiana na `false`. Każdy subskrybent będzie można go zmienić `true`. Po wszystkim subskrybentom przejrzane zgłoszone zdarzenie, składnik FileSearcher sprawdza, czy wartość logiczna i podejmuje działania.
+Jeden wzorzec zezwoli jednemu subskrybentowi na anulowanie operacji.
+Dla tego wzorca nowe pole jest inicjowane w celu `false`. Każdy subskrybent może zmienić go na `true`. Gdy Wszyscy subskrybenci napotkają zgłoszone zdarzenie, składnik FileSearcher analizuje wartość logiczną i wykonuje akcję.
 
-Drugi wzorzec tylko czy anulować operację, jeśli wszyscy subskrybenci operacja została anulowana. W tym wzorcu nowe pole jest inicjowany do wskazania powinna anulować operację i każdy subskrybent może zmienić go, aby wskazać, że operacja powinna nadal pozostawać.
-Po wszystkim subskrybentom przejrzane zgłoszone zdarzenie, składnik FileSearcher sprawdza, czy atrybut typu wartość logiczna i podejmuje działania. Istnieje jeden dodatkowy krok w tym wzorcu: składnik musi znać, jeśli zdarzenie przejrzane żadnych subskrybentów. W przypadku subskrybentów pola wskazuje Anuluj niepoprawnie.
+Drugi wzorzec spowoduje anulowanie operacji tylko wtedy, gdy Wszyscy subskrybenci chcieli operacja została anulowana. W tym wzorcu nowe pole jest inicjowane w celu wskazania, że operacja powinna zostać anulowana, a każdy subskrybent może ją zmienić, aby wskazać, że operacja powinna być kontynuowana.
+Gdy Wszyscy subskrybenci napotkają zgłoszone zdarzenie, składnik FileSearcher analizuje wartość logiczną i wykonuje akcję. Ten wzorzec zawiera jeden dodatkowy krok: składnik musi wiedzieć, czy każdy subskrybent widział zdarzenie. Jeśli nie ma subskrybentów, pole wskazuje nieprawidłowe anulowanie.
 
-Teraz można zaimplementować pierwsza wersja dla tego przykładu. Należy dodać pola logicznych o nazwie `CancelRequested` do `FileFoundArgs` typu:
+Zaimplementujmy pierwszą wersję dla tego przykładu. Należy dodać pole Boolean o nazwie `CancelRequested` do typu `FileFoundArgs`:
 
 [!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
-Do tego nowego pola jest inicjowana automatycznie `false`, wartością domyślną dla polem, dzięki czemu nie anulujesz przypadkowo. Jedyną inną zmianą do składnika jest do sprawdzania flagi po podnoszonego zdarzenia, aby zobaczyć, jeśli dowolny subskrybentów żądano anulowania:
+To nowe pole jest automatycznie inicjowane w celu `false`, wartości domyślnej pola Boolean, więc nie można go anulować przypadkowo. Jedyną inną zmianą w składniku jest sprawdzenie flagi po podniesieniu zdarzenia, aby sprawdzić, czy którykolwiek z subskrybentów zażądał anulowania:
 
 ```csharp
 public void List(string directory, string searchPattern)
@@ -102,10 +103,10 @@ public void List(string directory, string searchPattern)
 }
 ```
 
-Jedną z zalet tego wzorca jest, że nie jest istotną zmianę.
-Brak subskrybentów zażądał anulowania przed i nadal nie są one. Brak kodu subskrybenta wymaga aktualizacji, chyba że mają być obsługuje nowy protokół anulowania. Jest bardzo luźno powiązana.
+Jedną z zalet tego wzorca jest to, że nie jest to istotna zmiana.
+Żaden z subskrybentów nie zażądał anulowania przed i nadal nie jest. Żaden kod subskrybenta nie wymaga aktualizacji, chyba że chcą obsługiwać nowy protokół anulowania. Jest ona bardzo luźno powiązana.
 
-Zaktualizujmy subskrybenta, tak aby żądania anulowania, gdy znajdzie pierwszy plik wykonywalny:
+Zaktualizujmy subskrybenta, aby zażądał anulowania po znalezieniu pierwszego pliku wykonywalnego:
 
 ```csharp
 EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
@@ -115,37 +116,37 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 };
 ```
 
-## <a name="adding-another-event-declaration"></a>Dodawanie innego deklaracja zdarzenia
+## <a name="adding-another-event-declaration"></a>Dodawanie kolejnej deklaracji zdarzenia
 
-Dodajmy jedną funkcję więcej i pokazują innych idiomy języka dla zdarzeń. Dodajmy przeciążenia `Search` metodę, która przechodzi przez wszystkie podkatalogi w poszukiwaniu plików.
+Dodajmy jeszcze jedną funkcję i zademonstrowasz inne idiomy języka dla zdarzeń. Dodajmy Przeciążenie metody `Search`, która przechodzi przez wszystkie podkatalogi w poszukiwaniu plików.
 
-To można pobrać jako długotrwałej operacji w katalogu z wielu katalogach podrzędnych. Dodajmy zdarzenia, które pobiera zgłaszane w przypadku każdego nowego wyszukiwania w katalogu rozpoczyna się. Dzięki temu subskrybentów do śledzenia postępu i zaktualizować użytkownika dotyczące postępu. Wszystkie przykłady, utworzonych przez siebie do tej pory były publiczne. Upewnijmy się, to zdarzenie wewnętrzne. Oznacza to, że można również ustawić jako typy również używany dla wewnętrznych argumentów.
+Może to być długotrwała operacja w katalogu z wieloma katalogami podrzędnymi. Dodajmy zdarzenie, które zostanie wywołane po rozpoczęciu każdego nowego wyszukiwania w katalogu. Dzięki temu Subskrybenci mogą śledzić postęp i aktualizować użytkownika w miarę postępu. Wszystkie utworzone dotąd przykłady są publiczne. Utwórzmy to zdarzenie wewnętrzne. Oznacza to, że można również uczynić typy używane dla argumentów wewnętrznie.
 
-Będziesz rozpoczyna się od utworzenia nowej klasy EventArgs pochodne raportowania nowy katalog i postępu. 
+Zacznij od utworzenia nowej klasy pochodnej EventArgs na potrzeby raportowania nowego katalogu i postępu. 
 
 [!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
-Ponownie możesz wykonać zalecenia dotyczące typu odwołania niezmienne argumentów zdarzeń.
+Ponownie można postępować zgodnie z zaleceniami, aby utworzyć niezmienny typ referencyjny dla argumentów zdarzeń.
 
-Następnie zdefiniuj zdarzenie. Tym razem użyjesz różnej składni. Oprócz używania składni pola, można jawnie Utwórz właściwości, za pomocą Dodaj i usuń programy obsługi. W tym przykładzie nie wymaga dodatkowego kodu w tych procedurach obsługi, ale ten pokazuje, jak należy je utworzyć.
+Następnie zdefiniuj zdarzenie. Tym razem użyjesz innej składni. Oprócz używania składni pola można jawnie utworzyć właściwość z obsługą dodawania i usuwania. W tym przykładzie nie będzie potrzebny dodatkowy kod w tych procedurach obsługi, ale pokazano, jak je utworzyć.
 
 [!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
-Na wiele sposobów kod, który możesz zapisu w tym miejscu duplikatów kodu, kompilator generuje definicje zdarzeń pola przedstawiono wcześniej. Tworzenie zdarzenia za pomocą składni bardzo podobne do celów [właściwości](properties.md). Zwróć uwagę, że programy obsługi mają inne nazwy: `add` i `remove`. Są one nazywane do subskrybowania zdarzenia lub anulować subskrypcję zdarzenia. Należy zauważyć, że również należy zadeklarować polem zapasowym prywatnych do przechowania zmiennej zdarzeń. Jest inicjowany do wartości null.
+Na wiele sposobów kod napisany w tym miejscu odzwierciedla kod wygenerowany przez kompilator dla definicji zdarzenia pól, które wcześniej były widoczne. Tworzysz wydarzenie przy użyciu składni podobnej do tej, która jest używana do [Właściwości](properties.md). Należy zauważyć, że programy obsługi mają różne nazwy: `add` i `remove`. Są one wywoływane, aby subskrybować zdarzenie lub anulować subskrypcję zdarzenia. Zwróć uwagę, że należy również zadeklarować prywatne pole zapasowe do przechowywania zmiennej zdarzenia. Jest ona zainicjowana na wartość null.
 
-Następnie Dodajmy przeciążenia `Search` metodę, która przechodzi podkatalogów i wywołuje zarówno zdarzenia. Najprostszym sposobem, aby osiągnąć ten cel jest określenie, że wszystkie katalogi wyszukiwania za pomocą domyślnego argumentu:
+Następnie Dodajmy Przeciążenie metody `Search`, która przechodzi podkatalogi i wywołuje oba zdarzenia. Najprostszym sposobem osiągnięcia tego celu jest użycie domyślnego argumentu w celu określenia, czy chcesz przeszukać wszystkie katalogi:
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
-W tym momencie można uruchomić aplikacji, wywołanie przeciążenia wszystkie podkatalogi wyszukiwania. Na nowym nie ma żadnych subskrybentów `ChangeDirectory` zdarzenia, ale przy użyciu `?.Invoke()` idiom gwarantuje, że to działa prawidłowo.
+W tym momencie można uruchomić aplikację wywołującą Przeciążenie do przeszukiwania wszystkich podkatalogów. Nie ma subskrybentów nowego zdarzenia `ChangeDirectory`, ale użycie `?.Invoke()` idiom gwarantuje, że działa poprawnie.
 
- Możemy dodać program obsługi do pisania wiersza, która przedstawia postęp w oknie konsoli. 
+ Dodajmy procedurę obsługi, aby napisać wiersz pokazujący postęp w oknie konsoli. 
 
 [!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
 
-Po zapoznaniu wzorców, które są wykonywane w całym ekosystemie platformy .NET.
-Dzięki informacjom o tych wzorców i Konwencji, napiszesz idiomatyczną C# i .NET szybko.
+Pojawiły się wzorce, które są obserwowane w całym ekosystemie platformy .NET.
+Poznanie tych wzorców i Konwencji umożliwia szybkie pisanie idiomatyczne C# i platformy .NET.
 
-Następnie zobaczysz niektóre zmiany w tych wzorców w najnowszej wersji programu .NET.
+Następnie zobaczysz pewne zmiany w tych wzorcach w najnowszej wersji programu .NET.
 
 [Next](modern-events.md)

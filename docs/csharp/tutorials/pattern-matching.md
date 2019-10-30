@@ -2,15 +2,16 @@
 title: Korzystanie z funkcji dopasowania wzorców w celu poszerzenia typów danych
 description: W tym zaawansowanym samouczku pokazano, jak używać technik dopasowywania wzorców do tworzenia funkcji przy użyciu danych i algorytmów, które są tworzone osobno.
 ms.date: 03/13/2019
+ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: 036a6bcda04771eb8cf3699af8756e83bb144389
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: ca7ae63a038fce0b2569e7a4bd1805765bc23d44
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332353"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039195"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowywania wzorców do zwiększania typów danych
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Samouczek: Używanie funkcji dopasowania wzorców do zwiększania typów danych
 
 C#7 wprowadzono podstawowe funkcje dopasowania do wzorca. Te funkcje są rozszerzane C# w 8 przy użyciu nowych wyrażeń i wzorców. Można napisać funkcję, która zachowuje się tak, jakby rozszerzone typy, które mogą znajdować się w innych bibliotekach. Innym zastosowaniem wzorców jest tworzenie funkcji wymaganych przez aplikację, która nie jest podstawową funkcją rozszerzania typu.
 
@@ -42,7 +43,7 @@ Z tego krótkiego opisu można szybko szkicować hierarchię obiektów, aby mode
 
 [!code-csharp[ExternalSystems](~/samples/csharp/tutorials/patterns/start/toll-calculator/ExternalSystems.cs)]
 
-Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) . Można zobaczyć, że klasy pojazdu pochodzą z różnych systemów i znajdują się w różnych przestrzeniach nazw. Nie `System.Object` można użyć żadnej wspólnej klasy bazowej.
+Możesz pobrać kod początkowy z repozytorium usługi GitHub [/przykłady](https://github.com/dotnet/samples/tree/master/csharp/tutorials/patterns/start) . Można zobaczyć, że klasy pojazdu pochodzą z różnych systemów i znajdują się w różnych przestrzeniach nazw. Nie można wykorzystać żadnej wspólnej klasy bazowej, innej niż `System.Object`.
 
 ## <a name="pattern-matching-designs"></a>Projekty dopasowania wzorców
 
@@ -57,12 +58,12 @@ Gdy *kształt* danych i *operacje* na tych danych nie są opisane razem, funkcje
 
 Najbardziej podstawowe obliczenia płatne bazują wyłącznie na typie pojazdu:
 
-- A `Car` to $2,00.
-- A `Taxi` to $3,50.
-- A `Bus` to $5,00.
-- A `DeliveryTruck` to $10,00
+- `Car` to $2,00.
+- `Taxi` to $3,50.
+- `Bus` to $5,00.
+- `DeliveryTruck` to $10,00
 
-Utwórz nową `TollCalculator` klasę i Implementuj dopasowanie wzorców w typie pojazdu, aby uzyskać kwotę opłaty. Poniższy kod pokazuje początkową implementację `TollCalculator`.
+Utwórz nową klasę `TollCalculator` i Implementuj dopasowanie wzorców na typie pojazdu, aby uzyskać kwotę opłaty. Poniższy kod przedstawia początkową implementację `TollCalculator`.
 
 ```csharp
 using System;
@@ -88,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-Poprzedni kod używa **wyrażenia Switch** (nie takiego samego jak [`switch`](../language-reference/keywords/switch.md) instrukcja), które sprawdza **wzorzec typu**. **Wyrażenie Switch** zaczyna się od zmiennej, `vehicle` w poprzednim kodzie `switch` , po słowie kluczowym. Następnie wszystkie **ramiona przełączania** są umieszczone w nawiasach klamrowych. Wyrażenie wprowadza inne udoskonalenia do składni otaczającej `switch` instrukcję. `switch` `case` Słowo kluczowe jest pomijane, a wynik każdego ARM jest wyrażeniem. Ostatnie dwie poręcze zawierają nową funkcję języka. `{ }` Przypadek dopasowuje dowolny obiekt o wartości innej niż null, który nie jest zgodny z wcześniejszą ARM. Ten ARM przechwytuje wszystkie nieprawidłowe typy przesłane do tej metody.  `{ }` Przypadek musi być zgodny z przypadkami dla każdego typu pojazdu. Jeśli zamówienie zostało cofnięte, `{ }` pierwszeństwo ma. Na `null` koniec wzorzec wykrywa, `null` kiedy jest przenoszona do tej metody. `null` Wzorzec może być ostatni, ponieważ wzorce innych typów pasują tylko do niezerowego obiektu o poprawnym typie.
+Poprzedni kod używa **wyrażenia Switch** (nie takiego samego jak instrukcja [`switch`](../language-reference/keywords/switch.md) ), które sprawdza **wzorzec typu**. **Wyrażenie Switch** rozpoczyna się od zmiennej, `vehicle` w poprzednim kodzie, po którym następuje słowo kluczowe `switch`. Następnie wszystkie **ramiona przełączania** są umieszczone w nawiasach klamrowych. Wyrażenie `switch` wprowadza inne udoskonalenia do składni otaczającej instrukcję `switch`. Słowo kluczowe `case` zostało pominięte, a wynikiem każdego ARM jest wyrażenie. Ostatnie dwie poręcze zawierają nową funkcję języka. Przypadek `{ }` dopasowuje dowolny obiekt o wartości innej niż null, który nie jest zgodny z wcześniejszą ARM. Ten ARM przechwytuje wszystkie nieprawidłowe typy przesłane do tej metody.  Przypadek `{ }` musi być zgodny z przypadkami dla każdego typu pojazdu. Jeśli zamówienie zostało cofnięte, pierwszeństwo ma `{ }` przypadku. Na koniec wzorzec `null` wykrywa, kiedy `null` jest przenoszona do tej metody. Wzorzec `null` może być ostatni, ponieważ wzorce innych typów pasują tylko do niezerowego obiektu o poprawnym typie.
 
 Możesz przetestować ten kod przy użyciu następującego kodu w `Program.cs`:
 
@@ -139,7 +140,7 @@ namespace toll_calculator
 
 Ten kod jest zawarty w projekcie początkowym, ale jest oznaczony jako komentarz. Usuń Komentarze i możesz sprawdzić, które z nich zapisano.
 
-Zaczynasz widzieć, jak wzorce mogą pomóc w tworzeniu algorytmów, w których kod i dane są oddzielone. `switch` Wyrażenie testuje typ i tworzy różne wartości na podstawie wyników. To tylko początek.
+Zaczynasz widzieć, jak wzorce mogą pomóc w tworzeniu algorytmów, w których kod i dane są oddzielone. Wyrażenie `switch` sprawdza typ i tworzy różne wartości na podstawie wyników. To tylko początek.
 
 ## <a name="add-occupancy-pricing"></a>Dodawanie cen użytkowania
 
@@ -151,7 +152,7 @@ Urząd certyfikacji jest odpowiedzialny za przemieszczenie pojazdów z maksymaln
 - W przypadku magistrali, które mają mniej niż 50%, pełna opłata wynosi $2,00.
 - Magistrale, które mają więcej niż 90%, uzyskają rabat $1,00.
 
-Te reguły można zaimplementować przy użyciu **wzorca właściwości** w tym samym wyrażeniu przełącznika. Wzorzec właściwości bada właściwości obiektu po ustaleniu typu. Pojedynczy przypadek dla `Car` rozszerzania do czterech różnych przypadków:
+Te reguły można zaimplementować przy użyciu **wzorca właściwości** w tym samym wyrażeniu przełącznika. Wzorzec właściwości bada właściwości obiektu po ustaleniu typu. Pojedynczy przypadek dla `Car` rozwija się do czterech różnych przypadków:
 
 ```csharp
 vehicle switch
@@ -165,7 +166,7 @@ vehicle switch
 };
 ```
 
-Pierwsze trzy przypadki testują typ jako a `Car`, a następnie sprawdzają wartość `Passengers` właściwości. Jeśli oba te wartości są zgodne, to wyrażenie jest oceniane i zwracane.
+Pierwsze trzy przypadki testują typ jako `Car`, a następnie sprawdzają wartość właściwości `Passengers`. Jeśli oba te wartości są zgodne, to wyrażenie jest oceniane i zwracane.
 
 W podobny sposób można również rozwijać przypadki wypadków:
 
@@ -183,7 +184,7 @@ vehicle switch
 };
 ```
 
-W poprzednim przykładzie `when` klauzula została pominięta w ostatecznym przypadku.
+W poprzednim przykładzie klauzula `when` została pominięta w przypadku końcowym.
 
 Następnie Zaimplementuj reguły użytkowania, rozszerzając przypadki dla magistrali, jak pokazano w następującym przykładzie:
 
@@ -218,7 +219,7 @@ vehicle switch
 };
 ```
 
-Poprzedni kod pokazuje `when` klauzulę ramienia przełącznika. `when` Klauzula służy do testowania warunków innych niż równość dla właściwości. Po zakończeniu będziesz mieć metodę, która wygląda podobnie do następującej:
+Powyższy kod przedstawia klauzulę `when` ramienia przełącznika. Za pomocą klauzuli `when` można testować warunki inne niż równość we właściwości. Po zakończeniu będziesz mieć metodę, która wygląda podobnie do następującej:
 
 ```csharp
 vehicle switch
@@ -248,7 +249,7 @@ vehicle switch
 
 Wiele z tych broni przełączania to przykłady **wzorców cyklicznych**. Na przykład `Car { Passengers: 1}` pokazuje stały wzorzec wewnątrz wzorca właściwości.
 
-Ten kod może być mniej powtarzany przy użyciu przełączników zagnieżdżonych. Te `Car` i`Taxi` oba mają cztery różne ramiona w powyższych przykładach. W obu przypadkach można utworzyć wzorzec typu, który jest przesyłany do wzorca właściwości. Ta technika jest pokazana w poniższym kodzie:
+Ten kod może być mniej powtarzany przy użyciu przełączników zagnieżdżonych. W powyższych przykładach `Car` i `Taxi` mają cztery różne ramion. W obu przypadkach można utworzyć wzorzec typu, który jest przesyłany do wzorca właściwości. Ta technika jest pokazana w poniższym kodzie:
 
 ```csharp
 public decimal CalculateToll(object vehicle) =>
@@ -283,7 +284,7 @@ public decimal CalculateToll(object vehicle) =>
     };
 ```
 
-W powyższym przykładzie, przy użyciu wyrażenia cyklicznego oznacza, że `Car` nie `Taxi` powtarzasz broni i zawiera poręcze potomne, które testują wartość właściwości. Ta technika nie jest używana jako `Bus` broń `DeliveryTruck` i, ponieważ te poręcze są zakresami testowania dla właściwości, a nie do wartości dyskretnych.
+W poprzednim przykładzie użycie wyrażenia cyklicznego oznacza, że nie należy powtarzać `Car` i `Taxi` ramion zawierających ramiona potomne, które testują wartość właściwości. Ta technika nie jest używana dla broni `Bus` i `DeliveryTruck`, ponieważ te poręcze są zakresami testowania dla właściwości, a nie wartości dyskretnych.
 
 ## <a name="add-peak-pricing"></a>Dodawanie cen szczytowych
 
@@ -297,28 +298,28 @@ Użyjesz dopasowania do wzorca dla tej funkcji, ale będziesz zintegrować ją z
 
 W poniższej tabeli przedstawiono kombinacje wartości wejściowych i mnożnik cen szczytowych:
 
-| Dzień        | Time         | Direction | Premium |
+| Dzień        | Godzina         | Kierunek | Tytułu |
 | ---------- | ------------ | --------- |--------:|
-| Dzień tygodnia    | rano szczytu | Dotycząc   | x 2,00  |
-| Dzień tygodnia    | rano szczytu | Wyjściowy  | x 1,00  |
-| Dzień tygodnia    | telefonu      | Dotycząc   | x 1,50  |
-| Dzień tygodnia    | telefonu      | Wyjściowy  | x 1,50  |
-| Dzień tygodnia    | szczytu wieczór | Dotycząc   | x 1,00  |
-| Dzień tygodnia    | szczytu wieczór | Wyjściowy  | x 2,00  |
-| Dzień tygodnia    | Przelewy    | Dotycząc   | x 0,75  |
-| Dzień tygodnia    | Przelewy    | Wyjściowy  | x 0,75  |
-| Weekend    | rano szczytu | Dotycząc   | x 1,00  |
-| Weekend    | rano szczytu | Wyjściowy  | x 1,00  |
-| Weekend    | telefonu      | Dotycząc   | x 1,00  |
-| Weekend    | telefonu      | Wyjściowy  | x 1,00  |
-| Weekend    | szczytu wieczór | Dotycząc   | x 1,00  |
-| Weekend    | szczytu wieczór | Wyjściowy  | x 1,00  |
-| Weekend    | Przelewy    | Dotycząc   | x 1,00  |
-| Weekend    | Przelewy    | Wyjściowy  | x 1,00  |
+| Dzień tygodnia    | rano szczytu | dotycząc   | x 2,00  |
+| Dzień tygodnia    | rano szczytu | wyjściowy  | x 1,00  |
+| Dzień tygodnia    | telefonu      | dotycząc   | x 1,50  |
+| Dzień tygodnia    | telefonu      | wyjściowy  | x 1,50  |
+| Dzień tygodnia    | szczytu wieczór | dotycząc   | x 1,00  |
+| Dzień tygodnia    | szczytu wieczór | wyjściowy  | x 2,00  |
+| Dzień tygodnia    | Przelewy    | dotycząc   | x 0,75  |
+| Dzień tygodnia    | Przelewy    | wyjściowy  | x 0,75  |
+| Weekend    | rano szczytu | dotycząc   | x 1,00  |
+| Weekend    | rano szczytu | wyjściowy  | x 1,00  |
+| Weekend    | telefonu      | dotycząc   | x 1,00  |
+| Weekend    | telefonu      | wyjściowy  | x 1,00  |
+| Weekend    | szczytu wieczór | dotycząc   | x 1,00  |
+| Weekend    | szczytu wieczór | wyjściowy  | x 1,00  |
+| Weekend    | Przelewy    | dotycząc   | x 1,00  |
+| Weekend    | Przelewy    | wyjściowy  | x 1,00  |
 
 Istnieją 16 różnych kombinacji trzech zmiennych. Łącząc niektóre warunki, można uprościć ostateczne wyrażenie Switch.
 
-System, który zbiera opłaty, używa <xref:System.DateTime> struktury dla czasu, w którym nastąpiła opłata. Kompiluj metody Członkowskie, które tworzą zmienne z powyższej tabeli. Poniższa funkcja używa wyrażenia przełącznika dopasowania wzorca, aby określić, czy <xref:System.DateTime> element reprezentuje weekend czy dzień tygodnia:
+System, który zbiera opłaty za usługę, używa struktury <xref:System.DateTime> na czas, w którym nastąpiła opłata. Kompiluj metody Członkowskie, które tworzą zmienne z powyższej tabeli. Poniższa funkcja używa wyrażenia przełącznika dopasowania wzorca, aby określić, czy <xref:System.DateTime> reprezentuje weekend czy dzień tygodnia:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -342,9 +343,9 @@ Następnie Dodaj podobną funkcję, aby przydzielić czas do bloków:
 
 [!code-csharp[GetTimeBand](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#GetTimeBand)]
 
-Poprzednia metoda nie używa dopasowania do wzorca. Jest to wyraźniejsze użycie dobrze znanego `if` zestawienia instrukcji. Dodaj prywatny `enum` , aby przekonwertować każdy zakres czasu na wartość dyskretną.
+Poprzednia metoda nie używa dopasowania do wzorca. Jest to wyraźniejsze użycie znanych kaskadowych instrukcji `if`. Należy dodać prywatny `enum`, aby przekonwertować każdy zakres czasu na wartość dyskretną.
 
-Po utworzeniu tych metod można użyć innego `switch` wyrażenia z **wzorcem spójności** , aby obliczyć cenę Premium. Można utworzyć `switch` wyrażenie ze wszystkimi 16 bronią:
+Po utworzeniu tych metod można użyć innego wyrażenia `switch` ze **wzorcem spójności** , aby obliczyć cenę Premium. Można utworzyć wyrażenie `switch` ze wszystkimi 16 bronią:
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
@@ -377,7 +378,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
     };
 ```
 
-Na koniec możesz usunąć dwie szczytu godziny, które będą obciążane stałą cenę. Po usunięciu tych broni można zastąpić `false` element Odrzuć (`_`) w końcowej aktywacji. Następująca metoda została zakończona:
+Na koniec możesz usunąć dwie szczytu godziny, które będą obciążane stałą cenę. Po usunięciu tych broni można zastąpić `false` odrzucanie (`_`) w końcowej aktywacji. Następująca metoda została zakończona:
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 

@@ -2,27 +2,27 @@
 title: Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: f4b1b9e45f0cda976719b991c336463e0af05f12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 25fc2c427727273038f7b4267376d6ba6446b811
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784435"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040392"
 ---
-# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="c29b1-102">Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu</span><span class="sxs-lookup"><span data-stu-id="c29b1-102">Map Implicit Relations Between Nested Schema Elements</span></span>
-<span data-ttu-id="c29b1-103">Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnieżdżone wewnątrz siebie.</span><span class="sxs-lookup"><span data-stu-id="c29b1-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="c29b1-104">W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące elementy w <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="c29b1-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
+# <a name="map-implicit-relations-between-nested-schema-elements"></a><span data-ttu-id="4f4f4-102">Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu</span><span class="sxs-lookup"><span data-stu-id="4f4f4-102">Map Implicit Relations Between Nested Schema Elements</span></span>
+<span data-ttu-id="4f4f4-103">Schemat języka definicji schematu XML (XSD) może mieć złożone typy zagnieżdżone wewnątrz siebie.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-103">An XML Schema definition language (XSD) schema can have complex types nested inside one another.</span></span> <span data-ttu-id="4f4f4-104">W takim przypadku proces mapowania stosuje domyślne mapowanie i tworzy następujące elementy w <xref:System.Data.DataSet>:</span><span class="sxs-lookup"><span data-stu-id="4f4f4-104">In this case, the mapping process applies default mapping and creates the following in the <xref:System.Data.DataSet>:</span></span>  
   
-- <span data-ttu-id="c29b1-105">Jedna tabela dla każdego z typów złożonych (nadrzędnych i podrzędnych).</span><span class="sxs-lookup"><span data-stu-id="c29b1-105">One table for each of the complex types (parent and child).</span></span>  
+- <span data-ttu-id="4f4f4-105">Jedna tabela dla każdego z typów złożonych (nadrzędnych i podrzędnych).</span><span class="sxs-lookup"><span data-stu-id="4f4f4-105">One table for each of the complex types (parent and child).</span></span>  
   
-- <span data-ttu-id="c29b1-106">Jeśli w obiekcie nadrzędnym nie istnieje ograniczenie UNIQUE, jedna dodatkowa kolumna klucza podstawowego dla definicji tabeli o nazwie *TableName*_Id, gdzie *TableName* jest nazwą tabeli nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="c29b1-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
+- <span data-ttu-id="4f4f4-106">Jeśli w obiekcie nadrzędnym nie istnieje ograniczenie UNIQUE, jedna dodatkowa kolumna klucza podstawowego dla definicji tabeli o nazwie *TableName*_Id, gdzie *TableName* jest nazwą tabeli nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-106">If no unique constraint exists on the parent, one additional primary key column per table definition named *TableName*_Id where *TableName* is the name of the parent table.</span></span>  
   
-- <span data-ttu-id="c29b1-107">Ograniczenie PRIMARY KEY w tabeli nadrzędnej identyfikujące dodatkową kolumnę jako klucz podstawowy (przez ustawienie właściwości **IsPrimaryKey** na **wartość true**).</span><span class="sxs-lookup"><span data-stu-id="c29b1-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="c29b1-108">Ograniczenie ma nazwę Constraint\# , gdzie \# ma wartość 1, 2, 3 i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="c29b1-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="c29b1-109">Na przykład domyślna nazwa pierwszego ograniczenia to Constraint1.</span><span class="sxs-lookup"><span data-stu-id="c29b1-109">For example, the default name for the first constraint is Constraint1.</span></span>  
+- <span data-ttu-id="4f4f4-107">Ograniczenie PRIMARY KEY w tabeli nadrzędnej identyfikujące dodatkową kolumnę jako klucz podstawowy (przez ustawienie właściwości **IsPrimaryKey** na **wartość true**).</span><span class="sxs-lookup"><span data-stu-id="4f4f4-107">A primary key constraint on the parent table identifying the additional column as the primary key (by setting the **IsPrimaryKey** property to **True**).</span></span> <span data-ttu-id="4f4f4-108">Ograniczenie ma nazwę ograniczenia\# gdzie \# ma wartość 1, 2, 3 i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-108">The constraint is named Constraint\# where \# is 1, 2, 3, and so on.</span></span> <span data-ttu-id="4f4f4-109">Na przykład domyślna nazwa pierwszego ograniczenia to Constraint1.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-109">For example, the default name for the first constraint is Constraint1.</span></span>  
   
-- <span data-ttu-id="c29b1-110">Ograniczenie klucza obcego w tabeli podrzędnej identyfikującej dodatkową kolumnę jako klucz obcy odwołujący się do klucza podstawowego tabeli nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="c29b1-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="c29b1-111">Ograniczenie ma nazwę *ParentTable_ChildTable* , gdzie *element parentname* jest nazwą tabeli nadrzędnej i *elementem podrzędnym* jest nazwa tabeli podrzędnej.</span><span class="sxs-lookup"><span data-stu-id="c29b1-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
+- <span data-ttu-id="4f4f4-110">Ograniczenie klucza obcego w tabeli podrzędnej identyfikującej dodatkową kolumnę jako klucz obcy odwołujący się do klucza podstawowego tabeli nadrzędnej.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-110">A foreign key constraint on the child table identifying the additional column as the foreign key referring to the primary key of the parent table.</span></span> <span data-ttu-id="4f4f4-111">Ograniczenie ma nazwę *ParentTable_ChildTable* , gdzie *element parentname* jest nazwą tabeli nadrzędnej i *elementem podrzędnym* jest nazwa tabeli podrzędnej.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-111">The constraint is named *ParentTable_ChildTable* where *ParentTable* is the name of the parent table and *ChildTable* is the name of the child table.</span></span>  
   
-- <span data-ttu-id="c29b1-112">Relacja danych między tabelami nadrzędnymi i podrzędnymi.</span><span class="sxs-lookup"><span data-stu-id="c29b1-112">A data relation between the parent and child tables.</span></span>  
+- <span data-ttu-id="4f4f4-112">Relacja danych między tabelami nadrzędnymi i podrzędnymi.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-112">A data relation between the parent and child tables.</span></span>  
   
- <span data-ttu-id="c29b1-113">W poniższym przykładzie przedstawiono schemat, gdzie **OrderDetail** jest elementem podrzędnym **zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="c29b1-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
+ <span data-ttu-id="4f4f4-113">W poniższym przykładzie przedstawiono schemat, gdzie **OrderDetail** jest elementem podrzędnym **zamówienia**.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-113">The following example shows a schema where **OrderDetail** is a child element of **Order**.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,18 +54,18 @@ ms.locfileid: "70784435"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="c29b1-114">Proces mapowania schematu XML tworzy następujące elementy w **zestawie danych**:</span><span class="sxs-lookup"><span data-stu-id="c29b1-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
+ <span data-ttu-id="4f4f4-114">Proces mapowania schematu XML tworzy następujące elementy w **zestawie danych**:</span><span class="sxs-lookup"><span data-stu-id="4f4f4-114">The XML Schema mapping process creates the following in the **DataSet**:</span></span>  
   
-- <span data-ttu-id="c29b1-115">**Zamówienie** i tabela **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="c29b1-115">An **Order** and an **OrderDetail** table.</span></span>  
+- <span data-ttu-id="4f4f4-115">**Zamówienie** i tabela **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="4f4f4-115">An **Order** and an **OrderDetail** table.</span></span>  
   
-    ```  
+    ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- <span data-ttu-id="c29b1-116">Unikatowe ograniczenie tabeli **Order** .</span><span class="sxs-lookup"><span data-stu-id="c29b1-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="c29b1-117">Należy pamiętać, że właściwość **IsPrimaryKey** jest ustawiona na **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="c29b1-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
+- <span data-ttu-id="4f4f4-116">Unikatowe ograniczenie tabeli **Order** .</span><span class="sxs-lookup"><span data-stu-id="4f4f4-116">A unique constraint on the **Order** table.</span></span> <span data-ttu-id="4f4f4-117">Należy pamiętać, że właściwość **IsPrimaryKey** jest ustawiona na **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-117">Note that the **IsPrimaryKey** property is set to **True**.</span></span>  
   
-    ```  
+    ```text  
     ConstraintName: Constraint1  
     Type: UniqueConstraint  
     Table: Order  
@@ -73,9 +73,9 @@ ms.locfileid: "70784435"
     IsPrimaryKey: True  
     ```  
   
-- <span data-ttu-id="c29b1-118">Ograniczenie klucza obcego w tabeli **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="c29b1-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
+- <span data-ttu-id="4f4f4-118">Ograniczenie klucza obcego w tabeli **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="4f4f4-118">A foreign key constraint on the **OrderDetail** table.</span></span>  
   
-    ```  
+    ```text  
     ConstraintName: Order_OrderDetail  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
@@ -84,9 +84,9 @@ ms.locfileid: "70784435"
     RelatedColumns: Order_Id   
     ```  
   
-- <span data-ttu-id="c29b1-119">Relacja między tabelami **Order** i **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="c29b1-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="c29b1-120">Właściwość **zagnieżdżona** dla tej relacji jest ustawiona na **wartość true** , ponieważ elementy **Order** i **OrderDetail** są zagnieżdżone w schemacie.</span><span class="sxs-lookup"><span data-stu-id="c29b1-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
+- <span data-ttu-id="4f4f4-119">Relacja między tabelami **Order** i **OrderDetail** .</span><span class="sxs-lookup"><span data-stu-id="4f4f4-119">A relationship between the **Order** and **OrderDetail** tables.</span></span> <span data-ttu-id="4f4f4-120">Właściwość **zagnieżdżona** dla tej relacji jest ustawiona na **wartość true** , ponieważ elementy **Order** i **OrderDetail** są zagnieżdżone w schemacie.</span><span class="sxs-lookup"><span data-stu-id="4f4f4-120">The **Nested** property for this relationship is set to **True** because the **Order** and **OrderDetail** elements are nested in the schema.</span></span>  
   
-    ```  
+    ```text  
     ParentTable: Order  
     ParentColumns: Order_Id   
     ChildTable: OrderDetail  
@@ -97,8 +97,8 @@ ms.locfileid: "70784435"
     Nested: True  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="c29b1-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c29b1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4f4f4-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4f4f4-121">See also</span></span>
 
-- [<span data-ttu-id="c29b1-122">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="c29b1-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="c29b1-123">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="c29b1-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="c29b1-124">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="c29b1-124">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="4f4f4-122">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="4f4f4-122">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="4f4f4-123">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="4f4f4-123">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="4f4f4-124">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="4f4f4-124">ADO.NET Overview</span></span>](../ado-net-overview.md)

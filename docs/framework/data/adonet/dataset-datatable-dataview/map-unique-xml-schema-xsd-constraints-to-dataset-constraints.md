@@ -2,24 +2,24 @@
 title: Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
-ms.openlocfilehash: 4aa94dfaf088a2a934c8901e2720f166d3a38dae
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b847aba31aa75f7be3bd6a11b6bcb8231c06bc4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784407"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040359"
 ---
-# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="00852-102">Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="00852-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
-<span data-ttu-id="00852-103">W schemacie języka definicji schematu XML (XSD) **unikatowy** element określa ograniczenie unikatowości dla elementu lub atrybutu.</span><span class="sxs-lookup"><span data-stu-id="00852-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="00852-104">W procesie tłumaczenia schematu XML na schemat relacyjny, unikatowe ograniczenie określone dla elementu lub atrybutu w schemacie XML jest zamapowane na unikatowe ograniczenie w <xref:System.Data.DataTable> polu w odpowiedniej <xref:System.Data.DataSet> generacji.</span><span class="sxs-lookup"><span data-stu-id="00852-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
+# <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a><span data-ttu-id="a7c22-102">Mapowanie ograniczeń unique schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="a7c22-102">Map unique XML Schema (XSD) Constraints to DataSet Constraints</span></span>
+<span data-ttu-id="a7c22-103">W schemacie języka definicji schematu XML (XSD) **unikatowy** element określa ograniczenie unikatowości dla elementu lub atrybutu.</span><span class="sxs-lookup"><span data-stu-id="a7c22-103">In an XML Schema definition language (XSD) schema, the **unique** element specifies the uniqueness constraint on an element or attribute.</span></span> <span data-ttu-id="a7c22-104">W procesie tłumaczenia schematu XML na schemat relacyjny, unikatowe ograniczenie określone dla elementu lub atrybutu w schemacie XML jest zamapowane na unikatowe ograniczenie w <xref:System.Data.DataTable> w odpowiednim <xref:System.Data.DataSet> generowanym przez program.</span><span class="sxs-lookup"><span data-stu-id="a7c22-104">In the process of translating an XML Schema into a relational schema, the unique constraint specified on an element or attribute in the XML Schema is mapped to a unique constraint in the <xref:System.Data.DataTable> in the corresponding <xref:System.Data.DataSet> that is generated.</span></span>  
   
- <span data-ttu-id="00852-105">Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w **unikatowym** elemencie.</span><span class="sxs-lookup"><span data-stu-id="00852-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
+ <span data-ttu-id="a7c22-105">Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w **unikatowym** elemencie.</span><span class="sxs-lookup"><span data-stu-id="a7c22-105">The following table outlines the **msdata** attributes that you can specify in the **unique** element.</span></span>  
   
-|<span data-ttu-id="00852-106">Nazwa atrybutu</span><span class="sxs-lookup"><span data-stu-id="00852-106">Attribute name</span></span>|<span data-ttu-id="00852-107">Opis</span><span class="sxs-lookup"><span data-stu-id="00852-107">Description</span></span>|  
+|<span data-ttu-id="a7c22-106">Nazwa atrybutu</span><span class="sxs-lookup"><span data-stu-id="a7c22-106">Attribute name</span></span>|<span data-ttu-id="a7c22-107">Opis</span><span class="sxs-lookup"><span data-stu-id="a7c22-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="00852-108">**msdata:ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="00852-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="00852-109">Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="00852-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="00852-110">W przeciwnym razie atrybut **name** zawiera wartość nazwy ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="00852-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
-|<span data-ttu-id="00852-111">**msdata:PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="00852-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="00852-112">Jeśli `PrimaryKey="true"` jest obecny w elemencie **unikatowym** , zostanie utworzone unikatowe ograniczenie z właściwością **IsPrimaryKey** ustawioną na **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="00852-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
+|<span data-ttu-id="a7c22-108">**msdata: ConstraintName**</span><span class="sxs-lookup"><span data-stu-id="a7c22-108">**msdata:ConstraintName**</span></span>|<span data-ttu-id="a7c22-109">Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="a7c22-109">If this attribute is specified, its value is used as the constraint name.</span></span> <span data-ttu-id="a7c22-110">W przeciwnym razie atrybut **name** zawiera wartość nazwy ograniczenia.</span><span class="sxs-lookup"><span data-stu-id="a7c22-110">Otherwise, the **name** attribute provides the value of the constraint name.</span></span>|  
+|<span data-ttu-id="a7c22-111">**msdata: PrimaryKey**</span><span class="sxs-lookup"><span data-stu-id="a7c22-111">**msdata:PrimaryKey**</span></span>|<span data-ttu-id="a7c22-112">Jeśli `PrimaryKey="true"` jest obecny w elemencie **unikatowym** , zostanie utworzone unikatowe ograniczenie z właściwością **IsPrimaryKey** ustawioną na **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="a7c22-112">If `PrimaryKey="true"` is present in the **unique** element, a unique constraint is created with the **IsPrimaryKey** property set to **true**.</span></span>|  
   
- <span data-ttu-id="00852-113">W poniższym przykładzie przedstawiono schemat XML, który używa **unikatowego** elementu do określenia ograniczenia unikatowości.</span><span class="sxs-lookup"><span data-stu-id="00852-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
+ <span data-ttu-id="a7c22-113">W poniższym przykładzie przedstawiono schemat XML, który używa **unikatowego** elementu do określenia ograniczenia unikatowości.</span><span class="sxs-lookup"><span data-stu-id="a7c22-113">The following example shows an XML Schema that uses the **unique** element to specify a uniqueness constraint.</span></span>  
   
 ```xml  
 <xs:schema id="SampleDataSet"   
@@ -48,15 +48,15 @@ ms.locfileid: "70784407"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="00852-114">**Unikatowy** element w schemacie określa, że dla wszystkich elementów **klientów** w wystąpieniu dokumentu wartość elementu podrzędnego **CustomerID** musi być unikatowa.</span><span class="sxs-lookup"><span data-stu-id="00852-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="00852-115">Podczas kompilowania **zestawu danych**proces mapowania odczytuje ten schemat i generuje poniższą tabelę:</span><span class="sxs-lookup"><span data-stu-id="00852-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
+ <span data-ttu-id="a7c22-114">**Unikatowy** element w schemacie określa, że dla wszystkich elementów **klientów** w wystąpieniu dokumentu wartość elementu podrzędnego **CustomerID** musi być unikatowa.</span><span class="sxs-lookup"><span data-stu-id="a7c22-114">The **unique** element in the schema specifies that for all **Customers** elements in a document instance, the value of the **CustomerID** child element must be unique.</span></span> <span data-ttu-id="a7c22-115">Podczas kompilowania **zestawu danych**proces mapowania odczytuje ten schemat i generuje poniższą tabelę:</span><span class="sxs-lookup"><span data-stu-id="a7c22-115">In building the **DataSet**, the mapping process reads this schema and generates the following table:</span></span>  
   
-```  
+```text  
 Customers (CustomerID, CompanyName, Phone)  
 ```  
   
- <span data-ttu-id="00852-116">Proces mapowania powoduje także utworzenie unikatowego ograniczenia kolumny **CustomerID** , jak pokazano w poniższym **zestawie danych**.</span><span class="sxs-lookup"><span data-stu-id="00852-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="00852-117">(Dla uproszczenia są wyświetlane tylko odpowiednie właściwości.)</span><span class="sxs-lookup"><span data-stu-id="00852-117">(For simplicity, only relevant properties are shown.)</span></span>  
+ <span data-ttu-id="a7c22-116">Proces mapowania powoduje także utworzenie unikatowego ograniczenia kolumny **CustomerID** , jak pokazano w poniższym **zestawie danych**.</span><span class="sxs-lookup"><span data-stu-id="a7c22-116">The mapping process also creates a unique constraint on the **CustomerID** column, as shown in the following **DataSet**.</span></span> <span data-ttu-id="a7c22-117">(Dla uproszczenia są wyświetlane tylko odpowiednie właściwości.)</span><span class="sxs-lookup"><span data-stu-id="a7c22-117">(For simplicity, only relevant properties are shown.)</span></span>  
   
-```  
+```text  
       DataSetName: MyDataSet  
 TableName: Customers  
   ColumnName: CustomerID  
@@ -64,15 +64,15 @@ TableName: Customers
       Unique: True  
   ConstraintName: UcustID       Type: UniqueConstraint  
       Table: Customers  
-      Columns: CustomerID   
+      Columns: CustomerID
       IsPrimaryKey: False  
 ```  
   
- <span data-ttu-id="00852-118">W wygenerowanym **zestawie danych** Właściwość **IsPrimaryKey** jest ustawiona na **wartość false** dla ograniczenia UNIQUE.</span><span class="sxs-lookup"><span data-stu-id="00852-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="00852-119">Właściwość **Unique** kolumny wskazuje, że wartości kolumny **CustomerID** muszą być unikatowe (ale mogą być odwołaniem null, jak określono przez właściwość **AllowDBNull** kolumny).</span><span class="sxs-lookup"><span data-stu-id="00852-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
+ <span data-ttu-id="a7c22-118">W wygenerowanym **zestawie danych** Właściwość **IsPrimaryKey** jest ustawiona na **wartość false** dla ograniczenia UNIQUE.</span><span class="sxs-lookup"><span data-stu-id="a7c22-118">In the **DataSet** that is generated, the **IsPrimaryKey** property is set to **False** for the unique constraint.</span></span> <span data-ttu-id="a7c22-119">Właściwość **Unique** kolumny wskazuje, że wartości kolumny **CustomerID** muszą być unikatowe (ale mogą być odwołaniem null, jak określono przez właściwość **AllowDBNull** kolumny).</span><span class="sxs-lookup"><span data-stu-id="a7c22-119">The **unique** property on the column indicates that the **CustomerID** column values must be unique (but they can be a null reference, as specified by the **AllowDBNull** property of the column).</span></span>  
   
- <span data-ttu-id="00852-120">Jeśli zmodyfikujesz schemat i ustawisz opcjonalną wartość atrybutu **msdata: PrimaryKey** na **true**, w tabeli zostanie utworzone ograniczenie UNIQUE.</span><span class="sxs-lookup"><span data-stu-id="00852-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="00852-121">Właściwość Column **AllowDBNull** jest ustawiona na **false**, a właściwość **IsPrimaryKey** ograniczenia ma **wartość true**, co sprawia, że kolumna klucza podstawowego zostanie określona **jako kolumna.**</span><span class="sxs-lookup"><span data-stu-id="00852-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
+ <span data-ttu-id="a7c22-120">Jeśli zmodyfikujesz schemat i ustawisz opcjonalną wartość atrybutu **msdata: PrimaryKey** na **true**, w tabeli zostanie utworzone ograniczenie UNIQUE.</span><span class="sxs-lookup"><span data-stu-id="a7c22-120">If you modify the schema and set the optional **msdata:PrimaryKey** attribute value to **True**, the unique constraint is created on the table.</span></span> <span data-ttu-id="a7c22-121">Właściwość Column **AllowDBNull** jest ustawiona na **false**, a właściwość **IsPrimaryKey** ograniczenia ma **wartość true**, co sprawia, że kolumna klucza podstawowego zostanie określona **jako kolumna.**</span><span class="sxs-lookup"><span data-stu-id="a7c22-121">The **AllowDBNull** column property is set to **False**, and the **IsPrimaryKey** property of the constraint set to **True**, thus making the **CustomerID** column a primary key column.</span></span>  
   
- <span data-ttu-id="00852-122">Można określić unikatowe ograniczenie kombinacji elementów lub atrybutów w schemacie XML.</span><span class="sxs-lookup"><span data-stu-id="00852-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="00852-123">W poniższym przykładzie pokazano, jak określić, że kombinacja wartości **CustomerID** i **NazwaFirmy** musi być unikatowa dla wszystkich **klientów** w dowolnym wystąpieniu, dodając inny element **xs: Field** w schemacie.</span><span class="sxs-lookup"><span data-stu-id="00852-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
+ <span data-ttu-id="a7c22-122">Można określić unikatowe ograniczenie kombinacji elementów lub atrybutów w schemacie XML.</span><span class="sxs-lookup"><span data-stu-id="a7c22-122">You can specify a unique constraint on a combination of elements or attributes in the XML Schema.</span></span> <span data-ttu-id="a7c22-123">W poniższym przykładzie pokazano, jak określić, że kombinacja wartości **CustomerID** i **NazwaFirmy** musi być unikatowa dla wszystkich **klientów** w dowolnym wystąpieniu, dodając inny element **xs: Field** w schemacie.</span><span class="sxs-lookup"><span data-stu-id="a7c22-123">The following example demonstrates how to specify that a combination of **CustomerID** and **CompanyName** values must be unique for all **Customers** in any instance, by adding another **xs:field** element in the schema.</span></span>  
   
 ```xml  
       <xs:unique     
@@ -84,17 +84,17 @@ TableName: Customers
 </xs:unique>  
 ```  
   
- <span data-ttu-id="00852-124">Jest to ograniczenie, które jest tworzone w powstałym **zestawie danych**.</span><span class="sxs-lookup"><span data-stu-id="00852-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
+ <span data-ttu-id="a7c22-124">Jest to ograniczenie, które jest tworzone w powstałym **zestawie danych**.</span><span class="sxs-lookup"><span data-stu-id="a7c22-124">This is the constraint that is created in the resulting **DataSet**.</span></span>  
   
-```  
+```text  
 ConstraintName: SomeName  
   Table: Customers  
-  Columns: CustomerID CompanyName   
+  Columns: CustomerID CompanyName
   IsPrimaryKey: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="00852-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="00852-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a7c22-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a7c22-125">See also</span></span>
 
-- [<span data-ttu-id="00852-126">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="00852-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [<span data-ttu-id="00852-127">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="00852-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
-- [<span data-ttu-id="00852-128">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="00852-128">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="a7c22-126">Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet</span><span class="sxs-lookup"><span data-stu-id="a7c22-126">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [<span data-ttu-id="a7c22-127">Generowanie relacji elementu DataSet na podstawie schematu XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="a7c22-127">Generating DataSet Relations from XML Schema (XSD)</span></span>](generating-dataset-relations-from-xml-schema-xsd.md)
+- [<span data-ttu-id="a7c22-128">Omówienie ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a7c22-128">ADO.NET Overview</span></span>](../ado-net-overview.md)

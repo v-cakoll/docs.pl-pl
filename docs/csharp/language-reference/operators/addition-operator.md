@@ -1,5 +1,5 @@
 ---
-title: + operatory += — i C# odwołania
+title: + Operatory i + = — C# odwołanie
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -14,76 +14,74 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 709994632d704c6a9c6c7f4fc7180ae08cb901d7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610038"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039093"
 ---
-# <a name="-and--operators-c-reference"></a><span data-ttu-id="5a91d-102">+ i operatory += (C# odwołania)</span><span class="sxs-lookup"><span data-stu-id="5a91d-102">+ and += operators (C# reference)</span></span>
+# <a name="-and--operators-c-reference"></a><span data-ttu-id="c2d42-102">Operatory + i + = (C# odwołanie)</span><span class="sxs-lookup"><span data-stu-id="c2d42-102">+ and += operators (C# reference)</span></span>
 
-<span data-ttu-id="5a91d-103">`+` Operator jest obsługiwany przez wbudowane typy liczbowe [ciąg](../keywords/string.md) typu, i [delegować](../keywords/delegate.md) typów.</span><span class="sxs-lookup"><span data-stu-id="5a91d-103">The `+` operator is supported by the built-in numeric types, [string](../keywords/string.md) type, and [delegate](../keywords/delegate.md) types.</span></span>
+<span data-ttu-id="c2d42-103">Operatory `+` i `+=` są obsługiwane przez wbudowane typy liczbowe [całkowite](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowe](../builtin-types/floating-point-numeric-types.md) , typ [ciągu](../builtin-types/reference-types.md#the-string-type) i typy [delegatów](../builtin-types/reference-types.md#the-delegate-type) .</span><span class="sxs-lookup"><span data-stu-id="c2d42-103">The `+` and `+=` operators are supported by the built-in [integral](../builtin-types/integral-numeric-types.md) and [floating-point](../builtin-types/floating-point-numeric-types.md) numeric types, the [string](../builtin-types/reference-types.md#the-string-type) type, and [delegate](../builtin-types/reference-types.md#the-delegate-type) types.</span></span>
 
-<span data-ttu-id="5a91d-104">Aby uzyskać informacje o operacji arytmetycznych `+` operatora, zobacz [jednoargumentowe plus lub minus operatory](arithmetic-operators.md#unary-plus-and-minus-operators) i [operator dodawania +](arithmetic-operators.md#addition-operator-) sekcje [operatorów arytmetycznych](arithmetic-operators.md)artykułu.</span><span class="sxs-lookup"><span data-stu-id="5a91d-104">For information about the arithmetic `+` operator, see the [Unary plus and minus operators](arithmetic-operators.md#unary-plus-and-minus-operators) and [Addition operator +](arithmetic-operators.md#addition-operator-) sections of the [Arithmetic operators](arithmetic-operators.md) article.</span></span>
+<span data-ttu-id="c2d42-104">Aby uzyskać informacje o operatorze arytmetycznej `+`, zobacz [operatory jednoargumentowe Plus i minus](arithmetic-operators.md#unary-plus-and-minus-operators) oraz [operator dodawania +](arithmetic-operators.md#addition-operator-) sekcje w artykule [Operatory arytmetyczne](arithmetic-operators.md) .</span><span class="sxs-lookup"><span data-stu-id="c2d42-104">For information about the arithmetic `+` operator, see the [Unary plus and minus operators](arithmetic-operators.md#unary-plus-and-minus-operators) and [Addition operator +](arithmetic-operators.md#addition-operator-) sections of the [Arithmetic operators](arithmetic-operators.md) article.</span></span>
 
-## <a name="string-concatenation"></a><span data-ttu-id="5a91d-105">{1&gt;Łączenie ciągów&lt;1}</span><span class="sxs-lookup"><span data-stu-id="5a91d-105">String concatenation</span></span>
+## <a name="string-concatenation"></a><span data-ttu-id="c2d42-105">Łączenie ciągów</span><span class="sxs-lookup"><span data-stu-id="c2d42-105">String concatenation</span></span>
 
-<span data-ttu-id="5a91d-106">Kiedy jeden lub obydwa operandy są typu [ciąg](../keywords/string.md), `+` operator łączy ciągów reprezentujących argumentów:</span><span class="sxs-lookup"><span data-stu-id="5a91d-106">When one or both operands are of type [string](../keywords/string.md), the `+` operator concatenates the string representations of its operands:</span></span>
+<span data-ttu-id="c2d42-106">Gdy jeden lub oba operandy są typu [String](../builtin-types/reference-types.md#the-string-type), operator `+` łączy reprezentacje ciągów argumentów operacji:</span><span class="sxs-lookup"><span data-stu-id="c2d42-106">When one or both operands are of type [string](../builtin-types/reference-types.md#the-string-type), the `+` operator concatenates the string representations of its operands:</span></span>
 
 [!code-csharp-interactive[string concatenation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddStrings)]
 
-<span data-ttu-id="5a91d-107">Począwszy od C# 6, [Interpolacja ciągów](../tokens/interpolated.md) zapewnia wygodny sposób na ciągi formatu:</span><span class="sxs-lookup"><span data-stu-id="5a91d-107">Starting with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
+<span data-ttu-id="c2d42-107">Począwszy od C# 6, [Interpolacja ciągów](../tokens/interpolated.md) zapewnia wygodniejszy sposób formatowania ciągów:</span><span class="sxs-lookup"><span data-stu-id="c2d42-107">Beginning with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
 
 [!code-csharp-interactive[string interpolation](~/samples/csharp/language-reference/operators/AdditionOperator.cs#UseStringInterpolation)]
 
-## <a name="delegate-combination"></a><span data-ttu-id="5a91d-108">Delegatów</span><span class="sxs-lookup"><span data-stu-id="5a91d-108">Delegate combination</span></span>
+## <a name="delegate-combination"></a><span data-ttu-id="c2d42-108">Połączenie delegata</span><span class="sxs-lookup"><span data-stu-id="c2d42-108">Delegate combination</span></span>
 
-<span data-ttu-id="5a91d-109">Dla argumentów operacji tego samego [delegować](../keywords/delegate.md) typu `+` operator zwraca nowe wystąpienie delegata, gdy wywoływany, wywołuje argument po lewej stronie, a następnie wywołuje prawostronny operand.</span><span class="sxs-lookup"><span data-stu-id="5a91d-109">For operands of the same [delegate](../keywords/delegate.md) type, the `+` operator returns a new delegate instance that, when invoked, invokes the left-hand operand and then invokes the right-hand operand.</span></span> <span data-ttu-id="5a91d-110">Jeśli którykolwiek z argumentów jest `null`, `+` operator zwraca wartość innego operandu (które mogą być również `null`).</span><span class="sxs-lookup"><span data-stu-id="5a91d-110">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="5a91d-111">W poniższym przykładzie pokazano, jak delegaty można łączyć z `+` operator:</span><span class="sxs-lookup"><span data-stu-id="5a91d-111">The following example shows how delegates can be combined with the `+` operator:</span></span>
+<span data-ttu-id="c2d42-109">W przypadku operandów tego samego typu [delegata](../builtin-types/reference-types.md#the-delegate-type) operator `+` zwraca nowe wystąpienie delegata, które po wywołaniu wywołuje argument operacji po lewej stronie, a następnie wywołuje operand z prawej strony.</span><span class="sxs-lookup"><span data-stu-id="c2d42-109">For operands of the same [delegate](../builtin-types/reference-types.md#the-delegate-type) type, the `+` operator returns a new delegate instance that, when invoked, invokes the left-hand operand and then invokes the right-hand operand.</span></span> <span data-ttu-id="c2d42-110">Jeśli którykolwiek z operandów jest `null`, operator `+` zwróci wartość innego operandu (co również może być `null`).</span><span class="sxs-lookup"><span data-stu-id="c2d42-110">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="c2d42-111">Poniższy przykład pokazuje, jak można łączyć delegatów z operatorem `+`:</span><span class="sxs-lookup"><span data-stu-id="c2d42-111">The following example shows how delegates can be combined with the `+` operator:</span></span>
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-<span data-ttu-id="5a91d-112">Aby wykonać usuwanie delegata, użyj [ `-` operator](subtraction-operator.md#delegate-removal).</span><span class="sxs-lookup"><span data-stu-id="5a91d-112">To perform delegate removal, use the [`-` operator](subtraction-operator.md#delegate-removal).</span></span>
+<span data-ttu-id="c2d42-112">Aby przeprowadzić usuwanie delegata, użyj [operatora`-`](subtraction-operator.md#delegate-removal).</span><span class="sxs-lookup"><span data-stu-id="c2d42-112">To perform delegate removal, use the [`-` operator](subtraction-operator.md#delegate-removal).</span></span>
 
-<span data-ttu-id="5a91d-113">Aby uzyskać więcej informacji na temat typów obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="5a91d-113">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+<span data-ttu-id="c2d42-113">Aby uzyskać więcej informacji na temat typów delegatów, zobacz [delegats](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="c2d42-113">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
 
-## <a name="addition-assignment-operator-"></a><span data-ttu-id="5a91d-114">+= — Operator przypisania dodawania</span><span class="sxs-lookup"><span data-stu-id="5a91d-114">Addition assignment operator +=</span></span>
+## <a name="addition-assignment-operator-"></a><span data-ttu-id="c2d42-114">Operator przypisania dodawania + =</span><span class="sxs-lookup"><span data-stu-id="c2d42-114">Addition assignment operator +=</span></span>
 
-<span data-ttu-id="5a91d-115">Usługi za pomocą wyrażenia `+=` operatora, takich jak</span><span class="sxs-lookup"><span data-stu-id="5a91d-115">An expression using the `+=` operator, such as</span></span>
+<span data-ttu-id="c2d42-115">Wyrażenie używające operatora `+=`, takie jak</span><span class="sxs-lookup"><span data-stu-id="c2d42-115">An expression using the `+=` operator, such as</span></span>
 
 ```csharp
 x += y
 ```
 
-<span data-ttu-id="5a91d-116">odpowiada wyrażeniu</span><span class="sxs-lookup"><span data-stu-id="5a91d-116">is equivalent to</span></span>
+<span data-ttu-id="c2d42-116">jest równoważny</span><span class="sxs-lookup"><span data-stu-id="c2d42-116">is equivalent to</span></span>
 
 ```csharp
 x = x + y
 ```
 
-<span data-ttu-id="5a91d-117">z tą różnicą, że `x` jest obliczany tylko raz.</span><span class="sxs-lookup"><span data-stu-id="5a91d-117">except that `x` is only evaluated once.</span></span>
-  
-<span data-ttu-id="5a91d-118">W poniższym przykładzie pokazano użycie `+=` operator:</span><span class="sxs-lookup"><span data-stu-id="5a91d-118">The following example demonstrates the usage of the `+=` operator:</span></span>
+<span data-ttu-id="c2d42-117">z tą różnicą, że `x` jest obliczana tylko raz.</span><span class="sxs-lookup"><span data-stu-id="c2d42-117">except that `x` is only evaluated once.</span></span>
+
+<span data-ttu-id="c2d42-118">Poniższy przykład ilustruje użycie operatora `+=`:</span><span class="sxs-lookup"><span data-stu-id="c2d42-118">The following example demonstrates the usage of the `+=` operator:</span></span>
 
 [!code-csharp-interactive[+= examples](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddAndAssign)]
 
-<span data-ttu-id="5a91d-119">Możesz także użyć `+=` operatora, aby określić metodę programu obsługi zdarzeń podczas subskrybowania [zdarzeń](../keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="5a91d-119">You also use the `+=` operator to specify an event handler method when you subscribe to an [event](../keywords/event.md).</span></span> <span data-ttu-id="5a91d-120">Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span><span class="sxs-lookup"><span data-stu-id="5a91d-120">For more information, see [How to: subscribe to and unsubscribe from events](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>
+<span data-ttu-id="c2d42-119">Możesz również użyć operatora `+=`, aby określić metodę procedury obsługi zdarzeń podczas subskrybowania [zdarzenia](../keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="c2d42-119">You also use the `+=` operator to specify an event handler method when you subscribe to an [event](../keywords/event.md).</span></span> <span data-ttu-id="c2d42-120">Aby uzyskać więcej informacji, zobacz [How to: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span><span class="sxs-lookup"><span data-stu-id="c2d42-120">For more information, see [How to: subscribe to and unsubscribe from events](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).</span></span>
 
-## <a name="operator-overloadability"></a><span data-ttu-id="5a91d-121">Overloadability — operator</span><span class="sxs-lookup"><span data-stu-id="5a91d-121">Operator overloadability</span></span>
+## <a name="operator-overloadability"></a><span data-ttu-id="c2d42-121">Przeciążanie operatora</span><span class="sxs-lookup"><span data-stu-id="c2d42-121">Operator overloadability</span></span>
 
-<span data-ttu-id="5a91d-122">Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `+` operatora.</span><span class="sxs-lookup"><span data-stu-id="5a91d-122">A user-defined type can [overload](operator-overloading.md) the `+` operator.</span></span> <span data-ttu-id="5a91d-123">Gdy dane binarne `+` operator jest przeciążony, `+=` operator jest również niejawnie przeciążona.</span><span class="sxs-lookup"><span data-stu-id="5a91d-123">When a binary `+` operator is overloaded, the `+=` operator is also implicitly overloaded.</span></span> <span data-ttu-id="5a91d-124">Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `+=` operatora.</span><span class="sxs-lookup"><span data-stu-id="5a91d-124">A user-defined type cannot explicitly overload the `+=` operator.</span></span>
+<span data-ttu-id="c2d42-122">Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operator `+`.</span><span class="sxs-lookup"><span data-stu-id="c2d42-122">A user-defined type can [overload](operator-overloading.md) the `+` operator.</span></span> <span data-ttu-id="c2d42-123">Gdy operator `+` binarny jest przeciążony, operator `+=` jest również niejawnie przeciążony.</span><span class="sxs-lookup"><span data-stu-id="c2d42-123">When a binary `+` operator is overloaded, the `+=` operator is also implicitly overloaded.</span></span> <span data-ttu-id="c2d42-124">Typ zdefiniowany przez użytkownika nie może jawnie przeciążać operatora `+=`.</span><span class="sxs-lookup"><span data-stu-id="c2d42-124">A user-defined type cannot explicitly overload the `+=` operator.</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="5a91d-125">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="5a91d-125">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="c2d42-125">specyfikacja języka C#</span><span class="sxs-lookup"><span data-stu-id="c2d42-125">C# language specification</span></span>
 
-<span data-ttu-id="5a91d-126">Aby uzyskać więcej informacji, zobacz [jednoargumentowe plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) i [operator dodawania](~/_csharplang/spec/expressions.md#addition-operator) sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="5a91d-126">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+<span data-ttu-id="c2d42-126">Aby uzyskać więcej informacji, zobacz sekcje [jednoargumentowe Plus](~/_csharplang/spec/expressions.md#unary-plus-operator) i [operator dodawania](~/_csharplang/spec/expressions.md#addition-operator) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="c2d42-126">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5a91d-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="5a91d-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c2d42-127">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c2d42-127">See also</span></span>
 
-- [<span data-ttu-id="5a91d-128">C#Odwołanie</span><span class="sxs-lookup"><span data-stu-id="5a91d-128">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="5a91d-129">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="5a91d-129">C# operators</span></span>](index.md)
-- [<span data-ttu-id="5a91d-130">Interpolacja ciągów</span><span class="sxs-lookup"><span data-stu-id="5a91d-130">String interpolation</span></span>](../tokens/interpolated.md)
-- [<span data-ttu-id="5a91d-131">Porady: łączenie wielu ciągów</span><span class="sxs-lookup"><span data-stu-id="5a91d-131">How to: concatenate multiple strings</span></span>](../../how-to/concatenate-multiple-strings.md)
-- [<span data-ttu-id="5a91d-132">Delegaty</span><span class="sxs-lookup"><span data-stu-id="5a91d-132">Delegates</span></span>](../../programming-guide/delegates/index.md)
-- [<span data-ttu-id="5a91d-133">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="5a91d-133">Events</span></span>](../../programming-guide/events/index.md)
-- [<span data-ttu-id="5a91d-134">Operatory arytmetyczne</span><span class="sxs-lookup"><span data-stu-id="5a91d-134">Arithmetic operators</span></span>](arithmetic-operators.md)
-- [<span data-ttu-id="5a91d-135">— i Operatorzy-=</span><span class="sxs-lookup"><span data-stu-id="5a91d-135">- and -= operators</span></span>](subtraction-operator.md)
+- [<span data-ttu-id="c2d42-128">C#odwoła</span><span class="sxs-lookup"><span data-stu-id="c2d42-128">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="c2d42-129">Operatory języka C#</span><span class="sxs-lookup"><span data-stu-id="c2d42-129">C# operators</span></span>](index.md)
+- [<span data-ttu-id="c2d42-130">Instrukcje: łączenie wielu ciągów</span><span class="sxs-lookup"><span data-stu-id="c2d42-130">How to: concatenate multiple strings</span></span>](../../how-to/concatenate-multiple-strings.md)
+- [<span data-ttu-id="c2d42-131">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="c2d42-131">Events</span></span>](../../programming-guide/events/index.md)
+- [<span data-ttu-id="c2d42-132">Operatory arytmetyczne</span><span class="sxs-lookup"><span data-stu-id="c2d42-132">Arithmetic operators</span></span>](arithmetic-operators.md)
+- [<span data-ttu-id="c2d42-133">Operatory-and-=</span><span class="sxs-lookup"><span data-stu-id="c2d42-133">- and -= operators</span></span>](subtraction-operator.md)

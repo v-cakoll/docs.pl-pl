@@ -16,181 +16,192 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: d9b3c9975c4d10649bdecd6f63cf362a2b2a2738
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788131"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039494"
 ---
-# <a name="using-tcp-services"></a><span data-ttu-id="64e0c-102">Stosowanie usług TCP</span><span class="sxs-lookup"><span data-stu-id="64e0c-102">Using TCP Services</span></span>
+# <a name="using-tcp-services"></a><span data-ttu-id="9bd51-102">Stosowanie usług TCP</span><span class="sxs-lookup"><span data-stu-id="9bd51-102">Using TCP Services</span></span>
 
-<span data-ttu-id="64e0c-103"><xref:System.Net.Sockets.TcpClient> Klasy żąda danych od zasobu w Internecie przy użyciu protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="64e0c-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="64e0c-104">Metody i właściwości **TcpClient** abstrakcji szczegółowe informacje dotyczące tworzenia <xref:System.Net.Sockets.Socket> dla żądania i odbierania danych przy użyciu protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="64e0c-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="64e0c-105">Ponieważ połączenie z urządzeniem zdalnym jest reprezentowany jako strumień, dane można czytać i napisane przy użyciu techniki obsługi strumienia środowiska .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="64e0c-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>  
-  
- <span data-ttu-id="64e0c-106">Protokół TCP nawiązuje połączenie ze zdalnego punktu końcowego, a następnie używa tego połączenia do wysyłania i odbierania pakietów danych.</span><span class="sxs-lookup"><span data-stu-id="64e0c-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="64e0c-107">TCP jest odpowiedzialny za zagwarantowanie, że pakiety danych są wysyłane do punktu końcowego i zebranych w odpowiedniej kolejności, po ich nadejściu.</span><span class="sxs-lookup"><span data-stu-id="64e0c-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>  
-  
- <span data-ttu-id="64e0c-108">Do nawiązywania połączeń TCP, musisz znać adres urządzenia sieciowego, obsługujący usługę, czego potrzebujesz, i musi znać port TCP używany przez usługę do komunikowania się.</span><span class="sxs-lookup"><span data-stu-id="64e0c-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="64e0c-109">Internet Assigned Numbers Authority (Iana) definiuje numery portów dla usług common (zobacz [nazwę usługi i rejestru numer portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)).</span><span class="sxs-lookup"><span data-stu-id="64e0c-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)).</span></span> <span data-ttu-id="64e0c-110">Usługi nie ma na liście Iana może mieć numery portów z zakresu od 1024 do 65 535.</span><span class="sxs-lookup"><span data-stu-id="64e0c-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>  
-  
- <span data-ttu-id="64e0c-111">W poniższym przykładzie pokazano ustawienie zapasowej **TcpClient** nawiązać połączenia z serwerem czasu na porcie TCP 13.</span><span class="sxs-lookup"><span data-stu-id="64e0c-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13.</span></span>  
-  
-```vb  
-Imports System  
-Imports System.Net.Sockets  
-Imports System.Text  
-  
-Public Class TcpTimeClient  
-    Private const portNum As Integer = 13  
-    Private const hostName As String = "host.contoso.com"  
-  
-    ' Entry point  that delegates to C-style main Private Function.  
-    Public Overloads Shared Sub Main()  
-        System.Environment.ExitCode = _  
-            Main(System.Environment.GetCommandLineArgs())  
-    End Sub  
-  
-    Overloads Public Shared Function Main(args() As [String]) As Integer  
-        Try  
-            Dim client As New TcpClient(hostName, portNum)  
-  
-            Dim ns As NetworkStream = client.GetStream()  
-  
-            Dim bytes(1024) As Byte  
-            Dim bytesRead As Integer = ns.Read(bytes, 0, bytes.Length)  
-  
-            Console.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytesRead))  
-  
-        Catch e As Exception  
-            Console.WriteLine(e.ToString())  
-        End Try  
-  
-        client.Close()  
-  
-        Return 0  
-    End Function 'Main  
-End Class 'TcpTimeClient  
-```  
-  
-```csharp  
-using System;  
-using System.Net.Sockets;  
-using System.Text;  
-  
-public class TcpTimeClient {  
-    private const int portNum = 13;  
-    private const string hostName = "host.contoso.com";  
-  
-    public static int Main(String[] args) {  
-        try {  
-            TcpClient client = new TcpClient(hostName, portNum);  
-  
-            NetworkStream ns = client.GetStream();  
-  
-            byte[] bytes = new byte[1024];  
-            int bytesRead = ns.Read(bytes, 0, bytes.Length);  
-  
-            Console.WriteLine(Encoding.ASCII.GetString(bytes,0,bytesRead));  
-  
-            client.Close();  
-  
-        } catch (Exception e) {  
-            Console.WriteLine(e.ToString());  
-        }  
-  
-        return 0;  
-    }  
-}  
-```  
-  
- <span data-ttu-id="64e0c-112"><xref:System.Net.Sockets.TcpListener> Służy do monitorowania port TCP dla żądań przychodzących, a następnie utwórz jedną **gniazda** lub **TcpClient** który zarządza połączenie z klientem.</span><span class="sxs-lookup"><span data-stu-id="64e0c-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="64e0c-113"><xref:System.Net.Sockets.TcpListener.Start%2A> Metoda umożliwia nasłuchiwania i <xref:System.Net.Sockets.TcpListener.Stop%2A> metoda wyłącza nasłuchuje na porcie.</span><span class="sxs-lookup"><span data-stu-id="64e0c-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="64e0c-114"><xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> Metoda akceptuje przychodzące żądania połączeń i tworzy **TcpClient** obsłużyć żądania oraz <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> metoda akceptuje przychodzące żądania połączeń i tworzy **gniazda**obsłużyć żądania.</span><span class="sxs-lookup"><span data-stu-id="64e0c-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>  
-  
- <span data-ttu-id="64e0c-115">W poniższym przykładzie pokazano tworzenie sieci serwera przy użyciu **TcpListener** monitorowanie portu TCP 13.</span><span class="sxs-lookup"><span data-stu-id="64e0c-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="64e0c-116">Po zaakceptowaniu żądań połączenia przychodzących, serwer czasu odpowiada aktualnej daty i godziny od serwera hosta.</span><span class="sxs-lookup"><span data-stu-id="64e0c-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>  
-  
-```vb  
-Imports System  
-Imports System.Net.Sockets  
-Imports System.Text  
-  
-Public Class TcpTimeServer  
-  
-    Private const portNum As Integer = 13  
-  
-    ' Entry point that delegates to C-style main Private Function.  
-    Public Overloads Shared Sub Main()  
-        System.Environment.ExitCode = _  
-            Main(System.Environment.GetCommandLineArgs())  
-    End Sub  
-  
-    Overloads Public Shared Function Main(args() As [String]) As Integer  
-        Dim done As Boolean = False  
-  
-        Dim listener As New TcpListener(portNum)  
-  
-        listener.Start()  
-  
-        While Not done  
-            Console.Write("Waiting for connection...")  
-            Dim client As TcpClient = listener.AcceptTcpClient()  
-  
-            Console.WriteLine("Connection accepted.")  
-            Dim ns As NetworkStream = client.GetStream()  
-  
-            Dim byteTime As Byte() = _  
-                Encoding.ASCII.GetBytes(DateTime.Now.ToString())  
-  
-            Try  
-                ns.Write(byteTime, 0, byteTime.Length)  
-                ns.Close()  
-                client.Close()  
-            Catch e As Exception  
-                Console.WriteLine(e.ToString())  
-            End Try  
-        End While  
-  
-        listener.Stop()  
-  
-        Return 0  
-    End Function 'Main  
-End Class 'TcpTimeServer  
-```  
-  
-```csharp  
-using System;  
-using System.Net.Sockets;  
-using System.Text;  
-  
-public class TcpTimeServer {  
-  
-    private const int portNum = 13;  
-  
-    public static int Main(String[] args) {  
-        bool done = false;  
-  
-        TcpListener listener = new TcpListener(portNum);  
-  
-        listener.Start();  
-  
-        while (!done) {  
-            Console.Write("Waiting for connection...");  
-            TcpClient client = listener.AcceptTcpClient();  
-  
-            Console.WriteLine("Connection accepted.");  
-            NetworkStream ns = client.GetStream();  
-  
-            byte[] byteTime = Encoding.ASCII.GetBytes(DateTime.Now.ToString());  
-  
-            try {  
-                ns.Write(byteTime, 0, byteTime.Length);  
-                ns.Close();  
-                client.Close();  
-            } catch (Exception e) {  
-                Console.WriteLine(e.ToString());  
-            }  
-        }  
-  
-        listener.Stop();  
-  
-        return 0;  
-    }  
-  
-}  
+<span data-ttu-id="9bd51-103">Klasa <xref:System.Net.Sockets.TcpClient> żąda danych z zasobu internetowego przy użyciu protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="9bd51-103">The <xref:System.Net.Sockets.TcpClient> class requests data from an Internet resource using TCP.</span></span> <span data-ttu-id="9bd51-104">Metody i właściwości **TcpClient** są abstrakcyjne szczegóły dotyczące tworzenia <xref:System.Net.Sockets.Socket> do żądania i otrzymywania danych przy użyciu protokołu TCP.</span><span class="sxs-lookup"><span data-stu-id="9bd51-104">The methods and properties of **TcpClient** abstract the details for creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using TCP.</span></span> <span data-ttu-id="9bd51-105">Ponieważ połączenie z urządzeniem zdalnym jest reprezentowane jako strumień, dane mogą być odczytywane i zapisywane przy użyciu technik obsługi strumienia .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="9bd51-105">Because the connection to the remote device is represented as a stream, data can be read and written with .NET Framework stream-handling techniques.</span></span>
+
+<span data-ttu-id="9bd51-106">Protokół TCP nawiązuje połączenie ze zdalnym punktem końcowym, a następnie używa tego połączenia do wysyłania i odbierania pakietów danych.</span><span class="sxs-lookup"><span data-stu-id="9bd51-106">The TCP protocol establishes a connection with a remote endpoint and then uses that connection to send and receive data packets.</span></span> <span data-ttu-id="9bd51-107">Protokół TCP jest odpowiedzialny za zapewnienie, że pakiety danych są wysyłane do punktu końcowego i zmontowane w odpowiedniej kolejności po nadejściu.</span><span class="sxs-lookup"><span data-stu-id="9bd51-107">TCP is responsible for ensuring that data packets are sent to the endpoint and assembled in the correct order when they arrive.</span></span>
+
+<span data-ttu-id="9bd51-108">Aby nawiązać połączenie TCP, musisz znać adres urządzenia sieciowego, którego potrzebujesz, i musisz znać port TCP, którego usługa używa do komunikacji.</span><span class="sxs-lookup"><span data-stu-id="9bd51-108">To establish a TCP connection, you must know the address of the network device hosting the service you need and you must know the TCP port that the service uses to communicate.</span></span> <span data-ttu-id="9bd51-109">Organizacja Internet Assigned Numbers Authority (IANA) definiuje numery portów dla typowych usług (patrz [nazwa usługi i rejestr numeru portu protokołu transportu](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)).</span><span class="sxs-lookup"><span data-stu-id="9bd51-109">The Internet Assigned Numbers Authority (Iana) defines port numbers for common services (see [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)).</span></span> <span data-ttu-id="9bd51-110">Usługi, które nie znajdują się na liście Iana, mogą mieć numery portów z zakresu od 1 024 do 65 535.</span><span class="sxs-lookup"><span data-stu-id="9bd51-110">Services not on the Iana list can have port numbers in the range 1,024 to 65,535.</span></span>
+
+<span data-ttu-id="9bd51-111">W poniższym przykładzie pokazano, jak skonfigurować **TcpClient** do nawiązywania połączenia z serwerem czasu na porcie TCP 13:</span><span class="sxs-lookup"><span data-stu-id="9bd51-111">The following example demonstrates setting up a **TcpClient** to connect to a time server on TCP port 13:</span></span>
+
+```vb
+Imports System.Net.Sockets
+Imports System.Text
+
+Public Class TcpTimeClient
+    Private const portNum As Integer = 13
+    Private const hostName As String = "host.contoso.com"
+
+    ' Entry point  that delegates to C-style main Private Function.
+    Public Overloads Shared Sub Main()
+        System.Environment.ExitCode = _
+            Main(System.Environment.GetCommandLineArgs())
+    End Sub
+
+    Overloads Public Shared Function Main(args As String()) As Integer
+        Try
+            Dim client As New TcpClient(hostName, portNum)
+
+            Dim ns As NetworkStream = client.GetStream()
+
+            Dim bytes(1024) As Byte
+            Dim bytesRead As Integer = ns.Read(bytes, 0, bytes.Length)
+
+            Console.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytesRead))
+
+        Catch e As Exception
+            Console.WriteLine(e.ToString())
+        End Try
+
+        client.Close()
+
+        Return 0
+    End Function
+End Class
+```
+
+```csharp
+using System;
+using System.Net.Sockets;
+using System.Text;
+
+public class TcpTimeClient
+{
+    private const int portNum = 13;
+    private const string hostName = "host.contoso.com";
+
+    public static int Main(String[] args)
+    {
+        try
+        {
+            var client = new TcpClient(hostName, portNum);
+
+            NetworkStream ns = client.GetStream();
+
+            byte[] bytes = new byte[1024];
+            int bytesRead = ns.Read(bytes, 0, bytes.Length);
+
+            Console.WriteLine(Encoding.ASCII.GetString(bytes,0,bytesRead));
+
+            client.Close();
+
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.ToString());
+        }
+
+        return 0;
+    }
+}
+```
+
+<span data-ttu-id="9bd51-112"><xref:System.Net.Sockets.TcpListener> służy do monitorowania portu TCP dla żądań przychodzących, a następnie tworzenia **gniazda** lub **TcpClient** , który zarządza połączeniem z klientem.</span><span class="sxs-lookup"><span data-stu-id="9bd51-112"><xref:System.Net.Sockets.TcpListener> is used to monitor a TCP port for incoming requests and then create either a **Socket** or a **TcpClient** that manages the connection to the client.</span></span> <span data-ttu-id="9bd51-113">Metoda <xref:System.Net.Sockets.TcpListener.Start%2A> umożliwia nasłuchiwanie, a metoda <xref:System.Net.Sockets.TcpListener.Stop%2A> wyłącza nasłuchiwanie na porcie.</span><span class="sxs-lookup"><span data-stu-id="9bd51-113">The <xref:System.Net.Sockets.TcpListener.Start%2A> method enables listening, and the <xref:System.Net.Sockets.TcpListener.Stop%2A> method disables listening on the port.</span></span> <span data-ttu-id="9bd51-114">Metoda <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> akceptuje żądania połączeń przychodzących i tworzy **TcpClient** do obsługi żądania, a metoda <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> akceptuje przychodzące żądania połączenia i tworzy **gniazdo** do obsługi żądania.</span><span class="sxs-lookup"><span data-stu-id="9bd51-114">The <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A> method accepts incoming connection requests and creates a **TcpClient** to handle the request, and the <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A> method accepts incoming connection requests and creates a **Socket** to handle the request.</span></span>
+
+<span data-ttu-id="9bd51-115">Poniższy przykład ilustruje tworzenie serwera czasu sieci przy użyciu **TcpListener** do monitorowania portu TCP 13.</span><span class="sxs-lookup"><span data-stu-id="9bd51-115">The following example demonstrates creating a network time server using a **TcpListener** to monitor TCP port 13.</span></span> <span data-ttu-id="9bd51-116">Po zaakceptowaniu przychodzącego żądania połączenia serwer czasu reaguje na bieżącą datę i godzinę z serwera hosta.</span><span class="sxs-lookup"><span data-stu-id="9bd51-116">When an incoming connection request is accepted, the time server responds with the current date and time from the host server.</span></span>
+
+```vb
+Imports System.Net
+Imports System.Net.Sockets
+Imports System.Text
+
+Public Class TcpTimeServer
+
+    Private const portNum As Integer = 13
+
+    ' Entry point that delegates to C-style main Private Function.
+    Public Overloads Shared Sub Main()
+        System.Environment.ExitCode = _
+            Main(System.Environment.GetCommandLineArgs())
+    End Sub
+
+    Overloads Public Shared Function Main(args As String()) As Integer
+        Dim done As Boolean = False
+
+        Dim listener As New TcpListener(IPAddress.Any, portNum)
+
+        listener.Start()
+
+        While Not done
+            Console.Write("Waiting for connection...")
+            Dim client As TcpClient = listener.AcceptTcpClient()
+
+            Console.WriteLine("Connection accepted.")
+            Dim ns As NetworkStream = client.GetStream()
+
+            Dim byteTime As Byte() = _
+                Encoding.ASCII.GetBytes(DateTime.Now.ToString())
+
+            Try
+                ns.Write(byteTime, 0, byteTime.Length)
+                ns.Close()
+                client.Close()
+            Catch e As Exception
+                Console.WriteLine(e.ToString())
+            End Try
+        End While
+
+        listener.Stop()
+
+        Return 0
+    End Function
+End Class
+```
+
+```csharp
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+
+public class TcpTimeServer
+{
+
+    private const int portNum = 13;
+
+    public static int Main(String[] args)
+    {
+        bool done = false;
+
+        var listener = new TcpListener(IPAddress.Any, portNum);
+
+        listener.Start();
+
+        while (!done)
+        {
+            Console.Write("Waiting for connection...");
+            TcpClient client = listener.AcceptTcpClient();
+
+            Console.WriteLine("Connection accepted.");
+            NetworkStream ns = client.GetStream();
+
+            byte[] byteTime = Encoding.ASCII.GetBytes(DateTime.Now.ToString());
+
+            try
+            {
+                ns.Write(byteTime, 0, byteTime.Length);
+                ns.Close();
+                client.Close();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+        }
+
+        listener.Stop();
+
+        return 0;
+    }
+
+}
 ```

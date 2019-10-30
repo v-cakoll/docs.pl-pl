@@ -2,22 +2,22 @@
 title: Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: b5ffe69886b08903feab4373b1cd5c5244b3b3b9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 93f766003326fd41357581196015fd58c71d7508
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784515"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040367"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapowanie ograniczeń keyref schematu XML (XSD) na ograniczenia elementu DataSet
-Element **keyref** umożliwia ustanowienie linków między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa element **keyref** , element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego w kolumnach w tabelach tabeli <xref:System.Data.DataSet>. Domyślnie element **keyref** również generuje relację z właściwościami **Parent**, **Child**, **ParentColumn**i **ChildColumn** określonymi w relacji.  
+Element **keyref** umożliwia ustanowienie linków między elementami w dokumencie. Jest to podobne do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa element **keyref** , element jest konwertowany podczas procesu mapowania schematu do odpowiedniego ograniczenia klucza obcego w kolumnach w tabelach <xref:System.Data.DataSet>. Domyślnie element **keyref** również generuje relację z właściwościami **Parent**, **Child**, **ParentColumn**i **ChildColumn** określonymi w relacji.  
   
  Poniższa tabela zawiera opis atrybutów **msdata** , które można określić w elemencie **keyref** .  
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
 |**msdata:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określony w elemencie **keyref** w schemacie, zostanie utworzone ograniczenie, ale nie jest tworzone żadne powiązanie. Jeśli ten atrybut nie jest określony (lub jest ustawiony na **wartość false**), zarówno ograniczenie, jak i relacja są tworzone w **zestawie danych**.|  
-|**msdata:ConstraintName**|Jeśli określono atrybut **ConstraintName** , jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** elementu **keyref** w schemacie zawiera nazwę ograniczenia w **zestawie danych**.|  
+|**msdata: ConstraintName**|Jeśli określono atrybut **ConstraintName** , jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie atrybut **name** elementu **keyref** w schemacie zawiera nazwę ograniczenia w **zestawie danych**.|  
 |**msdata:UpdateRule**|Jeśli atrybut **UpdateRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **UpdateRule** w **zestawie danych**. W przeciwnym razie Właściwość **UpdateRule** jest ustawiona na **Kaskada**.|  
 |**msdata:DeleteRule**|Jeśli atrybut **DeleteRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **DeleteRule** w **zestawie danych**. W przeciwnym razie Właściwość **DeleteRule** jest ustawiona na **Kaskada**.|  
 |**msdata:AcceptRejectRule**|Jeśli atrybut **AcceptRejectRule** jest określony w elemencie **keyref** w schemacie, jego wartość jest przypisywana do właściwości ograniczenia **AcceptRejectRule** w **zestawie danych**. W przeciwnym razie Właściwość **AcceptRejectRule** ma wartość **none**.|  
@@ -68,7 +68,7 @@ Element **keyref** umożliwia ustanowienie linków między elementami w dokumenc
   
  Proces mapowania schematu języka definicji schematu XML (XSD) generuje następujący **zestaw danych** z dwiema tabelami:  
   
-```  
+```text  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
@@ -77,9 +77,9 @@ Order(OrderNumber, EmpNumber)
   
 - Unikatowe ograniczenie tabeli **Order** .  
   
-    ```  
+    ```text
               Table: Order  
-    Columns: OrderNumber   
+    Columns: OrderNumber
     ConstraintName: OrderNumberKey  
     Type: UniqueConstraint  
     IsPrimaryKey: False  
@@ -87,7 +87,7 @@ Order(OrderNumber, EmpNumber)
   
 - Relacja między tabelami **Order** i **OrderDetail** . Właściwość **zagnieżdżona** jest ustawiona na **false** , ponieważ dwa elementy nie są zagnieżdżone w schemacie.  
   
-    ```  
+    ```text
               ParentTable: Order  
     ParentColumns: OrderNumber   
     ChildTable: OrderDetail  
@@ -100,13 +100,13 @@ Order(OrderNumber, EmpNumber)
   
 - Ograniczenie klucza obcego w tabeli **OrderDetail** .  
   
-    ```  
+    ```text  
               ConstraintName: OrderNoRef  
     Type: ForeignKeyConstraint  
     Table: OrderDetail  
-    Columns: OrderNo   
+    Columns: OrderNo
     RelatedTable: Order  
-    RelatedColumns: OrderNumber   
+    RelatedColumns: OrderNumber
     ```  
   
 ## <a name="see-also"></a>Zobacz także

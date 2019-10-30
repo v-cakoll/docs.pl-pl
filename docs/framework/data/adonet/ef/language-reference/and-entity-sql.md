@@ -1,22 +1,26 @@
 ---
-title: '&amp;&amp;LUB (Entity SQL)'
+title: '&amp;&amp; (i) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251317"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039951"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp;LUB (Entity SQL)
-Zwraca `true` Jeśli oba wyrażenia są `true`; w przeciwnym `false` razie `NULL`lub.  
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (i) (Entity SQL)
+Zwraca `true`, jeśli oba wyrażenia są `true`; w przeciwnym razie `false` lub `NULL`.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
-boolean_expression AND boolean_expression  
-or  
+```csharp  
+boolean_expression AND boolean_expression
+```
+ 
+lub  
+
+```csharp
 boolean_expression && boolean_expression  
 ```  
   
@@ -38,9 +42,9 @@ boolean_expression && boolean_expression
 ## <a name="example"></a>Przykład  
  W poniższym zapytaniu Entity SQL pokazano, jak używać operatora i. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  
   
-1. Wykonaj czynności opisane w [temacie How to: Wykonaj zapytanie zwracające wyniki](../how-to-execute-a-query-that-returns-structuraltype-results.md)StructuralType.  
+1. Postępuj zgodnie z procedurą w temacie [How to: Execute a Query zwracającej wyniki StructuralType](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
-2. Przekaż następujące zapytanie jako argument do `ExecuteStructuralTypeQuery` metody:  
+2. Przekaż następujące zapytanie jako argument do metody `ExecuteStructuralTypeQuery`:  
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   

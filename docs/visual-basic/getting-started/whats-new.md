@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: f5630f7947125dd5eb8a5b58e79add1aec4c689b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a1db44259ccfe0fe8fb6e2849fb60fe52475b3ce
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774917"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73041061"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -176,7 +176,7 @@ Następnie można wywołać metodę i obsłużyć zwróconą krotkę z kodem pod
 
 **Literały binarne i separatory cyfr**
 
-Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub `&b`. Ponadto można użyć znaku podkreślenia, `_` jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji do przypisywania wartości `Byte` i wyświetlania jej jako liczby dziesiętnej, szesnastkowej i binarnej.
+Można zdefiniować literał binarny przy użyciu prefiksu `&B` lub `&b`. Ponadto można użyć znaku podkreślenia, `_`jako separatora cyfr, aby zwiększyć czytelność. Poniższy przykład używa obu funkcji do przypisywania wartości `Byte` i wyświetlania jej jako liczby dziesiętnej, szesnastkowej i binarnej.
 
 [!code-vb[Binary](../../../samples/snippets/visualbasic/getting-started/bin-example.vb#1)]
 
@@ -206,7 +206,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania do zwracanych wartości](../
 
 ## <a name="visual-basic-14"></a>Visual Basic 14
 
-[Nameof](../../csharp/language-reference/operators/nameof.md)
+[NameOf](../language-reference/operators/nameof.md)
 
 Można uzyskać niekwalifikowaną nazwę ciągu typu lub składowej, która ma być używana w komunikacie o błędzie bez twardego kodowania ciągu.  Dzięki temu kod może pozostawać poprawny podczas refaktoryzacji.  Ta funkcja jest również przydatna w przypadku podłączania linków modelu MVC i kontrolera widoku oraz wyzwalania zdarzeń ze zmienionymi właściwościami.
 
@@ -238,7 +238,7 @@ Możesz mieć literały dat w formacie RRRR-MM-DD, `#2015-03-17 16:10 PM#`.
 
 Właściwości interfejsu ReadOnly można zaimplementować przy użyciu właściwości ReadWrite. Interfejs gwarantuje minimalną funkcjonalność i nie zatrzymuje klasy implementującej, umożliwiając ustawienie właściwości.
 
-[@No__t_1expr TypeOf > IsNot \<type >](../../visual-basic/language-reference/operators/typeof-operator.md)
+[Wyrażenie TypeOf \<> IsNot \<typ >](../../visual-basic/language-reference/operators/typeof-operator.md)
 
 Aby zwiększyć czytelność kodu, można teraz używać `TypeOf` z `IsNot`.
 

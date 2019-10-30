@@ -2,13 +2,14 @@
 title: Eksplorowanie zakresów danych przy użyciu indeksów i zakresów
 description: Ten zaawansowany Samouczek uczy się, jak eksplorować dane przy użyciu indeksów i zakresów w celu zbadania wycinków sekwencyjnego zestawu danych.
 ms.date: 09/20/2019
+ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: 1be144560d2b20bafc66cd68de0735e6dc7f0124
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699938"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039674"
 ---
 # <a name="indices-and-ranges"></a>Indeksy i zakresy
 
@@ -31,7 +32,7 @@ Ten język obsługuje dwa nowe typy i dwa nowe operatory:
 - <xref:System.Range?displayProperty=nameWithType> reprezentuje Podzakres sekwencji.
 - Operator zakresu `..`, który określa początek i koniec zakresu jako jego operandy.
 
-Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` zgłasza wyjątek, podobnie jak `sequence[sequence.Length]`. Dla dowolnej liczby `n` indeks `^n` jest taki sam jak `sequence[sequence.Length - n]`.
+Zacznijmy od reguł dotyczących indeksów. Rozważ użycie tablicy `sequence`. Indeks `0` jest taki sam jak `sequence[0]`. Indeks `^0` jest taki sam jak `sequence[sequence.Length]`. Należy zauważyć, że `sequence[^0]` generuje wyjątek, tak jak `sequence[sequence.Length]`. Dla dowolnej liczby `n`indeks `^n` jest taka sama jak `sequence[sequence.Length - n]`.
 
 ```csharp
 string[] words = new string[]
@@ -59,7 +60,7 @@ Poniższy kod tworzy Podzakres słowami "Quick", "brązowy" i "Fox". Zawiera `wo
 
 [!code-csharp[Range](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Range)]
 
-Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Obejmuje `words[^2]` i `words[^1]`. Indeks końcowy `words[^0]` nie jest uwzględniony. Dodaj również następujący kod:
+Poniższy kod tworzy Podzakres "z opóźnieniem" i "Dog". Zawiera `words[^2]` i `words[^1]`. `words[^0]` indeksu końcowego nie jest uwzględniony. Dodaj również następujący kod:
 
 [!code-csharp[LastRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastRange)]
 
@@ -67,25 +68,25 @@ W poniższych przykładach zostały utworzone zakresy, które są otwarte dla po
 
 [!code-csharp[PartialRange](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_PartialRanges)]
 
-Można również zadeklarować zakresy lub indeksy jako zmienne. Zmienna może być używana wewnątrz znaków `[` i `]`:
+Można również zadeklarować zakresy lub indeksy jako zmienne. Zmienna może być następnie używana wewnątrz `[` i `]` znaków:
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
 
-Poniższy przykład pokazuje wiele przyczyn tego wyboru. Zmodyfikuj `x`, `y` i `z`, aby wypróbować różne kombinacje. Podczas eksperymentowania Użyj wartości, gdzie wartość `x` jest mniejsza niż `y`, a `y` jest mniejsza niż `z` dla prawidłowych kombinacji. Dodaj następujący kod w nowej metodzie. Wypróbuj różne kombinacje:
+Poniższy przykład pokazuje wiele przyczyn tego wyboru. Zmodyfikuj `x`, `y`i `z`, aby wypróbować różne kombinacje. Podczas eksperymentowania Użyj wartości, gdzie `x` jest mniejsza niż `y`, a `y` jest mniejsza niż `z` dla prawidłowych kombinacji. Dodaj następujący kod w nowej metodzie. Wypróbuj różne kombinacje:
 
 [!code-csharp[SemanticsExamples](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_Semantics)]
 
 ## <a name="type-support-for-indices-and-ranges"></a>Obsługa typów indeksów i zakresów
 
-Jeśli typ udostępnia [indeksator](../programming-guide/indexers/index.md) z parametrem <xref:System.Index> lub <xref:System.Range>, jawnie obsługuje odpowiednio indeksy lub zakresy.
+Jeśli typ zawiera [indeksator](../programming-guide/indexers/index.md) z parametrem <xref:System.Index> lub <xref:System.Range>, jawnie obsługuje odpowiednio indeksy lub zakresy.
 
 Typ jest możliwy do **zliczenia** , jeśli ma właściwość o nazwie `Length` lub `Count` z dostępną metodę pobierającą i typem zwracanym `int`. Typ z liczbą, która nie obsługuje jawnie indeksów lub zakresów może zapewnić niejawną obsługę. Aby uzyskać więcej informacji, zapoznaj się z sekcją obsługa niejawnych [indeksów](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) i [Obsługa niejawnego zakresu](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) w artykule [propozycja funkcji](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
-Na przykład następujące typy .NET obsługują zarówno indeksy, jak i zakresy: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601> i <xref:System.ReadOnlySpan%601>. @No__t-0 obsługuje indeksy, ale nie obsługuje zakresów.
+Na przykład następujące typy .NET obsługują zarówno indeksy, jak i zakresy: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>i <xref:System.ReadOnlySpan%601>. <xref:System.Collections.Generic.List%601> obsługuje indeksy, ale nie obsługuje zakresów.
 
 ## <a name="scenarios-for-indices-and-ranges"></a>Scenariusze dotyczące indeksów i zakresów
 
-Często używasz zakresów i indeksów, gdy chcesz przeprowadzić analizę podzakresu całej sekwencji. Nowa składnia jest przejrzysta w celu dokładnego odczytywania informacji o tym, jaki jest zakres. Funkcja lokalna `MovingAverage` przyjmuje jako argument <xref:System.Range>. Następnie Metoda wylicza tylko ten zakres przy obliczaniu wartości minimalnej, maksymalnej i średniej. Wypróbuj następujący kod w projekcie:
+Często używasz zakresów i indeksów, gdy chcesz przeprowadzić analizę podzakresu całej sekwencji. Nowa składnia jest przejrzysta w celu dokładnego odczytywania informacji o tym, jaki jest zakres. Funkcja lokalna `MovingAverage` przyjmuje <xref:System.Range> jako argument. Następnie Metoda wylicza tylko ten zakres przy obliczaniu wartości minimalnej, maksymalnej i średniej. Wypróbuj następujący kod w projekcie:
 
 [!code-csharp[MovingAverages](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_MovingAverage)]
 

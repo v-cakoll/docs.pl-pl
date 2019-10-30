@@ -3,14 +3,14 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002694"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039651"
 ---
-# <a name="the-history-of-c"></a>Historia języka C @ no__t-0
+# <a name="the-history-of-c"></a>Historia języka C\#
 
 Ten artykuł zawiera historię poszczególnych głównych wersji C# języka. C# Zespół kontynuuje wprowadzanie innowacji i dodawanie nowych funkcji. Szczegółowy stan funkcji języka, w tym funkcje uwzględniane w przypadku przyszłych wersji, można znaleźć [w repozytorium dotnet/Roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w witrynie GitHub.
 
@@ -48,7 +48,7 @@ Główne funkcje C# 1,0 obejmują:
 
 ## <a name="c-version-12"></a>C#Wersja 1,2
 
-C#Wersja 1,2 dostarczana z programem Visual Studio .NET 2003. Zawiera kilka małych ulepszeń w języku. Najbardziej istotny jest to, że począwszy od tej wersji, kod wygenerowany w pętli `foreach` o nazwie <xref:System.IDisposable.Dispose%2A> na <xref:System.Collections.IEnumerator>, gdy <xref:System.Collections.IEnumerator> zaimplementowane <xref:System.IDisposable>.
+C#Wersja 1,2 dostarczana z programem Visual Studio .NET 2003. Zawiera kilka małych ulepszeń w języku. Najbardziej istotny jest to, że począwszy od tej wersji, kod wygenerowany w pętli `foreach` o nazwie <xref:System.IDisposable.Dispose%2A> na <xref:System.Collections.IEnumerator>, gdy <xref:System.Collections.IEnumerator> zaimplementowana <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C#Wersja 2,0
 
@@ -70,7 +70,7 @@ Inne C# funkcje 2,0 dodaliśmy możliwości do istniejących funkcji:
 
 Program C# mógł zostać uruchomiony jako ogólny język zorientowany obiektowo (oo) w C# wersji 2,0 zmienionej w pospiesz. Gdy miały swoje stopy w nich, zakończyły się po kilku poważnych punktach bólu deweloperów. I zostały one w znaczący sposób.
 
-W przypadku typów ogólnych typy i metody mogą działać na dowolnym typie przy zachowaniu bezpieczeństwa typu. Na przykład posiadanie <xref:System.Collections.Generic.List%601> umożliwia `List<string>` lub `List<int>` i wykonywanie operacji bezpiecznych typu na tych ciągach lub liczbach całkowitych podczas iteracji. Użycie typów ogólnych jest lepsze niż tworzenie `ListInt`, które wynikają z `ArrayList` lub rzutowania z `Object` dla każdej operacji.
+W przypadku typów ogólnych typy i metody mogą działać na dowolnym typie przy zachowaniu bezpieczeństwa typu. Na przykład posiadanie <xref:System.Collections.Generic.List%601> umożliwia `List<string>` lub `List<int>` i wykonywanie operacji bezpiecznych dla typów w tych ciągach lub liczbach całkowitych podczas iteracji. Użycie typów ogólnych jest lepsze niż tworzenie `ListInt`, które wynikają z `ArrayList` lub rzutowania z `Object` dla każdej operacji.
 
 C#Wersja 2,0 przenoszona Iteratory. Aby umieścić je w formie zwięzłej, Iteratory umożliwiają badanie wszystkich elementów w `List` (lub innych wyliczalnych typów) z pętlą `foreach`. Posiadanie iteratorów jako pierwszej klasy języka znacznie zwiększa czytelność języka i zdolności osób do uzyskania informacji o kodzie.
 
@@ -132,7 +132,7 @@ Ale `async` i `await` to rzeczywiste gwiazdki tej wersji. Gdy te funkcje został
 
 ## <a name="c-version-60"></a>C#wersja 6,0
 
-W przypadku wersji 3,0 i 5,0 C# dodano najważniejsze nowe funkcje w języku zorientowanym obiektowo. W wersji 6,0 wydanej w Visual Studio 2013 nie można przeprowadzić C# dominującej funkcji Killer i zamiast tego wydać wiele mniejszych funkcji, które zwiększają produktywność. Oto niektóre z nich:
+W przypadku wersji 3,0 i 5,0 C# dodano najważniejsze nowe funkcje w języku zorientowanym obiektowo. W wersji 6,0 wydanej w programie Visual Studio 2015 nie można przeprowadzić dominującej funkcji Killer i zamiast tego wydać wiele mniejszych funkcji, które C# zwiększają produktywność. Oto niektóre z nich:
 
 - [Importy statyczne](./csharp-6.md#using-static)
 - [Filtry wyjątków](./csharp-6.md#exception-filters)

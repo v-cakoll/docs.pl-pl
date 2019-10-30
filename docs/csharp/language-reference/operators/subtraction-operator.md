@@ -1,5 +1,5 @@
 ---
-title: '- operatory-= — i C# odwołania'
+title: '- and-= operatory- C# Reference'
 ms.custom: seodec18
 ms.date: 05/27/2019
 f1_keywords:
@@ -13,76 +13,75 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: cf642fcac7233d27f2ed9052829c145038e93419
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609853"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038872"
 ---
-# <a name="--and---operators-c-reference"></a>— i Operatorzy-= (C# odwołania)
+# <a name="--and---operators-c-reference"></a>-and-= — operatoryC# (odwołanie)
 
-`-` Operator jest obsługiwany przez wbudowane typy liczbowe i [delegować](../keywords/delegate.md) typów.
+Operatory `-` i `-=` są obsługiwane przez wbudowane typy liczbowe [całkowite](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowe](../builtin-types/floating-point-numeric-types.md) oraz typy [delegatów](../builtin-types/reference-types.md#the-delegate-type) .
 
-Aby uzyskać informacje o operacji arytmetycznych `-` operatora, zobacz [jednoargumentowe plus lub minus operatory](arithmetic-operators.md#unary-plus-and-minus-operators) i [operator odejmowania -](arithmetic-operators.md#subtraction-operator--) części [operatorów arytmetycznych](arithmetic-operators.md) artykułu.
+Aby uzyskać informacje o operatorze arytmetycznej `-`, zobacz [operatory jednoargumentowe Plus i minus](arithmetic-operators.md#unary-plus-and-minus-operators) i [operator odejmowania —](arithmetic-operators.md#subtraction-operator--) sekcje w artykule [Operatory arytmetyczne](arithmetic-operators.md) .
 
 ## <a name="delegate-removal"></a>Usuwanie delegata
 
-Dla argumentów operacji tego samego [delegować](../keywords/delegate.md) typu `-` operator zwraca wystąpienie delegata, który jest obliczany w następujący sposób:
+Dla operandów tego samego typu [delegata](../builtin-types/reference-types.md#the-delegate-type) operator `-` zwraca wystąpienie delegata, które jest obliczane w następujący sposób:
 
-- Jeśli oba operandy są inne niż null, a lista wywołania prawostronny operand jest właściwe ciągłych podlistę wywołania listę lewostronny operand, wynik operacji jest nową listę wywołania uzyskany przez usunięcie prawostronny operand wpisy na liście wywołania operandu po lewej stronie. Jeśli listy prawostronny operand pasuje wiele sąsiadujących podlisty liście argument po lewej stronie, tylko podlisty pasującego najdalej z prawej strony są usuwane. Jeśli wyniki usuwania w pustej listy, wynik jest `null`.
+- Jeśli oba operandy mają wartość inną niż null, a lista wywołań operandu po prawej stronie jest właściwą ciągłą podlistą listy wywołań operandu po lewej stronie, wynik operacji jest nową listą wywołań, która jest uzyskiwana przez usunięcie argumentów operacji po prawej stronie wpisy z listy wywołań operandu po lewej stronie. Jeśli lista argumentów operacji po prawej stronie jest zgodna z wieloma ciągłymi podlistami na liście operandów po lewej stronie, usuwana jest tylko podlista dopasowania do prawej. Jeśli usunięcie spowoduje powstanie pustej listy, wynik jest `null`.
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- Jeśli wywołanie listę prawostronny operand nie jest właściwe ciągłych podlistę wywołania listę lewostronny operand, wynik operacji jest lewostronny operand. Na przykład usuwanie delegata, który nie jest częścią delegatów multiemisji nie robi nic i powoduje niezmienione delegatów multiemisji.
+- Jeśli lista wywołań operandu po prawej stronie nie jest prawidłową ciągłą podlistą listy wywołań operandu po lewej stronie, wynik operacji jest argumentem po lewej stronie. Na przykład usunięcie delegata, który nie jest częścią delegata multiemisji, ma wartość Nothing i skutkuje niezmienionym delegatem multiemisji.
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  Poprzedni przykład ilustruje też, że podczas delegata usuwania wystąpień delegata są porównywane. Na przykład, delegatów, które są tworzone z wersji ewaluacyjnej identycznych [wyrażeń lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) nie są takie same. Aby uzyskać więcej informacji na temat równości delegata zobacz [delegować Operatory równości](~/_csharplang/spec/expressions.md#delegate-equality-operators) części [ C# specyfikacji języka](../language-specification/index.md).
+  W poprzednim przykładzie pokazano również, że podczas porównywania wystąpień delegatów usuwania delegatów. Na przykład Delegaty wytwarzane z oceny identycznych [wyrażeń lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) nie są równe. Aby uzyskać więcej informacji o równość delegowania, zobacz sekcję [delegowanie operatorów równości](~/_csharplang/spec/expressions.md#delegate-equality-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
-- Jeśli argument po lewej stronie jest `null`, wynik operacji jest `null`. Jeśli argument po prawej stronie jest `null`, wynik operacji jest lewostronny operand.
+- Jeśli argument operacji po lewej stronie jest `null`, wynik operacji jest `null`. Jeśli argument operacji po prawej stronie jest `null`, wynik operacji jest argumentem po lewej stronie.
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-Aby połączyć delegatów, należy użyć [ `+` operator](addition-operator.md#delegate-combination).
+Aby połączyć delegatów, użyj [operatora`+`](addition-operator.md#delegate-combination).
 
-Aby uzyskać więcej informacji na temat typów obiektów delegowanych, zobacz [delegatów](../../programming-guide/delegates/index.md).
+Aby uzyskać więcej informacji na temat typów delegatów, zobacz [delegats](../../programming-guide/delegates/index.md).
 
-## <a name="subtraction-assignment-operator--"></a>Operator przypisania odejmowania-=
+## <a name="subtraction-assignment-operator--"></a>Operator przypisania odejmowania — =
 
-Usługi za pomocą wyrażenia `-=` operatora, takich jak
+Wyrażenie używające operatora `-=`, takie jak
 
 ```csharp
 x -= y
 ```
 
-odpowiada wyrażeniu
+jest równoważny
 
 ```csharp
 x = x - y
 ```
 
-z tą różnicą, że `x` jest obliczany tylko raz.
-  
-W poniższym przykładzie pokazano użycie `-=` operator:
+z tą różnicą, że `x` jest obliczana tylko raz.
+
+Poniższy przykład ilustruje użycie operatora `-=`:
 
 [!code-csharp-interactive[-= examples](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
 
-Możesz także użyć `-=` operatora, aby określić metodę programu obsługi zdarzeń, aby usunąć po anulowaniu subskrypcji z [zdarzeń](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [porady: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Możesz również użyć operatora `-=`, aby określić metodę programu obsługi zdarzeń do usunięcia podczas anulowania subskrypcji [zdarzenia](../keywords/event.md). Aby uzyskać więcej informacji, zobacz [How to: subskrybowanie i anulowanie subskrypcji zdarzeń](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
-## <a name="operator-overloadability"></a>Overloadability — operator
+## <a name="operator-overloadability"></a>Przeciążanie operatora
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `-` operatora. Gdy dane binarne `-` operator jest przeciążony, `-=` operator jest również niejawnie przeciążona. Typ zdefiniowany przez użytkownika nie można jawnie przeciążyć `-=` operatora.
+Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operator `-`. Gdy operator `-` binarny jest przeciążony, operator `-=` jest również niejawnie przeciążony. Typ zdefiniowany przez użytkownika nie może jawnie przeciążać operatora `-=`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [jednoargumentowy minus operator](~/_csharplang/spec/expressions.md#unary-minus-operator) i [operator odejmowania](~/_csharplang/spec/expressions.md#subtraction-operator) sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcje [jednoargumentowe minus](~/_csharplang/spec/expressions.md#unary-minus-operator) i [operator odejmowania](~/_csharplang/spec/expressions.md#subtraction-operator) [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwołanie](../index.md)
+- [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
-- [Delegaty](../../programming-guide/delegates/index.md)
 - [Zdarzenia](../../programming-guide/events/index.md)
 - [Operatory arytmetyczne](arithmetic-operators.md)
-- [+ i operatory +=](addition-operator.md)
+- [Operatory + i + =](addition-operator.md)

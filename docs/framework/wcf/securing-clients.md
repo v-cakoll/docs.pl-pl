@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 988e868b1a1698d00a6d77fd715b2a76b1790132
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: f8fe5c5e0afac071ce7e036ceccd0b66351b0e1d
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321266"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040881"
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W programie Windows Communication Foundation (WCF) usługa wymusza wymagania dotyczące zabezpieczeń dla klientów. Oznacza to, że usługa określa tryb zabezpieczeń, który ma być używany, oraz czy klient musi podać poświadczenie. W związku z tym proces zabezpieczania klienta jest prosty: Użyj metadanych uzyskanych z usługi (jeśli jest publikowany) i skompiluj klienta. Metadane określają sposób konfigurowania klienta programu. Jeśli usługa wymaga podania poświadczeń przez klienta, należy uzyskać poświadczenia spełniające wymagania. W tym temacie omówiono proces bardziej szczegółowo. Aby uzyskać więcej informacji na temat tworzenia bezpiecznej usługi, zobacz [Zabezpieczanie usług](securing-services.md).  
@@ -76,7 +76,7 @@ W programie Windows Communication Foundation (WCF) usługa wymusza wymagania dot
  Dodanie [\<behaviors >](../configure-apps/file-schema/wcf/behaviors.md) pliku konfiguracji klienta i użycie elementu `clientCredentials` (pokazanego poniżej).  
   
 #### <a name="setting-a-clientcredentials-value-in-code"></a>Ustawianie \<clientCredentials > wartości w kodzie  
- Aby ustawić [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) wartość w kodzie, należy uzyskać dostęp do właściwości <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> klasy <xref:System.ServiceModel.ClientBase%601>. Właściwość zwraca obiekt <xref:System.ServiceModel.Description.ClientCredentials>, który umożliwia dostęp do różnych typów poświadczeń, jak pokazano w poniższej tabeli.  
+ Aby ustawić [\<obiektu clientcredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) wartość w kodzie, należy uzyskać dostęp do właściwości <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> klasy <xref:System.ServiceModel.ClientBase%601>. Właściwość zwraca obiekt <xref:System.ServiceModel.Description.ClientCredentials>, który umożliwia dostęp do różnych typów poświadczeń, jak pokazano w poniższej tabeli.  
   
 |Właściwość ClientCredential|Opis|Uwagi|  
 |-------------------------------|-----------------|-----------|  
@@ -88,21 +88,22 @@ W programie Windows Communication Foundation (WCF) usługa wymusza wymagania dot
 |<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Zwraca <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Reprezentuje parę nazwa użytkownika i hasło.|  
 |<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Zwraca <xref:System.ServiceModel.Security.WindowsClientCredential>|Reprezentuje poświadczenie klienta systemu Windows (poświadczenie protokołu Kerberos). Właściwości klasy są tylko do odczytu.|  
   
-#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ustawianie wartości @no__t 0clientCredentials > w konfiguracji  
+#### <a name="setting-a-clientcredentials-value-in-configuration"></a>Ustawianie \<elementu clientCredentials > wartości w konfiguracji  
  Wartości poświadczeń są określane przy użyciu zachowania punktu końcowego jako elementów podrzędnych elementu [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) . Używany element zależy od typu poświadczeń klienta. Na przykład poniższy przykład pokazuje konfigurację służącą do ustawiania certyfikatu X. 509 przy użyciu[> < \<clientCertificate](../configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
   
 ```xml  
 <configuration>  
   <system.serviceModel>  
     <behaviors>  
-      <endpointBehaviors>  
+      <endpointBehaviors>
         <behavior name="myEndpointBehavior">  
           <clientCredentials>  
             <clientCertificate findvalue="myMachineName"   
             storeLocation="Current" X509FindType="FindBySubjectName" />  
           </clientCredentials>  
-        </behavior>              
-    </behaviors>  
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
   </system.serviceModel>  
 </configuration>  
 ```  
@@ -151,7 +152,7 @@ W programie Windows Communication Foundation (WCF) usługa wymusza wymagania dot
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [@no__t — 1bindings >](../configure-apps/file-schema/wcf/bindings.md)
+- [> powiązań\<](../configure-apps/file-schema/wcf/bindings.md)
 - [Narzędzie edytora konfiguracji (SvcConfigEditor.exe)](configuration-editor-tool-svcconfigeditor-exe.md)
 - [Zabezpieczanie usług](securing-services.md)
 - [Uzyskiwanie dostępu do usług za pomocą klienta WCF](accessing-services-using-a-wcf-client.md)

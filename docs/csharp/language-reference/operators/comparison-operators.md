@@ -1,6 +1,6 @@
 ---
-title: Operatory porównania — C# odwołania
-description: Dowiedz się więcej o C# operatorów porównania, które służy do Sprawdź kolejność wartości liczbowych.
+title: Operatory porównania — C# odwołanie
+description: Więcej informacji C# na temat operatorów porównania, których można użyć do sprawdzenia kolejności wartości liczbowych.
 ms.date: 04/25/2019
 author: pkulikov
 f1_keywords:
@@ -19,61 +19,61 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: d3e9bf1356218f223f959b423dfc048972b075d3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bb28e2adba896ae85b189858283376fbe3250dce
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661518"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039068"
 ---
-# <a name="comparison-operators-c-reference"></a>Operatory porównania (C# odwołania)
+# <a name="comparison-operators-c-reference"></a>Operatory porównania (C# odwołanie)
 
-[ `<` (Mniejsze niż)](#less-than-operator-), [ `>` (większe niż)](#greater-than-operator-), [ `<=` (mniejsze niż lub równe)](#less-than-or-equal-operator-), i [ `>=` () większe niż lub równe)](#greater-than-or-equal-operator-) porównania, nazywana również relacyjna, operatory porównania ich operandami. Te operatory obsługują wszystkie [całkowitego](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md) typów liczbowych.
+[`<` (mniejsze niż)](#less-than-operator-), [`>` (większe niż)](#greater-than-operator-), [`<=` (mniejsze niż lub równe)](#less-than-or-equal-operator-)i [`>=` (większe niż lub równe)](#greater-than-or-equal-operator-) porównanie, znane także jako relacyjne, operatory porównują operandy. Te operatory są obsługiwane przez wszystkie typy liczbowe [całkowite](../builtin-types/integral-numeric-types.md) i [zmiennoprzecinkowe](../builtin-types/floating-point-numeric-types.md) .
 
 > [!NOTE]
-> Aby uzyskać `==`, `<`, `>`, `<=`, i `>=` operatorów, jeśli dowolny z argumentów nie jest liczbą (<xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>), wynik operacji jest `false`. Oznacza to, że `NaN` wartość jest większe niż, mniejsze ani równy do żadnej innej `double` (lub `float`) wartość, tym `NaN`. Aby uzyskać więcej informacji i przykładów, zobacz <xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType> artykule dotyczącym struktury.
+> Dla operatorów `==`, `<`, `>`, `<=`i `>=`, jeśli którykolwiek z operandów nie jest liczbą (<xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>), wynik operacji jest `false`. Oznacza to, że wartość `NaN` nie może być większa niż ani równa żadnej innej wartości `double` (lub `float`), w tym `NaN`. Aby uzyskać więcej informacji i przykładów, zobacz artykuł dotyczący odniesienia <xref:System.Double.NaN?displayProperty=nameWithType> lub <xref:System.Single.NaN?displayProperty=nameWithType>.
 
-Typy wyliczeniowe obsługują także operatory porównania. Dla argumentów operacji tego samego [wyliczenia](../keywords/enum.md) typu, odpowiadające im wartości typu całkowitego podstawowej są porównywane.
+Typy wyliczeniowe obsługują również operatory porównania. Dla operandów tego samego typu [wyliczeniowego](../keywords/enum.md) , odpowiadające wartości podstawowego typu całkowitego są porównywane.
 
-[ `==` i `!=` operatory](equality-operators.md) Sprawdź, czy operandy są równe.
+[Operatory`==` i `!=`](equality-operators.md) sprawdzają, czy ich operandy są równe, czy nie.
 
-## <a name="less-than-operator-"></a>Operator mniejszości \<
+## <a name="less-than-operator-"></a>\< operatora mniejszego niż
 
-`<` Operator zwraca `true` jeśli jej argument po lewej stronie jest mniejsza niż jej prawostronny operand `false` inaczej:
+Operator `<` zwraca `true`, jeśli jego argument operacji po lewej stronie jest krótszy od jego operandu po prawej stronie, `false` w przeciwnym razie:
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
-## <a name="greater-than-operator-"></a>Operator Grater than >
+## <a name="greater-than-operator-"></a>Więcej niż > operatora
 
-`>` Operator zwraca `true` jeśli jej argument po lewej stronie jest większa niż jego prawostronny operand `false` inaczej:
+Operator `>` zwraca `true`, jeśli jego argument operacji po lewej stronie jest większy niż jego prawy operand, `false` w przeciwnym razie:
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
-## <a name="less-than-or-equal-operator-"></a>Mniejsze niż lub równe — operator \<=
+## <a name="less-than-or-equal-operator-"></a>Mniejsze niż lub równe \<operatora=
 
-`<=` Operator zwraca `true` Jeśli argumentem operacji po lewej stronie jest mniejsza niż jej prawostronny operand `false` inaczej:
+Operator `<=` zwraca `true`, jeśli jego argument operacji po lewej stronie jest mniejszy lub równy jego operandu po prawej stronie, `false` w przeciwnym razie:
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
-## <a name="greater-than-or-equal-operator-"></a>Większe lub równe — operator > =
+## <a name="greater-than-or-equal-operator-"></a>Większe niż lub równe > operatora =
 
-`>=` Operator zwraca `true` jeśli jej argument po lewej stronie jest większa lub równa jego prawostronny operand `false` inaczej:
+Operator `>=` zwraca `true`, jeśli jego argument operacji po lewej stronie jest większy lub równy jego operandu po prawej stronie, `false` w przeciwnym razie:
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 
-## <a name="operator-overloadability"></a>Overloadability — operator
+## <a name="operator-overloadability"></a>Przeciążanie operatora
 
-Typ zdefiniowany przez użytkownika może [przeciążenia](operator-overloading.md) `<`, `>`, `<=`, i `>=` operatorów.
+Typ zdefiniowany przez użytkownika może [przeciążać](operator-overloading.md) operatory `<`, `>`, `<=`i `>=`.
 
-Jeśli typem przeciążenia, jeden z `<` lub `>` operatorów, należy przeciąża zarówno `<` i `>`. Jeśli typem przeciążenia, jeden z `<=` lub `>=` operatorów, należy przeciąża zarówno `<=` i `>=`.
+Jeśli typ przeciążenia jednego z operatorów `<` lub `>`, musi przeciążać zarówno `<`, jak i `>`. Jeśli typ przeciążenia jednego z operatorów `<=` lub `>=`, musi przeciążać zarówno `<=`, jak i `>=`.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [relacyjne i badania typu operatory](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) części [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
+Aby uzyskać więcej informacji, zobacz sekcję [Operatory relacyjne i testowe typu](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) w [ C# specyfikacji języka](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwołanie](../index.md)
+- [C#odwoła](../index.md)
 - [Operatory języka C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operatory równości](equality-operators.md)

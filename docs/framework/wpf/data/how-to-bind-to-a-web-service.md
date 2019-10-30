@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 72638101b73e6b43fa225885b2e1f27d87b22826
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d752f4815de16daa466302881116e80aceec6edf
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920144"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040908"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Jak powiązać z usługą sieci Web
 Ten przykład pokazuje, jak powiązać z obiektami zwracanymi przez wywołania metody usługi sieci Web.  
@@ -32,18 +32,18 @@ Ten przykład pokazuje, jak powiązać z obiektami zwracanymi przez wywołania m
   
 4. Naciśnij przycisk **Przejdź** , a następnie **Dodaj odwołanie**.  
   
- Następnie należy wywołać metodę usługi sieci Web i ustawić <xref:System.Windows.FrameworkElement.DataContext%2A> odpowiedniej kontrolki lub okna do zwracanego obiektu. Metoda **getContent** usługi MTPS przyjmuje odwołanie do obiektu **getContentRequest** . W związku z tym Poniższy przykład najpierw konfiguruje obiekt żądania:  
+ Następnie należy wywołać metodę usługi sieci Web i ustawić <xref:System.Windows.FrameworkElement.DataContext%2A> odpowiedniej kontrolki lub okna do zwracanego obiektu. Metoda `GetContent` usługi MTPS przyjmuje odwołanie do obiektu `getContentRequest`. W związku z tym Poniższy przykład najpierw konfiguruje obiekt żądania:  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- Po ustawieniu <xref:System.Windows.FrameworkElement.DataContext%2A> można utworzyć powiązania z właściwościami obiektu, do którego ustawiono <xref:System.Windows.FrameworkElement.DataContext%2A>. W tym przykładzie <xref:System.Windows.FrameworkElement.DataContext%2A> jest ustawiony na obiekt **getContentResponse** zwrócony przez metodę **getContent** . W poniższym przykładzie <xref:System.Windows.Controls.ItemsControl> tworzy powiązanie z i wyświetla wartości **ustawień regionalnych** **availableVersionsAndLocales** **getContentResponse**.  
+ Po ustawieniu <xref:System.Windows.FrameworkElement.DataContext%2A> można utworzyć powiązania z właściwościami obiektu, do którego ustawiono <xref:System.Windows.FrameworkElement.DataContext%2A>. W tym przykładzie <xref:System.Windows.FrameworkElement.DataContext%2A> jest ustawiony na obiekt `getContentResponse` zwracany przez metodę `GetContent`. W poniższym przykładzie <xref:System.Windows.Controls.ItemsControl> tworzy powiązanie z i wyświetla `locale` wartości `availableVersionsAndLocales` `getContentResponse`.  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Informacje o strukturze **getContentResponse**można znaleźć w [dokumentacji usługi zawartości](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ Aby uzyskać informacje na temat struktury `getContentResponse`, zobacz [dokumentację usługi zawartości](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 4a30068293bef3adb9f58cc7f61e7e24e144f31b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 11d2161004af5199d9e501f8ab1e3c0382e6bfe7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395139"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039024"
 ---
 # <a name="equality-operators-c-reference"></a>Operatory równości (C# odwołanie)
 
@@ -41,7 +41,7 @@ Argumenty operacji [wbudowanych typów wartości](../keywords/value-types-table.
 
 Dwa operandy tego samego typu [wyliczeniowego](../keywords/enum.md) są równe, jeśli odpowiadające wartości bazowego typu całkowitego są równe.
 
-Zdefiniowane przez użytkownika typy [struktur](../keywords/struct.md) nie obsługują domyślnie operatora `==`. Aby można było obsługiwać operator `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](#operator-overloadability) ją.
+Zdefiniowane przez użytkownika typy [struktur](../keywords/struct.md) nie obsługują domyślnie operatora `==`. Aby można było obsługiwać operator `==`, struktura zdefiniowana przez użytkownika musi [przeciążać](operator-overloading.md) ją.
 
 Począwszy od C# 7,3, operatory `==` i `!=` są obsługiwane przez C# [krotki](../../tuples.md). Aby uzyskać więcej informacji, zobacz sekcję [równości i krotek](../../tuples.md#equality-and-tuples) w artykule [ C# typy krotek](../../tuples.md) .
 
@@ -51,11 +51,11 @@ Domyślnie dwa operandy typu odwołania są równe, jeśli odwołują się do te
 
 [!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
-Jak pokazano na przykładzie, zdefiniowane przez użytkownika typy odwołań domyślnie obsługują operator `==`. Jednak typ referencyjny może przeciążać operator `==`. Jeśli typ referencyjny przeciąża operator `==`, użyj metody <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> do sprawdzenia, czy dwa odwołania tego typu odwołują się do tego samego obiektu.
+Jak pokazano na przykładzie, zdefiniowane przez użytkownika typy odwołań domyślnie obsługują operator `==`. Jednak typ referencyjny może przeciążać operator `==`. Jeśli typ referencyjny przeciąża operator `==`, użyj metody <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>, aby sprawdzić, czy dwa odwołania tego typu odwołują się do tego samego obiektu.
 
 ### <a name="string-equality"></a>Równość ciągów
 
-Dwa operandy [ciągu](../keywords/string.md) są równe, gdy oba z nich są `null` lub oba wystąpienia ciągu mają taką samą długość i mają identyczne znaki w każdej pozycji znaku:
+Dwa operandy [ciągu](../builtin-types/reference-types.md#the-string-type) są równe, gdy oba z nich są `null` lub oba wystąpienia ciągu mają taką samą długość i mają identyczne znaki w każdej pozycji znaku:
 
 [!code-csharp-interactive[string equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#StringEquality)]
 

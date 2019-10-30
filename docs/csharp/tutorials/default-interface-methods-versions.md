@@ -2,19 +2,20 @@
 title: Bezpiecznie Aktualizuj interfejsy przy użyciu domyślnych metod interfejsu wC#
 description: W tym zaawansowanym samouczku przedstawiono sposób bezpiecznego dodawania nowych funkcji do istniejących definicji interfejsów bez przerywania wszystkich klas i struktur, które implementują ten interfejs.
 ms.date: 05/06/2019
+ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 71fce2594dbf5ef3175a6b9bdf4e6edba754bb84
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276002"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039252"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>Samouczek: aktualizowanie interfejsów przy użyciu domyślnych metod interfejsu C# w 8,0
 
 Począwszy od C# 8,0 na platformie .net Core 3,0, można zdefiniować implementację w przypadku deklarowania elementu członkowskiego interfejsu. Najbardziej typowym scenariuszem jest bezpieczne dodanie elementów członkowskich do interfejsu już wydanego i używanego przez klientów niezliczone.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+W tym samouczku dowiesz się, jak:
 
 > [!div class="checklist"]
 >

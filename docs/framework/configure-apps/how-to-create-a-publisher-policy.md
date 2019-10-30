@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 608918828bf72369a1bd48e2391e2423078e9df0
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846834"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040193"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Porady: tworzenie zasad wydawcy
 
@@ -55,26 +55,28 @@ Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , ab
 
 W wierszu polecenia wpisz następujące polecenie:
 
-**Al/link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*
+```console
+al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
+```
 
 W tym poleceniu:
 
-- Argument *publisherPolicyFile* jest nazwą pliku zasad wydawcy.
+- `publisherPolicyFile` argument jest nazwą pliku zasad wydawcy.
 
-- Argument *publisherPolicyAssemblyFile* jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:
+- `publisherPolicyAssemblyFile` argument jest nazwą zestawu zasad wydawcy, który jest wynikiem tego polecenia. Nazwa pliku zestawu musi być zgodna z formatem:
 
-  **zasad.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **. dll**
+  "Policy. majorNumber. minorNumber. mainAssemblyName. dll"
 
-- Argument *keyPairFile* jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.
+- `keyPairFile` argument jest nazwą pliku zawierającego parę kluczy. Należy podpisać zestaw i zestaw zasad wydawcy z tą samą parą kluczy.
 
-- Argument *processorArchitecture* identyfikuje platformę objętą przez zestaw specyficzny dla procesora.
+- Argument `processorArchitecture` identyfikuje platformę objętą przez zestaw specyficzny dla procesora.
 
   > [!NOTE]
   > Możliwość określania architektury procesora zależy od .NET Framework 2,0.
 
 Możliwość określania architektury procesora zależy od .NET Framework 2,0. Następujące polecenie tworzy zestaw zasad wydawcy o nazwie `policy.1.0.myAssembly` z pliku zasad wydawcy o nazwie `pub.config`, przypisuje silną nazwę zestawu przy użyciu pary kluczy w pliku `sgKey.snk` i określa, że zestaw jest przeznaczony dla procesora x86 Będąc.
 
-```
+```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
@@ -92,11 +94,13 @@ Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../to
 
 W wierszu polecenia wpisz następujące polecenie:
 
-**Gacutil/I**  *publisherPolicyAssemblyFile*
+```console
+gacutil /i publisherPolicyAssemblyFile
+```
 
 Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej zestawów.
 
-```
+```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 

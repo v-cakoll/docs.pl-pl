@@ -1,34 +1,35 @@
 ---
 title: Wykonywanie drzew wyrażeń
-description: Więcej informacji na temat wykonywanie drzew wyrażeń, konwertując je do pliku wykonywalnego instrukcje języka pośredniego (IL).
+description: Dowiedz się więcej o wykonywaniu drzew wyrażeń, konwertując je na instrukcje wykonywalnego języka pośredniego (IL).
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664561"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037114"
 ---
 # <a name="executing-expression-trees"></a>Wykonywanie drzew wyrażeń
 
-[Poprzednie — Typy platform obsługujące drzewa wyrażeń](expression-classes.md)
+[Poprzednie typy struktur obsługujące drzewa wyrażeń](expression-classes.md)
 
-*Drzewa wyrażeń* to struktura danych, który reprezentuje kodu.
-Nie jest skompilowany i wykonywalnego kodu. Do wykonania kodu platformy .NET, który jest reprezentowany przez drzewo wyrażenia, należy ją przekonwertować do pliku wykonywalnego instrukcje języka IL.
+*Drzewo wyrażenia* jest strukturą danych, która reprezentuje kod.
+Nie jest skompilowany i kod wykonywalny. Jeśli chcesz wykonać kod .NET, który jest reprezentowany przez drzewo wyrażenia, należy przekonwertować go na instrukcje pliku wykonywalnego IL.
 
 ## <a name="lambda-expressions-to-functions"></a>Wyrażenia lambda do funkcji
 
-Możesz również przekonwertować wszystkie Wyrażenielambda lub dowolnego typu opracowane z Wyrażenielambda do pliku wykonywalnego IL. Inne typy wyrażenia nie można przekonwertować bezpośrednio w kodzie. Ograniczenie to ma niewielki wpływ w praktyce. Wyrażenia lambda są tylko typy wyrażeń, które trzeba będzie wykonać za pomocą konwersji do pliku wykonywalnego języka pośredniego (IL). (Myśl o tym, na co oznaczałoby bezpośrednie wykonywanie `ConstantExpression`. Może to oznaczać żadnych użytecznych?) Wszelkie drzewa wyrażeń, który jest `LambdaExpression`, lub typ pochodzący od `LambdaExpression` mogą być konwertowane na IL.
-Typ wyrażenia `Expression<TDelegate>` tylko konkretnych przykład w bibliotekach .NET Core. Jest ona używana do reprezentowania wyrażenia, który jest mapowany do dowolnego typu delegata. Ponieważ ten typ jest mapowany do typu delegata, .NET można zbadać wyrażenie i wygenerować IL dla odpowiednich delegata, który pasuje do podpisu wyrażenia lambda. 
+Można przekonwertować dowolne Wyrażenielambda lub dowolny typ pochodzący z Wyrażenielambda do pliku wykonywalnego IL. Inne typy wyrażeń nie mogą być bezpośrednio konwertowane na kod. To ograniczenie ma niewielki wpływ na praktyce. Wyrażenia lambda są jedynymi typami wyrażeń, które mają być wykonywane przez konwersję do wykonywalnego języka pośredniego (IL). (Należy zastanowić się, co będzie miało na celu bezpośrednie wykonanie `ConstantExpression`. Czy to oznacza coś przydatnego?) Dowolne drzewo wyrażeń, które jest `LambdaExpression`lub typ pochodzący od `LambdaExpression` można przekonwertować na IL.
+Typ wyrażenia `Expression<TDelegate>` jest jedynym konkretnym przykładem w bibliotekach .NET Core. Służy do reprezentowania wyrażenia, które jest mapowane na dowolny typ delegata. Ponieważ ten typ jest mapowany na typ delegata, .NET może przeanalizować wyrażenie i wygenerować IL dla odpowiedniego delegata, który jest zgodny z podpisem wyrażenia lambda. 
 
-W większości przypadków spowoduje to utworzenie mapowania proste między wyrażenia oraz jego odpowiednie delegata. Na przykład drzewo wyrażenia, który jest reprezentowany przez `Expression<Func<int>>` zostanie przekonwertowana na delegata tego typu `Func<int>`. Dla wyrażenia lambda z listy argumentów i zwracanego typu istnieje typ delegata, który jest typem docelowym dla pliku wykonywalnego kodu, reprezentowane przez to wyrażenie lambda.
+W większości przypadków tworzy proste mapowanie między wyrażeniem i odpowiadającym mu delegatem. Na przykład drzewo wyrażenia, które jest reprezentowane przez `Expression<Func<int>>`, zostanie przekonwertowane na delegata typu `Func<int>`. W przypadku wyrażenia lambda z dowolnym typem zwracanym i listą argumentów istnieje typ delegata, który jest typem docelowym dla kodu wykonywalnego reprezentowanego przez to wyrażenie lambda.
 
-`LambdaExpression` Typ zawiera `Compile` i `CompileToMethod` elementów członkowskich, które umożliwiają przekonwertować drzewa wyrażenie kodu wykonywalnego. `Compile` Metoda tworzy delegata. `CompileToMethod` Metody aktualizacji `MethodBuilder` obiektu IL, reprezentujący skompilowanych danych wyjściowych drzewa wyrażeń. Należy pamiętać, że `CompileToMethod` dostępną tylko w ramach całego pulpitu, a nie w .NET Core.
+Typ `LambdaExpression` zawiera `Compile` i `CompileToMethod` członków, których można użyć do przekonwertowania drzewa wyrażenia na kod wykonywalny. Metoda `Compile` tworzy delegata. Metoda `CompileToMethod` aktualizuje obiekt `MethodBuilder` z IL, który reprezentuje skompilowane dane wyjściowe drzewa wyrażenia. Należy pamiętać, że `CompileToMethod` jest dostępna tylko w pełnej strukturze pulpitu, a nie w środowisku .NET Core.
 
-Opcjonalnie możesz też podać `DebugInfoGenerator` , zostanie wyświetlony symbol informacji debugowania dla obiektu delegowanego wygenerowany. Dzięki temu można przekonwertować na drzewo wyrażenia do obiektu delegowanego i mają pełne informacje debugowania o wygenerowanym delegata.
+Opcjonalnie można również udostępnić `DebugInfoGenerator`, które będą otrzymywać informacje o debugowaniu symboli dla wygenerowanego obiektu delegowanego. Umożliwia to konwertowanie drzewa wyrażenia na obiekt delegata i zawiera pełne informacje o debugowaniu dotyczące wygenerowanego delegata.
 
-Wyrażenie może przekonwertować na obiekt delegowany, używając następującego kodu:
+Wyrażenie można przekonwertować na delegata przy użyciu następującego kodu:
 
 ```csharp
 Expression<Func<int>> add = () => 1 + 2;
@@ -37,25 +38,25 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Należy zauważyć, że typ delegata jest oparty na typ wyrażenia. Jeśli chcesz użyć obiektu delegowanego w silnie typizowany sposób musisz znać typ zwracany i listą argumentów. `LambdaExpression.Compile()` Metoda zwraca `Delegate` typu. Będzie trzeba go rzutować na typ delegata poprawne mieć żadnych narzędzi kompilacji, zapoznaj się z listą argument lub zwracany typ.
+Należy zauważyć, że typ delegata jest oparty na typie wyrażenia. Musisz znać typ zwracany i listę argumentów, jeśli chcesz użyć obiektu delegata w sposób silnie wpisany. Metoda `LambdaExpression.Compile()` zwraca typ `Delegate`. Konieczne będzie przerzutowanie go do poprawnego typu delegata, aby wszystkie narzędzia czasu kompilacji sprawdzają listę argumentów lub typ zwracany.
 
-## <a name="execution-and-lifetimes"></a>Okresy istnienia i wykonywanie
+## <a name="execution-and-lifetimes"></a>Wykonywanie i okresy istnienia
 
-Wykonywania kodu za pomocą wywołania delegata utworzone podczas wywołania `LambdaExpression.Compile()`. Widać to powyżej gdzie `add.Compile()` zwraca delegata. Wywołanie delegata, wywołując `func()` wykonuje kod.
+Kod jest wykonywany przez wywoływanie delegata utworzonego podczas wywoływania `LambdaExpression.Compile()`. Możesz zobaczyć powyższe miejsce, gdzie `add.Compile()` zwraca delegata. Wywoływanie tego delegata przez wywołanie `func()` wykonuje kod.
 
-Ten delegat reprezentuje kod w drzewie wyrażeń. Można zachować dojścia do delegata i wywoływać go później. Nie musisz skompilować każdorazowo, którą chcesz wykonywać kod, który reprezentuje drzewo wyrażenia. (Należy pamiętać, że drzew wyrażeń są niezmienne i kompilowanie później tego samego drzewa wyrażeń utworzy obiekt delegowany, który jest wykonywany ten sam kod).
+Ten delegat reprezentuje kod w drzewie wyrażenia. Możesz zachować uchwyt do tego delegata i wywołać go później. Nie musisz kompilować drzewa wyrażenia za każdym razem, gdy chcesz wykonać kod, który reprezentuje. (Należy pamiętać, że drzewa wyrażeń są niezmienne i skompilowanie tego samego drzewa wyrażeń później spowoduje utworzenie delegata, który wykonuje ten sam kod).
 
-I będzie przestrzega przed w trakcie tworzenia jakichkolwiek bardziej zaawansowanych mechanizmów buforowania, co pozwoli zwiększyć wydajność przez unikanie niepotrzebnych kompilacji wywołania. Porównywanie dwa drzewa wykonania dowolnego wyrażenia, aby określić, czy stanowią one ten sam algorytm będzie również dużo czasu do wykonania. Prawdopodobnie okaże czas obliczeń zapisanie unikanie wszelkie dodatkowe wywołania `LambdaExpression.Compile()` będzie możliwe więcej niż przez czas wykonywania kodu, który określa dwóch różnych drzew wyrażeń spowodować tego samego kodu wykonywalnego.
+Będę mieć ostrożność w przypadku tworzenia bardziej zaawansowanych mechanizmów buforowania w celu zwiększenia wydajności poprzez uniknięcie niepotrzebnych wywołań kompilacji. Porównanie dwóch arbitralnych drzew wyrażeń w celu ustalenia, czy reprezentują one ten sam algorytm, również będzie czasochłonne wykonywanie operacji. Prawdopodobnie okaże się, że czas obliczeń, który zostanie zapisany, unikając jakichkolwiek dodatkowych wywołań `LambdaExpression.Compile()` będzie większy niż zużyty przez czas wykonywania kodu, który określa dwa różne drzewa wyrażeń wynik ten sam kod wykonywalny.
 
-## <a name="caveats"></a>Ostrzeżenia
+## <a name="caveats"></a>Zastrzeżenia
 
-Kompilowanie wyrażenia lambda do delegata i wywoływania delegata jest jednym z najprostszym operacje, które można wykonywać na drzewo wyrażenia. Jednak nawet w przypadku tej operacji proste, istnieją zastrzeżenia, których należy wiedzieć. 
+Kompilowanie wyrażenia lambda do delegata i wywoływanie tego delegata jest jedną z najprostszych operacji, które można wykonać za pomocą drzewa wyrażenia. Jednak nawet w przypadku tej prostej operacji istnieją zastrzeżenia, których należy wiedzieć. 
 
-Wyrażenia lambda Utwórz wolnych od pracy nad zmienne lokalne, które są przywoływane w wyrażeniu. Musisz gwarantować, wszystkie zmienne, które są częścią obiektu delegowanego jest użyteczne w lokalizacji, gdzie jest wywoływana `Compile`, a podczas wykonywania wynikowego delegata.
+Wyrażenia lambda tworzą zamknięcia na wszystkich zmiennych lokalnych, do których istnieją odwołania w wyrażeniu. Należy zagwarantować, że wszystkie zmienne, które będą częścią delegata, są użyteczne w lokalizacji, w której jest wywoływana `Compile`, i po wykonaniu wyniku delegowanego.
 
-Ogólnie rzecz biorąc kompilator zapewnia, że ta zasada obowiązuje. Jednakże jeśli wyrażenie uzyskuje dostęp do zmiennej, która implementuje `IDisposable`, istnieje możliwość, że Twój kod może usunąć obiekt podczas nadal odbywa się przez drzewa wyrażeń.
+Ogólnie rzecz biorąc, kompilator zapewni, że jest to prawdziwe. Jeśli jednak wyrażenie uzyskuje dostęp do zmiennej implementującej `IDisposable`, możliwe jest, że kod może usunąć obiekt, gdy nadal jest przechowywany w drzewie wyrażenia.
 
-Na przykład, ten kod działa poprawnie, ponieważ `int` nie implementuje `IDisposable`:
+Na przykład ten kod działa prawidłowo, ponieważ `int` nie implementuje `IDisposable`:
 
 ```csharp
 private static Func<int, int> CreateBoundFunc()
@@ -67,10 +68,10 @@ private static Func<int, int> CreateBoundFunc()
 }
 ```
 
-Delegat został przechwycony odwołaniem do zmiennej lokalnej `constant`.
-Tej zmiennej jest dostępna w dowolnym momencie później, po wartość zwrócona przez funkcję przez `CreateBoundFunc` wykonuje.
+Delegat przechwycił odwołanie do zmiennej lokalnej `constant`.
+Ta zmienna jest używana w dowolnym momencie później, gdy zostanie wykonana funkcja zwrócona przez `CreateBoundFunc`.
 
-Jednak wziąć pod uwagę tej klasy (zamiast contrived), który implementuje `IDisposable`:
+Należy jednak wziąć pod uwagę tę klasę (raczej contrived) implementującą `IDisposable`:
 
 ```csharp
 public class Resource : IDisposable
@@ -93,7 +94,7 @@ public class Resource : IDisposable
 }
 ```
 
-Jeśli jest ona używana w wyrażeniu jak pokazano poniżej, otrzymasz `ObjectDisposedException` podczas wykonywania kodu, odwołuje się `Resource.Argument` właściwości:
+Jeśli używasz go w wyrażeniu, jak pokazano poniżej, uzyskasz `ObjectDisposedException` podczas wykonywania kodu, do którego odwołuje się Właściwość `Resource.Argument`:
 
 ```csharp
 private static Func<int, int> CreateBoundResource()
@@ -107,20 +108,20 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-Delegat zwrócone w wyniku tej metody został zamknięty przez `constant` obiektu, który został zlikwidowany. (Jest został usunięty, ponieważ została ona zadeklarowana w `using` instrukcja.) 
+Delegat zwrócony z tej metody został zamknięty przez obiekt `constant`, który został usunięty. (Element został usunięty, ponieważ został zadeklarowany w instrukcji `using`). 
 
-Teraz, po wykonaniu delegata zwrócone w wyniku tej metody, będziesz mieć `ObjectDisposedException` generowany w momencie wykonywania.
+Teraz po wykonaniu delegata zwróconego przez tę metodę będziesz mieć `ObjectDisposedException` zgłoszony w punkcie wykonywania.
 
-Wydawać się dziwne mają reprezentujących konstrukcję kompilacji błąd w czasie wykonywania, ale jest to świecie, w którym możemy wprowadzić, kiedy będziemy pracować z drzewa wyrażeń.
+Wydaje się, że wystąpił błąd środowiska uruchomieniowego reprezentujący konstrukcję w czasie kompilacji, ale jest to na świecie wprowadzanym podczas pracy z drzewami wyrażeń.
 
-Dlatego jest trudny do oferty ogólne wskazówki, aby uniknąć tego błędu jest dostępnych wiele permutacji tego problemu. Należy zachować ostrożność podczas definiowania wyrażeń uzyskiwania dostępu do zmiennych lokalnych i należy zachować ostrożność w przypadku uzyskiwania dostępu do stanu w bieżącym obiekcie (reprezentowane przez `this`) podczas tworzenia drzewa wyrażenie, które mogą być zwrócone przez publiczny interfejs API.
+Istnieje wiele permutacji tego problemu, dlatego trudno jest zaoferować ogólne wskazówki, aby tego uniknąć. Pamiętaj o uzyskiwaniu dostępu do zmiennych lokalnych podczas definiowania wyrażeń i należy `this`zachować ostrożność podczas tworzenia drzewa wyrażenia, które może zostać zwrócone przez publiczny interfejs API.
 
-Kod w swoim wyrażeniu może odwoływać się do metody lub właściwości w innych zestawach. Ten zestaw musi być dostępny, gdy wyrażenie jest zdefiniowany i gdy jest ona kompilowana i kiedy wynikowy obiekt delegowany jest wywoływany. Można będzie spełniony przy użyciu `ReferencedAssemblyNotFoundException` w przypadkach, gdy nie jest obecny.
+Kod w wyrażeniu może odwoływać się do metod lub właściwości w innych zestawach. Ten zestaw musi być dostępny, gdy wyrażenie jest zdefiniowane, a kiedy jest kompilowane, oraz kiedy wywoływany jest otrzymany delegat. Zostanie osiągnięty `ReferencedAssemblyNotFoundException` w przypadkach, w których nie istnieje.
 
 ## <a name="summary"></a>Podsumowanie
 
-Drzewa wyrażeń, które reprezentują wyrażenia lambda może być kompilowane do utworzenia delegata, który może zostać uruchomiony. Zapewnia jeden mechanizm, aby wykonać ten kod reprezentowany przez drzewo wyrażenia.
+Drzewa wyrażeń, które reprezentują wyrażenia lambda, można skompilować, aby utworzyć delegata, który można wykonać. Zapewnia to jeden mechanizm do wykonywania kodu reprezentowanego przez drzewo wyrażenia.
 
-Drzewo wyrażenia reprezentuje kod, który jest wykonywany dla danego konstrukcji, które można utworzyć. Tak długo, jak środowisko, gdzie skompilować i wykonać ten kod jest zgodny z środowisku, w którym są tworzone wyrażenie, wszystko działa zgodnie z oczekiwaniami. Jeśli nie mają miejsce, błędy są bardzo przewidywalny i zostanie przechwycony w testach pierwszy dowolnego kodu, przy użyciu drzewa wyrażeń.
+Drzewo wyrażenia reprezentuje kod, który będzie wykonywany dla każdej utworzonej konstrukcji. Tak długo, jak środowisko, w którym kompilujesz i wykonujesz kod, jest zgodne ze środowiskiem, w którym tworzysz wyrażenie, wszystko działa zgodnie z oczekiwaniami. Gdy tak się nie stanie, błędy są bardzo przewidywalne i zostaną przechwycone podczas pierwszych testów dowolnego kodu przy użyciu drzew wyrażeń.
 
-[Dalej — Interpretowanie wyrażeń](expression-trees-interpreting.md)
+[Wyrażenia następnej interpretacji](expression-trees-interpreting.md)

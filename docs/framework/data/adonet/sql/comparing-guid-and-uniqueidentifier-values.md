@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 18f7ad8f6ef9cdf726bdf606ab108e2c5140aed7
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878114"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040465"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Porównywanie identyfikatora GUID i wartości uniqueidentifier
-Typ danych Unikatowy identyfikator globalny (GUID) w programie SQL Server jest reprezentowany przez `uniqueidentifier` typ danych, który przechowuje 16-bajtową wartość binarną. Identyfikator GUID jest liczbą binarną, i głównie jest jako identyfikator, który musi być unikatowa w sieci, który ma wiele komputerów w wielu lokacjach. Identyfikatorów GUID mogą być generowane przez wywołanie funkcji NEWID języka Transact-SQL i musi być unikatowa na całym świecie. Aby uzyskać więcej informacji, zobacz [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
+Typ danych unikatowy identyfikator globalny (GUID) w SQL Server jest reprezentowany przez typ danych `uniqueidentifier`, który przechowuje 16-bajtową wartość binarną. Identyfikator GUID jest liczbą binarną, a jej głównym zastosowaniem jest jako identyfikator, który musi być unikatowy w sieci, która ma wiele komputerów w wielu lokacjach. Identyfikatory GUID można generować przez wywołanie funkcji NEWID języka Transact-SQL i gwarantuje, że będzie ona unikatowa na całym świecie. Aby uzyskać więcej informacji, zobacz [unikatowy identyfikator (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  
   
 ## <a name="working-with-sqlguid-values"></a>Praca z wartościami SqlGuid  
- Identyfikatory GUID są długie i zasłoniętej, dlatego nie są zrozumiałe dla użytkowników. Jeśli losowo wygenerowane GUIDs są używane dla wartości klucza i wstawić wiele wierszy, otrzymasz losowych operacji We/Wy do indeksów, które może niekorzystnie wpłynąć na wydajność. Identyfikatory GUID są również stosunkowo dużej ilości, w porównaniu z innymi typami danych. Ogólnie rzecz biorąc zaleca się tylko na potrzeby scenariuszy bardzo małym, dla których żadne inne dane typu jest odpowiednia przy użyciu identyfikatorów GUID.  
+ Ponieważ wartości identyfikatorów GUID są długie i zasłaniane, nie są one znaczące dla użytkowników. W przypadku używania losowo generowanych identyfikatorów GUID dla wartości kluczy i wstawiania dużej liczby wierszy uzyskujesz losowe we/wy w indeksach, co może negatywnie wpłynąć na wydajność. Identyfikatory GUID są również stosunkowo duże w porównaniu z innymi typami danych. Ogólnie zalecamy korzystanie z identyfikatorów GUID tylko w przypadku bardzo wąskich scenariuszy, dla których nie jest odpowiedni inny typ danych.  
   
-### <a name="comparing-guid-values"></a>Porównanie wartości identyfikatora GUID  
- Operatory porównania mogą być używane z `uniqueidentifier` wartości. Jednak kolejność nie jest zaimplementowana przez porównanie wzorców bitowych z dwóch wartości. Jedyne operacje, które są dozwolone przed `uniqueidentifier` wartości są porównania (= <>, \<, >, \<=, > =) i sprawdzanie wartości NULL (IS NULL i IS NOT NULL). Inne operatory arytmetyczne są dozwolone.  
+### <a name="comparing-guid-values"></a>Porównywanie wartości identyfikatora GUID  
+ Operatory porównania mogą być używane z wartościami `uniqueidentifier`. Jednak porządkowanie nie jest zaimplementowane przez porównanie wzorców bitowych dwóch wartości. Jedyną operacją, która jest dozwolona dla wartości `uniqueidentifier` są porównania (=, < >, \<, >, \<=, > =) i sprawdzanie wartości NULL (IS NULL i IS NOT NULL). Nie są dozwolone żadne inne operatory arytmetyczne.  
   
- Zarówno <xref:System.Guid> i <xref:System.Data.SqlTypes.SqlGuid> mają `CompareTo` metodę porównywania różnych wartości identyfikatora GUID. Jednak `System.Guid.CompareTo` i `SqlTypes.SqlGuid.CompareTo` są implementowane w inny sposób. <xref:System.Data.SqlTypes.SqlGuid> implementuje `CompareTo` przy użyciu działania programu SQL Server w ostatnich sześć bajtów wartości są najbardziej znaczące. <xref:System.Guid> ocenia wszystkie 16 bajtów. W poniższym przykładzie pokazano różnicę zachowań. Pierwsza sekcja kodu Wyświetla nieposortowane <xref:System.Guid> wartości, a druga sekcja kodu pokazuje sortowany <xref:System.Guid> wartości. Trzecia sekcja pokazuje sortowany <xref:System.Data.SqlTypes.SqlGuid> wartości. Dane wyjściowe jest wyświetlana poniżej przykładowy kod.  
+ Zarówno <xref:System.Guid>, jak i <xref:System.Data.SqlTypes.SqlGuid> mają metodę `CompareTo` do porównywania różnych wartości identyfikatorów GUID. Jednak `System.Guid.CompareTo` i `SqlTypes.SqlGuid.CompareTo` są implementowane inaczej. <xref:System.Data.SqlTypes.SqlGuid> implementuje `CompareTo` przy użyciu zachowania SQL Server, w ciągu ostatnich sześciu bajtów wartości są najbardziej znaczące. <xref:System.Guid> oblicza wszystkie 16 bajtów. Poniższy przykład ilustruje tę różnicę zachowania. W pierwszej sekcji kodu są wyświetlane niesortowane <xref:System.Guid> wartości, a druga sekcja kodu pokazuje posortowane wartości <xref:System.Guid>. Trzecia sekcja zawiera posortowane wartości <xref:System.Data.SqlTypes.SqlGuid>. Dane wyjściowe są wyświetlane poniżej listy kodu.  
   
  [!code-csharp[DataWorks SqlTypes.Guid#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.Guid/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.Guid#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.Guid/VB/source.vb#1)]  
   
  Ten przykład generuje następujące wyniki.  
   
-```  
+```output  
 Unsorted Guids:  
 3aaaaaaa-bbbb-cccc-dddd-2eeeeeeeeeee  
 2aaaaaaa-bbbb-cccc-dddd-1eeeeeeeeeee  

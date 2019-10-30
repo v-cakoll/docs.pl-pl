@@ -5,19 +5,19 @@ helpviewer_keywords:
 - printing [WPF]
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
-ms.openlocfilehash: db40213bd6e20468706afda8a11d76e5a5a3c4e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 9ca812948926f80d9f8ec5b8cead4538d09fa7a1
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254265"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73035628"
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
-W tematach w tej sekcji pokazano, jak używać funkcji zarządzania systemem drukowania i drukowania, które [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] są dołączone do nowej ścieżki drukowania w formacie XML Paper Specification (XPS).  
+W tematach w tej sekcji pokazano, jak korzystać z funkcji zarządzania systemem drukowania i drukowania, które są dołączone do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], a także nowej ścieżki drukowania w formacie XML Paper Specification (XPS).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wywoływanie okna dialogowego drukowania](how-to-invoke-a-print-dialog.md)  
- Instrukcje dotyczące znacznika XAML do deklarowania [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] obiektu okna dialogowego drukowania i używania kodu do wywołania okna dialogowego z aplikacji Windows Presentation Foundation (WPF).  
+ Instrukcje dotyczące znacznika XAML do deklarowania obiektu okna dialogowego drukowania systemu Microsoft Windows i używania kodu do wywołania okna dialogowego z aplikacji Windows Presentation Foundation (WPF).  
   
  [Klonowanie drukarki](how-to-clone-a-printer.md)  
  Instrukcje dotyczące sposobu instalowania drugiej kolejki wydruku z dokładnie tymi samymi właściwościami co istniejąca kolejka wydruku.  
@@ -35,7 +35,7 @@ W tematach w tej sekcji pokazano, jak używać funkcji zarządzania systemem dru
  Instrukcje dotyczące odnajdywania we właściwościach i typach obiektu systemowego wydruku środowiska uruchomieniowego.  
   
  [Programowe drukowanie plików XPS](how-to-programmatically-print-xps-files.md)  
- Instrukcje dotyczące szybkiego drukowania plików XPS (XML Paper Specification) bez konieczności stosowania programu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Instrukcje dotyczące szybkiego drukowania plików XPS (XML Paper Specification) bez konieczności [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
  [Zdalne badanie stanu drukarek](how-to-remotely-survey-the-status-of-printers.md)  
  Instrukcje dotyczące tworzenia narzędzi, które będą przeszukiwać drukarki w celu wykrycia, że wystąpiły zakleszczenie papieru lub inny problem.  

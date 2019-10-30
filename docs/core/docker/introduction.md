@@ -3,12 +3,12 @@ title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera wprowadzenie i Omówienie platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3f40d2723feb5a31066115ae11cafba11981f1b4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522998"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038461"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -40,7 +40,7 @@ Microsoft Container Registry (MCR) jest oficjalnym źródłem obrazów kontener�
 
 ### <a name="dockerfile"></a>Pliku dockerfile
 
-**Pliku dockerfile** to plik, który definiuje zestaw instrukcji, które tworzą obraz. Każda instrukcja w **pliku dockerfile** tworzy warstwę w obrazie. W większości przypadków po odbudowaniu obrazu są przebudowywane tylko te warstwy, które uległy zmianie. **Pliku dockerfile** może być dystrybuowany do innych i umożliwia ich ponowne utworzenie w celu utworzenia nowego obrazu w taki sam sposób, w jaki został utworzony. Chociaż pozwala to na dystrybucję *instrukcji* dotyczących sposobu tworzenia obrazu, głównym sposobem dystrybuowania obrazu jest opublikowanie go w rejestrze.
+**Pliku dockerfile** to plik, który definiuje zestaw instrukcji, które tworzą obraz. Każda instrukcja w **pliku dockerfile** tworzy warstwę w obrazie. W większości przypadków po odbudowaniu obrazu zostaną odbudowane tylko te warstwy, które uległy zmianie. **Pliku dockerfile** może być dystrybuowany do innych i umożliwia im odtwarzanie nowego obrazu w taki sam sposób, w jaki został utworzony. Chociaż pozwala to na dystrybucję *instrukcji* dotyczących sposobu tworzenia obrazu, głównym sposobem dystrybuowania obrazu jest opublikowanie go w rejestrze.
 
 ## <a name="net-core-images"></a>Obrazy .NET Core
 
@@ -64,7 +64,7 @@ Hostowanie kontenera w chmurze bez żadnych usług zarządzania wyższego poziom
  [Azure Batch](https://azure.microsoft.com/services/batch/) \
 Uruchamiaj powtarzające się zadania obliczeniowe przy użyciu kontenerów.
 
-- @No__t_1 [Service Fabric platformy Azure](https://azure.microsoft.com/services/service-fabric/)
+- \ [Service Fabric platformy Azure](https://azure.microsoft.com/services/service-fabric/)
 Podnieś, Przenieś i unowocześnienie aplikacji .NET do mikrousług przy użyciu kontenerów systemu Windows Server.
 
 - [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) \

@@ -1,25 +1,25 @@
 ---
-title: Platformy docelowe
+title: Platformy docelowe w projektach w stylu zestawu SDK — .NET
 description: Dowiedz się więcej na temat platform docelowych dla aplikacji i bibliotek platformy .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/23/2019
+ms.date: 10/27/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: b05923b293b1a5bb94a69ddd0154f8701b9326b0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: d528201d1420b171e3a75919269e1c7a714f86e8
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216661"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040997"
 ---
-# <a name="target-frameworks"></a>Platformy docelowe
+# <a name="target-frameworks-in-sdk-style-projects"></a>Platformy docelowe w projektach w stylu zestawu SDK
 
 Gdy docelowa jest struktura w aplikacji lub bibliotece, określasz zestaw interfejsów API, które mają być dostępne dla aplikacji lub biblioteki. Należy określić platformę docelową w pliku projektu przy użyciu monikerów platformy docelowej (TFMs).
 
 Aplikacja lub biblioteka może być ukierunkowana na wersję [.NET Standard](net-standard.md). Wersje .NET Standard reprezentują standardowe zestawy interfejsów API we wszystkich implementacjach platformy .NET. Na przykład biblioteka może kierować do .NET Standard 1,6 i uzyskać dostęp do interfejsów API, które działają w ramach platformy .NET Core i .NET Framework przy użyciu tej samej bazy kodu.
 
-W celu uzyskania dostępu do interfejsów API specyficznych dla implementacji aplikacja lub biblioteka może być również ukierunkowana na określoną implementację platformy .NET. Przykładowo aplikacja, która jest przeznaczona dla platformy Xamarin. iOS (na `Xamarin.iOS10`przykład), uzyskuje dostęp do otok interfejsów API systemu iOS dla systemu iOS 10 lub aplikację, która jest przeznaczona dla platforma uniwersalna systemu Windows ( `uap10.0`platformy UWP), ma dostęp do interfejsu API kompilowanego dla urządzeń z systemem System Windows 10.
+W celu uzyskania dostępu do interfejsów API specyficznych dla implementacji aplikacja lub biblioteka może być również ukierunkowana na określoną implementację platformy .NET. Przykładowo aplikacja, która jest przeznaczona dla platformy Xamarin. iOS (na przykład `Xamarin.iOS10`), uzyskuje dostęp do otok interfejsu API systemu iOS dostarczonych przez platformę iOS 10 lub aplikację, która jest przeznaczona dla platforma uniwersalna systemu Windows (platformy UWP, `uap10.0`), ma dostęp do interfejsów API, które kompilują dla urządzeń z systemem Windows 10.
 
 W przypadku niektórych platform docelowych (na przykład .NET Framework) interfejsy API są definiowane przez Zestawy instalowane przez platformę w systemie i mogą zawierać interfejsy API struktury aplikacji (na przykład ASP.NET).
 
@@ -31,23 +31,23 @@ Poniższa tabela zawiera definicje najpopularniejszych platform docelowych, spos
 
 | Struktura docelowa      | Najnowsza <br/> Stabilna wersja | Moniker platformy docelowej (TFM) | Realizowane <br/> Wersja .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | Standard 2.1                 | Brak                                     |
-| .NET Core             | 3.0                         | netcoreapp 3.0                  | 2.1                                     |
-| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
+| .NET Standard         | 2,1                         | Standard 2.1                 | Brak                                     |
+| .NET Core             | 3.0                         | netcoreapp 3.0                  | 2,1                                     |
+| .NET Framework        | 4,8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Obsługiwane wersje platformy docelowej
 
-Platforma docelowa jest zwykle przywoływana przez TFM. W poniższej tabeli przedstawiono Platformy docelowe obsługiwane przez zestaw .NET Core SDK i klienta NuGet. Odpowiedniki są wyświetlane w nawiasach kwadratowych. Na przykład, `win81` jest odpowiednikiem TFM do `netcore451`.
+Platforma docelowa jest zwykle przywoływana przez TFM. W poniższej tabeli przedstawiono Platformy docelowe obsługiwane przez zestaw .NET Core SDK i klienta NuGet. Odpowiedniki są wyświetlane w nawiasach kwadratowych. Na przykład `win81` jest równoważne TFM `netcore451`.
 
 | Struktura docelowa           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | Standard 1.0<br>Standard 1.1<br>Standard 1.2<br>Standard 1.3<br>Standardowa 1.4<br>Standard 1.5<br>Standard 1.6<br>netstandard2.0<br>Standard 2.1 |
+| .NET Standard              | Standard 1.0<br>Standard 1.1<br>Standard 1.2<br>Standard 1.3<br>Standardowa 1.4<br>Standard 1.5<br>Standard 1.6<br>Standard 2.0<br>Standard 2.1 |
 | .NET Core                  | netcoreapp 1.0<br>netcoreapp 1.1<br>netcoreapp 2.0<br>netcoreapp 2.1<br>netcoreapp 2.2<br>netcoreapp 3.0 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Sklep Windows              | Rdzeń [netcore45]<br>netcore45 [win] [Win8]<br>netcore451 [Win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
-| Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
+| Windows Phone              | WP [WP7]<br>wp7<br>wp75<br>WP8<br>wp81<br>wpa81 |
 | Platforma uniwersalna systemu Windows | UAP [UAP 10.0]<br>UAP 10.0 [Win10] [netcore50] |
 
 ## <a name="how-to-specify-target-frameworks"></a>Jak określić Platformy docelowe
@@ -67,7 +67,7 @@ Struktury docelowe są określone w pliku projektu. W przypadku określenia poje
 
 W przypadku określania wielu platform docelowych można warunkowo odwoływać się do zestawów dla każdej platformy docelowej. W kodzie można warunkowo kompilować do tych zestawów przy użyciu symboli preprocesora z logiką *if-then-else* .
 
-Następujący plik projektu biblioteki kieruje interfejsy API .NET Standard (`netstandard1.4`) i interfejsów API .NET Framework (`net40` i `net45`). Użyj elementu **TargetFrameworks** w liczbie mnogiej z wieloma platformami docelowymi. Należy pamiętać, `Condition` że atrybuty obejmują pakiety specyficzne dla implementacji, gdy biblioteka jest skompilowana dla dwóch .NET Framework TFMs:
+Następujący plik projektu biblioteki kieruje interfejsy API .NET Standard (`netstandard1.4`) i interfejsów API .NET Framework (`net40` i `net45`). Użyj elementu **TargetFrameworks** w liczbie mnogiej z wieloma platformami docelowymi. Zwróć uwagę, jak atrybuty `Condition` zawierają pakiety specyficzne dla implementacji, gdy biblioteka jest skompilowana dla dwóch .NET Framework TFMs:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -108,7 +108,7 @@ public class MyClass
 }
 ```
 
-System kompilacji ma świadomość symboli preprocesora reprezentujących Platformy docelowe wyświetlane w tabeli [obsługiwane wersje platformy docelowej](#supported-target-framework-versions) . Przy użyciu symbolu, który reprezentuje .NET Standard lub TFM .NET Core, Zastąp kropkę znakiem podkreślenia i Zmień małe litery na wielkie litery (na przykład symbol dla elementu `netstandard1.4` `NETSTANDARD1_4`).
+System kompilacji ma świadomość symboli preprocesora reprezentujących Platformy docelowe, które są wyświetlane w tabeli [obsługiwane wersje platformy docelowej](#supported-target-framework-versions) w przypadku korzystania z projektów w stylu zestawu SDK. Przy użyciu symbolu, który reprezentuje .NET Standard lub TFM .NET Core, Zastąp kropkę znakiem podkreślenia i Zmień małe litery na wielkie litery (na przykład symbol `netstandard1.4` jest `NETSTANDARD1_4`).
 
 Kompletna lista symboli preprocesora dla platform .NET Core Target Framework to:
 
@@ -120,14 +120,14 @@ Poniższe Platformy docelowe są przestarzałe. Pakiety przeznaczone dla tych pl
 
 | Przestarzałe TFM                                                                             | Zastępc |
 | ------------------------------------------------------------------------------------------ | ----------- |
-| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>środowiska DNX<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
 | netcore50                                                                                  | UAP 10.0     |
 | kupione                                                                                        | netcore45   |
 | Win8                                                                                       | netcore45   |
-| win81                                                                                      | netcore451  |
+| Win81                                                                                      | netcore451  |
 | Win10                                                                                      | UAP 10.0     |
-| winrt                                                                                      | netcore45   |
+| środowiska                                                                                      | netcore45   |
 
 ## <a name="see-also"></a>Zobacz także
 

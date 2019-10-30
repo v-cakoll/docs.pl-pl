@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
-ms.openlocfilehash: 8ec4627d070cc670ce04be3a5d0298dba0a279d0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: eb782b2fa1fb73c7407b57a0942e5eebb30474ff
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582130"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040931"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>Parametry opcjonalne muszą określać wartość domyślną
 
@@ -20,17 +20,26 @@ Parametry opcjonalne muszą podawać wartości domyślne, których można użyć
 
 **Identyfikator błędu:** BC30812
 
-## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+## <a name="example"></a>Przykład
 
-Określ wartości domyślne dla parametrów opcjonalnych; na przykład:
+Poniższy przykład generuje BC30812:
 
 ```vb
-Sub Proc1(ByVal X As Integer,
-      Optional ByVal Y As String = "Default Value")
-    MsgBox("Default argument is: " & Y)
+Sub Proc1(x As Integer, Optional y As String)
+    Console.WriteLine("Default argument is: " & y)
+End Sub
+```
+
+## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+Określ wartości domyślne dla parametrów opcjonalnych:
+
+```vb
+Sub Proc1(x As Integer, Optional y As String = "Default Value")
+    Console.WriteLine("Default argument is: " & y)
 End Sub
 ```
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Optional](../../../visual-basic/language-reference/modifiers/optional.md)
+- [Optional](../modifiers/optional.md)

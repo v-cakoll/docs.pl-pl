@@ -2,12 +2,12 @@
 title: Specyfikacja manifestu dostawcy
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: cc58bbc82f3930f087b5da0c64afb4f9f03e905b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854503"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040492"
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -54,7 +54,7 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
   
  Napiszesz plik XML, który ma dwie sekcje:  
   
-- Lista typów dostawców wyrażona w warunkach EDM i zdefiniuj mapowanie dla obu kierunków: Modelu EDM-to-Provider i dostawcy do modelu EDM.  
+- Lista typów dostawców wyrażona w warunkach modelu EDM i zdefiniuj mapowanie dla obu kierunków: EDM-to-Provider i Provider-do-EDM.  
   
 - Lista funkcji obsługiwanych przez dostawcę, gdzie parametry i zwracane typy są wyrażane w warunkach EDM.  
   
@@ -66,7 +66,7 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
  Jednak dany dostawca może obsługiwać różne magazyny lub różne wersje tego samego magazynu. W związku z tym dostawca musi zgłosić inny manifest dla każdego z obsługiwanych magazynów danych.  
   
 ### <a name="provider-manifest-token"></a>Token manifestu dostawcy  
- Po otwarciu połączenia z magazynem danych dostawca może wysyłać zapytania o informacje w celu zwrócenia odpowiedniego manifestu. Może to nie być możliwe w scenariuszach w trybie offline, w których informacje o połączeniu są niedostępne lub nie można nawiązać połączenia ze sklepem. Zidentyfikuj manifest przy użyciu `ProviderManifestToken` atrybutu `Schema` elementu w pliku SSDL. Nie ma wymaganego formatu dla tego atrybutu; Dostawca wybiera minimalne informacje niezbędne do zidentyfikowania manifestu bez otwierania połączenia z magazynem.  
+ Po otwarciu połączenia z magazynem danych dostawca może wysyłać zapytania o informacje w celu zwrócenia odpowiedniego manifestu. Może to nie być możliwe w scenariuszach w trybie offline, w których informacje o połączeniu są niedostępne lub nie można nawiązać połączenia ze sklepem. Zidentyfikuj manifest przy użyciu atrybutu `ProviderManifestToken` elementu `Schema` w pliku SSDL. Nie ma wymaganego formatu dla tego atrybutu; Dostawca wybiera minimalne informacje niezbędne do zidentyfikowania manifestu bez otwierania połączenia z magazynem.  
   
  Na przykład:  
   
@@ -77,13 +77,13 @@ W tej sekcji omówiono, w jaki sposób dostawca magazynu danych może obsługiwa
 ## <a name="provider-manifest-programming-model"></a>Model programowania manifestu dostawcy  
  Dostawcy pochodzą z <xref:System.Data.Common.DbXmlEnabledProviderManifest>, co umożliwia ich deklaratywne określanie ich manifestów. Na poniższej ilustracji przedstawiono hierarchię klas dostawcy:  
   
- ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![Dawaj](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Interfejs API odnajdywania  
  Manifest dostawcy jest ładowany przez moduł ładujący metadanych magazynu (StoreItemCollection), przy użyciu połączenia magazynu danych lub tokenu manifestu dostawcy.  
   
 #### <a name="using-a-data-store-connection"></a>Korzystanie z połączenia magazynu danych  
- Gdy jest dostępne połączenie z magazynem danych, <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> Wywołaj polecenie zwracające token, który jest <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> przesyłany do metody <xref:System.Data.Common.DbProviderManifest>, która zwraca wartość. Ta metoda deleguje do implementacji `GetDbProviderManifestToken`dostawcy.  
+ Gdy jest dostępne połączenie z magazynem danych, wywołaj <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>, aby zwrócić token, który jest przesyłany do metody <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>, która zwraca <xref:System.Data.Common.DbProviderManifest>. Ta metoda deleguje do implementacji dostawcy `GetDbProviderManifestToken`.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Korzystanie z tokenu manifestu dostawcy  
  W przypadku scenariusza offline token jest wybierany z reprezentacji SSDL. SSDL pozwala określić ProviderManifestToken (zobacz [element Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) , aby uzyskać więcej informacji. Na przykład jeśli nie można otworzyć połączenia, plik SSDL ma token manifestu dostawcy, który określa informacje o manifeście.  
   
-```  
+```csharp  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   
@@ -259,10 +259,10 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa atrybutu|Typ danych|Wymagane|Wartość domyślna|Opis|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
 |Nazwa|String|Tak|n/d|Identyfikator/nazwa funkcji|  
-|Atrybuty|String|Nie|pozycję|Typ zwracany funkcji modelu EDM|  
+|Atrybuty|String|Nie|Pozycję|Typ zwracany funkcji modelu EDM|  
 |Agregowanie|Boolean|Nie|False|True, jeśli funkcja jest funkcją agregującą|  
-|Wbudowan|Boolean|Nie|Prawda|Prawda, jeśli funkcja jest wbudowana w magazyn danych|  
-|StoreFunctionName|String|Nie|\<> Nazwy|Nazwa funkcji w magazynie danych.  Umożliwia przekierowanie nazw funkcji.|  
+|Wbudowan|Boolean|Nie|Oznacza|Prawda, jeśli funkcja jest wbudowana w magazyn danych|  
+|StoreFunctionName|String|Nie|Nazwa \<|Nazwa funkcji w magazynie danych.  Umożliwia przekierowanie nazw funkcji.|  
 |NiladicFunction|Boolean|Nie|False|Prawda, jeśli funkcja nie wymaga parametrów i jest wywoływana bez żadnych parametrów|  
 |ParameterType<br /><br /> Semantyki|ParameterSemantics|Nie|AllowImplicit<br /><br /> Konwersja|Wybór sposobu postępowania z zastępowaniem typu parametru przez potok zapytania:<br /><br /> - ExactMatchOnly<br />- AllowImplicitPromotion<br />- AllowImplicitConversion|  
   
@@ -277,7 +277,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Tryb|Parametr<br /><br /> Kierunek|Tak|n/d|Kierunek parametru:<br /><br /> -in<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace — atrybut  
- Każdy dostawca magazynu danych musi definiować przestrzeń nazw lub grupę przestrzeni nazw, aby uzyskać informacje zdefiniowane w manifeście. Ta przestrzeń nazw może być używana w Entity SQL zapytania do rozpoznawania nazw funkcji i typów. Przykład: SqlServer. Ta przestrzeń nazw musi być różna od kanonicznej przestrzeni nazw, EDM zdefiniowanej przez usługi jednostek dla funkcji standardowych, które mają być obsługiwane przez Entity SQL zapytań.  
+ Każdy dostawca magazynu danych musi definiować przestrzeń nazw lub grupę przestrzeni nazw, aby uzyskać informacje zdefiniowane w manifeście. Ta przestrzeń nazw może być używana w Entity SQL zapytania do rozpoznawania nazw funkcji i typów. Na przykład: SqlServer. Ta przestrzeń nazw musi być różna od kanonicznej przestrzeni nazw, EDM zdefiniowanej przez usługi jednostek dla funkcji standardowych, które mają być obsługiwane przez Entity SQL zapytań.  
   
 ## <a name="see-also"></a>Zobacz także
 

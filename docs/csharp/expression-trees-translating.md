@@ -2,13 +2,14 @@
 title: Tłumaczenie drzew wyrażeń
 description: Dowiedz się, jak odwiedzać każdy węzeł w drzewie wyrażenia podczas tworzenia zmodyfikowanej kopii tego drzewa wyrażenia.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925837"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036621"
 ---
 # <a name="translating-expression-trees"></a>Tłumaczenie drzew wyrażeń
 
@@ -23,7 +24,7 @@ Kod, który tworzysz w celu przetłumaczenia drzewa wyrażenia, jest rozszerzeni
 Zobaczmy to w akcji, odwiedzając drzewo wyrażenia i tworząc nowe drzewo z niektórymi węzłami zastępczymi. W tym przykładzie zamienimy każdą stałą na stałą o dziesięć razy większym.
 W przeciwnym razie pozostawimy drzewo wyrażenia bez zmian. Zamiast odczytywania wartości stałej i zamieniania jej na nową stałą, wprowadzimy tę zamianę, zastępując węzeł stały nowym węzłem, który wykonuje mnożenie.
 
-W tym miejscu po znalezieniu stałego węzła utworzysz nowy węzeł mnożenia, którego elementy podrzędne są pierwotną stałą i stałą `10`:
+W tym miejscu po znalezieniu stałego węzła utworzysz nowy węzeł mnożenia, którego elementy podrzędne są pierwotną stałą, a `10`stałej:
 
 ```csharp
 private static Expression ReplaceNodes(Expression original)

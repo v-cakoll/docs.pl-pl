@@ -1,35 +1,36 @@
 ---
-title: Funkcje lokalne vs. wyrażenia lambda
-description: Dowiedz się, dlaczego funkcje lokalne może być lepszym rozwiązaniem niż wyrażenia lambda.
+title: Funkcje lokalne a wyrażenia lambda
+description: Dowiedz się, dlaczego funkcje lokalne mogą być lepszym wyborem niż wyrażenia lambda.
 ms.date: 06/27/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 7577950314f8c57fba635db8b2bcd69e8d427dc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a644b6868a37b3d6231a514dc37030cae062785a
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61659777"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73038800"
 ---
-# <a name="local-functions-compared-to-lambda-expressions"></a>Funkcje lokalne w porównaniu do wyrażenia lambda
+# <a name="local-functions-compared-to-lambda-expressions"></a>Funkcje lokalne w porównaniu z wyrażeniami lambda
 
-Na pierwszy rzut oka [funkcje lokalne](programming-guide/classes-and-structs/local-functions.md) i [wyrażeń lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) są bardzo podobne. W wielu przypadkach wybór między korzystaniem z wyrażenia lambda i funkcji lokalnych jest kwestią styl i osobistych preferencji. Istnieją jednak rzeczywistych różnic, w których można użyć jednej lub drugiej, należy pamiętać o.
+Na pierwszy rzut oka [funkcje lokalne](programming-guide/classes-and-structs/local-functions.md) i [wyrażenia lambda](./programming-guide/statements-expressions-operators/lambda-expressions.md) są bardzo podobne. W wielu przypadkach wybór między wyrażeniami lambda i funkcjami lokalnymi jest kwestią stylu i preferencji osobistych. Istnieją jednak rzeczywiste różnice w tym, gdzie można korzystać z jednej z nich lub drugiej.
 
-Przeanalizujmy różnice między lokalnym funkcji i implementacji wyrażenia lambda silni algorytmu. Pierwszą wersję przy użyciu funkcji lokalnego:
+Sprawdźmy różnice między funkcją lokalną a implementacją wyrażenia lambda algorytmu silnia. Pierwsza wersja przy użyciu funkcji lokalnej:
 
 [!code-csharp[LocalFunctionFactorial](../../samples/snippets/csharp/new-in-7/MathUtilities.cs#37_LocalFunctionFactorial "Recursive factorial using local function")]
 
-Porównaj tę implementację, wersji, który używa wyrażenia lambda:
+Kontrast tej implementacji z wersją, która używa wyrażeń lambda:
 
 [!code-csharp[26_LambdaFactorial](../../samples/snippets/csharp/new-in-7/MathUtilities.cs#38_LambdaFactorial "Recursive factorial using lambda expressions")]
 
-Funkcje lokalne mają nazwy. Wyrażenia lambda są metod anonimowych, które są przypisane do zmiennych, które są `Func` lub `Action` typów. Kiedy Deklarujesz funkcję lokalnego, typy argumentów i zwracanego typu są częścią deklaracji funkcji. Zamiast część treści lambda wyrażenia, typy argumentów i zwracanego typu należą deklaracji zmiennej typu wyrażenia lambda. Różnice te dwa może spowodować kod bardziej zrozumiały.
+Funkcje lokalne mają nazwy. Wyrażenia lambda są metodami anonimowymi przypisanymi do zmiennych, które są `Func` lub `Action`. Gdy deklarujesz funkcję lokalną, typy argumentów i typ zwracany są częścią deklaracji funkcji. Zamiast być częścią treści wyrażenia lambda, typy argumentów i typ zwracany są częścią deklaracji typu zmiennej wyrażenia lambda. Te dwie różnice mogą spowodować wyraźniejszy kod.
 
-Funkcje lokalne mają różną asercja określonego przydziału niż wyrażenia lambda. Deklaracja funkcji lokalnych mogą być przywoływane z dowolnego miejsca kodu, gdzie są dostępne w zakresie. Wyrażenie lambda musi być przypisany do zmiennej delegata, zanim można uzyskać dostępu do (lub wywoływanym za pośrednictwem delegata, odwołuje się do wyrażenia lambda.) Zwróć uwagę, że wersji za pomocą wyrażenia lambda musi zadeklarować i zainicjować wyrażenia lambda `nthFactorial` przed zdefiniowaniem go. To nie powoduje to błąd czasu kompilacji do odwoływania się do `nthFactorial` przed przypisaniem go.
-Te różnice oznacza, że cyklicznego algorytmy są łatwiej utworzyć przy użyciu funkcji lokalnych. Można zadeklarować i zdefiniuj funkcji lokalnej, który wywołuje sam siebie. Wyrażenia lambda należy zadeklarować i przypisać wartość domyślną, zanim zostaną ponownie przypisane do jednostki, który odwołuje się do tego samego wyrażenia lambda.
+Funkcje lokalne mają różne reguły dla określonego przypisania niż wyrażenia lambda. Deklaracja funkcji lokalnej może być przywoływana z dowolnego miejsca w kodzie, w którym znajduje się w zakresie. Wyrażenie lambda musi być przypisane do zmiennej delegata, zanim będzie można uzyskać do niej dostęp (lub wywołać za pomocą delegata odwołującego się do wyrażenia lambda). Należy zauważyć, że wersja używająca wyrażenia lambda musi deklarować i inicjować wyrażenie lambda, `nthFactorial` przed jego zdefiniowaniem. Nie powoduje to błędu czasu kompilacji dla odwołania `nthFactorial` przed przypisaniem.
+Różnice te oznaczają, że algorytmy cykliczne są łatwiejsze do tworzenia przy użyciu funkcji lokalnych. Można zadeklarować i zdefiniować funkcję lokalną, która wywołuje samą siebie. Wyrażenia lambda muszą być zadeklarowane i przypisane do wartości domyślnej przed ponownym przypisaniem do treści, która odwołuje się do tego samego wyrażenia lambda.
 
-Asercja określonego przydziału reguły również wpływać na wszystkie zmienne, które są przechwytywane przez lokalny funkcja lub wyrażenie lambda. Funkcje lokalne i reguł wyrażeń lambda popytu, że wszystkie przechwycone zmienne zdecydowanie są przypisywane w punkcie, po przekonwertowaniu lokalnej funkcja lub wyrażenie lambda do delegata. Różnica polega na tym, że wyrażenia lambda są konwertowane na delegatów, gdy są one zgłoszone. Funkcje lokalne są konwertowane do delegatów tylko wtedy, gdy jest używany jako pełnomocnik. Jeśli zadeklarujesz funkcją lokalną i odwoływać wywołując jak metody, nie będzie można przekonwertować na delegata. Tej reguły można zadeklarować funkcji lokalnej w dowolnym miejscu wygodny w jej zasięgu. Są często do deklarowania funkcji lokalnych na końcu metody nadrzędnego po dowolnej instrukcji return.
+Określone reguły przypisywania mają wpływ na wszystkie zmienne, które są przechwytywane przez funkcję lokalną lub wyrażenie lambda. Zarówno funkcja lokalna, jak i reguły wyrażenia lambda wymagają, aby wszystkie przechwycone zmienne były ostatecznie przypisane w punkcie, gdy funkcja lokalna lub wyrażenie lambda są konwertowane na delegata. Różnica polega na tym, że wyrażenia lambda są konwertowane na delegatów po ich zadeklarowaniu. Funkcja lokalna jest konwertowana na delegatów tylko wtedy, gdy jest używana jako delegat. Jeśli zadeklarujesz funkcję lokalną i odwołujesz się do niej tylko przez wywołanie jej jako metody, nie zostanie ona przekonwertowana na delegata. Ta reguła umożliwia zadeklarować funkcję lokalną w dowolnej wygodnej lokalizacji w jej zasięgu. Często deklaruje funkcje lokalne na końcu metody nadrzędnej po dowolnych instrukcjach Return.
 
-Po trzecie kompilator będzie mógł wykonać analizy statycznej, który umożliwia funkcji lokalnych zdecydowanie przypisać przechwyconych zmiennych w obejmującym zakresie. Rozważmy następujący przykład:
+Po trzecie kompilator może wykonać analizę statyczną, która umożliwia lokalne funkcje, aby ostatecznie przypisywać przechwycone zmienne w zakresie otaczającym. Rozważmy następujący przykład:
 
 ```csharp
 int M()
@@ -42,26 +43,26 @@ int M()
 }
 ```
 
-Kompilator można określić, że `LocalFunction` zdecydowanie przypisuje `y` po wywołaniu. Ponieważ `LocalFunction` jest wywoływana przed `return` instrukcji `y` zdecydowanie przydzielono `return` instrukcji.
+Kompilator może określić, że w `LocalFunction` ostatecznie przypisuje `y` po wywołaniu. Ponieważ `LocalFunction` jest wywoływana przed instrukcją `return`, `y` jest ostatecznie przypisana w instrukcji `return`.
 
-Analizy, które włącza analizę przykład umożliwia czwarty różnica.
-W zależności od ich użycie funkcji lokalnych można uniknąć alokacji stosu, które zawsze są niezbędne do wyrażenia lambda. Jeśli funkcja lokalna nigdy nie jest konwertowany na obiekt delegowany, a żaden z przechwycone przez funkcję Lokalne zmienne są przechwytywane przez inne wyrażenia lambda lub funkcji lokalnych, które są konwertowane na obiekty delegowane, kompilator można uniknąć alokacji sterty. 
+Analiza, która umożliwia przykładową analizę, włącza czwartą różnicę.
+W zależności od ich użycia funkcje lokalne mogą uniknąć przydziałów sterty, które są zawsze niezbędne dla wyrażeń lambda. Jeśli funkcja lokalna nigdy nie jest konwertowana na delegata, a żadna ze zmiennych przechwyconych przez funkcję lokalną nie zostanie przechwycona przez inne wyrażenia lambda lub funkcje lokalne, które są konwertowane na delegatów, kompilator może uniknąć przydziałów sterty. 
 
-Rozważmy następujący przykład async:
+Rozważmy ten przykład asynchroniczny:
 
 [!code-csharp[TaskLambdaExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#36_TaskLambdaExample "Task returning method with lambda expression")]
 
-Zawiera zamknięcia dla tego wyrażenia lambda `address`, `index` i `name` zmiennych. W przypadku funkcji lokalnych, może być obiekt, który implementuje zamknięcia `struct` typu. Tego typu struktury zostaną przekazane przez odwołanie do funkcji lokalnej. Różnica w implementacji będzie zapisywać w alokacji.
+Zamknięcie tego wyrażenia lambda zawiera zmienne `address`, `index` i `name`. W przypadku funkcji lokalnych obiekt implementujący zamknięcie może być typem `struct`. Ten typ struktury zostałby przesłany przez odwołanie do funkcji lokalnej. Różnica w implementacji spowodowałaby zapisanie alokacji.
 
-Wystąpienia niezbędne dla wyrażeń lambda oznacza alokacje dodatkową pamięć, która może być czynnikiem wydajności ścieżek kodu wrażliwego na czas.
-Funkcje lokalne nie są naliczane to obciążenie. W powyższym przykładzie wersja funkcji lokalnych ma 2 alokacje mniej niż wersja wyrażenia lambda.
+Wystąpienie niezbędne dla wyrażeń lambda oznacza dodatkowe alokacje pamięci, które mogą być czynnikiem wydajności w ścieżkach kodu o kluczowym znaczeniu.
+Funkcja lokalna nie wiąże się z tym obciążeniem. W powyższym przykładzie wersja funkcji lokalnych ma 2 mniejsze alokacje niż wersja wyrażenia lambda.
 
 > [!NOTE]
-> Funkcja lokalna wielokrotność ta metoda używa również klasy do zamknięcia. Czy zamknięcia dla funkcji lokalnej jest implementowany jako `class` lub `struct` jest szczegółowo opisuje implementacja. Funkcja lokalna może używać `struct` natomiast lambda będzie zawsze używać `class`.
+> Funkcja lokalna równoważna tej metody używa również klasy do zamykania. Czy zamknięcie funkcji lokalnej jest zaimplementowane jako `class`, czy `struct` jest szczegółami implementacji. Funkcja lokalna może używać `struct`, podczas gdy wyrażenie lambda zawsze będzie używać `class`.
 
 [!code-csharp[TaskLocalFunctionExample](../../samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
-Jedną z zalet końcowego nie zostało to pokazane w tym przykładzie jest, można zaimplementować jako Iteratory, za pomocą funkcji lokalnych `yield return` składni, aby wygenerować je sekvence hodnot. `yield return` Instrukcji jest niedozwolone w wyrażeniach lambda.
+Jedną z końcowych zalet nie pokazanych w tym przykładzie jest to, że funkcje lokalne mogą być implementowane jako Iteratory, przy użyciu składni `yield return` w celu utworzenia sekwencji wartości. Instrukcja `yield return` nie jest dozwolona w wyrażeniach lambda.
 
-Funkcje lokalne, może wydawać się nadmiarowe wyrażenia lambda, mogą faktycznie służyć do różnych celów i mają różne sposoby zastosowania.
-Funkcje lokalne są bardziej efektywne w przypadku, gdy chcesz napisać funkcję, która jest wywoływana tylko w kontekście innej metody.
+Podczas gdy funkcje lokalne mogą wydawać się nadmiarowe w wyrażeniach lambda, są one w rzeczywistości wykorzystywane do różnych celów i mają różne zastosowania.
+Funkcje lokalne są wydajniejsze w przypadku, gdy chcesz napisać funkcję, która jest wywoływana tylko z kontekstu innej metody.

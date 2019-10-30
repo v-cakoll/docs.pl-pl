@@ -1,20 +1,21 @@
 ---
-title: Wyrażenia lambda niejawnie wpisane
-description: Dowiedz się, dlaczego nie można używać deklaracji zmiennej niejawnie wpisany do deklarowania wyrażenia lambda.
+title: Niejawnie wpisane wyrażenia lambda
+description: Dowiedz się, dlaczego nie można użyć deklaracji zmiennej o typie określonym niejawnie do zadeklarowania wyrażenia lambda.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: 9b798f40676afaad2075806d6dc512f279bc7065
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c6b0f2666a5c67ce8c89222da5959304ecb8fb93
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672084"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039130"
 ---
-# <a name="implicitly-typed-lambda-expressions"></a>Wyrażenia lambda niejawnie wpisane
+# <a name="implicitly-typed-lambda-expressions"></a>Niejawnie wpisane wyrażenia lambda
 
-Niejawnie wpisane deklaracji zmiennych nie można użyć do deklarowania wyrażenia lambda.
-Tworzy problem cykliczne logiki dla kompilatora. `var` Deklaracji informuje kompilator, aby ustalić typ zmiennej z typu wyrażeniem po prawej stronie operatora przypisania. Wyrażenie lambda nie ma typów w czasie kompilacji, ale jest konwertowany na wszystkie dopasowania delegata lub typ wyrażenia. Po przypisaniu do wyrażenia lambda do zmiennej na delegata lub typ wyrażenia nakazuje kompilatorowi i spróbuj przekonwertować wyrażenia lambda na wyrażenie lub delegata, która pasuje do oznaczenia "przypisane do" zmiennej. Kompilator będą musieli spróbować dokonuje się po prawej stronie przypisania dopasowanie typu po lewej stronie przypisania w kolejności. 
+Nie można użyć deklaracji zmiennej typu niejawnie wpisanej do deklarowania wyrażenia lambda.
+Tworzy cykliczny problem logiki kompilatora. Deklaracja `var` informuje kompilator, aby ustalić typ zmiennej z typu wyrażenia po prawej stronie operatora przypisania. Wyrażenie lambda nie ma typu czasu kompilacji, ale jest konwertowane na dowolny pasujący delegat lub typ wyrażenia. Po przypisaniu wyrażenia lambda do zmiennej obiektu delegowanego lub typu wyrażenia poinformujesz kompilator, aby wypróbować i skonwertować wyrażenie lambda do wyrażenia lub delegata, który pasuje do sygnatury zmiennej "Assigned to". Kompilator musi próbować wykonać tę czynność po prawej stronie przypisania dopasowuje się do typu po lewej stronie przypisania. 
 
-Obie strony przypisania nie informuje kompilator, aby obejrzeć obiektu po drugiej stronie operatora przypisania i sprawdzić, czy mój typ odpowiada.
+Obie strony przypisania nie mogą być informować kompilatora, aby wyszukać obiekt po drugiej stronie operatora przypisania i zobaczyć, czy mój typ jest zgodny.
 
-Można uzyskać nawet więcej informacji na temat Dlaczego języka C# określa to zachowanie, czytając [w tym artykule](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (Pobierz plik PDF)
+Możesz uzyskać jeszcze więcej szczegółowych informacji na temat tego C# , dlaczego język określa takie zachowanie, czytając [ten artykuł](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (pobieranie plików PDF)

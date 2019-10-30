@@ -2,19 +2,20 @@
 title: Interpretowanie wyrażeń
 description: Dowiedz się, jak napisać kod, aby sprawdzić strukturę drzewa wyrażenia.
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: c9d80ca234e298df2f2e7ce48fbf92cb817fc8a7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 34434a633d866b82da3da713aaecc218c7d35124
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925686"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73036898"
 ---
 # <a name="interpreting-expressions"></a>Interpretowanie wyrażeń
 
 [Poprzednie--wykonywanie wyrażeń](expression-trees-execution.md)
 
-Teraz Napiszmy kod, aby przeanalizować strukturę *drzewa wyrażenia*. Każdy węzeł w drzewie wyrażenia będzie obiektem klasy, która pochodzi od `Expression`.
+Teraz Napiszmy kod, aby przeanalizować strukturę *drzewa wyrażenia*. Każdy węzeł w drzewie wyrażenia będzie obiektem klasy, która jest pochodną `Expression`.
 
 Ten projekt umożliwia odwiedzanie wszystkich węzłów w drzewie wyrażenia stosunkowo prostej operacji cyklicznej. Ogólna strategia jest uruchamiana w węźle głównym i decyduje o rodzaju węzła.
 
@@ -50,9 +51,9 @@ Zacznijmy od dodania przykładu od wprowadzenia do tej sekcji.
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> Nie używam `var` do deklarowania tego drzewa wyrażenia, ponieważ nie jest to możliwe, ponieważ prawa strona przypisania jest niejawnie wpisywana. Więcej informacji można znaleźć [tutaj](implicitly-typed-lambda-expressions.md).
+> Nie używam `var` do zadeklarować tego drzewa wyrażenia, ponieważ nie jest to możliwe, ponieważ prawa strona przypisania jest niejawnie wpisywana. Więcej informacji można znaleźć [tutaj](implicitly-typed-lambda-expressions.md).
 
-Węzeł główny to `LambdaExpression`. Aby uzyskać interesujący kod z prawej strony `=>` operatora, należy znaleźć jeden z elementów podrzędnych. `LambdaExpression` Wykonamy te czynności ze wszystkimi wyrażeniami w tej sekcji. Węzeł nadrzędny pomaga nam znaleźć zwracany typ `LambdaExpression`.
+Węzeł główny to `LambdaExpression`. Aby uzyskać interesujący kod z prawej strony operatora `=>`, należy znaleźć jeden z elementów podrzędnych `LambdaExpression`. Wykonamy te czynności ze wszystkimi wyrażeniami w tej sekcji. Węzeł nadrzędny pomaga nam znaleźć zwracany typ `LambdaExpression`.
 
 Aby przeanalizować każdy węzeł w tym wyrażeniu, należy rekursywnie odwiedzić liczbę węzłów. Oto prosta Pierwsza implementacja:
 
@@ -214,7 +215,7 @@ public class ConstantVisitor : Visitor
 }
 ```
 
-Ten algorytm jest podstawą algorytmu, który może odwiedzać dowolne `LambdaExpression`dowolne. Istnieje wiele otworów, w tym, że kod, który został utworzony, szuka bardzo małego przykładu możliwych zestawów węzłów drzewa wyrażeń, które może napotkać. Jednak nadal możesz uzyskać nieco informacji o tym, co produkuje. (Przypadek domyślny w `Visitor.CreateFromExpression` metodzie drukuje komunikat do konsoli błędów, gdy zostanie napotkany nowy typ węzła. Dzięki temu możesz dodać nowy typ wyrażenia.)
+Ten algorytm jest podstawą algorytmu, który może odwiedzać dowolny `LambdaExpression`. Istnieje wiele otworów, w tym, że kod, który został utworzony, szuka bardzo małego przykładu możliwych zestawów węzłów drzewa wyrażeń, które może napotkać. Jednak nadal możesz uzyskać nieco informacji o tym, co produkuje. (Przypadek domyślny w metodzie `Visitor.CreateFromExpression` drukuje komunikat do konsoli błędów, gdy zostanie napotkany nowy typ węzła. Dzięki temu możesz dodać nowy typ wyrażenia.)
 
 Po uruchomieniu tego gościa w wyrażeniu dodawania pokazanym powyżej otrzymujesz następujące dane wyjściowe:
 
@@ -247,7 +248,7 @@ Wypróbujmy bardziej skomplikowany przykład, ale nadal ograniczasz typy węzł�
 Expression<Func<int>> sum = () => 1 + 2 + 3 + 4;
 ```
 
-Przed uruchomieniem tego polecenia w algorytmie odwiedzającym, wypróbuj ćwiczenie, aby obejść dane wyjściowe. Należy pamiętać, `+` że operator jest *operatorem binarnym*: musi mieć dwa elementy podrzędne, reprezentujący lewy i prawy operand. Istnieje kilka możliwych sposobów konstruowania drzewa, które może być poprawne:
+Przed uruchomieniem tego polecenia w algorytmie odwiedzającym, wypróbuj ćwiczenie, aby obejść dane wyjściowe. Należy pamiętać, że operator `+` jest *operatorem binarnym*: musi mieć dwa elementy podrzędne, reprezentujący lewy i prawy operand. Istnieje kilka możliwych sposobów konstruowania drzewa, które może być poprawne:
 
 ```csharp
 Expression<Func<int>> sum1 = () => 1 + (2 + (3 + 4));
@@ -301,7 +302,7 @@ The expression body is:
                 The value of the constant value is 4
 ```
 
-Możesz również uruchomić dowolną z innych próbek za pomocą kodu gościa i zobaczyć, jakie drzewo reprezentuje. Oto przykład `sum3` powyższego wyrażenia (z dodatkowym parametrem uniemożliwiającym kompilatorowi Obliczanie stałej):
+Możesz również uruchomić dowolną z innych próbek za pomocą kodu gościa i zobaczyć, jakie drzewo reprezentuje. Oto przykład powyższego wyrażenia `sum3` (z dodatkowym parametrem uniemożliwiającym kompilatorowi Obliczanie stałej):
 
 ```csharp
 Expression<Func<int, int, int>> sum3 = (a, b) => (1 + a) + (3 + b);
@@ -344,7 +345,7 @@ Zauważ, że nawiasy nie są częścią danych wyjściowych. W drzewie wyrażeni
 
 ## <a name="extending-from-this-sample"></a>Rozszerzanie z tego przykładu
 
-Przykład dotyczy tylko najbardziej podstawoweych drzew wyrażeń. Kod widziany w tej sekcji obsługuje tylko stałe liczby całkowite i operator binarny `+` . Jako ostatni przykład zaktualizujmy gościa, aby obsługiwał bardziej skomplikowane wyrażenie. Przyjrzyjmy się temu:
+Przykład dotyczy tylko najbardziej podstawoweych drzew wyrażeń. Kod widziany w tej sekcji obsługuje tylko stałe liczby całkowite i binarny operator `+`. Jako ostatni przykład zaktualizujmy gościa, aby obsługiwał bardziej skomplikowane wyrażenie. Przyjrzyjmy się temu:
 
 ```csharp
 Expression<Func<int, int>> factorial = (n) =>
@@ -361,9 +362,9 @@ W tym wyrażeniu zobaczysz węzły wszystkich następujących typów:
 1. Równe (wyrażenie binarne)
 2. Pomnóż (wyrażenie binarne)
 3. Warunkowo (? wyrażenia
-4. Wyrażenie wywołania metody ( `Range()` wywoływanie `Aggregate()`i)
+4. Wyrażenie wywołania metody (wywołujące `Range()` i `Aggregate()`)
 
-Jednym ze sposobów modyfikowania algorytmu gościa jest zachowanie go i zapisanie typu węzła za każdym razem, gdy docierasz do `default` klauzuli. Po kilku iteracjach zobaczysz każdy z potencjalnych węzłów. Następnie masz wszystko, co jest potrzebne. Wynik będzie wyglądać następująco:
+Jednym ze sposobów modyfikowania algorytmu gościa jest zachowanie go i zapisanie typu węzła za każdym razem, gdy docierasz do klauzuli `default`. Po kilku iteracjach zobaczysz każdy z potencjalnych węzłów. Następnie masz wszystko, co jest potrzebne. Wynik będzie wyglądać następująco:
 
 ```csharp
 public static Visitor CreateFromExpression(Expression node)

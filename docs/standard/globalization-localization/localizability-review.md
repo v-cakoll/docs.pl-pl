@@ -16,36 +16,34 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8645f77c8d03a475fe0fcc49f3e6d5e28829f9e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026136"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120860"
 ---
 # <a name="localizability-review"></a>Sprawdzenie możliwości lokalizacji
 
-Przegląd możliwości zlokalizowania jest etap pośredni, w trakcie opracowywania aplikacji gotowej dla całego świata. Sprawdza, czy uniwersalnych aplikacji jest gotowy do lokalizacji i identyfikuje każdy kod lub jakiekolwiek aspekty interfejsu użytkownika, które wymagają specjalnej obsługi. Ten krok umożliwia również upewnić się, że proces lokalizacji nie wprowadza żadnych defektów funkcjonalnych w aplikacji. Gdy rozwiązano wszystkie problemy zgłoszone przez sprawdzenie, aplikacja jest gotowa do lokalizacji. W przypadku dokładne sprawdzenie, nie trzeba zmodyfikować każdy kod źródłowy w procesie lokalizacji.
+Przegląd możliwości lokalizowania jest pośrednim krokiem w rozwoju aplikacji gotowej do użycia na całym świecie. Sprawdza, czy aplikacja globalna jest gotowa do lokalizacji i identyfikuje każdy kod lub wszelkie aspekty interfejsu użytkownika, które wymagają specjalnej obsługi. Ten krok pomaga również upewnić się, że proces lokalizacji nie spowoduje wprowadzenia żadnych usterek funkcjonalnych do aplikacji. Po rozpatrzeniu wszystkich problemów zgłoszonych przez przegląd zlokalizowania aplikacja jest gotowa do lokalizacji. Jeśli przegląd możliwości zlokalizowania jest dokładny, nie należy modyfikować kodu źródłowego w procesie lokalizacji.
 
-Przegląd możliwości lokalizacji składa się z trzech następujące testy:
+Przegląd możliwości zlokalizowania składa się z trzech następujących testów:
 
-- [Zaleceń globalnych są implementowane?](#global)
+- [Czy zaimplementowano zalecenia dotyczące globalizacji?](#global)
 
-- [Wrażliwość na ustawienia kulturowe funkcje są obsługiwane poprawnie?](#culture)
+- [Czy funkcje uwzględniające kulturę są prawidłowo obsługiwane?](#culture)
 
-- [Zostały przetestowane aplikacji z danymi międzynarodowymi?](#test)
+- [Czy aplikacja została przetestowana z danymi międzynarodowymi?](#test)
 
 <a name="global"></a>
-## <a name="implement-globalization-recommendations"></a>Implementowanie zaleceń globalnych
+## <a name="implement-globalization-recommendations"></a>Implementowanie zaleceń globalizacji
 
-Jeśli zostały zaprojektowane i opracowane aplikacji przy użyciu lokalizacji należy pamiętać, a jeśli wykonano zaleceń omówione w [globalizacji](../../../docs/standard/globalization-localization/globalization.md) artykułu, przegląd możliwości lokalizacji w dużej mierze jest zapewnienie jakości — dostęp próbny . W przeciwnym razie na tym etapie należy przejrzeć i zaimplementować zalecenia dotyczące [globalizacji](../../../docs/standard/globalization-localization/globalization.md) i naprawiać błędy w kodzie źródłowym, które uniemożliwiają lokalizacji.
+Jeśli aplikacja została zaprojektowana i opracowana z myślą o lokalizacji, a po wykonaniu zaleceń omówionych w artykule [globalizacja](../../../docs/standard/globalization-localization/globalization.md) , przegląd możliwości zlokalizowania będzie miał duże gwarancje jakości. W przeciwnym razie na tym etapie należy przejrzeć i zaimplementować zalecenia dotyczące [globalizacji](../../../docs/standard/globalization-localization/globalization.md) oraz usunąć błędy w kodzie źródłowym, które uniemożliwiają lokalizację.
 
 <a name="culture"></a>
-## <a name="handle-culture-sensitive-features"></a>Obsługa funkcji wrażliwość na ustawienia kulturowe
+## <a name="handle-culture-sensitive-features"></a>Obsługa funkcji zależnych od kultury
 
-.NET nie zapewnia wsparcia programowego kilka obszarów, które różnią się od kultury. W większości przypadków trzeba napisać kod niestandardowy w celu obsługi obszary funkcji, jak pokazano poniżej:
+Platforma .NET nie zapewnia programistycznej pomocy technicznej w wielu obszarach, które różnią się w zależności od kultury. W większości przypadków należy napisać niestandardowy kod do obsługi obszarów funkcji, takich jak następujące:
 
 - Adresy
 
@@ -53,9 +51,9 @@ Jeśli zostały zaprojektowane i opracowane aplikacji przy użyciu lokalizacji n
 
 - Rozmiary papieru
 
-- Jednostki miary, używane do długości, wagi, obszaru, woluminów i temperatury
+- Jednostki miary używane dla długości, wagi, obszaru, objętości i temperatury
 
-   Chociaż .NET nie oferuje wbudowaną obsługę konwertowanie między jednostkami miary, możesz użyć <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType> właściwości w celu określenia, czy danego kraju lub regionu korzysta z systemu metryki, tak jak pokazano w poniższym przykładzie.
+   Chociaż platforma .NET nie oferuje wbudowanej obsługi konwersji między jednostkami miary, można użyć właściwości <xref:System.Globalization.RegionInfo.IsMetric%2A?displayProperty=nameWithType>, aby określić, czy określony kraj lub region używa systemu metrycznego, jak pokazano w poniższym przykładzie.
 
    [!code-csharp[Conceptual.Localizability#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.localizability/cs/ismetric1.cs#1)]
    [!code-vb[Conceptual.Localizability#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.localizability/vb/ismetric1.vb#1)]
@@ -63,21 +61,21 @@ Jeśli zostały zaprojektowane i opracowane aplikacji przy użyciu lokalizacji n
 <a name="test"></a>
 ## <a name="test-your-application"></a>Testowanie aplikacji
 
-Zanim możesz zlokalizować aplikację, należy go przetestować, korzystając z danych w różnych językach w międzynarodowych wersjach systemu operacyjnego. Chociaż nie jest lokalizowany w tym momencie większość interfejsu użytkownika, będzie można wykrywać problemy, takie jak następujące:
+Przed zlokalizowaniem aplikacji należy ją przetestować przy użyciu danych międzynarodowych w międzynarodowych wersjach systemu operacyjnego. Chociaż większość interfejsu użytkownika nie zostanie zlokalizowana w tym momencie, będzie można wykryć następujące problemy:
 
-- Serializowane dane nie poprawnie zdeserializować różnych wersjach systemu operacyjnego.
+- Serializowane dane, które nie są poprawnie deserializacji w różnych wersjach systemu operacyjnego.
 
-- Dane numeryczne, które nie odzwierciedlają konwencje bieżącej kultury. Na przykład liczby mogą być wyświetlane z separatory grup niedokładne, separatory dziesiętne i symbole walut.
+- Dane liczbowe, które nie odzwierciedlają Konwencji bieżącej kultury. Na przykład liczby mogą być wyświetlane z nieprawidłowymi separatorami grup, separatorami dziesiętnymi lub symbolami waluty.
 
-- Dane daty i godziny, który nie będzie odzwierciedlał Konwencji bieżącej kultury. Na przykład numery, które reprezentują miesiąc i dzień, może pojawić się w nieprawidłowej kolejności, separatorów daty może być niepoprawna lub informacje o strefie czasowej mogą być niepoprawne.
+- Dane daty i godziny, które nie odzwierciedlają Konwencji bieżącej kultury. Na przykład liczby reprezentujące miesiąc i dzień mogą występować w niewłaściwej kolejności, separatory dat mogą być niepoprawne lub informacje o strefie czasowej mogą być nieprawidłowe.
 
-- Zasoby, których nie można znaleźć, ponieważ nie znaleziono domyślną kulturę używaną dla swojej aplikacji.
+- Zasoby, których nie można znaleźć, ponieważ nie zidentyfikowano domyślnej kultury dla aplikacji.
 
-- Ciągi, które są wyświetlane w kolejności nietypowe dla określonej kultury.
+- Ciągi, które są wyświetlane w nietypowej kolejności dla określonej kultury.
 
-- Ciąg porównania lub porównania dla równości, które zwracają nieoczekiwane wyniki.
+- Porównania ciągów lub porównania dla równości, które zwracają nieoczekiwane wyniki.
 
-Jeśli już przestrzegać zaleceń globalnych, podczas tworzenia aplikacji, obsługiwane funkcje wrażliwość na ustawienia kulturowe prawidłowo i zidentyfikować i rozwiązane problemy związane z lokalizacją, które powstały podczas testowania, możesz przejść do następnego kroku [Lokalizacji](../../../docs/standard/globalization-localization/localization.md).
+Jeśli zostały wykonane zalecenia dotyczące globalizacji podczas tworzenia aplikacji, obsługiwane są funkcje zależne od kultury i zidentyfikowane i rozwiązane z problemami z lokalizacją, które powstały podczas testowania, można przejść do następnego kroku, [ Lokalizacja](../../../docs/standard/globalization-localization/localization.md).
 
 ## <a name="see-also"></a>Zobacz także
 

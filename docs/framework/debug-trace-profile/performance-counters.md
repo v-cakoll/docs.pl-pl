@@ -6,14 +6,12 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eafbd5b1dfa8eeee386cdcf49652aeeee9d635a8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052394"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121598"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
 Ten temat zawiera listę liczników wydajności, które można znaleźć w [monitorze wydajności systemu Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
@@ -119,9 +117,9 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |-------------------------|-----------------|  
 |**Liczba bajtów we wszystkich stertach**|Wyświetla sumę **rozmiaru sterty generacji 1**, **rozmiaru sterty generacji 2**i liczników **rozmiaru sterty dla dużego obiektu** . Ten licznik wskazuje bieżącą pamięć przydzieloną w bajtach na sterty wyrzucania elementów bezużytecznych.|  
 |**Liczba dojść do # GC**|Wyświetla bieżącą liczbę dojść do wyrzucania elementów bezużytecznych w użyciu. Dojścia do wyrzucania elementów bezużytecznych są dojściami do zasobów zewnętrznych względem środowiska uruchomieniowego języka wspólnego i środowiska zarządzanego.|  
-|**Liczba kolekcji generacji 0**|Przedstawia liczbę obiektów generacji 0 (czyli najwygodniejszych, ostatnio przyznanych obiektów), które są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji.<br /><br /> Wyrzucanie elementów bezużytecznych generacji 0 występuje, gdy dostępna pamięć w generacji 0 nie wystarcza do spełnienia żądania alokacji. Licznik jest zwiększany na końcu wyrzucania elementów bezużytecznych generacji 0. Wyrzucanie elementów bezużytecznych z większą generacji obejmuje wszystkie kolekcje o mniejszych generacjach. Ten licznik jest jawnie zwiększany w przypadku wystąpienia większej generacji (generacji 1 lub 2) wyrzucania elementów bezużytecznych.<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość **licznika\_ _global** jest niedokładna i powinna być ignorowana.|  
-|**Liczba kolekcji generacji 1**|Przedstawia liczbę obiektów generacji 1, które są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji.<br /><br /> Licznik jest zwiększany po zakończeniu wyrzucania elementów bezużytecznych generacji 1. Wyrzucanie elementów bezużytecznych z większą generacji obejmuje wszystkie kolekcje o mniejszych generacjach. Ten licznik jest jawnie zwiększany, gdy następuje wyrzucanie elementów bezużytecznych generacji (generacja 2).<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość **licznika\_ _global** jest niedokładna i powinna być ignorowana.|  
-|**Liczba kolekcji generacji 2**|Przedstawia, ile razy obiekty generacji 2 są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji. Licznik jest zwiększany na końcu wyrzucania elementów bezużytecznych generacji 2 (nazywane również pełnym odzyskiwaniem pamięci).<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość **licznika\_ _global** jest niedokładna i powinna być ignorowana.|  
+|**Liczba kolekcji generacji 0**|Przedstawia liczbę obiektów generacji 0 (czyli najwygodniejszych, ostatnio przyznanych obiektów), które są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji.<br /><br /> Wyrzucanie elementów bezużytecznych generacji 0 występuje, gdy dostępna pamięć w generacji 0 nie wystarcza do spełnienia żądania alokacji. Licznik jest zwiększany na końcu wyrzucania elementów bezużytecznych generacji 0. Wyrzucanie elementów bezużytecznych z większą generacji obejmuje wszystkie kolekcje o mniejszych generacjach. Ten licznik jest jawnie zwiększany w przypadku wystąpienia większej generacji (generacji 1 lub 2) wyrzucania elementów bezużytecznych.<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość licznika **\__global** nie jest dokładna i powinna być ignorowana.|  
+|**Liczba kolekcji generacji 1**|Przedstawia liczbę obiektów generacji 1, które są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji.<br /><br /> Licznik jest zwiększany po zakończeniu wyrzucania elementów bezużytecznych generacji 1. Wyrzucanie elementów bezużytecznych z większą generacji obejmuje wszystkie kolekcje o mniejszych generacjach. Ten licznik jest jawnie zwiększany, gdy następuje wyrzucanie elementów bezużytecznych generacji (generacja 2).<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość licznika **\__global** nie jest dokładna i powinna być ignorowana.|  
+|**Liczba kolekcji generacji 2**|Przedstawia, ile razy obiekty generacji 2 są zbierane jako elementy bezużyteczne od momentu uruchomienia aplikacji. Licznik jest zwiększany na końcu wyrzucania elementów bezużytecznych generacji 2 (nazywane również pełnym odzyskiwaniem pamięci).<br /><br /> Ten licznik wyświetla ostatnią obserwowana wartość. Wartość licznika **\__global** nie jest dokładna i powinna być ignorowana.|  
 |**# Wywołano GC**|Wyświetla szczytową liczbę przypadków wykonania wyrzucania elementów bezużytecznych z powodu jawnego wywołania <xref:System.GC.Collect%2A?displayProperty=nameWithType>. Dobrym sposobem jest umożliwienie modułowi zbierającemu elementy bezużyteczne dostrajania częstotliwości jego kolekcji.|  
 |**Liczba przypiętych obiektów**|Wyświetla liczbę przypiętych obiektów napotkanych w ostatnim wyrzucaniu elementów bezużytecznych. Przypięty obiekt jest obiektem, który nie może zostać przeniesiony w pamięci. Ten licznik śledzi obiekty przypięte tylko w stertach, które są zbierane jako elementy bezużyteczne. Na przykład wyrzucanie elementów bezużytecznych generacji 0 powoduje Wyliczenie przypiętych obiektów tylko w stercie generacji 0.|  
 |**Liczba bloków ujścia w użyciu**|Wyświetla bieżącą liczbę bloków synchronizacji w użyciu. Bloki synchronizacji są strukturami danych dla obiektów przydzielonymi do przechowywania informacji o synchronizacji. Przechowują one słabe odwołania do obiektów zarządzanych i muszą być skanowane przez moduł wyrzucania elementów bezużytecznych. Bloki synchronizacji nie są ograniczone do przechowywania informacji o synchronizacji; mogą także przechowywać metadane międzyoperacyjności modelu COM. Ten licznik wskazuje problemy z wydajnością przy dużym użyciu podstawowych elementów synchronizacji.|  
@@ -147,17 +145,17 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
-|**Bajty odebrane**|Skumulowana łączna liczba bajtów odebranych przez wszystkie <xref:System.Net.Sockets.Socket> obiekty <xref:System.AppDomain> w ramach od momentu rozpoczęcia procesu. Ta liczba obejmuje dane i wszelkie informacje o protokole, które nie są zdefiniowane przez TCP/IP.|  
-|**Bajty wysłane**|Skumulowana liczba bajtów wysłanych przez wszystkie <xref:System.Net.Sockets.Socket> obiekty <xref:System.AppDomain> w ramach od momentu rozpoczęcia procesu. Ta liczba obejmuje dane i wszelkie informacje o protokole, które nie są zdefiniowane przez TCP/IP.|  
-|**Nawiązano połączenia**|Skumulowana łączna liczba <xref:System.Net.Sockets.Socket> obiektów dla gniazd strumienia, które zostały kiedykolwiek połączone <xref:System.AppDomain> w ramach od momentu rozpoczęcia procesu.|  
-|**Odebrane datagramy**|Skumulowana łączna liczba pakietów datagramów odebranych <xref:System.Net.Sockets.Socket> przez wszystkie obiekty <xref:System.AppDomain> w ramach od momentu rozpoczęcia procesu.|  
-|**Wysłane datagramy**|Skumulowana łączna liczba pakietów datagramów wysłanych <xref:System.Net.Sockets.Socket> przez wszystkie obiekty <xref:System.AppDomain> w ramach od momentu rozpoczęcia procesu.|  
-|**Średni czas istnienia HttpWebRequest**|Średni czas ukończenia dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które zakończyły się w ostatnim interwale w <xref:System.AppDomain> czasie od momentu rozpoczęcia procesu.|  
-|**Średni czas kolejki HttpWebRequest**|Średni czas trwania kolejki dla wszystkich <xref:System.Net.HttpWebRequest> obiektów, które opuściły kolejkę w ostatnim interwale w <xref:System.AppDomain> czasie od momentu rozpoczęcia procesu.|  
-|**HttpWebRequests utworzone/s**|Liczba <xref:System.Net.HttpWebRequest> obiektów utworzonych na sekundę <xref:System.AppDomain>w ramach.|  
-|**HttpWebRequests w kolejce/s**|Liczba <xref:System.Net.HttpWebRequest> obiektów, które zostały dodane do kolejki na sekundę <xref:System.AppDomain>w obrębie.|  
-|**HttpWebRequests przerwane/s**|Liczba <xref:System.Net.HttpWebRequest> obiektów, w których aplikacja <xref:System.Net.HttpWebRequest.Abort%2A> wywołała <xref:System.AppDomain>metodę na sekundę w obrębie.|  
-|**Niepowodzenie HttpWebRequests/s**|Liczba <xref:System.Net.HttpWebRequest> obiektów, które otrzymały kod stanu błędu z serwera na sekundę <xref:System.AppDomain>w ramach.|  
+|**Bajty odebrane**|Skumulowana łączna liczba bajtów odebranych przez wszystkie <xref:System.Net.Sockets.Socket> obiektów w ramach <xref:System.AppDomain> od momentu uruchomienia procesu. Ta liczba obejmuje dane i wszelkie informacje o protokole, które nie są zdefiniowane przez TCP/IP.|  
+|**Bajty wysłane**|Skumulowana liczba bajtów wysłanych przez wszystkie <xref:System.Net.Sockets.Socket> obiektów w ramach <xref:System.AppDomain> od momentu uruchomienia procesu. Ta liczba obejmuje dane i wszelkie informacje o protokole, które nie są zdefiniowane przez TCP/IP.|  
+|**Nawiązano połączenia**|Skumulowana łączna liczba obiektów <xref:System.Net.Sockets.Socket> dla gniazd strumienia, które były kiedykolwiek połączone w <xref:System.AppDomain> od momentu uruchomienia procesu.|  
+|**Odebrane datagramy**|Skumulowana łączna liczba pakietów datagramów odebranych przez wszystkie <xref:System.Net.Sockets.Socket> obiektów w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
+|**Wysłane datagramy**|Skumulowana łączna liczba pakietów datagramów wysłanych przez wszystkie <xref:System.Net.Sockets.Socket> obiektów w ramach <xref:System.AppDomain> od momentu uruchomienia procesu.|  
+|**Średni czas istnienia HttpWebRequest**|Średni czas ukończenia dla wszystkich obiektów <xref:System.Net.HttpWebRequest>, które zakończyły się w ostatnim interwale w <xref:System.AppDomain> od momentu rozpoczęcia procesu.|  
+|**Średni czas kolejki HttpWebRequest**|Średni czas w kolejce dla wszystkich obiektów <xref:System.Net.HttpWebRequest>, które opuściły kolejkę w ostatnim interwale w <xref:System.AppDomain> od momentu uruchomienia procesu.|  
+|**HttpWebRequests utworzone/s**|Liczba obiektów <xref:System.Net.HttpWebRequest> utworzonych na sekundę w <xref:System.AppDomain>.|  
+|**HttpWebRequests w kolejce/s**|Liczba obiektów <xref:System.Net.HttpWebRequest>, które zostały dodane do kolejki na sekundę w <xref:System.AppDomain>.|  
+|**HttpWebRequests przerwane/s**|Liczba obiektów <xref:System.Net.HttpWebRequest>, w których aplikacja wywołała metodę <xref:System.Net.HttpWebRequest.Abort%2A> na sekundę w <xref:System.AppDomain>.|  
+|**Niepowodzenie HttpWebRequests/s**|Liczba obiektów <xref:System.Net.HttpWebRequest>, które otrzymały kod stanu błędu z serwera na sekundę w <xref:System.AppDomain>.|  
   
  Obsługiwane są kilka klas liczników wydajności sieci:  
   
@@ -177,9 +175,9 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
 - **Wysłane datagramy**  
   
- Te liczniki wydajności udostępniają liczby od momentu rozpoczęcia procesu. Liczba <xref:System.Net.Sockets.Socket> ustanowionych połączeń obejmuje jawne <xref:System.Net.Sockets.Socket> wywołania metod przez aplikację dla połączenia gniazda strumienia, które zostało nawiązane, a także wywołań wewnętrznych wykonanych przez inne klasy (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>, <xref:System.Net.Sockets.Socket> a <xref:System.Net.Sockets.TcpClient>na przykład) do klasy  
+ Te liczniki wydajności udostępniają liczby od momentu rozpoczęcia procesu. Liczba ustanowionych połączeń <xref:System.Net.Sockets.Socket> obejmuje jawne wywołania metody <xref:System.Net.Sockets.Socket> przez aplikację dla połączenia gniazda usługi Stream, które zostało nawiązane, a także wywołania wewnętrzne wykonane przez inne klasy (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>i <xref:System.Net.Sockets.TcpClient>na przykład) do klasy <xref:System.Net.Sockets.Socket>  
   
- Liczba **wysłanych i wysyłanych** **datagramów obejmuje pakiety datag** wysłane lub odebrane przy użyciu <xref:System.Net.Sockets.Socket> jawnych wywołań metod przez aplikację, a także wywołań wewnętrznych wykonanych przez<xref:System.Net.Sockets.UdpClient>inne klasy (na przykład) do <xref:System.Net.Sockets.Socket>. określonej. Liczba **odebranych datagramów** i **wysłanych** datagramy mogą być również używane w celu zapewnienia bardzo surowej miary liczby bajtów wysłanych lub odebranych za pomocą datagramy przy założeniu, że średni rozmiar datagramu.  
+ Liczby odbieranych i **wysyłanych** **datagramów obejmują pakiety datag** wysłane lub odebrane przy użyciu jawnej metody <xref:System.Net.Sockets.Socket> wywołań przez aplikację, a także wywołania wewnętrzne wykonane przez inne klasy (na przykład<xref:System.Net.Sockets.UdpClient>) do <xref:System.Net.Sockets.Socket>. Określonej. Liczba **odebranych datagramów** i **wysłanych** datagramy mogą być również używane w celu zapewnienia bardzo surowej miary liczby bajtów wysłanych lub odebranych za pomocą datagramy przy założeniu, że średni rozmiar datagramu.  
   
  Dostępne są następujące liczniki wydajności sieci dla danych:  
   
@@ -189,19 +187,19 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
  Powyższe liczniki zapewniają liczbę bajtów od momentu rozpoczęcia procesu.  
   
- Istnieją dwa liczniki czasu trwania, które mierzą, jak długo <xref:System.Net.HttpWebRequest> zajęło przekazanie obiektów przez cały cykl życia lub po prostu jej część:  
+ Istnieją dwa liczniki czasu trwania, które mierzą, jak długo zajęło <xref:System.Net.HttpWebRequest> obiektów do przekazywania przez cały cykl życia lub po prostu jego część:  
   
 - **Średni czas istnienia HttpWebRequest**  
   
 - **Średni czas kolejki HttpWebRequest**  
   
- W przypadku licznika **okresu istnienia HttpWebRequest średniego** okres istnienia większości <xref:System.Net.HttpWebRequest> obiektów zawsze rozpoczyna się od momentu utworzenia obiektu do momentu zamknięcia strumienia odpowiedzi przez aplikację. Istnieją dwa nietypowe przypadki:  
+ W przypadku licznika **okresu istnienia HttpWebRequest średni** czas istnienia większości obiektów <xref:System.Net.HttpWebRequest> zawsze zaczyna się od momentu utworzenia obiektu aż do momentu zamknięcia strumienia odpowiedzi przez aplikację. Istnieją dwa nietypowe przypadki:  
   
-- Jeśli aplikacja nigdy nie wywołuje <xref:System.Net.HttpWebRequest.GetResponse%2A> metod lub <xref:System.Net.HttpWebRequest.BeginGetResponse%2A> , okres istnienia <xref:System.Net.HttpWebRequest> obiektu jest ignorowany.  
+- Jeśli aplikacja nigdy nie wywołuje metod <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>, okres istnienia obiektu <xref:System.Net.HttpWebRequest> jest ignorowany.  
   
-- Jeśli obiekt zgłasza wywołanie metody <xref:System.Net.HttpWebRequest.GetResponse%2A> lub<xref:System.Net.HttpWebRequest.EndGetResponse%2A> , okres istnienia zostaje zakończony, gdy zostanie zgłoszony wyjątek. <xref:System.Net.WebException> <xref:System.Net.HttpWebRequest> Technicznie, źródłowy strumień odpowiedzi jest również zamykany w tym momencie (strumień odpowiedzi zwrócony do użytkownika to naprawdę strumień pamięci zawierający kopię strumienia odpowiedzi).  
+- Jeśli obiekt <xref:System.Net.HttpWebRequest> zgłasza <xref:System.Net.WebException> podczas wywoływania <xref:System.Net.HttpWebRequest.GetResponse%2A> lub <xref:System.Net.HttpWebRequest.EndGetResponse%2A> metod, okres istnienia zostanie zakończony, gdy zostanie zgłoszony wyjątek. Technicznie, źródłowy strumień odpowiedzi jest również zamykany w tym momencie (strumień odpowiedzi zwrócony do użytkownika to naprawdę strumień pamięci zawierający kopię strumienia odpowiedzi).  
   
- Istnieją cztery liczniki, które śledzą <xref:System.Net.HttpWebRequest> niektóre problemy dotyczące obiektów na interwał. Te liczniki wydajności mogą pomóc deweloperom aplikacji, administratorom i personelowi pomocy technicznej lepiej <xref:System.Net.HttpWebRequest> zrozumieć, jakie obiekty robią. Dostępne są następujące liczniki:  
+ Istnieją cztery liczniki, które śledzą niektóre <xref:System.Net.HttpWebRequest> problemy dotyczące obiektów na interwał. Te liczniki wydajności mogą pomóc deweloperom aplikacji, administratorom i pracownikom pomocy technicznej lepiej zrozumieć działanie obiektów <xref:System.Net.HttpWebRequest>. Dostępne są następujące liczniki:  
   
 - **HttpWebRequests utworzone/s**  
   
@@ -211,13 +209,13 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
 - **Niepowodzenie HttpWebRequests/s**  
   
- W przypadku licznika **przerwanych HttpWebRequests/s** zliczane <xref:System.Net.HttpWebRequest.Abort%2A> są również wywołania wewnętrzne. Te wywołania wewnętrzne są zwykle spowodowane przekroczeniem limitu czasu, które aplikacja może chcieć zmierzyć.  
+ W przypadku licznika **przerwanych HttpWebRequests/s** zliczane są również wywołania wewnętrzne <xref:System.Net.HttpWebRequest.Abort%2A>. Te wywołania wewnętrzne są zwykle spowodowane przekroczeniem limitu czasu, które aplikacja może chcieć zmierzyć.  
   
- Licznik **HttpWebRequests zakończonych niepowodzeniem/s** zawiera liczbę <xref:System.Net.HttpWebRequest> obiektów, które otrzymały kod stanu błędu z serwera na sekundę. Oznacza to, że kod stanu otrzymany z serwera http na końcu żądania nie był w zakresie od 200 do 299. Kody stanu, które są obsługiwane i powodują, że nowe żądanie (wiele nieautoryzowanych kodów stanu 401, na przykład) zakończy się niepowodzeniem lub nie powiedzie się na podstawie wyniku ponowienia próby. Jeśli aplikacja zobaczy błąd w oparciu o ponowienie próby, licznik zostanie zwiększony.  
+ Licznik **HttpWebRequests zakończonych niepowodzeniem/s** zawiera liczbę obiektów <xref:System.Net.HttpWebRequest>, które otrzymały kod stanu niepowodzenia z serwera na sekundę. Oznacza to, że kod stanu otrzymany z serwera http na końcu żądania nie był w zakresie od 200 do 299. Kody stanu, które są obsługiwane i powodują, że nowe żądanie (wiele nieautoryzowanych kodów stanu 401, na przykład) zakończy się niepowodzeniem lub nie powiedzie się na podstawie wyniku ponowienia próby. Jeśli aplikacja zobaczy błąd w oparciu o ponowienie próby, licznik zostanie zwiększony.  
   
- Liczniki wydajności sieci są dostępne i zarządzane przy użyciu <xref:System.Diagnostics.PerformanceCounter> klas i pokrewnych <xref:System.Diagnostics> w przestrzeni nazw. Liczniki wydajności sieci można także wyświetlić za pomocą konsoli monitora wydajności systemu Windows.  
+ Liczniki wydajności sieci są dostępne i zarządzane przy użyciu <xref:System.Diagnostics.PerformanceCounter> i powiązanych klas w przestrzeni nazw <xref:System.Diagnostics>. Liczniki wydajności sieci można także wyświetlić za pomocą konsoli monitora wydajności systemu Windows.  
   
- Liczniki wydajności sieci muszą być włączone w pliku konfiguracji, który ma być używany. Wszystkie liczniki wydajności sieci są włączone lub wyłączone przy użyciu jednego ustawienia w pliku konfiguracji. Nie można włączyć lub wyłączyć poszczególnych liczników wydajności sieci. Aby uzyskać więcej informacji, zobacz [ \<performanceCounter > element (Ustawienia sieci)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
+ Liczniki wydajności sieci muszą być włączone w pliku konfiguracji, który ma być używany. Wszystkie liczniki wydajności sieci są włączone lub wyłączone przy użyciu jednego ustawienia w pliku konfiguracji. Nie można włączyć lub wyłączyć poszczególnych liczników wydajności sieci. Aby uzyskać więcej informacji, zobacz [\<performanceCounter > elementu (Ustawienia sieci)](../configure-apps/file-schema/network/performancecounter-element-network-settings.md).  
   
  W przypadku włączenia liczników sieci spowoduje to utworzenie i zaktualizowanie zarówno liczników wydajności dla domeny aplikacji, jak i globalnych. Jeśli ta funkcja jest wyłączona, aplikacja nie będzie dostarczać żadnych danych licznika wydajności sieci.  
   
@@ -235,7 +233,7 @@ for (int i = 0; i < Array.Length; i++)
   
 - "Sieć CLR platformy .NET" — oryginalne liczniki wydajności wprowadzone w .NET Framework wersji 2 i obsługiwane w .NET Framework wersji 2 i nowszych.  
   
-- ".NET CLR Networking 4.0.0.0" — wszystkie powyższe liczniki gniazda oraz nowe liczniki wydajności obsługiwane w .NET Framework wersji 4 i nowszych. Te nowe liczniki zawierają informacje o <xref:System.Net.HttpWebRequest> wydajności obiektów.  
+- ".NET CLR Networking 4.0.0.0" — wszystkie powyższe liczniki gniazda oraz nowe liczniki wydajności obsługiwane w .NET Framework wersji 4 i nowszych. Te nowe liczniki zawierają informacje o wydajności dotyczące <xref:System.Net.HttpWebRequest> obiektów.  
   
  Aby uzyskać więcej informacji na temat uzyskiwania dostępu do liczników wydajności i zarządzania nimi w aplikacji, zobacz [liczniki wydajności](performance-counters.md).  
   

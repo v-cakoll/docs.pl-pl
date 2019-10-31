@@ -7,14 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4038f8e4a3c012fab9df6019b5f9f19375f61f2a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044291"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104949"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Narzędzie rejestracji zestawów)
 
@@ -40,9 +38,9 @@ regasm assemblyFile [options]
 |------------|-----------------|
 |**/codebase**|Tworzy wpis Codebase w rejestrze. Wpis Codebase określa ścieżkę pliku dla zestawu, który nie jest zainstalowany w globalnej pamięci podręcznej zestawów. Nie należy określać tej opcji, jeśli później instalowany będzie zestaw, który jest rejestrowany w globalnej pamięci podręcznej zestawów. Argument *assemblyFile* określony za pomocą opcji **/codebase** musi być [zestawem o silnej nazwie](../../standard/assembly/strong-named.md).|
 |**/registered**|Określa, że narzędzie będzie odnosić się tylko do bibliotek typów, które zostały już zarejestrowane.|
-|**/asmpath:directory**|Określa katalog zawierający odwołania do zestawów. Musi być używana z opcją **/regfile** .|
+|**/asmpath: katalog**|Określa katalog zawierający odwołania do zestawów. Musi być używana z opcją **/regfile** .|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
-|**/regfile** [ **:** *regFile*]|Generuje określony plik reg dla zestawu zawierający potrzebne wpisy rejestru. Zaznaczenie tej opcji nie powoduje zmiany rejestru. Tej opcji nie można używać z opcjami **/u** i **/TLB** .|
+|**/regfile** [ **:** *regfile*]|Generuje określony plik reg dla zestawu zawierający potrzebne wpisy rejestru. Zaznaczenie tej opcji nie powoduje zmiany rejestru. Tej opcji nie można używać z opcjami **/u** i **/TLB** .|
 |**/Silent** lub **/s**|Pomija wyświetlanie komunikatów o sukcesie.|
 |**/TLB** [ **:** *typeLibFile*]|Generuje bibliotekę typów z określonego zestawu zawierającego definicje dostępnych typów zdefiniowanych w zestawie.|
 |**/Unregister** lub **/u**|Wyrejestrowuje klasy możliwe do utworzenia znajdujące się w *assemblyFile*. Pominięcie tej opcji powoduje, że Regasm.exe rejestruje utworzone klasy w zestawie.|
@@ -78,7 +76,7 @@ Następujące polecenie generuje plik `myTest.reg`, który zawiera wszystkie nie
 regasm myTest.dll /regfile:myTest.reg
 ```
 
-Następujące polecenie rejestruje wszystkie klasy publiczne zawarte w `myTest.dll`i generuje i rejestruje bibliotekę `myTest.tlb`typów, która zawiera definicje wszystkich typów publicznych zdefiniowanych w `myTest.dll`.
+Następujące polecenie rejestruje wszystkie klasy publiczne zawarte w `myTest.dll`i generuje i rejestruje `myTest.tlb`biblioteki typów, która zawiera definicje wszystkich typów publicznych zdefiniowanych w `myTest.dll`.
 
 ```console
 regasm myTest.dll /tlb:myTest.tlb

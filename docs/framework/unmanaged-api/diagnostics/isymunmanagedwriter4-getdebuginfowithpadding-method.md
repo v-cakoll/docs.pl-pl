@@ -2,19 +2,17 @@
 title: ISymUnmanagedWriter4::GetDebugInfoWithPadding — Metoda
 ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 274bf79175bda9e880b1ef3cf8f125a017ad0734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121662"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding — Metoda
-Działa tak samo, jak [getdebuginfo — metoda](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) z tą różnicą, że ciąg ścieżki są dopełniane zerami po kończącego znaku null, sprawić, że dane ciągu stały rozmiar `MAX_PATH`. Dopełnienie tylko jest zwracany, jeśli długość ciągu ścieżki, sama jest mniejsza niż `MAX_PATH`.  
+Działa tak samo jak [Metoda GetDebugInfo —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md) , z tą różnicą, że ciąg ścieżki jest dopełniany zerami po zamykającym znaku null, aby dane ciągu miały stały rozmiar `MAX_PATH`. Uzupełnienie jest nadawane tylko wtedy, gdy sama długość ciągu ścieżki jest mniejsza niż `MAX_PATH`.  
   
- Ułatwia do zapisania plików różnica PE narzędzia.  
+ Ułatwia to pisanie narzędzi, które różnicuje pliki PE.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +33,7 @@ HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [i
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

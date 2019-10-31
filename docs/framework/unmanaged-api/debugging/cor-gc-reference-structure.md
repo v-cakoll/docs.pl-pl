@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 162e8179-0cd4-4110-8f06-5f387698bd62
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 635cb0c003889beb2f78e8413189cbfc4b064175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099139"
 ---
 # <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE — Struktura
 Zawiera informacje o obiekcie, który ma zostać pobrany do pamięci podręcznej.  
@@ -41,36 +39,36 @@ typedef struct _COR_GC_REFERENCE {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`domain`|Wskaźnik do domeny aplikacji, do której należy dojście lub obiekt. Jego wartość może być `null`równa.|  
+|`domain`|Wskaźnik do domeny aplikacji, do której należy dojście lub obiekt. Jego wartość może być `null`.|  
 |`location`|Interfejs ICorDebugValue lub ICorDebugReferenceValue, który odnosi się do obiektu, który ma zostać pobrany jako bezużyteczny.|  
 |`type`|Wartość wyliczenia [CorGCReferenceType](corgcreferencetype-enumeration.md) , która wskazuje, skąd pochodzi element główny. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
-|`extraData`|Dodatkowe dane dotyczące obiektu, który ma zostać pobrany do pamięci. Te informacje są zależne od źródła obiektu, jak wskazano `type` w polu. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
+|`extraData`|Dodatkowe dane dotyczące obiektu, który ma zostać pobrany do pamięci. Te informacje są zależne od źródła obiektu, jak wskazano w polu `type`. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
   
 ## <a name="remarks"></a>Uwagi  
- Pole to CorGCReferenceType wartość wyliczenia, która wskazuje, skąd pochodzi odwołanie. [](corgcreferencetype-enumeration.md) `type` Określona `COR_GC_REFERENCE` wartość może odzwierciedlać dowolny z następujących rodzajów obiektów zarządzanych:  
+ Pole `type` jest wartością wyliczenia [CorGCReferenceType](corgcreferencetype-enumeration.md) , która wskazuje, skąd pochodzi odwołanie. Określona wartość `COR_GC_REFERENCE` może odzwierciedlać dowolny z następujących rodzajów obiektów zarządzanych:  
   
-- Obiekty ze wszystkich stosów zarządzanych`CorGCReferenceType.CorReferenceStack`(). Obejmuje to dynamiczne odwołania w kodzie zarządzanym, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
+- Obiekty ze wszystkich zarządzanych stosów (`CorGCReferenceType.CorReferenceStack`). Obejmuje to dynamiczne odwołania w kodzie zarządzanym, a także obiekty utworzone przez środowisko uruchomieniowe języka wspólnego.  
   
-- Obiekty z tabeli uchwytów (`CorGCReferenceType.CorHandle*`). Obejmuje to ścisłe odwołania`HNDTYPE_STRONG` ( `HNDTYPE_REFCOUNT`i) oraz zmienne statyczne w module.  
+- Obiekty z tabeli uchwytów (`CorGCReferenceType.CorHandle*`). Obejmuje to silne odwołania (`HNDTYPE_STRONG` i `HNDTYPE_REFCOUNT`) oraz zmienne statyczne w module.  
   
 - Obiekty z kolejki finalizatora (`CorGCReferenceType.CorReferenceFinalizer`). Obiekty główne kolejki finalizatora do momentu uruchomienia finalizatora.  
   
- `extraData` Pole zawiera dodatkowe dane w zależności od źródła (lub typu) odwołania. Możliwe wartości to:  
+ Pole `extraData` zawiera dodatkowe dane w zależności od źródła (lub typu) odwołania. Możliwe wartości to:  
   
-- `DependentSource`. Jeśli jest, `CorGCREferenceType.CorHandleStrongDependent`to pole jest obiektem, który, jeśli działa, jest katalogiem głównym obiektu, który ma `COR_GC_REFERENCE.Location`zostać odrzucony. `type`  
+- `DependentSource`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongDependent`, to pole jest obiektem, który, jeśli działa, jest katalogiem głównym obiektu, który ma być odzyskiwany w `COR_GC_REFERENCE.Location`.  
   
-- `RefCount`. `type` Jeśli jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest liczbą odwołań do dojścia.  
+- `RefCount`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest liczbą odwołań do dojścia.  
   
-- `Size`. `type` Jeśli jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiarem drzewa obiektów, dla którego Moduł wyrzucania elementów bezużytecznych oblicza elementy główne obiektu. Należy zauważyć, że to obliczenie nie jest zawsze aktualne.  
+- `Size`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiarem drzewa obiektów, dla którego Moduł wyrzucania elementów bezużytecznych obliczy elementy główne obiektu. Należy zauważyć, że to obliczenie nie jest zawsze aktualne.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

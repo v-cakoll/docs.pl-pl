@@ -12,17 +12,15 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b667ac16a4bbe6bdab1814b66fb1121b34b2d945
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039582"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111993"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord — Metoda
-Wywoływana przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) w celu pobrania rekordu wyjątku skojarzonego z procesem docelowym. Na przykład dla elementu docelowego zrzutu będzie to odpowiednik rekordu wyjątku przekazanego za pośrednictwem `ExceptionParam` argumentu do funkcji [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) w bibliotece pomocy debugowania systemu Windows (dbghelp).  
+Wywoływana przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) w celu pobrania rekordu wyjątku skojarzonego z procesem docelowym. Na przykład dla elementu docelowego zrzutu będzie to odpowiednik rekordu wyjątku przekazanego za pośrednictwem argumentu `ExceptionParam` do funkcji [MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump) w bibliotece pomocy debugowania systemu Windows (dbghelp).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +34,16 @@ HRESULT GetExceptionRecord(
   
 ## <a name="parameters"></a>Parametry  
  `bufferSize`  
- podczas Rozmiar buforu wejściowego w bajtach. Ta wartość musi być równa `sizeof(` [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`.  
+ podczas Rozmiar buforu wejściowego w bajtach. Ta wartość musi być równa `sizeof(`[MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)`)`.  
   
  `bufferUsed`  
- określoną Wskaźnik do `ULONG32` typu, który odbiera liczbę bajtów rzeczywiście zapisywanych w buforze.  
+ określoną Wskaźnik do typu `ULONG32`, który odbiera liczbę bajtów rzeczywiście zapisywanych w buforze.  
   
  `buffer`  
  określoną Wskaźnik do bufora pamięci, który otrzymuje kopię rekordu wyjątku. Rekord wyjątku jest zwracany jako typ [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość zwracana jest `S_OK` w przypadku powodzenia lub kod błędu `HRESULT` w przypadku niepowodzenia. `HRESULT` Kody mogą zawierać, ale nie są ograniczone do następujących:  
+ Wartość zwracana jest `S_OK` w przypadku sukcesu lub niepowodzenie `HRESULT` kod w przypadku niepowodzenia. Kody `HRESULT` mogą zawierać, ale nie są ograniczone do następujących:  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -59,13 +57,13 @@ HRESULT GetExceptionRecord(
  Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** ClrData. idl, ClrData. h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c96770b0-3e09-47bb-bd29-20353b043459
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fc65f5b55082970a0cd59a6850aaaa6779d0821
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 002c6cccb3ddf29b831ba5e14baa5e51f1b82433
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095878"
 ---
 # <a name="icordebugobjectvaluegetfieldvalue-method"></a>ICorDebugObjectValue::GetFieldValue — Metoda
-Pobiera wartość określonego pola określonej klasie dla tej wartości obiektu.  
+Pobiera wartość określonego pola określonej klasy dla tej wartości obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +37,26 @@ HRESULT GetFieldValue (
   
 ## <a name="parameters"></a>Parametry  
  `pClass`  
- [in] Wskaźnik do obiektu "ICorDebugClass", który reprezentuje klasę, dla którego należy pobrać wartości pola.  
+ podczas Wskaźnik do obiektu "ICorDebugClass", który reprezentuje klasę, dla której ma zostać pobrana wartość pola.  
   
  `fieldDef`  
- [in] `mdFieldDef` Token, który odwołuje się do metadanych opisujących pola.  
+ podczas Token `mdFieldDef`, który odwołuje się do metadanych opisujących pole.  
   
  `ppValue`  
- [out] Wskaźnik do obiektu "ICorDebugValue", który reprezentuje wartość określonego pola.  
+ określoną Wskaźnik do obiektu "ICorDebugValue", który reprezentuje wartość określonego pola.  
   
 ## <a name="remarks"></a>Uwagi  
- Klasa określona w `pClass` parametru musi być w hierarchii klasy wartości obiektu, a pole musi być polem tej klasy.  
+ Klasa określona w parametrze `pClass` musi znajdować się w hierarchii klasy wartości obiektu, a pole musi być polem tej klasy.  
   
- `GetFieldValue` Metoda zakończy się powodzeniem dla ogólnych obiektów i klas ogólnych. Na przykład jeśli MyDictionary\<V > dziedziczy ze słownika\<ciągu V >, i wartość obiektu jest typu MyDictionary\<int32 >, przekazując `ICorDebugClass` obiekt słownika\<K, V > będzie pomyślnie pobrać polem słownika\<ciąg, int32 >.  
+ Metoda `GetFieldValue` nadal powiedzie się dla obiektów ogólnych i klas ogólnych. Na przykład, jeśli program webdictionary\<V > dziedziczy ze słownika\<String, V >, a wartość obiektu to typu webdictionary\<Int32 >, przekazanie obiektu `ICorDebugClass` dla słownika\<K, >\<słownika, ciąg Int32 >.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

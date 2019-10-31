@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3e7d0c2-3baa-4ef8-8e3f-b865cf252940
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 00adc852a0940766cdd4188ffa5d6be2b472e51f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 86fa44b609b4b89cfaa28f0bfa7bbdce6217623f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744880"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122854"
 ---
 # <a name="icordebugassemblyenumnext-method"></a>ICorDebugAssemblyEnum::Next — Metoda
-Pobiera określoną liczbę zestawów z kolekcji, począwszy od bieżącej pozycji kursora.  
+Pobiera określoną liczbę zestawów z kolekcji, rozpoczynając od bieżącej pozycji kursora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba zestawów, które mają zostać pobrane.  
+ podczas Liczba zestawów do pobrania.  
   
  `values`  
- [out] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugAssembly, który reprezentuje zestaw.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugAssembly, który reprezentuje zestaw.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby zestawów rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
+ określoną Wskaźnik do liczby faktycznie zwróconych zestawów. Ta wartość może być równa null, jeśli `celt` to jeden.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

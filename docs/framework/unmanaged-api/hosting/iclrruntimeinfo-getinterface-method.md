@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765547"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120250"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface — Metoda
-Ładuje środowisko CLR do bieżący proces i zwraca środowiska uruchomieniowego, wskaźniki interfejsu, takich jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [iclrstrongname —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md), i [imetadatadispenserex —](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
+Ładuje środowisko CLR do bieżącego procesu i zwraca wskaźniki interfejsu środowiska uruchomieniowego, takie jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)i [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md).  
   
- Ta metoda zastępuje wszystkie `CorBindTo`* funkcje w [przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) sekcji.  
+ Ta metoda zastępuje wszystkie `CorBindTo`* funkcje w sekcji [przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +38,28 @@ HRESULT GetInterface(
   
 ## <a name="parameters"></a>Parametry  
  `rclsid`  
- [in] Interfejs CLSID dla klasy coclass.  
+ podczas Interfejs CLSID dla klasy coclass.  
   
  `riid`  
- [in] Identyfikatorem IID żądany `rclsid` interfejsu.  
+ podczas Identyfikator IID żądanego interfejsu `rclsid`.  
   
  `ppUnk`  
- [out] Wskaźnik do interfejsu kwerendy.  
+ określoną Wskaźnik do zapytania do interfejsu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
 |E_POINTER|`ppUnk` ma wartość null.|  
-|E_OUTOFMEMORY|Nie ma wystarczającej ilości pamięci dostępnej może obsłużyć żądania.|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Środowiskiem uruchomieniowym w różnych była już powiązana starsze zasady 2 aktywacji wersji środowiska CLR.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby obsłużyć żądanie.|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Inne środowisko uruchomieniowe zostało już powiązane ze starszymi zasadami aktywacji środowiska CLR w wersji 2.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda powoduje, że CLR do załadowane, ale nie zainicjowane.  
+ Ta metoda powoduje załadowanie środowiska CLR, ale nie jego inicjalizację.  
   
- W poniższej tabeli przedstawiono obsługiwane kombinacje w celach `rclsid` i `riid`.  
+ W poniższej tabeli przedstawiono obsługiwane kombinacje `rclsid` i `riid`.  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -77,11 +75,11 @@ HRESULT GetInterface(
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

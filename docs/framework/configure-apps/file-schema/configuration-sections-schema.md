@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], custom settings in configuration files
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 120733873a7ea29303fe7f82c4c324d411532897
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a17d30af9d7abc3eea6b87d5e8768ac49a7c05ab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921204"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118930"
 ---
 # <a name="configuration-sections-schema"></a>Schemat sekcji konfiguracji
 
@@ -24,16 +24,16 @@ Schemat sekcji konfiguracji zawiera elementy, które definiują ustawienia niest
 
 [ **\<> konfiguracji**](configuration-element.md)   
 [ **\<configSections >** ](configsections-element-for-configuration.md)   
-[ **\<clear>** ](clear-element-for-configsections.md)   
-[ **\<remove>** ](remove-element-for-configsections.md)   
-[ **\<sekcja >** ](section-element.md)   
-[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
+[ **\<wyczyść >** ](clear-element-for-configsections.md)   
+[ **\<usunąć >** ](remove-element-for-configsections.md)   
+[ **\<sekcji >** ](section-element.md)   
+[ **\<sekcji >** ](sectiongroup-element-for-configsections.md)
 
 |     | Opis |
 | --- | ----------- |
-| [Wyczyść > dla  **\<**  **configSections>\<** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
-| [ **\<clear>** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<wyczyść >** **\<configSections >** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<Wyczyść >** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
 | [ **\<configSections >** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
-| [Usuń > dla  **\<**  **configSections>\<** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
-| [sekcja > **dla >configSectionsi\<** **> \<**  **\<** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
-| [> w sekcji elementu  **\<**  **\<configSections >** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
+| [ **\<usunąć >** **\<configSections >** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
+| [ **\<sekcji >** **\<configSections >** i **\<sekcji >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
+| [ **\<sekcji >** **\<configSections >** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |

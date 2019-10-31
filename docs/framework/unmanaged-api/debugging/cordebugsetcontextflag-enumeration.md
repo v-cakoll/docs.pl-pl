@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: b30280bb-fe75-44ed-8589-bcff081fae44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 251c96042e8e56112015fb869176c708322267f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097264"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag — Wyliczenie
-Wskazuje, czy kontekst jest z aktywnej (lub liścia) ramek na stosie lub obliczeniu, odwijanie od innej ramki.  
+Wskazuje, czy kontekst pochodzi z aktywnej ramki (lub liściowej) na stosie czy został obliczony przez odróżnienie od innej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,20 +38,20 @@ typedef enum CorDebugSetContextFlag
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|SET_CONTEXT_FLAG_ACTIVE_FRAME|Kontekst jest aktywny kontekst wątku.|  
-|SET_CONTEXT_FLAG_UNWIND_FRAME|Kontekst ma zostać obliczone przez odwijanie od innej ramki.|  
+|SET_CONTEXT_FLAG_ACTIVE_FRAME|Kontekst jest aktywnym kontekstem wątku.|  
+|SET_CONTEXT_FLAG_UNWIND_FRAME|Kontekst został obliczony przez odwinięcia z innej ramki.|  
   
 ## <a name="remarks"></a>Uwagi  
- `CorDebugSetContextFlag` zawiera wartości, które są używane przez [ICorDebugStackWalk::SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) metody.  
+ `CorDebugSetContextFlag` zawiera wartości, które są używane przez metodę [ICorDebugStackWalk:: SetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

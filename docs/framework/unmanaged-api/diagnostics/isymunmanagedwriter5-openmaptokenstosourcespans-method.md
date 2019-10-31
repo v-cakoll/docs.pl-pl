@@ -2,17 +2,15 @@
 title: ISymUnmanagedWriter5::OpenMapTokensToSourceSpans — Metoda
 ms.date: 03/30/2017
 ms.assetid: 93ad2517-b0dc-464c-8688-a58a30eda18d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 82dc2ced988f7277c994eb9449e7c26efa5450b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 004e1ddae8a6c0262846422a2eeb4314a4c82f65
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121614"
 ---
 # <a name="isymunmanagedwriter5openmaptokenstosourcespans-method"></a>ISymUnmanagedWriter5::OpenMapTokensToSourceSpans — Metoda
-Otwórz sekcji danych niestandardowych specjalny emitowanie informacji o mapowaniu zakresu źródłem tokenu do. Otwieranie w tej sekcji, gdy metoda jest już otwarty lub odwrotnie, występuje błąd.  
+Otwórz specjalną sekcję z danymi niestandardowymi, aby emitować informacje o mapowaniu między tokenami i źródłami do programu. Otwarcie tej sekcji, gdy metoda jest już otwarta lub na odwrót, jest błędem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,7 +22,7 @@ HRESULT OpenMapTokensToSourceSpans();
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

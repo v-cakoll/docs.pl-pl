@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0bc96acb-6179-4328-a447-cda562ce9e98
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9be126e45d8428d8786e9aadf2195133d1957440
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff74a9849b74b8a8e6b8c03f1fc4e7c7eee1ec14
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754835"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124058"
 ---
 # <a name="icordebugframeenumnext-method"></a>ICorDebugFrameEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugFrame, zaczynając od bieżącej pozycji.  
+Pobiera określoną liczbę wystąpień ICorDebugFrame, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba `ICorDebugFrame` wystąpienia mają zostać pobrane.  
+ podczas Liczba wystąpień `ICorDebugFrame` do pobrania.  
   
  `frames`  
- [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugFrame` obiektu.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugFrame`.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugFrame` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
+ określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugFrame`. Ta wartość może być równa null, jeśli `celt` to jeden.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

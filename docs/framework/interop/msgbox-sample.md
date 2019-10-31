@@ -9,17 +9,15 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9469cc5db1ada479e97026cae40b3019ae10c2c6
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151733"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124111"
 ---
 # <a name="msgbox-sample"></a>MsgBox — Przykład
-Ten przykład pokazuje, jak przekazywać typy ciągów według wartości, jak w parametrach i kiedy <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>należy <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>używać pól <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> ,, i.  
+Ten przykład pokazuje, jak przekazywać typy ciągów według wartości jak w parametrach i kiedy używać pól <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>i <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>.  
   
  Przykład OknoKomunikatu używa następującej funkcji niezarządzanej, pokazanej wraz z jej oryginalną deklaracją funkcji:  
   
@@ -30,9 +28,9 @@ Ten przykład pokazuje, jak przekazywać typy ciągów według wartości, jak w 
        UINT uType);  
     ```  
   
- W tym przykładzie `NativeMethods` Klasa zawiera zarządzany prototyp dla każdej funkcji niezarządzanej wywoływanej `MsgBoxSample` przez klasę. Zarządzane metody `MsgBox`prototypów, `MsgBox2`i `MsgBox3` mają różne deklaracje dla tej samej funkcji niezarządzanej.  
+ W tym przykładzie Klasa `NativeMethods` zawiera zarządzany prototyp dla każdej funkcji niezarządzanej wywoływanej przez klasę `MsgBoxSample`. Zarządzane metody prototypów `MsgBox`, `MsgBox2`i `MsgBox3` mają różne deklaracje dla tej samej funkcji niezarządzanej.  
   
- Deklaracja dla `MsgBox2` generuje nieprawidłowe dane wyjściowe w oknie komunikatu, ponieważ typ znaku określony jako ANSI jest niezgodny z punktem `MessageBoxW`wejścia, który jest nazwą funkcji Unicode. Deklaracja `MsgBox3` dla tworzy niezgodność między polami **EntryPoint**, **charset**i **ExactSpelling** . Gdy wywoływana, `MsgBox3` zgłasza wyjątek. Aby uzyskać szczegółowe informacje na temat nazewnictwa ciągów i organizowania nazw, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
+ Deklaracja dla `MsgBox2` generuje nieprawidłowe dane wyjściowe w oknie komunikatu, ponieważ typ znaku określony jako ANSI jest niezgodny z punktem wejścia `MessageBoxW`, który jest nazwą funkcji Unicode. Deklaracja `MsgBox3` tworzy niezgodność między polami **EntryPoint**, **charset**i **ExactSpelling** . Gdy jest wywoływana, `MsgBox3` zgłasza wyjątek. Aby uzyskać szczegółowe informacje na temat nazewnictwa ciągów i organizowania nazw, zobacz [Określanie zestawu znaków](specifying-a-character-set.md).  
   
 ## <a name="declaring-prototypes"></a>Deklarowanie prototypów  
  [!code-cpp[Conceptual.Interop.Marshaling#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/msgbox.cpp#5)]

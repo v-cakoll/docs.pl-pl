@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 794c6f8e-ed58-416b-b756-e864f2c958f7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dc5bed553ac54eb708beae23f5c29cbedcb2b4e0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be488ebe663169cabc5b569335dfc784fdf30556
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749066"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102693"
 ---
 # <a name="iobjecthandleunwrap-method"></a>IObjectHandle::Unwrap — Metoda
-Dekoduje obiekt marshal przez wartość pośredni.  
+Odpakuje obiekt zorganizowany przez wartość z pośredniego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT Unwrap (
   
 ## <a name="parameters"></a>Parametry  
  `ppv`  
- [out] Wskaźnik do obiektu do odkodowania.  
+ określoną Wskaźnik do obiektu, który ma zostać rozpakowany.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

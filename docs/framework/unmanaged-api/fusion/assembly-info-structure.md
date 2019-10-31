@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3cbb47c-457f-4083-8895-49562ca99ab8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 390ab4881396bbc01337d087f05b6066153bfed1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a43d5e15c02a97ff10a6a5afd439cadebb6b33d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109213"
 ---
 # <a name="assembly_info-structure"></a>ASSEMBLY_INFO — Struktura
 Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
@@ -43,17 +41,17 @@ typedef struct _ASSEMBLY_INFO {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`cbAssemblyInfo`|Rozmiar (w bajtach) struktury. To pole jest zarezerwowane do użytku w przyszłości.|  
-|`dwAssemblyFlags`|Flagi wskazujące szczegóły instalacji zestawu. Obsługiwane są następujące wartości:<br /><br /> -Wartość ASSEMBLYINFO_FLAG_INSTALLED, która wskazuje, że zestaw jest zainstalowany. Bieżąca wersja .NET Framework zawsze jest ustawiana `dwAssemblyFlags` na tę wartość.<br />-Wartość ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, która wskazuje, że zestaw jest rezydentem ładunku. Bieżąca wersja .NET Framework nigdy nie ustawia `dwAssemblyFlags` tej wartości.|  
+|`dwAssemblyFlags`|Flagi wskazujące szczegóły instalacji zestawu. Obsługiwane są następujące wartości:<br /><br /> -Wartość ASSEMBLYINFO_FLAG_INSTALLED, która wskazuje, że zestaw jest zainstalowany. Bieżąca wersja .NET Framework zawsze ustawia `dwAssemblyFlags` na tę wartość.<br />-Wartość ASSEMBLYINFO_FLAG_PAYLOADRESIDENT, która wskazuje, że zestaw jest rezydentem ładunku. Bieżąca wersja .NET Framework nigdy nie ustawia `dwAssemblyFlags` na tę wartość.|  
 |`uliAssemblySizeInKB`|Łączny rozmiar (w kilobajtach) plików, które zawiera zestaw.|  
 |`pszCurrentAssemblyPathBuf`|Wskaźnik do buforu ciągu, który przechowuje bieżącą ścieżkę do pliku manifestu. Ścieżka musi kończyć się znakiem null.|  
-|`cchBuf`|Liczba znaków dwubajtowych, łącznie z terminatorem wartości null `pszCurrentAssemblyPathBuf` , który zawiera.|  
+|`cchBuf`|Liczba znaków dwubajtowych, łącznie z terminatorem wartości null, który `pszCurrentAssemblyPathBuf` zawiera.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

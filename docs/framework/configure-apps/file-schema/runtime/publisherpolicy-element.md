@@ -1,5 +1,5 @@
 ---
-title: <publisherPolicy>, element
+title: <publisherPolicy> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/publisherPolicy
@@ -10,23 +10,21 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc206e584440778858e61fc0bab51fc8ffa2009a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115845"
 ---
-# <a name="publisherpolicy-element"></a>\<publisherPolicy> Element
+# <a name="publisherpolicy-element"></a>\<element > publisherPolicy Apply
 Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> dependentAssembly**](dependentassembly-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherPolicy Apply >**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zestawubinding**](assemblybinding-element-for-runtime.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<publisherpolicy apply >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -64,14 +62,14 @@ Brak.
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy dostawca składnika zwalnia nową wersję zestawu, dostawca może uwzględnić zasady wydawcy, aby aplikacje używające starej wersji używały teraz nowej wersji. Aby określić, czy zastosować zasady wydawcy dla określonego zestawu, umieść  **\<element publisherPolicy Apply >** w  **\<elemencie dependentAssembly >** .  
+ Gdy dostawca składnika zwalnia nową wersję zestawu, dostawca może uwzględnić zasady wydawcy, aby aplikacje używające starej wersji używały teraz nowej wersji. Aby określić, czy zastosować zasady wydawcy dla określonego zestawu, należy umieścić **\<publisherpolicy apply >** elementu w **\<dependentAssembly >** elementu.  
   
  Ustawieniem domyślnym dla atrybutu **apply** jest **tak**. Ustawienie atrybutu **Zastosuj** do **nie** zastępuje żadnych poprzednich ustawień **tak** dla zestawu.  
   
- Uprawnienie jest wymagane, aby aplikacja jawnie ignorował zasady wydawcy przy użyciu [ \<elementu publisherPolicy Apply Apply = "No"/>](publisherpolicy-element.md) w pliku konfiguracyjnym aplikacji. Uprawnienie jest udzielane przez ustawienie <xref:System.Security.Permissions.SecurityPermissionFlag> flagi <xref:System.Security.Permissions.SecurityPermission>na. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
+ Aby aplikacja jawnie ignorował zasady wydawcy przy użyciu [\<publisherPolicy Apply Apply = "No"/>](publisherpolicy-element.md) , w pliku konfiguracyjnym aplikacji jest wymagane uprawnienie. Uprawnienie jest udzielane przez ustawienie flagi <xref:System.Security.Permissions.SecurityPermissionFlag> w <xref:System.Security.Permissions.SecurityPermission>. Aby uzyskać więcej informacji, zobacz [uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu `myAssembly`.  
+ Poniższy przykład powoduje wyłączenie zasad wydawcy dla zestawu, `myAssembly`.  
   
 ```xml  
 <configuration>  

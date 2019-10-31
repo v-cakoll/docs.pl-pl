@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup.m_ConnectionList Field
+title: Connection. m_ConnectionList, pole
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120019"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList Field
+# <a name="connectiongroupm_connectionlist-field"></a>ConnectionList pole połączenia. m\_
 
-`ConnectionGroup.m_ConnectionList` jest <xref:System.Collections.ArrayList> obiektów połączeń, które służy do tego samego udziału i identyfikator URI takie same wartości dla niektórych innych właściwości, takich jak uwierzytelnianie i wygaśnięcia.
+`ConnectionGroup.m_ConnectionList` to <xref:System.Collections.ArrayList> obiektów połączeń, które obsługują ten sam identyfikator URI i mają te same wartości dla niektórych innych właściwości, takich jak wygaśnięcie i uwierzytelnianie.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> `ConnectionGroup.m_ConnectionList` Pole jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Pole `ConnectionGroup.m_ConnectionList` jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

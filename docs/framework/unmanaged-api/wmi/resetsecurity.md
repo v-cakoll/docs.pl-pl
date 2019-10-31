@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ResetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 95d91eac21e82e55af2f5e9ab181b770832f5ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120209"
 ---
 # <a name="resetsecurity-function"></a>ResetSecurity, funkcja
 Przypisuje podany token personifikacji do bieżącego wątku.   
@@ -39,20 +37,20 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parametry
 
 `token`  
-podczas Token personifikacji do skojarzenia z bieżącym wątkiem. Jego wartością może być `null`. 
+podczas Token personifikacji do skojarzenia z bieżącym wątkiem. Jej wartość może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Jeśli funkcja się powiedzie, zwracaną wartością jest `S_OK` (0).
+Jeśli funkcja się powiedzie, wartość zwracana jest `S_OK` (0).
 
 Jeśli funkcja się nie powiedzie, wartość zwracana jest kodem błędu o wartości innej niż zero. Aby uzyskać rozszerzone informacje o błędzie, wywołaj funkcję [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 440bad90-5a88-45e7-9157-4596801d8d19
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5d44f9b5dc42147959d3f1d127a64d39258f515
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 71836108dbd0ce01a64b4d9ac773c28d385dfd7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274265"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099689"
 ---
 # <a name="clrdatacreateinstance-function"></a>CLRDataCreateInstance — Funkcja
 Tworzy obiekt interfejsu dla określonego elementu docelowego.  
@@ -48,16 +46,16 @@ HRESULT CLRDataCreateInstance (
  określoną Wskaźnik do adresu zwróconego obiektu interfejsu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICLRDataTarget` Obiekt jest implementowany przez moduł zapisujący aplikacji debugowania. Implementacja zależy od typu reprezentowanego elementu docelowego. Element docelowy może być procesem, zrzutem pamięci, maszyną zdalną i tak dalej.  
+ Obiekt `ICLRDataTarget` jest implementowany przez moduł zapisujący aplikacji debugowania. Implementacja zależy od typu reprezentowanego elementu docelowego. Element docelowy może być procesem, zrzutem pamięci, maszyną zdalną i tak dalej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** ClrData. idl  
+ **Nagłówek:** ClrData. idl  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

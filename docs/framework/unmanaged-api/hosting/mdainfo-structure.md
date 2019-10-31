@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fb8c14f7-d461-43d1-8b47-adb6723b9b93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 198141545119976cb9107bc9c09b913572e266ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a2f513d40d722f1b0aad823ac7c0d93bda5615f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781128"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123257"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo — Struktura
-Zawiera szczegółowe informacje na temat `Event_MDAFired` zdarzenia, co powoduje wyzwolenie tworzenia zarządzanego Asystenta debugowania (MDA).  
+Zawiera szczegółowe informacje o zdarzeniu `Event_MDAFired`, które wyzwala tworzenie zarządzanego asystenta debugowania (MDA).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +37,28 @@ typedef struct _MDAInfo {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`lpMDACaption`|Tytuł bieżącego MDA. Tytuł w tym artykule opisano rodzaj błędu, który wyzwolił `Event_MDAFired` zdarzeń.|  
-|`lpMDAMessage`|Komunikatu wyjściowego dostarczane przez bieżącego MDA.|  
+|`lpMDACaption`|Tytuł bieżącego elementu MDA. Tytuł opisuje rodzaj błędu, który wyzwolił zdarzenie `Event_MDAFired`.|  
+|`lpMDAMessage`|Komunikat wyjściowy dostarczony przez bieżące zdarzenie MDA.|  
   
 ## <a name="remarks"></a>Uwagi  
- Debugowanie — pomoce, które działają w połączeniu z środowisko uruchomieniowe języka wspólnego (CLR) do wykonywania zadań, np. zidentyfikowanie nieprawidłowe warunki w silnika wykonania środowiska uruchomieniowego lub zrzucania dodatkowe informacje na temat stanu asystentów zarządzanego debugowania (mda) aparat. Mda generowania wiadomości XML o zdarzeniach, które w przeciwnym razie są trudne do pułapki. Są one szczególnie przydatne podczas debugowania przejścia między kodem zarządzanym i niezarządzanym.  
+ Zarządzane Asystenci debugowania (MDA) to pomoce debugowania, które działają w połączeniu ze środowiskiem uruchomieniowym języka wspólnego (CLR) do wykonywania zadań, takich jak identyfikowanie nieprawidłowych warunków w aparacie wykonawczym środowiska uruchomieniowego lub zatopienie dodatkowych informacji o stanie wyszukiwarce. MDA generuje komunikaty XML o zdarzeniach, które w przeciwnym razie trudno jest Zalewka. Są one szczególnie przydatne do debugowania przejść między zarządzanym i niezarządzanym kodem.  
   
- Po wyzwoleniu zdarzenia wyzwalającego tworzenia MDA, środowisko uruchomieniowe wykonuje następujące czynności:  
+ Środowisko uruchomieniowe wykonuje następujące czynności, gdy zostanie wyzwolone zdarzenie wyzwalające utworzenie elementu MDA:  
   
-- Jeśli host nie został zarejestrowany [iactiononclrevent —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) wystąpienia, wywołując [iclroneventmanager::registeractiononevent —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) Aby otrzymywać powiadomienia o `Event_MDAFired` zdarzenia środowiska uruchomieniowego kontynuuje jego Domyślnie-hostowanej działania.  
+- Jeśli host nie zarejestrował wystąpienia [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md) przez wywołanie [ICLROnEventManager:: RegisterActionOnEvent —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md) w celu powiadomienia o zdarzeniu `Event_MDAFired`, środowisko uruchomieniowe kontynuuje działanie z domyślnym, nieobsługiwanym zachowaniem.  
   
-- Jeśli host został zarejestrowany program obsługi dla tego zdarzenia, środowisko uruchomieniowe sprawdza, czy debuger jest dołączony do procesu. Jeśli tak jest, środowisko uruchomieniowe przerywa debugowanie. Gdy debuger będzie nadal występował, wywoła hosta. Jeśli debuger nie jest dołączony, środowisko wykonawcze wywołuje `IActionOnCLREvent::OnEvent` i przekazuje wskaźnik do `MDAInfo` wystąpienia jako `data` parametru.  
+- Jeśli host zarejestrował procedurę obsługi dla tego zdarzenia, środowisko uruchomieniowe sprawdzi, czy debuger jest dołączony do procesu. Jeśli tak jest, środowisko uruchomieniowe jest przerywane w debugerze. Gdy debuger kontynuuje działanie, wywołuje hosta. Jeśli debuger nie jest dołączony, wywołania środowiska uruchomieniowego `IActionOnCLREvent::OnEvent` i przekazują wskaźnik do wystąpienia `MDAInfo` jako parametru `data`.  
   
- Hosta można wybrać, aby aktywować MDA oraz otrzymywać powiadomienia, gdy zdarzenie MDA jest aktywowane. Host daje szansę, aby zastąpić domyślne zachowanie i aby przerwać wątków zarządzanych, która wywołała zdarzenie, aby uniemożliwić uszkodzenia stan procesu. Aby uzyskać więcej informacji na temat używania mda zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Host może zdecydować się na aktywację MDA i otrzymywanie powiadomień, gdy zostanie uaktywnione zdarzenie MDA. Dzięki temu host może przesłonić domyślne zachowanie i przerwać zarządzany wątek, który wywołał zdarzenie, aby zapobiec uszkodzeniu stanu procesu. Aby uzyskać więcej informacji na temat korzystania z programu MDA, zobacz [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.idl  
+ **Nagłówek:** MSCorEE. idl  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,17 +2,15 @@
 title: Metoda ICorDebugAssembly3::GetContainerAssembly
 ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4cda67145a0e624f87e93cf02ebdb6bc77c34d2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 39f8dd042ea785258dfe5c048ebc348852be6892
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69987602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095392"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>Metoda ICorDebugAssembly3::GetContainerAssembly
-Zwraca zestaw kontenerów tego `ICorDebugAssembly3` obiektu.  
+Zwraca zestaw kontenerów tego obiektu `ICorDebugAssembly3`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -27,7 +25,7 @@ HRESULT GetContainerAssembly(
  Wskaźnik do adresu obiektu ICorDebugAssembly, który reprezentuje zestaw kontenerów, lub **wartość null** , jeśli wywołanie metody nie powiedzie się.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK`Jeśli wywołanie metody powiodło się; w przeciwnym razie, `ppAssembly` i ma **wartość null.** `S_FALSE`  
+ `S_OK`, jeśli wywołanie metody powiodło się; w przeciwnym razie `S_FALSE`i `ppAssembly` ma **wartość null**.  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli ten zestaw został scalony z innymi wewnątrz jednego zestawu kontenerów, Metoda ta zwraca zestaw kontenerów. Aby uzyskać więcej informacji i terminologii, zobacz temat [Metoda ICorDebugProcess6:: EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md) .  
@@ -36,13 +34,13 @@ HRESULT GetContainerAssembly(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

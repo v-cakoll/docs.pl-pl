@@ -1,20 +1,18 @@
 ---
-title: 'Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych'
+title: 'Porady: rejestrowanie podstawowych zestawów międzyoperacyjnych'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - registering primary interop assemblies
 - primary interop assemblies, registering
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0eeaee969eda5e4d0ea1a119991456668c7d44f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c799e4ead2932f1c376a57488df30390ad48b90f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051743"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107677"
 ---
-# <a name="how-to-register-primary-interop-assemblies"></a>Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych
+# <a name="how-to-register-primary-interop-assemblies"></a>Porady: rejestrowanie podstawowych zestawów międzyoperacyjnych
 
 Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są zawsze organizowane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywany interfejsem klasy. Aby uzyskać informacje na temat przesłaniania interfejsu klasy przy użyciu wybranego interfejsu, zobacz Wywoływanie [otoki com](../../standard/native-interop/com-callable-wrapper.md).
 
@@ -43,7 +41,7 @@ Użyj [narzędzia rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembl
      W tym poleceniu *AssemblyName* jest nazwą pliku zestawu, który jest zarejestrowany. Regasm. exe dodaje wpis dla podstawowego zestawu międzyoperacyjnego w tym samym kluczu rejestru co oryginalna biblioteka typów.
 
 ## <a name="example"></a>Przykład
- Poniższy przykład rejestruje `CompanyA.UtilLib.dll` podstawowy zestaw międzyoperacyjny.
+ Poniższy przykład rejestruje `CompanyA.UtilLib.dll` podstawowego zestawu międzyoperacyjnego.
 
 ```console
 regasm CompanyA.UtilLib.dll

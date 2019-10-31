@@ -2,14 +2,12 @@
 title: 'ICorDebugVariableSymbol:: GetName — Metoda'
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 23637055e493c008db36b23515001895450d6ab9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9bc32d3372710b4c4e92aa89df5e6e7839ad3078
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121012"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol:: GetName — Metoda
 Pobiera nazwę zmiennej.  
@@ -26,10 +24,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- podczas Liczba znaków w `szName` buforze.  
+ podczas Liczba znaków w buforze `szName`.  
   
  `pcchName`  
- określoną Wskaźnik do liczby znaków rzeczywiście zapisywana `szName` w buforze.  
+ określoną Wskaźnik do liczby znaków rzeczywiście zapisywana w buforze `szName`.  
   
  `szName`  
  Wskaźnik do tablicy znaków, która zawiera nazwę zmiennej.  
@@ -40,13 +38,13 @@ HRESULT GetName(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

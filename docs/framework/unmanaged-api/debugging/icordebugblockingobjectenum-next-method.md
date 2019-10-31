@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1e94e4da0eea06ce9cc0110002b1def9e4dd4989
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939144"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122829"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next — Metoda
 Pobiera określoną liczbę obiektów [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) z wyliczenia, rozpoczynając od bieżącego położenia.  
@@ -52,24 +50,24 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|S_FALSE|`pceltFetched`nie równa `celt`się.|  
+|S_FALSE|`pceltFetched` nie jest równe `celt`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ta metoda działa jak typowy moduł wyliczający COM.  
   
- Wartości tablicy wejściowej muszą mieć rozmiar `celt`co najmniej. Tablica zostanie uzupełniona na następne `celt` wartości w wyliczeniu lub wszystkie pozostałe wartości, jeśli `celt` nie pozostaną. Gdy ta metoda zostanie zwrócona, `pceltFetched` zostanie wypełniona liczba pobieranych wartości. Jeśli `values` zawiera nieprawidłowe wskaźniki lub wskazuje bufor, który jest mniejszy niż `celt`lub jeśli `pceltFetched` jest nieprawidłowym wskaźnikiem, wynik jest niezdefiniowany.  
+ Wartości tablicy wejściowej muszą mieć co najmniej rozmiar `celt`. Tablica zostanie wypełniona przy użyciu następnych wartości `celt` w wyliczeniu lub dla wszystkich pozostałych wartości, jeśli pozostanie mniej niż `celt`. Gdy ta metoda zostanie zwrócona, `pceltFetched` zostanie wypełniony liczbą pobieranych wartości. Jeśli `values` zawiera nieprawidłowe wskaźniki lub wskazuje bufor, który jest mniejszy niż `celt`lub jeśli `pceltFetched` jest nieprawidłowym wskaźnikiem, wynik jest niezdefiniowany.  
   
 > [!NOTE]
 > Mimo że struktura [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) nie musi zostać wydana, należy wydać interfejs "ICorDebugValue" wewnątrz niego.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

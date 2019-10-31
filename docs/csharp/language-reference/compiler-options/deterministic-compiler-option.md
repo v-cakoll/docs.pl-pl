@@ -7,14 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77c14a1c3a4ba11b8ae6556be4f1c3c0cd42788
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70202922"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73086908"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -28,7 +26,7 @@ Powoduje, że kompilator tworzy zestaw, którego bajty w bajtach są identyczne 
 
 ## <a name="remarks"></a>Uwagi
 
-Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych są unikatowe, ponieważ kompilator dodaje sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczb losowych. Używasz opcji do tworzenia deterministycznego zestawu, który jest identyczny z zawartością binarną w kompilacjach, tak długo, jak dane wejściowe pozostają takie same. `-deterministic`
+Domyślnie dane wyjściowe kompilatora z danego zestawu danych wejściowych są unikatowe, ponieważ kompilator dodaje sygnaturę czasową i identyfikator GUID, który jest generowany na podstawie liczb losowych. Opcja `-deterministic` służy do tworzenia *deterministycznego zestawu*, który jest identyczny z zawartością binarną w kompilacjach, o ile dane wejściowe pozostają takie same.
 
 Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
 
@@ -40,7 +38,7 @@ Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
   - Pliki źródłowe
   - Przywoływane zestawy
   - Moduły, do których istnieją odwołania
-  - Zasoby
+  - Resources
   - Plik klucza o silnej nazwie
   - pliki odpowiedzi @
   - Analizatory

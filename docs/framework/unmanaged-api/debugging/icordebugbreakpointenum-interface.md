@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpointEnum, interfejs
+title: ICorDebugBreakpointEnum — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpointEnum
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e8192bd7ccaebab78158f11adb79509031132ecd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122757"
 ---
-# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum, interfejs
+# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum — Interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugBreakpoint.  
   
@@ -31,7 +29,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugBreakpoint.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Pobiera określoną liczbę `ICorDebugBreakpoint` wystąpień z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugBreakpoint` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -39,13 +37,13 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugBreakpoint.
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ea574c84-c622-4589-9a14-b55771af5e06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 114f4ff261d9612a81d17bf5b3df2f87323f77f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2358cee1b3a9aa50fb1f0e61d558f164a39aa86c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137361"
 ---
-# <a name="icordebugmodule2setjitcompilerflags-method"></a><span data-ttu-id="32403-102">ICorDebugModule2::SetJITCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="32403-102">ICorDebugModule2::SetJITCompilerFlags Method</span></span>
-<span data-ttu-id="32403-103">Ustawia flagi, które kontrolują kompilację just-in-time (JIT) to icordebugmodule2 —.</span><span class="sxs-lookup"><span data-stu-id="32403-103">Sets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
+# <a name="icordebugmodule2setjitcompilerflags-method"></a><span data-ttu-id="df002-102">ICorDebugModule2::SetJITCompilerFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="df002-102">ICorDebugModule2::SetJITCompilerFlags Method</span></span>
+<span data-ttu-id="df002-103">Ustawia flagi kontrolujące kompilację just-in-Time (JIT) tej ICorDebugModule2.</span><span class="sxs-lookup"><span data-stu-id="df002-103">Sets the flags that control the just-in-time (JIT) compilation of this ICorDebugModule2.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="32403-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="32403-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="df002-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="df002-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetJITCompilerFlags (  
@@ -35,22 +33,22 @@ HRESULT SetJITCompilerFlags (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="32403-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="32403-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="df002-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="df002-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="32403-106">[in] Bitowa kombinacja [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wartości wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="32403-106">[in] A bitwise combination of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration values.</span></span>  
+ <span data-ttu-id="df002-106">podczas Bitowa kombinacja wartości wyliczenia [CorDebugJITCompilerFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) .</span><span class="sxs-lookup"><span data-stu-id="df002-106">[in] A bitwise combination of the [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) enumeration values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="32403-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="32403-107">Remarks</span></span>  
- <span data-ttu-id="32403-108">Jeśli `dwFlags` wartość jest nieprawidłowa, `SetJITCompilerFlags` metoda zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="32403-108">If the `dwFlags` value is invalid, the `SetJITCompilerFlags` method will fail.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="df002-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="df002-107">Remarks</span></span>  
+ <span data-ttu-id="df002-108">Jeśli wartość `dwFlags` jest nieprawidłowa, Metoda `SetJITCompilerFlags` zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="df002-108">If the `dwFlags` value is invalid, the `SetJITCompilerFlags` method will fail.</span></span>  
   
- <span data-ttu-id="32403-109">`SetJITCompilerFlags` Metoda może być wywołana tylko z poziomu [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) wywołania zwrotnego dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="32403-109">The `SetJITCompilerFlags` method can be called only from within the [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) callback for this module.</span></span> <span data-ttu-id="32403-110">Próbuje wywołać go po `ICorDebugManagedCallback::LoadModule` wywołania zwrotnego dostarczonej będą się nie powieść.</span><span class="sxs-lookup"><span data-stu-id="32403-110">Attempts to call it after the `ICorDebugManagedCallback::LoadModule` callback has been delivered will fail.</span></span>  
+ <span data-ttu-id="df002-109">Metodę `SetJITCompilerFlags` można wywołać tylko z poziomu wywołania zwrotnego [ICorDebugManagedCallback:: LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="df002-109">The `SetJITCompilerFlags` method can be called only from within the [ICorDebugManagedCallback::LoadModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md) callback for this module.</span></span> <span data-ttu-id="df002-110">Próbuje wywołać ją po dostarczeniu wywołania zwrotnego `ICorDebugManagedCallback::LoadModule` zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="df002-110">Attempts to call it after the `ICorDebugManagedCallback::LoadModule` callback has been delivered will fail.</span></span>  
   
- <span data-ttu-id="32403-111">Edytuj i Kontynuuj nie jest obsługiwany w 64-bitowych lub Win9x platformach.</span><span class="sxs-lookup"><span data-stu-id="32403-111">Edit and Continue is not supported on 64-bit or Win9x platforms.</span></span> <span data-ttu-id="32403-112">W związku z tym jeśli wywołasz `SetJITCompilerFlags` metodę na jedną z tych dwóch platform przy użyciu flagi CORDEBUG_JIT_ENABLE_ENC w `dwFlags`, `SetJITCompilerFlags` metody i wszystkie metody określonej funkcji Edytuj i Kontynuuj, takich jak [icordebugmodule2 —:: Applychanges —](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), zakończy się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="32403-112">Therefore, if you call the `SetJITCompilerFlags` method on either of these two platforms with the CORDEBUG_JIT_ENABLE_ENC flag set in `dwFlags`, the `SetJITCompilerFlags` method and all methods specific to Edit and Continue, such as [ICorDebugModule2::ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), will fail.</span></span>  
+ <span data-ttu-id="df002-111">Edytuj i Kontynuuj nie są obsługiwane na platformach 64-bitowych i Win9x.</span><span class="sxs-lookup"><span data-stu-id="df002-111">Edit and Continue is not supported on 64-bit or Win9x platforms.</span></span> <span data-ttu-id="df002-112">W związku z tym, jeśli wywołasz metodę `SetJITCompilerFlags` na jednej z tych dwóch platform z flagą CORDEBUG_JIT_ENABLE_ENC ustawioną w `dwFlags`, Metoda `SetJITCompilerFlags` oraz wszystkie metody specyficzne dla opcji Edytuj i Kontynuuj, takie jak [ICorDebugModule2:: ApplyChanges —](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), zakończą się niepowodzeniem.</span><span class="sxs-lookup"><span data-stu-id="df002-112">Therefore, if you call the `SetJITCompilerFlags` method on either of these two platforms with the CORDEBUG_JIT_ENABLE_ENC flag set in `dwFlags`, the `SetJITCompilerFlags` method and all methods specific to Edit and Continue, such as [ICorDebugModule2::ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md), will fail.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="32403-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="32403-113">Requirements</span></span>  
- <span data-ttu-id="32403-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="32403-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="df002-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="df002-113">Requirements</span></span>  
+ <span data-ttu-id="df002-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="df002-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="32403-115">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="32403-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="df002-115">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="df002-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="32403-116">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="32403-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="df002-116">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="df002-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="32403-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="32403-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="df002-117">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="df002-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -14,37 +14,35 @@ helpviewer_keywords:
 ms.assetid: 873639e2-4837-4568-83b3-4493e67e4174
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c98ece9d60571034f3298f15897b10c4d8fb06f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e980356ad592e137df7d08dadd77431b0e295380
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141003"
 ---
-# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="b1922-102">ICLRMemoryNotificationCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="b1922-102">ICLRMemoryNotificationCallback Interface</span></span>
-<span data-ttu-id="b1922-103">Zezwalaj hostowi na warunki wykorzystanie pamięci raportu przy użyciu podejścia, podobnie jak w przypadku Win32 `CreateMemoryResourceNotification` funkcji.</span><span class="sxs-lookup"><span data-stu-id="b1922-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
+# <a name="iclrmemorynotificationcallback-interface"></a><span data-ttu-id="f08a7-102">ICLRMemoryNotificationCallback — Interfejs</span><span class="sxs-lookup"><span data-stu-id="f08a7-102">ICLRMemoryNotificationCallback Interface</span></span>
+<span data-ttu-id="f08a7-103">Umożliwia hostowi zgłaszanie warunków ciśnienia pamięci przy użyciu podejścia podobnego do funkcji Win32 `CreateMemoryResourceNotification`.</span><span class="sxs-lookup"><span data-stu-id="f08a7-103">Allows the host to report memory pressure conditions using an approach similar to that of the Win32 `CreateMemoryResourceNotification` function.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b1922-104">Metody</span><span class="sxs-lookup"><span data-stu-id="b1922-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="f08a7-104">Metody</span><span class="sxs-lookup"><span data-stu-id="f08a7-104">Methods</span></span>  
   
-|<span data-ttu-id="b1922-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="b1922-105">Method</span></span>|<span data-ttu-id="b1922-106">Opis</span><span class="sxs-lookup"><span data-stu-id="b1922-106">Description</span></span>|  
+|<span data-ttu-id="f08a7-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="f08a7-105">Method</span></span>|<span data-ttu-id="f08a7-106">Opis</span><span class="sxs-lookup"><span data-stu-id="f08a7-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b1922-107">OnMemoryNotification, metoda</span><span class="sxs-lookup"><span data-stu-id="b1922-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="b1922-108">Powiadamia środowisko uruchomieniowe języka wspólnego (CLR) obciążenia pamięci na komputerze.</span><span class="sxs-lookup"><span data-stu-id="b1922-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
+|[<span data-ttu-id="f08a7-107">OnMemoryNotification, metoda</span><span class="sxs-lookup"><span data-stu-id="f08a7-107">OnMemoryNotification Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)|<span data-ttu-id="f08a7-108">Powiadamia środowisko uruchomieniowe języka wspólnego (CLR) o załadowaniu pamięci na komputerze.</span><span class="sxs-lookup"><span data-stu-id="f08a7-108">Notifies the common language runtime (CLR) of the memory load on the computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b1922-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="b1922-109">Remarks</span></span>  
- <span data-ttu-id="b1922-110">Host używa `ICLRMemoryNotificationCallback` interfejsu do żądania, że środowisko CLR Zwolnij zasoby pamięci.</span><span class="sxs-lookup"><span data-stu-id="b1922-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f08a7-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f08a7-109">Remarks</span></span>  
+ <span data-ttu-id="f08a7-110">Host używa interfejsu `ICLRMemoryNotificationCallback`, aby zażądać zasobu wolnej pamięci środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="f08a7-110">The host uses the `ICLRMemoryNotificationCallback` interface to request that the CLR free memory resources.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1922-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b1922-111">Requirements</span></span>  
- <span data-ttu-id="b1922-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1922-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f08a7-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f08a7-111">Requirements</span></span>  
+ <span data-ttu-id="f08a7-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f08a7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1922-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b1922-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f08a7-113">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="f08a7-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b1922-114">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b1922-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f08a7-114">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="f08a7-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b1922-115">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1922-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="f08a7-115">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f08a7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b1922-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b1922-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f08a7-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f08a7-116">See also</span></span>
 
-- [<span data-ttu-id="b1922-117">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="b1922-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
-- [<span data-ttu-id="b1922-118">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="b1922-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="f08a7-117">IHostMemoryManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="f08a7-117">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="f08a7-118">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="f08a7-118">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

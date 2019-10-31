@@ -6,27 +6,25 @@ helpviewer_keywords:
 - debugging coclasses [.NET Framework]
 - coclasses [.NET Framework debugging]
 ms.assetid: 94f94159-108e-436c-99e7-dff3beeb2503
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 403815f38e0ce85d34d97f17b0af23246b5507e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc39b087e05a7770d88dd47123cd0d7a8e781cd0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698398"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124367"
 ---
-# <a name="debugging-coclasses"></a><span data-ttu-id="21443-102">Klasy coclass debugowania</span><span class="sxs-lookup"><span data-stu-id="21443-102">Debugging Coclasses</span></span>
-<span data-ttu-id="21443-103">W tej sekcji opisano niezarządzane klasy coclass, których używa interfejsu API debugowania.</span><span class="sxs-lookup"><span data-stu-id="21443-103">This section describes the unmanaged coclasses that the debugging API uses.</span></span>  
+# <a name="debugging-coclasses"></a><span data-ttu-id="c0f76-102">Klasy coclass debugowania</span><span class="sxs-lookup"><span data-stu-id="c0f76-102">Debugging Coclasses</span></span>
+<span data-ttu-id="c0f76-103">W tej sekcji opisano niezarządzane klasy coclass używane przez interfejs API debugowania.</span><span class="sxs-lookup"><span data-stu-id="c0f76-103">This section describes the unmanaged coclasses that the debugging API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="21443-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="21443-104">In This Section</span></span>  
- [<span data-ttu-id="21443-105">CorpubPublish, klasa coclass</span><span class="sxs-lookup"><span data-stu-id="21443-105">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
- <span data-ttu-id="21443-106">Udostępnia interfejsy do publikowania informacji o domenach aplikacji i procesów.</span><span class="sxs-lookup"><span data-stu-id="21443-106">Provides interfaces for publishing information about application domains and processes.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c0f76-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c0f76-104">In This Section</span></span>  
+ [<span data-ttu-id="c0f76-105">CorpubPublish, klasa coclass</span><span class="sxs-lookup"><span data-stu-id="c0f76-105">CorpubPublish Coclass</span></span>](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)  
+ <span data-ttu-id="c0f76-106">Udostępnia interfejsy umożliwiające publikowanie informacji o domenach i procesach aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c0f76-106">Provides interfaces for publishing information about application domains and processes.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="21443-107">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="21443-107">Related Sections</span></span>  
- [<span data-ttu-id="21443-108">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="21443-108">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="c0f76-107">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c0f76-107">Related Sections</span></span>  
+ [<span data-ttu-id="c0f76-108">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="c0f76-108">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
   
- [<span data-ttu-id="21443-109">Debugowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="21443-109">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [<span data-ttu-id="c0f76-109">Debugowanie statycznych funkcji globalnych</span><span class="sxs-lookup"><span data-stu-id="c0f76-109">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
   
- [<span data-ttu-id="21443-110">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="21443-110">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [<span data-ttu-id="c0f76-110">Debugowanie, wyliczenia</span><span class="sxs-lookup"><span data-stu-id="c0f76-110">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
   
- [<span data-ttu-id="21443-111">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="21443-111">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+ [<span data-ttu-id="c0f76-111">Struktury debugowania</span><span class="sxs-lookup"><span data-stu-id="c0f76-111">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

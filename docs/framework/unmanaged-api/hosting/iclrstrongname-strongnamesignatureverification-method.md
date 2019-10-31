@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 734dc4d1-0a76-4736-b5ac-cb4253b3dd49
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d269414346d8dcf4212fb5ee546cf22228cdd2b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6b473466aefc06dc83526e65f8ee9e37703ba9e4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134952"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="7e6a8-102">ICLRStrongName::StrongNameSignatureVerification — Metoda</span><span class="sxs-lookup"><span data-stu-id="7e6a8-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
-<span data-ttu-id="7e6a8-103">Pobiera wartość wskazującą, czy manifest zestawu w podanej ścieżce zawiera podpisu silnej nazwy, który jest weryfikowany zgodnie z określone flagi.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="ddaad-102">ICLRStrongName::StrongNameSignatureVerification — Metoda</span><span class="sxs-lookup"><span data-stu-id="ddaad-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
+<span data-ttu-id="ddaad-103">Pobiera wartość wskazującą, czy manifest zestawu w podanej ścieżce zawiera podpis silnej nazwy, który jest sprawdzany według określonych flag.</span><span class="sxs-lookup"><span data-stu-id="ddaad-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7e6a8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7e6a8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ddaad-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ddaad-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameSignatureVerification (  
@@ -37,43 +35,43 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7e6a8-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7e6a8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ddaad-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ddaad-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="7e6a8-106">[in] Ścieżka do przenośnych (.dll lub .exe) pliku wykonywalnego dla zestawu sprawdzić.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
+ <span data-ttu-id="ddaad-106">podczas Ścieżka do przenośnego pliku wykonywalnego (. dll lub. exe) dla zestawu do zweryfikowania.</span><span class="sxs-lookup"><span data-stu-id="ddaad-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="7e6a8-107">[in] Flagi, aby zmodyfikować zachowanie weryfikacji.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="7e6a8-108">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="7e6a8-108">The following values are supported:</span></span>  
+ <span data-ttu-id="ddaad-107">podczas Flagi modyfikujące zachowanie weryfikacji.</span><span class="sxs-lookup"><span data-stu-id="ddaad-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="ddaad-108">Obsługiwane są następujące wartości:</span><span class="sxs-lookup"><span data-stu-id="ddaad-108">The following values are supported:</span></span>  
   
-- <span data-ttu-id="7e6a8-109">`SN_INFLAG_FORCE_VER` (0x00000001) - wymusza weryfikację, nawet jeśli jest zastąpić ustawienia rejestru.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+- <span data-ttu-id="ddaad-109">`SN_INFLAG_FORCE_VER` (0x00000001) — wymusza weryfikację, nawet jeśli jest konieczna przesłonięcie ustawień rejestru.</span><span class="sxs-lookup"><span data-stu-id="ddaad-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
-- <span data-ttu-id="7e6a8-110">`SN_INFLAG_INSTALL` (0x00000002) — określa, że jest to manifest jest weryfikowany po raz pierwszy.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
+- <span data-ttu-id="ddaad-110">`SN_INFLAG_INSTALL` (0x00000002) — określa, że jest to pierwsze sprawdzenie manifestu.</span><span class="sxs-lookup"><span data-stu-id="ddaad-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
   
-- <span data-ttu-id="7e6a8-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) — określa, że pamięć podręczna zezwoli na dostęp tylko do użytkowników, którzy mają uprawnienia administracyjne.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+- <span data-ttu-id="ddaad-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) — określa, że pamięć podręczna będzie zezwalać na dostęp tylko użytkownikom z uprawnieniami administracyjnymi.</span><span class="sxs-lookup"><span data-stu-id="ddaad-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
-- <span data-ttu-id="7e6a8-112">`SN_INFLAG_USER_ACCESS` (0x00000008) — określa, że zestaw będzie dostępny tylko dla bieżącego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+- <span data-ttu-id="ddaad-112">`SN_INFLAG_USER_ACCESS` (0x00000008) — określa, że zestaw będzie dostępny tylko dla bieżącego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="ddaad-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
-- <span data-ttu-id="7e6a8-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) — określa, że pamięć podręczna zapewni żadnych gwarancji ograniczenie dostępu.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+- <span data-ttu-id="ddaad-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) — określa, że pamięć podręczna nie będzie zapewniać żadnych gwarancji ograniczenia dostępu.</span><span class="sxs-lookup"><span data-stu-id="ddaad-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
-- <span data-ttu-id="7e6a8-114">`SN_INFLAG_RUNTIME` (0x80000000) - zarezerwowane dla wewnętrznego debugowania.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+- <span data-ttu-id="ddaad-114">`SN_INFLAG_RUNTIME` (0x80000000) — zarezerwowane na potrzeby debugowania wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="ddaad-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="7e6a8-115">[out] Flagi wskazującą, czy została zweryfikowana podpisu silnej nazwy.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="7e6a8-116">Obsługiwane jest następującą wartość:</span><span class="sxs-lookup"><span data-stu-id="7e6a8-116">The following value is supported:</span></span>  
+ <span data-ttu-id="ddaad-115">określoną Flagi wskazujące, czy podpis silnej nazwy został zweryfikowany.</span><span class="sxs-lookup"><span data-stu-id="ddaad-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="ddaad-116">Obsługiwana jest następująca wartość:</span><span class="sxs-lookup"><span data-stu-id="ddaad-116">The following value is supported:</span></span>  
   
-- <span data-ttu-id="7e6a8-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) — ta wartość jest równa `false` do określenia, czy Weryfikacja powiodła się z powodu ustawień rejestru.</span><span class="sxs-lookup"><span data-stu-id="7e6a8-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+- <span data-ttu-id="ddaad-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) — ta wartość jest ustawiona na `false`, aby określić, że weryfikacja powiodła się z powodu ustawień rejestru.</span><span class="sxs-lookup"><span data-stu-id="ddaad-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7e6a8-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7e6a8-118">Return Value</span></span>  
- <span data-ttu-id="7e6a8-119">`S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="7e6a8-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ddaad-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ddaad-118">Return Value</span></span>  
+ <span data-ttu-id="ddaad-119">`S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).</span><span class="sxs-lookup"><span data-stu-id="ddaad-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7e6a8-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7e6a8-120">Requirements</span></span>  
- <span data-ttu-id="7e6a8-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7e6a8-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ddaad-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ddaad-120">Requirements</span></span>  
+ <span data-ttu-id="ddaad-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ddaad-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7e6a8-122">**Nagłówek:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="7e6a8-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ddaad-122">**Nagłówek:** Obiekt ServiceHost. h</span><span class="sxs-lookup"><span data-stu-id="ddaad-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="7e6a8-123">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="7e6a8-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ddaad-123">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="ddaad-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7e6a8-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e6a8-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ddaad-124">**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ddaad-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7e6a8-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7e6a8-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ddaad-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ddaad-125">See also</span></span>
 
-- [<span data-ttu-id="7e6a8-126">StrongNameSignatureVerificationEx, metoda</span><span class="sxs-lookup"><span data-stu-id="7e6a8-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="7e6a8-127">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="7e6a8-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="ddaad-126">StrongNameSignatureVerificationEx, metoda</span><span class="sxs-lookup"><span data-stu-id="ddaad-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="ddaad-127">ICLRStrongName, interfejs</span><span class="sxs-lookup"><span data-stu-id="ddaad-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

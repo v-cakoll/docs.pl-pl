@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6abc4893ac99c5ce93a409a8120f090250be57c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137370"
 ---
-# <a name="icordebugmanagedcallbackdebuggererror-method"></a><span data-ttu-id="d5d36-102">ICorDebugManagedCallback::DebuggerError — Metoda</span><span class="sxs-lookup"><span data-stu-id="d5d36-102">ICorDebugManagedCallback::DebuggerError Method</span></span>
-<span data-ttu-id="d5d36-103">Powiadamia debuger wystąpił błąd podczas próby obsłużyć zdarzenie z środowisko uruchomieniowe języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="d5d36-103">Notifies the debugger that an error has occurred while attempting to handle an event from the common language runtime (CLR).</span></span>  
+# <a name="icordebugmanagedcallbackdebuggererror-method"></a><span data-ttu-id="d452f-102">ICorDebugManagedCallback::DebuggerError — Metoda</span><span class="sxs-lookup"><span data-stu-id="d452f-102">ICorDebugManagedCallback::DebuggerError Method</span></span>
+<span data-ttu-id="d452f-103">Powiadamia debuger, że wystąpił błąd podczas próby obsłużenia zdarzenia z aparatu plików wykonywalnych języka wspólnego (CLR).</span><span class="sxs-lookup"><span data-stu-id="d452f-103">Notifies the debugger that an error has occurred while attempting to handle an event from the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d5d36-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d5d36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d452f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d452f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DebuggerError (  
@@ -37,30 +35,30 @@ HRESULT DebuggerError (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d5d36-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d5d36-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d452f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d452f-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="d5d36-106">[in] Wskaźnik do obiektu "ICorDebugProcess", który reprezentuje proces, w którym wystąpiło zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="d5d36-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the event occurred.</span></span>  
+ <span data-ttu-id="d452f-106">podczas Wskaźnik do obiektu "ICorDebugProcess", który reprezentuje proces, w którym wystąpiło zdarzenie.</span><span class="sxs-lookup"><span data-stu-id="d452f-106">[in] A pointer to an "ICorDebugProcess" object that represents the process in which the event occurred.</span></span>  
   
  `errorHR`  
- <span data-ttu-id="d5d36-107">[in] Wartość HRESULT, który został zwrócony z programu obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d5d36-107">[in] The HRESULT value that was returned from the event handler.</span></span>  
+ <span data-ttu-id="d452f-107">podczas Wartość HRESULT, która została zwrócona przez program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d452f-107">[in] The HRESULT value that was returned from the event handler.</span></span>  
   
  `errorCode`  
- <span data-ttu-id="d5d36-108">[in] Liczba całkowita określająca błąd środowiska CLR.</span><span class="sxs-lookup"><span data-stu-id="d5d36-108">[in] An integer that specifies the CLR error.</span></span>  
+ <span data-ttu-id="d452f-108">podczas Liczba całkowita, która określa błąd CLR.</span><span class="sxs-lookup"><span data-stu-id="d452f-108">[in] An integer that specifies the CLR error.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d5d36-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d5d36-109">Remarks</span></span>  
- <span data-ttu-id="d5d36-110">Proces mógł być umieszczony w trybie przekazywania, w zależności od charakteru błędu.</span><span class="sxs-lookup"><span data-stu-id="d5d36-110">The process may be placed into pass-through mode, depending on the nature of the error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d452f-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d452f-109">Remarks</span></span>  
+ <span data-ttu-id="d452f-110">Proces może być umieszczony w trybie przekazywania, w zależności od charakteru błędu.</span><span class="sxs-lookup"><span data-stu-id="d452f-110">The process may be placed into pass-through mode, depending on the nature of the error.</span></span>  
   
- <span data-ttu-id="d5d36-111">`DebugError` Wywołania zwrotnego wskazuje, że debugowania usługi zostały wyłączone z powodu błędu, dzięki czemu debugery powinny udostępniać komunikat o błędzie dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d5d36-111">The `DebugError` callback indicates that debugging services have been disabled due to an error, so debuggers should make the error message available to the user.</span></span> <span data-ttu-id="d5d36-112">[ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) będzie bezpieczne połączenie, ale wszystkie inne metody, w tym [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), nie powinna być wywoływana.</span><span class="sxs-lookup"><span data-stu-id="d5d36-112">[ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) will be safe to call, but all other methods, including [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), should not be called.</span></span> <span data-ttu-id="d5d36-113">Debuger powinien użyć systemu operacyjnego urządzenia dla zakończenie procesów.</span><span class="sxs-lookup"><span data-stu-id="d5d36-113">The debugger should use operating-system facilities for terminating processes.</span></span>  
+ <span data-ttu-id="d452f-111">Wywołanie zwrotne `DebugError` wskazuje, że usługi debugowania zostały wyłączone z powodu błędu, dlatego debugery powinny udostępnić komunikat o błędzie dla użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d452f-111">The `DebugError` callback indicates that debugging services have been disabled due to an error, so debuggers should make the error message available to the user.</span></span> <span data-ttu-id="d452f-112">[ICorDebugProcess:: GetId —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) będzie bezpieczne do wywołania, ale wszystkie inne metody, w tym [ICorDebug:: terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), nie powinny być wywoływane.</span><span class="sxs-lookup"><span data-stu-id="d452f-112">[ICorDebugProcess::GetID](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) will be safe to call, but all other methods, including [ICorDebug::Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md), should not be called.</span></span> <span data-ttu-id="d452f-113">Debuger powinien używać obiektów systemu operacyjnego do kończenia procesów.</span><span class="sxs-lookup"><span data-stu-id="d452f-113">The debugger should use operating-system facilities for terminating processes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d5d36-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d5d36-114">Requirements</span></span>  
- <span data-ttu-id="d5d36-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d5d36-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d452f-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d452f-114">Requirements</span></span>  
+ <span data-ttu-id="d452f-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d452f-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d5d36-116">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d5d36-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d452f-116">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d452f-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d5d36-117">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d5d36-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d452f-117">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="d452f-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d5d36-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d5d36-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d452f-118">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d452f-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d5d36-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d5d36-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d452f-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d452f-119">See also</span></span>
 
-- [<span data-ttu-id="d5d36-120">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="d5d36-120">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="d452f-120">ICorDebugManagedCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="d452f-120">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

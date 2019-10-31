@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 698fb8c8efcbe347c0e833b0dba01fffd3030de6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795495"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109156"
 ---
-# <a name="asm_name-enumeration"></a><span data-ttu-id="19c55-102">ASM_NAME — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="19c55-102">ASM_NAME Enumeration</span></span>
-<span data-ttu-id="19c55-103">Wskazuje wersję, kompilację, kulturę, sygnaturę i tak dalej, zestawu, którego właściwości będą pobierane lub ustawiane przez metody [IAssemblyName](iassemblyname-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="19c55-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
+# <a name="asm_name-enumeration"></a><span data-ttu-id="81cc4-102">ASM_NAME — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="81cc4-102">ASM_NAME Enumeration</span></span>
+<span data-ttu-id="81cc4-103">Wskazuje wersję, kompilację, kulturę, sygnaturę i tak dalej, zestawu, którego właściwości będą pobierane lub ustawiane przez metody [IAssemblyName](iassemblyname-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="81cc4-103">Indicates the version, build, culture, signature, and so on, of the assembly whose properties will be retrieved or set by [IAssemblyName](iassemblyname-interface.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19c55-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="19c55-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81cc4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="81cc4-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -64,16 +62,16 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="19c55-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="19c55-105">Requirements</span></span>  
- <span data-ttu-id="19c55-106">**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="19c55-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81cc4-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="81cc4-105">Requirements</span></span>  
+ <span data-ttu-id="81cc4-106">**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81cc4-106">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19c55-107">**Nagłówki** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="19c55-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="81cc4-107">**Nagłówek:** Fusion. h</span><span class="sxs-lookup"><span data-stu-id="81cc4-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="19c55-108">**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="19c55-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="81cc4-108">**Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="81cc4-108">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="19c55-109">**.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19c55-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="81cc4-109">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81cc4-109">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="19c55-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="19c55-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="81cc4-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="81cc4-110">See also</span></span>
 
-- [<span data-ttu-id="19c55-111">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="19c55-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
-- [<span data-ttu-id="19c55-112">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="19c55-112">Fusion Enumerations</span></span>](fusion-enumerations.md)
+- [<span data-ttu-id="81cc4-111">IAssemblyName, interfejs</span><span class="sxs-lookup"><span data-stu-id="81cc4-111">IAssemblyName Interface</span></span>](iassemblyname-interface.md)
+- [<span data-ttu-id="81cc4-112">Wyliczenia łączenia</span><span class="sxs-lookup"><span data-stu-id="81cc4-112">Fusion Enumerations</span></span>](fusion-enumerations.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 362c01e0b08145919793cec011a856f0090e5c47
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137620"
 ---
-# <a name="icordebugevalnewobject-method"></a><span data-ttu-id="c9222-102">ICorDebugEval::NewObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="c9222-102">ICorDebugEval::NewObject Method</span></span>
-<span data-ttu-id="c9222-103">Przydziela nowe wystąpienie obiektu, a następnie wywołuje metodę określonej konstruktora.</span><span class="sxs-lookup"><span data-stu-id="c9222-103">Allocates a new object instance and calls the specified constructor method.</span></span>  
+# <a name="icordebugevalnewobject-method"></a><span data-ttu-id="1c825-102">ICorDebugEval::NewObject — Metoda</span><span class="sxs-lookup"><span data-stu-id="1c825-102">ICorDebugEval::NewObject Method</span></span>
+<span data-ttu-id="1c825-103">Przydziela nowe wystąpienie obiektu i wywołuje określoną metodę konstruktora.</span><span class="sxs-lookup"><span data-stu-id="1c825-103">Allocates a new object instance and calls the specified constructor method.</span></span>  
   
- <span data-ttu-id="c9222-104">Ta metoda jest przestarzała w programie .NET Framework 2.0.</span><span class="sxs-lookup"><span data-stu-id="c9222-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="c9222-105">Użyj [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) zamiast tego.</span><span class="sxs-lookup"><span data-stu-id="c9222-105">Use [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) instead.</span></span>  
+ <span data-ttu-id="1c825-104">Ta metoda jest przestarzała w .NET Framework w wersji 2,0.</span><span class="sxs-lookup"><span data-stu-id="1c825-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="1c825-105">Zamiast tego użyj [ICorDebugEval2:: NewParameterizedObject —](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) .</span><span class="sxs-lookup"><span data-stu-id="1c825-105">Use [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9222-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="c9222-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c825-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="1c825-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT NewObject (  
@@ -39,25 +37,25 @@ HRESULT NewObject (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9222-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="c9222-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c825-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="1c825-107">Parameters</span></span>  
  `pConstructor`  
- <span data-ttu-id="c9222-108">[in] Konstruktor, który ma zostać wywołana.</span><span class="sxs-lookup"><span data-stu-id="c9222-108">[in] The constructor to be called.</span></span>  
+ <span data-ttu-id="1c825-108">podczas Konstruktor, który ma zostać wywołany.</span><span class="sxs-lookup"><span data-stu-id="1c825-108">[in] The constructor to be called.</span></span>  
   
  `nArgs`  
- <span data-ttu-id="c9222-109">[in] Rozmiar `ppArgs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="c9222-109">[in] The size of the `ppArgs` array.</span></span>  
+ <span data-ttu-id="1c825-109">podczas Rozmiar tablicy `ppArgs`.</span><span class="sxs-lookup"><span data-stu-id="1c825-109">[in] The size of the `ppArgs` array.</span></span>  
   
  `ppArgs`  
- <span data-ttu-id="c9222-110">[in] Tablica obiektów ICorDebugValue, z których każdy reprezentuje argument do przekazania do konstruktora.</span><span class="sxs-lookup"><span data-stu-id="c9222-110">[in] An array of ICorDebugValue objects, each of which represents an argument to be passed to the constructor.</span></span>  
+ <span data-ttu-id="1c825-110">podczas Tablica obiektów ICorDebugValue, z których każdy reprezentuje argument, który ma zostać przesłany do konstruktora.</span><span class="sxs-lookup"><span data-stu-id="1c825-110">[in] An array of ICorDebugValue objects, each of which represents an argument to be passed to the constructor.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9222-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c9222-111">Requirements</span></span>  
- <span data-ttu-id="c9222-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c9222-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c825-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1c825-111">Requirements</span></span>  
+ <span data-ttu-id="1c825-112">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c825-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9222-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9222-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1c825-113">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="1c825-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c9222-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9222-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c825-114">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="1c825-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9222-115">**Wersje programu .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="c9222-115">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="1c825-115">**.NET Framework wersje:** 1,1, 1,0</span><span class="sxs-lookup"><span data-stu-id="1c825-115">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9222-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c9222-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c825-116">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1c825-116">See also</span></span>
 
-- [<span data-ttu-id="c9222-117">NewParameterizedObject, metoda</span><span class="sxs-lookup"><span data-stu-id="c9222-117">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+- [<span data-ttu-id="1c825-117">NewParameterizedObject, metoda</span><span class="sxs-lookup"><span data-stu-id="1c825-117">NewParameterizedObject Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

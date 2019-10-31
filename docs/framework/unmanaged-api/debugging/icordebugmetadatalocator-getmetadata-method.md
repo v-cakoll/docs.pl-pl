@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136635"
 ---
-# <a name="icordebugmetadatalocatorgetmetadata-method"></a><span data-ttu-id="e5075-102">ICorDebugMetaDataLocator::GetMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="e5075-102">ICorDebugMetaDataLocator::GetMetaData Method</span></span>
-<span data-ttu-id="e5075-103">Pyta, czy debugera, aby przywrócić pełną ścieżkę do modułu, którego metadanych jest potrzebne do ukończenia operacja, którą żądany debuger.</span><span class="sxs-lookup"><span data-stu-id="e5075-103">Asks the debugger to return the full path to a module whose metadata is needed to complete an operation the debugger requested.</span></span>  
+# <a name="icordebugmetadatalocatorgetmetadata-method"></a><span data-ttu-id="6d07c-102">ICorDebugMetaDataLocator::GetMetaData — Metoda</span><span class="sxs-lookup"><span data-stu-id="6d07c-102">ICorDebugMetaDataLocator::GetMetaData Method</span></span>
+<span data-ttu-id="6d07c-103">Prosi debugera o zwrócenie pełnej ścieżki do modułu, którego metadane są wymagane do ukończenia operacji wymaganej przez debuger.</span><span class="sxs-lookup"><span data-stu-id="6d07c-103">Asks the debugger to return the full path to a module whose metadata is needed to complete an operation the debugger requested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e5075-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e5075-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d07c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6d07c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMetaData(  
@@ -41,51 +39,51 @@ HRESULT GetMetaData(
       );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e5075-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e5075-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6d07c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6d07c-105">Parameters</span></span>  
  `wszImagePath`  
- <span data-ttu-id="e5075-106">[in] Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku.</span><span class="sxs-lookup"><span data-stu-id="e5075-106">[in] A null-terminated string that represents the full path to the file.</span></span> <span data-ttu-id="e5075-107">Jeśli pełna ścieżka nie jest dostępna, nazwę i rozszerzenie nazwy pliku (*filename*. *rozszerzenie*).</span><span class="sxs-lookup"><span data-stu-id="e5075-107">If the full path is not available, the name and extension of the file (*filename*.*extension*).</span></span>  
+ <span data-ttu-id="6d07c-106">podczas Ciąg zakończony znakiem null, który reprezentuje pełną ścieżkę do pliku.</span><span class="sxs-lookup"><span data-stu-id="6d07c-106">[in] A null-terminated string that represents the full path to the file.</span></span> <span data-ttu-id="6d07c-107">Jeśli pełna ścieżka nie jest dostępna, nazwa i rozszerzenie pliku (*filename*. *rozszerzenie*).</span><span class="sxs-lookup"><span data-stu-id="6d07c-107">If the full path is not available, the name and extension of the file (*filename*.*extension*).</span></span>  
   
  `dwImageTimeStamp`  
- <span data-ttu-id="e5075-108">[in] Sygnatura czasowa z nagłówków pliku PE obrazu.</span><span class="sxs-lookup"><span data-stu-id="e5075-108">[in] The time stamp from the image's PE file headers.</span></span> <span data-ttu-id="e5075-109">Ten parametr potencjalnie może służyć do serwera symboli ([SymSrv](/windows/desktop/debug/using-symsrv)) wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="e5075-109">This parameter can potentially be used for a symbol server ([SymSrv](/windows/desktop/debug/using-symsrv)) lookup.</span></span>  
+ <span data-ttu-id="6d07c-108">podczas Sygnatura czasowa z nagłówków pliku PE obrazu.</span><span class="sxs-lookup"><span data-stu-id="6d07c-108">[in] The time stamp from the image's PE file headers.</span></span> <span data-ttu-id="6d07c-109">Ten parametr może być potencjalnie używany dla wyszukiwania serwera symboli ([SymSrv](/windows/desktop/debug/using-symsrv)).</span><span class="sxs-lookup"><span data-stu-id="6d07c-109">This parameter can potentially be used for a symbol server ([SymSrv](/windows/desktop/debug/using-symsrv)) lookup.</span></span>  
   
  `dwImageSize`  
- <span data-ttu-id="e5075-110">[in] Rozmiar obrazu z nagłówków pliku PE.</span><span class="sxs-lookup"><span data-stu-id="e5075-110">[in] The image size from PE file headers.</span></span> <span data-ttu-id="e5075-111">Ten parametr potencjalnie może służyć do wyszukiwania SymSrv.</span><span class="sxs-lookup"><span data-stu-id="e5075-111">This parameter can potentially be used for a SymSrv lookup.</span></span>  
+ <span data-ttu-id="6d07c-110">podczas Rozmiar obrazu z nagłówków pliku PE.</span><span class="sxs-lookup"><span data-stu-id="6d07c-110">[in] The image size from PE file headers.</span></span> <span data-ttu-id="6d07c-111">Ten parametr może być potencjalnie używany dla wyszukiwania SymSrv.</span><span class="sxs-lookup"><span data-stu-id="6d07c-111">This parameter can potentially be used for a SymSrv lookup.</span></span>  
   
  `cchPathBuffer`  
- <span data-ttu-id="e5075-112">[in] Znak liczby w `wszPathBuffer`.</span><span class="sxs-lookup"><span data-stu-id="e5075-112">[in] The character count in `wszPathBuffer`.</span></span>  
+ <span data-ttu-id="6d07c-112">podczas Liczba znaków w `wszPathBuffer`.</span><span class="sxs-lookup"><span data-stu-id="6d07c-112">[in] The character count in `wszPathBuffer`.</span></span>  
   
  `pcchPathBuffer`  
- <span data-ttu-id="e5075-113">[out] Liczba `WCHAR`s zapisywane `wszPathBuffer`.</span><span class="sxs-lookup"><span data-stu-id="e5075-113">[out] The count of `WCHAR`s written to `wszPathBuffer`.</span></span>  
+ <span data-ttu-id="6d07c-113">określoną Liczba `WCHAR`s zapisywana do `wszPathBuffer`.</span><span class="sxs-lookup"><span data-stu-id="6d07c-113">[out] The count of `WCHAR`s written to `wszPathBuffer`.</span></span>  
   
- <span data-ttu-id="e5075-114">Jeśli metoda zwraca E_NOT_SUFFICIENT_BUFFER, zawiera liczbę `WCHAR`s niezbędne do przechowywania ścieżki.</span><span class="sxs-lookup"><span data-stu-id="e5075-114">If the method returns E_NOT_SUFFICIENT_BUFFER, contains the count of `WCHAR`s needed to store the path.</span></span>  
+ <span data-ttu-id="6d07c-114">Jeśli metoda zwraca E_NOT_SUFFICIENT_BUFFER, zawiera liczbę `WCHAR`s wymaganych do przechowania ścieżki.</span><span class="sxs-lookup"><span data-stu-id="6d07c-114">If the method returns E_NOT_SUFFICIENT_BUFFER, contains the count of `WCHAR`s needed to store the path.</span></span>  
   
  `wszPathBuffer`  
- <span data-ttu-id="e5075-115">[out] Wskaźnik do buforu, do którego debuger będzie skopiować pełną ścieżkę pliku, który zawiera żądane metadanych.</span><span class="sxs-lookup"><span data-stu-id="e5075-115">[out] Pointer to a buffer into which the debugger will copy the full path of the file that contains the requested metadata.</span></span>  
+ <span data-ttu-id="6d07c-115">określoną Wskaźnik do buforu, do którego debuger skopiuje pełną ścieżkę pliku zawierającego żądane metadane.</span><span class="sxs-lookup"><span data-stu-id="6d07c-115">[out] Pointer to a buffer into which the debugger will copy the full path of the file that contains the requested metadata.</span></span>  
   
- <span data-ttu-id="e5075-116">`ofReadOnly` Flaga z [coropenflags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczenie jest używane, aby zażądać dostępu tylko do odczytu do metadanych, w tym pliku.</span><span class="sxs-lookup"><span data-stu-id="e5075-116">The `ofReadOnly` flag from the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration is used to request read-only access to the metadata in this file.</span></span>  
+ <span data-ttu-id="6d07c-116">Flaga `ofReadOnly` z wyliczenia [CorOpenFlags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) jest używana do żądania dostępu tylko do odczytu do metadanych w tym pliku.</span><span class="sxs-lookup"><span data-stu-id="6d07c-116">The `ofReadOnly` flag from the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration is used to request read-only access to the metadata in this file.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e5075-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e5075-117">Return Value</span></span>  
- <span data-ttu-id="e5075-118">Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="e5075-118">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span> <span data-ttu-id="e5075-119">Wszystkie inne wartości HRESULT błędu wskazują, że plik nie jest możliwe do pobierania.</span><span class="sxs-lookup"><span data-stu-id="e5075-119">All other failure HRESULTs indicate that the file is not retrievable.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6d07c-117">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="6d07c-117">Return Value</span></span>  
+ <span data-ttu-id="6d07c-118">Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.</span><span class="sxs-lookup"><span data-stu-id="6d07c-118">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span> <span data-ttu-id="6d07c-119">Wszystkie inne błędy HRESULT wskazują, że plik nie jest możliwy do pobierania.</span><span class="sxs-lookup"><span data-stu-id="6d07c-119">All other failure HRESULTs indicate that the file is not retrievable.</span></span>  
   
-|<span data-ttu-id="e5075-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e5075-120">HRESULT</span></span>|<span data-ttu-id="e5075-121">Opis</span><span class="sxs-lookup"><span data-stu-id="e5075-121">Description</span></span>|  
+|<span data-ttu-id="6d07c-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="6d07c-120">HRESULT</span></span>|<span data-ttu-id="6d07c-121">Opis</span><span class="sxs-lookup"><span data-stu-id="6d07c-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="e5075-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="e5075-122">S_OK</span></span>|<span data-ttu-id="e5075-123">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="e5075-123">The method completed successfully.</span></span> <span data-ttu-id="e5075-124">`wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zakończony znakiem null.</span><span class="sxs-lookup"><span data-stu-id="e5075-124">`wszPathBuffer` contains the full path to the file and is null-terminated.</span></span>|  
-|<span data-ttu-id="e5075-125">E_NOT_SUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="e5075-125">E_NOT_SUFFICIENT_BUFFER</span></span>|<span data-ttu-id="e5075-126">Bieżący rozmiar `wszPathBuffer` nie jest wystarczająca do przechowywania pełnej ścieżki.</span><span class="sxs-lookup"><span data-stu-id="e5075-126">The current size of `wszPathBuffer` is not sufficient to hold the full path.</span></span> <span data-ttu-id="e5075-127">W tym przypadku `pcchPathBuffer` zawiera wymagana liczba `WCHAR`s, łącznie z końcowym znakiem zerowym, i `GetMetaData` jest wywoływana po raz drugi z rozmiarem buforu żądanej.</span><span class="sxs-lookup"><span data-stu-id="e5075-127">In this case, `pcchPathBuffer` contains the needed count of `WCHAR`s, including the terminating null character, and `GetMetaData` is called a second time with the requested buffer size.</span></span>|  
+|<span data-ttu-id="6d07c-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="6d07c-122">S_OK</span></span>|<span data-ttu-id="6d07c-123">Metoda została ukończona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="6d07c-123">The method completed successfully.</span></span> <span data-ttu-id="6d07c-124">`wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zakończony znakiem null.</span><span class="sxs-lookup"><span data-stu-id="6d07c-124">`wszPathBuffer` contains the full path to the file and is null-terminated.</span></span>|  
+|<span data-ttu-id="6d07c-125">E_NOT_SUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="6d07c-125">E_NOT_SUFFICIENT_BUFFER</span></span>|<span data-ttu-id="6d07c-126">Bieżący rozmiar `wszPathBuffer` nie jest wystarczający, aby pomieścić pełną ścieżkę.</span><span class="sxs-lookup"><span data-stu-id="6d07c-126">The current size of `wszPathBuffer` is not sufficient to hold the full path.</span></span> <span data-ttu-id="6d07c-127">W tym przypadku `pcchPathBuffer` zawiera wymaganą liczbę `WCHAR`s, w tym kończący znak null, a `GetMetaData` jest wywoływana po raz drugi z żądanym rozmiarem buforu.</span><span class="sxs-lookup"><span data-stu-id="6d07c-127">In this case, `pcchPathBuffer` contains the needed count of `WCHAR`s, including the terminating null character, and `GetMetaData` is called a second time with the requested buffer size.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e5075-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e5075-128">Remarks</span></span>  
- <span data-ttu-id="e5075-129">Jeśli `wszImagePath` zawiera pełną ścieżkę dla modułu zrzutu, określa ścieżkę z komputera, w której pobrano zrzut.</span><span class="sxs-lookup"><span data-stu-id="e5075-129">If `wszImagePath` contains a full path for a module from a dump, it specifies the path from the computer where the dump was collected.</span></span> <span data-ttu-id="e5075-130">Plik nie istnieje w tej lokalizacji lub niepoprawny plik o takiej samej nazwie, mogą być przechowywane w ścieżce.</span><span class="sxs-lookup"><span data-stu-id="e5075-130">The file may not exist at this location, or an incorrect file with the same name may be stored on the path.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d07c-128">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6d07c-128">Remarks</span></span>  
+ <span data-ttu-id="6d07c-129">Jeśli `wszImagePath` zawiera pełną ścieżkę do modułu ze zrzutu, określa ścieżkę do komputera, na którym został zebrany zrzut.</span><span class="sxs-lookup"><span data-stu-id="6d07c-129">If `wszImagePath` contains a full path for a module from a dump, it specifies the path from the computer where the dump was collected.</span></span> <span data-ttu-id="6d07c-130">Plik może nie istnieć w tej lokalizacji lub w ścieżce może być przechowywany nieprawidłowy plik o takiej samej nazwie.</span><span class="sxs-lookup"><span data-stu-id="6d07c-130">The file may not exist at this location, or an incorrect file with the same name may be stored on the path.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e5075-131">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e5075-131">Requirements</span></span>  
- <span data-ttu-id="e5075-132">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e5075-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6d07c-131">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6d07c-131">Requirements</span></span>  
+ <span data-ttu-id="6d07c-132">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6d07c-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e5075-133">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e5075-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6d07c-133">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="6d07c-133">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e5075-134">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e5075-134">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6d07c-134">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="6d07c-134">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e5075-135">**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e5075-135">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="6d07c-135">**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6d07c-135">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e5075-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e5075-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d07c-136">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6d07c-136">See also</span></span>
 
-- [<span data-ttu-id="e5075-137">ICorDebugThread4, interfejs</span><span class="sxs-lookup"><span data-stu-id="e5075-137">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [<span data-ttu-id="e5075-138">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="e5075-138">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="e5075-139">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="e5075-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="6d07c-137">ICorDebugThread4, interfejs</span><span class="sxs-lookup"><span data-stu-id="6d07c-137">ICorDebugThread4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [<span data-ttu-id="6d07c-138">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="6d07c-138">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="6d07c-139">Debugowanie</span><span class="sxs-lookup"><span data-stu-id="6d07c-139">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

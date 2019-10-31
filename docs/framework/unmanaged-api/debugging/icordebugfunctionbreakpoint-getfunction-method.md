@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2a62dae5-dd8a-4696-b817-0e1e586c24a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4f9ea741e545cc424dff450325c3f8d271c8554
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b53c80157bfd99a766eb691e8a8a2e6b9659a95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137744"
 ---
-# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="127c2-102">ICorDebugFunctionBreakpoint::GetFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="127c2-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
-<span data-ttu-id="127c2-103">Pobiera wskaźnik interfejsu do ICorDebugFunction, który odwołuje się do funkcji, w którym ustawiono punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="127c2-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
+# <a name="icordebugfunctionbreakpointgetfunction-method"></a><span data-ttu-id="feaab-102">ICorDebugFunctionBreakpoint::GetFunction — Metoda</span><span class="sxs-lookup"><span data-stu-id="feaab-102">ICorDebugFunctionBreakpoint::GetFunction Method</span></span>
+<span data-ttu-id="feaab-103">Pobiera wskaźnik interfejsu do elementu ICorDebugFunction, który odwołuje się do funkcji, w której jest ustawiony punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="feaab-103">Gets an interface pointer to an ICorDebugFunction that references the function in which the breakpoint is set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="127c2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="127c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="feaab-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="feaab-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFunction (  
@@ -35,15 +33,15 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="127c2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="127c2-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="feaab-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="feaab-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="127c2-106">[out] Wskaźnik do adresu funkcji, w którym ustawiono punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="127c2-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
+ <span data-ttu-id="feaab-106">określoną Wskaźnik do adresu funkcji, w której jest ustawiony punkt przerwania.</span><span class="sxs-lookup"><span data-stu-id="feaab-106">[out] A pointer to the address of the function in which the breakpoint is set.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="127c2-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="127c2-107">Requirements</span></span>  
- <span data-ttu-id="127c2-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="127c2-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="feaab-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="feaab-107">Requirements</span></span>  
+ <span data-ttu-id="feaab-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="feaab-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="127c2-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="127c2-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="feaab-109">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="feaab-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="127c2-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="127c2-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="feaab-110">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="feaab-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="127c2-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="127c2-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="feaab-111">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="feaab-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

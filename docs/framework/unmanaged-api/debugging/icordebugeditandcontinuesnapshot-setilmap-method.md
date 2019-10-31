@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26c1bf4b-75ff-4c32-872c-3078ccdde04f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20ab65be32e6730ef828347c28eeed25d9033777
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8b92bdb4ae53f48af9f74a0fe13fd4465e9a356
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996037"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121180"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="131bb-102">ICorDebugEditAndContinueSnapshot::SetILMap — Metoda</span><span class="sxs-lookup"><span data-stu-id="131bb-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
-<span data-ttu-id="131bb-103">`SetILMap` jest przestarzały.</span><span class="sxs-lookup"><span data-stu-id="131bb-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="131bb-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="131bb-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a><span data-ttu-id="1cf0b-102">ICorDebugEditAndContinueSnapshot::SetILMap — Metoda</span><span class="sxs-lookup"><span data-stu-id="1cf0b-102">ICorDebugEditAndContinueSnapshot::SetILMap Method</span></span>
+<span data-ttu-id="1cf0b-103">`SetILMap` jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="1cf0b-103">`SetILMap` is obsolete.</span></span> <span data-ttu-id="1cf0b-104">Nie wywołuj tej metody.</span><span class="sxs-lookup"><span data-stu-id="1cf0b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="131bb-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="131bb-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cf0b-105">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1cf0b-105">See also</span></span>
 
-- [<span data-ttu-id="131bb-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="131bb-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1cf0b-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="1cf0b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

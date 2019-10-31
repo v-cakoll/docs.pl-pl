@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 989762c4-3d15-4485-b8ee-69e0fa8ec895
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ee602c85a2f591365d40984184780f70e8532bf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 29c9d9dde4776ef729c0bbae7b644171a265e3ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137465"
 ---
-# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="9ca45-102">ICorDebugModule::GetAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="9ca45-102">ICorDebugModule::GetAssembly Method</span></span>
-<span data-ttu-id="9ca45-103">Pobiera zawierające zestaw dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="9ca45-103">Gets the containing assembly for this module.</span></span>  
+# <a name="icordebugmodulegetassembly-method"></a><span data-ttu-id="cfaf3-102">ICorDebugModule::GetAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="cfaf3-102">ICorDebugModule::GetAssembly Method</span></span>
+<span data-ttu-id="cfaf3-103">Pobiera zawierający go zestaw dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="cfaf3-103">Gets the containing assembly for this module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ca45-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9ca45-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfaf3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cfaf3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssembly(  
@@ -35,15 +33,15 @@ HRESULT GetAssembly(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9ca45-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9ca45-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfaf3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="cfaf3-105">Parameters</span></span>  
  `ppAssembly`  
- <span data-ttu-id="9ca45-106">[out] Wskaźnik do obiektu ICorDebugAssembly, który reprezentuje zestaw zawierający ten moduł.</span><span class="sxs-lookup"><span data-stu-id="9ca45-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
+ <span data-ttu-id="cfaf3-106">określoną Wskaźnik do obiektu ICorDebugAssembly, który reprezentuje zestaw zawierający ten moduł.</span><span class="sxs-lookup"><span data-stu-id="cfaf3-106">[out] A pointer to an ICorDebugAssembly object that represents the assembly containing this module.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9ca45-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9ca45-107">Requirements</span></span>  
- <span data-ttu-id="9ca45-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9ca45-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfaf3-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="cfaf3-107">Requirements</span></span>  
+ <span data-ttu-id="cfaf3-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cfaf3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9ca45-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9ca45-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cfaf3-109">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="cfaf3-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9ca45-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9ca45-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cfaf3-110">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="cfaf3-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9ca45-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9ca45-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="cfaf3-111">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cfaf3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

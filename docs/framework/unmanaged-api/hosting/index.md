@@ -6,34 +6,32 @@ helpviewer_keywords:
 - native API reference [.NET Framework], hosting
 - hosting [.NET Framework], using the unmanaged API
 ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 412b61e026b019f7516332c247b203ac85304146
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fe07ba06d5e50c178c84dcb05351923e0548849
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102679"
 ---
-# <a name="hosting-unmanaged-api-reference"></a><span data-ttu-id="34633-102">Hosting (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="34633-102">Hosting (Unmanaged API Reference)</span></span>
-<span data-ttu-id="34633-103">Hostingu API włącza niezarządzane hosty do integrowania środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.</span><span class="sxs-lookup"><span data-stu-id="34633-103">The hosting API enables unmanaged hosts to integrate the common language runtime (CLR) into their applications.</span></span>  
+# <a name="hosting-unmanaged-api-reference"></a><span data-ttu-id="5499a-102">Hosting (Niezarządzany wykaz interfejsów API)</span><span class="sxs-lookup"><span data-stu-id="5499a-102">Hosting (Unmanaged API Reference)</span></span>
+<span data-ttu-id="5499a-103">Interfejs API hostingu umożliwia niezarządzanym hostom integrację środowiska uruchomieniowego języka wspólnego (CLR) ze swoimi aplikacjami.</span><span class="sxs-lookup"><span data-stu-id="5499a-103">The hosting API enables unmanaged hosts to integrate the common language runtime (CLR) into their applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="34633-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="34633-104">In This Section</span></span>  
- [<span data-ttu-id="34633-105">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="34633-105">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
- <span data-ttu-id="34633-106">Opisuje niezarządzane klasy coclass, które korzysta z interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="34633-106">Describes the unmanaged coclasses that the hosting API uses.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5499a-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="5499a-104">In This Section</span></span>  
+ [<span data-ttu-id="5499a-105">Współklasy hostingu</span><span class="sxs-lookup"><span data-stu-id="5499a-105">Hosting Coclasses</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
+ <span data-ttu-id="5499a-106">Opisuje niezarządzane klasy coclass używane przez interfejs API hostingu.</span><span class="sxs-lookup"><span data-stu-id="5499a-106">Describes the unmanaged coclasses that the hosting API uses.</span></span>  
   
- [<span data-ttu-id="34633-107">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="34633-107">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
- <span data-ttu-id="34633-108">Opisuje niezarządzane wyliczenia, które korzysta z interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="34633-108">Describes the unmanaged enumerations that the hosting API uses.</span></span>  
+ [<span data-ttu-id="5499a-107">Hosting — wyliczenia</span><span class="sxs-lookup"><span data-stu-id="5499a-107">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
+ <span data-ttu-id="5499a-108">Opisuje niezarządzane wyliczenia używane przez interfejs API hostingu.</span><span class="sxs-lookup"><span data-stu-id="5499a-108">Describes the unmanaged enumerations that the hosting API uses.</span></span>  
   
- [<span data-ttu-id="34633-109">Statyczne funkcje globalne hostingu</span><span class="sxs-lookup"><span data-stu-id="34633-109">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
- <span data-ttu-id="34633-110">Opisuje niezarządzane globalne funkcje statyczne, które korzysta z interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="34633-110">Describes the unmanaged global static functions that the hosting API uses.</span></span>  
+ [<span data-ttu-id="5499a-109">Statyczne funkcje globalne hostingu</span><span class="sxs-lookup"><span data-stu-id="5499a-109">Hosting Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
+ <span data-ttu-id="5499a-110">Opisuje niezarządzane globalne funkcje statyczne używane przez interfejs API hostingu.</span><span class="sxs-lookup"><span data-stu-id="5499a-110">Describes the unmanaged global static functions that the hosting API uses.</span></span>  
   
- [<span data-ttu-id="34633-111">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="34633-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- <span data-ttu-id="34633-112">W tym artykule opisano niezarządzane interfejsy, które umożliwiają host środowiska uruchomieniowego do integracji środowiska CLR w niezarządzanej aplikacji.</span><span class="sxs-lookup"><span data-stu-id="34633-112">Describes the unmanaged interfaces that enable a runtime host to integrate the CLR into an unmanaged application.</span></span>  
+ [<span data-ttu-id="5499a-111">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="5499a-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ <span data-ttu-id="5499a-112">Opisuje interfejsy niezarządzane, które umożliwiają hostowi środowiska uruchomieniowego integrację środowiska CLR z niezarządzaną aplikacją.</span><span class="sxs-lookup"><span data-stu-id="5499a-112">Describes the unmanaged interfaces that enable a runtime host to integrate the CLR into an unmanaged application.</span></span>  
   
- [<span data-ttu-id="34633-113">Hosting, struktury</span><span class="sxs-lookup"><span data-stu-id="34633-113">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
- <span data-ttu-id="34633-114">Opisuje niezarządzane struktury, które korzysta z interfejsu API.</span><span class="sxs-lookup"><span data-stu-id="34633-114">Describes the unmanaged structures that the hosting API uses.</span></span>  
+ [<span data-ttu-id="5499a-113">Hosting, struktury</span><span class="sxs-lookup"><span data-stu-id="5499a-113">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ <span data-ttu-id="5499a-114">Opisuje niezarządzane struktury używane przez interfejs API hostingu.</span><span class="sxs-lookup"><span data-stu-id="5499a-114">Describes the unmanaged structures that the hosting API uses.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="34633-115">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="34633-115">Related Sections</span></span>  
- <span data-ttu-id="34633-116">[Hosty środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="34633-116">[Runtime Hosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))</span></span>  
- <span data-ttu-id="34633-117">Opisuje hosty czasu wykonywania, dołączone do programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="34633-117">Describes the runtime hosts included with the .NET Framework.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="5499a-115">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="5499a-115">Related Sections</span></span>  
+ <span data-ttu-id="5499a-116">[Hosty środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="5499a-116">[Runtime Hosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))</span></span>  
+ <span data-ttu-id="5499a-117">Opisuje hosty środowiska uruchomieniowego dołączone do .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="5499a-117">Describes the runtime hosts included with the .NET Framework.</span></span>

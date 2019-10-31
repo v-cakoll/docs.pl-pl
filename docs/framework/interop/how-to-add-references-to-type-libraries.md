@@ -7,47 +7,45 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4908653b650f05bd25a7893d104040802f34d7e4
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: b4b78d377cf3ff2b43f7776567583c71c479054c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523821"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123954"
 ---
-# <a name="how-to-add-references-to-type-libraries"></a><span data-ttu-id="3b13f-102">Porady: dodawanie odwołań do bibliotek typów</span><span class="sxs-lookup"><span data-stu-id="3b13f-102">How to: Add References to Type Libraries</span></span>
-<span data-ttu-id="3b13f-103">Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane podczas dodawania odwołania do biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="3b13f-103">Visual Studio generates an interop assembly containing metadata when you add a reference to a type library.</span></span> <span data-ttu-id="3b13f-104">Jeśli jest dostępny podstawowy zestaw międzyoperacyjny, program Visual Studio używa istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.</span><span class="sxs-lookup"><span data-stu-id="3b13f-104">If a primary interop assembly is available, Visual Studio uses the existing assembly before generating a new interop assembly.</span></span>  
+# <a name="how-to-add-references-to-type-libraries"></a><span data-ttu-id="c4b63-102">Porady: dodawanie odwołań do bibliotek typów</span><span class="sxs-lookup"><span data-stu-id="c4b63-102">How to: Add References to Type Libraries</span></span>
+<span data-ttu-id="c4b63-103">Program Visual Studio generuje zestaw międzyoperacyjny zawierający metadane podczas dodawania odwołania do biblioteki typów.</span><span class="sxs-lookup"><span data-stu-id="c4b63-103">Visual Studio generates an interop assembly containing metadata when you add a reference to a type library.</span></span> <span data-ttu-id="c4b63-104">Jeśli jest dostępny podstawowy zestaw międzyoperacyjny, program Visual Studio używa istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.</span><span class="sxs-lookup"><span data-stu-id="c4b63-104">If a primary interop assembly is available, Visual Studio uses the existing assembly before generating a new interop assembly.</span></span>  
   
-### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a><span data-ttu-id="3b13f-105">Aby dodać odwołanie do biblioteki typów w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3b13f-105">To add a reference to a type library in Visual Studio</span></span>  
+### <a name="to-add-a-reference-to-a-type-library-in-visual-studio"></a><span data-ttu-id="c4b63-105">Aby dodać odwołanie do biblioteki typów w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c4b63-105">To add a reference to a type library in Visual Studio</span></span>  
   
-1. <span data-ttu-id="3b13f-106">Zainstaluj plik DLL COM lub EXE na komputerze, chyba że plik Instalator systemu Windows. exe przeprowadzi instalację.</span><span class="sxs-lookup"><span data-stu-id="3b13f-106">Install the COM DLL or EXE file on your computer, unless a Windows Setup.exe file performs the installation for you.</span></span>  
+1. <span data-ttu-id="c4b63-106">Zainstaluj plik DLL COM lub EXE na komputerze, chyba że plik Instalator systemu Windows. exe przeprowadzi instalację.</span><span class="sxs-lookup"><span data-stu-id="c4b63-106">Install the COM DLL or EXE file on your computer, unless a Windows Setup.exe file performs the installation for you.</span></span>  
   
-2. <span data-ttu-id="3b13f-107">Wybierz **projekt**, **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="3b13f-107">Choose **Project**, **Add Reference**.</span></span>  
+2. <span data-ttu-id="c4b63-107">Wybierz **projekt**, **Dodaj odwołanie**.</span><span class="sxs-lookup"><span data-stu-id="c4b63-107">Choose **Project**, **Add Reference**.</span></span>  
   
-3. <span data-ttu-id="3b13f-108">W Menedżerze odwołań wybierz **com**.</span><span class="sxs-lookup"><span data-stu-id="3b13f-108">In the Reference Manager, choose **COM**.</span></span>  
+3. <span data-ttu-id="c4b63-108">W Menedżerze odwołań wybierz **com**.</span><span class="sxs-lookup"><span data-stu-id="c4b63-108">In the Reference Manager, choose **COM**.</span></span>  
   
-4. <span data-ttu-id="3b13f-109">Wybierz bibliotekę typów z listy lub Wyszukaj plik. tlb.</span><span class="sxs-lookup"><span data-stu-id="3b13f-109">Select the type library from the list, or browse for the .tlb file.</span></span>  
+4. <span data-ttu-id="c4b63-109">Wybierz bibliotekę typów z listy lub Wyszukaj plik. tlb.</span><span class="sxs-lookup"><span data-stu-id="c4b63-109">Select the type library from the list, or browse for the .tlb file.</span></span>  
   
-5. <span data-ttu-id="3b13f-110">Wybierz **przycisk OK**.</span><span class="sxs-lookup"><span data-stu-id="3b13f-110">Choose **OK**.</span></span>  
+5. <span data-ttu-id="c4b63-110">Wybierz **przycisk OK**.</span><span class="sxs-lookup"><span data-stu-id="c4b63-110">Choose **OK**.</span></span>  
   
-6. <span data-ttu-id="3b13f-111">W Eksplorator rozwiązań otwórz menu skrótów dla właśnie dodanego odwołania, a następnie wybierz polecenie **Właściwości**.</span><span class="sxs-lookup"><span data-stu-id="3b13f-111">In Solution Explorer, open the shortcut menu for the reference you just added, and then choose **Properties**.</span></span>  
+6. <span data-ttu-id="c4b63-111">W Eksplorator rozwiązań otwórz menu skrótów dla właśnie dodanego odwołania, a następnie wybierz polecenie **Właściwości**.</span><span class="sxs-lookup"><span data-stu-id="c4b63-111">In Solution Explorer, open the shortcut menu for the reference you just added, and then choose **Properties**.</span></span>  
   
-7. <span data-ttu-id="3b13f-112">W oknie **Właściwości** upewnij się, że właściwość **Osadź typy** współdziałania ma **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="3b13f-112">In the **Properties** window, make sure that the **Embed Interop Types** property is set to **True**.</span></span> <span data-ttu-id="3b13f-113">Powoduje to, że program Visual Studio osadzi informacje o typie dla typów COM w plikach wykonywalnych, eliminując konieczność wdrażania podstawowych zestawów międzyoperacyjnych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="3b13f-113">This causes Visual Studio to embed type information for COM types in your executables, eliminating the need to deploy primary interop assemblies with your app.</span></span>  
+7. <span data-ttu-id="c4b63-112">W oknie **Właściwości** upewnij się, że właściwość **Osadź typy** współdziałania ma **wartość true**.</span><span class="sxs-lookup"><span data-stu-id="c4b63-112">In the **Properties** window, make sure that the **Embed Interop Types** property is set to **True**.</span></span> <span data-ttu-id="c4b63-113">Powoduje to, że program Visual Studio osadzi informacje o typie dla typów COM w plikach wykonywalnych, eliminując konieczność wdrażania podstawowych zestawów międzyoperacyjnych w aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c4b63-113">This causes Visual Studio to embed type information for COM types in your executables, eliminating the need to deploy primary interop assemblies with your app.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="3b13f-114">Opcje menu i okna dialogowego mogą się różnić w zależności od używanej wersji programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="3b13f-114">The menu and dialog box options may vary depending on the version of Visual Studio you're using.</span></span>  
+> <span data-ttu-id="c4b63-114">Opcje menu i okna dialogowego mogą się różnić w zależności od używanej wersji programu Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="c4b63-114">The menu and dialog box options may vary depending on the version of Visual Studio you're using.</span></span>  
   
-### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a><span data-ttu-id="3b13f-115">Aby dodać odwołanie do biblioteki typów dla kompilacji wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="3b13f-115">To add a reference to a type library for command-line compilation</span></span>  
+### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a><span data-ttu-id="c4b63-115">Aby dodać odwołanie do biblioteki typów dla kompilacji wiersza polecenia</span><span class="sxs-lookup"><span data-stu-id="c4b63-115">To add a reference to a type library for command-line compilation</span></span>  
   
-1. <span data-ttu-id="3b13f-116">Generowanie zestawu międzyoperacyjnego zgodnie z opisem w temacie [How to: Generate Assembly Interop from Library Type](how-to-generate-interop-assemblies-from-type-libraries.md)librarys.</span><span class="sxs-lookup"><span data-stu-id="3b13f-116">Generate an interop assembly as described in [How to: Generate Interop Assemblies from Type Libraries](how-to-generate-interop-assemblies-from-type-libraries.md).</span></span>  
+1. <span data-ttu-id="c4b63-116">Generowanie zestawu międzyoperacyjnego zgodnie z opisem w temacie [How to: Generate Assembly Interop from Library Type](how-to-generate-interop-assemblies-from-type-libraries.md)librarys.</span><span class="sxs-lookup"><span data-stu-id="c4b63-116">Generate an interop assembly as described in [How to: Generate Interop Assemblies from Type Libraries](how-to-generate-interop-assemblies-from-type-libraries.md).</span></span>  
   
-2. <span data-ttu-id="3b13f-117">Użyj opcji [-link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) z nazwą zestawu międzyoperacyjnego, aby osadzić informacje o typie dla typów com w plikach wykonywalnych.</span><span class="sxs-lookup"><span data-stu-id="3b13f-117">Use the [-link (C# Compiler Options)](../../csharp/language-reference/compiler-options/link-compiler-option.md) or [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) compiler option with the interop assembly name to embed type information for COM types in your executables.</span></span>  
+2. <span data-ttu-id="c4b63-117">Użyj opcji [-link (C# opcje kompilatora)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) z nazwą zestawu międzyoperacyjnego, aby osadzić informacje o typie dla typów com w plikach wykonywalnych.</span><span class="sxs-lookup"><span data-stu-id="c4b63-117">Use the [-link (C# Compiler Options)](../../csharp/language-reference/compiler-options/link-compiler-option.md) or [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) compiler option with the interop assembly name to embed type information for COM types in your executables.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b13f-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3b13f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c4b63-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c4b63-118">See also</span></span>
 
-- [<span data-ttu-id="3b13f-119">Importowanie biblioteki typów jako zestawu</span><span class="sxs-lookup"><span data-stu-id="3b13f-119">Importing a Type Library as an Assembly</span></span>](importing-a-type-library-as-an-assembly.md)
-- [<span data-ttu-id="3b13f-120">Udostępnianie składników COM programowi .NET Framework</span><span class="sxs-lookup"><span data-stu-id="3b13f-120">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
-- [<span data-ttu-id="3b13f-121">Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3b13f-121">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio</span></span>](../../standard/assembly/embed-types-visual-studio.md) 
-- [<span data-ttu-id="3b13f-122">-Link (C# opcje kompilatora)</span><span class="sxs-lookup"><span data-stu-id="3b13f-122">-link (C# Compiler Options)</span></span>](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [<span data-ttu-id="3b13f-123">-Link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b13f-123">-link (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/link.md)
+- [<span data-ttu-id="c4b63-119">Importowanie biblioteki typów jako zestawu</span><span class="sxs-lookup"><span data-stu-id="c4b63-119">Importing a Type Library as an Assembly</span></span>](importing-a-type-library-as-an-assembly.md)
+- [<span data-ttu-id="c4b63-120">Udostępnianie składników COM programowi .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c4b63-120">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
+- [<span data-ttu-id="c4b63-121">Przewodnik: osadzanie typów z zarządzanych zestawów w programie Visual Studio</span><span class="sxs-lookup"><span data-stu-id="c4b63-121">Walkthrough: Embedding Types from Managed Assemblies in Visual Studio</span></span>](../../standard/assembly/embed-types-visual-studio.md) 
+- [<span data-ttu-id="c4b63-122">-Link (C# opcje kompilatora)</span><span class="sxs-lookup"><span data-stu-id="c4b63-122">-link (C# Compiler Options)</span></span>](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [<span data-ttu-id="c4b63-123">-Link (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c4b63-123">-link (Visual Basic)</span></span>](../../visual-basic/reference/command-line-compiler/link.md)

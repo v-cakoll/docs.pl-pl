@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122713"
 ---
-# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="aa098-102">ICorDebugInternalFrame::GetFrameType — Metoda</span><span class="sxs-lookup"><span data-stu-id="aa098-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
-<span data-ttu-id="aa098-103">Pobiera typ tej ramki wewnętrznego.</span><span class="sxs-lookup"><span data-stu-id="aa098-103">Gets the type of this internal frame.</span></span>  
+# <a name="icordebuginternalframegetframetype-method"></a><span data-ttu-id="f2a7d-102">ICorDebugInternalFrame::GetFrameType — Metoda</span><span class="sxs-lookup"><span data-stu-id="f2a7d-102">ICorDebugInternalFrame::GetFrameType Method</span></span>
+<span data-ttu-id="f2a7d-103">Pobiera typ tej wewnętrznej ramki.</span><span class="sxs-lookup"><span data-stu-id="f2a7d-103">Gets the type of this internal frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa098-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="aa098-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2a7d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f2a7d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetFrameType (  
@@ -35,18 +33,18 @@ HRESULT GetFrameType (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="aa098-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="aa098-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f2a7d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f2a7d-105">Parameters</span></span>  
  `pType`  
- <span data-ttu-id="aa098-106">[out] Wskaźnik do wartości cordebuginternalframetype — wyliczenie, który wskazuje na typ reprezentowany przez ten ramka wewnętrzna `ICorDebugInternalFrame` obiektu.</span><span class="sxs-lookup"><span data-stu-id="aa098-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
+ <span data-ttu-id="f2a7d-106">określoną Wskaźnik do wartości wyliczenia CorDebugInternalFrameType —, który wskazuje typ wewnętrznej ramki reprezentowanej przez ten obiekt `ICorDebugInternalFrame`.</span><span class="sxs-lookup"><span data-stu-id="f2a7d-106">[out] A pointer to a value of the CorDebugInternalFrameType enumeration that indicates the type of internal frame represented by this `ICorDebugInternalFrame` object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aa098-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="aa098-107">Remarks</span></span>  
- <span data-ttu-id="aa098-108">Typ ramki wewnętrzny nigdy nie będą STUBFRAME_NONE.</span><span class="sxs-lookup"><span data-stu-id="aa098-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="aa098-109">Debugery bez problemu zmieniała należy zignorować nierozpoznane ramki wewnętrznych typów.</span><span class="sxs-lookup"><span data-stu-id="aa098-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f2a7d-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f2a7d-107">Remarks</span></span>  
+ <span data-ttu-id="f2a7d-108">Wewnętrzny typ ramki nigdy nie będzie STUBFRAME_NONE.</span><span class="sxs-lookup"><span data-stu-id="f2a7d-108">The internal frame type will never be STUBFRAME_NONE.</span></span> <span data-ttu-id="f2a7d-109">Debugery powinny bezpiecznie ignorować nierozpoznane typy ramek wewnętrznych.</span><span class="sxs-lookup"><span data-stu-id="f2a7d-109">Debuggers should gracefully ignore unrecognized internal frame types.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa098-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="aa098-110">Requirements</span></span>  
- <span data-ttu-id="aa098-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="aa098-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f2a7d-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f2a7d-110">Requirements</span></span>  
+ <span data-ttu-id="f2a7d-111">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2a7d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa098-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aa098-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f2a7d-112">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="f2a7d-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aa098-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aa098-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f2a7d-113">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="f2a7d-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aa098-114">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa098-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="f2a7d-114">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f2a7d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

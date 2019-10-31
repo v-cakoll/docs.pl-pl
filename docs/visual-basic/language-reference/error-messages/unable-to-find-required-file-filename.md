@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: ef1fd4fa94d2fe225077d8b7ed0e04fa29843e7d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1abb420c997afbc69a652502801d91043eb48757
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622629"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197259"
 ---
-# <a name="unable-to-find-required-file-filename"></a><span data-ttu-id="a05c7-102">Nie można odnaleźć wymaganego pliku "\<nazwa pliku >"</span><span class="sxs-lookup"><span data-stu-id="a05c7-102">Unable to find required file '\<filename>'</span></span>
-<span data-ttu-id="a05c7-103">Plik, którego wymaga program Visual Studio, jest uszkodzony lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="a05c7-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
+# <a name="unable-to-find-required-file-filename"></a><span data-ttu-id="ad849-102">Nie można odnaleźć wymaganego pliku "\<filename >"</span><span class="sxs-lookup"><span data-stu-id="ad849-102">Unable to find required file '\<filename>'</span></span>
+<span data-ttu-id="ad849-103">Plik, którego wymaga program Visual Studio, jest uszkodzony lub nie istnieje.</span><span class="sxs-lookup"><span data-stu-id="ad849-103">A file that is required by Visual Studio is missing or damaged.</span></span>  
   
- <span data-ttu-id="a05c7-104">**Identyfikator błędu:** BC30655</span><span class="sxs-lookup"><span data-stu-id="a05c7-104">**Error ID:** BC30655</span></span>  
+ <span data-ttu-id="ad849-104">**Identyfikator błędu:** BC30655</span><span class="sxs-lookup"><span data-stu-id="ad849-104">**Error ID:** BC30655</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a05c7-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="a05c7-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ad849-105">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="ad849-105">To correct this error</span></span>  
   
-- <span data-ttu-id="a05c7-106">Zainstaluj ponownie program Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="a05c7-106">Reinstall Visual Studio.</span></span>  
+- <span data-ttu-id="ad849-106">Zainstaluj ponownie program Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="ad849-106">Reinstall Visual Studio.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a05c7-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a05c7-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad849-107">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ad849-107">See also</span></span>
 
-- [<span data-ttu-id="a05c7-108">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="a05c7-108">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="ad849-108">Porozmawiaj z nami</span><span class="sxs-lookup"><span data-stu-id="ad849-108">Talk to Us</span></span>](/visualstudio/ide/feedback-options)

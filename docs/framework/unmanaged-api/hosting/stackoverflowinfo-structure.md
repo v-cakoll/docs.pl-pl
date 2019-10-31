@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 519389f2-0217-436c-99d4-93a76ebce5b5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de5a6d38d43c20ce52f609ef6514a1f28022416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1072026f92edbc646653c6dd74ec8e22d5b887e5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105920"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo — Struktura
-Typ przepełnienia, które wystąpiły, oraz informacje są przechowywane na wyjątek, który został wygenerowany z powodu przepełnienia.  
+Przechowuje typ przepełnienia, który wystąpił, i informacje o wyjątku, który został zgłoszony z powodu przepełnienia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,20 +37,20 @@ typedef struct _StackOverflowInfo {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`soType`|Wartość [stackoverflowtype —](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) wyliczenie, który określa typ przepełnienia.|  
-|`pExceptionInfo`|Wskaźnik do systemu Win32 `EXCEPTION_POINTERS` obiekt, który zawiera rekord wyjątku z opisem wyjątku niezależne od komputera i rekordu kontekstu z opisem zależnych od maszyny kontekst procesora w czasie wystąpienia wyjątku.|  
+|`soType`|Wartość wyliczenia [StackOverflowType —](../../../../docs/framework/unmanaged-api/hosting/stackoverflowtype-enumeration.md) , która określa typ przepełnienia.|  
+|`pExceptionInfo`|Wskaźnik do obiektu Win32 `EXCEPTION_POINTERS`, który zawiera rekord wyjątku z niezależnym od maszyny opis wyjątku i rekordu kontekstu z zależnością od maszyny w momencie wystąpienia wyjątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `StackOverflowInfo` obiekt jest przekazywany do [iactiononclrevent::ONEVENT —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metodę `Event_StackOverflow` zdarzenia.  
+ Obiekt `StackOverflowInfo` jest przenoszona do metody [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) dla zdarzeń `Event_StackOverflow`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.idl  
+ **Nagłówek:** MSCorEE. idl  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

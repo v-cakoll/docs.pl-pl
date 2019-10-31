@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ee7c434-9681-4fa8-badd-652cb1a9742b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e0bcabb32d50b236d42a555c073b50ba3a234dde
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8b7edf1cc642228c4a79c855b51727264f31741c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796486"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107987"
 ---
 # <a name="identity_attribute-structure"></a>IDENTITY_ATTRIBUTE — Struktura
 Zawiera informacje o atrybucie metadanych dotyczące wystąpienia [IDefinitionIdentity —](idefinitionidentity-interface.md) .  
@@ -45,16 +43,16 @@ typedef struct _IDENTITY_ATTRIBUTE {
 |`pszValue`|Wskaźnik do ciągu znaków zakończonych znakiem null, który zawiera wartość atrybutu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IDENTITY_ATTRIBUTE` Struktura zawiera trzy wskaźniki do ciągów znaków zakończonych znakiem null. Te trzy ciągi opisują jeden atrybut.  
+ Struktura `IDENTITY_ATTRIBUTE` zawiera trzy wskaźniki do ciągów znaków zakończonych znakiem null. Te trzy ciągi opisują jeden atrybut.  
   
- Wystąpienie `IDENTITY_ATTRIBUTE` struktury jest skojarzone z wystąpieniem struktury [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . Struktura zawiera rzeczywiste ciągi, a odpowiednia `IDENTITY_ATTRIBUTE_BLOB` struktura zawiera listę przesunięć do `IDENTITY_ATTRIBUTE` trzech ciągów wymienionych w strukturze. `IDENTITY_ATTRIBUTE`  
+ Wystąpienie struktury `IDENTITY_ATTRIBUTE` jest skojarzone z wystąpieniem struktury [IDENTITY_ATTRIBUTE_BLOB](identity-attribute-blob-structure.md) . Struktura `IDENTITY_ATTRIBUTE` zawiera rzeczywiste ciągi, a odpowiednia struktura `IDENTITY_ATTRIBUTE_BLOB` wyświetla przesunięcia na trzy ciągi wymienione w strukturze `IDENTITY_ATTRIBUTE`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

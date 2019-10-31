@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: edaaed1d-0d26-40f0-83f1-48efc0ded1c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ebc885e000f902670dbf74d5ecc11fd956f8c81
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 28a750846407a2b035e42533765eb83a87bfce3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798877"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104114"
 ---
 # <a name="itypelibresolver-interface"></a>ITypeLibResolver — Interfejs
 Udostępnia [metodę ResolveTypeLib —](resolvetypelib-method.md), która rozpoznaje ścieżkę pliku biblioteki typów.  
@@ -33,11 +31,11 @@ Udostępnia [metodę ResolveTypeLib —](resolvetypelib-method.md), która rozpo
 |[ResolveTypeLib, metoda](resolvetypelib-method.md)|Rozpoznaje prostą nazwę biblioteki typów przez zwrócenie jej w pełni kwalifikowanej ścieżki.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** TlbRef. idl, TlbRef. h  
+ **Nagłówek:** TlbRef. idl, TlbRef. h  
   
- **Biblioteki** TlbRef.lib  
+ **Biblioteka:** TlbRef. lib  
   
  **Wersja .NET Framework:** 4, 3,5, 3,0, 2,0  
   

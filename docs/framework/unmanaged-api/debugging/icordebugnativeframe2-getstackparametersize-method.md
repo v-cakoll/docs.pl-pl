@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8a5f0f767a7057064e285bf6ac9dcefc86eb9d79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4dd9760c347bbc23f3e8225c1ff748c6b7b8bfe1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757205"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096536"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize — Metoda
-Zwraca całkowity rozmiar wszystkich parametrów na stosie na x86 systemów operacyjnych.  
+Zwraca skumulowany rozmiar parametrów na stosie w systemach operacyjnych x86.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,31 +33,31 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
   
 ## <a name="parameters"></a>Parametry  
  `pSize`  
- [out] Wskaźnik łącznemu rozmiarowi parametrów na stosie.  
+ określoną Wskaźnik do skumulowanego rozmiaru parametrów na stosie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Rozmiar stosu została pomyślnie zwrócona.|  
-|S_FALSE|`GetStackParameterSize` została wywołana na platformy inne niż x86.|  
-|E_FAIL|`The size of the parameters could not be returned`.|  
+|S_OK|Rozmiar stosu został pomyślnie zwrócony.|  
+|S_FALSE|`GetStackParameterSize` został wywołany na platformie innej niż x86.|  
+|E_FAIL|`The size of the parameters could not be returned`.,|  
 |E_INVALIDARG|`pSize` jest `null`.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) metody nie ustawiaj wskaźnik stosu dla parametrów, które są przekazywane na stosie. Zamiast tego można użyć wartości zwracanej przez `GetStackParameterSize` dostosowania wskaźnik stosu do umieszczenia unwinder natywne, które dostosowanie parametrów.  
+ Metody [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) nie dostosowują wskaźnika stosu dla parametrów, które są wypychane na stosie. Zamiast tego można użyć wartości zwracanej przez `GetStackParameterSize`, aby dostosować Wskaźnik stosu do inicjatora natywnego, który dostosowuje parametry.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

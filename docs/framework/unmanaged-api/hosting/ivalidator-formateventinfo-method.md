@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c0c7477-05ba-461b-b21b-cbfba95f1db1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31329a8674a9991a3f306eeff44ee3437ad64a5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b3a6bab8672f3ef3fca5f89c60b03a43477cce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123297"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo — Metoda
-Pobiera komunikat o błędzie odpowiadający błąd sprawdzania poprawności określonej.  
+Pobiera komunikat o błędzie odpowiadający określonemu błędowi walidacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT FormatEventInfo(
   
 ## <a name="parameters"></a>Parametry  
  `hVECode`  
- [in] Wartość HRESULT, który został przekazany do procedury obsługi błędów sprawdzania poprawności.  
+ podczas Wartość HRESULT, która została przeniesiona do procedury obsługi błędów walidacji.  
   
  `Context`  
- [in] A `VEContext` wystąpienia, które zawiera informacje o kontekście o błędzie sprawdzania poprawności.  
+ podczas Wystąpienie `VEContext`, które zawiera informacje kontekstu dotyczące błędu walidacji.  
   
  `msg`  
- [out w] Ciąg, który zawiera komunikat zwrócony kod błędu.  
+ [in. out] Ciąg, który zawiera zwracany komunikat o błędzie.  
   
  `ulMaxLength`  
- [in] Maksymalna długość komunikatu o błędzie.  
+ podczas Maksymalna długość komunikatu o błędzie.  
   
  `psa`  
- [in] Bezpieczne tablicę, która zawiera dodatkowe parametry opisujące błąd.  
+ podczas Bezpieczna tablica zawierająca dodatkowe parametry opisujące błąd.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** IValidator.idl, IValidator.h  
+ **Nagłówek:** IValidator. idl, IValidator. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

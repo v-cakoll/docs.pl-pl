@@ -6,14 +6,12 @@ helpviewer_keywords:
 - fusion interfaces [.NET Framework]
 - unmanaged interfaces [.NET Framework], fusion
 ms.assetid: e2cf98b7-40c1-4f74-86c7-8a76dd9da677
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1605605f8510f7ccf5f0bbf2f3f6b09050a16025
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 81c66825e69d9526abddfe06133426a2274ad08f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795301"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108194"
 ---
 # <a name="fusion-interfaces"></a>Interfejsy łączenia
 W tej sekcji opisano niezarządzane interfejsy, które są używane przez interfejs API Fusion do uzyskiwania dostępu do właściwości zasobów aplikacji i lokalizowania odpowiednich wersji tych zasobów dla aplikacji.  
@@ -41,13 +39,13 @@ W tej sekcji opisano niezarządzane interfejsy, które są używane przez interf
  Reprezentuje unikatowy podpis kodu, który definiuje aplikację w bieżącym zakresie.  
   
  [IEnumDefinitionIdentity, interfejs](ienumdefinitionidentity-interface.md)  
- Służy jako moduł wyliczający dla kolekcji `IDefinitionIdentity` obiektów.  
+ Służy jako moduł wyliczający dla kolekcji obiektów `IDefinitionIdentity`.  
   
  [IEnumIDENTITY_ATTRIBUTE, interfejs](ienumidentity-attribute-interface.md)  
  Służy jako moduł wyliczający dla atrybutów obiektu kodu w bieżącym zakresie.  
   
  [IEnumReferenceIdentity, interfejs](ienumreferenceidentity-interface.md)  
- Służy jako moduł wyliczający dla kolekcji `IReferenceIdentity` obiektów.  
+ Służy jako moduł wyliczający dla kolekcji obiektów `IReferenceIdentity`.  
   
  [IIdentityAuthority, interfejs](iidentityauthority-interface.md)  
  Zarządza kluczami tożsamości dla obiektów kodu.  

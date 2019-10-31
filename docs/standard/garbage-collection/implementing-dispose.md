@@ -9,83 +9,81 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121211"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementowanie metody Dispose
 
-Zaimplementuj <xref:System.IDisposable.Dispose%2A> metodę zwalniania niezarządzanych zasobów używanych przez aplikację. Moduł wyrzucania elementów bezużytecznych platformy .NET nie przydziela lub nie zwalnia pamięci niezarządzanej.  
+Zaimplementuj metodę <xref:System.IDisposable.Dispose%2A>, aby zwolnić niezarządzane zasoby używane przez aplikację. Moduł wyrzucania elementów bezużytecznych platformy .NET nie przydziela lub nie zwalnia pamięci niezarządzanej.  
   
 Wzorzec do usuwania obiektu, nazywany [wzorcem usuwania](../../../docs/standard/design-guidelines/dispose-pattern.md), nakłada kolejność na okres istnienia obiektu. Wzorzec usuwania jest używany tylko w przypadku obiektów uzyskujących dostęp do niezarządzanych zasobów, takich jak dojścia do plików i potoków, dojścia do rejestru, dojścia oczekiwania lub wskaźniki do bloków w niezarządzanej pamięci. Z tego powodu moduł odśmiecania pamięci jest bardzo skuteczny w odzyskiwaniu nieużywanych zarządzanych obiektów, ale nie jest w stanie odzyskiwać niezarządzanych obiektów.  
   
 Wzorzec usuwania ma dwa warianty:  
   
-- Każdy zasób niezarządzany, który jest wykorzystywany przez typ, jest zawijany w bezpiecznym obsłudze (czyli <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>w klasie pochodnej z). W takim przypadku należy zaimplementować <xref:System.IDisposable> interfejs i dodatkową `Dispose(Boolean)` metodę. Jest to zalecana odmiana i nie wymaga przesłaniania <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody.  
+- Każdy zasób niezarządzany, który jest wykorzystywany przez typ, jest zawijany w bezpiecznym obsłudze (czyli w klasie pochodnej <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). W takim przypadku należy zaimplementować interfejs <xref:System.IDisposable> i dodatkową metodę `Dispose(Boolean)`. Jest to zalecana odmiana i nie wymaga zastąpienia metody <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
-  > Przestrzeń nazw zawiera zestaw klas <xref:System.Runtime.InteropServices.SafeHandle>pochodnych, które są wymienione w sekcji [using Safe Handles.](#SafeHandles) <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> Jeśli nie możesz znaleźć klasy, która jest odpowiednia do zwolnienia niezarządzanego zasobu, można zaimplementować własną podklasę <xref:System.Runtime.InteropServices.SafeHandle>.  
+  > Przestrzeń nazw <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> zawiera zestaw klas pochodnych od <xref:System.Runtime.InteropServices.SafeHandle>, które są wymienione w sekcji [using Safe Handles](#SafeHandles) . Jeśli nie możesz znaleźć klasy, która jest odpowiednia do zwolnienia niezarządzanego zasobu, można zaimplementować własną podklasę <xref:System.Runtime.InteropServices.SafeHandle>.  
   
-- Implementujesz <xref:System.IDisposable> interfejs i metodę dodatkową `Dispose(Boolean)` , <xref:System.Object.Finalize%2A?displayProperty=nameWithType> a także zastąpisz metodę. Należy przesłonić <xref:System.Object.Finalize%2A> , aby upewnić się, że niezarządzane <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> zasoby zostaną usunięte, jeśli implementacja nie zostanie wywołana przez odbiorcę typu. Jeśli używasz zalecanej techniki omówionej w poprzednim wypunktowaniu, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> Klasa robi to w Twoim imieniu.  
+- Implementujesz interfejs <xref:System.IDisposable> i dodatkową metodę `Dispose(Boolean)`, a także zastąpisz metodę <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Należy zastąpić <xref:System.Object.Finalize%2A>, aby upewnić się, że niezarządzane zasoby są usuwane, jeśli <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacja nie zostanie wywołana przez odbiorcę typu. Jeśli używasz zalecanej techniki omówionej w poprzednim wypunktowaniu, Klasa <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> robi to w Twoim imieniu.  
   
-Aby zapewnić, że zasoby są zawsze odpowiednio czyszczone, <xref:System.IDisposable.Dispose%2A> Metoda powinna być wywoływana wiele razy bez zgłaszania wyjątku.  
+Aby zapewnić, że zasoby są zawsze odpowiednio czyszczone, Metoda <xref:System.IDisposable.Dispose%2A> powinna być wywoływana wiele razy bez zgłaszania wyjątku.  
   
-Przykład kodu dla <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> metody pokazuje, jak agresywne wyrzucanie elementów bezużytecznych może spowodować, że finalizator jest uruchamiany, gdy członek odzyskiwanego obiektu jest nadal wykonywany. Dobrym pomysłem jest wywołanie <xref:System.GC.KeepAlive%2A> metody na końcu <xref:System.IDisposable.Dispose%2A> długotrwałej metody.  
+Przykład kodu podany dla metody <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> pokazuje, jak agresywne wyrzucanie elementów bezużytecznych może spowodować uruchomienie finalizatora w czasie, gdy element członkowski odzyskiwanego obiektu jest nadal wykonywany. Dobrym pomysłem jest wywołanie metody <xref:System.GC.KeepAlive%2A> na końcu długiej <xref:System.IDisposable.Dispose%2A>ej metody.  
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Metoda Dispose() a metoda Dispose(Boolean)  
 
-Interfejs wymaga implementacji pojedynczej <xref:System.IDisposable.Dispose%2A>metody bez parametrów. <xref:System.IDisposable> Jednak wzorzec Dispose wymaga zastosowania dwóch `Dispose` metod:  
+Interfejs <xref:System.IDisposable> wymaga implementacji pojedynczej metody bez parametrów, <xref:System.IDisposable.Dispose%2A>. Jednak wzorzec Dispose wymaga zaimplementowania dwóch metod `Dispose`:  
   
-- Publiczna implementacja niewirtualna (`NonInheritable` w Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> , która nie ma parametrów.  
+- Publiczna, niewirtualna (`NonInheritable` w Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacja, która nie ma parametrów.  
   
-- Chroniona wirtualna (`Overridable` w Visual Basic) `Dispose` Metoda, której sygnatura:  
+- Chroniona wirtualna (`Overridable` w Visual Basic) `Dispose` Metoda, której podpis to:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
   
 ### <a name="the-dispose-overload"></a>Przeciążenie metody Dispose ()
 
-Ponieważ publiczne, niewirtualne (`NonInheritable` w Visual Basic), `Dispose` Metoda bez parametrów jest wywoływana przez odbiorcę typu, jego celem jest zwolnienie niezarządzanych zasobów i wskazanie, że finalizator, jeśli taki istnieje, nie musi być uruchamiany. Z tego powodu ma standardową implementację:  
+Ze względu na to, że publiczna, niewirtualna (`NonInheritable` w Visual Basic) Metoda `Dispose` bezparametrowa jest wywoływana przez odbiorcę typu, jego celem jest zwolnienie niezarządzanych zasobów i wskazanie, że finalizator, jeśli taki istnieje, nie musi być uruchamiany. Z tego powodu ma standardową implementację:  
   
 [!code-csharp[Conceptual.Disposable#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#7)]
 [!code-vb[Conceptual.Disposable#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#7)]  
   
-Metoda wykonuje wszystkie operacje czyszczenia obiektów, dlatego Moduł wyrzucania elementów bezużytecznych nie musi już <xref:System.Object.Finalize%2A?displayProperty=nameWithType> wywoływać przesłonięcia obiektów. `Dispose` W związku z tym wywołanie <xref:System.GC.SuppressFinalize%2A> metody uniemożliwia uruchomienie finalizatora przez moduł wyrzucania elementów bezużytecznych. Jeśli typ nie ma finalizatora, wywołanie <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> nie ma żadnego wpływu. Należy pamiętać, że rzeczywista część zwalniania niezarządzanych zasobów jest wykonywana przez drugie Przeciążenie `Dispose` metody.  
+Metoda `Dispose` wykonuje wszystkie operacje czyszczenia obiektów, dlatego Moduł wyrzucania elementów bezużytecznych nie musi już wywoływać obiektów <xref:System.Object.Finalize%2A?displayProperty=nameWithType> zastąpień. W związku z tym wywołanie metody <xref:System.GC.SuppressFinalize%2A> uniemożliwia uruchomienie finalizatora przez moduł wyrzucania elementów bezużytecznych. Jeśli typ nie ma finalizatora, wywołanie do <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType> nie ma wpływu. Należy pamiętać, że rzeczywista część zwalniania niezarządzanych zasobów jest wykonywana przez drugie Przeciążenie metody `Dispose`.  
   
 ### <a name="the-disposeboolean-overload"></a>Przeciążenie metody Dispose (Boolean)
 
-W drugim przeciążeniu parametr Dispose ma wartość <xref:System.Boolean> wskazującą, czy <xref:System.IDisposable.Dispose%2A> wywołanie metody pochodzi z metody (jej wartość jest `true`) czy z finalizatora (jego wartość to `false`).  
+W drugim przeciążeniu parametr *Dispose* jest <xref:System.Boolean>, który wskazuje, czy wywołanie metody pochodzi z metody <xref:System.IDisposable.Dispose%2A> (jej wartość jest `true`) czy z finalizatora (jego wartość jest `false`).  
   
 Treść metody składa się z dwóch bloków kodu:  
   
-- Blok zwalniający niezarządzane zasoby. Ten blok jest wykonywany niezależnie od wartości `disposing` parametru.  
+- Blok zwalniający niezarządzane zasoby. Ten blok jest wykonywany niezależnie od wartości parametru `disposing`.  
   
 - Blok warunkowy zwalniający zarządzane zasoby. Ten blok jest wykonywany, gdy wartość `disposing` jest `true`. Zarządzane zasoby, które zwalnia, to m.in.:  
   
-  **Obiekty zarządzane, które <xref:System.IDisposable>implementują.** Bloku warunkowego można użyć do wywołania ich <xref:System.IDisposable.Dispose%2A> implementacji. Jeśli użyto bezpiecznego dojścia do zawijania niezarządzanego zasobu, należy wywołać <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> implementację tutaj.  
+  **Zarządzane obiekty, które implementują <xref:System.IDisposable>.** Bloku warunkowego można użyć do wywołania ich implementacji <xref:System.IDisposable.Dispose%2A>. Jeśli użyto bezpiecznego dojścia do zawijania niezarządzanego zasobu, należy wywołać implementację <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType> w tym miejscu.  
   
-  **Zarządzane obiekty, które zużywają duże ilości pamięci lub zużywają niewystarczające zasoby.** Bezpośrednie zwalnianie tych obiektów w `Dispose` metodzie zwalnia je szybciej niż gdyby były odzyskiwane niedeterministycznie przez moduł wyrzucania elementów bezużytecznych.  
+  **Zarządzane obiekty, które zużywają duże ilości pamięci lub zużywają niewystarczające zasoby.** Bezpośrednie zwalnianie tych obiektów w metodzie `Dispose` zwalnia je szybciej, niż gdyby były odzyskiwane niedeterministycznie przez moduł wyrzucania elementów bezużytecznych.  
   
-Jeśli wywołanie metody pochodzi od finalizatora (to oznacza, że w przypadku likwidacji `false`jest), zostanie wykonany tylko kod, który zwolni niezarządzane zasoby. Ponieważ kolejność, w której moduł zbierający elementy bezużyteczne niszczy obiekty zarządzane podczas finalizowania, nie jest zdefiniowana `Dispose` , wywołanie tego przeciążenia z `false` wartością zapobiega próbie zwolnienia zarządzanych zasobów, które mogą mieć zostało już przywrócone.  
+Jeśli wywołanie metody pochodzi od finalizatora (to oznacza, *że jeśli zostanie* `false`, zostanie wykonany tylko kod, który zwolni niezarządzane zasoby. Ponieważ kolejność, w której moduł wyrzucania elementów bezużytecznych niszczy obiekty zarządzane podczas finalizowania, nie jest zdefiniowana, wywołanie tego `Dispose` Przeciążenie z wartością `false` uniemożliwia finalizatorowi podejmowanie prób zwolnienia zarządzanych zasobów, które mogły już zostać odzyskać.  
   
 ## <a name="implementing-the-dispose-pattern-for-a-base-class"></a>Implementowanie wzorca usuwania dla klasy bazowej
 
 Podczas implementowania wzorca usuwania dla klasy bazowej należy dostarczyć następujące elementy:  
   
 > [!IMPORTANT]
-> Należy zaimplementować ten wzorzec dla wszystkich klas bazowych, które <xref:System.IDisposable.Dispose> implementują i `sealed` nie`NotInheritable` są (w Visual Basic).  
+> Należy zaimplementować ten wzorzec dla wszystkich klas bazowych, które implementują <xref:System.IDisposable.Dispose> i nie `sealed` (`NotInheritable` w Visual Basic).  
   
-- Implementacja, która `Dispose(Boolean)` wywołuje metodę. <xref:System.IDisposable.Dispose%2A>  
+- Implementacja <xref:System.IDisposable.Dispose%2A>, która wywołuje metodę `Dispose(Boolean)`.  
   
-- `Dispose(Boolean)` Metoda, która wykonuje rzeczywistą część zwalniania zasobów.  
+- Metoda `Dispose(Boolean)`, która wykonuje rzeczywistą część zwalniania zasobów.  
   
-- Klasa pochodna <xref:System.Runtime.InteropServices.SafeHandle> , która otacza niezarządzany zasób (zalecane) lub przesłonięcie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody. <xref:System.Runtime.InteropServices.SafeHandle> Klasa zawiera finalizator, który uwalnia Cię do kodu.  
+- Klasa pochodna <xref:System.Runtime.InteropServices.SafeHandle>, która otacza zasób niezarządzany (zalecane) lub przesłonięcie metody <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Klasa <xref:System.Runtime.InteropServices.SafeHandle> zapewnia finalizator, który uwalnia Cię do kodu.  
   
 Oto ogólny wzorzec implementowania wzorca usuwania dla klasy bazowej, która używa bezpiecznego dojścia.  
   
@@ -93,7 +91,7 @@ Oto ogólny wzorzec implementowania wzorca usuwania dla klasy bazowej, która u�
 [!code-vb[System.IDisposable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base1.vb#3)]  
   
 > [!NOTE]
-> W poprzednim przykładzie użyto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> obiektu do zilustrowania wzorca; zamiast tego można użyć dowolnego obiektu <xref:System.Runtime.InteropServices.SafeHandle> pochodnego. Należy zauważyć, że przykład nie tworzy prawidłowo wystąpienia <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> obiektu.  
+> Poprzedni przykład używa obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do zilustrowania wzorca; Zamiast tego można użyć dowolnego obiektu pochodnego <xref:System.Runtime.InteropServices.SafeHandle>. Należy zauważyć, że przykład nie tworzy poprawnie wystąpienia obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
 Oto ogólny wzorzec implementowania wzorca usuwania dla klasy bazowej, która zastąpi <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
@@ -101,15 +99,15 @@ Oto ogólny wzorzec implementowania wzorca usuwania dla klasy bazowej, która za
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> W C#programie przesłonięcie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> przez zdefiniowanie [destruktora](../../csharp/programming-guide/classes-and-structs/destructors.md).  
+> W C#programie zastąpienie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> przez zdefiniowanie [destruktora](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementowanie wzorca usuwania dla klasy pochodnej
 
-Klasa pochodna klasy, która implementuje <xref:System.IDisposable> interfejs, <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> nie należy implementować <xref:System.IDisposable>, ponieważ Implementacja klasy bazowej jest dziedziczona przez klasy pochodne. Tak więc, aby zaimplementować wzorzec usuwania dla klasy pochodnej, należy dostarczyć następujące elementy:  
+Klasa pochodna klasy implementującej interfejs <xref:System.IDisposable> nie powinna implementować <xref:System.IDisposable>, ponieważ Implementacja klasy bazowej <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> jest dziedziczona przez klasy pochodne. Tak więc, aby zaimplementować wzorzec usuwania dla klasy pochodnej, należy dostarczyć następujące elementy:  
   
-- `protected Dispose(Boolean)` Metoda, która zastępuje metodę klasy bazowej i wykonuje rzeczywistą liczbę zasobów klasy pochodnej. Ta metoda powinna również wywołać `Dispose(Boolean)` metodę klasy bazowej i przekazać jej stan likwidacji dla tego argumentu.  
+- Metoda `protected Dispose(Boolean)`, która zastępuje metodę klasy bazowej i wykonuje rzeczywistą ilość pracy w celu zwolnienia zasobów klasy pochodnej. Ta metoda powinna również wywołać metodę `Dispose(Boolean)` klasy bazowej i przekazać jej stan likwidacji dla tego argumentu.  
   
-- Klasa pochodna <xref:System.Runtime.InteropServices.SafeHandle> , która otacza niezarządzany zasób (zalecane) lub przesłonięcie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody. <xref:System.Runtime.InteropServices.SafeHandle> Klasa zawiera finalizator, który uwalnia Cię do kodu. W przypadku zapewnienia finalizatora należy wywołać `Dispose(Boolean)` Przeciążenie przy użyciu argumentu `false`usuwania.  
+- Klasa pochodna <xref:System.Runtime.InteropServices.SafeHandle>, która otacza zasób niezarządzany (zalecane) lub przesłonięcie metody <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Klasa <xref:System.Runtime.InteropServices.SafeHandle> zapewnia finalizator, który uwalnia Cię do kodu. W przypadku zapewnienia finalizatora należy wywołać Przeciążenie `Dispose(Boolean)` przy użyciu argumentu *usuwania* `false`.  
   
 Poniżej przedstawiono ogólny schemat implementowania wzorca usuwania dla klasy pochodnej, w którym jest używane bezpieczne dojście:  
   
@@ -117,7 +115,7 @@ Poniżej przedstawiono ogólny schemat implementowania wzorca usuwania dla klasy
 [!code-vb[System.IDisposable#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived1.vb#4)]  
   
 > [!NOTE]
-> W poprzednim przykładzie użyto <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> obiektu do zilustrowania wzorca; zamiast tego można użyć dowolnego obiektu <xref:System.Runtime.InteropServices.SafeHandle> pochodnego. Należy zauważyć, że przykład nie tworzy prawidłowo wystąpienia <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> obiektu.  
+> Poprzedni przykład używa obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do zilustrowania wzorca; Zamiast tego można użyć dowolnego obiektu pochodnego <xref:System.Runtime.InteropServices.SafeHandle>. Należy zauważyć, że przykład nie tworzy poprawnie wystąpienia obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>.  
   
 Oto ogólny wzorzec implementowania wzorca usuwania dla klasy pochodnej, która zastąpi <xref:System.Object.Finalize%2A?displayProperty=nameWithType>:  
   
@@ -125,29 +123,29 @@ Oto ogólny wzorzec implementowania wzorca usuwania dla klasy pochodnej, która 
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> W C#programie przesłonięcie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> przez zdefiniowanie [destruktora](../../csharp/programming-guide/classes-and-structs/destructors.md).  
+> W C#programie zastąpienie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> przez zdefiniowanie [destruktora](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Używanie bezpiecznych dojść
 
-Pisanie kodu dla finalizatora obiektu to złożone zadanie, które może powodować problemy, jeśli nie zostanie wykonane prawidłowo. Dlatego zalecamy konstruowanie <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> obiektów zamiast implementowania finalizatora.  
+Pisanie kodu dla finalizatora obiektu to złożone zadanie, które może powodować problemy, jeśli nie zostanie wykonane prawidłowo. W związku z tym zaleca się Konstruowanie obiektów <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> zamiast implementowania finalizatora.  
   
-Klasy pochodne <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> klasy upraszczają problemy z okresem istnienia obiektów przez przypisanie i zwolnienie dojść bez przeszkód. Zawierają finalizator krytyczny, który gwarantuje działanie w trakcie zwalniania domeny aplikacji. Aby uzyskać więcej informacji na temat korzyści z używania bezpiecznego dojścia, <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>Zobacz. Następujące klasy pochodne w <xref:Microsoft.Win32.SafeHandles> przestrzeni nazw zapewniają bezpieczne dojścia:  
+Klasy pochodne klasy <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> upraszczają problemy dotyczące okresu istnienia obiektów przez przypisanie i zwolnienie dojść bez przeszkód. Zawierają finalizator krytyczny, który gwarantuje działanie w trakcie zwalniania domeny aplikacji. Aby uzyskać więcej informacji na temat korzyści z używania bezpiecznego dojścia, zobacz <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Następujące klasy pochodne w przestrzeni nazw <xref:Microsoft.Win32.SafeHandles> zapewniają bezpieczne dojścia:  
   
-- Klasy <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>, i<xref:Microsoft.Win32.SafeHandles.SafePipeHandle> , dla plików, plików mapowanych na pamięć i potoków.  
+- Klasy <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle>i <xref:Microsoft.Win32.SafeHandles.SafePipeHandle>, dla plików, plików mapowanych na pamięć i potoków.  
   
-- <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> Klasa dla widoków pamięci.  
+- Klasa <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle>, dla widoków pamięci.  
   
-- Klasy <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> i<xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> , dla konstrukcji kryptografii.  
+- Klasy <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle>i <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> dla konstrukcji kryptograficznych.  
   
-- <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> Klasa dla kluczy rejestru.  
+- Klasa <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> dla kluczy rejestru.  
   
-- <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> Klasa, dla uchwytów oczekiwania.  
+- Klasa <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle>, dla uchwytów oczekiwania.  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Używanie bezpiecznego dojścia w celu implementacji wzorca usuwania dla klasy bazowej
 
-Poniższy przykład ilustruje wzorzec Dispose dla klasy bazowej, `DisposableStreamResource`który używa bezpiecznego dojścia do hermetyzowania niezarządzanych zasobów. Definiuje `DisposableResource` klasę, która <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> używa do zawijania <xref:System.IO.Stream> obiektu, który reprezentuje otwarty plik. Metoda zawiera również pojedynczą `Size`właściwość, która zwraca łączną liczbę bajtów w strumieniu pliku. `DisposableResource`  
+Poniższy przykład ilustruje wzorzec Dispose dla klasy bazowej, `DisposableStreamResource`, który używa bezpiecznego dojścia do hermetyzowania niezarządzanych zasobów. Definiuje klasę `DisposableResource`, która używa <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do otaczania <xref:System.IO.Stream> obiektu, który reprezentuje otwarty plik. Metoda `DisposableResource` zawiera również pojedynczą właściwość, `Size`, która zwraca łączną liczbę bajtów w strumieniu pliku.  
   
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
@@ -155,7 +153,7 @@ Poniższy przykład ilustruje wzorzec Dispose dla klasy bazowej, `DisposableStre
 <a name="derived"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>Używanie bezpiecznego dojścia w celu implementacji wzorca usuwania dla klasy pochodnej
 
-Poniższy przykład ilustruje wzorzec usuwania dla klasy `DisposableStreamResource2`pochodnej, która dziedziczy `DisposableStreamResource` z klasy przedstawionej w poprzednim przykładzie. Klasa dodaje dodatkową metodę, `WriteFileInfo`i <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> używa obiektu do zawijania uchwytu zapisywalnego pliku.  
+Poniższy przykład ilustruje wzorzec Dispose dla klasy pochodnej, `DisposableStreamResource2`, która dziedziczy z klasy `DisposableStreamResource` przedstawionej w poprzednim przykładzie. Klasa dodaje dodatkową metodę, `WriteFileInfo`i używa obiektu <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> do zawijania uchwytu zapisywalnego pliku.  
   
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  

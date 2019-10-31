@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 973f975885bbbf5cbed74adef7b9f4f423c42583
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084838"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray — Metoda
-Przydziela nową tablicę typu określonego elementu i wymiary.  
+Przypisuje nową tablicę określonego typu elementu i wymiarów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +38,25 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>Parametry  
  `pElementType`  
- [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywanego w tablicy.  
+ podczas Wskaźnik do obiektu ICorDebugType, który reprezentuje typ elementu przechowywanego w tablicy.  
   
  `rank`  
- [in] Liczba wymiarów tablicy. W programie .NET Framework 2.0 ta wartość musi wynosić 1.  
+ podczas Liczba wymiarów tablicy. W .NET Framework w wersji 2,0 ta wartość musi być równa 1.  
   
  `dims`  
- [in] Rozmiar w bajtach każdego wymiaru tablicy.  
+ podczas Rozmiar, w bajtach, każdego wymiaru tablicy.  
   
  `lowBounds`  
- [in] Opcjonalnie. Dolna granica każdego wymiaru tablicy. Jeśli ta wartość zostanie pominięty, dolną granicę równą zero zakłada, że dla każdego wymiaru.  
+ podczas Obowiązkowe. Dolna granica każdego wymiaru tablicy. W przypadku pominięcia tej wartości dla każdego wymiaru zostanie przyjęta Dolna granica zero.  
   
 ## <a name="remarks"></a>Uwagi  
- Elementy tablicy mogą być wystąpień typu ogólnego. Tablica zawsze jest tworzony w domenie aplikacji, w którym wątek jest obecnie uruchomiony. W programie .NET Framework 2.0, wartość `rank` musi mieć wartość 1.  
+ Elementy tablicy mogą być wystąpieniami typu ogólnego. Tablica jest zawsze tworzona w domenie aplikacji, w której jest aktualnie uruchomiony wątek. W .NET Framework 2,0 wartość `rank` musi być równa 1.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

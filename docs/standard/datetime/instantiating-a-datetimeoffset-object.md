@@ -11,85 +11,83 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50cc71b62581e1fb9302fe241abf6349afd33f8d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 1b1178623258393eab28a7087eb04c47b55a9176
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106642"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122310"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>Tworzenie wystąpień obiektów DateTimeOffset
 
-Struktura oferuje wiele metod tworzenia nowych <xref:System.DateTimeOffset> wartości. <xref:System.DateTimeOffset> Wiele z nich odnosi się bezpośrednio do metod dostępnych do tworzenia wystąpień <xref:System.DateTime> nowych wartości, z rozszerzeniami, które umożliwiają określenie wartości daty i godziny przesunięcia od skoordynowanego czasu uniwersalnego (UTC). W szczególności można utworzyć wystąpienie <xref:System.DateTimeOffset> wartości w następujący sposób:
+Struktura <xref:System.DateTimeOffset> oferuje kilka sposobów tworzenia nowych wartości <xref:System.DateTimeOffset>. Wiele z nich odnosi się bezpośrednio do metod dostępnych dla tworzenia wystąpienia nowych wartości <xref:System.DateTime>, z rozszerzeniami, które umożliwiają określenie wartości daty i godziny przesunięcia od skoordynowanego czasu uniwersalnego (UTC). W szczególności można utworzyć wystąpienie <xref:System.DateTimeOffset> wartości w następujący sposób:
 
 - Przy użyciu literału daty i godziny.
 
-- Wywołując <xref:System.DateTimeOffset> Konstruktor.
+- Wywołując Konstruktor <xref:System.DateTimeOffset>.
 
-- Przez niejawne przekonwertowanie <xref:System.DateTimeOffset> wartości na wartość.
+- Przez niejawne przekonwertowanie wartości na wartość <xref:System.DateTimeOffset>.
 
 - Przez analizowanie ciągu reprezentującego datę i godzinę.
 
-Ten temat zawiera bardziej szczegółowe informacje i przykłady kodu, które ilustrują te metody tworzenia wystąpienia <xref:System.DateTimeOffset> nowych wartości.
+Ten temat zawiera bardziej szczegółowe informacje i przykłady kodu, które ilustrują te metody tworzenia wystąpienia nowych wartości <xref:System.DateTimeOffset>.
 
 ## <a name="date-and-time-literals"></a>Literały daty i godziny
 
-W przypadku języków, które go obsługują, jednym z najczęstszych metod tworzenia <xref:System.DateTime> wystąpienia wartości jest podanie daty i godziny jako zakodowanej wartości literału. Na przykład poniższy kod Visual Basic tworzy obiekt, <xref:System.DateTime> którego wartość to 1 stycznia 2008, o 10:00 am.
+W przypadku języków, które go obsługują, jednym z najczęstszych metod tworzenia wystąpienia <xref:System.DateTime> jest podanie daty i godziny jako wartości literału, który jest zakodowany. Na przykład poniższy kod Visual Basic tworzy obiekt <xref:System.DateTime>, którego wartość to 1 stycznia 2008, o 10:00 AM.
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
 
-<xref:System.DateTimeOffset>wartości można także inicjować przy użyciu literałów daty i godziny w przypadku używania języków, <xref:System.DateTime> które obsługują literały. Na przykład poniższy kod Visual Basic tworzy <xref:System.DateTimeOffset> obiekt.
+wartości <xref:System.DateTimeOffset> można również inicjować przy użyciu literałów daty i godziny w przypadku używania języków, które obsługują <xref:System.DateTime> literały. Na przykład poniższy kod Visual Basic tworzy obiekt <xref:System.DateTimeOffset>.
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
 
-Jak pokazuje dane wyjściowe konsoli, <xref:System.DateTimeOffset> wartość utworzona w ten sposób przypisuje przesunięcie lokalnej strefy czasowej. Oznacza to, że <xref:System.DateTimeOffset> wartość przypisana przy użyciu literału znakowego nie identyfikuje pojedynczego punktu czasu, jeśli kod jest uruchamiany na różnych komputerach.
+Jak pokazuje dane wyjściowe konsoli, wartość <xref:System.DateTimeOffset> utworzona w ten sposób przypisuje przesunięcie lokalnej strefy czasowej. Oznacza to, że wartość <xref:System.DateTimeOffset> przypisywana przy użyciu literału znakowego nie identyfikuje pojedynczego punktu czasu, jeśli kod jest uruchamiany na różnych komputerach.
 
 ## <a name="datetimeoffset-constructors"></a>Konstruktory DateTimeOffset
 
-<xref:System.DateTimeOffset> Typ definiuje sześć konstruktorów. Cztery z nich odpowiadają bezpośrednio <xref:System.DateTime> konstruktorom, z dodatkowym parametrem <xref:System.TimeSpan> typu, który definiuje datę i godzinę przesunięcia od czasu UTC. Umożliwiają one Definiowanie <xref:System.DateTimeOffset> wartości na podstawie wartości poszczególnych składników daty i godziny. Na przykład poniższy kod używa tych czterech konstruktorów do tworzenia wystąpień <xref:System.DateTimeOffset> obiektów z identycznymi wartościami 7/1/2008 12:05 am + 01:00.
+Typ <xref:System.DateTimeOffset> definiuje sześć konstruktorów. Cztery z nich odnoszą się bezpośrednio do konstruktorów <xref:System.DateTime>, z dodatkowym parametrem typu <xref:System.TimeSpan>, który definiuje przesunięcie daty i godziny od czasu UTC. Umożliwiają one zdefiniowanie wartości <xref:System.DateTimeOffset> na podstawie wartości poszczególnych składników daty i godziny. Na przykład poniższy kod używa tych czterech konstruktorów do tworzenia wystąpień <xref:System.DateTimeOffset> obiektów z identycznymi wartościami 7/1/2008 12:05 AM + 01:00.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#3)]
 
-Należy zauważyć, że gdy wartość <xref:System.DateTimeOffset> obiektu skonkretyzowanygo <xref:System.Globalization.PersianCalendar> przy użyciu obiektu, jako jeden z argumentów konstruktora, zostanie wyświetlona w konsoli, jest wyrażona jako data w kalendarzu gregoriańskim, a nie w przypadku kalendarza perski. Aby wyprowadzić datę przy użyciu kalendarza perski, zapoznaj się z <xref:System.Globalization.PersianCalendar> przykładem w temacie.
+Należy zauważyć, że gdy wartość <xref:System.DateTimeOffset> obiektu utworzonego przy użyciu obiektu <xref:System.Globalization.PersianCalendar> jako jeden z argumentów konstruktora jest wyświetlany w konsoli, zostanie ona wyrażona jako data w kalendarzu gregoriańskim, a nie w obszarze kalendarza perski. Aby wyprowadzić datę przy użyciu kalendarza perski, zapoznaj się z przykładem w temacie <xref:System.Globalization.PersianCalendar>.
 
-Pozostałe dwa konstruktory tworzą <xref:System.DateTimeOffset> obiekt <xref:System.DateTime> z wartości. Pierwszy z nich ma jeden parametr, <xref:System.DateTime> wartość do przekonwertowania <xref:System.DateTimeOffset> na wartość. Przesunięcie wartości otrzymanej <xref:System.DateTimeOffset> zależy od <xref:System.DateTime.Kind%2A> właściwości pojedynczego parametru konstruktora. Jeśli wartość jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, przesunięcie jest <xref:System.TimeSpan.Zero?displayProperty=nameWithType>równe. W przeciwnym razie jego przesunięcie jest równe wartości dla lokalnej strefy czasowej. Poniższy przykład ilustruje użycie tego konstruktora do tworzenia wystąpienia <xref:System.DateTimeOffset> obiektów reprezentujących czas UTC i lokalną strefę czasową:
+Pozostałe dwa konstruktory tworzą obiekt <xref:System.DateTimeOffset> z wartości <xref:System.DateTime>. Pierwszy z nich ma jeden parametr, <xref:System.DateTime> wartość do przekonwertowania na wartość <xref:System.DateTimeOffset>. Przesunięcie obliczonej wartości <xref:System.DateTimeOffset> zależy od właściwości <xref:System.DateTime.Kind%2A> jednego parametru konstruktora. Jeśli wartość jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, przesunięcie jest równe <xref:System.TimeSpan.Zero?displayProperty=nameWithType>. W przeciwnym razie jego przesunięcie jest równe wartości dla lokalnej strefy czasowej. Poniższy przykład ilustruje użycie tego konstruktora do tworzenia wystąpień <xref:System.DateTimeOffset> obiektów reprezentujących czas UTC i lokalną strefę czasową:
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#4)]
 
 > [!NOTE]
-> Wywołanie przeciążenia <xref:System.DateTimeOffset> konstruktora, który ma jeden <xref:System.DateTime> parametr, jest równoznaczne z przeprowadzeniem niejawnej konwersji <xref:System.DateTime> wartości na <xref:System.DateTimeOffset> wartość.
+> Wywołanie przeciążenia konstruktora <xref:System.DateTimeOffset>, który ma jeden parametr <xref:System.DateTime> jest równoznaczne z przeprowadzeniem niejawnej konwersji wartości <xref:System.DateTime> do wartości <xref:System.DateTimeOffset>.
 
-Drugi Konstruktor, który <xref:System.DateTimeOffset> tworzy obiekt <xref:System.DateTime> z wartości, <xref:System.DateTime> ma dwa parametry: wartość do przekonwertowania i <xref:System.TimeSpan> wartość reprezentującą przesunięcie daty i godziny od czasu UTC. Ta wartość przesunięcia musi odpowiadać <xref:System.DateTime.Kind%2A> właściwości pierwszego parametru konstruktora <xref:System.ArgumentException> lub jest generowany. Jeśli właściwość pierwszego parametru jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, wartość drugiego parametru musi być <xref:System.TimeSpan.Zero?displayProperty=nameWithType>. <xref:System.DateTime.Kind%2A> Jeśli właściwość pierwszego parametru to <xref:System.DateTimeKind.Local?displayProperty=nameWithType>, wartość drugiego parametru musi być przesunięciem strefy czasowej systemu lokalnego. <xref:System.DateTime.Kind%2A> Jeśli właściwość pierwszego parametru jest <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, przesunięcie może być dowolną prawidłową wartością. <xref:System.DateTime.Kind%2A> Poniższy kod ilustruje wywołania tego konstruktora do konwersji <xref:System.DateTime> na <xref:System.DateTimeOffset> wartości.
+Drugi Konstruktor, który tworzy obiekt <xref:System.DateTimeOffset> z wartości <xref:System.DateTime> ma dwa parametry: wartość <xref:System.DateTime> do przekonwertowania i wartość <xref:System.TimeSpan> reprezentującą przesunięcie daty i godziny z czasu UTC. Ta wartość przesunięcia musi odpowiadać właściwości <xref:System.DateTime.Kind%2A> pierwszego parametru konstruktora lub zostanie wygenerowany <xref:System.ArgumentException>. Jeśli właściwość <xref:System.DateTime.Kind%2A> pierwszego parametru jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, wartość drugiego parametru musi być <xref:System.TimeSpan.Zero?displayProperty=nameWithType>. Jeśli właściwość <xref:System.DateTime.Kind%2A> pierwszego parametru jest <xref:System.DateTimeKind.Local?displayProperty=nameWithType>, wartość drugiego parametru musi być przesunięciem strefy czasowej systemu lokalnego. Jeśli właściwość <xref:System.DateTime.Kind%2A> pierwszego parametru jest <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, przesunięcie może być dowolną prawidłową wartością. Poniższy kod ilustruje wywołania tego konstruktora w celu przekonwertowania <xref:System.DateTime> na wartości <xref:System.DateTimeOffset>.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#5)]
 
 ## <a name="implicit-type-conversion"></a>Niejawna konwersja typu
 
-Typ obsługuje jedną niejawną konwersję typu: <xref:System.DateTime> od wartości do <xref:System.DateTimeOffset> wartości. <xref:System.DateTimeOffset> (Niejawna konwersja typu jest konwersją z jednego typu na inny, który nie wymaga jawnego rzutowania C#(in) ani konwersji (w Visual Basic) i nie utraci informacji. Sprawia, że kod może być podobny do poniższego.
+Typ <xref:System.DateTimeOffset> obsługuje jedną niejawną konwersję typu: od wartości <xref:System.DateTime> do wartości <xref:System.DateTimeOffset>. (Niejawna konwersja typu jest konwersją z jednego typu na inny, który nie wymaga jawnego rzutowania C#(in) ani konwersji (w Visual Basic) i nie utraci informacji. Sprawia, że kod może być podobny do poniższego.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#6)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#6)]
 
-Przesunięcie wartości otrzymanej <xref:System.DateTimeOffset> zależy od <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> wartości właściwości. Jeśli wartość jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, przesunięcie jest <xref:System.TimeSpan.Zero?displayProperty=nameWithType>równe. Jeśli wartość jest <xref:System.DateTimeKind.Local?displayProperty=nameWithType> albo lub <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, przesunięcie jest ustawione jako równe wartości dla lokalnej strefy czasowej.
+Przesunięcie obliczonej wartości <xref:System.DateTimeOffset> zależy od wartości właściwości <xref:System.DateTime.Kind%2A?displayProperty=nameWithType>. Jeśli wartość jest <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>, przesunięcie jest równe <xref:System.TimeSpan.Zero?displayProperty=nameWithType>. Jeśli wartość jest równa <xref:System.DateTimeKind.Local?displayProperty=nameWithType> lub <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>, przesunięcie jest ustawione tak samo, jak w przypadku lokalnej strefy czasowej.
 
 ## <a name="parsing-the-string-representation-of-a-date-and-time"></a>Analizowanie ciągu reprezentującego datę i godzinę
 
-Typ obsługuje cztery metody, które umożliwiają konwersję ciągu reprezentującego datę i godzinę <xref:System.DateTimeOffset> do wartości: <xref:System.DateTimeOffset>
+Typ <xref:System.DateTimeOffset> obsługuje cztery metody, które umożliwiają konwersję ciągu reprezentującego datę i godzinę do wartości <xref:System.DateTimeOffset>:
 
-- <xref:System.DateTimeOffset.Parse%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę na <xref:System.DateTimeOffset> wartość i zgłasza wyjątek, jeśli konwersja nie powiedzie się.
+- <xref:System.DateTimeOffset.Parse%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę na wartość <xref:System.DateTimeOffset> i zgłasza wyjątek, jeśli konwersja nie powiedzie się.
 
-- <xref:System.DateTimeOffset.TryParse%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę na <xref:System.DateTimeOffset> wartość i zwraca `false` , jeśli konwersja nie powiedzie się.
+- <xref:System.DateTimeOffset.TryParse%2A>, która próbuje skonwertować ciąg reprezentujący datę i godzinę do wartości <xref:System.DateTimeOffset> i zwraca `false`, jeśli konwersja nie powiedzie się.
 
-- <xref:System.DateTimeOffset.ParseExact%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę w określonym formacie na <xref:System.DateTimeOffset> wartość. Metoda zgłasza wyjątek, jeśli konwersja nie powiedzie się.
+- <xref:System.DateTimeOffset.ParseExact%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę w określonym formacie na wartość <xref:System.DateTimeOffset>. Metoda zgłasza wyjątek, jeśli konwersja nie powiedzie się.
 
-- <xref:System.DateTimeOffset.TryParseExact%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę w określonym formacie na <xref:System.DateTimeOffset> wartość. Metoda zwraca `false` , jeśli konwersja nie powiedzie się.
+- <xref:System.DateTimeOffset.TryParseExact%2A>, która próbuje przekonwertować ciąg reprezentujący datę i godzinę w określonym formacie na wartość <xref:System.DateTimeOffset>. Metoda zwraca `false`, jeśli konwersja nie powiedzie się.
 
-Poniższy przykład ilustruje wywołania każdej z tych czterech metod konwersji ciągów w celu utworzenia wystąpienia <xref:System.DateTimeOffset> wartości.
+Poniższy przykład ilustruje wywołania każdej z tych czterech metod konwersji ciągów, aby utworzyć wystąpienie <xref:System.DateTimeOffset> wartości.
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]

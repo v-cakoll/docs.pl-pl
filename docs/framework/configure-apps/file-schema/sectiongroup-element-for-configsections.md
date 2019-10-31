@@ -7,22 +7,22 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9113811557ded3a580a0bbacb24f2fe7e8d05ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114784"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<Element > sekcji dla \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<> elementu \<configSections >
 
 Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
 [ **\<> konfiguracji**](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sekcji >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,13 +36,13 @@ Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
 |           | Opis |
 | --------- | ----------- |
-| **name**  | Atrybut wymagany.<br><br>Określa nazwę definiowanej grupy sekcji. |
+| **Nazwij**  | Atrybut wymagany.<br><br>Określa nazwę definiowanej grupy sekcji. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [configSections, element >  **\<** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
+| [ **\<configSections >** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -52,7 +52,7 @@ Definiuje przestrzeń nazw dla sekcji konfiguracyjnych.
 
 ## <a name="remarks"></a>Uwagi
 
-Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracyjnych i zapewnia, że nie występują konflikty nazw z sekcjami konfiguracji zdefiniowanymi przez kogoś innego. Można zagnieżdżać  **\<elementy >** w obrębie siebie.
+Deklarowanie grupy sekcji tworzy tag kontenera dla sekcji konfiguracyjnych i zapewnia, że nie występują konflikty nazw z sekcjami konfiguracji zdefiniowanymi przez kogoś innego. \<można zagnieżdżać **>** elementów w obrębie siebie.
 
 ## <a name="example"></a>Przykład
 

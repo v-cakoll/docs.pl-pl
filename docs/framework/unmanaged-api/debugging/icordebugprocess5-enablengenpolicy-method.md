@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38ff08fa7e7db986006c4e0e09b1ac9cf1be801e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 583819e8e7ab16a8ac1ce72892f4353e3043ce3d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129688"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy — Metoda
-Ustawia wartość określającą, jak aplikacja ładuje obrazy natywne podczas uruchamiania w debugerze zarządzanych.  
+Ustawia wartość określającą sposób ładowania obrazów natywnych przez aplikację podczas działania w ramach zarządzanego debugera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,21 +35,21 @@ HRESULT EnableNGENPolicy(
   
 ## <a name="parameters"></a>Parametry  
  `ePolicy`  
- [in] A [cordebugngenpolicy —](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) stałą, która określa, jak aplikacja ładuje obrazy natywne podczas uruchamiania w debugerze zarządzanych.  
+ podczas Stała [CorDebugNGenPolicy —](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md) , która określa, w jaki sposób aplikacja ładuje obrazy natywne podczas działania w zarządzanym debugerze.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli zasady zostały ustawione pomyślnie, metoda zwraca `S_OK`. Jeśli `ePolicy` znajduje się poza zakresem wartości wyliczane definicją [cordebugngenpolicy —](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), metoda zwraca `E_INVALIDARG` i wywołania metody które nie ma wpływu. Jeśli nie można zaktualizować zasad Native Image Generator (Ngen.exe), metoda zwraca `E_FAIL`.  
+ Jeśli zasady zostały ustawione pomyślnie, metoda zwraca `S_OK`. Jeśli `ePolicy` znajduje się poza zakresem wartości wyliczanych zdefiniowanych przez [CorDebugNGenPolicy —](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md), metoda zwraca `E_INVALIDARG` i wywołanie metody nie ma żadnego wpływu. Jeśli nie można zaktualizować zasad generatora obrazów natywnych (Ngen. exe), metoda zwraca `E_FAIL`.  
   
- `ICorDebugProcess5::EnableNGenPolicy` Metodę można wywołać w dowolnym momencie podczas okresu istnienia procesu. Zasady są włączone dla wszelkich modułów, które są ładowane po ustawieniu zasad.  
+ Metodę `ICorDebugProcess5::EnableNGenPolicy` można wywołać w dowolnym momencie w okresie istnienia procesu. Zasady obowiązują dla wszystkich modułów, które są ładowane po ustawieniu zasad.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

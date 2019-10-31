@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8edd2a42ed1b826e1b6ea09e92165bc9fa967a8b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760249"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138180"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback — Wskaźnik funkcji
 Wskazuje funkcję, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) do wykonywania kodu zarządzanego.  
   
- Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.  
+ Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,18 +36,18 @@ typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (
   
 ## <a name="parameters"></a>Parametry  
  `cookie`  
- [in] Wskaźnik do nieprzezroczyste pamięci przydzielonej przez obiekt wywołujący, zawierający kod zarządzany do wykonania.  
+ podczas Wskaźnik do nieprzezroczystej pamięci przydzielonyj przez obiekt wywołujący, który zawiera zarządzany kod do wykonania.  
   
- Alokacji i okresie istnienia tej pamięci są kontrolowane przez obiekt wywołujący (CLR). Nie jest to pamięć sterty zarządzanej CLR.  
+ Alokacja i okres istnienia tej pamięci są kontrolowane przez obiekt wywołujący (czyli CLR). To nie jest pamięć sterty zarządzanej przez środowisko CLR.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorWks.dll  
+ **Biblioteka:** MSCorWks. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

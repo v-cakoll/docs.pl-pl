@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 06b1f7cc-acdf-47a6-9d53-d9dec2424152
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee3a0c27d350dec8e9f3e9448174d978c7d50e81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3a357a98cb5ed28a34e4076b5e145903ceaf91
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775689"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103496"
 ---
 # <a name="icorpublishprocessismanaged-method"></a>ICorPublishProcess::IsManaged — Metoda
-Pobiera wartość wskazującą, czy proces odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) wiadomo, że masz kod zarządzany.  
+Pobiera wartość wskazującą, czy proces, do którego odwołuje się ten [ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md) , ma znany kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +35,7 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parametry  
  `pbManaged`  
- [out] Wskaźnik na wartość logiczną, wskazującą, czy kod ma być zarządzany przez proces. Wartość jest `true` Jeśli proces ma zarządzany kod; w przeciwnym razie `false`.  
+ określoną Wskaźnik do wartości logicznej wskazującej, czy proces ma kod zarządzany. Wartość jest `true`, jeśli proces ma kod zarządzany; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
  Ponieważ bieżąca wersja `ICorPublishProcess` zezwala na dostęp tylko do procesów, które mają kod zarządzany, `IsManaged` zawsze zwraca `true`.  
@@ -45,11 +43,11 @@ HRESULT IsManaged (
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

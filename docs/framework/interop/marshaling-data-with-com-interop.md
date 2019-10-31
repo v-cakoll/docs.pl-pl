@@ -4,14 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dd667f681e9b6749f33d6ccfd91035477c56030
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113997"
 ---
 # <a name="marshaling-data-with-com-interop"></a>Organizowanie danych za pomocą modelu COM
 Współdziałanie modelu COM zapewnia obsługę zarówno obiektów COM z kodu zarządzanego, jak i Uwidacznianie obiektów zarządzanych w modelu COM. Obsługa przekazywania danych do i z modelu COM jest obszerna i prawie zawsze zapewnia prawidłowe zachowanie organizowania.  
@@ -25,10 +23,10 @@ Współdziałanie modelu COM zapewnia obsługę zarówno obiektów COM z kodu za
  W poniższych sekcjach znajdują się łącza do tematów opisujących procesy dostosowywania otok międzyoperacyjnych, gdy użytkownik może (lub musi) dostarczyć Organizatorowi dodatkowe informacje o typie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
-[Instrukcje: Ręczne tworzenie otok](how-to-create-wrappers-manually.md)   
+[Instrukcje: ręczne tworzenie otok](how-to-create-wrappers-manually.md)   
 Opisuje sposób ręcznego tworzenia otoki COM w zarządzanym kodzie źródłowym. 
  
- [Instrukcje: Migrowanie kodu zarządzanego DCOM do programu WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
+ [Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  Opisuje sposób migrowania zarządzanego kodu DCOM do usługi WCF w celu zapewnienia najbezpieczniejszego rozwiązania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
@@ -36,7 +34,7 @@ Opisuje sposób ręcznego tworzenia otoki COM w zarządzanym kodzie źródłowym
  Zapewnia odpowiednie zarządzane i niezarządzane typy danych.  
   
  [Dostosowywanie wywoływanych otok COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3bwc828w(v=vs.100))  
- Opisuje, <xref:System.Runtime.InteropServices.MarshalAsAttribute> jak jawnie zorganizować typy danych przy użyciu atrybutu w czasie projektowania.  
+ Opisuje, jak jawnie zorganizować typy danych przy użyciu atrybutu <xref:System.Runtime.InteropServices.MarshalAsAttribute> w czasie projektowania.  
   
  [Dostosowywanie wywoływanych otok środowiska uruchomieniowego](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))  
  Opisuje sposób dostosowywania zachowania związanego z kierowaniem typów w zestawie międzyoperacyjnym i sposób ręcznego definiowania typów COM.  

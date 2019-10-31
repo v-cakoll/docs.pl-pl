@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aba6096-5b38-435c-a72a-86d35db4daef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f0643ba9e750e7c64d2dae8eb5744df7bc26931
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a6e0b009674ff52595aaa0ae4a060f1cdfd1398
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737799"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089048"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType — Metoda
-Pobiera wskaźnik do funkcji, która ma podpis danego.  
+Pobiera wskaźnik do funkcji, która ma daną sygnaturę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +37,19 @@ HRESULT GetFunctionPointerType (
   
 ## <a name="parameters"></a>Parametry  
  `nTypeArgs`  
- [in] Liczba argumentów typu dla funkcji.  
+ podczas Liczba argumentów typu dla funkcji.  
   
  `ppTypeArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argument typu funkcji. Pierwszy element jest typu zwracanego; Każdy z innymi elementami jest typ parametru.  
+ podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje argument typu funkcji. Pierwszy element jest typem zwracanym; Każdy z pozostałych elementów jest typem parametru.  
   
  `ppType`  
- [out] Wskaźnik na adres `ICorDebugType` obiekt, który reprezentuje wskaźnik do funkcji.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugType`, który reprezentuje wskaźnik do funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

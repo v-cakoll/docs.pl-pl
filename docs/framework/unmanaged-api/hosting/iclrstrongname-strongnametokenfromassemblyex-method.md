@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fbac8263944ff0d009fcc7c5f6aecdc7faed089
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 71fda266c22c4beb1e1f9c81c84d6c56a0a6110e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092584"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx — Metoda
 Tworzy token silnej nazwy z określonego pliku zestawu i zwraca klucz publiczny, który reprezentuje token.  
@@ -41,36 +39,36 @@ HRESULT StrongNameTokenFromAssemblyEx (
   
 ## <a name="parameters"></a>Parametry  
  `wszFilePath`  
- [in] Ścieżka do pliku wykonalnego (PE) pliku zestawu.  
+ podczas Ścieżka do przenośnego pliku wykonywalnego (PE) dla zestawu.  
   
  `ppbStrongNameToken`  
- [out] Token zwracany silnej nazwy.  
+ określoną Zwrócony token silnej nazwy.  
   
  `pcbStrongNameToken`  
- [out] Rozmiar w bajtach, token silnej nazwy.  
+ określoną Rozmiar (w bajtach) tokenu silnej nazwy.  
   
  `ppbPublicKeyBlob`  
- [out] Zwrócony klucz publiczny.  
+ określoną Zwrócony klucz publiczny.  
   
  `pcbPublicKeyBlob`  
- [out] Rozmiar w bajtach klucza publicznego.  
+ określoną Rozmiar (w bajtach) klucza publicznego.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Token silna nazwa jest skrócona forma klucza publicznego. Token jest 64-bitową wartość skrótu, utworzona na podstawie klucza publicznego używany do podpisywania zestawu. Token jest częścią silnej nazwy zestawu i może zostać odczytany z metadanych zestawu.  
+ Token silnej nazwy to skrócona postać klucza publicznego. Token jest 64-bitowym skrótem, który jest tworzony na podstawie klucza publicznego używanego do podpisywania zestawu. Token jest częścią silnej nazwy zestawu i można go odczytać z metadanych zestawu.  
   
- Po na pobranie klucza i jest tworzony token, należy wywołać [iclrstrongname::strongnamefreebuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) metodę, aby zwolnić alokacji pamięci.  
+ Po pobraniu klucza i utworzeniu tokenu należy wywołać metodę [ICLRStrongName:: StrongNameFreeBuffer —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) , aby zwolnić przydzieloną pamięć.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

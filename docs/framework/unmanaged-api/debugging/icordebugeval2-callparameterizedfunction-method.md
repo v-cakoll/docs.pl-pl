@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2779cfaecfdd241b5317ac8b467222e045d48049
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137637"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction — Metoda
-Konfiguruje wywołanie do określonego ICorDebugFunction, które mogą być zagnieżdżone wewnątrz klasy, której Konstruktor przyjmuje <xref:System.Type> parametrów lub mogą się zająć <xref:System.Type> parametrów.  
+Konfiguruje wywołanie do określonego ICorDebugFunction, które może być zagnieżdżone wewnątrz klasy, której Konstruktor przyjmuje <xref:System.Type> parametry, lub sama może przyjmować <xref:System.Type> parametry.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,32 +39,32 @@ HRESULT CallParameterizedFunction (
   
 ## <a name="parameters"></a>Parametry  
  `pFunction`  
- [in] Wskaźnik do `ICorDebugFunction` obiekt, który reprezentuje funkcja do wywołania.  
+ podczas Wskaźnik do obiektu `ICorDebugFunction`, który reprezentuje funkcję, która ma zostać wywołana.  
   
  `nTypeArgs`  
- [in] Liczba argumentów, które funkcja przyjmuje.  
+ podczas Liczba argumentów, które wykonuje funkcja.  
   
  `ppTypeArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argumentu funkcji.  
+ podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje argument funkcji.  
   
  `nArgs`  
- [in] Liczba wartości przekazywane w funkcji.  
+ podczas Liczba wartości przekazaną w funkcji.  
   
  `ppArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, która reprezentuje wartość przekazanego argumentu funkcji.  
+ podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który reprezentuje wartość przekazaną w argumencie funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `CallParameterizedFunction` przypomina [ICorDebugEval::CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) z tą różnicą, że funkcja może być wewnątrz klasy z parametrami typu, może się zająć parametrów typu i / lub. Argumenty typu powinien być podawany najpierw dla klasy, a następnie dla tej funkcji.  
+ `CallParameterizedFunction` przypomina [ICorDebugEval:: CallFunction —](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) , z tą różnicą, że funkcja może znajdować się wewnątrz klasy z parametrami typu, może same przyjmować parametry typu lub oba te metody. Argumenty typu powinny być określone jako pierwsze dla klasy, a następnie dla funkcji.  
   
- Jeśli funkcja znajduje się w domenie innej aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości musi należeć do domeny aplikacji docelowej.  
+ Jeśli funkcja znajduje się w innej domenie aplikacji, nastąpi przejście. Jednak wszystkie argumenty typu i wartości muszą znajdować się w domenie aplikacji docelowej.  
   
- Obliczanie funkcji mogą być wykonywane tylko w ograniczonej liczbie scenariuszy. Jeśli `CallParameterizedFunction` lub `ICorDebugEval::CallFunction` zakończy się niepowodzeniem, zwrócona wartość HRESULT będą wskazywać najbardziej ogólną możliwe przyczyny błędu.  
+ Obliczanie funkcji można wykonać tylko w ograniczonych scenariuszach. Jeśli `CallParameterizedFunction` lub `ICorDebugEval::CallFunction` nie powiedzie się, zwrócony wynik HRESULT będzie wskazywał największą możliwą przyczynę niepowodzenia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

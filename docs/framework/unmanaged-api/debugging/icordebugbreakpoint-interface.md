@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpoint, interfejs
+title: ICorDebugBreakpoint — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpoint
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 608c2cea79c20a43d65fcbf37ba13242fa465100
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122799"
 ---
-# <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint, interfejs
+# <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint — Interfejs
 
 Reprezentuje punkt przerwania w funkcji lub punkt obserwacji wartości.  
   
@@ -31,25 +29,25 @@ Reprezentuje punkt przerwania w funkcji lub punkt obserwacji wartości.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Activate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Ustawia stan aktywności tego `ICorDebugBreakpoint`elementu.|  
-|[IsActive, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Pobiera wartość wskazującą, czy jest ona `ICorDebugBreakpoint` aktywna.|  
+|[Activate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|Ustawia stan aktywny tego `ICorDebugBreakpoint`.|  
+|[IsActive, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|Pobiera wartość wskazującą, czy ta `ICorDebugBreakpoint` jest aktywna.|  
   
 ## <a name="remarks"></a>Uwagi  
- Punkty przerwania nie obsługują bezpośrednio wyrażeń warunkowych. Jeśli ta funkcja jest wymagana, debuger musi zaimplementować ją w górnej części `ICorDebugBreakpoint`.  
+ Punkty przerwania nie obsługują bezpośrednio wyrażeń warunkowych. Jeśli ta funkcja jest wymagana, debuger musi zaimplementować ją na `ICorDebugBreakpoint`.  
   
- Interfejs ICorDebugFunctionBreakpoint rozszerza `ICorDebugBreakpoint` obsługę punktów przerwania w funkcjach.  
+ Interfejs ICorDebugFunctionBreakpoint rozszerza `ICorDebugBreakpoint` do obsługi punktów przerwania w funkcjach.  
   
 > [!NOTE]
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

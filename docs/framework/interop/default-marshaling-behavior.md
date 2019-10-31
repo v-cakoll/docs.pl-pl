@@ -9,14 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123602"
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Kierowanie międzyoperacyjności operuje na regułach, które określają sposób, w jaki dane skojarzone z parametrami metod działają w miarę przekazywania między pamięcią zarządzaną i niezarządzaną. Te wbudowane reguły kontrolują takie działania kierujące jako przekształcenia typu danych, niezależnie od tego, czy wywoływany może zmienić dane przekazywane do niego, i zwrócić te zmiany do obiektu wywołującego, i w jakich okolicznościach Organizator zapewnia optymalizację wydajności.  
@@ -24,7 +22,7 @@ Kierowanie międzyoperacyjności operuje na regułach, które określają sposó
  W tej sekcji opisano domyślne właściwości behawioralne usługi organizowania międzyoperacyjnego. Przedstawia szczegółowe informacje na temat organizowania tablic, typów logicznych, typów znaków, delegatów, klas, obiektów, ciągów i struktur.  
   
 > [!NOTE]
-> Kierowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz Współdziałanie [przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> Kierowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [współdziałanie przy użyciu typów ogólnych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Zarządzanie pamięcią za pomocą Organizatora międzyoperacyjnego  
  Organizator międzyoperacyjny zawsze próbuje zwolnić pamięć przydzieloną przez kod niezarządzany. To zachowanie jest zgodne z regułami zarządzania pamięcią COM, ale różni się od reguł, C++które regulują natywną.  
@@ -39,9 +37,9 @@ BSTR MethodOne (BSTR b) {
 }  
 ```  
   
- Jednakże w przypadku zdefiniowania metody jako prototypu wywołania platformy Zastąp każdy <xref:System.String> typ **BSTR** typem, a wywołanie `MethodOne`, środowisko uruchomieniowe języka wspólnego próbuje zwolnić `b` dwa razy. Zachowanie organizowania można zmienić przy użyciu <xref:System.IntPtr> typów, a nie typów **ciągów** .  
+ Jeśli jednak zdefiniujesz metodę jako prototyp wywołania platformy, Zastąp każdy typ **BSTR** typem <xref:System.String> i wywołaj `MethodOne`, środowisko uruchomieniowe języka wspólnego próbuje zwolnić `b` dwa razy. Zachowanie organizowania można zmienić przy użyciu typów <xref:System.IntPtr>, a nie typów **ciągów** .  
   
- Środowisko uruchomieniowe zawsze używa metody **CoTaskMemFree** do zwolnienia pamięci. Jeśli pamięć, z którą pracujesz, nie została przypisana przy użyciu metody **CoTaskMemAlloc** , należy użyć elementu **IntPtr** i zwolnić pamięć ręcznie przy użyciu odpowiedniej metody. Podobnie można uniknąć automatycznej zwalniania pamięci w sytuacjach, w których pamięć nigdy nie powinna zostać zwolniona, na przykład podczas korzystania z funkcji GetCommandLine z pliku Kernel32. dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać szczegółowe informacje na temat ręcznego zwalniania pamięci, zobacz [przykładowe bufory](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
+ Środowisko uruchomieniowe zawsze używa metody **CoTaskMemFree** do zwolnienia pamięci. Jeśli pamięć, z którą pracujesz, nie została przypisana przy użyciu metody **CoTaskMemAlloc** , należy użyć elementu **IntPtr** i zwolnić pamięć ręcznie przy użyciu odpowiedniej metody. Podobnie można uniknąć automatycznej zwalniania pamięci w sytuacjach, w których pamięć nigdy nie powinna zostać zwolniona, na przykład podczas korzystania z funkcji **GetCommandLine** z pliku Kernel32. dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać szczegółowe informacje na temat ręcznego zwalniania pamięci, zobacz [przykładowe bufory](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Kierowanie domyślne dla klas  
  Klasy mogą być organizowane tylko przez międzyoperacyjność modelu COM i są zawsze organizowane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy jest nazywany interfejsem klasy. Aby uzyskać informacje na temat przesłaniania interfejsu klasy z wybranym interfejsem, zobacz [wprowadzenie do interfejsu klasy](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface).  
@@ -75,16 +73,16 @@ BSTR MethodOne (BSTR b) {
   
 - W przypadku wywołania platformy delegat jest domyślnie zorganizowany jako niezarządzany wskaźnik funkcji.  
   
-- W przypadku międzyoperacyjności modelu COM delegat jest zorganizowany jako interfejs COM typu **_Delegate** domyślnie. Interfejs **_Delegate** jest zdefiniowany w bibliotece typów mscorlib. tlb i zawiera <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> metodę, która umożliwia wywołanie metody, która odwołuje się do obiektu delegowanego.  
+- W przypadku międzyoperacyjności modelu COM delegat jest zorganizowany jako interfejs COM typu **_Delegate** domyślnie. Interfejs **_Delegate** jest zdefiniowany w bibliotece typów mscorlib. tlb i zawiera metodę <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, która umożliwia wywołanie metody, która odwołuje się do obiektu delegowanego.  
   
- W poniższej tabeli przedstawiono opcje kierowania dla zarządzanego typu danych delegata. Ten <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybut zawiera kilka <xref:System.Runtime.InteropServices.UnmanagedType> wartości wyliczenia do organizowania delegatów.  
+ W poniższej tabeli przedstawiono opcje kierowania dla zarządzanego typu danych delegata. Atrybut <xref:System.Runtime.InteropServices.MarshalAsAttribute> zawiera kilka <xref:System.Runtime.InteropServices.UnmanagedType> wartości wyliczenia do organizowania delegatów.  
   
 |Typ wyliczenia|Opis niezarządzanego formatu|  
 |----------------------|-------------------------------------|  
-|**UnmanagedType.FunctionPtr**|Wskaźnik funkcji niezarządzanej.|  
+|**UnmanagedType. elementem FunctionPtr**|Wskaźnik funkcji niezarządzanej.|  
 |**UnmanagedType. Interface**|Interfejs typu **_Delegate**, zgodnie z definicją w pliku mscorlib. tlb.|  
   
- Rozważmy następujący przykładowy kod, w którym metody `DelegateTestInterface` są eksportowane do biblioteki typów com. Należy zauważyć, że tylko delegatów oznaczonych za pomocą słowa kluczowego **ref** (lub **ByRef**) są przesyłane jako parametry wejściowe/out.  
+ Rozważmy następujący przykładowy kod, w którym metody `DelegateTestInterface` są eksportowane do biblioteki typów COM. Należy zauważyć, że tylko delegatów oznaczonych za pomocą słowa kluczowego **ref** (lub **ByRef**) są przesyłane jako parametry wejściowe/out.  
   
 ```csharp  
 using System;  
@@ -114,12 +112,12 @@ interface DelegateTest : IDispatch {
   
  Wskaźnik funkcji może zostać wywoływany, tak jak każdy inny niezarządzany wskaźnik funkcji może zostać odwołujący się.  
 
-W tym przykładzie, gdy dwa Delegaty są organizowane jako <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, wynik `int` jest `int`i wskaźnikiem do. Ponieważ typy delegatów są organizowane, `int` w tym miejscu reprezentuje wskaźnik do typu void (`void*`), który jest adresem delegata w pamięci. Innymi słowy, ten wynik jest specyficzny dla 32-bitowych systemów Windows, ponieważ `int` w tym miejscu reprezentuje rozmiar wskaźnika funkcji.
+W tym przykładzie, gdy dwa Delegaty są organizowane jako <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, wynik jest `int` i wskaźnikiem do `int`. Ponieważ typy delegatów są organizowane, `int` w tym miejscu reprezentuje wskaźnik do typu void (`void*`), który jest adresem delegata w pamięci. Innymi słowy, ten wynik jest specyficzny dla 32-bitowych systemów Windows, ponieważ `int` tu reprezentuje rozmiar wskaźnika funkcji.
 
 > [!NOTE]
 > Odwołanie do wskaźnika funkcji do zarządzanego delegata przechowywanego przez kod niezarządzany nie zapobiega występowaniu elementów bezużytecznych w zarządzanym obiekcie przez środowisko uruchomieniowe języka wspólnego.  
   
- Na przykład następujący kod jest niepoprawny, `cb` ponieważ odwołanie do obiektu, `SetChangeHandler` do metody, nie utrzymuje `cb` aktywności poza cyklem życia `Test` metody. Gdy obiekt zostanie odrzucony, wskaźnik funkcji przeszedł do `SetChangeHandler` nie jest już prawidłowy. `cb`  
+ Na przykład następujący kod jest niepoprawny, ponieważ odwołanie do obiektu `cb`, które zostało przesłane do metody `SetChangeHandler`, nie utrzymuje `cb` aktywności poza okresem istnienia metody `Test`. Gdy obiekt `cb` zostanie pobrany jako elementy bezużyteczne, wskaźnik funkcji zakończony do `SetChangeHandler` nie jest już prawidłowy.  
   
 ```csharp  
 public class ExternalAPI {  
@@ -142,7 +140,7 @@ internal class DelegateTest {
 }  
 ```  
   
- Aby skompensować nieoczekiwane wyrzucanie elementów bezużytecznych, obiekt `cb` wywołujący musi upewnić się, że jest on aktywny, o ile niezarządzany wskaźnik funkcji jest używany. Opcjonalnie kod niezarządzany powiadamia kod zarządzany, gdy wskaźnik funkcji nie jest już wymagany, jak pokazano w poniższym przykładzie.  
+ Aby wyrównać nieoczekiwane wyrzucanie elementów bezużytecznych, obiekt wywołujący musi upewnić się, że obiekt `cb` jest aktywny, o ile niezarządzany wskaźnik funkcji jest używany. Opcjonalnie kod niezarządzany powiadamia kod zarządzany, gdy wskaźnik funkcji nie jest już wymagany, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 internal class DelegateTest {  
@@ -172,22 +170,22 @@ internal class DelegateTest {
   
  Oprócz opisywania sformatowanych typów, ten temat identyfikuje [typy wartości systemowych](#system-value-types) , które mają nietypowe zachowanie podczas organizowania.  
   
- Sformatowany typ to typ złożony, który zawiera informacje, które jawnie kontrolują układ elementów członkowskich w pamięci. Informacje o układzie elementu członkowskiego są udostępniane <xref:System.Runtime.InteropServices.StructLayoutAttribute> przy użyciu atrybutu. Układ może być jedną z następujących <xref:System.Runtime.InteropServices.LayoutKind> wartości wyliczenia:  
+ Sformatowany typ to typ złożony, który zawiera informacje, które jawnie kontrolują układ elementów członkowskich w pamięci. Informacje o układzie elementu członkowskiego są udostępniane przy użyciu atrybutu <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Układ może być jedną z następujących <xref:System.Runtime.InteropServices.LayoutKind> wartości wyliczenia:  
   
-- **LayoutKind.Automatic**  
+- **LayoutKind. Automatic**  
   
      Wskazuje, że środowisko uruchomieniowe języka wspólnego jest bezpłatne, aby zmienić kolejność elementów członkowskich typu w celu zwiększenia wydajności. Jednak gdy typ wartości jest przenoszona do kodu niezarządzanego, układ elementów członkowskich jest przewidywalny. Próba zorganizowania takiej struktury automatycznie powoduje wyjątek.  
   
-- **LayoutKind.Sequential**  
+- **LayoutKind. sekwencyjny**  
   
      Wskazuje, że elementy członkowskie typu muszą zostać ustanowione w pamięci niezarządzanej w takiej samej kolejności, w jakiej występują w definicji typu zarządzanego.  
   
-- **LayoutKind.Explicit**  
+- **LayoutKind. Explicit**  
   
-     Wskazuje, że elementy członkowskie są określane zgodnie z <xref:System.Runtime.InteropServices.FieldOffsetAttribute> podanymi dla każdego pola.  
+     Wskazuje, że elementy członkowskie są ustalane w oparciu o <xref:System.Runtime.InteropServices.FieldOffsetAttribute> dostarczone z każdym polem.  
   
 ### <a name="value-types-used-in-platform-invoke"></a>Typy wartości używane w wywołaniu platformy  
- W poniższym przykładzie `Point` typy i `Rect` zapewniają informacje o układzie elementu członkowskiego przy użyciu **StructLayoutAttribute**.  
+ W poniższym przykładzie typy `Point` i `Rect` zapewniają informacje o układzie elementu członkowskiego przy użyciu **StructLayoutAttribute**.  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -220,7 +218,7 @@ public struct Rect {
 }  
 ```  
   
- W przypadku kierowania do niezarządzanego kodu te sformatowane typy są organizowane jako struktury w stylu C. Zapewnia to prosty sposób wywoływania niezarządzanego interfejsu API, który ma argumenty struktury. Na przykład `POINT` struktury i `RECT` mogą być przesyłane do funkcji **PtInRect** interfejsu API systemu Microsoft Windows w następujący sposób:  
+ W przypadku kierowania do niezarządzanego kodu te sformatowane typy są organizowane jako struktury w stylu C. Zapewnia to prosty sposób wywoływania niezarządzanego interfejsu API, który ma argumenty struktury. Na przykład struktury `POINT` i `RECT` mogą być przesyłane do funkcji **PtInRect** interfejsu API systemu Microsoft Windows w następujący sposób:  
   
 ```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
@@ -243,17 +241,17 @@ internal static class NativeMethods
 }
 ```
   
- Typ wartości musi być przesyłany przez odwołanie, ponieważ niezarządzany interfejs API oczekuje na przekazanie `RECT` wskaźnika do funkcji. `Rect` Typ wartości jest przenoszona przez wartość, ponieważ niezarządzany interfejs API `POINT` oczekuje na przekazanie na stosie. `Point` Ta delikatna różnica jest bardzo ważna. Odwołania są przesyłane do niezarządzanego kodu jako wskaźniki. Wartości są przesyłane do kodu niezarządzanego na stosie.  
+ Typ wartości `Rect` musi być przesyłany przez odwołanie, ponieważ niezarządzany interfejs API oczekuje wskaźnika do `RECT` do przekazania do funkcji. Typ wartości `Point` jest przenoszona przez wartość, ponieważ niezarządzany interfejs API oczekuje na przekazanie `POINT` na stosie. Ta delikatna różnica jest bardzo ważna. Odwołania są przesyłane do niezarządzanego kodu jako wskaźniki. Wartości są przesyłane do kodu niezarządzanego na stosie.  
   
 > [!NOTE]
 > Gdy sformatowany typ jest zorganizowany jako struktura, dostępne są tylko pola należące do tego typu. Jeśli typ ma metody, właściwości lub zdarzenia, są one niedostępne z kodu niezarządzanego.  
   
- Klasy mogą być również organizowane w kodzie niezarządzanym jako struktury w stylu C, pod warunkiem, że mają stały układ elementu członkowskiego. Informacje o układzie elementu członkowskiego klasy są również udostępniane z <xref:System.Runtime.InteropServices.StructLayoutAttribute> atrybutem. Główna różnica między typami wartości ze stałym układem i klasami ze stałym układem jest sposobem, w jaki są one organizowane do kodu niezarządzanego. Typy wartości są przekazywane przez wartość (na stosie) i w związku z tym wszystkie zmiany wprowadzone do elementów członkowskich typu przez wywoływany nie są widoczne dla obiektu wywołującego. Typy odwołań są przesyłane przez odwołanie (odwołanie do typu jest przesyłane na stosie); w związku z tym, wszystkie zmiany wprowadzone do elementów członkowskich typu danych kopiowalnych typu przez wywoływany przez obiekt wywołujący są widoczne dla obiektu dzwoniącego.  
+ Klasy mogą być również organizowane w kodzie niezarządzanym jako struktury w stylu C, pod warunkiem, że mają stały układ elementu członkowskiego. Informacje o układzie elementu członkowskiego klasy są również udostępniane z atrybutem <xref:System.Runtime.InteropServices.StructLayoutAttribute>. Główna różnica między typami wartości ze stałym układem i klasami ze stałym układem jest sposobem, w jaki są one organizowane do kodu niezarządzanego. Typy wartości są przekazywane przez wartość (na stosie) i w związku z tym wszystkie zmiany wprowadzone do elementów członkowskich typu przez wywoływany nie są widoczne dla obiektu wywołującego. Typy odwołań są przesyłane przez odwołanie (odwołanie do typu jest przesyłane na stosie); w związku z tym, wszystkie zmiany wprowadzone do elementów członkowskich typu danych kopiowalnych typu przez wywoływany przez obiekt wywołujący są widoczne dla obiektu dzwoniącego.  
   
 > [!NOTE]
 > Jeśli typ referencyjny składa się z typów innych niż danych kopiowalnych, konwersja jest wymagana dwukrotnie: pierwszy raz, gdy argument jest przenoszona do niezarządzanej strony, a drugi czas powrotu z wywołania. W związku z tym dodatkowymi kosztami parametry wejściowe/out muszą być jawnie stosowane do argumentu, jeśli obiekt wywołujący chce zobaczyć zmiany wprowadzone przez wywoływany element.  
   
- W poniższym przykładzie `SystemTime` Klasa ma sekwencyjny układ elementów członkowskich i może być przenoszona do funkcji **GetSystemTime** interfejsu API systemu Windows.  
+ W poniższym przykładzie Klasa `SystemTime` ma sekwencyjny układ elementu członkowskiego i może być przenoszona do funkcji **GetSystemTime** interfejsu API systemu Windows.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -305,9 +303,9 @@ internal static class NativeMethods
 }
 ```
   
- Zwróć uwagę, `SystemTime` że argument nie jest wpisywany jako argument odwołania, `SystemTime` ponieważ jest klasą, a nie typem wartości. W przeciwieństwie do typów wartości, klasy są zawsze przesyłane przez odwołanie.  
+ Zwróć uwagę, że argument `SystemTime` nie jest wpisywany jako argument odwołania, ponieważ `SystemTime` jest klasą, a nie typem wartości. W przeciwieństwie do typów wartości, klasy są zawsze przesyłane przez odwołanie.  
   
- Poniższy przykład kodu przedstawia inną `Point` klasę, która ma metodę o nazwie. `SetXY` Ponieważ typ ma sekwencyjny układ, może być przekazywany do kodu niezarządzanego i zorganizowany jako struktura. `SetXY` Jednak element członkowski nie jest wywoływany z kodu niezarządzanego, nawet jeśli obiekt jest przesyłany przez odwołanie.  
+ Poniższy przykład kodu przedstawia inną klasę `Point`, która ma metodę o nazwie `SetXY`. Ponieważ typ ma sekwencyjny układ, może być przekazywany do kodu niezarządzanego i zorganizowany jako struktura. Niemniej jednak element członkowski `SetXY` nie jest wywoływany z kodu niezarządzanego, mimo że obiekt jest przesyłany przez odwołanie.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class Point  
@@ -331,7 +329,7 @@ public class Point {
 ```  
   
 ### <a name="value-types-used-in-com-interop"></a>Typy wartości używane w międzyoperacyjności modelu COM  
- Sformatowane typy mogą być również przesyłane do wywołań metod międzyoperacyjnych modelu COM. W rzeczywistości, gdy eksportowane do biblioteki typów, typy wartości są automatycznie konwertowane na struktury. Jak pokazano na poniższym przykładzie, `Point` typ wartości jest definicją typu (TypeDef) o nazwie. `Point` Wszystkie odwołania do `Point` typu wartości w innym miejscu w bibliotece typów są zastępowane `Point` typedef.  
+ Sformatowane typy mogą być również przesyłane do wywołań metod międzyoperacyjnych modelu COM. W rzeczywistości, gdy eksportowane do biblioteki typów, typy wartości są automatycznie konwertowane na struktury. Jak pokazano na poniższym przykładzie, typ wartości `Point` jest definicją typu (TypeDef) o nazwie `Point`. Wszystkie odwołania do `Point` typu wartości w innym miejscu w bibliotece typów są zastępowane `Point` typedef.  
   
  **Reprezentacja biblioteki typów**  
   
@@ -348,13 +346,13 @@ interface _Graphics {
 }  
 ```  
   
- Te same reguły służące do organizowania wartości i odwołań do wywołań wywołania platformy są używane podczas organizowania interfejsów COM. Na przykład, gdy wystąpienie `Point` typu wartości jest przesyłane z .NET Framework do modelu COM `Point` , wartość jest przenoszona przez wartości. Jeśli typ `Point` wartości jest przesyłany przez odwołanie, wskaźnik do elementu jest przesyłany na stosie. `Point` Organizator międzyoperacyjny nie obsługuje wyższych poziomów pośrednich (**punkt** \* \*) w dowolnym kierunku.  
+ Te same reguły służące do organizowania wartości i odwołań do wywołań wywołania platformy są używane podczas organizowania interfejsów COM. Na przykład gdy wystąpienie typu wartości `Point` jest przesyłane z .NET Framework do modelu COM, `Point` jest przenoszona przez wartość. Jeśli `Point` typ wartości jest przenoszona przez odwołanie, wskaźnik do `Point` jest przenoszona na stosie. Organizator międzyoperacyjny nie obsługuje wyższego poziomu pośredniego (**punkt** \*\*) w dowolnym kierunku.  
   
 > [!NOTE]
-> Struktury z <xref:System.Runtime.InteropServices.LayoutKind> wartością wyliczenia ustawioną na wartość **Explicit** nie mogą być używane w międzyoperacyjności modelu COM, ponieważ eksportowana biblioteka typów nie może wyrazić jawnego układu.  
+> Struktury z wartością wyliczenia <xref:System.Runtime.InteropServices.LayoutKind> ustawioną na wartość **Explicit** nie mogą być używane w międzyoperacyjności modelu COM, ponieważ eksportowana biblioteka typów nie może wyrazić jawnego układu.  
   
 ### <a name="system-value-types"></a>Typy wartości systemu  
- <xref:System> Przestrzeń nazw ma kilka typów wartości, które reprezentują postać opakowaną typów pierwotnych środowiska uruchomieniowego. Na przykład struktura typu <xref:System.Int32?displayProperty=nameWithType> wartości reprezentuje opakowaną postać **ELEMENT_TYPE_I4**. Zamiast organizować te typy jako struktury, tak jak inne sformatowane typy, są organizowane w taki sam sposób, jak w przypadku typów pierwotnych. W związku z tym **System. Int32** jest zorganizowany jako **ELEMENT_TYPE_I4** zamiast struktury zawierającej pojedynczy element członkowski typu **Long**. Poniższa tabela zawiera listę typów wartości w przestrzeni nazw **systemu** , które są opakowane na typy pierwotne.  
+ Przestrzeń nazw <xref:System> zawiera kilka typów wartości, które reprezentują postać opakowaną typów pierwotnych środowiska uruchomieniowego. Na przykład typ wartości <xref:System.Int32?displayProperty=nameWithType> Structure reprezentuje opakowaną postać **ELEMENT_TYPE_I4**. Zamiast organizować te typy jako struktury, tak jak inne sformatowane typy, są organizowane w taki sam sposób, jak w przypadku typów pierwotnych. W związku z tym **System. Int32** jest zorganizowany jako **ELEMENT_TYPE_I4** zamiast struktury zawierającej pojedynczy element członkowski typu **Long**. Poniższa tabela zawiera listę typów wartości w przestrzeni nazw **systemu** , które są opakowane na typy pierwotne.  
   
 |Typ wartości systemowej|Typ elementu|  
 |-----------------------|------------------|  
@@ -379,7 +377,7 @@ interface _Graphics {
 |Typ wartości systemowej|Typ IDL|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**DNIU**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DOKŁADNOŚCI**|  
 |<xref:System.Guid?displayProperty=nameWithType>|**IDENT**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
@@ -407,7 +405,7 @@ typedef struct tagGUID {
 } GUID;  
 ```  
   
- Poniższy kod przedstawia odpowiednie definicje w zarządzanym `IValueTypes` interfejsie.  
+ Poniższy kod przedstawia odpowiednie definicje w interfejsie zarządzanym `IValueTypes`.  
   
 ```vb  
 Public Interface IValueTypes  

@@ -5,17 +5,15 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104683"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (Narzędzie adnotacji dotyczące zabezpieczeń w programach .NET)
-Narzędzie do dodawania adnotacji zabezpieczeń .NET (SecAnnotate. exe) jest aplikacją wiersza polecenia, która identyfikuje `SecurityCritical` i `SecuritySafeCritical` części jednego lub kilku zestawów.  
+Narzędzie do dodawania adnotacji zabezpieczeń .NET (SecAnnotate. exe) jest aplikacją wiersza polecenia, która identyfikuje `SecurityCritical` i `SecuritySafeCritical` fragmenty jednego lub kilku zestawów.  
   
  Rozszerzenie programu Visual Studio, [adnotacja zabezpieczeń](https://go.microsoft.com/fwlink/?LinkId=198007), udostępnia graficzny interfejs użytkownika do SecAnnotate. exe i umożliwia uruchamianie narzędzia z programu Visual Studio.  
   
@@ -34,20 +32,20 @@ SecAnnotate.exe [parameters] [assemblies]
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/a`<br /><br /> lub<br /><br /> `/showstatistics`|Pokazuje statystykę użycia przezroczystości w analizowanych w ten sposób zestawach.|  
-|`/d:`*katalog*<br /><br /> lub<br /><br /> `/referencedir:`*katalog*|Określa katalog, w którym mają być wyszukiwanie zależne zestawy podczas oznaczania adnotacjami.|  
+|*katalog* `/d:`<br /><br /> lub<br /><br /> *katalog* `/referencedir:`|Określa katalog, w którym mają być wyszukiwanie zależne zestawy podczas oznaczania adnotacjami.|  
 |`/i`<br /><br /> lub<br /><br /> `/includesignatures`|Umieszcza rozszerzone informacje podpisu w pliku raportu oznaczania adnotacjami.|  
 |`/n`<br /><br /> lub<br /><br /> `/nogac`|Pomija wyszukiwanie zestawów, których dotyczą odwołania, w globalnej pamięci podręcznej zestawów.|  
-|`/o:`*Output. XML*<br /><br /> lub<br /><br /> `/out:`*Output. XML*|Określa wyjściowy plik adnotacji.|  
+|`/o:` *Output. XML*<br /><br /> lub<br /><br /> `/out:` *Output. XML*|Określa wyjściowy plik adnotacji.|  
 |`/p:` *maxpasses*<br /><br /> lub<br /><br /> `/maximumpasses:` *maxpasses*|Określa maksymalną liczbę adnotacji, które można przekazać do zestawów przed zatrzymaniem generowania nowych adnotacji.|  
 |`/q`<br /><br /> lub<br /><br /> `/quiet`|Określa tryb cichy, w którym moduł oznaczający adnotacjami nie wyświetla komunikatów o stanie, ale tylko informacje o błędach.|  
-|`/r:`*zestaw*<br /><br /> lub<br /><br /> `/referenceassembly:`*zestaw*|Dołącza określony zestaw podczas rozpoznawania zestawów zależnych w trakcie oznaczania adnotacjami. Zestawy, do których występują odwołania, otrzymują większy priorytet niż zestawy znajdujące się w ścieżce odwołania.|  
-|`/s:`*reguła*<br /><br /> lub<br /><br /> `/suppressrule:`*reguła*|Pomija uruchamianie określonych reguł przezroczystości w zestawach wejściowych.|  
+|*zestaw* `/r:`<br /><br /> lub<br /><br /> *zestaw* `/referenceassembly:`|Dołącza określony zestaw podczas rozpoznawania zestawów zależnych w trakcie oznaczania adnotacjami. Zestawy, do których występują odwołania, otrzymują większy priorytet niż zestawy znajdujące się w ścieżce odwołania.|  
+|*reguła* `/s:`<br /><br /> lub<br /><br /> *reguła* `/suppressrule:`|Pomija uruchamianie określonych reguł przezroczystości w zestawach wejściowych.|  
 |`/t`<br /><br /> lub<br /><br /> `/forcetransparent`|Wymusza, aby narzędzie Annotator traktowało wszystkie zestawy, które nie mają adnotacji przezroczystości, tak jakby były całkowicie przezroczyste.|  
 |`/t`:*zestaw*<br /><br /> lub<br /><br /> `/forcetransparent`:*zestaw*|Wymusza przezroczystość danego zestawu, niezależnie od jego bieżących adnotacji na poziomie zestawu.|  
 |||  
 |`/v`<br /><br /> lub<br /><br /> `/verify`|Sprawdza tylko, czy adnotacje zestawu są poprawne; nie podejmuje próby wykonania wielu przebiegów w celu znalezienia wszystkich wymaganych adnotacji, jeśli zestaw tego nie weryfikuje.|  
 |`/x`<br /><br /> lub<br /><br /> `/verbose`|Określa pełne dane wyjściowe podczas oznaczania adnotacjami.|  
-|`/y:`*katalog*<br /><br /> lub<br /><br /> `/symbolpath:`*katalog*|Uwzględnia określony katalog podczas wyszukiwania plików symboli w trakcie oznaczania adnotacjami.|  
+|*katalog* `/y:`<br /><br /> lub<br /><br /> *katalog* `/symbolpath:`|Uwzględnia określony katalog podczas wyszukiwania plików symboli w trakcie oznaczania adnotacjami.|  
   
 ## <a name="remarks"></a>Uwagi  
  Parametry i zestawy można także podać w pliku odpowiedzi, który jest określany w wierszu polecenia i poprzedzany znakiem (@). Każdy wiersz w pliku odpowiedzi musi zawierać pojedynczy parametr lub nazwę zestawu.  

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5fb645d9-b818-401c-8c2c-c30d86de58ba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 103ac75e7c3eaf9739c3a448ff1c052c158621db
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768379"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090907"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE — Wskaźnik funkcji
-Wskazuje funkcję, która powiadamia hosta, gdy nakładająca (czyli asynchroniczne) we/wy na urządzeniu została zakończona.  
+# <a name="lpoverlapped_completion_routine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE — Wskaźnik funkcji
+Wskazuje funkcję, która powiadamia hosta, gdy nakładają się (czyli asynchroniczne) operacje wejścia/wyjścia do urządzenia.  
   
- Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.  
+ Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,27 +38,27 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
   
 ## <a name="parameters"></a>Parametry  
  `dwErrorCode`  
- [in] Wartość, która jest kod błędu, jeśli urządzenie zostało zamknięte; w przeciwnym razie ta wartość wynosi zero.  
+ podczas Wartość, która jest kodem błędu, jeśli urządzenie zostało zamknięte; w przeciwnym razie ta wartość jest równa zero.  
   
- Zamknięcie urządzenia powoduje, że wszystkie oczekujące operacje We/Wy na urządzeniu należy natychmiast wykonać.  
+ Zamknięcie urządzenia powoduje natychmiastowe zakończenie wszystkich oczekujących operacji we/wy na urządzeniu.  
   
  `dwNumberOfBytesTransfered`  
- [in] Liczba bajtów przesłanych w operacji We/Wy.  
+ podczas Liczba bajtów przesłanych przez operację we/wy.  
   
  `lpOverlapped`  
- [in] Wskaźnik do struktury, która zawiera informacje, które ma być używany do wykonania żądania We/Wy.  
+ podczas Wskaźnik do struktury zawierającej informacje, które mają zostać użyte do ukończenia żądania we/wy.  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcja, do którego `LPOVERLAPPED_COMPLETION_ROUTINE` punktów jest funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej. Funkcja wywołania zwrotnego Zezwalaj hostowi na przetwarzanie zakończone żądanie operacji We/Wy.  
+ Funkcja, do której punkty `LPOVERLAPPED_COMPLETION_ROUTINE` są funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji hostingowej. Funkcja wywołania zwrotnego umożliwia hostowi przetwarzanie ukończonego żądania we/wy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorWks.dll  
+ **Biblioteka:** MSCorWks. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

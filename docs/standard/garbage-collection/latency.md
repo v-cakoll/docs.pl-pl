@@ -6,53 +6,51 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622783"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120908"
 ---
 # <a name="latency-modes"></a>Tryby opóźnienia
-Do odzyskania obiektów, wyrzucanie elementów bezużytecznych należy zatrzymać wszystkie wątki wykonywania w aplikacji. W niektórych sytuacjach, np. gdy aplikacja pobiera dane lub wyświetla zawartość pełne wyrzucanie elementów bezużytecznych występuje w czasie krytycznych i utrudniać wydajności. Można dostosować wszechobecność moduł zbierający elementy bezużyteczne, ustawiając <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> jedną z właściwości <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> wartości.  
+Aby odzyskiwać obiekty, Moduł wyrzucania elementów bezużytecznych musi zatrzymać wszystkie wątki wykonywane w aplikacji. W niektórych sytuacjach, na przykład gdy aplikacja pobiera dane lub wyświetla zawartość, pełne wyrzucanie elementów bezużytecznych może wystąpić w krytycznym czasie i utrudnić wydajność. Można dostosować inwazyjność modułu wyrzucania elementów bezużytecznych, ustawiając właściwość <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> na jedną z wartości <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
   
- Opóźnienie odnosi się do czasu, który narusza moduł odśmiecania pamięci, w aplikacji. W okresach, małe opóźnienia moduł odśmiecania pamięci jest bardziej konserwatywnego i płynniejsza w odzyskiwaniu obiektów. <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> Wyliczenia zawiera dwa ustawienia małe opóźnienia:  
+ Opóźnienie odnosi się do czasu, przez który moduł zbierający elementy bezużyteczne w aplikacji. W przypadku małych okresów opóźnienia Moduł wyrzucania elementów bezużytecznych jest bardziej ostrożny i mniej inwazyjny w odzyskiwaniu obiektów. Wyliczenie <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> zapewnia dwa ustawienia małych opóźnień:  
   
-- <xref:System.Runtime.GCLatencyMode.LowLatency> Pomija kolekcji generacji 2, a następnie wykonuje tylko kolekcji generacji 0 i 1. Może służyć tylko w przypadku krótkich okresach czasu. Przez dłuższy czas Jeśli system jest w dużym wykorzystaniu pamięci, moduł zbierający elementy bezużyteczne wyzwoli kolekcji, co może chwilę Zatrzymywanie aplikacji i zakłócić wrażliwego na czas operacji. To ustawienie jest dostępne tylko dla stacji roboczej wyrzucania elementów bezużytecznych.  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> pomija kolekcje generacji 2 i wykonuje tylko kolekcje generacji 0 i 1. Może być używany tylko przez krótki okresy czasu. W dłuższym czasie, jeśli system jest w obszarze pamięci, Moduł wyrzucania elementów bezużytecznych wywoła kolekcję, która może krótko zawieszać aplikację i przerwać operację krytyczną czasu. To ustawienie jest dostępne tylko dla wyrzucania elementów bezużytecznych stacji roboczej.  
   
-- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> Pomija kolekcje geenracji 2 pierwszego planu i wykonuje tylko generacji 0, 1 i kolekcje geenracji 2 w tle. Może służyć przez dłuższy czas i jest dostępna dla wyrzucania elementów bezużytecznych stacji roboczej i serwerze. Nie można użyć tego ustawienia, jeśli [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) jest wyłączona.  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> pomija kolekcje generacji pierwszego planu 2 i wykonuje tylko kolekcje generacji 0, 1 i 2. generacji w tle. Może być używany przez dłuższy okres czasu i jest dostępny zarówno dla stacji roboczej, jak i serwera. Nie można użyć tego ustawienia, jeśli [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) jest wyłączone.  
   
- W okresach, małe opóźnienia kolekcji generacji 2 są pomijane, chyba że mają miejsce następujące zdarzenia:  
+ Podczas małych okresów opóźnienia kolekcje 2 generacji są pomijane, chyba że wystąpią następujące sytuacje:  
   
-- System otrzyma powiadomienie o małej ilości pamięci systemu operacyjnego.  
+- System odbiera powiadomienie o niskim poziomie pamięci z systemu operacyjnego.  
   
-- Kod aplikacji wywołuje kolekcji przez wywołanie metody <xref:System.GC.Collect%2A?displayProperty=nameWithType> metody i określając 2- `generation` parametru.  
+- Kod aplikacji wywołuje kolekcję przez wywołanie metody <xref:System.GC.Collect%2A?displayProperty=nameWithType> i określenie 2 dla parametru `generation`.  
   
- Poniższa tabela zawiera listę scenariuszy aplikacji, aby uzyskać przy użyciu <xref:System.Runtime.GCLatencyMode> wartości.  
+ W poniższej tabeli wymieniono scenariusze aplikacji dotyczące używania wartości <xref:System.Runtime.GCLatencyMode>.  
   
-|Tryb opóźnienia|Scenariusze aplikacji|  
+|Tryb opóźnień|Scenariusze aplikacji|  
 |------------------|---------------------------|  
-|<xref:System.Runtime.GCLatencyMode.Batch>|W przypadku aplikacji, które mają nie interfejsu użytkownika lub operacji po stronie serwera.<br /><br /> Jest to domyślny tryb podczas [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) jest wyłączona.|  
-|<xref:System.Runtime.GCLatencyMode.Interactive>|W przypadku większości aplikacji, które mają interfejs użytkownika.<br /><br /> Jest to domyślny tryb podczas [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) jest włączona.|  
-|<xref:System.Runtime.GCLatencyMode.LowLatency>|W przypadku aplikacji, które mają krótkoterminowej operacje zależne od czasu, podczas których przerw w pracy z modułu odśmiecania pamięci może być szkodliwe. Na przykład aplikacje, które czy renderowania lub dane funkcji przejęcia animacji.|  
-|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|Dla aplikacji, które są zależne od czasu zawarte, ale potencjalnie dłuższy czas trwania czas, w którym przerw w pracy z modułu odśmiecania pamięci może być szkodliwe. Na przykład aplikacji, które wymagają szybkie czasy związku ze zmianą danych rynkowych poza godzinami handlowych.<br /><br /> W tym trybie powoduje zwiększenie rozmiaru sterty zarządzanej, niż inne tryby. Ponieważ nie to kompaktowania sterty zarządzanej, wyższe fragmentacji jest możliwe. Upewnij się, że jest dostępna wystarczająca ilość pamięci.|  
+|<xref:System.Runtime.GCLatencyMode.Batch>|W przypadku aplikacji, które nie mają interfejsu użytkownika ani operacji po stronie serwera.<br /><br /> Jest to domyślny tryb, gdy [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) jest wyłączone.|  
+|<xref:System.Runtime.GCLatencyMode.Interactive>|Dla większości aplikacji, które mają interfejs użytkownika.<br /><br /> Jest to domyślny tryb, gdy włączone jest [współbieżne wyrzucanie elementów bezużytecznych](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) .|  
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|W przypadku aplikacji, które mają krótkoterminowe, zależne od czasu operacje, w których przerwy między modułem wyrzucania elementów bezużytecznych mogą powodować zakłócenia. Na przykład aplikacje, które wykonują renderowanie animacji lub funkcje pozyskiwania danych.|  
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|W przypadku aplikacji, które mają dane zależne od czasu, ale dłuższy czas, w którym przerwy z modułu wyrzucania elementów bezużytecznych mogą być zakłócone. Na przykład aplikacje, które wymagają krótkich czasów odpowiedzi jako zmiany danych rynkowych w godzinach pracy.<br /><br /> Ten tryb powoduje zwiększenie rozmiaru zarządzanego sterty niż inne tryby. Ponieważ nie kompaktuje sterty zarządzanej, możliwe jest zwiększenie fragmentacji. Upewnij się, że dostępna jest wystarczająca ilość pamięci.|  
   
-## <a name="guidelines-for-using-low-latency"></a>Wytyczne dotyczące korzystania z małymi opóźnieniami  
- Kiedy używasz <xref:System.Runtime.GCLatencyMode.LowLatency> trybie, należy wziąć pod uwagę następujące wytyczne:  
+## <a name="guidelines-for-using-low-latency"></a>Wskazówki dotyczące korzystania z małych opóźnień  
+ W przypadku korzystania z trybu <xref:System.Runtime.GCLatencyMode.LowLatency> należy wziąć pod uwagę następujące wytyczne:  
   
-- Zachowaj czas w możliwie krótkie małymi opóźnieniami.  
+- Przechowuj okres czasu w małych opóźnieniach, tak jak to możliwe.  
   
-- Należy unikać przydzielanie wysokiej ilości pamięci w okresach małymi opóźnieniami. Powiadomienia o małej ilości pamięci może być fakt, że wyrzucanie elementów bezużytecznych odzyskuje mniejszą liczbę obiektów.  
+- Unikaj alokowania dużych ilości pamięci podczas okresów o małym opóźnieniu. Powiadomienia o niskiej ilości pamięci mogą wystąpić, ponieważ odzyskiwanie pamięci przejmuje mniej obiektów.  
   
-- W trybie małych opóźnień, zminimalizować liczbę alokacji wprowadzanych w określonej alokacji na sterty obiektów wielkich i przypiętych obiektów.  
+- W trybie niskiego opóźnienia Minimalizuj liczbę dokonanych przydziałów, w szczególności przydziały do sterty dużego obiektu i przypiętych obiektów.  
   
-- Należy pamiętać o wątki, które można przydzielania. Ponieważ <xref:System.Runtime.GCSettings.LatencyMode%2A> ustawienie właściwości jest całego procesu, można wygenerować <xref:System.OutOfMemoryException> dotyczące dowolnego wątku, który może być przydzielania.  
+- Należy pamiętać o wątkach, które mogą być przydzielane. Ponieważ ustawienie właściwości <xref:System.Runtime.GCSettings.LatencyMode%2A> to cały proces, można wygenerować <xref:System.OutOfMemoryException> na dowolnym wątku, który może przydzielić.  
   
-- Zawijania kodu niskie opóźnienia w ograniczone regiony wykonania (Aby uzyskać więcej informacji, zobacz [ograniczone regiony wykonania](../../../docs/framework/performance/constrained-execution-regions.md)).  
+- Zawijaj kod małych opóźnień w regionach ograniczonego wykonywania (Aby uzyskać więcej informacji, zobacz [ograniczone regiony wykonywania](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
-- Można wymusić kolekcje geenracji 2 okresie małych opóźnień, wywołując <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType> metody.  
+- Można wymusić zbieranie 2 kolekcji w okresie o małym opóźnieniu, wywołując metodę <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 

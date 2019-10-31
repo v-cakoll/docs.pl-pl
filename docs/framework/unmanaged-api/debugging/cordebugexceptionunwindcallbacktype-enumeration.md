@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 783dce92-8a98-43db-8f78-888d943dd5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef3f1d5e78efe37070bb2bdd6d2834178947af7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5004cd293b64436c41caef1c7393d2229d1a6ccf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740088"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098481"
 ---
 # <a name="cordebugexceptionunwindcallbacktype-enumeration"></a>CorDebugExceptionUnwindCallbackType — Wyliczenie
-Określa zdarzenie, które jest jest sygnalizowane przez wywołania zwrotnego w fazie unwind.  
+Wskazuje zdarzenie, które jest sygnalizowane przez wywołanie zwrotne w fazie unwind.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,17 +37,17 @@ typedef enum CorDebugExceptionUnwindCallbackType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_UNWIND_BEGIN`|Początek procesu odwijania.|  
-|`DEBUG_EXCEPTION_INTERCEPTED`|Wyjątek został przechwycony.|  
+|`DEBUG_EXCEPTION_UNWIND_BEGIN`|Początek procesu unwind.|  
+|`DEBUG_EXCEPTION_INTERCEPTED`|Przechwycono wyjątek.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 77cfd347-95c2-4425-b807-4ecc2a8d4578
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 442e4566749aade5a7f8164fcc43baad902928c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30c4ff93688396dd9a6a8086fbb53ad1c763ead0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749115"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141298"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads — Metoda
-Ustawia maksymalną liczbę wątków, zapewniające przez hosta w puli wątków.  
+Ustawia maksymalną liczbę wątków, które host może przechowywać w puli wątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,31 +35,31 @@ HRESULT SetMaxThreads (
   
 ## <a name="parameters"></a>Parametry  
  `MaxThreads`  
- Maksymalna liczba wątków w puli wątków.  
+ Maksymalna liczba wątków roboczych w puli wątków.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetMaxThreads` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił błąd nieznanego, krytycznego. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_NOTIMPL|Host nie zawiera implementacji `SetMaxThreads`.|  
+|S_OK|`SetMaxThreads` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_NOTIMPL|Host nie dostarcza implementacji `SetMaxThreads`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Host nie jest wymagany w celu umożliwienia CLR skonfigurować rozmiar puli wątków. Niektóre hosty może być wyłączną kontrolę nad puli wątków powodów, takich jak wdrożenia, wydajności i skalowalności. W tym przypadku hosta powinien zwrócić wartość HRESULT E_NOTIMPL.  
+ Host nie jest wymagany, aby umożliwić programowi CLR skonfigurowanie rozmiaru puli wątków. Niektóre hosty mogą mieć wyłączną kontrolę nad pulą wątków, z przyczyn takich jak implementacja, wydajność lub skalowalność. W takim przypadku host powinien zwrócić wartość HRESULT równą E_NOTIMPL.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

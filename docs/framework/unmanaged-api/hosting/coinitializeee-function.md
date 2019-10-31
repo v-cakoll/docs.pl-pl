@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e42a928-5068-4ba6-b8c3-806551a01fa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 72b95b634ffc352b7fad006e0ccd68e6e159dee9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e90772ae8c3e6be5744fcccc9901123df871831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131941"
 ---
 # <a name="coinitializeee-function"></a>CoInitializeEE — Funkcja
-Zapewnia, że aparat wykonywania środowiska uruchomieniowego języka wspólnego jest załadowany do procesu. Ta funkcja jest przestarzała w programie .NET Framework 4. Użyj [iclrruntimehost::Start —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) metody zamiast tego.  
+Zapewnia, że aparat wykonywania środowiska uruchomieniowego języka wspólnego jest ładowany do procesu. Ta funkcja jest przestarzała w .NET Framework 4. Zamiast tego użyj metody [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,28 +35,28 @@ HRESULT CoInitializeEE (
   
 ## <a name="parameters"></a>Parametry  
  `fFlags`  
- [in] Jedną z [coinitiee —](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) stałe wyliczeń.  
+ podczas Jedna ze stałych wyliczenia [COINITIEE —](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md) .  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowych kodów błędu modelu COM, zgodnie z definicją w pliku Winerror.h i wartościami w poniższej tabeli.  
+ Ta metoda zwraca standardowe kody błędów COM zdefiniowane w Winerror. h i wartości w poniższej tabeli.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
-|S_OK|Aparat wykonywania został pomyślnie załadowany.|  
-|S_FALSE|Aparat wykonywania jest już załadowany.|  
+|S_OK|Aparat wykonywania został załadowany pomyślnie.|  
+|S_FALSE|Aparat wykonywania został już załadowany.|  
 |E_FAIL|Nie można załadować aparatu wykonywania.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda ładuje aparatu wykonywania, jeśli nie został wcześniej załadowany.  
+ Ta metoda ładuje aparat wykonywania, jeśli nie został wcześniej załadowany.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

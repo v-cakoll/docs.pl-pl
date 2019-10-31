@@ -2,14 +2,12 @@
 title: Metoda ICorDebugProcess6::EnableVirtualModuleSplitting
 ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bd06dd3f58a1f74fbdb5ec61c4896f5c1696856
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32648f40046959ffd8676fe67a1e0a123b0e801f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123503"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Metoda ICorDebugProcess6::EnableVirtualModuleSplitting
 Włącza lub wyłącza dzielenie modułu wirtualnego.  
@@ -24,7 +22,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parametry  
  `enableSplitting`  
- `true`Aby włączyć dzielenie modułu wirtualnego; `false` aby go wyłączyć.  
+ `true` włączyć dzielenia modułu wirtualnego; `false`, aby go wyłączyć.  
   
 ## <a name="remarks"></a>Uwagi  
  Dzielenie modułu wirtualnego powoduje, że [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) rozpoznaje moduły, które zostały scalone podczas procesu kompilacji i są prezentowane jako Grupa oddzielnych modułów, a nie do pojedynczego dużego modułu. Spowoduje to zmianę zachowania różnych metod [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) opisanych poniżej.  
@@ -46,7 +44,7 @@ HRESULT EnableVirtualModuleSplitting(
  regularne moduły  
  Moduły, które nie zostały scalone w czasie kompilacji. Nie są to moduły kontenera ani moduły podrzędne.  
   
- Moduły kontenera i moduły podrzędne są reprezentowane przez obiekty interfejsu ICorDebugModule. Jednak zachowanie interfejsu jest nieco inne w każdym przypadku, zgodnie z opisem w \<sekcji x-ref do sekcji >.  
+ Moduły kontenera i moduły podrzędne są reprezentowane przez obiekty interfejsu ICorDebugModule. Jednak zachowanie interfejsu jest nieco inne w każdym przypadku, ponieważ sekcja \<x-ref do sekcji > zawiera opis.  
   
 ## <a name="modules-and-assemblies"></a>Moduły i zestawy  
  Zestawy obejmujące wiele modułów nie są obsługiwane w scenariuszach scalania zestawów, dlatego istnieje relacja jeden do jednego między modułem a zestawem. Każdy obiekt ICorDebugModule, niezależnie od tego, czy reprezentuje on moduł kontenera lub moduł podrzędny, ma odpowiedni obiekt ICorDebugAssembly. Metoda [ICorDebugModule:: GetAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md) konwertuje moduł do zestawu. Aby zamapować w innym kierunku, Metoda [ICorDebugAssembly:: EnumerateModules —](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-enumeratemodules-method.md) wylicza tylko jeden moduł. Ponieważ zestaw i moduł tworzą ściśle sprzężoną parę w tym przypadku, zestaw terminów i moduł stają się w dużym stopniu zamienne.  
@@ -64,7 +62,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 - Metoda ICorDebugAssembly3. EnumerateContainedAssemblies Wyświetla listę modułów podrzędnych.  
   
-- Metoda ICorDebugAssembly3. GetContainerAssembly zwraca wartość `S_FALSE`.  
+- Metoda ICorDebugAssembly3. GetContainerAssembly zwraca `S_FALSE`.  
   
  Moduły podrzędne mają następujące zachowania i cechy:  
   
@@ -78,7 +76,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 - Metoda [ICorDebugModule:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md) zwraca oryginalny Niescalony rozmiar obrazu.  
   
-- Metoda ICorDebugModule3. EnumerateContainedAssemblies zwraca wartość `S_FALSE`.  
+- Metoda ICorDebugModule3. EnumerateContainedAssemblies zwraca `S_FALSE`.  
   
 - Metoda ICorDebugAssembly3. GetContainerAssembly zwraca moduł zawierający.  
   
@@ -97,20 +95,20 @@ HRESULT EnableVirtualModuleSplitting(
   
 |Metoda|`enableSplitting` = `true`|`enableSplitting` = `false`|  
 |------------|---------------------------------|----------------------------------|  
-|[ICorDebugFunction::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Zwraca moduł podrzędny, w którym ta funkcja została pierwotnie zdefiniowana.|Zwraca moduł kontenera, do którego ta funkcja została scalona|  
-|[ICorDebugClass::GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Zwraca moduł podrzędny, w którym ta klasa została pierwotnie zdefiniowana.|Zwraca moduł kontenera, do którego ta klasa została scalona.|  
+|[ICorDebugFunction:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getmodule-method.md)|Zwraca moduł podrzędny, w którym ta funkcja została pierwotnie zdefiniowana.|Zwraca moduł kontenera, do którego ta funkcja została scalona|  
+|[ICorDebugClass:: GetModule](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|Zwraca moduł podrzędny, w którym ta klasa została pierwotnie zdefiniowana.|Zwraca moduł kontenera, do którego ta klasa została scalona.|  
 |ICorDebugModuleDebugEvent:: GetModule|Zwraca moduł kontenera, który został załadowany. Moduły podrzędne nie otrzymują zdarzeń ładowania, niezależnie od tego ustawienia.|Zwraca moduł kontenera, który został załadowany.|  
 |[ICorDebugAppDomain:: EnumerateAssemblies —](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-enumerateassemblies-method.md)|Zwraca listę podzespołów i zwykłych zestawów; nie dołączono żadnych zestawów kontenerów. **Uwaga:**  Jeśli w dowolnym zestawie kontenerów brakuje symboli, żaden z jej podzespołów nie zostanie wyliczony. Jeśli w dowolnym z zestawów zwykłych brakuje symboli, może ona być wyliczona lub nie można jej wyliczyć.|Zwraca listę zestawów kontenerów i zwykłych zestawów; żadne podzestawy nie są uwzględniane. **Uwaga:**  Jeśli w dowolnym z zestawów zwykłych brakuje symboli, może ona być wyliczona lub nie można jej wyliczyć.|  
-|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (w przypadku odwoływania się tylko do kodu IL)|Zwraca IL, który byłby prawidłowy w obrazie zestawu poprzedzającego scalenie. W każdym przypadku tokeny wbudowanej metadanych będą poprawnie mieć tokeny TypeRef lub MemberRef, gdy typy, do których się odwołuje, nie są zdefiniowane w module wirtualnym zawierającym IL. Te tokeny TypeRef lub MemberRef mogą być wyszukiwane w obiekcie [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) dla odpowiadającego wirtualnego obiektu ICorDebugModule.|Zwraca IL w obrazie zestawu po scaleniu.|  
+|[ICorDebugCode:: GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md) (tylko w przypadku odwoływania się do kodu Il)|Zwraca IL, który byłby prawidłowy w obrazie zestawu poprzedzającego scalenie. W każdym przypadku tokeny wbudowanej metadanych będą poprawnie mieć tokeny TypeRef lub MemberRef, gdy typy, do których się odwołuje, nie są zdefiniowane w module wirtualnym zawierającym IL. Te tokeny TypeRef lub MemberRef mogą być wyszukiwane w obiekcie [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) dla odpowiadającego wirtualnego obiektu ICorDebugModule.|Zwraca IL w obrazie zestawu po scaleniu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

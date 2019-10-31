@@ -2,17 +2,15 @@
 title: ICorDebugAppDomain4::GetObjectForCCW — metoda
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7ab4905c55a1395e9ae5cba8343e6b832622005d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8b046eb5926bb9aa4738e8fff8e61b0b7c23a3aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737646"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088828"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW — metoda
-Pobiera obiekt zarządzany ze wskaźnika wywoływalnej otoki (CCW) COM.  
+Pobiera obiekt zarządzany z wskaźnika otoki (CCW) modelu COM.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,21 +23,21 @@ HRESULT GetObjectForCCW(
   
 ## <a name="parameters"></a>Parametry  
  `ccwPointer`  
- [in] Wywoływana otoka (CCW) wskaźnik COM.  
+ podczas Wskaźnik wywoływanej otoki COM (CCW).  
   
  `ppManagedObject`  
- [out] Wskaźnik na adres obiektu "ICorDebugValue", który reprezentuje obiektu zarządzanego, który odnosi się do danego wskaźnika w lewo.  
+ określoną Wskaźnik do adresu obiektu "ICorDebugValue", który reprezentuje zarządzany obiekt odpowiadający danemu wskaźnikowi CCW.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

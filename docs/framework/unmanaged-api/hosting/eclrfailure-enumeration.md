@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d935bff023d806cf8cfb6d87bde0f82666b51b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769652"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131125"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure — Wyliczenie
-W tym artykule opisano zestaw awarie, dla których hosta można ustawić akcje dotyczące zasad.  
+Opisuje zestaw błędów, dla których host może ustawiać akcje zasad.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,25 +42,25 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (na przykład wątku, blok pamięci lub blokadę) w regionie niekrytyczne kodu.|  
-|`FAIL_CriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (na przykład wątku, blok pamięci lub blokady) krytyczne obszar kodu.|  
-|`FAIL_FatalRuntime`|Środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do uruchomienia kodu zarządzanego w procesie. Odtąd wywołania wszystkie funkcje hostingu zwraca wartość HRESULT HOST_E_CLRNOTAVAILABLE.|  
-|`FAIL_OrphanedLock`|Wątek nie udało się zwolnić blokady po powrocie z <xref:System.AppDomain> obiektu. Host nie można ustawić tego błędu, aby spowodować, że wątek przerwać.|  
-|`FAIL_StackOverflow`|Wystąpiło przepełnienie stosu.|  
-|`FAIL_AccessViolation`|Nastąpiła próba odczytu lub zapisu pamięci chronionej. Nie są obsługiwane w programie .NET Framework 4.|  
-|`FAIL_CodeContract`|Wystąpił błąd kodu kontraktu. Zobacz [kodu umów](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
+|`FAIL_NonCriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (takiego jak wątek, blok pamięci lub blokada) w niekrytycznym regionie kodu.|  
+|`FAIL_CriticalResource`|Wystąpił błąd podczas próby przydzielenia zasobu (takiego jak wątek, blok pamięci lub blokada) w krytycznym regionie kodu.|  
+|`FAIL_FatalRuntime`|Środowisko uruchomieniowe języka wspólnego (CLR) nie może już uruchamiać kodu zarządzanego w procesie. Odtąd wywołania funkcji hostingu zwracają wartość HRESULT równą HOST_E_CLRNOTAVAILABLE.|  
+|`FAIL_OrphanedLock`|Wątek nie może zwolnić blokady po powrocie z obiektu <xref:System.AppDomain>. Host nie może ustawić tego błędu, aby powodował przerwanie wątku.|  
+|`FAIL_StackOverflow`|Nastąpiło przepełnienie stosu.|  
+|`FAIL_AccessViolation`|Podjęto próbę odczytu lub zapisu chronionej pamięci. Nieobsługiwane w .NET Framework 4.|  
+|`FAIL_CodeContract`|Wystąpił błąd kontraktu kodu. Zobacz [kontrakty kodu](../../../../docs/framework/debug-trace-profile/code-contracts.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Zobacz [iclrpolicymanager::setactiononfailure —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) metody, aby uzyskać listę [epolicyaction —](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wartości hosta można użyć do określenia akcje zasad warunki błędu. Aby uzyskać więcej informacji na temat regionów krytyczne i niekrytyczne kodu, zobacz [eclroperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
+ Zobacz metodę [ICLRPolicyManager:: SetActionOnFailure —](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) , aby uzyskać listę wartości [EPolicyAction —](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) , których host może użyć do określenia akcji zasad dla warunków niepowodzeń. Aby uzyskać więcej informacji na temat krytycznych i niekrytycznych regionów kodu, zobacz [EClrOperation —](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

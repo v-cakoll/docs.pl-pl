@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27fae01a-ecec-423a-973e-24f8de55826c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdf3998d7430348cb71af8e7dd75cf2203d380ce
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b9a301714ea60b4e3220eb75721e56e39bd9659
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139930"
 ---
 # <a name="icordebugthread2getactivefunctions-method"></a>ICorDebugThread2::GetActiveFunctions — Metoda
-Pobiera informacje o funkcji aktywnych we wszystkich ramki dla wątku.  
+Pobiera informacje o aktywnej funkcji w poszczególnych ramkach tego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,26 +38,26 @@ HRESULT GetActiveFunctions (
   
 ## <a name="parameters"></a>Parametry  
  `cFunctions`  
- [in] Rozmiar `pFunctions` tablicy.  
+ podczas Rozmiar tablicy `pFunctions`.  
   
  `pcFunctions`  
- [out] Wskaźnik do liczby obiektów zwróconych w `pFunctions` tablicy. Liczba obiektów zwróconych będzie równa liczbie zarządzanych ramek na stosie.  
+ określoną Wskaźnik do liczby obiektów zwracanych w tablicy `pFunctions`. Liczba zwracanych obiektów będzie równa liczbie zarządzanych ramek na stosie.  
   
  `pFunctions`  
- [out w] Tablica obiektów cor_active_function —, z których każdy zawiera informacje na temat funkcji active w ramkach tego wątku.  
+ [in. out] Tablica obiektów COR_ACTIVE_FUNCTION, z których każdy zawiera informacje o aktywnych funkcjach w ramkach tego wątku.  
   
- Pierwszy element stosowanych w odniesieniu do ramki liścia i itd wstecz do katalogu głównego stosu.  
+ Pierwszy element zostanie użyty dla ramki liścia i tak dalej, jak z powrotem do korzenia stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `pFunctions` ma wartość null w danych wejściowych, `GetActiveFunctions` zwraca liczbę funkcji, które znajdują się w stosie. Oznacza to jeśli `pFunctions` ma wartość null w danych wejściowych, `GetActiveFunctions` zwraca wartość tylko w `pcFunctions`.  
+ Jeśli `pFunctions` ma wartość null przy wejściu, `GetActiveFunctions` zwraca tylko liczbę funkcji, które znajdują się na stosie. Oznacza to, że jeśli `pFunctions` ma wartość null przy wejściu, `GetActiveFunctions` zwraca wartość tylko w `pcFunctions`.  
   
- `GetActiveFunctions` Metoda jest przeznaczona do optymalizacji na pobieranie tych samych informacji z ramek w ślad stosu i zawiera tylko ramki, które będą miały obiektu ICorDebugILFrame ich w pełen ślad stosu.  
+ Metoda `GetActiveFunctions` jest przeznaczona do optymalizacji nad uzyskaniem tych samych informacji z ramek w śladach stosu i zawiera tylko ramki, które miały obiekt ICorDebugILFrame dla nich w pełnym śladzie stosu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

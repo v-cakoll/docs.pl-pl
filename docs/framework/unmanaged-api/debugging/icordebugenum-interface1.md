@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum, interfejs
+title: ICorDebugEnum — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b25c47e101ad0fb8e8cbdbb2718a41c9be6c0c22
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 59dcb7ae6f27f8d049cd4dc2d313f7f1130fc503
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931982"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085264"
 ---
-# <a name="icordebugenum-interface"></a>ICorDebugEnum, interfejs
+# <a name="icordebugenum-interface"></a>ICorDebugEnum — Interfejs
 
 Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, które są używane przez aplikację do debugowania.  
   
@@ -31,7 +29,7 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię tego `ICorDebugEnum` obiektu.|  
+|[Clone, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|Tworzy kopię tego obiektu `ICorDebugEnum`.|  
 |[GetCount, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|Pobiera liczbę elementów w wyliczeniu.|  
 |[Reset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|Przenosi kursor do początku wyliczenia.|  
 |[Skip, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|Przenosi kursor do przodu w wyliczeniu o określoną liczbę elementów.|  
@@ -55,7 +53,7 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
   
 - [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
   
-- "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
 - [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
   
@@ -85,13 +83,13 @@ Służy jako abstrakcyjny interfejs podstawowy dla modułów wyliczających, kt�
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

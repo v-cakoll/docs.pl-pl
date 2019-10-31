@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._AutoRedirects Field
+title: HttpWebRequest. _AutoRedirects, pole
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dde9cdeeca1cc8cca13322747d625b505e7f453
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 82acb409f09826d70f8f050c932ab4aebc4fd172
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120095"
 ---
-# <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest.\_AutoRedirects Field
+# <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_pola przekierowań
 
-`HttpWebRequest._AutoRedirects` jest <xref:System.Int32> , które odzwierciedla liczbę przekierowań wprowadzone w tym <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects` to <xref:System.Int32>, która odzwierciedla liczbę przekierowań wykonanych dla tego <xref:System.Net.HttpWebRequest>.
 
 ## <a name="syntax"></a>Składnia  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects` Pole jest wewnętrzna i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Pole `HttpWebRequest._AutoRedirects` jest wewnętrzne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

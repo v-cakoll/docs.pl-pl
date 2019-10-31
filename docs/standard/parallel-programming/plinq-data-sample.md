@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353158"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140012"
 ---
 # <a name="plinq-data-sample"></a>Próbka danych PLINQ
 Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które przekształcają je na kolekcje klientów, produkty, zamówienia i szczegóły zamówienia. Aby dodatkowo eksperymentować z PLINQ, możesz wkleić przykłady kodu z niektórych innych tematów do kodu w tym temacie i wywoływać go z metody `Main`. Możesz również używać tych danych przy użyciu własnych zapytań PLINQ.  
@@ -23,7 +21,7 @@ Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które 
  Dane przedstawiają podzestaw bazy danych Northwind. 50 (50) rekordy klientów są uwzględniane, ale nie wszystkie pola. Uwzględniono podzestaw wierszy z zamówień i odpowiadające im dane Order_Detail dla każdego klienta. Wszystkie produkty są dołączone.  
   
 > [!NOTE]
-> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają tylko podstawowe `where` i `select` klauzule. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
+> Zestaw danych nie jest wystarczająco duży, aby pokazać, że PLINQ jest szybsze niż LINQ to Objects dla zapytań, które zawierają tylko podstawowe `where` i klauzule `select`. Aby obsłużyć szybkość rośnie w przypadku małych zestawów danych, takich jak to, należy użyć zapytań, które zawierają obliczenia kosztownych operacji dla każdego elementu w zestawie danych.  
   
 ### <a name="to-set-up-this-sample"></a>Aby skonfigurować ten przykład  
   
@@ -46,7 +44,7 @@ Ten przykład zawiera przykładowe dane w formacie CSV, a także metody, które 
  [!code-csharp[PLINQ#50](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#50)]
  [!code-vb[PLINQ#50](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#50)]  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>Dane  
   
 ```console  
 CUSTOMERS  

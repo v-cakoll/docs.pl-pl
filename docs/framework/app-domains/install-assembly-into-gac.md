@@ -9,24 +9,22 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de5ae03ab885c4368e39b6339b5a14d1082e6df5
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119810"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Instrukcje: Instalowanie zestawu w globalnej pamięci podręcznej zestawów
 
 Global Assembly Cache (GAC) przechowuje zestawy, które są udostępniane przez kilka aplikacji. Zainstaluj zestaw w [globalnej pamięci podręcznej zestawów](gac.md) przy użyciu jednego z następujących składników: 
 
-- [Windows Installer](#windows-installer)
+- [Instalator Windows](#windows-installer)
 - [Narzędzie globalnej pamięci podręcznej zestawów](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> Można zainstalować tylko zestawy o silnych nazwach w globalnej pamięci podręcznej zestawów. Informacje o sposobie tworzenia zestawu o silnej nazwie można znaleźć w temacie [How to: Podpisz zestaw silną nazwą](../../standard/assembly/sign-strong-name.md).
+> Można zainstalować tylko zestawy o silnych nazwach w globalnej pamięci podręcznej zestawów. Aby uzyskać informacje na temat sposobu tworzenia zestawu o silnej nazwie, zobacz [How to: Sign a Assembly with silnej nazwy](../../standard/assembly/sign-strong-name.md).
 
 ## <a name="windows-installer"></a>Instalator Windows
 
@@ -45,9 +43,9 @@ Składnia programu *Gacutil. exe* do zainstalowania zestawu w pamięci podręczn
 gacutil -i <assembly name>
 ```
 
-W tym poleceniu  *\<nazwa zestawu >* jest nazwą zestawu, który ma zostać zainstalowany w globalnej pamięci podręcznej zestawów.
+W tym poleceniu *\<nazwa zestawu >* jest nazwą zestawu, który ma zostać zainstalowany w globalnej pamięci podręcznej zestawów.
 
-Jeśli *Gacutil. exe* nie znajduje się w ścieżce systemu, należy użyć [wiersza polecenia dewelopera dla programu vs  *\<w wersji >* ](../tools/developer-command-prompt-for-vs.md).
+Jeśli *Gacutil. exe* nie znajduje się w ścieżce systemowej, użyj [wiersza polecenia dla deweloperów w *wersji vs\<* ](../tools/developer-command-prompt-for-vs.md).
 
 Poniższy przykład instaluje zestaw z nazwą pliku *Hello. dll* w globalnej pamięci podręcznej zestawów.
 
@@ -61,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>Zobacz także
 
 - [Pracuj z zestawami i globalną pamięcią podręczną zestawów](working-with-assemblies-and-the-gac.md)
-- [Instrukcje: Usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)
+- [Instrukcje: usuwanie zestawu z globalnej pamięci podręcznej zestawów](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil. exe (Narzędzie globalnej pamięci podręcznej zestawów)](../tools/gacutil-exe-gac-tool.md)
-- [Instrukcje: Podpisz zestaw silną nazwą](../../standard/assembly/sign-strong-name.md)
+- [Instrukcje: podpisywanie zestawu za pomocą silnej nazwy](../../standard/assembly/sign-strong-name.md)

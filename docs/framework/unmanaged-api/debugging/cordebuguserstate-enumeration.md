@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fbbb3f924f610b604586dca78cab344217b544
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120190"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState — Wyliczenie
-Wskazuje stan wątku użytkownika.  
+Wskazuje stan użytkownika wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,28 +45,28 @@ typedef enum CorDebugUserState {
 |Wartość|Opis|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|Zażądano zakończenia wątku.|  
-|`USER_SUSPEND_REQUESTED`|Wysłano żądanie zawieszenia wątku.|  
-|`USER_BACKGROUND`|Wątek jest uruchomiony w tle.|  
-|`USER_UNSTARTED`|Wątek się nie rozpoczęła wykonywanie.|  
+|`USER_SUSPEND_REQUESTED`|Zażądano zawieszenia wątku.|  
+|`USER_BACKGROUND`|Wątek działa w tle.|  
+|`USER_UNSTARTED`|Nie rozpoczęto wykonywania wątku.|  
 |`USER_STOPPED`|Wątek został zakończony.|  
-|`USER_WAIT_SLEEP_JOIN`|Wątek czeka, aż inny wątek do ukończenia zadania.|  
-|`USER_SUSPENDED`|Wątek zostało zawieszone.|  
-|`USER_UNSAFE_POINT`|Ten wątek jest niebezpieczne w punkcie. Wątek jest w momencie wykonywania gdzie mogą blokować wyrzucania elementów bezużytecznych.<br /><br /> Debugowanie zdarzeń mogą być wysyłane z punktów niebezpieczne, ale zawieszanie wątków niebezpiecznych w punkcie najprawdopodobniej spowoduje zakleszczenia aż wątek zostanie wznowione. Bezpieczne i niebezpieczne punkty są określane przez just-in-time (JIT) i implementacji kolekcji wyrzucania elementów.|  
-|`USER_THREADPOOL`|Ten wątek jest z puli wątków.|  
+|`USER_WAIT_SLEEP_JOIN`|Wątek oczekuje na ukończenie zadania przez inny wątek.|  
+|`USER_SUSPENDED`|Wątek został zawieszony.|  
+|`USER_UNSAFE_POINT`|Wątek znajduje się w niebezpiecznym punkcie. Oznacza to, że wątek jest w miejscu wykonywania, gdzie może blokować odzyskiwanie pamięci.<br /><br /> Zdarzenia debugowania mogą być wysyłane z niebezpiecznych punktów, ale zawieszenie wątku w niebezpiecznym punkcie prawdopodobnie spowoduje zakleszczenie do momentu wznowienia wątku. Bezpieczne i niebezpieczne punkty są określane przez implementację just-in-Time (JIT) i wyrzucania elementów bezużytecznych.|  
+|`USER_THREADPOOL`|Wątek pochodzi z puli wątków.|  
   
 ## <a name="remarks"></a>Uwagi  
- Stan użytkownika wątek jest stan, który ma wątku, gdy debuger bada go. Wątek może być kombinacją stanów użytkowników.  
+ Stanem użytkownika wątku jest stan, w którym wątek jest badany przez debuger. Wątek może mieć kombinację Stanów użytkownika.  
   
- Użyj [ICorDebugThread::GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) metodę, aby pobrać stan użytkownika dla wątku.  
+ Użyj metody [ICorDebugThread:: GetUserState —](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md) , aby pobrać stan użytkownika wątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

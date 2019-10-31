@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f043594-0c45-4bc6-988e-a6793f0d8d06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f39608b39be7d5c25b916fb20877aa73d6e5a8bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1799e0af91fa6074f174120b29e2302a27230c62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916231"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141458"
 ---
 # <a name="startup_flags-enumeration"></a>STARTUP_FLAGS — Wyliczenie
 Zawiera wartości, które wskazują zachowanie uruchamiania środowiska uruchomieniowego języka wspólnego (CLR). Domyślnie zbieranie elementów bezużytecznych nie jest współbieżne i tylko podstawowa Biblioteka klas jest ładowana do obszaru neutralnego dla domeny.  
@@ -70,18 +68,18 @@ typedef enum {
 |`STARTUP_LEGACY_IMPERSONATION`|Określa, że personifikacja nie powinna domyślnie przepływać się w punktach asynchronicznych.|  
 |`STARTUP_DISABLE_COMMITTHREADSTACK`|Określa, że cały stos wątku nie powinien być zatwierdzany podczas uruchamiania wątku.|  
 |`STARTUP_ALWAYSFLOW_IMPERSONATION`|Określa, że zarządzane osoby odwołujące się i osoby niedochodzące za pośrednictwem wywołania platformy będą przepływać przez punkty asynchroniczne. Domyślnie tylko zarządzane osoby będą przepływać między punktami asynchronicznymi.|  
-|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej zajmowanego miejsca, gdy ilość pamięci jest niska. Zapoznaj się z tematem `gcTrimCommitOnLowMemory` [Optymalizacja dla udostępnionego hostingu w sieci Web](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
+|`STARTUP_TRIM_GC_COMMIT`|Określa, że wyrzucanie elementów bezużytecznych będzie używać mniej zajmowanego miejsca, gdy ilość pamięci jest niska. Zobacz `gcTrimCommitOnLowMemory` w obszarze [Optymalizacja dla udostępnionego hostingu w sieci Web](../../../standard/garbage-collection/optimization-for-shared-web-hosting.md).|  
 |`STARTUP_ETW`|Określa, że śledzenie zdarzeń systemu Windows (ETW) jest włączone dla zdarzeń środowiska uruchomieniowego języka wspólnego. Począwszy od systemu Windows Vista, śledzenie zdarzeń jest zawsze włączone, więc ta flaga nie ma żadnego wpływu. Zobacz [kontrolowanie rejestrowania .NET Framework](../../../../docs/framework/performance/controlling-logging.md).|  
-|`STARTUP_ARM`|Określa, że jest włączone monitorowanie zasobów domeny aplikacji. Zobacz Właściwość i [ \<appDomainResourceMonitoring > elementu.](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md) <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>|  
+|`STARTUP_ARM`|Określa, że jest włączone monitorowanie zasobów domeny aplikacji. Zobacz Właściwość <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType> i [\<appDomainResourceMonitoring > elementu](../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md).|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

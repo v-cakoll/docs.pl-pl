@@ -15,14 +15,12 @@ helpviewer_keywords:
 - binary resources files
 - embedding files in runtime binary executable
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8f9b8b93fe2b15ca6b4544547f3934f51ffed4df
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4605c7361705ba37091eb2e34d8425810854973e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104903"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generator pliku zasobów)
 Generator plików zasobów (Resgen.exe) konwertuje pliki tekstowe (txt lub restext) i pliki zasobów w formacie XML (resx) na pliki binarne (resources) środowiska uruchomieniowego języka wspólnego, które można osadzić w binarnym pliku wykonywalnym środowiska uruchomieniowego lub zestawie satelickim. (Zobacz [Tworzenie plików zasobów](../resources/creating-resource-files-for-desktop-apps.md)).  
@@ -302,7 +300,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
  *nazwą*  
  Nazwa silnie typizowanej klasy zasobów. Powinna odpowiadać głównej nazwie pliku resources. Na przykład jeśli program Resgen.exe generuje plik resources o nazwie MyCompany.Libraries.Strings.resources, nazwa silnie typizowanej klasy zasobów to Strings. Jeśli *ClassName* zostanie pominięty, wygenerowana Klasa jest pochodną nazwy głównej `outputFilename`. W przypadku pominięcia `outputFilename` wygenerowana Klasa jest pochodną nazwy głównej `inputFilename`.  
   
- *ClassName* nie może zawierać nieprawidłowych znaków, takich jak spacje osadzone. Jeśli *ClassName* zawiera spacje lub funkcja *ClassName* jest generowana domyślnie z *inputFilename*, a *inputFilename* zawiera osadzone spacje, Resgen. exe zastępuje wszystkie nieprawidłowe znaki znakiem podkreślenia (\_).  
+ *ClassName* nie może zawierać nieprawidłowych znaków, takich jak spacje osadzone. Jeśli *ClassName* zawiera osadzone spacje lub jeśli *ClassName* jest generowana domyślnie z *inputFilename*, a *inputFilename* zawiera osadzone spacje, Resgen. exe zastępuje wszystkie nieprawidłowe znaki znakiem podkreślenia (\_) .  
   
  *Nazwa pliku*  
  Nazwa pliku klasy.  
@@ -317,7 +315,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 - Konstruktor bez parametrów, którego można użyć do utworzenia wystąpienia silnie typizowanej klasy zasobów.  
   
-- @No__t_0 (C#) lub `Shared` (Visual Basic) i Właściwość `ResourceManager` tylko do odczytu, która zwraca <xref:System.Resources.ResourceManager> wystąpienie zarządzające silnie określonym zasobem.  
+- `static` (C#) lub `Shared` (Visual Basic) i Właściwość `ResourceManager` tylko do odczytu, która zwraca <xref:System.Resources.ResourceManager> wystąpienie zarządzające silnie określonym zasobem.  
   
 - Właściwość `Culture` statycznej, która pozwala ustawić kulturę używaną do pobierania zasobów. Domyślnie jego wartość to `null`, co oznacza, że jest używana bieżąca kultura interfejsu użytkownika.  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ca3b86e90dcb76c1fece44cf2c5ed68e073d8e7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138398"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid — Metoda
-Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten ICorDebugHeapValue jest prawidłowa.  
+Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten ICorDebugHeapValue jest prawidłowy.  
   
- Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.  
+ Ta metoda jest przestarzała w .NET Framework w wersji 2,0.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,18 +37,18 @@ HRESULT IsValid (
   
 ## <a name="parameters"></a>Parametry  
  `pbValid`  
- [out] Wskaźnik na wartość logiczną, wskazującą, czy ta wartość na stosie jest prawidłowa.  
+ określoną Wskaźnik do wartości logicznej wskazującej, czy ta wartość w stercie jest prawidłowa.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość jest nieprawidłowa, jeśli został odzyskany przez moduł odśmiecania pamięci.  
+ Wartość jest nieprawidłowa, jeśli została odinicjowana przez moduł wyrzucania elementów bezużytecznych.  
   
- Ta metoda jest przestarzała. W programie .NET Framework 2.0, wszystkie wartości są ważne do [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) jest wywoływana, w których wartości są nieważne.  
+ Ta metoda jest przestarzała. W .NET Framework 2,0 wszystkie wartości są ważne do momentu wywołania metody [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) , podczas gdy wartości są unieważnione.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

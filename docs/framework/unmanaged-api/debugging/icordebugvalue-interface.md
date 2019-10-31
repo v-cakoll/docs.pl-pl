@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValue, interfejs
+title: ICorDebugValue — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValue
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: b2f7007f-c446-4b18-aed1-a25cff8aee31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3bb2f6333f306c8a19c8b2f67986b23819b74ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 77d28d8eef97a934c15ac29725f856f4bf39e6ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966861"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140160"
 ---
-# <a name="icordebugvalue-interface"></a>ICorDebugValue, interfejs
+# <a name="icordebugvalue-interface"></a>ICorDebugValue — Interfejs
 Reprezentuje wartość w debugowanym procesie. Wartość może być wartością odczytu lub zapisu.  
   
 ## <a name="methods"></a>Metody  
@@ -31,9 +29,9 @@ Reprezentuje wartość w debugowanym procesie. Wartość może być wartością 
 |Metoda|Opis|  
 |------------|-----------------|  
 |[CreateBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-createbreakpoint-method.md)|Ta metoda nie jest obecnie zaimplementowana.|  
-|[GetAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Pobiera adres tego `ICorDebugValue` obiektu, który jest w trakcie debugowania.|  
-|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Pobiera rozmiar tego `ICorDebugValue` obiektu w bajtach.|  
-|[GetType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Pobiera typ pierwotny tego `ICorDebugValue` obiektu.|  
+|[GetAddress, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getaddress-method.md)|Pobiera adres tego obiektu `ICorDebugValue`, który jest w trakcie debugowania.|  
+|[GetSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)|Pobiera rozmiar (w bajtach) tego obiektu `ICorDebugValue`.|  
+|[GetType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md)|Pobiera typ pierwotny tego obiektu `ICorDebugValue`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ogólnie rzecz biorąc, własność obiektu wartości jest przenoszona, gdy jest zwracany. Odbiorca jest odpowiedzialny za usunięcie odwołania z obiektu po zakończeniu z obiektem.  
@@ -44,13 +42,13 @@ Reprezentuje wartość w debugowanym procesie. Wartość może być wartością 
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

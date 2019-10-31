@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745005"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122743"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugBreakpoint z wyliczenia, zaczynając od bieżącej pozycji.  
+Pobiera określoną liczbę wystąpień ICorDebugBreakpoint z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba `ICorDebugBreakpoint` wystąpienia mają zostać pobrane.  
+ podczas Liczba wystąpień `ICorDebugBreakpoint` do pobrania.  
   
  `breakpoints`  
- [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugBreakpoint` obiekt, który reprezentuje punkt przerwania.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugBreakpoint`, który reprezentuje punkt przerwania.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugBreakpoint` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
+ określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugBreakpoint`. Ta wartość może być równa null, jeśli `celt` to jeden.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

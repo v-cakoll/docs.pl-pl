@@ -1,25 +1,23 @@
 ---
-title: <appDomainResourceMonitoring>, element
+title: <appDomainResourceMonitoring> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1395ee64d94e33693344b678c7a949665f994079
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252822"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118253"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring, element >
+# <a name="appdomainresourcemonitoring-element"></a>\<element > appDomainResourceMonitoring
 Powoduje, że środowisko uruchomieniowe zbiera statystyki dotyczące wszystkich domen aplikacji w procesie przez cały czas trwania procesu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring>**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,7 +55,7 @@ Powoduje, że środowisko uruchomieniowe zbiera statystyki dotyczące wszystkich
 ## <a name="remarks"></a>Uwagi  
  Monitorowanie zasobów domeny aplikacji jest dostępne za pomocą klasy domeny aplikacji zarządzanej, interfejsu hosta [ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md) i śledzenia zdarzeń systemu Windows (ETW). Po włączeniu monitorowania statystyki są zbierane dla wszystkich domen aplikacji w procesie przez cały czas trwania procesu.  
   
- Aby włączyć monitorowanie z kodu zarządzanego, użyj <xref:System.AppDomain.MonitoringIsEnabled%2A> właściwości.  
+ Aby włączyć monitorowanie z kodu zarządzanego, użyj właściwości <xref:System.AppDomain.MonitoringIsEnabled%2A>.  
   
  Ten element konfiguracji jest dostępny tylko w .NET Framework 4 i nowszych.  
   

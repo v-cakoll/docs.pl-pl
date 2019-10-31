@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 863fc8ce-9b8a-477e-8dd8-75c8544bb43a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fdbce5e61f2013513d2079b5a958270319d34857
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8642235cda359b849c49a35ab565397402c37d2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130514"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount — Metoda
-Ustawia liczbę pokrętła dla bieżącego [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia.  
+Ustawia liczbę obrotów dla bieżącego wystąpienia [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,32 +35,32 @@ HRESULT SetSpinCount (
   
 ## <a name="parameters"></a>Parametry  
  `dwSpinCount`  
- [in] Liczba nowych pokrętła, dla bieżącego `IHostCrst` wystąpienia.  
+ podczas Nowa liczba obrotów dla bieżącego wystąpienia `IHostCrst`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetSpinCount` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetSpinCount` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- W systemach wieloprocesorowych, jeśli sekcję krytyczną, reprezentowane przez bieżącą `IHostCrst` wystąpienia jest niedostępna, wątek uruchamia `dwSpinCount` czasy przed wywołaniem [ihostsemaphore::wait —](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) na semafor skojarzone sekcja krytycznego. Jeśli podczas operacji pokrętła zwolniony sekcję krytyczną, wątek wywołujący unika operacji oczekiwania.  
+ W systemach wieloprocesorowych, jeśli Sekcja krytyczna reprezentowana przez bieżące wystąpienie `IHostCrst` jest niedostępna, wątek wywołujący obraca się `dwSpinCount` razy przed wywołaniem [IHostSemaphore:: Poczekaj](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-wait-method.md) na semafory skojarzone z sekcją krytyczną. Jeśli Sekcja krytyczna zostanie zwolniona podczas operacji pokrętła, wątek wywołujący unika operacji oczekiwania.  
   
- Użycie `dwSpinCount` jest taka sama jak użycie parametru o takiej samej nazwie w Win32 `InitializeCriticalSectionAndSpinCount` funkcji.  
+ Użycie `dwSpinCount` jest identyczne z użyciem parametru o tej samej nazwie w funkcji Win32 `InitializeCriticalSectionAndSpinCount`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

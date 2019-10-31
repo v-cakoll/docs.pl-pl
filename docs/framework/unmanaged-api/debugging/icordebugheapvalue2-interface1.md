@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2, interfejs
+title: ICorDebugHeapValue2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fa872453ed72a3095c135aa25e81284610ad2436
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138375"
 ---
-# <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2, interfejs
+# <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 — Interfejs
 
 Rozszerzenie ICorDebugHeapValue, które zapewnia obsługę uchwytów środowiska uruchomieniowego języka wspólnego (CLR).  
   
@@ -31,7 +29,7 @@ Rozszerzenie ICorDebugHeapValue, które zapewnia obsługę uchwytów środowiska
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Tworzy dojście określonego typu dla tego `ICorDebugHeapValue2` obiektu.|  
+|[CreateHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|Tworzy dojście określonego typu dla tego obiektu `ICorDebugHeapValue2`.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -39,13 +37,13 @@ Rozszerzenie ICorDebugHeapValue, które zapewnia obsługę uchwytów środowiska
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

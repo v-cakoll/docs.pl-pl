@@ -1,5 +1,5 @@
 ---
-title: <developmentMode>, element
+title: <developmentMode> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/developmentMode
@@ -9,21 +9,19 @@ helpviewer_keywords:
 - container tags, <developmentMode> element
 - <developmentMode> element
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4a062da31740edb8f0c7a4f4db8b09800c687587
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252695"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117632"
 ---
-# <a name="developmentmode-element"></a>\<Element > developmentmode
+# <a name="developmentmode-element"></a>Element > \<developmentmode
 Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> developmentmode**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentmode >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -75,4 +73,4 @@ Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określo
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Instrukcje: Lokalizowanie zestawów za pomocą DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Instrukcje: lokalizowanie zestawów za pomocą DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

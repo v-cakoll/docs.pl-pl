@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30038d383e78c23715b844df0bee7c1124885a69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 475cc6c688262f318aa7f844b975ad69fa80bbe9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745224"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122824"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject — Metoda
-Pobiera wartości spakowanej.  
+Pobiera wartość opakowaną.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetObject (
   
 ## <a name="parameters"></a>Parametry  
  `ppObject`  
- [out] Wskaźnik na adres obiektu ICorDebugObjectValue, który reprezentuje wartości spakowanej.  
+ określoną Wskaźnik do adresu obiektu ICorDebugObjectValue, który reprezentuje opakowaną wartość.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

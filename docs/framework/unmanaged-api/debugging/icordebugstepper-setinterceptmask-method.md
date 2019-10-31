@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6245e2ae-5cc2-43ff-8cc1-71953d12113a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e88fa543eca39c14962f0dbbe8053829713401c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137585"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask — Metoda
-Ustawia wartość, która określa typy kodu, które zostaną wykorzystane do.  
+Ustawia wartość określającą typy kodu, do którego nastąpi.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT SetInterceptMask (
   
 ## <a name="parameters"></a>Parametry  
  `mask`  
- [in] Kombinacja wartości wyliczenia cordebugintercept —, który określa typy kodu.  
+ podczas Kombinacja wartości wyliczenia CorDebugIntercept —, która określa typy kodu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ustawiono bit interceptor, stepper zostanie ukończone, gdy zostanie osiągnięty danego typu przechwytuje kodu. Jeśli bit jest wyczyszczone, przechwytujący kod zostanie pominięte.  
+ Jeśli ustawiono bit dla interceptora, stepper zakończy się po napotkaniu danego typu kodu przechwycenia. Jeśli bit jest wyczyszczony, kod przechwycenia zostanie pominięty.  
   
- `SetInterceptMask` Metoda może mieć nieprzewidziane interakcji z [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (z punktu widzenia użytkownika). Na przykład jeśli widoczne tylko dla (oznacza to, — wewnętrzny) część kodu inicjowania klasy brakuje informacji o mapowaniu i nie ustawiono STOP_NO_MAPPING_INFO (zobacz [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) metody i Cordebugunmappedstop — wyliczenie), stepper przechodzi przez inicjowanie klasy. Domyślnie tylko INTERCEPT_NONE wartość `CorDebugIntercept` wyliczenie będą używane.  
+ Metoda `SetInterceptMask` może mieć nieprzewidziane interakcje z [ICorDebugStepper:: SetUnmappedStopMask —](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (z punktu widzenia użytkownika). Na przykład, jeśli jedyną widoczną częścią (czyli niewewnętrzną) fragmentu kodu inicjującego nie są informacje o mapowaniu i STOP_NO_MAPPING_INFO nie jest ustawiony (zobacz [ICorDebugStepper:: SetUnmappedStopMask —](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) i CorDebugUnmappedStop — Wyliczenie) stepper będzie przekroczyć inicjalizację klasy. Domyślnie zostanie użyta tylko wartość INTERCEPT_NONE wyliczenia `CorDebugIntercept`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

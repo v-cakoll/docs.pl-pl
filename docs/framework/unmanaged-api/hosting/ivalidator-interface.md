@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: b297e3b0-20f9-478f-b707-5e2eecb2b5b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f516bf1f19e4d4a77e2d6af834a1c3d4e34c327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a732e59d539c330f91e8665e81dc4771b40e2d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765352"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123283"
 ---
 # <a name="ivalidator-interface"></a>IValidator — Interfejs
-Udostępnia metody sprawdzania poprawności przenośnego pliku wykonywalnego obrazów (PE) i raportowanie błędów sprawdzania poprawności.  
+Zapewnia metody sprawdzania poprawności przenośnych obrazów wykonywalnych (PE) i raportowania błędów walidacji.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|Sprawdzanie poprawności|Weryfikuje określony plik PE lub Microsoft intermediate language (MSIL).|  
-|FormatEventInfo|Pobiera komunikat o błędzie odpowiadający błąd sprawdzania poprawności określonej.|  
+|legalizacj|Sprawdza poprawność określonego pliku PE lub języka pośredniego firmy Microsoft (MSIL).|  
+|FormatEventInfo —|Pobiera komunikat o błędzie odpowiadający określonemu błędowi walidacji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** IValidator.idl, IValidator.h  
+ **Nagłówek:** IValidator. idl, IValidator. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

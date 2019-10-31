@@ -8,14 +8,12 @@ helpviewer_keywords:
 - culture, assembly manifest
 - assemblies [.NET Framework], metadata
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 053726b200b73956099ff9274cc8f63f21d8fc64
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: f1913f8c41ba4a7b54f7abcdfb97400503da8ac5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107151"
 ---
 # <a name="assembly-manifest"></a>Manifest zestawu
 Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują powiązania między elementami zawartymi w zestawie. Manifest zestawu zawiera metadane zestawu. W manifeście zestawu znajdują się wszystkie metadane potrzebne do określenia wymagań w zakresie wersji zestawu i tożsamości jego zabezpieczeń, a także wszystkie metadane niezbędne do definiowania zakresu zestawu oraz rozpoznawania odwołań do zasobów i klas. Manifest zestawu może być przechowywany w pliku PE ( *exe* lub *. dll*) przy użyciu kodu języka pośredniego (MSIL) firmy Microsoft lub w autonomicznym pliku PE, który zawiera tylko informacje manifestu zestawu.  
@@ -45,7 +43,7 @@ Każdy zestaw statyczny i dynamiczny zawiera kolekcję danych, które opisują p
 |-----------------|-----------------|  
 |Nazwa zestawu|Ciąg tekstowy określający nazwę zestawu.|  
 |Numer wersji|Główny i pomocniczy numer wersji oraz numery poprawki i kompilacji. Na podstawie tych numerów środowisko uruchomieniowe języka wspólnego wymusza zasady dotyczące wersji.|  
-|Kultura|Informacje o kulturze lub języku obsługiwanym przez zestaw. Informacji tych należy używać wyłącznie w celu oznaczenia zestawu jako zestawu satelickiego zawierającego informacje specyficzne dla kultury lub języka. (Zestaw z informacjami o kulturze jest automatycznie traktowany jako satelicki).|  
+|dziedzinie|Informacje o kulturze lub języku obsługiwanym przez zestaw. Informacji tych należy używać wyłącznie w celu oznaczenia zestawu jako zestawu satelickiego zawierającego informacje specyficzne dla kultury lub języka. (Zestaw z informacjami o kulturze jest automatycznie traktowany jako satelicki).|  
 |Informacje o silnej nazwie|Klucz publiczny od wydawcy, jeśli zestawowi nadano silną nazwę.|  
 |Lista wszystkich plików w zestawie|Skrót utworzony na podstawie zawartości każdego pliku w zestawie i nazwy pliku. Wszystkie pliki tworzące zestaw muszą być w tym samym katalogu co plik zawierający manifest zestawu.|  
 |Informacje o odwołaniu do typu|Informacje, na podstawie których środowisko uruchomieniowe mapuje odwołanie do typu na plik zawierający jego deklarację i implementację. Wykorzystywane do typów eksportowanych z zestawu.|  

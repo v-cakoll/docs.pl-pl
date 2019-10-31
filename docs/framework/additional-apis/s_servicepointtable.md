@@ -1,5 +1,5 @@
 ---
-title: Pole ServicePointManager.s_ServicePointTable
+title: ServicePointManager. s_ServicePointTable, pole
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 840d068d282e3ba35df5aee6a11ff96d9e6bfdbd
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 68445f4a290b9f4fe2696e35cda391b6c0ee8f85
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301387"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119999"
 ---
-# <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable pola
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_pole ServicePoint
 
-`ServicePointManager.s_ServicePointTable` jest <xref:System.Collections.Hashtable> zawierający listę aktywnych połączeń HTTP (<xref:System.Net.ServicePoint>s) w <xref:System.AppDomain>.
+`ServicePointManager.s_ServicePointTable` to <xref:System.Collections.Hashtable>, która zawiera listę aktywnych połączeń HTTP (<xref:System.Net.ServicePoint>s) w <xref:System.AppDomain>.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> `ServicePointManager.s_ServicePointTable` Pole jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Pole `ServicePointManager.s_ServicePointTable` jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

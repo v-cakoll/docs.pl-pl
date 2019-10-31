@@ -1,20 +1,18 @@
 ---
-title: 'Instrukcje: Tworzenie otok COM'
+title: 'Porady: tworzenie otok COM'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56a88a5719fc5630baf2f31ee62fd463980661c2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123937"
 ---
-# <a name="how-to-create-com-wrappers"></a>Instrukcje: Tworzenie otok COM
+# <a name="how-to-create-com-wrappers"></a>Porady: tworzenie otok COM
 
 Otoki Component Object Model (COM) można tworzyć za pomocą funkcji programu Visual Studio 2005 lub narzędzi .NET Framework Tools Tlbimp. exe i Regasm. exe. Obie metody generują dwa typy otok COM:
 
@@ -38,10 +36,10 @@ W programie Visual Studio 2005 można dodać otokę COM jako odwołanie do proje
 
      W **Eksplorator rozwiązań**Zwróć uwagę, że składnik com jest dodawany do folderu References w projekcie.
 
-Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpocząć od zadeklarowania obiektu, takiego jak `Imports` instrukcja Visual Basic `Using` lub instrukcji dla. C#
+Teraz można napisać kod, aby uzyskać dostęp do obiektu COM. Można rozpocząć od zadeklarowania obiektu, takiego jak instrukcja `Imports` dla Visual Basic lub instrukcji `Using` dla C#.
 
 > [!NOTE]
-> Jeśli chcesz programować Microsoft Office składniki, najpierw zainstaluj [Microsoft Office podstawowych zestawów](https://go.microsoft.com/fwlink/?LinkId=50479) międzyoperacyjnych (zestawów PIA) z centrum pobierania Microsoft. W kroku 4 Wybierz najnowszą wersję biblioteki obiektów dostępną dla żądanego produktu pakietu Office, na przykład **bibliotekę obiektów programu Microsoft Word 11,0**.  
+> Jeśli chcesz programować Microsoft Office składniki, najpierw zainstaluj [Microsoft Office podstawowych zestawów międzyoperacyjnych](https://go.microsoft.com/fwlink/?LinkId=50479) (zestawów PIA) z centrum pobierania Microsoft. W kroku 4 Wybierz najnowszą wersję biblioteki obiektów dostępną dla żądanego produktu pakietu Office, na przykład **bibliotekę obiektów programu Microsoft Word 11,0**.  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Aby utworzyć oddzielną otokę środowiska uruchomieniowego przy użyciu narzędzi .NET Framework  
   

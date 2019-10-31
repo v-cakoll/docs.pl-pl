@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73d5c98500c510630b1f8d6081b654a6dbd88a5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b07029990ef529ded57bc569beff1061ad0f938
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771804"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140870"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime — Metoda
 
-Udostępnia interfejs dla preferowaną wersję środowiska uruchomieniowego języka wspólnego (CLR) na podstawie zasad hostingu, zestaw zarządzany, ciąg wersji i konfiguracji strumienia. Ta metoda bez faktycznego obciążenia lub aktywacji środowiska CLR, ale po prostu zwraca [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejs, który reprezentuje wyników zasad. Ta metoda zastępuje [getrequestedruntimeinfo —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [getrequestedruntimeversion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [corbindtoruntimehost —](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md), i [getcorrequiredversion —](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) metody.
+Udostępnia interfejs preferowanej wersji środowiska uruchomieniowego języka wspólnego (CLR) na podstawie zasad hostingu, zestawu zarządzanego, ciągu wersji i strumienia konfiguracji. Ta metoda nie ładuje ani nie aktywuje środowiska CLR, ale po prostu zwraca interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) , który reprezentuje wynik zasad. Ta metoda zastępuje metody [GetRequestedRuntimeInfo —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md), [GetRequestedRuntimeVersion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md), [CorBindToRuntimeHost —](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md), [CorBindToRuntimeByCfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)i [GetCORRequiredVersion —](../../../../docs/framework/unmanaged-api/hosting/getcorrequiredversion-function.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -48,50 +46,50 @@ HRESULT GetRequestedRuntime(
 
 |Nazwa|Opis|
 |----------|-----------------|
-|`dwPolicyFlags`|[in] Wymagane. Określa członka [metahost_policy_flags —](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) wyliczenia, reprezentujący zasad tworzenia powiązań i dowolną liczbę modyfikatorów. Tylko zasady, które jest obecnie dostępna jest [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Modyfikatory obejmują [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), i [METAHOST_POLICY_ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
-|`pwzBinary`|[in] Opcjonalnie. Określa ścieżkę pliku zestawu.|
-|`pCfgStream`|[in] Opcjonalnie. Określa plik konfiguracyjny jako <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|
-|`pwzVersion`|[out w] Opcjonalnie. Określa, czy zwraca preferowaną wersję środowiska CLR do załadowania.|
-|`pcchVersion`|[out w] Wymagane. Określa rozmiar oczekiwany `pwzVersion` jako dane wejściowe, aby uniknąć przepełnienia buforu. Jeśli `pwzVersion` ma wartość null, `pcchVersion` zawiera oczekiwanego rozmiaru `pwzVersion` podczas `GetRequestedRuntime` zwraca, aby umożliwić wstępnej alokacji; w przeciwnym razie `pcchVersion` zawiera liczbę znaków zapisywane `pwzVersion`.|
-|`pwzImageVersion`|[out] Opcjonalnie. Gdy `GetRequestedRuntime` zwraca, zawiera wersję CLR do odpowiednich [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu, który jest zwracany.|
-|`pcchImageVersion`|[out w] Opcjonalnie. Określa rozmiar `pwzImageVersion` jako dane wejściowe, aby uniknąć przepełnienia buforu. Jeśli `pwzImageVersion` ma wartość null, `pcchImageVersion` zawiera wymagany rozmiar `pwzImageVersion` podczas `GetRequestedRuntime` zwraca, aby umożliwić wstępnej alokacji.|
-|`pdwConfigFlags`|[out] Opcjonalnie. Jeśli `GetRequestedRuntime` korzysta z pliku konfiguracji w procesie powiązania, gdy zwraca ono `pdwConfigFlags` zawiera [metahost_config_flags —](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) wartość wskazującą, czy [ \<uruchamiania >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) element ma `useLegacyV2RuntimeActivationPolicy` atrybutu zestawu, a wartość atrybutu. Zastosuj [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) maski do `pdwConfigFlags` można pobrać wartości dotyczą `useLegacyV2RuntimeActivationPolicy`.|
-|`riid`|[in] Określa identyfikator interfejsu IID_ICLRRuntimeInfo żądany [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu.|
-|`ppRuntime`|[out] Gdy `GetRequestedRuntime` zwraca, zawiera wskaźnik do odpowiednich [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu.|
+|`dwPolicyFlags`|podczas Wymagane. Określa element członkowski wyliczenia [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) , reprezentujący zasady powiązań i dowolną liczbę modyfikatorów. Jedyne dostępne zasady to [METAHOST_POLICY_HIGHCOMPAT](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).<br /><br /> Modyfikatory obejmują [METAHOST_POLICY_EMULATE_EXE_LAUNCH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_APPLY_UPGRADE_POLICY](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_SHOW_ERROR_DIALOG](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md), [METAHOST_POLICY_USE_PROCESS_IMAGE_PATH](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md)i [METAHOST_POLICY_ ENSURE_SKU_SUPPORTED](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md).|
+|`pwzBinary`|podczas Obowiązkowe. Określa ścieżkę pliku zestawu.|
+|`pCfgStream`|podczas Obowiązkowe. Określa plik konfiguracji jako <xref:System.Runtime.InteropServices.ComTypes.IStream?displayProperty=nameWithType>.|
+|`pwzVersion`|[in. out] Obowiązkowe. Określa lub zwraca preferowaną wersję środowiska CLR do załadowania.|
+|`pcchVersion`|[in. out] Wymagane. Określa oczekiwany rozmiar `pwzVersion` jako dane wejściowe, aby uniknąć przekroczeń buforu. Jeśli `pwzVersion` ma wartość null, `pcchVersion` zawiera oczekiwany rozmiar `pwzVersion`, gdy `GetRequestedRuntime` zwraca wartość, aby umożliwić wstępne przydzielanie; w przeciwnym razie `pcchVersion` zawiera liczbę znaków zapisanych do `pwzVersion`.|
+|`pwzImageVersion`|określoną Obowiązkowe. Gdy `GetRequestedRuntime` zwraca, zawiera wersję środowiska CLR odpowiadającą zwróconemu interfejsowi [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .|
+|`pcchImageVersion`|[in. out] Obowiązkowe. Określa rozmiar `pwzImageVersion` jako dane wejściowe, aby uniknąć przekroczeń buforu. Jeśli `pwzImageVersion` ma wartość null, `pcchImageVersion` zawiera wymagany rozmiar `pwzImageVersion`, gdy `GetRequestedRuntime` zwraca wartość, aby umożliwić wstępne przydzielanie.|
+|`pdwConfigFlags`|określoną Obowiązkowe. Jeśli `GetRequestedRuntime` używa pliku konfiguracji podczas procesu powiązania, w przypadku powracania `pdwConfigFlags` zawiera wartość [METAHOST_CONFIG_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) , która wskazuje, czy [\<> uruchamiania](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) elementu ma ustawiony atrybut `useLegacyV2RuntimeActivationPolicy` i wartość atrybut. Zastosuj maskę [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](../../../../docs/framework/unmanaged-api/hosting/metahost-config-flags-enumeration.md) , aby `pdwConfigFlags` uzyskać wartości istotne dla `useLegacyV2RuntimeActivationPolicy`.|
+|`riid`|podczas Określa identyfikator interfejsu IID_ICLRRuntimeInfo dla żądanego interfejsu [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .|
+|`ppRuntime`|określoną Gdy `GetRequestedRuntime` zwraca, zawiera wskaźnik do odpowiedniego interfejsu [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) .|
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy metoda ta powiedzie się, ma efekt ubocznym łączenia dodatkowe flagi z bieżące flagi uruchamiania domyślnego interfejsu zwrócone środowiska uruchomieniowego, tylko wtedy, gdy co najmniej jeden z następujących elementów istnieje w usłudze stream konfiguracji w ramach `<configuration><runtime>` sekcja:
+Gdy ta metoda zakończy się pomyślnie, ma wpływ na połączenie dodatkowych flag z bieżącymi domyślnymi flagami uruchamiania zwróconego interfejsu środowiska uruchomieniowego, jeśli i tylko wtedy, gdy co najmniej jeden z następujących elementów istnieje w strumieniu konfiguracji w ramach `<configuration><runtime>` Paragraf
 
-- `<gcServer enabled="true"/>` powoduje, że `STARTUP_SERVER_GC` do ustawienia.
+- `<gcServer enabled="true"/>` powoduje, że `STARTUP_SERVER_GC` być ustawiony.
 
-- `<etwEnable enabled="true"/>` powoduje, że `STARTUP_ETW` do ustawienia.
+- `<etwEnable enabled="true"/>` powoduje, że `STARTUP_ETW` być ustawiony.
 
-- `<appDomainResourceMonitoring enabled="true"/>` powoduje, że `STARTUP_ARM` do ustawienia.
+- `<appDomainResourceMonitoring enabled="true"/>` powoduje, że `STARTUP_ARM` być ustawiony.
 
-Wynikowy domyślne `STARTUP_FLAGS` wartość jest bitową kombinacją OR wartości, które są konfigurowane z powyższej listy z użyciem flag domyślnego uruchamiania.
+Wartość domyślna `STARTUP_FLAGS` jest wartością bitową lub kombinacją wartości, które są ustawione na podstawie poprzedniej listy z domyślnymi flagami uruchamiania.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.
+Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.
 
 |HRESULT|Opis|
 |-------------|-----------------|
 |S_OK|Metoda została ukończona pomyślnie.|
 |E_POINTER|`pwzVersion` nie ma wartości null i `pcchVersion` ma wartość null.<br /><br /> —lub—<br /><br /> `pwzImageVersion` nie ma wartości null i `pcchImageVersion` ma wartość null.|
-|E_INVALIDARG|`dwPolicyFlags` nie określono `METAHOST_POLICY_HIGHCOMPAT`.|
-|ERROR_INSUFFICIENT_BUFFER|Pamięć przydzielona do `pwzVersion` jest niewystarczająca.<br /><br /> —lub—<br /><br /> Pamięć przydzielona do `pwzImageVersion` jest niewystarczająca.|
-|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` obejmuje METAHOST_POLICY_APPLY_UPGRADE_POLICY i wartościami `pwzVersion` i `pcchVersion` mają wartość null.|
+|E_INVALIDARG|`dwPolicyFlags` nie określa `METAHOST_POLICY_HIGHCOMPAT`.|
+|ERROR_INSUFFICIENT_BUFFER|Pamięć przypisana do `pwzVersion` jest niewystarczająca.<br /><br /> —lub—<br /><br /> Pamięć przypisana do `pwzImageVersion` jest niewystarczająca.|
+|CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` zawiera METAHOST_POLICY_APPLY_UPGRADE_POLICY, a oba `pwzVersion` i `pcchVersion` mają wartość null.|
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** MetaHost.h
+**Nagłówek:** Obiekt ServiceHost. h
 
-**Biblioteka:** Dołączony jako zasób w MSCorEE.dll
+**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

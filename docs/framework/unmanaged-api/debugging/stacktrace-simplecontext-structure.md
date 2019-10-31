@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1cd3c34fc292e4a050fa8a75078283e34425fc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752503"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139129"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext — Struktura
-Udostępnia prosty kontekst, który można użyć zamiast pełnego `CONTEXT` struktury.  
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext — Struktura
+Udostępnia prosty kontekst, który może być używany zamiast pełnej struktury `CONTEXT`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,19 +40,19 @@ struct StackTrace_SimpleContext
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`StackOffset`|Wskaźnik stosu lub wskaźnik stosu enter (ESP) na x86 platform.|  
-|`FrameOffset`|Przesunięcie ramki lub zarejestruj EBP na x86 platform.|  
-|`InstructionOffset`|Wskaźnik instrukcji lub enter wskaźnik instrukcji (EIP) na x86 platform.|  
+|`StackOffset`|Wskaźnik stosu lub wskaźnik wprowadzania stosu (ESP) na platformach x86.|  
+|`FrameOffset`|Przesunięcie ramki lub rejestrowanie EBP na platformach x86.|  
+|`InstructionOffset`|Wskaźnik instrukcji lub wskaźnik wprowadzania instrukcji (EIP) na platformach x86.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ funkcje śledzenia stosu zazwyczaj trzeba zwrócić tylko adres, przesunięcie ramki i adresu stosu, można opcjonalnie używać `SimpleContext` struktury zamiast dużą `CONTEXT` struktury.  
+ Ponieważ funkcje śledzenia stosu zwykle muszą zwracać tylko adres, przesunięcie ramki i adres stosu, można opcjonalnie użyć struktury `SimpleContext` zamiast dużego `CONTEXT`j struktury.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** SOS_Stacktrace.h  
+ **Nagłówek:** SOS_Stacktrace. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781150"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106234"
 ---
-# <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS — Wyliczenie
-Zawiera wartości, które wskazują, jakie informacje dotyczące środowisko uruchomieniowe języka wspólnego (CLR) ma zostać zwrócony.  
+# <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS — Wyliczenie
+Zawiera wartości wskazujące, które informacje o środowisku uruchomieniowym języka wspólnego (CLR) powinny zostać zwrócone.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,17 +45,17 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Wskazuje, że informacje o katalogu nie powinny być uwzględnione.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Wskazuje, że informacje o wersji nie powinny być uwzględnione.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Wskazuje, że nie być wyświetlane okno dialogowe błędu w przypadku awarii.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Oznacza to, że efekty wywoływania [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) funkcji przy użyciu flagi SEM_FAILCRITICALERRORS powinna zostać zastąpiona. Oznacza to, że okno dialogowe Instalacja powinna być pokazywana w przypadku awarii, a nie są pomijane.|  
-|`RUNTIME_INFO_REQUEST_AMD64`|Wskazuje żądanie dotyczące informacji na temat AMD-64-compatible wersję środowiska uruchomieniowego.|  
-|`RUNTIME_INFO_REQUEST_IA64`|Wskazuje żądanie dotyczące informacji na temat IA-64-compatible wersję środowiska uruchomieniowego.|  
-|`RUNTIME_INFO_REQUEST_X86`|Wskazuje żądanie informacji o x86 zgodną wersję środowiska uruchomieniowego.|  
-|`RUNTIME_INFO_UPGRADE_VERSION`|Wskazuje, informacje o wersji uaktualnienia należy dołączyć.|  
+|`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Wskazuje, że informacje o katalogu nie powinny być uwzględniane.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Wskazuje, że informacja o wersji nie powinna być uwzględniona.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Wskazuje, że w przypadku błędu nie powinno być wyświetlane okno dialogowe błędu.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Wskazuje, że efekty wywołania funkcji [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) z flagą SEM_FAILCRITICALERRORS powinny zostać zastąpione. Oznacza to, że w przypadku awarii zamiast pomijania należy wyświetlić okno dialogowe instalacji.|  
+|`RUNTIME_INFO_REQUEST_AMD64`|Wskazuje żądanie informacji o wersji środowiska uruchomieniowego zgodnej z AMD-64.|  
+|`RUNTIME_INFO_REQUEST_IA64`|Wskazuje żądanie informacji o wersji środowiska uruchomieniowego zgodnej z systemem IA-64.|  
+|`RUNTIME_INFO_REQUEST_X86`|Wskazuje żądanie informacji o wersji środowiska uruchomieniowego zgodnej z architekturą x86.|  
+|`RUNTIME_INFO_UPGRADE_VERSION`|Wskazuje, że należy uwzględnić informacje o uaktualnianiu wersji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Następujące flagi architektura platformy może być określony tylko jeden w danym momencie i nie można połączyć:  
+ Poniższe flagi architektury platformy można określić tylko po jednej naraz i nie można ich łączyć:  
   
 - RUNTIME_INFO_REQUEST_IA64  
   
@@ -68,11 +66,11 @@ typedef enum {
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

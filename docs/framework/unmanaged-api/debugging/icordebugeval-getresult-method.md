@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50dbb9af-58a1-41f4-b56d-3da20011884f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b12ba5ad5c85643d1f4c91585cf7abca210d22bd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 52bfe669d3b078657916554255a11cecfc07d484
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085093"
 ---
 # <a name="icordebugevalgetresult-method"></a>ICorDebugEval::GetResult — Metoda
 Pobiera wyniki tej oceny.  
@@ -37,18 +35,18 @@ HRESULT GetResult (
   
 ## <a name="parameters"></a>Parametry  
  `ppResult`  
- [out] Wskaźnik na adres obiektu ICorDebugValue, który reprezentuje wyniki tej oceny, jeśli oceny zakończy się normalnie.  
+ określoną Wskaźnik na adres obiektu ICorDebugValue, który reprezentuje wyniki tej oceny, jeśli Ocena zakończy się normalnie.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetResult` Metoda jest prawidłowa tylko w przypadku, po zakończeniu okresu ewaluacyjnego.  
+ Metoda `GetResult` jest prawidłowa tylko po zakończeniu obliczania.  
   
- Jeśli ocena zakończy się normalnie, `ppResult` określa wyniki. Jeśli kończy się z powodu wyjątku, wynik jest zgłoszony wyjątek. Jeśli ocena dla nowego obiektu, wynik jest odwołanie do nowego obiektu.  
+ Jeśli Ocena kończy się normalnie, `ppResult` określa wyniki. Jeśli zakończy się wyjątek, wynikiem jest zgłaszany wyjątek. Jeśli Ocena dotyczyła nowego obiektu, wynik jest odwołaniem do nowego obiektu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

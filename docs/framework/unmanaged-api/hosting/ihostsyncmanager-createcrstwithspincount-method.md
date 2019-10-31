@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7280fa8c-3639-4abf-91cb-bc343da742d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 16fcc631e7e734e1bce4566f31d209a8433fbfdf
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 632b8d43ed459d489825dc796d39864e2ed15ec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139410"
 ---
 # <a name="ihostsyncmanagercreatecrstwithspincount-method"></a>IHostSyncManager::CreateCrstWithSpinCount — Metoda
-Tworzy obiekt sekcję krytyczną z liczbą pokrętła do synchronizacji.  
+Tworzy obiekt sekcji krytycznej z liczbą wirowania do synchronizacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,34 +36,34 @@ HRESULT CreateCrstWithSpinCount (
   
 ## <a name="parameters"></a>Parametry  
  `dwSpinCount`  
- [in] Określa liczbę pokrętła dla obiektu sekcję krytyczną.  
+ podczas Określa liczbę obrotów dla obiektu sekcji krytycznej.  
   
  `ppCrst`  
- [out] Wskaźnik na adres [ihostcrst —](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) wystąpienia lub wartość null, jeśli nie można utworzyć sekcję krytyczną.  
+ określoną Wskaźnik do adresu wystąpienia [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) lub wartość null, jeśli nie można utworzyć sekcji krytycznej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`CreateCrstWithSpinCount` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Nie ma wystarczającej ilości dostępnej pamięci na utworzyć żądany sekcję krytyczną.|  
+|S_OK|`CreateCrstWithSpinCount` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby utworzyć żądaną sekcję krytyczną.|  
   
 ## <a name="remarks"></a>Uwagi  
- Liczba pokrętła jest używana tylko w systemie wieloprocesorowym. Liczba pokrętła określa liczbę przypadków, gdy wątek wywołujący musi pokrętła, przed wykonaniem operacji oczekiwania na semafor, który jest skojarzony z niedostępny sekcję krytyczną. Jeśli podczas operacji pokrętła zwolniony sekcję krytyczną, wątek wywołujący unika operacji oczekiwania. `CreateCrstWithSpinCount` odzwierciedla Win32 `InitializeCriticalSectionAndSpinCount` funkcji.  
+ Liczba pokrętła jest używana tylko w systemie wieloprocesorowym. Liczba obrotów określa, ile razy wątek wywołujący musi się obrócić przed wykonaniem operacji oczekiwania dla semafora skojarzonego z niedostępną sekcją krytyczną. Jeśli Sekcja krytyczna zostanie zwolniona podczas operacji pokrętła, wątek wywołujący unika operacji oczekiwania. `CreateCrstWithSpinCount` odzwierciedla funkcję Win32 `InitializeCriticalSectionAndSpinCount`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

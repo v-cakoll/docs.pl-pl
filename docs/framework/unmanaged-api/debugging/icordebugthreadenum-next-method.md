@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f967c93d-9a7f-4aaf-99a1-a1317899ff3f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e9e33e65b1cdeabe203c67ee4d4f259e2f7ac99
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c455706b0d644d2444e9fbdf49c5a5d4f5295a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122389"
 ---
 # <a name="icordebugthreadenumnext-method"></a>ICorDebugThreadEnum::Next — Metoda
-Pobiera liczbę określonego wystąpienia ICorDebugThread z wyliczenia, zaczynając od bieżącej pozycji.  
+Pobiera liczbę określonych wystąpień ICorDebugThread z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba `ICorDebugThread` wystąpienia mają zostać pobrane.  
+ podczas Liczba wystąpień `ICorDebugThread` do pobrania.  
   
  `threads`  
- [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugThread` obiekt, który reprezentuje wątku.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugThread`, który reprezentuje wątek.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugThread` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
+ określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugThread`. Ta wartość może być równa null, jeśli `celt` to jeden.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

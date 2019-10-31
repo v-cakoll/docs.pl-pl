@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f5fab4ef0d67ab6b86510bd4b2f814d9456213fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a93d700c9c398076d87156cd2eb9c6d0d08cccfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124488"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly — Metoda
-Pobiera odwołanie do zestawu, który nie odwołuje się [iclrassemblyreferencelist —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) zwrócone z [ihostassemblymanager::getnonhoststoreassemblies —](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje `ProvideAssembly` dla każdego zestawu, który nie jest widoczna na liście.  
+Pobiera odwołanie do zestawu, który nie jest przywoływany przez [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md) , który jest zwracany z [IHostAssemblyManager:: GetNonHostStoreAssemblies —](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md). Wywołania środowiska uruchomieniowego języka wspólnego (CLR) `ProvideAssembly` dla każdego zestawu, który nie znajduje się na liście.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,44 +39,44 @@ HRESULT ProvideAssembly (
   
 ## <a name="parameters"></a>Parametry  
  `pBindInfo`  
- [in] Wskaźnik do [assemblybindinfo —](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) wystąpieniu, używany przez hosta do ustalenia niektórych parametrów powiązania, w tym obecność lub brak żadnych zasad przechowywania wersji i zestawu, które można powiązać.  
+ podczas Wskaźnik do wystąpienia [AssemblyBindInfo —](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md) , który jest używany przez hosta w celu określenia niektórych charakterystyk powiązań, w tym obecności lub braku jakichkolwiek zasad dotyczących wersji oraz zestawu, z którym ma zostać utworzone powiązanie.  
   
  `pAssemblyId`  
- [out] Wskaźnik na unikatowy identyfikator dla żądanego zestawu, w tym `IStream`.  
+ określoną Wskaźnik do unikatowego identyfikatora żądanego zestawu dla tego `IStream`.  
   
  `pHostContext`  
- [out] Wskaźnik do dane specyficzne dla hosta, który służy do określania dowód żądany zestaw bez konieczności platformy wywołania wywołania. `pHostContext` odnosi się do <xref:System.Reflection.Assembly.HostContext%2A> właściwość zarządzaną <xref:System.Reflection.Assembly> klasy.  
+ określoną Wskaźnik do danych specyficznych dla hosta, który jest używany do określenia dowodu żądanego zestawu bez konieczności wywołania wywołania platformy. `pHostContext` odpowiada właściwości <xref:System.Reflection.Assembly.HostContext%2A> klasy zarządzanej <xref:System.Reflection.Assembly>.  
   
  `ppStmAssemblyImage`  
- [out] Wskaźnik na adres `IStream` zawierający obraz przenośny plik wykonywalny (PE), aby zostać załadowane, lub wartość null, jeśli nie można odnaleźć zestawu.  
+ określoną Wskaźnik do adresu `IStream`, który zawiera obraz przenośnego pliku wykonywalnego (PE), który ma zostać załadowany lub ma wartość null, jeśli nie można znaleźć zestawu.  
   
  `ppStmPDB`  
- [out] Wskaźnik na adres `IStream` który zawiera informacje o debugowaniu (PDB) programu, lub wartość null, jeśli nie można odnaleźć pliku .pdb.  
+ określoną Wskaźnik na adres `IStream`, który zawiera informacje o debugowaniu programu (PDB), lub wartość null, jeśli nie można znaleźć pliku. pdb.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ProvideAssembly` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|COR_E_FILENOTFOUND (0X80070002)|Nie można odnaleźć żądanego zestawu.|  
-|E_NOT_SUFFICIENT_BUFFER|Rozmiar buforu określony przez `pAssemblyId` nie jest wystarczająco duży, aby pomieścić identyfikator, który chce hosta, aby zwrócić.|  
+|S_OK|`ProvideAssembly` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|COR_E_FILENOTFOUND (0x80070002)|Nie można zlokalizować żądanego zestawu.|  
+|E_NOT_SUFFICIENT_BUFFER|Rozmiar buforu określony przez `pAssemblyId` nie jest wystarczająco duży, aby pomieścić identyfikator, który chce zwrócić host.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zwracana wartość tożsamości dla `pAssemblyId` określonej przez hosta. Identyfikatory muszą być unikatowe w obrębie okres istnienia procesu. Środowisko CLR używa tej wartości jako unikatowy identyfikator dla strumienia. Sprawdza każdej wartości w odniesieniu do wartości dla `pAssemblyId` zwracane przez inne wywołania do `ProvideAssembly`. Jeśli host zwraca takie same `pAssemblyId` wartość dla innego `IStream`, środowisko CLR sprawdza, czy zawartość strumieniu ma już zamapowana. Jeśli tak, środowisko uruchomieniowe ładuje istniejącą kopię obrazu zamiast nowe mapowanie.  
+ Wartość tożsamości zwrócona dla `pAssemblyId` jest określona przez hosta. Identyfikatory muszą być unikatowe w okresie istnienia procesu. Środowisko CLR używa tej wartości jako unikatowego identyfikatora strumienia. Sprawdza każdą wartość w odniesieniu do wartości `pAssemblyId` zwracanych przez inne wywołania do `ProvideAssembly`. Jeśli host zwróci tę samą `pAssemblyId` wartość dla innego `IStream`, środowisko CLR sprawdzi, czy zawartość tego strumienia została już zamapowana. Jeśli tak, środowisko uruchomieniowe ładuje istniejącą kopię obrazu zamiast mapowania nowej.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

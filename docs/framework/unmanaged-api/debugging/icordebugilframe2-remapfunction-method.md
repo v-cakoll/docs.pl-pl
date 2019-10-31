@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd639ba0-f77b-426d-9ff6-f92706840348
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 75004f646c01897ef3e3016b073220ad33a0d925
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 152cdb13a9f517a7a9c29c04a056661bb2edb45e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967578"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090451"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction — Metoda
 Ponownie mapuje edytowaną funkcję poprzez określenie nowego przesunięcia języka pośredniego firmy Microsoft (MSIL)  
@@ -42,22 +40,22 @@ HRESULT RemapFunction (
  Jest on odpowiedzialny za zagwarantowanie ważności tej wartości. Na przykład przesunięcie MSIL jest nieprawidłowe, jeśli znajduje się poza granicami funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Po edytowaniu funkcji ramki debuger może wywołać `RemapFunction` metodę, aby dokonać zamiany w najnowszej wersji funkcji ramki, aby można ją było wykonać. Wykonanie kodu rozpocznie się w danym przesunięciu MSIL.  
+ Po edytowaniu funkcji ramki debuger może wywołać metodę `RemapFunction`, aby dokonać zamiany w najnowszej wersji funkcji ramki, aby można ją było wykonać. Wykonanie kodu rozpocznie się w danym przesunięciu MSIL.  
   
 > [!NOTE]
-> Wywołanie `RemapFunction`, takie jak wywołanie [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), natychmiast unieważnia wszystkie interfejsy debugowania, które są związane z generowaniem śladu stosu dla wątku. Te interfejsy obejmują [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame i ICorDebugNativeFrame.  
+> Wywoływanie `RemapFunction`, takich jak wywołanie [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), natychmiast unieważnia wszystkie interfejsy debugowania, które są związane z generowaniem śladu stosu dla wątku. Te interfejsy obejmują [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame i ICorDebugNativeFrame.  
   
- `RemapFunction` Metodę można wywołać tylko w kontekście bieżącej ramki i tylko w jednym z następujących przypadków:  
+ Metodę `RemapFunction` można wywołać tylko w kontekście bieżącej ramki i tylko w jednym z następujących przypadków:  
   
 - Po odebraniu wywołania zwrotnego [ICorDebugManagedCallback2:: FunctionRemapOpportunity —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) , które nie było jeszcze kontynuowane.  
   
 - Mimo że wykonywanie kodu zostało zatrzymane z powodu zdarzenia [ICorDebugManagedCallback:: EditAndContinueRemap —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) dla tej ramki.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

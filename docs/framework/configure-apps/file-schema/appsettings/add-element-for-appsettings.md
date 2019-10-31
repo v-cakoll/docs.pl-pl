@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09864ea8f174d0c23f26db49f8cc0d43608522a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927745"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119343"
 ---
-# <a name="add-element-for-appsettings"></a>\<Dodaj > element dla \<AppSettings >
+# <a name="add-element-for-appsettings"></a>\<dodać > elementu \<appSettings >
 
 Dodaje niestandardowe ustawienie aplikacji.
 
 [ **\<> konfiguracji**](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<dodaj >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,14 +36,14 @@ Dodaje niestandardowe ustawienie aplikacji.
 
 |           | Opis |
 | --------- | ----------- |
-| **Klucz**   | Atrybut wymagany.<br><br>Określa nazwę klucza do dodania. |
+| **głównych**   | Atrybut wymagany.<br><br>Określa nazwę klucza do dodania. |
 | **value** | Atrybut wymagany.<br><br>Określa wartość klucza do dodania. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji. |
+| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -59,7 +59,7 @@ Poniższy przykład pokazuje, jak dodać niestandardowe ustawienie konfiguracji 
 </appSettings>
 ```
 
-Poniższy przykład używa elementu, `<add>` aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:
+Poniższy przykład używa elementu `<add>`, aby zdefiniować dwa ustawienia zgodności w aplikacji ASP.NET:
 
 ```xml
 <appSettings>

@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest._HttpResponse Field
+title: HttpWebRequest. _HttpResponse, pole
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d993021ccb87ccafb5f6f2fc4c6c7c288288adae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301024"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120078"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest. \_HttpResponse pola
+# <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_pole HttpResponse
 
-`HttpWebRequest._HttpResponse` jest <xref:System.Net.HttpWebResponse> zawierającego szczegółowe informacje o odpowiedzi HTTP z żądania HTTP. Może być `null` do momentu otrzymania odpowiedzi HTTP.
+`HttpWebRequest._HttpResponse` to <xref:System.Net.HttpWebResponse> zawierający szczegóły odpowiedzi HTTP z żądania HTTP. Może być `null` do momentu otrzymania odpowiedzi HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ internal HttpWebResponse _HttpResponse
 ```
 
 > [!WARNING]
-> `HttpWebRequest._HttpResponse` Pole jest wewnętrzny i nie są one przeznaczone do użycia bezpośrednio w kodzie.
+> Pole `HttpWebRequest._HttpResponse` jest wewnętrzne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

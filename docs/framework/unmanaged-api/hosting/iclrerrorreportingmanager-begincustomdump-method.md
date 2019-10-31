@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93424a87-ba13-4fa1-b4dc-69d44437b7ae
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98eebd489792f57f7f98d3596d4f25be2e847441
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7153ac214ab99228ac9c59032aa8248d06d14c3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966278"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129295"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump — Metoda
 Określa konfigurację niestandardowych zrzutów sterty dla raportowania błędów.  
@@ -43,7 +41,7 @@ HRESULT BeginCustomDump (
  podczas Wartość [ECustomDumpFlavor —](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpflavor-enumeration.md) , która wskazuje rodzaj zrzutu sterty, na którym ma zostać skompilowany zrzut sterty niestandardowej.  
   
  `dwNumItems`  
- podczas Długość `items` tablicy. Jeśli `dwFlavor` wartość nie jest DUMP_FLAVOR_Mini `dwNumItems` , powinna być równa zero.  
+ podczas Długość tablicy `items`. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `dwNumItems` powinna być równa zero.  
   
  `items`  
  podczas Tablica wystąpień [CustomDumpItem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) , określająca elementy, które mają zostać dodane do mini zrzutu. Jeśli `dwFlavor` nie jest DUMP_FLAVOR_Mini, `items` powinna mieć wartość null.  
@@ -63,19 +61,19 @@ HRESULT BeginCustomDump (
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `BeginCustomDump` Metoda ustawia niestandardową konfigurację zrzutu sterty. Metoda [EndCustomDump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) czyści konfigurację zrzutu sterty niestandardowej i zwalnia wszystkie skojarzone Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu sterty.  
+ Metoda `BeginCustomDump` ustawia niestandardową konfigurację zrzutu sterty. Metoda [EndCustomDump —](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-endcustomdump-method.md) czyści konfigurację zrzutu sterty niestandardowej i zwalnia wszystkie skojarzone Stany. Powinien być wywoływany po zakończeniu niestandardowego zrzutu sterty.  
   
 > [!IMPORTANT]
-> Niepowodzenie wywołania `EndCustomDump` powoduje przeciek pamięci.  
+> Nie można wywołać `EndCustomDump` powoduje przeciek pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

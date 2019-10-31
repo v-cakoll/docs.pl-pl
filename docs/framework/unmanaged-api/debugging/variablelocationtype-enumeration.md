@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752454"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139120"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType, wyliczenie
-Wskazuje typ lokalizacji natywnych zmienną.  
+Wskazuje typ lokalizacji natywnej zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,20 +40,20 @@ typedef enum VariableLocationType
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`VLT_REGISTER`|Zmienna jest w rejestrze.|  
-|`VLT_REGISTER_RELATIVE`|Zmienna znajduje się w lokalizacji pamięci względem rejestru.|  
-|`VLT_INVALID`|Zmienna nie są przechowywane w rejestrze lub lokalizacji pamięci względem rejestru.|  
+|`VLT_REGISTER_RELATIVE`|Zmienna znajduje się w lokalizacji pamięci względnej do rejestracji.|  
+|`VLT_INVALID`|Zmienna nie jest przechowywana w rejestrze ani w lokalizacji pamięci względnej dla rejestru.|  
   
 ## <a name="remarks"></a>Uwagi  
- Członek `VariableLocationType` wyliczenia jest zwracany przez [ICorDebugVariableHome::GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) metody.  
+ Element członkowski wyliczenia `VariableLocationType` jest zwracany przez metodę [ICorDebugVariableHome:: Getlocationtype](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,23 +1,21 @@
 ---
 title: Wprowadzenie — C# Przewodnik
-description: Zapoznaj się z krótkimi samouczkami, dzięki którym szybko nauczysz się podstawowych pojęć z zakresu C# i tworzenia aplikacji .NET Core.
+description: Znajdź krótkie, proste samouczki, które umożliwiają szybką C# naukę najważniejszych koncepcji i pisanie aplikacji platformy .NET Core.
 helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b921db9abb65a1d470ada86784ecba1b649c9f09
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182438"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099954"
 ---
-# <a name="get-started-with-c"></a>Wprowadzenie do języka C\#
+# <a name="get-started-with-c"></a>Wprowadzenie do\# C
 
-Ta sekcja zawiera krótki, prosty samouczek, dzięki któremu szybko stworzysz aplikację przy użyciu języka C# i .NET Core. Znajdziesz tu tematy wprowadzające do Visual Studio 2017 i Visual Studio Code. W tych artykułach założono pewne środowisko programistyczne. Jeśli jesteś nowym sposobem programowania, wypróbuj nasze [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) interaktywnych samouczków.
+Ta sekcja zawiera krótkie, proste samouczki, które umożliwiają szybkie tworzenie aplikacji przy C# użyciu programu i platformy .NET Core. Istnieją tematy dotyczące uruchamiania programu Visual Studio 2017 i Visual Studio Code. W tych artykułach założono pewne środowisko programistyczne. Jeśli jesteś nowym sposobem programowania, wypróbuj nasze [wprowadzenie do C# ](../tutorials/intro-to-csharp/index.md) interaktywnych samouczków.
 
 Dostępne są następujące tematy:
 
@@ -29,27 +27,27 @@ Dostępne są następujące tematy:
 
    Program Visual Studio umożliwia wykonywanie kodu, kompilowanie, uruchamianie, debugowanie, profilowanie i publikowanie aplikacji z poziomu zintegrowanego środowiska projektowego dla systemu Windows lub Mac.
 
-   Temat ten umożliwi Ci utworzenie i uruchomienie prostej aplikacji Hello World, a następnie zmodyfikowanie jej do formy nieco bardziej interaktywnej. Kiedy już utworzysz i uruchomisz swoją aplikację, możesz też dowiedzieć się, jak ją [debugować](../../core/tutorials/debugging-with-visual-studio.md) oraz [opublikować](../../core/tutorials/publishing-with-visual-studio.md), tak aby można było ją uruchomić na dowolnej platformie obsługiwanej przez .NET Core.
+   Temat umożliwia utworzenie i uruchomienie prostej aplikacji Hello world, a następnie zmodyfikowanie jej w celu uruchomienia nieco bardziej interaktywnej aplikacji Hello world. Po zakończeniu kompilowania i uruchamiania aplikacji można także dowiedzieć się, jak ją [debugować](../../core/tutorials/debugging-with-visual-studio.md) i jak ją [opublikować](../../core/tutorials/publishing-with-visual-studio.md) , aby można ją było uruchomić na dowolnej platformie obsługiwanej przez platformę .NET Core.
 
-- [Tworzenie biblioteki klas przy użyciu języka C# i platformy .NET Core w programie Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
+- [Tworzenie biblioteki klas w języku C# i na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/library-with-visual-studio.md)
 
-   Biblioteka klas pozwala definiować typy i składniki typów, które mogą być wywoływane z innej aplikacji. Ten temat pokaże Ci, jak utworzyć bibliotekę z jedną metodą, która sprawdza, czy ciąg znaków rozpoczyna się wielką literą. Po utworzeniu biblioteki możesz utworzyć [test jednostkowy](../../core/tutorials/testing-library-with-visual-studio.md), aby upewnić się, że metoda działa zgodnie z oczekiwaniami, a następnie możesz udostępnić ją dla [aplikacji, które chcą z niej korzystać](../../core/tutorials/consuming-library-with-visual-studio.md).
+   Biblioteka klas umożliwia definiowanie typów i składowych typu, które mogą być wywoływane z innej aplikacji. Ten temat umożliwia utworzenie biblioteki klas z pojedynczą metodą, która określa, czy ciąg rozpoczyna się od wielkiej litery. Po zakończeniu tworzenia biblioteki można utworzyć [test jednostkowy](../../core/tutorials/testing-library-with-visual-studio.md) , aby upewnić się, że działa zgodnie z oczekiwaniami, a następnie udostępnić go [aplikacjom, które chcą korzystać z niej](../../core/tutorials/consuming-library-with-visual-studio.md).
 
 - [Wprowadzenie do języka C# i programu Visual Studio Code](../../core/tutorials/with-visual-studio-code.md)
 
-   Visual Studio Code to darmowy edytor kodu zoptymalizowany do tworzenia i debugowania nowoczesnych aplikacji webowych i chmurowych. Obsługuje IntelliSense i jest dostępny w systemach Linux, macOS i Windows.
+   Visual Studio Code to bezpłatny edytor kodu zoptymalizowany pod kątem kompilowania i debugowania nowoczesnych aplikacji internetowych i w chmurze. Obsługuje ona technologię IntelliSense i jest dostępna dla systemów Linux, macOS i Windows.
 
-   W tym temacie opisano tworzenie i uruchamianie prostej aplikacji Hello World przy użyciu programu Visual Studio Code i platformy .NET Core.
+   W tym temacie przedstawiono sposób tworzenia i uruchamiania prostej aplikacji Hello world z Visual Studio Code i .NET Core.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
 - [Przewodnik programowania w języku C#](../programming-guide/index.md)
 
-    Zawiera informacje o pojęciach programistycznych w C# oraz opisuje sposób wykonywania różnych zadań w tym języku.
+    Zawiera informacje dotyczące C# pojęć związanych z programowaniem i opisuje sposób wykonywania różnych zadań C#w programie.
 
-- [Dokumentacja języka C#](../language-reference/index.md)
+- [C#Odwoła](../language-reference/index.md)
 
-    Zawiera szczegółową dokumentację o słowach kluczowych, operatorach, dyrektywach preprocesora, opcjach kompilatora oraz błędach i ostrzeżeniach w czasie kompilacji.
+    Zawiera szczegółowe informacje referencyjne C# na temat słów kluczowych, operatorów, dyrektyw preprocesora, opcji kompilatora i błędów i ostrzeżeń kompilatora.
 
 - [Przewodniki](../walkthroughs.md)
 

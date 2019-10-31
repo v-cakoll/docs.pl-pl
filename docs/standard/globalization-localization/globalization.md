@@ -13,20 +13,18 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce2f127858305a96b358c1661b98a359ae565f57
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393121"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120894"
 ---
 # <a name="globalization"></a>Globalizacja
 
 Globalizacja obejmuje projektowanie i opracowywanie gotowej do użytku aplikacji, która obsługuje zlokalizowane interfejsy i dane regionalne dla użytkowników w wielu kulturach. Przed rozpoczęciem fazy projektowania należy określić, które kultury będą obsługiwane przez aplikację. Mimo że aplikacja odwołuje się do pojedynczej kultury lub regionu jako domyślnego, można projektować i pisać, aby można ją było łatwo rozszerzyć do użytkowników w innych kulturach lub regionach.
 
-Wszyscy deweloperzy mają założenia dotyczące interfejsów użytkownika i danych, które są tworzone przez nasze kultury. Na przykład w przypadku programisty w języku angielskim w Stany Zjednoczone, serializacji danych daty i godziny jako ciągu w formacie `MM/dd/yyyy hh:mm:ss` wydaje się być idealnie uzasadnione. Jednak deserializacja tego ciągu w systemie w innej kulturze prawdopodobnie zgłosi wyjątek <xref:System.FormatException> lub wygeneruje niedokładne dane. Globalizacja pozwala nam zidentyfikować takie założenia specyficzne dla kultury i upewnić się, że nie wpływają one na projekt lub kod aplikacji.
+Wszyscy deweloperzy mają założenia dotyczące interfejsów użytkownika i danych, które są tworzone przez nasze kultury. Na przykład w przypadku programisty w języku angielskim w Stany Zjednoczone, serializacja danych daty i godziny jako ciągu w formacie `MM/dd/yyyy hh:mm:ss` wydaje się doskonale uzasadnione. Jednak deserializacja tego ciągu w systemie w innej kulturze prawdopodobnie zgłosi wyjątek <xref:System.FormatException> lub wygeneruje niedokładne dane. Globalizacja pozwala nam zidentyfikować takie założenia specyficzne dla kultury i upewnić się, że nie wpływają one na projekt lub kod aplikacji.
 
 W tym artykule omówiono niektóre główne problemy, które należy wziąć pod uwagę, oraz najlepsze rozwiązania, które można wykonać podczas obsługi ciągów, wartości daty i godziny oraz wartości liczbowych w aplikacji globalnej.
 
@@ -57,7 +55,7 @@ Nawet jeśli tworzysz aplikację, która jest przeznaczona dla pojedynczej kultu
 
 - W pliku zasobów można uwzględnić zasoby niebędące ciągami, takie jak obrazy lub dane binarne, a nie przechowywać ich w osobnym pliku autonomicznym, dzięki czemu można je łatwo pobrać.
 
-Korzystanie z plików zasobów ma szczególne zalety, jeśli tworzysz zlokalizowaną aplikację. Podczas wdrażania zasobów w zestawach satelickich środowisko uruchomieniowe języka wspólnego automatycznie wybiera zasób odpowiedni dla kultury w oparciu o bieżącą kulturę interfejsu użytkownika określoną przez właściwość <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. O ile podajesz odpowiedni zasób specyficzny dla kultury i poprawnie utworzysz wystąpienie obiektu <xref:System.Resources.ResourceManager> lub użyj klasy zasobów o jednoznacznie określonym typie, środowisko uruchomieniowe obsługuje szczegóły pobierania odpowiednich zasobów.
+Korzystanie z plików zasobów ma szczególne zalety, jeśli tworzysz zlokalizowaną aplikację. Podczas wdrażania zasobów w zestawach satelickich środowisko uruchomieniowe języka wspólnego automatycznie wybiera zasób odpowiedni dla kultury w oparciu o bieżącą kulturę interfejsu użytkownika określoną przez właściwość <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>. O ile nie podajesz odpowiedniego zasobu specyficznego dla kultury i poprawnie utworzysz wystąpienie obiektu <xref:System.Resources.ResourceManager> lub użyj klasy zasobów o jednoznacznie określonym typie, środowisko uruchomieniowe obsługuje szczegóły pobierania odpowiednich zasobów.
 
 Aby uzyskać więcej informacji na temat tworzenia plików zasobów, zobacz [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md). Aby uzyskać informacje na temat tworzenia i wdrażania zestawów satelickich, zobacz [Tworzenie zestawów satelickich](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md) i [pakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md).
 
@@ -68,24 +66,24 @@ Jeśli to możliwe, należy obsługiwać ciągi jako całe ciągi zamiast obsłu
 > [!TIP]
 > Klasy <xref:System.Globalization.StringInfo> można użyć do pracy z elementami tekstowymi, a nie pojedynczymi znakami w ciągu.
 
-W przypadku wyszukiwania i porównywania ciągów częstą pomyłką jest traktowanie ciągu jako kolekcji znaków, z których każdy jest reprezentowany przez obiekt <xref:System.Char>. W rzeczywistości pojedynczy znak może być tworzony przez jeden, dwa lub więcej obiektów <xref:System.Char>. Takie znaki są najczęściej używane w ciągach z kultur, których alfabety składają się z znaków spoza zakresu znaków łacińskich Unicode Basic (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks wielkiej litery A ze znakiem akcentu słabego (U + 00C0) w ciągu. Jednak ten znak może być reprezentowany na dwa różne sposoby: jako jedna Jednostka kodu (U + 00C0) lub jako znak złożony (dwie jednostki kodu: U + 0021 i U + 007E). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa obiekty <xref:System.Char>, U + 0021 i U + 007E. Przykładowy kod wywołuje przeciążenia <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>, aby znaleźć pozycję tego znaku w wystąpieniu ciągu, ale te zwracają różne wyniki. Pierwsze wywołanie metody ma argument <xref:System.Char>; wykonuje porównanie porządkowe i w związku z tym nie może znaleźć dopasowania. Drugie wywołanie ma argument <xref:System.String>; wykonuje ono porównanie zależne od kultury i w związku z tym znajduje dopasowanie.
+W przypadku wyszukiwania i porównywania ciągów częstą pomyłką jest traktowanie ciągu jako kolekcji znaków, z których każdy jest reprezentowany przez obiekt <xref:System.Char>. W rzeczywistości pojedynczy znak może być tworzony przez jeden, dwa lub więcej obiektów <xref:System.Char>. Takie znaki są najczęściej używane w ciągach z kultur, których alfabety składają się z znaków spoza zakresu znaków łacińskich Unicode Basic (U + 0021 do U + 007E). Poniższy przykład próbuje znaleźć indeks wielkiej litery A ze znakiem akcentu słabego (U + 00C0) w ciągu. Jednak ten znak może być reprezentowany na dwa różne sposoby: jako jedna Jednostka kodu (U + 00C0) lub jako znak złożony (dwie jednostki kodu: U + 0021 i U + 007E). W tym przypadku znak jest reprezentowany w wystąpieniu ciągu przez dwa <xref:System.Char> obiektów, U + 0021 i U + 007E. Przykładowy kod wywołuje przeciążenia <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> i <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType>, aby znaleźć pozycję tego znaku w wystąpieniu ciągu, ale zwracają różne wyniki. Pierwsze wywołanie metody ma <xref:System.Char> argument; wykonuje porównanie porządkowe i w związku z tym nie może znaleźć dopasowania. Drugie wywołanie ma <xref:System.String> argument; wykonuje ono porównanie zależne od kultury i w związku z tym znajduje dopasowanie.
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
 
-Można uniknąć niektórych niejednoznaczności tego przykładu (wywołania dwóch podobnych przeciążeń metody zwracają różne wyniki) przez wywołanie przeciążenia, które zawiera <xref:System.StringComparison> parametru, takich jak <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> lub <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.
+Można uniknąć występowania niektórych niejednoznaczności tego przykładu (wywołania dwóch podobnych przeciążeń metody zwracają różne wyniki) przez wywołanie przeciążenia, które zawiera parametr <xref:System.StringComparison>, taki jak <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> lub metoda <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType>.
 
 Jednak wyszukiwania nie zawsze są zależne od kultury. Jeśli celem wyszukiwania jest podjęcie decyzji dotyczącej zabezpieczeń lub zezwolenie na dostęp do pewnego zasobu lub uniemożliwienie dostępu do niego, porównywanie powinno być porządkowe, zgodnie z opisem w następnej sekcji.
 
 ### <a name="test-strings-for-equality"></a>Ciągi testowe dla równości
 
-Jeśli chcesz przetestować dwa ciągi pod kątem równości zamiast określić sposób ich porównania w kolejności sortowania, użyj metody <xref:System.String.Equals%2A?displayProperty=nameWithType> zamiast metody porównywania ciągów, takiej jak <xref:System.String.Compare%2A?displayProperty=nameWithType> lub <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.
+Jeśli chcesz przetestować dwa ciągi pod kątem równości, a nie określić, jak porównują w kolejności sortowania, użyj metody <xref:System.String.Equals%2A?displayProperty=nameWithType> zamiast metody porównania ciągów, takiej jak <xref:System.String.Compare%2A?displayProperty=nameWithType> lub <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>.
 
-Porównania dla równości są zwykle wykonywane w celu zapewnienia warunkowego dostępu do określonego zasobu. Na przykład można przeprowadzić porównanie równości, aby zweryfikować hasło lub potwierdzić, że plik istnieje. Takie porównania nielingwistyczne powinny zawsze być liczbami porządkowymi, a nie z uwzględnieniem kultury. Ogólnie rzecz biorąc, należy wywołać metodę wystąpienia <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> lub metodę static <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> z wartością <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> dla ciągów, takich jak hasła, i wartość <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dla ciągów, takich jak nazwy plików lub identyfikatory URI.
+Porównania dla równości są zwykle wykonywane w celu zapewnienia warunkowego dostępu do określonego zasobu. Na przykład można przeprowadzić porównanie równości, aby zweryfikować hasło lub potwierdzić, że plik istnieje. Takie porównania nielingwistyczne powinny zawsze być liczbami porządkowymi, a nie z uwzględnieniem kultury. Ogólnie rzecz biorąc, należy wywołać metodę <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> wystąpienia lub metodę static <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> z wartością <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> dla ciągów, takich jak hasła, oraz wartości <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dla ciągów, takich jak nazwy plików lub identyfikatory URI.
 
 Porównania dla równości czasami obejmują wyszukiwania lub porównania podciągów, a nie wywołania metody <xref:System.String.Equals%2A?displayProperty=nameWithType>. W niektórych przypadkach możesz użyć wyszukiwania podciągu, aby określić, czy ten podciąg ma być innym ciągiem. Jeśli przeznaczeniem tego porównania jest inne niż językowe, wyszukiwanie powinno również mieć wartość porządkową, a nie jest zależne od kultury.
 
-Poniższy przykład ilustruje niebezpieczeństwo wyszukiwania z uwzględnieniem kultury w przypadku danych niejęzykowych. Metoda `AccessesFileSystem` zaprojektowano w celu zabronienia dostępu do systemu plików dla identyfikatorów URI rozpoczynających się od podciągu "FILE". W tym celu wykonuje porównanie bez uwzględniania wielkości liter względem początku identyfikatora URI z ciągiem "FILE". Ponieważ identyfikator URI, który uzyskuje dostęp do systemu plików, może rozpoczynać się od "FILE:" lub "File:", niejawne założenie to "i" (U + 0069) jest zawsze małymi literami "I" (U + 0049). Jednak w tureckim i azerbejdżańskim, Wielka wersja "i" to "i" (U + 0130). Ze względu na to rozbieżność porównanie wrażliwe na kulturę umożliwia dostęp do systemu plików, gdy powinien być zabroniony.
+Poniższy przykład ilustruje niebezpieczeństwo wyszukiwania z uwzględnieniem kultury w przypadku danych niejęzykowych. Metoda `AccessesFileSystem` jest zaprojektowana tak, aby uniemożliwić dostęp do systemu plików dla identyfikatorów URI zaczynających się od podciągu "FILE". W tym celu wykonuje porównanie bez uwzględniania wielkości liter względem początku identyfikatora URI z ciągiem "FILE". Ponieważ identyfikator URI, który uzyskuje dostęp do systemu plików, może rozpoczynać się od "FILE:" lub "File:", niejawne założenie to "i" (U + 0069) jest zawsze małymi literami "I" (U + 0049). Jednak w tureckim i azerbejdżańskim, Wielka wersja "i" to "i" (U + 0130). Ze względu na to rozbieżność porównanie wrażliwe na kulturę umożliwia dostęp do systemu plików, gdy powinien być zabroniony.
 
 [!code-csharp[Conceptual.Globalization#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/equals1.cs#12)]
 [!code-vb[Conceptual.Globalization#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/equals1.vb#12)]
@@ -102,7 +100,7 @@ Zazwyczaj uporządkowane ciągi, które mają być wyświetlane w interfejsie u�
 [!code-csharp[Conceptual.Globalization#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sort1.cs#14)]
 [!code-vb[Conceptual.Globalization#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sort1.vb#14)]
 
-Porównywanie ciągów zależnych od kultury jest definiowane przez obiekt <xref:System.Globalization.CompareInfo>, który jest zwracany przez właściwość <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> każdej kultury. Porównania ciągów uwzględniających kulturę, które używają przeciążeń metody <xref:System.String.Compare%2A?displayProperty=nameWithType> również używają obiektu <xref:System.Globalization.CompareInfo>.
+Porównywanie ciągów zależnych od kultury jest definiowane przez obiekt <xref:System.Globalization.CompareInfo>, który jest zwracany przez właściwość <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> każdej kultury. Porównania ciągów uwzględniających kulturę, które używają przeciążeń metody <xref:System.String.Compare%2A?displayProperty=nameWithType>, również używają obiektu <xref:System.Globalization.CompareInfo>.
 
 Platforma .NET używa tabel do wykonywania sortowania z uwzględnieniem kultury danych w postaci ciągów. Zawartość tych tabel, która zawiera dane dotyczące sortowania i normalizacji ciągów, jest określana na podstawie wersji standardu Unicode zaimplementowanej przez określoną wersję programu .NET. W poniższej tabeli wymieniono wersje standardu Unicode zaimplementowane przez określone wersje .NET Framework i platformy .NET Core. Należy zauważyć, że ta lista obsługiwanych wersji Unicode ma zastosowanie do porównywania znaków i sortowania. nie dotyczy klasyfikacji znaków Unicode według kategorii. Aby uzyskać więcej informacji, zobacz sekcję "ciągi i standard Unicode" w artykule <xref:System.String>.
 
@@ -114,13 +112,13 @@ Platforma .NET używa tabel do wykonywania sortowania z uwzględnieniem kultury 
 |Program .NET Framework 4|Wszystkie systemy operacyjne|Unicode 5,0|
 |.NET Framework 4,5 i nowsze w systemie Windows 7|Unicode 5,0|
 |.NET Framework 4,5 i nowsze w systemach operacyjnych Windows 8 i nowszych|6\.3.0 Unicode|
-|.NET core (wszystkie wersje)|Zależy od wersji standardu Unicode obsługiwanego przez podstawowy system operacyjny.|
+|.NET Core (wszystkie wersje)|Zależy od wersji standardu Unicode obsługiwanego przez podstawowy system operacyjny.|
 
-Począwszy od .NET Framework 4,5 i we wszystkich wersjach programu .NET Core, Porównywanie ciągów i sortowanie zależy od systemu operacyjnego. .NET Framework 4,5 i późniejsze działania w systemie Windows 7 pobiera dane z własnych tabel, które implementują standard Unicode 5,0. .NET Framework 4,5 i późniejsze uruchomione w systemie Windows 8 i nowszych pobiera dane z tabel systemu operacyjnego, które implementują standard Unicode 6,3. W przypadku platformy .NET Core obsługiwana wersja standardu Unicode zależy od bazowego systemu operacyjnego. W przypadku serializacji posortowanych danych z uwzględnieniem kultury można użyć klasy <xref:System.Globalization.SortVersion>, aby określić, kiedy dane serializowane muszą być sortowane, aby były spójne z programem .NET i porządkiem sortowania systemu operacyjnego. Aby zapoznać się z przykładem, zobacz temat klasy <xref:System.Globalization.SortVersion>.
+Począwszy od .NET Framework 4,5 i we wszystkich wersjach programu .NET Core, Porównywanie ciągów i sortowanie zależy od systemu operacyjnego. .NET Framework 4,5 i późniejsze działania w systemie Windows 7 pobiera dane z własnych tabel, które implementują standard Unicode 5,0. .NET Framework 4,5 i późniejsze uruchomione w systemie Windows 8 i nowszych pobiera dane z tabel systemu operacyjnego, które implementują standard Unicode 6,3. W przypadku platformy .NET Core obsługiwana wersja standardu Unicode zależy od bazowego systemu operacyjnego. W przypadku serializacji posortowanych danych z uwzględnieniem kultury można użyć klasy <xref:System.Globalization.SortVersion>, aby określić, kiedy dane serializowane muszą być sortowane, aby były spójne z programem .NET i porządkiem sortowania systemu operacyjnego. Aby zapoznać się z przykładem, zobacz temat Klasa <xref:System.Globalization.SortVersion>.
 
-Jeśli aplikacja wykonuje obszerne sortowanie danych ciągu, można współpracować z klasą <xref:System.Globalization.SortKey> do porównywania ciągów. Klucz sortowania odzwierciedla wagi sortowania specyficzne dla kultury, łącznie z alfabetyczną, wielkością liter i znakami diakrytycznych określonego ciągu. Ponieważ porównania przy użyciu kluczy sortowania są binarne, są one szybsze niż porównania, które używają obiektu <xref:System.Globalization.CompareInfo> jawnie lub jawnie. Można utworzyć klucz sortowania specyficzny dla kultury dla określonego ciągu, przekazując ciąg do metody <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>.
+Jeśli aplikacja wykonuje obszerne sortowanie danych ciągu, można współpracować z klasą <xref:System.Globalization.SortKey> do porównywania ciągów. Klucz sortowania odzwierciedla wagi sortowania specyficzne dla kultury, łącznie z alfabetyczną, wielkością liter i znakami diakrytycznych określonego ciągu. Ponieważ porównania przy użyciu kluczy sortowania są binarne, są one szybsze niż porównania, które używają obiektu <xref:System.Globalization.CompareInfo> albo niejawnie, albo jawnie. Można utworzyć klucz sortowania specyficzny dla kultury dla określonego ciągu, przekazując ciąg do metody <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType>.
 
-Poniższy przykład jest podobny do poprzedniego przykładu. Jednak zamiast wywołania metody <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType>, która niejawnie wywołuje metodę <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>, definiuje implementację <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, która porównuje klucze sortowania, które tworzy wystąpienie i przekazuje do metody <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType>.
+Poniższy przykład jest podobny do poprzedniego przykładu. Jednak zamiast wywołania metody <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType>, która niejawnie wywołuje metodę <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType>, definiuje implementację <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>, która porównuje klucze sortowania, które tworzy wystąpienia i przekazuje do metody <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType>.
 
 [!code-csharp[Conceptual.Globalization#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sortkey1.cs#15)]
 [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]
@@ -135,7 +133,7 @@ Sposób obsługi wartości daty i godziny zależy od tego, czy są wyświetlane 
 
 ### <a name="display-dates-and-times"></a>Wyświetlanie dat i godzin
 
-Zazwyczaj gdy daty i godziny są wyświetlane w interfejsie użytkownika, należy użyć Konwencji formatowania kultury użytkownika, która jest definiowana przez właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i obiekt <xref:System.Globalization.DateTimeFormatInfo> zwracany przez właściwość `CultureInfo.CurrentCulture.DateTimeFormat`. Konwencje formatowania bieżącej kultury są automatycznie używane podczas formatowania daty za pomocą dowolnej z następujących metod:
+Zazwyczaj gdy daty i godziny są wyświetlane w interfejsie użytkownika, należy użyć Konwencji formatowania kultury użytkownika, która jest definiowana przez właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i przez obiekt <xref:System.Globalization.DateTimeFormatInfo> zwracany przez właściwość `CultureInfo.CurrentCulture.DateTimeFormat`. Konwencje formatowania bieżącej kultury są automatycznie używane podczas formatowania daty za pomocą dowolnej z następujących metod:
 
 - Bezparametrowa Metoda <xref:System.DateTime.ToString?displayProperty=nameWithType>
 
@@ -143,7 +141,7 @@ Zazwyczaj gdy daty i godziny są wyświetlane w interfejsie użytkownika, należ
 
 - Bezparametrowa Metoda <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>
 
-- @No__t-0, który zawiera ciąg formatu
+- <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>, która zawiera ciąg formatu
 
 - Funkcja [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) , gdy jest używana z datami
 
@@ -167,14 +165,14 @@ Można uniknąć tego problemu na jeden z trzech sposobów:
 
 - Zapisz ciąg przy użyciu Konwencji formatowania niezmiennej kultury.
 
-Poniższy przykład ilustruje ostatnią metodę. Używa Konwencji formatowania kultury niezmiennej zwróconej przez właściwość static <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.
+Poniższy przykład ilustruje ostatnią metodę. Używa Konwencji formatowania niezmiennej kultury zwracanej przez właściwość static <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.
 
 [!code-csharp[Conceptual.Globalization#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/dates3.cs#4)]
 [!code-vb[Conceptual.Globalization#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/dates3.vb#4)]
 
 ### <a name="serialization-and-time-zone-awareness"></a>Serializacja i rozpoznawanie strefy czasowej
 
-Wartość daty i godziny może mieć wiele interpretacji od czasu ogólnego ("sklepy otwarte w dniu 2 stycznia 2013, o godzinie 9:00 rano") do określonego momentu ("Data urodzenia: 2 stycznia 2013 6:32:00 rano "). Gdy wartość czasu reprezentuje określony moment w czasie i przywracasz ją z serializowanej wartości, należy się upewnić, że reprezentuje ona ten sam moment w czasie, niezależnie od lokalizacji geograficznej użytkownika lub strefy czasowej.
+Wartość daty i godziny może mieć wiele interpretacji, od ogólnego czasu ("sklepy otwarte w dniu 2 stycznia 2013, o godzinie 9:00 rano") do określonego momentu ("Data urodzenia: 2 stycznia 2013 6:32:00)"). Gdy wartość czasu reprezentuje określony moment w czasie i przywracasz ją z serializowanej wartości, należy się upewnić, że reprezentuje ona ten sam moment w czasie, niezależnie od lokalizacji geograficznej użytkownika lub strefy czasowej.
 
 Poniższy przykład ilustruje ten problem. Zapisuje pojedynczą lokalną wartość daty i godziny jako ciąg w trzech [standardowych formatach](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) ("G" dla daty ogólnej godziny długiej, "s" do sortowania daty/godziny, i "o" dla daty/godziny rundy), jak również w formacie binarnym.
 
@@ -275,15 +273,15 @@ Obsługa liczb zależy od tego, czy są wyświetlane w interfejsie użytkownika,
 
 ### <a name="display-numeric-values"></a>Wyświetl wartości liczbowe
 
-Zazwyczaj gdy liczby są wyświetlane w interfejsie użytkownika, należy użyć Konwencji formatowania kultury użytkownika, która jest definiowana przez właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i obiekt <xref:System.Globalization.NumberFormatInfo> zwracany przez właściwość `CultureInfo.CurrentCulture.NumberFormat`. Konwencje formatowania bieżącej kultury są automatycznie używane podczas formatowania daty za pomocą dowolnej z następujących metod:
+Zazwyczaj gdy liczby są wyświetlane w interfejsie użytkownika, należy użyć Konwencji formatowania kultury użytkownika, która jest definiowana przez właściwość <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i przez obiekt <xref:System.Globalization.NumberFormatInfo> zwracany przez właściwość `CultureInfo.CurrentCulture.NumberFormat`. Konwencje formatowania bieżącej kultury są automatycznie używane podczas formatowania daty za pomocą dowolnej z następujących metod:
 
 - Bezparametrowa Metoda `ToString` dowolnego typu liczbowego
 
-- Metoda `ToString(String)` dowolnego typu liczbowego, który zawiera ciąg formatu jako argument
+- Metoda `ToString(String)` dowolnego typu liczbowego, która zawiera ciąg formatu jako argument
 
 - Funkcja [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md) , gdy jest używana z wartościami liczbowymi
 
-W poniższym przykładzie przedstawiono średnią temperaturę miesięcznie w Paryżu, Francja. Najpierw ustawia bieżącą kulturę na francuski (Francja) przed wyświetleniem danych, a następnie ustawia ją na angielski (Stany Zjednoczone). W każdym przypadku nazwy miesięcy i temperatury są wyświetlane w formacie, który jest odpowiedni dla tej kultury. Należy zauważyć, że dwie kultury używają różnych separatorów dziesiętnych w wartości temperatury. Należy również zauważyć, że w przykładzie jest stosowany niestandardowy ciąg formatu daty i godziny "MMMM", aby wyświetlić pełną nazwę miesiąca i przydzielić odpowiednią ilość miejsca dla nazwy miesiąca w ciągu wynikowym przez określenie długości najdłuższej nazwy miesiąca w <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> AR promień.
+W poniższym przykładzie przedstawiono średnią temperaturę miesięcznie w Paryżu, Francja. Najpierw ustawia bieżącą kulturę na francuski (Francja) przed wyświetleniem danych, a następnie ustawia ją na angielski (Stany Zjednoczone). W każdym przypadku nazwy miesięcy i temperatury są wyświetlane w formacie, który jest odpowiedni dla tej kultury. Należy zauważyć, że dwie kultury używają różnych separatorów dziesiętnych w wartości temperatury. Należy również zauważyć, że w przykładzie jest stosowany niestandardowy ciąg formatu daty i godziny "MMMM", aby wyświetlić pełną nazwę miesiąca i przydzielić odpowiednią ilość miejsca dla nazwy miesiąca w ciągu wynikowym przez określenie długości najdłuższej nazwy miesiąca w <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A?displayProperty=nameWithType> a rray.
 
 [!code-csharp[Conceptual.Globalization#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/numbers1.cs#5)]
 [!code-vb[Conceptual.Globalization#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/numbers1.vb#5)]
@@ -313,7 +311,7 @@ Serializowanie wartości walutowych jest szczególnym przypadkiem. Ponieważ war
 [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
 [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]
 
-Zamiast tego należy serializować wartość liczbową wraz z niektórymi informacjami kulturowymi, takimi jak nazwa kultury, tak aby wartość i jej symbol waluty mogły być deserializowane niezależnie od bieżącej kultury. Poniższy przykład robi, definiując strukturę `CurrencyValue` z dwoma elementami członkowskimi: wartość <xref:System.Decimal> i nazwę kultury, do której należy wartość.
+Zamiast tego należy serializować wartość liczbową wraz z niektórymi informacjami kulturowymi, takimi jak nazwa kultury, tak aby wartość i jej symbol waluty mogły być deserializowane niezależnie od bieżącej kultury. Poniższy przykład robi, definiując strukturę `CurrencyValue` z dwoma elementami członkowskimi: wartość <xref:System.Decimal> i nazwa kultury, do której należy wartość.
 
 [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
 [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]
@@ -324,13 +322,13 @@ W programie .NET Klasa <xref:System.Globalization.CultureInfo> reprezentuje okre
 
 - Właściwość <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.CompareInfo>, który zawiera informacje o tym, jak kultura porówna i porządkuje ciągi.
 
-- Właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.DateTimeFormatInfo>, który zapewnia informacje specyficzne dla kultury używane do formatowania danych daty i godziny.
+- Właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.DateTimeFormatInfo>, który zawiera informacje specyficzne dla kultury używane do formatowania danych daty i godziny.
 
-- Właściwość <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.NumberFormatInfo>, który zapewnia informacje specyficzne dla kultury używane do formatowania danych liczbowych.
+- Właściwość <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.NumberFormatInfo>, który zawiera informacje specyficzne dla kultury używane do formatowania danych liczbowych.
 
 - Właściwość <xref:System.Globalization.CultureInfo.TextInfo%2A?displayProperty=nameWithType> zwraca obiekt <xref:System.Globalization.TextInfo>, który zawiera informacje o systemie zapisu kultury.
 
-Ogólnie rzecz biorąc nie należy wprowadzać żadnych założeń dotyczących wartości określonych właściwości <xref:System.Globalization.CultureInfo> i powiązanych z nimi obiektów. Zamiast tego należy wyświetlić dane specyficzne dla kultury, które mogą ulec zmianie, z następujących powodów:
+Ogólnie rzecz biorąc nie należy wprowadzać żadnych założeń dotyczących wartości określonych <xref:System.Globalization.CultureInfo> właściwości i ich powiązanych obiektów. Zamiast tego należy wyświetlić dane specyficzne dla kultury, które mogą ulec zmianie, z następujących powodów:
 
 - Poszczególne wartości właściwości podlegają zmianom i poprawkom w miarę upływu czasu, gdy dane są korygowane, będą dostępne lepsze dane lub zmiany w konwencjach specyficznych dla kultury.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Anulowanie bloku przepływu danych'
+title: 'Porady: Anulowanie bloku przepływu danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,91 +10,89 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b95f0a3535716c4a01dae52abe38eb850f080cf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140094"
 ---
-# <a name="how-to-cancel-a-dataflow-block"></a>Instrukcje: Anulowanie bloku przepływu danych
-W tym dokumencie pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie użyto Windows Forms, aby pokazać, gdzie elementy robocze są aktywne w potoku przepływu danych, a także skutki anulowania.  
+# <a name="how-to-cancel-a-dataflow-block"></a>Porady: Anulowanie bloku przepływu danych
+W tym dokumencie przedstawiono sposób włączania anulowania w aplikacji. Ten przykład używa Windows Forms, aby pokazać, gdzie elementy robocze są aktywne w potoku przepływu danych, a także wpływ anulowania.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
-## <a name="to-create-the-windows-forms-application"></a>Aby utworzyć Windows Forms aplikacji  
+## <a name="to-create-the-windows-forms-application"></a>Aby utworzyć aplikację Windows Forms  
   
-1. Tworzenie języka C# lub Visual Basic **aplikacja interfejsu Windows Forms** projektu. W poniższych krokach projekt nazwano `CancellationWinForms`.  
+1. Utwórz projekt C# **aplikacji Windows Forms** lub Visual Basic. W poniższych krokach projekt ma nazwę `CancellationWinForms`.  
   
-2. Projektant formularzy dla tego formularza Form1.cs (Form1.vb dla języka Visual Basic), Dodaj <xref:System.Windows.Forms.ToolStrip> kontroli.  
+2. W projektancie formularzy dla formularza głównego Form1.cs (Form1. vb dla Visual Basic) Dodaj kontrolkę <xref:System.Windows.Forms.ToolStrip>.  
   
-3. Dodaj <xref:System.Windows.Forms.ToolStripButton> kontrolę <xref:System.Windows.Forms.ToolStrip> kontroli. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości **dodać elementy robocze**.  
+3. Dodaj kontrolkę <xref:System.Windows.Forms.ToolStripButton> do kontrolki <xref:System.Windows.Forms.ToolStrip>. Ustaw właściwość <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> na <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i Właściwość <xref:System.Windows.Forms.ToolStripItem.Text%2A>, aby **dodać elementy robocze**.  
   
-4. Dodaj drugą <xref:System.Windows.Forms.ToolStripButton> kontrolę <xref:System.Windows.Forms.ToolStrip> kontroli. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości **anulować**i <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> właściwość `False`.  
+4. Dodaj drugą kontrolkę <xref:System.Windows.Forms.ToolStripButton> do kontrolki <xref:System.Windows.Forms.ToolStrip>. Ustaw właściwość <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> na <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>, właściwość <xref:System.Windows.Forms.ToolStripItem.Text%2A> na wartość **Cancel**i Właściwość <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> na `False`.  
   
-5. Dodaj cztery <xref:System.Windows.Forms.ToolStripProgressBar> obiekty do <xref:System.Windows.Forms.ToolStrip> kontroli.  
+5. Dodaj cztery <xref:System.Windows.Forms.ToolStripProgressBar> obiektów do kontrolki <xref:System.Windows.Forms.ToolStrip>.  
   
 ## <a name="creating-the-dataflow-pipeline"></a>Tworzenie potoku przepływu danych  
- W tej sekcji opisano tworzenie potoku przepływu danych, która przetwarza elementy robocze i aktualizuje paski postępu.  
+ W tej sekcji opisano sposób tworzenia potoku przepływu danych, który przetwarza elementy robocze i aktualizuje paski postępu.  
   
-### <a name="to-create-the-dataflow-pipeline"></a>Tworzenie potoku przepływu danych  
+### <a name="to-create-the-dataflow-pipeline"></a>Aby utworzyć potok przepływu danych  
   
-1. W projekcie należy dodać odwołanie do System.Threading.Tasks.Dataflow.dll.  
+1. W projekcie Dodaj odwołanie do elementu System. Threading. Tasks. przepływu danych. dll.  
   
-2. Upewnij się, że Form1.cs (Form1.vb dla języka Visual Basic) zawiera następujące `using` instrukcji (`Imports` w języku Visual Basic).  
+2. Upewnij się, że Form1.cs (Form1. vb dla Visual Basic) zawiera następujące instrukcje `using` (`Imports` w Visual Basic).  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
   
-3. Dodaj `WorkItem` klasy jako wewnętrzny typ `Form1` klasy.  
+3. Dodaj klasę `WorkItem` jako typ wewnętrzny klasy `Form1`.  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#2)]
      [!code-vb[TPLDataflow_CancellationWinForms#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#2)]  
   
-4. Dodaj następujące elementy członkowskie danych do `Form1` klasy.  
+4. Dodaj następujące elementy członkowskie danych do klasy `Form1`.  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#3)]
      [!code-vb[TPLDataflow_CancellationWinForms#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#3)]  
   
-5. Dodaj następującą metodę `CreatePipeline`, `Form1` klasy.  
+5. Dodaj następującą metodę, `CreatePipeline`, do klasy `Form1`.  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#4)]
      [!code-vb[TPLDataflow_CancellationWinForms#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#4)]  
   
- Ponieważ `incrementProgress` i `decrementProgress` przepływu danych blokuje działanie w interfejsie użytkownika, ważne jest, czy w wątku interfejsu użytkownika są wykonywane następujące akcje. Aby to osiągnąć, podczas konstruowania tych obiektów, każda oferuje <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions> obiekt, który ma <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> właściwością <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> Metoda tworzy <xref:System.Threading.Tasks.TaskScheduler> obiektu, który wykonuje pracę w bieżącym kontekście synchronizacji. Ponieważ `Form1` Konstruktor jest wywoływana z wątku interfejsu użytkownika, akcje w przypadku `incrementProgress` i `decrementProgress` bloków przepływu danych również działać w wątku interfejsu użytkownika.  
+ Ponieważ `incrementProgress` i `decrementProgress` bloków przepływu danych działają w interfejsie użytkownika, ważne jest, aby te akcje miały miejsce w wątku interfejsu użytkownika. Aby to osiągnąć, podczas konstruowania obiekty każdy udostępnia obiekt <xref:System.Threading.Tasks.Dataflow.ExecutionDataflowBlockOptions>, który ma właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.TaskScheduler%2A> ustawioną na <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType>. Metoda <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> tworzy obiekt <xref:System.Threading.Tasks.TaskScheduler>, który wykonuje prace w bieżącym kontekście synchronizacji. Ponieważ Konstruktor `Form1` jest wywoływany z wątku interfejsu użytkownika, akcje dla bloków `incrementProgress` i `decrementProgress` przepływu danych również są uruchamiane w wątku interfejsu użytkownika.  
   
- W tym przykładzie <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość podczas jego tworzy elementy członkowskie w potoku. Ponieważ <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> właściwość trwale anuluje wykonanie bloku przepływu danych, cały potok musi zostać ponownie utworzona po użytkownik anuluje operację i chce dodać więcej elementów roboczych do potoku. Aby uzyskać przykład demonstrujący alternatywny sposób anulowanie bloku przepływu danych, dzięki czemu mogą być wykonywane inne prace, po operacji zostało anulowane, zobacz [instruktażu: Korzystanie z przepływu danych w Windows Forms aplikacji](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Ten przykład ustawia właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> podczas konstrukcji elementów członkowskich potoku. Ponieważ właściwość <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> trwale anuluje wykonywanie bloku przepływu danych, cały potok musi zostać utworzony ponownie, gdy użytkownik anuluje operację, a następnie chce dodać więcej elementów roboczych do potoku. Przykład demonstrujący alternatywny sposób anulowania bloku przepływu danych, dzięki czemu można wykonać inną pracę po anulowaniu operacji, zobacz [Przewodnik: używanie przepływu danych w aplikacji Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Łączenie potoku przepływu danych z interfejsu użytkownika  
- W tej sekcji opisano sposób podłączania potoku przepływu danych do interfejsu użytkownika. Tworzenie potoku i dodawanie elementów roboczych do potoku, które są kontrolowane przez program obsługi zdarzeń dla **dodać elementy robocze** przycisku. Anulowanie jest inicjowane przez **anulować** przycisku. Gdy użytkownik kliknie jeden z tych przycisków, odpowiednie działanie jest inicjowane w sposób asynchroniczny.  
+## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Łączenie potoku przepływu danych z interfejsem użytkownika  
+ W tej sekcji opisano sposób łączenia potoku przepływu danych z interfejsem użytkownika. Tworzenie potoku i Dodawanie elementów roboczych do potoku jest kontrolowane przez program obsługi zdarzeń dla przycisku **Dodaj elementy robocze** . Anulowanie jest inicjowane przez przycisk **Anuluj** . Gdy użytkownik kliknie jeden z tych przycisków, odpowiednia akcja zostanie zainicjowana w sposób asynchroniczny.  
   
-### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Aby połączyć potoku przepływu danych do interfejsu użytkownika  
+### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Aby połączyć potok przepływu danych z interfejsem użytkownika  
   
-1. W Projektancie formularza dla tego formularza, należy utworzyć program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenie **dodać elementy robocze** przycisku.  
+1. W projektancie formularzy dla formularza głównego Utwórz procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Dodaj elementy robocze** .  
   
-2. Implementowanie <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenie **dodać elementy robocze** przycisku.  
+2. Zaimplementuj zdarzenie <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Dodaj elementy robocze** .  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3. W Projektancie formularza dla tego formularza, należy utworzyć program obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> program obsługi zdarzeń dla **anulować** przycisku.  
+3. W projektancie formularzy dla formularza głównego Utwórz procedurę obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> obsługi zdarzeń dla przycisku **Anuluj** .  
   
-4. Implementowanie <xref:System.Windows.Forms.ToolStripItem.Click> program obsługi zdarzeń dla **anulować** przycisku.  
+4. Zaimplementuj procedurę obsługi zdarzeń <xref:System.Windows.Forms.ToolStripItem.Click> dla przycisku **Anuluj** .  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje kompletny kod dla Form1.cs (Form1.vb dla języka Visual Basic).  
+ Poniższy przykład pokazuje kompletny kod dla Form1.cs (Form1. vb dla Visual Basic).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  
   
- Na poniższej ilustracji przedstawiono uruchomionej aplikacji.  
+ Na poniższej ilustracji przedstawiono działającą aplikację.  
   
- ![Windows Forms aplikacji](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Aplikacja Windows Forms](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
 ## <a name="see-also"></a>Zobacz także
 

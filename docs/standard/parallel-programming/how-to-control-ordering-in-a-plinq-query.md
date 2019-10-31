@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ'
+title: 'Porady: sterowanie szeregowaniem w zapytaniu PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to control ordering
 ms.assetid: c67eccc7-004d-4b2f-987e-919cbbd62ef7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7416f2f9c200d687d3f2c1f14b01cafdb48f85b1
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: d38c039fa99433d9476d62c1e96dff7e306fd766
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123121"
 ---
-# <a name="how-to-control-ordering-in-a-plinq-query"></a>Instrukcje: Sterowanie szeregowaniem w zapytaniu PLINQ
-W poniższych przykładach pokazano, jak kontrolować porządkowanie w kwerendzie PLINQ przy użyciu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> metody rozszerzenia.  
+# <a name="how-to-control-ordering-in-a-plinq-query"></a>Porady: sterowanie szeregowaniem w zapytaniu PLINQ
+W poniższych przykładach pokazano, jak kontrolować porządkowanie w kwerendzie PLINQ przy użyciu metody rozszerzenia <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
 > [!WARNING]
 > Te przykłady są przeznaczone głównie do zademonstrowania użycia i mogą być uruchamiane szybciej niż równoważne zapytania sekwencyjne LINQ to Objects.  

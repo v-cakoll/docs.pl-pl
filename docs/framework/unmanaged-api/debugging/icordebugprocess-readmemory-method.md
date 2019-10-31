@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d74da502492065dbffb5e5499581263760636c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139360"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory — Metoda
 Odczytuje określony obszar pamięci dla tego procesu.  
@@ -39,29 +37,29 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która określa adres bazowy pamięci do odczytu.  
+ podczas Wartość `CORDB_ADDRESS`, która określa podstawowy adres pamięci, która ma zostać odczytana.  
   
  `size`  
- [in] Liczba bajtów, które mają zostać odczytana z pamięci.  
+ podczas Liczba bajtów do odczytu z pamięci.  
   
  `buffer`  
- [out] Bufor, który odbiera zawartość pamięci.  
+ określoną Bufor, który odbiera zawartość pamięci.  
   
  `read`  
- [out] Wskaźnik do liczby bajtów przesłanych do określonego bufora.  
+ określoną Wskaźnik do liczby bajtów transferowanych do określonego buforu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ReadMemory` Metoda jest przeznaczona głównie do użycia przez debugowania międzyoperacyjnego, aby sprawdzić regiony pamięci, które są używane przez niezarządzane część debugowany program. Tę metodę można również odczytywać kod intermediate language (MSIL) firmy Microsoft i natywnego kodu kompilowanego dokładnie na czas.  
+ Metoda `ReadMemory` jest przeznaczona głównie do użycia przez debugowanie międzyoperacyjną do inspekcji regionów pamięci, które są używane przez niezarządzaną część debugowanego obiektu. Ta metoda może być również używana do odczytywania kodu języka pośredniego firmy Microsoft (MSIL) i natywnego kodu skompilowanego JIT.  
   
- Wszelkie zarządzane punkty przerwania zostaną usunięte z danych, które są zwracane w `buffer` parametru. Nie zmiany zostaną wprowadzone dla natywnych punkty przerwania ustawione [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Wszystkie zarządzane punkty przerwania zostaną usunięte z danych, które są zwracane w parametrze `buffer`. Nie będą wprowadzane żadne korekty dla natywnych punktów przerwania ustawionych przez [ICorDebugProcess2:: SetUnmanagedBreakpoint —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- Brak buforowania pamięci procesu jest wykonywane.  
+ Nie jest wykonywane buforowanie pamięci procesu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

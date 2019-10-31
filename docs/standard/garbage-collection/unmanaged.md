@@ -12,46 +12,44 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6be45a3d03d8cff580653260081a20d518448237
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662735"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141351"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Oczyszczanie zasobów niezarządzanych
 
-Dla większości obiektów tworzonych przez aplikację na których możesz polegać. Moduł wyrzucania elementów bezużytecznych przez sieć do obsługi zarządzania pamięcią. Jeśli jednak są tworzone obiekty zawierające niezarządzane zasoby, należy jawnie zwalniać te zasoby po zakończeniu używania ich w aplikacji. Najpopularniejsze typy niezarządzanych zasobów to obiekty, które umieszczają w otoce zasoby systemu operacyjnego, takie jak pliki, okna, połączenia sieciowe lub połączenia bazy danych. Mimo że moduł odśmiecania pamięci jest w stanie śledzić okres istnienia obiektu hermetyzującego niezarządzany zasób, nie ma informacji, jak zwolnić i wyczyścić niezarządzany zasób.
+W przypadku większości obiektów tworzonych przez aplikację można polegać na. Moduł wyrzucania elementów bezużytecznych sieci do obsługi zarządzania pamięcią. Jeśli jednak są tworzone obiekty zawierające niezarządzane zasoby, należy jawnie zwalniać te zasoby po zakończeniu używania ich w aplikacji. Najpopularniejsze typy niezarządzanych zasobów to obiekty, które umieszczają w otoce zasoby systemu operacyjnego, takie jak pliki, okna, połączenia sieciowe lub połączenia bazy danych. Mimo że moduł odśmiecania pamięci jest w stanie śledzić okres istnienia obiektu hermetyzującego niezarządzany zasób, nie ma informacji, jak zwolnić i wyczyścić niezarządzany zasób.
 
 Jeśli typy w aplikacji używają niezarządzanych zasobów, należny wykonać następujące czynności:
 
-- Implementowanie [wzorca usuwania](../../../docs/standard/design-guidelines/dispose-pattern.md). Wymaga to, że podajesz <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji w celu umożliwienia deterministycznego zwalniania niezarządzanych zasobów. Konsument typu wywołuje metodę <xref:System.IDisposable.Dispose%2A> kiedy obiekt (i przez niego zasoby) nie jest już potrzebny. <xref:System.IDisposable.Dispose%2A> Metoda natychmiast zwalnia niezarządzane zasoby.
+- Zaimplementuj [wzorzec Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Wymaga to podania implementacji <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, aby umożliwić deterministyczne wydawanie niezarządzanych zasobów. Odbiorca typu wywołuje <xref:System.IDisposable.Dispose%2A>, gdy obiekt (i używane przez niego zasoby) nie jest już wymagany. Metoda <xref:System.IDisposable.Dispose%2A> natychmiast zwalnia niezarządzane zasoby.
 
-- Obejmij swoje zasoby niezarządzane, mogą być wprowadzane w przypadku, gdy konsument typu zapomni wywołać <xref:System.IDisposable.Dispose%2A>. Istnieją dwa sposoby wykonania tej czynności:
+- Określ, że niezarządzane zasoby mają zostać wydane w przypadku, gdy konsument typu zapomni, aby wywoływać <xref:System.IDisposable.Dispose%2A>. Istnieją dwa sposoby wykonania tej czynności:
 
-  - Użycie bezpiecznego dojścia w celu umieszczenie niezarządzanego zasobu w otoce. Jest to zalecana technika. Bezpieczne dojścia pochodzą z <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> klasy i zawierają niezawodną <xref:System.Object.Finalize%2A> metody. Użycie bezpiecznego dojścia, należy po prostu zaimplementować <xref:System.IDisposable> interfejs i wywołać bezpiecznego dojścia <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> method in Class metoda swoje <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji. Finalizator bezpiecznego dojścia jest wywoływana automatycznie przez moduł odśmiecania pamięci jeśli jego <xref:System.IDisposable.Dispose%2A> nie jest wywoływana metoda.
+  - Użycie bezpiecznego dojścia w celu umieszczenie niezarządzanego zasobu w otoce. Jest to zalecana technika. Bezpieczne dojścia są uzyskiwane z klasy <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> i zawierają niezawodną metodę <xref:System.Object.Finalize%2A>. W przypadku używania bezpiecznego dojścia należy po prostu zaimplementować interfejs <xref:System.IDisposable> i wywołać metodę <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> bezpiecznego dojścia w <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji. Finalizator bezpiecznego dojścia jest automatycznie wywoływany przez moduł wyrzucania elementów bezużytecznych, jeśli nie zostanie wywołana jego Metoda <xref:System.IDisposable.Dispose%2A>.
 
     —lub—
 
-  - Zastąp <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody. Finalizacja umożliwia niedeterministyczne zwalnianie niezarządzanych zasobów, gdy konsument typu nie wywoła <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> do usunięcia go w sposób deterministyczny. Jednak finalizacja obiektu może być złożoną i podatną na błędy operacją, więc zalecane jest używanie bezpiecznego dojścia, zamiast dostarczania własnego finalizatora.
+  - Zastąp metodę <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Finalizowanie umożliwia niedeterministyczną wydawanie niezarządzanych zasobów, gdy odbiorca typu nie może wywołać <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, aby usunąć z nich deterministycznie. Jednak finalizacja obiektu może być złożoną i podatną na błędy operacją, więc zalecane jest używanie bezpiecznego dojścia, zamiast dostarczania własnego finalizatora.
 
-Konsumenci typu będą następnie wywołać usługi <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implementacji bezpośrednio w celu zwolnienia pamięci używanej przez niezarządzane zasoby. Po poprawnym zaimplementowaniu <xref:System.IDisposable.Dispose%2A> metody, albo bezpiecznego dojścia <xref:System.Object.Finalize%2A> metody lub zastąpienie metody <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metoda będzie odpowiadać za czyszczenie zasobów w przypadku gdy <xref:System.IDisposable.Dispose%2A> nie jest wywoływana metoda.
+Odbiorcy typu mogą następnie wywoływać implementację <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> bezpośrednio, aby zwolnić pamięć używaną przez niezarządzane zasoby. Po poprawnym zaimplementowaniu metody <xref:System.IDisposable.Dispose%2A>, Metoda <xref:System.Object.Finalize%2A> bezpiecznego dojścia lub własne przesłonięcie metody <xref:System.Object.Finalize%2A?displayProperty=nameWithType>j będzie zabezpieczeniem czyszczenia zasobów w przypadku, gdy metoda <xref:System.IDisposable.Dispose%2A> nie zostanie wywołana.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Implementacja metody Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) opisuje sposób implementacji [wzorca usuwania](../../../docs/standard/design-guidelines/dispose-pattern.md) do zwalniania niezarządzanych zasobów.
+[Implementowanie metody Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) Opisuje sposób implementacji [wzorca Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) do zwalniania niezarządzanych zasobów.
 
-[Za pomocą obiektów, zaimplementuj interfejs IDisposable](../../../docs/standard/garbage-collection/using-objects.md) w tym artykule opisano, jak konsumenci typu upewnij się, że jego <xref:System.IDisposable.Dispose%2A> nosi nazwę wdrożenia. Firma Microsoft zaleca używanie C# `using` instrukcji lub Visual Basic `Using` instrukcję, aby to zrobić.
+[Używanie obiektów implementujących interfejs IDisposable](../../../docs/standard/garbage-collection/using-objects.md) Opisuje, jak konsumenci typu zapewniają, że jego implementacja <xref:System.IDisposable.Dispose%2A> jest wywoływana. Zalecamy użycie instrukcji C# `using` lub instrukcji Visual Basic `Using`.
 
 ## <a name="reference"></a>Tematy pomocy
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
-Definiuje <xref:System.IDisposable.Dispose%2A> metodę służącą do zwalniania niezarządzanych zasobów.
+Definiuje metodę <xref:System.IDisposable.Dispose%2A> do zwalniania niezarządzanych zasobów.
 
 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>\
-Umożliwia finalizację obiektu, jeśli niezarządzane zasoby nie zostaną zwolnione za <xref:System.IDisposable.Dispose%2A> metody.
+Zapewnia finalizowanie obiektów, jeśli niezarządzane zasoby nie są uwalniane przez metodę <xref:System.IDisposable.Dispose%2A>.
 
 <xref:System.GC.SuppressFinalize%2A?displayProperty=nameWithType>\
-Pomija finalizację. Ta metoda jest zazwyczaj wywoływana z `Dispose` metodę, aby uniemożliwić wykonanie finalizatora.
+Pomija finalizację. Ta metoda jest zwykle wywoływana z metody `Dispose`, aby zapobiec wykonywaniu finalizatorów.

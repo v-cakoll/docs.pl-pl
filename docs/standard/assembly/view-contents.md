@@ -10,24 +10,22 @@ helpviewer_keywords:
 - MSIL
 - viewing MSIL information
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 40ed31bb2231775bb2b6eb24586e07c8b07a85bb
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0b5e306d55bf38c28e2a68172c2a035b56e8d0af
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140173"
 ---
 # <a name="how-to-view-assembly-contents"></a>Instrukcje: wyświetlanie zawartości zestawu
 
 Do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w pliku można użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) . Jeśli rozpatrywany plik jest zestawem, te informacje mogą obejmować atrybuty zestawu, a także odwołania do innych modułów i zestawów. Te informacje mogą być pomocne w ustaleniu, czy plik jest zestawem lub częścią zestawu oraz czy plik zawiera odwołania do innych modułów lub zestawów.  
   
-Aby wyświetlić zawartość zestawu przy użyciu *Ildasm. exe*, w wierszu polecenia wpisz **Ildasm** \< *nazwę zestawu*, >. Na przykład następujące polecenie deasembleruje zestaw *Hello. exe* .  
+Aby wyświetlić zawartość zestawu przy użyciu *Ildasm. exe*, wpisz **Ildasm** \<*Assembly Name*> w wierszu polecenia. Na przykład następujące polecenie deasembleruje zestaw *Hello. exe* .  
 
 ```cmd
 ildasm Hello.exe  
@@ -108,19 +106,19 @@ Uruchomienie polecenia *Ildasm. exe* w zestawie *Hello. exe* i dwukrotne klikni�
   
  W poniższej tabeli opisano każdą dyrektywę w manifeście zestawu zestawu *Hello. exe* użytego w tym przykładzie.  
   
-|— Dyrektywa|Opis|  
+|Dyrektywę|Opis|  
 |---------------|-----------------|  
-|*Nazwa zestawu* **extern \< . Assembly** **>**|Określa inny zestaw, który zawiera elementy, do których odwołuje się bieżący moduł ( `mscorlib`w tym przykładzie).|  
-|*token* **. \< PublicKeyToken** **>**|Określa token rzeczywistego klucza przywoływanego zestawu.|  
-|*numer wersji* **. ver \<** **>**|Określa numer wersji przywoływanego zestawu.|  
-|*Nazwa zestawu* **. Assembly \<** **>**|Określa nazwę zestawu.|  
-|*wartość Int32* **algorytmu \< hash** **>**|Określa używany algorytm wyznaczania wartości skrótu.|  
-|*numer wersji* **. ver \<** **>**|Określa numer wersji zestawu.|  
-|*Nazwa pliku* **modułu \<** **>**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się tylko z jednego pliku.|  
-|**. podsystem \<**  — *wartość* **>**|Określa środowisko aplikacji wymagane dla programu. W tym przykładzie wartość 3 wskazuje, że ten plik wykonywalny jest uruchamiany z konsoli programu.|  
-|**.corflags**|Obecnie zarezerwowane pole w metadanych.|  
+|*Nazwa zewnętrznego zestawu* **\<Assembly** **>**|Określa inny zestaw, który zawiera elementy, do których odwołuje się bieżący moduł (w tym przykładzie `mscorlib`).|  
+|**token \<. publickeytoken** **>**|Określa token rzeczywistego klucza przywoływanego zestawu.|  
+|*numer wersji* **\<. ver** **>**|Określa numer wersji przywoływanego zestawu.|  
+|*Nazwa zestawu* \<Assembly **>**|Określa nazwę zestawu.|  
+|**algorytm skrótu \<** *wartość Int32* **>**|Określa używany algorytm wyznaczania wartości skrótu.|  
+|*numer wersji* **\<. ver** **>**|Określa numer wersji zestawu.|  
+|*Nazwa pliku* **. module \<** **>**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się tylko z jednego pliku.|  
+|**>** *wartość* **. Subsystem \<**|Określa środowisko aplikacji wymagane dla programu. W tym przykładzie wartość 3 wskazuje, że ten plik wykonywalny jest uruchamiany z konsoli programu.|  
+|**. CorFlags**|Obecnie zarezerwowane pole w metadanych.|  
   
- Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zawartości zestawu. Aby uzyskać obszerną listę dyrektyw w manifeście zestawu, zapoznaj się z dokumentacją ECMA, szczególnie "partycja II: Definicja i semantyka metadanych "i" partycja III: Zestaw instrukcji CIL ". Dokumentacja jest dostępna w trybie online. Zobacz [standardy C# ECMA i Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) w MSDN i [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w międzynarodowej witrynie internetowej ECMA.  
+ Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zawartości zestawu. Aby uzyskać obszerną listę dyrektyw w manifeście zestawu, zapoznaj się z dokumentacją ECMA, szczególnie "partycja II: definicja metadanych i semantyka" i "Partition III: zestaw instrukcji CIL". Dokumentacja jest dostępna w trybie online. Zobacz [standardy C# ECMA i Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) w MSDN i [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w międzynarodowej witrynie internetowej ECMA.  
   
 ## <a name="see-also"></a>Zobacz także
 

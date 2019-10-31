@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku'
+title: 'Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,25 @@ dev_langs:
 helpviewer_keywords:
 - parallel for loops, how to use local state
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ffac3df82268399aa35ff494e462e2b23c3894b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14f4f1402f564d38bb508e893521a3951c1509f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915553"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139707"
 ---
-# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku
-W tym przykładzie pokazano, jak używać zmiennych thread-local do przechowywania i pobierania stanu w każdym zadaniu oddzielne, który jest tworzony przez <xref:System.Threading.Tasks.Parallel.For%2A> pętli. Za pomocą danych lokalnych wątku, można uniknąć konieczności synchronizowania dużej liczby dostęp do udostępnionego stanu. Zamiast pisania do udostępnionego zasobu, w każdej iteracji, obliczeń i przechowywania wartości dopiero po zakończeniu wszystkich iteracji dla zadania. Można następnie jednokrotny wynik końcowy do udostępnionego zasobu lub przekazać go do innej metody.  
+# <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli For ze zmiennymi lokalnymi wątku
+Ten przykład pokazuje, jak używać zmiennych lokalnych wątku do przechowywania i pobierania stanu w każdym osobnym zadaniu, które jest tworzone przez pętlę <xref:System.Threading.Tasks.Parallel.For%2A>. Przy użyciu danych z wątków lokalnych można uniknąć obciążenia synchronizacji dużej liczby dostępu do stanu udostępnionego. Zamiast zapisywać do zasobu udostępnionego dla każdej iteracji, obliczenia i przechowywanie wartości będą wykonywane do momentu ukończenia wszystkich iteracji dla zadania. Następnie można napisać ostatni wynik do zasobu udostępnionego lub przekazać go do innej metody.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład wywołuje <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> metody w celu obliczenia sumy wartości w tablicy, zawierająca jeden milion elementy. Wartość każdego elementu jest równa jego indeksu.  
+ Poniższy przykład wywołuje metodę <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>, aby obliczyć sumę wartości w tablicy zawierającej elementy 1 000 000. Wartość każdego elementu jest równa jego indeksowi.  
   
  [!code-csharp[TPL_Parallel#05](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/forandforeach_simple.cs#05)]
  [!code-vb[TPL_Parallel#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/forwiththreadlocal.vb#05)]  
   
- Dwa pierwsze parametry, z każdym <xref:System.Threading.Tasks.Parallel.For%2A> metoda Określ początkowy i końcowy wartości iteracji. Tego przeciążenia metody trzeci parametr jest, gdzie należy zainicjować swój stan lokalnego. W tym kontekście lokalnego stan oznacza, że zmienna, którego okres istnienia rozciąga się od tuż przed pierwszą iteracją pętli w bieżącym wątku, tylko po ostatniej iteracji.  
+ Pierwsze dwa parametry każdej metody <xref:System.Threading.Tasks.Parallel.For%2A> określają początkową i końcową wartość iteracji. W tym przeciążeniu metody trzeci parametr polega na zainicjowaniu stanu lokalnego. W tym kontekście stan lokalny oznacza zmienną, której okres istnienia rozciąga się od tuż przed pierwszą iteracją pętli w bieżącym wątku, do tuż po ostatniej iteracji.  
   
- Typ trzeciego parametru to <xref:System.Func%601> gdzie `TResult` jest rodzajem zmiennej, która będzie przechowywać stan wątków lokalnych. Jego typ jest zdefiniowany przez argument typu ogólnego, podczas wywoływania ogólnych <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> metody, która w tym przypadku jest <xref:System.Int64>. Argument typu informuje kompilator, typ zmiennej tymczasowej, która będzie służyć do przechowywania stanu lokalnej wątku. W tym przykładzie wyrażenie `() => 0` (lub `Function() 0` w języku Visual Basic) inicjuje zmienną lokalną wątku do zera. Jeśli argument typu ogólnego jest typem referencyjnym lub typem wartości zdefiniowanej przez użytkownika, wyrażenie będzie wyglądać następująco:  
+ Typ trzeciego parametru to <xref:System.Func%601>, gdzie `TResult` jest typem zmiennej, w której będzie przechowywany stan wątku lokalnego. Jego typ jest definiowany przez argument typu ogólnego dostarczone podczas wywoływania metody ogólnej <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29>, która w tym przypadku jest <xref:System.Int64>. Argument typu nakazuje kompilatorowi typ zmiennej tymczasowej, która będzie używana do przechowywania stanu wątku-lokalnego. W tym przykładzie wyrażenie `() => 0` (lub `Function() 0` w Visual Basic) inicjuje zmienną lokalną wątku na zero. Jeśli argument typu ogólnego jest typem referencyjnym lub typem wartości zdefiniowanym przez użytkownika, wyrażenie będzie wyglądać następująco:  
   
 ```csharp  
 () => new MyClass()  
@@ -38,11 +36,11 @@ W tym przykładzie pokazano, jak używać zmiennych thread-local do przechowywan
 Function() new MyClass()  
 ```  
   
- Czwarty parametr definiuje logikę pętli. Musi być delegat lub wyrażenie lambda ma podpis `Func<int, ParallelLoopState, long, long>` w języku C# lub `Func(Of Integer, ParallelLoopState, Long, Long)` w języku Visual Basic. Pierwszy parametr jest wartość licznika pętli dla tej iteracji pętli. Drugi to <xref:System.Threading.Tasks.ParallelLoopState> obiekt, który może służyć do zerwać pętlę; tego obiektu są dostarczane przez <xref:System.Threading.Tasks.Parallel> klasy do każdego wystąpienia pętli. Trzeci parametr jest zmienną lokalną wątku. Ostatni parametr jest typem zwracanym. W tym przypadku jest typ <xref:System.Int64> , ponieważ jest to typ określonej w <xref:System.Threading.Tasks.Parallel.For%2A> argument typu. Zmienna ma nazwę `subtotal` i jest zwracany przez wyrażenie lambda. Wartość zwracana służy do inicjowania `subtotal` przy poszczególnych kolejnych iteracjach pętli. Można również potraktować ten ostatni parametr jako wartość, która jest przekazywany do każdej iteracji, a następnie przekazywane do `localFinally` po zakończeniu ostatniej iteracji.  
+ Czwarty parametr definiuje logikę pętli. Musi być delegatem lub wyrażeniem lambda, którego podpis jest `Func<int, ParallelLoopState, long, long>` C# w lub `Func(Of Integer, ParallelLoopState, Long, Long)` w Visual Basic. Pierwszy parametr jest wartością licznika pętli dla tej iteracji pętli. Drugi jest obiektem <xref:System.Threading.Tasks.ParallelLoopState>, którego można użyć do przerwania pętli; Ten obiekt jest dostarczany przez klasę <xref:System.Threading.Tasks.Parallel> do każdego wystąpienia pętli. Trzeci parametr jest zmienną lokalną wątku. Ostatni parametr jest typem zwracanym. W tym przypadku typem jest <xref:System.Int64>, ponieważ jest to typ określony w argumencie typu <xref:System.Threading.Tasks.Parallel.For%2A>. Ta zmienna nosi nazwę `subtotal` i jest zwracana przez wyrażenie lambda. Wartość zwracana jest używana do inicjowania `subtotal` w każdej kolejnej iteracji pętli. Ten ostatni parametr można również traktować jako wartość, która jest przesyłana do każdej iteracji, a następnie przekazywać do delegata `localFinally` po zakończeniu ostatniej iteracji.  
   
- Piątego parametru definiuje metodę, która jest wywoływana jeden raz, po zakończeniu wszystkich iteracji w określonym wątku. Typ argumentu wejściowego ponownie odpowiada argument typu <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> metoda i typ zwracany przez wyrażenie lambda treści. W tym przykładzie wartość jest dodawana do zmiennej w zakresie klasy w sposób bezpieczny dla wątków, wywołując <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType> metody. Za pomocą zmiennej lokalnej wątku, firma Microsoft ma unikać zapisywania tej zmiennej klasy w każdej iteracji pętli.  
+ Piąty parametr definiuje metodę, która jest wywoływana raz, po ukończeniu wszystkich iteracji w określonym wątku. Typ argumentu wejściowego jest ponownie odnosił się do argumentu typu metody <xref:System.Threading.Tasks.Parallel.For%60%601%28System.Int32%2CSystem.Int32%2CSystem.Func%7B%60%600%7D%2CSystem.Func%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%600%2C%60%600%7D%2CSystem.Action%7B%60%600%7D%29> i typu zwracanego przez wyrażenie lambda Body. W tym przykładzie wartość jest dodawana do zmiennej w zakresie klasy w bezpiecznym wątku przez wywołanie metody <xref:System.Threading.Interlocked.Add%2A?displayProperty=nameWithType>. Za pomocą zmiennej lokalnej wątku, możemy uniknąć zapisywania do tej zmiennej klasy w każdej iteracji pętli.  
   
- Aby uzyskać więcej informacji o sposobie używania wyrażeń lambda, zobacz [wyrażeń Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
+ Aby uzyskać więcej informacji na temat używania wyrażeń lambda, zobacz [lambda Expressions in PLINQ and TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

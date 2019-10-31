@@ -9,14 +9,12 @@ helpviewer_keywords:
 - data marshaling, Callback sample
 - marshaling, Callback sample
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e2289b3c12c7c83a39f1ad8d5a1365349ca6442
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: c71c89e5797745144a2baed2d4846e3d9f9f26be
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114020"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
 Ten przykład ilustruje sposób przekazywania delegatów do funkcji niezarządzanej, oczekiwanie wskaźników funkcji. Delegat jest klasą, która może przechowywać odwołanie do metody i jest równoznaczna z bezpiecznym dla typu wskaźnikiem funkcji lub funkcją wywołania zwrotnego.
@@ -26,13 +24,13 @@ Ten przykład ilustruje sposób przekazywania delegatów do funkcji niezarządza
 
 Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, które są wyświetlane wraz z ich oryginalną deklaracją funkcji:
 
-- `TestCallBack`wyeksportowane z PinvokeLib. dll.
+- `TestCallBack` eksportowany z PinvokeLib. dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
-- `TestCallBack2`wyeksportowane z PinvokeLib. dll.
+- `TestCallBack2` eksportowany z PinvokeLib. dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -40,7 +38,7 @@ Przykład wywołania zwrotnego używa następujących funkcji niezarządzanych, 
 
 [PinvokeLib. dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) to niestandardowa Biblioteka niezarządzana, która zawiera implementację wcześniej wymienionych funkcji.
 
-W tym przykładzie `NativeMethods` Klasa zawiera zarządzane prototypy `TestCallBack` dla metod i `TestCallBack2` . Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład `FPtr` Delegaty i `FPtr2` mają podpisy identyczne `DoSomething` z metodami i `DoSomething2` .
+W tym przykładzie Klasa `NativeMethods` zawiera zarządzane prototypy dla metod `TestCallBack` i `TestCallBack2`. Obie metody przekażą delegata do funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodny z podpisem metody, do której się odwołuje. Na przykład `FPtr` i Delegaty `FPtr2` mają sygnatury identyczne z `DoSomething` i `DoSomething2` metodami.
 
 ## <a name="declaring-prototypes"></a>Deklarowanie prototypów
 [!code-cpp[Conceptual.Interop.Marshaling#37](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/callback.cpp#37)]

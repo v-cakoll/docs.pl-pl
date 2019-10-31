@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
+title: 'Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - components [.NET Framework], manifest
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: baabff187fb8a22aea37c4fb4c1dc11a680d3bb8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123664"
 ---
-# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
+# <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Poradnik: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework
 Aktywacja bez rejestracji dla składników opartych na .NET Framework jest nieco bardziej skomplikowana niż w przypadku składników modelu COM. Instalator wymaga dwóch manifestów:  
   
 - Aplikacje COM muszą mieć manifest aplikacji w stylu Win32, aby zidentyfikować składnik zarządzany.  
@@ -90,7 +88,7 @@ Aktywacja bez rejestracji dla składników opartych na .NET Framework jest nieco
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3. Zidentyfikuj właściciela pliku. `<assemblyIdentity>` Element`<dependentAssembly>` elementu w pliku manifestu aplikacji musi być zgodny z elementem w manifeście składnika. W poniższym przykładzie `myManagedComp` wersja 1.2.3.4 jest właścicielem pliku manifestu.  
+3. Zidentyfikuj właściciela pliku. Element `<assemblyIdentity>` elementu `<dependentAssembly>` w pliku manifestu aplikacji musi być zgodny z plikiem w manifeście składnika. W poniższym przykładzie `myManagedComp` wersja 1.2.3.4 jest właścicielem pliku manifestu.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -103,7 +101,7 @@ Aktywacja bez rejestracji dla składników opartych na .NET Framework jest nieco
            />  
     ```  
   
-4. Zidentyfikuj każdą klasę w zestawie. Użyj elementu `<clrClass>` , aby jednoznacznie identyfikować każdą klasę w zarządzanym zestawie. Element, który jest podelementem `<assembly>` elementu, ma atrybuty opisane w poniższej tabeli.  
+4. Zidentyfikuj każdą klasę w zestawie. Użyj elementu `<clrClass>`, aby jednoznacznie zidentyfikować każdą klasę w zarządzanym zestawie. Element, który jest podelementem elementu `<assembly>`, ma atrybuty opisane w poniższej tabeli.  
   
     |Atrybut|Opis|Wymagane|  
     |---------------|-----------------|--------------|  
@@ -117,7 +115,7 @@ Aktywacja bez rejestracji dla składników opartych na .NET Framework jest nieco
   
      We wszystkich tagach atrybutów jest rozróżniana wielkość liter. Możesz uzyskać identyfikatory CLSID, ProgID, modele wątkowości i wersję środowiska uruchomieniowego, wyświetlając eksportowaną bibliotekę typów dla zestawu za pomocą OLE/COM ObjectViewer (OleView. exe).  
   
-     Następujący manifest składnika identyfikuje dwie klasy `testClass1` i. `testClass2`  
+     Następujący manifest składnika identyfikuje dwie klasy `testClass1` i `testClass2`.  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -156,19 +154,19 @@ Aktywacja bez rejestracji dla składników opartych na .NET Framework jest nieco
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
-     W tej instrukcji jest `myManagedComp.manifest` nazwą manifestu składnika, który jest osadzony. W tym przykładzie nazwa pliku skryptu to `myresource.rc`.  
+     W tej instrukcji `myManagedComp.manifest` jest nazwą manifestu składnika, który jest osadzony. W tym przykładzie nazwa pliku skryptu jest `myresource.rc`.  
   
 2. Skompiluj skrypt przy użyciu kompilatora zasobów systemu Microsoft Windows (RC. exe). W wierszu polecenia wpisz następujące polecenie:  
   
      `rc myresource.rc`  
   
-     RC. exe tworzy `myresource.res` plik zasobów.  
+     RC. exe tworzy plik zasobów `myresource.res`.  
   
 3. Skompiluj ponownie plik źródłowy zestawu i określ plik zasobów przy użyciu opcji **/win32res** :  
   
     `/win32res:myresource.res`  
   
-     `myresource.res` Ponownie jest nazwą pliku zasobów zawierającego osadzone zasoby.  
+     `myresource.res` to nazwa pliku zasobów zawierającego osadzone zasoby.  
   
 ## <a name="see-also"></a>Zobacz także
 

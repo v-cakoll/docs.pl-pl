@@ -10,52 +10,50 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: edec95ea729fdf26e384b6658c241ca307e60851
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643117"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114240"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym
 
-.NET Framework wspiera interakcji z modelu COM składników modelu COM + usług, zewnętrzne biblioteki typów i wielu usług systemu operacyjnego. Typy danych, podpisy metod i mechanizmy obsługi błędów różnią się między modele obiektów zarządzanych i niezarządzanych. Aby uprościć współdziałanie składników .NET Framework, a kod niezarządzany i jej obsługi ułatwiają realizację ścieżki migracji, środowisko uruchomieniowe języka wspólnego zawiera z klientów i serwerów różnice w tych modeli obiektów.
+.NET Framework promuje interakcje ze składnikami COM, usługami COM+, bibliotekami typów zewnętrznych i wieloma usługami systemu operacyjnego. Typy danych, sygnatury metod i mechanizmy obsługi błędów różnią się między zarządzanymi i niezarządzanymi modelami obiektów. Aby uprościć współdziałanie między składnikami .NET Framework i niezarządzanym kodem, a w celu ułatwienia ścieżki migracji, środowisko uruchomieniowe języka wspólnego jest ukrywane zarówno w przypadku klientów, jak i serwerów, które różnią się w tych modelach obiektów.
 
-Kod wykonujący pod kontrolą środowiska wykonawczego jest nazywany kodem zarządzanym. Z drugiej strony kod, który działa poza środowisko uruchomieniowe jest nazywany kodu niezarządzanego. Składniki COM, interfejsów ActiveX i funkcje Windows API są przykłady kodu niezarządzanego.
+Kod wykonywany w ramach kontroli środowiska uruchomieniowego jest nazywany kodem zarządzanym. Z kolei kod, który działa poza środowiskiem uruchomieniowym, jest nazywany kodem niezarządzanym. Składniki COM, interfejsy ActiveX i funkcje interfejsu API systemu Windows to przykłady kodu niezarządzanego.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
 [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)  
-Opisuje sposób używania składników COM w aplikacjach .NET Framework.
+Opisuje, jak używać składników COM z aplikacji .NET Framework.
 
 [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)  
-Opisuje sposób używania składników .NET Framework z aplikacjami COM.
+Opisuje, jak używać składników .NET Framework z aplikacji COM.
 
 [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)  
-W tym artykule opisano sposób wywoływania niezarządzanego wywoływanie funkcji DLL za pomocą platformy.
+Opisuje sposób wywoływania niezarządzanych funkcji DLL przy użyciu wywołania platformy.
 
 [Marshaling międzyoperacyjny](interop-marshaling.md)  
-W tym artykule opisano marshaling dla wywołania COM interop i platformy.
+Opisuje kierowanie dla międzyoperacyjności modelu COM i wywołania platformy.
 
-[Instrukcje: Mapa wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)  
-Opisuje mapowanie między wyjątków i wartości HRESULT.
+[Instrukcje: Mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)  
+Opisuje mapowanie między wyjątkami i WYNIKami HRESULT.
 
 [Otoki COM](com-wrappers.md)  
-W tym artykule opisano otoki, dostarczone przez współdziałania z modelem COM.
+Opisuje otoki udostępniane przez międzyoperacyjność modelu COM.
 
 [Równoważność typów i osadzone typy międzyoperacyjne](type-equivalence-and-embedded-interop-types.md)  
-W tym artykule opisano, jak informacje o typie dla typów modelu COM jest osadzony w zestawach i jak środowisko uruchomieniowe języka wspólnego określa równoważności typów modelu COM, embedded.
+Opisuje, jak informacje o typie dla typów COM są osadzone w zestawach oraz jak środowisko uruchomieniowe języka wspólnego określa równoważność osadzonych typów COM.
 
-[Instrukcje: Generowanie zestawów podstawowej obsługi Międzyoperacyjnej przy użyciu Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
-Opisuje sposób tworzenia podstawowych zestawów międzyoperacyjnych, za pomocą *Tlbimp.exe* (Importer biblioteki typów).
+[Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe](how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md)  
+Opisuje sposób tworzenia podstawowych zestawów międzyoperacyjnych za pomocą *Tlbimp. exe* (Importer biblioteki typów).
 
 [Instrukcje: Rejestrowanie podstawowych zestawów międzyoperacyjnych](how-to-register-primary-interop-assemblies.md)  
-W tym artykule opisano, jak zarejestrować podstawowe zestawy międzyoperacyjne, zanim można się odwołać je w swoich projektach.
+W tym artykule opisano sposób rejestrowania podstawowych zestawów międzyoperacyjnych, zanim będzie można odwołać się do nich w projektach.
 
 [Współdziałanie z COM bez rejestrowania](registration-free-com-interop.md)  
-W tym artykule opisano, jak Usługa międzyoperacyjna modelu COM może zostać aktywowany składniki bez za pomocą rejestru Windows.
+Opisuje sposób, w jaki współdziałanie modelu COM może aktywować składniki bez używania rejestru systemu Windows.
 
-[Instrukcje: Konfigurowanie składników COM opartych na Framework .NET aktywacji bez rejestracji](configure-net-framework-based-com-components-for-reg.md)  
-W tym artykule opisano sposób tworzenia manifestu aplikacji oraz jak utworzyć i osadzanie manifestu składnika.
+[Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)  
+Opisuje sposób tworzenia manifestu aplikacji i tworzenia i osadzania manifestu składnika.

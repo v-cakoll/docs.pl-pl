@@ -1,24 +1,22 @@
 ---
-title: <etwEnable>, element
+title: <etwEnable> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
 - <etwEnable> element
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 14cea171a4a25e148ea32f75a8ef09b83a4ec8ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117398"
 ---
-# <a name="etwenable-element"></a>\<etwEnable, element >
+# <a name="etwenable-element"></a>\<element > etwEnable
 Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń środowiska uruchomieniowego języka wspólnego.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<etwEnabled >**  
   
 ## <a name="syntax"></a>Składnia  

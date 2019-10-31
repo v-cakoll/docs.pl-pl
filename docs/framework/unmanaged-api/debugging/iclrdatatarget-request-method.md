@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f6926d66a438cfc4fd97d7120e359b737212dde
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738631"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113352"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request — Metoda
-Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do żądania operacji, zgodnie z definicją przez implementację.  
+Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do żądania operacji zgodnie z definicją w implementacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,33 +41,33 @@ HRESULT Request (
   
 ## <a name="parameters"></a>Parametry  
  `reqCode`  
- [in] Zdefiniowane przez użytkownika.  
+ podczas Zdefiniowane przez użytkownika.  
   
  `inBufferSize`  
- [in] Rozmiar buforu wejściowego, który służy do żądania przychodzącego.  
+ podczas Rozmiar buforu wejściowego, który jest używany w żądaniu przychodzącym.  
   
  `inBuffer`  
- [in] Bufor zawierający żądania.  
+ podczas Bufor zawierający żądanie.  
   
  `outBufferSize`  
- [in] Rozmiar buforu wyjściowego, który służy do odpowiedzi.  
+ podczas Rozmiar buforu wyjściowego, który jest używany na potrzeby odpowiedzi.  
   
  `outBuffer`  
- [out] Bufor, zawierająca odpowiedź.  
+ określoną Bufor zawierający odpowiedź.  
   
 ## <a name="remarks"></a>Uwagi  
- `Request` Metoda ułatwia dodawanie nieokreślony operacjach niestandardowych. Oznacza to, że ta metoda zapewnia rozszerzalność bez konieczności zmiany definicji interfejsu.  
+ Metoda `Request` ułatwia dodawanie nieokreślonych operacji niestandardowych. Oznacza to, że ta metoda zapewnia rozszerzalność bez konieczności zmiany definicji interfejsu.  
   
- Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

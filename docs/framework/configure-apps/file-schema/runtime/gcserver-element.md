@@ -1,5 +1,5 @@
 ---
-title: <gcServer>, element
+title: <gcServer> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcServer
@@ -8,21 +8,19 @@ helpviewer_keywords:
 - gcServer element
 - <gcServer> element
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa03179df1cd2595b4be428106dd3ec10b309317
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 98ecc7069df20a92492e9a6276a0d88331ccc0bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116666"
 ---
-# <a name="gcserver-element"></a>\<gcServer, element >
+# <a name="gcserver-element"></a>\<element > gcServer
 Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci serwera.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer>**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcServer >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,14 +56,14 @@ Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwan
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy wyrzucania elementów bezużytecznych: odzyskiwanie pamięci stacji roboczej, które jest dostępne we wszystkich systemach i wyrzucanie elementów bezużytecznych serwera, które jest dostępne w systemach wieloprocesorowych. Za pomocą `<gcServer>` elementu można kontrolować typ wyrzucania elementów bezużytecznych wykonywanych przez środowisko CLR. Użyj właściwości <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType> , aby określić, czy jest włączone odzyskiwanie pamięci serwera.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) obsługuje dwa typy wyrzucania elementów bezużytecznych: odzyskiwanie pamięci stacji roboczej, które jest dostępne we wszystkich systemach i wyrzucanie elementów bezużytecznych serwera, które jest dostępne w systemach wieloprocesorowych. Za pomocą elementu `<gcServer>` można kontrolować typ wyrzucania elementów bezużytecznych wykonywanych przez środowisko CLR. Użyj właściwości <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>, aby określić, czy jest włączone odzyskiwanie pamięci serwera.  
   
  W przypadku komputerów z jednym procesorem domyślna opcja wyrzucania elementów bezużytecznych stacji roboczej powinna być najszybszą opcją. Stacja robocza lub serwer może być używana w przypadku komputerów dwuprocesorowych. Wyrzucanie elementów bezużytecznych serwera powinno być najszybszą opcją dla więcej niż dwóch procesorów.  
   
  Tego elementu można używać tylko w pliku konfiguracji aplikacji; jest on ignorowany, jeśli znajduje się w pliku konfiguracji komputera.  
   
 > [!NOTE]
-> W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera `true` , ustaw `<gcServer>` element na i [ \<gcConcurrent > elementu.](gcconcurrent-element.md) `false`  
+> W .NET Framework 4 i starszych wersjach współbieżne wyrzucanie elementów bezużytecznych nie jest dostępne po włączeniu odzyskiwania pamięci serwera. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera jest współbieżne. Aby użyć niewspółbieżnego wyrzucania elementów bezużytecznych serwera, ustaw `<gcServer>` element `true` i [\<> elementu](gcconcurrent-element.md) `false`.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład umożliwia wyrzucanie elementów bezużytecznych na serwerze.  

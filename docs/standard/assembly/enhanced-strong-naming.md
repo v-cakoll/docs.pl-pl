@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies
 - strong naming [.NET Framework], enhanced
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ab1087a840fe41b9fac7779c73797c470899408
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 1d582513b10de88e4e5b9b9ef8c338599d6980f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141168"
 ---
 # <a name="enhanced-strong-naming"></a>Poprawa silnego nazywania
 Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyfikowania zestawów. Jest to podpis cyfrowy klucza publicznego, który zwykle jest używany do weryfikacji integralności danych, które są przesyłane z nadawcy (osoby podpisującej) do adresata (weryfikatora). Ta sygnatura jest używana jako unikatowa tożsamość zestawu i zapewnia, że odwołania do zestawu nie są niejednoznaczne. Zestaw jest podpisany jako część procesu kompilacji, a następnie weryfikowany po jego załadowaniu.  
@@ -36,7 +34,7 @@ Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyf
 ## <a name="use-enhanced-strong-names"></a>Użyj ulepszonych silnych nazw  
  Klucze silnej nazwy składają się z klucza podpisu i klucza tożsamości. Zestaw jest podpisany przy użyciu klucza podpisu i jest identyfikowany przez klucz tożsamości. Przed .NET Framework 4,5 te dwa klucze były takie same. Począwszy od .NET Framework 4,5, klucz tożsamości pozostaje taki sam jak w starszych wersjach .NET Framework, ale klucz podpisu zostanie rozszerzony przy użyciu silniejszego algorytmu wyznaczania wartości skrótu. Ponadto klucz podpisu jest podpisany przy użyciu klucza tożsamości w celu utworzenia podpisu licznika.  
   
- Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> umożliwia metadanych zestawu użycie istniejącego klucza publicznego dla tożsamości zestawu, co umożliwia kontynuowanie pracy przez stare odwołania do zestawu.  Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> używa sygnatury licznika, aby upewnić się, że właściciel nowego klucza podpisu jest również właścicielem starego klucza tożsamości.  
+ Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> umożliwia metadanych zestawu użycie istniejącego klucza publicznego dla tożsamości zestawu, co pozwala na kontynuowanie pracy przez stare odwołania do zestawu.  Atrybut <xref:System.Reflection.AssemblySignatureKeyAttribute> używa sygnatury licznika, aby upewnić się, że właściciel nowego klucza podpisu jest również właścicielem starego klucza tożsamości.  
   
 ### <a name="sign-with-sha-2-without-key-migration"></a>Podpisz przy użyciu algorytmu SHA-2 bez migracji klucza  
  Uruchom następujące polecenia z wiersza polecenia, aby podpisać zestaw bez migrowania sygnatury silnej nazwy:  
@@ -87,7 +85,7 @@ Sygnatura silnej nazwy jest mechanizmem tożsamości w .NET Framework do identyf
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4. Wygeneruj parametry dla atrybutu <xref:System.Reflection.AssemblySignatureKeyAttribute> i Dołącz atrybut do zestawu.  
+4. Generowanie parametrów dla atrybutu <xref:System.Reflection.AssemblySignatureKeyAttribute> i dołączanie atrybutu do zestawu.  
   
     ```console  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  

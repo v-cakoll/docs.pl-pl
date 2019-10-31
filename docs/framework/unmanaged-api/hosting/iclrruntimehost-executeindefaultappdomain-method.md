@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b7540f166311bbc9e5efa21d136132cc72b7c12
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed841d1b2ff346ebef668cbd96a58ddfe466b3b8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768738"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120446"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain — Metoda
-Wywołuje określoną metodę określonego typu w określonym zestawie zarządzanym.  
+Wywołuje określoną metodę określonego typu w określonym zarządzanym zestawie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,30 +39,30 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="parameters"></a>Parametry  
  `pwzAssemblyPath`  
- [in] Ścieżka do <xref:System.Reflection.Assembly> definiujący <xref:System.Type> metodę, której ma zostać wywołana.  
+ podczas Ścieżka do <xref:System.Reflection.Assembly>, która definiuje <xref:System.Type>, których metoda ma zostać wywołana.  
   
  `pwzTypeName`  
- [in] Nazwa <xref:System.Type> definiuje metody do wywołania.  
+ podczas Nazwa <xref:System.Type>, która definiuje metodę do wywołania.  
   
  `pwzMethodName`  
- [in] Nazwa metody do wywołania.  
+ podczas Nazwa metody do wywołania.  
   
  `pwzArgument`  
- [in] Parametr typu ciąg do przekazania do metody.  
+ podczas Parametr ciągu, który ma zostać przekazany do metody.  
   
  `pReturnValue`  
- [out] Wartość liczby całkowitej, zwrócona przez wywoływanej metody.  
+ określoną Wartość całkowita zwrócona przez wywołaną metodę.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca E_FAIL, listy CRL nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteInDefaultAppDomain` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca wartość E_FAIL, lista CRL nie będzie już można używać w ramach procesu. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołana metoda musi mieć następujący podpis:  
@@ -73,16 +71,16 @@ HRESULT ExecuteInDefaultAppDomain (
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- gdzie `pwzMethodName` reprezentuje nazwę wywoływanej metody i `pwzArgument` reprezentuje wartość ciągu jest przekazywany jako parametr do tej metody. Jeśli ustawiono wartość HRESULT S_OK, `pReturnValue` jest ustawiona na wartość całkowitą, zwracany przez wywoływanej metody. W przeciwnym razie `pReturnValue` nie jest ustawiona.  
+ gdzie `pwzMethodName` reprezentuje nazwę wywołanej metody, a `pwzArgument` reprezentuje wartość ciągu przekazaną jako parametr do tej metody. Jeśli wartość HRESULT jest ustawiona na S_OK, `pReturnValue` jest ustawiona na wartość całkowitą zwracaną przez wywołaną metodę. W przeciwnym razie `pReturnValue` nie jest ustawiona.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

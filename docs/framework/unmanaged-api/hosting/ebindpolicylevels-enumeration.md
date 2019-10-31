@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a9e00b4f-b6d0-4257-bd88-4fe9af97b8fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e61acbb15844c5ddfc8b7aa98c41bb18c6e9ade5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 81aef6beb9ee6d622519738d24fdd0a4d42a75b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136550"
 ---
 # <a name="ebindpolicylevels-enumeration"></a>EBindPolicyLevels — Wyliczenie
-Zawiera flagi, aby określić poziom, na którym można zastosować lub zmodyfikować zasady zestawu.  
+Zapewnia flagi do określania poziomu, na którym mają być stosowane lub zmodyfikowane zasady zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,26 +43,26 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ePolicyLevelAdmin`|Określa, czy zasady mają być stosowane na poziomie administratora.|  
-|`ePolicyLevelApp`|Określa, czy zasady mają być stosowane na poziomie aplikacji.|  
-|`ePolicyLevelHost`|Określa, czy zasady mają być stosowane na poziomie hosta.|  
-|`ePolicyLevelNone`|Określa flagi nie poziomu zasad.|  
-|`ePolicyLevelPublisher`|Określa, czy zasady mają być stosowane na poziomie wydawcy.|  
-|`ePolicyLevelRetargetable`|Określa, że zasady powinny mieć zastosowanie na poziomach zmiennej.|  
-|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenoszenia między implementacjami zestawu .NET Framework. Zobacz [ \<supportportability — >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) element pliku konfiguracji.|  
-|`ePolicyUnifiedToCLR`|Określa, że zasady powinny unified, środowisko uruchomieniowe języka wspólnego (CLR).|  
+|`ePolicyLevelAdmin`|Określa, że zasady mają być stosowane na poziomie administratora.|  
+|`ePolicyLevelApp`|Określa, że zasady mają być stosowane na poziomie aplikacji.|  
+|`ePolicyLevelHost`|Określa, że zasady mają być stosowane na poziomie hosta.|  
+|`ePolicyLevelNone`|Określa brak flag poziomu zasad.|  
+|`ePolicyLevelPublisher`|Określa, że zasady mają być stosowane na poziomie wydawcy.|  
+|`ePolicyLevelRetargetable`|Określa, że zasady powinny być stosowane na poziomach zmiennych.|  
+|`ePolicyPortability`|Określa, że zasady powinny obsługiwać przenośność między implementacjami zestawu .NET Framework. Zobacz [\<tag supportportability >](../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md) pliku konfiguracji.|  
+|`ePolicyUnifiedToCLR`|Określa, że zasady powinny być ujednolicone dla tego środowiska uruchomieniowego języka wspólnego (CLR).|  
   
 ## <a name="remarks"></a>Uwagi  
- To wyliczenie jest przekazywany do metody [iclrhostbindingpolicymanager —](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) interfejsu, aby określić zmiany w zasadach aplikacji.  
+ To wyliczenie jest przesyłane do metod interfejsu [ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md) , aby określić zmiany zasad aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

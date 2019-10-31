@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed4c6458-0435-44fc-8e78-8ba00be362f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b6907cdf78fc70c75ddd711cd8593427857b172
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4cd03895b4e33c3e42c71acca12eaf950fc9a145
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138556"
 ---
 # <a name="icordebuggenericvaluesetvalue-method"></a>ICorDebugGenericValue::SetValue — Metoda
-Kopiuje nowej wartości z określonego bufora.  
+Kopiuje nową wartość z określonego buforu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT SetValue (
   
 ## <a name="parameters"></a>Parametry  
  `pFrom`  
- [in] Wskaźnik do buforu z którego można skopiować wartości.  
+ podczas Wskaźnik do buforu, z którego ma zostać skopiowana wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla typów odwołań wartość jest odwołanie, nie element.  
+ W przypadku typów referencyjnych wartością jest odwołanie, a nie zawartość.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

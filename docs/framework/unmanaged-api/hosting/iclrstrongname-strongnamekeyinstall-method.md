@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a2badf8f164abd1bbb8892ec5db28f7cf39f5c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775667"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135039"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>ICLRStrongName::StrongNameKeyInstall — Metoda
-Importuje pary kluczy publiczny/prywatny w kontenerze.  
+Importuje parę kluczy publiczny/prywatny do kontenera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +37,28 @@ HRESULT StrongNameKeyInstall (
   
 ## <a name="parameters"></a>Parametry  
  `wszKeyContainer`  
- [in] Nazwa kontenera kluczy. `wszKeyContainer` musi być ciągiem niepustym.  
+ podczas Nazwa kontenera kluczy. `wszKeyContainer` musi być niepustym ciągiem.  
   
  `pbKeyBlob`  
- [in] Binarny pary kluczy.  
+ podczas Para kluczy binarnych.  
   
  `cbKeyBlob`  
- [in] Rozmiar w bajtach z `pbKeyBlob`.  
+ podczas Rozmiar w bajtach `pbKeyBlob`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [iclrstrongname::strongnamekeydelete —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) metodę, aby usunąć kontener kluczy.  
+ Aby usunąć kontener kluczy, użyj metody [ICLRStrongName:: StrongNameKeyDelete —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

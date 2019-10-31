@@ -14,14 +14,12 @@ helpviewer_keywords:
 - DeleteMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db360584dacf250be2f35e5e6666f8332b39a8dd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798661"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120645"
 ---
 # <a name="deletemethod-function"></a>DeleteMethod, funkcja
 Usuwa określoną metodę z definicji klasy CIM.
@@ -47,7 +45,7 @@ podczas Ten parametr jest nieużywany.
 podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-podczas Nazwa metody do usunięcia z tabeli klas. `wszName`musi być wskaźnikiem prawidłowym `LPCWSTR`.
+podczas Nazwa metody do usunięcia z tabeli klas. `wszName` musi być wskaźnikiem do prawidłowej `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -66,11 +64,11 @@ Ta funkcja otacza wywołanie metody [IWbemClassObject::D eletemethod](/windows/d
 Usuwanie metody nie jest obsługiwane dla wskaźników [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , które wskazują wystąpienia modelu wspólnych informacji.
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

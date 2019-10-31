@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1dcbd8bb566331a6a2d4217eeec0441fbd3e6ff6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e76800316885c27c697421d454341d5f0789c611
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739859"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097952"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType — Wyliczenie
-Określa typ ramki stosu. To wyliczenie jest używane przez [ICorDebugInternalFrame::GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) metody.  
+Identyfikuje typ ramki stosu. To wyliczenie jest używane przez metodę [ICorDebugInternalFrame:: GetFrameType](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,26 +47,26 @@ typedef enum CorDebugInternalFrameType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|Wartość null. `ICorDebugInternalFrame::GetFrameType` Metoda nigdy nie zwraca tę wartość.|  
-|`STUBFRAME_M2U`|Ramki zarządzane do niezarządzanego wycinka.|  
-|`STUBFRAME_U2M`|Ramka niezarządzane do zarządzanego wycinka.|  
+|`STUBFRAME_NONE`|Wartość null. Metoda `ICorDebugInternalFrame::GetFrameType` nigdy nie zwraca tej wartości.|  
+|`STUBFRAME_M2U`|Ramka klasy zarządzanej do niezarządzanej.|  
+|`STUBFRAME_U2M`|Niezarządzana ramka zastępcza niezarządzana.|  
 |`STUBFRAME_APPDOMAIN_TRANSITION`|Przejście między domenami aplikacji.|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Wywołanie metody uproszczone.|  
-|`STUBFRAME_FUNC_EVAL`|Początek Obliczanie funkcji.|  
-|`STUBFRAME_INTERNALCALL`|Wewnętrzny wywołać środowiska uruchomieniowego języka wspólnego.|  
-|`STUBFRAME_CLASS_INIT`|Początek inicjowania klasy.|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|Uproszczone wywołanie metody.|  
+|`STUBFRAME_FUNC_EVAL`|Rozpoczęcie obliczania funkcji.|  
+|`STUBFRAME_INTERNALCALL`|Wewnętrzne wywołanie środowiska uruchomieniowego języka wspólnego.|  
+|`STUBFRAME_CLASS_INIT`|Rozpoczęcie inicjowania klasy.|  
 |`STUBFRAME_EXCEPTION`|Wyjątek, który jest generowany.|  
-|`STUBFRAME_SECURITY`|Ramka, używany do zabezpieczenia dostępu kodu.|  
-|`STUBFRAME_JIT_COMPILATION`|Środowisko uruchomieniowe jest metodą kompilacji JIT.|  
+|`STUBFRAME_SECURITY`|Ramka używana do zabezpieczenia dostępu kodu.|  
+|`STUBFRAME_JIT_COMPILATION`|Środowisko uruchomieniowe to JIT-kompiluje metodę.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

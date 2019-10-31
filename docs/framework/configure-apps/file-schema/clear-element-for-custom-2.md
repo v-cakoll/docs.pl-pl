@@ -1,5 +1,5 @@
 ---
-title: <clear>element dla NameValueSectionHandler i DictionarySectionHandler
+title: element <clear> dla NameValueSectionHandler i DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3e27bb7e21baf2eb4990d0107db4aae1b5f9a7d1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119071"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Wyczyść element > dla NameValueSectionHandler i DictionarySectionHandler
 
 Czyści wszystkie poprzednio zdefiniowane ustawienia w sekcji.
 
 [ **\<> konfiguracji**](configuration-element.md)   
-&nbsp;&nbsp;[ **\<sekcjaname >** ](custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;[ **\<sectionname >** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -38,7 +38,7 @@ Brak
 
 |     | Opis |
 | --- | ------------|
-| [sekcjaname > element  **\<** ](custom-element-2.md) | Definiuje ustawienia niestandardowych sekcji konfiguracji, które używają <xref:System.Configuration.NameValueSectionHandler> klas i. <xref:System.Configuration.DictionarySectionHandler> |
+| [ **\<sectionname >** Postaci](custom-element-2.md) | Definiuje ustawienia niestandardowych sekcji konfiguracji, które używają klas <xref:System.Configuration.NameValueSectionHandler> i <xref:System.Configuration.DictionarySectionHandler>. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -46,13 +46,13 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć elementu  **\<Clear >** , aby usunąć wszystkie ustawienia z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
+Można użyć elementu **\<clear >** , aby usunąć wszystkie ustawienia z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie zdefiniowano plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazano,  **\<** jak używać elementu Clear > w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w konfiguracji maszyny rozszerzeniem.
+Ten przykład definiuje plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazuje, jak używać **\<wyczyść >** elementu w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w pliku konfiguracyjnym komputera.
 
-Następujący kod pliku konfiguracji komputera deklaruje sekcję  **\<>** :
+Następujący kod pliku konfiguracji komputera deklaruje sekcję **\<sekcji >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ Następujący kod pliku konfiguracji komputera deklaruje sekcję  **\<>** :
 </configuration>
 ```
 
-Następujący kod pliku konfiguracji aplikacji usuwa wszystkie ustawienia z  **\<sekcji >** . Aplikacja nie może pobrać z ustawień, które zostały zadeklarowane w sekcji  **\<>** w pliku konfiguracji maszyny.
+Następujący kod pliku konfiguracyjnego aplikacji usuwa wszystkie ustawienia z **\<sekcji >** . Aplikacja nie może pobrać z ustawień, które zostały zadeklarowane w sekcji **\<** sekcji w pliku konfiguracji maszyny.
 
 ```xml
 <!-- Application configuration file -->

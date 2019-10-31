@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b862ff3e-e480-4cdf-84e2-e1013334a467
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 291246169a5cc2c95b117bc55bc269791885b2ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c884569a452fb2985713956f942205cda6ea1ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749104"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141247"
 ---
 # <a name="imanagedobjectgetobjectidentity-method"></a>IManagedObject::GetObjectIdentity — Metoda
-Pobiera tożsamość tego zarządzanego obiektu.  
+Pobiera tożsamość tego obiektu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,25 +37,25 @@ HRESULT GetObjectIdentity (
   
 ## <a name="parameters"></a>Parametry  
  `pBSTRGUID`  
- [out] Wskaźnik na identyfikator GUID procesu, w której znajduje się obiekt.  
+ określoną Wskaźnik do identyfikatora GUID procesu, w którym znajduje się obiekt.  
   
  `AppDomainID`  
- [out] Wskaźnik do Identyfikatora domeny aplikacji obiektu.  
+ określoną Wskaźnik do identyfikatora domeny aplikacji obiektu.  
   
  `pCCW`  
- [out] Wskaźnik do obiektu indeksu w klasycznym modelu COM v-table.  
+ określoną Wskaźnik do indeksu obiektu w klasycznej tabeli COM.  
   
 ## <a name="remarks"></a>Uwagi  
- Tożsamość obiektu zarządzanego zawiera identyfikator GUID procesu, identyfikator domeny aplikacji i indeks obiektu w klasycznym modelu COM v-table.  
+ Tożsamość obiektu zarządzanego obejmuje identyfikator GUID procesu, identyfikator domeny aplikacji i indeks obiektu w klasycznej tabeli COM.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,17 +1,17 @@
 ---
-ms.openlocfilehash: fe6ff59066c9e6bcf5387e7c266c879b8ae173c6
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 94c582d25ae1cd2249ed2e3774134a86cf77327b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68237687"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085538"
 ---
-### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>ustawienie aplikacji "dataAnnotations:dataTypeAttribute:disableRegEx" jest domyślnie w programie .NET Framework 4.7.2
+### <a name="dataannotationsdatatypeattributedisableregex-app-setting-is-on-by-default-in-net-framework-472"></a>ustawienie aplikacji "DataAnnotations: DataTypeAttribute: disableRegEx" jest domyślnie włączone w .NET Framework 4.7.2
 
 |   |   |
 |---|---|
-|Szczegóły|W programie .NET Framework 4.6.1, ustawienie aplikacji (<code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code>) została wprowadzona, umożliwia użytkownikom zablokować używanie wyrażeń regularnych w atrybutach typu danych (takich jak <xref:System.ComponentModel.DataAnnotations.EmailAddressAttribute?displayProperty=nameWithType>, <xref:System.ComponentModel.DataAnnotations.UrlAttribute?displayProperty=nameWithType>, i <xref:System.ComponentModel.DataAnnotations.PhoneAttribute?displayProperty=nameWithType>). Pozwala to zmniejszyć luki w zabezpieczeniach, takie jak unikanie możliwości ataku typu "odmowa usługi" przy użyciu określonych wyrażeń regularnych.<br/>W programie .NET Framework 4.6.1 ustawiono tego ustawienia aplikacji, aby wyłączyć użycie wyrażenia regularnego <code>false</code> domyślnie. Rozpoczęcie przeczytania artykułu z programem .NET Framework 4.7.2, ta opcja konfiguracji jest równa <code>true</code> domyślnie, aby jeszcze bardziej ograniczyć bezpiecznego luk w zabezpieczeniach dla aplikacji sieci web, których platformą docelową .NET Framework 4.7.2 lub nowszej.|
-|Sugestia|Jeśli okaże się, że wyrażeń regularnych w aplikacji sieci web nie działają po uaktualnieniu do wersji .NET Framework 4.7.2, możesz zaktualizować wartość <code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code> ustawienie <code>false</code> Aby przywrócić poprzednie zachowanie.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appSettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot; value=&quot;false&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appSettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|Scope|Mały|
+|Szczegóły|W .NET Framework 4.6.1 wprowadzono ustawienie aplikacji (<code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code>), które umożliwia użytkownikom wyłączenie używania wyrażeń regularnych w atrybutach typu danych (takich jak <xref:System.ComponentModel.DataAnnotations.EmailAddressAttribute?displayProperty=nameWithType>, <xref:System.ComponentModel.DataAnnotations.UrlAttribute?displayProperty=nameWithType>i <xref:System.ComponentModel.DataAnnotations.PhoneAttribute?displayProperty=nameWithType>). Dzięki temu można zmniejszyć luki w zabezpieczeniach, takie jak uniknięcie ataku typu "odmowa usługi" przy użyciu określonych wyrażeń regularnych.<br/>W .NET Framework 4.6.1 to ustawienie aplikacji wyłączające użycie wyrażenia regularnego zostało ustawione na domyślnie <code>false</code>. Począwszy od .NET Framework 4.7.2, ten przełącznik konfiguracji jest domyślnie ustawiany na <code>true</code>, aby dodatkowo ograniczyć bezpieczną lukę w zabezpieczeniach aplikacji sieci Web przeznaczonych do .NET Framework 4.7.2 i nowszych.|
+|Sugestia|Jeśli okaże się, że wyrażenia regularne w aplikacji sieci Web nie działają po uaktualnieniu do .NET Framework 4.7.2, można zaktualizować wartość ustawienia <code>&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot;</code>, aby <code>false</code> przywrócić poprzednie zachowanie.<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;appSettings&gt;&#13;&#10;...&#13;&#10;&lt;add key=&quot;dataAnnotations:dataTypeAttribute:disableRegEx&quot; value=&quot;false&quot;/&gt;&#13;&#10;...&#13;&#10;&lt;/appSettings&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
+|Zakres|Mały|
 |Wersja|4.7.2|
 |Typ|Środowisko uruchomieniowe|

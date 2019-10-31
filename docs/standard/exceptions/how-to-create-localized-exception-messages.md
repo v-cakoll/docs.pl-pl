@@ -1,25 +1,24 @@
 ---
-title: 'Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach'
+title: 'Instrukcje: tworzenie wyjątków zdefiniowanych przez użytkownika z zastosowaniem zlokalizowanych komunikatów o wyjątkach'
 description: Dowiedz się, jak tworzyć zdefiniowane przez użytkownika wyjątki przy użyciu zlokalizowanych komunikatów o wyjątkach
 author: Youssef1313
-ms.author: ronpet
 ms.date: 09/13/2019
-ms.openlocfilehash: b4aa567fccda9354bc5959d6b9838d678d53abef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141526"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika przy użyciu zlokalizowanych komunikatów o wyjątkach
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Instrukcje: tworzenie wyjątków zdefiniowanych przez użytkownika z zastosowaniem zlokalizowanych komunikatów o wyjątkach
 
-W tym artykule przedstawiono sposób tworzenia wyjątków zdefiniowanych przez użytkownika, które są dziedziczone z klasy podstawowej <xref:System.Exception> z zlokalizowanymi komunikatami o wyjątkach przy użyciu zestawów satelickich.
+W tym artykule opisano sposób tworzenia wyjątków zdefiniowanych przez użytkownika, które są dziedziczone z podstawowej klasy <xref:System.Exception> ze zlokalizowanymi komunikatami o wyjątkach przy użyciu zestawów satelickich.
 
 ## <a name="create-custom-exceptions"></a>Tworzenie wyjątków niestandardowych
 
 Platforma .NET zawiera wiele różnych wyjątków, których można użyć. Jednak w niektórych przypadkach, gdy żaden z nich nie spełnia Twoich potrzeb, można utworzyć własne wyjątki niestandardowe.
 
-Załóżmy, że chcesz utworzyć `StudentNotFoundException`, która zawiera właściwość `StudentName`.
+Załóżmy, że chcesz utworzyć `StudentNotFoundException`, który zawiera właściwość `StudentName`.
 Aby utworzyć wyjątek niestandardowy, wykonaj następujące kroki:
 
 1. Utwórz klasę z możliwością serializacji, która dziedziczy po <xref:System.Exception>. Nazwa klasy powinna kończyć się znakiem "Exception":
@@ -77,13 +76,13 @@ Utworzono wyjątek niestandardowy i można go zgłosić w dowolnym miejscu przy 
 throw new StudentNotFoundException("The student cannot be found.", "John");
 ```
 
-Problem z poprzednim wierszem polega na tym, że `"The student cannot be found."` jest tylko stałym ciągiem. W zlokalizowanej aplikacji chcesz mieć różne komunikaty w zależności od kultury użytkownika.
+Problem z poprzednim wierszem to, że `"The student cannot be found."` jest tylko stałym ciągiem. W zlokalizowanej aplikacji chcesz mieć różne komunikaty w zależności od kultury użytkownika.
 [Zestawy satelickie](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md) to dobry sposób na to. Zestaw satelicki to plik dll, który zawiera zasoby dla określonego języka. Po poproszeniu określonych zasobów w czasie wykonywania środowisko CLR znajdzie ten zasób w zależności od kultury użytkownika. Jeśli nie odnaleziono zestawu satelickiego dla tej kultury, używane są zasoby domyślnej kultury.
 
 Aby utworzyć zlokalizowane komunikaty o wyjątkach:
 
 1. Utwórz nowy folder o nazwie *resources* , aby przechowywać pliki zasobów.
-1. Dodaj do niego nowy plik zasobów. Aby to zrobić w programie Visual Studio, kliknij prawym przyciskiem myszy folder w **Eksplorator rozwiązań**i wybierz polecenie **Dodaj** > **nowy element** > **plik zasobów**. Nazwij plik *ExceptionMessages. resx*. Jest to domyślny plik zasobów.
+1. Dodaj do niego nowy plik zasobów. Aby to zrobić w programie Visual Studio, kliknij prawym przyciskiem myszy folder w **Eksplorator rozwiązań**, a następnie wybierz pozycję **Dodaj** > **nowy element** > **plik zasobów**. Nazwij plik *ExceptionMessages. resx*. Jest to domyślny plik zasobów.
 1. Dodaj parę nazwa/wartość dla komunikatu o wyjątku, jak pokazano na poniższej ilustracji:
 
    ![Dodaj zasoby do domyślnej kultury](media/add-resources-to-default-culture.jpg)
@@ -102,7 +101,7 @@ Aby utworzyć zlokalizowane komunikaty o wyjątkach:
     ```
 
   > [!NOTE]
-  > Jeśli nazwa projektu to `TestProject`, a plik zasobów *ExceptionMessages. resx* znajduje się w folderze *resources* projektu, w pełni kwalifikowana nazwa pliku zasobów to `TestProject.Resources.ExceptionMessages`.
+  > Jeśli nazwa projektu jest `TestProject` a plik zasobów *ExceptionMessages. resx* znajduje się w folderze *resources* projektu, w pełni kwalifikowana nazwa pliku zasobów jest `TestProject.Resources.ExceptionMessages`.
 
 ## <a name="see-also"></a>Zobacz także
 

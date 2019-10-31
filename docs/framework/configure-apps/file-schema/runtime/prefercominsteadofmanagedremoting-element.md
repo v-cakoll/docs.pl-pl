@@ -1,25 +1,23 @@
 ---
-title: <PreferComInsteadOfManagedRemoting>, element
+title: <PreferComInsteadOfManagedRemoting> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d793c8d84a15f554ada78f3c0dd1f0e936893fd4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 47c568a8d6e89a195414552b3db5953ee61d1e55
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252407"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116013"
 ---
-# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting> Element
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<element > PreferComInsteadOfManagedRemoting
 Określa, czy środowisko uruchomieniowe będzie używać międzyoperacyjności modelu COM zamiast komunikacji zdalnej dla wszystkich wywołań między domenami aplikacji.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting>**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,11 +52,11 @@ Określa, czy środowisko uruchomieniowe będzie używać międzyoperacyjności 
 |`runtime`|Zawiera informacje dotyczące powiązania zestawu oraz wyrzucania elementów bezużytecznych.|  
   
 ## <a name="remarks"></a>Uwagi  
- Po ustawieniu `enabled` atrybutu na `true`, środowisko uruchomieniowe zachowuje się w następujący sposób:  
+ Po ustawieniu atrybutu `enabled` na `true`, środowisko uruchomieniowe zachowuje się w następujący sposób:  
   
 - Środowisko uruchomieniowe nie wywołuje [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) dla interfejsu [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) , gdy interfejs [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) przechodzi do domeny za pomocą interfejsu com. Zamiast tego konstruuje [otokę w czasie wykonywania](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) wokół obiektu.  
   
-- Środowisko uruchomieniowe zwraca E_NOINTERFACE, gdy odbierze `QueryInterface` wywołanie dla interfejsu [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) dla dowolnego [otoki](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) modelu COM, który został utworzony w tej domenie.  
+- Środowisko uruchomieniowe zwraca E_NOINTERFACE, gdy odbierze wywołanie `QueryInterface` dla interfejsu [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) dla dowolnego [otoki](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) modelu COM, który został utworzony w tej domenie.  
   
  Te dwa zachowania zapewniają, że wszystkie wywołania przez interfejsy COM między obiektami zarządzanymi między domenami aplikacji korzystają z międzyoperacyjności modelu COM i modelu COM zamiast komunikacji zdalnej.  
   

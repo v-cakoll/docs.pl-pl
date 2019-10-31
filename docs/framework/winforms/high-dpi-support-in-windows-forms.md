@@ -1,5 +1,5 @@
 ---
-title: Wysoka obsługa rozdzielczości DPI w formularzach Windows Forms
+title: Obsługa wysokiej rozdzielczości DPI w Windows Forms
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,36 +7,34 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139078"
 ---
-# <a name="high-dpi-support-in-windows-forms"></a>Wysoka obsługa rozdzielczości DPI w formularzach Windows Forms
+# <a name="high-dpi-support-in-windows-forms"></a>Obsługa wysokiej rozdzielczości DPI w Windows Forms
 
-Począwszy od programu .NET Framework 4.7 formularzy Windows zawiera ulepszenia dla typowych o wysokiej rozdzielczości i dynamiczne scenariuszy DPI. Należą do nich następujące elementy:
+Począwszy od .NET Framework 4,7, Windows Forms zawiera usprawnienia dla typowych scenariuszy o wysokiej rozdzielczości DPI i rozdzielczości DPI. Należą do nich następujące elementy:
 
-- Ulepszenia skalowanie i układ liczby formularzy Windows Forms kontroluje, takich jak <xref:System.Windows.Forms.MonthCalendar> kontroli i <xref:System.Windows.Forms.CheckedListBox> kontroli.
+- Ulepszenia skalowania i układu wielu kontrolek Windows Forms, takich jak kontrolka <xref:System.Windows.Forms.MonthCalendar> i kontrolka <xref:System.Windows.Forms.CheckedListBox>.
 
-- Jednego przebiegu skalowania.  W .NET Framework 4.6 i wcześniejszych wersjach skalowania została wykonana przy użyciu wielu przebiegów, które spowodowało niektóre formanty, które można skalować więcej niż było konieczne.
+- Skalowanie pojedynczej karty.  W .NET Framework 4,6 i wcześniejszych wersjach skalowanie było wykonywane przez wiele przebiegów, co spowodowało, że niektóre kontrolki są skalowane więcej niż jest to konieczne.
 
-- Obsługa dynamicznego scenariuszy DPI, w których użytkownik zmieni współczynnik skalowania lub DPI po aplikacji Windows Forms została uruchomiona.
+- Obsługa dynamicznych scenariuszy DPI, w których użytkownik zmienia współczynnik DPI lub skalowania po uruchomieniu aplikacji Windows Forms.
 
-W wersjach programu .NET Framework, począwszy od programu .NET Framework 4.7 rozszerzoną obsługę w wysokiej rozdzielczości DPI to funkcja opcjonalna. Należy skonfigurować aplikację, aby z niej korzystać.
+W wersjach .NET Framework rozpoczynających się od .NET Framework 4,7 Ulepszona obsługa wysokiej rozdzielczości DPI jest funkcją wyboru. Musisz skonfigurować aplikację, aby korzystać z niej.
 
-## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Konfigurowanie aplikacji Windows Forms o wysokiej rozdzielczości DPI pomocy technicznej.
+## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>Konfigurowanie aplikacji Windows Forms na potrzeby obsługi wysokiej rozdzielczości DPI
 
-Nowe funkcje Windows Forms, które obsługują wysokiej świadomości DPI są dostępne tylko w aplikacjach docelowych programu .NET Framework 4.7, które są uruchomione w systemach operacyjnych Windows, począwszy od systemu Windows 10 dla kreatywnych.
+Nowe funkcje Windows Forms obsługujące rozpoznawanie wysokiej rozdzielczości DPI są dostępne tylko w aplikacjach przeznaczonych dla .NET Framework 4,7 i działają w systemach operacyjnych Windows, począwszy od aktualizacji systemu Windows 10 dla twórców.
 
-Ponadto aby skonfigurować obsługa wysokiej rozdzielczości DPI w aplikacji Windows Forms, możesz wykonaj następujące czynności:
+Ponadto w celu skonfigurowania obsługi wysokiej rozdzielczości DPI w aplikacji Windows Forms należy wykonać następujące czynności:
 
-- Zadeklaruj zgodności z systemem Windows 10.
+- Zadeklaruj zgodność z systemem Windows 10.
 
-  Aby to zrobić, Dodaj do pliku manifestu:
+  Aby to zrobić, Dodaj następujący plik do pliku manifestu:
 
   ```xml
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">
@@ -47,9 +45,9 @@ Ponadto aby skonfigurować obsługa wysokiej rozdzielczości DPI w aplikacji Win
   </compatibility>
   ```
 
-- Włączanie rozpoznawanie wartości DPI monitora w *app.config* pliku.
+- Włącz obsługę rozdzielczości DPI na poziomie monitora w pliku *App. config* .
 
-  Windows Forms wprowadzono nowy [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md) element do obsługi nowych funkcji i dodać dostosowania, począwszy od programu .NET Framework 4.7. Aby móc korzystać z nowych funkcji, które obsługują o wysokiej rozdzielczości, Dodaj następujący element do pliku konfiguracyjnego aplikacji.
+  Windows Forms wprowadza nowy element [`<System.Windows.Forms.ApplicationConfigurationSection>`](../configure-apps/file-schema/winforms/index.md) do obsługi nowych funkcji i dostosowanych dostosowań, rozpoczynając od .NET Framework 4,7. Aby skorzystać z nowych funkcji, które obsługują wysoką wartość DPI, Dodaj następujące elementy do pliku konfiguracji aplikacji.
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -58,11 +56,11 @@ Ponadto aby skonfigurować obsługa wysokiej rozdzielczości DPI w aplikacji Win
   ```
 
   > [!IMPORTANT]
-  > W poprzednich wersjach programu .NET Framework manifest jest służy do dodawania obsługa wysokiej rozdzielczości DPI. To podejście nie jest już zalecany, ponieważ zastępuje ona ustawień zdefiniowanych w pliku app.config.
+  > W poprzednich wersjach .NET Framework użyto manifestu w celu dodania obsługi wysokiej rozdzielczości DPI. Takie podejście nie jest już zalecane, ponieważ zastępuje ustawienia zdefiniowane w pliku App. config.
 
-- Wywołaj statyczną <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> metody.
+- Wywołaj metodę static <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>.
 
-  Powinna to być to pierwsze wywołanie metody w punktem wejścia aplikacji. Na przykład:
+  Powinno to być pierwsze wywołanie metody w punkcie wejścia aplikacji. Na przykład:
 
   ```csharp
   static void Main()
@@ -73,9 +71,9 @@ Ponadto aby skonfigurować obsługa wysokiej rozdzielczości DPI w aplikacji Win
   }
   ```
 
-## <a name="opting-out-of-individual-high-dpi-features"></a>Rezygnacja z poszczególnych funkcji DPI wysoka
+## <a name="opting-out-of-individual-high-dpi-features"></a>Rezygnacja z pojedynczych funkcji wysokiej rozdzielczości DPI
 
-Ustawienie `DpiAwareness` wartość `PerMonitorV2` włącza wszystkie wysokiej funkcji świadomości DPI, są obsługiwane przez wersje programu .NET Framework, począwszy od programu .NET Framework 4.7. Zazwyczaj jest to odpowiednie dla większości aplikacji Windows Forms. Można jednak zrezygnować z co najmniej jeden poszczególnych funkcji. Najważniejszą przyczyną takiego postępowania jest, że istniejący kod aplikacji już obsługuje tę funkcję.  Na przykład jeśli aplikacja obsługuje automatyczne skalowanie, możesz chcieć wyłączyć funkcję automatycznej zmiany rozmiaru w następujący sposób:
+Ustawienie wartości `DpiAwareness` na `PerMonitorV2` włącza wszystkie funkcje rozpoznawania o wysokiej rozdzielczości DPI obsługiwane przez .NET Framework wersje zaczynające się od .NET Framework 4,7. Zwykle jest to odpowiednie dla większości aplikacji Windows Forms. Można jednak zrezygnować z jednej lub kilku poszczególnych funkcji. Najważniejszym powodem tego jest to, że istniejący kod aplikacji już obsługuje tę funkcję.  Na przykład jeśli aplikacja obsługuje automatyczne skalowanie, można wyłączyć funkcję automatycznego zmieniania rozmiarów w następujący sposób:
 
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,31 +82,31 @@ Ustawienie `DpiAwareness` wartość `PerMonitorV2` włącza wszystkie wysokiej f
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-Aby uzyskać listę poszczególnych kluczy i ich wartości, zobacz [elementu Dodawanie konfiguracji w programie Windows Forms](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
+Aby uzyskać listę poszczególnych kluczy i ich wartości, zobacz [Windows Forms dodawania elementu konfiguracji](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md).
 
-## <a name="new-dpi-change-events"></a>Nowe zdarzenia Zmiana rozdzielczości DPI
+## <a name="new-dpi-change-events"></a>Nowe zdarzenia zmiany DPI
 
-Począwszy od programu .NET Framework 4.7, trzy nowe zdarzenia umożliwiają programowe obsługi dynamicznej zmian rozdzielczości:
+Począwszy od .NET Framework 4,7, trzy nowe zdarzenia pozwalają programowo obsługiwać dynamiczne zmiany DPI:
 
-- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, który uruchamiane, gdy ustawienie DPI dla formantu jest programistycznej zmiany po wystąpieniu zdarzenia zmiany DPI do jego kontrolki nadrzędnej lub formularza wystąpił.
-- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, którego uruchamiane, gdy ustawienie DPI dla formantu jest programistycznej zmiany przed DPI zdarzenia zmiany, do kontrolki nadrzędnej lub formularza wystąpił.
-- <xref:System.Windows.Forms.Form.DpiChanged>, którego uruchamiane, gdy zmieni się ustawienie DPI na urządzeniu wyświetlana, gdy formularz jest aktualnie wyświetlany.
+- <xref:System.Windows.Forms.Control.DpiChangedAfterParent>, który jest uruchamiany, gdy ustawienie DPI dla kontrolki jest zmieniane programowo po wystąpieniu zdarzenia zmiany DPI dla jego formantu nadrzędnego lub formularza.
+- <xref:System.Windows.Forms.Control.DpiChangedBeforeParent>, który jest uruchamiany, gdy ustawienie DPI dla kontrolki jest zmieniane programowo przed wystąpieniem zdarzenia zmiany DPI dla jego formantu nadrzędnego lub formularza.
+- <xref:System.Windows.Forms.Form.DpiChanged>, który jest uruchamiany, gdy ustawienie DPI zostanie zmienione na urządzeniu wyświetlającym, w którym formularz jest aktualnie wyświetlany.
 
-## <a name="new-helper-methods-and-properties"></a>Nowy Pomocnik metody i właściwości
+## <a name="new-helper-methods-and-properties"></a>Nowe metody i właściwości pomocnika
 
-.NET Framework 4.7 również dodaje nowe metody pomocnicze i właściwości, które zawierają informacje dotyczące skalowania DPI i umożliwiają wykonywanie, Skalowanie DPI. Należą do nich następujące elementy:
+.NET Framework 4,7 dodaje także nowe metody pomocnika i właściwości, które zawierają informacje na temat skalowania DPI i umożliwiają skalowanie DPI. Należą do nich następujące elementy:
 
-- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, która konwertuje wartość z logiczną pikseli urządzenia.
+- <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>, która konwertuje wartość z logicznego na piksele urządzenia.
 
-- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, która skaluje się obrazu mapy bitowej do logicznego DPI dla urządzenia.
+- <xref:System.Windows.Forms.Control.ScaleBitmapLogicalToDevice%2A>, która skaluje obraz mapy bitowej do logicznej rozdzielczości DPI urządzenia.
 
-- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, która zwraca DPI dla bieżącego urządzenia.
+- <xref:System.Windows.Forms.Control.DeviceDpi%2A>, która zwraca wartość DPI dla bieżącego urządzenia.
 
-## <a name="versioning-considerations"></a>Uwagi dotyczące wersji
+## <a name="versioning-considerations"></a>Zagadnienia dotyczące wersji
 
-Oprócz uruchamiania na .NET Framework 4.7 i systemu Windows 10 dla kreatywnych, aplikacji mogą być wykonywane w środowisku, w którym nie jest zgodny z wysokiej rozdzielczości DPI ulepszenia. W takim przypadku należy tworzyć rezerwowych dla aplikacji. Można to zrobić przeprowadzić [Rysowanie niestandardowe](./controls/user-drawn-controls.md) do obsługi skalowania.
+Oprócz uruchamiania w systemie .NET Framework 4,7 i aktualizacji systemu Windows 10 dla twórców aplikacja może również działać w środowisku, w którym nie jest zgodna z ulepszeniami o wysokiej rozdzielczości DPI. W takim przypadku należy opracować rezerwę dla aplikacji. Można to zrobić, aby przeprowadzić [Niestandardowe Rysowanie](./controls/user-drawn-controls.md) w celu obsługi skalowania.
 
-Aby to zrobić, należy także określić systemu operacyjnego, na którym uruchomiona jest aplikacja. Możesz to zrobić przy użyciu kodu, jak pokazano poniżej:
+W tym celu należy również określić system operacyjny, w którym działa aplikacja. Można to zrobić z kodem podobnym do następującego:
 
 ```csharp
 // Create a reference to the OS version of Windows 10 Creators Update.
@@ -122,9 +120,9 @@ Console.WriteLine(Environment.OSVersion.VersionString);
 Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 ```
 
-Należy pamiętać, że aplikacja nie będzie pomyślnie wykryć systemu Windows 10, jeśli nie został wymieniony jako obsługiwany system operacyjny w manifeście aplikacji.
+Należy zauważyć, że aplikacja nie będzie mogła pomyślnie wykryć systemu Windows 10, jeśli nie został on wymieniony jako obsługiwany system operacyjny w manifeście aplikacji.
 
-Możesz również sprawdzić wersji programu .NET Framework, która została skompilowana aplikacja:
+Możesz również sprawdzić wersję .NET Framework, z którą została skompilowana aplikacja:
 
 ```csharp
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
@@ -132,5 +130,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Windows Forms, Dodaj Element konfiguracji](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [Windows Forms dodać elementu konfiguracji](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Dostosowywanie rozmiaru i skali formularzy Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

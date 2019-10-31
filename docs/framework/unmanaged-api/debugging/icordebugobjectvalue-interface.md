@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue, interfejs
+title: ICorDebugObjectValue — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 937de6a0-6fbf-4ddc-80ea-a6217b73e62b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4ca59aac075a42294026ad54c5d5dd4dbf7fda4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b782207503a2c3f739a30f68d509e6b481d2b6a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943334"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129752"
 ---
-# <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue, interfejs
+# <a name="icordebugobjectvalue-interface"></a>ICorDebugObjectValue — Interfejs
 
 Podklasa elementu "ICorDebugValue" reprezentująca wartość, która zawiera obiekt.  
   
@@ -31,28 +29,28 @@ Podklasa elementu "ICorDebugValue" reprezentująca wartość, która zawiera obi
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|Pobiera wskaźnik interfejsu do środowiska uruchomieniowego języka wspólnego (CLR) <xref:System.Type> obiektu, do którego odwołuje się to `ICorDebugObjectValue` odwołanie.|  
+|[GetClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)|Pobiera wskaźnik interfejsu do <xref:System.Type> środowiska uruchomieniowego języka wspólnego (CLR) obiektu, do którego odwołuje się ta `ICorDebugObjectValue`.|  
 |[GetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getcontext-method.md)|Nie zaimplementowane.|  
 |[GetFieldValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getfieldvalue-method.md)|Pobiera wskaźnik interfejsu do elementu [ICorDebugValue](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-interface.md) , który reprezentuje wartość określonego pola określonej klasy.|  
 |[GetManagedCopy, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getmanagedcopy-method.md)|Nieaktualne. Nie wywołuj tej metody.|  
 |[GetVirtualMethod, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getvirtualmethod-method.md)|Nie zaimplementowane.|  
-|[IsValueClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Pobiera wartość wskazującą, czy obiekt, do którego odwołuje `ICorDebugObjectValue` się to typ wartości.|  
+|[IsValueClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-isvalueclass-method.md)|Pobiera wartość wskazującą, czy obiekt, do którego odwołuje się ten `ICorDebugObjectValue`, jest typem wartości.|  
 |[SetFromManagedCopy, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-setfrommanagedcopy-method.md)|Nieaktualne. Nie wywołuj tej metody.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugObjectValue` Pozostanie on ważny do momentu, gdy debugowany proces jest kontynuowany.  
+ `ICorDebugObjectValue` pozostaje ważna do momentu kontynuowania debugowanego procesu.  
   
 > [!NOTE]
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

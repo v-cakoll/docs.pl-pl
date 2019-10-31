@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a13ec8a6-8e18-4acb-8054-77f5b1a0e0b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 276a69deecccc91b3c511403c2bd0d5c0baabd9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b24f8ed4f5e2c6e0022f5599f2ab8c44a30a561a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772798"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129278"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException — Metoda
-Pobiera pakiet programu Watson bieżący wyjątek w wątku wywołującego.  
+Pobiera pakiet programu Watson dla bieżącego wyjątku w wątku wywołującym.  
   
- A *zasobnika* to kolekcja danych błędu, który jest powiązany z samą wadę kodu. *Watson* odwołuje się do zestawu technologii do zbierania i analizowania danych, który jest skojarzony z powodu wyjątku.  
+ *Zasobnik* to kolekcja danych błędów, która jest powiązana z tą samą wadą kodu. Program *Watson* odwołuje się do zestawu technologii służących do zbierania i analizowania danych, które są skojarzone z wyjątkiem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +37,16 @@ HRESULT GetBucketParametersForCurrentException(
   
 ## <a name="parameters"></a>Parametry  
  `pParams`  
- [out] Wskaźnik do [bucketparameters —](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) strukturę, która zawiera dane o błędach dla wyjątku.  
+ określoną Wskaźnik do struktury [BucketParameters —](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md) , która zawiera dane błędów dla wyjątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

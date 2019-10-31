@@ -11,18 +11,16 @@ helpviewer_keywords:
 - Ilasm.exe
 - verifying MSIL performance
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8d1ad081c8d783cd18054078a6eeb82428faa4d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cb995e78e534048043886070536ef0dd0a45c057
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105094"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
-Program IL Assembler generuje przenośny plik wykonywalny (PE) na podstawie języka pośredniego (IL). (Aby uzyskać więcej informacji na temat IL, zobacz [zarządzany proces wykonywania](../../standard/managed-execution-process.md)). Można uruchomić wynikowy plik wykonywalny, który zawiera instrukcje języka IL i wymagane metadane, aby ustalić, czy kod w języku IL działa zgodnie z oczekiwaniami.
+Program IL Assembler generuje przenośny plik wykonywalny (PE) na podstawie języka pośredniego (IL). (Aby uzyskać więcej informacji na temat IL, zobacz [zarządzany proces wykonywania](../../standard/managed-execution-process.md)). Można uruchomić utworzony plik wykonywalny zawierający kod IL i wymagane metadane, aby określić, czy IL działa zgodnie z oczekiwaniami.
 
 To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, użyj wiersz polecenia dla deweloperów dla programu Visual Studio (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersza polecenia](developer-command-prompt-for-vs.md).
 
@@ -38,7 +36,7 @@ ilasm [options] filename [[options]filename...]
 
 | Argument | Opis |
 | -------- | ----------- |
-|`filename`|Nazwa pliku źródłowego il. Ten plik zawiera dyrektywy deklaracji metadanych i symboliczne instrukcje języka IL. Można dostarczyć wiele argumentów plików źródłowych w celu utworzenia pojedynczego pliku PE z *Ilasm. exe*. **Uwaga:** Należy upewnić się, że ostatnia linia kodu w pliku źródłowym il kończy się znakiem odstępu lub znakiem końca wiersza.|
+|`filename`|Nazwa pliku źródłowego il. Ten plik zawiera dyrektywy deklaracji metadanych i symboliczne instrukcje języka IL. Można dostarczyć wiele argumentów plików źródłowych w celu utworzenia pojedynczego pliku PE z *Ilasm. exe*. **Uwaga:** Upewnij się, że ostatni wiersz kodu w pliku źródłowym Il ma końcowe białe znaki lub znak końca wiersza.|
 
 | Opcja | Opis |
 | ------ | ----------- |
@@ -47,39 +45,39 @@ ilasm [options] filename [[options]filename...]
 |**/APPCONTAINER**|Tworzy plik *. dll* lub *. exe* , który jest uruchamiany w kontenerze aplikacji systemu Windows jako dane wyjściowe.|
 |**/arm**|Określa procesor Advanced RISC Machine (ARM) jako procesor docelowy.<br /><br /> Jeśli nie określono liczby bitów obrazu, wartość domyślna to **/32bitpreferred**.|
 |**/Base:** `integer`|Ustawia ImageBase na wartość określoną przez `integer` w opcjonalnym nagłówku NT. Jeśli dyrektywa języka IL .imagebase została określona w pliku, ta opcja zastępuje ją.|
-|**/clock**|Mierzy i raportuje następujące czasy kompilacji (w milisekundach) dla określonego pliku źródłowego il:<br /><br /> **Łączny przebieg**: Łączny czas poświęcony na wykonanie wszystkich konkretnych operacji.<br /><br /> **Uruchamianie**: Ładowanie i otwieranie pliku.<br /><br /> **Emitowanie MD**: Emitowanie metadanych.<br /><br /> **Odref do rozdzielczości def**: Rozpoznawanie odwołań do definicji w pliku.<br /><br /> **Generowanie pliku CEE**: Generowanie obrazu pliku w pamięci.<br /><br /> **Zapisywanie pliku PE**: Zapisywanie obrazu do pliku PE.|
-|**/debug**[:**IMPL**&#124;**OPT**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/Debug** bez dodatkowych wartości wyłącza optymalizację JIT i używa punktów sekwencji z pliku PDB.<br /><br /> **Impl** wyłącza optymalizację JIT i używa niejawnych punktów sekwencji.<br /><br /> Opcja **opt** włącza optymalizację JIT i używa niejawnych punktów sekwencji.|
+|**/clock**|Mierzy i raportuje następujące czasy kompilacji (w milisekundach) dla określonego pliku źródłowego il:<br /><br /> **Łączny przebieg**: łączny czas poświęcony na wykonywanie wszystkich określonych operacji.<br /><br /> **Uruchamianie**: ładowanie i otwieranie pliku.<br /><br /> **Emitowanie MD**: emitowanie metadanych.<br /><br /> **Odwołanie do rozdzielczości def**: Rozpoznawanie odwołań do definicji w pliku.<br /><br /> **Generowanie pliku CEE**: generowanie obrazu pliku w pamięci.<br /><br /> **Zapisywanie pliku PE**: Zapisywanie obrazu do pliku PE.|
+|**/Debug**[:**Impl**&#124;**opt**]|Dołącza informacje o debugowaniu (zmienne lokalne, nazwy argumentów i numery wierszy). Tworzy plik PDB.<br /><br /> **/Debug** bez dodatkowych wartości wyłącza optymalizację JIT i używa punktów sekwencji z pliku PDB.<br /><br /> **Impl** wyłącza optymalizację JIT i używa niejawnych punktów sekwencji.<br /><br /> Opcja **opt** włącza optymalizację JIT i używa niejawnych punktów sekwencji.|
 |**/DLL**|Tworzy plik *. dll* jako dane wyjściowe.|
 |**/ENC:** `file`|Tworzy plik różnic Edytuj-i-Kontynuuj z określonego pliku źródłowego.<br /><br /> Ten argument jest tylko do użytku akademickiego i nie jest obsługiwany w użytku komercyjnym.|
 |**/exe**|Tworzy plik wykonywalny jako dane wyjściowe. Domyślnie włączone.|
 |**/flags:** `integer`|Ustawia ImageFlags na wartość określoną przez `integer` w nagłówku środowiska uruchomieniowego języka wspólnego. Jeśli dyrektywa języka IL .corflags została określona w pliku, ta opcja zastępuje ją. Zobacz CorHdr. h, COMIMAGE_FLAGS, aby uzyskać listę prawidłowych wartości dla *liczby całkowitej*.|
 |**/fold**|Składa identyczne treści metod w jedną.|
 |/**HIGHENTROPYVA**|Tworzy wyjściowy plik wykonywalny, który obsługuje generowanie losowe układów przestrzeni adresowej (ASLR) o wysokiej entropii. (Domyślnie dla **/APPCONTAINER**).|
-|**/include:** `includePath`|Ustawia ścieżkę do wyszukiwania plików dołączonych `#include`do programu.|
+|**/include:** `includePath`|Ustawia ścieżkę do wyszukiwania plików dołączonych do `#include`.|
 |**/itanium**|Określa procesor Intel Itanium jako procesor docelowy.<br /><br /> Jeśli nie określono liczby bitów obrazu, wartość domyślna to **/pe64**.|
-|**/Key:** `keyFile`|Kompiluje `keyFile`ze silnym podpisem przy użyciu klucza prywatnego zawartego w. `filename`|
-|**/Key** @`keySource`|Kompiluje `keySource`ze silnym podpisem przy użyciu klucza prywatnego, który został utworzony w. `filename`|
+|**/Key:** `keyFile`|Kompiluje `filename` za pomocą silnego podpisu przy użyciu klucza prywatnego zawartego w `keyFile`.|
+|**/Key:**  @`keySource`|Kompiluje `filename` za pomocą silnego podpisu przy użyciu klucza prywatnego utworzonego w `keySource`.|
 |**/listing**|Tworzy plik listy w standardowym wyjściu. Jeśli ta opcja zostanie pominięta, plik listy nie zostanie utworzony.<br /><br /> Ten parametr nie jest obsługiwany w programie .NET Framework 2.0 i nowszych.|
 |**/MDV:** `versionString`|Ustawia ciąg wersji metadanych.|
-|**/MSV:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdzie `major` i `minor` są liczbami całkowitymi.|
-|**/noautoinherit**|Wyłącza dziedziczenie domyślne <xref:System.Object> z gdy nie określono żadnej klasy bazowej.|
+|**/MSV:** `major`.`minor`|Ustawia wersję strumienia metadanych, w której `major` i `minor` są liczbami całkowitymi.|
+|**/noautoinherit**|Wyłącza domyślne dziedziczenie z <xref:System.Object>, gdy nie określono klasy bazowej.|
 |**/nocorstub**|Powoduje pominięcie generowania procedury wejścia CORExeMain.|
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
 |**/Output:** `file.ext`|Określa nazwę i rozszerzenie pliku wyjściowego. Domyślnie nazwa pliku wyjściowego jest taka sama jak nazwa pierwszego pliku źródłowego. Domyślnym rozszerzeniem jest *. exe*. W przypadku określenia opcji **/dll** domyślne rozszerzenie to *. dll*. **Uwaga:** Określanie **/Output**: plik. dll nie ustawia opcji **/dll** . Jeśli nie określisz **/dll**, wynik będzie plikiem wykonywalnym o nazwie Moja *plik. dll*.|
-|**/optimize**|Optymalizuje długie instrukcje, co powoduje zamianę ich na krótkie. Na przykład, `br` do `br.s`.|
-|**/pe64**|Tworzy obraz 64-bitowy (PE32+).<br /><br /> Jeśli żaden procesor docelowy nie zostanie określony, wartość domyślna `/itanium`to.|
+|**/optimize**|Optymalizuje długie instrukcje, co powoduje zamianę ich na krótkie. Na przykład `br`, aby `br.s`.|
+|**/pe64**|Tworzy obraz 64-bitowy (PE32+).<br /><br /> Jeśli żaden procesor docelowy nie zostanie określony, wartość domyślna to `/itanium`.|
 |**/PDB**|Tworzy plik PDB bez włączania śledzenia informacji o debugowaniu.|
 |**/quiet**|Określa tryb cichy; nie zgłasza postępów zestawu.|
-|**/Resource:** `file.res`|Zawiera określony plik zasobów w \*formacie. res w pliku. *exe* lub *. dll* . Tylko jeden plik. res można określić przy użyciu opcji **/Resource** .|
+|**/Resource:** `file.res`|Zawiera określony plik zasobów w formacie \*. res w pliku. *exe* lub *. dll* . Tylko jeden plik. res można określić przy użyciu opcji **/Resource** .|
 |**/ssver:** `int`.`int`|Ustawia numer wersji podsystemu w opcjonalnym nagłówku NT. Dla **/APPCONTAINER** i **/ARM** minimalny numer wersji to 6,02.|
 |**/Stack:** `stackSize`|Ustawia wartość SizeOfStackReserve w opcjonalnym nagłówku NT na `stackSize`.|
 |**/stripreloc**|Określa, że nie są potrzebne relokacje podstawowe.|
-|**/SUBSYSTEM:** `integer`|Ustawia podsystem na wartość określoną przez `integer` w opcjonalnym nagłówku NT. Jeśli dyrektywa języka IL .subsystem została określona w pliku, to polecenie zastępuje ją. Aby uzyskać listę prawidłowych wartości dla `integer`programu, zobacz Winnt. h, IMAGE_SUBSYSTEM.|
+|**/SUBSYSTEM:** `integer`|Ustawia podsystem na wartość określoną przez `integer` w opcjonalnym nagłówku NT. Jeśli dyrektywa języka IL .subsystem została określona w pliku, to polecenie zastępuje ją. Aby uzyskać listę prawidłowych wartości `integer`, zobacz Winnt. h, IMAGE_SUBSYSTEM.|
 |**/x64**|Określa 64-bitowy procesor firmy AMD jako procesor docelowy.<br /><br /> Jeśli nie określono liczby bitów obrazu, wartość domyślna to **/pe64**.|
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|
 
 > [!NOTE]
-> Wszystkie opcje programu *Ilasm. exe* nie uwzględniają wielkości liter i są rozpoznawane przez pierwsze trzy litery. Na przykład **/lis** jest odpowiednikiem **/Listing** i **/res**: myresfile. res jest równoważne **/Resource**: myresfile. res. Opcje, które określają argumenty, akceptują dwukropek (:) lub znak równości (=) jako separator między opcją a argumentem. Na przykład **/Output**:*plik. ext* jest odpowiednikiem **/Output**=*pliku. ext*.
+> Wszystkie opcje programu *Ilasm. exe* nie uwzględniają wielkości liter i są rozpoznawane przez pierwsze trzy litery. Na przykład **/lis** jest odpowiednikiem **/Listing** i **/res**: myresfile. res jest równoważne **/Resource**: myresfile. res. Opcje określające argumenty akceptują dwukropek (:) lub znaku równości (=) jako separatora między opcją i argumentem. Na przykład **/Output**:*plik. ext* jest równoważne **/Output**=*pliku. ext*.
 
 ## <a name="remarks"></a>Uwagi
 

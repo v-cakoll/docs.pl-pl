@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e03e7a965bc923d91cb0c83a9ea8ea5899da63a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137898"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken — Metoda
-Pobiera token metadanych dla lokalnej zmiennej podpis funkcji, która jest reprezentowana przez to wystąpienie ICorDebugFunction.  
+Pobiera token metadanych dla zmiennej lokalnej sygnatury funkcji reprezentowanej przez to wystąpienie ICorDebugFunction.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetLocalVarSigToken (
   
 ## <a name="parameters"></a>Parametry  
  `pmdSig`  
- [out] Wskaźnik do `mdSignature` tokenu do lokalnej zmiennej podpisu tej funkcji lub `mdSignatureNil`, jeśli funkcja ta nie ma żadnych zmiennych lokalnych.  
+ określoną Wskaźnik do `mdSignature` token dla zmiennej lokalnej tej funkcji lub `mdSignatureNil`, jeśli ta funkcja nie ma zmiennych lokalnych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

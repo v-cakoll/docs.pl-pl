@@ -7,16 +7,16 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31b53837e24029fc7ff0b576d95c0213041a434e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927673"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119021"
 ---
-# <a name="configsections-element-for-configuration"></a>\<configSections > elementu \<konfiguracji >
+# <a name="configsections-element-for-configuration"></a>\<element > configSections dla konfiguracji \<
 
 Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw.
 
@@ -31,20 +31,20 @@ Brak
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<> konfiguracji**](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [ **> konfiguracji \<** ](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
 | [ **\<sekcja >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
-| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
-| [ **\<remove>** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
-| [ **\<clear>** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<sekcji >** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
+| [ **\<Usuń >** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
+| [ **\<Wyczyść >** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli ten element znajduje się w pliku konfiguracji, musi być pierwszym elementem  **\<** podrzędnym elementu Configuration >.
+Jeśli ten element znajduje się w pliku konfiguracji, musi być pierwszym elementem podrzędnym elementu **\<configuration >** .
 
 ## <a name="example"></a>Przykład
 

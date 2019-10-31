@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e14ff1cd85810a0b2f9e14c3ab4c8d12d883d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745617"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123847"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged — Metoda
-Pobiera wartość wskazującą, czy ten łańcuch działa dla kodu zarządzanego.  
+Pobiera wartość wskazującą, czy w tym łańcuchu działa kod zarządzany.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>Parametry  
  `pManaged`  
- [out] `true` Jeśli ten łańcuch działa kod zarządzany; w przeciwnym razie `false`.  
+ [out] `true`, jeśli ten łańcuch działa w kodzie zarządzanym; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

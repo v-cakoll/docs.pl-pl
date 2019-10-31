@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796505"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108010"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB — Struktura
-Zawiera informacje o pojedynczym atrybucie w zestawie i składa się z trzech `DWORD`elementów. Każdy `DWORD` jest przesunięciem do buforu znaków utworzonego `CurrentIntoBuffer` przez metodę interfejsu [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
+Zawiera informacje o pojedynczym atrybucie w zestawie i składa się z trzech `DWORD`s. Każdy `DWORD` jest przesunięciem do buforu znaków utworzonego przez metodę `CurrentIntoBuffer` interfejsu [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,15 +45,15 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 |`ofsValue`|Trzecie przesunięcie do buforu znaków. Ta lokalizacja oznacza początek wartości atrybutu.|  
   
 ## <a name="sample"></a>Przykład  
- Poniższy przykład ilustruje kilka podstawowych kroków, które ostatecznie spowodują, że została wypełniona `IDENTITY_ATTRIBUTE_BLOB` :  
+ Poniższy przykład ilustruje kilka podstawowych kroków, które ostatecznie powodują wypełnianie `IDENTITY_ATTRIBUTE_BLOB` strukturze:  
   
 1. Uzyskaj [IReferenceIdentity —](ireferenceidentity-interface.md) dla zestawu.  
   
-2. Wywołaj metodę i uzyskaj IEnumIDENTITY_ATTRIBUTE. [](ienumidentity-attribute-interface.md) `IReferenceIdentity::EnumAttributes`  
+2. Wywołaj metodę `IReferenceIdentity::EnumAttributes` i uzyskaj [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).  
   
-3. Utwórz bufor znaków i Cast jako `IDENTITY_ATTRIBUTE_BLOB` strukturę.  
+3. Utwórz bufor znaków i Cast jako strukturę `IDENTITY_ATTRIBUTE_BLOB`.  
   
-4. Wywoływanie `IEnumIDENTITY_ATTRIBUTE`metodyinterfejsu. `CurrentIntoBuffer` Ta metoda kopiuje atrybuty `Namespace`, `Name`i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w `IDENTITY_ATTRIBUTE_BLOB` strukturze.  
+4. Wywołaj metodę `CurrentIntoBuffer` interfejsu `IEnumIDENTITY_ATTRIBUTE`. Ta metoda kopiuje atrybuty `Namespace`, `Name`i `Value` do buforu znaków. Trzy przesunięcia do tych ciągów staną się dostępne w strukturze `IDENTITY_ATTRIBUTE_BLOB`.  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -222,7 +220,7 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>Aby uruchomić przykład  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> EnumAssemblyAttributes. exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>Przykładowe dane wyjściowe  
  Kultura = neutralna  
@@ -236,11 +234,11 @@ Exit:
  Wersja = 2.0.0.0  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

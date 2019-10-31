@@ -12,19 +12,17 @@ api_type:
 ms.assetid: 17665b77-1342-4115-94fd-9f45b0ecfb0f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9810a8a55fc9c5296bffa5106551f9734dcd61bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 243000a2399b4938a3ad7f732c64e2f79b664f51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131060"
 ---
 # <a name="icordebugilcode2getlocalvarsigtoken-method"></a>Metoda ICorDebugILCode2::GetLocalVarSigToken
-[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
+[Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Pobiera token metadanych dla lokalnej zmiennej podpisu dla funkcji, która jest reprezentowana przez to wystąpienie.  
+ Pobiera token metadanych lokalnej zmiennej sygnatury dla funkcji reprezentowanej przez to wystąpienie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,18 +34,18 @@ HRESULT GetLocalVarSigToken(
   
 ## <a name="parameters"></a>Parametry  
  `pmdSig`  
- [out] Wskaźnik do `mdSignature` tokenu dla lokalnej zmiennej podpisu dla tej funkcji lub `mdSignatureNil` czy brak podpisu (to znaczy, jeśli funkcja nie ma żadnych zmiennych lokalnych).  
+ określoną Wskaźnik do `mdSignature` token dla zmiennej lokalnej dla tej funkcji lub `mdSignatureNil`, jeśli nie ma sygnatury (czyli jeśli funkcja nie ma żadnych zmiennych lokalnych).  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

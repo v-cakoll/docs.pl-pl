@@ -6,78 +6,76 @@ helpviewer_keywords:
 - reflection, dynamic assembly
 - assemblies, collectible
 - collectible assemblies, retrieving
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85eacff22cf2e1c0b8c3d74a4971de035dfafbe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860909"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130290"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>Zestawy kolekcjonowane dla dynamicznego generowania typów
 
-*Zestawy kolekcjonowane* dynamicznych zestawów, które może być rozładowany bez rozładowywania domeny aplikacji, w którym zostały utworzone. Można odzyskać całej pamięci zarządzane i niezarządzane używane przez zestaw kolekcjonowany i typy, które zawiera. Informacje, takie jak nazwa zestawu jest usuwany z tabel wewnętrznych.
+*Zestawy kolekcjonowane* to zestawy dynamiczne, które można zwolnić bez zwalniania domeny aplikacji, w której zostały utworzone. Cała zarządzana i niezarządzana pamięć używana przez zestaw kolekcjonowany i typy, które zawiera, można odzyskiwać. Informacje, takie jak nazwa zestawu, są usuwane z tabel wewnętrznych.
 
-Do włączenia zwalniania, użyj <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> Flaga podczas tworzenia zestawu dynamicznego. Zestaw jest przejściowy (oznacza to, że nie można zapisać go) i może ulec ograniczenia opisane w [ograniczenia dotyczące zestawy Kolekcjonowane](#restrictions-on-collectible-assemblies) sekcji. Środowisko uruchomieniowe języka wspólnego (CLR) zwalnia zestaw kolekcjonowany automatycznie po zwolnieniu wszystkie obiekty skojarzone z zestawem. Pod innymi względami zestawy kolekcjonowane są tworzone i używane w taki sam sposób jak inne zestawów dynamicznych.
+Aby włączyć zwalnianie, Użyj flagi <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> podczas tworzenia zestawu dynamicznego. Zestaw jest przejściowy (oznacza to, że nie można go zapisać) i podlega ograniczeniom opisanym w sekcji [ograniczenia dotyczące zestawów kolekcjonowanych](#restrictions-on-collectible-assemblies) . Środowisko uruchomieniowe języka wspólnego (CLR) zwalnia zestaw kolekcjonowany automatycznie po zwolnieniu wszystkich obiektów skojarzonych z zestawem. We wszystkich innych aspektach zestawy kolekcjonowane są tworzone i używane w taki sam sposób jak inne zestawy dynamiczne.
 
-## <a name="lifetime-of-collectible-assemblies"></a>Okres istnienia zestawy kolekcjonowane
+## <a name="lifetime-of-collectible-assemblies"></a>Okres istnienia zestawów kolekcjonowanych
 
-Okres istnienia zestaw kolekcjonowany jest kontrolowana przez istnienie odwołania do typów, które zawiera i obiekty, które są tworzone na podstawie tych typów. Środowisko uruchomieniowe języka wspólnego nie spowoduje usunięcia zestawu, tak długo, jak istnieje co najmniej jeden z następujących czynności (`T` jest dowolny typ, który jest zdefiniowany w zestawie): 
+Okres istnienia zestawu kolekcjonowanego jest kontrolowany przez istnienie odwołań do typów, które zawiera, oraz obiektów, które są tworzone na podstawie tych typów. Środowisko uruchomieniowe języka wspólnego nie zwalnia zestawu, tak długo, jak istnieje co najmniej jeden z następujących elementów (`T` jest dowolnym typem zdefiniowanym w zestawie): 
 
 - Wystąpienie `T`.
 
 - Wystąpienie tablicy `T`.
  
-- Wystąpienia typu ogólnego, który ma `T` jako jeden z argumentów typu. W tym ogólnych kolekcji `T`nawet wtedy, gdy tej kolekcji jest pusta.
+- Wystąpienie typu ogólnego, który ma `T` jako jeden z argumentów typu. Obejmuje to ogólne kolekcje `T`, nawet jeśli ta kolekcja jest pusta.
 
-- Wystąpienie <xref:System.Type> lub <xref:System.Reflection.Emit.TypeBuilder> reprezentujący `T`. 
+- Wystąpienie <xref:System.Type> lub <xref:System.Reflection.Emit.TypeBuilder>, które reprezentuje `T`. 
 
    > [!IMPORTANT]
-   > Konieczne jest zwolnienie wszystkich obiektów, które reprezentuje części zestawu. <xref:System.Reflection.Emit.ModuleBuilder> Definiujący `T` przechowuje odwołania do <xref:System.Reflection.Emit.TypeBuilder>i <xref:System.Reflection.Emit.AssemblyBuilder> obiekt przechowuje odwołania do <xref:System.Reflection.Emit.ModuleBuilder>, więc odwołania do tych obiektów, które muszą zostać zwolnione. Nawet istnienie <xref:System.Reflection.Emit.LocalBuilder> lub <xref:System.Reflection.Emit.ILGenerator> używany do budowy `T` zapobiega zwolnienie.
+   > Należy zwolnić wszystkie obiekty, które reprezentują części zestawu. <xref:System.Reflection.Emit.ModuleBuilder> definiujący `T` zachowuje odwołanie do <xref:System.Reflection.Emit.TypeBuilder>, a obiekt <xref:System.Reflection.Emit.AssemblyBuilder> przechowuje odwołanie do <xref:System.Reflection.Emit.ModuleBuilder>, więc odwołania do tych obiektów muszą zostać wydane. Nawet istnienie <xref:System.Reflection.Emit.LocalBuilder> lub <xref:System.Reflection.Emit.ILGenerator> używane w konstrukcji `T` zapobiega wyładowaniu.
 
-- Statyczne odwołanie do `T` przez inny typ dynamicznie definiowane `T1` , jest nadal dostępny przy wykonywaniu kodu. Na przykład `T1` może pochodzić od `T`, lub `T` może być typem parametru w metodzie o `T1`.
+- Statyczne odwołanie do `T` przez inny typ dynamicznie zdefiniowany `T1`, który jest nadal dostępny przez wykonywanie kodu. Na przykład `T1` mogą pochodzić od `T`lub `T` być typem parametru w metodzie `T1`.
  
-- A **ByRef** w polu statycznym, który należy do `T`.
+- Element **ByRef** do pola statycznego, które należy do `T`.
 
-- A <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle>, lub <xref:System.RuntimeMethodHandle> odwołujący się do `T` lub składnik `T`.
+- <xref:System.RuntimeTypeHandle>, <xref:System.RuntimeFieldHandle>lub <xref:System.RuntimeMethodHandle> odwołujące się do `T` lub składnika `T`.
 
-- Wystąpienia dowolnego obiektu odbicia, która mogłaby być używana pośrednio lub bezpośrednio do dostępu <xref:System.Type> obiekt, który reprezentuje `T`. Na przykład <xref:System.Type> dla obiektu `T` można uzyskać z typem tablicy, którego typ elementu jest `T`, lub z typu ogólnego, który ma `T` jako argument typu. 
+- Wystąpienie dowolnego obiektu odbicia, które może być używane pośrednio lub bezpośrednio w celu uzyskania dostępu do obiektu <xref:System.Type>, który reprezentuje `T`. Na przykład obiekt <xref:System.Type> dla `T` można uzyskać z typu tablicy, którego typem elementu jest `T`lub z typu ogólnego, który ma `T` jako argument typu. 
 
-- Metody `M` w stosie wywołań z żadnym z wątków, gdzie `M` to metoda `T` lub metoda poziom modułu, która jest zdefiniowana w zestawie.
+- Metoda `M` na stosie wywołań dowolnego wątku, gdzie `M` jest metodą `T` lub metodą poziomu modułu, która jest zdefiniowana w zestawie.
 
-- Delegat na metodę statyczną, która jest zdefiniowana w module tego zestawu.
+- Delegat do statycznej metody, która jest zdefiniowana w module zestawu.
 
-Jeśli tylko jeden element z tej listy istnieje tylko jeden typ lub jednej metody w zestawie, środowisko uruchomieniowe nie może zwolnić zestaw.
+Jeśli istnieje tylko jeden element z tej listy tylko dla jednego typu lub jednej metody w zestawie, środowisko uruchomieniowe nie może zwolnić zestawu.
 
 > [!NOTE]
-> Środowisko uruchomieniowe nie faktycznie zwolnić zestaw, do momentu finalizatory zostały uruchomione dla wszystkich elementów na liście.
+> Środowisko uruchomieniowe nie zwalnia zestawu, dopóki nie zostaną uruchomione finalizatory dla wszystkich elementów na liście.
 
-W celu śledzenia okresu istnienia, zbudowany typ ogólny takich jak `List<int>` (w C#) lub `List(Of Integer)` (w języku Visual Basic), są tworzone i używane w generacji zestaw kolekcjonowany uznaje się za zdefiniowana w zestawie zawiera definicji typu ogólnego lub w zestawie, który zawiera definicję jednego z argumentów typu. Dokładny zestaw, który jest używany jest szczegółowo opisuje implementacja i ulegną zmianie.
+Dla celów śledzenia okresu istnienia, skonstruowany typ ogólny, taki jak `List<int>` C#(in) lub `List(Of Integer)` (w Visual Basic), który jest tworzony i używany w generacji zestawu kolekcjonowanego, jest uznawany za zdefiniowany w zestawie, który zawiera Definicja typu ogólnego lub zestawu, który zawiera definicję jednego z argumentów typu. Dokładny zestaw, który jest używany jest szczegółami implementacji i może ulec zmianie.
  
-## <a name="restrictions-on-collectible-assemblies"></a>Ograniczenia dotyczące zestawy kolekcjonowane
+## <a name="restrictions-on-collectible-assemblies"></a>Ograniczenia dotyczące zestawów kolekcjonowanych
 
-Aby zestawy kolekcjonowane są stosowane następujące ograniczenia: 
+Do zestawów kolekcjonowanych dotyczą następujące ograniczenia: 
 
-- **Odwołań statycznych**   
-  Typy w zwykłych zestawu dynamicznego nie może mieć statyczne odwołania do typów, które są zdefiniowane w zestawie. Na przykład, jeśli zdefiniujesz zwykły typ, który dziedziczy z typu w zestawie kolekcjonowane <xref:System.NotSupportedException> wyjątku. Typ w zestawie mogą mieć statyczne odwołania do typu w innym zestawie, ale spowoduje to rozszerzenie okres istnienia przywoływanego zestawu z okresem istnienia zestaw odwołujący się.
+- **Odwołania statyczne**   
+  Typy w zwykłym zestawie dynamicznym nie mogą zawierać statycznych odwołań do typów, które są zdefiniowane w zestawie kolekcjonowania. Na przykład, jeśli zdefiniujesz zwykły typ, który dziedziczy z typu w zestawie kolekcjonowanym, zostanie zgłoszony wyjątek <xref:System.NotSupportedException>. Typ w zestawie kolekcjonowania może mieć statyczne odwołania do typu w innym zestawie kolekcjonowanym, ale wydłuży okres istnienia przywoływanego zestawu do okresu istnienia zestawu, do którego się odwołuje.
 
-- **Usługa międzyoperacyjna modelu COM**   
-   Interfejsy modelu COM nie mogą być definiowane w zestawie, a nie wystąpień typów w zestawie mogą być konwertowane na obiekty COM. Typ w zestawie nie może służyć jako wywoływana otoka COM (CCW) lub wywoływana otoka środowiska uruchomieniowego (RCW). Jednak typów w zestawach kolekcjonowane można użyć obiektów, które implementują interfejsy COM.
+-   **międzyoperacyjności modelu COM**  
+   W obrębie zestawu kolekcjonowanego nie można definiować interfejsów COM, a żadne wystąpienia typów w ramach zestawu kolekcjonowanego nie mogą być konwertowane na obiekty COM. Typ w zestawie kolekcjonowania nie może być obiektem, który jest wywoływany przez COM otokę (CCW) lub otokę wywoływaną przez środowisko uruchomieniowe (RCW). Jednak typy w zestawach kolekcjonowanych mogą korzystać z obiektów, które implementują interfejsy COM.
 
-- **Wywołanie platformy**   
-   Metody, które mają <xref:System.Runtime.InteropServices.DllImportAttribute> atrybut nie zostanie skompilowany, gdy są deklarowane w zestawie. <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> Nie może być używana w celu wykonania danego typu w zestawie i takich typów nie mogą być przekazywane do kodu niezarządzanego. Można jednak wywoływać kodu natywnego za pomocą punktu wejścia, który jest zadeklarowany w zestawie kolekcjonowane.
+-   **wywołania platformy**  
+   Metody, które mają atrybut <xref:System.Runtime.InteropServices.DllImportAttribute> nie zostaną skompilowane, gdy są zadeklarowane w zestawie kolekcjonowanym. Instrukcji <xref:System.Reflection.Emit.OpCodes.Calli?displayProperty=nameWithType> nie można użyć w implementacji typu w zestawie kolekcjonowanym, a takie typy nie mogą być organizowane w kodzie niezarządzanym. Można jednak wywołać kod natywny przy użyciu punktu wejścia zadeklarowanego w niekolekcjonowanym zestawie.
  
-- **marshaling**   
-   Obiekty (w szczególności delegatów), które są zdefiniowane w zestawy kolekcjonowane nie mogą być przekazywane. Jest to ograniczenie dla wszystkich typów emitowany przejściowy.
+- **Kierowanie**   
+   Obiektów (w szczególności delegatów), które są zdefiniowane w zestawach kolekcjonowanych nie można zorganizować. Jest to ograniczenie dla wszystkich typów emisji przejściowych.
 
-- **Ładowanie zestawu**   
-   Emisji odbicia jest tylko mechanizm, który jest obsługiwany w przypadku ładowania zestawy kolekcjonowane. Zestawy, które są ładowane przy użyciu innej formy z ładowaniem zestawu, nie można zwolnić.
+-   **ładowania zestawu**  
+   Emisja odbicia jest jedynym mechanizmem, który jest obsługiwany w przypadku ładowania zestawów kolekcjonowanych. Zestawy, które są ładowane przy użyciu jakiejkolwiek innej formy ładowania zestawu nie mogą zostać zwolnione.
  
-- **Obiekty powiązane ze kontekstu**    
-   Zmienne statyczne kontekstu nie są obsługiwane. Typy w zestawie nie można rozszerzyć <xref:System.ContextBoundObject>. Jednak kod w zestawy kolekcjonowane wykorzystać obiekty powiązane z kontekstu, które są zdefiniowane gdzie indziej.
+- **Obiekty powiązane z kontekstem**    
+   Zmienne kontekstowe nie są obsługiwane. Typy w zestawie kolekcjonowania nie mogą poszerzać <xref:System.ContextBoundObject>. Jednak kod w zestawach kolekcjonowanych może korzystać z obiektów powiązanych z kontekstem, które są zdefiniowane w innym miejscu.
 
-- **Dane statyczne wątku**       
+-       **danych ze statycznym wątkiem**  
    Zmienne statyczne wątku nie są obsługiwane.
 
 ## <a name="see-also"></a>Zobacz także

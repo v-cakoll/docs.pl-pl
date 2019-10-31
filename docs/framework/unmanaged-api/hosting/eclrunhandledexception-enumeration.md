@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d231044e-2b53-4836-93f9-8117ff0e5c3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba0c2ea7733f098b7fac95f51b5eb16d083174e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 302db0d029b3811d151473323a7a60bd16a00ec1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779365"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131238"
 ---
 # <a name="eclrunhandledexception-enumeration"></a>EClrUnhandledException — Wyliczenie
-W tym artykule opisano dostępne opcje zarządzania wyjątki, które są nieobsługiwane w kodzie użytkownika.  
+Opisuje dostępne opcje zarządzania wyjątkami, które nie są obsługiwane w kodzie użytkownika.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,20 +37,20 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`eRuntimeDeterminedPolicy`|Określa, że występuje zachowanie domyślne. Proces zostaje rozłączona.|  
-|`eHostDeterminedPolicy`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) ignoruje nieobsłużone wyjątki i umożliwia hostowi ustalić żadnych dalszych akcji.|  
+|`eRuntimeDeterminedPolicy`|Określa, że występuje zachowanie domyślne. Proces został rozdarty.|  
+|`eHostDeterminedPolicy`|Określa, że środowisko uruchomieniowe języka wspólnego (CLR) ignoruje Nieobsłużone wyjątki i umożliwia hostowi określenie dalszych akcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Aby określić, czy środowisko CLR zachowują się jak wcześniejszych wersji, użyj `eHostDeterminedPolicy` elementu członkowskiego.  
+ Aby określić, że środowisko CLR zachowuje się jak wcześniejsze wersje, użyj elementu członkowskiego `eHostDeterminedPolicy`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

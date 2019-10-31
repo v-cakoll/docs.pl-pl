@@ -1,5 +1,5 @@
 ---
-title: Tabele konwersji typów w .NET
+title: Tabele konwersji typów w programie .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,37 +12,35 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f018ed182e6354bbc6e6873f0df1b35e023c9c17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103889"
 ---
-# <a name="type-conversion-tables-in-net"></a>Tabele konwersji typów w .NET
-Rozszerzanie konwersji występuje, gdy wartość jednego typu jest konwertowana na inny typ, który jest równy lub większy rozmiar. Konwersja zawężająca występuje, gdy wartości z jednego typu jest konwertowany na wartość innego typu, który ma mniejszy rozmiar. Tabele w tym temacie ilustrują Trojan oba rodzaje konwersji.  
+# <a name="type-conversion-tables-in-net"></a>Tabele konwersji typów w programie .NET
+Konwersja rozszerzająca występuje, gdy wartość jednego typu jest konwertowana na inny typ o równym lub większym rozmiarze. Konwersja zawęża występuje, gdy wartość jednego typu jest konwertowana na wartość innego typu o mniejszym rozmiarze. Tabele w tym temacie ilustrują zachowania w obu typach konwersji.  
   
 ## <a name="widening-conversions"></a>Poszerzenie konwersji  
  W poniższej tabeli opisano konwersje rozszerzające, które mogą być wykonywane bez utraty informacji.  
   
-|Typ|Mogą być konwertowane bez utraty danych do|  
+|Typ|Mogą być konwertowane bez utraty danych|  
 |----------|-------------------------------------------|  
 |<xref:System.Byte>|<xref:System.UInt16>, <xref:System.Int16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.SByte>|<xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double><xref:System.Decimal>|  
 |<xref:System.Int16>|<xref:System.Int32>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.UInt16>|<xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Char>|<xref:System.UInt16>, <xref:System.UInt32>, <xref:System.Int32>, <xref:System.UInt64>, <xref:System.Int64>, <xref:System.Single>, <xref:System.Double>, <xref:System.Decimal>|  
 |<xref:System.Int32>|<xref:System.Int64>, <xref:System.Double>, <xref:System.Decimal>|  
-|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double>, <xref:System.Decimal>|  
+|<xref:System.UInt32>|<xref:System.Int64>, <xref:System.UInt64>, <xref:System.Double><xref:System.Decimal>|  
 |<xref:System.Int64>|<xref:System.Decimal>|  
 |<xref:System.UInt64>|<xref:System.Decimal>|  
 |<xref:System.Single>|<xref:System.Double>|  
   
- Niektóre poszerzeniem konwersji, aby <xref:System.Single> lub <xref:System.Double> może spowodować utratę dokładności. W poniższej tabeli opisano konwersje rozszerzające, które czasami powodować utraty informacji.  
+ Niektóre rozszerzone konwersje na <xref:System.Single> lub <xref:System.Double> mogą spowodować utratę precyzji. W poniższej tabeli opisano konwersje rozszerzające, które czasami powodują utratę informacji.  
   
-|Typ|Mogą być konwertowane na|  
+|Typ|Można przekonwertować na|  
 |----------|-------------------------|  
 |<xref:System.Int32>|<xref:System.Single>|  
 |<xref:System.UInt32>|<xref:System.Single>|  
@@ -51,16 +49,16 @@ Rozszerzanie konwersji występuje, gdy wartość jednego typu jest konwertowana 
 |<xref:System.Decimal>|<xref:System.Single>, <xref:System.Double>|  
   
 ## <a name="narrowing-conversions"></a>Konwersje zawężające  
- Konwersja zawężająca do <xref:System.Single> lub <xref:System.Double> może spowodować utratę danych. Jeśli typ docelowy nie może poprawnie express wielkość źródła, wynikowy typ jest ustawiony na wartość stałej `PositiveInfinity` lub `NegativeInfinity`. `PositiveInfinity` wyniki z dzielenia liczby dodatnie przez zero i również jest zwracane, jeśli wartość <xref:System.Single> lub <xref:System.Double> przekracza wartość `MaxValue` pola. `NegativeInfinity` wyniki z dzielenia liczby ujemnej przez zero i również jest zwracane, jeśli wartość <xref:System.Single> lub <xref:System.Double> spadnie poniżej wartości `MinValue` pola. Konwersja z <xref:System.Double> do <xref:System.Single> może spowodować `PositiveInfinity` lub `NegativeInfinity`.  
+ Zawężanie konwersji na <xref:System.Single> lub <xref:System.Double> może spowodować utratę informacji. Jeśli typ docelowy nie może prawidłowo przedstawić wielkości źródła, typ wyniku jest ustawiony na stałą `PositiveInfinity` lub `NegativeInfinity`. `PositiveInfinity` wyniki dzielenia liczby dodatniej przez zero i są zwracane, gdy wartość <xref:System.Single> lub <xref:System.Double> przekracza wartość pola `MaxValue`. `NegativeInfinity` wyniki dzielenia ujemnej liczby przez zero i są zwracane, gdy wartość <xref:System.Single> lub <xref:System.Double> przypada poniżej wartości pola `MinValue`. Konwersja z <xref:System.Double> do <xref:System.Single> może skutkować `PositiveInfinity` lub `NegativeInfinity`.  
   
- Konwersja zawężająca może również spowodować utratę informacji dla innych typów danych. Jednak <xref:System.OverflowException> jest generowany, jeśli wartość typu, który jest przekształcany wykraczające poza zakres określony przez typ docelowy `MaxValue` i `MinValue` pola i konwersja jest sprawdzana przez środowisko uruchomieniowe, upewnij się, że wartość elementu docelowego Typ nie przekracza jego `MaxValue` lub `MinValue`. Konwersje, które są wykonywane przy użyciu <xref:System.Convert?displayProperty=nameWithType> klasy zawsze są sprawdzane w ten sposób.  
+ Zawężanie konwersji może również spowodować utratę informacji dla innych typów danych. Jednak <xref:System.OverflowException> jest generowany, jeśli wartość konwertowanego typu wykracza poza zakres określony przez pola `MaxValue` i `MinValue` typu docelowego, a konwersja jest sprawdzana przez środowisko uruchomieniowe, aby upewnić się, że wartość typu docelowego nie przekracza jego `MaxValue` lub `MinValue`. Konwersje wykonywane z klasą <xref:System.Convert?displayProperty=nameWithType> są zawsze sprawdzane w ten sposób.  
   
- W poniższej tabeli wymieniono konwersje, które generują <xref:System.OverflowException> przy użyciu <xref:System.Convert?displayProperty=nameWithType> lub dowolny wybrany konwersji, jeśli wartość typu konwertowanego znajduje się poza zakresem zdefiniowanego typu wynikowy.  
+ W poniższej tabeli wymieniono konwersje, które generują <xref:System.OverflowException> przy użyciu <xref:System.Convert?displayProperty=nameWithType> lub dowolnej konwersji zaznaczonej, jeśli wartość konwertowanego typu jest poza zdefiniowanym zakresem typu.  
   
-|Typ|Mogą być konwertowane na|  
+|Typ|Można przekonwertować na|  
 |----------|-------------------------|  
 |<xref:System.Byte>|<xref:System.SByte>|  
-|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>|  
+|<xref:System.SByte>|<xref:System.Byte>, <xref:System.UInt16>, <xref:System.UInt32><xref:System.UInt64>|  
 |<xref:System.Int16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.UInt16>|  
 |<xref:System.UInt16>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>|  
 |<xref:System.Int32>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>,<xref:System.UInt32>|  

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c0774f70-5bed-45e8-9922-fdad778c4c33
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 39bc1316bb7d8e2aba3390499437aadf263dac07
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 739b491d343c0eba76160c15719069ffae385f46
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73097975"
 ---
 # <a name="cordebugjitcompilerflags-enumeration"></a>CorDebugJITCompilerFlags — Wyliczenie
-Zawiera wartości, które wpływają na zachowanie zarządzanych kompilator just-in-time (JIT).  
+Zawiera wartości wpływające na zachowanie kompilatora zarządzanego (just-in-Time).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,18 +40,18 @@ typedef enum CorDebugJITCompilerFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`CORDEBUG_JIT_DEFAULT`|Określa, że kompilator powinien śledzić dane kompilacji i umożliwia optymalizacje.|  
-|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Określa, czy kompilator powinien śledzić dane kompilacji, ale wyłącza optymalizacje.|  
-|`CORDEBUG_JIT_ENABLE_ENC`|Określa się, że kompilator powinien śledzić dane kompilacji, wyłącza optymalizacje, i włącza tryb Edytuj i Kontynuuj technologii.|  
+|`CORDEBUG_JIT_DEFAULT`|Określa, że kompilator ma śledzić dane kompilacji i umożliwia optymalizacje.|  
+|`CORDEBUG_JIT_DISABLE_OPTIMIZATION`|Określa, że kompilator ma śledzić dane kompilacji, ale wyłącza optymalizacje.|  
+|`CORDEBUG_JIT_ENABLE_ENC`|Określa, że kompilator ma śledzić dane kompilacji, wyłącza optymalizacje i umożliwia korzystanie z technologii Edytuj i Kontynuuj.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

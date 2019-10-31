@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97e493f5-3a62-4ec7-b42f-4af57bf71f57
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd8f71ca75a795ab86c61140eacbbcfb0a18b590
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 166f6bb50849df8550871958d7034fdf2a841abb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73089113"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType — Metoda
-Pobiera tablicę elementów określonego typu lub wskaźnik lub odwołanie do określonego typu.  
+Pobiera tablicę określonego typu lub wskaźnik lub odwołanie do określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,33 +38,33 @@ HRESULT GetArrayOrPointerType (
   
 ## <a name="parameters"></a>Parametry  
  `elementType`  
- [in] Wartość corelementtype — wyliczenie, określający typ podstawowy natywnego (tablicy, wskaźnika lub odwołania) ma zostać utworzony.  
+ podczas Wartość wyliczenia CorElementType —, która określa odpowiedni typ natywny (tablicę, wskaźnik lub odwołanie), który ma zostać utworzony.  
   
  `nRank`  
- [in] Ranga (oznacza to, że liczba wymiarów) tablicy. Ta wartość musi wynosić 0, jeśli `elementType` Określa typ wskaźnika lub odwołania.  
+ podczas Ranga (czyli liczba wymiarów) tablicy. Ta wartość musi być równa 0, jeśli `elementType` określa wskaźnik lub typ referencyjny.  
   
  `pTypeArg`  
- [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ tablicy, wskaźnika lub odwołania do utworzenia.  
+ podczas Wskaźnik do obiektu ICorDebugType, który reprezentuje typ tablicy, wskaźnika lub odwołania, które mają zostać utworzone.  
   
  `ppType`  
- [out] Wskaźnik na adres `ICorDebugType` typ obiektu, który reprezentuje zbudowany tablicy, typ wskaźnika lub odwołania.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugType`, który reprezentuje skonstruowaną tablicę, typ wskaźnika lub typ referencyjny.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość *elementType* musi mieć jedną z następujących czynności:  
+ Wartość *elementu ElementType* musi być jedną z następujących wartości:  
   
 - ELEMENT_TYPE_PTR  
   
-- POLE  
+- ELEMENT_TYPE_BYREF  
   
 - ELEMENT_TYPE_ARRAY lub ELEMENT_TYPE_SZARRAY  
   
- Jeśli wartość *elementType* ELEMENT_TYPE_PTR lub pole, *nRank* musi mieć wartość zero.  
+ Jeśli wartość *elementu ElementType* to ELEMENT_TYPE_PTR lub ELEMENT_TYPE_BYREF, *nRank* musi mieć wartość zero.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

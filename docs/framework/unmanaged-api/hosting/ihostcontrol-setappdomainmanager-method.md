@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6562bbe7-0d67-4c50-a958-3a18cf680375
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94deb4eaeeec2400aebf397d391ce4b67c16989e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: de264135450190fd028eb8cf12017d94cc65ffac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134722"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager — Metoda
-Powiadamia hosta, że utworzono domeny aplikacji.  
+Powiadamia hosta o utworzeniu domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,35 +36,35 @@ HRESULT SetAppDomainManager (
   
 ## <a name="parameters"></a>Parametry  
  `dwAppDomainID`  
- [in] Identyfikator liczbowy wybranego <xref:System.AppDomain>.  
+ podczas Liczbowy identyfikator wybranego <xref:System.AppDomain>.  
   
  `pUnkAppDomainManager`  
- [in] Wskaźnik do <xref:System.AppDomainManager> obiektu implementującego hosta jako `IUnknown`.  
+ podczas Wskaźnik do obiektu <xref:System.AppDomainManager>, który jest implementowany przez hosta jako `IUnknown`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`SetAppDomainManager` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetAppDomainManager` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- <xref:System.AppDomainManager> Udostępnia mechanizm do uruchamiania kodu zarządzanego i sterowania tworzenia i ustawienia każdego hosta <xref:System.AppDomain>. <xref:System.AppDomainManager> Jest ładowany do każdego <xref:System.AppDomain> podczas który <xref:System.AppDomain> zostanie utworzony. Jeśli go wybierze, środowisko CLR powiadamia hosta, czy domena aplikacji została utworzona, ustawiając wartość `pUnkAppDomainManager` parametru.  
+ <xref:System.AppDomainManager> zapewnia hosta z mechanizmem ładowania do kodu zarządzanego i kontrolowania tworzenia i ustawień poszczególnych <xref:System.AppDomain>. <xref:System.AppDomainManager> jest ładowany do każdej <xref:System.AppDomain> po utworzeniu <xref:System.AppDomain>. W przypadku wybrania tej opcji środowisko CLR powiadamia hosta o utworzeniu domeny aplikacji przez ustawienie wartości parametru `pUnkAppDomainManager`.  
   
- W jego implementacja obiektu `SetAppDomainManager` metody hosta można ustawić nazwy zestawu i typu dla Menedżera domeny aplikacji.  
+ W implementacji metody `SetAppDomainManager` host może ustawić nazwę zestawu i typ dla Menedżera domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

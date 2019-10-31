@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1de0b3b05d38c1fec38b9436c653973dfaa4136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b68f24908a5b214d507da8e8a4636a7c55259604
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123017"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo Function
-Pobiera przesunięcie od początku obiektu, do pola i wartość do pola, używając wskaźnika udostępnionego obiektu i nazwy pola.  
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_funkcja GetManagedObjectFieldInfo
+Pobiera przesunięcie od początku obiektu do pola i wartości pola przy użyciu podanego wskaźnika obiektu i nazwy pola.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +38,31 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
   
 ## <a name="parameters"></a>Parametry  
  `Client`  
- [in] Wskaźnik do klienta debugowania.  
+ podczas Wskaźnik do klienta debugowania.  
   
  `objAddr`  
- [in] Wskaźnik zarządzanego obiektu.  
+ podczas Wskaźnik obiektu zarządzanego.  
   
  szFieldName  
- [in] Wskaźnik do obiektu zarządzanego, do nazwy pola.  
+ podczas Wskaźnik obiektu zarządzanego do nazwy pola.  
   
  `pValue`  
- [out] Wartość pola. Ten parametr może mieć wartości null.  
+ określoną Wartość pola. Ten parametr może mieć wartość null.  
   
  `pOffset`  
- [out] Przesunięcie od `objAddr` do pola. Ten parametr może mieć wartości null.  
+ określoną Przesunięcie od `objAddr` do pola. Ten parametr może mieć wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Przesunięcie wynosi 0, przesunięcie nie zostanie zapisane.  
+ Jeśli przesunięcie ma wartość 0, przesunięcie nie jest zapisywane.  
   
- Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartością funkcji 0xa0 i kod błędu 0x1000.  
+ W przypadku braku kodu zarządzanego w wątku, który jest obecnie w kontekście, funkcja zwraca wartość HRESULT SOS_E_NOMANAGEDCODE z wartością instrumentu 0xa0 i kod błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** SOS_Stacktrace.h  
+ **Nagłówek:** SOS_Stacktrace. h  
   
- **Wersja programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersja .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

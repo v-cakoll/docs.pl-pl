@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7de415b998ef97e7500c289a1bca4402d203b152
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738692"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113702"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue — Metoda
-Pobiera wartość z magazynu lokalnego wątku (TLS) lub określony wątek w procesie docelowym. Ta metoda jest wywoływana przez usługi dostępu do danych środowiska uruchomieniowego (języka wspólnego CLR) w usłudze common language.  
+Pobiera wartość z lokalnego magazynu wątków (TLS) określonego wątku w procesie docelowym. Ta metoda jest wywoływana przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,25 +37,25 @@ HRESULT GetTLSValue (
   
 ## <a name="parameters"></a>Parametry  
  `threadID`  
- [in] Identyfikator systemu operacyjnego wątek w procesie docelowym.  
+ podczas Identyfikator systemu operacyjnego wątku w procesie docelowym.  
   
  `index`  
- [in] Indeks lokalizacji. Ta wartość musi być prawidłowy indeks w lokalnym magazynie określonego wątku.  
+ podczas Indeks lokalizacji. Ta wartość musi być prawidłowym indeksem w magazynie lokalnym określonego wątku.  
   
  `value`  
- [out] Wskaźnik do `CLRDATA_ADDRESS` wartość określa wartość zwracana z danej lokalizacji protokołu TLS.  
+ określoną Wskaźnik do wartości `CLRDATA_ADDRESS`, która określa wartość zwracaną z danej lokalizacji protokołu TLS.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

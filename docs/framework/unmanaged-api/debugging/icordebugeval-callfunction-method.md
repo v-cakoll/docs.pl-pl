@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65225281fe3abaa20e69e96f4cd4d2a4b03a87ce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629944"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085157"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction — Metoda
 
 Konfiguruje wywołanie do określonej funkcji.
 
-Ta metoda jest przestarzała w programie .NET Framework 2.0. Użyj [ICorDebugEval2::CallParameterizedFunction](icordebugeval2-callparameterizedfunction-method.md) zamiast tego.
+Ta metoda jest przestarzała w .NET Framework w wersji 2,0. Zamiast tego użyj [ICorDebugEval2:: CallParameterizedFunction —](icordebugeval2-callparameterizedfunction-method.md) .
 
 ## <a name="syntax"></a>Składnia
 
@@ -43,27 +41,27 @@ HRESULT CallFunction (
 ## <a name="parameters"></a>Parametry
 
 `pFunction`\
-[in] Wskaźnik do obiektu ICorDebugFunction, który określa funkcję, która ma zostać wywołana.
+podczas Wskaźnik do obiektu ICorDebugFunction, który określa funkcję, która ma zostać wywołana.
 
 `nArgs`\
-[in] Liczba argumentów funkcji.
+podczas Liczba argumentów dla funkcji.
 
 `ppArgs`\
-[in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, który określa argument, który zostanie przekazany do funkcji.
+podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który określa argument, który ma zostać przesłany do funkcji.
 
 ## <a name="remarks"></a>Uwagi
 
-Jeśli funkcja znajduje się wirtualny, `CallFunction` wykona wirtualnego wysyłania. Jeśli funkcja znajduje się w domenie innej aplikacji, przejście wystąpi tak długo, jak wszystkie argumenty mają również w tej domenie aplikacji.
+Jeśli funkcja jest wirtualna, `CallFunction` przeprowadzi wirtualną wysyłkę. Jeśli funkcja znajduje się w innej domenie aplikacji, przejście zostanie przeprowadzone tak długo, jak wszystkie argumenty są również w tej domenie aplikacji.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** 1.1, 1.0
+**.NET Framework wersje:** 1,1, 1,0
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 22e35450460436e164db922fce76a53c437f6bdf
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a35be7c2a2cb4b499496f526d263bb1825a3614b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107130"
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywana w metadanych i ma znaczny wpływ na zakres zestawu i użycie przez aplikację. Zestaw o silnej nazwie ma w pełni kwalifikowaną nazwę, która zawiera nazwę zestawu, kulturę, klucz publiczny i numer wersji. Jest to często określane jako nazwa wyświetlana, a dla załadowanych zestawów można uzyskać za pomocą właściwości <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -50,7 +48,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ## <a name="name-application-components"></a>Nazwa składników aplikacji  
  Środowisko uruchomieniowe nie uwzględnia nazwy pliku podczas określania tożsamości zestawu. Tożsamość zestawu, która składa się z nazwy zestawu, wersji, kultury i silnej nazwy, musi być jasne dla środowiska uruchomieniowego.  
   
- Na przykład jeśli masz zestaw o nazwie *webassembly. exe* , który odwołuje się do zestawu o nazwie Moja *Assembly. dll*, powiązanie jest wykonywane prawidłowo, jeśli zostanie wykonany *plik. exe*. Jeśli jednak inna aplikacja wykonuje *plik webassembly. exe* przy użyciu metody <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, środowisko uruchomieniowe określa, że `myAssembly` jest już załadowana, gdy program *Web. exe* żąda powiązania z `myAssembly`. W takim przypadku *plik. dll* nie jest nigdy ładowany. Ponieważ obiekt *webassembly. exe* nie zawiera żądanego typu, występuje <xref:System.TypeLoadException>.  
+ Na przykład jeśli masz zestaw o nazwie *webassembly. exe* , który odwołuje się do zestawu o nazwie Moja *Assembly. dll*, powiązanie jest wykonywane prawidłowo, jeśli zostanie wykonany *plik. exe*. Jeśli jednak inna aplikacja wykonuje *plik webassembly. exe* przy użyciu metody <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>, środowisko uruchomieniowe określa, że `myAssembly` jest już załadowana, gdy program *webassembly. exe* żąda powiązania do `myAssembly`. W takim przypadku *plik. dll* nie jest nigdy ładowany. Ponieważ obiekt *webassembly. exe* nie zawiera żądanego typu, występuje <xref:System.TypeLoadException>.  
   
  Aby uniknąć tego problemu, upewnij się, że zestawy, które tworzą aplikację, nie mają tej samej nazwy zestawu lub Umieść zestawy o tej samej nazwie w różnych katalogach.  
   

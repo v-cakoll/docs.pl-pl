@@ -8,26 +8,24 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3167abd0c263a0a27573778d6f243bc824306a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: b8c4e9d835db044912d1cbed92a14dd05e7de658
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051684"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113940"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Organizowanie danych w wywołaniu platformy
 
 Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzanej, aplikacja .NET Framework wymaga prototypu funkcji w zarządzanym kodzie, który reprezentuje niezarządzaną funkcję. Aby utworzyć prototyp umożliwiający poprawne kierowanie danych przez wywołanie platformy, należy wykonać następujące czynności:
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute> Zastosuj atrybut do statycznej funkcji lub metody w kodzie zarządzanym.
+- Zastosuj atrybut <xref:System.Runtime.InteropServices.DllImportAttribute> do statycznej funkcji lub metody w kodzie zarządzanym.
 
 - Podstawianie typów danych zarządzanych dla niezarządzanych typów danych.
 
-Korzystając z dokumentacji dostarczonej z niezarządzaną funkcją, można utworzyć odpowiedni prototyp zarządzany przez zastosowanie atrybutu z opcjonalnymi polami i podstawianie typów danych zarządzanych dla typów niezarządzanych. Aby uzyskać instrukcje dotyczące sposobu zastosowania, <xref:System.Runtime.InteropServices.DllImportAttribute>zobacz Korzystanie z [niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md).
+Korzystając z dokumentacji dostarczonej z niezarządzaną funkcją, można utworzyć odpowiedni prototyp zarządzany przez zastosowanie atrybutu z opcjonalnymi polami i podstawianie typów danych zarządzanych dla typów niezarządzanych. Aby uzyskać instrukcje dotyczące sposobu stosowania <xref:System.Runtime.InteropServices.DllImportAttribute>, zobacz wykorzystywanie [niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md).
 
-Ta sekcja zawiera przykłady, które pokazują, jak utworzyć prototypy funkcji zarządzanych do przekazywania argumentów do i otrzymywania wartości zwracanych z funkcji wyeksportowanych przez biblioteki niezarządzane. Przykłady pokazują również, kiedy używać <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu <xref:System.Runtime.InteropServices.Marshal> i klasy, aby jawnie zorganizować dane.
+Ta sekcja zawiera przykłady, które pokazują, jak utworzyć prototypy funkcji zarządzanych do przekazywania argumentów do i otrzymywania wartości zwracanych z funkcji wyeksportowanych przez biblioteki niezarządzane. Przykłady pokazują również, kiedy używać atrybutu <xref:System.Runtime.InteropServices.MarshalAsAttribute> i klasy <xref:System.Runtime.InteropServices.Marshal>, aby jawnie zorganizować dane.
 
 ## <a name="platform-invoke-data-types"></a>Typy danych wywołania platformy
 

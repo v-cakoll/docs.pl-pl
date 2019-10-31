@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5d0b44a2-5a14-44a2-9a0e-e8682fd4e106
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 371ed85f53109856d9c8f64e42aadca10302c269
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 43a5cd57a8eeaba70f1bb1ffb9cab5bb1a067914
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130951"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfilew-method"></a>ICLRStrongName::GetHashFromAssemblyFileW — Metoda
-Generuje skrót nad zawartość pliku określonego przez ciąg Unicode.  
+Generuje skrót do zawartości pliku określonego przez ciąg Unicode.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +39,31 @@ HRESULT GetHashFromAssemblyFileW (
   
 ## <a name="parameters"></a>Parametry  
  `wszFilePath`  
- [in] Ścieżka do pliku ma zostać obliczona wartość skrótu. Ten parametr musi być ciąg Unicode.  
+ podczas Ścieżka do pliku, który ma zostać poddany skrótowi. Ten parametr musi być ciągiem Unicode.  
   
  `piHashAlg`  
- [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślnego algorytmu wyznaczania wartości skrótu.  
+ [in. out] Stała, która określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślnego algorytmu wyznaczania wartości skrótu.  
   
  `pbHash`  
- [out] Bufor zwrócone wyznaczania wartości skrótu.  
+ określoną Zwrócony bufor wyznaczania wartości skrótu.  
   
  `cchHash`  
- [in] Żądany maksymalny rozmiar `pbHash`.  
+ podczas Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- [out] Zwrócone rozmiar w bajtach, z `pbHash`.  
+ określoną Zwrócony rozmiar w bajtach `pbHash`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

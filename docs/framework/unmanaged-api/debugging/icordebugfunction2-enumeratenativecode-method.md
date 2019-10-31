@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: d383f5cc-1144-4b6d-b57a-db34d9134ab2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb7e2ed7b076cfa20064902b3592c8f958efc0ee
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d5b24ee02a682b38dcf0cb3449f0dff197e91bf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917050"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137829"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode — Metoda
 Pobiera wskaźnik interfejsu do obiektu ICorDebugCodeEnum, który zawiera instrukcje kodu natywnego w funkcji, do której odwołuje się ten obiekt ICorDebugFunction2.  
   
 > [!NOTE]
-> `EnumerateNativeCode`nie jest zaimplementowany w bieżącej wersji .NET Framework.  
+> `EnumerateNativeCode` nie jest zaimplementowana w bieżącej wersji .NET Framework.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,4 +37,4 @@ HRESULT EnumerateNativeCode (
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówki** CorDebug.idl, CorDebug.h
+ **Nagłówek:** CorDebug. idl, CorDebug. h

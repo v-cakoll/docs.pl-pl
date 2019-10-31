@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da278a29-dc2e-4bf7-96ce-801bdc4d7025
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a5461cc6a78347cdbe0d0b13f8111cb24c11006
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b7a33fd6e2178e0e9188b81f516b231702fb6460
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760047"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122713"
 ---
 # <a name="icordebuginternalframegetframetype-method"></a>ICorDebugInternalFrame::GetFrameType — Metoda
-Pobiera typ tej ramki wewnętrznego.  
+Pobiera typ tej wewnętrznej ramki.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetFrameType (
   
 ## <a name="parameters"></a>Parametry  
  `pType`  
- [out] Wskaźnik do wartości cordebuginternalframetype — wyliczenie, który wskazuje na typ reprezentowany przez ten ramka wewnętrzna `ICorDebugInternalFrame` obiektu.  
+ określoną Wskaźnik do wartości wyliczenia CorDebugInternalFrameType —, który wskazuje typ wewnętrznej ramki reprezentowanej przez ten obiekt `ICorDebugInternalFrame`.  
   
 ## <a name="remarks"></a>Uwagi  
- Typ ramki wewnętrzny nigdy nie będą STUBFRAME_NONE. Debugery bez problemu zmieniała należy zignorować nierozpoznane ramki wewnętrznych typów.  
+ Wewnętrzny typ ramki nigdy nie będzie STUBFRAME_NONE. Debugery powinny bezpiecznie ignorować nierozpoznane typy ramek wewnętrznych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

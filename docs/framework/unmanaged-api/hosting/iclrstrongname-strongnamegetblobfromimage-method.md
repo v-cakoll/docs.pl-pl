@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e13f0ebbdc4e5fe3974208f91ab57f86dd29c910
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad3b151165eb233bd3a4a78d8f4d612a696b7e93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748014"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135095"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>ICLRStrongName::StrongNameGetBlobFromImage — Metoda
-Pobiera reprezentacja binarna obrazu zestawu pod adresem określonym pamięci.  
+Pobiera binarną reprezentację obrazu zestawu pod określonym adresem pamięci.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +38,28 @@ HRESULT StrongNameGetBlobFromImage (
   
 ## <a name="parameters"></a>Parametry  
  `pbBase`  
- [in] Adres pamięci manifestu zestawu zamapowany.  
+ podczas Adres pamięci mapowanego manifestu zestawu.  
   
  `dwLength`  
- [in] Rozmiar w bajtach, obraz u `pbBase`.  
+ podczas Rozmiar, w bajtach, obrazu w `pbBase`.  
   
  `pbBlob`  
- [in] Bufor do przechowywania reprezentacja binarna obrazu.  
+ podczas Bufor zawierający reprezentację binarną obrazu.  
   
  `pcbBlob`  
- [out w] Maksymalny rozmiar w bajtach, żądane `pbBlob`. Po powrocie, rzeczywisty rozmiar w bajtach, z `pbBlob`.  
+ [in. out] Żądany maksymalny rozmiar w bajtach `pbBlob`. Po powrocie, rzeczywisty rozmiar w bajtach `pbBlob`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

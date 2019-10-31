@@ -12,14 +12,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, COM wrappers
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ebfc8f79303f89b092dd0fb38237dffffe0a93ba
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353906"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120732"
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 
@@ -53,7 +51,7 @@ Oprócz ujawniania interfejsów, które są jawnie implementowane przez klasę w
 |---------------|-----------------|
 |**IDispatch**|Udostępnia mechanizm późnego wiązania do typu.|
 |**IErrorInfo**|Zawiera tekstowy opis błędu, jego źródło, plik pomocy, kontekst pomocy oraz identyfikator GUID interfejsu, który definiuje błąd (zawsze **GUID_NULL** dla klas .NET).|
-|**IProvideClassInfo**|Umożliwia klientom COM uzyskiwanie dostępu do interfejsu **Metoda ITypeInfo** zaimplementowanego przez klasę zarządzaną. Zwraca `COR_E_NOTSUPPORTED` w programie .NET Core dla typów nieimportowanych z modelu COM. |
+|**IProvideClassInfo**|Umożliwia klientom COM uzyskiwanie dostępu do interfejsu **Metoda ITypeInfo** zaimplementowanego przez klasę zarządzaną. Zwraca `COR_E_NOTSUPPORTED` na platformie .NET Core dla typów nieimportowanych z modelu COM. |
 |**ISupportErrorInfo**|Umożliwia klientowi COM określenie, czy zarządzany obiekt obsługuje interfejs **IErrorInfo** . Jeśli tak, program umożliwia klientowi uzyskanie wskaźnika do ostatniego obiektu wyjątku. Wszystkie typy zarządzane obsługują interfejs **IErrorInfo** .|
 |**Metoda ITypeInfo** (tylko .NET Framework)|Zapewnia informacje o typie dla klasy, która jest dokładnie taka sama jak informacje o typie wytwarzane przez Tlbexp. exe.|
 |**IUnknown**|Zapewnia standardową implementację interfejsu **IUnknown** , za pomocą którego klient com zarządza okresem istnienia CCW i zapewnia przekształcenie typu.|
@@ -69,9 +67,9 @@ Oprócz ujawniania interfejsów, które są jawnie implementowane przez klasę w
 
 ## <a name="introducing-the-class-interface"></a>Wprowadzenie do interfejsu klasy
 
-Interfejs klasy, który nie jest jawnie zdefiniowany w kodzie zarządzanym, jest interfejsem, który uwidacznia wszystkie metody publiczne, właściwości, pola i zdarzenia, które są jawnie uwidocznione w obiekcie .NET. Ten interfejs może być interfejsem o podwójnym lub tylko do wysyłania. Interfejs klasy odbiera nazwę samej klasy .NET, poprzedzoną podkreśleniem. Na przykład dla ssaków klasy interfejs klasy jest \_Mammal.
+Interfejs klasy, który nie jest jawnie zdefiniowany w kodzie zarządzanym, jest interfejsem, który uwidacznia wszystkie metody publiczne, właściwości, pola i zdarzenia, które są jawnie uwidocznione w obiekcie .NET. Ten interfejs może być interfejsem o podwójnym lub tylko do wysyłania. Interfejs klasy odbiera nazwę samej klasy .NET, poprzedzoną podkreśleniem. Na przykład dla ssaków klasy interfejs klasy jest \_ssaków.
 
-W przypadku klas pochodnych interfejs klasy udostępnia również wszystkie metody publiczne, właściwości i pola klasy podstawowej. Klasa pochodna również udostępnia interfejs klasy dla każdej klasy bazowej. Na przykład, jeśli ssak klas rozszerza klasę MammalSuperclass, która sama stanowi rozszerzenie elementu System. Object, obiekt .NET uwidacznia klientom COM trzy interfejsy klasy o nazwie \_Mammal, \_MammalSuperclass i \_Object.
+W przypadku klas pochodnych interfejs klasy udostępnia również wszystkie metody publiczne, właściwości i pola klasy podstawowej. Klasa pochodna również udostępnia interfejs klasy dla każdej klasy bazowej. Na przykład, jeśli ssak klas rozszerza klasę MammalSuperclass, która sama stanowi rozszerzenie elementu System. Object, obiekt .NET uwidacznia klientom COM trzy interfejsy klasy o nazwie \_ssak, \_MammalSuperclass i obiekt \_.
 
 Rozważmy na przykład następujące klasy .NET:
 
@@ -98,7 +96,7 @@ public class Mammal
 }
 ```
 
-Klient COM może uzyskać wskaźnik do interfejsu klasy o nazwie `_Mammal`. Na .NET Framework można użyć narzędzia [eksportu biblioteki typów (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) w celu wygenerowania biblioteki typów zawierającej definicję interfejsu `_Mammal`. Eksporter biblioteki typów nie jest obsługiwany w programie .NET Core. Jeśli Klasa `Mammal` zaimplementowano jeden lub więcej interfejsów, interfejsy pojawią się pod klasą coclass.
+Klient COM może uzyskać wskaźnik do interfejsu klasy o nazwie `_Mammal`. Na .NET Framework można użyć narzędzia [eksportu biblioteki typów (Tlbexp. exe)](../../framework/tools/tlbexp-exe-type-library-exporter.md) w celu wygenerowania biblioteki typów zawierającej definicję interfejsu `_Mammal`. Eksporter biblioteki typów nie jest obsługiwany w programie .NET Core. Jeśli Klasa `Mammal` implementuje jeden lub więcej interfejsów, interfejsy pojawią się pod klasą coclass.
 
 ```console
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
@@ -188,7 +186,7 @@ Automatycznie wygenerowany podwójny interfejs może być odpowiedni w rzadkich 
 
 Domyślnie informacje o typie COM są osadzone bezpośrednio w zarządzanych zestawach, co eliminuje konieczność stosowania podstawowych zestawów międzyoperacyjnych (zestawów PIA). Jednak jedno z ograniczeń informacji o typie osadzonym polega na tym, że nie obsługuje on dostarczania powiadomień o zdarzeniach COM przez wczesne wywołania tablic wirtualnych, ale obsługuje tylko późne wywołania `IDispatch::Invoke`.
 
-Jeśli aplikacja wymaga wczesnych wywołań metod interfejsu zdarzenia COM, można ustawić właściwość **Osadź typy** współdziałania w programie Visual Studio do `true` lub uwzględnić następujący element w pliku projektu:
+Jeśli aplikacja wymaga wczesnych wywołań metod interfejsu zdarzenia COM, można ustawić właściwość **Osadź typy** współdziałania w programie Visual Studio, aby `true`, lub uwzględnić następujący element w pliku projektu:
 
 ```xml
 <EmbedInteropTypes>True</EmbedInteropTypes>

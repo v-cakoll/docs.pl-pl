@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie potoku przepływu danych'
+title: 'Wskazówki: Tworzenie potoku przepływu danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,37 +10,35 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870f65fdbf263913134d0528c200d3c2990a498c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139873"
 ---
-# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Przewodnik: Tworzenie potoku przepływu danych
-Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metody do odbierania komunikatów ze źródła bloki, bloki komunikatów można też połączyć do formularza *potoku przepływu danych*. Potoku przepływu danych to zbiór składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, które przyczynia się do ogólnego celu. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę, gdy odbiera wiadomości z innego bloku przepływu danych. Odpowiednio do tego jest do linii montażowej dla samochodów produkcji. Każdego pojazdu korzystał z linii montażowej, jedna stacja składa ramki, kolejny instaluje aparatu i tak dalej. Ponieważ do linii montażowej umożliwia wielu pojazdów do montażu w tym samym czasie, zapewnia większą przepustowość niż łączenie pojazdów kompletnych jednego naraz.
+# <a name="walkthrough-creating-a-dataflow-pipeline"></a>Wskazówki: Tworzenie potoku przepływu danych
+Mimo że można użyć metod <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> do odbierania komunikatów z bloków źródłowych, można także połączyć bloki komunikatów, aby utworzyć *potok przepływu danych*. Potok przepływu danych to szereg składników lub *bloków przepływu danych*, z których każdy wykonuje konkretne zadanie, które przyczynia się do większego celu. Każdy blok przepływu danych w potoku przepływu danych wykonuje działanie, gdy odbierze komunikat z innego bloku przepływu danych. Analogicznie do tego jest linia montażowa dla produkcji samochodów. Gdy każdy pojazd przechodzi przez linię zestawu, jedna stacja składa się z ramki, a następna z nich instaluje aparat i tak dalej. Ponieważ linia zestawu umożliwia łączenie wielu pojazdów w tym samym czasie, zapewnia lepszą przepływność niż Montaż kompletnych pojazdów pojedynczo.
 
- W tym dokumencie przedstawiono potoku przepływu danych, która pobiera książkę *Iliad Homer* z witryny sieci Web oraz wyszukiwania tekstu, aby dopasować poszczególnych wyrazów za pomocą wyrazów tego odwrotnej kolejności znaków pierwszy wyraz. Tworzenie potoku przepływu danych w tym dokumencie składa się z następujących czynności:  
+ W tym dokumencie przedstawiono potok przepływu danych, który pobiera książkę *Iliader* z witryny sieci Web i przeszukuje tekst w celu dopasowania do poszczególnych wyrazów, które odwracają znaki pierwszego wyrazu. Utworzenie potoku przepływu danych w tym dokumencie obejmuje następujące kroki:  
   
-1. Utwórz bloków przepływu danych, które uczestniczą w potoku.  
+1. Utwórz bloki przepływu danych, które uczestniczą w potoku.  
   
-2. Połącz każdy blok przepływu danych do następnego bloku w potoku. Każdy blok odbiera jako dane wejściowe dane wyjściowe poprzedniego bloku w potoku.  
+2. Połącz każdy blok przepływu danych z następnym blokiem w potoku. Każdy blok odbiera jako dane wyjściowe poprzedniego bloku w potoku.  
   
-3. Dla każdego bloku przepływu danych Utwórz zadanie typu kontynuacja, ustawia kolejny blok do stanu ukończenia, po zakończeniu poprzedniego bloku.  
+3. Dla każdego bloku przepływu danych Utwórz zadanie kontynuacji ustawiające następny blok do stanu ukończenia po zakończeniu poprzedniego bloku.  
   
-4. Opublikuj dane do głowy potoku.  
+4. Publikuj dane w nagłówku potoku.  
   
-5. Nagłówek potoku należy oznaczyć jako ukończone.  
+5. Oznacz wierzchołek potoku jako zakończony.  
   
-6. Poczekaj, aż potoku tak, aby wykonać całą pracę.  
+6. Poczekaj na zakończenie pracy potoku.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
- Odczyt [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed rozpoczęciem tego instruktażu.  
+ Przeczytaj [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed rozpoczęciem tego instruktażu.  
   
-## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli  
- W programie Visual Studio Utwórz projekt Visual C# lub Visual Basic aplikacji konsoli. Zainstaluj pakiet System.Threading.Tasks.Dataflow NuGet.
+## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsolowej  
+ W programie Visual Studio Utwórz projekt aplikacji C# konsolowej wizualizacji lub Visual Basic. Zainstaluj pakiet NuGet system. Threading. Tasks. przepływu danych.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
@@ -50,7 +48,7 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
  [!code-vb[TPLDataflow_Palindromes#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromesemptymain.vb#2)]  
   
 ## <a name="creating-the-dataflow-blocks"></a>Tworzenie bloków przepływu danych  
- Dodaj następujący kod do `Main` metodę w celu utworzenia bloków przepływu danych, które uczestniczą w potoku. Tabela poniżej zawiera podsumowanie rolę każdego członka tego potoku.  
+ Dodaj następujący kod do metody `Main`, aby utworzyć bloki przepływu danych, które uczestniczą w potoku. W poniższej tabeli zestawiono rolę każdego elementu członkowskiego potoku.  
   
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
@@ -58,44 +56,44 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
 |Element członkowski|Typ|Opis|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Pobiera tekst książki z sieci Web.|  
-|`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Dzieli tekst książki na tablicę słów.|  
-|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Usuwa krótkich wyrazów i duplikaty z tablicy programu word.|  
-|`findReversedWords`|<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|Znajduje wszystkie wyrazy w kolekcji tablicy filtrowane programu word, którego wstecznego występuje także w tablicy programu word.|  
-|`printReversedWords`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla wyrazów i odpowiednie wyrazów odwrotnej do konsoli.|  
+|`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Oddziela tekst książki do tablicy wyrazów.|  
+|`filterWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Usuwa krótkie słowa i duplikaty z tablicy wyrazów.|  
+|`findReversedWords`|<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>|Znajduje wszystkie słowa w filtrowanej kolekcji tablic programu Word, których odwrócenie również występuje w tablicy wyrazów.|  
+|`printReversedWords`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla wyrazy i odpowiednie słowa zwrotne do konsoli.|  
   
- Mimo że można połączyć wiele kroków w potoku przepływu danych w tym przykładzie w jednym kroku, w przykładzie pokazano koncepcji tworzenie wielu zadań niezależnie od przepływu danych w przypadku większych zadań. W przykładzie użyto <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> umożliwiające każdy element członkowski potoku do wykonywania operacji na dane wejściowe i wysyłać wyniki do następnego kroku w potoku. `findReversedWords` Potoku jest <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> obiektu, ponieważ generuje wiele niezależnych danych wyjściowych dla każdej danych wejściowych. Tail potoku, `printReversedWords`, jest <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> obiektu, ponieważ wykonuje jakąś akcję na dane wejściowe, a nie rezultatów.  
+ Mimo że można połączyć wiele kroków w potoku przepływu danych w tym przykładzie do jednego kroku, przykład ilustruje koncepcję tworzenia wielu niezależnych zadań przepływu danych, aby wykonać większe zadanie. W przykładzie używa się <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, aby umożliwić każdemu elementowi członkowskiemu potoku wykonywanie operacji na danych wejściowych i wysłanie wyników do następnego kroku w potoku. `findReversedWords` element członkowski potoku jest obiektem <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>, ponieważ produkuje wiele niezależnych danych wyjściowych dla każdego elementu wejściowego. Ogon potoku, `printReversedWords`, jest obiektem <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, ponieważ wykonuje akcję na wejściu i nie tworzy wyniku.  
   
 ## <a name="forming-the-pipeline"></a>Tworzenie potoku  
- Dodaj następujący kod do łączenia każdego bloku do następnego bloku w potoku.  
+ Dodaj następujący kod, aby połączyć każdy blok z następnym blokiem w potoku.  
   
- Gdy wywołujesz <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> metodę, aby połączyć z bloku przepływu danych źródłowych do bloku przepływu danych docelowego źródła bloku przepływu danych propaguje dane, aby blok docelowy danych staje się dostępna. Jeśli podasz również <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> z <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion> ustawiona na wartość true, pomyślnie lub niepowodzeniem zakończenia w potoku jednym bloku ukończenia kolejny blok spowoduje, że w potoku.
+ Po wywołaniu metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> w celu połączenia źródłowego bloku przepływu danych z docelowym blokiem przepływu danych, źródłowy blok przepływu danych propaguje dane do bloku docelowego, ponieważ dane staną się dostępne. Jeśli podano również <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> z <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.PropagateCompletion> ustawioną na wartość true, pomyślne lub nieudane zakończenie jednego bloku w potoku spowoduje zakończenie następnego bloku w potoku.
   
  [!code-csharp[TPLDataflow_Palindromes#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#4)]
  [!code-vb[TPLDataflow_Palindromes#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#4)]  
   
-## <a name="posting-data-to-the-pipeline"></a>Publikowanie danych z potokiem  
- Dodaj następujący kod do opublikowania adresu URL książki *Iliad Homer* do głowy potoku przepływu danych.  
+## <a name="posting-data-to-the-pipeline"></a>Ogłaszanie danych w potoku  
+ Dodaj następujący kod, aby ogłosić adres URL książki *Iliader* do szefa potoku przepływu danych.  
   
  [!code-csharp[TPLDataflow_Palindromes#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#6)]
  [!code-vb[TPLDataflow_Palindromes#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#6)]  
   
- W tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A?displayProperty=nameWithType> synchronicznie wysyłać dane do głowy potoku. Użyj <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType> metody, gdy asynchronicznie musi wysyłać dane do węzła przepływu danych.  
+ Ten przykład używa <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A?displayProperty=nameWithType> do synchronicznego wysyłania danych do szefa potoku. Użyj metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A?displayProperty=nameWithType>, gdy musisz asynchronicznie wysyłać dane do węzła przepływu danych.  
   
-## <a name="completing-pipeline-activity"></a>Kończenie działania potoku  
- Dodaj następujący kod, aby oznaczyć nagłówek potoku jako ukończone. Nagłówek potoku propaguje jego zakończenie, po przetwarza wszystkie buforowane wiadomości.
+## <a name="completing-pipeline-activity"></a>Wykonywanie działania potoku  
+ Dodaj następujący kod, aby oznaczyć wierzchołek potoku jako zakończony. Przed przetworzeniem wszystkich buforowanych komunikatów szef potoku propaguje jego zakończenie.
   
  [!code-csharp[TPLDataflow_Palindromes#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#7)]
  [!code-vb[TPLDataflow_Palindromes#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#7)]  
   
- W tym przykładzie wysyła jednego adresu URL za pośrednictwem potoku przepływu danych do przetworzenia. Jeśli wyślesz więcej niż jeden zestaw danych wejściowych za pomocą potoku, wywołaj <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> metoda po przesłaniu wszystkie dane wejściowe. Możesz pominąć ten krok, jeśli aplikacja nie ma dobrze zdefiniowanego punktu jaką dane nie są już dostępne lub aplikacja nie ma czekać na potoku zakończyć.  
+ Ten przykład wysyła jeden adres URL za pomocą potoku przepływu danych, który ma zostać przetworzony. W przypadku wysyłania więcej niż jednego danych wejściowych za pomocą potoku należy wywołać metodę <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A?displayProperty=nameWithType> po przesłaniu wszystkich danych wejściowych. Możesz pominąć ten krok, jeśli aplikacja nie ma dobrze zdefiniowanego punktu, w którym dane nie są już dostępne lub aplikacja nie musi czekać na zakończenie potoku.  
   
-## <a name="waiting-for-the-pipeline-to-finish"></a>Oczekiwanie na potoku do zakończenia  
- Dodaj następujący kod, aby czekać na potoku zakończyć. Ogólny operacja została zakończona, po zakończeniu tail potoku.  
+## <a name="waiting-for-the-pipeline-to-finish"></a>Oczekiwanie na zakończenie potoku  
+ Dodaj następujący kod, aby poczekać na zakończenie potoku. Operacja ogólna zostanie zakończona po zakończeniu końca potoku.  
   
  [!code-csharp[TPLDataflow_Palindromes#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#8)]
  [!code-vb[TPLDataflow_Palindromes#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#8)]  
   
- Możesz poczekać na zakończenie przepływu danych z żadnym z wątków, lub z wielu wątków w tym samym czasie.  
+ Możesz poczekać na zakończenie przepływu danych z dowolnego wątku lub z wielu wątków w tym samym czasie.  
   
 ## <a name="the-complete-example"></a>Kompletny przykład  
  Poniższy przykład pokazuje kompletny kod dla tego przewodnika.  
@@ -104,11 +102,11 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
  [!code-vb[TPLDataflow_Palindromes#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#1)]  
   
 ## <a name="next-steps"></a>Następne kroki  
- W tym przykładzie wysyła jeden adres URL do przetwarzania za pośrednictwem potoku przepływu danych. Jeśli wyślesz więcej niż jedną wartość danych wejściowych za pomocą potoku, można wprowadzać formularza równoległości do aplikacji, który jest podobny, jak przenieść części za pomocą fabryki samochodów. Podczas pierwszego elementu członkowskiego potok wysyła jego wynik do drugiego elementu członkowskiego, może przetwarzać inny element równocześnie, jak drugi element członkowski przetwarza pierwszego wyniku.  
+ Ten przykład wysyła jeden adres URL do przetworzenia przez potok przepływu danych. Jeśli wyślesz więcej niż jedną wartość wejściową za pomocą potoku, możesz wprowadzić równoległą postać do aplikacji przypominającą, jak części mogą być przenoszone przez fabrykę samochodów. Gdy pierwszy element członkowski potoku wysyła swój wynik do drugiego elementu członkowskiego, może przetwarzać inny element równolegle, gdy drugi element członkowski przetwarza pierwszy wynik.  
   
- Równoległość, które odbywa się za pomocą potoków przepływu danych jest znany jako *gruboziarnistych równoległości* ponieważ zwykle składa się z mniejszej liczby, bardziej złożone zadania. Możesz również użyć bardziej *równoległość drobnoziarnistą* mniejsze, krótko działających zadań w potoku przepływu danych. W tym przykładzie `findReversedWords` potoku używa [PLINQ](parallel-linq-plinq.md) do przetworzenia wiele elementów na liście zadań w sposób równoległy. Użycie równoległość drobnoziarnistą w potoku gruboziarnistych może zwiększyć ogólną przepływność.  
+ Równoległość osiągnięta przy użyciu potoków przepływu danych jest określana jako liczba *równoległa* , ponieważ zazwyczaj składa się z mniej i większych zadań. Można również użyć bardziej *precyzyjnie równoległych* zadań o mniejszych, krótkich działaniach w potoku przepływu danych. W tym przykładzie `findReversedWords` element członkowski potoku używa [PLINQ](parallel-linq-plinq.md) do przetwarzania wielu elementów na liście zadań równolegle. Użycie precyzyjnych równoległych potoków w powyższej potoku może zwiększyć ogólną przepływność.  
   
- Możesz również nawiązać bloku przepływu danych źródłowych wiele bloków docelowych, aby utworzyć *przepływu danych sieci*. Przeciążona wersja <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> metoda przyjmuje <xref:System.Predicate%601> obiekt, który definiuje, czy blok docelowy akceptuje każdy komunikat na podstawie jej wartości. Większość przepływu danych typów bloku, które działają jako źródła oferują wiadomości do wszystkich bloków docelowym, w kolejności, w których były one połączone, dopóki jeden z bloków akceptuje tej wiadomości. Za pomocą tego mechanizmu filtrowania, można utworzyć systemów bloków przepływu danych w połączonych, które bezpośrednie niektórych danych za pomocą ścieżek i innych danych za pośrednictwem inną ścieżkę. Na przykład, który używa filtrowania, aby utworzyć sieć przepływu danych, zobacz [instruktażu: Korzystanie z przepływu danych w Windows Forms aplikacji](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
+ Istnieje również możliwość połączenia źródłowego bloku przepływu danych z wieloma blokami docelowymi w celu utworzenia *sieci przepływu danych*. Przeciążona wersja metody <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> przyjmuje obiekt <xref:System.Predicate%601>, który określa, czy blok docelowy akceptuje każdy komunikat na podstawie jego wartości. Większość typów bloków przepływu danych, które pełnią funkcję źródła wiadomości do wszystkich połączonych bloków docelowych w kolejności, w jakiej były połączone, dopóki jeden z bloków nie zaakceptuje tego komunikatu. Korzystając z tego mechanizmu filtrowania, można tworzyć systemy połączonych bloków przepływu danych, które kierują określone dane za pośrednictwem jednej ścieżki i innych danych za pośrednictwem innej ścieżki. Aby uzyskać przykład, który używa filtrowania do tworzenia sieci przepływu danych, zobacz [Przewodnik: używanie przepływu danych w aplikacji Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

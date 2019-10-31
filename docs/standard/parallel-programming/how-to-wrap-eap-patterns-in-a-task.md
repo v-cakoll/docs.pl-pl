@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Opakowywanie wzorców EAP w zadaniu'
+title: 'Porady: zawijanie wzorów EAP w zadanie'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to wrap EAP patterns
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac7436892c644340286bb4670bf75c9cd63a8ce5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769203"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106821"
 ---
-# <a name="how-to-wrap-eap-patterns-in-a-task"></a>Instrukcje: Opakowywanie wzorców EAP w zadaniu
-Poniższy przykład pokazuje, jak udostępnić dowolne sekwencja operacji przy asynchroniczny wzorzec oparty na zdarzeniach (EAP), jako jedno zadanie przy użyciu <xref:System.Threading.Tasks.TaskCompletionSource%601>. W przykładzie pokazano również sposób użycia <xref:System.Threading.CancellationToken> do wywołania metod wbudowanych anulowania na <xref:System.Net.WebClient> obiektów.  
+# <a name="how-to-wrap-eap-patterns-in-a-task"></a>Porady: zawijanie wzorów EAP w zadanie
+Poniższy przykład pokazuje, jak uwidocznić dowolną sekwencję operacji asynchronicznych opartych na zdarzeniach (EAP) jako jedno zadanie przy użyciu <xref:System.Threading.Tasks.TaskCompletionSource%601>. W przykładzie pokazano również, jak używać <xref:System.Threading.CancellationToken> do wywołania wbudowanych metod anulowania na obiektach <xref:System.Net.WebClient>.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]

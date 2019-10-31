@@ -5,29 +5,27 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming, debugging and profiling tools
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f34170c5a79c302158707fa96c60aef15e4cb1e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 795fb9b37b95a2e7bc1fb8f8f9547522efa46d82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622447"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140051"
 ---
 # <a name="parallel-diagnostic-tools"></a>Równoległe narzędzia diagnostyczne
-Program Visual Studio zapewnia rozbudowaną obsługę debugowania i profilowania aplikacji wielowątkowych.  
+Program Visual Studio zapewnia szeroką obsługę debugowania i profilowania aplikacji wielowątkowych.  
   
 ## <a name="debugging"></a>Debugowanie  
- Debuger programu Visual Studio dodaje nowy systemu windows podczas debugowania aplikacji równoległych. Więcej informacji znajduje się w następujących tematach:  
+ Debuger programu Visual Studio dodaje nowe okna do debugowania aplikacji równoległych. Więcej informacji znajduje się w następujących tematach:  
   
 - [Korzystanie z okna stosów równoległych](/visualstudio/debugger/using-the-parallel-stacks-window)  
   
 - [Korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window)  
   
-- [Przewodnik: Debugowanie aplikacji równoległych](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
+- [Przewodnik: debugowanie aplikacji równoległej](/visualstudio/debugger/walkthrough-debugging-a-parallel-application).  
   
 ## <a name="profiling"></a>Profilowanie  
- Widoki raportu Concurrency Visualizer umożliwiają wizualizowanie, jak wątki, równoległe w programie wchodzić w interakcje ze sobą oraz z wątkami z innych procesów w systemie. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
+ Widoki raportów wizualizatora współbieżności umożliwiają wizualizowanie, jak wątki w programie równoległym współdziałają ze sobą i z wątkami z innych procesów w systemie. Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798914"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121148"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx — Funkcja
 Pobiera wartość wskazującą, czy manifest zestawu w podanej ścieżce zawiera podpis silnej nazwy.  
@@ -44,25 +42,25 @@ BOOLEAN StrongNameSignatureVerificationEx (
  podczas Ścieżka do przenośnego pliku wykonywalnego (. exe lub. dll) dla zestawu, który ma zostać zweryfikowany.  
   
  `fForceVerification`  
- podczas Aby przeprowadzić weryfikację, nawet jeśli konieczne jest przesłonięcie ustawień rejestru; `false`w przeciwnym razie. `true`  
+ [in] `true` przeprowadzić weryfikację, nawet jeśli konieczne jest przesłonięcie ustawień rejestru; w przeciwnym razie `false`.  
   
  `pfWasVerified`  
- określoną Jeśli podpis silnej nazwy został zweryfikowany; w przeciwnym razie, `false`. `true` `pfWasVerified`jest również ustawiony na `false` , Jeśli weryfikacja zakończyła się pomyślnie z powodu ustawień rejestru.  
+ [out] `true`, jeśli zweryfikowano podpis silnej nazwy; w przeciwnym razie `false`. `pfWasVerified` jest również ustawiony na `false`, Jeśli weryfikacja zakończyła się pomyślnie z powodu ustawień rejestru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Jeśli weryfikacja zakończyła się pomyślnie; w przeciwnym razie. `false`  
+ `true`, Jeśli weryfikacja zakończyła się pomyślnie; w przeciwnym razie `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- `StrongNameSignatureVerificationEx`zapewnia możliwość podobną do funkcji [StrongNameSignatureVerification —](strongnamesignatureverification-function.md) . Jednak drugi parametr wejściowy i parametr wyjściowy dla `StrongNameSignatureVerificationEx` są typu `BOOLEAN` zamiast `DWORD`.  
+ `StrongNameSignatureVerificationEx` zapewnia możliwość podobną do funkcji [StrongNameSignatureVerification —](strongnamesignatureverification-function.md) . Jednak drugi parametr wejściowy i parametr wyjściowy dla `StrongNameSignatureVerificationEx` są typu `BOOLEAN` zamiast `DWORD`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** StrongName.h  
+ **Nagłówek:** StrongName. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece mscoree. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece mscoree. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

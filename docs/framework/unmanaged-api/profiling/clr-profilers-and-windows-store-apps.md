@@ -1,5 +1,5 @@
 ---
-title: Preplikcy CLR i aplikacje ze sklepu Windows
+title: Profilery CLR i aplikacje sklepu Windows Store
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8368930e60210b0cb470700e9c9470c57d536c13
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291411"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140388"
 ---
-# <a name="clr-profilers-and-windows-store-apps"></a>Preplikcy CLR i aplikacje ze sklepu Windows
+# <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacje sklepu Windows Store
 
 W tym temacie omówiono, co należy wziąć pod uwagę podczas pisania narzędzi diagnostycznych, które analizują kod zarządzany działający w aplikacji ze sklepu Windows. Zawiera również wskazówki pozwalające modyfikować istniejące narzędzia programistyczne, aby nadal działały po uruchomieniu ich w aplikacjach ze sklepu Windows. Aby zrozumieć te informacje, najlepszym rozwiązaniem jest zapoznanie się z interfejsem API profilowania środowiska uruchomieniowego języka wspólnego. ten interfejs API jest już używany w narzędziu diagnostycznym, które działa prawidłowo w przypadku aplikacji klasycznych systemu Windows. użytkownik chce teraz modyfikować narzędzie Aby działać poprawnie z aplikacjami ze sklepu Windows.
 
@@ -114,7 +112,7 @@ Ogólnie rzecz biorąc, aplikacje ze sklepu Windows mogą uzyskiwać dostęp do 
 
 ### <a name="startup-load"></a>Ładowanie uruchamiania
 
-Zazwyczaj w aplikacji klasycznej interfejs użytkownika programu Profiler jest monitowany o ponowne uruchomienie narzędzia Profiler DLL przez zainicjowanie bloku środowiska zawierającego wymagane zmienne środowiskowe interfejsu API profilowania CLR (tj. `COR_PROFILER`, `COR_ENABLE_PROFILING` i `COR_PROFILER_PATH`), a następnie utworzyć nowy Przetwarzaj przy użyciu tego bloku środowiska. Te same wartości mają wartość prawda w przypadku aplikacji ze sklepu Windows, ale te mechanizmy są różne.
+Zazwyczaj w aplikacji klasycznej interfejs użytkownika profilera jest monitowany o ponowne uruchomienie narzędzia Profiler DLL przez zainicjowanie bloku środowiska zawierającego wymagane zmienne środowiskowe interfejsu API profilowania CLR (tj. `COR_PROFILER`, `COR_ENABLE_PROFILING`i `COR_PROFILER_PATH`), a następnie tworząc nowe Przetwarzaj przy użyciu tego bloku środowiska. Te same wartości mają wartość prawda w przypadku aplikacji ze sklepu Windows, ale te mechanizmy są różne.
 
 **Nie uruchamiaj z podwyższonym poziomem uprawnień**
 
@@ -137,7 +135,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Określanie niestandardowego bloku środowiska**
 
-Nowy interfejs COM [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), pozwala dostosować zachowanie aplikacji ze sklepu Windows, aby ułatwić korzystanie z niektórych form diagnostyki. Jedna z jej metod, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), umożliwia przekazanie bloku środowiska do aplikacji ze sklepu Windows, gdy zostanie ona uruchomiona, oraz innych użytecznych efektów, takich jak wyłączenie automatycznego zawieszenia procesów. Blok środowiska jest istotny, ponieważ jest to miejsce, w którym należy określić zmienne środowiskowe (`COR_PROFILER`, `COR_ENABLE_PROFILING` i `COR_PROFILER_PATH)`) używane przez środowisko CLR do załadowania pliku DLL profilera.
+Nowy interfejs COM [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), pozwala dostosować zachowanie aplikacji ze sklepu Windows, aby ułatwić korzystanie z niektórych form diagnostyki. Jedna z jej metod, [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), umożliwia przekazanie bloku środowiska do aplikacji ze sklepu Windows, gdy zostanie ona uruchomiona, oraz innych użytecznych efektów, takich jak wyłączenie automatycznego zawieszenia procesów. Blok środowiska jest istotny, ponieważ jest to miejsce, w którym należy określić zmienne środowiskowe (`COR_PROFILER`, `COR_ENABLE_PROFILING`i `COR_PROFILER_PATH)`) używane przez środowisko CLR do załadowania pliku DLL profilera.
 
 Rozważmy następujący fragment kodu:
 
@@ -334,7 +332,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="no-shutdown-notifications"></a>Brak powiadomień o zamknięciu
 
-W przypadku uruchamiania w ramach aplikacji ze sklepu Windows Profiler DLL nie powinien polegać na [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) lub nawet [DllMain](/windows/desktop/Dlls/dllmain) (z `DLL_PROCESS_DETACH`) wywoływanym w celu powiadomienia biblioteki DLL profilera, że aplikacja ze sklepu Windows zostanie zamknięta. W rzeczywistości należy się spodziewać, że nigdy nie będą wywoływane. W przeszłości wiele bibliotek DLL profilera użyła tych powiadomień jako wygodnych miejsc do opróżniania pamięci podręcznych na dysk, zamykania plików, wysyłania powiadomień z powrotem do interfejsu użytkownika profilera itp. Jednak teraz Twój plik DLL profilera musi być zorganizowany nieco inaczej.
+Podczas pracy w aplikacji ze sklepu Windows Profiler DLL nie powinien polegać na [ICorProfilerCallback:: Shutdown](icorprofilercallback-shutdown-method.md) lub nawet [DllMain](/windows/desktop/Dlls/dllmain) (z `DLL_PROCESS_DETACH`) wywoływanym w celu powiadomienia biblioteki DLL profilera, że aplikacja ze sklepu Windows zostanie zamknięta. W rzeczywistości należy się spodziewać, że nigdy nie będą wywoływane. W przeszłości wiele bibliotek DLL profilera użyła tych powiadomień jako wygodnych miejsc do opróżniania pamięci podręcznych na dysk, zamykania plików, wysyłania powiadomień z powrotem do interfejsu użytkownika profilera itp. Jednak teraz Twój plik DLL profilera musi być zorganizowany nieco inaczej.
 
 Biblioteka DLL profilera powinna rejestrować informacje w miarę ich tworzenia. Ze względu na wydajność można utworzyć wsadowe informacje w pamięci i opróżnić je na dysk, gdy partia rośnie w rozmiarze poprzedzającym pewien próg. Należy jednak założyć, że wszelkie informacje, które nie zostały jeszcze opróżnione na dysk, mogą zostać utracone. Oznacza to, że warto wybrać próg progu, a interfejs użytkownika profilera musi być zaostrzony, aby można było zająć się niekompletnymi informacjami zapisanymi przez profiler DLL.
 
@@ -390,15 +388,15 @@ W związku z tym zaleca się, aby każdy wątek utworzony przez program Profiler
 
 ### <a name="conditionalweaktablereferences"></a>ConditionalWeakTableReferences
 
-Począwszy od .NET Framework 4,5, istnieje nowe wywołanie zwrotne GC, [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md), które zapewnia profilerowi pełniejsze informacje o *dojściach zależnych*. Te uchwyty efektywnie dodają odwołanie z obiektu źródłowego do obiektu docelowego na potrzeby zarządzania okresem istnienia systemu GC. Dojścia zależne nie są nowe i deweloperzy, którzy program w kodzie zarządzanym, mogą tworzyć własne dojścia zależne przy użyciu klasy <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType> nawet przed systemem Windows 8 i .NET Framework 4,5.
+Począwszy od .NET Framework 4,5, istnieje nowe wywołanie zwrotne GC, [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md), które zapewnia profilerowi pełniejsze informacje o *dojściach zależnych*. Te uchwyty efektywnie dodają odwołanie z obiektu źródłowego do obiektu docelowego na potrzeby zarządzania okresem istnienia systemu GC. Dojścia zależne nie są nowe i deweloperzy, którzy program w kodzie zarządzanym, mogą tworzyć własne dojścia zależne przy użyciu klasy <xref:System.Runtime.CompilerServices.ConditionalWeakTable%602?displayProperty=nameWithType>, nawet przed systemem Windows 8 i .NET Framework 4,5.
 
 Jednak zarządzane aplikacje ze sklepu Windows XAML teraz intensywnie wykorzystują uchwyty zależne. W szczególności środowisko CLR używa ich do ułatwienia zarządzania cyklami odwołań między obiektami zarządzanymi i niezarządzanymi obiektami środowisko wykonawcze systemu Windows. Oznacza to, że jest to ważniejsze niż kiedykolwiek dotąd, aby uzyskać informacje o tych uchwytach zależnych, dzięki czemu można je wizualizować wraz z resztą krawędzi na grafie sterty. Biblioteka DLL profilera powinna używać [RootReferences2 —](icorprofilercallback2-rootreferences2-method.md), [ObjectReferences —](icorprofilercallback-objectreferences-method.md)i [ConditionalWeakTableElementReferences —](icorprofilercallback5-conditionalweaktableelementreferences-method.md) razem do tworzenia pełnego widoku grafu sterty.
 
-## <a name="conclusion"></a>Podsumowanie
+## <a name="conclusion"></a>Wniosek
 
 Można użyć interfejsu API profilowania środowiska CLR do analizy kodu zarządzanego działającego wewnątrz aplikacji ze sklepu Windows. W rzeczywistości można utworzyć istniejący Profiler, który jest opracowywany, i wprowadzić konkretne zmiany, aby można było kierować aplikacje do sklepu Windows. Interfejs użytkownika profilera powinien korzystać z nowych interfejsów API w celu aktywowania aplikacji ze sklepu Windows w trybie debugowania. Upewnij się, że biblioteka DLL profilera wykorzystuje tylko te interfejsy API, które są odpowiednie dla aplikacji ze sklepu Windows. Mechanizm komunikacji między biblioteką DLL i interfejsem użytkownika profilera powinien być zapisany przy użyciu ograniczeń interfejsu API aplikacji ze sklepu Windows i ma świadomość ograniczonych uprawnień dla aplikacji ze sklepu Windows. Biblioteka DLL profilera powinna mieć świadomość, jak środowisko CLR traktuje WinMD i jak zachowanie modułu wyrzucania elementów bezużytecznych jest różne w odniesieniu do zarządzanych wątków.
 
-## <a name="resources"></a>Zasoby
+## <a name="resources"></a>Resources
 
 **Środowisko uruchomieniowe języka wspólnego**
 
@@ -408,7 +406,7 @@ Można użyć interfejsu API profilowania środowiska CLR do analizy kodu zarzą
 
 **Interakcja środowiska CLR z środowisko wykonawcze systemu Windows**
 
-- [.NET Framework obsługa aplikacji ze sklepu Windows i środowisko wykonawcze systemu Windows](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 
 **Aplikacje ze sklepu Windows**
 

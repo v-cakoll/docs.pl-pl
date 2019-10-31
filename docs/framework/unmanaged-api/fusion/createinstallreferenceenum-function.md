@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80dbbbf8-54fc-4894-b74a-0179d3201083
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d696326ff8861ed8496474f76e9eaf89b4ead3e8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f089769f854bad5d3e572e0307734e06e72ca89c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795392"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108564"
 ---
 # <a name="createinstallreferenceenum-function"></a>CreateInstallReferenceEnum — Funkcja
 Pobiera wskaźnik do wystąpienia [IInstallReferenceEnum](iinstallreferenceenum-interface.md) , które reprezentuje listę odwołań aplikacji do określonego zestawu.  
@@ -41,7 +39,7 @@ HRESULT CreateInstallReferenceEnum (
   
 ## <a name="parameters"></a>Parametry  
  `ppRefEnum`  
- określoną Zwrócony `IInstallReferenceEnum` wskaźnik.  
+ określoną Zwrócony wskaźnik `IInstallReferenceEnum`.  
   
  `pName`  
  podczas [IAssemblyName](iassemblyname-interface.md) , który identyfikuje zestaw, dla którego mają zostać wyliczone odwołania.  
@@ -50,16 +48,16 @@ HRESULT CreateInstallReferenceEnum (
  podczas Flagi wpływające na zachowanie modułu wyliczającego.  
   
  `pvReserved`  
- podczas Zarezerwowane do użytku w przyszłości. `pvReserved`musi być odwołaniem o wartości null.  
+ podczas Zarezerwowane do użytku w przyszłości. `pvReserved` musi być odwołaniem o wartości null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **Biblioteki** Fusion. dll i mscorwks. dll. Aby upewnić się, że docelowa wersja .NET Framework, należy użyć pliku Fusion. dll zamiast Mscorwks. dll.  
+ **Biblioteka:** Fusion. dll i mscorwks. dll. Aby upewnić się, że docelowa wersja .NET Framework, należy użyć pliku Fusion. dll zamiast Mscorwks. dll.  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

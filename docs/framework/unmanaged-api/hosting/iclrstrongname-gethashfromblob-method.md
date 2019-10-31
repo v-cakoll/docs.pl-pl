@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4839f098a41e0d2b8e87616791b69ffd83e139f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748191"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135203"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>ICLRStrongName::GetHashFromBlob — Metoda
-Pobiera skrót zestawu pod adresem określonym pamięci, przy użyciu określonego algorytmu skrótu.  
+Pobiera skrót zestawu pod określonym adresem pamięci przy użyciu określonego algorytmu wyznaczania wartości skrótu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,34 +40,34 @@ HRESULT GetHashFromBlob (
   
 ## <a name="parameters"></a>Parametry  
  `pbBlob`  
- [in] Wskaźnik na adres bloku pamięci, aby zostać obliczona wartość skrótu.  
+ podczas Wskaźnik do adresu bloku pamięci, który ma zostać zmieszany.  
   
  `cchBlob`  
- [in] Długość w bajtach, bloku pamięci.  
+ podczas Długość (w bajtach) bloku pamięci.  
   
  `piHashAlg`  
- [out w] Stała, który określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla domyślny algorytm.  
+ [in. out] Stała, która określa algorytm wyznaczania wartości skrótu. Użyj wartości zero dla algorytmu domyślnego.  
   
  `pbHash`  
- [out] Bufor zwrócone wyznaczania wartości skrótu.  
+ określoną Zwrócony bufor wyznaczania wartości skrótu.  
   
  `cchHash`  
- [in] Żądany maksymalny rozmiar `pbHash`.  
+ podczas Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- [out] Rozmiar w bajtach zwracanego `pbHash`.  
+ określoną Rozmiar w bajtach zwracanej `pbHash`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` Jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT, która wskazuje błąd (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
+ `S_OK`, jeśli metoda została ukończona pomyślnie; w przeciwnym razie wartość HRESULT wskazująca niepowodzenie (zobacz [typowe wartości HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) dla listy).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame, interfejs
+title: ICorDebugInternalFrame — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9764cdcd07a09f5192a8f43b9baa5be40305c40b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b1ee5a155afa4e33340108e7295adef2309986cf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122709"
 ---
-# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame, interfejs
+# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame — Interfejs
 
 Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten interfejs jest podklasą interfejsu ICorDebugFrame.  
   
@@ -39,13 +37,13 @@ Reprezentuje wewnętrzną ramkę środowiska uruchomieniowego na stosie. Ten int
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c21dab60-fb65-47d9-8a94-7fd47ca53b48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f8e9284283247ec46a225470ae3063dac539f43
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 217874e625604613e67170a118a7bc3616e02c4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780019"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139648"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup — Metoda
-Pobiera typ wskaźnika interfejsu iappdomainsetup — aby <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. `IAppDomainSetup` udostępnia metody umożliwiające konfigurowanie aspektów domeny aplikacji, zanim zostanie on utworzony.  
+Pobiera wskaźnik interfejsu typu IAppDomainSetup — do wystąpienia <xref:System.AppDomainSetup?displayProperty=nameWithType>. `IAppDomainSetup` udostępnia metody konfigurowania aspektów domeny aplikacji przed jej utworzeniem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +35,7 @@ HRESULT CreateDomainSetup (
   
 ## <a name="parameters"></a>Parametry  
  `pAppDomainSetup`  
- [out] Wskaźnik interfejsu do <xref:System.AppDomainSetup?displayProperty=nameWithType> wystąpienia. Ten parametr jest wpisana jako `IUnknown`, więc obiekty wywołujące zwykle powinny wywoływać `QueryInterface` tego wskaźnika można uzyskać wskaźnika interfejsu typu `IAppDomainSetup`.  
+ określoną Wskaźnik interfejsu do wystąpienia <xref:System.AppDomainSetup?displayProperty=nameWithType>. Ten parametr jest wpisywany jako `IUnknown`, dlatego obiekty wywołujące powinny na ogół wywołać `QueryInterface` na tym wskaźniku, aby uzyskać wskaźnik interfejsu typu `IAppDomainSetup`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -45,20 +43,20 @@ HRESULT CreateDomainSetup (
 |-------------|-----------------|  
 |S_OK|Operacja zakończyła się pomyślnie.|  
 |S_FALSE|Nie można ukończyć operacji.|  
-|E_FAIL|Wystąpił błąd nieznanego, krytycznego. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie. Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wskaźnik zwrócone w wyniku tej metody zwykle jest przekazywany jako parametr do [createdomainex —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metody.  
+ Wskaźnik zwrócony z tej metody jest zwykle przekazana jako parametr do metody [CreateDomainEx —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersja programu .NET framework:** 1.0, 1.1  
+ **Wersja .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

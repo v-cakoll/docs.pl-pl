@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue, interfejs
+title: ICorDebugHeapValue — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1bca66db-0359-4ae8-846e-e35f7e547e8b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb130f11975eb95db7807126d6f163425439b0c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4f87065fc4a3d80a8363f3ae2fbb76c29f3d9b96
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138419"
 ---
-# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue, interfejs
+# <a name="icordebugheapvalue-interface"></a>ICorDebugHeapValue — Interfejs
 
 Podklasa elementu "ICorDebugValue" reprezentująca obiekt, który został zebrany przez moduł zbierający elementy bezużyteczne środowiska uruchomieniowego języka wspólnego (CLR).  
   
@@ -32,7 +30,7 @@ Podklasa elementu "ICorDebugValue" reprezentująca obiekt, który został zebran
 |Metoda|Opis|  
 |------------|-----------------|  
 |[CreateRelocBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|Nie zaimplementowane.|  
-|[IsValid, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten `ICorDebugHeapValue` element jest prawidłowy lub został odrzucony przez moduł zbierający elementy bezużyteczne. Ta metoda jest przestarzała w .NET Framework w wersji 2,0.|  
+|[IsValid, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|Pobiera wartość wskazującą, czy obiekt reprezentowany przez ten `ICorDebugHeapValue` jest prawidłowy, czy został odrzucony przez moduł zbierający elementy bezużyteczne. Ta metoda jest przestarzała w .NET Framework w wersji 2,0.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -40,13 +38,13 @@ Podklasa elementu "ICorDebugValue" reprezentująca obiekt, który został zebran
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

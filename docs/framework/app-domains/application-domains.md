@@ -12,14 +12,12 @@ helpviewer_keywords:
 - code, verification process
 - verification testing code
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ce9d5f706a473d64e97fb02e0426060878d9c75
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: a5c9f4248e060d231941269f39cadbc7147ce27f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834028"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119975"
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 
@@ -98,9 +96,9 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
 
 ### <a name="application-domains-and-cultures"></a>Domeny aplikacji i kultury
 
- Kultura, która jest reprezentowana przez obiekt <xref:System.Globalization.CultureInfo>, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem za pomocą właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem za pomocą właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Jeśli kultura, która jest skojarzona z wątkiem, została jawnie ustawiona przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, będzie nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość właściwości <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> w domenie aplikacji, w której jest wykonywany wątek:  
+ Kultura, która jest reprezentowana przez obiekt <xref:System.Globalization.CultureInfo>, jest skojarzona z wątkami. Można uzyskać kulturę, która jest skojarzona z aktualnie wykonywanym wątkiem za pomocą właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i można pobrać lub ustawić kulturę skojarzoną z aktualnie wykonywanym wątkiem przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Jeśli kultura skojarzona z wątkiem została jawnie ustawiona przy użyciu właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, będzie ona nadal skojarzona z tym wątkiem, gdy wątek przekroczy granice domeny aplikacji. W przeciwnym razie kultura, która jest skojarzona z wątkiem w danym momencie jest określona przez wartość właściwości <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> w domenie aplikacji, w której jest wykonywany wątek:  
   
-- Jeśli wartość właściwości nie jest `null`, kultura zwracana przez właściwość jest skojarzona z wątkiem (i dlatego jest zwracana przez właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
+- Jeśli wartość właściwości nie jest `null`, kultura zwracana przez właściwość jest skojarzona z wątkiem (i w związku z tym jest zwracana przez właściwości <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 - Jeśli wartość właściwości jest `null`, bieżąca kultura systemu jest skojarzona z wątkiem.  
   
@@ -108,7 +106,7 @@ Systemy operacyjne i środowiska uruchomieniowe zwykle zapewniają pewną posta�
 
  Zazwyczaj domeny aplikacji tworzy się i wykonuje na nich operacje programowo za pomocą hostów środowiska uruchomieniowego. Czasami jednak z domenami aplikacji chcą pracować programy. Na przykład program może wczytywać składnik aplikacji do domeny, aby umożliwić zwolnienie domeny (i składnika) z pamięci bez konieczności zatrzymywania całej aplikacji.  
   
- @No__t-0 to interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. W poniższej tabeli wymieniono często używane metody <xref:System.AppDomain>.  
+ <xref:System.AppDomain> jest interfejs programistyczny dla domen aplikacji. Zawiera ona metody tworzenia domen i zwalniania ich z pamięci, tworzenia wystąpień typów w domenach oraz rejestrowania w celu otrzymywania różnych powiadomień, np. o zwalnianiu domen aplikacji z pamięci. W poniższej tabeli wymieniono często używane metody <xref:System.AppDomain>.  
   
 |Metoda klasy AppDomain|Opis|  
 |----------------------|-----------------|  

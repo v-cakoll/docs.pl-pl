@@ -6,21 +6,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1808121049c6344b72b1c9d99e19c46422dfa0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ca5f27bdea75f6c6ce8f954f553b6a58a1a9204
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650290"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124249"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów na dane XML
-Po dokumentu XML w pamięci koncepcyjny reprezentacja jest drzewa. Dla programowania, możesz mieć hierarchię obiektów uzyskać dostęp do węzłów w drzewie. Poniższy przykład pokazuje, jak zawartość XML staje się węzły.  
+Gdy dokument XML znajduje się w pamięci, reprezentacja koncepcyjna jest drzewem. W przypadku programowania istnieje hierarchia obiektów do uzyskiwania dostępu do węzłów drzewa. W poniższym przykładzie pokazano, jak zawartość XML staną się węzłami.  
   
- Jako plik XML jest do odczytu do XML Document Object Model (DOM), elementy są tłumaczone na węzłach, a te węzły zachować dodatkowe metadane na temat, takie jak ich typ węzła i wartości. Typ węzła jest obiektem i to, co określa, jakie akcje mogą być wykonywane i właściwości można ustawić lub pobrać.  
+ Ponieważ kod XML jest odczytywany do Document Object Model XML (DOM), fragmenty są tłumaczone na węzły, a te węzły zachowują dodatkowe metadane dotyczące siebie, takie jak typ węzła i wartości. Typ węzła jest obiektem, co określa, jakie akcje można wykonać i jakie właściwości można ustawić lub pobrać.  
   
- Jeśli masz następujące prostego formatu XML:  
+ Jeśli masz następujący prosty kod XML:  
   
  **Dane wejściowe**  
   
@@ -30,14 +28,14 @@ Po dokumentu XML w pamięci koncepcyjny reprezentacja jest drzewa. Dla programow
 </book>  
 ```  
   
- Wartość wejściowa jest reprezentowany w pamięci następujące drzewo węzła z właściwością typu przypisanym węźle:  
+ Dane wejściowe są reprezentowane w pamięci jako drzewo węzła z przypisaną właściwością typu węzła:  
   
- ![przykład węzła drzewa](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
-Książki i tytuł reprezentacji drzewa węzła  
+ ![Przykładowe drzewo węzłów](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+Reprezentacja drzewa w drzewie i tytule węzła  
   
- `book` Element staje się **XmlElement** object, następnego elementu `title`, staje się również **XmlElement**, podczas gdy staje się zawartości elementu **XmlText** obiektu. Patrząc na **XmlElement** metod i właściwości, metod i właściwości różnią się od metod i właściwości dostępnych na **XmlText** obiektu. Tak, wiedząc, jakiego typu węzła staje się znaczników XML jest istotna, ponieważ jego typ węzła Określa akcje, które mogą być wykonywane.  
+ Element `book` stanie się obiektem **XmlElement** , a następny element, `title`, również stanie się **XmlElement**, natomiast zawartość elementu stanie się obiektem **XmlText** . W przypadku metod i właściwości **elementu XmlElement** metody i właściwości są inne niż metody i właściwości dostępne w obiekcie **XmlText** . Należy więc znać typ węzła, który ma stać się znacznikiem XML, ponieważ jego typ węzła Określa akcje, które można wykonać.  
   
- Poniższy przykład odczytuje w danych XML i zapisuje się inny tekst, w zależności od typu węzła. Przy użyciu następującego pliku XML w danych jako dane wejściowe, **items.xml**:  
+ Poniższy przykład odczytuje dane XML i zapisuje inny tekst w zależności od typu węzła. Używanie następującego pliku danych XML jako danych wejściowych, **Items. XML**:  
   
  **Dane wejściowe**  
   
@@ -55,7 +53,7 @@ Książki i tytuł reprezentacji drzewa węzła
 </Items>  
 ```  
   
- Poniższy kod przykładowy odczyty **items.xml** pliku i wyświetla informacje dla każdego typu węzła.  
+ Poniższy przykład kodu odczytuje plik **Items. XML** i wyświetla informacje dla każdego typu węzła.  
   
 ```vb  
 Imports System  
@@ -176,7 +174,7 @@ public class Sample
 } // End class  
 ```  
   
- Dane wyjściowe z przykładu, co spowoduje wyświetlenie mapowanie danych do typów węzłów.  
+ Dane wyjściowe z przykładu ujawniają mapowanie danych do typów węzłów.  
   
  **Output**  
   
@@ -184,41 +182,41 @@ public class Sample
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
 ```  
   
- Biorąc wejściowych jeden wiersz w danym momencie i używanie danych wyjściowe wygenerowane z kodu, można użyć poniższej tabeli do analizowania jakie test węzłów wygenerowanych danych wyjściowych, które wiersze, w tym samym zrozumienie, jakie dane XML stało się, jakiego typu węzła.  
+ Po wprowadzeniu jednego wiersza i użyciu danych wyjściowych generowanych na podstawie kodu można użyć poniższej tabeli, aby przeanalizować, który test węzła wygenerował te wiersze danych wyjściowych, a tym samym zrozumieć, jakie dane XML stały się typem węzła.  
   
-|Dane wejściowe|Dane wyjściowe|Test typ węzła|  
+|Dane wejściowe|Dane wyjściowe|Test typu węzła|  
 |-----------|------------|--------------------|  
-|\<? wersji xml = "1.0"? >|\<? wersji xml = "1.0'? >|XmlNodeType.XmlDeclaration|  
-|\<! — Jest to przykładowy dokument XML-->|\<! — Jest to przykładowy dokument XML-->|XmlNodeType.Comment|  
-|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >] >|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >]|XmlNodeType.DocumentType|  
-|\<Elementy >|\<Elementy >|XmlNodeType.Element|  
-|\<Element >|\<Element >|XmlNodeType.Element|  
-|Testowanie za pomocą jednostki: &number;|Testowanie za pomocą jednostki: 123|XmlNodeType.Text|  
-|\</ Element >|\</ Element >|XmlNodeType.EndElement|  
-|\<Element >|\<Element >|XmNodeType.Element|  
-|Testowanie za pomocą elementu podrzędnego|Testowanie za pomocą elementu podrzędnego|XmlNodeType.Text|  
-|\<more>|\<more>|XmlNodeType.Element|  
-|rzeczy|rzeczy|XmlNodeType.Text|  
-|\</ Element >|\</ Element >|XmlNodeType.EndElement|  
-|\<Element >|\<Element >|XmlNodeType.Element|  
-|Testowanie za pomocą sekcji CDATA|Testowanie za pomocą sekcji CDATA|XmlTest.Text|  
-|<![CDATA[\<456>]]\>|<![CDATA[\<456>]]\>|XmlTest.CDATA|  
-|DEF|DEF|XmlNodeType.Text|  
-|\</ Element >|\</ Element >|XmlNodeType.EndElement|  
-|\<Element >|\<Element >|XmlNodeType.Element|  
-|Test z jednostką char: &\#65;|Test z jednostką char: ELEMENT|XmlNodeType.Text|  
-|\</ Element >|\</ Element >|XmlNodeType.EndElement|  
-|\<!----> Czternastu znaków w tym elemencie.|\<----> Czternastu znaków w tym elemencie.|XmlNodeType.Comment|  
-|\<Element >|\<Element >|XmlNodeType.Element|  
-|1234567890ABCD|1234567890ABCD|XmlNodeType.Text|  
-|\</ Element >|\</ Element >|XmlNodeType.EndElement|  
-|\</ Elementy >|\</ Elementy >|XmlNodeType.EndElement|  
+|\<? wersja XML = "1.0"? >|\<? wersja XML = "1.0"? >|XmlNodeType. xmldeklaracji|  
+|\<!--jest to przykładowy dokument XML-->|\<!--jest to przykładowy dokument XML-->|XmlNodeType. Comment|  
+|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >] >|\<! Elementy DOCTYPE [\<! Numer jednostki "123" >]|XmlNodeType. DocumentType|  
+|\<elementy >|\<elementy >|XmlNodeType. element|  
+|Element \<|Element \<|XmlNodeType. element|  
+|Testowanie przy użyciu jednostki: &number;|Testowanie przy użyciu jednostki: 123|XmlNodeType. Text|  
+|\</Item >|\</Item >|XmlNodeType. EndElement|  
+|Element \<|Element \<|XmNodeType. element|  
+|Testowanie przy użyciu elementu podrzędnego|Testowanie przy użyciu elementu podrzędnego|XmlNodeType. Text|  
+|\<więcej >|\<więcej >|XmlNodeType. element|  
+|rzeczy|rzeczy|XmlNodeType. Text|  
+|\</Item >|\</Item >|XmlNodeType. EndElement|  
+|Element \<|Element \<|XmlNodeType. element|  
+|Testowanie za pomocą sekcji CDATA|Testowanie za pomocą sekcji CDATA|Xmltest. Text|  
+|<! [CDATA [\<456 >]]\>|<! [CDATA [\<456 >]]\>|Xmltest. CDATA|  
+|rozdzielczości|rozdzielczości|XmlNodeType. Text|  
+|\</Item >|\</Item >|XmlNodeType. EndElement|  
+|Element \<|Element \<|XmlNodeType. element|  
+|Testowanie za pomocą jednostki char: &\#65;|Testowanie za pomocą jednostki char:|XmlNodeType. Text|  
+|\</Item >|\</Item >|XmlNodeType. EndElement|  
+|\<!--czternaście znaków w tym elemencie.-->|\<--czternaście znaków w tym elemencie.-->|XmlNodeType. Comment|  
+|Element \<|Element \<|XmlNodeType. element|  
+|1234567890ABCD|1234567890ABCD|XmlNodeType. Text|  
+|\</Item >|\</Item >|XmlNodeType. EndElement|  
+|\</Items >|\</Items >|XmlNodeType. EndElement|  
   
- Musisz wiedzieć, jakiego typu węzła jest przypisany, jako węzeł typ Określa, jakiego rodzaju akcje są prawidłowe i jakiego rodzaju właściwości umożliwia ustawianie i pobieranie.  
+ Musisz wiedzieć, jaki typ węzła jest przypisany, ponieważ typ węzła kontroluje, jakie rodzaje akcji są prawidłowe i jakie właściwości można ustawić i pobrać.  
   
- Tworzenie węzła biały znak jest kontrolowany po załadowaniu danych do modelu DOM, **PreserveWhitespace** flagi. Aby uzyskać więcej informacji, zobacz [biały znak i znaczące biały znak obsługi podczas ładowania modelu DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
+ Tworzenie węzłów dla białych znaków jest kontrolowane, gdy dane są ładowane do modelu DOM przez flagę **PreserveWhitespace** . Aby uzyskać więcej informacji, zobacz [biały znak i znaczący biały znak podczas ładowania modelu dom](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).  
   
- Aby dodać nowe węzły do modelu DOM, zobacz [Wstawianie węzłów do dokumentu XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Aby usunąć węzły z modelu DOM, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Aby zmodyfikować zawartość węzłów w modelu DOM, zobacz [modyfikowanie węzłów, zawartości i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
+ Aby dodać nowe węzły do modelu DOM, zobacz [Wstawianie węzłów do dokumentu XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Aby usunąć węzły z modelu DOM, zobacz [usuwanie węzłów, zawartości i wartości z dokumentu XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Aby zmodyfikować zawartość węzłów w modelu DOM, zobacz [Modyfikowanie węzłów, zawartości i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

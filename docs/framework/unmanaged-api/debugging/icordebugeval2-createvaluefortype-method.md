@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9ffddb8242b6627239a99bd9223b98762910b831
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753239"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137608"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType — Metoda
-Pobiera wskaźnik do nowego ICorDebugValue określonego typu o wartości początkowej zero lub wartość null.  
+Pobiera wskaźnik do nowego ICorDebugValue określonego typu z początkową wartością zero lub null.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +36,21 @@ HRESULT CreateValueForType (
   
 ## <a name="parameters"></a>Parametry  
  `pType`  
- [in] Wskaźnik do obiektu ICorDebugType, który reprezentuje typ.  
+ podczas Wskaźnik do obiektu ICorDebugType, który reprezentuje typ.  
   
  `ppValue`  
- [out] Wskaźnik na adres `ICorDebugValue` obiekt, który reprezentuje wartość.  
+ określoną Wskaźnik na adres `ICorDebugValue` obiektu, który reprezentuje wartość.  
   
 ## <a name="remarks"></a>Uwagi  
- `CreateValueForType` stanowi uogólnienie [ICorDebugEval::CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , umożliwiając określenie typu dowolnego obiektu, w tym skonstruowany typy takie jak `List<int>`. Jedynym celem tej metody jest do generowania wartości, które mogą być przekazywane do obliczania funkcji.  
+ `CreateValueForType` generalizes [:: SetValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) , umożliwiając określenie dowolnego typu obiektu, w tym typów skonstruowanych, takich jak `List<int>`. Jedynym celem tej metody jest wygenerowanie wartości, która może zostać przeniesiona do oceny funkcji.  
   
- Typ musi być klasą lub typu wartości. Ta metoda nie można użyć do utworzenia tablicy wartości lub wartości ciągu.  
+ Typ musi być klasą lub typem wartości. Nie można użyć tej metody do tworzenia wartości tablicy lub wartości ciągu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

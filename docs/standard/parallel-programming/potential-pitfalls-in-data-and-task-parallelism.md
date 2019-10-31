@@ -8,23 +8,21 @@ dev_langs:
 helpviewer_keywords:
 - parallel programming, pitfalls
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ff6ac9e8c41ee203ae72e1b28c088f462ddf6a54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946331"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140022"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
-W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> może zapewnić znaczną poprawę wydajności w porównaniu z zwykłymi pętlami sekwencyjnymi. Jednak prace przekształcają pętlą wprowadzają złożoność, która może prowadzić do problemów, które w sekwencyjnym kodzie nie są zgodne lub nie są w ogóle obsługiwane. Ten temat zawiera wskazówki, które należy unikać podczas pisania pętli równoległych.  
+W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> mogą zapewniać znaczne ulepszenia wydajności w porównaniu z zwykłymi pętlami sekwencyjnymi. Jednak prace przekształcają pętlą wprowadzają złożoność, która może prowadzić do problemów, które w sekwencyjnym kodzie nie są zgodne lub nie są w ogóle obsługiwane. Ten temat zawiera wskazówki, które należy unikać podczas pisania pętli równoległych.  
   
 ## <a name="do-not-assume-that-parallel-is-always-faster"></a>Nie zakładaj, że równoległy jest zawsze szybszy  
  W niektórych przypadkach pętla równoległa może działać wolniej niż jej odpowiednik sekwencyjny. Podstawowa zasada kciuka polega na tym, że pętle równoległe, które mają kilka iteracji i szybki delegatów użytkowników, prawdopodobnie nie przyspieszenie dużo. Jednak ze względu na to, że wiele czynników jest związanych z wydajnością, zaleca się, aby zawsze mierzyć rzeczywiste wyniki.  
   
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Unikaj zapisywania w lokalizacjach pamięci współdzielonej  
- W sekwencyjnym kodzie nie jest mało typowe odczytywanie z lub zapisywanie do zmiennych statycznych lub pól klas. Jeśli jednak wiele wątków uzyskuje dostęp do takich zmiennych jednocześnie, istnieje duże prawdopodobieństwo dla warunków wyścigu. Mimo że można użyć blokad do synchronizowania dostępu do zmiennej, koszt synchronizacji może obniżyć wydajność. W związku z tym zalecamy uniknięcie lub ograniczenie dostępu do udostępnionego stanu w pętli równoległej tak długo, jak to możliwe. Najlepszym sposobem jest użycie przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> , które używają <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> zmiennej do przechowywania stanu wątku — lokalnego podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [jak: Napisz Parallel. for — pętla ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) lokalnymi wątku i [instrukcje: Napisz równoległą pętlę. ForEach ze zmiennymi](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)lokalnymi partycji.  
+ W sekwencyjnym kodzie nie jest mało typowe odczytywanie z lub zapisywanie do zmiennych statycznych lub pól klas. Jeśli jednak wiele wątków uzyskuje dostęp do takich zmiennych jednocześnie, istnieje duże prawdopodobieństwo dla warunków wyścigu. Mimo że można użyć blokad do synchronizowania dostępu do zmiennej, koszt synchronizacji może obniżyć wydajność. W związku z tym zalecamy uniknięcie lub ograniczenie dostępu do udostępnionego stanu w pętli równoległej tak długo, jak to możliwe. Najlepszym sposobem jest użycie przeciążenia <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>, które używają zmiennej <xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> do przechowywania stanu wątku — lokalnie podczas wykonywania pętli. Aby uzyskać więcej informacji, zobacz [How to: Write a Parallel. for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) i [instrukcje: pisanie pętli Parallel. Foreach ze zmiennymi lokalnymi partycji](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="avoid-over-parallelization"></a>Unikaj nadmiernego przetwarzanie równoległe  
  Korzystając z pętli równoległych, naliczane są koszty narzutu partycjonowania źródłowej kolekcji i synchronizowania wątków roboczych. Zalety przetwarzanie równoległe są bardziej ograniczone przez liczbę procesorów na komputerze. Nie ma przyspieszenie do uzyskania, uruchamiając wiele wątków powiązanych z obliczeniami tylko na jednym procesorze. W związku z tym należy zachować ostrożność, aby nie zrównoleglanie pętli.  
@@ -35,12 +33,12 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
   
 - Wykonujesz kosztowne obliczenia dla każdego zamówienia. (Operacja pokazana w przykładzie nie jest kosztowna).  
   
-- System docelowy ma wystarczającą ilość procesorów do obsługi liczby wątków, które zostaną utworzone przez przekształcają zapytania `cust.Orders`.  
+- System docelowy ma wystarczającą ilość procesorów do obsługi liczby wątków, które zostaną utworzone przez przekształcają zapytania na `cust.Orders`.  
   
  We wszystkich przypadkach najlepszym sposobem określenia optymalnego kształtu zapytania jest przetestowanie i pomiar.  
   
 ## <a name="avoid-calls-to-non-thread-safe-methods"></a>Unikaj wywołań metod niebezpiecznych dla wątków  
- Zapisywanie w metodach wystąpienia niebezpiecznego dla wątków z pętli równoległej może prowadzić do uszkodzenia danych, które mogą lub nie zostać wykryte w programie. Może to również prowadzić do wyjątków. W poniższym przykładzie wiele wątków próbuje wywołać <xref:System.IO.FileStream.WriteByte%2A?displayProperty=nameWithType> metodę jednocześnie, co nie jest obsługiwane przez klasę.  
+ Zapisywanie w metodach wystąpienia niebezpiecznego dla wątków z pętli równoległej może prowadzić do uszkodzenia danych, które mogą lub nie zostać wykryte w programie. Może to również prowadzić do wyjątków. W poniższym przykładzie wiele wątków próbuje wywołać metodę <xref:System.IO.FileStream.WriteByte%2A?displayProperty=nameWithType> jednocześnie, która nie jest obsługiwana przez klasę.  
   
  [!code-csharp[TPL_Pitfalls#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#04)]
  [!code-vb[TPL_Pitfalls#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#04)]  
@@ -49,7 +47,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  Większość metod statycznych w .NET Framework są bezpieczne dla wątków i może być wywoływana z wielu wątków jednocześnie. Jednak nawet w takich przypadkach Synchronizacja może prowadzić do znacznego spowolnienia w zapytaniu.  
   
 > [!NOTE]
-> Możesz przetestować ten sposób, wstawiając kilka wywołań do <xref:System.Console.WriteLine%2A> zapytania. Chociaż ta metoda jest używana w przykładach dokumentacji w celach demonstracyjnych, nie należy używać jej w pętlach równoległych, chyba że jest to konieczne.  
+> Można to sprawdzić za pomocą wstawiania niektórych wywołań do <xref:System.Console.WriteLine%2A> w zapytaniach. Chociaż ta metoda jest używana w przykładach dokumentacji w celach demonstracyjnych, nie należy używać jej w pętlach równoległych, chyba że jest to konieczne.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Należy pamiętać o problemach z koligacją wątków  
  Niektóre technologie, na przykład współdziałanie modelu COM dla składników Single-Threading Apartment (STA), Windows Forms i Windows Presentation Foundation (WPF), nakładają ograniczenia koligacji wątku, które wymagają kodu do uruchomienia w określonym wątku. Na przykład zarówno w Windows Forms, jak i WPF, dostęp do formantu można uzyskać tylko w wątku, w którym został utworzony. Oznacza to, na przykład, że nie można zaktualizować formantu listy z pętli równoległej, chyba że zostanie skonfigurowany harmonogram wątków w celu zaplanowania pracy tylko w wątku interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [określanie kontekstu synchronizacji](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  
@@ -58,7 +56,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
  W pewnych okolicznościach Biblioteka zadań równoległych wykona zadanie podrzędne, co oznacza, że jest uruchamiane na zadaniu w aktualnie wykonywanym wątku. (Aby uzyskać więcej informacji, zobacz [Task](xref:System.Threading.Tasks.TaskScheduler)Schedulers). Ta optymalizacja wydajności może prowadzić do zakleszczenia w niektórych przypadkach. Na przykład dwa zadania mogą uruchomić ten sam kod delegata, który sygnalizuje czas wystąpienia zdarzenia, a następnie czeka na inne zadanie. Jeśli drugie zadanie jest umieszczane w tym samym wątku co pierwszy, a pierwszy przechodzi w stan oczekiwania, drugie zadanie nigdy nie będzie mogło sygnalizować zdarzenia. Aby uniknąć takiego wystąpienia, można określić limit czasu dla operacji oczekiwania lub użyć jawnych konstruktorów wątków, aby zapewnić, że jedno zadanie nie może zablokować drugiego.  
   
 ## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Nie zakładaj, że iteracje ForEach, for i ForAll są zawsze wykonywane równolegle  
- Należy pamiętać, że poszczególne iteracje w <xref:System.Threading.Tasks.Parallel.For%2A> <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli lub <xref:System.Linq.ParallelEnumerable.ForAll%2A> mogą nie być wykonywane równolegle. W związku z tym należy unikać pisania kodu, który zależy do poprawnego wykonywania iteracji lub wykonywania iteracji w określonej kolejności. Na przykład ten kod może być zakleszczony:  
+ Należy pamiętać, że poszczególne iteracje w pętli <xref:System.Threading.Tasks.Parallel.For%2A>, <xref:System.Threading.Tasks.Parallel.ForEach%2A> lub <xref:System.Linq.ParallelEnumerable.ForAll%2A> mogą, ale nie muszą być wykonywane równolegle. W związku z tym należy unikać pisania kodu, który zależy do poprawnego wykonywania iteracji lub wykonywania iteracji w określonej kolejności. Na przykład ten kod może być zakleszczony:  
   
  [!code-csharp[TPL_Pitfalls#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#01)]
  [!code-vb[TPL_Pitfalls#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#01)]  
@@ -70,7 +68,7 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
 ## <a name="avoid-executing-parallel-loops-on-the-ui-thread"></a>Unikaj wykonywania pętli równoległych w wątku interfejsu użytkownika  
  Ważne jest, aby zachować odpowiedzi interfejsu użytkownika aplikacji. Jeśli operacja zawiera wystarczającą ilość pracy do uznania przetwarzanie równoległe, prawdopodobnie nie należy uruchamiać tej operacji w wątku interfejsu użytkownika.  Zamiast tego należy odciążyć tę operację do uruchomienia w wątku w tle. Na przykład jeśli chcesz użyć pętli równoległej do obliczenia niektórych danych, które powinny być następnie renderowane do kontrolki interfejsu użytkownika, należy rozważyć wykonanie pętli w ramach wystąpienia zadania, a nie bezpośrednio w programie obsługi zdarzeń interfejsu użytkownika.  Tylko wtedy, gdy podstawowe obliczenie zostało zakończone, należy następnie zorganizować aktualizację interfejsu użytkownika z powrotem do wątku interfejsu użytkownika.  
   
- Jeśli uruchamiasz pętle równoległe w wątku interfejsu użytkownika, należy zachować ostrożność, aby uniknąć aktualizowania formantów interfejsu użytkownika z poziomu pętli. Próba zaktualizowania formantów interfejsu użytkownika z poziomu pętli równoległej wykonywanej w wątku interfejsu użytkownika może prowadzić do uszkodzenia stanu, wyjątków, opóźnionych aktualizacji i nawet zakleszczeń, w zależności od sposobu wywołania aktualizacji interfejsu użytkownika. W poniższym przykładzie pętla równoległa blokuje wątek interfejsu użytkownika, na którym jest wykonywany do momentu ukończenia wszystkich iteracji. Jeśli jednak iteracja pętli jest uruchomiona w wątku w tle (jak to <xref:System.Threading.Tasks.Parallel.For%2A> możliwe), wywołanie metody Invoke powoduje wysłanie komunikatu do wątku interfejsu użytkownika i bloków oczekujących na przetworzenie tego komunikatu. Ponieważ wątek interfejsu użytkownika jest blokowany w <xref:System.Threading.Tasks.Parallel.For%2A>systemie, komunikat nigdy nie może zostać przetworzony, a wątek interfejsu użytkownika jest zakleszczony.  
+ Jeśli uruchamiasz pętle równoległe w wątku interfejsu użytkownika, należy zachować ostrożność, aby uniknąć aktualizowania formantów interfejsu użytkownika z poziomu pętli. Próba zaktualizowania formantów interfejsu użytkownika z poziomu pętli równoległej wykonywanej w wątku interfejsu użytkownika może prowadzić do uszkodzenia stanu, wyjątków, opóźnionych aktualizacji i nawet zakleszczeń, w zależności od sposobu wywołania aktualizacji interfejsu użytkownika. W poniższym przykładzie pętla równoległa blokuje wątek interfejsu użytkownika, na którym jest wykonywany do momentu ukończenia wszystkich iteracji. Jeśli jednak iteracja pętli jest uruchomiona w wątku w tle (jak <xref:System.Threading.Tasks.Parallel.For%2A> może to zrobić), wywołanie metody Invoke powoduje wysłanie komunikatu do wątku interfejsu użytkownika i bloków oczekujących na przetworzenie tego komunikatu. Ponieważ wątek interfejsu użytkownika zablokował uruchamianie <xref:System.Threading.Tasks.Parallel.For%2A>, komunikat nigdy nie może zostać przetworzony, a wątek interfejsu użytkownika jest zakleszczony.  
   
  [!code-csharp[TPL_Pitfalls#02](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_pitfalls/cs/pitfalls.cs#02)]
  [!code-vb[TPL_Pitfalls#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_pitfalls/vb/pitfalls_vb.vb#02)]  
@@ -84,4 +82,4 @@ W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty
 
 - [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)
 - [Potencjalne pułapki związane z PLINQ](../../../docs/standard/parallel-programming/potential-pitfalls-with-plinq.md)
-- [Wzorce programowania równoległego: Zrozumienie i stosowanie równoległych wzorców z .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)
+- [Wzorce programowania równoległego: zrozumienie i stosowanie równoległych wzorców z .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)

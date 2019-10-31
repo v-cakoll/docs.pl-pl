@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7b9b93b0-fe92-42ba-8693-701168a29dde
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 577526536e07172070a1e8a65e73fd15646681fb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6e0c02af93b9df726202f397bbb2afc306f3b3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090881"
 ---
-# <a name="lpthreadstartroutine-function-pointer"></a>LPTHREAD_START_ROUTINE — Wskaźnik funkcji
-Wskazuje funkcję, która powiadamia hosta, który wątek rozpoczęło się wykonanie.  
+# <a name="lpthread_start_routine-function-pointer"></a>LPTHREAD_START_ROUTINE — Wskaźnik funkcji
+Wskazuje funkcję, która powiadamia hosta o rozpoczęciu wykonywania wątku.  
   
- Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.  
+ Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ typedef DWORD (__stdcall *LPTHREAD_START_ROUTINE) (
   
 ## <a name="parameters"></a>Parametry  
  `lpThreadParameter`  
- [in] Wskaźnik do kodu, który rozpoczęła wykonywanie zadania.  
+ podczas Wskaźnik do kodu, który rozpoczął wykonywanie.  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcja, do którego `LPTHREAD_START_ROUTINE` punktów jest funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.  
+ Funkcja, do której punkty `LPTHREAD_START_ROUTINE` są funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji hostingowej.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorWks.dll  
+ **Biblioteka:** MSCorWks. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

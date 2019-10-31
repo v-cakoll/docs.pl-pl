@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 9ea07b57-96e2-44df-8711-8fe6c119087f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 569efa9d14ef10d8c5cf735091778a6c78882815
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e661bd82ecf6d804e852cca4a4478084edf303c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781163"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141497"
 ---
 # <a name="rundll32shimw-function"></a>RunDll32ShimW — Funkcja
 Wykonuje określone polecenie.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT RunDll32ShimW (
   
 ## <a name="parameters"></a>Parametry  
  `hwnd`  
- [in] Dojście do okna, w którym będą wyświetlane dane wyjściowe polecenia.  
+ podczas Dojście do okna, w którym będą wyświetlane dane wyjściowe polecenia.  
   
  `hinst`  
- [in] Dojście do biblioteki, która zawiera polecenia.  
+ podczas Dojście do biblioteki zawierającej polecenie.  
   
  `lpszCmdLine`  
- [in] Ciąg, który określa polecenie do wykonania.  
+ podczas Ciąg określający polecenie, które ma zostać wykonane.  
   
  `nCmdShow`  
- [in] Liczba całkowita, która określa tryb wyświetlania w oknie danych wyjściowych.  
+ podczas Liczba całkowita, która określa tryb wyświetlania okna danych wyjściowych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

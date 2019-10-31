@@ -1,5 +1,5 @@
 ---
-title: Opóźnij podpisanie zestawu
+title: Podpisywanie zestawu z opóźnieniem
 ms.date: 08/19/2019
 helpviewer_keywords:
 - deferring assembly signing
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - strong-named assemblies, delaying assembly signing
 - partial assembly signing
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: e7679520e246ab3eda03e6f0e0d092c7d09f1845
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991319"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084345"
 ---
-# <a name="delay-sign-an-assembly"></a>Opóźnij podpisanie zestawu
+# <a name="delay-sign-an-assembly"></a>Podpisywanie zestawu z opóźnieniem
 
 Organizacja może mieć dokładnie chronioną parę kluczy, której deweloperzy nie mogą uzyskać codziennie. Klucz publiczny jest często dostępny, ale dostęp do klucza prywatnego jest ograniczony tylko do kilku osób. Podczas tworzenia zestawów o silnych nazwach każdy zestaw, który odwołuje się do zestawu o silnej nazwie, zawiera token klucza publicznego, który jest używany do nadawania silnej nazwy zestawu docelowego. Wymaga to, aby klucz publiczny był dostępny podczas procesu tworzenia.
 
@@ -35,9 +33,9 @@ Aby podpisać zestaw z opóźnieniem:
 
    - <xref:System.Reflection.AssemblyKeyFileAttribute>, który przekazuje nazwę pliku zawierającego klucz publiczny jako parametr do jego konstruktora.
 
-   - <xref:System.Reflection.AssemblyDelaySignAttribute>, co oznacza, że jest używane podpisywanie opóźnień, przekazując **wartość true** jako parametr do jego konstruktora.
+   - <xref:System.Reflection.AssemblyDelaySignAttribute>, która wskazuje, że podpisywanie opóźnień jest używane przez przekazanie jako parametru do jego konstruktora **wartości true** .
 
-   Przykład:
+   Na przykład:
 
    ```cpp
    [assembly:AssemblyKeyFileAttribute("myKey.snk")];

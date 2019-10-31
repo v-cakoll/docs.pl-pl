@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29e7a14b-d50e-4852-bfda-011b76c0c9ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50a18f435063b74b837dbfe9e4f1d986bb735039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5d421bf0eb8ec5a34fe21d6efc79bbe56c294c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753338"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137645"
 ---
 # <a name="icordebugevalnewstring-method"></a>ICorDebugEval::NewString — Metoda
-Przydziela nowego wystąpienia ciągu przy użyciu określonej zawartości.  
+Przydziela nowe wystąpienie ciągu z określoną zawartością.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT NewString (
   
 ## <a name="parameters"></a>Parametry  
  `string`  
- [in] Wskaźnik do zawartości dla ciągu.  
+ podczas Wskaźnik do zawartości dla ciągu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ciąg zawsze jest tworzony w domenie aplikacji, w którym wątek jest w trakcie wykonywania.  
+ Ten ciąg jest zawsze tworzony w domenie aplikacji, w której jest aktualnie wykonywany wątek.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

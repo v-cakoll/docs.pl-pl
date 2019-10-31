@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768458"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122015"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC — Funkcja
 Tłumaczy wartość HRESULT na komunikat o błędzie przy użyciu domyślnej kultury bieżącego wątku.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +39,19 @@ HRESULT LoadStringRC (
   
 ## <a name="parameters"></a>Parametry  
  `iResourceID`  
- [in] Wartość HRESULT.  
+ podczas WYNIK HRESULT.  
   
  `szBuffer`  
- [out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
+ określoną Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
   
  `iMax`  
- [in] Rozmiar buforu komunikatu błędu.  
+ podczas Rozmiar buforu komunikatów o błędach.  
   
  `bQuiet`  
- [in] Ignorowane.  
+ podczas Ignoruj.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
@@ -61,16 +59,16 @@ HRESULT LoadStringRC (
 |E_INVALIDARG|`szBuffer` ma wartość null lub `iMax` wynosi zero (0).|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.  
+ Jeśli metoda nie zakończy się pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll i Mscorwks.dll. Użyj MSCorEE.dll zamiast Mscorwks.dll zapewnienie docelowych poprawną wersję programu .NET Framework.  
+ **Biblioteka:** MSCorEE. dll i mscorwks. dll. Użyj biblioteki MSCorEE. dll zamiast Mscorwks. dll, aby upewnić się, że docelowa jest poprawna wersja .NET Framework.  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

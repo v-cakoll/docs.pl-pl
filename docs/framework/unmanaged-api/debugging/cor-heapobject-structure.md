@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a92fdf95-492b-49ae-a741-2186e5c1d7c5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 270360a8950197eca14e02a60554659e5ac7b91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099075"
 ---
 # <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT — Struktura
 Zawiera informacje o obiekcie na zarządzanym stosie.  
@@ -45,24 +43,24 @@ typedef struct _COR_HEAPOBJECT {
 |`type`|Token [COR_TYPEID](cor-typeid-structure.md) , który reprezentuje typ obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_HEAPOBJECT`wystąpienia mogą być pobierane przez Wyliczenie obiektu interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) , który jest wypełniany przez wywołanie metody [ICorDebugProcess5:: EnumerateHeap —](icordebugprocess5-enumerateheap-method.md) .  
+ wystąpienia `COR_HEAPOBJECT` mogą być pobierane przez Wyliczenie obiektu interfejsu [ICorDebugHeapEnum](icordebugheapenum-interface.md) , który jest wypełniany przez wywołanie metody [ICorDebugProcess5:: EnumerateHeap —](icordebugprocess5-enumerateheap-method.md) .  
   
- `COR_HEAPOBJECT` Wystąpienie zawiera informacje dotyczące aktywnego obiektu na zarządzanym stosie lub o obiekcie, który nie jest odblokowany przez żaden obiekt, ale nie został jeszcze zebrany przez moduł wyrzucania elementów bezużytecznych.  
+ Wystąpienie `COR_HEAPOBJECT` zawiera informacje o obiekcie aktywnym na zarządzanym stosie lub o obiekcie, który nie jest odblokowany przez żaden obiekt, ale nie został jeszcze zebrany przez moduł wyrzucania elementów bezużytecznych.  
   
- W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.address` pole `CORDB_ADDRESS` to wartość, a nie wartość interfejsu ICorDebugValue użyta w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugValue dla danego adresu obiektu, można przekazać `CORDB_ADDRESS` wartość do metody [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
+ W celu uzyskania lepszej wydajności pole `COR_HEAPOBJECT.address` jest wartością `CORDB_ADDRESS`, a nie wartością interfejsu ICorDebugValue używaną w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugValue dla danego adresu obiektu, można przekazać wartość `CORDB_ADDRESS` do metody [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) .  
   
- W celu uzyskania lepszej wydajności `COR_HEAPOBJECT.type` pole `COR_TYPEID` to wartość, a nie wartość interfejsu ICorDebugType użyta w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugType dla danego identyfikatora typu, można przekazać `COR_TYPEID` wartość do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) .  
+ W celu uzyskania lepszej wydajności pole `COR_HEAPOBJECT.type` jest wartością `COR_TYPEID`, a nie wartością interfejsu ICorDebugType używaną w większości interfejsu API debugowania. Aby uzyskać obiekt ICorDebugType dla danego identyfikatora typu, można przekazać wartość `COR_TYPEID` do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) .  
   
- `COR_HEAPOBJECT` Struktura zawiera interfejs com liczony z odwołaniami. Jeśli pobrano `COR_HEAPOBJECT` wystąpienie z modułu wyliczającego, wywołując metodę [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , należy następnie zwolnić odwołanie.  
+ Struktura `COR_HEAPOBJECT` obejmuje interfejs COM liczony z odwołaniami. Jeśli pobierzesz wystąpienie `COR_HEAPOBJECT` z modułu wyliczającego, wywołując metodę [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) , należy następnie zwolnić odwołanie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

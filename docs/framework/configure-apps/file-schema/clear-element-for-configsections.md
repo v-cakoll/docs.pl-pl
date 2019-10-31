@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c06fca8b83638fb47bedb21863cb9b200cd211f3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927729"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119085"
 ---
-# <a name="clear-element-for-configsections"></a>\<Wyczyść element > dla \<configSections >
+# <a name="clear-element-for-configsections"></a>\<Wyczyść > elementu \<configSections >
 
 Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 [ **\<> konfiguracji**](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,13 +34,13 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 |           | Opis |
 | --------- | ----------- |
-| **name**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
+| **Nazwij**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [configSections, element >  **\<** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
+| [ **\<configSections >** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,13 +48,13 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Element **Clear > usuwa wszystkie sekcje i grupy sekcji z aplikacji, które zostały zdefiniowane wcześniej w bieżącym pliku konfiguracyjnym lub na wyższym poziomie w hierarchii plików konfiguracji. \<**
+**\<clear >** usuwa wszystkie sekcje i grupy sekcji z aplikacji, które zostały zdefiniowane wcześniej w bieżącym pliku konfiguracyjnym lub na wyższym poziomie w hierarchii plików konfiguracji.
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie zdefiniowano plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazano,  **\<** jak używać elementu Clear > w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w konfiguracji maszyny rozszerzeniem.
+Ten przykład definiuje plik konfiguracji komputera i plik konfiguracji aplikacji oraz pokazuje, jak używać **\<wyczyść >** elementu w pliku konfiguracyjnym aplikacji, aby wyczyścić sekcje wcześniej zdefiniowane w pliku konfiguracyjnym komputera.
 
-Następujący kod pliku konfiguracji komputera deklaruje dwie sekcje,  **\<sampleSection >** i  **\<anotherSampleSection >** , które są odczytywane przed plikiem konfiguracji aplikacji:
+Następujący kod pliku konfiguracji komputera deklaruje dwie sekcje, **\<sampleSection >** i **\<anotherSampleSection >** , które są odczytywane przed plikiem konfiguracyjnym aplikacji:
 
 ```xml
 <!-- Machine.config file -->
@@ -71,7 +71,7 @@ Następujący kod pliku konfiguracji komputera deklaruje dwie sekcje,  **\<sampl
 </configuration>
 ```
 
-Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklarowane sekcje. Aplikacja nie może używać lub pobrać ustawień w żadnej z sekcji zadeklarowanych w pliku konfiguracji maszyny. Może jednak używać ustawień z  **\<anotherSection >**  **\<** , ponieważ znajduje się po elemencie Clear >.
+Poniższy kod pliku konfiguracji aplikacji czyści wszystkie wcześniej zadeklarowane sekcje. Aplikacja nie może używać lub pobrać ustawień w żadnej z sekcji zadeklarowanych w pliku konfiguracji maszyny. Może jednak używać ustawień z **\<anotherSection >** , ponieważ jest on dostępny po **\<Wyczyść >** elementu.
 
 ```xml
 <!-- Application configuration file -->

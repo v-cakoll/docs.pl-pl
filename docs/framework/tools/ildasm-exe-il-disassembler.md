@@ -9,14 +9,12 @@ helpviewer_keywords:
 - text files produced by MSIL Disassembler
 - disassembling file for MSIL Assembler input
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d08d6164c00d2b5b750c9edda46a7be18153152
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f23f8c48a31dffa7d350c872aed7505da7a36861
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044659"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105057"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Dezasembler IL)
 
@@ -38,7 +36,7 @@ Dostępne są następujące opcje dla plików *exe*, *dll*, *obj*, *lib*i *winmd
 
 | Opcja | Opis |
 | ------ | ----------- |
-|**/out =** `filename`|Tworzy plik wyjściowy z określonym `filename`, zamiast wyświetlać wyniki w graficznym interfejsie użytkownika.|
+|**/out =** `filename`|Tworzy plik wyjściowy o określonym `filename`, zamiast wyświetlać wyniki w graficznym interfejsie użytkownika.|
 |**/rtf**|Generuje wyjście w formacie RTF. Nieprawidłowa z opcją **/Text** .|
 |**/Text**|Wyświetla wyniki w oknie konsoli, a nie w graficznym interfejsie użytkownika czy plik wyjściowy.|
 |**/html**|Generuje wyjście w formacie HTML. Prawidłowy tylko z opcją **/Output** .|
@@ -59,7 +57,7 @@ Następujące dodatkowe opcje są dostępne dla plików *exe*, *dll*i *winmd* .
 |**/raweh**|Wyświetla klauzule obsługi błędów w pierwotnej formie.|
 |**/source**|Wyświetla wiersze z oryginalnego źródła jako komentarze.|
 |**/tokens**|Wyświetla tokeny metadanych klas i składowych.|
-|**/Visibility:** `vis`[+`vis`...]|Dezasembluje tylko typy lub elementy członkowskie o określonej widoczności. Poniżej przedstawiono prawidłowe wartości dla `vis`:<br /><br /> **Pub** — publiczny<br /><br /> **Pri** — prywatny<br /><br /> **Farma** — rodzina<br /><br /> **ASM** — zestaw<br /><br /> **FAA** — rodzina i zestaw<br /><br /> **FOA** — rodzina lub zestaw<br /><br /> **PSC** — zakres prywatny<br /><br /> Definicje tych modyfikatorów widoczności można znaleźć w <xref:System.Reflection.MethodAttributes> tematach <xref:System.Reflection.TypeAttributes>i.|
+|**/Visibility:** `vis`[+`vis`...]|Dezasembluje tylko typy lub elementy członkowskie o określonej widoczności. Następujące wartości są prawidłowe dla `vis`:<br /><br /> **Pub** — publiczny<br /><br /> **Pri** — prywatny<br /><br /> **Farma** — rodzina<br /><br /> **ASM** — zestaw<br /><br /> **FAA** — rodzina i zestaw<br /><br /> **FOA** — rodzina lub zestaw<br /><br /> **PSC** — zakres prywatny<br /><br /> Aby zapoznać się z definicjami tych modyfikatorów widoczności, zobacz <xref:System.Reflection.MethodAttributes> i <xref:System.Reflection.TypeAttributes>.|
 
 Następujące opcje są prawidłowe dla plików *exe*, *dll*i *winmd* tylko dla plików wyjściowych w pliku lub konsoli.
 
@@ -69,7 +67,7 @@ Następujące opcje są prawidłowe dla plików *exe*, *dll*i *winmd* tylko dla 
 |**/classlist**|Dołącza listę klas zdefiniowanych w module.|
 |**/forward**|Używa deklaracji przekazującej klasy.|
 |**/Headers**|Dołącza informacje nagłówka pliku do wyjścia.|
-|**/Item:** `class`[ **::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> — Rozkłada określony `class`.<br />— Rozkłada określony `member` `class`z.<br />— Rozkłada `member` `class` z z określoną sygnaturą `sig`. Format `sig` jest:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Uwaga** W .NET Framework wersje 1,0 i 1,1 `sig` muszą następować nawiasy zamykające:. `(sig)` Począwszy od platformy NET Framework 2,0 nawias zamykający musi zostać pominięty: `(sig`.|
+|**/Item:** `class`[ **::** `member`[`(sig`]]|W zależności od określonego argumentu dezasembluje następujące obiekty:<br /><br /> — Rozkłada określony `class`.<br />— Rozkłada określony `member` `class`.<br />-Łączy `member` `class` z określoną sygnaturą `sig`. Format `sig` to:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`,..., `parameterTypeN`)<br />     **Uwaga** W .NET Framework wersje 1,0 i 1,1 `sig` musi następować nawias zamykający: `(sig)`. Począwszy od platformy NET Framework 2,0 nawias zamykający musi zostać pominięty: `(sig`.|
 |**/noil**|Wyłącza wyjście kodu zestawu IL.|
 |**/stats**|Zawiera dane statystyczne dotyczące obrazu.|
 |**/typelist**|Generuje pełną listę typów, aby zachować kolejność typów w rundzie.|
@@ -80,7 +78,7 @@ Następujące opcje są prawidłowe dla plików *exe*, *dll*, *obj*, *lib*i *win
 
 | Opcja | Opis |
 | ------ | ----------- |
-|**/Metadata** [=`specifier`]|Pokazuje metadane, gdzie `specifier` :<br /><br /> **MDHEADER** — wyświetla informacje i rozmiary nagłówka metadanych.<br /><br /> **HEX** — Pokaż informacje w postaci szesnastkowej, a także słowa.<br /><br /> **CSV** — pokazuje liczbę rekordów i rozmiary sterty.<br /><br /> **UNREX** — Pokaż nierozpoznane zewnętrzne.<br /><br /> **Schemat** — pokazuje nagłówek metadanych i informacje o schemacie.<br /><br /> **RAW** — wyświetlanie nieprzetworzonych tabel metadanych.<br /><br /> **Sterty** — Pokaż nieprzetworzone sterty.<br /><br /> **Sprawdź** poprawność — Sprawdź spójność metadanych.<br /><br /> Można określić **/Metadata** wiele razy, z różnymi wartościami dla `specifier`.|
+|**/Metadata**[=`specifier`]|Pokazuje metadane, gdzie `specifier`:<br /><br /> **MDHEADER** — wyświetla informacje i rozmiary nagłówka metadanych.<br /><br /> **HEX** — Pokaż informacje w postaci szesnastkowej, a także słowa.<br /><br /> **CSV** — pokazuje liczbę rekordów i rozmiary sterty.<br /><br /> **UNREX** — Pokaż nierozpoznane zewnętrzne.<br /><br /> **Schemat** — pokazuje nagłówek metadanych i informacje o schemacie.<br /><br /> **RAW** — wyświetlanie nieprzetworzonych tabel metadanych.<br /><br /> **Sterty** — Pokaż nieprzetworzone sterty.<br /><br /> **Sprawdź** poprawność — Sprawdź spójność metadanych.<br /><br /> Można określić **/Metadata** wiele razy, z różnymi wartościami dla `specifier`.|
 
 Poniższe opcje są prawidłowe dla plików *lib* tylko dla plików wyjściowych w pliku lub konsoli.
 
@@ -137,37 +135,37 @@ Począwszy od .NET Framework 4,5, *Ildasm. exe* Wyświetla atrybuty, które są 
 
 ## <a name="examples"></a>Przykłady
 
-Poniższe polecenie powoduje, że metadane i kod rozbudowy pliku `MyHello.exe` PE są wyświetlane w domyślnym interfejsie GUI *Ildasm. exe* .
+Poniższe polecenie powoduje, że metadane i rozłożony kod dla pliku PE `MyHello.exe` być wyświetlana w domyślnym interfejsie GUI *Ildasm. exe* .
 
 ```console
 ildasm myHello.exe
 ```
 
-Następujące polecenie odłączy plik `MyFile.exe` i zapisuje otrzymany tekst asemblera Il w pliku *myfile.Il*.
+Następujące polecenie odłączy plik `MyFile.exe` i zapisuje otrzymany tekst asemblera IL w pliku *myfile.Il*.
 
 ```console
 ildasm MyFile.exe /output:MyFile.il
 ```
 
-Następujące polecenie odłączy plik `MyFile.exe` i wyświetla otrzymany tekst asemblera Il do okna konsoli.
+Następujące polecenie odłączy plik `MyFile.exe` i wyświetla otrzymany tekst asemblera IL do okna konsoli.
 
 ```console
 ildasm MyFile.exe /text
 ```
 
-Jeśli plik `MyApp.exe` zawiera osadzone zasoby zarządzane i niezarządzane, następujące polecenie tworzy cztery pliki: *MyApp.Il*, *MojaApl. res*, *ikon. resources*i *Message. resources*:
+Jeśli plik `MyApp.exe` zawiera osadzone zarządzane i niezarządzane zasoby, następujące polecenie generuje cztery pliki: *MyApp.Il*, *MojaApl. res*, *ikon. resources*i *Message. resources*:
 
 ```console
 ildasm MyApp.exe /output:MyApp.il
 ```
 
-Następujące polecenie odłączy metodę `MyMethod` w klasie `MyClass` w `MyFile.exe` i wyświetla dane wyjściowe do okna konsoli.
+Następujące polecenie odłączy metodę `MyMethod` w klasie `MyClass` w `MyFile.exe` i wyświetla dane wyjściowe w oknie konsoli.
 
 ```console
 ildasm /item:MyClass::MyMethod MyFile.exe /text
 ```
 
-W poprzednim przykładzie może istnieć kilka metod o nazwie `MyMethod` z różnymi podpisami. Następujące polecenie deasembleruje `MyMethod` metodę wystąpienia z typem zwracanym **void** i typami parametrów **Int32** i **String**.
+W poprzednim przykładzie może istnieć kilka metod o nazwie `MyMethod` z różnymi podpisami. Następujące polecenie deasembleruje metodę wystąpienia `MyMethod` z typem zwracanym **void** i typami parametrów **Int32** i **String**.
 
 ```console
 ildasm /item:"MyClass::MyMethod(instance void(int32,string)" MyFile.exe /text
@@ -176,13 +174,13 @@ ildasm /item:"MyClass::MyMethod(instance void(int32,string)" MyFile.exe /text
 > [!NOTE]
 > W .NET Framework wersje 1,0 i 1,1, po lewej stronie nazwy metody muszą być zrównoważone po prawej stronie po podpisie: `MyMethod(instance void(int32))`. Począwszy od .NET Framework 2,0 nawias zamykający musi zostać pominięty: `MyMethod(instance void(int32)`.
 
-Aby pobrać `static` metodę (`Shared` metodę w Visual Basic), Pomiń słowo kluczowe `instance`. Typy klas, które nie są typami pierwotnymi `string` , takich jak `int32` i muszą zawierać przestrzeń nazw i muszą być poprzedzone słowem kluczowym `class`. Typy zewnętrzne muszą być poprzedzone nazwą biblioteki umieszczoną w nawiasach kwadratowych. Następujące polecenie deasembleruje statyczną metodę o nazwie `MyMethod` , która ma jeden parametr typu <xref:System.AppDomain> i <xref:System.AppDomain>ma zwracany typ.
+Aby pobrać metodę `static` (`Shared` Metoda w Visual Basic), Pomiń `instance`słowa kluczowego. Typy klas, które nie są typami pierwotnymi, takimi jak `int32` i `string`, muszą zawierać przestrzeń nazw i muszą być poprzedzone `class`em słowa kluczowego. Typy zewnętrzne muszą być poprzedzone nazwą biblioteki umieszczoną w nawiasach kwadratowych. Następujące polecenie deasembleruje metodę statyczną o nazwie `MyMethod`, która ma jeden parametr typu <xref:System.AppDomain> i ma zwracany typ <xref:System.AppDomain>.
 
 ```console
 ildasm /item:"MyClass::MyMethod(class [mscorlib]System.AppDomain(class [mscorlib]System.AppDomain)" MyFile.exe /text
 ```
 
-Typ zagnieżdżony musi być poprzedzony klasą zawierającą i oddzielony od niej ukośnikiem. Na przykład, jeśli `MyNamespace.MyClass` Klasa zawiera zagnieżdżoną klasę o nazwie `NestedClass`, Klasa zagnieżdżona jest identyfikowana w następujący sposób:. `class MyNamespace.MyClass/NestedClass`
+Typ zagnieżdżony musi być poprzedzony klasą zawierającą i oddzielony od niej ukośnikiem. Na przykład, jeśli Klasa `MyNamespace.MyClass` zawiera zagnieżdżoną klasę o nazwie `NestedClass`, Klasa zagnieżdżona jest identyfikowana w następujący sposób: `class MyNamespace.MyClass/NestedClass`.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Implementowanie funkcji wywołania zwrotnego'
+title: 'Porady: implementowanie funkcji wywołania zwrotnego'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6eba8202f0284b7b1054585039f12da9364ca1e9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 23355e16127b45c26a1d950c6a8b3cc27e265781
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051764"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123885"
 ---
-# <a name="how-to-implement-callback-functions"></a>Instrukcje: Implementowanie funkcji wywołania zwrotnego
+# <a name="how-to-implement-callback-functions"></a>Porady: implementowanie funkcji wywołania zwrotnego
 Poniższa procedura i przykład przedstawiają sposób, w jaki aplikacja zarządzana używająca funkcji wywołania platformy może drukować wartość dojścia dla każdego okna na komputerze lokalnym. W ramach procedury i przykładu Użyj funkcji **EnumWindows** , aby przejść przez listę systemu Windows i zarządzaną funkcję wywołania zwrotnego (nazwanego wywołania zwrotnego) w celu wydrukowania wartości uchwytu okna.  
   
 ### <a name="to-implement-a-callback-function"></a>Aby zaimplementować funkcję wywołania zwrotnego  

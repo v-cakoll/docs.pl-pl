@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: c627fcdd-fc4f-4b1c-8e91-df8536f627d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb760f4923cc3530a28bc68180db743ee468b51d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140914"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost — Interfejs
-Udostępnia metody, które zwracają określonej wersji środowiska uruchomieniowego języka wspólnego (CLR) na podstawie jego numeru wersji, listę wszystkich zainstalowanych CLRs, listy wszystkie środowiska uruchomieniowe, które są ładowane w określonym procesie, odnajdź wersję środowiska CLR używane do kompilowania zestawu, Zakończ proces Zamknięcie czyste środowisko uruchomieniowe i powiązań dla zapytań dotyczących starszej wersji interfejsu API.  
+Dostarcza metody, które zwracają określoną wersję środowiska uruchomieniowego języka wspólnego (CLR) na podstawie jego numeru wersji, wyświetla listę wszystkich zainstalowanych CLRs, wyświetla listę wszystkich środowisk uruchomieniowych ładowanych w określonym procesie, Odnajdywanie wersji środowiska CLR użytej do skompilowania zestawu, wyjście z procesu przy zamykaniu czystego środowiska uruchomieniowego i przeszukiwaniu starszych powiązań interfejsu API.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateInstalledRuntimes, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateinstalledruntimes-method.md)|Zwraca wyliczenie, które zawiera prawidłową [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) wskaźnika interfejsu dla każdej wersji środowiska CLR, który jest zainstalowany na komputerze.|  
-|[EnumerateLoadedRuntimes, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateloadedruntimes-method.md)|Zwraca wyliczenie, które zawiera prawidłową [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) wskaźnika interfejsu dla każdego środowiska CLR, który jest ładowany w danym procesie. Ta metoda zastępuje [getversionfromprocess —](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md).|  
-|[ExitProcess, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)|Próbuje zamknięcie wszystkie załadowane środowisk wykonawczych, a następnie kończy proces. Zastępuje [corexitprocess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) funkcji.|  
-|[GetRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)|Pobiera [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejs, który odnosi się do określonej wersji środowiska CLR. Ta metoda zastępuje [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funkcja używana z [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) flagi.|  
-|[GetVersionFromFile, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getversionfromfile-method.md)|Pobiera zestaw oryginalna wersja programu .NET Framework kompilacji (przechowywany w metadanych) podanej ścieżki pliku. Ta metoda zastępuje [getfileversion —](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md).|  
-|[QueryLegacyV2RuntimeBinding, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-querylegacyv2runtimebinding-method.md)|Zwraca interfejs, który reprezentuje środowiska uruchomieniowego, do którego zasady starszych aktywacji została powiązana, na przykład za pomocą `useLegacyV2RuntimeActivationPolicy` atrybutu na [ \<uruchamiania > Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) wpis w pliku konfiguracji, przy użyciu bezpośredniego Aktywacja starszych interfejsów API lub przez wywołanie metody [iclrruntimeinfo::bindaslegacyv2runtime —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) metody.|  
-|[RequestRuntimeLoadedNotification, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-requestruntimeloadednotification-method.md)|Gwarantuje wywołanie zwrotne do wskaźnika określonej funkcji, gdy jest ładowana jako pierwsza wersja środowiska CLR, ale jeszcze nie rozpoczęty. Ta metoda zastępuje [lockclrversion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)|  
+|[EnumerateInstalledRuntimes, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateinstalledruntimes-method.md)|Zwraca Wyliczenie, które zawiera prawidłowy wskaźnik interfejsu [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) dla każdej wersji środowiska CLR zainstalowanej na komputerze.|  
+|[EnumerateLoadedRuntimes, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateloadedruntimes-method.md)|Zwraca Wyliczenie, które zawiera prawidłowy wskaźnik interfejsu [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) dla każdego środowiska CLR, które jest załadowane w danym procesie. Ta metoda zastępuje [GetVersionFromProcess —](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md).|  
+|[ExitProcess, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)|Próbuje bezpiecznie zamknąć wszystkie ładowane środowiska uruchomieniowe, a następnie kończy proces. Zastępuje funkcję [CorExitProcess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) .|  
+|[GetRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)|Pobiera Interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) , który odpowiada określonej wersji środowiska CLR. Ta metoda zastępuje funkcję [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) używaną z flagą [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) .|  
+|[GetVersionFromFile, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getversionfromfile-method.md)|Pobiera oryginalną wersję kompilacji .NET Framework zestawu (przechowywaną w metadanych), uwzględniając ścieżkę pliku. Ta metoda zastępuje [GetFileVersion —](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md).|  
+|[QueryLegacyV2RuntimeBinding, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-querylegacyv2runtimebinding-method.md)|Zwraca interfejs reprezentujący środowisko uruchomieniowe, do którego powiązano starsze zasady aktywacji, na przykład przy użyciu atrybutu `useLegacyV2RuntimeActivationPolicy` w wpisie pliku konfiguracji [elementu > start\<](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) , przez bezpośrednie użycie starszych interfejsów API aktywacji lub przez Wywoływanie metody [ICLRRuntimeInfo:: BindAsLegacyV2Runtime —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md) .|  
+|[RequestRuntimeLoadedNotification, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-requestruntimeloadednotification-method.md)|Gwarantuje wywołanie zwrotne do określonego wskaźnika funkcji podczas pierwszego ładowania wersji środowiska CLR, ale nie zostało jeszcze uruchomione. Ta metoda zastępuje [LockClrVersion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)|  
   
 ## <a name="remarks"></a>Uwagi  
- Jedynym sposobem, aby pobrać wystąpienie ten interfejs jest wywołanie [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funkcji w następujący sposób:  
+ Jedynym sposobem, aby uzyskać wystąpienie tego interfejsu, jest wywołanie funkcji [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) w następujący sposób:  
   
 ```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
@@ -50,11 +48,11 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

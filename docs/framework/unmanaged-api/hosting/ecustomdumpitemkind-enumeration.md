@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7105a6c8-6e4e-48de-ac3d-74ac75e5de2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95b4e1762e5f7701bfce2edc4f7bd4f8cecb28b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ebbbdf02837cb1257ec4756c9d67f5a1ac0136fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747398"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131189"
 ---
 # <a name="ecustomdumpitemkind-enumeration"></a>ECustomDumpItemKind — Wyliczenie
-Zarezerwowane dla przyszłego rozszerzenia [customdumpitem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) struktury.  
+Zarezerwowane dla przyszłego rozszerzenia struktury [CustomDumpItem —](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,11 +41,11 @@ typedef enum {
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

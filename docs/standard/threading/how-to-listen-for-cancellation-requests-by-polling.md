@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Nasłuchiwanie żądań anulowania za pomocą sondowania'
+title: 'Porady: nasłuchiwanie żądań anulowania za pomocą sondowania'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,27 +8,25 @@ dev_langs:
 helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138024"
 ---
-# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Instrukcje: Nasłuchiwanie żądań anulowania za pomocą sondowania
-Poniższy przykład pokazuje jeden ze sposobów, kod użytkownika można sondować token anulowania w regularnych odstępach czasu, aby zobaczyć, czy zażądano anulowania z wątku wywoływania. W tym przykładzie użyto <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu, ale w tym samym wzorcem dotyczy operacji asynchronicznych utworzone bezpośrednio przez <xref:System.Threading.ThreadPool?displayProperty=nameWithType> typu lub <xref:System.Threading.Thread?displayProperty=nameWithType> typu.  
+# <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Porady: nasłuchiwanie żądań anulowania za pomocą sondowania
+W poniższym przykładzie pokazano jeden ze sposobów, w jaki kod użytkownika może sondować token anulowania w regularnych odstępach czasu, aby sprawdzić, czy żądanie anulowania zostało zażądane z wątku wywołującego. Ten przykład używa typu <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, ale ten sam wzorzec dotyczy operacji asynchronicznych utworzonych bezpośrednio przez typ <xref:System.Threading.ThreadPool?displayProperty=nameWithType> lub typ <xref:System.Threading.Thread?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Przykład  
- Sondowanie wymaga pewnego rodzaju pętli lub cykliczne kod, który okresowo może odczytać wartość typu Boolean <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwości. Jeśli używasz <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> typu i oczekuje na zakończenie wątku wywołującego zadania, możesz użyć <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> metodę, aby sprawdzić właściwości i zgłosić wyjątek. Za pomocą tej metody, należy upewnić się, czy poprawny wyjątek jest zgłaszany w odpowiedzi na żądanie. Jeśli używasz <xref:System.Threading.Tasks.Task>, wywołanie tej metody jest lepsze niż ręcznie zgłaszanie <xref:System.OperationCanceledException>. Jeśli nie masz zgłosić wyjątek, a następnie można po prostu Sprawdź właściwość i zwraca z metody, jeśli właściwość jest `true`.  
+ Sondowanie wymaga pewnego rodzaju pętli lub cyklicznego kodu, który może okresowo odczytać wartość właściwości <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> logicznej. Jeśli używasz typu <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i oczekujesz na ukończenie zadania w wątku wywołującym, możesz użyć metody <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, aby sprawdzić Właściwość i zgłosić wyjątek. Korzystając z tej metody, należy się upewnić, że w odpowiedzi na żądanie zostanie zgłoszony poprawny wyjątek. Jeśli używasz <xref:System.Threading.Tasks.Task>, wywołanie tej metody jest lepsze niż ręczne wyrzucanie <xref:System.OperationCanceledException>. Jeśli nie trzeba zgłosić wyjątku, można po prostu sprawdzić Właściwość i zwrócić z metody, jeśli właściwość jest `true`.  
   
  [!code-csharp[Cancellation#11](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex11.cs#11)]
  [!code-vb[Cancellation#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex11.vb#11)]  
   
- Wywoływanie <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> jest bardzo szybkie i nie powoduje znaczne obciążenie w pętli.  
+ Wywoływanie <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> jest niezwykle szybkie i nie wprowadza znaczących obciążeń w pętlach.  
   
- W przypadku wywołania <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, trzeba jawnie sprawdziła <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość, jeśli masz inne zadania do wykonania w odpowiedzi na anulowanie oprócz zostanie zgłoszony wyjątek. W tym przykładzie widać, że kod faktycznie uzyskuje dostęp do właściwości dwa razy: jeden raz w jawny dostęp i ponownie w <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> metody. Ale ponieważ act odczytu <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> właściwość obejmuje tylko jeden lotnych instrukcji na dostęp do odczytu, double dostęp nie jest istotne z punktu widzenia wydajności. Nadal lepiej jest wywołać metodę, a nie ręcznie throw <xref:System.OperationCanceledException>.  
+ Jeśli wywołujesz <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>, musisz tylko jawnie sprawdzić Właściwość <xref:System.Threading.CancellationToken.IsCancellationRequested%2A>, jeśli masz inne czynności, które należy wykonać w odpowiedzi na anulowanie przed wygenerowaniem wyjątku. W tym przykładzie można zobaczyć, że kod faktycznie uzyskuje dostęp do właściwości dwukrotnie: raz w jawnym dostępie i ponownie w metodzie <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>. Jednak ze względu na to, że czynność odczytywania właściwości <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> obejmuje tylko jedną nietrwałą instrukcję Read dla dostępu, podwójny dostęp nie jest istotny od perspektywy wydajności. Nadal zaleca się wywołanie metody zamiast ręcznie zgłosić <xref:System.OperationCanceledException>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753590"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084841"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject — Metoda
-Tworzy nowy obiekt typ sparametryzowany i wywołuje metodę do konstruktora obiektu.  
+Tworzy wystąpienie nowego obiektu typu sparametryzowanego i wywołuje metodę konstruktora obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT NewParameterizedObject (
   
 ## <a name="parameters"></a>Parametry  
  `pConstructor`  
- [in] Wskaźnik do obiektu ICorDebugFunction, który reprezentuje konstruktora obiektu, który ma zostać utworzona.  
+ podczas Wskaźnik do obiektu ICorDebugFunction, który reprezentuje konstruktora obiektu do wystąpienia.  
   
  `nTypeArgs`  
- [in] Przekazany liczby argumentów typu.  
+ podczas Liczba przezakończonych argumentów typu.  
   
  `ppTypeArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugType, który reprezentuje argument typu obiektu, który zostanie on uruchomiony.  
+ podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugType, który reprezentuje argument typu dla obiektu, który jest tworzony.  
   
  `nArgs`  
- [in] Liczba argumentów przekazana do konstruktora.  
+ podczas Liczba argumentów przeniesiona do konstruktora.  
   
  `ppArgs`  
- [in] Tablica wskaźników, z których każdy wskazuje na obiekt ICorDebugValue, który reprezentuje wartość argumentu, który jest przekazywany do konstruktora.  
+ podczas Tablica wskaźników, z których każdy wskazuje obiekt ICorDebugValue, który reprezentuje wartość argumentu, który jest przesyłany do konstruktora.  
   
 ## <a name="remarks"></a>Uwagi  
- Konstruktor obiektu może potrwać <xref:System.Type> parametrów.  
+ Konstruktor obiektu może przyjmować <xref:System.Type> parametry.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

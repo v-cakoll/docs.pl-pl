@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1588fe7b-c378-4f4b-9c4b-48647f1119cc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8597b68b75d2b5f77f68fc13c3fb78bfdae46178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 661eb758e1651901bb56810640a68f0de0b4e851
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736292"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136475"
 ---
 # <a name="getcorrequiredversion-function"></a>GetCORRequiredVersion — Funkcja
-Pobiera wymagane wspólnego języka wspólnego (CLR) numer wersji.  
+Pobiera wymagany numer wersji środowiska uruchomieniowego języka wspólnego (CLR).  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT GetCORRequiredVersion (
   
 ## <a name="parameters"></a>Parametry  
  `pbuffer`  
- [out] Bufor, zawierających ciąg, który określa numer wersji.  
+ określoną Bufor zawierający ciąg, który określa numer wersji.  
   
  `cchBuffer`  
- [in] Rozmiar w bajtach rozmiar buforu.  
+ podczas Rozmiar bufora (w bajtach).  
   
  `dwLength`  
- [out] Liczba bajtów zwróconych w buforze.  
+ określoną Liczba bajtów zwróconych w buforze.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

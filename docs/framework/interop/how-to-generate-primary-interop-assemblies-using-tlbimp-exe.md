@@ -1,21 +1,19 @@
 ---
-title: 'Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
+title: 'Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - primary interop assemblies, generating
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac60fa96b7c9ce6991f89e8c6a37ff5da4a34a50
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e46295b89b042452cb6e303302a8b88d68d58426
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123909"
 ---
-# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Instrukcje: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
+# <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 
 Istnieją dwa sposoby generowania podstawowego zestawu międzyoperacyjnego:
 
@@ -39,7 +37,7 @@ Aby podpisać zestaw za pomocą silnej nazwy, musisz mieć parę kluczy kryptogr
 
 1. W wierszu polecenia wpisz polecenie:
 
-    **Tlbimp** *tlbfile* **/Primary/keyfile:** *Nazwa pliku* **/out:** *AssemblyName*
+    **Tlbimp** *tlbfile*  **/Primary/keyfile:** *filename* **/out:** *AssemblyName*
 
     W tym poleceniu *tlbfile* jest plikiem zawierającym bibliotekę typów com, *filename* jest nazwą kontenera lub pliku, który zawiera parę kluczy, a *AssemblyName* jest nazwą zestawu do podpisania silną nazwą.
 
@@ -47,11 +45,11 @@ Podstawowe zestawy międzyoperacyjności mogą odwoływać się tylko do innych 
 
 Zależny podstawowy zestaw międzyoperacyjny z numerem wersji, który różni się od oryginalnej biblioteki typów, nie jest wykrywalny w przypadku instalacji w bieżącym katalogu. Należy zarejestrować zależny podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyć opcji **/Reference** , aby upewnić się, że Tlbimp. exe odnajdzie ZALEŻNĄ bibliotekę DLL.
 
-Możesz również otoczyć wiele wersji biblioteki typów. Aby uzyskać instrukcje, [zobacz How to: Zawiń wiele wersji bibliotek](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100))typów.
+Możesz również otoczyć wiele wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [How to: Otocz wiele wersji bibliotek typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/1565h6hc(v=vs.100)).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład importuje bibliotekę `LibUtil.tlb` typów com i podpisuje zestaw `LibUtil.dll` za pomocą silnej nazwy przy użyciu pliku `CompanyA.snk`klucza. Pomijając konkretną nazwę przestrzeni nazw, ten przykład tworzy domyślną przestrzeń nazw, `LibUtil`.
+Poniższy przykład importuje bibliotekę typów COM `LibUtil.tlb` i podpisuje `LibUtil.dll` zestawu silną nazwą przy użyciu pliku klucza `CompanyA.snk`. Pomijając konkretną nazwę przestrzeni nazw, ten przykład generuje domyślną przestrzeń nazw, `LibUtil`.
 
 ```console
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /out:LibUtil.dll
@@ -63,7 +61,7 @@ Aby uzyskać bardziej opisową nazwę (przy użyciu *NazwaDostawcy*. *LibraryNam
 tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /out:CompanyA.LibUtil.dll
 ```
 
-Poniższy przykład importuje `MyLib.tlb`, który odwołuje `CompanyA.LibUtil.dll`się i podpisuje `CompanyB.MyLib.dll` zestaw silną nazwą przy użyciu pliku `CompanyB.snk`klucza. Przestrzeń nazw, `CompanyB.MyLib`zastępuje domyślną nazwę przestrzeni nazw.
+Poniższy przykład importuje `MyLib.tlb`, który odwołuje się do `CompanyA.LibUtil.dll`i podpisuje zestaw `CompanyB.MyLib.dll` o silnej nazwie przy użyciu `CompanyB.snk`pliku klucza. Przestrzeń nazw `CompanyB.MyLib`, zastępuje domyślną nazwę przestrzeni nazw.
 
 ```console
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll

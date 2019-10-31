@@ -13,19 +13,17 @@ api_type:
 ms.assetid: 8b391afb-d79f-41bd-94ce-43ce62c6b5fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c5296fbab71c67572718a58fedb9f89b064f816
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d15f1b568c50cf4fca28966f94a6a4becf59e734
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141624"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>Metoda ICorProfilerCallback6::GetAssemblyReferences
-[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
+[Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Powiadamia program profilujący, że zestaw w bardzo wczesnym ładowania etapie, gdy środowisko uruchomieniowe języka wspólnego wykonuje przeszukiwania zamknięcia odwołanie do zestawu.  
+ Powiadamia program profilujący, że zestaw jest w bardzo wczesnym etapie ładowania, gdy środowisko uruchomieniowe języka wspólnego wykonuje przegląd zamknięcia odwołania do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,31 +35,31 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
   
 ## <a name="parameters"></a>Parametry  
  `wszAssemblyPath`  
- [in] Ścieżka i nazwa zestawu, w których metadane zostaną zmodyfikowane.  
+ podczas Ścieżka i nazwa zestawu, którego metadane zostaną zmodyfikowane.  
   
  `pAsmRefProvider`  
- [in] Wskaźnik na adres [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) interfejs, który określa zestaw, który odwołuje się do dodania.  
+ podczas Wskaźnik do adresu interfejsu [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) , który określa odwołania do zestawu do dodania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartości zwracane to wywołanie zwrotne są ignorowane.  
+ Zwracane wartości z tego wywołania zwrotnego są ignorowane.  
   
 ## <a name="remarks"></a>Uwagi  
- To wywołanie zwrotne jest kontrolowany przez ustawienie [COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) flagi maski zdarzenia podczas wywoływania [ICorProfilerCallback5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) metody. Jeśli program profilujący rejestruje [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) metody wywołania zwrotnego, środowisko uruchomieniowe przekazuje ścieżkę i nazwę zestawu do załadowania, wraz ze wskaźnikiem do [ ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiektu interfejsu do tej metody. Program profilujący może wywoływać [ICorProfilerAssemblyReferenceProvider::AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) metody z `COR_PRF_ASSEMBLY_REFERENCE_INFO` obiekt dla każdego zestawu docelowego, firma planuje odwoływać się z zestawu określonego w `GetAssemblyReferences` Wywołanie zwrotne.  
+ To wywołanie zwrotne jest kontrolowane przez ustawienie flagi maski zdarzeń [COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) podczas wywoływania metody [ICorProfilerCallback5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) . Jeśli Profiler rejestruje metodę wywołania zwrotnego [ICorProfilerCallback6:: GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) , środowisko uruchomieniowe przekazuje ścieżkę i nazwę zestawu, który ma być załadowany, wraz ze wskaźnikiem do [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiekt interfejsu do tej metody. Profiler może następnie wywołać metodę [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) z obiektem `COR_PRF_ASSEMBLY_REFERENCE_INFO` dla każdego zestawu docelowego, który planuje się do odwołania z zestawu określonego w `GetAssemblyReferences` wywołania zwrotnego.  
   
- Użyj `GetAssemblyReferences` wywołania zwrotnego, tylko wtedy, gdy program profilujący do modyfikowania metadane zestawu w celu dodania odwołania do zestawu. (Jednak należy pamiętać, że rzeczywiste zmiany dotyczące metadanych zestawu odbywa się w [icorprofilercallback::moduleloadfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)metody wywołania zwrotnego.) Program profilujący powinien implementować `GetAssemblyReferences` metody wywołania zwrotnego, środowisko uruchomieniowe języka wspólnego (CLR) poinformować, że odwołania do zestawów, zostaną dodane, gdy moduł został załadowany.  Dzięki temu zestaw udostępniania decyzje przez środowisko CLR na tym etapie wczesne zachowają ważność, mimo że profilera zamierza później zmodyfikować odwołania do zestawu metadanych.  To uniknąć pewnych okolicznościach, w której program profilujący spowodować modyfikacji metadanych `SECURITY_E_INCOMPATIBLE_SHARE` błędu.  
+ Użyj wywołania zwrotnego `GetAssemblyReferences` tylko wtedy, gdy profiler musi zmodyfikować metadane zestawu, aby dodać odwołania do zestawu. (Należy zauważyć, że rzeczywista modyfikacja metadanych zestawu jest wykonywana w metodzie wywołania zwrotnego [ICorProfilerCallback:: ModuleLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)). Profiler powinien zaimplementować metodę wywołania zwrotnego `GetAssemblyReferences`, aby poinformować środowisko uruchomieniowe języka wspólnego (CLR) o tym, że odwołania do zestawów zostaną dodane po załadowaniu modułu.  Pozwala to zagwarantować, że decyzje dotyczące udostępniania zestawu wykonane przez środowisko CLR w trakcie tego wczesnego etapu pozostają prawidłowe, mimo że program profilujący planuje później zmodyfikować odwołania do zestawu metadanych.  Może to uniknąć niektórych wystąpień, w których modyfikacje metadanych profilera powodują wystąpienie błędu `SECURITY_E_INCOMPATIBLE_SHARE`.  
   
- Program profilujący używa [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiekt udostępniany przez tę metodę, aby dodać odwołania do zestawów do walker zamknięcia odwołania zestawów CLR.  [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiektu powinien można używać tylko wewnątrz tego wywołania zwrotnego. Wywołania [ICorProfilerAssemblyReferenceProvider::AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) metody z to wywołanie zwrotne nie powoduje modyfikacji metadanych, ale tylko w przypadku modyfikacji zestawu odwołania zamknięcia przeszukiwania. Program profilujący nadal będą musieli używać [imetadataassemblyemit —](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) obiektu, aby jawnie dodać odwołania do zestawów z poziomu [icorprofilercallback::moduleloadfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) wywołania zwrotnego dla odwołania zestaw, nawet jeśli implementuje `GetAssemblyReferences` wywołania zwrotnego.  
+ Profiler używa obiektu [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) dostarczonego przez tę metodę, aby dodać odwołania do zestawu do analizatora zamknięcia odwołań do zestawu CLR.  Obiekt [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) powinien być używany tylko w ramach tego wywołania zwrotnego. Wywołania metody [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) z tego wywołania zwrotnego nie powodują zmodyfikowanych metadanych, ale tylko w zmodyfikowanym zamknięciu odwołań do zestawu. Profiler nadal będzie musiał używać obiektu [IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md) , aby jawnie dodawać odwołania do zestawów z poziomu wywołania zwrotnego [ICorProfilerCallback:: ModuleLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) dla zestawu, który zawiera odwołanie, nawet jeśli implementuje @no__t_2 wywołania zwrotnego.  
   
- Program profilujący powinna być przygotowana do otrzymywać zduplikowane wywołań to wywołania zwrotnego dla tego samego zestawu, a powinien odpowiadać tak samo dla każdego wywołania zduplikowane (, wprowadzając ten sam zestaw [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) wywołania).  
+ Profiler powinien zostać przygotowany do odbierania zduplikowanych wywołań tego wywołania zwrotnego dla tego samego zestawu i powinien odpowiadać identycznie dla każdego takiego duplikatu wywołania (przez utworzenie tego samego zestawu [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) wywołania).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

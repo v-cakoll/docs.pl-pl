@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0ea0f30-e8d2-48b0-8477-e1a029ceb4dd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58f148eb4c3206ba12eed41df670846d7beab77a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11d9c7393827b613d49e23972b4896bfe657a544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771636"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138991"
 ---
 # <a name="icordebugstepperenumnext-method"></a>ICorDebugStepperEnum::Next — Metoda
-Pobiera określoną liczbę wystąpień ICorDebugStepper — z wyliczenia, zaczynając od bieżącej pozycji.  
+Pobiera określoną liczbę wystąpień ICorDebugStepper z wyliczenia, rozpoczynając od bieżącego położenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba `ICorDebugStepper` wystąpienia mają zostać pobrane.  
+ podczas Liczba wystąpień `ICorDebugStepper` do pobrania.  
   
  `steppers`  
- [out] Tablica wskaźników, z których każdy wskazuje `ICorDebugStepper` obiektu.  
+ określoną Tablica wskaźników, z których każdy wskazuje obiekt `ICorDebugStepper`.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby `ICorDebugStepper` wystąpień rzeczywistego zwrotu. Ta wartość może mieć wartości null Jeśli `celt` jeden.  
+ określoną Wskaźnik do liczby zwróconych wystąpień `ICorDebugStepper`. Ta wartość może być równa null, jeśli `celt` to jeden.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b1211981-e90c-4e05-8def-fa18d85ad9ab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0a273c54559e8e297e09740ba9c770ce12d72d1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff393b119c349e34898b781c3185cc82f2dba11f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137550"
 ---
 # <a name="icordebugsteppersetunmappedstopmask-method"></a>ICorDebugStepper::SetUnmappedStopMask — Metoda
-Ustawia wartość, która określa typ niezamapowane kodu, w którym wykonywanie zostanie zatrzymany.  
+Ustawia wartość określającą typ niezamapowanego kodu, w którym wykonanie zostanie zatrzymane.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +35,20 @@ HRESULT SetUnmappedStopMask (
   
 ## <a name="parameters"></a>Parametry  
  `mask`  
- [in] Wartość cordebugunmappedstop — wyliczenie, który określa typ niezamapowane kodu, w której debuger będzie zatrzymuje wykonywanie.  
+ podczas Wartość wyliczenia CorDebugUnmappedStop —, która określa typ niezamapowanego kodu, w którym debuger zostanie zatrzymany.  
   
- Wartość domyślna to STOP_OTHER_UNMAPPED. Wartość STOP_UNMANAGED tylko jest prawidłowa w przypadku debugowania międzyoperacyjnego.  
+ Wartość domyślna to STOP_OTHER_UNMAPPED. Wartość STOP_UNMANAGED jest prawidłowa tylko z debugowaniem międzyoperacyjnym.  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy debuger wykryje just-in-time kompilacji (JIT), który nie ma odpowiedniego mapowania do języka Microsoft intermediate language (MSIL), zatrzymuje wykonywanie, jeśli została ustawiona flaga określania typu niezamapowane kodu; w przeciwnym razie wykonywanie krokowe w sposób niewidoczny dla użytkownika jest kontynuowane.  
+ Gdy debuger odnajdzie kompilację just-in-Time (JIT), która nie ma odpowiedniego mapowania do języka pośredniego firmy Microsoft (MSIL), zatrzymuje wykonywanie, jeśli ustawiono flagę, która określa ten typ niezamapowanego kodu; w przeciwnym razie w dalszym ciągu kontynuuje działanie.  
   
- Jeśli debuger nie używa stepper wprowadzenie metody, następnie go nie zawsze Przekrocz nad niezamapowane kodu.  
+ Jeśli debuger nie używa stepper do wprowadzania metody, nie będzie koniecznie przekroczyć niezamapowanego kodu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

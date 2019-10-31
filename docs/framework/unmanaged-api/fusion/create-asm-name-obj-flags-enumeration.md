@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5ed2fd0-c7d2-4603-aaca-5d0caad92675
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f6abb59c3aaec40a4e7b228b8c69147a2d454431
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795421"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108882"
 ---
 # <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS — Wyliczenie
 Określa atrybuty obiektu [interfejsu IAssemblyName](iassemblyname-interface.md) , gdy jest konstruowany [przez funkcję](createassemblynameobject-function.md) myfunctionobject.  
@@ -47,14 +45,14 @@ typedef enum {
 |`CANOF_PARSE_DISPLAY_NAME`|Wskazuje, że przesłany parametr jest tożsamością tekstową.|  
 |`CANOF_SET_DEFAULT_VALUES`|Ustawia kilka wartości domyślnych.|  
 |`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Weryfikuje regułę zaprzyjaźnionego zestawu (tylko nazwę i klucz publiczny). Ten element członkowski jest przeznaczony wyłącznie do użytku wewnętrznego.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Kombinacja `CANOF_PARSE_DISPLAY_NAME` flag i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` . Ten element członkowski jest przeznaczony wyłącznie do użytku wewnętrznego.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|Kombinacja flag `CANOF_PARSE_DISPLAY_NAME` i `CANOF_VERIFY_FRIEND_ASSEMBLYNAME`. Ten element członkowski jest przeznaczony wyłącznie do użytku wewnętrznego.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

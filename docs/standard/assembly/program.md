@@ -1,20 +1,18 @@
 ---
-title: Program z zestawami
+title: Programowanie przy użyciu zestawów
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], programming
 - programming assemblies
 ms.assetid: 25918b15-701d-42c7-95fc-c290d08648d6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 03babe701b46eab54a76094c4728af80e6d9911e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9f07d36d9e47189d53e367fd1406e5684c024aa3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973139"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107056"
 ---
-# <a name="program-with-assemblies"></a>Program z zestawami
+# <a name="program-with-assemblies"></a>Programowanie przy użyciu zestawów
 Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jednostkę wdrożenia, kontrolę wersji, ponowne użycie, zakres aktywacji i uprawnienia zabezpieczeń. Zestaw udostępnia środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Jest to Kolekcja typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Dla środowiska uruchomieniowego typ nie istnieje poza kontekstem zestawu.  
   
  W tej sekcji opisano sposób tworzenia modułów, tworzenia zestawów z modułów, tworzenia pary kluczy i podpisywania zestawu o silnej nazwie, a następnie instalowania zestawu w globalnej pamięci podręcznej zestawów. Ponadto w tej sekcji opisano sposób używania [Dezasembler MSIL (Ildasm. exe)](../../framework/tools/ildasm-exe-il-disassembler.md) do wyświetlania informacji manifestu zestawu.  
@@ -38,13 +36,13 @@ Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jedn
  [Lokalizacja zestawu](location.md)  
  Zawiera omówienie lokalizacji lokalizowania zestawów.  
   
- [Instrukcje: Kompilowanie zestawu jednoplikowego](../../framework/app-domains/build-single-file-assembly.md)  
+ [Instrukcje: kompilowanie zestawu jednoplikowego](../../framework/app-domains/build-single-file-assembly.md)  
  Opisuje sposób tworzenia zestawu jednoplikowego.  
   
  [Zestawy wieloplikowe](../../framework/app-domains/multifile-assemblies.md)  
  Opisuje przyczyny tworzenia zestawów wieloplikowych.  
   
- [Instrukcje: Kompilowanie zestawu wieloplikowego](../../framework/app-domains/build-multifile-assembly.md)  
+ [Instrukcje: kompilowanie zestawu wieloplikowego](../../framework/app-domains/build-multifile-assembly.md)  
  Opisuje sposób tworzenia zestawu wieloplikowego.  
   
  [Ustawianie atrybutów zestawu](set-attributes.md)  
@@ -59,7 +57,7 @@ Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jedn
  [Pracuj z zestawami i globalną pamięcią podręczną zestawów](../../framework/app-domains/working-with-assemblies-and-the-gac.md)  
  Opisuje, jak i dlaczego należy dodać zestawy do globalnej pamięci podręcznej zestawów i zawiera tematy porad.  
   
- [Instrukcje: Wyświetl zawartość zestawu](view-contents.md)  
+ [Instrukcje: wyświetlanie zawartości zestawu](view-contents.md)  
  Opisuje sposób używania Dezasembler MSIL (Ildasm. exe) do wyświetlania zawartości zestawu.  
   
  [Przekazywanie typu w środowisku uruchomieniowym języka wspólnego](type-forwarding.md)  
@@ -70,17 +68,17 @@ Zestawy są blokami konstrukcyjnymi .NET Framework; tworzą one podstawową jedn
  Klasa .NET Framework, która reprezentuje zestaw.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../../framework/reflection-and-codedom/get-type-member-information.md)  
+ [Instrukcje: uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../../framework/reflection-and-codedom/get-type-member-information.md)  
  Opisuje, w jaki sposób programowo uzyskać typ i inne informacje z zestawu.  
   
  [Zestawy w środowisku .NET](index.md)  
  Zawiera omówienie pojęć dotyczących zestawów środowiska uruchomieniowego języka wspólnego.  
   
  [Przechowywanie wersji zestawu](versioning.md)  
- Zawiera omówienie powiązań zestawów i <xref:System.Reflection.AssemblyVersionAttribute> atrybutów i. <xref:System.Reflection.AssemblyInformationalVersionAttribute>  
+ Zawiera omówienie powiązań zestawów i atrybutów <xref:System.Reflection.AssemblyVersionAttribute> i <xref:System.Reflection.AssemblyInformationalVersionAttribute>.  
   
  [Jak środowisko uruchomieniowe lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md)  
  Opisuje, jak środowisko uruchomieniowe określa, który zestaw ma być używany do realizacji żądania powiązania.  
   
- [Powiela](../../framework/reflection-and-codedom/reflection.md)   
+   [odbicia](../../framework/reflection-and-codedom/reflection.md)  
  Opisuje sposób użycia klasy **odbicia** w celu uzyskania informacji o zestawie.

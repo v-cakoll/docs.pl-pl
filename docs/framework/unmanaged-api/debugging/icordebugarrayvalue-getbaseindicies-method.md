@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 868b339b-acdb-4fe0-91c7-b85f4fba99eb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f4ecb700a19a4e06f9f0056881fe3cdb9753aae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e103401b85626e53db53e1894c22b161774e5163
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088688"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies — Metoda
-Pobiera podstawowy indeks każdego wymiaru tablicy.  
+Pobiera podstawowy indeks każdego wymiaru w tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +37,16 @@ HRESULT GetBaseIndicies (
   
 ## <a name="parameters"></a>Parametry  
  `cdim`  
- [in] Liczba wymiarów to `ICorDebugArrayValue` obiektu. Ta wartość jest również rozmiar `indicies` tablicy, ponieważ jego rozmiar jest równa liczbie wymiarów `ICorDebugArrayValue` obiektu.  
+ podczas Liczba wymiarów tego obiektu `ICorDebugArrayValue`. Ta wartość jest również rozmiarem tablicy `indicies`, ponieważ jej rozmiar jest równy liczbie wymiarów obiektu `ICorDebugArrayValue`.  
   
  `indicies`  
- [out] Tablica liczb całkowitych, z których każdy jest podstawowy indeks (tj. wartość początkowa indeksu) wymiaru `ICorDebugArrayValue` obiektu.  
+ określoną Tablica liczb całkowitych, z których każdy jest indeksem podstawowym (czyli indeksem początkowym) wymiaru tego obiektu `ICorDebugArrayValue`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

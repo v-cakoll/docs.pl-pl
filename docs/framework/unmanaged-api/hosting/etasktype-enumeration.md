@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: aa527b31-89d4-41f2-ad6f-63b76950b7df
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73098077e3860d3f4a8a02921ecedf8dff24165b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc956827ad59fc655137e4147e6d98b6d097d470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774050"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138188"
 ---
 # <a name="etasktype-enumeration"></a>ETaskType — Wyliczenie
-Zawiera wartości, które wskazują na typ zadania, który jest reprezentowany przez [iclrtask —](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [ihosttask —](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interfejsu.  
+Zawiera wartości wskazujące typ zadania reprezentowanego przez interfejs [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) lub [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,26 +46,26 @@ typedef enum ETaskType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|Interfejs reprezentuje zadanie Zwalnianie domeny aplikacji.|  
-|`TT_DEBUGGERHELPER`|Interfejs reprezentuje zadanie Pomocnik debugera.|  
+|`TT_ADUNLOAD`|Interfejs reprezentuje zadanie wyładowywania domeny aplikacji.|  
+|`TT_DEBUGGERHELPER`|Interfejs reprezentuje zadanie pomocnika debugera.|  
 |`TT_FINALIZER`|Interfejs reprezentuje zadanie finalizatora.|  
-|`TT_GC`|Interfejs reprezentuje zadanie odzyskiwania pamięci.|  
+|`TT_GC`|Interfejs reprezentuje zadanie wyrzucania elementów bezużytecznych.|  
 |`TT_THREADPOOL_GATE`|Interfejs reprezentuje zadanie wątku bramy.|  
-|`TT_THREADPOOL_IOCOMPLETION`|Interfejs reprezentuje operacji We/Wy wątek zadanie lub zadanie wątków portu zakończenia.|  
-|`TT_THREADPOOL_TIMER`|Interfejs reprezentuje zadanie wątków czasomierza.|  
+|`TT_THREADPOOL_IOCOMPLETION`|Interfejs reprezentuje zadanie wątku we/wy lub zadanie wątku zakończenia.|  
+|`TT_THREADPOOL_TIMER`|Interfejs reprezentuje zadanie wątku czasomierza.|  
 |`TT_THREADPOOL_WAIT`|Interfejs reprezentuje zadanie wątku oczekiwania.|  
-|`TT_THREADPOOL_WORKER`|Interfejs reprezentuje zadania wątek procesu roboczego.|  
-|`TT_UNKNOWN`|Zadanie jest nieznany.|  
+|`TT_THREADPOOL_WORKER`|Interfejs reprezentuje zadanie wątku roboczego.|  
+|`TT_UNKNOWN`|Zadanie jest nieznane.|  
 |`TT_USER`|Interfejs reprezentuje zadanie użytkownika.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

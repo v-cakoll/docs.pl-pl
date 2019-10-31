@@ -7,21 +7,21 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a64db49b521651ccff8b928720fe3273f8600b68
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6112d87afcca8b2f54508d03d3ea4c0781d7e475
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921323"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119268"
 ---
-# <a name="appsettings-element-for-configuration"></a>\<AppSettings > element dla \<konfiguracji >
+# <a name="appsettings-element-for-configuration"></a>\<appSettings > elementu \<Configuration >
 
 Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekcja konfiguracji udostępniona przez .NET Framework.
 
 [ **\<> konfiguracji**](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings>**
+&nbsp;&nbsp; **\<appSettings >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,29 +35,29 @@ Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekc
 
 |           | Opis |
 | --------- | ----------- |
-| **rozszerzeniem**  | Atrybut opcjonalny.<br><br>Określa ścieżkę względną do pliku zewnętrznego zawierającego niestandardowe ustawienia konfiguracji aplikacji. Określony plik zawiera ten sam rodzaj ustawień, które są określone w obszarze  **\<Dodaj >** ,  **\<Usuń >** i  **\<Wyczyść >** elementy i używają tego samego formatu pary klucz/wartość, co te elementy.<br><br>Określona ścieżka jest względna w stosunku do głównego pliku konfiguracji. W przypadku aplikacji Windows Forms jest to folder binarny (na przykład */bin/debug*), a nie lokalizacja pliku konfiguracji aplikacji. W przypadku aplikacji formularzy sieci Web ścieżka jest określana względem katalogu głównego aplikacji, w którym znajduje się plik *Web. config* .<br><br>Należy pamiętać, że środowisko uruchomieniowe ignoruje atrybut, jeśli nie można znaleźć określonego pliku. |
+| **rozszerzeniem**  | Atrybut opcjonalny.<br><br>Określa ścieżkę względną do pliku zewnętrznego zawierającego niestandardowe ustawienia konfiguracji aplikacji. Określony plik zawiera ten sam rodzaj ustawień, które są określone w **\<dodaj >** , **\<usuń >** i **\<Wyczyść elementy >** i używa tego samego formatu pary klucz/wartość, co te elementy.<br><br>Określona ścieżka jest względna w stosunku do głównego pliku konfiguracji. W przypadku aplikacji Windows Forms jest to folder binarny (na przykład */bin/debug*), a nie lokalizacja pliku konfiguracji aplikacji. W przypadku aplikacji formularzy sieci Web ścieżka jest określana względem katalogu głównego aplikacji, w którym znajduje się plik *Web. config* .<br><br>Należy pamiętać, że środowisko uruchomieniowe ignoruje atrybut, jeśli nie można znaleźć określonego pliku. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [> elementu  **\<konfiguracji**](../configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [ **> konfiguracji\<** Postaci](../configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<add>** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
+| [ **\<Dodaj >** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
+| [ **\<Wyczyść >** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
+| [ **\<Usuń >** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
 
 ## <a name="remarks"></a>Uwagi
 
-AppSettings > element przechowuje niestandardowe informacje o konfiguracji aplikacji, takie jak parametry połączenia bazy danych, ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji.  **\<** Pary klucz/wartość określone w <xref:System.Configuration.ConfigurationSettings>  **\<pliku AppSettings >** są dostępne w kodzie przy użyciu klasy.
+**\<appSettings >** element przechowuje niestandardowe informacje o konfiguracji aplikacji, takie jak parametry połączenia bazy danych, ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji. Pary klucz/wartość określone w **\<AppSettings elementu >** są dostępne w kodzie przy użyciu klasy <xref:System.Configuration.ConfigurationSettings>.
 
-Można użyć atrybutu **plik** w  **\<pliku AppSettings >** elementu *Web. config* i plików konfiguracji aplikacji. Ten atrybut określa plik konfiguracji, który zawiera dodatkowe ustawienia lub zastępuje ustawienia określone w  **\<AppSettings >** elementu. Atrybut **pliku** może być używany w scenariuszach tworzenia zespołu kontroli źródła, na przykład gdy użytkownik chce zastąpić ustawienia projektu określone w pliku konfiguracyjnym aplikacji.
+Można użyć atrybutu **pliku** w **\<AppSettings >** elementu pliku *Web. config* i plików konfiguracji aplikacji. Ten atrybut określa plik konfiguracji, który zawiera dodatkowe ustawienia lub zastępuje ustawienia określone w **\<appSettings >** elementu. Atrybut **pliku** może być używany w scenariuszach tworzenia zespołu kontroli źródła, na przykład gdy użytkownik chce zastąpić ustawienia projektu określone w pliku konfiguracyjnym aplikacji.
 
-Pliki konfiguracyjne określone przez atrybut **pliku** muszą mieć węzeł  **\<główny AppSettings >** , a nie  **\<> konfiguracji**.
+Pliki konfiguracyjne określone przez atrybut **pliku** muszą mieć węzeł główny **\<appSettings >** zamiast **\<> konfiguracji**.
 
 ## <a name="example"></a>Przykład
 

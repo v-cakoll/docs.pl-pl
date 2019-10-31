@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17304dc8330e4f8571f25b8544f1049dff229f2b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120329"
 ---
 # <a name="get-function"></a>Get, funkcja
 
@@ -58,19 +56,19 @@ podczas Nazwa właściwości.
 podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `pVal`\
-określoną Jeśli funkcja zwróci się pomyślnie, zawiera wartość `wszName` właściwości. Do `pval` argumentu jest przypisany prawidłowy typ i wartość dla kwalifikatora.
+określoną Jeśli funkcja zwróci się pomyślnie, zawiera wartość właściwości `wszName`. Do argumentu `pval` jest przypisany prawidłowy typ i wartość dla kwalifikatora.
 
 `pvtType`\
-określoną Jeśli funkcja zwróci się pomyślnie, zawiera [stałą typu CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) , która wskazuje typ właściwości. Jego wartość może być `null`również. 
+określoną Jeśli funkcja zwróci się pomyślnie, zawiera [stałą typu CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) , która wskazuje typ właściwości. Jego wartość może być również `null`. 
 
 `plFlavor`\
-określoną Jeśli funkcja zwróci się pomyślnie, otrzymuje informacje o pochodzeniu właściwości. Jego wartością może być `null`lub jedna z następujących stałych WBEM_FLAVOR_TYPE zdefiniowanych w pliku nagłówkowym *WbemCli. h* : 
+określoną Jeśli funkcja zwróci się pomyślnie, otrzymuje informacje o pochodzeniu właściwości. Jej wartość może być `null`lub jedna z następujących stałych WBEM_FLAVOR_TYPE zdefiniowanych w pliku nagłówkowym *WbemCli. h* : 
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Właściwość jest standardową właściwością systemu. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Dla klasy: Właściwość jest dziedziczona z klasy nadrzędnej. <br> Dla wystąpienia: Właściwość, podczas gdy dziedziczy z klasy nadrzędnej, nie została zmodyfikowana przez wystąpienie.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Dla klasy: Właściwość należy do klasy pochodnej. <br> Dla wystąpienia: Właściwość jest modyfikowana przez wystąpienie; oznacza to, że została podana wartość lub kwalifikator został dodany lub zmodyfikowany. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Dla klasy: właściwość jest dziedziczona z klasy nadrzędnej. <br> Dla wystąpienia: właściwość, podczas gdy dziedziczy z klasy nadrzędnej, nie została zmodyfikowana przez wystąpienie.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Dla klasy: właściwość należy do klasy pochodnej. <br> Dla wystąpienia: właściwość jest modyfikowana przez wystąpienie; oznacza to, że została podana wartość lub kwalifikator został dodany lub zmodyfikowany. |
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -88,17 +86,17 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
 
-`Get` Funkcja może również zwracać właściwości systemu.
+Funkcja `Get` może również zwracać właściwości systemu.
 
-Do argumentu jest przypisany prawidłowy typ i wartość dla kwalifikatora oraz funkcja com [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) `pVal`
+Do argumentu `pVal` jest przypisany prawidłowy typ i wartość kwalifikatora oraz funkcja COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)
 
 ## <a name="requirements"></a>Wymagania
 
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
- **Nagłówki** WMINet_Utils.idl
+ **Nagłówek:** WMINet_Utils. idl
 
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

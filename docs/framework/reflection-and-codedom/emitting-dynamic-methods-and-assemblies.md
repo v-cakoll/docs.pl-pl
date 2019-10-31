@@ -7,22 +7,20 @@ helpviewer_keywords:
 - metadata, emit interfaces
 - reflection emit, overview
 - assemblies [.NET Framework], emitting dynamic assemblies
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8e2b9aeb8c632efcbf8c506da4da7c6e7b408e1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4578b708b10e93a7f5def5b9dc040eeb646bdc8f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046085"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130233"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Emitowanie dynamicznych metod i zestawów
 
-W tej sekcji opisano zestaw typów zarządzanych w <xref:System.Reflection.Emit> przestrzeni nazw, które umożliwiają kompilatorowi lub narzędziu emitowanie metadanych i języka pośredniego firmy Microsoft (MSIL) w czasie wykonywania i opcjonalnie generowanie przenośnego pliku wykonywalnego (PE) na dysku. Aparaty skryptów i kompilatory są podstawowymi użytkownikami tej przestrzeni nazw. W tej sekcji funkcje zapewniane przez <xref:System.Reflection.Emit> przestrzeń nazw są określane jako emisja odbicia.  
+W tej sekcji opisano zestaw typów zarządzanych w przestrzeni nazw <xref:System.Reflection.Emit>, które umożliwiają kompilatorowi lub narzędziu emitowanie metadanych i języka pośredniego firmy Microsoft (MSIL) w czasie wykonywania i opcjonalnie generowanie przenośnego pliku wykonywalnego (PE) na dysku. Aparaty skryptów i kompilatory są podstawowymi użytkownikami tej przestrzeni nazw. W tej sekcji funkcje zapewniane przez przestrzeń nazw <xref:System.Reflection.Emit> są określane jako emisja odbicia.  
   
 Emisja odbicia zapewnia następujące możliwości:  
   
-- Zdefiniuj lekkie metody globalne w czasie wykonywania, używając <xref:System.Reflection.Emit.DynamicMethod> klasy i wykonuj je za pomocą delegatów.  
+- Zdefiniuj lekkie metody globalne w czasie wykonywania przy użyciu klasy <xref:System.Reflection.Emit.DynamicMethod> i wykonuj je za pomocą delegatów.  
   
 - Zdefiniuj zestawy w czasie wykonywania, a następnie uruchom je i/lub Zapisz na dysku.  
   
@@ -34,9 +32,9 @@ Emisja odbicia zapewnia następujące możliwości:
   
 - Zdefiniuj informacje symboliczne dla zdefiniowanych modułów, które mogą być używane przez narzędzia, takie jak debugery i program do tworzenia kodu.  
   
-Oprócz typów zarządzanych w <xref:System.Reflection.Emit> przestrzeni nazw istnieją niezarządzane interfejsy metadanych, które opisano w dokumentacji dotyczącej [interfejsów metadanych](../unmanaged-api/metadata/metadata-interfaces.md) . Emitowane emisje odbicia udostępniają silniejsze sprawdzanie błędów semantycznych i wyższy poziom abstrakcji metadanych niż niezarządzane interfejsy metadanych.  
+Oprócz typów zarządzanych w przestrzeni nazw <xref:System.Reflection.Emit> istnieją niezarządzane interfejsy metadanych, które opisano w dokumentacji dotyczącej [interfejsów metadanych](../unmanaged-api/metadata/metadata-interfaces.md) . Emitowane emisje odbicia udostępniają silniejsze sprawdzanie błędów semantycznych i wyższy poziom abstrakcji metadanych niż niezarządzane interfejsy metadanych.  
   
-Innym przydatnym zasobem do pracy z metadanymi i MSIL jest dokumentacja Common Language Infrastructure (CLI), szczególnie "partycja II: Definicja i semantyka metadanych "i" partycja III: Zestaw instrukcji CIL ". Dokumentacja jest dostępna online w [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) i w [witrynie sieci Web ECMA](https://go.microsoft.com/fwlink/?LinkId=116487).  
+Innym przydatnym zasobem do pracy z metadanymi i MSIL jest dokumentacja Common Language Infrastructure (CLI), szczególnie "partycja II: definicja metadanych i semantyka" i "partycja III: zestaw instrukcji CIL". Dokumentacja jest dostępna online w [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) i w [witrynie sieci Web ECMA](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
 ## <a name="in-this-section"></a>W tej sekcji
   
@@ -64,7 +62,7 @@ Kataloguje kody instrukcji MSIL, których można użyć do kompilowania treści 
 Zawiera klasy zarządzane używane do emitowania metod, zestawów i typów dynamicznych.  
   
 <xref:System.Type>  
-<xref:System.Type> Opisuje klasę, która reprezentuje typy w zarządzanym odbiciu i emitowaniu odbicia, które jest kluczem do korzystania z tych technologii.  
+Opisuje klasę <xref:System.Type>, która reprezentuje typy w zarządzanym zakresie odbicia i emisji odbicia, która jest kluczem do korzystania z tych technologii.  
   
 <xref:System.Reflection>  
 Zawiera zarządzane klasy służące do eksplorowania metadanych i kodu zarządzanego.  

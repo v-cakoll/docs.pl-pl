@@ -7,28 +7,26 @@ helpviewer_keywords:
 - hosting interfaces [.NET Framework], version 1
 - .NET Framework 1.0, hosting interfaces
 ms.assetid: 7b3d2755-cbab-4160-bc69-eb85791e38c7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1f6c20a69894c95086dbd813601ac8811ab4f337
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08e193ed40c6538b62d8b1af0a8c41b4225f136b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985702"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138259"
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR
-W tej sekcji opisano interfejsy, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w wersjach programu .NET Framework 1.0 i 1.1 w swoich aplikacjach. Te interfejsy dostarczać metody do hosta skonfigurować i załadowania środowiska uruchomieniowego do procesu.  
+W tej sekcji opisano interfejsy, które mogą być używane przez niezarządzane hosty do integrowania środowiska uruchomieniowego języka wspólnego (CLR) w .NET Framework wersje 1,0 i 1,1 w aplikacjach. Te interfejsy zapewniają metody hosta do konfigurowania i ładowania środowiska uruchomieniowego do procesu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- IAppDomainSetup  
- Udostępnia metody dla hosta skonfigurować <xref:System.AppDomain>.  
+ IAppDomainSetup —  
+ Zapewnia metody dla hosta do konfigurowania <xref:System.AppDomain>.  
   
  [ICeeFileGen, klasa](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
- (Przestarzałe) Zawiera funkcje do tworzenia natywnych przenośny plik wykonywalny (PE).  
+ Przestarzałe Oferuje funkcje tworzenia natywnego przenośnego pliku wykonywalnego (PE).  
   
  [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
- Udostępnia metody dla hosta skonfigurować ustawienia środowiska CLR.  
+ Zapewnia metody dla hosta do konfigurowania ustawień środowiska CLR.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
- Zawiera tematy, które opisują hostingu dostarczanych z .NET Framework w wersji 2.0 i nowszych wersjach.
+ Zawiera tematy opisujące Interfejsy hostingu udostępniane w .NET Framework w wersji 2,0 i nowszych.

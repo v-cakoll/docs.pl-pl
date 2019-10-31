@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback9 Interface
+title: ICorProfilerCallback9, interfejs
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback9
@@ -8,36 +8,34 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c383a2e221e61770d3c28a65c561c48f6059b6d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991994"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136564"
 ---
-# <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 Interface
-[Obsługiwane w programie .NET Framework 4.7.2 i nowszych wersjach]  
+# <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9, interfejs
+[Obsługiwane w .NET Framework 4.7.2 i nowszych wersjach]  
 
- Podklasa klasy [ICorProfilerCallback8](icorprofilercallback8-interface.md) który zapewnia metodę wywołania zwrotnego używane przez środowisko uruchomieniowe języka wspólnego powiadomić profiler, że metoda dynamiczna został pamięci zbierane i następnie zwolnione.  
+ Podklasa elementu [ICorProfilerCallback8](icorprofilercallback8-interface.md) , która zapewnia metodę wywołania zwrotnego używaną przez środowisko uruchomieniowe języka wspólnego do powiadomienia profilera, że metoda dynamiczna została odtworzona, a następnie zwolniona z pamięci.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[DynamicMethodUnloaded, metoda](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Powiadamia program profilujący, że metoda dynamiczna został pamięci zbierane i następnie zwolnione.|  
+|[DynamicMethodUnloaded, metoda](ICorProfilerCallback9-dynamicmethodunloaded-method.md)|Powiadamia program profilujący, że metoda dynamiczna została odtworzona, a następnie zwolniona.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Interfejsy profilowania](profiling-interfaces.md)
 - [ICorProfilerCallback8, interfejs](icorprofilercallback9-interface.md)
-- [Metoda ICorProfilerCallback8.DynamicMethodJITCompilationStarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
-- [Metoda ICorProfilerCallback8.DynamicMethodJITCompilationFinished](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationStarted — Metoda](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
+- [ICorProfilerCallback8. DynamicMethodJITCompilationFinished — Metoda](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 535d94688d02a7315529d17fae555fba457bbb86
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737873"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110307"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName — Metoda
 Pobiera nazwę domeny aplikacji.  
@@ -40,22 +38,22 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Rozmiar `szName` tablicy. Ustaw tę wartość na wartość zero, aby przełączyć tę metodę w trybie zapytania.  
+ podczas Rozmiar tablicy `szName`. Ustaw tę wartość na zero, aby ustawić tę metodę w trybie zapytania.  
   
  `pcchName`  
- [out] Wskaźnik do rozmiaru nazwę lub liczbę znaków, które faktycznie są zwracane w `szName`. W trybie zapytania ta wartość umożliwia element wywołujący wiedzieć, jak duże bufor do przydzielenia dla nazwy.  
+ określoną Wskaźnik do rozmiaru nazwy lub liczby znaków faktycznie zwracanych w `szName`. W trybie zapytania ta wartość umożliwia obiektowi wywołującemu określenie, jak duży bufor ma zostać przydzielony do nazwy.  
   
  `szName`  
- [out] Tablica, która przechowuje nazwę domeny aplikacji.  
+ określoną Tablica, w której jest przechowywana nazwa domeny aplikacji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołuje debugera `GetName` metody raz, można pobrać rozmiar buforu, wymagane dla nazwy. Debuger przydziela bufor, a następnie po raz drugi wywołuje metodę, aby wypełnić buforu. Pierwsze wywołanie, aby uzyskać nazwę, rozmiar jest określany jako *tryb zapytania*.  
+ Debuger wywołuje metodę `GetName` raz, aby uzyskać rozmiar buforu wymaganego dla nazwy. Debuger przydziela bufor, a następnie wywołuje metodę przy drugim czasie, aby wypełnić bufor. Pierwsze wywołanie, aby uzyskać rozmiar nazwy, jest określany jako *tryb zapytania*.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,15 +15,13 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: c6f33023d747ce20964c7cb83a66d6764b6030cd
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736614"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140555"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 
@@ -38,12 +36,12 @@ Konstrukcje warunkowe modyfikują wyrażenie regularne, aby umożliwić Dopasowa
 
 Można użyć znaku kreski pionowej (`|`), aby dopasować każdą z serii wzorców, gdzie znak `|` oddziela każdy wzorzec.
 
-Podobnie jak w przypadku klasy znaków pozytywnych, znak `|` może być używany w celu dopasowania do jednej z wielu pojedynczych znaków. W poniższym przykładzie zastosowano zarówno klasę znaku dodatniego, jak i/lub dopasowanie wzorca ze znakiem `|`, aby znaleźć wystąpienia wyrazów "szary" lub "szary" w ciągu. W takim przypadku znak `|` generuje wyrażenie regularne, które jest bardziej pełne.
+Podobnie jak w przypadku klasy znaków pozytywnych, znak `|` może być używany w celu dopasowania do jednej z wielu pojedynczych znaków. Poniższy przykład używa zarówno klasy znaku dodatniego, jak i/lub dopasowania wzorca ze znakiem `|`, aby zlokalizować wystąpienia wyrazów "szary" lub "szary" w ciągu. W tym przypadku znak `|` generuje wyrażenie regularne, które jest bardziej pełne.
 
 [!code-csharp[RegularExpressions.Language.Alternation#1](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation1.cs#1)]
 [!code-vb[RegularExpressions.Language.Alternation#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation1.vb#1)]
 
-Wyrażenie regularne, które używa znaku `|`, `\bgr(a|e)y\b`, jest interpretowane jak pokazano w poniższej tabeli:
+Wyrażenie regularne używające znaku `|`, `\bgr(a|e)y\b`, jest interpretowane jak pokazano w poniższej tabeli:
 
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -52,7 +50,7 @@ Wyrażenie regularne, które używa znaku `|`, `\bgr(a|e)y\b`, jest interpretowa
 |<code>(a&#124;e)</code>|Dopasowuje znak „a” lub „e”.|  
 |`y\b`|Dopasowuje znak "y" na granicy słowa.|  
 
-Znaku `|` można także użyć do wykonania wyrażenia/lub dopasowania z wieloma znakami lub podwyrażeniami, które mogą zawierać dowolną kombinację literałów znakowych i elementy języka wyrażeń regularnych. (Klasa znaku nie zapewnia tej funkcji). W poniższym przykładzie używa się znaku `|` w celu wyodrębnienia amerykańskiego numeru ubezpieczenia społecznego (SSN), który jest 9-cyfrowym numerem w formacie *ddd*-*DD*-*dddd*lub USA numer identyfikacyjny (EIN), który jest 9-cyfrowy numer z formatem *dd*-*ddddddd*.
+Znaku `|` można również użyć do wykonania elementu/lub dopasowania z wieloma znakami lub podwyrażeniami, które mogą zawierać dowolną kombinację literałów znakowych i elementy języka wyrażeń regularnych. (Klasa znaku nie zapewnia tej funkcji). Poniższy przykład używa znaku `|`, aby wyodrębnić numer ubezpieczenia społecznego (SSN) w Stanach Zjednoczonych, który jest 9-cyfrowym numerem w formacie *ddd*-*DD*-*dddd*lub numerem identyfikacyjnym pracodawcy USA (EIN), który jest 9-cyfrowym numerem z formatem *dd*-*ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -70,13 +68,13 @@ Wyrażenie regularne `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowane j
 
 Ten element języka próbuje dopasować jeden z dwóch wzorców w zależności od tego, czy może on pasować do wzorca początkowego. Jego składnia to:  
 
-*wyrażenie* `(?(` `)` *tak* `|` *bez* `)`
+*wyrażenie* `(?(` `)` *tak* `|` *nie* `)`
 
 *wyrażenie* WHERE jest wzorcem początkowym, *tak* aby pasowało do wzorca, jeśli *wyrażenie* jest dopasowane, a *nie* jest opcjonalnym wzorcem do dopasowania, jeśli *wyrażenie* nie jest zgodne. Aparat wyrażeń regularnych traktuje *wyrażenie* jako potwierdzenie o zerowej szerokości; oznacza to, że aparat wyrażeń regularnych nie postępuje w strumieniu wejściowym po obliczeniu *wyrażenia*. W związku z tym konstrukcja ta jest równoważna następującym:
 
-*wyrażenie* `(?(?=` `)` *tak* `|` *bez* `)`
+*wyrażenie* `(?(?=` `)` *tak* `|` *nie* `)`
 
-gdzie*wyrażenie*`(?=` `)` jest konstrukcjami potwierdzenia o zerowej szerokości. (Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](grouping-constructs-in-regular-expressions.md)). Ponieważ aparat wyrażeń regularnych interpretuje *wyrażenie* jako zakotwiczenie (potwierdzenie o zerowej szerokości), *wyrażenie* musi być potwierdzeniem o zerowej szerokości (Aby uzyskać więcej informacji, zobacz [kotwice](anchors-in-regular-expressions.md)) lub Podwyrażenie, które jest również zawarte w *tak*. W przeciwnym razie nie można dopasować wzorca *tak* .  
+gdzie `(?=`*expression*`)` jest konstrukcja potwierdzenia o zerowej szerokości. (Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](grouping-constructs-in-regular-expressions.md)). Ponieważ aparat wyrażeń regularnych interpretuje *wyrażenie* jako zakotwiczenie (potwierdzenie o zerowej szerokości), *wyrażenie* musi być potwierdzeniem o zerowej szerokości (Aby uzyskać więcej informacji, zobacz [kotwice](anchors-in-regular-expressions.md)) lub Podwyrażenie, które jest również zawarte w *tak*. W przeciwnym razie nie można dopasować wzorca *tak* .  
   
 > [!NOTE]
 > Jeśli *wyrażenie* jest nazwaną lub numerowaną grupą przechwytywania, konstrukcja alternatywna jest interpretowana jako test przechwytywania. Aby uzyskać więcej informacji, zobacz następną sekcję, [Dopasowanie warunkowe na podstawie prawidłowej grupy przechwytywania](#Conditional_Group). Innymi słowy aparat wyrażeń regularnych nie próbuje dopasować przechwyconego podciągu, ale zamiast tego testuje obecność lub brak grupy.  
@@ -86,7 +84,7 @@ Poniższy przykład jest odmianą przykładu, który pojawia się w sekcji " [do
 [!code-csharp[RegularExpressions.Language.Alternation#3](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation3.cs#3)]
 [!code-vb[RegularExpressions.Language.Alternation#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation3.vb#3)]
 
-Wzorzec wyrażenia regularnego `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowany jak pokazano w poniższej tabeli:
+`\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli:
 
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -101,11 +99,11 @@ Wzorzec wyrażenia regularnego `\b(?(\d{2}-)\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` je
 
 Ten element języka próbuje dopasować jeden z dwóch wzorców w zależności od tego, czy jest on zgodny z określoną grupą przechwytywania. Jego składnia to:
 
-`(?(` *nazwa* `)` *tak* `|` *bez* `)`
+*nazwa* `(?(` `)` *tak* `|` *nie* `)`
 
 lub
 
-`(?(` *numer* `)` *tak* `|` *bez* `)`
+*numer* `(?(` `)` *tak* `|` *nie* `)`
 
 gdzie *name* to nazwa i *numer* jest liczbą grupy przechwytywania, *tak* jest wyrażenie do dopasowania, jeśli *Nazwa* lub *Liczba* ma dopasowanie, a wartość *nie* jest wyrażeniem opcjonalnym do dopasowania, jeśli nie.
 
@@ -116,18 +114,18 @@ Poniższy przykład jest odmianą przykładu, który pojawia się w sekcji " [do
 [!code-csharp[RegularExpressions.Language.Alternation#4](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation4.cs#4)]
 [!code-vb[RegularExpressions.Language.Alternation#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation4.vb#4)]
 
-Wzorzec wyrażenia regularnego `\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` jest interpretowany jak pokazano w poniższej tabeli:
+`\b(?<n2>\d{2}-)?(?(n2)\d{7}|\d{3}-\d{2}-\d{4})\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli:
 
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|`(?<n2>\d{2}-)?`|Dopasowanie do zera lub jednego wystąpienia dwóch cyfr, po których następuje łącznik. Nazwij tę grupę przechwytywania `n2`.|  
+|`(?<n2>\d{2}-)?`|Dopasowanie do zera lub jednego wystąpienia dwóch cyfr, po których następuje łącznik. Nadaj nazwę tej grupie przechwytywania `n2`.|  
 |`(?(n2)`|Sprawdź, czy `n2` został dopasowany w ciągu wejściowym.|  
-|`\d{7}`|W przypadku dopasowania `n2` Dopasuj siedem cyfr dziesiętnych.|  
-|<code>&#124;\d{3}-\d{2}-\d{4}</code>|Jeśli `n2` nie zostało dopasowane, Dopasuj trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
+|`\d{7}`|Jeśli `n2` zostało dopasowane, Dopasuj siedem cyfr dziesiętnych.|  
+|<code>&#124;\d{3}-\d{2}-\d{4}</code>|Jeśli `n2` nie zostały dopasowane, Dopasuj trzy cyfry dziesiętne, łącznik, dwie cyfry dziesiętne, inny łącznik i cztery cyfry dziesiętne.|  
 |`\b`|Dopasowuje granicę wyrazu.|  
 
-W poniższym przykładzie przedstawiono odmianę tego przykładu, która używa numerowanej grupy zamiast nazwanej grupy. Jego wzorzec wyrażenia regularnego to `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.
+W poniższym przykładzie przedstawiono odmianę tego przykładu, która używa numerowanej grupy zamiast nazwanej grupy. Jego wzorzec wyrażenia regularnego jest `\b(\d{2}-)?(?(1)\d{7}|\d{3}-\d{2}-\d{4})\b`.
 
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]

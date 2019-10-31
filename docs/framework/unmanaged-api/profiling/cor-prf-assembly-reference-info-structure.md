@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - cpp
 ms.assetid: c8c1d916-8d1a-4f82-8128-9fd3732383fc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99fa1cc05ee583cf1bd59235fcd9821d1c92d21f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ac7ddeed5694ad0ae6ef3d4a11fcb1fb23755b8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123228"
 ---
-# <a name="corprfassemblyreferenceinfo-structure"></a>Struktura COR_PRF_ASSEMBLY_REFERENCE_INFO
-[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
+# <a name="cor_prf_assembly_reference_info-structure"></a>Struktura COR_PRF_ASSEMBLY_REFERENCE_INFO
+[Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Udostępnia środowisko uruchomieniowe języka wspólnego z informacjami dotyczącymi odwołania do zestawu, należy rozważyć, podczas przeszukiwania zamknięcia odwołanie do zestawu.  
+ Zapewnia środowisko uruchomieniowe języka wspólnego z informacjami o odwołaniu do zestawu, które należy wziąć pod uwagę podczas przeprowadzania przeszukiwania odwołań do zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +34,27 @@ typedef struct _COR_PRF_ASSEMBLY_REFERENCE_INFO {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pbPublicKeyOrToken`|Wskaźnik do publicznego klucza lub tokenu zestawu.|  
-|`cbPublicKeyOrToken`|Liczba bajtów w tokenu lub klucza publicznego.|  
+|`pbPublicKeyOrToken`|Wskaźnik do klucza publicznego lub tokenu zestawu.|  
+|`cbPublicKeyOrToken`|Liczba bajtów w kluczu publicznym lub tokenie.|  
 |`szName`|Nazwa zestawu, do którego istnieje odwołanie.|  
 |`pMetaData`|Wskaźnik do metadanych zestawu.|  
-|`pbHashValue`|Wskaźnik do wyznaczania wartości skrótu duży obiekt binarny (BLOB).|  
-|`cbHashValue`|Liczba bajtów skrótu obiektu BLOB.|  
+|`pbHashValue`|Wskaźnik do binarnego dużego obiektu typu hash (BLOB).|  
+|`cbHashValue`|Liczba bajtów w obiekcie BLOB mieszania.|  
 |`dwAssemblyRefFlags`|Flagi zestawu.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_PRF_EX_CLAUSE_INFO` Struktury jest wypełniana przez profiler, gdy deklaruje odwołań do zestawu dodatkowe środowiska uruchomieniowego języka wspólnego należy wziąć pod uwagę podczas przeszukiwania zamknięcia odwołanie do zestawu.  
+ Struktura `COR_PRF_EX_CLAUSE_INFO` jest wypełniana przez profiler, gdy deklaruje dodatkowe odwołania do zestawu, że środowisko uruchomieniowe języka wspólnego należy wziąć pod uwagę podczas przeprowadzania przeszukiwania odwołań do zestawu.  
   
- Jeśli program profilujący rejestruje [ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) metody wywołania zwrotnego, środowisko uruchomieniowe przekazuje ścieżkę i nazwę zestawu do załadowania, wraz ze wskaźnikiem do [ ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiektu interfejsu do tej metody. Program profilujący może wywoływać [ICorProfilerAssemblyReferenceProvider::AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) metody z `COR_PRF_ASSEMBLY_REFERENCE_INFO` obiekt dla każdego zestawu docelowego, firma planuje odwoływać się z zestawu określonego w [ ICorProfilerCallback6::GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) wywołania zwrotnego.  
+ Jeśli Profiler rejestruje metodę wywołania zwrotnego [ICorProfilerCallback6:: GetAssemblyReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) , środowisko uruchomieniowe przekazuje ścieżkę i nazwę zestawu, który ma być załadowany, wraz ze wskaźnikiem do [ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md) obiekt interfejsu do tej metody. Profiler może następnie wywołać metodę [ICorProfilerAssemblyReferenceProvider:: AddAssemblyReference](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md) z obiektem `COR_PRF_ASSEMBLY_REFERENCE_INFO` dla każdego zestawu docelowego, który planuje się do odwołania z zestawu określonego w [ICorProfilerCallback6:: ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)Wywołanie zwrotne GetAssemblyReferences.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

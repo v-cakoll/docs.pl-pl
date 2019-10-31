@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771036"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131811"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext — Metoda
-Zestawy [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu w bieżącym kontekście do prawidłowego kontekstu dla wątku.  
+Ustawia bieżący kontekst obiektu [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) na prawidłowy kontekst dla wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,41 +35,41 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>Parametry  
  `flag`  
- [in] A [cordebugsetcontextflag —](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) flagę, która wskazuje, czy kontekst jest z aktywną ramkę stosu lub kontekst uzyskanych przez odwijania stosu.  
+ podczas Flaga [CorDebugSetContextFlag —](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) , która wskazuje, czy kontekst pochodzi z aktywnej ramki na stosie, czy kontekst uzyskany przez odmieszczenie stosu.  
   
  `contextSize`  
- [in] Przydzielony rozmiar `CONTEXT` buforu.  
+ podczas Przydzielony rozmiar buforu `CONTEXT`.  
   
  `context`  
- [in] `CONTEXT` Buforu.  
+ podczas Bufor `CONTEXT`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk` Pomyślnie ustawiono kontekstu obiektu.|  
-|E_FAIL|`ICorDebugStackWalk` Nie ustawiono kontekstu obiektu.|  
+|S_OK|Kontekst obiektu `ICorDebugStackWalk` został pomyślnie ustawiony.|  
+|E_FAIL|Nie ustawiono kontekstu obiektu `ICorDebugStackWalk`.|  
 |E_INVALIDARG|Kontekst ma wartość null.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Buforu kontekstu jest za mały.|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|Bufor kontekstu jest za mały.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda nie zmienia bieżący kontekst wątku.  
+ Ta metoda nie zmienia bieżącego kontekstu wątku.  
   
- Ustawienie bieżącego kontekstu Nieprawidłowy kontekst może spowodować nieprzewidywalne skutki z walker stosu.  
+ Ustawienie bieżącego kontekstu na nieprawidłowy kontekst może spowodować nieprzewidywalne wyniki z analizatora stosu.  
   
- Bitowe dokładną kopię tego kontekstu można pobrać natychmiast wywołując [ICorDebugStackWalk::GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) metody.  
+ Możesz pobrać dokładną kopię bitową tego kontekstu, natychmiast wywołując metodę [ICorDebugStackWalk:: GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

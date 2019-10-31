@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomain2, interfejs
+title: ICorDebugAppDomain2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomain2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 63772c6642cc6f7f96a375beab4f7ef1b4884139
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bff270ff774692d058a36c7f47ab474b08bceb35
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959842"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088959"
 ---
-# <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2, interfejs
+# <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 — Interfejs
 
 Dostarcza metody do pracy z tablicami, wskaźnikami, wskaźnikami funkcji i typami referencyjnymi. Ten interfejs jest rozszerzeniem interfejsu ICorDebugAppDomain.  
   
@@ -40,13 +38,13 @@ Dostarcza metody do pracy z tablicami, wskaźnikami, wskaźnikami funkcji i typa
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

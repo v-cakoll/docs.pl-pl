@@ -1,5 +1,5 @@
 ---
-title: What's Obsolete w bibliotece klas programu .NET Framework
+title: Co jest przestarzałe w bibliotece klas .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,47 +7,45 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140597"
 ---
-# <a name="whats-obsolete-in-the-net-framework-class-library"></a>Co to jest przestarzała w bibliotece klas programu .NET Framework
+# <a name="whats-obsolete-in-the-net-framework-class-library"></a>Co jest przestarzałe w bibliotece klas .NET Framework
 
-.NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i składowe typu, które zapewniają nowe funkcje. Istniejące typy i składowe są również zmienić wraz z upływem czasu. Na przykład niektóre typy stać się mniej ważne technologii, które obsługują zostaje zastąpiona przez nową technologię, a niektóre metody są zastępowane przez nowszą metody, które są bardziej wygodne lub zaawansowanych funkcji.
+.NET Framework zmiany w czasie. Każda nowa wersja dodaje nowe typy i składowe typu, które udostępniają nowe funkcje. Istniejące typy i ich członkowie również zmieniają się wraz z upływem czasu. Na przykład niektóre typy stają się mniej ważne, ponieważ technologia, którą obsługują, jest zastępowana nową technologią, a niektóre metody są zastępowane nowszymi metodami, które są bardziej wygodne lub bardziej funkcjonalne.
 
-.NET Framework i środowiska uruchomieniowego języka wspólnego Dokładamy wszelkich starań obsługiwać zgodność z poprzednimi wersjami (dzięki czemu aplikacje, które zostały opracowane z jednej wersji programu .NET Framework do uruchamiania w następnej wersji programu .NET Framework). Utrudnia to po prostu usunąć typu lub składowej typu. Zamiast tego programu .NET Framework wskazuje, że typu lub składowej typu powinna nie jest już używane, oznaczając je jako nieaktualne lub przestarzały. Wycofano typu lub elementu członkowskiego obejmuje, oznaczając je, tak aby deweloperzy mają świadomość spowoduje pozbycie i masz czasu na odpowiadanie na jego usunięcie. Jednak istniejący kod, który używa typu lub elementu członkowskiego kontynuuje działanie w nowej wersji programu .NET Framework.
+.NET Framework i środowisko uruchomieniowe języka wspólnego dążą do obsługi zgodności z poprzednimi wersjami (dzięki czemu aplikacje, które zostały opracowane przy użyciu jednej wersji .NET Framework do uruchomienia w następnej wersji .NET Framework). Utrudnia to po prostu usunięcie typu lub elementu członkowskiego typu. Zamiast tego .NET Framework wskazuje, że typ lub element członkowski typu nie powinny być już używane przez oznaczenie go jako przestarzałe lub przestarzałe. Wycofanie typu lub elementu członkowskiego polega na oznaczeniu go w taki sposób, aby deweloperzy wiedzieli, że przestanie odpowiadać na usunięcie. Jednak istniejący kod, który używa typu lub elementu członkowskiego, kontynuuje działanie w nowej wersji .NET Framework.
 
 > [!NOTE]
-> Warunki *przestarzałe* i *przestarzałe* mają takie samo znaczenie, gdy jest stosowany do typów i członków programu .NET Framework.
+> Warunki *przestarzałe* i *przestarzałe* mają takie samo znaczenie, gdy są stosowane do typów i członków .NET Framework.
 
 ## <a name="the-obsoleteattribute-attribute"></a>Atrybut ObsoleteAttribute
 
-.NET Framework wskazuje, że dany typ lub członek typu jest przestarzałe, oznaczając je za pomocą <xref:System.ObsoleteAttribute> atrybutu. Stosowanie atrybutu do typu lub elementu członkowskiego wskazuje, że typ lub element członkowski zostanie usunięta w niektórych przyszłych wersjach programu .NET Framework bez kod skompilowany podziału, który używa tego członka.
+.NET Framework wskazuje, że typ lub element członkowski typu jest przestarzały poprzez oznaczenie go atrybutem <xref:System.ObsoleteAttribute>. Zastosowanie atrybutu do typu lub elementu członkowskiego wskazuje, że typ lub członek zostanie usunięty w przyszłych wersjach .NET Framework bez dzielenia skompilowanego kodu, który używa tego elementu członkowskiego.
 
-Oprócz wskazujący, że typ lub członek typu jest przestarzały, <xref:System.ObsoleteAttribute> definiuje, jak kompilator obsługuje kod źródłowy, który zawiera tego typu lub elementu członkowskiego. Kompilator może skompilować kod, ale emitują komunikat ostrzegawczy lub użycie typu lub elementu członkowskiego go traktować jako błąd. W pierwszym przypadku pomyślnie skompilować kod, ale komunikat ostrzegawczy wskazuje, że typ lub element członkowski jest przestarzały. W drugim przypadku kompilacja kończy się niepowodzeniem.
+Oprócz wskazuje, że typ lub element członkowski typu są przestarzałe, <xref:System.ObsoleteAttribute> definiuje, jak kompilator obsługuje kod źródłowy, który zawiera ten typ lub element członkowski. Kompilator może skompilować kod, ale emituje komunikat ostrzegawczy lub może traktować użycie typu lub elementu członkowskiego jako błędu. W pierwszym przypadku kod można skompilować pomyślnie, ale komunikat ostrzegawczy wskazuje, że typ lub element członkowski jest przestarzały. W drugim przypadku kompilacja kończy się niepowodzeniem.
 
-Nawet wtedy, gdy kompilacja generuje błąd zamiast komunikat ostrzegawczy <xref:System.ObsoleteAttribute> nie ma wpływu na zachowanie w czasie wykonywania. Oznacza to, że aplikacje, które korzystają z typu lub elementu członkowskiego i która została wykonana pomyślnie zawsze będzie uruchomione pomyślnie. Tylko próba ponownego kompilowania aplikacji korzystającej z typu lub elementu członkowskiego nie powiedzie się.
+Nawet jeśli kompilacja generuje błąd zamiast komunikatu ostrzegawczego, <xref:System.ObsoleteAttribute> nie ma wpływu na zachowanie w czasie wykonywania. Oznacza to, że aplikacje używające typu lub elementu członkowskiego, które zostały pomyślnie skompilowane, będą zawsze uruchamiane pomyślnie. Tylko próba ponownego skompilowania aplikacji używającej typu lub składowej kończy się niepowodzeniem.
 
-## <a name="how-to-handle-obsolete-types-and-members"></a>Jak obsługiwać przestarzałych typów i członków
+## <a name="how-to-handle-obsolete-types-and-members"></a>Jak obsłużyć przestarzałe typy i składowe
 
-Podczas uaktualniania i ponownie skompilować istniejący kod, za pomocą przestarzałego typu lub elementu członkowskiego, który generuje ostrzeżenie kompilatora w aplikacji jest idealnie dopuszczalne. Jednakże należy zapoznać się z komunikatem ostrzegawczym kompilatora, aby ustalić, czy należy zmienić kod aplikacji. Jeśli komunikat nie wskazuje odpowiedniego alternatywnego, powinny wykonaj jedną z następujących czynności:
+Po uaktualnieniu i ponownym skompilowaniu istniejącego kodu przy użyciu przestarzałego typu lub elementu członkowskiego, który generuje ostrzeżenie kompilatora w aplikacji, jest doskonale akceptowalna. Należy jednak przejrzeć komunikat ostrzegawczy kompilatora, aby określić, czy należy zmienić kod aplikacji. Jeśli komunikat nie wskazuje odpowiedniej alternatywy, należy wykonać jedną z następujących czynności:
 
-- Zmień swój kod, usuwając użycie typu lub elementu członkowskiego, jeśli jest to możliwe.
+- Zmień kod, usuwając użycie typu lub elementu członkowskiego, jeśli jest to możliwe.
 
      —lub—
 
-- Przejrzyj dokumentację dla tego obszaru technologii określić, jak reagować na amortyzacja.
+- Zapoznaj się z dokumentacją tego obszaru technologii, aby określić, jak odpowiedzieć na wycofanie.
 
-Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu .NET Framework. Zamiast tego można określić wersji programu .NET Framework, względem którego istniejącą skompilowany kod działa. Na przykład załóżmy, że masz aplikację o nazwie app1.exe skompilowanego dla platformy .NET Framework 3.5, ale chcesz, aby aplikacji w celu uruchomienia programu .NET Framework 4.5. Wymagane jest wykonanie następujących kroków:
+Możesz zrezygnować z ponownego kompilowania istniejącego kodu do nowszej wersji .NET Framework. Zamiast tego można określić wersję .NET Framework, do której zostanie uruchomiony istniejący skompilowany kod. Załóżmy na przykład, że masz aplikację o nazwie APP1. exe skompilowaną pod kątem .NET Framework 3,5, ale chcesz, aby aplikacja działała względem .NET Framework 4,5. Wymaga to wykonania następujących czynności:
 
-1. Utwórz plik konfiguracji dla użytkownika głównego pliku wykonywalnego i nadaj mu nazwę *appName*. exe.config, gdzie *appName* jest nazwą pliku wykonywalnego aplikacji. Dla aplikacji o nazwie app1.exe w naszym przykładzie należy utworzyć plik konfiguracji o nazwie app1.exe.config.
+1. Utwórz plik konfiguracji dla głównego pliku wykonywalnego i nadaj mu nazwę *nazwa_aplikacji*. exe. config, gdzie *nazwa_aplikacji* jest nazwą pliku wykonywalnego aplikacji. W przypadku aplikacji o nazwie APP1. exe w naszym przykładzie należy utworzyć plik konfiguracji o nazwie APP1. exe. config.
 
-2. Dodaj następujący element do pliku konfiguracji.
+2. Dodaj następujący plik do pliku konfiguracji.
 
     ```xml
     <configuration>
@@ -57,35 +55,35 @@ Może nie chcesz ponownie skompilować istniejący kod w nowszej wersji programu
     </configuration>
     ```
 
-W poniższej tabeli wymieniono wartości ciągów, które można przypisać do `version` atrybut pod kątem określonej wersji programu .NET Framework:
+Poniższa tabela zawiera listę wartości ciągów, które można przypisać do atrybutu `version`, aby określić docelową wersję .NET Framework:
 
-|Wersja programu .NET Framework|`version` ciąg|
+|Wersja programu .NET Framework|ciąg `version`|
 |-|-|
-|4.8|w wersji 4.0|
-|4.7 (w tym 4.7.1 i 4.7.2)|w wersji 4.0|
-|4.6 (w tym 4.6.1 i 4.6.2)|w wersji 4.0|
-|4.5 (w tym 4.5.1 i 4.5.2)|w wersji 4.0|
-|4|w wersji 4.0|
-|3.5|v2.0.50727|
-|2.0|v2.0.50727|
-|1.1|v1.1.4322|
-|1.0|v1.0.3705|
+|4,8|wersja|
+|4,7 (w tym 4.7.1 i 4.7.2)|wersja|
+|4,6 (w tym 4.6.1 i 4.6.2)|wersja|
+|4,5 (w tym 4.5.1 i 4.5.2)|wersja|
+|4|wersja|
+|3.5|2\.0.50727 v|
+|2.0|2\.0.50727 v|
+|1.1|1\.1.4322 v|
+|1.0|1\.0.3705 v|
 
-## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe listy dla .NET Framework 4.5 lub nowszy
+## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Przestarzałe listy dla .NET Framework 4,5 i nowszych wersji
 
 - [Przestarzałe typy](obsolete-types.md)
 - [Przestarzałe elementy członkowskie](obsolete-members.md)
 
-## <a name="obsolete-lists-for-previous-versions"></a>Przestarzałe list dla wcześniejszych wersji
+## <a name="obsolete-lists-for-previous-versions"></a>Przestarzałe listy dla poprzednich wersji
 
-- [Przestarzałe typy w programie .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
+- [Przestarzałe typy w .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
 
-- [Przestarzali członkowie w .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
+- [Przestarzałe składowe w .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
 
-- [Lista przestarzałe programu .NET framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
+- [Nieaktualna lista .NET Framework 3,5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
 
-- [.NET framework 2.0 przestarzałe listy](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
+- [Nieaktualna lista .NET Framework 2,0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
 ## <a name="see-also"></a>Zobacz także
 
-- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<element > supportedRuntime](../configure-apps/file-schema/startup/supportedruntime-element.md)

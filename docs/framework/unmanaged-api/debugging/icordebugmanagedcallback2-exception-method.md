@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd707685dfff31644565db18e72dc153d25781f4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137454"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception — Metoda
-Powiadamia debuger rozpoczęto wyszukiwania dla obsługi wyjątków.  
+Powiadamia debugera o rozpoczęciu wyszukiwania programu obsługi wyjątków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,45 +40,45 @@ HRESULT Exception (
   
 ## <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą wątku, na którym wystąpił wyjątek.  
+ podczas Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji zawierającą wątek, w którym został zgłoszony wyjątek.  
   
  `pThread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku, na którym wystąpił wyjątek.  
+ podczas Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, w którym został zgłoszony wyjątek.  
   
  `pFrame`  
- [in] Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę, zgodnie z ustaleniami `dwEventType` parametru. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag.  
+ podczas Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę określoną przez parametr `dwEventType`. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
   
  `nOffset`  
- [in] Liczba całkowita, która określa przesunięcie, zgodnie z ustaleniami `dwEventType` parametru. Aby uzyskać więcej informacji zobacz tabelę w sekcji uwag.  
+ podczas Liczba całkowita, która określa przesunięcie, zgodnie z parametrem `dwEventType`. Aby uzyskać więcej informacji, zobacz tabelę w sekcji uwagi.  
   
  `dwEventType`  
- [in] Wartość cordebugexceptioncallbacktype — wyliczenie, który określa typ to wywołanie zwrotne wyjątku.  
+ podczas Wartość wyliczenia CorDebugExceptionCallbackType —, która określa typ tego wywołania zwrotnego wyjątku.  
   
  `dwFlags`  
- [in] Wartość [cordebugexceptionflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) wyliczenie, które określa dodatkowe informacje o wyjątku  
+ podczas Wartość wyliczenia [CorDebugExceptionFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md) , która określa dodatkowe informacje o wyjątku  
   
 ## <a name="remarks"></a>Uwagi  
- `Exception` Wywołanie zwrotne jest wywoływane na różnych etapach procesu obsługi wyjątków w fazie wyszukiwania. Oznacza to jego może być wywoływana więcej niż jeden raz podczas odwijanie wyjątków.  
+ Wywołanie zwrotne `Exception` jest wywoływane w różnych punktach w fazie wyszukiwania procesu obsługi wyjątków. Oznacza to, że może być wywoływana więcej niż jeden raz podczas odwinięcia wyjątku.  
   
- Wyjątek przetwarzane można pobrać z zawiera odwołanie do obiektu ICorDebugThread `pThread` parametru.  
+ Przetwarzany wyjątek można pobrać z obiektu ICorDebugThread, do którego odwołuje się parametr `pThread`.  
   
- Ramki określonego i przesunięcia, są określane przez `dwEventType` parametru w następujący sposób:  
+ Konkretna ramka i przesunięcie są określane przez parametr `dwEventType` w następujący sposób:  
   
 |Wartość `dwEventType`|Wartość `pFrame`|Wartość `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
-|DEBUG_EXCEPTION_FIRST_CHANCE|Ramka, która zgłosiła wyjątek.|Wskaźnik instrukcji w ramce.|  
-|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Ramka kod użytkownika najbliższy punkt zgłoszony wyjątek.|Wskaźnik instrukcji w ramce.|  
-|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Ramki, który zawiera program obsługi catch.|Microsoft intermediate language (MSIL) Przesunięcie początku obsługi catch.|  
-|DEBUG_EXCEPTION_UNHANDLED|NULL|Nie zdefiniowano.|  
+|DEBUG_EXCEPTION_FIRST_CHANCE|Ramka, która wywołała wyjątek.|Wskaźnik instrukcji w ramce.|  
+|DEBUG_EXCEPTION_USER_FIRST_CHANCE|Ramka kodu użytkownika najbliżej punktu zgłoszonego wyjątku.|Wskaźnik instrukcji w ramce.|  
+|DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Ramka, która zawiera procedurę obsługi catch.|Przesunięcie języka pośredniego firmy Microsoft (MSIL) od początku procedury obsługi catch.|  
+|DEBUG_EXCEPTION_UNHANDLED|NULL|Definicji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

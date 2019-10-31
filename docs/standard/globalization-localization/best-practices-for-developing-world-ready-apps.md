@@ -8,98 +8,96 @@ helpviewer_keywords:
 - globalization [.NET Framework], best practices
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683213"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141304"
 ---
-# <a name="best-practices-for-developing-world-ready-applications"></a>Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych
+# <a name="best-practices-for-developing-world-ready-applications"></a>Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do użytku na całym świecie
 
-W tej sekcji opisano najważniejsze praktyki do naśladowania podczas tworzenia aplikacji gotowych.
+W tej sekcji opisano najlepsze rozwiązania, które należy wykonać podczas tworzenia aplikacji gotowych do działania.
 
-## <a name="globalization-best-practices"></a>Najlepsze praktyki w zakresie globalizacji
+## <a name="globalization-best-practices"></a>Najlepsze rozwiązania z zakresu globalizacji
 
-1. Przyznawanie aplikacji Unicode wewnętrznie.
+1. Udostępnianie kodu Unicode aplikacji wewnętrznie.
 
-2. Użyj klas świadomych kultury dostarczonych przez <xref:System.Globalization> przestrzeń nazw do manipulowania i formatowania danych.
+2. Użyj klas opartych na kulturze dostarczonych przez przestrzeń nazw <xref:System.Globalization>, aby manipulować i formatować dane.
 
-    - Do sortowania użyj <xref:System.Globalization.SortKey> klasy i <xref:System.Globalization.CompareInfo> klasy.
+    - W celu sortowania Użyj klasy <xref:System.Globalization.SortKey> i klasy <xref:System.Globalization.CompareInfo>.
 
-    - W przypadku porównywania ciągów znaków użyj <xref:System.Globalization.CompareInfo> klasy.
+    - W przypadku porównywania ciągów użyj klasy <xref:System.Globalization.CompareInfo>.
 
-    - W przypadku formatowania daty i godziny, użyj <xref:System.Globalization.DateTimeFormatInfo> klasy.
+    - W przypadku formatowania daty i godziny użyj klasy <xref:System.Globalization.DateTimeFormatInfo>.
 
-    - Do formatowania liczbowego użyj <xref:System.Globalization.NumberFormatInfo> klasy.
+    - W przypadku formatowania liczbowego należy użyć klasy <xref:System.Globalization.NumberFormatInfo>.
 
-    - W przypadku kalendarzy — gregoriańskiego i innych niż gregoriański, użyj <xref:System.Globalization.Calendar> klasy lub jednej z określonych implementacji kalendarza.
+    - W przypadku kalendarzy gregoriańskich i innych niż gregoriański należy użyć klasy <xref:System.Globalization.Calendar> lub jednej z określonych implementacji kalendarza.
 
-3. Użyj ustawień właściwości kultury dostarczonych przez <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> klasy w odpowiednich sytuacjach. Użyj <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> właściwości formatowania zadań, takich jak Data i godzina lub formatowanie numeryczne. Użyj <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> właściwość służąca do pobierania zasobów. Należy pamiętać, że `CurrentCulture` i `CurrentUICulture` właściwości mogą być ustawiane dla wątku.
+3. Użyj ustawień właściwości kultury dostarczonych przez klasę <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> w odpowiednich sytuacjach. Użyj właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> do formatowania zadań, takich jak Data i godzina lub formatowanie numeryczne. Użyj właściwości <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>, aby pobrać zasoby. Należy pamiętać, że właściwości `CurrentCulture` i `CurrentUICulture` można ustawić na wątek.
 
-4. Umożliw aplikacji odczytywanie i zapisywanie danych do i z różnych kodowań przy użyciu klas kodowania w <xref:System.Text> przestrzeni nazw. Nie zakładaj danych ASCII. Przyjęto założenie, że znaki międzynarodowe zostaną umieszczone gdziekolwiek można wprowadzać tekst. Na przykład aplikacja powinna obsługiwać znaki międzynarodowe w nazwy serwerów, katalogów, nazw plików, nazwy użytkowników i adresów URL.
+4. Zezwól aplikacji na odczytywanie i zapisywanie danych do i z różnych kodowań przy użyciu klas kodowania w przestrzeni nazw <xref:System.Text>. Nie zakładaj danych ASCII. Załóżmy, że znaki międzynarodowe zostaną dostarczone wszędzie tam, gdzie użytkownik może wprowadzić tekst. Na przykład aplikacja powinna akceptować znaki międzynarodowe w nazwach serwerów, katalogach, nazwach plików, nazwach użytkowników i adresach URL.
 
-5. Korzystając z <xref:System.Text.UTF8Encoding> klasy, ze względów bezpieczeństwa używać funkcji wykrywania błędów oferowanych przez tę klasę. Aby włączyć funkcję wykrywania błędów, należy utworzyć wystąpienie klasy za pomocą konstruktora, który przyjmuje `throwOnInvalidBytes` parametru i ustaw wartość tego parametru na `true`.
+5. Korzystając z klasy <xref:System.Text.UTF8Encoding>, ze względów bezpieczeństwa Użyj funkcji wykrywania błędów oferowanej przez tę klasę. Aby włączyć funkcję wykrywania błędów, Utwórz wystąpienie klasy przy użyciu konstruktora, który przyjmuje parametr `throwOnInvalidBytes` i ustaw wartość tego parametru na `true`.
 
-6. Jeśli to możliwe, należy obsługiwać ciągi jako ciągi całego, a nie jako serię pojedynczych znaków. Jest to szczególnie ważne podczas sortowania i wyszukiwania podciągów. Pozwoli to uniknąć problemów związanych z przetwarzaniem znaków łączonych. Można również pracować jednostkach tekstowe, a nie pojedyncze znaki przy użyciu <xref:System.Globalization.StringInfo?displayProperty=nameWithType> klasy.
+6. Jeśli to możliwe, należy obsługiwać ciągi jako całe ciągi, a nie jako serię pojedynczych znaków. Jest to szczególnie ważne podczas sortowania lub wyszukiwania podciągów. Uniemożliwi to problemy związane z analizowaniem połączonych znaków. Możesz również współpracować z jednostkami tekstu, a nie pojedynczymi znakami przy użyciu klasy <xref:System.Globalization.StringInfo?displayProperty=nameWithType>.
 
-7. Wyświetl tekst przy użyciu klas dostarczonych przez <xref:System.Drawing> przestrzeni nazw.
+7. Wyświetlaj tekst przy użyciu klas dostarczonych przez przestrzeń nazw <xref:System.Drawing>.
 
-8. W celu zapewnienia spójności we wszystkich systemach operacyjnych nie zezwalaj na ustawienia użytkownika zastępowały <xref:System.Globalization.CultureInfo>. Użyj `CultureInfo` Konstruktor, który akceptuje `useUserOverride` parametru i ustaw ją na `false`.
+8. W celu zachowania spójności w systemach operacyjnych nie Zezwalaj ustawieniom użytkownika na przesłonięcie <xref:System.Globalization.CultureInfo>. Użyj konstruktora `CultureInfo`, który akceptuje parametr `useUserOverride` i ustaw go na `false`.
 
-9. Przetestuj funkcjonalność swojej aplikacji w międzynarodowych wersjach systemu operacyjnego, przy użyciu danych w różnych językach.
+9. Przetestuj funkcjonalność aplikacji w międzynarodowych wersjach systemu operacyjnego, korzystając z danych międzynarodowych.
 
-10. Jeśli decyzja dot. zabezpieczeń opiera się na wyniku porównania ciągów lub operacji zmiany wielkości, należy użyć operacji niewrażliwość na ustawienia kulturowe ciąg. Daje to gwarancję, że wynik nie wpływa wartość `CultureInfo.CurrentCulture`. Zobacz ["Ciągów porównań, użyj bieżącej kultury"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) części [najlepsze rozwiązania dotyczące Using Strings](../../../docs/standard/base-types/best-practices-strings.md) dla przykładu, który demonstruje sposób ciągach wrażliwych na kulturę może wygenerować porównania niespójne wyniki.
+10. Jeśli decyzja dotycząca zabezpieczeń opiera się na wyniku porównania ciągów lub operacji zmiany wielkości liter, należy użyć niewrażliwej na kulturę operacji na ciągach. Ta metoda zapewnia, że wartość `CultureInfo.CurrentCulture`nie wpłynie na wynik. Zobacz sekcję ["porównania ciągów, które wykorzystują bieżącą kulturę"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture) [najlepszych rozwiązań dotyczących używania ciągów](../../../docs/standard/base-types/best-practices-strings.md) , aby zapoznać się z przykładem, w jaki sposób porównania ciągów zależnych od kultury mogą generować niespójne wyniki.
 
-## <a name="localization-best-practices"></a>Najlepsze rozwiązania w lokalizacji
+## <a name="localization-best-practices"></a>Najlepsze rozwiązania dotyczące lokalizacji
 
-1. Przenieś wszystkie lokalizowalne zasoby do oddzielnych bibliotek DLL z samymi zasobami. Lokalizowalne zasoby obejmują elementy interfejsu użytkownika, takich jak ciągi, komunikaty o błędach, okna dialogowe, menu i zasoby obiektów osadzonych.
+1. Przenieś wszystkie lokalizowalne zasoby do oddzielnych bibliotek DLL, które są oparte na zasobach. Zasoby lokalizowalne obejmują elementy interfejsu użytkownika, takie jak ciągi, komunikaty o błędach, okna dialogowe, menu i zasoby osadzonych obiektów.
 
-2. Czy nie wstawiaj na stałe ciągów ani zasobów interfejsu użytkownika.
+2. Nie umieszczaj ciągów ani zasobów interfejsu użytkownika.
 
-3. Nie umieszczaj nielokalizowanych zasobów tylko do zasobu biblioteki dll. Powoduje to pracę tłumaczom.
+3. Nie należy umieszczać zasobów niezlokalizowanych w bibliotekach DLL z samymi zasobami. Powoduje to pomyłkę w przypadku tłumaczeń.
 
-4. Nie używaj złożonych ciągów, które są kompilowane w czasie wykonywania z wyrażeń połączonych. Ciągi złożone są trudne do zlokalizowania, ponieważ często zakładają porządek gramatyczny angielskiego, który nie ma zastosowania do wszystkich języków.
+4. Nie używaj złożonych ciągów, które są kompilowane w czasie wykonywania z połączonych fraz. Ciągi złożone są trudne do zlokalizowania, ponieważ często zakładają angielską kolejność gramatyczną, która nie ma zastosowania do wszystkich języków.
 
-5. Unikaj niejednoznacznych konstrukcji, takich jak "Empty Folder", gdzie ciągi mogą być tłumaczone różnie w zależności od ról gramatycznych składników ciągów. Na przykład "empty" może być czasownikiem lub przymiotnikiem, co może prowadzić do różnych tłumaczeń w językach takich jak francuski czy włoski.
+5. Unikaj niejednoznacznych konstrukcji, takich jak "pusty folder", gdzie ciągi mogą być tłumaczone inaczej w zależności od ról gramatycznych składników ciągu. Na przykład "Empty" może być czasownikiem lub przymiotnikiem, który może prowadzić do różnych tłumaczeń w językach, takich jak włoski lub francuski.
 
-6. Należy unikać używania obrazów i ikon, które zawierają tekst w aplikacji. Są one kosztowne do zlokalizowania.
+6. Unikaj używania obrazów i ikon, które zawierają tekst w aplikacji. Ich lokalizowanie jest kosztowne.
 
-7. Zapewnij odpowiednią ilość miejsca dla długości ciągów, które mogą się rozszerzyć w interfejsie użytkownika. W przypadku niektórych języków frazy mogą wymagać 50-75 procent więcej miejsca niż potrzebne w innych językach.
+7. Zezwól na dużą ilość miejsca na długość ciągów do rozwinięcia w interfejsie użytkownika. W przypadku niektórych języków frazy mogą wymagać od 50-75% więcej miejsca niż w innych językach.
 
-8. Użyj <xref:System.Resources.ResourceManager?displayProperty=nameWithType> klasy do pobrania zasobów na podstawie kultury.
+8. Użyj klasy <xref:System.Resources.ResourceManager?displayProperty=nameWithType>, aby pobrać zasoby na podstawie kultury.
 
-9. Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) do tworzenia formularzy Windows oknach dialogowych, aby mogły być lokalizowane za pomocą [Edytor zasobów formularzy systemu Windows (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Nie Koduj okien dialogowych kontrolek Windows ręcznie.
+9. Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) , aby utworzyć Windows Forms oknach dialogowych, aby można było je lokalizować przy użyciu [edytora zasobów Windows Forms (Winres. exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md). Nie należy ręcznie Windows Forms okien dialogowych.
 
-10. Przygotuj do profesjonalnej lokalizacji (tłumaczenia).
+10. Rozmieść na potrzeby profesjonalnej lokalizacji (tłumaczenia).
 
-11. Aby uzyskać pełny opis tworzenia i lokalizowania zasobów, zobacz [zasoby w aplikacjach](../../../docs/framework/resources/index.md).
+11. Pełny opis tworzenia i lokalizowania zasobów znajduje się [w temacie Zasoby w aplikacjach](../../../docs/framework/resources/index.md).
 
-## <a name="globalization-best-practices-for-aspnet-applications"></a>Globalizacja najlepsze rozwiązania dotyczące aplikacji platformy ASP.NET
+## <a name="globalization-best-practices-for-aspnet-applications"></a>Najlepsze rozwiązania z zakresu globalizacji dla aplikacji ASP.NET
 
-1. Jawnie ustawić <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości w aplikacji. Nie należy polegać na wartości domyślne.
+1. Jawnie ustaw <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> i <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości w aplikacji. Nie należy polegać na wartościach domyślnych.
 
-2. Należy pamiętać, że aplikacje ASP.NET to aplikacje zarządzane i w związku z tym można użyć tych samych klas jako innych aplikacji zarządzanych do pobierania, wyświetlania, informacji i operowania nimi na podstawie kultury.
+2. Należy pamiętać, że aplikacje ASP.NET są aplikacjami zarządzanymi i w związku z tym mogą używać tych samych klas, co inne zarządzane aplikacje do pobierania, wyświetlania i manipulowania informacjami w oparciu o kulturę.
 
-3. Należy pamiętać, że w programie ASP.NET: można określić trzy następujące typy kodowania:
+3. Należy pamiętać, że można określić następujące trzy typy kodowania w ASP.NET:
 
-    - Funkcja requestEncoding Określa kodowanie otrzymane od przeglądarki klienta.
+    - requestEncoding określa kodowanie otrzymane z przeglądarki klienta.
 
-    - Funkcja responseEncoding Określa kodowanie wysyłane do przeglądarki klienta. W większości sytuacji to kodowanie powinno być taka sama jak określone dla requestEncoding.
+    - responseEncoding określa kodowanie do wysłania do przeglądarki klienta. W większości sytuacji to kodowanie powinno być takie samo, jak określone dla requestEncoding.
 
-    - Funkcja fileEncoding Określa domyślne kodowanie .aspx, .asmx i .asax plików.
+    - fileEncoding określa domyślne kodowanie dla analizy plików aspx, asmx i. asax.
 
-4. Określ wartości dla atrybutów requestEncoding, responseEncoding, fileEncoding, culture i uiCulture w następujących trzech miejscach w aplikacji ASP.NET:
+4. Określ wartości atrybutów requestEncoding, responseEncoding, fileEncoding, Culture i uiCulture w następujących trzech miejscach w aplikacji ASP.NET:
 
-    - W sekcji globalizacji w pliku Web.config. Ten plik jest zewnętrzny dla aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [ \<globalizacji > Element](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
+    - W sekcji globalizacji w pliku Web. config. Ten plik jest zewnętrzny względem aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [\<globalizacja > elementu](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100)).
 
-    - W dyrektywie page. Należy pamiętać, że gdy aplikacja znajduje się na stronie, plik jest już przeczytana. Dlatego jest za późno, aby określić fileEncoding i requestEncoding. Tylko uiCulture, Culture i responseEncoding można określić w dyrektywie page.
+    - W dyrektywie page. Pamiętaj, że gdy aplikacja znajduje się na stronie, plik został już odczytany. W związku z tym jest zbyt późno, aby określić fileEncoding i requestEncoding. Tylko uiCulture, Culture i responseEncoding można określić w dyrektywie page.
 
-    - Programowo w kodzie aplikacji. To ustawienie może się wraz z żądaniem. Jak z dyrektywą page przez czas kodu aplikacji w osiągnięciu jej jest za późno, aby określić fileEncoding i requestEncoding. Tylko uiCulture, Culture i responseEncoding można określić w kodzie aplikacji.
+    - Programowo w kodzie aplikacji. To ustawienie może się różnić w zależności od żądania. Podobnie jak w przypadku dyrektywy Page, przez czas osiągnięcia kodu aplikacji, jest zbyt późno na określenie fileEncoding i requestEncoding. Tylko uiCulture, Culture i responseEncoding można określić w kodzie aplikacji.
 
-5. Język, jaki akceptuje należy pamiętać, że wartość uiCulture można ustawić w przeglądarce.
+5. Należy pamiętać, że wartość uiCulture można ustawić na język akceptowania przeglądarki.
 
 ## <a name="see-also"></a>Zobacz także
 

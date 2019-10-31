@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetPropertyOrigin function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c2d0f23f3dd2d52f73f09c32d4e3118a9ed5ea3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6cab3765f0359f5dd18831acaaa1aefce3fe1081
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798494"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101848"
 ---
 # <a name="getpropertyorigin-function"></a>GetPropertyOrigin, funkcja
 
@@ -72,15 +70,15 @@ Ta funkcja otacza wywołanie metody [IWbemClassObject:: GetPropertyOrigin](/wind
 
 Ponieważ Klasa może dziedziczyć właściwości z co najmniej jednej klasy bazowej, deweloperzy często chcą określić właściwość, w której jest zdefiniowana dana metoda.
 
-Parametr nie może wskazywać prawidłowego `BSTR` przed `out` wywołaniem funkcji, ponieważ jest to parametr; ten wskaźnik nie jest cofany po powrocie funkcji. `pstrClassName`
+Parametr `pstrClassName` nie może wskazywać prawidłowego `BSTR` przed wywołaniem funkcji, ponieważ jest to parametr `out`; Ten wskaźnik nie został cofnięty po powrocie funkcji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

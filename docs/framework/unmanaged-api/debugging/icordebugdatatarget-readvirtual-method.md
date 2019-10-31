@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9d42c85502c12d4d77694626a533c69af97da67
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122174"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual — Metoda
-Pobiera blok pamięci ciągłej uruchamianie pod podanym adresem i zwraca go w dostarczony bufor.  
+Pobiera blok ciągłej pamięci zaczynający się od określonego adresu i zwraca go w dostarczonym buforze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +38,28 @@ HRESULT ReadVirtual(
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] Początkowy adres żądanej pamięci.  
+ podczas Adres początkowy żądanej pamięci.  
   
  `pbuffer`  
- [out] Bufor, w którym będzie przechowywana pamięć.  
+ określoną Bufor, w którym będzie przechowywana pamięć.  
   
  `bytesRequested`  
- [in] Liczba bajtów, które można pobrać z adresu docelowego.  
+ podczas Liczba bajtów pobieranych z adresu docelowego.  
   
  `pBytesRead`  
- [out] Liczba bajtów odczytanych w rzeczywistości z adres docelowy. Może to być krótsza niż `bytesRequested`.  
+ określoną Liczba bajtów faktycznie odczytywanych z adresu docelowego. Może to być mniejsze niż `bytesRequested`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli pierwszy bajt (pod adresem początkową) może zostać odczytany, wywołanie powinno zwrócić Powodzenie (umożliwiających wydajne odczytywania struktury danych z własnym opisem długości, takich jak ciągi zakończone wartością null).  
+ W przypadku odczytywania pierwszego bajtu (na określonym adresie początkowym) wywołanie powinno zwrócić sukces (w celu zapewnienia obsługi wydajnego odczytu struktur danych z unikatową długością, na przykład w przypadku ciągów zakończonych znakiem null).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

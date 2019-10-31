@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
+title: 'Porady: wyświetlanie zawartości globalnej pamięci podręcznej zestawów'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -11,22 +11,20 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c319c5f7c9bb808b2ce7ee10178722287e456339
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119834"
 ---
-# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Instrukcje: Wyświetlanie zawartości globalnej pamięci podręcznej
+# <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Instrukcje: wyświetlanie zawartości globalnej pamięci podręcznej zestawów
 
-Użyj [narzędzie global assembly cache (gacutil.exe)](../tools/gacutil-exe-gac-tool.md) do wyświetlania zawartości globalnej pamięci podręcznej zestawów (GAC).
+Użyj [Narzędzia globalnej pamięci podręcznej zestawów (Gacutil. exe)](../tools/gacutil-exe-gac-tool.md) , aby wyświetlić zawartość globalnej pamięci podręcznej zestawów (GAC).
 
-## <a name="view-the-assemblies-in-the-gac"></a>Wyświetlanie zestawów w globalnej pamięci podręcznej zestawów
+## <a name="view-the-assemblies-in-the-gac"></a>Wyświetlanie zestawów w globalnej pamięci podręcznej
 
-Aby wyświetlić listę zestawów w globalnej pamięci podręcznej, należy otworzyć [wiersz polecenia programisty dla programu Visual Studio](../tools/developer-command-prompt-for-vs.md), a następnie wprowadź następujące polecenie:
+Aby wyświetlić listę zestawów w globalnej pamięci podręcznej zestawów, Otwórz [wiersz polecenia dla deweloperów dla programu Visual Studio](../tools/developer-command-prompt-for-vs.md), a następnie wprowadź następujące polecenie:
 
 ```shell
 gacutil -l
@@ -39,7 +37,7 @@ gacutil /l
 ```
 
 > [!NOTE]
-> We wcześniejszych wersjach programu .NET Framework [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) rozszerzenie powłoki Windows umożliwia wyświetlanie globalnej pamięci podręcznej w Eksploratorze plików. Począwszy od programu .NET Framework 4, biblioteka Shfusion.dll jest przestarzała.
+> We wcześniejszych wersjach .NET Framework rozszerzenie powłoki systemu Windows [Shfusion. dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) umożliwiło wyświetlanie globalnej pamięci podręcznej zestawów w Eksploratorze plików. Począwszy od .NET Framework 4 Shfusion. dll jest przestarzały.
 
 ## <a name="see-also"></a>Zobacz także
 

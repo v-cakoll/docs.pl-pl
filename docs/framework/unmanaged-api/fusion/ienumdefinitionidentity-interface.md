@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8263e75d-251b-4abc-8a1a-c62884142232
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88c2513229b6a4183cadbdc78e505910e01e152c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 09c6431ec885c8b797dc9bb5f5c3ffe21890ccc7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107941"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity — Interfejs
-Służy jako moduł wyliczający dla kolekcji `IDefinitionIdentity` obiektów.  
+Służy jako moduł wyliczający dla kolekcji obiektów `IDefinitionIdentity`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -55,17 +53,17 @@ IEnumDefinitionIdentity : IUnknown {
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IEnumDefinitionIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IEnumDefinitionIdentity` obiektu, który zawiera te same składowe. `IEnumDefinitionIdentity`|  
+|`IEnumDefinitionIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego obiektu `IEnumDefinitionIdentity`, który zawiera te same elementy członkowskie co ten `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Next`|Pobiera określoną liczbę `IDefinitionIdentity` obiektów, rozpoczynając od bieżącego położenia.|  
-|`IEnumDefinitionIdentity::Reset`|Przenosi wskaźnik instrukcji na początek tego `IEnumDefinitionIdentity`elementu.|  
+|`IEnumDefinitionIdentity::Reset`|Przenosi wskaźnik instrukcji na początek tego `IEnumDefinitionIdentity`.|  
 |`IEnumDefinitionIdentity::Skip`|Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

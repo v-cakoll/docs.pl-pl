@@ -12,16 +12,14 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55869c107d245738df3af5ca9bb1b22195e90024
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973321"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122510"
 ---
-# <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnych nazwach
+# <a name="create-and-use-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnej nazwie
 
 Silna nazwa składa się z tożsamości zestawu — nazwy zwykłego tekstu, numeru wersji i informacji o kulturze (jeśli zostały podane) — oraz klucza publicznego i podpisu cyfrowego. Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. (Plik zestawu zawiera manifest zestawu, który zawiera nazwy i skróty wszystkich plików, które tworzą zestaw).
 
@@ -54,29 +52,29 @@ W poniższym scenariuszu opisano proces podpisywania zestawu o silnej nazwie i p
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Pomijanie weryfikacji sygnatury zaufanych zestawów
 
-Począwszy od .NET Framework 3,5 z dodatkiem Service Pack 1, sygnatury silnej nazwy nie są sprawdzane, gdy zestaw jest ładowany do domeny aplikacji w pełni zaufanej, takiej jak domyślna domena `MyComputer` aplikacji dla strefy. Jest to nazywane funkcją pomijania silnej nazwy. W środowisku pełnego zaufania wymagania dotyczące <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze powiodło się dla podpisanych, pełnych zestawów, niezależnie od ich sygnatur. Funkcja pomijania silnej nazwy pozwala uniknąć niepotrzebnego narzutu na sygnaturę o silnej nazwie w przypadku zestawów o pełnym zaufaniu w tej sytuacji, co umożliwia szybsze ładowanie zestawów.
+Począwszy od .NET Framework 3,5 z dodatkiem Service Pack 1, sygnatury silnej nazwy nie są sprawdzane, gdy zestaw jest ładowany do domeny aplikacji w pełni zaufanej, takiej jak domyślna domena aplikacji dla strefy `MyComputer`. Jest to nazywane funkcją pomijania silnej nazwy. W środowisku pełnego zaufania wymagania dotyczące <xref:System.Security.Permissions.StrongNameIdentityPermission> zawsze powiodło się dla podpisanych, pełnych zestawów, niezależnie od ich sygnatur. Funkcja pomijania silnej nazwy pozwala uniknąć niepotrzebnego narzutu na sygnaturę o silnej nazwie w przypadku zestawów o pełnym zaufaniu w tej sytuacji, co umożliwia szybsze ładowanie zestawów.
 
 Funkcja Bypass ma zastosowanie do każdego zestawu, który jest podpisany silną nazwą i ma następującą charakterystykę:
 
-- W pełni zaufane <xref:System.Security.Policy.StrongName> bez dowodu (na przykład `MyComputer` zawiera dowody strefy).
+- W pełni zaufany bez <xref:System.Security.Policy.StrongName> dowodów (na przykład ma `MyComputer`e dowody strefy).
 
-- Załadowano w pełni zaufany <xref:System.AppDomain>.
+- Załadowano do w pełni zaufanego <xref:System.AppDomain>.
 
-- Załadowany z lokalizacji pod <xref:System.AppDomainSetup.ApplicationBase%2A> właściwością. <xref:System.AppDomain>
+- Załadowano z lokalizacji pod właściwością <xref:System.AppDomainSetup.ApplicationBase%2A> tej <xref:System.AppDomain>.
 
 - Nie jest podpisany z opóźnieniem.
 
-Tę funkcję można wyłączyć dla poszczególnych aplikacji lub dla komputera. Zobacz [How to: Wyłącz funkcję](disable-strong-name-bypass-feature.md)pomijania silnej nazwy.
+Tę funkcję można wyłączyć dla poszczególnych aplikacji lub dla komputera. Zobacz [jak: wyłączanie funkcji pomijania silnej nazwy](disable-strong-name-bypass-feature.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----------|-----------------|
 |[Instrukcje: Tworzenie pary kluczy publiczny-prywatny](create-public-private-key-pair.md)|Opisuje sposób tworzenia pary kluczy kryptograficznych do podpisywania zestawu.|
-|[Instrukcje: Podpisz zestaw silną nazwą](sign-strong-name.md)|Opisuje sposób tworzenia zestawu o silnej nazwie.|
+|[Instrukcje: podpisywanie zestawu za pomocą silnej nazwy](sign-strong-name.md)|Opisuje sposób tworzenia zestawu o silnej nazwie.|
 |[Ulepszone silne nazewnictwo](enhanced-strong-naming.md)|Opisuje ulepszenia dotyczące silnych nazw w .NET Framework 4,5.|
-|[Instrukcje: Odwołuje się do zestawu o silnej nazwie](reference-strong-named.md)|Opisuje, jak odwoływać się do typów lub zasobów w zestawie o silnej nazwie w czasie kompilacji lub w czasie wykonywania.|
-|[Instrukcje: Wyłącz funkcję pomijania silnej nazwy](disable-strong-name-bypass-feature.md)|Zawiera opis sposobu wyłączania funkcji, która pomija weryfikację sygnatur silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub dla określonych aplikacji.|
+|[Instrukcje: odwoływanie się do zestawu o silnej nazwie](reference-strong-named.md)|Opisuje, jak odwoływać się do typów lub zasobów w zestawie o silnej nazwie w czasie kompilacji lub w czasie wykonywania.|
+|[Instrukcje: wyłączanie funkcji pomijania silnej nazwy](disable-strong-name-bypass-feature.md)|Zawiera opis sposobu wyłączania funkcji, która pomija weryfikację sygnatur silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub dla określonych aplikacji.|
 |[Tworzenie zestawów](create.md)|Zawiera omówienie zestawów jednoplikowych i wieloplikowych.|
 |[Jak opóźniać podpisywanie zestawu w programie Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Wyjaśnia, jak podpisać zestaw silną nazwą po utworzeniu zestawu.|
 |[SN. exe (Narzędzie silnej nazwy)](../../framework/tools/sn-exe-strong-name-tool.md)|Zawiera opis narzędzia dołączonego do .NET Framework, które ułatwia tworzenie zestawów o silnych nazwach. To narzędzie dostarcza opcje do zarządzania kluczami oraz generowania podpisów i weryfikowania ich.|

@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768451"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122039"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx — Funkcja
-Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury.  
+Tłumaczy wartość HRESULT na odpowiedni komunikat o błędzie dla określonej kultury.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,42 +41,42 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>Parametry  
  `lcid`  
- [in] Identyfikator kultury. Przekaż wartość -1 `lcid` używać domyślnej kultury.  
+ podczas Identyfikator kultury. Przekaż wartość 1 dla `lcid`, aby użyć domyślnej kultury.  
   
  `iResourceID`  
- [in] Wartość HRESULT.  
+ podczas WYNIK HRESULT.  
   
  `szBuffer`  
- [out] Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
+ określoną Bufor, który zawiera komunikat o błędzie po pomyślnym zakończeniu.  
   
  `iMax`  
- [in] Rozmiar buforu komunikatu błędu.  
+ podczas Rozmiar buforu komunikatów o błędach.  
   
  `bQuiet`  
- [in] Ignorowane.  
+ podczas Ignoruj.  
   
  `pcwchUsed`  
- [out] Wskaźnik do długości komunikat o błędzie.  
+ określoną Wskaźnik do długości komunikatu o błędzie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów COM, jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`szBuffer` ma wartość null, lub `iMax` wynosi zero (0).|  
+|E_INVALIDARG|`szBuffer` ma wartość null lub `iMax` wynosi zero (0).|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli metoda nie została zakończona pomyślnie, `szBuffer` zawiera pusty ciąg.  
+ Jeśli metoda nie zakończy się pomyślnie, `szBuffer` zawiera pusty ciąg.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

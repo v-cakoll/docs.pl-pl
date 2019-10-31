@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a637cebb9e1aef20c600353eb14fe900ad7513c7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754160"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114794"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller — Metoda
-Pobiera wskaźnik do obiektu ICorDebugFrame w łańcuchu bieżącym wywołaniu tej ramki.  
+Pobiera wskaźnik do obiektu ICorDebugFrame w bieżącym łańcuchu, który wywołał tę ramkę.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parametry  
  `ppFrame`  
- [out] Wskaźnik na adres `ICorDebugFrame` obiekt, który reprezentuje wywoływania ramki. Ta wartość jest wartość null, jeśli ramka o nazwie jest najbardziej zewnętrznej ramki w łańcuchu bieżącego.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugFrame`, który reprezentuje ramkę wywołującą. Ta wartość jest równa null, jeśli wywoływana ramka jest skrajną zewnętrzną ramką w bieżącym łańcuchu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

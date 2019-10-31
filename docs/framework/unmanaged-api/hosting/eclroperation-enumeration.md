@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5aef6808-5aac-4b2f-a2c7-fee1575c55ed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6becc44b061ff2baac63437b6a72375d1c3735b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767878"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131160"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation — Wyliczenie
-W tym artykule opisano zestaw operacji, dla których hostem akcje można zastosować zasad.  
+Opisuje zestaw operacji, dla których host może stosować akcje zasad.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,31 +42,31 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`OPR_AppDomainRudeUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> zwalnianie w sposób łagodne (prosta).|  
-|`OPR_AppDomainUnload`|Hosta można określić zasady akcje do wykonania, kiedy <xref:System.AppDomain> jest zwalniana.|  
-|`OPR_FinalizerRun`|Hosta można określić zasady akcje do wykonania po uruchomieniu finalizatorów.|  
-|`OPR_ProcessExit`|Hosta można określić zasady akcje do wykonania, gdy kończy proces.|  
-|`OPR_ThreadAbort`|Hosta można określić zasady akcje do wykonania, gdy wątek został przerwany.|  
-|`OPR_ThreadRudeAbortInCriticalRegion`|Hosta można określić zasady akcje do wykonania, gdy przerwanie wątku prosta odbywa się na krytyczny obszar kodu.|  
-|`OPR_ThreadRudeAbortInNonCriticalRegion`|Hosta można określić akcje zasad podjęcie sytuacji przerwanie wątku prosta w regionie niekrytyczne kodu.|  
+|`OPR_AppDomainRudeUnload`|Host może określać akcje zasad, które mają zostać podjęte, gdy <xref:System.AppDomain> zostanie zwolnione w sposób niebezpieczny (prosta).|  
+|`OPR_AppDomainUnload`|Host może określać akcje zasad, które mają zostać podjęte, gdy <xref:System.AppDomain> zostanie zwolniona.|  
+|`OPR_FinalizerRun`|Host może określać akcje zasad, które mają być podejmowane po uruchomieniu finalizatorów.|  
+|`OPR_ProcessExit`|Host może określić akcje zasad, które mają zostać wykonane po zakończeniu procesu.|  
+|`OPR_ThreadAbort`|Host może określać akcje zasad, które mają być podejmowane w przypadku przerwania wątku.|  
+|`OPR_ThreadRudeAbortInCriticalRegion`|Host może określać akcje zasad, które mają być podejmowane w przypadku przerwania wątku prosta w krytycznym regionie kodu.|  
+|`OPR_ThreadRudeAbortInNonCriticalRegion`|Host może określać akcje zasad, które mają być podejmowane po przerwaniu wątku prosta w niekrytycznym regionie kodu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wspólnej infrastruktury języka wspólnego (CLR) niezawodność rozróżnia przerwań i zasobów błędów alokacji, występujących w regionach krytycznego kodu, i te, które występują w niekrytyczne regiony kodu. Ta różnica jest przeznaczony do Zezwalaj na hostach w celu ustawienia zasad różne w zależności od tego, gdzie występuje błąd w kodzie.  
+ Infrastruktura niezawodności aparatu plików wykonywalnych języka wspólnego (CLR) odróżnia między przerwami a błędami alokacji zasobów, które występują w krytycznych regionach kodu i tych, które występują w niekrytycznych regionach kodu. Ta różnica została zaprojektowana tak, aby umożliwić hostom Ustawianie różnych zasad w zależności od tego, gdzie wystąpi błąd w kodzie.  
   
- A *krytyczne obszar kodu* dowolnego miejsca, gdzie środowisko CLR nie może zagwarantować tego przerywanie zadania lub nieukończone żądania dla zasobów wpłynie na bieżące zadanie. Na przykład, jeśli zadanie jest blokada, otrzymuje wartość HRESULT, który wskazuje niepowodzenie podczas żądania alokacji pamięci jest za mała, aby przerwać to zadanie, aby upewnić się, stabilności, po prostu <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> mogą zawierać inne Oczekiwanie na blokadę tego samego zadania. Aby odrzucić bieżącego zadania może spowodować tych innych zadań może przestać odpowiadać. W takim przypadku host wymaga możliwości można zwolnić całej <xref:System.AppDomain> zamiast niestabilności potencjalne ryzyko.  
+ *Krytyczny region kodu* jest dowolnym miejscem, w którym środowisko CLR nie może zagwarantować, że przerywanie zadania lub niepowodzenie żądania dla zasobów będzie wpływać tylko na bieżące zadanie. Na przykład, jeśli zadanie utrzymuje blokadę i otrzymuje wynik HRESULT wskazujący błąd podczas tworzenia żądania alokacji pamięci, to nie wystarczy po prostu przerwać to zadanie, aby zapewnić stabilność <xref:System.AppDomain>, ponieważ <xref:System.AppDomain> może zawierać inne zadania oczekiwanie na tę samą blokadę. Aby porzucić bieżące zadanie, może spowodować, że te inne zadania przestaną odpowiadać. W takim przypadku host wymaga możliwości zwolnienia całego <xref:System.AppDomain>, a nie zagrożenia potencjalnej niestabilności.  
   
- A *niekrytyczne obszar kodu*, z drugiej strony, to region, w którym środowiska CLR może zagwarantować, że przerwania lub awarii będzie mieć wpływ na zadania, na którym występuje błąd.  
+ *Niekrytyczny region kodu*, z drugiej strony, to region, w którym środowisko CLR może zagwarantować, że przerwanie lub awaria będzie wpływać tylko na zadanie, na którym wystąpi błąd.  
   
- Środowisko CLR rozróżnia również bezpiecznie i łagodne przerwań (prosta). Ogólnie rzecz biorąc przerwania normalne lub łagodne dokłada wszelkich starań, aby uruchomić procedury obsługi wyjątków i finalizatory przed przerwaniem zadania, natomiast prosta przerwania nie gwarantuje takie.  
+ Środowisko CLR rozróżnia również łagodne i niebezpieczne przerwania (prosta). Ogólnie rzecz biorąc, normalne lub bezpieczne przerwanie podejmuje wszelkie wysiłki, aby uruchomić procedury obsługi wyjątków i finalizatory przed przerwaniem zadania, podczas gdy przerwanie prosta nie daje takich gwarancji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

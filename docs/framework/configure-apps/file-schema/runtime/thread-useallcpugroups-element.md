@@ -1,22 +1,20 @@
 ---
-title: <Thread_UseAllCpuGroups> Element
+title: <Thread_UseAllCpuGroups>, element
 ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a3a612c0ffbcb211157b9623d298ce8ad7a13e94
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252273"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115408"
 ---
-# <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups> Element
+# <a name="thread_useallcpugroups-element"></a>\<element > Thread_UseAllCpuGroups
 
 Określa, czy środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora.
 
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
 &nbsp;&nbsp;&nbsp;&nbsp; **\<Thread_UseAllCpuGroups >**  
 
 ## <a name="syntax"></a>Składnia
@@ -41,7 +39,7 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 |Wartość|Opis|
 |-----------|-----------------|
 |`false`|Środowisko uruchomieniowe nie dystrybuuje zarządzanych wątków w wielu grupach procesorów. Domyślnie włączone.|
-|`true`|Środowisko uruchomieniowe dystrybuuje wątki zarządzane między wiele grup CPU, jeśli komputer ma wiele grup CPU i [ \<GCCpuGroup element >](gccpugroup-element.md) jest włączony.|
+|`true`|Środowisko uruchomieniowe dystrybuuje wątki zarządzane do wielu grup procesorów, jeśli komputer ma wiele grup CPU i jest włączony [\<GCCpuGroup >](gccpugroup-element.md) .|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -56,7 +54,7 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy komputer ma wiele grup CPU, włączenie tego elementu powoduje, że środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora. Aby użyć tej funkcji, należy również włączyć [ \<GCCpuGroup >](gccpugroup-element.md) , który rozszerza odzyskiwanie pamięci do wszystkich grup CPU i pobiera wszystkie rdzenie w przypadku tworzenia i równoważenia sterty. Włączenie elementu > [ GCCpuGroupwymagawłączeniaelementugcServer>.\<](gcserver-element.md) [ \<](gccpugroup-element.md) Jeśli te elementy nie są włączone, włączenie `<Thread_UseAllCpuGroups>` elementu nie ma żadnego wpływu.
+Gdy komputer ma wiele grup CPU, włączenie tego elementu powoduje, że środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora. Aby użyć tej funkcji, należy również włączyć [\<GCCpuGroup >](gccpugroup-element.md) elementu, który rozszerza odzyskiwanie pamięci do wszystkich grup CPU i pobiera wszystkie rdzenie w przypadku tworzenia i równoważenia sterty. Włączenie elementu [\<GCCpuGroup >](gccpugroup-element.md) wymaga włączenia [\<gcServer >](gcserver-element.md) elementu. Jeśli te elementy nie są włączone, włączenie elementu `<Thread_UseAllCpuGroups>` nie ma żadnego wpływu.
 
 ## <a name="example"></a>Przykład
 
@@ -76,4 +74,4 @@ Poniższy przykład pokazuje, jak włączyć obsługę wielu grup procesorów.
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [\<GCCpuGroup> Element](gccpugroup-element.md)
+- [\<element > GCCpuGroup](gccpugroup-element.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cbb0b6191c74c2b7ebdc8267701f246c17b016f9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779525"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134773"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit — Metoda
-Żąda hosta, aby zmienić limity pamięci wirtualnej.  
+Żąda od hosta zmiany limitów pamięci wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT RequestVirtualMemLimit (
   
 ## <a name="parameters"></a>Parametry  
  `sztMaxVirtualMemMB`  
- [in] Żądany rozmiar pamięci do przydzielenia.  
+ podczas Żądany rozmiar pamięci do przydzielenia.  
   
  `psztNewMaxVirtualMemMB`  
- [out w] Wskaźnik do rzeczywistego rozmiaru pamięci przydzielonej.  
+ [in. out] Wskaźnik do rzeczywistego rozmiaru przydzieloną pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

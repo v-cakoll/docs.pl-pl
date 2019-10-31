@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761167"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130589"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection — Metoda
-Powiadamia debugera, że utworzono nowe połączenie.  
+Powiadamia debuger o utworzeniu nowego połączenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,29 +37,29 @@ HRESULT CreateConnection (
   
 ## <a name="parameters"></a>Parametry  
  `pProcess`  
- [in] Wskaźnik do obiektu "ICorDebugProcess", który reprezentuje proces, w którym utworzono połączenie  
+ podczas Wskaźnik do obiektu "ICorDebugProcess", który reprezentuje proces, w którym utworzono połączenie  
   
  `dwConnectionId`  
- [in] Identyfikator nowego połączenia.  
+ podczas Identyfikator nowego połączenia.  
   
  `pConnName`  
- [in] Wskaźnik na nazwę nowego połączenia.  
+ podczas Wskaźnik do nazwy nowego połączenia.  
   
 ## <a name="remarks"></a>Uwagi  
- A `CreateConnection` wywołanie zwrotne, które będą uruchamiane w jednym z następujących przypadkach:  
+ Wywołanie zwrotne `CreateConnection` zostanie wyzwolone w jednej z następujących sytuacji:  
   
-- Gdy debuger dołącza do procesu, który zawiera połączenia. W takim wypadku środowisko uruchomieniowe wygeneruje i wysyłania `CreateConnection` zdarzeń i [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) zdarzeń dla każdego połączenia w procesie.  
+- Gdy debuger dołącza do procesu, który zawiera połączenia. W takim przypadku środowisko uruchomieniowe generuje i wyśle zdarzenie `CreateConnection` i [ICorDebugManagedCallback2:: ChangeConnection —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) dla każdego połączenia w procesie.  
   
-- Gdy host wywołuje [iclrdebugmanager::beginconnection —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) w [interfejs API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md).  
+- Gdy host wywołuje [ICLRDebugManager:: BeginConnection —](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) w [interfejsie API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

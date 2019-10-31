@@ -16,14 +16,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - Reqasm.exe
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09c54e58ef25afa28d2681719284c358d90bddc2
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 6866da283cc7cdd180aada252007d67bd72cd862
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969058"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124094"
 ---
 # <a name="packaging-a-net-framework-assembly-for-com"></a>Pakowanie zestawu .NET Framework dla modelu COM
 
@@ -61,7 +59,7 @@ Deweloperzy COM mogą skorzystać z następujących informacji o zarządzanych t
 
   Niezależnie od wybranego mechanizmu, tylko typy publiczne zdefiniowane w zestawie, które dostarczasz, są uwzględniane w wygenerowanej bibliotece typów.
 
-Aby uzyskać instrukcje, [zobacz How to: Osadź biblioteki typów jako zasoby Win32 w. Aplikacje](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))oparte na sieci.
+Aby uzyskać instrukcje, zobacz [How to: embed Library Type librarys as Win32 Resources in. Aplikacje oparte na sieci](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100)).
 
 <a name="cpconpackagingassemblyforcomanchor1"></a>
 
@@ -73,7 +71,7 @@ Aby uzyskać instrukcje, [zobacz How to: Osadź biblioteki typów jako zasoby Wi
 
 ## <a name="typelibconverter-class"></a>Klasa TypeLibConverter
 
-Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. <xref:System.Runtime.InteropServices.TypeLibConverter> Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
+Klasa <xref:System.Runtime.InteropServices.TypeLibConverter> znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuje klasy i interfejsy zawarte w zestawie na bibliotekę typów com. Ten interfejs API tworzy takie same informacje o typie, jak Eksporter biblioteki typów, opisany w poprzedniej sekcji.
 
 **Klasa TypeLibConverter** implementuje <xref:System.Runtime.InteropServices.ITypeLibConverter>.
 
@@ -99,4 +97,4 @@ Klasa znajdująca się w przestrzeni nazw **System. Runtime. Interop** konwertuj
 - [Zagadnienia dotyczące zabezpieczeń zestawów](../../standard/assembly/security-considerations.md)
 - [Tlbexp.exe (eksporter biblioteki typów)](../tools/tlbexp-exe-type-library-exporter.md)
 - [Rejestrowanie zestawów do użycia z modelem COM](registering-assemblies-with-com.md)
-- [Instrukcje: Osadź biblioteki typów jako zasoby Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))
+- [Instrukcje: osadzanie bibliotek typów jako zasobów Win32 w aplikacjach](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

@@ -2,14 +2,12 @@
 title: 'ICorDebugVariableSymbol:: GetValue — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b72b9dbeff6aa06a132dc7ec3ddd9477553c4c2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967991"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120965"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol:: GetValue — Metoda
 Pobiera wartość zmiennej jako tablicę bajtów.  
@@ -32,16 +30,16 @@ HRESULT GetValue(
  podczas Przesunięcie początkowe w zmiennej, z której ma zostać odczytana wartość. Ten parametr jest używany podczas odczytywania pól elementu członkowskiego w obiekcie.  
   
  `cbContext`  
- podczas Rozmiar w bajtach `context` argumentu.  
+ podczas Rozmiar w bajtach argumentu `context`.  
   
  `context`  
  podczas Kontekst wątku używany do odczytywania wartości.  
   
  `cbValue`  
- podczas Rozmiar w bajtach `pValue` buforu.  
+ podczas Rozmiar w bajtach buforu `pValue`.  
   
  `pcbValue`  
- określoną Liczba bajtów rzeczywiście zapisywana `pValue` w buforze.  
+ określoną Liczba bajtów rzeczywiście zapisywana w buforze `pValue`.  
   
  `pValue`  
  określoną Tablica bajtów, która zawiera wartość zmiennej.  
@@ -52,13 +50,13 @@ HRESULT GetValue(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

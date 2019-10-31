@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ff9bb537a31e28dbd4b878c1bc04c96262f85ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3f57dc9279c107ce751f71c2998670ab992db162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927454"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118433"
 ---
-# <a name="remove-element-for-configsections"></a>\<Usuń element > dla \<configSections >
+# <a name="remove-element-for-configsections"></a>\<usunąć > elementu \<configSections >
 
 Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji.
 
 [ **\<> konfiguracji**](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<usuń >**
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,13 +34,13 @@ Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji.
 
 |           | Opis |
 | --------- | ----------- |
-| **name**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
+| **Nazwij**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 
 |     | Opis |
 | --- | ----------- |
-| [configSections, element >  **\<** ](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
+| [ **\<configSections >** Postaci](configsections-element-for-configuration.md) | Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -48,13 +48,13 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Można użyć elementu  **\<Remove >** , aby usunąć sekcje i grupy sekcji z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
+Można użyć elementu **\<remove >** , aby usunąć sekcje i grupy sekcji z aplikacji, które zostały zdefiniowane na wyższym poziomie w hierarchii plików konfiguracji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje,  **\<** jak używać elementu Remove > w pliku konfiguracyjnym aplikacji, aby usunąć sekcję wcześniej zdefiniowaną w pliku konfiguracyjnym komputera.
+Poniższy przykład pokazuje, jak użyć **\<usunąć >** elementu w pliku konfiguracyjnym aplikacji, aby usunąć sekcję wcześniej zdefiniowaną w pliku konfiguracji maszyny.
 
-Następujący kod pliku konfiguracji komputera deklaruje sekcję  **\<sampleSection >** :
+Następujący kod pliku konfiguracji komputera deklaruje sekcję **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ Następujący kod pliku konfiguracji komputera deklaruje sekcję  **\<sampleSect
 </configuration>
 ```
 
-Poniższy kod pliku konfiguracji aplikacji usuwa  **\<sekcję > sampleSection** . Po usunięciu aplikacja nie może pobrać ustawień w  **\<sampleSection >** .
+Poniższy kod pliku konfiguracji aplikacji usuwa sekcję **\<sampleSection >** . Po usunięciu aplikacja nie może pobrać ustawień w **\<sampleSection >** .
 
 ```xml
 <!-- Application configuration file -->

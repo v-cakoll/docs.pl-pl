@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: 1fbbf572-6d28-41a5-82fb-579ac90bfcf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5dc1ad5bd98899f82e0b52345710c5ea3da864b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943406"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103036"
 ---
 # <a name="imanagedobject-interface"></a>IManagedObject — Interfejs
-Zawiera metody służące do sterowania zarządzanego obiektu.  
+Zapewnia metody kontrolowania obiektu zarządzanego.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetObjectIdentity, metoda](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Pobiera tożsamość tego zarządzanego obiektu.|  
-|[GetSerializedBuffer, metoda](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Pobiera reprezentację ciągu tego zarządzanego obiektu.|  
+|[GetObjectIdentity, metoda](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|Pobiera tożsamość tego obiektu zarządzanego.|  
+|[GetSerializedBuffer, metoda](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|Pobiera ciąg reprezentujący ten obiekt zarządzany.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

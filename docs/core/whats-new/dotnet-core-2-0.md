@@ -1,15 +1,13 @@
 ---
 title: Co nowego w programie .NET Core 2.0
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849937"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100839"
 ---
 # <a name="whats-new-in-net-core-20"></a>Co nowego w programie .NET Core 2.0
 
@@ -30,13 +28,13 @@ W poprzednich wersjach programu .NET Core należy uruchomić polecenie [dotnet R
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Możesz również wyłączyć automatyczne wywoływanie `dotnet restore` przez `--no-restore` przekazanie przełącznika do `new`poleceń, `run`, `build`, `publish` `pack`, i `test` .
+Możesz również wyłączyć automatyczne wywoływanie `dotnet restore`, przekazując `--no-restore` Przełącz do poleceń `new`, `run`, `build`, `publish`, `pack`i `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Przekierowywanie do programu .NET Core 2,0
 
 Jeśli jest zainstalowany zestaw SDK programu .NET Core 2,0, projekty przeznaczone dla platformy .NET Core 1. x można przekierować do programu .NET Core 2,0.
 
-Aby przekierować do programu .NET Core 2,0, edytuj plik projektu, zmieniając wartość `<TargetFramework>` elementu (lub elementu, `<TargetFrameworks>` Jeśli masz więcej niż jeden obiekt docelowy w pliku projektu) od 1. x do 2,0:
+Aby przekierować do programu .NET Core 2,0, edytuj plik projektu przez zmianę wartości elementu `<TargetFramework>` (lub elementu `<TargetFrameworks>`, jeśli masz więcej niż jeden obiekt docelowy w pliku projektu) od 1. x do 2,0:
 
 ```xml
 <PropertyGroup>
@@ -74,7 +72,7 @@ Na przykład aby utworzyć Visual Basic aplikację "Hello world", wykonaj nastę
 
 1. Wprowadź polecenie `dotnet new console -lang vb`.
 
-   Polecenie tworzy plik projektu z `.vbproj` rozszerzeniem pliku wraz z Visual Basic plikiem kodu źródłowego o nazwie *program. vb*. Ten plik zawiera kod źródłowy do zapisu ciągu "Hello world!" do okna konsoli.
+   Polecenie tworzy plik projektu z rozszerzeniem pliku `.vbproj` wraz z Visual Basic plikiem kodu źródłowego o nazwie *program. vb*. Ten plik zawiera kod źródłowy do zapisu ciągu "Hello world!" do okna konsoli.
 
 1. Wprowadź polecenie `dotnet run`. [Interfejs wiersza polecenia platformy .NET Core](../tools/index.md) automatycznie kompiluje i wykonuje aplikację, która wyświetla komunikat "Hello World!" w oknie konsoli.
 
@@ -82,7 +80,7 @@ Na przykład aby utworzyć Visual Basic aplikację "Hello world", wykonaj nastę
 
 Program .NET Core 2,0 C# obsługuje 7,1, który dodaje wiele nowych funkcji, takich jak:
 
-- Metoda, punkt wejścia aplikacji, może być oznaczona za pomocą słowa kluczowego [Async.](../../csharp/language-reference/keywords/async.md) `Main`
+- Metoda `Main`, punkt wejścia aplikacji, może być oznaczona za pomocą słowa kluczowego [Async](../../csharp/language-reference/keywords/async.md) .
 - Wywnioskowane nazwy krotek.
 - Wyrażenia domyślne.
 
@@ -112,7 +110,7 @@ Platforma .NET Core 1. x w systemie macOS wymagała biblioteki kryptograficznej 
 
 Biblioteki klas .NET Standard 2,0 mogą również odwoływać się do bibliotek klas .NET Framework, pod warunkiem, że wywoła interfejsy API, które znajdują się w .NET Standard 2,0. Nie jest wymagana ponowna kompilacja bibliotek .NET Framework.
 
-Aby zapoznać się z listą interfejsów API, które zostały dodane do .NET Standard od momentu jego ostatniej wersji, .NET standard 1,6 [, zobacz .NET Standard 2,0 a. 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
+Aby zapoznać się z listą interfejsów API, które zostały dodane do .NET Standard od momentu jego ostatniej wersji, .NET Standard 1,6, zobacz [.NET Standard 2,0 a 1,6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 ### <a name="expanded-surface-area"></a>Rozwinięty obszar powierzchni
 
@@ -132,7 +130,7 @@ Program Visual Studio 2017 w wersji 15,3 i w niektórych przypadkach Visual Stud
 
 Jeśli jest zainstalowany zestaw SDK programu .NET Core 2,0, można przekierować projekty platformy .NET Core 1. x do bibliotek .NET Core 2,0 i .NET Standard 1. x do .NET Standard 2,0.
 
-Aby przekierować projekt w programie Visual Studio, Otwórz kartę **aplikacji** okna dialogowego właściwości projektu i zmień wartość **platformy docelowej** na **.net Core 2,0** lub **.NET Standard 2,0**. Możesz również ją zmienić, klikając prawym przyciskiem myszy projekt i wybierając opcję  **\*Edytuj plik CSPROJ** . Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [narzędzi](#tooling) wcześniej w tym temacie.
+Aby przekierować projekt w programie Visual Studio, Otwórz kartę **aplikacji** okna dialogowego właściwości projektu i zmień wartość **platformy docelowej** na **.net Core 2,0** lub **.NET Standard 2,0**. Można to również zmienić, klikając prawym przyciskiem myszy projekt i wybierając opcję **edytuj \*. csproj** . Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [narzędzi](#tooling) wcześniej w tym temacie.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>Obsługa funkcji Live Unit Testing dla platformy .NET Core
 

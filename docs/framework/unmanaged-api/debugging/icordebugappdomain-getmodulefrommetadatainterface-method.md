@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f35225b3-5dda-4d5a-913d-b3373e9ab81e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 48249bb634c301b7fda2c360c3b793e9206a759a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c8469c9aa875e7d567229e9949d83083cbe54987
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737901"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110344"
 ---
 # <a name="icordebugappdomaingetmodulefrommetadatainterface-method"></a>ICorDebugAppDomain::GetModuleFromMetaDataInterface — Metoda
-Pobiera moduł, który odnosi się do interfejsu określonych metadanych.  
+Pobiera moduł, który odnosi się do podanego interfejsu metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +36,16 @@ HRESULT GetModuleFromMetaDataInterface (
   
 ## <a name="parameters"></a>Parametry  
  `pIMetaData`  
- [in] Wskaźnik do obiektu, który jest jednym z [interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
+ podczas Wskaźnik do obiektu, który jest jednym z [interfejsów metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md).  
   
  `ppModule`  
- [out] Wskaźnik na adres obiektu ICorDebugModule, który reprezentuje Moduł odpowiadający interfejsowi określonych metadanych.  
+ określoną Wskaźnik do adresu obiektu ICorDebugModule, który reprezentuje moduł odpowiadający podanemu interfejsowi metadanych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

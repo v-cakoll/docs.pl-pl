@@ -8,29 +8,27 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d457a9c22f0eaea02fe744ebb24d02558710948b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aed3b18c154d4b7a4390b28fb1f14536690f6b3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121327"
 ---
 # <a name="blocking-application-execution-by-ending-an-async-operation"></a>Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
-Aplikacje, które nie mogą w dalszym ciągu wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej należy zablokować, aż do zakończenia operacji. Blokowanie wątku głównego aplikacji podczas oczekiwania na zakończenie operacji asynchronicznej, użyj jednej z następujących opcji:  
+Aplikacje, które nie mogą kontynuować wykonywania innych zadań podczas oczekiwania na wyniki operacji asynchronicznej, muszą być blokowane do momentu zakończenia operacji. Użyj jednej z następujących opcji, aby zablokować główny wątek aplikacji podczas oczekiwania na ukończenie operacji asynchronicznej:  
   
-- Wywoływanie operacji asynchronicznych **zakończenia**_OperationName_ metody. To podejście jest przedstawiona w tym temacie.  
+- Wywołaj metodę **kończenia**_operacji operacji_ asynchronicznej. Ta metoda jest przedstawiona w tym temacie.  
   
-- Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć**_OperationName_ metody. Aby uzyskać przykład demonstrujący takie podejście, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+- Użyj właściwości <xref:System.IAsyncResult.AsyncWaitHandle%2A> <xref:System.IAsyncResult> zwrócone przez metodę **BEGIN**_OperationName_ operacji asynchronicznej. Przykład demonstrujący tę metodę można znaleźć w temacie [blokowanie wykonywania aplikacji przy użyciu AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
- Aplikacje, które używają **zakończenia**_OperationName_ zazwyczaj wywoła metodę, aby zablokować do czasu ukończenia operacji asynchronicznej **rozpocząć**  _OperationName_ metody, wykonać wszelkie prace, które może odbywać się bez wyników operacji, a następnie wywołaj **zakończenia**_OperationName_.  
+ Aplikacje korzystające z metody **End**_OperationName_ do blokowania do momentu ukończenia operacji asynchronicznej zwykle wywołują metodę **BEGIN**_OperationName_ , wykonując wszelkie zadania, które można wykonać bez wyników , a następnie Wywołaj **zakończenie**_operacji_.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu demonstruje, za pomocą metod asynchronicznych we <xref:System.Net.Dns> klasy do pobrania informacji System nazw domen dla komputera określonego przez użytkownika. Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametry ponieważ tych argumentów nie są wymagane w przypadku korzystania z tej metody.  
+ Poniższy przykład kodu demonstruje użycie metod asynchronicznych w klasie <xref:System.Net.Dns> do pobrania informacji o systemie nazw domen dla komputera określonego przez użytkownika. Należy zauważyć, że `null` (`Nothing` w Visual Basic) są przesyłane do parametrów <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` i `stateObject`, ponieważ te argumenty nie są wymagane podczas korzystania z tego podejścia.  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  

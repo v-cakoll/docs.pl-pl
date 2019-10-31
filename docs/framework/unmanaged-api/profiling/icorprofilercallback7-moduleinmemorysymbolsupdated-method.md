@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: f362a896-3247-4894-9727-e48dbbcd2c78
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860ecde22dead112a42b6ac868e34f0e9cd3531d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f6dd10d196ffd3a653584e1bc8d1a5643850bc33
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136609"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a>ICorProfilerCallback7:: ModuleInMemorySymbolsUpdated, Metoda
 [Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
@@ -32,7 +30,7 @@ HRESULT ModuleInMemorySymbolsUpdated(
 ```  
   
 ## <a name="parameters"></a>Parametry  
- podczas`moduleId`  
+ [in] `moduleId`  
  Identyfikator modułu w pamięci, którego strumień symboli został zaktualizowany.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -41,16 +39,16 @@ HRESULT ModuleInMemorySymbolsUpdated(
 > [!NOTE]
 > To zdarzenie nie jest obecnie wywoływane dla symboli niejawnie utworzonych lub zmodyfikowanych za pośrednictwem <xref:System.Reflection.Emit> interfejsów API.  
   
- Nawet jeśli symbole są dostarczane z góry w wywołaniu jednego z przeciążeń metod zarządzanych <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> , które `rawSymbolStore` zawierają argument, aby określić symbole dla zestawu, środowisko uruchomieniowe może w rzeczywistości nie skojarzyć danych symbolicznych z modułem do momentu wystąpienia wywołania zwrotnego [ModuleLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) . To zdarzenie umożliwia późniejsze zbieranie symboli dla takich modułów.  
+ Nawet w przypadku podania symboli przede wszystkim w wywołaniu jednego z przeciążeń zarządzanych metod <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType>, które zawierają `rawSymbolStore` argument do określenia symboli dla zestawu, środowisko uruchomieniowe może nie skojarzyć danych symbolicznych z modułem do momentu Nastąpiło wywołanie zwrotne [ModuleLoadFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) . To zdarzenie umożliwia późniejsze zbieranie symboli dla takich modułów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

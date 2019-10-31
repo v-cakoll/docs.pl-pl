@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41602053-8670-4827-9d61-cbfcba509b9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12c571f478f15a0b72168977f12623be1c4a08a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39c35884d0fb53baefafbf86391a349e141418a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749159"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141313"
 ---
 # <a name="ihostthreadpoolmanagerqueueuserworkitem-method"></a>IHostThreadPoolManager::QueueUserWorkItem — Metoda
-Kolejki funkcję do wykonania i określa obiekt zawierający dane, które ma być używany przez tę funkcję. Funkcja wykonuje, gdy wątek stanie się dostępna.  
+Kolejkuje funkcję do wykonania i określa obiekt zawierający dane, które mają być używane przez tę funkcję. Funkcja jest wykonywana po udostępnieniu wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,36 +37,36 @@ HRESULT QueueUserWorkItem (
   
 ## <a name="parameters"></a>Parametry  
  `Function`  
- [in] Wskaźnik funkcji, która reprezentuje funkcję do wykonania.  
+ podczas Wskaźnik funkcji, który reprezentuje funkcję do wykonania.  
   
  `Context`  
- [in] Obiekt, który zawiera dane używane przez `Function`.  
+ podczas Obiekt, który zawiera dane, które mają być używane przez `Function`.  
   
  `Flags`  
- [in] Jedną z flag wartości, zgodnie z definicją dla Win32 `QueueUserWorkItem` metody, które sterują wykonywania.  
+ podczas Jedna z wartości flag, zgodnie z definicją dla metody `QueueUserWorkItem` Win32, która kontroluje wykonanie.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`QueueUserWorkItem` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`QueueUserWorkItem` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `QueueUserWorkItem` umieszcza w kolejce elementu roboczego do wątku roboczego w puli wątków. Jego typy podpisu i parametru są identyczne z odpowiedniej funkcji Win32, która ma taką samą nazwę. Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.  
+ `QueueUserWorkItem` kolejkuje element roboczy do wątku roboczego w puli wątków. Jego sygnatura i typy parametrów są identyczne z odpowiednimi funkcjami Win32, które mają taką samą nazwę. Aby uzyskać więcej informacji, zobacz dokumentację platformy systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - WritePropertyValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a3c42129835f9b30bed493a0992d49d7e2a458e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f02fb3877d55e9f47384b281573202712c29c606
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798184"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73107289"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue, funkcja
 Zapisuje określoną liczbę bajtów do właściwości identyfikowanej przez uchwyt właściwości.
@@ -71,16 +69,16 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) .
 
-Użyj tej funkcji, aby ustawić ciąg i wszystkie inne`DWORD` `QWORD` dane, które nie są danymi.
+Użyj tej funkcji, aby ustawić ciąg i wszystkie inne`DWORD` lub nie`QWORD` dane.
 
-W przypadku wartości właściwości, które `lNumBytes` nie są ciągami, musi być poprawnym rozmiarem danych określonego typu właściwości. W przypadku wartości właściwości ciągu `lNumBytes` , musi być długością określonego ciągu w bajtach, a sam ciąg musi mieć długość w bajtach i mieć znak zakończenia o wartości null.
+W przypadku wartości właściwości niebędących ciągami `lNumBytes` musi być prawidłowym rozmiarem danych określonego typu właściwości. W przypadku wartości właściwości ciągu `lNumBytes` musi być długością określonego ciągu w bajtach, a sam ciąg musi mieć długość w bajtach i mieć znak zakończenia o wartości null.
 
 ## <a name="requirements"></a>Wymagania  
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

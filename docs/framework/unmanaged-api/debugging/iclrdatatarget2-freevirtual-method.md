@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 26fb69f8-1467-4711-bd24-cb117c63938f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d51c445d6f375f805253b9f640ab61ab3dccc58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c084a3fcbbc02504124a511c6e136be32f408d21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738491"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112323"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual — Metoda
-Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych w celu zwolnienia pamięci, która była przydzielona wcześniej w przestrzeni adresowej procesu docelowego.  
+Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do wolnej pamięci, która została wcześniej przydzielone w przestrzeni adresowej procesu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,27 +37,27 @@ HRESULT FreeVirtual(
   
 ## <a name="parameters"></a>Parametry  
  `addr`  
- [in] A `CLRDATA_ADDRESS` wartość, która określa początkowy adres pamięci, który ma zostać zwolniony.  
+ podczas Wartość `CLRDATA_ADDRESS`, która określa początkowy adres pamięci, która ma zostać zwolniona.  
   
  `size`  
- [in] Rozmiar w bajtach, pamięci, który ma zostać zwolniony.  
+ podczas Rozmiar (w bajtach) pamięci, która ma zostać zwolniona.  
   
  `typeFlags`  
- [in] Flagi sterujące zwalnianie pamięci. Zobacz Win32 `VirtualFree` funkcji.  
+ podczas Flagi kontrolujące zwalnianie pamięci. Zobacz funkcję Win32 `VirtualFree`.  
   
 ## <a name="remarks"></a>Uwagi  
- `FreeVirtual` Metody służy jako logiczne otoki dla Win32 `VirtualFree` funkcji.  
+ Metoda `FreeVirtual` służy jako otoka logiczna dla funkcji Win32 `VirtualFree`.  
   
- Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

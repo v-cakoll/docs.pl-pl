@@ -1,15 +1,15 @@
 ---
 title: 'Samouczek: kategoryzowanie problemów z pomocą techniczną — Klasyfikacja wieloklasowa'
 description: Dowiedz się, jak używać ML.NET w scenariuszu klasyfikacji wieloklasowej do klasyfikowania problemów z usługi GitHub w celu przypisywania ich do danego obszaru.
-ms.date: 09/30/2019
+ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 7507463cfc5504182f028ab2ced9a03733c61f6d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1cd213653c23c4d713e03d53394885f1f3ebb6f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774485"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73094590"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Samouczek: kategoryzowanie problemów z pomocą techniczną przy użyciu klasyfikacji wieloklasowej z .NET ML
 
@@ -91,7 +91,7 @@ Usuń istniejącą definicję klasy i Dodaj następujący kod, który ma dwie kl
 
 [!code-csharp[DeclareGlobalVariables](~/samples/machine-learning/tutorials/GitHubIssueClassification/GitHubIssueData.cs#DeclareTypes)]
 
-@No__t_0 to kolumna, która ma zostać przewidywalna. Zidentyfikowane `Features` są danymi wejściowymi, które dają model do przewidywania etykiet.
+`label` to kolumna, która ma zostać przewidywalna. Zidentyfikowane `Features` są danymi wejściowymi, które dają model do przewidywania etykiet.
 
 Użyj [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) , aby określić indeksy kolumn źródłowych w zestawie danych.
 
@@ -102,7 +102,7 @@ Użyj [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute) , aby ok
 * Trzecia kolumna `Title` (tytuł problemu GitHub) to pierwszy `feature` używany do przewidywania `Area`
 * czwarta kolumna `Description` jest drugim `feature` używanym do przewidywania `Area`
 
-`IssuePrediction` jest klasą używaną do przewidywania po przeszkoleniu modelu. Ma on jeden `string` (`Area`) i `PredictedLabel` `ColumnName` atrybut.  @No__t_0 jest używany podczas przewidywania i oceny. W celu dokonania oceny dane wejściowe z danymi szkoleniowymi, przewidywane wartości i model są używane.
+`IssuePrediction` jest klasą używaną do przewidywania po przeszkoleniu modelu. Ma on jeden `string` (`Area`) i `PredictedLabel` `ColumnName` atrybut.  `PredictedLabel` jest używany podczas przewidywania i oceny. W celu dokonania oceny dane wejściowe z danymi szkoleniowymi, przewidywane wartości i model są używane.
 
 Wszystkie operacje ML.NET są uruchamiane w klasie [MLContext](xref:Microsoft.ML.MLContext) . Inicjowanie `mlContext` tworzy nowe środowisko ML.NET, które może być współużytkowane przez obiekty przepływu pracy tworzenia modelu. Jest to podobne, pojęciowo, aby `DBContext` w `Entity Framework`.
 
@@ -210,7 +210,7 @@ Dopasuj model do `splitTrainSet` danych i zwróć przeszkolony model, dodając n
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
 
-@No__t_0method pociąga za Ciebie swój model poprzez transformowanie zestawu danych i zastosowanie szkolenia.
+Metoda `Fit()`pociąga za siebie model poprzez transformowanie zestawu danych i zastosowanie szkolenia.
 
 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) jest WYGODNYm interfejsem API, który pozwala na przekazywanie danych, a następnie wykonywanie prognozowania na jednym wystąpieniu. Dodaj tę wartość jako następny wiersz w `BuildAndTrainModel()` metodzie:
 
@@ -272,13 +272,13 @@ Zwróć uwagę na użycie metody [Transform ()](xref:Microsoft.ML.ITransformer.T
 
 Następujące metryki są oceniane dla klasyfikacji wieloklasowej:
 
-* Mikro-dokładność — każda para klasy próbek bezproblemowo przyczynia się do metryki dokładności.  Potrzebujesz Micro dokładności, jak najbliżej 1.
+* Mikro-dokładność — każda para klasy próbek bezproblemowo przyczynia się do metryki dokładności.  Chcesz, aby program Micro dokładności był możliwie blisko jednej, jak to możliwe.
 
-* Dokładność makra — każda klasa przyczynia się równo do metryki dokładności. Klasy mniejszości są traktowane jako takie same wagi jak większe klasy. Dokładność makra powinna być jak najbliżej 1, jak to możliwe.
+* Dokładność makra — każda klasa przyczynia się równo do metryki dokładności. Klasy mniejszości są traktowane jako takie same wagi jak większe klasy. Dokładność makra powinna być jak najbliżej jednego z nich.
 
 * Dziennik — utrata — zobacz [Dziennik strat](../resources/glossary.md#log-loss). Utrata dziennika powinna być jak najbliżej zera.
 
-* Redukcja utraconych plików dziennika — zakresy z [-inf, 100], gdzie 100 są idealnym przewidywaniam, a wartość 0 oznacza przewidywania. Zmniejszenie liczby utraconych dzienników może być zbliżone do zera, jak to możliwe.
+* Redukcja utraconych plików dziennika — zakresy z [-inf, 1,00], gdzie 1,00 są idealnym przewidywaniam, a wartość 0 oznacza przewidywania. Zmniejszenie liczby utraconych dzienników jest możliwie najbliżej jednego z nich.
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>Wyświetlanie metryk na potrzeby walidacji modelu
 

@@ -1,5 +1,5 @@
 ---
-title: Metoda ICorDebugVariableHome::GetSlotIndex
+title: 'ICorDebugVariableHome:: GetSlotIndex, Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetSlotIndex
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfc2e91599e7f05d90d56af07b71313e9eecaa51
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760346"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121051"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a>Metoda ICorDebugVariableHome::GetSlotIndex
-Pobiera zarządzane miejsce indeks zmiennej lokalnej.  
+# <a name="icordebugvariablehomegetslotindex-method"></a>ICorDebugVariableHome:: GetSlotIndex, Metoda
+Pobiera zarządzany indeks szczeliny zmiennej lokalnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,27 +35,27 @@ HRESULT GetSlotIndex(
   
 ## <a name="parameters"></a>Parametry  
  `pSlotIndex`  
- [out] Wskaźnik do gniazda indeksu do zmiennej lokalnej.  
+ określoną Wskaźnik do indeksu szczeliny zmiennej lokalnej.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda zwraca następujące wartości.  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`S_OK`|Wywołanie metody zwróciła wartość indeksu miejsca w `pSlotIndex`.|  
-|`E_FAIL`|Bieżący [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) wystąpienie reprezentuje argumentu funkcji.|  
+|`S_OK`|Wywołanie metody zwróciło wartość indeksu szczeliny w `pSlotIndex`.|  
+|`E_FAIL`|Bieżące wystąpienie [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) reprezentuje argument funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
- Indeks gniazda może służyć do pobierania metadanych dla tej zmiennej lokalnej.  
+ Za pomocą indeksu miejsca można pobrać metadane dla tej zmiennej lokalnej.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

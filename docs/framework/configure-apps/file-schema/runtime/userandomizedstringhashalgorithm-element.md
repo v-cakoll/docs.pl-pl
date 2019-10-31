@@ -1,5 +1,5 @@
 ---
-title: <UseRandomizedStringHashAlgorithm>, element
+title: <UseRandomizedStringHashAlgorithm> Element
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,19 @@ helpviewer_keywords:
 - UseRandomizedStringHashAlgorithm element
 - <UseRandomizedStringHashAlgorithm> element
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49b53dcd4db7e0ac1e9079e763b8ed76c1088e0e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cc9708b8cca6520932fbf0e1975a05cad5fad485
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252200"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115041"
 ---
-# <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm> Element
+# <a name="userandomizedstringhashalgorithm-element"></a>\<element > UseRandomizedStringHashAlgorithm
 Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie poszczególnych domen aplikacji.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm>**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseRandomizedStringHashAlgorithm >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,14 +56,14 @@ Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrót�
 |`runtime`|Zawiera informacje dotyczące opcji inicjowania środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie <xref:System.StringComparer> Klasa<xref:System.String.GetHashCode%2A?displayProperty=nameWithType> i Metoda używają jednego algorytmu wyznaczania wartości skrótu, który tworzy spójny kod skrótu w różnych domenach aplikacji. Jest to równoznaczne z ustawieniem `enabled` atrybutu `<UseRandomizedStringHashAlgorithm>` elementu na `0`. Jest to algorytm wyznaczania wartości skrótu używany w .NET Framework 4.  
+ Domyślnie Klasa <xref:System.StringComparer> i Metoda <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> używają jednego algorytmu wyznaczania wartości skrótu, który tworzy spójny kod skrótu w różnych domenach aplikacji. Jest to równoznaczne z ustawieniem atrybutu `enabled` elementu `<UseRandomizedStringHashAlgorithm>` do `0`. Jest to algorytm wyznaczania wartości skrótu używany w .NET Framework 4.  
   
- <xref:System.StringComparer> Klasa<xref:System.String.GetHashCode%2A?displayProperty=nameWithType> i metoda mogą również używać innego algorytmu wyznaczania wartości skrótu, który oblicza kody skrótów dla poszczególnych domen aplikacji. W związku z tym kody skrótów dla równoważnych ciągów różnią się w różnych domenach aplikacji. Jest to funkcja opcjonalna. Aby skorzystać z niego, należy ustawić `enabled` atrybut `<UseRandomizedStringHashAlgorithm>` elementu na `1`.  
+ Klasy <xref:System.StringComparer> i metody <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> mogą również używać innego algorytmu wyznaczania wartości skrótu, który oblicza kody skrótów dla poszczególnych domen aplikacji. W związku z tym kody skrótów dla równoważnych ciągów różnią się w różnych domenach aplikacji. Jest to funkcja opcjonalna. Aby móc korzystać z tej funkcji, należy ustawić atrybut `enabled` elementu `<UseRandomizedStringHashAlgorithm>` na `1`.  
   
- Wyszukiwanie ciągu w tabeli skrótów jest zazwyczaj operacją O (1). Jednak w przypadku wystąpienia dużej liczby kolizji wyszukiwanie może być operacją O (n<sup>2</sup>). Można użyć `<UseRandomizedStringHashAlgorithm>` elementu konfiguracji, aby wygenerować losowy algorytm wyznaczania wartości skrótu na domenę aplikacji, co z kolei ogranicza liczbę potencjalnych kolizji, szczególnie gdy klucze, z których są obliczane kody skrótów, są oparte na danych wejściowych. przez użytkowników.  
+ Wyszukiwanie ciągu w tabeli skrótów jest zazwyczaj operacją O (1). Jednak w przypadku wystąpienia dużej liczby kolizji wyszukiwanie może być operacją O (n<sup>2</sup>). Można użyć elementu konfiguracji `<UseRandomizedStringHashAlgorithm>`, aby wygenerować losowy algorytm wyznaczania wartości skrótu na domenę aplikacji, co z kolei ogranicza liczbę potencjalnych kolizji, zwłaszcza gdy klucze, z których są obliczane kody skrótów są oparte na danych wejściowych przez użytkownikowi.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano `DisplayString` klasę, która zawiera znak prywatny w postaci `s`ciągu, którego wartością jest "to jest ciąg". Zawiera `ShowStringHashCode` również metodę, która wyświetla wartość ciągu i jego kod skrótu wraz z nazwą domeny aplikacji, w której jest wykonywana metoda.  
+ W poniższym przykładzie zdefiniowano klasę `DisplayString`, która zawiera ciąg prywatny, `s`, którego wartością jest "to jest ciąg". Zawiera również metodę `ShowStringHashCode`, która wyświetla wartość ciągu i jego kod skrótu wraz z nazwą domeny aplikacji, w której jest wykonywana metoda.  
   
  [!code-csharp[System.String.GetHashCode#2](../../../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.String.GetHashCode/CS/perdomain.cs#2)]
  [!code-vb[System.String.GetHashCode#2](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.String.GetHashCode/VB/perdomain.vb#2)]  

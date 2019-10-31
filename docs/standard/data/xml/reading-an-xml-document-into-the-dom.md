@@ -6,29 +6,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4fb291f-5630-49ba-a49a-5b66c3b71e49
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9031f5df0d0f48dc2844cdfd0654ee4ab876cc22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e61a9ed1a1ccaa2f9f1543efa1d33c3fcf00061
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130829"
 ---
 # <a name="reading-an-xml-document-into-the-dom"></a>Wczytywanie dokumentu XML do modelu DOM
-Informacje o XML jest do odczytu do pamięci z różnych formatów. Może być odczytany z ciągu, strumienia, adres URL, czytnika tekstu lub klasę pochodną <xref:System.Xml.XmlReader>.  
+Informacje XML są odczytywane w pamięci z różnych formatów. Można go odczytać z ciągu, strumienia, adresu URL, czytnika tekstu lub klasy pochodnej <xref:System.Xml.XmlReader>.  
   
- <xref:System.Xml.XmlDocument.Load%2A> Metoda udostępnia dokument do pamięci i ma skonfigurowane przeciążone metody dostępne dla pobierają dane z każdego z różnych formatów. Istnieje również <xref:System.Xml.XmlDocument.LoadXml%2A> metodę, która odczytuje XML z ciągu.  
+ Metoda <xref:System.Xml.XmlDocument.Load%2A> przenosi dokument do pamięci i ma dostępne przeciążone metody, aby pobrać dane z każdego z różnych formatów. Istnieje również Metoda <xref:System.Xml.XmlDocument.LoadXml%2A>, która odczytuje dane XML z ciągu.  
   
- Różne <xref:System.Xml.XmlDocument.Load%2A> metody wpływają na węzły, które są tworzone po załadowaniu XML Document Object Model (DOM). W poniższej tabeli przedstawiono różnice między część <xref:System.Xml.XmlDocument.Load%2A> metody i tematy, które ich dotyczą.  
+ Różne metody <xref:System.Xml.XmlDocument.Load%2A> mają wpływ na to, które węzły są tworzone podczas ładowania Document Object Model XML (DOM). W poniższej tabeli wymieniono różnice między niektórymi metodami <xref:System.Xml.XmlDocument.Load%2A> i tematami.  
   
-|Subject|Temat|  
+|Temat|Temat|  
 |-------------|-----------|  
-|Tworzenie węzły odstępów|Obiekt używany do załadowania modelu DOM ma to wpływu na biały i istotnych białych węzłów generowane w modelu DOM. Aby uzyskać więcej informacji, zobacz [biały znak i znaczące biały znak obsługi podczas ładowania modelu DOM](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
-|Podczas ładowania XML, zaczynając od określonego węzła lub ładowania całego dokumentu XML|Za pomocą <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> danych metody mogą być ładowane z określonego węzła do modelu DOM. Aby uzyskać więcej informacji, zobacz [ładowanie danych z czytnika](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
-|Walidacja kodu XML w postaci, w jakiej jest ładowany.|Mogą być sprawdzone dane XML załadowane do modelu DOM, ponieważ jest on ładowany. Jest to realizowane przy użyciu sprawdzania poprawności <xref:System.Xml.XmlReader>. Aby uzyskać więcej informacji na temat sprawdzania poprawności XML, ponieważ jest on ładowany zobacz [Weryfikowanie dokumentu XML w modelu DOM](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
+|Tworzenie białych węzłów spacji|Obiekt użyty do załadowania modelu DOM ma wpływ na białe miejsce i znaczące węzły odstępu wygenerowane w modelu DOM. Aby uzyskać więcej informacji, zobacz [biały znak i znaczący biały znak podczas ładowania modelu dom](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md).|  
+|Ładowanie kodu XML począwszy od określonego węzła lub ładowanie całego dokumentu XML|Przy użyciu danych metody <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> można ładować z określonego węzła do modelu DOM. Aby uzyskać więcej informacji, zobacz [ładowanie danych z czytnika](../../../../docs/standard/data/xml/load-data-from-a-reader.md).|  
+|Sprawdzanie poprawności kodu XML w trakcie jego ładowania|Dane XML ładowane do modelu DOM mogą być zweryfikowane w miarę ich ładowania. Jest to realizowane przy użyciu walidacji <xref:System.Xml.XmlReader>. Aby uzyskać więcej informacji na temat walidacji kodu XML w trakcie jego ładowania, zobacz [Walidacja dokumentu XML w modelu dom](../../../../docs/standard/data/xml/validating-an-xml-document-in-the-dom.md).|  
   
- W poniższym przykładzie pokazano XML ładowany z <xref:System.Xml.XmlDocument.LoadXml%2A> metody i danych, następnie zapisywane do pliku tekstowego o nazwie `data.xml`.  
+ Poniższy przykład pokazuje, że kod XML jest ładowany przy użyciu metody <xref:System.Xml.XmlDocument.LoadXml%2A>, a dane są następnie zapisywane w pliku tekstowym o nazwie `data.xml`.  
   
 ```vb  
 Imports System  

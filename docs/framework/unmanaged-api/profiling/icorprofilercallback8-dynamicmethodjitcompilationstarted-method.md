@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method
+title: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted Metoda
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,19 +8,17 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136463"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted Method
-[Obsługiwane w programie .NET Framework 4.7 i nowszych wersjach]  
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted Metoda
+[Obsługiwane w .NET Framework 4,7 i nowszych wersjach]  
   
-Powiadamia program profilujący, zawsze wtedy, gdy rozpoczęto kompilację JIT metodę dynamiczną.  
+Powiadamia profiler za każdym razem, gdy została rozpoczęta kompilacja JIT metody dynamicznej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,34 +33,34 @@ HRESULT DynamicMethodJITCompilationStarted(
   
 ## <a name="parameters"></a>Parametry  
 [in] `functionId`  
-Identyfikator funkcji w pamięci, dla których JIT kompilacja jest uruchomiona.   
+Identyfikator funkcji w pamięci, dla której uruchomiono kompilację JIT.   
 
 [in] `fIsSafeToBlock`   
-`true` Aby wskazać, że blokuje może spowodować, że środowisko uruchomieniowe oczekiwania na wątek wywołujący, zostać zwrócony przez to wywołanie zwrotne; `false` do wskazania, że blokuje nie wpłynie na funkcjonowanie środowiska uruchomieniowego.  
+`true` wskazujący, że blokowanie może spowodować, że środowisko uruchomieniowe będzie oczekiwać na zwrócenie przez wątek wywołujący z tego wywołania zwrotnego; `false` wskazujący, że blokowanie nie ma wpływu na działanie środowiska uruchomieniowego.  
 
 [in] `pILHeader`    
-Wskaźnik do pierwszego bajtu nagłówek IL metody.   
+Wskaźnik do pierwszego bajtu nagłówka IL metody.   
 
 [in] `cbILHeader`    
 Liczba bajtów w nagłówku IL. 
 
 ## <a name="remarks"></a>Uwagi  
 
-To wywołanie zwrotne jest wywoływane zawsze wtedy, gdy metoda dynamiczna kompilowanego dokładnie na czas. Obejmuje to różne wycinki kodu IL i LCG metody. Jego celem jest zapewnienie autorzy profilera wystarczających informacji do identyfikowania metody skompilowanej dla użytkowników.
+To wywołanie zwrotne jest wyzwalane za każdym razem, gdy metoda dynamiczna jest skompilowana w trybie JIT. Obejmuje to różne metody pośredniczące IL i LCG. Celem jest zapewnienie autorom profilera wystarczającej ilości informacji do zidentyfikowania skompilowanej metody dla użytkowników.
 
 > [!NOTE]
-> `functionId` Nie można użyć wartości do rozpoznawania tokenów metadanych, ponieważ metody dynamiczne mają Brak metadanych.
+> wartości `functionId` nie można użyć do rozpoznania swoich tokenów metadanych, ponieważ metody dynamiczne nie mają metadanych.
 
-`pILHeader` Wskaźnik jest prawidłowy tylko podczas wywołania zwrotnego.
+Wskaźnik `pILHeader` jest prawidłowy tylko podczas wywołania zwrotnego.
 
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffd0f708-0d21-4fae-a395-63b6c45828fa
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6eb93b84baf9dcd82d89bb1a4711a91d97c52779
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64304b671532325bdc2f8841a2702d537d143330
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124037"
 ---
 # <a name="icordebugfunctioncreatebreakpoint-method"></a>ICorDebugFunction::CreateBreakpoint — Metoda
 Tworzy punkt przerwania na początku tej funkcji.  
@@ -37,13 +35,13 @@ HRESULT CreateBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `ppBreakpoint`  
- [out] Wskaźnik na adres icordebugfunctionbreakpoint — obiekt, który reprezentuje nowy punkt przerwania funkcji.  
+ określoną Wskaźnik do adresu obiektu ICorDebugFunctionBreakpoint, który reprezentuje nowy punkt przerwania dla funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

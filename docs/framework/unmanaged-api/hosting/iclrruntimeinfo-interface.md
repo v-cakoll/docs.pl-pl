@@ -14,43 +14,41 @@ helpviewer_keywords:
 ms.assetid: 287e5ede-b3a7-4ef8-a756-4fca3f285a82
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6608b03df80fa37ebf5049b53bce46da3e155e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771728"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120363"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo — Interfejs
-Udostępnia metody, które zwracają informacji na temat określonych środowisko uruchomieniowe języka wspólnego (CLR), m.in. Wersja katalogu i stan obciążenia. Ten interfejs zapewnia również funkcje specyficzne dla środowiska uruchomieniowego bez inicjowania środowiska uruchomieniowego. Zawiera ona względna środowiska uruchomieniowego [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) metody, środowisko uruchomieniowe specyficzne dla modułu [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) metody i interfejsy dostarczane przez środowisko uruchomieniowe za pośrednictwem [getinterface —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)metody.  
+Dostarcza metody, które zwracają informacje o konkretnym środowisku uruchomieniowym języka wspólnego (CLR), w tym o wersji, katalogu i stanie ładowania. Ten interfejs zapewnia również funkcje specyficzne dla środowiska uruchomieniowego bez inicjalizacji środowiska uruchomieniowego. Obejmuje metodę [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) względną dla środowiska uruchomieniowego, metodę [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) specyficzną dla modułu środowiska uruchomieniowego i interfejsy dostarczone przez środowisko uruchomieniowe za pomocą metody [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md) .  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[BindAsLegacyV2Runtime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)|Wiąże się to środowisko uruchomieniowe dla wszystkich starszej wersji środowiska CLR w wersji 2 aktywacji decyzji dotyczących zasad.|  
-|[GetDefaultStartupFlags, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getdefaultstartupflags-method.md)|Pobiera flagi uruchamiania środowiska CLR i pliku konfiguracyjnego hosta.|  
-|[GetInterface, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)|Ładuje środowisko CLR do bieżący proces i zwraca środowiska uruchomieniowego, wskaźniki interfejsu, takich jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [iclrstrongname —](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) i [imetadatadispenser —](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md). Ta metoda zastępuje wszystkie `CorBindTo*` funkcji.|  
-|[GetProcAddress, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)|Pobiera adres określonej funkcji, który został wyeksportowany ze środowiska CLR skojarzony z tym interfejsem. Ta metoda zastępuje [getrealprocaddress —](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) metody.|  
-|[GetRuntimeDirectory, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)|Pobiera katalog instalacyjny środowiska CLR skojarzony z tym interfejsem. Ta metoda zastępuje [GetCORSystemDirectory](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) metody.|  
-|[GetVersionString, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getversionstring-method.md)|Pobiera (CLR) wersja informacje CLR skojarzony z danym [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu. Ta metoda zastępuje [getrequestedruntimeinfo —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) i [getrequestedruntimeversion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) metody.|  
-|[IsLoadable, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isloadable-method.md)|Wskazuje, czy środowisko uruchomieniowe skojarzona z tym interfejsem, może być załadowany do bieżącego procesu, biorąc pod uwagę innych środowisk wykonawczych, które mogą już być załadowany do procesu.|  
-|[IsLoaded, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isloaded-method.md)|Wskazuje, czy środowisko CLR skojarzony z [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu jest załadowany do procesu.|  
-|[IsStarted, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isstarted-method.md)|Wskazuje, czy CLR, która jest skojarzona z [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejs został uruchomiony.|  
-|[LoadErrorString, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loaderrorstring-method.md)|Tłumaczy wartość HRESULT do odpowiedniego komunikatu o błędzie dla określonej kultury. Ta metoda zastępuje [loadstringrc —](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md) i [loadstringrcex —](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md) metody.|  
-|[LoadLibrary, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)|Ładuje bibliotekę z katalogu framework, CLR reprezentowany przez [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfejsu. Ta metoda zastępuje [LoadLibraryShim](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) metody.|  
-|[SetDefaultStartupFlags, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)|Ustawia flagi uruchamiania środowiska CLR i hosta pliku konfiguracji.|  
+|[BindAsLegacyV2Runtime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)|Tworzy powiązanie tego środowiska uruchomieniowego ze wszystkimi starszymi decyzjami zasad aktywacji środowiska CLR w wersji 2.|  
+|[GetDefaultStartupFlags, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getdefaultstartupflags-method.md)|Pobiera flagi uruchamiania środowiska CLR i plik konfiguracji hosta.|  
+|[GetInterface, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)|Ładuje środowisko CLR do bieżącego procesu i zwraca wskaźniki interfejsu środowiska uruchomieniowego, takie jak [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md), [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) i [IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md). Ta metoda zastępuje wszystkie funkcje `CorBindTo*`.|  
+|[GetProcAddress, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)|Pobiera adres określonej funkcji, która została wyeksportowana z CLR skojarzonej z tym interfejsem. Ta metoda zastępuje metodę [GetRealProcAddress —](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md) .|  
+|[GetRuntimeDirectory, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)|Pobiera katalog instalacji środowiska CLR skojarzonego z tym interfejsem. Ta metoda zastępuje metodę [GetCORSystemDirectory —](../../../../docs/framework/unmanaged-api/hosting/getcorsystemdirectory-function.md) .|  
+|[GetVersionString, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getversionstring-method.md)|Pobiera informacje o wersji środowiska uruchomieniowego języka wspólnego (CLR) skojarzone z danym interfejsem [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) . Ta metoda zastępuje metody [GetRequestedRuntimeInfo —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md) i [GetRequestedRuntimeVersion —](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md) .|  
+|[IsLoadable, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isloadable-method.md)|Wskazuje, czy środowisko uruchomieniowe skojarzone z tym interfejsem może zostać załadowane do bieżącego procesu, biorąc pod uwagę inne środowiska uruchomieniowe, które mogły już zostać załadowane do procesu.|  
+|[IsLoaded, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isloaded-method.md)|Wskazuje, czy środowisko CLR skojarzone z interfejsem [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) jest załadowane do procesu.|  
+|[IsStarted, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-isstarted-method.md)|Wskazuje, czy środowisko CLR skojarzone z interfejsem [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) zostało uruchomione.|  
+|[LoadErrorString, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loaderrorstring-method.md)|Tłumaczy wartość HRESULT na odpowiedni komunikat o błędzie dla określonej kultury. Ta metoda zastępuje metody [LoadStringRC —](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md) i [LoadStringRCEx —](../../../../docs/framework/unmanaged-api/hosting/loadstringrcex-function.md) .|  
+|[LoadLibrary, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)|Ładuje bibliotekę z katalogu struktury środowiska CLR reprezentowanej przez interfejs [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) . Ta metoda zastępuje metodę [LoadLibraryShim —](../../../../docs/framework/unmanaged-api/hosting/loadlibraryshim-function.md) .|  
+|[SetDefaultStartupFlags, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-setdefaultstartupflags-method.md)|Ustawia flagi uruchamiania środowiska CLR i plik konfiguracji hosta.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

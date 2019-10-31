@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 235b93f4176858372a83331730ddea8b97179cc8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1f28a4b4acd9d6050d33b9824aa49a9b9041b59b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738371"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111251"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata — Metoda
-Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych do pobierania metadanych obrazu.  
+Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do pobierania metadanych obrazu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,43 +44,43 @@ HRESULT GetMetadata(
   
 ## <a name="parameters"></a>Parametry  
  `imagePath`  
- [in] Ciąg, który określa ścieżkę do pliku obrazu.  
+ podczas Ciąg określający ścieżkę pliku obrazu.  
   
  `imageTimestamp`  
- [in] Sygnatura czasowa pliku obrazu.  
+ podczas Sygnatura czasowa pliku obrazu.  
   
  `imageSize`  
- [in] Rozmiar pliku obrazu.  
+ podczas Rozmiar pliku obrazu.  
   
  `mvid`  
- [in] Unikatowy identyfikator globalny obrazu.  
+ podczas Unikatowy identyfikator globalny obrazu.  
   
  `mdRva`  
- [in] Wirtualny adres względny (RVA) metadanych. Adres jest określany względem adresu podstawowego obrazu.  
+ podczas Względny adres wirtualny (RVA) metadanych. Adres jest określany względem adresu podstawowego obrazu.  
   
  `flags`  
- [in] Zarezerwowane do użytku w przyszłości.  
+ podczas Zarezerwowane do użytku w przyszłości.  
   
  `bufferSize`  
- [in] Rozmiar buforu, w której chcesz umieścić metadanych.  
+ podczas Rozmiar buforu, w którym mają zostać umieszczone metadane.  
   
  `buffer`  
- [out] Bufor, w której chcesz umieścić metadanych.  
+ określoną Bufor, w którym mają zostać umieszczone metadane.  
   
  `dataSize`  
- [out] Rozmiar metadanych, który jest zwracany.  
+ określoną Rozmiar zwracanych metadanych.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

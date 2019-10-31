@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BeginEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de36650aa2b206b5e9734b38c6067a3a79de610c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e467234a45ae702a5b77a5f0fa8b75d4ff03c52
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124130"
 ---
 # <a name="beginenumeration-function"></a>BeingEnumeration, funkcja
 Resetuje moduł wyliczający z powrotem do początku wyliczenia.  
@@ -56,7 +54,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Kombinacja flag w `lEnumFlags` jest nieprawidłowa lub określono nieprawidłowy argument. |
-|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` zostało wykonane bez wywołania wywołującego do [`EndEnumeration`](endenumeration.md). |
+|`WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` zostało wykonane bez interwencji wywołującego do [`EndEnumeration`](endenumeration.md). |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby rozpocząć nowe Wyliczenie. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
@@ -64,7 +62,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: beingenumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Flagi, które mogą być przesyłane jako `lEnumFlags` argument, są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie.  Można połączyć jedną flagę z każdej grupy z dowolną flagą z dowolnej innej grupy. Jednak flagi z tej samej grupy wykluczają się wzajemnie. 
+Flagi, które mogą być przesyłane jako argument `lEnumFlags`, są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie.  Można połączyć jedną flagę z każdej grupy z dowolną flagą z dowolnej innej grupy. Jednak flagi z tej samej grupy wykluczają się wzajemnie. 
 
 **Grupa 1**
 
@@ -86,7 +84,7 @@ Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 |`WBEM_FLAG_CLASS_OVERRIDES_ONLY` | 0x100 | Ogranicz Wyliczenie do właściwości zastąpionych w definicji klasy. |
 |`WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` | 0x100 | Ogranicz Wyliczenie do właściwości, które zostały zastąpione w bieżącej definicji klasy, i nowe właściwości zdefiniowane w klasie. |
-| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Maska (zamiast flagi) do zastosowania względem `lEnumFlags` wartości, aby sprawdzić `WBEM_FLAG_CLASS_OVERRIDES_ONLY` , czy jest ustawiona albo lub `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES` . |
+| `WBEM_MASK_CLASS_CONDITION` | 0x300 | Maska (a nie flaga) do zastosowania względem wartości `lEnumFlags`, aby sprawdzić, czy ustawiono `WBEM_FLAG_CLASS_OVERRIDES_ONLY` lub `WBEM_FLAG_CLASS_LOCAL_AND_OVERRIDES`. |
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ogranicz Wyliczenie do właściwości, które są zdefiniowane lub modyfikowane w samej klasie. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ogranicz Wyliczenie do właściwości, które są dziedziczone z klas bazowych. |
 
@@ -98,11 +96,11 @@ Stała  |Wartość  |Opis  |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ogranicz Wyliczenie do właściwości, które są dziedziczone z klas bazowych. |
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

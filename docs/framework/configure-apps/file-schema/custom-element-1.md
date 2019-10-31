@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fae3673fe72d036802cb1a8366aaa2430c38884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927500"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118835"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>Element niestandardowy dla SingleTagSectionHandler
 
-Definiuje ustawienia w sekcji konfiguracji niestandardowej zdefiniowanej przez \<sekcję > elementu i <xref:System.Configuration.SingleTagSectionHandler> używa klasy.
+Definiuje ustawienia w sekcji konfiguracji niestandardowej zdefiniowanej przez \<sekcję > elementu i używa klasy <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<> konfiguracji**](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionName>*
+&nbsp;&nbsp; *\<sectionname >*
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,7 +36,7 @@ Atrybuty i wartości atrybutów są zdefiniowane przez użytkownika.
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<> konfiguracji**](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
+| [ **> konfiguracji \<** ](configuration-element.md) | Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework. |
 
 ## <a name="child-elements"></a>Elementy podrzędne
 
@@ -44,11 +44,11 @@ Brak
 
 ## <a name="remarks"></a>Uwagi
 
-Element **SectionName > jest elementem niestandardowym zdefiniowanym przez tag > sekcji w elemencie > configSections. \<** [ **\<** ](section-element.md) [ **\<** ](configsections-element-for-configuration.md) System konfiguracji zwraca <xref:System.Collections.IDictionary> obiekt podczas wywoływania <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+**\<sectionname >** element jest elementem niestandardowym zdefiniowanym przez [ **\<sekcję >** ](section-element.md) tagu w\<elementu > [**configSections**](configsections-element-for-configuration.md) . System konfiguracji zwraca obiekt <xref:System.Collections.IDictionary> podczas wywoływania <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład deklaruje element niestandardowy o nazwie  **\<sampleSection >** , który zawiera <xref:System.Configuration.SingleTagSectionHandler> ustawienia odczytane przez klasę:
+Poniższy przykład deklaruje element niestandardowy o nazwie **\<sampleSection >** , który zawiera ustawienia odczytane przez klasę <xref:System.Configuration.SingleTagSectionHandler>:
 
 ```xml
 <configuration>

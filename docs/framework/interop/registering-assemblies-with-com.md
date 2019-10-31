@@ -7,45 +7,43 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ff24a5705058d4e303b3b64b454ced8548053a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648552"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73113807"
 ---
 # <a name="registering-assemblies-with-com"></a>Rejestrowanie zestawów do użycia z modelem COM
-Można uruchomić z wiersza polecenia narzędzia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) Aby zarejestrować lub wyrejestrować zestawu do użycia w modelu COM. Regasm.exe dodaje informacje o klasie do rejestru systemowego dzięki klientów modelu COM za pomocą klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa oferuje podobne funkcje.  
+Możesz uruchomić narzędzie wiersza polecenia o nazwie [Narzędzie rejestracji zestawu (Regasm. exe)](../tools/regasm-exe-assembly-registration-tool.md) , aby zarejestrować lub wyrejestrować zestaw do użycia z modelem com. Regasm. exe dodaje informacje o klasie do rejestru systemowego, aby klienci COM mogli używać klasy .NET Framework w niewidoczny sposób. Klasa <xref:System.Runtime.InteropServices.RegistrationServices> zapewnia równorzędną funkcjonalność.  
   
- Zarządzany składnik musi być zarejestrowane w rejestrze systemu Windows może być aktywowany w kliencie COM. W poniższej tabeli przedstawiono klucze, które Regasm.exe dodaje się zazwyczaj do rejestru Windows. (000000 wskazuje rzeczywista wartość identyfikatora GUID).  
+ Składnik zarządzany musi być zarejestrowany w rejestrze systemu Windows, aby można go było aktywować z poziomu klienta COM. W poniższej tabeli przedstawiono klucze, które Regasm. exe są zazwyczaj dodawane do rejestru systemu Windows. (000000 wskazuje rzeczywistą wartość identyfikatora GUID).  
   
 |Identyfikator GUID|Opis|Klucz rejestru|  
 |----------|-----------------|------------------|  
-|CLSID|Identyfikator klasy|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
-|IID|Identyfikator interfejsu|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
-|LIBID|Identyfikator biblioteki|HKEY_CLASSES_ROOT\TypeLib\\{000…000}|  
-|ProgID|Identyfikator programowy|HKEY_CLASSES_ROOT\000…000|  
+|Identyfikator|Identyfikator klasy|HKEY_CLASSES_ROOT\CLSID\\{000... 500000|  
+|IID|Identyfikator interfejsu|HKEY_CLASSES_ROOT\Interface\\{000... 500000|  
+|IDENTYFIKATORA LIBID|Identyfikator biblioteki|HKEY_CLASSES_ROOT\TypeLib\\{000... 500000|  
+|ProgID|Identyfikator programistyczny|HKEY_CLASSES_ROOT\000... 500000|  
   
- W obszarze HKCR\CLSID\\{0000... 0000} klucz, wartość domyślna jest równa ProgID klasy, a zostaną dodane dwie nowe wartości o nazwie, klasy i zestawu. Środowisko uruchomieniowe odczytuje wartość zestawu z rejestru i przekazuje je do programu rozpoznawania nazw zestawów środowiska uruchomieniowego. Mechanizm rozpoznawania zestawów próbuje zlokalizować zestawu, w oparciu o informacje o zestawie, takie jak nazwa i numer wersji. W przypadku mechanizm rozpoznawania zestawów zlokalizowania zestawu zestaw musi należeć do jednej z następujących lokalizacji:  
+ W HKCR\CLSID\\{0000... 0000} — wartość domyślna to identyfikator ProgID klasy i dodano dwie nowe nazwane wartości, klasy i zestawu. Środowisko uruchomieniowe odczytuje wartość zestawu z rejestru i przekazuje je do programu rozpoznawania zestawu środowiska uruchomieniowego. Program rozpoznawania zestawu próbuje zlokalizować zestaw na podstawie informacji o zestawie, takich jak nazwa i numer wersji. Aby program rozpoznawania zestawu mógł zlokalizować zestaw, zestaw musi znajdować się w jednej z następujących lokalizacji:  
   
-- Global assembly cache (musi być zestaw o silnej nazwie).  
+- Globalna pamięć podręczna zestawów (musi być zestawem o silnej nazwie).  
   
-- W katalogu aplikacji. Zestawy, ładowane z ścieżce aplikacji są dostępne jedynie z tej aplikacji.  
+- W katalogu aplikacji. Zestawy ładowane ze ścieżki aplikacji są dostępne tylko dla tej aplikacji.  
   
-- Wzdłuż ścieżki pliku określony za pomocą **/ codebase** możliwość Regasm.exe.  
+- Ścieżka pliku określona z opcją **/codebase** do Regasm. exe.  
   
- Regasm.exe tworzy również klucz InProcServer32 pod HKCR\CLSID\\{0000... 0000} klucz. Wartością domyślną dla klucza jest równa nazwy biblioteki DLL, która inicjuje środowiska uruchomieniowego języka wspólnego (Mscoree.dll).  
+ Regasm. exe tworzy również klucz InProcServer32 w obszarze HKCR\CLSID\\{0000... 0000}. Wartość domyślna dla klucza jest ustawiana na nazwę biblioteki DLL, która inicjuje środowisko uruchomieniowe języka wspólnego (mscoree. dll).  
   
 ## <a name="examining-registry-entries"></a>Badanie wpisów rejestru  
- Usługa międzyoperacyjna modelu COM zapewnia wdrożenie fabryki klasa standardowa w celu utworzenia wystąpienia każdej klasy .NET Framework. Klienci mogą wywołać **DllGetClassObject** na zarządzanej biblioteki DLL, aby otrzymać fabrykę klas i tworzenia obiektów, tak samo, jak za pomocą innego składnika COM.  
+ Współdziałanie modelu COM zapewnia standardową implementację fabryki klasy w celu utworzenia wystąpienia dowolnej klasy .NET Framework. Klienci mogą wywoływać **DllGetClassObject** na ZARZĄDZANEJ bibliotece DLL, aby uzyskać fabrykę klasy i tworzyć obiekty, podobnie jak w przypadku każdego innego składnika com.  
   
- Aby uzyskać `InprocServer32` podklucza, odwołanie do Mscoree.dll pojawia się zamiast tradycyjnych bibliotece typów modelu COM, aby wskazać, że środowiska uruchomieniowego języka wspólnego tworzy zarządzany obiekt.  
+ W przypadku podklucza `InprocServer32`, odwołanie do biblioteki Mscoree. dll występuje zamiast tradycyjnego typu modelu COM, aby wskazać, że środowisko uruchomieniowe języka wspólnego tworzy obiekt zarządzany.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)
-- [Instrukcje: Odwołanie do typów .NET z modelu COM](how-to-reference-net-types-from-com.md)
+- [Instrukcje: Odwołania do typów .NET z modelu COM](how-to-reference-net-types-from-com.md)
 - [Wywołanie obiektu .NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
-- [Wdrażanie aplikacji dla dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))
+- [Wdrażanie aplikacji na potrzeby dostępu do modelu COM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

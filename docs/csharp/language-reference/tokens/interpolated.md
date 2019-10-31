@@ -11,17 +11,16 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.author: ronpet
-ms.openlocfilehash: 53a8938a373136df65e23c162b94c4d8dc1f30b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73101656"
 ---
 # <a name="---string-interpolation-c-reference"></a>Interpolacja $-String (C# odwołanie)
 
-Znak specjalny identyfikuje literał ciągu jako *ciąg interpolowany.* `$` Ciąg interpolowany jest literałem ciągu, która może zawierać *wyrażenia interpolacji*. Gdy ciąg interpolowany jest rozpoznawany jako ciąg wynikowy, elementy z wyrażeniami interpolacji są zastępowane ciągami reprezentującymi wyniki wyrażenia. Ta funkcja jest dostępna od C# 6.
+`$` znak specjalny identyfikuje literał ciągu jako *ciąg interpolowany*. Ciąg interpolowany jest literałem ciągu, która może zawierać *wyrażenia interpolacji*. Gdy ciąg interpolowany jest rozpoznawany jako ciąg wynikowy, elementy z wyrażeniami interpolacji są zastępowane ciągami reprezentującymi wyniki wyrażenia. Ta funkcja jest dostępna od C# 6.
 
 Interpolacja ciągów zapewnia bardziej czytelną i wygodną składnię do tworzenia ciągów sformatowanych niż funkcja [formatowania złożonego w postaci ciągu](../../../standard/base-types/composite-formatting.md) . Poniższy przykład używa obu funkcji do wygenerowania tych samych danych wyjściowych:
 
@@ -29,7 +28,7 @@ Interpolacja ciągów zapewnia bardziej czytelną i wygodną składnię do tworz
 
 ## <a name="structure-of-an-interpolated-string"></a>Struktura ciągu interpolowanego
 
-Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go `$` symbolem. `$` Między`"` i, które zaczyna się literałem ciągu znaków, nie może zawierać żadnego odstępu.
+Aby zidentyfikować literał ciągu jako ciąg interpolowany, poprzedź go symbolem `$`. Między `$` i `"`, które zaczynają literał ciągu znaków, nie może być odstępy.
 
 Struktura elementu z wyrażeniem interpolacji jest następująca:
 
@@ -41,7 +40,7 @@ Elementy w nawiasach kwadratowych są opcjonalne. W poniższej tabeli opisano ka
 
 |Element|Opis|
 |-------------|-----------------|
-|`interpolationExpression`|Wyrażenie, które generuje wynik do sformatowania. Ciąg reprezentujący `null` is <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`interpolationExpression`|Wyrażenie, które generuje wynik do sformatowania. Reprezentacja ciągu `null` jest <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Wyrażenie stałe, którego wartość definiuje minimalną liczbę znaków w ciągu reprezentującym wynik wyrażenia. W przypadku wartości pozytywnej Reprezentacja ciągu jest wyrównana do prawej; Jeśli wartość jest ujemna, jest wyrównana do lewej. Aby uzyskać więcej informacji, zobacz [składnik wyrównania](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Ciąg formatu, który jest obsługiwany przez typ wyniku wyrażenia. Aby uzyskać więcej informacji, zobacz [Formatowanie składnika ciągu](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
@@ -59,28 +58,28 @@ Poniższy przykład pokazuje, jak uwzględnić nawias klamrowy w ciągu wynikowy
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Interpolowany ciąg Verbatim rozpoczyna się od znaku `$` , po którym następuje `@` znak. Aby uzyskać więcej informacji na temat ciągów Verbatim, zobacz temat [identyfikatory](verbatim.md) [ciągów](../keywords/string.md) i Verbatim.
+Interpolacja Verbatim ciąg rozpoczyna się od znaku `$`, po którym następuje znak `@`. Aby uzyskać więcej informacji na temat ciągów Verbatim, zobacz temat [identyfikatory](verbatim.md) [ciągów](../keywords/string.md) i Verbatim.
 
 > [!NOTE]
-> Począwszy od C# 8,0, można użyć `$` tokenów i `@` w dowolnej kolejności: oba `$@"..."` i `@$"..."` są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych C# wersjach `$` token `@` musi znajdować się przed tokenem.
+> Począwszy od C# 8,0, można użyć tokenów`$`i`@`w dowolnej kolejności: zarówno `$@"..."`, jak i`@$"..."`są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych C# wersjach token `$` musi znajdować się przed tokenem `@`.
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Konwersje niejawne i sposób `IFormatProvider` określania implementacji
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Niejawne konwersje i sposób określania implementacji `IFormatProvider`
 
 Istnieją trzy niejawne konwersje z ciągu interpolowanego:
 
-1. Konwersja ciągu interpolowanego na <xref:System.String> wystąpienie, które jest wynikiem interpolowanej rozdzielczości ciągu z elementami wyrażenia interpolacji, które są zastępowane poprawnie sformatowanymi reprezentacjami ciągu wyników. Ta konwersja używa <xref:System.Globalization.CultureInfo.CurrentCulture> do formatowania wyników wyrażenia.
+1. Konwersja ciągu interpolowanego na wystąpienie <xref:System.String>, które jest wynikiem interpolowanej rozdzielczości ciągu z elementami wyrażenia interpolacji, które są zastępowane poprawnie sformatowanymi reprezentacjami ciągu wyników. Ta konwersja używa <xref:System.Globalization.CultureInfo.CurrentCulture> do formatowania wyników wyrażenia.
 
-1. Konwersja ciągu interpolowanego na <xref:System.FormattableString> wystąpienie, które reprezentuje ciąg formatu złożonego wraz z wynikami wyrażenia do sformatowania. Pozwala to na tworzenie wielu ciągów wynikowych z zawartością specyficzną dla kultury z jednego <xref:System.FormattableString> wystąpienia. W tym celu należy wywołać jedną z następujących metod:
+1. Konwersja ciągu interpolowanego na wystąpienie <xref:System.FormattableString>, które reprezentuje ciąg formatu złożonego wraz z wynikami wyrażenia do sformatowania. Pozwala to na tworzenie wielu ciągów wynikowych z zawartością specyficzną dla kultury z jednego wystąpienia <xref:System.FormattableString>. W tym celu należy wywołać jedną z następujących metod:
 
-      - Przeciążenie generujące ciąg wynikowy <xref:System.Globalization.CultureInfo.CurrentCulture>dla. <xref:System.FormattableString.ToString>
-      - Metoda, która generuje ciąg wynikowy <xref:System.Globalization.CultureInfo.InvariantCulture>dla. <xref:System.FormattableString.Invariant%2A>
-      - <xref:System.FormattableString.ToString(System.IFormatProvider)> Metoda, która tworzy ciąg wynikowy dla określonej kultury.
+      - Przeciążenie <xref:System.FormattableString.ToString>, które tworzy ciąg wynikowy dla <xref:System.Globalization.CultureInfo.CurrentCulture>.
+      - Metoda <xref:System.FormattableString.Invariant%2A>, która generuje ciąg wynikowy dla <xref:System.Globalization.CultureInfo.InvariantCulture>.
+      - Metoda <xref:System.FormattableString.ToString(System.IFormatProvider)>, która generuje ciąg wynikowy dla określonej kultury.
 
-    Można również użyć <xref:System.FormattableString.ToString(System.IFormatProvider)> metody, aby zapewnić zdefiniowaną przez użytkownika implementację <xref:System.IFormatProvider> interfejsu, która obsługuje niestandardowe formatowanie. Aby uzyskać więcej informacji, zobacz sekcję [formatowanie niestandardowe przy użyciu ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) [typów formatowania w artykule .NET](../../../standard/base-types/formatting-types.md) .
+    Można również użyć metody <xref:System.FormattableString.ToString(System.IFormatProvider)>, aby zapewnić zdefiniowaną przez użytkownika implementację interfejsu <xref:System.IFormatProvider>, która obsługuje niestandardowe formatowanie. Aby uzyskać więcej informacji, zobacz sekcję [formatowanie niestandardowe przy użyciu ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) [typów formatowania w artykule .NET](../../../standard/base-types/formatting-types.md) .
 
-1. Konwersja ciągu interpolowanego na <xref:System.IFormattable> wystąpienie, które również umożliwia tworzenie wielu ciągów wynikowych przy użyciu zawartości specyficznej dla kultury z jednego <xref:System.IFormattable> wystąpienia.
+1. Konwersja ciągu interpolowanego na wystąpienie <xref:System.IFormattable>, które również umożliwia tworzenie wielu ciągów wynikowych z zawartością specyficzną dla kultury z jednego wystąpienia <xref:System.IFormattable>.
 
-W poniższym przykładzie zastosowano niejawną konwersję do <xref:System.FormattableString> , aby utworzyć charakterystyczne dla kultury ciągi wynikowe:
+W poniższym przykładzie zastosowano niejawną konwersję w celu <xref:System.FormattableString> tworzenia ciągów wynikowych specyficznych dla kultury:
 
 [!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
@@ -90,9 +89,9 @@ Jeśli dopiero zaczynasz interpolację ciągów, zobacz [Interpolacja ciągów w
 
 ## <a name="compilation-of-interpolated-strings"></a>Kompilacja ciągów interpolowanych
 
-Jeśli ciąg interpolowany ma typ `string`, zazwyczaj jest przekształcany <xref:System.String.Format%2A?displayProperty=nameWithType> do wywołania metody. Kompilator może zastępować <xref:System.String.Format%2A?displayProperty=nameWithType> w <xref:System.String.Concat%2A?displayProperty=nameWithType> przypadku, gdy przeanalizowane zachowanie byłoby równoważne konkatenacji.
+Jeśli ciąg interpolowany ma typ `string`, zazwyczaj jest przekształcany do wywołania metody <xref:System.String.Format%2A?displayProperty=nameWithType>. Kompilator może zastąpić <xref:System.String.Format%2A?displayProperty=nameWithType> z <xref:System.String.Concat%2A?displayProperty=nameWithType>, jeśli przeanalizowane zachowanie byłoby równoważne z konkatenacją.
 
-Jeśli ciąg interpolowany ma typ <xref:System.IFormattable> lub <xref:System.FormattableString>, kompilator <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> generuje wywołanie metody.
+Jeśli ciąg interpolowany ma typ <xref:System.IFormattable> lub <xref:System.FormattableString>, kompilator generuje wywołanie metody <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType>.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 

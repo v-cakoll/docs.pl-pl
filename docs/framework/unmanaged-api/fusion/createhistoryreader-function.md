@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2710d14d6e73879fd17a6b58659463ea205f2384
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795366"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108608"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader — Funkcja
 Tworzy czytelnika historii dla określonego pliku.  
@@ -48,14 +46,14 @@ HRESULT CreateHistoryReader (
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Wskazuje, że metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|Wskazuje, `wzFilePath` że `ppHistoryReader` lub są ustawione na odwołanie o wartości null.|  
+|E_INVALIDARG|Wskazuje, że `wzFilePath` lub `ppHistoryReader` są ustawione na odwołanie o wartości null.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Biblioteki** Fusion.dll  
+ **Biblioteka:** Fusion. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - resolving assembly binding requests
 - versioning, assemblies
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1363ce758929414f054e3d28dc6cd02bd618a8ac
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bbb3dae2ce66c93d05a2a1c0f7e426901fa7b2e0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140177"
 ---
 # <a name="assembly-versioning"></a>Przechowywanie wersji zestawu
 
@@ -52,7 +50,7 @@ Każdy zestaw może przedstawiać informacje o wersji na dwa odrębne sposoby:
 
 Elementem tożsamości każdego zestawu jest jego numer wersji. W związku z tym dwa zestawy, które różnią się numerem wersji, są przez środowisko uruchomieniowe uznawane za całkowicie różne zestawy. Numer wersji jest fizycznie reprezentowany jako czteroczęściowy ciąg tekstowy o następującym formacie:  
   
-\<*wersja główna*>. *wersja pomocnicza >.* \< > numeru *kompilacji.* \< \< *poprawka*>  
+> \<*wersji głównej*. >\<*wersji pomocniczej*.\<> *numeru kompilacji*.\<*poprawka*>  
   
 Na przykład wersja 1.5.1254.0 określa „1” jako wersję główną, „5” jako wersję pomocniczą, „1254” jako numer kompilacji i „0” jako numer poprawki.  
   

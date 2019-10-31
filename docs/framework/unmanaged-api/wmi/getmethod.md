@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9cc185bf8cccb8ed3c24e28954afd86464602d7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 48986f5ff1cbbb45840ec1a059aa86711848d717
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102589"
 ---
 # <a name="getmethod-function"></a>GetMethod, funkcja
 
@@ -51,16 +49,16 @@ podczas Ten parametr jest nieużywany.
 podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-podczas Nazwa metody. Ten parametr nie może `null` być prawidłowy. `LPCWSTR`
+podczas Nazwa metody. Ten parametr nie może być `null` i musi wskazywać prawidłowy `LPCWSTR`.
 
 `lFlags`\
 podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `ppInSignature`\
-określoną Wskaźnik do adresu wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , który opisuje parametry w metodzie. Ten parametr jest ignorowany, jeśli jest ustawiony `null`na.
+określoną Wskaźnik do adresu wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , który opisuje parametry w metodzie. Ten parametr jest ignorowany, jeśli jest ustawiony na `null`.
 
 `ppOutSignature`\
-określoną Wskaźnik do adresu wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , który opisuje parametry out metody. Ten parametr jest ignorowany, jeśli jest ustawiony `null`na.
+określoną Wskaźnik do adresu wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , który opisuje parametry out metody. Ten parametr jest ignorowany, jeśli jest ustawiony na `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -76,17 +74,17 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: GetMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
 
-Zarządzanie systemem Windows może ustawić [](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) wskaźnik `null` IWbemClassObject, jeśli metoda nie ma parametrów.
+Zarządzanie systemem Windows może ustawić wskaźnik [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) , aby `null`, jeśli metoda nie ma parametrów.
 
-W `ppInSignature` systemach `ppOutSignature` i opisują odpowiednio parametry in i out `IWbemClassObject` , jako właściwości w wystąpieniu klasy systemowej [_Parameters](/windows/desktop/WmiSdk/--parameters). `ppInSignature` Właściwości w `Param`są nazwane *n*, gdzie *n* jest pozycją `Param1` `Param2`parametru w sygnaturze metody (na przykład itp.). Właściwości w `ppOutSignature` są również nazywane `Param` *n*, a zwracaną wartością jest nazwa `ReturnValue`. Aby uzyskać więcej informacji i przykład, zobacz [IWbemClassObject:: GetMethod Metoda](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+W `ppInSignature` i `ppOutSignature` opisują odpowiednio parametry i out, jako właściwości w `IWbemClassObject` wystąpieniu klasy systemowej [_Parameters](/windows/desktop/WmiSdk/--parameters). Właściwości w `ppInSignature` są nazwane `Param`*n*, gdzie *n* jest pozycją parametru w sygnaturze metody (na przykład `Param1`, `Param2`itp.). Właściwości w `ppOutSignature` są również nazwane `Param`*n*, a wartość zwracana jest nazywana `ReturnValue`. Aby uzyskać więcej informacji i przykład, zobacz [IWbemClassObject:: GetMethod Metoda](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

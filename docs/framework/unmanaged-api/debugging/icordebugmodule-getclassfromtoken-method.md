@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 622a4d3c-0425-4c54-a7e4-0735377cdad2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6da6fabc6632bea58b28a00f55d05f4c2cc5b46
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 790999093f874a4d81dd5db74ef012b1d997a12f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762678"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109650"
 ---
 # <a name="icordebugmodulegetclassfromtoken-method"></a>ICorDebugModule::GetClassFromToken — Metoda
-Pobiera z klasą określoną przez token metadanych.  
+Pobiera klasę określoną przez token metadanych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +36,16 @@ HRESULT GetClassFromToken(
   
 ## <a name="parameters"></a>Parametry  
  `typedef`  
- [in] `mdTypeDef` Token metadanych, który odwołuje się do metadanych klasy.  
+ podczas `mdTypeDef` token metadanych, który odwołuje się do metadanych klasy.  
   
  `ppClass`  
- [out] Wskaźnik na adres obiektu ICorDebugClass, który reprezentuje klasę.  
+ określoną Wskaźnik do adresu obiektu ICorDebugClass, który reprezentuje klasę.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,50 +14,48 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a2c71f32dfd190e188bb28aad5d51c72160eb4bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b7cc41848e41976f388e38bf22c9ea0f90abbae
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603239"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121479"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager — Interfejs
-Udostępnia metody, które umożliwiają dostęp do i kontrolę nad kontekstu zabezpieczeń aktualnie wykonywany wątek.  
+Zapewnia metody, które umożliwiają dostęp do i kontrolę nad kontekstem zabezpieczeń aktualnie wykonywanego wątku.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSecurityContext, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Pobiera żądany [ihostsecuritycontext —](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) z hosta.|  
-|[ImpersonateLoggedOnUser, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|Żądania, kod można wykonać przy użyciu poświadczeń bieżącej tożsamości użytkownika.|  
-|[OpenThreadToken, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|Zostanie otwarty token dostępu skojarzone z bieżącym wątkiem.|  
-|[RevertToSelf, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|Kończy działanie personifikacji bieżącej tożsamości użytkownika, a następnie zwraca oryginalny tokenu wątku.|  
-|[SetSecurityContext, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|Ustawia kontekst zabezpieczeń dla aktualnie wykonywany wątek.|  
-|[SetThreadToken, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Ustawia obsługi do aktualnie wykonywany wątek.|  
+|[GetSecurityContext, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|Pobiera żądany [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) z hosta.|  
+|[ImpersonateLoggedOnUser, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-impersonateloggedonuser-method.md)|Żąda wykonania kodu przy użyciu poświadczeń bieżącego użytkownika.|  
+|[OpenThreadToken, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-openthreadtoken-method.md)|Otwiera token dostępu swobodnego skojarzony z bieżącym wątkiem.|  
+|[RevertToSelf, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-reverttoself-method.md)|Kończy personifikację bieżącej tożsamości użytkownika i zwraca oryginalny token wątku.|  
+|[SetSecurityContext, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)|Ustawia kontekst zabezpieczeń aktualnie wykonywanego wątku.|  
+|[SetThreadToken, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setthreadtoken-method.md)|Ustawia dojście dla aktualnie wykonywanego wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Hosta można kontrolować wszelki dostęp kodu do tokenów wątku przez środowisko uruchomieniowe języka wspólnego (CLR) i kod użytkownika. Można to także zapewnić pełne zabezpieczenia informacji kontekstowych jest przekazywany w operacji asynchronicznych lub punkty kodowe dostęp ograniczony kod. `IHostSecurityContext` hermetyzuje informacje kontekstu zabezpieczeń, która jest nieprzezroczysta dla środowiska CLR.  
+ Host może kontrolować cały dostęp kodu do tokenów wątków przez środowisko uruchomieniowe języka wspólnego (CLR) i kod użytkownika. Może także zapewnić, że pełne informacje kontekstu zabezpieczeń są przesyłane przez operacje asynchroniczne lub punkty kodowe z ograniczonym dostępem do kodu. `IHostSecurityContext` hermetyzuje informacje kontekstu zabezpieczeń, nieprzezroczyste dla środowiska CLR.  
   
- Środowisko CLR obsługuje kontekstu wątków zarządzanych wewnętrznie. Wysyła zapytanie dotyczące procesu `IHostSecurityManager` w następujących sytuacjach:  
+ Środowisko CLR obsługuje wewnętrznie zarządzane kontekstu wątku. Wysyła zapytanie do `IHostSecurityManager` specyficznych dla procesu w następujących sytuacjach:  
   
 - W wątku finalizatora podczas wykonywania finalizatora.  
   
-- Podczas wykonywania konstruktora klasy i moduł.  
+- Podczas wykonywania konstruktora klasy i modułu.  
   
-- W punktach asynchroniczne w wątku roboczego, w wywołaniach [ihostthreadpoolmanager::QueueUserWorkItem —](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) metody.  
+- W przypadku asynchronicznych punktów w wątku roboczym w wywołaniach metody [IHostThreadPoolManager:: QueueUserWorkItem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md) .  
   
-- Obsługę portów zakończenia operacji We/Wy.  
+- W trakcie obsługi portów zakończenia we/wy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

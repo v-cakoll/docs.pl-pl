@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c213f311f1af1e56d0ce24eba3b76f33be541323
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120179"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass, funkcja
 Tworzy nowo pochodny obiekt klasy na podstawie określonego obiektu.    
@@ -50,7 +48,7 @@ podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcl
 podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `ppNewClass`  
-określoną Odbiera wskaźnik do nowego obiektu definicji klasy. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany i `ppNewClass` pozostaje niemodyfikowany. Wartość nie może być `null`.
+określoną Odbiera wskaźnik do nowego obiektu definicji klasy. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany, a `ppNewClass` pozostanie niemodyfikowany. Nie można `null`jej wartości.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -62,23 +60,23 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | Zażądano nieprawidłowej operacji, takiej jak duplikowanie klasy z wystąpienia. |
 | `WBEM_E_INCOMPLETE_CLASS` | Klasa źródłowa nie została całkowicie zdefiniowana lub zarejestrowana w usłudze zarządzania systemem Windows, więc nowa klasa pochodna jest niedozwolona. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć tę operację. |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass`jest `null`. |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` jest `null`. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone) .
 
-`ptr`musi być definicją klasy, która jest klasą nadrzędną podanego obiektu. Zwrócony obiekt zostanie podklasą bieżącego obiektu.
+`ptr` musi być definicją klasy, która jest klasą nadrzędną podanego obiektu. Zwrócony obiekt zostanie podklasą bieżącego obiektu.
 
-Nowy obiekt zwrócony w programie `ppNewClass` automatycznie zostanie podklasą bieżącego obiektu. Tego zachowania nie można zastąpić. Nie istnieje inna metoda, za pomocą której można tworzyć podklasy (klasy pochodne).
+Nowy obiekt zwrócony w `ppNewClass` automatycznie zostanie podklasą bieżącego obiektu. Tego zachowania nie można zastąpić. Nie istnieje inna metoda, za pomocą której można tworzyć podklasy (klasy pochodne).
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

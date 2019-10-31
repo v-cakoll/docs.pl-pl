@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 826baa9b-9218-4736-a509-7ab193b125a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36eeb7ed4f80979ef2edb930e65963a1db0c894f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134904"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats — Metoda
-Pobiera statystyki wątku wyrzucania elementów bezużytecznych.  
+Pobiera statystyki poszczególnych wątków na potrzeby wyrzucania elementów bezużytecznych.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT GetThreadStats (
   
 ## <a name="parameters"></a>Parametry  
  `pFiberCookie`  
- [in] Wskaźnik do pliku cookie fiber, określający wątku, do których chcesz pobrać statystyk.  
+ podczas Wskaźnik do pliku cookie włókna, który określa wątek, dla którego mają zostać pobrane dane statystyczne.  
   
  `pStats`  
- [out w] Wskaźnik do [cor_gc_thread_stats —](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) strukturę, która zawiera dane statystyczne kolekcji wyrzucania elementów dla określonego wątku.  
+ [in. out] Wskaźnik do struktury [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) , która zawiera statystyki wyrzucania elementów bezużytecznych dla określonego wątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** GCHost.idl, GCHost.h  
+ **Nagłówek:** GCHost. idl, GCHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

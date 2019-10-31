@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f28cc4e-7176-4e00-aa1f-58ae6ee52fe4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b56ffab8fb6a9ef70b51421f9cdc5535111e527
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965355"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120487"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication — Metoda
 Używany w scenariuszach wdrażania ClickOnce opartych na manifestach, aby określić aplikację, która ma zostać aktywowana w nowej domenie. Aby uzyskać więcej informacji na temat tych scenariuszy, zobacz [zabezpieczenia i wdrażanie technologii ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
@@ -45,13 +43,13 @@ HRESULT ExecuteApplication(
  podczas Pełna nazwa aplikacji zgodnie z definicją dla <xref:System.ApplicationIdentity>.  
   
  `dwManifestPaths`  
- podczas Liczba ciągów zawartych w `ppwzManifestPaths` tablicy.  
+ podczas Liczba ciągów zawartych w tablicy `ppwzManifestPaths`.  
   
  `ppwzManifestPaths`  
  podczas Obowiązkowe. Tablica ciągów zawierająca ścieżki manifestu dla aplikacji.  
   
  `dwActivationData`  
- podczas Liczba ciągów zawartych w `ppwzActivationData` tablicy.  
+ podczas Liczba ciągów zawartych w tablicy `ppwzActivationData`.  
   
  `ppwzActivationData`  
  podczas Obowiązkowe. Tablica ciągów zawierająca dane aktywacji aplikacji, na przykład część ciągu zapytania w adresie URL dla aplikacji wdrożonych za pośrednictwem sieci Web.  
@@ -63,7 +61,7 @@ HRESULT ExecuteApplication(
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication`pomyślnie zwrócono.|  
+|S_OK|`ExecuteApplication` pomyślnie zwrócone.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
@@ -71,21 +69,21 @@ HRESULT ExecuteApplication(
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Jeśli metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `ExecuteApplication`służy do uaktywniania aplikacji ClickOnce w nowo utworzonej domenie aplikacji.  
+ `ExecuteApplication` służy do uaktywniania aplikacji ClickOnce w nowo utworzonej domenie aplikacji.  
   
- Parametr `pReturnValue` wyjściowy jest ustawiany na wartość zwracaną przez aplikację. Jeśli podasz wartość null dla `pReturnValue`, `ExecuteApplication` nie powiedzie się, ale nie zwróci wartości.  
+ Parametr wyjściowy `pReturnValue` ma ustawioną wartość zwróconą przez aplikację. Jeśli podasz wartość null dla `pReturnValue`, `ExecuteApplication` nie powiedzie się, ale nie zwróci wartości.  
   
 > [!IMPORTANT]
-> Nie wywołuj metody [startowej](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) przed wywołaniem `ExecuteApplication` metody w celu aktywowania aplikacji opartej na manifeście. Jeśli metoda jest wywoływana jako pierwsza `ExecuteApplication` , wywołanie metody zakończy się niepowodzeniem. `Start`  
+> Nie wywołuj metody [startowej](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) przed wywołaniem metody `ExecuteApplication` w celu aktywowania aplikacji opartej na manifeście. Jeśli metoda `Start` jest wywoływana jako pierwsza, wywołanie metody `ExecuteApplication` zakończy się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -94,4 +92,4 @@ HRESULT ExecuteApplication(
 - <xref:System.ApplicationIdentity>
 - [ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [SetAppDomainManager, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-setappdomainmanager-method.md)
-- [Przewodnik: Pobieranie zestawów na żądanie przy użyciu interfejsu API wdrażania ClickOnce za pomocą Projektanta](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Przewodnik: pobieranie zestawów na żądanie przy użyciu wdrażania interfejsu API ClickOnce za pomocą Projektanta](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)

@@ -1,5 +1,5 @@
 ---
-title: <dependentAssembly>, element
+title: <dependentAssembly> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/assemblyBinding/dependentAssembly
@@ -9,22 +9,20 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a0604161ed6e7c3ead4a2e518daebc8414689af
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252707"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117588"
 ---
-# <a name="dependentassembly-element"></a>\<Elementy > dependentAssembly
+# <a name="dependentassembly-element"></a>\<dependentAssembly > elementu
 Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. Użyj jednego `dependentAssembly` elementu dla każdego zestawu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zestawubinding**](assemblybinding-element-for-runtime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> dependentAssembly**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zestawubinding**](assemblybinding-element-for-runtime.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**dependentAssembly >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +41,7 @@ Hermetyzuje zasady powiązań oraz lokalizację zestawu dla każdego zestawu. U�
   
 |Element|Opis|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Zawiera informacje identyfikacyjne zestawu. Ten element musi być uwzględniony w `dependentAssembly` każdym elemencie.|  
+|`assemblyIdentity`|Zawiera informacje identyfikacyjne zestawu. Ten element musi być uwzględniony w każdym elemencie `dependentAssembly`.|  
 |`codeBase`|Określa, gdzie środowisko uruchomieniowe może znaleźć zestaw współużytkowany, jeśli nie jest zainstalowany na komputerze.|  
 |`bindingRedirect`|Przekierowuje jedną wersję zestawu do innej.|  
 |`publisherPolicy`|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy dla tego zestawu.|  

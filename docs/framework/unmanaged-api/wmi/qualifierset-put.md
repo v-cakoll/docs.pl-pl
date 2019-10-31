@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Put function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a35025c6d16455a51b7b22d822ba77337ddd894a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798275"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120233"
 ---
 # <a name="qualifierset_put-function"></a>QualifierSet_Put, funkcja
 
@@ -53,7 +51,7 @@ podczas Wskaźnik do wystąpienia [IWbemQualifierSet](/windows/desktop/api/wbemc
 podczas Nazwa kwalifikatora do zapisu.
 
 `pVal`\
-podczas Wskaźnik do prawidłowego `VARIANT` , który zawiera kwalifikator do zapisu. Ten parametr nie może `null`być.
+podczas Wskaźnik do prawidłowego `VARIANT`, który zawiera kwalifikator do zapisu. Ten parametr nie może być `null`.
 
 `lFlavor`\
 podczas Jedna z następujących stałych, która definiuje odpowiednie typy kwalifikatorów dla tego kwalifikatora. Wartość domyślna to `WBEM_FLAVOR_OVERRIDABLE` (0).
@@ -74,8 +72,8 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |---------|---------|---------|
 | `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Wystąpiła niedozwolona próba określenia kwalifikatora **klucza** dla właściwości, która nie może być kluczem. Klucze są określone w definicji klasy dla obiektu i nie można ich zmienić dla poszczególnych wystąpień. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal` Parametr nie jest dozwolonym typem kwalifikatora. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Nie można wywołać `QualifierSet_Put` metody w kwalifikatorze, ponieważ obiekt będący właścicielem nie zezwala na zastępowanie. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Parametr `pVal` nie jest dozwolonym typem kwalifikatora. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Nie można wywołać metody `QualifierSet_Put` w kwalifikatorze, ponieważ obiekt będący właścicielem nie zezwala na zastępowanie. |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 
 ## <a name="remarks"></a>Uwagi
@@ -84,11 +82,11 @@ Ta funkcja otacza wywołanie metody [IWbemQualifierSet::P UT](/windows/desktop/a
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

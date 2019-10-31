@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965009"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140890"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification — Metoda
 Zapewnia funkcję wywołania zwrotnego, która jest gwarantowana, gdy wersja środowiska uruchomieniowego języka wspólnego (CLR) jest najpierw ładowana, ale jeszcze nie została uruchomiona. Ta metoda zastępuje funkcję [LockClrVersion —](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
@@ -44,7 +42,7 @@ HRESULT RequestRuntimeLoadedNotification (
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_POINTER|`pCallbackFunction`ma wartość null.|  
+|E_POINTER|`pCallbackFunction` ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
  Wywołanie zwrotne działa w następujący sposób:  
@@ -78,25 +76,25 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Jeśli host zamierza załadować lub spowodować załadowanie innego środowiska uruchomieniowego w sposób współużytkowany, parametry `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` , które są dostępne w funkcji wywołania zwrotnego, muszą być używane w następujący sposób:  
+ Jeśli host zamierza załadować lub spowodować załadowanie innego środowiska uruchomieniowego w sposób współużytkowany, należy użyć parametrów `pfnCallbackThreadSet` i `pfnCallbackThreadUnset`, które są dostępne w funkcji wywołania zwrotnego w następujący sposób:  
   
-- `pfnCallbackThreadSet`musi być wywoływana przez wątek, który może spowodować obciążenie w czasie wykonywania przed próbą takiego obciążenia.  
+- `pfnCallbackThreadSet` musi być wywoływana przez wątek, który może spowodować obciążenie w czasie wykonywania przed próbą takiego obciążenia.  
   
-- `pfnCallbackThreadUnset`musi być wywoływana, gdy wątek nie będzie już powodował obciążenia w czasie wykonywania (i przed powrotem z początkowego wywołania zwrotnego).  
+- należy wywołać `pfnCallbackThreadUnset`, gdy wątek nie będzie już powodował obciążenia w czasie wykonywania (i przed powrotem z początkowego wywołania zwrotnego).  
   
-- `pfnCallbackThreadSet`i `pfnCallbackThreadUnset` nie są współużytkowane.  
+- `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` są zarówno niewspółpracujące.  
   
 > [!NOTE]
-> Aplikacje hosta nie mogą `pfnCallbackThreadSet` wywoływać `pfnCallbackThreadUnset` i znajdować się `pCallbackFunction` poza zakresem parametru.  
+> Aplikacje hosta nie mogą wywoływać `pfnCallbackThreadSet` i `pfnCallbackThreadUnset` poza zakresem parametru `pCallbackFunction`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

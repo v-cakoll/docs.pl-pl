@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e95d7cb-144d-4ccf-8a69-d605f4744be2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e2fc054e42c34b13051e2125f8e18adc3029633
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7923008eecb9011bead685fbbb7f05f81f12329b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138578"
 ---
 # <a name="icordebuggenericvaluegetvalue-method"></a>ICorDebugGenericValue::GetValue — Metoda
-Kopiuje wartości z tym ogólnego do określonego bufora.  
+Kopiuje wartość tego elementu generycznego do określonego buforu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetValue (
   
 ## <a name="parameters"></a>Parametry  
  `pTo`  
- [out] Wskaźnik do wartości, który jest reprezentowany przez ten obiekt icordebuggenericvalue —. Wartość może być typu prostego lub typ odwołania (wskaźnik).  
+ określoną Wskaźnik do wartości, która jest reprezentowana przez ten obiekt ICorDebugGenericValue. Wartość może być typem prostym lub typem referencyjnym (czyli wskaźnikiem).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

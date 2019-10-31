@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec3dc37984228565b4a3fcc560d3857a1c1e46d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d297023d96de83965c3d04ca9efe2613fd54d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084450"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject — Metoda
-Konwertuje adres obiektu do obiektu "ICorDebugObjectValue".  
+Konwertuje adres obiektu na obiekt "ICorDebugObjectValue".  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +36,22 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>Parametry  
  `addr`  
- [in] Adres obiektu.  
+ podczas Adres obiektu.  
   
  `ppObject`  
- [out] Wskaźnik na adres obiektu "ICorDebugObjectValue".  
+ określoną Wskaźnik do adresu obiektu "ICorDebugObjectValue".  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli `addr` nie wskazuje prawidłowego obiektu zarządzanego, `GetObject` metoda zwraca `E_FAIL`.  
+ Jeśli `addr` nie wskazuje prawidłowego obiektu zarządzanego, Metoda `GetObject` zwróci `E_FAIL`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

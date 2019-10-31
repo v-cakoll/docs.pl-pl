@@ -2,14 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetMethodProps —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95610bc527b8f5b90df906b6260eb636d61dbcd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 811106216e1e454ddf342af1578f74c80ba2acc9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138832"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider:: GetMethodProps —, Metoda
 Zwraca informacje o właściwościach metody, takich jak token metadanych metody i informacje o jego ogólnych parametrach, w którym znajduje się względny adres wirtualny (RVA) w tej metodzie.  
@@ -38,28 +36,28 @@ HRESULT GetMethodProps(
  określoną Wskaźnik do liczby parametrów ogólnych skojarzonych z tą metodą.  
   
  `cbSignature`  
- podczas Rozmiar `signature` tablicy. Zobacz sekcję Uwagi.  
+ podczas Rozmiar tablicy `signature`. Zobacz sekcję Uwagi.  
   
  `pcbSignature`  
- określoną Wskaźnik do rozmiaru zwróconej `signature` tablicy.  
+ określoną Wskaźnik do rozmiaru zwróconej tablicy `signature`.  
   
  `signature`  
  określoną Bufor, który przechowuje sygnatury elementu TypeSpec wszystkich parametrów ogólnych.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać wymagany `signature` rozmiar tablicy metody, należy `cbSignature` ustawić argument na 0 i `signature` na **wartość null**. Gdy metoda zwraca, `pcbSignature` będzie zawierać liczbę bajtów wymaganych `signature` przez tablicę.  
+ Aby uzyskać wymagany rozmiar tablicy `signature` metody, ustaw argument `cbSignature` na wartość 0, a `signature` na **wartość null**. Gdy metoda zwraca, `pcbSignature` będzie zawierać liczbę bajtów wymaganą dla `signature` tablicy.  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

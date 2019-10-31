@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8954268-1821-4b23-b665-dbb55f2af31b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2047929c52dbb7b0d780a4ea0f180bae48a3ce79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 278320391615eddaa8ba878ef87f802f30cddb95
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750396"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122025"
 ---
 # <a name="icordebugdatatargetgetthreadcontext-method"></a>ICorDebugDataTarget::GetThreadContext — Metoda
-Zwraca bieżący kontekst wątku określonego wątku.  
+Zwraca bieżący kontekst wątku dla określonego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +37,28 @@ HRESULT GetThreadContext(
   
 ## <a name="parameters"></a>Parametry  
  `dwThreadID`  
- [in] Identyfikator wątku, którego kontekst ma być pobrana. Identyfikator jest definiowany przez system operacyjny.  
+ podczas Identyfikator wątku, którego kontekst ma zostać pobrany. Identyfikator jest zdefiniowany przez system operacyjny.  
   
  `contextFlags`  
- [in] Bitowa kombinacja flag zależny od platformy, które wskazują, które części kontekstu powinny być odczytywane.  
+ podczas Bitowa kombinacja flag zależnych od platformy wskazująca, które fragmenty kontekstu mają być odczytywane.  
   
  `contextSize`  
- [in] Rozmiar `pContext`.  
+ podczas Rozmiar `pContext`.  
   
  `pContext`  
- [out] Bufor, w którym będzie przechowywany kontekst wątku.  
+ określoną Bufor, w którym będzie przechowywany kontekst wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Na platformach Windows `pContext` musi być `CONTEXT` struktury (zdefiniowane w pliku WinNT.h), który jest odpowiedni dla typu maszyny, określonego przez [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) metody. `contextFlags` musi mieć takie same wartości jak `ContextFlags` pole `CONTEXT` struktury. `CONTEXT` Struktury jest specyficznych dla procesora; odwoływać się do pliku opis pliku WinNT.h, aby uzyskać szczegółowe informacje.  
+ Na platformach Windows `pContext` musi być strukturą `CONTEXT` (zdefiniowaną w WinNT. h), która jest odpowiednia dla typu maszyny określonego przez metodę [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . `contextFlags` muszą mieć te same wartości, co pole `ContextFlags` struktury `CONTEXT`. Struktura `CONTEXT` jest specyficzna dla procesora; Szczegóły można znaleźć w pliku WinNT. h.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

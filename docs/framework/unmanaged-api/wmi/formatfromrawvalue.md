@@ -14,14 +14,12 @@ helpviewer_keywords:
 - FormatFromRawValue function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65a6d9eab9708f762d14e5361697b85ffb73f54a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5097cfe43ae785461a1e2af1217bcbd5e8c4b79c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798628"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120285"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue, funkcja
 Konwertuje jedną pierwotną wartość danych wydajności do określonego formatu lub dwie wartości danych pierwotnych wydajności, jeśli Konwersja formatu jest oparta na czasie. 
@@ -44,7 +42,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parametry
 
 `dwCounterType`\
-podczas Typ licznika. Aby uzyskać listę typów licznika, zobacz [Typy liczników wydajności usługi WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`może być dowolnego typu licznika z wyjątkiem `PERF_LARGE_RAW_FRACTION` dla `PERF_LARGE_RAW_BASE`i. 
+podczas Typ licznika. Aby uzyskać listę typów licznika, zobacz [Typy liczników wydajności usługi WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` może być dowolnego typu licznika z wyjątkiem `PERF_LARGE_RAW_FRACTION` i `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`\
 podczas Format, do którego mają zostać przekonwertowane pierwotne dane wydajności. Może to być jedna z następujących wartości:
@@ -65,13 +63,13 @@ Jedną z poprzednich wartości można logicznie z jedną z następujących flag 
 `pTimeBase`\
 podczas Wskaźnik do podstawy czasu, jeśli jest to konieczne dla konwersji formatu. Jeśli informacje podstawowe czasu nie są niezbędne do konwersji formatu, wartość tego parametru jest ignorowana.
 
-`pRawValue1`\ [in] wskaźnik do [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) struktury, która reprezentuje nieprzetworzoną wartość wydajności.
+`pRawValue1`\ [in] wskaźnik do struktury [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) , która reprezentuje nieprzetworzoną wartość wydajności.
 
 `pRawValue2`\
-podczas Wskaźnik do [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) struktury, która reprezentuje drugą pierwotną wartość wydajności. Jeśli druga pierwotna wartość wydajności nie jest konieczna, ten parametr powinien `null`być.
+podczas Wskaźnik do struktury [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) , która reprezentuje drugą pierwotną wartość wydajności. Jeśli druga pierwotna wartość wydajności nie jest konieczna, ten parametr powinien być `null`.
 
 `pFmtValue`\
-określoną Wskaźnik do [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) struktury, która otrzymuje sformatowaną wartość wydajności.
+określoną Wskaźnik do struktury [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) , która otrzymuje sformatowaną wartość wydajności.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -89,11 +87,11 @@ Ta funkcja otacza wywołanie funkcji [FormatFromRawValue](https://docs.microsoft
 
 ## <a name="requirements"></a>Wymagania
 
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
- **Biblioteki** PerfCounter.dll
+ **Biblioteka:** Funkcja kończąca PerfCounter. dll
 
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

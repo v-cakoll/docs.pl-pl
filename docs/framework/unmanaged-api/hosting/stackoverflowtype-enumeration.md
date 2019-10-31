@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: dab648ad-972b-479c-b129-b4c1dcbd932e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44d5b7fdb2908678671505649bb906c0c5f740e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f09c6bb79d7bd28f4d8b74237b6f343a07b79062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751129"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141472"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType — Wyliczenie
-Zawiera wartości wskazujące podstawowych przyczyn zdarzenie przepełnienia stosu.  
+Zawiera wartości wskazujące podstawową przyczynę zdarzenia przepełnienia stosu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +43,16 @@ typedef enum {
 |`SO_Other`|Przepełnienie stosu zostało spowodowane przez kod niezarządzany.|  
   
 ## <a name="remarks"></a>Uwagi  
- Te informacje są przesyłane do hosta za pomocą wywołania [iactiononclrevent::ONEVENT —](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) metody.  
+ Te informacje są przesyłane do hosta za pomocą wywołania metody [IActionOnCLREvent:: OnEvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

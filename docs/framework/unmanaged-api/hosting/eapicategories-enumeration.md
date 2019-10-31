@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3c4a8a5a-8a46-4ac9-947f-4959bc9d6ac6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fd9409a5157e1013365c94f01631f130a76f54b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131212"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories — Wyliczenie
-Opis kategorii możliwości, które blokują hosta z systemem w kodzie częściowo zaufanym.  
+Opisuje kategorie możliwości, które host może blokować z uruchamiania w częściowo zaufanym kodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,31 +46,31 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`eAll`|Określa, czy wszystkich zarządzanych klas i składowych, które są obejmowane przez inne `EApiCategories` pola zablokowany w kodzie częściowo zaufanym.|  
-|`eExternalProcessMgmt`|Określa, że zarządzanych klas i elementów członkowskich, które umożliwiają tworzenie, manipulowanie i niszczenia procesy zewnętrzne zablokowany w kodzie częściowo zaufanym.|  
-|`eExternalThreading`|Określa, że zarządzanych klas i elementów członkowskich, które umożliwiają tworzenie, manipulowanie i niszczenie wątków zewnętrznych zablokowany w kodzie częściowo zaufanym.|  
-|`eMayLeakOnAbort`|Określa, że zarządzane typy i elementy członkowskie, które potencjalnie mogą spowodować wyciek pamięci po przerwaniu zablokowany w kodzie częściowo zaufanym.|  
-|`eNoCategory`|Określa, że nie ma kategorii kodu zarządzanego zablokowany w kodzie częściowo zaufanym.|  
-|`eSecurityInfrastructure`|Określa, że zablokowany wspólnej infrastruktury języka wspólnego (CLR) zabezpieczeń używany przez częściowo zaufany kod.|  
-|`eSelfAffectingProcessMgmt`|Określa, że zarządzanych klas i składowych, których możliwości mogą mieć wpływ na proces hostowanej zablokowany w kodzie częściowo zaufanym.|  
-|`eSelfAffectingThreading`|Określa, że zarządzanych klas i składowych, których możliwości mogą mieć wpływ na wątki w procesie hostowanej zablokowany w kodzie częściowo zaufanym.|  
-|`eSharedState`|Określa, że zarządzanych klas i składowych, które uwidaczniają udostępnionego stanu zablokowany w kodzie częściowo zaufanym.|  
-|`eSynchronization`|Określa, że wspólnej klasy środowiska wykonawczego języka i elementy członkowskie, które umożliwia blokady przy użyciu kodu użytkownika zablokowany w kodzie częściowo zaufanym.|  
-|`eUI`|Określa, że zarządzanych klas i składowych, które blokują lub wymaga interakcji z człowiekiem zablokowany w kodzie częściowo zaufanym.|  
+|`eAll`|Określa, że wszystkie zarządzane klasy i elementy członkowskie, które są objęte innymi polami `EApiCategories`, nie mogą być uruchamiane w częściowo zaufanym kodzie.|  
+|`eExternalProcessMgmt`|Określa, że zarządzane klasy i elementy członkowskie, które umożliwiają tworzenie, manipulowanie i niszczenie procesów zewnętrznych, nie są uruchamiane w częściowo zaufanym kodzie.|  
+|`eExternalThreading`|Określa, że zarządzane klasy i elementy członkowskie, które umożliwiają tworzenie, manipulowanie i niszczenie wątków zewnętrznych, nie są uruchamiane w częściowo zaufanym kodzie.|  
+|`eMayLeakOnAbort`|Określa, że zarządzane typy i elementy członkowskie, które mogą potencjalnie przeciekać pamięć przy przerwaniu, mogą być uruchamiane w częściowo zaufanym kodzie.|  
+|`eNoCategory`|Określa, że nie można blokować uruchamiania żadnej zarządzanej kategorii kodu w kodzie częściowo zaufanym.|  
+|`eSecurityInfrastructure`|Określa, że infrastruktura zabezpieczeń środowiska uruchomieniowego języka wspólnego (CLR) nie może być używana przez częściowo zaufany kod.|  
+|`eSelfAffectingProcessMgmt`|Określa, że zarządzane klasy i elementy członkowskie, których możliwości mogą mieć wpływ na proces hostowany, można zablokować z uruchamiania w częściowo zaufanym kodzie.|  
+|`eSelfAffectingThreading`|Określa, że zarządzane klasy i elementy członkowskie, których możliwości mogą wpływać na wątki w hostowanym procesie, można zablokować uruchamiania w częściowo zaufanym kodzie.|  
+|`eSharedState`|Określa, że zarządzane klasy i elementy członkowskie, które uwidaczniają stan udostępniony, nie są uruchamiane w częściowo zaufanym kodzie.|  
+|`eSynchronization`|Określa, że klasy środowiska uruchomieniowego języka wspólnego i składowe, które zezwalają na przechowywanie blokad przez kod użytkownika, nie mogą być uruchamiane w częściowo zaufanym kodzie.|  
+|`eUI`|Określa, że zarządzane klasy i elementy członkowskie, które zezwalają na interakcję ludzką lub wymagają, aby nie były uruchamiane w częściowo zaufanym kodzie.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Iclrhostprotectionmanager::setprotectedcategories —](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) metoda przyjmuje parametr typu `EApiCategories`.  
+ Metoda [ICLRHostProtectionManager:: SetProtectedCategories —](../../../../docs/framework/unmanaged-api/hosting/iclrhostprotectionmanager-setprotectedcategories-method.md) przyjmuje parametr typu `EApiCategories`.  
   
- `EApiCategories` Wyliczenie i `SetProtectedCategories` metoda odnoszą się bezpośrednio do zarządzanej <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType> klasy. Klasa zarządzana jest używana z <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType> wyliczenia, których wartości odpowiadają bezpośrednio do `EApiCategories` wartości, aby oznaczyć zarządzane typy i elementy członkowskie, które udostępniają funkcje odpowiadającej kategorii opisanych przez `EApiCategories`.  
+ Wyliczenie `EApiCategories` i Metoda `SetProtectedCategories` są bezpośrednio powiązane z klasą zarządzanej <xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>. Zarządzana Klasa jest używana z wyliczeniem <xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>, którego wartości odpowiadają bezpośrednio na wartości `EApiCategories`, aby oznaczyć typy zarządzane i składowe, które uwidaczniają możliwości odpowiadające kategoriom opisanym przez `EApiCategories`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

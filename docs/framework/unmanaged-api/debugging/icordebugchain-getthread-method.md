@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b3390319-6366-418c-ba80-b552ac4dfc1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05002ecdb903a1adfeea88930083ba472164324
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b964d58bddb174da38fc8988ec807fd3129b5fcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745640"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123823"
 ---
 # <a name="icordebugchaingetthread-method"></a>ICorDebugChain::GetThread — Metoda
-Pobiera wątku fizycznym, ten łańcuch wywołań jest częścią.  
+Pobiera wątek fizyczny, do którego należy ten łańcuch wywołań.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetThread (
   
 ## <a name="parameters"></a>Parametry  
  `ppThread`  
- [out] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątku fizycznym tego łańcucha wywołań jest częścią.  
+ określoną Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek fizyczny, do którego należy ten łańcuch wywołań.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

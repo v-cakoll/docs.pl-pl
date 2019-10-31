@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738330"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110992"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess — Metoda
-Uruchamia proces i jego podstawowym wątku pod kontrolą debugera.  
+Uruchamia proces i jego główny wątek pod kontrolą debugera.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,58 +46,58 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parametry  
  `lpApplicationName`  
- [in] Wskaźnik Określa moduł, który ma być wykonane przez uruchomienie procesu ciąg zakończony znakiem null. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa moduł, który ma zostać wykonany przez uruchomiony proces. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
   
  `lpCommandLine`  
- [in] Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania przez uruchomienie procesu. Nazwa aplikacji (na przykład "SomeApp.exe") musi być pierwszym argumentem.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa wiersz polecenia, który ma zostać wykonany przez uruchomiony proces. Nazwa aplikacji (na przykład "SomeApp. exe") musi być pierwszym argumentem.  
   
  `lpProcessAttributes`  
- [in] Wskaźnik do systemu Win32 `SECURITY_ATTRIBUTES` strukturę, która określa deskryptora zabezpieczeń dla procesu. Jeśli `lpProcessAttributes` jest wartość null, proces pobiera domyślnego deskryptora zabezpieczeń.  
+ podczas Wskaźnik do struktury `SECURITY_ATTRIBUTES` Win32, który określa deskryptor zabezpieczeń dla procesu. Jeśli `lpProcessAttributes` ma wartość null, proces Pobiera domyślny deskryptor zabezpieczeń.  
   
  `lpThreadAttributes`  
- [in] Wskaźnik do systemu Win32 `SECURITY_ATTRIBUTES` strukturę, która określa deskryptora zabezpieczeń dla wątku głównego procesu. Jeśli `lpThreadAttributes` jest wartość null, wątek pobiera domyślnego deskryptora zabezpieczeń.  
+ podczas Wskaźnik do struktury `SECURITY_ATTRIBUTES` Win32, który określa deskryptor zabezpieczeń dla wątku podstawowego procesu. Jeśli `lpThreadAttributes` ma wartość null, wątek Pobiera domyślny deskryptor zabezpieczeń.  
   
  `bInheritHandles`  
- [in] Ustaw `true` do wskazania, że każdy dziedziczne uchwytu procesu wywołującego jest dziedziczona przez uruchomienie procesu lub `false` do wskazania, że uchwyty nie są dziedziczone. Uchwyty odziedziczone mają takie same wartości i dostęp prawa jako oryginalnego uchwyty.  
+ podczas Ustaw na `true`, aby wskazać, że każdy dziedziczny uchwyt w procesie wywołującym jest dziedziczony przez uruchomiony proces lub `false`, aby wskazać, że uchwyty nie są dziedziczone. Dziedziczone dojścia mają takie same prawa wartości i dostępu jak oryginalne dojścia.  
   
  `dwCreationFlags`  
- [in] Bitowa kombinacja [flagi tworzenia procesu Win32](https://go.microsoft.com/fwlink/?linkid=69981) umożliwiające sterowanie priorytet i zachowanie uruchomienie procesu.  
+ podczas Bitowa kombinacja [flag tworzenia procesów Win32](https://go.microsoft.com/fwlink/?linkid=69981) kontrolujących klasę priorytetu i zachowanie uruchomionego procesu.  
   
  `lpEnvironment`  
- [in] Wskaźnik do bloku środowiska dla nowego procesu.  
+ podczas Wskaźnik do bloku środowiska dla nowego procesu.  
   
  `lpCurrentDirectory`  
- [in] Wskaźnik na ciąg zakończony znakiem null, który określa pełną ścieżkę do katalogu bieżącego procesu. Jeśli ten parametr ma wartość null, nowy proces, będzie miał ten sam bieżącego dysku i katalogu jako procesu wywołującego.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa pełną ścieżkę do bieżącego katalogu dla procesu. Jeśli ten parametr ma wartość null, nowy proces będzie miał ten sam bieżący dysk i katalog co proces wywołujący.  
   
  `lpStartupInfo`  
- [in] Wskaźnik do systemu Win32 `STARTUPINFOW` strukturę, która określa stacji okna pulpitu, standardowe uchwyty i wygląd okna głównego dla uruchomionego procesu.  
+ podczas Wskaźnik do struktury `STARTUPINFOW` Win32, który określa stacji okna, pulpitu, standardowych dojść i wyglądu okna głównego dla uruchomionego procesu.  
   
  `lpProcessInformation`  
- [in] Wskaźnik do systemu Win32 `PROCESS_INFORMATION` strukturę, która określa informacje identyfikacyjne dotyczące procesu do uruchomienia.  
+ podczas Wskaźnik do struktury `PROCESS_INFORMATION` Win32, który określa informacje identyfikacyjne procesu, który ma zostać uruchomiony.  
   
  `debuggingFlags`  
- [in] Wartość cordebugcreateprocessflags — wyliczenie, który określa opcje debugowania.  
+ podczas Wartość wyliczenia CorDebugCreateProcessFlags —, która określa opcje debugowania.  
   
  `ppProcess`  
- [out] Wskaźnik do adresu obiektu ICorDebugProcess, który reprezentuje proces.  
+ określoną Wskaźnik do adresu obiektu ICorDebugProcess, który reprezentuje proces.  
   
 ## <a name="remarks"></a>Uwagi  
- Parametry tej metody są takie same, jak Win32 `CreateProcess` metody.  
+ Parametry tej metody są takie same jak w przypadku metody Win32 `CreateProcess`.  
   
- Aby włączyć debugowanie niezarządzane trybu mieszanego, ustaw `dwCreationFlags` do DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Aby użyć tylko debugowania zarządzanego, nie należy ustawiać tych flag.  
+ Aby włączyć debugowanie w trybie mieszanym, ustaw `dwCreationFlags` na DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Jeśli chcesz używać tylko debugowania zarządzanego, nie ustawiaj tych flag.  
   
- Jeśli debuger i proces debugowania (dołączony proces) udostępnianie jednej konsoli, a jeśli debugowania międzyoperacyjnego jest używany, istnieje możliwość dołączony proces konsoli blokady i zatrzyma zdarzeń debugowania. Debuger następnie zablokuje wszelkie próby korzystania z konsoli. Aby uniknąć tego problemu, należy ustawić flagę CREATE_NEW_CONSOLE `dwCreationFlags` parametru.  
+ Jeśli debuger i proces mają być debugowane (dołączone procesy) współużytkują pojedynczą konsolę, a jeśli jest używane debugowanie międzyoperacyjności, istnieje możliwość, że podłączony proces będzie przetrzymywać blokady i zatrzymać przy zdarzeniu debugowania. Debuger spowoduje zablokowanie wszelkich prób korzystania z konsoli programu. Aby uniknąć tego problemu, Ustaw flagę CREATE_NEW_CONSOLE w parametrze `dwCreationFlags`.  
   
- Debugowanie międzyoperacyjne nie jest obsługiwane na Win9x i x86 innych platformach, takich jak IA-64 i komputerów z procesorem AMD64 platform.  
+ Debugowanie międzyoperacyjności nie jest obsługiwane w przypadku platform systemów Win9x i innych niż x86, takich jak platformy oparte na architekturze IA-64 i AMD64.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 950a74dd663249b2a59bf746d02b5992733d0ce9
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120155"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfejsy (Przewodnik programowania w języku C#)
 
-Interfejs zawiera definicje dla grupy powiązanych funkcji, które muszą implementować [Klasa](../../language-reference/keywords/class.md) nieabstrat lub [Struktura](../../language-reference/keywords/struct.md) .
+Interfejs zawiera definicje dla grupy powiązanych funkcji, które muszą implementować [Klasa](../../language-reference/keywords/class.md) nieabstrakcyjna lub [Struktura](../../language-reference/keywords/struct.md) .
   
 Korzystając z interfejsów, można na przykład uwzględnić zachowanie z wielu źródeł w klasie. Ta funkcja jest ważna w C# przypadku, gdy język nie obsługuje wielokrotnego dziedziczenia klas. Ponadto należy użyć interfejsu, jeśli chcesz symulować dziedziczenie dla struktur, ponieważ nie może faktycznie dziedziczyć z innej struktury lub klasy.  
   

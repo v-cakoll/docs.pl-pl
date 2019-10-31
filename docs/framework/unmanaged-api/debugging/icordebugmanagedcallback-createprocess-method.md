@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0eacb4b0a06fbe086935b59eba7d33135b6bef19
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d773368c85fd42fd169109cf1c7e6635705ebb7e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090229"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess — Metoda
-Powiadamia debuger został dołączony proces lub uruchomiona po raz pierwszy.  
+Powiadamia debuger, gdy proces został dołączony lub uruchomiony po raz pierwszy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +35,19 @@ HRESULT CreateProcess (
   
 ## <a name="parameters"></a>Parametry  
  `pProcess`  
- [in] Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, który jest dołączony lub pracy.  
+ podczas Wskaźnik do obiektu ICorDebugProcess, który reprezentuje proces, który został dołączony lub uruchomiony.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda nie jest wywoływana, dopóki nie został zainicjowany przez środowisko uruchomieniowe języka wspólnego. Większość [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) metody zwróci CORDBG_E_NOTREADY przed `CreateProcess` wywołania zwrotnego.  
+ Ta metoda nie jest wywoływana do momentu zainicjowania środowiska uruchomieniowego języka wspólnego. Większość metod [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) zwróci CORDBG_E_NOTREADY przed wywołaniem zwrotnym `CreateProcess`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

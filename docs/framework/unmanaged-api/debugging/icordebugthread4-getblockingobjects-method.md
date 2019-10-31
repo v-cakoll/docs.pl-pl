@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d83f9c0b187ad8b2955bc12ff168e0c4f26b909
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765227"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122460"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects — Metoda
-Zawiera wyliczenie uporządkowane [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktur, które zapewniają blokowania informacje o wątku.  
+Udostępnia uporządkowane Wyliczenie struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) , które dostarczają informacje o blokowaniu wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,27 +34,27 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>Parametry  
  `ppBlockingObjectEnum`  
- [out] Wskaźnik do uporządkowanej wyliczenie [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) struktury.  
+ określoną Wskaźnik do uporządkowanego wyliczania struktur [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) .  
   
 ## <a name="remarks"></a>Uwagi  
- Pierwszy element w wyliczeniu zwrócone odnosi się do pierwszego strukturę, która blokuje wątek. Drugi element odnosi się do blokowania elementu, który występuje podczas uruchamiania wywołania asynchronicznego procedury (APC), gdy zablokowany w pierwszy i tak dalej.  
+ Pierwszy element w zwracanym wyliczeniu odpowiada pierwszej strukturze, która blokuje wątek. Drugi element odnosi się do bloku elementu, który jest napotkany podczas wykonywania wywołania procedury asynchronicznej (APC), gdy jest zablokowany w pierwszej i tak dalej.  
   
- Wyliczenia jest prawidłowa tylko na czas trwania bieżącego stanu zsynchronizowane.  
+ Wyliczenie jest prawidłowe tylko dla czasu trwania bieżącego zsynchronizowanego stanu.  
   
- Ta metoda musi zostać wywołana, gdy obiekt debugowany jest w stanie zsynchronizowane.  
+ Ta metoda musi być wywoływana, gdy debugowanego obiektu jest w stanie zsynchronizowanym.  
   
- Jeśli `ppBlockingObjectEnum` nie jest prawidłową wskaźnikiem, wynik jest niezdefiniowany.  
+ Jeśli `ppBlockingObjectEnum` nie jest prawidłowym wskaźnikiem, wynik jest niezdefiniowany.  
   
- Jeśli wątek jest zablokowany i nie może być określony błąd, metoda zwraca wartość HRESULT, która wskazuje błąd; w przeciwnym razie zwraca wartość S_OK.  
+ Jeśli wątek jest zablokowany i nie można ustalić błędu, metoda zwraca wartość HRESULT, która wskazuje na błąd; w przeciwnym razie zwraca S_OK.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

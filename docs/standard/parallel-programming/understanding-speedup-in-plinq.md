@@ -8,26 +8,24 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 014adfbf6f9afab0eaacd574cfb181c0eec07b5b
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960314"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139907"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
-Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań obiekt, wykonując delegatów zapytania równolegle na komputerach z wielordzeniowymi procesorami. Program PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależne, bez udostępnionego stanu związane między poszczególnych obiektów delegowanych. Operacje takie są wspólne w składniku LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ one nadają się łatwo do planowania w wielu wątkach. Jednak nie wszystkie kwerendy składać się z samych operacji delightfully równoległych; w większości przypadków zapytanie obejmuje niektóre operatory, albo nie może być przeprowadzana równolegle lub który spowolnić wykonywanie równoległe. A nawet w przypadku zapytań, które są całkowicie delightfully równoległego, PLINQ musi nadal partycji źródła danych harmonogramu pracy nad wątków i zazwyczaj scalać wyniki po wykonaniu kwerendy. Wszystkie te operacje dodawania obliczeniową koszty przetwarzania równoległego; te koszty, dodawanie funkcji przetwarzania równoległego, są nazywane *obciążenie*. Aby uzyskać optymalną wydajność w zapytaniu PLINQ, celem jest maksymalne części, które są delightfully równoległe i zminimalizować części, które wymagają narzutu. Ten artykuł zawiera informacje, dzięki którym można tworzyć zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawne wyniki.  
+Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ to Objects przez wykonywanie delegatów zapytań równolegle na komputerach wielordzeniowych. PLINQ sprawdza się najlepiej, gdy przetwarzanie każdego elementu w kolekcji źródłowej jest niezależne, bez współużytkowanego stanu wśród poszczególnych delegatów. Takie operacje są typowe w LINQ to Objects i PLINQ i często nazywa się "*delightfully Parallel*", ponieważ ułatwiają one planowanie na wielu wątkach. Jednak nie wszystkie zapytania składają się wyłącznie z delightfully operacji równoległych; w większości przypadków zapytanie obejmuje niektóre operatory, które nie mogą być równoległe lub spowalniają wykonywanie równoległe. Mimo że zapytania, które są całkowicie delightfully równolegle, PLINQ muszą nadal dzielić źródło danych i zaplanować pracę w wątkach, a zazwyczaj scalać wyniki po zakończeniu zapytania. Wszystkie te operacje są dodawane do kosztów obliczeniowych przetwarzanie równoległe; koszty dodawania przetwarzanie równoległe są nazywane *obciążeniem*. Aby osiągnąć optymalną wydajność zapytania PLINQ, celem jest maksymalizacja części, które są delightfully równoległe i zminimalizowanie części, które wymagają narzutu. Ten artykuł zawiera informacje, które pomogą w pisaniu PLINQ zapytań, które są tak wydajne, jak to możliwe, przy zachowaniu prawidłowych wyników.  
   
 ## <a name="factors-that-impact-plinq-query-performance"></a>Czynniki wpływające na wydajność zapytań PLINQ  
- W poniższych sekcjach wymieniono niektóre z najważniejszych czynników tego obniżenie wydajności zapytania równolegle. Są to ogólne instrukcje, które same w sobie nie są wystarczające, aby przewidzieć wydajności zapytań we wszystkich przypadkach. Jak zawsze jest ważne, aby zmierzyć wydajność rzeczywistego określonych zapytań na komputerach z szerokim zakresem reprezentatywny konfiguracje i obciążeniami.  
+ W poniższych sekcjach wymieniono najważniejsze czynniki wpływające na wydajność zapytań równoległych. Są to ogólne instrukcje, które same nie są wystarczające do przewidywania wydajności zapytań we wszystkich przypadkach. Tak samo ważne jest, aby mierzyć rzeczywistą wydajność konkretnych zapytań na komputerach z różnymi konfiguracjami i obciążeniami reprezentatywnymi.  
   
-1. Obliczeniową koszty ogólne pracy.  
+1. Koszt obliczeniowy całościowej pracy.  
   
-     Aby osiągnąć przyspieszenie, zapytanie PLINQ musi mieć wystarczającą ilość delightfully równoległą pracę, aby zrównoważyć obciążenie. Praca może być wyrażona jako obliczeniową koszt każdego delegata pomnożona przez liczbę elementów w kolekcji źródłowej. Przy założeniu, że operacji może odbywać się równolegle, tym bardziej praktyce kosztowne jest, tym większa możliwość przyspieszenie. Na przykład jeśli funkcja przyjmuje jeden milisekund do wykonania, sekwencyjne zapytanie ponad 1000 elementów zajmie 1 sekundy do wykonania tej operacji, natomiast równoległego zapytań na komputerze z cztery rdzenie może zająć tylko 250 milisekund. Daje to przyspieszenie 750 milisekund. W razie potrzeby jednej sekundy można wykonać dla każdego elementu funkcji przyspieszenie byłoby 750 sekund. Jeśli delegat jest bardzo kosztowna, PLINQ może oferować znaczące przyspieszenie za pomocą tylko kilku elementów w kolekcji źródłowej. Z drugiej strony kolekcje małych źródła z uproszczonych delegatów zazwyczaj nie są dobrymi kandydatami do PLINQ.  
+     Aby osiągnąć przyspieszenie, zapytanie PLINQ musi mieć wystarczającą liczbę delightfully równoległej pracy, aby przesunąć obciążenie. Nakład pracy może być wyrażony jako koszt obliczeniowy każdego delegata pomnożony przez liczbę elementów w kolekcji źródłowej. Przy założeniu, że operacja może być równoległa, im bardziej kosztowne jest, tym większa szansa dla przyspieszenie. Jeśli na przykład funkcja przyjmuje jedną milisekundę, wykonanie tej operacji przez sekwencyjne zapytanie ponad 1000 elementów zajmie jedną sekundę, podczas gdy zapytanie równoległe na komputerze z czterema rdzeniami może trwać tylko 250 milisekund. Daje to przyspieszenie o 750 milisekund. Jeśli funkcja wymagana przez jedną sekundę do wykonania dla każdego elementu, przyspieszenie będzie 750 sekund. Jeśli delegat jest bardzo kosztowny, PLINQ może oferować znaczący przyspieszenie z tylko kilkoma elementami w kolekcji źródłowej. Z kolei małe kolekcje źródłowe z prostymi delegatami zwykle nie są dobrymi kandydatami do PLINQ.  
   
-     W poniższym przykładzie queryA prawdopodobnie jest dobrym kandydatem do PLINQ, zakładając, że jego funkcja wybierz polega na sporego nakładu pracy. queryB prawdopodobnie nie jest dobrym kandydatem, ponieważ nie jest wystarczająco dużo pracy w instrukcji Select, a obciążenie związane z przetwarzaniem równoległym spowoduje przesunięcie większości lub wszystkich przyspieszenie.  
+     W poniższym przykładzie zapytanie jest prawdopodobnie dobrym kandydatem do PLINQ, przy założeniu, że jego funkcja SELECT obejmuje wiele pracy. queryB prawdopodobnie nie jest dobrym kandydatem, ponieważ nie ma wystarczającej ilości pracy w instrukcji SELECT, a obciążenie przetwarzanie równoległe będzie przesunięte w większości lub wszystkich przyspieszenie.  
   
     ```vb  
     Dim queryA = From num In numberList.AsParallel()  
@@ -49,40 +47,40 @@ Głównym celem PLINQ jest przyspieszenie wykonywania zapytań LINQ do zapytań 
   
 2. Liczba rdzeni logicznych w systemie (stopień równoległości).  
   
-     Ten punkt jest oczywisty następstwem w poprzedniej sekcji, zapytania, które są delightfully równoległe działają szybciej na komputerach przy użyciu więcej rdzeni, ponieważ można podzielić pracę między większą liczbę jednoczesnych wątków. Ogólną ilość przyspieszenie zależy od tego, jaki procent ogólnej pracy kwerendy jest równoległego. Jednak nie należy zakładać, że wszystkie zapytania będą uruchamiane dwa razy szybkiego na komputerze osiem podstawowe jako komputer cztery podstawowe. Podczas dostosowywania zapytań, aby uzyskać optymalną wydajność, należy do mierzenia rzeczywiste wyniki na komputerach mających różne liczby rdzeni. Ten punkt jest powiązany z punktu #1: większych zestawów danych są wymagane, aby móc korzystać z większej zasobów obliczeniowych.  
+     Ten punkt jest oczywistym współrzutem do poprzedniej sekcji zapytania, które są delightfully równoległe na maszynach o większej liczbie rdzeni, ponieważ praca może być dzielona między więcej współbieżnych wątków. Ogólna ilość przyspieszenie zależy od tego, jaki procent ogólnej pracy zapytania to działania równoległego. Jednak nie należy zakładać, że wszystkie zapytania będą uruchamiane dwa razy na osiem komputerów Core jako cztery podstawowe komputery. Podczas dostrajania zapytań w celu uzyskania optymalnej wydajności ważne jest, aby mierzyć rzeczywiste wyniki na komputerach z różnymi liczbami rdzeni. Ten punkt jest związany z punktem #1: większe zestawy danych są wymagane do wykorzystania większej ilości zasobów obliczeniowych.  
   
 3. Liczba i rodzaj operacji.  
   
-     Program PLINQ zawiera AsOrdered operator w sytuacjach, w których jest to konieczne zachować kolejność elementów w sekwencji źródłowej. Istnieje koszt związany z kolejności, ale ten koszt jest zwykle niewielkie. Operacje GroupBy i sprzężenia podobnie naliczone obciążenie. Program PLINQ sprawdza się najlepiej, gdy jest możliwy do przetwarzania elementów w kolekcji źródłowej, w dowolnej kolejności i przekazywać je dalej operatora, jak są one gotowe. Aby uzyskać więcej informacji, zobacz [zamawianie zachowywania w PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
+     PLINQ udostępnia operator operator AsOrdered w sytuacjach, w których konieczne jest zachowanie kolejności elementów w sekwencji źródłowej. Istnieje koszt związany z porządkowaniem, ale ten koszt jest zazwyczaj Nieumiarkowany. Operacje GroupBy i Join również powodują naliczanie kosztów. PLINQ sprawdza się najlepiej, gdy może przetwarzać elementy w kolekcji źródłowej w dowolnej kolejności i przekazywać je do następnego operatora, gdy tylko będą gotowe. Aby uzyskać więcej informacji, zobacz temat [porządkowania zamówień w PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).  
   
-4. Formularz wykonywania zapytania.  
+4. Forma wykonywania zapytania.  
   
-     Jeśli wyniki zapytania są przechowywane przez wywołanie metody ToArray lub tolist —, wyniki ze wszystkich wątków równoległych, muszą zostać połączone w strukturze danych jednego. Obejmuje to da się uniknąć kosztów obliczeniową. Podobnie jeśli wyniki iteracji za pomocą pętli foreach (dla każdego w języku Visual Basic), wyniki z wątków roboczych muszą być serializowany na wątek modułu wyliczającego. Ale jeśli chcesz wykonywać niektórych akcji, na podstawie wyniku z każdego wątku, można użyć metody ForAll do wykonywania tej pracy w wielu wątkach.  
+     Jeśli przechowujesz wyniki zapytania przez wywołanie ToArray — lub ToList —, wyniki ze wszystkich wątków równoległych muszą zostać scalone w ramach pojedynczej struktury danych. Dotyczy to niemożliwego do uniknięcia kosztu obliczeniowego. Podobnie, w przypadku iteracji wyników przy użyciu pętli foreach (dla każdej w Visual Basic), wyniki wątków roboczych muszą być serializowane do wątku modułu wyliczającego. Jeśli jednak po prostu chcesz wykonać pewne czynności na podstawie wyniku z każdego wątku, możesz użyć metody ForAll, aby wykonać tę czynność na wielu wątkach.  
   
 5. Typ opcji scalania.  
   
-     Program PLINQ można skonfigurować do buforowania danych wyjściowych i przedstawić go we fragmentach, lub wszystkie na raz po cały zestaw wyników jest generowany, lub do poszczególnych wyników strumienia jako są produkowane. Wcześniejsze wyniki w pogorszyła całkowity czas wykonywania i ostatnie wyniki zmniejszenia opóźnienia między elementami yielded.  Chociaż opcje scalania nie zawsze mają istotny wpływ na ogólną wydajność zapytań, mogą one wpływać na wydajność ponieważ kontrolują jak długo użytkownik musi czekać, aby zobaczyć wyniki. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+     PLINQ można skonfigurować w taki sposób, aby buforuje swoje dane wyjściowe, i generować go w fragmentach lub wszystkie jednocześnie po utworzeniu całego zestawu wyników lub w innym strumieniu w miarę ich produkcji. Poprzednie wyniki w skrócie łączny czas wykonywania i ostatnie wyniki zmniejszają opóźnienia między elementami.  Mimo że opcje scalania nie zawsze mają istotny wpływ na ogólną wydajność zapytań, mogą mieć wpływ na postrzeganą wydajność, ponieważ kontrolują, jak długo użytkownik musi czekać, aby zobaczyć wyniki. Aby uzyskać więcej informacji, zobacz [Opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
-6. Rodzaj partycji.  
+6. Rodzaj partycjonowania.  
   
-     W niektórych przypadkach zapytanie PLINQ przez kolekcję można indeksować źródła może spowodować obciążenia pracą niezrównoważone. W takiej sytuacji można zwiększyć wydajność zapytań, tworząc niestandardowy partycjoner. Aby uzyskać więcej informacji, zobacz [niestandardowe Partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+     W niektórych przypadkach zapytanie PLINQ w kolekcji źródłowej z indeksem może spowodować niezrównoważone obciążenie pracą. W takim przypadku może być możliwe zwiększenie wydajności zapytania przez utworzenie niestandardowego programu Partitioner. Aby uzyskać więcej informacji, zobacz [niestandardowe partycje dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
-## <a name="when-plinq-chooses-sequential-mode"></a>Gdy wybierze trybu sekwencyjnego w PLINQ  
- Program PLINQ zawsze będzie podejmował próbę wykonania kwerendy co najmniej tak szybko, jak uruchomić zapytanie sekwencyjnie. Mimo, że PLINQ nie wygląda jak praktyce są kosztowne delegatów użytkownika lub jak duże źródło danych wejściowych jest, poszukaj niektórych zapytań "kształty". W szczególności szuka operatorów zapytań lub kombinacji operatorów, które zazwyczaj powodują zapytanie w celu wykonania wolniej w trybie równoległych. Po znalezieniu takiego kształty, PLINQ domyślnie powraca do trybu sekwencyjnego.  
+## <a name="when-plinq-chooses-sequential-mode"></a>Gdy PLINQ wybiera tryb sekwencyjny  
+ PLINQ zawsze podejmie próbę wykonania zapytania co najmniej tak szybko, jak zapytanie zostanie uruchomione sekwencyjnie. Mimo że PLINQ nie sprawdza, w jaki sposób wyliczane są Delegaty użytkowników, lub jak duże jest źródło danych wejściowych, szuka określonych zapytań "Shapes". W odniesieniu do tego szuka operatorów zapytań lub kombinacji operatorów, które zwykle powodują spowolnienie wykonywania zapytania w trybie równoległym. Po znalezieniu takich kształtów PLINQ domyślnie wraca do trybu sekwencyjnego.  
   
- Jednak po mierzenia wydajności określonej kwerendy, można stwierdzić czy on rzeczywiście działa szybciej w trybie równoległych. W takich przypadkach można użyć <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> Flaga za pośrednictwem <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> metodę, aby nakazać PLINQ do zrównoleglenia zapytania. Aby uzyskać więcej informacji, zobacz [jak: Określanie trybu wykonywania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
+ Jednak po pomiarze wydajności określonego zapytania można określić, że faktycznie działa szybciej w trybie równoległym. W takich przypadkach można użyć flagi <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> za pomocą metody <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A>, aby nakazać PLINQ zrównoleglanie zapytania. Aby uzyskać więcej informacji, zobacz [How to: Określanie trybu wykonywania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md).  
   
- Na poniższej liście opisano kształty zapytanie PLINQ domyślnie będą wykonywane w trybie sekwencyjnego:  
+ Na poniższej liście opisano kształty zapytań, które domyślnie PLINQ są wykonywane w trybie sekwencyjnym:  
   
-- Zapytania, które zawierają Select, Where, indeksowane indeksowanych SelectMany lub klauzuli ElementAt po operatorze sortowania lub filtrowania, który został usunięty lub przestawiać, oryginalnym indeksów.  
+- Zapytania zawierające klauzulę SELECT, Indexed WHERE, Indexed SelectMany lub ElementAt po operatorze porządkowania lub filtrowania, który usunął lub zmienił rozmieszczenie oryginalnych indeksów.  
   
-- Zapytania zawierające Pomiń Take, takewhile —, skipwhile — operator i której indeksów w sekwencji źródłowej nie są w kolejności, oryginalnym.  
+- Zapytania zawierające operator Take, TakeWhile —, Skip, SkipWhile — i WHERE indeksów w sekwencji źródłowej nie znajdują się w oryginalnej kolejności.  
   
-- Zapytania, które zawierają Zip lub SequenceEquals, chyba że jest to jedno ze źródeł danych i inne źródła danych jest można indeksować zamówiony indeksu (czyli tablicy lub IList(T)).  
+- Zapytania zawierające kod zip lub SequenceEquals, chyba że jedno ze źródeł danych ma pierwotnie uporządkowany indeks, a inne źródło danych jest indeksem (tj. tablicą lub IList (T)).  
   
-- Zapytania, które zawierają Concat, chyba że zostanie zastosowany do źródeł danych można indeksować.  
+- Zapytania zawierające element concat, chyba że zostanie zastosowany do indeksowanych źródeł danych.  
   
-- Zapytania, które zawierają odwrócić, chyba że stosowane do źródła danych można indeksować.  
+- Zapytania, które zawierają zwrot, chyba że zostaną zastosowane do źródła danych z indeksem.  
   
 ## <a name="see-also"></a>Zobacz także
 

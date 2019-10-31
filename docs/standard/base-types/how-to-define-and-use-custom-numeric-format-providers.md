@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego'
+title: 'Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,78 +15,76 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140064"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Instrukcje: Definiowanie i używanie niestandardowych dostawców formatu liczbowego
-.NET Framework zapewnia szeroką kontrolę nad reprezentację ciągu wartości liczbowych. Obsługuje następujące funkcje dostosowywania format wartości liczbowe:  
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego
+.NET Framework zapewnia szeroką kontrolę nad reprezentacją ciągu wartości liczbowych. Program obsługuje następujące funkcje dostosowywania formatu wartości liczbowych:  
   
-- Ciągi standardowego formatu liczb, które zawierają zestaw wstępnie zdefiniowanych formatów do konwertowania liczb na jego reprezentację ciągu. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Standardowe ciągi formatujące liczbę, które zapewniają wstępnie zdefiniowany zestaw formatów do konwertowania liczb na ich reprezentację w postaci ciągu. Można ich używać z dowolną metodą formatowania liczbowego, taką jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma parametr `format`. Aby uzyskać szczegółowe informacje, zobacz [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
-- Ciągi niestandardowego formatu liczb, które zawierają zestaw symboli, które można łączyć, aby zdefiniować specyfikatory niestandardowego formatu liczb. One można również za pomocą wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma `format` parametru. Aby uzyskać więcej informacji, zobacz [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Niestandardowe ciągi formatujące liczbę, które zawierają zestaw symboli, które można łączyć w celu zdefiniowania niestandardowych specyfikatorów formatu liczbowego. Mogą być również używane z dowolną metodą formatowania liczbowego, taką jak <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, która ma parametr `format`. Aby uzyskać szczegółowe informacje, zobacz [Niestandardowe ciągi formatujące](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
-- Niestandardowe <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiektów, które zdefiniować symbole i formatowanie wzorców służącego do wyświetlania ciągów reprezentujących wartości numeryczne. Mogą być używane z wszelkie wartości numeryczne, formatowanie, metody, takie jak <xref:System.Int32.ToString%2A>, która ma `provider` parametru. Zazwyczaj `provider` parametr jest używany do określenia formatowanie specyficzne dla kultury.  
+- Niestandardowe <xref:System.Globalization.CultureInfo> lub obiekty <xref:System.Globalization.NumberFormatInfo>, które definiują symbole i wzorce formatu używane do wyświetlania reprezentacji ciągów wartości liczbowych. Można ich używać z dowolną metodą formatowania liczbowego, taką jak <xref:System.Int32.ToString%2A>, która ma parametr `provider`. Zazwyczaj parametr `provider` służy do określania formatowania specyficznego dla kultury.  
   
- W niektórych przypadkach (na przykład gdy aplikacji musi wyświetlić numer konta sformatowane, numer identyfikacyjny lub kod pocztowy) tych trzech metod nie mają zastosowania. .NET Framework oferuje również możliwość definiowania formatowania obiektu, który nie jest ani <xref:System.Globalization.CultureInfo> ani <xref:System.Globalization.NumberFormatInfo> obiektu, aby określić sposób formatowania wartości liczbowej. Ten temat zawiera szczegółowe instrukcje dotyczące wdrażania takiego obiektu i przedstawiono przykład formatowania numerów telefonów.  
+ W niektórych przypadkach (na przykład gdy aplikacja musi wyświetlić sformatowany numer konta, numer identyfikacyjny lub kod pocztowy) te trzy techniki są nieodpowiednie. .NET Framework umożliwia również zdefiniowanie obiektu formatowania, który nie jest <xref:System.Globalization.CultureInfo> ani obiektem <xref:System.Globalization.NumberFormatInfo>, aby określić sposób formatowania wartości liczbowej. Ten temat zawiera instrukcje krok po kroku dotyczące implementowania takiego obiektu i zawiera przykład formatowania numerów telefonów.  
   
-### <a name="to-define-a-custom-format-provider"></a>Aby zdefiniować dostawcę formatu niestandardowego  
+### <a name="to-define-a-custom-format-provider"></a>Aby zdefiniować niestandardowego dostawcę formatowania  
   
-1. Definiowanie klasy, która implementuje <xref:System.IFormatProvider> i <xref:System.ICustomFormatter> interfejsów.  
+1. Zdefiniuj klasę implementującą interfejsy <xref:System.IFormatProvider> i <xref:System.ICustomFormatter>.  
   
-2. Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A> jest metodą wywołania zwrotnego, metoda formatowania (takie jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda) wywołuje w celu pobrania obiektu, który jest faktycznie odpowiedzialny za wykonanie, niestandardowe formatowanie. Typowa implementacja metody <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
+2. Zaimplementuj metodę <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> to metoda wywołania zwrotnego, która Metoda formatowania (taka jak Metoda <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) wywołuje, aby pobrać obiekt, który jest odpowiedzialny za wykonywanie formatowania niestandardowego. Typowa implementacja <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
   
-    1. Określa, czy <xref:System.Type> przekazano obiekt jako metoda parametr reprezentuje <xref:System.ICustomFormatter> interfejsu.  
+    1. Określa, czy obiekt <xref:System.Type> przekazywać jako parametr metody reprezentuje interfejs <xref:System.ICustomFormatter>.  
   
-    2. Jeśli parametr reprezentują <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca obiekt, który implementuje <xref:System.ICustomFormatter> interfejs, który jest odpowiedzialny za zapewnienie niestandardowe formatowanie. Zazwyczaj obiektów formatowania niestandardowych zwraca samą siebie.  
+    2. Jeśli parametr reprezentuje interfejs <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> zwraca obiekt implementujący interfejs <xref:System.ICustomFormatter>, który jest odpowiedzialny za dostarczanie formatowania niestandardowego. Zazwyczaj obiekt formatowania niestandardowego zwraca sam siebie.  
   
-    3. Jeśli parametr nie reprezentuje <xref:System.ICustomFormatter> interfejsu <xref:System.IFormatProvider.GetFormat%2A> zwraca `null`.  
+    3. Jeśli parametr nie reprezentuje interfejsu <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> zwraca `null`.  
   
-3. Implementowanie <xref:System.ICustomFormatter.Format%2A> metody. Ta metoda jest wywoływana <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody i jest odpowiedzialna za zwrócenie ciąg reprezentujący liczbę. Implementacja metody zwykle obejmuje następujące czynności:  
+3. Zaimplementuj metodę <xref:System.ICustomFormatter.Format%2A>. Ta metoda jest wywoływana przez metodę <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> i jest odpowiedzialna za zwracanie ciągu reprezentującego liczbę. Implementacja metody zwykle obejmuje następujące elementy:  
   
-    1. Opcjonalnie, upewnij się, że metoda rzeczywiście jest przeznaczona do świadczenia usług formatowania, sprawdzając `provider` parametru. Obiekty, które implementują zarówno formatowania <xref:System.IFormatProvider> i <xref:System.ICustomFormatter>, wiąże się to testowanie `provider` parametr dla porównania z bieżącym obiektem formatowania.  
+    1. Opcjonalnie upewnij się, że metoda jest uzasadniona w celu zapewnienia usług formatowania, badając parametr `provider`. W przypadku formatowania obiektów, które implementują zarówno <xref:System.IFormatProvider>, jak i <xref:System.ICustomFormatter>, obejmuje to testowanie parametru `provider` dla równości z bieżącym obiektem formatowania.  
   
-    2. Ustal, czy obiekt formatowania powinien obsługiwać specyfikatorów formatu niestandardowego. (Na przykład, specyfikator formatu "N" może wskazywać, że numer telefonu w Stanach Zjednoczonych, powinien być danych wyjściowych w formacie NANP, i "I" może wskazywać dane wyjściowe w formacie ITU-T E.123 zalecenia.) Jeśli używane są specyfikatorów formatu, metoda powinna obsługiwać specyfikator formatu określone. Jest przekazywany do metody w `format` parametru. Jeśli specyfikator nie jest obecna, wartość `format` parametr <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Ustal, czy obiekt formatowania powinien obsługiwać niestandardowe specyfikatory formatu. (Na przykład specyfikator formatu "N" może wskazywać, że numer telefonu w Stanach Zjednoczonych powinien być wyjściowy w formacie NANP, a "I" może wskazywać na dane wyjściowe w formacie E. 123 z zaleceniem ITU-T). Jeśli używane są specyfikatory formatu, metoda powinna obsługiwać określony specyfikator formatu. Jest ona przenoszona do metody w parametrze `format`. Jeśli żaden specyfikator nie jest obecny, wartość parametru `format` jest <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3. Pobierz wartość liczbową przekazywany do metody jako `arg` parametru. Wykonywać dowolne operacje są wymagane, aby przekonwertować go na jego reprezentację ciągu.  
+    3. Pobierz wartość liczbową przekazaną do metody jako parametr `arg`. Wykonaj wszelkie manipulacje wymagane do przekonwertowania go na jego reprezentację ciągu.  
   
-    4. Zwraca reprezentację ciągu `arg` parametru.  
+    4. Zwraca ciąg reprezentujący parametr `arg`.  
   
-### <a name="to-use-a-custom-numeric-formatting-object"></a>Aby użyć obiektów niestandardowych formatowania liczbowego  
+### <a name="to-use-a-custom-numeric-formatting-object"></a>Aby użyć niestandardowego obiektu formatowania liczbowego  
   
-1. Utwórz nowe wystąpienie klasy formatowania niestandardowego.  
+1. Utwórz nowe wystąpienie niestandardowej klasy formatowania.  
   
-2. Wywołaj <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metoda formatowania, niestandardowy obiekt formatowania formatowania specyfikator przekazywania (lub <xref:System.String.Empty?displayProperty=nameWithType>, jeśli nie jest on używany) oraz wartości numerycznych do sformatowania.  
+2. Wywołaj metodę formatowania <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, przekazując ją do niestandardowego obiektu formatowania, specyfikator formatowania (lub <xref:System.String.Empty?displayProperty=nameWithType>, jeśli nie jest używany) i wartość liczbową do sformatowania.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano dostawcy niestandardowego formatu liczb, o nazwie `TelephoneFormatter` Konwertuje liczbę, która reprezentuje numer telefonu w Stanach Zjednoczonych, jego format NANP lub E.123. Metoda obsługuje dwa specyfikatorów formatu "N" (której dane wyjściowe są w formacie NANP) i "I" (która generuje formacie międzynarodowym E.123).  
+ W poniższym przykładzie zdefiniowano niestandardowego dostawcę formatu liczbowego o nazwie `TelephoneFormatter`, który konwertuje liczbę reprezentującą numer telefonu w Stanach Zjednoczonych do formatu NANP lub E. 123. Metoda obsługuje dwa specyfikatory formatu: "N" (który wyprowadza format NANP) i "I" (który wyprowadza międzynarodowy format E. 123).  
   
  [!code-csharp[Formatting.HowTo.NumericValue#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#1)]
  [!code-vb[Formatting.HowTo.NumericValue#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#1)]  
   
- Dostawcy niestandardowego formatu liczb, mogą być używane tylko z <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody. Przeciążenia metody formatowanie liczb (takie jak `ToString`), ma parametr typu <xref:System.IFormatProvider> wszystkie przekazać <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacji <xref:System.Type> obiekt, który reprezentuje <xref:System.Globalization.NumberFormatInfo> typu. W zamian spełniają oczekiwane metody, aby zwrócić <xref:System.Globalization.NumberFormatInfo> obiektu. Jeśli nie, dostawcy niestandardowego formatu liczb jest ignorowana, a <xref:System.Globalization.NumberFormatInfo> obiekt bieżącej kultury jest używane w tym miejscu. W tym przykładzie `TelephoneFormatter.GetFormat` obsługiwała możliwość, że może być niewłaściwie przekazywane na liczbowy, metoda formatowania, sprawdzając parametru metody i zwracanie `null` Jeśli termin reprezentuje typ inny niż <xref:System.ICustomFormatter>.  
+ Niestandardowego dostawcy formatu liczbowego można używać tylko z metodą <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Inne przeciążenia metod formatowania liczbowego (takich jak `ToString`), które mają parametr typu <xref:System.IFormatProvider> wszystkie, przekażą <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementację <xref:System.Type> obiektu, który reprezentuje typ <xref:System.Globalization.NumberFormatInfo>. W elemencie Return oczekujemy, że metoda zwróci obiekt <xref:System.Globalization.NumberFormatInfo>. Jeśli tak nie jest, dostawca niestandardowego formatu liczbowego jest ignorowany, a w jego miejsce jest używany obiekt <xref:System.Globalization.NumberFormatInfo> dla bieżącej kultury. W przykładzie metoda `TelephoneFormatter.GetFormat` obsługuje możliwość, że może być niewłaściwie przenoszona do metody formatowania liczbowego poprzez zbadanie parametru Method i zwrócenie `null`, jeśli reprezentuje typ inny niż <xref:System.ICustomFormatter>.  
   
- Jeśli dostawcy niestandardowego formatu liczb obsługuje zestaw specyfikatorów formatu, upewnij się, zapewniasz zachowanie domyślne, jeśli nie dostarczono żadnych specyfikatora formatu w elemencie formatu, używane w <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> wywołania metody. W tym przykładzie "N" to domyślny specyfikator formatu. Dzięki temu liczby są konwertowane na numer telefonu sformatowane, zapewniając specyfikator formatu jawnego. W poniższym przykładzie pokazano wywołanie metody.  
+ Jeśli dostawca niestandardowego formatu liczb obsługuje zestaw specyfikatorów formatu, upewnij się, że zostało podane zachowanie domyślne, jeśli w elemencie formatu użytym w wywołaniu metody <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> nie podano specyfikatora formatu. W przykładzie "N" jest domyślnym specyfikatorem formatu. Pozwala to na konwersję liczby na sformatowany numer telefonu przez udostępnienie jawnego specyfikatora formatu. Poniższy przykład ilustruje takie wywołanie metody.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#2)]
  [!code-vb[Formatting.HowTo.NumericValue#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#2)]  
   
- Ale mogą również wystąpić, jeśli występuje nie specyfikatora formatu konwersji. W poniższym przykładzie pokazano wywołanie metody.  
+ Jednak umożliwia również konwersję, jeśli nie ma specyfikatora formatu. Poniższy przykład ilustruje takie wywołanie metody.  
   
  [!code-csharp[Formatting.HowTo.NumericValue#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.NumericValue/cs/Telephone1.cs#3)]
  [!code-vb[Formatting.HowTo.NumericValue#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.NumericValue/vb/Telephone1.vb#3)]  
   
- Jeśli specyfikator formatu nie domyślny jest zdefiniowany, implementacja <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> metoda powinna zawierać następujący kod, tak że .NET umożliwia formatowanie kodu nie obsługuje.  
+ Jeśli nie zdefiniowano żadnego domyślnego specyfikatora formatu, implementacja metody <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> powinna obejmować kod, taki jak poniższy, aby program .NET mógł zapewnić formatowanie, którego kod nie obsługuje.  
   
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- W tym przykładzie metoda, która implementuje <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> ma służyć jako metoda wywołania zwrotnego dla <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody. W związku z tym, sprawdza, czy `formatProvider` parametru do określenia, czy zawiera on odwołanie do bieżącego `TelephoneFormatter` obiektu. Jednak metoda może być wywoływana bezpośrednio z kodu. W takim przypadku można użyć `formatProvider` parametru do podania <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
+ W przypadku tego przykładu Metoda implementująca <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> ma służyć jako metoda wywołania zwrotnego dla metody <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. W związku z tym sprawdza parametr `formatProvider`, aby określić, czy zawiera odwołanie do bieżącego obiektu `TelephoneFormatter`. Jednak metodę można również wywołać bezpośrednio z kodu. W takim przypadku można użyć parametru `formatProvider`, aby dostarczyć <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiekt, który dostarcza informacje o formatowaniu specyficzne dla kultury.  
   
 ## <a name="see-also"></a>Zobacz także
 

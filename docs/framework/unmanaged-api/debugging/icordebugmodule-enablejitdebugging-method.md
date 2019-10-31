@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0a65e2a4-5bb6-496c-ae6f-40474426b5a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aeb6ed448539db2720fee0d42cfcc344fd3bbf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da532ee1b5909a68bedbb9e6f6c96333e88002a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762763"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109725"
 ---
 # <a name="icordebugmoduleenablejitdebugging-method"></a>ICorDebugModule::EnableJITDebugging — Metoda
-Określa, czy kompilator just-in-time (JIT), zachowuje informacje o debugowaniu dla metod, w tym module.  
+Określa, czy kompilator just in Time (JIT) zachowuje informacje debugowania dla metod w ramach tego modułu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT EnableJITDebugging(
   
 ## <a name="parameters"></a>Parametry  
  `bTrackJITInfo`  
- [in] Ustaw tę wartość na `true` umożliwiające kompilator JIT, aby zachować informacje dotyczące mapowania między wersji języka intermediate language (MSIL) firmy Microsoft i wersję kompilowanego dokładnie na czas każdej metody w tym module.  
+ podczas Ustaw tę wartość na `true`, aby umożliwić kompilatorowi JIT zachowywanie informacji o mapowaniu między wersją języka pośredniego firmy Microsoft (MSIL) a wersją skompilowaną przez kompilator JIT dla każdej metody w tym module.  
   
  `bAllowJitOpts`  
- [in] Ustaw tę wartość na `true` umożliwiające kompilator JIT wygenerować kod z niektóre optymalizacje JIT specyficzne dla debugowania.  
+ podczas Ustaw tę wartość na `true`, aby umożliwić kompilatorowi JIT generowanie kodu z pewnymi optymalizacjami specyficznymi dla JIT dla debugowania.  
   
 ## <a name="remarks"></a>Uwagi  
- Debugowanie JIT jest domyślnie włączone dla wszystkich modułów, które są ładowane, gdy debuger jest aktywny. Programowe Włączanie lub wyłączanie ustawień zastępuje ustawienia globalne.  
+ Debugowanie JIT jest domyślnie włączone dla wszystkich modułów, które są ładowane, gdy debuger jest aktywny. Programowe Włączanie lub wyłączanie ustawień przesłania ustawienia globalne.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

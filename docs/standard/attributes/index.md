@@ -12,29 +12,27 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969796"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130903"
 ---
 # <a name="extending-metadata-using-attributes"></a>Rozszerzanie metadanych za pomocą atrybutów
-Środowisko uruchomieniowe języka wspólnego pozwala na dodawanie deklaracje opisowe typu słowo kluczowe, o nazwie atrybutów, dodawać adnotacje do elementów programowania, takich jak typy, pola, metody i właściwości. Podczas kompilowania kodu dla środowiska uruchomieniowego jest konwertowany na składnię języka Microsoft intermediate language (MSIL) i umieszczone wewnątrz przenośny plik wykonywalny (PE) wraz z metadanymi generowanych przez kompilator. Atrybuty zezwala na umieszczenie bardzo opisowe informacje do metadanych, które można wyodrębnić za pomocą usług odbicia środowiska uruchomieniowego. Kompilator tworzy atrybutów w deklaracji wystąpienia klasy specjalne, które wynikają z <xref:System.Attribute?displayProperty=nameWithType>.  
+Środowisko uruchomieniowe języka wspólnego umożliwia dodawanie opisowych deklaracji słów kluczowych, takich jak atrybuty, do elementów programistycznych, takich jak typy, pola, metody i właściwości. Podczas kompilowania kodu środowiska uruchomieniowego jest on konwertowany do języka pośredniego firmy Microsoft (MSIL) i umieszczony wewnątrz przenośnego pliku wykonywalnego (PE) wraz z metadanymi generowanymi przez kompilator. Atrybuty umożliwiają umieszczanie w metadanych dodatkowych informacji opisowych, które można wyodrębnić przy użyciu usług odbicia środowiska uruchomieniowego. Kompilator tworzy atrybuty przy deklarowaniu wystąpień klas specjalnych, które pochodzą z <xref:System.Attribute?displayProperty=nameWithType>.  
   
- .NET Framework używa atrybutów z różnych powodów i rozwiązać wiele problemów. Atrybuty zawierają instrukcje dotyczące serializacji danych, określ cechy, które są używane do wymuszania zabezpieczeń i ograniczyć optymalizacji przez kompilator just-in-time (JIT), więc kod pozostaje ułatwia debugowanie. Atrybuty można również zarejestrować nazwę pliku i autor kodu lub kontrolowanie widoczności kontrolek i elementów członkowskich podczas projektowania formularzy.  
+ .NET Framework używa atrybutów z różnych powodów i rozwiązywania wielu problemów. Atrybuty opisują sposób serializacji danych, określają cechy, które są używane do wymuszania zabezpieczeń i ograniczają optymalizacje przez kompilator just-in-Time (JIT), dzięki czemu kod pozostaje łatwy do debugowania. Atrybuty mogą również rejestrować nazwę pliku lub autora kodu lub kontrolować widoczność formantów i członków podczas opracowywania formularzy.  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Stosowanie atrybutów](../../../docs/standard/attributes/applying-attributes.md)|W tym artykule opisano sposób zastosowania atrybutu do elementu kodu.|  
+|[Stosowanie atrybutów](../../../docs/standard/attributes/applying-attributes.md)|Opisuje sposób zastosowania atrybutu do elementu kodu.|  
 |[Wpisywanie atrybutów niestandardowych](../../../docs/standard/attributes/writing-custom-attributes.md)|Opisuje sposób projektowania klas atrybutów niestandardowych.|  
-|[Pobieranie informacji przechowywanych w atrybutach](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|W tym artykule opisano sposób pobierania atrybutów niestandardowych dla kodu, który jest ładowany do kontekstu wykonywania.|  
-|[Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)|Zawiera omówienie metadanych, a w tym artykule opisano, jak jest zaimplementowane w .NET Framework przenośny plik wykonywalny (PE).|  
-|[Instrukcje: Ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Wyjaśnia, jak można pobrać atrybutów niestandardowych informacji w kontekstu reflection-only.|  
+|[Pobieranie informacji przechowywanych w atrybutach](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|Opisuje sposób pobierania atrybutów niestandardowych dla kodu, który jest ładowany do kontekstu wykonywania.|  
+|[Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)|Zawiera omówienie metadanych i opis sposobu ich implementacji w .NET Framework przenośnym pliku wykonywalnym (PE).|  
+|[Instrukcje: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Wyjaśnia, jak pobrać informacje o atrybutach niestandardowych w kontekście tylko odbicia.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Attribute?displayProperty=nameWithType>

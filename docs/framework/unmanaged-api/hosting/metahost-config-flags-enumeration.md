@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6f1e389f-ed99-4d6a-a0ba-72d7d869a01d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13a7ad5b59dd318f823645d28f9c3ccbec8a8cb0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 07cab119810c4da25d16a4ad7c13f2d2bda16455
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140312"
 ---
-# <a name="metahostconfigflags-enumeration"></a>METAHOST_CONFIG_FLAGS — Wyliczenie
-W tym artykule opisano możliwe flagi zwracane w `pdwConfigFlags` parametru [iclrmetahostpolicy::getrequestedruntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) metody, wskazujące na obecność i ustawianie `useLegacyV2RuntimeActivationPolicy` atrybutu w [ \<uruchamiania > element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) pliku konfiguracji.  
+# <a name="metahost_config_flags-enumeration"></a>METAHOST_CONFIG_FLAGS — Wyliczenie
+Opisuje możliwe flagi zwrócone w parametrze `pdwConfigFlags` metody [ICLRMetaHostPolicy:: GetRequestedRuntime —](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) , wskazującą obecność i ustawienie atrybutu `useLegacyV2RuntimeActivationPolicy` w [elemencie\<Startup >](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) plik konfiguracji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,24 +39,24 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|`useLegacyV2RuntimeActivationPolicy` Atrybutu nie była obecna w [ \<uruchamiania > Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md).|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|`useLegacyV2RuntimeActivationPolicy` Atrybut jest obecna i ustawiona na `true`.|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_FALSE`|`useLegacyV2RuntimeActivationPolicy` Atrybut jest obecna i ustawiona na `false`.|  
-|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK`|Zastosuj tę maskę do wartości zwracanej w `pdwConfigFlags` można pobrać wartości dotyczą `useLegacyV2RuntimeActivationPolicy`.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_UNSET`|Atrybut `useLegacyV2RuntimeActivationPolicy` nie był obecny w [elemencie > uruchomienia\<](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md).|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_TRUE`|Atrybut `useLegacyV2RuntimeActivationPolicy` był obecny i został ustawiony na `true`.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_FALSE`|Atrybut `useLegacyV2RuntimeActivationPolicy` był obecny i został ustawiony na `false`.|  
+|`METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK`|Zastosuj tę maskę do wartości zwracanej w `pdwConfigFlags`, aby uzyskać wartości istotne dla `useLegacyV2RuntimeActivationPolicy`.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** Metahost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
 - [GetRequestedRuntime, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<Uruchamianie > Element](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [\<> uruchomienia elementu](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

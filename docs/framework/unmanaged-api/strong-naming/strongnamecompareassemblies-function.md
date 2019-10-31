@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 763f2375-efc6-4219-8806-a3b0567ef72b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b0c2e8e46c7bb3a5e693c9ea16e6c5a0722b1898
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: adde52dddb63b83dcd7ff10703a43928d9601c92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799154"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140620"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies — Funkcja
 Określa, czy dwa zestawy różnią się tylko sygnaturami silnej nazwy.  
@@ -48,28 +46,28 @@ BOOLEAN StrongNameCompareAssemblies (
  `pdwResult`  
  określoną Jedna z następujących wartości:  
   
-- `SN_CMP_DIFFERENT`(0) — określa, że zestawy zawierają różne dane.  
+- `SN_CMP_DIFFERENT` (0) — określa, że zestawy zawierają różne dane.  
   
-- `SN_CMP_IDENTICAL`(1) — określa, że zestawy są dokładnie takie same, łącznie z ich sygnaturami i sumą kontrolną.  
+- `SN_CMP_IDENTICAL` (1) — określa, że zestawy są dokładnie takie same, łącznie z ich sygnaturami i sumą kontrolną.  
   
-- `SN_CMP_SIGONLY`(2) — określa, że zestawy różnią się tylko sygnaturą i sumą kontrolną.  
+- `SN_CMP_SIGONLY` (2) — określa, że zestawy różnią się tylko sygnaturą i sumą kontrolną.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true`Po pomyślnym zakończeniu; w przeciwnym razie. `false`  
+ `true` po pomyślnym zakończeniu; w przeciwnym razie `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** StrongName.h  
+ **Nagłówek:** StrongName. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="remarks"></a>Uwagi  
  Podpis silnej nazwy zestawu składa się z nazwy tekstu, wersji, kultury i tokenu klucza publicznego zestawu.  
   
- Jeśli funkcja nie zakończy się pomyślnie, wywołaj funkcję StrongNameErrorInfo — w celu pobrania ostatniego wygenerowanego błędu. [](strongnameerrorinfo-function.md) `StrongNameCompareAssemblies`  
+ Jeśli funkcja `StrongNameCompareAssemblies` nie zakończy się pomyślnie, wywołaj funkcję [StrongNameErrorInfo —](strongnameerrorinfo-function.md) w celu pobrania ostatniego wygenerowanego błędu.  
   
 ## <a name="see-also"></a>Zobacz także
 

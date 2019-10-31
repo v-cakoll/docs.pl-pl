@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 84296b55-c2c5-424c-ac9c-8e28e2895945
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6f5cd47abd4c17021bc324898a096ff70a3db2e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a957a042875b546a18a17422f355b712756e91c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098169"
 ---
 # <a name="cordebughandletype-enumeration"></a>CorDebugHandleType — Wyliczenie
-Wskazuje typ uchwytu.  
+Wskazuje typ dojścia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,17 +37,17 @@ typedef enum CorDebugHandleType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`HANDLE_STRONG`|Dojście jest silna, który uniemożliwia są odzyskiwane przez wyrzucanie elementów bezużytecznych przez obiekt.|  
-|`HANDLE_WEAK_TRACK_RESURRECTION`|Dojście jest słaby, której nie uniemożliwia obiektu są odzyskiwane przez wyrzucanie elementów bezużytecznych.<br /><br /> Dojście staje się nieprawidłowy, gdy obiekt są zbierane.|  
+|`HANDLE_STRONG`|Dojście jest silnie, co uniemożliwia odjęcie obiektu przez wyrzucanie elementów bezużytecznych.|  
+|`HANDLE_WEAK_TRACK_RESURRECTION`|Dojście jest słabe, co nie zapobiega odzyskiwaniu obiektu przez wyrzucanie elementów bezużytecznych.<br /><br /> Uchwyt jest nieprawidłowy, gdy zbierany jest obiekt.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

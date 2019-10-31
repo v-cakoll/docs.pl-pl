@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3a9446-7a4e-4836-9b27-5c536c15993d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7d23b2371e7cc3c9d1e91af061c19b4fb0dbc69e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9600573a0a730cee10247d5644d587e75856cdd9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779696"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141178"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy — Metoda
-Ocenia zasady tworzenia powiązań w imieniu hosta.  
+Oblicza zasady powiązań w imieniu hosta.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,47 +40,47 @@ HRESULT EvaluatePolicy (
   
 ## <a name="parameters"></a>Parametry  
  `pwzReferenceIdentity`  
- [in] Odwołanie do zestawu przed oceny zasad.  
+ podczas Odwołanie do zestawu przed oceną zasad.  
   
  `pbApplicationPolicy`  
- [in] Wskaźnik do buforu, który zawiera dane zasad.  
+ podczas Wskaźnik do buforu, który zawiera dane zasad.  
   
  `cbAppPolicySize`  
- [in] Rozmiar `pbApplicationPolicy` buforu.  
+ podczas Rozmiar buforu `pbApplicationPolicy`.  
   
  `pwzPostPolicyReferenceIdentity`  
- [out] Odwołanie do zestawu, po dokonaniu oceny nowe dane zasad.  
+ określoną Odwołanie do zestawu po dokonaniu oceny nowych danych zasad.  
   
  `pcchPostPolicyReferenceIdentity`  
- [out w] Wskaźnik do rozmiar buforu odwołanie do zestawu tożsamości, po dokonaniu oceny nowe dane zasad.  
+ [in. out] Wskaźnik do rozmiaru buforu odwołań tożsamości zestawu po dokonaniu oceny nowych danych zasad.  
   
  `pdwPoliciesApplied`  
- [out] Wskaźnik do logicznego lub kombinacji [ebindpolicylevels —](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) wartości, wskazując, które zasady zostały zastosowane.  
+ określoną Wskaźnik do logicznej lub kombinacji wartości [EBindPolicyLevels —](../../../../docs/framework/unmanaged-api/hosting/ebindpolicylevels-enumeration.md) wskazujących, które zasady zostały zastosowane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Ocena została ukończona pomyślnie.|  
-|E_INVALIDARG|Albo `pwzReferenceIdentity` lub `pbApplicationPolicy` jest odwołanie o wartości null.|  
+|S_OK|Ocena została zakończona pomyślnie.|  
+|E_INVALIDARG|`pwzReferenceIdentity` lub `pbApplicationPolicy` jest odwołaniem o wartości null.|  
 |ERROR_INSUFFICIENT_BUFFER|`cbAppPolicySize` jest za mały.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie będzie już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie będzie już można używać w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `EvaluatePolicy` Metoda umożliwia hosta do wywierania wpływu na politykę powiązania do zachowania specyficzne dla hosta zestawu wymagań dotyczących przechowywania wersji. Aparat zasad, sama pozostaje wewnątrz środowiska CLR.  
+ Metoda `EvaluatePolicy` umożliwia hostowi wpływ na powiązania zasad w celu obsługi wymagań dotyczących wersji zestawu specyficznych dla hosta. Sam aparat zasad pozostaje wewnątrz środowiska CLR.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

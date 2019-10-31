@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f7653317-7e48-4163-be03-f50f1a4b0f70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 852c77be0dc8ef91933bacbbd3d6b3f5a69ae8c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766872"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139389"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub — Metoda
-Pobiera wartość wskazującą, czy adres znajduje się wewnątrz odcinek, który spowoduje przejście do kodu zarządzanego.  
+Pobiera wartość wskazującą, czy adres znajduje się wewnątrz klasy zastępczej, która spowoduje przejście do kodu zarządzanego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,21 +35,21 @@ HRESULT IsTransitionStub(
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która określa danego adresu.  
+ podczas Wartość `CORDB_ADDRESS`, która określa dany adres.  
   
  `pbTransitionStub`  
- [out] Wskaźnik na wartość logiczną, która jest `true` Jeśli określony adres znajduje się wewnątrz odcinek, który spowoduje przejście do zarządzanego kodu; w przeciwnym razie *`pbTransitionStub` jest `false`.  
+ określoną Wskaźnik do wartości logicznej, która jest `true`, jeśli określony adres znajduje się wewnątrz klasy zastępczej, która spowoduje przejście do kodu zarządzanego; w przeciwnym wypadku *`pbTransitionStub` jest `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- `IsTransitionStub` Metoda może służyć przez kod niezarządzany przechodzenia krok po kroku w podjęciu decyzji, przywrócenie kontroli przechodzenia krok po kroku do stepper zarządzanych.  
+ Metoda `IsTransitionStub` może być używana przez niezarządzany kod wykonujący, aby określić, kiedy należy zwrócić kontrolę krokową do zarządzanego stepper.  
   
- Można również wycinków przejścia tożsamości, analizując informacje zawarte w przenośny plik wykonywalny (PE).  
+ Można również posłużyć do przechodzenia między zmianami, sprawdzając informacje w przenośnym pliku wykonywalnym (PE).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

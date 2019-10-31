@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a1adb79e5081fc909d0cd180d8161eccea7e58e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754348"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084797"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort — Metoda
-Przerywa obliczeń że `ICorDebugEval2` Trwa wykonywanie.  
+Przerywa Obliczanie wykonywane przez tę `ICorDebugEval2`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +32,13 @@ HRESULT RudeAbort ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `RudeAbort` nie spowoduje zwolnienia żadnych blokad, które przechowuje ewaluatora, więc pozostawia sesji debugowania w stanie niebezpieczne. Wywołaj tę metodę z najwyższą ostrożnością.  
+ `RudeAbort` nie zwolni żadnych blokad, które są przechowywane przez ewaluatora, więc pozostawia sesję debugowania w stanie niebezpiecznym. Wywołaj tę metodę z największą ostrożnością.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

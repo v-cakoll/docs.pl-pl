@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2644f48b-db3c-429f-ae62-76f1c98a1af5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd68df77adafb8b21e7684b28fe978722ca37e16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a895f432ed640cc35a492df0c91cece34893062
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736792"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122366"
 ---
 # <a name="icordebugtypegetclass-method"></a>ICorDebugType::GetClass — Metoda
 Pobiera wskaźnik interfejsu do ICorDebugClass, który reprezentuje typ ogólny bez wystąpień.  
@@ -37,16 +35,16 @@ HRESULT GetClass (
   
 ## <a name="parameters"></a>Parametry  
  `ppClass`  
- [out] Wskaźnik na adres `ICorDebugClass` interfejs, który reprezentuje typ ogólny bez wystąpień.  
+ określoną Wskaźnik do adresu interfejsu `ICorDebugClass`, który reprezentuje typ ogólny bez wystąpień.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetClass` może być wywoływana tylko w określonych warunkach. Wywołaj [ICorDebugType::GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) przed wywołaniem `GetClass`. Jeśli `ICorDebugType::GetType` zwraca wartość corelementtype — ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, `GetClass` może być wywoływana w celu uzyskania bez wystąpień typu dla typu ogólnego.  
+ `GetClass` można wywołać tylko w określonych warunkach. Wywołaj metodę [ICorDebugType:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) przed wywołaniem `GetClass`. Jeśli `ICorDebugType::GetType` zwraca wartość CorElementType —, która jest ELEMENT_TYPE_CLASS lub ELEMENT_TYPE_VALUETYPE, można wywołać `GetClass`, aby uzyskać typ nieskonkretyzowany dla typu ogólnego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

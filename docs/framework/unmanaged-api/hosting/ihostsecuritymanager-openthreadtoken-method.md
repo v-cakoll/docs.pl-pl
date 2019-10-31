@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1beeb0ff6b2e3493f0814fc3371f189bd4d485d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ced153798355aff882f0244f3dd946c39dea2bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778020"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121468"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken — Metoda
-Zostanie otwarty token dostępu skojarzone z aktualnie wykonywany wątek.  
+Otwiera token dostępu swobodnego skojarzony z aktualnie wykonywanym wątkiem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,38 +37,38 @@ HRESULT OpenThreadToken (
   
 ## <a name="parameters"></a>Parametry  
  `dwDesiredAccess`  
- [in] Maska wartości dostępu, które określają żądany typ dostępu do tokenu wątku. Te wartości są zdefiniowane w Win32 `OpenThreadToken` funkcji. Typy żądanego dostępu są uzgodnione względem listy kontroli dostępu tokenu (DACL), aby określić, jakie typy dostępu, aby udzielić lub odmówić.  
+ podczas Maska wartości dostępu określająca żądane typy dostępu do tokenu wątku. Te wartości są zdefiniowane w funkcji `OpenThreadToken` Win32. Żądane typy dostępu są uzgadniane z poufną listą kontroli dostępu (DACL) tokenu, aby określić, które typy dostępu mają być udzielone lub odrzucane.  
   
  `bOpenAsSelf`  
- [in] `true` do określenia, że należy dokonać kontroli dostępu za pomocą kontekstu zabezpieczeń procesu wywołującego wątku; `false` do określenia, czy należy wykonać sprawdzanie dostępu za pomocą kontekstu zabezpieczeń dla wątku wywołującego, sam. Jeśli wątek nie personifikuje klienta, kontekstu zabezpieczeń może być procesu klienta.  
+ [in] `true`, aby określić, że sprawdzanie dostępu należy przeprowadzić przy użyciu kontekstu zabezpieczeń procesu dla wątku wywołującego; `false`, aby określić, że sprawdzanie dostępu ma być wykonywane przy użyciu kontekstu zabezpieczeń dla samego wątku wywołującego. Jeśli wątek personifikuje klienta, kontekst zabezpieczeń może być procesem klienta.  
   
  `phThreadToken`  
- [out] Wskaźnik do tokena dostępu w nowo otwartym.  
+ określoną Wskaźnik do nowo otwartego tokenu dostępu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`OpenThreadToken` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IHostSecurityManager::OpenThreadToken` zachowuje się podobnie do odpowiednich funkcji Win32 o takiej samej nazwie, z tą różnicą, że funkcja Win32 pozwala na obiekt wywołujący, aby przekazać dojścia do dowolnego wątku, podczas gdy `IHostSecurityManager::OpenThreadToken` otwiera token skojarzony wątek wywołujący.  
+ `IHostSecurityManager::OpenThreadToken` zachowuje się podobnie do odpowiedniej funkcji Win32 o tej samej nazwie, z tą różnicą, że funkcja Win32 zezwala obiektowi wywołującemu na przekazywanie dojścia do dowolnego wątku, podczas gdy `IHostSecurityManager::OpenThreadToken` otwiera tylko token skojarzony z wątkiem wywołującym.  
   
- `HANDLE` Typ nie jest zgodny z COM, oznacza to, że jego rozmiar jest specyficzne dla systemu operacyjnego i wymaga ona organizowanie niestandardowe. W związku z tym ten token jest przeznaczona do użytku tylko w ramach procesu między środowiska CLR i hostem.  
+ Typ `HANDLE` nie jest zgodny z modelem COM, oznacza to, że jego rozmiar jest specyficzny dla systemu operacyjnego i wymaga kierowania niestandardowego. W ten sposób token jest używany tylko w ramach procesu, między środowiskiem CLR a hostem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

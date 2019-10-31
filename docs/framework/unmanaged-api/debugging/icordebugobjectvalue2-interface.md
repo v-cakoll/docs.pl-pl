@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectValue2, interfejs
+title: ICorDebugObjectValue2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectValue2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 14c701f4e1aeed887598e4f17e600a03de4cf078
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943318"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129733"
 ---
-# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2, interfejs
+# <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 — Interfejs
 
 Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zastąpień.  
   
@@ -31,7 +29,7 @@ Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zast�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`nie została jeszcze zaimplementowana.|  
+|[GetVirtualMethodAndType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` jeszcze nie zaimplementowano.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -39,13 +37,13 @@ Rozszerza interfejs "ICorDebugObjectValue" w celu obsługi dziedziczenia i zast�
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

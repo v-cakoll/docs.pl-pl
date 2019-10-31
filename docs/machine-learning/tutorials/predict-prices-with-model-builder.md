@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a851bf3c405d15243bc1457b8c3dff815d072ebe
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 314b637b4a43725f6daeefa6097544567dcaabc2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180284"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124284"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Samouczek: prognozowanie cen przy użyciu regresji z konstruktorem modelu
 
@@ -19,14 +19,14 @@ Dowiedz się, jak za pomocą konstruktora modeli ML.NET utworzyć model regresji
 
 Szablon prognozowania cen konstruktora modeli może być używany w każdym scenariuszu wymagającym wartości prognozowanych liczbowych. Przykładowe scenariusze obejmują: prognozowanie cen domu, prognozowanie popytu i prognozowanie sprzedaży.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
-> - Trenowanie modelu
-> - Ocenianie modelu
+> - Uczenie modelu
+> - Oceń model
 > - Używanie modelu dla prognoz
 
 > [!NOTE]
@@ -68,7 +68,7 @@ Każdy wiersz w zestawie danych `taxi-fare-train.csv` zawiera szczegółowe info
     - **payment_type:** Forma płatności (karta kasowa lub kredytowa) to funkcja.
     - **fare_amount:** Łączna liczba płatnych opłat za taksówkę to etykieta.
 
-@No__t-0 to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Określone `features` to dane wejściowe, które umożliwiają modelowi prognozowanie `label`. W takim przypadku pozostałe kolumny z wyjątkiem **trip_time_in_secs** są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
+`label` to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania regresji celem jest przewidywanie wartości liczbowej. W tym scenariuszu prognozowania cen jest przewidywany koszt najazdy z taksówką. W związku z tym **fare_amount** jest etykietą. Określone `features` to dane wejściowe, które umożliwiają modelowi prognozowanie `label`. W takim przypadku pozostałe kolumny z wyjątkiem **trip_time_in_secs** są używane jako funkcje lub dane wejściowe do przewidywania kwoty opłat.
 
 ## <a name="choose-a-scenario"></a>Wybierz scenariusz
 
@@ -83,10 +83,10 @@ Konstruktor modelu akceptuje dane z dwóch źródeł, bazy danych SQL Server lub
 
 1. W kroku dane narzędzia model Builder wybierz pozycję *plik* z listy rozwijanej Źródło danych.
 1. Wybierz przycisk obok pola tekstowego *Wybierz plik* i Użyj Eksploratora plików do przeglądania i wybierania *Taxi-Fare-test. csv* w katalogu *danych*
-1. Wybierz pozycję *fare_amount* w *kolumnie do przewidywania (etykieta)* , a następnie przejdź do kroku uczenia narzędzia model Builder.
-1. Rozwiń listę rozwijaną *kolumny wejściowe (funkcje)* i usuń zaznaczenie kolumny *trip_time_in_secs* , aby wykluczyć ją jako funkcję podczas szkolenia.
+1. Wybierz pozycję *fare_amount* w *kolumnie do przewidywania (etykieta)* listy rozwijanej.
+1. Rozwiń listę rozwijaną *kolumny wejściowe (funkcje)* i usuń zaznaczenie kolumny *trip_time_in_secs* , aby wykluczyć ją jako funkcję podczas szkolenia.  Przejdź do kroku uczenia narzędzia model Builder.
 
-## <a name="train-the-model"></a>Trenowanie modelu
+## <a name="train-the-model"></a>Uczenie modelu
 
 Zadanie uczenia maszynowego używane do uczenia modelu prognozowania cen w tym samouczku to regresja. W trakcie procesu szkolenia modelu, Konstruktor modelu pociąga za siebie różne modele przy użyciu różnych algorytmów regresji i ustawień, aby znaleźć najlepszy model dla zestawu danych.
 
@@ -104,7 +104,7 @@ W trakcie całego procesu szkolenia dane o postępie są wyświetlane w sekcji `
 
 Po zakończeniu szkolenia przejdź do kroku szacowania.
 
-## <a name="evaluate-the-model"></a>Ocenianie modelu
+## <a name="evaluate-the-model"></a>Oceń model
 
 Wynikiem kroku szkolenia będzie jeden model, który miał najlepszą wydajność. W kroku szacowania narzędzia model Builder sekcja Output będzie zawierać algorytm używany przez model najlepszego wykonywania w najlepszym wpisie *modelu* oraz metryki w *najlepszej jakości modelu (RSquared)* . Ponadto tabela podsumowująca zawierająca pięć najważniejszych modeli i ich metryki.
 
@@ -163,17 +163,17 @@ Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czas
 
 ## <a name="next-steps"></a>Następne kroki
 
-W niniejszym samouczku zawarto informacje na temat wykonywania następujących czynności:
+W tym samouczku przedstawiono sposób wykonywania tych instrukcji:
 > [!div class="checklist"]
 >
 > - Przygotuj i poznanie danych
 > - Wybierz scenariusz
 > - Ładowanie danych
-> - Trenowanie modelu
-> - Ocenianie modelu
+> - Uczenie modelu
+> - Oceń model
 > - Używanie modelu dla prognoz
 
-### <a name="additional-resources"></a>Zasoby dodatkowe
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
 Aby dowiedzieć się więcej na temat tematów wymienionych w tym samouczku, odwiedź następujące zasoby:
 

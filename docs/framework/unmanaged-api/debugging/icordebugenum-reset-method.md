@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4e809cad8098ccb80685545c9e7f9deea2f73540
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fdf7ce97d45dc54d711389af822f2ca7d1ea67a5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752239"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090632"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset — Metoda
 Przenosi kursor do początku wyliczenia.  
@@ -36,12 +34,12 @@ HRESULT Reset ();
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Icordebugenum — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [ICorDebugEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)

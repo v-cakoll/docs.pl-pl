@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 100688ece4ebb984d3d03823ab01bbaae7d395db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137385"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap — Metoda
-Ta metoda jest przestarzała. Powiadomi użytkownika debugera, zdarzenia ponowne mapowanie została wysłana do zintegrowanego środowiska programistycznego (IDE).  
+Ta metoda jest przestarzała. Powiadamia on debuger o wysłaniu zdarzenia ponownego mapowania do zintegrowanego środowiska programistycznego (IDE).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +37,16 @@ HRESULT EditAndContinueRemap (
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `EditAndContinueRemap` Metoda jest wywoływana, gdy podjęto próbę wykonania kodu w starszej wersji zaktualizowanych funkcji. Środowisko uruchomieniowe wywołuje języka wspólnego `EditAndContinueRemap` metodę, aby wysłać zdarzenie ponowne mapowanie środowiska IDE.  
+ Metoda `EditAndContinueRemap` jest wywoływana, gdy podjęto próbę wykonania kodu w starej wersji zaktualizowanej funkcji. Środowisko uruchomieniowe języka wspólnego wywołuje metodę `EditAndContinueRemap`, aby wysłać zdarzenie ponownego mapowania do środowiska IDE.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

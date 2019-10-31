@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c8b41e-fbe4-4ae0-aa29-68fbb2311691
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fb53014a28fb291b8463535addfb61e62d32d7d6
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 00345f6c95c67f0494aa721c662f56a9e98cdd7f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795356"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108715"
 ---
 # <a name="createassemblynameobject-function"></a>CreateAssemblyNameObject — Funkcja
 Pobiera wskaźnik interfejsu do wystąpienia [IAssemblyName](iassemblyname-interface.md) , które reprezentuje unikatową tożsamość zestawu o określonej nazwie.  
@@ -41,25 +39,25 @@ HRESULT CreateAssemblyNameObject (
   
 ## <a name="parameters"></a>Parametry  
  `ppAssemblyNameObj`  
- określoną Zwracana `IAssemblyName`wartość.  
+ określoną Zwrócony `IAssemblyName`.  
   
  `szAssemblyName`  
- podczas Nazwa zestawu, dla którego ma zostać utworzone nowe `IAssemblyName` wystąpienie.  
+ podczas Nazwa zestawu, dla którego ma zostać utworzone nowe wystąpienie `IAssemblyName`.  
   
  `dwFlags`  
  podczas Flagi do przekazania do konstruktora obiektów.  
   
  `pvReserved`  
- podczas Zarezerwowane do użytku w przyszłości. `pvReserved`musi być odwołaniem o wartości null.  
+ podczas Zarezerwowane do użytku w przyszłości. `pvReserved` musi być odwołaniem o wartości null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

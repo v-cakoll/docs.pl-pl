@@ -11,14 +11,12 @@ helpviewer_keywords:
 - profiling applications
 - Performance Console
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 163022256dfbeb303a500d9c1d574054c5b550d7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: daa2ae4fbbed78bda4648b4b3077fa7d96a9b3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052296"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121564"
 ---
 # <a name="runtime-profiling"></a>Profilowanie środowiska uruchomieniowego
 Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu opracowywania i wdrażania. Ta sekcja jest przeznaczony dla deweloperów i administratorów systemu, którzy chcą zbierać informacje o wydajności aplikacji.  
@@ -40,7 +38,7 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
   
 5. Kliknij licznik wydajności, który chcesz wyświetlić.  
   
-6. W polu listy **wystąpienia wybranego obiektu** kliknij pozycję  **\<wszystkie wystąpienia >** , aby określić, że chcesz monitorować licznik wydajności dla środowiska uruchomieniowego CLR globalnie (to znaczy na poziomie całego systemu).  
+6. W polu listy **wystąpienia wybranego obiektu** kliknij pozycję **\<wszystkie wystąpienia >** , aby określić, że chcesz monitorować licznik wydajności dla środowiska uruchomieniowego języka wspólnego (czyli w oparciu o cały system).  
   
      —lub—  
   
@@ -54,7 +52,7 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
  Jeśli chcesz utworzyć profil zestawu, który istnieje w strefie lub w udziale zdalnym, upewnij się, że zestaw zdalny ma pełne zaufanie na komputerze, na którym są uruchomione liczniki wydajności. Jeśli zestaw nie ma wystarczających relacji zaufania, liczniki wydajności nie będą działały. Informacje o przyznawaniu zaufania do różnych stref można znaleźć w temacie [Caspol. exe (Narzędzie zasad zabezpieczeń dostępu kodu)](../tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
-> W systemach, w których zainstalowano .NET Framework 4, Monitor wydajności może nie wyświetlać danych dla liczników wydajności w niektórych kategoriach, takich jak **dane środowiska .NET CLR** i **sieci CLR platformy .NET**, dla aplikacji, które zostały opracowane przy użyciu platformy .NET. Framework 1,1. W takim przypadku można skonfigurować Monitor wydajności do wyświetlania tych danych przez dodanie [ \<elementu forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) do pliku konfiguracji aplikacji.  
+> W systemach, w których zainstalowano .NET Framework 4, Monitor wydajności może nie wyświetlać danych dla liczników wydajności w niektórych kategoriach, takich jak **dane środowiska .NET CLR** i **sieci CLR platformy .NET**, dla aplikacji, które zostały opracowane przy użyciu platformy .NET. Framework 1,1. W takim przypadku można skonfigurować Monitor wydajności do wyświetlania tych danych, dodając element [\<forcePerformanceCounterUniqueSharedMemoryReads >](../configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) do pliku konfiguracji aplikacji.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Programowe odczytywanie i tworzenie liczników wydajności  
  .NET Framework zawiera klasy, których można użyć, aby programowo uzyskać dostęp do tych samych informacji o wydajności, które są dostępne w konsoli wydajności. Można również użyć tych klas do tworzenia niestandardowych liczników wydajności. W poniższej tabeli opisano niektóre klasy monitorowania wydajności, które są dostępne w .NET Framework.  
@@ -63,8 +61,8 @@ Profilowanie to metoda zbierania danych wydajności w dowolnym scenariuszu oprac
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Reprezentuje składnik licznika wydajności systemu Windows NT. Ta klasa umożliwia odczytywanie istniejących wstępnie zdefiniowanych lub niestandardowych liczników oraz publikowanie (zapisywanie) danych wydajności do liczników niestandardowych.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Program udostępnia kilka metod współpracy z licznikami i kategoriami liczników na komputerze.|  
-|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Określa Instalatora `PerformanceCounter` składnika.|  
-|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Określa formułę, w której `NextValue` ma zostać obliczona Metoda. `PerformanceCounter`|  
+|<xref:System.Diagnostics.PerformanceCounterInstaller?displayProperty=nameWithType>|Określa Instalatora dla składnika `PerformanceCounter`.|  
+|<xref:System.Diagnostics.PerformanceCounterType?displayProperty=nameWithType>|Określa formułę, aby obliczyć metodę `NextValue` dla `PerformanceCounter`.|  
   
 ## <a name="see-also"></a>Zobacz także
 

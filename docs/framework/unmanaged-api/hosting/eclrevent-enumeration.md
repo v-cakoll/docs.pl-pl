@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7c36a7c2-75a2-4971-bc23-abf54c812154
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f1e003ba23f680c4a5525a956d758aac6b823eb9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ee749fd40f440e92f1d1b09c2ea5e7bdd51f1cbe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769706"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131134"
 ---
 # <a name="eclrevent-enumeration"></a>EClrEvent — Wyliczenie
-Zawiera opis typowych zdarzeń środowiska uruchomieniowego (języka wspólnego CLR) języka, dla których hosta mogą rejestrować wywołania zwrotne.  
+Opisuje zdarzenia środowiska uruchomieniowego języka wspólnego (CLR), dla których host może rejestrować wywołania zwrotne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,26 +39,26 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`Event_ClrDisabled`|Określa krytyczny błąd środowiska CLR.|  
-|`Event_DomainUnload`|Określa zwolnienie określonego <xref:System.AppDomain>.|  
-|`Event_MDAFired`|Określa komunikat zarządzane debugowanie Asystenta ustawień (MDA) został wygenerowany.|  
+|`Event_ClrDisabled`|Określa krytyczny błąd CLR.|  
+|`Event_DomainUnload`|Określa wyładowywanie określonego <xref:System.AppDomain>.|  
+|`Event_MDAFired`|Określa, że został wygenerowany komunikat Asystent debugowania zarządzanego (MDA).|  
 |`Event_StackOverflow`|Określa, że wystąpił błąd przepełnienia stosu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Hosta można zarejestrować wywołania zwrotne dla każdego z typów zdarzeń, opisanego przez `EClrEvent` przez wywołanie metody [iclroneventmanager —](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) interfejsu. Host pobiera wskaźnik do tego interfejsu, wywołując [iclrcontrol::getclrmanager —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) metody.  
+ Host może rejestrować wywołania zwrotne dla dowolnego typu zdarzenia opisanego przez `EClrEvent` przez wywoływanie metod interfejsu [ICLROnEventManager](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-interface.md) . Host Pobiera wskaźnik do tego interfejsu, wywołując metodę [ICLRControl:: GetCLRManager —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-getclrmanager-method.md) .  
   
- `Event_CLRDisabled` i `Event_DomainUnload` zdarzenia można podnieść więcej niż jeden raz i inne wątki w celu sygnalizowania, że zwolnienie lub wyłączenie środowiska CLR.  
+ Zdarzenia `Event_CLRDisabled` i `Event_DomainUnload` mogą być wywoływane więcej niż jeden raz i z różnych wątków, aby sygnalizować zwolnienie lub wyłączenie środowiska CLR.  
   
- `Event_MDAFired` Zdarzeń wywołuje tworzenie [mdainfo —](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) wystąpienia, które zawiera szczegóły komunikatu MDA. Aby uzyskać więcej informacji na temat mda zobacz [diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+ Zdarzenie `Event_MDAFired` wywołuje Tworzenie wystąpienia [MDAInfo —](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md) zawierającego szczegóły komunikatu MDA. Aby uzyskać więcej informacji na temat MDA, zobacz [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

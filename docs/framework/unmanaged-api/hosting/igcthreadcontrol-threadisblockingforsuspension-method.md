@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ed5b5b58-7db7-46b5-9e2c-278db7159cee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8609b32ad2dea699b5b248b2b8bb3d81ec744043
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6534c3085b70b590c2dcc3f50cf0253bd5e6682
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779477"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134751"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension — Metoda
-Powiadamia hosta, że wątek, który wykonuje wywołanie zostanie zablokować, być może do wyrzucania elementów bezużytecznych lub innych zawieszenia.  
+Powiadamia hosta, że wątek, który wywołuje wywołanie, ma zablokować, prawdopodobnie na wyrzucanie elementów bezużytecznych lub w innym zawieszeniu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +32,16 @@ HRESULT ThreadIsBlockingForSuspension ( );
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Host może wybrać w ramach `ThreadIsBlockingForSuspension` wywołania zwrotnego czy zmienić termin egzaminu wątku.  
+ Host może wybrać w ramach wywołania zwrotnego `ThreadIsBlockingForSuspension`, czy ponownie zaplanować wątek.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

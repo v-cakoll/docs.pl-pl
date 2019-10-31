@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7070b6d0-f2e0-44ff-b124-0944cd807e69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052c467f5570119cd08b4719c768d178dd52aba2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 78402e5e099815fe309618e692285de91b8b29f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752207"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124236"
 ---
 # <a name="icordebugevalabort-method"></a>ICorDebugEval::Abort — Metoda
-Przerywa obliczeń, który wykonuje obecnie ten obiekt ICorDebugEval.  
+Przerywa obliczenia wykonywane przez ten obiekt ICorDebugEval.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +32,13 @@ HRESULT Abort ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli ocena jest zagnieżdżony, a nie jest ostatnim zadaniem `Abort` metoda może zakończyć się niepowodzeniem.  
+ Jeśli ocena jest zagnieżdżona i nie jest to najnowsza wartość, Metoda `Abort` może zakończyć się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

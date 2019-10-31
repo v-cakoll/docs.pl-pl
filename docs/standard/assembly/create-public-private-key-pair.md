@@ -11,31 +11,29 @@ helpviewer_keywords:
 - .snk files
 - strong-named assemblies, key pairs
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 62c38494e29541bd490d69ccc8de485217b9514a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122519"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Instrukcje: Tworzenie pary kluczy publiczny-prywatny
 
 Aby podpisać zestaw za pomocą silnej nazwy, musisz mieć parę kluczy publiczny/prywatny. Ta para publicznych i prywatnych kluczy kryptograficznych jest używana podczas kompilacji w celu utworzenia zestawu o silnej nazwie. Parę kluczy można utworzyć za pomocą [Narzędzia silnej nazwy (SN. exe)](../../framework/tools/sn-exe-strong-name-tool.md). Pliki pary kluczy zazwyczaj mają rozszerzenie *. snk* .
 
 > [!NOTE]
-> W programie Visual Studio strony C# właściwości projektu i Visual Basic zawierają kartę **podpisywanie** , która umożliwia wybieranie istniejących plików kluczy lub generowanie nowych plików kluczy bez korzystania z *SN. exe*. W C++wizualizacji, możesz określić lokalizację istniejącego pliku klucza na stronie właściwości **Zaawansowane** w sekcji **konsolidator** w sekcji **Właściwości konfiguracji** w oknie **strony właściwości** . Użycie <xref:System.Reflection.AssemblyKeyFileAttribute> atrybutu do identyfikacji par plików kluczy było przestarzałe, począwszy od programu Visual Studio 2005.
+> W programie Visual Studio strony C# właściwości projektu i Visual Basic zawierają kartę **podpisywanie** , która umożliwia wybieranie istniejących plików kluczy lub generowanie nowych plików kluczy bez korzystania z *SN. exe*. W C++wizualizacji, możesz określić lokalizację istniejącego pliku klucza na stronie właściwości **Zaawansowane** w sekcji **konsolidator** w sekcji **Właściwości konfiguracji** w oknie **strony właściwości** . Użycie atrybutu <xref:System.Reflection.AssemblyKeyFileAttribute> do identyfikowania par plików kluczy było przestarzałe, począwszy od programu Visual Studio 2005.
 
 ## <a name="create-a-key-pair"></a>Tworzenie pary kluczy
 
 Aby utworzyć parę kluczy, w wierszu polecenia wpisz następujące polecenie:
 
-**SN — k** \< *Nazwa pliku*>
+**SN —** *Nazwa pliku* \<k>
 
 W tym poleceniu *Nazwa pliku* jest nazwą pliku wyjściowego zawierającego parę kluczy.
 

@@ -12,19 +12,17 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 839e698c8921f916fad174bae4f4cc8bb4d02994
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609077"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73098861"
 ---
 # <a name="cordebugehclause-structure"></a>Struktura CorDebugEHClause
-[Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
+[Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Reprezentuje wyjątek obsługi klauzuli (EH) dla danego kodu języka pośredniego (IL).  
+ Reprezentuje klauzulę obsługi wyjątków (EH) dla danego fragmentu kodu języka pośredniego (IL).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,36 +42,36 @@ typedef struct _CorDebugEHClause {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`Flags`|Pole bitowe, który opisuje informacje o wyjątku w klauzuli EH. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
-|`TryOffset`|Przesunięcie, w bajtach, z `try` bloku od początku treści metody.|  
-|`TryLength`|Długość w bajtach z `try` bloku.|  
-|`HandlerOffset`|Lokalizacja programu obsługi dla tego `try` bloku.|  
-|`HandlerLength`|Rozmiar kod obsługi w bajtach.|  
-|`ClassToken`|Token metadanych w przypadku obsługi na podstawie typu wyjątku.|  
-|`FilterOffset`|Przesunięcie w bajtach od początku treści metody obsługi wyjątków na podstawie filtru.|  
+|`Flags`|Pole bitowe opisujące informacje o wyjątku w klauzuli EH. Aby uzyskać więcej informacji, zobacz sekcję: Uwagi.|  
+|`TryOffset`|Przesunięcie, w bajtach, bloku `try` od początku treści metody.|  
+|`TryLength`|Długość (w bajtach) bloku `try`.|  
+|`HandlerOffset`|Lokalizacja programu obsługi dla tego bloku `try`.|  
+|`HandlerLength`|Rozmiar kodu programu obsługi w bajtach.|  
+|`ClassToken`|Token metadanych dla obsługi wyjątków opartych na typie.|  
+|`FilterOffset`|Przesunięcie, w bajtach, od początku treści metody dla procedury obsługi wyjątków opartej na filtrze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tablica `CoreDebugEHClause` wartości jest zwracana przez [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metody.  
+ Tablica wartości `CoreDebugEHClause` jest zwracana przez metodę [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) .  
   
- Informacje o klauzuli EH jest definiowany przez specyfikację interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Standard ECMA-355: Common Language Infrastructure (CLI), wersja 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Informacje o klauzuli EH są definiowane przez specyfikację interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [Standard ECMA-355: Common Language Infrastructure (CLI), Wydanie szóste](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
- `flags` Pole może zawierać następujących flag. Należy pamiętać, że nie są zdefiniowane w CorDebug.idl lub CorDebug.h.  
+ Pole `flags` może zawierać następujące flagi. Należy zauważyć, że nie są one zdefiniowane w CorDebug. idl lub CorDebug. h.  
   
-|Flaga|Wartość|Opis|  
+|znacznik|Wartość|Opis|  
 |----------|-----------|-----------------|  
-|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Klauzula typizowanego wyjątku.|  
-|`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Wyjątek filtr i obsługi klauzuli.|  
-|`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|A `finally` klauzuli.|  
-|`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Klauzuli fault ( `finally` klauzula, która jest wywoływana tylko wtedy, gdy zostanie zgłoszony wyjątek).|  
+|`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|Klauzula wyjątku o określonym typie.|  
+|`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|Filtr wyjątku i klauzula obsługi.|  
+|`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|Klauzula `finally`.|  
+|`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Klauzula błędu (klauzula `finally`, która jest wywoływana tylko w przypadku zgłoszenia wyjątku).|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

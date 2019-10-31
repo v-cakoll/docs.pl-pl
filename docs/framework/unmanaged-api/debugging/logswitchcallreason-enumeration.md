@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 5bbb8d1b-bbc4-47b0-b1b1-2d54cc0be291
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 894f74f12de7ed0754dcca34eacb815efc33c766
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2a6ca9f4d74c508ac0a2af68c2a5b0a3e6d6b217
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752575"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139179"
 ---
 # <a name="logswitchcallreason-enumeration"></a>LogSwitchCallReason — Wyliczenie
-Określa operację, która została wykonana w przełączniku debugowanie śledzenia.  
+Wskazuje operację wykonywaną na przełączniku debugowania/śledzenia.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,18 +38,18 @@ typedef enum LogSwitchCallReason {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|Przełącznik debugowanie śledzenia został utworzony.|  
-|`SWITCH_MODIFY`|Przełącznik debugowanie śledzenia został zmodyfikowany.|  
-|`SWITCH_DELETE`|Usunięto przełącznik debugowanie śledzenia.|  
+|`SWITCH_CREATE`|Utworzono przełącznik debugowania/śledzenia.|  
+|`SWITCH_MODIFY`|Zmodyfikowano przełącznik debugowania/śledzenia.|  
+|`SWITCH_DELETE`|Usunięto przełącznik debugowania/śledzenia.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

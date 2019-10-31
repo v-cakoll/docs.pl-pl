@@ -10,14 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, miscellaneous constructs
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6b4e9072100a25c297dbf3bfb70a928e16b06da4
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956889"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141603"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Inne konstrukcje w wyrażeniach regularnych
 Wyrażenia regularne w programie .NET zawierają trzy różne konstrukcje językowe. Jeden umożliwia włączenie lub wyłączenie określonych opcji dopasowania w środku wzorca wyrażenia regularnego. Pozostałe dwa umożliwiają uwzględnienie komentarzy w wyrażeniu regularnym.  
@@ -40,14 +38,14 @@ Wyrażenia regularne w programie .NET zawierają trzy różne konstrukcje język
  Każda zmiana opcji wyrażenia regularnego zdefiniowanych przez konstrukcję `(?imnsx-imnsx)` obowiązuje do końca otaczającej grupy.  
   
 > [!NOTE]
-> Podwyrażenie @no__t-0 `)` Konstrukcja grupująca zawiera identyczne funkcje dla podwyrażenia. Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> Podwyrażenie `(?imnsx-imnsx:``)` konstrukcja grupowania zapewnia identyczną funkcjonalność dla podwyrażenia. Aby uzyskać więcej informacji, zobacz [grupowanie konstrukcji](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
- W poniższym przykładzie zastosowano opcje `i`, `n` i `x`, aby włączyć wyznaczanie wielkości liter i jawne przechwytywanie oraz ignorowanie białych znaków we wzorcu wyrażenia regularnego w środku wyrażenia regularnego.  
+ W poniższym przykładzie zastosowano opcje `i`, `n`i `x` w celu włączenia wyznaczania wielkości liter i jawnych przechwycenia oraz ignorowania białych znaków we wzorcu wyrażenia regularnego w środku wyrażenia regularnego.  
   
  [!code-csharp[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous1.cs#1)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous1.vb#1)]  
   
- W przykładzie zdefiniowano dwa wyrażenia regularne. Pierwsze, `\b(D\w+)\s(d\w+)\b`, dopasowuje dwa kolejne słowa zaczynające się wielką literą "D" i małą literą "d". Drugie wyrażenie regularne, `\b(D\w+)(?ixn) \s (d\w+) \b`, używa wbudowanych opcji, aby zmodyfikować ten wzorzec, zgodnie z opisem w poniższej tabeli. Porównanie wyników potwierdza wpływ konstrukcji `(?ixn)`.  
+ W przykładzie zdefiniowano dwa wyrażenia regularne. Pierwsze, `\b(D\w+)\s(d\w+)\b`, dopasowuje dwa kolejne słowa zaczynające się wielką literą "D" i małą literą "d". Drugie wyrażenie regularne `\b(D\w+)(?ixn) \s (d\w+) \b`, używa wbudowanych opcji do modyfikowania wzorca, zgodnie z opisem w poniższej tabeli. Porównanie wyników potwierdza efekt konstruowania `(?ixn)`.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -59,9 +57,9 @@ Wyrażenia regularne w programie .NET zawierają trzy różne konstrukcje język
 |`\b`|Dopasowuje granicę wyrazu.|  
   
 ## <a name="inline-comment"></a>Komentarz w tekście  
- @No__t-0 *komentarz*@no__t 2 konstrukcja umożliwia uwzględnienie komentarza wbudowanego w wyrażeniu regularnym. Aparat wyrażeń regularnych nie używa żadnej części komentarza w dopasowaniu do wzorca, chociaż komentarz jest zawarty w ciągu, który jest zwracany przez metodę <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Komentarz kończy się przy pierwszym nawiasie zamykającym.  
+ `)` konstrukcja *komentarza* `(?#` umożliwia dołączenie komentarza wbudowanego do wyrażenia regularnego. Aparat wyrażeń regularnych nie używa żadnej części komentarza w dopasowaniu do wzorca, chociaż komentarz jest zawarty w ciągu, który jest zwracany przez metodę <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Komentarz kończy się przy pierwszym nawiasie zamykającym.  
   
- Poniższy przykład powtarza pierwszy wzorzec wyrażenia regularnego z przykładu w poprzedniej sekcji. Dodaje dwa wbudowane Komentarze do wyrażenia regularnego, aby wskazać, czy w porównaniu jest rozróżniana wielkość liter. Wzorzec wyrażenia regularnego, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, został zdefiniowany w następujący sposób.  
+ Poniższy przykład powtarza pierwszy wzorzec wyrażenia regularnego z przykładu w poprzedniej sekcji. Dodaje dwa wbudowane Komentarze do wyrażenia regularnego, aby wskazać, czy w porównaniu jest rozróżniana wielkość liter. Wzorzec wyrażenia regularnego, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, jest zdefiniowany w następujący sposób.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -78,7 +76,7 @@ Wyrażenia regularne w programie .NET zawierają trzy różne konstrukcje język
  [!code-vb[RegularExpressions.Language.Miscellaneous#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous2.vb#2)]  
   
 ## <a name="end-of-line-comment"></a>Komentarz końca wiersza  
- Znak numeru (`#`) oznacza komentarz w trybie x, który zaczyna się od znaku nieoznaczonego znakiem # na końcu wzorca wyrażenia regularnego i kontynuuje do końca wiersza. Aby użyć tej konstrukcji, należy włączyć opcję `x` (za pomocą opcji wbudowanych) lub podać wartość <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> do parametru `option` podczas tworzenia wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> lub wywołania statycznej metody <xref:System.Text.RegularExpressions.Regex>.  
+ Znak numeru (`#`) oznacza komentarz w trybie x, który zaczyna się od znaku nieoznaczonego znakiem # na końcu wzorca wyrażenia regularnego i kontynuuje do końca wiersza. Aby użyć tej konstrukcji, należy włączyć opcję `x` (za pomocą opcji wbudowanych) lub podać <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartość do parametru `option` podczas tworzenia wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> lub wywołania statycznej metody <xref:System.Text.RegularExpressions.Regex>.  
   
  Poniższy przykład ilustruje zakończenie konstruowania komentarza do końca wiersza. Określa, czy ciąg jest ciągiem formatu złożonego, który zawiera co najmniej jeden element formatu. W poniższej tabeli opisano konstrukcje we wzorcu wyrażenia regularnego:  
   
@@ -97,7 +95,7 @@ Wyrażenia regularne w programie .NET zawierają trzy różne konstrukcje język
  [!code-csharp[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.miscellaneous/cs/miscellaneous3.cs#3)]
  [!code-vb[RegularExpressions.Language.Miscellaneous#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.miscellaneous/vb/miscellaneous3.vb#3)]  
   
- Należy pamiętać, że zamiast dostarczać konstrukcję `(?x)` w wyrażeniu regularnym, komentarz mógł również zostać rozpoznany przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> i przekazanie jej do wartości wyliczenia <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
+ Należy pamiętać, że zamiast dostarczać konstrukcję `(?x)` w wyrażeniu regularnym, komentarz mógł również zostać rozpoznany przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> i przekazanie jej <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> wartości wyliczenia.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29746b24-3766-4255-8813-0426c45e73e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 003a6546b3316f2a2a65bce4537c60dcf62b3197
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f80bdffbf5c0ba39980bd27c6e89a368547340c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129806"
 ---
 # <a name="icordebugmdagetxml-method"></a>ICorDebugMDA::GetXML — Metoda
-Pobiera pełną strumień XML skojarzony z zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Pobiera pełny strumień XML skojarzony z zarządzanym asystentem debugowania (MDA) reprezentowany przez [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +38,25 @@ HRESULT GetXML (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Rozmiar `szName` tablicy.  
+ podczas Rozmiar tablicy `szName`.  
   
  `pcchName`  
- [out] Wskaźnik do długość strumienia XML.  
+ określoną Wskaźnik do długości strumienia XML.  
   
  `szName`  
- [out] Tablica do przechowywania strumień XML. Tablica może być pusta.  
+ określoną Tablica, w której ma być przechowywany strumień XML. Tablica może być pusta.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetXML` Metoda może wpłynąć na wydajność, w zależności od rozmiaru skojarzonego strumienia XML.  
+ Metoda `GetXML` może mieć wpływ na wydajność, w zależności od rozmiaru skojarzonego strumienia XML.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

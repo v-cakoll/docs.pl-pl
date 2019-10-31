@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ec9c4f3afb8f3b7e75e22874996d57d29ce8cf16
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274218"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099469"
 ---
 # <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT — Struktury
 Zawiera informacje o układzie obiektu tablicy w pamięci.  
@@ -55,18 +53,18 @@ typedef struct COR_ARRAY_LAYOUT {
 |`rankOffset`|Przesunięcie, od którego są uruchamiane Range.|  
   
 ## <a name="remarks"></a>Uwagi  
- `rankSize` Pole określa rozmiar rangi w tablicy wielowymiarowej. Jest to dokładne dla tablic jednowymiarowych.  
+ Pole `rankSize` określa rozmiar rangi w tablicy wielowymiarowej. Jest to dokładne dla tablic jednowymiarowych.  
   
- Wartość `numRanks` jest równa 1 dla jednowymiarowej tablicy i `N` dla wielowymiarowej tablicy `N` wymiarów.  
+ Wartość `numRanks` to 1 dla jednowymiarowej tablicy i `N` dla wielowymiarowej tablicy wymiarów `N`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

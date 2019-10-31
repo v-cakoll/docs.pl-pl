@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 18217ba1-1776-4297-a3b9-f77e64b0fead
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d7eca3c2825707c9190436377bba7e4bb0d5447
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7e1605eede55360e72d65da6744bc1dcce4f107f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757972"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130990"
 ---
 # <a name="icordebugilframegetip-method"></a>ICorDebugILFrame::GetIP — Metoda
-Pobiera wartość wskaźnika instrukcji i wartości bitowe połączenie, w tym artykule opisano, jak wartość wskaźnika instrukcji zostały pobrane.  
+Pobiera wartość wskaźnika instrukcji i wartość kombinacji bitowej opisującą sposób uzyskiwania wartości wskaźnika instrukcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +36,21 @@ HRESULT GetIP (
   
 ## <a name="parameters"></a>Parametry  
  `pnOffset`  
- [out] Wartość wskaźnika instrukcji.  
+ określoną Wartość wskaźnika instrukcji.  
   
  `pMappingResult`  
- [out] Wskaźnik do bitowa kombinacja wartości wyliczenia cordebugmappingresult —, które opisują, jak wartość wskaźnika instrukcji zostały pobrane.  
+ określoną Wskaźnik do bitowej kombinacji wartości wyliczenia CorDebugMappingResult —, który opisuje sposób uzyskiwania wartości wskaźnika instrukcji.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartość wskaźnika instrukcji jest przesunięcie ramki stosu kod funkcji Microsoft intermediate language (MSIL). Jeśli ramka stosu jest aktywna, ten adres jest następną instrukcję do wykonania. Jeśli ramka stosu nie jest aktywny, ten adres jest następną instrukcję do wykonania podczas ponownego uaktywniania ramki stosu.  
+ Wartość wskaźnika instrukcji to przesunięcie ramki stosu do kodu języka pośredniego firmy Microsoft (MSIL) funkcji. Jeśli ramka stosu jest aktywna, ten adres jest następną instrukcją do wykonania. Jeśli ramka stosu nie jest aktywna, ten adres jest następną instrukcją do wykonania po ponownym uaktywnieniu ramki stosu.  
   
- Jeśli ta ramka ramkę skompilowany just-in-time (JIT), wartość wskaźnika instrukcji będzie określana przez mapowanie wstecz od wskaźnika rzeczywiste natywnych instrukcji, co wartość może być tylko przybliżone.  
+ Jeśli ta ramka jest skompilowaną ramką just-in-Time (JIT), wartość wskaźnika instrukcji zostanie określona przez mapowanie wstecz od rzeczywistego wskaźnika instrukcji natywnych, więc wartość może być przybliżona.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

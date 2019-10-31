@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Kompilowanie zestawu wieloplikowego'
+title: 'Instrukcje: kompilowanie zestawu wieloplikowego'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,16 +17,14 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b95d686529da83a5a52edb80219874530212dcc
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991256"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119939"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: Kompilowanie zestawu wieloplikowego
+# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: kompilowanie zestawu wieloplikowego
 
 W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, który ilustruje każdy krok w procedurze.
 
@@ -37,7 +35,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
 1. Kompiluj wszystkie pliki, które zawierają przestrzenie nazw, do których odwołują się inne moduły w zestawie, do modułów kodu. Domyślnym rozszerzeniem modułów kodu jest *. module*.
 
-   Załóżmy na przykład, że `Stringer` plik ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie `Stringer`. Klasa zawiera metodę o nazwie `StringerMethod` , która zapisuje jeden wiersz w konsoli. `Stringer`
+   Załóżmy na przykład, że plik `Stringer` ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie `Stringer`. Klasa `Stringer` zawiera metodę o nazwie `StringerMethod`, która zapisuje jeden wiersz w konsoli.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -103,7 +101,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
 3. Kompiluj wszystkie inne moduły przy użyciu niezbędnych opcji kompilatora, aby wskazać inne moduły, do których istnieją odwołania w kodzie. W tym kroku jest stosowana opcja kompilatora **/addmodule** .
 
-   W poniższym przykładzie moduł kodu o nazwie *Client* ma metodę punktu `Main` wejścia, która odwołuje się do metody w module *Stringer. dll* utworzonym w kroku 1.
+   W poniższym przykładzie moduł kodu o nazwie *Client* ma punkt wejścia `Main` metodę, która odwołuje się do metody w module *Stringer. dll* utworzonym w kroku 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -214,11 +212,11 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
     W wierszu polecenia wpisz następujące polecenie:
 
-    **Al***Nazwa*modułunazw> modułów>... \<\< **/Main:** \<*Nazwa***metody/out:** nazwa pliku/Target:\<*Typ pliku* zestawu\<> > >
+    *Nazwa modułu* **Al** \<> *Nazwa modułu*\<>... **/Main:** \<*Nazwa metody*>  **/out:** \<*Nazwa pliku*>  **/target:** \<*Typ pliku zestawu*>
 
     W tym poleceniu argumenty *nazwy modułu* określają nazwę każdego modułu, który ma zostać uwzględniony w zestawie. **/Main:** opcja określa nazwę metody, która jest punktem wejścia zestawu. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw to plik wykonywalny aplikacji konsoli (*exe*), plik wykonywalny systemu Windows ( *. win*) lub plik biblioteki ( *. lib*).
 
-    W poniższym przykładzie *Al. exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie mój *Assembly. exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *. exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest `Main` metodą w klasie `MainClientApp`, która znajduje się w *pliku Client. dll*.
+    W poniższym przykładzie *Al. exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie mój *Assembly. exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *. exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest metodą `Main` w klasie `MainClientApp`, która znajduje się w *pliku Client. dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -229,6 +227,6 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie zestawów](../../standard/assembly/create.md)
-- [Instrukcje: Wyświetl zawartość zestawu](../../standard/assembly/view-contents.md)
+- [Instrukcje: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)
 - [Jak środowisko uruchomieniowe lokalizuje zestawy](../deployment/how-the-runtime-locates-assemblies.md)
 - [Zestawy wieloplikowe](multifile-assemblies.md)

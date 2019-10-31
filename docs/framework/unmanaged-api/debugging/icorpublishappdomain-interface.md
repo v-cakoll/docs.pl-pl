@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7885a6-d17a-4bfc-a4c6-23cbb7337ad5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8d651f19b7d4cb0cbe163c2fa59e1ef07ceb480
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140336"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain — Interfejs
 Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.  
@@ -31,16 +29,16 @@ Reprezentuje i dostarcza informacje dotyczące domeny aplikacji.
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetID, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getid-method.md)|Pobiera unikatowy identyfikator dla tego `ICorPublishAppDomain`.|  
-|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji odwołuje się ten `ICorPublishAppDomain`.|  
+|[GetName, metoda](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-getname-method.md)|Pobiera nazwę domeny aplikacji, do której odwołuje się ten `ICorPublishAppDomain`.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

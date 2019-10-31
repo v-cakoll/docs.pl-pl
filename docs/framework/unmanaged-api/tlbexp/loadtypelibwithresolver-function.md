@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b78789344050fd5e1cb0ee3492bf330fbf92bc88
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124157"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver — Funkcja
 Ładuje bibliotekę typów i używa dostarczonego [interfejsu ITypeLibResolver](itypelibresolver-interface.md) do rozpoznawania wszelkich wewnętrznie przywoływanych bibliotek typów.  
@@ -47,7 +45,7 @@ HRESULT LoadTypeLibWithResolver(
   
 - `REGKIND_REGISTER`: Zarejestruj tę bibliotekę typów.  
   
-- `REGKIND_NONE`: Nie rejestruj tej biblioteki typów.  
+- `REGKIND_NONE`: nie Rejestruj tej biblioteki typów.  
   
  `pTlbResolver`  
  podczas Wskaźnik do implementacji [interfejsu ITypeLibResolver](itypelibresolver-interface.md).  
@@ -70,26 +68,26 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_CANTLOADLIBRARY`|Nie można załadować biblioteki typów lub biblioteki DLL.|  
   
 ## <a name="remarks"></a>Uwagi  
- [Tlbexp. exe (Eksporter biblioteki typów)](../../tools/tlbexp-exe-type-library-exporter.md) wywołuje `LoadTypeLibWithResolver` funkcję w procesie konwersji zestawu na typ biblioteki.  
+ [Tlbexp. exe (Eksporter biblioteki typów)](../../tools/tlbexp-exe-type-library-exporter.md) wywołuje funkcję `LoadTypeLibWithResolver` w procesie konwersji zestawu na typ biblioteki.  
   
  Ta funkcja ładuje określoną bibliotekę typów o minimalnym dostępie do rejestru. Funkcja następnie analizuje bibliotekę typów dla wewnętrznie przywoływanych bibliotek typów, z których każdy musi być załadowany i dodany do biblioteki typów nadrzędnych.  
   
- Przed załadowaniem przywoływanej biblioteki typów, jej ścieżka do pliku odniesienia musi zostać rozpoznana jako pełna ścieżka pliku. Jest to realizowane za pomocą [metody ResolveTypeLib —](resolvetypelib-method.md) dostarczonej przez [interfejs ITypeLibResolver](itypelibresolver-interface.md), który jest `pTlbResolver` przekazywany do parametru.  
+ Przed załadowaniem przywoływanej biblioteki typów, jej ścieżka do pliku odniesienia musi zostać rozpoznana jako pełna ścieżka pliku. Jest to realizowane za pomocą [metody ResolveTypeLib —](resolvetypelib-method.md) dostarczonej przez [interfejs ITypeLibResolver](itypelibresolver-interface.md), który jest przekazywany w parametrze `pTlbResolver`.  
   
- Gdy znana jest pełna ścieżka pliku przywoływanej biblioteki typów, `LoadTypeLibWithResolver` funkcja ładuje i dodaje przywoływaną bibliotekę typów do biblioteki typów nadrzędnych, tworząc połączoną bibliotekę typów głównych.  
+ Gdy znana jest pełna ścieżka do pliku z przywoływaną biblioteką typów, funkcja `LoadTypeLibWithResolver` ładuje i dodaje przywoływaną bibliotekę typów do biblioteki typów nadrzędnych, tworząc połączoną bibliotekę typów głównych.  
   
- Po rozpoznaniu i załadowaniu wszystkich wewnętrznie przywoływanych bibliotek typów funkcja zwraca odwołanie do głównej, rozwiązanej biblioteki typów `pptlib` w parametrze.  
+ Po rozpoznaniu i załadowaniu wszystkich wewnętrznie przywoływanych bibliotek typów funkcja zwraca odwołanie do głównej, rozwiązanej biblioteki typów w parametrze `pptlib`.  
   
- Funkcja jest zazwyczaj wywoływana przez [Tlbexp. exe (Eksporter biblioteki typów)](../../tools/tlbexp-exe-type-library-exporter.md), która dostarcza własną wewnętrzną implementację [interfejsu](itypelibresolver-interface.md) `pTlbResolver` ITypeLibResolver w parametrze. `LoadTypeLibWithResolver`  
+ Funkcja `LoadTypeLibWithResolver` jest zazwyczaj wywoływana przez [Tlbexp. exe (Eksporter biblioteki typów)](../../tools/tlbexp-exe-type-library-exporter.md), która dostarcza własną wewnętrzną implementację [interfejsu ITypeLibResolver](itypelibresolver-interface.md) w parametrze `pTlbResolver`.  
   
- Jeśli wywołasz `LoadTypeLibWithResolver` bezpośrednio, musisz podać własną implementację [interfejsu ITypeLibResolver](itypelibresolver-interface.md) .  
+ W przypadku wywołania `LoadTypeLibWithResolver` bezpośrednio należy podać własną implementację [interfejsu ITypeLibResolver](itypelibresolver-interface.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** TlbRef. h  
+ **Nagłówek:** TlbRef. h  
   
- **Biblioteki** TlbRef.lib  
+ **Biblioteka:** TlbRef. lib  
   
  **Wersja .NET Framework:** 3,5, 3,0, 2,0  
   

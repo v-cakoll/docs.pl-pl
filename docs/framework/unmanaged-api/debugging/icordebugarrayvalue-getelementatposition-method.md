@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fd5eaa4-1997-4910-82f5-3887480db764
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cfdaeb1bc298c10cbae01c946ffb867cef21d17
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 10584442d7e0bd61e6decaf2b494dfe39f339d6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088416"
 ---
 # <a name="icordebugarrayvaluegetelementatposition-method"></a>ICorDebugArrayValue::GetElementAtPosition — Metoda
-Pobiera element wskazywany danej pozycji, traktując tablicy jako tablicę indeksowaną od zera, jednowymiarową.  
+Pobiera element w podanym miejscu, traktując tablicę jako tablicę jednowymiarową o wartości zero.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT GetElementAtPosition (
   
 ## <a name="parameters"></a>Parametry  
  `nPosition`  
- [in] Położenie elementu do pobrania.  
+ podczas Pozycja elementu, który ma zostać pobrany.  
   
  `ppValue`  
- [out] Wskaźnik na adres obiektu ICorDebugValue, która reprezentuje wartość elementu.  
+ określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość elementu.  
   
 ## <a name="remarks"></a>Uwagi  
- Układ tablicą wielowymiarową następuje styl C++ układ tablicy.  
+ Układ tablicy wielowymiarowej jest zgodny z C++ stylem układu tablicy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

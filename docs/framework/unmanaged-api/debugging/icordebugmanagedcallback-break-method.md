@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7d78a301-82b3-43b2-9d65-3cda3285ae97
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621c5b1e32a1a21c2b0b883249c3b65fadceb5f2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: efc9de050e34867c14f8e85e091e2b959c30f213
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632349"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122583"
 ---
 # <a name="icordebugmanagedcallbackbreak-method"></a>ICorDebugManagedCallback::Break — Metoda
 
-Powiadamia debuger po <xref:System.Reflection.Emit.OpCodes.Break> instrukcji w strumieniu kod jest wykonywany.
+Powiadamia debuger, gdy zostanie wykonana instrukcja <xref:System.Reflection.Emit.OpCodes.Break> w strumieniu kodu.
 
 ## <a name="syntax"></a>Składnia
 
@@ -40,20 +38,20 @@ HRESULT Break (
 ## <a name="parameters"></a>Parametry
 
 `pAppDomain`\
-[in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera instrukcji przerwy.
+podczas Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, która zawiera instrukcję Break.
 
 `thread`\
-[in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, który zawiera instrukcji przerwy.
+podczas Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek, który zawiera instrukcję Break.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

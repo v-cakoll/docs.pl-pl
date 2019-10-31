@@ -6,18 +6,16 @@ helpviewer_keywords:
 - assembly binding, attributes
 - assembly manifest, attributes
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d0809ec3da5a12abe950e63f9665037323a0ab39
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991677"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138639"
 ---
 # <a name="set-assembly-attributes"></a>Ustawianie atrybutów zestawu
 
@@ -41,7 +39,7 @@ W poniższej tabeli opisano atrybuty wersji i kultury.
 |---------------------------------|-----------------|
 |<xref:System.Reflection.AssemblyCultureAttribute>|Pole wyliczane wskazujące kulturę obsługiwaną przez zestaw. Zestaw może również określać niezależność kultury, wskazując, że zawiera zasoby dla kultury domyślnej. **Uwaga:**  Środowisko uruchomieniowe traktuje dowolny zestaw, który nie ma atrybutu kultury ustawionego na wartość null jako zestaw satelicki. Takie zestawy podlegają regułom powiązania zestawu satelickiego. Aby uzyskać więcej informacji, zobacz [jak środowisko uruchomieniowe lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|Wartość, która ustawia atrybuty zestawu, na przykład czy zestaw może być uruchamiany obok siebie.|
-|<xref:System.Reflection.AssemblyVersionAttribute>|Wartość liczbowa w formacie *głównym*. *pomocnicze*. *kompilacja*. *poprawka* (na przykład 2.4.0.0). Środowisko uruchomieniowe języka wspólnego używa tej wartości do wykonywania operacji powiązań w zestawach o silnej nazwie. **Uwaga:**  <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> <xref:System.Reflection.AssemblyVersionAttribute> Jeśli atrybut nie jest stosowany do zestawu, numer wersji określony przez atrybut jest używany przez, i właściwości. <xref:System.Reflection.AssemblyInformationalVersionAttribute>|
+|<xref:System.Reflection.AssemblyVersionAttribute>|Wartość liczbowa w formacie *głównym*. *pomocnicze*. *kompilacja*. *poprawka* (na przykład 2.4.0.0). Środowisko uruchomieniowe języka wspólnego używa tej wartości do wykonywania operacji powiązań w zestawach o silnej nazwie. **Uwaga:**  Jeśli atrybut <xref:System.Reflection.AssemblyInformationalVersionAttribute> nie jest stosowany do zestawu, numer wersji określony przez atrybut <xref:System.Reflection.AssemblyVersionAttribute> jest używany przez właściwości <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType>i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 
 Poniższy przykład kodu pokazuje, jak zastosować wersję i atrybuty kultury do zestawu.
 
@@ -75,7 +73,7 @@ Można użyć atrybutów informacyjnych w celu podania dodatkowych informacji o 
 |<xref:System.Reflection.AssemblyCompanyAttribute>|Wartość ciągu określająca nazwę firmy.|
 |<xref:System.Reflection.AssemblyCopyrightAttribute>|Wartość ciągu określająca informacje o prawach autorskich.|
 |<xref:System.Reflection.AssemblyFileVersionAttribute>|Wartość ciągu określająca numer wersji pliku Win32. Zwykle jest to domyślna wersja zestawu.|
-|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Wartość ciągu określająca informacje o wersji, które nie są używane przez środowisko uruchomieniowe języka wspólnego, takie jak pełny numer wersji produktu. **Uwaga:**  Jeśli ten atrybut jest stosowany do zestawu, ciąg, który określa, można uzyskać w czasie wykonywania przy użyciu <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType> właściwości. Ten ciąg jest również używany w ścieżce i klucz rejestru dostarczonych przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|
+|<xref:System.Reflection.AssemblyInformationalVersionAttribute>|Wartość ciągu określająca informacje o wersji, które nie są używane przez środowisko uruchomieniowe języka wspólnego, takie jak pełny numer wersji produktu. **Uwaga:**  Jeśli ten atrybut jest stosowany do zestawu, ciąg, który określa, można uzyskać w czasie wykonywania przy użyciu właściwości <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>. Ten ciąg jest również używany w ścieżce i klucz rejestru podany przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> właściwości.|
 |<xref:System.Reflection.AssemblyProductAttribute>|Wartość ciągu określająca informacje o produkcie.|
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|Wartość ciągu określająca informacje o znakach towarowych.|
 

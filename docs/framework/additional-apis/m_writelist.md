@@ -1,5 +1,5 @@
 ---
-title: Pole Connection.m_WriteList
+title: Connection. m_WriteList, pole
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,18 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d138e0490e849ff26f540077ec7d23ae42737606
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 9760e301e25bc6e69ab22b563894cb079a8d58bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300911"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120025"
 ---
-# <a name="connectionmwritelist-field"></a>Connection.m\_WriteList pola
+# <a name="connectionm_writelist-field"></a>Połączenie. m\_pole WriteList
 
-`Connection.m_WriteList` jest <xref:System.Collections.ArrayList> z <xref:System.Net.HttpWebRequest> obiektów, które są umieszczone w kolejce do wysłania za pośrednictwem protokołu HTTP.
+`Connection.m_WriteList` to <xref:System.Collections.ArrayList> obiektów <xref:System.Net.HttpWebRequest> umieszczonych w kolejce do wysłania za pośrednictwem protokołu HTTP.
 
 ## <a name="syntax"></a>Składnia
   
@@ -30,14 +30,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> `Connection.m_WriteList` Pole jest prywatny i nie jest przeznaczona do użycia bezpośrednio w kodzie.
+> Pole `Connection.m_WriteList` jest prywatne i nie jest przeznaczone do użycia bezpośrednio w kodzie.
 > 
-> Firma Microsoft obsługuje korzystanie z tego pola w aplikacji produkcyjnej w żadnym wypadku.
+> Firma Microsoft nie obsługuje korzystania z tego pola w aplikacji produkcyjnej w żadnej sytuacji.
 
 ## <a name="requirements"></a>Wymagania
 
-**Namespace:** <xref:System.Net>
+**Przestrzeń nazw:** <xref:System.Net>
 
-**Zestaw:** System (System.dll)
+**Zestaw:** System (w pliku System. dll)
 
-**Wersje programu .NET framework:** Dostępne od wersji 2.0.
+**.NET Framework wersje:** Dostępne od 2,0.

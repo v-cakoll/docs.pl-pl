@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: f24e1af9-c220-4f79-ae62-4153ec17ea81
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c24d6e9c42a091eafbe6d4bdee2bb4e055fd8852
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cff527aa7cde6a13667d47d030a0ef7db96ad5ba
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772034"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122344"
 ---
 # <a name="icordebugtypegetbase-method"></a>ICorDebugType::GetBase — Metoda
 Pobiera wskaźnik interfejsu do ICorDebugType, który reprezentuje typ podstawowy, jeśli taki istnieje, typu reprezentowanego przez ten `ICorDebugType`.  
@@ -37,16 +35,16 @@ HRESULT GetBase (
   
 ## <a name="parameters"></a>Parametry  
  `pBase`  
- [out] Wskaźnik na adres `ICorDebugType` obiekt, który reprezentuje typ podstawowy.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugType`, który reprezentuje typ podstawowy.  
   
 ## <a name="remarks"></a>Uwagi  
- Wyszukiwanie z typem podstawowym typem jest przydatne do zaimplementowania typowych funkcji debugowania, takich jak drukowanie wszystkich pól obiektu lub jej klas nadrzędnych.  
+ Wyszukiwanie typu podstawowego dla typu jest przydatne, aby zaimplementować typowe funkcje debugera, takie jak drukowanie wszystkich pól obiektu lub jego klas nadrzędnych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

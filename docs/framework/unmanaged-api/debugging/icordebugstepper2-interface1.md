@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepper2, interfejs
+title: ICorDebugStepper2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepper2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d86f4bbec8971d164966298734388f0744a2d41c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953035"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120523"
 ---
-# <a name="icordebugstepper2-interface"></a>ICorDebugStepper2, interfejs
+# <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 — Interfejs
 Zapewnia obsługę debugowania tylko mój kod (JMC).  
   
 ## <a name="methods"></a>Metody  
@@ -38,13 +36,13 @@ Zapewnia obsługę debugowania tylko mój kod (JMC).
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

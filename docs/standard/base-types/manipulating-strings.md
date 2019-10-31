@@ -6,34 +6,32 @@ helpviewer_keywords:
 - strings [.NET Framework], manipulating
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca4e24cb882daf7efd14da83011d50d05a85232b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025070"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73135231"
 ---
-# <a name="manipulating-strings-in-net"></a>Operowanie ciągami w programie .NET
-.NET udostępnia wiele procedur, które umożliwiają wydajne tworzenie, porównanie i modyfikowanie ciągi, a także szybkiego analizowania dużych ilości tekstu i danych, aby wyszukać, Usuń i Zastąp wzorców tekstu.  
+# <a name="manipulating-strings-in-net"></a>Manipulowanie ciągami w programie .NET
+Platforma .NET zawiera obszerny zestaw procedur, które umożliwiają wydajne tworzenie, porównywanie i modyfikowanie ciągów oraz szybkie analizowanie dużych ilości tekstu i danych w celu wyszukiwania, usuwania i zamiany wzorców tekstu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)  
- Sprawdza, czy sortowanie ciągów, porównanie i wielkość liter w wyrazie metody na platformie .NET i zawiera zalecenia dotyczące wybierania metody obsługi ciągów.  
+ Bada metody sortowania ciągów, porównywania i wielkości liter w programie .NET i zawiera zalecenia dotyczące wybierania metody obsługi ciągów.  
   
- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
- Zawiera szczegółowe informacje o wyrażeniach regularnych programu .NET, w tym elementów języka, zachowania wyrażeń regularnych i przykłady.  
+ [Wyrażenia regularne .NET](../../../docs/standard/base-types/regular-expressions.md)  
+ Zawiera szczegółowe informacje na temat wyrażeń regularnych programu .NET, w tym elementów języka, zachowania wyrażeń regularnych i przykładów.  
   
  [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
- W tym artykule opisano dostarczone przez operacje na ciągach <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy, w tym tworzenie nowych ciągów w tablice bajtów, porównywania wartości typu ciąg i modyfikowanie istniejących ciągów.  
+ Opisuje operacje na ciągach dostarczone przez klasy <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType>, w tym tworzenie nowych ciągów z tablic bajtów, porównywanie wartości ciągów i modyfikowanie istniejących ciągów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)  
- Opisano techniki i reguły używane do konwersji typów, przy użyciu platformy .NET.  
+ Wyjaśnia techniki i reguły używane do konwersji typów przy użyciu platformy .NET.  
   
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
- Zapewnia się, jak używać biblioteki klasy podstawowej do wdrożenia, formatowanie, jak sformatować typy liczbowe, jak sformatować typów ciągów i sposób formatowania dla określonej kultury.  
+ Zawiera informacje dotyczące sposobu używania biblioteki klas bazowych do implementowania formatowania, formatowania typów liczbowych, sposobu formatowania typów ciągów oraz formatowania dla określonej kultury.  
   
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  
- W tym artykule opisano sposób inicjowania obiektów do wartości opisanych przez ciąg reprezentujący te obiekty. Analizowanie jest odwróconą operacją formatowania.
+ Opisuje sposób inicjowania obiektów do wartości opisanych przez ciąg reprezentujący te obiekty. Analizowanie jest operacją odwrotną formatowania.

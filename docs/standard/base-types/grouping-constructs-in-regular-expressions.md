@@ -13,14 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ee06454575afc16c904b60a2301feeb05debdcdf
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140117"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przechwytuje podciągi ciągu wejściowego. Można użyć konstrukcji grupowania, aby wykonać następujące czynności:  
@@ -59,17 +57,17 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  gdzie *subexpression* jest dowolnym prawidłowym wzorcem wyrażenia regularnego. Przechwytuje, że nawiasy są numerowane automatycznie od lewej do prawej na podstawie kolejności nawiasów otwierających w wyrażeniu regularnym, rozpoczynając od jednego. Przechwytywanie o numerze zero jest tekstem dopasowanym przez cały wzorzec wyrażenia regularnego.  
   
 > [!NOTE]
-> Domyślnie*Podwyrażenie*`(` `)` języka przechwytuje Dopasowane Podwyrażenie. Ale jeśli parametr <xref:System.Text.RegularExpressions.RegexOptions> metody dopasowywania do wzorca wyrażenia regularnego zawiera flagę <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> lub jeśli do tego podwyrażenia zostanie zastosowana opcja `n` (zobacz [Opcje grupy](#group_options) w dalszej części tego tematu), dopasowane Podwyrażenie nie jest przechwytywane.  
+> Domyślnie *Podwyrażenie* `(``)` element Language przechwytuje Dopasowane Podwyrażenie. Ale jeśli parametr <xref:System.Text.RegularExpressions.RegexOptions> metody dopasowywania do wzorca wyrażenia regularnego zawiera flagę <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> lub w przypadku zastosowania opcji `n` do tego podwyrażenia (zobacz [Opcje grupy](#group_options) w dalszej części tego tematu), dopasowane Podwyrażenie nie jest przechwytywane.  
   
  Dostęp do przechwyconych grup można uzyskać na cztery sposoby:  
   
-- Za pomocą konstrukcji odwołania wstecznego w wyrażeniu regularnym. Dopasowane Podwyrażenie jest przywoływane w tym samym wyrażeniu regularnym przy użyciu składni `\`*Number*, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Za pomocą konstrukcji odwołania wstecznego w wyrażeniu regularnym. W tym samym wyrażeniu regularnym jest przywoływane Dopasowane Podwyrażenie, przy użyciu składni `\`*Number*, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
   
-- Za pomocą nazwanej konstrukcji odwołania wstecznego w wyrażeniu regularnym. W tym samym wyrażeniu regularnym jest przywoływane Dopasowane Podwyrażenie, przy użyciu składni `\k<`*name*`>`, gdzie *name* to nazwa grupy przechwytywania lub `\k<`*numer*`>`, gdzie *Number* jest numerem porządkowym grupy przechwytywania. Grupa przechwytywania ma nazwę domyślną, która jest identyczna z numerem porządkowym. Aby uzyskać więcej informacji, zobacz [nazwane dopasowane podwyrażenia](#named_matched_subexpression) w dalszej części tego tematu.  
+- Za pomocą nazwanej konstrukcji odwołania wstecznego w wyrażeniu regularnym. W tym samym wyrażeniu regularnym jest przywoływane Dopasowane Podwyrażenie, używając składni `\k<`*name*`>`, gdzie *name* to nazwa grupy przechwytywania lub `\k<`*Number*`>`, gdzie Number to *Liczba* porządkowa liczba grup przechwytywania. Grupa przechwytywania ma nazwę domyślną, która jest identyczna z numerem porządkowym. Aby uzyskać więcej informacji, zobacz [nazwane dopasowane podwyrażenia](#named_matched_subexpression) w dalszej części tego tematu.  
   
-- Przy użyciu*sekwencji zastępczej* `$` w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Przy użyciu sekwencji zastępczej *numerów* `$`w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
   
-- Programowo przy użyciu obiektu <xref:System.Text.RegularExpressions.GroupCollection> zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Element członkowski na pozycji zero w kolekcji reprezentuje całe dopasowanie wyrażenia regularnego. Każdy kolejny element członkowski reprezentuje Dopasowane Podwyrażenie. Aby uzyskać więcej informacji, zobacz sekcję [konstrukcje grupujące i obiekty wyrażeń regularnych](#Objects) .  
+- Programowo, przy użyciu obiektu <xref:System.Text.RegularExpressions.GroupCollection> zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Element członkowski na pozycji zero w kolekcji reprezentuje całe dopasowanie wyrażenia regularnego. Każdy kolejny element członkowski reprezentuje Dopasowane Podwyrażenie. Aby uzyskać więcej informacji, zobacz sekcję [konstrukcje grupujące i obiekty wyrażeń regularnych](#Objects) .  
   
  Poniższy przykład ilustruje wyrażenie regularne, które identyfikuje duplikaty wyrazów w tekście. Dwie grupy przechwytywania wzorca wyrażenia regularnego reprezentują dwa wystąpienia zduplikowanego wyrazu. Drugie wystąpienie jest przechwytywane, aby zgłosić jego pozycję początkową w ciągu wejściowym.  
   
@@ -102,19 +100,19 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  gdzie *name* jest prawidłową nazwą grupy, a *subexpression* jest dowolnym prawidłowym wzorcem wyrażenia regularnego. *Nazwa* nie może zawierać żadnych znaków interpunkcyjnych i nie może rozpoczynać się od cyfry.  
   
 > [!NOTE]
-> Jeśli parametr <xref:System.Text.RegularExpressions.RegexOptions> metody dopasowywania do wzorca wyrażenia regularnego zawiera flagę <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> lub jeśli do tego podwyrażenia zostanie zastosowana opcja `n` (zobacz [Opcje grupy](#group_options) w dalszej części tego tematu), jedynym sposobem przechwycenia podwyrażenia jest jawne nazwy przechwytywania grup.  
+> Jeśli parametr <xref:System.Text.RegularExpressions.RegexOptions> metody dopasowywania do wzorca wyrażenia regularnego zawiera flagę <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> lub w przypadku zastosowania opcji `n` do tego podwyrażenia (zobacz [Opcje grupy](#group_options) w dalszej części tego tematu), jedynym sposobem przechwycenia podwyrażenia jest jawne nazwy przechwytywania grup.  
   
  Można uzyskać dostęp do nazwanych przechwyconych grup w następujący sposób:  
   
 - Za pomocą nazwanej konstrukcji odwołania wstecznego w wyrażeniu regularnym. W tym samym wyrażeniu regularnym jest przywoływane Dopasowane Podwyrażenie, używając składni `\k<`*name*`>`, gdzie *name* to nazwa przechwyconego podwyrażenia.  
   
-- Za pomocą konstrukcji odwołania wstecznego w wyrażeniu regularnym. Dopasowane Podwyrażenie jest przywoływane w tym samym wyrażeniu regularnym przy użyciu składni `\`*Number*, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia. Nazwane dopasowane podwyrażenia są numerowane kolejno od lewej do prawej po dopasowaniu podwyrażeń.  
+- Za pomocą konstrukcji odwołania wstecznego w wyrażeniu regularnym. W tym samym wyrażeniu regularnym jest przywoływane Dopasowane Podwyrażenie, przy użyciu składni `\`*Number*, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia. Nazwane dopasowane podwyrażenia są numerowane kolejno od lewej do prawej po dopasowaniu podwyrażeń.  
   
-- Używając `${`*nazwy*`}` kolejności zastępowania w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *name* to nazwa przechwyconego podwyrażenia.  
+- Przy użyciu `${`*nazwy*`}` kolejności zamiany w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *name* to nazwa przechwyconego podwyrażenia.  
   
-- Przy użyciu*sekwencji zastępczej* `$` w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
+- Przy użyciu sekwencji zastępczej *numerów* `$`w wywołaniu metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>, gdzie *Number* jest numerem porządkowym przechwyconego podwyrażenia.  
   
-- Programowo przy użyciu obiektu <xref:System.Text.RegularExpressions.GroupCollection> zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Element członkowski na pozycji zero w kolekcji reprezentuje całe dopasowanie wyrażenia regularnego. Każdy kolejny element członkowski reprezentuje Dopasowane Podwyrażenie. Nazwane przechwycone grupy są przechowywane w kolekcji po numerowanych przechwyconych grupach.  
+- Programowo, przy użyciu obiektu <xref:System.Text.RegularExpressions.GroupCollection> zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Element członkowski na pozycji zero w kolekcji reprezentuje całe dopasowanie wyrażenia regularnego. Każdy kolejny element członkowski reprezentuje Dopasowane Podwyrażenie. Nazwane przechwycone grupy są przechowywane w kolekcji po numerowanych przechwyconych grupach.  
   
 - Programowo, dostarczając nazwę podwyrażenia do indeksatora obiektu <xref:System.Text.RegularExpressions.GroupCollection> (w C#) lub do jego właściwości <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> (w Visual Basic).  
   
@@ -126,9 +124,9 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |1|1 (nazwa domyślna)|`((?<One>abc)\d+)`|  
 |2|2 (nazwa domyślna)|`(.*)`|  
 |3|Jeden|`(?<One>abc)`|  
-|4|Tymi|`(?<Two>xyz)`|  
+|4|tymi|`(?<Two>xyz)`|  
   
- Poniższy przykład ilustruje wyrażenie regularne, które identyfikuje zduplikowane wyrazy i słowo, które bezpośrednio następuje po każdym zduplikowanym wyrazie. Wzorzec wyrażenia regularnego definiuje dwa nazwane Podwyrażenie: `duplicateWord`, które reprezentuje zduplikowany wyraz; i `nextWord`, który reprezentuje wyraz, który następuje po zduplikowanym wyrazie.  
+ Poniższy przykład ilustruje wyrażenie regularne, które identyfikuje zduplikowane wyrazy i słowo, które bezpośrednio następuje po każdym zduplikowanym wyrazie. Wzorzec wyrażenia regularnego definiuje dwa nazwane Podwyrażenie: `duplicateWord`, które reprezentuje zduplikowany wyraz; i `nextWord`, która reprezentuje wyraz, który następuje po zduplikowanym wyrazie.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping2.cs#2)]
  [!code-vb[RegularExpressions.Language.Grouping#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping2.vb#2)]  
@@ -141,15 +139,15 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
-|`(?<duplicateWord>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nazwij tę grupę przechwytywania `duplicateWord`.|  
+|`(?<duplicateWord>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nadaj nazwę tej grupie przechwytywania `duplicateWord`.|  
 |`\s`|Dopasowuje znak odstępu.|  
 |`\k<duplicateWord>`|Dopasowuje ciąg z przechwyconej grupy o nazwie `duplicateWord`.|  
 |`\W`|Dopasowuje znak niebędący słowem, w tym odstępy i znaki interpunkcyjne. Zapobiega to, aby wzorzec wyrażenia regularnego był zgodny z wyrazem rozpoczynającym się od pierwszej przechwyconej grupy.|  
-|`(?<nextWord>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nazwij tę grupę przechwytywania `nextWord`.|  
+|`(?<nextWord>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nadaj nazwę tej grupie przechwytywania `nextWord`.|  
   
- Należy zauważyć, że nazwa grupy może być powtórzona w wyrażeniu regularnym. Na przykład możliwe jest nazywanie więcej niż jednej grupy `digit`, jak pokazano w poniższym przykładzie. W przypadku zduplikowanych nazw wartość obiektu <xref:System.Text.RegularExpressions.Group> jest określana na podstawie ostatniego pomyślnego przechwycenia w ciągu wejściowym. Ponadto <xref:System.Text.RegularExpressions.CaptureCollection> jest wypełniany informacjami o każdym przechwytywaniu, tak jak gdyby nazwa grupy nie była duplikatem.  
+ Należy zauważyć, że nazwa grupy może być powtórzona w wyrażeniu regularnym. Na przykład można mieć więcej niż jedną grupę o nazwie `digit`, jak pokazano w poniższym przykładzie. W przypadku zduplikowanych nazw wartość obiektu <xref:System.Text.RegularExpressions.Group> jest określana na podstawie ostatniego pomyślnego przechwycenia w ciągu wejściowym. Ponadto <xref:System.Text.RegularExpressions.CaptureCollection> są wypełniane informacjami o każdym przechwytywaniu, tak jak gdyby nazwa grupy nie była duplikatem.  
   
- W poniższym przykładzie wyrażenie regularne `\D+(?<digit>\d+)\D+(?<digit>\d+)?` zawiera dwa wystąpienia grupy o nazwie `digit`. Pierwsze `digit` nazwana grupa przechwytuje co najmniej jeden znak cyfr. Druga `digit` nazwana grupa przechwytuje zero lub jedno wystąpienie co najmniej jednego znaku cyfry. Jako dane wyjściowe z przykładu pokazują, jeśli druga grupa przechwytywania pomyślnie dopasowuje tekst, wartość tego tekstu definiuje wartość obiektu <xref:System.Text.RegularExpressions.Group>. Jeśli druga grupa przechwytywania nie może być zgodna z ciągiem wejściowym, wartość ostatniego pomyślnego dopasowania definiuje wartość obiektu <xref:System.Text.RegularExpressions.Group>.  
+ W poniższym przykładzie wyrażenie regularne `\D+(?<digit>\d+)\D+(?<digit>\d+)?` zawiera dwa wystąpienia grupy o nazwie `digit`. Pierwsza `digit` nazwana grupa przechwytuje co najmniej jeden znak cyfr. Druga `digit` nazwana grupa przechwytuje zero lub jedno wystąpienie co najmniej jednego znaku cyfry. Jako dane wyjściowe z przykładu pokazują, jeśli druga grupa przechwytywania pomyślnie dopasowuje tekst, wartość tego tekstu definiuje wartość obiektu <xref:System.Text.RegularExpressions.Group>. Jeśli druga grupa przechwytywania nie może być zgodna z ciągiem wejściowym, wartość ostatniego pomyślnego dopasowania definiuje wartość obiektu <xref:System.Text.RegularExpressions.Group>.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#12](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/duplicate1.cs#12)]
  [!code-vb[RegularExpressions.Language.Grouping#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/duplicate1.vb#12)]  
@@ -159,9 +157,9 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\D+`|Dopasowuje co najmniej jeden znak niebędący cyfrą dziesiętną.|  
-|`(?<digit>\d+)`|Dopasowuje jeden lub więcej cyfr dziesiętnych. Przypisz dopasowanie do grupy o nazwie `digit`.|  
+|`(?<digit>\d+)`|Dopasowuje jeden lub więcej cyfr dziesiętnych. Przypisz dopasowanie do `digit` nazwanej grupy.|  
 |`\D+`|Dopasowuje co najmniej jeden znak niebędący cyfrą dziesiętną.|  
-|`(?<digit>\d+)?`|Dopasowanie do zera lub jednego wystąpienia co najmniej jednego znaku cyfry dziesiętnej. Przypisz dopasowanie do grupy o nazwie `digit`.|  
+|`(?<digit>\d+)?`|Dopasowanie do zera lub jednego wystąpienia co najmniej jednego znaku cyfry dziesiętnej. Przypisz dopasowanie do `digit` nazwanej grupy.|  
   
 <a name="balancing_group_definition"></a>   
 ## <a name="balancing-group-definitions"></a>Równoważenie definicji grup  
@@ -180,7 +178,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 > [!NOTE]
 > Po zmodyfikowaniu wyrażenia regularnego w poniższym przykładzie, aby użyć odpowiedniego otwierającego i zamykającego znaku zagnieżdżonej konstrukcji, można użyć go do obsługi większości zagnieżdżonych konstrukcji, takich jak wyrażenia matematyczne lub wiersze kodu programu, które obejmują wiele wywołań metod zagnieżdżonych.  
   
- W poniższym przykładzie jest stosowana definicja grupy równoważenia do dopasowania do lewego i prawego nawiasu ostrego (< >) w ciągu wejściowym. W przykładzie zdefiniowano dwie nazwane grupy `Open` i `Close`, które są używane jak stos do śledzenia dopasowania par nawiasów ostrych. Każdy przechwycony lewy nawias kątowy jest wypychany do kolekcji przechwytywania grupy `Open`, a każdy przechwycony prawy nawias kątowy jest wypychany do kolekcji przechwytywania grupy `Close`. Definicja grupy równoważenia gwarantuje, że istnieje pasujący prawy nawias kątowy dla każdego lewego nawiasu kątowego. Jeśli nie istnieje, ostatni podwzorzec, `(?(Open)(?!))`, jest obliczany tylko wtedy, gdy grupa `Open` nie jest pusta (i dlatego jeśli wszystkie zagnieżdżone konstrukcje nie zostały zamknięte). Jeśli ostateczny wzorzec jest obliczany, dopasowanie nie powiedzie się, ponieważ podwzorzec `(?!)` jest nieprawidłowym pomyślnym wyprzedzeniem o zerowej szerokości, które zawsze kończy się niepowodzeniem.  
+ W poniższym przykładzie jest stosowana definicja grupy równoważenia do dopasowania do lewego i prawego nawiasu ostrego (< >) w ciągu wejściowym. W przykładzie zdefiniowano dwie nazwane grupy, `Open` i `Close`, które są używane jak stos do śledzenia pasujących par nawiasów ostrych. Każdy przechwycony lewy nawias kątowy jest wypychany do kolekcji przechwytywania grupy `Open`, a każdy przechwycony prawy nawias kątowy jest wypychany do kolekcji przechwytywania grupy `Close`. Definicja grupy równoważenia gwarantuje, że istnieje pasujący prawy nawias kątowy dla każdego lewego nawiasu kątowego. Jeśli nie istnieje, ostateczny podwzorzec `(?(Open)(?!))`, jest oceniany tylko wtedy, gdy grupa `Open` nie jest pusta (i dlatego jeśli wszystkie zagnieżdżone konstrukcje nie zostały zamknięte). Jeśli ostateczny wzorzec jest obliczany, dopasowanie nie powiedzie się, ponieważ `(?!)` podwzorzec jest nieprawidłowym pomyślnym wyprzedzeniem o zerowej szerokości, które zawsze kończy się niepowodzeniem.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/grouping3.cs#3)]
  [!code-vb[RegularExpressions.Language.Grouping#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/grouping3.vb#3)]  
@@ -202,38 +200,38 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
 |`[^<>]*`|Dopasowuje zero lub więcej wystąpień dowolnego znaku, który nie jest lewym ani prawym nawiasem ostrym.|  
 |`((?'Close-Open'>)[^<>]*)+`|Dopasowuje jedno lub więcej wystąpień prawego nawiasu ostrego, po którym następuje zero lub więcej wystąpień dowolnego znaku, który nie jest lewym ani prawym nawiasem ostrym. W przypadku dopasowania do prawego nawiasu ostrego Przypisz podciąg między grupą `Open` i bieżącą grupę do grupy `Close` i usuń definicję grupy `Open`. Jest to trzecia grupa przechwytywania.|  
 |`(((?'Open'<)[^<>]*)+((?'Close-Open'>)[^<>]*)+)*`|Dopasowanie do zera lub większej liczby wystąpień następującego wzorca: co najmniej jedno wystąpienie lewego nawiasu kątowego, po którym następuje zero lub więcej znaków nieostrych, po którym następuje jedno lub więcej wystąpień prawego nawiasu ostrego, po którym następuje zero lub więcej wystąpień nawiasy ostre. W przypadku dopasowania do prawego nawiasu ostrego usuń definicję grupy `Open` i przypisz podciąg między grupą `Open` i bieżącą grupę do grupy `Close`. Jest to pierwsza grupa przechwytywania.|  
-|`(?(Open)(?!))`|Jeśli istnieje grupa `Open`, Porzuć dopasowanie, jeśli można dopasować pusty ciąg, ale nie przesuwaj pozycji aparatu wyrażeń regularnych w ciągu. Jest to nieujemne potwierdzenie o zerowej szerokości. Ponieważ pusty ciąg jest zawsze niejawnie obecny w ciągu wejściowym, to dopasowanie zawsze kończy się niepowodzeniem. Niepowodzenie tego dopasowania wskazuje, że nawiasy kątowe nie są zrównoważone.|  
+|`(?(Open)(?!))`|Jeśli grupa `Open` istnieje, Porzuć dopasowanie, jeśli można dopasować pusty ciąg, ale nie przesuwaj pozycji aparatu wyrażeń regularnych w ciągu. Jest to nieujemne potwierdzenie o zerowej szerokości. Ponieważ pusty ciąg jest zawsze niejawnie obecny w ciągu wejściowym, to dopasowanie zawsze kończy się niepowodzeniem. Niepowodzenie tego dopasowania wskazuje, że nawiasy kątowe nie są zrównoważone.|  
 |`$`|Dopasowuje koniec ciągu wejściowego.|  
   
- Ostateczne Podwyrażenie `(?(Open)(?!))` wskazuje, czy konstrukcje zagnieżdżania w ciągu wejściowym są prawidłowo zrównoważone (na przykład czy każdy lewy nawias kątowy jest dopasowywany do prawego nawiasu ostrego). Używa dopasowania warunkowego opartego na prawidłowej przechwyconej grupie; Aby uzyskać więcej informacji, zobacz [konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md). Jeśli zdefiniowano grupę `Open`, aparat wyrażeń regularnych próbuje dopasować Podwyrażenie `(?!)` w ciągu wejściowym. Grupę `Open` należy zdefiniować tylko wtedy, gdy konstrukcje zagnieżdżania są niezrównoważone. W związku z tym wzorzec, który ma zostać dopasowany w ciągu wejściowym powinien być taki, który zawsze powoduje niepowodzenie dopasowania. W tym przypadku `(?!)` to nieujemne potwierdzenie o zerowej szerokości, które zawsze kończy się niepowodzeniem, ponieważ pusty ciąg jest zawsze niejawnie obecny na następnej pozycji w ciągu wejściowym.  
+ Ostateczne Podwyrażenie `(?(Open)(?!))`, wskazuje, czy konstrukcje zagnieżdżania w ciągu wejściowym są prawidłowo zrównoważone (na przykład czy każdy lewy nawias kątowy jest dopasowany do prawego nawiasu ostrego). Używa dopasowania warunkowego opartego na prawidłowej przechwyconej grupie; Aby uzyskać więcej informacji, zobacz [konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md). Jeśli zdefiniowano grupę `Open`, aparat wyrażeń regularnych próbuje dopasować Podwyrażenie `(?!)` w ciągu wejściowym. Grupę `Open` należy zdefiniować tylko wtedy, gdy konstrukcje zagnieżdżania są niezrównoważone. W związku z tym wzorzec, który ma zostać dopasowany w ciągu wejściowym powinien być taki, który zawsze powoduje niepowodzenie dopasowania. W tym przypadku `(?!)` jest nieujemnym potwierdzeniem pomyślnym o zerowej szerokości, które zawsze się nie powiedzie, ponieważ pusty ciąg jest zawsze niejawnie obecny na następnej pozycji w ciągu wejściowym.  
   
- W przykładzie aparat wyrażeń regularnych oblicza ciąg wejściowy "\<abc > < MNO @ no__t-1xyz > >", jak pokazano w poniższej tabeli.  
+ W przykładzie aparat wyrażeń regularnych oblicza ciąg wejściowy "\<ABC > < MNO\<xyz > >", jak pokazano w poniższej tabeli.  
   
 |Krok|Wzorzec|Wynik|  
 |----------|-------------|------------|  
 |1|`^`|Rozpoczyna dopasowanie na początku ciągu wejściowego|  
 |2|`[^<>]*`|Wyszukuje znaki niebędące nawiasami ostrymi przed lewym nawiasem ostrym; znajduje brak dopasowań.|  
-|3|`(((?'Open'<)`|Dopasowuje lewy nawias kątowy w "\<abc >" i przypisuje go do grupy `Open`.|  
+|3|`(((?'Open'<)`|Dopasowuje lewy nawias ostry w "\<ABC >" i przypisuje go do grupy `Open`.|  
 |4|`[^<>]*`|Pasuje do "ABC".|  
-|5|`)+`|"< ABC" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do wzorca `(?'Open'<)[^<>]*)`.|  
-|6|`((?'Close-Open'>)`|Dopasowuje prawy nawias ostry w "\<abc >", przypisuje "ABC", który jest podciągiem między grupą `Open` i prawego nawiasu ostrego, do grupy `Close` i usuwa bieżącą wartość ("<") grupy `Open`, pozostawiając ją pustą.|  
+|5|`)+`|"< ABC" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do `(?'Open'<)[^<>]*)` podwzorca.|  
+|6|`((?'Close-Open'>)`|Dopasowuje prawy nawias kątowy w "\<ABC >", przypisuje "ABC", który jest podciągiem między grupą `Open` i prawego nawiasu ostrego, do grupy `Close` i usuwa bieżącą wartość ("<") grupy `Open` , pozostawiając je puste.|  
 |7|`[^<>]*`|Wyszukuje znaki niebędące nawiasami ostrymi po prawym nawiasie ostrym; nie znaleziono żadnych dopasowań.|  
-|8|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym nie jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do wzorca `((?'Close-Open'>)[^<>]*)`.|  
-|9|`)*`|Wartość pierwszej przechwyconej grupy to "\<abc >".<br /><br /> Następny znak w ciągu wejściowym jest lewym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do podwzorca `(((?'Open'<)`.|  
-|10|`(((?'Open'<)`|Dopasowuje lewy nawias kątowy w "\<mno" i przypisuje go do grupy `Open`. Jego kolekcja <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ma teraz jedną wartość "<".|  
+|8|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym nie jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do `((?'Close-Open'>)[^<>]*)` podwzorca.|  
+|9|`)*`|Wartość pierwszej przechwyconej grupy to "\<ABC >".<br /><br /> Następny znak w ciągu wejściowym jest lewym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do `(((?'Open'<)` podwzorca.|  
+|10|`(((?'Open'<)`|Dopasowuje lewy nawias kątowy w "\<MNO" i przypisuje go do grupy `Open`. Jej kolekcja <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ma teraz jedną wartość "<".|  
 |11|`[^<>]*`|Pasuje do "MNO".|  
-|12|`)+`|"< MNO" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym jest lewym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do podwzorca `(?'Open'<)[^<>]*)`.|  
-|13|`(((?'Open'<)`|Dopasowuje lewy nawias kątowy w "\<xyz >" i przypisuje go do grupy `Open`. Kolekcja <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> grupy `Open` zawiera teraz dwa przechwycenia: lewy nawias ostry od "\<mno" i lewy nawias ostry od "\<xyz >".|  
+|12|`)+`|"< MNO" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym jest lewym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do `(?'Open'<)[^<>]*)` podwzorca.|  
+|13|`(((?'Open'<)`|Dopasowuje lewy nawias ostry w "\<xyz >" i przypisuje go do grupy `Open`. Kolekcja <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> grupy `Open` zawiera teraz dwa przechwycenia: lewy nawias ostry od "\<MNO" i lewy nawias ostry od "\<xyz >".|  
 |14,5|`[^<>]*`|Dopasowuje "XYZ".|  
-|15000|`)+`|"< XYZ" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do wzorca `(?'Open'<)[^<>]*)`.|  
-|16|`((?'Close-Open'>)`|Dopasowuje prawy nawias kątowy w "\<xyz >". "XYZ", przypisuje podciąg między grupą `Open` i prawym nawiasem kątowym do grupy `Close` i usuwa bieżącą wartość grupy `Open`. Wartość poprzedniego przechwytywania (lewy nawias kątowy w "\<mno") jest bieżącą wartością grupy `Open`. Kolekcja <xref:System.Text.RegularExpressions.Group.Captures%2A> grupy `Open` zawiera teraz pojedyncze przechwycenie, lewy nawias ostry od "\<xyz >".|  
+|15000|`)+`|"< XYZ" to wartość drugiej przechwyconej grupy.<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do `(?'Open'<)[^<>]*)` podwzorca.|  
+|16|`((?'Close-Open'>)`|Dopasowuje prawy nawias kątowy w "\<xyz >". "XYZ", przypisuje podciąg między grupą `Open` i prawego nawiasu ostrego do grupy `Close` i usuwa bieżącą wartość grupy `Open`. Wartość poprzedniego przechwytywania (lewy nawias kątowy w "\<MNO") jest bieżącą wartością grupy `Open`. <xref:System.Text.RegularExpressions.Group.Captures%2A> Kolekcja grup `Open` obejmuje teraz pojedyncze przechwycenie, lewy nawias ostry od "\<xyz >".|  
 |7|`[^<>]*`|Wyszukuje znaki niebędące nawiasami ostrymi; nie znaleziono żadnych dopasowań.|  
-|postanowienia|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do podwzorca `((?'Close-Open'>)[^<>]*)`.|  
-|19|`((?'Close-Open'>)`|Dopasowuje prawy nawias ostry w "xyz > >", przypisuje "MNO @ no__t-0xyz >" (podciąg między grupą @no__t i prawego nawiasu ostrego) do grupy `Close` i usuwa bieżącą wartość grupy `Open`. Grupa `Open` jest teraz pusta.|  
+|postanowienia|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych jest odtwarzany z powrotem do `((?'Close-Open'>)[^<>]*)` podwzorca.|  
+|19|`((?'Close-Open'>)`|Dopasowuje prawy nawias kątowy w ciągu "xyz > >", przypisuje "MNO\<xyz >" (podciąg między grupą `Open` i prawego nawiasu ostrego) do grupy `Close`, a następnie usuwa bieżącą wartość grupy `Open`. Grupa `Open` jest teraz pusta.|  
 |20|`[^<>]*`|Wyszukuje znaki niebędące nawiasami ostrymi; nie znaleziono żadnych dopasowań.|  
-|43|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym nie jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do wzorca `((?'Close-Open'>)[^<>]*)`.|  
-|22|`)*`|Wartość pierwszej przechwyconej grupy to "< MNO @ no__t-0xyz > >".<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do wzorca `(((?'Open'<)`.|  
-|233|`(?(Open)(?!))`|Grupa `Open` nie jest zdefiniowana, więc nie podjęto żadnego dopasowania.|  
+|43|`)+`|Wartość trzeciej przechwyconej grupy to ">".<br /><br /> Następny znak w ciągu wejściowym nie jest prawym nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do `((?'Close-Open'>)[^<>]*)` podwzorca.|  
+|22|`)*`|Wartość pierwszej przechwyconej grupy to "< MNO\<xyz > >".<br /><br /> Następny znak w ciągu wejściowym nie jest nawiasem ostrym, dlatego aparat wyrażeń regularnych nie jest odtwarzany z powrotem do `(((?'Open'<)` podwzorca.|  
+|233|`(?(Open)(?!))`|Grupa `Open` nie jest zdefiniowana, więc nie podjęto próby dopasowania.|  
 |codzienne|`$`|Dopasowuje koniec ciągu wejściowego.|  
   
 <a name="noncapturing_group"></a>   
@@ -268,14 +266,14 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  `(?imnsx-imnsx:` *Podwyrażenie* `)`  
   
- gdzie *subexpression* jest dowolnym prawidłowym wzorcem wyrażenia regularnego. Na przykład `(?i-s:)` włącza wielkość liter i wyłącza tryb jednowierszowy. Aby uzyskać więcej informacji na temat opcji wbudowanych, które można określić, zobacz [Opcje wyrażenia regularnego](../../../docs/standard/base-types/regular-expression-options.md).  
+ gdzie *subexpression* jest dowolnym prawidłowym wzorcem wyrażenia regularnego. Na przykład `(?i-s:)` włącza nieuwzględnianie wielkości liter i wyłącza tryb jednowierszowy. Aby uzyskać więcej informacji na temat opcji wbudowanych, które można określić, zobacz [Opcje wyrażenia regularnego](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
 > Można określić opcje, które mają zastosowanie do całego wyrażenia regularnego, a nie podwyrażenia przy użyciu konstruktora klasy <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> lub metody statycznej. Można również określić opcje wbudowane, które są stosowane po określonym punkcie w wyrażeniu regularnym, przy użyciu konstrukcji języka `(?imnsx-imnsx)`.  
   
  Konstrukcja opcji grupy nie jest grupą przechwytywania. Oznacza to, że mimo że jakakolwiek część ciągu, który jest przechwytywany przez *Podwyrażenie* jest uwzględniona w dopasowaniu, nie jest uwzględniona w przechwyconej grupie ani użyta do wypełnienia obiektu <xref:System.Text.RegularExpressions.GroupCollection>.  
   
- Na przykład wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowanych w konstrukcji grupującej, aby umożliwić dopasowanie bez uwzględniania wielkości liter i ignorowanie białych znaków w deseniu do identyfikowania wszystkich słów zaczynających się od litery "d". Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
+ Na przykład wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowanych w konstrukcji grupującej, aby umożliwić dopasowanie bez uwzględniania wielkości liter i ignorowanie znaków wzorca w przypadku identyfikowania wszystkich słów zaczynających się od litery "d". Wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -353,7 +351,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  `(?<=` *Podwyrażenie* `)`  
   
- gdzie *subexpression* jest dowolnym wzorcem wyrażenia regularnego. Aby dopasowanie powiodło się, *Podwyrażenie* musi wystąpić w ciągu wejściowym z lewej strony bieżącego położenia, chociaż `subexpression` nie jest uwzględniony w wyniku dopasowania. Pozytywna asercja wstecznaa o zerowej szerokości nie nawrotu.  
+ gdzie *subexpression* jest dowolnym wzorcem wyrażenia regularnego. Aby dopasowanie zakończyło się pomyślnie, *Podwyrażenie* musi wystąpić w ciągu wejściowym z lewej strony bieżącego położenia, chociaż `subexpression` nie jest uwzględniony w wyniku dopasowania. Pozytywna asercja wstecznaa o zerowej szerokości nie nawrotu.  
   
  Pozytywne potwierdzenia asercja wsteczna o zerowej szerokości są zwykle używane na początku wyrażeń regularnych. Wzorzec, który definiuje, jest warunkiem wstępnym dla dopasowania, chociaż nie jest częścią wyniku dopasowania.  
   
@@ -362,7 +360,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  [!code-csharp[RegularExpressions.Language.Grouping#9](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/lookbehind1.cs#9)]
  [!code-vb[RegularExpressions.Language.Grouping#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/lookbehind1.vb#9)]  
   
- Wzorzec wyrażenia regularnego `(?<=\b20)\d{2}\b` jest interpretowany jak pokazano w poniższej tabeli.  
+ `(?<=\b20)\d{2}\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -378,7 +376,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  `(?<!` *Podwyrażenie* `)`  
   
- gdzie *subexpression* jest dowolnym wzorcem wyrażenia regularnego. Aby dopasowanie zakończyło się pomyślnie, *Podwyrażenie* nie może wystąpić w ciągu wejściowym z lewej strony bieżącego położenia. Jednak dowolny ciąg, który nie pasuje do `subexpression` nie jest uwzględniony w wyniku dopasowania.  
+ gdzie *subexpression* jest dowolnym wzorcem wyrażenia regularnego. Aby dopasowanie zakończyło się pomyślnie, *Podwyrażenie* nie może wystąpić w ciągu wejściowym z lewej strony bieżącego położenia. Jednak każdy podciąg, który nie jest zgodny `subexpression` nie jest uwzględniony w wyniku dopasowania.  
   
  Ujemne asercja wstecznay o zerowej szerokości są zwykle używane na początku wyrażeń regularnych. Zdefiniowany przez siebie wzorzec wyklucza dopasowanie w ciągu poniżej. Są one również używane do ograniczania wycofywania, gdy ostatni znak lub znaki w przechwyconej grupie nie mogą być jednym lub więcej znaków, które pasują do wzorca wyrażenia regularnego tej grupy. Na przykład jeśli grupa przechwytuje wszystkie kolejne znaki wyrazu, można użyć pozytywnej asercja wsteczna o zerowej szerokości, aby wymagać, aby ostatni znak nie był podkreśleniem (\_).  
   
@@ -387,7 +385,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  [!code-csharp[RegularExpressions.Language.Grouping#10](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/negativelookbehind1.cs#10)]
  [!code-vb[RegularExpressions.Language.Grouping#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/negativelookbehind1.vb#10)]  
   
- Wzorzec wyrażenia regularnego `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` jest interpretowany jak pokazano w poniższej tabeli.  
+ `(?<!(Saturday|Sunday) )\b\w+ \d{1,2}, \d{4}\b` wzorzec wyrażenia regularnego jest interpretowany jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -407,7 +405,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
  Zwykle Jeśli wyrażenie regularne zawiera opcjonalny lub alternatywny wzorzec dopasowywania, a dopasowanie nie powiedzie się, aparat wyrażeń regularnych może rozgałęziać się w wielu kierunkach, aby dopasować ciąg wejściowy do wzorca. Jeśli dopasowanie nie zostanie znalezione podczas pierwszego rozgałęzienia, aparat wyrażeń regularnych może utworzyć kopię zapasową lub nawrotu do punktu, w którym zajęło pierwsze dopasowanie, i spróbować dopasować przy użyciu drugiego rozgałęzienia. Ten proces może być kontynuowany, dopóki nie zostaną wypróbowane wszystkie gałęzie.  
   
- Podwyrażenie @no__t-0 `)` Konstrukcja języka wyłącza funkcję wycofywania. Aparat wyrażeń regularnych będzie pasował do tylu znaków w ciągu wejściowym, jak to możliwe. Gdy nie jest możliwe dalsze dopasowanie, nie będzie nawrotu prób alternatywnej dopasowania wzorca. (Oznacza to, że Podwyrażenie dopasowuje tylko ciągi, które byłyby dopasowane tylko przez Podwyrażenie; nie próbuje dopasować ciągu w oparciu o Podwyrażenie i wszystkie Podwyrażenie, które je obserwują).  
+ Podwyrażenie `(?>``)` konstrukcja języka wyłącza funkcję wycofywania. Aparat wyrażeń regularnych będzie pasował do tylu znaków w ciągu wejściowym, jak to możliwe. Gdy nie jest możliwe dalsze dopasowanie, nie będzie nawrotu prób alternatywnej dopasowania wzorca. (Oznacza to, że Podwyrażenie dopasowuje tylko ciągi, które byłyby dopasowane tylko przez Podwyrażenie; nie próbuje dopasować ciągu w oparciu o Podwyrażenie i wszystkie Podwyrażenie, które je obserwują).  
   
  Ta opcja jest zalecana, Jeśli wiesz, że wycofywanie nie powiedzie się. Uniemożliwianie aparatowi wyrażeń regularnych wykonywanie niepotrzebnych operacji wyszukiwania poprawia wydajność.  
   
@@ -416,7 +414,7 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  
   
- Wyrażenie regularne Podwyrażenie `(?>(\w)\1+).\b` jest zdefiniowane, jak pokazano w poniższej tabeli.  
+ `(?>(\w)\1+).\b` wyrażenie regularne jest zdefiniowane, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -428,22 +426,22 @@ Konstrukcje grupujące odróżnić podwyrażenia wyrażenia regularnego i przech
   
 <a name="Objects"></a>   
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>Konstrukty grupujące i obiekty wyrażeń regularnych  
- Podciągi pasujące do grupy przechwytywania wyrażenia regularnego są reprezentowane przez obiekty <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType>, które można pobrać z obiektu <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Obiekt <xref:System.Text.RegularExpressions.GroupCollection> jest wypełniany w następujący sposób:  
+ Podciągi dopasowane przez grupę przechwyconą wyrażeń regularnych są reprezentowane przez <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> obiektów, które można pobrać z obiektu <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Obiekt <xref:System.Text.RegularExpressions.GroupCollection> jest wypełniany w następujący sposób:  
   
 - Pierwszy obiekt <xref:System.Text.RegularExpressions.Group> w kolekcji (obiekt pod indeksem zero) reprezentuje całe dopasowanie.  
   
-- Następny zestaw obiektów <xref:System.Text.RegularExpressions.Group> reprezentuje grupy przechwytywania bez nazwy (numerowane). Są one wyświetlane w kolejności, w jakiej są zdefiniowane w wyrażeniu regularnym od lewej do prawej. Wartości indeksu tych grup należą do zakresu od 1 do liczby nienazwanych grup przechwytywania w kolekcji. (Indeks określonej grupy jest równoznaczny z numerowanym odwołaniem wstecznym. Aby uzyskać więcej informacji na temat odwołań wstecznych, zobacz [konstrukcje odwołań wstecznych](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
+- Następny zestaw <xref:System.Text.RegularExpressions.Group> obiektów reprezentuje grupy przechwytywania bez nazwy (numerowane). Są one wyświetlane w kolejności, w jakiej są zdefiniowane w wyrażeniu regularnym od lewej do prawej. Wartości indeksu tych grup należą do zakresu od 1 do liczby nienazwanych grup przechwytywania w kolekcji. (Indeks określonej grupy jest równoznaczny z numerowanym odwołaniem wstecznym. Aby uzyskać więcej informacji na temat odwołań wstecznych, zobacz [konstrukcje odwołań wstecznych](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)  
   
 - Końcowy zestaw obiektów <xref:System.Text.RegularExpressions.Group> reprezentuje nazwane grupy przechwytywania. Są one wyświetlane w kolejności, w jakiej są zdefiniowane w wyrażeniu regularnym od lewej do prawej. Wartość indeksu pierwszej nazwanej grupy przechwytywania jest większa niż indeks ostatniej nienazwanej grupy przechwytywania. Jeśli w wyrażeniu regularnym nie ma grup przechwytywania bez nazwy, wartość indeksu pierwszej nazwanej grupy przechwytywania to jeden.  
   
- W przypadku zastosowania kwantyfikatora do grupy przechwytywania odpowiednie właściwości <xref:System.Text.RegularExpressions.Group> <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> odzwierciedlają ostatni podciąg, który jest przechwytywany przez grupę przechwytywania. Można pobrać kompletny zestaw podciągów, które są przechwytywane przez grupy, które mają Kwantyfikatory z obiektu <xref:System.Text.RegularExpressions.CaptureCollection> zwracanego przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
+ W przypadku zastosowania kwantyfikatora do grupy przechwytywania odpowiednie <xref:System.Text.RegularExpressions.Group> obiektu <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>, <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>i <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> odzwierciedlają ostatni podciąg, który jest przechwytywany przez grupę przechwytywania. Można pobrać kompletny zestaw podciągów, które są przechwytywane przez grupy, które mają Kwantyfikatory z obiektu <xref:System.Text.RegularExpressions.CaptureCollection>, który jest zwracany przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
- W poniższym przykładzie wyjaśniono relację między obiektami <xref:System.Text.RegularExpressions.Group> i <xref:System.Text.RegularExpressions.Capture>.  
+ W poniższym przykładzie wyjaśniono relację między <xref:System.Text.RegularExpressions.Group> i <xref:System.Text.RegularExpressions.Capture> obiektów.  
   
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- Wzorzec wyrażenia regularnego `(\b(\w+)\W+)+` wyodrębnia poszczególne wyrazy z ciągu. Definicję tego wyrażenia pokazano w poniższej tabeli.  
+ Wzorzec wyrażenia regularnego `(\b(\w+)\W+)+` wyodrębnianie pojedynczych wyrazów z ciągu. Definicję tego wyrażenia pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  

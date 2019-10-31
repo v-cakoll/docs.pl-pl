@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PEverify.exe
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4f0828409a8c57baecf7c81fd7a4df6e7844c7ce
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044332"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104980"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -42,17 +40,17 @@ peverify filename [options]
 |------------|-----------------|  
 |**/Break =** *maxErrorCount*|Przerywa weryfikację po błędach *maxErrorCount* .<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
 |**/clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **MD Val. cykl**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. Pure**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **IL Ver. Cycle**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **Kod IL Ver**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> Czasy **MD Val. Cycle** i **Il Ver. Cycle** obejmują czas wymagany do wykonania niezbędnych procedur uruchamiania i zamykania. Wartość **MD Val. Pure** i **Il Ver czyste** czasy są odzwierciedlać czas wymagany do przeprowadzenia walidacji lub weryfikacji.|  
-|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
-|**/Ignore =** *hex. Code* [, *hex. Code*]|Ignoruje wymienione kody błędów.|  
+|**/Ignore =** *szesnastkowy. kod* [, *szesnastkowy. Code*]|Ignoruje wymienione kody błędów.|  
 |**/Ignore = @** *responseFile*|Ignoruje kody błędów wymienione w określonym pliku odpowiedzi.|  
 |**/Il**|Wykonuje weryfikację bezpieczeństwa typu MSIL dla metod zaimplementowanych w zestawie określonym przez *filename*. Narzędzie zwraca szczegółowe opisy dla każdego wykrytego problemu, chyba że zostanie określona opcja **/quiet** .|  
-|**/md**|Wykonuje sprawdzanie poprawności metadanych na zestawie określonym przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
+|**/MD**|Wykonuje sprawdzanie poprawności metadanych na zestawie określonym przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
 |**/nologo**|Pomija wyświetlanie informacji o wersji i prawach autorskich produktu.|  
 |**/nosymbols**|W wersji 2.0 .NET Framework wyłącza numery wierszy w celu zapewnienia zgodności z poprzednimi wersjami.|  
 |**/quiet**|Określa tryb cichy. Wyłącza raportowanie problemów weryfikacji. Peverify.exe w dalszym ciągu raportuje, czy plik jest bezpiecznych pod względem typów, ale nie raportuje problemów uniemożliwiających weryfikację bezpieczeństwa typów.|  
 |`/transparent`|Weryfikuje tylko metody przezroczyste.|  
-|**/unique**|Ignoruje powtarzające się kody błędów.|  
+|**/Unique**|Ignoruje powtarzające się kody błędów.|  
 |**/verbose**|W .NET Framework w wersji 2.0 wyświetla dodatkowe informacje w komunikatach weryfikacji MSIL.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -63,7 +61,7 @@ peverify filename [options]
   
  Peverify.exe wykonuje kompleksową weryfikację MSIL na podstawie analizy przepływu danych oraz listy kilkuset reguł poprawności metadanych. Aby uzyskać szczegółowe informacje na temat sprawdzania PEVerify. exe, zobacz "Specyfikacja walidacji metadanych" i "Specyfikacja zestawu instrukcji MSIL" w folderze przewodnika deweloperów narzędzi w Windows SDK.  
   
- Należy zauważyć, że .NET Framework w wersji 2,0 lub nowszej `byref` obsługuje sprawdzone zwroty określone przy użyciu następujących instrukcji `ldsflda`MSIL `ldflda`: `ldelema` `dup`, `call` , `unbox`, i.  
+ Należy pamiętać, że .NET Framework w wersji 2,0 lub nowszej obsługuje możliwe do zweryfikowania zwroty `byref` określone przy użyciu następujących instrukcji MSIL: `dup`, `ldsflda`, `ldflda`, `ldelema`, `call` i `unbox`.  
   
 ## <a name="examples"></a>Przykłady  
  Następujące polecenie wykonuje sprawdzanie poprawności metadanych i weryfikację bezpieczeństwa typów MSIL dla metod zaimplementowanych w zestawie `myAssembly.exe`.  
@@ -101,7 +99,7 @@ Timing: Total run     320 msec
 peverify myAssembly.exe /break=100 /ignore=0x12345678,0xABCD1234  
 ```  
   
- Poniższe polecenie daje ten sam wynik jak powyżej poprzedniego przykładu, ale określa kody błędów do zignorowania w pliku `ignoreErrors.rsp`odpowiedzi.  
+ Poniższe polecenie daje ten sam wynik jak powyżej poprzedniego przykładu, ale określa kody błędów, które mają być ignorowane w pliku odpowiedzi `ignoreErrors.rsp`.  
   
 ```console  
 peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp  

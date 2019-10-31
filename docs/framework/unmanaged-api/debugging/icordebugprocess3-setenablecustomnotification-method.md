@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129706"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification — Metoda
-Włącza i wyłącza niestandardowymi powiadomieniami debugera określonego typu.  
+Włącza i wyłącza niestandardowe powiadomienia debugera określonego typu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,24 +34,24 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="parameters"></a>Parametry  
  `pClass`  
- [in] Typ, który określa niestandardowymi powiadomieniami debugera.  
+ podczas Typ, który określa niestandardowe powiadomienia debugera.  
   
  `fEnable`  
- [in] `true` umożliwiające niestandardowymi powiadomieniami debugera; `false` wyłączyć powiadomienia. Wartość domyślna to `false`.  
+ [in] `true` włączyć powiadomień debugera niestandardowego; `false` wyłączyć powiadomienia. Wartość domyślna to `false`.  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy `fEnable` jest ustawiona na `true`, wywołania <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> metoda wyzwalacza [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) wywołania zwrotnego. Powiadomienia są domyślnie wyłączona; w związku z tym debuger należy określić wszystkie typy powiadomień obsługującemu i chce, aby obsłużyć. Ponieważ [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) klasy jest ograniczone przez domenę aplikacji, debuger musi wywołać `SetEnableCustomNotification` dla każdej domeny aplikacji, w tym procesie, jeśli chce otrzymać powiadomienia przez cały proces.  
+ Gdy `fEnable` jest ustawiona na `true`, wywołania metody <xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> wyzwalają wywołanie zwrotne [ICorDebugManagedCallback3:: CustomNotification —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) . Powiadomienia są domyślnie wyłączone; w związku z tym debuger musi określić wszelkie typy powiadomień, o których wie i który chce obsłużyć. Ponieważ Klasa [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) jest objęta zakresem przez domenę aplikacji, debuger musi wywoływać `SetEnableCustomNotification` dla każdej domeny aplikacji w procesie, jeśli chce otrzymywać powiadomienie przez cały proces.  
   
- Począwszy od programu .NET Framework 4, tylko obsługiwane powiadomienie jest powiadomienie zależności między wątkami.  
+ Począwszy od .NET Framework 4, jedyne obsługiwane powiadomienie to powiadomienie obejmujące zależność między wątkami.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

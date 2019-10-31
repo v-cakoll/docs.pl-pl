@@ -6,30 +6,28 @@ helpviewer_keywords:
 - names [.NET Framework], assemblies
 - assemblies [.NET Framework], names
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
-author: rpetrusha
-ms.author: ronpet
 dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 4fc670adc80a6f4ce7b36074185dcd3bb85fbc67
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 49d6d6cf5c138df671d061beb23cb57bcb0667b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140301"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Instrukcje: Znajdowanie w pełni kwalifikowanej nazwy zestawu
 
-Aby odnaleźć w pełni kwalifikowaną nazwę zestawu .NET Framework w globalnej pamięci podręcznej zestawów, użyj narzędzia globalnej pamięci podręcznej zestawów ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)). Zobacz [How to: Wyświetl zawartość globalnej pamięci podręcznej](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md)zestawów.
+Aby odnaleźć w pełni kwalifikowaną nazwę zestawu .NET Framework w globalnej pamięci podręcznej zestawów, użyj narzędzia globalnej pamięci podręcznej zestawów ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)). Zobacz [jak to zrobić: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
 W przypadku zestawów .NET Core i dla zestawów .NET Framework, które nie znajdują się w globalnej pamięci podręcznej zestawów, można uzyskać w pełni kwalifikowaną nazwę zestawu na wiele sposobów:
 
 - Można użyć kodu do wyprowadzania informacji do konsoli lub do zmiennej lub użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) do sprawdzenia metadanych zestawu, który zawiera w pełni kwalifikowaną nazwę.
 
-- Jeśli zestaw jest już załadowany przez aplikację, możesz pobrać wartość <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> właściwości, aby uzyskać w pełni kwalifikowaną nazwę. Możesz użyć <xref:System.Type.Assembly> właściwości <xref:System.Type> zdefiniowanej w tym zestawie, aby <xref:System.Reflection.Assembly> pobrać odwołanie do obiektu. Przykład stanowi ilustrację.
+- Jeśli zestaw jest już załadowany przez aplikację, możesz pobrać wartość właściwości <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>, aby uzyskać w pełni kwalifikowaną nazwę. Można użyć właściwości <xref:System.Type.Assembly> <xref:System.Type> zdefiniowanej w tym zestawie, aby pobrać odwołanie do obiektu <xref:System.Reflection.Assembly>. Przykład stanowi ilustrację.
 
-- Jeśli znasz ścieżkę systemu plików zestawu `static` , możesz wywołać metodę (C#) lub `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> , aby uzyskać w pełni kwalifikowaną nazwę zestawu. Poniżej przedstawiono prosty przykład.
+- Jeśli znasz ścieżkę systemu plików zestawu, możesz `static` wywołać metodę <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> (C#) lub `Shared` (Visual Basic), aby uzyskać w pełni kwalifikowaną nazwę zestawu. Poniżej przedstawiono prosty przykład.
 
   ```csharp
   using System;
@@ -64,7 +62,7 @@ Aby uzyskać więcej informacji na temat ustawiania atrybutów zestawu, takich j
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wyświetlić w pełni kwalifikowaną nazwę zestawu zawierającego określoną klasę w konsoli programu. Używa <xref:System.Type.Assembly?displayProperty=nameWithType> właściwości, aby pobrać odwołanie do zestawu z typu, który jest zdefiniowany w tym zestawie.
+Poniższy przykład pokazuje, jak wyświetlić w pełni kwalifikowaną nazwę zestawu zawierającego określoną klasę w konsoli programu. Używa właściwości <xref:System.Type.Assembly?displayProperty=nameWithType>, aby pobrać odwołanie do zestawu z typu, który jest zdefiniowany w tym zestawie.
 
 ```cpp
 #using <System.dll>

@@ -3,40 +3,38 @@ title: Model SOM (XML Schema Object Model) ― omówienie
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97e2e54c534b30c3c514c9102ded0050fc154b75
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3ebf0cd06ebea3092ef8aa42debe0afeac9be4f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129145"
 ---
 # <a name="xml-schema-object-model-overview"></a>Model SOM (XML Schema Object Model) ― omówienie
-Model obiektu schematu (SOM) w programie Microsoft .NET Framework to zaawansowane interfejsy API, która pozwala na tworzenie, edytowanie i sprawdź poprawność schematów programowo. Model SOM działa na dokumentów schematu XML, podobnie jak sposób, w jaki Document Object Model (DOM) działa w dokumentach XML. Dokumentów schematu XML są prawidłowe pliki XML, które po załadowaniu do SOM, zmienić znaczenie dotyczące struktury i ważności innych dokumentów XML, które są zgodne ze schematem.  
+Model obiektów schematu (SOM) w Microsoft .NET Framework to bogaty interfejs API, który umożliwia Programistyczne tworzenie, edytowanie i sprawdzanie poprawności schematów. Model SOM działa na dokumentach schematu XML podobnie do sposobu działania Document Object Model (DOM) w dokumentach XML. Dokumenty schematu XML są prawidłowymi plikami XML, które po załadowaniu do modelu SOM, przekazując znaczenie dotyczące struktury i ważności innych dokumentów XML, które są zgodne ze schematem.  
   
- Schemat jest dokument XML, który definiuje klasę dokumentów XML przez określenie struktury lub modelu dokumentów XML dla określonego schematu. Schemat wymieniono ograniczenia dotyczące zawartości dokumentów XML i opisano słownika (reguły lub gramatyki), który jest zgodny z dokumentów XML należy wykonać, aby można je było uważać schematu prawidłowy z określonego schematu. Sprawdzanie poprawności dokumentu XML to proces, który zapewnia, że dokument jest zgodny ze gramatyki, określonego przez schemat.  
+ Schemat to dokument XML, który definiuje klasę dokumentów XML, określając strukturę lub model dokumentów XML dla określonego schematu. Schemat identyfikuje ograniczenia dotyczące zawartości dokumentów XML i opisuje słownictwo (reguły lub gramatyki) zgodne dokumenty XML muszą być przestrzegane, aby można je było traktować jako schemat-prawidłowy z tym konkretnym schematem. Walidacja dokumentu XML jest procesem, który gwarantuje, że dokument jest zgodny z gramatyką określoną przez schemat.  
   
- Poniżej przedstawiono sposoby SOM interfejsu API na platformie .NET Framework umożliwia tworzenie, edytowanie i sprawdź poprawność schematów.  
+ Poniżej przedstawiono sposoby tworzenia, edytowania i weryfikowania schematów przy użyciu interfejsu API modelu SOM w .NET Framework.  
   
-- Ładuje i zapisuje prawidłowe schematy do i z plików.  
+- Załaduj i Zapisz prawidłowe schematy do i z plików.  
   
-- Tworzenie schematów w pamięci, za pomocą silnie typizowanej klasy.  
+- Twórz schematy w pamięci przy użyciu klas silnie wpisanych.  
   
-- Interakcja z <xref:System.Xml.Schema.XmlSchemaSet> klasy do pamięci podręcznej, kompilowania i pobrać schematów.  
+- Współpracuj z klasą <xref:System.Xml.Schema.XmlSchemaSet>, aby buforować, kompilować i pobierać schematy.  
   
-- Interakcja z <xref:System.Xml.XmlReader.Create%2A> metody <xref:System.Xml.XmlReader> klasy do weryfikacji dokumentów wystąpienia XML względem schematów.  
+- Współdziałanie z metodą <xref:System.Xml.XmlReader.Create%2A> klasy <xref:System.Xml.XmlReader> w celu walidacji dokumentów wystąpień XML w schematach.  
   
-- Twórz edytory za utworzenie i utrzymywanie schematów.  
+- Redaktorzy kompilacji do tworzenia i obsługi schematów.  
   
-- Dynamicznie edytować schemat, który może być spełnione i zapisać do użycia podczas sprawdzania poprawności, dokumentów wystąpienia XML.  
+- Dynamicznie Edytuj schemat, który może być zgodny i zapisany do użycia w walidacji dokumentów wystąpienia XML.  
   
 ## <a name="the-schema-object-model"></a>Model obiektu schematu  
- Model SOM składa się z obszerny zestaw klas w <xref:System.Xml.Schema?displayProperty=nameWithType> odpowiadające elementom w schematu XML przestrzeń nazw. Na przykład `<xsd:schema>...</xsd:schema>` mapuje element <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> klasy i wszystkie informacje, które mogą być zawarte w obrębie `<xsd:schema/>` element może być reprezentowany za pomocą <xref:System.Xml.Schema.XmlSchema> klasy. Podobnie `<xsd:element>...</xsd:element>` i `<xsd:attribute>...</xsd:attribute>` mapowania elementów <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> i <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> klasy odpowiednio. To mapowanie jest kontynuowany dla wszystkich elementów schematu XML, tworzenie modelu obiektu schematu XML w <xref:System.Xml.Schema> przedstawione na diagramie, który następuje po przestrzeni nazw.  
+ Model SOM składa się z rozbudowanego zestawu klas w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeni nazw odpowiadającej elementom w schemacie XML. Na przykład element `<xsd:schema>...</xsd:schema>` jest mapowany na klasę <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>, a wszystkie informacje, które mogą być zawarte w elemencie `<xsd:schema/>` mogą być reprezentowane przy użyciu klasy <xref:System.Xml.Schema.XmlSchema>. Podobnie `<xsd:element>...</xsd:element>` i `<xsd:attribute>...</xsd:attribute>` elementy są mapowane na odpowiednio <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> i <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> klas. To mapowanie będzie kontynuowane dla wszystkich elementów schematu XML tworzących model obiektów schematu XML w przestrzeni nazw <xref:System.Xml.Schema> przedstawiony na poniższym diagramie.  
   
- ![System.Xml.Schema Object Model](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
+ ![System. XML. Schema — model obiektów](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
- Aby uzyskać więcej informacji na temat każdej klasy w <xref:System.Xml.Schema> przestrzeni nazw, zobacz <xref:System.Xml.Schema> dokumentacja przestrzeni nazw w bibliotece klas programu .NET Framework.  
+ Aby uzyskać więcej informacji na temat każdej klasy w przestrzeni nazw <xref:System.Xml.Schema>, zobacz dokumentację referencyjną <xref:System.Xml.Schema> przestrzeni nazw w bibliotece klas .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 

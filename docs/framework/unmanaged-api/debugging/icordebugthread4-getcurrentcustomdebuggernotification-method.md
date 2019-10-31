@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 57e0f2d2-5f0e-4e2d-99ec-3f26632eb693
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f626ff6e562bd9bc94440f31e9470a45cc32cfbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba4375511fe7f5aaee032c4e132de54808041111
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122448"
 ---
 # <a name="icordebugthread4getcurrentcustomdebuggernotification-method"></a>ICorDebugThread4::GetCurrentCustomDebuggerNotification — Metoda
 
-Pobiera bieżący [ICorDebugManagedCallback3::CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) obiektu w bieżącym wątku.
+Pobiera bieżący obiekt [ICorDebugManagedCallback3:: CustomNotification —](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md) w bieżącym wątku.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,21 +37,21 @@ HRESULT GetCurrentCustomDebuggerNotification(
 ## <a name="parameters"></a>Parametry
 
 `ppNotificationObject`\
-[out] Wskaźnik do bieżącego `ICorDebugManagedCallback3::CustomNotification` obiektu w bieżącym wątku.
+określoną Wskaźnik do bieżącego obiektu `ICorDebugManagedCallback3::CustomNotification` w bieżącym wątku.
 
 ## <a name="remarks"></a>Uwagi
 
-Wartość `ppNotificationObject` ma wartość null, jeśli metoda nie jest wywoływana z poziomu `ICorDebugManagedCallback3::CustomNotification` wywołanie zwrotne, lub czy istnieje nie bieżący obiekt powiadomień.
+Wartość `ppNotificationObject` ma wartość null, jeśli metoda nie jest wywoływana z poziomu wywołania zwrotnego `ICorDebugManagedCallback3::CustomNotification` lub jeśli nie istnieje bieżący obiekt powiadomienia.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

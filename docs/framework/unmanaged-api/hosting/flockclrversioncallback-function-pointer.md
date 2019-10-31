@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 98a4762d-9ad2-45bd-9d03-39064a028b44
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 46e3356df6578f2adf2ceee00b1363b65fd014ea
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f1ad414c30788801e14a33e98a0893e2a0f58d0c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760229"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136521"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>FLockClrVersionCallback — Wskaźnik funkcji
-Wskazuje funkcję, która Typowe wywołania środowiska uruchomieniowego (języka wspólnego CLR) języka, aby wskazać, że inicjowanie uruchomiona lub ukończone.  
+Wskazuje funkcję, którą wywołuje środowisko uruchomieniowe języka wspólnego (CLR), aby wskazać, że inicjalizacja została uruchomiona lub ukończona.  
   
- Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.  
+ Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,16 +33,16 @@ typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja jest zaimplementowana przez hosta.  
+ Ta funkcja jest implementowana przez hosta.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorWks.dll  
+ **Biblioteka:** MSCorWks. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

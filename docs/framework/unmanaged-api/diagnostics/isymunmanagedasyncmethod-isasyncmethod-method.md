@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethod::IsAsyncMethod — Metoda
 ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea4c21e9e6a49d7bbbad5e1853598c440cd6410
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129208"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod — Metoda
-Sprawdza, czy metoda ma informacje o asynchronicznej.  
+Sprawdza, czy metoda ma informacje asynchroniczne, czy nie.  
   
- Jeśli ta metoda zwraca `FALSE` to wywoływać wszelkich innych metod, w tym interfejsie. Będą oni mogli zwrócenia wszystkich `E_UNEXPECTED` w tym przypadku.  
+ Jeśli ta metoda zwraca `FALSE`, to jest nieprawidłowa, aby wywołać inne metody w tym interfejsie. Wszystkie zwracają `E_UNEXPECTED` w tym przypadku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -32,7 +30,7 @@ HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

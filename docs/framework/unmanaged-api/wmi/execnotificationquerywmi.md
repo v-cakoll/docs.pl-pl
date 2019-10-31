@@ -14,14 +14,12 @@ helpviewer_keywords:
 - ExecNotificationQueryWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cfe54c7c9b7ae707b2d3591afbd830bac171f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d8a7683eef52a5e91bf7aa84d5aa7db7dbdac8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798648"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130443"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi, funkcja
 
@@ -53,7 +51,7 @@ HRESULT ExecNotificationQueryWmi (
 podczas Ciąg z prawidłowym językiem zapytań obsługiwanym przez zarządzanie systemem Windows. Musi to być "WQL", akronim dla język zapytań usługi WMI.
 
 `strQuery`\
-podczas Tekst zapytania. Ten parametr nie może `null`być.
+podczas Tekst zapytania. Ten parametr nie może być `null`.
 
 `lFlags`\
 podczas Kombinacja następujących dwóch flag mających wpływ na zachowanie tej funkcji. Te wartości są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie.
@@ -64,7 +62,7 @@ podczas Kombinacja następujących dwóch flag mających wpływ na zachowanie te
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | Funkcja zwraca moduł wyliczający tylko do przodu. Zazwyczaj moduły wyliczające tylko do przodu są szybsze i używają mniej pamięci niż konwencjonalne moduły wyliczające, ale nie pozwalają na wywołania [klonowania](clone.md). |
 
 `pCtx`\
-podczas Zazwyczaj ta wartość to `null`. W przeciwnym razie jest wskaźnikiem do wystąpienia [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) , które może być używane przez dostawcę dostarczającego żądane zdarzenia.
+podczas Zazwyczaj ta wartość jest `null`. W przeciwnym razie jest wskaźnikiem do wystąpienia [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) , które może być używane przez dostawcę dostarczającego żądane zdarzenia.
 
 `ppEnum`\
 określoną Jeśli błąd nie wystąpi, otrzymuje wskaźnik do modułu wyliczającego, który umożliwia obiektowi wywołującemu pobieranie wystąpień w zestawie wyników zapytania. Zobacz sekcję [uwagi](#remarks) , aby uzyskać więcej informacji.
@@ -98,7 +96,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | Zapytanie określa klasę, która nie istnieje. |
 | `WBEMESS_E_REGISTRATION_TOO_PRECISE` | 0x80042002 | Zażądano zbyt dużej dokładności dostarczania zdarzeń. Należy określić większą tolerancję sondowania. |
-| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Zapytanie żąda więcej informacji niż można zapewnić zarządzanie systemem Windows. Ta `HRESULT` wartość jest zwracana, gdy zapytanie zdarzenia powoduje żądanie sondowania wszystkich obiektów w przestrzeni nazw. |
+| `WBEMESS_E_REGISTRATION_TOO_BROAD` | 0x80042001 | Zapytanie żąda więcej informacji niż można zapewnić zarządzanie systemem Windows. Ta `HRESULT` jest zwracana, gdy zapytanie zdarzenia powoduje żądanie sondowania wszystkich obiektów w przestrzeni nazw. |
 | `WBEM_E_INVALID_QUERY` | 0x80041017 | Zapytanie zawierało błąd składniowy. |
 | `WBEM_E_INVALID_QUERY_TYPE` | 0x80041018 | Żądany język kwerendy nie jest obsługiwany. |
 | `WBEM_E_QUOTA_VIOLATION` | 0x8004106c | Zapytanie jest zbyt złożone. |
@@ -112,19 +110,19 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemServices:: ExecNotificationQuery](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-execnotificationquery) .
 
-Po powrocie funkcji obiekt wywołujący okresowo przekazuje zwrócony `ppEnum` obiekt do [następnej](next.md) funkcji, aby sprawdzić, czy jakieś zdarzenia są dostępne.
+Po powrocie funkcji obiekt wywołujący okresowo przekazuje zwrócony obiekt `ppEnum` do [następnej](next.md) funkcji, aby sprawdzić, czy jakieś zdarzenia są dostępne.
 
-Istnieją limity dotyczące liczby `AND` i `OR` słów kluczowych, które mogą być używane w zapytaniach WQL. Duża liczba słów kluczowych WQL używanych w złożonej kwerendzie może spowodować, że usługa WMI `WBEM_E_QUOTA_VIOLATION` zwróci kod błędu (lub 0x8004106c) `HRESULT` jako wartość. Limit słów kluczowych WQL zależy od tego, jak złożona jest kwerenda.
+Istnieją ograniczenia liczby `AND` i `OR` słów kluczowych, które mogą być używane w zapytaniach WQL. Duża liczba słów kluczowych WQL używanych w złożonej kwerendzie może spowodować, że usługa WMI zwróci kod błędu `WBEM_E_QUOTA_VIOLATION` (lub 0x8004106c) jako wartość `HRESULT`ą. Limit słów kluczowych WQL zależy od tego, jak złożona jest kwerenda.
 
 Jeśli wywołanie funkcji nie powiedzie się, można uzyskać dodatkowe informacje o błędzie, wywołując funkcję [GetErrorInfo](geterrorinfo.md) .
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

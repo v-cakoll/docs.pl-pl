@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo — Metoda
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a8305d0a562fd90e3fae32e372b663ca3942d2a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59e3a95a4d2573263600da60b4f852caa361138e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129196"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo — Metoda
-Zdefiniuj grupę async operator await operacji w bieżącej metodzie.  
+Zdefiniuj grupę asynchronicznych operacji await w bieżącej metodzie.  
   
- Przesunięcie każdego yield pasuje do zwrotu instrukcji await, identyfikowanie potencjalnej wydajności. Każdy `breakpointMethod` / `breakpointOffset` pary informuje NAS, gdzie operacja asynchroniczna zostanie wznowione, co może być w innej metody.  
+ Każde przesunięcie Yield pasuje do instrukcji return oczekującej, identyfikując potencjalną rentowność. Każda `breakpointMethod`/`breakpointOffset` para informuje nas, gdzie zostanie wznowiona operacja asynchroniczna, która może znajdować się w innej metodzie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,7 +33,7 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
  Zwraca `HRESULT`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Nagłówek:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -6,20 +6,18 @@ helpviewer_keywords:
 - threading [.NET Framework], scheduling
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 502e118a67e157ce7756efdece866564fddc6ab7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934306"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73106228"
 ---
 # <a name="scheduling-threads"></a>Harmonogram wątków
 
-Każdy wątek ma przypisany priorytet wątku. Utworzone w ramach środowiska uruchomieniowego języka wspólnego wątki są początkowo przypisana priorytet <xref:System.Threading.ThreadPriority.Normal?displayProperty=nameWithType>. Wątki utworzony poza środowisko uruchomieniowe zachować priorytet, który wcześniej one umieszczone w środowisku zarządzanym. Można uzyskać lub ustawić priorytet z żadnym z wątków <xref:System.Threading.Thread.Priority?displayProperty=nameWithType> właściwości.  
+Każdy wątek ma przypisany priorytet wątku. Wątki utworzone w środowisku uruchomieniowym języka wspólnego mają początkowo przypisany priorytet <xref:System.Threading.ThreadPriority.Normal?displayProperty=nameWithType>. Wątki utworzone poza środowiskiem uruchomieniowym zachowują priorytet, który miał przed wprowadzeniem środowiska zarządzanego. Można pobrać lub ustawić priorytet dowolnego wątku za pomocą właściwości <xref:System.Threading.Thread.Priority?displayProperty=nameWithType>.  
   
- Wątki są zaplanowane do wykonania na podstawie ich priorytetu. Mimo że wątki są wykonywane w ramach środowiska uruchomieniowego, wszystkie wątki są przypisywane przedziały czasu procesora przez system operacyjny. Szczegółowe informacje o harmonogramie algorytm używany do określenia kolejność wykonywania wątków zależy od każdego systemu operacyjnego. W niektórych systemach operacyjnych wątku z najwyższym priorytetem (z wątków, które mogą być wykonywane) zawsze jest zaplanowana do uruchomienia jako pierwsza. Jeśli wiele wątków, z tym samym priorytecie są wszystkie dostępne cykli harmonogramu za pomocą wątków tego priorytetem, dzięki czemu każdy wątek wycinek stały czas, w której chcesz wykonać. Tak długo, jak wątek o wyższym priorytecie jest dostępna do uruchamiania, nie otrzymują niższy priorytet wątków do wykonania. Gdy istnieją wątki nie ma już możliwy do uruchomienia w danym priorytecie, harmonogram przechodzi do następnego niższy priorytet i planuje wątków, w tym priorytet dla wykonywania. Jeśli wątek wyższy priorytet staje się możliwy do uruchomienia, niższy priorytet wątku jest przerywane i wyższy priorytet wątku można wykonać ponownie. Na podstawie wszystkich, systemu operacyjnego można również dostosować priorytety wątku dynamicznie zgodnie z interfejsu użytkownika aplikacji jest przenoszone między pierwszego planu i tła. Inne systemy operacyjne, warto używać innego algorytmu planowania.  
+ Wątki są zaplanowane do wykonania na podstawie ich priorytetu. Chociaż wątki są wykonywane w czasie wykonywania, wszystkie wątki są przypisanymi wycinkami czasu procesora przez system operacyjny. Szczegóły algorytmu planowania używane do określenia kolejności, w której wątki są wykonywane, różnią się w zależności od systemu operacyjnego. W niektórych systemach operacyjnych wątek o najwyższym priorytecie (z tych wątków, które mogą być wykonywane) jest zawsze zaplanowany do uruchomienia w pierwszej kolejności. Jeśli wszystkie wątki o takim samym priorytecie są dostępne, harmonogram przechodzi przez wątki w tym priorytecie, co oznacza, że każdy wątek jest stałym wycinkem czasu, który ma zostać wykonany. Tak długo, jak wątek o wyższym priorytecie jest dostępny do uruchomienia, wątki o niższym priorytecie nie są wykonywane. Gdy nie ma więcej możliwy do uruchomienia wątków o danym priorytecie, harmonogram przechodzi do następnego niższego priorytetu i planuje wątki w tym priorytecie do wykonania. Jeśli wątek o wyższym priorytecie zostanie możliwy do uruchomienia, wątek o niższym priorytecie zostanie przeniesiona, a wątek o wyższym priorytecie będzie można wykonać raz ponownie. Na wszystkich tych systemach system operacyjny może również dynamicznie dostosować priorytety wątków, ponieważ interfejs użytkownika aplikacji jest przenoszony między pierwszym i tłem. Inne systemy operacyjne mogą korzystać z innego algorytmu planowania.  
   
 ## <a name="see-also"></a>Zobacz także
 

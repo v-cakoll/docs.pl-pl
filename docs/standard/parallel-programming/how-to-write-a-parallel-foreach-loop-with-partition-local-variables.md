@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji'
+title: 'Instrukcje: zapisywanie pętli Parallel. ForEach ze zmiennymi lokalnymi partycji'
 ms.date: 06/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,44 +8,42 @@ dev_langs:
 helpviewer_keywords:
 - parallel foreach loop, how to use local state
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 98abed0efa2e1b624ee1fb671300969f3d79a9db
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: cca48889670c3bd67366c879ccede94c89542c8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661669"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139682"
 ---
-# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Instrukcje: Zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi partycji
+# <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Instrukcje: zapisywanie pętli Parallel. ForEach ze zmiennymi lokalnymi partycji
 
-Poniższy przykład przedstawia sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> metodę, która używa zmiennych lokalnych partycji. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja zawiera własną kopię zmiennej lokalnej partycji. Zmienna partycji lokalnej jest podobny do [zmienną lokalną wątku](xref:System.Threading.ThreadLocal%601), z tą różnicą, że wiele partycji można uruchomić w jednym wątku.
+Poniższy przykład pokazuje, jak napisać metodę <xref:System.Threading.Tasks.Parallel.ForEach%2A>, która używa zmiennych lokalnych partycji. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja ma własną kopię zmiennej lokalnej partycji. Zmienna lokalna partycji jest podobna do [zmiennej lokalnej wątku](xref:System.Threading.ThreadLocal%601), z tą różnicą, że wiele partycji może działać w jednym wątku.
 
-Kod i parametry w przykładzie przypominają zbliżone w odpowiadającej metodzie <xref:System.Threading.Tasks.Parallel.For%2A>. Aby uzyskać więcej informacji, zobacz [jak: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
+Kod i parametry w przykładzie przypominają zbliżone w odpowiadającej metodzie <xref:System.Threading.Tasks.Parallel.For%2A>. Aby uzyskać więcej informacji, zobacz [jak: napisać pętlę Parallel. for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md).
 
-Aby użyć zmiennej lokalnej partycji w <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli, należy wywołać jedno z przeciążeń metody, która przyjmuje dwa parametry typu. Pierwszy parametr typu `TSource`, określa typ elementu źródłowego, a drugi parametr typu `TLocal`, określa typ zmiennej lokalnej partycji.
+Aby użyć zmiennej lokalnej partycji w pętli <xref:System.Threading.Tasks.Parallel.ForEach%2A>, należy wywołać jedno z przeciążeń metody, które pobiera dwa parametry typu. Pierwszy parametr typu, `TSource`, określa typ elementu źródłowego, a drugi parametr typu, `TLocal`, określa typ zmiennej lokalnej partycji.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład wywołuje <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType> przeciążenie, można obliczyć sumę tablicy elementów jeden milion. To przeciążenie ma cztery parametry:
+Poniższy przykład wywołuje Przeciążenie <xref:System.Threading.Tasks.Parallel.ForEach%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%601%7D%2CSystem.Func%7B%60%600%2CSystem.Threading.Tasks.ParallelLoopState%2C%60%601%2C%60%601%7D%2CSystem.Action%7B%60%601%7D%29?displayProperty=nameWithType>, aby obliczyć sumę tablicy elementów 1 000 000. To Przeciążenie ma cztery parametry:
 
-- `source`, który jest źródłem danych. Musi on implementować <xref:System.Collections.Generic.IEnumerable%601>. Źródło danych, w tym przykładzie jest członkiem miliona `IEnumerable<Int32>` obiektu zwróconego przez <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType> metody.
+- `source`, który jest źródłem danych. Musi implementować <xref:System.Collections.Generic.IEnumerable%601>. Źródłem danych w naszym przykładzie jest element członkowski 1 000 000 `IEnumerable<Int32>` obiektu zwróconego przez metodę <xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>.
 
-- `localInit`, lub funkcji, która inicjuje zmienną lokalnych partycji. Ta funkcja jest wywoływana jeden raz dla każdej partycji, w którym <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> wykonuje operację. Nasz przykład inicjuje zmienną partycji lokalnej do zera.
+- `localInit`lub funkcja, która inicjuje zmienną lokalną partycji. Ta funkcja jest wywoływana raz dla każdej partycji, w której jest wykonywana operacja <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Nasz przykład inicjuje zmienną lokalną partycji na zero.
 
-- `body`, <xref:System.Func%604> , wywoływany przez pętlę równoległą podczas każdej iteracji pętli. Jego podpis jest `Func\<TSource, ParallelLoopState, TLocal, TLocal>`. Dostarczasz kod dla delegata, a pętla przekazuje parametry wejściowe, które są:
+- `body`, <xref:System.Func%604>, który jest wywoływany przez pętlę równoległą dla każdej iteracji pętli. Jego podpis jest `Func\<TSource, ParallelLoopState, TLocal, TLocal>`. Podasz kod delegata, a pętla przechodzi w parametrach wejściowych, które są:
 
   - Bieżący element <xref:System.Collections.Generic.IEnumerable%601>.
 
-  - A <xref:System.Threading.Tasks.ParallelLoopState> zmiennej, czy można użyć w kodzie w swoim delegacie, aby sprawdzić stan pętli.
+  - Zmienna <xref:System.Threading.Tasks.ParallelLoopState>, której można użyć w kodzie delegata do sprawdzenia stanu pętli.
 
-  - Zmienna lokalnych partycji.
+  - Zmienna lokalna partycji.
 
-  Swoim delegacie zwraca zmienną partycji lokalnej, która jest następnie przekazywany do następnej iteracji pętli, która jest wykonywana w określonej partycji. Każda partycja pętli zachowuje osobne wystąpienie tej zmiennej.
+  Delegat zwraca zmienną lokalną partycji, która jest następnie przenoszona do następnej iteracji pętli, która jest wykonywana w danej partycji. Każda partycja pętli przechowuje oddzielne wystąpienie tej zmiennej.
 
-  W tym przykładzie delegata dodaje wartość Każda liczba całkowita do zmiennej lokalnej partycji, która przechowuje działającego całkowitej wartości elementy całkowite w tej partycji.
+  W tym przykładzie delegat dodaje wartość każdej liczby całkowitej do zmiennej lokalnej partycji, która zachowuje sumę całkowitą elementów liczby całkowitej w tej partycji.
 
-- `localFinally`, `Action<TLocal>` delegowania, który <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> wywołuje po zakończeniu pętli operacji w poszczególnych partycjach. <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> Metoda przekazuje swoje `Action<TLocal>` delegować końcowa wartość zmiennej partycji lokalnej dla tej partycji pętli, a następnie podaj kod, który wykonuje czynność wymagane dla połączenia wyników danej partycji z wynikami innych partycji. Delegat może być wywoływany współbieżnie przez wiele zadań. W związku z tym w przykładzie użyto <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> metody do synchronizowania dostępu do `total` zmiennej. Ponieważ typ delegata to <xref:System.Action%601>, żadna wartość nie jest zwracana.
+- `localFinally`, `Action<TLocal>` delegat <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> wywoływany, gdy operacje zapętlenia w każdej partycji zakończyły się pomyślnie. Metoda <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> przekazuje `Action<TLocal>` delegowania wartości końcowej zmiennej lokalnej partycji dla tej partycji pętli, i podajesz kod, który wykonuje wymaganą akcję do łączenia wyniku z tej partycji z wynikami innych Partition. Delegat może być wywoływany współbieżnie przez wiele zadań. W związku z tym w przykładzie zastosowano metodę <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType>, aby zsynchronizować dostęp do zmiennej `total`. Ponieważ typ delegata to <xref:System.Action%601>, żadna wartość nie jest zwracana.
 
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]
@@ -53,5 +51,5 @@ Poniższy przykład wywołuje <xref:System.Threading.Tasks.Parallel.ForEach%60%6
 ## <a name="see-also"></a>Zobacz także
 
 - [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [Instrukcje: Zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
+- [Instrukcje: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
 - [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

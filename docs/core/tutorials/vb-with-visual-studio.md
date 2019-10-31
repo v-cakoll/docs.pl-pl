@@ -1,18 +1,16 @@
 ---
 title: Aplikacja .NET Core Hello world z Visual Basic w programie Visual Studio 2017
 description: Dowiedz się, jak utworzyć prostą aplikację konsolową platformy .NET Core z Visual Basic przy użyciu programu Visual Studio 2017.
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b4f3cc055f73332db1348ef35174beab614df147
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039612"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100875"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Hello world Visual Basic przy użyciu zestaw .NET Core SDK w programie Visual Studio 2017
 
@@ -28,17 +26,17 @@ Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące platformy
 
 Zacznij od utworzenia prostej aplikacji konsolowej "Hello world". Wykonaj następujące kroki:
 
-1. Uruchom program Visual Studio 2017. Na pasku menu wybierz pozycję **plik** > **Nowy** > **projekt** . W oknie dialogowym *Nowy projekt** wybierz węzeł **Visual Basic** , po którym następuje węzeł **.NET Core** . Następnie wybierz szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "HelloWorld". Wybierz przycisk **OK**.
+1. Uruchom program Visual Studio 2017. Wybierz pozycję **plik** > **Nowy** > **projekt** na pasku menu. W oknie dialogowym *Nowy projekt** wybierz węzeł **Visual Basic** , po którym następuje węzeł **.NET Core** . Następnie wybierz szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "HelloWorld". Wybierz przycisk **OK** .
 
    ![Okno dialogowe nowego projektu z wybraną aplikacją konsolową](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
-1. Program Visual Studio używa szablonu do utworzenia projektu. Szablon aplikacji konsoli Visual Basic dla platformy .NET Core automatycznie definiuje klasę, `Program`przy użyciu pojedynczej `Main`metody, która przyjmuje <xref:System.String> tablicę jako argument. `Main`jest punktem wejścia aplikacji, metoda, która jest wywoływana automatycznie przez środowisko uruchomieniowe podczas uruchamiania aplikacji. Wszystkie argumenty wiersza polecenia dostarczone podczas uruchamiania aplikacji są dostępne w tablicy *args* .
+1. Program Visual Studio używa szablonu do utworzenia projektu. Szablon aplikacji konsoli Visual Basic dla platformy .NET Core automatycznie definiuje klasę, `Program`, przy użyciu pojedynczej metody, `Main`, która przyjmuje tablicę <xref:System.String> jako argument. `Main` jest punktem wejścia aplikacji, metoda, która jest wywoływana automatycznie przez środowisko uruchomieniowe podczas uruchamiania aplikacji. Wszystkie argumenty wiersza polecenia dostarczone podczas uruchamiania aplikacji są dostępne w tablicy *args* .
 
    ![Program Visual Studio i nowy projekt HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
-   Szablon tworzy prostą aplikację "Hello world". Wywołuje <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metodę w celu wyświetlenia ciągu literału "Hello World!" w oknie konsoli. Wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, można uruchomić program w trybie debugowania. Jeśli to zrobisz, okno konsoli będzie widoczne tylko dla krótkiego interwału czasu przed jego zamknięciem. Dzieje się `Main` tak, ponieważ metoda kończy działanie, a aplikacja kończy się zaraz po wykonaniu pojedynczej `Main` instrukcji w metodzie.
+   Szablon tworzy prostą aplikację "Hello world". Wywołuje metodę <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>, aby wyświetlić ciąg literału "Hello world!" w oknie konsoli. Wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, można uruchomić program w trybie debugowania. Jeśli to zrobisz, okno konsoli będzie widoczne tylko dla krótkiego interwału czasu przed jego zamknięciem. Dzieje się tak, ponieważ metoda `Main` kończy działanie, a aplikacja kończy się zaraz po wykonaniu pojedynczej instrukcji w metodzie `Main`.
 
-1. Aby spowodować wstrzymanie aplikacji przed zamknięciem okna konsoli, Dodaj następujący kod bezpośrednio po wywołaniu <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> metody:
+1. Aby spowodować wstrzymanie aplikacji przed zamknięciem okna konsoli, Dodaj następujący kod bezpośrednio po wywołaniu metody <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>:
 
    ```vb
    Console.Write("Press any key to continue...")
@@ -47,7 +45,7 @@ Zacznij od utworzenia prostej aplikacji konsolowej "Hello world". Wykonaj nastę
 
    Ten kod poprosi użytkownika o naciśnięcie dowolnego klawisza, a następnie wstrzymuje program do momentu naciśnięcia klawisza.
 
-1. Na pasku menu wybierz pozycję **kompilacja** > Kompiluj**rozwiązanie**. Spowoduje to skompilowanie programu do języka pośredniego (IL), który jest konwertowany na kod binarny przez kompilator just-in-Time (JIT).
+1. Na pasku menu wybierz kolejno opcje **kompiluj** > **Kompiluj rozwiązanie**. Spowoduje to skompilowanie programu do języka pośredniego (IL), który jest konwertowany na kod binarny przez kompilator just-in-Time (JIT).
 
 1. Uruchom program, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi.
 
@@ -59,19 +57,19 @@ Zacznij od utworzenia prostej aplikacji konsolowej "Hello world". Wykonaj nastę
 
 Zwiększ swoją aplikację, aby monitować użytkownika o jego nazwę i wyświetlić ją wraz z datą i godziną. Aby zmodyfikować i przetestować program, wykonaj następujące czynności:
 
-1. Wprowadź następujący kod Visual Basic w oknie kodu bezpośrednio po nawiasie otwierającym, który następuje `Sub Main(args As String())` po wierszu i przed pierwszym nawiasem zamykającym:
+1. Wprowadź następujący kod Visual Basic w oknie kodu bezpośrednio po nawiasie otwierającym, który następuje po wierszu `Sub Main(args As String())` i przed pierwszym nawiasem zamykającym:
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   Ten kod zastępuje zawartość `Main` metody.
+   Ten kod zastępuje zawartość metody `Main`.
 
    ![Plik programu Visual Studio ze zaktualizowaną metodą Main](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
-   Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz ENTER. Ten ciąg jest przechowywany w zmiennej o nazwie `name`. Pobiera również wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwości, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `currentDate`. Na koniec używa [ciągu interpolowanego](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) , aby wyświetlić te wartości w oknie konsoli.
+   Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz ENTER. Ten ciąg jest przechowywany w zmiennej o nazwie `name`. Pobiera również wartość właściwości <xref:System.DateTime.Now?displayProperty=nameWithType>, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `currentDate`. Na koniec używa [ciągu interpolowanego](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) , aby wyświetlić te wartości w oknie konsoli.
 
-1. Skompiluj program, **wybierając opcję** > Kompiluj**kompilację rozwiązania**.
+1. Skompiluj program, wybierając opcję **kompiluj** > **Kompiluj rozwiązanie**.
 
-1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając > element menu**Rozpocznij debugowanie** debugowania. Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz ENTER.
+1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając element menu **debuguj** > **Rozpocznij debugowanie** . Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz ENTER.
 
    ![Okno konsoli ze zmodyfikowanym wyjściem programu](./media/with-visual-studio/hello-world-update.png)
 

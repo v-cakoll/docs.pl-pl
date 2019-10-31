@@ -7,45 +7,45 @@ helpviewer_keywords:
 - Windows Forms, app settings schema
 - configuration schema [.NET Framework], app settings
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
-author: rpetrusha
+author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d02f9f952c0ca7651d27571111a2d29f3d1130fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3b931b76aa09b3f62fbd799990975268af4f7293
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921299"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119217"
 ---
 # <a name="app-settings-schema"></a>Schemat ustawień aplikacji
 
 Zawiera niestandardowe ustawienia aplikacji, takie jak ścieżki plików, adresy URL usług sieci Web XML lub inne niestandardowe informacje o konfiguracji dla aplikacji.
 
 [ **\<> konfiguracji**](../configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clear>** ](clear-element-for-appsettings.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<remove>** ](remove-element-for-appsettings.md)
+&nbsp;&nbsp;[ **\<appSettings >** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dodaj >** ](add-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wyczyść >** ](clear-element-for-appsettings.md)   
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Usuń >** ](remove-element-for-appsettings.md)
 
 | Element | Opis |
 | ------- | ----------- |
-| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | **Zawiera\<Dodaj >** ,  **\<Wyczyść >** i  **\<Usuń Tagi >** w celu kontrolowania ustawień aplikacji. Ma opcjonalny atrybut **pliku** . |
-| [ **\<add>** ](add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny **> appSettings.\<** Wymaga atrybutów **klucza** i **wartości** . |
-| [ **\<clear>** ](clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny **> appSettings.\<** Nie ma atrybutów. |
-| [ **\<remove>** ](remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny **> appSettings.\<** Wymaga atrybutu **klucza** . |
+| [ **\<appSettings >** ](appsettings-element-for-configuration.md) | Zawiera **\<dodaj >** , **\<wyczyść >** i **\<Usuń Tagi >** w celu kontrolowania ustawień aplikacji. Ma opcjonalny atrybut **pliku** . |
+| [ **\<Dodaj >** ](add-element-for-appsettings.md) | Definiuje ustawienie. Element podrzędny **\<AppSettings**. Wymaga atrybutów **klucza** i **wartości** . |
+| [ **\<Wyczyść >** ](clear-element-for-appsettings.md) | Czyści wszystkie ustawienia. Element podrzędny **\<AppSettings**. Nie ma atrybutów. |
+| [ **\<Usuń >** ](remove-element-for-appsettings.md) | Usuwa ustawienie. Element podrzędny **\<AppSettings**. Wymaga atrybutu **klucza** . |
 
-## <a name="appsettings-element"></a>\<appSettings, > element
+## <a name="appsettings-element"></a>\<appSettings > element
 
-Ten element zawiera  **\<Dodawanie >** ,  **\<czyszczenie >** i  **\<Usuwanie tagów >** w celu kontrolowania ustawień aplikacji. Definiuje opcjonalny atrybut dla **pliku**.
+Ten element zawiera **\<dodaj >** , **\<wyczyść >** i **\<Usuń Tagi >** w celu kontrolowania ustawień aplikacji. Definiuje opcjonalny atrybut dla **pliku**.
 
-## <a name="add-element"></a>\<Dodaj element >
+## <a name="add-element"></a>\<dodać elementu >
 
 Dodaje niestandardowe ustawienie aplikacji jako parę nazwa/wartość do kolekcji ustawień aplikacji. Definiuje atrybuty **klucza** i **wartości**.
 
-## <a name="clear-element"></a>\<Wyczyść element >
+## <a name="clear-element"></a>\<Wyczyść > elementu
 
-Usuwa wszystkie odwołania do dziedziczonych ustawień aplikacji niestandardowych i zezwala tylko na odwołania, które są dodawane przez  **\<Dodawanie >** elementów po  **\<elemencie Clear >** . Nie definiuje żadnych atrybutów.
+Usuwa wszystkie odwołania do dziedziczonych ustawień aplikacji niestandardowych i zezwala tylko na odwołania, które są dodawane przez **\<dodaj >** elementy po **\<Wyczyść >** elementu. Nie definiuje żadnych atrybutów.
 
-## <a name="remove-element"></a>\<Usuń element >
+## <a name="remove-element"></a>\<usunąć elementu >
 
 Usuwa odwołanie do dziedziczonego ustawienia aplikacji niestandardowej z kolekcji ustawień aplikacji. Definiuje atrybut dla **klucza**.
 

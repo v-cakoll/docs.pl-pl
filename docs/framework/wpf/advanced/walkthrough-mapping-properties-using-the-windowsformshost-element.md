@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost'
+title: 'Wskazówki: mapowanie właściwości z użyciem elementu WindowsFormsHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,34 +8,34 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: a7c36e8fc150fe3268120ed728f1bed87d24e800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8a83dd3f7327d00979431ca7fa801ff642a4eef
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623587"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197800"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Przewodnik: mapowanie właściwości przy użyciu kontrolki WindowsFormsHost
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>Wskazówki: mapowanie właściwości z użyciem elementu WindowsFormsHost
 
-W tym instruktażu dowiesz się, jak używać <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> właściwości, aby zamapować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości do odpowiedniej właściwości hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.
+W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> do mapowania właściwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do odpowiednich właściwości w hostowanej kontroli [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
-Zadania zilustrowane w tym przewodniku obejmują:
+Zadania przedstawione w tym instruktażu obejmują:
 
 - Tworzenie projektu.
 
-- Definiowanie układów aplikacji.
+- Definiowanie układu aplikacji.
 
 - Definiowanie nowego mapowania właściwości.
 
-- Usuwanie mapowania właściwości domyślnej.
+- Usuwanie domyślnego mapowania właściwości.
 
 - Zastępowanie domyślnego mapowania właściwości.
 
 - Rozszerzanie domyślnego mapowania właściwości.
 
-Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Mapowanie właściwości przy użyciu przykładu elementu WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
+Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [Mapowanie właściwości przy użyciu przykładu elementu WindowsFormsHost](https://go.microsoft.com/fwlink/?LinkID=160019).
 
-Po zakończeniu będzie można mapować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości do odpowiedniej właściwości hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.
+Po zakończeniu będzie możliwe mapowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości do odpowiednich właściwości w hostowanej kontrolce [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -43,21 +43,21 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 - Visual Studio 2017
 
-## <a name="create-and-set-up-the-project"></a>Tworzenie i konfigurowanie projektu
+## <a name="create-and-set-up-the-project"></a>Tworzenie i Konfigurowanie projektu
 
-1. Tworzenie **aplikacja WPF** projektu o nazwie `PropertyMappingWithWfhSample`.
+1. Utwórz projekt **aplikacji WPF** o nazwie `PropertyMappingWithWfhSample`.
 
-2. W **Eksploratora rozwiązań**, Dodaj odwołanie do zestawu WindowsFormsIntegration, która nosi nazwę WindowsFormsIntegration.dll.
+2. W **Eksplorator rozwiązań**Dodaj odwołanie do zestawu WindowsFormsIntegration o nazwie WindowsFormsIntegration. dll.
 
-3. W **Eksploratora rozwiązań**, dodaj odwołania do zestawów System.Drawing i pozycję System.Windows.Forms.
+3. W **Eksplorator rozwiązań**Dodaj odwołania do zestawów System. Drawing i system. Windows. Forms.
 
 ## <a name="defining-the-application-layout"></a>Definiowanie układu aplikacji
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]— Na podstawie aplikacja używa <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu hosta [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli.
+Aplikacja oparta na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> do hostowania kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 ### <a name="to-define-the-application-layout"></a>Aby zdefiniować układ aplikacji
 
-1. Otwórz Window1.xaml w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+1. Otwórz window1. XAML w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
 2. Zastąp istniejący kod następującym kodem.
 
@@ -65,93 +65,93 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 3. Otwórz Window1.xaml.cs w edytorze kodu.
 
-4. W górnej części pliku zaimportuj następujące przestrzenie nazw.
+4. W górnej części pliku Zaimportuj następujące przestrzenie nazw.
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
 
-## <a name="defining-a-new-property-mapping"></a>Definiowanie nowe mapowanie właściwości
+## <a name="defining-a-new-property-mapping"></a>Definiowanie nowego mapowania właściwości
 
-<xref:System.Windows.Forms.Integration.WindowsFormsHost> Elementu udostępnia kilka domyślne mapowania właściwości. Dodaj nowe mapowanie właściwości przez wywołanie metody <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metody <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> zawiera kilka domyślnych mapowań właściwości. Dodaj nowe mapowanie właściwości, wywołując metodę <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> w <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 ### <a name="to-define-a-new-property-mapping"></a>Aby zdefiniować nowe mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji klasy `Window1`.
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
 
-     `AddClipMapping` Metoda dodaje nowe mapowanie dla <xref:System.Windows.UIElement.Clip%2A> właściwości.
+     Metoda `AddClipMapping` dodaje nowe mapowanie dla właściwości <xref:System.Windows.UIElement.Clip%2A>.
 
-     `OnClipChange` Tłumaczy metoda <xref:System.Windows.UIElement.Clip%2A> właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.Region%2A> właściwości.
+     Metoda `OnClipChange` przekształca Właściwość <xref:System.Windows.UIElement.Clip%2A> na Właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A>.
 
-     `Window1_SizeChanged` Obsługiwała okna <xref:System.Windows.FrameworkElement.SizeChanged> zdarzeń i rozmiar obszaru przycinania do rozmiaru okna aplikacji.
+     Metoda `Window1_SizeChanged` obsługuje zdarzenie <xref:System.Windows.FrameworkElement.SizeChanged> okna i rozmiary obszaru przycinania w celu dopasowania go do okna aplikacji.
 
-## <a name="removing-a-default-property-mapping"></a>Usuwanie mapowania właściwości domyślne
+## <a name="removing-a-default-property-mapping"></a>Usuwanie domyślnego mapowania właściwości
 
-Usuń mapowanie właściwości domyślne przez wywołanie metody <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metody <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Usuń domyślne mapowanie właściwości, wywołując metodę <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> w <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
-### <a name="to-remove-a-default-property-mapping"></a>Aby usunąć mapowanie właściwości domyślne
+### <a name="to-remove-a-default-property-mapping"></a>Aby usunąć domyślne mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji klasy `Window1`.
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
 
-     `RemoveCursorMapping` Metoda usuwa domyślnego mapowania dla <xref:System.Windows.FrameworkElement.Cursor%2A> właściwości.
+     Metoda `RemoveCursorMapping` usuwa mapowanie domyślne dla właściwości <xref:System.Windows.FrameworkElement.Cursor%2A>.
 
 ## <a name="replacing-a-default-property-mapping"></a>Zastępowanie domyślnego mapowania właściwości
 
-Zastąp domyślne mapowanie właściwości przez usunięcie domyślnego mapowania i wywoływania <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metody <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>.
+Zastąp domyślne mapowanie właściwości, usuwając mapowanie domyślne i wywołując metodę <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> w <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 ### <a name="to-replace-a-default-property-mapping"></a>Aby zastąpić domyślne mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji klasy `Window1`.
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
 
-     `ReplaceFlowDirectionMapping` Metoda zastępuje domyślne mapowanie dla <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości.
+     Metoda `ReplaceFlowDirectionMapping` zastępuje domyślne mapowanie dla właściwości <xref:System.Windows.FrameworkElement.FlowDirection%2A>.
 
-     `OnFlowDirectionChange` Tłumaczy metoda <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Control.RightToLeft%2A> właściwości.
+     Metoda `OnFlowDirectionChange` przekształca Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> na Właściwość [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A>.
 
-     `cb_CheckedChanged` Metodę uchwytów <xref:System.Windows.Forms.CheckBox.CheckedChanged> zdarzenie na <xref:System.Windows.Forms.CheckBox> kontroli. Przypisuje <xref:System.Windows.FrameworkElement.FlowDirection%2A> właściwości na podstawie wartości z <xref:System.Windows.Forms.CheckBox.CheckState%2A> właściwości
+     Metoda `cb_CheckedChanged` obsługuje zdarzenie <xref:System.Windows.Forms.CheckBox.CheckedChanged> w kontrolce <xref:System.Windows.Forms.CheckBox>. Przypisuje Właściwość <xref:System.Windows.FrameworkElement.FlowDirection%2A> na podstawie wartości właściwości <xref:System.Windows.Forms.CheckBox.CheckState%2A>
 
-## <a name="extending-a-default-property-mapping"></a>Rozszerzanie domyślne mapowanie właściwości
+## <a name="extending-a-default-property-mapping"></a>Rozszerzanie domyślnego mapowania właściwości
 
-Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą własnych mapowania.
+Można użyć domyślnego mapowania właściwości, a także poszerzyć go przy użyciu własnego mapowania.
 
-### <a name="to-extend-a-default-property-mapping"></a>Aby rozszerzyć domyślne mapowanie właściwości
+### <a name="to-extend-a-default-property-mapping"></a>Aby zwiększyć domyślne mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Window1` klasy.
+- Skopiuj następujący kod do definicji klasy `Window1`.
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
 
-     `ExtendBackgroundMapping` Metoda dodaje translator właściwości niestandardowych do istniejących <xref:System.Windows.Controls.Control.Background%2A> mapowania właściwości.
+     Metoda `ExtendBackgroundMapping` dodaje translator właściwości niestandardowych do istniejącego mapowania właściwości <xref:System.Windows.Controls.Control.Background%2A>.
 
-     `OnBackgroundChange` Metoda przypisuje określonego obrazu do obsługiwanego formantu <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwości. `OnBackgroundChange` Metoda jest wywoływana po zastosowaniu do domyślnego mapowania właściwości.
+     Metoda `OnBackgroundChange` przypisuje określony obraz do właściwości <xref:System.Windows.Forms.Control.BackgroundImage%2A> kontrolki hostowanej. Metoda `OnBackgroundChange` jest wywoływana po zastosowaniu domyślnego mapowania właściwości.
 
 ## <a name="initializing-your-property-mappings"></a>Inicjowanie mapowań właściwości
 
-Konfigurowanie mapowań właściwości przez wywołanie metody opisany wcześniej w <xref:System.Windows.FrameworkElement.Loaded> programu obsługi zdarzeń.
+Skonfiguruj mapowania właściwości, wywołując poprzednio opisane metody w obsłudze zdarzeń <xref:System.Windows.FrameworkElement.Loaded>.
 
-### <a name="to-initialize-your-property-mappings"></a>Aby zainicjować mapowań właściwości
+### <a name="to-initialize-your-property-mappings"></a>Aby zainicjować mapowania właściwości
 
-1. Skopiuj następujący kod do definicji `Window1` klasy.
+1. Skopiuj następujący kod do definicji klasy `Window1`.
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
-     `WindowLoaded` Metodę uchwytów <xref:System.Windows.FrameworkElement.Loaded> zdarzeń i wykonuje następujące inicjowanie.
+     Metoda `WindowLoaded` obsługuje zdarzenie <xref:System.Windows.FrameworkElement.Loaded> i wykonuje następujące inicjalizacje.
 
-    - Tworzy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox> kontroli.
+    - Tworzy kontrolkę <xref:System.Windows.Forms.CheckBox> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
-    - Wywołuje metody, które są zdefiniowane we wcześniejszej części przewodnika do skonfigurowania mapowania właściwości.
+    - Wywołuje metody zdefiniowane wcześniej w przewodniku, aby skonfigurować mapowania właściwości.
 
-    - Przypisuje wartości początkowe, aby mapowanych właściwości.
+    - Przypisuje początkowe wartości do mapowanych właściwości.
 
-2. Naciśnij klawisz **F5** Aby skompilować i uruchomić aplikację. Kliknij pole wyboru, aby zobaczyć efekt <xref:System.Windows.FrameworkElement.FlowDirection%2A> mapowania. Po kliknięciu pola wyboru, układ odwraca orientacji lewa prawa.
+2. Naciśnij klawisz **F5** , aby skompilować i uruchomić aplikację. Kliknij pole wyboru, aby zobaczyć efekt mapowania <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Po kliknięciu pola wyboru układ zmieni orientację w lewo i w prawo.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -159,5 +159,5 @@ Konfigurowanie mapowań właściwości przez wywołanie metody opisany wcześnie
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
-- [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: Hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [Przewodnik: hosting kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

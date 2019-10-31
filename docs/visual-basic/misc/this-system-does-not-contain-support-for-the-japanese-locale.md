@@ -1,25 +1,25 @@
 ---
-title: Ten system nie obsługuje japońskich ustawieniach regionalnych
+title: Ten system nie obsługuje ustawień regionalnych dla języka japońskiego
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_JPNNotSupported
 ms.assetid: 986d0379-c9d1-4004-b9ac-8d3bd95dfe85
-ms.openlocfilehash: f1a4e02d66d2073fd5172616214533bf4358422a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7b8f5e50c5a59a946724b817eb8979eb520b30b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942639"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198115"
 ---
-# <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Ten system nie obsługuje japońskich ustawieniach regionalnych
-Podjęto próbę użycia `VbStrConv.Japanese` element członkowski wyliczenia, ale system nie obsługuje japońskich ustawieniach regionalnych.  
+# <a name="this-system-does-not-contain-support-for-the-japanese-locale"></a>Ten system nie obsługuje ustawień regionalnych dla języka japońskiego
+Próbujesz użyć elementu członkowskiego wyliczenia `VbStrConv.Japanese`, ale system nie obsługuje ustawień regionalnych dla języka japońskiego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Uaktualnienie komputera do obsługi japońskich ustawieniach regionalnych lub uruchom aplikację na komputerze, który obsługuje ustawień regionalnych.  
+1. Uaktualnij maszynę pod kątem obsługi ustawień regionalnych w języku japońskim lub Uruchom aplikację na komputerze, który obsługuje ustawienia regionalne.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Globalization>
 
-- [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Opracowywanie aplikacji globalnych i zlokalizowanych](/visualstudio/ide/globalizing-and-localizing-applications)

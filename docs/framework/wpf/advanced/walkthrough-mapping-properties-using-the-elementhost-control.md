@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: mapowanie właściwości przy użyciu kontrolki ElementHost'
+title: 'Wskazówki: mapowanie właściwości z użyciem formantu ElementHost'
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 3c74878a91f89e14837b42a45a35ab35bcd5cf68
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650823"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197817"
 ---
-# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Przewodnik: mapowanie właściwości przy użyciu kontrolki ElementHost
+# <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>Wskazówki: mapowanie właściwości z użyciem formantu ElementHost
 
-W tym instruktażu dowiesz się, jak używać <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> właściwości, aby zamapować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości do odpowiedniej właściwości hostowany [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementu.
+W tym instruktażu przedstawiono sposób użycia właściwości <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> do mapowania właściwości [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] na odpowiednie właściwości w hostowanym elemencie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-Zadania zilustrowane w tym przewodniku obejmują:
+Zadania przedstawione w tym instruktażu obejmują:
 
 - Tworzenie projektu.
 
 - Definiowanie nowego mapowania właściwości.
 
-- Usuwanie mapowania właściwości domyślnej.
+- Usuwanie domyślnego mapowania właściwości.
 
 - Rozszerzanie domyślnego mapowania właściwości.
 
-Lista zadań przedstawione w niniejszym przewodniku kompletny kod znajduje się [Mapowanie właściwości przy użyciu przykładu formantu ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
+Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [Mapowanie właściwości przy użyciu przykładu kontrolki ElementHost](https://go.microsoft.com/fwlink/?LinkID=160018).
 
-Po zakończeniu będzie można mapować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości do odpowiadającego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości hostowanego elementu.
+Po zakończeniu będzie możliwe mapowanie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] właściwości do odpowiednich [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości w hostowanym elemencie.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -43,100 +43,100 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ### <a name="to-create-the-project"></a>Aby utworzyć projekt
 
-1. Tworzenie **Windows Forms App** projektu o nazwie `PropertyMappingWithElementHost`.
+1. Utwórz projekt **aplikacji Windows Forms** o nazwie `PropertyMappingWithElementHost`.
 
-2. W **Eksploratora rozwiązań**, dodaj odwołania do następujących [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zestawów.
+2. W **Eksplorator rozwiązań**Dodaj odwołania do następujących zestawów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-    - PresentationCore
+    - 'Presentationcore
 
-    - PresentationFramework
+    - Platformie docelowej
 
-    - WindowsBase
+    - 'Windowsbase
 
     - WindowsFormsIntegration
 
-3. Skopiuj poniższy kod w górnej części `Form1` pliku kodu.
+3. Skopiuj poniższy kod do góry pliku kodu `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4. Otwórz `Form1` w programie Windows Forms Designer. Kliknij dwukrotnie formularz, aby dodać moduł obsługi zdarzenia <xref:System.Windows.Forms.Form.Load> zdarzeń.
+4. Otwórz `Form1` w Projektant formularzy systemu Windows. Kliknij dwukrotnie formularz, aby dodać program obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Form.Load>.
 
-5. Wróć do projektanta Windows Forms i Dodaj program obsługi zdarzeń w formularzu <xref:System.Windows.Forms.Control.Resize> zdarzeń. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń za pomocą projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
+5. Wróć do Projektant formularzy systemu Windows i Dodaj procedurę obsługi zdarzeń dla zdarzenia <xref:System.Windows.Forms.Control.Resize> formularza. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie obsługi zdarzeń przy użyciu projektanta](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100)).
 
-6. Zadeklaruj <xref:System.Windows.Forms.Integration.ElementHost> pole `Form1` klasy.
+6. Zadeklaruj pole <xref:System.Windows.Forms.Integration.ElementHost> w klasie `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
 
-## <a name="defining-new-property-mappings"></a>Definiowanie nowego mapowania właściwości
+## <a name="defining-new-property-mappings"></a>Definiowanie nowych mapowań właściwości
 
-<xref:System.Windows.Forms.Integration.ElementHost> Control oferuje kilka domyślnego mapowania właściwości. Dodaj nowe mapowanie właściwości przez wywołanie metody <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> metody <xref:System.Windows.Forms.Integration.ElementHost> formantu <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.
+Formant <xref:System.Windows.Forms.Integration.ElementHost> zawiera kilka domyślnych mapowań właściwości. Aby dodać nowe mapowanie właściwości, należy wywołać metodę <xref:System.Windows.Forms.Integration.PropertyMap.Add%2A> na <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>kontrolce <xref:System.Windows.Forms.Integration.ElementHost>.
 
-### <a name="to-define-new-property-mappings"></a>Aby zdefiniować nowe mapowanie właściwości
+### <a name="to-define-new-property-mappings"></a>Aby zdefiniować nowe mapowania właściwości
 
-1. Skopiuj następujący kod do definicji `Form1` klasy.
+1. Skopiuj następujący kod do definicji klasy `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
 
-     `AddMarginMapping` Metoda dodaje nowe mapowanie dla <xref:System.Windows.Forms.Control.Margin%2A> właściwości.
+     Metoda `AddMarginMapping` dodaje nowe mapowanie dla właściwości <xref:System.Windows.Forms.Control.Margin%2A>.
 
-     `OnMarginChange` Tłumaczy metoda <xref:System.Windows.Forms.Control.Margin%2A> właściwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A> właściwości.
+     Metoda `OnMarginChange` przekształca Właściwość <xref:System.Windows.Forms.Control.Margin%2A> na Właściwość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.FrameworkElement.Margin%2A>.
 
-2. Skopiuj następujący kod do definicji `Form1` klasy.
+2. Skopiuj następujący kod do definicji klasy `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
 
-     `AddRegionMapping` Metoda dodaje nowe mapowanie dla <xref:System.Windows.Forms.Control.Region%2A> właściwości.
+     Metoda `AddRegionMapping` dodaje nowe mapowanie dla właściwości <xref:System.Windows.Forms.Control.Region%2A>.
 
-     `OnRegionChange` Tłumaczy metoda <xref:System.Windows.Forms.Control.Region%2A> właściwości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A> właściwości.
+     Metoda `OnRegionChange` przekształca Właściwość <xref:System.Windows.Forms.Control.Region%2A> na Właściwość [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.UIElement.Clip%2A>.
 
-     `Form1_Resize` Obsługiwała formularza <xref:System.Windows.Forms.Control.Resize> zdarzeń i rozmiar obszaru przycinania, aby dopasować element hostowany.
+     Metoda `Form1_Resize` obsługuje zdarzenie <xref:System.Windows.Forms.Control.Resize> formularza i rozmiary obszaru przycinania w celu dopasowania go do hostowanego elementu.
 
-## <a name="removing-a-default-property-mapping"></a>Usuwanie mapowania właściwości domyślne
+## <a name="removing-a-default-property-mapping"></a>Usuwanie domyślnego mapowania właściwości
 
-Usuń mapowanie właściwości domyślne przez wywołanie metody <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> metody <xref:System.Windows.Forms.Integration.ElementHost> formantu <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>.
+Usuń domyślne mapowanie właściwości, wywołując metodę <xref:System.Windows.Forms.Integration.PropertyMap.Remove%2A> na <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A>kontroli <xref:System.Windows.Forms.Integration.ElementHost>.
 
-### <a name="to-remove-a-default-property-mapping"></a>Aby usunąć mapowanie właściwości domyślne
+### <a name="to-remove-a-default-property-mapping"></a>Aby usunąć domyślne mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Form1` klasy.
+- Skopiuj następujący kod do definicji klasy `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
 
-     `RemoveCursorMapping` Metoda usuwa domyślnego mapowania dla <xref:System.Windows.Forms.Control.Cursor%2A> właściwości.
+     Metoda `RemoveCursorMapping` usuwa mapowanie domyślne dla właściwości <xref:System.Windows.Forms.Control.Cursor%2A>.
 
-## <a name="extending-a-default-property-mapping"></a>Rozszerzanie domyślne mapowanie właściwości
+## <a name="extending-a-default-property-mapping"></a>Rozszerzanie domyślnego mapowania właściwości
 
-Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą własnych mapowania.
+Można użyć domyślnego mapowania właściwości, a także poszerzyć go przy użyciu własnego mapowania.
 
-### <a name="to-extend-a-default-property-mapping"></a>Aby rozszerzyć domyślne mapowanie właściwości
+### <a name="to-extend-a-default-property-mapping"></a>Aby zwiększyć domyślne mapowanie właściwości
 
-- Skopiuj następujący kod do definicji `Form1` klasy.
+- Skopiuj następujący kod do definicji klasy `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
 
-     `ExtendBackColorMapping` Metoda dodaje translator właściwości niestandardowych do istniejących <xref:System.Windows.Forms.Control.BackColor%2A> mapowania właściwości.
+     Metoda `ExtendBackColorMapping` dodaje translator właściwości niestandardowych do istniejącego mapowania właściwości <xref:System.Windows.Forms.Control.BackColor%2A>.
 
-     `OnBackColorChange` Metoda przypisuje określonego obrazu do obsługiwanego formantu <xref:System.Windows.Controls.Control.Background%2A> właściwości. `OnBackColorChange` Metoda jest wywoływana po zastosowaniu do domyślnego mapowania właściwości.
+     Metoda `OnBackColorChange` przypisuje określony obraz do właściwości <xref:System.Windows.Controls.Control.Background%2A> kontrolki hostowanej. Metoda `OnBackColorChange` jest wywoływana po zastosowaniu domyślnego mapowania właściwości.
 
-## <a name="initialize-your-property-mappings"></a>Inicjowanie mapowań właściwości
+## <a name="initialize-your-property-mappings"></a>Inicjuj mapowania właściwości
 
-1. Skopiuj następujący kod do definicji `Form1` klasy.
+1. Skopiuj następujący kod do definicji klasy `Form1`.
 
      [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
 
-     `Form1_Load` Metodę uchwytów <xref:System.Windows.Forms.Form.Load> zdarzeń i wykonuje następujące inicjowanie.
+     Metoda `Form1_Load` obsługuje zdarzenie <xref:System.Windows.Forms.Form.Load> i wykonuje następujące inicjalizacje.
 
-    - Tworzy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button> elementu.
+    - Tworzy element <xref:System.Windows.Controls.Button> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-    - Wywołuje metody, które są zdefiniowane we wcześniejszej części przewodnika do skonfigurowania mapowania właściwości.
+    - Wywołuje metody zdefiniowane wcześniej w przewodniku, aby skonfigurować mapowania właściwości.
 
-    - Przypisuje wartości początkowe, aby mapowanych właściwości.
+    - Przypisuje początkowe wartości do mapowanych właściwości.
 
 2. Naciśnij klawisz F5, aby skompilować i uruchomić aplikację.
 
@@ -146,5 +146,5 @@ Możesz użyć domyślnego mapowania właściwości i rozszerzać go za pomocą 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Mapowanie właściwości Windows Forms i WPF](windows-forms-and-wpf-property-mapping.md)
-- [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Przewodnik: Hosting złożonego formantu WPF w formularzach Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

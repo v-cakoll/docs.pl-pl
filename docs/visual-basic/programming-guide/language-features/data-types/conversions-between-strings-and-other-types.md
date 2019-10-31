@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: e1530c1772808249546b453294fc848c31c1e581
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 06dabbb5d5dfbfb545f01afb157fd532ca0551df
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582938"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197332"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konwertowanie pomiędzy ciągami a innymi typami danych (Visual Basic)
 Można przekonwertować wartość liczbową, `Boolean` lub daty/godziny na `String`. Możesz również skonwertować w odwrotnym kierunku — od wartości ciągu na liczbowy, `Boolean` lub `Date` — pod warunkiem, że zawartość ciągu może być interpretowana jako prawidłowa wartość docelowego typu danych. Jeśli nie, wystąpi błąd w czasie wykonywania.  
@@ -49,4 +49,4 @@ Str = "The total count is " & count
 - [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
 - [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Opracowywanie aplikacji globalnych i zlokalizowanych](/visualstudio/ide/globalizing-and-localizing-applications)

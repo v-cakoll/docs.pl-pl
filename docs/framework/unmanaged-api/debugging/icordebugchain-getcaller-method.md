@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d11693473dc4ed4438bbcad7f95c1b20adc1062b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744972"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192138"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller — Metoda
-Pobiera łańcucha, który wywołuje ten łańcuch.  
+Pobiera łańcuch, który wywołał ten łańcuch.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT GetCaller (
   
 ## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcucha wywołania.  
+ określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje łańcuch wywoływania.  
   
- Jeśli ten łańcuch spontanicznie została wywołana (tak jak w przypadku gdy ten łańcuch lub debuger zainicjowano stosu wywołań), `ppChain` będzie miał wartość null.  
+ Jeśli ten łańcuch został wywołany spontanicznie (tak jak w przypadku tego łańcucha lub debugera zainicjował stos wywołań), `ppChain` będzie miał wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Łańcucha wywołania może być w innym wątku, jeśli połączenie zostało organizowane przez wątków.  
+ Łańcuch wywołujący może znajdować się w innym wątku, jeśli wywołanie zostało zorganizowane między wątkami.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

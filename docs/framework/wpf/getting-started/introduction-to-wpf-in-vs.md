@@ -15,22 +15,22 @@ helpviewer_keywords:
 - WPF [WPF], about Windows Presentation Foundation
 - 3-D rendering [WPF]
 ms.assetid: 582a314e-e23d-4144-b45b-acbbd5579252
-ms.openlocfilehash: d2a0cdb7e49fb584d0824edcefe710313ba21d4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 893f9cd881b841409829d8f6a0513ee4368535ab
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934683"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197595"
 ---
 # <a name="introduction-to-wpf-in-visual-studio"></a>Wprowadzenie do platformy WPF w programie Visual Studio
-Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom jednolity model programowania do tworzenia aplikacji klasycznych line-of-business na Windows.  
+Windows Presentation Foundation (WPF) w programie Visual Studio oferuje deweloperom ujednolicony model programowania do tworzenia aplikacji klasycznych dla przedsiębiorstw w systemie Windows.  
   
- [Twórz aplikacje pulpitu za pomocą programu Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Tworzenie aplikacji klasycznych za pomocą Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
  [Projektowanie XAML w programach Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
   
- [Wprowadzenie do WPF](/visualstudio/designers/introduction-to-wpf)  
+ [Wprowadzenie do WPF](/dotnet/framework/wpf/introduction-to-wpf)  
   
- [Platformy WPF w programie .NET Framework](../index.md)  
+ [WPF w .NET Framework](../index.md)  
   
- [Get Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+ [Pobierz program Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)

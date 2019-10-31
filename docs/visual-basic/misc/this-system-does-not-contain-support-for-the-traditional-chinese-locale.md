@@ -1,25 +1,25 @@
 ---
-title: Ten system nie obsługuje dla ustawień regionalnych chiński tradycyjny
+title: Ten system nie obsługuje ustawień regionalnych tradycyjnych chińskich
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_TCNotSupported
 ms.assetid: 95bace92-c7b9-4641-b71f-c088ddb418c9
-ms.openlocfilehash: 43b94b3382c4ce62afbdce6abcd4aad10b46ca58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8332a82ef2c2e16786b0d3c843ade0aa01cb2ef6
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022743"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198075"
 ---
-# <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>Ten system nie obsługuje dla ustawień regionalnych chiński tradycyjny
-Podjęto próbę użycia `VbStrConv.TraditionalChinese` element członkowski wyliczenia, ale system nie obsługuje ustawień regionalnych chiński tradycyjny.  
+# <a name="this-system-does-not-contain-support-for-the-traditional-chinese-locale"></a>Ten system nie obsługuje ustawień regionalnych tradycyjnych chińskich
+Podjęto próbę użycia elementu członkowskiego wyliczenia `VbStrConv.TraditionalChinese`, ale system nie obsługuje tradycyjnych ustawień regionalnych w języku chińskim.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Uaktualnienie komputera do obsługi tradycyjny, chiński ustawień regionalnych lub uruchom aplikację na komputerze, który obsługuje ustawień regionalnych.  
+1. Uaktualnij maszynę, aby obsługiwała tradycyjne ustawienia regionalne w języku chińskim, lub Uruchom aplikację na komputerze, który obsługuje ustawienia regionalne.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Globalization>
 
-- [Wprowadzenie do aplikacji międzynarodowych opartych na programie .NET Framework](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+- [Opracowywanie aplikacji globalnych i zlokalizowanych](/visualstudio/ide/globalizing-and-localizing-applications)

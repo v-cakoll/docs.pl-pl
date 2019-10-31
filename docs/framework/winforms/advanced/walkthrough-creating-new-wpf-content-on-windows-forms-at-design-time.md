@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Tworzenie nowej zawartości WPF na formularzach systemu Windows w czasie projektowania'
+title: 'Wskazówki: tworzenie nowej zawartości WPF na formularzach systemu Windows w czasie projektowania'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,14 +11,14 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5e5112aa0b025648ce68a93f0f3da026ec99fe89
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: fc6f988d6ffd270eba4abe277ca34fa2eeec56fd
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987143"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197427"
 ---
-# <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Utwórz nową zawartość WPF na Windows Forms w czasie projektowania
+# <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Przewodnik: Tworzenie nowej zawartości WPF na Windows Forms w czasie projektowania
 
 W tym artykule pokazano, jak utworzyć formant Windows Presentation Foundation (WPF) do użycia w aplikacjach opartych na Windows Forms.
 
@@ -28,21 +28,21 @@ Aby ukończyć ten przewodnik, potrzebujesz programu Visual Studio.
 
 ## <a name="create-the-project"></a>Utwórz projekt
 
-Otwórz program Visual Studio i Utwórz nowy projekt **aplikacji Windows Forms (.NET Framework)** w Visual Basic lub wizualizacji `HostingWpf` C# o nazwie.
+Otwórz program Visual Studio i Utwórz nowy projekt **aplikacji Windows Forms (.NET Framework)** w Visual Basic lub wizualizacji C# o nazwie `HostingWpf`.
 
 > [!NOTE]
 > W przypadku hostowania zawartości WPF C# obsługiwane są tylko projekty i Visual Basic.
 
 ## <a name="create-a-new-wpf-control"></a>Utwórz nową kontrolkę WPF
 
-Utworzenie nowej kontrolki WPF i dodanie jej do projektu jest tak proste jak dodanie innego elementu do projektu. Projektant formularzy systemu Windows działa z określonym rodzajem kontrolki o nazwie *formant złożony*lub *kontrolka użytkownika*. Aby uzyskać więcej informacji na temat kontrolek użytkownika <xref:System.Windows.Controls.UserControl>WPF, zobacz.
+Utworzenie nowej kontrolki WPF i dodanie jej do projektu jest tak proste jak dodanie innego elementu do projektu. Projektant formularzy systemu Windows działa z określonym rodzajem kontrolki o nazwie *formant złożony*lub *kontrolka użytkownika*. Aby uzyskać więcej informacji na temat kontrolek użytkownika WPF, zobacz <xref:System.Windows.Controls.UserControl>.
 
 > [!NOTE]
-> Typ dla WPF jest różny od typu kontrolki użytkownika dostarczonej przez Windows Forms, która jest również nazywana <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>. <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>
+> Typ <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> dla WPF jest różny od typu kontrolki użytkownika dostarczonej przez Windows Forms, która jest również nazywana <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.
 
 Aby utworzyć nową kontrolkę WPF:
 
-1. W **Eksplorator rozwiązań**Dodaj nowy projekt **biblioteki formantów użytkownika WPF (.NET Framework)** do rozwiązania. Użyj domyślnej nazwy biblioteki `WpfControlLibrary1`kontrolek. Domyślna nazwa kontrolki to `UserControl1.xaml`.
+1. W **Eksplorator rozwiązań**Dodaj nowy projekt **biblioteki formantów użytkownika WPF (.NET Framework)** do rozwiązania. Użyj domyślnej nazwy biblioteki formantów `WpfControlLibrary1`. Domyślna nazwa kontrolki to `UserControl1.xaml`.
 
    Dodanie nowej kontrolki ma następujące skutki:
 
@@ -54,40 +54,40 @@ Aby utworzyć nową kontrolkę WPF:
 
    - Plik UserControl1. XAML zostanie otwarty w projektancie WPF dla programu Visual Studio.
 
-2. W widok Projekt upewnij się, że `UserControl1` jest zaznaczone.
+2. W widok Projekt upewnij się, że wybrano pozycję `UserControl1`.
 
-3. W oknie **Właściwości** ustaw wartość <xref:System.Windows.FrameworkElement.Width%2A> właściwości i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
+3. W oknie **Właściwości** ustaw wartość właściwości <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A> na **200**.
 
-4. Z **przybornika**przeciągnij <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> kontrolkę na powierzchnię projektu.
+4. Z **przybornika**przeciągnij kontrolkę <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> na powierzchnię projektu.
 
-5. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Controls.TextBox.Text%2A> właściwości na **hostowana zawartość**.
+5. W oknie **Właściwości** ustaw wartość właściwości <xref:System.Windows.Controls.TextBox.Text%2A> na **hostowaną zawartość**.
 
    > [!NOTE]
-   > Ogólnie rzecz biorąc, należy hostować bardziej zaawansowaną zawartość WPF. <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> Kontrolka jest używana w tym miejscu tylko do celów informacyjnych.
+   > Ogólnie rzecz biorąc, należy hostować bardziej zaawansowaną zawartość WPF. Kontrolka <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> jest używana tutaj tylko do celów informacyjnych.
 
 6. Skompiluj projekt.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Dodawanie formantu WPF do formularza systemu Windows
 
-Nowa kontrolka WPF jest gotowa do użycia w formularzu. Windows Forms używa <xref:System.Windows.Forms.Integration.ElementHost> kontrolki do hostowania zawartości WPF.
+Nowa kontrolka WPF jest gotowa do użycia w formularzu. Windows Forms używa kontrolki <xref:System.Windows.Forms.Integration.ElementHost> do hostowania zawartości WPF.
 
 Aby dodać formant WPF do formularza systemu Windows:
 
 1. Otwórz `Form1` w Projektant formularzy systemu Windows.
 
-2. W przyborniku Znajdź kartę z **WPFUserControlLibraryą formantów użytkownika WPF**.
+2. W **przyborniku**Znajdź kartę z **WPFUserControlLibraryą formantów użytkownika WPF**.
 
-3. Przeciągnij wystąpienie do `UserControl1` formularza.
+3. Przeciągnij wystąpienie `UserControl1` na formularz.
 
-    - <xref:System.Windows.Forms.Integration.ElementHost> Formant jest automatycznie tworzony w formularzu, aby hostować formant WPF.
+    - Formant <xref:System.Windows.Forms.Integration.ElementHost> jest automatycznie tworzony w formularzu, aby hostować formant WPF.
 
-    - `elementHost1` <xref:System.Windows.Forms.Integration.ElementHost.Child%2A>Kontrolka ma nazwę i w oknie właściwości można zobaczyć, że jej właściwość jest ustawiona na UserControl1. <xref:System.Windows.Forms.Integration.ElementHost>
+    - Kontrolka <xref:System.Windows.Forms.Integration.ElementHost> ma nazwę `elementHost1` i w oknie **Właściwości** można zobaczyć, że właściwość <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> jest ustawiona na **UserControl1**.
 
     - Odwołania do zestawów WPF są dodawane do projektu.
 
-    - `elementHost1` Kontrolka zawiera Panel tagów inteligentnych, który zawiera dostępne opcje hostingu.
+    - Kontrolka `elementHost1` ma panel tagu inteligentnego, który zawiera dostępne opcje hostingu.
 
-4. W panelu Tagi inteligentne **ElementHost zadania** wybierz pozycję Zadokuj **w kontenerze nadrzędnym**.
+4. W panelu Tagi inteligentne **ElementHost zadania** wybierz pozycję **Zadokuj w kontenerze nadrzędnym**.
 
 5. Naciśnij klawisz **F5** , aby skompilować i uruchomić aplikację.
 
@@ -95,11 +95,11 @@ Aby dodać formant WPF do formularza systemu Windows:
 
 Windows Forms i WPF są różnymi technologiami, ale są one tak zaprojektowane, aby ściśle współpracować. Aby zapewnić bogatszy wygląd i zachowanie aplikacji, spróbuj wykonać następujące czynności:
 
-- Hostowanie kontrolki Windows Forms na stronie WPF. Aby uzyskać więcej informacji, [zobacz Przewodnik: Hostowanie formantu Windows Forms w WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hostowanie kontrolki Windows Forms na stronie WPF. Aby uzyskać więcej informacji, zobacz [Przewodnik: hosting formantu Windows Forms w WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
 
-- Zastosuj Windows Forms style wizualne do zawartości WPF. Aby uzyskać więcej informacji, zobacz [jak: Włącz style wizualne w aplikacji](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)hybrydowej.
+- Zastosuj Windows Forms style wizualne do zawartości WPF. Aby uzyskać więcej informacji, zobacz [jak: włączyć style wizualne w aplikacji hybrydowej](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
 
-- Zmień styl zawartości WPF. Aby uzyskać więcej informacji, [zobacz Przewodnik: Style zawartości](walkthrough-styling-wpf-content.md)WPF.
+- Zmień styl zawartości WPF. Aby uzyskać więcej informacji, zobacz [Przewodnik: style zawartości WPF](walkthrough-styling-wpf-content.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -107,4 +107,4 @@ Windows Forms i WPF są różnymi technologiami, ale są one tak zaprojektowane,
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migracja i współdziałanie](../../wpf/advanced/migration-and-interoperability.md)
 - [Korzystanie z kontrolek WPF](using-wpf-controls.md)
-- [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

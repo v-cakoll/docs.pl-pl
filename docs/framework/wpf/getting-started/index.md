@@ -6,28 +6,28 @@ helpviewer_keywords:
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 127ab96a6249db4e4c02c7633fcad04b1a1bbfb5
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922398"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197606"
 ---
 # <a name="getting-started-wpf"></a>Wprowadzenie (WPF)
-Windows Presentation Foundation (WPF) to struktura interfejsu użytkownika, która tworzy aplikacje klienta pulpitu. Platforma programistyczna WPF obsługuje szeroką gamę funkcje tworzenia aplikacji, w tym modelu aplikacji, zasobów, formanty, grafiki, układ, powiązań danych, dokumentów i zabezpieczeń. Jest podzbiorem .NET Framework, więc jeśli aplikacje zostały wcześniej utworzony za pomocą programu .NET Framework przy użyciu platformy ASP.NET lub formularzy Windows, doświadczenie w programowaniu należy się zapoznać. WPF używa Extensible Application Markup Language (XAML), aby zapewnić deklaratywny model programowania aplikacji. Ta sekcja zawiera tematy, które wprowadzają i pomóc Ci rozpocząć pracę przy użyciu platformy WPF.  
+Windows Presentation Foundation (WPF) to struktura interfejsu użytkownika, która tworzy aplikacje klienckie dla komputerów stacjonarnych. Platforma programistyczna WPF obsługuje szeroką gamę funkcji tworzenia aplikacji, takich jak model aplikacji, zasoby, formanty, grafika, układ, powiązanie danych, dokumenty i zabezpieczenia. Jest to podzestaw .NET Framework, więc jeśli wcześniej skompilowano aplikacje z .NET Framework przy użyciu ASP.NET lub Windows Forms, środowisko programistyczne powinno być znane. WPF używa Extensible Application Markup Language (XAML), aby zapewnić deklaratywny model dla programowania aplikacji. Ta sekcja zawiera tematy, które wprowadzają i ułatwiają rozpoczęcie pracy z programem WPF.  
   
-## <a name="where-should-i-start"></a>Gdzie mam zacząć?  
+## <a name="where-should-i-start"></a>Gdzie należy zacząć?  
   
 |||  
 |-|-|  
-|Chcę, aby przejść bezpośrednio...|[Przewodnik: Mój pierwszy aplikacji klasycznej WPF](walkthrough-my-first-wpf-desktop-application.md)|  
-|Jak projektowanie interfejsu użytkownika aplikacji?|[Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
-|Jesteś nowym użytkownikiem platformy .NET?|[Omówienie programu .NET Framework](../../get-started/overview.md)<br /><br /> [Podstawy aplikacji .NET framework](../../../standard/application-essentials.md)<br /><br /> [Wprowadzenie do języków Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
-|Więcej informacji o WPF...|[Wprowadzenie do platformy WPF w programie Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Przegląd XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Kontrolki](../controls/index.md)<br /><br /> [Powiązanie danych — omówienie](../data/data-binding-overview.md)|  
-|Jesteś deweloperem formularze Windows?|[Kontrolki formularzy Windows Forms i równoważne kontrolki WPF](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Współdziałanie WPF i Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
+|Chcę przeskoczyć do prawej strony...|[Przewodnik: moja pierwsza aplikacja klasyczna WPF](walkthrough-my-first-wpf-desktop-application.md)|  
+|Jak mogę Projektowanie interfejsu użytkownika aplikacji?|[Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
+|Jesteś nowym w programie .NET?|[Przegląd .NET Framework](../../get-started/overview.md)<br /><br /> [.NET Framework podstawowe aplikacje](../../../standard/application-essentials.md)<br /><br /> [Wprowadzenie do języków Visual C# i Visual Basic](/visualstudio/ide/quickstart-visual-basic-console)|  
+|Więcej informacji na temat platformy WPF...|[Wprowadzenie do platformy WPF w programie Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Przegląd XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Kontrolki](../controls/index.md)<br /><br /> [Powiązanie danych — omówienie](../data/data-binding-overview.md)|  
+|Jesteś deweloperem Windows Forms?|[Kontrolki formularzy Windows Forms i równoważne kontrolki WPF](../advanced/windows-forms-controls-and-equivalent-wpf-controls.md)<br /><br /> [Współdziałanie WPF i Windows Forms](../advanced/wpf-and-windows-forms-interoperation.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Biblioteka klas](../class-library-wpf.md)
 - [Projektowanie aplikacji](../app-development/index.md)
-- [.NET Framework Developer Center](https://www.microsoft.com/net)
+- [Centrum deweloperów .NET Framework](https://www.microsoft.com/net)

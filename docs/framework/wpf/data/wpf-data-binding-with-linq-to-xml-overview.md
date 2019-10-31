@@ -2,12 +2,12 @@
 title: Powiązanie danych WPF za pomocą LINQ to XML
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53bc5e09d3c837b69c8f215b1b5c61d1b745f683
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: HT
+ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139800"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197392"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>Omówienie powiązania danych WPF z LINQ to XML
 
@@ -36,7 +36,7 @@ Powiązanie danych WPF umożliwia elementowi interfejsu użytkownika kojarzenie 
 |Źródło powiązania|Obiekt źródłowy dla co najmniej jednej wartości, która jest dostarczana do elementu interfejsu użytkownika dla prezentacji. WPF automatycznie obsługuje następujące typy jako źródła powiązań: obiekty CLR, obiekty danych ADO.NET, dane XML (z zapytań XPath lub LINQ to XML) lub inne <xref:System.Windows.DependencyObject>.|
 |Ścieżka źródłowa|Właściwość źródła powiązania, która jest rozpoznawana jako wartość lub zbiór wartości, które mają być powiązane.|
 
-Właściwość zależności jest koncepcją specyficzną dla WPF, która reprezentuje dynamiczną obliczaną właściwość elementu interfejsu użytkownika. Na przykład właściwości zależności często mają wartości domyślne lub wartości, które są dostarczane przez element nadrzędny. Te właściwości specjalne są obsługiwane przez wystąpienia klasy <xref:System.Windows.DependencyProperty> (a nie pola z właściwościami standardowymi). Aby uzyskać więcej informacji, zobacz [Omówienie właściwości zależności](/dotnet/framework/wpf/advanced/dependency-properties-overview).
+Właściwość zależności jest koncepcją specyficzną dla WPF, która reprezentuje dynamiczną obliczaną właściwość elementu interfejsu użytkownika. Na przykład właściwości zależności często mają wartości domyślne lub wartości, które są dostarczane przez element nadrzędny. Te właściwości specjalne są obsługiwane przez wystąpienia klasy <xref:System.Windows.DependencyProperty> (a nie pola z właściwościami standardowymi). Aby uzyskać więcej informacji, zobacz [Omówienie właściwości zależności](../advanced/dependency-properties-overview.md).
 
 ### <a name="dynamic-data-binding-in-wpf"></a>Dynamiczne powiązanie danych w WPF
 
@@ -89,6 +89,6 @@ Aby zaimplementować dynamiczne powiązanie WPF, właściwości dynamiczne będ�
 
 - [Powiązanie danych WPF za pomocą LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Właściwości dynamiczne LINQ to XML](linq-to-xml-dynamic-properties.md)
-- [XAML w WPF](/dotnet/framework/wpf/advanced/xaml-in-wpf)
+- [XAML w WPF](../advanced/xaml-in-wpf.md)
 - [Powiązanie danych (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
 - [Używanie znaczników przepływu pracy](https://go.microsoft.com/fwlink/?LinkId=98685)

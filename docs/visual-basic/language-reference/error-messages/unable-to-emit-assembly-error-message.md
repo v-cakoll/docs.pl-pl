@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: 530aaee40be92bf72ee4b83b4141108e9b81c8a1
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5776755a57fbc2b0086b1c9b6cfbb2f2b7eb03fa
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968850"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197271"
 ---
-# <a name="unable-to-emit-assembly-error-message"></a>Nie można wyemitować zestawu \<: komunikat o błędzie >
+# <a name="unable-to-emit-assembly-error-message"></a>Nie można wyemitować zestawu: \<komunikat o błędzie >
 
 Kompilator Visual Basic wywołuje konsolidator zestawu (*Al. exe*, znany również jako ALink) w celu wygenerowania zestawu z manifestem, a konsolidator raportuje błąd w fazie emisji tworzenia zestawu.
 
@@ -26,7 +26,7 @@ Kompilator Visual Basic wywołuje konsolidator zestawu (*Al. exe*, znany równie
 
 2. Spróbuj podpisać zestaw ręcznie przy użyciu [Al. exe](../../../framework/tools/al-exe-assembly-linker.md) lub [SN. exe (Narzędzie silnej nazwy)](../../../framework/tools/sn-exe-strong-name-tool.md).
 
-3. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.
+3. Jeśli błąd będzie się powtarzać, Zbierz informacje o okolicznościach i powiadom usługi pomocy technicznej firmy Microsoft.
 
 ### <a name="to-sign-the-assembly-manually"></a>Aby ręcznie podpisać zestaw
 
@@ -61,7 +61,7 @@ Kompilator Visual Basic wywołuje konsolidator zestawu (*Al. exe*, znany równie
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
 - [Sn.exe (narzędzie silnych nazw)](../../../framework/tools/sn-exe-strong-name-tool.md)
-- [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](../../../standard/assembly/create-public-private-key-pair.md)
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+- [Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../standard/assembly/create-public-private-key-pair.md)
+- [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

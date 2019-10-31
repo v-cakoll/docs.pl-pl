@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0783c6ab80f3a07bd7b7e5a005444218c17e85fb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035456"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191697"
 ---
 # <a name="contributing"></a>Udział
 
@@ -15,9 +15,9 @@ Dziękujemy za zainteresowanie korzystaniem z dokumentacji platformy .NET.
 
 W dokumencie omówiono proces współtworzenia artykułów i przykładów kodu, które są hostowane w [witrynie dokumentacji programu .NET](https://docs.microsoft.com/dotnet). Wkłady mogą być bardzo proste jako poprawki literówki lub złożone jako nowe artykuły.
 
+- [DOs i podstawowe](#dos-and-donts)
 - [Proces współtworzenia](#process-for-contributing)
 - [Środowisko C# interaktywne](#the-c-interactive-experience)
-- [DOs i podstawowe](#dos-and-donts)
 - [Umowa licencyjna współautora](#contributor-license-agreement)
 
 To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. Witryna dokumentacji programu .NET została utworzona na podstawie wielu repozytoriów, a także do tego:
@@ -28,6 +28,24 @@ To repozytorium zawiera dokumentację koncepcyjną dla platformy .NET. Witryna d
     Problemy i zadania dla tego repozytorium są śledzone w programie [dotnet/dotnet-API-docs/problemy](https://github.com/dotnet/dotnet-api-docs/issues).
 - [Dokumentacja zestawu SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
     Problemy i taks dla tego repozytorium są śledzone w usłudze [dotnet/docs/problemy](https://github.com/dotnet/docs/issues).
+
+## <a name="dos-and-donts"></a>DOs i podstawowe
+
+Na poniższej liście przedstawiono niektóre reguły identyfikatorów GUID, które należy wziąć pod uwagę podczas korzystania z dokumentacji programu .NET:
+
+- **Nie ryzykuj** nas z dużymi żądaniami ściągnięcia. Zamiast tego należy rozwiązać problem i zacząć dyskusję, dzięki czemu możemy wyrazić zgodę na kierunek przed zainwestowaniem dużej ilości czasu. W przypadku zmian zbiorczych należy przerwać działanie w mniejszych żądań ściągnięcia (do 100 plików). Te wytyczne są zdecydowanie zalecane, jeśli żądanie ściągnięcia nie postępuje zgodnie z poniższymi wskazówkami.
+- **Zapoznaj się** z bieżącą usługą [w celu](https://github.com/dotnet/docs/labels/up-for-grabs) dołączania problemów związanych z sugestiami dotyczącymi zadań.
+- **Utwórz jedną** żądanie ściągnięcia dla każdego zadania. Żądań ściągnięcia, które obejmują wiele niepowiązanych zmian, są znacznie trudniejsze do przejrzenia. To opóźnia przeglądy i scalanie żądań ściągnięcia. Te wytyczne dotyczą również przeglądów: staramy się, aby nie sugerowały niezwiązanych zmian w przeglądach; Firma Microsoft zaleca, aby Recenzje społeczności przestrzegać tych wytycznych.
+- **Podaj jasny** opis pracy w ramach żądania ściągnięcia. Powiedz nam, co zmieniono i dlaczego. Domyślny opis "Update article.md" nie jest pomocny dla recenzentów.
+- **Nie** przesyłaj żądań ściągnięcia wyłącznie do stylów bez wcześniejszej dyskusji. Te żądań ściągnięcia pomogą Ci uzyskać więcej czasu na sprawdzenie dokładności i scalanie ich często powoduje konflikty scalania z innymi ważnymi aktualizacjami. Pracujemy nad spójnym stylem, ale firma Microsoft gwarantuje, że pracujemy nad innymi zadaniami. Artykuły są zgodne ze stylem, gdy wprowadzamy najważniejsze aktualizacje z innych przyczyn. 
+- **Przeczytaj** [Przewodnik po stylu](./styleguide/template.md) i wskazówki dotyczące [głosu i tonu](./styleguide/voice-tone.md) . Nowe dodatki powinny być zgodne z tymi wskazówkami.
+- Przed rozpoczęciem pracy z artykułami utwórz oddzielną gałąź w rozwidleniu.
+- **Postępuj zgodnie z** [przepływem pracy przepływu usługi GitHub](https://guides.github.com/introduction/flow/).
+- Bądź **na blogu i** tweety (lub niezależnie od tego) o Twoje wkłady — często!
+
+Te wskazówki pomagają nam w zaszanowaniu czasu. Wiele osób współtworzy te repozytoria. Postępując zgodnie z tymi wskazówkami, można ułatwić nam przeglądanie i scalanie żądania ściągnięcia. Te praktyki minimalizują konflikty z żądań ściągnięcia od innych członków społeczności i naszego zespołu. Ponieważ żądań ściągnięcia, które nie są zgodne z tymi wytycznymi często, powodują, że firma Microsoft i członkowie społeczności mogą je odrzucić. Jeśli chcesz utworzyć wyjątek, Zacznij od utworzenia problemu.
+
+> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w całej lokacji.
 
 ## <a name="process-for-contributing"></a>Proces współtworzenia
 
@@ -135,19 +153,6 @@ C# Interaktywny proces zmienia sposób pracy z przykładami. Odwiedzający mogą
 
 - Artykuły, w których próbka generuje większe dane wyjściowe nie powinny uwzględniać tego w komentarzach. Po uruchomieniu próbki program zasłania kod.
 - Artykuły, w których przykład ilustruje temat, ale dane wyjściowe nie są integralną częścią tego tematu. Na przykład kod, który uruchamia zapytanie LINQ, aby wyjaśnić składnię zapytania, a następnie wyświetlić każdy element w kolekcji wyjściowej.
-
-## <a name="dos-and-donts"></a>DOs i podstawowe
-
-Na poniższej liście przedstawiono niektóre reguły identyfikatorów GUID, które należy wziąć pod uwagę podczas korzystania z dokumentacji programu .NET:
-
-- **Nie ryzykuj** nas z dużymi żądaniami ściągnięcia. Zamiast tego należy rozwiązać problem i zacząć dyskusję, dzięki czemu możemy wyrazić zgodę na kierunek przed zainwestowaniem dużej ilości czasu. W przypadku zmian zbiorczych należy przerwać działanie w mniejszych żądań ściągnięcia (do 100 plików).
-- **Przeczytaj** [Przewodnik po stylu](./styleguide/template.md) i wskazówki dotyczące [głosu i tonu](./styleguide/voice-tone.md) .
-- **Użyj pliku** [szablonu](./styleguide/template.md) jako punktu początkowego pracy.
-- Przed rozpoczęciem pracy z artykułami utwórz oddzielną gałąź w rozwidleniu.
-- **Postępuj zgodnie z** [przepływem pracy przepływu usługi GitHub](https://guides.github.com/introduction/flow/).
-- Bądź **na blogu i** tweety (lub niezależnie od tego) o Twoje wkłady — często!
-
-> Uwaga: możesz zauważyć, że niektóre tematy nie są obecnie zgodne ze wszystkimi wytycznymi określonymi tutaj i w [przewodniku po stylu](./styleguide/template.md) . Pracujemy nad osiągnięciem spójności w całej lokacji.
 
 ## <a name="contributor-license-agreement"></a>Umowa licencyjna współautora
 

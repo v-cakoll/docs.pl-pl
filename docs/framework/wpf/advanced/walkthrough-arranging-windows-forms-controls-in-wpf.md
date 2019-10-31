@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: rozmieszczanie formantów Windows Forms w WPF'
+title: 'Wskazówki: rozmieszczanie formantów Windows Forms w WPF'
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 3a94ef65be99b01a9511f37872cbcacd6ec12264
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179432"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197842"
 ---
-# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Przewodnik: rozmieszczanie formantów Windows Forms w WPF
+# <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Wskazówki: rozmieszczanie formantów Windows Forms w WPF
 
 W tym instruktażu pokazano, jak za pomocą funkcji układu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] rozmieścić kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] w aplikacji hybrydowej.
 
@@ -38,7 +38,7 @@ Zadania przedstawione w tym instruktażu obejmują:
 
 Aby uzyskać pełną listę kodów zadań przedstawionych w tym instruktażu, zobacz [organizowanie Windows Forms formantów w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971).
 
-Po zakończeniu będziesz mieć świadomość funkcji układu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] w @no__t aplikacji opartych na -1.
+Po zakończeniu uzyskasz informacje o funkcjach układu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] w aplikacjach opartych na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -58,19 +58,19 @@ Aby utworzyć i skonfigurować projekt, wykonaj następujące kroki:
 
 3. Kliknij dwukrotnie plik *MainWindow. XAML* , aby otworzyć go w widoku XAML.
 
-4. W elemencie <xref:System.Windows.Window> Dodaj następujące mapowanie przestrzeni nazw [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+4. W <xref:System.Windows.Window> elementu Dodaj następujące mapowanie przestrzeni nazw [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
     ```
 
-5. W elemencie <xref:System.Windows.Controls.Grid> ustaw właściwość <xref:System.Windows.Controls.Grid.ShowGridLines%2A> na `true` i zdefiniuj pięć wierszy i trzy kolumny.
+5. W elemencie <xref:System.Windows.Controls.Grid> ustaw właściwość <xref:System.Windows.Controls.Grid.ShowGridLines%2A> na `true` i zdefiniuj pięć wierszy i trzech kolumn.
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#2)]
 
 ## <a name="using-default-layout-settings"></a>Używanie domyślnych ustawień układu
 
-Domyślnie element <xref:System.Windows.Forms.Integration.WindowsFormsHost> obsługuje układ dla kontrolki hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+Domyślnie element <xref:System.Windows.Forms.Integration.WindowsFormsHost> obsługuje układ kontrolki hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 Aby użyć domyślnych ustawień układu, wykonaj następujące kroki:
 
@@ -78,7 +78,7 @@ Aby użyć domyślnych ustawień układu, wykonaj następujące kroki:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Kontrolka [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> pojawia się w <xref:System.Windows.Controls.Canvas>. Rozmiar hostowanej kontrolki jest ustalany na podstawie jej zawartości, a element <xref:System.Windows.Forms.Integration.WindowsFormsHost> ma rozmiar, aby pomieścić obsługiwaną kontrolę.
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. W <xref:System.Windows.Controls.Canvas>zostanie wyświetlona kontrolka <xref:System.Windows.Forms.Button?displayProperty=nameWithType> [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Rozmiar hostowanej kontrolki jest ustalany na podstawie jej zawartości, a element <xref:System.Windows.Forms.Integration.WindowsFormsHost> ma rozmiar, aby pomieścić obsługiwaną kontrolę.
 
 ## <a name="sizing-to-content"></a>Ustalanie wielkości do zawartości
 
@@ -106,7 +106,7 @@ Aby użyć pozycjonowania bezwzględnego, wykonaj następujące kroki:
 
 ## <a name="specifying-size-explicitly"></a>Określanie rozmiaru jawnie
 
-Możesz określić rozmiar elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> przy użyciu właściwości <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A>.
+Można określić rozmiar <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu przy użyciu właściwości <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A>.
 
 Aby określić rozmiar jawnie, wykonaj następujące kroki:
 
@@ -114,7 +114,7 @@ Aby określić rozmiar jawnie, wykonaj następujące kroki:
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Dla elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> ustawiono rozmiar 50 pikseli o szerokości do 70 pikseli, który jest mniejszy niż domyślne ustawienia układu. Zawartość kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest odpowiednio zmieniana.
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Dla elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost> ustawiono rozmiar 50 pikseli o szerokości do 70 pikseli, który jest mniejszy niż domyślne ustawienia układu. Zawartość kontrolki [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest zmieniana odpowiednio.
 
 ## <a name="setting-layout-properties"></a>Ustawianie właściwości układu
 
@@ -137,7 +137,7 @@ Aby wyświetlić efekty ustawiania właściwości kontrolki hostowanej, wykonaj 
 
 4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację.
 
-5. Kliknij przycisk **kliknij mnie** . Obsługa zdarzeń `button1_Click` ustawia właściwości <xref:System.Windows.Forms.Control.Top%2A> i <xref:System.Windows.Forms.Control.Left%2A> w formancie hostowanym. Powoduje to zmianę położenia hostowanej kontrolki w obrębie elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Host utrzymuje ten sam obszar ekranu, ale hostowana kontrolka jest obcinana. Zamiast tego, formant hostowany powinien zawsze wypełnić element <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
+5. Kliknij przycisk **kliknij mnie** . Obsługa zdarzeń `button1_Click` ustawia właściwości <xref:System.Windows.Forms.Control.Top%2A> i <xref:System.Windows.Forms.Control.Left%2A> dla hostowanej kontrolki. Powoduje to zmianę położenia hostowanej kontrolki w obrębie elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Host utrzymuje ten sam obszar ekranu, ale hostowana kontrolka jest obcinana. Zamiast tego, formant hostowany powinien zawsze wypełnić element <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 ## <a name="understanding-z-order-limitations"></a>Informacje o ograniczeniach porządku osi Z
 
@@ -151,7 +151,7 @@ Widoczne elementy <xref:System.Windows.Forms.Integration.WindowsFormsHost> są z
 
 ## <a name="docking"></a>Dokowania
 
-element <xref:System.Windows.Forms.Integration.WindowsFormsHost> obsługuje dokowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ustaw właściwość dołączoną <xref:System.Windows.Controls.DockPanel.Dock%2A>, aby zadokować formant hostowany w elemencie <xref:System.Windows.Controls.DockPanel>.
+element <xref:System.Windows.Forms.Integration.WindowsFormsHost> obsługuje dokowanie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ustaw przyłączoną Właściwość <xref:System.Windows.Controls.DockPanel.Dock%2A>, aby zadokować formant hostowany w <xref:System.Windows.Controls.DockPanel> elemencie.
 
 Aby zadokować formant hostowany, wykonaj następujące kroki:
 
@@ -163,7 +163,7 @@ Aby zadokować formant hostowany, wykonaj następujące kroki:
 
 ## <a name="setting-visibility"></a>Widoczność ustawień
 
-Można sprawić, aby kontrolka [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] była niewidoczna lub zwijana, ustawiając właściwość <xref:System.Windows.UIElement.Visibility%2A> w elemencie <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Gdy kontrolka jest niewidoczna, nie jest wyświetlana, ale zajmuje przestrzeń układu. Gdy formant jest zwinięty, nie jest wyświetlany ani nie zajmuje obszaru układu.
+Formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] można uczynić niewidocznym lub zwijać, ustawiając właściwość <xref:System.Windows.UIElement.Visibility%2A> w elemencie <xref:System.Windows.Forms.Integration.WindowsFormsHost>. Gdy kontrolka jest niewidoczna, nie jest wyświetlana, ale zajmuje przestrzeń układu. Gdy formant jest zwinięty, nie jest wyświetlany ani nie zajmuje obszaru układu.
 
 Aby ustawić widoczność hostowanej kontrolki, wykonaj następujące kroki:
 
@@ -180,7 +180,7 @@ Aby ustawić widoczność hostowanej kontrolki, wykonaj następujące kroki:
 
 4. Kliknij przycisk **kliknij, aby uczynić niewidocznym** , aby element <xref:System.Windows.Forms.Integration.WindowsFormsHost> był niewidoczny.
 
-5. Kliknij przycisk **kliknij, aby zwinąć** , aby całkowicie ukryć element <xref:System.Windows.Forms.Integration.WindowsFormsHost> z układu. Gdy formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest zwinięty, elementy otaczające są zmieniane, aby zajmowały miejsce.
+5. Kliknij przycisk **kliknij, aby zwinąć** , aby całkowicie ukryć element <xref:System.Windows.Forms.Integration.WindowsFormsHost> z układu. Gdy formant [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest zwinięty, elementy otaczające są zmieniane w celu zajmowanego miejsca.
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>Hostowanie formantu, który nie rozciąga się
 
@@ -192,9 +192,9 @@ Aby hostować formant, który nie rozciąga się, wykonaj następujące czynnoś
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest wyśrodkowany w wierszu siatki, ale nie jest rozciągany w celu wypełnienia dostępnego miejsca. Jeśli okno jest wystarczająco duże, może pojawić się co najmniej dwa miesiące wyświetlane przez obsługiwaną kontrolę <xref:System.Windows.Forms.MonthCalendar>, ale są one wyśrodkowane w wierszu. Układ aparatu układu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie może mieć rozmiaru, aby wypełnić dostępne miejsce.
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> jest wyśrodkowany w wierszu siatki, ale nie jest rozciągany w celu wypełnienia dostępnego miejsca. Jeśli okno jest wystarczająco duże, może pojawić się co najmniej dwa miesiące wyświetlane przez obsługiwaną kontrolę <xref:System.Windows.Forms.MonthCalendar>, ale są one wyśrodkowane w wierszu. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu aparatu aparat centrów elementów, których nie można zmieniać, aby wypełnić dostępne miejsce.
 
-## <a name="scaling"></a>Skalowanie
+## <a name="scaling"></a>Ponowne
 
 W przeciwieństwie do elementów WPF większość formantów Windows Forms nie jest ciągle skalowalna. Aby zapewnić niestandardowe skalowanie, Zastąp metodę <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType>.
 
@@ -222,7 +222,7 @@ Aby zobaczyć efekt rotacji w aplikacji hybrydowej, wykonaj następujące kroki:
 
 ## <a name="setting-padding-and-margins"></a>Ustawianie uzupełniania i marginesów
 
-Uzupełnienie i marginesy w układzie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są podobne do uzupełniania i marginesów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Po prostu ustaw właściwości <xref:System.Windows.Controls.Control.Padding%2A> i <xref:System.Windows.FrameworkElement.Margin%2A> dla elementu <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
+Uzupełnienie i marginesy w układzie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są podobne do uzupełniania i marginesów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Po prostu ustaw właściwości <xref:System.Windows.Controls.Control.Padding%2A> i <xref:System.Windows.FrameworkElement.Margin%2A> w elemencie <xref:System.Windows.Forms.Integration.WindowsFormsHost>.
 
 Aby ustawić uzupełnienie i marginesy dla kontrolki hostowanej, wykonaj następujące kroki:
 
@@ -231,7 +231,7 @@ Aby ustawić uzupełnienie i marginesy dla kontrolki hostowanej, wykonaj następ
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Ustawienia uzupełniania i marginesu są stosowane do formantów hostowanych [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] w taki sam sposób, w jaki byłyby stosowane w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
+2. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Ustawienia uzupełniania i marginesu są stosowane do kontrolek hostowanych [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] w taki sam sposób, w jaki byłyby stosowane w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 ## <a name="using-dynamic-layout-containers"></a>Używanie kontenerów układów dynamicznych
 
@@ -253,14 +253,14 @@ Aby użyć dynamicznego kontenera układu, wykonaj następujące kroki:
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]
 
-4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> wypełnia <xref:System.Windows.Controls.DockPanel>, a <xref:System.Windows.Forms.FlowLayoutPanel> rozmieszcza kontrolki podrzędne w domyślnym <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.
+4. Naciśnij klawisz <kbd>F5</kbd> , aby skompilować i uruchomić aplikację. Element <xref:System.Windows.Forms.Integration.WindowsFormsHost> wypełnia <xref:System.Windows.Controls.DockPanel>, a <xref:System.Windows.Forms.FlowLayoutPanel> układa jego kontrolki podrzędne w domyślnym <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Projektuj kod XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [Zagadnienia dotyczące układu elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [Zagadnienia dotyczące układu dla elementu WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md)
 - [Rozmieszczanie formantów Windows Forms w przykładzie WPF](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Przewodnik: hosting złożonego formantu Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Przewodnik: hosting złożonego formantu WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

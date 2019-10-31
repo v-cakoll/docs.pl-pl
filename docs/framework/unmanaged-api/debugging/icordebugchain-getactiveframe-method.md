@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c79f3b3b976b83eb99f8aa26d38a1fe316de471a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744996"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192146"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame — Metoda
-Pobiera aktywny (oznacza to, najbardziej aktualną) ramki w łańcuchu.  
+Pobiera aktywną (czyli ostatnią) ramkę w łańcuchu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT GetActiveFrame (
   
 ## <a name="parameters"></a>Parametry  
  `ppFrame`  
- [out] Wskaźnik na adres ICorDebugFrame obiekt, który reprezentuje aktywny (oznacza to, najbardziej aktualną) ramki w łańcuchu.  
+ określoną Wskaźnik do adresu obiektu ICorDebugFrame, który reprezentuje aktywną (czyli ostatnią) ramkę w łańcuchu.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli nie ramki zarządzanego stosu jest dostępna, `ppFrame` jest ustawiona na wartość null.  
+ Jeśli nie jest dostępna żadna ramka zarządzanego stosu, `ppFrame` jest ustawiona na wartość null.  
   
- Jeśli aktywnej ramki jest niedostępny, wywołanie zostanie wykonane pomyślnie i `ppFrame` będzie miał wartość null. Aktywne ramek nie będą dostępne, łańcuchy inicjowane z powodu CHAIN_ENTER_UNMANAGED i niektóre łańcuchów inicjowane z powodu CHAIN_CLASS_INIT. Zobacz cordebugchainreason — wyliczenie.  
+ Jeśli aktywna ramka jest niedostępna, wywołanie zakończy się pomyślnie, a `ppFrame` będzie miało wartość null. Aktywne ramki nie będą dostępne dla łańcuchów zainicjowanych z powodu CHAIN_ENTER_UNMANAGED oraz dla niektórych łańcuchów inicjowanych z powodu CHAIN_CLASS_INIT. Zobacz Wyliczenie CorDebugChainReason —.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

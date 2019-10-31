@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 32c7f4e9e4736145f9275b74f34c04404e7c770a
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 771238c53dc97f4cf4068968f3c68500ba9f87da
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394044"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198530"
 ---
 ### <a name="caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package"></a>Buforowanie: Microsoft. Extensions. buforowanie. SqlServer używa nowego pakietu SqlClient
 
@@ -28,7 +28,7 @@ Pakiet `Microsoft.Extensions.Caching.SqlServer` używał pakietu `System.Data.Sq
 
 #### <a name="recommended-action"></a>Zalecana akcja
 
-Klienci nie muszą martwić się o tę zmianę, chyba że używali typów zwracanych przez pakiet `Microsoft.Extensions.Caching.SqlServer` i rzutowania ich do typów `System.Data.SqlClient`. Na przykład jeśli ktoś wyrzutuje `DbConnection` do [starego typu SqlConnection](xref:System.Data.SqlClient.SqlConnection), musi zmienić rzutowanie na nowy typ `Microsoft.Data.SqlClient.SqlConnection`. 
+Klienci nie muszą martwić się o tę zmianę, chyba że używali typów zwracanych przez pakiet `Microsoft.Extensions.Caching.SqlServer` i rzutowania ich do typów `System.Data.SqlClient`. Na przykład jeśli ktoś wyrzutuje `DbConnection` do [starego typu SqlConnection](xref:System.Data.SqlClient.SqlConnection), musi zmienić rzutowanie na nowy typ `Microsoft.Data.SqlClient.SqlConnection`.
 
 #### <a name="category"></a>Kategoria
 

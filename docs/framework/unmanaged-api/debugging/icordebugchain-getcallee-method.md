@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 19560c79-abdc-4bdf-a5fe-eb362a59edc0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 79743b78ea3d19bab4756b580d2feddd07e0a23b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d28af09faae84b0482d438ae33f593f250490c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744984"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196336"
 ---
 # <a name="icordebugchaingetcallee-method"></a>ICorDebugChain::GetCallee — Metoda
-Pobiera łańcucha, który został wywołany przez tego łańcucha.  
+Pobiera łańcuch, który został wywołany przez ten łańcuch.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetCallee (
   
 ## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje o nazwie łańcucha. Jeśli ta sieć jest w trakcie wykonywania (to znaczy, jeśli ten łańcuch nie oczekuje na o nazwie łańcuch do zwrócenia), `ppChain` będzie miał wartość null.  
+ określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje wywołany łańcuch. Jeśli ten łańcuch jest obecnie wykonywany (oznacza to, że jeśli ten łańcuch nie oczekuje na zwrócenie wywołanego łańcucha), `ppChain` będzie mieć wartość null.  
   
 ## <a name="remarks"></a>Uwagi  
- Ten łańcuch będzie czekać na o nazwie łańcuch do zwrócenia przed jego wznawia działanie. Łańcuch o nazwie może znajdować się na inny wątek w przypadku międzyprocesowe między wątkami.  
+ Ten łańcuch będzie czekał na zwrócenie wywoływanego łańcucha przed wznowieniem wykonywania. Wywołany łańcuch może znajdować się w innym wątku w przypadku wywołań zorganizowanych między wątkami.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

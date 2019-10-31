@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -doc compiler option [C#]
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
-ms.openlocfilehash: 21605b30867d7be0b906b431253c183e655bea82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7b22bbf75b29fdffd9927110ebe5b4e5309cd778
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922484"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191836"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# opcje kompilatora)
 Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.  
@@ -41,9 +41,9 @@ Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.
   
  Plik kodu źródłowego, który zawiera główny, jest wyprowadzany jako pierwszy w formacie XML.  
   
- Aby użyć wygenerowanego pliku XML do użycia z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) , pozwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany, a następnie upewnij się, że plik. XML znajduje się w tym samym katalogu, co zestaw. Z tego względu, gdy zestaw jest przywoływany w projekcie programu Visual Studio, można również znaleźć plik. XML. Zobacz [dostarczanie komentarzy do kodu](/visualstudio/ide/supplying-xml-code-comments) i aby uzyskać więcej informacji.  
+ Aby użyć wygenerowanego pliku XML do użycia z funkcją [IntelliSense](/visualstudio/ide/using-intellisense) , pozwól, aby nazwa pliku XML była taka sama jak zestaw, który ma być obsługiwany, a następnie upewnij się, że plik. XML znajduje się w tym samym katalogu, co zestaw. Z tego względu, gdy zestaw jest przywoływany w projekcie programu Visual Studio, można również znaleźć plik. XML. Zobacz [dostarczanie komentarzy do kodu](/visualstudio/ide/reference/generate-xml-documentation-comments) i aby uzyskać więcej informacji.  
   
- O ile nie kompilujesz [elementu with-target: module](./target-module-compiler-option.md), `file` program\<będzie zawierał \<zestaw >/Assembly > Tagi określające nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
+ O ile nie zostanie skompilowany [moduł-target: module](./target-module-compiler-option.md), `file` będzie zawierać \<assembly >\</Assembly > Tagi, określając nazwę pliku zawierającego manifest zestawu dla pliku wyjściowego kompilacji.  
   
 > [!NOTE]
 > Opcja-doc dotyczy wszystkich plików wejściowych; lub, jeśli jest ustawiony w ustawieniach projektu, wszystkie pliki w projekcie. Aby wyłączyć ostrzeżenia związane z komentarzami do dokumentacji dla określonego pliku lub sekcji kodu, użyj [#pragma ostrzeżenie](../preprocessor-directives/preprocessor-pragma-warning.md).  
@@ -58,7 +58,7 @@ Opcja **-doc** umożliwia umieszczenie komentarzy do dokumentacji w pliku XML.
   
 3. Zmodyfikuj właściwość **pliku dokumentacji XML** .  
   
- Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>tę opcję kompilatora, zobacz.  
+ Aby uzyskać informacje na temat sposobu, w jaki można programowo ustawić tę opcję kompilatora, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>.  
   
 ## <a name="see-also"></a>Zobacz także
 

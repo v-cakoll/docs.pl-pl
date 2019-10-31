@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 93f07e663fbc8f61c71e5b83bb752f0b129b62ba
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608300"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191873"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Wprowadzenie do języka C# i systemu .NET Framework
 
@@ -22,13 +22,13 @@ C#to elegancki i bezpieczny dla typu język oparty na obiektach, który umożliw
   
 ## <a name="c-language"></a>Język C#
 
- C#Składnia jest wysoce wyraźna, ale jest również prosta i łatwa do uczenia się. Składnia C# nawiasów klamrowych jest natychmiast rozpoznawalna dla każdego znanego w języku C C++ lub Java. Deweloperzy, którzy znają którykolwiek z tych języków, zazwyczaj mogą zacząć pracować wydajnie w C# bardzo krótkim czasie. C#Składnia upraszcza wiele złożoności C++ i zapewnia zaawansowane funkcje, takie jak typy wartości null, wyliczenia, Delegaty, wyrażenia lambda i bezpośredni dostęp do pamięci, które nie znajdują się w języku Java. C#obsługuje metody generyczne i typy, które zapewniają zwiększone bezpieczeństwo typu i wydajność oraz Iteratory, które umożliwiają implementacje klas kolekcji w celu zdefiniowania niestandardowych zachowań iteracji, które są proste do użycia przez kod klienta. [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]wyrażenia czynią silnie wpisaną kwerendę klasą języka pierwszej klasy.  
+ C#Składnia jest wysoce wyraźna, ale jest również prosta i łatwa do uczenia się. Składnia C# nawiasów klamrowych jest natychmiast rozpoznawalna dla każdego znanego w języku C C++ lub Java. Deweloperzy, którzy znają którykolwiek z tych języków, zazwyczaj mogą zacząć pracować wydajnie w C# bardzo krótkim czasie. C#Składnia upraszcza wiele złożoności C++ i zapewnia zaawansowane funkcje, takie jak typy wartości null, wyliczenia, Delegaty, wyrażenia lambda i bezpośredni dostęp do pamięci, które nie znajdują się w języku Java. C#obsługuje metody generyczne i typy, które zapewniają zwiększone bezpieczeństwo typu i wydajność oraz Iteratory, które umożliwiają implementacje klas kolekcji w celu zdefiniowania niestandardowych zachowań iteracji, które są proste do użycia przez kod klienta. wyrażenia [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] tworzą silnie wpisaną kwerendę w konstrukcji języka pierwszej klasy.  
   
- Jako język zorientowany obiektowo program C# obsługuje koncepcje hermetyzacji, dziedziczenia i polimorfizmu. Wszystkie zmienne i metody, w tym `Main` Metoda, punkt wejścia aplikacji, są hermetyzowane w definicjach klas. Klasa może dziedziczyć bezpośrednio z jednej klasy nadrzędnej, ale może implementować dowolną liczbę interfejsów. Metody, które zastępują metody wirtualne w klasie nadrzędnej `override` , wymagają słowa kluczowego jako sposobu, aby uniknąć przypadkowej ponownej definicji. W C#programie struktura jest taka sama jak Klasa uproszczona; jest typem przydzielonym przez stos, który może implementować interfejsy, ale nie obsługuje dziedziczenia.  
+ Jako język zorientowany obiektowo program C# obsługuje koncepcje hermetyzacji, dziedziczenia i polimorfizmu. Wszystkie zmienne i metody, w tym Metoda `Main`, punktu wejścia aplikacji, są hermetyzowane w ramach definicji klas. Klasa może dziedziczyć bezpośrednio z jednej klasy nadrzędnej, ale może implementować dowolną liczbę interfejsów. Metody, które zastępują metody wirtualne w klasie nadrzędnej, wymagają słowa kluczowego `override` jako sposobu, aby uniknąć przypadkowej ponownej definicji. W C#programie struktura jest taka sama jak Klasa uproszczona; jest typem przydzielonym przez stos, który może implementować interfejsy, ale nie obsługuje dziedziczenia.  
   
  Oprócz tych podstawowych zasad zorientowanych obiektowo program C# ułatwia tworzenie składników oprogramowania za pomocą kilku innowacyjnych konstrukcji językowych, w tym następujących:  
   
-- Wyhermetyzowane sygnaturymetod o nazwie pełnomocnicy, które włączają powiadomienia o zdarzeniach bezpiecznych dla typów.  
+- Wyhermetyzowane sygnatury metod o nazwie *pełnomocnicy*, które włączają powiadomienia o zdarzeniach bezpiecznych dla typów.  
   
 - Właściwości, które stanowią metody dostępu do zmiennych prywatnych elementów członkowskich.  
   
@@ -36,7 +36,7 @@ C#to elegancki i bezpieczny dla typu język oparty na obiektach, który umożliw
   
 - Komentarze do wbudowanej dokumentacji XML.  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]zapewnia wbudowane możliwości zapytań w różnych źródłach danych.  
+- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], które udostępnia wbudowane funkcje zapytań w różnych źródłach danych.  
   
  Jeśli konieczne jest współdziałanie z innym oprogramowaniem systemu Windows, takim jak obiekty COM lub natywne biblioteki DLL Win32, C# można to zrobić za pomocą procesu o nazwie "międzyoperacyjna". Międzyoperacyjność umożliwia C# programom niemal wszystko, co C++ można zrobić w aplikacji natywnej. C#Program obsługuje również wskaźniki i koncepcję niebezpiecznego kodu dla tych przypadków, w których bezpośredni dostęp do pamięci jest absolutnie krytyczny.  
   
@@ -48,7 +48,7 @@ C#to elegancki i bezpieczny dla typu język oparty na obiektach, który umożliw
   
 - Aby uzyskać szczegółowe informacje na temat określonych aspektów C# języka, zobacz [ C# odwołanie](../language-reference/index.md).  
   
-- Aby uzyskać więcej informacji [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]na temat, zobacz [LINQ (zapytanie zintegrowane z językiem)](../programming-guide/concepts/linq/index.md).  
+- Aby uzyskać więcej informacji na temat [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], zobacz [LINQ (zapytanie zintegrowane z językiem)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>Architektura platformy .NET Framework
 
@@ -69,4 +69,4 @@ C#to elegancki i bezpieczny dla typu język oparty na obiektach, który umożliw
 ## <a name="see-also"></a>Zobacz także
 
 - [C#](../index.md)
-- [Wprowadzenie do języków Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Wprowadzenie z wizualizacjąC#](/visualstudio/ide/quickstart-csharp-console)

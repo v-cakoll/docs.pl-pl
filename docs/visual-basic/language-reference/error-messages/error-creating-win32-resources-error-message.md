@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC30136
 ms.assetid: 05a813e4-9d65-4ce8-be8f-7ca20bbba2af
-ms.openlocfilehash: 19572e3a20c3d9392560d434bebb8f70ca144297
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3f0d74e4ac141d383a595bf86ca9b5cd7bee4c0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803340"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191943"
 ---
-# <a name="error-creating-win32-resources-error-message"></a>Wystąpił błąd podczas tworzenia zasobów Win32: \<komunikat o błędzie >
-Kompilator Visual Basic wywołuje Assembly Linker (Al.exe, znany także jako Alink) do generowania manifestu zestawu. Konsolidator zgłosił błąd podczas tworzenia zasobu w pamięci. Może to być problem ze środowiskiem lub komputer może być mało pamięci.  
+# <a name="error-creating-win32-resources-error-message"></a>Błąd podczas tworzenia zasobów Win32: komunikat o błędzie \<
+Kompilator Visual Basic wywołuje konsolidator zestawu (Al. exe, znany również jako ALink) w celu wygenerowania zestawu z manifestem. Konsolidator zgłosił błąd podczas tworzenia zasobu znajdującego się w pamięci. Może to być problem ze środowiskiem lub brak pamięci na komputerze.  
   
  **Identyfikator błędu:** BC30136  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Sprawdź komunikat o błędzie w cudzysłowach i zapoznaj się z tematem [Al.exe](../../../framework/tools/al-exe-assembly-linker.md). Aby uzyskać dokładniejsze objaśnienie i porady.  
+1. Sprawdź cytowany komunikat o błędzie i zapoznaj się z tematem [Al. exe](../../../framework/tools/al-exe-assembly-linker.md). Dalsze wyjaśnienie i porady.  
   
-2. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
+2. Jeśli błąd będzie się powtarzać, Zbierz informacje o okolicznościach i powiadom usługi pomocy technicznej firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+- [Al. exe](../../../framework/tools/al-exe-assembly-linker.md)
+- [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

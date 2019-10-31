@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031151"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198156"
 ---
-# <a name="type-typename-has-no-constructors"></a>Typ "\<typename >" nie ma konstruktorów
-Typ nie obsługuje wywołania `Sub New()`. Jedną z możliwych przyczyn jest kompilatora uszkodzony lub plik binarny.  
+# <a name="type-typename-has-no-constructors"></a>Typ "\<TypeName >" nie ma konstruktorów
+Typ nie obsługuje wywołania do `Sub New()`. Jedną z możliwych przyczyn jest uszkodzony kompilator lub plik binarny.  
   
  **Identyfikator błędu:** BC30251  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Jeśli typ jest w innym projekcie lub w pliku odwołania, należy ponownie zainstalować projektu lub pliku.  
+1. Jeśli typ znajduje się w innym projekcie lub w pliku, do którego istnieje odwołanie, zainstaluj ponownie projekt lub plik.  
   
-2. Jeśli typ znajduje się w tym samym projekcie, należy ponownie skompilować zestawu zawierającego typ.  
+2. Jeśli typ znajduje się w tym samym projekcie, Skompiluj ponownie zestaw zawierający typ.  
   
-3. Jeśli ten błąd wystąpi, zainstaluj ponownie kompilator Visual Basic.  
+3. Jeśli błąd powtarza się, zainstaluj ponownie kompilator Visual Basic.  
   
-4. Jeśli błąd będzie się powtarzać, należy zebrać informacje dotyczące okoliczności i powiadom pomoc techniczna firmy Microsoft.  
+4. Jeśli błąd będzie się powtarzać, Zbierz informacje o okolicznościach i powiadom usługi pomocy technicznej firmy Microsoft.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+- [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

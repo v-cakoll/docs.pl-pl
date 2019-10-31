@@ -2,12 +2,12 @@
 title: Debugowanie drzew wyrażeń w programie Visual StudioC#()
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 2b858597a01f4d7ce460460956d3efcad856531d
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 30f538712881e41b4fd0e62d06f74373d755ea40
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319025"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195686"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Debugowanie drzew wyrażeń w programie Visual StudioC#()
 Można analizować strukturę i zawartość drzew wyrażeń podczas debugowania aplikacji. Aby uzyskać szybki przegląd struktury drzewa wyrażeń, można użyć właściwości `DebugView`, która reprezentuje drzewa wyrażeń [przy użyciu specjalnej składni](debugview-syntax.md). (Należy zauważyć, że `DebugView` jest dostępny tylko w trybie debugowania).  
@@ -41,6 +41,6 @@ Alternatywnie można zainstalować i używać [wizualizatora niestandardowego](h
 ## <a name="see-also"></a>Zobacz także
 
 - [Drzewa wyrażeń (C#)](./index.md)
-- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+- [Debugowanie w programie Visual Studio](/visualstudio/debugger/debugger-feature-tour)
 - [Tworzenie niestandardowych wizualizatorów](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [Składnia `DebugView`](debugview-syntax.md)

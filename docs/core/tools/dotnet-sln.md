@@ -1,98 +1,174 @@
 ---
 title: dotnet sln — polecenie
 description: Polecenie dotnet-sln udostępnia wygodną opcję dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.
-ms.date: 06/13/2018
-ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 10/29/2019
+ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117584"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191821"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
+**Ten artykuł dotyczy: ✓** .NET Core 1. x SDK i nowszych wersji
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>Nazwa
 
-`dotnet sln`-Modyfikuje plik rozwiązania .NET Core.
+`dotnet sln` — modyfikuje plik rozwiązania .NET Core.
 
 ## <a name="synopsis"></a>Streszczenie
 
 ```dotnetcli
-dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
-dotnet sln [<SOLUTION_NAME>] remove <GLOBBING_PATTERN>
-dotnet sln [<SOLUTION_NAME>] list
-dotnet sln [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 ```
 
 ## <a name="description"></a>Opis
 
-`dotnet sln` Polecenie zapewnia wygodny sposób dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.
+`dotnet sln` polecenie zapewnia wygodny sposób dodawania, usuwania i wyświetlania listy projektów w pliku rozwiązania.
 
-Aby użyć `dotnet sln` polecenia, plik rozwiązania musi już istnieć. Jeśli trzeba ją utworzyć, użyj polecenia [dotnet New](dotnet-new.md) , tak jak w poniższym przykładzie:
+Aby użyć polecenia `dotnet sln`, plik rozwiązania musi już istnieć. Jeśli trzeba ją utworzyć, użyj polecenia [dotnet New](dotnet-new.md) , tak jak w poniższym przykładzie:
 
 ```dotnetcli
 dotnet new sln
 ```
 
-## <a name="commands"></a>Polecenia
-
-`add <PROJECT> ...`
-
-`add <GLOBBING_PATTERN>`
-
-Dodaje projekt lub wiele projektów do pliku rozwiązania. [Wzorce obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminalach opartych na systemie UNIX/Linux.
-
-`remove <PROJECT> ...`
-
-`remove <GLOBBING_PATTERN>`
-
-Usuwa projekt lub wiele projektów z pliku rozwiązania. [Wzorce obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) są obsługiwane w terminalach opartych na systemie UNIX/Linux.
-
-`list`
-
-Wyświetla wszystkie projekty w pliku rozwiązania.
-
 ## <a name="arguments"></a>Argumenty
 
-`SOLUTION_NAME`
+- **`SOLUTION_FILE`**
 
-Plik rozwiązania do użycia. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli w katalogu znajduje się wiele plików rozwiązania, należy określić jeden z nich.
+  Plik rozwiązania, który ma być używany. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli w katalogu znajduje się wiele plików rozwiązania, należy określić jeden z nich.
 
 ## <a name="options"></a>Opcje
 
-`-h|--help`
+- **`-h|--help`**
 
-Drukuje krótką pomoc dla polecenia.
+  Drukuje krótką pomoc dla polecenia.
+
+## <a name="commands"></a>Polecenia
+
+### `add`
+
+Dodaje projekt lub wiele projektów do pliku rozwiązania.
+
+#### <a name="synopsis"></a>Streszczenie
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln add [-h|--help]
+```
+
+#### <a name="arguments"></a>Argumenty
+
+- **`SOLUTION_FILE`**
+
+  Plik rozwiązania, który ma być używany. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli w katalogu znajduje się wiele plików rozwiązania, należy określić jeden z nich.
+
+- **`PROJECT_PATH`**
+
+  Ścieżka do projektu, który ma zostać dodany do rozwiązania. Dodaj wiele projektów, dodając je po innych rozdzielonych spacjami. Rozszerzenia [wzorca obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) powłoki systemu UNIX/Linux są przetwarzane prawidłowo przez polecenie `dotnet sln`.
+
+#### <a name="options"></a>Opcje
+
+- **`-h|--help`**
+
+  Drukuje krótką pomoc dla polecenia.
+
+- **`--in-root`**
+
+  Umieszcza projekty w katalogu głównym rozwiązania zamiast tworzenia folderu rozwiązania. Dostępne od wersji .NET Core 3,0 SDK.
+
+- **`-s|--solution-folder`**
+
+  Ścieżka folderu rozwiązania docelowego, do którego mają zostać dodane projekty. Dostępne od wersji .NET Core 3,0 SDK.
+
+### `remove`
+
+Usuwa projekt lub wiele projektów z pliku rozwiązania.
+
+#### <a name="synopsis"></a>Streszczenie
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
+```
+
+#### <a name="arguments"></a>Argumenty
+
+- **`SOLUTION_FILE`**
+
+  Plik rozwiązania, który ma być używany. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli w katalogu znajduje się wiele plików rozwiązania, należy określić jeden z nich.
+
+- **`PROJECT_PATH`**
+
+  Ścieżka do projektu, który ma zostać usunięty z rozwiązania. Usuń wiele projektów, dodając je po innych rozdzielonych spacjami. Rozszerzenia [wzorca obsługi symboli wieloznacznych](https://en.wikipedia.org/wiki/Glob_(programming)) powłoki systemu UNIX/Linux są przetwarzane prawidłowo przez polecenie `dotnet sln`.
+
+#### <a name="options"></a>Opcje
+
+- **`-h|--help`**
+
+  Drukuje krótką pomoc dla polecenia.
+
+### `list`
+
+Wyświetla wszystkie projekty w pliku rozwiązania.
+
+#### <a name="synopsis"></a>Streszczenie
+
+```dotnetcli
+dotnet sln list [-h|--help]
+```
+  
+#### <a name="arguments"></a>Argumenty
+
+- **`SOLUTION_FILE`**
+
+  Plik rozwiązania, który ma być używany. Jeśli nie zostanie określony, polecenie przeszukuje bieżący katalog. Jeśli w katalogu znajduje się wiele plików rozwiązania, należy określić jeden z nich.
+
+#### <a name="options"></a>Opcje
+
+- **`-h|--help`**
+
+  Drukuje krótką pomoc dla polecenia.
 
 ## <a name="examples"></a>Przykłady
 
 Dodaj C# projekt do rozwiązania:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj
+```
 
 Usuń C# projekt z rozwiązania:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj
+```
 
 Dodaj wiele C# projektów do rozwiązania:
 
-`dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
 Usuń wiele C# projektów z rozwiązania:
 
-`dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj`
+```dotnetcli
+dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+```
 
-Dodawanie wielu C# projektów do rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych:
+Dodawanie wielu C# projektów do rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
 
-`dotnet sln todo.sln add **/*.csproj`
+```dotnetcli
+dotnet sln todo.sln add **/*.csproj
+```
 
-Usuwanie wielu C# projektów z rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych:
+Usuwanie wielu C# projektów z rozwiązania przy użyciu wzorca obsługi symboli wieloznacznych (tylko w systemie UNIX/Linux):
 
-`dotnet sln todo.sln remove **/*.csproj`
-
-> [!NOTE]
-> Obsługi symboli wieloznacznych nie jest funkcją interfejsu wiersza polecenia, ale raczej funkcją powłoki poleceń. Aby pomyślnie rozszerzyć pliki, należy użyć powłoki obsługującej obsługi symboli wieloznacznych. Aby uzyskać więcej informacji na temat obsługi symboli wieloznacznych, zobacz [witrynę Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming)).
+```dotnetcli
+dotnet sln todo.sln remove **/*.csproj
+```

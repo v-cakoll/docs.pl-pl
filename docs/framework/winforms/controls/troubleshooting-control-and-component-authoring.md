@@ -14,14 +14,14 @@ ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2e0b98107ac5f43c80aad6cb5ea61e6f4e1e28d3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 5d3aa715590a10391bafa08a85265842ee8cedfb
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015715"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197121"
 ---
-# <a name="troubleshoot-control-and-component-authoring"></a>Rozwiązywanie problemów dotyczących kontroli i tworzenia składników
+# <a name="troubleshoot-control-and-component-authoring"></a>Rozwiązywanie problemów z tworzeniem kontrolek i składników
 
 W tym temacie wymieniono następujące typowe problemy związane z tworzeniem składników i kontrolek:
 
@@ -31,7 +31,7 @@ W tym temacie wymieniono następujące typowe problemy związane z tworzeniem sk
 
 - Zdarzenie jest zgłaszane dwa razy w dziedziczonej kontrolce lub składniku
 
-- Błąd czasu projektowania: "Nie można utworzyć składnika"*Nazwa składnika*""
+- Błąd czasu projektowania: "nie można utworzyć składnika"*Nazwa składnika*""
 
 - STAThreadAttribute
 
@@ -39,7 +39,7 @@ W tym temacie wymieniono następujące typowe problemy związane z tworzeniem sk
 
 ## <a name="cannot-add-control-to-toolbox"></a>Nie można dodać kontrolki do przybornika
 
-Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce innej firmy do przybornika, należy tozrobić ręcznie. Jeśli bieżący projekt zawiera kontrolkę lub składnik, powinien być automatycznie wyświetlany w **przyborniku** . Aby uzyskać więcej informacji, [zobacz Przewodnik: Automatyczne wypełnianie przybornika składnikami](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)niestandardowymi.
+Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce innej firmy do **przybornika**, należy to zrobić ręcznie. Jeśli bieżący projekt zawiera kontrolkę lub składnik, powinien być automatycznie wyświetlany w **przyborniku** . Aby uzyskać więcej informacji, zobacz [Przewodnik: automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 ### <a name="to-add-a-control-to-the-toolbox"></a>Aby dodać kontrolkę do przybornika
 
@@ -49,7 +49,7 @@ Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce
 
     - Jeśli chcesz dodać składnik .NET Framework lub kontrolkę, kliknij kartę **składniki .NET Framework** .
 
-         — lub —
+         oraz
 
     - Jeśli chcesz dodać składnik COM lub kontrolkę ActiveX, kliknij kartę **składniki com** .
 
@@ -73,7 +73,7 @@ Aby dodać kontrolkę niestandardową utworzoną w innym projekcie lub kontrolce
 
 ## <a name="cannot-debug-the-windows-forms-user-control-or-component"></a>Nie można debugować kontrolki użytkownika Windows Forms lub składnika
 
-Jeśli formant pochodzi z <xref:System.Windows.Forms.UserControl> klasy, można debugować jego zachowanie w czasie wykonywania za pomocą kontenera testowego. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
+Jeśli formant pochodzi z klasy <xref:System.Windows.Forms.UserControl>, można debugować jego zachowanie w czasie wykonywania za pomocą kontenera testowego. Aby uzyskać więcej informacji, zobacz [jak: testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 Inne niestandardowe kontrolki i składniki nie są projektami autonomicznymi. Muszą one być hostowane przez aplikację, taką jak projekt Windows Forms. Aby debugować formant lub składnik, należy dodać go do projektu Windows Forms.
 
@@ -99,27 +99,27 @@ Inne niestandardowe kontrolki i składniki nie są projektami autonomicznymi. Mu
 
    Teraz można debugować formant lub składnik w zwykły sposób.
 
-Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowanie w programie Visual Studio](/visualstudio/debugger/debugging-in-visual-studio) i [Przewodnik: Debugowanie niestandardowych kontrolek Windows Forms w czasie](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)projektowania.
+Aby uzyskać więcej informacji na temat debugowania, zobacz [debugowanie w programie Visual Studio](/visualstudio/debugger/debugger-feature-tour) i [instruktaże: debugowanie niestandardowych kontrolek Windows Forms w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).
 
 ## <a name="event-is-raised-twice-in-inherited-control-or-component"></a>Zdarzenie jest zgłaszane dwa razy w dziedziczonej kontrolce lub składniku
 
-Prawdopodobnie jest to spowodowane zduplikowaną `Handles` klauzulą. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
+Prawdopodobnie jest to spowodowane zduplikowaną klauzulą `Handles`. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z dziedziczonymi programami obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md).
 
-## <a name="design-time-error-failed-to-create-component-component-name"></a>Błąd czasu projektowania: "Nie można utworzyć składnika" Nazwa składnika ""
+## <a name="design-time-error-failed-to-create-component-component-name"></a>Błąd czasu projektowania: "nie można utworzyć składnika" Nazwa składnika ""
 
 Składnik lub formant muszą dostarczać Konstruktor bez parametrów z parametrami. Gdy środowisko projektowe tworzy wystąpienie składnika lub formantu, nie podejmuje próby dostarczenia żadnych parametrów do przeciążenia konstruktorów przyjmujących parametry.
 
 ## <a name="stathreadattribute"></a>STAThreadAttribute
 
-<xref:System.STAThreadAttribute> Informuje o tym, że środowisko uruchomieniowe języka wspólnego (CLR), które Windows Forms używa modelu apartamentu jednowątkowego. Możesz zauważyć niezamierzone zachowanie, jeśli nie zastosujesz tego atrybutu do `Main` metody aplikacji Windows Forms. Na przykład obrazy tła mogą nie być wyświetlane dla kontrolek <xref:System.Windows.Forms.ListView>takich jak. Niektóre kontrolki mogą również wymagać tego atrybutu w celu poprawnego autouzupełniania oraz zachowania przeciągania i upuszczania.
+<xref:System.STAThreadAttribute> informuje środowisko uruchomieniowe języka wspólnego (CLR), które Windows Forms używa modelu apartamentu jednowątkowego. Możesz zauważyć niezamierzone zachowanie, jeśli nie zastosujesz tego atrybutu do metody `Main` Windows Forms aplikacji. Na przykład obrazy tła mogą nie być wyświetlane dla kontrolek takich jak <xref:System.Windows.Forms.ListView>. Niektóre kontrolki mogą również wymagać tego atrybutu w celu poprawnego autouzupełniania oraz zachowania przeciągania i upuszczania.
 
 ## <a name="component-icon-does-not-appear-in-toolbox"></a>Ikona składnika nie jest wyświetlana w przyborniku
 
-Gdy używasz <xref:System.Drawing.ToolboxBitmapAttribute> do kojarzenia ikony ze składnikiem niestandardowym, mapa bitowa nie jest wyświetlana w przyborniku dla automatycznie generowanych składników. Aby wyświetlić mapę bitową, Załaduj ponownie formant przy użyciu okna dialogowego **Wybierz elementy przybornika** . Aby uzyskać więcej informacji, zobacz [jak: Udostępnianie mapy bitowej przybornika dla kontrolki](how-to-provide-a-toolbox-bitmap-for-a-control.md).
+Gdy używasz <xref:System.Drawing.ToolboxBitmapAttribute> do skojarzenia ikony ze składnikiem niestandardowym, mapa bitowa nie jest wyświetlana w przyborniku dla automatycznie generowanych składników. Aby wyświetlić mapę bitową, Załaduj ponownie formant przy użyciu okna dialogowego **Wybierz elementy przybornika** . Aby uzyskać więcej informacji, zobacz [How to: dostarczanie mapy bitowej przybornika dla kontrolki](how-to-provide-a-toolbox-bitmap-for-a-control.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](developing-windows-forms-controls-at-design-time.md)
-- [Przewodnik: Automatyczne zapełnianie przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Instrukcje: Testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Przewodnik: Debugowanie niestandardowych kontrolek Windows Forms w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Przewodnik: debugowanie niestandardowych kontrolek formularzy Windows Forms w czasie projektowania](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)

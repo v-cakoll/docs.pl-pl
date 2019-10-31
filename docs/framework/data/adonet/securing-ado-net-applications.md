@@ -2,12 +2,12 @@
 title: Zabezpieczanie aplikacji ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 725ba568f3cd482991359237f4fc42b7da99bc0a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c99c56afca475caafe32cca3f50d074fb82e0e00
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795059"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196728"
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspólnego kodowania pułapek, takie jak nieweryfikowanie danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych, ma wiele potencjalnych punktów awarii, których atakujący może wykorzystać do pobierania, manipulowania lub niszczenia poufnych danych. W związku z tym ważne jest, aby zrozumieć wszystkie aspekty zabezpieczeń, od procesu modelowania zagrożeń podczas fazy projektowania aplikacji, do ostatecznego wdrożenia i trwającej konserwacji.  
@@ -39,7 +39,7 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspó
  [Zagadnienia dotyczące bezpieczeństwa](./ef/security-considerations.md)  
  Opisuje zabezpieczenia Entity Framework aplikacji.  
   
- [Zabezpieczenia](../../../standard/security/index.md)  
+ [Security](../../../standard/security/index.md)  
  Zawiera łącza do tematów opisujących wszystkie aspekty zabezpieczeń w programie .NET.  
   
  [Narzędzia zabezpieczeń](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
@@ -48,7 +48,7 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż uniknięcie wspó
  [Zasoby do tworzenia bezpiecznych aplikacji](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  Zawiera łącza do tematów dotyczących tworzenia bezpiecznych aplikacji.  
   
- [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/security-bibliography)  
+ [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/securing-applications)  
  Oferuje linki do zasobów zewnętrznych dostępnych w trybie online i drukowania.  
   
 ## <a name="see-also"></a>Zobacz także

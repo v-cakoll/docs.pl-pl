@@ -1,24 +1,24 @@
 ---
-title: 'Przewodnik: lokalizowanie aplikacji hybrydowej'
+title: 'Wskazówki: lokalizacja aplikacji hybrydowej'
 ms.date: 08/18/2018
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: b98bf7b3f0aa4e7698a5c0ca7c8ae16051ce6300
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: bef296d5de4735780c839af312b5d4fe7eeeb960
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991774"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197853"
 ---
-# <a name="walkthrough-localizing-a-hybrid-application"></a>Przewodnik: lokalizowanie aplikacji hybrydowej
+# <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
 
-W tym instruktażu pokazano, jak lokalizować [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy w aplikacjihybrydowejopartejnabazie.[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
+W tym instruktażu pokazano, jak lokalizować elementy [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji hybrydowej opartej na [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 Zadania przedstawione w tym instruktażu obejmują:
 
-- Tworzenie projektu [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] hosta.
+- Tworzenie projektu hosta [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].
 
 - Dodawanie lokalizowalnej zawartości.
 
@@ -40,35 +40,35 @@ Następujące składniki są wymagane do przeprowadzenia tego instruktażu:
 
 ## <a name="creating-the-windows-forms-host-project"></a>Tworzenie projektu hosta Windows Forms
 
-Pierwszym krokiem jest utworzenie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] projektu aplikacji i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dodanie elementu z zawartością, która zostanie zlokalizowana.
+Pierwszym krokiem jest utworzenie projektu aplikacji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i dodanie elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] z zawartością, która zostanie zlokalizowana.
 
 ### <a name="to-create-the-host-project"></a>Aby utworzyć projekt hosta
 
-1. Utwórz projekt **aplikacji WPF** o nazwie `LocalizingWpfInWf`.  (**Plik** > **Nowy** **projekt Visual C#**  Visual Basic**klasyczna** **Aplikacja WPF**Desktop) > . >  >  > 
+1. Utwórz projekt **aplikacji WPF** o nazwie `LocalizingWpfInWf`.  (**Plik** > **Nowy** > **projekt** > **Wizualizacja C#**  lub **Visual Basic** > **klasycznego pulpitu** > **aplikacji WPF**).
 
-2. Dodaj element o nazwie`SimpleControl` do projektu. <xref:System.Windows.Controls.UserControl> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]
+2. Dodaj element <xref:System.Windows.Controls.UserControl> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]o nazwie `SimpleControl` do projektu.
 
-3. Użyj kontrolki, <xref:System.Windows.Forms.Integration.ElementHost> aby `SimpleControl` umieścić element w formularzu. Aby uzyskać więcej informacji, [zobacz Przewodnik: Hostowanie złożonej kontrolki WPF 3D w Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
+3. Użyj kontrolki <xref:System.Windows.Forms.Integration.ElementHost>, aby umieścić element `SimpleControl` w formularzu. Aby uzyskać więcej informacji, zobacz [Przewodnik: hosting złożonego formantu 3D WPF w Windows Forms](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md).
 
 ## <a name="adding-localizable-content"></a>Dodawanie lokalizowalnej zawartości
 
-Następnie dodasz kontrolkę [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]etykietai ustawisz zawartość elementu na Lokalizowalny ciąg. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]
+Następnie dodasz kontrolkę [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] etykieta i ustawisz zawartość elementu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] na Lokalizowalny ciąg.
 
 ### <a name="to-add-localizable-content"></a>Aby dodać lokalizowalną zawartość
 
-1. W **Eksplorator rozwiązań**kliknij dwukrotnie [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]plik **SimpleControl. XAML** , aby otworzyć go w.
+1. W **Eksplorator rozwiązań**kliknij dwukrotnie plik **SimpleControl. XAML** , aby otworzyć go w [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
 
-2. Ustaw zawartość <xref:System.Windows.Controls.Button> formantu przy użyciu następującego kodu.
+2. Ustaw zawartość kontrolki <xref:System.Windows.Controls.Button> przy użyciu następującego kodu.
 
      [!code-xaml[LocalizingWpfInWf#10](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl0.xaml#10)]
 
 3. W **Eksplorator rozwiązań**kliknij dwukrotnie przycisk **Form1** , aby otworzyć go w Projektant formularzy systemu Windows.
 
-4. Otwórz **Przybornik** i kliknij dwukrotnie **etykietę** , aby dodać kontrolkę etykieta do formularza. Ustaw wartość <xref:System.Windows.Forms.Control.Text%2A> właściwości na `"Hello"`.
+4. Otwórz **Przybornik** i kliknij dwukrotnie **etykietę** , aby dodać kontrolkę etykieta do formularza. Ustaw wartość właściwości <xref:System.Windows.Forms.Control.Text%2A> na `"Hello"`.
 
 5. Naciśnij klawisz **F5** , aby skompilować i uruchomić aplikację.
 
-     Zarówno element, jak i kontrolka etykieta wyświetlają tekst **"Hello".** `SimpleControl`
+     Element `SimpleControl` i kontrolka etykieta wyświetlają tekst **"Hello"** .
 
 ## <a name="enabling-localization"></a>Włączanie lokalizacji
 
@@ -84,13 +84,13 @@ Projektant formularzy systemu Windows zawiera ustawienia umożliwiające włącz
 
 4. W Projektant formularzy systemu Windows wybierz kontrolkę etykieta.
 
-5. W oknie **Właściwości** ustaw wartość <xref:System.Windows.Forms.Control.Text%2A> właściwości na `"Hola"`.
+5. W oknie **Właściwości** ustaw wartość właściwości <xref:System.Windows.Forms.Control.Text%2A> na `"Hola"`.
 
      Nowy plik zasobów o nazwie Form1.es-ES. resx zostanie dodany do projektu.
 
 6. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy pozycję **Form1.cs** , a następnie kliknij pozycję **Wyświetl kod** , aby otworzyć ją w edytorze kodu.
 
-7. Skopiuj następujący kod do `Form1` konstruktora, poprzedzając `InitializeComponent`wywołanie metody.
+7. Skopiuj następujący kod do konstruktora `Form1`, poprzedzając wywołanie `InitializeComponent`.
 
      [!code-csharp[LocalizingWpfInWf#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/Form1.cs#2)]
 
@@ -114,7 +114,7 @@ Projektant formularzy systemu Windows zawiera ustawienia umożliwiające włącz
 
 ## <a name="assigning-resource-identifiers"></a>Przypisywanie identyfikatorów zasobów
 
-Można zmapować lokalizowalną zawartość na zestawy zasobów przy użyciu identyfikatorów zasobów. Aplikacja MsBuild. exe automatycznie przypisuje identyfikatory zasobów podczas określania `updateuid` opcji.
+Można zmapować lokalizowalną zawartość na zestawy zasobów przy użyciu identyfikatorów zasobów. Aplikacja MsBuild. exe automatycznie przypisuje identyfikatory zasobów po określeniu opcji `updateuid`.
 
 ### <a name="to-assign-resource-identifiers"></a>Aby przypisać identyfikatory zasobów
 
@@ -126,7 +126,7 @@ Można zmapować lokalizowalną zawartość na zestawy zasobów przy użyciu ide
     msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
-3. W **Eksplorator rozwiązań**kliknij dwukrotnie plik **SimpleControl. XAML** , aby otworzyć go w edytorze kodu. Zobaczysz, że `msbuild` polecenie `Uid` dodało atrybut do wszystkich elementów. Ułatwia to lokalizowanie identyfikatorów zasobów.
+3. W **Eksplorator rozwiązań**kliknij dwukrotnie plik **SimpleControl. XAML** , aby otworzyć go w edytorze kodu. Zobaczysz, że polecenie `msbuild` dodaliśmy atrybut `Uid` do wszystkich elementów. Ułatwia to lokalizowanie identyfikatorów zasobów.
 
      [!code-xaml[LocalizingWpfInWf#20](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizingWpfInWf/CSharp/SimpleControl.xaml#20)]
 
@@ -134,7 +134,7 @@ Można zmapować lokalizowalną zawartość na zestawy zasobów przy użyciu ide
 
 ## <a name="using-locbaml-to-produce-a-satellite-assembly"></a>Tworzenie zestawu satelickiego za pomocą LocBaml
 
-Zlokalizowana zawartość jest przechowywana w *zestawie satelickim*obsługującym tylko zasoby. Użyj narzędzia wiersza polecenia LocBaml. exe, aby utworzyć zlokalizowany zestaw [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości.
+Zlokalizowana zawartość jest przechowywana w *zestawie satelickim*obsługującym tylko zasoby. Użyj narzędzia wiersza polecenia LocBaml. exe, aby utworzyć zlokalizowany zestaw dla zawartości [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
 ### <a name="to-produce-a-satellite-assembly"></a>Aby utworzyć zestaw satelicki
 
@@ -146,7 +146,7 @@ Zlokalizowana zawartość jest przechowywana w *zestawie satelickim*obsługując
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv
     ```
 
-3. Otwórz plik temp. CSV z programem Visual Studio lub innym edytorem tekstu. Zastąp ciąg `"Hello"` wyrażeniem hiszpańskim `"Hola"`.
+3. Otwórz plik temp. CSV z programem Visual Studio lub innym edytorem tekstu. Zastąp ciąg `"Hello"` przy użyciu tłumaczenia hiszpańskiego, `"Hola"`.
 
 4. Zapisz plik temp. csv.
 
@@ -178,4 +178,4 @@ Zlokalizowana zawartość jest przechowywana w *zestawie satelickim*obsługując
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Lokalizowanie aplikacji](how-to-localize-an-application.md)
 - [Przewodnik: Lokalizowanie Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
-- [Projektowanie XAML w programie Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
+- [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)

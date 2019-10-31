@@ -1,13 +1,13 @@
 ---
-ms.openlocfilehash: f4ea5d52be1431a126f06ffdd2772fdaa0a1e02b
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 814372535f5c7a91f1df250404018228e4c4c812
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690605"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198535"
 ---
 
 > [!NOTE]
-> Przykłady języka C#, w tym artykule uruchamiane w [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) modułu uruchamiającego testy i Plac zabaw dla kodu wbudowanego. Wybierz **Uruchom** przycisk, aby uruchomić przykład, w oknie interaktywnym. Po wykonaniu kodu, możesz go zmodyfikować i uruchomić zmodyfikowany kod, wybierając **Uruchom** ponownie. Zmodyfikowanego kodu albo działa w oknie interaktywnym lub, jeśli kompilacja nie powiedzie się, w oknie interaktywnym Wyświetla wszystkie C# kompilatora komunikaty o błędach. 
->  
-> [Lokalnej strefy czasowej](xref:System.TimeZoneInfo.Local) z [Try.NET](https://dotnet.microsoft.com/platform/try-dotnet) wbudowany kod modułu uruchamiającego testy i placu zabaw jest uniwersalny czas koordynowany lub czasu UTC. Może to wpłynąć na zachowanie i dane wyjściowe przykłady ilustrujące <xref:System.DateTime>, <xref:System.DateTimeOffset>, i <xref:System.TimeZoneInfo> typów i ich członków.
+> Niektóre C# przykłady w tym artykule działają w module uruchamiającego kod wbudowany [try.NET](https://dotnet.microsoft.com/platform/try-dotnet) i plac zabaw. Wybierz przycisk **Run (Uruchom** ), aby uruchomić przykład w oknie interaktywnym. Po wykonaniu kodu można go zmodyfikować i uruchomić zmodyfikowany kod, wybierając pozycję **Uruchom** ponownie. Zmodyfikowany kod jest uruchamiany w oknie interaktywnym lub, jeśli kompilacja nie powiedzie się, w oknie interaktywnym zostaną C# wyświetlone wszystkie komunikaty o błędach kompilatora.
+>
+> [Lokalna strefa czasowa](xref:System.TimeZoneInfo.Local) [try.NET](https://dotnet.microsoft.com/platform/try-dotnet) wbudowanego modułu uruchamiającego kod i plac zabaw jest uniwersalnym czasem koordynowanym (UTC). Może to mieć wpływ na zachowanie i dane wyjściowe przykładów, które ilustrują typy <xref:System.DateTime>, <xref:System.DateTimeOffset>i <xref:System.TimeZoneInfo> oraz ich członków.

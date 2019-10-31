@@ -2,12 +2,12 @@
 title: Szablony programu Visual Studio na potrzeby programu WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 507599549bd75fb454483378e044b6b7581cf4a6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320488"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197194"
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
 Windows Communication Foundation (WCF) szablony programu Visual Studio są wstępnie zdefiniowanymi szablonami projektu i elementów, których można użyć w programie Visual Studio, aby szybko tworzyć usługi WCF i otaczające aplikacje.  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) szablony programu Visual Studio są wstę
  Plik hosta usługi (Service1. svc) jest również tworzony, jeśli istniejący projekt jest projektem sieci Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projekt usługi WCF WF i szablon elementu.  
- Te szablony tworzą usługi WCF obsługujące usługę przepływu pracy, która jest przepływem pracy, który można uzyskać dostęp do usługi sieci Web. Istnieją osobne szablony dla języka XAML lub bezwzględnych modeli programistycznych. Za pomocą szablonów można utworzyć sekwencyjny przepływ pracy automatu lub stanu. Aby uzyskać więcej informacji na temat tego typu przepływu pracy, zobacz [How to: Create a Workflow](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [Tworzenie starszych projektów przepływu pracy](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Te szablony tworzą usługi WCF obsługujące usługę przepływu pracy, która jest przepływem pracy, który można uzyskać dostęp do usługi sieci Web. Istnieją osobne szablony dla języka XAML lub bezwzględnych modeli programistycznych. Za pomocą szablonów można utworzyć sekwencyjny przepływ pracy automatu lub stanu. Aby uzyskać więcej informacji na temat tego typu przepływu pracy, zobacz [How to: Create a Workflow](../windows-workflow-foundation/how-to-create-a-workflow.md). Aby uzyskać więcej informacji na temat tworzenia projektów przepływu pracy, zobacz [Tworzenie starszych projektów przepływu pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer).  
   
  Program Visual Studio Designer jest bardziej reagujący, gdy są używane przepływy pracy typu XOML zamiast kodu. Przepływ pracy XOML jest domyślnym typem przepływu pracy, który ma zostać utworzony.  
   

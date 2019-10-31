@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 990786fbb3cc853f7f399d60fa686bb5d60018af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745701"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192126"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext — Metoda
-Pobiera łańcuch następnej ramki dla wątku.  
+Pobiera następny łańcuch ramek dla wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetNext (
   
 ## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcuch następnej ramki dla wątku. Jeśli ten łańcuch jest ostatni łańcucha `ppChain` ma wartość null.  
+ określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje następny łańcuch ramek dla wątku. Jeśli ten łańcuch jest ostatnim łańcuchem, `ppChain` ma wartość null.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

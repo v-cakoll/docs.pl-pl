@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d600b4687b86f5872f94a60ad3422be764cf5307
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747206"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137704"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable — Metoda
-Pobiera nieco maski wskazujący, który rejestruje, w tym [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) są obecnie dostępne.  
+Pobiera maskę bitową wskazującą, które rejestry w tym [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) są obecnie dostępne.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,21 +35,21 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametry  
  `pAvailable`  
- [out] Maska bitów, która wskazuje, który rejestruje są obecnie dostępne.  
+ określoną Maska bitów wskazująca, które rejestry są obecnie dostępne.  
   
 ## <a name="remarks"></a>Uwagi  
- Rejestr może być niedostępna, jeśli jego wartość nie można określić dla danej sytuacji.  
+ Rejestr może być niedostępny, jeśli nie można ustalić jego wartości dla danej sytuacji.  
   
- Zwrócone maska zawiera nieco dla każdego rejestru (1 << indeks rejestru). Wartość bitowa wynosi 1, jeśli rejestr jest dostępny, lub 0, jeśli nie jest dostępna.  
+ Zwracana Maska zawiera bit dla każdej rejestracji (1 < < indeks rejestru). Wartość bitowa to 1, jeśli rejestr jest dostępny, lub 0, jeśli nie jest dostępny.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

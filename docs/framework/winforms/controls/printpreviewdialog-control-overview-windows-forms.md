@@ -6,33 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dce6bf9cb9872183e60e6ccdf7eaf79b6630db51
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 670886956e1b348895862c117ccf9cf586bde8bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053697"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141220"
 ---
-# <a name="printpreviewdialog-control-overview-windows-forms"></a>Printpreviewdialog — informacje o formancie (formularze Windows)
+# <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog — informacje o formancie (Windows Forms)
 
-Formularze Windows <xref:System.Windows.Forms.PrintPreviewDialog> sterowania to wstępnie skonfigurowane okno dialogowe umożliwia wyświetlenie jak [PrintDocument](printdocument-component-windows-forms.md) pojawią się po wydrukowaniu. Użyj go w ramach aplikacji opartych na Windows jako proste rozwiązanie zamiast konfigurować własne okno dialogowe. Kontrolka zawiera przyciski do drukowania, powiększania, wyświetlanie jednego lub wielu stronach i zamyka okno dialogowe.
+Kontrolka <xref:System.Windows.Forms.PrintPreviewDialog> Windows Forms jest wstępnie skonfigurowanym oknem dialogowym używanym do wyświetlania, jak [PrintDocument](printdocument-component-windows-forms.md) pojawi się po wydrukowaniu. Użyj go w aplikacji opartej na systemie Windows jako proste rozwiązanie zamiast konfigurować własne okno dialogowe. Kontrolka zawiera przyciski do drukowania, powiększania, wyświetlania jednej lub wielu stron i zamykania okna dialogowego.
 
-## <a name="key-properties-and-methods"></a>Kluczowe właściwości i metody
+## <a name="key-properties-and-methods"></a>Właściwości i metody klucza
 
-Właściwość klucza jest <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, który ustawia dokumentów, których podgląd będzie wyświetlany. Dokument musi być <xref:System.Drawing.Printing.PrintDocument> obiektu. Aby wyświetlić okno dialogowe, należy wywołać jej <xref:System.Windows.Forms.Form.ShowDialog%2A> metody. Wygładzanie można wprowadzać tekst płynny, ale może również sprawić, że wyświetlana wolniejsze; Aby go użyć, należy ustawić <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> właściwość `true`.
+Właściwość klucza kontrolki jest <xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>, która ustawia dokument do podglądu. Dokument musi być obiektem <xref:System.Drawing.Printing.PrintDocument>. Aby wyświetlić okno dialogowe, należy wywołać jego metodę <xref:System.Windows.Forms.Form.ShowDialog%2A>. Wygładzanie może sprawiać, że tekst wydaje się gładszy, ale może również spowodować spowolnienie wyświetlania. Aby go użyć, ustaw właściwość <xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A> na `true`.
 
-Niektóre właściwości są dostępne za pośrednictwem <xref:System.Windows.Forms.PrintPreviewControl> , <xref:System.Windows.Forms.PrintPreviewDialog> zawiera. (Nie trzeba dodać to <xref:System.Windows.Forms.PrintPreviewControl> do formularza; jest on automatycznie zawarta w <xref:System.Windows.Forms.PrintPreviewDialog> po dodaniu okna dialogowego do formularza.) Przykłady dostępnych za pośrednictwem właściwości <xref:System.Windows.Forms.PrintPreviewControl> są <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> i <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> właściwości, które określają liczbę stron wyświetlany poziomo i pionowo w kontrolce. Możesz uzyskać dostęp <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> właściwość jako `PrintPreviewDialog1.PrintPreviewControl.Columns` w języku Visual Basic `printPreviewDialog1.PrintPreviewControl.Columns` w elemencie wizualnym C#, lub `printPreviewDialog1->PrintPreviewControl->Columns` w elemencie wizualnym C++.
+Niektóre właściwości są dostępne za pomocą <xref:System.Windows.Forms.PrintPreviewControl>, które <xref:System.Windows.Forms.PrintPreviewDialog> zawiera. (Nie musisz dodawać tego <xref:System.Windows.Forms.PrintPreviewControl> do formularza; jest on automatycznie zawarty w <xref:System.Windows.Forms.PrintPreviewDialog> po dodaniu okna dialogowego do formularza). Przykłady właściwości dostępnych za pomocą <xref:System.Windows.Forms.PrintPreviewControl> są właściwościami <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> i <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>, które określają liczbę stron wyświetlanych w poziomie i w pionie na formancie. Możesz uzyskać dostęp do właściwości <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> jako `PrintPreviewDialog1.PrintPreviewControl.Columns` w Visual Basic, `printPreviewDialog1.PrintPreviewControl.Columns` w wizualizacji C#lub `printPreviewDialog1->PrintPreviewControl->Columns` w wizualizacji. C++
 
-## <a name="printpreviewdialog-performance"></a>Printpreviewdialog — wydajność
+## <a name="printpreviewdialog-performance"></a>PrintPreviewDialog wydajność
 
-W następujących warunkach <xref:System.Windows.Forms.PrintPreviewDialog> kontroli inicjuje bardzo wolno:
+W następujących warunkach formant <xref:System.Windows.Forms.PrintPreviewDialog> jest zainicjowany bardzo wolno:
 
-- Drukarki sieciowej jest używany.
-- Preferencje użytkownika dotyczące drukarki, takie jak ustawienia dupleksu są modyfikowane.
+- Używana jest drukarka sieciowa.
+- Preferencje użytkownika dotyczące tej drukarki, takie jak ustawienia dupleks, są modyfikowane.
 
-Dla aplikacji działających w .NET Framework 4.5.2, można dodać następujący klucz do \<appSettings > sekcji pliku konfiguracji w celu zwiększenia wydajności <xref:System.Windows.Forms.PrintPreviewDialog> kontrolować inicjowania:
+W przypadku aplikacji uruchamianych w .NET Framework 4.5.2 można dodać następujący klucz do sekcji \<appSettings > pliku konfiguracji, aby zwiększyć wydajność inicjowania <xref:System.Windows.Forms.PrintPreviewDialog> kontroli:
 
 ```xml
 <appSettings>
@@ -40,9 +38,9 @@ Dla aplikacji działających w .NET Framework 4.5.2, można dodać następujący
 </appSettings>
 ```
 
-Jeśli `EnablePrintPreviewOptimization` jest ustawiona na jakąkolwiek inną wartość lub jeśli klucz nie jest obecny, optymalizacja nie ma zastosowania.
+Jeśli klucz `EnablePrintPreviewOptimization` jest ustawiony na inną wartość lub jeśli klucz nie istnieje, optymalizacja nie zostanie zastosowana.
 
-Dla aplikacji działających w .NET Framework 4.6 lub nowszej wersji, można dodać następującego przełącznika do [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ \<runtime >](../../configure-apps/file-schema/runtime/index.md) sekcja pliku konfiguracji aplikacji:
+W przypadku aplikacji uruchamianych w .NET Framework 4,6 lub nowszych wersjach można dodać następujący przełącznik do elementu [\<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) w sekcji [\<Runtime >](../../configure-apps/file-schema/runtime/index.md) w pliku konfiguracji aplikacji:
 
 ```xml
 <runtime >
@@ -51,9 +49,9 @@ Dla aplikacji działających w .NET Framework 4.6 lub nowszej wersji, można dod
 </runtime >
 ```
 
-Jeśli przełącznik nie jest obecny lub jest ustawiona na jakąkolwiek inną wartość, optymalizacja nie została zastosowana.
+Jeśli przełącznik nie jest obecny lub jest ustawiony na inną wartość, optymalizacja nie zostanie zastosowana.
 
-Jeśli używasz <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> zdarzenie, aby zmodyfikować ustawienia drukarki, wydajność <xref:System.Windows.Forms.PrintPreviewDialog> nie poprawi kontroli, nawet jeśli jest ustawiona na przełącznik konfiguracji optymalizacji.
+W przypadku użycia zdarzenia <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> w celu zmodyfikowania ustawień drukarki wydajność kontrolki <xref:System.Windows.Forms.PrintPreviewDialog> nie zostanie zwiększona nawet po ustawieniu przełącznika konfiguracji optymalizacji.
 
 ## <a name="see-also"></a>Zobacz także
 

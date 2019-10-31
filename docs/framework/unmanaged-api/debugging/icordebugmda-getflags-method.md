@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 87ce7c5b-fd82-453e-bf55-c8a32150b183
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 701d578a1d3af941923d68ddc0cb7c97dd0ca8ab
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7c3b0331cc4d987070b2d04beb621c4966a27cb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129834"
 ---
 # <a name="icordebugmdagetflags-method"></a>ICorDebugMDA::GetFlags — Metoda
-Pobiera flagi skojarzone z zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Pobiera flagi skojarzone z zarządzanym asystentem debugowania (MDA) reprezentowane przez [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetFlags (
   
 ## <a name="parameters"></a>Parametry  
  `pFlags`  
- [in] Bitowa kombinacja [cordebugmdaflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) wartości wyliczenia, które określają ustawienia flagi to zdarzenie MDA.  
+ podczas Bitowa kombinacja wartości wyliczenia [CorDebugMDAFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) , które określają ustawienia flag dla tego MDA.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

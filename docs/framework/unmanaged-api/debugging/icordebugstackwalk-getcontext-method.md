@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131847"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext — Metoda
-Zwraca kontekst dla bieżącej ramki [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) obiektu.  
+Zwraca kontekst dla bieżącej ramki w obiekcie [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,40 +36,40 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="parameters"></a>Parametry  
  `contextFlags`  
- [in] Flagi, które wskazują żądanej zawartości buforu kontekstu (zdefiniowane w pliku WinNT.h).  
+ podczas Flagi wskazujące żądaną zawartość buforu kontekstu (zdefiniowaną w WinNT. h).  
   
  `contextBufSize`  
- [in] Przydzielony rozmiar buforu kontekstu.  
+ podczas Przydzielony rozmiar buforu kontekstu.  
   
  `contextSize`  
- [out] Rzeczywisty rozmiar kontekstu. Ta wartość musi być mniejsza niż lub równy rozmiarowi buforu kontekstu.  
+ określoną Rzeczywisty rozmiar kontekstu. Ta wartość musi być mniejsza lub równa rozmiarowi buforu kontekstu.  
   
  `contextBuf`  
- [out] Buforu kontekstu.  
+ określoną Bufor kontekstu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Kontekst dla bieżącej ramki została pomyślnie zwrócona.|  
+|S_OK|Kontekst dla bieżącej ramki został pomyślnie zwrócony.|  
 |E_FAIL|Nie można zwrócić kontekstu.|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|Buforu kontekstu jest za mały.|  
-|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki jest już na końcu stosu; w związku z tym są dostępne nie dodatkowe ramki.|  
+|HRESULT_FROM_WIN32 (BUFOR ERROR_INSUFFICIENT)|Bufor kontekstu jest za mały.|  
+|CORDBG_E_PAST_END_OF_STACK|Wskaźnik ramki znajduje się już na końcu stosu; w związku z tym nie można uzyskać dostępu do dodatkowych ramek.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Ponieważ odwijanie przywraca tylko podzbiór rejestrów, takich jak rejestrów trwałej kontekst może nie odpowiadają dokładnie stanu rejestru w momencie wywołania.  
+ Ponieważ rozwinięcia powoduje przywrócenie tylko podzbioru rejestrów, takich jak rejestry nietrwałe, kontekst może nie być dokładnie zgodny z stanem rejestru w momencie wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

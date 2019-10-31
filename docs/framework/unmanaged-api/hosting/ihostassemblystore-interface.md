@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f881440b2e93745723bd090cfbab0286dcd0a4e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d7475e2423d4dc6f57e8928514d7991169eef232
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124500"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore — Interfejs
 Zapewnia metody, które pozwalają hostowi ładować zestawy i moduły niezależnie od środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -34,24 +32,24 @@ Zapewnia metody, które pozwalają hostowi ładować zestawy i moduły niezależ
 |[ProvideModule, metoda](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|Rozwiązuje moduł w zestawie lub połączonym (nieosadzonym) pliku zasobów.|  
   
 ## <a name="remarks"></a>Uwagi  
- `IHostAssemblyStore`umożliwia hostowi wydajne ładowanie zestawów w oparciu o tożsamość zestawu. Host ładuje zestawy, zwracając `IStream` wystąpienia bezpośrednio w bajtach.  
+ `IHostAssemblyStore` zapewnia sposób, aby Host ładował zestawy efektywnie w oparciu o tożsamość zestawu. Host ładuje zestawy, zwracając `IStream` wystąpienia, które wskazują bezpośrednio w bajtach.  
   
- Środowisko CLR określa, czy host został zaimplementowany `IHostAssemblyStore` przez wywołanie `IHostAssemblyManager::GetNonHostAssemblyStores` przy inicjacji. Dzięki temu host może na przykład kontrolować powiązania z zestawami użytkowników, ale w celu utworzenia powiązania z zestawami .NET Framework.  
+ Środowisko CLR określa, czy host zaimplementował `IHostAssemblyStore` przez wywoływanie `IHostAssemblyManager::GetNonHostAssemblyStores` po zainicjowaniu. Dzięki temu host może na przykład kontrolować powiązania z zestawami użytkowników, ale w celu utworzenia powiązania z zestawami .NET Framework.  
   
 > [!NOTE]
-> W przypadku wdrażania programu `IHostAssemblyStore`Host określa jego zamiar, aby rozpoznać wszystkie zestawy, do których nie odwołują `ICLRAssemblyReferenceList` się zwrócone z `IHostAssemblyManager::GetNonHostStoreAssemblies`.  
+> W przypadku wdrażania `IHostAssemblyStore`Host określa jego zamiar w celu rozpoznania wszystkich zestawów, do których nie odwołuje się `ICLRAssemblyReferenceList` zwrócone przez `IHostAssemblyManager::GetNonHostStoreAssemblies`.  
   
 > [!NOTE]
 > .NET Framework wersja 2,0 nie umożliwia hostowi załadowania obrazu natywnego zestawu, zgodnie z opisem w narzędziu [Native Image Generator (Ngen. exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

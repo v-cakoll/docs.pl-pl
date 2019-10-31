@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fbaa0794-a031-4015-8beb-2749e47ac340
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca64e392b930ed57691f05ae771bbaf305df8eb3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a4f533c0ab817d800c2d35b7d64c7aee78faaea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754074"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121164"
 ---
 # <a name="icordebugframegetcode-method"></a>ICorDebugFrame::GetCode — Metoda
 Pobiera wskaźnik do kodu skojarzonego z tą ramką stosu.  
@@ -37,13 +35,13 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametry  
  `ppCode`  
- [out] Wskaźnik na adres obiektu ICorDebugCode, która przedstawia kod skojarzony z tej ramki.  
+ określoną Wskaźnik do adresu obiektu ICorDebugCode, który reprezentuje kod skojarzony z tą ramką.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

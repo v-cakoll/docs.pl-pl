@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62db708b-6cf0-45c5-b897-4b5c75bd2505
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 85247f2f3672e7827f4dd0c93e50cd5da914ee8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bbe2727e4b93cf6d7b3111b6060d170e497024a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755778"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130768"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread — Metoda
-Powiadamia debugera, że zakończył się wątek, który był wykonywany kod zarządzany.  
+Powiadamia debuger, że wątek wykonujący kod zarządzany został zakończony.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +36,22 @@ HRESULT ExitThread (
   
 ## <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [in] Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji, zawierającą wątków zarządzanych.  
+ podczas Wskaźnik do obiektu ICorDebugAppDomain, który reprezentuje domenę aplikacji zawierającą zarządzany wątek.  
   
  `thread`  
- [in] Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątków zarządzanych.  
+ podczas Wskaźnik do obiektu ICorDebugThread, który reprezentuje wątek zarządzany.  
   
 ## <a name="remarks"></a>Uwagi  
- Raz `ExitThread` wywołanie zwrotne jest wywoływane, wątek już nie będą widoczne w wątku wyliczenia.  
+ Po wywołaniu wywołania zwrotnego `ExitThread` wątek nie będzie już wyświetlany w wyliczeniach wątków.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

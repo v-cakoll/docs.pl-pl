@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: cae53926-82ac-4d1d-b297-0bde0bd1bebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 87ba947b9564f82f8daf8cd2ba0acac5cc3587ca
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ae50fb3ff15097f9a6ca5839f3832bcfc58d3f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69928666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134855"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits — Metoda
 Ustawia rozmiar segmentu i maksymalny rozmiar generacji 0.  
   
 > [!IMPORTANT]
-> Począwszy od .NET Framework 4,5, można ustawić rozmiar segmentu i rozmiar maksymalnej generacji 0 na wartości większe niż `DWORD` przy użyciu metody [IGCHost2:: SetGCStartupLimitsEx —](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
+> Począwszy od .NET Framework 4,5, można ustawić rozmiar segmentu i rozmiar maksymalnej generacji 0 na wartość większą niż `DWORD` przy użyciu metody [IGCHost2:: SetGCStartupLimitsEx —](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,16 +45,16 @@ HRESULT SetGCStartupLimits (
  podczas Maksymalny rozmiar generacji 0.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetGCStartupLimits` Metoda może być wywoływana tylko raz. Tych wartości nie można później zmienić.  
+ Metodę `SetGCStartupLimits` można wywołać tylko raz. Tych wartości nie można później zmienić.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** GCHost. idl, GCHost. h  
+ **Nagłówek:** GCHost. idl, GCHost. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

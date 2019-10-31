@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: c94b1b61-045a-4695-bacd-0f18c5acc246
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fb158b35165fb229fc78169e2508679b6749752e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738890"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122953"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent — Funkcja
-Tworzy lub zostanie otwarte dojście zdarzenia, które są sygnalizowane po przez dowolnego środowisko uruchomieniowe języka wspólnego (CLR), który jest ładowany w procesie docelowym określonym.  
+Tworzy lub otwiera dojście zdarzenia, które będzie sygnalizowane przez środowisko uruchomieniowe języka wspólnego (CLR) ładowane w określonym procesie docelowym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +38,31 @@ HRESULT GetStartupNotificationEvent
   
 ## <a name="parameters"></a>Parametry  
  `debuggeePID`  
- [in] Proces identyfikator procesu docelowego, z którego będą otrzymywać powiadomienia o uruchamiania środowiska CLR.  
+ podczas Identyfikator procesu docelowego, z którego mają zostać odebrane powiadomienia uruchomieniowe środowiska CLR.  
   
  `phStartupEvent`  
- [out] Wskaźnik do uchwytu, który zostanie zasygnalizowane przez CLR podczas uruchamiania.  
+ określoną Wskaźnik do dojścia, który zostanie zasygnalizowani przez CLR podczas uruchamiania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Pomyślnie uzyskano dojścia do uruchamiania zdarzenie powiadomienia.  
+ Pomyślnie uzyskano dojście do zdarzenia powiadomienia uruchomienia.  
   
  E_INVALIDARG  
- `phStartupEvent` ma wartość null lub `debuggeePID` nie odwołuje się do procesu, który jest obecnie uruchomiona.  
+ `phStartupEvent` ma wartość null lub `debuggeePID` nie odwołuje się do procesu, który jest obecnie uruchomiony.  
   
- E_FAIL (lub inne kody powrotne e_)  
- Nie można uzyskać dojścia do uruchamiania zdarzenie powiadomienia.  
+ E_FAIL (lub inne kody powrotne E_)  
+ Nie można uzyskać dojścia do zdarzenia powiadomienia uruchomienia.  
   
 ## <a name="remarks"></a>Uwagi  
- W systemie operacyjnym Windows `debuggeePID` mapuje do systemu operacyjnego przetworzyć identyfikatora.  
+ W systemie operacyjnym Windows `debuggeePID` mapuje na identyfikator procesu systemu operacyjnego.  
   
- Zdarzenie jest sygnalizowane przed każdą zarządzane, że kod jest wykonywany przez środowisko CLR, która jest sygnalizowane zdarzenie.  
+ Zdarzenie jest sygnalizowane przed wykonaniem kodu zarządzanego przez środowisko CLR sygnalizujące zdarzenie.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** dbgshim.h  
+ **Nagłówek:** dbgshim. h  
   
- **Biblioteka:** dbgshim.dll  
+ **Biblioteka:** dbgshim. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3,5 SP1

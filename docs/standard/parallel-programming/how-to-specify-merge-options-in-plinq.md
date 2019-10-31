@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie opcji scalania w PLINQ'
+title: 'Porady: określanie opcji scalania w PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 947f3cb15b7eb372d20884ece73374114c48f472
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139269"
 ---
-# <a name="how-to-specify-merge-options-in-plinq"></a>Instrukcje: Określanie opcji scalania w PLINQ
+# <a name="how-to-specify-merge-options-in-plinq"></a>Porady: określanie opcji scalania w PLINQ
 Ten przykład pokazuje, jak określić opcje scalania, które będą stosowane do wszystkich kolejnych operatorów w kwerendzie PLINQ. Nie trzeba jawnie ustawiać opcji scalania, ale może to poprawić wydajność. Aby uzyskać więcej informacji na temat opcji scalania, zobacz [Opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 > [!WARNING]
@@ -29,7 +27,7 @@ Ten przykład pokazuje, jak określić opcje scalania, które będą stosowane d
  [!code-csharp[PLINQ#23](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#23)]
  [!code-vb[PLINQ#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#23)]  
   
- W przypadkach, gdy <xref:System.Linq.ParallelMergeOptions.AutoBuffered> opcja odnosi się do niepożądanego opóźnienia przed zwróceniem pierwszego elementu, <xref:System.Linq.ParallelMergeOptions.NotBuffered> wypróbuj opcję, aby szybciej i bardziej płynnie dać elementy wynikowe.  
+ W przypadkach, gdy opcja <xref:System.Linq.ParallelMergeOptions.AutoBuffered>a wiąże się z niepożądane opóźnienie przed uzyskaniem pierwszego elementu, wypróbuj <xref:System.Linq.ParallelMergeOptions.NotBuffered> opcję, aby szybciej i bardziej płynnie zwracać elementy wynikowe.  
   
 ## <a name="see-also"></a>Zobacz także
 

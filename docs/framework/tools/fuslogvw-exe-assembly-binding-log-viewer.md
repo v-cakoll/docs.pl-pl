@@ -9,18 +9,16 @@ helpviewer_keywords:
 - locating assemblies
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6077acab533ecb755ae42b7c4359a6c77ff33449
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129845"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Podgląd dziennika powiązań zasobów)
 
-Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Niepowodzenie zlokalizowania zestawu przez środowisko uruchomieniowe języka wspólnego jest zwykle wyświetlane <xref:System.TypeLoadException> w aplikacji.
+Podgląd dziennika powiązań zestawów wyświetla szczegóły dotyczące powiązań zestawu. Te informacje pomagają zdiagnozować, dlaczego .NET Framework nie może zlokalizować zestawu w czasie wykonywania. Te błędy są zazwyczaj wynikiem wdrożenia zestawu w nieprawidłowej lokalizacji, obrazu macierzystego, który przestał być prawidłowy lub niezgodności numerów wersji lub kultur. Niepowodzenie zlokalizowania zestawu przez środowisko uruchomieniowe języka wspólnego jest zwykle wyświetlane jako <xref:System.TypeLoadException> w aplikacji.
 
 > [!IMPORTANT]
 > Program fuslogvw.exe musi być uruchomione z uprawnieniami administratora.
@@ -42,7 +40,7 @@ Przeglądarka wyświetla wpis dla każdego nieudanego powiązania zestawu. Dla k
 2. Wybierz przycisk opcji **niestandardowa** , aby wyświetlić błędy powiązania w niestandardowym katalogu, który określisz. Należy określić niestandardową lokalizację, w której środowisko uruchomieniowe ma przechowywać dzienniki, ustawiając w oknie dialogowym **ustawienia dziennika** niestandardową lokalizację dziennika na prawidłową nazwę katalogu. Ten katalog powinien być pusty i zawierać tylko pliki, które generuje środowisko uruchomieniowe. Jeśli zawiera plik wykonywalny, który generuje błąd, który ma zostać zapisany, błąd nie zostanie zapisany, ponieważ narzędzie spróbuje utworzyć katalog o takiej samej nazwie jak plik wykonywalny. Ponadto próba uruchomienia pliku wykonywalnego z lokalizacji dziennika nie powiedzie się.
 
     > [!NOTE]
-    > Domyślna lokalizacja powiązania jest preferowana nad niestandardową lokalizacją powiązania. Środowisko uruchomieniowe przechowuje w pamięci podręcznej wininet domyślną lokalizację powiązania i dlatego czyści ją automatycznie. Jeśli określisz niestandardową lokalizację powiązania, jesteś także odpowiedzialny za jej czyszczenie.
+    > Domyślna lokalizacja powiązania jest preferowana nad niestandardową lokalizacją powiązania. Środowisko uruchomieniowe przechowuje w pamięci podręcznej usługi WinInet domyślną lokalizację powiązania i w związku z tym automatycznie czyści ją. W przypadku określenia niestandardowej lokalizacji powiązania użytkownik jest odpowiedzialny za jej czyszczenie.
 
 ### <a name="to-view-details-about-a-specific-failure"></a>Aby wyświetlić szczegóły, dotyczące określonego błędu
 
@@ -209,7 +207,7 @@ Za pomocą okna dialogowego **ustawienia dziennika** można wykonać następują
   Zobacz Ważne informacje dotyczące zestawów, które są ładowane, jako niezależne od domeny.
 
 > [!IMPORTANT]
-> Gdy zestaw jest ładowany jako neutralny dla domeny, na przykład przez ustawienie <xref:System.AppDomainSetup.LoaderOptimization%2A> właściwości na <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> lub <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, włączenie rejestrowania może spowodować przeciek pamięci w niektórych przypadkach. Może się to zdarzyć, jeśli wpis dziennika jest dodawany, gdy moduł niezależny od domeny jest ładowany do domeny aplikacji, a później domena aplikacji jest zwalniana. Wpis dziennika nie może być zwolniony do czasu zakończenia procesu. Niektóre debugery włączają rejestrowanie automatycznie.
+> Gdy zestaw jest ładowany jako neutralny dla domeny, na przykład przez ustawienie właściwości <xref:System.AppDomainSetup.LoaderOptimization%2A> na <xref:System.LoaderOptimization.MultiDomain?displayProperty=nameWithType> lub <xref:System.LoaderOptimization.MultiDomainHost?displayProperty=nameWithType>, włączenie rejestrowania może spowodować przeciek pamięci w niektórych przypadkach. Może się to zdarzyć, jeśli wpis dziennika jest dodawany, gdy moduł niezależny od domeny jest ładowany do domeny aplikacji, a później domena aplikacji jest zwalniana. Wpis dziennika nie może być zwolniony do czasu zakończenia procesu. Niektóre debugery włączają rejestrowanie automatycznie.
 
 #### <a name="to-enable-a-custom-log-path"></a>Aby włączyć niestandardową ścieżkę dziennika
 
@@ -218,9 +216,9 @@ Za pomocą okna dialogowego **ustawienia dziennika** można wykonać następują
 2. Wprowadź ścieżkę do pola tekstowego **niestandardowa ścieżka dziennika** .
 
 > [!NOTE]
-> [Podgląd dziennika powiązań zestawów (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE) do przechowywania dziennika powiązań. Ze względu na sporadyczne uszkodzenie w pamięci podręcznej programu IE, [Przeglądarka dzienników powiązań zestawu (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) może czasami zatrzymać wyświetlanie nowych dzienników powiązań w oknie wyświetlania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie wystąpi, jeśli używana jest niestandardowa ścieżka dziennika).  Aby naprawić uszkodzenie i umożliwić programowi fusion ponowne wyświetlanie dzienników powiązań, należy wyczyścić pamięć podręczną programu IE poprzez usunięcie tymczasowych plików internetowych w oknie Opcji internetowych programu IE.
+> [Podgląd dziennika powiązań zestawów (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) używa pamięci podręcznej programu Internet Explorer (IE) do przechowywania dziennika powiązań. Ze względu na sporadyczne uszkodzenie w pamięci podręcznej programu IE, [Przeglądarka dzienników powiązań zestawu (Fuslogvw. exe)](fuslogvw-exe-assembly-binding-log-viewer.md) może czasami zatrzymać wyświetlanie nowych dzienników powiązań w oknie wyświetlania. W wyniku tego uszkodzenia infrastruktura powiązań .NET (fusion) nie może zapisywać w dzienniku powiązań ani z niego odczytywać. (Ten problem nie występuje, jeśli używasz niestandardowej ścieżki dziennika).  Aby naprawić uszkodzenie i umożliwić łączenie w celu ponownego wyświetlenia dzienników powiązań, wyczyść pamięć podręczną programu IE, usuwając tymczasowe pliki internetowe z okna dialogowego Opcje internetowe programu IE.
 >
-> Jeśli niezarządzana aplikacja obsługuje środowisko uruchomieniowe języka wspólnego przez `IHostAssemblyManager` implementację interfejsów i `IHostAssemblyStore` , wpisy dziennika nie mogą być przechowywane w pamięci podręcznej WinINet.  Aby wyświetlić wpisy dziennika dla hostów niestandardowych, które implementują te interfejsy, należy określić alternatywną ścieżkę dziennika.
+> Jeśli niezarządzana aplikacja obsługuje środowisko uruchomieniowe języka wspólnego przez implementację interfejsów `IHostAssemblyManager` i `IHostAssemblyStore`, wpisów dziennika nie można przechowywać w pamięci podręcznej WinINet.  Aby wyświetlić wpisy dziennika dla hostów niestandardowych, które implementują te interfejsy, należy określić alternatywną ścieżkę dziennika.
 
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>Aby włączyć rejestrowanie dla aplikacji działających w kontenerze aplikacji systemu Windows
 

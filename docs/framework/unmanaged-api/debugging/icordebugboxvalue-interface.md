@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue, interfejs
+title: ICorDebugBoxValue — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a40e12655106cca01add065c2f95384b0eb1a286
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912919"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122809"
 ---
-# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue, interfejs
+# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue — Interfejs
 
 Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w ramce.  
   
@@ -39,13 +37,13 @@ Podklasa elementu "ICorDebugHeapValue" reprezentująca obiekt klasy wartości w 
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

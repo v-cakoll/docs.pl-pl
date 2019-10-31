@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 06ce2da435df9458ca59d76fa426becbede2e619
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131858"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk — Interfejs
 Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się na stosie wątku.  
@@ -30,10 +28,10 @@ Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się n
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Zwraca kontekst dla bieżącej ramki w `ICorDebugStackWalk` obiekcie.|  
-|[SetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Ustawia bieżący kontekst obiektu na prawidłowy kontekst dla wątku. `ICorDebugStackWalk`|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|`ICorDebugStackWalk` Przenosi obiekt do następnej ramki.|  
-|[GetFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Pobiera bieżącą ramkę w `ICorDebugStackWalk` obiekcie.|  
+|[GetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|Zwraca kontekst dla bieżącej ramki w obiekcie `ICorDebugStackWalk`.|  
+|[SetContext, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|Ustawia bieżący kontekst obiektu `ICorDebugStackWalk` na prawidłowy kontekst dla wątku.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|Przenosi `ICorDebugStackWalk` obiektu do następnej ramki.|  
+|[GetFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|Pobiera bieżącą ramkę w obiekcie `ICorDebugStackWalk`.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -41,13 +39,13 @@ Dostarcza metody pobierania zarządzanych metod, lub ramek, znajdujących się n
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

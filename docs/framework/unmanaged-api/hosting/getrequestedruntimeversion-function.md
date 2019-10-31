@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136345"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion — Funkcja
-Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) wymagane przez określoną aplikację. Jeśli ta wersja nie jest zainstalowana, pobiera najbardziej aktualną wersję zainstalowaną przed żądaną wersją.  
+Pobiera numer wersji środowiska uruchomieniowego języka wspólnego (CLR) żądany przez określoną aplikację. Jeśli ta wersja nie jest zainstalowana, program pobierze najnowszą wersję, która jest zainstalowana przed żądaną wersją.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,34 +40,34 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>Parametry  
  `pExe`  
- [in] Nazwa aplikacji.  
+ podczas Nazwa aplikacji.  
   
  `pVersion`  
- [out] Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu.  
+ określoną Bufor zawierający ciąg numeru wersji po pomyślnym zakończeniu.  
   
  `cchBuffer`  
- [in] Długość buforu wersji.  
+ podczas Długość buforu wersji.  
   
  `pdwLength`  
- [out] Wskaźnik do długości ciągu numeru wersji.  
+ określoną Wskaźnik do długości ciągu numeru wersji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|ERROR_INSUFFICIENT_BUFFER|Bufor wersji nie jest wystarczająco duży, aby zapisać ciąg wersji.|  
+|ERROR_INSUFFICIENT_BUFFER|Bufor wersji nie jest wystarczająco duży, aby można było przechowywać ciąg wersji.|  
 |E_POINTER|`pdwLength` ma wartość null.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

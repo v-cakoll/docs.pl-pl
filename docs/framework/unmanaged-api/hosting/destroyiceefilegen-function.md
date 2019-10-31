@@ -16,19 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc1e2235-e721-4cb2-a0b8-6b0c030d7bab
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab4560774edce49341c86dd9446e38701db7fa62
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4eb878b61b72378bc6870af7f2cd09f0b6943b13
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769833"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136503"
 ---
 # <a name="destroyiceefilegen-function"></a>DestroyICeeFileGen — Funkcja
-Niszczy [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) obiektu.  
+Niszczy obiekt [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) .  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT DestroyICeeFileGen (
   
 ## <a name="parameters"></a>Parametry  
  `ceeFileGen`  
- [in] `ICeeFileGen` Obiektu do zniszczenia.  
+ podczas Obiekt `ICeeFileGen` do zniszczenia.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Ta metoda zwraca standardowe kody błędów COM.  
   
 ## <a name="remarks"></a>Uwagi  
- `DestroyICeeFileGen` niszczy `ICeeFileGen` obiekt utworzony przez [createiceefilegen —](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) funkcji.  
+ `DestroyICeeFileGen` niszczy obiekt `ICeeFileGen` utworzony przez funkcję [CreateICeeFileGen —](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ICeeFileGen.h  
+ **Nagłówek:** ICeeFileGen. h  
   
- **Biblioteka:** MSCorPE.dll  
+ **Biblioteka:** MSCorPE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

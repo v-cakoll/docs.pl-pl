@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ba3c6ee-4ba1-4c98-bf1e-8531acd3da09
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1272df17a9a9a500b84f62914811b8d109bf3cdd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f2838007504e56ad44614a6778083be046629f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768951"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140072"
 ---
 # <a name="icordebugthread2gettaskid-method"></a>ICorDebugThread2::GetTaskID — Metoda
-Pobiera identyfikator zadania uruchomione w tym wątku.  
+Pobiera identyfikator zadania uruchomionego w tym wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetTaskID (
   
 ## <a name="parameters"></a>Parametry  
  `pTaskId`  
- [out] Wskaźnik do identyfikatora zadania uruchamiane w wątku, reprezentowane przez ten obiekt icordebugthread2 —.  
+ określoną Wskaźnik do identyfikatora zadania uruchomionego w wątku reprezentowanego przez ten obiekt ICorDebugThread2.  
   
 ## <a name="remarks"></a>Uwagi  
- Zadanie może być uruchomiony tylko w wątku, jeśli wątek jest skojarzona z połączeniem. `GetTaskID` Zwraca zero `pTaskId` Jeśli wątek nie jest skojarzona z połączeniem.  
+ Zadanie może być uruchomione tylko w wątku, jeśli wątek jest skojarzony z połączeniem. `GetTaskID` zwraca zero w `pTaskId`, jeśli wątek nie jest skojarzony z połączeniem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

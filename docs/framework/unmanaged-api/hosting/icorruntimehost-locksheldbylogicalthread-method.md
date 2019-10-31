@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c3601255-d894-4d7c-b1df-c31334551700
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eed83cbc983d59e99b3a42e667e9e126316c263
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f6ef7e06d94cb22d266949927cb15105b1602d3a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780096"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139530"
 ---
 # <a name="icorruntimehostlocksheldbylogicalthread-method"></a>ICorRuntimeHost::LocksHeldByLogicalThread — Metoda
-Pobiera liczbę blokad, które zawiera bieżący wątek.  
+Pobiera liczbę blokad, które są przechowywane w bieżącym wątku.  
   
  Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
@@ -39,16 +37,16 @@ HRESULT LocksHeldByLogicalThread(
   
 ## <a name="parameters"></a>Parametry  
  `pCount`  
- [out] Wskaźnik z liczbą blokad, które zawiera bieżący wątek.  
+ określoną Wskaźnik do liczby blokad, które są przechowywane w bieżącym wątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** 1.0, 1.1  
+ **.NET Framework wersje:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

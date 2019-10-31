@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9659dd835bb60adf8471f73ed45b6588cf15126f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139201"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum — Wyliczenie
-Wskazuje poziom ważności opisowy komunikat, który jest zapisywany w dzienniku zdarzeń, gdy wątków zarządzanych rejestruje zdarzenie.  
+Wskazuje poziom ważności komunikatu opisowego, który jest zapisywana w dzienniku zdarzeń, gdy zarządzany wątek rejestruje zdarzenie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,31 +48,31 @@ typedef enum LoggingLevelEnum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`LTraceLevel0`|Komunikat jest poziom śledzenia 0.|  
-|`LTraceLevel1`|Komunikat jest poziom śledzenia 1.|  
-|`LTraceLevel2`|Komunikat jest poziom śledzenia 2.|  
-|`LTraceLevel3`|Komunikat jest poziom śledzenia 3.|  
-|`LTraceLevel4`|Komunikat jest poziom śledzenia 4.|  
-|`LStatusLevel0`|Komunikat jest poziom stanu 0.|  
-|`LStatusLevel1`|Komunikat jest poziom stanu 1.|  
-|`LStatusLevel2`|Komunikat jest poziom stanu 2.|  
-|`LStatusLevel3`|Komunikat jest poziom stanu 3.|  
-|`LStatusLevel4`|Komunikat jest poziom stanu 4.|  
-|`LWarningLevel`|Komunikat jest poziom ostrzeżeń.|  
-|`LErrorLevel`|Komunikat jest poziomu błędu.|  
-|`LPanicLevel`|Komunikat jest alarm poziom.|  
+|`LTraceLevel0`|Komunikat jest poziomem śledzenia równym 0.|  
+|`LTraceLevel1`|Komunikat jest poziomem śledzenia 1.|  
+|`LTraceLevel2`|Komunikat jest poziomem śledzenia 2.|  
+|`LTraceLevel3`|Komunikat jest poziomem śledzenia 3.|  
+|`LTraceLevel4`|Komunikat jest poziomem śledzenia 4.|  
+|`LStatusLevel0`|Komunikat jest poziomem stanu 0.|  
+|`LStatusLevel1`|Komunikat jest poziomem stanu 1.|  
+|`LStatusLevel2`|Komunikat jest poziomem stanu 2.|  
+|`LStatusLevel3`|Komunikat jest poziomem stanu 3.|  
+|`LStatusLevel4`|Komunikat jest poziomem stanu 4.|  
+|`LWarningLevel`|Komunikat jest poziomem ostrzegawczym.|  
+|`LErrorLevel`|Komunikat jest poziomem błędu.|  
+|`LPanicLevel`|Komunikat jest poziomem awaryjnego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje [ICorDebugManagedCallback::LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) metodę, aby powiadomić debugera, że wątków zarządzanych jest rejestrowane zdarzenie. Środowisko CLR przekazuje wartość `LoggingLevelEnum` wyliczenie, aby wskazać poziom ważności komunikatu, który napisał wątków zarządzanych, w dzienniku zdarzeń.  
+ Środowisko uruchomieniowe języka wspólnego (CLR) wywołuje metodę [ICorDebugManagedCallback:: LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md) w celu powiadomienia debugera o zarejestrowaniu zdarzenia przez wątek zarządzany. Środowisko CLR przekazuje wartość wyliczenia `LoggingLevelEnum`, aby wskazać poziom ważności komunikatu, który został zapisany przez wątek zarządzany w dzienniku zdarzeń.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

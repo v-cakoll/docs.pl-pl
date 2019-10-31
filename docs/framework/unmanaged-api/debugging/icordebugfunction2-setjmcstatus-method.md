@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22c27b01-2869-4214-b840-5921f7c874fc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67959b2ebbfb62b47a1b2a770e278d043fc66d21
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 758364b2d63343e464b727d5a1c1817533a6acea
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754916"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137795"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus — Metoda
-Funkcja reprezentowany przez ten icordebugfunction2 — tylko mój kod oznacza przechodzenie krok po kroku.  
+Oznacza funkcję reprezentowaną przez ten ICorDebugFunction2 do Tylko mój kod wykonywania kroków.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +35,23 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>Parametry  
  `bIsJustMyCode`  
- [in] Ustaw `true` aby oznaczyć tę funkcję, co kod użytkownika; w przeciwnym wypadku ustaw `false`.  
+ podczas Ustaw, aby `true` oznaczyć funkcję jako kod użytkownika; w przeciwnym razie ustaw wartość `false`.  
   
 ## <a name="return-values"></a>Wartości zwrócone  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|Funkcja został pomyślnie oznaczony.|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Funkcja nie można oznaczyć jako kod użytkownika, ponieważ nie można debugować.|  
+|`S_OK`|Funkcja została pomyślnie oznaczona.|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|Nie można oznaczyć funkcji jako kodu użytkownika, ponieważ nie można jej debugować.|  
   
 ## <a name="remarks"></a>Uwagi  
- Stepper tylko mój kod pozwoli na pominięcie kodu innych użytkowników. Kod użytkownika musi być podzestawem kod do debugowania.  
+ Tylko mój kod stepper pominie kod niebędący użytkownikiem. Kod użytkownika musi być podzbiorem kodu możliwością debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

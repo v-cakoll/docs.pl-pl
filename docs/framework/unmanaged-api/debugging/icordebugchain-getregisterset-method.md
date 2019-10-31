@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bc4288b6-3331-4ae3-990d-e1d6e62ecb67
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89237c20cbb145d14b7afbda8c00eb14b441d0d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d6ee36ac4d4510637e5f8240c3b8930a9bec7970
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745283"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123833"
 ---
 # <a name="icordebugchaingetregisterset-method"></a>ICorDebugChain::GetRegisterSet — Metoda
-Pobiera rejestr dla aktywnego częścią tego łańcucha.  
+Pobiera zestaw rejestru dla aktywnej części tego łańcucha.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>Parametry  
  `ppRegisters`  
- [out] Wskaźnik na adres [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) obiekt, który reprezentuje rejestru ustawione dla aktywnego częścią tego łańcucha.  
+ określoną Wskaźnik do adresu obiektu [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) , który reprezentuje zestaw rejestru dla aktywnej części tego łańcucha.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

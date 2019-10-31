@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe07a05b-f6d6-44b5-ab01-b9a6eb15c350
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bf19d322d8e4d0d05993d22b2aa7e46bda7b5a1d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 36eacedfb83c1248fc252091872bcfeecdbcd874
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780067"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139519"
 ---
 # <a name="icorruntimehostnextdomain-method"></a>ICorRuntimeHost::NextDomain — Metoda
 Pobiera wskaźnik interfejsu do następnej domeny w wyliczeniu.  
@@ -38,28 +36,28 @@ HRESULT NextDomain (
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- [in] Moduł wyliczający, który został uzyskany za pomocą wywołania [enumdomains —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).  
+ podczas Moduł wyliczający uzyskany za pomocą wywołania do [EnumDomains —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).  
   
  `pAppDomain`  
- [out] Wskaźnik interfejsu do <xref:System._AppDomain?displayProperty=nameWithType> typ, który reprezentuje następnej domeny w wyliczenia lub wartość null, jeśli istnieje żadnych więcej domen.  
+ określoną Wskaźnik interfejsu do typu <xref:System._AppDomain?displayProperty=nameWithType>, który reprezentuje następną domenę w wyliczeniu, lub wartość null, jeśli nie ma więcej domen.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Operacja zakończyła się pomyślnie.|  
-|S_FALSE|Nie można ukończyć operacji, lub nie istnieją więcej domeny w wyliczeniu.|  
-|E_FAIL|Wystąpił błąd nieznanego, krytycznego. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie. Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
+|S_FALSE|Nie można ukończyć operacji lub w wyliczeniu nie ma więcej domen.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** 1.0, 1.1  
+ **.NET Framework wersje:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

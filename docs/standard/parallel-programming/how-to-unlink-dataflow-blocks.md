@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Rozłączanie bloków przepływu danych'
+title: 'Porady: Rozłączanie bloków przepływu danych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,29 +10,27 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 989220141e4af5d64c3994479949547136843ff5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b49cfc9730ba154202baf15093a54ba3ce0e2a8a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591995"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139294"
 ---
-# <a name="how-to-unlink-dataflow-blocks"></a>Instrukcje: Rozłączanie bloków przepływu danych
-Ten dokument zawiera opis sposobu odłączania docelowej bloku przepływu danych ze źródła.
+# <a name="how-to-unlink-dataflow-blocks"></a>Porady: Rozłączanie bloków przepływu danych
+W tym dokumencie opisano sposób odłączania docelowego bloku przepływu danych od jego źródła.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy trzy <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektów, każdy która wywołuje metodę `TrySolution` metodę w celu obliczenia wartości. W tym przykładzie wymaga tylko wyniki z pierwszym wywołaniu `TrySolution` na zakończenie.  
+ Poniższy przykład tworzy trzy <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektów, z których każdy wywołuje metodę `TrySolution` w celu obliczenia wartości. Ten przykład wymaga tylko wyniku pierwszego wywołania do `TrySolution`.  
   
  [!code-csharp[TPLDataflow_ReceiveAny#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_receiveany/cs/dataflowreceiveany.cs#1)]
  [!code-vb[TPLDataflow_ReceiveAny#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_receiveany/vb/dataflowreceiveany.vb#1)]  
   
- Aby otrzymać wartość od pierwszego <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiektu, który zakończy się, w tym przykładzie definiuje `ReceiveFromAny(T)` metody. `ReceiveFromAny(T)` Metoda przyjmuje tablicę <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> obiektów i każdy z tych obiektów do łączy <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> obiektu. Kiedy używasz <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metodę, aby połączyć bloku przepływu danych źródłowych do bloku docelowego, źródłowego propaguje komunikatów do obiektu docelowego danych staje się dostępna. Ponieważ <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> klasy akceptuje tylko pierwszy komunikat, który jest dostępna, `ReceiveFromAny(T)` generuje jej wynik, wywołując <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> metody. Daje to pierwszy komunikat, który jest oferowany <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> obiektu. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Metoda ma przeciążona wersja, która przyjmuje <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> obiekt z <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages> właściwości, gdy jest równa `1`, powoduje, że blok źródłowy można odłączyć od obiektu docelowego, gdy docelowym otrzyma jeden komunikat ze źródła . Ważne jest, aby <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> obiektu można odłączyć od źródła, ponieważ relacja między tablicą źródeł i <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> obiekt nie jest już wymagane po <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> obiekt otrzymuje komunikat.  
+ Aby otrzymać wartość z pierwszego obiektu <xref:System.Threading.Tasks.Dataflow.TransformBlock%602>, który zakończy, ten przykład definiuje metodę `ReceiveFromAny(T)`. Metoda `ReceiveFromAny(T)` akceptuje tablicę obiektów <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> i łączy każdy z tych obiektów do obiektu <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>. W przypadku używania metody <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> do łączenia źródłowego bloku przepływu danych z blokiem docelowym, Źródło propaguje komunikaty do obiektu docelowego, ponieważ dane staną się dostępne. Ponieważ Klasa <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> akceptuje tylko pierwszy komunikat, który jest oferowany, Metoda `ReceiveFromAny(T)` generuje swój wynik, wywołując metodę <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A>. Spowoduje to wygenerowanie pierwszej wiadomości, która jest oferowana dla obiektu <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>. Metoda <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> ma przeciążoną wersję, która przyjmuje obiekt <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions> z właściwością <xref:System.Threading.Tasks.Dataflow.DataflowLinkOptions.MaxMessages>, która, gdy jest ustawiona na `1`, instruuje blok źródłowy, aby odłączyć od elementu docelowego po odebraniu przez obiekt docelowy jednej wiadomości ze źródła. Ważne jest, aby obiekt <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> rozłączył się ze źródła, ponieważ relacja między tablicą źródeł i obiektem <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601> nie jest już wymagana po odebraniu komunikatu przez obiekt <xref:System.Threading.Tasks.Dataflow.WriteOnceBlock%601>.  
   
- Aby włączyć pozostałe wywołania do `TrySolution` kończy się po jednej z nich oblicza wartość `TrySolution` metoda przyjmuje <xref:System.Threading.CancellationToken> obiektów, które zostało anulowane po wywołaniu `ReceiveFromAny(T)` zwraca. <xref:System.Threading.SpinWait.SpinUntil%2A> Metoda zwraca, kiedy to <xref:System.Threading.CancellationToken> obiektu zostanie anulowane.  
+ Aby umożliwić zakończenie pozostałych wywołań `TrySolution`, gdy jeden z nich obliczy wartość, Metoda `TrySolution` pobiera <xref:System.Threading.CancellationToken> obiekt, który zostanie anulowany po wywołaniu `ReceiveFromAny(T)` zwraca. Metoda <xref:System.Threading.SpinWait.SpinUntil%2A> zwraca, gdy ten obiekt <xref:System.Threading.CancellationToken> zostanie anulowany.  
   
 ## <a name="see-also"></a>Zobacz także
 

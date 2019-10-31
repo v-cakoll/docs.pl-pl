@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback7 Interface
+title: ICorProfilerCallback7, interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorProfilerCallback7
@@ -9,32 +9,30 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 81477010b22edee71098edfc1b8557db08b6038f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8c2fb544cf9fd6642bd0581211e0e4e49633221
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139761"
 ---
-# <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 Interface
-[Obsługiwane w programie .NET Framework 4.6.1 i nowszych wersjach]  
+# <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7, interfejs
+[Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
   
- Podklasa klasy [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) który zapewnia metodę wywołania zwrotnego, która środowiska uruchomieniowego języka wspólnego używa powiadomić profiler, że strumień symbol skojarzone z modułem w pamięci jest aktualizowana.  
+ Podklasa elementu [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) , która zapewnia metodę wywołania zwrotnego używaną przez środowisko uruchomieniowe języka wspólnego do powiadamiania profilera o aktualizacji strumienia symboli skojarzonego z modułem w pamięci.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ModuleInMemorySymbolsUpdated, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Powiadamia program profilujący, że strumień symbol skojarzone z modułem w pamięci jest aktualizowana.|  
+|[ModuleInMemorySymbolsUpdated, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|Powiadamia program profilujący, że jest aktualizowany strumień symboli skojarzony z modułem w pamięci.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

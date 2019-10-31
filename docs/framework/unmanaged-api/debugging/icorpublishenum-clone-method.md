@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9a26ea3-b8eb-4b8e-854f-9a2ca26b3b39
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d672cf2375a5354c48608b3e4156867ba406992a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e9f7f1fc0f04e8cc8c69d533c1dbba380d04ebfb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765016"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140497"
 ---
 # <a name="icorpublishenumclone-method"></a>ICorPublishEnum::Clone — Metoda
-Tworzy kopię [icorpublishenum —](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) obiektu.  
+Tworzy kopię tego obiektu [ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT Clone (
   
 ## <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Wskaźnik na adres `ICorPublishEnum` obiektu, który jest kopią tego `ICorPublishEnum` obiektu.  
+ określoną Wskaźnik do adresu obiektu `ICorPublishEnum`, który jest kopią tego obiektu `ICorPublishEnum`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorPub.idl, CorPub.h  
+ **Nagłówek:** CorPub. idl, CorPub. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

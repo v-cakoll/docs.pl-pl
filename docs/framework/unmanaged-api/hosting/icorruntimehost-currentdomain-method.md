@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2afb38-675b-4c3c-a9f3-8ab3b133eb02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3aa6bc844d2c6629085b0596127c0b51b99357d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f2249d10159b1ff0be7ead0783efb8a2742d26b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766354"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139608"
 ---
 # <a name="icorruntimehostcurrentdomain-method"></a>ICorRuntimeHost::CurrentDomain — Metoda
-Pobiera wskaźnik interfejsu typu <xref:System.AppDomain?displayProperty=nameWithType> reprezentujący domeny załadowany w bieżącym wątku.  
+Pobiera wskaźnik interfejsu typu <xref:System.AppDomain?displayProperty=nameWithType> reprezentujący domenę załadowana w bieżącym wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +35,7 @@ HRESULT CurrentDomain (
   
 ## <a name="parameters"></a>Parametry  
  `pAppDomain`  
- [out] Wskaźnik typu <xref:System.AppDomain?displayProperty=nameWithType> reprezentujący wątku bieżącej domeny aplikacji. This, wskaźnik jest wpisane `IUnknown`, więc obiekty wywołujące zwykle powinny wywoływać `QueryInterface` uzyskać wskaźnika typu <xref:System._AppDomain>.  
+ określoną Wskaźnik typu <xref:System.AppDomain?displayProperty=nameWithType> reprezentujący bieżącą domenę aplikacji wątku. Ten wskaźnik jest wpisywany `IUnknown`, dlatego obiekty wywołujące powinny na ogół wywołać `QueryInterface`, aby uzyskać wskaźnik typu <xref:System._AppDomain>.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -45,17 +43,17 @@ HRESULT CurrentDomain (
 |-------------|-----------------|  
 |S_OK|Operacja zakończyła się pomyślnie.|  
 |S_FALSE|Nie można ukończyć operacji.|  
-|E_FAIL|Wystąpił błąd nieznanego, krytycznego. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie. Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** 1.0, 1.1  
+ **.NET Framework wersje:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,41 +8,39 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1ddb6a5534eb7ef2dc823ac05e03d3b2d3d0cee7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623970"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138221"
 ---
 # <a name="order-preservation-in-plinq"></a>Zamawianie zachowywania w PLINQ
-W programie PLINQ celem jest aby zmaksymalizować wydajność przy zachowaniu poprawności. Zapytanie powinno działają równie szybko, ale nadal generować prawidłowe wyniki. W niektórych przypadkach poprawność wymaga kolejność sekwencji źródłowej zostanie zachowana; jednak porządkowania może być dużego nakładu mocy obliczeniowych. Dlatego domyślnie PLINQ nie pozwala zachować kolejność sekwencji źródłowej. W tym zakresie przypomina PLINQ [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ale w przeciwieństwie do programu LINQ do obiektów, które zachowują kolejność.  
+W PLINQ celem jest maksymalizacja wydajności przy zachowaniu poprawności. Zapytanie powinno działać tak szybko, jak to możliwe, ale nadal daje poprawne wyniki. W niektórych przypadkach poprawność wymaga zachowania kolejności sekwencji źródłowej; Określanie kolejności może być jednak kosztowne w praktyce. W związku z tym domyślnie PLINQ nie zachowuje kolejności sekwencji źródłowej. W tym względzie PLINQ przypomina [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], ale w przeciwieństwie do LINQ to Objects, która zachowuje porządkowanie.  
   
- Aby zastąpić domyślne zachowanie, można włączyć zachowywanie kolejności przy użyciu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operatora w sekwencji źródłowej. Możesz następnie wyłączyć zachowywanie kolejności w dalszej części zapytania przy użyciu <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> metody. Za pomocą obu metod zapytania są przetwarzane w zależności od Algorytm heurystyczny, który ustalić, czy można wykonać kwerendy w postaci równoległego lub jako kolejnych. Aby uzyskać więcej informacji, zobacz [ogólne informacje o przyspieszeniach w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
+ Aby przesłonić zachowanie domyślne, można włączyć opcję zachowywania kolejności przy użyciu operatora <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> w sekwencji źródłowej. Następnie można wyłączyć zachowanie w kolejności późniejszej w zapytaniu za pomocą metody <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>. W obu metodach zapytanie jest przetwarzane w oparciu o algorytmy heurystyczne określające, czy wykonać zapytanie jako równoległe, czy sekwencyjne. Aby uzyskać więcej informacji, zobacz temat [Omówienie przyspieszenie w PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).  
   
- Poniższy przykład pokazuje nieuporządkowaną zapytanie równoległe, który filtruje dla wszystkich elementów, które odpowiadają warunku, bez próby kolejność wyników w dowolny sposób.  
+ Poniższy przykład przedstawia nieuporządkowane zapytanie równoległe, które filtruje dla wszystkich elementów, które pasują do warunku, bez konieczności przeszukiwania wyników w dowolny sposób.  
   
  [!code-csharp[PLINQ#8](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#8)]
  [!code-vb[PLINQ#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#8)]  
   
- To zapytanie nie zawsze generuje 1000 pierwszych miast w sekwencji źródłowej, które spełniają warunek, ale raczej niektóre zestaw miast 1000, które spełniają warunek. Operatory zapytań PLINQ partycji sekwencję źródłową na wiele podciągów, które są przetwarzane jako współbieżnych zadań. Jeśli nie określono porządku, wyniki z każdej partycji są przekazane do kolejnego etapu zapytania w dowolnej kolejności. Ponadto partycji może przynieść podzbiór wyników, przed kontynuowaniem przetworzyć wszystkie pozostałe elementy. Wynikowy zamówienia może różnić się zawsze. Aplikacji nie można kontrolować to, ponieważ zależy ona jak system operacyjny planuje wątków.  
+ To zapytanie nie musi dawać pierwszych 1000 miast w sekwencji źródłowej spełniającej warunek, ale raczej z zestawu 1000 miasta, który spełnia warunek. Operatory zapytań PLINQ dzielą sekwencję źródłową na wiele podsekwencji, które są przetwarzane jako zadania współbieżne. Jeśli nie określono zachowywania zamówienia, wyniki każdej partycji są przekazywane do następnego etapu zapytania w dowolnej kolejności. Ponadto partycja może spowodować podzbiór wyników przed kontynuowaniem przetwarzania pozostałych elementów. Porządek ten może być różny za każdym razem. Aplikacja nie może kontrolować tego, ponieważ zależy od tego, jak system operacyjny planuje wątki.  
   
- Poniższy przykład zastępuje domyślne zachowanie za pomocą <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> operatora w sekwencji źródłowej. Gwarantuje to, że <xref:System.Linq.ParallelEnumerable.Take%2A> metoda zwraca wartość 1000 pierwszych miast w sekwencji źródłowej, które spełniają warunek.  
+ Poniższy przykład zastępuje zachowanie domyślne przy użyciu operatora <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> w sekwencji źródłowej. Dzięki temu Metoda <xref:System.Linq.ParallelEnumerable.Take%2A> zwraca pierwsze miasta 1000 w sekwencji źródłowej spełniającej warunek.  
   
  [!code-csharp[PLINQ#9](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#9)]
  [!code-vb[PLINQ#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#9)]  
   
- Jednak ta kwerenda prawdopodobnie nie działa tak szybko, jak Nieuporządkowana wersja, ponieważ jego musi śledzić oryginalna kolejność w partycji i w czasie scalania upewnij się, że kolejność spójne. Dlatego zaleca się używanie <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> tylko wtedy, gdy jest to wymagane i tylko dla tych części zapytania, które tego wymagają. Gdy porządku nie jest już wymagane, użyj <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> jej wyłączenia. Poniższy przykład osiąga to za pośrednictwem dwóch zapytań.  
+ Jednak to zapytanie prawdopodobnie nie działa tak szybko, jak w przypadku wersji nieuporządkowanej, ponieważ musi śledzić oryginalne porządkowanie w ramach partycji i czas scalania, upewniając się, że kolejność jest spójna. Dlatego zalecamy używanie <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> tylko wtedy, gdy jest to wymagane, i tylko dla tych części zapytania, które tego wymagają. Gdy zachowywanie kolejności nie jest już wymagane, użyj <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>, aby je wyłączyć. W poniższym przykładzie są one osiągane przez złożenie dwóch zapytań.  
   
  [!code-csharp[PLINQ#6](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#6)]
  [!code-vb[PLINQ#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#6)]  
   
- Należy pamiętać, że PLINQ zachowuje kolejności sekwencji generowany przez nakładające kolejność operatorów w pozostałej części zapytania. Innymi słowy, operatory, takie jak <xref:System.Linq.ParallelEnumerable.OrderBy%2A> i <xref:System.Linq.ParallelEnumerable.ThenBy%2A> są traktowane tak, jakby były następuje po wywołaniu <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
+ Należy zauważyć, że PLINQ zachowuje kolejność sekwencji wygenerowanej przez operatory nakładające się w kolejności dla reszty zapytania. Inaczej mówiąc, operatory, takie jak <xref:System.Linq.ParallelEnumerable.OrderBy%2A> i <xref:System.Linq.ParallelEnumerable.ThenBy%2A>, są traktowane tak, jakby były wykonane przez wywołanie <xref:System.Linq.ParallelEnumerable.AsOrdered%2A>.  
   
-## <a name="query-operators-and-ordering"></a>Operatory zapytań i kolejność  
- Następujące operatory zapytań wprowadzić porządku na wszystkie kolejne operacje w zapytaniu lub do chwili <xref:System.Linq.ParallelEnumerable.AsUnordered%2A> nosi nazwę:  
+## <a name="query-operators-and-ordering"></a>Operatory zapytań i porządkowanie  
+ Następujące operatory zapytań wprowadzają zachowywanie kolejności do wszystkich kolejnych operacji w zapytaniu lub do momentu wywołania <xref:System.Linq.ParallelEnumerable.AsUnordered%2A>:  
   
 - <xref:System.Linq.ParallelEnumerable.OrderBy%2A>  
   
@@ -52,7 +50,7 @@ W programie PLINQ celem jest aby zmaksymalizować wydajność przy zachowaniu po
   
 - <xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>  
   
- W niektórych przypadkach następujących operatorów zapytań PLINQ może wymagać uporządkowane źródłowych sekwencji, aby wygenerować prawidłowych wyników:  
+ Następujące operatory zapytań PLINQ mogą w niektórych przypadkach wymagać uporządkowanych sekwencji źródłowych, aby generować poprawne wyniki:  
   
 - <xref:System.Linq.ParallelEnumerable.Reverse%2A>  
   
@@ -64,63 +62,63 @@ W programie PLINQ celem jest aby zmaksymalizować wydajność przy zachowaniu po
   
 - <xref:System.Linq.ParallelEnumerable.Zip%2A>  
   
- Niektóre operatory zapytań PLINQ zachowywać się różnie w zależności od tego, czy ich sekwencja źródłowa jest uporządkowany lub nieuporządkowane. Poniższa tabela zawiera listę tych operatorów.  
+ Niektóre operatory zapytań PLINQ działają inaczej, w zależności od tego, czy ich sekwencja źródłowa jest uporządkowana, czy nieuporządkowana. Poniższa tabela zawiera listę tych operatorów.  
   
-|Operator|Wynik, jeśli sekwencja źródłowa jest uporządkowany|Wynik, jeśli sekwencja źródłowa jest nieuporządkowane|  
+|Operator|Wynik po zamówieniu sekwencji źródłowej|Wynik w przypadku nieuporządkowania sekwencji źródłowej|  
 |--------------|------------------------------------------------|--------------------------------------------------|  
-|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|  
+|<xref:System.Linq.ParallelEnumerable.Aggregate%2A>|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|  
 |<xref:System.Linq.ParallelEnumerable.All%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.Any%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.Average%2A>|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.Average%2A>|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Concat%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
 |<xref:System.Linq.ParallelEnumerable.Count%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.Distinct%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
 |<xref:System.Linq.ParallelEnumerable.ElementAt%2A>|Zwraca określony element|Dowolny element|  
 |<xref:System.Linq.ParallelEnumerable.ElementAtOrDefault%2A>|Zwraca określony element|Dowolny element|  
-|<xref:System.Linq.ParallelEnumerable.Except%2A>|Wyniki nieuporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.Except%2A>|Nieuporządkowane wyniki|Nieuporządkowane wyniki|  
 |<xref:System.Linq.ParallelEnumerable.First%2A>|Zwraca określony element|Dowolny element|  
 |<xref:System.Linq.ParallelEnumerable.FirstOrDefault%2A>|Zwraca określony element|Dowolny element|  
-|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|Wykonywane w sposób niedeterministyczny równolegle|Wykonywane w sposób niedeterministyczny równolegle|  
-|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Join%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.ForAll%2A>|Wykonuje niedeterministycznie równolegle|Wykonuje niedeterministycznie równolegle|  
+|<xref:System.Linq.ParallelEnumerable.GroupBy%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.GroupJoin%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Intersect%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Join%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
 |<xref:System.Linq.ParallelEnumerable.Last%2A>|Zwraca określony element|Dowolny element|  
 |<xref:System.Linq.ParallelEnumerable.LastOrDefault%2A>|Zwraca określony element|Dowolny element|  
 |<xref:System.Linq.ParallelEnumerable.LongCount%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.Min%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|Zmienia kolejność sekwencji|Rozpoczyna się nowej sekcji uporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|Zmienia kolejność sekwencji|Rozpoczyna się nowej sekcji uporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Range%2A>|Nie dotyczy (domyślnie takie same jak <xref:System.Linq.ParallelEnumerable.AsParallel%2A> )|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Nie dotyczy (domyślnie takie same jak <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Nie dotyczy|  
+|<xref:System.Linq.ParallelEnumerable.OrderBy%2A>|Zmienia kolejność sekwencji|Uruchamia nową sekcję uporządkowaną|  
+|<xref:System.Linq.ParallelEnumerable.OrderByDescending%2A>|Zmienia kolejność sekwencji|Uruchamia nową sekcję uporządkowaną|  
+|<xref:System.Linq.ParallelEnumerable.Range%2A>|Nie dotyczy (wartość domyślna jako <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Nie dotyczy|  
+|<xref:System.Linq.ParallelEnumerable.Repeat%2A>|Nie dotyczy (wartość domyślna jako <xref:System.Linq.ParallelEnumerable.AsParallel%2A>)|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|Odwraca|Nic nie robi.|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A> (indeksowanych)|Wyniki uporządkowane|Nieuporządkowana wyników.|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Uporządkowanych wyników.|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (indeksowanych)|Uporządkowanych wyników.|Nieuporządkowana wyników.|  
-|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Uporządkowane porównania|Porównanie nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A> (indeksowane)|Uporządkowane wyniki|Nieuporządkowane wyniki.|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|Uporządkowane wyniki.|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A> (indeksowane)|Uporządkowane wyniki.|Nieuporządkowane wyniki.|  
+|<xref:System.Linq.ParallelEnumerable.SequenceEqual%2A>|Porównanie uporządkowane|Porównanie nieuporządkowane|  
 |<xref:System.Linq.ParallelEnumerable.Single%2A>|Nie dotyczy|Nie dotyczy|  
 |<xref:System.Linq.ParallelEnumerable.SingleOrDefault%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Pomija najpierw *n* elementów|Pomija dowolne *n* elementów|  
-|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Uporządkowanych wyników.|Jednoznaczne wyniki. Wykonuje skipwhile — bieżącego dowolnego zamówienia|  
-|<xref:System.Linq.ParallelEnumerable.Sum%2A>|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|Tego rodzaju danych wyjściowych dla operacji nonassociative lub noncommutative|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|Pobiera pierwszy `n` elementów|Przyjmuje żadnego `n` elementów|  
-|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|Wyniki uporządkowane|Jednoznaczne wyniki. Wykonuje takewhile — bieżącego dowolnego zamówienia|  
-|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Dodatki `OrderBy`|Dodatki `OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Dodatki `OrderBy`|Dodatki `OrderBy`|  
-|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|Pomija pierwsze *n* elementów|Pomija wszystkie *n* elementów|  
+|<xref:System.Linq.ParallelEnumerable.SkipWhile%2A>|Uporządkowane wyniki.|Niejednoznaczny. Wykonuje SkipWhile — w bieżącym arbitralnym zamówieniu|  
+|<xref:System.Linq.ParallelEnumerable.Sum%2A>|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|Niedeterministyczne dane wyjściowe dla operacji nieasocjacyjnych lub Noncommutative|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|Przyjmuje najpierw elementy `n`|Przyjmuje dowolne `n` elementy|  
+|<xref:System.Linq.ParallelEnumerable.TakeWhile%2A>|Uporządkowane wyniki|Niejednoznaczny. Wykonuje TakeWhile — w bieżącym arbitralnym zamówieniu|  
+|<xref:System.Linq.ParallelEnumerable.ThenBy%2A>|Suplementy `OrderBy`|Suplementy `OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ThenByDescending%2A>|Suplementy `OrderBy`|Suplementy `OrderBy`|  
+|<xref:System.Linq.ParallelEnumerable.ToArray%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
 |<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>|Nie dotyczy|Nie dotyczy|  
-|<xref:System.Linq.ParallelEnumerable.ToList%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Union%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A> (indeksowanych)|Wyniki uporządkowane|Wyniki nieuporządkowane|  
-|<xref:System.Linq.ParallelEnumerable.Zip%2A>|Wyniki uporządkowane|Wyniki nieuporządkowane|  
+|<xref:System.Linq.ParallelEnumerable.ToList%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.ToLookup%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Union%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A> (indeksowane)|Uporządkowane wyniki|Nieuporządkowane wyniki|  
+|<xref:System.Linq.ParallelEnumerable.Zip%2A>|Uporządkowane wyniki|Nieuporządkowane wyniki|  
   
- Nieuporządkowana wyniki nie są aktywnie przekazanych; po prostu nie mają jakąkolwiek logikę specjalną szeregowania, zastosowanych do nich. W niektórych przypadkach nieuporządkowaną zapytania może zachować kolejność sekwencji źródłowej. Dla zapytań, korzystających z indeksowanej wybierz operator PLINQ gwarantuje, że elementy danych wyjściowych pojawią zgodnie z kolejnością rosnącą indeksów, ale sprawia, że żadnej gwarancji dotyczącej indeksów, które zostaną przypisane do elementów.  
+ Nieuporządkowane wyniki nie są aktywnie przełączone; po prostu nie mają zastosowania żadnej specjalnej logiki określania kolejności. W niektórych przypadkach nieuporządkowane zapytanie może zachować kolejność sekwencji źródłowej. W przypadku zapytań, które używają operatora indeksowanego SELECT, PLINQ gwarantuje, że elementy danych wyjściowych będą znajdować się w kolejności rosnących indeksów, ale nie gwarantuje, które indeksy zostaną przypisane do elementów.  
   
 ## <a name="see-also"></a>Zobacz także
 

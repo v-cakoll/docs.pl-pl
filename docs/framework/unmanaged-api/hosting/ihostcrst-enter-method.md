@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 100dd7eb-7053-4295-9bb3-32ba47f6ec79
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bdc597e741023af1c7cc1f48e378083157dd4a5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 757fb996b268892818a54a3f80a54edfd89c7630
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937741"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124430"
 ---
 # <a name="ihostcrstenter-method"></a>IHostCrst::Enter — Metoda
 Wprowadza sekcję krytyczną, która jest reprezentowana przez bieżące wystąpienie [IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md) .  
@@ -43,7 +41,7 @@ HRESULT Enter (
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`Enter`pomyślnie zwrócono.|  
+|S_OK|`Enter` pomyślnie zwrócone.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
@@ -51,19 +49,19 @@ HRESULT Enter (
 |E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Uwagi  
- `Enter`odzwierciedla funkcję Win32 `EnterCriticalSection` .  
+ `Enter` odzwierciedla funkcję Win32 `EnterCriticalSection`.  
   
 > [!NOTE]
 > Ta metoda nie jest zwracana do momentu wprowadzenia sekcji krytycznej.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

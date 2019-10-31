@@ -1,5 +1,5 @@
 ---
-title: Metoda ICorDebugVariableHomeEnum::Next
+title: 'ICorDebugVariableHomeEnum:: Next — Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHomeEnum.Next
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: eb9ea96c-5b58-4655-8104-094fc8b393b8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41aff94b8241f07c8646ecc52c06567fc262f703
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9c2c16789fb61099c9b7c58154810739d225af1f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774924"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121920"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a>Metoda ICorDebugVariableHomeEnum::Next
-Pobiera określoną liczbę [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) wystąpień, które zawierają informacje dotyczące zmiennych lokalnych i argumenty w funkcji.  
+# <a name="icordebugvariablehomeenumnext-method"></a>ICorDebugVariableHomeEnum:: Next — Metoda
+Pobiera określoną liczbę wystąpień [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) , które zawierają informacje o zmiennych lokalnych i argumentach w funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,13 +37,13 @@ HRESULT Next(
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba obiektów, które mają zostać pobrane.  
+ podczas Liczba obiektów do pobrania.  
   
  `homes`  
- Tablica wskaźników, z których każdy wskazuje [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) obiekt, który zawiera informacje dotyczące lokalnej zmiennej lub argumentu funkcji.  
+ Tablica wskaźników, z których każdy wskazuje obiekt [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) , który zawiera informacje na temat zmiennej lokalnej lub argumentu funkcji.  
   
  `pceltFetched`  
- [out] Liczba wystąpień zwrócona w rzeczywistości w obiektach.  
+ określoną Liczba wystąpień faktycznie zwracanych w obiektach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda zwraca następujące wartości.  
@@ -53,19 +51,19 @@ HRESULT Next(
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |`S_OK`|Metoda została ukończona pomyślnie.|  
-|`S_FALSE`|Rzeczywista liczba wystąpień pobierane, zgodnie z opisem w `pceltFetched`, jest mniejsza od liczby wystąpień na żądanie.|  
+|`S_FALSE`|Rzeczywista liczba pobranych wystąpień uwzględnionych w `pceltFetched`jest mniejsza niż liczba żądanych wystąpień.|  
   
 ## <a name="remarks"></a>Uwagi  
- [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) metoda pobiera maksymalnie `celt` obiektów, począwszy od bieżącego położenia obiektu modułu wyliczającego. Po powrocie z metody `pceltFetched` zawiera rzeczywista liczba pobrane obiekty.  
+ Metoda [ICorDebugVariableHomeEnum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) pobiera maksymalnie `celt` obiektów, rozpoczynając od bieżącego położenia modułu wyliczającego. Gdy metoda zwraca, `pceltFetched` zawiera rzeczywistą liczbę pobranych obiektów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

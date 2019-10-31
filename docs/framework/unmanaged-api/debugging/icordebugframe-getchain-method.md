@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e28e51d3-8f73-494f-bcd4-48bac239fbe1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64de770676cdd02375e854acb8af7feecb28dfeb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9677fd14f50cf93eac7eeaef784082d45e8884c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67754111"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137684"
 ---
 # <a name="icordebugframegetchain-method"></a>ICorDebugFrame::GetChain — Metoda
 Pobiera wskaźnik do łańcucha, do którego należy ta ramka.  
@@ -37,13 +35,13 @@ HRESULT GetChain (
   
 ## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcuch zawierający tej ramki.  
+ określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje łańcuch zawierający tę ramkę.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

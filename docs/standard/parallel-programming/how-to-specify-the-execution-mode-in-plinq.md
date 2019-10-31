@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Określanie trybu wykonywania w PLINQ'
+title: 'Porady: określanie trybu wykonywania w PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,16 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 705b6bc364e2ecf00c3629814228157c90017a8b
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988452"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139247"
 ---
-# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Instrukcje: Określanie trybu wykonywania w PLINQ
+# <a name="how-to-specify-the-execution-mode-in-plinq"></a>Porady: określanie trybu wykonywania w PLINQ
 Ten przykład pokazuje, jak wymusić PLINQ, aby pominąć domyślne heurystyke i zrównoleglanie zapytanie niezależnie od kształtu zapytania.  
   
 > [!WARNING]
@@ -27,10 +25,10 @@ Ten przykład pokazuje, jak wymusić PLINQ, aby pominąć domyślne heurystyke i
  [!code-csharp[PLINQ#22](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#22)]
  [!code-vb[PLINQ#22](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#22)]  
   
- PLINQ zaprojektowano w celu wykorzystania możliwości programu przetwarzanie równoległe. Jednak nie wszystkie zapytania korzystają z wykonywania równoległego. Na przykład, gdy zapytanie zawiera pojedynczego delegata użytkownika, który wykonuje bardzo mało pracy, zapytanie będzie zazwyczaj wykonywane szybciej. Wynika to z faktu, że obciążenie związane z włączaniem wykonywania przekształcają jest droższe niż uzyskany przyspieszenie. W związku z tym PLINQ nie jest automatycznie zrównoleglanie wszystkich zapytań. Najpierw analizuje kształt zapytania i różne operatory, które go tworzą. Na podstawie tej analizy PLINQ w domyślnym trybie wykonywania może zdecydować się na wykonanie niektórych lub wszystkich zapytań sekwencyjnie. Jednak w niektórych przypadkach można dowiedzieć się więcej o zapytaniu niż PLINQ jest w stanie określić na podstawie jego analizy. Na przykład może być wiadomo, że delegat jest bardzo kosztowny i że zapytanie będzie ostatecznie korzystać z przetwarzanie równoległe. W takich przypadkach można użyć <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> metody i <xref:System.Linq.ParallelExecutionMode.ForceParallelism> określić wartość, aby polecić PLINQ, aby zawsze uruchamiała zapytanie jako Parallel.  
+ PLINQ zaprojektowano w celu wykorzystania możliwości programu przetwarzanie równoległe. Jednak nie wszystkie zapytania korzystają z wykonywania równoległego. Na przykład, gdy zapytanie zawiera pojedynczego delegata użytkownika, który wykonuje bardzo mało pracy, zapytanie będzie zazwyczaj wykonywane szybciej. Wynika to z faktu, że obciążenie związane z włączaniem wykonywania przekształcają jest droższe niż uzyskany przyspieszenie. W związku z tym PLINQ nie jest automatycznie zrównoleglanie wszystkich zapytań. Najpierw analizuje kształt zapytania i różne operatory, które go tworzą. Na podstawie tej analizy PLINQ w domyślnym trybie wykonywania może zdecydować się na wykonanie niektórych lub wszystkich zapytań sekwencyjnie. Jednak w niektórych przypadkach można dowiedzieć się więcej o zapytaniu niż PLINQ jest w stanie określić na podstawie jego analizy. Na przykład może być wiadomo, że delegat jest bardzo kosztowny i że zapytanie będzie ostatecznie korzystać z przetwarzanie równoległe. W takich przypadkach można użyć metody <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> i określić wartość <xref:System.Linq.ParallelExecutionMode.ForceParallelism>, aby PLINQ zawsze uruchamiać zapytanie jako Parallel.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Wytnij i wklej ten kod do [przykładu danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) i Wywołaj metodę `Main`z.  
+ Wytnij i wklej ten kod do [przykładu danych PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md) i Wywołaj metodę z `Main`.  
   
 ## <a name="see-also"></a>Zobacz także
 

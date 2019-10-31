@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: d1b2b172-5353-42af-a877-cf653c68ece0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d4b748370ff1aff042923002ad827a0e39d99963
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf7667f0f2a0f77cd793e00a5de8b030b0c53ec8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140698"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW — Funkcja
 Pobiera skrót określonego pliku zestawu przy użyciu określonego algorytmu wyznaczania wartości skrótu. Ścieżka do pliku zestawu musi być określona jako ciąg Unicode.  
@@ -54,16 +52,16 @@ HRESULT GetHashFromAssemblyFileW (
  podczas Żądany maksymalny rozmiar `pbHash`.  
   
  `pchHash`  
- określoną Zwrócony rozmiar, w bajtach, z `pbHash`.  
+ określoną Zwrócony rozmiar w bajtach `pbHash`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** StrongName.h  
+ **Nagłówek:** StrongName. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

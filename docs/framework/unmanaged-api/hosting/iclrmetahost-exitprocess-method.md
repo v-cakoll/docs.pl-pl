@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4df98cc-4e4e-407b-b8f4-e0076afef3a4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0288c9912125e20cfb9f9aaaac5003ae9e0b51e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8643c54950486b6374045ff83928c8c7fb568a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779784"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140949"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess — Metoda
-Próbuje zamknięcie wszystkie załadowane środowisk wykonawczych, a następnie kończy proces. Zastępuje [corexitprocess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) funkcji.  
+Próbuje bezpiecznie zamknąć wszystkie ładowane środowiska uruchomieniowe, a następnie kończy proces. Zastępuje funkcję [CorExitProcess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,21 +34,21 @@ HRESULT ExitProcess (
   
 ## <a name="parameters"></a>Parametry  
  `iExitCode`  
- [in] Kod zakończenia procesu.  
+ podczas Kod zakończenia procesu.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda nigdy nie powraca, dzięki czemu jego wartość zwracana jest niezdefiniowany.  
+ Ta metoda nigdy nie zwraca, więc jej wartość zwracana jest niezdefiniowana.  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

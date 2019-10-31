@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e235ea80-b84c-4442-a4c3-fc96c25a8eb9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 429ce0510162b3256cdf58f4820b04dd80243e29
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779976"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139635"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence — Metoda
-Pobiera wskaźnik interfejsu typu <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, co pozwala hosta utworzyć dowodów zabezpieczeń do przekazania do [createdomain —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) lub [createdomainex —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metody.  
+Pobiera wskaźnik interfejsu typu <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>, co umożliwia hostowi tworzenie dowodów zabezpieczeń do przekazania do metody [ondomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) lub [CreateDomainEx —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,7 +35,7 @@ HRESULT CreateEvidence (
   
 ## <a name="parameters"></a>Parametry  
  `pEvidence`  
- [out] Wskaźnik interfejsu do <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> wystąpienia użyty do utworzenia dowodów zabezpieczeń. This, wskaźnik jest wpisane `IUnknown`, więc obiekty wywołujące zwykle powinny wywoływać `QueryInterface` na wskaźnik do tego interfejsu <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
+ określoną Wskaźnik interfejsu do <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> wystąpienia służącego do tworzenia dowodu bezpieczeństwa. Ten wskaźnik jest określony `IUnknown`, dlatego obiekty wywołujące powinny zwykle wywołać `QueryInterface` w tym interfejsie, aby uzyskać wskaźnik do <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -45,20 +43,20 @@ HRESULT CreateEvidence (
 |-------------|-----------------|  
 |S_OK|Operacja zakończyła się pomyślnie.|  
 |S_FALSE|Nie można ukończyć operacji.|  
-|E_FAIL|Wystąpił błąd nieznanego, krytycznego. Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie. Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
+|E_FAIL|Wystąpił nieznany, Katastrofalny błąd. Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie. Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda zwraca pustą kolekcję, która nie można wypełnić z kodu natywnego. Należy używać <xref:System.Security.Policy.Evidence> metody zamiast tego.  
+ Ta metoda zwraca pustą kolekcję, której nie można wypełnić z kodu natywnego. Zamiast tego należy użyć metody <xref:System.Security.Policy.Evidence>.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersja programu .NET framework:** 1.0, 1.1  
+ **Wersja .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

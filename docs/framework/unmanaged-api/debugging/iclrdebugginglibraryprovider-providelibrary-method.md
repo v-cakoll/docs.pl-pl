@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1b02bb74a61e64a3ed9875fcf88e018de9f6317
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041442"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111362"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary — Metoda
 
@@ -47,7 +45,7 @@ podczas Nazwa żądanego modułu.
 podczas Sygnatura czasowa, która jest przechowywana w nagłówku pliku COFF plików PE.
 
 `pLibraryProvider` \
-podczas `SizeOfImage` Pole przechowywane w nagłówku opcjonalnego pliku w formacie COFF.
+podczas Pole `SizeOfImage` przechowywane w nagłówku opcjonalnego pliku COFF dla plików PE.
 
 `hModule` \
 określoną Uchwyt do żądanego modułu.
@@ -64,24 +62,24 @@ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT
 
 ## <a name="remarks"></a>Uwagi
 
-`ProvideLibrary`umożliwia debugerowi dostarczanie modułów, które są konieczne do debugowania określonych plików CLR, takich jak mscordbi. dll i mscordacwks. dll. Obsługa modułów musi pozostać ważna, dopóki wywołanie metody [ICLRDebugging:: CanUnloadNow —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) nie wskazuje, że mogą być zwolnione, a tym samym jest odpowiedzialnością wywołującą, aby zwolnić dojścia.
+`ProvideLibrary` umożliwia debugerowi dostarczenie modułów, które są konieczne do debugowania określonych plików CLR, takich jak mscordbi. dll i mscordacwks. dll. Obsługa modułów musi pozostać ważna, dopóki wywołanie metody [ICLRDebugging:: CanUnloadNow —](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) nie wskazuje, że mogą być zwolnione, a tym samym jest odpowiedzialnością wywołującą, aby zwolnić dojścia.
 
 Debuger może używać dowolnego dostępnego środka do lokalizowania lub pozyskiwania modułu debugowania.
 
 > [!IMPORTANT]
-> Ta funkcja umożliwia obiektowi wywołującemu interfejsu API dostarczanie modułów, które zawierają plik wykonywalny, i prawdopodobnie złośliwego kodu. Ze względów bezpieczeństwa, wywołujący nie powinien używać `ProvideLibrary` do dystrybuowania żadnego kodu, który nie jest gotowy do wykonania.
+> Ta funkcja umożliwia obiektowi wywołującemu interfejsu API dostarczanie modułów, które zawierają plik wykonywalny, i prawdopodobnie złośliwego kodu. Ze względów bezpieczeństwa obiekt wywołujący nie powinien używać `ProvideLibrary` do dystrybuowania dowolnego kodu, który nie jest gotowy do wykonania.
 >
 > W przypadku odnalezienia poważnego problemu z zabezpieczeniami w już wydanej bibliotece, takiej jak mscordbi. dll lub mscordacwks. dll, Poprawka podkładki może zostać poprawiona w celu rozpoznania nieprawidłowych wersji plików. Podkładka może następnie wydać żądania dotyczące wersji plików z poprawkami i odrzucić niewłaściwe wersje, jeśli są one dostarczane w odpowiedzi na jakiekolwiek żądanie. Taka sytuacja może wystąpić tylko wtedy, gdy użytkownik połączył się z nową wersją podkładki. Niepoprawione wersje pozostaną zagrożone.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówki** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteki** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

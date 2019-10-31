@@ -8,18 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - threads, cancellation
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bd32deb9c8719a12b76aaea8ec91a17471cf18f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d1433ecf39974bf9e68fe07b9d0818ac16fb544
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138128"
 ---
 # <a name="canceling-threads-cooperatively"></a>Wspólne anulowanie wątków
 
-Przed .NET Framework 4 .NET Framework, pod warunkiem ma wbudowane możliwości wspólne anulowanie wątków, po jego uruchomienia. Jednak począwszy od programu .NET Framework 4, możesz użyć <xref:System.Threading.CancellationToken?displayProperty=nameWithType> anulować wątków, tak samo, jak można je anulować <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> obiektów lub zapytania PLINQ. Mimo że <xref:System.Threading.Thread?displayProperty=nameWithType> klasy nie oferuje wbudowaną obsługę tokenów anulowania, można przekazać tokenu do procedury wątku za pomocą <xref:System.Threading.Thread> konstruktora przyjmującego <xref:System.Threading.ParameterizedThreadStart> delegować. Poniższy przykład demonstruje, jak to zrobić.  
+Przed rozpoczęciem .NET Framework 4 .NET Framework nie miał wbudowanego sposobu anulowania wątku po jego uruchomieniu. Jednak rozpoczynając od .NET Framework 4, można użyć <xref:System.Threading.CancellationToken?displayProperty=nameWithType>, aby anulować wątki, tak jak można je użyć do anulowania obiektów <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> lub zapytań PLINQ. Chociaż Klasa <xref:System.Threading.Thread?displayProperty=nameWithType> nie oferuje wbudowanej obsługi tokenów anulowania, można przekazać token do procedury wątku za pomocą konstruktora <xref:System.Threading.Thread>, który pobiera <xref:System.Threading.ParameterizedThreadStart> delegat. Poniższy przykład demonstruje, jak to zrobić.  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  

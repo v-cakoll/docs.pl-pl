@@ -6,14 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11774620dba03cc980ec3e2e2d3bd1a855dc6295
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053057"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119724"
 ---
 # <a name="using-application-domains"></a>Używanie domeny aplikacji
 
@@ -23,32 +21,32 @@ W przypadku większości aplikacji nie trzeba tworzyć własnej domeny aplikacji
   
 ## <a name="in-this-section"></a>W tej sekcji  
 
-[Instrukcje: Tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
+[Instrukcje: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)  
 Opisuje sposób programowego tworzenia domeny aplikacji.  
   
-[Instrukcje: Zwalnianie domeny aplikacji](how-to-unload-an-application-domain.md)  
+[Instrukcje: zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)  
 Opisuje sposób programowego zwalniania domeny aplikacji.  
   
-[Instrukcje: Konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
+[Instrukcje: konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)  
 Zawiera wprowadzenie do konfigurowania domeny aplikacji.  
   
 [Pobieranie informacji o instalacji z domeny aplikacji](retrieve-setup-information.md)  
 Opisuje sposób pobierania informacji o instalacji z domeny aplikacji.  
   
-[Instrukcje: Ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
+[Instrukcje: ładowanie zestawów do domeny aplikacji](how-to-load-assemblies-into-an-application-domain.md)  
 Opisuje sposób ładowania zestawu do domeny aplikacji.  
   
-[Instrukcje: Uzyskiwanie informacji o typie i elemencie członkowskim z zestawu](../reflection-and-codedom/get-type-member-information.md)  
+[Instrukcje: uzyskiwanie informacji dotyczących typów i elementów członkowskich z zestawu](../reflection-and-codedom/get-type-member-information.md)  
 Opisuje sposób pobierania informacji o zestawie.  
   
 [Kopiowanie zestawów w tle](shadow-copy-assemblies.md)  
 Opisuje, w jaki sposób kopiowanie w tle umożliwia aktualizowanie zestawów, gdy są używane, oraz sposób konfigurowania kopiowania w tle.  
   
-[Instrukcje: Odbieraj powiadomienia o wyjątkach pierwszej szansy](how-to-receive-first-chance-exception-notifications.md)  
+[Instrukcje: odbieranie powiadomień o wyjątkach pierwszej szansy](how-to-receive-first-chance-exception-notifications.md)  
 Wyjaśnia, jak można odebrać powiadomienie zgłoszone przez wyjątek, zanim środowisko uruchomieniowe języka wspólnego rozpoczęło wyszukiwanie obsługi wyjątków.  
   
 [Rozwiązywanie załadowań zestawów](../../standard/assembly/resolve-loads.md)  
-Zawiera wskazówki dotyczące używania <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia do rozwiązywania niepowodzeń ładowania zestawu.  
+Zawiera wskazówki dotyczące używania zdarzenia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> do rozwiązywania niepowodzeń ładowania zestawu.  
   
 ## <a name="reference"></a>Tematy pomocy  
 

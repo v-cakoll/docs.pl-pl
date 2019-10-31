@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d627e8b7-a605-40ac-b9bb-da9a3f1b66d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0ad4b7e907412aced911d7869ffce81eb867448
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c6b4303163140c9c5553d02855c64dd2a3f5b134
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738510"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73112738"
 ---
 # <a name="iclrdatatargetwritevirtual-method"></a>ICLRDataTarget::WriteVirtual — Metoda
-Zapisuje dane z określonego bufora do adresu określonego pamięci wirtualnej.  
+Zapisuje dane z określonego buforu na określonym adresie pamięci wirtualnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT WriteVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] CLRDATA_ADDRESS, która przechowuje adres pamięci wirtualnej.  
+ podczas CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
   
  `buffer`  
- [in] Wskaźnik do buforu, który przechowuje dane do zapisania.  
+ podczas Wskaźnik do buforu, który przechowuje dane do zapisania.  
   
  `bytesRequested`  
- [in] Liczba bajtów do zapisania.  
+ podczas Liczba bajtów do zapisania.  
   
  `bytesWritten`  
- [out] Wskaźnik do rzeczywistej liczby bajtów, które zostały napisane.  
+ określoną Wskaźnik do rzeczywistej liczby zapisanych bajtów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -20,14 +20,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 89b527d4febb677512b3cdcf7cd47344d182ae26
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121705"
 ---
 # <a name="net-regular-expressions"></a>Wyrażenia regularne .NET
 Wyrażenia regularne zapewniają zaawansowaną, elastyczną i wydajną metodę przetwarzania tekstu. Obszerna notacja zgodna z wzorcem wyrażeń regularnych umożliwia szybkie analizowanie dużych ilości tekstu w celu znalezienia określonych wzorców znaków; Aby sprawdzić poprawność tekstu w celu upewnienia się, że jest zgodny ze wstępnie zdefiniowanym wzorcem (na przykład adres e-mail); Aby wyodrębnić, edytować, zamienić lub usunąć podciągi tekstowe; i aby dodać wyodrębnione ciągi do kolekcji w celu wygenerowania raportu. W przypadku wielu aplikacji, które zajmują się ciągami lub analizują duże bloki tekstu, wyrażenia regularne są niezbędnym narzędziem.  
@@ -45,9 +43,9 @@ Wyrażenia regularne zapewniają zaawansowaną, elastyczną i wydajną metodę p
   
 - Ustal, czy wzorzec wyrażenia regularnego występuje w tekście wejściowym przez wywołanie metody <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>. Aby zapoznać się z przykładem, który używa metody <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> do walidacji tekstu, zobacz [How to: Verify, czy ciągi są w prawidłowym formacie poczty e-mail](how-to-verify-that-strings-are-in-valid-email-format.md).  
   
-- Pobierz jedno lub wszystkie wystąpienia tekstu, które pasują do wzorca wyrażenia regularnego, wywołując metodę <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Dawna Metoda zwraca obiekt <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>, który zawiera informacje na temat pasującego tekstu. Ostatni zwraca obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który zawiera jeden obiekt <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> dla każdego dopasowania znalezionego w analizowanym tekście.  
+- Pobierz jedno lub wszystkie wystąpienia tekstu, które pasują do wzorca wyrażenia regularnego, wywołując metodę <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType>. Dawna Metoda zwraca obiekt <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType>, który zawiera informacje na temat pasującego tekstu. Ostatni zwraca obiekt <xref:System.Text.RegularExpressions.MatchCollection>, który zawiera jeden obiekt <xref:System.Text.RegularExpressions.Match?displayProperty=nameWithType> dla każdego dopasowania znaleziony w analizowanym tekście.  
   
-- Zastąp tekst, który pasuje do wzorca wyrażenia regularnego, wywołując metodę <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Przykłady korzystające z metody <xref:System.Text.RegularExpressions.Regex.Replace%2A> w celu zmiany formatów daty i usunięcia nieprawidłowych znaków z ciągu można znaleźć w temacie [How to: Stripe nieprawidłowe znaki z ciągu](how-to-strip-invalid-characters-from-a-string.md) i [przykład: zmienianie formatów daty](regular-expression-example-changing-date-formats.md).  
+- Zastąp tekst, który pasuje do wzorca wyrażenia regularnego, wywołując metodę <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType>. Przykłady używające metody <xref:System.Text.RegularExpressions.Regex.Replace%2A> do zmiany formatów dat i usuwania nieprawidłowych znaków z ciągu można znaleźć w temacie [How to: Stripe nieprawidłowe znaki z ciągu](how-to-strip-invalid-characters-from-a-string.md) i [przykład: zmienianie formatów daty](regular-expression-example-changing-date-formats.md).  
   
  Aby zapoznać się z omówieniem modelu obiektów wyrażeń regularnych, zobacz [model obiektów wyrażeń regularnych](the-regular-expression-object-model.md).  
   
@@ -65,7 +63,7 @@ Wyrażenia regularne zapewniają zaawansowaną, elastyczną i wydajną metodę p
  [!code-csharp[Conceptual.Regex#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example1.cs#2)]
  [!code-vb[Conceptual.Regex#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example1.vb#2)]  
   
- Wzorzec wyrażenia regularnego `(Mr\.? |Mrs\.? |Miss |Ms\.? )` dopasowuje dowolne wystąpienie "Mr", "Mr", "Pani", "Pani", "chybień", "MS" lub "MS". Wywołanie metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> zastępuje dopasowany ciąg <xref:System.String.Empty?displayProperty=nameWithType>; Innymi słowy usuwa je z oryginalnego ciągu.  
+ Wzorzec wyrażenia regularnego `(Mr\.? |Mrs\.? |Miss |Ms\.? )` dopasowuje dowolne wystąpienie "Mr", "Mr.", "Pani", "Pani", "chybień", "MS" lub "MS". Wywołanie metody <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> zastępuje dopasowany ciąg z <xref:System.String.Empty?displayProperty=nameWithType>; Innymi słowy usuwa je z oryginalnego ciągu.  
   
 ### <a name="example-2-identifying-duplicated-words"></a>Przykład 2: Identyfikowanie zduplikowanych słów  
  Przypadkowe duplikowanie słów jest typowym błędem wprowadzanym przez autorów. Wyrażenie regularne może służyć do identyfikowania zduplikowanych wyrazów, jak pokazano w poniższym przykładzie.  
@@ -73,22 +71,22 @@ Wyrażenia regularne zapewniają zaawansowaną, elastyczną i wydajną metodę p
  [!code-csharp[Conceptual.Regex#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example2.cs#3)]
  [!code-vb[Conceptual.Regex#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example2.vb#3)]  
   
- Wzorzec wyrażenia regularnego `\b(\w+?)\s\1\b` może być interpretowany w następujący sposób:  
+ Wzorzec wyrażenia regularnego `\b(\w+?)\s\1\b` można interpretować w następujący sposób:  
   
 |||  
 |-|-|  
 |`\b`|Rozpoczyna na granicy wyrazu.|  
-|(\w +?)|Dopasowuje co najmniej jeden znak słowa, ale jak najmniejsza liczba znaków. Razem tworzą one grupę, która może być określana jako `\1`.|  
+|(\w +?)|Dopasowuje co najmniej jeden znak słowa, ale jak najmniejsza liczba znaków. Razem tworzą one grupę, która może być nazywana `\1`.|  
 |`\s`|Dopasowuje znak odstępu.|  
 |`\1`|Dopasowuje podciąg, który jest równy grupie o nazwie `\1`.|  
 |`\b`|Dopasowuje granicę wyrazu.|  
   
- Metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> jest wywoływana z opcją wyrażenia regularnego ustawioną na <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. W związku z tym, Operacja dopasowania nie uwzględnia wielkości liter, a przykład określa podciąg "this this" jako duplikacji.  
+ Metoda <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> jest wywoływana z opcjami wyrażenia regularnego ustawionymi na <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>. W związku z tym, Operacja dopasowania nie uwzględnia wielkości liter, a przykład określa podciąg "this this" jako duplikacji.  
   
  Należy zauważyć, że ciąg wejściowy zawiera podciąg "this? To ". Jednak ze względu na pozostały znak interpunkcyjny nie jest on identyfikowany jako duplikowanie.  
   
 ### <a name="example-3-dynamically-building-a-culture-sensitive-regular-expression"></a>Przykład 3: Dynamicznie tworzenie wyrażenia regularnego z uwzględnieniem wrażliwość na ustawienia kulturowe  
- Poniższy przykład ilustruje moc wyrażeń regularnych połączonych z elastyczną oferowaną przez. Funkcje globalizacji sieci. Używa obiektu <xref:System.Globalization.NumberFormatInfo> do określenia formatu wartości walutowych w bieżącej kulturze systemu. Następnie używa tych informacji do dynamicznego konstruowania wyrażenia regularnego, które wyodrębnia wartości walutowe z tekstu. Dla każdego dopasowania wyodrębnia podgrupę zawierającą tylko ciąg liczbowy, konwertuje ją na wartość <xref:System.Decimal> i oblicza sumę działania.  
+ Poniższy przykład ilustruje moc wyrażeń regularnych połączonych z elastyczną oferowaną przez. Funkcje globalizacji sieci. Używa obiektu <xref:System.Globalization.NumberFormatInfo>, aby określić format wartości walutowych w bieżącej kulturze systemu. Następnie używa tych informacji do dynamicznego konstruowania wyrażenia regularnego, które wyodrębnia wartości walutowe z tekstu. Dla każdego dopasowania wyodrębnia podgrupę zawierającą tylko ciąg liczbowy, konwertuje ją na wartość <xref:System.Decimal> i oblicza sumę uruchomienia.  
   
  [!code-csharp[Conceptual.Regex#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex/cs/example.cs#1)]
  [!code-vb[Conceptual.Regex#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex/vb/example.vb#1)]  
@@ -97,7 +95,7 @@ Wyrażenia regularne zapewniają zaawansowaną, elastyczną i wydajną metodę p
   
 |||  
 |-|-|  
-|`\$`|Poszukaj pojedynczego wystąpienia symbolu dolara (`$`) w ciągu wejściowym. Ciąg wzorca wyrażenia regularnego zawiera ukośnik odwrotny wskazujący, że symbol dolara ma być interpretowany dosłownie, a nie jako zakotwiczenie wyrażenia regularnego. (Symbol `$` wskazuje, że aparat wyrażeń regularnych powinien próbować rozpocząć jego dopasowanie na końcu ciągu znaków). Aby upewnić się, że symbol waluty bieżącej kultury nie jest interpretowany jako symbol wyrażenia regularnego, przykład wywołuje metodę <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType>, aby wypróbować znak.|  
+|`\$`|Poszukaj pojedynczego wystąpienia symbolu dolara (`$`) w ciągu wejściowym. Ciąg wzorca wyrażenia regularnego zawiera ukośnik odwrotny wskazujący, że symbol dolara ma być interpretowany dosłownie, a nie jako zakotwiczenie wyrażenia regularnego. (Symbol `$` samodzielnie wskazuje, że aparat wyrażeń regularnych powinien próbować rozpocząć jego dopasowanie na końcu ciągu znaków). Aby upewnić się, że symbol waluty bieżącej kultury nie jest interpretowany jako symbol wyrażenia regularnego, przykład wywołuje metodę <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType>, aby wprowadzić znak ucieczki.|  
 |`\s*`|Wyszukaj zero lub więcej wystąpień znaku odstępu.|  
 |`[-+]?`|Poszukaj zera lub jednego wystąpienia znaku dodatniego lub znaku minus.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Nawiasy zewnętrzne wokół tego wyrażenia definiują je jako grupę przechwytywania lub Podwyrażenie. W przypadku znalezienia dopasowania informacje o tej części pasującego ciągu można pobrać z drugiego obiektu <xref:System.Text.RegularExpressions.Group> w obiekcie <xref:System.Text.RegularExpressions.GroupCollection> zwróconym przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. (Pierwszy element w kolekcji reprezentuje całe dopasowanie).|  

@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960064"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138060"
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka wspólnego pozwala na wykonywanie większości nieobsługiwanych wyjątków w wątkach. W większości przypadków, nieobsłużony wyjątek powoduje przerwanie działania aplikacji.  
@@ -25,9 +23,9 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
   
  Środowisko uruchomieniowe języka wspólnego zapewnia Nieobsłużone wyjątki, które są używane do sterowania przepływem programu:  
   
-- Element <xref:System.Threading.ThreadAbortException> jest generowany w wątku, ponieważ <xref:System.Threading.Thread.Abort%2A> został wywołany.  
+- <xref:System.Threading.ThreadAbortException> jest generowany w wątku, ponieważ został wywołany <xref:System.Threading.Thread.Abort%2A>.  
   
-- <xref:System.AppDomainUnloadedException> Jest zgłaszany w wątku, ponieważ trwa zwalnianie domeny aplikacji, w której wykonywany jest wątek.  
+- <xref:System.AppDomainUnloadedException> jest generowany w wątku, ponieważ trwa zwalnianie domeny aplikacji, w której wykonywany jest wątek.  
   
 - Środowisko uruchomieniowe języka wspólnego lub proces hosta przerywa wątek przez wygenerowanie wewnętrznego wyjątku.  
   
@@ -49,7 +47,7 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
   
 - Nie ma takiego znaczenia jako nieobsłużonego wyjątku w wątku puli wątków. Gdy zadanie zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie zwraca wątek do puli wątków.  
   
-- Nie ma takiego znaczenia jako nieobsłużony wyjątek w wątku utworzonym za pomocą <xref:System.Threading.Thread.Start%2A> metody <xref:System.Threading.Thread> klasy. Gdy kod uruchomiony w takim wątku zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie przerywa działanie wątku.  
+- Nie istnieje taka rzecz jako nieobsłużony wyjątek w wątku utworzonym za pomocą metody <xref:System.Threading.Thread.Start%2A> klasy <xref:System.Threading.Thread>. Gdy kod uruchomiony w takim wątku zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie przerywa działanie wątku.  
   
 - Nie ma takiego znaczenia jako nieobsłużonego wyjątku w wątku finalizatora. Gdy finalizator zgłasza wyjątek, który nie jest obsługiwany, środowisko uruchomieniowe drukuje ślad stosu wyjątku do konsoli programu, a następnie zezwoli wątekowi finalizatora na wznowienie działania finalizatorów.  
   
@@ -62,14 +60,14 @@ Począwszy od .NET Framework w wersji 2,0, środowisko uruchomieniowe języka ws
   
 - Restrukturyzacja kodu, dzięki czemu wątek zostanie bezproblemowo zakończony po odebraniu sygnału.  
   
-- Użyj metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> , aby przerwać wątek.  
+- Użyj metody <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, aby przerwać wątek.  
   
 - Jeśli wątek musi zostać zatrzymany, aby zakończyć proces, należy wykonać wątek jako wątek w tle, dzięki czemu zostanie on automatycznie przerwany po zakończeniu procesu.  
   
  We wszystkich przypadkach strategia powinna być zgodna z zaleceniami dotyczącymi projektowania wyjątków. Zobacz [wskazówki dotyczące projektowania wyjątków](../../../docs/standard/design-guidelines/exceptions.md).  
   
 ### <a name="application-compatibility-flag"></a>Flaga zgodności aplikacji  
- Jako tymczasową miarę zgodności Administratorzy mogą umieścić flagę zgodności w `<runtime>` sekcji pliku konfiguracyjnego aplikacji. Powoduje to, że środowisko uruchomieniowe języka wspólnego przywraca zachowanie wersji 1,0 i 1,1.  
+ Jako tymczasową miarę zgodności Administratorzy mogą umieścić flagę zgodności w sekcji `<runtime>` w pliku konfiguracji aplikacji. Powoduje to, że środowisko uruchomieniowe języka wspólnego przywraca zachowanie wersji 1,0 i 1,1.  
   
 ```xml  
 <legacyUnhandledExceptionPolicy enabled="1"/>  

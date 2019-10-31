@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 64431150969c25da9781871ad8dcd30e029cd62e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b1406519c80368cd00a888c541ec9abfce7faa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039436"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123079"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem
 > [!NOTE]
@@ -65,7 +65,7 @@ ms.locfileid: "73039436"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Zależy od|Jeśli element można modyfikować w celu pokazywania lub ukrywania informacji, ten wzorzec kontrolki musi być zaimplementowany.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Zależy od|Jeśli element można edytować, ten wzorzec kontrolki musi być zaimplementowany. Zmiany w formancie elementu listy spowodują zmiany wartości <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>i <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider>|Zależy od|Jeśli funkcja nawigacji przestrzennej elementu do elementu jest obsługiwana w obrębie kontenera listy, a kontener jest układany w wiersze i kolumny, należy zaimplementować wzorzec kontrolki elementu siatki.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zależy od|Jeśli element zawiera polecenie, które można wykonać na nim, niezależnie od zaznaczenia, ten wzorzec musi być zaimplementowany. Jest to zazwyczaj akcja skojarzona z dwukrotnym kliknięciem kontrolki elementu listy. Przykładem może być uruchamianie dokumentu z [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]lub odtwarzanie pliku muzycznego w programie Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Zależy od|Jeśli element zawiera polecenie, które można wykonać na nim, niezależnie od zaznaczenia, ten wzorzec musi być zaimplementowany. Jest to zazwyczaj akcja skojarzona z dwukrotnym kliknięciem kontrolki elementu listy. Przykładem może być uruchamianie dokumentu z Eksploratora Microsoft Windows lub odtwarzanie pliku muzycznego w systemie Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Wymagane zdarzenia automatyzacji interfejsu użytkownika  

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: eea570d9-2e53-4320-9ea0-eb777bf9dcf3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ea76d78431ae8833602588379d5150e473710
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcb78dd5374ff97f23d7dfea63fe33fa96836958
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124533"
 ---
 # <a name="iclrtaskmanagercreatetask-method"></a>ICLRTaskManager::CreateTask — Metoda
 Żądania jawnie, które tworzą nowe zadanie środowiska uruchomieniowego języka wspólnego (CLR).  
@@ -52,21 +50,21 @@ HRESULT CreateTask (
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby przydzielić żądany zasób.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko CLR tworzy nowe zadanie automatycznie po zainicjowaniu, gdy kod użytkownika tworzy wątek przy użyciu typów w <xref:System.Threading> przestrzeni nazw lub zwiększenie rozmiaru puli wątków. Tworzy również zadania, gdy kod niezarządzany wykonuje wywołanie do funkcji zarządzanej.  
+ Środowisko CLR tworzy nowe zadanie automatycznie po zainicjowaniu, gdy kod użytkownika tworzy wątek przy użyciu typów w przestrzeni nazw <xref:System.Threading> lub gdy zwiększony jest rozmiar puli wątków. Tworzy również zadania, gdy kod niezarządzany wykonuje wywołanie do funkcji zarządzanej.  
   
- `CreateTask`umożliwia hostowi jawne żądanie utworzenia nowego zadania przez środowisko CLR. Na przykład host może wywołać tę metodę, aby wstępnie zainicjować struktury danych.  
+ `CreateTask` umożliwia hostowi jawne żądanie utworzenia nowego zadania przez środowisko CLR. Na przykład host może wywołać tę metodę, aby wstępnie zainicjować struktury danych.  
   
 > [!IMPORTANT]
 > Nowe zadanie jest zwracane w stanie wstrzymania i pozostaje zawieszone, dopóki Host jawnie wywoła [IHostTask:: Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

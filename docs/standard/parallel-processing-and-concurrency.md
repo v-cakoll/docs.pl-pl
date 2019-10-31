@@ -1,6 +1,6 @@
 ---
-title: Przetwarzanie równoległe, współbieżność i programowania asynchronicznego w .NET
-description: Dowiedz się, jak utworzyć aplikację, reagują szybciej i szybciej dzięki możliwości platformy .NET dla przetwarzania równoległego i programowanie asynchroniczne
+title: Równoległe przetwarzanie, współbieżność i programowanie asynchroniczne w programie .NET
+description: Dowiedz się, jak zwiększyć wydajność i szybkość działania aplikacji dzięki możliwościom platformy .NET do przetwarzania równoległego i asynchronicznego programowania
 ms.date: 04/06/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,24 +8,22 @@ helpviewer_keywords:
 - concurrency [.NET]
 - asynchronous programming [.NET]
 ms.assetid: e573faa8-0212-44b1-a850-ce85dc54f47f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 896b572ef6a9b285787c39a41c99c8f0209b28cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08a1b45759b1b78368f867161a13cf2af4db1a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123200"
 ---
-# <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Przetwarzanie równoległe, współbieżność i programowania asynchronicznego w .NET
-.NET oferuje kilka możliwości do pisania kodu asynchronicznego aplikacji reakcji użytkownikowi i napisać kod przetwarzania równoległego, która korzysta z wielu wątków wykonania Aby zmaksymalizować wydajność komputera użytkownika.  
+# <a name="parallel-processing-concurrency-and-async-programming-in-net"></a>Równoległe przetwarzanie, współbieżność i programowanie asynchroniczne w programie .NET
+Platforma .NET oferuje kilka sposobów pisania kodu asynchronicznego, aby aplikacja mogła szybciej odpowiadać użytkownikowi i pisać kod równoległy, który używa wielu wątków wykonywania w celu zmaksymalizowania wydajności komputera użytkownika.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Programowanie asynchroniczne](../../docs/standard/async.md)  
- W tym artykule opisano mechanizmy do programowania asynchronicznego, dostarczone przez platformy .NET.  
+ Opisuje mechanizmy programowania asynchronicznego zapewniane przez platformę .NET.  
   
  [Programowanie równoległe](../../docs/standard/parallel-programming/index.md)  
- W tym artykule opisano model programowania opartego na zadaniach upraszczającym Programowanie równoległe, umożliwiając pisanie wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym bez konieczności bezpośredniej pracy z wątkami lub pulą wątków.  
+ Opisuje model programowania oparty na zadaniach, który upraszcza programowanie równoległe, co pozwala pisać wydajny, szczegółowy i skalowalny kod równoległy w naturalnym idiom bez konieczności bezpośredniej pracy z wątkami lub pulą wątków.  
 
  [Wątkowość](../../docs/standard/threading/index.md)  
- W tym artykule opisano podstawowe współbieżność i synchronizacji mechanizmach zapewnianych przez platformy .NET.  
+ Opisuje podstawowe mechanizmy współbieżności i synchronizacji zapewniane przez platformę .NET.  

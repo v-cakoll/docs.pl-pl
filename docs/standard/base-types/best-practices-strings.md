@@ -18,15 +18,13 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: d2255d935f59bc7a999819d345b35db3e5916656
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120642"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Najlepsze rozwiązania dotyczące używania ciągów w programie .NET
 
@@ -113,8 +111,8 @@ Porównania, które używają bieżącej semantyki kultury, są domyślne dla na
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> przeciążeń, które nie zawierają <xref:System.StringComparison> parametru.
 - przeciążenia <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.
-- Domyślną metodą <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> i metodą <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> z parametrem<xref:System.Globalization.CultureInfo> `null`.
-- Domyślną metodą <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> i metodą <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> z parametrem<xref:System.Globalization.CultureInfo> `null`.
+- Domyślną metodą <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> i metodą <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> z parametrem <xref:System.Globalization.CultureInfo> `null`.
+- Domyślną metodą <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> i metodą <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> z parametrem <xref:System.Globalization.CultureInfo> `null`.
 - <xref:System.String.IndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako parametr wyszukiwania i nie mają parametru <xref:System.StringComparison>.
 - <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> przeciążenia, które akceptują <xref:System.String> jako parametr wyszukiwania i nie mają parametru <xref:System.StringComparison>.
 
@@ -312,7 +310,7 @@ Poniższy przykład tworzy wystąpienie obiektu <xref:System.Collections.Hashtab
 W przypadku wyświetlania danych niebędących ciągami, takich jak liczby i daty i godziny, sformatuj je przy użyciu ustawień kultury użytkownika. Domyślnie następujące wszystkie używają bieżącej kultury wątku w operacjach formatowania:
 
 - Ciągi interpolowane obsługiwane przez kompilatory [C#](../../csharp/language-reference/tokens/interpolated.md) i [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) .
-- Operacje łączenia ciągów wykorzystujące operatory łączenia [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) lub [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) lub bezpośrednio wywołujące metodę<xref:System.String.Concat%2A?displayProperty=nameWithType>.
+- Operacje łączenia ciągów wykorzystujące operatory łączenia [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) lub [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) lub bezpośrednio wywołujące metodę <xref:System.String.Concat%2A?displayProperty=nameWithType>.
 - Metoda <xref:System.String.Format%2A?displayProperty=nameWithType>.
 - Metody `ToString` typów liczbowych i typów dat i godzin.
 

@@ -1,15 +1,15 @@
 ---
-title: Niezależność danych na mikrousługi
+title: Suwerenność danych przypadająca na mikrousługę
 description: Niezależność danych jest jednym z najważniejszych punktów mikrousług. Każda mikrousługa musi być jedynym właścicielem swojej bazy danych, udostępniając ją innym osobom. Oczywiście wszystkie wystąpienia mikrousług nawiązują połączenie z tą samą bazą danych o wysokiej dostępności.
 ms.date: 09/20/2018
-ms.openlocfilehash: 3261446a84038b7b634242b0a0737472965168de
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: f606d6314f38bf3e2c163871af432806dddc7446
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834464"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191908"
 ---
-# <a name="data-sovereignty-per-microservice"></a>Niezależność danych na mikrousługi
+# <a name="data-sovereignty-per-microservice"></a>Suwerenność danych przypadająca na mikrousługę
 
 Ważną regułą dla architektury mikrousług jest to, że każda mikrousługa musi być własnością swoich danych i logiki domeny. Tak samo jak Pełna aplikacja jest właścicielem swojej logiki i danych, dlatego musi każda mikrousługa była własnością logiki i danych w autonomicznym cyklu życia z niezależnym wdrożeniem na mikrousługę.
 
@@ -27,7 +27,9 @@ W tradycyjnym podejściu istnieje pojedyncza baza danych współdzielona przez w
 
 Aplikacja monolityczna z zazwyczaj jedną relacyjną bazą danych ma dwie istotne zalety: [transakcje kwasowe](https://en.wikipedia.org/wiki/ACID) i język SQL — zarówno pracujące we wszystkich tabelach, jak i danych związanych z Twoją aplikacją. Takie podejście umożliwia łatwe pisanie zapytania, które łączy dane z wielu tabel.
 
-Jednak dostęp do danych jest znacznie bardziej skomplikowany po przejściu do architektury mikrousług. Jednak nawet w przypadku, gdy w ramach mikrousług lub ograniczonego kontekstu nie można używać transakcji KWASowych, dane należące do każdej mikrousługi są prywatne dla tej mikrousługi i można uzyskać do nich dostęp tylko za pośrednictwem interfejsu API mikrousług. Hermetyzowanie danych gwarantuje, że mikrousługi są luźno powiązane i mogą być od siebie niezależne. Jeśli wiele usług uzyskuje dostęp do tych samych danych, aktualizacje schematu wymagają skoordynowanej aktualizacji do wszystkich usług. Spowoduje to przerwanie autonomii cyklu życia mikrousług. Jednak rozproszone struktury danych oznaczają, że nie można wykonać jednej KWAŚNej transakcji na mikrousługach. To z kolei oznacza, że należy użyć spójności ostatecznej, gdy proces biznesowy obejmuje wiele mikrousług. Jest to znacznie trudniejsze do zaimplementowania niż proste sprzężenia SQL, ponieważ nie można utworzyć ograniczeń integralności ani używać transakcji rozproszonych między oddzielnymi bazami danych, ponieważ wyjaśnimy to później. Podobnie wiele innych funkcji relacyjnych baz danych nie jest dostępnych w wielu mikrousługach.
+Jednak dostęp do danych jest znacznie bardziej skomplikowany po przejściu do architektury mikrousług. Nawet w przypadku używania transakcji KWASowych w ramach mikrousług lub ograniczonego kontekstu należy rozważyć, że dane należące do każdej mikrousługi są prywatne dla tej mikrousługi i powinny być dostępne synchronicznie za pośrednictwem punktów końcowych interfejsu API (REST, gRPC, SOAP itp.) lub asynchronicznie za pośrednictwem funkcji Messaging (AMQP lub podobna).
+
+Hermetyzowanie danych gwarantuje, że mikrousługi są luźno powiązane i mogą być od siebie niezależne. Jeśli wiele usług uzyskuje dostęp do tych samych danych, aktualizacje schematu wymagają skoordynowanej aktualizacji do wszystkich usług. Spowoduje to przerwanie autonomii cyklu życia mikrousług. Jednak rozproszone struktury danych oznaczają, że nie można wykonać jednej KWAŚNej transakcji na mikrousługach. To z kolei oznacza, że należy użyć spójności ostatecznej, gdy proces biznesowy obejmuje wiele mikrousług. Jest to znacznie trudniejsze do zaimplementowania niż proste sprzężenia SQL, ponieważ nie można utworzyć ograniczeń integralności ani używać transakcji rozproszonych między oddzielnymi bazami danych, ponieważ wyjaśnimy to później. Podobnie wiele innych funkcji relacyjnych baz danych nie jest dostępnych w wielu mikrousługach.
 
 Jeszcze więcej, różne mikrousługi często używają różnych *rodzajów* baz danych. Nowoczesne aplikacje przechowują i przetwarzają różne rodzaje danych, a relacyjna baza danych nie zawsze jest najlepszym wyborem. W przypadku niektórych przypadków użycia baza danych NoSQL, taka jak Azure CosmosDB lub MongoDB, może mieć wygodniejszy model danych i zapewnia lepszą wydajność i skalowalność niż baza danych SQL, taka jak SQL Server lub Azure SQL Database. W innych przypadkach relacyjna baza danych jest nadal najlepszym rozwiązaniem. W związku z tym aplikacje oparte na mikrousługach często używają kombinacji baz danych SQL i NoSQL, które są czasami nazywane podejściem [trwałości Polyglot](https://martinfowler.com/bliki/PolyglotPersistence.html) .
 
@@ -45,9 +47,9 @@ Należy zaznaczyć, że zdefiniowanie usługi dla każdego powiązanego kontekst
 
 DDD zalety mikrousług, uzyskując rzeczywiste granice w postaci rozproszonych mikrousług. Jednak pomysły, takie jak nieudostępniające modelu między mikrousługami, są również potrzebne w ograniczonym kontekście.
 
-### <a name="additional-resources"></a>Zasoby dodatkowe
+### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Krzysztof Richardson. Wzorzec: baza danych na usługę** \
+- **Krzysztof Richardson. Wzorzec: baza danych na \ usługi**
   <https://microservices.io/patterns/data/database-per-service.html>
 
 - **Fowlera Martin. BoundedContext** \

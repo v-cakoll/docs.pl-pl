@@ -8,14 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c1a14f0ee36341c9579683f711ae78fc4df3f97
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833657"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091993"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj .NET Framework dla deweloperów
 
@@ -37,7 +35,7 @@ Aby uzyskać szczegółowe informacje, Skorzystaj z poniższej tabeli. Aby wyśw
 
 |Wersja programu .NET Framework|Instalacja dewelopera|Instalacja redystrybucyjna|Obsługa platform|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4,8**|[Pakiet dewelopera .NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088517)|[Instalator sieci Web Centrum pobierania 4,8](http://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Pobierz instalatora offline centrum pobierania 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Uwzględnione w:**<br/><br/>Aktualizacja systemu Windows 10 maja 2019<br /><br /> **Program można zainstalować na:**<br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>Aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
+|**4,8**|[Pakiet dewelopera .NET Framework 4,8](https://go.microsoft.com/fwlink/?linkid=2088517)|[Instalator sieci Web Centrum pobierania 4,8](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>[Pobierz instalatora offline centrum pobierania 4,8](https://go.microsoft.com/fwlink/?linkid=2088631)|**Uwzględnione w:**<br/><br/>Aktualizacja systemu Windows 10 maja 2019<br /><br /> **Program można zainstalować na:**<br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>Aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
 |**4.7.2**|[.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Instalator sieci Web Centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Instalator offline centrum pobierania 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 październik 2018<br/>Aktualizacja systemu Windows 10 z kwietnia 2018<br/>System Windows Server 2019<br/>System Windows Server w wersji 1809<br/>System Windows Server w wersji 1803<br /><br /> **Program można zainstalować na:**<br/> <br/>Aktualizacja systemu Windows 10 dla twórców<br/>Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> System Windows Server, wersja 1709 i starsze wersje<br /><br/> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
 |**4.7.1**|[.NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Strona pobierania dla Instalatora sieci Web 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona pobierania dla Instalatora 4.7.1 offline](https://go.microsoft.com/fwlink/?LinkId=852107)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 dla twórców<br/>System Windows Server w wersji 1709<br /><br /> **Program można zainstalować na:**<br/><br/> Aktualizacja systemu Windows 10 dla twórców <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
 |**4,7**|[.NET Framework 4,7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Strona pobierania dla Instalatora sieci Web 4,7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strona pobierania dla Instalatora w trybie offline 4,7](https://go.microsoft.com/fwlink/?LinkId=825303)|**Uwzględnione w:** <br/><br/>Aktualizacja systemu Windows 10 dla twórców<br /><br /> **Program można zainstalować na:**<br /><br/> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze<br /> Windows Server 2016 i starsze<br /> (aby zapoznać się z pełną listą, zobacz [wymagania systemowe](../get-started/system-requirements.md)).||
@@ -170,7 +168,7 @@ Pakiety językowe są plikami wykonywalnymi zawierającymi zlokalizowane zasoby 
 
 1. Otwórz stronę pobierania pakietu językowego dla zainstalowanej wersji .NET Framework:
 
-    - [Pakiety językowe .NET Framework 4,8](http://go.microsoft.com/fwlink/?LinkId=2053984)
+    - [Pakiety językowe .NET Framework 4,8](https://go.microsoft.com/fwlink/?LinkId=2053984)
 
     - [Pakiety językowe .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -200,7 +198,7 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 | --------------------- | :-----: |
 | Arabski                | ty      |
 | czeski                 | Rejestr      |
-| duński                | funkcją      |
+| duński                | Funkcją      |
 | Holenderski                 | NL      |
 | fiński               | Finlandia      |
 | Angielski (USA)         | pl-US   |
@@ -212,7 +210,7 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 | Włoski               | go      |
 | japoński              | Japonia      |
 | koreański                | Ko      |
-| Norweski             | Znaleziono      |
+| Norweski             | znaleziono      |
 | polski                | zysków      |
 | portugalski (Brazylia)   | pt-BR   |
 | Portugalski (Portugalia) | pt-PT   |

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 36798fabcd42cf7e04b0a6f288736503eecad88b
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70169122"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124269"
 ---
 # <a name="asynchronous-programming-patterns"></a>Wzorce programowania asynchronicznego
 
@@ -21,13 +19,13 @@ Platforma .NET udostępnia trzy wzorce do wykonywania operacji asynchronicznych:
 
 - **Wzorzec asynchroniczny oparty na zadaniach (TAP)** , który używa pojedynczej metody do reprezentowania inicjacji i ukończenia operacji asynchronicznej. Naciśnij przycisk został wprowadzony w .NET Framework 4. **Jest to zalecane podejście do programowania asynchronicznego w programie .NET.** Słowa kluczowe [Async](../../csharp/language-reference/keywords/async.md) i [await](../../csharp/language-reference/operators/await.md) w C# programie oraz operatory [Async](../../visual-basic/language-reference/modifiers/async.md) i [await](../../visual-basic/language-reference/operators/await-operator.md) w Visual Basic Dodaj obsługę języka dla TAP. Aby uzyskać więcej informacji, zobacz [wzorzec asynchroniczny oparty na zadaniach (TAP)](task-based-asynchronous-pattern-tap.md).  
 
-- **Wzorzec asynchroniczny oparty na zdarzeniach (EAP)** , który jest oparty na zdarzeniach starszym modelu do zapewniania zachowania asynchronicznego. Wymaga metody, która ma `Async` sufiks i jedno lub więcej zdarzeń, typy delegatów obsługi zdarzeń i `EventArg`typy pochodne. Protokół EAP został wprowadzony w .NET Framework 2,0. Nie jest już zalecane w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny wzorzec oparty na zdarzeniach (EAP)](event-based-asynchronous-pattern-eap.md).  
+- **Wzorzec asynchroniczny oparty na zdarzeniach (EAP)** , który jest oparty na zdarzeniach starszym modelu do zapewniania zachowania asynchronicznego. Wymaga metody, która ma `Async` sufiks i co najmniej jedno zdarzenie, typy delegatów obsługi zdarzeń i typy pochodne `EventArg`. Protokół EAP został wprowadzony w .NET Framework 2,0. Nie jest już zalecane w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny wzorzec oparty na zdarzeniach (EAP)](event-based-asynchronous-pattern-eap.md).  
 
-- Wzorzec **modelu programowania asynchronicznego (APM)** (nazywany <xref:System.IAsyncResult> również wzorcem), który jest starszym <xref:System.IAsyncResult> modelem, który używa interfejsu w celu zapewnienia zachowania asynchronicznego. W tym wzorcu operacje synchroniczne wymagają `Begin` , `End` a `BeginWrite` metody (na przykład i `EndWrite` w celu zaimplementowania asynchronicznej operacji zapisu). Ten wzorzec nie jest już zalecany w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny model programowania (APM)](asynchronous-programming-model-apm.md).  
+- Wzorzec **modelu programowania asynchronicznego (APM)** (nazywany również wzorcem <xref:System.IAsyncResult>), który jest starszym modelem, który używa interfejsu <xref:System.IAsyncResult>, aby zapewnić asynchroniczne zachowanie. W tym wzorcu operacje synchroniczne wymagają `Begin` i `End` metod (na przykład `BeginWrite` i `EndWrite` do implementowania asynchronicznej operacji zapisu). Ten wzorzec nie jest już zalecany w przypadku nowych rozwiązań programistycznych. Aby uzyskać więcej informacji, zobacz [asynchroniczny model programowania (APM)](asynchronous-programming-model-apm.md).  
   
 ## <a name="comparison-of-patterns"></a>Porównanie wzorców
 
-Aby szybko porównać sposób wykonywania operacji asynchronicznych przez trzy wzorce, należy rozważyć `Read` metodę, która odczytuje określoną ilość danych do podanego buforu, rozpoczynając od określonego przesunięcia:  
+Aby szybko porównać sposób wykonywania operacji asynchronicznych przez trzy modele wzorców, należy rozważyć metodę `Read`, która odczytuje określoną ilość danych do podanego buforu, rozpoczynając od określonego przesunięcia:  
   
 ```csharp  
 public class MyClass  
@@ -36,7 +34,7 @@ public class MyClass
 }  
 ```  
 
-Odpowiedniki TAP dla tej metody uwidaczniają następujące pojedyncze `ReadAsync` metody:  
+Odpowiedniki TAP dla tej metody uwidaczniają następujące pojedyncze metody `ReadAsync`:  
   
 ```csharp
 public class MyClass  
@@ -55,7 +53,7 @@ public class MyClass
 }  
 ```  
   
-Odpowiedniki APM uwidaczniają `BeginRead` metody i `EndRead` :  
+Odpowiednika APM uwidacznia `BeginRead` i `EndRead` metody:  
   
 ```csharp  
 public class MyClass  

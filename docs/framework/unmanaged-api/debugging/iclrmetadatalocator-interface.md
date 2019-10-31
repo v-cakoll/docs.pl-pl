@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 43c944f4-406a-4df6-981e-0eabb33dd5d0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec92214e33cd1acda8b2702d93deba1f0fb2aaa2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73111030"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator — Interfejs
-Używane przez warstwę usług dostępu do danych do lokalizowania metadane zestawów w procesie docelowym.  
+Używany przez warstwę usług dostępu do danych do lokalizowania metadanych zestawów w procesie docelowym.  
   
 ## <a name="methods"></a>Metody  
   
@@ -33,16 +31,16 @@ Używane przez warstwę usług dostępu do danych do lokalizowania metadane zest
 |[GetMetaData, metoda](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|Pobiera metadane obrazu z procesu docelowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład to implementacja żywy proces będzie różnić się od tej ze zrzutu pamięci.  
+ Klient API (tzn. debuger) musi implementować ten interfejs stosownie do określonego procesu docelowego. Na przykład implementacja procesu na żywo byłaby inna niż w przypadku zrzutu pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

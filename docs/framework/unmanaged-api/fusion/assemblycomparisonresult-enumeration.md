@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd042f89-10b1-40ca-946e-46da082f5263
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0086906b23cc65825bbd54a54e544fa9ec7b211e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3d3fd88a2c1ac90f823b23d8d2bcb5b177a625c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796267"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109010"
 ---
 # <a name="assemblycomparisonresult-enumeration"></a>AssemblyComparisonResult — Wyliczenie
 Określa równoważność dwóch tożsamości zestawów określonych przez funkcję [CompareAssemblyIdentity —](compareassemblyidentity-function.md) .  
@@ -63,13 +61,13 @@ typedef enum _tagAssemblyComparisonResult {
 |`ACR_Unknown`|Wskazuje, że przyczyna nierównoważności jest nieznana.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796320"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123066"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly — Funkcja
 Pobiera wartość wskazującą, czy określony zestaw jest zarządzany.  
@@ -51,14 +49,14 @@ HRESULT IsFrameworkAssembly (
  podczas Rozmiar `pwzFrameworkAssemblyIdentity`.  
   
 ## <a name="remarks"></a>Uwagi  
- `pwzAssemblyReference` Parametr jest wskaźnikiem do ciągu znaków, który zawiera nazwę zestawu.  
+ `pwzAssemblyReference` parametr jest wskaźnikiem do ciągu znaków, który zawiera nazwę zestawu.  
   
- Jeśli ten zestaw jest częścią .NET Framework, `pbIsFrameworkAssembly` parametr będzie zawierać `true`wartość logiczną.  
+ Jeśli ten zestaw jest częścią .NET Framework, parametr `pbIsFrameworkAssembly` będzie zawierać wartość logiczną `true`.  
   
- Jeśli nazwany zestaw nie jest częścią .NET Framework lub jeśli `pwzAssemblyReference` parametr nie ma nazwy zestawu, `pbIsFrameworkAssembly` będzie `false`zawierać wartość logiczną.  
+ Jeśli nazwany zestaw nie jest częścią .NET Framework lub jeśli parametr `pwzAssemblyReference` nie ma nazwy zestawu, `pbIsFrameworkAssembly` będzie zawierać wartość logiczną `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

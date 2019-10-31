@@ -1,5 +1,5 @@
 ---
-title: Używanie klasy StringBuilder w programie .NET
+title: Korzystanie z klasy StringBuilder w środowisku .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,97 +16,95 @@ helpviewer_keywords:
 - Insert method
 - strings [.NET Framework], StringBuilder object
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19ee90f3300e3b610eeefd4949baa2759b834a60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121675"
 ---
-# <a name="using-the-stringbuilder-class-in-net"></a>Używanie klasy StringBuilder w programie .NET
-<xref:System.String> Obiektu jest niezmienny. Za każdym razem, gdy używasz jednej z metod w <xref:System.String?displayProperty=nameWithType> klasy, należy utworzyć nowy obiekt ciągu w pamięci, co wymaga nowego przydziału miejsca dla tego nowego obiektu. W sytuacjach, w których trzeba wykonać powtarzanych modyfikacji ciągu, obciążenie związane z utworzeniem nowej <xref:System.String> obiekt może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Klasa może być używana, gdy chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład za pomocą <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność, gdy łączenie wielu ciągów w pętli.  
+# <a name="using-the-stringbuilder-class-in-net"></a>Korzystanie z klasy StringBuilder w środowisku .NET
+Obiekt <xref:System.String> jest niezmienny. Za każdym razem, gdy używasz jednej z metod w klasie <xref:System.String?displayProperty=nameWithType>, utworzysz nowy obiekt String w pamięci, co wymaga nowego przydziału miejsca dla nowego obiektu. W sytuacjach, gdy trzeba wykonać powtórzone modyfikacje ciągu, obciążenie związane z tworzeniem nowego obiektu <xref:System.String> może być kosztowne. Klasy <xref:System.Text.StringBuilder?displayProperty=nameWithType> można użyć, jeśli chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład użycie klasy <xref:System.Text.StringBuilder> może zwiększyć wydajność podczas łączenia wielu ciągów razem w pętli.  
   
-## <a name="importing-the-systemtext-namespace"></a>Importowanie Namespace System.Text  
- <xref:System.Text.StringBuilder> Klasa znajduje się w <xref:System.Text> przestrzeni nazw.  Aby uniknąć konieczności podać w pełni kwalifikowaną nazwę typu w kodzie, można importować <xref:System.Text> przestrzeni nazw:  
+## <a name="importing-the-systemtext-namespace"></a>Importowanie przestrzeni nazw System. Text  
+ Klasa <xref:System.Text.StringBuilder> znajduje się w przestrzeni nazw <xref:System.Text>.  Aby uniknąć konieczności podawania w kodzie w pełni kwalifikowanej nazwy typu, możesz zaimportować <xref:System.Text> przestrzeni nazw:  
   
  [!code-cpp[Conceptual.StringBuilder#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#11)]
  [!code-csharp[Conceptual.StringBuilder#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#11)]
  [!code-vb[Conceptual.StringBuilder#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#11)]  
   
-## <a name="instantiating-a-stringbuilder-object"></a>Utworzenie wystąpienia obiektu StringBuilder  
- Można utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder> klasy przez inicjowanie zmiennej za pomocą jednej z metod przeciążonego konstruktora, jak pokazano w poniższym przykładzie.  
+## <a name="instantiating-a-stringbuilder-object"></a>Tworzenie wystąpienia obiektu StringBuilder  
+ Można utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder>, inicjując zmienną za pomocą jednej z przeciążonych metod konstruktora, jak pokazano w poniższym przykładzie.  
   
  [!code-cpp[Conceptual.StringBuilder#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#1)]
  [!code-csharp[Conceptual.StringBuilder#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#1)]
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
-## <a name="setting-the-capacity-and-length"></a>Ustawienia pojemności i długość  
- Mimo że <xref:System.Text.StringBuilder> to obiekt dynamiczny, który pozwala zwiększyć liczbę znaków w ciągu, który hermetyzuje on można określić wartość maksymalnej liczby znaków, które może przechowywać. Wartość ta jest wywoływana pojemność obiektu i nie należy mylić z długość ciągu, bieżący <xref:System.Text.StringBuilder> przechowuje. Na przykład, możesz utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder> klasy z ciągiem "Hello", który ma długość równą 5, a może określić, że obiekt ma maksymalną pojemność wynoszącą 25. Po zmodyfikowaniu <xref:System.Text.StringBuilder>, nie alokację rozmiar wykorzystywany aż do osiągnięcia pojemności. W takiej sytuacji nowe miejsce jest przydzielany automatycznie i podwaja się pojemności. Należy określić pojemność <xref:System.Text.StringBuilder> klasy przy użyciu jednej z przeciążenia konstruktorów. Poniższy przykład określa, że `myStringBuilder` obiektu można rozszerzyć do maksymalnie 25 miejsca do magazynowania.  
+## <a name="setting-the-capacity-and-length"></a>Ustawianie pojemności i długości  
+ Chociaż <xref:System.Text.StringBuilder> jest obiektem dynamicznym, który pozwala rozwijać liczbę znaków w ciągu, który jest hermetyzowany, można określić wartość maksymalnej dozwolonej liczby znaków. Ta wartość jest określana jako pojemność obiektu i nie należy jej mylić z długością ciągu, w którym znajduje się bieżąca <xref:System.Text.StringBuilder>. Można na przykład utworzyć nowe wystąpienie klasy <xref:System.Text.StringBuilder> z ciągiem "Hello", który ma długość 5 i można określić, że obiekt ma maksymalną pojemność wynoszącą 25. Modyfikacja <xref:System.Text.StringBuilder>nie powoduje ponownego przydzielania rozmiaru dla siebie, dopóki nie zostanie osiągnięta pojemność. W takim przypadku nowe miejsce zostanie przydzieloną automatycznie, a pojemność jest podwójna. Możesz określić pojemność klasy <xref:System.Text.StringBuilder> przy użyciu jednego z przeciążonych konstruktorów. Poniższy przykład określa, że obiekt `myStringBuilder` może być rozszerzony do maksymalnie 25 spacji.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]
  [!code-vb[Conceptual.StringBuilder#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#2)]  
   
- Ponadto można użyć odczytu/zapisu <xref:System.Text.StringBuilder.Capacity%2A> właściwości, aby ustawić maksymalną długość obiektu. W poniższym przykładzie użyto **pojemności** właściwość, aby określić maksymalną długość.  
+ Ponadto można użyć właściwości <xref:System.Text.StringBuilder.Capacity%2A> do odczytu/zapisu, aby ustawić maksymalną długość obiektu. W poniższym przykładzie użyta jest właściwość **pojemności** do zdefiniowania maksymalnej długości obiektu.  
   
  [!code-cpp[Conceptual.StringBuilder#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#3)]
  [!code-csharp[Conceptual.StringBuilder#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#3)]
  [!code-vb[Conceptual.StringBuilder#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#3)]  
   
- <xref:System.Text.StringBuilder.EnsureCapacity%2A> Metoda może służyć do sprawdzania pojemności bieżącego **StringBuilder**. Jeśli pojemność jest większa niż wartość przekazany, nie zostanie zmienione; Jednak jeśli pojemność jest mniejsza niż wartość sukces, bieżąca pojemność jest zmieniany na pasuje do wartości przekazane.  
+ Metoda <xref:System.Text.StringBuilder.EnsureCapacity%2A> może służyć do sprawdzenia pojemności bieżącego elementu **StringBuilder**. Jeśli pojemność jest większa niż wartość przeniesiona, nie wprowadzono żadnych zmian. Jeśli jednak pojemność jest mniejsza niż wartość przeniesiona, bieżąca pojemność jest zmieniana, aby odpowiadała wartości z przekazaną.  
   
- <xref:System.Text.StringBuilder.Length%2A> Również można przeglądać lub ustaw właściwości. Jeśli ustawisz **długość** właściwość z wartością, która jest większa niż **pojemności** właściwości **pojemności** właściwość automatycznie zmieni się na taką samą wartość jak  **Długość** właściwości. Ustawienie **długość** właściwość z wartością, która jest mniejsza niż długość ciągu w bieżącej **StringBuilder** skraca ciągu.  
+ Właściwość <xref:System.Text.StringBuilder.Length%2A> może być również wyświetlana lub ustawiona. Jeśli właściwość **Length** zostanie ustawiona na wartość większą niż Właściwość **pojemności** , właściwość **pojemności** zostanie automatycznie zmieniona na taką samą wartość jak Właściwość **Length** . Ustawienie właściwości **Length** na wartość, która jest mniejsza niż długość ciągu w bieżącym **StringBuilder** , skraca ciąg.  
   
 ## <a name="modifying-the-stringbuilder-string"></a>Modyfikowanie ciągu StringBuilder  
- W poniższej tabeli wymieniono metody, można użyć do zmodyfikowania zawartości **StringBuilder**.  
+ Poniższa tabela zawiera listę metod, których można użyć w celu zmodyfikowania zawartości **StringBuilder**.  
   
 |Nazwa metody|Zastosowanie|  
 |-----------------|---------|  
-|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Dołącza informacje do końca bieżącego **StringBuilder**.|  
-|<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Zastępuje specyfikatora formatu przekazany ciąg znaków z tekstu sformatowanego.|  
-|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Wstawia ciąg lub obiekt w określonym indeksie bieżącego **StringBuilder**.|  
-|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków z bieżącego **StringBuilder**.|  
-|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Zamienia określony znak pod określonym indeksem.|  
+|<xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>|Dołącza informacje na końcu bieżącego elementu **StringBuilder**.|  
+|<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|Zastępuje specyfikator formatu przekazaną w ciągu sformatowanym tekstem.|  
+|<xref:System.Text.StringBuilder.Insert%2A?displayProperty=nameWithType>|Wstawia ciąg lub obiekt do określonego indeksu bieżącego elementu **StringBuilder**.|  
+|<xref:System.Text.StringBuilder.Remove%2A?displayProperty=nameWithType>|Usuwa określoną liczbę znaków z bieżącego elementu **StringBuilder**.|  
+|<xref:System.Text.StringBuilder.Replace%2A?displayProperty=nameWithType>|Zastępuje określony znak w określonym indeksie.|  
   
-### <a name="append"></a>Append  
- **Append** metoda może służyć do dodawania tekstu lub ciąg reprezentujący obiekt do końca ciągu reprezentowane przez bieżącą **StringBuilder**. Poniższy przykład inicjuje **StringBuilder** do "Hello World", a następnie dołącza jakiś tekst na końcu obiektu. Miejsce jest przydzielane automatycznie, zgodnie z potrzebami.  
+### <a name="append"></a>łączono  
+ Metoda **append** może służyć do dodawania tekstu lub reprezentowania ciągu obiektu na końcu ciągu reprezentowanego przez bieżący element **StringBuilder**. Poniższy przykład Inicjuje element **StringBuilder** do "Hello World", a następnie dołącza jakiś tekst na końcu obiektu. Miejsce jest przypisywany automatycznie, zgodnie z wymaganiami.  
   
  [!code-cpp[Conceptual.StringBuilder#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#4)]
  [!code-csharp[Conceptual.StringBuilder#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#4)]
  [!code-vb[Conceptual.StringBuilder#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#4)]  
   
-### <a name="appendformat"></a>Appendformat —  
- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> Metoda dodaje tekst na końcu <xref:System.Text.StringBuilder> obiektu. Obsługuje ona funkcję formatowania złożonego (Aby uzyskać więcej informacji, zobacz [formatowania złożonego](../../../docs/standard/base-types/composite-formatting.md)) przez wywołanie metody <xref:System.IFormattable> implementacji obiektu lub obiektów do sformatowania. W związku z tym akceptuje ciągi formatu standardowego dla wartości liczbowych, daty i godziny oraz wyliczenia, ciągi formatów niestandardowych dla liczbowe i wartości daty i godziny i ciągi formatu zdefiniowany dla typów niestandardowych. (Aby uzyskać informacje na temat formatowania, zobacz [typy formatowania](../../../docs/standard/base-types/formatting-types.md).) Można użyć tej metody można dostosować format zmiennych i Dołącz te wartości do <xref:System.Text.StringBuilder>. W poniższym przykładzie użyto <xref:System.Text.StringBuilder.AppendFormat%2A> metodę, aby umieścić wartość całkowitą sformatowane jako wartość waluty na końcu <xref:System.Text.StringBuilder> obiektu.  
+### <a name="appendformat"></a>AppendFormat  
+ Metoda <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> dodaje tekst na końcu obiektu <xref:System.Text.StringBuilder>. Obsługuje funkcję formatowania złożonego (Aby uzyskać więcej informacji, zobacz [formatowanie złożone](../../../docs/standard/base-types/composite-formatting.md)) przez wywołanie <xref:System.IFormattable> implementacji obiektu lub obiektów do sformatowania. W związku z tym akceptuje ciągi formatu standardowego dla wartości liczbowych, daty i godziny oraz wyliczenia, niestandardowych ciągów formatu dla wartości liczbowych i daty i godziny oraz ciągów formatu zdefiniowanych dla typów niestandardowych. (Aby uzyskać informacje na temat formatowania, zobacz [Typy formatowania](../../../docs/standard/base-types/formatting-types.md)). Tej metody można użyć do dostosowania formatu zmiennych i dołączenia tych wartości do <xref:System.Text.StringBuilder>. W poniższym przykładzie zastosowano metodę <xref:System.Text.StringBuilder.AppendFormat%2A>, aby umieścić wartość całkowitą sformatowaną jako wartość walutową na końcu obiektu <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#5)]
  [!code-csharp[Conceptual.StringBuilder#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#5)]
  [!code-vb[Conceptual.StringBuilder#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#5)]  
   
 ### <a name="insert"></a>Insert  
- <xref:System.Text.StringBuilder.Insert%2A> Metoda dodaje ciąg lub obiekt do określonej pozycji w bieżącym <xref:System.Text.StringBuilder> obiektu. W poniższym przykładzie użyto tej metody można wstawić słowa do szóstego położenie <xref:System.Text.StringBuilder> obiektu.  
+ Metoda <xref:System.Text.StringBuilder.Insert%2A> dodaje ciąg lub obiekt do określonej pozycji w bieżącym obiekcie <xref:System.Text.StringBuilder>. Poniższy przykład używa tej metody do wstawienia wyrazu do szóstego położenia obiektu <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#6)]
  [!code-csharp[Conceptual.StringBuilder#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#6)]
  [!code-vb[Conceptual.StringBuilder#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#6)]  
   
 ### <a name="remove"></a>Usuń  
- Możesz użyć **Usuń** metodę, aby usunąć określoną liczbę znaków z bieżącego <xref:System.Text.StringBuilder> obiektu, rozpoczynając od określonego indeksu zaczynającego się od zera. W poniższym przykładzie użyto **Usuń** metodę, aby skrócić <xref:System.Text.StringBuilder> obiektu.  
+ Możesz użyć metody **Remove** , aby usunąć określoną liczbę znaków z bieżącego obiektu <xref:System.Text.StringBuilder>, zaczynając od określonego indeksu na podstawie zera. Poniższy przykład używa metody **Remove** do skracania obiektu <xref:System.Text.StringBuilder>.  
   
  [!code-cpp[Conceptual.StringBuilder#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#7)]
  [!code-csharp[Conceptual.StringBuilder#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#7)]
  [!code-vb[Conceptual.StringBuilder#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#7)]  
   
-### <a name="replace"></a>Replace  
- **Zastąp** metoda może służyć do Zastąp znaki w obrębie <xref:System.Text.StringBuilder> obiektu na inny określony znak. W poniższym przykładzie użyto **Zastąp** metodę wyszukiwania <xref:System.Text.StringBuilder> obiektu dla wszystkich wystąpień wykrzyknika (!) znak i zastąpić je znak zapytania (?).  
+### <a name="replace"></a>stępować  
+ Metoda **replace** może służyć do zastępowania znaków w obiekcie <xref:System.Text.StringBuilder> innym określonym znakiem. W poniższym przykładzie zastosowano metodę **replace** , aby przeszukać <xref:System.Text.StringBuilder> obiektu dla wszystkich wystąpień znaku wykrzyknika (!) i zastąpić je znakiem znaku zapytania (?).  
   
  [!code-cpp[Conceptual.StringBuilder#8](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#8)]
  [!code-csharp[Conceptual.StringBuilder#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#8)]
  [!code-vb[Conceptual.StringBuilder#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#8)]  
   
-## <a name="converting-a-stringbuilder-object-to-a-string"></a>Konwersja obiektu StringBuilder na ciąg  
- Należy przekonwertować <xref:System.Text.StringBuilder> obiekt <xref:System.String> obiekt przed można przekazać ciągu, reprezentowane przez <xref:System.Text.StringBuilder> obiekt do metody, która ma <xref:System.String> parametru lub wyświetlić ją w interfejsie użytkownika. Wykonaj tę konwersję, wywołując <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType> metody. Poniższy przykład wywołuje szereg <xref:System.Text.StringBuilder> metody, a następnie wywołania <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType> metodę w celu wyświetlenia ciągu.  
+## <a name="converting-a-stringbuilder-object-to-a-string"></a>Konwertowanie obiektu StringBuilder na ciąg  
+ Przed przekazaniem ciągu reprezentowanego przez obiekt <xref:System.Text.StringBuilder> do metody, która ma parametr <xref:System.String> lub wyświetlenie w interfejsie użytkownika, należy przekonwertować obiekt <xref:System.Text.StringBuilder> na obiekt <xref:System.String>. Tę konwersję można wykonać, wywołując metodę <xref:System.Text.StringBuilder.ToString%2A?displayProperty=nameWithType>. Poniższy przykład wywołuje wiele metod <xref:System.Text.StringBuilder>, a następnie wywołuje metodę <xref:System.Text.StringBuilder.ToString?displayProperty=nameWithType>, aby wyświetlić ciąg.  
   
  [!code-csharp[Conceptual.StringBuilder#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/tostringexample1.cs#10)]
  [!code-vb[Conceptual.StringBuilder#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/tostringexample1.vb#10)]  

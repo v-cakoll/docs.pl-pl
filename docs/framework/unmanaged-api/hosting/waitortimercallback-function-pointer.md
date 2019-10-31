@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776499"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092036"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK — Wskaźnik funkcji
-Wskazuje funkcję, która powiadamia hosta, którego obsługa oczekiwania (<xref:System.Threading.WaitHandle>) zostały zasygnalizowane lub przekroczyło limit czasu.  
+Wskazuje funkcję, która powiadamia hosta o zasygnalizowaniu lub przekroczeniu limitu czasu dojścia oczekiwania (<xref:System.Threading.WaitHandle>).  
   
- Ten wskaźnik funkcji jest przestarzała w programie .NET Framework 4.  
+ Ten wskaźnik funkcji został uznany za przestarzały w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ typedef VOID (__stdcall *WAITORTIMERCALLBACK) (
   
 ## <a name="parameters"></a>Parametry  
  `lpParameter`  
- [in] Wskaźnik do obiektu, który zawiera informacje o zdefiniowanym przez hosta.  
+ podczas Wskaźnik do obiektu, który zawiera informacje zdefiniowane przez hosta.  
   
  `TimerOrWaitFired`  
- [in] `true` Jeśli dojście oczekiwania upłynął limit czasu, lub `false` Jeśli został on zasygnalizowane.  
+ [in] `true`, jeśli upłynął limit czasu dojścia oczekiwania lub `false`, jeśli został zasygnalizowani.  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcja, do którego `WAITORTIMERCALLBACK` punktów jest funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji macierzystej.  
+ Funkcja, do której punkty `WAITORTIMERCALLBACK` są funkcją wywołania zwrotnego i musi być implementowana przez moduł zapisujący aplikacji hostingowej.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorWks.dll  
+ **Biblioteka:** MSCorWks. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

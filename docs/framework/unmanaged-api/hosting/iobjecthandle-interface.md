@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 436683ef-9849-4b24-89a9-28c06d148dce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fcdcb8d70e04430ac09c78f0ef0ce1d95358db53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 954043414b7cdbbf701f34375372f91dd68a359c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922008"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102716"
 ---
 # <a name="iobjecthandle-interface"></a>IObjectHandle — Interfejs
-Zapewnia metodę Odkodowywanie obiektów marshal przez wartość pośredni.  
+Zapewnia metodę odpakowania obiektów marshal-by-Value z operatora pośredni.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Unwrap, metoda](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Dekoduje obiekt marshal przez wartość pośredni.|  
+|[Unwrap, metoda](../../../../docs/framework/unmanaged-api/hosting/iobjecthandle-unwrap-method.md)|Odpakuje obiekt zorganizowany przez wartość z pośredniego.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

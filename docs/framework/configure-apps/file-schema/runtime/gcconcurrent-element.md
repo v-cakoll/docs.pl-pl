@@ -1,5 +1,5 @@
 ---
-title: <gcConcurrent>, element
+title: <gcConcurrent> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/gcConcurrent
@@ -9,22 +9,20 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b2774c32b4ee3e67772f84d599ecc5dbeb6598b
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4897462e20b193496c44d26923d0d0e2a13f7dd6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252594"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116808"
 ---
-# <a name="gcconcurrent-element"></a>\<gcConcurrent, element >
+# <a name="gcconcurrent-element"></a>\<element > gcConcurrent
 
 Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci w osobnym wątku.
 
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent>**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcConcurrent >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -63,14 +61,14 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Przed .NET Framework 4, wyrzucanie elementów bezużytecznych stacji roboczych obsługiwało współbieżne wyrzucanie elementów bezużytecznych, które przeprowadzono odzyskiwanie pamięci w tle w osobnym wątku. W .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych zostało zastąpione przez w tle GC, co również wykonuje wyrzucanie elementów bezużytecznych w tle w osobnym wątku. Począwszy od .NET Framework 4,5, zbieranie w tle stało się dostępne w wyrzucaniu elementów bezużytecznych serwera. `<gcConcurrent>` Element określa, czy środowisko uruchomieniowe wykonuje współbieżne lub w tle wyrzucanie elementów bezużytecznych, jeśli jest dostępne, lub czy wykonuje wyrzucanie elementów bezużytecznych na pierwszym planie.
+Przed .NET Framework 4, wyrzucanie elementów bezużytecznych stacji roboczych obsługiwało współbieżne wyrzucanie elementów bezużytecznych, które przeprowadzono odzyskiwanie pamięci w tle w osobnym wątku. W .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych zostało zastąpione przez w tle GC, co również wykonuje wyrzucanie elementów bezużytecznych w tle w osobnym wątku. Począwszy od .NET Framework 4,5, zbieranie w tle stało się dostępne w wyrzucaniu elementów bezużytecznych serwera. Element `<gcConcurrent>` określa, czy środowisko uruchomieniowe wykonuje współbieżne lub w tle wyrzucanie elementów bezużytecznych, jeśli jest dostępne, lub czy wykonuje wyrzucanie elementów bezużytecznych na pierwszym planie.
 
 ### <a name="to-disable-background-garbage-collection"></a>Aby wyłączyć wyrzucanie elementów bezużytecznych w tle
 
 > [!WARNING]
-> Począwszy od .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych jest zastępowane przez odzyskiwanie pamięci w tle. Terminy *współbieżne* i *tła* są używane zamiennie w dokumentacji .NET Framework. Aby wyłączyć wyrzucanie elementów bezużytecznych w tle, należy użyć `<gcConcurrent>` elementu, zgodnie z opisem w tym artykule.
+> Począwszy od .NET Framework 4 współbieżne wyrzucanie elementów bezużytecznych jest zastępowane przez odzyskiwanie pamięci w tle. Terminy *współbieżne* i *tła* są używane zamiennie w dokumentacji .NET Framework. Aby wyłączyć wyrzucanie elementów bezużytecznych w tle, użyj elementu `<gcConcurrent>`, zgodnie z opisem w tym artykule.
 
-Domyślnie środowisko uruchomieniowe używa współbieżnych lub w tle wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem opóźnień. Jeśli aplikacja wymaga dużej interakcji z użytkownikiem, Włącz współbieżne wyrzucanie elementów bezużytecznych, aby zminimalizować czas wstrzymania aplikacji w celu wykonania odzyskiwania pamięci. Jeśli ustawisz `enabled` atrybut `<gcConcurrent>` elementu na `false`, środowisko uruchomieniowe używa niewspółbieżnego wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem przepływności. Następujący plik konfiguracji wyłącza odzyskiwanie pamięci w tle.
+Domyślnie środowisko uruchomieniowe używa współbieżnych lub w tle wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem opóźnień. Jeśli aplikacja wymaga dużej interakcji z użytkownikiem, Włącz współbieżne wyrzucanie elementów bezużytecznych, aby zminimalizować czas wstrzymania aplikacji w celu wykonania odzyskiwania pamięci. Jeśli ustawisz atrybut `enabled` elementu `<gcConcurrent>` do `false`, środowisko uruchomieniowe użyje niewspółbieżnego wyrzucania elementów bezużytecznych, które jest zoptymalizowane pod kątem przepływności. Następujący plik konfiguracji wyłącza odzyskiwanie pamięci w tle.
 
 ```xml
 <configuration>
@@ -80,7 +78,7 @@ Domyślnie środowisko uruchomieniowe używa współbieżnych lub w tle wyrzucan
 </configuration>
 ```
 
- Jeśli w pliku konfiguracji `<gcConcurrentSetting>` komputera istnieje ustawienie, definiuje on wartość domyślną dla wszystkich .NET Framework aplikacji. Ustawienie pliku konfiguracji komputera zastępuje ustawienie pliku konfiguracji aplikacji.
+ Jeśli istnieje ustawienie `<gcConcurrentSetting>` w pliku konfiguracji komputera, definiuje wartość domyślną dla wszystkich aplikacji .NET Framework. Ustawienie pliku konfiguracji komputera zastępuje ustawienie pliku konfiguracji aplikacji.
 
  Aby uzyskać więcej informacji na temat współbieżnych i wyrzucania elementów bezużytecznych w tle, zobacz sekcję [współbieżne odzyskiwanie](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection) pamięci w artykule [podstawy odzyskiwania pamięci](../../../../standard/garbage-collection/fundamentals.md) .
 

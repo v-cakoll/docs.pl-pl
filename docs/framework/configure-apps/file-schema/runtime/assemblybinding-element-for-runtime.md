@@ -8,21 +8,19 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 515261fe39676292ce50858f71b7da92287945d1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252813"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118133"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<zestawbinding > element dla \<> środowiska uruchomieniowego
+# <a name="assemblybinding-element-for-runtime"></a>\<element > zestawubinding dla środowiska uruchomieniowego \<
 Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> środowiska uruchomieniowego**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<> zestawubinding**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<zestawubinding >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,16 +37,16 @@ Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML wymaganą dla powiązania zestawu. Użyj ciągu "urn: schematys-Microsoft-com: ASM. v1" jako wartości.|  
-|**Zignorowan**|Określa wersję środowiska uruchomieniowego, do której odnosi się przekierowanie zestawu .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework, aby wskazać, której wersji dotyczy. Jeśli nie **appliesTo** atrybut jest określony, **\<assemblyBinding>** element ma zastosowanie do wszystkich wersji programu .NET Framework. Atrybut **AppliesTo** został wprowadzony w .NET Framework w wersji 1,1; jest on ignorowany przez .NET Framework w wersji 1,0. Oznacza to, że wszystkie **\<assemblyBinding>** elementy są stosowane podczas korzystania z wersji programu .NET Framework 1.0, nawet jeśli **appliesTo** atrybut jest określony.|  
+|**'xmlns**|Atrybut wymagany.<br /><br /> Określa przestrzeń nazw XML wymaganą dla powiązania zestawu. Użyj ciągu "urn: schematys-Microsoft-com: ASM. v1" jako wartości.|  
+|**Zignorowan**|Określa wersję środowiska uruchomieniowego, do której odnosi się przekierowanie zestawu .NET Framework. Ten opcjonalny atrybut używa numeru wersji .NET Framework, aby wskazać, której wersji dotyczy. Jeśli nie określono atrybutu **AppliesTo** , element **\<assemblyBinding >** ma zastosowanie do wszystkich wersji .NET Framework. Atrybut **AppliesTo** został wprowadzony w .NET Framework w wersji 1,1; jest on ignorowany przez .NET Framework w wersji 1,0. Oznacza to, że wszystkie elementy **\<zestawubinding >** są stosowane w przypadku używania .NET Framework wersji 1,0, nawet jeśli określono atrybut **AppliesTo** .|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> dependentAssembly](dependentassembly-element.md)|Hermetyzuje zasady powiązań i lokalizację zestawu. Użyj jednego  **\<elementu dependentAssembly >** znacznika dla każdego zestawu.|  
+|[\<dependentAssembly >](dependentassembly-element.md)|Hermetyzuje zasady powiązań i lokalizację zestawu. Użyj jednego **\<dependentAssembly >** tag dla każdego zestawu.|  
 |[\<> sondowania](probing-element.md)|Określa podkatalogi przeszukiwania środowiska uruchomieniowego języka wspólnego podczas ładowania zestawów.|  
-|[\<publisherPolicy>](publisherpolicy-element.md)|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.|  
+|[\<publisherPolicy Apply >](publisherpolicy-element.md)|Określa, czy środowisko uruchomieniowe stosuje zasady wydawcy.|  
 |[\<qualifyAssembly >](qualifyassembly-element.md)|Określa pełną nazwę zestawu, który ma być dynamicznie ładowany, gdy zostanie użyta nazwa częściowa.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  

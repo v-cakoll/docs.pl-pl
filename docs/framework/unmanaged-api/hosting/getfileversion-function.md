@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1f5508e9ee41d8670b43d5b219846237e11fc8f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778143"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136336"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion — Funkcja
-Pobiera wspólnego języka wspólnego (CLR) informacje o wersji określonego pliku, przy użyciu określonego bufora.  
+Pobiera informacje o wersji środowiska uruchomieniowego języka wspólnego (CLR) określonego pliku przy użyciu określonego buforu.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,23 +39,23 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>Parametry  
  `szFilename`  
- [in] Ścieżka pliku do badania.  
+ podczas Ścieżka pliku, który ma zostać zbadany.  
   
  `szBuffer`  
- [out w] Bufor przydzielony, aby uzyskać informacje o wersji, która jest zwracana.  
+ [in. out] Bufor przydzielony dla zwracanych informacji o wersji.  
   
  `cchBuffer`  
- [in] Rozmiar w szerokich znaków z `szBuffer`.  
+ podczas Rozmiar, w postaci znaków dwubajtowych, `szBuffer`.  
   
  `dwLength`  
- [out] Rozmiar w bajtach zwracanego `szBuffer`.  
+ określoną Rozmiar w bajtach zwracanej `szBuffer`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

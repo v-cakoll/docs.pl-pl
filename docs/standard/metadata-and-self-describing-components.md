@@ -15,14 +15,12 @@ helpviewer_keywords:
 - PE files, metadata
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a35f4ffa88211d914dbf84c87da49fafa89a929
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353897"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121932"
 ---
 # <a name="metadata-and-self-describing-components"></a>Składniki samoopisujące się i metadane
 
@@ -86,7 +84,7 @@ Token metadanych jest czterobajtową liczbą. Pierwszy bajt określa tabelę met
 
 `0x06000004`
 
-Górny bajt (`0x06`) wskazuje, że jest to token **MethodDef** . Trzy mniejsze bajty (`000004`) mówią, że środowisko uruchomieniowe języka wspólnego zapoznaje się z czwartym wierszem tabeli **MethodDef** , aby uzyskać informacje opisujące tę definicję metody.
+Górny bajt (`0x06`) wskazuje, że jest to token **MethodDef** . W przypadku środowiska uruchomieniowego języka wspólnego w czwartym wierszu tabeli **MethodDef** są wyświetlane mniejsze trzy bajty (`000004`), które opisują tę definicję metody.
 
 ### <a name="metadata-within-a-pe-file"></a>Metadane w pliku PE
 
@@ -100,7 +98,7 @@ Gdy program jest kompilowany dla środowiska uruchomieniowego języka wspólnego
 
 ## <a name="run-time-use-of-metadata"></a>Użycie metadanych w czasie wykonywania
 
-Aby lepiej zrozumieć metadane i jego rolę w środowisku uruchomieniowym języka wspólnego, może być przydatne utworzenie prostego programu i zilustrowanie, jak metadane wpływają na jego żywotność. Poniższy przykład kodu przedstawia dwie metody wewnątrz klasy o nazwie `MyApp`. Metoda `Main` jest punktem wejścia programu, a metoda `Add` po prostu zwraca sumę dwóch argumentów liczb całkowitych.
+Aby lepiej zrozumieć metadane i jego rolę w środowisku uruchomieniowym języka wspólnego, może być przydatne utworzenie prostego programu i zilustrowanie, jak metadane wpływają na jego żywotność. Poniższy przykład kodu przedstawia dwie metody wewnątrz klasy o nazwie `MyApp`. `Main` Metoda jest punktem wejścia programu, a metoda `Add` po prostu zwraca sumę dwóch argumentów liczb całkowitych.
 
 ```vb
 Public Class MyApp
@@ -155,15 +153,15 @@ IL_000c:  ldloc.1
 IL_000d:  call int32 ConsoleApplication.MyApp::Add(int32,int32) /* 06000003 */
 ```
 
-Kompilator JIT odczytuje MSIL dla całej metody, analizuje ją dokładnie i generuje wydajne instrukcje natywne dla metody. W `IL_000d` występuje token metadanych dla metody `Add` (`/*` `06000003 */`), a środowisko uruchomieniowe użyje tokenu do zapoznania się z trzecim wierszem tabeli **MethodDef** .
+Kompilator JIT odczytuje MSIL dla całej metody, analizuje ją dokładnie i generuje wydajne instrukcje natywne dla metody. W `IL_000d`napotkano token metadanych dla metody `Add` (`/*` `06000003 */`), a środowisko uruchomieniowe użyje tokenu do zapoznania się z trzecim wierszem tabeli **MethodDef** .
 
 W poniższej tabeli przedstawiono część tabeli **MethodDef** , do której odwołuje się token metadanych opisującą metodę `Add`. Chociaż inne tabele metadanych istnieją w tym zestawie i mają własne unikatowe wartości, omawiana jest tylko ta tabela.
 
-|Wiersz|Względny adres wirtualny (RVA)|ImplFlags|flagi|Name<br /><br /> (Punkty do sterty ciągu).|Podpis (punkty do sterty obiektów BLOB).|
+|wiersza|Względny adres wirtualny (RVA)|ImplFlags|Flagi|Nazwa<br /><br /> (Punkty do sterty ciągu).|Podpis (punkty do sterty obiektów BLOB).|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Zarządzanych|Public<br /><br /> ReuseSlot<br /><br /> Jako SpecialName<br /><br /> RTSpecialName<br /><br /> . ctor|. ctor (Konstruktor)||
-|2|0x00002058|IL<br /><br /> Zarządzanych|Public<br /><br /> Static<br /><br /> ReuseSlot|główną|String|
-|3|0x0000208c|IL<br /><br /> Zarządzanych|Public<br /><br /> Static<br /><br /> ReuseSlot|Add|int, int, int|
+|1|0x00002050|II<br /><br /> zarządzanych|Public<br /><br /> ReuseSlot<br /><br /> Jako SpecialName<br /><br /> Oznaczone<br /><br /> . ctor|. ctor (Konstruktor)||
+|2|0x00002058|II<br /><br /> zarządzanych|Public<br /><br /> Static<br /><br /> ReuseSlot|Główną|String|
+|3|0x0000208c|II<br /><br /> zarządzanych|Public<br /><br /> Static<br /><br /> ReuseSlot|Dodaj|int, int, int|
 
 Każda kolumna tabeli zawiera ważne informacje o kodzie. Kolumna **RVA** umożliwia środowisko uruchomieniowe Obliczanie adresu pamięci początkowej, który definiuje tę metodę. Kolumny **ImplFlags** i **flag** zawierają masek bitowych opisujące metodę (na przykład czy metoda jest publiczna lub prywatna). Kolumna **name** indeksuje nazwę metody z sterty ciągu. Kolumna **Signature** indeksuje definicję sygnatury metody w stercie obiektów BLOB.
 

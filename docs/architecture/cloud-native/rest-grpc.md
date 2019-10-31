@@ -3,12 +3,12 @@ title: REST i gRPC
 description: Dowiedz się więcej na temat gRPC, jego roli w aplikacjach natywnych w chmurze i jak różni się od protokołu HTTP REST
 author: robvet
 ms.date: 09/08/2019
-ms.openlocfilehash: ba15bb1c5ee7c2cd48d75867512539190c80b0e5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4baccccf12bcd76366a4a934bb39a41d76ac11e0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094540"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191995"
 ---
 # <a name="rest-and-grpc"></a>REST i gRPC
 
@@ -52,7 +52,7 @@ Rysunek 4-21 przedstawia strukturę usługi gRPC w programie Visual Studio 2019.
 
 **Rysunek 4-21**. projekt gRPC w programie Visual Studio 2019
 
-## <a name="gprc-usage"></a>gPRC użycie
+## <a name="grpc-usage"></a>gRPC użycie
 
 gRPC są odpowiednie dla następujących scenariuszy:
 
@@ -73,4 +73,4 @@ Patrząc na przyszłość, gRPC może odgrywać główną rolę w dethroning dom
 
 >[!div class="step-by-step"]
 >[Poprzedni](service-to-service-communication.md)
->[Następny](service-mesh-communication-infrastructure.md)
+>[dalej](service-mesh-communication-infrastructure.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFrameEnum, interfejs
+title: ICorDebugFrameEnum — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFrameEnum
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9ea398c32762be31f93002533b15bcf3851b870
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910243"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73090540"
 ---
-# <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum, interfejs
+# <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum — Interfejs
 
 Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.  
   
@@ -31,7 +29,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Pobiera określoną liczbę `ICorDebugFrame` wystąpień z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugFrame` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -39,13 +37,13 @@ Implementuje metody ICorDebugEnum i wylicza tablice ICorDebugFrame.
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugTypeEnum, interfejs
+title: ICorDebugTypeEnum — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugTypeEnum
@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b81230ee901510b2859b45de76c6dcfa6cb28e58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8fa4f2fbe576083658a934e30177bb7a48be06d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968186"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110232"
 ---
-# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum, interfejs
+# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum — Interfejs
 Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugType".  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Pobiera określoną liczbę `ICorDebugType` wystąpień z wyliczenia, rozpoczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|Pobiera określoną liczbę wystąpień `ICorDebugType` z wyliczenia, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -38,13 +36,13 @@ Implementuje metody "ICorDebugEnum" i wylicza tablice "ICorDebugType".
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

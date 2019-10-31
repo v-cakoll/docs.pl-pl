@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 356f7ec9c50ce511883cbf0f5fbcb729493c92af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737572"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73088489"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement — Metoda
-Pobiera wartość elementu danej tablicy.  
+Pobiera wartość danego elementu tablicy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,23 +38,23 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>Parametry  
  `cdim`  
- [in] Liczba wymiarów to `ICorDebugArrayValue` obiektu.  
+ podczas Liczba wymiarów tego obiektu `ICorDebugArrayValue`.  
   
- Ta wartość jest również rozmiar `indices` tablicy, ponieważ jego rozmiar jest równa liczbie wymiarów `ICorDebugArrayValue` obiektu.  
+ Ta wartość jest również rozmiarem tablicy `indices`, ponieważ jej rozmiar jest równy liczbie wymiarów obiektu `ICorDebugArrayValue`.  
   
  `indices`  
- [in] Tablica wartości indeksu, z których każdy określa położenie w obrębie wymiaru `ICorDebugArrayValue` obiektu.  
+ podczas Tablica wartości indeksu, z których każdy określa pozycję w wymiarze obiektu `ICorDebugArrayValue`.  
   
- Ta wartość nie może być zerowy.  
+ Ta wartość nie może być równa null.  
   
  `ppValue`  
- [out] Wskaźnik do adresu obiektu ICorDebugValue, która reprezentuje wartość określonego elementu.  
+ określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość określonego elementu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

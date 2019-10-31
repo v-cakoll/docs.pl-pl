@@ -11,35 +11,33 @@ helpviewer_keywords:
 - UTC times, finding local system time zones
 - time zones [.NET Framework], UTC
 ms.assetid: 3f63b1bc-9a4b-4bde-84ea-ab028a80d3e1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a65798c46b01bb7a702559d685590ecf7a6f2793
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e7e3a7a11c1d262f7fcb63e6e12efbe5edf745f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61819759"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122325"
 ---
 # <a name="finding-the-time-zones-defined-on-a-local-system"></a>Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym
 
-<xref:System.TimeZoneInfo> Klasy nie ujawnia on publicznego konstruktora. W rezultacie `new` — słowo kluczowe nie może służyć do tworzenia nowego <xref:System.TimeZoneInfo> obiektu. Zamiast tego <xref:System.TimeZoneInfo> obiekty są tworzone przez pobranie informacji o wstępnie zdefiniowane strefy czasowe z rejestru lub tworząc niestandardowa strefa czasowa. W tym temacie omówiono tworzenie wystąpienia strefy czasowej z danych przechowywanych w rejestrze. Ponadto `static` (`shared` w języku Visual Basic) właściwości <xref:System.TimeZoneInfo> klasy zapewnianie dostępu do uniwersalnego czasu koordynowanego (UTC) i lokalnej strefy czasowej.
+Klasa <xref:System.TimeZoneInfo> nie ujawnia konstruktora publicznego. W związku z tym nie można użyć słowa kluczowego `new` do utworzenia nowego obiektu <xref:System.TimeZoneInfo>. Zamiast tego obiekty <xref:System.TimeZoneInfo> są tworzone przez pobranie informacji o wstępnie zdefiniowanych strefach czasowych z rejestru lub przez utworzenie niestandardowej strefy czasowej. W tym temacie omówiono tworzenie wystąpienia strefy czasowej na podstawie danych przechowywanych w rejestrze. Ponadto `static` (`shared` w Visual Basic) właściwości klasy <xref:System.TimeZoneInfo> zapewniają dostęp do uniwersalnego czasu koordynowanego (UTC) i lokalnej strefy czasowej.
 
 > [!NOTE]
-> Dla stref czasowych, które nie są zdefiniowane w rejestrze, można utworzyć niestandardowy stref czasowych poprzez wywołanie przeciążenia <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> metody. Tworzenie niestandardowej strefy czasowej jest omówiona w [jak: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [jak: Tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) tematów. Ponadto można utworzyć wystąpienie <xref:System.TimeZoneInfo> obiektu, przywracając go z ciągu Zserializowany za pomocą <xref:System.TimeZoneInfo.FromSerializedString%2A> metody. Serializacja i deserializacja <xref:System.TimeZoneInfo> obiekt został omówiony w [jak: Zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [jak: Przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) tematów.
+> W przypadku stref czasowych, które nie są zdefiniowane w rejestrze, można utworzyć niestandardowe strefy czasowe, wywołując przeciążenia metody <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>. Tworzenie niestandardowej strefy czasowej jest omówione w temacie [How to: Create Time Zones bez reguł dostosowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [instrukcje: Tworzenie stref czasowych przy użyciu reguł korekty](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md) . Ponadto można utworzyć wystąpienie obiektu <xref:System.TimeZoneInfo>, przywracając go z serializowanego ciągu za pomocą metody <xref:System.TimeZoneInfo.FromSerializedString%2A>. Serializacja i deserializacja obiektu <xref:System.TimeZoneInfo> została omówiona w temacie [How to: Save Time Zones to a Embedded Resource](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [How to: Restore Zone Time from a Embedded Resource](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md) Reports.
 
 ## <a name="accessing-individual-time-zones"></a>Uzyskiwanie dostępu do poszczególnych stref czasowych
 
-<xref:System.TimeZoneInfo> Klasa udostępnia dwa obiekty wstępnie zdefiniowane strefy czasowej, które reprezentują czas UTC i lokalnej strefy czasowej. Są one dostępne z <xref:System.TimeZoneInfo.Utc%2A> i <xref:System.TimeZoneInfo.Local%2A> właściwości, odpowiednio. Aby uzyskać instrukcje dotyczące uzyskiwania dostępu do czasu UTC, czy strefy czasu lokalnego, zobacz [jak: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md).
+Klasa <xref:System.TimeZoneInfo> zawiera dwa wstępnie zdefiniowane obiekty strefy czasowej, które reprezentują czas UTC i lokalną strefę czasową. Są one dostępne odpowiednio na podstawie właściwości <xref:System.TimeZoneInfo.Utc%2A> i <xref:System.TimeZoneInfo.Local%2A>. Aby uzyskać instrukcje dotyczące uzyskiwania dostępu do stref czasowych UTC lub lokalnym, zobacz [jak to zrobić: dostęp do wstępnie zdefiniowanych obiektów czasu UTC i lokalnej strefy czasowej](../../../docs/standard/datetime/access-utc-and-local.md).
 
-Można również utworzyć wystąpienie <xref:System.TimeZoneInfo> obiekt, który reprezentuje wszystkie strefy czasowej, zdefiniowana w rejestrze. Aby uzyskać instrukcje dotyczące tworzenia wystąpienia obiektu określonej strefy czasowej, zobacz [jak: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
+Można również utworzyć wystąpienie <xref:System.TimeZoneInfo> obiektu, który reprezentuje strefę czasową zdefiniowaną w rejestrze. Aby uzyskać instrukcje dotyczące tworzenia wystąpienia określonego obiektu strefy czasowej, zobacz [How to: 'Utwórz wystąpienie obiektu TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md).
 
-## <a name="time-zone-identifiers"></a>Identyfikatory stref czasowych
+## <a name="time-zone-identifiers"></a>Identyfikatory strefy czasowej
 
-Identyfikator strefy czasowej to pole klucza, który unikatowo identyfikuje strefy czasowej. Mimo że większość klawiszy względnie krótkich, identyfikator strefy czasowej jest stosunkowo długo. W większości przypadków wartość odpowiada <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType> właściwość, która zostanie użyta do podania nazwy strefy czasowej (czas standardowy). Istnieją jednak wyjątki. Najlepszym sposobem, aby upewnić się, że możesz podać prawidłowy identyfikator jest wykazywanie stref czasowych dostępną w Twoim systemie i należy pamiętać, ich skojarzone identyfikatorów.
+Identyfikator strefy czasowej to pole klucza, które jednoznacznie identyfikuje strefę czasową. Chociaż większość kluczy jest stosunkowo krótka, Identyfikator strefy czasowej jest bardzo długi. W większości przypadków jego wartość odpowiada właściwości <xref:System.TimeZoneInfo.StandardName%2A?displayProperty=nameWithType>, która jest używana do podania nazwy czasu standardowego strefy czasowej. Istnieją jednak wyjątki. Najlepszym sposobem, aby upewnić się, że podano prawidłowy identyfikator, jest Wyliczenie stref czasowych dostępnych w systemie i zanotować ich skojarzone identyfikatory.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
-- [Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów stref UTC i czasem lokalnym](../../../docs/standard/datetime/access-utc-and-local.md)
+- [Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC](../../../docs/standard/datetime/access-utc-and-local.md)
 - [Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
-- [Konwertowanie godzin między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md)
+- [Konwertowanie czasów między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md)

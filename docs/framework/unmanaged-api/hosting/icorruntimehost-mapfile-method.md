@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45ae0502-0a31-4342-b7e3-f36e1cf738f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bcf1b49f0576f5dbd73c001f8edff7a9ab29af22
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780087"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139504"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile — Metoda
 Mapuje określony plik do pamięci. Ta metoda jest przestarzała.  
@@ -38,19 +36,19 @@ HRESULT MapFile(
   
 ## <a name="parameters"></a>Parametry  
  `hFile`  
- [in] Uchwyt pliku, które mają być mapowane.  
+ podczas Dojście pliku do zmapowania.  
   
  `hMapAddress`  
- [out] Początkowy adres pamięci, od którego należy rozpocząć mapowanie pliku.  
+ określoną Początkowy adres pamięci, pod którym ma zostać rozpoczęte mapowanie pliku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersja programu .NET framework:** 1.0, 1.1  
+ **Wersja .NET Framework:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

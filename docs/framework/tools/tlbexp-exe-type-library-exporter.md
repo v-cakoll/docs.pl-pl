@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 84ae47b984d6a1a207e6678e30991073ba02a438
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044006"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104343"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
@@ -39,14 +37,14 @@ tlbexp assemblyName [options]
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/asmpath:** *katalog*|Określa lokalizację do przeszukania pod kątem zestawów. W przypadku użycia tej opcji należy jawnie określić lokalizacje do przeszukiwania pod kątem zestawów, do których się odwoływano, łącznie z bieżącym katalogiem.<br /><br /> W przypadku korzystania z opcji **asmpath** Eksporter biblioteki typów nie będzie szukał zestawu w globalnej pamięci podręcznej zestawów (GAC).|  
-|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/Names:** *Nazwa pliku*|Określa wielkość liter nazw w bibliotece typów. Argument *filename* jest plikiem tekstowym. Każdy wiersz w pliku określa wielkość liter jednej nazwy w bibliotece typów.|  
+|**/Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/Names:** *filename*|Określa wielkość liter nazw w bibliotece typów. Argument *filename* jest plikiem tekstowym. Każdy wiersz w pliku określa wielkość liter jednej nazwy w bibliotece typów.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/oldnames**|Wymusza na Tlbexp.exe eksport uzupełnionych nazw typu, gdy występuje konflikt nazw typu. Należy zauważyć, że było to zachowanie domyślne w wersjach wcześniejszych niż .NET Framework w wersji 2.0.|  
 |**/out:** *plik*|Określa nazwę pliku biblioteki typów do wygenerowania. Jeżeli pominięto tę opcję, Tlbexp.exe generuje bibliotekę typów o takiej samej nazwie co zestaw (rzeczywista nazwa zestawu, która niekoniecznie jest taka sama jak nazwa pliku zawierającego zestaw) i rozszerzenie .tlb.|  
 |**/Silence:** `warningnumber`|Pomija wyświetlanie określonego ostrzeżenia. Tej opcji nie można używać z **/Silent**.|  
 |**/silent**|Pomija wyświetlanie komunikatów o sukcesie. Tej opcji nie można używać z **/Silence**.|  
-|**/tlbreference:** *typelibraryname*|Wymusza na Tlbexp.exe jawne rozwiązanie odwołań do biblioteki typów bez konsultacji z rejestrem. Na przykład jeśli zestaw B odwołuje się do zestawu A, można użyć tej opcji, aby dostarczyć jawne odwołanie do biblioteki typów, zamiast polegać na bibliotece typów określonej w rejestrze. Tlbexp.exe wykonuje sprawdzenie wersji, aby zapewnić zgodność wersji biblioteki typów z wersją zestawu; w przeciwnym wypadku wygeneruje błąd.<br /><br /> Należy zauważyć, że opcja **tlbreference** nadal sprawdza rejestr w przypadkach, gdy <xref:System.Runtime.InteropServices.ComImportAttribute> atrybut jest stosowany do interfejsu, który jest następnie zaimplementowany przez inny typ.|  
+|**/tlbreference:** *typelibraryname*|Wymusza na Tlbexp.exe jawne rozwiązanie odwołań do biblioteki typów bez konsultacji z rejestrem. Na przykład jeśli zestaw B odwołuje się do zestawu A, można użyć tej opcji, aby dostarczyć jawne odwołanie do biblioteki typów, zamiast polegać na bibliotece typów określonej w rejestrze. Tlbexp.exe wykonuje sprawdzenie wersji, aby zapewnić zgodność wersji biblioteki typów z wersją zestawu; w przeciwnym wypadku wygeneruje błąd.<br /><br /> Należy zauważyć, że opcja **tlbreference** nadal sprawdza rejestr w przypadkach, gdy atrybut <xref:System.Runtime.InteropServices.ComImportAttribute> jest stosowany do interfejsu, który jest następnie zaimplementowany przez inny typ.|  
 |**/tlbrefpath:** *ścieżka*|W pełni kwalifikowana ścieżka do biblioteki typów, do którego się odwoływano.|  
 |**/win32**|Podczas kompilowania na komputerze 64-bitowym ta opcja określa, że Tlbexp.exe generuje biblioteki typów 32-bitowych.|  
 |**/Win64**|W przypadku kompilowania na komputerze 32-bitowym, ta opcja określa, że Tlbexp. exe generuje bibliotekę typów 64-bitowych.|  
@@ -70,9 +68,9 @@ tlbexp assemblyName [options]
   
  Tlbexp.exe generuje bibliotekę typów, ale nie rejestruje jej. Jest to w przeciwieństwie do [narzędzia rejestracji zestawu (Regasm. exe)](regasm-exe-assembly-registration-tool.md), które generuje i rejestruje bibliotekę typów. Aby wygenerować i zarejestrować bibliotekę typów w modelu COM, należy użyć Regasm.exe.  
   
- Jeśli nie określisz `/win32` opcji lub `/win64` , program Tlbexp. exe generuje bibliotekę typów 32-bitową lub 64-bitową odpowiadającą typowi komputera, na którym wykonujesz kompilację (komputer 32-bitowy lub 64-bitowy). W celu wykonania wielu kompilacji można użyć `/win64` opcji na komputerze 32-bitowym, aby wygenerować bibliotekę typów 64-bitowej i można `/win32` użyć opcji na komputerze 64-bitowym, aby wygenerować bibliotekę typów 32-bitowego. W 32-bitowych bibliotekach <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> typów wartość jest ustawiana na. <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32> W 64-bitowych bibliotekach <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> typów wartość jest ustawiana na. <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64> Wszystkie przekształcenia typu danych (na przykład typy danych o rozmiarze wskaźnika, takie jak `IntPtr` i `UIntPtr`) są odpowiednio konwertowane.  
+ Jeśli nie określisz opcji `/win32` ani `/win64`, Tlbexp. exe generuje bibliotekę typów 32-bitową lub 64-bitową odpowiadającą typowi komputera, na którym wykonujesz kompilację (komputer 32-bitowy lub 64-bitowy). W celu wykonania wielu kompilacji można użyć opcji `/win64` na komputerze 32-bitowym, aby wygenerować bibliotekę typów 64-bitowej i można użyć opcji `/win32` na komputerze 64-bitowym, aby wygenerować bibliotekę typów 32-bitowego. W 32-bitowych bibliotekach typów wartość <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> jest ustawiona na <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN32>. W 64-bitowych bibliotekach typów wartość <xref:System.Runtime.InteropServices.ComTypes.SYSKIND> jest ustawiona na <xref:System.Runtime.InteropServices.ComTypes.SYSKIND.SYS_WIN64>. Wszystkie przekształcenia typu danych (na przykład typy danych o rozmiarze wskaźnika, takie jak `IntPtr` i `UIntPtr`) są odpowiednio konwertowane.  
   
- Jeśli <xref:System.Runtime.InteropServices.MarshalAsAttribute> używasz atrybutu, aby `VT_UNKOWN` <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> określić wartość lub `VT_DISPATCH`, Tlbexp. exe ignoruje wszelkie kolejne użycie <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> pola. Na przykład w następujących podpisach:  
+ Jeśli używasz atrybutu <xref:System.Runtime.InteropServices.MarshalAsAttribute>, aby określić <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType> wartość `VT_UNKOWN` lub `VT_DISPATCH`, Tlbexp. exe ignoruje wszelkie późniejsze użycie pola <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>. Na przykład w następujących podpisach:  
   
 ```csharp
 [return:MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VarEnum.VT_UNKNOWN, SafeArrayUserDefinedSubType=typeof(ConsoleKeyInfo))] public Array StructUnkSafe(){return null;}  
@@ -88,11 +86,11 @@ HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);
 HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);  
 ```  
   
- Należy zauważyć, że Tlbexp. exe <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> ignoruje pole.  
+ Należy pamiętać, że Tlbexp. exe ignoruje pole <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType>.  
   
  Ponieważ biblioteki typów nie mogą pomieścić wszystkich informacji znajdujących się w zestawach, Tlbexp.exe może odrzucić niektóre dane podczas procesu eksportu. Aby uzyskać informacje na temat procesu transformacji i identyfikacji źródła informacji emitowanych do biblioteki typów, zobacz [Podsumowanie konwersji zestawu na bibliotekę typów](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xk1120c3(v=vs.100)).  
   
- Należy zauważyć, że Eksporter biblioteki typów eksportuje metody <xref:System.TypedReference> , które `VARIANT`mają parametry AS, <xref:System.TypedReference> nawet jeśli obiekt nie ma znaczenia w kodzie niezarządzanym. Podczas eksportowania metod, które mają <xref:System.TypedReference> parametry, Eksporter biblioteki typów nie będzie generował ostrzeżenia ani błędu i niezarządzany kod, który używa biblioteki typów, nie będzie działać prawidłowo.  
+ Należy zauważyć, że Eksporter biblioteki typów eksportuje metody, które mają <xref:System.TypedReference> parametry jako `VARIANT`, mimo że obiekt <xref:System.TypedReference> nie ma znaczenia w kodzie niezarządzanym. Podczas eksportowania metod, które mają <xref:System.TypedReference> parametry, Eksporter biblioteki typów nie będzie generował ostrzeżenia ani błędu i niezarządzany kod, który używa biblioteki typów, nie będzie działać prawidłowo.  
   
  Eksporter biblioteki typów jest obsługiwany w systemie Microsoft Windows 2000 i nowszych.  
   
@@ -111,19 +109,19 @@ tlbexp myTest.dll /out:clipper.tlb
   
  Poniższy przykład ilustruje użycie Tlbexp.exe do eksportowania biblioteki typów z zestawu, który odwołuje się do zestawów importowanych przy użyciu Tlbimp.exe.  
   
- Najpierw należy użyć Tlbimp. exe do zaimportowania `myLib.tlb` biblioteki typów i zapisania `myLib.dll`jej jako.  
+ Najpierw należy użyć programu Tlbimp. exe do zaimportowania biblioteki typów `myLib.tlb` i zapisania jej jako `myLib.dll`.  
   
 ```console  
 tlbimp myLib.tlb /out:myLib.dll  
 ```  
   
- Następujące polecenie używa C# kompilatora do kompilowania `Sample.dll,` odwołań `myLib.dll` utworzonych w poprzednim przykładzie.  
+ Następujące polecenie używa C# kompilatora do kompilowania `Sample.dll,`, które odwołują się do `myLib.dll` utworzonych w poprzednim przykładzie.  
   
 ```console  
 CSC Sample.cs /reference:myLib.dll /out:Sample.dll  
 ```  
   
- Następujące polecenie generuje bibliotekę typów dla `Sample.dll` odwołań. `myLib.dll`  
+ Następujące polecenie generuje bibliotekę typów dla `Sample.dll` odwołujących się do `myLib.dll`.  
   
 ```console  
 tlbexp Sample.dll  

@@ -9,29 +9,27 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960089"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138093"
 ---
 # <a name="destroying-threads"></a>Niszczenie wątków
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> Metoda służy do trwałego zatrzymania wątku zarządzanego. Podczas wywoływania <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego <xref:System.Threading.ThreadAbortException> generuje w wątku docelowym, który wątek docelowy może przechwycić. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+Metoda <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> służy do trwałego zatrzymania wątku zarządzanego. Gdy wywołasz <xref:System.Threading.Thread.Abort%2A>, środowisko uruchomieniowe języka wspólnego generuje <xref:System.Threading.ThreadAbortException> w wątku docelowym, który może zostać przechwycony przez wątek docelowy. Aby uzyskać więcej informacji, zobacz <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
-> Jeśli wątek wykonuje kod niezarządzany, gdy <xref:System.Threading.Thread.Abort%2A> Metoda jest wywoływana, środowisko uruchomieniowe go <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>oznaczy. Wyjątek jest zgłaszany, gdy wątek zwraca kod zarządzany.  
+> Jeśli wątek wykonuje kod niezarządzany, gdy jego Metoda <xref:System.Threading.Thread.Abort%2A> jest wywoływana, środowisko uruchomieniowe go oznaczy <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. Wyjątek jest zgłaszany, gdy wątek zwraca kod zarządzany.  
   
  Po przerwaniu wątku nie można go ponownie uruchomić.  
   
- Metoda nie powoduje natychmiastowego przerwania wątku, ponieważ wątek docelowy może <xref:System.Threading.ThreadAbortException> przechwycić i wykonać dowolne `finally` ilości kodu w bloku. <xref:System.Threading.Thread.Abort%2A> Możesz wywołać <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> , jeśli musisz poczekać na zakończenie wątku. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>jest wywołaniem blokującym, które nie zwraca, dopóki wątek nie zostanie faktycznie zatrzymany lub upłynie opcjonalny interwał limitu czasu. Przerwany wątek może wywołać <xref:System.Threading.Thread.ResetAbort%2A> metodę lub wykonać nieograniczone przetwarzanie `finally` w bloku, dlatego jeśli nie określisz limitu czasu, oczekiwania nie zostanie zakończone.  
+ Metoda <xref:System.Threading.Thread.Abort%2A> nie powoduje natychmiastowego przerwania wątku, ponieważ wątek docelowy może przechwycić <xref:System.Threading.ThreadAbortException> i wykonać dowolne ilości kodu w bloku `finally`. Możesz wywołać <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, jeśli chcesz poczekać na zakończenie wątku. <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> jest wywołaniem blokującym, które nie zwraca, dopóki wątek nie zostanie faktycznie zatrzymany lub upłynie opcjonalny interwał limitu czasu. Przerwany wątek może wywołać metodę <xref:System.Threading.Thread.ResetAbort%2A> lub wykonać nieograniczone przetwarzanie w bloku `finally`, dlatego jeśli nie określisz limitu czasu, oczekiwania nie zostanie zakończone.  
   
- Wątki, które oczekują na wywołanie <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> metody mogą zostać przerwane przez inne wątki, które wywołują. <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>  
+ Wątki, które oczekują na wywołanie metody <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> mogą zostać przerwane przez inne wątki, które wywołują <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>.  
   
 ## <a name="handling-threadabortexception"></a>Obsługa ThreadAbortException  
- Jeśli oczekujesz, że wątek zostanie przerwany, w wyniku wywołania <xref:System.Threading.Thread.Abort%2A> z własnego kodu lub w wyniku rozładowania domeny aplikacji, w której działa wątek (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> używany <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> do kończenia wątków), wątek musi obsłużyć i wykonać wszelkie końcowe przetwarzanie `finally` w klauzuli, jak pokazano w poniższym kodzie. <xref:System.Threading.ThreadAbortException>  
+ Jeśli oczekujesz, że wątek zostanie przerwany, w wyniku wywołania <xref:System.Threading.Thread.Abort%2A> z własnego kodu lub w wyniku rozładowania domeny aplikacji, w której jest uruchomiony wątek (<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> używa <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> do kończenia wątków) , wątek musi obsłużyć <xref:System.Threading.ThreadAbortException> i wykonać wszelkie końcowe przetwarzanie w klauzuli `finally`, jak pokazano w poniższym kodzie.  
   
 ```vb  
 Try  
@@ -62,9 +60,9 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- Kod czyszczący musi znajdować `catch` się w klauzuli `finally` lub klauzuli, ponieważ <xref:System.Threading.ThreadAbortException> jest ponownie zgłaszany `finally` przez system na końcu klauzuli lub na końcu `catch` klauzuli, jeśli nie `finally` ma klauzuli.  
+ Kod czyszczący musi znajdować się w klauzuli `catch` lub klauzuli `finally`, ponieważ <xref:System.Threading.ThreadAbortException> jest ponownie zgłaszany przez system na końcu klauzuli `finally` lub na końcu klauzuli `catch`, jeśli nie ma klauzuli `finally`.  
   
- Można uniemożliwić ponowne zgłoszenie wyjątku przez system, wywołując <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> metodę. Jednak należy to zrobić tylko wtedy, <xref:System.Threading.ThreadAbortException>gdy własny kod spowodował.  
+ Można uniemożliwić ponowne zgłoszenie wyjątku przez system, wywołując metodę <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType>. Jednak należy to zrobić tylko wtedy, gdy własny kod spowodował <xref:System.Threading.ThreadAbortException>.  
   
 ## <a name="see-also"></a>Zobacz także
 

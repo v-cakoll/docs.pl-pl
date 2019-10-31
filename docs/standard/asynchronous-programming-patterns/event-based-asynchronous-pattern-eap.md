@@ -7,63 +7,61 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 052773c615bcc4ddb5b735ae8164d44ed70bd935
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870308"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130942"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
 
-Istnieją różne sposoby do udostępnienia asynchronicznego cech dla kodu klienta. Asynchroniczny wzorzec oparty na zdarzeniach określa jeden ze sposobów dla klas przedstawić zachowanie asynchroniczne.  
+Istnieje wiele sposobów udostępniania funkcji asynchronicznych kodowi klienta. Wzorzec asynchroniczny oparty na zdarzeniach umożliwia jednokierunkową metodę prezentowania zachowań asynchronicznych.  
   
 > [!NOTE]
-> Począwszy od programu .NET Framework 4 w bibliotece zadań równoległych przewiduje nowy model programowania asynchronicznego i równoległego. Aby uzyskać więcej informacji, zobacz [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md) i [opartego na zadaniach asynchronicznej wzorca (TAP)](task-based-asynchronous-pattern-tap.md).
+> Począwszy od .NET Framework 4, Biblioteka zadań równoległych udostępnia nowy model dla programowania asynchronicznego i równoległego. Aby uzyskać więcej informacji, zobacz [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md) i [wzorzec asynchroniczny oparty na zadaniach (TAP)](task-based-asynchronous-pattern-tap.md).
   
 ## <a name="in-this-section"></a>W tej sekcji
 
  [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](event-based-asynchronous-pattern-overview.md)  
- W tym artykule opisano, jak asynchroniczny wzorzec oparty na zdarzeniach udostępnia zalety aplikacji wielowątkowych wiele skomplikowane problemy związane z wielowątkowych projektu są ukryte.  
+ Opisuje sposób, w jaki wzorzec asynchroniczny oparty na zdarzeniach udostępnia zalety aplikacji wielowątkowych, jednocześnie ukrywając wiele złożonych problemów niezależnych od projektów wielowątkowych.  
   
  [Implementowanie wzorca asynchronicznego opartego na zdarzeniach](implementing-the-event-based-asynchronous-pattern.md)  
- W tym artykule opisano standardowy sposób pakietu klasę, która ma funkcje asynchroniczne.  
+ Opisuje ustandaryzowany sposób spakowania klasy, która ma funkcje asynchroniczne.  
   
  [Implementacja wzorca asynchronicznego opartego na zdarzeniach — najlepsze rozwiązania](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- W tym artykule opisano wymagania dotyczące udostępniania funkcje asynchroniczne zgodnie z wzorca asynchronicznego opartego na zdarzeniach.  
+ Opisuje wymagania dotyczące uwidaczniania funkcji asynchronicznych zgodnie ze wzorcem asynchronicznym opartym na zdarzeniach.  
   
  [Decydowanie o czasie implementacji wzorca asynchronicznego opartego na zdarzeniach](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- Opisuje sposób określenia, kiedy należy wybrać implementacji wzorca asynchronicznego opartego na zdarzeniach — zamiast <xref:System.IAsyncResult> wzorzec reprezentowany przez [modelu programowania asynchronicznego (APM)](asynchronous-programming-model-apm.md)
+ Opisuje, jak określić, kiedy należy wybrać implementację wzorca asynchronicznego opartego na zdarzeniach zamiast wzorca <xref:System.IAsyncResult> reprezentowanego przez [model programowania asynchronicznego (APM)](asynchronous-programming-model-apm.md)
   
  [Instrukcje: Implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](component-that-supports-the-event-based-asynchronous-pattern.md)  
- W tym artykule opisano sposób tworzenia składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach. Jej implementacji przy użyciu klas pomocy z <xref:System.ComponentModel?displayProperty=nameWithType> przestrzeń nazw, która zapewnia składnika działa prawidłowo w ramach dowolnego modelu aplikacji.  
+ Opisuje sposób tworzenia składnika implementującego wzorzec asynchroniczny oparty na zdarzeniach. Jest implementowana przy użyciu klas pomocnika z przestrzeni nazw <xref:System.ComponentModel?displayProperty=nameWithType>, co gwarantuje, że składnik działa prawidłowo w ramach dowolnego modelu aplikacji.  
 
  [Instrukcje: Implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
- W tym artykule opisano sposób tworzenia klienta, który używa składnika, który implementuje wzorzec asynchroniczny oparty na zdarzeniach.
+ Opisuje sposób tworzenia klienta korzystającego ze składnika implementującego wzorzec asynchroniczny oparty na zdarzeniach.
   
- [Instrukcje: Używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
- Opisuje sposób używania składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach.  
+ [Instrukcje: Używanie składników obsługujących wzorzec asynchroniczny oparty na zdarzeniach](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ Opisuje sposób użycia składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach.  
   
 ## <a name="reference"></a>Tematy pomocy
 
  <xref:System.ComponentModel.AsyncOperation>  
- W tym artykule opisano <xref:System.ComponentModel.AsyncOperation> klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje klasę <xref:System.ComponentModel.AsyncOperation> i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.ComponentModel.AsyncOperationManager>  
- W tym artykule opisano <xref:System.ComponentModel.AsyncOperationManager> klasy i zawiera linki do wszystkich jej członków.  
+ Opisuje klasę <xref:System.ComponentModel.AsyncOperationManager> i zawiera linki do wszystkich jej elementów członkowskich.  
   
  <xref:System.ComponentModel.BackgroundWorker>  
- W tym artykule opisano <xref:System.ComponentModel.BackgroundWorker> składnika i zawiera linki do wszystkich jej członków.  
+ Opisuje składnik <xref:System.ComponentModel.BackgroundWorker> i zawiera linki do wszystkich jego członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne
 
  [Biblioteka zadań równoległych (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
- W tym artykule opisano model programowania dla operacji asynchronicznych i równoległych.  
+ Opisuje model programowania dla operacji asynchronicznych i równoległych.  
   
  [Wątkowość](../../../docs/standard/threading/index.md)  
- Opisuje funkcje wielowątkowości w środowisku .NET.  
+ Opisuje funkcje wielowątkowości w programie .NET.  
   
 ## <a name="see-also"></a>Zobacz także
 

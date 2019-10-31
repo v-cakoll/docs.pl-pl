@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 92eff65078f05557f542c64c1be7d4f6eca43eb5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738466"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091147"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual — Metoda
-Metoda wywoływana przez wspólnego języka wspólnego (CLR) usługi dostępu do danych można przydzielić pamięci w przestrzeni adresowej procesu docelowego.  
+Wywoływane przez usługi dostępu do danych środowiska uruchomieniowego języka wspólnego (CLR) do przydzielania pamięci w przestrzeni adresowej tego procesu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,33 +39,33 @@ HRESULT AllocVirtual(
   
 ## <a name="parameters"></a>Parametry  
  `addr`  
- [in] A `CLRDATA_ADDRESS` wartość, która określa żądany adres początkowy pamięci do przydzielenia.  
+ podczas Wartość `CLRDATA_ADDRESS`, która określa żądany adres początkowy pamięci do przydzielenia.  
   
  `size`  
- [in] Rozmiar w bajtach pamięci do przydzielenia.  
+ podczas Rozmiar pamięci do przydzielenia w bajtach.  
   
  `typeFlags`  
- [in] Flagi sterujące alokacji pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
+ podczas Flagi kontrolujące przydział pamięci. Zobacz funkcję Win32 `VirtualAlloc`.  
   
  `protectFlags`  
- [in] Atrybuty ochrony ilość przydzielonej pamięci. Zobacz Win32 `VirtualAlloc` funkcji.  
+ podczas Atrybuty ochrony przydzieloną pamięć. Zobacz funkcję Win32 `VirtualAlloc`.  
   
  `virt`  
- [out] Wskaźnik do `CLRDATA_ADDRESS` wartość, która określa adres początkowy rzeczywista ilość przydzielonej pamięci.  
+ określoną Wskaźnik do wartości `CLRDATA_ADDRESS`, który określa rzeczywisty adres początkowy przydzieloną pamięć.  
   
 ## <a name="remarks"></a>Uwagi  
- `AllocVirtual` Metody służy jako logiczne otoki dla Win32 `VirtualAlloc` funkcji.  
+ Metoda `AllocVirtual` służy jako otoka logiczna dla funkcji Win32 `VirtualAlloc`.  
   
- Ta metoda jest implementowana przez moduł zapisujący debugowania aplikacji.  
+ Ta metoda jest implementowana przez moduł zapisujący aplikacji debugowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

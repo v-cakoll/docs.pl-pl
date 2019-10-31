@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103288"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager — Funkcja
-Inicjuje menedżera transportu nawiązać zdalnego obiektu docelowego dla wyliczenia procesu i środowiska uruchomieniowego.  
+Inicjuje menedżera transportu, aby połączyć się ze zdalnym elementem docelowym na potrzeby wyliczenia procesu i środowiska uruchomieniowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +34,19 @@ HRESULT InitDbgTransportManager ();
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Powodzenie.  
+ Prawnego.  
   
  E_OUTOFMEMORY  
  Funkcja nie może przydzielić pamięci dla menedżera transportu.  
   
- E_FAIL (lub inne kody powrotne e_)  
+ E_FAIL (lub inne kody powrotne E_)  
  Inne błędy.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3,5 SP1

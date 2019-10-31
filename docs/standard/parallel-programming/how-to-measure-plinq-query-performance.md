@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Mierzenie wydajności zapytań PLINQ'
+title: 'Porady: mierzenie wydajności zapytań PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,26 +8,24 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to measure performance
 ms.assetid: 491ba43b-2c10-473d-9aab-e2cb96446711
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd9e3a0ead62450e87225212f4fc6ecec6ec9489
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91b6165be2f4f464626fb25f7152de68de9d86e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124992"
 ---
-# <a name="how-to-measure-plinq-query-performance"></a><span data-ttu-id="12d9e-102">Instrukcje: Mierzenie wydajności zapytań PLINQ</span><span class="sxs-lookup"><span data-stu-id="12d9e-102">How to: Measure PLINQ Query Performance</span></span>
-<span data-ttu-id="12d9e-103">Ten przykład pokazuje jak używać <xref:System.Diagnostics.Stopwatch> klasy, aby zmierzyć czas potrzebny do wykonania zapytania PLINQ.</span><span class="sxs-lookup"><span data-stu-id="12d9e-103">This example shows how use the <xref:System.Diagnostics.Stopwatch> class to measure the time it takes for a PLINQ query to execute.</span></span>  
+# <a name="how-to-measure-plinq-query-performance"></a><span data-ttu-id="f6d58-102">Porady: mierzenie wydajności zapytań PLINQ</span><span class="sxs-lookup"><span data-stu-id="f6d58-102">How to: Measure PLINQ Query Performance</span></span>
+<span data-ttu-id="f6d58-103">Ten przykład pokazuje, jak używać klasy <xref:System.Diagnostics.Stopwatch> do mierzenia czasu potrzebnego na wykonanie zapytania PLINQ.</span><span class="sxs-lookup"><span data-stu-id="f6d58-103">This example shows how use the <xref:System.Diagnostics.Stopwatch> class to measure the time it takes for a PLINQ query to execute.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="12d9e-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="12d9e-104">Example</span></span>  
- <span data-ttu-id="12d9e-105">W tym przykładzie użyto pustą `foreach` pętli (`For Each` w języku Visual Basic) do pomiaru czas potrzebny na wykonanie kwerendy.</span><span class="sxs-lookup"><span data-stu-id="12d9e-105">This example uses an empty `foreach` loop (`For Each` in Visual Basic) to measure the time it takes for the query to execute.</span></span> <span data-ttu-id="12d9e-106">W kodzie rzeczywistych pętli zazwyczaj zawiera kroki dodatkowego przetwarzania, które dodać do zapytania łączny czas wykonywania.</span><span class="sxs-lookup"><span data-stu-id="12d9e-106">In real-world code, the loop typically contains additional processing steps that add to the total query execution time.</span></span> <span data-ttu-id="12d9e-107">Należy zauważyć, że stoper nie jest uruchomione, dopóki tylko przed pętli, ponieważ jest to, kiedy rozpoczyna się wykonanie zapytania.</span><span class="sxs-lookup"><span data-stu-id="12d9e-107">Notice that the stopwatch is not started until just before the loop, because that is when the query execution begins.</span></span> <span data-ttu-id="12d9e-108">Jeśli potrzebujesz więcej szczegółowych pomiarów, możesz użyć `ElapsedTicks` właściwości zamiast `ElapsedMilliseconds`.</span><span class="sxs-lookup"><span data-stu-id="12d9e-108">If you require more fine-grained measurement, you can use the `ElapsedTicks` property instead of `ElapsedMilliseconds`.</span></span>  
+## <a name="example"></a><span data-ttu-id="f6d58-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="f6d58-104">Example</span></span>  
+ <span data-ttu-id="f6d58-105">W tym przykładzie jest używana pusta pętla `foreach` (`For Each` w Visual Basic) do mierzenia czasu wykonywania zapytania.</span><span class="sxs-lookup"><span data-stu-id="f6d58-105">This example uses an empty `foreach` loop (`For Each` in Visual Basic) to measure the time it takes for the query to execute.</span></span> <span data-ttu-id="f6d58-106">W kodzie rzeczywistym pętla zwykle zawiera dodatkowe kroki przetwarzania, które dodają do łącznego czasu wykonywania zapytania.</span><span class="sxs-lookup"><span data-stu-id="f6d58-106">In real-world code, the loop typically contains additional processing steps that add to the total query execution time.</span></span> <span data-ttu-id="f6d58-107">Należy zauważyć, że stopera nie jest uruchomiona przed pętlą, ponieważ jest to wykonywane po rozpoczęciu wykonywania zapytania.</span><span class="sxs-lookup"><span data-stu-id="f6d58-107">Notice that the stopwatch is not started until just before the loop, because that is when the query execution begins.</span></span> <span data-ttu-id="f6d58-108">Jeśli potrzebujesz bardziej szczegółowych pomiarów, możesz użyć właściwości `ElapsedTicks` zamiast `ElapsedMilliseconds`.</span><span class="sxs-lookup"><span data-stu-id="f6d58-108">If you require more fine-grained measurement, you can use the `ElapsedTicks` property instead of `ElapsedMilliseconds`.</span></span>  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  
   
- <span data-ttu-id="12d9e-109">Łączny czas wykonywania jest przydatne metryki, gdy są eksperymentowanie z implementacjami zapytania, ale nie zawsze rozpozna przedstawiającym.</span><span class="sxs-lookup"><span data-stu-id="12d9e-109">The total execution time is a useful metric when you are experimenting with query implementations, but it does not always tell the whole story.</span></span> <span data-ttu-id="12d9e-110">Aby uzyskać lepszą i bardziej rozbudowane widok interakcji wątków zapytania ze sobą oraz z innych uruchomionych procesów, należy użyć narzędzia Concurrency Visualizer.</span><span class="sxs-lookup"><span data-stu-id="12d9e-110">To get a deeper and richer view of the interaction of the query threads with one another and with other running processes, use the Concurrency Visualizer.</span></span> <span data-ttu-id="12d9e-111">Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span><span class="sxs-lookup"><span data-stu-id="12d9e-111">For more information, see [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span></span>  
+ <span data-ttu-id="f6d58-109">Łączny czas wykonywania jest przydatną metryką podczas eksperymentowania z implementacjami zapytań, ale nie zawsze informuje cały wątek.</span><span class="sxs-lookup"><span data-stu-id="f6d58-109">The total execution time is a useful metric when you are experimenting with query implementations, but it does not always tell the whole story.</span></span> <span data-ttu-id="f6d58-110">Aby uzyskać dokładniejszy i bogatszy widok interakcji między wątkami zapytań i innymi uruchomionymi procesami, użyj wizualizatora współbieżności.</span><span class="sxs-lookup"><span data-stu-id="f6d58-110">To get a deeper and richer view of the interaction of the query threads with one another and with other running processes, use the Concurrency Visualizer.</span></span> <span data-ttu-id="f6d58-111">Aby uzyskać więcej informacji, zobacz [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span><span class="sxs-lookup"><span data-stu-id="f6d58-111">For more information, see [Concurrency Visualizer](/visualstudio/profiling/concurrency-visualizer).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12d9e-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="12d9e-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f6d58-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f6d58-112">See also</span></span>
 
-- [<span data-ttu-id="12d9e-113">Równoległe LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="12d9e-113">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [<span data-ttu-id="f6d58-113">Równoległe LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="f6d58-113">Parallel LINQ (PLINQ)</span></span>](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef7619316cae46df350bd75a2c6838828f7e9c82
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db4f9bc6277015055cbcdb509628f2862a71dbc4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747180"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127150"
 ---
-# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="17e6b-102">ICorDebugRegisterSet::GetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="17e6b-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
-<span data-ttu-id="17e6b-103">Pobiera kontekst bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="17e6b-103">Gets the context of the current thread.</span></span>  
+# <a name="icordebugregistersetgetthreadcontext-method"></a><span data-ttu-id="d6ec2-102">ICorDebugRegisterSet::GetThreadContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="d6ec2-102">ICorDebugRegisterSet::GetThreadContext Method</span></span>
+<span data-ttu-id="d6ec2-103">Pobiera kontekst bieżącego wątku.</span><span class="sxs-lookup"><span data-stu-id="d6ec2-103">Gets the context of the current thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17e6b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="17e6b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6ec2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d6ec2-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetThreadContext(  
@@ -37,28 +35,28 @@ HRESULT GetThreadContext(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="17e6b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="17e6b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d6ec2-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d6ec2-105">Parameters</span></span>  
  `contextSize`  
- <span data-ttu-id="17e6b-106">[in] Rozmiar w bajtach z `context` tablicy.</span><span class="sxs-lookup"><span data-stu-id="17e6b-106">[in] The size, in bytes, of the `context` array.</span></span>  
+ <span data-ttu-id="d6ec2-106">podczas Rozmiar (w bajtach) tablicy `context`.</span><span class="sxs-lookup"><span data-stu-id="d6ec2-106">[in] The size, in bytes, of the `context` array.</span></span>  
   
  `context`  
- <span data-ttu-id="17e6b-107">[out w] Tablica bajtów, które tworzą Win32 `CONTEXT` struktury dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="17e6b-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
+ <span data-ttu-id="d6ec2-107">[in. out] Tablica bajtów, która składa się ze struktury `CONTEXT` Win32 dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="d6ec2-107">[in, out] An array of bytes that compose the Win32 `CONTEXT` structure for the current platform.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="17e6b-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="17e6b-108">Remarks</span></span>  
- <span data-ttu-id="17e6b-109">Debuger powinien wywołać tę funkcję, zamiast Win32 `GetThreadContext` działać, ponieważ wątek może być w stanie "przejętego", gdzie kontekst zostało tymczasowo zmienione.</span><span class="sxs-lookup"><span data-stu-id="17e6b-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="17e6b-110">Dane zwracane to Win32 `CONTEXT` struktury dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="17e6b-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d6ec2-108">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d6ec2-108">Remarks</span></span>  
+ <span data-ttu-id="d6ec2-109">Debuger powinien wywołać tę funkcję zamiast funkcji Win32 `GetThreadContext`, ponieważ wątek może być w stanie "przejęte", gdzie jego kontekst został tymczasowo zmieniony.</span><span class="sxs-lookup"><span data-stu-id="d6ec2-109">The debugger should call this function instead of the Win32 `GetThreadContext` function, because the thread may be in a "hijacked" state where its context has been temporarily changed.</span></span> <span data-ttu-id="d6ec2-110">Zwrócone dane to struktura `CONTEXT` Win32 dla bieżącej platformy.</span><span class="sxs-lookup"><span data-stu-id="d6ec2-110">The data returned is a Win32 `CONTEXT` structure for the current platform.</span></span>  
   
- <span data-ttu-id="17e6b-111">Dla ramek elementu członkowskiego typu liść klientów należy sprawdzić rejestrujący są prawidłowe, za pomocą [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span><span class="sxs-lookup"><span data-stu-id="17e6b-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
+ <span data-ttu-id="d6ec2-111">W przypadku ramek spoza liścia klienci powinni sprawdzić, które rejestry są prawidłowe za pomocą [ICorDebugRegisterSet:: GetRegistersAvailable —](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span><span class="sxs-lookup"><span data-stu-id="d6ec2-111">For non-leaf frames, clients should check which registers are valid by using [ICorDebugRegisterSet::GetRegistersAvailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17e6b-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="17e6b-112">Requirements</span></span>  
- <span data-ttu-id="17e6b-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17e6b-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6ec2-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d6ec2-112">Requirements</span></span>  
+ <span data-ttu-id="d6ec2-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d6ec2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17e6b-114">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17e6b-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d6ec2-114">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="d6ec2-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="17e6b-115">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17e6b-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d6ec2-115">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="d6ec2-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17e6b-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17e6b-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="d6ec2-116">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d6ec2-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17e6b-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="17e6b-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6ec2-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d6ec2-117">See also</span></span>
 
-- [<span data-ttu-id="17e6b-118">ICorDebugRegisterSet, interfejs</span><span class="sxs-lookup"><span data-stu-id="17e6b-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="17e6b-119">ICorDebugRegisterSet2, interfejs</span><span class="sxs-lookup"><span data-stu-id="17e6b-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="d6ec2-118">ICorDebugRegisterSet, interfejs</span><span class="sxs-lookup"><span data-stu-id="d6ec2-118">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="d6ec2-119">ICorDebugRegisterSet2, interfejs</span><span class="sxs-lookup"><span data-stu-id="d6ec2-119">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

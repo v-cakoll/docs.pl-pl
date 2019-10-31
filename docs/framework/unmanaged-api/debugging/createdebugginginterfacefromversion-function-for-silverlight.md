@@ -8,19 +8,17 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 96968956b513e1ae80a25f5fb4afea48bf888876
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739266"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132199"
 ---
-# <a name="createdebugginginterfacefromversion-function-for-silverlight"></a><span data-ttu-id="e81a3-102">CreateDebuggingInterfaceFromVersion — Funkcja programu Silverlight</span><span class="sxs-lookup"><span data-stu-id="e81a3-102">CreateDebuggingInterfaceFromVersion Function for Silverlight</span></span>
-<span data-ttu-id="e81a3-103">Akceptuje wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) wersja ciąg, który jest zwracany z [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)i zwraca odpowiedniego interfejsu debugera (zazwyczaj [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).</span><span class="sxs-lookup"><span data-stu-id="e81a3-103">Accepts a common language runtime (CLR) version string that is returned from the [CreateVersionStringFromModule function](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md), and returns a corresponding debugger interface (typically, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).</span></span>  
+# <a name="createdebugginginterfacefromversion-function-for-silverlight"></a><span data-ttu-id="6735c-102">CreateDebuggingInterfaceFromVersion — Funkcja programu Silverlight</span><span class="sxs-lookup"><span data-stu-id="6735c-102">CreateDebuggingInterfaceFromVersion Function for Silverlight</span></span>
+<span data-ttu-id="6735c-103">Akceptuje ciąg wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest zwracany przez [funkcję CreateVersionStringFromModule —](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)i zwraca odpowiedni interfejs debugera (zazwyczaj [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).</span><span class="sxs-lookup"><span data-stu-id="6735c-103">Accepts a common language runtime (CLR) version string that is returned from the [CreateVersionStringFromModule function](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md), and returns a corresponding debugger interface (typically, [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e81a3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e81a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6735c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6735c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
@@ -29,37 +27,37 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e81a3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e81a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6735c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6735c-105">Parameters</span></span>  
  `szDebuggeeVersion`  
- <span data-ttu-id="e81a3-106">[in] Ciąg wersji środowiska CLR w debugowanym obiekcie docelowym, która jest zwracana przez [createversionstringfrommodule — funkcja](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).</span><span class="sxs-lookup"><span data-stu-id="e81a3-106">[in] Version string of the CLR in the target debuggee, which is returned by the [CreateVersionStringFromModule function](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).</span></span>  
+ <span data-ttu-id="6735c-106">podczas Ciąg wersji środowiska CLR w docelowym debugowanego obiektu, który jest zwracany przez [funkcję CreateVersionStringFromModule —](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).</span><span class="sxs-lookup"><span data-stu-id="6735c-106">[in] Version string of the CLR in the target debuggee, which is returned by the [CreateVersionStringFromModule function](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md).</span></span>  
   
  `ppCordb`  
- <span data-ttu-id="e81a3-107">[out] Wskaźnik do wskaźnika do obiektu COM (`IUnknown`).</span><span class="sxs-lookup"><span data-stu-id="e81a3-107">[out] Pointer to a pointer to a COM object (`IUnknown`).</span></span> <span data-ttu-id="e81a3-108">Ten obiekt zostanie rzutowany [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) obiekt przed zwróceniem.</span><span class="sxs-lookup"><span data-stu-id="e81a3-108">This object will be cast to an [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) object before it is returned.</span></span>  
+ <span data-ttu-id="6735c-107">określoną Wskaźnik na wskaźnik do obiektu COM (`IUnknown`).</span><span class="sxs-lookup"><span data-stu-id="6735c-107">[out] Pointer to a pointer to a COM object (`IUnknown`).</span></span> <span data-ttu-id="6735c-108">Ten obiekt będzie rzutowany na obiekt [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) przed jego zwróceniem.</span><span class="sxs-lookup"><span data-stu-id="6735c-108">This object will be cast to an [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) object before it is returned.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e81a3-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e81a3-109">Return Value</span></span>  
- <span data-ttu-id="e81a3-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="e81a3-110">S_OK</span></span>  
- <span data-ttu-id="e81a3-111">`ppCordb` odwołuje się do prawidłowego obiektu, który implementuje [icordebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="e81a3-111">`ppCordb` references a valid object that implements the [ICorDebug interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6735c-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="6735c-109">Return Value</span></span>  
+ <span data-ttu-id="6735c-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="6735c-110">S_OK</span></span>  
+ <span data-ttu-id="6735c-111">`ppCordb` odwołuje się do prawidłowego obiektu, który implementuje interfejs [interfejsu ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="6735c-111">`ppCordb` references a valid object that implements the [ICorDebug interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) interface.</span></span>  
   
- <span data-ttu-id="e81a3-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="e81a3-112">E_INVALIDARG</span></span>  
- <span data-ttu-id="e81a3-113">Albo `szDebuggeeVersion` lub `ppCordb` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="e81a3-113">Either `szDebuggeeVersion` or `ppCordb` is null.</span></span>  
+ <span data-ttu-id="6735c-112">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="6735c-112">E_INVALIDARG</span></span>  
+ <span data-ttu-id="6735c-113">`szDebuggeeVersion` lub `ppCordb` ma wartość null.</span><span class="sxs-lookup"><span data-stu-id="6735c-113">Either `szDebuggeeVersion` or `ppCordb` is null.</span></span>  
   
- <span data-ttu-id="e81a3-114">CORDBG_E_DEBUG_COMPONENT_MISSING</span><span class="sxs-lookup"><span data-stu-id="e81a3-114">CORDBG_E_DEBUG_COMPONENT_MISSING</span></span>  
- <span data-ttu-id="e81a3-115">Składnik, który jest konieczny, aby debugowanie CLR nie można odnaleźć.</span><span class="sxs-lookup"><span data-stu-id="e81a3-115">A component that is necessary for CLR debugging cannot be located.</span></span> <span data-ttu-id="e81a3-116">Oznacza to, że plik mscordbi.dll lub mscordaccore.dll nie został znaleziony w tym samym katalogu jako element docelowy CoreCLR.dll.</span><span class="sxs-lookup"><span data-stu-id="e81a3-116">This means that either mscordbi.dll or mscordaccore.dll was not found in the same directory as the target CoreCLR.dll.</span></span>  
+ <span data-ttu-id="6735c-114">CORDBG_E_DEBUG_COMPONENT_MISSING</span><span class="sxs-lookup"><span data-stu-id="6735c-114">CORDBG_E_DEBUG_COMPONENT_MISSING</span></span>  
+ <span data-ttu-id="6735c-115">Nie można zlokalizować składnika, który jest niezbędny do debugowania CLR.</span><span class="sxs-lookup"><span data-stu-id="6735c-115">A component that is necessary for CLR debugging cannot be located.</span></span> <span data-ttu-id="6735c-116">Oznacza to, że plik mscordbi. dll lub mscordaccore. dll nie został odnaleziony w tym samym katalogu co element docelowy CoreCLR. dll.</span><span class="sxs-lookup"><span data-stu-id="6735c-116">This means that either mscordbi.dll or mscordaccore.dll was not found in the same directory as the target CoreCLR.dll.</span></span>  
   
- <span data-ttu-id="e81a3-117">CORDBG_E_INCOMPATIBLE_PROTOCOL</span><span class="sxs-lookup"><span data-stu-id="e81a3-117">CORDBG_E_INCOMPATIBLE_PROTOCOL</span></span>  
- <span data-ttu-id="e81a3-118">Plik mscordbi.dll lub mscordaccore.dll nie jest tę samą wersję, jako cel CoreCLR.dll.</span><span class="sxs-lookup"><span data-stu-id="e81a3-118">Either mscordbi.dll or mscordaccore.dll is not the same version as the target CoreCLR.dll.</span></span>  
+ <span data-ttu-id="6735c-117">CORDBG_E_INCOMPATIBLE_PROTOCOL</span><span class="sxs-lookup"><span data-stu-id="6735c-117">CORDBG_E_INCOMPATIBLE_PROTOCOL</span></span>  
+ <span data-ttu-id="6735c-118">Mscordbi. dll lub mscordaccore. dll nie jest taka sama jak wersja elementu docelowego CoreCLR. dll.</span><span class="sxs-lookup"><span data-stu-id="6735c-118">Either mscordbi.dll or mscordaccore.dll is not the same version as the target CoreCLR.dll.</span></span>  
   
- <span data-ttu-id="e81a3-119">E_FAIL (lub inne kody powrotne e_)</span><span class="sxs-lookup"><span data-stu-id="e81a3-119">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="e81a3-120">Nie można zwrócić [icordebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).</span><span class="sxs-lookup"><span data-stu-id="e81a3-120">Unable to return an [ICorDebug interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).</span></span>  
+ <span data-ttu-id="6735c-119">E_FAIL (lub inne kody powrotne E_)</span><span class="sxs-lookup"><span data-stu-id="6735c-119">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="6735c-120">Nie można zwrócić [interfejsu ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).</span><span class="sxs-lookup"><span data-stu-id="6735c-120">Unable to return an [ICorDebug interface](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e81a3-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e81a3-121">Remarks</span></span>  
- <span data-ttu-id="e81a3-122">Interfejs, który jest zwracany udostępnia funkcje służące do dołączania do CLR w procesie docelowym i debugowania kodu zarządzanego, który działa środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="e81a3-122">The interface that is returned provides the facilities for attaching to a CLR in a target process and debugging the managed code that the CLR is running.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6735c-121">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6735c-121">Remarks</span></span>  
+ <span data-ttu-id="6735c-122">Interfejs, który jest zwracany, udostępnia funkcje do dołączania do środowiska CLR w procesie docelowym i debugowania kodu zarządzanego, który działa środowisko CLR.</span><span class="sxs-lookup"><span data-stu-id="6735c-122">The interface that is returned provides the facilities for attaching to a CLR in a target process and debugging the managed code that the CLR is running.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e81a3-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e81a3-123">Requirements</span></span>  
- <span data-ttu-id="e81a3-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e81a3-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6735c-123">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6735c-123">Requirements</span></span>  
+ <span data-ttu-id="6735c-124">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6735c-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e81a3-125">**Nagłówek:** dbgshim.h</span><span class="sxs-lookup"><span data-stu-id="e81a3-125">**Header:** dbgshim.h</span></span>  
+ <span data-ttu-id="6735c-125">**Nagłówek:** dbgshim. h</span><span class="sxs-lookup"><span data-stu-id="6735c-125">**Header:** dbgshim.h</span></span>  
   
- <span data-ttu-id="e81a3-126">**Biblioteka:** dbgshim.dll</span><span class="sxs-lookup"><span data-stu-id="e81a3-126">**Library:** dbgshim.dll</span></span>  
+ <span data-ttu-id="6735c-126">**Biblioteka:** dbgshim. dll</span><span class="sxs-lookup"><span data-stu-id="6735c-126">**Library:** dbgshim.dll</span></span>  
   
- <span data-ttu-id="e81a3-127">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="e81a3-127">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="6735c-127">**.NET Framework wersje:** 3,5 SP1</span><span class="sxs-lookup"><span data-stu-id="6735c-127">**.NET Framework Versions:** 3.5 SP1</span></span>

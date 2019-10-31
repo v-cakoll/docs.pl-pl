@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: dd9e9204-a80d-44f3-8192-779224b35056
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 90c845d87cc9c8bf229dd604ec2077ec28d31dcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfdcb9b8aedeb3ccbbd27864e79ce43338942922
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133357"
 ---
-# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="abd71-102">ICorRuntimeHost::UnloadDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="abd71-102">ICorRuntimeHost::UnloadDomain Method</span></span>
-<span data-ttu-id="abd71-103">Zwalnia domeny określonej aplikacji w bieżącym procesie.</span><span class="sxs-lookup"><span data-stu-id="abd71-103">Unloads the specified application domain from the current process.</span></span>  
+# <a name="icorruntimehostunloaddomain-method"></a><span data-ttu-id="4bdce-102">ICorRuntimeHost::UnloadDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="4bdce-102">ICorRuntimeHost::UnloadDomain Method</span></span>
+<span data-ttu-id="4bdce-103">Zwalnia określoną domenę aplikacji z bieżącego procesu.</span><span class="sxs-lookup"><span data-stu-id="4bdce-103">Unloads the specified application domain from the current process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="abd71-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="abd71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4bdce-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4bdce-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnloadDomain (  
@@ -35,30 +33,30 @@ HRESULT UnloadDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="abd71-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="abd71-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4bdce-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4bdce-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="abd71-106">[in] Wskaźnik typu <xref:System._AppDomain?displayProperty=nameWithType> reprezentujący domeny, która ma zostać zwolniony.</span><span class="sxs-lookup"><span data-stu-id="abd71-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
+ <span data-ttu-id="4bdce-106">podczas Wskaźnik typu <xref:System._AppDomain?displayProperty=nameWithType> reprezentujący domenę, która ma zostać zwolniona.</span><span class="sxs-lookup"><span data-stu-id="4bdce-106">[in] A pointer of type <xref:System._AppDomain?displayProperty=nameWithType> that represents the domain to be unloaded.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="abd71-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="abd71-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4bdce-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="4bdce-107">Return Value</span></span>  
   
-|<span data-ttu-id="abd71-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="abd71-108">HRESULT</span></span>|<span data-ttu-id="abd71-109">Opis</span><span class="sxs-lookup"><span data-stu-id="abd71-109">Description</span></span>|  
+|<span data-ttu-id="4bdce-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4bdce-108">HRESULT</span></span>|<span data-ttu-id="4bdce-109">Opis</span><span class="sxs-lookup"><span data-stu-id="4bdce-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="abd71-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="abd71-110">S_OK</span></span>|<span data-ttu-id="abd71-111">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="abd71-111">The operation was successful.</span></span>|  
-|<span data-ttu-id="abd71-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="abd71-112">S_FALSE</span></span>|<span data-ttu-id="abd71-113">Nie można ukończyć operacji.</span><span class="sxs-lookup"><span data-stu-id="abd71-113">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="abd71-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="abd71-114">E_FAIL</span></span>|<span data-ttu-id="abd71-115">Wystąpił błąd nieznanego, krytycznego.</span><span class="sxs-lookup"><span data-stu-id="abd71-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="abd71-116">Jeśli metoda zwraca E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe w procesie.</span><span class="sxs-lookup"><span data-stu-id="abd71-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="abd71-117">Kolejne wywołania do dowolnych hostowania interfejsów API zwraca HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="abd71-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="abd71-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="abd71-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="abd71-119">Środowisko CLR nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="abd71-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="4bdce-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="4bdce-110">S_OK</span></span>|<span data-ttu-id="4bdce-111">Operacja zakończyła się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="4bdce-111">The operation was successful.</span></span>|  
+|<span data-ttu-id="4bdce-112">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="4bdce-112">S_FALSE</span></span>|<span data-ttu-id="4bdce-113">Nie można ukończyć operacji.</span><span class="sxs-lookup"><span data-stu-id="4bdce-113">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="4bdce-114">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4bdce-114">E_FAIL</span></span>|<span data-ttu-id="4bdce-115">Wystąpił nieznany, Katastrofalny błąd.</span><span class="sxs-lookup"><span data-stu-id="4bdce-115">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="4bdce-116">Jeśli metoda zwraca wartość E_FAIL, środowisko uruchomieniowe języka wspólnego (CLR) nie jest już możliwe do użycia w procesie.</span><span class="sxs-lookup"><span data-stu-id="4bdce-116">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="4bdce-117">Kolejne wywołania interfejsów API hostingu zwracają HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="4bdce-117">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="4bdce-118">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4bdce-118">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4bdce-119">Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="4bdce-119">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="abd71-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="abd71-120">Requirements</span></span>  
- <span data-ttu-id="abd71-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abd71-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4bdce-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4bdce-120">Requirements</span></span>  
+ <span data-ttu-id="4bdce-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4bdce-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="abd71-122">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="abd71-122">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="4bdce-122">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="4bdce-122">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="abd71-123">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="abd71-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="4bdce-123">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="4bdce-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="abd71-124">**Wersja programu .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="abd71-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="4bdce-124">**Wersja .NET Framework:** 1,0, 1,1</span><span class="sxs-lookup"><span data-stu-id="4bdce-124">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abd71-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="abd71-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bdce-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4bdce-125">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="abd71-126">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="abd71-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="4bdce-126">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="4bdce-126">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

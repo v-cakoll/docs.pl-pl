@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 14e18510-23ac-4cba-9f96-c86147a2df9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4fced656168952c1064de213405147baf7856b2c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53042e722809a6574396648529c677d749154716
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737353"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132728"
 ---
-# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="61e43-102">ICorDebugAssembly::GetAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="61e43-102">ICorDebugAssembly::GetAppDomain Method</span></span>
-<span data-ttu-id="61e43-103">Pobiera wskaźnik interfejsu do domeny aplikacji, która zawiera to `ICorDebugAssembly` wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="61e43-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
+# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="91fed-102">ICorDebugAssembly::GetAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="91fed-102">ICorDebugAssembly::GetAppDomain Method</span></span>
+<span data-ttu-id="91fed-103">Pobiera wskaźnik interfejsu do domeny aplikacji, która zawiera to wystąpienie `ICorDebugAssembly`.</span><span class="sxs-lookup"><span data-stu-id="91fed-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="61e43-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="61e43-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91fed-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="91fed-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAppDomain (  
@@ -35,18 +33,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="61e43-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="61e43-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91fed-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="91fed-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="61e43-106">[out] Wskaźnik na adres icordebugappdomain — interfejs, który reprezentuje domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="61e43-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
+ <span data-ttu-id="91fed-106">określoną Wskaźnik do adresu interfejsu ICorDebugAppDomain, który reprezentuje domenę aplikacji.</span><span class="sxs-lookup"><span data-stu-id="91fed-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="61e43-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="61e43-107">Remarks</span></span>  
- <span data-ttu-id="61e43-108">Jeśli ten zestaw jest zestaw systemowy `GetAppDomain` zwraca wartość null.</span><span class="sxs-lookup"><span data-stu-id="61e43-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="91fed-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="91fed-107">Remarks</span></span>  
+ <span data-ttu-id="91fed-108">Jeśli ten zestaw jest zestawem systemowym, `GetAppDomain` zwraca wartość null.</span><span class="sxs-lookup"><span data-stu-id="91fed-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="61e43-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="61e43-109">Requirements</span></span>  
- <span data-ttu-id="61e43-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61e43-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91fed-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="91fed-109">Requirements</span></span>  
+ <span data-ttu-id="91fed-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91fed-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="61e43-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="61e43-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="91fed-111">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="91fed-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="61e43-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61e43-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="91fed-112">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="91fed-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="61e43-113">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61e43-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="91fed-113">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91fed-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

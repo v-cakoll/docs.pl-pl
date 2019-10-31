@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f3c4503-570e-44c1-ae6a-a3c6b840c732
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea2c72a91aaa09d1c2d0e0944b73beb9ea313d0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a736990188023031eb8df5a76dd16fcc289cfe20
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738031"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134035"
 ---
-# <a name="icordebugappdomainenumeratesteppers-method"></a><span data-ttu-id="c7cac-102">ICorDebugAppDomain::EnumerateSteppers — Metoda</span><span class="sxs-lookup"><span data-stu-id="c7cac-102">ICorDebugAppDomain::EnumerateSteppers Method</span></span>
-<span data-ttu-id="c7cac-103">Pobiera moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c7cac-103">Gets an enumerator for all active steppers in the application domain.</span></span>  
+# <a name="icordebugappdomainenumeratesteppers-method"></a><span data-ttu-id="0a3bd-102">ICorDebugAppDomain::EnumerateSteppers — Metoda</span><span class="sxs-lookup"><span data-stu-id="0a3bd-102">ICorDebugAppDomain::EnumerateSteppers Method</span></span>
+<span data-ttu-id="0a3bd-103">Pobiera moduł wyliczający dla wszystkich aktywnych współdziałań w domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0a3bd-103">Gets an enumerator for all active steppers in the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7cac-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="c7cac-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a3bd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0a3bd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateSteppers (  
@@ -35,15 +33,15 @@ HRESULT EnumerateSteppers (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7cac-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="c7cac-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a3bd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0a3bd-105">Parameters</span></span>  
  `ppSteppers`  
- <span data-ttu-id="c7cac-106">[out] Wskaźnik na adres icordebugstepperenum — obiekt, który jest moduł wyliczający dla wszystkich aktywnych steppery w domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="c7cac-106">[out] A pointer to the address of an ICorDebugStepperEnum object that is the enumerator for all active steppers in the application domain.</span></span>  
+ <span data-ttu-id="0a3bd-106">określoną Wskaźnik do adresu obiektu ICorDebugStepperEnum, który jest modułem wyliczającym dla wszystkich aktywnych współdziałań w domenie aplikacji.</span><span class="sxs-lookup"><span data-stu-id="0a3bd-106">[out] A pointer to the address of an ICorDebugStepperEnum object that is the enumerator for all active steppers in the application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7cac-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c7cac-107">Requirements</span></span>  
- <span data-ttu-id="c7cac-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7cac-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a3bd-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0a3bd-107">Requirements</span></span>  
+ <span data-ttu-id="0a3bd-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a3bd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7cac-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7cac-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="0a3bd-109">**Nagłówek:** CorDebug. idl, CorDebug. h</span><span class="sxs-lookup"><span data-stu-id="0a3bd-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7cac-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7cac-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a3bd-110">**Biblioteka:** CorGuids. lib</span><span class="sxs-lookup"><span data-stu-id="0a3bd-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7cac-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7cac-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="0a3bd-111">**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a3bd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

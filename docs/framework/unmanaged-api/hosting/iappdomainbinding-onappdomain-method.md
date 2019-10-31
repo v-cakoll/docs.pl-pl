@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b419dcc9-e8aa-484b-af0d-0f40358edb99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 523f90966501e06994fb0e11b3c77aa62c378eef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 37c02b878cd52034603ab6cafe4d8aaca594cbe9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770462"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126889"
 ---
-# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="03ad1-102">IAppDomainBinding::OnAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="03ad1-102">IAppDomainBinding::OnAppDomain Method</span></span>
-<span data-ttu-id="03ad1-103">Metoda wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR) w celu powiadomienia hosta, że utworzono domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="03ad1-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
+# <a name="iappdomainbindingonappdomain-method"></a><span data-ttu-id="8b5b3-102">IAppDomainBinding::OnAppDomain — Metoda</span><span class="sxs-lookup"><span data-stu-id="8b5b3-102">IAppDomainBinding::OnAppDomain Method</span></span>
+<span data-ttu-id="8b5b3-103">Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania hosta o utworzeniu domeny aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8b5b3-103">Called by the common language runtime (CLR) to notify the host that an application domain has been created.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="03ad1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="03ad1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8b5b3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8b5b3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnAppDomain (  
@@ -35,19 +33,19 @@ HRESULT OnAppDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="03ad1-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="03ad1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8b5b3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="8b5b3-105">Parameters</span></span>  
  `pAppdomain`  
- <span data-ttu-id="03ad1-106">[in] Wskaźnik do [IUnknown](/cpp/atl/iunknown) obiektu interfejsu, który reprezentuje nową domenę aplikacji.</span><span class="sxs-lookup"><span data-stu-id="03ad1-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
+ <span data-ttu-id="8b5b3-106">podczas Wskaźnik do obiektu interfejsu [IUnknown](/cpp/atl/iunknown) , który reprezentuje nową domenę aplikacji.</span><span class="sxs-lookup"><span data-stu-id="8b5b3-106">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) interface object that represents the new application domain.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="03ad1-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="03ad1-107">Requirements</span></span>  
- <span data-ttu-id="03ad1-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="03ad1-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8b5b3-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8b5b3-107">Requirements</span></span>  
+ <span data-ttu-id="8b5b3-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b5b3-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="03ad1-109">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="03ad1-109">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="8b5b3-109">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="8b5b3-109">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="03ad1-110">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="03ad1-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="8b5b3-110">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="8b5b3-110">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="03ad1-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03ad1-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8b5b3-111">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8b5b3-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="03ad1-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="03ad1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8b5b3-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8b5b3-112">See also</span></span>
 
-- [<span data-ttu-id="03ad1-113">IAppDomainBinding, interfejs</span><span class="sxs-lookup"><span data-stu-id="03ad1-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)
+- [<span data-ttu-id="8b5b3-113">IAppDomainBinding, interfejs</span><span class="sxs-lookup"><span data-stu-id="8b5b3-113">IAppDomainBinding Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-interface.md)

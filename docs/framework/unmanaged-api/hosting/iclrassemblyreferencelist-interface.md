@@ -14,39 +14,37 @@ helpviewer_keywords:
 ms.assetid: 5f890fdf-d22a-429e-a35f-135273d1a636
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 43c40e833e3a250239e9e90667196a2a74a96e0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e74d49d71cfee51f8cb99645151aace3d02de0e8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969965"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126662"
 ---
-# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="4155b-102">ICLRAssemblyReferenceList — Interfejs</span><span class="sxs-lookup"><span data-stu-id="4155b-102">ICLRAssemblyReferenceList Interface</span></span>
-<span data-ttu-id="4155b-103">Zarządza listę zestawów, które są ładowane przez środowisko uruchomieniowe języka wspólnego (CLR), a nie przez hosta.</span><span class="sxs-lookup"><span data-stu-id="4155b-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
+# <a name="iclrassemblyreferencelist-interface"></a><span data-ttu-id="9f786-102">ICLRAssemblyReferenceList — Interfejs</span><span class="sxs-lookup"><span data-stu-id="9f786-102">ICLRAssemblyReferenceList Interface</span></span>
+<span data-ttu-id="9f786-103">Zarządza listą zestawów, które są ładowane przez środowisko uruchomieniowe języka wspólnego (CLR), a nie przez hosta.</span><span class="sxs-lookup"><span data-stu-id="9f786-103">Manages a list of assemblies that are loaded by the common language runtime (CLR) and not by the host.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="4155b-104">Metody</span><span class="sxs-lookup"><span data-stu-id="4155b-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9f786-104">Metody</span><span class="sxs-lookup"><span data-stu-id="9f786-104">Methods</span></span>  
   
-|<span data-ttu-id="4155b-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="4155b-105">Method</span></span>|<span data-ttu-id="4155b-106">Opis</span><span class="sxs-lookup"><span data-stu-id="4155b-106">Description</span></span>|  
+|<span data-ttu-id="9f786-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="9f786-105">Method</span></span>|<span data-ttu-id="9f786-106">Opis</span><span class="sxs-lookup"><span data-stu-id="9f786-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="4155b-107">IsAssemblyReferenceInList, metoda</span><span class="sxs-lookup"><span data-stu-id="4155b-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="4155b-108">Pobiera wartość wskazującą, czy podany wskaźnik odwołuje się zestaw na liście.</span><span class="sxs-lookup"><span data-stu-id="4155b-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
-|[<span data-ttu-id="4155b-109">IsStringAssemblyReferenceInList, metoda</span><span class="sxs-lookup"><span data-stu-id="4155b-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="4155b-110">Pobiera wartość wskazującą, czy podana nazwa jest zgodna z nazwą zestawu na liście.</span><span class="sxs-lookup"><span data-stu-id="4155b-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
+|[<span data-ttu-id="9f786-107">IsAssemblyReferenceInList, metoda</span><span class="sxs-lookup"><span data-stu-id="9f786-107">IsAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isassemblyreferenceinlist-method.md)|<span data-ttu-id="9f786-108">Pobiera wartość wskazującą, czy dostarczony wskaźnik odwołuje się do zestawu na liście.</span><span class="sxs-lookup"><span data-stu-id="9f786-108">Gets a value that indicates whether the supplied pointer references an assembly in the list.</span></span>|  
+|[<span data-ttu-id="9f786-109">IsStringAssemblyReferenceInList, metoda</span><span class="sxs-lookup"><span data-stu-id="9f786-109">IsStringAssemblyReferenceInList Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md)|<span data-ttu-id="9f786-110">Pobiera wartość wskazującą, czy podana nazwa jest zgodna z nazwą zestawu znajdującego się na liście.</span><span class="sxs-lookup"><span data-stu-id="9f786-110">Gets a value that indicates whether the supplied name matches the name of an assembly in the list.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4155b-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4155b-111">Remarks</span></span>  
- <span data-ttu-id="4155b-112">Wywołaj [iclrassemblyidentitymanager::getclrassemblyreferencelist —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) metodę, aby uzyskać wskaźnik do wystąpienia `ICLRAssemblyReferenceList`.</span><span class="sxs-lookup"><span data-stu-id="4155b-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9f786-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="9f786-111">Remarks</span></span>  
+ <span data-ttu-id="9f786-112">Wywołaj metodę [ICLRAssemblyIdentityManager:: GetCLRAssemblyReferenceList —](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) , aby uzyskać wskaźnik do wystąpienia `ICLRAssemblyReferenceList`.</span><span class="sxs-lookup"><span data-stu-id="9f786-112">Call the [ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md) method to get a pointer to an instance of `ICLRAssemblyReferenceList`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4155b-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4155b-113">Requirements</span></span>  
- <span data-ttu-id="4155b-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4155b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f786-113">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f786-113">Requirements</span></span>  
+ <span data-ttu-id="9f786-114">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f786-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4155b-115">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4155b-115">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9f786-115">**Nagłówek:** MSCorEE. h</span><span class="sxs-lookup"><span data-stu-id="9f786-115">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4155b-116">**Biblioteka:** Dołączony jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4155b-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9f786-116">**Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9f786-116">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4155b-117">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4155b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="9f786-117">**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9f786-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4155b-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="4155b-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9f786-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9f786-118">See also</span></span>
 
-- [<span data-ttu-id="4155b-119">ICLRAssemblyIdentityManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="4155b-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="4155b-120">IHostAssemblyStore, interfejs</span><span class="sxs-lookup"><span data-stu-id="4155b-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="4155b-121">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="4155b-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="9f786-119">ICLRAssemblyIdentityManager, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f786-119">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="9f786-120">IHostAssemblyStore, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f786-120">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="9f786-121">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="9f786-121">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

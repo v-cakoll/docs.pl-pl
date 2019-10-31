@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4bc26a16650a5beecc17898e0421e79536713deb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798337"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127300"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete, funkcja
 Usuwa określony kwalifikator według nazwy.  
@@ -55,7 +53,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` Parametr jest nieprawidłowy. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr `wszName` jest nieprawidłowy. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Usuwanie tego kwalifikatora jest niedozwolone. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Nie znaleziono określonego kwalifikatora. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
@@ -65,14 +63,14 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemQualifierSet::D Usuń](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) .
 
-Ze względu na reguły propagacji kwalifikatora, określony kwalifikator może być Dziedziczony z innego obiektu i jedynie zastępowany w bieżącej klasie lub wystąpieniu. W takim przypadku `QualifierSet_Delete` metoda resetuje kwalifikator do pierwotnej dziedziczonej wartości. Funkcja w tym przypadku zwraca kod `WBEM_S_RESET_TO_DEFAULT`stanu.
+Ze względu na reguły propagacji kwalifikatora, określony kwalifikator może być Dziedziczony z innego obiektu i jedynie zastępowany w bieżącej klasie lub wystąpieniu. W takim przypadku Metoda `QualifierSet_Delete` resetuje kwalifikator do oryginalnej wartości dziedziczonej. Funkcja w tym przypadku zwraca kod stanu `WBEM_S_RESET_TO_DEFAULT`.
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

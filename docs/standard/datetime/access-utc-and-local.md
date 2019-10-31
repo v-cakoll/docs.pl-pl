@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC'
+title: 'Instrukcje: uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów czasu UTC i lokalnego strefy czasowej'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,48 +13,46 @@ helpviewer_keywords:
 - time zones [.NET Framework], retrieving
 - time zones [.NET Framework], UTC
 ms.assetid: 961fb70b-83f0-4dab-a042-cb5fcd817cf5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8aa19118ce0837b9ce0eb523f3e086fcbcecb9e8
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: ef22753d9934a52d955412a4493b608f265519aa
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106566"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132606"
 ---
-# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Instrukcje: Uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów lokalnej strefy czasowej i strefy czasowej UTC
+# <a name="how-to-access-the-predefined-utc-and-local-time-zone-objects"></a>Instrukcje: uzyskiwanie dostępu do wstępnie zdefiniowanych obiektów czasu UTC i lokalnego strefy czasowej
 
-Klasa zawiera dwie <xref:System.TimeZoneInfo.Utc%2A> właściwości i <xref:System.TimeZoneInfo.Local%2A>, które dają kod dostępu do wstępnie zdefiniowanych obiektów stref czasowych. <xref:System.TimeZoneInfo> W tym temacie omówiono sposób uzyskiwania dostępu <xref:System.TimeZoneInfo> do obiektów zwracanych przez te właściwości.
+Klasa <xref:System.TimeZoneInfo> udostępnia dwie właściwości, <xref:System.TimeZoneInfo.Utc%2A> i <xref:System.TimeZoneInfo.Local%2A>, które dają kod dostępu do wstępnie zdefiniowanych obiektów stref czasowych. W tym temacie omówiono sposób uzyskiwania dostępu do obiektów <xref:System.TimeZoneInfo> zwracanych przez te właściwości.
 
 ### <a name="to-access-the-coordinated-universal-time-utc-timezoneinfo-object"></a>Aby uzyskać dostęp do obiektu TimeZoneInfo skoordynowanego czasu uniwersalnego (UTC)
 
-1. Aby uzyskać `static` dostęp`Shared` do uniwersalnego <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> czasu koordynowanego, użyj właściwości (w Visual Basic).
+1. Użyj właściwości <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> `static` (`Shared` w Visual Basic), aby uzyskać dostęp do uniwersalnego czasu koordynowanego.
 
-2. Zamiast przypisywać <xref:System.TimeZoneInfo> obiekt zwracany przez właściwość do zmiennej obiektu, Kontynuuj dostęp do uniwersalnego czasu koordynowanego <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> za pomocą właściwości.
+2. Zamiast przypisywać obiekt <xref:System.TimeZoneInfo> zwracany przez właściwość do zmiennej obiektu, Kontynuuj dostęp do uniwersalnego czasu koordynowanego za pomocą właściwości <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType>.
 
 ### <a name="to-access-the-local-time-zone"></a>Aby uzyskać dostęp do lokalnej strefy czasowej
 
-1. Użyj właściwości`Shared` <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> (w Visual Basic), aby uzyskać dostęp do strefy czasowej systemu lokalnego. `static`
+1. Aby uzyskać dostęp do strefy czasowej systemu lokalnego, użyj właściwości <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> `static` (`Shared` Visual Basic).
 
-2. Zamiast przypisywać <xref:System.TimeZoneInfo> obiekt zwracany przez właściwość do zmiennej obiektu, Kontynuuj dostęp do lokalnej strefy czasowej <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> za pomocą właściwości.
+2. Zamiast przypisywać obiekt <xref:System.TimeZoneInfo> zwracany przez właściwość do zmiennej obiektu, Kontynuuj dostęp do lokalnej strefy czasowej za pomocą właściwości <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Przykład
 
-Poniższy kod używa <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> właściwości i <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> , aby przekonwertować godzinę z amerykańskiej i kanadyjskiej, standardowej strefy czasowej, a także do wyświetlania nazwy strefy czasowej w konsoli programu.
+Poniższy kod używa właściwości <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> i <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> do przekonwertowania czasu z amerykańskiej i kanadyjskiej standardowej strefy czasowej, a także do wyświetlania nazwy strefy czasowej w konsoli programu.
 
 [!code-csharp[System.TimeZone2.Concepts#13](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#13)]
 [!code-vb[System.TimeZone2.Concepts#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#13)]
 
-Należy zawsze uzyskać dostęp do lokalnej strefy czasowej przy <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> użyciu właściwości zamiast przypisywać lokalną strefę czasową <xref:System.TimeZoneInfo> do zmiennej obiektu. Podobnie należy zawsze uzyskiwać dostęp do skoordynowanego uniwersalnego czasu <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> za pomocą właściwości zamiast przypisywać strefy UTC <xref:System.TimeZoneInfo> do zmiennej obiektu. Zapobiega <xref:System.TimeZoneInfo> to unieważnieniu zmiennej obiektu przez wywołanie <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> metody.
+Należy zawsze uzyskać dostęp do lokalnej strefy czasowej przy użyciu właściwości <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> zamiast przypisywać lokalną strefę czasową do zmiennej obiektu <xref:System.TimeZoneInfo>. Podobnie należy zawsze uzyskiwać dostęp do skoordynowanego uniwersalnego czasu za pomocą właściwości <xref:System.TimeZoneInfo.Utc%2A?displayProperty=nameWithType> zamiast przypisywania strefy UTC do zmiennej obiektu <xref:System.TimeZoneInfo>. Zapobiega to unieważnieniu zmiennej obiektu <xref:System.TimeZoneInfo> przez wywołanie metody <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType>.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
 Ten przykład wymaga:
 
-- Że przestrzeń nazw ma zostać zaimportowana `using` przy użyciu instrukcji C# (wymaganej w kodzie). <xref:System>
+- Przestrzeń nazw <xref:System> zostać zaimportowana przy użyciu instrukcji `using` (wymagane C# w kodzie).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)
 - [Znajdowanie stref czasowych zdefiniowanych w systemie lokalnym](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-- [Instrukcje: Tworzenie wystąpienia obiektu TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)
+- [Instrukcje: Tworzenie wystąpień obiektów TimeZoneInfo](../../../docs/standard/datetime/instantiate-time-zone-info.md)

@@ -1,23 +1,21 @@
 ---
-title: Minimalne wartości DWORD wydania dla każdej wersji systemu .NET Framework
+title: Minimalna wartość wartości DWORD wersji dla każdej wersji .NET Framework
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 - .NET Framework, minimum version value
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cc5808229e0d3f467b886f6572bc767d5f1dd0ab
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: ceed1a3b3793f763e76a5ae769312bf6e534f1ec
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170468"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126280"
 ---
-# <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>Minimalne wartości DWORD wersji .NET Framework 4.5 i nowsze wersje
+# <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>Minimalne wartości w polu DWORD wydania dla .NET Framework 4,5 i nowszych wersji
 
-W poniższej tabeli przedstawiono minimalną wartość **wersji** wpis dla każdej wersji systemu .NET Framework. W tej tabeli można użyć, aby ustalić, czy aplikacja jest uruchomiona w określonej wersji programu .NET Framework, niezależnie od platformy.
+W poniższej tabeli wymieniono minimalną wartość wpisu **Release** dla każdej wersji .NET Framework. Za pomocą tej tabeli można określić, czy aplikacja działa w określonej wersji .NET Framework niezależnie od platformy.
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
@@ -29,7 +27,7 @@ W poniższej tabeli przedstawiono minimalną wartość **wersji** wpis dla każd
 |.NET Framework 4.6|393295|
 |.NET Framework 4.6.1|394254|
 |.NET Framework 4.6.2|394802|
-|.NET framework 4.7|460798|
+|.NET Framework 4,7|460798|
 |.NET Framework 4.7.1|461308|
 |.NET Framework 4.7.2|461808|
-|.NET Framework 4.8|528040|
+|.NET Framework 4,8|528040|

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ec354fa1-1efd-41b0-bc43-b90597b6e253
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 91ab2f71e7fb74f8e0e517b566d46d61c316ebe2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 004e4f70e3385e7a71c356cce38e64d0253dcfa4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796836"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127135"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority — Interfejs
 Dostarcza metody, które generują i porównują klucze dla tożsamości i odwołań aplikacji.  
@@ -34,25 +32,25 @@ Dostarcza metody, które generują i porównują klucze dla tożsamości i odwo�
 |`IAppIdAuthority::AreReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone wystąpienia [IReferenceAppId —](ireferenceappid-interface.md) są równe. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION, aby zignorować odpowiednie informacje o wersji.|  
 |`IAppIdAuthority::AreTextualDefinitionsEqual`|Pobiera wartość wskazującą, czy dwa określone definicje ciągów są równe. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION, aby zignorować odpowiednie informacje o wersji.|  
 |`IAppIdAuthority::AreTextualReferencesEqual`|Pobiera wartość wskazującą, czy dwa określone odwołania do ciągu są równe. Można przekazać wartość flagi IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION, aby zignorować odpowiednie informacje o wersji.|  
-|`IAppIdAuthority::CreateDefinition`|Pobiera wskaźnik interfejsu do nowo wygenerowanego `IDefinitionAppId` wystąpienia, które reprezentuje zestaw w bieżącym zakresie.|  
-|`IAppIdAuthority::CreateReference`|Pobiera wskaźnik interfejsu do nowo utworzonego `IReferenceAppId` , który reprezentuje zestaw w bieżącym zakresie.|  
+|`IAppIdAuthority::CreateDefinition`|Pobiera wskaźnik interfejsu do nowo wygenerowanego wystąpienia `IDefinitionAppId`, które reprezentuje zestaw w bieżącym zakresie.|  
+|`IAppIdAuthority::CreateReference`|Pobiera wskaźnik interfejsu do nowo utworzonego `IReferenceAppId`, który reprezentuje zestaw w bieżącym zakresie.|  
 |`IAppIdAuthority::DefinitionToText`|Pobiera wersję ciągu określonego `IDefinitionAppId`przy użyciu określonych wartości flagi.|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|Pobiera wartość wskazującą, czy określony `IDefinitionAppId` i `IReferenceAppId` reprezentuje ten sam zestaw.|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|Pobiera wartość wskazującą, czy określone `IDefinitionAppId` i `IReferenceAppId` reprezentują ten sam zestaw.|  
 |`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|Pobiera wartość wskazującą, czy określony ciąg definicji i ciąg odwołania reprezentują ten sam zestaw.|  
-|`IAppIdAuthority::GenerateDefinitionKey`|Pobiera klucz ciągu, który reprezentuje określone `IDefinitionAppId` wystąpienie.|  
-|`IAppIdAuthority::GenerateReferenceKey`|Pobiera klucz ciągu, który reprezentuje określone `IReferenceAppId` wystąpienie.|  
-|`IAppIdAuthority::HashDefinition`|Pobiera klucz skrótu dla określonego `IDefinitionAppId` wystąpienia.|  
-|`IAppIdAuthority::HashReference`|Pobiera klucz skrótu dla określonego `IReferenceAppId` wystąpienia.|  
+|`IAppIdAuthority::GenerateDefinitionKey`|Pobiera klucz ciągu, który reprezentuje określone wystąpienie `IDefinitionAppId`.|  
+|`IAppIdAuthority::GenerateReferenceKey`|Pobiera klucz ciągu, który reprezentuje określone wystąpienie `IReferenceAppId`.|  
+|`IAppIdAuthority::HashDefinition`|Pobiera klucz skrótu dla określonego wystąpienia `IDefinitionAppId`.|  
+|`IAppIdAuthority::HashReference`|Pobiera klucz skrótu dla określonego wystąpienia `IReferenceAppId`.|  
 |`IAppIdAuthority::ReferenceToText`|Pobiera wersję ciągu określonego `IReferenceAppId`przy użyciu określonych wartości flagi.|  
-|`IAppIdAuthority::TextToDefinition`|Pobiera wskaźnik interfejsu do `IDefinitionAppId` wystąpienia, które reprezentuje zestaw, do którego odwołuje się określony klucz ciągu.|  
-|`IAppIdAuthority::TextToReference`|Pobiera wskaźnik interfejsu do `IReferenceAppId` wystąpienia, które reprezentuje zestaw, do którego odwołuje się określony klucz ciągu.|  
+|`IAppIdAuthority::TextToDefinition`|Pobiera wskaźnik interfejsu do wystąpienia `IDefinitionAppId`, które reprezentuje zestaw, do którego odwołuje się określony klucz ciągu.|  
+|`IAppIdAuthority::TextToReference`|Pobiera wskaźnik interfejsu do wystąpienia `IReferenceAppId`, które reprezentuje zestaw, do którego odwołuje się określony klucz ciągu.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

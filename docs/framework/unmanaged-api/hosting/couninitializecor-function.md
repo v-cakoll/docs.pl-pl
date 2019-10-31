@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50a95b8b-9766-470e-bb29-2c7ecddfd4a1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3ce0b9a40d5375f563662d73964d28724209dcd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eddc2f29da0efd9e56df710203b1d7621ffc27a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758293"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136872"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor — Funkcja
-`CoUninitializeCor` jest przestarzały.  
+`CoUninitializeCor` jest przestarzała.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,7 +32,7 @@ STDAPI_(void) CoUninitializeCor(void);
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego nie może być zwolnione z procesu. Aby całkowicie usunąć środowisko uruchomieniowe z uruchomionego procesu, należy zamknąć ten proces.  
+ Nie można zwolnić środowiska uruchomieniowego języka wspólnego z procesu. Aby całkowicie usunąć środowisko uruchomieniowe z działającego procesu, należy zamknąć ten proces.  
   
 ## <a name="see-also"></a>Zobacz także
 

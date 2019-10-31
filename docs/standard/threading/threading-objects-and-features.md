@@ -6,31 +6,29 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f25609bc3c4dd829c66a1a4514b7f1121f9c0909
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940936"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128958"
 ---
 # <a name="threading-objects-and-features"></a>Wątkowość obiektów i funkcji
 
-Wraz z <xref:System.Threading.Thread?displayProperty=nameWithType> klasy .NET zapewnia szereg klas, które ułatwiają tworzenie aplikacji wielowątkowych. Poniższe artykuły zawierają omówienie tych klas:
+Wraz z klasą <xref:System.Threading.Thread?displayProperty=nameWithType> platforma .NET udostępnia wiele klas, które ułatwiają tworzenie aplikacji wielowątkowych. W poniższych artykułach przedstawiono przegląd tych klas:
 
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Zarządzana Pula wątków](the-managed-thread-pool.md)|W tym artykule opisano <xref:System.Threading.ThreadPool?displayProperty=nameWithType> klasy, która dostarcza puli wątków roboczych, które są zarządzane przez platformy .NET.|  
-|[Czasomierze](timers.md)|W tym artykule opisano czasomierzy .NET, które mogą być używane w środowisku wielowątkowym.|
-|[Przegląd elementów podstawowych synchronizacji](overview-of-synchronization-primitives.md)|Opisuje typy, które mogą służyć do synchronizowania dostępu do udostępnionego zasobu lub kontroli wątku interakcji.|
-|[EventWaitHandle](eventwaithandle.md)|W tym artykule opisano <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> klasy, która reprezentuje zdarzenia synchronizacji wątków.|
-|[CountdownEvent](countdownevent.md)|W tym artykule opisano <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> klasy, która reprezentuje zdarzenia synchronizacji wątku, który staje się ustawić, gdy ich liczba jest równa zero.|
-|[Muteksy](mutexes.md)|W tym artykule opisano <xref:System.Threading.Mutex?displayProperty=nameWithType> klasy, która przyznaje wyłącznego dostępu do zasobu udostępnionego.|
-|[Semaphore i SemaphoreSlim](semaphore-and-semaphoreslim.md)|W tym artykule opisano <xref:System.Threading.Semaphore?displayProperty=nameWithType> klasy, która ogranicza liczbę wątków, które mogą uzyskać dostęp do udostępnionego zasobu lub pulę zasobów jednocześnie.|
-|[Barrier](barrier.md)|W tym artykule opisano <xref:System.Threading.Barrier?displayProperty=nameWithType> klasy, która implementuje wzorzec barierę koordynacji wątków w operacjach etapowe.|
-|[SpinLock](spinlock.md)|W tym artykule opisano <xref:System.Threading.SpinLock?displayProperty=nameWithType> struktury, która jest lekkie alternatywą <xref:System.Threading.Monitor?displayProperty=nameWithType> klasy dla niektórych niskiego poziomu scenariuszy blokowania.|
-|[SpinWait](spinwait.md)|W tym artykule opisano <xref:System.Threading.SpinWait?displayProperty=nameWithType> struktury, która zapewnia obsługę oczekiwania na podstawie pokrętła.|
+|[Zarządzana pula wątków](the-managed-thread-pool.md)|Opisuje klasę <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, która dostarcza pulę wątków roboczych, które są zarządzane przez platformę .NET.|  
+|[Czasomierze](timers.md)|Opisuje czasomierze programu .NET, które mogą być używane w środowisku wielowątkowym.|
+|[Przegląd elementów podstawowych synchronizacji](overview-of-synchronization-primitives.md)|Opisuje typy, których można użyć do synchronizowania dostępu do współużytkowanego zasobu lub interakcji wątku kontroli.|
+|[EventWaitHandle](eventwaithandle.md)|Opisuje klasę <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>, która reprezentuje zdarzenie synchronizacji wątku.|
+|[CountdownEvent](countdownevent.md)|Opisuje klasę <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>, która reprezentuje zdarzenie synchronizacji wątku, które zostaje ustawione, gdy jego licznik ma wartość zero.|
+|[Muteksy](mutexes.md)|Opisuje klasę <xref:System.Threading.Mutex?displayProperty=nameWithType>, która przyznaje wyłączny dostęp do zasobu udostępnionego.|
+|[Semaphore i SemaphoreSlim](semaphore-and-semaphoreslim.md)|Opisuje klasę <xref:System.Threading.Semaphore?displayProperty=nameWithType>, która ogranicza liczbę wątków, które mogą uzyskiwać dostęp do zasobów udostępnionych lub puli zasobów współbieżnie.|
+|[Barrier](barrier.md)|Opisuje klasę <xref:System.Threading.Barrier?displayProperty=nameWithType>, która implementuje wzorzec bariery do koordynacji wątków w operacjach stopniowanych.|
+|[SpinLock](spinlock.md)|Opisuje strukturę <xref:System.Threading.SpinLock?displayProperty=nameWithType>, która jest lekkim alternatywą dla klasy <xref:System.Threading.Monitor?displayProperty=nameWithType> dla pewnych scenariuszy blokowania niskiego poziomu.|
+|[SpinWait](spinwait.md)|Opisuje strukturę <xref:System.Threading.SpinWait?displayProperty=nameWithType>, która zapewnia obsługę czekania na grzbiet.|
 
 ## <a name="see-also"></a>Zobacz także
 

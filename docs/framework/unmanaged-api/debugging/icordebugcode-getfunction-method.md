@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 825840536968562a53d9e05b8a4628a1df79407d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700836"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125641"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction — Metoda
 Pobiera wartość "ICorDebugFunction" skojarzoną z tym "ICorDebugCode".  
@@ -40,7 +38,7 @@ HRESULT GetFunction (
  określoną Wskaźnik do adresu funkcji.  
   
 ## <a name="remarks"></a>Uwagi  
- `ICorDebugCode` i `ICorDebugFunction` zachowują relację jeden do jednego.  
+ `ICorDebugCode` i `ICorDebugFunction` utrzymania relacji jeden-do-jednego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

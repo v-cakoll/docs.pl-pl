@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1844da85-c031-40bf-bea4-1a3d12a36c8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbde873481aea9de94862117a99079301965f33c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fab64c31d4a73995c16d21767f4569f21c7df9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126871"
 ---
 # <a name="iappdomainsetup-interface"></a>IAppDomainSetup — Interfejs
-Udostępnia właściwości umożliwiające hosta skonfigurować <xref:System.AppDomain?displayProperty=nameWithType> typ przed wywołaniem [icorruntimehost::createdomainex —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) metodę, aby go utworzyć.  
+Udostępnia właściwości, które umożliwiają hostowi skonfigurowanie typu <xref:System.AppDomain?displayProperty=nameWithType> przed wywołaniem metody [ICorRuntimeHost:: CreateDomainEx —](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) , aby ją utworzyć.  
   
 ## <a name="properties"></a>Właściwości  
   
@@ -32,28 +30,28 @@ Udostępnia właściwości umożliwiające hosta skonfigurować <xref:System.App
 |--------------|-----------------|  
 |<xref:System.AppDomainSetup.ApplicationBase%2A>|Pobiera lub ustawia nazwę katalogu, który zawiera aplikację.|  
 |<xref:System.AppDomainSetup.ApplicationName%2A>|Pobiera lub ustawia nazwę aplikacji.|  
-|<xref:System.AppDomainSetup.CachePath%2A>|Pobiera lub ustawia nazwę obszaru określonych aplikacji której pliki są kopiowane w tle.|  
-|<xref:System.AppDomainSetup.ConfigurationFile%2A>|Pobiera lub ustawia nazwę pliku konfiguracji aplikacji.|  
-|<xref:System.AppDomainSetup.DynamicBase%2A>|Pobiera lub ustawia nazwę katalogu, gdzie przechowywane dynamicznie generowanych plików i dostępne.|  
-|<xref:System.AppDomainSetup.LicenseFile%2A>|Pobiera lub ustawia ścieżkę do pliku licencji, który jest skojarzony z tą domeną.|  
-|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Pobiera lub ustawia listę katalogów w połączeniu z <xref:System.AppDomainSetup.ApplicationBase%2A> katalogu, aby sondować zestawy prywatne.|  
-|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Pobiera lub ustawia wartość ciągu, która obejmuje lub wyklucza <xref:System.AppDomainSetup.ApplicationBase%2A> ze ścieżki wyszukiwania dla aplikacji.|  
-|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Pobiera lub ustawia nazwy katalogów, które zawierają zestawy być kopiowane w tle.|  
-|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Pobiera lub ustawia ciąg, który wskazuje, czy kopiowanie w tle jest włączony lub wyłączony. Prawidłowe wartości to "true" lub "false".|  
+|<xref:System.AppDomainSetup.CachePath%2A>|Pobiera lub ustawia nazwę obszaru określonego dla aplikacji, w której pliki są kopiowane w tle.|  
+|<xref:System.AppDomainSetup.ConfigurationFile%2A>|Pobiera lub ustawia nazwę pliku konfiguracji dla aplikacji.|  
+|<xref:System.AppDomainSetup.DynamicBase%2A>|Pobiera lub ustawia nazwę katalogu, w którym są przechowywane i dostępne dynamicznie generowane pliki.|  
+|<xref:System.AppDomainSetup.LicenseFile%2A>|Pobiera lub ustawia ścieżkę do pliku licencji skojarzonego z tą domeną.|  
+|<xref:System.AppDomainSetup.PrivateBinPath%2A>|Pobiera lub ustawia listę katalogów połączonych z katalogiem <xref:System.AppDomainSetup.ApplicationBase%2A> w celu sondowania zestawów prywatnych.|  
+|<xref:System.AppDomainSetup.PrivateBinPathProbe%2A>|Pobiera lub ustawia wartość ciągu, która zawiera lub wyklucza <xref:System.AppDomainSetup.ApplicationBase%2A> ze ścieżki wyszukiwania dla aplikacji.|  
+|<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>|Pobiera lub ustawia nazwy katalogów, które zawierają zestawy przeznaczone do kopiowania w tle.|  
+|<xref:System.AppDomainSetup.ShadowCopyFiles%2A>|Pobiera lub ustawia ciąg, który wskazuje, czy kopiowanie w tle jest włączone czy wyłączone. Prawidłowe wartości to "true" lub "false".|  
   
 ## <a name="remarks"></a>Uwagi  
- `IAppDomainSetup` Interfejsu odnosi się do zarządzanej <xref:System.IAppDomainSetup> interfejsu, który <xref:System.AppDomainSetup> typ implementuje. Zobacz <xref:System.IAppDomainSetup?displayProperty=nameWithType> szczegółowe opisy jego właściwości.  
+ Interfejs `IAppDomainSetup` odpowiada interfejsowi zarządzanemu <xref:System.IAppDomainSetup>, który implementuje typ <xref:System.AppDomainSetup>. Zobacz <xref:System.IAppDomainSetup?displayProperty=nameWithType>, aby uzyskać szczegółowe opisy jego właściwości.  
   
- `IAppDomainSetup` przedstawia informacje o powiązań zestawów, które mogą być dodawane do <xref:System.AppDomain> wystąpienia przed jego utworzenia. Na przykład można ustawić hosta <xref:System.AppDomainSetup.ApplicationBase%2A> zarządzane zestawy, właściwość, aby ustanowić katalogu głównego sondy środowisko uruchomieniowe języka wspólnego (CLR).  
+ `IAppDomainSetup` reprezentuje informacje o powiązaniu zestawu, które można dodać do wystąpienia <xref:System.AppDomain> przed jego utworzeniem. Na przykład host może ustawić właściwość <xref:System.AppDomainSetup.ApplicationBase%2A>, aby ustanowić katalog główny, który sond środowiska uruchomieniowego języka wspólnego (CLR) dla zestawów zarządzanych.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

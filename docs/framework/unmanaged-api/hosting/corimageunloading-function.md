@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: b4367214-6dac-4280-aa11-fd487ff30bc4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b488b6a887b0c66d8c17f8ea78f48f7d2ea31011
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 30e3a88140c8a438001e8428df4c5ee879c83376
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758395"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136921"
 ---
-# <a name="corimageunloading-function"></a>_CorImageUnloading — Funkcja
-Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są usuwane z pamięci.  
+# <a name="_corimageunloading-function"></a>_CorImageUnloading — Funkcja
+Powiadamia moduł ładujący, gdy obrazy modułu zarządzanego są zwolnione.  
   
- Ta funkcja nie jest zaimplementowana. Jeżeli jest wywoływana, zwraca E_NOTIMPL.  
+ Ta funkcja nie jest zaimplementowana. Jeśli zostanie wywołana, zwraca E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,16 +36,16 @@ STDAPI (VOID) _CorImageUnloading(
   
 ## <a name="parameters"></a>Parametry  
  `ImageBase`  
- [in] Wskaźnik do wyjścia lokalizację obrazu, aby zwolnić.  
+ podczas Wskaźnik do lokalizacji początkowej obrazu do zwolnienia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

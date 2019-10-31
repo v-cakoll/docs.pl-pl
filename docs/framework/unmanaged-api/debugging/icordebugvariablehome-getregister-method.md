@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetRegister Method
+title: 'ICorDebugVariableHome:: getregister — Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetRegister
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125076"
 ---
-# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome::GetRegister Method
-Pobiera rejestr, który zawiera zmienną typu lokalizacji `VLT_REGISTER`oraz podstawowego rejestru dla zmiennej o typie lokalizacji `VLT_REGISTER_RELATIVE`.  
+# <a name="icordebugvariablehomegetregister-method"></a>ICorDebugVariableHome:: getregister — Metoda
+Pobiera rejestr zawierający zmienną z typem lokalizacji `VLT_REGISTER`i podstawową rejestracją dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +35,24 @@ HRESULT GetRegister(
   
 ## <a name="parameters"></a>Parametry  
  `pRegister`  
- [out] Wartość wyliczenia cordebugregister —, która wskazuje rejestru dla zmiennej o typie lokalizacji `VLT_REGISTER`oraz podstawowego rejestru dla zmiennej o typie lokalizacji `VLT_REGISTER_RELATIVE`.  
+ określoną Wartość wyliczenia CorDebugRegister —, która wskazuje rejestr dla zmiennej z typem lokalizacji `VLT_REGISTER`i podstawowy rejestr dla zmiennej z typem lokalizacji `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda zwraca następujące wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`S_OK`|Zmienna jest w rejestrze, wskazywanym przez `pRegister` argumentu.|  
-|`E_FAIL`|Zmienna nie jest w rejestrze lub w lokalizacji rejestru powiązane z wątkiem.|  
+|`S_OK`|Zmienna znajduje się w rejestrze wskazanym przez argument `pRegister`.|  
+|`E_FAIL`|Zmienna nie znajduje się w rejestrze ani w lokalizacji względnej do rejestracji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

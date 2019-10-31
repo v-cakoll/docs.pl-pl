@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1bf9bd5d93d1affee649588138456269411d280
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6b8f287be831702dd31a8335f9b2f6447bcee540
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798670"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127666"
 ---
 # <a name="delete-function"></a>Delete, funkcja
 
@@ -48,7 +46,7 @@ podczas Ten parametr jest nieużywany.
 podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-podczas Nazwa właściwości do usunięcia. `wszName`musi być wskaźnikiem prawidłowym `LPCWSTR`.
+podczas Nazwa właściwości do usunięcia. `wszName` musi być wskaźnikiem do prawidłowej `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -72,11 +70,11 @@ Ta funkcja otacza wywołanie metody [IWbemClassObject::D Usuń](/windows/desktop
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

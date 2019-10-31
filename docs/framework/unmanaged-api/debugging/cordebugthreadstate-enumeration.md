@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ccdf18-4ec6-494d-9024-48e5c8c724f5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce252f5a4b5fbcdbbc7b70c8b1c829490f8f63e5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1ff36e8ef6b7c02eea5b02bc22587bc3889df093
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739530"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133694"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState — Wyliczenie
 Określa stan wątku do debugowania.  
@@ -39,22 +37,22 @@ typedef enum CorDebugThreadState {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`THREAD_RUN`|Wątek uruchamia się za darmo, chyba że wystąpi zdarzenie debugowania.|  
+|`THREAD_RUN`|Wątek działa swobodnie, chyba że wystąpi zdarzenie debugowania.|  
 |`THREAD_SUSPEND`|Nie można uruchomić wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger używa `CorDebugThreadState` wyliczeniu, aby kontrolować wykonywanie wątku. Stan wątku można ustawić za pomocą [ICorDebugThread::SetDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) lub [ICorDebugController::SetAllThreadsDebugState](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) metody.  
+ Debuger używa wyliczenia `CorDebugThreadState`, aby sterować wykonywaniem wątku. Stan wątku można ustawić za pomocą metody [ICorDebugThread:: SetDebugState —](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md) lub [ICorDebugController:: SetAllThreadsDebugState —](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md) .  
   
- Wywołanie zwrotne udostępniane [hostującego interfejs API](../../../../docs/framework/unmanaged-api/hosting/index.md) umożliwia przekazywanie wiadomości, przerwane stanu nie jest potrzebna.  
+ Wywołanie zwrotne obsługiwane w [interfejsie API hostingu](../../../../docs/framework/unmanaged-api/hosting/index.md) umożliwia pompowanie komunikatów, dlatego nie jest wymagany stan przerwania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

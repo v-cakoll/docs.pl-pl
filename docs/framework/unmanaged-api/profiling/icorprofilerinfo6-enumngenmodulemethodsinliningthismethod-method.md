@@ -1,19 +1,17 @@
 ---
-title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod Method
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, metoda
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 103fe1b6845edfe0a364db979557db63511f6ee3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636884"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130386"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod, metoda
 
-Zwraca moduł wyliczający do metod, które są zdefiniowane w danym module NGen i wbudowane danej metody.
+Zwraca moduł wyliczający do wszystkich metod, które są zdefiniowane w danym module NGen i wbudowana daną metodę.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,58 +28,58 @@ HRESULT EnumNgenModuleMethodsInliningThisMethod(
 ## <a name="parameters"></a>Parametry
 
 `inlinersModuleId`\
-[in] Identyfikator modułu NGen.
+podczas Identyfikator modułu NGen.
 
 `inlineeModuleId`\
-[in] Identyfikator modułu, który definiuje `inlineeMethodId`. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+podczas Identyfikator modułu, który definiuje `inlineeMethodId`. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 `inlineeMethodId`\
-[in] Identyfikator śródwierszowych metody. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+podczas Identyfikator metody wbudowanej. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 `incompleteData`\
-[out] Flaga, która wskazuje, czy `ppEnum` zawiera wszystkie metody wbudowanie danej metody.  Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+określoną Flaga wskazująca, czy `ppEnum` zawiera wszystkie metody podkreślające daną metodę.  Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 `ppEnum`\
-[out] Wskaźnik na adres modułu wyliczającego
+określoną Wskaźnik do adresu modułu wyliczającego
 
 ## <a name="remarks"></a>Uwagi
 
-`inlineeModuleId` i `inlineeMethodId` razem tworzą pełny identyfikator metodę, która może być śródwierszowa. Załóżmy na przykład moduł `A` definiuje metodę `Simple.Add`:
+`inlineeModuleId` i `inlineeMethodId` razem tworzą pełny identyfikator dla metody, która może być wbudowana. Załóżmy na przykład, że moduł `A` definiuje `Simple.Add`metody:
 
 ```csharp
 Simple.Add(int a, int b)
 { return a + b; }
 ```
 
-i definiuje moduł B `Fancy.AddTwice`:
+i moduł B definiuje `Fancy.AddTwice`:
 
 ```csharp
 Fancy.AddTwice(int a, int b)
 { return Simple.Add(a,b) + Simple.Add(a,b); }
 ```
 
-Umożliwia także przyjęto założenie, że `Fancy.AddTwice` inlines wywołanie do `SimpleAdd`. Program profilujący można użyć tego modułu wyliczającego można znaleźć wszystkie metody zdefiniowanego w module B, której wbudowane `Simple.Add`, i wynik będzie wyliczanie `AddTwice`.  `inlineeModuleId` Identyfikator modułu `A`, i `inlineeMethodId` jest identyfikatorem `Simple.Add(int a, int b)`.
+Umożliwia również założenie, że `Fancy.AddTwice` rozliczanie wywołania `SimpleAdd`. Profiler może użyć tego modułu wyliczającego, aby znaleźć wszystkie metody zdefiniowane w module B, które są wbudowane `Simple.Add`, a wynikiem będzie Wyliczenie `AddTwice`.  `inlineeModuleId` jest identyfikatorem `A`modułu, a `inlineeMethodId` jest identyfikatorem `Simple.Add(int a, int b)`.
 
-Jeśli `incompleteData` ma wartość true po funkcji zwraca wartość modułu wyliczającego nie zawiera wszystkich metod wbudowanie danej metody. Może się to zdarzyć, gdy dla jednego lub więcej bezpośrednich lub pośrednich zależności inliners moduł nie został jeszcze załadowany. Jeśli program profilujący musi dokładnych danych, należy ponowić próbę później podczas więcej są załadowane moduły, najlepiej podczas każdego ładowania modułu.
+Jeśli `incompleteData` ma wartość true po powrocie funkcji, moduł wyliczający nie zawiera wszystkich metod, które podkreślają daną metodę. Może to być spowodowane tym, że co najmniej jedna bezpośrednia lub pośrednia zależność modułu modułów nie została jeszcze załadowana. Jeśli Profiler wymaga dokładnej ilości danych, powinien ponowić próbę później, gdy więcej modułów zostanie załadowanych, najlepiej przy każdym załadowaniu modułu.
 
-`EnumNgenModuleMethodsInliningThisMethod` Metoda może służyć do obejścia ograniczeń na wbudowanie dla ReJIT. ReJIT informuje program profilujący Zmień implementację metody, a następnie utwórz nowy kod go na bieżąco. Na przykład można zmienić `Simple.Add` w następujący sposób:
+Za pomocą metody `EnumNgenModuleMethodsInliningThisMethod` można obejść ograniczenia dotyczące deReJIT. ReJIT umożliwia usłudze Profiler zmianę implementacji metody, a następnie utworzenie nowego kodu na bieżąco. Można na przykład zmienić `Simple.Add` w następujący sposób:
 
 ```csharp
 Simple.Add(int a, int b)
 { return 42; }
 ```
 
-Jednak ponieważ `Fancy.AddTwice` ma już śródwierszowych `Simple.Add`, będzie nadal mają takie samo zachowanie, tak jak poprzednio. W celu obejścia tego ograniczenia, obiekt wywołujący ma wyszukiwać wszystkie metody we wszystkich modułach tym miejscu `Simple.Add` i użyj `ICorProfilerInfo5::RequestRejit` na każdym z tych metod. Gdy metody są ponownie skompilowany, muszą nowe zachowanie `Simple.Add` zamiast stare zachowanie.
+Ponieważ jednak `Fancy.AddTwice` ma już wbudowaną `Simple.Add`, nadal ma takie samo zachowanie jak wcześniej. Aby obejść to ograniczenie, obiekt wywołujący musi wyszukać wszystkie metody we wszystkich modułach, które są wbudowane `Simple.Add` i używają `ICorProfilerInfo5::RequestRejit` dla każdej z tych metod. Po ponownym skompilowaniu metod będą one miały nowe zachowanie `Simple.Add` zamiast starego zachowania.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorProf.idl, CorProf.h
+**Nagłówek:** CorProf. idl, CorProf. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

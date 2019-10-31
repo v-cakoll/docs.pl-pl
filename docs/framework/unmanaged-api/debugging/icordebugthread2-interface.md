@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2, interfejs
+title: ICorDebugThread2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d21c221bba3ac668924003f96580bb660229ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 49d0015e9d8390a47aae7ce497dd431dfe743c36
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963002"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138671"
 ---
-# <a name="icordebugthread2-interface"></a>ICorDebugThread2, interfejs
+# <a name="icordebugthread2-interface"></a>ICorDebugThread2 — Interfejs
 Służy jako logiczne rozszerzenie interfejsu ICorDebugThread.  
   
 ## <a name="methods"></a>Metody  
@@ -31,9 +29,9 @@ Służy jako logiczne rozszerzenie interfejsu ICorDebugThread.
 |Metoda|Opis|  
 |------------|-----------------|  
 |[GetActiveFunctions, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|Pobiera tablicę wystąpień COR_ACTIVE_FUNCTION, które zawierają dane dotyczące aktywnych funkcji w ramkach wątku.|  
-|[GetConnectionID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Pobiera identyfikator połączenia dla tego `ICorDebugThread2`elementu.|  
-|[GetTaskID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Pobiera identyfikator zadania dla tego `ICorDebugThread2`elementu.|  
-|[GetVolatileOSThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Pobiera identyfikator `ICorDebugThread2`wątku systemu operacyjnego.|  
+|[GetConnectionID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|Pobiera identyfikator połączenia dla tego `ICorDebugThread2`.|  
+|[GetTaskID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|Pobiera identyfikator zadania dla tego `ICorDebugThread2`.|  
+|[GetVolatileOSThreadID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|Pobiera identyfikator wątku systemu operacyjnego dla tego `ICorDebugThread2`.|  
 |[InterceptCurrentException, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|Umożliwia debugerowi przechwycenie bieżącego wyjątku w wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -42,13 +40,13 @@ Służy jako logiczne rozszerzenie interfejsu ICorDebugThread.
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

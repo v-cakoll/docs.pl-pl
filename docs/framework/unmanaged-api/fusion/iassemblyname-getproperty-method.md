@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: e59fda62-77d5-4e37-89cb-ce7ae4627975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 351d540d226f46f180b46323e83eb1bcc71da4f0
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b86828e01fb00b12feff2ed451793c240e16e240
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796589"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134381"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty — Metoda
 Pobiera wskaźnik do właściwości, do której odwołuje się określony identyfikator właściwości.  
@@ -45,14 +43,14 @@ HRESULT GetProperty (
  określoną Zwrócone dane właściwości.  
   
  `pcbProperty`  
- [in. out] Rozmiar, w bajtach, z `pvProperty`.  
+ [in. out] Rozmiar w bajtach `pvProperty`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

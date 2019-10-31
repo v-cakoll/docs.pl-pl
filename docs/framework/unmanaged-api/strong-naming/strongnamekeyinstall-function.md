@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: e32fd546-7757-4681-be3d-658e93281e50
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9e441d4da64e9704fbda2368d2b07289aaea610a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125195"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall — Funkcja
 
@@ -42,33 +40,33 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parametry
 
 `wszKeyContainer`\
-podczas Nazwa kontenera kluczy. `wszKeyContainer`nie może być pustym ciągiem.
+podczas Nazwa kontenera kluczy. `wszKeyContainer` musi być niepustym ciągiem.
 
 `pbKeyBlob`\
 podczas Para kluczy binarnych.
 
 `cbKeyBlob`\
-podczas Rozmiar, w bajtach, z `pbKeyBlob`.
+podczas Rozmiar w bajtach `pbKeyBlob`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-`true`Po pomyślnym zakończeniu; w przeciwnym razie. `false`
+`true` po pomyślnym zakończeniu; w przeciwnym razie `false`.
 
 ## <a name="remarks"></a>Uwagi
 
 Aby usunąć kontener kluczy, użyj funkcji [StrongNameKeyDelete —](strongnamekeydelete-function.md) .
 
-Jeśli funkcja nie zakończy się pomyślnie, wywołaj funkcję StrongNameErrorInfo — w celu pobrania ostatniego wygenerowanego błędu. [](strongnameerrorinfo-function.md) `StrongNameKeyInstall`
+Jeśli funkcja `StrongNameKeyInstall` nie zakończy się pomyślnie, wywołaj funkcję [StrongNameErrorInfo —](strongnameerrorinfo-function.md) w celu pobrania ostatniego wygenerowanego błędu.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** StrongName.h
+**Nagłówek:** StrongName. h
 
-**Biblioteki** Uwzględnione jako zasób w bibliotece MsCorEE. dll
+**Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

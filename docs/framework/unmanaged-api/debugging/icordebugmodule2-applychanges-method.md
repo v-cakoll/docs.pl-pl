@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 860b87b09ee487f893a1bba2aaa34292c50ffcb7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c324019e1e62701f4f2aaba1c00948b292ba6847
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764339"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127911"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges — Metoda
-Ma zastosowanie zmian w metadanych i zmiany w kodzie języka intermediate language (MSIL) firmy Microsoft do uruchomionego procesu.  
+Stosuje zmiany w metadanych i zmiany w kodzie języka pośredniego firmy Microsoft (MSIL) do uruchomionego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,35 +38,35 @@ HRESULT ApplyChanges (
   
 ## <a name="parameters"></a>Parametry  
  `cbMetadata`  
- [in] Rozmiar w bajtach metadanych delta.  
+ podczas Rozmiar metadanych różnicowych w bajtach.  
   
  `pbMetadata`  
- [in] Bufor, który zawiera metadane delta. Adres buforu jest zwracana z [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) metody.  
+ podczas Bufor zawierający metadane różnicowe. Adres buforu jest zwracany z metody [IMetaDataEmit2:: SaveDeltaToMemory —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md) .  
   
- Względnych adresów wirtualnych (RVA) w metadanych powinna być określona względem początku kodu MSIL.  
+ Względne adresy wirtualne (RVA) w metadanych powinny być względne względem początku kodu MSIL.  
   
  `cbIL`  
- [in] Rozmiar w bajtach, zmian kodu MSIL.  
+ podczas Rozmiar (w bajtach) różnicowego kodu MSIL.  
   
  `pbIL`  
- [in] Bufor, który zawiera zaktualizowany kod MSIL.  
+ podczas Bufor zawierający zaktualizowany kod MSIL.  
   
 ## <a name="remarks"></a>Uwagi  
- `pbMetadata` Parametr jest w formacie metadanych specjalne różnicowej (jako dane wyjściowe przez [IMetaDataEmit2::SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` Trwa poprzedniego metadanych jako podstawa oraz opis poszczególnych zmian do zastosowania do tej bazy.  
+ Parametr `pbMetadata` jest w specjalnym formacie metadanych różnicowych (jako dane wyjściowe przez [IMetaDataEmit2:: SaveDeltaToMemory —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)). `pbMetadata` pobiera poprzednie metadane jako podstawowe i opisuje indywidualne zmiany, które mają zastosowanie do tej bazy.  
   
- Z kolei `pbIL[`] parametr zawiera nowy język MSIL dla zaktualizowanej metody i mają na celu całkowitego zastąpienia poprzedniego MSIL dla tej metody  
+ Z kolei parametr `pbIL[`] zawiera nowe MSIL dla zaktualizowanej metody i ma na celu całkowite zamienienie poprzedniej MSIL dla tej metody  
   
- Gdy delta MSIL i metadane zostały utworzone w pamięci w debugerze, debuger wywołuje `ApplyChanges` wysyła zmiany na środowisko uruchomieniowe języka wspólnego (CLR). Środowisko uruchomieniowe aktualizuje jego tabel metadanych, umieszcza nowe MSIL w procesie i konfiguruje kompilacji just-in-time (JIT) nowego języka MSIL. Jeśli zmiany zostały zastosowane, należy wywołać debugera [IMetaDataEmit2::ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) Aby przygotować się do edycji następnej sesji. Debuger może następnie kontynuować procesu.  
+ Po utworzeniu różnicowego MSIL i metadanych w pamięci debugera debuger wywołuje `ApplyChanges`, aby wysłać zmiany do środowiska uruchomieniowego języka wspólnego (CLR). Środowisko uruchomieniowe aktualizuje swoje tabele metadanych, umieszcza nowe MSIL w procesie i konfiguruje kompilację just-in-Time (JIT) nowej MSIL. Po zastosowaniu zmian debuger powinien wywołać [IMetaDataEmit2:: ResetENCLog —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) , aby przygotować się do następnej sesji edytowania. Debuger może następnie kontynuować proces.  
   
- Zawsze, gdy wywołuje debugera `ApplyChanges` w module, który zawiera metadane delta, powinien także wywołać [IMetaDataEmit::ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) metadanymi zmian na wszystkie kopie w metadanych tego modułu, z wyjątkiem kopiowania używany do emitowania zmiany. Jeśli kopia metadanych jakiś sposób stanie się poza zsynchronizowane z metadanymi rzeczywiste, debuger zawsze możesz Pozbywać się kopii i uzyskać nową kopię.  
+ Za każdym razem, gdy debuger wywołuje `ApplyChanges` w module, który ma metadane różnicowe, powinien również wywołać [IMetaDataEmit:: ApplyEditAndContinue —](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md) z tymi samymi metadanymi Delta we wszystkich kopiach metadanych tego modułu, z wyjątkiem kopii użytej do emisji zmian. Jeśli kopia metadanych w jakiś sposób stanie się niezsynchronizowana z rzeczywistymi metadanymi, debuger zawsze może zgłosić tę kopię i uzyskać nową kopię.  
   
- Jeśli `ApplyChanges` metoda nie powiedzie się, debugowania sesji jest w nieprawidłowym stanie i musi zostać uruchomiony ponownie.  
+ Jeśli metoda `ApplyChanges` nie powiedzie się, sesja debugowania jest w nieprawidłowym stanie i należy ją ponownie uruchomić.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

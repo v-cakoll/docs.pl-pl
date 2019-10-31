@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 54981be7104eb04ac6347ad13b61a69f40d4377c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770625"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133465"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle — Metoda
-Pobiera bieżący uchwyt active część tego ICorDebugThread.  
+Pobiera bieżące dojście dla aktywnej części tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT GetHandle (
   
 ## <a name="parameters"></a>Parametry  
  `phThreadHandle`  
- [out] Wskaźnik do HTHREAD będącego uchwytu aktywnego część tego wątku.  
+ określoną Wskaźnik do elementu HTHREAD, który jest uchwytem aktywnej części tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Uchwyt może zmienić proces wykonywany i mogą być różne dla różnych części wątku.  
+ Dojście może ulec zmianie, gdy proces jest wykonywany i może się różnić w różnych częściach wątku.  
   
- Tego dojścia jest własnością interfejsu API debugowania. Debuger powinien zduplikować go przed jego użyciem.  
+ To dojście jest własnością interfejsu API debugowania. Debuger powinien go zduplikować przed użyciem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

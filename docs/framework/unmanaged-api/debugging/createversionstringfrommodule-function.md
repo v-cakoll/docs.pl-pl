@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b68624b962ed610dbeecd3e4cead769ab1400f4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1571ff796a10c5ddcd85cc2ce130e62eab2ed8f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739210"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132085"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule — Funkcja
-Tworzy ciąg wersji ze ścieżki środowiska uruchomieniowego (języka wspólnego CLR) języka wspólnego w procesie docelowym.  
+Tworzy ciąg wersji ze ścieżki środowiska uruchomieniowego języka wspólnego (CLR) w procesie docelowym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,46 +41,46 @@ HRESULT CreateVersionStringFromModule (
   
 ## <a name="parameters"></a>Parametry  
  `pidDebuggee`  
- [in] Identyfikator procesu, w którym celem CLR jest załadowany.  
+ podczas Identyfikator procesu, w którym jest ładowany docelowe środowisko CLR.  
   
  `szModuleName`  
- [in] Pełną lub względną ścieżkę do obiektu docelowego CLR, który jest załadowany do procesu.  
+ podczas Pełna lub względna ścieżka do docelowego środowiska CLR, który jest ładowany w procesie.  
   
  `pBuffer`  
- [out] Zwraca bufor do przechowywania ciągu wersji dla elementu docelowego CLR.  
+ określoną Bufor powrotny do przechowywania ciągu wersji dla docelowego środowiska CLR.  
   
  `cchBuffer`  
- [in] Rozmiar `pBuffer`.  
+ podczas Rozmiar `pBuffer`.  
   
  `pdwLength`  
- [out] Długość ciągu wersji zwracanego przez `pBuffer`.  
+ określoną Długość ciągu wersji zwracanego przez `pBuffer`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Ciąg wersji dla elementu docelowego CLR została pomyślnie zwrócona w `pBuffer`.  
+ Ciąg wersji docelowego środowiska CLR został pomyślnie zwrócony w `pBuffer`.  
   
  E_INVALIDARG  
- `szModuleName` jest wartością null, lub element `pBuffer` lub `cchBuffer` ma wartość null. `pBuffer` i `cchBuffer` muszą być wartość null lub jest inna niż null.  
+ `szModuleName` ma wartość null lub `pBuffer` lub `cchBuffer` ma wartość null. `pBuffer` i `cchBuffer` muszą mieć wartość null lub być wartością null.  
   
  HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)  
- `pdwLength` jest większa niż `cchBuffer`. Może to być oczekiwany wynik, jeśli przekazana wartość null dla obu `pBuffer` i `cchBuffer`i sprawdzać rozmiar buforu niezbędne za pomocą `pdwLength`.  
+ `pdwLength` jest większa niż `cchBuffer`. Może to być oczekiwany wynik, jeśli przeszedł wartość null dla obu `pBuffer` i `cchBuffer`i zbadano niezbędny rozmiar buforu przy użyciu `pdwLength`.  
   
  HRESULT_FROM_WIN32(ERROR_MOD_NOT_FOUND)  
- `szModuleName` nie zawiera ścieżki do prawidłowe CLR w procesie docelowym.  
+ `szModuleName` nie zawiera ścieżki do prawidłowego środowiska CLR w procesie docelowym.  
   
- E_FAIL (lub inne kody powrotne e_)  
- `pidDebuggee` Nie można znaleźć prawidłowy proces, lub inna awaria.  
+ E_FAIL (lub inne kody powrotne E_)  
+ `pidDebuggee` nie odwołuje się do prawidłowego procesu lub innego błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja akceptuje procesu CLR, która jest identyfikowana przez `pidDebuggee` i ścieżki ciąg, który jest określony przez `szModuleName`. Ciąg wersji jest zwracany w buforze, `pBuffer` wskazuje. Ten ciąg jest nieprzezroczysta dla użytkownika funkcji; oznacza to nie ma znaczenia wewnętrzne w ciąg wersji. Jest używana wyłącznie w kontekście tej funkcji i [createdebugginginterfacefromversion — funkcja](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
+ Ta funkcja akceptuje proces CLR identyfikowany przez `pidDebuggee` i ścieżkę ciągu, która jest określona przez `szModuleName`. Ciąg wersji jest zwracany w buforze, do którego wskazuje `pBuffer`. Ten ciąg jest nieprzezroczysty dla użytkownika funkcji; oznacza to, że nie istnieje żadne wewnętrzne znaczenie w ciągu wersji. Jest używana wyłącznie w kontekście tej funkcji i [funkcji CreateDebuggingInterfaceFromVersion —](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md).  
   
- Ta funkcja powinna być wywoływana dwa razy. Gdy wywołujesz ją po raz pierwszy, przekazać wartości null dla obu `pBuffer` i `cchBuffer`. Gdy to zrobisz, rozmiar buforu, które są niezbędne do `pBuffer` zostaną zwrócone w `pdwLength`. Można następnie wywołać funkcję po raz drugi i przekaż bufor w `pBuffer` i jej rozmiar w `cchBuffer`.  
+ Ta funkcja powinna być wywoływana dwukrotnie. Po pierwszym wywołaniu należy przekazać wartość null dla obu `pBuffer` i `cchBuffer`. Gdy to zrobisz, rozmiar buforu niezbędnego do `pBuffer` zostanie zwrócony w `pdwLength`. Następnie można wywołać funkcję po raz drugi i przekazać bufor w `pBuffer` i jego rozmiar w `cchBuffer`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** dbgshim.h  
+ **Nagłówek:** dbgshim. h  
   
- **Biblioteka:** dbgshim.dll  
+ **Biblioteka:** dbgshim. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3,5 SP1

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - .NET Framework application compatibility
 - .NET Framework changes
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f547180995ec155f9121eeace109e7dfb07c7827
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cf0d556dd5df773958e24ff1efcefbc3d8a8d3a9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790112"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126332"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Zgodność aplikacji w programie .NET Framework
 
@@ -24,7 +22,7 @@ Każda aplikacja odwołuje się do określonej wersji .NET Framework, która mo�
 
 - Definiowanie platformy docelowej w programie Visual Studio.
 - Określanie platformy docelowej w pliku projektu.
-- <xref:System.Runtime.Versioning.TargetFrameworkAttribute> Zastosowanie do kodu źródłowego.
+- Zastosowanie <xref:System.Runtime.Versioning.TargetFrameworkAttribute> do kodu źródłowego.
 
 Gdy program jest uruchamiany w nowszej wersji niż dostosowana, .NET Framework będzie używać zachowania quirked do naśladowania starszej wersji dostosowanej. Innymi słowy, aplikacja zostanie uruchomiona w nowszej wersji platformy, ale działa tak, jakby była uruchomiona w starszej wersji. Wiele problemów ze zgodnością między wersjami .NET Framework jest korygowanych przez ten model quirking. Wersja .NET Framework, do której odwołuje się aplikacja, jest określana przez docelową wersję zestawu wejścia dla domeny aplikacji, w której uruchomiono kod. Wszystkie dodatkowe zestawy ładowane w tym miejscu docelowym domeny aplikacji, które .NET Framework wersji. Na przykład w przypadku pliku wykonywalnego Struktura elementów wykonywalnych jest w trybie zgodności, w którym będą uruchamiane wszystkie zestawy w tej domenie aplikacji.
 
@@ -77,5 +75,5 @@ Aby rozpocząć, wybierz typ zmiany zgodności poniżej:
 ## <a name="see-also"></a>Zobacz także
 
 - [Wersje i zależności](versions-and-dependencies.md)
-- [Co nowego](../whats-new/index.md)
+- [Co nowego?](../whats-new/index.md)
 - [Przestarzałe elementy w ułatwieniach dostępu](../whats-new/whats-obsolete.md)

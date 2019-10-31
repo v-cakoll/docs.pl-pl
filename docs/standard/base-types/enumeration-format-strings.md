@@ -1,5 +1,5 @@
 ---
-title: Wyliczanie ciągów formatujących — .NET
+title: Ciągi formatujące Wyliczenie — .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,62 +10,60 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be2e5dbe0d02bcec8974a1e52c0dce107d3bf46b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052852"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126419"
 ---
-# <a name="enumeration-format-strings"></a>Wyliczanie ciągów formatujących
+# <a name="enumeration-format-strings"></a>Ciągi formatujące Wyliczenie
 
-Możesz użyć <xref:System.Enum.ToString%2A?displayProperty=nameWithType> metodę, aby utworzyć nowy obiekt ciągu reprezentujący liczbowy, szesnastkowo lub wartości ciągu elementu członkowskiego wyliczenia. Ta metoda przyjmuje jeden wyliczenie formatowanie ciągów, aby określić wartości, które mają być zwracane.
+Za pomocą metody <xref:System.Enum.ToString%2A?displayProperty=nameWithType> można utworzyć nowy obiekt ciągu, który reprezentuje wartość liczbową, szesnastkową lub ciąg elementu członkowskiego wyliczenia. Ta metoda przyjmuje jeden z ciągów formatowania wyliczenia, aby określić wartość, która ma zostać zwrócona.
 
-W poniższych sekcjach wymieniono wyliczenie formatowanie ciągów i wartości, które zwracają. Te specyfikatory formatu nie jest rozróżniana wielkość liter.
+W poniższych sekcjach wymieniono ciągi formatowania wyliczenia i zwracane przez nie wartości. W tych specyfikatorach formatu nie jest rozróżniana wielkość liter.
 
 ## <a name="g-or-g"></a>G lub g
 
-Wyświetla wpis wyliczenia jako wartość ciągu, jeśli jest to możliwe, a w przeciwnym razie wyświetlana jest wartość całkowitą bieżącego wystąpienia. Jeśli nie zdefiniowano wyliczenia z **flagi** zestaw atrybutów, ciąg wartości każdego prawidłowego wpisu są łączone ze sobą, oddzielonych przecinkami. Jeśli **flagi** atrybut nie jest ustawiony, nieprawidłową wartość jest wyświetlana jako wpisy numeryczne. Poniższy przykład ilustruje specyfikator formatu G.
+Wyświetla wpis wyliczenia jako wartość ciągu, jeśli jest to możliwe, i w przeciwnym razie wyświetla wartość całkowitą bieżącego wystąpienia. Jeśli Wyliczenie jest zdefiniowane przy użyciu ustawionych atrybutów **flag** , wartości ciągów każdego poprawnego wpisu są łączone razem, oddzielone przecinkami. Jeśli atrybut **flags** nie jest ustawiony, nieprawidłowa wartość jest wyświetlana jako wpis liczbowy. Poniższy przykład ilustruje specyfikator formatu G.
 
 [!code-csharp[Formatting.Enum#1](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#1)]
 [!code-vb[Formatting.Enum#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#1)]
 
 ## <a name="f-or-f"></a>F lub f
 
-Wyświetla wpis wyliczenia jako wartość ciągu, jeśli jest to możliwe. Jeśli wartość, które mogą być całkowicie wyświetlane jako suma pozycji w wyliczeniu (nawet wtedy, gdy **flagi** atrybut nie jest obecny), wartości ciągu każdego wpisu prawidłowe są połączone ze sobą, oddzielonych przecinkami. Jeśli wartość nie może całkowicie określana przez wpisy wyliczenie, wartość jest formatowana jako wartość całkowitą. Poniższy przykład ilustruje specyfikator formatu F.
+Wyświetla wpis wyliczenia jako wartość ciągu, jeśli jest to możliwe. Jeśli wartość może być w pełni wyświetlana jako suma wpisów w wyliczeniu (nawet jeśli nie ma atrybutu **flags** ), wartości ciągu każdego z prawidłowych wpisów są połączone, oddzielone przecinkami. Jeśli wartość nie może być całkowicie określona przez wpisy wyliczenia, wartość jest formatowana jako wartość całkowita. Poniższy przykład ilustruje specyfikator formatu F.
 
 [!code-csharp[Formatting.Enum#2](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#2)]
 [!code-vb[Formatting.Enum#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#2)]
 
 ## <a name="d-or-d"></a>D lub d
 
-Wyświetla wpis wyliczenia jako wartość całkowitą w możliwie najkrótszym reprezentacji możliwe. Poniższy przykład ilustruje specyfikator formatu D.
+Wyświetla wpis wyliczenia jako wartość całkowitą w najkrótszej możliwej reprezentacji. Poniższy przykład ilustruje specyfikator formatu D.
 
 [!code-csharp[Formatting.Enum#3](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#3)]
 [!code-vb[Formatting.Enum#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#3)]
 
 ## <a name="x-or-x"></a>X lub x
 
-Wyświetla wpis wyliczenia jako wartość szesnastkową. Wartość jest reprezentowana z zerami zgodnie z potrzebami upewnić się, że ciąg wynikowy ma dwa znaki dla każdego bajtu w typ wyliczeniowy [bazowy typ liczbowy](xref:System.Enum.GetUnderlyingType%2A). Poniższy przykład ilustruje specyfikator formatu X. W tym przykładzie typ podstawowy elementu zarówno <xref:System.ConsoleColor> i <xref:System.IO.FileAttributes> jest <xref:System.Int32>, lub 32-bitowego (lub 4-bajtowych) całkowitą, która tworzy ciąg wyniku 8 znaków.
+Wyświetla wpis wyliczenia jako wartość szesnastkową. Wartość jest reprezentowana z wiodącymi zerami w razie potrzeby, aby upewnić się, że ciąg wynikowy ma dwa znaki dla każdego bajtu w [podstawowym typie liczbowym](xref:System.Enum.GetUnderlyingType%2A)typu wyliczenia. Poniższy przykład ilustruje specyfikator formatu X. W tym przykładzie typ podstawowy obu <xref:System.ConsoleColor> i <xref:System.IO.FileAttributes> jest <xref:System.Int32>lub 32-bitową (lub 4-bajtową) liczbą całkowitą, która tworzy 8-znakowy ciąg wynikowy.
 
 [!code-csharp[Formatting.Enum#4](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#4)]      
 [!code-vb[Formatting.Enum#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#4)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zdefiniowano wyliczenia zwanego `Colors` składający się z trzech wpisów: `Red`, `Blue`, i `Green`.
+Poniższy przykład definiuje wyliczenie o nazwie `Colors`, które składa się z trzech wpisów: `Red`, `Blue`i `Green`.
 
 [!code-csharp[Formatting.Enum#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
 [!code-vb[Formatting.Enum#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]
 
-Po zdefiniowaniu wyliczenia wystąpienie może być zadeklarowana w następujący sposób.
+Po zdefiniowaniu wyliczenia wystąpienie może być deklarowane w następujący sposób.
 
 [!code-csharp[Formatting.Enum#6](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#6)]
 [!code-vb[Formatting.Enum#6](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#6)]
 
-`Color.ToString(System.String)` Metoda następnie może służyć do wyświetlania wartości wyliczenia na różne sposoby, w zależności od specyfikatora formatu przekazane do niego.
+Metodę `Color.ToString(System.String)` można następnie użyć do wyświetlenia wartości wyliczenia na różne sposoby, w zależności od przenoszonego specyfikatora formatu.
 
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]

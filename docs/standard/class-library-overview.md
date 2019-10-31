@@ -1,5 +1,5 @@
 ---
-title: Przegląd biblioteki klas programu .NET
+title: Omówienie biblioteki klas .NET
 ms.date: 02/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -37,81 +37,79 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593509"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132846"
 ---
-# <a name="net-class-library-overview"></a>Przegląd biblioteki klas programu .NET
+# <a name="net-class-library-overview"></a>Omówienie biblioteki klas .NET
 
-Implementacje platformy .NET zawierają klasy, interfejsy, delegaty i typów wartości, które przyspiesza i zoptymalizować proces tworzenia aplikacji oraz zapewnia dostęp do funkcji systemu. W celu ułatwienia współdziałanie między językami, większość typów .NET są zgodne ze specyfikacją CLS i w związku z tym można używać z dowolnego języka programowania, w których kompilator jest zgodny z common language specification (CLS).  
+Implementacje platformy .NET obejmują klasy, interfejsy, Delegaty i typy wartości, które przyspieszają i optymalizują proces tworzenia i zapewniają dostęp do funkcji systemu. Aby ułatwić współdziałanie między językami, większość typów .NET jest zgodna ze specyfikacją CLS i dlatego może być używana z dowolnego języka programowania, którego kompilator jest zgodny ze specyfikacją języka wspólnego (CLS).  
   
- Typy .NET to podstawę, na które .NET są tworzone aplikacje, składników i formantów. Implementacje platformy .NET zawierają typy, które wykonują następujące funkcje:  
+ Typy .NET są podstawą, w której są kompilowane aplikacje, składniki i formanty platformy .NET. Implementacje programu .NET obejmują typy, które wykonują następujące funkcje:  
   
-- Reprezentuje podstawowych typów danych i wyjątki.  
+- Reprezentuje podstawowe typy danych i wyjątki.  
   
-- Hermetyzuj struktur danych.  
+- Hermetyzuj struktury danych.  
   
-- Operacje We/Wy.  
+- Wykonywanie operacji we/wy.  
   
-- Uzyskiwanie dostępu do informacji o typach załadowane.  
+- Uzyskaj dostęp do informacji o załadowanych typach.  
   
-- Wywołaj kontrolę bezpieczeństwa .NET Framework.  
+- Wywołaj .NET Framework sprawdzenia zabezpieczeń.  
   
-- Zapewnia dostęp do danych, rozbudowane GUI po stronie klienta i kontrolowane przez serwer, po stronie klienta graficznego interfejsu użytkownika.  
+- Zapewnianie dostępu do danych, rozbudowanego interfejsu GUI po stronie klienta oraz interfejsu GUI po stronie klienta.  
   
- .NET zapewnia bogaty zestaw interfejsów, a także abstrakcyjne i konkretnych klas (nieabstrakcyjna). Możesz używać konkretnych klas, ponieważ jest lub w wielu przypadkach, dziedziczyć po ich własnych klas. Aby użyć funkcjonalności interfejsu, możesz utworzyć klasę, która implementuje interfejs lub wyprowadzić klasę z jednej z klas platformy .NET, które implementuje interfejs.  
+ Platforma .NET oferuje bogaty zestaw interfejsów, a także abstrakcyjne i specyficzne klasy (nieabstrakcyjne). Klas konkretnych można użyć jako lub, w wielu przypadkach, należy utworzyć własne klasy z nich. Aby użyć funkcji interfejsu, można utworzyć klasę, która implementuje interfejs lub dziedziczyć klasy z jednej z klas .NET, które implementują interfejs.  
   
 ## <a name="naming-conventions"></a>Konwencje nazewnictwa
 
- Typy .NET wykorzystują schemat nazewnictwa kropka składni, która connotes hierarchii. Ta technika grupy powiązanych typów w przestrzeni nazw, aby mogą być przeszukiwane i łatwiej odwoływać. Pierwsza część imię i nazwisko — maksymalnie kropki (.) po prawej stronie — jest nazwą przestrzeni nazw. Ostatnia część nazwy jest nazwą typu. Na przykład `System.Collections.Generic.List<T>` reprezentuje `List<T>` typ, który należy do `System.Collections.Generic` przestrzeni nazw. Typy w <xref:System.Collections.Generic> może służyć do pracy z kolekcji ogólnych.  
+ Typy .NET używają schematu nazewnictwa składni z kropką, który oznacza hierarchię. Ta technika grupuje powiązane typy w przestrzeni nazw, dzięki czemu mogą być przeszukiwane i łatwiejsze do przywoływane. Pierwsza część pełnej nazwy — do skrajnej prawej kropki — to nazwa przestrzeni nazw. Ostatnia część nazwy jest nazwą typu. Na przykład `System.Collections.Generic.List<T>` reprezentuje typ `List<T>`, który należy do przestrzeni nazw `System.Collections.Generic`. Typy w <xref:System.Collections.Generic> mogą służyć do pracy z kolekcjami ogólnymi.  
   
- Ten schemat nazewnictwa ułatwia deweloperom biblioteki Rozszerzanie programu .NET Framework do tworzenia grup hierarchicznych typów i nazwij je w sposób spójny, zawierającego wiele użytecznych informacji. Umożliwia także typy można jednoznacznie zidentyfikować przez ich pełną nazwę (czyli według nazwy przestrzeni nazw i typ), co uniemożliwia Kolizje nazw typu. Deweloperzy biblioteki powinny używać następującej konwencji, podczas tworzenia nazwy dla ich przestrzenie nazw:  
+ Ten schemat nazewnictwa ułatwia deweloperom biblioteki rozszerzanie .NET Framework w celu tworzenia hierarchicznych grup typów i nazywania ich w spójny, informacyjny sposób. Umożliwia także jednoznaczne zidentyfikowanie typów według ich pełnej nazwy (czyli według ich przestrzeni nazw i nazwy typu), co zapobiega kolizji nazw typów. Deweloperzy biblioteki powinni używać następującej konwencji podczas tworzenia nazw dla ich przestrzeni nazw:  
   
- *CompanyName*.*TechnologyName*  
+ *NazwaFirmy*. Nr *technologii*  
   
- Na przykład, przestrzeń nazw `Microsoft.Word` odpowiada niniejszych wytycznych.  
+ Na przykład przestrzeń nazw `Microsoft.Word` jest zgodna z tymi wskazówkami.  
   
- Korzystanie z wzorców nazewnictwa do grupy powiązanych typów w przestrzeni nazw jest bardzo przydatny sposób tworzenia i zarządzania dokumentami bibliotek klas. Jednak ten schemat nazewnictwa nie ma wpływu na widoczność, dostęp do elementu członkowskiego, dziedziczenie, zabezpieczeń lub powiązania. Przestrzeń nazw można podzielić na partycje w wielu zestawach i pojedynczy zestaw może zawierać typy z wielu obszary nazw. Zestaw zawiera formalne struktury przechowywania wersji, wdrażania, zabezpieczeń, ładowania i wgląd w środowisko uruchomieniowe języka wspólnego.  
+ Użycie wzorców nazewnictwa do grupowania powiązanych typów w przestrzeni nazw to bardzo użyteczny sposób kompilowania i dokumentowania bibliotek klas. Jednak ten schemat nazewnictwa nie ma wpływu na widoczność, dostęp do elementu członkowskiego, dziedziczenie, zabezpieczenia ani powiązanie. Przestrzeń nazw może być partycjonowana w wielu zestawach, a pojedynczy zestaw może zawierać typy z wielu przestrzeni nazw. Zestaw zawiera formalną strukturę dla wersji, wdrożenia, zabezpieczeń, ładowania i widoczności w środowisku uruchomieniowym języka wspólnego.  
   
- Aby uzyskać więcej informacji na temat nazw przestrzenie nazw i typ, zobacz [Wspólny System typów](../../docs/standard/base-types/common-type-system.md).  
+ Aby uzyskać więcej informacji na temat przestrzeni nazw i nazw typów, zobacz [Common Type System](../../docs/standard/base-types/common-type-system.md).  
   
 ## <a name="system-namespace"></a>Przestrzeń nazw systemu
 
- <xref:System> Przestrzeń nazw jest przestrzeń nazw korzenia dla podstawowych typów na platformie .NET. Ta przestrzeń nazw zawiera klasy reprezentujące podstawowe typy danych używany przez wszystkie aplikacje: <xref:System.Object> (główny hierarchii dziedziczenia), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>i tak dalej. Wiele z tych typów odnoszą się do typów danych pierwotnych, które używa języka programowania. Podczas pisania kodu za pomocą typów programu .NET Framework, można użyć danego języka odpowiednich słów kluczowych podczas .NET Framework jest oczekiwany typ danych podstawowych.  
+ Przestrzeń nazw <xref:System> to główna przestrzeń nazw dla podstawowych typów w programie .NET. Ta przestrzeń nazw zawiera klasy reprezentujące podstawowe typy danych używane przez wszystkie aplikacje: <xref:System.Object> (katalog główny hierarchii dziedziczenia), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>i tak dalej. Wiele z tych typów odpowiada typom danych pierwotnych używanym przez język programowania. Podczas pisania kodu przy użyciu typów .NET Framework, można użyć słowa kluczowego odpowiedniego dla danego języka, gdy oczekiwany jest .NET Framework podstawowy typ danych.  
   
- Poniższa tabela zawiera listę typów podstawowych, że .NET dostarcza krótko opisano każdy typ i oznacza odpowiedni typ w języku Visual Basic C#, C++, i F#.  
+ Poniższa tabela zawiera listę typów podstawowych, które są używane przez platformę .NET, krótko opisuje każdy typ i wskazuje odpowiedni typ C#w C++Visual Basic, F#,, i.  
   
-|Kategoria|Nazwa klasy|Opis|Typ danych w języku Visual Basic|Typ danych w języku C#|C++/ Interfejs wiersza polecenia typ danych|F#Typ danych|  
+|Kategoria|Nazwa klasy|Opis|Typ danych Visual Basic|C#Typ danych|C++/CLI — typ danych|F#Typ danych|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Liczba całkowita|<xref:System.Byte>|8-bitowa liczba całkowita bez znaku.|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8-bitową całkowita.<br /><br /> Niezgodne ze specyfikacją CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **podpisana** **char**|**sbyte**|  
-||<xref:System.Int16>|Całkowita 16-bitowych.|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|Całkowita 32-bitowych.|**Integer**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
-||<xref:System.Int64>|Całkowita 64-bitowych.|**Long**|**long**|**__int64**|**int64**|  
-||<xref:System.UInt16>|16-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodne ze specyfikacją CLS.|**UShort**|**ushort**|**short bez znaku**|**uint16**|  
-||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodne ze specyfikacją CLS.|**UInteger**|**uint**|**unsigned int**<br /> —lub—<br /> **unsigned long**|**uint32**|  
-||<xref:System.UInt64>|64-bitowej nieoznaczonej liczby całkowitej.<br /><br /> Niezgodne ze specyfikacją CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**uint64**|  
-|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczba zmiennoprzecinkowa (32-bitowy) pojedynczej precyzji.|**Single**|**float**|**float**|**float32**<br> lub<br>**single**|  
-||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**Double**|**double**|**double**|**float**<br> lub <br> **double**|  
-|Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Boolean**|**bool**|**bool**|**bool**|  
-|Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**Char**|**char**|**wchar_t**|**char**|  
-||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**decimal**|  
-||<xref:System.IntPtr>|Liczba całkowita ze znakiem której rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
-||<xref:System.UIntPtr>|Liczbą całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowe) i 64-bitowych wartości na platformie 64-bitowej.<br /><br /> Niezgodne ze specyfikacją CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
-||<xref:System.Object>|Katalog główny hierarchii obiektów.|**Obiekt**|**object**|**Object ^**|**obj**|  
-||<xref:System.String>|Niezmienny, o stałej długości ciągu znaków Unicode.|**Ciąg**|**string**|**String ^**|**string**|  
+|Liczba całkowita|<xref:System.Byte>|8-bitowa liczba całkowita bez znaku.|**Bajc**|**byte**|**znak bez znaku**|**byte**|  
+||<xref:System.SByte>|8-bitowa liczba całkowita ze znakiem.<br /><br /> Niezgodny ze specyfikacją CLS.|**SByte**|**sbyte**|**char**<br /> —lub—<br /> **znak** ze znakiem|**sbyte**|  
+||<xref:System.Int16>|16-bitowa liczba całkowita ze znakiem.|**Wybierak**|**short**|**short**|**Int16**|  
+||<xref:System.Int32>|32-bitowa liczba całkowita ze znakiem.|**Całkowitą**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
+||<xref:System.Int64>|64-bitowa liczba całkowita ze znakiem.|**Długo**|**long**|**__int64**|**Int64**|  
+||<xref:System.UInt16>|16-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodny ze specyfikacją CLS.|**UShort**|**ushort**|**bez znaku Short**|**UInt16**|  
+||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodny ze specyfikacją CLS.|**UInteger —**|**uint**|**niepodpisany int**<br /> —lub—<br /> **bez znaku**|**równ**|  
+||<xref:System.UInt64>|64-bitowa liczba całkowita bez znaku.<br /><br /> Niezgodny ze specyfikacją CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**UInt64**|  
+|Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczba zmiennoprzecinkowa o pojedynczej precyzji (32-bitowej).|**Wiersz**|**float**|**float**|**float32**<br> lub<br>**single**|  
+||<xref:System.Double>|Liczba zmiennoprzecinkowa o podwójnej precyzji (64-bitowej).|**Double**|**double**|**double**|**float**<br> lub <br> **double**|  
+|logicznej|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Typu**|**bool**|**bool**|**bool**|  
+|Inne|<xref:System.Char>|Znak Unicode (16-bitowy).|**Delikatn**|**char**|**wchar_t**|**char**|  
+||<xref:System.Decimal>|Wartość dziesiętna (128-bitowa).|**Dokładności**|**decimal**|**Dokładności**|**decimal**|  
+||<xref:System.IntPtr>|Liczba całkowita ze znakiem, której rozmiar zależy od podstawowej platformy (wartość 32-bitowa na platformie 32-bitowej i 64-bitowej na platformie 64-bitowej).|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
+||<xref:System.UIntPtr>|Liczba całkowita bez znaku, której rozmiar zależy od podstawowej platformy (wartość 32-bitowa na platformie 32-bitowej i 64-bitowej wartości na platformie 64-bitowej).<br /><br /> Niezgodny ze specyfikacją CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**unativeint —**|  
+||<xref:System.Object>|Katalog główny hierarchii obiektów.|**Stream**|**object**|**Obiekt ^**|**obiektów**|  
+||<xref:System.String>|Niezmienny ciąg o stałej długości znaków Unicode.|**Ciąg**|**string**|**Ciąg ^**|**string**|  
   
- Oprócz podstawowe typy danych <xref:System> przestrzeń nazw zawiera klasy ponad 100, począwszy od klas, które obsługi wyjątków do klas, które zajmują się podstawowe koncepcje środowiska uruchomieniowego, takich jak domeny aplikacji i moduł odśmiecania pamięci. <xref:System> Przestrzeń nazw zawiera także wiele nazw drugiego poziomu.  
+ Oprócz podstawowych typów danych, przestrzeń nazw <xref:System> zawiera ponad 100 klas, od klas, które obsługują wyjątki dla klas, które obejmują podstawowe koncepcje środowiska uruchomieniowego, takie jak domeny aplikacji i moduł wyrzucania elementów bezużytecznych. Przestrzeń nazw <xref:System> również zawiera wiele przestrzeni nazw drugiego poziomu.  
   
- Aby uzyskać więcej informacji na temat przestrzenie nazw, należy użyć [przeglądarka interfejsu API .NET](https://docs.microsoft.com/dotnet/api) do przeglądania biblioteki klas programu .NET. Dokumentacja referencyjna interfejsu API zawiera dokumentację w każdej przestrzeni nazw, jego typy i wszystkich ich elementów członkowskich.  
+ Aby uzyskać więcej informacji na temat przestrzeni nazw, należy użyć [przeglądarki interfejsu API .NET](https://docs.microsoft.com/dotnet/api) do przeglądania biblioteki klas .NET. Dokumentacja dotycząca interfejsów API zawiera dokumentację dla każdej przestrzeni nazw, jej typów i każdego z nich.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [System typu wspólnego](../../docs/standard/base-types/common-type-system.md)
-- [Przeglądarka interfejsu API .NET](../../api/index.md)
+- [Przeglądarka interfejsów API platformy .NET](../../api/index.md)
 - [Omówienie](../../docs/framework/get-started/overview.md)

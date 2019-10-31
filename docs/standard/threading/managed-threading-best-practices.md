@@ -10,14 +10,12 @@ helpviewer_keywords:
 - threading [.NET Framework], best practices
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1066a3533dedd5976f2dd73b1858ad8fa0c1f653
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 26b0535fa918a802dd0922554ae197ba10396d56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129566"
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzane wątki z najlepszymi rozwiązaniami
 Wielowątkowość wymaga starannego programowania. W przypadku większości zadań można zmniejszyć złożoność przez kolejkowanie żądań na potrzeby wykonywania przez wątki puli wątków. Ten temat dotyczy trudniejszych sytuacji, takich jak koordynacja pracy wielu wątków lub obsługa wątków, które blokują.  
@@ -62,7 +60,7 @@ else {
 ### <a name="race-conditions"></a>Warunki wyścigu  
  Sytuacja wyścigu jest usterką, która występuje, gdy wynik programu zależy od tego, co dwa lub więcej wątków osiągną określony blok kodu jako pierwszy. Uruchamianie programu wiele razy daje różne wyniki, a wynik danego uruchomienia nie może być przewidywany.  
   
- Prosty przykład warunku wyścigu powoduje zwiększenie pola. Załóżmy, że Klasa ma prywatne pole **statyczne** (**udostępniane** w Visual Basic), które jest zwiększane za każdym razem, gdy tworzone jest wystąpienie klasy, przy użyciu kodu, takiego jak @no__t-C#2 () lub `objCt += 1` (Visual Basic). Ta operacja wymaga załadowania wartości z `objCt` do rejestru, zwiększenia wartości i zapisania jej w `objCt`.  
+ Prosty przykład warunku wyścigu powoduje zwiększenie pola. Załóżmy, że Klasa ma prywatne pole **statyczne** (**udostępniane** w Visual Basic), które jest zwiększane za każdym razem, gdy tworzone jest wystąpienie klasy, przy użyciu kodu, takiego jakC#`objCt++;` () lub `objCt += 1` (Visual Basic). Ta operacja wymaga załadowania wartości z `objCt` do rejestru, zwiększając wartość i przechowując ją w `objCt`.  
   
  W aplikacji wielowątkowej wątek, który został załadowany i zwiększony wartość może zostać przeniesiona przez inny wątek, który wykonuje wszystkie trzy kroki; gdy pierwszy wątek wznawia wykonywanie i przechowuje jego wartość, zastępuje `objCt` bez uwzględniania faktu, że wartość została zmieniona w tymczasowym.  
   
@@ -71,9 +69,9 @@ else {
  Sytuacje wyścigu mogą również wystąpić podczas synchronizowania działań wielu wątków. Za każdym razem, gdy piszesz wiersz kodu, należy wziąć pod uwagę to, co może się zdarzyć, jeśli wątek został przemieszczony przed wykonaniem wiersza (lub przed dowolnym z instrukcji poszczególnych maszyn, które składają się na linię), a inny wątek przejdzie do niego.  
   
 ## <a name="static-members-and-static-constructors"></a>Statyczne elementy członkowskie i konstruktory statyczne  
- Klasa nie została zainicjowana, dopóki jej Konstruktor klas (Konstruktor @no__t- C#0 w, `Shared Sub New` w Visual Basic) zakończył działanie. Aby zapobiec wykonywaniu kodu w typie, który nie został zainicjowany, środowisko uruchomieniowe języka wspólnego blokuje wszystkie wywołania z innych wątków do `static` elementów członkowskich klasy (`Shared` członków w Visual Basic) do momentu zakończenia działania konstruktora klasy.  
+ Klasa nie została zainicjowana, dopóki jej Konstruktor klas (Konstruktor C#`static` w, `Shared Sub New` w Visual Basic) zakończył działanie. Aby zapobiec wykonywaniu kodu w typie, który nie został zainicjowany, środowisko uruchomieniowe języka wspólnego blokuje wszystkie wywołania z innych wątków do `static` elementów członkowskich klasy (`Shared` elementy członkowskie w Visual Basic) do momentu zakończenia działania konstruktora klasy.  
   
- Na przykład jeśli Konstruktor klasy uruchamia nowy wątek, a procedura wątku wywołuje element członkowski `static` klasy, nowy wątek jest blokowany do momentu ukończenia konstruktora klasy.  
+ Na przykład, jeśli Konstruktor klasy uruchamia nowy wątek, a procedura wątku wywołuje `static` składową klasy, nowe bloki wątku do momentu ukończenia konstruktora klasy.  
   
  Dotyczy to dowolnego typu, który może mieć Konstruktor `static`.  
 
@@ -88,19 +86,19 @@ Użyj właściwości <xref:System.Environment.ProcessorCount?displayProperty=nam
   
 - Nie używaj <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, aby zakończyć inne wątki. Wywołanie metody **Abort** w innym wątku jest zbliżone, aby zgłaszać wyjątek w tym wątku, bez znajomości tego, który punkt został osiągnięty w jego przetwarzaniu.  
   
-- Nie używaj <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> do synchronizowania działań wielu wątków. Użyj <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent> i <xref:System.Threading.Monitor>.  
+- Nie używaj <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> i <xref:System.Threading.Thread.Resume%2A?displayProperty=nameWithType> do synchronizowania działań wielu wątków. Używaj <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent>, <xref:System.Threading.AutoResetEvent>i <xref:System.Threading.Monitor>.  
   
-- Nie Kontroluj wykonywania wątków roboczych z głównego programu (na przykład przy użyciu zdarzeń). Zamiast tego Zaprojektuj program tak, aby wątki robocze były odpowiedzialne za oczekiwanie na dostępność, wykonanie tej operacji i powiadomienie innych części programu po zakończeniu. Jeśli wątki robocze nie są blokowane, należy rozważyć użycie wątków puli wątków. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> jest przydatny w sytuacjach, w których działa blok wątków roboczych.  
+- Nie Kontroluj wykonywania wątków roboczych z głównego programu (na przykład przy użyciu zdarzeń). Zamiast tego Zaprojektuj program tak, aby wątki robocze były odpowiedzialne za oczekiwanie na dostępność, wykonanie tej operacji i powiadomienie innych części programu po zakończeniu. Jeśli wątki robocze nie są blokowane, należy rozważyć użycie wątków puli wątków. <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> jest przydatna w sytuacjach, w których działa blok wątków roboczych.  
   
-- Nie używaj typów jako obiektów blokady. Oznacza to, że należy unikać kodu, takiego jak @no__t C# -0 w lub `SyncLock(GetType(X))` w Visual Basic, lub użycie <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> z <xref:System.Type> obiektów. Dla danego typu istnieje tylko jedno wystąpienie <xref:System.Type?displayProperty=nameWithType> dla domeny aplikacji. Jeśli typ, w którym jest wykonywane zablokowanie, jest publiczny, kod inny niż własny może być na nim zablokowany, prowadząc do zakleszczenia. Aby uzyskać dodatkowe problemy, zobacz [najlepsze rozwiązania dotyczące niezawodności](../../../docs/framework/performance/reliability-best-practices.md).  
+- Nie używaj typów jako obiektów blokady. Oznacza to, że należy unikać kodu, takiego C# jak `lock(typeof(X))` in lub `SyncLock(GetType(X))` w Visual Basic lub użycia <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> z obiektami <xref:System.Type>. Dla danego typu istnieje tylko jedno wystąpienie <xref:System.Type?displayProperty=nameWithType> na domenę aplikacji. Jeśli typ, w którym jest wykonywane zablokowanie, jest publiczny, kod inny niż własny może być na nim zablokowany, prowadząc do zakleszczenia. Aby uzyskać dodatkowe problemy, zobacz [najlepsze rozwiązania dotyczące niezawodności](../../../docs/framework/performance/reliability-best-practices.md).  
   
-- Należy zachować ostrożność podczas blokowania na wystąpieniach, na przykład @no__t C# -0 w lub `SyncLock(Me)` w Visual Basic. Jeśli inny kod w aplikacji, zewnętrzny dla tego typu, przyjmuje blokadę obiektu, mogą wystąpić zakleszczenia.  
+- Należy zachować ostrożność podczas blokowania na wystąpieniach, na C# przykład `lock(this)` w lub `SyncLock(Me)` w Visual Basic. Jeśli inny kod w aplikacji, zewnętrzny dla tego typu, przyjmuje blokadę obiektu, mogą wystąpić zakleszczenia.  
   
-- Upewnij się, że wątek, który został wprowadzony do monitora, zawsze opuszcza ten monitor, nawet jeśli wystąpi wyjątek, gdy wątek jest w monitorze. C# Instrukcja [Lock](../../csharp/language-reference/keywords/lock-statement.md) i instrukcja Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) umożliwiają automatyczne udostępnienie tego zachowania, przy użyciu bloku **finally** , aby upewnić się, że jest wywoływana <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Jeśli nie można zagwarantować, że **wyjście** zostanie wywołane, Rozważ zmianę projektu w celu użycia **muteksu**. Element mutex jest automatycznie wydawany, gdy wątek, który jest aktualnie do przerwania.  
+- Upewnij się, że wątek, który został wprowadzony do monitora, zawsze opuszcza ten monitor, nawet jeśli wystąpi wyjątek, gdy wątek jest w monitorze. C# Instrukcja [Lock](../../csharp/language-reference/keywords/lock-statement.md) i instrukcja Visual Basic [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) umożliwiają automatyczne udostępnienie tego zachowania, przy użyciu bloku **finally** , aby upewnić się, że <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> jest wywoływana. Jeśli nie można zagwarantować, że **wyjście** zostanie wywołane, Rozważ zmianę projektu w celu użycia **muteksu**. Element mutex jest automatycznie wydawany, gdy wątek, który jest aktualnie do przerwania.  
   
 - Używaj wielu wątków dla zadań, które wymagają różnych zasobów i nie należy przypisywać wielu wątków do pojedynczego zasobu. Na przykład każde zadanie związane z korzyściami we/wy z posiadania własnego wątku, ponieważ ten wątek zostanie zablokowany podczas operacji we/wy i w ten sposób zezwala na wykonywanie innych wątków. Dane wejściowe użytkownika to inne zasoby, które są korzyści z dedykowanego wątku. Na komputerze z jednym procesorem zadanie, które obejmuje intensywne obliczenia, zawiera dane wejściowe użytkownika i zadania, które obejmują operacje we/wy, ale wiele zadań intensywnie korzystających z obliczeń będą konkurować o ze sobą.  
   
-- Rozważ użycie metod klasy <xref:System.Threading.Interlocked> w przypadku prostych zmian stanu zamiast używania instrukcji `lock` (`SyncLock` w Visual Basic). Instrukcja `lock` jest dobrym narzędziem ogólnego przeznaczenia, ale Klasa <xref:System.Threading.Interlocked> zapewnia lepszą wydajność dla aktualizacji, które muszą być niepodzielne. Wewnętrznie wykonuje pojedynczy prefiks blokady w przypadku braku rywalizacji. W przeglądach kodu Obejrzyj kod podobny do przedstawionego w poniższych przykładach. W pierwszym przykładzie zmienna stanu jest zwiększana:  
+- Należy rozważyć użycie metod klasy <xref:System.Threading.Interlocked> dla prostych zmian stanu, zamiast używać instrukcji `lock` (`SyncLock` w Visual Basic). Instrukcja `lock` jest dobrym narzędziem ogólnego przeznaczenia, ale Klasa <xref:System.Threading.Interlocked> zapewnia lepszą wydajność dla aktualizacji, które muszą być niepodzielne. Wewnętrznie wykonuje pojedynczy prefiks blokady w przypadku braku rywalizacji. W przeglądach kodu Obejrzyj kod podobny do przedstawionego w poniższych przykładach. W pierwszym przykładzie zmienna stanu jest zwiększana:  
   
     ```vb  
     SyncLock lockObject  
@@ -115,7 +113,7 @@ Użyj właściwości <xref:System.Environment.ProcessorCount?displayProperty=nam
     }  
     ```  
   
-     Wydajność można zwiększyć przy użyciu metody <xref:System.Threading.Interlocked.Increment%2A> zamiast instrukcji `lock` w następujący sposób:  
+     Można zwiększyć wydajność przy użyciu metody <xref:System.Threading.Interlocked.Increment%2A> zamiast instrukcji `lock`, w następujący sposób:  
   
     ```vb  
     System.Threading.Interlocked.Increment(myField)  

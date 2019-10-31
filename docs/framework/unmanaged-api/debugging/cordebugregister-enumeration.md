@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003bb138-7960-4291-ac88-0d87e470ff70
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bed3c461935c5a2bc912ed9ed16d147fddaf8a1a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d182476130e611e57df232c9652cda4bec002c31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739655"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132777"
 ---
 # <a name="cordebugregister-enumeration"></a>CorDebugRegister — Wyliczenie
-Określa rejestrów związane z architekturą procesora w danym.  
+Określa rejestry skojarzone z daną architekturą procesora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -118,96 +116,96 @@ typedef enum CorDebugRegister {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`REGISTER_INSTRUCTION_POINTER`|Wskaźnik instrukcji rejestrowania na każdy procesor.|  
-|`REGISTER_STACK_POINTER`|Wskaźnik stosu, zarejestruj się na każdy procesor.|  
-|`REGISTER_FRAME_POINTER`|Wskaźnik ramki, zarejestruj się na każdy procesor.|  
-|`REGISTER_X86_EIP`|Rejestr wskaźnika instrukcji na x86 procesora.|  
-|`REGISTER_X86_ESP`|Rejestr wskaźnika stosu na x86 procesora.|  
-|`REGISTER_X86_EBP`|Podstawowy wskaźnik, zarejestruj się na x86 procesora.|  
-|`REGISTER_X86_EAX`|Rejestr danych A na x86 procesora.|  
-|`REGISTER_X86_ECX`|Rejestr danych C na x86 procesora.|  
-|`REGISTER_X86_EDX`|D dane rejestrują się x86 procesora.|  
-|`REGISTER_X86_EBX`|Rejestr danych B na x86 procesora.|  
-|`REGISTER_X86_ESI`|Źródło indeks rejestru w x86 procesora.|  
-|`REGISTER_X86_EDI`|Rejestr indeksu docelowego na x86 procesora.|  
-|`REGISTER_X86_FPSTACK_0`|Procesor rejestru 0 na x86 zmiennoprzecinkowych (FP) stosu.|  
-|`REGISTER_X86_FPSTACK_1`|Stos #1 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_2`|Stos #2 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_3`|Stos #3 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_4`|Stos #4 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_5`|Stos #5 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_6`|Stos #6 rejestrują się x86 FP procesora.|  
-|`REGISTER_X86_FPSTACK_7`|Stos #7 rejestrują się x86 FP procesora.|  
-|`REGISTER_AMD64_RIP`|Zarejestruj wskaźnik instrukcji w procesorze AMD64.|  
-|`REGISTER_AMD64_RSP`|Wskaźnik stosu, zarejestruj się na procesorze AMD64.|  
-|`REGISTER_AMD64_RBP`|Podstawowy wskaźnik, zarejestruj się na procesorze AMD64.|  
-|`REGISTER_AMD64_RAX`|Rejestr danych A na procesorze AMD64.|  
-|`REGISTER_AMD64_RCX`|Zarejestruj dane C na systemów z procesorem AMD64.|  
-|`REGISTER_AMD64_RDX`|Zarejestruj D dane na procesorze AMD64.|  
-|`REGISTER_AMD64_RBX`|Rejestrowanie danych B na procesorze AMD64.|  
-|`REGISTER_AMD64_RSI`|Indeks źródła, zarejestruj się na procesorze AMD64.|  
-|`REGISTER_AMD64_RDI`|Indeksu docelowego, zarejestruj się na procesorze AMD64.|  
-|`REGISTER_AMD64_R8`|Zarejestruj dane #8 na procesorze AMD64.|  
-|`REGISTER_AMD64_R9`|Zarejestruj dane #9 na procesorze AMD64.|  
-|`REGISTER_AMD64_R10`|Zarejestruj dane #10 na procesorze AMD64.|  
-|`REGISTER_AMD64_R11`|Zarejestruj dane #11 na procesorze AMD64.|  
-|`REGISTER_AMD64_R12`|Zarejestruj dane #12 na procesorze AMD64.|  
-|`REGISTER_AMD64_R13`|Zarejestruj dane #13 na procesorze AMD64.|  
-|`REGISTER_AMD64_R14`|Zarejestruj dane #14 na procesorze AMD64.|  
-|`REGISTER_AMD64_R15`|Zarejestruj dane #15 na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM0`|#0 multimedialnych zarejestrować na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM1`|Zarejestruj #1 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM2`|Zarejestruj #2 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM3`|Zarejestruj #3 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM4`|Zarejestruj #4 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM5`|Zarejestruj #5 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM6`|Zarejestruj #6 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM7`|Zarejestruj #7 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM8`|Zarejestruj #8 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM9`|Zarejestruj #9 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM10`|Zarejestruj #10 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM11`|Zarejestruj #11 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM12`|Zarejestruj #12 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM13`|Zarejestruj #13 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM14`|Zarejestruj #14 multimedialnych na procesorze AMD64.|  
-|`REGISTER_AMD64_XMM15`|Zarejestruj #15 multimedialnych na procesorze AMD64.|  
-|`REGISTER_IA64_BSP`|Wskaźnik stosu, zarejestruj się na procesorze IA-64.|  
-|`REGISTER_IA64_R0`|Zarejestruj dane #0 na procesorze IA-64.|  
-|`REGISTER_IA64_F0`|Zarejestruj dane FP #0 na procesorze IA-64.|  
-|`REGISTER_ARM_PC`|Licznik programu Zarejestruj (R15) w procesorze ARM.|  
-|`REGISTER_ARM_SP`|Wskaźnik stosu Zarejestruj (R13) w procesorze ARM.|  
-|`REGISTER_ARM_R0`|Data zarejestrowania R0 procesora ARM.|  
-|`REGISTER_ARM_R1`|Data zarejestrowania R1 procesora ARM.|  
-|`REGISTER_ARM_R2`|Data zarejestrowania R2 procesora ARM.|  
-|`REGISTER_ARM_R3`|Data zarejestrowania R3 procesora ARM.|  
-|`REGISTER_ARM_R4`|Zarejestruj R4 procesora ARM.|  
-|`REGISTER_ARM_R5`|Zarejestruj R5 procesora ARM.|  
-|`REGISTER_ARM_R6`|Zarejestruj R6 procesora ARM.|  
-|`REGISTER_ARM_R7`|Zarejestruj R7 (THUMB wskaźnika ramki) na procesorze ARM.|  
-|`REGISTER_ARM_R8`|Zarejestruj R8 procesora ARM.|  
-|`REGISTER_ARM_R9`|Zarejestruj R9 procesora ARM.|  
-|`REGISTER_ARM_R10`|Zarejestruj R10 procesora ARM.|  
-|`REGISTER_ARM_R11`|Wskaźnik ramki procesora ARM.|  
-|`REGISTER_ARM_R12`|Zarejestruj R12 procesora ARM.|  
-|`REGISTER_ARM_LR`|Rejestr link (R14) w procesorze ARM.|  
+|`REGISTER_INSTRUCTION_POINTER`|Zarejestrowano wskaźnik instrukcji na dowolnym procesorze.|  
+|`REGISTER_STACK_POINTER`|Zarejestrowano Wskaźnik stosu na dowolnym procesorze.|  
+|`REGISTER_FRAME_POINTER`|Rejestr wskaźnika ramki na dowolnym procesorze.|  
+|`REGISTER_X86_EIP`|Wskaźnik instrukcji jest rejestrowany na procesorze x86.|  
+|`REGISTER_X86_ESP`|Wskaźnik stosu jest rejestrowany na procesorze x86.|  
+|`REGISTER_X86_EBP`|Podstawowy wskaźnik rejestracji na procesorze x86.|  
+|`REGISTER_X86_EAX`|Rejestr danych na procesorze x86.|  
+|`REGISTER_X86_ECX`|Rejestr danych języka C na procesorze x86.|  
+|`REGISTER_X86_EDX`|Rejestr danych D na procesorze x86.|  
+|`REGISTER_X86_EBX`|Rejestr danych B na procesorze x86.|  
+|`REGISTER_X86_ESI`|Indeks źródła jest rejestrowany na procesorze x86.|  
+|`REGISTER_X86_EDI`|Indeks docelowy jest rejestrowany na procesorze x86.|  
+|`REGISTER_X86_FPSTACK_0`|Stos rejestruje 0 na procesorze zmiennoprzecinkowym x86 (FP).|  
+|`REGISTER_X86_FPSTACK_1`|#1 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_2`|#2 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_3`|#3 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_4`|#4 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_5`|#5 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_6`|#6 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_X86_FPSTACK_7`|#7 zarejestrować stos na procesorze x86 FP.|  
+|`REGISTER_AMD64_RIP`|Wskaźnik instrukcji jest rejestrowany na procesorze AMD64.|  
+|`REGISTER_AMD64_RSP`|Wskaźnik stosu jest rejestrowany na procesorze AMD64.|  
+|`REGISTER_AMD64_RBP`|Podstawowy wskaźnik rejestru na procesorze AMD64.|  
+|`REGISTER_AMD64_RAX`|Rejestr danych na procesorze AMD64.|  
+|`REGISTER_AMD64_RCX`|Rejestr danych języka C na procesorze AMD64.|  
+|`REGISTER_AMD64_RDX`|Rejestr D na procesorze AMD64.|  
+|`REGISTER_AMD64_RBX`|Rejestr danych B na procesorze AMD64.|  
+|`REGISTER_AMD64_RSI`|Indeks źródła jest rejestrowany na procesorze AMD64.|  
+|`REGISTER_AMD64_RDI`|Indeks docelowy rejestruje się w procesorze AMD64.|  
+|`REGISTER_AMD64_R8`|Rejestr danych #8 na procesorze AMD64.|  
+|`REGISTER_AMD64_R9`|Rejestr danych #9 na procesorze AMD64.|  
+|`REGISTER_AMD64_R10`|Rejestr danych #10 na procesorze AMD64.|  
+|`REGISTER_AMD64_R11`|Rejestr danych #11 na procesorze AMD64.|  
+|`REGISTER_AMD64_R12`|Rejestr danych #12 na procesorze AMD64.|  
+|`REGISTER_AMD64_R13`|Rejestr danych #13 na procesorze AMD64.|  
+|`REGISTER_AMD64_R14`|Rejestr danych #14 na procesorze AMD64.|  
+|`REGISTER_AMD64_R15`|Rejestr danych #15 na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM0`|#0 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM1`|#1 Rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM2`|#2 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM3`|#3 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM4`|#4 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM5`|#5 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM6`|#6 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM7`|#7 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM8`|#8 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM9`|#9 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM10`|#10 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM11`|#11 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM12`|#12 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM13`|#13 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM14`|#14 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_AMD64_XMM15`|#15 rejestr multimedialny na procesorze AMD64.|  
+|`REGISTER_IA64_BSP`|Wskaźnik stosu jest rejestrowany w procesorze IA-64.|  
+|`REGISTER_IA64_R0`|#0 zarejestrować dane w procesorze IA-64.|  
+|`REGISTER_IA64_F0`|Rejestr danych FP #0 w procesorze IA-64.|  
+|`REGISTER_ARM_PC`|Rejestr licznika programu (R15) na procesorze ARM.|  
+|`REGISTER_ARM_SP`|Rejestr wskaźnika stosu (R13) na procesorze ARM.|  
+|`REGISTER_ARM_R0`|R0 rejestru danych w procesorze ARM.|  
+|`REGISTER_ARM_R1`|Rejestr danych R1 w procesorze ARM.|  
+|`REGISTER_ARM_R2`|Rejestr danych R2 w procesorze ARM.|  
+|`REGISTER_ARM_R3`|Zarejestruj dane R3 na procesorze ARM.|  
+|`REGISTER_ARM_R4`|Zarejestruj R4 na procesorze ARM.|  
+|`REGISTER_ARM_R5`|Zarejestruj R5 na procesorze ARM.|  
+|`REGISTER_ARM_R6`|Zarejestruj R6 na procesorze ARM.|  
+|`REGISTER_ARM_R7`|Zarejestruj R7 (wskaźnik ramki KCIUKa) na procesorze ARM.|  
+|`REGISTER_ARM_R8`|Zarejestruj R8 na procesorze ARM.|  
+|`REGISTER_ARM_R9`|Zarejestruj R9 na procesorze ARM.|  
+|`REGISTER_ARM_R10`|Zarejestruj R10 na procesorze ARM.|  
+|`REGISTER_ARM_R11`|Wskaźnik ramki na procesorze ARM.|  
+|`REGISTER_ARM_R12`|Zarejestruj R12 na procesorze ARM.|  
+|`REGISTER_ARM_LR`|Rejestracja linku (R14) na procesorze ARM.|  
   
 ## <a name="remarks"></a>Uwagi  
- Brak rejestrów 128 danych ogólnego przeznaczenia i 128 rejestrów zmiennoprzecinkowych danych na procesorach IA-64 procesora, ale tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0` są dostarczane. Inne wartości mogą być określane w następujący sposób:  
+ Istnieją 128 rejestrów danych ogólnego przeznaczenia i 128 rejestrów danych zmiennoprzecinkowych w procesorze IA-64, ale podano tylko wartości `REGISTER_IA64_R0` i `REGISTER_IA64_F0`. Inne wartości można określić w następujący sposób:  
   
-- Dodaj numer rejestru w celu `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pośrednictwem `REGISTER_IA64_R127`, które odpowiadają rejestru #1 danych za pośrednictwem rejestru #127 danych w procesorze IA-64.  
+- Dodaj numer rejestru do `REGISTER_IA64_R0` wartości `REGISTER_IA64_R1` za pomocą `REGISTER_IA64_R127`, który odpowiada #1 rejestru danych przez #127 rejestru danych w procesorze IA-64.  
   
-- Dodaj numer rejestru w celu `REGISTER_IA64_F0` wartości `REGISTER_IA64_F1` za pośrednictwem `REGISTER_IA64_F127`, które są zgodne Rejestr danych FP #1 do #127 Rejestr danych FP na procesorze IA-64.  
+- Dodaj numer rejestru do `REGISTER_IA64_F0` dla wartości `REGISTER_IA64_F1` za pomocą `REGISTER_IA64_F127`, który odpowiada rejestrowi danych z #1 FP za pomocą rejestru #127 FP w ramach procesora IA-64.  
   
- Na przykład, jeśli zachodzi potrzeba Określ rejestr #83 danych w procesorze IA-64, użyj `REGISTER_IA64_R0` + 83.  
+ Na przykład, jeśli konieczne jest określenie #83 rejestru danych w procesorze IA-64, należy użyć `REGISTER_IA64_R0` + 83.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

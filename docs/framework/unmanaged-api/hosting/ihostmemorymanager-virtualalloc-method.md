@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4dff3646-a050-4bd9-ac31-fe307e8637ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a0764cb212a95412a4dcf9455b7648ee863951e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dd588fa85ff8aaa396a8d0e52a738ada46c2a9b1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767666"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128617"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc — Metoda
-Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualAlloc` rezerwuje lub zwalnia region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
+Służy jako otoka logiczna dla odpowiadającej jej funkcji Win32. Implementacja Win32 `VirtualAlloc` rezerwuje lub zatwierdza region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,48 +40,48 @@ HRESULT VirtualAlloc (
   
 ## <a name="parameters"></a>Parametry  
  `pAddress`  
- [in] Wskaźnik do adres początkowy regionów do przydzielenia.  
+ podczas Wskaźnik do adresu początkowego regionu do przydzielenia.  
   
  `dwSize`  
- [in] Rozmiar w bajtach, regionu.  
+ podczas Rozmiar, w bajtach, regionu.  
   
  `flAllocationType`  
- [in] Typ alokacji pamięci.  
+ podczas Typ alokacji pamięci.  
   
  `flProtect`  
- [in] Ochrona pamięci dla regionu stron do przydzielenia.  
+ podczas Ochrona pamięci dla regionu stron do przydzielenia.  
   
  `dwCriticalLevel`  
- [in] [Ememorycriticallevel —](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) wartość, która wskazuje wpływ wystąpił błąd alokacji.  
+ podczas Wartość [EMemoryCriticalLevel —](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md) , która wskazuje wpływ błędu alokacji.  
   
  `ppMem`  
- [out] Wskaźnik na adres początkowy ilość przydzielonej pamięci lub wartość null, jeśli żądanie nie mogło zostać spełnione.  
+ określoną Wskaźnik na adres początkowy przydzieloną pamięć lub wartość null, jeśli nie można spełnić żądania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`VirtualAlloc` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|E_OUTOFMEMORY|Za mało pamięci była dostępna do wykonania żądania alokacji|  
+|S_OK|`VirtualAlloc` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|E_OUTOFMEMORY|Za mało dostępnej pamięci, aby ukończyć żądanie alokacji|  
   
 ## <a name="remarks"></a>Uwagi  
- Możesz zarezerwować region przestrzeni adresowej procesu, wywołując `VirtualAlloc`. `pAddress` Parametr zawiera adres początkowy bloku pamięci, które chcesz. Ten parametr jest zazwyczaj ustawiony na wartość null. System operacyjny jest rejestrowana wolnego adresu zakresy dostępne w danym procesie. A `pAddress` wartości null powoduje, że systemu, aby zarezerwować region wszędzie tam, gdzie za stosowny. Alternatywnie możesz podać określony adres początkowy dla bloku pamięci. W obu przypadkach, parametr wyjściowy `ppMem` jest zwracana jako wskaźnik do alokacji pamięci. Ta funkcja zwraca wartość HRESULT.  
+ Zarezerwuj region w przestrzeni adresowej procesu przez wywołanie `VirtualAlloc`. Parametr `pAddress` zawiera początkowy adres żądanego bloku pamięci. Ten parametr ma zazwyczaj wartość null. System operacyjny przechowuje rekord bezpłatnych zakresów adresów dostępnych dla danego procesu. `pAddress` wartość null Nakazuje systemowi zarezerwowanie regionu wszędzie tam, gdzie jest to zgodne. Alternatywnie można podać konkretny adres początkowy bloku pamięci. W obu przypadkach parametr wyjściowy `ppMem` jest zwracany jako wskaźnik do przydzieloną pamięci. Sama funkcja zwraca wartość HRESULT.  
   
- Win32 `VirtualAlloc` funkcja nie ma `ppMem` parametru, a zamiast tego zwraca wskaźnik do ilość przydzielonej pamięci. Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.  
+ Funkcja Win32 `VirtualAlloc` nie ma parametru `ppMem` i zwraca zamiast niego wskaźnik do przydzieloną pamięci. Aby uzyskać więcej informacji, zobacz dokumentację platformy systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

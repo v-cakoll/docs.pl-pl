@@ -1,5 +1,5 @@
 ---
-title: Środki zaradcze Obsługa dotykowa i pióra na podstawie wskaźnika
+title: 'Środki zaradcze: Obsługa dotykowa i pióra oparta na wskaźnikach'
 ms.date: 04/07/2017
 helpviewer_keywords:
 - retargeting changes
@@ -7,24 +7,22 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 41a587b343e4774a27e9ddc39080de6939839d93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779238"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126201"
 ---
-# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Środki zaradcze Obsługa dotykowa i pióra na podstawie wskaźnika
+# <a name="mitigation-pointer-based-touch-and-stylus-support"></a>Środki zaradcze: Obsługa dotykowa i pióra oparta na wskaźnikach
 
-Aplikacje WPF, które są przeznaczone dla .NET Framework 4,7 i działają w systemach Windows, począwszy od aktualizacji systemu Windows 10 Creators `WM_POINTER`, mogą umożliwić opcjonalny stos dotykowy/pióra WPF.
+Aplikacje WPF, które są przeznaczone dla .NET Framework 4,7 i działają w systemach Windows, począwszy od aktualizacji systemu Windows 10 Creators, mogą włączyć opcjonalny stos dotykowy/pióra WPF oparty na `WM_POINTER`.
 
 ## <a name="impact"></a>Wpływ
 
 Deweloperzy, którzy nie umożliwiają jawnie włączania obsługi dotykowej opartej na wskaźnikach, nie powinni zmieniać zachowań dotykowych i pióra WPF.
 
-Poniżej przedstawiono bieżące znane problemy z opcjonalnym `WM_POINTER`stosem dotyk/piórem:
+Poniżej znajdują się obecnie znane problemy z opcjonalnym stosem dotykowy/piórem na `WM_POINTER`:
 
 - Brak obsługi pisma odręcznego w czasie rzeczywistym.
 
@@ -52,7 +50,7 @@ Deweloperzy, którzy chcą włączyć ten stos, mogą dodać następujące eleme
 </configuration>
 ```
 
-Usunięcie tego wpisu lub ustawienie jego wartości powoduje `false` wyłączenie tego opcjonalnego stosu.
+Usunięcie tego wpisu lub ustawienie jego wartości `false` powoduje wyłączenie tego opcjonalnego stosu.
 
 ## <a name="see-also"></a>Zobacz także
 

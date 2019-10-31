@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133685"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason — Wyliczenie
 Wskazuje wynik pojedynczego kroku.  
@@ -44,22 +42,22 @@ typedef enum CorDebugStepReason {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`STEP_NORMAL`|Przechodzenie krok po kroku zakończone normalnie w ramach tej samej funkcji.|  
-|`STEP_RETURN`|Przechodzenie krok po kroku nadal normalnie po wartość zwrócona przez funkcję.|  
-|`STEP_CALL`|Na początku nowo wywołana funkcja przechodzenie krok po kroku nadal normalnie.|  
-|`STEP_EXCEPTION_FILTER`|Wyjątek został wygenerowany i formant został przekazany do filtra wyjątku.|  
-|`STEP_EXCEPTION_HANDLER`|Wyjątek został wygenerowany i formant został przekazany do obsługi wyjątków.|  
-|`STEP_INTERCEPT`|Formant został przekazany do interceptor.|  
-|`STEP_EXIT`|Wątek został zakończony przed ukończeniem kroku.|  
+|`STEP_NORMAL`|Przechodzenie do normalnego działania w ramach tej samej funkcji.|  
+|`STEP_RETURN`|Dalsze dalsze przechodzenie po zwróceniu funkcji.|  
+|`STEP_CALL`|Dalsze przechodzenie dalej na początku nowo wywołanej funkcji.|  
+|`STEP_EXCEPTION_FILTER`|Wygenerowano wyjątek i kontrola została przeniesiona do filtru wyjątków.|  
+|`STEP_EXCEPTION_HANDLER`|Wygenerowano wyjątek i kontrola została przeniesiona do procedury obsługi wyjątków.|  
+|`STEP_INTERCEPT`|Kontrolka została przeniesiona do interceptora.|  
+|`STEP_EXIT`|Wątek zakończył działanie przed ukończeniem kroku.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

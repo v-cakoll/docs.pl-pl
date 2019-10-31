@@ -14,14 +14,12 @@ helpviewer_keywords:
 - InheritsFrom function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c32c54ec56ea0fe4f4039ca6438a91338edbadb
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6bda63377251e3a208dfb1620896535ccdf8ccd8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798449"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127432"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom, funkcja
 Określa, czy bieżąca Klasa lub wystąpienie pochodzi z określonej klasy nadrzędnej.
@@ -47,7 +45,7 @@ podczas Ten parametr jest nieużywany.
 podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszAncestor`  
-podczas Nazwa klasy. `wszAncestor`musi wskazywać prawidłowy `LPCWSTR`.
+podczas Nazwa klasy. `wszAncestor` musi wskazywać prawidłowy `LPCWSTR`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -56,19 +54,19 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | Bieżący obiekt dziedziczy z `wszAncestor`.  |
-| `WBEM_S_FALSE` | 1 | Bieżący obiekt nie dziedziczy po elemencie `wszAncestor`. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor`jest `null`. |
+| `WBEM_S_FALSE` | 1 | Bieżący obiekt nie dziedziczy po `wszAncestor`. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` jest `null`. |
   
 ## <a name="remarks"></a>Uwagi
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) .
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

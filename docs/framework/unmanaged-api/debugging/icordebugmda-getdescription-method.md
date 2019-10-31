@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01d1b481-ca67-4712-8744-d342ec0df639
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da57ecf0c153d902322798e1927c995a34cb93d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bfe77982b88b2fc96dc2846b9db04df28bfc0c38
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67761986"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131452"
 ---
 # <a name="icordebugmdagetdescription-method"></a>ICorDebugMDA::GetDescription — Metoda
-Pobiera ciąg zawierający opis zarządzanego Asystenta debugowania (MDA), reprezentowana przez [icordebugmda —](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
+Pobiera ciąg zawierający opis zarządzanego asystenta debugowania (MDA) reprezentowanego przez [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +38,25 @@ HRESULT GetDescription (
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- [in] Rozmiar buforu ciągu, w którym będą przechowywane opis.  
+ podczas Rozmiar buforu ciągu, który będzie przechowywać opis.  
   
  `pcchName`  
- [out] Wskaźnik do liczby bajtów zwróconych w buforu ciągu.  
+ określoną Wskaźnik do liczby bajtów zwróconych w buforze ciągów.  
   
  `szName`  
- [out] Bufor ciągu zawierający opis MDA.  
+ określoną Bufor ciągu zawierający opis MDA.  
   
 ## <a name="remarks"></a>Uwagi  
- Ciąg może być zerowej długości.  
+ Ciąg może mieć długość zero.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

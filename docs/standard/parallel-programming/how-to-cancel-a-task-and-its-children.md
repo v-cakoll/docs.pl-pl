@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Anulowanie zadania i jego elementów podrzędnych'
+title: 'Porady: anulowanie zadania i jego elementów podrzędnych'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,35 +8,33 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4e0e783a4dfe3bf3a55795d7baef461369d7405a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134203"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>Instrukcje: Anulowanie zadania i jego elementów podrzędnych
-Te przykłady przedstawiają sposób wykonywania następujących zadań:  
+# <a name="how-to-cancel-a-task-and-its-children"></a>Porady: anulowanie zadania i jego elementów podrzędnych
+W poniższych przykładach pokazano, jak wykonywać następujące zadania:  
   
-1. Tworzenie i uruchamianie można anulować zadania.  
+1. Utwórz i uruchom zadanie z możliwością anulowania.  
   
-2. Przekaż token anulowania w swoim delegacie użytkownika i opcjonalnie wystąpienia zadania.  
+2. Przekaż token anulowania do delegata użytkownika i opcjonalnie do wystąpienia zadania.  
   
-3. Zwróć uwagę, a odpowiedź na żądanie anulowania w swoim delegacie użytkownika.  
+3. Zwróć uwagę i Odpowiedz na żądanie anulowania w oddelegowaniu użytkownika.  
   
-4. Opcjonalnie Zwróć uwagę na wątku wywołującym czy zadanie zostało anulowane.  
+4. Opcjonalnie Zwróć uwagę na wątek wywołujący, że zadanie zostało anulowane.  
   
- Wątek wywołujący nie kończy wymuszone zadania; tylko sygnalizuje, że zażądano anulowania. Jeśli zadanie jest już uruchomiony, jest do pełnomocnika użytkownika Zwróć uwagę, żądania i odpowiednio reagować. Czy zażądano anulowania przed uruchomieniem zadania, pełnomocnika użytkownika nigdy nie jest wykonywana, a obiekt zadania przechodzi do stanu Canceled.  
+ Wątek wywołujący nie wymusi zakończyć zadania; tylko sygnalizuje to żądanie anulowania. Jeśli zadanie jest już uruchomione, należy do delegata użytkownika, aby zwrócić uwagę na żądanie i odpowiednio odpowiedzieć. Jeśli przed uruchomieniem zadania zostanie wysłane żądanie anulowania, delegat użytkownika nigdy nie zostanie wykonany, a obiekt zadania przechodzi do stanu anulowane.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie pokazano, jak zakończyć <xref:System.Threading.Tasks.Task> i jego elementy podrzędne w odpowiedzi na żądanie anulowania. Pokazano także, czy po użytkownik delegować kończy się, zwracając <xref:System.Threading.Tasks.TaskCanceledException>, opcjonalnie możesz skorzystać z wątku wywołującego <xref:System.Threading.Tasks.Task.Wait%2A> metody lub <xref:System.Threading.Tasks.Task.WaitAll%2A> metodę, aby czekać na zakończenie zadań. W takim przypadku należy użyć `try/catch` bloku obsługi wyjątków na wątku wywołującym.  
+ Ten przykład pokazuje, jak przerwać <xref:System.Threading.Tasks.Task> i jego elementy podrzędne w odpowiedzi na żądanie anulowania. Pokazuje również, że po zakończeniu delegata użytkownika przez wyrzucanie <xref:System.Threading.Tasks.TaskCanceledException>, wątek wywołujący może opcjonalnie użyć metody <xref:System.Threading.Tasks.Task.Wait%2A> lub metody <xref:System.Threading.Tasks.Task.WaitAll%2A>, aby poczekać na zakończenie zadań. W takim przypadku należy użyć bloku `try/catch`, aby obsłużyć wyjątki w wątku wywołującym.  
   
  [!code-csharp[TPL_Cancellation#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_cancellation/cs/cancel1.cs#04)]
  [!code-vb[TPL_Cancellation#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_cancellation/vb/cancel1.vb#04)]  
   
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> Klasy jest w pełni zintegrowana z anulowania, który jest oparty na <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> i <xref:System.Threading.CancellationToken?displayProperty=nameWithType> typów. Aby uzyskać więcej informacji, zobacz [anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md) i [anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md).  
+ Klasa <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> jest w pełni zintegrowana z modelem anulowania opartym na typach <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> i <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Aby uzyskać więcej informacji, zobacz [Anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md) i [Anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

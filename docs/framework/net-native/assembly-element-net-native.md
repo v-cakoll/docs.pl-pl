@@ -1,17 +1,15 @@
 ---
-title: <Assembly>— Element (.NET Native)
+title: Element <Assembly> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1743264996680c6a0ce308619d7a5bafef5d07a5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049921"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128507"
 ---
-# <a name="assembly-element-net-native"></a>\<Zestaw > element (.NET Native)
+# <a name="assembly-element-net-native"></a>Element > zestawu \<(.NET Native)
 Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w określonym zestawie.  
   
 ## <a name="syntax"></a>Składnia  
@@ -42,9 +40,9 @@ Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w okre�
 |`Browse`|Odbicie|Atrybut opcjonalny. Kontroluje wykonywanie zapytań dotyczących informacji na temat lub wyliczanie typów w zestawie, ale nie umożliwia dostępu dynamicznego w czasie wykonywania.|  
 |`Dynamic`|Odbicie|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do wszystkich elementów członkowskich typu, takich jak konstruktory, metody, pola, właściwości i zdarzenia, aby umożliwić programowanie dynamiczne.|  
 |`Serialize`|Serializacja|Atrybut opcjonalny. Kontroluje dostęp środowiska uruchomieniowego do konstruktorów, pól i właściwości, aby umożliwić Serializowanie i deserializacja wystąpień typów przez biblioteki, takie jak serializator JSON Newtonsoft.|  
-|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji, która używa <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> klasy.|  
-|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON używającej <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType> klasy.|  
-|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> klasy.|  
+|`DataContractSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji korzystającej z klasy <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.|  
+|`DataContractJsonSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji JSON korzystającej z klasy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>.|  
+|`XmlSerializer`|Serializacja|Atrybut opcjonalny. Kontroluje zasady dla serializacji XML, która używa klasy <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.|  
 |`MarshalObject`|Interop|Atrybut opcjonalny. Kontroluje zasady dotyczące organizowania typów odwołań do środowisko wykonawcze systemu Windows i COM.|  
 |`MarshalDelegate`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania typów delegatów jako wskaźników funkcji do kodu natywnego.|  
 |`MarshalStructure`|Interop|Atrybut opcjonalny. Steruje zasadami organizowania struktur w kodzie natywnym.|  
@@ -53,33 +51,33 @@ Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w okre�
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*assembly_name*|Prosta nazwa zestawu bez rozszerzenia pliku. Ten atrybut odpowiada <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości. Na przykład nazwa zestawu o nazwie Extensions. dll ma wartość "Extensions".<br /><br /> Możesz również określić ciąg `*Application*` literału, aby zastosować zasady do wszystkich zestawów w pakiecie aplikacji, niezależnie od tego, czy te zestawy zostały załadowane. `*Application*`nie stosuje zasad do .NET Framework zestawów.|  
+|*assembly_name*|Prosta nazwa zestawu bez rozszerzenia pliku. Ten atrybut odpowiada właściwości <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Na przykład nazwa zestawu o nazwie Extensions. dll ma wartość "Extensions".<br /><br /> Możesz również określić ciąg literału `*Application*`, aby zastosować zasady do wszystkich zestawów w pakiecie aplikacji, niezależnie od tego, czy te zestawy zostały załadowane. `*Application*` nigdy nie stosuje zasad do .NET Framework zestawów.|  
   
 ## <a name="all-other-attributes"></a>Wszystkie inne atrybuty  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla wszystkich typów w zestawie. Możliwe wartości to `All`, `Auto` `Excluded` ,,`Public` ,,`Required All`, i. `PublicAndInternal` `Required Public` `Required PublicAndInternal` Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
+|*policy_setting*|Ustawienie, które ma zostać zastosowane do tego typu zasad dla wszystkich typów w zestawie. Możliwe wartości to `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal`i `Required All`. Aby uzyskać więcej informacji, zobacz [Ustawienia zasad dyrektywy środowiska uruchomieniowego](runtime-directive-policy-settings.md).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Namespace>](namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
-|[\<Type>](type-element-net-native.md)|Stosuje zasady odbicia do typu.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
+|[\<przestrzeni nazw >](namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w podrzędnej przestrzeni nazw.|  
+|[Typ\<](type-element-net-native.md)|Stosuje zasady odbicia do typu.|  
+|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> Aplikacji](application-element-net-native.md)|Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania. Element > `<Assembly>` aplikacji może mieć zero, jeden lub więcej elementów. [ \<](application-element-net-native.md)|  
-|[\<> Biblioteki](library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania. Biblioteka > element może mieć zero lub jeden `<Assembly>` element. [ \<](library-element-net-native.md)|  
+|[\<> aplikacji](application-element-net-native.md)|Służy jako kontener dla typów i składowych dla całej aplikacji, których metadane są dostępne do odbicia w czasie wykonywania. Element [\<> aplikacji](application-element-net-native.md) może mieć zero, jeden lub więcej elementów `<Assembly>`.|  
+|[Biblioteka \<](library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania. [\<biblioteki >](library-element-net-native.md) element może mieć zero lub jeden element `<Assembly>`.|  
   
 ## <a name="remarks"></a>Uwagi  
- `<Assembly>` Element definiuje zasady środowiska uruchomieniowego dla wszystkich typów w zestawie. Różni się od [ \<elementu > biblioteki](library-element-net-native.md) , który określa bibliotekę, ale zależy od jej elementów podrzędnych, aby zdefiniować zasady odbicia środowiska uruchomieniowego. `<Assembly>` Element ma zastosowanie do wszystkich typów w zestawie, chyba że zostaną zastąpione przez element podrzędny.  
+ Element `<Assembly>` definiuje zasady środowiska uruchomieniowego dla wszystkich typów w zestawie. Różni się od elementu [\<library >](library-element-net-native.md) , który określa bibliotekę, ale zależy od jej elementów podrzędnych, aby zdefiniować zasady odbicia środowiska uruchomieniowego. Element `<Assembly>` ma zastosowanie do wszystkich typów w zestawie, chyba że zostaną zastąpione przez element podrzędny.  
   
- Poniższy przykład pokazuje, jak można zastosować zasady środowiska uruchomieniowego do wszystkich typów w zestawach w pakiecie aplikacji, przypisując `Name` atrybutowi wartość "* aplikacja\*". Element musi być elementem podrzędnym [ \<elementu > aplikacji.](application-element-net-native.md) `<Assembly>`  
+ Poniższy przykład pokazuje, jak można zastosować zasady środowiska uruchomieniowego do wszystkich typów w zestawach w pakiecie aplikacji, przypisując atrybut `Name` wartość "* Application\*". Element `<Assembly>` musi być elementem podrzędnym elementu [\<aplikacji >](application-element-net-native.md) .  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">   
@@ -89,7 +87,7 @@ Stosuje zasady odbicia środowiska uruchomieniowego do wszystkich typów w okre�
 </Directives>  
 ```  
   
- Atrybuty `Activate`, `Browse`, `Dynamic`i sąopcjonalne.`Serialize` `<Assembly>` Jednak element musi zawierać co najmniej jeden z tych atrybutów.  
+ Atrybuty `Activate`, `Browse`, `Dynamic`i `Serialize` są opcjonalne. Jednak element `<Assembly>` musi zawierać co najmniej jeden z tych atrybutów.  
   
 ## <a name="see-also"></a>Zobacz także
 

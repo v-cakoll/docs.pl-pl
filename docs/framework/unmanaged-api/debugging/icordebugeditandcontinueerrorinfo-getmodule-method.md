@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 292f1255-5dfd-427f-844e-781d4b938f9a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 446a66661f10f0292100951eb842110887c636a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6a04bdb68149fcc659fa45acc5856c3cebc9a56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989168"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137012"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetmodule-method"></a>ICorDebugEditAndContinueErrorInfo::GetModule — Metoda
-`GetModule` jest przestarzały. Nie wywołuj tej metody.  
+`GetModule` jest przestarzała. Nie wywołuj tej metody.  
   
 ## <a name="see-also"></a>Zobacz także
 

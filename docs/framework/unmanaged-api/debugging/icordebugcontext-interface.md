@@ -1,5 +1,5 @@
 ---
-title: ICorDebugContext, interfejs
+title: ICorDebugContext — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugContext
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1000e24d9952f13aa41ff2b85339dd64c14d175e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 25c7894fef13b1cca96e9a1d0acaf70001630e30
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125479"
 ---
-# <a name="icordebugcontext-interface"></a>ICorDebugContext, interfejs
+# <a name="icordebugcontext-interface"></a>ICorDebugContext — Interfejs
 
 Reprezentuje obiekt kontekstu. Ten Interfejs nie został jeszcze implementowany.  
   
@@ -33,13 +31,13 @@ Reprezentuje obiekt kontekstu. Ten Interfejs nie został jeszcze implementowany.
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

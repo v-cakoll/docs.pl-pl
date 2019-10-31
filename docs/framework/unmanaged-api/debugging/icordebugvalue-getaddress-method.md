@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5dc29663153f837b660262eae51b6f032617d027
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765068"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137101"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress — Metoda
 Pobiera adres tego obiektu "ICorDebugValue", który jest w trakcie debugowania.  
@@ -37,18 +35,18 @@ HRESULT GetAddress (
   
 ## <a name="parameters"></a>Parametry  
  `pAddress`  
- [out] Wskaźnik do `CORDB_ADDRESS` obiekt, który określa adres obiektu tej wartości.  
+ określoną Wskaźnik do obiektu `CORDB_ADDRESS`, który określa adres tego obiektu wartości.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wartość jest niedostępna, zwracany jest 0 (zero). To może się zdarzyć, jeśli wartość wynosi co najmniej częściowo w rejestrach ani przechowywane na uchwyt modułu odśmiecania pamięci (`GCHandle`).  
+ Jeśli wartość jest niedostępna, zwracana jest wartość 0 (zero). Może się tak zdarzyć, jeśli wartość jest co najmniej częściowo w rejestrach lub przechowywana w dojściu do modułu zbierającego elementy bezużyteczne (`GCHandle`).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

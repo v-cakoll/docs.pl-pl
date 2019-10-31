@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769980"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131358"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters — Metoda
-Pobiera wartość każdego rejestru (dla platformy, na którym aktualnie wykonuje kod) określonej przez dany bitowej maski.  
+Pobiera wartość każdego rejestru (dla platformy, w której kod jest aktualnie wykonywany), która jest określona przez daną maskę bitową.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,34 +38,34 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>Parametry  
  `maskCount`  
- [in] Rozmiar w bajtach z `mask` tablicy.  
+ podczas Rozmiar (w bajtach) tablicy `mask`.  
   
  `mask`  
- [in] Tablica bajtów, każdy bit odnosi się do rejestru. Jeśli bit ma wartość 1, zostanie pobrana wartość w odpowiednim rejestrze.  
+ podczas Tablica bajtów, z których każdy bit odnosi się do rejestru. Jeśli bit wynosi 1, zostanie pobrana odpowiednia wartość rejestru.  
   
  `regCount`  
- [in] Liczba wartości rejestru, które mają zostać pobrane.  
+ podczas Liczba wartości rejestru do pobrania.  
   
  `regBuffer`  
- [out] Tablica `CORDB_REGISTER` obiektów, z których każdy otrzymuje wartość rejestru.  
+ określoną Tablica obiektów `CORDB_REGISTER`, z których każdy otrzymuje wartość rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetRegisters` Metoda zwraca tablicę wartości z rejestrów, określonych przez maskę. Tablica nie zawiera wartości rejestrów, w których bit maski nie jest ustawiony. Dlatego rozmiar `regBuffer` tablicy musi być równa liczbie 1 maski. Jeśli wartość `regCount` jest zbyt mały dla liczby rejestrów wskazywanym przez maskę wartości wyższej rejestrów numerowane zostanie obcięta z zestawu. Jeśli `regCount` jest zbyt duży, nieużywane `regBuffer` elementy zostaną zostały zmodyfikowane.  
+ Metoda `GetRegisters` zwraca tablicę wartości z rejestrów, które są określone przez maskę. Tablica nie zawiera wartości rejestrów, których bit maski nie jest ustawiony. W ten sposób rozmiar tablicy `regBuffer` musi być równy liczbie 1 w masce. Jeśli wartość `regCount` jest za mała dla liczby rejestrów wskazywanych przez maskę, wartości wyższych numerowanych rejestrów zostaną obcięte z zestawu. Jeśli `regCount` jest zbyt duży, nieużywane elementy `regBuffer` będą niemodyfikowane.  
   
- Jeśli rejestrowanie niedostępne jest wskazywany przez maskę, nieokreślona wartość zwracaną dla tego rejestru.  
+ Jeśli niedostępna Rejestracja jest wskazywana przez maskę, zostanie zwrócona wartość nieokreślona dla tego rejestru.  
   
- `ICorDebugRegisterSet2::GetRegisters` Metoda jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestrów ogólnego przeznaczenia i 128 rejestrów zmiennoprzecinkowych, dlatego potrzebujesz więcej niż 64-bitowej maski bitowej.  
+ Metoda `ICorDebugRegisterSet2::GetRegisters` jest niezbędna dla platform, które mają więcej niż 64 rejestrów. Na przykład IA64 ma 128 rejestry ogólnego przeznaczenia i 128 rejestry zmiennoprzecinkowe, więc potrzebujesz więcej niż 64-bitów w masce bitowej.  
   
- Jeśli nie masz więcej niż 64 rejestry, tak jak w przypadku na platformach takich jak x86, `GetRegisters` metody w rzeczywistości po prostu tłumaczy bajtów w `mask` tablicy typu byte do `ULONG64` , a następnie wywołuje [ICorDebugRegisterSet:: Getregisters —](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) metody, która przyjmuje `ULONG64` maski.  
+ Jeśli nie ma więcej niż 64 rejestrów, tak jak w przypadku platform, takich jak x86, Metoda `GetRegisters` faktycznie tłumaczy bajty w tablicy `mask` bajtów na `ULONG64`, a następnie wywołuje metodę [ICorDebugRegisterSet:: GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md) , która przyjmuje maskę `ULONG64`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

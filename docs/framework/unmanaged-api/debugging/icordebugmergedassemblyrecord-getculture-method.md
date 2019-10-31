@@ -2,14 +2,12 @@
 title: 'ICorDebugMergedAssemblyRecord:: getculture — Metoda'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f39a1f17c80d27a38c0f2a8a516405f72c79bbcf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131425"
 ---
 # <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: getculture — Metoda
 Pobiera ciąg nazwy kultury zestawu.  
@@ -26,10 +24,10 @@ HRESULT GetCulture(
   
 ## <a name="parameters"></a>Parametry  
  `cchCulture`  
- podczas Liczba znaków w `szCulture` buforze.  
+ podczas Liczba znaków w buforze `szCulture`.  
   
  `pcchCulture`  
- określoną Liczba znaków rzeczywiście zapisywana `szCulture` w buforze.  
+ określoną Liczba znaków rzeczywiście zapisywana w buforze `szCulture`.  
   
  `szCulture`  
  określoną Tablica znaków, która zawiera nazwę kultury.  
@@ -41,13 +39,13 @@ HRESULT GetCulture(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

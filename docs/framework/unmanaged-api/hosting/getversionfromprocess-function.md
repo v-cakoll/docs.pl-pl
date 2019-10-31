@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a9f7f824-64a1-408d-8607-91c7f19d21fe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 76c033b11f3212241827d74f4fe18ee881f20b64
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127038"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess — Funkcja
-Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR) skojarzony z określonym dojściem do procesu.  
+Pobiera numer wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest skojarzony z określonym dojściem do procesu.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,35 +40,35 @@ HRESULT GetVersionFromProcess (
   
 ## <a name="parameters"></a>Parametry  
  `hProcess`  
- [in] Dojście do procesu.  
+ podczas Dojście do procesu.  
   
  `pVersion`  
- [out] Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu metody.  
+ określoną Bufor zawierający ciąg numeru wersji po pomyślnym zakończeniu metody.  
   
  `cchBuffer`  
- [in] Długość buforu wersji.  
+ podczas Długość buforu wersji.  
   
  `pdwLength`  
- [out] Wskaźnik do długości ciągu numeru wersji.  
+ określoną Wskaźnik do długości ciągu numeru wersji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędów Component Object Model (COM), zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca kody błędów standardowego Component Object Model (COM), jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|`pVersion` ma wartość null i `cchBuffer` nie ma wartości null, lub na odwrót.<br /><br /> —lub—<br /><br /> `hProcess` nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Środowisko CLR nie został załadowany.|  
-|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` jest wartość null lub jest mniejsza niż długość ciągu wersji.|  
+|E_INVALIDARG|`pVersion` ma wartość null, a `cchBuffer` nie ma wartości null lub odwrotnie.<br /><br /> —lub—<br /><br /> `hProcess` nie jest prawidłowym dojściem do procesu.<br /><br /> —lub—<br /><br /> Środowisko CLR nie jest załadowane.|  
+|ERROR_INSUFFICIENT_BUFFER|`cchBuffer` ma wartość null lub jest mniejsza niż długość ciągu wersji.|  
 |E_NOTIMPL|Ta metoda nie jest dostępna w systemie operacyjnym Microsoft Windows 95, Microsoft Windows 98 lub Microsoft Windows Millennium Edition.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1de4584-92df-42f3-9da4-fca03a1c6821
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11e21e913e4749705ba6c7f91016be21b4de1712
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 48d2af96b50bf77347256b3d5860405e460a09d3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769968"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133449"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID — Metoda
-Pobiera identyfikator active część tego ICorDebugThread z bieżącego systemu operacyjnego.  
+Pobiera bieżący identyfikator systemu operacyjnego aktywnej części tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetID (
   
 ## <a name="parameters"></a>Parametry  
  `pdwThreadId`  
- [out] Identyfikator wątku.  
+ określoną Identyfikator wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Identyfikator systemu operacyjnego nie może zmienić podczas wykonywania procesu i mogą być różne wartości dla różnych części wątku.  
+ Identyfikator systemu operacyjnego może ulec zmianie podczas wykonywania procesu i może być inną wartością dla różnych części wątku.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

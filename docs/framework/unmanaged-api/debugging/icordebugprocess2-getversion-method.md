@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: e11d5a75-61d9-4548-aedf-79c26079bd17
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 07f3be81431201a4bb6011ea9b8f973061d3d101
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f618f6779f6931785bba18f70fb1ac9baf46753
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137190"
 ---
 # <a name="icordebugprocess2getversion-method"></a>ICorDebugProcess2::GetVersion — Metoda
 
-Pobiera numer wersji środowisko uruchomieniowe języka wspólnego (CLR), który jest uruchomiony w ramach tego procesu.
+Pobiera numer wersji środowiska uruchomieniowego języka wspólnego (CLR), który jest uruchomiony w tym procesie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,18 +37,18 @@ HRESULT GetVersion (
 ## <a name="parameters"></a>Parametry
 
 `version`\
-[out] Wskaźnik do cor_version — struktura, która przechowuje numer wersji środowiska uruchomieniowego.
+określoną Wskaźnik do struktury COR_VERSION, w której jest przechowywany numer wersji środowiska uruchomieniowego.
 
 ## <a name="remarks"></a>Uwagi
 
-`GetVersion` Metoda zwraca kod błędu, jeśli nie środowiska wykonawczego został załadowany w procesie.
+Metoda `GetVersion` zwraca kod błędu, jeśli nie załadowano środowiska uruchomieniowego w procesie.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

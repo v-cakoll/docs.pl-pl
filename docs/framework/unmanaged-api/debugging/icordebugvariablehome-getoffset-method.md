@@ -1,5 +1,5 @@
 ---
-title: Metoda ICorDebugVariableHome::GetOffset
+title: 'ICorDebugVariableHome:: GetOffset — Metoda'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fdab81d499fe1508493cb0bf05a1787974a9d01
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125093"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>Metoda ICorDebugVariableHome::GetOffset
-Pobiera przesunięcie z podstawowej rejestru dla zmiennej.  
+# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome:: GetOffset — Metoda
+Pobiera przesunięcie z rejestru podstawowego dla zmiennej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,24 +35,24 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametry  
  `pOffset`  
- [out] Przesunięcie od podstawowej rejestru.  
+ określoną Przesunięcie od podstawowego rejestru.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Metoda zwraca następujące wartości:  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`S_OK`|Zmienna znajduje się w lokalizacji pamięci względem rejestru.|  
-|`E_FAIL`|Zmienna nie jest w lokalizacji pamięci względem rejestru.|  
+|`S_OK`|Zmienna znajduje się w lokalizacji pamięci względnej do rejestracji.|  
+|`E_FAIL`|Zmienna nie znajduje się w lokalizacji pamięci względnej do rejestracji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

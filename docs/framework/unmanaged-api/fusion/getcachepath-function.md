@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: d977ad29-6619-42e1-b0be-bc25ea950e80
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b1c28f32a4b24393483241bd2d7d6f550b8b65ba
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 13e1468ef5a48f18910c1f8082cdd7c4849da14a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796906"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132696"
 ---
 # <a name="getcachepath-function"></a>GetCachePath — Funkcja
 Pobiera ścieżkę do buforowanego zestawu przy użyciu określonych flag.  
@@ -46,14 +44,14 @@ HRESULT GetCachePath (
  określoną Zwrócony wskaźnik do ścieżki.  
   
  `pcchPath`  
- [in. out] Żądana Maksymalna długość `pwzCachePath`i po powrocie — rzeczywista `pwzCachePath`długość.  
+ [in. out] Żądana Maksymalna długość `pwzCachePath`i po powrocie, rzeczywista długość `pwzCachePath`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,18 +1,16 @@
 ---
-title: ICorDebugMutableDataTarget::WriteVirtual Method
+title: 'ICorDebugMutableDataTarget:: WriteVirtual —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d0a6a58a1a270cb67b75cf34ac5df8d45ccf307c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5947caa8dfb97574bb4b3c5634d962df153211c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67764579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132678"
 ---
-# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual Method
-Zapisuje w pamięci do przestrzeni adresowej procesu docelowego.  
+# <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget:: WriteVirtual —, Metoda
+Zapisuje pamięć w przestrzeni adresowej procesu docelowego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,28 +23,28 @@ HRESULT WriteVirtual(
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] Adres, w którym należy zapisać zawartość `pBuffer`.  
+ podczas Adres, pod który należy napisać zawartość `pBuffer`.  
   
  `pBuffer`  
- [in] Wskaźnik do tablicy typu byte, zawierająca bajty do zapisania.  
+ podczas Wskaźnik do tablicy bajtów zawierającej bajty do zapisania.  
   
  `address`  
- [in] Liczba bajtów w `pBuffer`.  
+ podczas Liczba bajtów w `pBuffer`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `S_OK` na powodzenie lub innych `HRESULT` w przypadku niepowodzenia.  
+ `S_OK` po powodzeniu lub innych `HRESULT` w przypadku awarii.  
   
 ## <a name="remarks"></a>Uwagi  
- Nie można zapisać wszystkich bajtów, wywołanie metody nie powiedzie się bez zmieniania żadnych bajty w przestrzeni adresowej docelowego. (W przeciwnym razie element docelowy będzie można w niespójnym stanie, który sprawia, że dodatkowe debugowanie zawodne.)  
+ Jeśli nie można zapisać żadnych bajtów, wywołanie metody zakończy się niepowodzeniem bez zmiany jakichkolwiek bajtów w docelowej przestrzeni adresowej. (W przeciwnym razie element docelowy będzie w stanie niespójnym, co sprawia, że dalsze debugowanie jest niezawodne).  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

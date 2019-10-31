@@ -10,14 +10,12 @@ helpviewer_keywords:
 - object activation
 - registration-free COM interop, about registration-free COM interop
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0ae92232b1d50d1381b6873e21a4c185db6efd25
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f73bb2ac9e1b942c08f83507589b534d7e67748d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051649"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124963"
 ---
 # <a name="registration-free-com-interop"></a>Współdziałanie z modelem COM bez rejestrowania
 Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik bez używania rejestru systemu Windows do przechowywania informacji o zestawie. Zamiast rejestrować składnik na komputerze podczas wdrażania, można tworzyć pliki manifestu w stylu Win32 w czasie projektowania, które zawierają informacje o powiązaniu i aktywacji. Te pliki manifestu, a nie klucze rejestru, kierują aktywację obiektu.  
@@ -36,7 +34,7 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
   
     |Typ zestawu|System operacyjny|Wersja programu .NET Framework|  
     |-------------------|----------------------|----------------------------|  
-    |COM obok siebie|Microsoft Windows XP|Nie jest wymagane.|  
+    |COM obok siebie|Microsoft Windows XP|Niewymagane.|  
     |. Oparte na sieci|Windows XP z dodatkiem SP2|.NET Framework w wersji 1,1 lub nowszej.|  
   
      Rodzina systemów Windows Server 2003 obsługuje również niezależną od rejestracji międzyoperacyjność COM dla programu. Zestawy oparte na sieci.  
@@ -56,4 +54,4 @@ Niezależna od rejestracji międzyoperacyjność modelu COM aktywuje składnik b
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Konfigurowanie składników COM opartych na .NET Framework na potrzeby aktywacji bez rejestracji](configure-net-framework-based-com-components-for-reg.md)
+- [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)

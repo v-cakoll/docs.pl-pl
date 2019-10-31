@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98320175-7c5e-4dbb-8683-86fa82e2641f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9313fc58dec8099f42dbff07685ca14791fa324f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747375"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137159"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags — Metoda
-Ustawia flagi, które muszą być osadzone w wstępnie skompilowanym obrazów w kolejności dla środowiska uruchomieniowego do załadowania tego obrazu do bieżącego procesu.  
+Ustawia flagi, które muszą być osadzone we wstępnie skompilowanym obrazie, aby środowisko uruchomieniowe ładowało ten obraz do bieżącego procesu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,23 +35,23 @@ HRESULT SetDesiredNGENCompilerFlags (
   
 ## <a name="parameters"></a>Parametry  
  `pdwFlags`  
- [in] Wartość [cordebugjitcompilerflags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) wyliczenie, które określa flagi kompilatora używany do wybierania wstępnie skompilowanym prawidłowy obraz.  
+ podczas Wartość wyliczenia [CorDebugJITCompilerFlags —](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) , która określa flagi kompilatora używane do wybierania poprawnego prekompilowanego obrazu.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetDesiredNGENCompilerFlags` Metody określa flagi, które muszą być osadzone w wstępnie skompilowanym obrazów, tak, aby środowisko uruchomieniowe będzie załadować ten obraz do tego procesu. Flag ustawionych przez tę metodę są używane tylko po to, aby wybrać prawidłowy obraz wstępnie skompilowane. Jeśli istnieje nie takich obrazów, środowisko uruchomieniowe zamiast tego obciążenia obrazu języka intermediate language (MSIL) firmy Microsoft i kompilator just-in-time (JIT). W takim przypadku należy nadal używać debugera [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) metodę, aby ustawić flagi zgodnie z potrzebami dla kompilacji JIT.  
+ Metoda `SetDesiredNGENCompilerFlags` określa flagi, które muszą być osadzone we wstępnie skompilowanym obrazie, aby środowisko uruchomieniowe załadowało ten obraz do tego procesu. Flagi ustawione za pomocą tej metody są używane tylko do wybierania poprawnego prekompilowanego obrazu. Jeśli taki obraz nie istnieje, środowisko uruchomieniowe załaduje obraz języka pośredniego firmy Microsoft (MSIL) oraz kompilator just-in-Time (JIT). W takim przypadku debuger musi nadal używać metody [ICorDebugModule2:: SetJITCompilerFlags —](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) , aby ustawić flagi zgodnie z potrzebami kompilacji JIT.  
   
- Jeśli obraz został załadowany, ale niektóre kompilacja JIT musi odbywać się obrazu (co będzie miało miejsce, jeśli obraz zawiera ogólne), flagi kompilatora określony przez `SetDesiredNGENCompilerFlags` metody będą stosowane dodatkowe kompilację JIT.  
+ Jeśli obraz jest ładowany, ale niektóre kompilacje JIT muszą mieć miejsce dla tego obrazu (w przypadku, gdy obraz zawiera ogólne), flagi kompilatora określone przez metodę `SetDesiredNGENCompilerFlags` będą stosowane do kompilacji dodatkowej JIT.  
   
- `SetDesiredNGENCompilerFlags` Metoda musi zostać wywołane podczas [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) wywołania zwrotnego. Próbuje wywołać `SetDesiredNGENCompilerFlags` metoda później zakończy się niepowodzeniem. Ponadto próbuje ustawić flagi, które nie są zdefiniowane w `CorDebugJITCompilerFlags` wyliczenia lub czy nie jest dozwolony dla danego procesu zakończy się niepowodzeniem.  
+ Metoda `SetDesiredNGENCompilerFlags` musi być wywoływana podczas wywołania zwrotnego [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) . Próbuje wywołać metodę `SetDesiredNGENCompilerFlags` później zakończy się niepowodzeniem. Ponadto program próbuje ustawić flagi, które nie są zdefiniowane w wyliczeniu `CorDebugJITCompilerFlags` lub które nie są dozwolone dla danego procesu, zakończą się niepowodzeniem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

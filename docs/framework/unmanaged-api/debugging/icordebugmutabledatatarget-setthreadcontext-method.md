@@ -2,14 +2,12 @@
 title: 'ICorDebugMutableDataTarget:: SetThreadContext —, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21a24b3ae3563db09f1f7e9229f388abf8de654c
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 2c9e508c7a4059fee4e1cce6eb28e6de7b2fff6d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038315"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132709"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget:: SetThreadContext —, Metoda
 Ustawia kontekst (wartości rejestru) dla wątku.  
@@ -27,22 +25,22 @@ HRESULT SetThreadContext(
  podczas Identyfikator wątku zdefiniowanego przez system operacyjny.  
   
  `contextSize`  
- podczas Rozmiar `pContext` buforu, który ma zostać zapisany.  
+ podczas Rozmiar bufora `pContext`, który ma zostać zapisany.  
   
  `pContext`  
  podczas Wskaźnik do bajtów do zapisania.  
   
 ## <a name="remarks"></a>Uwagi  
- Metoda aktualizuje bieżący kontekst dla wątku określonego przez argument zdefiniowany `dwThreadID` przez system operacyjny. `SetThreadContext` Format rekordu kontekstu jest określany przez platformę wskazywaną przez metodę [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . W systemie Windows jest to struktura [kontekstu](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
+ Metoda `SetThreadContext` aktualizuje bieżący kontekst dla wątku określonego przez argument `dwThreadID` zdefiniowanego przez system operacyjny. Format rekordu kontekstu jest określany przez platformę wskazywaną przez metodę [ICorDebugDataTarget:: GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) . W systemie Windows jest to struktura [kontekstu](/windows/win32/api/winnt/ns-winnt-arm64_nt_context) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -2,14 +2,12 @@
 title: Wprowadzenie do architektury .NET Native
 ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: de887f73a5cc3968dda7e0e4dd14493883485d2b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1c0c25ddf379c31a9c7b4437d36e7e0cbf1bb2f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049736"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128402"
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 
@@ -28,7 +26,7 @@ Niezależnie od tego, czy piszesz nową aplikację systemu Windows dla systemu W
 
 <a name="Step1"></a>
 
-## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Krok 1. Opracowywanie i testowanie kompilacji debugowania aplikacji platformy UWP
+## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>Krok 1. opracowywanie i testowanie kompilacji debugowania aplikacji platformy UWP
 
 Bez względu na to, czy tworzysz nową aplikację, czy migrujesz istniejącą, postępuj zgodnie z tym samym procesem co w przypadku dowolnej aplikacji systemu Windows.
 
@@ -45,7 +43,7 @@ Domyślnie kompilacje debugowania są kompilowane w trybie JIT, aby umożliwić 
 
 <a name="Step2"></a>
 
-## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Krok 2. Obsługa dodatkowego odbicia i użycia serializacji
+## <a name="step-2-handle-additional-reflection-and-serialization-usage"></a>Krok 2. Obsługa dodatkowego odbicia i użycie serializacji
 
 Plik dyrektywy środowiska uruchomieniowego, default. Rd. XML, jest automatycznie dodawany do projektu podczas jego tworzenia. W przypadku tworzenia aplikacji C#w programie zostanie ona znaleziona w folderze **Właściwości** projektu. Jeśli tworzysz program w Visual Basic, zostanie on znaleziony w folderze **mój projekt** projektu.
 
@@ -58,19 +56,19 @@ Plik dyrektywy środowiska uruchomieniowego służy do definiowania metadanych w
 
 Istnieją dwie kategorie serializatorów, które mogą wymagać dodatkowych wpisów w pliku dyrektywy środowiska uruchomieniowego:
 
-- Serializatory na podstawie nieodbicia. Serializatory Znalezione w bibliotece klas .NET Framework, takie jak <xref:System.Runtime.Serialization.DataContractSerializer>klasy, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, i <xref:System.Xml.Serialization.XmlSerializer> , nie polegają na odbiciu. Jednak wymagają one, aby kod został wygenerowany na podstawie obiektu, który ma być serializowany lub deserializowany.  Aby uzyskać więcej informacji, zobacz sekcję "serializatory firmy Microsoft" w temacie [serializacji i metadanych](serialization-and-metadata.md).
+- Serializatory na podstawie nieodbicia. Serializatory Znalezione w bibliotece klas .NET Framework, takie jak klasy <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>i <xref:System.Xml.Serialization.XmlSerializer>, nie polegają na odbiciu. Jednak wymagają one, aby kod został wygenerowany na podstawie obiektu, który ma być serializowany lub deserializowany.  Aby uzyskać więcej informacji, zobacz sekcję "serializatory firmy Microsoft" w temacie [serializacji i metadanych](serialization-and-metadata.md).
 
-- Serializatory innych firm. Biblioteki serializacji innych firm, najczęściej typowe dla serializatora JSON Newtonsoft, są zwykle oparte na odbiciach i wymagają wpisów w \*pliku Rd. XML do obsługi serializacji obiektów i deserializacji. Aby uzyskać więcej informacji, zobacz sekcję "serializatory innych firm" w temacie [serializacji i metadanych](serialization-and-metadata.md).
+- Serializatory innych firm. Biblioteki serializacji innych firm, najczęściej typowe dla serializatora JSON Newtonsoft, są zwykle oparte na odbiciach i wymagają wpisów w pliku \*. Rd. XML do obsługi serializacji i deserializacji obiektu. Aby uzyskać więcej informacji, zobacz sekcję "serializatory innych firm" w temacie [serializacji i metadanych](serialization-and-metadata.md).
 
 **Metody, które opierają się na odbiciu**
 
 W niektórych przypadkach użycie odbicia w kodzie nie jest oczywiste. Niektóre typowe interfejsy API lub wzorce programowania nie są uważane za część interfejsu API odbicia, ale polegają na pomyślnym wykonaniu odbicia. Obejmuje to następujące typy tworzenia wystąpień i metod konstrukcji metody:
 
-- <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> Metoda
+- Metoda <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>
 
-- Metody <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> i<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>
+- Metody <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> i <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>
 
-- <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> Metoda.
+- Metoda <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>.
 
 Aby uzyskać więcej informacji, zobacz [interfejsy API, które opierają się na odbiciu](apis-that-rely-on-reflection.md).
 
@@ -79,17 +77,17 @@ Aby uzyskać więcej informacji, zobacz [interfejsy API, które opierają się n
 
 <a name="Step3"></a>
 
-## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Krok 3. Wdróż i przetestuj kompilacje wydania aplikacji
+## <a name="step-3-deploy-and-test-the-release-builds-of-your-app"></a>Krok 3. wdrażanie i testowanie wersji kompilacji aplikacji
 
-Po zaktualizowaniu pliku dyrektywy środowiska uruchomieniowego można skompilować i wdrożyć Kompilacje wersji aplikacji. .NET Native pliki binarne są umieszczane w podkatalogu ILC {0}. out katalogu określonego w polu tekstowym **kompilacja ścieżki wyjściowej** w oknie dialogowym **Właściwości** projektu, karta **kompilacja** . Pliki binarne, które nie znajdują się w tym folderze, nie zostały skompilowane przy użyciu .NET Native. Dokładnie Przetestuj swoją aplikację i przetestuj wszystkie scenariusze, w tym scenariusze awarii, na każdej platformie docelowej.
+Po zaktualizowaniu pliku dyrektywy środowiska uruchomieniowego można skompilować i wdrożyć Kompilacje wersji aplikacji. .NET Native pliki binarne są umieszczane w podkatalogu ILC {0}. out katalogu określonego w polu tekstowym **Ścieżka wyjściowa kompilacji** w oknie dialogowym **Właściwości** projektu, karta **kompilacja** . pliki binarne, które nie są w tym folderze, nie zostały skompilowane z .NET Native. Dokładnie Przetestuj swoją aplikację i przetestuj wszystkie scenariusze, w tym scenariusze awarii, na każdej platformie docelowej.
 
-Jeśli aplikacja nie działa prawidłowo (zwłaszcza w przypadkach, gdy w czasie wykonywania zgłasza wyjątek [MissingMetadataException](missingmetadataexception-class-net-native.md) lub [MissingInteropDataException](missinginteropdataexception-class-net-native.md) ), postępuj zgodnie z instrukcjami w następnej sekcji, [krok 4: Ręcznie Rozwiąż brakujące metadane](#Step4). Włączenie wyjątków pierwszej szansy może pomóc w znalezieniu tych błędów.
+Jeśli Twoja aplikacja nie działa prawidłowo (zwłaszcza w przypadkach, gdy zgłasza wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md) lub [MissingInteropDataException](missinginteropdataexception-class-net-native.md) w czasie wykonywania), postępuj zgodnie z instrukcjami w następnej sekcji, [krok 4. Ręczne rozwiązywanie brakujących metadanych](#Step4). Włączenie wyjątków pierwszej szansy może pomóc w znalezieniu tych błędów.
 
 Po przetestowaniu i debugowaniu kompilacji debugowania aplikacji i pewności, że zostały wyeliminowane wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md) i [MissingInteropDataException](missinginteropdataexception-class-net-native.md) , należy przetestować aplikację jako zoptymalizowaną .NET Native aplikację. W tym celu Zmień konfigurację aktywnego projektu z **Debuguj** do **Release**.
 
 <a name="Step4"></a>
 
-## <a name="step-4-manually-resolve-missing-metadata"></a>Krok 4. Ręcznie Rozwiązuj brakujące metadane
+## <a name="step-4-manually-resolve-missing-metadata"></a>Krok 4. Ręczne rozwiązywanie brakujących metadanych
 
 Najbardziej typowym błędem napotkanym przez .NET Native, które nie występują na pulpicie, jest wyjątek czasu wykonywania [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)lub [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) . W niektórych przypadkach Brak metadanych może być manifestem w nieprzewidywalny sposób lub nawet w przypadku awarii aplikacji. W tej sekcji omówiono, jak można debugować i rozwiązywać te wyjątki, dodając dyrektywy do pliku dyrektywy środowiska uruchomieniowego. Aby uzyskać informacje o formacie dyrektywy środowiska uruchomieniowego, zobacz [Dokumentacja pliku konfiguracji dyrektywy środowiska uruchomieniowego (RD. xml)](runtime-directives-rd-xml-configuration-file-reference.md). Po dodaniu dyrektyw środowiska uruchomieniowego należy ponownie [wdrożyć i przetestować aplikację](#Step3) oraz rozwiązać wszelkie nowe wyjątki [MissingMetadataException](missingmetadataexception-class-net-native.md), [MissingInteropDataException](missinginteropdataexception-class-net-native.md)i [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) do momentu nie występuje więcej wyjątków.
 
@@ -108,7 +106,7 @@ W przypadku rozwiązywania brakującego wyjątku metadanych należy wziąć pod 
 
 - Czy można ponownie napisać kod, aby nie używał odbicia?
 
-  - Na przykład, czy kod używa słowa kluczowego, `dynamic` gdy wiesz, jakiego typu oczekiwać?
+  - Na przykład czy kod używa słowa kluczowego `dynamic`, gdy wiesz, jakiego typu oczekiwać?
 
   - Czy kod wywołuje metodę, która zależy od odbicia, gdy jest dostępny jakiś lepszy alternatywa?
 

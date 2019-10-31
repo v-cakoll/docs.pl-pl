@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6742293c1970198ef3d5f5da7d75a0c78e78045c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768409"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133776"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion — Funkcja
-Umożliwia hostowi na określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR), będą używane w ramach procesu przed jawnym zainicjowaniem środowiska CLR.  
+Umożliwia hostowi określenie, która wersja środowiska uruchomieniowego języka wspólnego (CLR) zostanie użyta w procesie przed jawnym inicjalizacją środowiska CLR.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,57 +39,57 @@ HRESULT LockClrVersion (
   
 ## <a name="parameters"></a>Parametry  
  `hostCallback`  
- [in] Funkcja, która ma zostać wywołana przez środowisko CLR po zainicjowaniu.  
+ podczas Funkcja, która ma zostać wywołana przez środowisko CLR po inicjacji.  
   
  `pBeginHostSetup`  
- [in] Funkcja wywoływana przez hosta w celu poinformowania środowiska CLR, że inicjowanie jest uruchamiana.  
+ podczas Funkcja, która ma zostać wywołana przez hosta w celu poinformowania o uruchamianiu CLR.  
   
  `pEndHostSetup`  
- [in] Funkcja wywoływana przez hosta w celu poinformowania środowiska CLR, że Inicjowanie zostało ukończone.  
+ podczas Funkcja, która ma zostać wywołana przez hosta w celu poinformowania środowiska CLR o ukończeniu inicjalizacji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca standardowe kody błędu modelu COM, zgodnie z definicją w pliku WinError.h oprócz następujących wartości.  
+ Ta metoda zwraca standardowe kody błędów COM, jak zdefiniowano w WinError. h, oprócz następujących wartości.  
   
 |Kod powrotu|Opis|  
 |-----------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|E_INVALIDARG|Co najmniej jeden z argumentów ma wartość null.|  
+|E_INVALIDARG|Co najmniej jeden argument ma wartość null.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania hosta `LockClrVersion` przed zainicjowaniem środowiska CLR. `LockClrVersion` przyjmuje trzy parametry, które są wywołania zwrotne typu [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Ten typ jest zdefiniowany w następujący sposób.  
+ Host wywołuje `LockClrVersion` przed zainicjowaniem środowiska CLR. `LockClrVersion` pobiera trzy parametry, z których wszystkie są wywołaniami zwrotnymi typu [FLockClrVersionCallback —](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md). Ten typ jest definiowany w następujący sposób.  
   
 ```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- Po zainicjowaniu środowiska uruchomieniowego są wykonywane następujące kroki:  
+ Następujące kroki są wykonywane po zainicjowaniu środowiska uruchomieniowego:  
   
-1. Wywołania hosta [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jednego z innych funkcji inicjowania środowiska uruchomieniowego. Alternatywnie hosta można zainicjować aparatu plików wykonywalnych przy użyciu aktywowanie obiektu COM.  
+1. Host wywołuje [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) lub jedną z innych funkcji inicjalizacji środowiska uruchomieniowego. Alternatywnie host może zainicjować środowisko uruchomieniowe przy użyciu funkcji aktywacji obiektów COM.  
   
-2. Środowisko wykonawcze wywołuje funkcji określonej przez `hostCallback` parametru.  
+2. Środowisko uruchomieniowe wywołuje funkcję określoną przez parametr `hostCallback`.  
   
-3. Funkcji określonej przez `hostCallback` następnie sprawia, że następująca sekwencja wywołań:  
+3. Funkcja określona przez `hostCallback` następnie wykonuje następującą sekwencję wywołań:  
   
-    - Funkcji określonej przez `pBeginHostSetup` parametru.  
+    - Funkcja określona przez parametr `pBeginHostSetup`.  
   
-    - `CorBindToRuntimeEx` (lub inną funkcję inicjowania środowiska uruchomieniowego).  
+    - `CorBindToRuntimeEx` (lub inna funkcja inicjacji środowiska uruchomieniowego).  
   
-    - [ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
+    - [ICLRRuntimeHost:: SetHostControl —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).  
   
-    - [Iclrruntimehost::Start —](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
+    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).  
   
-    - Funkcji określonej przez `pEndHostSetup` parametru.  
+    - Funkcja określona przez parametr `pEndHostSetup`.  
   
- Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` musi przypadać na jednym wątku lub włókna, z tym samym stosie logiczne. Ten wątek może różnić się od wątku, na którym `hostCallback` jest wywoływana.  
+ Wszystkie wywołania z `pBeginHostSetup` do `pEndHostSetup` muszą wystąpić w pojedynczym wątku lub włókna przy użyciu tego samego logicznego stosu. Ten wątek może się różnić od wątku, w którym wywołano `hostCallback`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

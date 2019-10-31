@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 855f4199-b62d-40ce-998e-1eb4a1772142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b577e915422814fbd0060fdda53b9e2bf7cd091a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d75897e00c36bd5c484e837ee68e54443168e77
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760724"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131757"
 ---
 # <a name="icordebugstepperdeactivate-method"></a>ICorDebugStepper::Deactivate — Metoda
-Powoduje to ICorDebugStepper — ostatnie polecenie kroku, który otrzymał anulowania.  
+Powoduje anulowanie przez ten ICorDebugStepper polecenia ostatniego kroku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,13 +32,13 @@ HRESULT Deactivate ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Mogą być wydawane nowego polecenia przechodzenia krok po kroku, po najbardziej niedawno odebrano polecenie kroku zostało anulowane.  
+ Nowe polecenie krokowe może zostać wydane po anulowaniu niedawno otrzymanego kroku polecenia.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

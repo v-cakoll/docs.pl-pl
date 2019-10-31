@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2ea0bf215c0d2abfe9beb29d736f893073d3be8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc02f63808b1929b93777c8bbc67c47000b0b424
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739511"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132745"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop — Wyliczenie
-Określa typ niezamapowane kod, który możesz wyzwolić stepper zatrzymania wykonywania kodu.  
+Określa typ niezamapowanego kodu, który może wyzwolić zatrzymanie w wykonaniu kodu przez stepper.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,25 +42,25 @@ typedef enum CorDebugUnmappedStop {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`STOP_NONE`|Nie zostanie zatrzymana w dowolnego typu niezamapowane kodu.|  
+|`STOP_NONE`|Nie należy Zatrzymywać w żadnym typie niezamapowanego kodu.|  
 |`STOP_PROLOG`|Zatrzymaj w kodzie prologu.|  
-|`STOP_EPILOG`|Zatrzymaj w kod epilogu.|  
-|`STOP_NO_MAPPING_INFO`|Zatrzymaj w kodzie, który nie ma mapowania informacji.|  
-|`STOP_OTHER_UNMAPPED`|Zatrzymaj w niezamapowane kod, który nie mieści się w prologu, epilogu, nie informacji o mapowaniu lub niezarządzanego kategorii.|  
-|`STOP_UNMANAGED`|Zatrzymaj w niezarządzanym kodzie. Ta wartość jest prawidłowa tylko w przypadku debugowania międzyoperacyjnego.|  
-|`STOP_ALL`|Zatrzymaj we wszystkich typach niezamapowane kodu.|  
+|`STOP_EPILOG`|Zatrzymywanie w kodzie epilogu.|  
+|`STOP_NO_MAPPING_INFO`|Zatrzymaj w kodzie, który nie zawiera informacji dotyczących mapowania.|  
+|`STOP_OTHER_UNMAPPED`|Zatrzymaj w niemapowanym kodzie, który nie mieści się w niezgodnej kategorii Prolog, epilogu, Brak-mapowania-informacje lub niezarządzana.|  
+|`STOP_UNMANAGED`|Zatrzymaj w kodzie niezarządzanym. Ta wartość jest prawidłowa tylko w przypadku debugowania międzyoperacyjności.|  
+|`STOP_ALL`|Zatrzymaj wszystkie typy niezamapowanego kodu.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj [ICorDebugStepper::SetUnmappedStopMask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) metodę, aby ustawić flagi określające niezamapowane kodu, w którym stepper zostanie zatrzymane.  
+ Użyj metody [ICorDebugStepper:: SetUnmappedStopMask —](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) , aby ustawić flagi określające niezamapowany kod, w którym zostanie zatrzymany stepper.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

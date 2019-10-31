@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 548828f8e9948e000a15fd19a4475ef715e110d8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039464"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131511"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "73039464"
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Używane dla kontrolek, które mogą być zadokowane w kontenerze dokowania. Na przykład paski narzędzi lub palety narzędzi.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Używany do kontrolek, które mogą być rozwinięte lub zwinięte. Na przykład elementy menu w aplikacji, takie jak menu **plik** .|  
 |<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Używane dla formantów, które obsługują funkcje siatki, takie jak rozmiar i przechodzenie do określonej komórki. Na przykład widok dużych ikon w Eksploratorze Windows lub tabelach prostych bez nagłówków w [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
-|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Używane dla formantów, które mają komórki w siatkach. Poszczególne komórki powinny obsługiwać wzorzec GridItem. Na przykład każda komórka w [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] widoku szczegółów.|  
+|<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Używane dla formantów, które mają komórki w siatkach. Poszczególne komórki powinny obsługiwać wzorzec GridItem. Na przykład każda komórka w widoku szczegółowym programu Microsoft Windows Explorer.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Używany do kontrolek, które mogą być wywoływane, takich jak przycisk.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Używane dla kontrolek, które mogą przełączać się między wieloma reprezentacjami tego samego zestawu informacji, danych lub elementów podrzędnych. Na przykład kontrolka widok listy, w której dane są dostępne w widokach miniatury, kafelków, ikon, list lub szczegółów.|  
 |<xref:System.Windows.Automation.RangeValuePattern>|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Używane dla kontrolek, które mają zakres wartości, które można zastosować do kontrolki. Na przykład, formant pokrętła zawierający lata może mieć zakres od 1900 do 2010, podczas gdy inny formant pokrętła przedstawiający miesiące będzie miał zakres od 1 do 12.|  
@@ -70,7 +70,7 @@ ms.locfileid: "73039464"
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Używane dla kontrolek, w których stan może być przełączany. Na przykład pola wyboru i elementy menu umożliwiające sprawdzanie.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Używany do kontrolek, które mogą być zmieniane, przenoszone i obracane. Typowe zastosowania wzorca kontrolki przekształcania znajdują się w projektantach, formularzach, edytorach graficznych i aplikacjach do rysowania.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Umożliwia klientom pobieranie lub Ustawianie wartości w kontrolkach, które nie obsługują zakresu wartości. Na przykład wybór daty i godziny.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Opisuje informacje specyficzne dla systemu Windows, podstawowe koncepcje systemu operacyjnego Microsoft Windows. Przykłady formantów, które są oknami, są oknami aplikacji najwyższego poziomu ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]i tak dalej), oknach podrzędnych interfejsu wielu dokumentów (MDI) i oknach dialogowych.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Opisuje informacje specyficzne dla systemu Windows, podstawowe koncepcje systemu operacyjnego Microsoft Windows. Przykłady formantów, które są Windows są oknami aplikacji najwyższego poziomu ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Eksplorator Microsoft Windows, i tak dalej), okna podrzędne interfejsu wielu dokumentów (MDI) i okien dialogowych.|  
   
 ## <a name="see-also"></a>Zobacz także
 

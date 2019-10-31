@@ -2,17 +2,15 @@
 title: Dokumentacja interfejsu API odbicia dla platformy .NET Native
 ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9c1fbef46231fed3af0d335e9396b301fe503254
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01678ea6230a53416f213730ae6bb66e6bc057f8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049380"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128218"
 ---
 # <a name="net-native-reflection-api-reference"></a>Dokumentacja interfejsu API odbicia dla platformy .NET Native
-.NET Native zawiera trzy nowe typy wyjątków: [System. Runtime. CompilerServices. MissingInteropDataException](missinginteropdataexception-class-net-native.md), [System. odbicie. MissingMetadataException](missingmetadataexception-class-net-native.md)oraz [System. odbicie. MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Zwróć uwagę na następujące informacje o wszystkich trzech typach wyjątków:  
+.NET Native obejmuje trzy nowe typy wyjątków: [System. Runtime. CompilerServices. MissingInteropDataException](missinginteropdataexception-class-net-native.md), [System. odbicie. MissingMetadataException](missingmetadataexception-class-net-native.md)oraz [System. odbicie. MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md). Zwróć uwagę na następujące informacje o wszystkich trzech typach wyjątków:  
   
  Te typy są przeznaczone tylko do użytku wewnętrznego.  
  Te trzy typy wyjątków służą tylko do używania łańcucha narzędzi .NET Native. Wyjątki są generowane, gdy łańcuch narzędzi .NET Native wykrywa brakujące dane, które nie zezwalają na kontynuowanie wykonywania programu.  
@@ -25,26 +23,26 @@ ms.locfileid: "71049380"
 - [Narzędzie do rozwiązywania problemów z MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) .  
   
 > [!NOTE]
-> Ta dokumentacja dokumentuje trzy typy wyjątków, które są unikatowe dla .NET Native. Aby uzyskać dokumentację referencyjną dla podstawowego interfejsu API odbicia .NET Framework <xref:System.Reflection>, <xref:System.Reflection.Context> zobacz <xref:System.Reflection.Emit> przestrzenie nazw i. Aby uzyskać dokumentację referencyjną .NET Framework podstawowego interfejsu API międzyoperacyjności, zobacz <xref:System.Runtime.InteropServices>.  
+> Ta dokumentacja dokumentuje trzy typy wyjątków, które są unikatowe dla .NET Native. Aby uzyskać dokumentację referencyjną .NET Framework podstawowego interfejsu API odbicia, zobacz <xref:System.Reflection>, <xref:System.Reflection.Context> i <xref:System.Reflection.Emit> przestrzenie nazw. Aby uzyskać dokumentację referencyjną .NET Framework podstawowego interfejsu API międzyoperacyjności, zobacz <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Przestrzeń nazw System. odbicie  
- <xref:System.Reflection> Przestrzeń nazw zawiera podstawowe typy używane do odbicia w .NET Framework. W przypadku .NET Native zawiera również dwa nowe typy wyjątków:  
+ Przestrzeń nazw <xref:System.Reflection> zawiera podstawowe typy używane do odbicia w .NET Framework. W przypadku .NET Native zawiera również dwa nowe typy wyjątków:  
   
 |Class|Opis|  
 |-----------|-----------------|  
 |[MissingMetadataException](missingmetadataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy odbicie jest używane do pobierania nieobecnych metadanych.|  
 |[MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md)|Wyjątek, który jest generowany, gdy jest dostępny metadanych typu lub elementu członkowskiego typu, ale jego implementacja została usunięta.|  
   
- Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, <xref:System.Reflection> Zobacz strony referencyjne w zestawie dokumentacji .NET Framework.  
+ Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, zobacz strony referencyjne <xref:System.Reflection> w zestawie dokumentacji .NET Framework.  
   
-## <a name="systemruntimecompilerservices-namespace"></a>System.Runtime.CompilerServices namespace  
- <xref:System.Runtime.CompilerServices> Przestrzeń nazw zawiera typy zaprojektowane dla użytkownika przez kompilatory języka. W przypadku .NET Native zawiera również nowy typ wyjątku:  
+## <a name="systemruntimecompilerservices-namespace"></a>Przestrzeń nazw System. Runtime. CompilerServices  
+ Przestrzeń nazw <xref:System.Runtime.CompilerServices> zawiera typy zaprojektowane dla użytkownika przez kompilatory języka. W przypadku .NET Native zawiera również nowy typ wyjątku:  
   
 |Class|Opis|  
 |-----------|-----------------|  
 |[MissingInteropDataException](missinginteropdataexception-class-net-native.md)|Wyjątek, który jest generowany, gdy wywoływana jest metoda ręcznego kierowania, ale nie można odnaleźć metadanych dla typu przez analizę statyczną lub plik dyrektywy środowiska uruchomieniowego.|  
   
- Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, <xref:System.Runtime.CompilerServices> Zobacz strony referencyjne w zestawie dokumentacji .NET Framework.  
+ Aby uzyskać dokumentację dotyczącą innych typów w tej przestrzeni nazw, zobacz strony referencyjne <xref:System.Runtime.CompilerServices> w zestawie dokumentacji .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz także
 

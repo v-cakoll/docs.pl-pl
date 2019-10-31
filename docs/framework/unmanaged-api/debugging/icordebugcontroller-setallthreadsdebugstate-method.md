@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bdda4bd7-4743-4d58-a22b-8067e967db95
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9348652129a3357784654006dc16d822298f28f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1190f83e2671216cf1627eeb710ba576e4b2ec93
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749961"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125358"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState — Metoda
-Ustawia stan debugowania wszystkie zarządzane wątki w procesie.  
+Ustawia stan debugowania wszystkich zarządzanych wątków w procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,21 +36,21 @@ HRESULT SetAllThreadsDebugState (
   
 ## <a name="parameters"></a>Parametry  
  `state`  
- [in] Wartość wyliczenia "Cordebugthreadstate —", który określa stan wątku do debugowania.  
+ podczas Wartość wyliczenia "CorDebugThreadState —", która określa stan wątku na potrzeby debugowania.  
   
  `pExceptThisThread`  
- [in] Wskaźnik do obiektu "ICorDebugThread", który reprezentuje wątek zwolnione z ustawieniem stanu debugowania. Jeżeli ta wartość jest równa null, jest wykluczany żadnego wątku.  
+ podczas Wskaźnik do obiektu "ICorDebugThread", który reprezentuje wątek, który ma zostać wykluczony z ustawienia stanu debugowania. Jeśli ta wartość jest równa null, żaden wątek nie jest wykluczony.  
   
 ## <a name="remarks"></a>Uwagi  
- `SetAllThreadsDebugState` Metoda może mieć wpływ na wątki, które nie są widoczne za pośrednictwem [enumeratethreads — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md), więc wątków, które zostały wstrzymane z `SetAllThreadsDebugState` metody będą musieli można wznowić z `SetAllThreadsDebugState` metody.  
+ Metoda `SetAllThreadsDebugState` może mieć wpływ na wątki, które nie są widoczne za pośrednictwem [metody EnumerateThreads —](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md), więc wątki, które zostały zawieszone przy użyciu metody `SetAllThreadsDebugState`, muszą zostać wznowione przy użyciu metody `SetAllThreadsDebugState`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

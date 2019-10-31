@@ -14,14 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 751694985248346187eff016ef7a4a8054cb1212
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798312"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127279"
 ---
 # <a name="qualifierset_get-function"></a>QualifierSet_Get, funkcja
 Pobiera określony kwalifikator nazwany.  
@@ -56,10 +54,10 @@ podczas Nazwa kwalifikatora, którego żądano wartości.
 podczas Rezerwacj. Ten parametr musi być równy 0.
 
 `pVal`   
-określoną Po pomyślnym wykonaniu prawidłowy typ i wartość kwalifikatora. Jeśli funkcja się nie powiedzie `VARIANT` , wskazywane `pVal` przez nie jest modyfikowane. Jeśli ten parametr ma `null`wartość, parametr jest ignorowany.
+określoną Po pomyślnym wykonaniu prawidłowy typ i wartość kwalifikatora. Jeśli funkcja się nie powiedzie, `VARIANT` wskazywane przez `pVal` nie jest modyfikowany. Jeśli ten parametr jest `null`, parametr jest ignorowany.
 
 `plFlavor`   
-określoną Wskaźnik do LONG, który odbiera bity wersji kwalifikatora dla żądanego kwalifikatora. Jeśli informacje o wersji nie są potrzebne, ten parametr może `null`być. 
+określoną Wskaźnik do LONG, który odbiera bity wersji kwalifikatora dla żądanego kwalifikatora. Jeśli informacje o wersji nie są potrzebne, ten parametr może być `null`. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -76,11 +74,11 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 Ta funkcja otacza wywołanie metody [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get) .
 
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

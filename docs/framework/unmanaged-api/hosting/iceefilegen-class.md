@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126805"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen — Klasa
 Oferuje funkcje tworzenia natywnego przenośnego pliku wykonywalnego (PE). Interfejs jest zwykle używany przez kompilatory do generowania skompilowanego wyjściowego pliku wykonywalnego.  
   
 > [!NOTE]
-> `ICeeFileGen`obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
+> `ICeeFileGen` obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
   
  Ten interfejs jest przestarzały i zostanie usunięty w przyszłej wersji.  
   
@@ -237,11 +235,11 @@ public:
 ```  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** ICeeFileGen.h  
+ **Nagłówek:** ICeeFileGen. h  
   
- **Wersja .NET Framework:** 1.0  
+ **Wersja .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

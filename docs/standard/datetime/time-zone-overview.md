@@ -15,18 +15,16 @@ helpviewer_keywords:
 - adjustment rule [.NET Framework]
 - time zones [.NET Framework], terminology
 ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 64fce738556fa68c54f5f7d7dcba79fc30d03bbe
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: 83fa7609c9500bc51581b7b20db3992b4265488b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106734"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131603"
 ---
 # <a name="time-zone-overview"></a>Strefy czasowe — omówienie
 
-<xref:System.TimeZoneInfo> Klasa upraszcza tworzenie aplikacji obsługujących strefy czasowe. <xref:System.TimeZone> Klasa obsługuje pracę z lokalną strefą czasową i uniwersalnym czasem koordynowanym (UTC). <xref:System.TimeZoneInfo> Klasa obsługuje obie te strefy, a także strefę czasową, o której informacje są wstępnie zdefiniowane w rejestrze. Można również użyć <xref:System.TimeZoneInfo> do zdefiniowania niestandardowych stref czasowych, z których system nie ma informacji.
+Klasa <xref:System.TimeZoneInfo> upraszcza tworzenie aplikacji obsługujących strefy czasowe. Klasa <xref:System.TimeZone> obsługuje pracę z lokalną strefą czasową i uniwersalnym czasem koordynowanym (UTC). Klasa <xref:System.TimeZoneInfo> obsługuje obie te strefy, a także strefę czasową, o której informacje są wstępnie zdefiniowane w rejestrze. Można również użyć <xref:System.TimeZoneInfo>, aby zdefiniować niestandardowe strefy czasowe, w których system nie ma informacji.
 
 ## <a name="time-zone-essentials"></a>Podstawowe informacje o strefie czasowej
 
@@ -53,15 +51,15 @@ W poniższej tabeli opisano terminy często używane podczas pracy z strefami cz
 
 ## <a name="time-zones-and-the-timezoneinfo-class"></a>Strefy czasowe i Klasa TimeZoneInfo
 
-W programie .NET <xref:System.TimeZoneInfo> obiekt reprezentuje strefę czasową. Klasa zawiera metodę, która zwraca tablicę obiektów. <xref:System.TimeZoneInfo.AdjustmentRule> <xref:System.TimeZoneInfo> <xref:System.TimeZoneInfo.GetAdjustmentRules%2A> Każdy element tablicy zawiera informacje o przejściu do i od czasu letniego w określonym przedziale czasu. (W przypadku stref czasowych, które nie obsługują czasu letniego, metoda zwraca pustą tablicę). Każdy <xref:System.TimeZoneInfo.AdjustmentRule> obiekt <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A> ma właściwość i, która definiuje określoną datę i godzinę przejścia do i od czasu letniego. <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> Właściwość wskazuje, czy zmiana jest stała, czy zmienna.
+W programie .NET obiekt <xref:System.TimeZoneInfo> reprezentuje strefę czasową. Klasa <xref:System.TimeZoneInfo> zawiera metodę <xref:System.TimeZoneInfo.GetAdjustmentRules%2A>, która zwraca tablicę obiektów <xref:System.TimeZoneInfo.AdjustmentRule>. Każdy element tablicy zawiera informacje o przejściu do i od czasu letniego w określonym przedziale czasu. (W przypadku stref czasowych, które nie obsługują czasu letniego, metoda zwraca pustą tablicę). Każdy obiekt <xref:System.TimeZoneInfo.AdjustmentRule> ma <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionStart%2A> i Właściwość <xref:System.TimeZoneInfo.AdjustmentRule.DaylightTransitionEnd%2A>, która definiuje określoną datę i godzinę przejścia do i od czasu letniego. Właściwość <xref:System.TimeZoneInfo.TransitionTime.IsFixedDateRule%2A> wskazuje, czy zmiana jest stała, czy zmienna.
 
 Platforma .NET opiera się na informacjach o strefie czasowej udostępnianych przez system operacyjny Windows i przechowywanych w rejestrze. Ze względu na liczbę stref czasowych ziemi nie wszystkie istniejące strefy czasowe są reprezentowane w rejestrze. Ponadto, ponieważ rejestr jest strukturą dynamiczną, można do niej dodawać lub usuwać wstępnie zdefiniowane strefy czasowe. Na koniec rejestr nie musi zawierać historycznych danych strefy czasowej. Na przykład w systemie Windows XP Rejestr zawiera dane o pojedynczym zestawie korekt strefy czasowej. System Windows Vista obsługuje dynamiczne dane strefy czasowej, co oznacza, że pojedyncza strefa czasowa może mieć wiele reguł korekty, które są stosowane do określonych interwałów lat. Jednak większość stref czasowych, które są zdefiniowane w rejestrze systemu Windows Vista i obsługują czas letni, ma tylko jedną lub dwie wstępnie zdefiniowane reguły korekty.
 
-Zależność <xref:System.TimeZoneInfo> klasy w rejestrze oznacza, że aplikacja obsługująca strefy czasowej nie może mieć pewności, że określona strefa czasowa jest zdefiniowana w rejestrze. W związku z tym próba utworzenia wystąpienia określonej strefy czasowej (innej niż lokalna strefa czasowa lub strefa czasowa reprezentująca czas UTC) powinna korzystać z obsługi wyjątków. Należy również udostępnić pewną metodę, aby aplikacja kontynuowała działanie, jeśli nie <xref:System.TimeZoneInfo> można utworzyć wystąpienia wymaganego obiektu z rejestru.
+Zależność klasy <xref:System.TimeZoneInfo> w rejestrze oznacza, że aplikacja obsługująca strefy czasowej nie może mieć pewności, że określona strefa czasowa jest zdefiniowana w rejestrze. W związku z tym próba utworzenia wystąpienia określonej strefy czasowej (innej niż lokalna strefa czasowa lub strefa czasowa reprezentująca czas UTC) powinna korzystać z obsługi wyjątków. Należy również udostępnić pewne metody zezwalania aplikacji na kontynuowanie, jeśli nie można utworzyć wystąpienia wymaganego obiektu <xref:System.TimeZoneInfo> z rejestru.
 
-Aby obsłużyć brak wymaganej strefy czasowej, <xref:System.TimeZoneInfo> Klasa <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> zawiera metodę, która służy do tworzenia niestandardowych stref czasowych, które nie znajdują się w rejestrze. Aby uzyskać szczegółowe informacje na temat tworzenia niestandardowej strefy czasowej, zobacz [How to: Utwórz strefy czasowe bez reguł](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) dostosowywania [i instrukcje: Utwórz strefy czasowe z regułami](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)korekty. Ponadto można użyć <xref:System.TimeZoneInfo.ToSerializedString%2A> metody do przekonwertowania nowo utworzonej strefy czasowej na ciąg i zapisania jej w magazynie danych (na przykład bazy danych, pliku tekstowego, rejestru lub zasobu aplikacji). Następnie można użyć metody, <xref:System.TimeZoneInfo.FromSerializedString%2A> aby przekonwertować ten ciąg z powrotem <xref:System.TimeZoneInfo> do obiektu. Aby uzyskać szczegółowe informacje [, zobacz How to: Zapisz strefy czasowe w osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) zasobie i [instrukcje: Przywróć strefy czasowe z zasobu](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)osadzonego.
+W celu obsługi braku wymaganej strefy czasowej Klasa <xref:System.TimeZoneInfo> obejmuje metodę <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>, za pomocą której można tworzyć niestandardowe strefy czasowe, które nie znajdują się w rejestrze. Aby uzyskać szczegółowe informacje na temat tworzenia niestandardowej strefy czasowej, zobacz [jak: Tworzenie stref czasowych bez reguł korygowania](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md) i [instrukcje: Tworzenie stref czasowych przy użyciu reguł korygowania](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md). Ponadto można użyć metody <xref:System.TimeZoneInfo.ToSerializedString%2A>, aby przekonwertować nowo utworzoną strefę czasową na ciąg i zapisać ją w magazynie danych (na przykład baza danych, plik tekstowy, rejestr lub zasób aplikacji). Następnie można użyć metody <xref:System.TimeZoneInfo.FromSerializedString%2A>, aby przekonwertować ten ciąg z powrotem do <xref:System.TimeZoneInfo> obiektu. Aby uzyskać szczegółowe informacje, zobacz [jak: zapisywanie stref czasowych w zasobie osadzonym](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) i [instrukcje: przywracanie stref czasowych z zasobu osadzonego](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
 
-Ponieważ każda strefa czasowa jest określana przez przesunięcie bazowe od czasu UTC, a także przesunięcie od czasu UTC, które odzwierciedla wszelkie istniejące reguły korekty, czas w jednej strefie czasowej może być łatwo konwertowany na godzinę w innej strefie czasowej. W tym celu <xref:System.TimeZoneInfo> obiekt zawiera kilka metod konwersji, w tym:
+Ponieważ każda strefa czasowa jest określana przez przesunięcie bazowe od czasu UTC, a także przesunięcie od czasu UTC, które odzwierciedla wszelkie istniejące reguły korekty, czas w jednej strefie czasowej może być łatwo konwertowany na godzinę w innej strefie czasowej. W tym celu obiekt <xref:System.TimeZoneInfo> zawiera kilka metod konwersji, w tym:
 
 - <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>, która konwertuje czas UTC na godzinę w określonej strefie czasowej.
 
@@ -69,7 +67,7 @@ Ponieważ każda strefa czasowa jest określana przez przesunięcie bazowe od cz
 
 - <xref:System.TimeZoneInfo.ConvertTime%2A>, która konwertuje czas w jednej określonej strefie czasowej na godzinę w innej wyznaczeniu strefy czasowej.
 
-- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, który używa identyfikatorów strefy czasowej (zamiast <xref:System.TimeZoneInfo> obiektów) jako parametrów do konwersji czasu w jednej określonej strefie czasowej na godzinę w innej wyznaczeniu strefy czasowej.
+- <xref:System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId%2A>, który używa identyfikatorów strefy czasowej (zamiast obiektów <xref:System.TimeZoneInfo>) jako parametrów do konwersji czasu w jednej określonej strefie czasowej na godzinę w innej wyznaczeniej strefie czasowej.
 
 Aby uzyskać szczegółowe informacje o konwertowaniu czasu między strefami czasowymi, zobacz [konwertowanie czasów między strefami czasowymi](../../../docs/standard/datetime/converting-between-time-zones.md).
 

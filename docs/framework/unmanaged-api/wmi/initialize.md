@@ -14,14 +14,12 @@ helpviewer_keywords:
 - Initialize function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1bc3688b30180bdcde0a87027955a789de749f90
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b1f96b6285911b12d72ac136127d736b75d44023
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798444"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127389"
 ---
 # <a name="initialize-function"></a>Initialize — funkcja
 
@@ -41,19 +39,19 @@ HRESULT Initialize(
 
 `bAllowIManagementObjectQI`
 
-podczas `true` aby wskazać, że wywołania funkcji QueryInterface w obiektach usługi WMI są dozwolone; `false` w przeciwnym razie.
+[in] `true`, aby wskazać, że wywołania funkcji QueryInterface w obiektach usługi WMI są dozwolone; `false` w przeciwnym razie.
 
 ## <a name="return-value"></a>Wartość zwracana
 
-Funkcja zawsze zwraca wartość `S_OK` (0).
+Funkcja zawsze zwraca `S_OK` (0).
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.def
+**Nagłówek:** WMINet_Utils. def
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

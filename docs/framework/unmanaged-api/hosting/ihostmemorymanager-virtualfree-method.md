@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a436e89-eb28-4d15-bcf1-a072f86dbd99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a60d954cf4331d46a4667afba1e9dee0d214f0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b53c0bb38922ae8de048c131807eb32f97423d6c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767682"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128589"
 ---
 # <a name="ihostmemorymanagervirtualfree-method"></a>IHostMemoryManager::VirtualFree — Metoda
-Służy jako logiczne otoki dla odpowiedniej funkcji Win32. Implementacja Win32 `VirtualFree` zwalnia, anuluje, zwalnia lub anuluje region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
+Służy jako otoka logiczna dla odpowiadającej jej funkcji Win32. Implementacja Win32 `VirtualFree` zwalnia, decommits lub zwalnia i anuluje region stron w wirtualnej przestrzeni adresowej procesu wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,39 +37,39 @@ HRESULT VirtualFree (
   
 ## <a name="parameters"></a>Parametry  
  `lpAddress`  
- [in] Wskaźnik na adres bazowy stron pamięci wirtualnej, który ma zostać zwolniony.  
+ podczas Wskaźnik na adres podstawowy stron pamięci wirtualnej, które mają zostać zwolnione.  
   
  `dwSize`  
- [in] Rozmiar w bajtach, region, który ma zostać zwolniony.  
+ podczas Rozmiar, w bajtach, regionu, który ma zostać zwolniony.  
   
  `dwFreeType`  
- [in] Typ zwalnianie operacji.  
+ podczas Typ operacji zwalniania.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`VirtualFree` pomyślnie zwrócił.|  
-|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie został załadowany do procesu lub środowisko CLR jest w stanie, w której nie można uruchomić kod zarządzany lub przetworzyć wywołania.|  
-|HOST_E_TIMEOUT|Upłynął limit czasu wywołania.|  
-|HOST_E_NOT_OWNER|Obiekt wywołujący nie posiada blokady.|  
-|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas zablokowane wątki lub włókna oczekiwał na nim.|  
-|E_FAIL|Wystąpił nieznany błąd krytyczny. Po powrocie z metody E_FAIL CLR nie jest już można używać w ramach procesu. Kolejne wywołania do hostowania metody zwracają HOST_E_CLRNOTAVAILABLE.|  
-|HOST_E_INVALIDOPERATION|Nastąpiła próba, aby zwolnić pamięć, która nie została przydzielona za pośrednictwem hosta.|  
+|S_OK|`VirtualFree` pomyślnie zwrócone.|  
+|HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
+|HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
+|HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
+|HOST_E_ABANDONED|Zdarzenie zostało anulowane podczas oczekiwania na niego zablokowanego wątku lub włókna.|  
+|E_FAIL|Wystąpił nieznany błąd krytyczny. Gdy metoda zwraca wartość E_FAIL, środowisko CLR nie jest już możliwe do użycia w procesie. Kolejne wywołania metod hostingu zwracają HOST_E_CLRNOTAVAILABLE.|  
+|HOST_E_INVALIDOPERATION|Podjęto próbę zwolnienia pamięci, która nie została przyalokowana przez hosta.|  
   
 ## <a name="remarks"></a>Uwagi  
- `VirtualFree` zwalnia strony pamięci wirtualnej skojarzone z `lpAddress` parametru za pomocą podczas wcześniejszego wywołania [ihostmemorymanager::VirtualAlloc —](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) funkcji. Próbuje zwolnić pamięć, która nie została przydzielona za pośrednictwem hosta powinien zwrócić HOST_E_INVALIDOPERATION.  
+ `VirtualFree` zwalnia strony pamięci wirtualnej skojarzone z parametrem `lpAddress` za pomocą wcześniejszego wywołania funkcji [IHostMemoryManager:: funkcja VirtualAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-virtualalloc-method.md) . Próby zwolnienia pamięci, która nie została przydzielono za pomocą hosta, powinny zwrócić HOST_E_INVALIDOPERATION.  
   
- Semantyka są identyczne z tymi wdrożenia Win32 `VirtualFree`. Aby uzyskać więcej informacji zobacz dokumentację platformy Windows.  
+ Semantyka jest taka sama jak w przypadku implementacji Win32 `VirtualFree`. Aby uzyskać więcej informacji, zobacz dokumentację platformy systemu Windows.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

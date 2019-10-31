@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d4ab49aaccd77fac497bd86413915e82c99ed3e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744904"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131369"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable — Metoda
-Pobiera tablicę bajtów, która zawiera mapę bitową dostępnych rejestrach.  
+Pobiera tablicę bajtów, która zawiera mapę bitową dostępnych rejestrów.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,30 +36,30 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="parameters"></a>Parametry  
  `numChunks`  
- [in] Rozmiar `availableRegChunks` tablicy.  
+ podczas Rozmiar tablicy `availableRegChunks`.  
   
  `availableRegChunks`  
- [out] Tablica bajtów, każdy bit odnosi się do rejestru. Jeśli rejestr jest dostępny, odpowiadający mu bit rejestru jest ustawiona.  
+ określoną Tablica bajtów, z których każdy bit odnosi się do rejestru. Jeśli rejestr jest dostępny, zostanie ustawiony odpowiedni bit rejestru.  
   
 ## <a name="remarks"></a>Uwagi  
- Wartości wyliczenia cordebugregister — Określ rejestrów mikroprocesory różne. Górny pięć bitów każdej wartości są Indeksuj do `availableRegChunks` tablicę bajtów. Niższe trzy usługi bits w każdej wartości identyfikują Pozycja bitu w indeksowanych bajtów. Biorąc pod uwagę `CorDebugRegister` wartość, która określa określonego rejestru, pozycji Zarejestruj maski jest określany w następujący sposób:  
+ Wartości wyliczenia CorDebugRegister — określają rejestry różnych mikroprocesorów. Górne pięć bitów każdej wartości jest indeksem do `availableRegChunks` tablicy bajtów. Mniejsze trzy bity każdej wartości określają pozycję bitową w ramach indeksowanego bajtu. Uwzględniając `CorDebugRegister` wartość określającą konkretny rejestr, pozycja rejestru w masce jest określana w następujący sposób:  
   
-1. Wyodrębnij indeksu umożliwiającymi dostęp poprawne bajtów w `availableRegChunks` tablicy:  
+1. Wyodrębnij indeks wymagany do uzyskania dostępu do poprawnego bajtu w tablicy `availableRegChunks`:  
   
-     `CorDebugRegister` wartość >> 3  
+     `CorDebugRegister` wartość > > 3  
   
-2. Wyodrębnij Pozycja bitu w indeksowanych bajtów, gdzie bit zero jest najmniej znaczący bit:  
+2. Wyodrębnij pozycję bitową w zaindeksowanym bajcie, gdzie bit zero jest najmniej znaczącym bitem:  
   
-     `CorDebugRegister` Wartość & 7  
+     `CorDebugRegister` wartość & 7  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f857f773f02da25fe6650000be777b8290f5af91
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274061"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132356"
 ---
 # <a name="cor_field-structure"></a>COR_FIELD — Struktura
 Zawiera informacje dotyczące pola w obiekcie.  
@@ -41,7 +39,7 @@ typedef struct COR_FIELD{
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`token`|`mdFieldDef` Token, który może służyć do uzyskiwania informacji o polu.|  
+|`token`|Token `mdFieldDef`, który może służyć do uzyskiwania informacji o polu.|  
 |`offset`|Przesunięcie, w bajtach, do danych pola w obiekcie.|  
 |`id`|Wartość [COR_TYPEID](cor-typeid-structure.md) , która identyfikuje typ tego pola.|  
 |`fieldType`|Wartość wyliczenia CorElementType —, która wskazuje typ pola.|  
@@ -49,13 +47,13 @@ typedef struct COR_FIELD{
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

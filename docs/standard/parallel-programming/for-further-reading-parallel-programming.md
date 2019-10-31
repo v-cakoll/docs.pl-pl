@@ -5,20 +5,18 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bbdbc7586396a13cacac216774e8937416be947e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929293"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134216"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Dalsze informacje (Programowanie równoległe)
 
 Następujące zasoby zawierają dodatkowe informacje na temat programowania równoległego w programie .NET:
 
-- [Wzorce programowania równoległego: Zrozumienie i stosowanie równoległych wzorców z dokumentem](https://www.microsoft.com/download/details.aspx?id=19222) .NET Framework 4 zawiera opis typowych wzorców równoległych i najlepszych rozwiązań do tworzenia równoległych składników wykorzystujących te wzorce.
+- [Wzorce programowania równoległego: zrozumienie i stosowanie równoległych wzorców z dokumentem .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) zawiera opis typowych wzorców równoległych i najlepszych rozwiązań do tworzenia składników równoległych korzystających z tych wzorców.
 
 - [Wzorce projektowe dla dekompozycji i koordynacji w książce architektury wielordzeniowe](https://docs.microsoft.com/previous-versions/msp-n-p/ff963553(v=pandp.10)) opisują wzorce programowania równoległego, które korzystają z obsługi programowania równoległego wprowadzonego w .NET Framework 4.
 

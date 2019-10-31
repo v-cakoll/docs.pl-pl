@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7911d09c97c5401bff827ca5fb0a8766933778f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738672"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134168"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual — Metoda
-Odczytuje dane z adresu określonego pamięci wirtualnej do określonego bufora.  
+Odczytuje dane z określonego adresu pamięci wirtualnej do określonego buforu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] CLRDATA_ADDRESS, która przechowuje adres pamięci wirtualnej.  
+ podczas CLRDATA_ADDRESS, który przechowuje adres pamięci wirtualnej.  
   
  `buffer`  
- [out] Wskaźnik do buforu, który odbiera dane.  
+ określoną Wskaźnik do buforu, który odbiera dane.  
   
  `bytesRequested`  
- [in] Długość buforu.  
+ podczas Długość buforu.  
   
  `bytesRead`  
- [out] Wskaźnik do liczby bajtów zwróconych.  
+ określoną Wskaźnik do liczby zwracanych bajtów.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** ClrData.idl, ClrData.h  
+ **Nagłówek:** ClrData. idl, ClrData. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca51b87e7afc8e9e48d541a32b3bd60a19a5ff70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5fcf8bc861b2ef0b8ea9f5a5e46585564cc26615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965967"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127701"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop — Metoda
 Kończy wykonywanie kodu w środowisku uruchomieniowym dla bieżącego procesu.  
@@ -43,19 +41,19 @@ HRESULT Stop ();
 |HOST_E_CLRNOTAVAILABLE|Środowisko CLR nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Zazwyczaj nie jest konieczne wywoływanie `Stop` metody, ponieważ kod kończy wykonywanie po zakończeniu procesu.  
+ Zazwyczaj nie jest konieczne wywoływanie metody `Stop`, ponieważ kod kończy wykonywanie po zakończeniu procesu.  
   
 > [!NOTE]
-> Po wywołaniu `Stop`, nie można ponownie zainicjować środowiska CLR w tym samym procesie.  
+> Po wywołaniu `Stop`nie można ponownie zainicjować środowiska CLR w tym samym procesie.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** 1.0, 1.1  
+ **.NET Framework wersje:** 1,0, 1,1  
   
 ## <a name="see-also"></a>Zobacz także
 

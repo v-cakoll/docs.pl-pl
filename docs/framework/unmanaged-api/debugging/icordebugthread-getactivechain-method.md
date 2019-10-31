@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f50de1f7-40ef-4949-b542-1d9a61f7bfef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 59328c8b7e86694610de20ade72a98a4280b439d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 99a617ef21ee3c3319b1ebe7d3ab8367659b6ef8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762620"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133554"
 ---
 # <a name="icordebugthreadgetactivechain-method"></a>ICorDebugThread::GetActiveChain — Metoda
-Pobiera wskaźnik interfejsu do aktywnego łańcucha stosu (najnowsze) dla tego obiektu ICorDebugThread.  
+Pobiera wskaźnik interfejsu do aktywnego (najnowszego) łańcucha stosu dla tego obiektu ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT GetActiveChain (
   
 ## <a name="parameters"></a>Parametry  
  `ppChain`  
- [out] Wskaźnik na adres icordebugchain — obiekt, który reprezentuje łańcucha stosu.  
+ określoną Wskaźnik do adresu obiektu ICorDebugChain, który reprezentuje łańcuch stosu.  
   
 ## <a name="remarks"></a>Uwagi  
- `ppChain` Parametr ma wartość null, jeśli żaden łańcuch stosu jest obecnie aktywna.  
+ Parametr `ppChain` ma wartość null, jeśli żaden łańcuch stosu nie jest obecnie aktywny.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

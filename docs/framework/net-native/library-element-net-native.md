@@ -1,20 +1,18 @@
 ---
-title: <Library>— Element (.NET Native)
+title: Element <Library> (.NET Native)
 ms.date: 03/30/2017
 ms.assetid: f642276b-33fb-4a81-b882-8808c31ba69e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc3c85ab99574c96d8a68d4221f218a1340e4122
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f94bfe047fa7a95b6f24264bae0b27112c589dfd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049651"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128370"
 ---
-# <a name="library-element-net-native"></a>\<Biblioteka > element (.NET Native)
+# <a name="library-element-net-native"></a>Element > biblioteki \<(.NET Native)
 Definiuje zestaw zawierający typy i elementy członkowskie typu, których metadane są dostępne do odbicia w czasie wykonywania.  
   
- \<Dyrektywy > element  
+ Dyrektywy \<> element  
 \<Biblioteka > element  
   
 ## <a name="syntax"></a>Składnia  
@@ -30,35 +28,35 @@ Definiuje zestaw zawierający typy i elementy członkowskie typu, których metad
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`Name`|Atrybut wymagany. Określa nazwę zestawu. Elementy podrzędne tego `<Library>` elementu definiują zasady odbicia środowiska uruchomieniowego dla typów i elementów członkowskich typu znalezionych w tym zestawie.|  
+|`Name`|Atrybut wymagany. Określa nazwę zestawu. Elementy podrzędne tego elementu `<Library>` definiują zasady odbicia środowiska uruchomieniowego dla typów i elementów członkowskich typu znalezionych w tym zestawie.|  
   
 ## <a name="name-attribute"></a>Atrybut nazwy  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*assembly_name*|Prosta nazwa zestawu bez rozszerzenia pliku. Ten atrybut odpowiada <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości. Na przykład nazwa zestawu o nazwie Extensions. dll ma wartość "Extensions". Zobacz sekcję Uwagi, aby uzyskać specjalną postać *assembly_name* , która obsługuje warunkowe dołączanie metadanych z zestawu.|  
+|*assembly_name*|Prosta nazwa zestawu bez rozszerzenia pliku. Ten atrybut odpowiada właściwości <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType>. Na przykład nazwa zestawu o nazwie Extensions. dll ma wartość "Extensions". Zobacz sekcję Uwagi, aby uzyskać specjalną postać *assembly_name* , która obsługuje warunkowe dołączanie metadanych z zestawu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> Zestawu](assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
-|[\<Namespace>](namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w konkretnym obszarze nazw.|  
-|[\<Type>](type-element-net-native.md)|Stosuje zasady do określonego typu, na przykład klasy lub struktury.|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład [ \<element TypeInstantiation >](typeinstantiation-element-net-native.md) może służyć do `List<String>` definiowania zasad dla typu.|  
+|[\<zestawu >](assembly-element-net-native.md)|Stosuje zasady do wszystkich typów w określonym zestawie.|  
+|[\<przestrzeni nazw >](namespace-element-net-native.md)|Stosuje zasady do wszystkich typów w konkretnym obszarze nazw.|  
+|[Typ\<](type-element-net-native.md)|Stosuje zasady do określonego typu, na przykład klasy lub struktury.|  
+|[\<TypeInstantiation >](typeinstantiation-element-net-native.md)|Stosuje zasady do skonstruowanego typu ogólnego. Na przykład element [\<TypeInstantiation >](typeinstantiation-element-net-native.md) może służyć do definiowania zasad dla typu `List<String>`.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Dyrektywy >](directives-element-net-native.md)|Element główny pliku dyrektywy środowiska uruchomieniowego.|  
+|[Dyrektywy \<](directives-element-net-native.md)|Element główny pliku dyrektywy środowiska uruchomieniowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Dyrektywy > element może zawierać zero, jeden lub więcej `<Library>` elementów. [ \<](directives-element-net-native.md)  
+ [Dyrektywy\<](directives-element-net-native.md) element może zawierać zero, jeden lub więcej elementów `<Library>`.  
   
- `<Library>` Element służy jako kontener do definiowania elementów programu, których metadane są konieczne w czasie wykonywania; ten element nie ma zasad ekspresowych. W czasie kompilacji narzędzia kompilatora przeszukują tylko bibliotekę wyznaczony przez `<Library>` element dla elementów programu identyfikowanych przez jego elementy podrzędne. Z kolei narzędzia kompilatora przeszukują wszystkie biblioteki, including.NET Framework Core librarys dla elementów programu identyfikowanych przez elementy [ \<podrzędne aplikacji >](application-element-net-native.md) elementu.  
+ Element `<Library>` służy jako kontener do definiowania elementów programu, których metadane są konieczne w czasie wykonywania; Ten element nie ma zasad ekspresowych. W czasie kompilacji narzędzia kompilatora przeszukują tylko bibliotekę wyznaczony przez element `<Library>` dla elementów programu identyfikowanych przez jego elementy podrzędne. W przeciwieństwie do narzędzi kompilatora przeszukiwane są wszystkie biblioteki, including.NET Framework Core librarys dla elementów programu identyfikowanych przez elementy podrzędne elementu [> aplikacji\<](application-element-net-native.md) .  
   
- `<Library>`dyrektywy mogą być warunkowo wykorzystywane. Jeśli nazwa `<Library>` elementu zaczyna się i kończy się gwiazdką (\*), `<Library>` dyrektywa ma wpływ tylko wtedy, gdy zestaw określony między gwiazdkami jest przywoływany przez aplikację. Na przykład następująca dyrektywa środowiska uruchomieniowego ma zastosowanie tylko wtedy, gdy aplikacja jest przywoływana przez zestaw Utilities. dll.  
+ dyrektywy `<Library>` mogą być stosowane warunkowo. Jeśli nazwa elementu `<Library>` rozpoczyna się i kończy się gwiazdką (\*), dyrektywa `<Library>` ma wpływ tylko wtedy, gdy zestaw określony między gwiazdkami jest przywoływany przez aplikację. Na przykład następująca dyrektywa środowiska uruchomieniowego ma zastosowanie tylko wtedy, gdy aplikacja jest przywoływana przez zestaw Utilities. dll.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -70,7 +68,7 @@ Definiuje zestaw zawierający typy i elementy członkowskie typu, których metad
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<Element > aplikacji](application-element-net-native.md)
-- [\<Dyrektywy > element](directives-element-net-native.md)
+- [\<> elementu aplikacji](application-element-net-native.md)
+- [Dyrektywy \<> element](directives-element-net-native.md)
 - [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elementy dyrektyw środowiska uruchomieniowego](runtime-directive-elements.md)

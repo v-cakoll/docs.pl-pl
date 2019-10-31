@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5f5a311a-839a-465f-89d9-ff1c74da9736
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05bc472711838236ed18b00ce808d022d9581dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3531cfc0815c3f8a9479e35b2df60b2825801b39
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758202"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136847"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE — Funkcja
-`CoUninitializeEE` jest przestarzały i nie zawiera żadnych funkcji.  
+`CoUninitializeEE` jest przestarzała i nie zapewnia żadnych funkcji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,7 +34,7 @@ void CoUninitializeEE (
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Aparat wykonywania środowiska uruchomieniowego języka wspólnego nie może być zwolnione z procesu. Zamknąć wywołanie aparatu wykonywania [corexitprocess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
+ Nie można zwolnić aparatu wykonywania środowiska uruchomieniowego języka wspólnego z procesu. Aby zamknąć wywołanie aparatu wykonywania [CorExitProcess —](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

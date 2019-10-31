@@ -2,14 +2,12 @@
 title: Odbicie i architektura .NET Native
 ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17b567fe0f476e689a9775c5c73ebf068424e840
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 65921377be9b8bf1c2d147b384c85cbd037d15f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049287"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128183"
 ---
 # <a name="reflection-and-net-native"></a>Odbicie i architektura .NET Native
 W .NET Framework zarządzanie zarządzane obsługuje tworzenie aplikacji za pomocą interfejsu API odbicia. Odbicie umożliwia inspekcję obiektów w aplikacji, wywoływanie metod dla obiektów odnalezionych za poorednictwem inspekcji, generowanie nowych typów w czasie wykonywania i obsługę wielu innych scenariuszy kodu dynamicznego. Obsługuje również serializacji i deserializacji, co pozwala na utrwalanie i późniejsze przywracanie wartości pól obiektu. Te scenariusze wymagają, .NET Framework kompilator just-in-Time (JIT) do generowania kodu natywnego na podstawie dostępnych metadanych.  
@@ -23,7 +21,7 @@ W .NET Framework zarządzanie zarządzane obsługuje tworzenie aplikacji za pomo
 > [!NOTE]
 > Aby zapoznać się z omówieniem procesu kompilacji .NET Native, który zawiera informacje o tym, dlaczego plik dyrektywy środowiska uruchomieniowego jest zbędny, zobacz [.NET Native i kompilacja](net-native-and-compilation.md).  
   
- Ponadto .NET Native nie pozwala na odzwierciedlenie w porównaniu z prywatnymi członkami biblioteki klas .NET Framework. Na przykład wywołanie <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> właściwości w celu pobrania pól typu Biblioteka klas .NET Framework zwraca tylko pola publiczne lub chronione.  
+ Ponadto .NET Native nie pozwala na odzwierciedlenie w porównaniu z prywatnymi członkami biblioteki klas .NET Framework. Na przykład wywołanie właściwości <xref:System.Reflection.TypeInfo.DeclaredFields%2A?displayProperty=nameWithType> w celu pobrania pól typu biblioteki klas .NET Framework zwraca tylko pola publiczne lub chronione.  
   
  Poniższe tematy zawierają informacje dotyczące pojęć i referencyjnych, które należy wykonać, aby obsłużyć odbicie i serializację w aplikacjach:  
   

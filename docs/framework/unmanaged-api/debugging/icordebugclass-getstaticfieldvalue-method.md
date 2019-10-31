@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7649d91ca2b654952d1d5ab0d45f7903d3c46a32
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745541"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125760"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue — Metoda
-Pobiera wartość określonego pola statyczne.  
+Pobiera wartość określonego pola statycznego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,24 +37,24 @@ HRESULT GetStaticFieldValue (
   
 ## <a name="parameters"></a>Parametry  
  `fieldDef`  
- [in] Pole `Def` token, który odwołuje się do pola, które mają zostać pobrane.  
+ podczas Token `Def` pola, który odwołuje się do pola, które ma zostać pobrane.  
   
  `pFrame`  
- [in] Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę, która ma być używany, aby rozróżniać wśród wątku, kontekstu lub statystyce domeny aplikacji.  
+ podczas Wskaźnik do obiektu ICorDebugFrame, który reprezentuje ramkę, która ma zostać użyta do rozróżnienia między elementem statycznym, kontekstowym lub domeną aplikacji.  
   
- Jeśli pola statycznego jest określana względem wątku, kontekst lub domenę aplikacji, ramki określi poprawnej wartości.  
+ Jeśli pole statyczne jest powiązane z wątkiem, kontekstem lub domeną aplikacji, ramka będzie określać odpowiednią wartość.  
   
  `ppValue`  
- [out] Wskaźnik na adres obiektu ICorDebugValue, która reprezentuje wartość pola statycznego.  
+ określoną Wskaźnik do adresu obiektu ICorDebugValue, który reprezentuje wartość pola statycznego.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla typów sparametryzowanych wartość pola statycznego jest względem określonego wystąpienia. W związku z tym jeśli Konstruktor klasy ma parametry typu <xref:System.Type>, wywołaj [ICorDebugType::GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) zamiast `ICorDebugClass::GetStaticFieldValue`.  
+ W przypadku typów sparametryzowanych wartość pola statycznego jest określana względem konkretnego wystąpienia. W związku z tym, jeśli Konstruktor klasy przyjmuje parametry typu <xref:System.Type>, należy wywołać [ICorDebugType:: GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) , a nie `ICorDebugClass::GetStaticFieldValue`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0358b84a-4236-4c34-945b-4babff7df570
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9d30b6cb083cc2f92bcbe089bf8e990fedd8e8f7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 66ec64b1a855a3d31f14f3ef29dde0b82361f5d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133983"
 ---
 # <a name="icordebugappdomainattach-method"></a>ICorDebugAppDomain::Attach — Metoda
 Dołącza debuger do domeny aplikacji.  
@@ -34,13 +32,13 @@ HRESULT Attach ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger musi być dołączony do domeny aplikacji, aby odbierać zdarzenia i włączyć debugowanie stron domeny aplikacji.  
+ Debuger musi być dołączony do domeny aplikacji, aby odbierać zdarzenia i włączać debugowanie domeny aplikacji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

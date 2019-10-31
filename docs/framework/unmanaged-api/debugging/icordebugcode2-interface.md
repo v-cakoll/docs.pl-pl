@@ -1,5 +1,5 @@
 ---
-title: ICorDebugCode2, interfejs
+title: ICorDebugCode2 — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugCode2
@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9cb7be64089a55e7b653fcd6272219abba311af8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7f0570b668cc33ca509c8522d1ba35ebcfca2453
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125574"
 ---
-# <a name="icordebugcode2-interface"></a>ICorDebugCode2, interfejs
+# <a name="icordebugcode2-interface"></a>ICorDebugCode2 — Interfejs
 
 Dostarcza metody, które zwiększają możliwości programu "ICorDebugCode".  
   
@@ -40,13 +38,13 @@ Dostarcza metody, które zwiększają możliwości programu "ICorDebugCode".
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

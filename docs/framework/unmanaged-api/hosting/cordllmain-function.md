@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: bc7b51cf-39d3-48ec-a5cb-2f179fbefff8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a02a899fd6fbffd04ef25913adb6a65ade27177
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f60f159ab4770023cee7123b39109040243e1ccd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136966"
 ---
-# <a name="cordllmain-function"></a>\_CorDllMain Function
+# <a name="_cordllmain-function"></a>\_funkcja CorDllMain
 
-Inicjuje środowisko uruchomieniowe języka wspólnego (CLR), lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu biblioteki DLL i rozpoczyna wykonywanie.  
+Inicjuje środowisko uruchomieniowe języka wspólnego (CLR), lokalizuje zarządzany punkt wejścia w nagłówku CLR zestawu DLL i rozpoczyna wykonywanie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,35 +37,35 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
 ## <a name="parameters"></a>Parametry  
  `hInst`  
- [in] Uchwyt wystąpienia załadowanym module.  
+ podczas Dojście wystąpienia załadowanego modułu.  
   
  `dwReason`  
- [in] Wskazuje, dlaczego jest wywoływana funkcja punktu wejścia biblioteki DLL. Ten parametr może być jedną z następujących wartości: Biblioteki DLL\_PROCESS_ATTACH, biblioteki DLL\_wątku\_ATTACH, biblioteki DLL\_wątku\_ATTACH lub DLL\_procesu\_ODŁĄCZANIA. Aby uzyskać opis tych wartości, zobacz `DllMain` dokumentacji w zestawie SDK platformy.  
+ podczas Wskazuje, dlaczego funkcja punktu wejścia biblioteki DLL jest wywoływana. Ten parametr może być jedną z następujących wartości: DLL\_PROCESS_ATTACH, DLL\_wątku\_ATTACH, DLL\_wątku\_ATTACH, lub\_proces\_odłączania. Opisy tych wartości można znaleźć w dokumentacji `DllMain` w zestawie SDK platformy.  
   
  `lpReserved`  
- [in] Nieużywane.  
+ podczas Przestrzeń.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca `true` w celu osiągnięcia sukcesu i `false` w przypadku wystąpienia błędu.  
+ Ta metoda zwraca `true` dla sukcesu i `false` w przypadku wystąpienia błędu.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta funkcja jest wywoływana przez program ładujący systemu operacyjnego dla zestawów DLL. Dla pliku wykonywalnego zestawów wywołuje moduł ładujący [ \_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) zamiast tego funkcji.  
+ Ta funkcja jest wywoływana przez program ładujący systemu operacyjnego dla zestawów bibliotek DLL. W przypadku zestawów wykonywalnych moduł ładujący wywołuje [\_funkcję CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) .  
   
- Program ładujący systemu operacyjnego wywołuje tę metodę, niezależnie od tego punktu wejścia, określone w pliku DLL.  
+ Moduł ładujący systemu operacyjnego wywołuje tę metodę niezależnie od punktu wejścia określonego w pliku DLL.  
   
-`_CorDllMain` Funkcja jest wywoływana bezpośrednio przez program ładujący systemu operacyjnego.
+Funkcja `_CorDllMain` jest wywoływana bezpośrednio przez program ładujący systemu operacyjnego.
   
- Aby uzyskać dodatkowe informacje, zobacz sekcję Uwagi w [ \_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) tematu.  
+ Aby uzyskać dodatkowe informacje, zobacz sekcję Uwagi w temacie [\_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md) .  
   
 ## <a name="requirements"></a>Wymagania  
 
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Nagłówek:** Cor. h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MsCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

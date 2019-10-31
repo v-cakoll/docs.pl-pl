@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86a09871-33e4-412c-aeb8-4d18f924595b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a66fb16462cf7b12d1b0dfadb7df63be96b3f70f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2644a36e9a2901ef1007ebf3180b9fc55b5ca67a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127199"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone — Metoda
 Ta metoda obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  

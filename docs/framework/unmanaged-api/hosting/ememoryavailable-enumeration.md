@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 38e72a06-dbed-473b-a59b-7e0b3ea4f2af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aec3c5f140df7eab10ea2bfa33634a4d853adcb0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772397"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134290"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable — Wyliczenie
-Zawiera wartości, które wskazują ilość wolnej pamięci fizycznej na komputerze. Te wartości logicznie mapowania na zdarzenia dla wysokim i niskim pamięci zwróciło `CreateMemoryResourceNotification` funkcji w interfejsie API Windows.  
+Zawiera wartości wskazujące ilość wolnej pamięci fizycznej na komputerze. Te wartości logicznie mapują do zdarzeń związanych z wysoką i niską ilością pamięci zwracaną z funkcji `CreateMemoryResourceNotification` w interfejsie API systemu Windows.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,21 +38,21 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|Dużej ilości pamięci fizycznej jest dostępna.|  
-|`eMemoryAvailableLow`|Bardzo mała ilość pamięci fizycznej jest dostępna.|  
-|`eMemoryAvailableNeutral`|Dostępnej pamięci fizycznej jest neutralna.|  
+|`eMemoryAvailableHigh`|Dostępna jest duża ilość pamięci fizycznej.|  
+|`eMemoryAvailableLow`|Dostępna jest bardzo mała ilość pamięci fizycznej.|  
+|`eMemoryAvailableNeutral`|Dostępna pamięć fizyczna jest neutralna.|  
   
 ## <a name="remarks"></a>Uwagi  
- Ta wartość jest przekazywana przez hosta do wykonywalnych języka wspólnego (CLR), przy użyciu wywołania do [iclrmemorynotificationcallback::onmemorynotification —](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) metody.  
+ Ta wartość jest przesyłana przez hosta do środowiska uruchomieniowego języka wspólnego (CLR) za pomocą wywołania metody [ICLRMemoryNotificationCallback:: OnMemoryNotification —](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

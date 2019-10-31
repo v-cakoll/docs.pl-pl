@@ -6,42 +6,40 @@ helpviewer_keywords:
 - unmanaged structures [.NET Framework], hosting
 - structures [.NET Framework hosting]
 ms.assetid: 492e010f-7493-4134-9505-f7008ccdaae6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 01b12af8c3c3a2f834827ff14665050e07b31467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d43225574b8794733ee2e83562699276ddc5bab
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985598"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126937"
 ---
 # <a name="hosting-structures"></a>Hosting — Struktury
-W tej sekcji opisano niezarządzane struktury, które korzysta z interfejsu API.  
+W tej sekcji opisano niezarządzane struktury używane przez interfejs API hostingu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [AssemblyBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)  
- Zawiera szczegółowe informacje o zestawie, do którego istnieje odwołanie.  
+ Zawiera szczegółowe informacje o przywoływanym zestawie.  
   
  [BucketParameters, struktura](../../../../docs/framework/unmanaged-api/hosting/bucketparameters-structure.md)  
- Przechowuje nazwę typu zdarzenia i parametry dla bieżącego wyjątku, który jest skojarzony ze zdarzeniem.  
+ Przechowuje nazwę typu zdarzenia i parametry bieżącego wyjątku, który jest skojarzony ze zdarzeniem.  
   
  [COR_GC_STATS, struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)  
- Przedstawia dane statystyczne dotyczące mechanizmu kolekcji wyrzucania elementów środowiska uruchomieniowego języka wspólnego (CLR).  
+ Zawiera dane statystyczne dotyczące mechanizmu odzyskiwania pamięci środowiska uruchomieniowego języka wspólnego (CLR).  
   
  [COR_GC_THREAD_STATS, struktura](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)  
- Zawiera statystyki wątku odnoszących się do wyrzucania elementów bezużytecznych.  
+ Zawiera statystyki poszczególnych wątków dotyczące wyrzucania elementów bezużytecznych.  
   
  [CustomDumpItem, struktura](../../../../docs/framework/unmanaged-api/hosting/customdumpitem-structure.md)  
- Opis elementu do dodania do niestandardowych zrzutu w raportowaniu błędów.  
+ Opisuje element, który ma zostać dodany do niestandardowego zrzutu w raporcie o błędach.  
   
  [MDAInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)  
- Zawiera szczegółowe informacje na temat `Event_MDAFired` zdarzenia, co powoduje wyzwolenie tworzenia zarządzanego Asystenta debugowania (MDA).  
+ Zawiera szczegółowe informacje o zdarzeniu `Event_MDAFired`, które wyzwala tworzenie zarządzanego asystenta debugowania (MDA).  
   
  [ModuleBindInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)  
- Zawiera szczegółowe informacje o module odwołania i zestawu, który go zawiera.  
+ Zawiera szczegółowe informacje dotyczące modułu, do którego istnieje odwołanie, i zestawu, który go zawiera.  
   
  [StackOverflowInfo, struktura](../../../../docs/framework/unmanaged-api/hosting/stackoverflowinfo-structure.md)  
- Typ przepełnienia, które wystąpiły, oraz informacje są przechowywane na wyjątek, który został wygenerowany z powodu przepełnienia.  
+ Przechowuje typ przepełnienia, który wystąpił, i informacje o wyjątku, który został zgłoszony z powodu przepełnienia.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  

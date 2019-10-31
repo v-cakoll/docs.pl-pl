@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d17f51867b64780fca9b21c5f48c88db36343af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51ee8b3631bffe9fd7fef4351e0aa67d1cbbe2c9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748787"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125398"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks — Metoda
-Pobiera wartość wskazującą, czy wszystkie zarządzane wywołania zwrotne aktualnie czekają w kolejce dla określonego wątku.  
+Pobiera wartość wskazującą, czy wszystkie zarządzane wywołania zwrotne są obecnie umieszczane w kolejce dla określonego wątku.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,25 +36,25 @@ HRESULT HasQueuedCallbacks (
   
 ## <a name="parameters"></a>Parametry  
  `pThread`  
- [in] Wskaźnik do obiektu "ICorDebugThread", który reprezentuje wątku.  
+ podczas Wskaźnik do obiektu "ICorDebugThread", który reprezentuje wątek.  
   
  `pbQueued`  
- [out] Wskaźnik do wartości, która jest `true` Jeśli wszystkie zarządzane wywołania zwrotne są obecnie w kolejce dla określonego wątku; w przeciwnym razie `false`.  
+ określoną Wskaźnik do wartości, która jest `true`, jeśli wszystkie zarządzane wywołania zwrotne są obecnie umieszczane w kolejce dla określonego wątku; w przeciwnym razie `false`.  
   
- Jeśli określono wartość null dla `pThread` parametru `HasQueuedCallbacks` zwróci `true` Jeśli obecnie nie są zarządzane wywołania zwrotne w kolejce dla każdego wątku.  
+ Jeśli określono wartość null dla parametru `pThread`, `HasQueuedCallbacks` zwróci `true`, jeśli w dowolnym wątku istnieją obecnie zarządzane wywołania zwrotne.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołania zwrotne zostaną wysłane pojedynczo, każdorazowo [ICorDebugController::Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) jest wywoływana. Debuger można sprawdzić tę flagę, jeśli chce zgłosić wielu zdarzeń debugowania, które wystąpiły równocześnie.  
+ Wywołania zwrotne będą wysyłane pojedynczo, za każdym razem, gdy [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) jest wywoływana. Debuger może zaznaczyć tę flagę, jeśli chce zgłosić wiele zdarzeń debugowania, które wystąpiły jednocześnie.  
   
- Podczas debugowania zdarzenia są umieszczane w kolejce, ich ma już wystąpił, debuger musi opróżniania kolejki całego mieć pewność, że stan debugowany program. (Wywołania `ICorDebugController::Continue` celu opróżnienia kolejki.) Na przykład, jeśli kolejka zawiera dwa zdarzenia debugowania w wątku *X*, a debuger zawiesza wątku *X* po pierwsze zdarzenie debugowania, a następnie wywołania `ICorDebugController::Continue`, drugie zdarzenie debugowania dla Wątek *X* zostanie wysłany, mimo że wstrzymania wątku.  
+ Gdy zdarzenia debugowania są umieszczane w kolejce, są już wystąpiły, więc debuger musi opróżnić całą kolejkę, aby upewnić się, że stan debugowanego obiektu. (Wywołaj `ICorDebugController::Continue`, aby opróżnić kolejkę.) Na przykład, jeśli kolejka zawiera dwa zdarzenia debugowania w wątku *x*, a Debuger zawiesza wątek *x* po pierwszym zdarzeniu debugowania, a następnie wywołuje `ICorDebugController::Continue`, drugie zdarzenie debugowania dla wątku *X* zostanie wysłane, mimo że wątek został zawieszony.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

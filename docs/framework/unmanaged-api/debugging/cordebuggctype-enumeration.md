@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740033"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132183"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType — Wyliczenie
-Wskazuje, czy moduł garbage collector jest uruchomiona na serwerze lub stacji roboczej.  
+Wskazuje, czy moduł wyrzucania elementów bezużytecznych jest uruchomiony na stacji roboczej lub na serwerze.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,19 +39,19 @@ typedef enum CorDebugGCType {
   
 |Nazwa elementu członkowskiego|Opis|  
 |-----------------|-----------------|  
-|`CorDebugWorkstationGC`|Moduł garbage collector jest uruchomiona na stacji roboczej.|  
-|`CorDebugServerGC`|Moduł garbage collector jest uruchomiona na serwerze.|  
+|`CorDebugWorkstationGC`|Moduł wyrzucania elementów bezużytecznych jest uruchomiony na stacji roboczej.|  
+|`CorDebugServerGC`|Moduł wyrzucania elementów bezużytecznych jest uruchomiony na serwerze.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

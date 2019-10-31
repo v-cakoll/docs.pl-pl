@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e18097dd380ee354e5652886544d40da074f1230
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: db24228de7e8c98fd97f890b1e408515172299b3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747627"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125670"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode — Metoda
-Pobiera cały kod dla określonej funkcji, sformatowane, aby dezasemblacji. Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0. Użyj [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) zamiast tego.  
+Pobiera cały kod dla określonej funkcji, sformatowany pod kątem demontażu. Ta metoda jest przestarzała w .NET Framework w wersji 2,0. Zamiast tego użyj [ICorDebugCode2:: GetCodeChunks —](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) .  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>Parametry  
  `startOffset`  
- [in] Przesunięcie początku funkcji.  
+ podczas Przesunięcie początku funkcji.  
   
  `endOffset`  
- [in] Przesunięcia końca funkcji.  
+ podczas Przesunięcie końca funkcji.  
   
  `cBufferAlloc`  
- [in] Rozmiar `buffer` tablicy, do której zostanie zwrócony kod.  
+ podczas Rozmiar tablicy `buffer`, do której zostanie zwrócony kod.  
   
  `buffer`  
- [out] Tablica, do którego zostanie zwrócony kod.  
+ określoną Tablica, do której zostanie zwrócony kod.  
   
  `pcBufferSize`  
- [out] Liczba bajtów zwróconych.  
+ określoną Liczba zwróconych bajtów.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli kod funkcji został podzielony na wiele fragmentów, są one łączone w celu zwiększenia przesunięciu macierzystym. Instrukcja granice nie są sprawdzane.  
+ Jeśli kod funkcji został podzielony na wiele fragmentów, są one łączone w kolejności rosnącego przesunięcia natywnego. Granice instrukcji nie są zaznaczone.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** 1.1, 1.0  
+ **.NET Framework wersje:** 1,1, 1,0  
   
 ## <a name="see-also"></a>Zobacz także
 

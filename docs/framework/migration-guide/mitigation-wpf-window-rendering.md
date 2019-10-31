@@ -1,17 +1,15 @@
 ---
-title: Środki zaradcze Renderowanie okna WPF
+title: 'Ograniczenie: renderowanie okien WPF'
 ms.date: 03/30/2017
 ms.assetid: 28ed6bf8-141b-4b73-a4e3-44a99fae5084
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13091c06561da24d2fc03f810fd8b8687b21d9a4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 374f24ff8a66f689fbd6ca635905ba73bc9e0450
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70789791"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126101"
 ---
-# <a name="mitigation-wpf-window-rendering"></a>Środki zaradcze Renderowanie okna WPF
+# <a name="mitigation-wpf-window-rendering"></a>Ograniczenie: renderowanie okien WPF
 
 W .NET Framework 4,6 działający w systemie Windows 8 i nowszych całe okno jest renderowane bez przycinania, gdy rozciąga się poza pojedynczym ekranem w scenariuszu z obsługą kilku monitorów.
 
@@ -25,7 +23,7 @@ Dokładny wpływ renderowania systemu Windows WPF na monitory w systemie Windows
 
 Tę zmianę można wyłączyć i przywrócić poprzednie zachowanie przycinania okna WPF, gdy wykracza poza pojedynczy ekran. Istnieją dwa sposoby wykonania tej czynności:
 
-- Dodając `<EnableMultiMonitorDisplayClipping>` element `<appSettings>` do sekcji pliku konfiguracyjnego aplikacji, możesz wyłączyć lub włączyć to zachowanie w aplikacjach uruchomionych w systemie Windows 8 lub nowszym. Na przykład następująca sekcja konfiguracyjna wyłącza renderowanie bez przycinania:
+- Dodając `<EnableMultiMonitorDisplayClipping>` element do sekcji `<appSettings>` w pliku konfiguracji aplikacji, możesz wyłączyć lub włączyć to zachowanie dla aplikacji działających w systemie Windows 8 lub nowszym. Na przykład następująca sekcja konfiguracyjna wyłącza renderowanie bez przycinania:
 
   ```xml
   <appSettings>
@@ -33,13 +31,13 @@ Tę zmianę można wyłączyć i przywrócić poprzednie zachowanie przycinania 
     </appSettings>
   ```
 
-  Ustawienie `<EnableMultiMonitorDisplayClipping>` konfiguracji może mieć jedną z dwóch wartości:
+  Ustawienie konfiguracji `<EnableMultiMonitorDisplayClipping>` może mieć jedną z dwóch wartości:
 
   - `true`, aby włączyć przycinanie systemu Windows do monitorowania granic podczas renderowania.
 
   - `false`, aby wyłączyć przycinanie okien do monitorowania granic podczas renderowania.
 
-- Ustawiając <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> właściwość na `true` wartość przy uruchamianiu aplikacji.
+- Ustawiając właściwość <xref:System.Windows.CoreCompatibilityPreferences.EnableMultiMonitorDisplayClipping%2A> na `true` podczas uruchamiania aplikacji.
 
 ## <a name="see-also"></a>Zobacz także
 

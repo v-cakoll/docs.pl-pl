@@ -13,38 +13,36 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765989"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127572"
 ---
 # <a name="parsing-other-strings-in-net"></a>Analizowanie innych ciągów w programie .NET
-Oprócz liczbowych i <xref:System.DateTime> ciągów, można również przeanalizować ciągi, które reprezentują typy <xref:System.Char>, <xref:System.Boolean>, i <xref:System.Enum> do typów danych.  
+Oprócz ciągów numerycznych i <xref:System.DateTime>, można również analizować ciągi reprezentujące typy <xref:System.Char>, <xref:System.Boolean>i <xref:System.Enum> do typów danych.  
   
 ## <a name="char"></a>Char  
- Metoda analizy statycznej, skojarzona z **Char** — typ danych jest przydatne w przypadku konwertowania ciągu zawierający pojedynczy znak w jego wartość Unicode. Poniższy przykład kodu analizuje ciąg na znak Unicode.  
+ Statyczna metoda analizy skojarzona z typem danych **char** jest przydatna do konwertowania ciągu, który zawiera pojedynczy znak do jego wartości Unicode. Poniższy przykład kodu analizuje ciąg w znak Unicode.  
   
  [!code-cpp[Conceptual.String.Parse#2](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#2)]
  [!code-csharp[Conceptual.String.Parse#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#2)]
  [!code-vb[Conceptual.String.Parse#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#2)]  
   
 ## <a name="boolean"></a>Boolean  
- **Logiczna** zawiera typ danych **przeanalizować** metodę, która służy do przekonwertowania na ciąg reprezentujący wartość typu Boolean do rzeczywistego **logiczna** typu. Ta metoda nie jest rozróżniana wielkość liter i może pomyślnie przeanalizować ciąg zawierający "wartość prawda" lub "False". **Przeanalizować** metoda skojarzona z **logiczna** typu, również mogą analizować ciągi, które są ujęte w białych znaków. Jeśli inny ciąg jest przekazywany, <xref:System.FormatException> zgłaszany.  
+ Typ danych **Boolean** zawiera metodę **analizy** , której można użyć do przekonwertowania ciągu, który reprezentuje wartość logiczną w rzeczywistym typie **Boolean** . W tej metodzie nie jest rozróżniana wielkość liter i można pomyślnie przeanalizować ciąg zawierający wartość "true" lub "false". Metoda **Parse** skojarzona z typem **Boolean** może również analizować ciągi, które są ujęte w białe znaki. W przypadku przekazanie dowolnego innego ciągu zostanie zgłoszony <xref:System.FormatException>.  
   
- Poniższy przykład kodu wykorzystuje **przeanalizować** metodę, aby skonwertować ciąg na wartość logiczną.  
+ Poniższy przykład kodu używa metody **Parse** do przekonwertowania ciągu na wartość logiczną.  
   
  [!code-cpp[Conceptual.String.Parse#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#3)]
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
 ## <a name="enumeration"></a>Wyliczenie  
- Można użyć statycznej **przeanalizować** metodę, aby zainicjować typem wyliczenia na wartość ciągu. Ta metoda akceptuje typ wyliczeniowy, który jest analiza kodu, ciąg do analizy i opcjonalna Flaga wartości logicznej wskazująca, czy analizy jest rozróżniana wielkość liter. Ciąg, który jest analizowania może zawierać kilka wartości rozdzielonych przecinkami, które mogą być poprzedza lub następuje co najmniej jeden pusty miejsca do magazynowania (zwane również białych znaków). Jeśli ciąg zawiera wiele wartości, wartość zwróconego obiektu jest wartość wszystkie wartości określonej w połączeniu z operacją bitowe OR.  
+ Możesz użyć statycznej metody **Parse** , aby zainicjować typ wyliczeniowy jako wartość ciągu. Ta metoda akceptuje analizowany typ wyliczeniowy, ciąg do przeanalizowania i opcjonalną flagę logiczną wskazującą, czy podczas analizy jest rozróżniana wielkość liter. Analizowany ciąg może zawierać kilka wartości rozdzielonych przecinkami, które mogą być poprzedzone lub po którym następuje jedna lub więcej pustych spacji (nazywanych również białymi spacjami). Gdy ciąg zawiera wiele wartości, wartość zwracanego obiektu jest wartością wszystkich określonych wartości połączonych z bitową lub operacją.  
   
- W poniższym przykładzie użyto **przeanalizować** metody, aby przekonwertować ciąg reprezentujący wartość wyliczenia. <xref:System.DayOfWeek> Wyliczenia jest inicjowany do **czwartek** z ciągu.  
+ W poniższym przykładzie zastosowano metodę **Parse** do przekonwertowania ciągu na wartość wyliczenia. Wyliczenie <xref:System.DayOfWeek> jest inicjowane w **czwartek** od ciągu.  
   
  [!code-cpp[Conceptual.String.Parse#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.parse/cpp/parse.cpp#4)]
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]

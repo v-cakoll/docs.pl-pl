@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 51f848be-84c5-4036-9839-c762c576bbf5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: caf76fa7962de9392b06591777ac862aa548d20d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cc0cea10b4a209583fb7afb551a6b80d52ad7f62
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779550"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127028"
 ---
-# <a name="hosttype-enumeration"></a>HOST_TYPE — Wyliczenie
-Zawiera wartości, które określają typ hosta, który uruchamia aplikację.  
+# <a name="host_type-enumeration"></a>HOST_TYPE — Wyliczenie
+Zawiera wartości określające typ hosta, który uruchamia aplikację.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,18 +38,18 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`HOST_TYPE_APPLAUNCH`|Uruchom aplikację z AppLaunch.exe.<br /><br /> Użyj tej wartości dla częściowo zaufanych aplikacji.|  
-|`HOST_TYPE_CORFLAG`|Uruchom aplikację bezpośrednio. Oznacza to uruchom aplikację w jej własnym pliku .exe.<br /><br /> Ta wartość służy do w pełni zaufane aplikacje.|  
-|`HOST_TYPE_DEFAULT`|Taka sama jak HOST_TYPE_APPLAUNCH.|  
+|`HOST_TYPE_APPLAUNCH`|Uruchom aplikację z AppLaunch. exe.<br /><br /> Ta wartość jest używana w przypadku aplikacji częściowo zaufanych.|  
+|`HOST_TYPE_CORFLAG`|Uruchom aplikację bezpośrednio. Oznacza to, że należy uruchomić aplikację z własnego pliku. exe.<br /><br /> Ta wartość jest używana w przypadku w pełni zaufanych aplikacji.|  
+|`HOST_TYPE_DEFAULT`|Analogicznie jak HOST_TYPE_APPLAUNCH.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

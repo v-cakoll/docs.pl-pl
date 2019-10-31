@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4322a7e23c7085dadb3b2df6c1f72125aa685cef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127489"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock — Metoda
-Zwraca wątków zarządzanych, który jest właścicielem blokady monitora dla tego obiektu.  
+Zwraca zarządzany wątek, który jest właścicielem blokady monitora dla tego obiektu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,42 +36,42 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="parameters"></a>Parametry  
  `ppThread`  
- [out] Wątków zarządzanych, który jest właścicielem blokady monitora dla tego obiektu.  
+ określoną Zarządzany wątek, który jest właścicielem blokady monitora dla tego obiektu.  
   
  `pAcquisitionCount`  
- [out] Ile razy ten wątek musi zwolnić blokadę przed zwróceniem jest bez właściciela.  
+ określoną Liczba przypadków, w których ten wątek będzie musiał zwolnić blokadę, zanim powróci do elementu będącego właścicielem.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ Ta metoda zwraca następujące określone wartości HRESULT oraz błędy HRESULT wskazujące niepowodzenie metody.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
 |S_OK|Metoda została ukończona pomyślnie.|  
-|S_FALSE|Nie wątków zarządzanych jest właścicielem blokady monitora dla tego obiektu.|  
+|S_FALSE|Żaden zarządzany wątek nie jest właścicielem blokady monitora dla tego obiektu.|  
   
 ## <a name="exceptions"></a>Wyjątki  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli wątek jest właścicielem blokady monitora dla tego obiektu:  
+ Jeśli zarządzany wątek jest właścicielem blokady monitora dla tego obiektu:  
   
-- Metoda zwraca wartość S_OK.  
+- Metoda zwraca S_OK.  
   
-- Obiekt wątku jest prawidłowy, aż wątek kończy działanie.  
+- Obiekt wątku jest prawidłowy do momentu zakończenia wątku.  
   
- Jeśli nie wątków zarządzanych jest właścicielem blokady monitora dla tego obiektu `ppThread` i `pAcquisitionCount` ulegną zmianie, a metoda zwraca wartość S_FALSE.  
+ Jeśli żaden zarządzany wątek nie jest właścicielem blokady monitora dla tego obiektu, `ppThread` i `pAcquisitionCount` są niezmienione, a metoda zwraca S_FALSE.  
   
- Jeśli `ppThread` lub `pAcquisitionCount` nie jest prawidłową wskaźnikiem, wynik jest niezdefiniowany.  
+ Jeśli `ppThread` lub `pAcquisitionCount` nie jest prawidłowym wskaźnikiem, wynik jest niezdefiniowany.  
   
- W przypadku wystąpienia błędu w taki sposób, że nie można ustalić, który, wątek jest właścicielem blokady monitora dla tego obiektu, metoda zwraca wartość HRESULT wskazujący błąd.  
+ Jeśli wystąpi błąd w taki sposób, że nie można ustalić, który z nich jest właścicielem blokady monitora dla tego obiektu, metoda zwraca wartość HRESULT, która wskazuje na błąd.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

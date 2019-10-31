@@ -1,6 +1,6 @@
 ---
-title: 'Porady: Konwertowanie ciągów na daty i godziny'
-description: Poznaj techniki do analizowania ciągów reprezentujących daty i godziny, aby otrzymać wartość typu DateTime z ciągu daty i godziny.
+title: 'Instrukcje: konwertowanie ciągów na DateTime'
+description: Poznaj techniki analizowania ciągów, które reprezentują daty i godziny, aby utworzyć datę i godzinę z ciągu daty i godziny.
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,82 +14,80 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9957c38ad625a27395a3bcc3ddd9ce0b4797b93d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268180"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127615"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny na platformie .NET
+# <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny w programie .NET
 
-Analizowanie ciągów w celu przekonwertowania ich do <xref:System.DateTime> obiektów wymaga podania informacji o jak daty i godziny są reprezentowane jako tekst. Różne kultury używają różnych zleceniach dzień, miesiąc i rok. Niektóre reprezentacje czas użycia zegara 24-godzinnego, innych użytkowników określ, "AM" i "PM". Niektóre aplikacje potrzebują tylko data. Inni użytkownicy potrzebują tylko raz. Nadal inni użytkownicy potrzebują do określenia daty i godziny. Metody, które konwertują ciągi do <xref:System.DateTime> obiektów umożliwiają uzyskanie szczegółowych informacji dotyczących formatów oczekujesz, a elementom daty i godziny do potrzeb aplikacji. Istnieją trzy podzadania poprawnie Konwertowanie tekstu do <xref:System.DateTime>:
+Analizowanie ciągów w celu przekonwertowania ich do obiektów <xref:System.DateTime> wymaga określenia informacji o tym, jak daty i godziny są reprezentowane jako tekst. Różne kultury używają różnej kolejności dla dnia, miesiąca i roku. Niektóre reprezentacje czasu używają zegara 24-godzinnego, inne określają "AM" i "PM". Niektóre aplikacje wymagają tylko daty. Inne osoby potrzebują tylko czasu. Nadal inne osoby muszą określić datę i godzinę. Metody, które konwertują ciągi na <xref:System.DateTime> obiektów, umożliwiają dostarczenie szczegółowych informacji na temat oczekiwanych formatów oraz elementów daty i czasu potrzebnych aplikacji. Istnieją trzy podzadania, które umożliwiają poprawne Konwertowanie tekstu na <xref:System.DateTime>:
 
-1. Należy określić oczekiwany format tekstowy reprezentujący datę i godzinę.
-1. Użytkownik może określić kulturę używaną do formatu daty, godziny.
-1. Można określić sposób brakujących składników w tekście reprezentacji są ustawiane w daty i godziny.
+1. Należy określić oczekiwany format tekstu reprezentującego datę i godzinę.
+1. Można określić kulturę dla formatu daty i godziny.
+1. Możesz określić, jak brakujące składniki w reprezentacji tekstowej są ustawiane w dacie i godzinie.
 
-<xref:System.DateTime.Parse%2A> i <xref:System.DateTime.TryParse%2A> konwertują wiele typowych liczbami w postaci daty i godziny. <xref:System.DateTime.ParseExact%2A> i <xref:System.DateTime.TryParseExact%2A> konwertują reprezentację ciągu znaków, który jest zgodny z wzorcem, określona przez ciąg formatu daty i godziny. (Zobacz artykuły w [ciągi formatu standardowego daty i godziny](standard-date-and-time-format-strings.md) i [niestandardowa data i godzina ciągi formatujące](custom-date-and-time-format-strings.md) Aby uzyskać szczegółowe informacje.)
+Metody <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.TryParse%2A> konwertują wiele typowych reprezentacji daty i godziny. Metody <xref:System.DateTime.ParseExact%2A> i <xref:System.DateTime.TryParseExact%2A> konwertują reprezentację ciągu, która jest zgodna ze wzorcem określonym przez ciąg formatu daty i godziny. (Aby uzyskać szczegółowe informacje, zobacz artykuły dotyczące [standardowych ciągów formatu daty i godziny](standard-date-and-time-format-strings.md) oraz [niestandardowych ciągów formatu daty i godziny](custom-date-and-time-format-strings.md) ).
 
-Bieżący <xref:System.Globalization.DateTimeFormatInfo> obiekt zapewnia większą kontrolę nad jak tekst należy interpretować jako daty i godziny. Właściwości <xref:System.Globalization.DateTimeFormatInfo> opisują Data i godzina separatory i nazwy miesięcy, dni, a ery i format oznaczenia "AM" i "PM". Bieżąca kultura wątku dostarcza <xref:System.Globalization.DateTimeFormatInfo> reprezentujący bieżącą kulturę. Jeśli chcesz, aby ustawienia niestandardowe lub określonej kultury, określ <xref:System.IFormatProvider> parametr metody analizy. Dla <xref:System.IFormatProvider> parametru, określ <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kulturę, lub <xref:System.Globalization.DateTimeFormatInfo> obiektu.
+Bieżący obiekt <xref:System.Globalization.DateTimeFormatInfo> zapewnia większą kontrolę nad sposobem interpretowania tekstu jako daty i godziny. Właściwości <xref:System.Globalization.DateTimeFormatInfo> opisują separatory daty i godziny oraz nazwy miesięcy, dni i wymazywania oraz format oznaczeń "AM" i "PM". Bieżąca kultura wątku zawiera <xref:System.Globalization.DateTimeFormatInfo>, która reprezentuje bieżącą kulturę. Jeśli potrzebujesz określonych kultur lub ustawień niestandardowych, określisz parametr <xref:System.IFormatProvider> metody analizy. Dla parametru <xref:System.IFormatProvider> Określ obiekt <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę lub obiekt <xref:System.Globalization.DateTimeFormatInfo>.
 
-Tekst reprezentujący datę lub godzinę może brakować niektórych informacji. Większość użytkowników będzie Załóżmy na przykład daty "12 marca" reprezentuje bieżący rok. Podobnie "Marca 2018 r." przedstawia miesiąc marca w roku 2018 r. Tekst, który często reprezentujące czasu jest tylko obejmuje godziny, minuty i oznaczenie AM/PM.  Metody analizy obsługi brakujących informacji za pomocą odpowiednie wartości domyślne:
+Tekst reprezentujący datę lub godzinę może nie zawierać pewnych informacji. Na przykład większość osób przyjmuje datę "12 marca" reprezentującą bieżący rok. Podobnie "marzec 2018" oznacza miesiąc marca w roku 2018. Tekst reprezentujący czas często obejmuje tylko godziny, minuty i oznaczenie AM/PM.  Metody analizy obsługują te brakujące informacje przy użyciu odpowiednich wartości domyślnych:
 
-- Jeśli występuje tylko przy użyciu część dotycząca daty używa bieżącej daty.
-- Jeśli występuje tylko data część godzinowa to północ.
-- Po roku nie jest określona w dacie, jest używany w bieżącym roku.
-- Jeśli dzień miesiąca nie jest określona, używana jest pierwszego dnia miesiąca.
+- Gdy jest obecny tylko czas, część daty używa bieżącej daty.
+- Gdy tylko data jest obecna, częścią czasu jest północ.
+- Jeśli rok nie jest określony w dacie, używany jest bieżący rok.
+- Gdy nie jest określony dzień miesiąca, jest używany pierwszy miesiąc.
 
-Jeśli data znajduje się w ciągu, musi on zawierać miesiąc i dzień lub rok. Jeśli czas jest obecna, musi on zawierać godziny i minuty lub oznaczenia AM/PM.
+Jeśli data jest obecna w ciągu, musi zawierać miesiąc i jeden dzień lub rok. Jeśli czas jest obecny, musi zawierać godzinę oraz liczbę minut lub oznaczenie AM/PM.
 
-Można określić <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> stałą, aby zastąpić te ustawienia domyślne. Gdy używasz tej stałej, wszelkie brakujące rok, miesiąc lub dzień właściwości są ustawione na wartość `1`. [Przykład ostatniego](#styles-example) przy użyciu <xref:System.DateTime.Parse%2A> przedstawia tego zachowania.
+Możesz określić stałą <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault>, aby zastąpić te ustawienia domyślne. Gdy używasz tej stałej, wszystkie brakujące właściwości Year, Month lub Day są ustawiane na wartość `1`. W [ostatnim przykładzie](#styles-example) użyto <xref:System.DateTime.Parse%2A> przedstawiono to zachowanie.
 
-Oprócz datę i składnik czasu reprezentację ciągu daty i godziny mogą obejmować przesunięcia, która wskazuje, ile czasu różni się od skoordynowanego czasu uniwersalnego (UTC). Na przykład ciąg "2/14/2007 5:32:00 -7:00" definiuje czas oznacza to siedem godziny wcześniejszy niż w formacie UTC. W przypadku pominięcia przesunięcie z ciągu reprezentującego czas analizy zwraca <xref:System.DateTime> obiekt z jego <xref:System.DateTime.Kind%2A> właściwością <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>. Jeśli określono wartość przesunięcia, analizowania zwraca <xref:System.DateTime> obiekt z jego <xref:System.DateTime.Kind%2A> właściwością <xref:System.DateTimeKind.Local?displayProperty=nameWithType> , jego wartość dostosowane do lokalnej strefy czasowej komputera. To zachowanie można zmienić za pomocą <xref:System.Globalization.DateTimeStyles> wartość przy użyciu metody analizy.
+Oprócz daty i składnika czasu, Reprezentacja ciągu daty i godziny może zawierać przesunięcie, które wskazuje, ile czasu różni się od uniwersalnego czasu koordynowanego (UTC). Na przykład ciąg "2/14/2007 5:32:00 -7:00" definiuje godzinę, która jest siedem godzin wcześniejsza od czasu UTC. Jeśli przesunięcie zostanie pominięte na podstawie ciągu reprezentującego godzinę, analiza zwraca obiekt <xref:System.DateTime> z właściwością <xref:System.DateTime.Kind%2A> ustawioną na <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>. Jeśli wartość przesunięcia jest określona, funkcja analizowania zwraca obiekt <xref:System.DateTime> z właściwością <xref:System.DateTime.Kind%2A> ustawioną na <xref:System.DateTimeKind.Local?displayProperty=nameWithType> i jego wartości dostosowuje się do lokalnej strefy czasowej maszyny. Możesz zmodyfikować to zachowanie przy użyciu wartości <xref:System.Globalization.DateTimeStyles> z metodą analizy.
   
-Dostawca formatu służy także do interpretacji datę liczbowych niejednoznaczne. Nie jest jasne, które składniki Data jest reprezentowana przez ciąg "02/03/04" to dzień, miesiąc i rok. Składniki są interpretowane zgodnie z porządkiem podobne formatów daty w formacie dostawcy.
+Dostawca formatu jest również używany do interpretowania niejednoznacznej daty liczbowej. Nie jest jasne, które składniki daty reprezentowanej przez ciąg "02/03/04" to miesiąc, dzień i rok. Składniki są interpretowane zgodnie z kolejnością podobnych formatów daty w dostawcy formatu.
 
-## <a name="parse"></a>Analizy
+## <a name="parse"></a>Przetwarzania
 
-Poniższy przykład ilustruje użycie <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> metodę, aby przekonwertować `string` do <xref:System.DateTime>. W tym przykładzie użyto kultury skojarzonej z bieżącym wątkiem. Jeśli <xref:System.Globalization.CultureInfo> skojarzony z bieżącą kulturę nie można przeanalizować ciągu wejściowego <xref:System.FormatException> zgłaszany.
+Poniższy przykład ilustruje użycie metody <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>, aby skonwertować `string` do <xref:System.DateTime>. W tym przykładzie zastosowano kulturę skojarzoną z bieżącym wątkiem. Jeśli <xref:System.Globalization.CultureInfo> skojarzona z bieżącą kulturą nie może przeanalizować ciągu wejściowego, zostanie zgłoszony <xref:System.FormatException>.
 
 > [!TIP]
-> Uruchom wszystkie C# przykłady w tym artykule w przeglądarce. Naciśnij klawisz **Uruchom** przycisk, aby wyświetlić dane wyjściowe. Można również edytować je samodzielnie wypróbować.
+> Wszystkie C# przykłady w tym artykule działają w przeglądarce. Naciśnij przycisk **Run (Uruchom** ), aby wyświetlić dane wyjściowe. Możesz również edytować je, aby samodzielnie eksperymentować.
 
 > [!NOTE]
-> Te przykłady są dostępne w repozytorium GitHub docs dla obu [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) i [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Możesz też pobrać projekt jako zipfile dla [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) lub [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
+> Te przykłady są dostępne w repozytorium docs w witrynie GitHub dla [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) programów i [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Lub można pobrać projekt jako zipfile dla [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) lub [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-Można również jawnie określić kulturę, której konwencje formatowania są używane podczas analizy ciągu. Należy podać jedną z standard <xref:System.Globalization.DateTimeFormatInfo> obiektów zwróconych przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości. W poniższym przykładzie użyto dostawcę formatu, aby przeanalizować ciąg niemieckim do <xref:System.DateTime>. Tworzy <xref:System.Globalization.CultureInfo> reprezentujący `de-DE` kultury. Czy `CultureInfo` obiektu zapewnia pomyślne analizowania tego określonego ciągu. Wyklucza to, niezależnie od ustawienie znajduje się w <xref:System.Threading.Thread.CurrentCulture> z <xref:System.Threading.Thread.CurrentThread>.  
+Można również jawnie zdefiniować kulturę, której konwencje formatowania są używane podczas analizowania ciągu. Należy określić jeden ze standardowych obiektów <xref:System.Globalization.DateTimeFormatInfo> zwracanych przez właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. Poniższy przykład używa dostawcy formatu do analizy ciągu niemieckiego w <xref:System.DateTime>. Tworzy <xref:System.Globalization.CultureInfo> reprezentujący `de-DE` kulturę. Ten obiekt `CultureInfo` gwarantuje pomyślne analizowanie tego określonego ciągu. Wyklucza to, niezależnie od tego, jakie ustawienie znajduje się w <xref:System.Threading.Thread.CurrentCulture> <xref:System.Threading.Thread.CurrentThread>.  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
-Jednak mimo że można użyć przeciążenia <xref:System.DateTime.Parse%2A> metodę, aby określić niestandardowych dostawców formatu, metoda nie obsługuje analizowania formatów niestandardowych. Aby przeanalizować daty i godziny wyrażony w postaci niestandardowych, należy użyć <xref:System.DateTime.ParseExact%2A> metody zamiast tego.  
+Jednak chociaż można użyć przeciążenia metody <xref:System.DateTime.Parse%2A>, aby określić dostawców formatów niestandardowych, metoda nie obsługuje analizowania formatów niestandardowych. Aby przeanalizować datę i godzinę wyrażoną w formacie niestandardowym, należy zamiast tego użyć metody <xref:System.DateTime.ParseExact%2A>.  
 
-<a name="styles-example"></a>W poniższym przykładzie użyto <xref:System.Globalization.DateTimeStyles> wyliczeniu, aby określić, czy bieżące informacje o daty i godziny nie można dodać do <xref:System.DateTime> dla pola nieokreślony.  
+<a name="styles-example"></a>Poniższy przykład używa wyliczenia <xref:System.Globalization.DateTimeStyles>, aby określić, że bieżące informacje o dacie i godzinie nie powinny być dodawane do <xref:System.DateTime> dla nieokreślonych pól.  
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
-## <a name="parseexact"></a>Parseexact —
+## <a name="parseexact"></a>ParseExact
 
-<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> Metoda konwertuje ciąg na <xref:System.DateTime> obiektu, jeśli go jest zgodny z jednym z wzorców określonego ciągu. Gdy ciąg, który nie jest jednym z formularze określona jest przekazywany do tej metody <xref:System.FormatException> zgłaszany. Można określić jeden standardowy daty i godziny specyfikatorów formatu lub kombinację specyfikatorów formatu niestandardowego. Przy użyciu specyfikatorów formatu niestandardowego, jest możliwe do konstruowania ciągu niestandardowe rozpoznawanie. Objaśnienia dotyczące specyfikatorów, zobacz Tematy w [ciągi formatu standardowego daty i godziny](standard-date-and-time-format-strings.md) i [niestandardowa data i godzina ciągi formatujące](custom-date-and-time-format-strings.md).  
+Metoda <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> konwertuje ciąg na obiekt <xref:System.DateTime>, jeśli jest zgodny z jednym z określonych wzorców ciągu. Gdy ciąg, który nie jest jednym z określonych formularzy jest przenoszona do tej metody, zostanie zgłoszony <xref:System.FormatException>. Można określić jeden z standardowych specyfikatorów formatu daty i godziny lub kombinację niestandardowych specyfikatorów formatu. Przy użyciu specyfikatorów formatu niestandardowego można utworzyć niestandardowy ciąg rozpoznawania. Aby uzyskać wyjaśnienie specyfikatorów, zobacz tematy dotyczące [standardowych ciągów formatu daty i godziny](standard-date-and-time-format-strings.md) oraz [niestandardowych ciągów formatu daty i godziny](custom-date-and-time-format-strings.md).  
 
-W poniższym przykładzie <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> metody jest przekazywany obiekt ciągu, aby analizować, następuje specyfikatora formatu, a następnie <xref:System.Globalization.CultureInfo> obiektu. To <xref:System.DateTime.ParseExact%2A> metoda można analizować tylko ciągi, które należy wykonać wzorzec daty długiej w `en-US` kultury.  
+W poniższym przykładzie metoda <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> jest przenoszona przez obiekt ciągu do analizy, po którym następuje specyfikator formatu, po którym następuje obiekt <xref:System.Globalization.CultureInfo>. Ta metoda <xref:System.DateTime.ParseExact%2A> może analizować tylko ciągi, które są zgodne ze wzorcem daty długiej w kulturze `en-US`.  
 
 [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-Każdy przeciążenia <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.ParseExact%2A> ma również metody <xref:System.IFormatProvider> parametr, który dostarcza specyficzne dla kultury informacje o formatowanie ciągu. To <xref:System.IFormatProvider> obiekt jest <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje standardowej kultury lub <xref:System.Globalization.DateTimeFormatInfo> obiektu, który jest zwracany przez <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> właściwości.  <xref:System.DateTime.ParseExact%2A> używa również dodatkowy ciąg znaków lub argument tablica ciągu, który definiuje co najmniej jeden niestandardowa data i godzina formatów.  
+Każde Przeciążenie metod <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.ParseExact%2A> również ma <xref:System.IFormatProvider> parametr, który zawiera informacje specyficzne dla kultury dotyczące formatowania ciągu. Ten obiekt <xref:System.IFormatProvider> jest obiektem <xref:System.Globalization.CultureInfo>, który reprezentuje kulturę standardową lub obiekt <xref:System.Globalization.DateTimeFormatInfo>, który jest zwracany przez właściwość <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> używa również dodatkowego argumentu ciągu lub tablicy ciągów, który definiuje jeden lub więcej niestandardowych formatów daty i godziny.  
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Analizowanie ciągów](parsing-strings.md)
 - [Formatowanie typów](formatting-types.md)
 - [Konwersja typów w programie .NET](type-conversion.md)
-- [Standardowa Data i godzina formatów](standard-date-and-time-format-strings.md)
-- [Niestandardowa data i godzina ciągi formatujące](custom-date-and-time-format-strings.md)
+- [Standardowe formaty daty i godziny](standard-date-and-time-format-strings.md)
+- [Niestandardowe ciągi formatujące datę i godzinę](custom-date-and-time-format-strings.md)

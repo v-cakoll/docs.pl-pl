@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: da7fdab1cf67ffd47acb75533fcfdb89664c86d3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: af1548602ece8ea0f5720a836ec05648854e198f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834805"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127244"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Instrukcje: Tworzenie aplikacji Windows Forms z poziomu wiersza polecenia
 
@@ -36,7 +34,7 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać w ce
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. Utwórz Konstruktor bez parametrów dla `Form1`.
+3. Utwórz konstruktora bez parametrów dla `Form1`.
   
      Do konstruktora zostanie dodany kod w kolejnej procedurze.
   
@@ -87,9 +85,9 @@ Poprzednie kroki procedury pokazują, jak po prostu utworzyć podstawowy formula
      [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
-4. Utwórz metodę, aby obsłużyć <xref:System.Windows.Forms.Control.Click> zdarzenia dla przycisku.  
+4. Utwórz metodę, aby obsłużyć zdarzenie <xref:System.Windows.Forms.Control.Click> dla przycisku.  
   
-5. W obsłudze zdarzeń kliknięcia Wyświetl <xref:System.Windows.Forms.MessageBox> z komunikatem "Hello world".  
+5. W programie obsługi zdarzeń kliknij <xref:System.Windows.Forms.MessageBox> z komunikatem "Hello world".  
   
      Poniższy przykład kodu demonstruje, jak obsłużyć zdarzenie kliknięcia kontrolki przycisku:
   

@@ -14,14 +14,12 @@ helpviewer_keywords:
 - CompareTo function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ec42dff333422e247a11b4a3a5b9aed9bd316fa
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 0d210795016cd2e0179b902a224ca0c62f4ac01f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798775"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128700"
 ---
 # <a name="compareto-function"></a>CompareTo, funkcja
 
@@ -52,7 +50,7 @@ podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcl
 podczas Bitowa kombinacja flag, które określają właściwości obiektu, które należy wziąć pod uwagę w porównaniu z porównaniem. Zobacz sekcję [uwagi](#remarks) , aby uzyskać więcej informacji.
 
 `pCompareTo`\
-podczas Obiekt do porównania. `pCompareTo`musi być prawidłowym wystąpieniem [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ; nie może być `null`.
+podczas Obiekt do porównania. `pCompareTo` musi być prawidłowym wystąpieniem [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ; nie może być `null`.
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -62,7 +60,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Wystąpił nieokreślony błąd. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest nieprawidłowy. |
-| `WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` zostało wykonane bez wywołania wywołującego do [`EndEnumeration`](endenumeration.md). |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | Drugie wywołanie `BeginEnumeration` zostało wykonane bez interwencji wywołującego do [`EndEnumeration`](endenumeration.md). |
 | `WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
 | `WBEM_S_DIFFERENT` | 0x40003 | Obiekty są różne. |
 | `WBEM_S_SAME` | 0 | Obiekty są takie same, w zależności od flag porównania. |
@@ -71,7 +69,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: CompareTo](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-compareto) .
 
-Flagi, które mogą być przesyłane jako `lEnumFlags` argument, są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie. Można określić poszczególne cechy, które są wykorzystywane w porównaniu, określając bitową kombinację następujących flag:
+Flagi, które mogą być przesyłane jako argument `lEnumFlags`, są zdefiniowane w pliku nagłówkowym *WbemCli. h* lub można je definiować jako stałe w kodzie. Można określić poszczególne cechy, które są wykorzystywane w porównaniu, określając bitową kombinację następujących flag:
 
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
@@ -90,11 +88,11 @@ Lub można określić pojedynczą flagę złożoną w następujący sposób:
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3c0f20cc93b02e048c9d1952188af3d21d37221
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e09e25503ad00ab3542f0c4f50221b6014b25561
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766124"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128884"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains — Metoda
-Wylicza wszystkie domeny aplikacji w ramach tego procesu.  
+Wylicza wszystkie domeny aplikacji w tym procesie.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +34,16 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>Parametry  
  `ppAppDomains`  
- [out] Wskaźnik na adres [icordebugappdomainenum —](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) oznacza to moduł wyliczający dla domen aplikacji w ramach tego procesu.  
+ określoną Wskaźnik na adres elementu [ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md) , który jest modułem wyliczającym dla domen aplikacji w tym procesie.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda może być używana przed [ICorDebugManagedCallback::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) wywołania zwrotnego.  
+ Tej metody można użyć przed wywołaniem zwrotnym [ICorDebugManagedCallback:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

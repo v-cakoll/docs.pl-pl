@@ -23,25 +23,23 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17465b07172788f18a432784653afadda18467fe
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ab4fc990e0c524e0c77fa0bdedd7c263edb21b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71045690"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129958"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 
-Pliki zasobów odgrywają centralną rolę w zlokalizowanych aplikacjach. Umożliwiają one aplikacji wyświetlanie ciągów, obrazów i innych danych w własnym języku i kulturze użytkownika oraz dostarczanie alternatywnych danych, jeśli zasoby dla własnego języka lub kultury użytkownika są niedostępne. .NET Framework używa modelu gwiazdy, aby zlokalizować i pobrać zlokalizowane zasoby. Koncentrator jest głównym zestawem zawierającym nielokalizowalny kod wykonywalny i zasoby dla jednej kultury, która jest nazywana kulturą neutralną lub domyślną. Domyślna kultura jest kulturą rezerwową dla aplikacji; jest on używany, gdy nie są dostępne żadne zlokalizowane zasoby. Użyj atrybutu, <xref:System.Resources.NeutralResourcesLanguageAttribute> aby wyznaczyć kulturę domyślnej kultury aplikacji. Każdy szprych nawiązuje połączenie z zestawem satelickim zawierającym zasoby dla jednej zlokalizowanej kultury, ale nie zawiera kodu. Ponieważ zestawy satelickie nie są częścią głównego zestawu, można łatwo aktualizować lub zastępować zasoby, które odpowiadają określonej kulturze, bez zastępowania głównego zestawu aplikacji.
+Pliki zasobów odgrywają centralną rolę w zlokalizowanych aplikacjach. Umożliwiają one aplikacji wyświetlanie ciągów, obrazów i innych danych w własnym języku i kulturze użytkownika oraz dostarczanie alternatywnych danych, jeśli zasoby dla własnego języka lub kultury użytkownika są niedostępne. .NET Framework używa modelu gwiazdy, aby zlokalizować i pobrać zlokalizowane zasoby. Koncentrator jest głównym zestawem zawierającym nielokalizowalny kod wykonywalny i zasoby dla jednej kultury, która jest nazywana kulturą neutralną lub domyślną. Domyślna kultura jest kulturą rezerwową dla aplikacji; jest on używany, gdy nie są dostępne żadne zlokalizowane zasoby. Użyj atrybutu <xref:System.Resources.NeutralResourcesLanguageAttribute>, aby określić kulturę domyślnej kultury aplikacji. Każdy szprych nawiązuje połączenie z zestawem satelickim zawierającym zasoby dla jednej zlokalizowanej kultury, ale nie zawiera kodu. Ponieważ zestawy satelickie nie są częścią głównego zestawu, można łatwo aktualizować lub zastępować zasoby, które odpowiadają określonej kulturze, bez zastępowania głównego zestawu aplikacji.
 
 > [!NOTE]
-> Zasoby domyślnej kultury aplikacji mogą być również przechowywane w zestawie satelickim. W tym celu należy przypisać <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut o <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>wartości.
+> Zasoby domyślnej kultury aplikacji mogą być również przechowywane w zestawie satelickim. W tym celu należy przypisać atrybut <xref:System.Resources.NeutralResourcesLanguageAttribute> wartość <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.
 
 ## <a name="satellite-assembly-name-and-location"></a>Nazwa i lokalizacja zestawu satelickiego
 
-Model gwiazdy i gwiazdy wymaga umieszczenia zasobów w określonych lokalizacjach, aby można je było łatwo zlokalizować i wykorzystać. Jeśli nie kompilujesz zasobów i nie nazywasz ich w oczekiwany sposób lub jeśli nie umieścisz ich w prawidłowych lokalizacjach, środowisko uruchomieniowe języka wspólnego nie będzie w stanie go zlokalizować i będzie używać zasobów kultury domyślnej. .NET Framework Menedżer zasobów reprezentowane przez <xref:System.Resources.ResourceManager> obiekt jest używany do automatycznego uzyskiwania dostępu do zlokalizowanych zasobów. Menedżer zasobów wymaga następujących czynności:
+Model gwiazdy i gwiazdy wymaga umieszczenia zasobów w określonych lokalizacjach, aby można je było łatwo zlokalizować i wykorzystać. Jeśli nie kompilujesz zasobów i nie nazywasz ich w oczekiwany sposób lub jeśli nie umieścisz ich w prawidłowych lokalizacjach, środowisko uruchomieniowe języka wspólnego nie będzie w stanie go zlokalizować i będzie używać zasobów kultury domyślnej. .NET Framework Menedżer zasobów reprezentowane przez obiekt <xref:System.Resources.ResourceManager> jest używany do automatycznego uzyskiwania dostępu do zlokalizowanych zasobów. Menedżer zasobów wymaga następujących czynności:
 
 - Pojedynczy zestaw satelicki musi zawierać wszystkie zasoby dla określonej kultury. Innymi słowy, należy skompilować wiele plików txt lub resx do jednego pliku binarnego Resources.
 
@@ -52,7 +50,7 @@ Model gwiazdy i gwiazdy wymaga umieszczenia zasobów w określonych lokalizacjac
 
 - Zestaw satelicki musi mieć taką samą nazwę jak aplikacja i musi używać rozszerzenia nazwy pliku ". resources. dll". Na przykład jeśli aplikacja ma nazwę example. exe, Nazwa każdego zestawu satelickiego powinna być przykładem. resources. dll. Należy zauważyć, że nazwa zestawu satelickiego nie wskazuje kultury plików zasobów. Jednak zestaw satelicki pojawia się w katalogu, który określa kulturę.
 
-- Informacje o kulturze zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby zapisać nazwę kultury w metadanych zestawu satelickiego, należy określić `/culture` opcję przy użyciu [konsolidatora zestawu](../tools/al-exe-assembly-linker.md) do osadzenia zasobów w zestawie satelickim.
+- Informacje o kulturze zestawu satelickiego muszą być zawarte w metadanych zestawu. Aby zapisać nazwę kultury w metadanych zestawu satelickiego, należy określić opcję `/culture` przy użyciu [konsolidatora zestawu](../tools/al-exe-assembly-linker.md) do osadzenia zasobów w zestawie satelickim.
 
 Na poniższej ilustracji przedstawiono przykładową strukturę katalogów i wymagania dotyczące lokalizacji dla aplikacji, które nie są instalowane w [globalnej pamięci podręcznej zestawów](../app-domains/gac.md). Elementy z rozszerzeniami. txt i. resources nie będą dostarczane z aplikacją końcową. Są to pośrednie pliki zasobów używane do tworzenia końcowych zestawów zasobów satelitarnych. W tym przykładzie można zastąpić pliki RESX dla plików txt. Aby uzyskać więcej informacji, zobacz [pakowanie i wdrażanie zasobów](packaging-and-deploying-resources-in-desktop-apps.md).
 
@@ -64,7 +62,7 @@ Na poniższej ilustracji przedstawiono katalog zestawu satelickiego:
 
 Używasz [generatora plików zasobów (Resgen. exe)](../tools/resgen-exe-resource-file-generator.md) do kompilowania plików tekstowych lub plików XML (. resx) zawierających zasoby do plików binarnych. resources. Następnie należy użyć [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) do kompilowania plików Resources do zestawów satelickich. Al. exe tworzy zestaw z plików Resources, które określisz. Zestawy satelickie mogą zawierać tylko zasoby; nie mogą zawierać żadnego kodu wykonywalnego.
 
-Następujące polecenie Al. exe tworzy zestaw satelicki dla aplikacji `Example` z ciągów plików zasobów niemieckich. de. resources.
+Następujące polecenie Al. exe tworzy zestaw satelicki dla aplikacji `Example` z plików z plikami zasobów niemieckich. de. resources.
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll
@@ -88,23 +86,23 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  Aby zapoznać się z pełną listą opcji dostępnych w programie Al. exe, zobacz [konsolidator zestawu (Al. exe)](../tools/al-exe-assembly-linker.md).
   
-## <a name="satellite-assemblies-an-example"></a>Zestawy satelickie: Przykład  
+## <a name="satellite-assemblies-an-example"></a>Zestawy satelickie: przykład  
  Poniżej znajduje się prosty przykład "Hello World", który wyświetla okno komunikatu zawierające zlokalizowane powitanie. W przykładzie uwzględniono zasoby dla kultur angielskiej (Stany Zjednoczone), francuski (Francja) i rosyjski (Rosja), a jej kultura rezerwowa jest w języku angielskim. Aby utworzyć przykład, wykonaj następujące czynności:  
   
-1. Utwórz plik zasobów o nazwie Greetings. resx lub Greeting. txt, aby zawierał zasób dla kultury domyślnej. Przechowywanie pojedynczego ciągu o nazwie `HelloString` "Hello World!" w tym pliku.
+1. Utwórz plik zasobów o nazwie Greetings. resx lub Greeting. txt, aby zawierał zasób dla kultury domyślnej. Zapisz pojedynczy ciąg o nazwie `HelloString` którego wartość to "Hello World!" w tym pliku.
   
-2. Aby wskazać, że angielski (EN) jest kulturą domyślną aplikacji, Dodaj następujący <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybut do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji.
+2. Aby wskazać, że angielski (EN) jest kulturą domyślną aplikacji, Dodaj następujący atrybut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji.
   
     [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
     [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
 3. Dodaj obsługę dodatkowych kultur (EN-US, fr-FR i ru-RU) do aplikacji w następujący sposób:  
   
-    - Aby zapewnić obsługę kultury en-us lub English (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greetings. en-us. resx lub Greetings. en-us. txt i Zapisz w nim w tym samym ciągu o `HelloString` nazwie "Witaj świecie!"  
+    - Aby zapewnić obsługę kultury en-US lub English (Stany Zjednoczone), Utwórz plik zasobów o nazwie Greetingd. en-US. resx lub Greetings. en-US. txt i Zapisz w nim jeden ciąg o nazwie `HelloString`, którego wartość to "Witaj świecie!"  
   
-    - Aby zapewnić obsługę kultury fr-fr lub francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-fr. resx lub Greeting.fr-fr. txt, a następnie zapisz go w tym samym ciągu `HelloString` o nazwie, którego wartość to "Salut Tout Le Monde!"  
+    - Aby zapewnić obsługę kultury fr-FR lub francuski (Francja), Utwórz plik zasobów o nazwie Greeting.fr-FR. resx lub Greeting.fr-FR. txt, a następnie zapisz go w tym samym ciągu o nazwie `HelloString`, którego wartość to "Salut Tout Le Monde!"  
   
-    - Aby zapewnić obsługę kultury ru-RU lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru-RU. resx lub Greeting.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `HelloString` "Всем Привет!"  
+    - Aby zapewnić obsługę kultury ru-RU lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Greeting.ru-RU. resx lub Greeting.ru-RU. txt, a następnie zapisz go w tym samym ciągu o nazwie `HelloString`, którego wartość to "Всем Привет!"  
   
 4. Użyj programu [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenia, aby skompilować pliki. resx do plików Resources:  
   
@@ -120,7 +118,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 5. Skompiluj następujący kod źródłowy wraz z zasobami dla domyślnej kultury w zestawie głównym aplikacji:
 
     > [!IMPORTANT]
-    > Jeśli używasz wiersza polecenia zamiast programu Visual Studio do utworzenia przykładu, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> konstruktora klasy w następujący sposób:`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`
+    > Jeśli używasz wiersza polecenia zamiast programu Visual Studio do utworzenia przykładu, należy zmodyfikować wywołanie konstruktora klasy <xref:System.Resources.ResourceManager> w następujący sposób: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`
 
     [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
@@ -208,7 +206,7 @@ gacutil -i:StringLibrary.resources.dll
 
 **/I** opcja określa, że Gacutil. exe powinien zainstalować określony zestaw w globalnej pamięci podręcznej zestawów. Po zainstalowaniu zestawu satelickiego w pamięci podręcznej zasoby, które zawiera, staną się dostępne dla wszystkich aplikacji, które są przeznaczone do korzystania z zestawu satelickiego.
 
-### <a name="resources-in-the-global-assembly-cache-an-example"></a>Zasoby w globalnej pamięci podręcznej zestawów: Przykład
+### <a name="resources-in-the-global-assembly-cache-an-example"></a>Zasoby w globalnej pamięci podręcznej zestawów: przykład
 
 Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodrębnić i zwrócić zlokalizowane powitanie z pliku zasobów. Biblioteka i jej zasoby są zarejestrowane w globalnej pamięci podręcznej zestawów. Przykład zawiera zasoby dla angielskiej wersji językowej (Stany Zjednoczone), francuski (Francja), rosyjski (Rosja) i kulturę w języku angielskim. Język angielski jest kulturą domyślną; jego zasoby są przechowywane w zestawie głównym. Przykładowe opóźnienie polega na podpisaniu biblioteki i jej zestawów satelickich za pomocą klucza publicznego, a następnie ponowne podpisanie ich za pomocą pary kluczy publicznych/prywatnych. Aby utworzyć przykład, wykonaj następujące czynności:
 
@@ -226,20 +224,20 @@ Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodręb
     sn –p ResKey.snk PublicKey.snk
     ```
 
-3. Utwórz plik zasobów o nazwie Strings. resx, aby zawierał zasób domyślnej kultury. Przechowaj pojedynczy ciąg o `Greeting` nazwie, którego wartość to "jak to zrobić"? w tym pliku.
+3. Utwórz plik zasobów o nazwie Strings. resx, aby zawierał zasób domyślnej kultury. Zapisz pojedynczy ciąg o nazwie `Greeting` którego wartość to "jak zrobić?" w tym pliku.
 
-4. Aby wskazać, że "en" jest kulturą domyślną aplikacji, Dodaj następujący <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> atrybut do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji:
+4. Aby wskazać, że "en" jest kulturą domyślną aplikacji, Dodaj następujący atrybut <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> do pliku AssemblyInfo aplikacji lub do głównego pliku kodu źródłowego, który zostanie skompilowany do głównego zestawu aplikacji:
 
     [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
     [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]
 
 5. Dodanie obsługi dodatkowych kultur (kultur en-US, fr-FR i ru-RU) do aplikacji w następujący sposób:
 
-    - Aby zapewnić obsługę kultury "en-us" lub angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Strings. en-us. resx lub String. en-us. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting` "Hello!".
+    - Aby zapewnić obsługę kultury "en-US" lub angielski (Stany Zjednoczone), Utwórz plik zasobów o nazwie Strings. en-US. resx lub String. en-US. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting`, którego wartość to "Hello!".
 
-    - Aby zapewnić obsługę kultury "fr-fr" lub francuski (Francja), Utwórz plik zasobów o nazwie Strings.fr-fr. resx lub Strings.fr-fr. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting` "szczęśliwe jour!"
+    - Aby zapewnić obsługę kultury "fr-FR" lub francuski (Francja), Utwórz plik zasobów o nazwie Strings.fr-FR. resx lub Strings.fr-FR. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting`, którego wartość to "szczęśliwe jour!"
 
-    - Aby zapewnić obsługę kultury "ru-RU" lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru-RU. resx lub Strings.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting` "Привет!"
+    - Aby zapewnić obsługę kultury "ru-RU" lub rosyjski (Rosja), Utwórz plik zasobów o nazwie Strings.ru-RU. resx lub Strings.ru-RU. txt i Zapisz w nim pojedynczy ciąg o nazwie `Greeting` którego wartość to "Привет!"
 
 6. Użyj programu [Resgen. exe](../tools/resgen-exe-resource-file-generator.md) , aby skompilować każdy plik tekstowy lub XML do pliku binarnego. resources. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jak pliki resx lub txt, ale rozszerzenie. resources. Jeśli utworzysz przykład w programie Visual Studio, proces kompilacji jest obsługiwany automatycznie. Jeśli nie korzystasz z programu Visual Studio, uruchom następujące polecenie, aby skompilować pliki. resx do plików Resources:
 
@@ -252,7 +250,7 @@ Poniższy przykład używa metody w bibliotece klas .NET Framework, aby wyodręb
 7. Skompiluj następujący kod źródłowy dla StringLibrary. vb lub StringLibrary.cs wraz z zasobami dla kultury domyślnej w zestawie bibliotek podpisanych z opóźnieniem o nazwie StringLibrary. dll:
 
     > [!IMPORTANT]
-    > Jeśli używasz wiersza polecenia zamiast programu Visual Studio do utworzenia przykładu, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> konstruktora klasy do. `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`
+    > Jeśli używasz wiersza polecenia zamiast programu Visual Studio do utworzenia przykładu, należy zmodyfikować wywołanie konstruktora klasy <xref:System.Resources.ResourceManager>, aby `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`.
 
     [!code-csharp[Conceptual.Resources.Satellites#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
     [!code-vb[Conceptual.Resources.Satellites#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]

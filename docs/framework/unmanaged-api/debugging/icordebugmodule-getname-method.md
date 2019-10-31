@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7f62385031967c164915fd31735a6d962f557fa
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894990"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129536"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName — Metoda
 Pobiera nazwę pliku modułu.  
@@ -39,7 +37,7 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchname`  
- podczas Rozmiar `szName` tablicy.  
+ podczas Rozmiar tablicy `szName`.  
   
  `pcchName`  
  podczas Wskaźnik do długości zwracanej nazwy.  
@@ -48,15 +46,15 @@ HRESULT GetName(
  określoną Tablica przechowująca zwróconą nazwę.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetName` Metoda zwraca S_OK HRESULT, jeśli nazwa pliku modułu jest zgodna z nazwą na dysku. `GetName`Zwraca S_FALSE HRESULT, jeśli nazwa jest wypełniania, na przykład w module dynamicznym lub w pamięci.  
+ Metoda `GetName` zwraca wartość HRESULT S_OK, jeśli nazwa pliku modułu jest zgodna z nazwą na dysku. `GetName` zwraca S_FALSE HRESULT, jeśli nazwa jest wypełniania, na przykład w module dynamicznym lub w pamięci.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także

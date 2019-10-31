@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd8b9879-962a-4811-aa46-2e2b6bae0d84
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d52f9f0bc2ff27d7849a80a424714aa84d3688fe
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779131"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136995"
 ---
-# <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS — Wyliczenie
-Zawiera wartości, które wskazują, jak środowisko uruchomieniowe języka wspólnego (CLR) powinna być rozpoznawana `CLSID`.  
+# <a name="clsid_resolution_flags-enumeration"></a>CLSID_RESOLUTION_FLAGS — Wyliczenie
+Zawiera wartości wskazujące, jak środowisko uruchomieniowe języka wspólnego (CLR) powinno rozpoznać `CLSID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,14 +38,14 @@ typedef enum {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Wskazuje zachowanie domyślne.|  
-|`CLSID_RESOLUTION_REGISTERED`|Wskazuje, że środowisko uruchomieniowe wyszukuje rejestru i stosuje zasady podkładki.|  
+|`CLSID_RESOLUTION_REGISTERED`|Wskazuje, że środowisko uruchomieniowe przeszukuje rejestr i stosuje zasady dotyczące podkładek.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

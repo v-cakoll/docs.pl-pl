@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61f4e057a487462feb385ca0e3ca977fdd165f56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739092"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134141"
 ---
-# <a name="efngetmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack Function
-Podany adres obiektu zarządzanego wyjątku zwraca wersję ślad stosu zawarte wewnątrz ciągu.  
+# <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_funkcja GetManagedExcepStack
+Dany adres obiektu wyjątku zarządzanego zwraca wersję ciągu śledzenia stosu zawartych wewnątrz.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,26 +37,26 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="parameters"></a>Parametry  
  `Client`  
- [in] Klient debugowane.  
+ podczas Debugowany klient.  
   
  `StackObjAddr`  
- [in] Wskaźnik do obiektu zarządzanego, pochodzące z <xref:System.Exception>.  
+ podczas Wskaźnik obiektu zarządzanego pochodzący z <xref:System.Exception>.  
   
  szStackString  
- [out] Zwracanego ciągu.  
+ określoną Zwrócony ciąg.  
   
  `cbString`  
- [out] Liczba dostępnych w buforu ciągu znaków.  
+ określoną Liczba znaków dostępnych w buforze ciągów.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli żaden kod zarządzany w wątku obecnie występuje w kontekście, funkcja zwraca HRESULT SOS_E_NOMANAGEDCODE z wartością funkcji 0xa0 i kod błędu 0x1000.  
+ W przypadku braku kodu zarządzanego w wątku, który jest obecnie w kontekście, funkcja zwraca wartość HRESULT SOS_E_NOMANAGEDCODE z wartością instrumentu 0xa0 i kod błędu 0x1000.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** SOS_Stacktrace.h  
+ **Nagłówek:** SOS_Stacktrace. h  
   
- **Wersja programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersja .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

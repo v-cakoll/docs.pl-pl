@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 71f362a9-8fe2-47ce-9302-05a645cf3d7d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9861de733a9acb43c7e2a4b4941f9945fc5f0ba7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e01698d2d8491b2496bb664c13dca97964cd1481
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758374"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136944"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication — Funkcja
-Uruchamia aplikację w określonej ścieżce sieciowej, przy użyciu określonych manifestów i innych danych aplikacji.  
+Uruchamia aplikację pod określoną ścieżką sieciową przy użyciu określonych manifestów i innych danych aplikacji.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,34 +43,34 @@ HRESULT CorLaunchApplication (
   
 ## <a name="parameters"></a>Parametry  
  `dwClickOnceHost`  
- [in] Wartość [host_type —](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) wyliczenie, który określa typ hosta, który uruchamia aplikację.  
+ podczas Wartość wyliczenia [HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md) , która określa typ hosta, który uruchamia aplikację.  
   
  `pwzAppFullName`  
- [in] Pełna nazwa aplikacji, który jest on uruchamiany.  
+ podczas Pełna nazwa aplikacji, która jest uruchamiana.  
   
  `dwManifestPaths`  
- [in] Liczba ścieżek manifestu dla aplikacji.  
+ podczas Liczba ścieżek manifestu dla aplikacji.  
   
  `ppwzManifestPaths`  
- [in] Tablica ciągów, z których każdy określa ścieżkę do manifestu aplikacji, który jest on uruchamiany.  
+ podczas Tablica ciągów, z których każdy określa ścieżkę do manifestu dla aplikacji, która jest uruchamiana.  
   
  `dwActivationData`  
- [in] Liczba elementów danych aktywacji dla aplikacji, który jest on uruchamiany.  
+ podczas Liczba elementów danych aktywacji dla aplikacji, która jest uruchamiana.  
   
  `ppwzActivationData`  
- [in] Tablica ciągów, z których każdy jest element danych aktywacji dla aplikacji, który jest on uruchamiany.  
+ podczas Tablica ciągów, z których każdy jest elementem danych aktywacji dla aplikacji, która jest uruchamiana.  
   
  `lpProcessInformation`  
- [out] Wskaźnik do informacji na temat procesu, w którym został załadowany w aplikacji.  
+ określoną Wskaźnik do informacji o procesie, w którym aplikacja została załadowana.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** MSCorEE.dll  
+ **Biblioteka:** MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

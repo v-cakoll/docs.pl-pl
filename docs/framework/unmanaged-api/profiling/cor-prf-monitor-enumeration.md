@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 321ad53ca5f773191c5b5d1084b36caa6aeae4dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752056"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137048"
 ---
-# <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR — Wyliczenie
-Zawiera wartości, które są używane do określania zachowania, funkcji lub zdarzeń do których program profilujący chce subskrypcji.  
+# <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR — Wyliczenie
+Zawiera wartości, które są używane do określania zachowania, możliwości lub zdarzeń, do których profiler chce subskrybować.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -100,24 +98,24 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>Elementy członkowskie  
- Na poniższej liście sekcje `COR_PRF_MONITOR` elementów członkowskich wyliczenia według kategorii. Dostępne są następujące kategorie:  
+ W poniższych sekcjach wymieniono `COR_PRF_MONITOR` składowe wyliczenia według kategorii. Kategorie są następujące:  
   
-- [Nie ustawiono flagi](#None)  
+- [Nie ustawiono flag](#None)  
   
 - [Flagi wywołania zwrotnego](#Callback)  
   
-- [Włączanie funkcji flagi](#Feature)  
+- [Flagi włączające funkcję](#Feature)  
   
 - [Flagi konfiguracji](#Config)  
   
 - [Flagi złożone](#Composite)  
   
 <a name="None"></a>   
-### <a name="no-flags-set"></a>Nie ustawiono flagi  
+### <a name="no-flags-set"></a>Nie ustawiono flag  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_MONITOR_NONE`|Flagi nie są ustawione.|  
+|`COR_PRF_MONITOR_NONE`|Nie ustawiono żadnych flag.|  
   
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Flagi wywołania zwrotnego  
@@ -125,73 +123,73 @@ typedef enum {
 |Element członkowski|Opis|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Włącza wszystkie zdarzenia wywołania zwrotnego.|  
-|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Formanty `AppDomainCreation*` i `AppDomainShutdown*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Formanty `AssemblyLoad*` i `AssemblyUnload*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_CACHE_SEARCHES`|Formanty `JITCachedFunctionSearch*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.<br /><br /> Zachowanie tej flagi nie zostało zmienione w programie .NET Framework 2.0.|  
-|`COR_PRF_MONITOR_CCW`|Formanty `COMClassicVTable*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_CLASS_LOADS`|Formanty `ClassLoad*` i `ClassUnload*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Formanty `ExceptionCLRCatcher*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_CODE_TRANSITIONS`|Formanty [unmanagedtomanagedtransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) i [managedtounmanagedtransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu|  
-|`COR_PRF_MONITOR_ENTERLEAVE`|Formanty `FunctionEnter*`, `FunctionLeave*`, i `FunctionTailCall*` [profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md).|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|Formanty [exceptionthrown —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) wywołania zwrotnego i `ExceptionSearch*`, `ExceptionOSHandler*`, `ExceptionUnwind*`, i `ExceptionCatcher*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Formanty [functionunloadstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) wywołania zwrotnego w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_GC`|Formanty [garbagecollectionstarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [garbagecollectionfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), [movedreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md), [movedreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md), [ Survivingreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md), [survivingreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md), [objectreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), [objectsallocatedbyclass —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md), [ Rootreferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md), [rootreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [handlecreated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md), [handledestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md), i [finalizeableobjectqueued — ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) wywołaniami zwrotnymi w `ICorProfilerCallback*` interfejsów. Gdy `COR_PRF_MONITOR_GC` jest przydzielone, równoczesnego wyrzucania elementów bezużytecznych jest wyłączone.|  
-|`COR_PRF_MONITOR_JIT_COMPILATION`|Formanty `JITCompilation*`, [jitfunctionpitched —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md), i [jitinlining —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|Formanty `ModuleLoad*`, `ModuleUnload*`, i [moduleattachedtoassembly —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Formanty [objectallocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) wywołania zwrotnego w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_REMOTING`|Formanty `Remoting*` wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_REMOTING_ASYNC`|Formanty czy `Remoting*` wywołania zwrotne będzie monitorować zdarzenia asynchroniczne.|  
-|`COR_PRF_MONITOR_REMOTING_COOKIE`|Określa, czy plik cookie jest przekazywany do `Remoting*` wywołań zwrotnych.|  
-|`COR_PRF_MONITOR_SUSPENDS`|Formanty `RuntimeSuspend*`, `RuntimeResume*`, [runtimethreadsuspended —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md), i [runtimethreadresumed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md) wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu.|  
-|`COR_PRF_MONITOR_THREADS`|Formanty [threadcreated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md), [threaddestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md), [threadassignedtoosthread —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md), i [threadnamechanged —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md) wywołaniami zwrotnymi w [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfejsów.|  
+|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Kontroluje `AppDomainCreation*` i `AppDomainShutdown*` wywołania zwrotne w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|Kontroluje `AssemblyLoad*` i `AssemblyUnload*` wywołania zwrotne w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CACHE_SEARCHES`|Steruje wywołaniami zwrotnymi `JITCachedFunctionSearch*` w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .<br /><br /> Zachowanie tej flagi zostanie zmienione w .NET Framework w wersji 2,0.|  
+|`COR_PRF_MONITOR_CCW`|Steruje wywołaniami zwrotnymi `COMClassicVTable*` w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CLASS_LOADS`|Kontroluje `ClassLoad*` i `ClassUnload*` wywołania zwrotne w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|Steruje wywołaniami zwrotnymi `ExceptionCLRCatcher*` w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_CODE_TRANSITIONS`|Kontroluje wywołania zwrotne [UnmanagedToManagedTransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) i [ManagedToUnmanagedTransition —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)|  
+|`COR_PRF_MONITOR_ENTERLEAVE`|Kontroluje `FunctionEnter*`, `FunctionLeave*`i `FunctionTailCall*`[profilowania globalnych funkcji statycznych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md).|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|Kontroluje wywołanie zwrotne [ExceptionThrown —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionthrown-method.md) oraz `ExceptionSearch*`, `ExceptionOSHandler*`, `ExceptionUnwind*`i `ExceptionCatcher*` wywołania zwrotne w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|Steruje wywołaniem zwrotnym [FunctionUnloadStarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-functionunloadstarted-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_GC`|Kontroluje [GarbageCollectionStarted —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), [MovedReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md), [MovedReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md), [SurvivingReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md), [SurvivingReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md), [ObjectReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), [ ](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectsallocatedbyclass-method.md)Wywołania zwrotne ObjectsAllocatedByClass —, [RootReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md), [RootReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md), [HandleCreated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md), [HandleDestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)i [FinalizeableObjectQueued —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md) w interfejsach `ICorProfilerCallback*`. Po przydzieleniu `COR_PRF_MONITOR_GC` współbieżne wyrzucanie elementów bezużytecznych jest wyłączone.|  
+|`COR_PRF_MONITOR_JIT_COMPILATION`|Steruje wywołaniami zwrotnymi `JITCompilation*`, [JITFunctionPitched —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitfunctionpitched-method.md)i [JITInlining —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitinlining-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|Steruje wywołaniami zwrotnymi `ModuleLoad*`, `ModuleUnload*`i [ModuleAttachedToAssembly —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|Steruje wywołaniem zwrotnym [ObjectAllocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_REMOTING`|Steruje wywołaniami zwrotnymi `Remoting*` w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_REMOTING_ASYNC`|Określa, czy wywołania zwrotne `Remoting*` będą monitorować zdarzenia asynchroniczne.|  
+|`COR_PRF_MONITOR_REMOTING_COOKIE`|Określa, czy plik cookie jest przesyłany do wywołań zwrotnych `Remoting*`.|  
+|`COR_PRF_MONITOR_SUSPENDS`|Steruje wywołaniami zwrotnymi `RuntimeSuspend*`, `RuntimeResume*`, [RuntimeThreadSuspended —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)i [RuntimeThreadResumed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md) w interfejsie [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) .|  
+|`COR_PRF_MONITOR_THREADS`|Kontroluje wywołania zwrotne [ThreadCreated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md), [ThreadDestroyed —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md), [ThreadAssignedToOSThread —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadassignedtoosthread-method.md)i [ThreadNameChanged —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md) w interfejsach [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) i [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) .|  
   
 <a name="Feature"></a>   
-### <a name="feature-enabling-flags"></a>Włączanie funkcji flagi  
+### <a name="feature-enabling-flags"></a>Flagi włączające funkcję  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|Umożliwia pobieranie dokładnie `ClassID` ogólnych funkcji, wywołując [getfunctioninfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) metody z `COR_PRF_FRAME_INFO` wartość zwrócona przez obiekt [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) wywołania zwrotnego.|  
-|`COR_PRF_ENABLE_FUNCTION_ARGS`|Za pomocą śledzenia argument umożliwia [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) wywołanie zwrotne lub [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) wywołania zwrotnego i [getfunctionenter3info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) metody.|  
-|`COR_PRF_ENABLE_FUNCTION_RETVAL`|Umożliwia śledzenie zwracane wartości przy użyciu [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) wywołanie zwrotne lub [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) wywołania zwrotnego i [getfunctionleave3info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) metody.|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|Przestarzałe.<br /><br /> W procesie debugowania nie jest obsługiwana. Ta flaga nie ma znaczenia.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|Przestarzałe.<br /><br /> Umożliwia profiler umożliwiające uzyskanie mapy IL do natywnych przy użyciu [getiltonativemapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md). Począwszy od programu .NET Framework 2.0 środowisko uruchomieniowe zawsze śledzi IL do natywnego mapy; w związku z tym ta flaga jest zawsze traktowana jako można ustawić.|  
-|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informuje środowiska uruchomieniowego, że program profilujący może być obiekt alokacji powiadomienia. Tej flagi należy ustawić podczas inicjowania. Umożliwia ona profiler można następnie użyć `COR_PRF_MONITOR_OBJECT_ALLOCATED` flagi, aby otrzymać [objectallocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) wywołań zwrotnych.|  
-|`COR_PRF_ENABLE_REJIT`|Umożliwia wywołania [requestrejit —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) i [requestrevert —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) metody. Program profilujący, należy ustawić tę flagę przy uruchamianiu.  Jeśli program profilujący określa tej flagi, musi on również określać `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
-|`COR_PRF_ENABLE_STACK_SNAPSHOT`|Umożliwia wywołania [dostacksnapshot —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) metody.|  
+|`COR_PRF_ENABLE_FRAME_INFO`|Włącza pobieranie dokładnego `ClassID` dla funkcji ogólnej przez wywołanie metody [GetFunctionInfo2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) z wartością `COR_PRF_FRAME_INFO` zwracaną przez wywołanie zwrotne [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .|  
+|`COR_PRF_ENABLE_FUNCTION_ARGS`|Włącza śledzenie argumentów przy użyciu wywołania zwrotnego [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) lub wywołania zwrotnego [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) i metody [GetFunctionEnter3Info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) .|  
+|`COR_PRF_ENABLE_FUNCTION_RETVAL`|Włącza śledzenie wartości zwracanych przy użyciu wywołania zwrotnego [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) lub metody wywołania zwrotnego [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) i [GetFunctionLeave3Info —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) .|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|Przestarzałe.<br /><br /> Debugowanie procesu nie jest obsługiwane. Ta flaga nie ma żadnego wpływu.|  
+|`COR_PRF_ENABLE_JIT_MAPS`|Przestarzałe.<br /><br /> Umożliwia programowi Profiler uzyskanie map IL-to-native przy użyciu [GetILToNativeMapping —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md). Począwszy od .NET Framework 2,0, środowisko uruchomieniowe zawsze śledzi mapowania IL-to-natywne; w związku z tym Flaga ta jest zawsze uznawana za ustawioną.|  
+|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informuje środowisko uruchomieniowe, że profiler może chcieć otrzymywać powiadomienia dotyczące alokacji obiektów. Ta flaga musi być ustawiona podczas inicjowania. Umożliwia profilerowi użycie flagi `COR_PRF_MONITOR_OBJECT_ALLOCATED`, aby odbierać wywołania zwrotne [ObjectAllocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) .|  
+|`COR_PRF_ENABLE_REJIT`|Włącza wywołania metod [RequestReJIT —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) i [RequestRevert —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) . Profiler musi ustawić tę flagę podczas uruchamiania.  Jeśli profiler określa tę flagę, musi również określać `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
+|`COR_PRF_ENABLE_STACK_SNAPSHOT`|Włącza wywołania metody [DoStackSnapshot —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) .|  
   
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>Flagi konfiguracji  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Zapobiega wszystkich obrazów natywnych (w tym obrazów wzmocnionych programem profilującym) podczas ładowania.  Jeśli ta flaga i `COR_PRF_USE_PROFILE_IMAGES` flagi są określone oba `COR_PRF_DISABLE_ALL_NGEN_IMAGES` jest używany.|  
-|`COR_PRF_DISABLE_INLINING`|Wyłącza wszystkie wbudowanie.|  
+|`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Zapobiega ładowaniu wszystkich obrazów natywnych (w tym obrazów ulepszonych profilera).  Jeśli ta flaga i flaga `COR_PRF_USE_PROFILE_IMAGES` są określone, `COR_PRF_DISABLE_ALL_NGEN_IMAGES` jest używana.|  
+|`COR_PRF_DISABLE_INLINING`|Wyłącza wszystkie znaki wykreślania.|  
 |`COR_PRF_DISABLE_OPTIMIZATIONS`|Wyłącza wszystkie optymalizacje kodu.|  
-|`COR_PRF_DISABLE_TRANSPARENCY_CHECKS_UNDER_FULL_TRUST`|Wyłącza sprawdzanie przezroczystości zabezpieczeń, które są zazwyczaj wykonywane podczas just-in-time (JIT) kompilacja i klasa ładowania dla zestawów pełnego zaufania. Ułatwia czynność do wykonania niektórych instrumentacji.|  
-|`COR_PRF_USE_PROFILE_IMAGES`|Powoduje, że wyszukiwanie obrazów natywnych wzmocnionych programem profilującym obrazy. Jeśli nie obrazów wzmocnionych programem profilującym został znaleziony dla danego zestawu, środowisko uruchomieniowe języka wspólnego powraca do metody JIT dla tego zestawu. Jeśli ta flaga i `COR_PRF_DISABLE_ALL_NGEN_IMAGES` flagi są określone oba `COR_PRF_DISABLE_ALL_NGEN_IMAGES` jest używany.|  
+|`COR_PRF_DISABLE_TRANSPARENCY_CHECKS_UNDER_FULL_TRUST`|Wyłącza kontrole przezroczystości zabezpieczeń, które zwykle są wykonywane podczas kompilacji w czasie just-in-Time (JIT) i załadowanie klasy dla zestawów o pełnym zaufaniu. Może to ułatwić wykonywanie niektórych Instrumentacji.|  
+|`COR_PRF_USE_PROFILE_IMAGES`|Powoduje, że wyszukiwanie obrazów natywnych jest wyszukiwane w obrazach z ulepszonym profilerem. Jeśli dla danego zestawu nie zostanie znaleziony obraz z ulepszonym profilerem, środowisko uruchomieniowe języka wspólnego powróci do trybu JIT dla tego zestawu. Jeśli ta flaga i flaga `COR_PRF_DISABLE_ALL_NGEN_IMAGES` są określone, `COR_PRF_DISABLE_ALL_NGEN_IMAGES` jest używana.|  
   
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>Flagi złożone  
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_ALL`|Reprezentuje wszystkie `COR_PRF_MONITOR` Flaga wartości.|  
-|`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Reprezentuje wszystkie `COR_PRF_MONITOR` flagi, które można ustawić po profiler jest dołączony do uruchomionej aplikacji. W sekcji składni wskazuje poszczególne flagi, które znajdują się w tym maski bitów.|  
+|`COR_PRF_ALL`|Reprezentuje wszystkie wartości flagi `COR_PRF_MONITOR`.|  
+|`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Reprezentuje wszystkie flagi `COR_PRF_MONITOR`, które można ustawić po dołączeniu profilera do uruchomionej aplikacji. Sekcja składnia wskazuje poszczególne flagi, które znajdują się w tej masce bitowej.|  
 |`COR_PRF_MONITOR_ALL`|Włącza wszystkie zdarzenia wywołania zwrotnego.|  
-|`COR_PRF_MONITOR_IMMUTABLE`|Reprezentuje wszystkie `COR_PRF_MONITOR` flagi, które można ustawić tylko podczas inicjowania. Podjęcie próby zmienić dowolne z tych flag, po powrocie inicjowania `HRESULT` wartość, która wskazuje błąd.|  
-|`COR_PRF_REQUIRE_PROFILE_IMAGE`|Reprezentuje wszystkie `COR_PRF_MONITOR` flagi, które wymagają obrazów rozszerzone profilu.|  
+|`COR_PRF_MONITOR_IMMUTABLE`|Reprezentuje wszystkie flagi `COR_PRF_MONITOR`, które można ustawić tylko podczas inicjowania. Próba zmiany którejkolwiek z tych flag po inicjacji zwróci wartość `HRESULT`, która wskazuje na błąd.|  
+|`COR_PRF_REQUIRE_PROFILE_IMAGE`|Reprezentuje wszystkie flagi `COR_PRF_MONITOR`, które wymagają obrazów z rozszerzonym profilem.|  
   
 ## <a name="remarks"></a>Uwagi  
- A `COR_PRF_MONITOR` wartość jest używana z [icorprofilerinfo::geteventmask —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) i [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metody służące do definiowania powiadomienia o zdarzeniach, które wprowadza środowiska uruchomieniowego języka wspólnego profiler.  
+ Wartość `COR_PRF_MONITOR` jest używana z metodami [ICorProfilerInfo:: GetEventMask —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md) i [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) do definiowania powiadomień o zdarzeniach, które środowisko uruchomieniowe języka wspólnego zapewnia Profiler.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

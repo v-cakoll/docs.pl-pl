@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13371d15c8b29f9ef93cc4af87acf85029404644
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83cc4eadca7c337c06c5fbf9f0e74306c2b9cb99
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744770"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131276"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx — Metoda
-Uruchamia proces na komputerze zdalnym w debugerze.  
+Uruchamia proces na maszynie zdalnej pod debugerem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT DebugActiveProcessEx (
   
 ## <a name="parameters"></a>Parametry  
  `pRemoteTarget`  
- [in] Wskaźnik do [icordebugremotetarget — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Ten parametr jest używany do określenia komputera, na którym jest uruchomiony proces.  
+ podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Ten parametr służy do określania komputera, na którym jest uruchomiony proces.  
   
  `id`  
- [in] Identyfikator procesu, do którego ma zostać dołączony debuger.  
+ podczas Identyfikator procesu, do którego ma zostać dołączony debuger.  
   
  `win32Attach`  
- [in] `true` Jeśli debuger powinien zachowywać się jak debugera Win32 dla procesu i wysyłania niezarządzanych wywołań zwrotnych; w przeciwnym razie `false`.  
+ [in] `true`, Jeśli debuger powinien zachowywać się jako debuger Win32 dla procesu i wysyłał niezarządzane wywołania zwrotne; w przeciwnym razie `false`.  
   
  `ppProcess`  
- [out] Wskaźnik na adres obiektu "ICorDebugProcess", który reprezentuje proces, do którego został dołączony debuger.  
+ określoną Wskaźnik do adresu obiektu "ICorDebugProcess", który reprezentuje proces, do którego został podłączony debuger.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
  Pomyślnie dołączono do procesu na komputerze zdalnym.  
   
- E_FAIL (lub inne kody powrotne e_)  
+ E_FAIL (lub inne kody powrotne E_)  
  Nie można dołączyć do procesu na komputerze zdalnym.  
   
 ## <a name="remarks"></a>Uwagi  
@@ -64,11 +62,11 @@ HRESULT DebugActiveProcessEx (
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** 4.5, 4, 3.5 Z DODATKIEM SP1  
+ **.NET Framework wersje:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6fae3b23-5c9f-47c0-85d8-6bb75e050786
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 80465c8d1f1f9e09c0675de1667b999b332b9f6b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a5cda98cac0bc3fc6fb101fd0404b062224cb578
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738148"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134080"
 ---
 # <a name="icordebuginitialize-method"></a>ICorDebug::Initialize — Metoda
-Inicjuje `ICorDebug` obiektu.  
+Inicjuje obiekt `ICorDebug`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,16 +32,16 @@ HRESULT Initialize ();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Debuger musi wywołać `Initialize` podczas tworzenia usługi czasu można zainicjować debugowania. Ta metoda musi zostać wywołana przed każda inna metoda na `ICorDebug` jest wywoływana.  
+ Debuger musi wywołać `Initialize` w czasie tworzenia, aby zainicjować usługi debugowania. Ta metoda musi być wywoływana przed wywołaniem innej metody na `ICorDebug`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

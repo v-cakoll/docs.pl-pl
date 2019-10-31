@@ -14,14 +14,12 @@ helpviewer_keywords:
 - EndEnumeration function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0065dcd25430e102b965d5598c7e9a04c7857eb3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9fd1f094c8fb56c94421a07437aa25a3549c487
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798815"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132042"
 ---
 # <a name="endenumeration-function"></a>EndEnumeration, funkcja
 
@@ -59,15 +57,15 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 
 Ta funkcja otacza wywołanie metody [IWbemClassObject:: EndEnumeration](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
-Wywołanie `EndEnumeration` funkcji nie jest wymagane, ale jest zalecane, ponieważ zwalnia zasoby skojarzone z wyliczeniem. Jednak zasoby są cofane automatycznie, gdy następne Wyliczenie zostanie rozpoczęte lub że obiekt zostanie opublikowany.
+Wywołanie funkcji `EndEnumeration` nie jest wymagane, ale jest zalecane, ponieważ zwalnia zasoby skojarzone z wyliczeniem. Jednak zasoby są cofane automatycznie, gdy następne Wyliczenie zostanie rozpoczęte lub że obiekt zostanie opublikowany.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).
 
-**Nagłówki** WMINet_Utils.idl
+**Nagłówek:** WMINet_Utils. idl
 
-**.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

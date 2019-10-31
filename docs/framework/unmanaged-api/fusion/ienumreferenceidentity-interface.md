@@ -14,33 +14,31 @@ helpviewer_keywords:
 ms.assetid: a17b3155-7216-4e16-8c9f-abce21f549e7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c5d4bc1fa82f7623168050f4ee36f0ea3cd171e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1305b9ebe3cd87ba002ee87610ff309d015a44e6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796431"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131744"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity — Interfejs
-Służy jako moduł wyliczający dla kolekcji `IReferenceIdentity` obiektów.  
+Służy jako moduł wyliczający dla kolekcji obiektów `IReferenceIdentity`.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IEnumReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IEnumReferenceIdentity` , który zawiera te same składowe. `IEnumReferenceIdentity`|  
+|`IEnumReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IEnumReferenceIdentity`, który zawiera te same elementy członkowskie co ten `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Next`|Pobiera określoną liczbę `IReferenceIdentity` obiektów, rozpoczynając od bieżącego położenia.|  
-|`IEnumReferenceIdentity::Reset`|Przenosi wskaźnik instrukcji na początek tego `IEnumReferenceIdentity`elementu.|  
+|`IEnumReferenceIdentity::Reset`|Przenosi wskaźnik instrukcji na początek tego `IEnumReferenceIdentity`.|  
 |`IEnumReferenceIdentity::Skip`|Przesuwa wskaźnik instrukcji do przodu o określoną liczbę elementów, rozpoczynając od bieżącego położenia.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

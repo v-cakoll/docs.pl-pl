@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f16a5d1bad80a5aad8573508aab5fbf98c8c2a03
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736840"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137177"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint — Metoda
-Ustawia niezarządzany punkt przerwania w przesunięciu określonego obrazu natywnego.  
+Ustawia niezarządzany punkt przerwania w określonym przesunięciu obrazu natywnego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` obiekt, który określa przesunięcie obrazu natywnego.  
+ podczas Obiekt `CORDB_ADDRESS`, który określa przesunięcie obrazu natywnego.  
   
  `bufsize`  
- [in] Rozmiar w bajtach z `buffer` tablicy.  
+ podczas Rozmiar (w bajtach) tablicy `buffer`.  
   
  `buffer`  
- [out] Tablica, która zawiera kod operacji, który jest zastępowany przez punkt przerwania.  
+ określoną Tablica zawierająca kod operacji, który jest zastępowany przez punkt przerwania.  
   
  `bufLen`  
- [out] Wskaźnik do liczby bajtów zwróconych w `buffer` tablicy.  
+ określoną Wskaźnik do liczby bajtów zwróconych w tablicy `buffer`.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli przesunięcie obrazów natywnych w środowisko uruchomieniowe języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Dzięki temu środowisko CLR uniknąć przerwania out-of-band wysyłki, gdy punkt przerwania jest ustawiony przez debuger.  
+ Jeśli przesunięcie obrazu natywnego znajduje się w środowisku uruchomieniowym języka wspólnego (CLR), punkt przerwania zostanie zignorowany. Pozwala to na uniknięcie wysyłania przez środowisko uruchomieniowe punktu przerwania poza pasmem, gdy punkt przerwania jest ustawiony przez debuger.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

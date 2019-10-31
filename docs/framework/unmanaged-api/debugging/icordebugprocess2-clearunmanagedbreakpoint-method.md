@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fb566ff2e5e2b0bcb096cead243ed65a904a914
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8377ead42c752d8ebe9813d9e00662b94339f8a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736976"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137243"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint — Metoda
-Usuwa wcześniej ustawiony punkt przerwania pod podanym adresem.  
+Usuwa poprzednio ustawiony punkt przerwania pod podanym adresem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +35,20 @@ HRESULT ClearUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>Parametry  
  `address`  
- [in] A `CORDB_ADDRESS` wartość, która określa adres, w którym ustawiono punkt przerwania.  
+ podczas Wartość `CORDB_ADDRESS`, która określa adres, pod którym został ustawiony punkt przerwania.  
   
 ## <a name="remarks"></a>Uwagi  
- Określony punkt przerwania mogły zostać wcześniej ustawione przez wcześniejsze wywołanie [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
+ Określony punkt przerwania zostałby wcześniej ustawiony przez wcześniejsze wywołanie [ICorDebugProcess2:: SetUnmanagedBreakpoint —](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).  
   
- `ClearUnmanagedBreakpoint` Metoda może być wywoływana, gdy debugowany proces jest uruchomiona.  
+ Metodę `ClearUnmanagedBreakpoint` można wywołać, gdy debugowany proces jest uruchomiony.  
   
- `ClearUnmanagedBreakpoint` Metoda zwraca kod błędu, jeśli jest dołączony debuger w trybie tylko do zarządzanych lub przerwania nie istnieje pod podanym adresem.  
+ Metoda `ClearUnmanagedBreakpoint` zwraca kod błędu, Jeśli debuger jest dołączony w trybie tylko zarządzanym lub jeśli punkt przerwania nie istnieje pod podanym adresem.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

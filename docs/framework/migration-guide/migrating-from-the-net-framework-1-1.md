@@ -5,24 +5,22 @@ helpviewer_keywords:
 - .NET Framework 4.5, migrating from 1.1
 - .NET Framework 1.1, migrating to .NET Framework 4.5
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7b15318ef38c407110c8d48d3e81977aa1b20df4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f74b75827770524299f9a25a5854503186139cb4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779475"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126293"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migracja z programu .NET Framework 1.1
 
-[!INCLUDE[win7](../../../includes/win7-md.md)]i nowsze wersje systemu operacyjnego Windows nie obsługują .NET Framework 1,1. W związku z tym aplikacje przeznaczone dla .NET Framework 1,1 nie będą uruchamiane bez modyfikacji w systemach [!INCLUDE[win7](../../../includes/win7-md.md)] operacyjnych i nowszych wersjach. W tym temacie omówiono kroki wymagane do uruchomienia aplikacji, która jest przeznaczona dla .NET Framework 1,1 [!INCLUDE[win7](../../../includes/win7-md.md)] w ramach i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat .NET Framework 1,1 [!INCLUDE[win8](../../../includes/win8-md.md)]i, zobacz [Uruchamianie aplikacji .NET Framework 1,1 w systemie Windows 8 i nowszych wersjach](../install/run-net-framework-1-1-apps.md).
+[!INCLUDE[win7](../../../includes/win7-md.md)] i nowsze wersje systemu operacyjnego Windows nie obsługują .NET Framework 1,1. W związku z tym aplikacje przeznaczone dla .NET Framework 1,1 nie będą uruchamiane bez modyfikacji [!INCLUDE[win7](../../../includes/win7-md.md)] lub nowszych wersji systemu operacyjnego. W tym temacie omówiono kroki wymagane do uruchomienia aplikacji, która jest przeznaczona dla .NET Framework 1,1 w obszarze [!INCLUDE[win7](../../../includes/win7-md.md)] i nowszych wersjach systemu operacyjnego Windows. Aby uzyskać więcej informacji na temat .NET Framework 1,1 i [!INCLUDE[win8](../../../includes/win8-md.md)], zobacz [Uruchamianie aplikacji .NET Framework 1,1 w systemie Windows 8 i nowszych wersjach](../install/run-net-framework-1-1-apps.md).
 
 ## <a name="retargeting-or-recompiling"></a>Przekierowywanie lub ponowne kompilowanie
 
-Istnieją dwa sposoby uzyskania aplikacji, która została skompilowana przy użyciu .NET Framework 1,1 do uruchamiania w [!INCLUDE[win7](../../../includes/win7-md.md)] systemie lub nowszym systemem operacyjnym Windows:
+Istnieją dwa sposoby uzyskania aplikacji skompilowanej za pomocą .NET Framework 1,1 do uruchamiania w [!INCLUDE[win7](../../../includes/win7-md.md)] lub w późniejszym systemie operacyjnym Windows:
 
-- Można przekierować aplikację do uruchamiania w .NET Framework 4 i nowszych wersjach. Przekierowywanie wymaga dodania [ \<elementu supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) do pliku konfiguracji aplikacji, który umożliwia uruchamianie go w .NET Framework 4 i nowszych wersjach. Taki plik konfiguracyjny ma następującą postać:
+- Można przekierować aplikację do uruchamiania w .NET Framework 4 i nowszych wersjach. Przekierowywanie wymaga dodania elementu [\<supportedRuntime >](../configure-apps/file-schema/startup/supportedruntime-element.md) do pliku konfiguracji aplikacji, który umożliwia uruchamianie go w .NET Framework 4 i nowszych wersjach. Taki plik konfiguracyjny ma następującą postać:
 
     ```xml
     <configuration>
@@ -44,7 +42,7 @@ Bez względu na to, czy chcesz przekierować aplikację, czy ją ponownie skompi
 
 ## <a name="breaking-changes"></a>Fundamentalne zmiany
 
-Gdy nastąpi zmiana istotna, w zależności od określonej zmiany obejście może być dostępne zarówno w przypadku aplikacji docelowych, jak i ponownie skompilowanych. W niektórych przypadkach można dodać element podrzędny do [ \<elementu > środowiska uruchomieniowego](../configure-apps/file-schema/startup/supportedruntime-element.md) w pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracyjny przywraca zachowanie sortowania i porównywania ciągów używane w .NET Framework 1,1 i może być używane z przekierowaniem lub ponowną kompilacją aplikacji.
+Gdy nastąpi zmiana istotna, w zależności od określonej zmiany obejście może być dostępne zarówno w przypadku aplikacji docelowych, jak i ponownie skompilowanych. W niektórych przypadkach można dodać element podrzędny do [> elementu\<środowiska uruchomieniowego](../configure-apps/file-schema/startup/supportedruntime-element.md) w pliku konfiguracji aplikacji, aby przywrócić poprzednie zachowanie. Na przykład następujący plik konfiguracyjny przywraca zachowanie sortowania i porównywania ciągów używane w .NET Framework 1,1 i może być używane z przekierowaniem lub ponowną kompilacją aplikacji.
 
 ```xml
 <configuration>

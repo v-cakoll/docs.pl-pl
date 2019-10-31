@@ -16,14 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 21fc34add4038d25d60e4728847e0d84914a14e3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739416"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132164"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo — Struktura
 Reprezentuje proces, który jest uruchomiony na komputerze zdalnym.  
@@ -42,15 +40,15 @@ struct  CoreClrDebugProcInfo {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`m_dwPID`|Identyfikator procesu przypisaną przez system operacyjny.|  
-|`m_dwInternalID`|Identyfikator procesu, który jest przypisany przez serwer proxy debugowania zdalnego uruchomioną na maszynie docelowej. Ten identyfikator jest odtwarzana częściej niż identyfikator systemu operacyjnego.|  
-|`m_wszName`|Wiersza polecenia procesu. Ten element członkowski może zostać obcięty.|  
+|`m_dwPID`|Identyfikator procesu przypisany do systemu operacyjnego.|  
+|`m_dwInternalID`|Identyfikator procesu, który jest przypisywany przez zdalny serwer proxy na komputerze docelowym. Ten identyfikator jest odtwarzany rzadziej niż identyfikator systemu operacyjnego.|  
+|`m_wszName`|Wiersz polecenia procesu. Ten element członkowski może zostać obcięty.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3,5 SP1

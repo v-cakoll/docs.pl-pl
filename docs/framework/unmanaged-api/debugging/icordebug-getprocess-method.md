@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10a40ba0-1b65-4721-bd11-cf12d57b280d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e77046745381d3ecc35c24d5af3f9181b9132e9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 64ed875059730e91e28ff0903ab93fb25c68910b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738162"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134110"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess — Metoda
 Pobiera wskaźnik do wystąpienia "ICorDebugProcess" dla określonego procesu.  
@@ -38,19 +36,19 @@ HRESULT GetProcess (
   
 ## <a name="parameters"></a>Parametry  
  `dwProcessId`  
- [in] Identyfikator procesu.  
+ podczas Identyfikator procesu.  
   
  `ppProcess`  
- [out] Wskaźnik na adres `ICorDebugProcess` wystąpienia dla określonego procesu.  
+ określoną Wskaźnik do adresu `ICorDebugProcess` wystąpienia określonego procesu.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

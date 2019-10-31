@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9180ac5a-7019-4716-9f83-8a91d157239a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bb151d7c77104d8e24acefaac2e1f109b67f168
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8f6a117d1e2fe76c271b0b014e6079370c8b4fe4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796360"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127066"
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity — Interfejs
 Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.  
@@ -30,17 +28,17 @@ Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|`IReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego `IReferenceIdentity` wystąpienia, które jest identyczne z tą `IReferenceIdentity`różnicą, z wyjątkiem określonych zmian atrybutów.|  
-|`IReferenceIdentity::EnumAttributes`|Pobiera wskaźnik interfejsu do `IEnumIDENTITY_ATTRIBUTE` wystąpienia, które zawiera atrybuty skojarzone z tym `IReferenceIdentity`elementem.|  
+|`IReferenceIdentity::Clone`|Pobiera wskaźnik interfejsu do nowego wystąpienia `IReferenceIdentity`, który jest identyczny z tym `IReferenceIdentity`, z wyjątkiem określonych zmian atrybutów.|  
+|`IReferenceIdentity::EnumAttributes`|Pobiera wskaźnik interfejsu do wystąpienia `IEnumIDENTITY_ATTRIBUTE`, które zawiera atrybuty skojarzone z tym `IReferenceIdentity`.|  
 |`IReferenceIdentity::GetAttribute`|Pobiera wartość atrybutu w określonym obszarze nazw z określoną nazwą.|  
 |`IReferenceIdentity::SetAttribute`|Ustawia atrybut, który ma określoną przestrzeń nazw i określoną nazwę określonej wartości.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Izolacja. h  
+ **Nagłówek:** Izolacja. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

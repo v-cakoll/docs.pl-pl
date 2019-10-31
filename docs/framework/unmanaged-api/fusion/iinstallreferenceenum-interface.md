@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2863b33b-a541-462c-bbe8-702a2832898e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0d29b9e2a9b9022f682065816a62734d6c5b2d62
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d3f7c24b4bd373924c44dbc0490c890e7f1322bd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796408"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131733"
 ---
 # <a name="iinstallreferenceenum-interface"></a>IInstallReferenceEnum — Interfejs
 Reprezentuje moduł wyliczający dla zestawów, do których istnieją odwołania zainstalowane w globalnej pamięci podręcznej zestawów.  
@@ -42,14 +40,14 @@ interface IInstallReferenceEnum : IUnknown {
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetNextInstallReferenceItem, metoda](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Pobiera wskaźnik do następnego `IInstallReferenceItem` elementu zawartego w tym `IInstallReferenceEnum`elemencie.|  
+|[GetNextInstallReferenceItem, metoda](iinstallreferenceenum-getnextinstallreferenceitem-method.md)|Pobiera wskaźnik do następnego `IInstallReferenceItem` zawartego w tym `IInstallReferenceEnum`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

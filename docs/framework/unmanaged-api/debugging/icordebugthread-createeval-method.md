@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 41bd4c0bb4e84b6d6f267e24808baafa57f71882
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771119"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133618"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval — Metoda
-Tworzy obiekt ICorDebugEval, który zbiera i udostępnia funkcje to ICorDebugThread.  
+Tworzy obiekt ICorDebugEval, który zbiera i udostępnia funkcje tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,16 +35,16 @@ HRESULT CreateEval (
   
 ## <a name="parameters"></a>Parametry  
  `ppEval`  
- [out] Wskaźnik na adres `ICorDebugEval` obiektu, który zbiera i udostępnia funkcje tego wątku.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugEval`, który zbiera i udostępnia funkcje tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt oceny będzie umożliwiać wypychanie powiadomień nowy łańcuch w wątku, przed wykonaniem jego obliczeń. Przerywa to działanie obliczeń obecnie wykonywane w wątku do chwili zakończenia oceny.  
+ Obiekt oceny wypycha nowy łańcuch w wątku przed wykonaniem jego obliczenia. Spowoduje to przerwanie obliczeń aktualnie wykonywanych na wątku do momentu zakończenia szacowania.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

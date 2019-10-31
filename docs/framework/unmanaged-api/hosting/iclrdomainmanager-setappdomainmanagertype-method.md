@@ -13,17 +13,15 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5c61e2e1208cec0bda1492964a8d02bd71f5a1c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963094"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129328"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType — Metoda
-Określa typ, który pochodzi od <xref:System.AppDomainManager?displayProperty=nameWithType> klasy, Menedżera domeny aplikacji, który będzie używany do inicjowania domyślnej domeny aplikacji.  
+Określa typ, który pochodzi od klasy <xref:System.AppDomainManager?displayProperty=nameWithType>, Menedżera domeny aplikacji, który będzie używany do inicjowania domyślnej domeny aplikacji.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,21 +52,21 @@ HRESULT SetAppDomainManagerType(
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obecnie jedyną zdefiniowaną wartością dla elementu `dwInitializeDomainFlags` jest `eInitializeNewDomainFlags_NoSecurityChanges`, która informuje środowisko uruchomieniowe języka wspólnego (CLR), że Menedżer domeny aplikacji nie zmodyfikuje ustawień zabezpieczeń <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> podczas wykonywania metody. Dzięki temu środowisko CLR optymalizuje ładowanie zestawów, które mają atrybut Conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Może to spowodować znaczne zwiększenie czasu uruchamiania, jeśli zamknięcie przechodnie tego zestawu zestawów jest duże.  
+ Obecnie jedyną zdefiniowaną wartością `dwInitializeDomainFlags` jest `eInitializeNewDomainFlags_NoSecurityChanges`, która informuje środowisko uruchomieniowe języka wspólnego (CLR), że Menedżer domeny aplikacji nie zmodyfikuje ustawień zabezpieczeń podczas wykonywania metody <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>. Dzięki temu środowisko CLR optymalizuje ładowanie zestawów, które mają atrybut warunkowego <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Może to spowodować znaczne zwiększenie czasu uruchamiania, jeśli zamknięcie przechodnie tego zestawu zestawów jest duże.  
   
 > [!IMPORTANT]
-> Jeśli host określi `eInitializeNewDomainFlags_NoSecurityChanges` Menedżera domeny aplikacji <xref:System.InvalidOperationException> , jest zgłaszany w przypadku każdej próby zmodyfikowania zabezpieczeń domeny aplikacji.  
+> Jeśli host określi `eInitializeNewDomainFlags_NoSecurityChanges` dla Menedżera domeny aplikacji, zostanie zgłoszony <xref:System.InvalidOperationException>, Jeśli podjęto próbę zmodyfikowania zabezpieczeń domeny aplikacji.  
   
- Wywołanie metody [ICLRControl:: SetAppDomainManagerType —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)jest równoważne wywołaniu `ICLRDomainManager::SetAppDomainManagerType` with `eInitializeNewDomainFlags_None`.  
+ Wywołanie metody [ICLRControl:: SetAppDomainManagerType —](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)jest równoznaczne z wywołaniem `ICLRDomainManager::SetAppDomainManagerType` z `eInitializeNewDomainFlags_None`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MetaHost.h  
+ **Nagłówek:** Obiekt ServiceHost. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

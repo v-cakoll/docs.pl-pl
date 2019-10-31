@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 5bb12f9a-0612-434b-b4ed-2db636a20bec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ce0c6307defd93dcf63ac4e9051fc798041475f3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779562"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127051"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID — Funkcja
-Pobiera odpowiednie wspólnego języka wspólnego (CLR) informacje o wersji dla klasy z określonym `CLSID`.  
+Pobiera odpowiednie informacje o wersji środowiska uruchomieniowego języka wspólnego (CLR) dla klasy z określonym `CLSID`.  
   
- Ta funkcja jest przestarzała w programie .NET Framework 4.  
+ Ta funkcja jest przestarzała w .NET Framework 4.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,40 +40,40 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
   
 ## <a name="parameters"></a>Parametry  
  `rclsid`  
- [in]  `CLSID` Składnika.  
+ podczas  `CLSID` składnika.  
   
  `pVersion`  
- [out]  Bufor, który zawiera ciąg numeru wersji, po pomyślnym zakończeniu.  
+ określoną  Bufor zawierający ciąg numeru wersji po pomyślnym zakończeniu.  
   
  `cchBuffer`  
- [in]  Rozmiar w szerokich znaków z `pVersion` buforu.  
+ podczas  Rozmiar (w bajtach) w buforze `pVersion`.  
   
  `dwLength`  
- [out] Długość, w bajtach, zwrócone buforu.  
+ określoną Długość (w bajtach) zwróconego buforu.  
   
  `dwResolutionFlags`  
- [in]  Jedna z wartości clsid_resolution_flags —. Obsługiwane są następujące wartości:  
+ podczas  Jedna z wartości CLSID_RESOLUTION_FLAGS. Obsługiwane są następujące wartości:  
   
-- CLSID_RESOLUTION_DEFAULT: (0x0) określa, że powinny być używane domyślne zachowanie międzyoperacyjnego.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) określa, że należy użyć domyślnego zachowania międzyoperacyjności.  
   
-- CLSID_RESOLUTION_REGISTERED: (0x1) określa, że powinna być dodatkowo rejestru i podkładek zasady powinny zostać zastosowane.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) określa, że rejestr powinien być przeszukiwany, a zasady podkładki powinny być stosowane.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Wartość zwrócona przez funkcję pomyślnie.|  
+|S_OK|Funkcja została pomyślnie zwrócona.|  
 |E_INVALIDARG|Jeden z parametrów ma nieprawidłowy typ lub format.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` Bufor nie jest wystarczająco duży, aby pomieścić całą wersję ciągu.|  
-|REGDB_E_CLASSNOTREG|Istnieje klasa nie zarejestrowana z określonym `CLSID`.|  
-|E_POINTER|`dwLength` ma wartość null, lub `cchBuffer` jest wystarczająco duży, aby pomieścić ciąg wersji, ale `pVersion` ma wartość null.|  
+|ERROR_INSUFFICIENT_BUFFER|Bufor `pVersion` nie jest wystarczająco duży, aby pomieścić cały ciąg wersji.|  
+|REGDB_E_CLASSNOTREG|Nie ma żadnej klasy zarejestrowanej w określonym `CLSID`.|  
+|E_POINTER|`dwLength` ma wartość null lub `cchBuffer` jest wystarczająco duży, aby pomieścić ciąg wersji, ale `pVersion` ma wartość null.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

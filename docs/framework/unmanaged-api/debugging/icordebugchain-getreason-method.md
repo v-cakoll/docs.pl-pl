@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9f9f62b9-113a-4a98-8f9b-b593cef27b03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e5120b5fddf621d6f4c684c4c432fda4f5c0117
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e51ee2e4d44af547c82a21a782121976d07118c5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745258"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124719"
 ---
 # <a name="icordebugchaingetreason-method"></a>ICorDebugChain::GetReason — Metoda
-Pobiera przyczynę genesis tego łańcucha wywoływania.  
+Pobiera przyczynę Genesis tego łańcucha wywołującego.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT GetReason (
   
 ## <a name="parameters"></a>Parametry  
  `pReason`  
- [out] Wskaźnik do wartości cordebugchainreason — wyliczenie, która wskazuje przyczynę genesis tego łańcucha wywoływania (bitowe połączenie).  
+ określoną Wskaźnik do wartości (kombinacja bitowa) wyliczenia CorDebugChainReason —, która wskazuje przyczynę Genesis tego łańcucha wywołującego.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b58832e110f67a54d3bd57a7284b2e26e43d6bf7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739404"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132140"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo — Struktura
-Reprezentuje wystąpienie wspólnego środowiska uruchomieniowego (języka wspólnego CLR) języka, który jest załadowany do procesu na komputerze zdalnym.  
+Reprezentuje wystąpienie środowiska uruchomieniowego języka wspólnego (CLR), które jest ładowane w procesie na maszynie zdalnej.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,13 +38,13 @@ struct  CoreClrDebugRuntimeInfo {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`m_dwInternalID`|Identyfikator środowiska uruchomieniowego, który jest przypisany przez serwer proxy debugowania zdalnego uruchomioną na maszynie docelowej.|  
+|`m_dwInternalID`|Identyfikator środowiska uruchomieniowego, który jest przypisany przez zdalny serwer proxy uruchomiony na komputerze docelowym.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CoreClrRemoteDebuggingInterfaces.h  
+ **Nagłówek:** CoreClrRemoteDebuggingInterfaces. h  
   
- **Library:** mscordbi_macx86.dll  
+ **Biblioteka:** mscordbi_macx86. dll  
   
- **Wersje programu .NET framework:** 3.5 z dodatkiem SP1
+ **.NET Framework wersje:** 3,5 SP1

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66df494d-1a2f-4441-8ee6-cfed0217b4e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5187c20aaa4bd37401db3990e0f8a96a61e75418
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 016ded7b1393d6e03faa029ab5be661bf4ff4efd
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796381"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131668"
 ---
 # <a name="iinstallreferenceitem-interface"></a>IInstallReferenceItem — Interfejs
 Reprezentuje element zainstalowany w globalnej pamięci podręcznej zestawów.  
@@ -30,14 +28,14 @@ Reprezentuje element zainstalowany w globalnej pamięci podręcznej zestawów.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReference, metoda](iinstallreferenceitem-getreference-method.md)|Pobiera wskaźnik do `FUSION_INSTALL_REFERENCE` struktury reprezentowanej przez ten `IInstallReferenceItem`element.|  
+|[GetReference, metoda](iinstallreferenceitem-getreference-method.md)|Pobiera wskaźnik do struktury `FUSION_INSTALL_REFERENCE` reprezentowanej przez ten `IInstallReferenceItem`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

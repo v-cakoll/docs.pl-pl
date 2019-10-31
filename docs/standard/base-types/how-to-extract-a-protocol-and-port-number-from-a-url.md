@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL'
+title: 'Porady: wyodrębnianie protokółu i numeru portu z adresu URL'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,42 +13,40 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: ab7f62b3-6d2c-4efb-8ac6-28600df5fd5c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a08e97b02e2f60422132e97e2f3f7d4d2d5b8ec4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2704e3fb5ceb68609a475d52e11030177ad760b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61860974"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138721"
 ---
-# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Instrukcje: Wyodrębnianie protokołu i numeru portu z adresu URL
-Poniższy przykład wyodrębnia protokół i numer portu z adresu URL.  
+# <a name="how-to-extract-a-protocol-and-port-number-from-a-url"></a>Porady: wyodrębnianie protokółu i numeru portu z adresu URL
+Poniższy przykład wyodrębnia protokołu i numeru portu z adresu URL.  
   
 ## <a name="example"></a>Przykład  
- W przykładzie użyto <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metodę, aby zwrócić protokołu następuje dwukropek i numer portu.  
+ W przykładzie użyto metody <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> do zwrócenia protokołu, po którym następuje dwukropek i numer portu.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/Example.cs#1)]
  [!code-vb[RegularExpressions.Examples.Protocol#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/Example.vb#1)]  
   
- Definicję wzorca wyrażenia regularnego `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` mogą być interpretowane, jak pokazano w poniższej tabeli.  
+ Wzorzec wyrażenia regularnego `^(?<proto>\w+)://[^/]+?(?<port>:\d+)?/` można interpretować, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
-|`^`|Rozpoczyna dopasowanie na początku ciągu.|  
-|`(?<proto>\w+)`|Dopasowuje co najmniej jeden znak słowa. Określ nazwę tej grupy `proto`.|  
-|`://`|Dopasowuje dwukropek następuje dwóch znaków ukośnika.|  
-|`[^/]+?`|Dopasowuje jedno lub więcej wystąpień (ale możliwie) dowolny znak inny niż znak ukośnika.|  
-|`(?<port>:\d+)?`|Dopasowuje zero lub jeden wystąpienie średnikami, na którym następuje co najmniej jeden znak cyfry. Określ nazwę tej grupy `port`.|  
+|`^`|Rozpocznij dopasowanie na początku ciągu.|  
+|`(?<proto>\w+)`|Dopasowuje co najmniej jeden znak słowa. Nadaj tej grupie nazwę `proto`.|  
+|`://`|Dopasowuje dwukropek, po którym następuje dwa znaki ukośnika.|  
+|`[^/]+?`|Dopasowuje jedno lub więcej wystąpień (ale jak najszybciej) dowolnego znaku, który jest inny niż znak kreski ułamkowej.|  
+|`(?<port>:\d+)?`|Dopasowanie do zera lub jednego wystąpienia dwukropka, po którym następuje jeden lub więcej znaków cyfrowych. Nadaj tej grupie nazwę `port`.|  
 |`/`|Dopasowuje znak ukośnika.|  
   
- <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> Rozszerza metoda `${proto}${port}` sekwencji zastąpienie łączy wartości z dwóch grup o nazwie przechwycone we wzorcu wyrażenia regularnego. Jest wygodne alternatywa jawnie łączenia ciągów pobierana z obiektu kolekcji zwrócony przez <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> właściwości.  
+ Metoda <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> rozszerza `${proto}${port}` sekwencję zastępowania, która łączy wartość dwóch nazwanych grup przechwyconych we wzorcu wyrażenia regularnego. Jest to wygodna alternatywa do jawnego łączenia ciągów pobranych z obiektu kolekcji zwróconego przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>.  
   
- W przykładzie użyto <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody za pomocą dwóch podstawienia `${proto}` i `${port}`, aby uwzględnić przechwyconych grupach w ciągu wyjściowym. Możesz pobrać przechwyconych grupach z dopasowania <xref:System.Text.RegularExpressions.GroupCollection> zamiast tego, co ilustruje poniższy kod obiektu.  
+ W przykładzie zastosowano metodę <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> z dwoma podstawiami, `${proto}` i `${port}`, aby uwzględnić przechwycone grupy w ciągu danych wyjściowych. Przechwycone grupy można pobrać z obiektu <xref:System.Text.RegularExpressions.GroupCollection> dopasowania zamiast tego, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/cs/example2.cs#2)]
  [!code-vb[RegularExpressions.Examples.Protocol#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Protocol/vb/example2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)
+- [Wyrażenia regularne .NET](../../../docs/standard/base-types/regular-expressions.md)

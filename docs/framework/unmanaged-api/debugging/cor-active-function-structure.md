@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 50dd4acece43628b20b6bc50a539ee197e865855
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132380"
 ---
 # <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION — Struktura
 Zawiera informacje o funkcjach, które są obecnie aktywne w ramkach wątku. Ta struktura jest używana przez metodę [ICorDebugThread2:: GetActiveFunctions —](icordebugthread2-getactivefunctions-method.md) .  
@@ -42,20 +40,20 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`pAppDomain`|Wskaźnik do właściciela `ilOffset` domeny aplikacji pola.|  
-|`pModule`|Wskaźnik do właściciela `ilOffset` modułu pola.|  
-|`pFunction`|Wskaźnik do właściciela `ilOffset` funkcji pola.|  
+|`pAppDomain`|Wskaźnik do właściciela domeny aplikacji pola `ilOffset`.|  
+|`pModule`|Wskaźnik do właściciela modułu pola `ilOffset`.|  
+|`pFunction`|Wskaźnik do właściciela funkcji pola `ilOffset`.|  
 |`ilOffset`|Przesunięcie języka pośredniego (MSIL) firmy Microsoft dla ramki.|  
 |`flags`|Zarezerwowane do użytku w przyszłości.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl  
+ **Nagłówek:** CorDebug. idl  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

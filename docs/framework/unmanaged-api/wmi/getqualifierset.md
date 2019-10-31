@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetQualifierSet function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 845d5ea93a06859840c87c65b415ead0f846d538
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 489e240af3f26e82f2459ac4b4dbd944639f78fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70798463"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127441"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet, funkcja
 Pobiera kwalifikator zestawu dla wystąpienia klasy lub definicji klasy.
@@ -47,7 +45,7 @@ podczas Ten parametr jest nieużywany.
 podczas Wskaźnik do wystąpienia [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `ppQualSet`  
-określoną Odbiera wskaźnik interfejsu, który umożliwia dostęp do kwalifikatorów obiektu klasy. `ppQualSet`nie może `null`być. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany, a wskaźnik nie zostanie zmodyfikowany. 
+określoną Odbiera wskaźnik interfejsu, który umożliwia dostęp do kwalifikatorów obiektu klasy. nie można `null``ppQualSet`. Jeśli wystąpi błąd, nowy obiekt nie jest zwracany, a wskaźnik nie zostanie zmodyfikowany. 
 
 ## <a name="return-value"></a>Wartość zwracana
 
@@ -58,7 +56,7 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |`WBEM_E_FAILED` | 0x80041001 | Wystąpił błąd ogólny. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Określona metoda nie istnieje. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Za mało dostępnej pamięci, aby ukończyć tę operację. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr ma `null`wartość. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Parametr jest `null`. |
 |`WBEM_S_NO_ERROR` | 0 | Wywołanie funkcji zakończyło się pomyślnie.  |
   
 ## <a name="remarks"></a>Uwagi
@@ -68,11 +66,11 @@ Ta funkcja otacza wywołanie metody [IWbemClassObject:: GetQualifierSet](/window
 [Wskaźnik IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) umożliwia obiektowi wywołującemu Dodawanie, edytowanie lub usuwanie tych kwalifikatorów. Takie dodane, zmodyfikowane lub usunięte kwalifikatory mają zastosowanie do całego wystąpienia lub definicji klasy.
 
 ## <a name="requirements"></a>Wymagania  
-**Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+**Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

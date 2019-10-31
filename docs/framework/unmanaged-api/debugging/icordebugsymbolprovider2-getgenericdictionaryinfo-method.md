@@ -1,19 +1,17 @@
 ---
-title: Metoda ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+title: 'ICorDebugSymbolProvider2:: GetGenericDictionaryInfo, Metoda'
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 65407fca73971546725d9457d25bf1270d2001e2
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662535"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133632"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>Metoda ICorDebugSymbolProvider2::GetGenericDictionaryInfo
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: GetGenericDictionaryInfo, Metoda
 
-Pobiera mapę generyczny słownik.
+Pobiera mapę ogólnego słownika.
 
 ## <a name="syntax"></a>Składnia
 
@@ -26,66 +24,66 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>Parametry
 
 `ppMemoryBuffer`\
-[out] Wskaźnik na adres [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) obiekt zawierający mapy generyczny słownik. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
+określoną Wskaźnik do adresu obiektu [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md) zawierającego mapę ogólnego słownika. Zobacz sekcję Spostrzeżenia, aby uzyskać więcej informacji.
 
 ## <a name="remarks"></a>Uwagi
 
 > [!NOTE]
-> Ta metoda jest tylko dostępne z architekturą .NET Native.
+> Ta metoda jest dostępna tylko z .NET Native.
 
-Mapa zawiera dwie sekcje najwyższego poziomu:
+Mapa składa się z dwóch sekcji najwyższego poziomu:
 
-- A [katalogu](#Directory) zawierający względnych adresów wirtualnych (RVA) słowników wszystkie zawarte w tej mapie.
+- [Katalog](#Directory) zawierający względne adresy wirtualne (RVA) wszystkich słowników uwzględnionych w tej mapie.
 
-- -Bajtami [sterty](#Heap) zawierający informacje dotyczące tworzenia wystąpienia obiektu. Rozpoczyna się natychmiast po ostatni wpis katalogu.
+- [Stos](#Heap) wyrównany do bajtów zawierający informacje o tworzeniu wystąpienia obiektu. Rozpocznie się natychmiast po ostatnim wpisie w katalogu.
 
 <a name="Directory"></a>
 
 ## <a name="the-directory"></a>Katalog
 
-Każdy wpis w katalogu, który odwołuje się do przesunięcia wewnątrz sterty; oznacza to, że jest przesunięcie względem początku sterty. Wartość poszczególne wpisy nie jest zawsze unikatowa. istnieje możliwość dla wielu wpisów w katalogu wskaż samo przesunięcie w stosie.
+Każdy wpis w katalogu odnosi się do przesunięcia wewnątrz sterty; oznacza to, że jest to przesunięcie odnoszące się do początku sterty. Wartość poszczególnych wpisów nie musi być unikatowa. Istnieje możliwość, że wiele wpisów katalogu wskazuje na to samo przesunięcie w stercie.
 
-Część katalogu mapy generyczny słownik ma następującą strukturę:
+Część katalogu ogólnego mapowania słownika ma następującą strukturę:
 
-- Pierwsze 4 bajty zawiera liczbę pozycji słownika (oznacza to, że liczba względnych adresów wirtualnych w słowniku). Firma Microsoft będzie odnosił się do tej wartości jako *N*. Jeśli ustawiono bit wysokiej, wpisy są sortowane według względny adres wirtualny, w kolejności rosnącej.
+- Pierwsze 4 bajty zawierają liczbę wpisów słownika (czyli liczbę względnych adresów wirtualnych w słowniku). Ta wartość zostanie odwołująca się do tej wartości jako *N*. Jeśli jest ustawiony wysoki bit, wpisy są sortowane według względnych adresów wirtualnych w kolejności rosnącej.
 
-- *N* postępuj zgodnie z wpisy w katalogu. Każdy wpis składa się z 8 bajtów w dwa segmenty 4-bajtowych:
+- Wpisy katalogu *N* są następujące. Każdy wpis składa się z 8 bajtów w dwóch segmentach 4-bajtowych:
 
-  - Bajty 0 – 3: ADRES RVA; względny adres wirtualny słownika.
+  - Bajty 0-3: RVA; względny adres wirtualny słownika.
 
-  - Bajty 4 – 7: Przesunięcie; przesunięcie względem początku sterty.
+  - Bajty 4-7: przesunięcie; przesunięcie względem początku sterty.
 
 <a name="Heap"></a>
 
-## <a name="the-heap"></a>Sterty
+## <a name="the-heap"></a>Sterta
 
-Rozmiar sterty, może zostać obliczony przez czytnik strumienia poprzez odjęcie długość strumienia od rozmiaru katalogu + 4. Innymi słowy:
+Rozmiar sterty może być obliczany przez czytnik strumienia przez odjęcie długości strumienia od rozmiaru katalogu + 4. Innymi słowy:
 
 ```csharp
 Heap Size = Stream.Length – (Directory Size + 4)
 ```
 
-gdzie jest rozmiar katalogu `N * 8`.
+miejsce, w którym rozmiar katalogu jest `N * 8`.
 
-Format dla każdego elementu informacji podczas tworzenia wystąpienia na stosie jest następujący:
+Format każdego elementu informacji o tworzeniu wystąpienia na stercie to:
 
-- Długość tego elementu informacji podczas tworzenia wystąpienia w bajtach Format skompresowanych metadanych ECMA. Wartość nie obejmuje to informacje o długości.
+- Długość tego elementu informacji o tworzeniu wystąpienia w bajtach w skompresowanym formacie metadanych ECMA. Ta wartość wyklucza informacje o długości.
 
-- Liczba typów ogólnych podczas tworzenia wystąpienia lub *T*, format skompresowanych metadanych ECMA.
+- Liczba typów ogólnych wystąpień wystąpienia lub *T*w formacie skompresowanego metadanych ECMA.
 
-- *T* typów, w każdym reprezentowane w formacie podpisu typu ECMA.
+- Typy *T* , każdy reprezentowane w formacie sygnatury typu ECMA.
 
-Włączenie długość dla każdego elementu sterty umożliwia proste sortowanie sekcji katalogu bez wywierania wpływu na stosie.
+Włączenie długości dla każdego elementu sterty umożliwia proste sortowanie sekcji katalogu bez wpływu na stertę.
 
 ## <a name="requirements"></a>Wymagania
 
 **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** CorDebug.idl, CorDebug.h
+**Nagłówek:** CorDebug. idl, CorDebug. h
 
-**Biblioteka:** CorGuids.lib
+**Biblioteka:** CorGuids. lib
 
-**Wersje programu .NET framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
+**Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

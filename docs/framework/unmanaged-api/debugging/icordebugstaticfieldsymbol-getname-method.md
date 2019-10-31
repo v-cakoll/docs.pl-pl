@@ -2,14 +2,12 @@
 title: 'ICorDebugStaticFieldSymbol:: GetName — Metoda'
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2187a205b41388d191ad4f06db6d6caa86971e13
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e961ae064bd5bb2c97175b4506ddd8c0f17d3b32
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913415"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131779"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol:: GetName — Metoda
 Pobiera nazwę pola statycznego.  
@@ -26,10 +24,10 @@ HRESULT GetName(
   
 ## <a name="parameters"></a>Parametry  
  `cchName`  
- podczas Liczba znaków w `szName` buforze.  
+ podczas Liczba znaków w buforze `szName`.  
   
  `pcchName`  
- określoną Wskaźnik do liczby znaków rzeczywiście zapisywana `szName` w buforze.  
+ określoną Wskaźnik do liczby znaków rzeczywiście zapisywana w buforze `szName`.  
   
  `szName`  
  określoną Tablica znaków przechowująca zwróconą nazwę.  
@@ -40,13 +38,13 @@ HRESULT GetName(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

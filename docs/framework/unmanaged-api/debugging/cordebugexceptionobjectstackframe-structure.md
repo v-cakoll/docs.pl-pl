@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 542cdd81-5ae7-4361-b0ef-1ae4775df258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: faa2082d31c5fa47b87e2238017066b477fdc191
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67740102"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132176"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame — Struktura
-Reprezentuje stosu ramki informacje z obiekt wyjątku.  
+Reprezentuje informacje o ramce stosu z obiektu Exception.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,19 +42,19 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`pModule`|Wskaźnik do obiektu ICorDebugModule dla bieżącej ramki.|  
 |`ip`|Wartość wskaźnika instrukcji (EIP/RIP) dla bieżącej ramki.|  
 |`methodDef`|Token metody dla bieżącej ramki.|  
-|`isLastForeignExceptionFrame`|Wartość, która wskazuje, czy ramki jest ostatniej ramki obcego wyjątku.|  
+|`isLastForeignExceptionFrame`|Wartość wskazująca, czy ramka jest ostatnią ramką w wyjątku obcym.|  
   
 ## <a name="remarks"></a>Uwagi  
- Obiekt wywołujący musi zwolnić wskaźnik do obiektu ICorDebugModule, gdy nie jest już używana.  
+ Obiekt wywołujący musi zwolnić wskaźnik do obiektu ICorDebugModule, gdy nie jest już używany.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

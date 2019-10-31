@@ -1,17 +1,15 @@
 ---
-title: Środki zaradcze Normalizacja ścieżki
+title: 'Środki zaradcze: Normalizacja ścieżki'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc5ea69d80a225adfc2f409e8303ee1c241398db
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779343"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126210"
 ---
-# <a name="mitigation-path-normalization"></a>Środki zaradcze Normalizacja ścieżki
+# <a name="mitigation-path-normalization"></a>Środki zaradcze: Normalizacja ścieżki
 Począwszy od aplikacji obiekt docelowy .NET Framework 4.6.2, normalizacja ścieżki w .NET Framework została zmieniona.  
   
 ## <a name="what-is-path-normalization"></a>Co to jest normalizacja ścieżki?  
@@ -32,7 +30,7 @@ Począwszy od aplikacji obiekt docelowy .NET Framework 4.6.2, normalizacja ście
   
 - Normalizacja nie obejmuje już przecinania końców segmentów katalogów (takich jak spacja na końcu nazwy katalogu).  
   
-- Obsługa składni ścieżki urządzenia w pełnym zaufaniu, w `\\.\` tym i dla interfejsów API we/wy plików w bibliotece Mscorlib. `\\?\`dll,.  
+- Obsługa składni ścieżki urządzenia w pełnym zaufaniu, w tym `\\.\` i, dla interfejsów API we/wy plików w bibliotece Mscorlib. dll, `\\?\`.  
   
 - Środowisko uruchomieniowe nie sprawdza poprawności ścieżek składni urządzeń.  
   
@@ -45,7 +43,7 @@ W przypadku aplikacji przeznaczonych dla .NET Framework 4.6.2 lub nowszych te zm
 Ta zmiana nie wpłynie na aplikacje, które są przeznaczone dla .NET Framework 4.6.1 i wcześniejszych wersji, ale działają na .NET Framework 4.6.2 lub nowszych.  
   
 ## <a name="mitigation"></a>Ograniczenie  
- Aplikacje przeznaczone dla .NET Framework 4.6.2 lub nowszych mogą zrezygnować z tej zmiany i użyć starszej normalizacji, dodając następujący element do [ \<> środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracyjnym aplikacji:  
+ Aplikacje przeznaczone dla .NET Framework 4.6.2 lub nowszych mogą zrezygnować z tej zmiany i użyć starszej normalizacji, dodając następujący element do sekcji [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracyjnego aplikacji:  
   
 ```xml  
 <runtime>  
@@ -53,7 +51,7 @@ Ta zmiana nie wpłynie na aplikacje, które są przeznaczone dla .NET Framework 
 </runtime>  
 ```  
   
-Aplikacje, które są przeznaczone dla .NET Framework 4.6.1 lub wcześniejszych, ale działają na .NET Framework 4.6.2 lub później, mogą umożliwić zmianę normalizacji ścieżki, dodając następujący wiersz do [ \<sekcji > środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) aplikacji. Konfiguracja rozszerzeniem  
+Aplikacje, które są przeznaczone dla .NET Framework 4.6.1 lub wcześniejszych, ale działają na .NET Framework 4.6.2 lub później, mogą umożliwić zmianę normalizacji ścieżki, dodając następujący wiersz do sekcji [> środowiska uruchomieniowego\<](../configure-apps/file-schema/runtime/runtime-element.md) pliku aplikacji. konfiguracji:  
   
 ```xml  
 <runtime>  

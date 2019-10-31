@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5ae4c5743b01c4a9087323678d315473631cb32f
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274050"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132345"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP — Struktura
 Określa zmiany w względnym przesunięciu funkcji.  
@@ -42,10 +40,10 @@ typedef struct _COR_IL_MAP {
 |------------|-----------------|  
 |`oldOffset`|Poprzednie przesunięcie języka pośredniego firmy Microsoft (MSIL) względem początku funkcji.|  
 |`newOffset`|Nowe przesunięcie MSIL względem początku funkcji.|  
-|`fAccurate`|`true`Jeśli mapowanie jest znane, aby było dokładne; w przeciwnym razie. `false`|  
+|`fAccurate`|`true`, jeśli mapowanie jest znane z dokładnością; w przeciwnym razie `false`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Format mapy jest następujący: Zostanie przyjęty debuger, `oldOffset` który odwołuje się do przesunięcia MSIL w oryginalnym, niezmodyfikowanym kodzie MSIL. `newOffset` Parametr odnosi się do odpowiedniego przesunięcia MSIL w nowym, Instrumentacji kodu.  
+ Format mapy jest następujący: debuger przyjmie, że `oldOffset` odnosi się do przesunięcia MSIL w oryginalnym, niezmodyfikowanym kodzie MSIL. `newOffset` parametr odnosi się do odpowiedniego przesunięcia MSIL w nowym, Instrumentacji kodu.  
   
  Aby wykonać prawidłowe działanie, należy spełnić następujące wymagania:  
   
@@ -82,13 +80,13 @@ typedef struct _COR_IL_MAP {
 - Nowe przesunięcie o wartości 20 lub wyższej zostanie zmapowane do starego przesunięcia 9.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorProf.idl  
+ **Nagłówek:** CorDebug. idl, CorProf. idl  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

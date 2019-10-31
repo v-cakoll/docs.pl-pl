@@ -9,14 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 157b0e215f8afa58cccb3d54a65baa9c307ba966
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 299a7495d9ca9215ad21301a3ac525fa6e49a01b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955426"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130343"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: GetInMemorySymbolsLength, Metoda
 [Obsługiwane w .NET Framework 4.6.1 i nowszych wersjach]  
@@ -37,27 +35,27 @@ HRESULT GetInMemorySymbolsLength(
  podczas Identyfikator modułu zawierającego strumień znajdujący się w pamięci.  
   
  pCountSymbolBytes  
- określoną Wskaźnik do `DWORD` wartości, która, gdy zwraca metodę, zawiera długość strumienia w bajtach.  
+ określoną Wskaźnik do wartości `DWORD`, która, gdy zwraca metodę, zawiera długość strumienia w bajtach.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Metoda zwraca `S_OK` , jeśli długość strumienia pamięci można ustalić, nawet jeśli jest równa zero (0).  
+ Metoda zwraca `S_OK`, jeśli długość strumienia pamięci można ustalić, nawet jeśli jest równa zero (0).  
   
- Metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC` , jeśli metoda została utworzona przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
+ Metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`, jeśli metoda została utworzona przy użyciu <xref:System.Reflection.Emit?displayProperty=nameWithType>.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli moduł zawiera symbole w pamięci, długość strumienia jest umieszczana w `pCountSymbolBytes`. Jeśli moduł nie zawiera symboli w pamięci, `*pCountSymbolBytes = 0`.  
+ Jeśli moduł zawiera symbole znajdujące się w pamięci, długość strumienia jest umieszczana w `pCountSymbolBytes`. Jeśli moduł nie zawiera symboli w pamięci, `*pCountSymbolBytes = 0`.  
   
 > [!NOTE]
 > Bieżąca implementacja nie obsługuje odbicia. emisji. Jeśli moduł został utworzony przy użyciu odbicia. Emituj, metoda zwraca `CORPROF_E_MODULE_IS_DYNAMIC`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorProf. idl, CorProf. h  
+ **Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

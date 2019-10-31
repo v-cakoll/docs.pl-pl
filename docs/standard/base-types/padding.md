@@ -13,37 +13,35 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811543"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127625"
 ---
 # <a name="padding-strings-in-net"></a>Uzupełnianie ciągów w programie .NET
 
-Użyj jednej z następujących <xref:System.String> metody, aby utworzyć nowy ciąg, który składa się z oryginalnego ciągu, który jest dopełniana wiodących albo końcowych znaków do określonej długości łączna liczba. Znak dopełnienia może być spacji ani znaków określony. Wynikowy ciąg wydaje się być wyrównany do prawej lub wyrównane do lewej. Jeśli oryginalny ciąg, długość jest już równa lub większa niż żądany całkowita długość, metod dopełnienie zwraca oryginalny ciąg bez zmian; Aby uzyskać więcej informacji, zobacz **zwraca** sekcje dwa przeciążenia metody <xref:System.String.PadLeft%2A?displayProperty=nameWithType> i <xref:System.String.PadRight%2A?displayProperty=nameWithType> metody.
+Użyj jednej z następujących metod <xref:System.String>, aby utworzyć nowy ciąg, który składa się z oryginalnego ciągu, który jest uzupełniony znakami początkowymi lub końcowymi, do określonej całkowitej długości. Znak uzupełniania może być spacją lub określonym znakiem. Ciąg wyników wydaje się być wyrównany do prawej lub wyrównany do lewej. Jeśli pierwotna długość ciągu jest już równa lub większa od żądanej całkowitej długości, metody uzupełniania zwracają oryginalny ciąg niezmieniony; Aby uzyskać więcej informacji, zobacz sekcje **zwracające** dwa przeciążenia metod <xref:System.String.PadLeft%2A?displayProperty=nameWithType> i <xref:System.String.PadRight%2A?displayProperty=nameWithType>.
   
 |Nazwa metody|Zastosowanie|  
 |-----------------|---------|  
-|<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Dopełnia ciągu za pomocą prowadzące znaki do określonej długości całkowitej.|  
-|<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Dopełnia ciąg ze znakami do określonej długości całkowitej.|  
+|<xref:System.String.PadLeft%2A?displayProperty=nameWithType>|Tworzy w postaci ciągu znaki wiodące z określoną łączną długością.|  
+|<xref:System.String.PadRight%2A?displayProperty=nameWithType>|Tworzy w postaci ciągu znaki końcowe z określoną całkowitą długością.|  
   
-## <a name="padleft"></a>padLeft  
- <xref:System.String.PadLeft%2A?displayProperty=nameWithType> Metoda tworzy nowy ciąg przez złączenie wystarczająco dużo początkowe znaki konsolę na oryginalny ciąg do osiągnięcia określonej całkowita długość. <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> Metoda używa biały znak dopełnienia i <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> metody umożliwia określenie własnych znak dopełnienia.  
+## <a name="padleft"></a>PadLeft  
+ Metoda <xref:System.String.PadLeft%2A?displayProperty=nameWithType> tworzy nowy ciąg przez złączenie wystarczającej liczby wiodących znaków pad do oryginalnego ciągu, aby osiągnąć określoną całkowitą długość. Metoda <xref:System.String.PadLeft%28System.Int32%29?displayProperty=nameWithType> używa odstępu jako znaku uzupełniania, a metoda <xref:System.String.PadLeft%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> umożliwia określenie własnego znaku uzupełniania.  
   
- Poniższy przykład kodu wykorzystuje <xref:System.String.PadLeft%2A> metodę, aby utworzyć nowy ciąg, który składa się z 20 znaków. W przykładzie są wyświetlane "`--------Hello World!`" do konsoli.  
+ Poniższy przykład kodu używa metody <xref:System.String.PadLeft%2A>, aby utworzyć nowy ciąg o długości dwudziestu znaków. W przykładzie zostanie wyświetlony komunikat "`--------Hello World!`" w konsoli programu.  
   
  [!code-cpp[Conceptual.String.BasicOps#3](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#3)]
  [!code-csharp[Conceptual.String.BasicOps#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#3)]
  [!code-vb[Conceptual.String.BasicOps#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/padding.vb#3)]  
   
-## <a name="padright"></a>Padright —  
- <xref:System.String.PadRight%2A?displayProperty=nameWithType> Metoda tworzy nowy ciąg przez złączenie wystarczająco dużo nieprawidłowymi znakami konsolę na oryginalny ciąg do osiągnięcia określonej całkowita długość. <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> Metoda używa biały znak dopełnienia i <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> metody umożliwia określenie własnych znak dopełnienia.  
+## <a name="padright"></a>PadRight  
+ Metoda <xref:System.String.PadRight%2A?displayProperty=nameWithType> tworzy nowy ciąg, łącząc wystarczającą liczbę końcową znaków uzupełniających do oryginalnego ciągu, aby osiągnąć określoną łączną długość. Metoda <xref:System.String.PadRight%28System.Int32%29?displayProperty=nameWithType> używa odstępu jako znaku uzupełniania, a metoda <xref:System.String.PadRight%28System.Int32%2CSystem.Char%29?displayProperty=nameWithType> umożliwia określenie własnego znaku uzupełniania.  
   
- Poniższy przykład kodu wykorzystuje <xref:System.String.PadRight%2A> metodę, aby utworzyć nowy ciąg, który składa się z 20 znaków. W przykładzie są wyświetlane "`Hello World!--------`" do konsoli.  
+ Poniższy przykład kodu używa metody <xref:System.String.PadRight%2A>, aby utworzyć nowy ciąg o długości dwudziestu znaków. W przykładzie zostanie wyświetlony komunikat "`Hello World!--------`" w konsoli programu.  
   
  [!code-cpp[Conceptual.String.BasicOps#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.string.basicops/cpp/padding.cpp#4)]
  [!code-csharp[Conceptual.String.BasicOps#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/padding.cs#4)]

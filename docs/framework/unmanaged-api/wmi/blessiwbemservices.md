@@ -14,14 +14,12 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e00197b72ca7fc8941475ae51159351d53da12d3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855973"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138782"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices, funkcja
 Wskazuje, czy poświadczenia użytkownika zezwalają na dostęp do określonej klasy [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) .   
@@ -68,18 +66,18 @@ Następujące wartości zwracane przez tę funkcję są zdefiniowane w pliku nag
 |Stała  |Wartość  |Opis  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Co najmniej jeden argument jest nieprawidłowy. |
-| `E_POINTER` | 0x80004003 | `pIWbemServices`jest `null`. | 
+| `E_POINTER` | 0x80004003 | `pIWbemServices` jest `null`. | 
 | `E_FAIL` | 0x80000008 | Wystąpił nieokreślony błąd. |
 | `E_OUTOFMEMORY` | 0x80000002 | Za mało dostępnej pamięci, aby wykonać tę operację. | 
 | `S_OK` | 0 | Wywołanie funkcji zakończyło się pomyślnie. | 
 
 ## <a name="requirements"></a>Wymagania  
 
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** WMINet_Utils.idl  
+ **Nagłówek:** WMINet_Utils. idl  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

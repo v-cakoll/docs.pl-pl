@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8edad30c-30ff-4bee-813c-75525a82fc93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7bd983a41307a4244b5426b8f6b997569cd631e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb257a3d84d5022b9ae13c89a34572485d3033b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67770507"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126942"
 ---
 # <a name="iapartmentcallbackdocallback-method"></a>IApartmentCallback::DoCallback — Metoda
-Wykonuje określoną funkcję w ramach typu apartment.  
+Wykonuje określoną funkcję w obrębie apartamentu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT _stdcall DoCallback(
   
 ## <a name="parameters"></a>Parametry  
  `pFunc`  
- [in] Wskaźnik do funkcji, które mają być wykonane w ramach typu apartment.  
+ podczas Wskaźnik do funkcji, która ma zostać wykonana w obrębie apartamentu.  
   
  `pData`  
- [in] Wskaźnik do argumentu funkcji.  
+ podczas Wskaźnik do argumentu funkcji.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

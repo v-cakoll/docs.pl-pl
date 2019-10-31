@@ -8,14 +8,12 @@ helpviewer_keywords:
 - .NET Native
 - C# and native compilation
 ms.assetid: 47cd5648-9469-4b1d-804c-43cc04384045
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5993cfdb0f50d8e474a4f18280d181d9ec2fdfa4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1f176e81905fe68c6d740a13240fe814659a7a59
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049654"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128375"
 ---
 # <a name="compiling-apps-with-net-native"></a>Kompilowanie aplikacji z architekturą .NET Native
 
@@ -56,7 +54,7 @@ Ale .NET Native zawiera więcej niż Kompilacja kodu natywnego. Przekształca on
 |-|----------------------------------------------------------------|-----------|
 |Biblioteki|.NET Framework + środowisko wykonawcze systemu Windows|Win32 + środowisko wykonawcze systemu Windows|
 |Compiler|Kompilator optymalizacji UTC|Kompilator optymalizacji UTC|
-|Szczebl|Gotowe do uruchomienia pliki binarne|Gotowe do uruchomienia pliki binarne (ASM)|
+|szczebl|Gotowe do uruchomienia pliki binarne|Gotowe do uruchomienia pliki binarne (ASM)|
 |Środowisko uruchomieniowe|MRT. dll (minimalne środowisko uruchomieniowe CLR)|CRT. dll (środowisko uruchomieniowe języka C)|
 
 W przypadku aplikacji systemu Windows dla systemu Windows 10 przekazywanie plików binarnych kompilacji kodu .NET Native w pakietach aplikacji (pliki. appx) do sklepu Windows.
@@ -65,7 +63,7 @@ W przypadku aplikacji systemu Windows dla systemu Windows 10 przekazywanie plik�
 
 Aby uzyskać więcej informacji na temat opracowywania aplikacji za pomocą kompilacji kodu .NET Native, zobacz następujące tematy:
 
-- [Wprowadzenie z kompilacją kodu .NET Native: Przewodnik po samouczku dla deweloperów](getting-started-with-net-native.md)
+- [Wprowadzenie z kompilacją .NET Native kodu: Przewodnik po samouczku dla deweloperów](getting-started-with-net-native.md)
 
 - [.NET Native i kompilacja:](net-native-and-compilation.md) Jak .NET Native kompiluje projekt na kod natywny.
 

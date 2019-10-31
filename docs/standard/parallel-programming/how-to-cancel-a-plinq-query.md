@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Anulowanie zapytania PLINQ'
+title: 'Porady: anulowanie zapytania PLINQ'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a90a41b1dc2e5d0b24d3d72b870891238809d75
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046528"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134230"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>Instrukcje: Anulowanie zapytania PLINQ
+# <a name="how-to-cancel-a-plinq-query"></a>Porady: anulowanie zapytania PLINQ
 W poniższych przykładach pokazano dwa sposoby anulowania zapytania PLINQ. Pierwszy przykład pokazuje, jak anulować zapytanie, które składa się głównie z przechodzenia do danych. Drugi przykład pokazuje, jak anulować zapytanie zawierające funkcję użytkownika, która jest w praktyce kosztowna.
 
 > [!NOTE]
@@ -31,13 +29,13 @@ W poniższych przykładach pokazano dwa sposoby anulowania zapytania PLINQ. Pier
 [!code-csharp[PLINQ#16](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#16)]
 [!code-vb[PLINQ#16](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#16)]
 
-Struktura PLINQ nie jest rzutowana <xref:System.OperationCanceledException> <xref:System.AggregateException?displayProperty=nameWithType>na; <xref:System.OperationCanceledException> musi być obsługiwana w oddzielnym bloku catch. Jeśli co najmniej jeden delegat użytkownika zgłosi OperationCanceledException (externalCT) (przy użyciu zewnętrznego <xref:System.Threading.CancellationToken?displayProperty=nameWithType>), ale nie inny wyjątek, a zapytanie zostało zdefiniowane jako `AsParallel().WithCancellation(externalCT)`, a następnie PLINQ wystawia jeden <xref:System.OperationCanceledException> (externalCT), a nie <xref:System.AggregateException?displayProperty=nameWithType>. Jeśli jednak jeden delegat użytkownika zgłosi <xref:System.OperationCanceledException>, a inny delegat zgłosi inny typ wyjątku, oba wyjątki zostaną przeagregowane <xref:System.AggregateException>do.
+PLINQ Framework nie tworzy jednego <xref:System.OperationCanceledException> w <xref:System.AggregateException?displayProperty=nameWithType>; <xref:System.OperationCanceledException> musi być obsłużony w oddzielnym bloku catch. Jeśli co najmniej jeden delegat użytkownika zgłosi OperationCanceledException (externalCT) (przy użyciu zewnętrznego <xref:System.Threading.CancellationToken?displayProperty=nameWithType>), ale nie inny wyjątek, a zapytanie zostało zdefiniowane jako `AsParallel().WithCancellation(externalCT)`, PLINQ będzie wystawiał pojedyncze <xref:System.OperationCanceledException> (externalCT), a nie <xref:System.AggregateException?displayProperty=nameWithType>. Jeśli jednak jeden z delegatów użytkownika zgłosi <xref:System.OperationCanceledException>, a inny delegat zgłosi inny typ wyjątku, oba wyjątki zostaną przeniesiona do <xref:System.AggregateException>.
 
 Ogólne wskazówki dotyczące anulowania są następujące:
 
-1. W przypadku wykonywania anulowania delegowania przez <xref:System.Threading.CancellationToken> <xref:System.OperationCanceledException>użytkownika należy poinformować PLINQ o zewnętrznym i wyrzucaniu (externalCT).
+1. W przypadku wykonywania anulowania delegowania przez użytkownika należy poinformować PLINQ o zewnętrznym <xref:System.Threading.CancellationToken> i zgłosić <xref:System.OperationCanceledException>(externalCT).
 
-2. Jeśli wystąpiło anulowanie i nie są zgłaszane żadne inne wyjątki, należy obsłużyć <xref:System.OperationCanceledException> zamiast. <xref:System.AggregateException>
+2. Jeśli wystąpiło anulowanie i nie są zgłaszane żadne inne wyjątki, należy obsłużyć <xref:System.OperationCanceledException>, a nie <xref:System.AggregateException>.
 
 ## <a name="example"></a>Przykład
 

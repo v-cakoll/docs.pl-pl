@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8960332f-c98a-405a-ba92-7003de0c1187
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9395fcc6d896114c25770edbc17761323285099f
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 014bd4f2b12c84790065f76a67765aaf35e8b2d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796393"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131684"
 ---
 # <a name="iinstallreferenceitemgetreference-method"></a>IInstallReferenceItem::GetReference — Metoda
 Pobiera wskaźnik do struktury [FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md) reprezentowanej przez ten obiekt [IInstallReferenceItem](iinstallreferenceitem-interface.md) .  
@@ -39,20 +37,20 @@ HRESULT GetReference (
   
 ## <a name="parameters"></a>Parametry  
  `ppRefData`  
- określoną Zwrócony `FUSION_INSTALL_REFERENCE` wskaźnik.  
+ określoną Zwrócony wskaźnik `FUSION_INSTALL_REFERENCE`.  
   
  `dwFlags`  
- podczas Zarezerwowane do użytku w przyszłości. `dwFlags`musi mieć wartość 0 (zero).  
+ podczas Zarezerwowane do użytku w przyszłości. `dwFlags` musi mieć wartość 0 (zero).  
   
  `pvReserved`  
- podczas Zarezerwowane do użytku w przyszłości. `pvReserved`musi być odwołaniem o wartości null.  
+ podczas Zarezerwowane do użytku w przyszłości. `pvReserved` musi być odwołaniem o wartości null.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

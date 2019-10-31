@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f7b340a73aa9eaebca9c0d78563ae298557039b8
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274188"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132334"
 ---
 # <a name="cor_heapinfo-structure"></a>COR_HEAPINFO — Struktura
 Zawiera ogólne informacje o stercie wyrzucania elementów bezużytecznych, w tym o tym, czy są wyliczalne  
@@ -42,25 +40,25 @@ typedef struct _COR_HEAPINFO {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true`Jeśli struktury wyrzucania elementów bezużytecznych są prawidłowe i sterta może zostać wyliczona; w przeciwnym razie. `false`|  
+|`areGCStructuresValid`|`true`, jeśli struktury wyrzucania elementów bezużytecznych są prawidłowe i można wyliczyć stertę; w przeciwnym razie `false`.|  
 |`pointerSize`|Rozmiar (w bajtach) wskaźników na architekturze docelowej.|  
 |`numHeaps`|Liczba sterty logicznego wyrzucania elementów bezużytecznych w procesie.|  
-|`concurrent`|`TRUE`Jeśli włączono współbieżne (w tle) odzyskiwanie pamięci; w przeciwnym razie. `FALSE`|  
+|`concurrent`|`TRUE`, jeśli jest włączone współbieżne wyrzucanie elementów bezużytecznych (w tle); w przeciwnym razie `FALSE`.|  
 |`gcType`|Element członkowski wyliczenia [CorDebugGCType —](cordebuggctype-enumeration.md) , który wskazuje, czy moduł wyrzucania elementów bezużytecznych jest uruchomiony na stacji roboczej lub na serwerze.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wystąpienie `COR_HEAPINFO` struktury jest zwracane przez wywołanie metody [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
+ Wystąpienie struktury `COR_HEAPINFO` jest zwracane przez wywołanie metody [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
   
- Przed wyliczeniem obiektów na stercie wyrzucania elementów bezużytecznych należy `areGCStructuresValid` zawsze zaznaczyć pole, aby upewnić się, że sterta jest w stanie wyliczalnym. Aby uzyskać więcej informacji, zobacz metodę [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
+ Przed wyliczeniem obiektów na stercie wyrzucania elementów bezużytecznych należy zawsze sprawdzić pole `areGCStructuresValid`, aby upewnić się, że sterta jest w stanie wyliczalnym. Aby uzyskać więcej informacji, zobacz metodę [ICorDebugProcess5:: GetGCHeapInformation —](icordebugprocess5-getgcheapinformation-method.md) .  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

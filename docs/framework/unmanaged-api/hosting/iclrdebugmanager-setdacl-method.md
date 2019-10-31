@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52f4af3f-e02b-4c20-9fd9-e8e4f4d6fc31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8c5d35af072b773786a8be5ad7d1e71a21c38b2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2be12c1654290b9a67245177d9f2a221d62d200d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773078"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129368"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl — Metoda
 Ta metoda nie jest zaimplementowana.  
@@ -37,7 +35,7 @@ HRESULT SetDacl (
   
 ## <a name="parameters"></a>Parametry  
  `pacl`  
- [in] Wskaźnik do listy kontroli dostępu (ACL).  
+ podczas Wskaźnik do listy Access Control (ACL).  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
@@ -48,11 +46,11 @@ HRESULT SetDacl (
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** MSCorEE.h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteka:** Dołączony jako zasób w MSCorEE.dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

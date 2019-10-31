@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d05384af8201fae8cf81650d38c99a5c44e6bd16
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744773"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131293"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx — Metoda
-Uruchamia proces na komputerze zdalnym w debugerze.  
+Uruchamia proces na maszynie zdalnej pod debugerem.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,50 +47,50 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>Parametry  
  `pRemoteTarget`  
- [in] Wskaźnik do [icordebugremotetarget — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Używany do określenia komputera zdalnego, na którym zostanie uruchomiony proces.  
+ podczas Wskaźnik do [interfejsu ICorDebugRemoteTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md). Służy do określania komputera zdalnego, na którym zostanie uruchomiony proces.  
   
  `lpApplicationName`  
- [in] Wskaźnik Określa moduł, który ma być wykonane przez uruchomienie procesu ciąg zakończony znakiem null. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa moduł, który ma zostać wykonany przez uruchomiony proces. Moduł jest wykonywany w kontekście zabezpieczeń procesu wywołującego.  
   
  `lpCommandLine`  
- [in] Wskaźnik na ciąg zakończony znakiem null, który określa wiersz poleceń do wykonania przez uruchomienie procesu.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa wiersz polecenia, który ma zostać wykonany przez uruchomiony proces.  
   
  `lpProcessAttributes`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `lpThreadAttributes`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `bInheritHandles`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `dwCreationFlags`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `lpEnvironment`  
- [in] Wskaźnik do bloku środowiska dla nowego procesu.  
+ podczas Wskaźnik do bloku środowiska dla nowego procesu.  
   
  `lpCurrentDirectory`  
- [in] Wskaźnik na ciąg zakończony znakiem null, który określa pełną ścieżkę do katalogu bieżącego procesu. Jeśli ten parametr ma wartość null, nowy proces, będzie miał ten sam bieżącego dysku i katalogu jako procesu wywołującego.  
+ podczas Wskaźnik na ciąg zakończony znakiem null, który określa pełną ścieżkę do bieżącego katalogu dla procesu. Jeśli ten parametr ma wartość null, nowy proces będzie miał ten sam bieżący dysk i katalog co proces wywołujący.  
   
  `lpStartupInfo`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `lpProcessInformation`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `debuggingFlags`  
- [in] Nieużywane dla zdalnego debugowania.  
+ podczas Nieużywane na potrzeby debugowania zdalnego.  
   
  `ppProcess`  
- [out] Wskaźnik do adresu obiektu "Icordebugprocess — interfejs", który reprezentuje proces.  
+ określoną Wskaźnik do adresu obiektu "ICorDebugProcess Interface", który reprezentuje proces.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  S_OK  
- Pomyślnie uruchomiono proces na komputerze zdalnym i zwrócony "icordebugprocess — interfejs" do debugowania.  
+ Pomyślnie uruchomiono proces na maszynie zdalnej i zwróciło "interfejs ICorDebugProcess" do debugowania.  
   
- E_FAIL (lub inne kody powrotne e_)  
- Nie można uruchomić procesu na komputerze zdalnym i zwracają "Interfejs ICorDebugProcess" do debugowania.  
+ E_FAIL (lub inne kody powrotne E_)  
+ Nie można uruchomić procesu na maszynie zdalnej i zwrócić "ICorDebugProcess Interface" w celu debugowania.  
   
 ## <a name="remarks"></a>Uwagi  
  Debugowanie w trybie mieszanym nie jest obsługiwane w programie Silverlight.  
@@ -100,11 +98,11 @@ HRESULT CreateProcessEx (
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl  
+ **Nagłówek:** CorDebug. idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** 4.5, 4, 3.5 Z DODATKIEM SP1  
+ **.NET Framework wersje:** 4,5, 4, 3,5 SP1  
   
 ## <a name="see-also"></a>Zobacz także
 

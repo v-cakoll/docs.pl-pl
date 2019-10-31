@@ -10,18 +10,16 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 676489880cb30ca540cb78d70797dbf4eedf7395
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739587"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133723"
 ---
 # <a name="cordebugstatechange-enumeration"></a>Wyliczenie CorDebugStateChange
 
-W tym artykule opisano wielkość pamięci podręcznej danych, które muszą zostać odrzucone na podstawie zmian do procesu.
+Opisuje ilość danych buforowanych, które muszą zostać odrzucone na podstawie zmian w procesie.
 
 ## <a name="syntax"></a>Składnia
 
@@ -37,22 +35,22 @@ typedef enum CorDebugStateChange
 
 | Element członkowski            | Opis                                                              |
 | ----------------- | ------------------------------------------------------------------------ |
-| `PROCESS_RUNNING` | Proces osiągnięto nowy stan pamięci za pomocą wykonywania do przodu.            |
-| `FLUSH_ALL`       | Pamięć procesu może być dowolnie inny niż wcześniej. |
+| `PROCESS_RUNNING` | Proces osiągnął nowy stan pamięci przez wykonanie do przodu.            |
+| `FLUSH_ALL`       | Pamięć procesu może być arbitralnie inna niż wcześniej. |
 
 ## <a name="remarks"></a>Uwagi
 
- Członek `CorDebugStateChange` wyliczenia jest dostarczana jako argument, gdy wywołuje debugera `ProcessStateChanged` metody za pomocą [ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md) lub [ICorDebugProcess6:: ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ Element członkowski wyliczenia `CorDebugStateChange` jest dostarczany jako argument, gdy debuger wywołuje metodę `ProcessStateChanged` z [ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md) lub [Metoda ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)
 
 ## <a name="requirements"></a>Wymagania
 
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
 
- **Nagłówek:** CorDebug.idl, CorDebug.h
+ **Nagłówek:** CorDebug. idl, CorDebug. h
 
- **Biblioteka:** CorGuids.lib
+ **Biblioteka:** CorGuids. lib
 
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

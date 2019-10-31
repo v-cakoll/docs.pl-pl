@@ -13,14 +13,12 @@ helpviewer_keywords:
 - CTLs
 - certificate revocation lists
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 716513bdcf3ac1b8a2b2b29b23a8dc25a86a0d1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 06fe3a78d0b19720d4f83111980b88806312205f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044811"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129878"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Menedżer certyfikatów)
 Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listami zaufania certyfikatów (CTL) oraz listami odwołania certyfikatów (CRL).  
@@ -59,16 +57,16 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
 |**/CRL**|Dodaje listy CRL, gdy jest używana z opcją **/Add**. Usuwa listy CRL, gdy są używane z **/del**. Zapisuje listy CRL, gdy są używane z **/Put**. Wyświetla listę CRL, gdy jest używana bez opcji **/Add**, **/del**lub **/Put** .|  
 |**/CTL**|Dodaje listy CTL, gdy jest używana z opcją **/Add**. Usuwa listy CTL, gdy jest używana z **/del**. Zapisuje listy CTL, gdy jest używana z **/Put**. Wyświetla listę CTL, gdy jest używana bez opcji **/Add**, **/del**lub **/Put** .|  
 |**/del**|Usuwa certyfikaty oraz listy CTL i CRL z magazynu certyfikatów.|  
-|**/e** *EncodingType*|Określa typ kodowania certyfikatu. Wartość domyślna to `X509_ASN_ENCODING`.|  
-|**/f** *flagiDW*|Określa flagę otwarcia magazynu. Jest to parametr *flagiDW* przesłany do **CertOpenStore**. Wartość domyślna to CERT_SYSTEM_STORE_CURRENT_USER. Ta opcja jest uwzględniana tylko wtedy, gdy jest używana opcja **/y** .|  
-|**/h** [**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/n** nazwa|Określa wspólną nazwę certyfikatu do dodania, usunięcia lub zapisania. Tej opcji można używać tylko z certyfikatami; nie można używać jej z listami CTL i CRL.|  
+|**/e** — *EncodingType*|Określa typ kodowania certyfikatu. Wartość domyślna to `X509_ASN_ENCODING`.|  
+|**/F** *flagiDW*|Określa flagę otwarcia magazynu. Jest to parametr *flagiDW* przesłany do **CertOpenStore**. Wartość domyślna to CERT_SYSTEM_STORE_CURRENT_USER. Ta opcja jest uwzględniana tylko wtedy, gdy jest używana opcja **/y** .|  
+|**/h**[**ELP**]|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/n**|Określa wspólną nazwę certyfikatu do dodania, usunięcia lub zapisania. Tej opcji można używać tylko z certyfikatami; nie można używać jej z listami CTL i CRL.|  
 |**/Put**|Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku. Plik jest zapisywany w formacie X.509. Aby zapisać plik w formacie PKCS #7, można użyć opcji **/7** z opcją **/Put** . Po opcji **/Put** należy wykonać polecenie **/c**, **/CTL**lub **/CRL**. Opcja **/All** nie może być używana z **/Put**.|  
-|**/r** *Lokalizacja*|Określa lokalizację w rejestrze magazynu systemowego. Ta opcja jest uwzględniana tylko wtedy, gdy określono opcję **/s** . *Lokalizacja* musi mieć jedną z następujących wartości:<br /><br /> -   `currentUser`wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_CURRENT_USER. Domyślnie włączone.<br />-   `localMachine`wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_LOCAL_MACHINE.|  
+|*Lokalizacja* /r|Określa lokalizację w rejestrze magazynu systemowego. Ta opcja jest uwzględniana tylko wtedy, gdy określono opcję **/s** . *Lokalizacja* musi mieć jedną z następujących wartości:<br /><br /> -   `currentUser` wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_CURRENT_USER. Domyślnie włączone.<br />-   `localMachine` wskazuje, że magazyn certyfikatów znajduje się w kluczu HKEY_LOCAL_MACHINE.|  
 |**/s**|Wskazuje, że magazyn certyfikatów jest magazynem systemowym. Jeśli ta opcja nie zostanie określona, magazyn jest uznawany za **StoreFile**.|  
 |**/SHA1** *sha1Hash*|Określa skrót SHA1 certyfikatu, listy CTL lub CRL do dodania, usunięcia lub zapisania.|  
-|**/v**|Określa tryb pełny; wyświetla szczegółowe informacje dotyczące certyfikatu oraz list CTL i CRL. Tej opcji nie można używać z opcjami **/Add**, **/del**i **/Put** .|  
-|**/y** *dostawca*|Określa nazwę dostawcy magazynu.|  
+|**przełącznika**|Określa tryb pełny; wyświetla szczegółowe informacje dotyczące certyfikatu oraz list CTL i CRL. Tej opcji nie można używać z opcjami **/Add**, **/del**i **/Put** .|  
+|**/y** — *dostawca*|Określa nazwę dostawcy magazynu.|  
 |**/7**|Zapisuje magazyn docelowy jako obiekt w formacie PKCS #7.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -83,11 +81,11 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
   
 - Zapisuje certyfikat X.509, listę CTL lub CRL z magazynu certyfikatów w pliku.  
   
- Certmgr. exe współpracuje z dwoma typami magazynów certyfikatów: **StoreFile** i magazyn systemowy. Nie jest konieczne określanie typu magazynu certyfikatów; program Certmgr.exe może zidentyfikować typ magazynu i wykonać odpowiednie operacje.  
+ Certmgr. exe współpracuje z dwoma typami magazynów certyfikatów: **StoreFile** i magazynem systemowym. Nie jest konieczne określanie typu magazynu certyfikatów; program Certmgr.exe może zidentyfikować typ magazynu i wykonać odpowiednie operacje.  
   
  Uruchomienie programu Certmgr.exe bez określenia żadnej opcji spowoduje uruchomienie przystawki certmgr.msc wyposażonej w graficzny interfejs użytkownika ułatwiający wykonywanie zadań zarządzania certyfikatami, które są również dostępne w wierszu polecenia. Graficzny interfejs użytkownika dostarcza kreatora importu, który kopiuje certyfikaty oraz listy CTL i CRL z dysku do magazynu certyfikatów.  
   
- Nazwy magazynów x509 można znaleźć dla `sourceStorename` parametrów i `destinationStorename` , kompilując i uruchamiając następujący kod.  
+ Nazwy magazynów x509 dla `sourceStorename` i `destinationStorename` parametrów można znaleźć, kompilując i uruchamiając następujący kod.  
   
  [!code-csharp[Tools.CertMgr#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tools.certmgr/cs/storenames1.cs#1)]
  [!code-vb[Tools.CertMgr#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tools.certmgr/vb/storenames1.vb#1)]  
@@ -101,37 +99,37 @@ Narzędzie Menedżer certyfikatów (Certmgr.exe) zarządza certyfikatami, listam
 certmgr /v /s my  
 ```  
   
- Następujące polecenie dodaje wszystkie certyfikaty w pliku o nazwie `myFile.ext` do nowego pliku o nazwie. `newFile.ext`  
+ Następujące polecenie dodaje wszystkie certyfikaty w pliku o nazwie `myFile.ext` do nowego pliku o nazwie `newFile.ext`.  
   
 ```console  
 certmgr /add /all /c myFile.ext newFile.ext  
 ```  
   
- Poniższe polecenie dodaje certyfikat w pliku o nazwie `testcert.cer` `my` do magazynu systemowego.  
+ Poniższe polecenie dodaje certyfikat w pliku o nazwie `testcert.cer` do magazynu systemowego `my`.  
   
 ```console  
 certmgr /add /c testcert.cer /s my  
 ```  
   
- Poniższe polecenie dodaje certyfikat w pliku o nazwie `TrustedCert.cer` do głównego magazynu certyfikatów.  
+ Poniższe polecenie dodaje certyfikat w pliku o nazwie `TrustedCert.cer` do magazynu certyfikatów głównych.  
   
 ```console  
 certmgr /c /add TrustedCert.cer /s root  
 ```  
   
- Poniższe polecenie zapisuje certyfikat z nazwą `myCert` pospolitą `my` w magazynie systemowym do pliku o nazwie `newCert.cer`.  
+ Poniższe polecenie zapisuje certyfikat z nazwą pospolitą `myCert` w magazynie systemowym `my` do pliku o nazwie `newCert.cer`.  
   
 ```console  
 certmgr /add /c /n myCert /s my newCert.cer  
 ```  
   
- Następujące polecenie usuwa wszystkie listy CTL ze `my` sklepu systemowego i zapisuje przechowywany magazyn do pliku o nazwie. `newStore.str`  
+ Następujące polecenie usuwa wszystkie listy CTL w magazynie system `my` i zapisuje wyniki magazynu w pliku o nazwie `newStore.str`.  
   
 ```console  
 certmgr /del /all /ctl /s my newStore.str  
 ```  
   
- Poniższe polecenie zapisuje certyfikat w `my` magazynie systemowym w pliku. `newFile` Zostanie wyświetlony monit o wprowadzenie numeru certyfikatu z `my` , który ma zostać `newFile`umieszczony.  
+ Poniższe polecenie zapisuje certyfikat w magazynie system `my` w `newFile`pliku. Zostanie wyświetlony monit o wprowadzenie numeru certyfikatu z `my`, który ma zostać umieszczony w `newFile`.  
   
 ```console  
 certmgr /put /c /s my newFile  

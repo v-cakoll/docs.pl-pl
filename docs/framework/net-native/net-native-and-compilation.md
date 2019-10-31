@@ -2,20 +2,18 @@
 title: Architektura .NET Native i kompilacja
 ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a15d30ea4d6e0f4456460248e96428419117d85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: cf5c9f05b2f2cb4ca15e4add5b53bc9bdca757a3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71049439"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128246"
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 
 Windows 8.1 aplikacji i aplikacji klasycznych systemu Windows, które są przeznaczone dla platformy the.NET Framework, są zapisywane w określonym języku programowania i kompilowane w języku pośrednim (IL). W czasie wykonywania kompilator "just-in-Time" (JIT) jest odpowiedzialny za kompilowanie kodu IL w kodzie macierzystym komputera lokalnego tuż przed wykonaniem metody po raz pierwszy. Z kolei łańcuch narzędzi .NET Native konwertuje kod źródłowy na kod natywny w czasie kompilacji. W tym temacie porównano .NET Native z innymi technologiami kompilacji dostępnymi dla .NET Framework aplikacji, a także praktyczne omówienie sposobu, w jaki .NET Native generuje kod natywny, który może pomóc zrozumieć, dlaczego Wyjątki występujące w kodzie skompilowanym z platformą .NET Natywne nie występują w kodzie skompilowanym przez JIT.
 
-## <a name="net-native-generating-native-binaries"></a>.NET Native: Generowanie natywnych plików binarnych
+## <a name="net-native-generating-native-binaries"></a>.NET Native: generowanie natywnych plików binarnych
 
 Aplikacja, która jest przeznaczona dla .NET Framework i która nie jest skompilowana za pomocą łańcucha narzędzi .NET Native, składa się z zestawu aplikacji, który obejmuje następujące elementy:
 
@@ -44,7 +42,7 @@ Dane wejściowe dla łańcucha narzędzi .NET Native to aplikacja ze sklepu Wind
 
 W trakcie konwertowania aplikacji z IL na kod natywny łańcuch narzędzi .NET Native wykonuje operacje podobne do następujących:
 
-- W przypadku niektórych ścieżek kodu zastępuje on kod, który opiera się na odbiciu i metadanych przy użyciu statycznego kodu natywnego. Na przykład, jeśli typ wartości nie przesłania <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> metody, domyślny test dla równości używa odbicia do pobierania <xref:System.Reflection.FieldInfo> obiektów reprezentujących pola typu wartości, a następnie porównuje wartości pól dwóch wystąpień. Podczas kompilowania do kodu natywnego łańcuch narzędzi .NET Native zastępuje kod odbicia i metadane przy użyciu statycznego porównania wartości pól.
+- W przypadku niektórych ścieżek kodu zastępuje on kod, który opiera się na odbiciu i metadanych przy użyciu statycznego kodu natywnego. Na przykład, jeśli typ wartości nie przesłania metody <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>, domyślny test dla równości używa odbicia, aby pobrać obiekty <xref:System.Reflection.FieldInfo> reprezentujące pola typu wartości, a następnie porównuje wartości pól dwóch wystąpień. Podczas kompilowania do kodu natywnego łańcuch narzędzi .NET Native zastępuje kod odbicia i metadane przy użyciu statycznego porównania wartości pól.
 
 - Jeśli to możliwe, próbuje wyeliminować wszystkie metadane.
 
@@ -60,9 +58,9 @@ W trakcie konwertowania aplikacji z IL na kod natywny łańcuch narzędzi .NET N
 
 Aplikacja powstała w łańcuchu narzędzi .NET Native jest zapisywana w katalogu o nazwie ILC {0}. out w katalogu debugowania lub wersji katalogu projektu. Składa się z następujących plików:
 
-- nazwa_aplikacji >. exe, plik wykonywalny stub, który po prostu transferuje `Main` kontrolę do specjalnego eksportu w programie  *\<nazwa_aplikacji >* . dll.  *\<*
+- *\<nazwa_aplikacji >* . exe, plik wykonywalny stub, który po prostu transferuje kontrolę do specjalnego eksportu `Main` w *\<nazwa_aplikacji >* . dll.
 
-- nazwa_aplikacji >. dll, biblioteka dołączana dynamicznie systemu Windows, która zawiera cały kod aplikacji, a także kod z biblioteki klas .NET Framework i wszystkie biblioteki innych firm, na których znajduje się zależność.  *\<*  Zawiera również kod pomocy technicznej, taki jak kod niezbędny do współpracy z systemem Windows i do serializacji obiektów w aplikacji.
+- *\<nazwa_aplikacji >* . dll, biblioteka dołączana dynamicznie systemu Windows, która zawiera wszystkie kod aplikacji, a także kod z biblioteki klas .NET Framework oraz wszystkie biblioteki innych firm, na których masz zależność.  Zawiera również kod pomocy technicznej, taki jak kod niezbędny do współpracy z systemem Windows i do serializacji obiektów w aplikacji.
 
 - mrt100_app. dll, Refaktoryzacja środowiska uruchomieniowego, która zapewnia usługi środowiska uruchomieniowego, takie jak odzyskiwanie pamięci.
 
@@ -70,7 +68,7 @@ Aplikacja powstała w łańcuchu narzędzi .NET Native jest zapisywana w katalog
 
 - msvcr140_app. dll, biblioteka środowiska uruchomieniowego języka C (CRT) używana przez mrt100_app. dll. Jest on dołączony do struktury w pakiecie.
 
-- mrt100.dll. Ta biblioteka zawiera funkcje, które mogą zwiększyć wydajność mrt100_app. dll, chociaż jego nieobecność nie zapobiega działaniu mrt100_app. dll. Jest ładowany z katalogu system32 na komputerze lokalnym, jeśli jest obecny.
+- mrt100. dll. Ta biblioteka zawiera funkcje, które mogą zwiększyć wydajność mrt100_app. dll, chociaż jego nieobecność nie zapobiega działaniu mrt100_app. dll. Jest ładowany z katalogu system32 na komputerze lokalnym, jeśli jest obecny.
 
 Ponieważ łańcuch narzędzi .NET Native łączy kod implementacji w aplikacji tylko wtedy, gdy wie, że aplikacja faktycznie wywołuje ten kod, metadane lub kod implementacji wymagane w następujących scenariuszach mogą nie zostać dołączone do aplikacji:
 

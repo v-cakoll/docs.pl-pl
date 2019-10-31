@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e172b14-ee22-4943-b3b8-3740e7bdcd2e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5d76fa4b2352da18b5ef0e547ebc4e2e99d980b8
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 4f6dbe8c17bd6a91078b87a87c1055fbf4977a88
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71273993"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132309"
 ---
 # <a name="cor_typeid-structure"></a>COR_TYPEID — Struktura
 Zawiera identyfikator typu.  
@@ -43,18 +41,18 @@ typedef struct COR_TYPEID{
 |`token2`|Drugi token.|  
   
 ## <a name="remarks"></a>Uwagi  
- `COR_TYPEID` Struktura jest zwracana przez wiele metod debugowania, które dostarczają informacji o obiektach, które mają być zbierane jako elementy bezużyteczne. Następnie można przekazać jako argument do innych metod debugowania, które zawierają dodatkowe informacje na temat tego elementu. Na przykład przez Wyliczenie obiektu [ICorDebugHeapEnum](icordebugheapenum-interface.md) można pobrać pojedyncze obiekty [COR_HEAPOBJECT](cor-heapobject-structure.md) , które reprezentują poszczególne obiekty na stercie zarządzanym. Następnie można przekazać `COR_TYPEID` wartość `COR_HEAPOBJECT.type` z pola do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) , aby pobrać obiekt ICorDebugType, który zawiera informacje o typie obiektu.  
+ Struktura `COR_TYPEID` jest zwracana przez wiele metod debugowania, które zapewniają informacje o obiektach, które mają być zbierane jako elementy bezużyteczne. Następnie można przekazać jako argument do innych metod debugowania, które zawierają dodatkowe informacje na temat tego elementu. Na przykład przez Wyliczenie obiektu [ICorDebugHeapEnum](icordebugheapenum-interface.md) można pobrać pojedyncze obiekty [COR_HEAPOBJECT](cor-heapobject-structure.md) , które reprezentują poszczególne obiekty na stercie zarządzanym. Następnie można przekazać wartość `COR_TYPEID` z pola `COR_HEAPOBJECT.type` do metody [ICorDebugProcess5:: GetTypeForTypeID —](icordebugprocess5-gettypefortypeid-method.md) , aby pobrać obiekt ICorDebugType, który zawiera informacje o typie obiektu.  
   
- `COR_TYPEID` Obiekt ma być nieprzezroczysty. Nie można uzyskać dostępu do poszczególnych pól ani manipulować nimi. Jego jedynym zastosowaniem jest jako identyfikator, który jest dostarczany jako `out` parametr w wywołaniu metody i który może z kolei być przekazywany do innych metod w celu dostarczenia dodatkowych informacji.  
+ Obiekt `COR_TYPEID` ma być nieprzezroczysty. Nie można uzyskać dostępu do poszczególnych pól ani manipulować nimi. Jego jedynym zastosowaniem jest jako identyfikator, który jest dostarczany jako parametr `out` w wywołaniu metody i który może z kolei być przekazywany do innych metod w celu dostarczenia dodatkowych informacji.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

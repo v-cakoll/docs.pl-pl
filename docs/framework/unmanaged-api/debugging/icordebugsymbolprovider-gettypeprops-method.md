@@ -2,14 +2,12 @@
 title: 'ICorDebugSymbolProvider:: GetTypeProps, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955551"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133669"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: GetTypeProps, Metoda
 Zwraca informacje o właściwościach typu, takich jak liczba podpisów jego parametrów ogólnych, z uwzględnieniem względnego adresu wirtualnego (RVA) w tabeli jednoelementowej.  
@@ -30,28 +28,28 @@ HRESULT GetTypeProps(
  podczas Względny adres wirtualny (RVA) w tabeli jednoelementowej.  
   
  `cbSignature`  
- podczas Rozmiar `signature` tablicy. Zobacz sekcję Uwagi.  
+ podczas Rozmiar tablicy `signature`. Zobacz sekcję Uwagi.  
   
  `pcbSignature`  
- określoną określoną Wskaźnik do rozmiaru zwróconej `signature` tablicy.  
+ określoną określoną Wskaźnik do rozmiaru zwróconej tablicy `signature`.  
   
  `signature`  
  określoną Bufor, który przechowuje sygnatury elementu TypeSpec wszystkich parametrów ogólnych.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać wymagany `signature` rozmiar tablicy typu, należy `cbSignature` ustawić argument na 0 i `signature` na **wartość null**. Gdy metoda zwraca, `pcbSignature` będzie zawierać liczbę bajtów wymaganych `signature` przez tablicę.  
+ Aby uzyskać wymagany rozmiar tablicy `signature` typu, ustaw dla argumentu `cbSignature` wartość 0, a `signature` na **wartość null**. Gdy metoda zwraca, `pcbSignature` będzie zawierać liczbę bajtów wymaganą dla `signature` tablicy.  
   
 > [!NOTE]
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

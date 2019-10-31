@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c35199bf-bc47-4901-b467-4e8a37644bbb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac7014962b99ac167e8192c13b2bae5ca92470f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9fd299ad25166bcbcf0202da13a5b4cbdd20d7d7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948526"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133801"
 ---
 # <a name="ihostiocompletionmanagerinitializehostoverlapped-method"></a>IHostIoCompletionManager::InitializeHostOverlapped — Metoda
-Udostępnia hostowi możliwość zainicjowania dowolnych danych niestandardowych w celu dołączenia `OVERLAPPED` do struktury Win32, która jest używana na potrzeby asynchronicznych żądań we/wy.  
+Udostępnia hostowi możliwość zainicjowania dowolnych danych niestandardowych w celu dołączenia do struktury `OVERLAPPED` Win32, która jest używana na potrzeby asynchronicznych żądań we/wy.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,13 +35,13 @@ HRESULT InitializeHostOverlapped (
   
 ## <a name="parameters"></a>Parametry  
  `pvOverlapped`  
- podczas Wskaźnik do struktury Win32 `OVERLAPPED` , który ma zostać dołączony do żądania we/wy.  
+ podczas Wskaźnik do struktury `OVERLAPPED` Win32, który ma zostać dołączony do żądania we/wy.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`InitializeHostOverlapped`pomyślnie zwrócono.|  
+|S_OK|`InitializeHostOverlapped` pomyślnie zwrócone.|  
 |HOST_E_CLRNOTAVAILABLE|Środowisko uruchomieniowe języka wspólnego (CLR) nie zostało załadowane do procesu lub środowisko CLR znajduje się w stanie, w którym nie można uruchomić kodu zarządzanego lub przetworzyć wywołania pomyślnie.|  
 |HOST_E_TIMEOUT|Upłynął limit czasu połączenia.|  
 |HOST_E_NOT_OWNER|Obiekt wywołujący nie jest właocicielem blokady.|  
@@ -52,21 +50,21 @@ HRESULT InitializeHostOverlapped (
 |E_OUTOFMEMORY|Za mało dostępnej pamięci, aby przydzielić żądany zasób.|  
   
 ## <a name="remarks"></a>Uwagi  
- Funkcje platformy systemu Windows używają `OVERLAPPED` struktury do przechowywania stanu asynchronicznych żądań we/wy. Środowisko CLR wywołuje `InitializeHostOverlapped` metodę, aby umożliwić hostowi dołączenie danych niestandardowych `OVERLAPPED` do wystąpienia.  
+ Funkcje platformy systemu Windows używają struktury `OVERLAPPED` do przechowywania stanu asynchronicznych żądań we/wy. Środowisko CLR wywołuje metodę `InitializeHostOverlapped`, aby umożliwić hostowi dołączenie danych niestandardowych do wystąpienia `OVERLAPPED`.  
   
 > [!IMPORTANT]
-> Aby przejść do początku swojego niestandardowego bloku danych, hosty muszą ustawić przesunięcie na rozmiar `OVERLAPPED` struktury (`sizeof(OVERLAPPED)`).  
+> Aby przejść do początku ich niestandardowego bloku danych, hosty muszą ustawić przesunięcie na rozmiar struktury `OVERLAPPED` (`sizeof(OVERLAPPED)`).  
   
  Wartość zwracana przez E_OUTOFMEMORY wskazuje, że host nie zainicjuje swoich niestandardowych danych. W takim przypadku środowisko CLR zgłasza błąd i nie wywołuje wywołania.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** MSCorEE. h  
+ **Nagłówek:** MSCorEE. h  
   
- **Biblioteki** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
+ **Biblioteka:** Uwzględnione jako zasób w bibliotece MSCorEE. dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

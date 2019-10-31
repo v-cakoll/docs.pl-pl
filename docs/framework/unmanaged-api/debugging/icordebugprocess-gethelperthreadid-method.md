@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84e1e605-37c1-49a5-8e12-35db85654622
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad62b267eb0c49ff8fbefeb45b523c21edc705fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d38a59b23d47cbaf57dc21e121d56530a514d354
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128861"
 ---
 # <a name="icordebugprocessgethelperthreadid-method"></a>ICorDebugProcess::GetHelperThreadID — Metoda
-Pobiera identyfikator wątku systemu operacyjnego (OS) debugera wewnętrzny wątek pomocniczy.  
+Pobiera identyfikator wątku pomocnika wewnętrznego debugera w systemie operacyjnym.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,20 +35,20 @@ HRESULT GetHelperThreadID (
   
 ## <a name="parameters"></a>Parametry  
  `pThreadID`  
- [out] Wskaźnik do systemu operacyjnego wątku identyfikator wątku wewnętrznego Pomocnik debugera.  
+ określoną Wskaźnik do identyfikatora wątku systemu operacyjnego wewnętrznego wątku pomocnika debugera.  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas debugowania zarządzanych i niezarządzanych, jest debugera ponosić odpowiedzialność za zapewnienie wątku z określonym Identyfikatorem jest uruchomiona, w przypadku trafienia punktu przerwania umieszczone przez debuger. Debuger może również chcesz ukryć ten wątek od użytkownika. Jeśli wątek pomocniczy, nie istnieje w procesie jeszcze `GetHelperThreadID` metoda zwraca zero w *`pThreadID`.  
+ Podczas debugowania zarządzanego i niezarządzanego, jest odpowiedzialny za debuger, aby upewnić się, że wątek o określonym IDENTYFIKATORze pozostaje uruchomiony, jeśli trafi punkt przerwania umieszczony przez debuger. Debuger może również chcieć ukryć ten wątek od użytkownika. Jeśli żaden wątek pomocnika nie istnieje jeszcze w procesie, Metoda `GetHelperThreadID` zwraca zero w *`pThreadID`.  
   
- Identyfikator wątku wątek pomocniczy nie może buforować, ponieważ czasem ulec zmianie. Identyfikator wątku na każde zdarzenie zatrzymywanie musi ponownie zapytania.  
+ Nie można buforować wątku identyfikatora wątku pomocnika, ponieważ może on ulec zmianie w czasie. W każdym zdarzeniu zatrzymywania należy wykonać ponowne zapytanie o identyfikator wątku.  
   
- Identyfikator wątku wątek pomocniczy debugera będzie prawidłowy w każdy niezarządzany [ICorDebugManagedCallback::CreateThread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) zdarzenia, dzięki czemu debugera określić identyfikator wątku wątku pomocnika i Ukryj go przez użytkownika. Wątek, który jest identyfikowany jako wątek pomocniczy podczas niezarządzanych `ICorDebugManagedCallback::CreateThread` zdarzeń nigdy nie spowoduje uruchomienia kodu zarządzanego użytkownika.  
+ Identyfikator wątku wątku pomocnika debugera będzie poprawny w każdym niezarządzanym zdarzeniu [ICorDebugManagedCallback:: Isthreading](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) , dzięki czemu debuger może ustalić identyfikator wątku jego wątku pomocnika i ukryć go od użytkownika. Wątek, który jest identyfikowany jako wątek pomocnika w niezarządzanym zdarzeniu `ICorDebugManagedCallback::CreateThread` nigdy nie będzie uruchamiał zarządzanego kodu użytkownika.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl. CorDebug.h  
+ **Nagłówek:** CorDebug. idl. CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

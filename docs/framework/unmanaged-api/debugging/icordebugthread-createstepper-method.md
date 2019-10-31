@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4657443f-dd12-431b-a648-175c23f13c83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95a00e8646589e7897636c1698b7c2647cd233fd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d1b058aef66ed32c2cadcc3cfd72320dd8eb7729
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133591"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper — Metoda
-Tworzy obiekt ICorDebugStepper —, który umożliwia krokowe wykonywanie aktywnej ramki tego ICorDebugThread.  
+Tworzy obiekt ICorDebugStepper, który umożliwia przechodzenie przez aktywną ramkę tego ICorDebugThread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT CreateStepper (
   
 ## <a name="parameters"></a>Parametry  
  `ppStepper`  
- [out] Wskaźnik na adres `ICorDebugStepper` obiekt, który umożliwia krokowe wykonywanie aktywnej ramki tego wątku.  
+ określoną Wskaźnik do adresu obiektu `ICorDebugStepper`, który umożliwia przechodzenie przez aktywną ramkę tego wątku.  
   
 ## <a name="remarks"></a>Uwagi  
- Aktywnej ramki mogą być kodu niezarządzanego.  
+ Aktywna ramka może być kodem niezarządzanym.  
   
- `ICorDebugStepper` Interfejsu muszą być używane do wykonania rzeczywistego krokowego.  
+ Aby wykonać rzeczywiste przechodzenie, należy użyć interfejsu `ICorDebugStepper`.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteka:** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

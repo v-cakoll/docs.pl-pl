@@ -2,38 +2,36 @@
 title: Dokonywanie pomiaru poprawy szybkości uruchomienia za pomocą architektury .NET Native
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74011a4c70cc8f7da3973698a43b1e97cffb9f9b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 771bf8deba8e851eadf356c647169a21428ddcff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927069"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128356"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Dokonywanie pomiaru poprawy szybkości uruchomienia za pomocą architektury .NET Native
 .NET Native znacznie poprawia czas uruchamiania aplikacji. To ulepszenie jest szczególnie zauważalne w przypadku urządzeń przenośnych i z niską obsługą aplikacji. Ten temat ułatwia rozpoczęcie pracy z podstawową Instrumentacją wymaganą do mierzenia tego usprawnienia uruchamiania.  
   
  Aby ułatwić badania wydajności, .NET Framework i system Windows używają platformy zdarzeń o nazwie śledzenie zdarzeń systemu Windows (ETW), która umożliwia aplikacji powiadamianie narzędzi o zdarzeniach. Następnie można użyć narzędzia o nazwie narzędzia PerfView, aby łatwo wyświetlać i analizować zdarzenia ETW. W tym temacie wyjaśniono, jak:  
   
-- Użyj klasy <xref:System.Diagnostics.Tracing.EventSource> , aby emitować zdarzenia.  
+- Użyj klasy <xref:System.Diagnostics.Tracing.EventSource>, aby emitować zdarzenia.  
   
 - Użyj narzędzia PerfView, aby zebrać te zdarzenia.  
   
 - Użyj narzędzia PerfView, aby wyświetlić te zdarzenia.  
   
 ## <a name="using-eventsource-to-emit-events"></a>Używanie funkcji EventSource do emisji zdarzeń  
- <xref:System.Diagnostics.Tracing.EventSource>dostarcza klasę bazową, z której należy utworzyć niestandardowego dostawcę zdarzeń. Ogólnie rzecz biorąc tworzysz podklasę <xref:System.Diagnostics.Tracing.EventSource> i `Write*` otaczaj metody własnymi metodami zdarzeń. Pojedynczy wzorzec jest zwykle używany dla każdego z <xref:System.Diagnostics.Tracing.EventSource>nich.  
+ <xref:System.Diagnostics.Tracing.EventSource> dostarcza klasę bazową, z której należy utworzyć niestandardowego dostawcę zdarzeń. Ogólnie rzecz biorąc utworzysz podklasę <xref:System.Diagnostics.Tracing.EventSource> i zawiń metody `Write*` przy użyciu własnych metod zdarzenia. Wzorzec singleton jest zazwyczaj używany dla każdego <xref:System.Diagnostics.Tracing.EventSource>.  
   
  Na przykład Klasa w poniższym przykładzie może służyć do mierzenia dwóch cech wydajności:  
   
-- Czas do momentu `App` wywołania konstruktora klasy.  
+- Czas do momentu wywołania konstruktora klasy `App`.  
   
-- Godzina, do której `MainPage` Konstruktor został wywołany.  
+- Czas do momentu wywołania konstruktora `MainPage`.  
   
  [!code-csharp[ProjectN_ETW#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw1.cs#1)]  
   
- Istnieje kilka kwestii, na które należy zwrócić uwagę. Najpierw jest tworzony `AppEventSource.Log`pojedynczy element. To wystąpienie będzie używane dla wszystkich dzienników. Druga metoda zdarzenia ma <xref:System.Diagnostics.Tracing.EventAttribute>. Dzięki temu narzędzia mogą skojarzyć indeks <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> metody z metodą, która została `AppEventSource`wywołana.  
+ Istnieje kilka kwestii, na które należy zwrócić uwagę. Najpierw tworzony jest pojedynczy element w `AppEventSource.Log`. To wystąpienie będzie używane dla wszystkich dzienników. Druga metoda zdarzenia ma <xref:System.Diagnostics.Tracing.EventAttribute>. Dzięki temu narzędzia mogą skojarzyć indeks metody <xref:System.Diagnostics.Tracing.EventSource.WriteEvent%2A> z metodą, która została wywołana w `AppEventSource`.  
   
  Należy zauważyć, że te zdarzenia są czysto ilustracyjny. Większość kodu aplikacji będzie uruchamiana po tych zdarzeniach. Należy zrozumieć, które zdarzenia w kodzie odpowiadają interakcjom użytkowników, mierzyć te i ulepszać te testy. Ponadto zdarzenia same rejestruje tylko pojedyncze wystąpienie w czasie. Często warto mieć sparowane zdarzenia uruchamiania i zatrzymywania dla każdej operacji. Podczas badania uruchamiania aplikacji zdarzenie uruchomieniowe jest zazwyczaj zdarzeniem "proces/Start", które jest emitowane przez system operacyjny.  
   
@@ -47,7 +45,7 @@ ms.locfileid: "70927069"
   
 - Gdy aplikacja zakończyła Synchronizowanie nowych wątków.  
   
- Instrumentacja aplikacji jest prosta: Po prostu wywołaj odpowiednią metodę w klasie pochodnej. Korzystając `AppEventSource` z poprzedniego przykładu, można instrumentować aplikację w następujący sposób:  
+ Instrumentacja aplikacji jest prosta: po prostu wywołaj odpowiednią metodę w klasie pochodnej. Korzystając z `AppEventSource` z poprzedniego przykładu, można instrumentować aplikację w następujący sposób:  
   
  [!code-csharp[ProjectN_ETW#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_etw/cs/etw2.cs#2)]  
   

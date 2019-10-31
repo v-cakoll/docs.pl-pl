@@ -2,14 +2,12 @@
 title: 'ICorDebugMergedAssemblyRecord:: GetPublicKey, Metoda'
 ms.date: 03/30/2017
 ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e08b1edcef3e93caa82be3a4342c6a0264734bea
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9cf5f6b6d12303b3f59588c5fb663c457da79cb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940021"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131395"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>ICorDebugMergedAssemblyRecord:: GetPublicKey, Metoda
 Pobiera klucz publiczny zestawu.  
@@ -25,10 +23,10 @@ HRESULT GetPublicKey(
   
 ## <a name="parameters"></a>Parametry  
  `cbPublicKey`  
- podczas Maksymalna liczba bajtów w `pbPublicKey` tablicy.  
+ podczas Maksymalna liczba bajtów w tablicy `pbPublicKey`.  
   
  `pcbPublicKey`  
- określoną Wskaźnik do rzeczywistej liczby bajtów zapisanych do `pbPublicKey` tablicy.  
+ określoną Wskaźnik do rzeczywistej liczby bajtów zapisanych do tablicy `pbPublicKey`.  
   
  `pbPublicKey`  
  określoną Wskaźnik do tablicy bajtów zawierającej klucz publiczny zestawu.  
@@ -39,13 +37,13 @@ HRESULT GetPublicKey(
 > Ta metoda jest dostępna tylko z .NET Native.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,17 +1,15 @@
 ---
-title: Środki zaradcze Układ WPF
+title: 'Ograniczenie: układ platformy WPF'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3e08a2d11e815248d0fe73f804e9ef7edb7c04da
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779065"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126112"
 ---
-# <a name="mitigation-wpf-layout"></a>Środki zaradcze Układ WPF
+# <a name="mitigation-wpf-layout"></a>Ograniczenie: układ platformy WPF
 Układ formantów WPF może się nieco zmieniać.  
   
 ## <a name="impact"></a>Wpływ  
@@ -26,13 +24,13 @@ Układ formantów WPF może się nieco zmieniać.
  Domyślnie ten nowy układ jest włączony tylko dla aplikacji przeznaczonych dla .NET Framework 4,6.  
   
 ## <a name="mitigation"></a>Ograniczenie  
- Ponieważ ta modyfikacja ma na celu wyeliminowanie wycinków prawej lub dolnej części formantów WPF o wysokiej rozdzielczościami, aplikacje, które są przeznaczone dla wcześniejszych wersji .NET Framework ale działają na .NET Framework 4,6, mogą przystąpić do tego nowego zachowania, dodając następujący wiersz do `<runtime>` sekcja pliku App. config:  
+ Ponieważ ta modyfikacja ma na celu wyeliminowanie wycinków prawej lub dolnej części formantów WPF o wysokiej rozdzielczościami, aplikacje, które są przeznaczone dla wcześniejszych wersji .NET Framework ale działają na .NET Framework 4,6, mogą przystąpić do tego nowego zachowania, dodając następujący wiersz do @no Sekcja __t_0_ pliku App. config:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=false" />  
 ```  
   
- Aplikacje, które są przeznaczone dla .NET Framework 4,6, ale chcą, aby formanty WPF mogły być renderowane przy użyciu poprzedniego algorytmu układu, można to zrobić `<runtime>` , dodając następujący wiersz do sekcji pliku App. config:  
+ Aplikacje przeznaczone dla .NET Framework 4,6, ale chcą, aby formanty WPF mogły być renderowane przy użyciu poprzedniego algorytmu układu, można to zrobić, dodając następujący wiersz do sekcji `<runtime>` pliku App. config:  
   
 ```xml  
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  

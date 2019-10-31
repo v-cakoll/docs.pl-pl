@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 634ef9f9-e94b-4776-a9e1-866df9a76c8f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0338c1e3e8890f08f87c80ec922071053d591935
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b0538a0dec6ed7659898b3a40bd5e36729c7dcb9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796673"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134417"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum — Interfejs
 Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.  
@@ -30,16 +28,16 @@ Reprezentuje moduł wyliczający dla tablicy `IAssemblyName` obiektów.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Clone, metoda](iassemblyenum-clone-method.md)|Tworzy skróconą kopię tego `IAssemblyEnum` obiektu.|  
-|[GetNextAssembly, metoda](iassemblyenum-getnextassembly-method.md)|Pobiera wskaźnik do następnego `IAssemblyName` elementu zawartego w tym `IAssemblyEnum` obiekcie.|  
-|[Reset, metoda](iassemblyenum-reset-method.md)|Resetuje ten `IAssemblyEnum` obiekt do jego pozycji początkowej.|  
+|[Clone, metoda](iassemblyenum-clone-method.md)|Tworzy skróconą kopię tego obiektu `IAssemblyEnum`.|  
+|[GetNextAssembly, metoda](iassemblyenum-getnextassembly-method.md)|Pobiera wskaźnik do następnego `IAssemblyName` zawartego w tym obiekcie `IAssemblyEnum`.|  
+|[Reset, metoda](iassemblyenum-reset-method.md)|Resetuje ten obiekt `IAssemblyEnum` do jego pozycji początkowej.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../get-started/system-requirements.md).  
   
- **Nagłówki** Fusion. h  
+ **Nagłówek:** Fusion. h  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

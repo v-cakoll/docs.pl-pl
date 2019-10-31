@@ -1,5 +1,5 @@
 ---
-title: ICorDebugController, interfejs
+title: ICorDebugController — Interfejs
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e2a083f46f24d6f3f24c63dd2415b85f975cfa29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 27f991c12ea7786d6146b5731848ca5ad3a37e21
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912850"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125371"
 ---
-# <a name="icordebugcontroller-interface"></a>ICorDebugController, interfejs
+# <a name="icordebugcontroller-interface"></a>ICorDebugController — Interfejs
 
-Reprezentuje zakres, <xref:System.Diagnostics.Process> albo <xref:System.AppDomain>lub, w którym można kontrolować kontekst wykonywania kodu.  
+Reprezentuje zakres, <xref:System.Diagnostics.Process> lub <xref:System.AppDomain>, w którym można kontrolować kontekst wykonywania kodu.  
   
 ## <a name="methods"></a>Metody  
   
@@ -49,13 +47,13 @@ Reprezentuje zakres, <xref:System.Diagnostics.Process> albo <xref:System.AppDoma
 > Ten interfejs nie obsługuje wywoływania zdalnego na wielu maszynach ani wielu procesów.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorDebug.idl, CorDebug.h  
+ **Nagłówek:** CorDebug. idl, CorDebug. h  
   
- **Biblioteki** CorGuids.lib  
+ **Biblioteka:** CorGuids. lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

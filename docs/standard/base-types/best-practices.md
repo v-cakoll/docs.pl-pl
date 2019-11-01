@@ -10,15 +10,13 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-author: rpetrusha
-ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 89585ff97183912feb9b9af0bd326041b7381bfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774307"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73105719"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze rozwiązania dotyczące wyrażeń regularnych w programie .NET
 
@@ -43,7 +41,7 @@ Aby dopasować nieograniczone dane wejściowe, wyrażenie regularne musi być w 
 Ostatni typ tekstu jest szczególnie problematyczny dla wyrażeń regularnych, które zostały napisane do obsługi ograniczonych danych wejściowych. Jeśli to wyrażenie regularne [opiera się również na rozbudowanej](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)operacji wycofywania, aparat wyrażeń regularnych może poświęcać niezależny czas (w niektórych przypadkach, wiele godzin lub dni) przetwarzanie pozornie niewielkiej ilości tekstu.
 
 > [!WARNING]
-> W poniższym przykładzie użyto wyrażenia regularnego, które jest podatne na nadmierne korzystanie z wycofywania, przez co istnieje duże prawdopodobieństwo odrzucenia prawidłowych adresów e-mail. Nie należy stosować go w procedurze weryfikacji adresów e-mail. Jeśli chcesz, aby wyrażenie regularne sprawdzające poprawność adresów e-mail, zobacz [How to: Sprawdź, czy ciągi są w prawidłowym formacie poczty E-mail](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
+> W poniższym przykładzie użyto wyrażenia regularnego, które jest podatne na nadmierne korzystanie z wycofywania, przez co istnieje duże prawdopodobieństwo odrzucenia prawidłowych adresów e-mail. Nie należy stosować go w procedurze weryfikacji adresów e-mail. Jeśli potrzebujesz wyrażenia regularnego weryfikującego adresy e-mail, zobacz [jak to zrobić: Sprawdź, czy ciągi są w prawidłowym formacie poczty e-mail](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).
 
 Rozważmy na przykład bardzo często używane, ale wyjątkowo problematyczne wyrażenie regularne służące do weryfikacji aliasów adresów e-mail. `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` wyrażenia regularnego jest zapisywana w celu przetworzenia, co jest uznawane za prawidłowy adres e-mail, który składa się z znaku alfanumerycznego, po którym następuje zero lub więcej znaków, które mogą być alfanumeryczne, kropki lub łączniki. Wyrażenie regularne musi być zakończone znakiem alfanumerycznym. Jednak, jak pokazuje poniższy przykład, mimo że wyrażenie regularne obsługuje z łatwością prawidłowe dane wejściowe, jego wydajność jest nieefektywna podczas przetwarzania niemal prawidłowych danych wejściowych.
 
@@ -65,7 +63,7 @@ Aby rozwiązać ten problem, można wykonać następujące czynności:
 W serca. Model obiektów wyrażeń regularnych sieci jest klasą <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, która reprezentuje aparat wyrażeń regularnych. Często jeden największy czynnik wpływający na wydajność wyrażeń regularnych jest sposobem, w jaki używany jest aparat <xref:System.Text.RegularExpressions.Regex>. Definiowanie wyrażenia regularnego polega na ścisłym sprzęganiu aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Ten proces sprzęgania, niezależnie od tego, czy obejmuje tworzenie wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> przez przekazanie jego konstruktora wzorca wyrażenia regularnego, czy wywoływanie statycznej metody przez przekazanie jej wzorca wyrażenia regularnego wraz z ciągiem do analizy, jest z konieczności kosztowna.
 
 > [!NOTE]
-> Aby zapoznać się z bardziej szczegółowym omówieniem implikacji wydajności przy użyciu interpretowanych i skompilowanych wyrażeń regularnych, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie bezpłatnej](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
+> Aby zapoznać się z bardziej szczegółowym omówieniem implikacji wydajności przy użyciu interpretowanych i skompilowanych wyrażeń regularnych, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejmowanie opłaty za wycofywanie](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
 
 Można sprzęgnąć aparat wyrażeń regularnych z konkretnym wzorcem wyrażenia regularnego, a następnie użyć aparatu, aby dopasować tekst na kilka sposobów:
 
@@ -135,9 +133,9 @@ Wzorzec wyrażenia regularnego używany w przykładzie, `\b(\w+((\r?\n)|,?\s))*\
 |`\w+`|Dopasowuje co najmniej jeden znak słowa.|
 |`[.?:;!]`|Dopasowanie do kropki, znaku zapytania, dwukropka, średnika lub wykrzyknika.|
 
-### <a name="regular-expressions-compiled-to-an-assembly"></a>Wyrażenia regularne: Skompilowano do zestawu
+### <a name="regular-expressions-compiled-to-an-assembly"></a>Wyrażenia regularne: skompilowane do zestawu
 
-Program .NET umożliwia również tworzenie zestawu zawierającego skompilowane wyrażenia regularne. Przenosi to czynnik wpływający na wydajność kompilowania wyrażeń regularnych z czasu wykonywania na czas projektowania. Jednak wymaga to również pewnej dodatkowej pracy: Wyrażenia regularne należy definiować z wyprzedzeniem i kompilować do zestawu. Kompilator może następnie odwołać się do tego zestawu podczas kompilowania kodu źródłowego, który używa wyrażeń regularnych zestawu. Każde skompilowane wyrażenie regularne w zestawie jest reprezentowane przez klasę, która pochodzi od <xref:System.Text.RegularExpressions.Regex>.
+Program .NET umożliwia również tworzenie zestawu zawierającego skompilowane wyrażenia regularne. Przenosi to czynnik wpływający na wydajność kompilowania wyrażeń regularnych z czasu wykonywania na czas projektowania. Jednak to także wiąże się z dodatkową pracą: konieczne jest zdefiniowanie wyrażane regularnych z wyprzedzeniem i skompilowanie ich do zestawu. Kompilator może następnie odwołać się do tego zestawu podczas kompilowania kodu źródłowego, który używa wyrażeń regularnych zestawu. Każde skompilowane wyrażenie regularne w zestawie jest reprezentowane przez klasę, która pochodzi od <xref:System.Text.RegularExpressions.Regex>.
 
 Aby kompilować wyrażenia regularne do zestawu, należy wywołać metodę <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> i przekazać ją do tablicy <xref:System.Text.RegularExpressions.RegexCompilationInfo> obiektów, które reprezentują wyrażenia regularne do skompilowania, oraz obiekt <xref:System.Reflection.AssemblyName> zawierający informacje o zestawie, który ma zostać utworzony.
 
@@ -149,7 +147,7 @@ Zaleca się, aby kompilować wyrażenia regularne do zestawu w następujących s
 
 Jeśli skompilowane wyrażenia regularne są używane w celu optymalizacji wydajności, nie należy używać odbicia w celu utworzenia zestawu, załadowania aparatu wyrażeń regularnych i wykonania jego metod dopasowania do wzorca. Wymaga to unikania dynamicznego kompilowania wzorców wyrażeń regularnych i określenia wszelkich opcji dopasowania do wzorca (np. z uwzględnieniem wielkości liter) w czasie tworzenia zestawu. Wymaga to również odseparowania kodu, który tworzy zestaw, od kodu, który używa wyrażenia regularnego.
 
-W poniższym przykładzie pokazano, w jaki sposób utworzyć zestaw zawierający skompilowane wyrażenie regularne. Tworzy zestaw o nazwie `RegexLib.dll` z pojedynczą klasą wyrażenia regularnego, `SentencePattern`, która zawiera wzorzec wyrażenia regularnego pasującego do zdania używany w [interpretowaniu a Sekcja](#interpreted-vs-compiled-regular-expressions) skompilowane wyrażenia regularne.
+W poniższym przykładzie pokazano, w jaki sposób utworzyć zestaw zawierający skompilowane wyrażenie regularne. Tworzy zestaw o nazwie `RegexLib.dll` z pojedynczą klasą wyrażenia regularnego, `SentencePattern`, która zawiera wzorzec wyrażenia regularnego pasującego do zdania używany w sekcji [interpretowane a skompilowane wyrażenia regularne](#interpreted-vs-compiled-regular-expressions) .
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]
@@ -161,10 +159,10 @@ Gdy przykład jest kompilowany do pliku wykonywalnego i uruchamiany, tworzy zest
 
 ## <a name="take-charge-of-backtracking"></a>Przejmowanie opłaty za wycofywanie
 
-Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednakże, gdy w wzorcu wyrażenia regularnego są używane nieokreślone Kwantyfikatory, takie jak `*`, `+`i `?`, aparat wyrażeń regularnych może pokazywać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu w celu przeszukania Aby pomyślnie dopasować cały wzorzec. Proces ten jest znany pod nazwą wycofywania.
+Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednakże, gdy w wzorcu wyrażenia regularnego są używane nieokreślone Kwantyfikatory, takie jak `*`, `+` i `?`, aparat wyrażeń regularnych może pokazywać część udanych częściowych dopasowań i powrócić do wcześniej zapisanego stanu w celu wyszukania pomyślne dopasowanie dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) [i](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)wycofywania. Aby uzyskać szczegółowe omówienie wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejęcie bezpłatnej](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
+> Aby uzyskać więcej informacji na temat wycofywania, zobacz [Szczegóły zachowania wyrażenia regularnego](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) [i](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)wycofywania. Aby zapoznać się ze szczegółową omówieniem wycofywania, zobacz [Optymalizowanie wydajności wyrażeń regularnych, część II: Przejmowanie opłaty za wycofywanie](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.
 
 Obsługa wycofywania daje wyrażeniom regularnym duże możliwości i elastyczność. Dodatkowo odpowiedzialność za kontrolowanie operacji aparatu wyrażeń regularnych spada na deweloperów wyrażeń regularnych. Ponieważ deweloperzy często nie są tego świadomi, błędne użycie wycofywania lub nadmierne poleganie na wycofywaniu często odgrywa najbardziej znaczącą rolę w zmniejszeniu wydajności wyrażeń regularnych. W scenariuszu najgorszego przypadku czas wykonywania może podwajać się dla każdego dodatkowego znaku w ciągu wejściowym. W rzeczywistości przy nadmiernym wykorzystaniu wycofywania łatwo jest stworzyć programowy odpowiednik pętli nieskończonej, jeżeli dane wejściowe niemal pasują do wzorca wyrażenia regularnego; przetwarzanie relatywnie krótkiego ciągu wejściowego może zająć aparatowi wyrażeń regularnych kilka godzin, a nawet dni.
 
@@ -220,7 +218,7 @@ Język wyrażeń regularnych w programie .NET zawiera następujące elementy ję
 
 Jeśli wyrażenie regularne przetwarza dane wejściowe, które niemal pasują do wzorca wyrażenia regularnego, często może nadmiernie używać wycofywania, co znacznie wpływa na wydajność. Oprócz dokładnego rozważenia użycia wycofywania i przetestowania wyrażenia regularnego pod kątem niemal dopasowanych danych wejściowych, zawsze należy ustawić wartość limitu czasu, aby zagwarantować, że efekt nadmiernego używania wycofywania, jeżeli wystąpi, będzie jak najmniejszy.
 
-Interwał limitu czasu wyrażenia regularnego określa czas, przez jaki aparat wyrażeń regularnych będzie szukał pojedynczego dopasowania, zanim zostanie przekroczony limit czasu. Domyślny interwał limitu czasu to <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, co oznacza, że nie zostanie przekroczony limit czasu wyrażenia regularnego. Można zastąpić tę wartość i zdefiniować interwał limitu czasu w następujący sposób:
+Interwał limitu czasu wyrażenia regularnego określa czas, przez który aparat wyrażeń regularnych będzie szukał pojedynczego dopasowania, zanim zostanie przekroczony limit czasu. Domyślny interwał limitu czasu to <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, co oznacza, że nie zostanie przekroczony limit czasu wyrażenia regularnego. Można zastąpić tę wartość i zdefiniować interwał limitu czasu w następujący sposób:
 
 - Podając wartość limitu czasu podczas tworzenia wystąpienia obiektu <xref:System.Text.RegularExpressions.Regex> przez wywołanie konstruktora <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.
 
@@ -237,7 +235,7 @@ W poniższym przykładzie zdefiniowano metodę `GetWordData`, która tworzy wyst
 
 ## <a name="capture-only-when-necessary"></a>Przechwyć tylko w razie potrzeby
 
-Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w języku wyrażeń regularnych programu .NET są `(`*podwyrażeniem*`)`, które definiuje numerowaną grupę przechwytywania, i `(?<`*nazwę*`>`*podwyrażeniem*`)`, które definiuje nazwaną grupę przechwytywania. Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.
+Wyrażenia regularne w programie .NET obsługują szereg konstrukcji grupujących, które pozwalają grupować wzorzec wyrażenia regularnego w jedno lub więcej podwyrażeń. Najczęściej używane konstrukcje grupujące w języku wyrażeń regularnych programu .NET są `(`*podwyrażeniem* `)`, które definiuje numerowaną grupę przechwytywania, i `(?<`*nazwę* `>`*Podwyrażenie* `)`, które definiuje nazwana grupa przechwytywania. Konstrukcje grupujące są niezbędne do tworzenia odwołań wstecznych i do definiowania podwyrażeń, do których jest stosowany kwantyfikator.
 
 Jednak zastosowanie tych elementów języka jest kosztowne. Powodują, że obiekt <xref:System.Text.RegularExpressions.GroupCollection> zwracany przez właściwość <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> zostanie wypełniony najnowszymi nienazwanymi lub nazwanymi przechwycenimi, a jeśli jedna konstrukcja grupowania przechwyciła wiele podciągów w ciągu wejściowym, wypełnia również obiekt <xref:System.Text.RegularExpressions.CaptureCollection> zwracane przez właściwość <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> określonej grupy przechwytywania z wieloma obiektami <xref:System.Text.RegularExpressions.Capture>.
 

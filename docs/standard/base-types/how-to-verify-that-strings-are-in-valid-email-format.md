@@ -1,5 +1,5 @@
 ---
-title: 'Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
+title: Sprawdzanie, czy ciągi są w prawidłowym formacie poczty e-mail
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - email [.NET Framework], validating
 - IsMatch method
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
-ms.openlocfilehash: 1812235da6e6d02a97fe994568c5c26a3c7cde33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c02fc215fa66951ae3333175191ab96a226a2afe
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126415"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73197583"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Instrukcje: Weryfikowanie, czy ciągi są w prawidłowym formacie poczty e-mail
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Sprawdzanie, czy ciągi są w prawidłowym formacie poczty e-mail
 
 Poniższy przykład używa wyrażenia regularnego, aby sprawdzić, czy ciąg jest w prawidłowym formacie poczty e-mail.
 
@@ -50,7 +50,7 @@ Należy pamiętać, że metoda `IsValidEmail` nie przeprowadza uwierzytelniania 
 [!code-csharp[RegularExpressions.Examples.Email#7](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#7)]
 [!code-vb[RegularExpressions.Examples.Email#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#7)]
 
-W tym przykładzie wzorzec wyrażenia regularnego ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` jest interpretowany jak pokazano w poniższym legendzie. Wyrażenie regularne jest kompilowane przy użyciu flagi <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
+W tym przykładzie wzorzec wyrażenia regularnego ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$`` jest interpretowany jak pokazano w poniższym legendzie. Wyrażenie regularne jest kompilowane przy użyciu flagi <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.
 
 `^`wzorca: Rozpocznij dopasowanie na początku ciągu.
 
@@ -62,7 +62,7 @@ W tym przykładzie wzorzec wyrażenia regularnego ``^(?(")(".+?(?<!\\)"@)|(([0-9
 
 `(\.(?!\.))`wzorca: Jeśli następny znak jest kropką, Dopasuj go. Jeśli nie jest to okres, spójrz na następny znak i Kontynuuj dopasowanie. `(?!\.)` to nieujemne potwierdzenie o zerowej szerokości, które uniemożliwia wyświetlanie dwóch kolejnych okresów w lokalnej części adresu e-mail.
 
-``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``wzorca: Jeśli następny znak nie jest kropką, dopasowuje dowolny znak słowa lub jeden z następujących znaków:-! # $% & ' * +/=? ^ '{}| ~
+``|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w]``wzorca: Jeśli następny znak nie jest kropką, dopasowuje dowolny znak słowa lub jeden z następujących znaków:-! # $% & "\*+/=? ^\`{}| ~
 
 ``((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*``wzorca: pasuje do wzorca warunkowego (kropka, po którym następuje nie kropka lub jedna z kilku znaków) zero lub więcej razy.
 

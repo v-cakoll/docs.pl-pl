@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań dotyczących silnych n
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 3a623f65d95d776e45af245a1fe241cc5ee25b93
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 3e7cc9a3a1be05d8fcb02b34f7027126697d15d0
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70968971"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196973"
 ---
 # <a name="strong-naming"></a>Silne nazewnictwo
 
@@ -53,7 +53,7 @@ Należy silnej nazwy bibliotek .NET Open Source. Silne nazewnictwo zestawu zapew
 
 > Publicznie dostępny klucz umożliwia deweloperom modyfikowanie i ponowne kompilowanie kodu źródłowego biblioteki z tym samym kluczem.
 > 
-> Klucz silnego nazewnictwa nie powinien być publiczny, jeśli został użyty w przeszłości w celu udzielenia specjalnych uprawnień w [scenariuszach częściowej relacji zaufania](/dotnet/framework/misc/using-libraries-from-partially-trusted-code). W przeciwnym razie mogą naruszać istniejące środowiska.
+> Klucz silnego nazewnictwa nie powinien być publiczny, jeśli został użyty w przeszłości w celu udzielenia specjalnych uprawnień w [scenariuszach częściowej relacji zaufania](../../framework/misc/using-libraries-from-partially-trusted-code.md). W przeciwnym razie mogą naruszać istniejące środowiska.
 
 > [!IMPORTANT]
 > Gdy wymagana jest tożsamość wydawcy kodu, zalecane jest [podpisywanie pakietów](/nuget/create-packages/sign-a-package) [Authenticode](/windows-hardware/drivers/install/authenticode) i NuGet. Zabezpieczeń dostępu kodu (CAS) nie należy używać jako środków zaradczych.
@@ -62,14 +62,14 @@ Należy silnej nazwy bibliotek .NET Open Source. Silne nazewnictwo zestawu zapew
 
 > Przeczytaj więcej [na temat przechowywania wersji i wersji zestawu](./versioning.md#assembly-version).
 
-**❌ Nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
+**❌ nie** dodawaj, usuwaj ani nie zmieniaj silnego klucza nazewnictwa.
 
 > Modyfikacja klucza silnego nazewnictwa zestawu zmienia tożsamość zestawu i dzieli skompilowany kod, który go używa. Aby uzyskać więcej informacji, zobacz [binarne zmiany](./breaking-changes.md#binary-breaking-change).
 
-**❌** Nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
+**❌** nie publikować wersji z silną nazwą i niesilną nazwą biblioteki. Na przykład `Contoso.Api` i `Contoso.Api.StrongNamed`.
 
 > Publikowanie dwóch pakietów rozwidlenia systemu dla deweloperów. Ponadto, jeśli aplikacja zostanie zakończona w zależności od obu pakietów, deweloper może napotkać konflikty nazw typów. W odniesieniu do platformy .NET są zainteresowane różne typy w różnych zestawach.
 
 >[!div class="step-by-step"]
->[Poprzedni](cross-platform-targeting.md)Następny
->[](nuget.md)
+>[Poprzedni](cross-platform-targeting.md)
+>[dalej](nuget.md)

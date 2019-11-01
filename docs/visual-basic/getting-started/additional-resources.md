@@ -1,6 +1,6 @@
 ---
-title: Dodatkowe zasoby dla programistów Visual Basic
-description: Odkryj zasoby internetowe, dzięki którym możesz zdobywać wiedzę, zadawać pytania i uzyskiwać więcej informacji dotyczących języka Visual Basic.
+title: Dodatkowe zasoby dla Visual Basic programistów
+description: Odkryj zasoby w sieci Web, aby dowiedzieć się, zadawać pytania i uzyskać więcej informacji na temat Visual Basic.
 ms.date: 02/21/2018
 helpviewer_keywords:
 - Visual Basic, additional resources
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: dc7653b1d792c66b40c0ab1d55a1614c7a69b7d1
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869059"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196981"
 ---
 # <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -25,14 +25,14 @@ Poniższe witryny sieci Web oferują wskazówki i mogą pomóc w znalezieniu odp
 
 |Adres URL|Opis|
 |----------|----------------|
-|[Projekt języka Visual Basic .NET](https://github.com/dotnet/vblang)|Oficjalne repozytorium w usłudze GitHub, przeznaczone dla projektów w języku Visual Basic .NET.|
+|[Projekt języka Visual Basic .NET](https://github.com/dotnet/vblang)|Oficjalne repozytorium w serwisie GitHub Visual Basic projektowanie języka .NET.|
 |[Blog zespołu Visual Basic firmy Microsoft](https://devblogs.microsoft.com/vbteam/)|Zapewnia dostęp do blogu zespołu Visual Basic.|
 
 ### <a name="code-samples"></a>Przykłady kodu
 
 |Adres URL|Opis|
 |----------|----------------|
-|[Przykłady z dokumentacji języka Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Zawiera przykłady używane w dokumentacji języka Visual Basic i technologii .NET.|
+|[Przykłady dokumentacji Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Zawiera przykłady używane w całej Visual Basic i dokumentacji programu .NET.|
 
 ### <a name="forums"></a>Fora
 
@@ -44,24 +44,24 @@ Poniższe witryny sieci Web oferują wskazówki i mogą pomóc w znalezieniu odp
 
 |Adres URL|Opis|
 |----------|----------------|
-|[Channel9](https://channel9.msdn.com/)|Stale aktualizowane materiały dla społeczności (filmy, strony typu wiki i forum).|
+|[Channel9](https://channel9.msdn.com/)|Zapewnia ciągłą społeczność za poorednictwem filmów wideo, witryn typu wiki i forów.|
 
-### <a name="support"></a>Pomoc techniczna
+### <a name="support"></a>Obsługa
 
 |Adres URL|Opis|
 |----------|----------------|
-|[pomoc techniczna firmy Microsoft](https://support.microsoft.com)|Zapewnia dostęp do artykułów bazy wiedzy Knowledge Base (KB), plików do pobrania, aktualizacji, webcastów i innych usług.|
-|[Pytania dotyczące programu Visual Studio](https://developercommunity.visualstudio.com)|Umożliwia zgłaszanie błędów lub sugestii do firmy Microsoft dotyczących platform .NET i Visual Studio. Można również zgłosić błąd, wybierając pozycje **Pomoc**  >  **Wyślij opinię**  >  **Zgłoś problem** w programie Visual Studio.|
+|[pomoc techniczna firmy Microsoft](https://support.microsoft.com)|Zapewnia dostęp do artykułów bazy wiedzy (KB), plików do pobrania i aktualizacji, obsługi przerzutów internetowych i innych usług.|
+|[Pytania dotyczące programu Visual Studio](https://developercommunity.visualstudio.com)|Umożliwia pliki błędów lub zadawanie sugestii do firmy Microsoft dotyczących platformy .NET i programu Visual Studio. Możesz również zgłosić usterkę, wybierając pozycję **pomoc** > **Prześlij opinię** > **zgłosić problem** w programie Visual Studio.|
 
 ## <a name="third-party-resources"></a>Zasoby innych firm
 
 |Adres URL|Opis|
 |----------|----------------|
-|[VBForums](http://www.vbforums.com/)|Udostępnia forum dyskusyjne dotyczące języka Visual Basic, technologii .NET i innych.|
-|[vbCity](http://vbcity.com/)|Witryna społeczności, w której można dowiedzieć się więcej i zadawać pytania na temat języka Visual Basic i platformy .NET.|
-|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow to witryna z pytaniami i odpowiedziami dla deweloperów.|
+|[VBForums](http://www.vbforums.com/)|Zawiera forum do omówienia Visual Basic, .NET i innych.|
+|[vbCity](http://vbcity.com/)|Witryna społeczności dla osób, które mogą uczyć się i zadawać pytania dotyczące Visual Basic i platformy .NET.|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|Stack Overflow jest witryną pytań i odpowiedzi dla deweloperów.|
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Wprowadzenie do Visual Basic](../../visual-basic/getting-started/index.md)
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+- [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

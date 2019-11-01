@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168966"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195488"
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sprawia, że jest dobrym miejscem do rozpoczęcia uczenia się dotyczącej produktu lub określonego obszaru funkcji.  
@@ -24,13 +24,13 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
  Pokazuje, jak utworzyć rozwiązanie asynchroniczne przy użyciu [Async](./language-reference/keywords/async.md) i [await](./language-reference/operators/await.md).  
   
  [Tworzenie składnika środowisko wykonawcze systemu Windows w programie C# lub Visual Basic i wywoływanie go przy użyciu języka JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Pokazuje, jak utworzyć typ środowisko wykonawcze systemu Windows, spakować go w składniku środowisko wykonawcze systemu Windows, a następnie wywołać składnik z [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] aplikacji skompilowanej dla systemu Windows przy użyciu języka JavaScript.  
+ Pokazuje, jak utworzyć typ środowisko wykonawcze systemu Windows, spakować go w składniku środowisko wykonawcze systemu Windows, a następnie wywołać składnik z aplikacji [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] utworzonej dla systemu Windows przy użyciu języka JavaScript.  
   
  [Programowanie Office (C# i Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Pokazuje, jak utworzyć skoroszyt programu Excel i dokument programu Word przy użyciu C# i Visual Basic.  
   
  [Tworzenie i używanie obiektów dynamicznych (C# i Visual Basic)](./programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
- Pokazuje, jak utworzyć niestandardowy obiekt, który dynamicznie uwidacznia zawartość pliku tekstowego i jak utworzyć projekt, który używa `IronPython` biblioteki.  
+ Pokazuje, jak utworzyć niestandardowy obiekt, który dynamicznie uwidacznia zawartość pliku tekstowego i jak utworzyć projekt, który używa biblioteki `IronPython`.  
    
  [Tworzenie formantu złożonego za pomocą wizualizacjiC#](../framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Demonstruje Tworzenie prostego formantu złożonego i rozszerzanie jego funkcjonalności przez dziedziczenie.  
@@ -45,13 +45,13 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
  Opisuje sposób debugowania zachowania niestandardowej kontrolki czasu projektowania.
 
  [Wykonywanie typowych zadań przy użyciu tagów inteligentnych w kontrolkach Windows Forms](../framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
- Pokazuje niektóre z często wykonywanych zadań `TabControl`, takich jak dodawanie lub usuwanie karty na, dokowanie kontrolki do jej elementu nadrzędnego i zmiana orientacji `SplitContainer` formantu.  
+ Pokazuje niektóre z często wykonywanych zadań, takich jak dodawanie lub usuwanie karty na `TabControl`, dokowanie kontrolki do jej elementu nadrzędnego i zmiana orientacji kontrolki `SplitContainer`.  
   
  [Pisanie zapytań w C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Demonstruje funkcje C# języka, które są używane do pisania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytania.  
+ Demonstruje funkcje C# języka, które są używane do pisania wyrażeń zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
  [Manipulowanie danymi (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
- [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] Opisuje scenariusz dodawania, modyfikowania i usuwania danych w bazie danych.  
+ Opisuje scenariusz [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] na potrzeby dodawania, modyfikowania i usuwania danych w bazie danych.  
   
  [Prosty model obiektu i zapytanie (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  Demonstruje sposób tworzenia klasy jednostki i prostego zapytania do filtrowania klasy jednostki.  
@@ -60,7 +60,7 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
  Pokazuje, jak używać LINQ to SQL do uzyskiwania dostępu do danych przez wykonywanie tylko procedur składowanych.  
   
  [Wykonywanie zapytań w relacjachC#() (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
- Demonstruje użycie [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] skojarzeń do reprezentowania relacji klucza obcego w bazie danych.  
+ Demonstruje użycie skojarzeń [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] do reprezentowania relacji klucza obcego w bazie danych.  
 
  [Pisanie wizualizatora wC#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  Pokazuje, jak napisać prosty wizualizator przy użyciu C#.  
@@ -72,4 +72,4 @@ Instruktaże zawierają instrukcje krok po kroku dla typowych scenariuszy, co sp
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](./programming-guide/index.md)
-- [Przykłady w Visual Studio](/visualstudio/ide/visual-studio-samples)
+- [Przykłady programu Visual Studio](/visualstudio/ide/visual-studio-ide)

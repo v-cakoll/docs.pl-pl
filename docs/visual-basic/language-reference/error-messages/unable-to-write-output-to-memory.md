@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31020
 ms.assetid: 23996dca-250f-4320-8211-1560e90172df
-ms.openlocfilehash: 510488e9dd18d8bf274a8fe5cd00666c4c26fcf5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65e63ddf15534ac83480bca3a9a01c97b629ee08
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787377"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198169"
 ---
 # <a name="unable-to-write-output-to-memory"></a>Nie można zapisać danych wyjściowych w pamięci
 Wystąpił problem podczas zapisywania danych wyjściowych w pamięci.  
@@ -21,14 +21,14 @@ Wystąpił problem podczas zapisywania danych wyjściowych w pamięci.
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Skompiluj program ponownie, aby zobaczyć, jeśli ten błąd wystąpi ponownie.  
+1. Skompiluj ponownie program, aby zobaczyć, czy błąd wystąpił.  
   
-2. Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i uruchom ponownie program Visual Studio.  
+2. Jeśli błąd będzie nadal występował, Zapisz swoją pracę i ponownie uruchom program Visual Studio.  
   
-3. Jeśli ten błąd wystąpi, zainstaluj ponownie Visual Basic.  
+3. Jeśli błąd się powtarza, zainstaluj ponownie Visual Basic.  
   
-4. Jeśli ten błąd będzie występował po ponownej instalacji, powiadom pomoc techniczna firmy Microsoft.  
+4. Jeśli błąd będzie się powtarzać po ponownej instalacji, powiadom firmę Microsoft o pomocy technicznej.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)
+- [Porozmawiaj z nami](/visualstudio/ide/feedback-options)

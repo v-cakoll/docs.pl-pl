@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f5b0064f9f01923c6353fd8e2b274bd7407ccbd8
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9052f509ec6df4e4b911e2f33b5c8197adb9a2c3
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72237431"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73198523"
 ---
 ### <a name="jsonfactoryconvertercreateconverter-signature-changed"></a>Zmieniono sygnaturę JsonFactoryConverter. isconverter
 
@@ -12,7 +12,7 @@ Aby ułatwić składanie klas <xref:System.Text.Json.Serialization.JsonConverter
 
 #### <a name="change-description"></a>Zmień opis
 
-Sygnatura metody `CreateConverter` w programie .NET Core wcześniejszym niż wersja 3,0 Preview 8 to: 
+Sygnatura metody `CreateConverter` w programie .NET Core wcześniejszym niż wersja 3,0 Preview 8 to:
 
 ```csharp
 namespace System.Text.Json.Serialization
@@ -36,7 +36,7 @@ namespace System.Text.Json.Serialization
 }
 ```
 
-Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było możliwości łatwego uzyskania <xref:System.Text.Json.Serialization.JsonConverter%601>. Dzięki temu Metoda fabryki powinna być publiczna, a także przekazywać bieżące <xref:System.Text.Json.JsonSerializerOptions> Zezwalaj na znacznie bardziej elastyczne składanie.
+Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery fabryk, ponieważ nie było łatwo możliwe uzyskanie <xref:System.Text.Json.Serialization.JsonConverter%601> od niego. Dzięki temu Metoda fabryki powinna być publiczna, a także przekazywać bieżące <xref:System.Text.Json.JsonSerializerOptions> Zezwalaj na znacznie bardziej elastyczne składanie.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -46,9 +46,9 @@ Przed wprowadzeniem tej zmiany trudno było tworzyć zapieczętowane konwertery 
 
 Klasy pochodne muszą zostać zaktualizowane i ponownie skompilowane.
 
-#### <a name="affected-apis"></a>Narażone interfejsy API
+#### <a name="affected-apis"></a>Dotyczy interfejsów API
 
-<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.
+<xref:System.Text.Json.Serialization.JsonConverterFactory.CreateConverter(System.Type,System.Text.Json.JsonSerializerOptions)?displayProperty=nameWithType>.,
 
 <!-- For tool use only
 

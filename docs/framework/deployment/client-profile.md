@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25aa7b7c88047a95af3cd1d8f99d96771f252ef4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052200"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73195179"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 Profil klienta platformy .NET to podzestaw .NET Framework, który został dostarczony z .NET Framework 4 i wcześniejszych wersji i został zoptymalizowany pod kątem aplikacji klienckich. .NET Framework jest platformą programistyczną dla systemu Windows, Windows Phone i Microsoft Azure i udostępnia zarządzane środowisko wykonywania aplikacji oraz bibliotekę klas .NET Framework. W .NET Framework 4 i starszych wersjach przedstawiono dwie opcje wdrożenia: pełny .NET Framework i profil klienta. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
@@ -32,4 +32,4 @@ Profil klienta platformy .NET to podzestaw .NET Framework, który został dostar
 - [.NET Framework profilu klienta (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Wielowersyjność kodu w programie Visual Studio ― przegląd](/visualstudio/ide/visual-studio-multi-targeting-overview)
 - [Rozwiązywanie problemów z błędami obiektów docelowych programu .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
-- [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/visual-studio-multi-targeting-overview)

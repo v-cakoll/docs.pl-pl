@@ -1,5 +1,5 @@
 ---
-title: Opinia społeczności WPF
+title: Opinie społeczności WPF
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,116 +8,116 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053151"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196995"
 ---
-# <a name="wpf-community-feedback"></a>Opinia społeczności WPF
+# <a name="wpf-community-feedback"></a>Opinie społeczności WPF
 
-Microsoft udostępnia szereg zasoby społeczności, Dowiedz się więcej o, omówienia i reagowanie na Windows Presentation Foundation (WPF). Te zasoby obejmują forów i [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) lokacji. Każdy zasób społeczności oferuje różne zestawy korzyści. Korzyści te są opisane w tym miejscu to zbiór najlepsze rozwiązania dotyczące używania każdego w celu zapewnienia najlepszą odpowiedź w dużych społeczności i firmy Microsoft.
+Firma Microsoft udostępnia wiele zasobów społeczności, za pomocą których można dowiedzieć się, jak omówić i przedstawić opinię na temat Windows Presentation Foundation (WPF). Te zasoby obejmują fora i witrynę [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) . Każdy zasób społeczności oferuje inny zestaw korzyści. Te korzyści są opisane w tym miejscu, ponieważ stanowią zestaw najlepszych rozwiązań w zakresie korzystania z nich w celu zapewnienia najlepszej odpowiedzi ze społeczności w dużej i w szczególności firmie Microsoft.
 
 > [!NOTE]
-> Nie używaj sekcji opinii znajdujący się u dołu każdej strony, aby wysłać opinię o produkcie. Te linki mają tylko opinię dotyczącą dokumentacji.
+> Nie używaj sekcji opinii znajdującej się w dolnej części każdej strony, aby wysłać opinie o produkcie. Te linki służą wyłącznie do celów opinii dotyczących dokumentacji.
 
 ## <a name="forums"></a>Fora
 
-[WPF forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) zasób podstawowego społeczności Omawiając i rozwiązywania problemów. Fora ułatwia rozpoznawania dyskusji i problem, udostępniając wszechstronny zestaw obsługi funkcji, które obejmują:
+[Forum WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) to podstawowy zasób społeczności dotyczący omawiania i rozwiązywania problemów. Fora ułatwiają dyskusję i rozwiązywanie problemów, oferując kompleksowy zestaw funkcji pomocniczych, które obejmują:
 
-- Wyszukiwanie.
-- Omówienie śledzenia.
-- Zaawansowane formatowanie tekstu i kodu.
+- Zasobów.
+- Śledzenie dyskusji.
+- Bogate formatowanie tekstu i kodu.
 - Integracja z programem Visual Studio.
-- Większość zaangażowanie cenionym Professional (MVP) i społeczności.
-- Monitorowanie, aby upewnić się, że wpisy są wypełniona w najszybszym czasie.
+- Najbardziej ceniony specjalista (MVP) i zaangażowanie społecznościowe.
+- Monitorowanie w celu zapewnienia, że w najszybszym możliwym czasie są odpowiedzi na wpisy.
 
-Innym rozwiązaniem dla Ciebie zadawać pytania do społeczności dotyczące WPF jest [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
+Kolejną opcją zadawania pytań do społeczności dotyczącej platformy WPF jest [Stack Overflow](https://stackoverflow.com/questions/tagged/wpf).
 
-### <a name="forum-best-practices"></a>Najlepsze forum
+### <a name="forum-best-practices"></a>Najlepsze rozwiązania dotyczące forum
 
-Przy użyciu następujących najlepszych rozwiązań ułatwiają rozwiązywanie problemów z umieszczonych na forum WPF w najszybszym czasie. Praktyki te mają zastosowanie do wszystkich forach.
+Korzystając z poniższych najlepszych rozwiązań, można rozwiązać problemy ogłoszone na forum WPF w najszybszym możliwym czasie. Te praktyki mają zastosowanie do wszystkich forów.
 
-#### <a name="search-existing-posts"></a>Wyszukiwanie istniejących wpisów
+#### <a name="search-existing-posts"></a>Wyszukaj istniejące wpisy
 
-Niektóre występują problemy z wystarczająco powszechnie czy inne osoby mają zmierzyła się je przed. W związku z tym można szybko rozwiązać tego problemu, lub możesz dodać dane wejściowe w istniejącej dyskusji.
+Niektóre problemy występują bardzo często, aby inne osoby miały do nich dostęp. W związku z tym możesz szybko rozwiązać swój problem lub dodać dane wejściowe do istniejącej dyskusji.
 
-#### <a name="use-meaningful-titles"></a>Użyj zrozumiałe tytuły
+#### <a name="use-meaningful-titles"></a>Użyj znaczących tytułów
 
-Zwięzły, skierowany do zrozumiałe tytuły zwiększyć możliwości odnajdywania Twojej wpisów. Mogą również ułatwić inni członkowie społeczności forum WPF określić, jeśli ich rozwiązać tego problemu.
+Zwięzłe, zrozumiałe tytuły poprawiają wykrywalność wpisów. Ułatwiają one również innym członkom społeczności z forum WPF ustalenie, czy mogą rozwiązać problem.
 
-#### <a name="include-appropriate-content"></a>Uwzględnij odpowiednie zawartość
+#### <a name="include-appropriate-content"></a>Uwzględnij odpowiednią zawartość
 
-Opis problemu i jak sprawdzone pracy przy jego użyciu. Jeśli to możliwe obejmują Obsługa fragmentów kodu lub najprostsza możliwa przykład, który przedstawia swój problem. Te informacje ułatwiają zwiększyć szanse, które pytania będą odbierane szybko.
+Opisz problem i sposób, w jaki podjęto próbę wykonania tej czynności. Jeśli to możliwe, Dołącz fragmenty kodu pomocniczego lub najprostszy przykład, który pokazuje swój problem. Wszystkie te szczegóły pomagają zwiększyć szansę szybkiego udzielenia odpowiedzi na pytanie.
 
-## <a name="visual-studio-developer-community"></a>Visual Studio Developer Community
+## <a name="visual-studio-developer-community"></a>Społeczność deweloperów programu Visual Studio
 
-Problemy z czasami może być trudne do rozwiązania lub nierozwiązywalny. Występują takie sytuacje z powodu błędów w technologii, trudności, zastosowanie technologii do konkretnych scenariuszach lub brak obsługi konkretne scenariusze. Te informacje, ważne jest, aby firmy Microsoft i mogą zostać dostarczone za pośrednictwem [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) lokacji.
+Czasami trudno jest rozwiązać problemy lub nierozwiązywalny. Takie sytuacje powstają ze względu na błędy w technologii, jednak trudności z zastosowaniem technologii do określonych scenariuszy lub brakiem pomocy technicznej dla konkretnych scenariuszy. Te informacje są ważne dla firmy Microsoft i mogą być udostępniane za pośrednictwem witryny [społeczności deweloperów programu Visual Studio](https://developercommunity.visualstudio.com/) .
 
-Elementy, które opublikowano WPF Product Feedback Center są kierowane do bazy danych wewnętrznych błędów zespół WPF. W związku z tym jest najbardziej niezawodnym sposobem przekazywania opinii do właściciela funkcji WPF. Ponadto możesz można zweryfikować i śledzić sugestie i usterek także oddawać głosy na nich, co ułatwia ustalenie priorytetów problemów zespół WPF.
+Elementy ogłoszone w centrum opinii o produkcie WPF są kierowane do wewnętrznej bazy danych błędów zespołu WPF. W związku z tym jest to najbardziej niezawodny sposób na uzyskanie opinii do właściciela funkcji WPF. Ponadto możesz sprawdzić poprawność i śledzić sugestie oraz usterki, które ułatwiają zespołowi WPF określanie priorytetów.
 
 ### <a name="developer-community-best-practices"></a>Najlepsze rozwiązania społeczności deweloperów
 
-Ogłaszając w społeczności deweloperów programu Visual Studio, wyszukiwanie istniejących publikuje, zapewniając znaczący tytuł i odpowiedniej zawartości są ważne najlepszych rozwiązań, tak jak publikowania w grupach na forum WPF. Poniżej przedstawiono dodatkowe wskazówki, które powinny także wykorzystywać.
+Podczas ogłaszania w społeczności deweloperów programu Visual Studio wyszukiwanie istniejących wpisów, dostarczając znaczący tytuł i odpowiednią zawartość, jest ważnymi najlepszymi rozwiązaniami, podobnie jak w przypadku publikowania na forum WPF. Poniżej przedstawiono dodatkowe najlepsze rozwiązania, które należy również zastosować.
 
-#### <a name="search-existing-posts"></a>Wyszukiwanie istniejących wpisów
+#### <a name="search-existing-posts"></a>Wyszukaj istniejące wpisy
 
-Niektóre występują problemy z wystarczająco powszechnie czy inne osoby mają zmierzyła się je przed. W związku z tym można szybko rozwiązać tego problemu, lub możesz dodać dane wejściowe do istniejącego problemu.
+Niektóre problemy występują bardzo często, aby inne osoby miały do nich dostęp. W związku z tym możesz szybko rozwiązać swój problem lub dodać dane wejściowe do istniejącego problemu.
 
-#### <a name="use-meaningful-titles"></a>Użyj zrozumiałe tytuły
+#### <a name="use-meaningful-titles"></a>Użyj znaczących tytułów
 
-Tytuły zwięzły, skierowany do znaczący wzrost prawdopodobieństwo, że problem jest kierowane do najbardziej odpowiedni zespół WPF w możliwie najkrótszym czasie. Jest to szczególnie ważne w przypadku technologii, takich jak WPF, która zawiera wiele powiązanych funkcji.
+Zwięzłe, znaczące tytuły zwiększają prawdopodobieństwo skierowania problemu do najbardziej odpowiedniego zespołu WPF w najkrótszym czasie. Jest to szczególnie ważne dla technologii, takich jak WPF, która zawiera wiele powiązanych funkcji.
 
-#### <a name="describe-how-to-reproduce-your-bug"></a>Opisano, jak do odtworzenia błędu
+#### <a name="describe-how-to-reproduce-your-bug"></a>Opis sposobu odtworzenia błędu
 
-Po opublikowaniu o usterkę, jest także następujące czynności:
+Po ogłoszeniu o błędzie ważne jest, aby uwzględnić następujące informacje:
 
-- Zapewniają jasny opis błędu.
-- Używanie fragmentów kodu do obsługi w opisie błędu.
-- Podaj listę czynności, które pokazują, jak odtworzyć błąd.
-- To najmniejsza przykładowego kodu możliwe, która powoduje wygenerowanie błędu.
-- Wspominanie, czy jest stale odtworzenia usterki, czy nie.
-- Zawierają informacje odpowiedni wyjątek.
+- Podaj jasny opis błędu.
+- Użyj fragmentów kodu do obsługi opisu usterki.
+- Podaj listę kroków demonstrujących sposób odtworzenia błędu.
+- Dołącz najmniejszy możliwy przykład kodu, który reprodukuje usterkę.
+- Należy określić, czy usterka jest spójnie powtarzalna, czy nie.
+- Dołącz odpowiednie informacje o wyjątku.
 
- W przypadku instalacji lub konfiguracji związane z usterki dołączanie dzienników instalacji odpowiednie i migawki (pliki prefiksem "dd_", które znajdują się w folderze % temp %).
+ Jeśli usterka dotyczy instalacji lub instalacji, Dołącz odpowiednie dzienniki instalacji i migawki (pliki poprzedzone prefiksem "dd_", które znajdują się w folderze% Temp%).
 
- Dla kompilacji lub problemy, dołączanie dzienników kompilacji. Program MSBuild, których system może być skonfigurowany do obsługuje rejestrowanie za pomocą różnych verbosities przy użyciu przełącznika/v: z wiersza polecenia lub przez skonfigurowanie odpowiedniego poziomu z tworzenia środowiska IDE (Integrated) takich jak Visual Studio.
+ W przypadku problemów z kompilacją lub kompilacją Dołącz dzienniki kompilacji. System MSBuild można skonfigurować tak, aby obsługiwał rejestrowanie z różnymi poziomami szczegółowości przy użyciu/v: przełącznika z wiersza polecenia lub konfigurując odpowiedni poziom z zintegrowanego środowiska programistycznego (IDE), takiego jak Visual Studio.
 
 #### <a name="provide-environment-information"></a>Podaj informacje o środowisku
 
-Informacje uzupełniające często może być przydatne w przypadku dodać kontekstowego do swojego wpisu. W szczególności wspomina o identyfikatorach platformy systemu operacyjnego, rodziny procesorów i architektury, takich jak "Systemu Windows 10 w wersji 1709, Intel(R) Xeon(R), x64."
+Informacje w tle mogą być często przydatne do dodawania kontekstu do wpisu. W szczególności należy wymienić platformę systemu operacyjnego, rodzinę procesora i architekturę, taką jak "Windows 10 w wersji 1709, Intel (R) Xeon (R), x64".
 
-Jeśli publikujesz o problem jest związany z renderowania, należy także uwzględnić grafiki szczegóły karty i sterownik, jeśli jest to możliwe. Te informacje są ważne, ponieważ WPF jest struktura prezentacji.
+Jeśli dany problem jest związany z renderowaniem, powinien również zawierać szczegóły karty graficznej i sterownika, jeśli jest to możliwe. Te informacje są ważne, ponieważ WPF jest strukturą prezentacji.
 
-#### <a name="provide-solution-or-project-information"></a>Podaj informacje rozwiązania lub projektu
+#### <a name="provide-solution-or-project-information"></a>Podaj informacje o rozwiązaniu lub projekcie
 
-Błędy mogą odnoszą się do narzędzia służące do tworzenia i tworzenie aplikacji i typów aplikacji, które tworzysz. W związku z tym może być przydatne do określenia:
+Usterki mogą dotyczyć narzędzi używanych do tworzenia i kompilowania aplikacji oraz typów tworzonych aplikacji. W związku z tym może być przydatne do określenia:
 
-- Typ aplikacji, które tworzysz, takich jak:
-  - Aplikacja (*.exe*) lub biblioteki (*.dll*)
+- Typ kompilowanej aplikacji, na przykład:
+  - Aplikacja ( *. exe*) lub biblioteka ( *. dll*)
   - Aplikacja przeglądarki Extensible Application Markup Language (XAML) (XBAP)
-  - Luźne aplikacji XAML
-  - Aplikacje autonomiczne zainstalowany
-  - Aplikacje wdrożone autonomiczny ClickOnce
-- Tworzenie narzędzi takich jak:
+  - Luźna aplikacja XAML
+  - Aplikacje zainstalowane autonomicznie
+  - Autonomiczne aplikacje wdrożone ClickOnce
+- Narzędzie programistyczne, takie jak:
   - MSBuild
-  - Wyrażenie grafikiem
-  - Wyrażenie interaktywne projektanta
+  - Projektant grafiki wyrażenia
+  - Expression interactive — Projektant
   - Visual Studio
-- Konfiguracja rozwiązania, takie jak:
-  - To rozwiązanie
+- Konfiguracja rozwiązania, taka jak:
+  - Rozwiązanie
   - Pojedynczy projekt
-  - Rozwiązanie z wielu projektów zależnych
-- Czy Twoja aplikacja ma zasoby specyficzne dla języka lub niezależny od języka. Na przykład, czy określono `UICulture` właściwość projektu lub metadanych Lokalizowalny `Application`, `Page`, i `Resource` typy?
-- Czy w pliku AssemblyInfo.cs lub AssemblyInfo.vb używane ustawienie neutralnym językiem.
+  - Rozwiązanie z wieloma projektami zależnymi
+- Czy aplikacja ma zasoby specyficzne dla języka, czy też niezależne od języka. Na przykład po określeniu właściwości projektu `UICulture` lub lokalizowalnych metadanych dla typów `Application`, `Page`i `Resource`?
+- Czy użyto ustawienia języka neutralnego w pliku AssemblyInfo.cs lub AssemblyInfo. vb.
 
-#### <a name="provide-scenario-and-impact-information"></a>Podaj informacje scenariusza i wpływ
+#### <a name="provide-scenario-and-impact-information"></a>Podaj informacje dotyczące scenariusza i wpływu
 
-Podaj informacje dotyczące tego scenariusza, który manifestów usterkę i jej wpływ. Te informacje są bardzo ważne, aby zespół WPF, gdy decyduje, kiedy i w jaki sposób problem należy ustalić, czy czy dopuszczalne obejście można zamiast tego.
+Podaj informacje o scenariuszu, który manifestuje usterkę i jej wpływ. Te informacje są bardzo ważne dla zespołu WPF, gdy decyduje, kiedy i jak należy rozwiązać problem, lub czy zamiast tego można użyć akceptowalnego obejścia.
 
-Zazwyczaj utratą o awariach i danych są o dużym znaczeniu i, w związku z tym, najłatwiejsze do określenia priorytetów. Niektóre błędy jednak tylko widoczne w nietypowych scenariuszy, które mogą być również linii głównej scenariuszy, w niektórych przypadkach. Dostarczanie kontekstu wokół scenariuszy i wpływ pomaga zespołowi WPF, podejmowanie właściwych decyzji.
+Zwykle scenariusze awarii i utraty danych mają duży wpływ i dlatego najłatwiej określić priorytety. Niektóre usterki są jednak wyświetlane tylko w nietypowych scenariuszach, które mogą również linii głównej scenariusze w niektórych przypadkach. Zapewnienie kontekstu wokół scenariusza i wpływu ułatwia zespołowi WPF podejmowanie właściwych decyzji.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Jak zgłosić problem w programie Visual Studio 2017](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)
+- [Jak zgłosić problem w programie Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

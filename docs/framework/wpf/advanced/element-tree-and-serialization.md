@@ -8,36 +8,36 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afddaab6a7f5e9ef445da48d013ace59b84611cd
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61962446"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460470"
 ---
-# <a name="element-tree-and-serialization"></a><span data-ttu-id="bf1c1-102">Drzewo elementów i serializacja</span><span class="sxs-lookup"><span data-stu-id="bf1c1-102">Element Tree and Serialization</span></span>
-<span data-ttu-id="bf1c1-103">Element programistyczny WPF często istnieje w pewnej postaci drzewa relacji między sobą.</span><span class="sxs-lookup"><span data-stu-id="bf1c1-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="bf1c1-104">Na przykład aplikację, której tworzony interfejsu użytkownika XAML można conceptualized jako drzewa obiektów.</span><span class="sxs-lookup"><span data-stu-id="bf1c1-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="bf1c1-105">Drzewo elementów można podzielić na dwa drzewa dyskretnych, ale czasami równoległego: drzewo logiczne i drzewo wizualne.</span><span class="sxs-lookup"><span data-stu-id="bf1c1-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="bf1c1-106">Serializacja w WPF obejmuje zapisanie stanu tych dwóch drzewa, a także stan aplikacji i potencjalnie jako XAML zapisywania w pliku.</span><span class="sxs-lookup"><span data-stu-id="bf1c1-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
+# <a name="element-tree-and-serialization"></a><span data-ttu-id="c1e24-102">Drzewo elementów i serializacja</span><span class="sxs-lookup"><span data-stu-id="c1e24-102">Element Tree and Serialization</span></span>
+<span data-ttu-id="c1e24-103">Elementy programistyczne WPF często istnieją w pewnej postaci relacji drzewa ze sobą.</span><span class="sxs-lookup"><span data-stu-id="c1e24-103">WPF programming elements often exist in some form of tree relationship to each other.</span></span> <span data-ttu-id="c1e24-104">Na przykład interfejs użytkownika aplikacji utworzony w języku XAML może być koncepcyjny jako drzewo obiektów.</span><span class="sxs-lookup"><span data-stu-id="c1e24-104">For instance, an application UI created in XAML can be conceptualized as an object tree.</span></span> <span data-ttu-id="c1e24-105">Drzewo elementu można dalej podzielić na dwa dyskretnie, a czasami drzewa równoległe: Drzewo logiczne i drzewo wizualne.</span><span class="sxs-lookup"><span data-stu-id="c1e24-105">The element tree can be further divided into two discrete yet sometimes parallel trees: the logical tree and the visual tree.</span></span> <span data-ttu-id="c1e24-106">Serializacja w WPF polega na zapisaniu stanu tych dwóch drzew oraz o stanie aplikacji i zapisaniu go do pliku, potencjalnie jako XAML.</span><span class="sxs-lookup"><span data-stu-id="c1e24-106">Serialization in WPF involves saving the state of these two trees as well as application state and writing it to a file, potentially as XAML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bf1c1-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="bf1c1-107">In This Section</span></span>  
- [<span data-ttu-id="bf1c1-108">Drzewa w WPF</span><span class="sxs-lookup"><span data-stu-id="bf1c1-108">Trees in WPF</span></span>](trees-in-wpf.md)  
- [<span data-ttu-id="bf1c1-109">Ograniczenia serializacji XamlWriter.Save</span><span class="sxs-lookup"><span data-stu-id="bf1c1-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
- [<span data-ttu-id="bf1c1-110">Inicjowanie elementów obiektu poza drzewem obiektu</span><span class="sxs-lookup"><span data-stu-id="bf1c1-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
- [<span data-ttu-id="bf1c1-111">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="bf1c1-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c1e24-107">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c1e24-107">In This Section</span></span>  
+ [<span data-ttu-id="c1e24-108">Drzewa w WPF</span><span class="sxs-lookup"><span data-stu-id="c1e24-108">Trees in WPF</span></span>](trees-in-wpf.md)  
+ [<span data-ttu-id="c1e24-109">Ograniczenia serializacji XamlWriter.Save</span><span class="sxs-lookup"><span data-stu-id="c1e24-109">Serialization Limitations of XamlWriter.Save</span></span>](serialization-limitations-of-xamlwriter-save.md)  
+ [<span data-ttu-id="c1e24-110">Inicjowanie elementów obiektu poza drzewem obiektu</span><span class="sxs-lookup"><span data-stu-id="c1e24-110">Initialization for Object Elements Not in an Object Tree</span></span>](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [<span data-ttu-id="c1e24-111">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="c1e24-111">How-to Topics</span></span>](element-tree-and-serialization-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="bf1c1-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="bf1c1-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c1e24-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c1e24-112">Reference</span></span>  
  <xref:System.Windows.Markup>  
   
  <xref:System.Windows.LogicalTreeHelper>  
   
  <xref:System.Windows.Media.VisualTreeHelper>  
   
-## <a name="related-sections"></a><span data-ttu-id="bf1c1-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="bf1c1-113">Related Sections</span></span>  
- [<span data-ttu-id="bf1c1-114">Architektura WPF</span><span class="sxs-lookup"><span data-stu-id="bf1c1-114">WPF Architecture</span></span>](wpf-architecture.md)  
-  [<span data-ttu-id="bf1c1-115">XAML w WPF</span><span class="sxs-lookup"><span data-stu-id="bf1c1-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
-  [<span data-ttu-id="bf1c1-116">Elementy podstawowe</span><span class="sxs-lookup"><span data-stu-id="bf1c1-116">Base Elements</span></span>](base-elements.md)  
-  [<span data-ttu-id="bf1c1-117">Właściwości</span><span class="sxs-lookup"><span data-stu-id="bf1c1-117">Properties</span></span>](properties-wpf.md)  
-  [<span data-ttu-id="bf1c1-118">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="bf1c1-118">Events</span></span>](events-wpf.md)  
-  [<span data-ttu-id="bf1c1-119">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="bf1c1-119">Input</span></span>](input-wpf.md)  
-  [<span data-ttu-id="bf1c1-120">Zasoby</span><span class="sxs-lookup"><span data-stu-id="bf1c1-120">Resources</span></span>](resources-wpf.md)  
-  [<span data-ttu-id="bf1c1-121">Tworzenie szablonów i stylów</span><span class="sxs-lookup"><span data-stu-id="bf1c1-121">Styling and Templating</span></span>](../controls/styling-and-templating.md)  
-  [<span data-ttu-id="bf1c1-122">Model wątkowości</span><span class="sxs-lookup"><span data-stu-id="bf1c1-122">Threading Model</span></span>](threading-model.md)
+## <a name="related-sections"></a><span data-ttu-id="c1e24-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c1e24-113">Related Sections</span></span>  
+ [<span data-ttu-id="c1e24-114">Architektura WPF</span><span class="sxs-lookup"><span data-stu-id="c1e24-114">WPF Architecture</span></span>](wpf-architecture.md)  
+  [<span data-ttu-id="c1e24-115">XAML w WPF</span><span class="sxs-lookup"><span data-stu-id="c1e24-115">XAML in WPF</span></span>](xaml-in-wpf.md)  
+  [<span data-ttu-id="c1e24-116">Elementy podstawowe</span><span class="sxs-lookup"><span data-stu-id="c1e24-116">Base Elements</span></span>](base-elements.md)  
+  [<span data-ttu-id="c1e24-117">Właściwości</span><span class="sxs-lookup"><span data-stu-id="c1e24-117">Properties</span></span>](properties-wpf.md)  
+  [<span data-ttu-id="c1e24-118">Zdarzenia</span><span class="sxs-lookup"><span data-stu-id="c1e24-118">Events</span></span>](events-wpf.md)  
+  [<span data-ttu-id="c1e24-119">Dane wejściowe</span><span class="sxs-lookup"><span data-stu-id="c1e24-119">Input</span></span>](input-wpf.md)  
+  [<span data-ttu-id="c1e24-120">Zasoby</span><span class="sxs-lookup"><span data-stu-id="c1e24-120">Resources</span></span>](resources-wpf.md)  
+  [<span data-ttu-id="c1e24-121">Tworzenie szablonów i stylów</span><span class="sxs-lookup"><span data-stu-id="c1e24-121">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+  [<span data-ttu-id="c1e24-122">Model wątkowości</span><span class="sxs-lookup"><span data-stu-id="c1e24-122">Threading Model</span></span>](threading-model.md)

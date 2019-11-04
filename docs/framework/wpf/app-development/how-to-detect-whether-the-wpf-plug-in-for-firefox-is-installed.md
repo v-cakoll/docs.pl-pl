@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wykrywanie, czy wtyczka WPF dla Firefox jest zainstalowana'
+title: Jak wykryć, czy wtyczka WPF dla Firefox jest zainstalowana
 ms.date: 03/30/2017
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: f84a0a2af43931b3ada1f674390ec5d841b79a1c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: fdc7b516c316c7efc7056b549baf43191a5aedd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690420"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423747"
 ---
-# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="fafa2-102">Instrukcje: Wykrywanie, czy wtyczka WPF dla Firefox jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="fafa2-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
+# <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a><span data-ttu-id="c8754-102">Jak wykryć, czy wtyczka WPF dla Firefox jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="c8754-102">How to: Detect Whether the WPF Plug-In for Firefox Is Installed</span></span>
 
-<span data-ttu-id="fafa2-103">Windows Presentation Foundation (WPF) wtyczka dla programu Firefox umożliwia [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] i luźno pliki XAML w celu uruchomienia w przeglądarce Mozilla Firefox.</span><span class="sxs-lookup"><span data-stu-id="fafa2-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="fafa2-104">Ten temat zawiera skrypt napisany w kodzie HTML i JavaScript, które Administratorzy mogą używać do określenia, czy wtyczka WPF dla Firefox jest zainstalowana.</span><span class="sxs-lookup"><span data-stu-id="fafa2-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>
+<span data-ttu-id="c8754-103">Wtyczka Windows Presentation Foundation (WPF) dla przeglądarki Firefox Włącza aplikacje przeglądarki XAML (XBAP) i luźne pliki XAML do uruchomienia w przeglądarce Mozilla Firefox.</span><span class="sxs-lookup"><span data-stu-id="c8754-103">The Windows Presentation Foundation (WPF) plug-in for Firefox enables XAML browser applications (XBAPs) and loose XAML files to run in the Mozilla Firefox browser.</span></span> <span data-ttu-id="c8754-104">Ten temat zawiera skrypt zapisany w formacie HTML i JavaScript, za pomocą którego Administratorzy mogą określić, czy wtyczka WPF dla programu Firefox jest zainstalowana.</span><span class="sxs-lookup"><span data-stu-id="c8754-104">This topic provides a script written in HTML and JavaScript that administrators can use to determine whether the WPF plug-in for Firefox is installed.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fafa2-105">Aby uzyskać więcej informacji na temat instalowania i wdrażania oraz wykrywanie programu .NET Framework, zobacz [Instalowanie programu .NET Framework dla deweloperów](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="fafa2-105">For more information about installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>
+> <span data-ttu-id="c8754-105">Aby uzyskać więcej informacji na temat instalowania, wdrażania i wykrywania .NET Framework, zobacz [instalowanie .NET Framework dla deweloperów](../../install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="c8754-105">For more information about installing, deploying, and detecting the .NET Framework, see [Install the .NET Framework for developers](../../install/guide-for-developers.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="fafa2-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="fafa2-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="c8754-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="c8754-106">Example</span></span>
 
-<span data-ttu-id="fafa2-107">Po zainstalowaniu programu .NET Framework 3.5, komputer kliencki jest konfigurowana wtyczka WPF dla Firefox.</span><span class="sxs-lookup"><span data-stu-id="fafa2-107">When the .NET Framework 3.5 is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="fafa2-108">Poniższy przykładowy skrypt szuka wtyczka WPF dla Firefox, a następnie wyświetla komunikat o stanie odpowiednie.</span><span class="sxs-lookup"><span data-stu-id="fafa2-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>
+<span data-ttu-id="c8754-107">Po zainstalowaniu .NET Framework 3,5 na komputerze klienckim jest konfigurowana wtyczka WPF dla programu Firefox.</span><span class="sxs-lookup"><span data-stu-id="c8754-107">When the .NET Framework 3.5 is installed, the client computer is configured with a WPF plug-in for Firefox.</span></span> <span data-ttu-id="c8754-108">Poniższy przykładowy skrypt sprawdza, czy wtyczka WPF dla programu Firefox, a następnie wyświetla odpowiedni komunikat o stanie.</span><span class="sxs-lookup"><span data-stu-id="c8754-108">The following example script checks for the WPF plug-in for Firefox and then displays an appropriate status message.</span></span>
 
 ```html
 <HTML>
@@ -56,16 +56,16 @@ ms.locfileid: "66690420"
 </HTML>
 ```
 
-<span data-ttu-id="fafa2-109">W przypadku pomyślnego dostępności wtyczka WPF dla Firefox jest wyświetlany następujący komunikat o stanie:</span><span class="sxs-lookup"><span data-stu-id="fafa2-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>
+<span data-ttu-id="c8754-109">Jeśli sprawdzanie wtyczki WPF dla programu Firefox powiedzie się, zostanie wyświetlony następujący komunikat o stanie:</span><span class="sxs-lookup"><span data-stu-id="c8754-109">If the check for the WPF plug-in for Firefox is successful, the following status message is displayed:</span></span>
 
 `The WPF plug-in for Firefox is installed.`
 
-<span data-ttu-id="fafa2-110">W przeciwnym razie jest wyświetlany następujący komunikat o stanie:</span><span class="sxs-lookup"><span data-stu-id="fafa2-110">Otherwise, the following status message is displayed:</span></span>
+<span data-ttu-id="c8754-110">W przeciwnym razie zostanie wyświetlony następujący komunikat o stanie:</span><span class="sxs-lookup"><span data-stu-id="c8754-110">Otherwise, the following status message is displayed:</span></span>
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 
-## <a name="see-also"></a><span data-ttu-id="fafa2-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="fafa2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c8754-111">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="c8754-111">See also</span></span>
 
-- [<span data-ttu-id="fafa2-112">Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="fafa2-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
-- [<span data-ttu-id="fafa2-113">Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="fafa2-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
-- [<span data-ttu-id="fafa2-114">Aplikacje przeglądarek WPF XAML — omówienie</span><span class="sxs-lookup"><span data-stu-id="fafa2-114">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)
+- [<span data-ttu-id="c8754-112">Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="c8754-112">Detect Whether the .NET Framework 3.0 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
+- [<span data-ttu-id="c8754-113">Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana</span><span class="sxs-lookup"><span data-stu-id="c8754-113">Detect Whether the .NET Framework 3.5 Is Installed</span></span>](how-to-detect-whether-the-net-framework-3-5-is-installed.md)
+- [<span data-ttu-id="c8754-114">Aplikacje przeglądarek WPF XAML — omówienie</span><span class="sxs-lookup"><span data-stu-id="c8754-114">WPF XAML Browser Applications Overview</span></span>](wpf-xaml-browser-applications-overview.md)

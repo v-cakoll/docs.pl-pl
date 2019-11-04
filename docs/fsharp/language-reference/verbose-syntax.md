@@ -2,30 +2,30 @@
 title: Pełna składnia
 description: Zapoznaj się z różnicą między pełną i uproszczoną F# składnią w języku programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214040"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421178"
 ---
-# <a name="verbose-syntax"></a><span data-ttu-id="501b0-103">Pełna składnia</span><span class="sxs-lookup"><span data-stu-id="501b0-103">Verbose Syntax</span></span>
+# <a name="verbose-syntax"></a><span data-ttu-id="a3b76-103">Pełna składnia</span><span class="sxs-lookup"><span data-stu-id="a3b76-103">Verbose Syntax</span></span>
 
-<span data-ttu-id="501b0-104">Istnieją dwie formy składni dostępne dla wielu konstrukcji w F# języku: *Pełna składnia* i *składnia uproszczona*.</span><span class="sxs-lookup"><span data-stu-id="501b0-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="501b0-105">Składnia verbose nie jest zgodna z powszechnie używanymi, ale ma zalety mniejszej czułości do wcięcia.</span><span class="sxs-lookup"><span data-stu-id="501b0-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="501b0-106">Uproszczona składnia jest krótsza i używa wcięć do sygnalizowania początku i końca konstrukcji, zamiast dodatkowych słów kluczowych `begin` `in`, takich jak `end`,, i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="501b0-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="501b0-107">Domyślną składnią jest składnia uproszczona.</span><span class="sxs-lookup"><span data-stu-id="501b0-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="501b0-108">W tym temacie opisano składnię F# dla konstrukcji, gdy nie jest włączona składnia uproszczona.</span><span class="sxs-lookup"><span data-stu-id="501b0-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="501b0-109">Pełna składnia jest zawsze włączona, więc nawet w przypadku włączenia uproszczonej składni można nadal używać składni pełnej dla niektórych konstrukcji.</span><span class="sxs-lookup"><span data-stu-id="501b0-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="501b0-110">Można wyłączyć składnię uproszczoną za pomocą `#light "off"` dyrektywy.</span><span class="sxs-lookup"><span data-stu-id="501b0-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
+<span data-ttu-id="a3b76-104">Istnieją dwie formy składni dostępne dla wielu konstrukcji w F# języku: *Pełna składnia* i *składnia uproszczona*.</span><span class="sxs-lookup"><span data-stu-id="a3b76-104">There are two forms of syntax available for many constructs in the F# language: *verbose syntax* and *lightweight syntax*.</span></span> <span data-ttu-id="a3b76-105">Składnia verbose nie jest zgodna z powszechnie używanymi, ale ma zalety mniejszej czułości do wcięcia.</span><span class="sxs-lookup"><span data-stu-id="a3b76-105">The verbose syntax is not as commonly used, but has the advantage of being less sensitive to indentation.</span></span> <span data-ttu-id="a3b76-106">Uproszczona składnia jest krótsza i używa wcięć do sygnalizowania początku i końca konstrukcji, zamiast dodatkowych słów kluczowych, takich jak `begin`, `end`, `in`i tak dalej.</span><span class="sxs-lookup"><span data-stu-id="a3b76-106">The lightweight syntax is shorter and uses indentation to signal the beginning and end of constructs, rather than additional keywords like `begin`, `end`, `in`, and so on.</span></span> <span data-ttu-id="a3b76-107">Domyślną składnią jest składnia uproszczona.</span><span class="sxs-lookup"><span data-stu-id="a3b76-107">The default syntax is the lightweight syntax.</span></span> <span data-ttu-id="a3b76-108">W tym temacie opisano składnię F# dla konstrukcji, gdy nie jest włączona składnia uproszczona.</span><span class="sxs-lookup"><span data-stu-id="a3b76-108">This topic describes the syntax for F# constructs when lightweight syntax is not enabled.</span></span> <span data-ttu-id="a3b76-109">Pełna składnia jest zawsze włączona, więc nawet w przypadku włączenia uproszczonej składni można nadal używać składni pełnej dla niektórych konstrukcji.</span><span class="sxs-lookup"><span data-stu-id="a3b76-109">Verbose syntax is always enabled, so even if you enable lightweight syntax, you can still use verbose syntax for some constructs.</span></span> <span data-ttu-id="a3b76-110">Można wyłączyć składnię uproszczoną za pomocą dyrektywy `#light "off"`.</span><span class="sxs-lookup"><span data-stu-id="a3b76-110">You can disable lightweight syntax by using the `#light "off"` directive.</span></span>
 
-## <a name="table-of-constructs"></a><span data-ttu-id="501b0-111">Tabela konstrukcji</span><span class="sxs-lookup"><span data-stu-id="501b0-111">Table of Constructs</span></span>
+## <a name="table-of-constructs"></a><span data-ttu-id="a3b76-111">Tabela konstrukcji</span><span class="sxs-lookup"><span data-stu-id="a3b76-111">Table of Constructs</span></span>
 
-<span data-ttu-id="501b0-112">W poniższej tabeli przedstawiono składnię uproszczoną i pełną dla F# konstrukcji języka w kontekstach, w których istnieje różnica między dwoma formularzami.</span><span class="sxs-lookup"><span data-stu-id="501b0-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="501b0-113">W tej tabeli, nawiasy kątowe (&lt;&gt;) otaczają elementy składni dostarczone przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="501b0-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="501b0-114">Zapoznaj się z dokumentacją dla każdej konstrukcji języka, aby uzyskać bardziej szczegółowe informacje na temat składni używanej w ramach tych konstrukcji.</span><span class="sxs-lookup"><span data-stu-id="501b0-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
+<span data-ttu-id="a3b76-112">W poniższej tabeli przedstawiono składnię uproszczoną i pełną dla F# konstrukcji języka w kontekstach, w których istnieje różnica między dwoma formularzami.</span><span class="sxs-lookup"><span data-stu-id="a3b76-112">The following table shows the lightweight and verbose syntax for F# language constructs in contexts where there is a difference between the two forms.</span></span> <span data-ttu-id="a3b76-113">W tej tabeli, nawiasy kątowe (&lt;&gt;) otaczają elementy składni dostarczone przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="a3b76-113">In this table, angle brackets (&lt;&gt;) enclose user-supplied syntax elements.</span></span> <span data-ttu-id="a3b76-114">Zapoznaj się z dokumentacją dla każdej konstrukcji języka, aby uzyskać bardziej szczegółowe informacje na temat składni używanej w ramach tych konstrukcji.</span><span class="sxs-lookup"><span data-stu-id="a3b76-114">Refer to the documentation for each language construct for more detailed information about the syntax used within these constructs.</span></span>
 
 <table>
 <tr>
-<th><span data-ttu-id="501b0-115">Konstrukcja języka</span><span class="sxs-lookup"><span data-stu-id="501b0-115">Language construct</span></span></th>
-<th><span data-ttu-id="501b0-116">Składnia uproszczona</span><span class="sxs-lookup"><span data-stu-id="501b0-116">Lightweight syntax</span></span></th>
-<th><span data-ttu-id="501b0-117">Verbose — składnia</span><span class="sxs-lookup"><span data-stu-id="501b0-117">Verbose syntax</span></span></th>
+<th><span data-ttu-id="a3b76-115">Konstrukcja języka</span><span class="sxs-lookup"><span data-stu-id="a3b76-115">Language construct</span></span></th>
+<th><span data-ttu-id="a3b76-116">Składnia uproszczona</span><span class="sxs-lookup"><span data-stu-id="a3b76-116">Lightweight syntax</span></span></th>
+<th><span data-ttu-id="a3b76-117">Verbose — składnia</span><span class="sxs-lookup"><span data-stu-id="a3b76-117">Verbose syntax</span></span></th>
 </tr>
 <tr>
 <td>
-<span data-ttu-id="501b0-118">wyrażenia złożone</span><span class="sxs-lookup"><span data-stu-id="501b0-118">compound expressions</span></span>
+<span data-ttu-id="a3b76-118">wyrażenia złożone</span><span class="sxs-lookup"><span data-stu-id="a3b76-118">compound expressions</span></span>
 </td>
 <td>
 
@@ -44,7 +44,7 @@ ms.locfileid: "71214040"
 </tr>
 <tr><td>
 
-<span data-ttu-id="501b0-119">powiązania `let` zagnieżdżone</span><span class="sxs-lookup"><span data-stu-id="501b0-119">nested `let` bindings</span></span>
+<span data-ttu-id="a3b76-119">zagnieżdżone powiązania `let`</span><span class="sxs-lookup"><span data-stu-id="a3b76-119">nested `let` bindings</span></span>
 
 </td><td>
 
@@ -67,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-<span data-ttu-id="501b0-120">blok kodu</span><span class="sxs-lookup"><span data-stu-id="501b0-120">code block</span></span>
+<span data-ttu-id="a3b76-120">blok kodu</span><span class="sxs-lookup"><span data-stu-id="a3b76-120">code block</span></span>
 </td><td>
 
 ```fsharp
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-121">record</span><span class="sxs-lookup"><span data-stu-id="501b0-121">record</span></span>
+<tr><td><span data-ttu-id="a3b76-121">Rekord</span><span class="sxs-lookup"><span data-stu-id="a3b76-121">record</span></span>
 </td><td>
 
 ```fsharp
@@ -189,7 +189,7 @@ type <record-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-122">class</span><span class="sxs-lookup"><span data-stu-id="501b0-122">class</span></span>
+<tr><td><span data-ttu-id="a3b76-122">class</span><span class="sxs-lookup"><span data-stu-id="a3b76-122">class</span></span>
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-123">— struktura</span><span class="sxs-lookup"><span data-stu-id="501b0-123">structure</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-123">— struktura</span><span class="sxs-lookup"><span data-stu-id="a3b76-123">structure</span></span></td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-124">Unia rozłączna</span><span class="sxs-lookup"><span data-stu-id="501b0-124">discriminated union</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-124">Unia rozłączna</span><span class="sxs-lookup"><span data-stu-id="a3b76-124">discriminated union</span></span></td><td>
 
 ```fsharp
 type <union-name> =
@@ -251,7 +251,7 @@ type <union-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-125">interface</span><span class="sxs-lookup"><span data-stu-id="501b0-125">interface</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-125">interface</span><span class="sxs-lookup"><span data-stu-id="a3b76-125">interface</span></span></td><td>
 
 ```fsharp
 type <interface-name> =
@@ -269,7 +269,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-126">wyrażenie obiektu</span><span class="sxs-lookup"><span data-stu-id="501b0-126">object expression</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-126">wyrażenie obiektu</span><span class="sxs-lookup"><span data-stu-id="a3b76-126">object expression</span></span></td><td>
 
 ```fsharp
 { new <type-name>
@@ -292,7 +292,7 @@ type <interface-name> =
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-127">implementacja interfejsu</span><span class="sxs-lookup"><span data-stu-id="501b0-127">interface implementation</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-127">implementacja interfejsu</span><span class="sxs-lookup"><span data-stu-id="a3b76-127">interface implementation</span></span></td><td>
 
 ```fsharp
 interface <interface-name>
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-128">rozszerzenie typu</span><span class="sxs-lookup"><span data-stu-id="501b0-128">type extension</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-128">rozszerzenie typu</span><span class="sxs-lookup"><span data-stu-id="a3b76-128">type extension</span></span></td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td><span data-ttu-id="501b0-129">moduł</span><span class="sxs-lookup"><span data-stu-id="501b0-129">module</span></span></td><td>
+<tr><td><span data-ttu-id="a3b76-129">moduł</span><span class="sxs-lookup"><span data-stu-id="a3b76-129">module</span></span></td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,8 +350,8 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a><span data-ttu-id="501b0-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="501b0-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3b76-130">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a3b76-130">See also</span></span>
 
-- [<span data-ttu-id="501b0-131">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="501b0-131">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="501b0-132">Dyrektywy kompilatora</span><span class="sxs-lookup"><span data-stu-id="501b0-132">Compiler Directives</span></span>](compiler-directives.md)
-- [<span data-ttu-id="501b0-133">Wskazówki dotyczące formatowania kodu</span><span class="sxs-lookup"><span data-stu-id="501b0-133">Code Formatting Guidelines</span></span>](code-formatting-guidelines.md)
+- [<span data-ttu-id="a3b76-131">Dokumentacja języka F#</span><span class="sxs-lookup"><span data-stu-id="a3b76-131">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="a3b76-132">Dyrektywy kompilatora</span><span class="sxs-lookup"><span data-stu-id="a3b76-132">Compiler Directives</span></span>](compiler-directives.md)
+- [<span data-ttu-id="a3b76-133">Wskazówki dotyczące formatowania kodu</span><span class="sxs-lookup"><span data-stu-id="a3b76-133">Code Formatting Guidelines</span></span>](../style-guide/formatting.md)

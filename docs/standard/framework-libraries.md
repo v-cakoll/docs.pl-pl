@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 56d795d309aec98d43bfba506cbc4e862f13cc68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131550"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424970"
 ---
 # <a name="framework-libraries"></a>Biblioteki platformy
 
@@ -26,7 +26,7 @@ BCL zapewnia najpopularniejsze typy i funkcje narzędziowe oraz są podstawą ws
 
 Platforma .NET zawiera zestaw typów pierwotnych, które są używane (w różnym stopniu) w przypadku wszystkich programów. Te typy zawierają dane, takie jak liczby, ciągi, bajty i dowolnych obiektów. C# Język zawiera słowa kluczowe dla tych typów. Przykładowy zestaw tych typów jest wymieniony poniżej z pasującymi C# słowami kluczowymi.
 
-* <xref:System.Object?displayProperty=nameWithType> ([Object](../csharp/language-reference/keywords/object.md)) — Klasa podstawowa klasy podstawowej w systemie typów CLR. Jest to katalog główny hierarchii typów.
+* <xref:System.Object?displayProperty=nameWithType> ([Object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) — Klasa podstawowa klasy podstawowej w systemie typów CLR. Jest to katalog główny hierarchii typów.
 * <xref:System.Int16?displayProperty=nameWithType> ([Krótki](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 16-bitowy typ liczby całkowitej ze znakiem. Niepodpisany <xref:System.UInt16> również istnieje.
 * <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-A 32-bitowy Typ Liczba całkowita ze znakiem. Wartość [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) nie jest również dostępna.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 32-bitowy typ zmiennoprzecinkowy.
@@ -34,7 +34,7 @@ Platforma .NET zawiera zestaw typów pierwotnych, które są używane (w różny
 * <xref:System.Byte?displayProperty=nameWithType> ([bajt](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 8-bitowa liczba całkowita bez znaku reprezentująca bajt pamięci.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — typ Boolean reprezentujący `true` lub `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) — 16-bitowy typ liczbowy reprezentujący znak Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([String](../csharp/language-reference/keywords/string.md)) — reprezentuje serię znaków. Inna niż `char[]`, ale umożliwia indeksowanie poszczególnych `char` w `string`.
+* <xref:System.String?displayProperty=nameWithType> ([String](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) — reprezentuje serię znaków. Inna niż `char[]`, ale umożliwia indeksowanie poszczególnych `char` w `string`.
 
 ## <a name="data-structures"></a>Struktury danych
 

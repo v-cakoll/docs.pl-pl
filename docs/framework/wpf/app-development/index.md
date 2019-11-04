@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 85218bd4b6e900bd4508a5c90132419a07846f2c
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: ce37eecf7edf2adcc4f56af27a5c658400f7abba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920214"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420638"
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a>Windows Presentation Foundation (WPF) to struktura prezentacji, za pomocą której można opracowywać następujące typy aplikacji:  
   
 - Aplikacje autonomiczne (tradycyjne style systemu Windows skompilowane jako zestawy wykonywalne, które są instalowane i uruchamiane z komputera klienckiego).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplikacje złożone z stron nawigacyjnych, które są wbudowane jako zestawy wykonywalne i obsługiwane przez przeglądarki sieci Web, takie jak Microsoft Internet Explorer lub Mozilla Firefox).  
+- Aplikacje przeglądarki XAML (XBAP) (aplikacje złożone z stron nawigacyjnych, które są wbudowane jako zestawy wykonywalne i obsługiwane przez przeglądarki sieci Web, takie jak Microsoft Internet Explorer lub Mozilla Firefox).  
   
 - Niestandardowe biblioteki formantów (zestawy niewykonywalne zawierające kontrolki wielokrotnego użytku).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "72920214"
   
 - Zarządzanie oknami w aplikacjach autonomicznych.  
   
-- Śledzenie nawigacji w [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]i autonomicznych aplikacjach z oknami nawigacji i ramkami.  
+- Śledzenie nawigacji w aplikacjach przeglądarki XAML (XBAP) i autonomicznych aplikacjach z oknami nawigacji i ramkami.  
   
  Te możliwości są implementowane przez klasę <xref:System.Windows.Application>, która jest dodawana do aplikacji przy użyciu *definicji aplikacji*.  
   
@@ -86,15 +86,15 @@ ms.locfileid: "72920214"
   
 - Autonomiczne strony hostowane w przeglądarce internetowej.  
   
-- Strony skompilowane w [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], które są hostowane w przeglądarce internetowej.  
+- Strony skompilowane w aplikacji XBAP, która jest hostowana w przeglądarce sieci Web.  
   
 - Strony skompilowane w aplikacji autonomicznej i hostowane w oknie nawigacji (<xref:System.Windows.Navigation.NavigationWindow>).  
   
-- Strony hostowane przez ramkę (<xref:System.Windows.Controls.Frame>), które mogą być hostowane na stronie autonomicznej lub strony skompilowanej w [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] lub aplikacji autonomicznej.  
+- Strony hostowane przez ramkę (<xref:System.Windows.Controls.Frame>), które mogą być hostowane na stronie autonomicznej lub strony skompilowane w aplikacji XBAP lub autonomicznej.  
   
  Aby ułatwić nawigację, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] implementuje następujące elementy:  
   
-- <xref:System.Windows.Navigation.NavigationService>udostępniony aparat nawigacyjny do przetwarzania żądań nawigacji, które są używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>i [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do obsługi nawigacji wewnątrz aplikacji.  
+- <xref:System.Windows.Navigation.NavigationService>udostępniony aparat nawigacyjny do przetwarzania żądań nawigacji, które są używane przez <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>i XBAP do obsługi nawigacji wewnątrz aplikacji.  
   
 - Metody nawigacji umożliwiające zainicjowanie nawigacji.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "72920214"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] mogą być hostowane w programie Microsoft Internet Explorer lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnień i ograniczeń, które są omówione w [hostingu](hosting-wpf-applications.md).  
+ Aplikacje XBAP mogą być hostowane w programie Microsoft Internet Explorer lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnień i ograniczeń, które są omówione w [hostingu](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Wdróż i konfiguruj  
@@ -124,7 +124,7 @@ ms.locfileid: "72920214"
 |[Zarządzanie aplikacjami — omówienie](application-management-overview.md)|Zawiera przegląd klasy <xref:System.Windows.Application>, w tym zarządzanie okresem istnienia aplikacji, systemem Windows, zasobami aplikacji i nawigacją.|  
 |[Okna w programie WPF](windows-in-wpf-applications.md)|Zawiera szczegółowe informacje dotyczące zarządzania oknami w aplikacji, w tym sposób używania <xref:System.Windows.Window> klasy i okien dialogowych.|  
 |[Nawigacja — omówienie](navigation-overview.md)|Zawiera omówienie zarządzania nawigacją między stronami aplikacji.|  
-|[Hosting](hosting-wpf-applications.md)|Zawiera omówienie [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
+|[Hosting](hosting-wpf-applications.md)|Zawiera omówienie aplikacji przeglądarki XAML (XBAP).|  
 |[Tworzenie i wdrażanie](building-and-deploying-wpf-applications.md)|Opisuje sposób kompilowania i wdrażania aplikacji WPF.|  
 |[Wprowadzenie do platformy WPF w programie Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Opisuje główne funkcje platformy WPF.|  
 |[Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|Przewodnik, który pokazuje, jak utworzyć aplikację WPF za pomocą nawigacji, układu, kontrolek, obrazów, stylów i powiązania.|

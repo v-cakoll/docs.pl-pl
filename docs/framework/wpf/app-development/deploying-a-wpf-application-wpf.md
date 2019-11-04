@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: daa69997f70c22a97482fd7e63d42506e7051732
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
-ms.translationtype: MT
+ms.openlocfilehash: ff6e76838ef2e3826c5b3dbeb44c748682902591
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291294"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421077"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Wdrażanie aplikacji WPF (WPF)
-Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania używana do wdrażania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia każdego typu aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zostać wdrożone. Systemy Windows i .NET Framework zawierają kilka technologii wdrażania. Technologia wdrażania, która jest używana do wdrażania aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zależy od typu aplikacji. Ten temat zawiera krótkie omówienie poszczególnych technologii wdrażania oraz sposób ich użycia w połączeniu z wymaganiami dotyczącymi wdrożenia poszczególnych typów aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Technologie wdrażania  
@@ -21,7 +21,7 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 - Wdrażanie polecenia XCopy.  
   
-- wdrożenie [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
+- Wdrożenie Instalator Windows.  
   
 - Wdrożenie ClickOnce.  
   
@@ -39,15 +39,15 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Instalator Windows  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] umożliwia spakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] jest instalowany z systemem Windows i umożliwia integrację z pulpitem, menu Start i apletem programy w panelu sterowania.  
+ Instalator Windows umożliwia spakowanie aplikacji jako samodzielnych plików wykonywalnych, które mogą być łatwo dystrybuowane do klientów i uruchamiane. Ponadto program Instalator Windows jest instalowany z systemem Windows i umożliwia integrację z pulpitem, menu Start i apletem programy w panelu sterowania.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] upraszcza instalację i odinstalowywanie aplikacji, ale nie zapewnia możliwości zapewniania aktualności zainstalowanych aplikacji z punktu widzenia wersji.  
+ Instalator Windows upraszcza instalację i odinstalowywanie aplikacji, ale nie zapewnia możliwości zapewniania aktualności zainstalowanych aplikacji z punktu widzenia wersji programu.  
   
  Aby uzyskać więcej informacji na temat Instalator Windows, zobacz [Instalator Windows Deployment](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>Wdrożenie ClickOnce  
- Technologia ClickOnce umożliwia wdrażanie aplikacji w stylu sieci Web dla aplikacji innych niż sieci Web. Aplikacje są publikowane w sieci Web lub na serwerach plików i wdrażane z nich. Chociaż technologia ClickOnce nie obsługuje pełnego zakresu funkcji klienta, które @no__t aplikacji instalowanych -0, obsługuje podzestaw, który obejmuje następujące elementy:  
+ Technologia ClickOnce umożliwia wdrażanie aplikacji w stylu sieci Web dla aplikacji innych niż sieci Web. Aplikacje są publikowane w sieci Web lub na serwerach plików i wdrażane z nich. Chociaż technologia ClickOnce nie obsługuje pełnego zakresu funkcji klienta, które Instalator Windows zainstalowanych aplikacji, obsługuje podzestaw, który obejmuje następujące elementy:  
   
 - Integracja z menu Start i apletem Panel sterowania programy.  
   
@@ -69,25 +69,25 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
   
 - Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji.  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+- Aplikacje przeglądarki XAML (XBAP).  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Wdrażanie aplikacji autonomicznych  
- Aplikacje autonomiczne są wdrażane przy użyciu technologii ClickOnce lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. W obu przypadkach aplikacje autonomiczne wymagają pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przydzielane do aplikacji autonomicznych wdrożonych przy użyciu [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Aplikacje autonomiczne wdrożone przy użyciu technologii ClickOnce nie mają automatycznie pełnego zaufania. Zamiast tego, ClickOnce Wyświetla okno dialogowe ostrzeżenia o zabezpieczeniach, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. W przypadku zaakceptowania aplikacja autonomiczna jest zainstalowana i ma przyznane pełne zaufanie. W przeciwnym razie aplikacja autonomiczna nie jest zainstalowana.  
+ Aplikacje autonomiczne są wdrażane przy użyciu technologii ClickOnce lub Instalator Windows. W obu przypadkach aplikacje autonomiczne wymagają pełnego zaufania do uruchomienia. Pełne zaufanie jest automatycznie przydzielane do aplikacji autonomicznych wdrożonych przy użyciu Instalator Windows. Aplikacje autonomiczne wdrożone przy użyciu technologii ClickOnce nie mają automatycznie pełnego zaufania. Zamiast tego, ClickOnce Wyświetla okno dialogowe ostrzeżenia o zabezpieczeniach, które użytkownicy muszą zaakceptować przed zainstalowaniem aplikacji autonomicznej. W przypadku zaakceptowania aplikacja autonomiczna jest zainstalowana i ma przyznane pełne zaufanie. W przeciwnym razie aplikacja autonomiczna nie jest zainstalowana.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Wdrażanie aplikacji XAML tylko do znaczników  
- Tylko znaczniki @no__t strony-0 są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i można je przeglądać za pomocą programu Internet Explorer. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równorzędną piaskownicę zabezpieczeń dla aplikacji sieci Web opartych na języku HTML.  
+ Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są zwykle publikowane na serwerach sieci Web, takich jak strony HTML, i można je przeglądać za pomocą programu Internet Explorer. Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są uruchamiane w obszarze piaskownicy zabezpieczeń częściowej relacji zaufania z ograniczeniami, które są zdefiniowane przez zestaw uprawnień strefy internetowej. Zapewnia to równorzędną piaskownicę zabezpieczeń dla aplikacji sieci Web opartych na języku HTML.  
   
- Aby uzyskać więcej informacji o zabezpieczeniach aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [zabezpieczenia](../security-wpf.md).  
+ Aby uzyskać więcej informacji na temat zabezpieczeń aplikacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [zabezpieczenia](../security-wpf.md).  
   
- Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony można zainstalować w lokalnym systemie plików przy użyciu polecenia XCopy lub [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Te strony można wyświetlać przy użyciu programu Internet Explorer lub Eksploratora Windows.  
+ Tylko znaczniki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony można zainstalować w lokalnym systemie plików przy użyciu polecenia XCopy lub Instalator Windows. Te strony można wyświetlać przy użyciu programu Internet Explorer lub Eksploratora Windows.  
   
  Aby uzyskać więcej informacji na temat języka XAML, zobacz [Omówienie języka XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Wdrażanie aplikacji przeglądarki XAML  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] są skompilowanymi aplikacjami, które wymagają wdrożenia następujących trzech plików:  
+ Aplikacje XBAP są skompilowanymi aplikacjami, które wymagają wdrożenia następujących trzech plików:  
   
 - *ApplicationName*. exe: plik wykonywalny aplikacji zestawu.  
   
@@ -98,21 +98,21 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 > [!NOTE]
 > Aby uzyskać więcej informacji na temat wdrażania i manifestów aplikacji, zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md).  
   
- Te pliki są tworzone po skompilowaniu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Aby uzyskać więcej informacji, zobacz [How to: Create a New WPF Browser Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Podobnie jak w przypadku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron, [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] są zwykle publikowane na serwerze sieci Web i wyświetlane przy użyciu przeglądarki Internet Explorer.  
+ Te pliki są tworzone po skompilowaniu aplikacji XBAP. Aby uzyskać więcej informacji, zobacz [How to: Create a New WPF Browser Application](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Podobnie jak w przypadku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] stron, aplikacje XBAP są zwykle publikowane na serwerze sieci Web i wyświetlane przy użyciu przeglądarki Internet Explorer.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] można wdrożyć na klientach przy użyciu dowolnych metod wdrażania. Jednak funkcja ClickOnce jest zalecana, ponieważ zapewnia następujące możliwości:  
+ Aplikacje XBAP można wdrożyć na klientach przy użyciu dowolnych metod wdrażania. Jednak funkcja ClickOnce jest zalecana, ponieważ zapewnia następujące możliwości:  
   
 1. Aktualizacje automatyczne po opublikowaniu nowej wersji.  
   
-2. Podniesienie uprawnień dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] działającego z pełnym zaufaniem.  
+2. Podniesienie uprawnień dla aplikacji XBAP działającego z pełnym zaufaniem.  
   
  Domyślnie ClickOnce publikuje pliki aplikacji przy użyciu rozszerzenia. deploy. Może to być przyczyną problemów, ale można ją wyłączyć. Aby uzyskać więcej informacji, zobacz [problemy z konfiguracją serwera i klienta we wdrożeniach ClickOnce](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments).  
   
- Aby uzyskać więcej informacji na temat wdrażania [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)], zobacz [Omówienie aplikacji w przeglądarce WPF XAML](wpf-xaml-browser-applications-overview.md).  
+ Aby uzyskać więcej informacji na temat wdrażania aplikacji przeglądarki XAML (XBAP), zobacz [Omówienie aplikacji przeglądarki XAML w języku WPF](wpf-xaml-browser-applications-overview.md).  
   
 <a name="Installing__NET_Framework_3_0"></a>   
-## <a name="installing-the-net-framework"></a>Instalowanie .NET Framework  
- Aby uruchomić aplikację [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], należy zainstalować na kliencie Microsoft .NET Framework. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z .NET Framework, gdy są wyświetlane aplikacje hostowane w przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
+## <a name="installing-the-net-framework"></a>Instalowanie programu .NET Framework  
+ Aby uruchomić aplikację [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], na kliencie musi być zainstalowana platforma Microsoft .NET. Program Internet Explorer automatycznie wykrywa, czy klienci są instalowani z .NET Framework podczas wyświetlania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji hostowanych w przeglądarce. Jeśli .NET Framework nie jest zainstalowana, program Internet Explorer poprosi użytkowników o ich zainstalowanie.  
   
  Aby wykryć, czy .NET Framework jest zainstalowana, program Internet Explorer zawiera aplikację programu inicjującego, która jest zarejestrowana jako rezerwowa procedura obsługi rozszerzeń MIME (Multipurpose Internet Mail Extensions) dla plików zawartości z następującymi rozszerzeniami: XAML, XPS,. XBAP i. Application. Jeśli przejdziesz do tych typów plików, a .NET Framework nie jest zainstalowana na kliencie, aplikacja inicjująca zażąda uprawnień do jej zainstalowania. Jeśli nie zostanie podane uprawnienie, ani .NET Framework ani aplikacja nie zostanie zainstalowana.  
   
@@ -123,4 +123,4 @@ Po skompilowaniu aplikacji Windows Presentation Foundation (WPF) muszą one zost
 ## <a name="see-also"></a>Zobacz także
 
 - [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)
-- [Bezpieczeństwo](../security-wpf.md)
+- [Security](../security-wpf.md)

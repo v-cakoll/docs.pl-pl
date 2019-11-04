@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ac47ec6e69b7910f474378eebd91d58c171a802e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419549"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Niejawnie wpisane tablice (Przewodnik programowania w języku C#)
 
@@ -24,11 +24,11 @@ W poniższych przykładach pokazano, jak utworzyć tablicę o typie określonym 
 
 [!code-csharp[csProgGuideLINQ#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#37)]
 
-W poprzednim przykładzie Zwróć uwagę, że z tablicami z niejawnie określonym typem, w lewej części instrukcji inicjowania nie są używane żadne nawiasy kwadratowe. Zwróć uwagę na to, że tablice nieregularne są `new []` inicjowane przy użyciu podobnie jak w przypadku tablic jednowymiarowych.
+W poprzednim przykładzie Zwróć uwagę, że z tablicami z niejawnie określonym typem, w lewej części instrukcji inicjowania nie są używane żadne nawiasy kwadratowe. Należy zauważyć, że tablice nieregularne są inicjowane przy użyciu `new []` podobnie jak w przypadku tablic jednowymiarowych.
 
 ## <a name="implicitly-typed-arrays-in-object-initializers"></a>Tablice o typie określonym niejawnie w inicjatorach obiektów
 
-Podczas tworzenia typu anonimowego, który zawiera tablicę, Tablica musi być niejawnie wpisana w inicjatorze obiektu typu. W poniższym przykładzie `contacts` jest tablicą typów anonimowych niejawnie, z których każdy zawiera tablicę o nazwie `PhoneNumbers`. Należy zauważyć, `var` że słowo kluczowe nie jest używane wewnątrz inicjatorów obiektów.
+Podczas tworzenia typu anonimowego, który zawiera tablicę, Tablica musi być niejawnie wpisana w inicjatorze obiektu typu. W poniższym przykładzie `contacts` jest tablicą typów anonimowych niejawnie, z których każdy zawiera tablicę o nazwie `PhoneNumbers`. Należy zauważyć, że słowo kluczowe `var` nie jest używane wewnątrz inicjatorów obiektów.
 
 [!code-csharp[csProgGuideLINQ#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#38)]
 
@@ -40,4 +40,4 @@ Podczas tworzenia typu anonimowego, który zawiera tablicę, Tablica musi być n
 - [Typy anonimowe](../classes-and-structs/anonymous-types.md)
 - [Inicjatory obiektów i kolekcji](../classes-and-structs/object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Wyrażenia zapytania LINQ](../linq-query-expressions/index.md)
+- [LINQ w C#](../../linq/index.md)

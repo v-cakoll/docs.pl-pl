@@ -5,12 +5,12 @@ ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7e6d1b663007d430f71f81923f343f1c43f5dd2d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: f5ff78eaf9d565a9708c7a3a11754579389e79e8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579180"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422245"
 ---
 # <a name="using-statement-c-reference"></a>using — instrukcjaC# (Reference)
 
@@ -56,7 +56,7 @@ Aby uzyskać więcej informacji na temat usuwania obiektów `IDisposable`, zobac
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [instrukcja using](~/_csharplang/spec/statements.md#the-using-statement) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [instrukcja using](~/_csharplang/spec/statements.md#the-using-statement) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 

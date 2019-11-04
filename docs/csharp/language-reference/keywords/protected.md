@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: a0420dd10d81c4ae893ab0447244a611091ed7b0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f54c3f36e5aeb428815d1c49cd797e559d156ea7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69601975"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422562"
 ---
 # <a name="protected-c-reference"></a>protected (odwołanie w C#)
 
-`protected` Słowo kluczowe jest modyfikatorem dostępu składowej.
+Słowo kluczowe `protected` jest modyfikatorem dostępu składowej.
 
- > Ta strona dotyczy `protected` dostępu. Słowo kluczowe jest również częścią [`protected internal`](protected-internal.md) modyfikatorów [`private protected`](private-protected.md) i dostępu. `protected`
+ > Ta strona obejmuje `protected` dostępu. Słowo kluczowe `protected` jest również częścią modyfikatorów dostępu [`protected internal`](protected-internal.md) i [`private protected`](private-protected.md) .
 
 Chroniony element członkowski jest dostępny w jego klasie i wystąpieniach klasy pochodnej.
 
@@ -37,11 +37,11 @@ Elementy członkowskie struktury nie mogą być chronione, ponieważ struktura n
 
 ## <a name="example"></a>Przykład
 
-W tym przykładzie Klasa `DerivedPoint` pochodzi od. `Point` W związku z tym można uzyskać dostęp do chronionych elementów członkowskich klasy bazowej bezpośrednio z klasy pochodnej.
+W tym przykładzie Klasa `DerivedPoint` pochodzi od `Point`. W związku z tym można uzyskać dostęp do chronionych elementów członkowskich klasy bazowej bezpośrednio z klasy pochodnej.
 
 [!code-csharp[csrefKeywordsModifiers#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#12)]  
 
-Jeśli zmienisz poziomy `x` dostępu dla i `y` na [prywatne](private.md), kompilator będzie wystawiał komunikaty o błędach:
+W przypadku zmiany poziomów dostępu `x` i `y` na [prywatne](private.md), kompilator będzie wystawiał komunikaty o błędach:
 
 `'Point.y' is inaccessible due to its protection level.`
 
@@ -49,16 +49,16 @@ Jeśli zmienisz poziomy `x` dostępu dla i `y` na [prywatne](private.md), kompil
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)
 - [Poziomy ułatwień dostępu](accessibility-levels.md)
-- [Modyfikatory](modifiers.md)
+- [Modyfikatory](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

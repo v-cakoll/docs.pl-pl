@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774450"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420067"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Samouczek: wykrywanie obiektów przy użyciu ONNX w ML.NET
 
@@ -45,7 +45,7 @@ Ten przykład służy do tworzenia aplikacji konsolowej .NET Core, która wykryw
 
 Wykrywanie obiektów to problem z obsługą komputera. Chociaż ściśle powiązane z klasyfikacją obrazów, wykrywanie obiektów wykonuje klasyfikację obrazów na bardziej szczegółowym poziomie. Wykrywanie obiektów zarówno lokalizuje _, jak i_ klasyfikuje jednostki w obrazach. Użyj wykrywania obiektów, gdy obrazy zawierają wiele obiektów różnych typów.
 
-![Obrazy obok siebie przedstawiające klasyfikację obrazu pies po lewej stronie, a Klasyfikacja obiektów grupy po prawej stronie](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Zrzuty ekranu przedstawiające klasyfikację obrazu w porównaniu z klasyfikacją obiektów.](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 Niektóre przypadki użycia dotyczące wykrywania obiektów obejmują:
 
@@ -66,7 +66,7 @@ Istnieją różne typy sieci neuronowych, najczęściej występujące wielowarst
 
 Wykrywanie obiektów to zadanie przetwarzania obrazu. W związku z tym większość modeli uczenia głębokiego przeszkolonych w celu rozwiązania tego problemu jest CNNs. Model używany w tym samouczku to mały model YOLOv2, bardziej zwarta wersja modelu YOLOv2 opisana w dokumencie: ["YOLO9000: lepszy, szybszy, silniejszy" przez RedMon i Fadhari](https://arxiv.org/pdf/1612.08242.pdf). Niewielka YOLOv2 jest przeszkolony na zestawie danych LZO w języku Pascal i składa się z 15 warstw, które mogą przewidzieć 20 różnych klas obiektów. Ponieważ mała YOLOv2 to skrócona wersja oryginalnego modelu YOLOv2, kompromis między szybkością i dokładnością jest zwiększany. Różne warstwy, które tworzą model, można wizualizować przy użyciu narzędzi, takich jak Netron. Sprawdzenie modelu spowoduje odwzorowanie połączeń między wszystkimi warstwami tworzącymi sieć neuronowych, gdzie każda warstwa będzie zawierać nazwę warstwy wraz z wymiarami odpowiednich operacji wejścia/wyjścia. Struktury danych używane do opisywania wejścia i wyjścia modelu są znane jako dwuczęściowe. Mogą być uważane za kontenery, które przechowują dane w N-wymiarach. W przypadku niewielkiej YOLOv2 Nazwa warstwy wejściowej jest `image` i oczekuje dwuczęściowy wymiar `3 x 416 x 416`. Nazwa warstwy wyjściowej jest `grid` i generuje dwustronicowy natężenie wymiarów `125 x 13 x 13`.
 
-![Warstwa wejściowa jest podzielona na warstwy ukryte, a następnie warstwa wyjściowa](./media/object-detection-onnx/netron-model-map.png)
+![Warstwa wejściowa jest podzielona na warstwy ukryte, a następnie warstwa wyjściowa](./media/object-detection-onnx/netron-model-map-layers.png)
 
 Model YOLO przyjmuje obraz `3(RGB) x 416px x 416px`. Model przyjmuje dane wejściowe i przekazuje je za pomocą różnych warstw, aby utworzyć dane wyjściowe. Dane wyjściowe dzielą obraz wejściowy na siatkę `13 x 13`, z każdą komórką w siatce składającą się z wartości `125`.
 
@@ -74,11 +74,11 @@ Model YOLO przyjmuje obraz `3(RGB) x 416px x 416px`. Model przyjmuje dane wejśc
 
 Open neuronowych Network Exchange (ONNX) to format Open Source dla modeli AI. ONNX obsługuje współdziałanie między strukturami. Oznacza to, że możesz przeszkolić model w jednym z wielu popularnych platform uczenia maszynowego, takich jak PyTorch, przekonwertować go do formatu ONNX i korzystać z modelu ONNX w różnych strukturach, takich jak ML.NET. Aby dowiedzieć się więcej, odwiedź witrynę [sieci Web ONNX](https://onnx.ai/).
 
-![Obsługiwane formaty ONNX są importowane do ONNX, a następnie używane przez inne formaty obsługiwane przez ONNX](./media/object-detection-onnx/onnx-frameworks.png)
+![Diagram ONNX obsługiwanych formatów.](./media/object-detection-onnx/onyx-supported-formats.png)
 
 Wstępnie szkolony model YOLOv2 jest przechowywany w formacie ONNX, szeregowaną reprezentacją warstw i wyznanie wzorców tych warstw. W programie ML.NET współdziałanie z ONNX jest realizowane przy użyciu pakietów NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) i [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) . Pakiet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) zawiera serię transformacji, która pobiera obraz i koduje go na wartości liczbowe, które mogą być używane jako dane wejściowe w potoku przewidywania lub uczenia. Pakiet [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) wykorzystuje środowisko uruchomieniowe ONNX w celu załadowania modelu ONNX i używania go do prognozowania na podstawie dostarczonych danych wejściowych.
 
-![Przepływ danych pliku ONNX do środowiska uruchomieniowego ONNX, a wreszcie do C# aplikacji](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![Przepływ danych pliku ONNX do środowiska uruchomieniowego ONNX.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>Konfigurowanie projektu .NET Core
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Aby wyświetlić obrazy z ograniczonymi polami, przejdź do katalogu `assets/images/output/`. Poniżej znajduje się przykład z jednego z przetworzonych obrazów.
 
-![Przykładowy przetworzony obraz pokoju Dinning](./media/object-detection-onnx/image3.jpg)
+![Przykładowy przetworzony obraz pokoju Dinning](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 Nabycia! Pomyślnie skompilowano model uczenia maszynowego na potrzeby wykrywania obiektów przez ponowne użycie wstępnie nauczonego modelu `ONNX` w ML.NET.
 

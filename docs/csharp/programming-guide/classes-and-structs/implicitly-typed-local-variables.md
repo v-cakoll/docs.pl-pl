@@ -1,106 +1,106 @@
 ---
-title: Niejawnie wpisane zmienne lokalne - C# Programming Guide
+title: Niejawnie wpisane zmienne lokalne C# — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635550"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419385"
 ---
-# <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalne (C# Programming Guide)
+# <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalneC# (Przewodnik programowania)
 
-Zmienne lokalne, może być zadeklarowana bez jawnego typu. `var` — Słowo kluczowe nakazuje kompilatorowi wywnioskowania typu zmiennej z wyrażenie po prawej stronie instrukcji inicjowania. Wnioskowany typ może być wbudowany typ, typ anonimowy, typ zdefiniowany przez użytkownika lub typ zdefiniowany w bibliotece klas programu .NET Framework. Aby uzyskać więcej informacji o tym, jak zainicjować tablic z `var`, zobacz [niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md).
+Zmienne lokalne można deklarować bez udzielania jawnego typu. Słowo kluczowe `var` instruuje kompilator do wywnioskowania typu zmiennej z wyrażenia po prawej stronie instrukcji inicjującej. Typ wnioskowany może być typem wbudowanym, typem anonimowym, typem zdefiniowanym przez użytkownika lub typem zdefiniowanym w bibliotece klas .NET Framework. Aby uzyskać więcej informacji na temat inicjowania tablic z `var`, zobacz [niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md).
 
-W poniższych przykładach pokazano różne sposoby, w których zmienne lokalne mogą być deklarowane przy użyciu `var`:
+W poniższych przykładach pokazano różne sposoby deklarowania zmiennych lokalnych przy użyciu `var`:
 
 [!code-csharp[csProgGuideLINQ#43](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#43)]
 
-Należy pamiętać, że `var` — słowo kluczowe nie oznaczać "variant" i nie wskazuje, że zmienna jest luźno wpisane lub z późnym wiązaniem. Po prostu oznacza to, że kompilator określa i przypisuje najbardziej odpowiedniego typu.
+Ważne jest, aby zrozumieć, że słowo kluczowe `var` nie ma znaczenia "Variant" i nie wskazuje, że zmienna jest luźno wpisana lub późna. Oznacza to, że kompilator określa i przypisuje najbardziej odpowiedni typ.
 
-`var` — Słowo kluczowe może być używana w kontekstach następujące:
+Słowo kluczowe `var` może być używane w następujących kontekstach:
 
-- W zmiennych lokalnych (zmiennych zadeklarowanych w zakresie metoda) jak pokazano w poprzednim przykładzie.
+- W przypadku zmiennych lokalnych (zmienne zadeklarowane w zakresie metody), jak pokazano w poprzednim przykładzie.
 
-- W [dla](../../language-reference/keywords/for.md) instrukcji inicjowania.
+- W instrukcji [for](../../language-reference/keywords/for.md) inicjującej.
 
     ```csharp
     for(var x = 1; x < 10; x++)
     ```
 
-- W [foreach](../../language-reference/keywords/foreach-in.md) instrukcji inicjowania.
+- W instrukcji inicjującej [foreach](../../language-reference/keywords/foreach-in.md) .
 
     ```csharp
     foreach(var item in list){...}
     ```
 
-- W [przy użyciu](../../language-reference/keywords/using-statement.md) instrukcji.
+- W instrukcji [using](../../language-reference/keywords/using-statement.md) .
 
     ```csharp
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Aby uzyskać więcej informacji, zobacz [jak: Użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Aby uzyskać więcej informacji, zobacz [jak: użyć niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
-## <a name="var-and-anonymous-types"></a>var i typy anonimowe
+## <a name="var-and-anonymous-types"></a>typy var i Anonymous
 
-W wielu przypadkach użycia `var` jest opcjonalny, a to udogodnienie składni. Jednak gdy zmienna jest inicjowana za pomocą typu anonimowego należy zadeklarować zmienną jako `var` Jeśli chcesz uzyskać dostęp do właściwości obiektu w dowolnym momencie. Jest to typowy scenariusz w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeniach zapytań. Aby uzyskać więcej informacji, zobacz [typy anonimowe](anonymous-types.md).
+W wielu przypadkach użycie `var` jest opcjonalne i jest tylko wygodą składni. Jeśli jednak zmienna jest inicjowana z typem anonimowym, należy zadeklarować zmienną jako `var`, jeśli chcesz uzyskać dostęp do właściwości obiektu w późniejszym momencie. Jest to typowy scenariusz w [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] wyrażeń zapytań. Aby uzyskać więcej informacji, zobacz [Typy anonimowe](anonymous-types.md).
 
-Z punktu widzenia kodu źródłowego typ anonimowy nie ma nazwy. W związku z tym jeśli zmienna zapytania została zainicjowana przy użyciu `var`, a następnie jedynym sposobem, aby uzyskać dostęp do właściwości w zwracanej sekwencji obiektów jest użycie `var` jako typ zmiennej iteracji w `foreach` instrukcji.
+Z perspektywy kodu źródłowego typ anonimowy nie ma nazwy. W związku z tym, jeśli zmienna zapytania została zainicjowana przy użyciu `var`, jedynym sposobem uzyskania dostępu do właściwości w zwracanej sekwencji obiektów jest użycie `var` jako typu zmiennej iteracji w instrukcji `foreach`.
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
 ## <a name="remarks"></a>Uwagi
 
-Poniższe ograniczenia mają zastosowanie do deklaracji zmiennych wpisanych niejawnie:
+Następujące ograniczenia dotyczą deklaracji zmiennej o typie określonym niejawnie:
 
-- `var` można używać tylko w przypadku zmiennej lokalnej jest deklarowane i inicjowane w tej samej instrukcji; Nie można zainicjować zmiennej, na wartość null lub do grupy metoda lub funkcja anonimowa.
+- `var` można używać tylko wtedy, gdy zmienna lokalna jest zadeklarowana i zainicjowana w tej samej instrukcji; nie można zainicjować zmiennej do wartości null lub do grupy metod lub funkcji anonimowej.
 
-- `var` Nie można używać w polach w zakresie klasy.
+- nie można używać `var` dla pól w zakresie klasy.
 
-- Zmienne zadeklarowane za pomocą `var` nie można używać w wyrażenia inicjowania. Innymi słowy, to wyrażenie jest legalna`: int i = (i = 20);` to wyrażenie powoduje błąd w czasie kompilacji: `var i = (i = 20);`
+- Zmienne zadeklarowane za pomocą `var` nie mogą być używane w wyrażeniu inicjalizacji. Innymi słowy, to wyrażenie jest prawne`: int i = (i = 20);` ale to wyrażenie powoduje błąd czasu kompilacji: `var i = (i = 20);`
 
-- Nie można zainicjować wiele zmiennych wpisanych niejawnie w tej samej instrukcji.
+- W tej samej instrukcji nie można zainicjować wielu niejawnie wpisanych zmiennych.
 
-- Jeśli typ o nazwie `var` znajduje się w zakresie, a następnie `var` — słowo kluczowe zostanie rozwiązany w tej nazwy typu i nie będzie traktowane jako część niejawnie wpisane deklaracji zmiennej lokalnej.
+- Jeśli typ o nazwie `var` znajduje się w zakresie, wówczas słowo kluczowe `var` zostanie rozpoznane jako nazwa tego typu i nie będzie traktowane jako część niejawnie wpisanej deklaracji zmiennej lokalnej.
 
-Niejawnego wpisywania z `var` — słowo kluczowe można stosować tylko do zmiennych w zakresie metody lokalnej. Niejawnego wpisywania nie jest dostępna dla pola klasy jako C# kompilator napotyka logiczne paradox przetworzeniu kod: kompilator musi znać typ pola, ale nie można określić typu, dopóki nie zostanie przeanalizowany wyrażenia przypisania, i Nie można obliczyć wyrażenia, nie wiedząc o tym typie. Rozważmy poniższy kod:
+Niejawne wpisywanie za pomocą słowa kluczowego `var` może być stosowane tylko do zmiennych w zakresie metody lokalnej. Niejawne wpisywanie nie jest dostępne dla pól C# klas, ponieważ kompilator napotyka logiczną Paradox w trakcie przetwarzania kodu: kompilator musi znać typ pola, ale nie może ustalić typu do momentu przeanalizowania wyrażenia przypisania i nie można oszacować wyrażenia bez znajomości typu. Rozważmy następujący kod:
 
 ```csharp
 private var bookTitles;
 ```
 
-`bookTitles` To pole klasy dla danego typu `var`. Ponieważ pole zawiera Brak wyrażenia do obliczenia, nie ma możliwości aby kompilator wywnioskuje typ `bookTitles` powinien być. Ponadto dodanie wyrażenie do pola (tak jak w przypadku dla zmiennej lokalnej) jest również niewystarczające:
+`bookTitles` to pole klasy, którego typ to `var`. Ponieważ pole nie ma wyrażenia do obliczenia, nie jest możliwe, aby kompilator mógł wnioskować, jakiego typu `bookTitles` ma być. Ponadto dodanie wyrażenia do pola (na przykład dla zmiennej lokalnej) jest również niewystarczające:
 
 ```csharp
 private var bookTitles = new List<string>();
 ```
 
-Gdy kompilator napotka pól podczas kompilacji kodu, rejestruje typ każdego pola przed przetworzeniem wszystkie wyrażenia skojarzonych z nim. Kompilator napotka na tym samym paradox, próby przeprowadzenia analizy `bookTitles`: musi wiedzieć typu pola, ale kompilator będzie zazwyczaj określić `var`tego typu, analizując wyrażenie, które nie jest możliwe, nie wiedząc o tym typie wcześniej.
+Gdy kompilator napotyka pola podczas kompilacji kodu, rejestruje każdy typ pola przed przetworzeniem skojarzonych z nim wyrażeń. Kompilator napotyka ten sam program Paradox, próbując przeanalizować `bookTitles`: musi znać typ pola, ale kompilator zwykle określa typ `var`, analizując wyrażenie, które nie jest możliwe bez uprzedniego poznania typu.
 
-Może się okazać, że `var` może być również przydatne w przypadku wyrażeń zapytania, w których jest trudny do określenia dokładnego skonstruowanego typu zmiennej zapytania. Może to być spowodowane grupowania i kolejność operacji.
+Może się okazać, że `var` może być również przydatne w przypadku wyrażeń zapytania, w których dokładny, skonstruowany typ zmiennej zapytania jest trudny do określenia. Może się to zdarzyć w przypadku operacji grupowania i porządkowania.
 
-`var` — Słowo kluczowe może być także przydatny podczas określonego typu zmiennej jest niewygodna do typu na klawiaturze, jest oczywiste lub nie zwiększa czytelność kodu. Jednym z przykładów gdzie `var` przydaje się w tym sposób jest zagnieżdżonych typów rodzajowych, takich jak używane z operacjami grupy. W następującym zapytaniu typ zmiennej zapytania jest `IEnumerable<IGrouping<string, Student>>`. Tak długo, jak Ty i inni, którzy muszą utrzymywać kod to zrozumieć, tam nie ma problemu przy użyciu niejawnego wpisywania dla wygody i skrócenia programu.
+Słowo kluczowe `var` może być również przydatne, gdy określony typ zmiennej jest żmudnym do wpisywania na klawiaturze lub jest oczywiste lub nie dodaje do czytelności kodu. Przykład, w którym `var` jest pomocne w ten sposób, to z zagnieżdżonych typów ogólnych, takich jak te używane w przypadku operacji grupowych. W poniższym zapytaniu typ zmiennej zapytania jest `IEnumerable<IGrouping<string, Student>>`. Tak długo, jak ty i inne osoby, które muszą zachować ten kod, nie występują problemy z użyciem niejawnego wpisywania dla wygody i zwięzłości.
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-Jednak użycie `var` mieć co najmniej mogą sprawić, że kod jest trudniejszy do zrozumienia innym deweloperom. Z tego powodu, dokumentacja języka C# zazwyczaj używa `var` tylko jeśli jest to wymagane.
+Jednak użycie `var` ma co najmniej potencjał, aby kod był trudniejszy do zrozumienia dla innych deweloperów. Z tego powodu dokumentacja zazwyczaj C# używa `var` tylko wtedy, gdy jest to wymagane.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../../language-reference/index.md)
+- [C#Odwoła](../../language-reference/index.md)
 - [Niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md)
-- [Instrukcje: Użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Instrukcje: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Typy anonimowe](anonymous-types.md)
 - [Inicjatory obiektów i kolekcji](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Wyrażenia zapytań LINQ](../linq-query-expressions/index.md)
-- [LINQ (Language-Integrated Query)](../../linq/index.md)
+- [LINQ w C#](../../linq/index.md)
+- [LINQ (zapytanie zintegrowane z językiem)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)
 - [using, instrukcja](../../language-reference/keywords/using-statement.md)

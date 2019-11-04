@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179921"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422959"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# opcje kompilatora)
 
@@ -32,13 +32,13 @@ Powoduje, że kompilator akceptuje tylko składnię, która jest zawarta w wybra
 
 |Opcja|Znaczenie|
 |------------|-------------|
-|wersja zapoznawcza|Kompilator akceptuje wszystkie prawidłowe składnie języka od najnowszej wersji zapoznawczej, którą może obsłużyć.|
-|najnowsza|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji (w tym wydań pomocniczych), którą może obsłużyć.|
+|Przeglądania|Kompilator akceptuje wszystkie prawidłowe składnie języka od najnowszej wersji zapoznawczej, którą może obsłużyć.|
+|Ostatnia|Kompilator akceptuje całą poprawną składnię języka od najnowszej wersji (w tym wydań pomocniczych), którą może obsłużyć.|
 |latestMajor|Kompilator akceptuje wszystkie prawidłowe składnie języka od najnowszej wersji głównej, którą może obsłużyć.|
 |8.0|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 8,0 lub niższej.|
-|7.3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,3 lub niższej.|
-|7.2|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,2 lub niższej.|
-|7.1|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,1 lub niższej.|
+|7,3|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,3 lub niższej.|
+|7,2|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,2 lub niższej.|
+|7,1|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,1 lub niższej.|
 |7|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 7,0 lub niższej.|
 |6|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 6,0 lub niższej.|
 |5|Kompilator akceptuje tylko składnię, która jest uwzględniona w C# 5,0 lub niższej.|
@@ -63,12 +63,12 @@ Aby poznać inne sposoby określania wersji C# językowej, zobacz artykuł [Wybi
 
 Aby uzyskać informacje o tym, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.LanguageVersion%2A>.
 
-## <a name="c-language-specification"></a>C#Specyfikacja języka
+## <a name="c-language-specification"></a>specyfikacja języka C#
 
-|Wersja|Link|Opis|
+|Wersja|Łącze|Opis|
 |-------|----|-----------|
 |C#7,0 i nowsze||obecnie niedostępne|
-|C#6,0|[Link](../language-specification/index.md)|C#Specyfikacja języka w wersji 6 — nieoficjalne wersje robocze: .NET Foundation|
+|C#6,0|[Powiązań](/dotnet/csharp/language-reference/language-specification/introduction)|C#Specyfikacja języka w wersji 6 — nieoficjalne wersje robocze: .NET Foundation|
 |C#5,0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Standardowa ECMA-334, wersja 5|
 |C#3,0|[Pobierz dokument](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|C#Specyfikacja języka wersja 3,0: Microsoft Corporation|
 |C#2,0|[Pobierz plik PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Standard ECMA-334 czwarta|
@@ -81,12 +81,12 @@ W poniższej tabeli wymieniono minimalne wersje zestawu SDK z C# kompilatorem ob
 
 |C#Wersja|Minimalna wersja zestawu SDK|
 |----------|-------------------|
-|C#8,0| Microsoft Visual Studio/Build Tools 2019, wersja 16,3 lub .NET Core 3,0 SDK |
-|C#7,3| Microsoft Visual Studio/Build Tools 2017, wersja 15,7 |
-|C#7,2| Microsoft Visual Studio/Build Tools 2017, wersja 15,5 |
-|C#7,1| Microsoft Visual Studio/Build Tools 2017, wersja 15,3 |
-|C#7,0| Narzędzia Microsoft Visual Studio/Build Tools 2017 |
-|C#ust| Narzędzia Microsoft Visual Studio/Build Tools 2015 |
+|C# 8.0| Microsoft Visual Studio/Build Tools 2019, wersja 16,3 lub .NET Core 3,0 SDK |
+|C# 7.3| Microsoft Visual Studio/Build Tools 2017, wersja 15,7 |
+|C# 7.2| Microsoft Visual Studio/Build Tools 2017, wersja 15,5 |
+|C# 7.1| Microsoft Visual Studio/Build Tools 2017, wersja 15,3 |
+|C# 7.0| Narzędzia Microsoft Visual Studio/Build Tools 2017 |
+|C# 6| Narzędzia Microsoft Visual Studio/Build Tools 2015 |
 |C#5000| Microsoft Visual Studio/Build Tools 2012 lub z pakietem .NET Framework 4,5 |
 |C#czwart| Microsoft Visual Studio/Build Tools 2010 lub z pakietem .NET Framework 4,0 |
 |C#r.3| Microsoft Visual Studio/Build Tools 2008 lub z pakietem .NET Framework 3,5 |
@@ -95,5 +95,5 @@ W poniższej tabeli wymieniono minimalne wersje zestawu SDK z C# kompilatorem ob
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Opcje kompilatora](index.md)
+- [Opcje kompilatora C#](index.md)
 - [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

@@ -9,44 +9,44 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: ec64c7c2051b12cba01135054a90e54864b7386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64764d43191d30c191c5d6519982b16cfc86d26e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912486"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460954"
 ---
 # <a name="button-styles-and-templates"></a>Style i szablony przycisków
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Button> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Button>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="button-parts"></a>Przycisk części  
- <xref:System.Windows.Controls.Button> Formant nie ma żadnych części o nazwie.  
+## <a name="button-parts"></a>Części przycisku  
+ Formant <xref:System.Windows.Controls.Button> nie zawiera żadnych nazwanych części.  
   
-## <a name="button-states"></a>Stany przycisku  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Button> kontroli.  
+## <a name="button-states"></a>Stany przycisków  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Button>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad kontrolką.|  
-|Naciśnięto|CommonStates|Użytkownik naciśnie kontrolkę.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
+|Styczn|CommonStates|Kontrolka zostanie naciśnięty.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
 |Fokus|FocusStates|Kontrolka ma fokus.|  
-|Po przeniesieniu fokusu|FocusStates|Kontrolka nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` i kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` i kontrolka nie ma fokusu.|  
+|Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, a kontrolka ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` i formant nie ma fokusu.|  
   
-## <a name="button-controltemplate-example"></a>Przycisk przykład ControlTemplate  
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Button> kontroli.  
+## <a name="button-controltemplate-example"></a>Przykład ControlTemplate przycisku  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.Button>.  
   
  [!code-xaml[ControlTemplateExamples#Button](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/button.xaml#button)]  
   
- W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -54,5 +54,5 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Button> ko
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

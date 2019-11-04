@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 12ced911c6fded5dd9016ea377a3a4518c9c2ee1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 9a3d579019db4d2b59a0252dbe63b4a6a0468849
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920339"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458301"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Obsługa zdarzeń Visual Basic oraz WPF
 W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można użyć słowa kluczowego `Handles` specyficznego dla języka w celu skojarzenia programów obsługi zdarzeń z wystąpieniami, zamiast dołączać obsługi zdarzeń z atrybutami lub przy użyciu metody <xref:System.Windows.UIElement.AddHandler%2A>. Jednak technika `Handles` dołączania programów obsługi do wystąpień ma pewne ograniczenia, ponieważ składnia `Handles` nie może obsługiwać niektórych określonych funkcji zdarzeń kierowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemie zdarzeń.  
@@ -47,4 +47,4 @@ W przypadku języka Microsoft Visual Basic .NET w konkretnym przypadku można u�
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](marking-routed-events-as-handled-and-class-handling.md)
 - [Przegląd zdarzeń trasowanych](routed-events-overview.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

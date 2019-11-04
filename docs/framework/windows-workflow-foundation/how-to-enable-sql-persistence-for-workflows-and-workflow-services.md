@@ -1,16 +1,13 @@
 ---
 title: 'Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy'
 ms.date: 03/30/2017
-dev_langs:
-- csharp
-- vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: b3ba21234af9555a4e40a0b587ac21473cff8761
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834839"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460877"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie trwałości SQL dla przepływów pracy i usług przepływu pracy
 
@@ -35,7 +32,7 @@ W poniższych sekcjach opisano sposób włączania trwałości dla przepływów 
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>Włączanie trwałości dla samohostowanych przepływów pracy korzystających z funkcji WorkflowApplication
 
-Można włączyć trwałość dla samodzielnych przepływów pracy, które wykorzystują program <xref:System.Activities.WorkflowApplication> programowo przy użyciu modelu obiektów <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. Poniższa procedura zawiera kroki, które należy wykonać.
+Można włączyć trwałość dla samodzielnych przepływów pracy, które wykorzystują <xref:System.Activities.WorkflowApplication> programowo przy użyciu modelu obiektów <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. Poniższa procedura zawiera kroki, które należy wykonać.
 
 #### <a name="to-enable-persistence-for-self-hosted-workflows"></a>Aby włączyć trwałość dla samodzielnych przepływów pracy
 
@@ -62,7 +59,7 @@ Można włączyć trwałość dla samodzielnych przepływów pracy, które wykor
    > [!NOTE]
    > W zależności od wersji SQL Server Nazwa serwera parametrów połączenia może się różnić.
 
-4. Wywołaj metodę <xref:System.Activities.WorkflowApplication.Persist%2A> w obiekcie <xref:System.Activities.WorkflowApplication>, aby zachować przepływ pracy, lub metodę <xref:System.Activities.WorkflowApplication.Unload%2A>, aby zachować i zwolnić przepływ pracy. Można także obsłużyć zdarzenie <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> zgłoszone przez obiekt <xref:System.Activities.WorkflowApplication> i zwrócić odpowiedni element (<xref:System.Activities.PersistableIdleAction.Persist> lub <xref:System.Activities.PersistableIdleAction.Unload>) <xref:System.Activities.PersistableIdleAction>.
+4. Wywołaj metodę <xref:System.Activities.WorkflowApplication.Persist%2A> na obiekcie <xref:System.Activities.WorkflowApplication>, aby zachować przepływ pracy lub <xref:System.Activities.WorkflowApplication.Unload%2A> metodę utrwalania i zwalniania przepływu pracy. Można także obsłużyć zdarzenie <xref:System.Activities.WorkflowApplication.PersistableIdle%2A> zgłoszone przez obiekt <xref:System.Activities.WorkflowApplication> i zwrócić odpowiedni element członkowski (<xref:System.Activities.PersistableIdleAction.Persist> lub <xref:System.Activities.PersistableIdleAction.Unload>) <xref:System.Activities.PersistableIdleAction>.
 
    ```csharp
    wfApp.PersistableIdle = delegate(WorkflowApplicationIdleEventArgs e)
@@ -76,7 +73,7 @@ Można włączyć trwałość dla samodzielnych przepływów pracy, które wykor
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Włączanie trwałości dla samodzielnych usług przepływu pracy korzystających z obiektu WorkflowServiceHost
 
-Można włączyć trwałość dla samodzielnych usług przepływu pracy, które wykorzystują program <xref:System.ServiceModel.WorkflowServiceHost> programowo przy użyciu klasy <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> lub klasy <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A>.
+Można włączyć trwałość dla samodzielnych usług przepływu pracy, które używają <xref:System.ServiceModel.WorkflowServiceHost> programowo przy użyciu klasy <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> lub klasy <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A>.
 
 ### <a name="using-the-sqlworkflowinstancestorebehavior-class"></a>Korzystanie z klasy SqlWorkflowInstanceStoreBehavior
 
@@ -119,7 +116,7 @@ Poniższa procedura zawiera kroki umożliwiające użycie klasy <xref:System.Ser
 
 ### <a name="using-the-durableinstancingoptions-property"></a>Używanie właściwości DurableInstancingOptions
 
-Po zastosowaniu `SqlWorkflowInstanceStoreBehavior` `DurableInstancingOptions.InstanceStore` w `WorkflowServiceHost` jest ustawiany na obiekt `SqlWorkflowInstanceStore` utworzony przy użyciu wartości konfiguracyjnych. Można to zrobić programowo, aby ustawić właściwość <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> `WorkflowServiceHost` bez używania klasy `SqlWorkflowInstanceStoreBehavior`, jak pokazano w poniższym przykładzie kodu.
+Gdy `SqlWorkflowInstanceStoreBehavior` jest stosowany, `DurableInstancingOptions.InstanceStore` na `WorkflowServiceHost` jest ustawiony na obiekt `SqlWorkflowInstanceStore` utworzony przy użyciu wartości konfiguracyjnych. Można to zrobić programowo, aby ustawić właściwość <xref:System.ServiceModel.Activities.WorkflowServiceHost.DurableInstancingOptions%2A> `WorkflowServiceHost` bez używania klasy `SqlWorkflowInstanceStoreBehavior`, jak pokazano w poniższym przykładzie kodu.
 
 ```csharp
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;
@@ -129,7 +126,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 Możesz włączyć trwałość dla usługi przepływu pracy obsługiwanej przez samodzielny lub usługi aktywacji procesów systemu Windows (WAS) przy użyciu pliku konfiguracji. Hostowana usługa przepływu pracy używa obiektu WorkflowServiceHost jako samoobsługowego usługi przepływu pracy.
 
-@No__t-0, zachowanie usługi, które umożliwia wygodną zmianę właściwości [magazynu wystąpienia przepływu pracy SQL](sql-workflow-instance-store.md) za pomocą konfiguracji XML. W przypadku hostowanych usług przepływu pracy Użyj pliku Web. config. Poniższy przykład konfiguracji pokazuje, jak skonfigurować magazyn wystąpień przepływu pracy SQL przy użyciu elementu zachowanie `sqlWorkflowInstanceStore` w pliku konfiguracyjnym.
+`SqlWorkflowInstanceStoreBehavior`, zachowanie usługi, które umożliwia wygodną zmianę właściwości [magazynu wystąpienia przepływu pracy SQL](sql-workflow-instance-store.md) za pomocą konfiguracji XML. W przypadku hostowanych usług przepływu pracy Użyj pliku Web. config. Poniższy przykład konfiguracji pokazuje, jak skonfigurować magazyn wystąpień przepływu pracy SQL przy użyciu elementu zachowanie `sqlWorkflowInstanceStore` w pliku konfiguracyjnym.
 
 ```xml
 <serviceBehaviors>
@@ -140,16 +137,15 @@ Możesz włączyć trwałość dla usługi przepływu pracy obsługiwanej przez 
                     instanceCompletionAction="DeleteAll | DeleteNothing"
                     instanceLockedExceptionAction="NoRetry | BasicRetry |AggressiveRetry"
                     hostLockRenewalPeriod="00:00:30"
-                    runnableInstancesDetectionPeriod="00:00:05">
+                    runnableInstancesDetectionPeriod="00:00:05" />
 
-        <sqlWorkflowInstanceStore/>
     </behavior>
 </serviceBehaviors>
 ```
 
-Jeśli nie ustawisz wartości dla właściwości `connectionString` lub `connectionStringName`, magazyn wystąpień programu SQL Workflow używa domyślnie nazwanych parametrów połączenia `DefaultSqlWorkflowInstanceStoreConnectionString`.
+Jeśli nie ustawisz wartości dla `connectionString` lub właściwości `connectionStringName`, magazyn wystąpień przepływu pracy SQL używa domyślnych nazwanych parametrów połączenia `DefaultSqlWorkflowInstanceStoreConnectionString`.
 
-Po zastosowaniu `SqlWorkflowInstanceStoreBehavior` `DurableInstancingOptions.InstanceStore` w `WorkflowServiceHost` jest ustawiany na obiekt `SqlWorkflowInstanceStore` utworzony przy użyciu wartości konfiguracyjnych. Można to zrobić programowo, aby użyć `SqlWorkflowInstanceStore` z `WorkflowServiceHost` bez użycia elementu zachowania usługi.
+Gdy `SqlWorkflowInstanceStoreBehavior` jest stosowany, `DurableInstancingOptions.InstanceStore` na `WorkflowServiceHost` jest ustawiony na obiekt `SqlWorkflowInstanceStore` utworzony przy użyciu wartości konfiguracyjnych. Można to zrobić programowo, aby użyć `SqlWorkflowInstanceStore` z `WorkflowServiceHost` bez użycia elementu zachowanie usługi.
 
 ```csharp
 workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObject;
@@ -160,9 +156,9 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementy Machine. config powiązane z funkcją magazynu wystąpień przepływu pracy SQL
 
-Instalacja [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] powoduje dodanie następujących elementów związanych z funkcją magazynu wystąpień przepływu pracy SQL do pliku Machine. config:
+Instalacja [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] dodaje następujące elementy związane z funkcją Magazyn wystąpień przepływu pracy SQL do pliku Machine. config:
 
-- Dodaje następujący element rozszerzenia zachowania do pliku Machine. config, tak aby można było użyć elementu \<sqlWorkflowInstanceStore >, w pliku konfiguracji, aby skonfigurować trwałość dla usług.
+- Dodaje następujący element rozszerzenia zachowania do pliku Machine. config, tak aby można było użyć elementu \<obiekt SqlWorkflowInstanceStore >, w pliku konfiguracji, aby skonfigurować trwałość dla usług.
 
     ```xml
     <configuration>
@@ -172,6 +168,6 @@ Instalacja [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-
                     <add name="sqlWorkflowInstanceStore" type="System.Activities.DurableInstancing.SqlWorkflowInstanceStoreElement, System.Activities.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
                 </behaviorExtensions>
             </extensions>
-        <system.serviceModel>
-    <configuration>
+        </system.serviceModel>
+    </configuration>
     ```

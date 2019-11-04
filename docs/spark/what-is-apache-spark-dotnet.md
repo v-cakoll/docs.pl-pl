@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat platformy .NET dla Apache Spark, bezp
 author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
-ms.openlocfilehash: c31b50a20ac08bcde077e1e85ee915435a99fc28
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395853"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458202"
 ---
 # <a name="what-is-net-for-apache-spark"></a>Co to jest platforma .NET dla platformy Apache Spark?
 
@@ -19,10 +19,10 @@ ms.locfileid: "72395853"
 
 Program .NET dla Apache Spark umożliwia deweloperom korzystanie z platformy .NET lub baz kodu do wzięcia udziału w świecie analizy danych Big Data. Platforma .NET dla Apache Spark oferuje interfejsy API o wysokiej wydajności służące do korzystania z platformy Spark z C# systemów i F#. Za C# pomocą F#i można uzyskać dostęp do:
 
-* Dataframe i SparkSQL do pracy z danymi strukturalnymi
-* Strumień strukturalny platformy Spark do pracy z danymi przesyłania strumieniowego
-* Spark SQL na potrzeby pisania zapytań ze składnią SQL
-* Integracja z uczeniem maszynowym w celu przyspieszenia szkoleń i prognozowania (np. używania platformy .NET dla Apache Spark wraz z [ml.NET](http://dot.net/ml))
+* Dataframe i SparkSQL do pracy z danymi strukturalnymi.
+* Przesyłanie strumieniowe platformy Spark do pracy z danymi przesyłanymi strumieniowo.
+* Program Spark SQL do pisania zapytań ze składnią SQL.
+* Integracja z uczeniem maszynowym zapewniająca szybsze szkolenia i prognozowanie (czyli korzystanie z platformy .NET dla Apache Spark obok [ml.NET](https://dot.net/ml)).
 
 Platforma .NET dla Apache Spark jest zgodna z .NET Standard, formalną specyfikacją interfejsów API platformy .NET, które są wspólne dla implementacji platformy .NET. Oznacza to, że można używać platformy .NET do Apache Spark dowolnego miejsca, w którym piszesz kod platformy .NET, aby można było ponownie wykorzystać wszystkie wiedzę, umiejętności, kod i biblioteki, które już masz jako deweloper platformy .NET.
 
@@ -33,13 +33,13 @@ Platforma .NET dla Apache Spark jest zgodna z .NET Standard, formalną specyfika
 C#Powiązanie F# języka z platformą Spark jest zapisywane w nowej warstwie międzyoperacyjności platformy Spark, która oferuje łatwiejsze rozszerzanie. Ta nowa warstwa międzyoperacyjności platformy Spark została opracowana przy użyciu najlepszych rozwiązań dotyczących rozszerzenia języka i zoptymalizowanych pod kątem współdziałania i wydajności. Długoterminowe, takie rozszerzalność może służyć do dodawania obsługi innych języków w usłudze Spark.
 
 > [!div class="mx-imgBorder"]
-> ![.NET dla Apache Spark architektury @ no__t-1
+> ![.NET dla architektury Apache Spark](media/dotnet-spark-architecture.png)
 
 Aby uzyskać informacje o obsłudze międzyoperacyjności dla rozszerzeń języka Spark, zapoznaj się z [propozycją](https://issues.apache.org/jira/browse/SPARK-26257).
 
 ## <a name="net-for-apache-spark-performance"></a>Platforma .NET dla Apache Spark wydajności
 
-W porównaniu do języka Python i scala przy użyciu [testu TPC-H](http://www.tpc.org/tpch/)środowisko .net dla Apache Spark jest dobrze w większości przypadków i jest szybsze niż w języku Python, gdy wydajność funkcji zdefiniowanej przez użytkownika jest krytyczna. Istnieje ciągły nakład pracy w celu poprawy i oceny wydajności. 
+W porównaniu do języka Python i scala przy użyciu [testu TPC-H](http://www.tpc.org/tpch/)środowisko .net dla Apache Spark jest dobrze w większości przypadków i jest szybsze niż w języku Python, gdy wydajność funkcji zdefiniowanej przez użytkownika jest krytyczna. Istnieje ciągły nakład pracy w celu poprawy i oceny wydajności.
 
 Aby przeprowadzić własne testy porównawcze, zobacz wyniki testów dostępnych w [programie .NET dla Apache Spark GitHub](https://github.com/dotnet/spark/tree/master/benchmark).
 

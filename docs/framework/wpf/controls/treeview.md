@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761334"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458290"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView> Kontrolka wyświetla informacji w strukturze hierarchicznej przy użyciu zwijany węzłów.  
+Kontrolka <xref:System.Windows.Controls.TreeView> wyświetla informacje w strukturze hierarchicznej za pomocą zwijanych węzłów.  
   
- Na poniższej ilustracji przedstawiono przykładowy <xref:System.Windows.Controls.TreeView> formant, który zawiera zagnieżdżony <xref:System.Windows.Controls.TreeViewItem> kontrolki:  
+ Na poniższej ilustracji przedstawiono przykład kontrolki <xref:System.Windows.Controls.TreeView>, która ma zagnieżdżonych <xref:System.Windows.Controls.TreeViewItem> formantów:  
   
- ![Ilustracja, który zawiera zagnieżdżony TreeViewItem kontrolki.](./media/treeview/nested-treeviewitem-controls.jpg)  
+ ![Ilustracja przedstawiająca zagnieżdżone kontrolki TreeViewItem.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TreeView — omówienie](treeview-overview.md)  
@@ -31,5 +31,5 @@ ms.locfileid: "61761334"
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Powiązanie danych — omówienie](../data/data-binding-overview.md)  
+ [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)  
   [Szablonowanie danych — omówienie](../data/data-templating-overview.md)

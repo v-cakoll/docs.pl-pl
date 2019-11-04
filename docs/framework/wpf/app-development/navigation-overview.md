@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425282"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459769"
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 
@@ -742,7 +742,7 @@ Podobnie jak <xref:System.Windows.Controls.Frame>, przechodzenie do kodu HTML pr
 
 ### <a name="navigating-to-custom-objects"></a>Nawigowanie do obiektów niestandardowych
 
-Jeśli masz dane przechowywane jako obiekty niestandardowe, jednym ze sposobów wyświetlania tych danych jest utworzenie <xref:System.Windows.Controls.Page> z zawartością powiązaną z tymi obiektami (zobacz temat [powiązanie danych — omówienie](../data/data-binding-overview.md)). Jeśli nie potrzebujesz nakładu na tworzenie całej strony tylko w celu wyświetlenia obiektów, możesz przejść bezpośrednio do nich.
+Jeśli masz dane przechowywane jako obiekty niestandardowe, jednym ze sposobów wyświetlania tych danych jest utworzenie <xref:System.Windows.Controls.Page> z zawartością powiązaną z tymi obiektami (zobacz temat [powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)). Jeśli nie potrzebujesz nakładu na tworzenie całej strony tylko w celu wyświetlenia obiektów, możesz przejść bezpośrednio do nich.
 
 Rozważmy klasę `Person`, która jest zaimplementowana w poniższym kodzie.
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 59c72d9ae12a014a8c47cb3b2852b337b173446c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: efaf55220a41526b8952f01b8225f8336a4e8657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580620"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459665"
 ---
 # <a name="pack-uris-in-wpf"></a>Pakuj URI w WPF
 
@@ -188,7 +188,7 @@ Poniższy przykład pokazuje identyfikator URI pakietu dla [!INCLUDE[TLA2#tla_xa
 
 Pliki XAML, które są skonfigurowane jako elementy `Page` MSBuild, są kompilowane do zestawów w taki sam sposób jak pliki zasobów. W związku z tym elementy `Page` MSBuild można zidentyfikować przy użyciu identyfikatorów URI pakietów dla plików zasobów.
 
-Typy plików [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], które są powszechnie skonfigurowane jako elementy programu MSBuild `Page`, mają jeden z następujących elementów jako ich element główny:
+Typy plików [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], które są powszechnie skonfigurowane jako elementy programu MSBuild`Page`, mają jeden z następujących elementów jako ich element główny:
 
 - <xref:System.Windows.Window?displayProperty=nameWithType>
 
@@ -397,7 +397,7 @@ Tabela 4: względne identyfikatory URI pakietu w kodzie
 
 ### <a name="common-pack-uri-scenarios"></a>Scenariusze typowych identyfikatorów URI pakietu
 
-W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietów w celu identyfikowania zasobów, zawartości i lokacji plików pochodzenia. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] te konstrukcje są używane na różne sposoby, a poniższe sekcje obejmują kilka typowych zastosowań.
+W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietów w celu identyfikowania zasobów, zawartości i lokacji plików pochodzenia. W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]te konstrukcje są używane na różne sposoby, a poniższe sekcje obejmują kilka typowych zastosowań.
 
 <a name="Specifying_the_UI_to_Show_when_an_Application_Starts"></a>
 
@@ -407,11 +407,11 @@ W powyższych sekcjach omówiono sposób tworzenia identyfikatorów URI pakietó
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriWindow](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/Copy of App.xaml#startupuriwindow)]
 
-Aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] mogą również określać stronę jako początkowy interfejs użytkownika, jak pokazano w poniższym przykładzie.
+Aplikacje autonomiczne i aplikacje przeglądarki XAML (XBAP) mogą również określać stronę jako początkowy interfejs użytkownika, jak pokazano w poniższym przykładzie.
 
 [!code-xaml[PackURIOverviewSnippets#StartupUriPage](~/samples/snippets/csharp/VS_Snippets_Wpf/PackURIOverviewSnippets/CS/App.xaml#startupuripage)]
 
-Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] otwiera <xref:System.Windows.Navigation.NavigationWindow> do hostowania strony. W przypadku [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] strona jest wyświetlana w przeglądarce hosta.
+Jeśli aplikacja jest aplikacją autonomiczną, a strona jest określona za pomocą <xref:System.Windows.Application.StartupUri%2A>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] otwiera <xref:System.Windows.Navigation.NavigationWindow> do hostowania strony. W przypadku aplikacji XBAP strona jest wyświetlana w przeglądarce hosta.
 
 <a name="Navigating_to_a_Page"></a>
 
@@ -457,7 +457,7 @@ Słowniki zasobów (<xref:System.Windows.ResourceDictionary>) mogą służyć do
 
 [!code-xaml[ResourceDictionarySnippets#ResourceDictionaryPackURI](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceDictionarySnippets/CS/App.xaml#resourcedictionarypackuri)]
 
-Aby zapoznać się z omówieniem tematów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Style i tworzenia szablonów](../controls/styling-and-templating.md).
+Aby zapoznać się z omówieniem tematów w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 ## <a name="see-also"></a>Zobacz także
 

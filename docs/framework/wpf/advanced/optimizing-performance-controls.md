@@ -1,67 +1,67 @@
 ---
-title: 'Optymalizacja wydajności: Formanty - WPF'
+title: 'Optymalizacja wydajności: formanty — WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: 1e291e1638864176913342d02acad092f561789c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 595a4865e1d422f460aab18fc541326a4557476b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645683"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458540"
 ---
-# <a name="optimizing-performance-controls"></a>Optymalizacja wydajności: Formanty
+# <a name="optimizing-performance-controls"></a>Optymalizacja wydajności: kontrolki
 
-Windows Presentation Foundation (WPF) zawiera wiele wspólnych składników interfejsu użytkownika (UI), które są używane w większości aplikacji Windows. Ten temat zawiera technik poprawę wydajności interfejsu użytkownika.
+Windows Presentation Foundation (WPF) zawiera wiele typowych składników interfejsu użytkownika, które są używane w większości aplikacji systemu Windows. Ten temat zawiera techniki ulepszania wydajności interfejsu użytkownika.
 
 ## <a name="displaying-large-data-sets"></a>Wyświetlanie dużych zestawów danych
 
-Określa WPF, takich jak <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ComboBox> są używane do wyświetlania listy elementów w aplikacji. W przypadku dużych listy, aby wyświetlić może mieć wpływ na wydajność aplikacji. Ponieważ system standardowego układu, tworzy kontener układu dla każdego elementu skojarzonego z kontrolką listy i oblicza układ rozmiar i położenie. Zazwyczaj nie trzeba wyświetlić wszystkie elementy w tym samym czasie; Zamiast tego wyświetlić podzbiór, a użytkownik przewija listy. W takim przypadku warto użyć interfejsu użytkownika *wirtualizacji*, która oznacza, że generowania kontenera elementu i skojarzonych obliczeń układu dla elementu jest odroczone do czasu element jest widoczny.
+Formanty WPF, takie jak <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ComboBox>, służą do wyświetlania list elementów w aplikacji. Jeśli lista, która ma zostać wyświetlona, jest duża, może to wpłynąć na wydajność aplikacji. Wynika to z faktu, że standardowy układ układu tworzy kontener układu dla każdego elementu skojarzonego z kontrolką listy i oblicza jego rozmiar i położenie układu. Zazwyczaj nie ma potrzeby wyświetlania wszystkich elementów w tym samym czasie; Zamiast tego zostanie wyświetlony podzestaw, a użytkownik przewija listę. W tym przypadku warto używać *wirtualizacji*interfejsu użytkownika, co oznacza, że generowanie kontenera elementów i powiązane obliczenia układu dla elementu są odroczone do momentu wyświetlenia elementu.
 
-Wirtualizacja interfejsu użytkownika jest istotnym elementem kontrolki listy. Wirtualizacja interfejsu użytkownika nie należy mylić z wirtualizacji danych. Interfejs użytkownika wirtualizacji przechowywanie widoczne tylko dla elementów w pamięci, ale w przypadku powiązania danych przechowuje struktury danych w pamięci. Z kolei wirtualizacji danych przechowuje elementy danych, które są widoczne na ekranie w pamięci.
+Wirtualizacja interfejsu użytkownika jest ważnym aspektem formantów listy. Wirtualizacja interfejsu użytkownika nie należy mylić z wirtualizacją danych. Wirtualizacja interfejsu użytkownika przechowuje tylko widoczne elementy w pamięci, ale w scenariuszu powiązania danych przechowuje całą strukturę danych w pamięci. W przeciwieństwie do wirtualizacji danych są przechowywane tylko te elementy danych, które są widoczne na ekranie w pamięci.
 
-Domyślnie wirtualizacja interfejsu użytkownika jest włączona dla <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ListBox> kontrolki, gdy ich elementy listy są powiązane z danymi. <xref:System.Windows.Controls.TreeView> można włączyć wirtualizacji, ustawiając <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> dołączonych właściwości `true`. Jeśli chcesz włączyć wirtualizację interfejsu użytkownika w przypadku kontrolek niestandardowych, które wynikają z <xref:System.Windows.Controls.ItemsControl> lub istniejący element kontrolki używające <xref:System.Windows.Controls.StackPanel> klasy, takie jak <xref:System.Windows.Controls.ComboBox>, można ustawić <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> do <xref:System.Windows.Controls.VirtualizingStackPanel> i ustaw <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> do `true`. Niestety możesz wyłączyć wirtualizacji interfejsu użytkownika dla tych formantów bez wiedzy. Oto lista warunków, które wyłączają wirtualizacja interfejsu użytkownika.
+Domyślnie Wirtualizacja interfejsu użytkownika jest włączona dla <xref:System.Windows.Controls.ListView> i <xref:System.Windows.Controls.ListBox> formantów, gdy ich elementy listy są powiązane z danymi. wirtualizację <xref:System.Windows.Controls.TreeView> można włączyć, ustawiając właściwość <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A?displayProperty=nameWithType> dołączone do `true`. Jeśli chcesz włączyć wirtualizację interfejsu użytkownika dla kontrolek niestandardowych, które pochodzą od <xref:System.Windows.Controls.ItemsControl> lub istniejących formantów elementu, które używają klasy <xref:System.Windows.Controls.StackPanel>, takich jak <xref:System.Windows.Controls.ComboBox>, można ustawić <xref:System.Windows.Controls.ItemsControl.ItemsPanel%2A> na <xref:System.Windows.Controls.VirtualizingStackPanel> i ustawić <xref:System.Windows.Controls.VirtualizingPanel.IsVirtualizing%2A> `true`. Niestety, można wyłączyć wirtualizację interfejsu użytkownika dla tych kontrolek bez jej realizacji. Poniżej znajduje się lista warunków, które wyłączają wirtualizację interfejsu użytkownika.
 
-- Element kontenery są dodawane bezpośrednio do <xref:System.Windows.Controls.ItemsControl>. Na przykład, jeśli aplikacja jawnie dodaje <xref:System.Windows.Controls.ListBoxItem> obiekty do <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> nie wirtualizacji <xref:System.Windows.Controls.ListBoxItem> obiektów.
+- Kontenery elementów są dodawane bezpośrednio do <xref:System.Windows.Controls.ItemsControl>. Na przykład jeśli aplikacja jawnie dodaje <xref:System.Windows.Controls.ListBoxItem> obiektów do <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.ListBox> nie będzie wirtualizacji obiektów <xref:System.Windows.Controls.ListBoxItem>.
 
-- Element kontenerów w <xref:System.Windows.Controls.ItemsControl> są różnych typów. Na przykład <xref:System.Windows.Controls.Menu> , który używa <xref:System.Windows.Controls.Separator> obiektów nie może implementować elementu odtwarzania, ponieważ <xref:System.Windows.Controls.Menu> zawiera obiekty typu <xref:System.Windows.Controls.Separator> i <xref:System.Windows.Controls.MenuItem>.
+- Kontenery elementów w <xref:System.Windows.Controls.ItemsControl> są różnych typów. Na przykład <xref:System.Windows.Controls.Menu>, która używa obiektów <xref:System.Windows.Controls.Separator>, nie może zaimplementować odtwarzania elementu, ponieważ <xref:System.Windows.Controls.Menu> zawiera obiekty typu <xref:System.Windows.Controls.Separator> i <xref:System.Windows.Controls.MenuItem>.
 
-- Ustawienie <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> do `false`.
+- Ustawienie <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> na `false`.
 
-- Ustawienie <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A> do `false`.
+- Ustawienie <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A> na `false`.
 
-Ważną kwestią w przypadku wirtualizacji kontenerów elementów jest, czy masz informacje o stanie dodatkowe związane z kontenera elementu, który należy z elementem. W takim przypadku należy zapisać dodatkowy stan. Na przykład, Niewykluczone, że element zawarty w <xref:System.Windows.Controls.Expander> kontroli i <xref:System.Windows.Controls.Expander.IsExpanded%2A> stanu jest powiązany element kontenera, a nie sam element. Gdy kontener jest ponownie dla nowego elementu, bieżąca wartość <xref:System.Windows.Controls.Expander.IsExpanded%2A> jest używany dla nowego elementu. Ponadto stary element utraci poprawny <xref:System.Windows.Controls.Expander.IsExpanded%2A> wartość.
+Ważnym zagadnieniem podczas wirtualizacji kontenerów elementów jest fakt, że masz dodatkowe informacje o stanie skojarzone z kontenerem elementu, który należy do elementu. W takim przypadku należy zapisać dodatkowy stan. Na przykład może istnieć element zawarty w kontrolce <xref:System.Windows.Controls.Expander>, a stan <xref:System.Windows.Controls.Expander.IsExpanded%2A> jest powiązany z kontenerem elementu, a nie do samego elementu. Gdy kontener zostanie ponownie użyty dla nowego elementu, bieżąca wartość <xref:System.Windows.Controls.Expander.IsExpanded%2A> jest używana dla nowego elementu. Ponadto stary element traci poprawną wartość <xref:System.Windows.Controls.Expander.IsExpanded%2A>.
 
-Obecnie brak kontrolek WPF oferuje wbudowaną obsługę wirtualizacji danych.
+Obecnie żadna kontrolka WPF nie oferuje wbudowanej obsługi wirtualizacji danych.
 
 ## <a name="container-recycling"></a>Odtwarzanie kontenera
 
-Optymalizacja do wirtualizacji interfejsu użytkownika dodano w .NET Framework 3.5 SP1 dla formantów, które dziedziczą z <xref:System.Windows.Controls.ItemsControl> jest *odtwarzanie kontenera,* może również zwiększyć wydajność. Gdy <xref:System.Windows.Controls.ItemsControl> czy wirtualizacja interfejsu użytkownika używa jest wypełniana, tworzy kontener elementów dla każdego elementu, który stanie się widoczny i niszczy kontenera elementu dla każdego elementu, który przewija poza widokiem. *Odtwarzanie kontenera* umożliwia kontrolowanie, to ponowne użycie istniejących kontenerów elementów dla różne elementy danych, tak aby kontenerów elementów nie stale są tworzone i niszczone, gdy użytkownik przewija <xref:System.Windows.Controls.ItemsControl>. Można wybrać włączyć odzyskiwanie, ustawiając element <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> dołączonych właściwości <xref:System.Windows.Controls.VirtualizationMode.Recycling>.
+Optymalizacja wirtualizacji interfejsu użytkownika dodana w .NET Framework 3,5 SP1 dla formantów dziedziczących po <xref:System.Windows.Controls.ItemsControl> jest *odtwarzaniem kontenerów,* co może również zwiększyć wydajność przewijania. Gdy zostanie wyświetlona <xref:System.Windows.Controls.ItemsControl>, która używa wirtualizacji interfejsu użytkownika, tworzy kontener elementów dla każdego elementu, który przewija do widoku i niszczy kontener elementów dla każdego elementu, który jest przewijany do widoku. *Odtwarzanie kontenera* umożliwia kontrolce ponowne użycie istniejących kontenerów elementów dla różnych elementów danych, dzięki czemu kontenery elementów nie są stale tworzone i niszczone, gdy użytkownik przewinie <xref:System.Windows.Controls.ItemsControl>. Możesz włączyć odtwarzanie elementu, ustawiając właściwość <xref:System.Windows.Controls.VirtualizingPanel.VirtualizationMode%2A> dołączone do <xref:System.Windows.Controls.VirtualizationMode.Recycling>.
 
-Wszelkie <xref:System.Windows.Controls.ItemsControl> obsługiwanych przez wirtualizacji, można użyć odtwarzanie kontenera. Przykład sposobu włączania kontenera odtwarzanie na <xref:System.Windows.Controls.ListBox>, zobacz [zwiększa wydajność przewijanie ListBox](../controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).
+Wszystkie <xref:System.Windows.Controls.ItemsControl> obsługujące wirtualizację mogą używać odtwarzania kontenerów. Aby zapoznać się z przykładem sposobu włączania odtwarzania kontenera na <xref:System.Windows.Controls.ListBox>, zobacz [Poprawianie wydajności przewijania elementu ListBox](../controls/how-to-improve-the-scrolling-performance-of-a-listbox.md).
 
-## <a name="supporting-bidirectional-virtualization"></a>Obsługa dwukierunkowych wirtualizacji
+## <a name="supporting-bidirectional-virtualization"></a>Obsługa wirtualizacji dwukierunkowej
 
-<xref:System.Windows.Controls.VirtualizingStackPanel> udostępnia wbudowaną obsługę wirtualizacja interfejsu użytkownika w jednym kierunku, poziomo czy pionowo. Jeśli chcesz korzystać z wirtualizacji dwukierunkowe dla formantów, musisz zaimplementować niestandardowy panel, która rozszerza <xref:System.Windows.Controls.VirtualizingStackPanel> klasy. <xref:System.Windows.Controls.VirtualizingStackPanel> Klasa udostępnia metody wirtualne <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>, i <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Te metody wirtualne umożliwiają wykrywanie zmian w widoczna część listy i odpowiednio je obsłużyć.
+<xref:System.Windows.Controls.VirtualizingStackPanel> oferuje wbudowaną obsługę wirtualizacji interfejsu użytkownika w jednym kierunku w poziomie lub w pionie. Jeśli chcesz używać wirtualizacji dwukierunkowej dla kontrolek, musisz zaimplementować niestandardowy Panel, który rozszerza klasę <xref:System.Windows.Controls.VirtualizingStackPanel>. Klasa <xref:System.Windows.Controls.VirtualizingStackPanel> uwidacznia metody wirtualne, takie jak <xref:System.Windows.Controls.VirtualizingStackPanel.OnViewportSizeChanged%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.LineUp%2A>, <xref:System.Windows.Controls.VirtualizingStackPanel.PageUp%2A>i <xref:System.Windows.Controls.VirtualizingStackPanel.MouseWheelUp%2A>. Te metody wirtualne pozwalają wykryć zmianę w widocznej części listy i odpowiednio ją obsłużyć.
 
-## <a name="optimizing-templates"></a>Optymalizacja szablonów
+## <a name="optimizing-templates"></a>Optymalizowanie szablonów
 
-Drzewo wizualne zawiera wszystkie elementy wizualne w aplikacji. Oprócz obiektów utworzone bezpośrednio zawiera ona także obiekty z powodu rozszerzenie szablonu. Na przykład po utworzeniu <xref:System.Windows.Controls.Button>, możesz także uzyskać <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> i <xref:System.Windows.Controls.ContentPresenter> obiektów w drzewie wizualnym. Jeśli nie zostały zoptymalizowane pod kątem szablonów kontrolki, może być utworzeniem wiele dodatkowych niepotrzebne obiektów w drzewie wizualnym. Aby uzyskać więcej informacji na temat drzewa wizualnego, zobacz [Przegląd Renderowanie grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md).
+Drzewo wizualne zawiera wszystkie elementy wizualne w aplikacji. Oprócz obiektów tworzonych bezpośrednio, zawiera również obiekty z powodu rozwinięcia szablonu. Na przykład podczas tworzenia <xref:System.Windows.Controls.Button>można również uzyskać <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> i <xref:System.Windows.Controls.ContentPresenter> obiekty w drzewie wizualnym. Jeśli szablony kontroli nie zostały zoptymalizowane, można utworzyć wiele niepotrzebnych obiektów w drzewie wizualnym. Aby uzyskać więcej informacji na temat drzewa wizualnego, zobacz [Omówienie renderowania grafiki WPF](../graphics-multimedia/wpf-graphics-rendering-overview.md).
 
-## <a name="deferred-scrolling"></a>Odroczone przewijania
+## <a name="deferred-scrolling"></a>Przewijanie odroczone
 
-Domyślnie gdy użytkownik przeciągnie miniatury na scrollbar, widok zawartości stale aktualizowane. Jeśli przewijanie odbywa się powoli w kontrolce, należy rozważyć przy użyciu odroczone przewijania. W odroczonego przewijanie zawartości jest aktualizowana tylko wtedy, gdy użytkownik zwolni przycisku suwaka.
+Domyślnie, gdy użytkownik przeciąga element kciuka na pasku przewijania, widok zawartości jest ciągle aktualizowany. Jeśli przewijanie w kontrolce jest powolne, rozważ użycie przełożonego przewijania. W przypadku przewijania odroczonego zawartość jest aktualizowana tylko wtedy, gdy użytkownik zwolni przycisk przewijania.
 
-Aby zaimplementować odroczonego przewijania, ustaw <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> właściwość `true`. <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> dołączona właściwość a może ustawić na <xref:System.Windows.Controls.ScrollViewer> i dowolną kontrolkę, która ma <xref:System.Windows.Controls.ScrollViewer> w szablonie kontrolki.
+Aby zaimplementować opóźnione przewijanie, ustaw właściwość <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> na `true`. <xref:System.Windows.Controls.ScrollViewer.IsDeferredScrollingEnabled%2A> jest dołączoną właściwością i można ją ustawić na <xref:System.Windows.Controls.ScrollViewer> i dowolnej kontrolce, która ma <xref:System.Windows.Controls.ScrollViewer> w szablonie kontrolki.
 
-## <a name="controls-that-implement-performance-features"></a>Formanty, które implementują funkcje wydajności
+## <a name="controls-that-implement-performance-features"></a>Kontrolki implementujące funkcje wydajności
 
-W poniższej tabeli wymieniono wspólnych formantów do wyświetlania danych i ich obsługa funkcje wydajności. Zobacz poprzednie sekcje, aby uzyskać informacje na temat włączyć te funkcje.
+Poniższa tabela zawiera listę typowych kontrolek służących do wyświetlania danych i ich obsługi. Zapoznaj się z poprzednimi sekcjami, aby uzyskać informacje na temat włączania tych funkcji.
 
-|formant|Wirtualizacja|Odtwarzanie kontenera|Odroczone przewijania|
+|formant|Wirtualizacja|Odtwarzanie kontenera|Przewijanie odroczone|
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|Można włączyć|Można włączyć|Można włączyć|
 |<xref:System.Windows.Controls.ContextMenu>|Można włączyć|Można włączyć|Można włączyć|
@@ -72,7 +72,7 @@ W poniższej tabeli wymieniono wspólnych formantów do wyświetlania danych i i
 |<xref:System.Windows.Controls.ToolBar>|Niedostępne|Niedostępne|Można włączyć|
 
 > [!NOTE]
-> Na przykład jak włączyć wirtualizacji i odtwarzanie na kontenera <xref:System.Windows.Controls.TreeView>, zobacz [poprawić wydajność TreeView](../controls/how-to-improve-the-performance-of-a-treeview.md).
+> Aby zapoznać się z przykładem sposobu włączania wirtualizacji i odtwarzania kontenerów na <xref:System.Windows.Controls.TreeView>, zobacz [Poprawianie wydajności widoku TreeView](../controls/how-to-improve-the-performance-of-a-treeview.md).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -80,5 +80,5 @@ W poniższej tabeli wymieniono wspólnych formantów do wyświetlania danych i i
 - [Układ i projekt](optimizing-performance-layout-and-design.md)
 - [Powiązanie danych](optimizing-performance-data-binding.md)
 - [Kontrolki](../controls/index.md)
-- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

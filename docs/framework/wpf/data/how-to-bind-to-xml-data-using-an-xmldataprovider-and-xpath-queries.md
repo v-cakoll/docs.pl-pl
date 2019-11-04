@@ -6,23 +6,23 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: d92b01c453a9e07a5d4a6d1900d54e8c86210041
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0f39c9d42abfaba1327f2c189ac6ce3d40db6e89
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005685"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459211"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Jak powiązać z danymi XML przy użyciu XMLDataProvider i zapytań XPath
 Ten przykład pokazuje, jak utworzyć powiązanie z danymi [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] przy użyciu <xref:System.Windows.Data.XmlDataProvider>.  
   
- W przypadku <xref:System.Windows.Data.XmlDataProvider> dane bazowe, do których można uzyskać dostęp za pomocą powiązania danych w aplikacji mogą być dowolnym drzewem węzłów [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Innymi słowy, <xref:System.Windows.Data.XmlDataProvider> zapewnia wygodny sposób używania dowolnego drzewa węzłów [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] jako źródła powiązania.  
+ Za pomocą <xref:System.Windows.Data.XmlDataProvider>dane bazowe, do których można uzyskać dostęp za pomocą powiązania danych w aplikacji, mogą być dowolnym drzewem [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] węzłów. Innymi słowy <xref:System.Windows.Data.XmlDataProvider> zapewnia wygodny sposób używania dowolnego drzewa węzłów [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] jako źródła powiązań.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie dane są osadzone bezpośrednio jako *wyspa danych* [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] w sekcji <xref:System.Windows.FrameworkElement.Resources%2A>. Wyspa danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] musi być opakowana w Tagi `<x:XData>` i zawsze mieć pojedynczy węzeł główny, który jest *spisem* w tym przykładzie.  
+ W poniższym przykładzie dane są osadzone bezpośrednio jako *wyspa danych* [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] w sekcji <xref:System.Windows.FrameworkElement.Resources%2A>. [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Wyspy danych muszą być opakowane w `<x:XData>` Tagi i zawsze mieć pojedynczy węzeł główny, który jest *spisem* w tym przykładzie.  
   
 > [!NOTE]
-> Węzeł główny danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ma atrybut **xmlns** , który ustawia przestrzeń nazw [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] na pusty ciąg. Jest to wymagane do zastosowania zapytań XPath do Wyspy danych, która jest wbudowana w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony. W tym przypadku, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a tym samym wyspa danych, dziedziczy przestrzeń nazw <xref:System.Windows>. Z tego względu należy ustawić pustą przestrzeń nazw, aby kwerendy XPath były kwalifikowane przez przestrzeń nazw <xref:System.Windows>, co spowodowałoby nieregularne kierowanie zapytań.  
+> Węzeł główny danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] ma atrybut **xmlns** , który ustawia przestrzeń nazw [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] na pusty ciąg. Jest to wymagane do zastosowania zapytań XPath do Wyspy danych, która jest wbudowana na stronie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. W tym przypadku, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], a tym samym wyspa danych, dziedziczy <xref:System.Windows> przestrzeni nazw. Z tego względu należy ustawić pustą przestrzeń nazw, aby kwerendy XPath były kwalifikowane przez przestrzeń nazw <xref:System.Windows>, co spowodowałoby nieregularne kierowanie zapytań.  
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
@@ -32,15 +32,15 @@ Ten przykład pokazuje, jak utworzyć powiązanie z danymi [!INCLUDE[TLA#tla_xml
   
  ![Zrzut ekranu przedstawiający przykład wyrażenia XPath z tytułem czterech książek.](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
- W tym przykładzie tytuły książek są wyświetlane, ponieważ <xref:System.Windows.Data.Binding.XPath%2A> dla powiązania <xref:System.Windows.Controls.TextBlock> w <xref:System.Windows.DataTemplate> ma wartość "*title*". Jeśli chcesz wyświetlić wartość atrybutu, na przykład *ISBN*, należy ustawić tę wartość <xref:System.Windows.Data.Binding.XPath%2A> na "`@ISBN`".  
+ W tym przykładzie tytuły książek są wyświetlane, ponieważ <xref:System.Windows.Data.Binding.XPath%2A> powiązania <xref:System.Windows.Controls.TextBlock> w <xref:System.Windows.DataTemplate> jest ustawiony na "*title*". Jeśli chcesz wyświetlić wartość atrybutu, na przykład *ISBN*, ustaw tę <xref:System.Windows.Data.Binding.XPath%2A> wartość na "`@ISBN`".  
   
- Właściwości **XPath** w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są obsługiwane przez metodę XmlNode. SelectNodes. Zapytania **XPath** można modyfikować, aby uzyskać różne wyniki. Poniżej przedstawiono kilka przykładów zapytania <xref:System.Windows.Data.Binding.XPath%2A> w powiązanym <xref:System.Windows.Controls.ListBox> z poprzedniego przykładu:  
+ Właściwości **XPath** w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są obsługiwane przez metodę XmlNode. SelectNodes. Zapytania **XPath** można modyfikować, aby uzyskać różne wyniki. Poniżej przedstawiono kilka przykładów zapytania <xref:System.Windows.Data.Binding.XPath%2A> na powiązanej <xref:System.Windows.Controls.ListBox> z poprzedniego przykładu:  
   
 - `XPath="Book[1]"` zwróci pierwszy element książki ("XML w akcji"). Należy zauważyć, że indeksy **XPath** bazują na 1, nie wartości 0.  
   
 - `XPath="Book[@*]"` zwróci wszystkie elementy książki z dowolnymi atrybutami.  
   
-- `XPath="Book[last()-1]"` zwróci sekundę do ostatniego elementu książki ("wprowadzając Microsoft .NET").  
+- `XPath="Book[last()-1]"` zwróci drugi do ostatniego elementu książki ("wprowadzenie Microsoft .NET").  
   
 - `XPath="*[position()>3]"` zwróci wszystkie elementy książki z wyjątkiem pierwszego 3.  
   
@@ -52,7 +52,7 @@ Ten przykład pokazuje, jak utworzyć powiązanie z danymi [!INCLUDE[TLA#tla_xml
   
  [!code-xaml[XMLDataSource2#XmlFileExample](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource2/CS/Window1.xaml#xmlfileexample)]  
   
- Jeśli dane [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] znajdują się w zdalnym pliku [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], należy zdefiniować dostęp do danych przez przypisanie odpowiedniego adresu URL do atrybutu <xref:System.Windows.Data.XmlDataProvider.Source%2A> w następujący sposób:  
+ Jeśli [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane znajdują się w pliku [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] zdalnego, należy zdefiniować dostęp do danych przez przypisanie odpowiedniego adresu URL do atrybutu <xref:System.Windows.Data.XmlDataProvider.Source%2A> w następujący sposób:  
   
 ```xml  
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
@@ -64,5 +64,5 @@ Ten przykład pokazuje, jak utworzyć powiązanie z danymi [!INCLUDE[TLA#tla_xml
 - [Powiązywanie z dokumentem X, elementem X lub LINQ dla wyników zapytań XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [Używanie wzorca szczegółowego z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [Wiązanie źródeł — omówienie](binding-sources-overview.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Tematy z instrukcjami](data-binding-how-to-topics.md)

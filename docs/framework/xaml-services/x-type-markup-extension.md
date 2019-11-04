@@ -14,15 +14,15 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: bf62987c61c1d4f6aefce515f79e997b41272b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df0b3fe53cb8f284fc6e2d79a9b2cea86318d701
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622964"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459912"
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
-Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
+Dostarcza obiekt CLR <xref:System.Type>, który jest typem podstawowym dla określonego typu XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -40,48 +40,48 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
   
 |||  
 |-|-|  
-|`prefix`|Opcjonalna. Prefiks, który mapuje przestrzeń nazw XAML innych niż domyślne. Określenie prefiksu często nie jest konieczne. Zobacz uwagi.|  
-|`typeNameValue`|Wymagana. Nazwa typu, który jest rozpoznawalna do bieżącej domyślnej XAML przestrzeni nazw; lub określony mapowanych prefiks Jeśli `prefix` podano.|  
+|`prefix`|Opcjonalny. Prefiks, który mapuje niedomyślną przestrzeń nazw XAML. Określanie prefiksu jest często niepotrzebne. Zobacz uwagi.|  
+|`typeNameValue`|Wymagany. Nazwa typu rozpoznawana jako bieżąca domyślna przestrzeń nazw XAML; lub określony zamapowany prefiks, jeśli podano `prefix`.|  
   
 ## <a name="remarks"></a>Uwagi  
- `x:Type` — Rozszerzenie znaczników ma podobną funkcję do `typeof()` operatora w języku C# lub `GetType` operatora programu Microsoft Visual Basic.  
+ Rozszerzenie znacznika `x:Type` ma podobną funkcję do operatora `typeof()` w C# lub operatora `GetType` w programie Microsoft Visual Basic.  
   
- `x:Type` — Rozszerzenie znaczników dostarcza zachowanie konwersję z ciągu dla właściwości, które przyjmują typ <xref:System.Type>. Dane wejściowe są typu XAML. Relacja między typ XAML w danych wejściowych i wyjściowych CLR <xref:System.Type> jest to, że dane wyjściowe <xref:System.Type> jest <xref:System.Xaml.XamlType.UnderlyingType%2A> danych wejściowych <xref:System.Xaml.XamlType>, po wyszukaniu niezbędne <xref:System.Xaml.XamlType> na podstawie kontekst schematu XAML i <xref:System.Windows.Markup.IXamlTypeResolver>dostarcza kontekst usługi.  
+ Rozszerzenie znaczników `x:Type` zawiera zachowanie konwersji ciągów dla właściwości, które przyjmują typ <xref:System.Type>. Dane wejściowe są typu XAML. Relacja między wejściowym typem XAML i wyjściowym środowiskiem CLR <xref:System.Type> polega na tym, że <xref:System.Type> wyjściowy jest <xref:System.Xaml.XamlType.UnderlyingType%2A>em <xref:System.Xaml.XamlType>danych wejściowych, po wyszukaniu niezbędnych <xref:System.Xaml.XamlType> na podstawie kontekstu schematu XAML i usługi <xref:System.Windows.Markup.IXamlTypeResolver>.  
   
- W programie .NET Framework XAML Services obsługi dla tego rozszerzenia znacznika jest definiowany przez <xref:System.Windows.Markup.TypeExtension> klasy.  
+ W .NET Framework usługach XAML obsługa tego rozszerzenia znacznika jest definiowana przez klasę <xref:System.Windows.Markup.TypeExtension>.  
   
- W ramach określonej implementacji, niektóre właściwości, które wymagają <xref:System.Type> zgodnie z wartością może zaakceptować nazwę typu bezpośrednio (wartość ciągu typu `Name`). Jednak implementacja to zachowanie jest złożonych scenariuszach. Przykłady zobacz sekcję "Uwagi dotyczące użycia WPF", która jest zgodna.  
+ W określonych implementacjach platformy niektóre właściwości, które przyjmują <xref:System.Type> jako wartość mogą akceptować nazwę typu bezpośrednio (wartość ciągu typu `Name`). Jednak wdrożenie tego zachowania jest złożonym scenariuszem. Aby zapoznać się z przykładami, zobacz sekcję "uwagi dotyczące użycia platformy WPF" poniżej.  
   
- Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podawany po `x:Type` ciągu identyfikatora jest przypisany jako <xref:System.Windows.Markup.TypeExtension.TypeName%2A> wartości elementu bazowego <xref:System.Windows.Markup.TypeExtension> rozszerzenie klasy. W obszarze domyślny kontekst schematu XAML dla usług .NET Framework XAML, która jest oparta na typy CLR, wartość tego atrybutu jest <xref:System.Reflection.MemberInfo.Name%2A> żądanego typu, lub który zawiera <xref:System.Reflection.MemberInfo.Name%2A> poprzedzone prefiksu dla przestrzeni nazw XAML innych niż domyślne mapowania.  
+ Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podany po ciągu identyfikatora `x:Type` jest przypisywany jako wartość <xref:System.Windows.Markup.TypeExtension.TypeName%2A> źródłowej klasy rozszerzenia <xref:System.Windows.Markup.TypeExtension>. W ramach domyślnego kontekstu schematu XAML dla .NET Framework usług XAML, który jest oparty na typach CLR, wartość tego atrybutu jest <xref:System.Reflection.MemberInfo.Name%2A> żądanego typu lub zawiera <xref:System.Reflection.MemberInfo.Name%2A> poprzedzony prefiksem dla mapowania przestrzeni nazw w języku XAML innym niż domyślne.  
   
- `x:Type` — Rozszerzenie znaczników mogą być używane w składni obiektów. W tym przypadku określającą wartość <xref:System.Windows.Markup.TypeExtension.TypeName%2A> właściwość jest wymagana, aby poprawnie zainicjować rozszerzenia.  
+ Rozszerzenia znaczników `x:Type` można używać w składni elementu obiektu. W takim przypadku określenie wartości właściwości <xref:System.Windows.Markup.TypeExtension.TypeName%2A> jest wymagane do prawidłowego zainicjowania rozszerzenia.  
   
- `x:Type` — Rozszerzenie znaczników może również służyć jako pełne atrybutu; jednak to wykorzystania nie jest to typowe: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
+ Rozszerzenia znaczników `x:Type` można także użyć jako atrybutu pełnego; Jednak to użycie nie jest typowe: `<object property="{x:Type TypeName=typeNameValue}" .../>`  
   
-## <a name="wpf-usage-notes"></a>Uwagi dotyczące użytkowania WPF  
+## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
   
-### <a name="default-xaml-namespace-and-type-mapping"></a>Domyślne Namespace XAML i mapowanie typu  
- Domyślna przestrzeń nazw XAML dla programowania WPF zawiera większość typów XAML, czego potrzebujesz do typowych scenariuszy XAML; Dlatego możesz często uniknąć prefiksy podczas odwoływania się do wartości typu XAML. Może być konieczne zamapować prefiksu, jeśli odwołujesz się do typu z niestandardowego zestawu lub dla typów, które istnieją w zestawie WPF, ale od przestrzeń nazw środowiska CLR, który nie został zmapowany do domyślnej przestrzeni nazw XAML. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XAML i mapowanie środowiska CLR w przestrzeni nazw, zobacz [przestrzeń nazw XAML i mapowanie Namespace dla WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+### <a name="default-xaml-namespace-and-type-mapping"></a>Domyślna przestrzeń nazw XAML i mapowanie typu  
+ Domyślna przestrzeń nazw XAML dla programowania WPF zawiera większość typów XAML potrzebnych dla typowych scenariuszy języka XAML; w związku z tym, można często unikać prefiksów podczas odwoływania się do wartości typu XAML. Może być konieczne zamapowanie prefiksu, jeśli odwołujesz się do typu z niestandardowego zestawu lub dla typów, które istnieją w zestawie WPF, ale pochodzą z przestrzeni nazw CLR, która nie została zmapowana do domyślnej przestrzeni nazw XAML. Aby uzyskać więcej informacji na temat prefiksów, przestrzeni nazw XAML i mapowania przestrzeni nazw środowiska CLR, zobacz [przestrzenie nazw XAML i mapowanie przestrzeni nazw dla języka XAML WPF](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
-### <a name="type-properties-that-support-typename-as-string"></a>Typ właściwości tej obsługi Typename co String  
- WPF obsługuje technik, które umożliwiają określenie wartości niektórych właściwości typu <xref:System.Type> bez konieczności `x:Type` użycie rozszerzenia znaczników. Zamiast tego można określić wartość jako ciąg znaków zapewniający nazwę typu. Przykładami są <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> i <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Obsługa tego zachowania nie jest dostępna za pośrednictwem typy konwerterów i rozszerzenia znaczników. Zamiast tego jest to zachowanie odroczenia implementowane za pomocą <xref:System.Windows.FrameworkElementFactory>.  
+### <a name="type-properties-that-support-typename-as-string"></a>Właściwości typu, które obsługują atrybut TypeName as  
+ WPF obsługuje techniki, które umożliwiają określanie wartości niektórych właściwości typu <xref:System.Type> bez konieczności używania rozszerzenia `x:Type` znaczników. Zamiast tego można określić wartość jako ciąg, który określa nazwę typu. Przykłady <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> i <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Obsługa tego zachowania nie jest zapewniana za pomocą konwerterów typów ani rozszerzeń znaczników. Zamiast tego jest to zachowanie odroczenia implementowane za pomocą <xref:System.Windows.FrameworkElementFactory>.  
   
- Technologia Silverlight obsługuje podobne Konwencji. W rzeczywistości Silverlight nie obsługuje obecnie `{x:Type}` w jego obsługa języka XAML i nie akceptuje `{x:Type}` użycia poza w niektórych przypadkach, które są przeznaczone do obsługi migracji XAML w WPF i Silverlight. W związku z tym, zachowanie typename jako ciąg znaków jest wbudowana wszystkie oceny właściwości macierzystej Silverlight gdzie <xref:System.Type> jest wartością.  
+ Program Silverlight obsługuje podobną Konwencję. W rzeczywistości Technologia Silverlight obecnie nie obsługuje `{x:Type}` w jej obsłudze języka XAML i nie akceptuje `{x:Type}` użycia poza kilka okoliczności, które są przeznaczone do obsługi migracji XAML programu Silverlight. W związku z tym, zachowanie typu "typename" jest wbudowane we wszystkich obliczeniach natywnych właściwości Silverlight, gdzie <xref:System.Type> jest wartością.  
   
 ## <a name="xaml-2009"></a>XAML 2009  
- XAML 2009 zapewnia dodatkową obsługę dla ogólnych typów i modyfikuje zachowanie funkcji `x:TypeArguments` i `x:Type` zapewnienie tej obsługi.  
+ Język XAML 2009 zapewnia dodatkową pomoc techniczną dla typów ogólnych i modyfikuje zachowanie funkcji `x:TypeArguments` i `x:Type` w celu zapewnienia tej pomocy technicznej.  
   
-- `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być w przypadku elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](x-typearguments-directive.md).  
+- `x:TypeArguments` i element skojarzonego obiektu dla tworzenia wystąpienia obiektu ogólnego mogą znajdować się w elementach innych niż główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" w [dyrektywie x:TypeArguments —](x-typearguments-directive.md).  
   
-- XAML 2009 obsługuje składnię do określania ograniczenie typu ogólnego w znacznikach. To mogą być używane przez `x:TypeArguments`, `x:Type`, lub obu tych funkcji w połączeniu.  
+- XAML 2009 obsługuje składnię do określania ograniczenia typu ogólnego w znaczniku. Może to być używane przez `x:TypeArguments`, przez `x:Type`lub przez dwie funkcje.  
   
-- Implementacja WPF XAML podczas przetwarzania XAML 2009 dla obciążenia dodaje również tej możliwości do zachowania konwersji niejawnego typu określone we właściwościach framework, które używają typu <xref:System.Type>.  
+- Implementacja języka XAML WPF podczas przetwarzania kodu XAML 2009 do załadowania również dodaje tę możliwość do zachowania niejawnej konwersji typów dla niektórych właściwości platformy, które używają typu <xref:System.Type>.  
   
- W środowisku WPF można użyć funkcji XAML 2009, ale tylko dla luźne XAML (XAML, która nie jest kompilowana do znaczników). XAML kompilowana do znaczników dla platformy WPF i formularz BAML XAML aktualnie nie obsługują tych funkcji i słowa kluczowe XAML 2009.  
+ W programie WPF można używać funkcji języka XAML 2009, ale tylko w przypadku swobodnego języka XAML (XAML, który nie jest skompilowany do adiustacji). Skompilowane znaczniki XAML dla WPF i forma BAML języka XAML nie obsługują obecnie słów kluczowych i funkcji języka XAML 2009.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Style>
 - [Tworzenie szablonów i stylów](../wpf/controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)
 - [Rozszerzenia znaczników i WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

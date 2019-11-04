@@ -39,14 +39,16 @@
           href: tutorials/object-detection-onnx.md
         - name: Klasyfikowanie tonacji za pomocą biblioteki TensorFlow (klasyfikacja tekstu)
           href: tutorials/text-classification-tf.md
-    - name: Narzędzia
+    - name: Konstruktor modelu i interfejs wiersza polecenia
       items:
-        - name: Przewidywanie cen za pomocą konstruktora modelu
+        - name: Przewidywanie cen (konstruktor modelu i regresja)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analizowanie tonacji przy użyciu interfejsu wiersza polecenia platformy ML.NET
           href: tutorials/mlnet-cli.md
-        - name: Analizowanie tonacji za pomocą konstruktora modelu i produktu Razor Pages
+        - name: Analizowanie tonacji w rozwiązaniu Razor Pages (konstruktor modelu i klasyfikacja binarna)
           href: tutorials/sentiment-analysis-model-builder.md
+        - name: Kategoryzowanie naruszeń kondycji (konstruktor modeli i klasyfikacja wieloklasowa)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Probabilistyczne programowanie za pomocą Infer.NET

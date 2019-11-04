@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596276"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419171"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 
@@ -30,14 +30,14 @@ Istnieje kilka sytuacji, w których pożądana jest podział definicji klasy:
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
-`partial` Słowo kluczowe wskazuje, że w przestrzeni nazw można definiować inne części klasy, struktury lub interfejsu. Wszystkie części muszą używać `partial` słowa kluczowego. Wszystkie części muszą być dostępne w czasie kompilacji w celu utworzenia typu końcowego. Wszystkie części muszą mieć tę samą dostępność, taką jak `public`, `private`, i tak dalej.
+Słowo kluczowe `partial` wskazuje, że w przestrzeni nazw można definiować inne części klasy, struktury lub interfejsu. Wszystkie części muszą używać słowa kluczowego `partial`. Wszystkie części muszą być dostępne w czasie kompilacji w celu utworzenia typu końcowego. Wszystkie części muszą mieć taką samą dostępność, jak `public`, `private`i tak dalej.
 
 Jeśli jakakolwiek część jest zadeklarowana jako abstract, cały typ jest uznawany za abstrakcyjny. Jeśli jakakolwiek część jest zadeklarowana jako Sealed, cały typ jest uznawany za zapieczętowany. Jeśli jakakolwiek część deklaruje typ podstawowy, cały typ dziedziczy tę klasę.
 
 Wszystkie części określające klasę bazową muszą wyrazić zgodę, ale części, które pomijają klasę bazową, nadal dziedziczą typ podstawowy. Części mogą określać różne interfejsy podstawowe, a końcowy typ implementuje wszystkie interfejsy wymienione przez wszystkie częściowe deklaracje. Każdy element członkowski klasy, struktury lub interfejsu zadeklarowany w częściowej definicji jest dostępny dla wszystkich innych części. Ostatni typ to kombinacja wszystkich części w czasie kompilacji.
 
 > [!NOTE]
-> `partial` Modyfikator nie jest dostępny w deklaracjach delegata lub wyliczania.
+> Modyfikator `partial` nie jest dostępny w deklaracjach delegata ani wyliczania.
 
 Poniższy przykład pokazuje, że zagnieżdżone typy mogą być częścią, nawet jeśli typ, w którym są zagnieżdżone, nie jest częścią.
 
@@ -75,11 +75,11 @@ Są one równoważne z następującymi deklaracjami:
 
 Istnieje kilka reguł, które należy wykonać podczas pracy ze częściowymi definicjami klas:
 
-- Wszystkie definicje typu częściowego, które powinny być częściami tego samego typu, muszą być `partial`modyfikowane przy użyciu. Na przykład następujące deklaracje klas generują błąd:
+- Wszystkie definicje typu częściowego, które powinny być częściami tego samego typu, muszą być modyfikowane przy użyciu `partial`. Na przykład następujące deklaracje klas generują błąd:
 
   [!code-csharp[csProgGuideObjects#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#20)]
 
-- Modyfikator może występować tylko bezpośrednio przed słowami kluczowymi `struct` `class`, lub `interface`. `partial`
+- Modyfikator `partial` może występować tylko bezpośrednio przed słowami kluczowymi `class`, `struct`lub `interface`.
 
 - Zagnieżdżone typy częściowe są dozwolone w definicjach typów częściowych, jak pokazano w następującym przykładzie:
 
@@ -115,7 +115,7 @@ Aby uzyskać więcej informacji, zobacz [ograniczenia dotyczące parametrów typ
 
 ### <a name="description"></a>Opis
 
-W poniższym przykładzie pola i Konstruktor klasy, `Coords`,, są zadeklarowane w jednej częściowej definicji klasy, a element członkowski, `PrintCoords`, jest zadeklarowany w innej definicji klasy częściowej.
+W poniższym przykładzie pola i Konstruktor klasy, `Coords`, są zadeklarowane w jednej częściowej definicji klasy, a element członkowski, `PrintCoords`, jest zadeklarowany w innej definicji klasy częściowej.
 
 ### <a name="code"></a>Kod
 
@@ -152,7 +152,7 @@ partial void onNameChanged()
 }
 ```
 
-- Deklaracje metody częściowej muszą zaczynać się [](../../language-reference/keywords/partial-type.md) od kontekstowego słowa kluczowego częściowego, a metoda musi zwracać [typ void](../../language-reference/keywords/void.md).
+- Deklaracje metody częściowej muszą zaczynać się od kontekstowego słowa kluczowego [częściowego](../../language-reference/keywords/partial-type.md) , a metoda musi zwracać [typ void](../../language-reference/keywords/void.md).
 
 - Metody częściowe mogą mieć parametry [in](../../language-reference/keywords/in-parameter-modifier.md) lub [ref](../../language-reference/keywords/ref.md) , ale nie [out](../../language-reference/keywords/out-parameter-modifier.md) .
 
@@ -160,15 +160,15 @@ partial void onNameChanged()
 
 - Metody częściowe nie mogą być [extern](../../language-reference/keywords/extern.md), ponieważ obecność treści określa, czy są one definiowane lub implementowane.
 
-- Metody częściowe mogą mieć Modyfikatory [static](../../language-reference/keywords/static.md) i UNSAFE. [](../../language-reference/keywords/unsafe.md)
+- Metody częściowe mogą mieć Modyfikatory [static](../../language-reference/keywords/static.md) i [UNSAFE](../../language-reference/keywords/unsafe.md) .
 
 - Metody częściowe mogą być ogólne. Ograniczenia są umieszczane w deklaracji metody częściowej i opcjonalnie mogą być powtórzone na implementującej ją. Nazwy parametrów parametrów i typów nie muszą być takie same w deklaracji implementującej, jak w definicji.
 
-- Można utworzyć [Delegat](../../language-reference/keywords/delegate.md) do metody częściowej, która została zdefiniowana i zaimplementowana, ale nie do metody częściowej, która została zdefiniowana tylko.
+- Można utworzyć [Delegat](../../language-reference/builtin-types/reference-types.md) do metody częściowej, która została zdefiniowana i zaimplementowana, ale nie do metody częściowej, która została zdefiniowana tylko.
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [typy częściowe](~/_csharplang/spec/classes.md#partial-types) w [ C# specyfikacji języka](../../language-reference/language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [typy częściowe](~/_csharplang/spec/classes.md#partial-types) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,32 +1,32 @@
 ---
-title: 'Instrukcje: Używanie zasobów aplikacji'
+title: Jak użyć zasobów aplikacji
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e4114466fa8016f8e31100d7a37038b0abfdccca
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088207"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460270"
 ---
-# <a name="how-to-use-application-resources"></a>Instrukcje: Używanie zasobów aplikacji
-W tym przykładzie pokazano, jak korzystać z zasobów aplikacji.  
+# <a name="how-to-use-application-resources"></a>Jak użyć zasobów aplikacji
+Ten przykład pokazuje, jak używać zasobów aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje plik definicji aplikacji. Plik definicji aplikacji definiuje sekcję zasobów (wartość <xref:System.Windows.Application.Resources%2A> właściwości). Zasoby zdefiniowane na poziomie aplikacji jest możliwy przez wszystkich stron, które są częścią aplikacji. W tym przypadku zasób jest zadeklarowana stylu. Ponieważ pełną stylu, który zawiera szablon kontrolki może być długi, w tym przykładzie pomija szablonu kontrolki, która jest zdefiniowana w <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> metoda ustawiająca właściwości stylu.  
+ Poniższy przykład przedstawia plik definicji aplikacji. Plik definicji aplikacji definiuje sekcję zasobów (wartość właściwości <xref:System.Windows.Application.Resources%2A>). Do zasobów zdefiniowanych na poziomie aplikacji mogą być dostępne wszystkie inne strony, które są częścią aplikacji. W takim przypadku zasób jest zadeklarowanym stylem. Ponieważ pełny styl, który zawiera szablon kontrolki może być długi, ten przykład pomija szablon formantu, który jest zdefiniowany w <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> właściwości setter stylu.  
   
  [!code-xaml[ResourcesApplication#PreTemplateResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#pretemplateresource)]  
 [!code-xaml[ResourcesApplication#PostTemplateResource](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/app.xaml#posttemplateresource)]  
   
- W poniższym przykładzie przedstawiono [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony, który odwołuje się do zasobu dodatku poziomu aplikacji, zdefiniowanego w poprzednim przykładzie. Zasób jest wywoływany przy użyciu [staticresource — rozszerzenie znaczników](staticresource-markup-extension.md) , który określa klucz unikatowy zasób dla żądanego zasobu. Żaden zasób z kluczem "GelButton" znajduje się na bieżącej stronie, aby zakres wyszukiwania zasobów dla żądanego zasobu kontynuuje poza bieżącą stronę i do określonych zasobów na poziomie aplikacji.  
+ W poniższym przykładzie przedstawiono stronę [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], która odwołuje się do zasobu na poziomie aplikacji, który został zdefiniowany w poprzednim przykładzie. Zasób jest przywoływany przy użyciu [rozszerzenia znacznika StaticResource](staticresource-markup-extension.md) , które określa unikatowy klucz zasobu dla żądanego zasobu. Na bieżącej stronie nie znaleziono żadnego zasobu z kluczem "GelButton", więc zakres wyszukiwania zasobów dla żądanego zasobu będzie przekroczyć bieżącą stronę i zdefiniowane zasoby na poziomie aplikacji.  
   
  [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zasoby XAML](xaml-resources.md)
+- [Zasoby XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Zarządzanie aplikacjami — omówienie](../app-development/application-management-overview.md)
 - [Tematy z instrukcjami](resources-how-to-topics.md)

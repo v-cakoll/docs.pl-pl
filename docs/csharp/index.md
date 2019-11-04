@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191809"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416734"
 ---
 # <a name="c-guide"></a>Przewodnik dla języka C#
 
 C# Przewodnik zawiera wiele zasobów o C# języku. Ta lokacja ma wielu różnych odbiorców. W zależności od środowiska z programowaniem lub C# językiem i platformą .NET warto zapoznać się z różnymi sekcjami tego przewodnika.
 
 - Dla marki — Nowi deweloperzy:
+  - Obejrzyj [ C# serię wideo 101](https://aka.ms/dotnet3-csharp). Zawiera wprowadzenie do ważnych koncepcji, które należy poznać w tych samouczkach.
+
   - Zacznij od [wprowadzenia do C# samouczków](tutorials/intro-to-csharp/index.md). Te samouczki umożliwiają interaktywną C# Eksplorowanie języka w przeglądarce. Z tego miejsca możesz przejść do innych [samouczków](tutorials/index.md). W tych samouczkach przedstawiono sposób tworzenia C# programów od podstaw. Samouczki stanowią krok po kroku proces tworzenia programów. Pokazują one koncepcje językowe i sposób tworzenia C# programów. Jeśli wolisz najpierw przeczytać informacje o przeglądzie, wypróbuj Przewodnik dotyczący [ C# języka](tour-of-csharp/index.md). Opisano w nim pojęcia związane z C# językiem. Po przeczytaniu tego zagadnienia będziesz mieć podstawową wiedzę na temat języka i będzie gotowy do wypróbowania samouczków lub utworzenia czegoś samodzielnie.
 
 - Dla deweloperów Nowość C#:
@@ -61,7 +63,7 @@ C# Przewodnik zawiera kilka sekcji. Można je odczytać w kolejności lub przesk
 - [Dokumentacja języka](language-reference/index.md)
   - Ta sekcja zawiera materiał referencyjny C# języka. Ten materiał ułatwia zrozumienie składni i semantyki C#. Zawiera również materiał referencyjny dotyczący typów, operatorów, atrybutów, dyrektyw preprocesora, przełączników kompilatora, błędów kompilatora i ostrzeżeń kompilatora.
 
-- [C#Specyfikacja języka](./language-reference/language-specification/index.md)
+- [C#Specyfikacja języka](/dotnet/csharp/language-reference/language-specification/introduction)
   - Linki do najnowszych wersji specyfikacji C# języka.
 
 ## <a name="see-also"></a>Zobacz także

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392426"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423247"
 ---
 # <a name="c-programming-guide"></a>C#Przewodnik programowania
-Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# oraz o funkcjach tego języka dostępnych przez platformę .NET Framework.  
+Ta sekcja zawiera szczegółowe informacje na temat C# kluczowych funkcji i funkcji dostępnych dla C# .NET Framework.  
   
- W większej części tej sekcji przyjęto założenie, że masz już pewną wiedzę na temat języka C# i ogólnie na temat programowania. Jeśli jesteś kompletnym początkującym z programowaniem lub C#programem, możesz chcieć odwiedzić [wprowadzenie do C# samouczków](../tutorials/intro-to-csharp/index.md) lub [samouczka platformy .NET w przeglądarce](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
+ W większości tej sekcji założono, że znasz już coś C# o i ogólnych pojęciach związanych z programowaniem. Jeśli jesteś kompletnym początkującym z programowaniem lub C#programem, możesz chcieć odwiedzić [wprowadzenie do C# samouczków](../tutorials/intro-to-csharp/index.md) lub [samouczka platformy .NET w przeglądarce](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), gdzie nie jest wymagana wcześniejsza wiedza o programowaniu.  
   
- Aby uzyskać informacje dotyczące określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz sekcję [Dokumentacja języka C#](../language-reference/index.md). Informacje o specyfikacji języka C# można znaleźć w temacie [Specyfikacja języka C#](../language-reference/language-specification/index.md).  
+ Aby uzyskać informacje na temat określonych słów kluczowych, operatorów i dyrektyw preprocesora, zobacz [ C# Reference](../language-reference/index.md). Informacje o specyfikacji C# języka można znaleźć w temacie [ C# Language Specification (Specyfikacja języka](/dotnet/csharp/language-reference/language-specification/introduction)).  
   
 ## <a name="program-sections"></a>Sekcje programu
 
@@ -40,7 +40,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
 
  [Typy wyliczeniowe](./enumeration-types.md)  
   
- [Delegaty](./delegates/index.md)  
+ [Delegaci](./delegates/index.md)  
  
  [Tablice](./arrays/index.md)  
   
@@ -56,7 +56,7 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
  [Iteratory](./concepts/iterators.md)
   
- [Wyrażenia zapytania LINQ](./linq-query-expressions/index.md)  
+ [Wyrażenia zapytania LINQ](../linq/index.md)  
   
  [Wyrażenia lambda](./statements-expressions-operators/lambda-expressions.md)  
   
@@ -87,5 +87,5 @@ Ta sekcja zawiera szczegółowe informacje o kluczowych funkcjach języka C# ora
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../language-reference/index.md)
+- [C#Odwoła](../language-reference/index.md)
 - [C#](../index.md)

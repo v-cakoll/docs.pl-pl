@@ -2,12 +2,12 @@
 title: Programowanie zorientowane obiektowo (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418047"
 ---
 # <a name="object-oriented-programming-c"></a>Programowanie zorientowane obiektowo (C#)
 
@@ -53,7 +53,7 @@ W tej sekcji opisano następujące pojęcia:
 
 - [Typy ogólne](#Generics)
 
-- [Delegaty](#Delegates)
+- [Delegaci](#Delegates)
 
 ## <a name="Classes"></a>Klasy i obiekty
 
@@ -129,7 +129,7 @@ class SampleClass
 }
 ```
 
-Większość właściwości ma metody lub procedury ustawiające i pobierające wartość właściwości. Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie. W C#, możesz pominąć `get` metodę lub `set` właściwość. Jednak właściwości zaimplementowane domyślnie nie mogą być tylko do odczytu lub tylko do zapisu.
+Większość właściwości ma metody lub procedury ustawiające i pobierające wartość właściwości. Można jednak utworzyć właściwości tylko do odczytu lub tylko do zapisu, aby uniemożliwić ich modyfikację lub odczytanie. W C#, można pominąć metodę `get` lub `set` właściwości. Jednak właściwości zaimplementowane domyślnie nie mogą być tylko do odczytu lub tylko do zapisu.
 
 Aby uzyskać więcej informacji, zobacz:
 
@@ -170,7 +170,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 - [Metody rozszerzeń](../classes-and-structs/extension-methods.md)
 
-#### <a name="Constructors"></a> Konstruktory
+#### <a name="Constructors"></a>Konstruktor
 
 Konstruktory są metodami klasy, które są wykonywane automatycznie po utworzeniu obiektu danego typu. Konstruktory zazwyczaj inicjują elementy członkowskie danych nowego obiektu. Konstruktor można uruchomić tylko raz podczas tworzenia klasy. Ponadto kod w konstruktorze zawsze jest uruchamiany przed jakimkolwiek innym kodem w klasie. Można jednak utworzyć wiele przeciążeń konstruktora w taki sam sposób jak w przypadku innych metod.
 
@@ -190,7 +190,7 @@ Aby uzyskać więcej informacji, zobacz:
 
 [Konstruktory](../classes-and-structs/constructors.md).
 
-#### <a name="Finalizers"></a> Finalizatory
+#### <a name="Finalizers"></a>Finalizatory
 
 Finalizatory są używane do destruktora wystąpień klas. W .NET Framework Moduł wyrzucania elementów bezużytecznych automatycznie zarządza alokacją i ilością pamięci dla obiektów zarządzanych w aplikacji. Jednak nadal mogą być potrzebne finalizatory do czyszczenia wszystkich niezarządzanych zasobów tworzonych przez aplikację. Dla klasy może istnieć tylko jeden finalizator.
 
@@ -198,13 +198,13 @@ Aby uzyskać więcej informacji na temat finalizatorów i wyrzucania elementów 
 
 #### <a name="Events"></a>Wydarzeniach
 
-Zdarzenia umożliwiają klasie lub obiektowi powiadamianie innych klas lub obiektów w przypadku wystąpienia czegoś zainteresowania. Klasa, która wysyła (lub podnosi) zdarzenie, jest nazywana wydawcą i klasy, które odbierają (lub obsługują) zdarzenie są nazywane *subskrybentami*. Aby uzyskać więcej informacji o zdarzeniach, sposobie ich podniesienia i obsłudze, zobacz [zdarzenia](../../../standard/events/index.md).
+Zdarzenia umożliwiają klasie lub obiektowi powiadamianie innych klas lub obiektów w przypadku wystąpienia czegoś zainteresowania. Klasa, która wysyła (lub podnosi) zdarzenie, jest nazywana *wydawcą* i klasy, które odbierają (lub obsługują) zdarzenie są nazywane *subskrybentami*. Aby uzyskać więcej informacji o zdarzeniach, sposobie ich podniesienia i obsłudze, zobacz [zdarzenia](../../../standard/events/index.md).
 
 - Aby zadeklarować zdarzenie w klasie, użyj słowa kluczowego [zdarzenia](../../language-reference/keywords/event.md) .
 
 - Aby zgłosić zdarzenie, wywołaj delegata zdarzenia.
 
-- Aby subskrybować zdarzenie, użyj `+=` operatora; aby anulować subskrypcję zdarzenia, `-=` Użyj operatora.
+- Aby subskrybować zdarzenie, użyj operatora `+=`; Aby anulować subskrypcję zdarzenia, użyj operatora `-=`.
 
 #### <a name="NestedClasses"></a>Klasy zagnieżdżone
 
@@ -270,7 +270,7 @@ SampleClass sampleObject = new SampleClass
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [new, operator](../../language-reference/operators/new-operator.md)
+- [Operator new](../../language-reference/operators/new-operator.md)
 
 - [Inicjatory obiektów i kolekcji](../classes-and-structs/object-and-collection-initializers.md)
 
@@ -313,7 +313,7 @@ Aby uzyskać więcej informacji, zobacz: [Typy anonimowe](../classes-and-structs
 
 ## <a name="Inheritance"></a>Strukturze
 
-Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa, rozszerza i modyfikuje zachowanie zdefiniowane w innej klasie. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Jednak wszystkie klasy w C# niejawnie dziedziczą z <xref:System.Object> klasy, która obsługuje hierarchię klas .NET i zapewnia usługi niskiego poziomu dla wszystkich klas.
+Dziedziczenie umożliwia utworzenie nowej klasy, która ponownie używa, rozszerza i modyfikuje zachowanie zdefiniowane w innej klasie. Klasa, której członkowie są dziedziczone jest nazywana *klasą bazową*, a Klasa, która dziedziczy tych członków, nosi nazwę *klasy pochodnej*. Jednak wszystkie klasy w C# niejawnie dziedziczą z klasy <xref:System.Object>, która obsługuje hierarchię klas .NET i zapewnia usługi niskiego poziomu dla wszystkich klas.
 
 > [!NOTE]
 > C#nie obsługuje dziedziczenia wielokrotnego. Oznacza to, że można określić tylko jedną klasę bazową dla klasy pochodnej.
@@ -448,9 +448,9 @@ class SampleClass
 
 Aby uzyskać więcej informacji, zobacz:
 
-- [Delegaty](../delegates/index.md)
+- [Delegaci](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>Zobacz także
 

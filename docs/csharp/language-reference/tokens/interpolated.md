@@ -11,12 +11,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: 5f0388d90119455833eb6dba6ac808cdc8517865
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101656"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421856"
 ---
 # <a name="---string-interpolation-c-reference"></a>Interpolacja $-String (C# odwołanie)
 
@@ -58,7 +58,7 @@ Poniższy przykład pokazuje, jak uwzględnić nawias klamrowy w ciągu wynikowy
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-Interpolacja Verbatim ciąg rozpoczyna się od znaku `$`, po którym następuje znak `@`. Aby uzyskać więcej informacji na temat ciągów Verbatim, zobacz temat [identyfikatory](verbatim.md) [ciągów](../keywords/string.md) i Verbatim.
+Interpolacja Verbatim ciąg rozpoczyna się od znaku `$`, po którym następuje znak `@`. Aby uzyskać więcej informacji na temat ciągów Verbatim, zobacz temat [identyfikatory](verbatim.md) [ciągów](../builtin-types/reference-types.md) i Verbatim.
 
 > [!NOTE]
 > Począwszy od C# 8,0, można użyć tokenów`$`i`@`w dowolnej kolejności: zarówno `$@"..."`, jak i`@$"..."`są prawidłowymi interpolowanymi ciągami Verbatim. We wcześniejszych C# wersjach token `$` musi znajdować się przed tokenem `@`.

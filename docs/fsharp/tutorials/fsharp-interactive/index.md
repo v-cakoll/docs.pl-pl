@@ -2,14 +2,14 @@
 title: Odwołanie interakcyjne F# (fsi.exe)
 description: Dowiedz F# się, w jaki sposób interaktywny (fsi. F# exe) jest używany do interaktywnego uruchamiania kodu przy F# użyciu konsoli programu lub wykonywania skryptów.
 ms.date: 05/16/2016
-ms.openlocfilehash: 4e8521677cad5f4e62d2822837818292c55da96d
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9f4b5c0e7527d29e375265bb31a5de2df098f8e1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002062"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419910"
 ---
-# <a name="interactive-programming-with-f"></a>Interaktywne Programowanie przy użyciu języka F @ no__t-0
+# <a name="interactive-programming-with-f"></a>Interaktywne Programowanie przy użyciu języka F\#
 
 > [!NOTE]
 > W tym artykule opisano obecnie tylko środowisko dla systemu Windows.  Zostanie on ponownie zapisany.
@@ -43,10 +43,12 @@ Jeśli masz otwarty projekt, który odwołuje się do niektórych bibliotek, mo�
 
 Można kontrolować F# interaktywne argumenty wiersza polecenia (Opcje) przez dostosowanie ustawień. W menu **Narzędzia** wybierz pozycję **Opcje...** , a następnie rozwiń węzeł  **F# narzędzia**. Dwa ustawienia, które można zmienić, to opcje F# interaktywne i **64-bitowe F# ustawienia interaktywne** , które są istotne tylko wtedy, gdy uruchamiasz F# interaktywnie na komputerze 64-bitowym. To ustawienie określa, czy chcesz uruchomić dedykowaną 64-bitową wersję programu FSI. exe lub fsianycpu. exe, która korzysta z architektury komputera, aby określić, czy uruchomić program jako proces 32-bitowy czy 64-bitowy.
 
-## <a name="scripting-with-f"></a>Wykonywanie skryptów przy użyciu języka F @ no__t-0
+## <a name="scripting-with-f"></a>Wykonywanie skryptów przy użyciu języka F\#
+
 Skrypty używają rozszerzenia pliku **. FSX** lub **. FSSCRIPT**. Zamiast kompilowania kodu źródłowego, a następnie uruchamiania skompilowanego zestawu, można po prostu uruchomić **FSI. exe** i określić nazwę pliku skryptu kodu F# źródłowego, a F# interaktywnie odczytuje kod i wykonuje go w czasie rzeczywistym.
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Różnice między interaktywnym, skryptowym i skompilowanym środowiskiem
+
 W przypadku kompilowania kodu w F# trybie interaktywnym, niezależnie od tego, czy uruchamiasz interaktywnie, czy uruchamiasz skrypt, jest definiowany symbol **interaktywny** . Podczas kompilowania kodu w kompilatorze jest zdefiniowany symbol **skompilowany** . W tym przypadku, jeśli kod musi być inny w skompilowanych i interaktywnych trybach, można użyć dyrektyw preprocesora dla kompilacji warunkowej, aby określić, która z nich ma być używana.
 
 Niektóre dyrektywy są dostępne w przypadku wykonywania skryptów w F# trybie interaktywnym, które nie są dostępne podczas wykonywania kompilatora. Poniższa tabela zawiera podsumowanie dyrektyw, które są dostępne w przypadku korzystania F# z programu Interactive.
@@ -87,7 +89,7 @@ printfn "%A" (MyAssembly.myFunction 10 40)
 Dane wyjściowe są następujące:
 
 ```console
-Command line arguments: 
+Command line arguments:
 file1.fsx
 test
 90

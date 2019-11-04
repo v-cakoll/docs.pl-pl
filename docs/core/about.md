@@ -2,12 +2,12 @@
 title: Informacje o platformie .NET Core
 description: Dowiedz się więcej o programie .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093444"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416746"
 ---
 # <a name="about-net-core"></a>Informacje o platformie .NET Core
 
@@ -16,7 +16,7 @@ Platforma .NET Core ma następujące cechy:
 - Na **wielu platformach:** Działa w [systemach operacyjnych](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS i Linux.
 - **Spójne między architekturami:** Uruchamia kod z zachowaniem tego samego zachowania w wielu architekturach, w tym x64, x86 i ARM.
 - **Narzędzia wiersza polecenia:**  Obejmuje łatwe w użyciu narzędzia wiersza polecenia, które mogą być używane do lokalnego programowania i w scenariuszach ciągłej integracji.
-- **Elastyczne wdrożenie:** Mogą być dołączane do aplikacji lub instalowane obok siebie (instalacje dla całego użytkownika lub systemu). Może być używany z [kontenerami platformy Docker](docker/index.md).
+- **Elastyczne wdrożenie:** Mogą być dołączane do aplikacji lub instalowane obok siebie (instalacje dla całego użytkownika lub systemu). Może być używany z [kontenerami platformy Docker](docker/introduction.md).
 - **Zgodne:** program .NET Core jest zgodny z .NET Framework, Xamarin i mono, za pośrednictwem [.NET Standard](../standard/net-standard.md).
 - **Open Source:** Platforma .NET Core jest platformą Open Source, przy użyciu licencji MIT i Apache 2. .NET Core to projekt [platformy .NET Foundation](https://dotnetfoundation.org/) .
 - **Obsługiwane przez firmę Microsoft:** platforma .NET Core jest obsługiwana przez firmę Microsoft w ramach [pomocy technicznej dla platformy .NET Core](https://dotnet.microsoft.com/platform/support/policy).

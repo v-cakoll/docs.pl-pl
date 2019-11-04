@@ -2,20 +2,20 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenera z Docker-Compose. yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 8c0f1a654d27b32e613b84d3862198ad96f32e1c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039742"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416706"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
-W tym przewodniku plik [Docker-Compose. yml](https://docs.docker.com/compose/compose-file/) został wprowadzony w sekcji [krok 4. Zdefiniuj usługi w Docker-Compose. yml podczas kompilowania aplikacji](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application)platformy Docker z obsługą kilku kontenerów. Istnieją jednak dodatkowe sposoby używania plików do redagowania platformy Docker, które są bardziej szczegółowe.
+W tym przewodniku plik [Docker-Compose. yml](https://docs.docker.com/compose/compose-file/) został wprowadzony w sekcji [krok 4. Zdefiniuj usługi w Docker-Compose. yml podczas kompilowania aplikacji platformy Docker z obsługą kilku kontenerów](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Istnieją jednak dodatkowe sposoby używania plików do redagowania platformy Docker, które są bardziej szczegółowe.
 
 Na przykład można jawnie opisać sposób wdrożenia aplikacji wielokontenera w pliku Docker-Compose. yml. Opcjonalnie można również opisać sposób tworzenia niestandardowych obrazów platformy Docker. (Niestandardowe obrazy platformy Docker można także skompilować przy użyciu interfejsu wiersza polecenia platformy Docker).
 
-Zasadniczo należy zdefiniować wszystkie kontenery, które mają zostać wdrożone, oraz określone charakterystyki dla każdego wdrożenia kontenera. Po utworzeniu pliku opisu wdrożenia z zastosowaniem kilku kontenerów można wdrożyć całe rozwiązanie w ramach jednej akcji zorganizowanej przy użyciu interfejsu wiersza polecenia [platformy Docker i utworzyć](https://docs.docker.com/compose/overview/) je w sposób przezroczysty w programie Visual Studio. W przeciwnym razie należy użyć interfejsu wiersza polecenia platformy Docker, aby wdrożyć kontener między kontenerami w wielu krokach przy użyciu `docker run` polecenia z wiersza poleceń. W związku z tym każda usługa zdefiniowana w Docker-Compose. yml musi określać dokładnie jeden obraz lub kompilację. Inne klucze są opcjonalne i są analogiczne do ich `docker run` odpowiedników w wierszu polecenia.
+Zasadniczo należy zdefiniować wszystkie kontenery, które mają zostać wdrożone, oraz określone charakterystyki dla każdego wdrożenia kontenera. Po utworzeniu pliku opisu wdrożenia z zastosowaniem kilku kontenerów można wdrożyć całe rozwiązanie w ramach jednej akcji zorganizowanej przy użyciu interfejsu wiersza polecenia [platformy Docker i utworzyć](https://docs.docker.com/compose/overview/) je w sposób przezroczysty w programie Visual Studio. W przeciwnym razie należy użyć interfejsu wiersza polecenia platformy Docker, aby wdrożyć kontener między kontenerami w wielu krokach za pomocą polecenia `docker run` z wiersza poleceń. W związku z tym każda usługa zdefiniowana w Docker-Compose. yml musi określać dokładnie jeden obraz lub kompilację. Inne klucze są opcjonalne i są analogiczne do ich `docker run` odpowiedników wiersza polecenia.
 
 Następujący kod YAML jest definicją możliwego globalnie, ale pojedynczego pliku Docker-Compose. yml dla przykładu eShopOnContainers. To nie jest rzeczywisty plik "Docker-Zredaguj" z eShopOnContainers. Zamiast tego jest to wersja uproszczona i skonsolidowana w jednym pliku, co nie jest najlepszym sposobem na korzystanie z plików do redagowania oprogramowania Docker, co zostanie wyjaśnione później.
 
@@ -82,16 +82,16 @@ services:
     image: redis
 ```
 
-Kluczem głównym tego pliku są usługi. W tym kluczu należy zdefiniować usługi, które mają zostać wdrożone i uruchomione podczas wykonywania `docker-compose up` polecenia lub podczas wdrażania z programu Visual Studio przy użyciu tego pliku Docker-Compose. yml. W takim przypadku plik Docker-Compose. yml ma zdefiniowane wiele usług, zgodnie z opisem w poniższej tabeli.
+Kluczem głównym tego pliku są usługi. W tym kluczu należy zdefiniować usługi, które mają zostać wdrożone i uruchomione podczas wykonywania polecenia `docker-compose up` lub podczas wdrażania z programu Visual Studio przy użyciu tego pliku Docker-Compose. yml. W takim przypadku plik Docker-Compose. yml ma zdefiniowane wiele usług, zgodnie z opisem w poniższej tabeli.
 
 | Nazwa usługi | Opis |
 |--------------|-------------|
-| webmvc       | Kontener obejmujący aplikację ASP.NET Core MVC korzystającą z mikrousług po stronie serwera (C)\#|
+| webmvc       | Kontener obejmujący aplikację ASP.NET Core MVC korzystającą z mikrousług z\# C po stronie serwera|
 | Katalog. API  | Kontener, w tym wykaz ASP.NET Core sieci Web API mikrousługi |
 | Porządkowanie. API | Kontener obejmujący porządkowanie ASP.NET Core sieci Web API mikrousług |
-| sql.data     | Kontener SQL Server dla systemu Linux, który utrzymuje bazy danych mikrousług |
+| SQL. Data     | Kontener SQL Server dla systemu Linux, który utrzymuje bazy danych mikrousług |
 | koszyk. API   | Kontener z koszykiem ASP.NET Core mikrousługi interfejsu Web API |
-| basket.data  | Kontener z uruchomioną usługą pamięci podręcznej REDIS z bazą danych koszyka jako pamięć podręczną REDIS |
+| koszyk. dane  | Kontener z uruchomioną usługą pamięci podręcznej REDIS z bazą danych koszyka jako pamięć podręczną REDIS |
 
 ### <a name="a-simple-web-service-api-container"></a>Prosty kontener interfejsu API usługi sieci Web
 
@@ -129,7 +129,7 @@ Ponieważ parametry połączenia są zdefiniowane przez zmienną środowiskową,
 
 - Łączy usługę sieci Web z usługą SQL. Data (wystąpienie SQL Server dla bazy danych systemu Linux działającej w kontenerze). W przypadku określenia tej zależności kontener Catalog. API nie zostanie uruchomiony, dopóki nie zostanie już uruchomiony kontener SQL. Data. jest to ważne, ponieważ katalog. interfejs API musi mieć najpierw bazę danych SQL Server. Jednak tego rodzaju zależność kontenera jest zbyt mała w wielu przypadkach, ponieważ platforma Docker sprawdza tylko na poziomie kontenera. Czasami usługa (w tym przypadku SQL Server) nadal może nie być gotowa, dlatego zaleca się wdrożenie logiki ponawiania przy użyciu wykładniczej wycofywania w mikrousługach klienta. W ten sposób, jeśli kontener zależności nie jest gotowy przez krótki czas, aplikacja nadal będzie odporna na błędy.
 
-- Jest skonfigurowany tak, aby zezwalał na dostęp do serwerów zewnętrznych:\_ustawienie dodatkowe hosty pozwala uzyskać dostęp do zewnętrznych serwerów lub maszyn poza hostem platformy Docker (czyli poza domyślną maszyną wirtualną z systemem Linux, która jest hostem platformy Docker), takim jak lokalny serwer SQL Wystąpienie serwera na komputerze deweloperskim.
+- Jest skonfigurowany tak, aby zezwalał na dostęp do serwerów zewnętrznych: ustawienie dodatkowe\_hosty umożliwia dostęp do zewnętrznych serwerów lub maszyn poza hostem platformy Docker (czyli poza domyślną maszyną wirtualną z systemem Linux, która jest hostem platformy Docker), takim jak lokalna SQL Server na komputerze deweloperskim.
 
 Istnieją również inne zaawansowane ustawienia Docker-Compose. yml, które będziemy omawiać w poniższych sekcjach.
 
@@ -175,7 +175,7 @@ W przypadku określania różnych środowisk należy używać wielu plików reda
 
 Można użyć pojedynczego pliku Docker-Compose. yml, jak w przykładach uproszczonych przedstawionych w poprzednich sekcjach. Jednak nie jest to zalecane w przypadku większości aplikacji.
 
-Domyślnie Redaguj odczytuje dwa pliki, Docker-Compose. yml i opcjonalny plik Docker-Compose. override. yml. Jak pokazano na rysunku 6-11, gdy korzystasz z programu Visual Studio i włączasz obsługę platformy Docker, Visual Studio tworzy również dodatkowy plik Docker-Compose. vs. Debug. g. yml do debugowania aplikacji, można przyjrzeć się temu plikowi w folderze\\Docker \\ w folderze głównym rozwiązania.
+Domyślnie Redaguj odczytuje dwa pliki, Docker-Compose. yml i opcjonalny plik Docker-Compose. override. yml. Jak pokazano na rysunku 6-11, podczas korzystania z programu Visual Studio i włączania obsługi platformy Docker program Visual Studio tworzy również dodatkowy plik Docker-Compose. vs. Debug. g. yml do debugowania aplikacji, można przyjrzeć się temu plikowi do folderu obj\\Docker\\ w folderze głównym rozwiązania.
 
 ![Platforma Docker — Tworzenie struktury pliku projektu:. dockerignore, aby zignorować pliki; Docker-Compose. yml, aby tworzyć mikrousługi; Docker-Compose. override. yml, aby skonfigurować środowisko mikrousług.](./media/image12.png)
 
@@ -384,7 +384,7 @@ W tym przykładzie konfiguracja przesłonięcia rozwoju uwidacznia niektóre por
 
 Gdy uruchamiasz `docker-compose up` (lub uruchamiasz ją z programu Visual Studio), polecenie odczytuje przesłonięcia automatycznie tak, jakby były scalane oba pliki.
 
-Załóżmy, że chcesz, aby inny plik redagowania był używany w środowisku produkcyjnym z innymi wartościami konfiguracji, portami lub parametrami połączenia. Można utworzyć inny plik przesłonięcia, taki jak `docker-compose.prod.yml` plik o różnych ustawieniach i zmiennych środowiskowych. Ten plik może być przechowywany w innym repozytorium Git lub zarządzany i zabezpieczony przez inny zespół.
+Załóżmy, że chcesz, aby inny plik redagowania był używany w środowisku produkcyjnym z innymi wartościami konfiguracji, portami lub parametrami połączenia. Można utworzyć inny plik zastąpienia, taki jak plik o nazwie `docker-compose.prod.yml` z różnymi ustawieniami i zmiennymi środowiskowymi. Ten plik może być przechowywany w innym repozytorium Git lub zarządzany i zabezpieczony przez inny zespół.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Jak wdrożyć z określonym plikiem przesłonięcia
 
@@ -396,7 +396,7 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 #### <a name="using-environment-variables-in-docker-compose-files"></a>Używanie zmiennych środowiskowych w programie Docker — tworzenie plików
 
-Jest to wygodne, szczególnie w środowiskach produkcyjnych, aby można było uzyskać informacje o konfiguracji ze zmiennych środowiskowych, jak pokazano w poprzednich przykładach. Można odwołać się do zmiennej środowiskowej w plikach tworzących platformy Docker przy użyciu składni $ {\_my var}. Poniższy wiersz z pliku Docker-Compose. prod. yml pokazuje, jak odwołać się do wartości zmiennej środowiskowej.
+Jest to wygodne, szczególnie w środowiskach produkcyjnych, aby można było uzyskać informacje o konfiguracji ze zmiennych środowiskowych, jak pokazano w poprzednich przykładach. Można odwołać się do zmiennej środowiskowej w plikach do redagowania platformy Docker przy użyciu składni $ {MY\_VAR}. Poniższy wiersz z pliku Docker-Compose. prod. yml pokazuje, jak odwołać się do wartości zmiennej środowiskowej.
 
 ```yml
 IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
@@ -414,13 +414,13 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-Platforma Docker — redagowanie oczekuje, że każdy \<wiersz w pliku ENV ma być w formacie wartości\>zmiennej\>=\<.
+Platforma Docker — tworzenie oczekuje, że każdy wiersz w pliku ENV ma mieć format \<zmienna\>=\<wartość\>.
 
 Należy pamiętać, że wartości ustawione w środowisku uruchomieniowym zawsze przesłaniają wartości zdefiniowane wewnątrz pliku ENV. W podobny sposób wartości przekazane za pośrednictwem argumentów wiersza polecenia również przesłaniają wartości domyślne ustawione w pliku ENV.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Omówienie Docker Compose** \
+- **Omówienie \ Docker Compose**
     <https://docs.docker.com/compose/overview/>
 
 - **Wiele plików redagowania** \
@@ -442,15 +442,15 @@ ENTRYPOINT ["dotnet", "run"]
 
 Pliku dockerfile taka będzie działała. Można jednak znacznie zoptymalizować obrazy, w szczególności obrazy produkcyjne.
 
-W modelu kontenerów i mikrousług są ciągle uruchamiane kontenery. Typowy sposób używania kontenerów nie powoduje ponownego uruchomienia kontenera uśpionego, ponieważ kontener jest jednorazowy. Koordynatorzy (na przykład Kubernetes i Azure Service Fabric) po prostu tworzą nowe wystąpienia obrazów. Oznacza to, że trzeba zoptymalizować przez wstępne skompilowanie aplikacji, aby proces tworzenia wystąpienia był szybszy. Po rozpoczęciu kontenera powinien być gotowy do uruchomienia. Nie należy przywracać i kompilować w czasie wykonywania za pomocą `dotnet restore` poleceń `dotnet build` i z interfejsu wiersza polecenia dotnet, które są widoczne w wielu wpisach w blogu dotyczących oprogramowania .NET Core i Docker.
+W modelu kontenerów i mikrousług są ciągle uruchamiane kontenery. Typowy sposób używania kontenerów nie powoduje ponownego uruchomienia kontenera uśpionego, ponieważ kontener jest jednorazowy. Koordynatorzy (na przykład Kubernetes i Azure Service Fabric) po prostu tworzą nowe wystąpienia obrazów. Oznacza to, że trzeba zoptymalizować przez wstępne skompilowanie aplikacji, aby proces tworzenia wystąpienia był szybszy. Po rozpoczęciu kontenera powinien być gotowy do uruchomienia. Nie należy przywracać i kompilować w czasie wykonywania za pomocą poleceń `dotnet restore` i `dotnet build` z interfejsu wiersza polecenia dotnet, które są widoczne w wielu wpisach w blogu dotyczących oprogramowania .NET Core i Docker.
 
 Zespół platformy .NET wykonuje ważne prace w celu udostępnienia platformy .NET Core i ASP.NET Core platformy zoptymalizowanej pod kątem kontenerów. Jest to nie tylko platforma .NET Core z małą ilością pamięci. zespół koncentruje się na zoptymalizowanych obrazach platformy Docker dla trzech głównych scenariuszy i publikuje je w rejestrze usługi Docker Hub na platformie *dotnet/Core*, począwszy od wersji 2,1:
 
-1. **Programowanie**: Priorytet umożliwia szybkie wykonywanie iteracji i debugowanie zmian oraz miejsce, gdzie rozmiar jest pomocniczy.
+1. **Programowanie**: w którym priorytet jest możliwość szybkiego wykonywania iteracji i debugowania zmian oraz w przypadku, gdy rozmiar jest pomocniczy.
 
-2. **Kompilacja**: Priorytet kompiluje aplikację i zawiera pliki binarne i inne zależności w celu zoptymalizowania plików binarnych.
+2. **Kompilacja**: priorytet kompiluje aplikację i zawiera pliki binarne i inne zależności w celu zoptymalizowania plików binarnych.
 
-3. **Produkcji**: Gdy fokus jest szybko wdrażany i zaczyna się na kontenerach, więc te obrazy są ograniczone do plików binarnych i zawartości wymaganej do uruchomienia aplikacji.
+3. **Produkcja**: gdzie fokus jest szybko wdrażany i rozpoczyna się na kontenerach, więc te obrazy są ograniczone do plików binarnych i zawartości wymaganej do uruchomienia aplikacji.
 
 Aby to osiągnąć, zespół .NET udostępnia cztery podstawowe warianty w technologii [dotnet/Core](https://hub.docker.com/_/microsoft-dotnet-core/) (w usłudze Docker Hub):
 
@@ -459,7 +459,7 @@ Aby to osiągnąć, zespół .NET udostępnia cztery podstawowe warianty w techn
 1. **środowisko uruchomieniowe**: dla scenariuszy produkcyjnych programu .NET
 1. **środowisko uruchomieniowe — deps**: dla scenariuszy produkcyjnych [aplikacji samodzielnych](../../../core/deploying/index.md#self-contained-deployments-scd).
 
-W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego również automatycznie\_ustawiają adresy URL aspnetcore na porcie 80 i używają narzędzia NGen do tworzenia pamięci podręcznej obrazów natywnych zestawów.
+W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego są również automatycznie ustawiane\_adresy URL aspnetcore na port 80 i używanie narzędzia NGen do tworzenia pamięci podręcznej obrazów natywnych zestawów.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -467,8 +467,8 @@ W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego również
   <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
 
 - **Tworzenie obrazów platformy Docker dla aplikacji .NET Core**  
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 > [!div class="step-by-step"]
-> [Poprzedni](data-driven-crud-microservice.md)Następny
-> [](database-server-container.md)
+> [Poprzedni](data-driven-crud-microservice.md)
+> [dalej](database-server-container.md)

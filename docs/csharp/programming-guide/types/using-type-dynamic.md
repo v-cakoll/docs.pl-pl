@@ -6,12 +6,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: aef64f538aecb0fc5dadec850020d7c01d02ccbd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 248f0410aa8fc7c4aa92b844bda19f51fcf09c6d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523550"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417591"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Korzystanie z typu dynamicznegoC# (Przewodnik programowania)
 
@@ -76,7 +76,7 @@ Wiele metod COM pozwala na odchylenia typów argumentów i zwracanego typu przez
 
 |Tytuł|Opis|
 |-----------|-----------------|
-|[dynamic](../../language-reference/keywords/dynamic.md)|Opisuje użycie słowa kluczowego `dynamic`.|
+|[dynamic](../../language-reference/builtin-types/reference-types.md)|Opisuje użycie słowa kluczowego `dynamic`.|
 |[Przegląd środowiska uruchomieniowego języka dynamicznego](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Zawiera omówienie DLR, czyli środowisko uruchomieniowe, które dodaje zestaw usług dla języków dynamicznych do środowiska uruchomieniowego języka wspólnego (CLR).|
 |[Przewodnik: Tworzenie obiektów dynamicznych i korzystanie z nich](walkthrough-creating-and-using-dynamic-objects.md)|Zawiera instrukcje krok po kroku dotyczące tworzenia niestandardowego obiektu dynamicznego i tworzenia projektu, który uzyskuje dostęp do biblioteki `IronPython`.|
 |[Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#](../interop/how-to-access-office-onterop-objects.md)|Pokazuje, jak utworzyć projekt, który używa argumentów nazwanych i opcjonalnych, typu `dynamic` i innych ulepszeń, które upraszczają dostęp do obiektów interfejsu API pakietu Office.|

@@ -4,12 +4,12 @@ description: Dowiedz się, jak wdrożyć aplikację platformy .NET dla Apache Sp
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 9e338886c68845d5f95e7beb0cd7ac3a729d3281
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961068"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454276"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Samouczek: wdrażanie aplikacji .NET dla Apache Spark w kostkach
 
@@ -18,10 +18,11 @@ W tym samouczku przedstawiono sposób wdrażania aplikacji w chmurze za pośredn
 Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
-> Utwórz obszar roboczy Azure Databricks.
-> Opublikuj aplikację .NET dla Apache Spark.
-> Utwórz zadanie platformy Spark i klaster Spark.
-> Uruchom aplikację w klastrze Spark.
+>
+> - Utwórz obszar roboczy Azure Databricks.
+> - Opublikuj aplikację .NET dla Apache Spark.
+> - Utwórz zadanie platformy Spark i klaster Spark.
+> - Uruchom aplikację w klastrze Spark.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -44,7 +45,7 @@ W tej sekcji utworzysz obszar roboczy Azure Databricks przy użyciu Azure Portal
    ![Tworzenie zasobu Azure Databricks w Azure Portal](./media/databricks-deployment/create-databricks-resource.png)
 
 2. W obszarze **usługa Azure Databricks**podaj wartości, aby utworzyć obszar roboczy datakostki.
-    
+
     |Właściwość  |Opis  |
     |---------|---------|
     |**Nazwa obszaru roboczego**     | Podaj nazwę obszaru roboczego datakostki.        |
@@ -58,10 +59,10 @@ W tej sekcji utworzysz obszar roboczy Azure Databricks przy użyciu Azure Portal
 
 ## <a name="install-azure-databricks-tools"></a>Zainstaluj narzędzia Azure Databricks
 
-Korzystając z **interfejsu wiersza polecenia datacegłs** , można nawiązać połączenie z klastrami Azure Databricks i przekazywać do nich pliki z komputera lokalnego. Klastry datacegły uzyskują dostęp do plików za poorednictwem DBFS (system plików). 
+Korzystając z **interfejsu wiersza polecenia datacegłs** , można nawiązać połączenie z klastrami Azure Databricks i przekazywać do nich pliki z komputera lokalnego. Klastry datacegły uzyskują dostęp do plików za poorednictwem DBFS (system plików).
 
 1. Interfejs wiersza polecenia datakostki wymaga języka Python 3,6 lub nowszego. Jeśli masz już zainstalowany język Python, możesz pominąć ten krok.
- 
+
    **Dla systemu Windows:**
 
    [Pobierz Język Python dla systemu Windows](https://www.python.org/ftp/python/3.7.4/python-3.7.4.exe)
@@ -106,14 +107,14 @@ Teraz powinno być możliwe uzyskanie dostępu do dowolnych klastrów Azure Data
 
 1. Aplikacja Microsoft. Spark. Worker ułatwia Apache Spark wykonywanie aplikacji, na przykład dowolnych funkcji zdefiniowanych przez użytkownika (UDF). Pobierz [pakiet Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz).
 
-2. *Install-Worker.sh* to skrypt, który umożliwia skopiowanie programu .net dla Apache Spark plików zależnych do węzłów klastra. 
+2. *Install-Worker.sh* to skrypt, który umożliwia skopiowanie programu .net dla Apache Spark plików zależnych do węzłów klastra.
 
-   Utwórz nowy plik o nazwie **Install-Worker.sh** na komputerze lokalnym i wklej [zawartość Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) znajdującą się w witrynie GitHub. 
+   Utwórz nowy plik o nazwie **Install-Worker.sh** na komputerze lokalnym i wklej [zawartość Install-Worker.sh](https://raw.githubusercontent.com/dotnet/spark/master/deployment/install-worker.sh) znajdującą się w witrynie GitHub.
 
 3. *DB-init.sh* to skrypt służący do instalowania zależności w klastrze danych platformy Spark.
 
-   Utwórz nowy plik o nazwie **DB-init.sh** na komputerze lokalnym i wklej [zawartość DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) znajdującą się w witrynie GitHub. 
-   
+   Utwórz nowy plik o nazwie **DB-init.sh** na komputerze lokalnym i wklej [zawartość DB-init.sh](https://github.com/dotnet/spark/blob/master/deployment/db-init.sh) znajdującą się w witrynie GitHub.
+
    W właśnie utworzonym pliku Ustaw zmienną `DOTNET_SPARK_RELEASE` na `https://github.com/dotnet/spark/releases/download/v0.6.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz`. Pozostaw resztę pliku *DB-init.sh* .
 
 > [!Note]
@@ -121,7 +122,7 @@ Teraz powinno być możliwe uzyskanie dostępu do dowolnych klastrów Azure Data
 
 ## <a name="publish-your-app"></a>Publikowanie aplikacji
 
-Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spark — Rozpocznij w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku, aby zapewnić, że klaster Spark ma dostęp do wszystkich plików potrzebnych do uruchomienia aplikacji. 
+Następnie opublikujesz *mySparkApp* utworzoną w programie [.net for Apache Spark — Rozpocznij w 10-minutowym](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) samouczku, aby zapewnić, że klaster Spark ma dostęp do wszystkich plików potrzebnych do uruchomienia aplikacji.
 
 1. Uruchom następujące polecenia, aby opublikować *mySparkApp*:
 
@@ -163,13 +164,13 @@ W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego
    databricks fs cp Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz dbfs:/spark-dotnet/   Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz
    ```
 
-2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, do których klaster będzie musiał uruchomić aplikację: spakowanego folderu publikowania, *Input. txt*i *Microsoft-Spark-2.4. x-0.3.0. jar*. 
+2. Uruchom następujące polecenia, aby przekazać pozostałe pliki, do których klaster będzie musiał uruchomić aplikację: spakowanego folderu publikowania, *Input. txt*i *Microsoft-Spark-2.4. x-0.3.0. jar*.
 
    ```console
-   cd mySparkApp 
+   cd mySparkApp
    databricks fs cp input.txt dbfs:/input.txt
-   
-   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory 
+
+   cd mySparkApp\bin\Release\netcoreapp3.0\ubuntu.16.04-x64 directory
    databricks fs cp mySparkApp.zip dbfs:/spark-dotnet/publish.zip
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
@@ -178,7 +179,7 @@ W tej sekcji przekazano kilka plików do DBFS, aby klaster miał wszystko, czego
 
 Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiającego żądanie uruchomienia platformy **Spark**, które jest poleceniem używanym do uruchamiania programu .net dla Apache Spark zadań.
 
-1. W obszarze roboczym Azure Databricks wybierz ikonę **zadania** , a następnie pozycję **+ Utwórz zadanie**. 
+1. W obszarze roboczym Azure Databricks wybierz ikonę **zadania** , a następnie pozycję **+ Utwórz zadanie**.
 
    ![Tworzenie zadania Azure Databricks](./media/databricks-deployment/create-job.png)
 
@@ -196,7 +197,7 @@ Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiające
 
 1. Przejdź do zadania i wybierz pozycję **Edytuj** , aby skonfigurować klaster zadania.
 
-2. Ustaw klaster na platformę **Spark 2.4.1**. Następnie wybierz pozycję **Opcje zaawansowane** > **init scripts**. Ustaw ścieżkę skryptu init jako `dbfs:/spark-dotnet/db-init.sh`. 
+2. Ustaw klaster na platformę **Spark 2.4.1**. Następnie wybierz pozycję **Opcje zaawansowane** > **init scripts**. Ustaw ścieżkę skryptu init jako `dbfs:/spark-dotnet/db-init.sh`.
 
    ![Skonfiguruj klaster Spark w Azure Databricks](./media/databricks-deployment/cluster-config.png)
 
@@ -208,7 +209,7 @@ Aplikacja jest uruchamiana na Azure Databricks za pomocą zadania uruchamiające
 
 2. Utworzenie klastra zadania może potrwać kilka minut. Po jego utworzeniu zadanie zostanie przesłane i będzie można wyświetlić dane wyjściowe.
 
-3. Z menu po lewej stronie wybierz pozycję **klastry** , a następnie nazwę i uruchomienie zadania. 
+3. Z menu po lewej stronie wybierz pozycję **klastry** , a następnie nazwę i uruchomienie zadania.
 
 4. Wybierz pozycję **dzienniki sterowników** , aby wyświetlić dane wyjściowe zadania. Gdy aplikacja zakończy wykonywanie, zobaczysz tę samą tabelę Count wyrazów z uruchomienia lokalnego uruchamiania zapisaną w standardowej konsoli wyjściowej.
 

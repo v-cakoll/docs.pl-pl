@@ -2,12 +2,12 @@
 title: Sortowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 78b263c384895b736b11cc524befa42b4a896380
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591041"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418188"
 ---
 # <a name="sorting-data-c"></a>Sortowanie danych (C#)
 Operacja sortowania Porządkuje elementy sekwencji na podstawie jednego lub większej liczby atrybutów. Pierwsze kryterium sortowania wykonuje podstawowe sortowanie elementów. Określając drugie kryterium sortowania, można sortować elementy w ramach każdej podstawowej grupy sortowania.  
@@ -33,7 +33,7 @@ Operacja sortowania Porządkuje elementy sekwencji na podstawie jednego lub wię
 ### <a name="primary-sort-examples"></a>Główne przykłady sortowania  
   
 #### <a name="primary-ascending-sort"></a>Podstawowe sortowanie rosnące  
- Poniższy przykład ilustruje sposób użycia `orderby` klauzuli w zapytaniu LINQ do sortowania ciągów w tablicy według długości ciągu w kolejności rosnącej.  
+ Poniższy przykład ilustruje sposób użycia klauzuli `orderby` w zapytaniu LINQ do sortowania ciągów w tablicy według długości ciągu w kolejności rosnącej.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -56,7 +56,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="primary-descending-sort"></a>Sortowanie sortowania podstawowego  
- W następnym przykładzie pokazano, jak używać `orderby descending` klauzuli w zapytaniu LINQ do sortowania ciągów według ich pierwszej litery, w kolejności malejącej.  
+ W następnym przykładzie pokazano, jak używać klauzuli `orderby descending` w zapytaniu LINQ do sortowania ciągów według ich pierwszej litery, w kolejności malejącej.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -81,7 +81,7 @@ foreach (string str in query)
 ### <a name="secondary-sort-examples"></a>Przykłady sortowania pomocniczego  
   
 #### <a name="secondary-ascending-sort"></a>Sortowanie pomocnicze rosnąco  
- Poniższy przykład ilustruje sposób użycia `orderby` klauzuli w zapytaniu LINQ do wykonywania podstawowego i pomocniczego sortowania ciągów w tablicy. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu, zarówno w kolejności rosnącej.  
+ W poniższym przykładzie pokazano, jak używać klauzuli `orderby` w zapytaniu LINQ, aby wykonać podstawowe i pomocnicze sortowanie ciągów w tablicy. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu, zarówno w kolejności rosnącej.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -104,7 +104,7 @@ foreach (string str in query)
 ```  
   
 #### <a name="secondary-descending-sort"></a>Sortowanie malejąco  
- W następnym przykładzie pokazano, jak używać `orderby descending` klauzuli w zapytaniu LINQ do wykonywania sortowania podstawowego w kolejności rosnącej i sortowania pomocniczego w kolejności malejącej. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu.  
+ W następnym przykładzie pokazano, jak używać klauzuli `orderby descending` w zapytaniu LINQ do wykonywania sortowania podstawowego w kolejności rosnącej i sortowania pomocniczego w kolejności malejącej. Ciągi są sortowane głównie według długości i secondarily przez pierwszą literę ciągu.  
   
 ```csharp  
 string[] words = { "the", "quick", "brown", "fox", "jumps" };  
@@ -131,5 +131,5 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
 - [orderby, klauzula](../../../language-reference/keywords/orderby-clause.md)
-- [Instrukcje: Kolejność wyników klauzuli join](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ)C#()](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Instrukcje: kolejność wyników klauzuli join](../../../linq/order-the-results-of-a-join-clause.md)
+- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

@@ -6,12 +6,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 35290796b89262cafd8bce63bb97da203853f569
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920714"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454196"
 ---
 # <a name="wpf-overview"></a>Omówienie podsystemu WPF
 
@@ -612,7 +612,7 @@ Poniższy przykład odwołuje się do słownika zasobów zdefiniowanego w poprze
 
 Zasoby i słowniki zasobów są podstawą obsługi technologii WPF dla motywów i skórek.
 
-Aby uzyskać więcej informacji, zobacz [zasoby](advanced/xaml-resources.md).
+Aby uzyskać więcej informacji, zobacz [zasoby](../../desktop-wpf/fundamentals/xaml-resources-define.md).
 
 ### <a name="custom-controls"></a>Kontrolki niestandardowe
 

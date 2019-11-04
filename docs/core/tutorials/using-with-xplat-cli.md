@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117349"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454738"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -39,42 +39,42 @@ Wykonajmy szybkie wskazówki:
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md)tworzy aktualny `Hello.csproj` plik projektu z zależnościami niezbędnymi do skompilowania aplikacji konsolowej.  Tworzy `Program.cs`również plik podstawowy zawierający punkt wejścia dla aplikacji.
+   [`dotnet new`](../tools/dotnet-new.md) tworzy aktualny plik projektu *Hello. csproj* z zależnościami niezbędnymi do skompilowania aplikacji konsolowej. Tworzy również *program.cs*, podstawowy plik zawierający punkt wejścia dla aplikacji.
 
-   `Hello.csproj`:
+   *Witaj. csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i skompilowania programu.
 
-   - `OutputType` Tag określa, że tworzysz plik wykonywalny, innymi słowy, Aplikacja konsolowa.
-   - Tag `TargetFramework` określa, która implementacja platformy .NET jest docelowa. W zaawansowanym scenariuszu można określić wiele platform docelowych i skompilować je do wszystkich w ramach jednej operacji. W tym samouczku dojdziemy do kompilowania tylko dla platformy .NET Core 2,1.
+   - Znacznik `OutputType` określa, że tworzysz plik wykonywalny, innymi słowy aplikację konsolową.
+   - Znacznik `TargetFramework` określa, która implementacja platformy .NET jest celem. W zaawansowanym scenariuszu można określić wiele platform docelowych i skompilować je do wszystkich w ramach jednej operacji. W tym samouczku dojdziemy do kompilowania tylko dla platformy .NET Core 2,1.
 
-   `Program.cs`:
+   *Program.cs*:
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   Program jest uruchamiany przez `using System`, co oznacza, że `System` w zakresie tego pliku można przenieść wszystkie elementy w przestrzeni nazw. Przestrzeń nazw zawiera podstawowe konstrukcje, takie `string`jak, lub typy liczbowe. `System`
+   Program jest uruchamiany przez `using System`, co oznacza, że w zakresie dla tego pliku można przenieść wszystko w przestrzeni nazw `System`. Przestrzeń nazw `System` zawiera podstawowe konstrukcje, takie jak `string`lub typy liczbowe.
 
-   Następnie zdefiniujemy przestrzeń nazw o `Hello`nazwie. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, `Main` z metodą, która pobiera tablicę ciągów jako argument. Ta tablica zawiera listę argumentów, które zostały przekazane podczas wywoływania skompilowanego programu. W takim przypadku ta tablica nie jest używana: cały program wykonuje zapis "Hello world!" do konsoli programu. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
+   Następnie zdefiniujemy przestrzeń nazw o nazwie `Hello`. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, z metodą `Main`, która pobiera tablicę ciągów jako argument. Ta tablica zawiera listę argumentów, które zostały przekazane podczas wywoływania skompilowanego programu. W takim przypadku ta tablica nie jest używana: cały program wykonuje zapis "Hello world!" do konsoli programu. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
 
    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-   `dotnet new`wywołania [`dotnet restore`](../tools/dotnet-restore.md) niejawnie. `dotnet restore`wywołuje pakiet [NuGet](https://www.nuget.org/) (Menedżer pakietów .NET) w celu przywrócenia drzewa zależności. Pakiet NuGet analizuje plik *Hello. csproj* , pobiera zależności zdefiniowane w pliku (lub zbiera je z pamięci podręcznej na maszynie) i zapisuje plik *obj/Project. assets. JSON* , który jest niezbędny do skompilowania i uruchomienia przykładu.
+   wywołania `dotnet new` [`dotnet restore`](../tools/dotnet-restore.md) niejawnie. `dotnet restore` wywołania [NuGet](https://www.nuget.org/) (Menedżer pakietów .NET) w celu przywrócenia drzewa zależności. Pakiet NuGet analizuje plik *Hello. csproj* , pobiera zależności zdefiniowane w pliku (lub zbiera je z pamięci podręcznej na maszynie) i zapisuje plik *obj/Project. assets. JSON* , który jest niezbędny do skompilowania i uruchomienia przykładu.
 
    > [!IMPORTANT]
-   > Jeśli używasz wersji programu .NET Core 1. x zestawu SDK, musisz wywołać `dotnet restore` siebie po wywołaniu. `dotnet new`
+   > Jeśli używasz wersji programu .NET Core 1. x zestawu SDK, musisz wywołać `dotnet restore` siebie po wywołaniu `dotnet new`.
 
 2. `dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md)wywołuje [`dotnet build`](../tools/dotnet-build.md) się, by upewnić się, że cele kompilacji zostały skompilowane `dotnet <assembly.dll>` , a następnie wywołuje, aby uruchomić aplikację docelową.
+   [`dotnet run`](../tools/dotnet-run.md) wywołań [`dotnet build`](../tools/dotnet-build.md) , aby upewnić się, że cele kompilacji zostały skompilowane, a następnie wywoła `dotnet <assembly.dll>`, aby uruchomić aplikację docelową.
 
     ```console
     $ dotnet run
     Hello World!
     ```
 
-    Alternatywnie można również wykonać [`dotnet build`](../tools/dotnet-build.md) polecenie, aby skompilować kod bez uruchamiania aplikacji konsolowej kompilacji. Powoduje to skompilowaną aplikację jako plik dll, który można uruchomić za pomocą `dotnet bin\Debug\netcoreapp2.1\Hello.dll` systemu Windows `/` (w przypadku systemów innych niż Windows). Możesz również określić argumenty dla aplikacji, jak widać w dalszej części tematu.
+    Alternatywnie można również wykonać [`dotnet build`](../tools/dotnet-build.md) , aby skompilować kod bez uruchamiania aplikacji konsolowej kompilacji. Powoduje to skompilowaną aplikację jako plik DLL, który można uruchomić za pomocą `dotnet bin\Debug\netcoreapp2.1\Hello.dll` w systemie Windows (Użyj `/` dla systemów innych niż Windows). Możesz również określić argumenty dla aplikacji, jak widać w dalszej części tematu.
 
     ```console
     $ dotnet bin\Debug\netcoreapp2.1\Hello.dll
@@ -116,7 +116,7 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten dodat
    15: 377
    ```
 
-I to wszystko!  Można to zrobić `Program.cs` w dowolny sposób.
+I to wszystko!  Możesz rozszerzyć `Program.cs` w dowolny sposób.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
@@ -127,7 +127,7 @@ Utwórzmy od poprzedniego przykładu Fibonacci przez buforowanie niektórych war
 
    [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
-2. Zmień metodę w pliku program.cs, aby utworzyć wystąpienie nowej klasy i wywołać jej metodę tak jak w poniższym przykładzie: `Main`
+2. Zmień metodę `Main` w pliku *program.cs* , aby utworzyć wystąpienie nowej klasy i wywołać jej metodę, tak jak w poniższym przykładzie:
 
    [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
@@ -156,7 +156,7 @@ Utwórzmy od poprzedniego przykładu Fibonacci przez buforowanie niektórych war
 
 ## <a name="publish-your-app"></a>Publikowanie aplikacji
 
-Gdy wszystko będzie gotowe do dystrybucji swojej aplikacji, użyj [`dotnet publish`](../tools/dotnet-publish.md) polecenia w celu wygenerowania folderu _publikowania_ w polu Debuguj debugowanie `/` _\\\\w\\usłudze\\ bin netcoreapp 2.1_ (Użyj dla Systemy inne niż Windows). Zawartość folderu _publikowania_ można dystrybuować na inne platformy, o ile już zainstalowano środowisko uruchomieniowe dotnet.
+Gdy wszystko będzie gotowe do dystrybucji swojej aplikacji, użyj polecenia [`dotnet publish`](../tools/dotnet-publish.md) , aby wygenerować folder _publikowania_ w polu _bin\\Debuguj\\netcoreapp 2.1\\Publish\\_ (Użyj `/` dla systemów innych niż Windows). Zawartość folderu _publikowania_ można dystrybuować na inne platformy, o ile już zainstalowano środowisko uruchomieniowe dotnet.
 
 Opublikowaną aplikację można uruchomić za pomocą polecenia [dotnet](../tools/dotnet.md) :
 

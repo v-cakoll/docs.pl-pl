@@ -118,7 +118,7 @@
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
                 - name: 'Instrukcje: Usuwanie nieprawidłowych znaków z ciągu'
                   href: how-to-strip-invalid-characters-from-a-string.md
-                - name: 'Instrukcje: Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
+                - name: 'Sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy'
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
         - name: Kodowanie znaków w programie .NET
           href: character-encoding.md

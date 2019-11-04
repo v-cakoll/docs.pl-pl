@@ -5,16 +5,16 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926398"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416641"
 ---
 # <a name="dependency-loading-in-net-core"></a>Ładowanie zależności w programie .NET Core
 
-Każda aplikacja .NET Core ma zależności. Nawet prosta `hello world` aplikacja ma zależności dotyczące części bibliotek klas .NET Core.
+Każda aplikacja .NET Core ma zależności. Nawet prosta aplikacja `hello world` ma zależności od części bibliotek klas platformy .NET Core.
 
 Informacje o standardowej logiki ładowania zestawów programu .NET Core mogą pomóc w zrozumieniu i debugowaniu typowych problemów z wdrażaniem.
 
@@ -22,7 +22,7 @@ W niektórych aplikacjach zależności są określane dynamicznie w czasie wykon
 
 ## <a name="understanding-assemblyloadcontext"></a>Informacje o elemencie AssemblyLoadContext
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> Interfejs API jest centralny w projekcie ładowania .NET Core. Artykuł dotyczący [poznania AssemblyLoadContext](understanding-assemblyloadcontext.md) zawiera omówienie pojęć dotyczących projektu.
+Interfejs API <xref:System.Runtime.Loader.AssemblyLoadContext> jest centralnym projektem ładowania platformy .NET Core. Artykuł dotyczący [poznania AssemblyLoadContext](understanding-assemblyloadcontext.md) zawiera omówienie pojęć dotyczących projektu.
 
 ## <a name="loading-details"></a>Ładowanie szczegółów
 
@@ -39,4 +39,4 @@ Samouczek [Tworzenie aplikacji platformy .NET Core z wtyczkami](../tutorials/cre
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
 
-[Użycie i debugowanie zestawu do odciążania w artykule .NET Core](../../standard/assembly/unloadability-howto.md) to samouczek krok po kroku. Pokazuje sposób ładowania aplikacji platformy .NET Core, wykonywania, a następnie zwalniania jej. Artykuł zawiera również porady dotyczące debugowania.
+[Użycie i debugowanie zestawu do odciążania w artykule .NET Core](../../standard/assembly/unloadability.md) to samouczek krok po kroku. Pokazuje sposób ładowania aplikacji platformy .NET Core, wykonywania, a następnie zwalniania jej. Artykuł zawiera również porady dotyczące debugowania.

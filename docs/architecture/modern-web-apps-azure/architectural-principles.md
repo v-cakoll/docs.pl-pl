@@ -4,17 +4,17 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373765"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416685"
 ---
 # <a name="architectural-principles"></a>Zasady dotyczące architektury
 
 > "Jeśli konstruktory skompilowane przez programistów w sposób, w jaki programiści zapisały programy, to pierwszy Woodpecker, który miał być zniszczony Civilization".  
-> _\-Gerald Weinberg_
+> _\- Gerald Weinberg_
 
 Należy wziąć pod uwagę możliwość tworzenia i projektowania rozwiązań programistycznych. Zasady przedstawione w tej sekcji mogą ułatwić podejmowanie decyzji dotyczących architektury, które będą powodowały czyste i utrzymywane w obsłudze aplikacje. Ogólnie rzecz biorąc, te zasady przeprowadzą Cię przez proces tworzenia aplikacji poza dyskretnymi składnikami, które nie są ściśle powiązane z innymi częściami aplikacji, ale raczej komunikują się przez jawne interfejsy lub systemy obsługi komunikatów.
 
@@ -28,7 +28,7 @@ Architektura aplikacji może być logicznie skompilowana, aby przestrzegać tej 
 
 ### <a name="encapsulation"></a>Encapsulation
 
-Różne części aplikacji powinny używać **hermetyzacji** do izolowania ich od innych części aplikacji. Składniki aplikacji i warstwy powinny mieć możliwość dostosowania ich wewnętrznej implementacji bez przerywania współpracowników, tak długo, jak kontrakty zewnętrzne nie zostały naruszone. Polecenia COUNT_BIG hermetyzacji pomaga osiągnąć luźne powiązania i Modułowość projektów aplikacji, ponieważ obiekty i pakietów można zastąpić za pomocą alternatywnych implementacji tak długo, jak długo jest obsługiwany przez ten sam interfejs.
+Różne części aplikacji powinny używać **hermetyzacji** do izolowania ich od innych części aplikacji. Składniki aplikacji i warstwy powinny mieć możliwość dostosowania ich wewnętrznej implementacji bez przerywania współpracowników, tak długo, jak kontrakty zewnętrzne nie zostały naruszone. Odpowiednie użycie hermetyzacji pomaga osiągnąć swobodny sprzężenie i modułowość w projektach aplikacji, ponieważ obiekty i pakiety można zamienić na alternatywne implementacje, o ile ten sam interfejs jest obsługiwany.
 
 W klasach hermetyzacja jest realizowana przez ograniczenie poza dostępem do stanu wewnętrznego klasy. Jeśli aktor zewnętrzny chce manipulować stanem obiektu, należy to zrobić za pośrednictwem dobrze zdefiniowanej funkcji (lub metody ustawiającej właściwości), a nie bezpośredniego dostępu do stanu prywatnego obiektu. Podobnie składniki aplikacji i aplikacje powinny ujawniać dobrze zdefiniowane interfejsy dla współpracowników, zamiast zezwalać na bezpośrednie modyfikowanie ich stanu. Pozwala to na rozbicie projektu wewnętrznego aplikacji na czas bez obaw, że takie działanie spowoduje przerwanie współpracowników, dopóki są utrzymywane umowy publiczne.
 
@@ -75,7 +75,7 @@ Zamiast duplikowania logiki należy hermetyzować ją w konstrukcji programistyc
 
 ### <a name="persistence-ignorance"></a>Ignorujących trwałości
 
-**Ignorujących trwałości** (PI) odnosi się do typów, które muszą być utrwalane, ale których kod nie ma wpływać na wybór technologii trwałości. Takie typy w programie .NET są czasami określane jako zwykłe stare obiekty CLR (POCOs), ponieważ nie muszą dziedziczyć z określonej klasy bazowej ani implementować określonego interfejsu. Trwałość ignorujących jest cenna, ponieważ pozwala na utrwalenie tego samego modelu biznesowego na wiele sposobów, oferując dodatkową elastyczność aplikacji. Opcje trwałości mogą ulec zmianie z upływem czasu, z jednej technologii bazy danych na inną, a także w przypadku, gdy aplikacja została uruchomiona z użyciem pamięci podręcznej Redis lub DocumentDb platformy Azure, oprócz relacyjna baza danych).
+**Ignorujących trwałości** (PI) odnosi się do typów, które muszą być utrwalane, ale których kod nie ma wpływać na wybór technologii trwałości. Takie typy w programie .NET są czasami określane jako zwykłe stare obiekty CLR (POCOs), ponieważ nie muszą dziedziczyć z określonej klasy bazowej ani implementować określonego interfejsu. Trwałość ignorujących jest cenna, ponieważ pozwala na utrwalenie tego samego modelu biznesowego na wiele sposobów, oferując dodatkową elastyczność aplikacji. Opcje trwałości mogą ulec zmianie z upływem czasu, z jednej technologii bazy danych na inną, a oprócz tego mogą być wymagane dodatkowe formy trwałości (na przykład użycie pamięci podręcznej Redis lub Azure Cosmos DB oprócz relacyjna baza danych).
 
 Niektóre przykłady naruszeń tej zasady obejmują:
 
@@ -101,9 +101,9 @@ Co najmniej poszczególne aplikacje sieci Web powinny dążyć do własnego kont
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- [Wzorce projektowe języka JAVA: DPL](https://java-design-patterns.com/principles/)
+- [Wzorce projektowe JAVA: zasady](https://java-design-patterns.com/principles/)
 - [Ograniczony kontekst](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]
->[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)Następny
->[](common-web-application-architectures.md)
+>[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)
+>[dalej](common-web-application-architectures.md)

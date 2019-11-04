@@ -1,17 +1,17 @@
 ---
 title: Wyniki
-description: Dowiedz się, jak używać F# "Result" wpisz, aby pomóc w pisaniu kodu błędu odpornej na uszkodzenia.
+description: Dowiedz się, F# jak za pomocą typu "result" napisać kod odporny na błędy.
 ms.date: 04/24/2017
-ms.openlocfilehash: 36f60df8a2991c1d318e4921af6c9e89a0156918
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 187aa26ccbaac7e0ec998756377bb7b0489eb1ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645322"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424850"
 ---
 # <a name="results"></a>Wyniki
 
-Począwszy od F# 4.1, Brak `Result<'T,'TFailure>` typu, który służy do pisania kodu błędu odpornej na uszkodzenia, który może być składana.
+Począwszy od F# 4,1, istnieje `Result<'T,'TFailure>` typ, którego można użyć do pisania kodu odpornego na błędy, który może składać się z.
 
 ## <a name="syntax"></a>Składnia
 
@@ -20,20 +20,20 @@ Począwszy od F# 4.1, Brak `Result<'T,'TFailure>` typu, który służy do pisani
 [<StructuralEquality; StructuralComparison>]
 [<CompiledName("FSharpResult`2")>]
 [<Struct>]
-type Result<'T,'TError> = 
-    | Ok of ResultValue:'T 
+type Result<'T,'TError> =
+    | Ok of ResultValue:'T
     | Error of ErrorValue:'TError
 ```
 
 ## <a name="remarks"></a>Uwagi
 
-Należy zauważyć, że typ wyniku [sumy Unii](discriminated-unions.md#struct-discriminated-unions), która jest inna funkcja wprowadzona w F# 4.1.  Semantyka porównania strukturalnego zgłosić się tutaj.
+Należy zauważyć, że typ wyniku to [związek rozłącznych struktur](discriminated-unions.md#struct-discriminated-unions), który jest kolejną funkcją wprowadzoną w F# 4,1.  W tym miejscu są stosowane semantyka równości strukturalnej.
 
-`Result` Typu jest zwykle używana w monadic obsługi błędów, która jest często nazywany [programowania zorientowanego na kolei](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) w ramach F# społeczności.  W poniższym przykładzie trivial pokazano tego podejścia.
+Typ `Result` jest zazwyczaj używany w obsłudze błędów monadic, co jest często określane jako [programowanie zorientowane na szyny](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) w F# społeczności.  Poniższy prosty przykład ilustruje to podejście.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
-type Request = 
+type Request =
     { Name: string
       Email: string }
 
@@ -57,11 +57,11 @@ let validateEmail req =
     | _ -> Ok req
 
 let validateRequest reqResult =
-    reqResult 
+    reqResult
     |> Result.bind validateName
     |> Result.bind validateEmail
 
-let test() = 
+let test() =
     // Now, create a Request and pattern match on the result.
     let req1 = { Name = "Phillip"; Email = "phillip@contoso.biz" }
     let res1 = validateRequest (Ok req1)
@@ -80,7 +80,7 @@ let test() =
 test()
 ```
 
-Jak widać, jest całkiem łatwo można połączyć w łańcuch ze sobą różne funkcje sprawdzania poprawności na zwrócenie ich wszystkich wymuszenia `Result`.  Pozwala to przerwać funkcje następująco w małych fragmentów, które są jako konfigurowalna w razie potrzeby można.  Ma to również wartość dodaną *Wymuszanie* użytkowania [dopasowywania do wzorca](pattern-matching.md) na końcu podczas sprawdzania poprawności, które w chwili wymusza wyższy stopień poprawność program.
+Jak widać, bardzo łatwo można połączyć łańcuchowo różne funkcje walidacji, jeśli wymusimy, aby wszyscy mogli zwrócić `Result`.  Dzięki temu można rozbić funkcje podobne do małych kawałków, które są w miarę możliwości do redagowania.  Jest to również wartość dodana do *wymuszania* użycia [dopasowania wzorca](pattern-matching.md) na końcu zaokrąglenia sprawdzania poprawności, która w ten sposób wymusza wyższy stopień poprawienia programu.
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 95c36cd039436dcddd3e2e2a3e1fae98ee885677
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a78488ad902b0a96a30ad197b0ece043543c3d69
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924667"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422313"
 ---
 # <a name="struct-c-reference"></a>struct (odwołanie w C#)
 
-`struct` Typ jest typem wartości, który zwykle jest używany do hermetyzowania małych grup powiązanych zmiennych, takich jak współrzędne prostokąta lub Charakterystyka elementu w spisie. Poniższy przykład pokazuje prostą deklarację struktury:
+Typ `struct` jest typem wartości, który zwykle jest używany do hermetyzowania małych grup powiązanych zmiennych, takich jak współrzędne prostokąta lub Charakterystyka elementu w spisie. Poniższy przykład pokazuje prostą deklarację struktury:
 
 ```csharp
 public struct Book
@@ -48,12 +48,12 @@ Aby zapoznać się z przykładami, zobacz [using structs](../../programming-guid
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Tabela wartości domyślnych](default-values-table.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
-- [Typy](types.md)
+- [Typy](/dotnet/csharp/language-reference/keywords)
 - [Typy wartości](value-types.md)
 - [class](class.md)
 - [interface](interface.md)

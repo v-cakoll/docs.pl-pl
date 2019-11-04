@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321345"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420656"
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano, jakie aplikacje klienckie, jak konfigurować, tworzyć i korzystać z klienta Windows Communication Foundation (WCF) oraz jak zabezpieczać aplikacje klienckie.  
@@ -43,7 +43,7 @@ W tej sekcji opisano, jakie aplikacje klienckie, jak konfigurować, tworzyć i k
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Uzyskiwanie kontraktu, powiązań i adresów usługi  
  W programie WCF, usługi i klienci modelują kontrakty przy użyciu atrybutów zarządzanych, interfejsów i metod. Aby nawiązać połączenie z usługą w aplikacji klienckiej, należy uzyskać informacje o typie dla kontraktu usługi. Zazwyczaj można to zrobić za pomocą narzędzia do obsługi [metadanych ServiceModel (Svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), które pobiera metadane z usługi, konwertuje je na plik zarządzanego kodu źródłowego w wybranym języku i tworzy plik konfiguracji aplikacji klienckiej. za pomocą programu można skonfigurować obiekt klienta WCF. Na przykład jeśli zamierzasz utworzyć obiekt klienta WCF w celu wywołania `MyCalculatorService` i wiesz, że metadane dla tej usługi są publikowane w `http://computerName/MyCalculatorService/Service.svc?wsdl`, Poniższy przykład kodu pokazuje, jak używać programu Svcutil. exe do uzyskania pliku `ClientCode.vb` zawierającego usługę kontrakt w kodzie zarządzanym.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   
@@ -64,7 +64,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- Jeśli nie używasz programu Visual Studio, sprawdź wygenerowany kod kontraktu, aby znaleźć typ, który rozszerza <xref:System.ServiceModel.ClientBase%601> i interfejs kontraktu usługi `ISampleService`. W tym przypadku ten typ wygląda podobnie do następującego kodu:  
+ Jeśli nie używasz programu Visual Studio, sprawdź wygenerowany kod kontraktu, aby znaleźć typ, który rozszerza <xref:System.ServiceModel.ClientBase%601> i `ISampleService`interfejs kontraktu usługi. W tym przypadku ten typ wygląda podobnie do następującego kodu:  
   
  [!code-csharp[C_GeneratedCodeFiles#14](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#14)]  
   
@@ -79,7 +79,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- Ten plik konfiguracji określa docelowy punkt końcowy w elemencie `<client>`. Aby uzyskać więcej informacji o używaniu wielu docelowych punktów końcowych, zobacz <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> lub konstruktorów <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>.  
+ Ten plik konfiguracji określa docelowy punkt końcowy w elemencie `<client>`. Aby uzyskać więcej informacji o używaniu wielu docelowych punktów końcowych, zobacz <xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType> lub <xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType> konstruktorów.  
   
 ## <a name="calling-operations"></a>Operacje wywołujące  
  Po utworzeniu i skonfigurowaniu obiektu klienckiego Utwórz blok try/catch, a następnie Wywołaj operacje w taki sam sposób, jak gdyby obiekt był lokalny, i Zamknij obiekt klienta WCF. Gdy aplikacja kliencka wywołuje pierwszą operację, usługa WCF automatycznie otwiera podstawowy kanał, a kanał źródłowy jest zamykany podczas odtwarzania obiektu. (Alternatywnie można również jawnie otworzyć i zamknąć kanał przed wywołaniem innych operacji lub po nim.)  
@@ -132,7 +132,7 @@ End Interface
  [!code-csharp[C_GeneratedCodeFiles#20](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#20)]  
   
 ## <a name="handling-errors"></a>Obsługa błędów  
- Wyjątki mogą wystąpić w aplikacji klienckiej podczas otwierania bazowego kanału klienta (bez względu na to, czy jest to jawnie czy automatycznie przez wywołanie operacji), przy użyciu obiektu klienta lub kanału do wywoływania operacji lub podczas zamykania bazowego kanału klienta. Zaleca się, aby aplikacje, które oczekują w obsłudze ewentualnych wyjątków <xref:System.TimeoutException?displayProperty=nameWithType> i <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, oprócz wszystkich obiektów <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> zgłaszanych w wyniku błędów SOAP zwracanych przez operacje. Błędy SOAP określone w kontrakcie operacji są wywoływane w aplikacjach klienckich jako <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>, gdzie parametr typu jest typem szczegółowym błędu SOAP. Aby uzyskać więcej informacji na temat obsługi błędów w aplikacji klienckiej, zobacz [wysyłanie i otrzymywanie błędów](sending-and-receiving-faults.md). Pełny przykład pokazuje, jak obsłużyć błędy w kliencie, zobacz [oczekiwane wyjątki](./samples/expected-exceptions.md).  
+ Wyjątki mogą wystąpić w aplikacji klienckiej podczas otwierania bazowego kanału klienta (bez względu na to, czy jest to jawnie czy automatycznie przez wywołanie operacji), przy użyciu obiektu klienta lub kanału do wywoływania operacji lub podczas zamykania bazowego kanału klienta. Zaleca się, aby aplikacje, które oczekują w obsłudze ewentualnych wyjątków <xref:System.TimeoutException?displayProperty=nameWithType> i <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>, oprócz wszystkich obiektów <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> zgłaszanych w wyniku błędów SOAP zwracanych przez operacje. Błędy SOAP określone w kontrakcie operacji są zgłaszane do aplikacji klienckich jako <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType>, gdzie parametr typu jest typem szczegółowym błędu SOAP. Aby uzyskać więcej informacji na temat obsługi błędów w aplikacji klienckiej, zobacz [wysyłanie i otrzymywanie błędów](sending-and-receiving-faults.md). Pełny przykład pokazuje, jak obsłużyć błędy w kliencie, zobacz [oczekiwane wyjątki](./samples/expected-exceptions.md).  
   
 ## <a name="configuring-and-securing-clients"></a>Konfigurowanie i Zabezpieczanie klientów  
  Konfigurowanie klienta programu rozpoczyna się od wymaganego ładowania informacji o docelowym punkcie końcowym dla obiektu klienta lub kanału, zazwyczaj z pliku konfiguracji, chociaż można również ładować te informacje programowo przy użyciu konstruktorów i właściwości klienta. Należy jednak wykonać dodatkowe czynności konfiguracyjne, aby włączyć określone zachowanie klienta i wiele scenariuszy zabezpieczeń.  
@@ -169,7 +169,7 @@ End Interface
  Sposób wywoływania operacji jest całkowicie do dewelopera klienta. Wynika to z faktu, że komunikaty wchodzące w skład operacji można zamapować na metody synchroniczne lub asynchroniczne, gdy wyrażasz w kodzie zarządzanym. W związku z tym, jeśli chcesz skompilować klienta, który wywołuje operacje asynchronicznie, możesz użyć programu Svcutil. exe do generowania kodu klienta asynchronicznego przy użyciu opcji `/async`. Aby uzyskać więcej informacji, zobacz [jak: wywołania operacji usługi asynchronicznej](./feature-details/how-to-call-wcf-service-operations-asynchronously.md).  
   
 ## <a name="calling-services-using-wcf-client-channels"></a>Wywoływanie usług przy użyciu kanałów klienta WCF  
- Typy klientów WCF zwiększają <xref:System.ServiceModel.ClientBase%601>, które same pochodzą z interfejsu <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, aby uwidocznić podstawowy system kanałów. Możesz wywoływać usługi przy użyciu kontraktu usługi docelowej z klasą <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Aby uzyskać szczegółowe informacje, zobacz [Architektura klienta WCF](./feature-details/client-architecture.md).  
+ Typy klientów WCF rozszerzając <xref:System.ServiceModel.ClientBase%601>, które same pochodzą z interfejsu <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>, aby uwidocznić podstawowy system kanałów. Możesz wywoływać usługi przy użyciu kontraktu usługi docelowej z klasą <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Aby uzyskać szczegółowe informacje, zobacz [Architektura klienta WCF](./feature-details/client-architecture.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

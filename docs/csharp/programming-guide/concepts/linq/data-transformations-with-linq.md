@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: f042042f36e373ec05e8f0f15c14027463653578
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8dd57a43f814d7e41ec74af3eeb6d797fef41c9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924319"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418635"
 ---
 # <a name="data-transformations-with-linq-c"></a>Przekształcanie danych za pomocą LINQ (C#)
-[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]nie tylko pobiera dane. Jest to również zaawansowane narzędzie do przekształcania danych. Za pomocą [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania można użyć sekwencji źródłowej jako danych wejściowych i zmodyfikować ją na wiele sposobów, aby utworzyć nową sekwencję wyjściową. Można zmodyfikować samą sekwencję bez modyfikowania samych elementów przez sortowanie i grupowanie. Jednak prawdopodobnie najbardziej wydajną funkcją [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytań jest możliwość tworzenia nowych typów. Jest to realizowane w klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) . Na przykład należy wykonać następujące zadania:  
+[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] nie tylko na pobieranie danych. Jest to również zaawansowane narzędzie do przekształcania danych. Używając zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], można użyć sekwencji źródłowej jako danych wejściowych i zmodyfikować ją na wiele sposobów, aby utworzyć nową sekwencję wyjściową. Można zmodyfikować samą sekwencję bez modyfikowania samych elementów przez sortowanie i grupowanie. Jednak prawdopodobnie najbardziej wydajną funkcją zapytań [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] jest możliwość tworzenia nowych typów. Jest to realizowane w klauzuli [SELECT](../../../language-reference/keywords/select-clause.md) . Na przykład można wykonać następujące zadania:  
   
 - Scalanie wielu sekwencji wejściowych w jedną sekwencję wyjściową, która ma nowy typ.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "69924319"
  Poniżej przedstawiono kilka przykładów. Oczywiście te przekształcenia można łączyć na różne sposoby w tym samym zapytaniu. Ponadto sekwencja wyjściowa jednego zapytania może służyć jako sekwencja wejściowa dla nowej kwerendy.  
   
 ## <a name="joining-multiple-inputs-into-one-output-sequence"></a>Łączenie wielu danych wejściowych w jedną sekwencję wyjściową  
- Można użyć [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania, aby utworzyć sekwencję wyjściową zawierającą elementy z więcej niż jednej sekwencji danych wejściowych. Poniższy przykład pokazuje, jak połączyć dwie struktury danych w pamięci, ale te same zasady można stosować do łączenia danych ze źródeł XML lub SQL lub zestawów danych. Założono następujące dwa typy klas:  
+ Za pomocą zapytania [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] można utworzyć sekwencję wyjściową zawierającą elementy z więcej niż jednej sekwencji danych wejściowych. Poniższy przykład pokazuje, jak połączyć dwie struktury danych w pamięci, ale te same zasady można stosować do łączenia danych ze źródeł XML lub SQL lub zestawów danych. Założono następujące dwa typy klas:  
   
  [!code-csharp[CsLINQGettingStarted#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#7)]  
   
@@ -44,14 +44,14 @@ ms.locfileid: "69924319"
 ## <a name="selecting-a-subset-of-each-source-element"></a>Wybranie podzestawu każdego elementu źródłowego  
  Istnieją dwa podstawowe sposoby wybierania podzbioru każdego elementu w sekwencji źródłowej:  
   
-1. Aby zaznaczyć tylko jeden element członkowski elementu źródłowego, użyj operacji z kropką. W poniższym przykładzie Załóżmy, że `Customer` obiekt zawiera kilka właściwości publicznych, w tym ciąg o nazwie. `City` Po wykonaniu to zapytanie będzie generować sekwencję wyjściową ciągów.  
+1. Aby zaznaczyć tylko jeden element członkowski elementu źródłowego, użyj operacji z kropką. W poniższym przykładzie Załóżmy, że obiekt `Customer` zawiera kilka właściwości publicznych, w tym ciąg o nazwie `City`. Po wykonaniu to zapytanie będzie generować sekwencję wyjściową ciągów.  
   
     ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
-2. Aby utworzyć elementy, które zawierają więcej niż jedną właściwość z elementu źródłowego, można użyć inicjatora obiektów z obiektem nazwanym lub typem anonimowym. W poniższym przykładzie pokazano użycie typu anonimowego do hermetyzacji dwóch właściwości z każdego `Customer` elementu:  
+2. Aby utworzyć elementy, które zawierają więcej niż jedną właściwość z elementu źródłowego, można użyć inicjatora obiektów z obiektem nazwanym lub typem anonimowym. W poniższym przykładzie pokazano użycie typu anonimowego do hermetyzacji dwóch właściwości z każdego elementu `Customer`:  
   
     ```csharp
     var query = from cust in Customer  
@@ -61,7 +61,7 @@ ms.locfileid: "69924319"
  Aby uzyskać więcej informacji, zobacz [Inicjatory obiektów i kolekcji](../../classes-and-structs/object-and-collection-initializers.md) oraz [Typy anonimowe](../../classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Przekształcanie obiektów w pamięci do formatu XML  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]zapytania ułatwiają Przekształcanie danych między strukturami danych w pamięci, bazami danych SQL, ADO.NETmi i strumieniami XML. Poniższy przykład przekształca obiekty w strukturze danych w pamięci na elementy XML.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] zapytania ułatwiają Przekształcanie danych między strukturami danych w pamięci, bazami danych SQL, ADO.NETmi i strumieniami XML. Poniższy przykład przekształca obiekty w strukturze danych w pamięci na elementy XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69924319"
  Sekwencja wyjściowa może nie zawierać żadnych elementów ani właściwości elementów z sekwencji źródłowej. Wyjście może zamiast tego być sekwencją wartości, które są obliczane przy użyciu elementów źródłowych jako argumentów wejściowych. Następujące proste zapytanie, gdy jest wykonywane, wyprowadza sekwencję ciągów, których wartości reprezentują obliczenia na podstawie sekwencji źródłowej elementów typu `double`.  
   
 > [!NOTE]
-> Metody wywołujące w wyrażeniach zapytań nie są obsługiwane, jeśli zapytanie zostanie przetłumaczone na inną domenę. Na przykład nie można wywołać metody zwykłej C# w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] , ponieważ SQL Server nie ma kontekstu dla tego elementu. Można jednak mapować procedury składowane na metody i wywoływać je. Aby uzyskać więcej informacji, zobacz [procedury składowane](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
+> Metody wywołujące w wyrażeniach zapytań nie są obsługiwane, jeśli zapytanie zostanie przetłumaczone na inną domenę. Na przykład nie można wywołać metody zwykłej C# w [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], ponieważ SQL Server nie ma kontekstu dla tego elementu. Można jednak mapować procedury składowane na metody i wywoływać je. Aby uzyskać więcej informacji, zobacz [procedury składowane](../../../../framework/data/adonet/sql/linq/stored-procedures.md).  
   
  [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   
@@ -103,5 +103,5 @@ ms.locfileid: "69924319"
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 - [LINQ to XML (C#)](./linq-to-xml-overview.md)
-- [Wyrażenia zapytania LINQ](../../linq-query-expressions/index.md)
+- [Wyrażenia zapytania LINQ](../../../linq/index.md)
 - [select, klauzula](../../../language-reference/keywords/select-clause.md)

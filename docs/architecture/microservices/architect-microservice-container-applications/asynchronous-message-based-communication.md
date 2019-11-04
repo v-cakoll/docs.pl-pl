@@ -2,12 +2,12 @@
 title: Asynchroniczna komunikacja oparta na komunikatach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Asynchroniczna komunikacja oparta na komunikatach to podstawowe koncepcje w architekturze mikrousług, ponieważ jest to najlepszy sposób, aby mikrousługi były niezależne od siebie, a także ostatecznie zsynchronizowane.
 ms.date: 09/20/2018
-ms.openlocfilehash: c362bdaf41fee5ee20516b89b8bec12d6c0557cf
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522760"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454231"
 ---
 # <a name="asynchronous-message-based-communication"></a>Asynchroniczna komunikacja oparta na komunikatach
 
@@ -77,7 +77,7 @@ Wyzwanie w przypadku implementowania architektury opartej na zdarzeniach w wielu
 
 - Używanie wzorca [pozyskiwania pełnego zdarzenia](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) .
 
-- Używanie [wzorca skrzynki nadawczej](http://www.kamilgrzybek.com/design/the-outbox-pattern/): transakcyjna tabela bazy danych jako kolejka komunikatów, która będzie podstawą dla składnika Event-Creator, który utworzy zdarzenie i opublikuje je.
+- Używanie [wzorca skrzynki nadawczej](https://www.kamilgrzybek.com/design/the-outbox-pattern/): transakcyjna tabela bazy danych jako kolejka komunikatów, która będzie podstawą dla składnika Event-Creator, który utworzy zdarzenie i opublikuje je.
 
 Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komunikacji asynchronicznej, to idempotentność komunikatów i Deduplikacja komunikatów. Te tematy zostały omówione w sekcji [implementowanie komunikacji opartej na zdarzeniach między mikrousługami (zdarzenia integracji)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md) w dalszej części tego przewodnika.
 
@@ -98,7 +98,7 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 - **Komunikacja między kontekstami ograniczonymi** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- @No__t **spójności ostatecznej**— 1
+-  \ **spójności ostatecznej**
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard. Refaktoryzacja do odporności: Ocena sprzęgu** \
@@ -106,4 +106,4 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 
 > [!div class="step-by-step"]
 > [Poprzedni](communication-in-microservice-architecture.md)
-> [Następny](maintain-microservice-apis.md)
+> [dalej](maintain-microservice-apis.md)

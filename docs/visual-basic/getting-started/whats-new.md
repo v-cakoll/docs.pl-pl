@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 2798c436ddfabc8fedf1f2c36c25e8ee2651b476
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191982"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423917"
 ---
 # <a name="whats-new-for-visual-basic"></a>Co nowego w Visual Basic
 
@@ -212,7 +212,7 @@ Można uzyskać niekwalifikowaną nazwę ciągu typu lub składowej, która ma b
 
 [Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-Do konstruowania ciągów można użyć wyrażeń interpolacji ciągów.  Wyrażenie interpolowane ciąg wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciąg interpolowany jest łatwiejszy do zrozumienia w odniesieniu do argumentów niż [formatowanie złożone](../../standard/base-types/composite-format.md).
+Do konstruowania ciągów można użyć wyrażeń interpolacji ciągów.  Wyrażenie interpolowane ciąg wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciąg interpolowany jest łatwiejszy do zrozumienia w odniesieniu do argumentów niż [formatowanie złożone](../../standard/base-types/composite-formatting.md).
 
 [Dostęp warunkowy do elementu członkowskiego o wartości null i indeksowanie](../language-reference/operators/null-conditional-operators.md)
 

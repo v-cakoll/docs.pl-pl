@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331989"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416713"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące hostingu platformy Azure dla ASP.NET Core aplikacji sieci Web
 
@@ -76,7 +76,7 @@ W miarę jak część większych aplikacji jest dzielona na własne, niezależne
 
 [Dowiedz się więcej o wzorcach projektowych, które należy wziąć pod uwagę podczas tworzenia systemów mikrousług.](https://docs.microsoft.com/azure/architecture/microservices/design/patterns)
 
-### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
+### <a name="azure-kubernetes-service"></a>Usługa Azure Kubernetes
 
 Usługa Azure Kubernetes Service (AKS) zarządza hostowanym środowiskiem Kubernetes, dzięki czemu można szybko i łatwo wdrażać aplikacje z kontenerami bez wiedzy z zakresu aranżacji kontenerów i zarządzać nimi. Eliminuje to również obciążenie trwających operacji i konserwacji dzięki aprowizacji, uaktualnianiu i skalowaniu zasobów na żądanie bez przełączania aplikacji do trybu offline.
 
@@ -102,21 +102,21 @@ Azure Dev Spaces:
 
 [Dowiedz się więcej o Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
-### <a name="azure-virtual-machines"></a>Usługa Azure Virtual Machines
+### <a name="azure-virtual-machines"></a>Virtual Machines platformy Azure
 
 Jeśli masz istniejącą aplikację, która będzie wymagała znaczących modyfikacji do uruchomienia w App Service, możesz wybrać Virtual Machines, aby uprościć migrację do chmury. Jednak prawidłowe Konfigurowanie, zabezpieczanie i konserwowanie maszyn wirtualnych wymaga znacznie więcej czasu i wiedza IT w porównaniu z Azure App Service. Jeśli rozważasz platformę Azure Virtual Machines, pamiętaj, aby wziąć pod uwagę trwającą pracę konserwacyjną wymaganą do naprawienia i zaktualizowania środowiska maszyn wirtualnych oraz zarządzania nim. Azure Virtual Machines to infrastruktura jako usługa (IaaS), a App Service to PaaS. Należy również rozważyć, czy wdrażanie aplikacji jako kontenera systemu Windows do Web App for Containers może być możliwością dla Twojego scenariusza.
 
 ## <a name="logical-processes"></a>Procesy logiczne
 
-Poszczególne procesy logiczne, które mogą być oddzielone od reszty aplikacji, mogą zostać wdrożone niezależnie w celu Azure Functions w sposób "bezserwerowy". Azure Functions pozwala napisać kod, który jest potrzebny dla danego problemu, bez obaw o działanie aplikacji lub infrastruktury w celu jej uruchomienia. Możesz wybierać spośród różnych języków programowania, w tym C @ no__t-0, F @ no__t-1, Node. js, Python i PHP, co pozwala na wybranie najbardziej wydajnego języka dla tego zadania. Podobnie jak w przypadku większości rozwiązań opartych na chmurze, płacisz tylko za wykorzystywany czas i możesz ufać Azure Functions w miarę potrzeb.
+Poszczególne procesy logiczne, które mogą być oddzielone od reszty aplikacji, mogą zostać wdrożone niezależnie w celu Azure Functions w sposób "bezserwerowy". Azure Functions pozwala napisać kod, który jest potrzebny dla danego problemu, bez obaw o działanie aplikacji lub infrastruktury w celu jej uruchomienia. Możesz wybierać spośród różnych języków programowania, w tym C\#, F\#, Node. js, Python i PHP, co pozwala na wybranie najbardziej wydajnego języka dla tego zadania. Podobnie jak w przypadku większości rozwiązań opartych na chmurze, płacisz tylko za wykorzystywany czas i możesz ufać Azure Functions w miarę potrzeb.
 
-## <a name="data"></a>Data
+## <a name="data"></a>Dane
 
 System Azure oferuje szeroką gamę opcji przechowywania danych, dzięki czemu aplikacja może używać odpowiedniego dostawcy danych dla danych, których dotyczy.
 
 W przypadku transakcyjnych danych relacyjnych usługi Azure SQL Database są najlepszą opcją. W celu uzyskania danych o wysokiej wydajności do odczytu, Redis pamięć podręczna, której kopia zapasowa jest tworzona za pomocą Azure SQL Database jest dobrym rozwiązaniem.
 
-Dane JSON bez struktury mogą być przechowywane na różne sposoby, od SQL Database kolumn do obiektów blob lub tabel w usłudze Azure Storage, do DocumentDB. Z tych DocumentDB oferuje najlepszą funkcję wykonywania zapytań i jest to zalecana opcja dla dużej liczby dokumentów opartych na notacji JSON, które muszą obsługiwać wykonywanie zapytań.
+Dane JSON bez struktury mogą być przechowywane na różne sposoby, od SQL Database kolumn do obiektów blob lub tabel w usłudze Azure Storage, aby Azure Cosmos DB. Z tych Azure Cosmos DB oferuje najlepszą funkcję wykonywania zapytań i jest to zalecana opcja dla dużej liczby dokumentów opartych na notacji JSON, które muszą obsługiwać wykonywanie zapytań.
 
 Przejściowe lub oparte na zdarzeniach dane służące do organizowania zachowań aplikacji mogą korzystać z Azure Service Bus lub kolejek usługi Azure Storage. Usługa Azure Storage Bus zapewnia większą elastyczność i jest zalecaną usługą dla nieuproszczonych komunikatów w aplikacjach i między nimi.
 
@@ -154,4 +154,4 @@ Na rysunku 11-1 przedstawiono przykładową architekturę referencyjną. Na tym 
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
->[Poprzednie](development-process-for-azure.md)
+>[Ubiegł](development-process-for-azure.md)

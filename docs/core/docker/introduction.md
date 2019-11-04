@@ -3,12 +3,12 @@ title: Wprowadzenie do platformy Docker
 description: Ten artykuł zawiera wprowadzenie i Omówienie platformy Docker w kontekście aplikacji .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038461"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416640"
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do platform .NET i Docker
 
@@ -72,7 +72,7 @@ Przechowuj obrazy kontenerów i zarządzaj nimi we wszystkich typach wdrożeń p
 
 ## <a name="next-steps"></a>Następne kroki
 
-- [Dowiedz się, jak konteneryzowanie aplikację .NET Core.](build-docker-netcore-container.md)
+- [Dowiedz się, jak konteneryzowanie aplikację .NET Core.](build-container.md)
 - [Dowiedz się, jak konteneryzowanie aplikację ASP.NET Coreową.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [Wypróbuj samouczek uczenia się ASP.NET Core mikrousług.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Informacje o narzędziach kontenera w programie Visual Studio](/visualstudio/containers/overview)

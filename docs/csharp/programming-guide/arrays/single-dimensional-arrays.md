@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 17c384ec327d4a80ed614dce6254baa5bfb2e960
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 5559acd162b26a94b009ec21691d1501c90db290
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597313"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419528"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tablice jednowymiarowe (Przewodnik programowania w języku C#)
 
@@ -19,7 +19,7 @@ Można zadeklarować jednowymiarową tablicę składającą się z pięciu liczb
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Ta tablica zawiera elementy z `array[0]` elementu do. `array[4]` Operator [New](../../language-reference/operators/new-operator.md) jest używany do tworzenia tablicy i inicjowania elementów tablicy do ich wartości domyślnych. W tym przykładzie wszystkie elementy tablicy są inicjowane do zera.  
+ Ta tablica zawiera elementy `array[0]` do `array[4]`. Operator [New](../../language-reference/operators/new-operator.md) jest używany do tworzenia tablicy i inicjowania elementów tablicy do ich wartości domyślnych. W tym przykładzie wszystkie elementy tablicy są inicjowane do zera.  
   
  Tablica, która przechowuje elementy ciągu, może być zadeklarowana w ten sam sposób. Na przykład:  
   
@@ -41,7 +41,7 @@ Można zadeklarować jednowymiarową tablicę składającą się z pięciu liczb
   
  [!code-csharp[csProgGuideArrays#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#8)]  
   
- Istnieje możliwość zadeklarować zmienną tablicową bez inicjalizacji, ale należy użyć `new` operatora, gdy przypiszesz tablicę do tej zmiennej. Na przykład:  
+ Istnieje możliwość zadeklarować zmienną tablicową bez inicjalizacji, ale należy użyć operatora `new`, gdy przypiszesz tablicę do tej zmiennej. Na przykład:  
   
  [!code-csharp[csProgGuideArrays#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#9)]  
   
@@ -55,7 +55,7 @@ Można zadeklarować jednowymiarową tablicę składającą się z pięciu liczb
   
  Wynik tej instrukcji zależy od tego, czy `SomeType` jest typem wartości czy typem referencyjnym. Jeśli jest to typ wartości, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy ma typ `SomeType`. Jeśli `SomeType` jest typem referencyjnym, instrukcja tworzy tablicę zawierającą 10 elementów, z których każdy jest zainicjowany do odwołania o wartości null.  
   
- Aby uzyskać więcej informacji na temat typów wartości i typów referencyjnych, zobacz [Types](../../language-reference/keywords/types.md).  
+ Aby uzyskać więcej informacji na temat typów wartości i typów referencyjnych, zobacz [Types](/dotnet/csharp/language-reference/keywords).  
   
 ## <a name="see-also"></a>Zobacz także
 

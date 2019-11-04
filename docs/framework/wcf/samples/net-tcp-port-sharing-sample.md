@@ -2,12 +2,12 @@
 title: Przykład współużytkowania portów Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039184"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416760"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Przykład współużytkowania portów Net.TCP
 Protokół TCP/IP używa liczby 16-bitowej zwanej portem do rozróżniania połączeń z wieloma aplikacjami sieciowymi uruchomionymi na tym samym komputerze. Jeśli aplikacja nasłuchuje na porcie, cały ruch TCP dla tego portu przechodzi do tej aplikacji. Inne aplikacje nie mogą nasłuchiwać tego portu w tym samym czasie.  
@@ -17,7 +17,7 @@ Protokół TCP/IP używa liczby 16-bitowej zwanej portem do rozróżniania poł�
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,16 +25,16 @@ Protokół TCP/IP używa liczby 16-bitowej zwanej portem do rozróżniania poł�
   
  Udostępnianie portów NetTcp to funkcja programu Windows Communication Foundation (WCF), która w podobny sposób pozwala wielu aplikacjom sieciowym współużytkować jeden port. Usługa udostępniania portów NetTcp akceptuje połączenia za pomocą protokołu net. TCP i przekazuje komunikaty na podstawie ich adresu docelowego.  
   
- Usługa udostępniania portów NetTcp nie jest domyślnie włączona. Przed uruchomieniem tego przykładu należy ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [jak: Włącz usługę](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)udostępniania portów Net. TCP. Jeśli usługa jest wyłączona, podczas uruchamiania aplikacji serwera zostanie zgłoszony wyjątek.  
+ Usługa udostępniania portów NetTcp nie jest domyślnie włączona. Przed uruchomieniem tego przykładu należy ręcznie włączyć usługę. Aby uzyskać więcej informacji, zobacz [jak: Włączanie usługi udostępniania portów Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Jeśli usługa jest wyłączona, podczas uruchamiania aplikacji serwera zostanie zgłoszony wyjątek.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Udostępnianie portów jest włączone na serwerze przez ustawienie <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> właściwości <xref:System.ServiceModel.NetTcpBinding> powiązania lub <xref:System.ServiceModel.Channels.TcpTransportBindingElement> elementu powiązania. Klient nie musi wiedzieć, jak Udostępnianie portów zostało skonfigurowane do korzystania z niego na serwerze.  
+ Udostępnianie portów jest włączone na serwerze przez ustawienie właściwości <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> powiązania <xref:System.ServiceModel.NetTcpBinding> lub elementu powiązania <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Klient nie musi wiedzieć, jak Udostępnianie portów zostało skonfigurowane do korzystania z niego na serwerze.  
   
 ## <a name="enabling-port-sharing"></a>Włączanie udostępniania portów  
- Poniższy kod demonstruje włączenie udostępniania portów na serwerze. Uruchamia wystąpienie `ICalculator` usługi na stałym porcie ze losową ścieżką URI. Mimo że dwie usługi mogą współużytkować ten sam port, ich ogólne adresy punktów końcowych nadal muszą być unikatowe, aby usługa udostępniania portów NetTcp mogła kierować komunikaty do odpowiedniej aplikacji.  
+ Poniższy kod demonstruje włączenie udostępniania portów na serwerze. Uruchamia wystąpienie usługi `ICalculator` na stałym porcie ze losową ścieżką URI. Mimo że dwie usługi mogą współużytkować ten sam port, ich ogólne adresy punktów końcowych nadal muszą być unikatowe, aby usługa udostępniania portów NetTcp mogła kierować komunikaty do odpowiedniej aplikacji.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -51,7 +51,7 @@ host.Open();
 
  Włączenie udostępniania portów umożliwia uruchomienie usługi wiele razy bez konfliktu przez numer portu. Jeśli zmienisz kod w celu wyłączenia udostępniania portów, uruchomienie dwóch kopii usługi powoduje, że w drugim kończy się niepowodzeniem z <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Każde wystąpienie usługi drukuje swój unikatowy numer i adres. Na przykład po uruchomieniu programu Service. exe może zostać wyświetlony następujący tekst.  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  Wprowadź numer usługi widoczny w tym miejscu podczas uruchamiania programu Client. exe.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

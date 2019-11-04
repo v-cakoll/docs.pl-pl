@@ -5,12 +5,12 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 70f4b439d231d69e5671216bc4e62d0789ce66c7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d21ac5f366e001ea76d6eda64ed62583248796f6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920137"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454415"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Jak powiązać z wynikami zapytania LINQ
 
@@ -35,4 +35,4 @@ Drugie pole listy tworzy powiązanie z tą kolekcją, ponieważ jej wartość <x
 - [Udostępnianie danych do powiązania w XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Powiązywanie z kolekcją i wyświetlanie informacji na podstawie wyboru](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Nowości w WPF w wersji 4.5](../getting-started/whats-new.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)

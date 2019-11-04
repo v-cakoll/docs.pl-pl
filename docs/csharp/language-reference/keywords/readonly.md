@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 8ecf399e48da12a9dee19bb217b8668c6a53d3ad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191859"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454959"
 ---
 # <a name="readonly-c-reference"></a>readonly (odwołanie w C#)
 
@@ -33,7 +33,7 @@ Słowo kluczowe `readonly` jest modyfikatorem, który może być używany w czte
 - W [definicji elementu członkowskiego`readonly`](#readonly-member-examples)`readonly` wskazuje, że element członkowski `struct` nie ulega mutacji w wewnętrznym stanie struktury.
 - W [`ref readonly` zwraca metodę](#ref-readonly-return-example), modyfikator `readonly` wskazuje, że metoda zwraca odwołanie, a zapisy nie są dozwolone dla tego odwołania.
 
-Konteksty `readonly sturct` i `ref readonly` zostały dodane do C# 7,2. `readonly` członkowie struktury zostali dodani C# do 8,0
+Konteksty `readonly struct` i `ref readonly` zostały dodane do C# 7,2. `readonly` członkowie struktury zostali dodani C# do 8,0
 
 ## <a name="readonly-field-example"></a>Przykład pola tylko do odczytu
 
@@ -161,6 +161,6 @@ Możesz również zobaczyć propozycje specyfikacji języka:
 - [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Modyfikatory](modifiers.md)
+- [Modyfikatory](index.md)
 - [const](const.md)
 - [Pola](../../programming-guide/classes-and-structs/fields.md)

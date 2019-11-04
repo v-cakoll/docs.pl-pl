@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: cf5873cdf137573826d5361d077e0534e8cba1f0
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920288"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459017"
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z którego pochodzą dane. W tym temacie omówiono typy obiektów, których można użyć jako źródła powiązań.
@@ -54,7 +54,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
 ## <a name="using-entire-objects-as-a-binding-source"></a>Używanie całych obiektów jako źródła powiązania
  Możesz użyć całego obiektu jako źródła powiązania. Źródło powiązania można określić przy użyciu właściwości <xref:System.Windows.Data.Binding.Source%2A> lub <xref:System.Windows.FrameworkElement.DataContext%2A>, a następnie podać pustą deklarację powiązania: `{Binding}`. Scenariusze, w których jest to przydatne, obejmują powiązanie z obiektami typu String, powiązania z obiektami z wieloma interesującymi się właściwościami lub powiązaniem z obiektami kolekcji. Aby zapoznać się z przykładem powiązania z całym obiektem kolekcji, zobacz [Używanie wzorca wzorzec-szczegóły z danymi hierarchicznymi](how-to-use-the-master-detail-pattern-with-hierarchical-data.md).
 
- Należy pamiętać, że może być konieczne zastosowanie logiki niestandardowej, aby dane były zrozumiałe dla powiązanej właściwości docelowej. Logika niestandardowa może mieć postać niestandardowego konwertera (jeśli konwersja typu domyślnego nie istnieje) lub <xref:System.Windows.DataTemplate>. Aby uzyskać więcej informacji na temat konwerterów, zobacz sekcję konwersja danych — [Omówienie powiązań danych](data-binding-overview.md). Aby uzyskać więcej informacji na temat szablonów danych, zobacz [tworzenia szablonów danych — omówienie](data-templating-overview.md).
+ Należy pamiętać, że może być konieczne zastosowanie logiki niestandardowej, aby dane były zrozumiałe dla powiązanej właściwości docelowej. Logika niestandardowa może mieć postać niestandardowego konwertera (jeśli konwersja typu domyślnego nie istnieje) lub <xref:System.Windows.DataTemplate>. Aby uzyskać więcej informacji na temat konwerterów, zobacz sekcję konwersja danych — [Omówienie powiązań danych](../../../desktop-wpf/data/data-binding-overview.md). Aby uzyskać więcej informacji na temat szablonów danych, zobacz [tworzenia szablonów danych — omówienie](data-templating-overview.md).
 
 <a name="collections"></a>
 ## <a name="using-collection-objects-as-a-binding-source"></a>Używanie obiektów kolekcji jako źródła powiązania
@@ -64,7 +64,7 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
 
  Klasa <xref:System.Collections.ObjectModel.ObservableCollection%601> to wbudowana implementacja kolekcji danych, która uwidacznia interfejs <xref:System.Collections.Specialized.INotifyCollectionChanged>. Poszczególne obiekty danych w kolekcji muszą spełniać wymagania opisane w poprzednich sekcjach. Aby zapoznać się z przykładem, zobacz [Tworzenie i powiązywanie z ObservableCollection](how-to-create-and-bind-to-an-observablecollection.md). Przed zaimplementowaniem własnej kolekcji należy rozważyć użycie <xref:System.Collections.ObjectModel.ObservableCollection%601> lub jednej z istniejących klas kolekcji, takich jak <xref:System.Collections.Generic.List%601>, <xref:System.Collections.ObjectModel.Collection%601>i <xref:System.ComponentModel.BindingList%601>, wśród wielu innych.
 
- WPF nigdy nie wiąże się bezpośrednio z kolekcją. Jeśli określisz kolekcję jako źródło powiązań, program WPF rzeczywiście wiąże się z widokiem domyślnym kolekcji. Aby uzyskać informacje o widokach domyślnych, zobacz temat [powiązanie danych — omówienie](data-binding-overview.md).
+ WPF nigdy nie wiąże się bezpośrednio z kolekcją. Jeśli określisz kolekcję jako źródło powiązań, program WPF rzeczywiście wiąże się z widokiem domyślnym kolekcji. Aby uzyskać informacje o widokach domyślnych, zobacz temat [powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md).
 
  Jeśli masz zaawansowany scenariusz i chcesz wdrożyć własną kolekcję, rozważ użycie interfejsu <xref:System.Collections.IList>. <xref:System.Collections.IList> zapewnia nieogólną kolekcję obiektów, do których można uzyskać dostęp za pomocą indeksu, co może poprawić wydajność.
 
@@ -97,6 +97,6 @@ W powiązaniu danych obiekt źródłowy powiązania odwołuje się do obiektu, z
 - <xref:System.Windows.Data.ObjectDataProvider>
 - <xref:System.Windows.Data.XmlDataProvider>
 - [Określanie obiektu źródłowego powiązania](how-to-specify-the-binding-source.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Powiązanie danych WPF za pomocą LINQ to XML — omówienie](wpf-data-binding-with-linq-to-xml-overview.md)
 - [Optymalizowanie wydajności powiązań danych](../advanced/optimizing-performance-data-binding.md)

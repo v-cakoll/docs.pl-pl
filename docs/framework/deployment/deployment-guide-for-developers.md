@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1f13053ea23e45b66b4767295af28a758f474ab5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121549"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457993"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework Przewodnik wdrażania dla deweloperów
 Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolną wersję .NET Framework z .NET Framework 4,5, aby [!INCLUDE[net_current](../../../includes/net-current-version.md)] z ich aplikacjami.
@@ -168,7 +168,7 @@ W programie Visual Studio, aby wybrać wdrożenie InstallShield i dodać zależn
 
 ### <a name="windows-installer-xml-wix-deployment"></a>Wdrożenie Instalator Windows XML (WiX)
 
-Zestaw narzędzi Instalator Windows XML (WiX) kompiluje pakiety instalacyjne systemu Windows z kodu źródłowego XML. WiX obsługuje środowisko wiersza polecenia, które można zintegrować z procesami kompilacji w celu tworzenia pakietów instalacyjnych MSI i MSM. Korzystając z WiX, można [określić .NET Framework jako warunek wstępny](http://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)lub [utworzyć łańcuch](http://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) , aby w pełni kontrolować środowisko wdrażania .NET Framework. Aby uzyskać więcej informacji na temat WiX, zobacz witrynę sieci Web zestawu [narzędzi Instalator Windows XML (WiX)](http://wixtoolset.org/) .
+Zestaw narzędzi Instalator Windows XML (WiX) kompiluje pakiety instalacyjne systemu Windows z kodu źródłowego XML. WiX obsługuje środowisko wiersza polecenia, które można zintegrować z procesami kompilacji w celu tworzenia pakietów instalacyjnych MSI i MSM. Korzystając z WiX, można [określić .NET Framework jako warunek wstępny](https://wixtoolset.org/documentation/manual/v3/howtos/redistributables_and_install_checks/install_dotnet.html)lub [utworzyć łańcuch](https://wixtoolset.org/documentation/manual/v3/xsd/wix/exepackage.html) , aby w pełni kontrolować środowisko wdrażania .NET Framework. Aby uzyskać więcej informacji na temat WiX, zobacz witrynę sieci Web zestawu [narzędzi Instalator Windows XML (WiX)](https://wixtoolset.org/) .
 
 <a name="installing_manually"></a>
 

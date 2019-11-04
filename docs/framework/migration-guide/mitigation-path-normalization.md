@@ -2,12 +2,12 @@
 title: 'Środki zaradcze: Normalizacja ścieżki'
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 9ec34d8215c88329066b1cb86da018db82e16c5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126210"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457884"
 ---
 # <a name="mitigation-path-normalization"></a>Środki zaradcze: Normalizacja ścieżki
 Począwszy od aplikacji obiekt docelowy .NET Framework 4.6.2, normalizacja ścieżki w .NET Framework została zmieniona.  
@@ -61,4 +61,4 @@ Aplikacje, które są przeznaczone dla .NET Framework 4.6.1 lub wcześniejszych,
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-2.md)
+- [Zgodność aplikacji](application-compatibility.md)

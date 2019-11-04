@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606143"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422941"
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
-`abstract` Modyfikator wskazuje, że modyfikowany element nie ma lub niekompletnej implementacji. Modyfikator abstrakcyjny może być używany z klasami, metodami, właściwościami, indeksatorami i zdarzeniami. `abstract` Użyj modyfikatora w deklaracji klasy, aby wskazać, że Klasa jest przeznaczona tylko jako klasa bazowa innych klas, ale nie jest tworzona samodzielnie. Elementy członkowskie oznaczone jako abstrakcyjne muszą być zaimplementowane przez nieabstrakcyjne klasy, które pochodzą z klasy abstrakcyjnej.
+Modyfikator `abstract` wskazuje, że modyfikowany element nie ma lub niekompletnej implementacji. Modyfikator abstrakcyjny może być używany z klasami, metodami, właściwościami, indeksatorami i zdarzeniami. Użyj modyfikatora `abstract` w deklaracji klasy, aby wskazać, że Klasa jest przeznaczona tylko jako klasa bazowa innych klas, ale nie jest tworzona samodzielnie. Elementy członkowskie oznaczone jako abstrakcyjne muszą być zaimplementowane przez nieabstrakcyjne klasy, które pochodzą z klasy abstrakcyjnej.
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie Klasa `Square` musi dostarczyć `GetArea` implementację, ponieważ pochodzi ona z `Shape`:  
+ W tym przykładzie Klasa `Square` musi dostarczyć implementację `GetArea`, ponieważ pochodzi ona z `Shape`:  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
@@ -29,11 +29,11 @@ ms.locfileid: "69606143"
   
 - Klasa abstrakcyjna może zawierać metody abstrakcyjne i metod dostępu.  
   
-- Nie można zmodyfikować klasy abstrakcyjnej za pomocą modyfikatora [zapieczętowanego](./sealed.md) , ponieważ dwa Modyfikatory mają przeciwległe znaczenie. Modyfikator uniemożliwia dziedziczenie klasy `abstract` , a modyfikator wymaga klasy do dziedziczenia. `sealed`  
+- Nie można zmodyfikować klasy abstrakcyjnej za pomocą modyfikatora [zapieczętowanego](./sealed.md) , ponieważ dwa Modyfikatory mają przeciwległe znaczenie. Modyfikator `sealed` uniemożliwia dziedziczenie klasy, a modyfikator `abstract` wymaga dziedziczenia klasy.  
   
 - Klasa nieabstrakcyjna pochodna klasy abstrakcyjnej musi zawierać rzeczywiste implementacje wszystkich dziedziczonych metod abstrakcyjnych i metody dostępu.  
   
- `abstract` Użyj modyfikatora w deklaracji metody lub właściwości, aby wskazać, że metoda lub właściwość nie zawiera implementacji.  
+ Użyj modyfikatora `abstract` w deklaracji metody lub właściwości, aby wskazać, że metoda lub właściwość nie zawiera implementacji.  
   
  Metody abstrakcyjne mają następujące funkcje:  
   
@@ -47,15 +47,15 @@ ms.locfileid: "69606143"
     public abstract void MyMethod();  
     ```  
   
-     Implementacja jest dostarczana przez przesłonięcie metody, która jest elementem członkowskim klasy nieabstrakcyjnej. [](./override.md)  
+     Implementacja jest dostarczana przez [przesłonięcie](./override.md)metody, która jest elementem członkowskim klasy nieabstrakcyjnej.  
   
 - Wystąpił błąd podczas używania modyfikatorów [static](./static.md) lub [Virtual](./virtual.md) w deklaracji metody abstrakcyjnej.  
   
  Właściwości abstrakcyjne zachowują się jak metody abstrakcyjne, z wyjątkiem różnic w składni deklaracji i wywołania.  
   
-- Wystąpił błąd podczas używania `abstract` modyfikatora dla właściwości statycznej.  
+- Wystąpił błąd podczas używania modyfikatora `abstract` na właściwości statycznej.  
   
-- Abstrakcyjna dziedziczona właściwość może zostać przesłonięta w klasie pochodnej przez dołączenie deklaracji właściwości, [](./override.md) która używa modyfikatora przesłaniania.  
+- Abstrakcyjna dziedziczona właściwość może zostać przesłonięta w klasie pochodnej przez dołączenie deklaracji właściwości, która używa modyfikatora [przesłaniania](./override.md) .  
   
  Aby uzyskać więcej informacji na temat klas abstrakcyjnych, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69606143"
 [!code-csharp[csrefKeywordsModifiers#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#2)]
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie Klasa `DerivedClass` pochodzi od klasy `BaseClass`abstrakcyjnej. Klasa abstrakcyjna zawiera metodę `AbstractMethod`abstrakcyjną, i dwie `X` właściwości abstrakcyjne oraz `Y`.  
+ W tym przykładzie Klasa `DerivedClass` pochodzi od klasy abstrakcyjnej `BaseClass`. Klasa abstrakcyjna zawiera metodę abstrakcyjną, `AbstractMethod`i dwie właściwości abstrakcyjne, `X` i `Y`.  
   
 [!code-csharp[csrefKeywordsModifiers#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#3)]
   
@@ -83,9 +83,9 @@ Zostanie wyświetlony komunikat o błędzie informujący, że kompilator nie mo�
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
-- [Modyfikatory](./modifiers.md)
+- [Modyfikatory](index.md)
 - [virtual](./virtual.md)
 - [override](./override.md)
 - [Słowa kluczowe języka C#](./index.md)

@@ -1,5 +1,5 @@
 ---
-title: zapieczętowane modyfikator - C# odwołania
+title: zapieczętowany modyfikator- C# odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,61 +8,61 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 84f838645bed6facc8b59ebf596d16373a9c6f86
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833344"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422378"
 ---
 # <a name="sealed-c-reference"></a>sealed (odwołanie w C#)
 
-Po zastosowaniu do klasy, `sealed` modyfikator uniemożliwia innych klas z niego dziedziczącego. W poniższym przykładzie klasa `B` dziedziczy z klasy `A`, ale klasa nie może dziedziczyć z klasy `B`.
+W przypadku zastosowania do klasy modyfikator `sealed` uniemożliwia innym klasom dziedziczenie z tego typu. W poniższym przykładzie Klasa `B` dziedziczy po klasie `A`, ale żadna Klasa nie może dziedziczyć z klasy `B`.
 
 ```csharp
 class A {}
 sealed class B : A {}
 ```
 
-Można również użyć `sealed` modyfikator metoda lub właściwość, która zastępuje metodę wirtualną lub właściwości w klasie bazowej. Dzięki temu można umożliwić klasy pochodzi od klasy i uniemożliwić zastępowanie konkretnych metod wirtualnych lub właściwości.
+Można również użyć modyfikatora `sealed` dla metody lub właściwości, która zastępuje wirtualną metodę lub właściwość w klasie bazowej. Dzięki temu można zezwolić klasom na pochodną klasy i uniemożliwić im zastępowanie określonych metod lub właściwości wirtualnych.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie `Z` dziedziczy `Y` , ale `Z` nie może przesłonić funkcji wirtualnej `F` zadeklarowanego w `X` i zamkniętych w `Y`.
+W poniższym przykładzie `Z` dziedziczy po `Y`, ale `Z` nie może przesłonić funkcji wirtualnej `F` zadeklarowanej w `X` i zapieczętowanej w `Y`.
 
 [!code-csharp[csrefKeywordsModifiers#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#16)]
 
-Definiując nowe metody lub właściwości w klasie, można zapobiec klas pochodnych zastępowania ich nie deklarując je jako [wirtualnego](virtual.md).
+Podczas definiowania nowych metod lub właściwości w klasie można zapobiegać występowaniu klas przez wyprowadzanie ich przez niezadeklarowanie ich jako [wirtualne](virtual.md).
 
-Jest to błąd, aby użyć [abstrakcyjne](abstract.md) modyfikator za pomocą klasy zapieczętowanej ponieważ klasy abstrakcyjnej muszą być dziedziczone przez klasę, która dostarcza implementację metody abstrakcyjne lub właściwości.
+Wystąpił błąd podczas używania modyfikatora [abstract](abstract.md) z klasą zapieczętowana, ponieważ Klasa abstrakcyjna musi być dziedziczona przez klasę, która dostarcza implementację metod abstrakcyjnych lub właściwości.
 
-Po zastosowaniu do metody lub właściwości, `sealed` modyfikator zawsze musi być używany z [zastąpienia](override.md).
+W przypadku zastosowania do metody lub właściwości modyfikator `sealed` musi być zawsze używany z [zastępowaniem](override.md).
 
-Ponieważ struktury niejawnie są zamknięte, nie może być dziedziczona.
+Ponieważ struktury są niejawnie zapieczętowane, nie można ich dziedziczyć.
 
-Aby uzyskać więcej informacji, zobacz [dziedziczenia](../../programming-guide/classes-and-structs/inheritance.md).
+Aby uzyskać więcej informacji, zobacz [dziedziczenie](../../programming-guide/classes-and-structs/inheritance.md).
 
-Aby uzyskać więcej przykładów, zobacz [abstrakcyjnych i zapieczętowanych klas i składowych klasy](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
+Aby uzyskać więcej przykładów, zobacz [klasy abstrakcyjne i zapieczętowane oraz składowe klas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md).
 
 ## <a name="example"></a>Przykład
 
 [!code-csharp[csrefKeywordsModifiers#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#17)]
 
-W poprzednim przykładzie możesz spróbować dziedziczą z klasy zapieczętowanej przy użyciu następujących instrukcji:
+W poprzednim przykładzie można spróbować dziedziczyć z klasy zapieczętowanej przy użyciu następującej instrukcji:
 
 `class MyDerivedC: SealedClass {}   // Error`
 
-Wynik jest komunikat o błędzie:
+Wynik jest komunikatem o błędzie:
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
 ## <a name="remarks"></a>Uwagi
 
-Aby ustalić, czy ma być Zapieczętuj klasę, metodę lub właściwość, zazwyczaj należy rozważyć następujące dwa punkty:
+Aby określić, czy należy zapieczętować klasę, metodę lub właściwość, należy ogólnie wziąć pod uwagę następujące dwa punkty:
 
-- Potencjalnych korzyści, że wyprowadzanie klas mogą uzyskać za pośrednictwem możliwość dostosowania swojej klasy.
+- Potencjalne korzyści wynikające z używania klas mogą uzyskać możliwość dostosowania klasy.
 
-- Ryzyko, że wyprowadzanie klas można zmodyfikować klas w taki sposób, że będzie już działać poprawnie lub oczekuje.
+- Potencjalna Klasa może modyfikować klasy w taki sposób, że nie będą działać prawidłowo lub zgodnie z oczekiwaniami.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -70,12 +70,12 @@ Aby ustalić, czy ma być Zapieczętuj klasę, metodę lub właściwość, zazwy
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Klasy statyczne i statyczne elementy członkowskie klas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [Modyfikatory](modifiers.md)
+- [Modyfikatory](index.md)
 - [override](override.md)
 - [virtual](virtual.md)

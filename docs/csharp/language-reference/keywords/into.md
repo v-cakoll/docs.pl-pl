@@ -8,29 +8,29 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: ccb1463db51510d275b7053955a0257bd4fe621e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608639"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422712"
 ---
 # <a name="into-c-reference"></a>into (odwołanie w C#)
 
-Kontekstowe słowo kluczowe może służyć do tworzenia tymczasowego identyfikatora do przechowywania wyników [grupy](group-clause.md), sprzężenia lub [zaznaczania](select-clause.md) do nowego identyfikatora. [](join-clause.md) `into` Ten identyfikator może być generatorem dla dodatkowych poleceń zapytań. W przypadku użycia w `group` klauzuli `select` or, użycie nowego identyfikatora jest czasami określane jako *kontynuacja*.
+Kontekstowe słowo kluczowe `into` może służyć do tworzenia tymczasowego identyfikatora do przechowywania wyników [grupy](group-clause.md), [sprzężenia](join-clause.md) lub [zaznaczania](select-clause.md) do nowego identyfikatora. Ten identyfikator może być generatorem dla dodatkowych poleceń zapytań. W przypadku użycia w klauzuli `group` lub `select` użycie nowego identyfikatora jest czasami określane jako *kontynuacja*.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `into` słowa kluczowego, aby włączyć tymczasowy identyfikator `fruitGroup` , który ma wnioskowany typ `IGrouping`. Używając identyfikatora, można wywołać <xref:System.Linq.Enumerable.Count%2A> metodę dla każdej grupy i wybrać tylko te grupy, które zawierają dwa lub więcej wyrazów.
+Poniższy przykład ilustruje użycie słowa kluczowego `into`, aby włączyć tymczasowy identyfikator `fruitGroup`, który ma wnioskowany typ `IGrouping`. Używając identyfikatora, można wywołać metodę <xref:System.Linq.Enumerable.Count%2A> dla każdej grupy i wybrać tylko te grupy, które zawierają dwa lub więcej wyrazów.
 
 [!code-csharp[cscsrefQueryKeywords#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Into.cs#18)]
 
-`into` Użycie`group` w klauzuli jest wymagane tylko wtedy, gdy chcesz wykonać dodatkowe operacje na zapytania dla każdej grupy. Aby uzyskać więcej informacji, zobacz artykuł [kluzula group](group-clause.md).
+Użycie `into` w klauzuli `group` jest konieczne tylko wtedy, gdy chcesz wykonać dodatkowe operacje zapytań dla każdej grupy. Aby uzyskać więcej informacji, zobacz [klauzula](group-clause.md)Group.
 
-Aby zapoznać się z przykładem użycia `into` `join` w klauzuli, zobacz [Klauzula join](join-clause.md).
+Aby zapoznać się z przykładem użycia `into` w klauzuli `join`, zobacz [Klauzula join](join-clause.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Słowa kluczowe zapytania (LINQ)](query-keywords.md)
-- [Wyrażenia zapytania LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ w C#](../../linq/index.md)
 - [group, klauzula](group-clause.md)

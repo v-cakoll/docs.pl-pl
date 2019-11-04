@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: d6e3667861c2b1ac9a84ca7b4e2cabb5784d793d
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970058"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422286"
 ---
 # <a name="using-directive-c-reference"></a>Using — dyrektywaC# (odwołanie)
 
-`using` Dyrektywa ma trzy zastosowania:
+Dyrektywa `using` ma trzy zastosowania:
 
 - Aby zezwolić na używanie typów w przestrzeni nazw, aby nie trzeba było kwalifikować użycia typu w tej przestrzeni nazw:
 
@@ -36,7 +36,7 @@ ms.locfileid: "70970058"
     using Project = PC.MyCompany.Project;
     ```
 
-Słowo kluczowe jest również używane do tworzenia *instrukcji using*, które pomagają zagwarantować, <xref:System.IDisposable> że obiekty takie jak pliki i czcionki są obsługiwane poprawnie. `using` Aby uzyskać więcej informacji, zobacz [używanie instrukcji using](using-statement.md) .
+Słowo kluczowe `using` jest również używane do tworzenia *instrukcji using*, które ułatwiają zapewnienie, że <xref:System.IDisposable> obiektów, takich jak pliki i czcionki, są obsługiwane poprawnie. Aby uzyskać więcej informacji, zobacz [używanie instrukcji using](using-statement.md) .
 
 ## <a name="using-static-type"></a>Używanie typu statycznego
 
@@ -56,47 +56,47 @@ class Program
 
 ## <a name="remarks"></a>Uwagi
 
-Zakres `using` dyrektywy jest ograniczony do pliku, w którym występuje.
+Zakres dyrektywy `using` jest ograniczony do pliku, w którym występuje.
 
-Może pojawić się dyrektywa: `using`
+`using` można wyświetlić dyrektywy:
 
 - Na początku pliku kodu źródłowego przed dowolnymi obszarami nazw lub definicjami typów.
 - W dowolnej przestrzeni nazw, ale przed wszelkimi obszarami nazw lub typami zadeklarowanymi w tej przestrzeni nazw.
 
 W przeciwnym razie zostanie wygenerowany błąd kompilatora [CS1529](../../misc/cs1529.md) .
 
-Utwórz dyrektywę `using` aliasu, aby ułatwić kwalifikowanie identyfikatora do przestrzeni nazw lub typu. W dowolnej `using` dyrektywie w pełni kwalifikowana przestrzeń nazw lub typ muszą być używane niezależnie `using` od dyrektyw, które przed nim pochodzą. Nie `using` można użyć aliasu w deklaracji `using` dyrektywy. Na przykład poniższy kod generuje błąd kompilatora:
+Utwórz dyrektywę aliasu `using`, aby ułatwić kwalifikowanie identyfikatora do przestrzeni nazw lub typu. W dowolnej dyrektywie `using` w pełni kwalifikowana przestrzeń nazw lub typ muszą być używane niezależnie od dyrektyw `using`, które przed nim pochodzą. Nie można użyć aliasu `using` w deklaracji dyrektywy `using`. Na przykład poniższy kod generuje błąd kompilatora:
 
 ```csharp
 using s = System.Text;
 using s.RegularExpressions;
 ```
 
-`using` Utwórz dyrektywę, aby użyć typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. `using` Dyrektywa nie daje dostępu do żadnych przestrzeni nazw, które są zagnieżdżone w określonym obszarze nazw.
+Utwórz dyrektywę `using`, aby użyć typów w przestrzeni nazw bez konieczności określania przestrzeni nazw. Dyrektywa `using` nie zapewnia dostępu do żadnych przestrzeni nazw, które są zagnieżdżone w określonym obszarze nazw.
 
 Przestrzenie nazw są dostępne w dwóch kategoriach: zdefiniowane przez użytkownika i zdefiniowane przez system. Przestrzenie nazw zdefiniowane przez użytkownika to przestrzenie nazw zdefiniowane w kodzie. Aby uzyskać listę przestrzeni nazw zdefiniowanych przez system, zobacz [.NET API Browser](../../../../api/index.md).
 
 ## <a name="example-1"></a>Przykład 1
 
-Poniższy przykład pokazuje, jak zdefiniować `using` alias dla przestrzeni nazw i używać go:
+Poniższy przykład pokazuje sposób definiowania i używania aliasu `using` dla przestrzeni nazw:
 
 [!code-csharp[csrefKeywordsNamespace#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#8)]
 
-Dyrektywa using alias nie może mieć otwartego typu ogólnego po prawej stronie. Na przykład nie można utworzyć aliasu using dla elementu `List<T>`, ale można go utworzyć dla elementu. `List<int>`
+Dyrektywa using alias nie może mieć otwartego typu ogólnego po prawej stronie. Nie można na przykład utworzyć aliasu using dla `List<T>`, ale można go utworzyć dla `List<int>`.
 
 ## <a name="example-2"></a>Przykład 2
 
-Poniższy przykład pokazuje, jak zdefiniować `using` dyrektywę `using` i alias dla klasy:
+Poniższy przykład pokazuje, jak zdefiniować dyrektywę `using` i alias `using` dla klasy:
 
 [!code-csharp[csrefKeywordsNamespace#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace2.cs#9)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [Używanie dyrektyw](~/_csharplang/spec/namespaces.md#using-directives) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [Używanie dyrektyw](~/_csharplang/spec/namespaces.md#using-directives) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Używanie przestrzeni nazw](../../programming-guide/namespaces/using-namespaces.md)
 - [Słowa kluczowe języka C#](index.md)

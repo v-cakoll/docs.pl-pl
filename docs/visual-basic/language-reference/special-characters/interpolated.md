@@ -1,24 +1,24 @@
 ---
-title: $ (Odwołanie w Visual Basic)
+title: $ (Odwołanie Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945161"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423660"
 ---
-# <a name="-visual-basic-reference"></a>$ (Odwołanie w Visual Basic)
+# <a name="-visual-basic-reference"></a>$ (Odwołanie Visual Basic)
 
-Określa ciąg literału jako [ciągiem interpolowanym](../../programming-guide/language-features/strings/interpolated-strings.md). Ciąg interpolowany jest ciągiem jak szablon, który zawiera tekst dosłowny wraz z *wyrażeń interpolowanych*. Po usunięciu ciągu interpolowanego, na przykład w instrukcji przypisania lub wywołanie metody jej wyrażenia interpolowane są zastępowane przez ich reprezentacji ciągu w ciągu wynikowym. Ciągi interpolowane są zastępujące [ciągów formatowania złożonego](../../../standard/base-types/composite-format.md) obsługiwane przez program .NET Framework.
+Identyfikuje literał ciągu jako [ciąg interpolowany](../../programming-guide/language-features/strings/interpolated-strings.md). Ciąg interpolowany jest ciągiem podobnym do szablonu, który zawiera tekst literału oraz *wyrażenie interpolowane*. Gdy ciąg interpolowany zostanie rozwiązany, na przykład w instrukcji przypisania lub wywołaniu metody, jego wyrażenia interpolowane są zamieniane na ciąg w ciągu wynikowym. Ciągi interpolowane są zamiennikami [ciągów formatu złożonego](../../../standard/base-types/composite-formatting.md) obsługiwanych przez .NET Framework.
 
-W poniższym przykładzie użyto `$` znaku do definiowania ciągu interpolowanym.
+Poniższy przykład używa znaku `$`, aby zdefiniować ciąg interpolowany.
 
 [!CODE-vb[interpolated-string-symbol](../../../../samples/snippets/visualbasic/language-reference/special-characters/dollar-sign1.vb)]
 
-Aby uzyskać więcej informacji na temat ciągów interpolowanych, zobacz [ciągi interpolowane](../../programming-guide/language-features/strings/interpolated-strings.md) tematu.
+Aby uzyskać więcej informacji na temat ciągów interpolowanych, zobacz temat [Parametry interpolowane](../../programming-guide/language-features/strings/interpolated-strings.md) .
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka Visual Basic](../index.md)
-- [Znaki specjalne w języku Visual Basic](index.md)
+- [Informacje Visual Basic](../index.md)
+- [Visual Basic znaki specjalne](index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73086908"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455187"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -46,7 +46,7 @@ Kompilator traktuje następujące dane wejściowe na potrzeby ustalenia:
   - Dodatkowe pliki, które mogą być używane przez analizatory
 - Bieżąca kultura (dla języka, w którym są generowane diagnostyczne i komunikaty o wyjątkach).
 - Domyślne kodowanie (lub bieżącą stronę kodową), Jeśli kodowanie nie jest określone.
-- Istnienie, nieistnienie i zawartość plików na ścieżkach wyszukiwania kompilatora (na przykład przez `/lib` lub `/recurse`).
+- Istnienie, nieistnienie i zawartość plików na ścieżkach wyszukiwania kompilatora (na przykład przez `-lib` lub `-recurse`).
 - Platforma CLR, na której jest uruchomiony kompilator.
 - Wartość `%LIBPATH%`, która może wpływać na ładowanie zależności analizatora.
 

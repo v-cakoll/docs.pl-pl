@@ -603,8 +603,10 @@
               href: language-reference/operators/istrue-operator.md
             - name: Like — Operator
               href: language-reference/operators/like-operator.md
-            - name: 'Mod, operator'
+            - name: Mod — Operator
               href: language-reference/operators/mod-operator.md
+            - name: 'NameOf, operator'
+              href: language-reference/operators/nameof.md
             - name: Nowy operator
               href: language-reference/operators/new-operator.md
             - name: 'Not, operator'

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141351"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423039"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Oczyszczanie zasobów niezarządzanych
 
@@ -25,7 +25,7 @@ W przypadku większości obiektów tworzonych przez aplikację można polegać n
 
 Jeśli typy w aplikacji używają niezarządzanych zasobów, należny wykonać następujące czynności:
 
-- Zaimplementuj [wzorzec Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Wymaga to podania implementacji <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, aby umożliwić deterministyczne wydawanie niezarządzanych zasobów. Odbiorca typu wywołuje <xref:System.IDisposable.Dispose%2A>, gdy obiekt (i używane przez niego zasoby) nie jest już wymagany. Metoda <xref:System.IDisposable.Dispose%2A> natychmiast zwalnia niezarządzane zasoby.
+- Zaimplementuj [wzorzec Dispose](implementing-dispose.md). Wymaga to podania implementacji <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>, aby umożliwić deterministyczne wydawanie niezarządzanych zasobów. Odbiorca typu wywołuje <xref:System.IDisposable.Dispose%2A>, gdy obiekt (i używane przez niego zasoby) nie jest już wymagany. Metoda <xref:System.IDisposable.Dispose%2A> natychmiast zwalnia niezarządzane zasoby.
 
 - Określ, że niezarządzane zasoby mają zostać wydane w przypadku, gdy konsument typu zapomni, aby wywoływać <xref:System.IDisposable.Dispose%2A>. Istnieją dwa sposoby wykonania tej czynności:
 
@@ -39,7 +39,7 @@ Odbiorcy typu mogą następnie wywoływać implementację <xref:System.IDisposab
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Implementowanie metody Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) Opisuje sposób implementacji [wzorca Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md) do zwalniania niezarządzanych zasobów.
+[Implementowanie metody Dispose](../../../docs/standard/garbage-collection/implementing-dispose.md) Opisuje sposób implementacji [wzorca Dispose](implementing-dispose.md) do zwalniania niezarządzanych zasobów.
 
 [Używanie obiektów implementujących interfejs IDisposable](../../../docs/standard/garbage-collection/using-objects.md) Opisuje, jak konsumenci typu zapewniają, że jego implementacja <xref:System.IDisposable.Dispose%2A> jest wywoływana. Zalecamy użycie instrukcji C# `using` lub instrukcji Visual Basic `Using`.
 

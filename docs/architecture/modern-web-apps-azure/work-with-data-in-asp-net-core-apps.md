@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117300"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419983"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach ASP.NET Core
 
@@ -37,7 +37,7 @@ dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
 ### <a name="the-dbcontext"></a>DbContext
 
-Aby można było korzystać z EF Core, należy podklasą <xref:Microsoft.EntityFrameworkCore.DbContext>. Ta klasa zawiera właściwości reprezentujące kolekcje jednostek, z którymi aplikacja będzie współdziałać. Przykład eShopOnWeb zawiera CatalogContext z kolekcjami dla elementów, marek i typów:
+Aby można było korzystać z EF Core, potrzebna jest podklasa <xref:Microsoft.EntityFrameworkCore.DbContext>. Ta klasa zawiera właściwości reprezentujące kolekcje jednostek, z którymi aplikacja będzie współdziałać. Przykład eShopOnWeb zawiera CatalogContext z kolekcjami dla elementów, marek i typów:
 
 ```csharp
 public class CatalogContext : DbContext
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-DbContext musi mieć konstruktora akceptującego DbContextOptions i przekazać ten argument do podstawowego konstruktora DbContext. Należy pamiętać, że jeśli w aplikacji jest tylko jeden DbContext, można przekazać wystąpienie elementu DbContextOptions, ale jeśli masz więcej niż jeden, należy użyć typu ogólnego DbContextOptions\<T >, przekazując w typ kontekstu dbjako parametr generyczny.
+DbContext musi mieć konstruktora akceptującego DbContextOptions i przekazać ten argument do podstawowego konstruktora DbContext. Należy pamiętać, że jeśli w aplikacji jest tylko jeden kontekst DbContext, można przekazać wystąpienie elementu DbContextOptions, ale jeśli masz więcej niż jeden z nich, musisz użyć typu generycznego DbContextOptions\<T >, przekazując w typ kontekstu dbjako parametr generyczny.
 
 ### <a name="configuring-ef-core"></a>Konfigurowanie EF Core
 
@@ -93,7 +93,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Ważne jest, aby w powyższym przykładzie dodać wywołanie do ToListAsync w celu natychmiastowego wykonania zapytania. W przeciwnym razie instrukcja przypisze interfejs IQueryable\<SelectListItem > do brandItems, co nie zostanie wykonane, dopóki nie zostanie wyliczone. Istnieją specjaliści i wady zwracające wyniki z metod. Pozwala to na dalsze modyfikacje EF Core kwerendy, ale może również powodować błędy, które występują tylko w czasie wykonywania, jeśli operacje są dodawane do zapytania, którego EF Core nie można przetłumaczyć. Zwykle bezpieczniejsze jest przekazywanie dowolnych filtrów do metody wykonującej dostęp do danych i zwracanie z powrotem kolekcji w pamięci (na przykład listy\<T >) jako wyniku.
+Ważne jest, aby w powyższym przykładzie dodać wywołanie do ToListAsync w celu natychmiastowego wykonania zapytania. W przeciwnym razie instrukcja przypisze interfejs IQueryable\<SelectListItem > do brandItems, co nie zostanie wykonane do momentu wyliczenia. Istnieją specjaliści i wady zwracające wyniki z metod. Pozwala to na dalsze modyfikacje EF Core kwerendy, ale może również powodować błędy, które występują tylko w czasie wykonywania, jeśli operacje są dodawane do zapytania, którego EF Core nie można przetłumaczyć. Zwykle bezpieczniejsze jest przekazywanie dowolnych filtrów do metody wykonującej dostęp do danych i zwracanie z powrotem kolekcji w pamięci (na przykład listy\<T >) w wyniku.
 
 EF Core śledzi zmiany w jednostkach pobieranych z trwałości. Aby zapisać zmiany w monitorowanej jednostce, wystarczy wywołać metodę metody SaveChanges w kontekście DbContext, upewniając się, że jest to to samo wystąpienie DbContext, które zostało użyte do pobrania jednostki. Dodawanie i usuwanie jednostek jest bezpośrednio wykonywane na odpowiedniej właściwości Nieogólnymi, z wywołaniem metody SaveChanges w celu wykonania poleceń bazy danych. Poniższy przykład ilustruje Dodawanie, aktualizowanie i usuwanie jednostek z trwałości.
 
@@ -127,7 +127,7 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-Można uwzględnić wiele relacji i można również uwzględnić relacje podrzędne przy użyciu ThenInclude. EF Core wykona pojedyncze zapytanie w celu pobrania zestawu wyników. Alternatywnie można uwzględnić właściwości nawigacji właściwości nawigacji poprzez przekazanie "." rozdzielany ciąg do metody `.Include()` rozszerzającej, na przykład:
+Można uwzględnić wiele relacji i można również uwzględnić relacje podrzędne przy użyciu ThenInclude. EF Core wykona pojedyncze zapytanie w celu pobrania zestawu wyników. Alternatywnie można uwzględnić właściwości nawigacji właściwości nawigacji poprzez przekazanie "." rozdzielany ciąg do metody rozszerzenia `.Include()`, na przykład:
 
 ```csharp
     .Include(“Items.Products”)
@@ -147,7 +147,7 @@ query = specification.IncludeStrings.Aggregate(query,
 
 Kolejną opcją ładowania powiązanych danych jest użycie _jawnego ładowania_. Jawne ładowanie umożliwia załadowanie dodatkowych danych do jednostki, która została już pobrana. Ponieważ obejmuje to oddzielne żądanie do bazy danych, nie jest to zalecane w przypadku aplikacji sieci Web, co powinno zminimalizować liczbę rejsów w bazie danych na żądanie.
 
-_Ładowanie z opóźnieniem_ to funkcja, która automatycznie ładuje powiązane dane, ponieważ odwołuje się do niej aplikacja. EF Core dodano obsługę ładowania z opóźnieniem w wersji 2,1. Ładowanie z `Microsoft.EntityFrameworkCore.Proxies`opóźnieniem nie jest domyślnie włączone i wymaga zainstalowania. Podobnie jak w przypadku jawnego ładowania, ładowanie z opóźnieniem powinno być zwykle wyłączone dla aplikacji sieci Web, ponieważ jego użycie spowoduje, że w każdym żądaniu sieci Web zostaną wykonane dodatkowe zapytania bazy danych. Niestety, obciążenie związane z ładowaniem opóźnionym często jest niezauważalne w czasie projektowania, gdy opóźnienie jest małe i często zestawy danych używane do testowania są małe. Jednak w środowisku produkcyjnym, z większą liczbą użytkowników, większą ilością danych i większym opóźnieniu, dodatkowe żądania bazy danych mogą być często przyczyną niskiej wydajności aplikacji sieci Web, które intensywnie wykorzystują ładowanie z opóźnieniem.
+_Ładowanie z opóźnieniem_ to funkcja, która automatycznie ładuje powiązane dane, ponieważ odwołuje się do niej aplikacja. EF Core dodano obsługę ładowania z opóźnieniem w wersji 2,1. Ładowanie z opóźnieniem nie jest domyślnie włączone i wymaga zainstalowania `Microsoft.EntityFrameworkCore.Proxies`. Podobnie jak w przypadku jawnego ładowania, ładowanie z opóźnieniem powinno być zwykle wyłączone dla aplikacji sieci Web, ponieważ jego użycie spowoduje, że w każdym żądaniu sieci Web zostaną wykonane dodatkowe zapytania bazy danych. Niestety, obciążenie związane z ładowaniem opóźnionym często jest niezauważalne w czasie projektowania, gdy opóźnienie jest małe i często zestawy danych używane do testowania są małe. Jednak w środowisku produkcyjnym, z większą liczbą użytkowników, większą ilością danych i większym opóźnieniu, dodatkowe żądania bazy danych mogą być często przyczyną niskiej wydajności aplikacji sieci Web, które intensywnie wykorzystują ładowanie z opóźnieniem.
 
 [Unikaj załadowania jednostek w aplikacjach sieci Web](https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications)
 
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-Należy zauważyć, że ten typ jednostki nie uwidacznia `List` publicznej `ICollection` lub właściwości `IReadOnlyCollection` , ale zamiast tego ujawnia typ, który otacza podstawowy typ listy. Korzystając z tego wzorca, można wskazać, aby Entity Framework Core, aby użyć pola zapasowego, takiego jak:
+Należy zauważyć, że ten typ jednostki nie uwidacznia publicznej `List` lub właściwości `ICollection`, ale udostępnia `IReadOnlyCollection` typ, który otacza podstawowy typ listy. Korzystając z tego wzorca, można wskazać, aby Entity Framework Core, aby użyć pola zapasowego, takiego jak:
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -200,7 +200,7 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-W tym przykładzie `ShipToAddress` właściwość jest typu `Address`. `Address`jest obiektem wartości z kilkoma właściwościami, `Street` takimi jak i `City`. EF Core mapuje `Order` obiekt na tabelę z jedną kolumną na `Address` właściwość, dodając prefiks nazwy każdej kolumny przy użyciu nazwy właściwości. W tym przykładzie `Order` tabela będzie zawierać kolumny, takie jak `ShipToAddress_Street` i `ShipToAddress_City`.
+W tym przykładzie właściwość `ShipToAddress` jest typu `Address`. `Address` jest obiektem wartości z kilkoma właściwościami, takimi jak `Street` i `City`. EF Core mapuje obiekt `Order` na tabelę z jedną kolumną dla właściwości `Address`, co oznacza, że każda nazwa kolumny jest poprzed nazwą właściwości. W tym przykładzie tabela `Order` będzie zawierać kolumny, takie jak `ShipToAddress_Street` i `ShipToAddress_City`.
 
 [EF Core 2,2 wprowadza obsługę kolekcji jednostek będących własnością](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
 
@@ -240,7 +240,7 @@ Po włączeniu ponownych prób w EF Core połączeniach każda operacja wykonywa
 
 Jeśli jednak kod inicjuje transakcję przy użyciu BeginTransaction, definiujesz własną grupę operacji, która musi być traktowana jako jednostka; Jeśli wystąpi awaria, wszystkie elementy wewnątrz transakcji należy wycofać. Jeśli spróbujesz wykonać tę transakcję podczas korzystania z strategii wykonywania EF (zasady ponawiania), zostanie wyświetlony wyjątek, który będzie zawierał kilka metody SaveChanges z wielu dbcontexts.
 
-System.InvalidOperationException: Skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę wywołały.
+System. InvalidOperationException: skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę wywołały.
 
 Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania wywoła ponownie delegata. Poniższy kod przedstawia sposób wdrożenia tego podejścia:
 
@@ -267,13 +267,13 @@ await strategy.ExecuteAsync(async () =>
 });
 ```
 
-Pierwszy DbContext to \_catalogContext, a drugi DbContext znajduje się \_w obiekcie integrationEventLogService. Na koniec akcja zatwierdzania będzie wykonywana z wieloma kontekstami DbContext i przy użyciu strategii wykonywania EF.
+Pierwszy DbContext to \_catalogContext, a drugi DbContext znajduje się w \_obiektu integrationEventLogService. Na koniec akcja zatwierdzania będzie wykonywana z wieloma kontekstami DbContext i przy użyciu strategii wykonywania EF.
 
 > ### <a name="references--entity-framework-core"></a>Odwołania — Entity Framework Core
 >
 > - **Dokumentacja EF Core**  
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core: Powiązane dane**  
+> - **EF Core: powiązane dane**  
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Unikaj powolnych jednostek ładowania w aplikacjach ASPNET**  
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
@@ -342,20 +342,20 @@ Istnieje możliwość, że w bazach danych NoSQL są przechowywane wiele wersji 
 
 Bazy danych NoSQL zazwyczaj nie wymuszają stosowania [kwasów](https://en.wikipedia.org/wiki/ACID), co oznacza, że mają one zalety wydajności i skalowalności w porównaniu z relacyjnymi bazami danych. Są one odpowiednie dla bardzo dużych zestawów danych i obiektów, które nie są dobrze dopasowane do magazynu w znormalizowanych strukturach tabel. Nie ma powodów, dla których pojedyncze aplikacje nie mogą korzystać z baz danych relacyjnych i NoSQL, przy użyciu każdego z nich, gdzie jest najlepiej dopasowany.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-Azure DocumentDB to w pełni zarządzana usługa bazy danych NoSQL, która oferuje oparty na chmurze magazyn danych bez schematu. DocumentDB jest zbudowany na potrzeby szybkiej i przewidywalnej wydajności, wysokiej dostępności, elastycznego skalowania i globalnej dystrybucji. Mimo że nie jest to baza danych NoSQL, deweloperzy mogą korzystać z zaawansowanych i znanych funkcji zapytań SQL dotyczących danych JSON. Wszystkie zasoby w DocumentDB są przechowywane jako dokumenty JSON. Zasoby są zarządzane jako _elementy_, które są dokumentami zawierającymi metadane, a także _źródła danych_, które są kolekcjami elementów. Rysunek 8-2 przedstawia relację między różnymi zasobami DocumentDB.
+Azure Cosmos DB to w pełni zarządzana usługa bazy danych NoSQL, która oferuje oparty na chmurze magazyn danych bez schematu. Azure Cosmos DB został zbudowany w celu uzyskania szybkiej i przewidywalnej wydajności, wysokiej dostępności, elastycznego skalowania i globalnej dystrybucji. Mimo że nie jest to baza danych NoSQL, deweloperzy mogą korzystać z zaawansowanych i znanych funkcji zapytań SQL dotyczących danych JSON. Wszystkie zasoby w Azure Cosmos DB są przechowywane jako dokumenty JSON. Zasoby są zarządzane jako _elementy_, które są dokumentami zawierającymi metadane, a także _źródła danych_, które są kolekcjami elementów. Rysunek 8-2 przedstawia relację między różnymi zasobami Azure Cosmos DB.
 
-![Hierarchiczna relacja między zasobami w DocumentDB, NoSQL w bazie danych JSON](./media/image8-2.png)
+![Hierarchiczna relacja między zasobami w Azure Cosmos DB, baza danych JSON NoSQL](./media/image8-2.png)
 
-**Rysunek 8-2.** Organizacja zasobów DocumentDB.
+**Rysunek 8-2.** Organizacja zasobów Azure Cosmos DB.
 
-Język zapytań DocumentDB to prosty, jeszcze zaawansowany interfejs do wykonywania zapytań w dokumentach JSON. Język obsługuje podzbiór gramatyki SQL ANSI i dodaje głębokiej integracji obiektów JavaScript, tablic, konstrukcji obiektów i wywołania funkcji.
+Język zapytań Azure Cosmos DB to prosty, jeszcze zaawansowany interfejs do wykonywania zapytań w dokumentach JSON. Język obsługuje podzbiór gramatyki SQL ANSI i dodaje głębokiej integracji obiektów JavaScript, tablic, konstrukcji obiektów i wywołania funkcji.
 
-**References — DocumentDB**
+**Odwołania — Azure Cosmos DB**
 
-- Wprowadzenie do DocumentDB  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Azure Cosmos DB wprowadzenie  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Inne opcje trwałości
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;
@@ -513,5 +512,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Buforowanie może znacząco poprawić wydajność stron sieci Web, które wielokrotnie żądają tych samych wartości z bazy danych. Należy pamiętać, aby zmierzyć dostęp do danych i wydajność stron przed zastosowaniem buforowania, i zastosować buforowanie tylko w przypadku, gdy zobaczysz potrzebę ulepszenia. Buforowanie zużywa zasoby pamięci serwera sieci Web i zwiększa złożoność aplikacji, dlatego ważne jest, aby nie zoptymalizować się za pomocą tej techniki.
 
 >[!div class="step-by-step"]
->[Poprzedni](develop-asp-net-core-mvc-apps.md)Następny
->[](test-asp-net-core-mvc-apps.md)
+>[Poprzedni](develop-asp-net-core-mvc-apps.md)
+>[dalej](test-asp-net-core-mvc-apps.md)

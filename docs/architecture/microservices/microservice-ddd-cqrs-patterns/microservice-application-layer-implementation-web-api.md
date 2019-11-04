@@ -2,12 +2,12 @@
 title: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771119"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454849"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 
@@ -285,7 +285,7 @@ Zasadniczo Klasa Command zawiera wszystkie dane potrzebne do wykonania transakcj
 
 Jako dodatkową cechą polecenia są niezmienne, ponieważ oczekiwane użycie polega na tym, że są przetwarzane bezpośrednio przez model domeny. Nie trzeba zmieniać ich w przewidywanym okresie istnienia. W C# klasie niezmienności można osiągnąć, nie mając żadnych metod ustawiających ani innych, które zmieniają stan wewnętrzny.
 
-Należy pamiętać, że jeśli zamierzasz lub oczekiwać, że polecenia będą przechodzą przez proces serializacji/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą i atrybut `[DataMember]` (lub `[JsonProperty]`), w przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu na Lokalizacja docelowa z wymaganymi wartościami.
+Należy pamiętać, że jeśli zamierzasz lub oczekiwać, że polecenia będą przechodzą przez proces serializowania/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą i atrybut `[DataMember]` (lub `[JsonProperty]`), w przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu w miejscu docelowym z wymaganymi wartościami.
 
 Na przykład Klasa poleceń do tworzenia zamówienia jest prawdopodobnie podobna pod względem danych do zamówienia, które chcesz utworzyć, ale prawdopodobnie nie potrzebujesz tych samych atrybutów. Na przykład `CreateOrderCommand` nie ma identyfikatora zamówienia, ponieważ zamówienie nie zostało jeszcze utworzone.
 
@@ -398,10 +398,10 @@ Są to dodatkowe kroki, które powinien wykonać procedura obsługi polecenia:
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Polecenia i zdarzenia** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **Do czego służy procedura obsługi poleceń?** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. Wzorce poleceń domeny — programy obsługi** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
@@ -451,9 +451,9 @@ W związku z tym, możliwość odpowiedzi na klienta po zweryfikowaniu komunikat
 
 Ponadto polecenia asynchroniczne są poleceniami jednokierunkowymi, które w wielu przypadkach mogą nie być konieczne, jak wyjaśniono w następującej interesującej wymianie między Burtsev Alexey i Gregem młodych w [konwersacji online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
-> \[Burtsev Alexey \] mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jeden sposób obsługi komunikatów z poleceniami bez żadnych powodów (nie wykonują długotrwałej operacji, nie wykonują zewnętrznego kodu asynchronicznego, ale nie są nawet między aplikacjami). granica, która ma być używana przez magistralę komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
+> \[Burtsev Alexey\] mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jednym sposobem obsługi komunikatów z poleceniami bez żadnych powodów (nie wykonują długotrwałej operacji, nie wykonują zewnętrznego kodu asynchronicznego, ale nie są nawet krzyżowe) granica aplikacji, która ma używać magistrali komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
 >
-> \[Greg młodych \] \[... \] polecenie asynchroniczne nie istnieje; jest to w rzeczywistości inne zdarzenie. Jeśli muszę zaakceptować to, co wysłałeś, i zgłosić wydarzenie, jeśli nie, już nie wiesz, jak to zrobić, \[that nie jest to polecenie \]. Poinformujemy Cię o tym, że coś zostało już zrobione. Wydaje się to bardzo niewielką różnicą w pierwszej kolejności, ale ma wiele konsekwencji.
+> \[Gregować młode\] \[...\] polecenie asynchroniczne nie istnieje; jest to w rzeczywistości inne zdarzenie. Jeśli muszę zaakceptować to, co wyślę, i zgłosić wydarzenie, jeśli nie zgadzam się, nie jest już wiesz, jak to zrobić, \[nie jest to polecenie\]. Poinformujemy Cię o tym, że coś zostało już zrobione. Wydaje się to bardzo niewielką różnicą w pierwszej kolejności, ale ma wiele konsekwencji.
 
 Asynchroniczne polecenia znacznie zwiększają złożoność systemu, ponieważ nie ma prostego sposobu wskazywania niepowodzeń. W związku z tym polecenia asynchroniczne nie są zalecane, niż w przypadku gdy wymagania dotyczące skalowania są wymagane lub w szczególnych przypadkach podczas komunikacji mikrousług wewnętrznych przy użyciu komunikatów. W takich przypadkach należy zaprojektować oddzielny system raportowania i odzyskiwania pod kątem błędów.
 
@@ -838,4 +838,4 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-application-layer-web-api-design.md)
-> [Następny](../implement-resilient-applications/index.md)
+> [dalej](../implement-resilient-applications/index.md)

@@ -1,22 +1,22 @@
 ---
-title: 'Instrukcje: kontrolki autoryzacji dla formularzy systemu Windows'
+title: 'Porady: formanty autoryzacji dla formularzy systemu Windows'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 45a6ae68102204ad8506027065c2676e02fdd7a3
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015918"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459425"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: Kontrolki autora dla Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Instrukcje: Tworzenie formantów dla Windows Forms
 
 Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontrolka może udostępniać lub przetwarzać dane, akceptować wprowadzanie danych przez użytkownika, odpowiadać na zdarzenia lub wykonywać dowolną liczbę innych funkcji, które łączą użytkownika i aplikację. Ponieważ kontrolka jest zasadniczo składnikiem interfejsu graficznego, może służyć dowolnej funkcji, która robi składnik, a także zapewnia interakcję z użytkownikiem. Formanty są tworzone w celu obsłużenia określonych celów, a formanty tworzenia są po prostu innym zadaniem programistycznym. Z tego względu poniższe kroki przedstawiają przegląd procesu tworzenia kontroli. Linki zawierają dodatkowe informacje dotyczące poszczególnych kroków.
 
@@ -40,9 +40,9 @@ Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontro
 
 5. Jeśli potrzebujesz niestandardowego rysowania kontrolki, Dodaj do niej kod. Aby uzyskać szczegółowe informacje, zobacz [malowanie i renderowanie kontrolek niestandardowych](custom-control-painting-and-rendering.md).
 
-6. Jeśli formant dziedziczy z <xref:System.Windows.Forms.UserControl>, można przetestować jego zachowanie w czasie wykonywania przez skompilowanie projektu kontrolki i uruchomienie go w **kontenerze testów UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
+6. Jeśli formant dziedziczy po <xref:System.Windows.Forms.UserControl>, można przetestować jego zachowanie w czasie wykonywania przez skompilowanie projektu kontrolki i uruchomienie go w **kontenerze testów UserControl**. Aby uzyskać więcej informacji, zobacz [jak: testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
-7. Możesz również testować i debugować kontrolkę, tworząc nowy projekt, taki jak aplikacja systemu Windows i umieszczając go w kontenerze. Ten proces jest przedstawiany jako część [przewodnika: Tworzenie złożonego formantu](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
+7. Możesz również testować i debugować kontrolkę, tworząc nowy projekt, taki jak aplikacja systemu Windows i umieszczając go w kontenerze. Ten proces jest przedstawiany jako część [przewodnika: Tworzenie formantu złożonego](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
 8. Podczas dodawania każdej funkcji Dodaj funkcje do projektu testowego, aby skorzystać z nowych funkcji.
 
@@ -52,8 +52,8 @@ Kontrolka reprezentuje graficzny link między użytkownikiem a programem. Kontro
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Dziedzicz z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Instrukcje: dziedziczenie z klasy UserControl](how-to-inherit-from-the-usercontrol-class.md)
+- [Instrukcje: dziedziczenie z klasy kontrolek](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: dziedziczenie z istniejących kontrolek formularzy Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)

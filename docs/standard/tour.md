@@ -1,19 +1,19 @@
 ---
-title: Przewodnik po platformie .NET
+title: Przewodnik po środowisku .NET
 description: Przewodnik po kilku widocznych funkcjach platformy .NET.
 author: cartermp
 ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291592"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421585"
 ---
-# <a name="tour-of-net"></a>Przewodnik po platformie .NET
+# <a name="tour-of-net"></a>Przewodnik po środowisku .NET
 
 .NET to platforma programistyczna ogólnego przeznaczenia. Ma kilka najważniejszych funkcji, takich jak obsługa wielu języków programowania, asynchronicznych i współbieżnych modeli programowania oraz natywnego współdziałania, które umożliwiają szeroki zakres scenariuszy na wielu platformach.
 
@@ -37,7 +37,7 @@ Firma Microsoft aktywnie opracowuje i obsługuje trzy języki .NET C#: F#, i Vis
 
 ## <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 
-Platforma .NET używa [wyrzucania elementów bezużytecznych (GC)](garbagecollection/index.md) w celu zapewnienia automatycznego zarządzania pamięcią dla programów. GC wykorzystuje podejście z opóźnieniem do zarządzania pamięcią, a tym samym przepływność aplikacji do natychmiastowego zbierania pamięci. Aby dowiedzieć się więcej na temat platformy .NET GC, zapoznaj się z tematem podstawowe informacje na temat [odzyskiwania pamięci (GC)](garbagecollection/fundamentals.md).
+Platforma .NET używa [wyrzucania elementów bezużytecznych (GC)](garbage-collection/index.md) w celu zapewnienia automatycznego zarządzania pamięcią dla programów. GC wykorzystuje podejście z opóźnieniem do zarządzania pamięcią, a tym samym przepływność aplikacji do natychmiastowego zbierania pamięci. Aby dowiedzieć się więcej na temat platformy .NET GC, zapoznaj się z tematem podstawowe informacje na temat [odzyskiwania pamięci (GC)](garbage-collection/fundamentals.md).
 
 Oba te dwa wiersze przydzielą pamięć:
 
@@ -85,7 +85,7 @@ C#, VB i F# obsługują *wnioskowanie typu*lokalnego. Wnioskowanie o typie oznac
 
 F#ma jeszcze więcej możliwości wnioskowania o typie niż w metodzie i w C# języku VB. Aby dowiedzieć się więcej, zobacz [wnioskowanie o typie](../fsharp/language-reference/type-inference.md).
 
-## <a name="delegates-and-lambdas"></a>Obiekty delegowane i wyrażenia lambda
+## <a name="delegates-and-lambdas"></a>Delegaci i wyrażenia lambda
 
 Delegat jest reprezentowany przez sygnaturę metody. Dowolna metoda z tym podpisem może być przypisana do delegata i jest wykonywana, gdy obiekt delegowany jest wywoływany.
 
@@ -111,7 +111,7 @@ Programowanie asynchroniczne to koncepcja pierwszej klasy w ramach platformy .NE
 
 Aby dowiedzieć się więcej o programowaniu asynchronicznym w programie .NET, Rozpocznij pracę z tematem [Przegląd asynchroniczny](async.md) .
 
-## <a name="language-integrated-query-linq"></a>Zapytanie Integrated Language (LINQ)
+## <a name="language-integrated-query-linq"></a>Language Integrated Query (LINQ)
 
 LINQ to zaawansowany zestaw funkcji dla C# i VB, który umożliwia pisanie prostego, deklaratywnego kodu do obsługi danych. Dane mogą znajdować się w wielu formularzach (takich jak obiekty znajdujące się w pamięci, bazy danych SQL lub dokumenty XML), ale kod LINQ, który jest zwykle nie różni się od źródła danych.
 
@@ -127,7 +127,7 @@ Większość funkcji obsługi współdziałania programu mono (i w ten sposób X
 
 Aby uzyskać więcej informacji na temat współdziałania natywnego, zobacz artykuł dotyczący współdziałania [macierzystego](native-interop/index.md) .
 
-## <a name="unsafe-code"></a>Kod niebezpieczny
+## <a name="unsafe-code"></a>Niebezpieczny kod
 
 W zależności od obsługi języków środowisko CLR umożliwia dostęp do pamięci natywnej i przeprowadzenie obliczeń wskaźnika za pośrednictwem kodu `unsafe`. Te operacje są niezbędne w przypadku niektórych algorytmów i współdziałania systemu. Chociaż nie jest zalecane korzystanie z niebezpiecznego kodu, chyba że jest to konieczne do współdziałania z interfejsami API systemu lub implementuje najbardziej wydajny algorytm. Kod niebezpieczny może nie działać w ten sam sposób w różnych środowiskach, a także traci korzyści ze stosowania modułu wyrzucania elementów bezużytecznych i bezpieczeństwa typów. Zaleca się ograniczenie i scentralizowanie niebezpiecznego kodu, jak to możliwe, i gruntowne sprawdzenie tego kodu.
 

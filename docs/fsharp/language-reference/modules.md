@@ -2,12 +2,12 @@
 title: Moduły
 description: Dowiedz się F# , jak moduł jest grupą F# kodów, takich jak wartości, typy i wartości funkcji, w F# programie.
 ms.date: 04/24/2017
-ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fbde0c8b001d88614ba2de49c4aa7bfa098c6945
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627424"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425053"
 ---
 # <a name="modules"></a>Moduły
 
@@ -40,7 +40,7 @@ Ten plik zostanie skompilowany tak, jakby został zapisany w ten sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Jeśli masz wiele modułów w pliku, musisz użyć lokalnej deklaracji modułu dla każdego modułu. W przypadku zadeklarowania otaczającej przestrzeni nazw te moduły są częścią otaczającej przestrzeni nazw. Jeśli otaczająca przestrzeń nazw nie jest zadeklarowana, moduły stają się częścią niejawnie utworzonego modułu najwyższego poziomu. Poniższy przykład kodu przedstawia plik kodu, który zawiera wiele modułów. Kompilator niejawnie tworzy moduł najwyższego poziomu o `Multiplemodules`nazwie i `MyModule1` i `MyModule2` jest zagnieżdżony w tym module najwyższego poziomu.
+Jeśli masz wiele modułów w pliku, musisz użyć lokalnej deklaracji modułu dla każdego modułu. W przypadku zadeklarowania otaczającej przestrzeni nazw te moduły są częścią otaczającej przestrzeni nazw. Jeśli otaczająca przestrzeń nazw nie jest zadeklarowana, moduły stają się częścią niejawnie utworzonego modułu najwyższego poziomu. Poniższy przykład kodu przedstawia plik kodu, który zawiera wiele modułów. Kompilator niejawnie tworzy moduł najwyższego poziomu o nazwie `Multiplemodules`, a `MyModule1` i `MyModule2` są zagnieżdżone w tym module najwyższego poziomu.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
@@ -54,7 +54,7 @@ Podczas odwoływania się do funkcji, typów i wartości z innego modułu należ
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Aby uprościć kod, możesz otworzyć moduł lub co najmniej jedną przestrzeń nazw. Aby uzyskać więcej informacji na temat otwierania obszarów nazw i [modułów, zobacz Importowanie deklaracji: `open` Słowo kluczowe](import-declarations-the-open-keyword.md).
+Aby uprościć kod, możesz otworzyć moduł lub co najmniej jedną przestrzeń nazw. Aby uzyskać więcej informacji na temat otwierania obszarów nazw i modułów, zobacz [Importowanie deklaracji: słowo kluczowe `open`](import-declarations-the-open-keyword.md).
 
 Poniższy przykład kodu pokazuje moduł najwyższego poziomu, który zawiera cały kod, do końca pliku.
 
@@ -70,7 +70,7 @@ Moduły mogą być zagnieżdżane. W przypadku modułów wewnętrznych należy z
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Ale moduł `Z` jest elementem równorzędnym do `Y` modułu w poniższym kodzie.
+Ale moduł `Z` jest elementem równorzędnym do modułu `Y` w poniższym kodzie.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
 Moduł `Z` jest również modułem równorzędnym w poniższym kodzie, ponieważ nie jest wcięty do innych deklaracji w module `Y`.
@@ -88,7 +88,7 @@ Jeśli chcesz, aby cały kod w pliku znajdował się w jednym module zewnętrzny
 
 ## <a name="recursive-modules"></a>Moduły cykliczne
 
-F#4,1 wprowadza koncepcję modułów, które zezwalają na wzajemną rekursywnie wszystkie zawarte w nim kod.  Jest to realizowane za `module rec`pośrednictwem.  `module rec` Użycie może wyeliminować pewne problemy, ponieważ nie można napisać wzajemnie referencyjnego kodu między typami i modułami.  Poniżej znajduje się przykład:
+F#4,1 wprowadza koncepcję modułów, które zezwalają na wzajemną rekursywnie wszystkie zawarte w nim kod.  Odbywa się to za pośrednictwem `module rec`.  Użycie `module rec` może wyeliminować problemy, ponieważ nie można napisać wzajemnie referencyjnego kodu między typami i modułami.  Poniżej znajduje się przykład:
 
 ```fsharp
 module rec RecursiveModule =
@@ -112,7 +112,7 @@ module rec RecursiveModule =
         let peel (b: Banana) =
             let flip (banana: Banana) =
                 match banana.Orientation with
-                | Up -> 
+                | Up ->
                     banana.Orientation <- Down
                     banana
                 | Down -> banana
@@ -128,7 +128,7 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Należy zauważyć, że `DontSqueezeTheBananaException` wyjątek i Klasa `Banana` odnoszą się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i Klasa `Banana` odnoszą się do siebie nawzajem.  Nie będzie to możliwe w F# przypadku usunięcia `rec` słowa kluczowego z `RecursiveModule` modułu.
+Należy zauważyć, że wyjątek `DontSqueezeTheBananaException` i Klasa `Banana` obie odwołują się do siebie nawzajem.  Ponadto moduł `BananaHelpers` i Klasa `Banana` również odwołują się do siebie.  Nie będzie to możliwe w F# przypadku usunięcia słowa kluczowego `rec` z modułu `RecursiveModule`.
 
 Ta możliwość jest również możliwa w [przestrzeniach nazw](namespaces.md) z F# 4,1.
 

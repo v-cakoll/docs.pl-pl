@@ -1,36 +1,36 @@
 ---
 title: Elementy członkowskie
-description: Dowiedz się więcej o elementach członkowskich obiektu w F# języka programowania.
+description: Dowiedz się więcej o elementach członkowskich obiektów w języku F# programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0da704b637a9421aa150aa8d8de504bec858e252
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2e85d014cd1e9b7997638cb210fed5705c217719
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645153"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425071"
 ---
 # <a name="members"></a>Elementy członkowskie
 
-W tej sekcji opisano elementy członkowskie F# typy obiektów.
+W F# tej sekcji opisano elementy członkowskie typów obiektów.
 
 ## <a name="remarks"></a>Uwagi
 
-*Elementy członkowskie* funkcje, które są częścią definicji typu i są uznane za pomocą `member` — słowo kluczowe. F#typy obiektów, takich jak rekordy, klas, rekord z wariantami, interfejsów i struktury obsługuje elementy członkowskie. Aby uzyskać więcej informacji, zobacz [rekordów](../records.md), [klasy](../classes.md), [sumy rozłączne](../discriminated-Unions.md), [interfejsów](../interfaces.md), i [struktury](../structures.md).
+*Elementy członkowskie* są funkcjami, które są częścią definicji typu i są zadeklarowane za pomocą słowa kluczowego `member`. F#typy obiektów, takie jak rekordy, klasy, Unii rozłącznych, interfejsy i struktury, obsługują członków. Aby uzyskać więcej informacji, zobacz [rekordy](../records.md), [klasy](../classes.md), [związki rozłącznych](../discriminated-Unions.md), [interfejsy](../interfaces.md)i [struktury](../structures.md).
 
-Elementy członkowskie zwykle tworzą interfejsu publicznego dla typu, dlatego są publiczne, chyba że określono inaczej. Prywatne lub wewnętrzne, mogą być także zadeklarowane elementy członkowskie. Aby uzyskać więcej informacji, zobacz [kontroli dostępu](../access-Control.md). Podpisy dla typów może również służyć do ujawniają i nie ujawnia niektóre elementy członkowskie typu. Aby uzyskać więcej informacji, zobacz [podpisy](../signatures.md).
+Członkowie zwykle tworzą interfejs publiczny dla typu, dlatego są one publiczne, chyba że określono inaczej. Elementy członkowskie mogą być również deklarowane jako prywatne lub wewnętrzne. Aby uzyskać więcej informacji, zobacz [Access Control](../access-Control.md). Sygnatury typów mogą być również używane do ujawniania lub nieujawniania określonych elementów członkowskich typu. Aby uzyskać więcej informacji, zobacz [podpisy](../signature-files.md).
 
-Pola prywatne i `do` powiązania, które są używane tylko z klasami, nie są członkami wartość true, ponieważ nigdy nie są częścią interfejsu publicznego typu i nie są zadeklarowane za pomocą `member` — słowo kluczowe, ale są opisane w tej sekcji również.
+Pola prywatne i powiązania `do`, które są używane tylko z klasami, nie są prawdziwymi elementami członkowskimi, ponieważ nigdy nie są częścią publicznego interfejsu typu i nie są zadeklarowane za pomocą słowa kluczowego `member`, ale są opisane w tej sekcji.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Temat|Opis|
 |-----|-----------|
-|[`let` Powiązania w klasach](let-bindings-in-classes.md)|W tym artykule opisano definicji pola prywatne i funkcje w klasach.|
-|[`do` Powiązania w klasach](do-bindings-in-classes.md)|W tym artykule opisano specyfikację kod inicjowania obiektu.|
-|[Właściwości](properties.md)|Opisuje właściwości składowych w klasach i innych typów.|
-|[Właściwości indeksowane](indexed-properties.md)|Opisuje właściwości tablicy w klasach i innych typów.|
+|[`let` powiązania w klasach](let-bindings-in-classes.md)|Opisuje definicje pól i funkcji prywatnych w klasach.|
+|[`do` powiązania w klasach](do-bindings-in-classes.md)|Opisuje specyfikację kodu inicjalizacji obiektu.|
+|[Właściwości](properties.md)|Opisuje elementy członkowskie właściwości w klasach i innych typach.|
+|[Właściwości indeksowane](indexed-properties.md)|Opisuje właściwości podobne do tablic w klasach i innych typach.|
 |[Metody](methods.md)|Opisuje funkcje, które są elementami członkowskimi typu.|
-|[Konstruktory](constructors.md)|W tym artykule opisano funkcje specjalne, które Inicjowanie obiektów typu.|
-|[Przeładowanie operatora](../operator-overloading.md)|W tym artykule opisano definicję niestandardowych operatorów dla typów.|
-|[Zdarzenia](events.md)|W tym artykule opisano definicji zdarzeń i zdarzeń w F#.|
-|[Pola jawne: słowo kluczowe `val`](explicit-fields-the-val-keyword.md)|W tym artykule opisano definicji niezainicjowanej pola w typie.|
+|[Konstruktory](constructors.md)|Opisuje funkcje specjalne, które inicjują obiekty typu.|
+|[Przeładowanie operatora](../operator-overloading.md)|Opisuje definicje niestandardowych operatorów dla typów.|
+|[Zdarzenia](events.md)|Opisuje definicje zdarzeń i obsługi zdarzeń w programie F#.|
+|[Pola jawne: słowo kluczowe `val`](explicit-fields-the-val-keyword.md)|Opisuje definicje niezainicjowanych pól w typie.|

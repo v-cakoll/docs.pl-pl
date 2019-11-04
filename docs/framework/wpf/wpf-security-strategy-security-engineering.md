@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: a042f0ae1c7673f7d21b39580db3d373835939cd
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5dd80cff7675a7d3236c7409fd882ebf3a3cd7b1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353834"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424916"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Strategia zabezpieczeń WPF - projekt zabezpieczeń
 Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia produkcji bezpiecznego kodu. Kluczowym elementem wiarygodnej inicjatywy komputerowej jest Microsoft Security Development Lifecycle (SDL). SDL to metoda inżynieryjna, która jest używana w połączeniu ze standardowymi procesami inżynieryjnymi w celu ułatwienia dostarczania bezpiecznego kodu. SDL składa się z dziesięciu faz, które łączą najlepsze rozwiązania z formalization, mierzalną i dodatkową strukturą, w tym:  
@@ -31,7 +31,7 @@ Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia
 - Zarządzanie zabezpieczeniami produktu po wydaniu  
   
 ## <a name="wpf-specifics"></a>Specyficzne dla WPF  
- Zespół inżynieryjny [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] stosuje i rozszerza klucz SDL, którego kombinację zawierają następujące kluczowe aspekty:  
+ Zespół inżynierów [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] ma zastosowanie i rozszerza klucz SDL, którego kombinacja obejmuje następujące kluczowe aspekty:  
   
  [Modelowanie zagrożeń](#threat_modeling)  
   
@@ -65,33 +65,33 @@ Wiarygodne technologie obliczeniowe to inicjatywa firmy Microsoft do zapewnienia
   
 <a name="tools"></a>   
 ### <a name="source-analysis-and-editing-tools"></a>Narzędzia do analizy źródłowej i edycji  
- Oprócz ręcznych elementów kontroli kodu zabezpieczeń SDL zespół [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] używa kilku narzędzi do analizy źródła i skojarzonych modyfikacji w celu zmniejszenia luk w zabezpieczeniach. Używane są szeroką gamę narzędzi źródłowych, które obejmują następujące elementy:  
+ Oprócz ręcznych elementów kontroli kodu zabezpieczeń SDL, zespół [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] używa kilku narzędzi do analizy źródła i skojarzonych modyfikacji w celu zmniejszenia luk w zabezpieczeniach. Używane są szeroką gamę narzędzi źródłowych, które obejmują następujące elementy:  
   
-- **FXCop**: Znajduje typowe problemy z zabezpieczeniami w kodzie zarządzanym od reguł dziedziczenia do użycia w celu zabezpieczenia dostępu kodu w celu bezpiecznego współdziałania z kodem niezarządzanym. Zobacz [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
+- **FXCop**: znajduje typowe problemy z zabezpieczeniami w kodzie zarządzanym od reguł dziedziczenia do użycia w celu zabezpieczenia dostępu kodu, aby bezpiecznie współpracować z niezarządzanym kodem. Zobacz [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
-- **Prefiks/szybka szybkość**: Znajdowanie luk w zabezpieczeniach i typowych problemów z zabezpieczeniami w niezarządzanym kodzie, takich jak przepełnienia buforu, problemy z ciągami formatowania i sprawdzanie błędów.  
+- **Prefiks/szybki Fast**: umożliwia znalezienie luk w zabezpieczeniach i typowych problemów z zabezpieczeniami w kodzie niezarządzanym, takim jak przepełnienia buforu, problemy z ciągami formatowania i sprawdzanie błędów.  
   
-- **Zablokowane interfejsy API**: Przeszukuje kod źródłowy, aby identyfikować przypadkowe użycie funkcji, które są dobrze znane w przypadku problemów z zabezpieczeniami, takich jak `strcpy`. Po zidentyfikowaniu te funkcje są zastępowane alternatywami, które są bardziej bezpieczne.  
+- **Zablokowane interfejsy API**: wyszukuje kod źródłowy, aby identyfikować przypadkowe użycie funkcji, które są dobrze znane w przypadku problemów z zabezpieczeniami, takich jak `strcpy`. Po zidentyfikowaniu te funkcje są zastępowane alternatywami, które są bardziej bezpieczne.  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Techniki testowania  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] korzysta z różnych technik testowania zabezpieczeń, które obejmują:  
   
-- **Testowanie Whitebox**: Testerzy wyświetlają kod źródłowy, a następnie kompilują testy wykorzystujące luki w zabezpieczeniach.
+- **Testowanie Whitebox**: testerzy wyświetlają kod źródłowy, a następnie kompilują testy wykorzystujące luki w zabezpieczeniach.
   
-- **Testowanie Blackbox**: Testerzy próbują znaleźć luki w zabezpieczeniach, sprawdzając interfejs API i funkcje, a następnie próbę ataku na produkt.  
+- **Testowanie Blackbox**: testerzy próbują znaleźć luki w zabezpieczeniach, sprawdzając interfejs API i funkcje, a następnie próbę ataku na produkt.  
   
-- **Rozwiązywanie problemów z zabezpieczeniami z innych produktów**: W razie potrzeby są testowane problemy z zabezpieczeniami pokrewnych produktów. Na przykład zostały zidentyfikowane odpowiednie warianty około 60 problemów z zabezpieczeniami programu Internet Explorer i podjęto próbę ich zastosowania do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+- **Rozwiązywanie problemów z zabezpieczeniami z innych produktów**: w razie potrzeby są testowane problemy z zabezpieczeniami pokrewnych produktów. Na przykład zostały zidentyfikowane odpowiednie warianty około 60 problemów z zabezpieczeniami programu Internet Explorer i podjęto próbę ich zastosowania do [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
-- **Testowanie penetracji plików w oparciu o narzędzia**: Rozmyty plik to wykorzystanie zakresu wejściowego czytnika plików za pomocą różnych danych wejściowych. Przykładem w [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], gdy ta technika jest używana, jest sprawdzenie niepowodzenia w kodzie dekodowania obrazu.  
+- **Testowanie penetracji na podstawie narzędzi przez rozmyte pliki**: rozmyte pliki to wykorzystanie zakresu wejściowego czytnika plików za pośrednictwem różnych danych wejściowych. Przykładem w [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], w którym ta technika jest używana, jest sprawdzenie niepowodzenia w kodzie dekodowania obrazu.  
   
 <a name="critical_code"></a>   
 ### <a name="critical-code-management"></a>Krytyczne Zarządzanie kodem  
- W przypadku [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kompiluje piaskownicę zabezpieczeń przy użyciu funkcji .NET Framework do oznaczania i śledzenia kodu krytycznego dla zabezpieczeń, który podnosi uprawnienia (patrz **metodologia krytyczna** dotycząca zabezpieczeń w ramach [strategii zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Zgodnie z wymaganiami dotyczącymi wysokiej jakości zabezpieczeń w kodzie krytycznym zabezpieczeń, taki kod otrzymuje dodatkowy poziom kontroli zarządzania źródła i inspekcji zabezpieczeń. Około 5% do 10% [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu krytycznego pod względem zabezpieczeń, który jest przeglądany przez dedykowanego zespołu ds. recenzji. Kod źródłowy i proces ewidencjonowania są zarządzane przez śledzenie kodu krytycznego zabezpieczeń i mapowanie każdej krytycznej jednostki (tj. metody zawierającej kod krytyczny) do jej stanu rejestracji. Stan wylogowywania obejmuje nazwy jednego lub kilku recenzentów. Każda codzienna kompilacja [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny z tym, że w poprzednich kompilacjach sprawdza Niezatwierdzone zmiany. Jeśli inżynier modyfikuje kod krytyczny bez zgody zespołu recenzowania, zostanie on zidentyfikowany i rozwiązany od razu. Ten proces umożliwia stosowanie i konserwację szczególnie wysokiego poziomu kontroli nad kodem piaskownicy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ W przypadku aplikacji przeglądarki XAML (XBAP) [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] kompiluje piaskownicę zabezpieczeń przy użyciu funkcji .NET Framework do oznaczania i śledzenia kodu o krytycznym poziomie zabezpieczeń, który podnosi uprawnienia (patrz **metodologia krytyczna** dla zabezpieczeń w ramach [strategii zabezpieczeń WPF — Zabezpieczenia platformy](wpf-security-strategy-platform-security.md)). Zgodnie z wymaganiami dotyczącymi wysokiej jakości zabezpieczeń w kodzie krytycznym zabezpieczeń, taki kod otrzymuje dodatkowy poziom kontroli zarządzania źródła i inspekcji zabezpieczeń. Około 5% do 10% [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] składa się z kodu krytycznego pod względem zabezpieczeń, który jest przeglądany przez dedykowanego zespołu ds. recenzji. Kod źródłowy i proces ewidencjonowania są zarządzane przez śledzenie kodu krytycznego zabezpieczeń i mapowanie każdej krytycznej jednostki (tj. metody zawierającej kod krytyczny) do jej stanu rejestracji. Stan wylogowywania obejmuje nazwy jednego lub kilku recenzentów. Każda codzienna kompilacja [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] porównuje kod krytyczny z tym w poprzednich kompilacjach, aby sprawdzić Niezatwierdzone zmiany. Jeśli inżynier modyfikuje kod krytyczny bez zgody zespołu recenzowania, zostanie on zidentyfikowany i rozwiązany od razu. Ten proces umożliwia stosowanie i konserwację szczególnie wysokiego poziomu kontroli nad kodem piaskownicy [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zabezpieczenia](security-wpf.md)
+- [Security](security-wpf.md)
 - [Zabezpieczenie częściowej relacji zaufania WPF](wpf-partial-trust-security.md)
 - [Strategia zabezpieczeń WPF — zabezpieczenia platformy](wpf-security-strategy-platform-security.md)
 - [Wiarygodne przetwarzanie](https://www.microsoft.com/mscorp/twc/default.mspx)

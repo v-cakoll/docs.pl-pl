@@ -2,29 +2,29 @@
 title: Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 396ec5ae-e34f-4c64-a164-fcf50e86b6ac
-ms.openlocfilehash: 519f303507ed873266cc05a7556073887b66ba6f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: aa9fc1b2338007db240fb10a9af35754107b07d0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923028"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424876"
 ---
 # <a name="servicemodel-registration-tool-servicemodelregexe"></a>Narzędzie rejestracji modelu ServiceModel (ServiceModelReg.exe)
 To narzędzie wiersza polecenia zapewnia możliwość zarządzania rejestracją składników WCF i WF na jednym komputerze. W normalnych okolicznościach nie należy używać tego narzędzia, ponieważ składniki WCF i WF są skonfigurowane podczas instalacji. Jeśli jednak występują problemy z aktywacją usługi, możesz spróbować zarejestrować składniki przy użyciu tego narzędzia.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
  Narzędzie można znaleźć w następującej lokalizacji:  
   
- %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
+ %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
   
 > [!NOTE]
-> Po uruchomieniu narzędzia rejestracji [!INCLUDE[wv](../../../includes/wv-md.md)]ServiceModel w systemie okno dialogowe **funkcji systemu Windows** może nie odzwierciedlać, że opcja **Windows Communication Foundation Aktywacja HTTP** w obszarze **Microsoft .NET Framework 3,0** jest włączona. Do okna dialogowego **funkcje systemu Windows** można uzyskać dostęp przez kliknięcie przycisku **Start**, a następnie kliknij pozycję **Uruchom** , a następnie wpisz **OptionalFeatures**.  
+> Po uruchomieniu narzędzia rejestracji modelu ServiceModel w [!INCLUDE[wv](../../../includes/wv-md.md)]okno dialogowe **funkcji systemu Windows** może nie odzwierciedlać, że **Windows Communication Foundation opcja aktywacji HTTP** w obszarze **Microsoft .NET Framework 3,0** jest włączona. Do okna dialogowego **funkcje systemu Windows** można uzyskać dostęp przez kliknięcie przycisku **Start**, a następnie kliknij pozycję **Uruchom** , a następnie wpisz **OptionalFeatures**.  
   
  W poniższych tabelach opisano opcje, których można użyć w programie ServiceModelReg. exe.  
   
@@ -42,11 +42,11 @@ ServiceModelReg.exe[(-ia|-ua|-r)|((-i|-u) -c:<command>)] [-v|-q] [-nologo] [-?]
 |`-?`|Wyświetla tekst pomocy|  
   
 ## <a name="fixing-the-fileloadexception-error"></a>Naprawianie błędu FileLoadException  
- Jeśli na komputerze zainstalowano poprzednie wersje programu WCF, podczas uruchamiania narzędzia ServiceModelReg `FileLoadFoundException` w celu zarejestrowania nowej instalacji może wystąpić błąd. Może się tak zdarzyć nawet w przypadku ręcznego usuwania plików z poprzedniej instalacji, ale pozostawionie ustawień Machine. config bez zmian.  
+ Jeśli na komputerze zainstalowano wcześniejsze wersje programu WCF, podczas uruchamiania narzędzia ServiceModelReg w celu zarejestrowania nowej instalacji może wystąpić błąd `FileLoadFoundException`. Może się tak zdarzyć nawet w przypadku ręcznego usuwania plików z poprzedniej instalacji, ale pozostawionie ustawień Machine. config bez zmian.  
   
  Komunikat o błędzie jest podobny do poniższego.  
   
-```  
+```console  
 Error: System.IO.FileLoadException: Could not load file or assembly 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' or one of its dependencies. The located assembly's manifest definition does not match the assembly reference. (Exception from HRESULT: 0x80131040)  
 File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'  
 ```  
@@ -55,13 +55,13 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
   
  ServiceModelReg. exe nie może oczyścić wcześniejszych wpisów wersji ani nie może zarejestrować wpisów nowej wersji. Jedyną obejściem jest ręczne edytowanie pliku Machine. config. Ten plik można zlokalizować w następującej lokalizacji.  
   
-```  
+```console  
 %windir%\Microsoft.NET\Framework\v2.0.50727\config\machine.config   
 ```  
   
  Jeśli używasz programu WCF na komputerze 64-bitowym, należy również edytować ten sam plik w tej lokalizacji.  
   
-```  
+```console  
 %windir%\Microsoft.NET\Framework64\v2.0.50727\config\machine.config   
 ```  
   
@@ -70,7 +70,7 @@ File name: 'System.ServiceModel, Version=2.0.0.0, Culture=neutral, PublicKeyToke
 ## <a name="examples"></a>Przykłady  
  W poniższych przykładach pokazano, jak używać najbardziej typowych opcji narzędzia ServiceModelReg. exe.  
   
-```  
+```console  
 ServiceModelReg.exe -ia  
   Installs all components  
 ServiceModelReg.exe -i -c:httpnamespace -c:etw  

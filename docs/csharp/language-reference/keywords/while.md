@@ -1,5 +1,5 @@
 ---
-title: while — C# odwołania
+title: While — C# odwołanie
 ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: ab0a8ba0b724757b4f239daf1d3319b989c4531a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422484"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421914"
 ---
 # <a name="while-c-reference"></a>while (odwołanie w C#)
 
-`while` Instrukcji wykonuje instrukcję lub blok instrukcji, gdy określone wyrażenie logiczne, które daje w wyniku `true`. Ponieważ to wyrażenie jest obliczane przed każdym wykonaniu pętli, `while` pętla jest wykonywana zero lub więcej razy. To różni się od [czy](do.md) pętli, która wykonuje jeden lub więcej razy.
+Instrukcja `while` wykonuje instrukcję lub blok instrukcji, gdy określone wyrażenie logiczne daje w wyniku `true`. Ponieważ to wyrażenie jest oceniane przed każdym wykonaniem pętli, pętla `while` wykonuje zero lub więcej razy. Różni się to od [pętli do](do.md) , która wykonuje jeden lub więcej razy.
 
-W dowolnym punkcie w `while` blok instrukcji, można zerwać pętlę za pomocą [podziału](break.md) instrukcji.
+W dowolnym momencie w bloku instrukcji `while` można przerwać pętlę przy użyciu instrukcji [Break](break.md) .
 
-Użytkownik może przechodzić bezpośrednio do obliczania `while` wyrażenie, używając [nadal](continue.md) instrukcji. Jeśli wyrażenie ma `true`, wykonywanie jest kontynuowane po pierwszej instrukcji w pętli. W przeciwnym razie wykonywanie jest kontynuowane po pierwszej instrukcji następującej po pętli.
+Możesz przejść bezpośrednio do oceny wyrażenia `while` przy użyciu instrukcji [Continue](continue.md) . Jeśli wyrażenie zwróci wartość `true`, wykonywanie jest kontynuowane na pierwszej instrukcji w pętli. W przeciwnym razie wykonywanie jest kontynuowane po pierwszej instrukcji po pętli.
 
-Możesz również wyjść `while` pętli przez [przejdź do](goto.md), [zwracają](return.md), lub [throw](throw.md) instrukcji.
+Możesz również wyjść z pętli `while` przez instrukcje [goto](goto.md), [Return](return.md)lub [throw](throw.md) .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie pokazano użycie `while` instrukcji. Wybierz **Uruchom** do uruchamiania kodu przykładu. Po tym można zmodyfikować kod i uruchom go ponownie.
+Poniższy przykład pokazuje użycie instrukcji `while`. Wybierz pozycję **Uruchom** , aby uruchomić przykładowy kod. Następnie można zmodyfikować kod i uruchomić go ponownie.
 
 [!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [while, instrukcja](~/_csharplang/spec/statements.md#the-while-statement) części [ C# specyfikacji języka](../language-specification/index.md).
+Aby uzyskać więcej informacji, zobacz sekcję [while](~/_csharplang/spec/statements.md#the-while-statement) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [— Instrukcja](do.md)
+- [do — instrukcja](do.md)

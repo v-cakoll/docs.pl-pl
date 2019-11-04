@@ -1,20 +1,20 @@
 ---
-title: Delegaty z metodami nazwanymi lub Metody anonimowe C# — Przewodnik programowania
+title: Delegaty z metodami nazwanymi i C# anonimowymi — Przewodnik programowania
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 9df143fb183ef2fc7e951b2cee47d18ce4b11942
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 50df0e9c42d366c9c79dde3b0d34f85b8e552a45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590648"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418033"
 ---
-# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaty z metodami nazwanymi lub Metody anonimowe (Przewodnik programowania w języku C#)
-[Delegat](../../language-reference/keywords/delegate.md) może być skojarzony z nazwaną metodą. Podczas tworzenia wystąpienia delegata przy użyciu nazwanej metody Metoda jest przenoszona jako parametr, na przykład:  
+# <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Delegaty z metodami nazwanymi lub anonimowymi (Przewodnik programowania w języku C#)
+[Delegat](../../language-reference/builtin-types/reference-types.md) może być skojarzony z nazwaną metodą. Podczas tworzenia wystąpienia delegata przy użyciu nazwanej metody Metoda jest przenoszona jako parametr, na przykład:  
   
  [!code-csharp[csProgGuideDelegates#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#1)]  
   
@@ -28,7 +28,7 @@ ms.locfileid: "69590648"
  Chociaż delegat może korzystać z parametru [out](../../language-reference/keywords/out-parameter-modifier.md) , nie zalecamy jej używania z delegatami zdarzeń multiemisji, ponieważ nie można wiedzieć, który delegat zostanie wywołany.  
   
 ## <a name="example-1"></a>Przykład 1  
- Poniżej przedstawiono prosty przykład deklarowania i używania delegata. Zwróć uwagę, że zarówno delegat `Del`,, jak i skojarzona `MultiplyNumbers`Metoda, mają taką samą sygnaturę  
+ Poniżej przedstawiono prosty przykład deklarowania i używania delegata. Zwróć uwagę, że zarówno delegat, `Del`, jak i Metoda skojarzona, `MultiplyNumbers`, mają tę samą sygnaturę  
   
  [!code-csharp[csProgGuideDelegates#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#2)]  
   
@@ -40,6 +40,6 @@ ms.locfileid: "69590648"
 ## <a name="see-also"></a>Zobacz także
 
 - [Przewodnik programowania w języku C#](../index.md)
-- [Delegaty](./index.md)
-- [Instrukcje: Łączenie delegatów (delegatów multiemisji)](./how-to-combine-delegates-multicast-delegates.md)
+- [Delegaci](./index.md)
+- [Instrukcje: łączenie delegatów (delegatów multiemisji)](./how-to-combine-delegates-multicast-delegates.md)
 - [Zdarzenia](../events/index.md)

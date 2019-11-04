@@ -2,12 +2,12 @@
 title: 'Ograniczenie: Deserializacja obiektów między domenami aplikacji'
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
-ms.openlocfilehash: 43a1a045560b54cc831e69f9e1d4dba76a8569e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126252"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457926"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Ograniczenie: Deserializacja obiektów między domenami aplikacji
 W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby domen aplikacji z różnymi bazami aplikacji, próba deserializacji obiektów w logicznym kontekście wywołań między różnymi domenami aplikacji zgłasza wyjątek.  
@@ -48,4 +48,4 @@ W niektórych przypadkach, gdy aplikacja używa dwóch lub większej liczby dome
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany środowiska uruchomieniowego](runtime-changes-in-the-net-framework-4-5-1.md)
+- [Zgodność aplikacji](application-compatibility.md)

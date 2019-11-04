@@ -2,16 +2,16 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 03cc5a2359c6430c04c6afb09f161b397fcb1afa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038488"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424553"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 
-Podwójny przykład http demonstruje sposób konfigurowania `WSDualHttpBinding` powiązania. Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt dupleksowy. Kontrakt jest definiowany przez `ICalculatorDuplex` interfejs, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). W tym przykładzie `ICalculatorDuplex` interfejs pozwala klientowi wykonywać operacje matematyczne, obliczając wynik działania w ramach sesji. Niezależnie usługa zwraca wyniki na `ICalculatorDuplexCallback` interfejsie. Kontrakt dupleksowy wymaga sesji, ponieważ należy ustanowić kontekst w celu skorelowania zestawu komunikatów przesyłanych między klientem i usługą. `WSDualHttpBinding` Powiązanie obsługuje komunikację dupleksową.
+Podwójny przykład http demonstruje sposób konfigurowania powiązania `WSDualHttpBinding`. Ten przykład składa się z programu konsolowego klienta (exe) i biblioteki usług (. dll) hostowanej przez Internet Information Services (IIS). Usługa implementuje kontrakt dupleksowy. Kontrakt jest definiowany przez interfejs `ICalculatorDuplex`, który udostępnia operacje matematyczne (Dodawanie, odejmowanie, mnożenie i dzielenie). W tym przykładzie interfejs `ICalculatorDuplex` pozwala klientowi wykonywać operacje matematyczne, obliczając wynik działania w ramach sesji. Niezależnie usługa zwraca wyniki na interfejsie `ICalculatorDuplexCallback`. Kontrakt dupleksowy wymaga sesji, ponieważ należy ustanowić kontekst w celu skorelowania zestawu komunikatów przesyłanych między klientem i usługą. Powiązanie `WSDualHttpBinding` obsługuje komunikację dupleksową.
 
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
@@ -21,7 +21,7 @@ Podwójny przykład http demonstruje sposób konfigurowania `WSDualHttpBinding` 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
@@ -61,7 +61,7 @@ Na kliencie należy skonfigurować adres, który może być używany przez serwe
 
 Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.
 
-```
+```console
 Press <ENTER> to terminate client once the output is displayed.
 
 Result(100)
@@ -77,7 +77,7 @@ Po uruchomieniu przykładu komunikaty zwrócone do klienta są wyświetlane w in
 
 1. Zainstaluj ASP.NET 4,0 przy użyciu następującego polecenia.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -88,7 +88,7 @@ Po uruchomieniu przykładu komunikaty zwrócone do klienta są wyświetlane w in
 4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > W przypadku uruchamiania klienta programu w konfiguracji obejmującej wiele komputerów należy zastąpić localhost w obu `address` atrybutach [ \<punktu końcowego > \<elementu > klienta](../../configure-apps/file-schema/wcf/endpoint-of-client.md) i atrybutu `clientBaseAddress` [ Powiązywanie\<](../../../../docs/framework/misc/binding.md) [ elementu\<> elementu > WSDualHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) o nazwie odpowiedniej maszyny, jak pokazano poniżej:
+    > W przypadku uruchamiania klienta programu w konfiguracji obejmującej wiele komputerów Pamiętaj, aby zamienić wartość localhost zarówno w atrybucie `address` [\<punktu końcowego > elementu \<klienta >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) [`clientBaseAddress`](../../../../docs/framework/misc/binding.md) elementu [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) elementu o nazwie odpowiedniej maszyny, jak pokazano poniżej:
 
     ```xml
     <client>

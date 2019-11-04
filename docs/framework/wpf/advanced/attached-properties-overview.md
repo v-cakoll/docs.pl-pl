@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: cee80ca0880e046870f699f45624df61ee507a47
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919864"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455521"
 ---
 # <a name="attached-properties-overview"></a>Przegląd Właściwości dołączone
 
@@ -146,5 +146,5 @@ WPF definiuje kilka [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includ
 - <xref:System.Windows.DependencyProperty>
 - [Przegląd właściwości zależności](dependency-properties-overview.md)
 - [Niestandardowe właściwości zależności](custom-dependency-properties.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Rejestrowanie dołączonej właściwości](how-to-register-an-attached-property.md)

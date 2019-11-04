@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 495377403e2f0c0f5f4f166f51d738265c16ef7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126061"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457734"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Środki zaradcze: separator ścieżki klasy ZipArchiveEntry. FullName
 Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, separator ścieżki używany we właściwości <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> został zmieniony od ukośnika odwrotnego ("\\") użytego w poprzednich wersjach .NET Framework do ukośnika ("/").   obiekty <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> są tworzone przez wywołanie jednego z przeciążeń metody <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
@@ -45,4 +45,4 @@ Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, separ
 ## <a name="see-also"></a>Zobacz także
 
 - [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Zgodność aplikacji w 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Zgodność aplikacji](application-compatibility.md)

@@ -1,140 +1,140 @@
 ---
 title: Wspólne wzorce dla delegatów
-description: Poznaj typowe wzorce do używania delegatów w kodzie w celu uniknięcia silne sprzężenia między składnikami.
+description: Zapoznaj się z typowymi wzorcami dotyczącymi używania delegatów w kodzie, aby uniknąć silnego sprzężenia między składnikami.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646686"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454082"
 ---
 # <a name="common-patterns-for-delegates"></a>Wspólne wzorce dla delegatów
 
-[Poprzednie](delegates-strongly-typed.md)
+[Ubiegł](delegates-strongly-typed.md)
 
-Delegaty zapewniają mechanizm, który umożliwia projekty oprogramowania obejmujące minimalny sprzężenia między składnikami.
+Delegaty zapewniają mechanizm, który umożliwia projekty oprogramowania, które obejmują minimalny sprzężenie między składnikami.
 
-Przykładem doskonałe dla tego rodzaju projektu jest LINQ. Wzorzec wyrażenia zapytań LINQ, zależy od delegatów dla wszystkich funkcji. Należy wziąć pod uwagę ten prosty przykład:
+Jednym z doskonały przykładu dla tego rodzaju projektu jest LINQ. Wzorzec wyrażenia zapytania LINQ opiera się na delegatach dla wszystkich swoich funkcji. Rozważmy ten prosty przykład:
 
 ```csharp
 var smallNumbers = numbers.Where(n => n < 10);
 ```
 
-Filtruje numery tylko te mniejsza niż wartość 10.
-`Where` Metoda używa delegata, która określa, które elementy sekwencji przekazać filtru. Podczas tworzenia zapytania LINQ podajesz implementację delegata do tego określonego celu.
+To filtruje sekwencję liczb tylko do wartości mniejszej niż wartość 10.
+Metoda `Where` używa delegata, który określa, które elementy sekwencji przechodzą filtr. Podczas tworzenia zapytania LINQ należy podać implementację delegata w tym konkretnym celu.
 
-Prototyp w którym metoda jest:
+Prototyp dla metody WHERE:
 
 ```csharp
 public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> source, Func<TSource, bool> predicate);
 ```
 
-W tym przykładzie jest powtarzany za pomocą metod, które są częścią LINQ. Wszystkie korzystają z delegatów dla kodu, który zarządza użytego zapytania. Ten wzorzec projektowania interfejsu API jest bardzo zaawansowane i zrozumieć.
+Ten przykład powtarza się ze wszystkimi metodami, które są częścią LINQ. Wszyscy korzystają z delegatów dla kodu, który zarządza konkretną kwerendą. Ten Wzorzec projektowy interfejsu API jest bardzo wydajny, aby poznać i zrozumieć.
 
-Ten prosty przykład ilustruje, jak delegatów wymaga bardzo mało sprzężenia między składnikami. Nie trzeba utworzyć klasę, która pochodzi od konkretnej klasy bazowej. Nie ma potrzeby implementowania określonego interfejsu.
-Jedynym wymaganiem jest zapewnienie stosowania jedną metodę, która ma podstawowe znaczenie dla wykonywanego zadania.
+W tym prostym przykładzie przedstawiono sposób, w jaki Delegaty potrzebują bardzo mało sprzężenia między składnikami. Nie musisz tworzyć klasy, która pochodzi od określonej klasy bazowej. Nie trzeba implementować określonego interfejsu.
+Jedynym wymaganiem jest zapewnienie implementacji jednej metody, która jest podstawowa dla danego zadania.
 
-## <a name="building-your-own-components-with-delegates"></a>Tworzenie składników przy użyciu delegatów
+## <a name="building-your-own-components-with-delegates"></a>Tworzenie własnych składników za pomocą delegatów
 
-Utworzymy w tym przykładzie, tworząc składnika za pomocą projektu, który opiera się na delegatów.
+Zacznijmy od tego przykładu, tworząc składnik przy użyciu projektu, który jest zależny od delegatów.
 
-Czynnością jest zdefiniowanie składnika, która mogłaby być używana dla dziennika komunikatów w dużym systemie. Składniki biblioteki można używać w wielu różnych środowiskach, na wielu różnych platformach. Istnieje wiele typowych funkcji w składniku, który zarządza dzienniki. Trzeba będzie ją akceptować komunikaty z dowolnego składnika w systemie. Te komunikaty mają różne priorytety, których składnik core można zarządzać. Komunikatów mają sygnatury czasowe w ostatecznej postaci zarchiwizowane. Dla bardziej zaawansowanych scenariuszy można filtrować wiadomości przez składnik źródłowy.
+Zdefiniujmy składnik, który może być używany na potrzeby komunikatów dzienników w dużym systemie. Składniki biblioteki mogą być używane w wielu różnych środowiskach na wielu różnych platformach. Składnik zarządzający dziennikami zawiera wiele typowych funkcji. Konieczne będzie zaakceptowanie komunikatów z dowolnego składnika w systemie. Te komunikaty będą mieć różne priorytety, którymi może zarządzać składnik podstawowy. Komunikaty powinny mieć sygnatury czasowe w końcowej zarchiwizowanej postaci. W przypadku bardziej zaawansowanych scenariuszy można filtrować komunikaty według składnika źródłowego.
 
-Istnieje jeden z aspektów funkcji, która zmieni się często: gdy komunikaty są zapisywane. W niektórych środowiskach może zostać wyświetlony w konsoli błędu. W innych, plik. Inne możliwości obejmują Magazyn bazy danych, dzienników zdarzeń systemu operacyjnego lub innych przechowywania dokumentów.
+Istnieje jeden aspekt funkcji, która często zmienia się: gdzie są zapisywane wiadomości. W niektórych środowiskach mogą one być zapisywane w konsoli błędów. W innych, plik. Inne możliwości obejmują Magazyn bazy danych, dzienniki zdarzeń systemu operacyjnego lub inne magazyny dokumentów.
 
-Dostępne są także kombinacji danych wyjściowych, które mogą być używane w różnych scenariuszach. Możesz chcieć zapisywania komunikatów w konsoli oraz w pliku.
+Istnieją także kombinacje danych wyjściowych, które mogą być używane w różnych scenariuszach. Możesz chcieć pisać komunikaty do konsoli programu i do pliku.
 
-Projektowanie oparte na delegatach zapewniają dużą elastyczność i ułatwić obsługę magazynu mechanizmów, które mogą zostać dodane w przyszłości.
+Projekt oparty na delegatach zapewnia dużą elastyczność i ułatwia obsługę mechanizmów magazynu, które mogą zostać dodane w przyszłości.
 
-W tym projekcie dziennika podstawowego składnika może być niewirtualną, nawet zapieczętowanych klas. Można dodać dowolny zbiór delegatów do zapisywania komunikatów do innego magazynu multimediów. Obsługa wbudowane obiekty delegowane multiemisji można łatwo obsługiwane scenariusze, w której wiadomości musi być napisana w wielu lokalizacjach (plik i konsoli).
+W ramach tego projektu podstawowy składnik dziennika może być niewirtualną, nawet klasą zapieczętowana. Można podłączyć dowolnego zestawu delegatów, aby zapisywać komunikaty na innym nośniku magazynu. Wbudowana obsługa delegatów multiemisji ułatwia obsługę scenariuszy, w których komunikaty muszą być zapisywane w wielu lokalizacjach (pliku i konsoli).
 
-## <a name="a-first-implementation"></a>Pierwszy implementacji
+## <a name="a-first-implementation"></a>Pierwsza implementacja
 
-Zacznijmy od małych: wstępne wdrożenie będzie akceptować nowe wiadomości i zapisać je przy użyciu dowolnego dołączonego delegata. Można uruchomić za pomocą jednego delegata, która wypisuje komunikaty na konsoli.
+Zacznijmy od początku: początkowa implementacja przyjmie nowe komunikaty i zapisze je przy użyciu dowolnego dołączonego delegata. Możesz rozpocząć od jednego delegata, który zapisuje komunikaty w konsoli programu.
 
 [!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
-Klasa statyczna powyżej jest najprostszym rzecz, którą można pracować. Potrzebujemy do zapisania pojedynczej implementacji metody, która wypisuje komunikaty na konsoli: 
+Powyższa Klasa statyczna jest najprostszą czynnością, którą można obsłużyć. Musimy napisać pojedynczą implementację metody, która zapisuje komunikaty w konsoli: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
-Na koniec należy Podłączanie delegata, dołączając ją do WriteMessage delegatów zadeklarowanych w rejestratora:
+Na koniec należy podłączyć delegata, dołączając go do delegata WriteMessage zadeklarowanego w rejestratorze:
 
 [!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
-## <a name="practices"></a>Rozwiązania
+## <a name="practices"></a>Procedur
 
-Do tej pory naszego przykładu jest dość prosta, ale nadal pokazuje niektóre ważne wskazówki dotyczące projektów obejmujących delegatów.
+Nasz przykład jest dość prosty, ale nadal pokazuje niektóre z ważnych wytycznych dotyczących projektów obejmujących delegatów.
 
-Przy użyciu typy delegatów, określone w ramach Core ułatwia użytkownikom pracę z delegatów. Nie trzeba definiować nowe typy i nie trzeba Dowiedz się, typy delegatów nowe, wyspecjalizowany deweloperzy korzystający z biblioteki.
+Użycie typów delegatów zdefiniowanych w podstawowym środowisku ułatwia użytkownikom pracę z delegatami. Nie musisz definiować nowych typów, a deweloperzy korzystający z biblioteki nie muszą uczyć się nowych, wyspecjalizowanych typów delegatów.
 
-Interfejsy używane są możliwie i jak najbardziej elastyczny: Aby utworzyć nowego rejestratora danych wyjściowych, należy utworzyć jedną z metod. Ta metoda może być metodą statyczną lub metodą wystąpienia. Może mieć dostęp do wszystkich.
+Używane interfejsy są minimalne i elastyczne, jak to możliwe: Aby utworzyć nowy Rejestrator danych wyjściowych, należy utworzyć jedną metodę. Ta metoda może być metodą statyczną lub metodą wystąpienia. Może mieć dowolny dostęp.
 
 ## <a name="formatting-output"></a>Formatowanie danych wyjściowych
 
-Upewnijmy się pierwszej wersji bitowych bardziej niezawodne i ponownie uruchomić tworzenie innych mechanizmów rejestrowania.
+Przypuśćmy, że ta pierwsza wersja jest nieco bardziej niezawodna, a następnie rozpocznie tworzenie innych mechanizmów rejestrowania.
 
-Następnie Dodajmy kilka argumentów `LogMessage()` metody, aby klasa dziennika tworzy więcej wiadomości ze strukturą:
+Następnie Dodajmy kilka argumentów do metody `LogMessage()`, aby Klasa log tworzyła bardziej uporządkowane komunikaty:
 
 [!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
 [!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
-Następnie upewnijmy się, użyj tego `Severity` argument do filtrowania wiadomości, które są wysyłane do dziennika danych wyjściowych. 
+Następnie Użyjmy tego argumentu `Severity`, aby odfiltrować komunikaty wysyłane do danych wyjściowych dziennika. 
 
 [!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
-## <a name="practices"></a>Rozwiązania
+## <a name="practices"></a>Procedur
 
-Nowe funkcje dodano do infrastruktury rejestrowania. Ponieważ składnika modułu logującego się bardzo luźno mechanizmu żadnych danych wyjściowych, można dodać te nowe funkcje bez wpływu na dowolny kod Implementowanie delegata rejestratora.
+Dodano nowe funkcje do infrastruktury rejestrowania. Ze względu na to, że składnik rejestratora jest bardzo luźno połączony z jakimkolwiek mechanizmem wyjścia, nowe funkcje mogą być dodawane bez wpływu na żaden kod implementujący delegata rejestratora.
 
-Jak zachować możesz tworzyć, zobaczysz więcej przykładów jak tym luźne powiązanie umożliwia większą elastyczność w aktualizację części witryny bez konieczności wprowadzania zmian do innych lokalizacji. W rzeczywistości w większej aplikacji klasy wyjściowe rejestratora może znajdować się w innym zestawie, a nawet konieczne jest ponowne skompilowanie.
+Podczas kompilowania tego procesu zobaczysz więcej przykładów, jak ten luźny sprzężenie zapewnia większą elastyczność aktualizowania części lokacji bez wprowadzania zmian w innych lokalizacjach. W rzeczywistości klasy wyjściowe rejestratora mogą znajdować się w innym zestawie, a nawet nie muszą być odbudowane.
 
-## <a name="building-a-second-output-engine"></a>Tworzenie drugiej aparatu danych wyjściowych
+## <a name="building-a-second-output-engine"></a>Kompilowanie drugiego aparatu wyjściowego
 
-Składnik Log pochodzi wzdłuż dobrze. Dodajmy jeden więcej aparat danych wyjściowych, który rejestruje komunikaty w pliku. Są to wymaga nieco więcej wysiłku aparatu danych wyjściowych. Będzie ona klasę, która hermetyzuje operacji na plikach i gwarantuje, że plik jest zawsze zamknięte po każdym zapisie. Który zapewnia, że wszystkie dane jest opróżniany do dysku po każdy komunikat jest generowany.
+Składnik dziennika jest również dobrze. Dodajmy do jednego aparatu wyjściowego, który zapisuje komunikaty do pliku. Będzie to nieco bardziej przeprowadzony aparat wyjściowy. Będzie to Klasa, która hermetyzuje operacje na plikach i gwarantuje, że plik jest zawsze zamykany po każdym zapisie. Gwarantuje to, że wszystkie dane zostaną opróżnione na dysk po wygenerowaniu poszczególnych komunikatów.
 
-Oto rejestratora tego pliku:
+Oto ten Rejestrator oparty na plikach:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-Po utworzeniu tej klasy tworzenia jego instancji i jego logmessage — metoda dołącza do składnika modułu logującego:
+Po utworzeniu tej klasy można utworzyć jej wystąpienie i dołączyć jej metodę LogMessage do składnika rejestratora:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
-Te dwa nie wykluczają się wzajemnie. Można dołączyć obu metod dziennika i generowanie wiadomości do konsoli i plik:
+Te dwa nie wykluczają się wzajemnie. Można dołączyć zarówno metody rejestrowania, jak i generować komunikaty do konsoli programu i pliku:
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
-Później nawet w tej samej aplikacji, możesz usunąć jeden z obiektów delegowanych, bez żadnych innych problemów w systemie:
+Później, nawet w tej samej aplikacji, można usunąć jednego z delegatów bez żadnych innych problemów do systemu:
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
-## <a name="practices"></a>Rozwiązania
+## <a name="practices"></a>Procedur
 
-Teraz dodaniu drugiego danych wyjściowych procedury obsługi na potrzeby rejestrowania podsystemu.
-Ten zestaw wymaga nieco więcej infrastruktury do poprawnie obsługiwać system plików. Delegat jest metodą wystąpienia. Jest również metody prywatnej.
-Nie ma potrzeby lepsze ułatwienia dostępu, ponieważ infrastruktury delegata można połączyć delegatów.
+Teraz została dodana druga procedura obsługi danych wyjściowych dla podsystemu rejestrowania.
+Wymaga to nieco większej infrastruktury, aby prawidłowo obsługiwać system plików. Delegat jest metodą wystąpienia. Jest to również Metoda prywatna.
+Nie ma potrzeby większego ułatwienia dostępu, ponieważ infrastruktura delegatów może połączyć delegatów.
 
-Po drugie projektowanie oparte na delegatach umożliwia wielu metod wyjścia metod bez konieczności wprowadzania dodatkowego kodu. Nie trzeba tworzyć jakiejkolwiek dodatkowej infrastruktury do obsługi wielu metod wyjścia. Po prostu stają się one innej metody na liście wywołania.
+W drugim, projekt oparty na delegatach umożliwia wiele metod wyjściowych bez żadnego dodatkowego kodu. Nie trzeba tworzyć żadnej dodatkowej infrastruktury do obsługi wielu metod wyjściowych. Po prostu stają się one kolejną metodą na liście wywołań.
 
-Należy zwrócić szczególną uwagę na kod w pliku rejestrowania metoda danych wyjściowych. Jest on kodowane, aby upewnić się, że nie generuje żadnych wyjątków. Chociaż nie jest to niezbędne, jest często dobrym rozwiązaniem. Jeśli jednej z metod delegata zgłasza wyjątek, nie można wywołać pozostałych obiektów delegowanych, które znajdują się na wywołanie.
+Zwróć szczególną uwagę na kod w metodzie wyjściowej rejestrowania plików. Jest on kodowany, aby upewnić się, że nie generuje żadnych wyjątków. Chociaż nie zawsze jest to konieczne, jest to często dobre rozwiązanie. Jeśli jedna z metod delegatów zgłasza wyjątek, pozostałe Delegaty, które znajdują się w wywołaniu nie będą wywoływane.
 
-Jako ostatni notatki rejestratora plików muszą zarządzać jego zasobów otwierający i zamykający go na wszystkich komunikatach dziennika. Można pozostawić otwarty plik i zaimplementuj interfejs IDisposable, aby zamknąć go po zakończeniu.
-Każda metoda ma swoje zalety i wady. Obie umożliwiają tworzenie bardziej sprzężenia między klasami.
+W ostatniej notatce Rejestrator plików musi zarządzać swoimi zasobami, otwierając i zamykając plik w każdym komunikacie dziennika. Po zakończeniu pracy można pozostawić plik otwarty i zaimplementować interfejs IDisposable, aby zamknąć plik.
+Każda metoda ma swoje zalety i wady. Oba te elementy tworzą bit więcej sprzęgania między klasami.
 
-Brak kodu w klasie rejestratora musi zostać zaktualizowane w celu obsługi dowolnego scenariusza.
+Żaden kod w klasie rejestratorów nie musi zostać zaktualizowany w celu obsługi jednego z tych scenariuszy.
 
-## <a name="handling-null-delegates"></a>Obsługa wartości Null delegatów
+## <a name="handling-null-delegates"></a>Obsługa delegatów o wartości null
 
-Na koniec spróbujmy aktualizacji logmessage — metoda, aby był niezawodny dla tych przypadków, gdy żaden mechanizm danych wyjściowych jest zaznaczone. Bieżąca implementacja spowoduje zgłoszenie `NullReferenceException` podczas `WriteMessage` delegat nie ma listę wywołań, który jest dołączony.
-Możesz projekt, który dyskretnie kontynuowana po dołączono żadnych metod. Jest to łatwe za pomocą operatora warunkowego wartości null, w połączeniu z `Delegate.Invoke()` metody:
+Na koniec zaktualizujmy metodę LogMessage, tak aby była niezawodna dla tych przypadków, gdy nie wybrano żadnego mechanizmu wyjściowego. Bieżąca implementacja zgłosi `NullReferenceException`, gdy delegat `WriteMessage` nie ma dołączonej listy wywołań.
+Możesz preferować projekt, który jest dyskretnie kontynuowany, gdy nie dołączono żadnych metod. Jest to proste użycie operatora warunkowego null, połączonego z metodą `Delegate.Invoke()`:
 
 ```csharp
 public static void LogMessage(string msg)
@@ -143,14 +143,14 @@ public static void LogMessage(string msg)
 }
 ```
 
-Operator warunkowy o wartości null (`?.`) short-circuits, kiedy Lewy argument operacji (`WriteMessage` w tym przypadku) ma wartość null, oznacza to, aby zarejestrować komunikat jest podejmowana próba.
+Dwuobwodowy operator warunkowy o wartości null (`?.`), gdy lewy argument operacji (`WriteMessage` w tym przypadku) ma wartość null, co oznacza, że nie podjęto próby zarejestrowania komunikatu.
 
-Nie odnajdzie `Invoke()` metody wymienione w dokumentacji dotyczącej `System.Delegate` lub `System.MulticastDelegate`. Kompilator generuje bezpieczny `Invoke` metody dla każdego delegować deklaracji typu. W tym przykładzie, oznacza to, `Invoke` przyjmuje jeden `string` argument, a ma zwracać typ void.
+Nie znajdziesz metody `Invoke()` wymienionej w dokumentacji `System.Delegate` lub `System.MulticastDelegate`. Kompilator generuje metodę `Invoke` bezpiecznego typu dla dowolnego zadeklarowanego typu delegata. W tym przykładzie oznacza to, że `Invoke` przyjmuje jeden argument `string` i ma zwracany typ void.
 
-## <a name="summary-of-practices"></a>Podsumowanie rozwiązań
+## <a name="summary-of-practices"></a>Podsumowanie praktyk
 
-Po zapoznaniu początku składnik dziennika, który może zostać rozszerzona przy użyciu innych składników zapisywania i innych funkcji. Przy użyciu delegatów w projekcie te składniki są bardzo luźno powiązane. Dzięki temu można ze sobą pewne korzyści. Jest bardzo proste utworzyć nowe mechanizmy danych wyjściowych i dołącz je do systemu. Te inne mechanizmy wymagane jest tylko jedna metoda: metoda, która zapisuje komunikat w dzienniku. Jest to projekt, który jest bardzo odporne na błędy, gdy zostaną dodane nowe funkcje. Kontrakt wymagane dla dowolnego edytora jest zaimplementować jedną z metod. Tej metody może być statyczną lub metodę wystąpienia. Można prywatnej, publicznej lub innym prawne dostępu.
+Pojawiły się początek składnika dziennika, który można rozszerzyć za pomocą innych autorów i innych funkcji. Korzystając z delegatów w projekcie, te różne składniki są bardzo luźno sprzężone. Zapewnia to kilka korzyści. Łatwo jest utworzyć nowe mechanizmy wyjściowe i dołączyć je do systemu. Te inne mechanizmy potrzebują tylko jednej metody: metoda, która zapisuje komunikat dziennika. Jest to projekt, który jest bardzo odporny po dodaniu nowych funkcji. Kontrakt wymagany dla każdego składnika zapisywania programu to implementacja jednej metody. Ta metoda może być metodą statyczną lub wystąpieniem. Może to być publiczne, prywatne lub inny dostęp prawny.
 
-Klasa rejestratora wprowadzać dowolną liczbę ulepszenia lub zmiany bez wprowadzania istotnych zmian. Podobnie jak dowolnej klasy nie można zmodyfikować publiczny interfejs API bez ryzyka istotne zmiany. Jednak ponieważ sprzężenie między rejestratora i aparaty żadnych danych wyjściowych jest wyłącznie za pośrednictwem delegata, żadne inne typy (takich jak interfejsy lub klas bazowych) są zaangażowane. Sprzężenia jest tak małej, jak to możliwe.
+Klasa rejestratora może wprowadzać dowolną liczbę ulepszeń lub zmian bez wprowadzania istotnych zmian. Podobnie jak w przypadku każdej klasy, nie można zmodyfikować publicznego interfejsu API bez ryzyka naruszenia zmian. Jednak ponieważ sprzężenie między rejestratorem a wszystkimi aparatami wyjściowymi odbywa się tylko za pomocą delegata, nie są wykorzystywane żadne inne typy (takie jak interfejsy lub klasy bazowe). Sprzęganie jest tak małe, jak to możliwe.
 
 [Next](events-overview.md)

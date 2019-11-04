@@ -5,16 +5,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: f7ee014150a01fe0010048101576f2fece360146
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.openlocfilehash: a0422b5cd3083f351bde44deae5871599a649140
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031868"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423298"
 ---
-# <a name="using-delegates-c-programming-guide"></a>Korzystanie z delegatów (C# Przewodnik programowania)
+# <a name="using-delegates-c-programming-guide"></a>Używanie delegatów (Przewodnik programowania w języku C#)
 
-[Delegat](../../language-reference/keywords/delegate.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o nazwie `Del`, który może hermetyzować metodę, która pobiera [ciąg](../../language-reference/keywords/string.md) jako argument i zwraca wartość [void](../../language-reference/keywords/void.md):
+[Delegat](../../language-reference/builtin-types/reference-types.md) jest typem, który bezpiecznie hermetyzuje metodę, podobną do wskaźnika funkcji w C i C++. W przeciwieństwie do wskaźników funkcji języka C, Delegaty są zorientowane obiektowo, typu bezpieczne i bezpieczne. Typ delegata jest definiowany przy użyciu nazwy delegata. Poniższy przykład deklaruje delegata o nazwie `Del`, który może hermetyzować metodę, która pobiera [ciąg](../../language-reference/builtin-types/reference-types.md) jako argument i zwraca wartość [void](../../language-reference/keywords/void.md):
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 
@@ -42,7 +42,7 @@ The number is: 3
 
 Przy użyciu delegata jako abstrakcji `MethodWithCallback` nie musi bezpośrednio wywoływać konsoli — nie musi być ona zaprojektowana z uwzględnieniem konsoli. Co `MethodWithCallback` to po prostu przygotowanie ciągu i przekazanie ciągu do innej metody. Jest to szczególnie zaawansowane, ponieważ metoda delegowana może używać dowolnej liczby parametrów.
 
-Gdy delegat jest skonstruowany do zawijania metody instancji, delegat odwołuje się zarówno do wystąpienia, jak i metody. Delegat nie ma informacji o typie wystąpienia poza metodą, która go otacza, więc delegat może odwoływać się do dowolnego typu obiektu, o ile istnieje metoda dla tego obiektu, która pasuje do sygnatury delegata. Gdy delegat jest skonstruowany do zawijania metody statycznej, odwołuje się tylko do metody. Należy wziąć pod uwagę następujące deklaracje:
+Gdy delegat jest skonstruowany do zawijania metody instancji, delegat odwołuje się zarówno do wystąpienia, jak i metody. Delegat nie ma informacji o typie wystąpienia poza metodą, która go otacza, więc delegat może odwoływać się do dowolnego typu obiektu, o ile istnieje metoda dla tego obiektu, która pasuje do sygnatury delegata. Gdy delegat jest skonstruowany do zawijania metody statycznej, odwołuje się tylko do metody. Rozważ następujące deklaracje:
 
 [!code-csharp[csProgGuideDelegates#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#26)]
 
@@ -70,9 +70,9 @@ Porównywanie delegatów dwóch różnych typów przypisanych w czasie kompilacj
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Przewodnik programowania](../index.md)
-- [Delegat](./index.md)
+- [Przewodnik programowania w języku C#](../index.md)
+- [Delegaci](./index.md)
 - [Korzystanie z wariancji w delegatach](../concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [Wariancja w delegatach](../concepts/covariance-contravariance/variance-in-delegates.md)
-- [Korzystanie z wariancji dla delegatów funkcji Func i Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Wariancje w delegatach](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Korzystanie z wariancji dla delegatów ogólnych Func i Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
 - [Zdarzenia](../events/index.md)

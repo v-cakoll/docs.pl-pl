@@ -3,12 +3,12 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 11463f7d47c5fb5b71bd16d73039b22e4a6ca43e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039651"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423082"
 ---
 # <a name="the-history-of-c"></a>Historia języka C\#
 
@@ -104,7 +104,7 @@ C#w wersji 4,0 wydanej w programie Visual Studio 2010 wystąpił trudny czas utr
 
 Następna wersja wprowadziła interesujące nowe funkcje:
 
-- [Powiązanie dynamiczne](../language-reference/keywords/dynamic.md)
+- [Powiązanie dynamiczne](../language-reference/builtin-types/reference-types.md)
 - [Argumenty nazwane/opcjonalne](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Ogólna współvariant i kontrawariantne](../../standard/generics/covariance-and-contravariance.md)
 - [Osadzone typy międzyoperacyjnych](../../framework/interop/type-equivalence-and-embedded-interop-types.md)

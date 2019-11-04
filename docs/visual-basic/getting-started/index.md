@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: e07ded52d76e027127ad41c14c39730648c0ca12
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c5cd4ab82fde1604dea14718b3cdd1a104fdf922
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775183"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425148"
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do Visual Basic
 
@@ -41,7 +41,7 @@ Oferuje linki do pobrania dla wersji programu Visual Studio, które obejmują ob
 - [Programowanie zorientowane obiektowo](../programming-guide/concepts/object-oriented-programming.md) \
 Oferuje łącza do stron, które wprowadzają programowanie zorientowane obiektowo i opisują sposób tworzenia własnych obiektów, a także sposób wykorzystania obiektów w celu uproszczenia kodowania.
 
-- [Przykłady](../../visual-basic/sample-applications.md) \
+- [Przykłady](https://github.com/dotnet/samples/tree/master/snippets/visualbasic) \
 Zawiera łącza do przykładowego kodu w Visual Basic.
 
 - [Instruktaże](../../visual-basic/walkthroughs.md) \
@@ -50,13 +50,13 @@ Zawiera listę stron pomocy, które przedstawiają aspekty języka Visual Basic.
 - [Opcje opinii dla programu Visual Studio](/visualstudio/ide/feedback-options) \
 Opisuje sposoby uzyskania pomocy technicznej i przekazywania opinii zwrotnej.
 
-- @No__t_1 [programu Visual Studio](/visualstudio/)
+- \ [programu Visual Studio](/visualstudio/)
 Oferuje linki do dokumentacji programu Visual Studio.
 
 - [C#](../../csharp/index.md)\
 Oferuje linki do dokumentacji dotyczącej tworzenia aplikacji przy użyciu C#wizualizacji.
 
-- [@No__t_2 C++ wizualizacji](/cpp/)
+- [\ C++ wizualizacji](/cpp/)
 Oferuje łącza do dokumentacji języka Visual C++.
 
 - [Programowanie dla pakietu Office i programu SharePoint](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) \

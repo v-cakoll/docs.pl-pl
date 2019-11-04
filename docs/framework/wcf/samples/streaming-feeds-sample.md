@@ -2,26 +2,26 @@
 title: Przykład strumieniowych kanałów informacyjnych
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: f37e7791bc407a57432fb9f6900ad8f19ff4eb52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044691"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425358"
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
-Ten przykład pokazuje, jak zarządzać źródłami zespolonymi zawierającymi dużą liczbę elementów. Na serwerze przykład pokazuje, jak opóźnić tworzenie pojedynczych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w kanale informacyjnym do momentu, gdy element zostanie zapisany do strumienia sieciowego.  
+Ten przykład pokazuje, jak zarządzać źródłami zespolonymi zawierającymi dużą liczbę elementów. Na serwerze przykład ilustruje, jak opóźnić tworzenie pojedynczych obiektów <xref:System.ServiceModel.Syndication.SyndicationItem> w kanale informacyjnym aż do momentu zapisania elementu w strumieniu sieciowym.  
   
  Na kliencie przykład pokazuje, jak niestandardowe elementy formatujące źródło danych zespolonych mogą być używane do odczytywania poszczególnych elementów ze strumienia sieciowego, dzięki czemu odczytywane źródło danych nigdy nie jest w pełni buforowane w pamięci.  
   
- Aby najlepiej przedstawić możliwości przesyłania strumieniowego interfejsu API zespolonego, w tym przykładzie jest używany nieco mało prawdopodobny scenariusz, w którym serwer uwidacznia źródło danych zawierające nieskończoną liczbę elementów. W takim przypadku serwer kontynuuje generowanie nowych elementów w kanale informacyjnym do momentu określenia, że klient odczytał określoną liczbę elementów ze źródła danych (domyślnie 10). Dla uproszczenia zarówno klient, jak i serwer są zaimplementowane w tym samym procesie i używają udostępnionego `ItemCounter` obiektu do śledzenia liczby elementów, które wygenerował klient. `ItemCounter` Typ istnieje tylko w celu umożliwienia czyszczenia przykładowego scenariusza i nie jest elementem podstawowym wzorca, który jest demonstrowany.  
+ Aby najlepiej przedstawić możliwości przesyłania strumieniowego interfejsu API zespolonego, w tym przykładzie jest używany nieco mało prawdopodobny scenariusz, w którym serwer uwidacznia źródło danych zawierające nieskończoną liczbę elementów. W takim przypadku serwer kontynuuje generowanie nowych elementów w kanale informacyjnym do momentu określenia, że klient odczytał określoną liczbę elementów ze źródła danych (domyślnie 10). Dla uproszczenia zarówno klient, jak i serwer są zaimplementowane w tym samym procesie i używają udostępnionego obiektu `ItemCounter` do śledzenia liczby elementów, które wygenerował klient. Typ `ItemCounter` istnieje tylko w celu umożliwienia czyszczenia przykładowego scenariusza i nie jest elementem podstawowym wzorca, który jest demonstrowany.  
   
- Demonstracja korzysta z iteratorów C# wizualnych (przy użyciu `yield return` konstrukcji słowa kluczowego). Aby uzyskać więcej informacji na temat iteratorów, zobacz temat "Używanie iteratorów" w witrynie MSDN.  
+ Demonstracja korzysta z iteratorów C# wizualnych (przy użyciu konstrukcji słowa kluczowego `yield return`). Aby uzyskać więcej informacji na temat iteratorów, zobacz temat "Używanie iteratorów" w witrynie MSDN.  
   
 ## <a name="service"></a>Usługa  
- Usługa implementuje podstawową <xref:System.ServiceModel.Web.WebGetAttribute> umowę, która składa się z jednej operacji, jak pokazano w poniższym kodzie.  
+ Usługa implementuje podstawową umowę <xref:System.ServiceModel.Web.WebGetAttribute>, która składa się z jednej operacji, jak pokazano w poniższym kodzie.  
   
-```  
+```csharp  
 [ServiceContract]  
 interface IStreamingFeedService  
 {  
@@ -31,9 +31,9 @@ interface IStreamingFeedService
 }  
 ```  
   
- Usługa implementuje ten kontrakt przy użyciu `ItemGenerator` klasy, aby utworzyć potencjalnie nieskończony <xref:System.ServiceModel.Syndication.SyndicationItem> strumień wystąpień przy użyciu iteratora, jak pokazano w poniższym kodzie.  
+ Usługa implementuje ten kontrakt przy użyciu klasy `ItemGenerator`, aby utworzyć potencjalnie nieskończony strumień wystąpień <xref:System.ServiceModel.Syndication.SyndicationItem> przy użyciu iteratora, jak pokazano w poniższym kodzie.  
   
-```  
+```csharp  
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -49,9 +49,9 @@ class ItemGenerator
 }  
 ```  
   
- Po utworzeniu źródła danych przez implementację usługi, zamiast buforowanej kolekcji elementów `ItemGenerator.GenerateItems()` jest używany wynik.  
+ Podczas tworzenia źródła danych przez implementację usługi, zamiast buforowanej kolekcji elementów zostanie użyta wartość wyjściowa `ItemGenerator.GenerateItems()`.  
   
-```  
+```csharp  
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  
@@ -65,21 +65,21 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- W efekcie strumień elementu nigdy nie jest w pełni buforowany do pamięci. Możesz obsłużyć to zachowanie, ustawiając punkt przerwania `yield return` w instrukcji wewnątrz `ItemGenerator.GenerateItems()` metody i zwracając uwagę, że ten punkt przerwania jest wyświetlany po raz pierwszy od momentu, gdy usługa `StreamedFeed()` zwróci wynik metody.  
+ W efekcie strumień elementu nigdy nie jest w pełni buforowany do pamięci. Możesz obsłużyć to zachowanie, ustawiając punkt przerwania w instrukcji `yield return` wewnątrz metody `ItemGenerator.GenerateItems()` i zwracając uwagę, że ten punkt przerwania jest wyświetlany po raz pierwszy od momentu, gdy usługa zwróci wynik metody `StreamedFeed()`.  
   
 ## <a name="client"></a>Klient  
- Klient w tym przykładzie używa niestandardowej <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> implementacji, która opóźnia materializację poszczególnych elementów w kanale informacyjnym zamiast buforowania ich do pamięci. Wystąpienie niestandardowe `StreamedAtom10FeedFormatter` jest używane w następujący sposób.  
+ Klient w tym przykładzie używa niestandardowej implementacji <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>, która opóźnia materializację poszczególnych elementów w kanale informacyjnym zamiast buforowania ich do pamięci. Niestandardowe wystąpienie `StreamedAtom10FeedFormatter` jest używane w następujący sposób.  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
 StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter);  
   
 SyndicationFeed feed = formatter.ReadFrom(reader);  
 ```  
   
- Zwykle wywołanie <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> nie zwraca, dopóki cała zawartość kanału informacyjnego nie została odczytana z sieci i zbuforowana w pamięci. Jednak obiekt przesłania <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> iterator, zamiast buforowanej kolekcji, jak pokazano w poniższym kodzie. `StreamedAtom10FeedFormatter`  
+ Zwykle wywołanie <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> nie zwraca, dopóki cała zawartość kanału informacyjnego nie została odczytana z sieci i zbuforowana w pamięci. Jednak obiekt `StreamedAtom10FeedFormatter` zastępuje <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29>, aby zwracał iterator zamiast buforowanej kolekcji, jak pokazano w poniższym kodzie.  
   
-```  
+```csharp  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
 {  
     areAllItemsRead = false;  
@@ -97,7 +97,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- W związku z tym każdy element nie jest odczytywany z sieci do momentu, gdy aplikacja `ReadItems()` kliencka przestanie być gotowa do użycia. To zachowanie można obsłużyć przez ustawienie punktu przerwania `yield return` w instrukcji `StreamedAtom10FeedFormatter.DelayReadItems()` wewnątrz i obserwowanie, że ten punkt przerwania jest wywoływany po raz pierwszy po `ReadFrom()` wywołaniu.  
+ W związku z tym każdy element nie jest odczytywany z sieci do momentu, gdy aplikacja kliencka przejdzie wyniki `ReadItems()` jest gotowa do użycia. Aby obsłużyć to zachowanie, należy ustawić punkt przerwania w instrukcji `yield return` wewnątrz `StreamedAtom10FeedFormatter.DelayReadItems()` i obserwowanie, że ten punkt przerwania jest wywoływany po raz pierwszy po wywołaniu `ReadFrom()`.  
   
  Poniższe instrukcje pokazują, jak skompilować i uruchomić przykład. Należy zauważyć, że mimo że serwer przestaje generować elementy po odczytaniu 10 elementów przez klienta, dane wyjściowe pokazują, że klient odczytuje znacznie więcej niż 10 elementów. Wynika to z faktu, że powiązanie sieciowe używane przez przykład przesyła dane w segmentach czterech kilobajtów (KB). W związku z tym klient otrzymuje 4 KB danych elementu, zanim będzie miał możliwość odczytania nawet jednego elementu. Jest to normalne zachowanie (wysyłanie strumieniowych danych HTTP w przypadku segmentów o rozsądnym rozmiarze zwiększa wydajność).  
   
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

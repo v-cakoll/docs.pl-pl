@@ -4,20 +4,20 @@ description: Dowiedz się więcej na temat scenariuszy Apache Spark i danych Big
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583485"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458176"
 ---
 # <a name="what-is-apache-spark"></a>Co to jest Apache Spark?
 
-[Apache Spark](https://spark.apache.org/) to platforma przetwarzania równoległego typu open source, która obsługuje przetwarzanie w pamięci w celu zwiększenia wydajności aplikacji, które analizują dane Big Data. Rozwiązania danych Big Data są przeznaczone do obsługi danych, które są zbyt duże lub złożone dla tradycyjnych baz danych. Platforma Spark przetwarza duże ilości danych w pamięci, które są znacznie szybsze niż alternatywy oparte na dyskach. 
+[Apache Spark](https://spark.apache.org/) to platforma przetwarzania równoległego typu open source, która obsługuje przetwarzanie w pamięci w celu zwiększenia wydajności aplikacji, które analizują dane Big Data. Rozwiązania danych Big Data są przeznaczone do obsługi danych, które są zbyt duże lub złożone dla tradycyjnych baz danych. Platforma Spark przetwarza duże ilości danych w pamięci, które są znacznie szybsze niż alternatywy oparte na dyskach.
 
 ## <a name="common-big-data-scenarios"></a>Typowe scenariusze danych Big Data
 
-Można rozważyć użycie architektury danych Big Data, jeśli trzeba przechowywać i przetwarzać duże ilości danych, przekształcać dane bez struktury lub przetwarzać dane przesyłane strumieniowo. Spark to aparat przetwarzania rozproszonego ogólnego przeznaczenia, który może być używany dla kilku scenariuszy danych Big Data. 
+Można rozważyć użycie architektury danych Big Data, jeśli trzeba przechowywać i przetwarzać duże ilości danych, przekształcać dane bez struktury lub przetwarzać dane przesyłane strumieniowo. Spark to aparat przetwarzania rozproszonego ogólnego przeznaczenia, który może być używany dla kilku scenariuszy danych Big Data.
 
 ### <a name="extract-transform-and-load-etl"></a>Wyodrębnianie, przekształcanie i ładowanie (ETL)
 
@@ -33,7 +33,7 @@ Można rozważyć użycie architektury danych Big Data, jeśli trzeba przechowyw
 
 ### <a name="real-time-data-stream-processing"></a>Przetwarzanie strumienia danych w czasie rzeczywistym
 
-Dane są przesyłane strumieniowo lub w czasie rzeczywistym. Dane telemetryczne z urządzeń IoT, Weblogs i strumieni kliknięć to wszystkie przykłady danych przesyłanych strumieniowo. Dane w czasie rzeczywistym mogą być przetwarzane w celu zapewnienia użytecznych informacji, takich jak analiza geoprzestrzenna, zdalne monitorowanie i wykrywanie anomalii. Podobnie jak w przypadku danych relacyjnych, można filtrować, agregować i przygotowywać dane przesyłane strumieniowo przed przeniesieniem danych do ujścia danych wyjściowych. Apache Spark obsługuje [Przetwarzanie strumieni danych](/azure/architecture/data-guide/big-data/real-time-processing) w czasie rzeczywistym za poorednictwem [przesyłania strumieniowego Spark](https://spark.apache.org/streaming/). 
+Dane są przesyłane strumieniowo lub w czasie rzeczywistym. Dane telemetryczne z urządzeń IoT, Weblogs i strumieni kliknięć to wszystkie przykłady danych przesyłanych strumieniowo. Dane w czasie rzeczywistym mogą być przetwarzane w celu zapewnienia użytecznych informacji, takich jak analiza geoprzestrzenna, zdalne monitorowanie i wykrywanie anomalii. Podobnie jak w przypadku danych relacyjnych, można filtrować, agregować i przygotowywać dane przesyłane strumieniowo przed przeniesieniem danych do ujścia danych wyjściowych. Apache Spark obsługuje [Przetwarzanie strumieni danych](/azure/architecture/data-guide/big-data/real-time-processing) w czasie rzeczywistym za poorednictwem [przesyłania strumieniowego Spark](https://spark.apache.org/streaming/).
 
 ### <a name="batch-processing"></a>Przetwarzanie wsadowe
 

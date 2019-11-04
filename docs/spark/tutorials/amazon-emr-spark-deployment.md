@@ -4,18 +4,18 @@ description: Dowiedz się, jak wdrożyć aplikację .NET for Apache Spark w usł
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0eea5a40ae4643c7447e2f7281dc8b0db609ca79
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a1ff1ba4d5e855e0ac36b99b0c9d63adfaaaac1e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117947"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454936"
 ---
 # <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a>Wdrażanie aplikacji .NET dla Apache Spark w usłudze Amazon EMR Spark
 
 W tym samouczku przedstawiono sposób wdrażania aplikacji .NET for Apache Spark w usłudze Amazon EMR Spark.
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 > [!div class="checklist"]
 >
@@ -37,9 +37,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 1. Wybierz wersję [Microsoft. Spark. Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp, która ma zostać wdrożona w klastrze.
 
-   Jeśli na przykład chcesz `.NET for Apache Spark v0.1.0` użyć `netcoreapp2.1`, Pobierz [pakiet Microsoft. Spark. Worker. netcoreapp 2.1. linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
+   Na przykład jeśli chcesz, aby `.NET for Apache Spark v0.1.0` przy użyciu `netcoreapp2.1`, należy pobrać [Microsoft. Spark. Worker. netcoreapp 2.1. linux-x64-0.1.0. tar. gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).
 
-2. Przekazuj `Microsoft.Spark.Worker.<release>.tar.gz` i [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) do rozproszonego systemu plików (np. S3), do którego ma dostęp klaster.
+2. Przekaż `Microsoft.Spark.Worker.<release>.tar.gz` i [Install-Worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) do rozproszonego systemu plików (np. S3), do którego klaster ma dostęp.
 
 ## <a name="prepare-your-net-for-apache-spark-app"></a>Przygotowywanie aplikacji .NET dla Apache Spark
 
@@ -53,9 +53,9 @@ Przed rozpoczęciem wykonaj następujące czynności:
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. Twórz `<your app>.zip` pliki do opublikowania.
+3. Wygeneruj `<your app>.zip` dla publikowanych plików.
 
-   Uruchom następujące polecenie w systemie Linux przy `zip`użyciu polecenia.
+   Uruchom następujące polecenie w systemie Linux przy użyciu `zip`.
 
    ```bash
    zip -r <your app>.zip .
@@ -63,7 +63,7 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 4. Przekaż następujące elementy do rozproszonego systemu plików (np. S3), do którego klaster ma dostęp:
 
-   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Ten plik JAR jest dołączany jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
+   * `microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: ten plik JAR jest dołączony jako część pakietu NuGet [Microsoft. Spark](https://www.nuget.org/packages/Microsoft.Spark/) i znajduje się w katalogu danych wyjściowych kompilacji aplikacji.
    * `<your app>.zip`
    * Pliki (takie jak pliki zależności lub typowe dane dostępne dla każdego pracownika) lub zestawy (takie jak biblioteki DLL, które zawierają zdefiniowane przez użytkownika funkcje lub biblioteki, od których zależy aplikacja), zostaną umieszczone w katalogu roboczym każdego wykonawcy.
 
@@ -71,14 +71,14 @@ Przed rozpoczęciem wykonaj następujące czynności:
 
 [Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) to zarządzana platforma klastra, która upraszcza uruchamianie platform danych Big Data w systemie AWS.
 
-> [!NOTE] 
+> [!NOTE]
 > System Amazon EMR Spark jest oparty na systemie Linux. W związku z tym, Jeśli interesuje Cię wdrażanie aplikacji w usłudze Amazon EMR Spark, upewnij się, że aplikacja jest zgodna .NET Standard i że używasz [kompilatora .NET Core](https://dotnet.microsoft.com/download) do kompilowania aplikacji.
 
 ### <a name="deploy-microsoftsparkworker"></a>Wdróż aplikację Microsoft. Spark. Worker
 
 Ten krok jest wymagany tylko podczas tworzenia klastra.
 
-Uruchamiany `install-worker.sh` podczas tworzenia klastra za pomocą [akcji Bootstrap](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).
+Uruchom `install-worker.sh` podczas tworzenia klastra za pomocą [akcji Bootstrap](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).
 
 Uruchom następujące polecenie w systemie Linux przy użyciu interfejsu wiersza polecenia AWS.
 
@@ -102,7 +102,7 @@ Istnieją dwa sposoby uruchamiania aplikacji w usłudze Amazon EMR Spark: Spark-
 
 Za pomocą polecenia [Spark-Submit](https://spark.apache.org/docs/latest/submitting-applications.html) można przesłać Apache Spark zadań programu .NET do usługi Amazon EMR Spark.
 
-1. `ssh`w jednym z węzłów w klastrze.
+1. `ssh` do jednego z węzłów w klastrze.
 
 2. Uruchom `spark-submit`.
 

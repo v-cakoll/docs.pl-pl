@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: 59fe870e623ca998f24161123dc020144b7cd055
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 4e5f0f3bfe27a02930bdb004cd78e254a6a38ad6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920277"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459985"
 ---
 # <a name="data-binding-how-to-topics"></a>Powiązanie danych — Tematy porad
 
@@ -65,5 +65,5 @@ W tematach w tej sekcji opisano, jak za pomocą powiązania danych powiązać el
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-- [Powiązanie danych w WPF](data-binding-wpf.md)
+- [Powiązanie danych w WPF](../../../desktop-wpf/data/data-binding-overview.md)
 - [Wydajność powiązań danych](../advanced/optimizing-performance-data-binding.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Uzyskiwanie wartości na podstawie listy powiązanych elementów'
+title: Jak uzyskać wartość w oparciu o listę powiązanych elementów
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da183a34eb85de54b1e3f54f8d14c09e25640165
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931401"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459696"
 ---
-# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Instrukcje: Uzyskiwanie wartości na podstawie listy powiązanych elementów
-<xref:System.Windows.Data.MultiBinding> Umożliwia powiązanie właściwość target powiązania do listy właściwości źródła, a następnie stosuje logikę w celu utworzenia wartości danego danych wejściowych. W tym przykładzie przedstawiono sposób użycia <xref:System.Windows.Data.MultiBinding>.  
+# <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Jak uzyskać wartość w oparciu o listę powiązanych elementów
+<xref:System.Windows.Data.MultiBinding> umożliwia powiązanie właściwości celu powiązania z listą właściwości źródła, a następnie zastosowanie logiki w celu utworzenia wartości z danymi wejściowymi. W tym przykładzie pokazano, jak używać <xref:System.Windows.Data.MultiBinding>.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `NameListData` odwołuje się do kolekcji `PersonName` obiektów, które są obiektami, które zawierają dwie właściwości, `firstName` i `lastName`. Poniższy przykład tworzy <xref:System.Windows.Controls.TextBlock> imiona i nazwiska osoby o nazwisku przedstawiająca pierwszy.  
+ W poniższym przykładzie `NameListData` odnosi się do kolekcji obiektów `PersonName`, które są obiektami zawierającymi dwie właściwości, `firstName` i `lastName`. Poniższy przykład generuje <xref:System.Windows.Controls.TextBlock>, który najpierw wyświetla imię i nazwisko osoby o nazwisku nazwisko.  
   
  [!code-xaml[MultiBinding#Resources1](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources1)]  
 [!code-xaml[MultiBinding#Resources2](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#resources2)]  
 [!code-xaml[MultiBinding#MultiBindingTextBox2](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#multibindingtextbox2)]  
 [!code-xaml[MultiBinding#Window](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/Window1.xaml#window)]  
   
- Aby dowiedzieć się, jak jest generowany format ostatnia nazwa pierwszego, Przyjrzyjmy się na implementacji `NameConverter`:  
+ Aby zrozumieć, w jaki sposób jest tworzony format last-name-First, przyjrzyjmy się implementacji `NameConverter`:  
   
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` implementuje <xref:System.Windows.Data.IMultiValueConverter> interfejsu. `NameConverter` przyjmuje wartości od poszczególnych powiązania i przechowuje je w tablicy obiektu wartości. Kolejność, w której <xref:System.Windows.Data.Binding> elementy są wyświetlane w obszarze <xref:System.Windows.Data.MultiBinding> element polega na kolejności, w której te wartości są przechowywane w tablicy. Wartość <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> atrybut odwołuje się do niej argumentu parametru <xref:System.Windows.Data.MultiBinding.Converter%2A> metody, która wykonuje przełącznikiem parametru do określenia, jak format nazwy.  
+ `NameConverter` implementuje interfejs <xref:System.Windows.Data.IMultiValueConverter>. `NameConverter` pobiera wartości z poszczególnych powiązań i zapisuje je w tablicy obiektów wartości. Kolejność, w której elementy <xref:System.Windows.Data.Binding> są wyświetlane pod elementem <xref:System.Windows.Data.MultiBinding>, jest kolejnością, w której te wartości są przechowywane w tablicy. Wartość atrybutu <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> jest przywoływana przez argument Parameter metody <xref:System.Windows.Data.MultiBinding.Converter%2A>, która wykonuje przełącznik na parametrze, aby określić sposób formatowania nazwy.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Konwertowanie powiązanych danych](how-to-convert-bound-data.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Tematy z instrukcjami](data-binding-how-to-topics.md)

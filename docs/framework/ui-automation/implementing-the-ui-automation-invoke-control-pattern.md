@@ -6,21 +6,21 @@ helpviewer_keywords:
 - control patterns, Invoke
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
-ms.openlocfilehash: e9815e4c2c0740f213632681200e48c8e4786657
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 616bbab4d659cf00b1f730492e73ad6b847e3926
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043395"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458005"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementacja wzorca kontrolki wywołania automatyzacji interfejsu użytkownika
 
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.
+> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).
 
-W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IInvokeProvider>dotyczące wdrażania, w tym informacje o zdarzeniach i właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.
+W tym temacie przedstawiono wytyczne i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.IInvokeProvider>, w tym informacje o zdarzeniach i właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.
 
-Wzorzec <xref:System.Windows.Automation.InvokePattern> kontrolki służy do obsługi kontrolek, które nie utrzymują stanu po aktywowaniu, ale nie inicjują lub wykonują pojedyncze, niejednoznaczne działanie. Kontrolki, które utrzymują stan, takie jak pola wyboru i przyciski radiowe, muszą <xref:System.Windows.Automation.Provider.IToggleProvider> zamiast <xref:System.Windows.Automation.Provider.ISelectionItemProvider> tego zaimplementować i odpowiednio. Aby zapoznać się z przykładami formantów implementujących wzorzec kontrolki Invoke, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).
+<xref:System.Windows.Automation.InvokePattern> wzorzec kontrolki służy do obsługi kontrolek, które nie utrzymują stanu po aktywowaniu, ale raczej inicjują lub wykonują jedną, niejednoznaczną akcję. Kontrolki, które utrzymują stan, takie jak pola wyboru i przyciski radiowe, muszą raczej zaimplementować odpowiednio <xref:System.Windows.Automation.Provider.IToggleProvider> i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Aby zapoznać się z przykładami formantów implementujących wzorzec kontrolki Invoke, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
@@ -28,11 +28,11 @@ Wzorzec <xref:System.Windows.Automation.InvokePattern> kontrolki służy do obs�
 
 Podczas implementowania wzorca kontrolki Invoke należy zwrócić uwagę na następujące wytyczne i konwencje:
 
-- Formanty implementują <xref:System.Windows.Automation.Provider.IInvokeProvider> , jeśli takie samo zachowanie nie jest ujawniane za pomocą innego dostawcy wzorca kontroli. Na przykład jeśli <xref:System.Windows.Automation.InvokePattern.Invoke%2A> Metoda kontrolki wykonuje tę samą akcję <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> co metoda lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> , formant nie powinien implementować <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+- Kontrolki implementują <xref:System.Windows.Automation.Provider.IInvokeProvider>, jeśli takie samo zachowanie nie jest ujawniane za pomocą innego dostawcy wzorca kontroli. Na przykład jeśli metoda <xref:System.Windows.Automation.InvokePattern.Invoke%2A> formantu wykonuje tę samą akcję co <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> lub <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>, formant nie powinien implementować <xref:System.Windows.Automation.Provider.IInvokeProvider>.
 
 - Wywoływanie kontrolki jest zazwyczaj wykonywane przez kliknięcie lub dwukrotne kliknięcie lub naciśnięcie klawisza ENTER, wstępnie zdefiniowanego skrótu klawiaturowego lub alternatywnej kombinacji naciśnięć klawiszy.
 
-- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>jest wywoływany na kontrolce, która została aktywowana (jako odpowiedź na kontrolkę, która wykonuje skojarzoną akcję). Jeśli to możliwe, zdarzenie powinno być wywoływane po wykonaniu akcji przez formant i zwróceniem bez blokowania. Wywołane zdarzenie powinno zostać zgłoszone przed obsługą żądania Invoke w następujących scenariuszach:
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> jest wywoływane na kontrolce, która została aktywowana (jako odpowiedź na kontrolkę, która prowadzi do jej działania). Jeśli to możliwe, zdarzenie powinno być wywoływane po wykonaniu akcji przez formant i zwróceniem bez blokowania. Wywołane zdarzenie powinno zostać zgłoszone przed obsługą żądania Invoke w następujących scenariuszach:
 
   - Nie jest to możliwe ani praktyczne, aby poczekać na zakończenie działania.
 
@@ -40,28 +40,28 @@ Podczas implementowania wzorca kontrolki Invoke należy zwrócić uwagę na nast
 
   - Akcja jest czasochłonna i spowoduje, że klient wywołujący będzie blokował przez znaczący czas.
 
-- Jeśli wywołanie formantu ma znaczące efekty uboczne, te efekty uboczne powinny być uwidaczniane przez <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> właściwość. Na przykład mimo że <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> nie jest skojarzony z zaznaczeniem, może to spowodować, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> że zostanie zaznaczona inna kontrolka.
+- Jeśli wywołanie formantu ma znaczące efekty uboczne, te efekty uboczne powinny być uwidaczniane za pomocą właściwości <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>. Na przykład mimo że <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> nie jest skojarzony z zaznaczeniem, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> może spowodować, że zostanie zaznaczona inna kontrolka.
 
-- Efekty przemieszczania (lub przełączenia do trybu failover) zwykle nie stanowią wywoływanego zdarzenia. Jednak kontrolki, które wykonują akcję (w przeciwieństwie do efektów wizualnych), na podstawie stanu aktywowania powinny obsługiwać <xref:System.Windows.Automation.InvokePattern> wzorzec kontrolki.
+- Efekty przemieszczania (lub przełączenia do trybu failover) zwykle nie stanowią wywoływanego zdarzenia. Jednak kontrolki, które wykonują akcję (w przeciwieństwie do efektów wizualnych), powinny obsługiwać wzorzec formantu <xref:System.Windows.Automation.InvokePattern>.
 
 > [!NOTE]
 > Ta implementacja jest uważana za problem z ułatwieniami dostępu, Jeśli kontrolka może być wywoływana tylko w wyniku efektu ubocznego związanego z myszą.
 
-- Wywoływanie kontrolki różni się od wybrania elementu. Jednak w zależności od kontrolki wywoływanie jej może spowodować, że element zostanie wybrany jako efekt uboczny. Na przykład wywoływanie [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] elementu listy dokumentów w folderze Moje dokumenty powoduje wybranie elementu i otwarcie dokumentu.
+- Wywoływanie kontrolki różni się od wybrania elementu. Jednak w zależności od kontrolki wywoływanie jej może spowodować, że element zostanie wybrany jako efekt uboczny. Na przykład wywoływanie elementu listy dokumentów programu Microsoft Word w folderze Moje dokumenty powoduje wybranie elementu i otwarcie dokumentu.
 
-- Element może zniknąć od [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] drzewa natychmiast po wywołaniu. Żądanie informacji z elementu dostarczonego przez wywołanie zwrotne zdarzenia może zakończyć się niepowodzeniem w wyniku. Zalecanym obejściem jest wstępne pobranie informacji w pamięci podręcznej.
+- Element może zniknąć z drzewa [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] natychmiast po wywołaniu. Żądanie informacji z elementu dostarczonego przez wywołanie zwrotne zdarzenia może zakończyć się niepowodzeniem w wyniku. Zalecanym obejściem jest wstępne pobranie informacji w pamięci podręcznej.
 
-- Kontrolki mogą zaimplementować wiele wzorców kontrolek. Na przykład kontrolka kolor wypełnienia na [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] pasku narzędzi implementuje <xref:System.Windows.Automation.InvokePattern> zarówno wzorce, jak i <xref:System.Windows.Automation.ExpandCollapsePattern> elementy sterujące. <xref:System.Windows.Automation.ExpandCollapsePattern>uwidacznia menu i <xref:System.Windows.Automation.InvokePattern> wypełnia aktywne zaznaczenie wybranym kolorem.
+- Kontrolki mogą zaimplementować wiele wzorców kontrolek. Na przykład kontrolka kolor wypełnienia na pasku narzędzi programu Microsoft Excel implementuje zarówno <xref:System.Windows.Automation.InvokePattern>, jak i <xref:System.Windows.Automation.ExpandCollapsePattern> wzorców kontrolek. <xref:System.Windows.Automation.ExpandCollapsePattern> uwidacznia menu, a <xref:System.Windows.Automation.InvokePattern> wypełnia aktywny wybór wybranym kolorem.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
 ## <a name="required-members-for-iinvokeprovider"></a>Wymagane elementy członkowskie dla IInvokeProvider
 
-Następujące właściwości i metody są wymagane do zaimplementowania <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+Do zaimplementowania <xref:System.Windows.Automation.Provider.IInvokeProvider>są wymagane następujące właściwości i metody.
 
 |Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|— metoda|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>jest wywołaniem asynchronicznym i musi zwrócić natychmiast bez blokowania.<br /><br /> To zachowanie jest szczególnie istotne dla formantów, które bezpośrednio lub pośrednio uruchamiają modalne okno dialogowe po wywołaniu. Każdy klient automatyzacji interfejsu użytkownika, który wykonał zdarzenie, pozostanie zablokowany do momentu zamknięcia modalnego okna dialogowego.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|— metoda|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> jest wywołaniem asynchronicznym i musi zwrócić bezpośrednio bez blokowania.<br /><br /> To zachowanie jest szczególnie istotne dla formantów, które bezpośrednio lub pośrednio uruchamiają modalne okno dialogowe po wywołaniu. Każdy klient automatyzacji interfejsu użytkownika, który wykonał zdarzenie, pozostanie zablokowany do momentu zamknięcia modalnego okna dialogowego.|
 
 <a name="Exceptions"></a>
 

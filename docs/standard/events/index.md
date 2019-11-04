@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131632"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423524"
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 
@@ -50,7 +50,7 @@ Platforma .NET udostępnia delegatów <xref:System.EventHandler> i <xref:System.
   
 Delegaty są [multiemisją](xref:System.MulticastDelegate), co oznacza, że mogą przechowywać odwołania do więcej niż jednej metody obsługi zdarzeń. Aby uzyskać szczegółowe informacje, zobacz stronę referencyjną <xref:System.Delegate>. Delegaty zapewniają elastyczność i szczegółową kontrolę w obsłudze zdarzeń. Delegat działa jako Dyspozytor zdarzeń dla klasy, która wywołuje zdarzenie przez utrzymywanie listy zarejestrowanych programów obsługi zdarzeń dla zdarzenia.  
   
-W scenariuszach, w których <xref:System.EventHandler> i <xref:System.EventHandler%601> delegatów nie działają, można zdefiniować delegata. Scenariusze, które wymagają zdefiniowania delegata, są bardzo rzadkimi, na przykład gdy trzeba współpracować z kodem, który nie rozpoznaje typów ogólnych. Delegat można oznaczyć za pomocą C# słowa kluczowego [`delegate`](../../csharp/language-reference/keywords/delegate.md) i Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) w deklaracji. Poniższy przykład pokazuje, jak zadeklarować delegata o nazwie `ThresholdReachedEventHandler`.  
+W scenariuszach, w których <xref:System.EventHandler> i <xref:System.EventHandler%601> delegatów nie działają, można zdefiniować delegata. Scenariusze, które wymagają zdefiniowania delegata, są bardzo rzadkimi, na przykład gdy trzeba współpracować z kodem, który nie rozpoznaje typów ogólnych. Delegat można oznaczyć za pomocą C# słowa kluczowego [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) i Visual Basic [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) w deklaracji. Poniższy przykład pokazuje, jak zadeklarować delegata o nazwie `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

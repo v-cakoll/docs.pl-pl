@@ -4,12 +4,12 @@ description: Informacje na temat przykładów i samouczków dotyczących platfor
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855772"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423571"
 ---
 # <a name="net-samples-and-tutorials"></a>Przykłady i samouczki dotyczące platformy .NET
 
@@ -49,7 +49,7 @@ Ten przykład ilustruje składnię i funkcje tworzenia i używania C# iteratoró
 
 Ten przykład ilustruje składnię i funkcje C# indeksatorów. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/indexers) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
-**[Obiekty delegowane i zdarzenia](../csharp/delegates-events.md)**
+**[Obiekty delegowane i zdarzenia](../csharp/delegates-overview.md)**
 
 Ten przykład pokazuje składnię i funkcje dla C# delegatów i zdarzeń. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub. [Drugi przykład](https://github.com/dotnet/samples/tree/master/csharp/events) skoncentrowany na zdarzeniach znajduje się również w tym samym repozytorium.
 
@@ -75,7 +75,7 @@ Przykład [ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensi
 
 W tym samouczku przedstawiono Tworzenie konsoli we/wy, strukturę aplikacji konsolowej oraz podstawowe informacje o modelu programowania asynchronicznego opartego na zadaniach. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
-**[REST Client](../csharp/tutorials/console-webapiclient.md)**
+**[Klient REST](../csharp/tutorials/console-webapiclient.md)**
 
 W tym samouczku przedstawiono komunikację sieci Web, serializacji JSON i zorientowane obiektowo funkcje C# języka. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
@@ -95,15 +95,11 @@ W tym samouczku pokazano, jak utworzyć kompletne rozwiązanie .NET Core, które
 
 W tym samouczku pokazano, jak utworzyć prostą aplikację na platformie .NET Core, która obsługuje architekturę wtyczki. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
-## <a name="deploying-to-containers"></a>Wdrażanie w kontenerach
+## <a name="deploy-to-containers"></a>Wdrażanie w kontenerach
 
-**[Uruchamianie aplikacji ASP.NET MVC w kontenerach platformy Docker systemu Windows](../framework/docker/aspnetmvc.md)**
+**[Uruchamianie aplikacji ASP.NET MVC w kontenerach platformy Docker systemu Windows](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 W tym samouczku przedstawiono sposób wdrażania istniejącej aplikacji ASP.NET MVC w kontenerze platformy Docker systemu Windows. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
-
-**[Uruchamianie .NET Framework aplikacji konsolowych w kontenerach systemu Windows](../framework/docker/console.md)**
-
-W tym samouczku przedstawiono sposób wdrażania istniejącej aplikacji konsolowej w kontenerze systemu Windows. [Ukończony przykład](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) jest dostępny w repozytorium dotnet/Samples w witrynie GitHub.
 
 ## <a name="viewing-and-downloading-samples"></a>Wyświetlanie i pobieranie przykładów
 
@@ -115,7 +111,7 @@ Wiele tematów pokazuje kod źródłowy i przykłady, które są dostępne do wy
    * Sklonuj repozytorium lokalnie. W przypadku sklonowania repozytorium dokumentów bezpośrednio do systemu lokalnego nie będzie można wprowadzać zatwierdzeń bezpośrednio do oficjalnego repozytorium, więc nie będzie można później wprowadzać wkładów do dokumentacji. Użyj opisanej wcześniej procedury rozwidlenia i klonowania, jeśli chcesz zachować możliwość późniejszego współtworzenia do dokumentacji.
 1. Nawigowanie w folderach repozytorium do lokalizacji przykładowej. Ścieżka względna do lokalizacji przykładu pojawia się na pasku adresu przeglądarki, gdy użyjesz linku do przykładu.
 1. Aby uruchomić przykład, masz kilka opcji:
-   * Użyj [narzędzi interfejsu wiersza polecenia dotnet](../core/tools/index.md): W oknie konsoli przejdź do folderu przykładowego i Użyj poleceń interfejsu wiersza polecenia dotnet.
-   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz przykład, wybierając pozycję **plik > otwórz > projekt/rozwiązanie** na pasku menu, przejdź do folderu projektu przykładowego i wybierz plik projektu ( *. csproj* lub *. fsproj*).
+   * Użyj [narzędzi interfejsu wiersza polecenia dotnet](../core/tools/index.md): w oknie konsoli przejdź do folderu przykładowego i Użyj poleceń interfejsu wiersza polecenia dotnet.
+   * Użyj [programu Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) lub [Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Otwórz próbkę, wybierając pozycję **plik > Otwórz > projekt/rozwiązanie** na pasku menu, przejdź do folderu projektu przykładowego i wybierz plik projektu ( *. csproj* lub *. fsproj* ).
    * Użyj [Visual Studio Code](https://code.visualstudio.com/): Otwórz przykład, wybierając pozycję **plik > Otwórz folder** z paska menu i wybierając folder projektu przykładu.
    * Użyj innego środowiska IDE, które obsługuje projekty platformy .NET Core.

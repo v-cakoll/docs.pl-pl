@@ -9,41 +9,41 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 993f3c861cbead88df3503eb01f18e5d1f69e2d8
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024030"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458437"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer — Przegląd
-Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświetlania ekranu komputera. <xref:System.Windows.Controls.ScrollViewer> Kontrola zapewnia wygodny sposób, aby włączyć przewijanie zawartości w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie przedstawiono <xref:System.Windows.Controls.ScrollViewer> elementu i udostępnia kilka przykładów użycia.  
+Zawartość w interfejsie użytkownika jest często większa niż obszar wyświetlania ekranu komputera. Formant <xref:System.Windows.Controls.ScrollViewer> zapewnia wygodny sposób włączania przewijania zawartości w aplikacjach [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. W tym temacie przedstawiono <xref:System.Windows.Controls.ScrollViewer> elementu i przedstawiono kilka przykładów użycia.  
   
 <a name="what_is_a_scrollviewer_element"></a>   
-## <a name="the-scrollviewer-control"></a>The ScrollViewer Control  
- Istnieją dwa wstępnie zdefiniowane elementy, które umożliwiają przewijanie w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji: <xref:System.Windows.Controls.Primitives.ScrollBar> i <xref:System.Windows.Controls.ScrollViewer>. <xref:System.Windows.Controls.ScrollViewer> Kontroli hermetyzuje poziomo i pionowo <xref:System.Windows.Controls.Primitives.ScrollBar> elementów i zawartość kontenerów (takie jak <xref:System.Windows.Controls.Panel> elementu) aby wyświetlić inne widoczne elementy w przewijanym obszarze. Należy utworzyć niestandardowy obiekt, aby można było używać <xref:System.Windows.Controls.Primitives.ScrollBar> element przewijania zawartości. Można jednak użyć <xref:System.Windows.Controls.ScrollViewer> elementu samodzielnie, ponieważ jest on złożonego kontrolkę, która hermetyzuje <xref:System.Windows.Controls.Primitives.ScrollBar> funkcji.  
+## <a name="the-scrollviewer-control"></a>Kontrolka ScrollViewer  
+ Istnieją dwa wstępnie zdefiniowane elementy, które umożliwiają przewijanie w aplikacjach [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: <xref:System.Windows.Controls.Primitives.ScrollBar> i <xref:System.Windows.Controls.ScrollViewer>. Formant <xref:System.Windows.Controls.ScrollViewer> hermetyzuje elementy poziome i pionowe <xref:System.Windows.Controls.Primitives.ScrollBar> i kontener zawartości (na przykład element <xref:System.Windows.Controls.Panel>), aby wyświetlić inne widoczne elementy w przewijanym obszarze. Należy utworzyć obiekt niestandardowy w celu użycia elementu <xref:System.Windows.Controls.Primitives.ScrollBar> do przewijania zawartości. Można jednak użyć elementu <xref:System.Windows.Controls.ScrollViewer> samego siebie, ponieważ jest to formant złożony, który hermetyzuje <xref:System.Windows.Controls.Primitives.ScrollBar> funkcje.  
   
- <xref:System.Windows.Controls.ScrollViewer> Kontroli reaguje na polecenia klawiatury i myszy, a następnie definiuje wiele metod czekających za pomocą którego można przewijać zawartość przy wstępnie zdefiniowanych przyrostów. Możesz użyć <xref:System.Windows.Controls.ScrollViewer.ScrollChanged> zdarzenia w celu wykrycia zmian w <xref:System.Windows.Controls.ScrollViewer> stanu.  
+ Kontrolka <xref:System.Windows.Controls.ScrollViewer> reaguje na polecenia myszy i klawiatury oraz definiuje wiele metod, za pomocą których można przewijać zawartość według wstępnie określonych przyrostów. Aby wykryć zmianę w stanie <xref:System.Windows.Controls.ScrollViewer>, można użyć zdarzenia <xref:System.Windows.Controls.ScrollViewer.ScrollChanged>.  
   
- A <xref:System.Windows.Controls.ScrollViewer> może mieć tylko jeden element podrzędny, zwykle <xref:System.Windows.Controls.Panel> element, który może obsługiwać <xref:System.Windows.Controls.Panel.Children%2A> kolekcję elementów. <xref:System.Windows.Controls.ContentPresenter.Content%2A> Właściwość definiuje jedyny podrzędnym <xref:System.Windows.Controls.ScrollViewer>.  
+ <xref:System.Windows.Controls.ScrollViewer> może mieć tylko jeden element podrzędny, zazwyczaj <xref:System.Windows.Controls.Panel> elementu, który może hostować <xref:System.Windows.Controls.Panel.Children%2A> kolekcję elementów. Właściwość <xref:System.Windows.Controls.ContentPresenter.Content%2A> definiuje jedynym elementem podrzędnym <xref:System.Windows.Controls.ScrollViewer>.  
   
 <a name="scrollviewer_physical_vs_logical"></a>   
-## <a name="physical-vs-logical-scrolling"></a>Fizyczne programu vs. Przewijanie logiczne  
- Przewijanie fizycznych służy do przewijanie zawartości z wstępnie zdefiniowanych przyrostem fizycznych, zwykle przez wartość, która jest zadeklarowana w pikselach. Przewijanie logicznych jest używany do przewiń do następnego elementu w drzewie logicznym. Przewijanie fizycznego jest domyślne zachowanie przewijania dla większości <xref:System.Windows.Controls.Panel> elementów. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje oba rodzaje przewijania.  
+## <a name="physical-vs-logical-scrolling"></a>Przewijanie fizyczne a logiczne  
+ Przewijanie fizyczne służy do przewijania zawartości przez wstępnie określony przyrost fizyczny, zazwyczaj przez wartość zadeklarowaną w pikselach. Przewijanie logiczne służy do przewijania do następnego elementu w drzewie logicznym. Przewijanie fizyczne jest domyślnym zachowaniem przewijania dla większości elementów <xref:System.Windows.Controls.Panel>. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługuje oba typy przewijania.  
   
-#### <a name="the-iscrollinfo-interface"></a>Interfejsu IScrollInfo  
- <xref:System.Windows.Controls.Primitives.IScrollInfo> Interfejs reprezentuje główny region przewijania w ramach <xref:System.Windows.Controls.ScrollViewer> lub pochodnego kontroli. Interfejs definiuje przewijania właściwości i metod, które może być implementowany przez <xref:System.Windows.Controls.Panel> elementy, które wymagają przewijania jednostki logicznej, a nie fizycznej przyrostu. Rzutowania wystąpienia <xref:System.Windows.Controls.Primitives.IScrollInfo> do pochodnej <xref:System.Windows.Controls.Panel> i następnie przy użyciu jego metod przewijania zapewnia wygodny sposób, aby przewinąć do następnego jednostki logicznej w kolekcji podrzędnej, a nie z przyrostem pikseli. Domyślnie <xref:System.Windows.Controls.ScrollViewer> kontrolka obsługuje przewijania jednostek fizycznych.  
+#### <a name="the-iscrollinfo-interface"></a>Interfejs IScrollInfo  
+ Interfejs <xref:System.Windows.Controls.Primitives.IScrollInfo> reprezentuje główny region przewijania w <xref:System.Windows.Controls.ScrollViewer> lub formancie pochodnym. Interfejs definiuje właściwości i metody przewijania, które mogą być implementowane przez <xref:System.Windows.Controls.Panel> elementy, które wymagają przewijania według jednostki logicznej, a nie przez przyrost fizyczny. Rzutowanie wystąpienia <xref:System.Windows.Controls.Primitives.IScrollInfo> na pochodny <xref:System.Windows.Controls.Panel>, a następnie za pomocą jego metod przewijania, zapewnia przydatny sposób przewijania do następnej jednostki logicznej w kolekcji podrzędnej, a nie przez przyrost pikseli. Domyślnie formant <xref:System.Windows.Controls.ScrollViewer> obsługuje przewijanie według jednostek fizycznych.  
   
- <xref:System.Windows.Controls.StackPanel> i <xref:System.Windows.Controls.VirtualizingStackPanel> zarówno zaimplementować <xref:System.Windows.Controls.Primitives.IScrollInfo> i przewijanie logicznego w sposób natywny obsługują. Układ formantów tego natywnej obsługi logiczne przewijanie, można nadal osiągnąć fizycznych przewijanie opakowując hosta <xref:System.Windows.Controls.Panel> element <xref:System.Windows.Controls.ScrollViewer> i ustawienie <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> właściwość `false`.  
+ <xref:System.Windows.Controls.StackPanel> i <xref:System.Windows.Controls.VirtualizingStackPanel> zarówno Implementuj <xref:System.Windows.Controls.Primitives.IScrollInfo>, jak i natywnie obsługują przewijanie logiczne. W przypadku kontrolek układu, które natywnie obsługują przewijanie logiczne, można nadal osiągnąć bezpośrednie przewijanie, zawijając <xref:System.Windows.Controls.Panel> elementu hosta w <xref:System.Windows.Controls.ScrollViewer> i ustawiając właściwość <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> na `false`.  
   
- Poniższy przykład kodu demonstruje sposób rzutowania wystąpienia <xref:System.Windows.Controls.Primitives.IScrollInfo> do <xref:System.Windows.Controls.StackPanel> i używania metod przewijania zawartości (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> i <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) zdefiniowany przez interfejs.  
+ Poniższy przykład kodu ilustruje sposób rzutowania wystąpienia <xref:System.Windows.Controls.Primitives.IScrollInfo> na <xref:System.Windows.Controls.StackPanel> i używania metod przewijania zawartości (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> i <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) zdefiniowanej przez interfejs.  
   
  [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
  [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
-## <a name="defining-and-using-a-scrollviewer-element"></a>Definiowanie i korzystanie z elementu ScrollViewer  
- Poniższy przykład tworzy <xref:System.Windows.Controls.ScrollViewer> w oknie, który zawiera część tekstu i prostokąt. <xref:System.Windows.Controls.Primitives.ScrollBar> elementy są wyświetlane tylko wtedy, gdy są one niezbędne. Podczas zmiany rozmiaru okna, <xref:System.Windows.Controls.Primitives.ScrollBar> elementy pojawiają się i znikają z powodu zaktualizowanymi wartościami z <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> i <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> właściwości.  
+## <a name="defining-and-using-a-scrollviewer-element"></a>Definiowanie i używanie elementu ScrollViewer  
+ Poniższy przykład tworzy <xref:System.Windows.Controls.ScrollViewer> w oknie, które zawiera tekst i prostokąt. elementy <xref:System.Windows.Controls.Primitives.ScrollBar> są wyświetlane tylko wtedy, gdy są potrzebne. Po zmianie rozmiaru okna <xref:System.Windows.Controls.Primitives.ScrollBar> elementy pojawiają się i znikają z powodu zaktualizowanych wartości właściwości <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> i <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A>.  
   
  [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
  [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
@@ -51,21 +51,21 @@ Zawartość w interfejsie użytkownika często jest większy niż obszaru wyświ
  [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
-## <a name="styling-a-scrollviewer"></a>Scrollviewer — style  
- Wszystkie formanty w oprogramowaniu Windows Presentation Foundation, takich jak <xref:System.Windows.Controls.ScrollViewer> być różne, aby zmienić domyślne zachowanie renderowania formantu. Aby uzyskać dodatkowe informacje na temat ustawiania stylu formantu, zobacz [Tworzenie szablonów i stylów](styling-and-templating.md).  
+## <a name="styling-a-scrollviewer"></a>Określanie stylu elementu ScrollViewer  
+ Podobnie jak w przypadku wszystkich formantów w Windows Presentation Foundation, <xref:System.Windows.Controls.ScrollViewer> można nadać stylowi w celu zmiany domyślnego zachowania renderowania formantu. Aby uzyskać dodatkowe informacje na temat stylów kontroli, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
-## <a name="paginating-documents"></a>Podział na strony w dokumentach  
- Alternatywa przewijanie zawartości dokumentu jest Wybierz kontener dokumentów, która obsługuje podział na strony. <xref:System.Windows.Documents.FlowDocument> jest dokumentów, które mają zostać umieszczony w elemencie wyświetlania kontrolki, takie jak <xref:System.Windows.Controls.FlowDocumentPageViewer>, obsługujący zawartość dzielonych na wielu stronach, zapobiegając potrzebę przewijania. <xref:System.Windows.Controls.DocumentViewer> zapewnia rozwiązanie do wyświetlania <xref:System.Windows.Documents.FixedDocument> zawartość, która korzysta z tradycyjnych przewijanie do wyświetlenia zawartości spoza obszaru obszaru wyświetlania.  
+## <a name="paginating-documents"></a>Paginating dokumenty  
+ W przypadku zawartości dokumentu alternatywą dla przewijania jest wybranie kontenera dokumentu, który obsługuje podział na strony. <xref:System.Windows.Documents.FlowDocument> to dokumenty, które są zaprojektowane do obsługi w kontrolce wyświetlania, takie jak <xref:System.Windows.Controls.FlowDocumentPageViewer>, które obsługują zawartość paginating na wielu stronach, zapobiegając konieczności przewijania. <xref:System.Windows.Controls.DocumentViewer> udostępnia rozwiązanie do wyświetlania zawartości <xref:System.Windows.Documents.FixedDocument>, która używa tradycyjnego przewijania do wyświetlania zawartości poza obszarem wyświetlania.  
   
- Aby uzyskać dodatkowe informacje na temat formatów dokumentów i prezentacji opcji, zobacz [dokumenty w WPF](../advanced/documents-in-wpf.md).  
+ Aby uzyskać dodatkowe informacje na temat formatów dokumentów i opcji prezentacji, zobacz [dokumenty w WPF](../advanced/documents-in-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [Instrukcje: Tworzenie podglądu z przewijaniem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [Instrukcje: Tworzenie podglądu przewijania](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)
 - [ScrollBar — style i szablony](scrollbar-styles-and-templates.md)
 - [Kontrolki](../advanced/optimizing-performance-controls.md)

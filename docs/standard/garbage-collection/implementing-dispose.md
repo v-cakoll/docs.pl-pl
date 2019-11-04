@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121211"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424330"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementowanie metody Dispose
 
 Zaimplementuj metodę <xref:System.IDisposable.Dispose%2A>, aby zwolnić niezarządzane zasoby używane przez aplikację. Moduł wyrzucania elementów bezużytecznych platformy .NET nie przydziela lub nie zwalnia pamięci niezarządzanej.  
   
-Wzorzec do usuwania obiektu, nazywany [wzorcem usuwania](../../../docs/standard/design-guidelines/dispose-pattern.md), nakłada kolejność na okres istnienia obiektu. Wzorzec usuwania jest używany tylko w przypadku obiektów uzyskujących dostęp do niezarządzanych zasobów, takich jak dojścia do plików i potoków, dojścia do rejestru, dojścia oczekiwania lub wskaźniki do bloków w niezarządzanej pamięci. Z tego powodu moduł odśmiecania pamięci jest bardzo skuteczny w odzyskiwaniu nieużywanych zarządzanych obiektów, ale nie jest w stanie odzyskiwać niezarządzanych obiektów.  
+Wzorzec do usuwania obiektu, nazywany [wzorcem usuwania](implementing-dispose.md), nakłada kolejność na okres istnienia obiektu. Wzorzec usuwania jest używany tylko w przypadku obiektów uzyskujących dostęp do niezarządzanych zasobów, takich jak dojścia do plików i potoków, dojścia do rejestru, dojścia oczekiwania lub wskaźniki do bloków w niezarządzanej pamięci. Z tego powodu moduł odśmiecania pamięci jest bardzo skuteczny w odzyskiwaniu nieużywanych zarządzanych obiektów, ale nie jest w stanie odzyskiwać niezarządzanych obiektów.  
   
 Wzorzec usuwania ma dwa warianty:  
   
@@ -167,4 +167,4 @@ Poniższy przykład ilustruje wzorzec Dispose dla klasy pochodnej, `DisposableSt
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Instrukcje: definiowanie oraz stosowanie klas i struktur (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Wzorzec Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Wzorzec Dispose](implementing-dispose.md)

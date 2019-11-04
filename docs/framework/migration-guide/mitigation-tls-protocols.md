@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
-ms.openlocfilehash: 2a2f95be92ec08185f627e862b0f62e40a1d764b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126142"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457840"
 ---
 # <a name="mitigation-tls-protocols"></a>Ograniczenie: protokoły TLS
 Począwszy od .NET Framework 4,6, klasy <xref:System.Net.ServicePointManager?displayProperty=nameWithType> i <xref:System.Net.Security.SslStream?displayProperty=nameWithType> mogą korzystać z jednego z następujących trzech protokołów: TLS 1.0, TLS 1.1 lub TLS 1,2. Protokół SSL 3.0 i szyfr RC4 nie są obsługiwane.  
@@ -42,4 +42,4 @@ Począwszy od .NET Framework 4,6, klasy <xref:System.Net.ServicePointManager?dis
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6.md)
+- [Zgodność aplikacji](application-compatibility.md)

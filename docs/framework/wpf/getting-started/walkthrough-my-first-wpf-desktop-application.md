@@ -12,18 +12,18 @@ ms.topic: tutorial
 ms.custom: vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2c8e36c1b8185f28a7ec20402e385f3a1ddf5ce
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991777"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453750"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Samouczek: Tworzenie pierwszej aplikacji WPF w programie Visual Studio 2019
 
-W tym artykule przedstawiono sposób tworzenia aplikacji klasycznych Windows Presentation Foundation (WPF), która zawiera elementy wspólne dla większości aplikacji WPF: Znaczniki Extensible Application Markup Language (XAML), powiązane z kodem, definicje aplikacji, formanty, układ, powiązanie danych i style. Aby opracować aplikację, użyjesz programu Visual Studio. 
+W tym artykule przedstawiono sposób tworzenia aplikacji klasycznych Windows Presentation Foundation (WPF), która zawiera elementy wspólne dla większości aplikacji WPF: znaczniki Extensible Application Markup Language (XAML), powiązane z kodem, definicje aplikacji, kontrolki, układ, powiązanie danych i style. Aby opracować aplikację, użyjesz programu Visual Studio. 
 
-Ten samouczek zawiera informacje na temat wykonywania następujących czynności:
+Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > [!div class="checklist"]
 >
 > - Utwórz projekt WPF.
@@ -51,7 +51,7 @@ Na końcu samouczka utworzysz autonomiczną aplikację systemu Windows, która u
 
 Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje definicję aplikacji, dwie strony i obraz.
 
-1. Utwórz nowy projekt aplikacji WPF w Visual Basic lub wizualizacji C# o **`ExpenseIt`** nazwie:
+1. Utwórz nowy projekt aplikacji WPF w Visual Basic lub wizualizacji C# o nazwie **`ExpenseIt`** :
 
    1. Otwórz program Visual Studio i wybierz pozycję **Utwórz nowy projekt** w menu **wprowadzenie** .
 
@@ -65,7 +65,7 @@ Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje defi
     
       Zostanie otwarte okno dialogowe **Konfigurowanie nowego projektu** .
 
-   4. Wprowadź nazwę **`ExpenseIt`** projektu, a następnie wybierz pozycję **Utwórz**.
+   4. Wprowadź nazwę projektu **`ExpenseIt`** a następnie wybierz pozycję **Utwórz**.
 
       ![Okno dialogowe Konfigurowanie nowego projektu](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -85,9 +85,9 @@ Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje defi
 
 3. Otwórz *MainWindow. XAML*.
 
-    Ten plik XAML jest głównym oknem aplikacji i wyświetla zawartość utworzoną na stronach. <xref:System.Windows.Window> Klasa definiuje właściwości okna, takie jak tytuł, rozmiar lub ikona, i obsługuje zdarzenia, takie jak zamykanie lub ukrywanie.
+    Ten plik XAML jest głównym oknem aplikacji i wyświetla zawartość utworzoną na stronach. Klasa <xref:System.Windows.Window> definiuje właściwości okna, takie jak tytuł, rozmiar lub ikona i obsługuje zdarzenia, takie jak zamykanie lub ukrywanie.
 
-4. <xref:System.Windows.Window> Zmień element<xref:System.Windows.Navigation.NavigationWindow>na, jak pokazano na poniższym kodzie XAML:
+4. Zmień element <xref:System.Windows.Window> na <xref:System.Windows.Navigation.NavigationWindow>, jak pokazano na poniższym kodzie XAML:
 
    ```xaml
    <NavigationWindow x:Class="ExpenseIt.MainWindow"
@@ -97,17 +97,17 @@ Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje defi
    </NavigationWindow>
    ```
 
-   Ta aplikacja nawiguje do innej zawartości w zależności od danych wprowadzonych przez użytkownika. Jest to dlatego, że <xref:System.Windows.Window> główny należy zmienić <xref:System.Windows.Navigation.NavigationWindow>na. <xref:System.Windows.Navigation.NavigationWindow>dziedziczy wszystkie właściwości <xref:System.Windows.Window>. Element w pliku XAML tworzy wystąpienie <xref:System.Windows.Navigation.NavigationWindow> klasy. <xref:System.Windows.Navigation.NavigationWindow> Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](../app-development/navigation-overview.md).
+   Ta aplikacja nawiguje do innej zawartości w zależności od danych wprowadzonych przez użytkownika. Dlatego głównym <xref:System.Windows.Window> należy zmienić na <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> dziedziczy wszystkie właściwości <xref:System.Windows.Window>. Element <xref:System.Windows.Navigation.NavigationWindow> w pliku XAML tworzy wystąpienie klasy <xref:System.Windows.Navigation.NavigationWindow>. Aby uzyskać więcej informacji, zobacz [Omówienie nawigacji](../app-development/navigation-overview.md).
 
-5. Usuń elementy z między <xref:System.Windows.Navigation.NavigationWindow>tagami. <xref:System.Windows.Controls.Grid>
+5. Usuń <xref:System.Windows.Controls.Grid> elementy z między tagami <xref:System.Windows.Navigation.NavigationWindow>.
 
-6. Zmień następujące właściwości w kodzie XAML dla <xref:System.Windows.Navigation.NavigationWindow> elementu:
+6. Zmień następujące właściwości w kodzie XAML dla elementu <xref:System.Windows.Navigation.NavigationWindow>:
 
-    - Ustaw właściwość na "`ExpenseIt`". <xref:System.Windows.Window.Title%2A>
+    - Ustaw właściwość <xref:System.Windows.Window.Title%2A> na "`ExpenseIt`".
 
-    - <xref:System.Windows.FrameworkElement.Height%2A> Ustaw właściwość na 350 pikseli.
+    - Ustaw właściwość <xref:System.Windows.FrameworkElement.Height%2A> na 350 pikseli.
 
-    - <xref:System.Windows.FrameworkElement.Width%2A> Ustaw właściwość na 500 pikseli.
+    - Ustaw właściwość <xref:System.Windows.FrameworkElement.Width%2A> na 500 pikseli.
 
     KOD XAML powinien wyglądać podobnie do poniższego Visual Basic:
 
@@ -121,7 +121,7 @@ Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje defi
 
     Ten plik jest plikiem związanym z kodem, który zawiera kod służący do obsługi zdarzeń zadeklarowanych w *MainWindow. XAML*. Ten plik zawiera klasę częściową dla okna zdefiniowanego w języku XAML.
 
-8. Jeśli używasz programu C#, Zmień `MainWindow` klasę, aby dziedziczyć z <xref:System.Windows.Navigation.NavigationWindow>. (W Visual Basic dzieje się to automatycznie po zmianie okna w języku XAML). C# Kod powinien teraz wyglądać następująco:
+8. Jeśli używasz programu C#, zmień klasę `MainWindow`, aby dziedziczyć z <xref:System.Windows.Navigation.NavigationWindow>. (W Visual Basic dzieje się to automatycznie po zmianie okna w języku XAML). C# Kod powinien teraz wyglądać następująco:
 
    [!code-csharp[ExpenseIt#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/MainWindow.xaml.cs?highlight=21)]
 
@@ -129,19 +129,19 @@ Pierwszym krokiem jest utworzenie infrastruktury aplikacji, która obejmuje defi
 
 W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
-1. Dodaj nową stronę do projektu i nadaj jej *`ExpenseItHome.xaml`* nazwę:
+1. Dodaj nową stronę do projektu i nadaj jej nazwę *`ExpenseItHome.xaml`* :
 
-   1. W **Eksplorator rozwiązań**kliknij **`ExpenseIt`** prawym przyciskiem myszy węzeł projektu i wybierz polecenie **Dodaj** > **stronę**.
+   1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu **`ExpenseIt`** i wybierz polecenie **Dodaj** > **stronę**.
 
-   1. W oknie dialogowym **Dodaj nowy element** szablon **Strona (WPF)** jest już zaznaczony. Wprowadź nazwę **`ExpenseItHome`** , a następnie wybierz pozycję **Dodaj**.
+   1. W oknie dialogowym **Dodaj nowy element** szablon **Strona (WPF)** jest już zaznaczony. Wprowadź nazwę **`ExpenseItHome`** a następnie wybierz pozycję **Dodaj**.
 
     Ta strona to pierwsza strona wyświetlana podczas uruchamiania aplikacji. Zostanie wyświetlona lista osób, spośród których można wybrać, aby wyświetlić raport wydatków dla programu.
 
 1. Otwórz *`ExpenseItHome.xaml`* .
 
-1. Ustaw wartość`ExpenseIt - Home`na "". <xref:System.Windows.Controls.Page.Title%2A>
+1. Ustaw <xref:System.Windows.Controls.Page.Title%2A> na "`ExpenseIt - Home`".
 
-1. Ustaw do 350 pikseli `DesignWidth` i do 500 pikseli. `DesignHeight`
+1. Ustaw `DesignHeight` na 350 pikseli i `DesignWidth` na 500 pikseli.
 
     KOD XAML jest teraz wyświetlany w następujący sposób dla Visual Basic:
 
@@ -153,15 +153,15 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Otwórz *MainWindow. XAML*.
 
-1. Dodaj właściwość do elementu i ustaw ją na "`ExpenseItHome.xaml`". <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Navigation.NavigationWindow.Source%2A>
+1. Dodaj właściwość <xref:System.Windows.Navigation.NavigationWindow.Source%2A> do elementu <xref:System.Windows.Navigation.NavigationWindow> i ustaw ją na "`ExpenseItHome.xaml`".
 
-    To ustawienie *`ExpenseItHome.xaml`* jest pierwszą stroną otwartą podczas uruchamiania aplikacji. 
+    To ustawienie *`ExpenseItHome.xaml`* być pierwszą stroną otwartą podczas uruchamiania aplikacji. 
 
     Przykładowy kod XAML w Visual Basic:
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    W języku C#:
+    I w C#programie:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -172,17 +172,17 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Dodaj kolejną nową stronę WPF do projektu i nadaj jej nazwę *ExpenseReportPage. XAML*::
 
-   1. W **Eksplorator rozwiązań**kliknij **`ExpenseIt`** prawym przyciskiem myszy węzeł projektu i wybierz polecenie **Dodaj** > **stronę**.
+   1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy węzeł projektu **`ExpenseIt`** i wybierz polecenie **Dodaj** > **stronę**.
 
    1. W oknie dialogowym **Dodaj nowy element** wybierz szablon **Strona (WPF)** . Wprowadź nazwę **ExpenseReportPage**, a następnie wybierz pozycję **Dodaj**.
 
-    Na tej stronie zostanie wyświetlony raport wydatków dla osoby, która została wybrana na **`ExpenseItHome`** stronie.
+    Na tej stronie zostanie wyświetlony raport wydatków dla osoby, która została wybrana na stronie **`ExpenseItHome`** .
 
 1. Otwórz *ExpenseReportPage. XAML*.
 
-1. Ustaw wartość`ExpenseIt - View Expense`na "". <xref:System.Windows.Controls.Page.Title%2A>
+1. Ustaw <xref:System.Windows.Controls.Page.Title%2A> na "`ExpenseIt - View Expense`".
 
-1. Ustaw do 350 pikseli `DesignWidth` i do 500 pikseli. `DesignHeight` 
+1. Ustaw `DesignHeight` na 350 pikseli i `DesignWidth` na 500 pikseli. 
 
     *ExpenseReportPage. XAML* wygląda teraz następująco w Visual Basic:
 
@@ -196,7 +196,7 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
     Podczas tworzenia nowego pliku stronicowania program Visual Studio automatycznie tworzy swój plik *związany z kodem* . Te pliki związane z kodem obsługują logikę w celu reagowania na dane wejściowe użytkownika.
 
-    Kod powinien wyglądać **`ExpenseItHome`** następująco:
+    Kod powinien wyglądać podobnie do poniższego **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -210,7 +210,7 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Dodaj obraz o nazwie *znak wodny. png* do projektu. Możesz utworzyć własny obraz, skopiować plik z przykładowego kodu lub pobrać go z repozytorium GitHub [Microsoft/WPF-Samples](https://raw.githubusercontent.com/microsoft/WPF-Samples/master/Getting%20Started/WalkthroughFirstWPFApp/csharp/watermark.png) .
 
-    1. Kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **Dodaj** > **istniejący element**lub naciśnij klawisze **SHIFT**+**Alt**+**A**.
+    1. Kliknij prawym przyciskiem myszy węzeł projektu i wybierz polecenie **dodaj** > **istniejący element**lub naciśnij klawisz **SHIFT**+**Alt**+**A**.
 
     2. W oknie dialogowym **Dodaj istniejący element** Ustaw filtr pliku na **wszystkie pliki** lub **pliki obrazów**, przejdź do pliku obrazu, którego chcesz użyć, a następnie wybierz pozycję **Dodaj**.
 
@@ -218,7 +218,7 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 1. Aby skompilować i uruchomić aplikację, naciśnij klawisz **F5** lub wybierz pozycję **Rozpocznij debugowanie** z menu **debugowanie** .
 
-    Na poniższej ilustracji przedstawiono aplikację z <xref:System.Windows.Navigation.NavigationWindow> przyciskami:
+    Na poniższej ilustracji przedstawiono aplikację z przyciskami <xref:System.Windows.Navigation.NavigationWindow>:
 
     ![Po skompilowaniu i uruchomieniu aplikacji.](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
@@ -228,21 +228,21 @@ W tej sekcji dodasz dwie strony i obraz do aplikacji.
 
 Układ zapewnia uporządkowany sposób umieszczania elementów interfejsu użytkownika, a także zarządza rozmiarem i położeniem tych elementów w przypadku zmiany rozmiaru interfejsu użytkownika. Zazwyczaj tworzysz układ z jedną z następujących kontrolek układu:
 
-- <xref:System.Windows.Controls.Canvas>-Definiuje obszar, w którym można jawnie pozycjonować elementy podrzędne za pomocą współrzędnych względnych dla obszaru kanwy.
-- <xref:System.Windows.Controls.DockPanel>-Definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub w pionie względem siebie.
-- <xref:System.Windows.Controls.Grid>-Definiuje elastyczny obszar siatki składający się z kolumn i wierszy.
-- <xref:System.Windows.Controls.StackPanel>— Rozmieszcza elementy podrzędne w pojedynczym wierszu, który może być zorientowany w poziomie lub w pionie.
-- <xref:System.Windows.Controls.VirtualizingStackPanel>-Rozmieszcza i wirtualizacji zawartość w jednym wierszu, który ma orientację poziomą lub pionową.
-- <xref:System.Windows.Controls.WrapPanel>-Umieszcza elementy podrzędne w kolejności sekwencyjnej od lewej do prawej, dzieląc zawartość do następnego wiersza na krawędzi pola zawierającego. Kolejne porządkowanie odbywa się sekwencyjnie od góry do dołu lub od prawej do lewej, w zależności od wartości właściwości Orientation.
+- <xref:System.Windows.Controls.Canvas> — definiuje obszar, w którym można jawnie pozycjonować elementy podrzędne za pomocą współrzędnych względnych dla obszaru kanwy.
+- <xref:System.Windows.Controls.DockPanel> — definiuje obszar, w którym można rozmieścić elementy podrzędne w poziomie lub w pionie względem siebie.
+- <xref:System.Windows.Controls.Grid> — definiuje elastyczny obszar siatki składający się z kolumn i wierszy.
+- <xref:System.Windows.Controls.StackPanel> — rozmieszcza elementy podrzędne w pojedynczym wierszu, który może być zorientowany w poziomie lub w pionie.
+- <xref:System.Windows.Controls.VirtualizingStackPanel> — rozmieszcza i wirtualizację zawartości w jednym wierszu, który ma orientację poziomą lub pionową.
+- <xref:System.Windows.Controls.WrapPanel> — elementy podrzędne w kolejności sekwencyjnej od lewej do prawej, Podziel zawartość do następnego wiersza na krawędzi pola zawierającego. Kolejne porządkowanie odbywa się sekwencyjnie od góry do dołu lub od prawej do lewej, w zależności od wartości właściwości Orientation.
 
-Każda z tych kontrolek układu obsługuje określony typ układu dla jego elementów podrzędnych. `ExpenseIt`rozmiary stron mogą być zmieniane, a każda Strona zawiera elementy ułożone w poziomie i w pionie wraz z innymi elementami. W tym przykładzie <xref:System.Windows.Controls.Grid> jest używany jako element układu dla aplikacji.
+Każda z tych kontrolek układu obsługuje określony typ układu dla jego elementów podrzędnych. można zmienić rozmiar stron `ExpenseIt`, a każda Strona zawiera elementy ułożone w poziomie i w pionie wraz z innymi elementami. W tym przykładzie <xref:System.Windows.Controls.Grid> jest używany jako element układu dla aplikacji.
 
 > [!TIP]
-> Aby uzyskać więcej informacji <xref:System.Windows.Controls.Panel> o elementach, zobacz [Omówienie paneli](../controls/panels-overview.md). Aby uzyskać więcej informacji na temat układu, zobacz [Układ](../advanced/layout.md).
+> Aby uzyskać więcej informacji na temat elementów <xref:System.Windows.Controls.Panel>, zobacz [Omówienie paneli](../controls/panels-overview.md). Aby uzyskać więcej informacji na temat układu, zobacz [Układ](../advanced/layout.md).
 
-W tej sekcji utworzysz jednokolumnową tabelę z trzema wierszami i marginesem 10 pikseli, dodając definicje kolumn i wierszy do <xref:System.Windows.Controls.Grid> elementu w. *`ExpenseItHome.xaml`*
+W tej sekcji utworzysz jednokolumnową tabelę z trzema wierszami i marginesem 10 pikseli, dodając definicje kolumn i wierszy do <xref:System.Windows.Controls.Grid> w *`ExpenseItHome.xaml`* .
 
-1. W *`ExpenseItHome.xaml`* , <xref:System.Windows.Controls.Grid> ustaw właściwość elementu na wartość "10, 0, 10, 10", która odnosi się do lewego, górnego, prawego i dolnego marginesu: <xref:System.Windows.FrameworkElement.Margin%2A>
+1. W *`ExpenseItHome.xaml`* ustaw właściwość <xref:System.Windows.FrameworkElement.Margin%2A> dla elementu <xref:System.Windows.Controls.Grid> na wartość "10, 0, 10, 10", która odnosi się do lewego, górnego, prawego i dolnego marginesu:
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -253,13 +253,13 @@ W tej sekcji utworzysz jednokolumnową tabelę z trzema wierszami i marginesem 1
    >
    > ![Wartości marginesów w okno Właściwości](./media/properties-margin.png)
 
-2. Dodaj następujący kod XAML między tagami <xref:System.Windows.Controls.Grid> , aby utworzyć definicje wierszy i kolumn:
+2. Dodaj następujący kod XAML między tagami <xref:System.Windows.Controls.Grid>, aby utworzyć definicje wierszy i kolumn:
 
     [!code-xaml[ExpenseIt#8](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    Dwa wiersze są ustawione na <xref:System.Windows.GridLength.Auto%2A>, co oznacza, że rozmiar wierszy jest określany na podstawie zawartości w wierszach. <xref:System.Windows.Controls.RowDefinition.Height%2A> Wartość domyślna <xref:System.Windows.Controls.RowDefinition.Height%2A> to <xref:System.Windows.GridUnitType.Star> rozmiar, co oznacza, że wysokość wiersza jest ważoną ilością dostępnego miejsca. Na przykład jeśli dwa wiersze mają wartość <xref:System.Windows.Controls.RowDefinition.Height%2A> "*", każdy z nich ma wysokość połowę dostępnego miejsca.
+    <xref:System.Windows.Controls.RowDefinition.Height%2A> dwóch wierszy jest ustawiona na <xref:System.Windows.GridLength.Auto%2A>, co oznacza, że rozmiar wierszy jest określany na podstawie zawartości w wierszach. Domyślny <xref:System.Windows.Controls.RowDefinition.Height%2A> jest <xref:System.Windows.GridUnitType.Star> rozmiar, co oznacza, że wysokość wiersza jest ważoną ilością dostępnego miejsca. Na przykład jeśli dwa wiersze mają <xref:System.Windows.Controls.RowDefinition.Height%2A> "*", każda z nich ma wysokość połowę dostępnego miejsca.
 
-    <xref:System.Windows.Controls.Grid> Powinien teraz zawierać następujący kod XAML:
+    <xref:System.Windows.Controls.Grid> powinien teraz zawierać następujący kod XAML:
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
@@ -267,15 +267,15 @@ W tej sekcji utworzysz jednokolumnową tabelę z trzema wierszami i marginesem 1
 
 W tej sekcji opisano aktualizowanie interfejsu użytkownika strony głównej w celu wyświetlenia listy osób, w których można wybrać jedną osobę, aby wyświetlić raport z wydatków. Formanty to obiekty UI, które umożliwiają użytkownikom współpracującie z Twoją aplikacją. Aby uzyskać więcej informacji, zobacz [Controls](../controls/index.md).
 
-Aby utworzyć ten interfejs użytkownika, Dodaj następujące elementy *`ExpenseItHome.xaml`* :
+Aby utworzyć ten interfejs użytkownika, Dodaj następujące elementy do *`ExpenseItHome.xaml`* :
 
-- A <xref:System.Windows.Controls.ListBox> (dla listy osób).
-- A <xref:System.Windows.Controls.Label> (dla nagłówka listy).
-- A <xref:System.Windows.Controls.Button> (kliknij, aby wyświetlić raport wydatków dla osoby, która została wybrana na liście).
+- <xref:System.Windows.Controls.ListBox> (dla listy osób).
+- <xref:System.Windows.Controls.Label> (dla nagłówka listy).
+- <xref:System.Windows.Controls.Button> (kliknij, aby wyświetlić raport wydatków dla osoby, która została wybrana na liście).
 
-Każda kontrolka jest umieszczana w wierszu <xref:System.Windows.Controls.Grid> obiektu przez <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> ustawienie dołączonej właściwości. Aby uzyskać więcej informacji o dołączanych właściwościach, zobacz temat [dołączone właściwości przegląd](../advanced/attached-properties-overview.md).
+Każda kontrolka jest umieszczana w wierszu <xref:System.Windows.Controls.Grid> przez ustawienie <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> dołączonej właściwości. Aby uzyskać więcej informacji o dołączanych właściwościach, zobacz temat [dołączone właściwości przegląd](../advanced/attached-properties-overview.md).
 
-1. W *`ExpenseItHome.xaml`* programie Dodaj następujący kod XAML gdzieś <xref:System.Windows.Controls.Grid> między tagami:
+1. W *`ExpenseItHome.xaml`* Dodaj następujący kod XAML gdzieś między tagami <xref:System.Windows.Controls.Grid>:
 
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
@@ -292,7 +292,7 @@ Każda kontrolka jest umieszczana w wierszu <xref:System.Windows.Controls.Grid> 
 
 W tej sekcji zaktualizujesz interfejs użytkownika strony głównej za pomocą obrazu i tytułu strony.
 
-1. W *`ExpenseItHome.xaml`* programie Dodaj kolejną kolumnę <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> z ustaloną <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 pikseli:
+1. W *`ExpenseItHome.xaml`* Dodaj kolejną kolumnę do <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> o stałym <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 pikseli:
 
     [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
@@ -300,19 +300,19 @@ W tej sekcji zaktualizujesz interfejs użytkownika strony głównej za pomocą o
 
     [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
 
-3. Przenieś kontrolki do drugiej kolumny, ustawiając <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> właściwość na 1 w każdej z trzech kontrolek (obramowanie, ListBox i Button).
+3. Przenieś kontrolki do drugiej kolumny, ustawiając właściwość <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> na 1 w każdej z trzech kontrolek (obramowanie, ListBox i Button).
 
-4. Przenieś każdy formant w dół, zwiększając jego <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> wartość o 1 dla każdej z trzech kontrolek (obramowanie, ListBox i Button) oraz dla elementu Border.
+4. Przenieś każdy formant w dół, zwiększając jego wartość <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> o 1 dla każdej z trzech kontrolek (obramowanie, ListBox i Button) oraz dla elementu Border.
 
    KOD XAML dla trzech kontrolek wygląda teraz następująco:
 
     [!code-xaml[ExpenseIt#12](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#12)]
 
-5. Ustaw właściwość na plik obrazu *znaku wodnego. png* , dodając następujący `<Grid>` kod XAML gdziekolwiek między tagami i `</Grid>`: <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType>
+5. Ustaw właściwość <xref:System.Windows.Controls.Panel.Background%2A?displayProperty=nameWithType> na plik obrazu *znaku wodnego* , dodając Poniższy kod XAML między tagami `<Grid>` i `</Grid>`:
 
     [!code-xaml[ExpenseIt#14](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#14)]
 
-6. <xref:System.Windows.Controls.Border> Przed elementem <xref:System.Windows.Controls.Label> Dodaj element z zawartością "Wyświetl raport wydatków". Ta etykieta jest tytułem strony.
+6. Przed elementem <xref:System.Windows.Controls.Border> Dodaj <xref:System.Windows.Controls.Label> z zawartością "Wyświetl raport wydatków". Ta etykieta jest tytułem strony.
 
     [!code-xaml[ExpenseIt#13](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt5/ExpenseItHome.xaml#13)]
 
@@ -324,28 +324,28 @@ Na poniższej ilustracji przedstawiono wyniki, które właśnie Dodano:
 
 ## <a name="add-code-to-handle-events"></a>Dodawanie kodu do obsługi zdarzeń
 
-1. W *`ExpenseItHome.xaml`* programie Dodajdo<xref:System.Windows.Controls.Button> elementu procedurę obsługi zdarzeń.<xref:System.Windows.Controls.Primitives.ButtonBase.Click> Aby uzyskać więcej informacji, zobacz [jak: Utwórz prostą procedurę obsługi](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))zdarzeń.
+1. W *`ExpenseItHome.xaml`* Dodaj procedurę obsługi zdarzeń <xref:System.Windows.Controls.Primitives.ButtonBase.Click> do elementu <xref:System.Windows.Controls.Button>. Aby uzyskać więcej informacji, zobacz [jak: Tworzenie prostego programu obsługi zdarzeń](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100)).
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
 2. Otwórz *`ExpenseItHome.xaml.vb`* lub *`ExpenseItHome.xaml.cs`* .
 
-3. Dodaj następujący kod do klasy, `ExpenseItHome` aby dodać przycisk procedury obsługi zdarzeń. Procedura obsługi zdarzeń otwiera stronę **ExpenseReportPage** .
+3. Dodaj następujący kod do klasy `ExpenseItHome`, aby dodać przycisk procedury obsługi zdarzeń. Procedura obsługi zdarzeń otwiera stronę **ExpenseReportPage** .
 
     [!code-csharp[ExpenseIt#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml.cs#16)]
     [!code-vb[ExpenseIt#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt6/ExpenseItHome.xaml.vb#16)]
 
 ## <a name="create-the-ui-for-expensereportpage"></a>Tworzenie interfejsu użytkownika dla ExpenseReportPage
 
-*ExpenseReportPage. XAML* wyświetla raport wydatków dla osoby, która została wybrana na **`ExpenseItHome`** stronie. W tej sekcji utworzysz interfejs użytkownika dla **ExpenseReportPage**. Możesz również dodać kolory tła i wypełnienia do różnych elementów interfejsu użytkownika.
+*ExpenseReportPage. XAML* wyświetla raport wydatków dla osoby, która została wybrana na stronie **`ExpenseItHome`** . W tej sekcji utworzysz interfejs użytkownika dla **ExpenseReportPage**. Możesz również dodać kolory tła i wypełnienia do różnych elementów interfejsu użytkownika.
 
 1. Otwórz *ExpenseReportPage. XAML*.
 
-2. Dodaj następujący kod XAML między <xref:System.Windows.Controls.Grid> tagami:
+2. Dodaj następujący kod XAML między tagami <xref:System.Windows.Controls.Grid>:
 
     [!code-xaml[ExpenseIt#17](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseReportPage.xaml#17)]
 
-    Ten interfejs użytkownika jest podobny *`ExpenseItHome.xaml`* do, z wyjątkiem tego, że dane raportu <xref:System.Windows.Controls.DataGrid>są wyświetlane w.
+    Ten interfejs użytkownika jest podobny do *`ExpenseItHome.xaml`* , z wyjątkiem tego, że dane raportu są wyświetlane w <xref:System.Windows.Controls.DataGrid>.
 
 3. Skompiluj i uruchom aplikację.
 
@@ -363,39 +363,39 @@ Wygląd różnych elementów jest często taki sam dla wszystkich elementów teg
 
 1. Otwórz *aplikację Application. XAML* lub *App. XAML*.
 
-2. Dodaj następujący kod XAML między <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> tagami:
+2. Dodaj następujący kod XAML między tagami <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>:
 
     [!code-xaml[ExpenseIt#18](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/App.xaml#18)]
 
     Ten kod XAML dodaje następujące style:
 
-    - `headerTextStyle`: Aby sformatować tytuł <xref:System.Windows.Controls.Label>strony.
+    - `headerTextStyle`: Formatowanie tytułu strony <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`: Do formatowania <xref:System.Windows.Controls.Label> kontrolek.
+    - `labelStyle`: Aby sformatować kontrolki <xref:System.Windows.Controls.Label>.
 
     - `columnHeaderStyle`: Aby sformatować <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`: Aby sformatować kontrolki <xref:System.Windows.Controls.Border> nagłówka listy.
+    - `listHeaderStyle`: Aby sformatować kontrolki nagłówka listy <xref:System.Windows.Controls.Border>.
 
-    - `listHeaderTextStyle`: Aby sformatować nagłówek <xref:System.Windows.Controls.Label>listy.
+    - `listHeaderTextStyle`: Aby sformatować nagłówek listy <xref:System.Windows.Controls.Label>.
 
-    - `buttonStyle`: Aby sformatować <xref:System.Windows.Controls.Button> `ExpenseItHome.xaml`.
+    - `buttonStyle`: Aby sformatować <xref:System.Windows.Controls.Button> w `ExpenseItHome.xaml`.
 
-    Należy zauważyć, że style są zasobami i elementami podrzędnymi <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> elementu właściwości. W tej lokalizacji style są stosowane do wszystkich elementów w aplikacji. Aby zapoznać się z przykładem użycia zasobów w aplikacji .NET, zobacz [Korzystanie z zasobów aplikacji](../advanced/how-to-use-application-resources.md).
+    Należy zauważyć, że style są zasobami i elementami podrzędnymi elementu właściwości <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>. W tej lokalizacji style są stosowane do wszystkich elementów w aplikacji. Aby zapoznać się z przykładem użycia zasobów w aplikacji .NET, zobacz [Korzystanie z zasobów aplikacji](../advanced/how-to-use-application-resources.md).
 
-3. W *`ExpenseItHome.xaml`* programie Zamień wszystkie <xref:System.Windows.Controls.Grid> elementy między elementami o następującym języku XAML:
+3. W *`ExpenseItHome.xaml`* Zastąp wszystkie elementy <xref:System.Windows.Controls.Grid> następującym XAML:
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
-    Właściwości, takie jak <xref:System.Windows.VerticalAlignment> i <xref:System.Windows.Media.FontFamily> definiujące wygląd poszczególnych kontrolek, są usuwane i zastępowane przez zastosowanie stylów. Na przykład, `headerTextStyle` jest stosowana do "Wyświetl raport wydatków" <xref:System.Windows.Controls.Label>.
+    Właściwości, takie jak <xref:System.Windows.VerticalAlignment> i <xref:System.Windows.Media.FontFamily> definiujące wygląd poszczególnych kontrolek, są usuwane i zastępowane przez zastosowanie stylów. Na przykład `headerTextStyle` jest zastosowana do <xref:System.Windows.Controls.Label>"Wyświetl raport wydatków".
 
 4. Otwórz *ExpenseReportPage. XAML*.
 
-5. Zastąp wszystkie <xref:System.Windows.Controls.Grid> elementy następującym XAML:
+5. Zastąp wszystkie elementy <xref:System.Windows.Controls.Grid> następującym XAML:
 
     [!code-xaml[ExpenseIt#20](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseReportPage.xaml#20)]
 
-    Ten kod XAML dodaje style do <xref:System.Windows.Controls.Label> elementów <xref:System.Windows.Controls.Border> i.
+    Ten kod XAML dodaje style do <xref:System.Windows.Controls.Label> i <xref:System.Windows.Controls.Border> elementów.
 
 6. Skompiluj i uruchom aplikację. Wygląd okna jest taki sam jak poprzednio.
 
@@ -407,13 +407,13 @@ Wygląd różnych elementów jest często taki sam dla wszystkich elementów teg
 
 W tej sekcji utworzysz dane XML powiązane z różnymi kontrolkami.
 
-1. W *`ExpenseItHome.xaml`* programie po otwarciu <xref:System.Windows.Controls.Grid> elementu Dodaj <xref:System.Windows.Data.XmlDataProvider> następujący kod XAML, aby utworzyć zawierający dane dla każdej osoby:
+1. W *`ExpenseItHome.xaml`* po otwarciu elementu <xref:System.Windows.Controls.Grid> Dodaj następujący kod XAML, aby utworzyć <xref:System.Windows.Data.XmlDataProvider> zawierający dane dla każdej osoby:
 
     [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
-    Dane są tworzone jako <xref:System.Windows.Controls.Grid> zasób. Zwykle te dane zostałyby załadowane jako plik, ale dla uproszczenia dane są dodawane wewnętrznie.
+    Dane są tworzone jako zasób <xref:System.Windows.Controls.Grid>. Zwykle te dane zostałyby załadowane jako plik, ale dla uproszczenia dane są dodawane wewnętrznie.
 
-2. W elemencie Dodaj następujący `<xref:System.Windows.DataTemplate>` element, który definiuje sposób <xref:System.Windows.Controls.ListBox>wyświetlania danych `<XmlDataProvider>` w, po elemencie: `<Grid.Resources>`
+2. W `<Grid.Resources>` elementu Dodaj następujący element `<xref:System.Windows.DataTemplate>`, który definiuje sposób wyświetlania danych w <xref:System.Windows.Controls.ListBox>, po elemencie `<XmlDataProvider>`:
 
     [!code-xaml[ExpenseIt#24](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,43-46,49)]
 
@@ -427,7 +427,7 @@ W tej sekcji utworzysz dane XML powiązane z różnymi kontrolkami.
 
 ## <a name="connect-data-to-controls"></a>Łączenie danych z kontrolkami
 
-Następnie dodasz kod w celu pobrania nazwy wybranej na **`ExpenseItHome`** stronie i przekazania jej do konstruktora **ExpenseReportPage**. **ExpenseReportPage** ustawia swój kontekst danych z elementem zakończonym, co oznacza, że kontrolki zdefiniowane w *ExpenseReportPage. XAML* są powiązane z.
+Następnie dodasz kod w celu pobrania nazwy wybranej na stronie **`ExpenseItHome`** i przekazania jej do konstruktora **ExpenseReportPage**. **ExpenseReportPage** ustawia swój kontekst danych z elementem zakończonym, co oznacza, że kontrolki zdefiniowane w *ExpenseReportPage. XAML* są powiązane z.
 
 1. Otwórz *ExpenseReportPage. XAML. vb* lub *ExpenseReportPage.XAML.cs*.
 
@@ -438,7 +438,7 @@ Następnie dodasz kod w celu pobrania nazwy wybranej na **`ExpenseItHome`** stro
 
 3. Otwórz *`ExpenseItHome.xaml.vb`* lub *`ExpenseItHome.xaml.cs`* .
 
-4. Zmień procedurę obsługi zdarzeń, aby wywoływać nowego konstruktora przekazującego dane raportu wydatków wybranej osoby. <xref:System.Windows.Controls.Primitives.ButtonBase.Click>
+4. Zmień procedurę obsługi zdarzeń <xref:System.Windows.Controls.Primitives.ButtonBase.Click>, aby wywoływać nowego konstruktora przekazującego dane raportu wydatków wybranej osoby.
 
     [!code-csharp[ExpenseIt#27](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml.cs#27)]
     [!code-vb[ExpenseIt#27](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt8/ExpenseItHome.xaml.vb#27)]
@@ -449,15 +449,15 @@ W tej sekcji należy zaktualizować interfejs użytkownika dla każdego elementu
 
 1. Otwórz *ExpenseReportPage. XAML*.
 
-2. Powiąż zawartość elementów "name" i "Department" <xref:System.Windows.Controls.Label> z odpowiednią właściwością źródła danych. Aby uzyskać więcej informacji na temat powiązania danych, zobacz temat [powiązanie danych — omówienie](../data/data-binding-overview.md).
+2. Powiąż zawartość <xref:System.Windows.Controls.Label> elementów "name" i "Department" z odpowiednią właściwością źródła danych. Aby uzyskać więcej informacji na temat powiązania danych, zobacz temat [powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md).
 
     [!code-xaml[ExpenseIt#31](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#31)]
 
-3. Po otwarciu <xref:System.Windows.Controls.Grid> elementu Dodaj następujące szablony danych, które definiują sposób wyświetlania danych raportu wydatków:
+3. Po otwarciu elementu <xref:System.Windows.Controls.Grid> należy dodać następujące szablony danych, które definiują sposób wyświetlania danych raportu wydatków:
 
     [!code-xaml[ExpenseIt#30](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#30)]
 
-4. <xref:System.Windows.Controls.DataGridTextColumn> Zamień elementy<xref:System.Windows.Controls.DataGridTemplateColumn> naelementiZastosuj<xref:System.Windows.Controls.DataGrid> do nich szablony.
+4. Zastąp <xref:System.Windows.Controls.DataGridTextColumn> elementami <xref:System.Windows.Controls.DataGridTemplateColumn> pod elementem <xref:System.Windows.Controls.DataGrid> i Zastosuj do nich szablony.
 
     [!code-xaml[ExpenseIt#32](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseReportPage.xaml#32)]
 
@@ -465,7 +465,7 @@ W tej sekcji należy zaktualizować interfejs użytkownika dla każdego elementu
 
 6. Wybierz osobę, a następnie wybierz przycisk **Wyświetl** .
 
-Na poniższej ilustracji przedstawiono obie strony `ExpenseIt` aplikacji z kontrolkami, układem, stylem, powiązaniem danych i szablonami danych, które zostały zastosowane:
+Na poniższej ilustracji przedstawiono obie strony aplikacji `ExpenseIt` z kontrolkami, układem, stylami, powiązaniem danych i szablonami danych:
 
 ![Obie strony aplikacji pokazują listę nazw i raport wydatków.](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
@@ -473,7 +473,7 @@ Na poniższej ilustracji przedstawiono obie strony `ExpenseIt` aplikacji z kontr
 > Ten przykład pokazuje konkretną funkcję WPF i nie jest zgodny ze wszystkimi najlepszymi rozwiązaniami dotyczącymi takich elementów, jak zabezpieczenia, lokalizacja i ułatwienia dostępu. Aby uzyskać kompleksową obsługę WPF i najlepszych rozwiązań programistycznych dotyczących projektowania aplikacji .NET, zobacz następujące tematy:
 >
 > - [Ułatwienia dostępu](../../ui-automation/accessibility-best-practices.md)
-> - [Zabezpieczenia](../security-wpf.md)
+> - [Security](../security-wpf.md)
 > - [Globalizacja i lokalizacja WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Wydajność WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -490,7 +490,7 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji, zobacz następują
 
 - [Opracowywanie aplikacji](../app-development/index.md)
 - [Kontrolki](../controls/index.md)
-- [Przegląd powiązań danych](../data/data-binding-overview.md)
+- [Przegląd powiązań danych](../../../desktop-wpf/data/data-binding-overview.md)
 - [Grafika i multimedia](../graphics-multimedia/index.md)
 - [Dokumenty w WPF](../advanced/documents-in-wpf.md)
 

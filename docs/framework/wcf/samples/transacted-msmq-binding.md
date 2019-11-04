@@ -2,27 +2,27 @@
 title: Transakcyjne powiązanie MSMQ
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-ms.openlocfilehash: 259ca8059ac1c4f62636a2320d5eb64daa7f56cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebf93ba5b7497d30ff7efceea3bd7ca827d5b502
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759989"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423901"
 ---
 # <a name="transacted-msmq-binding"></a>Transakcyjne powiązanie MSMQ
 
-W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ).
+Ten przykład pokazuje, jak przeprowadzić komunikację z kolejką w kolejce przy użyciu usługi kolejkowania komunikatów (MSMQ).
 
 > [!NOTE]
-> Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-W komunikacie w kolejce klient komunikuje się z usługą przy użyciu kolejki. Mówiąc ściślej klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. Usługi i klienta, więc nie musi być uruchomiona w tym samym czasie do komunikowania się za pomocą kolejki.
+W kolejce komunikacja klient komunikuje się z usługą przy użyciu kolejki. Dokładniej, klient wysyła komunikaty do kolejki. Usługa odbiera komunikaty z kolejki. W związku z tym usługa i klient nie muszą być uruchomione w tym samym czasie w celu komunikowania się przy użyciu kolejki.
 
-Jeśli transakcje są używane do wysyłania i odbierania komunikatów, są faktycznie dwóch oddzielnych transakcji. Gdy klient wysyła komunikaty w zakresie transakcji, transakcja jest lokalny dla klienta i Menedżer kolejki klienta. Gdy usługa odbiera komunikaty w zakresie transakcji, transakcja jest lokalnego do usługi i odbieranie Menedżer kolejki. Jest bardzo ważne, należy pamiętać, że klient i usługa nie uczestniczą w tej samej transakcji; przeciwnie używają różnych transakcji podczas ich działania (takie jak wysyłanie i odbieranie) z kolejką.
+Gdy transakcje są używane do wysyłania i odbierania wiadomości, istnieją w rzeczywistości dwie osobne transakcje. Gdy klient wysyła komunikaty w zakresie transakcji, transakcja jest lokalna dla klienta i Menedżera kolejki klienta. Gdy usługa odbiera komunikaty w zakresie transakcji, transakcja jest lokalna dla usługi i Menedżera kolejki odbierającej. Bardzo ważne jest, aby pamiętać, że klient i usługa nie uczestniczą w tej samej transakcji. Zamiast tego korzystają z różnych transakcji podczas wykonywania operacji (takich jak wysyłanie i odbieranie) z kolejką.
 
-W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji. Komunikaty wysyłane do kolejki następnie są odbierane przez usługę w zakresie transakcji, zdefiniowane przez usługę.
+W tym przykładzie klient wysyła partię komunikatów do usługi z zakresu transakcji. Komunikaty wysyłane do kolejki są następnie odbierane przez usługę w zakresie transakcji zdefiniowanym przez usługę.
 
-Umowa serwisowa jest `IOrderProcessor`, jak pokazano w poniższym przykładowym kodzie. Interfejs definiuje usługi jednokierunkowej, który jest odpowiedni do użytku z kolejki.
+Kontrakt usługi jest `IOrderProcessor`, jak pokazano w poniższym przykładowym kodzie. Interfejs definiuje jednokierunkową usługę, która jest odpowiednia do użycia z kolejkami.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -33,7 +33,7 @@ public interface IOrderProcessor
 }
 ```
 
-Zachowanie usługi definiuje zachowanie operacji za pomocą `TransactionScopeRequired` równa `true`. Gwarantuje to, że ten sam zakres transakcji, który służy do pobierania komunikatu z kolejki jest używany przez wszystkie menedżerów zasobów uzyskiwał dostęp do metody. Gwarantuje również, że jeśli metoda zgłasza wyjątek, zwracany jest komunikat do kolejki. Bez ustawienia tego zachowania operacji, kanał umieszczonych w kolejce tworzy transakcji, aby odczytać wiadomość z kolejki i zatwierdzeń go automatycznie przed wysyłką tak, jeśli operacja nie powiedzie się, komunikat zostanie utracony. Najbardziej typowym scenariuszem jest dla operacji usługi można zarejestrować w transakcji, który jest używany do odczytu komunikatu z kolejki, jak pokazano w poniższym kodzie.
+Zachowanie usługi definiuje zachowanie operacji z `TransactionScopeRequired`m ustawionym na `true`. Gwarantuje to, że ten sam zakres transakcji, który jest używany do pobierania wiadomości z kolejki jest używany przez menedżerów zasobów, do których uzyskuje dostęp Metoda. Gwarantuje również, że jeśli metoda zgłasza wyjątek, komunikat jest zwracany do kolejki. Bez ustawiania tego zachowania, kanał umieszczony w kolejce tworzy transakcję odczytu wiadomości z kolejki i zatwierdza ją automatycznie przed wysłaniem, jeśli operacja nie powiedzie się, komunikat zostanie utracony. Najbardziej typowym scenariuszem jest to, że operacje usługi mogą być rejestrowane w transakcji, która jest używana do odczytywania wiadomości z kolejki, jak pokazano w poniższym kodzie.
 
 ```csharp
  // This service class that implements the service contract.
@@ -50,7 +50,7 @@ Zachowanie usługi definiuje zachowanie operacji za pomocą `TransactionScopeReq
 }
 ```
 
-Usługa jest samodzielnie hostowana. Za pomocą transportu MSMQ, kolejki, używane musi zostać utworzona wcześniej. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera kod, aby sprawdzić istnienia kolejki i utworzyć kolejkę, jeśli nie istnieje. Nazwa kolejki jest do odczytu z pliku konfiguracji. Adres podstawowy jest używany przez [narzędzia narzędzie metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania serwera proxy do usługi.
+Usługa jest samodzielna. W przypadku korzystania z transportu usługi MSMQ użyta Kolejka musi zostać utworzona z góry. Można to zrobić ręcznie lub przy użyciu kodu. W tym przykładzie usługa zawiera kod służący do sprawdzania istnienia kolejki i tworzenia kolejki, jeśli nie istnieje. Nazwa kolejki jest odczytywana z pliku konfiguracji. Adres podstawowy jest używany przez narzędzie do obsługi [metadanych ServiceModel (Svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) w celu wygenerowania serwera proxy w usłudze.
 
 ```csharp
 // Host the service within this EXE console application.
@@ -81,7 +81,7 @@ public static void Main()
 }
 ```
 
-Nazwa kolejki usługi MSMQ jest określony w sekcji appSettings pliku konfiguracji, jak pokazano w poniższym Przykładowa konfiguracja.
+Nazwa kolejki MSMQ jest określona w sekcji appSettings w pliku konfiguracji, jak pokazano w poniższej konfiguracji przykładowej.
 
 ```xml
 <appSettings>
@@ -90,9 +90,9 @@ Nazwa kolejki usługi MSMQ jest określony w sekcji appSettings pliku konfigurac
 ```
 
 > [!NOTE]
-> Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatory ukośnik odwrotny w ścieżce do utworzenia przy użyciu kolejki <xref:System.Messaging>. Punkt końcowy usługi Windows Communication Foundation (WCF) używa adresu kolejki ze schematem net.msmq używa "localhost" do określenia komputera lokalnego i używa ukośników w ścieżce.
+> Nazwa kolejki używa kropki (.) dla komputera lokalnego i separatorów ukośników odwrotnych w ścieżce podczas tworzenia kolejki przy użyciu <xref:System.Messaging>. Punkt końcowy Windows Communication Foundation (WCF) używa adresu kolejki w schemacie net. MSMQ, używa "localhost" do określenia komputera lokalnego i używa ukośników w ścieżce.
 
-Klient tworzy zakres transakcji. Komunikacja z kolejką odbywa się w zakresie transakcji, co powoduje powinien być traktowany jako pojedynczej Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub żadne komunikaty są wysyłane do kolejki. Transakcja została zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.
+Klient tworzy zakres transakcji. Komunikacja z kolejką odbywa się w zakresie transakcji, co sprawia, że jest ona traktowana jako jednostka niepodzielna, w której wszystkie komunikaty są wysyłane do kolejki lub żaden z komunikatów nie jest wysyłany do kolejki. Transakcja jest zatwierdzana przez wywołanie <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.
 
 ```csharp
 // Create a client.
@@ -134,17 +134,17 @@ Console.WriteLine("Press <ENTER> to terminate client.");
 Console.ReadLine();
 ```
 
-Aby sprawdzić, czy działają transakcji, zmodyfikować klienta, oznaczając zakresu transakcji, jak pokazano w poniższym przykładowym kodzie, ponownie skompiluj rozwiązanie i uruchomić klienta.
+Aby sprawdzić, czy transakcje działają, zmodyfikuj klienta, dodając komentarz do zakresu transakcji, jak pokazano w poniższym przykładowym kodzie, Skompiluj ponownie rozwiązanie i uruchom klienta.
 
 ```csharp
 //scope.Complete();
 ```
 
-Ponieważ transakcja nie jest zakończona, nie są wysyłane komunikaty do kolejki.
+Ponieważ transakcja nie została ukończona, wiadomości nie są wysyłane do kolejki.
 
-Po uruchomieniu przykładu, działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Możesz zobaczyć komunikaty odbierania usługi z klienta. Naciśnij klawisz ENTER każdego okna konsoli, aby zamknąć usługę i klienta. Należy zauważyć, że ponieważ kolejkowania wiadomości jest używany, klient i usługa musi być uruchomiona w tym samym czasie. Można uruchomić klienta, zamknij go, a następnie uruchom usługi i wciąż otrzymuje komunikaty.
+Po uruchomieniu przykładu działania klienta i usługi są wyświetlane zarówno w systemie, jak i w oknach konsoli klienta. Możesz zobaczyć, że usługa odbiera komunikaty od klienta. Naciśnij klawisz ENTER w każdym oknie konsoli, aby zamknąć usługę i klienta. Należy pamiętać, że ponieważ usługa kolejkowania jest w użyciu, klient i usługi nie muszą działać w tym samym czasie. Można uruchomić klienta programu, zamknąć go, a następnie uruchomić usługę i nadal otrzymuje komunikaty.
 
-```
+```console
 The service is ready.
 Press <ENTER> to terminate service.
 
@@ -157,31 +157,31 @@ Processing Purchase Order: 7b31ce51-ae7c-4def-9b8b-617e4288eafd
         Order status: Pending
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Jeśli usługa jest uruchamiana pierwszy, będzie sprawdzał, aby upewnić się, że kolejka jest obecny. Jeśli kolejka nie jest obecny, będzie utworzyć usługę. Można uruchomić usługi, aby najpierw utworzyć kolejkę, lub możesz je utworzyć za pomocą Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w programie Windows 2008.
+2. Jeśli usługa jest uruchamiana po raz pierwszy, sprawdzi, czy kolejka jest obecna. Jeśli kolejka nie istnieje, usługa utworzy ją. Aby utworzyć kolejkę, można najpierw uruchomić tę usługę lub utworzyć ją za pośrednictwem Menedżera kolejki usługi MSMQ. Wykonaj następujące kroki, aby utworzyć kolejkę w systemie Windows 2008.
 
-    1. Otwórz Menedżera serwera w programie Visual Studio 2012.
+    1. Otwórz Menedżer serwera w programie Visual Studio 2012.
 
-    2. Rozwiń **funkcji** kartę.
+    2. Rozwiń kartę **funkcje** .
 
-    3. Kliknij prawym przyciskiem myszy **prywatnej kolejki komunikatów**i wybierz **New**, **kolejki prywatnej**.
+    3. Kliknij prawym przyciskiem myszy pozycję **prywatne kolejki komunikatów**, a następnie wybierz kolejno pozycje **Nowa**i **prywatne**.
 
-    4. Sprawdź **transakcyjna** pole.
+    4. Zaznacz pole **transakcyjne** .
 
     5. Wprowadź `ServiceModelSamplesTransacted` jako nazwę nowej kolejki.
 
-3. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+3. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Do uruchomienia przykładu w konfiguracji o jednym lub między komputerami, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-Domyślnie <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczenia transportu jest włączona. Istnieją dwie właściwości istotnych dla zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Domyślnie, tryb uwierzytelniania jest ustawiony na `Windows` i poziom ochrony jest ustawiony na `Sign`. Dla usługi MSMQ zapewniać uwierzytelnianie i podpisywania funkcji musi być częścią domeny i musi być zainstalowany opcji integracji usługi Active Directory dla usługi MSMQ. Jeśli w tym przykładzie jest uruchomiony na komputerze, który nie spełnia tych kryteriów, otrzymasz komunikat o błędzie.
+Domyślnie przy <xref:System.ServiceModel.NetMsmqBinding>włączono zabezpieczenia transportu. Istnieją dwie istotne właściwości zabezpieczeń transportu usługi MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> i <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>. Domyślnie tryb uwierzytelniania jest ustawiony na `Windows`, a poziom ochrony jest ustawiony na `Sign`. Aby usługa MSMQ zapewniała funkcję uwierzytelniania i podpisywania, musi być częścią domeny i należy zainstalować opcję integracji Active Directory dla usługi MSMQ. Jeśli ten przykład zostanie uruchomiony na komputerze, który nie spełnia tych kryteriów, zostanie wyświetlony komunikat o błędzie.
 
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Do uruchomienia przykładu na komputer przyłączony do grupy roboczej lub bez integracji usługi Active Directory
+### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Aby uruchomić przykład na komputerze przyłączonym do grupy roboczej lub bez integracji z Active Directory
 
-1. Jeśli komputer nie jest częścią domeny lub nie ma zainstalowaną integracją usługi Active Directory, należy wyłączyć zabezpieczenia transportu, ustawienie poziomu uwierzytelniania w trybie i ochrony `None` jak pokazano w poniższym kodzie przykładowej konfiguracji.
+1. Jeśli komputer nie jest częścią domeny lub nie ma zainstalowanej integracji Active Directory, Wyłącz zabezpieczenia transportu, ustawiając tryb uwierzytelniania i poziom ochrony na `None`, jak pokazano w poniższym przykładowym kodzie konfiguracyjnym.
 
     ```xml
     <system.serviceModel>
@@ -225,16 +225,16 @@ Domyślnie <xref:System.ServiceModel.NetMsmqBinding>, zabezpieczenia transportu 
       </system.serviceModel>
     ```
 
-2. Upewnij się, zmień konfigurację serwera i klienta, przed uruchomieniem przykładu.
+2. Przed uruchomieniem przykładu należy zmienić konfigurację na serwerze i kliencie programu.
 
     > [!NOTE]
-    > Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>, i `Message` security `None`.
+    > Ustawienie `security mode` `None` jest równoznaczne z ustawieniem <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>i `Message` zabezpieczenia `None`.
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Transacted`

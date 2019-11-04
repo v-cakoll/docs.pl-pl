@@ -4,12 +4,12 @@ description: W tym samouczku przedstawiono sposób tworzenia modelu regresji prz
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 298dd4aa97518bcfdb0c5c4f00e0135a328b3b9a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a7a7a246f3153889343589a7b32c183ca30df5a3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774419"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459159"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Samouczek: prognozowanie cen przy użyciu regresji z ML.NET
 
@@ -41,13 +41,13 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 ## <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 
-1. Pobierz zestawy danych [Taxi-Fare-Train. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) i [Taxi-Fare-test. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) i Zapisz je w folderze *danych* utworzonym w poprzednim kroku. Te zestawy danych są używane do uczenia modelu uczenia maszynowego, a następnie szacowania dokładnego modelu. Te zestawy danych pierwotnie pochodzą z [zestawu danych o podróży NYC TLC](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. Pobierz zestawy danych [Taxi-Fare-Train. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) i [Taxi-Fare-test. csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) i Zapisz je w folderze *danych* utworzonym w poprzednim kroku. Te zestawy danych są używane do uczenia modelu uczenia maszynowego, a następnie szacowania dokładnego modelu. Te zestawy danych pierwotnie pochodzą z [zestawu danych o podróży NYC TLC](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
 
 1. W **Eksplorator rozwiązań**kliknij prawym przyciskiem myszy każdy z plików \*. csv i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
 
 1. Otwórz zestaw danych **Taxi-Fare-Train. csv** i sprawdź nagłówki kolumn w pierwszym wierszu. Zapoznaj się z każdą kolumną. Zrozumienie danych i decydowanie o tym, które kolumny są **funkcjami** , a które są takie same jak **etykieta**.
 
-@No__t_0 to kolumna, która ma zostać przewidywalna. Zidentyfikowane `Features`są danymi wejściowymi, które umożliwiają modelowi przewidywanie `Label`.
+`label` to kolumna, która ma zostać przewidywalna. Zidentyfikowane `Features`są danymi wejściowymi, które umożliwiają modelowi przewidywanie `Label`.
 
 Podany zestaw danych zawiera następujące kolumny:
 

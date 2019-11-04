@@ -2,19 +2,19 @@
 title: Sekwencje
 description: Dowiedz się, F# jak używać sekwencji, gdy masz dużą uporządkowaną kolekcję danych, ale niekoniecznie używać wszystkich elementów.
 ms.date: 02/19/2019
-ms.openlocfilehash: 63e878c2c11db25a08d449070ab779a6e6a2c2eb
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216760"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424978"
 ---
 # <a name="sequences"></a>Sekwencje
 
 > [!NOTE]
 > Linki do odwołań do interfejsów API w tym artykule przeprowadzą Cię do subskrypcji MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-*Sekwencja* jest logiczną serią wszystkich elementów jednego typu. Sekwencje są szczególnie przydatne w przypadku dużej, uporządkowanej kolekcji danych, ale niekoniecznie używać wszystkich elementów. Poszczególne elementy sekwencji są obliczane tylko w razie potrzeby, dlatego sekwencja może zapewnić lepszą wydajność niż lista w sytuacjach, w których nie wszystkie elementy są używane. Sekwencje są reprezentowane przez `seq<'T>` typ, który jest aliasem dla `System.Collections.Generic.IEnumerable`. W związku z tym każdy typ .NET Framework `System.IEnumerable` , który implementuje, może być używany jako sekwencja. [Moduł SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) zapewnia obsługę operacji dla operacji związanych z sekwencjami.
+*Sekwencja* jest logiczną serią wszystkich elementów jednego typu. Sekwencje są szczególnie przydatne w przypadku dużej, uporządkowanej kolekcji danych, ale niekoniecznie używać wszystkich elementów. Poszczególne elementy sekwencji są obliczane tylko w razie potrzeby, dlatego sekwencja może zapewnić lepszą wydajność niż lista w sytuacjach, w których nie wszystkie elementy są używane. Sekwencje są reprezentowane przez typ `seq<'T>`, który jest aliasem dla `System.Collections.Generic.IEnumerable`. W związku z tym każdy typ .NET Framework implementujący `System.IEnumerable` może być używany jako sekwencja. [Moduł SEQ](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) zapewnia obsługę operacji dla operacji związanych z sekwencjami.
 
 ## <a name="sequence-expressions"></a>Wyrażenia sekwencji
 
@@ -22,13 +22,13 @@ ms.locfileid: "71216760"
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Wyrażenia sekwencji składają się z F# wyrażeń, które tworzą wartości sekwencji. Mogą używać `yield` słowa kluczowego do tworzenia wartości, które stają się częścią sekwencji.
+Wyrażenia sekwencji składają się z F# wyrażeń, które tworzą wartości sekwencji. Mogą użyć słowa kluczowego `yield`, aby utworzyć wartości, które staną się częścią sekwencji.
 
 Poniżej znajduje się przykład.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Możesz użyć `->` operatora `yield`zamiast, w takim `do` przypadku można pominąć słowo kluczowe, jak pokazano w poniższym przykładzie.
+Możesz użyć operatora `->` zamiast `yield`, w takim przypadku można pominąć słowo kluczowe `do`, jak pokazano w poniższym przykładzie.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
@@ -36,11 +36,11 @@ Poniższy kod generuje listę par współrzędnych wraz z indeksem do tablicy, k
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
-`if` Wyrażenie użyte w sekwencji jest filtrem. Na przykład, aby wygenerować sekwencję tylko liczb pierwszych, przy założeniu, że masz funkcję `isprime` typu `int -> bool`, Konstruuj sekwencję w następujący sposób.
+Wyrażenie `if` użyte w sekwencji jest filtrem. Na przykład, aby wygenerować sekwencję tylko liczb pierwszych, przy założeniu, że masz funkcję `isprime` typu `int -> bool`, Konstruuj sekwencję w następujący sposób.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-W przypadku użycia `yield` lub `->` w iteracji, każda iteracja powinna generować pojedynczy element sekwencji. Jeśli każda iteracja tworzy sekwencję elementów, użyj `yield!`. W takim przypadku elementy generowane na każdej iteracji są łączone w celu utworzenia końcowej sekwencji.
+W przypadku używania `yield` lub `->` w iteracji należy oczekiwać, że każdy z iteracji będzie generował pojedynczy element sekwencji. Jeśli każda iteracja tworzy sekwencję elementów, użyj `yield!`. W takim przypadku elementy generowane na każdej iteracji są łączone w celu utworzenia końcowej sekwencji.
 
 W wyrażeniu sekwencji można łączyć wiele wyrażeń. Elementy wygenerowane przez każde wyrażenie są łączone ze sobą. Aby zapoznać się z przykładem, zobacz sekcję "Przykłady" w tym temacie.
 
@@ -50,11 +50,11 @@ W pierwszym przykładzie używane jest wyrażenie sekwencji zawierające iteracj
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-Poniższy kod używa `yield` do tworzenia tabeli mnożenia, która składa się z krotek trzech elementów, z których każdy składa się z dwóch czynników i produktu.
+Poniższy kod używa `yield`, aby utworzyć tabelę mnożenia, która składa się z krotek trzech elementów, z których każdy składa się z dwóch czynników i produktu.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
-Poniższy przykład ilustruje użycie `yield!` , aby połączyć poszczególne sekwencje w jedną końcową sekwencję. W takim przypadku sekwencje dla każdego poddrzewa w drzewie binarnym są łączone w funkcji cyklicznej, aby utworzyć ostateczną sekwencję.
+Poniższy przykład ilustruje użycie `yield!` do łączenia poszczególnych sekwencji w jedną końcową sekwencję. W takim przypadku sekwencje dla każdego poddrzewa w drzewie binarnym są łączone w funkcji cyklicznej, aby utworzyć ostateczną sekwencję.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1509.fs)]
 
@@ -62,7 +62,7 @@ Poniższy przykład ilustruje użycie `yield!` , aby połączyć poszczególne s
 
 Sekwencje obsługują wiele takich samych funkcji, jak [listy](lists.md). Sekwencje obsługują również operacje, takie jak grupowanie i zliczanie przy użyciu funkcji generujących klucze. Sekwencje obsługują również bardziej różnorodne funkcje wyodrębniania podsekwencji.
 
-Wiele typów danych, takich jak listy, tablice, zestawy i mapy, to niejawne sekwencje, ponieważ są wyliczalnymi kolekcjami. Funkcja, która przyjmuje sekwencję jako argument, działa z dowolnym wspólnym F# typem danych, oprócz dowolnego .NET Framework typ danych, który implementuje. `System.Collections.Generic.IEnumerable<'T>` W przeciwieństwie do funkcji, która przyjmuje listę jako argument, który może przyjmować tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że każdy typ implementujący rodzaj `System.Collections.Generic.IEnumerable<'T>`ogólny, który obejmuje tablice, listy, zestawy i mapy w F#, a także większość .NET Framework typów kolekcji, `seq` jest zgodny z typem i można go używać wszędzie tam, gdzie jest oczekiwana sekwencja .
+Wiele typów danych, takich jak listy, tablice, zestawy i mapy, to niejawne sekwencje, ponieważ są wyliczalnymi kolekcjami. Funkcja, która przyjmuje sekwencję jako argument, działa z dowolnym wspólnym F# typem danych, oprócz dowolnego .NET Framework typ danych implementującego `System.Collections.Generic.IEnumerable<'T>`. W przeciwieństwie do funkcji, która przyjmuje listę jako argument, który może przyjmować tylko listy. Typ `seq<'T>` jest skrótem typu dla `IEnumerable<'T>`. Oznacza to, że każdy typ implementujący ogólne `System.Collections.Generic.IEnumerable<'T>`, który obejmuje tablice, listy, zestawy i mapy w F#, a także większość .NET Framework typy kolekcji, jest zgodny z typem `seq` i można go użyć wszędzie tam, gdzie jest oczekiwana sekwencja.
 
 ## <a name="module-functions"></a>Funkcje modułu
 
@@ -76,7 +76,7 @@ Można utworzyć pustą sekwencję przy użyciu [SEQ. Empty](https://msdn.micros
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet9.fs)]
 
-Za pomocą [SEQ. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576) można utworzyć sekwencję, dla której elementy są tworzone za pomocą podania funkcji. Możesz również podać rozmiar sekwencji. Ta funkcja jest tak samo jak [list. init](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83), z tą różnicą, że elementy nie są tworzone, dopóki nie przeprowadzisz iteracji przez sekwencję. Poniższy kod ilustruje użycie `Seq.init`.
+Za pomocą [SEQ. init](https://msdn.microsoft.com/library/059de69d-812c-4f8e-be86-88aa72101576) można utworzyć sekwencję, dla której elementy są tworzone za pomocą podania funkcji. Możesz również podać rozmiar sekwencji. Ta funkcja jest tak samo jak [list. init](https://msdn.microsoft.com/library/dd38c096-0ea8-4858-be6b-794b90418b83), z tą różnicą, że elementy nie są tworzone, dopóki nie przeprowadzisz iteracji przez sekwencję. Poniższy kod ilustruje sposób używania `Seq.init`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet10.fs)]
 
@@ -90,7 +90,7 @@ Za pomocą [SEQ. ofArray —](https://msdn.microsoft.com/library/299cd4d9-be72-4
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet11.fs)]
 
-Za pomocą [SEQ. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)można utworzyć sekwencję z niejednoznacznie wpisanej kolekcji, takiej jak te zdefiniowane w `System.Collections`. Takie kolekcje o jednoznacznie określonym typie mają typ `System.Object` elementu i są wyliczane przy użyciu typu niegenerycznego. `System.Collections.Generic.IEnumerable&#96;1` Poniższy kod ilustruje użycie `Seq.cast` programu w celu `System.Collections.ArrayList` przekonwertowania na sekwencję.
+Za pomocą [SEQ. Cast](https://msdn.microsoft.com/library/1d087db3-a8b2-41dd-8ddc-227544529334)można utworzyć sekwencję z niejednoznacznie wpisanej kolekcji, takiej jak te zdefiniowane w `System.Collections`. Takie kolekcje o nieokreślonych typach mają typ elementu `System.Object` i są wyliczane przy użyciu nieogólnego typu `System.Collections.Generic.IEnumerable&#96;1`. Poniższy kod ilustruje użycie `Seq.cast` do przekonwertowania `System.Collections.ArrayList` na sekwencję.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet12.fs)]
 
@@ -98,11 +98,11 @@ Można zdefiniować nieskończone sekwencje przy użyciu funkcji [SEQ. initInfin
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet13.fs)]
 
-[SEQ. unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generuje sekwencję z funkcji obliczeniowej, która przyjmuje stan i przekształca ją w celu utworzenia każdego kolejnego elementu w sekwencji. Stan to tylko wartość, która jest używana do obliczenia każdego elementu i może ulec zmianie, gdy każdy element jest obliczany. Drugi argument `Seq.unfold` jest wartością początkową, która jest używana do uruchomienia sekwencji. `Seq.unfold`używa typu opcji dla stanu, który umożliwia zakończenie sekwencji przez zwrócenie `None` wartości. Poniższy kod przedstawia dwa przykłady sekwencji `seq1` i `fib`, `unfold` które są generowane przez operację. Pierwszy, `seq1`, jest prostą sekwencją z liczbami do 20. Sekunda, `fib`,, `unfold` używa do obliczania sekwencji Fibonacci. Ponieważ każdy element w sekwencji Fibonacci jest sumą poprzednich dwóch liczb Fibonacci, wartość stanu jest krotką, która składa się z poprzednich dwóch liczb w sekwencji. Wartość początkowa to `(1,1)`, pierwsze dwie liczby w sekwencji.
+[SEQ. unfold](https://msdn.microsoft.com/library/7d9232fc-742e-42bc-bdf7-6f130f0eff21) generuje sekwencję z funkcji obliczeniowej, która przyjmuje stan i przekształca ją w celu utworzenia każdego kolejnego elementu w sekwencji. Stan to tylko wartość, która jest używana do obliczenia każdego elementu i może ulec zmianie, gdy każdy element jest obliczany. Drugi argument `Seq.unfold` jest wartością początkową, która jest używana do uruchomienia sekwencji. `Seq.unfold` używa typu opcji dla stanu, który umożliwia zakończenie sekwencji poprzez zwrócenie wartości `None`. Poniższy kod przedstawia dwa przykłady sekwencji, `seq1` i `fib`, które są generowane przez operację `unfold`. Pierwsza, `seq1`, to prosta sekwencja z liczbami do 20. Drugi `fib`, używa `unfold` do obliczania sekwencji Fibonacci. Ponieważ każdy element w sekwencji Fibonacci jest sumą poprzednich dwóch liczb Fibonacci, wartość stanu jest krotką, która składa się z poprzednich dwóch liczb w sekwencji. Wartość początkowa to `(1,1)`, pierwsze dwie liczby w sekwencji.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet14.fs)]
 
-Wynik jest następujący:
+Dane wyjściowe są następujące:
 
 ```console
 The sequence seq1 contains numbers from 0 to 20.
@@ -120,28 +120,28 @@ Poniższy kod to przykład, który używa wielu funkcji modułu sekwencji opisan
 
 ## <a name="searching-and-finding-elements"></a>Wyszukiwanie i znajdowanie elementów
 
-Funkcje obsługi sekwencji dostępne dla list: [SEQ. Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [SEQ. exists2 —](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [SEQ. Find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [SEQ. FindIndex —](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [SEQ. pobrań](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [SEQ. tryFind —](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)i [SEQ. tryFindIndex —](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Wersje tych funkcji, które są dostępne dla sekwencji, ocenią sekwencję tylko do elementu, który jest wyszukiwany. Aby zapoznać się z przykładami, zobacz [listy](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
+Funkcje obsługi sekwencji dostępne dla list: [SEQ. Exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1), [SEQ. exists2 —](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565), [SEQ. Find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8), [SEQ. FindIndex —](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3), [SEQ. pobranie](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d), [SEQ. tryFind —](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)i [SEQ. tryFindIndex —](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a). Wersje tych funkcji, które są dostępne dla sekwencji, ocenią sekwencję tylko do elementu, który jest wyszukiwany. Aby zapoznać się z przykładami, zobacz [listy](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d).
 
 ## <a name="obtaining-subsequences"></a>Uzyskiwanie podsekwencji
 
 [SEQ. Filter](https://msdn.microsoft.com/library/7f2e9850-a660-460c-9831-3bbff5613770) i [SEQ. Choose](https://msdn.microsoft.com/library/63b83b06-4b24-4239-bf69-a2c12d891395) przypomina odpowiadające im funkcje, które są dostępne dla list, z tą różnicą, że filtrowanie i wybór nie występują do momentu obliczenia elementów sekwencji.
 
-[SEQ. Truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) tworzy sekwencję z innej sekwencji, ale ogranicza sekwencję do określonej liczby elementów. [SEQ. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) tworzy nową sekwencję zawierającą tylko określoną liczbę elementów na początku sekwencji. Jeśli w sekwencji znajduje się mniej elementów niż określono do wykonania, program `Seq.take` `System.InvalidOperationException`wygeneruje. Różnica między `Seq.take` i `Seq.truncate` jest niegenerująca błędu, `Seq.truncate` Jeśli liczba elementów jest mniejsza niż liczba określona przez użytkownika.
+[SEQ. Truncate](https://msdn.microsoft.com/library/1892dfeb-308e-45e2-857a-3c3405d02244) tworzy sekwencję z innej sekwencji, ale ogranicza sekwencję do określonej liczby elementów. [SEQ. Take](https://msdn.microsoft.com/library/6e75f701-640b-4c4a-9d63-4313fc090596) tworzy nową sekwencję zawierającą tylko określoną liczbę elementów na początku sekwencji. Jeśli w sekwencji znajduje się mniej elementów niż określono do wykonania, `Seq.take` zgłasza `System.InvalidOperationException`. Różnica między `Seq.take` i `Seq.truncate` polega na tym, że `Seq.truncate` nie wygenerował błędu, jeśli liczba elementów jest mniejsza niż określona liczba.
 
-Poniższy kod przedstawia zachowanie i różnice między `Seq.truncate` i. `Seq.take`
+Poniższy kod przedstawia zachowanie i różnice między `Seq.truncate` i `Seq.take`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet16.fs)]
 
 Dane wyjściowe przed wystąpieniem błędu są następujące.
 
 ```console
-1 4 9 16 25 
-1 4 9 16 25 36 49 64 81 100 
-1 4 9 16 25 
+1 4 9 16 25
+1 4 9 16 25 36 49 64 81 100
+1 4 9 16 25
 1 4 9 16 25 36 49 64 81 100
 ```
 
-Za pomocą [SEQ. TakeWhile —](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92)można określić funkcję predykatu (funkcję logiczną) i utworzyć sekwencję z innej sekwencji składającej się z tych elementów oryginalnej sekwencji, dla których predykatu jest `true`, ale zatrzymać przed pierwszym elementem dla którego predykatu zwraca `false`. [SEQ. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) zwraca sekwencję, która pomija określoną liczbę pierwszych elementów w innej sekwencji i zwraca pozostałe elementy. [SEQ. SkipWhile —](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) zwraca sekwencję, która pomija pierwsze elementy innej sekwencji, tak długo, jak predykat zwraca `true`, a następnie zwraca pozostałe elementy, rozpoczynając od pierwszego elementu, dla którego predykat zwraca `false` .
+Korzystając z [SEQ. TakeWhile —](https://msdn.microsoft.com/library/19eea4ce-66e0-4353-b015-72eb03421d92), można określić funkcję predykatu (funkcję logiczną) i utworzyć sekwencję z innej sekwencji składającej się z tych elementów oryginalnej sekwencji, dla której predykat jest `true`, ale zatrzymać przed pierwszym elementem dla który predykat zwraca `false`. [SEQ. Skip](https://msdn.microsoft.com/library/b4eb3f08-8594-4d17-8180-852c6c688bf1) zwraca sekwencję, która pomija określoną liczbę pierwszych elementów w innej sekwencji i zwraca pozostałe elementy. [SEQ. SkipWhile —](https://msdn.microsoft.com/library/fb729021-2a3c-430f-83c3-0b37526f1a16) zwraca sekwencję, która pomija pierwsze elementy innej sekwencji, tak długo, jak predykat zwraca `true`, a następnie zwraca pozostałe elementy, rozpoczynając od pierwszego elementu, dla którego predykat zwraca `false`.
 
 Poniższy przykład kodu ilustruje zachowanie i różnice między `Seq.takeWhile`, `Seq.skip`i `Seq.skipWhile`.
 
@@ -150,8 +150,8 @@ Poniższy przykład kodu ilustruje zachowanie i różnice między `Seq.takeWhile
 Dane wyjściowe są następujące:
 
 ```console
-1 4 9 
-36 49 64 81 100 
+1 4 9
+36 49 64 81 100
 16 25 36 49 64 81 100
 ```
 
@@ -161,9 +161,9 @@ Dane wyjściowe są następujące:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet18.fs)]
 
-[SEQ. Windowd](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) `Seq.pairwise`przypomina, z tą różnicą, że zamiast tworzenia sekwencji krotek tworzy sekwencję tablic zawierających kopie sąsiadujących elementów ( *okna*) z sekwencji. Należy określić liczbę sąsiadujących elementów, które mają być w każdej tablicy.
+[SEQ. Windowd](https://msdn.microsoft.com/library/8b565b8f-d645-4dba-be22-099075fe4744) przypomina `Seq.pairwise`, z tą różnicą, że zamiast tworzenia sekwencji krotek tworzy sekwencję tablic zawierających kopie sąsiadujących elementów ( *okna*) z sekwencji. Należy określić liczbę sąsiadujących elementów, które mają być w każdej tablicy.
 
-Poniższy przykład kodu demonstruje użycie `Seq.windowed`. W takim przypadku liczba elementów w oknie to 3. W przykładzie zastosowano `printSeq`, który jest zdefiniowany w poprzednim przykładzie kodu.
+Poniższy przykład kodu demonstruje użycie `Seq.windowed`. W takim przypadku liczba elementów w oknie to 3. W przykładzie jest używany `printSeq`, który jest zdefiniowany w poprzednim przykładzie kodu.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet180.fs)]
 
@@ -172,12 +172,12 @@ Dane wyjściowe są następujące:
 Sekwencja początkowa:
 
 ```console
-1.0 1.5 2.0 1.5 1.0 1.5 
+1.0 1.5 2.0 1.5 1.0 1.5
 
-Windows of length 3: 
-[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|] 
+Windows of length 3:
+[|1.0; 1.5; 2.0|] [|1.5; 2.0; 1.5|] [|2.0; 1.5; 1.0|] [|1.5; 1.0; 1.5|]
 
-Moving average: 
+Moving average:
 1.5 1.666666667 1.5 1.333333333
 ```
 
@@ -191,13 +191,13 @@ Funkcje sortowania obsługiwane dla list również działają z sekwencjami. Obe
 
 Można porównać dwie sekwencje przy użyciu funkcji [SEQ. CompareWith —](https://msdn.microsoft.com/library/5a740135-0b3a-4545-816f-8f91cc31290f) . Funkcja porównuje kolejne elementy z kolei i przerywa, gdy napotka on pierwszą nierówną parę. Wszelkie dodatkowe elementy nie przyczyniają się do porównania.
 
-Poniższy kod ilustruje użycie `Seq.compareWith`.
+Poniższy kod przedstawia użycie `Seq.compareWith`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet19.fs)]
 
 W poprzednim kodzie tylko pierwszy element jest obliczany i sprawdzany, a wynik to-1.
 
-[SEQ. countBy —](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) pobiera funkcję, która generuje wartość o nazwie *Key* dla każdego elementu. Dla każdego elementu jest generowany klucz, wywołując tę funkcję dla każdego elementu. `Seq.countBy`następnie zwraca sekwencję zawierającą wartości klucza oraz liczbę elementów, które wygenerowały każdą wartość klucza.
+[SEQ. countBy —](https://msdn.microsoft.com/library/721702a5-150e-4fe8-81cd-ffbf8476cc1f) pobiera funkcję, która generuje wartość o nazwie *Key* dla każdego elementu. Dla każdego elementu jest generowany klucz, wywołując tę funkcję dla każdego elementu. `Seq.countBy` następnie zwraca sekwencję zawierającą wartości klucza oraz liczbę elementów, które wygenerowały każdą wartość klucza.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet201.fs)]
 
@@ -209,9 +209,9 @@ Dane wyjściowe są następujące:
 
 Poprzednie dane wyjściowe pokazują, że wystąpiły 34 elementy oryginalnej sekwencji, która wygenerowała wartości Key 1, 33, które wygenerowały klucz 2 i 33 wartości, które wygenerowały klucz 0.
 
-Elementy sekwencji można grupować przez wywołanie [SEQ. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy`przyjmuje sekwencję i funkcję, która generuje klucz z elementu. Funkcja jest wykonywana na każdym elemencie sekwencji. `Seq.groupBy`zwraca sekwencję krotek, gdzie pierwszy element każdej krotki jest kluczem, a drugi to sekwencja elementów, które tworzą ten klucz.
+Elementy sekwencji można grupować przez wywołanie [SEQ. GroupBy](https://msdn.microsoft.com/library/d46a04df-1a42-40cc-a368-058c9c5806fd). `Seq.groupBy` przyjmuje sekwencję i funkcję, która generuje klucz z elementu. Funkcja jest wykonywana na każdym elemencie sekwencji. `Seq.groupBy` zwraca sekwencję krotek, gdzie pierwszy element każdej krotki jest kluczem, a drugi to sekwencja elementów, które tworzą ten klucz.
 
-Poniższy przykład kodu ilustruje użycie programu `Seq.groupBy` do partycjonowania sekwencji liczb z 1 do 100 w trzech grupach, które mają odrębne wartości klucza 0, 1 i 2.
+Poniższy przykład kodu ilustruje użycie `Seq.groupBy` do partycjonowania sekwencji liczb z 1 do 100 w trzech grupach, które mają odrębne wartości klucza 0, 1 i 2.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet202.fs)]
 
@@ -223,21 +223,21 @@ Dane wyjściowe są następujące:
 
 Można utworzyć sekwencję, która eliminuje zduplikowane elementy przez wywołanie [SEQ. DISTINCT](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401). Można też użyć [SEQ. distinctBy —](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75), który pobiera funkcję generującą klucz do wywołania dla każdego elementu. Utworzona sekwencja zawiera elementy oryginalnej sekwencji, które mają unikatowe klucze; późniejsze elementy, które generują zduplikowany klucz do wcześniejszego elementu, są odrzucane.
 
-Poniższy przykład kodu ilustruje użycie `Seq.distinct`. `Seq.distinct`jest przedstawiany przez generowanie sekwencji, które reprezentują liczby binarne, a następnie pokazuje, że jedyne różne elementy to 0 i 1.
+Poniższy przykład kodu ilustruje sposób używania `Seq.distinct`. `Seq.distinct` jest przedstawiany przez generowanie sekwencji, które reprezentują liczby binarne, a następnie pokazują, że jedyne różne elementy to 0 i 1.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet22.fs)]
 
-Poniższy kod ilustruje `Seq.distinctBy` , rozpoczynając od sekwencji zawierającej liczby ujemne i dodatnie oraz używając funkcji wartości bezwzględnej jako funkcji generującej klucz. Wynikowa sekwencja nie zawiera wszystkich liczb dodatnich, które odpowiadają liczbom ujemnym w sekwencji, ponieważ liczby ujemne występują wcześniej w sekwencji i w związku z tym są wybierane zamiast liczb dodatnich, które mają te same bezwzględne wartość lub klucz.
+Poniższy kod ilustruje `Seq.distinctBy`, rozpoczynając od sekwencji zawierającej liczbę ujemną i dodatnią i używając funkcji wartości bezwzględnej jako funkcji generującej klucz. Wynikowa sekwencja nie zawiera wszystkich liczb dodatnich, które odpowiadają liczbom ujemnym w sekwencji, ponieważ liczby ujemne występują wcześniej w sekwencji i w związku z tym są wybierane zamiast liczb dodatnich, które mają te same bezwzględne wartość lub klucz.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet23.fs)]
 
 ## <a name="readonly-and-cached-sequences"></a>Sekwencje ReadOnly i buforowane
 
-[SEQ. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) tworzy kopię sekwencji tylko do odczytu. `Seq.readonly`jest przydatne, gdy masz kolekcję do odczytu i zapisu, na przykład tablicę, i nie chcesz modyfikować oryginalnej kolekcji. Ta funkcja może służyć do zachowywania hermetyzacji danych. W poniższym przykładzie kodu zostanie utworzony typ zawierający tablicę. Właściwość uwidacznia tablicę, ale zamiast zwracać tablicę, zwraca sekwencję utworzoną z tablicy przy użyciu `Seq.readonly`.
+[SEQ. ReadOnly](https://msdn.microsoft.com/library/88059cb4-3bb0-4126-9448-fbcd48fe13a7) tworzy kopię sekwencji tylko do odczytu. `Seq.readonly` jest przydatne, gdy masz kolekcję do odczytu i zapisu, taką jak tablica, i nie chcesz modyfikować oryginalnej kolekcji. Ta funkcja może służyć do zachowywania hermetyzacji danych. W poniższym przykładzie kodu zostanie utworzony typ zawierający tablicę. Właściwość uwidacznia tablicę, ale zamiast zwracać tablicę, zwraca sekwencję utworzoną z tablicy przy użyciu `Seq.readonly`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/fssequences/snippet24.fs)]
 
-[SEQ. cache](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0) tworzy przechowywaną wersję sekwencji. Użyj `Seq.cache` , aby uniknąć ponownej oceny sekwencji lub jeśli masz wiele wątków, które używają sekwencji, ale musisz się upewnić, że każdy element jest poddany działaniu tylko jeden raz. Jeśli masz sekwencję, która jest używana przez wiele wątków, możesz mieć jeden wątek, który wylicza i oblicza wartości dla oryginalnej sekwencji, a pozostałe wątki mogą używać sekwencji w pamięci podręcznej.
+[SEQ. cache](https://msdn.microsoft.com/library/d197f9cc-08bf-4986-9869-246e72ca73f0) tworzy przechowywaną wersję sekwencji. Użyj `Seq.cache`, aby uniknąć ponownej oceny sekwencji lub jeśli masz wiele wątków, które używają sekwencji, ale musisz się upewnić, że każdy element jest poddany działaniu tylko raz. Jeśli masz sekwencję, która jest używana przez wiele wątków, możesz mieć jeden wątek, który wylicza i oblicza wartości dla oryginalnej sekwencji, a pozostałe wątki mogą używać sekwencji w pamięci podręcznej.
 
 ## <a name="performing-computations-on-sequences"></a>Wykonywanie obliczeń na sekwencjach
 

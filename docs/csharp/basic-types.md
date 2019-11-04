@@ -4,12 +4,12 @@ description: Informacje o typach podstawowych (liczbowych, ciągach i obiektach)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: f984321ab01fc4b5ddd92a20b178748de50246da
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7a75ad5080cd2646070447cbc3dcc46b8c73dd65
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037667"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420712"
 ---
 # <a name="types-variables-and-values"></a>Typy, zmienne i wartości
 
@@ -66,7 +66,7 @@ Typ może być zadeklarowany z co najmniej jednym *parametrem typu* , który sł
   
 [!code-csharp[Generic types](../../samples/snippets/csharp/concepts/basic-types/generic-type.cs)]
   
-Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](language-reference/keywords/object.md). Klasy kolekcji generycznej są nazywane *kolekcjami silnie określonymi* , ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do obiektu `strings` w Poprzedni przykład. Aby uzyskać więcej informacji, zobacz [Ogólne](programming-guide/generics/index.md).
+Użycie parametru typu umożliwia ponowne użycie tej samej klasy do przechowywania dowolnego typu elementu, bez konieczności konwertowania każdego elementu na [obiekt](language-reference/builtin-types/reference-types.md#the-object-type). Klasy kolekcji generycznej są nazywane *kolekcjami silnie określonymi* , ponieważ kompilator zna określony typ elementów kolekcji i może zgłosić błąd w czasie kompilacji, jeśli na przykład próbujesz dodać liczbę całkowitą do obiektu `strings` w Poprzedni przykład. Aby uzyskać więcej informacji, zobacz [Ogólne](programming-guide/generics/index.md).
 
 ## <a name="implicit-types-anonymous-types-and-tuple-types"></a>Typy niejawne, typy anonimowe i typy krotek
 
@@ -82,9 +82,9 @@ Ważne jest, aby zrozumieć dwa podstawowe punkty o systemie typów w .NET Frame
   
 - Obsługuje zasady dziedziczenia. Typy mogą pochodzić od innych typów, nazywanych *typami podstawowymi*. Typ pochodny dziedziczy (z pewnymi ograniczeniami) metody, właściwości i inne elementy członkowskie typu podstawowego. Typ podstawowy może być pochodny od innego typu, w tym przypadku typ pochodny dziedziczy elementy członkowskie obu typów podstawowych w hierarchii dziedziczenia. Wszystkie typy, w tym wbudowane typy liczbowe, takie jak <xref:System.Int32> (C# słowo kluczowe:`int`), uzyskują ostatecznie z jednego typu podstawowego, który jest<xref:System.Object>C# (słowo kluczowe:`object`). Ta ujednolicona hierarchia typów jest nazywana [systemem common Type System](../standard/common-type-system.md) (CTS). Aby uzyskać więcej informacji na temat C#dziedziczenia w programie, zobacz [dziedziczenie](programming-guide/classes-and-structs/inheritance.md).  
   
-- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET Framework, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](language-reference/keywords/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe to **struktury**. Aby uzyskać więcej informacji na temat typów wartości, zobacz [struktury](structs.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
+- Każdy typ w CTS jest zdefiniowany jako *Typ wartości* lub *typ referencyjny*. Obejmuje to wszystkie niestandardowe typy w bibliotece klas .NET Framework, a także własne typy zdefiniowane przez użytkownika. Typy zdefiniowane za pomocą słowa kluczowego [struct](language-reference/keywords/struct.md) są typami wartości; wszystkie wbudowane typy liczbowe to **struktury**. Aby uzyskać więcej informacji na temat typów wartości, zobacz [struktury](structs.md). Typy zdefiniowane za pomocą słowa kluczowego [Class](language-reference/keywords/class.md) to typy odwołań. Aby uzyskać więcej informacji na temat typów referencyjnych, zobacz [klasy](programming-guide/classes-and-structs/classes.md). Typy odwołań i typy wartości mają różne reguły czasu kompilacji i inne zachowanie w czasie wykonywania.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Struktury](structs.md)
-- [Klasy](classes.md)
+- [Klasy](programming-guide/classes-and-structs/classes.md)

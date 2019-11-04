@@ -1,5 +1,5 @@
 ---
-title: słowa kluczowego unsafe — C# odwołania
+title: niebezpieczne słowo kluczowe C# — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: aa22eac9d4ae06753bbed1fd5733eddeddd81a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875877"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422268"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (odwołanie w C#)
 
-`unsafe` — Słowo kluczowe określa niebezpieczny kontekst, który jest wymagany we wszystkich operacjach obejmujących wskaźniki. Aby uzyskać więcej informacji, zobacz [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md).
+Słowo kluczowe `unsafe` oznacza niebezpieczny kontekst, który jest wymagany dla każdej operacji obejmującej wskaźniki. Aby uzyskać więcej informacji, zobacz artykuł [niebezpieczny kod i wskaźniki](../../programming-guide/unsafe-code-pointers/index.md).
 
-Możesz użyć `unsafe` modyfikatora w deklaracji typu lub elementu członkowskiego. W związku z tym niebezpieczny kontekst jest uważany za cały zakres tekstowa typu lub elementu członkowskiego. Na przykład, następujące jest zadeklarowana za pomocą metody `unsafe` modyfikator:
+Można użyć modyfikatora `unsafe` w deklaracji typu lub elementu członkowskiego. Cały tekstowy zakres typu lub elementu członkowskiego jest traktowany jako niebezpieczny kontekst. Na przykład poniżej przedstawiono metodę zadeklarowaną z modyfikatorem `unsafe`:
 
 ```csharp
 unsafe static void FastCopy(byte[] src, byte[] dst, int count)
@@ -28,13 +28,13 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 }
 ```
 
-Zakres niebezpieczny kontekst rozciąga się od listy parametrów na końcu metody, więc wskaźniki można również na liście parametrów:
+Zakres niebezpiecznego kontekstu rozciąga się od listy parametrów na koniec metody, dlatego na liście parametrów można również używać wskaźników:
 
 ```csharp
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-Blok niebezpieczne umożliwia również korzystanie z niebezpieczny kod wewnątrz tego bloku. Na przykład:
+Można również użyć niebezpiecznego bloku, aby umożliwić użycie niebezpiecznego kodu wewnątrz tego bloku. Na przykład:
 
 ```csharp
 unsafe
@@ -43,7 +43,7 @@ unsafe
 }
 ```
 
-Aby skompilować kod niebezpieczny, należy określić [ `-unsafe` ](../compiler-options/unsafe-compiler-option.md) — opcja kompilatora. Niebezpieczny kod nie jest możliwe do zweryfikowania przez środowisko uruchomieniowe języka wspólnego.
+Aby skompilować niebezpieczny kod, należy określić opcję kompilatora [`-unsafe`](../compiler-options/unsafe-compiler-option.md) . Kod niebezpieczny nie jest możliwy do zweryfikowania przez środowisko uruchomieniowe języka wspólnego.
 
 ## <a name="example"></a>Przykład
 
@@ -51,11 +51,11 @@ Aby skompilować kod niebezpieczny, należy określić [ `-unsafe` ](../compiler
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz [niebezpieczny kod](~/_csharplang/spec/unsafe-code.md) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz artykuł [niebezpieczny kod](~/_csharplang/spec/unsafe-code.md) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [fixed, instrukcja](fixed-statement.md)

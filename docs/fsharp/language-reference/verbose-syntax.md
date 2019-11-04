@@ -2,16 +2,16 @@
 title: Pełna składnia
 description: Zapoznaj się z różnicą między pełną i uproszczoną F# składnią w języku programowania.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2459da60bba5d88bd23615c8bf09ba64f7c22c4
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214040"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421178"
 ---
 # <a name="verbose-syntax"></a>Pełna składnia
 
-Istnieją dwie formy składni dostępne dla wielu konstrukcji w F# języku: *Pełna składnia* i *składnia uproszczona*. Składnia verbose nie jest zgodna z powszechnie używanymi, ale ma zalety mniejszej czułości do wcięcia. Uproszczona składnia jest krótsza i używa wcięć do sygnalizowania początku i końca konstrukcji, zamiast dodatkowych słów kluczowych `begin` `in`, takich jak `end`,, i tak dalej. Domyślną składnią jest składnia uproszczona. W tym temacie opisano składnię F# dla konstrukcji, gdy nie jest włączona składnia uproszczona. Pełna składnia jest zawsze włączona, więc nawet w przypadku włączenia uproszczonej składni można nadal używać składni pełnej dla niektórych konstrukcji. Można wyłączyć składnię uproszczoną za pomocą `#light "off"` dyrektywy.
+Istnieją dwie formy składni dostępne dla wielu konstrukcji w F# języku: *Pełna składnia* i *składnia uproszczona*. Składnia verbose nie jest zgodna z powszechnie używanymi, ale ma zalety mniejszej czułości do wcięcia. Uproszczona składnia jest krótsza i używa wcięć do sygnalizowania początku i końca konstrukcji, zamiast dodatkowych słów kluczowych, takich jak `begin`, `end`, `in`i tak dalej. Domyślną składnią jest składnia uproszczona. W tym temacie opisano składnię F# dla konstrukcji, gdy nie jest włączona składnia uproszczona. Pełna składnia jest zawsze włączona, więc nawet w przypadku włączenia uproszczonej składni można nadal używać składni pełnej dla niektórych konstrukcji. Można wyłączyć składnię uproszczoną za pomocą dyrektywy `#light "off"`.
 
 ## <a name="table-of-constructs"></a>Tabela konstrukcji
 
@@ -44,7 +44,7 @@ wyrażenia złożone
 </tr>
 <tr><td>
 
-powiązania `let` zagnieżdżone
+zagnieżdżone powiązania `let`
 
 </td><td>
 
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>record
+<tr><td>Rekord
 </td><td>
 
 ```fsharp
@@ -354,4 +354,4 @@ module <module-name> =
 
 - [Dokumentacja języka F#](index.md)
 - [Dyrektywy kompilatora](compiler-directives.md)
-- [Wskazówki dotyczące formatowania kodu](code-formatting-guidelines.md)
+- [Wskazówki dotyczące formatowania kodu](../style-guide/formatting.md)

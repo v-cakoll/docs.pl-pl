@@ -2,12 +2,12 @@
 title: Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 73627455b1f4460edfe165126a388e961e98921f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 89a78e9e423ab4cce9fd3627ec433072ade238dc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353127"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419867"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Anulowanie zadania asynchronicznego lub listy zadań (Visual Basic)
 
@@ -57,7 +57,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
         Dim cts As CancellationTokenSource
     ```
 
-2. Dodaj następujący program obsługi zdarzeń dla przycisku **Anuluj** . Procedura obsługi zdarzeń używa metody <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> do powiadomienia `cts`, gdy użytkownik zażąda anulowania.
+2. Dodaj następujący program obsługi zdarzeń dla przycisku **Anuluj** . Procedura obsługi zdarzeń używa metody <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> do powiadamiania `cts`, gdy użytkownik zażąda anulowania.
 
     ```vb
     ' ***Add an event handler for the Cancel button.
@@ -78,7 +78,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
       cts = New CancellationTokenSource()
       ```
 
-    - W wywołaniu do `AccessTheWebAsync`, który pobiera zawartość określonej witryny sieci Web, Wyślij Właściwość <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> `cts` jako argument. Właściwość `Token` propaguje komunikat w przypadku żądania anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik zdecyduje się anulować operację pobierania. Poniższy kod przedstawia zmiany.
+    - W wywołaniu do `AccessTheWebAsync`, które pobiera zawartość określonej witryny sieci Web, Wyślij Właściwość <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> `cts` jako argument. Właściwość `Token` propaguje komunikat w przypadku żądania anulowania. Dodaj blok catch, który wyświetla komunikat, jeśli użytkownik zdecyduje się anulować operację pobierania. Poniższy kod przedstawia zmiany.
 
       ```vb
       Try
@@ -86,7 +86,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
           Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
           resultsTextBox.Text &=
-              String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+              vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
           ' *** If cancellation is requested, an OperationCanceledException results.
       Catch ex As OperationCanceledException
@@ -97,7 +97,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
       End Try
       ```
 
-4. W `AccessTheWebAsync` Użyj przeciążenia <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> metody `GetAsync` w typie <xref:System.Net.Http.HttpClient>, aby pobrać zawartość witryny sieci Web. Przekazanie @no__t-@no__t 0 `AccessTheWebAsync` jako drugi argument. Token przenosi komunikat, jeśli użytkownik wybierze przycisk **Anuluj** .
+4. W `AccessTheWebAsync`należy użyć przeciążenia <xref:System.Net.Http.HttpClient.GetAsync%28System.String%2CSystem.Threading.CancellationToken%29?displayProperty=nameWithType> metody `GetAsync` w typie <xref:System.Net.Http.HttpClient>, aby pobrać zawartość witryny sieci Web. Przekaż `ct`, parametr <xref:System.Threading.CancellationToken> `AccessTheWebAsync`jako drugi argument. Token przenosi komunikat, jeśli użytkownik wybierze przycisk **Anuluj** .
 
     Poniższy kod przedstawia zmiany w `AccessTheWebAsync`.
 
@@ -107,8 +107,7 @@ Następnie Dodaj następujące zmiany do pliku MainWindow. XAML. vb tego projekt
 
         Dim client As HttpClient = New HttpClient()
 
-        resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+        resultsTextBox.Text &= vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -206,11 +205,11 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
         Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+            vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
     Next
     ```
 
-4. Ponieważ `AccessTheWebAsync` wyświetla długości, metoda nie musi zwracać żadnych elementów. Usuń instrukcję return i Zmień zwracany typ metody na <xref:System.Threading.Tasks.Task> zamiast <xref:System.Threading.Tasks.Task%601>.
+4. Ponieważ `AccessTheWebAsync` wyświetla długości, metoda nie musi zwracać żadnych elementów. Usuń instrukcję return i Zmień zwracany typ metody na <xref:System.Threading.Tasks.Task>, a nie <xref:System.Threading.Tasks.Task%601>.
 
     ```vb
     Async Function AccessTheWebAsync(ct As CancellationToken) As Task
@@ -258,7 +257,7 @@ Aby poszerzyć przykład samodzielnie, krok po kroku, postępuj zgodnie z instru
 
 Poniższe sekcje zawierają kod dla każdego z powyższych przykładów. Należy zauważyć, że należy dodać odwołanie do <xref:System.Net.Http>.
 
-Możesz pobrać projekty z przykładu [Async: Dostosuj aplikację](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
+Możesz pobrać projekty z [przykładu asynchronicznego: dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ### <a name="cancel-a-task-example"></a>Anulowanie zadania przykładowego
 
@@ -287,7 +286,7 @@ Class MainWindow
             Dim contentLength As Integer = Await AccessTheWebAsync(cts.Token)
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, contentLength)
+                vbCrLf & $"Length of the downloaded string: {contentLength}." & vbCrLf
 
             ' *** If cancellation is requested, an OperationCanceledException results.
         Catch ex As OperationCanceledException
@@ -315,7 +314,7 @@ Class MainWindow
         Dim client As HttpClient = New HttpClient()
 
         resultsTextBox.Text &=
-            String.Format(vbCrLf & "Ready to download." & vbCrLf)
+            vbCrLf & "Ready to download." & vbCrLf
 
         ' You might need to slow things down to have a chance to cancel.
         Await Task.Delay(250)
@@ -413,7 +412,7 @@ Class MainWindow
             Dim urlContents As Byte() = Await response.Content.ReadAsByteArrayAsync()
 
             resultsTextBox.Text &=
-                String.Format(vbCrLf & "Length of the downloaded string: {0}." & vbCrLf, urlContents.Length)
+                vbCrLf & $"Length of the downloaded string: {urlContents.Length}." & vbCrLf
         Next
     End Function
 
@@ -470,4 +469,4 @@ End Class
 - <xref:System.Threading.CancellationToken>
 - [Programowanie asynchroniczne z Async i Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Dostrajanie aplikacji asynchronicznej (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Przykład asynchroniczny: Dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Próbka asynchroniczna: dostrajanie aplikacji](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

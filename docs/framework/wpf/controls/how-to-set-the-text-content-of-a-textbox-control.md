@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ustawianie zawartości tekstu dla kontrolki TextBox'
+title: Jak ustawić zawartość tekstu dla formantu TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 2e2bc70b108991fd4e3c138bfac5bff942173e33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9b16f2d99295a28725255361b0be3ef7f4245fd2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856112"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459304"
 ---
-# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Instrukcje: Ustawianie zawartości tekstu dla kontrolki TextBox
+# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Jak ustawić zawartość tekstu dla formantu TextBox
 
-Ten przykład pokazuje, jak użyć <xref:System.Windows.Controls.TextBox.Text%2A> właściwości, aby ustawić początkową zawartość <xref:System.Windows.Controls.TextBox> tekstu kontrolki.
+Ten przykład pokazuje, jak użyć właściwości <xref:System.Windows.Controls.TextBox.Text%2A> do ustawienia początkowej zawartości tekstowej kontrolki <xref:System.Windows.Controls.TextBox>.
 
 > [!NOTE]
-> <xref:System.Windows.Markup.ContentPropertyAttribute> <xref:System.Windows.Controls.TextBox> `<TextBox.Text>` <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox.Text%2A> Mimo że [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] wersja przykładu może używać tagów wokół tekstu zawartości przycisku, nie jest to konieczne, ponieważ stosuje atrybut do właściwości . Aby uzyskać więcej informacji, zobacz [XAML — Omówienie (WPF)](../advanced/xaml-overview-wpf.md).
+> Mimo że [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] wersja przykładu może używać tagów `<TextBox.Text>` wokół tekstu zawartości <xref:System.Windows.Controls.TextBox> poszczególnych przycisków, nie jest to konieczne, ponieważ <xref:System.Windows.Controls.TextBox> stosuje atrybut <xref:System.Windows.Markup.ContentPropertyAttribute> do właściwości <xref:System.Windows.Controls.TextBox.Text%2A>. Aby uzyskać więcej informacji, zobacz [XAML — Omówienie (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
 ## <a name="example"></a>Przykład
 

@@ -2,12 +2,12 @@
 title: Inspektorzy komunikatów
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 01553084aa049688cd05fa36e46fb6f67983fb21
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039399"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424150"
 ---
 # <a name="message-inspectors"></a>Inspektorzy komunikatów
 W tym przykładzie przedstawiono sposób wdrażania i konfigurowania inspektorów komunikatów klienta i usługi.  
@@ -17,9 +17,9 @@ W tym przykładzie przedstawiono sposób wdrażania i konfigurowania inspektoró
  Ten przykład służy do implementowania podstawowego mechanizmu sprawdzania poprawności komunikatów klienta i usługi, który weryfikuje komunikaty przychodzące względem zestawu konfigurowalnych dokumentów schematu XML. Należy zauważyć, że ten przykład nie sprawdza poprawności komunikatów dla każdej operacji. Jest to celowe uproszczenie.  
   
 ## <a name="message-inspector"></a>Inspektor komunikatów  
- Inspektorzy komunikatów klienta implementują <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> interfejs i inspektorzy komunikatów usługi <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> implementujący interfejs. Implementacje mogą być połączone w jedną klasę, aby utworzyć inspektora komunikatów, który działa po obu stronach. Ten przykład implementuje ten połączony Inspektor komunikatów. Inspektor jest zbudowany w zestawie schematów, do których są sprawdzane komunikaty przychodzące i wychodzące, i umożliwia deweloperom określenie, czy wiadomości przychodzące lub wychodzące są weryfikowane oraz czy inspektor znajduje się w trybie wysyłania lub klienta, który ma wpływ na obsługę błędów, jak opisano w dalszej części tego tematu.  
+ Inspektorzy komunikatów klienta implementują interfejs <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> i inspektorów komunikatów usługi implementują interfejs <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector>. Implementacje mogą być połączone w jedną klasę, aby utworzyć inspektora komunikatów, który działa po obu stronach. Ten przykład implementuje ten połączony Inspektor komunikatów. Inspektor jest zbudowany w zestawie schematów, do których są sprawdzane komunikaty przychodzące i wychodzące, i umożliwia deweloperom określenie, czy wiadomości przychodzące lub wychodzące są weryfikowane oraz czy inspektor znajduje się w trybie wysyłania lub klienta, który ma wpływ na obsługę błędów, jak opisano w dalszej części tego tematu.  
   
-```  
+```csharp  
 public class SchemaValidationMessageInspector : IClientMessageInspector, IDispatchMessageInspector  
 {  
     XmlSchemaSet schemaSet;  
@@ -41,9 +41,9 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  Każdy inspektor komunikatów usługi (dyspozytora) musi zaimplementować dwie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> metody <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> i <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>.  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>jest wywoływany przez dyspozytora, gdy otrzyma komunikat, przetworzony przez stos kanału i przypisany do usługi, ale zanim zostanie on rozszeregowany i wysłany do operacji. Jeśli komunikat przychodzący został zaszyfrowany, komunikat jest już odszyfrowany, gdy dociera do Inspektora komunikatów. Metoda pobiera `request` komunikat przekazaną jako parametr odwołania, który umożliwia kontrolowanie, manipulowanie lub zamienienie komunikatu jako wymagane. Wartością zwracaną może być dowolny obiekt i jest używany jako obiekt stanu korelacji, który jest przesyłany do <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> momentu, gdy usługa zwróci odpowiedź na bieżącą wiadomość. W tym przykładzie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> deleguje inspekcję (walidację) wiadomości do prywatnej, lokalnej metody `ValidateMessageBody` i nie zwraca obiektu stanu korelacji. Ta metoda zapewnia, że żadne nieprawidłowe komunikaty nie są przekazywane do usługi.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> jest wywoływany przez dyspozytora, gdy otrzyma komunikat, przetworzony przez stos kanału i przypisany do usługi, ale zanim zostanie on rozszeregowany i wysłany do operacji. Jeśli komunikat przychodzący został zaszyfrowany, komunikat jest już odszyfrowany, gdy dociera do Inspektora komunikatów. Metoda pobiera `request` komunikat przekazaną jako parametr referencyjny, który umożliwia kontrolowanie, manipulowanie lub zamienienie komunikatu w miarę potrzeb. Wartością zwracaną może być dowolny obiekt i jest używany jako obiekt stanu korelacji, który jest przesyłany do <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, gdy usługa zwróci odpowiedź do bieżącej wiadomości. W tym przykładzie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> deleguje inspekcję (walidację) wiadomości do prywatnej, lokalnej metody `ValidateMessageBody` i nie zwraca obiektu stanu korelacji. Ta metoda zapewnia, że żadne nieprawidłowe komunikaty nie są przekazywane do usługi.  
   
-```  
+```csharp  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
 {  
     if (validateRequest)  
@@ -56,11 +56,11 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>jest wywoływana za każdym razem, gdy odpowiedź jest gotowa do wysłania do klienta lub w przypadku komunikatów jednokierunkowych, gdy komunikat przychodzący został przetworzony. Pozwala to na stosowanie rozszerzeń w sposób symetryczny, niezależnie od unikatowy MEP. Podobnie jak <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>w przypadku, komunikat jest przenoszona jako parametr odwołania i może być sprawdzany, modyfikowany lub zastępowany. Sprawdzanie poprawności komunikatu, który jest wykonywany w tym przykładzie, jest ponownie delegowane do `ValidMessageBody` metody, ale obsługa błędów walidacji jest nieco inna w tym przypadku.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> jest wywoływana za każdym razem, gdy odpowiedź jest gotowa do wysłania do klienta lub w przypadku komunikatów jednokierunkowych, gdy komunikat przychodzący został przetworzony. Pozwala to na stosowanie rozszerzeń w sposób symetryczny, niezależnie od unikatowy MEP. Podobnie jak w przypadku <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>, komunikat jest przenoszona jako parametr odwołania i może być sprawdzany, modyfikowany lub zastępowany. Sprawdzanie poprawności komunikatu wykonywanego w tym przykładzie jest ponownie delegowane do metody `ValidMessageBody`, ale obsługa błędów walidacji jest nieco inna w tym przypadku.  
   
- Jeśli w usłudze wystąpi błąd walidacji, `ValidateMessageBody` Metoda zgłasza <xref:System.ServiceModel.FaultException>wyjątek pochodne. W <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>programie te wyjątki można umieścić w infrastrukturze modelu usług, gdzie są one automatycznie przekształcane w błędy protokołu SOAP i przekazywane do klienta. W programie <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>wyjątkiniemogą być umieszczane w infrastrukturze, ponieważ przekształcenie wyjątków błędów zgłaszanych przez usługę występuje przed wywołaniem inspektora komunikatów. <xref:System.ServiceModel.FaultException> W związku z tym Następująca implementacja przechwytuje znany `ReplyValidationFault` wyjątek i zastępuje komunikat odpowiedzi z jawnym komunikatem o błędzie. Dzięki tej metodzie implementacja usługi nie zwraca żadnych nieprawidłowych komunikatów.  
+ W przypadku wystąpienia w usłudze błędu sprawdzania poprawności metoda `ValidateMessageBody` zgłasza wyjątki pochodne <xref:System.ServiceModel.FaultException>. W <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>te wyjątki można umieścić w infrastrukturze modelu usług, gdzie są one automatycznie przekształcane w błędy protokołu SOAP i przekazywane do klienta. W <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> wyjątki nie mogą być umieszczane w infrastrukturze, ponieważ przekształcenie wyjątków błędów zgłaszanych przez usługę występuje przed wywołaniem inspektora komunikatów. W związku z tym Następująca implementacja przechwytuje znany wyjątek `ReplyValidationFault` i zastępuje komunikat odpowiedzi z jawnym komunikatem o błędzie. Dzięki tej metodzie implementacja usługi nie zwraca żadnych nieprawidłowych komunikatów.  
   
-```  
+```csharp  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -80,15 +80,15 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
     }  
 ```  
   
- Inspektor komunikatów klienta jest bardzo podobny. Dwie metody, które muszą być zaimplementowane z <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> programu <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> , <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>to i.  
+ Inspektor komunikatów klienta jest bardzo podobny. Dwie metody, które muszą być zaimplementowane z <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> są <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> i <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>.  
   
- <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>jest wywoływany, gdy wiadomość została złożona przez aplikację kliencką lub przez program formatujący operacji. Podobnie jak w przypadku inspektorów komunikatów dyspozytora, komunikat można tylko sprawdzić lub całkowicie zastąpić. W tym przykładzie Inspektor delegowany do tej samej lokalnej `ValidateMessageBody` metody pomocnika, która również jest używana dla inspektorów komunikatów wysyłania.  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> jest wywoływana, gdy wiadomość została złożona przez aplikację kliencką lub przez program formatujący operacje. Podobnie jak w przypadku inspektorów komunikatów dyspozytora, komunikat można tylko sprawdzić lub całkowicie zastąpić. W tym przykładzie Inspektor delegowany do tej samej metody pomocnika lokalnego `ValidateMessageBody`, która również jest używana dla inspektorów komunikatów wysyłania.  
   
  Różnica w zachowaniu między walidacją klienta i usługi (zgodnie z definicją w konstruktorze) polega na tym, że Walidacja klienta zgłasza wyjątki lokalne, które są umieszczane w kodzie użytkownika, ponieważ są one wykonywane lokalnie, a nie z powodu błędu usługi. Ogólnie rzecz biorąc, reguła jest taka, że inspektorzy dyspozytorów usługi zgłaszają błędy i inspektorzy klienta zgłaszają wyjątki.  
   
- Ta <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> implementacja zapewnia, że do usługi nie są wysyłane żadne nieprawidłowe komunikaty.  
+ Ta <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> implementacja gwarantuje, że do usługi nie są wysyłane żadne nieprawidłowe komunikaty.  
   
-```  
+```csharp  
 object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
 {  
     if (validateRequest)  
@@ -99,9 +99,9 @@ object IClientMessageInspector.BeforeSendRequest(ref System.ServiceModel.Channel
 }  
 ```  
   
- `AfterReceiveReply` Implementacja gwarantuje, że żadne nieprawidłowe komunikaty odebrane z usługi nie są przekazywane do kodu użytkownika klienta.  
+ Implementacja `AfterReceiveReply` gwarantuje, że żadne nieprawidłowe komunikaty odebrane z usługi nie są przekazywane do kodu użytkownika klienta.  
   
-```  
+```csharp  
 void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
 {  
     if (validateReply)  
@@ -111,11 +111,11 @@ void IClientMessageInspector.AfterReceiveReply(ref System.ServiceModel.Channels.
 }  
 ```  
   
- Tym konkretnym inspektorem komunikatów jest `ValidateMessageBody` ta metoda. Aby można było wykonać swoją prace, zawija ona walidację <xref:System.Xml.XmlReader> wokół poddrzewa zawartości komunikatu o przekazaniu. Czytnik jest wypełniany zestawem schematów, które znajdują się w Inspektorze komunikatów, a wywołanie zwrotne walidacji jest ustawiane `InspectionValidationHandler` jako delegat odwołujący się do elementu, który jest zdefiniowany obok tej metody. W celu przeprowadzenia walidacji wiadomość jest odczytywana i buforowana w strumieniu <xref:System.Xml.XmlDictionaryWriter>pamięci. Jeśli w procesie wystąpi błąd lub ostrzeżenie z walidacją, wywoływana jest metoda wywołania zwrotnego.  
+ Tym konkretnym inspektorem komunikatów jest metoda `ValidateMessageBody`. Aby wykonać swoją prace, zawija walidację <xref:System.Xml.XmlReader> wokół poddrzewa zawartości treści przesłanego komunikatu. Czytnik jest wypełniany zestawem schematów, które znajdują się w Inspektorze komunikatów, a wywołanie zwrotne walidacji jest ustawione na delegata odwołujący się do `InspectionValidationHandler` zdefiniowanego obok tej metody. Aby przeprowadzić walidację, komunikat jest odczytywany i umieszczany w buforze do <xref:System.Xml.XmlDictionaryWriter>kopii zapasowej w strumieniu pamięci. Jeśli w procesie wystąpi błąd lub ostrzeżenie z walidacją, wywoływana jest metoda wywołania zwrotnego.  
   
  Jeśli wystąpi błąd, tworzony jest nowy komunikat, który kopiuje właściwości i nagłówki z oryginalnej wiadomości i używa teraz zweryfikowanych sprawdzonych w strumieniu pamięci, które są opakowane przez <xref:System.Xml.XmlDictionaryReader> i dodawane do komunikatu zastępczego.  
   
-```  
+```csharp  
 void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool isRequest)  
 {  
     if (!message.IsFault)  
@@ -156,13 +156,13 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 }  
 ```  
   
- Metoda jest wywoływana przez walidację <xref:System.Xml.XmlReader> za każdym razem, gdy wystąpi błąd walidacji schematu lub ostrzeżenie. `InspectionValidationHandler` Następująca implementacja działa tylko z błędami i ignoruje wszystkie ostrzeżenia.  
+ Metoda `InspectionValidationHandler` jest wywoływana przez walidację <xref:System.Xml.XmlReader> za każdym razem, gdy wystąpi błąd walidacji schematu lub ostrzeżenie. Następująca implementacja działa tylko z błędami i ignoruje wszystkie ostrzeżenia.  
   
- Przy pierwszym rozważaniu może być możliwe wstrzyknięcie walidacji <xref:System.Xml.XmlReader> komunikatu za pomocą Inspektora komunikatów i przeprowadzenie walidacji, gdy komunikat jest przetwarzany i bez buforowania komunikatu. Oznacza to jednak, że to wywołanie zwrotne zgłasza wyjątki walidacji w infrastrukturze modelu usług lub w kodzie użytkownika, ponieważ wykryto nieprawidłowe węzły XML, co skutkuje nieprzewidywalnym zachowaniem. Metoda buforowania umożliwia ochronę kodu użytkownika przed nieprawidłowymi komunikatami.  
+ Przy pierwszym rozważaniu może być możliwe wstrzyknięcie <xref:System.Xml.XmlReader> weryfikacji do wiadomości za pomocą Inspektora komunikatów i przeprowadzenie walidacji, gdy komunikat jest przetwarzany i bez buforowania komunikatu. Oznacza to jednak, że to wywołanie zwrotne zgłasza wyjątki walidacji w infrastrukturze modelu usług lub w kodzie użytkownika, ponieważ wykryto nieprawidłowe węzły XML, co skutkuje nieprzewidywalnym zachowaniem. Metoda buforowania umożliwia ochronę kodu użytkownika przed nieprawidłowymi komunikatami.  
   
- Jak wspomniano wcześniej, wyjątki zgłoszone przez program obsługi różnią się między klientem a usługą. W usłudze wyjątki są wyprowadzane z <xref:System.ServiceModel.FaultException>programu, na kliencie są to regularne wyjątki niestandardowe.  
+ Jak wspomniano wcześniej, wyjątki zgłoszone przez program obsługi różnią się między klientem a usługą. W ramach usługi wyjątki są wyprowadzane z <xref:System.ServiceModel.FaultException>, na kliencie wyjątki są regularnie wyjątkami niestandardowymi.  
   
-```  
+```csharp  
         void InspectionValidationHandler(object sender, ValidationEventArgs e)  
 {  
     if (e.Severity == XmlSeverityType.Error)  
@@ -204,9 +204,9 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ## <a name="behavior"></a>Zachowanie  
  Inspektorzy komunikatów są rozszerzeniami środowiska uruchomieniowego klienta lub środowiska uruchomieniowego wysyłania. Takie rozszerzenia są konfigurowane przy użyciu *zachowań*. Zachowanie jest klasą, która zmienia zachowanie środowiska uruchomieniowego modelu usług, zmieniając domyślną konfigurację lub dodając do niej rozszerzenia (na przykład inspektorów komunikatów).  
   
- Następująca `SchemaValidationBehavior` Klasa jest zachowaniem używanym do dodawania tego przykładowego inspektora komunikatów do klienta lub środowiska uruchomieniowego wysyłania. Implementacja jest raczej podstawowa w obu przypadkach. W <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> programie <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>i, inspektor komunikatów jest <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> tworzony i dodawany do kolekcji odpowiedniego środowiska uruchomieniowego.  
+ Poniższa klasa `SchemaValidationBehavior` jest zachowaniem używanym do dodawania inspektora komunikatów tego przykładu do klienta lub środowiska uruchomieniowego wysyłania. Implementacja jest raczej podstawowa w obu przypadkach. W <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> i <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>Inspektor komunikatów jest tworzony i dodawany do <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> kolekcji odpowiedniego środowiska uruchomieniowego.  
   
-```  
+```csharp  
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
     XmlSchemaSet schemaSet;   
@@ -275,7 +275,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
   
  Rozszerzenia można dodać w pliku konfiguracji aplikacji lub ASP.NET, który jest najbardziej typowym wyborem lub w pliku konfiguracyjnym komputera.  
   
- Po dodaniu rozszerzenia do zakresu konfiguracji zachowanie można dodać do konfiguracji zachowania, tak jak pokazano w poniższym kodzie. Konfiguracje zachowań są elementami wielokrotnego użytku, które można zastosować do wielu punktów końcowych zgodnie z wymaganiami. Ponieważ określone zachowanie należy skonfigurować w tym miejscu <xref:System.ServiceModel.Description.IEndpointBehavior>, jest ono prawidłowe tylko w odpowiedniej sekcji konfiguracji w pliku konfiguracji.  
+ Po dodaniu rozszerzenia do zakresu konfiguracji zachowanie można dodać do konfiguracji zachowania, tak jak pokazano w poniższym kodzie. Konfiguracje zachowań są elementami wielokrotnego użytku, które można zastosować do wielu punktów końcowych zgodnie z wymaganiami. Ponieważ określone zachowanie należy skonfigurować tutaj implementuje <xref:System.ServiceModel.Description.IEndpointBehavior>, jest ono prawidłowe tylko w odpowiedniej sekcji konfiguracji w pliku konfiguracyjnym.  
   
 ```xml  
 <system.serviceModel>  
@@ -295,11 +295,11 @@ public class SchemaValidationBehavior : IEndpointBehavior
 </system.serviceModel>  
 ```  
   
- Element, który konfiguruje inspektora komunikatów, jest obsługiwany `SchemaValidationBehaviorExtensionElement` przez klasę. `<schemaValidator>` Klasa uwidacznia dwie właściwości publiczne Boolean o nazwie `ValidateRequest` i `ValidateReply`. Oba te elementy są oznaczone <xref:System.Configuration.ConfigurationPropertyAttribute>symbolem. Ten atrybut stanowi połączenie między właściwościami kodu i atrybutami XML, które mogą być widoczne w poprzednim elemencie konfiguracji XML. Klasa ma również właściwość `Schemas` , która jest dodatkowo oznaczona <xref:System.Configuration.ConfigurationCollectionAttribute> przy użyciu i jest typu `SchemaCollection`, który jest również częścią tego przykładu, ale został pominięty w tym dokumencie dla zwięzłości. Ta właściwość wraz z kolekcją i klasą `SchemaConfigElement` elementów kolekcji wykonuje kopię zapasową `<schemas>` elementu w poprzednim fragmencie konfiguracji i umożliwia dodanie kolekcji schematów do zestawu walidacji.  
+ Element `<schemaValidator>`, który konfiguruje inspektora komunikatów, jest obsługiwany przez klasę `SchemaValidationBehaviorExtensionElement`. Klasa uwidacznia dwie właściwości publiczne Boolean o nazwie `ValidateRequest` i `ValidateReply`. Oba te elementy są oznaczone <xref:System.Configuration.ConfigurationPropertyAttribute>. Ten atrybut stanowi połączenie między właściwościami kodu i atrybutami XML, które mogą być widoczne w poprzednim elemencie konfiguracji XML. Klasa ma również właściwość `Schemas`, która jest dodatkowo oznaczona <xref:System.Configuration.ConfigurationCollectionAttribute> i jest typu `SchemaCollection`, który jest również częścią tego przykładu, ale pominięto w tym dokumencie dla zwięzłości. Ta właściwość wraz z kolekcją i klasą elementów kolekcji `SchemaConfigElement` kopię zapasową elementu `<schemas>` w poprzednim fragmencie konfiguracji i umożliwia dodanie kolekcji schematów do zestawu walidacji.  
   
- Zastąpiona `CreateBehavior` Metoda przekształca dane konfiguracji w obiekt zachowań, gdy środowisko uruchomieniowe szacuje dane konfiguracyjne w miarę kompilowania klienta lub punktu końcowego.  
+ Zastąpiona metoda `CreateBehavior` przekształca dane konfiguracji w obiekt zachowań, gdy środowisko uruchomieniowe szacuje dane konfiguracyjne podczas kompilacji klienta lub punktu końcowego.  
   
-```  
+```csharp  
 public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public SchemaValidationBehaviorExtensionElement()  
@@ -367,9 +367,9 @@ public bool ValidateRequest
 ```  
   
 ## <a name="adding-message-inspectors-imperatively"></a>Bezwzględne Dodawanie inspektorów komunikatów  
- Oprócz atrybutów, które nie są obsługiwane w tym przykładzie z powodu podanej wcześniej przyczyny) i konfiguracji, zachowania można łatwo dodać do środowiska uruchomieniowego klienta i usługi przy użyciu własnego kodu. W tym przykładzie jest to wykonywane w aplikacji klienckiej w celu przetestowania inspektora komunikatów klienta. Klasa pochodzi od <xref:System.ServiceModel.ClientBase%601>, która uwidacznia konfigurację punktu końcowego w kodzie użytkownika. `GenericClient` Przed niejawnie otwartym klientem można zmienić konfigurację punktu końcowego, na przykład przez dodanie zachowań, jak pokazano w poniższym kodzie. Dodanie zachowania usługi jest w dużym stopniu odpowiednikiem techniki klienta pokazanej w tym miejscu i musi zostać wykonane przed otwarciem hosta usługi.  
+ Oprócz atrybutów, które nie są obsługiwane w tym przykładzie z powodu podanej wcześniej przyczyny) i konfiguracji, zachowania można łatwo dodać do środowiska uruchomieniowego klienta i usługi przy użyciu własnego kodu. W tym przykładzie jest to wykonywane w aplikacji klienckiej w celu przetestowania inspektora komunikatów klienta. Klasa `GenericClient` pochodzi od <xref:System.ServiceModel.ClientBase%601>, która uwidacznia konfigurację punktu końcowego w kodzie użytkownika. Przed niejawnie otwartym klientem można zmienić konfigurację punktu końcowego, na przykład przez dodanie zachowań, jak pokazano w poniższym kodzie. Dodanie zachowania usługi jest w dużym stopniu odpowiednikiem techniki klienta pokazanej w tym miejscu i musi zostać wykonane przed otwarciem hosta usługi.  
   
-```  
+```csharp  
 try  
 {  
     Console.WriteLine("*** Call 'Hello' with generic client, with client behavior");  
@@ -409,6 +409,6 @@ catch (Exception e)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

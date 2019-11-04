@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 42e1814af38fa442255f6da79fb4862ce3d0f361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589415"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423207"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>konwencje kodowania C# (Przewodnik programowania w języku C#)
  Konwencje kodowania mają następujące cele:  
@@ -75,13 +75,13 @@ ms.locfileid: "69589415"
   
      [!code-csharp[csProgGuideCodingConventions#6](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#6)]  
   
-- Aby dołączyć ciągi w pętlach, szczególnie w przypadku pracy z dużymi ilościami tekstu, użyj <xref:System.Text.StringBuilder> obiektu.  
+- Aby dołączyć ciągi w pętlach, szczególnie podczas pracy z dużymi ilościami tekstu, użyj obiektu <xref:System.Text.StringBuilder>.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
 ### <a name="implicitly-typed-local-variables"></a>Jawnie wpisana zmienna lokalna  
   
-- Użyj [](../classes-and-structs/implicitly-typed-local-variables.md) niejawnego wpisywania zmiennych lokalnych, gdy typ zmiennej jest oczywisty z prawej strony przypisania lub jeśli dokładny typ nie jest ważny.  
+- Użyj [niejawnego wpisywania](../classes-and-structs/implicitly-typed-local-variables.md) zmiennych lokalnych, gdy typ zmiennej jest oczywisty z prawej strony przypisania lub jeśli dokładny typ nie jest ważny.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
@@ -93,21 +93,21 @@ ms.locfileid: "69589415"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- Należy unikać używania zamiast `var` elementów [dynamicznych](../../language-reference/keywords/dynamic.md).  
+- Unikaj stosowania `var` zamiast [dynamicznych](../../language-reference/builtin-types/reference-types.md).  
   
 - Użyj niejawnego wpisywania, aby określić typ zmiennej pętli w pętlach [for](../../language-reference/keywords/for.md) i [foreach](../../language-reference/keywords/foreach-in.md) .  
   
-     Poniższy przykład używa niejawnego wpisywania `for` w instrukcji.  
+     Poniższy przykład używa niejawnego wpisywania w instrukcji `for`.  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
   
-     Poniższy przykład używa niejawnego wpisywania `foreach` w instrukcji.  
+     Poniższy przykład używa niejawnego wpisywania w instrukcji `foreach`.  
   
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
   
 ### <a name="unsigned-data-type"></a>Typ danych bez znaku  
   
-- Ogólnie rzecz biorąc, `int` Użyj zamiast niepodpisanych typów. Korzystanie z programu `int` jest typowe w C#całym systemie i łatwiej jest korzystać z innych bibliotek, gdy są używane `int`.  
+- Ogólnie rzecz biorąc, użyj `int`, a nie niepodpisanych typów. Korzystanie z `int` jest wspólne w całym C#systemie i ułatwia korzystanie z innych bibliotek przy użyciu `int`.  
   
 ### <a name="arrays"></a>Tablice  
   
@@ -129,13 +129,13 @@ ms.locfileid: "69589415"
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- Uprość kod przy użyciu C# [instrukcji using](../../language-reference/keywords/using-statement.md). Jeśli masz instrukcję [try-finally](../../language-reference/keywords/try-finally.md) , w której jedyny kod w `finally` bloku jest wywołaniem <xref:System.IDisposable.Dispose%2A> metody, zamiast tego użyj `using` instrukcji.  
+- Uprość kod przy użyciu C# [instrukcji using](../../language-reference/keywords/using-statement.md). Jeśli masz instrukcję [try-finally](../../language-reference/keywords/try-finally.md) , w której jedyny kod w bloku `finally` jest wywołaniem metody <xref:System.IDisposable.Dispose%2A>, zamiast tego należy użyć instrukcji `using`.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
 ### <a name="-and-124124-operators"></a>& & i &#124; &#124; operatory  
   
-- Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) , użyj [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) zamiast [ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) i zamiast [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) tego podczas wykonywania porównań, jak pokazano w poniższym przykładzie.  
+- Aby uniknąć wyjątków i zwiększyć wydajność przez pominięcie niepotrzebnych porównań [](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) , użyj&&[](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) zamiast&[ &#124; ](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) i zamiast [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) przeprowadzania porównań, jak pokazano w poniższym przykładzie.  
   
      [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -175,7 +175,7 @@ ms.locfileid: "69589415"
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
-- Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłyby niejednoznaczne. Na przykład, jeśli zapytanie zwróci nazwę klienta i identyfikator dystrybutora, zamiast `Name` zostawiać je jako i `ID` w wyniku, należy zmienić ich nazwy, aby wyjaśnić, `Name` że jest nazwą klienta i `ID` jest identyfikatorem dystrybutora.  
+- Zmień nazwę właściwości, gdy nazwy właściwości w wyniku byłyby niejednoznaczne. Na przykład, jeśli zapytanie zwróci nazwę klienta i identyfikator dystrybutora, zamiast opuszczania ich jako `Name` i `ID` w wyniku, należy zmienić ich nazwy, aby wyjaśnić, że `Name` jest nazwą klienta, a `ID` jest IDENTYFIKATORem dystrybutora.  
   
      [!code-csharp[csProgGuideCodingConventions#27](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#27)]  
   
@@ -189,7 +189,7 @@ ms.locfileid: "69589415"
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- Aby uzyskać `from` dostęp do kolekcji wewnętrznych, Użyj wielu klauzul zamiast klauzuli [Join](../../language-reference/keywords/join-clause.md) . Na przykład kolekcja `Student` obiektów może zawierać kolekcję wyników testu. Gdy wykonywane jest następujące zapytanie, zwraca każdy wynik o wartości ponad 90, a także nazwisko studenta, który otrzymał wynik.  
+- Do uzyskiwania dostępu do kolekcji wewnętrznych używaj wielu klauzul `from` zamiast klauzuli [Join](../../language-reference/keywords/join-clause.md) . Na przykład kolekcja obiektów `Student` może zawierać kolekcję wyników testu. Gdy wykonywane jest następujące zapytanie, zwraca każdy wynik o wartości ponad 90, a także nazwisko studenta, który otrzymał wynik.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie powiązania w kodzie'
+title: Jak utworzyć powiązanie w kodzie
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616487a16ebbe6e23fe067fb7ce72644aa3f919f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931628"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458845"
 ---
-# <a name="how-to-create-a-binding-in-code"></a>Instrukcje: Tworzenie powiązania w kodzie
-W tym przykładzie pokazano, jak utworzyć i ustawić <xref:System.Windows.Data.Binding> w kodzie.  
+# <a name="how-to-create-a-binding-in-code"></a>Jak utworzyć powiązanie w kodzie
+Ten przykład pokazuje, jak utworzyć i ustawić <xref:System.Windows.Data.Binding> w kodzie.  
   
 ## <a name="example"></a>Przykład  
- <xref:System.Windows.FrameworkElement> Klasy i <xref:System.Windows.FrameworkContentElement> klasy zarówno ujawnić `SetBinding` metody. Są wiązane element, który dziedziczy z jednej z tych klas, można wywołać <xref:System.Windows.FrameworkElement.SetBinding%2A> bezpośrednio metodę.  
+ Klasa <xref:System.Windows.FrameworkElement> i Klasa <xref:System.Windows.FrameworkContentElement> uwidaczniają metodę `SetBinding`. W przypadku powiązania elementu, który dziedziczy jedną z tych klas, można wywołać metodę <xref:System.Windows.FrameworkElement.SetBinding%2A> bezpośrednio.  
   
- Poniższy przykład tworzy klasę o nazwie `MyData`, który zawiera właściwość o nazwie `MyDataProperty`.  
+ Poniższy przykład tworzy klasę o nazwie, `MyData`, która zawiera właściwość o nazwie `MyDataProperty`.  
   
  [!code-csharp[CodeOnlyBinding#DataObject](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/MyData.cs#dataobject)]
  [!code-vb[CodeOnlyBinding#DataObject](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/MyData.vb#dataobject)]  
   
- Poniższy przykład pokazuje, jak utworzyć obiekt wiążący, aby ustawić źródło wiązania.  W przykładzie użyto <xref:System.Windows.FrameworkElement.SetBinding%2A> powiązać <xref:System.Windows.Controls.TextBlock.Text%2A> właściwość `myText`, czyli <xref:System.Windows.Controls.TextBlock> sterowania do `MyDataProperty`.  
+ Poniższy przykład pokazuje, jak utworzyć obiekt powiązania, aby ustawić źródło powiązania.  W przykładzie używa się <xref:System.Windows.FrameworkElement.SetBinding%2A>, aby powiązać Właściwość <xref:System.Windows.Controls.TextBlock.Text%2A> `myText`, która jest kontrolką <xref:System.Windows.Controls.TextBlock>, `MyDataProperty`.  
   
  [!code-csharp[CodeOnlyBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#1)]
  [!code-vb[CodeOnlyBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#1)]  
   
- Aby uzyskać cały przykładowy kod, zobacz [tylko kod przykładowy powiązanie](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
+ Aby uzyskać pełny przykład kodu, zobacz [przykład powiązania tylko z kodem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771500(v=vs.90)).  
   
- Zamiast wywoływać metodę <xref:System.Windows.FrameworkElement.SetBinding%2A>, możesz użyć <xref:System.Windows.Data.BindingOperations.SetBinding%2A> metoda statyczna <xref:System.Windows.Data.BindingOperations> klasy. Poniższy przykład, wywołania <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType> zamiast <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType> powiązać `myText` do `myDataProperty`.  
+ Zamiast wywoływania <xref:System.Windows.FrameworkElement.SetBinding%2A>, można użyć metody statycznej <xref:System.Windows.Data.BindingOperations.SetBinding%2A> klasy <xref:System.Windows.Data.BindingOperations>. Poniższy przykład wywołuje <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>, a nie <xref:System.Windows.FrameworkElement.SetBinding%2A?displayProperty=nameWithType>, aby powiązać `myText` z `myDataProperty`.  
   
  [!code-csharp[CodeOnlyBinding#BOSetBinding](~/samples/snippets/csharp/VS_Snippets_Wpf/CodeOnlyBinding/CSharp/binding.cs#bosetbinding)]
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Tematy z instrukcjami](data-binding-how-to-topics.md)

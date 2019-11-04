@@ -9,51 +9,51 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 7783330dd56ec5b2759e783a6935761eb3587978
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770646"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458840"
 ---
 # <a name="passwordbox-styles-and-templates"></a>PasswordBox — Style i szablony
 
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.PasswordBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.PasswordBox>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
 
-## <a name="passwordbox-parts"></a>Części PasswordBox
+## <a name="passwordbox-parts"></a>PasswordBox części
 
-Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.PasswordBox> kontroli.
+W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.PasswordBox>.
 
-|Część|Typ|Opis|
+|Części|Typ|Opis|
 |-|-|-|
-|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Element wizualny, który może zawierać <xref:System.Windows.FrameworkElement>. Tekst <xref:System.Windows.Controls.PasswordBox> jest wyświetlana w tym elemencie.|
+|PART_ContentHost|<xref:System.Windows.FrameworkElement>|Element wizualizacji, który może zawierać <xref:System.Windows.FrameworkElement>. Tekst <xref:System.Windows.Controls.PasswordBox> zostanie wyświetlony w tym elemencie.|
 
 ## <a name="passwordbox-states"></a>Stany PasswordBox
 
-Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.PasswordBox> kontroli.
+Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.PasswordBox>.
 
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|
 |-|-|-|
-|Normalne|CommonStates|Stan domyślny.|
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad kontrolką.|
+|Typow|CommonStates|Stan domyślny.|
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|
 |Fokus|FocusStates|Kontrolka ma fokus.|
-|Po przeniesieniu fokusu|FocusStates|Kontrolka nie ma fokusu.|
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|
+|Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|
 
-## <a name="passwordbox-controltemplate-example"></a>Przykład ControlTemplate PasswordBox
+## <a name="passwordbox-controltemplate-example"></a>Przykład PasswordBox ControlTemplate
 
-Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.PasswordBox> kontroli.
+Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.PasswordBox>.
 
 [!code-xaml[ControlTemplateExamples#PasswordBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/textbox.xaml#passwordbox)]
 
-W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.
+W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.
 
 [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]
 
-Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
+Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -61,5 +61,5 @@ Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https:/
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

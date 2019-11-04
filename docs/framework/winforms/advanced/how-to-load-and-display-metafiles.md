@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Ładowanie i wyświetlanie metaplików'
+title: 'Porady: ładowanie i wyświetlanie metaplików'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c17e0b2d023ccf80b0d32301b7ee6765edcae9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723231"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424819"
 ---
-# <a name="how-to-load-and-display-metafiles"></a>Instrukcje: Ładowanie i wyświetlanie metaplików
-<xref:System.Drawing.Imaging.Metafile> Klasy, która dziedziczy po elemencie <xref:System.Drawing.Image> klasy, zawiera metody służące do rejestrowania, wyświetlanie i badanie obrazy wektorowe.  
+# <a name="how-to-load-and-display-metafiles"></a>Porady: ładowanie i wyświetlanie metaplików
+Klasa <xref:System.Drawing.Imaging.Metafile>, która dziedziczy z klasy <xref:System.Drawing.Image>, zapewnia metody rejestrowania, wyświetlania i badania obrazów wektorowych.  
   
 ## <a name="example"></a>Przykład  
- Aby wyświetlić obraz wektora (metaplik) na ekranie, należy <xref:System.Drawing.Imaging.Metafile> obiektu i <xref:System.Drawing.Graphics> obiektu. Przekazać nazwę pliku (lub strumienia) do <xref:System.Drawing.Imaging.Metafile> konstruktora. Po utworzeniu <xref:System.Drawing.Imaging.Metafile> obiektów, przekaż go <xref:System.Drawing.Imaging.Metafile> obiekt <xref:System.Drawing.Graphics.DrawImage%2A> metody <xref:System.Drawing.Graphics> obiektu.  
+ Aby wyświetlić obraz wektora (metaplik) na ekranie, potrzebny jest obiekt <xref:System.Drawing.Imaging.Metafile> i <xref:System.Drawing.Graphics> obiektu. Przekaż nazwę pliku (lub strumienia) do konstruktora <xref:System.Drawing.Imaging.Metafile>. Po utworzeniu obiektu <xref:System.Drawing.Imaging.Metafile>, Przekaż ten obiekt <xref:System.Drawing.Imaging.Metafile> do metody <xref:System.Drawing.Graphics.DrawImage%2A> obiektu <xref:System.Drawing.Graphics>.  
   
- W przykładzie jest tworzony <xref:System.Drawing.Imaging.Metafile> obiektu z pliku EMF (rozszerzony metaplik) i następnie Rysuje obraz z jego lewego górnego rogu w (60, 10).  
+ Przykład tworzy obiekt <xref:System.Drawing.Imaging.Metafile> z pliku EMF (Enhanced Metafile), a następnie rysuje obraz w lewym górnym rogu w lokalizacji (60, 10).  
   
- Poniższa ilustracja przedstawia metaplik rysowane w określonej lokalizacji.  
+ Na poniższej ilustracji przedstawiono metaplik rysowany w określonej lokalizacji.  
   
- ![Pozycja obrazu](./media/imageposition2.png "imageposition2")  
+ ![Zrzut ekranu przedstawiający położenie obrazu.](./media/how-to-load-and-display-metafiles/metafile-drawn-specified-location.png "imageposition2")  
   
  [!code-csharp[System.Drawing.WorkingWithImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.WorkingWithImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z formularzami Windows Forms i potrzebny <xref:System.Windows.Forms.PaintEventArgs> `e`, czyli parametrem <xref:System.Windows.Forms.Control.Paint> programu obsługi zdarzeń.  
+ Poprzedni przykład jest przeznaczony do użytku z Windows Forms i wymaga `e`<xref:System.Windows.Forms.PaintEventArgs>, który jest parametrem programu obsługi zdarzeń <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Zobacz także
 

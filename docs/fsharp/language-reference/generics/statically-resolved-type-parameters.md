@@ -2,12 +2,12 @@
 title: Statycznie rozwiązywane parametry typu
 description: Dowiedz się, jak F# używać statycznie rozpoznanego parametru typu, który jest zastępowany rzeczywistym typem w czasie kompilacji, a nie w czasie wykonywania.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082927"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425011"
 ---
 # <a name="statically-resolved-type-parameters"></a>Statycznie rozwiązywane parametry typu
 
@@ -21,7 +21,7 @@ ms.locfileid: "71082927"
 
 ## <a name="remarks"></a>Uwagi
 
-W F# języku istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest standardowym parametrem typu ogólnego. Są one wskazywane przez apostrof ('), jak w `'T` i `'U`. Są one odpowiednikami parametrów typu ogólnego w innych językach .NET Framework. Inny rodzaj jest statycznie rozpoznany i jest wskazywany przez symbol karetki, jak w `^T` i `^U`.
+W F# języku istnieją dwa odrębne rodzaje parametrów typu. Pierwszy rodzaj jest standardowym parametrem typu ogólnego. Są one wskazywane przez apostrof ('), jak w `'T` i `'U`. Są one odpowiednikami parametrów typu ogólnego w innych językach .NET Framework. Inny rodzaj jest statycznie rozwiązany i jest wskazywany przez symbol karetki, jak w `^T` i `^U`.
 
 Statycznie rozpoznane parametry typu są szczególnie przydatne w połączeniu z ograniczeniami elementu członkowskiego, które są ograniczeniami, które umożliwiają określenie, że argument typu musi mieć określonego członka lub członków, aby można go było używać. Nie ma możliwości utworzenia tego rodzaju ograniczenia przy użyciu zwykłego parametru typu ogólnego.
 
@@ -30,7 +30,7 @@ W poniższej tabeli zestawiono podobieństwa i różnice między dwoma rodzajami
 |Funkcja|Ogólny|Statycznie rozwiązane|
 |-------|-------|-------------------|
 |Składnia|`'T`, `'U`|`^T`, `^U`|
-|Czas rozwiązania|W czasie wykonywania|Czas kompilacji|
+|Czas rozwiązania|Czas wykonywania|Czas kompilacji|
 |Ograniczenia elementu członkowskiego|Nie można używać z ograniczeniami elementu członkowskiego.|Może być używany z ograniczeniami elementu członkowskiego.|
 |Generowanie kodu|Typ (lub metoda) ze standardowymi parametrami typu ogólnego skutkuje generowaniem pojedynczego typu ogólnego lub metody.|Generowanych jest wiele wystąpień typów i metod, jeden dla każdego typu, który jest wymagany.|
 |Używanie z typami|Może być używany w typach.|Nie można używać w typach.|
@@ -42,7 +42,7 @@ Metody wbudowane i funkcje, które używają operatorów lub używają innych fu
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-Rozpoznany typ `(+@)` jest oparty na użyciu obu `(+)` i `(*)`, obu, z których wynika, że wnioskowanie o typie do wnioskowania ograniczeń składowych na statycznie rozpoznanych parametrach typu. Rozpoznany typ, jak pokazano w F# interpreterze, jest następujący.
+Rozpoznany typ `(+@)` jest oparty na użyciu obu `(+)` i `(*)`, z których oba powodują, że wnioskowanie o typie do wnioskowania ograniczeń składowych na statycznie rozpoznanych parametrach typu. Rozpoznany typ, jak pokazano w F# interpreterze, jest następujący.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -62,7 +62,7 @@ Począwszy od F# 4,1, można także określić konkretne nazwy typów w sygnatur
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

@@ -2,12 +2,12 @@
 title: 'Ograniczanie: X509CertificateClaimSet. FindClaims Metoda'
 ms.date: 03/30/2017
 ms.assetid: ee356e3b-f932-48f5-875a-5e42340bee63
-ms.openlocfilehash: 5591ecebeb924f84cc0efdaf78f40f9d835d2d02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e75b1cae599b153012b8525a0e1e36ed116e695f
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126084"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457755"
 ---
 # <a name="mitigation-x509certificateclaimsetfindclaims-method"></a>Ograniczanie: X509CertificateClaimSet. FindClaims Metoda
 Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, Metoda <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> podejmie próbę dopasowania argumentu `claimType` ze wszystkimi wpisami DNS w jego polu SAN.  
@@ -36,4 +36,4 @@ Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4.6.1, Metod
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6-1.md)
+- [Zgodność aplikacji](application-compatibility.md)

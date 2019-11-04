@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Konwertowanie powiązanych danych'
+title: Jak konwertować powiązane dane
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,36 +9,36 @@ helpviewer_keywords:
 - data binding [WPF], converting bound data
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
-ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9ad390626092d481bf47f017f643a29302c1b29
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020936"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458856"
 ---
-# <a name="how-to-convert-bound-data"></a>Instrukcje: Konwertowanie powiązanych danych
-Ten przykład przedstawia sposób zastosowania konwersji na dane, które jest używane w powiązaniach.  
+# <a name="how-to-convert-bound-data"></a>Jak konwertować powiązane dane
+Ten przykład pokazuje, jak zastosować konwersję do danych, które są używane w powiązaniach.  
   
- Aby dokonać konwersji danych podczas tworzenia powiązania, należy utworzyć klasę, która implementuje <xref:System.Windows.Data.IValueConverter> interfejsu, który zawiera <xref:System.Windows.Data.IValueConverter.Convert%2A> i <xref:System.Windows.Data.IValueConverter.ConvertBack%2A> metody.  
+ Aby przekonwertować dane podczas wiązania, należy utworzyć klasę, która implementuje interfejs <xref:System.Windows.Data.IValueConverter>, który obejmuje metody <xref:System.Windows.Data.IValueConverter.Convert%2A> i <xref:System.Windows.Data.IValueConverter.ConvertBack%2A>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje implementację konwerter daty, która konwertuje wartość daty przekazanej tak, aby pokazywał tylko rok, miesiąc i dzień. Podczas implementowania <xref:System.Windows.Data.IValueConverter> interfejsu, jest dobrym rozwiązaniem do dekorowania implementacji przy użyciu <xref:System.Windows.Data.ValueConversionAttribute> atrybutu, aby wskazać programowania narzędzi typy danych związane z konwersją, jak w poniższym przykładzie:  
+ W poniższym przykładzie przedstawiono implementację konwertera daty, który konwertuje przekazaną wartość daty, aby wyświetlić tylko rok, miesiąc i dzień. Podczas implementowania interfejsu <xref:System.Windows.Data.IValueConverter>, dobrym sposobem jest dekorować implementacji z atrybutem <xref:System.Windows.Data.ValueConversionAttribute>, aby wskazać narzędziom programistycznym typy danych uwzględnione w konwersji, jak w poniższym przykładzie:  
   
  [!code-csharp[DataBindingLab#18](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DateConverter.cs#18)]
  [!code-vb[DataBindingLab#18](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/DateConverter.vb#18)]  
   
- Po utworzeniu konwertera można dodać go jako zasób w swojej [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] pliku. W poniższym przykładzie *src* mapuje do przestrzeni nazw, w którym *DateConverter* jest zdefiniowana.  
+ Po utworzeniu konwertera można go dodać jako zasób do pliku [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. W poniższym przykładzie *src* jest mapowany do przestrzeni nazw, w której zdefiniowano *DateConverter* .  
   
  [!code-xaml[DataBindingLab#15](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#15)]  
   
- Na koniec konwertera można używać w Twoje powiązanie, używając następującej składni. W poniższym przykładzie, zawartość tekstu <xref:System.Windows.Controls.TextBlock> jest powiązany z *StartDate*, który jest właściwością zewnętrznego źródła danych.  
+ Na koniec można użyć konwertera w powiązaniu przy użyciu następującej składni. W poniższym przykładzie zawartość tekstowa <xref:System.Windows.Controls.TextBlock> jest powiązana z *StartDate*, która jest właściwością zewnętrznego źródła danych.  
   
  [!code-xaml[DataBindingLab#17](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#17)]  
   
- Zasoby stylów, do których odwołuje się w powyższym przykładzie są zdefiniowane w sekcji zasobów nie są wyświetlane w tym temacie.  
+ Zasoby stylu, do których odwołuje się powyższy przykład, są zdefiniowane w sekcji zasobów, która nie jest pokazana w tym temacie.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Implementowanie powiązanej walidacji](how-to-implement-binding-validation.md)
-- [Powiązanie danych — omówienie](data-binding-overview.md)
+- [Powiązanie danych — omówienie](../../../desktop-wpf/data/data-binding-overview.md)
 - [Tematy z instrukcjami](data-binding-how-to-topics.md)

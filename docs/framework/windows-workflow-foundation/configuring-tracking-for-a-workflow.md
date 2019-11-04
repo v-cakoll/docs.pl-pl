@@ -2,12 +2,12 @@
 title: Konfigurowanie śledzenia dla przepływu pracy
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 889efc804bb45b384dfde5b4deb520a81d1e5486
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353053"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458901"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurowanie śledzenia dla przepływu pracy
 
@@ -19,11 +19,11 @@ Przepływ pracy można wykonać na trzy sposoby:
 
 - Wykonywane bezpośrednio przy użyciu <xref:System.Activities.WorkflowInvoker>
 
-W zależności od opcji hostingu przepływu pracy można dodać uczestnika śledzenia za pomocą kodu lub pliku konfiguracji. W tym temacie opisano sposób skonfigurowania śledzenia przez dodanie uczestnika śledzenia do <xref:System.Activities.WorkflowApplication> i do <xref:System.ServiceModel.Activities.WorkflowServiceHost> oraz sposób włączania śledzenia podczas korzystania z <xref:System.Activities.WorkflowInvoker>.
+W zależności od opcji hostingu przepływu pracy można dodać uczestnika śledzenia za pomocą kodu lub pliku konfiguracji. W tym temacie opisano sposób skonfigurowania śledzenia przez dodanie uczestnika śledzenia do <xref:System.Activities.WorkflowApplication> i <xref:System.ServiceModel.Activities.WorkflowServiceHost>i sposobu włączania śledzenia przy użyciu <xref:System.Activities.WorkflowInvoker>.
 
 ## <a name="configuring-workflow-application-tracking"></a>Konfigurowanie śledzenia aplikacji przepływu pracy
 
-Przepływ pracy można uruchomić za pomocą klasy <xref:System.Activities.WorkflowApplication>. W tym temacie przedstawiono sposób skonfigurowania śledzenia dla aplikacji przepływu pracy [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przez dodanie uczestnika śledzenia do hosta przepływów pracy @no__t 1. W takim przypadku przepływ pracy jest uruchamiany jako aplikacja przepływu pracy. Aplikację przepływu pracy konfiguruje się za pomocą kodu (a nie przy użyciu pliku konfiguracji), który jest nieobsługiwanym plikiem exe przy użyciu klasy <xref:System.Activities.WorkflowApplication>. Uczestnik śledzenia jest dodawany jako rozszerzenie wystąpienia <xref:System.Activities.WorkflowApplication>. W tym celu należy dodać <xref:System.Activities.Tracking.TrackingParticipant> do kolekcji rozszerzeń dla wystąpienia obiektu WorkflowApplication.
+Przepływ pracy można uruchomić za pomocą klasy <xref:System.Activities.WorkflowApplication>. W tym temacie przedstawiono sposób skonfigurowania śledzenia dla aplikacji przepływu pracy [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] przez dodanie uczestnika śledzenia do <xref:System.Activities.WorkflowApplication> hosta przepływu pracy. W takim przypadku przepływ pracy jest uruchamiany jako aplikacja przepływu pracy. Aplikację przepływu pracy konfiguruje się za pomocą kodu (a nie przy użyciu pliku konfiguracji), który jest nieobsługiwanym plikiem exe przy użyciu klasy <xref:System.Activities.WorkflowApplication>. Uczestnik śledzenia jest dodawany jako rozszerzenie do wystąpienia <xref:System.Activities.WorkflowApplication>. Można to zrobić, dodając <xref:System.Activities.Tracking.TrackingParticipant> do kolekcji rozszerzeń dla wystąpienia obiektu WorkflowApplication.
 
 W przypadku aplikacji przepływu pracy można dodać rozszerzenie zachowanie <xref:System.Activities.Tracking.EtwTrackingParticipant>, jak pokazano w poniższym kodzie.
 
@@ -50,9 +50,9 @@ instance.Extensions.Add(trackingParticipant);
 
 ### <a name="configuring-workflow-service-tracking"></a>Konfigurowanie śledzenia usługi przepływu pracy
 
-Przepływ pracy może być ujawniony jako usługa WCF, gdy jest hostowany na hoście usługi <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to wyspecjalizowana implementacja ServiceHost platformy .NET dla usługi opartej na przepływie pracy. W tej sekcji wyjaśniono, jak skonfigurować śledzenie dla usługi przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działającej w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest ona konfigurowana za pośrednictwem pliku Web. config (dla usługi hostowanej w sieci Web) lub pliku App. config (dla usługi hostowanej w aplikacji autonomicznej, takiej jak Aplikacja konsolowa) przez określenie zachowania usługi lub za pośrednictwem kodu przez dodanie zachowania specyficznego dla śledzenia Kolekcja <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dla hosta usługi.
+Przepływ pracy może być ujawniony jako usługa WCF, gdy jest hostowany na hoście usługi <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowServiceHost> to wyspecjalizowana implementacja ServiceHost platformy .NET dla usługi opartej na przepływie pracy. W tej sekcji wyjaśniono, jak skonfigurować śledzenie dla usługi przepływu pracy [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działającej w programie <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest ona konfigurowana za pośrednictwem pliku Web. config (dla usługi hostowanej w sieci Web) lub pliku App. config (dla usługi hostowanej w aplikacji autonomicznej, takiej jak Aplikacja konsolowa) przez określenie zachowania usługi lub za pośrednictwem kodu przez dodanie zachowania specyficznego dla śledzenia Kolekcja <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> dla hosta usługi.
 
-W przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost> można dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu elementu < `behavior` > w pliku konfiguracyjnym, jak pokazano w poniższym przykładzie.
+W przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost>można dodać <xref:System.Activities.Tracking.EtwTrackingParticipant> przy użyciu elementu <`behavior`> w pliku konfiguracji, jak pokazano w poniższym przykładzie.
 
 ```xml
 <behaviors>
@@ -61,10 +61,10 @@ W przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.Work
           <etwTracking profileName="Sample Tracking Profile" />
         </behavior>
    </serviceBehaviors>
-<behaviors>
+</behaviors>
 ```
 
-Alternatywnie w przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost> można dodać rozszerzenie zachowania <xref:System.Activities.Tracking.EtwTrackingParticipant> za pomocą kodu. Aby dodać uczestnika śledzenia niestandardowego, Utwórz nowe rozszerzenie zachowania i Dodaj je do <xref:System.ServiceModel.ServiceHost>, jak pokazano w poniższym przykładowym kodzie.
+Alternatywnie, w przypadku usługi przepływu pracy hostowanej w <xref:System.ServiceModel.WorkflowServiceHost>można dodać rozszerzenie zachowania <xref:System.Activities.Tracking.EtwTrackingParticipant> za pomocą kodu. Aby dodać uczestnika śledzenia niestandardowego, Utwórz nowe rozszerzenie zachowania i Dodaj je do <xref:System.ServiceModel.ServiceHost>, jak pokazano w poniższym przykładowym kodzie.
 
 > [!NOTE]
 > Jeśli chcesz wyświetlić przykładowy kod, który pokazuje, jak utworzyć niestandardowy element zachowania, który dodaje niestandardowego uczestnika śledzenia, zapoznaj się z przykładami [śledzenia](./samples/tracking.md) .
@@ -196,7 +196,7 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
     </system.serviceModel>
     ```
 
-2. Skopiuj plik manifestu z%windir%\Microsoft.NET\Framework @ no__t-0 @ no__t-1latest wersja [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] > \Microsoft.Windows.ApplicationServer.Applications.man do lokalizacji tymczasowej, a następnie zmień jej nazwę na Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
+2. Skopiuj plik manifestu z%windir%\Microsoft.NET\Framework\\\<najnowszej wersji [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man do tymczasowej lokalizacji i zmień jego nazwę na Microsoft. Windows. ApplicationServer. Applications_Provider1. Man
 
 3. Zmień identyfikator GUID w pliku manifestu na nowy identyfikator GUID.
 
@@ -244,7 +244,7 @@ Jeśli zdarzenia muszą być zapisywane w określonym dzienniku aplikacji, wykon
         csc /target:library /win32res:Microsoft.Windows.ApplicationServer.Applications_Provider1.res NewProviderReg.cs /out:Microsoft.Windows.ApplicationServer.Applications_Provider1.dll
         ```
 
-    6. Zmień nazwę biblioteki DLL zasobu i komunikatu w pliku manifestu z `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` na nową nazwę dll.
+    6. Zmień nazwę biblioteki DLL zasobu i komunikatu w pliku manifestu, `Microsoft.Windows.ApplicationServer.Applications.Provider1.man` na nową nazwę dll.
 
         ```xml
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">

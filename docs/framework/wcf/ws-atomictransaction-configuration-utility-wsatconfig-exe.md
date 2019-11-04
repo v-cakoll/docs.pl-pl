@@ -2,19 +2,19 @@
 title: Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320197"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425266"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)
 Narzędzie konfiguracji protokołu WS-AtomicTransaction służy do konfigurowania podstawowych ustawień obsługi WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Składnia  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Jeśli używasz [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], musisz pobrać aktualizację przed uruchomieniem programu WsatConfig. exe. Aby uzyskać więcej informacji o tej aktualizacji, zobacz [Update for Commerce Server 2007 (KB912817)](https://go.microsoft.com/fwlink/?LinkId=95340) i [dostępność pakietu zbiorczego poprawek dla systemu Windows XP com+](https://go.microsoft.com/fwlink/?LinkId=95341).  
+ Jeśli korzystasz z programu [!INCLUDE[wxp](../../../includes/wxp-md.md)] lub [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], musisz pobrać aktualizację przed uruchomieniem programu WsatConfig. exe. Aby uzyskać więcej informacji o tej aktualizacji, zobacz [Update for Commerce Server 2007 (KB912817)](https://go.microsoft.com/fwlink/?LinkId=95340) i [dostępność pakietu zbiorczego poprawek dla systemu Windows XP com+](https://go.microsoft.com/fwlink/?LinkId=95341).  
   
  W poniższej tabeli przedstawiono opcje, które mogą być używane z narzędziem konfiguracji protokołu WS-AtomicTransaction (wsatConfig. exe).  
   
@@ -38,7 +38,7 @@ wsatConfig [Options]
 |-accountsCerts: \<thumb >&#124;"Issuer\SubjectName", >|Określa rozdzieloną przecinkami listę certyfikatów, które mogą uczestniczyć w usłudze WS-AtomicTransaction. Certyfikaty są wskazywane przez odcisk palca lub parę Issuer\SubjectName. Użyj {EMPTY} dla nazwy podmiotu, jeśli jest pusta.|  
 |-endpointCert: < Machine&#124;\<thumb >&#124;"Issuer\SubjectName" >|Używa certyfikatu komputera lub innego lokalnego certyfikatu punktu końcowego określonego za pomocą odcisku palca lub pary Issuer\SubjectName. Używa elementu {EMPTY} dla nazwy podmiotu, jeśli jest pusta.|  
 |-maxTimeout: \<sec >|Określa maksymalny limit czasu w sekundach. Prawidłowe wartości to od 0 do 3600.|  
-|-Sieć: @no__t&#124;wyłączyć >|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
+|-Sieć:\<Włącz&#124;opcję Wyłącz >|Włącza lub wyłącza obsługę sieci WS-AtomicTransaction.|  
 |-Port: \<portNum >|Ustawia port HTTPS dla protokołu WS-AtomicTransaction.<br /><br /> Jeśli Zapora została już włączona przed uruchomieniem tego narzędzia, port zostanie automatycznie zarejestrowany na liście wyjątków. Jeśli Zapora jest wyłączona przed uruchomieniem tego narzędzia, dla zapory nic nie skonfigurowano.<br /><br /> W przypadku włączenia zapory po skonfigurowaniu usługi WS-AT należy ponownie uruchomić to narzędzie i podać numer portu przy użyciu tego parametru. Jeśli po skonfigurowaniu Zapora zostanie wyłączona, Usługa WS-AT będzie nadal działała bez dodatkowych danych wejściowych.|  
 |-timeout: \<sec >|Określa domyślny limit czasu (w sekundach). Prawidłowe wartości to od 1 do 3600.|  
 |-traced: \<enable&#124;Disable >|Włącza lub wyłącza śledzenie zdarzeń działania.|  

@@ -17,23 +17,23 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8e4e848cb37ac1b2d147b570d98777a7beaf1bb
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018074"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460254"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serializacja XML z usługami internetowymi XML
-Serializacji XML jest źródłowego transportu mechanizm używany w architekturze usług sieci Web XML przez <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby kontrolować XML generowanych przez usługi sieci Web XML, można zastosować atrybuty wymienione w obu [atrybuty czy kontroli serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) i [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) do klasy, zwracanej wartości, parametry i pola pliku używany do tworzenia usługi XML sieci Web (.asmx). Aby uzyskać więcej informacji na temat tworzenia usługi XML sieci Web, zobacz [ASP.NET przy użyciu usług XML sieci Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
+Serializacji XML jest źródłowego transportu mechanizm używany w architekturze usług sieci Web XML przez <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby sterować XML wygenerowanym przez usługę sieci Web XML, można zastosować atrybuty wymienione w obu [atrybutach, które kontrolują serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) i atrybuty kontrolujące [zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) do klas, zwracane wartości, parametry i pola pliku służącego do tworzenia usługi sieci Web XML (. asmx). Aby uzyskać więcej informacji na temat tworzenia usługi sieci Web XML, zobacz [usługi sieci Web XML przy użyciu ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100)).  
   
 ## <a name="literal-and-encoded-styles"></a>Literał i zakodowany stylów  
- XML generowanych przez usługi sieci Web XML, które mogą być sformatowane jeden z dwóch sposobów, albo literał lub zakodowane, jak wyjaśniono w [Dostosowywanie formatowania komunikatu protokołu SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Dlatego są dwóch zestawów atrybutów, które kontrolują serializacji XML. Na liście atrybutów [atrybuty czy kontroli serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) są przeznaczone do sterowania stylu literał XML. Na liście atrybutów [atrybuty czy kontroli kodowany protokołu SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) kontrolować zakodowany stylu. Stosując selektywnego te atrybuty, można dostosować aplikację do zwrócenia jednego lub obu tych stylów. Ponadto te atrybuty można zastosować (odpowiednio) do zwrócenia wartości i parametry.  
+ KOD XML wygenerowany przez usługę sieci Web XML można sformatować na jeden z dwóch sposobów, albo literał lub zakodowany, zgodnie z opisem w temacie [Dostosowywanie formatowania komunikatów protokołu SOAP](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100)). Dlatego są dwóch zestawów atrybutów, które kontrolują serializacji XML. Atrybuty wymienione w [atrybutach, które kontrolują serializacji XML,](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) są przeznaczone do sterowania XML stylu literału. Atrybuty wymienione w [atrybutach kontrolujących kodowanie zakodowanej serializacji protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) w stylu kodowanym. Wybiórczo stosując te atrybuty, można dostosować aplikację w celu zwrócenia obu tych stylów lub obu. Ponadto te atrybuty mogą być stosowane (odpowiednio) do zwracania wartości i parametrów.  
   
 ### <a name="example-of-using-both-styles"></a>Przykład użycia obu stylów  
- Podczas tworzenia usługi sieci Web XML, można użyć obu zestawów atrybutów na metody. W poniższym przykładzie kodu o nazwie klasy `MyService` zawiera dwie metody usługi sieci Web XML, `MyLiteralMethod` i `MyEncodedMethod`. Obie metody wykonywania tej samej funkcji: zwrócenia wystąpienia `Order` klasy. W `Order` klasy <xref:System.Xml.Serialization.XmlTypeAttribute> i <xref:System.Xml.Serialization.SoapTypeAttribute> atrybuty są oba stosowane do `OrderID` pola i obu atrybutów ma ich `ElementName` właściwość jest ustawiona na różne wartości.  
+ Podczas tworzenia usługi sieci Web XML, można użyć obu zestawów atrybutów na metody. W poniższym przykładzie kodu Klasa o nazwie `MyService` zawiera dwie metody usługi sieci Web XML, `MyLiteralMethod` i `MyEncodedMethod`. Obie metody wykonywania tej samej funkcji: zwrócenia wystąpienia `Order` klasy. W klasie `Order` atrybuty <xref:System.Xml.Serialization.XmlTypeAttribute> i <xref:System.Xml.Serialization.SoapTypeAttribute> są stosowane do pola `OrderID`, a oba atrybuty mają ich Właściwość `ElementName` ustawioną na różne wartości.  
   
- Aby uruchomić przykład, Wklej kod do pliku z rozszerzeniem .asmx i umieścić go w katalogu wirtualnym zarządzane przez Internetowe usługi informacyjne (IIS). Z przeglądarki HTML, takich jak program Internet Explorer wpisz nazwę komputera, katalogu wirtualnego i pliku.  
+ Aby uruchomić przykład, wklej kod do pliku z rozszerzeniem. asmx i umieść plik w katalogu wirtualnym zarządzanym przez Internet Information Services (IIS). W przeglądarce HTML, takiej jak Internet Explorer, wpisz nazwę komputera, katalogu wirtualnego i pliku.  
   
 ```vb  
 <%@ WebService Language="VB" Class="MyService" %>  
@@ -90,7 +90,7 @@ public class MyService {
 }  
 ```  
   
- Poniższy kod wywoła przykład `MyLiteralMethod`. Nazwa elementu jest zmieniana na "LiteralOrderID".  
+ Poniższy przykład kodu wywołuje `MyLiteralMethod`. Nazwa elementu jest zmieniana na "LiteralOrderID".  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -105,7 +105,7 @@ public class MyService {
 </soap:Envelope>  
 ```  
   
- Poniższy kod wywoła przykład `MyEncodedMethod`. Nazwa elementu jest "EncodedOrderID".  
+ Poniższy przykład kodu wywołuje `MyEncodedMethod`. Nazwa elementu jest "EncodedOrderID".  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -121,8 +121,8 @@ public class MyService {
 </soap:Envelope>  
 ```  
   
-### <a name="applying-attributes-to-return-values"></a>Stosowanie atrybutów do zwracania wartości  
- Można także zastosować atrybutów do zwracania wartości do kontrolowania obszaru nazw, nazwa elementu i tak dalej. Poniższy przykładowy kod stosuje `XmlElementAttribute` atrybut na wartość zwracaną przez `MyLiteralMethod` metody. Ten sposób pozwala na kontrolowanie nazwa przestrzeni nazw i elementu.  
+### <a name="applying-attributes-to-return-values"></a>Stosowanie atrybutów do zwracanych wartości  
+ Można również zastosować atrybuty do zwracanych wartości, aby kontrolować przestrzeń nazw, nazwę elementu i tak dalej. Poniższy przykład kodu stosuje atrybut `XmlElementAttribute` do wartości zwracanej metody `MyLiteralMethod`. Ten sposób pozwala na kontrolowanie nazwa przestrzeni nazw i elementu.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -160,8 +160,8 @@ public Order MyLiteralMethod(){
 </soap:Envelope>  
 ```  
   
-### <a name="attributes-applied-to-parameters"></a>Atrybuty stosowane do parametrów  
- Atrybuty można również zastosować do parametrów, aby określić przestrzeń nazw, nazwa elementu i tak dalej. Poniższy przykład kodu dodaje parametr `MyLiteralMethodResponse` metody i stosuje `XmlAttributeAttribute` atrybutu do parametru. Nazwa elementu i przestrzeni nazw są ustawione dla parametru.  
+### <a name="attributes-applied-to-parameters"></a>Atrybuty zastosowane do parametrów  
+ Można również zastosować atrybuty do parametrów, aby określić przestrzeń nazw, nazwę elementu i tak dalej. Poniższy przykład kodu dodaje parametr do metody `MyLiteralMethodResponse` i stosuje atrybut `XmlAttributeAttribute` do parametru. Nazwa elementu i przestrzeni nazw są ustawione dla parametru.  
   
 ```vb  
 <WebMethod, SoapDocumentMethod> _  
@@ -201,8 +201,8 @@ Namespace="http://www.microsoft.com")] string ID){
 </soap:Envelope>  
 ```  
   
-### <a name="applying-attributes-to-classes"></a>Stosowanie atrybutów do klasy  
- Jeśli potrzebujesz do kontrolowania obszaru nazw elementów, które odnoszą się do klasy, można zastosować `XmlTypeAttribute`, `XmlRootAttribute`, i `SoapTypeAttribute`, odpowiednio. Poniższy przykładowy kod stosuje wszystkie trzy do `Order` klasy.  
+### <a name="applying-attributes-to-classes"></a>Stosowanie atrybutów do klas  
+ Jeśli musisz kontrolować przestrzeń nazw elementów, które są skorelowane z klasami, możesz zastosować odpowiednio `XmlTypeAttribute`, `XmlRootAttribute`i `SoapTypeAttribute`. Poniższy przykład kodu stosuje wszystkie trzy do klasy `Order`.  
   
 ```vb  
 <XmlType("BigBookService"), _  
@@ -230,23 +230,24 @@ public class Order {
 }  
 ```  
   
- Rezultaty zastosowania `XmlTypeAttribute` i `SoapTypeAttribute` są widoczne podczas badania opis usługi, jak pokazano w poniższym przykładzie kodu.  
+ Wyniki stosowania `XmlTypeAttribute` i `SoapTypeAttribute` mogą być widoczne podczas badania opisu usługi, jak pokazano w poniższym przykładzie kodu.  
   
-```xml  
-    <s:element name="BookOrderForm" type="s0:BigBookService" />   
-- <s:complexType name="BigBookService">  
-- <s:sequence>  
-    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />   
-    </s:sequence>  
-  
-- <s:schema targetNamespace="http://tempuri.org/encodedTypes">  
-- <s:complexType name="SoapBookService">  
-- <s:sequence>  
-    <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />   
-    </s:sequence>  
-    </s:complexType>  
-    </s:schema>  
-```  
+```xml
+<s:element name="BookOrderForm" type="s0:BigBookService" />
+<s:complexType name="BigBookService">
+  <s:sequence>
+    <s:element minOccurs="0" maxOccurs="1" name="LiteralOrderID" type="s:string" />
+  </s:sequence>
+
+  <s:schema targetNamespace="http://tempuri.org/encodedTypes">
+    <s:complexType name="SoapBookService">
+      <s:sequence>
+        <s:element minOccurs="1" maxOccurs="1" name="EncodedOrderID" type="s:string" />
+      </s:sequence>
+    </s:complexType>
+  </s:schema>
+</s:complexType>
+```
   
  Efekt `XmlRootAttribute` również zostanie wyświetlona w wynikach HTTP GET i HTTP POST w następujący sposób.  
   
@@ -259,10 +260,10 @@ public class Order {
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [Instrukcje: Serializacja obiektu jako Stream XML kodowany w formacie protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [Instrukcje: Zastąp zakodowanego protokołu SOAP serializacji XML](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
-- [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [Serializacja XML i SOAP](xml-and-soap-serialization.md)
+- [Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)
+- [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP](how-to-override-encoded-soap-xml-serialization.md)
+- [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
+- [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

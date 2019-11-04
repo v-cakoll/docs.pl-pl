@@ -2,12 +2,12 @@
 title: Dostawca członkostwa i ról
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039435"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424667"
 ---
 # <a name="membership-and-role-provider"></a>Dostawca członkostwa i ról
 Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać członkostwa ASP.NET i dostawców ról do uwierzytelniania i autoryzowania klientów.  
@@ -27,9 +27,9 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
   
 - Serwer programu może mapować uwierzytelnionego klienta na rolę przy użyciu dostawcy roli ASP.NET.  
   
-- Serwer może korzystać `PrincipalPermissionAttribute` z programu w celu kontrolowania dostępu do niektórych metod, które są udostępniane przez usługę.  
+- Serwer może używać `PrincipalPermissionAttribute`, aby kontrolować dostęp do niektórych metod, które są udostępniane przez usługę.  
   
- Dostawcy członkostwa i ról są skonfigurowani do używania magazynu obsługiwanego przez SQL Server. W pliku konfiguracji usługi określono parametry połączenia i różne opcje. Dostawca członkostwa ma nazwę `SqlMembershipProvider` , podczas gdy dostawca roli otrzymuje nazwę. `SqlRoleProvider`  
+ Dostawcy członkostwa i ról są skonfigurowani do używania magazynu obsługiwanego przez SQL Server. W pliku konfiguracji usługi określono parametry połączenia i różne opcje. Dostawca członkostwa otrzymuje nazwę `SqlMembershipProvider` podczas gdy dostawca roli ma nazwę `SqlRoleProvider`.  
   
 ```xml  
 <!-- Set the connection string for SQL Server -->  
@@ -69,7 +69,7 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
 </system.web>  
 ```  
   
- Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest definiowana przy użyciu pliku konfiguracyjnego Web. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardu `wsHttpBinding`, który domyślnie używa uwierzytelniania systemu Windows. Ten przykład ustawia standard `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika. Zachowanie określa, że certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać tę samą wartość `SubjectName` `findValue` jako atrybut w [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemencie konfiguracji > serviceCertificate. Dodatkowo zachowanie określa, że uwierzytelnianie par username-Password jest wykonywane przez dostawcę członkostwa ASP.NET, a mapowanie roli jest wykonywane przez dostawcę roli ASP.NET przez określenie nazw zdefiniowanych dla dwóch dostawców.  
+ Usługa udostępnia jeden punkt końcowy do komunikacji z usługą, która jest definiowana przy użyciu pliku konfiguracyjnego Web. config. Punkt końcowy składa się z adresu, powiązania i kontraktu. Powiązanie jest skonfigurowane przy użyciu standardowej `wsHttpBinding`, która domyślnie używa uwierzytelniania systemu Windows. Ten przykład ustawia standardowy `wsHttpBinding` do korzystania z uwierzytelniania nazwy użytkownika. Zachowanie określa, że certyfikat serwera ma być używany do uwierzytelniania usługi. Certyfikat serwera musi zawierać taką samą wartość `SubjectName` jak atrybut `findValue` w elemencie konfiguracji [\<serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Dodatkowo zachowanie określa, że uwierzytelnianie par username-Password jest wykonywane przez dostawcę członkostwa ASP.NET, a mapowanie roli jest wykonywane przez dostawcę roli ASP.NET przez określenie nazw zdefiniowanych dla dwóch dostawców.  
   
 ```xml  
 <system.serviceModel>  
@@ -150,9 +150,9 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
   
 4. Skopiuj pliki programu klienckiego do katalogu klienta na komputerze klienckim. Skopiuj również do klienta pliki Setup. bat, Oczyść. bat i ImportServiceCert. bat.  
   
-5. Na serwerze otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi i uruchom `setup.bat service`polecenie. `setup.bat` Uruchomienie`service` z argumentem tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
+5. Na serwerze otwórz wiersz polecenia dla deweloperów programu Visual Studio z uprawnieniami administracyjnymi i uruchom `setup.bat service`. Uruchomienie `setup.bat` z argumentem `service` tworzy certyfikat usługi z w pełni kwalifikowaną nazwą domeny komputera i eksportuje certyfikat usługi do pliku o nazwie Service. cer.  
   
-6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu ( `findValue` w atrybucie [ \<w > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
+6. Edytuj plik Web. config, aby odzwierciedlić nową nazwę certyfikatu (w atrybucie `findValue` w [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), która jest taka sama jak w pełni kwalifikowana nazwa domeny komputera.  
   
 7. Skopiuj plik. cer usługi z katalogu usługi do katalogu klienta na komputerze klienckim.  
   
@@ -167,7 +167,7 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
 - Uruchom Oczyść. bat w folderze Samples po zakończeniu uruchamiania przykładu.  
   
 > [!NOTE]
-> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Ten skrypt nie powoduje usunięcia certyfikatów usługi na kliencie podczas uruchamiania tego przykładu między komputerami. W przypadku uruchamiania przykładów programu Windows Communication Foundation (WCF), które używają certyfikatów między komputerami, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w magazynie CurrentUser-TrustedPeople. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` na przykład: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Plik wsadowy konfiguracji  
  Plik wsadowy Setup. bat dołączony do tego przykładu umożliwia skonfigurowanie serwera z odpowiednimi certyfikatami w celu uruchomienia aplikacji samohostowanej wymagającej zabezpieczeń opartych na certyfikatach serwera. Ten plik wsadowy należy zmodyfikować, aby mógł działać na różnych komputerach lub działać w nieobsługiwanym przypadku.  
@@ -180,7 +180,7 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
   
      Certyfikat jest przechowywany w magazynie (Personal) w lokalizacji magazynu LocalMachine.  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ Przykład członkostwa i dostawcy ról pokazuje, jak usługa może używać czł
   
      Następujące wiersze w pliku wsadowym Setup. bat kopiują certyfikat serwera do magazynu zaufanych osób klienta. Ten krok jest wymagany, ponieważ certyfikaty wygenerowane przez Makecert. exe nie są niejawnie zaufane przez system klienta. Jeśli masz już certyfikat, który znajduje się w zaufanym certyfikacie głównym klienta — na przykład certyfikat wystawiony przez firmę Microsoft — ten krok zapełniania magazynu certyfikatów klienta z certyfikatem serwera nie jest wymagany.  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

@@ -1,26 +1,26 @@
 ---
 title: Opcje wartości
-description: Dowiedz się więcej o F# opcję wartość typu, który jest wersja struktury typu opcji.
+description: Dowiedz się F# więcej o typie opcji wartość, która jest wersją struktury typu opcji.
 ms.date: 02/06/2019
-ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4dc3f7217943345b7aaf1165fd648ab2e01bd727
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982582"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424019"
 ---
 # <a name="value-options"></a>Opcje wartości
 
-Typ opcji wartości w F# jest używany podczas przechowywania następujących dwóch przypadkach:
+Typ opcji wartość w jest F# używany w przypadku, gdy są utrzymywane następujące dwa sytuacje:
 
 1. Scenariusz jest odpowiedni dla [ F# opcji](options.md).
-2. Za pomocą struktury zapewnia korzyści wydajności, w tym scenariuszu.
+2. Użycie struktury zapewnia korzyść wydajności w danym scenariuszu.
 
-Nie wszystkie scenariusze wrażliwego na wydajność to "rozwiązane" przy użyciu struktury. Należy wziąć pod uwagę dodatkowych kosztów kopiowania podczas korzystania z nich zamiast typów odwołań. Jednak duże F# programy często wystąpienia wielu opcjonalne typy, które będą działać przy użyciu ścieżek krytycznych oraz w takich przypadkach struktury często może zapewnić lepszą wydajność ogólną, przez cały okres istnienia programu.
+Nie wszystkie scenariusze z uwzględnieniem wydajności są "rozwiązane" przy użyciu struktur. Należy wziąć pod uwagę dodatkowy koszt kopiowania, gdy są używane zamiast typów referencyjnych. Jednak duże F# programy często żądają wielu opcjonalnych typów, które przepływają przez ścieżki gorąca, a w takich przypadkach struktury mogą często dać lepszą wydajność w okresie istnienia programu.
 
 ## <a name="definition"></a>Definicja
 
-Wartość opcji jest zdefiniowany jako [sumy Unii](discriminated-unions.md#struct-discriminated-unions) jest podobna do opcji typu odwołania. W ten sposób można traktować ich definicji:
+Opcja Value jest definiowana jako [związek rozłącznych struktur](discriminated-unions.md#struct-discriminated-unions) , który jest podobny do typu opcji odwołania. Jego definicję można traktować w następujący sposób:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
@@ -30,11 +30,11 @@ type ValueOption<'T> =
     | ValueSome of 'T
 ```
 
-Wartość opcji jest zgodny ze strukturalnego równości i porównania. Główną różnicą jest to, że skompilowanych nazwa, nazwa typu i wielkości liter nazwy wskazać, że jest typem wartości.
+Opcja wartości jest zgodna z kryterium równości i porównywania strukturalnego. Główną różnicą jest to, że skompilowana nazwa, nazwa typu i nazwy przypadków wskazują, że jest to typ wartości.
 
-## <a name="using-value-options"></a>Za pomocą opcji wartość
+## <a name="using-value-options"></a>Korzystanie z opcji wartości
 
-Podobnie jak używane są opcje wartość [opcje](options.md). `ValueSome` Służy do wskazywania, czy wartość jest obecna, a `ValueNone` jest używany, gdy nie jest wartością:
+Opcje wartości są używane podobnie jak [Opcje](options.md). `ValueSome` jest używany do wskazania, że wartość jest obecna, a `ValueNone` jest używana, gdy wartość nie jest obecna:
 
 ```fsharp
 let tryParseDateTime (s: string) =
@@ -55,23 +55,23 @@ match (result1, result2) with
 | ValueNone, ValueNone -> printfn "None of them are dates!"
 ```
 
-Podobnie jak w przypadku [opcje](options.md), Konwencja nazewnictwa dla funkcji, która zwraca `ValueOption` jest poprzedzić go `try`.
+Podobnie jak w przypadku [opcji](options.md), Konwencja nazewnictwa dla funkcji, która zwraca `ValueOption`, to prefiks z `try`.
 
-## <a name="value-option-properties-and-methods"></a>Wartość opcji właściwości i metody
+## <a name="value-option-properties-and-methods"></a>Właściwości opcji wartości i metody
 
-W tej chwili jest jedną właściwość dla opcji wartości: `Value`. <xref:System.InvalidOperationException> Jest wywoływane, jeśli wartość nie jest obecna, gdy ta właściwość zostanie wywołana.
+W tej chwili istnieje jedna Właściwość opcji wartości: `Value`. <xref:System.InvalidOperationException> jest wywoływane, jeśli żadna wartość nie jest obecna, gdy ta właściwość jest wywoływana.
 
-## <a name="value-option-functions"></a>Wartość opcji funkcji
+## <a name="value-option-functions"></a>Funkcje opcji wartości
 
-Obecnie jest jedną funkcję powiązane z modułu dla opcji wartości `defaultValueArg`:
+Obecnie istnieje jedna funkcja powiązana z modułem dla opcji wartości, `defaultValueArg`:
 
 ```fsharp
-val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T 
+val defaultValueArg : arg:'T voption -> defaultValue:'T -> 'T
 ```
 
-Podobnie jak w przypadku `defaultArg` funkcji `defaultValueArg` zwraca podstawową wartość danej opcji wartość, jeśli istnieje; w przeciwnym razie zwraca określoną wartość domyślną.
+Podobnie jak w przypadku funkcji `defaultArg`, `defaultValueArg` zwraca wartość podstawową danej wartości, jeśli istnieje; w przeciwnym razie zwraca określoną wartość domyślną.
 
-W tej chwili nie istnieją żadnych funkcji powiązanych z modułu dla opcji wartości.
+W tej chwili nie ma żadnych innych funkcji powiązanych z modułem dla opcji wartości.
 
 ## <a name="see-also"></a>Zobacz także
 

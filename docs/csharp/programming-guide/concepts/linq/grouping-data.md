@@ -2,12 +2,12 @@
 title: Grupowanie danych (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e7f10b121a7a1c599d88731a806fe784eb1a7e66
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594206"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423417"
 ---
 # <a name="grouping-data-c"></a>Grupowanie danych (C#)
 Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby elementy w każdej grupie miały wspólny atrybut.  
@@ -22,11 +22,11 @@ Grupowanie odwołuje się do operacji umieszczania danych w grupach, tak aby ele
   
 |Nazwa metody|Opis|C#Składnia wyrażenia zapytania|Więcej informacji|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez <xref:System.Linq.IGrouping%602> obiekt.|`group … by`<br /><br /> —lub—<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik jeden-do-wielu) w oparciu o funkcję selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|GroupBy|Grupuje elementy, które mają wspólny atrybut. Każda grupa jest reprezentowana przez obiekt <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> —lub—<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|ToLookup|Wstawia elementy do <xref:System.Linq.Lookup%602> (słownik "jeden do wielu") na podstawie funkcji selektora kluczy.|Nie dotyczy.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania  
- Poniższy przykład kodu używa `group by` klauzuli do grupowania liczb całkowitych na liście zgodnie z tym, czy są one parzyste czy nieparzyste.  
+ Poniższy przykład kodu używa klauzuli `group by` do grupowania liczb całkowitych na liście zgodnie z tym, czy są one parzyste czy nieparzyste.  
   
 ```csharp  
 List<int> numbers = new List<int>() { 35, 44, 200, 84, 3987, 4, 199, 329, 446, 208 };  
@@ -64,8 +64,8 @@ foreach (var group in query)
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
 - [group, klauzula](../../../language-reference/keywords/group-clause.md)
-- [Instrukcje: Tworzenie grupy zagnieżdżonej](../../linq-query-expressions/how-to-create-a-nested-group.md)
-- [Instrukcje: Grupuj pliki według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
-- [Instrukcje: Grupuj wyniki zapytania](../../linq-query-expressions/how-to-group-query-results.md)
-- [Instrukcje: Wykonanie podzapytania w operacji grupowania](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Instrukcje: Dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Instrukcje: Tworzenie grupy zagnieżdżonej](../../../linq/create-a-nested-group.md)
+- [Instrukcje: grupowanie plików według rozszerzenia (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Instrukcje: grupowanie wyników zapytania](../../../linq/group-query-results.md)
+- [Instrukcje: wykonywanie podzapytania w operacji grupowania](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

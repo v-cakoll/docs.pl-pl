@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat klas w .NET Framework, które obsług
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037451"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420365"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System. Delegate i słowo kluczowe `delegate`
 
@@ -32,7 +32,7 @@ Kontynuujmy używanie metody list. Sort () jako przykładu. Pierwszym krokiem je
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Kompilator generuje klasę pochodną `System.Delegate`, która pasuje do użytego podpisu (w tym przypadku metoda zwraca liczbę całkowitą i ma dwa argumenty). Typ tego delegata jest `Comparison`. Typ delegata `Comparison` jest typem ogólnym. Aby uzyskać szczegółowe informacje na temat typów ogólnych, zobacz [tutaj](generics.md).
+Kompilator generuje klasę pochodną `System.Delegate`, która pasuje do użytego podpisu (w tym przypadku metoda zwraca liczbę całkowitą i ma dwa argumenty). Typ tego delegata jest `Comparison`. Typ delegata `Comparison` jest typem ogólnym. Aby uzyskać szczegółowe informacje na temat typów ogólnych, zobacz [tutaj](programming-guide/generics/index.md).
 
 Zauważ, że składnia może wyglądać tak, jakby deklaruje zmienną, ale faktycznie deklaruje *Typ*. Można definiować typy delegatów wewnątrz klas, bezpośrednio w przestrzeniach nazw, a nawet w globalnej przestrzeni nazw.
 

@@ -8,23 +8,23 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 479e15b8c1103ea1e5fdd803812944d25d965a81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f0b183f9e7cf0997947e5a8cdd73fb90fd7e44ea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602341"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422920"
 ---
 # <a name="ascending-c-reference"></a>ascending (odwołanie w C#)
-Kontekstowe słowo kluczowe jest używane w [klauzuli OrderBy](./orderby-clause.md) w wyrażeniach zapytania, aby określić, że kolejność sortowania jest od najmniejszych do największych. `ascending` Ponieważ `ascending` jest to domyślny porządek sortowania, nie trzeba go określać.  
+`ascending` kontekstowe słowo kluczowe jest używane w [klauzuli OrderBy](./orderby-clause.md) w wyrażeniach zapytania, aby określić, że kolejność sortowania jest od najmniejszych do największych. Ponieważ `ascending` jest domyślnym porządkiem sortowania, nie trzeba go określać.  
   
 ## <a name="example"></a>Przykład  
- `ascending` W poniższym przykładzie pokazano użycie w [klauzuli OrderBy](./orderby-clause.md).  
+ W poniższym przykładzie pokazano użycie `ascending` w [klauzuli OrderBy](./orderby-clause.md).  
   
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Wyrażenia zapytania LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [C#Odwoła](../index.md)
+- [LINQ w C#](../../linq/index.md)
 - [descending](./descending.md)

@@ -1,56 +1,56 @@
 ---
-title: 'Instrukcje: Włączanie stanów trwałych dla przepływów pracy i usług przepływu pracy'
+title: 'Instrukcje: Włączanie trwałości dla przepływów pracy i usług przepływu pracy'
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
-ms.openlocfilehash: 9357098318342d15ad7eead32cbc7218af095f6e
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 5d0eeb8ad40f2f4f3349ab48487316014a561a1b
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425339"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460894"
 ---
-# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie stanów trwałych dla przepływów pracy i usług przepływu pracy
+# <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>Instrukcje: Włączanie trwałości dla przepływów pracy i usług przepływu pracy
 
-W tym temacie opisano włączanie stanów trwałych dla przepływów pracy i usług przepływu pracy.
+W tym temacie opisano sposób włączania trwałości dla przepływów pracy i usług przepływu pracy.
 
-## <a name="enable-persistence-for-workflows"></a>Włączanie stanów trwałych dla przepływów pracy
+## <a name="enable-persistence-for-workflows"></a>Włącz trwałość dla przepływów pracy
 
-Możesz skojarzyć magazyn wystąpienia z **WorkflowApplication** przy użyciu <xref:System.Activities.WorkflowApplication.InstanceStore%2A> właściwość <xref:System.Activities.WorkflowApplication> klasy. <xref:System.Activities.WorkflowApplication.Persist%2A> Metody zapisuje lub będzie się powtarzał przepływu pracy do wystąpienia magazynu skojarzone z aplikacją. <xref:System.Activities.WorkflowApplication.Unload%2A> Metoda się powtarza przepływu pracy do magazynu wystąpienia, a następnie zwalnia wystąpienie z pamięci. **Obciążenia** metoda ładuje przepływu pracy do ilości pamięci za pomocą danych przepływu pracy, przechowywane w magazynie w trwałości wystąpienia.
+Można skojarzyć magazyn wystąpień z obiektem **WorkflowApplication** przy użyciu właściwości <xref:System.Activities.WorkflowApplication.InstanceStore%2A> klasy <xref:System.Activities.WorkflowApplication>. Metoda <xref:System.Activities.WorkflowApplication.Persist%2A> zapisuje lub utrzymuje przepływ pracy w magazynie wystąpień skojarzonym z aplikacją. Metoda <xref:System.Activities.WorkflowApplication.Unload%2A> utrzymuje przepływ pracy w magazynie wystąpień, a następnie zwalnia wystąpienie z pamięci. Metoda **Load** ładuje przepływ pracy do pamięci przy użyciu danych przepływu pracy przechowywanych w magazynie trwałości wystąpienia.
 
-**Utrwalanie** metoda wykonuje następujące czynności:
+Metoda **utrwalania** wykonuje następujące czynności:
 
-1. Wstrzymuje harmonogram przepływu pracy i czeka, aż przepływ pracy przejdzie w stan bezczynności.
+1. Wstrzymuje harmonogram przepływu pracy i czeka, aż przepływ pracy przejdzie do stanu bezczynności.
 
-2. Będzie się powtarzał lub zapisuje przepływ pracy w magazynie w trwałości.
+2. Zachowuje lub zapisuje przepływ pracy w magazynie trwałości.
 
 3. Wznawia harmonogram przepływu pracy.
 
- **Zwolnienie** metoda wykonuje następujące czynności:
+ Metoda **Unload** wykonuje następujące czynności:
 
-1. Wstrzymuje harmonogram przepływu pracy i czeka, aż przepływ pracy przejdzie w stan bezczynności.
+1. Wstrzymuje harmonogram przepływu pracy i czeka, aż przepływ pracy przejdzie do stanu bezczynności.
 
-2. Będzie się powtarzał lub zapisuje przepływ pracy w magazynie w trwałości.
+2. Zachowuje lub zapisuje przepływ pracy w magazynie trwałości.
 
 3. Usuwa wystąpienie przepływu pracy w pamięci.
 
-Zarówno **utrwalanie** i **zwolnienie** metody są blokowane, gdy przepływ pracy jest w strefie no-persist aż przepływ pracy zamyka strefy no-persist. Metody będzie kontynuowane przy użyciu operacji utrwalania lub zwolnij, po zakończeniu strefy utrwalanie nie. Jeśli strefa no-persist nie zostanie zakończone, zanim upłynie limit czasu lub jeśli proces trwałości trwa zbyt długo, zostanie zgłoszony TimeoutException.
+Metody **utrwalania** i **zwalniania** będą blokowane, gdy przepływ pracy jest w strefie no-utrwalania, dopóki przepływ pracy nie spowoduje zakończenia strefy braku trwałej. Metoda kontynuuje działanie z operacją utrwalania lub zwalniania po zakończeniu strefy No-utrwalania. Jeśli strefa braku utrwalania nie zostanie zakończona przed upływem limitu czasu lub jeśli proces trwałości trwa zbyt długo, zostanie zgłoszony limit czasu.
 
-## <a name="enable-persistence-for-workflow-services-in-code"></a>Włączanie stanów trwałych dla usług przepływu pracy w kodzie
+## <a name="enable-persistence-for-workflow-services-in-code"></a>Włącz trwałość dla usług przepływu pracy w kodzie
 
-**DurableInstancingOptions** członkiem <xref:System.ServiceModel.WorkflowServiceHost> klasa ma właściwość o nazwie **objekt InstanceStore** służące do kojarzenia magazyn wystąpienia z **elementu WorkflowServiceHost** .
+Składowa **DurableInstancingOptions** klasy <xref:System.ServiceModel.WorkflowServiceHost> ma właściwość o nazwie **InstanceStore** , której można użyć do skojarzenia magazynu wystąpień z obiektem **WorkflowServiceHost**.
 
 ```csharp
 // wsh is an instance of WorkflowServiceHost class
 wsh.DurableInstancingOptions.InstanceStore = new SqlWorkflowInstanceStore();
 ```
 
-Gdy **WorkflowServiceHost** jest otwarty, trwałości jest włączany automatycznie, jeżeli **DurableInstancingOptions.InstanceStore** nie ma wartości null.
+Gdy obiekt **WorkflowServiceHost** jest otwarty, trwałość jest włączana automatycznie, jeśli **DurableInstancingOptions. InstanceStore** nie ma wartości null.
 
-Zazwyczaj zachowanie usługi zawiera konkretne wystąpienie magazynu do użycia z hosta usługi przepływu pracy przy użyciu **objekt InstanceStore** właściwości. Na przykład SqlWorkflowInstanceStoreBehavior tworzy wystąpienie **SqlWorkflowInstanceStore**, konfiguruje je i przypisuje go do **DurableInstancingOptions.InstanceStore**.
+Zwykle zachowanie usługi zapewnia konkretny magazyn wystąpień do użycia z hostem usługi przepływu pracy przy użyciu właściwości **InstanceStore** . Na przykład SqlWorkflowInstanceStoreBehavior tworzy wystąpienie **obiekt SqlWorkflowInstanceStore**, konfiguruje je i przypisuje go do **DurableInstancingOptions. InstanceStore**.
 
-## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>Włączanie stanów trwałych dla przepływów pracy usługi przy użyciu pliku konfiguracji aplikacji
+## <a name="enable-persistence-for-workflow-services-using-an-application-configuration-file"></a>Włącz trwałość dla usług przepływu pracy przy użyciu pliku konfiguracji aplikacji
 
-Stan trwały można włączyć za pomocą pliku konfiguracji aplikacji, dodając następujący kod do pliku app.config lub web.config:
+Trwałości można włączyć za pomocą pliku konfiguracji aplikacji, dodając następujący kod do pliku App. config lub Web. config:
 
 ```xml
 <configuration>
@@ -58,10 +58,10 @@ Stan trwały można włączyć za pomocą pliku konfiguracji aplikacji, dodając
     <behaviors>
       <serviceBehaviors>
         <behavior name="myBehavior">
-          <SqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase">
+          <sqlWorkflowInstanceStore connectionString="Data Source=myDatabaseServer;Initial Catalog=myPersistenceDatabase" />
         </behavior>
       </serviceBehaviors>
-    <behaviors>
+    </behaviors>
   </system.serviceModel>
 </configuration>
 ```

@@ -3,14 +3,14 @@ title: Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F
 description: Przechowuj dane strukturalne w chmurze przy użyciu usługi Azure Table Storage lub Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395208"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424608"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Rozpoczynanie pracy z usługą Azure Table Storage i interfejs API tabel Azure Cosmos DB przy użyciu języka F\#
 
 Azure Table Storage to usługa, która przechowuje strukturalne dane NoSQL w chmurze. Magazyn tabel jest magazynem kluczy/atrybutów z projektem bez schematu. Ponieważ magazyn tabel jest bezschematowy, można łatwo dostosować dane w miarę rozwoju aplikacji. Dostęp do danych jest szybki i opłacalny dla wszystkich rodzajów aplikacji. Magazyn tabel jest zwykle znacząco niższy niż tradycyjny kod SQL dla podobnych ilości danych.
 
@@ -54,7 +54,7 @@ W przypadku nawiązywania połączenia z usługą Azure Storage Table service po
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Pobierz parametry połączenia Azure Cosmos DB
 
-W przypadku nawiązywania połączenia z usługą Azure Cosmos DB potrzebne są parametry połączenia dla tego samouczka. Parametry połączenia można skopiować z Azure Portal. W Azure Portal na koncie Cosmos DB przejdź do pozycji **ustawienia** > **Parametry połączenia**, a następnie kliknij przycisk **Kopiuj** , aby skopiować podstawowe parametry połączenia. 
+W przypadku nawiązywania połączenia z usługą Azure Cosmos DB potrzebne są parametry połączenia dla tego samouczka. Parametry połączenia można skopiować z Azure Portal. W Azure Portal na koncie Cosmos DB przejdź do pozycji **ustawienia** > **Parametry połączenia**, a następnie kliknij przycisk **Kopiuj** , aby skopiować podstawowe parametry połączenia.
 
 Dla samouczka wprowadź parametry połączenia w skrypcie, jak w poniższym przykładzie:
 
@@ -92,7 +92,7 @@ Ten przykład pokazuje, jak utworzyć tabelę, jeśli jeszcze nie istnieje:
 
 ### <a name="add-an-entity-to-a-table"></a>Dodawanie jednostki do tabeli
 
-Jednostka musi mieć typ, który dziedziczy po `TableEntity`. @No__t-0 można rozciągnąć w dowolny sposób, ale typ *musi* mieć konstruktora bez parametrów. W tabeli platformy Azure są przechowywane tylko właściwości `get` i `set`.
+Jednostka musi mieć typ, który dziedziczy po `TableEntity`. Możesz w dowolny sposób rozciągnąć `TableEntity`, ale typ *musi* mieć konstruktora bez parametrów. W tabeli platformy Azure są przechowywane tylko właściwości `get` i `set`.
 
 Partycja i klucz wiersza jednostki jednoznacznie identyfikują jednostkę w tabeli. Jednostki z tym samym kluczem partycji mogą być przeszukiwane szybciej niż te z różnymi kluczami partycji, ale użycie różnych kluczy partycji umożliwia zwiększenie skalowalności operacji równoległych.
 

@@ -1,31 +1,31 @@
 ---
-title: 'Instrukcje: Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView'
+title: Jak nadać styl wierszowi w ListView, który implementuje GridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - GridView controls [WPF], styling rows
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 150988aab368e3ffef0107d29bea5ebc53163946
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052017"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459321"
 ---
-# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Instrukcje: Nadawanie stylu wierszowi w kontrolce ListView z implementacją GridView
-W tym przykładzie pokazano, jak styl wierszowi w <xref:System.Windows.Controls.ListView> formant, który implementuje <xref:System.Windows.Controls.GridView> <xref:System.Windows.Controls.ListView.View%2A> trybu.  
+# <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>Jak nadać styl wierszowi w ListView, który implementuje GridView
+Ten przykład pokazuje, jak stylować wiersz w kontrolce <xref:System.Windows.Controls.ListView> implementującej tryb <xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>.  
   
 ## <a name="example"></a>Przykład  
- Można styl wierszowi w <xref:System.Windows.Controls.ListView> kontroli przez ustawienie <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> na <xref:System.Windows.Controls.ListView> kontroli. Ustaw styl dla jego elementów, które są reprezentowane jako <xref:System.Windows.Controls.ListViewItem> obiektów. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Odwołania <xref:System.Windows.Controls.ControlTemplate> obiekty, które są używane do wyświetlania zawartości wiersza.  
+ Aby określić styl wiersza w kontrolce <xref:System.Windows.Controls.ListView>, należy ustawić <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> kontrolki <xref:System.Windows.Controls.ListView>. Ustaw styl dla elementów, które są reprezentowane jako obiekty <xref:System.Windows.Controls.ListViewItem>. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> odwołuje się do obiektów <xref:System.Windows.Controls.ControlTemplate>, które są używane do wyświetlania zawartości wiersza.  
   
- Pełny przykład, poniższe przykłady są wyodrębniane z, wyświetla zbiór informacji utworu, która jest przechowywana w [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] bazy danych. Każdy utwór w bazie danych znajduje się pole klasyfikacji i wartość tego pola określa sposób wyświetlania wiersz utworu informacji.  
+ Kompletny przykład, w którym następujące przykłady są wyodrębniane z programu, zawiera kolekcję informacji o utworze, które są przechowywane w bazie danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Każdy utwór w bazie danych ma pole Rating i wartość tego pola określa sposób wyświetlania wiersza informacji o utworze.  
   
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> dla <xref:System.Windows.Controls.ListViewItem> obiekty reprezentujące utworów muzycznych w kolekcji utworu. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> Odwołania <xref:System.Windows.Controls.ControlTemplate> obiekty, które określają sposób wyświetlania wiersz utworu informacji.  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> dla obiektów <xref:System.Windows.Controls.ListViewItem>, które reprezentują utwory w kolekcji Song. <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> odwołuje się do obiektów <xref:System.Windows.Controls.ControlTemplate>, które określają sposób wyświetlania wiersza informacji o utworze.  
   
  [!code-xaml[ListViewItemStyleSnippet#ItemContainerStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#itemcontainerstyle)]  
   
- W poniższym przykładzie przedstawiono <xref:System.Windows.Controls.ControlTemplate> dodająca ciąg tekstowy `"Strongly Recommended"` do wiersza. Ten szablon jest przywoływany w <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> i wyświetla gdy utwór ocena ma wartość 5 (pięć). <xref:System.Windows.Controls.ControlTemplate> Obejmuje <xref:System.Windows.Controls.GridViewRowPresenter> obiekt, który układa zawartość wiersza w kolumnach, zgodnie z definicją <xref:System.Windows.Controls.GridView> trybu wyświetlania.  
+ Poniższy przykład pokazuje <xref:System.Windows.Controls.ControlTemplate>, który dodaje ciąg tekstowy `"Strongly Recommended"` do wiersza. Ten szablon jest przywoływany w <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A> i wyświetla, gdy klasyfikacja utworu ma wartość 5 (pięć). <xref:System.Windows.Controls.ControlTemplate> zawiera <xref:System.Windows.Controls.GridViewRowPresenter> obiekt, który określa zawartość wiersza w kolumnach, zgodnie z definicją w trybie widoku <xref:System.Windows.Controls.GridView>.  
   
  [!code-xaml[ListViewItemStyleSnippet#ControlTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#controltemplate)]  
   
@@ -39,4 +39,4 @@ W tym przykładzie pokazano, jak styl wierszowi w <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.GridView>
 - [Tematy z instrukcjami](listview-how-to-topics.md)
 - [ListView — omówienie](listview-overview.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

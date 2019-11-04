@@ -9,42 +9,42 @@ helpviewer_keywords:
 - states [WPF], Frame
 - styles [WPF], Frame
 ms.assetid: a01c32e2-c951-46a0-a82f-2614ca241f0b
-ms.openlocfilehash: 6b084cfa31efebe2456871a99cd810741aa26609
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89f4fc21637d20ca226507463093bc6bae2241fc
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912213"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460321"
 ---
 # <a name="frame-styles-and-templates"></a>Style i szablony klatek
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Frame> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Frame>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
 ## <a name="frame-parts"></a>Części ramki  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Frame> kontroli.  
+ W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Frame>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|Obszar zawartości.|  
   
 ## <a name="frame-states"></a>Stany ramki  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Frame> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Frame>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
-## <a name="frame-controltemplate-example"></a>Przykład ControlTemplate ramki  
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Frame> kontroli.  
+## <a name="frame-controltemplate-example"></a>Przykład ControlTemplate Frame  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.Frame>.  
   
  [!code-xaml[ControlTemplateExamples#Frame](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/frame.xaml#frame)]  
   
- W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -52,5 +52,5 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Frame> kon
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

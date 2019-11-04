@@ -2,12 +2,12 @@
 title: Przechowywanie wersji usługi
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321489"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423683"
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i punkty końcowe, które ujawniają) mogą wymagać zmiany z różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub inne rozwiązanie luk. Każda zmiana wprowadza nową wersję usługi. W tym temacie wyjaśniono, jak rozważyć przechowywanie wersji w programie Windows Communication Foundation (WCF).  
@@ -77,7 +77,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
 ### <a name="round-trips-of-unknown-data"></a>Rundy nieznanych danych  
  W niektórych scenariuszach istnieje potrzeba "rundy", które pochodzą z elementów członkowskich dodanych w nowej wersji. Na przykład usługa "versionNew" wysyła dane z nowo dodanych członków do klienta "versionOld". Klient ignoruje nowo dodane elementy członkowskie podczas przetwarzania komunikatu, ale ponownie wysyła te same dane, w tym nowo dodane elementy członkowskie, z powrotem do usługi versionNew. Typowym scenariuszem jest aktualizacja danych, w której dane są pobierane z usługi, zmienione i zwracane.  
   
- Aby włączyć funkcję okrężną dla określonego typu, typ musi implementować interfejs <xref:System.Runtime.Serialization.IExtensibleDataObject>. Interfejs zawiera jedną właściwość, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>, która zwraca typ <xref:System.Runtime.Serialization.ExtensionDataObject>. Właściwość służy do przechowywania danych z przyszłych wersji kontraktu danych, który jest nieznany dla bieżącej wersji. Te dane są nieprzezroczyste dla klienta, ale gdy wystąpienie jest serializowane, zawartość właściwości <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> jest zapisywana z pozostałymi danymi członków kontraktu danych.  
+ Aby włączyć funkcję okrężną dla określonego typu, typ musi implementować interfejs <xref:System.Runtime.Serialization.IExtensibleDataObject>. Interfejs zawiera jedną właściwość, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> która zwraca typ <xref:System.Runtime.Serialization.ExtensionDataObject>. Właściwość służy do przechowywania danych z przyszłych wersji kontraktu danych, który jest nieznany dla bieżącej wersji. Te dane są nieprzezroczyste dla klienta, ale gdy wystąpienie jest serializowane, zawartość właściwości <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> jest zapisywana z pozostałymi danymi członków kontraktu danych.  
   
  Zaleca się, aby wszystkie typy implementują ten interfejs w celu uwzględnienia nowych i nieznanych przyszłych członków.  
   
@@ -88,7 +88,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
  Te same zasady przechowywania wersji są stosowane w przypadku używania klasy <xref:System.Xml.Serialization.XmlSerializer>. Gdy wymagane jest dokładne przechowywanie wersji, Traktuj Kontrakty danych jako niezmienne i Utwórz nowe kontrakty danych z unikatowymi, kwalifikowanymi nazwami dla nowych wersji. Jeśli masz pewność, że można użyć wersji swobodny, możesz dodać nowych możliwych do serializacji członków w nowych wersjach, ale nie zmieniać ani usuwać istniejących członków.  
   
 > [!NOTE]
-> @No__t-0 używa atrybutów <xref:System.Xml.Serialization.XmlAnyElementAttribute> i <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> do obsługi rundy nieznanych danych.  
+> <xref:System.Xml.Serialization.XmlSerializer> używa atrybutów <xref:System.Xml.Serialization.XmlAnyElementAttribute> i <xref:System.Xml.Serialization.XmlAnyAttributeAttribute> do obsługi rundy nieznanych danych.  
   
 ## <a name="message-contract-versioning"></a>Przechowywanie wersji kontraktu komunikatów  
  Wskazówki dotyczące przechowywania wersji kontraktu są bardzo podobne do wersji umów dotyczących danych. Jeśli jest wymagana ścisła wersja, nie należy zmieniać treści wiadomości, ale zamiast tego utworzyć nowy kontrakt wiadomości z unikatową kwalifikowaną nazwą. Jeśli wiesz, że możesz użyć wersji swobodny, możesz dodać nowe części treści wiadomości, ale nie zmieniać ani usuwać istniejących. Te wskazówki dotyczą umów dotyczących komunikatów zarówno od zera, jak i opakowanych.  
@@ -132,7 +132,7 @@ Po wdrożeniu wstępnym i potencjalnie kilka razy w okresie istnienia usługi (i
   
  Jednym z tych mechanizmów jest użycie interfejsów do definiowania elementów członkowskich każdego kontraktu danych i zapis wewnętrzny kod implementacji pod względem interfejsów, a nie klas kontraktów danych, które implementują interfejsy. Poniższy kod dla wersji 1 usługi zawiera interfejs `IPurchaseOrderV1` i `PurchaseOrderV1`:  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Mimo że operacje kontraktu usługi są zapisywane w warunkach `PurchaseOrderV1`, rzeczywista logika biznesowa miałaby `IPurchaseOrderV1`. Następnie w wersji 2 można uzyskać nowy interfejs `IPurchaseOrderV2` i nową klasę `PurchaseOrderV2`, jak pokazano w poniższym kodzie:  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

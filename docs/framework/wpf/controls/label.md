@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052056"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423776"
 ---
 # <a name="label"></a>Etykieta
-<xref:System.Windows.Controls.Label> Formanty zwykle są udostępniane w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  W przeszłości <xref:System.Windows.Controls.Label> ma zawiera tylko tekst, ale ponieważ <xref:System.Windows.Controls.Label> współpracującym z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Controls.ContentControl>, może on zawierać text lub <xref:System.Windows.UIElement>.  
+kontrolki <xref:System.Windows.Controls.Label> zwykle zawierają informacje w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historycznie, <xref:System.Windows.Controls.Label> zawiera tylko tekst, ale ponieważ <xref:System.Windows.Controls.Label>, który jest dostarczany z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Controls.ContentControl>, może zawierać zarówno tekst, jak i <xref:System.Windows.UIElement>.  
   
- Element <xref:System.Windows.Controls.Label> obsługuje zarówno funkcjonalności, jak i visual klucze dostępu. Włącz klawiatury szybki dostęp do formantów, takich jak często jest używana <xref:System.Windows.Controls.TextBox>. Aby przypisać <xref:System.Windows.Controls.Label> do <xref:System.Windows.Controls.Control>ustaw <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> właściwości formantu, który powinien otrzymywać fokus, gdy użytkownik naciśnie klawisz dostępu.  
+ <xref:System.Windows.Controls.Label> zapewnia obsługę funkcjonalną i wizualną dla kluczy dostępu. Jest on często używany do włączania szybkiego dostępu klawiatury do kontrolek, takich jak <xref:System.Windows.Controls.TextBox>. Aby przypisać <xref:System.Windows.Controls.Label> do <xref:System.Windows.Controls.Control>, ustaw właściwość <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> na kontrolkę, która powinna mieć fokus, gdy użytkownik naciśnie klawisz dostępu.  
   
- Na poniższej ilustracji przedstawiono <xref:System.Windows.Controls.Label> "Motywów", które jest przeznaczony dla <xref:System.Windows.Controls.ComboBox>.  Gdy użytkownik naciśnie, <xref:System.Windows.Controls.ComboBox> zostanie ustawiony fokus.  Aby uzyskać więcej informacji, zobacz [jak: Ustaw właściwość Target etykietę](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
+ Na poniższej ilustracji przedstawiono <xref:System.Windows.Controls.Label> "motywy", które są przeznaczone dla <xref:System.Windows.Controls.ComboBox>.  Gdy użytkownik naciśnie klawisz, <xref:System.Windows.Controls.ComboBox> otrzymuje fokus.  Aby uzyskać więcej informacji, zobacz [jak to zrobić: Ustawianie właściwości target etykiety](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Właściwości ekranu pokazuje oznaczonych przez użycie](./media/labeledby.JPG "LabeledBy")  
+ ![Zrzut ekranu przedstawiający okno dialogowe właściwości wyświetlania z etykietą według użycia.](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Utwórz formant z kluczem dostępu i zwijaniem tekstu](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+ [Instrukcje: Tworzenie kontrolki z kluczem dostępu i zawijaniem tekstu](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Label>

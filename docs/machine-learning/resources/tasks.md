@@ -4,27 +4,27 @@ description: Poznaj różne zadania uczenia maszynowego i powiązane zadania, kt
 ms.custom: seodec18
 ms.date: 04/23/2019
 author: natke
-ms.openlocfilehash: bcd967c11156ca9b837631560e78722b13fc7ae0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d19593358361c9c8d3657053e766ec4a2c1ec163
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630050"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424227"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Zadania uczenia maszynowego w ML.NET
 
-Podczas kompilowania modelu uczenia maszynowego należy najpierw zdefiniować, co zostaje się z danymi. Dzięki temu można wybrać odpowiednie zadanie uczenia maszynowego w danej sytuacji. Poniższa lista zawiera opis różnych zadań uczenia maszynowego, spośród których można wybierać i niektórych typowych przypadków użycia.
+Podczas kompilowania modelu uczenia maszynowego należy najpierw zdefiniować, co zostaje się z danymi. Dzięki temu można wybrać odpowiednie zadanie uczenia maszynowego w danej sytuacji. Poniższa lista zawiera opis różnych zadań uczenia maszynowego, spośród których można wybierać i niektórych typowych przypadków użycia. Aby uzyskać więcej informacji na temat wybierania zadania, które jest odpowiednie dla danego scenariusza, zobacz [algorytmy](../how-to-choose-an-ml-net-algorithm.md).
 
 Po ustaleniu, które zadanie działa w danym scenariuszu, należy wybrać najlepszy algorytm do uczenia modelu. Dostępne algorytmy są wymienione w sekcji dla każdego zadania.
 
 ## <a name="binary-classification"></a>Klasyfikacja binarna
 
-[Nadzorowane](glossary.md#supervised-machine-learning) zadanie uczenia maszynowego, które jest używane do przewidywania, do których dwóch klas (kategorii) należy wystąpienie danych. Wejściem algorytmu klasyfikacji jest zestaw przykładowych etykiet, gdzie każda etykieta jest liczbą całkowitą równą 0 lub 1. Dane wyjściowe algorytmu klasyfikacji binarnej to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykłady scenariuszy klasyfikacji binarnej obejmują:
+[Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania, do których dwóch klas (kategorii) należy wystąpienie danych. Wejściem algorytmu klasyfikacji jest zestaw przykładowych etykiet, gdzie każda etykieta jest liczbą całkowitą równą 0 lub 1. Dane wyjściowe algorytmu klasyfikacji binarnej to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykłady scenariuszy klasyfikacji binarnej obejmują:
 
 * [Zrozumienie tonacji komentarzy w serwisie Twitter](../tutorials/sentiment-analysis.md) jako "pozytywne" lub "negatywne".
 * Diagnozowanie, czy pacjent ma określoną chorobę, czy nie.
 * Podejmowanie decyzji o oznaczeniu wiadomości e-mail jako "spamu".
-* Ustalanie, czy zdjęcie zawiera pies lub owoc.
+* Określanie, czy zdjęcie zawiera określony element, np. pies lub owoce.
 
 Aby uzyskać więcej informacji, zobacz artykuł dotyczący [klasyfikacji binarnej](https://en.wikipedia.org/wiki/Binary_classification) w witrynie Wikipedia.
 
@@ -49,28 +49,28 @@ Można nauczyć model klasyfikacji binarnej przy użyciu następujących algoryt
 
 Aby uzyskać najlepsze wyniki z klasyfikacją binarną, należy zrównoważyć dane szkoleniowe (to jest równa Liczba pozytywnych i negatywnych danych szkoleniowych). Brakujące wartości powinny zostać obsłużone przed szkoleniem.
 
-Dane kolumny etykiet wejściowych muszą mieć <xref:System.Boolean>wartość.
-Dane kolumn funkcji wejściowych muszą mieć wektor o <xref:System.Single>stałym rozmiarze.
+Dane kolumny etykiety wejściowej muszą być <xref:System.Boolean>.
+Dane w kolumnie funkcje wejściowe muszą być wektorem o stałym rozmiarze <xref:System.Single>.
 
-Ci instruktorzy wyprowadzają następujące kolumny:
+Te instruktorzy wyprowadzają następujące kolumny:
 
 | Nazwa kolumny wyjściowej | Typ kolumny | Opis|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Nieprzetworzony wynik, który został obliczony przez model|
-| `PredictedLabel` | <xref:System.Boolean> | Przewidywana etykieta na podstawie znaku wyniku. Negatywny wynik mapy do `false` i pozytywnego wyniku są mapowane na. `true`|
+| `PredictedLabel` | <xref:System.Boolean> | Przewidywana etykieta na podstawie znaku wyniku. Negatywny wynik mapy do `false` i pozytywnego wyniku mapowania do `true`.|
 
 ## <a name="multiclass-classification"></a>Klasyfikacja wieloklasowa
 
-[Nadzorowane](glossary.md#supervised-machine-learning) zadanie uczenia maszynowego, które jest używane do przewidywania klasy (kategorii) wystąpienia danych. Dane wejściowe algorytmu klasyfikacji to zestaw przykładowych etykiet. Każda etykieta zwykle zaczyna się jako tekst. Następnie jest uruchamiany za pomocą TermTransform, który konwertuje go na typ klucza (liczbowy). Dane wyjściowe algorytmu klasyfikacji to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykładowe wieloklasowe scenariusze klasyfikacji obejmują:
+[Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania klasy (kategorii) wystąpienia danych. Dane wejściowe algorytmu klasyfikacji to zestaw przykładowych etykiet. Każda etykieta zwykle zaczyna się jako tekst. Następnie jest uruchamiany za pomocą TermTransform, który konwertuje go na typ klucza (liczbowy). Dane wyjściowe algorytmu klasyfikacji to klasyfikator, którego można użyć do przewidywania klasy nowych wystąpień bez etykiet. Przykładowe wieloklasowe scenariusze klasyfikacji obejmują:
 
 * Określanie rasy Dog jako "Siberian Husky", "złota wejście metody Retriever", "POODLE" itd.
 * Zrozumienie przeglądów filmów jako "pozytywnych", "neutralnych" lub "negatywnych".
 * Kategoryzacja przeglądów hotelu jako "lokalizacja", "cena", "czysta" itp.
 
-Aby uzyskać więcej informacji, zobacz artykuł dotyczący [klasyfikacji](https://en.wikipedia.org/wiki/Multiclass_classification) wieloklasowej w witrynie Wikipedia.
+Aby uzyskać więcej informacji, zobacz artykuł dotyczący [klasyfikacji wieloklasowej](https://en.wikipedia.org/wiki/Multiclass_classification) w witrynie Wikipedia.
 
 >[!NOTE]
->Jeden a All uaktualnia każdy [kod binarny](#binary-classification) do działania w ramach wieloklasowych zestawów danych. Więcej informacji na temat witryny [Wikipedia https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) ] (.
+>Jeden a All uaktualnia każdy [kod binarny](#binary-classification) do działania w ramach wieloklasowych zestawów danych. Więcej informacji na temat witryny [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest).
 
 ### <a name="multiclass-classification-trainers"></a>Instruktorzy klasyfikacji wieloklasowej
 
@@ -87,18 +87,18 @@ Można przeszkolić model klasyfikacji wieloklasowej przy użyciu następującyc
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Dane wejściowe i wyjściowe klasyfikacji wieloklasowej
 
 Dane kolumny etykiet wejściowych muszą być typu [klucza](xref:Microsoft.ML.Data.KeyDataViewType) .
-Kolumna funkcji musi być wektorem o <xref:System.Single>stałym rozmiarze.
+Kolumna funkcji musi być wektorem o stałym rozmiarze <xref:System.Single>.
 
 Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | Wektor<xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
+| `Score` | Wektor <xref:System.Single> | Wyniki wszystkich klas. Wyższa wartość oznacza wyższe prawdopodobieństwo podzielenia się z klasą skojarzoną. Jeśli element i-ty ma największą wartość, przewidywany indeks etykiet będzie. Zwróć uwagę, że jest indeksem opartym na wartości zero. |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks przewidywanej etykiety. Jeśli wartość jest równa i, rzeczywista etykieta będzie kategorią i, w typie etykiety wejściowej z wartościami klucza. |
 
-## <a name="regression"></a>Regresji
+## <a name="regression"></a>Ubytk
 
-[Nadzorowane](glossary.md#supervised-machine-learning) zadanie uczenia maszynowego, które jest używane do przewidywania wartości etykiety z zestawu pokrewnych funkcji. Etykieta może być dowolną wartością rzeczywistą i nie pochodzi z skończonego zestawu wartości jako zadań klasyfikacji. Algorytmy regresji modelują zależność etykiety na jej powiązanych funkcjach, aby określić, w jaki sposób etykieta zostanie zmieniona, ponieważ wartości funkcji są różne. Wejście algorytmu regresji jest zestawem przykładów z etykietami znanych wartości. Wynikiem algorytmu regresji jest funkcja, której można użyć do przewidywania wartości etykiety dla każdego nowego zestawu funkcji wejściowych. Przykłady scenariuszy regresji obejmują:
+[Nadzorowane zadanie uczenia maszynowego](glossary.md#supervised-machine-learning) , które jest używane do przewidywania wartości etykiety z zestawu pokrewnych funkcji. Etykieta może być dowolną wartością rzeczywistą i nie pochodzi z skończonego zestawu wartości jako zadań klasyfikacji. Algorytmy regresji modelują zależność etykiety na jej powiązanych funkcjach, aby określić, w jaki sposób etykieta zostanie zmieniona, ponieważ wartości funkcji są różne. Wejście algorytmu regresji jest zestawem przykładów z etykietami znanych wartości. Wynikiem algorytmu regresji jest funkcja, której można użyć do przewidywania wartości etykiety dla każdego nowego zestawu funkcji wejściowych. Przykłady scenariuszy regresji obejmują:
 
 * Przewidywanie cen domu na podstawie atrybutów, takich jak liczba sypialniami, lokalizacji lub rozmiaru.
 * Przewidywanie przyszłych cen giełdowych w oparciu o dane historyczne i bieżące trendy rynkowe.
@@ -120,7 +120,7 @@ Model regresji można przeszkolić przy użyciu następujących algorytmów:
 
 ### <a name="regression-inputs-and-outputs"></a>Dane wejściowe i wyjściowe regresji
 
-Dane kolumny etykiet wejściowych muszą mieć <xref:System.Single>wartość.
+Dane kolumny etykiety wejściowej muszą być <xref:System.Single>.
 
 Instruktorzy dla tego zadania wyprowadzają następujące dane wyjściowe:
 
@@ -144,13 +144,13 @@ Model klastrowania można przeszkolić przy użyciu następującego algorytmu:
 
 ### <a name="clustering-inputs-and-outputs"></a>Klastrowanie danych wejściowych i wyjściowych
 
-Dane funkcji wejściowych muszą mieć <xref:System.Single>wartość. Etykiety nie są zbędne.
+Dane funkcji wejściowych muszą być <xref:System.Single>. Etykiety nie są zbędne.
 
 Ta Trainer wyprowadza następujące dane:
 
 | Nazwa wyjściowa | Typ | Opis|
 | -- | -- | -- |
-| `Score` | wektor<xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
+| `Score` | wektor <xref:System.Single> | Odległość danego punktu danych do wszystkich klastrów centriods |
 | `PredictedLabel` | Typ [klucza](xref:Microsoft.ML.Data.KeyDataViewType) | Indeks najbliższego klastra przewidziany przez model. |
 
 ## <a name="anomaly-detection"></a>Wykrywanie anomalii
@@ -176,7 +176,7 @@ Model wykrywania anomalii można przeszkolić przy użyciu następującego algor
 
 ### <a name="anomaly-detection-inputs-and-outputs"></a>Dane wejściowe i wyjściowe wykrywania anomalii
 
-Funkcje wejściowe muszą być wektorami o <xref:System.Single>stałym rozmiarze.
+Funkcje wejściowe muszą być wektorami o stałym rozmiarze <xref:System.Single>.
 
 Ta Trainer wyprowadza następujące dane:
 
@@ -199,7 +199,7 @@ Model klasyfikowania można nauczyć przy użyciu następujących algorytmów:
 
 Typ danych etykiety wejściowej musi być typem [klucza](xref:Microsoft.ML.Data.KeyDataViewType) lub <xref:System.Single>. Wartość etykiety określa istotność, gdzie wyższe wartości wskazują wyższy poziom istotności. Jeśli etykieta jest typem [klucza](xref:Microsoft.ML.Data.KeyDataViewType) , indeks klucza jest wartością istotności, gdzie najmniejszy indeks jest najmniej istotny. Jeśli etykieta jest <xref:System.Single>, większe wartości wskazują wyższy poziom istotności.
 
-Dane funkcji muszą być wektorem o <xref:System.Single> stałym rozmiarze, a kolumna grupy wierszy wejściowych musi być typem [klucza](xref:Microsoft.ML.Data.KeyDataViewType) .
+Dane funkcji muszą być wektorem o stałym rozmiarze <xref:System.Single>, a kolumna grupy wierszy wejściowych musi być typem [klucza](xref:Microsoft.ML.Data.KeyDataViewType) .
 
 Ta Trainer wyprowadza następujące dane:
 
@@ -207,9 +207,9 @@ Ta Trainer wyprowadza następujące dane:
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | Niezwiązany wynik, który został obliczony przez model w celu określenia przewidywania |
 
-## <a name="recommendation"></a>Zalecenie
+## <a name="recommendation"></a>Zaleca
 
-Zadanie rekomendacji umożliwia tworzenie listy zalecanych produktów lub usług. ML.NET używa [klasy Matrix factorization (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), współpracującego algorytmu [filtrowania](https://en.wikipedia.org/wiki/Collaborative_filtering) dla zaleceń w przypadku historycznych danych oceny produktu w katalogu. Na przykład masz historyczne dane klasyfikacji filmów dla użytkowników i chcesz, aby zalecać inne filmy, które mogą być obserwowane dalej.
+Zadanie rekomendacji umożliwia tworzenie listy zalecanych produktów lub usług. ML.NET używa [klasy Matrix factorization (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29), [współpracującego algorytmu filtrowania](https://en.wikipedia.org/wiki/Collaborative_filtering) dla zaleceń w przypadku historycznych danych oceny produktu w katalogu. Na przykład masz historyczne dane klasyfikacji filmów dla użytkowników i chcesz, aby zalecać inne filmy, które mogą być obserwowane dalej.
 
 ### <a name="recommendation-training-algorithms"></a>Algorytmy szkoleniowe dotyczące rekomendacji
 

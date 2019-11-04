@@ -1,33 +1,33 @@
 ---
-title: 'Instrukcje: Stosowanie stylu FocusVisualStyle do kontrolki'
+title: Jak zastosować FocusVisualStyle do formantu
 ms.date: 03/30/2017
 helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b44330ee7554f953389556bd62ff49db120b5db9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051328"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459805"
 ---
-# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Instrukcje: Stosowanie stylu FocusVisualStyle do kontrolki
-W tym przykładzie pokazano, jak utworzyć styl wizualny fokusu w zasobach i zastosować styl do kontrolki, za pomocą <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości.  
+# <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Jak zastosować FocusVisualStyle do formantu
+Ten przykład pokazuje, jak utworzyć styl wizualizacji fokusu w zasobach i zastosować styl do kontrolki przy użyciu właściwości <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano styl, który tworzy dodatkową kontrolę składania, które tylko wtedy, gdy kontrola jest klawiatury w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jest to realizowane przez zdefiniowanie styl z <xref:System.Windows.Controls.ControlTemplate>, a następnie odwołuje się do tego stylu jako zasób podczas ustawiania <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości.  
+ W poniższym przykładzie zdefiniowano styl, który tworzy dodatkowe elementy sterujące, które mają zastosowanie tylko wtedy, gdy ta kontrolka jest ukierunkowana na [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. Jest to realizowane przez zdefiniowanie stylu z <xref:System.Windows.Controls.ControlTemplate>, a następnie odwołanie do tego stylu jako zasobu podczas ustawiania właściwości <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>.  
   
- Prostokąt zewnętrznych przypominającą obramowanie jest umieszczany poza prostokątny obszar. O ile nie zmodyfikowano inaczej, korzysta z rozmiaru stylu <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.ActualWidth%2A> prostokątny kontrolki, w której stosowana jest styl wizualny fokusu. W tym przykładzie wartości ujemnych dla <xref:System.Windows.FrameworkElement.Margin%2A> Aby obramowanie pojawiają się nieco poza kontrolą wąsko zdefiniowany.  
+ Zewnętrzny prostokąt przypominający obramowanie znajduje się poza prostokątnym obszarem. O ile nie zmodyfikowano inaczej, rozmiar stylu używa <xref:System.Windows.FrameworkElement.ActualHeight%2A> i <xref:System.Windows.FrameworkElement.ActualWidth%2A> prostokątnego formantu, w którym jest stosowany styl wizualizacji fokusu. Ten przykład ustawia wartości ujemne dla <xref:System.Windows.FrameworkElement.Margin%2A>, aby obramowanie pojawiło się nieco poza kontrolką ukierunkowaną.  
   
  [!code-xaml[FEFocusVisualStyle#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FEFocusVisualStyle/CS/page1.xaml#xaml)]  
   
- A <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> jest dodatku na dowolny styl szablonu kontrolki, dostarczanego z style jawne lub style motyw; podstawowy styl kontrolki nadal można utworzyć za pomocą <xref:System.Windows.Controls.ControlTemplate> i ustawienie stylu <xref:System.Windows.FrameworkElement.Style%2A> właściwości.  
+ <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> jest dodatkiem do dowolnego stylu szablonu formantu, który pochodzi ze stylu jawnego lub stylu motywu; styl podstawowy formantu można nadal utworzyć przy użyciu <xref:System.Windows.Controls.ControlTemplate> i ustawić ten styl na Właściwość <xref:System.Windows.FrameworkElement.Style%2A>.  
   
- Fokus stylów wizualnych powinien stosowane konsekwentnie w motywu lub interfejsu użytkownika, a nie przy użyciu innej dla każdego elementu focusable. Aby uzyskać więcej informacji, zobacz [style dla fokusu w formantach i FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
+ Style wizualizacji fokusu powinny być stosowane spójnie między motywem lub interfejsem użytkownika, a nie przy użyciu różnych elementów dla każdego elementu możliwego do skoncentrowania. Aby uzyskać szczegółowe informacje, zobacz [Style do fokusu w kontrolkach i FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Style dla fokusu w kontrolkach i styl FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

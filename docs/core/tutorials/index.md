@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925941"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420840"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Poznaj narzędzia platformy .NET Core i zestaw .NET Core SDK, korzystając z tych samouczków
 
@@ -25,7 +25,7 @@ Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 - [Kompilowanie biblioteki klas przy użyciu Visual Basic](vb-library-with-visual-studio.md)
 - [Testowanie biblioteki klas](testing-library-with-visual-studio.md)
 - [Zużywanie biblioteki klas](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB: Wprowadzenie do interfejsu API SQL i platformy .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: Rozpoczynanie pracy z interfejsem API SQL i platformą .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Tworzenie aplikacji za pomocą Visual Studio Code
 
@@ -49,6 +49,6 @@ Poniższe samouczki są dostępne do uczenia się w programie .NET Core.
 - [Testowanie jednostkowe za pomocą MSTest i .NET Core](../testing/unit-testing-with-mstest.md)
 - [Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](libraries.md)
 - [Hostowanie platformy .NET Core z kodu natywnego](netcore-hosting.md)
-- [Tworzenie szablonu niestandardowego dla polecenia dotnet new](create-custom-template.md)
+- [Tworzenie szablonu niestandardowego dla polecenia dotnet new](cli-templates-create-item-template.md)
 
 Samouczki dotyczące projektowania ASP.NET Core aplikacji sieci Web znajdują się w [dokumentacji ASP.NET Core](/aspnet/core/).

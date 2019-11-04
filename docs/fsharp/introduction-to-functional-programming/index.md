@@ -1,83 +1,83 @@
 ---
 title: Wprowadzenie do programowania funkcyjnego w F#
-description: Poznaj podstawy programowania funkcyjnego w F#.
+description: Poznaj podstawy programowania funkcjonalnego w programie F#.
 ms.date: 10/29/2018
-ms.openlocfilehash: 84022e58c0f17b9e9875402c653c31e494e940da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e1a0edc61dbe13012c48e166d490e22ebc70d6a0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772791"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424710"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>Wprowadzenie do programowania funkcyjnego w F\#
+# <a name="introduction-to-functional-programming-in-f"></a>Wprowadzenie do programowania funkcjonalnego w języku F\#
 
-Programowanie funkcjonalne jest stylu programowania, która kładzie nacisk na korzystanie z funkcji i niezmienialnymi danymi. Jest wpisane programowania funkcjonalnego, podczas programowania funkcjonalnego jest połączony z typów statycznych, takich jak za pomocą F#. Ogólnie rzecz biorąc następujące pojęcia są wyróżniono w programowaniu funkcjonalności:
+Programowanie funkcjonalne to styl programowania, który kładzie nacisk na korzystanie z funkcji i niezmienne dane. Programowanie funkcjonalne o określonym typie jest połączone z typami statycznymi, na przykład z F#. Ogólnie rzecz biorąc, następujące koncepcje zostały wyróżnione w programowaniu funkcjonalnym:
 
-* Funkcje jako głównymi konstrukcjami, których używasz
-* Wyrażeń, zamiast instrukcji
-* Niezmienne wartości zmiennych
-* Programowanie deklaratywne za pośrednictwem programowanie imperatywne
+* Działa jako konstrukcje podstawowe, z których korzystasz
+* Wyrażenia zamiast instrukcji
+* Niezmienne wartości w zmiennych
+* Programowanie deklaratywne nad bezwzględnym programowaniem
 
-W tej serii przedstawimy pojęcia i wzorce w funkcjonalności programowania przy użyciu F#. Po drodze dowiesz się, niektóre F# zbyt.
+W tej serii zapoznajesz koncepcje i wzorce w programowaniu funkcjonalnym F#przy użyciu programu. W ten sposób dowiesz się, jak F# również.
 
 ## <a name="terminology"></a>Terminologia
 
-Programowanie funkcjonalne, podobnie jak inne programowania paradygmatów jest powiązana z słownictwo, który ostatecznie trzeba będzie Dowiedz się więcej. Poniżej przedstawiono niektóre typowe terminy, zobaczysz cały czas:
+Programowanie funkcjonalne, takie jak inne odmiany programistyczne, zawiera słownictwo, które trzeba poznać. Poniżej przedstawiono niektóre typowe terminy, w których zobaczysz cały czas:
 
-* **Funkcja** — funkcja jest konstrukcja, która spowoduje wygenerowanie danych wyjściowych, gdy dane wejściowe. Więcej formalnie go _mapuje_ element z jednego zestawu do innego zestawu. Ta formalism zostało zniesione pod konkretny na wiele sposobów, zwłaszcza w przypadku korzystania z funkcji, które działają na zbiory danych. To najbardziej podstawowy (i ważne) pojęciem programowania funkcjonalnego. 
-* **Wyrażenie** -wyrażenie jest konstrukcja w kodzie, który generuje wartość. W F#, ta wartość musi być powiązany lub jawnie ignorowane. Wyrażenie może być przypadku zastąpiony wywołania funkcji.
-* **Czystość** -czystości to właściwość funkcji w taki sposób, że jego wartość zwracana jest zawsze taki sam, aby uzyskać te same argumenty i że jego oceny nie ma żadnych efektów ubocznych. Czystej funkcji zależy od całkowicie argumentów.
-* **Przezroczystość referencyjną** -referencyjną przezroczystości jest właściwość wyrażeń taki sposób, że ich, można zastąpić swoje dane wyjściowe bez wywierania wpływu na zachowanie programu.
-* **Niezmienność** -niezmienności oznacza wartość nie może być zmieniona w miejscu. Jest to w przeciwieństwie do zmiennych, które można zmienić w miejscu.
+* **Function** -a funkcja jest konstrukcja, która spowoduje wygenerowanie danych wyjściowych po otrzymaniu danych wejściowych. Bardziej formalnie _mapuje_ element z jednego zestawu na inny. Ta formalność jest przekształcana w konkretną na wiele sposobów, szczególnie w przypadku korzystania z funkcji, które działają na kolekcjach danych. Jest to najbardziej podstawowe (i ważne) koncepcje programowania funkcjonalnego.
+* **Wyrażenie** -wyrażenie jest konstrukcja w kodzie, która tworzy wartość. W F#programie ta wartość musi być powiązana lub jawnie ignorowana. Wyrażenie może być nieuproszczone zamieniane przez wywołanie funkcji.
+* **Czystość** — czystość jest właściwością funkcji, w taki sposób, że jej wartość zwracana jest zawsze taka sama dla tych samych argumentów i że jej Ocena nie ma żadnych efektów ubocznych. Czysta funkcja zależy wyłącznie od jej argumentów.
+* **Przezroczystość referencyjna** — przezroczystość referencyjna jest właściwością wyrażeń, które mogą zostać zastąpione danymi wyjściowymi bez wpływania na zachowanie programu.
+* **Niezmienności** -niezmienności oznacza, że wartości nie można zmienić w miejscu. Jest to w przeciwieństwie do zmiennych, które mogą ulec zmianie w miejscu.
 
 ## <a name="examples"></a>Przykłady
 
-W poniższych przykładach pokazano tych podstawowych założeń.
+W poniższych przykładach przedstawiono podstawowe pojęcia.
 
 ### <a name="functions"></a>Funkcje
 
-Najbardziej typowe i podstawowe konstrukcję w programowania funkcjonalnego jest funkcją. Poniżej przedstawiono prosty funkcja, która dodaje 1 na liczbę całkowitą:
+Najbardziej typową i podstawową konstrukcją w programowaniu funkcjonalnym jest funkcja. Oto prosta funkcja, która dodaje 1 do liczby całkowitej:
 
 ```fsharp
 let addOne x = x + 1
 ```
 
-Podpis jego typ jest następująca:
+Podpis typu jest następujący:
 
 ```fsharp
 val addOne: x:int -> int
 ```
 
-Podpis mogą być odczytywane jako "`addOne` akceptuje `int` o nazwie `x` i będzie generować `int`". Więcej formalnie `addOne` jest _mapowania_ wartość z liczby całkowite na liczby całkowite. `->` Token, oznacza to mapowanie. W F#, zwykle przyjrzymy się sygnatura funkcji, aby poznać jego przeznaczenie.
+Podpis może być odczytywany jako "`addOne` akceptuje `int` o nazwie `x` i spowoduje utworzenie `int`". Bardziej formalnie `addOne` _mapuje_ wartość z zestawu liczb całkowitych na zestaw liczb całkowitych. Token `->` oznacza to mapowanie. W F#programie zwykle można przyjrzeć się sygnatury funkcji w celu uzyskania sensu, co robi.
 
-Dlatego jest podpis ważna W typizowanych programowania funkcjonalnego, implementacja funkcji jest często mniej istotne niż rzeczywisty typ podpisu! Fakt, `addOne` dodaje wartość od 1 do liczby całkowitej jest interesująca w czasie wykonywania, ale gdy są konstruowanie programu fakt, że akceptuje i zwraca `int` to, co informuje, jak faktycznie użyjesz tej funkcji. Ponadto, gdy funkcja poprawnie (względem jeho signatura typu), diagnozowanie problemów może odbywać się tylko w treści `addOne` funkcji. Jest to tempa za wpisane programowania funkcjonalnego.
+Dlatego dlaczego sygnatura jest ważna? W przypadku programowania w określonym zakresie implementacja funkcji jest często mniej ważna niż faktyczny podpis typu! Fakt, że `addOne` dodaje wartość 1 do liczby całkowitej, jest interesujący w czasie wykonywania, ale podczas konstruowania programu, fakt, że akceptuje, i zwraca `int`, wskazuje, jak faktycznie będzie używana ta funkcja. Ponadto po poprawnym użyciu tej funkcji (w odniesieniu do podpisu typu) diagnozowanie wszelkich problemów może odbywać się tylko w treści funkcji `addOne`. Jest to tempo związane z programowaniem funkcjonalności w określonym typie.
 
 ### <a name="expressions"></a>Wyrażenia
 
-Wyrażenia są konstrukcji, które obliczają do wartości. W przeciwieństwie do instrukcji, które wykonują akcję, można traktować wyrażeń wykonywanie akcji, która zapewnia ponownie wartość. Wyrażenia prawie zawsze są używane na rzecz instrukcji programowania funkcjonalnego.
+Wyrażenia są konstrukcjami, które są szacowane do wartości. W przeciwieństwie do instrukcji, które wykonują akcję, wyrażenia mogą być uważane za wykonywanie akcji, która zwraca wartość. Wyrażenia są prawie zawsze używane na korzyść instrukcji w programowaniu funkcjonalnym.
 
-Należy wziąć pod uwagę poprzednie funkcji `addOne`. Treść `addOne` to wyrażenie:
+Rozważmy poprzednią funkcję, `addOne`. Treść `addOne` jest wyrażeniem:
 
 ```fsharp
 // 'x + 1' is an expression!
 let addOne x = x + 1
 ```
 
-Jest to wynik tego wyrażenia, który definiuje typ wyniku `addOne` funkcji. Na przykład, wyrażenie, które tworzą tej funkcji można ją zmienić w taki sposób, na być innego typu, taką jak `string`:
+Jest to wynik tego wyrażenia, który definiuje typ wyniku funkcji `addOne`. Na przykład, wyrażenie, które powoduje, że ta funkcja może zostać zmieniony na inny typ, taki jak `string`:
 
 ```fsharp
 let addOne x = x.ToString() + "1"
 ```
 
-Podpis funkcji jest teraz:
+Sygnatura funkcji jest teraz:
 
 ```fsharp
 val addOne: x:'a -> string
 ```
 
-Od dowolnego typu w F# może mieć `ToString()` wywoływać w nim typ `x` wprowadzono ogólnego (o nazwie [automatyczna Generalizacja](../language-reference/generics/automatic-generalization.md)), a wynikowy typ to `string`.
+Ponieważ dowolny typ w F# może mieć `ToString()` wywoływany, typ `x` został generyczny (nazywany [automatycznym generalizacją](../language-reference/generics/automatic-generalization.md)), a wynikowy typ to `string`.
 
-Wyrażenia nie są po prostu treści funkcji. Może mieć wyrażenia, które generują wartość, których używasz w innym miejscu. Często jest `if`:
+Wyrażenia nie są tylko treścią funkcji. Można utworzyć wyrażenia, które tworzą wartość używaną w innym miejscu. Wspólny `if`:
 
 ```fsharp
 // Checks if 'x' is odd by using the mod operator
@@ -93,9 +93,9 @@ let addOneIfOdd input =
     result
 ```
 
-`if` Wyrażenia generują wartość o nazwie `result`. Należy zauważyć, że można pominąć `result` całości, dzięki czemu `if` wyrażenia treści z `addOneIfOdd` funkcji. Kluczową kwestią do zapamiętania informacji na temat wyrażeń jest, aby spowodować wartość.
+Wyrażenie `if` generuje wartość o nazwie `result`. Należy pamiętać, że można pominąć `result` całkowicie, wprowadzając `if` wyrażenie treści funkcji `addOneIfOdd`. Kluczem do zapamiętania w przypadku wyrażeń jest utworzenie wartości.
 
-Jest specjalnym typem `unit`, który jest używany, gdy nie ma nic do zwrócenia. Na przykład należy wziąć pod uwagę tej prostej funkcji:
+Istnieje typ specjalny, `unit`, który jest używany, gdy nie ma niczego do zwrócenia. Rozważmy na przykład tę prostą funkcję:
 
 ```fsharp
 let printString (str: string) =
@@ -108,9 +108,9 @@ Podpis wygląda następująco:
 val printString: str:string -> unit
 ```
 
-`unit` Typu wskazuje, że nie ma rzeczywiste wartości zwracanych. Jest to przydatne, gdy masz procedurę, która musi "work" pomimo posiadanie żadnej wartości do zwrócenia w wyniku tej pracy.
+Typ `unit` wskazuje, że nie jest zwracana wartość rzeczywista. Jest to przydatne, gdy masz procedurę, która musi "do pracy" mimo braku wartości do zwrócenia w wyniku tej pracy.
 
-To sharp natomiast do programowania imperatywnego, gdzie odpowiednik `if` konstrukcja jest instrukcją i produkcji wartości często odbywa się za pomocą mutacja zmiennych. Na przykład w C#, kod może być zapisany jako:
+Jest to bardzo zróżnicowane dla bezwzględnego programowania, gdzie równoważna konstrukcja `if` jest instrukcją, a Tworzenie wartości jest często wykonywane z mutacją zmiennych. Na przykład w programie C#kod może być zapisany w następujący sposób:
 
 ```csharp
 bool IsOdd(int x) => x % 2 != 0;
@@ -128,22 +128,22 @@ int AddOneIfOdd(int input)
 }
 ```
 
-Warto zauważyć, że C# i innych językach w stylu języka C obsługuje [trójargumentowy wyrażenie](../../csharp/language-reference/operators/conditional-operator.md), co umożliwia oparte na wyrażeniach warunkowych programowania.
+Warto zauważyć, że C# a inne języki w stylu C obsługują [wyrażenie Trzyelementowy](../../csharp/language-reference/operators/conditional-operator.md), które umożliwia programowanie warunkowe oparte na wyrażeniach.
 
-W programowaniu funkcjonalności, to rzadkość, aby mutować wartości za pomocą instrukcji. Mimo że w przypadku niektórych języków funkcjonalnych obsługuje oświadczenia i mutacji, nie jest często używa tych pojęć w programowania funkcjonalnego.
+W programowaniu funkcjonalnym rzadko można przystąpić do wartości instrukcji. Chociaż niektóre języki funkcjonalne obsługują instrukcje i mutacje, nie jest powszechna możliwość używania tych koncepcji w programowaniu funkcjonalnym.
 
-### <a name="pure-functions"></a>Czystych funkcji
+### <a name="pure-functions"></a>Czyste funkcje
 
-Jak wspomniano wcześniej, czystej funkcji funkcji:
+Jak wspomniano wcześniej, czyste funkcje to funkcje, które:
 
-* Zawsze należy przeprowadzić ocenę na tę samą wartość dla tych samych danych wejściowych.
-* Mieć żadnych efektów ubocznych.
+* Należy zawsze oszacować tę samą wartość dla tych samych danych wejściowych.
+* Nie ma żadnych efektów ubocznych.
 
-Warto traktować funkcji matematycznych, w tym kontekście. W matematyce funkcje być zależne tylko od ich argumentów i nie ma żadnych efektów ubocznych. W funkcji matematycznych `f(x) = x + 1`, wartość `f(x)` zależy tylko od wartości `x`. Czystej funkcji w programowania funkcjonalnego jest taki sam sposób.
+Warto traktować funkcje matematyczne w tym kontekście. W przypadku matematyki funkcje są zależne od ich argumentów i nie mają żadnych efektów ubocznych. W funkcji matematycznej `f(x) = x + 1`wartość `f(x)` zależy od wartości `x`. Czyste funkcje w programowaniu funkcjonalnym są takie same.
 
-Podczas pisania czystą funkcję, funkcja musi być zależne tylko od argumentów i wykonuje żadnych działań, które powoduje efekt uboczny.
+Podczas pisania czystej funkcji, funkcja musi zależeć tylko od jej argumentów i nie wykonuje żadnej akcji, która skutkuje efektem ubocznym.
 
-Oto przykład-czystej funkcji, ponieważ zależy od globalnej, modyfikowalnego stanu:
+Oto przykład funkcji nieczystych, ponieważ zależy ona od globalnego, modyfikowalnego stanu:
 
 ```fsharp
 let mutable value = 1
@@ -151,58 +151,58 @@ let mutable value = 1
 let addOneToValue x = x + value
 ```
 
-`addOneToValue` Funkcja jest wyraźnie oczyścić zanieczyszczony, ponieważ `value` można zmienić w dowolnym momencie, będzie mieć wartość inną niż 1. Tego wzorca w zależności od wartości globalnej jest unikać w programowania funkcjonalnego.
+Funkcja `addOneToValue` jest jasno nieczytelna, ponieważ `value` można zmienić w dowolnym momencie, aby miała inną wartość niż 1. Ten wzorzec w zależności od wartości globalnej należy unikać w programowaniu funkcjonalnym.
 
-Oto inny przykład-czystą funkcję, bo efekt uboczny:
+Oto inny przykład nieczystej funkcji, ponieważ wykonuje efekt uboczny:
 
 ```fsharp
-let addOneToValue x = 
+let addOneToValue x =
     printfn "x is %d" x
     x + 1
 ```
 
-Chociaż ta funkcja nie zależy od wartości globalnej, zapisuje wartość `x` danych wyjściowych programu. Mimo że nie ma natury błąd w ten sposób, to oznacza, że funkcja nie jest czysty. Jeśli innej części programu, który jest zależna od coś zewnętrznego do programu, takie jak bufor wyjściowy następnie wywołaniu tej funkcji może mieć wpływ na tę część programu.
+Chociaż ta funkcja nie jest zależna od wartości globalnej, zapisuje wartość `x` w danych wyjściowych programu. Chociaż nie ma żadnego niewłaściwego w tym celu, oznacza to, że funkcja nie jest czysta. Jeśli inna część programu zależy od elementu zewnętrznego do programu, takiego jak bufor wyjściowy, wywołanie tej funkcji może mieć wpływ na tę inną część programu.
 
-Usuwanie `printfn` instrukcji sprawia, że funkcja jest czysty:
+Usunięcie instrukcji `printfn` powoduje, że funkcja jest czysta:
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-Chociaż ta funkcja nie jest z natury _lepsze_ niż poprzednia wersja z `printfn` instrukcji zagwarantować wszystkie ta funkcja nie jest zwrócona wartość. Wywołanie tej funkcji dowolną liczbę razy daje ten sam wynik: po prostu tworzy wartość. Przewidywalność podane przez czystości sytuacji niełatwo jest wielu programistów funkcjonalności Dokładamy wszelkich starań, aby uzyskać.
+Mimo że ta funkcja nie jest jeszcze _lepsza_ niż poprzednia wersja przy użyciu instrukcji `printfn`, gwarantuje, że cała ta funkcja zwraca wartość. Wywołanie tej funkcji dowolna liczba razy daje ten sam wynik: po prostu tworzy wartość. Przewidywalność podaną przez czystość to coś wielu programistów.
 
-### <a name="immutability"></a>Niezmienność
+### <a name="immutability"></a>Niezmienności
 
-Na koniec jest jedną z najbardziej podstawowe pojęcia programowania funkcjonalnego wpisane niezmienności. W F#, wszystkie wartości są niezmienne domyślnie. Oznacza to, że nie może być zmutowania na miejscu, chyba że wyraźnie oznaczyć je jako modyfikowalna.
+Na koniec jednym z najważniejszych koncepcji programowania funkcjonalnego z typem jest niezmienności. W F#programie wszystkie wartości są domyślnie niezmienne. Oznacza to, że nie można ich zmodyfikować w miejscu, chyba że jawnie Oznacz je jako modyfikowalne.
 
-W praktyce Praca z wartościami niezmiennymi oznacza, że zmienić swoje podejście do programowania z "Muszę coś zmienić", aby "należy utworzyć nową wartość".
+W tym przypadku praca z niezmiennymi wartościami oznacza zmianę podejścia do programowania z, "muszę zmienić coś" na "chcę utworzyć nową wartość".
 
-Na przykład dodawanie 1 na wartość oznacza produkujących nową wartość, nie mutacja istniejącą grupę:
+Na przykład dodanie 1 do wartości oznacza wygenerowanie nowej wartości, a nie mutację istniejącej:
 
 ```fsharp
 let value = 1
 let secondValue = value + 1
 ```
 
-W F#, poniższy kod wykonuje **nie** mutować `value` funkcji; zamiast tego wykonuje sprawdzanie równości:
+W F#programie Poniższy **kod nie powoduje mutacji** funkcji `value`; Zamiast tego sprawdza równość:
 
 ```fsharp
 let value = 1
 value = value + 1 // Produces a 'bool' value!
 ```
 
-Niektóre funkcjonalności języki programowania nie obsługują na wszystkich mutacji. W F#, jest obsługiwane, ale nie jest to domyślne zachowanie dla wartości.
+Niektóre funkcjonalne Języki programowania nie obsługują mutacji. W F#programie jest obsługiwane, ale nie jest to domyślne zachowanie dla wartości.
 
-Rozszerza tę koncepcję nawet bardziej struktur danych. W programowania funkcjonalnego, danymi niezmiennymi struktury, takich jak zestawy (i wielu innych) mają różne implementacje niż może być początkowo się spodziewać. Model coś, takie jak dodanie elementu do zestawu nie zmienia się zestaw, generuje _nowe_ zestawu przy użyciu wartości dodanej. Dzieje się w tle to często odbywa się przez to struktura różnych danych, która pozwala na efektywne śledzenia wartość tak, aby w efekcie można podać odpowiednie reprezentacja danych.
+Koncepcja ta rozszerza jeszcze więcej do struktur danych. W programowaniu funkcjonalnym niezmienne struktury danych, takie jak zestawy (i wiele innych), mają inną implementację niż oczekiwano. Ze względu na to, że dodanie elementu do zestawu nie powoduje zmiany zestawu, tworzy _Nowy_ zestaw z dodaną wartością. W obszarze okładek jest to często realizowane przez inną strukturę danych, która umożliwia efektywne śledzenie wartości, dzięki czemu w wyniku tego można otrzymać odpowiednią reprezentację danych.
 
-Ten styl pracy z wartościami i struktur danych ma krytyczne znaczenie, ponieważ wymusza można traktować każdej operacji, która modyfikuje coś tak, jakby tworzy nową wersję aplikacji. Umożliwi to np. równości i porównywalności zachować spójność w swoich programach.
+Ten styl pracy z wartościami i strukturami danych jest krytyczny, ponieważ Wymusza traktowanie dowolnej operacji, która modyfikuje coś, tak jakby tworzy nową wersję tego elementu. Pozwala to na takie jak równość i porównywalność w programach.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Następna sekcja dokładnie obejmuje funkcje, eksplorowanie różne sposoby, można ich używać w programowania funkcjonalnego.
+W następnej sekcji znajdują się dokładne funkcje, eksplorowanie różnych sposobów korzystania z nich w programowaniu funkcjonalnym.
 
-[Funkcje pierwszej klasy](first-class-functions.md) Eksploruje funkcje głęboko, przedstawiający sposób ich użycia w różnych kontekstach.
+[Funkcje pierwszej klasy](first-class-functions.md) eksplorują funkcje głęboko i pokazują, jak można ich używać w różnych kontekstach.
 
-## <a name="further-reading"></a>Dalsze informacje
+## <a name="further-reading"></a>Dalsze odczytywanie
 
-[Myśl funkcjonalnie](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) seria jest innym świetnym zasobem, aby dowiedzieć się więcej o programowania funkcjonalnego, za pomocą F#. Poruszono w nim podstawowe informacje na temat programowania funkcjonalnego w sposób pragmatyczne i łatwe do odczytania przy użyciu F# funkcji w celu zilustrowania koncepcji.
+Warto zastanowić się [, że szereg funkcjonalny](https://fsharpforfunandprofit.com/posts/thinking-functionally-intro/) jest innym doskonałym zasobem F#, aby uzyskać informacje na temat programowania funkcjonalnego. Obejmuje ona podstawowe programowanie funkcjonalne w sposób pragmatyczny i łatwy do odczytu, przy użyciu F# funkcji do zilustrowania koncepcji.

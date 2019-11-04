@@ -9,60 +9,60 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766873"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459293"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox — Style i szablony
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ListBox> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ListBox>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="listbox-parts"></a>Części ListBox  
- <xref:System.Windows.Controls.ListBox> Formant nie ma żadnych części o nazwie.  
+## <a name="listbox-parts"></a>ListBox — części  
+ Formant <xref:System.Windows.Controls.ListBox> nie zawiera żadnych nazwanych części.  
   
- Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ListBox>, szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w ramach <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Wyświetla każdy element na <xref:System.Windows.Controls.ListBox>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednie podrzędne <xref:System.Windows.Controls.ScrollViewer>, należy podać <xref:System.Windows.Controls.ItemsPresenter> nazwę, `ItemsPresenter`.  
+ Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ListBox>szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w <xref:System.Windows.Controls.ScrollViewer>. (<xref:System.Windows.Controls.ItemsPresenter> wyświetla każdy element w <xref:System.Windows.Controls.ListBox>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednim elementem podrzędnym <xref:System.Windows.Controls.ScrollViewer>, należy nadać <xref:System.Windows.Controls.ItemsPresenter> nazwę `ItemsPresenter`.  
   
-## <a name="listbox-states"></a>Stany ListBox  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.ListBox> kontroli.  
+## <a name="listbox-states"></a>ListBox — Stany  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.ListBox>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Prawidłowe|ValidationStates|Kontrolka jest nieprawidłowy.|  
-|InvalidFocused|ValidationStates|Kontrolka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Kontrolka jest nieprawidłowy i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
+|InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
   
-## <a name="listboxitem-parts"></a>Części ListBoxItem  
- <xref:System.Windows.Controls.ListBoxItem> Formant nie ma żadnych części o nazwie.  
+## <a name="listboxitem-parts"></a>ListBoxItem części  
+ Formant <xref:System.Windows.Controls.ListBoxItem> nie zawiera żadnych nazwanych części.  
   
 ## <a name="listboxitem-states"></a>Stany ListBoxItem  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.ListBox> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.ListBox>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad kontrolką.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
 |Wyłączone|CommonStates|Element jest wyłączony.|  
 |Fokus|FocusStates|Element ma fokus.|  
-|Po przeniesieniu fokusu|FocusStates|Element nie ma fokusu.|  
+|Bez fokusu|FocusStates|Element nie ma fokusu.|  
 |Niezaznaczone|SelectionStates|Nie wybrano elementu.|  
-|Wybrane|SelectionStates|Element jest wybrany currentlyplate.|  
-|SelectedUnfocused|SelectionStates|Element jest wybrany, ale nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Niezaznaczone|SelectionStates|Element jest zaznaczony jako currentlyplate.|  
+|SelectedUnfocused|SelectionStates|Element jest zaznaczony, ale nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
-## <a name="listbox-controltemplate-example"></a>Przykład ControlTemplate ListBox  
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListBoxItem> kontrolki.  
+## <a name="listbox-controltemplate-example"></a>ListBox ControlTemplate — przykład  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolek <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListBoxItem>.  
   
  [!code-xaml[ControlTemplateExamples#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
- W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -70,5 +70,5 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.ListBox> k
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

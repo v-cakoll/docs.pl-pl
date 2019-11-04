@@ -31,19 +31,20 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048497"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458039"
 ---
 # <a name="handling-errors"></a>Obsługa błędów
-<xref:System.Net.WebRequest.GetResponse%2A> <xref:System.ArgumentException> <xref:System.Net.WebException> Klasy i generujązarównowyjątkisystemowe(takiejak),jakispecyficznedlasieciWebwyjątki(któresągenerowaneprzezmetodę).<xref:System.Net.WebResponse> <xref:System.Net.WebRequest>  
+
+Klasy <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse> zgłaszają zarówno wyjątki systemowe (takie jak <xref:System.ArgumentException>), jak i specyficzne dla sieci Web wyjątki (które są <xref:System.Net.WebException> zgłaszane przez metodę <xref:System.Net.WebRequest.GetResponse%2A>).  
   
- Każdy element **WebException** zawiera <xref:System.Net.WebException.Status%2A> właściwość, która zawiera wartość z <xref:System.Net.WebExceptionStatus> wyliczenia. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
+Każdy element **WebException** zawiera właściwość <xref:System.Net.WebException.Status%2A>, która zawiera wartość z wyliczenia <xref:System.Net.WebExceptionStatus>. Można sprawdzić Właściwość **status** , aby określić błąd, który wystąpił, i podjąć odpowiednie kroki, aby rozwiązać ten problem.  
   
- W poniższej tabeli opisano możliwe wartości właściwości **stan** .  
+W poniższej tabeli opisano możliwe wartości właściwości **stan** .  
   
 |Stan|Opis|  
 |------------|-----------------|  
@@ -61,14 +62,14 @@ ms.locfileid: "71048497"
 |limit czasu|Nie odebrano odpowiedzi w określonym limicie czasu dla żądania.|  
 |TrustFailure|Nie można zweryfikować certyfikatu serwera.|  
 |MessageLengthLimitExceeded|Odebrano komunikat, który przekroczył określony limit podczas wysyłania żądania lub odebrania odpowiedzi z serwera.|  
-|Oczekujące|Wewnętrzne asynchroniczne żądanie jest w stanie oczekiwania.|  
+|Podjęcia|Wewnętrzne asynchroniczne żądanie jest w stanie oczekiwania.|  
 |PipelineFailure|Ta wartość obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
 |ProxyNameResolutionFailure|Usługa rozpoznawania nazw nie może rozpoznać nazwy hosta serwera proxy.|  
-|Nieznany błąd zostanie|Wystąpił wyjątek nieznanego typu.|  
+|UnknownError|Wystąpił wyjątek nieznanego typu.|  
   
- Gdy właściwość **status** ma wartość **WebExceptionStatus. ProtocolError**, dostępna jest **WebResponse** , która zawiera odpowiedź z serwera. Tę odpowiedź można sprawdzić w celu ustalenia rzeczywistego źródła błędu protokołu.  
+Gdy właściwość **status** ma wartość **WebExceptionStatus. ProtocolError**, dostępna jest **WebResponse** , która zawiera odpowiedź z serwera. Tę odpowiedź można sprawdzić w celu ustalenia rzeczywistego źródła błędu protokołu.  
   
- Poniższy przykład przedstawia sposób przechwytywania **wyjątku WebException**.  
+Poniższy przykład przedstawia sposób przechwytywania **wyjątku WebException**.  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Aplikacje korzystające z <xref:System.Net.Sockets.Socket> klasy throw <xref:System.Net.Sockets.SocketException> w przypadku wystąpienia błędów w gnieździe Windows. <xref:System.Net.Sockets.TcpClient>Klasy , <xref:System.Net.Sockets.TcpListener>, i<xref:System.Net.Sockets.UdpClient> są zbudowane na podstawie klasy Socket i generują **SocketExceptions** .  
+Aplikacje korzystające z klasy <xref:System.Net.Sockets.Socket> generują <xref:System.Net.Sockets.SocketException> w przypadku wystąpienia błędów w gnieździe Windows. Klasy <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>i <xref:System.Net.Sockets.UdpClient> są zbudowane na podstawie klasy **Socket** i generują **SocketExceptions** .  
   
- Gdy zostanie zgłoszony obiekt <xref:System.Net.Sockets.SocketException.ErrorCode%2A> **SocketException** , Klasa **SocketException** ustawia właściwość na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
+Gdy zostanie zgłoszony obiekt **SocketException** , Klasa **SocketException** ustawia właściwość <xref:System.Net.Sockets.SocketException.ErrorCode%2A> na ostatni błąd gniazda systemu operacyjnego, który wystąpił. Aby uzyskać więcej informacji na temat kodów błędów gniazda, zobacz dokumentację kodu błędu interfejsu API Winsock 2,0 w witrynie MSDN.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Podstawy obsługi wyjątków](../../standard/exceptions/exception-handling-fundamentals.md)
+- [Obsługa i zgłaszanie wyjątków w programie .NET](../../standard/exceptions/index.md)
 - [Żądanie danych](requesting-data.md)

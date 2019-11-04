@@ -2,12 +2,12 @@
 title: 'Ograniczenie: układ platformy WPF'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-ms.openlocfilehash: 3e08a2d11e815248d0fe73f804e9ef7edb7c04da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126112"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457784"
 ---
 # <a name="mitigation-wpf-layout"></a>Ograniczenie: układ platformy WPF
 Układ formantów WPF może się nieco zmieniać.  
@@ -38,4 +38,4 @@ Układ formantów WPF może się nieco zmieniać.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zmiany retargetingu](retargeting-changes-in-the-net-framework-4-6.md)
+- [Zgodność aplikacji](application-compatibility.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: a3daf75417260d7e761da2e90c595471b2a4b2a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: acb10df0da97954f4c2f7451d75d2f3042938e48
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131511"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458095"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Wzorce formantów automatyzacji interfejsu użytkownika — omówienie
 > [!NOTE]
@@ -55,7 +55,7 @@ ms.locfileid: "73131511"
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Używane dla kontrolek, które mogą być zadokowane w kontenerze dokowania. Na przykład paski narzędzi lub palety narzędzi.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Używany do kontrolek, które mogą być rozwinięte lub zwinięte. Na przykład elementy menu w aplikacji, takie jak menu **plik** .|  
-|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Używane dla formantów, które obsługują funkcje siatki, takie jak rozmiar i przechodzenie do określonej komórki. Na przykład widok dużych ikon w Eksploratorze Windows lub tabelach prostych bez nagłówków w [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)].|  
+|<xref:System.Windows.Automation.GridPattern>|<xref:System.Windows.Automation.Provider.IGridProvider>|Używane dla formantów, które obsługują funkcje siatki, takie jak rozmiar i przechodzenie do określonej komórki. Na przykład widok dużych ikon w Eksploratorze Windows lub prostych tabelach bez nagłówków w programie Microsoft Word.|  
 |<xref:System.Windows.Automation.GridItemPattern>|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Używane dla formantów, które mają komórki w siatkach. Poszczególne komórki powinny obsługiwać wzorzec GridItem. Na przykład każda komórka w widoku szczegółowym programu Microsoft Windows Explorer.|  
 |<xref:System.Windows.Automation.InvokePattern>|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Używany do kontrolek, które mogą być wywoływane, takich jak przycisk.|  
 |<xref:System.Windows.Automation.MultipleViewPattern>|<xref:System.Windows.Automation.Provider.IMultipleViewProvider>|Używane dla kontrolek, które mogą przełączać się między wieloma reprezentacjami tego samego zestawu informacji, danych lub elementów podrzędnych. Na przykład kontrolka widok listy, w której dane są dostępne w widokach miniatury, kafelków, ikon, list lub szczegółów.|  
@@ -64,13 +64,13 @@ ms.locfileid: "73131511"
 |<xref:System.Windows.Automation.ScrollItemPattern>|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Używany do kontrolek, które mają pojedyncze elementy na liście, które są przewijane. Na przykład kontrolka listy, która ma poszczególne elementy na liście przewijania, taka jak kontrolka pola kombi.|  
 |<xref:System.Windows.Automation.SelectionPattern>|<xref:System.Windows.Automation.Provider.ISelectionProvider>|Używany do zaznaczania elementów sterujących kontenera. Na przykład pola listy i pola kombi.|  
 |<xref:System.Windows.Automation.SelectionItemPattern>|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Używany do poszczególnych elementów w kontrolkach kontenera wyboru, takich jak pola listy i pola kombi.|  
-|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Używany do kontrolek, które mają siatkę, a także informacje nagłówka. Na przykład [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] arkuszach.|  
+|<xref:System.Windows.Automation.TablePattern>|<xref:System.Windows.Automation.Provider.ITableProvider>|Używany do kontrolek, które mają siatkę, a także informacje nagłówka. Na przykład arkusze programu Microsoft Excel.|  
 |<xref:System.Windows.Automation.TableItemPattern>|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Używane dla elementów w tabeli.|  
 |<xref:System.Windows.Automation.TextPattern>|<xref:System.Windows.Automation.Provider.ITextProvider>|Służy do edycji formantów i dokumentów, które uwidaczniają informacje tekstowe.|  
 |<xref:System.Windows.Automation.TogglePattern>|<xref:System.Windows.Automation.Provider.IToggleProvider>|Używane dla kontrolek, w których stan może być przełączany. Na przykład pola wyboru i elementy menu umożliwiające sprawdzanie.|  
 |<xref:System.Windows.Automation.TransformPattern>|<xref:System.Windows.Automation.Provider.ITransformProvider>|Używany do kontrolek, które mogą być zmieniane, przenoszone i obracane. Typowe zastosowania wzorca kontrolki przekształcania znajdują się w projektantach, formularzach, edytorach graficznych i aplikacjach do rysowania.|  
 |<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.Provider.IValueProvider>|Umożliwia klientom pobieranie lub Ustawianie wartości w kontrolkach, które nie obsługują zakresu wartości. Na przykład wybór daty i godziny.|  
-|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Opisuje informacje specyficzne dla systemu Windows, podstawowe koncepcje systemu operacyjnego Microsoft Windows. Przykłady formantów, które są Windows są oknami aplikacji najwyższego poziomu ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], Eksplorator Microsoft Windows, i tak dalej), okna podrzędne interfejsu wielu dokumentów (MDI) i okien dialogowych.|  
+|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Opisuje informacje specyficzne dla systemu Windows, podstawowe koncepcje systemu operacyjnego Microsoft Windows. Przykłady formantów, które są oknami, są Windows najwyższego poziomu (Microsoft Word, Eksplorator Microsoft Windows i tak dalej), okien podrzędnych interfejsu wielu dokumentów (MDI) i oknach dialogowych.|  
   
 ## <a name="see-also"></a>Zobacz także
 

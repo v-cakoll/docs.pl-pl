@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: testowanie zachowania elementu UserControl w czasie wykonywania'
+title: 'Porady: testowanie zachowania UserControl w czasie wykonywania'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UserControl class [Windows Forms], testing
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 110036e5031a2956375b1edf0689237661522d39
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: be6c913c43e3559806bc9f38a9c3152b544e4c07
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180207"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455537"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Instrukcje: testowanie zachowania elementu UserControl w czasie wykonywania
 
@@ -69,6 +69,6 @@ Kontrolki użytkownika można testować z innych projektów w kontenerze testów
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Windows.Forms.UserControl>
-- [Instrukcje: Tworzenie kontrolek złożonych](how-to-author-composite-controls.md)
+- [Instrukcje: tworzenie kontrolek złożonych](how-to-author-composite-controls.md)
 - [Przewodnik: Tworzenie kontrolki złożonej](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Projektant formantów użytkownika](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

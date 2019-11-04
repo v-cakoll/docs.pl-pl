@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040725"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424629"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Chociaż Windows Presentation Foundation (WPF) oferuje różne usługi zabezpieczeń, wykorzystuje również funkcje zabezpieczeń podstawowej platformy, w tym system operacyjny, środowisko CLR i program Internet Explorer. Te warstwy łączą się, aby zapewnić [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] silnego, kompleksowego modelu zabezpieczeń, który próbuje uniknąć wszelkich single point of failure, jak pokazano na poniższym rysunku:  
@@ -70,7 +70,7 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Ograniczony proces uprawnień dla aplikacji hostowanych w przeglądarce  
  Obsługiwane przez przeglądarkę [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje są wykonywane w piaskownicy strefy internetowej. Integracja [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] z programem Microsoft Internet Explorer rozszerza tę ochronę z dodatkową obsługą.  
   
- Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] są zwykle piaskownicy przez zestaw uprawnień strefy internetowej, Usunięcie tych uprawnień nie jest szkodliwe dla [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] z perspektywy zgodności. Zamiast tego zostanie utworzona dodatkowa warstwa zabezpieczeń. Jeśli aplikacja w trybie piaskownicy może wykorzystywać inne warstwy i przejmowanie tego procesu, proces nadal będzie miał tylko ograniczone uprawnienia.  
+ Ponieważ aplikacje przeglądarki XAML (XBAP) są zwykle piaskownicy przez zestaw uprawnień strefy internetowej, Usunięcie tych uprawnień nie jest szkodliwe dla aplikacji przeglądarki XAML (XBAP) z perspektywy zgodności. Zamiast tego zostanie utworzona dodatkowa warstwa zabezpieczeń. Jeśli aplikacja w trybie piaskownicy może wykorzystywać inne warstwy i przejmowanie tego procesu, proces nadal będzie miał tylko ograniczone uprawnienia.  
   
  Zobacz [Używanie konta użytkownika z najniższymi uprawnieniami](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
@@ -166,7 +166,7 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
  Należy pamiętać, że .NET Framework pozwala na rozbudowanie obszaru piaskownicy strefy internetowej XBAP przez deweloperów, umożliwiając deweloperom pisanie zestawów zarządzanych, które są oznaczone <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) i wdrożone w globalnej pamięci podręcznej zestawów (GAC) użytkownika. Oznaczanie zestawu za pomocą APTCA jest wysoce poufną operacją zabezpieczeń, ponieważ umożliwia każdemu kodowi wywoływanie tego zestawu, w tym złośliwy kod z Internetu. Należy zachować szczególną ostrożność i korzystać z najlepszych rozwiązań, aby użytkownicy mogli je zaufać.  
   
 ## <a name="microsoft-internet-explorer-security"></a>Zabezpieczenia programu Microsoft Internet Explorer  
- Poza zmniejszeniem problemów z zabezpieczeniami i uproszczeniem konfiguracji zabezpieczeń program Microsoft Internet Explorer 6 (SP2) zawiera kilka funkcji, które zwiększają bezpieczeństwo użytkowników [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Nacisk tych funkcji próbuje umożliwić użytkownikom większą kontrolę nad ich doświadczeniem w przeglądaniu.  
+ Ponad zmniejszenie problemów z zabezpieczeniami i uproszczenie konfiguracji zabezpieczeń program Microsoft Internet Explorer 6 (SP2) zawiera kilka funkcji, które zwiększają bezpieczeństwo użytkowników aplikacji przeglądarki XAML (XBAP). Nacisk tych funkcji próbuje umożliwić użytkownikom większą kontrolę nad ich doświadczeniem w przeglądaniu.  
   
  Przed IE6 SP2 użytkownicy mogą podlegać dowolnym z następujących czynności:  
   
@@ -182,7 +182,7 @@ Użytkownicy WPF w systemie Windows Vista będą korzystać z dodatkowych ulepsz
   
  Ta sama logika inicjacji użytkownika jest również stosowana do **otwierania** /**zapisywania** wierszy zabezpieczeń. Okna dialogowe instalacji ActiveX są zawsze zalewkowane na pasku informacji, chyba że reprezentuje uaktualnienie z wcześniej zainstalowanej kontrolki. Te miary łączą się, aby zapewnić użytkownikom bezpieczniejsze i bardziej kontrolowane środowisko użytkownika, ponieważ są one chronione przed lokacjami, które nękaniy w celu zainstalowania niechcianych lub złośliwych oprogramowania.  
   
- Te funkcje umożliwiają również ochronę klientów korzystających z programu IE6 z dodatkiem SP2 do przeglądania witryn sieci Web, dzięki którym mogą oni pobierać i instalować [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje. W szczególności jest to spowodowane tym, że program IE6 z dodatkiem SP2 oferuje lepsze środowisko użytkownika, co pozwala użytkownikom na instalowanie złośliwych lub deviousych aplikacji niezależnie od tego, jaka technologia została użyta w celu jej skompilowania, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dodaje do tych ochrony przy użyciu technologii ClickOnce, aby ułatwić pobieranie aplikacji przez Internet. Ponieważ [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] wykonywane w piaskownicy zabezpieczeń strefy internetowej, można je uruchomić bezproblemowo. Z drugiej strony Aplikacje autonomiczne [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] są wymagane do wykonania pełnego zaufania. W przypadku tych aplikacji Technologia ClickOnce wyświetli okno dialogowe zabezpieczenia podczas procesu uruchamiania, aby powiadomić o użyciu dodatkowych wymagań w zakresie zabezpieczeń aplikacji. Jednak to musi być inicjowane przez użytkownika, a także będzie podlegać logiki zainicjowane przez użytkownika i może być anulowane.  
+ Te funkcje umożliwiają również ochronę klientów korzystających z programu IE6 z dodatkiem SP2 do przeglądania witryn sieci Web, dzięki którym mogą oni pobierać i instalować [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplikacje. W szczególności jest to spowodowane tym, że program IE6 z dodatkiem SP2 oferuje lepsze środowisko użytkownika, co pozwala użytkownikom na instalowanie złośliwych lub deviousych aplikacji niezależnie od tego, jaka technologia została użyta w celu jej skompilowania, w tym [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] dodaje do tych ochrony przy użyciu technologii ClickOnce, aby ułatwić pobieranie aplikacji przez Internet. Ponieważ aplikacje przeglądarki XAML (XBAP) są wykonywane w obszarze piaskownicy zabezpieczeń strefy internetowej, można je uruchomić bezproblemowo. Z drugiej strony Aplikacje autonomiczne [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] są wymagane do wykonania pełnego zaufania. W przypadku tych aplikacji Technologia ClickOnce wyświetli okno dialogowe zabezpieczenia podczas procesu uruchamiania, aby powiadomić o użyciu dodatkowych wymagań w zakresie zabezpieczeń aplikacji. Jednak to musi być inicjowane przez użytkownika, a także będzie podlegać logiki zainicjowane przez użytkownika i może być anulowane.  
   
  Program Internet Explorer 7 obejmuje i rozszerza możliwości zabezpieczeń programu IE6 SP2 w ramach ciągłego zaangażowania w zabezpieczenia.  
   

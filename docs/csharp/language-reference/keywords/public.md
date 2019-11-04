@@ -1,5 +1,5 @@
 ---
-title: Public — słowo kluczowe - C# odwołania
+title: Public — słowo C# kluczowe — odwołanie
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: a68cbf3af2568cd3c197eaece9e2d5a25cdb4a6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: dfb6e341ea0740225d7600f07af2813d39141b45
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633712"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422559"
 ---
 # <a name="public-c-reference"></a>public (odwołanie w C#)
 
-`public` — Słowo kluczowe jest modyfikatorem dostępu dla typów i elementów członkowskich typu. Dostęp publiczny jest restrykcyjny poziom dostępu. Istnieją ograniczenia związane z dostępem do publicznych składowych, jak w poniższym przykładzie:
+Słowo kluczowe `public` jest modyfikatorem dostępu dla typów i elementów członkowskich typu. Dostęp publiczny to najwyższy poziom dostępu. Nie ma żadnych ograniczeń dotyczących uzyskiwania dostępu do publicznych członków, jak w tym przykładzie:
 
 ```csharp
 class SampleClass
@@ -26,31 +26,31 @@ class SampleClass
 }
 ```
 
-Zobacz [modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md) i [poziomów ułatwień dostępu](accessibility-levels.md) Aby uzyskać więcej informacji.
+Aby uzyskać więcej informacji, zobacz [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md) i [poziomy dostępności](accessibility-levels.md) .
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie zadeklarowano dwóch klas, `PointTest` i `MainClass`. Publiczne elementy członkowskie `x` i `y` z `PointTest` są dostępne bezpośrednio z `MainClass`.
+W poniższym przykładzie są zadeklarowane dwie klasy, `PointTest` i `MainClass`. Publiczne składowe `x` i `y` `PointTest` są dostępne bezpośrednio z `MainClass`.
 
 [!code-csharp[csrefKeywordsModifiers#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#13)]
 
-Jeśli zmienisz `public` poziom dostępu do [prywatnej](private.md) lub [chronione](protected.md), otrzymasz komunikat o błędzie:
+W przypadku zmiany poziomu dostępu `public` na [prywatny](private.md) lub [chroniony](protected.md)zostanie wyświetlony komunikat o błędzie:
 
-"PointTest.y" jest niedostępny z powodu swojego poziomu ochrony.
+Element "PointTest. y" jest niedostępny z powodu swojego poziomu ochrony.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#  
 
-Aby uzyskać więcej informacji, zobacz [zadeklarowana dostępność](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](../language-specification/index.md). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
+Aby uzyskać więcej informacji, zobacz [zadeklarowane ułatwienia dostępu](~/_csharplang/spec/basic-concepts.md#declared-accessibility) w [ C# specyfikacji języka](/dotnet/csharp/language-reference/language-specification/introduction). Specyfikacja języka jest ostatecznym źródłem informacji o składni i użyciu języka C#.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Modyfikatory dostępu](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)
 - [Poziomy ułatwień dostępu](accessibility-levels.md)
-- [Modyfikatory](modifiers.md)
+- [Modyfikatory](index.md)
 - [private](private.md)
 - [protected](protected.md)
 - [internal](internal.md)

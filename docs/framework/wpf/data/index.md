@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400371"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460288"
 ---
 # <a name="data"></a>Dane
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]powiązanie danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów środowiska uruchomieniowego języka wspólnego (CLR) i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia również mechanizm transferu danych za pomocą operacji przeciągania i upuszczania.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązania danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów środowiska uruchomieniowego języka wspólnego (CLR) i XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia również mechanizm transferu danych za pomocą operacji przeciągania i upuszczania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Powiązanie danych](data-binding-wpf.md)  
@@ -34,11 +34,11 @@ ms.locfileid: "68400371"
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Kontrolki](../controls/index.md)  
   
- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)  
+ [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
  [Powiązanie danych](../advanced/optimizing-performance-data-binding.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik: Moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Przewodnik: Buforowanie danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

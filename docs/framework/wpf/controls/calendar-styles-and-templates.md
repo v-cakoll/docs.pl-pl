@@ -9,123 +9,123 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912447"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460927"
 ---
 # <a name="calendar-styles-and-templates"></a>Style i szablony kalendarza
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Calendar> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Calendar>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="calendar-parts"></a>Elementy kalendarza  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Calendar> kontroli.  
+## <a name="calendar-parts"></a>Części kalendarza  
+ W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Calendar>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|Aktualnie wyświetlany miesiąc lub rok w <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|Panel, który zawiera <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
   
 ## <a name="calendar-states"></a>Stany kalendarza  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Calendar> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Calendar>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |----------------------|---------------------------|-----------------|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
-## <a name="calendaritem-parts"></a>Części CalendarItem  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Primitives.CalendarItem> kontroli.  
+## <a name="calendaritem-parts"></a>CalendarItem części  
+ W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|Katalog główny formantu.|  
-|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Przycisk, który wyświetla poprzedniej strony, kalendarza, po kliknięciu.|  
-|PART_NextButton|<xref:System.Windows.Controls.Button>|Przycisk, który wyświetla następną stronę kalendarza, po kliknięciu.|  
-|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Przycisk, który pozwala na przełączanie się między trybem miesiąc, rok trybu a dekadę trybu.|  
-|PART_MonthView|<xref:System.Windows.Controls.Grid>|Obsługuje zawartości w trybie miesiąca.|  
-|PART_YearView|<xref:System.Windows.Controls.Grid>|Obsługuje zawartości w trybie roku lub dekadę.|  
-|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Nakładce w stanie wyłączenia.|  
-|DayTitleTemplate|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate> Opisujący struktury efektów wizualnych.|  
+|PART_PreviousButton|<xref:System.Windows.Controls.Button>|Przycisk wyświetlający poprzednią stronę kalendarza, gdy zostanie kliknięty.|  
+|PART_NextButton|<xref:System.Windows.Controls.Button>|Przycisk, który wyświetla następną stronę kalendarza, gdy zostanie kliknięty.|  
+|PART_HeaderButton|<xref:System.Windows.Controls.Button>|Przycisk, który umożliwia przełączanie między trybem miesiąc, trybem roku i trybem dekady.|  
+|PART_MonthView|<xref:System.Windows.Controls.Grid>|Hostuje zawartość w trybie miesiąca.|  
+|PART_YearView|<xref:System.Windows.Controls.Grid>|Hostuje zawartość w trybie roku lub dekady.|  
+|PART_DisabledVisual|<xref:System.Windows.FrameworkElement>|Nakładka dla wyłączonego stanu.|  
+|DayTitleTemplate|<xref:System.Windows.DataTemplate>|<xref:System.Windows.DataTemplate>, który opisuje strukturę wizualizacji.|  
   
 ## <a name="calendaritem-states"></a>Stany CalendarItem  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.CalendarItem> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalny stan|CommonStates|Stan domyślny.|  
-|Stan wyłączenia|CommonStates|Stan kalendarza podczas <xref:System.Windows.UIElement.IsEnabled%2A> właściwość `false`.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Stan normalny|CommonStates|Stan domyślny.|  
+|Stan wyłączenia|CommonStates|Stan kalendarza, gdy właściwość <xref:System.Windows.UIElement.IsEnabled%2A> jest `false`.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
-## <a name="calendardaybutton-parts"></a>Części CalendarDayButton  
- <xref:System.Windows.Controls.Primitives.CalendarDayButton> Formant nie ma żadnych części o nazwie.  
+## <a name="calendardaybutton-parts"></a>CalendarDayButton części  
+ Formant <xref:System.Windows.Controls.Primitives.CalendarDayButton> nie zawiera żadnych nazwanych części.  
   
 ## <a name="calendardaybutton-states"></a>Stany CalendarDayButton  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.CalendarDayButton> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Primitives.CalendarDayButton>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Jest wyłączona.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Naciśnięto|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> Naciśnięciu.|  
-|Wybrane|SelectionStates|Ten przycisk jest zaznaczony.|  
-|Niezaznaczone|SelectionStates|Nie wybrano przycisku.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Ten przycisk ma fokus.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Ten przycisk ma fokus.|  
-|Fokus|FocusStates|Ten przycisk ma fokus.|  
-|Po przeniesieniu fokusu|FocusStates|Ten przycisk ma fokus.|  
-|Aktywne|ActiveStates|Przycisk jest aktywny.|  
-|Nieaktywne|ActiveStates|Przycisk będzie nieaktywny.|  
-|RegularDay|DayStates|Ten przycisk nie reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|Dzisiaj|DayStates|Reprezentuje przycisk <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
-|NormalDay|BlackoutDayStates|Przycisk reprezentuje dzień, w którym można wybrać.|  
-|BlackoutDay|BlackoutDayStates|Przycisk reprezentuje dzień, w którym nie można go wybrać.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Typow|CommonStates|Stan domyślny.|  
+|Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> jest wyłączona.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|Styczn|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|Niezaznaczone|SelectionStates|Przycisk jest wybrany.|  
+|Niezaznaczone|SelectionStates|Przycisk nie jest zaznaczony.|  
+|CalendarButtonFocused|CalendarButtonFocusStates|Przycisk ma fokus.|  
+|CalendarButtonUnfocused|CalendarButtonFocusStates|Przycisk nie ma fokusu.|  
+|Fokus|FocusStates|Przycisk ma fokus.|  
+|Bez fokusu|FocusStates|Przycisk nie ma fokusu.|  
+|Wyprzedzeni|ActiveStates|Przycisk jest aktywny.|  
+|Nieaktywne|ActiveStates|Przycisk jest nieaktywny.|  
+|RegularDay|DayStates|Przycisk nie reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|Obecnych|DayStates|Przycisk reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
+|NormalDay|BlackoutDayStates|Przycisk reprezentuje dzień, który można wybrać.|  
+|BlackoutDay|BlackoutDayStates|Przycisk reprezentuje dzień, którego nie można wybrać.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
-## <a name="calendarbutton-parts"></a>Części CalendarButton  
- <xref:System.Windows.Controls.Primitives.CalendarButton> Formant nie ma żadnych części o nazwie.  
+## <a name="calendarbutton-parts"></a>CalendarButton części  
+ Formant <xref:System.Windows.Controls.Primitives.CalendarButton> nie zawiera żadnych nazwanych części.  
   
 ## <a name="calendarbutton-states"></a>Stany CalendarButton  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.CalendarButton> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.Primitives.CalendarButton>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Jest wyłączona.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Naciśnięto|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> Naciśnięciu.|  
-|Wybrane|SelectionStates|Ten przycisk jest zaznaczony.|  
-|Niezaznaczone|SelectionStates|Nie wybrano przycisku.|  
-|CalendarButtonFocused|CalendarButtonFocusStates|Ten przycisk ma fokus.|  
-|CalendarButtonUnfocused|CalendarButtonFocusStates|Ten przycisk ma fokus.|  
-|Fokus|FocusStates|Ten przycisk ma fokus.|  
-|Po przeniesieniu fokusu|FocusStates|Ten przycisk ma fokus.|  
-|Aktywne|ActiveStates|Przycisk jest aktywny.|  
-|Nieaktywne|ActiveStates|Przycisk będzie nieaktywny.|  
-|Prawidłowe|ValidationStates|Kontrolka używa <xref:System.Windows.Controls.Validation> klasy i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest dołączona właściwość `false`.|  
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolki jest ustawiony fokus.|  
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> Jest dołączona właściwość `true` ma kontrolka nie ma fokusu.|  
+|Typow|CommonStates|Stan domyślny.|  
+|Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> jest wyłączona.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|Styczn|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|Niezaznaczone|SelectionStates|Przycisk jest wybrany.|  
+|Niezaznaczone|SelectionStates|Przycisk nie jest zaznaczony.|  
+|CalendarButtonFocused|CalendarButtonFocusStates|Przycisk ma fokus.|  
+|CalendarButtonUnfocused|CalendarButtonFocusStates|Przycisk nie ma fokusu.|  
+|Fokus|FocusStates|Przycisk ma fokus.|  
+|Bez fokusu|FocusStates|Przycisk nie ma fokusu.|  
+|Wyprzedzeni|ActiveStates|Przycisk jest aktywny.|  
+|Nieaktywne|ActiveStates|Przycisk jest nieaktywny.|  
+|Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
+|InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
+|InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
   
 ## <a name="calendar-controltemplate-example"></a>Przykład ControlTemplate kalendarza  
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.Calendar> kontroli i typy skojarzonych.  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.Calendar> i skojarzonych typów.  
   
  [!code-xaml[ControlTemplateExamples#Calendar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/calendar.xaml#calendar)]  
   
- W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -133,5 +133,5 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.Calendar> 
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

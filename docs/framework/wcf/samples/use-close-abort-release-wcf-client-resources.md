@@ -1,27 +1,27 @@
 ---
 title: Zwalnianie zasobów klienta programu WCF za pomocą poleceń Zamknij i Przerwij
-description: Dispose może zakończyć się niepowodzeniem i zgłaszają wyjątki, gdy sieć nie powiedzie się. Który może spowodować niepożądane zachowanie. Zamiast tego użyj Zamknij i Przerwij, aby zwolnić zasoby klienta, gdy sieć nie powiodło się.
+description: Metody Dispose mogą kończyć się niepowodzeniem i generować wyjątki w przypadku niepowodzenia sieci. Może to spowodować niepożądane zachowanie. Zamiast tego należy użyć Zamknij i Przerwij, aby zwolnić zasoby klienta w przypadku niepowodzenia sieci.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007581"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424173"
 ---
-# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Zamknij i przerwania zwolnienia zasobów bezpiecznie w przypadku, gdy połączenia sieciowe zostały odrzucone
+# <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Bezpieczne zamykanie i przerywanie zasobów wydań po porzucenia połączeń sieciowych
 
-Ten przykład demonstruje użycie `Close` i `Abort` metody, aby wyczyścić zasoby, korzystając z klient z typowaniem. `using` Instrukcja powoduje wyjątki, gdy połączenie sieciowe działa niezawodnie. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi kalkulatora. W tym przykładzie klient to aplikacja konsoli (.exe), a usługa jest hostowana przez Internetowe usługi informacyjne (IIS).
+Ten przykład ilustruje użycie metod `Close` i `Abort` w celu oczyszczenia zasobów przy użyciu klienta z określonym typem. Instrukcja `using` powoduje wyjątki, gdy połączenie sieciowe nie jest niezawodne. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora. W tym przykładzie klient jest aplikacją konsolową (. exe), a usługa jest hostowana przez Internet Information Services (IIS).
 
 > [!NOTE]
-> Procedury i kompilacja instrukcje dotyczące instalacji w tym przykładzie znajdują się na końcu tego tematu.
+> Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.
 
-W tym przykładzie przedstawiono dwie typowe problemy, które występuje w przypadku użycia "za pomocą" instrukcji z kontrolą typów klientów, a także kod, który prawidłowo czyści po wyjątków języka C#.
+Ten przykład przedstawia dwa typowe problemy występujące podczas korzystania z instrukcji C# "Using" z klientami z określonym typem, jak również kod, który poprawnie czyści po wyjątkach.
 
-C# instrukcję "using" powoduje wywołanie `Dispose`(). To jest taka sama jak `Close`(), który może zgłaszać wyjątki, gdy wystąpi błąd sieci. Ponieważ wywołanie `Dispose`() odbywa się domyślnie na zamykający nawias klamrowy w bloku "za pomocą", to źródło wyjątków jest prawdopodobnie przejście bez zwracania uwagi zarówno przez osoby, pisanie kodu i kodu. Reprezentuje potencjalnym źródłem błędów aplikacji.
+Instrukcja C# "Using" powoduje wywołanie `Dispose`(). Jest to taka sama jak `Close`(), która może generować wyjątki w przypadku wystąpienia błędu sieci. Ponieważ wywołanie do `Dispose`() występuje niejawnie w zamykającym nawiasie klamrowym bloku "Using", to źródło wyjątków może być niezauważalne, przez co osoby piszące kod i odczytujące kod. Reprezentuje to potencjalne źródło błędów aplikacji.
 
-Pierwszy problem, przedstawionych `DemonstrateProblemUsingCanThrow` metody jest, że zamykającego nawiasu klamrowego zgłasza wyjątek i kod po nawias zamykający nie jest wykonywane:
+Pierwszym problemem, przedstawionym w metodzie `DemonstrateProblemUsingCanThrow`, jest to, że zamykający nawias klamrowy zgłasza wyjątek, a kod po zamykającym nawiasie klamrowym nie jest wykonywany:
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())
@@ -31,9 +31,9 @@ using (CalculatorClient client = new CalculatorClient())
 Console.WriteLine("Hope this code wasn't important, because it might not happen.");
 ```
 
-Nawet wtedy, gdy nic wewnątrz przy użyciu block, zgłasza wyjątek, który lub wszystkie wyjątki wewnątrz przy użyciu bloku zostały wykryte, `Console.WriteLine` nie może być to, że niejawny `Dispose`wywołania () w zamykającego nawiasu klamrowego może zgłosić wyjątek.
+Nawet jeśli żadne elementy wewnątrz bloku using nie zgłasza wyjątku lub wszystkie wyjątki wewnątrz bloku using są przechwytywane, `Console.WriteLine` może się nie zdarzyć, ponieważ niejawne wywołanie `Dispose`() w zamykającym nawiasie klamrowym może zgłosić wyjątek.
 
-Drugi problem, przedstawionych `DemonstrateProblemUsingCanThrowAndMask` metody jest domniemanie innego elementu zamykającego nawiasu klamrowego, zostanie zgłoszony wyjątek:
+Drugi problem, przedstawiony w metodzie `DemonstrateProblemUsingCanThrowAndMask`, jest kolejną implikacją zamykającego nawiasu klamrowego, który zgłasza wyjątek:
 
 ```csharp
 using (CalculatorClient client = new CalculatorClient())
@@ -44,9 +44,9 @@ using (CalculatorClient client = new CalculatorClient())
 } // <-- this line might throw an exception.
 ```
 
-Ponieważ `Dispose`() odbywa się wewnątrz bloku "finally" `ApplicationException` nigdy nie są widoczne poza używając zablokować, jeśli `Dispose`() nie powiodło się. Jeśli kod poza musisz wiedzieć o tym, kiedy `ApplicationException` występuje w konstrukcji "using" może spowodować problemy, maskując tego wyjątku.
+Ponieważ `Dispose`() występuje wewnątrz bloku "finally", `ApplicationException` nigdy nie jest wyświetlany poza blokiem using, jeśli `Dispose`() zakończy się niepowodzeniem. Jeśli kod poza programem musi wiedzieć o wystąpieniu `ApplicationException`, konstrukcja "Using" może spowodować problemy, maskując ten wyjątek.
 
-Ponadto w przykładzie pokazano jak wyczyścić poprawnie, gdy wyjątki występują w `DemonstrateCleanupWithExceptions`. Ta metoda korzysta z bloku try/catch, aby raportowanie błędów, a następnie wywołać `Abort`. Zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) przykładowe więcej szczegółowych informacji dotyczących przechwytywania wyjątków z wywołań klienta.
+Na koniec przykład pokazuje, jak oczyścić prawidłowo, gdy występują wyjątki w `DemonstrateCleanupWithExceptions`. Używa bloku try/catch do zgłaszania błędów i wywoływania `Abort`. Zapoznaj się z przykładem [oczekiwanych wyjątków](../../../../docs/framework/wcf/samples/expected-exceptions.md) , aby uzyskać więcej informacji na temat przechwytywania wyjątków z wywołań klientów.
 
 ```csharp
 try
@@ -73,15 +73,15 @@ catch (Exception e)
 ```
 
 > [!NOTE]
-> Za pomocą instrukcji i ServiceHost: Wiele aplikacji samodzielnie hostingu nieco ponad hostowanie usługi i ServiceHost.Close rzadko zgłasza wyjątek, więc takie aplikacje mogą bezpiecznie korzystać przy użyciu instrukcji za pomocą elementu ServiceHost. Należy jednak pamiętać, że może zgłosić ServiceHost.Close `CommunicationException`, więc jeśli aplikacja będzie nadal występował po zamknięciu elementu ServiceHost, należy unikać używania instrukcji i postępuj zgodnie z wzorcem podane wcześniej.
+> Instrukcja using i ServiceHost: wiele aplikacji do samodzielnego udostępniania jest nieco więcej niż Hostowanie usługi i ServiceHost. zamknięcie sporadycznie zgłasza wyjątek, dzięki czemu takie aplikacje mogą bezpiecznie używać instrukcji using z elementem ServiceHost. Należy jednak pamiętać, że obiekt ServiceHost. Close może zgłosić `CommunicationException`, więc jeśli aplikacja będzie kontynuować działanie po zamknięciu ServiceHost, należy unikać instrukcji using i postępować zgodnie ze wzorcem.
 
-Po uruchomieniu przykładu odpowiedzi operacji i wyjątków są wyświetlane w oknie konsoli klienta.
+Po uruchomieniu przykładu odpowiedzi operacji i wyjątki są wyświetlane w oknie konsoli klienta.
 
-Proces klienta uruchamia trzy scenariusze, każda z których próby wywołania `Divide`. Pierwszy scenariusz pokazuje kod pominięte z powodu wyjątku z `Dispose`(). Drugi scenariusz pokazuje ważny wyjątek maskowaniu z powodu wyjątku z `Dispose`(). Trzeci scenariusz pokazuje poprawne oczyszczania.
+Proces klienta uruchamia trzy scenariusze, z których każdy próbuje wywołać `Divide`. Pierwszy scenariusz ilustruje pominięty kod z powodu wyjątku z `Dispose`(). W drugim scenariuszu przedstawiono ważny wyjątek, który jest maskowany z powodu wyjątku z `Dispose`(). Trzeci scenariusz przedstawia poprawne czyszczenie.
 
-Oczekiwane dane wyjściowe z procesu klienta jest:
+Oczekiwane dane wyjściowe procesu klienta to:
 
-```
+```console
 =
 = Demonstrating problem:  closing brace of using statement can throw.
 =
@@ -103,19 +103,19 @@ Got System.ServiceModel.CommunicationException from Divide.
 Press <ENTER> to terminate client.
 ```
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, tworzenie i uruchamianie aplikacji przykładowej
+### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład
 
-1. Upewnij się, że wykonano [procedura konfiguracji jednorazowe dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Upewnij się, że została wykonana [Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Aby kompilować rozwiązania w wersji języka C# lub Visual Basic .NET, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Aby skompilować C# lub Visual Basic wersję .NET rozwiązania, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Do uruchomienia przykładu w konfiguracji o jednym lub wielu maszyny, postępuj zgodnie z instrukcjami [uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 > [!IMPORTANT]
-> Przykłady może już być zainstalowany na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).
+> Przykłady mogą być już zainstalowane na komputerze. Przed kontynuowaniem Wyszukaj następujący katalog (domyślny).
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Jeśli ten katalog nie istnieje, przejdź do strony [Windows Communication Foundation (WCF) i przykłady Windows Workflow Foundation (WF) dla platformy .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) do pobierania wszystkich Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykładów. W tym przykładzie znajduje się w następującym katalogu.
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

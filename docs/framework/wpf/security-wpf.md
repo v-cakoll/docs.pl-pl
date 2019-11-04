@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 7e29b724259604a6ee09dff9cf9133b1739eb9ad
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: HT
+ms.openlocfilehash: 908c3fb0baacc7fd75dae875e9a9d49a08fe5401
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424790"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459722"
 ---
 # <a name="security-wpf"></a>Zabezpieczenia (WPF)
 <a name="introduction"></a>Podczas opracowywania aplikacji autonomicznych i hostowanych przez program Windows Presentation Foundation (WPF) należy wziąć pod uwagę model zabezpieczeń. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Aplikacje autonomiczne są wykonywane z nieograniczonymi uprawnieniami (zestaw uprawnień CAS**FullTrust** ), niezależnie od tego, czy wdrożono przy użyciu Instalator Windows (. msi), XCOPY lub ClickOnce. Wdrożenie częściowego zaufania, autonomiczne aplikacje WPF za pomocą technologii ClickOnce nie jest obsługiwane. Jednak w pełni zaufane aplikacje hosta mogą utworzyć <xref:System.AppDomain> relacji zaufania z użyciem .NET Framework modelu dodatków. Aby uzyskać więcej informacji, zobacz [Omówienie dodatków WPF](./app-development/wpf-add-ins-overview.md).  
@@ -279,4 +279,4 @@ ms.locfileid: "73424790"
 - [Wskazówki dotyczące zabezpieczeń wzorców i praktyk dotyczących aplikacji](https://go.microsoft.com/fwlink/?LinkId=117426)
 - [Zabezpieczenia dostępu kodu](../misc/code-access-security.md)
 - [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Przegląd XAML (WPF)](./advanced/xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

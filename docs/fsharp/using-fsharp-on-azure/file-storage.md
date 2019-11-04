@@ -3,16 +3,16 @@ title: Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F#
 description: Przechowuj dane plików w chmurze za pomocą usługi Azure File Storage i instaluj udział plików w chmurze z maszyny wirtualnej platformy Azure lub z aplikacji lokalnej z systemem Windows.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: a0e3cab56ba0f3db27335822616b4976a5d9de62
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9c25ab930abcbe7b358ae63c709aba4e97aed3be
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630496"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423861"
 ---
-# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F\#
+# <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z usługą Azure File Storage przy użyciu programu F\#
 
-Azure File Storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowego [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są wersje 2.1 i 3.0 protokołu SMB. W usłudze Magazyn plików Azure można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych modyfikacji oprogramowania. Aplikacje uruchomione na maszynach wirtualnych lub w ramach usług w chmurze platformy Azure, a także na klientach lokalnych mogą instalować udziały plików w chmurze tak samo jak aplikacja na komputerze instalująca typowy udział SMB. Dowolna liczba składników aplikacji może następnie równocześnie zainstalować udział Magazynu plików i uzyskiwać do niego dostęp.
+Azure File Storage to usługa, która oferuje udziały plików w chmurze przy użyciu standardowego [protokołu bloku komunikatów serwera (SMB)](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx). Obsługiwane są zarówno protokoły SMB 2,1, jak i SMB 3,0. Za pomocą usługi Azure File Storage można migrować starsze aplikacje korzystające z udziałów plików na platformę Azure szybko i bez kosztownych ponownych prób. Aplikacje działające na maszynach wirtualnych platformy Azure lub w usługach w chmurze lub na klientach lokalnych mogą instalować udziały plików w chmurze, podobnie jak aplikacja klasyczna instaluje typowy udział SMB. Dowolna liczba składników aplikacji może następnie zainstalować i uzyskać dostęp do udziału magazynu plików jednocześnie.
 
 Aby zapoznać się z omówieniem koncepcyjnym usługi File Storage, zobacz [Przewodnik po platformie .NET dotyczący usługi File Storage](/azure/storage/storage-dotnet-how-to-use-files).
 
@@ -23,13 +23,13 @@ Wymagany jest również klucz dostępu do magazynu dla tego konta.
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Utwórz F# skrypt i uruchom F# interaktywny
 
-Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z `.fsx` rozszerzeniem, na przykład `files.fsx`w środowisku F# deweloperskim.
+Przykłady w tym artykule mogą być używane w F# aplikacji lub F# skrypcie. Aby utworzyć F# skrypt, Utwórz plik z rozszerzeniem `.fsx`, na przykład `files.fsx`, w środowisku F# deweloperskim.
 
-Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [](https://www.nuget.org/) `WindowsAzure.Storage` NuGet, aby zainstalować `#r` pakiet i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy.
+Następnie należy użyć [Menedżera pakietów](package-management.md) , takiego jak [Paket](https://fsprojects.github.io/Paket/) lub [NuGet](https://www.nuget.org/) , aby zainstalować pakiet `WindowsAzure.Storage` i odwołanie `WindowsAzure.Storage.dll` w skrypcie przy użyciu dyrektywy `#r`.
 
 ### <a name="add-namespace-declarations"></a>Dodawanie deklaracji przestrzeni nazw
 
-Dodaj następujące `open` instrukcje na początku `files.fsx` pliku:
+Dodaj następujące instrukcje `open` na początku pliku `files.fsx`:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L1-L5)]
 
@@ -47,7 +47,7 @@ W przypadku prawdziwych aplikacji najlepszym sposobem obsługi parametrów poł�
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L13-L15)]
 
-Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak `ConfigurationManager` typ .NET Framework.
+Korzystanie z usługi Azure Configuration Manager jest opcjonalne. Można również użyć interfejsu API, takiego jak typ `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analizowanie parametrów połączenia
 
@@ -55,11 +55,11 @@ Aby przeanalizować parametry połączenia, użyj:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L21-L22)]
 
-Spowoduje to zwrócenie elementu `CloudStorageAccount`.
+Spowoduje to zwrócenie `CloudStorageAccount`.
 
 ### <a name="create-the-file-service-client"></a>Tworzenie klienta usługi plików
 
-`CloudFileClient` Typ pozwala programistycznie używać plików przechowywanych w magazynie plików. Oto jeden ze sposobów tworzenia klienta usługi:
+Typ `CloudFileClient` umożliwia programistyczne używanie plików przechowywanych w magazynie plików. Oto jeden ze sposobów tworzenia klienta usługi:
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L28-L28)]
 
@@ -91,7 +91,7 @@ W tym miejscu pobierasz utworzony plik, dołączając zawartość do pliku lokal
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Ustaw maksymalny rozmiar udziału plików
 
-W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału i jak ustawić limit przydziału dla udziału. `FetchAttributes`musi być wywołana `Properties`, aby wypełnić udział i `SetProperties` propagowanie lokalnych zmian do usługi Azure File Storage.
+W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału i jak ustawić limit przydziału dla udziału. należy wywołać `FetchAttributes`, aby wypełnić `Properties`udziału, i `SetProperties` propagowanie lokalnych zmian do usługi Azure File Storage.
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -154,6 +154,6 @@ Zobacz te linki, aby uzyskać więcej informacji na temat usługi Azure File Sto
 ### <a name="blog-posts"></a>Wpisy w blogu
 
 - [Usługa Azure File Storage jest teraz ogólnie dostępna](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
-- [Wewnątrz File Storage platformy Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
+- [Wewnątrz File Storage platformy Azure](https://azure.microsoft.com/blog/inside-azure-file-storage/)
 - [Wprowadzenie do usługi plików Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
 - [Utrwalanie połączeń z plikami Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

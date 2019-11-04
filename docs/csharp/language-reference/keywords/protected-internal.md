@@ -1,22 +1,22 @@
 ---
-title: chronionych wewnętrznych - C# odwołania
+title: chronione C# odwołanie wewnętrzne
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: ddfefa2a0bb145aa49a60f06a40725d2706cecb5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661652"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422583"
 ---
-# <a name="protected-internal-c-reference"></a>chronionych wewnętrznych (odwołanie w C#)
+# <a name="protected-internal-c-reference"></a>chroniona wewnętrznieC# (odwołanie)
 
-`protected internal` Kombinacja słów kluczowych jest modyfikator dostępu składowej. Chronionych wewnętrznych składowych jest możliwy z bieżącego zestawu lub typy pochodzące z klasy zawierającej. Porównanie `protected internal` z innych modyfikatorów dostępu, zobacz [poziomów ułatwień dostępu](accessibility-levels.md).
+Kombinacja słowa kluczowego `protected internal` jest modyfikatorem dostępu składowej. Chroniony wewnętrzny element członkowski jest dostępny z bieżącego zestawu lub z typów, które pochodzą od klasy zawierającej. Aby uzyskać porównanie `protected internal` z innymi modyfikatorami dostępu, zobacz [poziomy dostępności](accessibility-levels.md).
 
 ## <a name="example"></a>Przykład
 
-Chronionych wewnętrznych elementu członkowskiego klasy bazowej jest dostępna z dowolnego typu w ramach własnego zestawu zawierającego. Jest również dostępna w klasie pochodnej znajduje się w innym zestawie, tylko wtedy, gdy dostęp odbywa się za pośrednictwem zmiennej o typie klasy pochodnej. Na przykład rozważmy następujący segment kodu:
+Chroniona wewnętrzna składowa klasy bazowej jest dostępna z dowolnego typu w obrębie zawierającego go zestawu. Jest ona również dostępna w klasie pochodnej znajdującej się w innym zestawie tylko wtedy, gdy dostęp odbywa się za pomocą zmiennej typu klasy pochodnej. Rozważmy na przykład następujący segment kodu:
 
 ```csharp
 // Assembly1.cs
@@ -56,11 +56,11 @@ class DerivedClass : BaseClass
 }
 ```
 
-Ten przykład zawiera dwa pliki `Assembly1.cs` i `Assembly2.cs`.
-Pierwszy plik zawiera klasę bazową publicznych `BaseClass`oraz inną klasę `TestAccess`. `BaseClass` jest właścicielem wewnętrzny elementu członkowskiego chronionego `myValue`, który jest dostępny po `TestAccess` typu.
-W drugim pliku, próba uzyskania dostępu do `myValue` za pośrednictwem wystąpienia `BaseClass` wystąpi błąd, podczas dostępu do tego elementu członkowskiego przez wystąpienie klasy pochodnej, `DerivedClass` zakończy się powodzeniem.
+Ten przykład zawiera dwa pliki, `Assembly1.cs` i `Assembly2.cs`.
+Pierwszy plik zawiera publiczną klasę bazową, `BaseClass`i inną klasę, `TestAccess`. `BaseClass` jest właścicielem chronionego wewnętrznego elementu członkowskiego, `myValue`, do którego jest uzyskiwany dostęp za pomocą typu `TestAccess`.
+W drugim pliku próba uzyskania dostępu do `myValue` za pomocą wystąpienia `BaseClass` spowoduje wystąpienie błędu, podczas gdy dostęp do tego elementu członkowskiego odbywa się za pomocą wystąpienia klasy pochodnej, `DerivedClass` powiedzie się.
 
-Składowe struktury nie mogą być `protected internal` ponieważ struktura nie może być dziedziczona.
+Elementy członkowskie struktury nie mogą być `protected internal`, ponieważ struktura nie może być dziedziczona.
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
@@ -68,13 +68,13 @@ Składowe struktury nie mogą być `protected internal` ponieważ struktura nie 
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
+- [C#Odwoła](../index.md)
 - [Przewodnik programowania w języku C#](../../programming-guide/index.md)
 - [Słowa kluczowe języka C#](index.md)
 - [Modyfikatory dostępu](access-modifiers.md)
 - [Poziomy ułatwień dostępu](accessibility-levels.md)
-- [Modyfikatory](modifiers.md)
+- [Modyfikatory](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [Kwestie bezpieczeństwa wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Zagadnienia dotyczące zabezpieczeń wewnętrznych wirtualnych słów kluczowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

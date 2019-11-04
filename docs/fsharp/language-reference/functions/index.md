@@ -2,18 +2,18 @@
 title: Funkcje
 description: Dowiedz się więcej F# o funkcjach w programie oraz o sposobie F# obsługi wspólnych konstrukcji programowania funkcjonalnego.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630703"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423953"
 ---
 # <a name="functions"></a>Funkcje
 
 Funkcje są podstawową jednostką wykonywania programu w dowolnym języku programowania. Podobnie jak w innych językach, F# funkcja ma nazwę, może mieć parametry i przyjmować argumenty i ma treść. F#obsługuje również konstrukcje programowania funkcjonalnego, takie jak traktowanie funkcji jako wartości, za pomocą funkcji nienazwanych w wyrażeniach, skład funkcji do tworzenia nowych funkcji, funkcji rozwinięte i niejawnej definicji funkcji w formie częściowej stosowanie argumentów funkcji.
 
-Można definiować funkcje za pomocą `let` słowa kluczowego lub, jeśli funkcja jest cykliczna `let rec` , kombinacja słowa kluczowego.
+Można definiować funkcje za pomocą słowa kluczowego `let` lub, jeśli funkcja jest cykliczna, kombinacji słowa kluczowego `let rec`.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,11 +34,11 @@ Prosta definicja funkcji jest podobna do następującej:
 let f x = x + 1
 ```
 
-W poprzednim przykładzie nazwa funkcji to `f`, `x`argument ma typ `int`, treść funkcji jest `x + 1`, a zwracana wartość jest typu `int`.
+W poprzednim przykładzie nazwa funkcji jest `f`, argument jest `x`, który ma `int`typu, treść funkcji jest `x + 1`, a zwracana wartość jest typu `int`.
 
-Funkcje mogą być oznaczone `inline`. Aby uzyskać informacje `inline`na temat, zobacz [funkcje wbudowane](../functions/inline-functions.md).
+Funkcje mogą być oznaczone `inline`. Aby uzyskać informacje na temat `inline`, zobacz [funkcje wbudowane](../functions/inline-functions.md).
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Zakres
 
 Na dowolnym poziomie zakresu innym niż zakres modułu nie jest to błąd, aby ponownie użyć wartości lub nazwy funkcji. Jeśli ponownie używasz nazwy, nazwa zadeklarowana w dalszej części zaciemnienia nazwy zadeklarowanej wcześniej. Jednak w zakresie najwyższego poziomu w module nazwy muszą być unikatowe. Na przykład poniższy kod generuje błąd, gdy pojawia się on w zakresie modułu, ale nie gdy pojawia się wewnątrz funkcji:
 
@@ -56,7 +56,7 @@ Nazwy parametrów są wyświetlane po nazwie funkcji. Możesz określić typ dla
 let f (x : int) = x + 1
 ```
 
-Jeśli określisz typ, następuje jego nazwa i jest oddzielona od nazwy średnikami. W przypadku pominięcia typu parametru typ parametru zostanie wywnioskowany przez kompilator. Na przykład w poniższej definicji funkcji argument `x` jest wywnioskowany jako typ `int` , ponieważ 1 jest typu `int`.
+Jeśli określisz typ, następuje jego nazwa i jest oddzielona od nazwy średnikami. W przypadku pominięcia typu parametru typ parametru zostanie wywnioskowany przez kompilator. Na przykład w poniższej definicji funkcji argument `x` jest wywnioskowany jako typ `int`, ponieważ 1 jest typu `int`.
 
 ```fsharp
 let f x = x + 1
@@ -76,17 +76,17 @@ Treść funkcji może zawierać definicje zmiennych lokalnych i funkcji. Takie z
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące formatowania kodu](../code-formatting-guidelines.md) i [Pełna składnia](../verbose-syntax.md).
+Aby uzyskać więcej informacji, zobacz [wskazówki dotyczące formatowania kodu](../../style-guide/formatting.md) i [Pełna składnia](../verbose-syntax.md).
 
 ## <a name="return-values"></a>Wartości zwrócone
 
-Kompilator używa końcowego wyrażenia w treści funkcji, aby określić wartość zwracaną i typ. Kompilator może wywnioskować typ wyrażenia końcowego z poprzednich wyrażeń. W funkcji `cylinderVolume`pokazanej w poprzedniej sekcji `pi` typ jest określany na podstawie typu literału `3.14159` , który ma być `float`. Kompilator używa typu `pi` , aby określić typ wyrażenia `h * pi * r * r` , które ma być `float`. W związku z tym, całkowity typ zwracany funkcji to `float`.
+Kompilator używa końcowego wyrażenia w treści funkcji, aby określić wartość zwracaną i typ. Kompilator może wywnioskować typ wyrażenia końcowego z poprzednich wyrażeń. W funkcji `cylinderVolume`, pokazanej w poprzedniej sekcji, typ `pi` jest określany na podstawie typu literału, `3.14159` `float`. Kompilator używa typu `pi`, aby określić typ `h * pi * r * r` wyrażenia, które ma być `float`. W związku z tym, cały zwracany typ funkcji jest `float`.
 
 Aby jawnie określić wartość zwracaną, napisz kod w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
-Ponieważ kod jest pisany powyżej, kompilator stosuje zmiennoprzecinkowe do całej funkcji; Jeśli zamierzasz zastosować ją również do typów parametrów, użyj następującego kodu:
+Ponieważ kod jest pisany powyżej, kompilator stosuje **zmiennoprzecinkowe** do całej funkcji; Jeśli zamierzasz zastosować ją również do typów parametrów, użyj następującego kodu:
 
 ```fsharp
 let cylinderVolume (radius : float) (length : float) : float
@@ -124,13 +124,13 @@ W F#programie wszystkie funkcje są uznawane za wartości; w rzeczywistości są
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
-Należy określić typ wartości funkcji za pomocą `->` tokenu. Po lewej stronie tego tokenu jest typem argumentu, a po prawej stronie jest wartością zwracaną. W poprzednim przykładzie `apply1` jest funkcją, która przyjmuje funkcję `transform` jako argument, gdzie `transform` jest funkcją, która przyjmuje liczbę całkowitą i zwraca kolejną liczbę całkowitą. Poniższy kod przedstawia sposób użycia `apply1`:
+Typ wartości funkcji można określić przy użyciu tokenu `->`. Po lewej stronie tego tokenu jest typem argumentu, a po prawej stronie jest wartością zwracaną. W poprzednim przykładzie `apply1` jest funkcją, która przyjmuje funkcję, `transform` jako argument, gdzie `transform` jest funkcją, która przyjmuje liczbę całkowitą i zwraca kolejną liczbę całkowitą. Poniższy kod ilustruje sposób używania `apply1`:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 Wartość `result` będzie 101 po powyższym kodzie.
 
-Wiele argumentów jest oddzielonych kolejnymi `->` tokenami, jak pokazano w następującym przykładzie:
+Wiele argumentów jest rozdzielonych kolejnymi tokenami `->`, jak pokazano w następującym przykładzie:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
@@ -142,7 +142,7 @@ Wynikiem jest 200.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Wyrażenia lambda można definiować za pomocą `fun` słowa kluczowego. Wyrażenie lambda przypomina definicję funkcji, z tą różnicą, że zamiast `=` tokenu `->` token jest używany do rozdzielenia listy argumentów z treści funkcji. Podobnie jak w przypadku definicji funkcji regularnych, typy argumentów można wywnioskować lub określić jawnie, a zwracany typ wyrażenia lambda jest wywnioskowany na podstawie typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, [Zobacz wyrażenia lambda: `fun` Słowo kluczowe](../functions/lambda-expressions-the-fun-keyword.md).
+Wyrażenia lambda można definiować za pomocą słowa kluczowego `fun`. Wyrażenie lambda przypomina definicję funkcji, z tą różnicą, że zamiast tokenu `=`, token `->` służy do rozdzielenia listy argumentów z treści funkcji. Podobnie jak w przypadku definicji funkcji regularnych, typy argumentów można wywnioskować lub określić jawnie, a zwracany typ wyrażenia lambda jest wywnioskowany na podstawie typu ostatniego wyrażenia w treści. Aby uzyskać więcej informacji, zobacz [wyrażenia lambda: słowo kluczowe `fun`](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Kompozycja funkcji i przetwarzanie potokowe
 

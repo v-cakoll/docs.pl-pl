@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919723"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421099"
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 
@@ -171,21 +171,21 @@ Dodatki często udostępniają wiele interfejsów użytkownika do wyświetlania 
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Dodatki i aplikacje przeglądarki XAML
 
-W przykładach do tej pory aplikacja hosta była zainstalowaną aplikacją autonomiczną. Ale [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] mogą również hostować dodatki, chociaż z następującymi dodatkowymi wymaganiami dotyczącymi kompilacji i implementacji:
+W przykładach do tej pory aplikacja hosta była zainstalowaną aplikacją autonomiczną. Jednak aplikacje przeglądarki XAML (XBAP) mogą również hostować dodatki, chociaż z następującymi dodatkowymi wymaganiami dotyczącymi kompilacji i implementacji:
 
-- Manifest aplikacji [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] musi być skonfigurowany specjalnie do pobierania potoku (folderów i zestawów) oraz zestawu dodatków do pamięci podręcznej aplikacji ClickOnce na komputerze klienckim, w tym samym folderze co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- Manifest aplikacji XBAP musi być skonfigurowany specjalnie do pobierania potoku (folderów i zestawów) oraz zestawu dodatków do pamięci podręcznej aplikacji ClickOnce na komputerze klienckim, w tym samym folderze, w którym znajduje się aplikacja XBAP.
 
-- Kod [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] do odnalezienia i załadowania dodatków musi używać pamięci podręcznej aplikacji ClickOnce dla [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] jako lokalizacji potoków i dodatków.
+- Kod XBAP do odnalezienia i załadowania dodatków musi używać pamięci podręcznej aplikacji ClickOnce dla programu XBAP jako lokalizacji potoków i dodatków.
 
-- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] musi załadować dodatek do specjalnego kontekstu zabezpieczeń, jeśli dodatek odwołuje się do luźnych plików, które znajdują się w miejscu pochodzenia; w przypadku hostowania przez [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]Dodatki mogą odwoływać się tylko do swobodnych plików, które znajdują się w lokalizacji źródłowej aplikacji hosta.
+- Obiekt XBAP musi załadować dodatek do specjalnego kontekstu zabezpieczeń, jeśli dodatek odwołuje się do luźnych plików, które znajdują się w miejscu pochodzenia; w przypadku obsługi przez aplikacje XBAP Dodatki mogą odwoływać się tylko do swobodnych plików, które znajdują się w lokalizacji źródłowej aplikacji hosta.
 
 Te zadania są szczegółowo opisane w poniższych podsekcjach.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurowanie potoku i dodatku dla wdrożenia ClickOnce
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] są pobierane do i uruchamiane z bezpiecznego folderu w pamięci podręcznej wdrażania ClickOnce. Aby [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hostować dodatek, należy również pobrać potok i zestaw dodatków do bezpiecznego folderu. Aby to osiągnąć, należy skonfigurować manifest aplikacji w taki sposób, aby obejmował zarówno potok, jak i zestaw dodatków do pobrania. Jest to najłatwiej wykonywane w programie Visual Studio, chociaż potok i zestaw dodatku muszą znajdować się w folderze głównym hosta [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu, aby program Visual Studio wykrył zestawy potoków.
+Aplikacje XBAP są pobierane do programu i uruchamiane z bezpiecznego folderu w pamięci podręcznej wdrażania ClickOnce. Aby element XBAP obsługiwał dodatek, należy również pobrać potok i zestaw dodatków do bezpiecznego folderu. Aby to osiągnąć, należy skonfigurować manifest aplikacji w taki sposób, aby obejmował zarówno potok, jak i zestaw dodatków do pobrania. Jest to najłatwiej wykonywane w programie Visual Studio, chociaż potok i zestaw dodatku muszą znajdować się w folderze głównym aplikacji XBAP hosta, aby program Visual Studio wykrył zestawy potoków.
 
-W związku z tym pierwszym krokiem jest skompilowanie potoku i zestawu dodatków do głównego katalogu [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] projektu przez ustawienie danych wyjściowych kompilacji dla każdego zestawu potoku i projektów zestawu dodatków. W poniższej tabeli przedstawiono ścieżki wyjściowe kompilacji dla projektów zestawu potoku i projektu zestawu dodatków, które znajdują się w tym samym rozwiązaniu i folderze głównym co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hosta.
+W związku z tym pierwszym krokiem jest skompilowanie potoku i zestawu dodatków do katalogu głównego projektu XBAP przez ustawienie danych wyjściowych kompilacji dla każdego zestawu potoku i projektów zestawu dodatków. W poniższej tabeli przedstawiono ścieżki wyjściowe kompilacji dla projektów zestawu potoku i projektu zestawu dodatków, które znajdują się w tym samym rozwiązaniu i folderze głównym co projekt XBAP.
 
 Tabela 1: Tworzenie ścieżek wyjściowych dla zestawów potoku hostowanych przez aplikację XBAP
 
@@ -197,21 +197,21 @@ Tabela 1: Tworzenie ścieżek wyjściowych dla zestawów potoku hostowanych prze
 |Adapter po stronie hosta|`..\HostXBAP\HostSideAdapters\`|
 |Dodatek|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-Następnym krokiem jest określenie zestawów potoku i zestawu dodatków jako plików zawartości [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] w programie Visual Studio, wykonując następujące czynności:
+Następnym krokiem jest określenie zestawów potoków i zestawu dodatków jako plików zawartości XBAP w programie Visual Studio, wykonując następujące czynności:
 
 1. Uwzględniając potok i zestaw dodatków w projekcie, klikając prawym przyciskiem myszy każdy folder potoku w Eksplorator rozwiązań i wybierając opcję **Dołącz do projektu**.
 
 2. Ustawianie **akcji kompilacji** dla każdego zestawu potoku i zestawu dodatków do **zawartości** z okna **Właściwości** .
 
-Ostatnim krokiem jest skonfigurowanie manifestu aplikacji w celu uwzględnienia plików zestawu potoku i pliku zestawu dodatku do pobrania. Pliki powinny znajdować się w folderach w folderze głównym folderu w pamięci podręcznej ClickOnce, w której zajmowana jest aplikacja [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Konfigurację można uzyskać w programie Visual Studio, wykonując następujące czynności:
+Ostatnim krokiem jest skonfigurowanie manifestu aplikacji w celu uwzględnienia plików zestawu potoku i pliku zestawu dodatku do pobrania. Pliki powinny znajdować się w folderach w folderze głównym folderu w pamięci podręcznej ClickOnce, w której zajmowana jest aplikacja XBAP. Konfigurację można uzyskać w programie Visual Studio, wykonując następujące czynności:
 
-1. Kliknij prawym przyciskiem myszy projekt [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], kliknij pozycję **Właściwości**, kliknij pozycję **Opublikuj**, a następnie kliknij przycisk **pliki aplikacji** .
+1. Kliknij prawym przyciskiem myszy projekt XBAP, kliknij pozycję **Właściwości**, kliknij pozycję **Opublikuj**, a następnie kliknij przycisk **pliki aplikacji** .
 
 2. W oknie dialogowym **pliki aplikacji** Ustaw **stan publikacji** każdego potoku i dodatku dll na wartość ( **Auto)** i ustaw **grupę pobierania** dla każdego potoku i dodatku dll na **(wymagane)** .
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Korzystanie z potoku i dodatku z bazy aplikacji
 
-Gdy potok i dodatek są skonfigurowane do wdrażania ClickOnce, są pobierane do tego samego folderu pamięci podręcznej ClickOnce co [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Aby użyć potoku i dodatku z [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], kod [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] musi pobrać je z bazy aplikacji. Różne typy i elementy członkowskie modelu dodatku .NET Framework na potrzeby używania potoków i dodatków zapewniają specjalną pomoc techniczną dla tego scenariusza. Po pierwsze ścieżka jest identyfikowana przez <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartość wyliczenia. Ta wartość jest używana z przeciążeniami odpowiednich członków dodatku, aby używać potoków, które obejmują następujące elementy:
+Gdy potok i dodatek są skonfigurowane pod kątem wdrażania ClickOnce, są one pobierane do tego samego folderu pamięci podręcznej ClickOnce co aplikacje XBAP. Aby użyć potoku i dodatku z programu XBAP, kod XBAP musi pobrać z bazy aplikacji. Różne typy i elementy członkowskie modelu dodatku .NET Framework na potrzeby używania potoków i dodatków zapewniają specjalną pomoc techniczną dla tego scenariusza. Po pierwsze ścieżka jest identyfikowana przez <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> wartość wyliczenia. Ta wartość jest używana z przeciążeniami odpowiednich członków dodatku, aby używać potoków, które obejmują następujące elementy:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

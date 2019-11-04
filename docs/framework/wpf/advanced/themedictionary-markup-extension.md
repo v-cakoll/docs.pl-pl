@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ThemeDictionary markup extension [WPF]
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
-ms.openlocfilehash: 471b444b66c5e8173542ab1e27cb1233bfde133f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ab38c2c885e230183852fff895e0a8a8f1d7a666
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582319"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459486"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary — Rozszerzenie znaczników
 Udostępnia sposób dla autorów formantów niestandardowych lub aplikacji, które integrują formanty innych firm w celu załadowania słowników zasobów specyficznych dla motywu do użycia w stylu kontrolki.  
@@ -45,7 +45,7 @@ Udostępnia sposób dla autorów formantów niestandardowych lub aplikacji, któ
   
  Za pomocą tego rozszerzenia można określić pojedynczy zestaw tylko zasobów, który zawiera kilka stylów, które mają być używane tylko wtedy, gdy motyw Windows Aero jest stosowany do systemu użytkownika, inne style tylko wtedy, gdy motyw Luna jest aktywny i tak dalej. Za pomocą tego rozszerzenia zawartość słownika zasobów specyficznych dla kontrolki można automatycznie unieważniać i ponownie ładować, aby była określona dla innego motywu, jeśli jest to wymagane.  
   
- Ciąg `assemblyUri` (wartość właściwości <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>) stanowi podstawę konwencji nazewnictwa, która określa, który słownik ma zastosowanie do określonego motywu. Logika <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> dla `ThemeDictionary` pełni Konwencję przez wygenerowanie identyfikatora Uniform Resource Identifier (URI), który wskazuje określony wariant słownika motywu, który jest zawarty w prekompilowanym zestawie zasobów. Opisywanie tej Konwencji lub interakcji z motywem z ogólnymi stylami formantów i stylami na poziomie strony/aplikacji jako koncepcji nie są tu omówione. Podstawowym scenariuszem korzystania z `ThemeDictionary` jest określenie właściwości <xref:System.Windows.ResourceDictionary.Source%2A> `ResourceDictionary` zadeklarowanej na poziomie aplikacji. Po podaniu identyfikatora URI dla zestawu za pośrednictwem rozszerzenia `ThemeDictionary`, a nie jako bezpośredniego identyfikatora URI, logika rozszerzeń będzie dostarczać logikę unieważnienia, która ma zastosowanie zawsze, gdy zmienia się kompozycja systemu.  
+ Ciąg `assemblyUri` (wartość właściwości<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>) stanowi podstawę konwencji nazewnictwa, która określa, który słownik ma zastosowanie do określonego motywu. Logika <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> dla `ThemeDictionary` pełni Konwencję przez wygenerowanie identyfikatora Uniform Resource Identifier (URI), który wskazuje określony wariant słownika motywu, który jest zawarty w prekompilowanym zestawie zasobów. Opisywanie tej Konwencji lub interakcji z motywem z ogólnymi stylami formantów i stylami na poziomie strony/aplikacji jako koncepcji nie są tu omówione. Podstawowym scenariuszem korzystania z `ThemeDictionary` jest określenie właściwości <xref:System.Windows.ResourceDictionary.Source%2A> `ResourceDictionary` zadeklarowanej na poziomie aplikacji. Po podaniu identyfikatora URI dla zestawu za pośrednictwem rozszerzenia `ThemeDictionary`, a nie jako bezpośredniego identyfikatora URI, logika rozszerzeń będzie dostarczać logikę unieważnienia, która ma zastosowanie zawsze, gdy zmienia się kompozycja systemu.  
   
  Składnią atrybutu jest składnia najczęściej używana z tym rozszerzeniem znacznika. Token ciągu podany po ciągu identyfikatora `ThemeDictionary` jest przypisywany jako wartość <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> źródłowej klasy rozszerzenia <xref:System.Windows.ThemeDictionaryExtension>.  
   
@@ -66,6 +66,6 @@ Udostępnia sposób dla autorów formantów niestandardowych lub aplikacji, któ
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
-- [Przegląd XAML (WPF)](xaml-overview-wpf.md)
+- [Przegląd XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Rozszerzenia znaczników i WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [Zasoby aplikacji WPF, zawartość i pliki danych](../app-development/wpf-application-resource-content-and-data-files.md)

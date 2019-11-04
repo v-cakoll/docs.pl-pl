@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 11e48c54ba82b51268b34d6db01d2f9d4ae61ad7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d4a2562324259bda0bab523849449d584736b2ae
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523576"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423197"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 
@@ -114,13 +114,13 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     Te dodatki przedstawiają kolejną funkcję C#w: traktowanie wartości `Object` zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/keywords/dynamic.md). Dzieje się tak automatycznie, gdy **typy osadzania międzyoperacyjności** mają ustawioną wartość domyślną, `True` lub, równoważne, gdy do zestawu jest przywoływana opcja kompilatora [-link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
+     Te dodatki przedstawiają kolejną funkcję C#w: traktowanie wartości `Object` zwracanych z hostów com, takich jak pakiet Office, tak jakby były typu [dynamicznego](../../language-reference/builtin-types/reference-types.md). Dzieje się tak automatycznie, gdy **typy osadzania międzyoperacyjności** mają ustawioną wartość domyślną, `True` lub, równoważne, gdy do zestawu jest przywoływana opcja kompilatora [-link](../../language-reference/compiler-options/link-compiler-option.md) . Typ `dynamic` umożliwia późne wiązanie, już dostępne w Visual Basic i pozwala uniknąć jawnego rzutowania wymaganego w C# 3,0 i wcześniejszych wersjach języka.
 
-     Na przykład `excelApp.Columns[1]` zwraca `Object`, a `AutoFit` jest metodą [zakresu](<xref:Microsoft.Office.Interop.Excel.Range>) programu Excel. Bez `dynamic` należy rzutować obiekt zwrócony przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.
+     Na przykład `excelApp.Columns[1]` zwraca `Object`, a `AutoFit` jest metodą [zakresu](<xref:Microsoft.Office.Interop.Excel.Range>) programu Excel. Bez `dynamic`należy rzutować obiekt zwrócony przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.
 
      [!code-csharp[csOfficeWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#8)]
 
-     Aby uzyskać więcej informacji na temat osadzania typów międzyoperacyjnych, zobacz procedury "aby znaleźć odwołanie PIA" i "aby przywrócić zależność PIA" w dalszej części tego tematu. Aby uzyskać więcej informacji na temat `dynamic`, zobacz [dynamiczne](../../language-reference/keywords/dynamic.md) lub [Używanie typu dynamicznego](../types/using-type-dynamic.md).
+     Aby uzyskać więcej informacji na temat osadzania typów międzyoperacyjnych, zobacz procedury "aby znaleźć odwołanie PIA" i "aby przywrócić zależność PIA" w dalszej części tego tematu. Aby uzyskać więcej informacji na temat `dynamic`, zobacz [dynamiczne](../../language-reference/builtin-types/reference-types.md) lub [Używanie typu dynamicznego](../types/using-type-dynamic.md).
 
 ### <a name="to-invoke-displayinexcel"></a>Aby wywołać DisplayInExcel
 
@@ -199,7 +199,7 @@ Aby ukończyć ten przewodnik, musisz mieć zainstalowany Microsoft Office Excel
 - [Przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)
 - [Argumenty nazwane i opcjonalne](../classes-and-structs/named-and-optional-arguments.md)
 - [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Używanie typu dynamicznego](../types/using-type-dynamic.md)
 - [Wyrażenia lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Wyrażenia lambda (C#)](../statements-expressions-operators/lambda-expressions.md)

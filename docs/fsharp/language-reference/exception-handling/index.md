@@ -1,30 +1,31 @@
 ---
 title: Obsługa wyjątków
-description: Naucz się podstaw obsługi wyjątków w F# i łącza do obsługi wyrażeń i funkcji wyjątków.
+description: Poznaj podstawy obsługi wyjątków w F# i Znajdź linki do wyrażeń obsługi wyjątków i funkcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f4e57bfd643cba3dab5281df484ebb6162cb4b7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e34a65dd7da9d706153254ac28e729de0745e4d0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645487"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423060"
 ---
 # <a name="exception-handling"></a>Obsługa wyjątków
 
-Ta sekcja zawiera informacje o pomocy technicznej w obsłudze wyjątków F# języka.
+Ta sekcja zawiera informacje dotyczące obsługi wyjątków w F# języku.
 
-## <a name="exception-handling-basics"></a>Podstawy obsługi wyjątków
-Obsługa wyjątków jest standardowym sposobem obsługi błędów w programie .NET Framework. W związku z tym, dowolnego języka platformy .NET musi obsługiwać ten mechanizm tym F#. *Wyjątek* jest obiektem, który hermetyzuje informacje o błędzie. Jeśli wystąpią błędy, wyjątki są zatrzymuje podniesione i regularnego wykonywania. Zamiast tego środowisko uruchomieniowe wyszukuje odpowiedni program obsługi wyjątku. Wyszukiwanie rozpoczyna się bieżącą funkcję i przechodzi w górę stosu za pośrednictwem warstw obiektów wywołujących, aż do znalezienia pasującej klauzuli obsługi. Następnie program obsługi jest wykonywana.
+## <a name="exception-handling-basics"></a>Podstawowe informacje o obsłudze wyjątków
 
-Ponadto, ponieważ stos jest odwijany, środowisko uruchomieniowe wykonuje każdy kod `finally` bloków, aby zagwarantować, że obiekty są czyszczone poprawnie podczas procesu odwijania.
+Obsługa wyjątków jest standardowym sposobem obsługi warunków błędów w .NET Framework. Z tego względu każdy język .NET musi obsługiwać ten mechanizm F#, w tym. *Wyjątek* to obiekt, który hermetyzuje informacje o błędzie. W przypadku wystąpienia błędów są zgłaszane wyjątki i regularne wykonywanie. Zamiast tego, środowisko uruchomieniowe wyszukuje odpowiednią procedurę obsługi dla wyjątku. Wyszukiwanie rozpoczyna się w bieżącej funkcji i przechodzi przez stosy za pomocą warstw obiektów wywołujących do momentu znalezienia zgodnej procedury obsługi. Następnie jest wykonywany program obsługi.
+
+Ponadto, ponieważ stos jest oddzielony, środowisko uruchomieniowe wykonuje dowolny kod w blokach `finally`, aby zagwarantować, że obiekty są czyszczone prawidłowo podczas procesu odwinięcia.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Typy wyjątków](exception-types.md)|W tym artykule opisano, jak zadeklarować typ wyjątku.|
-|[Wyjątki: `try...with` Wyrażenia](the-try-with-expression.md)|W tym artykule opisano konstrukcją języka pierwszej klasy, który obsługuje obsługi wyjątków.|
-|[Wyjątki: `try...finally` Wyrażenia](the-try-finally-expression.md)|W tym artykule opisano konstrukcją języka pierwszej klasy, która pozwala na wykonywanie czyszczenia kodu rozwija stos, gdy wyjątek jest zgłaszany.|
-|[Wyjątki: `raise` — funkcja](the-raise-Function.md)|W tym artykule opisano, jak zostać zgłoszony obiekt wyjątku.|
-|[Wyjątki: `failwith` — Funkcja](the-failwith-function.md)|W tym artykule opisano sposób generowania ogólnego F# wyjątku.|
-|[Wyjątki: `invalidArg` — Funkcja](the-invalidArg-function.md)|W tym artykule opisano, jak wygenerować wyjątek nieprawidłowego argumentu.|
+|[Typy wyjątków](exception-types.md)|Opisuje sposób deklarowania typu wyjątku.|
+|[Wyjątki: wyrażenie `try...with`](the-try-with-expression.md)|Opisuje konstrukcję języka, która obsługuje obsługę wyjątków.|
+|[Wyjątki: wyrażenie `try...finally`](the-try-finally-expression.md)|Opisuje konstrukcję języka, która umożliwia wykonywanie kodu czyszczącego jako rozwinięcia stosu, gdy zostanie zgłoszony wyjątek.|
+|[Wyjątki: funkcja `raise`](the-raise-Function.md)|Opisuje, jak zgłosić obiekt wyjątku.|
+|[Wyjątki: funkcja `failwith`](the-failwith-function.md)|Opisuje sposób generowania wyjątku ogólnego F# .|
+|[Wyjątki: funkcja `invalidArg`](the-invalidArg-function.md)|Opisuje sposób generowania wyjątku nieprawidłowego argumentu.|

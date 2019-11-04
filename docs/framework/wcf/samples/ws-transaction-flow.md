@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 955522630af7eab458545e3b4e9631e6fbea31eb
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9f215bb5f6d2ec480022af477d93d9411fe190cd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038468"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424484"
 ---
 # <a name="ws-transaction-flow"></a>Przepływ transakcji WS
-Ten przykład ilustruje użycie transakcji skoordynowanej przez klienta oraz opcji klienta i serwera dla przepływu transakcji przy użyciu protokołu transakcji WS-lub OleTransactions. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługę kalkulatora, ale operacje są przypisywane w celu zademonstrowania użycia `TransactionFlowAttribute` z wyliczeniem **parametru TransactionFlowOption** w celu określenia stopnia przepływ transakcji jest włączony. W ramach przetworzonej transakcji dziennik żądanych operacji jest zapisywana w bazie danych i utrzymuje się do momentu ukończenia transakcji skoordynowanej klienta — Jeśli transakcja klienta nie zostanie ukończona, transakcja usługi sieci Web gwarantuje, że odpowiednie aktualizacje bazy danych nie są zatwierdzone.  
+Ten przykład ilustruje użycie transakcji skoordynowanej przez klienta oraz opcji klienta i serwera dla przepływu transakcji przy użyciu protokołu transakcji WS-lub OleTransactions. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) , który implementuje usługę kalkulatora, ale operacje są przypisywane w celu zademonstrowania użycia `TransactionFlowAttribute` z wyliczeniem **parametru TransactionFlowOption** w celu określenia, jakiego stopnia przepływu transakcji jest włączona. W ramach przetworzonej transakcji dziennik żądanych operacji jest zapisywana w bazie danych i utrzymuje się do momentu ukończenia transakcji skoordynowanej klienta — Jeśli transakcja klienta nie zostanie ukończona, transakcja usługi sieci Web gwarantuje, że odpowiednie aktualizacje bazy danych nie są zatwierdzone.  
   
 > [!NOTE]
 > Procedura instalacji i instrukcje dotyczące kompilacji dla tego przykładu znajdują się na końcu tego tematu.  
@@ -39,15 +39,15 @@ public interface ICalculator
 
  Definiuje operacje w kolejności, w jakiej mają być przetwarzane:  
   
-- Żądanie `Add` operacji musi zawierać transakcję przepływaną.  
+- Żądanie operacji `Add` musi zawierać transakcję przepływaną.  
   
-- Żądanie `Subtract` operacji może obejmować przechodzącą transakcję.  
+- Żądanie operacji `Subtract` może obejmować transakcję przepływaną.  
   
-- Żądanie `Multiply` operacji nie może zawierać przepływającej transakcji za pomocą jawnego ustawienia nołojud.  
+- Żądanie operacji `Multiply` nie może zawierać przepływającej transakcji za pomocą jawnego ustawienia nołojud.  
   
-- Żądanie operacji nie może zawierać przepływającej transakcji przez pominięcie `TransactionFlow` atrybutu. `Divide`  
+- Żądanie operacji `Divide` nie może zawierać przepływającej transakcji za pomocą pomijania atrybutu `TransactionFlow`.  
   
- Aby włączyć przepływ transakcji, oprócz odpowiednich atrybutów [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) operacji należy użyć powiązań z włączoną właściwością TransactionFlow >. W tym przykładzie konfiguracja usługi uwidacznia punkt końcowy protokołu TCP i punkt końcowy HTTP oprócz punktu końcowego wymiany metadanych. Punkt końcowy TCP i punkt końcowy HTTP używają następujących powiązań, z których oba mają [ \<włączoną właściwość TransactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) .  
+ Aby włączyć przepływ transakcji, oprócz odpowiednich atrybutów operacji należy użyć powiązań z włączoną właściwością [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) . W tym przykładzie konfiguracja usługi uwidacznia punkt końcowy protokołu TCP i punkt końcowy HTTP oprócz punktu końcowego wymiany metadanych. Punkt końcowy TCP i punkt końcowy HTTP używają następujących powiązań, z których oba mają włączoną właściwość [\<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md) .  
   
 ```xml  
 <bindings>  
@@ -66,10 +66,10 @@ public interface ICalculator
 > [!NOTE]
 > NetTcpBinding udostępnione przez system umożliwia specyfikację element TransactionProtocol, podczas gdy w przypadku systemu wsHttpBinding jest wykorzystywany tylko bardziej międzyoperacyjny protokół WSAtomicTransactionOctober2004. Protokół OleTransactions jest dostępny tylko dla klientów Windows Communication Foundation (WCF).  
   
- Dla klasy implementującej `ICalculator` interfejs wszystkie metody są przypisane <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> do właściwości ustawionej na `true`. To ustawienie deklaruje, że wszystkie akcje podjęte w ramach metody są wykonywane w zakresie transakcji. W takim przypadku wykonane działania obejmują rejestrowanie do bazy danych dziennika. Jeśli żądanie operacji obejmuje przetworzoną transakcję, akcje są wykonywane w ramach zakresu transakcji przychodzącej lub automatycznie generowane są nowe zakresy transakcji.  
+ Dla klasy implementującej interfejs `ICalculator` wszystkie metody są przypisane do właściwości <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> ustawionej na `true`. To ustawienie deklaruje, że wszystkie akcje podjęte w ramach metody są wykonywane w zakresie transakcji. W takim przypadku wykonane działania obejmują rejestrowanie do bazy danych dziennika. Jeśli żądanie operacji obejmuje przetworzoną transakcję, akcje są wykonywane w ramach zakresu transakcji przychodzącej lub automatycznie generowane są nowe zakresy transakcji.  
   
 > [!NOTE]
-> <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> Właściwość definiuje zachowanie lokalne dla implementacji metod usługi i nie definiuje możliwości lub wymagania dotyczącego przepływania transakcji przez klienta.  
+> Właściwość <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> definiuje zachowanie lokalne dla implementacji metod usługi i nie definiuje możliwości lub wymagania dotyczącego przepływania transakcji przez klienta.  
 
 ```csharp
 // Service class that implements the service contract.  
@@ -108,7 +108,7 @@ public class CalculatorService : ICalculator
 }  
 ```
 
- W przypadku klienta `TransactionFlowOption` ustawienia usługi dla operacji są odzwierciedlone w wygenerowanej definicji `ICalculator` interfejsu klienta. Ponadto ustawienia `transactionFlow` właściwości usługi są odzwierciedlone w konfiguracji aplikacji klienta. Klient może wybrać transport i protokół, wybierając odpowiednie `endpointConfigurationName`.  
+ W przypadku klienta ustawienia `TransactionFlowOption` usługi dla operacji są odzwierciedlane w wygenerowanej definicji klienta interfejsu `ICalculator`. Ponadto ustawienia właściwości `transactionFlow` usługi są odzwierciedlone w konfiguracji aplikacji klienta. Klient może wybrać transport i protokół, wybierając odpowiednie `endpointConfigurationName`.  
 
 ```csharp
 // Create a client using either wsat or oletx endpoint configurations  
@@ -182,19 +182,19 @@ Console.WriteLine("Transaction committed");
 
  Wywołania operacji są następujące:  
   
-- `Add` Żądanie przeprowadzi transakcję wymaganą przez usługę, a akcje usługi są wykonywane w zakresie transakcji klienta.  
+- Żądanie `Add` przeprowadzi transakcję wymaganą przez usługę, a akcje usługi są wykonywane w zakresie transakcji klienta.  
   
-- Pierwsze `Subtract` żądanie również przepływie dozwolonej transakcji do usługi, a następnie akcje usługi są wykonywane w zakresie transakcji klienta.  
+- Pierwsze żądanie `Subtract` również przepływie dozwolonej transakcji do usługi, a następnie akcje usługi są wykonywane w zakresie transakcji klienta.  
   
-- Drugie `Subtract` żądanie jest wykonywane w ramach nowego zakresu transakcji zadeklarowanego `TransactionScopeOption.Suppress` za pomocą opcji. Pomija to początkową transakcję klienta i żądanie nie powoduje przepływania transakcji do usługi. Takie podejście pozwala klientowi jawnie zrezygnować z usługi i chronić ją przed przepływaniem transakcji w usłudze, gdy nie jest to wymagane. Akcje usługi są wykonywane w zakresie nowej i niepołączonej transakcji.  
+- Drugie żądanie `Subtract` jest wykonywane w ramach nowego zakresu transakcji zadeklarowanego za pomocą opcji `TransactionScopeOption.Suppress`. Pomija to początkową transakcję klienta i żądanie nie powoduje przepływania transakcji do usługi. Takie podejście pozwala klientowi jawnie zrezygnować z usługi i chronić ją przed przepływaniem transakcji w usłudze, gdy nie jest to wymagane. Akcje usługi są wykonywane w zakresie nowej i niepołączonej transakcji.  
   
-- <xref:System.ServiceModel.TransactionFlowAttribute> `ICalculator` `NotAllowed` <xref:System.ServiceModel.TransactionFlowOption>Żądanie nie przepływ transakcji do usługi, ponieważ wygenerowana definicja interfejsu klienta zawiera zestaw do. `Multiply`  
+- Żądanie `Multiply` nie przepływ transakcji do usługi, ponieważ wygenerowana definicja interfejsu `ICalculator` przez klienta zawiera <xref:System.ServiceModel.TransactionFlowAttribute> ustawioną <xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`.  
   
-- Żądanie nie przepływ transakcji do usługi, ponieważ wywygenerowana definicja `ICalculator` `TransactionFlowAttribute`interfejsu klienta nie zawiera. `Divide` Akcje usługi są ponownie wykonywane w zakresie innej nowej i niepołączonej transakcji.  
+- Żądanie `Divide` nie powoduje przepływania transakcji do usługi, ponieważ wywygenerowana przez klienta definicja interfejsu `ICalculator` nie zawiera `TransactionFlowAttribute`. Akcje usługi są ponownie wykonywane w zakresie innej nowej i niepołączonej transakcji.  
   
  Po uruchomieniu przykładu żądania operacji i odpowiedzi są wyświetlane w oknie konsoli klienta. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
-```  
+```console  
 Starting transaction  
   Add(100,15.99) = 115.99  
   Subtract(145,76.54) = 68.46  
@@ -208,7 +208,7 @@ Press <ENTER> to terminate client.
   
  Rejestrowanie żądań operacji usługi jest wyświetlane w oknie konsoli usługi. Naciśnij klawisz ENTER w oknie klienta, aby zamknąć klienta programu.  
   
-```  
+```console  
 Press <ENTER> to terminate the service.  
   Writing row to database: Adding 100 to 15.99  
   Writing row to database: Subtracting 76.54 from 145  
@@ -219,13 +219,13 @@ Press <ENTER> to terminate the service.
   
  Po pomyślnym wykonaniu zakres transakcji klienta zostaje zakończony i wszystkie akcje podjęte w ramach tego zakresu zostaną zatwierdzone. W odróżnieniu od 5 rekordów w bazie danych usługi są utrwalane. Pierwsze 2 z nich wystąpiło w zakresie transakcji klienta.  
   
- Jeśli wystąpi wyjątek w dowolnym miejscu w ramach klienta `TransactionScope` , nie można ukończyć transakcji. Powoduje to, że rekordy zarejestrowane w tym zakresie nie są zatwierdzone do bazy danych. Ten efekt można zaobserwować przez powtórzenie przykładowego przebiegu po komentowaniu wywołania w celu ukończenia zewnętrznego `TransactionScope`. W takim przebiegu są rejestrowane tylko ostatnie 3 akcje (od drugiej `Subtract` `Multiply` , a i `Divide` żądania), ponieważ transakcja klienta nie przepływa do tych.  
+ Jeśli wystąpi wyjątek w dowolnym miejscu w `TransactionScope` klienta, nie można ukończyć transakcji. Powoduje to, że rekordy zarejestrowane w tym zakresie nie są zatwierdzone do bazy danych. Ten efekt można zaobserwować przez powtórzenie przykładowego przebiegu po wprowadzeniu komentarza do wywołania `TransactionScope`zewnętrznego. W takim przebiegu są rejestrowane tylko ostatnie 3 akcje (od drugiego `Subtract`, `Multiply` i `Divide` żądania), ponieważ transakcja klienta nie przepływa do tych.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, skompilować i uruchomić przykład  
   
 1. Aby skompilować wersję C# rozwiązania lub Visual Basic .NET, postępuj zgodnie z instrukcjami w temacie [Tworzenie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. Upewnij się, że masz zainstalowaną wersję SQL Server Express lub SQL Server i że parametry połączenia zostały prawidłowo ustawione w pliku konfiguracyjnym aplikacji usługi. Aby uruchomić przykład bez korzystania z bazy danych, ustaw `usingSql` wartość w pliku konfiguracyjnym aplikacji usługi na`false`  
+2. Upewnij się, że masz zainstalowaną wersję SQL Server Express lub SQL Server i że parametry połączenia zostały prawidłowo ustawione w pliku konfiguracyjnym aplikacji usługi. Aby uruchomić przykład bez korzystania z bazy danych, ustaw wartość `usingSql` w pliku konfiguracyjnym aplikacji usługi na `false`  
   
 3. Aby uruchomić przykład w konfiguracji na jednym lub wielu komputerach, postępuj zgodnie z instrukcjami w temacie [Uruchamianie przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
@@ -246,7 +246,7 @@ Press <ENTER> to terminate the service.
   
     4. Na karcie **MSDTC** kliknij pozycję **Konfiguracja zabezpieczeń**.  
   
-    5. Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na ruch**przychodzący.  
+    5. Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na ruch przychodzący**.  
   
     6. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
@@ -260,7 +260,7 @@ Press <ENTER> to terminate the service.
   
     3. Kliknij prawym przyciskiem myszy pozycję **koordynator usługi DTC** i wybierz pozycję **Właściwości**.  
   
-    4. Na karcie **zabezpieczenia** Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na ruch**przychodzący.  
+    4. Na karcie **zabezpieczenia** Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na ruch przychodzący**.  
   
     5. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
@@ -268,13 +268,13 @@ Press <ENTER> to terminate the service.
   
 3. Na komputerze klienckim Skonfiguruj usługę MSDTC tak, aby zezwalała na wychodzące transakcje sieciowe:  
   
-    1. W menu **Start** przejdź do `Control Panel`, a następnie **Narzędzia administracyjne**, a następnie **usługi składowe**.  
+    1. W menu **Start** przejdź do `Control Panel`, następnie **Narzędzia administracyjne**, a następnie pozycję **usługi składowe**.  
   
     2. Kliknij prawym przyciskiem myszy pozycję **mój komputer** , a następnie wybierz pozycję **Właściwości**.  
   
     3. Na karcie **MSDTC** kliknij pozycję **Konfiguracja zabezpieczeń**.  
   
-    4. Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na**ruch wychodzący.  
+    4. Sprawdź **dostęp do usługi Network DTC** i **Zezwalaj na ruch wychodzący**.  
   
     5. Kliknij przycisk **OK**, a następnie kliknij przycisk **tak** , aby ponownie uruchomić usługę MSDTC.  
   
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] przykłady. Ten przykład znajduje się w następującym katalogu.  
+> Jeśli ten katalog nie istnieje, przejdź do [przykładów Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) dla .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) , aby pobrać wszystkie próbki Windows Communication Foundation (WCF) i [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Ten przykład znajduje się w następującym katalogu.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

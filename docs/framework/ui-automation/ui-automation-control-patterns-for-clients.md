@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: e1d87920f64242379d1931a424aa38b676dc5ef5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c7d9eeceaba2ed8b624d3001dae86868ef626c08
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039446"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458104"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika dla klientów
 > [!NOTE]
@@ -40,7 +40,7 @@ ms.locfileid: "73039446"
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Kontrolki ze wzorcami zmiennych  
- Niektóre typy formantów obsługują różne wzorce w zależności od ich stanu lub sposobu, w jaki formant jest używany. Przykładami formantów, które mogą mieć wzorce zmiennych, są widoki list (miniatury, kafelki, ikony, listy, szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresy (kołowy, liniowy, słupkowy, wartość komórki z formułą), obszar dokumentu [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)](normalny, układ sieci Web, konspekt, układ wydruku, Podgląd wydruku) i Karnacje programu Microsoft Windows Media Player.  
+ Niektóre typy formantów obsługują różne wzorce w zależności od ich stanu lub sposobu, w jaki formant jest używany. Przykłady formantów, które mogą mieć wzorce zmiennych, to widoki listy (miniatury, kafelki, ikony, lista, szczegóły), wykresy programu Microsoft Excel (kołowy, liniowy, słupkowy, wartość komórki z formułą), obszar dokumentu programu Microsoft Word (normalny, układ sieci Web, konspekt, układ wydruku, drukowanie Wersja zapoznawcza) i karnacje programu Microsoft Windows Media Player.  
   
  Kontrolki implementujące niestandardowe typy kontrolek mogą mieć dowolny zestaw wzorców kontroli, które są potrzebne do reprezentowania ich funkcjonalności.  
   

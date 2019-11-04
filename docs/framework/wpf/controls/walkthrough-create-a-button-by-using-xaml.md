@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: a0792beca358de52a24bd9bb0dd48a20c175f8ff
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6738b9e66c1223ea4ec50c070a421d119fd30bc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920183"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458691"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
 
@@ -92,7 +92,7 @@ Następnie Skonfigurujmy niektóre właściwości na tych przyciskach, aby kontr
 
      ![Przyciski o szerokości 90 i marginesie 10](./media/custom-button-animatedbutton-2.gif "custom_button_AnimatedButton_2")
 
-     Istnieje dużo więcej możliwości z stylami, w tym różne sposoby dostosowania obiektów do celów, określania złożonych wartości właściwości, a nawet style jako dane wejściowe dla innych stylów. Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](styling-and-templating.md).
+     Istnieje dużo więcej możliwości z stylami, w tym różne sposoby dostosowania obiektów do celów, określania złożonych wartości właściwości, a nawet style jako dane wejściowe dla innych stylów. Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
 3. **Ustaw wartość właściwości styl na zasób:** Zasoby umożliwiają proste użycie często zdefiniowanych obiektów i wartości. Jest to szczególnie przydatne do definiowania złożonych wartości przy użyciu zasobów, aby kod był bardziej modularny. Dodaj następujące wyróżnione znaczniki do pliku App. XAML.
 
@@ -439,7 +439,7 @@ Prosty sposób na dodanie interaktywności (przesuwanie myszą, wyjście myszy, 
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Animacja — przegląd](../graphics-multimedia/animation-overview.md)
 - [Malowanie jednolitymi kolorami i gradientami — przegląd](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
 - [Efekty mapy bitowej — przegląd](../graphics-multimedia/bitmap-effects-overview.md)

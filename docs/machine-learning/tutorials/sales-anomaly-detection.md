@@ -4,12 +4,12 @@ description: Dowiedz się, jak utworzyć aplikację wykrywania anomalii dla dany
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774439"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423610"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Samouczek: wykrywanie anomalii w sprzedaży produktów za pomocą ML.NET
 
@@ -127,7 +127,7 @@ Dane w ML.NET są reprezentowane jako [Klasa IDataView](xref:Microsoft.ML.IDataV
 
 Flagi wykrywania anomalii nieoczekiwane lub nietypowe zdarzenia lub zachowania. Zawiera wskazówki, gdzie szukać problemów i pomaga odpowiedzieć na pytanie "czy to brzmienia?".
 
-![Czy ten brzmienia](./media/sales-anomaly-detection/anomalydetection.png)
+![Przykład wykrywania anomalii "is to brzmienia".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 Wykrywanie anomalii to proces wykrywania wartości odstających danych szeregów czasowych; wskazuje na dane wejściowe serie czasowe, w których zachowanie nie jest oczekiwane, lub "brzmienia".
 
@@ -152,7 +152,7 @@ Przeanalizujesz te same dane sprzedaży produktu w celu wykrywania skoków i pun
 
 Celem w zakresie wykrywania jest zidentyfikowanie nagłych obciążeń tymczasowych, które znacząco różnią się od większości wartości danych szeregów czasowych. Ważne jest, aby wykrywać te podejrzane rzadkie elementy, zdarzenia lub obserwacje w odpowiednim czasie, aby być zminimalizowane. Poniższe podejście może służyć do wykrywania różnych anomalii, takich jak: awaria, ataki cybernetycznymi lub wirusowej zawartości sieci Web. Na poniższej ilustracji przedstawiono przykład skoków w zestawie danych szeregów czasowych:
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![Zrzut ekranu przedstawiający dwa wykrycia skoków.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>Dodaj metodę CreateEmptyDataView ()
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` są trwałymi zmianami w dystrybucji strumienia zdarzeń szeregów czasowych, takich jak zmiany poziomów i trendy. Te trwałe zmiany są znacznie dłuższe niż `spikes` i mogą wskazywać na katastrofalne zdarzenia. `Change points` nie są zwykle widoczne dla gołym okiem, ale można je wykryć w danych przy użyciu podejścia, takiego jak w poniższej metodzie.  Na poniższej ilustracji przedstawiono przykład wykrywania punktu zmiany:
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![Zrzut ekranu pokazujący wykrywanie punktu zmiany.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>Tworzenie metody DetectChangepoint ()
 

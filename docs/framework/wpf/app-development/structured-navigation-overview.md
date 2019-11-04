@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 76330c1228b1f55a5dbaf58a1acd231a391d550c
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580511"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425326"
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 
-Zawartość, która może być hostowana przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> lub <xref:System.Windows.Navigation.NavigationWindow> składa się ze stron, które mogą być identyfikowane przez identyfikatory URI (Uniform Resource Identifier) pakietu i przechodzące przez hiperlinki. Struktura stron i sposoby, w których można przechodzić, zgodnie z definicją za pomocą hiperłączy, jest znana jako topologia nawigacji. Taka topologia oferuje różne typy aplikacji, szczególnie te, które poruszają się za pomocą dokumentów. W przypadku takich aplikacji użytkownik może nawigować z jednej strony na inną stronę bez konieczności poznania innych elementów.
+Zawartość, która może być hostowana przez aplikację przeglądarki XAML (XBAP), <xref:System.Windows.Controls.Frame>lub <xref:System.Windows.Navigation.NavigationWindow>, składa się ze stron, które mogą być identyfikowane przez identyfikatory URI (Uniform Resource Identifier) pakietu i przechodzące przez hiperlinki. Struktura stron i sposoby, w których można przechodzić, zgodnie z definicją za pomocą hiperłączy, jest znana jako topologia nawigacji. Taka topologia oferuje różne typy aplikacji, szczególnie te, które poruszają się za pomocą dokumentów. W przypadku takich aplikacji użytkownik może nawigować z jednej strony na inną stronę bez konieczności poznania innych elementów.
 
 Jednak inne typy aplikacji mają strony, które muszą wiedzieć, kiedy zostały przejściu między. Rozważmy na przykład aplikację kadr, która ma jedną stronę, aby wyświetlić listę wszystkich pracowników w organizacji — stronę "Lista pracowników". Na tej stronie można również zezwolić użytkownikom na dodawanie nowego pracownika przez kliknięcie hiperłącza. Po kliknięciu strony przechodzi do strony "Dodaj pracownika", aby zebrać szczegóły nowego pracownika i zwrócić je do strony "Wyświetl pracowników", aby utworzyć nowego pracownika i zaktualizować listę. Ten styl nawigacji jest podobny do wywołania metody wykonywania niektórych operacji przetwarzania i zwracania wartości, która jest znana jako programowanie strukturalne. W związku z tym styl nawigacji jest znany jako *Nawigacja strukturalna*.
 
@@ -77,7 +77,7 @@ Ze względu na to, że strona wywołująca może używać wywoływanej strony do
 
 Deklaracja <xref:System.Windows.Navigation.PageFunction%601> jest podobna do deklaracji <xref:System.Windows.Controls.Page> z dodaniem argumentów typu. Jak widać w przykładzie kodu, argumenty typu są określane w obu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników, przy użyciu atrybutu `x:TypeArguments` i kodu, przy użyciu standardowej składni argumentu typu ogólnego.
 
-Nie trzeba używać tylko .NET Framework klas jako argumentów typu. @No__t_0 można wywołać w celu zebrania danych specyficznych dla domeny, które są abstrakcyjne jako typ niestandardowy. Poniższy kod pokazuje, jak używać typu niestandardowego jako argumentu typu dla <xref:System.Windows.Navigation.PageFunction%601>.
+Nie trzeba używać tylko .NET Framework klas jako argumentów typu. <xref:System.Windows.Navigation.PageFunction%601> można wywołać w celu zebrania danych specyficznych dla domeny, które są abstrakcyjne jako typ niestandardowy. Poniższy kod pokazuje, jak używać typu niestandardowego jako argumentu typu dla <xref:System.Windows.Navigation.PageFunction%601>.
 
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]

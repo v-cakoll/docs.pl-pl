@@ -7,35 +7,35 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b88ef444283f4e1e85009c59b39f3cc41965d300
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051016"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460006"
 ---
 # <a name="inline-styles-and-templates"></a>Style i szablony wbudowane
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia <xref:System.Windows.Style> obiekty i szablonu (<xref:System.Windows.FrameworkTemplate> podklasy) jako sposób zdefiniować wygląd elementu w zasobach, dzięki czemu będzie można ich użyć wiele razy. Z tego powodu atrybutów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] typy, które wymagają <xref:System.Windows.Style> i <xref:System.Windows.FrameworkTemplate> prawie zawsze zasobów odwołuje się do istniejącego — style i szablony, a nie zdefiniować nowe wbudowane.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewnia <xref:System.Windows.Style> obiektów i obiektów szablonów (<xref:System.Windows.FrameworkTemplate> podklas) jako sposób definiowania wyglądu elementu w zasobach, dzięki czemu mogą być używane wiele razy. Z tego powodu atrybuty w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], które pobierają typy <xref:System.Windows.Style> i <xref:System.Windows.FrameworkTemplate> niemal zawsze tworzą odwołania do zasobów do istniejących stylów i szablonów zamiast definiować nowe.  
   
-## <a name="limitations-of-inline-styles-and-templates"></a>Ograniczenia style i Szablony wbudowane  
- W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], z technicznego punktu widzenia można ustawić właściwości stylów i szablonów w jeden z dwóch sposobów. Można użyć składni atrybutów stylu, który został zdefiniowany w ramach zasobu, na przykład odwołanie do `<` *obiektu*`Style="{StaticResource`*myResourceKey*`}" .../>`. Lub składnia elementu właściwości umożliwia definiowanie w tekście stylu, na przykład:  
+## <a name="limitations-of-inline-styles-and-templates"></a>Ograniczenia stylów i szablonów wbudowanych  
+ W [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]właściwości stylu i szablonu można ustawić w jeden z dwóch sposobów. Można użyć składni atrybutu, aby odwołać się do stylu, który został zdefiniowany w ramach zasobu, na przykład `<`*obiektu* *`Style="{StaticResource``}" .../>`* . Lub można użyć składni elementu właściwości, aby zdefiniować styl wbudowany, na przykład:  
   
- `<` *obiekt* `>`  
+ `>` `<` *obiektu*  
   
- `<` *obiekt* `.Style>`  
+ `.Style>` `<` *obiektu*  
   
- `<` `Style`  `.../>`  
+ `<` `Style``.../>`  
   
- `</` *obiekt* `.Style>`  
+ `.Style>` `</` *obiektu*  
   
- `</` *obiekt* `>`  
+ `>` `</` *obiektu*  
   
- Użycie atrybutu jest znacznie bardziej powszechne. Styl, który zdefiniowano w tekście i nie zdefiniowano w zasoby zawsze obejmuje tylko element zawierający i nie można ponownie użyć równie łatwo, ponieważ nie ma on zasobów klucza. Ogólnie rzecz biorąc zdefiniowany zasób stylu jest bardziej wszechstronna i przydatne i jest bardziej zgodne ogólne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oddzielenie logiki programu w kodzie, od projektowania w znacznikach zasady modelu programowania.  
+ Użycie atrybutu jest znacznie bardziej powszechne. Styl, który jest zdefiniowany w tekście i nie jest zdefiniowany w zasobach, jest koniecznie objęty zakresem zawierającym tylko element i nie można go ponownie użyć, ponieważ nie ma klucza zasobu. Ogólnie rzecz biorąc, styl zdefiniowany przez zasób jest bardziej uniwersalny i przydatny, co jest bardziej pomocne z ogólnym modelem programowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasadą oddzielania logiki programu w kodzie od projektowania w znaczniku.  
   
- Zwykle nie ma powodu do wbudowanej stylu lub szablonu, nawet jeśli zamierzasz używać stylu lub szablonu w tej lokalizacji. Większość elementów, które mogą przejąć stylu lub szablonu obsługują również właściwość zawartości oraz model zawartości. Jeśli używane są tylko niezależnie od drzewo logiczne Utwórz za pomocą stylów i szablonów raz, byłoby jeszcze łatwiej Wypełnij tę właściwość zawartości z elementami podrzędnymi równoważne, w znacznikach bezpośrednie. Spowoduje to całkowicie pominąć mechanizmy stylów i szablonów.  
+ Zwykle nie istnieje powód, aby ustawić styl lub szablon w tekście, nawet jeśli zamierzasz użyć tego stylu lub szablonu w tej lokalizacji. Większość elementów, które mogą przyjmować styl lub szablon, obsługują również właściwość content i model zawartości. Jeśli używasz tylko dowolnego drzewa logicznego, które tworzysz za pośrednictwem stylu lub tworzenia szablonów raz, łatwiej jest wypełniać tę właściwość zawartości z odpowiednikami elementów podrzędnych w znacznikach bezpośrednich. Dzięki temu wszystkie mechanizmy stylu i szablonu zostaną całkowicie pominięte.  
   
- Możliwe, style i szablony są również innych składni włączane przez rozszerzenia znaczników, które zwracają obiekt. Dwa rozszerzenia, które mają możliwe scenariusze obejmują [TemplateBinding](templatebinding-markup-extension.md) i <xref:System.Windows.Data.Binding>.  
+ Inne składnie włączane przez rozszerzenia znaczników, które zwracają obiekt, są również dostępne dla stylów i szablonów. Dwa takie rozszerzenia, które mają możliwe scenariusze, obejmują [szablonbinding](templatebinding-markup-extension.md) i <xref:System.Windows.Data.Binding>.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie szablonów i stylów](../controls/styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

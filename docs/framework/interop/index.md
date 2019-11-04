@@ -10,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, about interoperation
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
-ms.openlocfilehash: cdd8d2781331956289d2b74162e653ba1ee8fad6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114240"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457971"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym
 
@@ -40,9 +40,6 @@ Opisuje kierowanie dla międzyoperacyjności modelu COM i wywołania platformy.
 [Instrukcje: Mapowanie wyników HRESULT i wyjątków](how-to-map-hresults-and-exceptions.md)  
 Opisuje mapowanie między wyjątkami i WYNIKami HRESULT.
 
-[Otoki COM](com-wrappers.md)  
-Opisuje otoki udostępniane przez międzyoperacyjność modelu COM.
-
 [Równoważność typów i osadzone typy międzyoperacyjne](type-equivalence-and-embedded-interop-types.md)  
 Opisuje, jak informacje o typie dla typów COM są osadzone w zestawach oraz jak środowisko uruchomieniowe języka wspólnego określa równoważność osadzonych typów COM.
 
@@ -57,3 +54,8 @@ Opisuje sposób, w jaki współdziałanie modelu COM może aktywować składniki
 
 [Instrukcje: Konfigurowanie aktywacji bez rejestracji składników COM opartych na platformie .NET Framework](configure-net-framework-based-com-components-for-reg.md)  
 Opisuje sposób tworzenia manifestu aplikacji i tworzenia i osadzania manifestu składnika.
+
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Otoki COM](../../standard/native-interop/com-wrappers.md)  
+Opisuje otoki udostępniane przez międzyoperacyjność modelu COM.

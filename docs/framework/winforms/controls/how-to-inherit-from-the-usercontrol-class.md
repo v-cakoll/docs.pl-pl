@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: dziedziczenie z klasy UserControl'
+title: 'Porady: dziedziczenie z klasy UserControl'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7f4055c2374103b7df941d9a9bef24ed5e6cb27c
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 10bb807d012a130ad633b7ce06f99c5abf2cdda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015841"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458373"
 ---
-# <a name="how-to-inherit-from-the-usercontrol-class"></a>Instrukcje: dziedziczenie z klasy UserControl
+# <a name="how-to-inherit-from-the-usercontrol-class"></a>Porady: dziedziczenie z klasy UserControl
 
 Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms z kodem niestandardowym, można utworzyć *kontrolkę użytkownika*. Kontrolki użytkownika łączą programowanie szybkiej kontroli, standardowe funkcje kontroli Windows Forms i uniwersalność niestandardowych właściwości i metod. Po rozpoczęciu tworzenia kontrolki użytkownika zostanie wyświetlony widoczny Projektant, na którym można umieścić standardowe kontrolki Windows Forms. Te kontrolki zachowują wszystkie funkcje, a także wygląd i zachowanie (wyglądu i działania) standardowych kontrolek. Po wbudowaniu tych kontrolek w kontrolce użytkownika nie są one już dostępne za pomocą kodu. Kontrolka użytkownika wykonuje własne malowanie, a także obsługuje wszystkie podstawowe funkcje związane z kontrolkami.
 
@@ -27,19 +27,19 @@ Aby połączyć funkcje co najmniej jednej kontrolki Windows Forms z kodem niest
 
    Tworzony jest nowy projekt z pustą kontrolką użytkownika.
 
-2. Przeciągnij kontrolki z karty **Windows Forms** przybornika do projektanta.
+2. Przeciągnij kontrolki z karty **Windows Forms** **przybornika** do projektanta.
 
-3. Te kontrolki powinny być rozmieszczone i zaprojektowane tak, aby były wyświetlane w końcowej kontrolce użytkownika. Aby umożliwić deweloperom dostęp do kontrolek składnika, należy zadeklarować je jako publiczne lub selektywnie uwidocznić właściwości kontrolki składnik. Aby uzyskać szczegółowe informacje [, zobacz How to: Uwidacznia właściwości kontrolek](how-to-expose-properties-of-constituent-controls.md)składnika.
+3. Te kontrolki powinny być rozmieszczone i zaprojektowane tak, aby były wyświetlane w końcowej kontrolce użytkownika. Aby umożliwić deweloperom dostęp do kontrolek składnika, należy zadeklarować je jako publiczne lub selektywnie uwidocznić właściwości kontrolki składnik. Aby uzyskać szczegółowe informacje, zobacz [How to: Uwidacznianie właściwości kontrolek składnika](how-to-expose-properties-of-constituent-controls.md).
 
 4. Zaimplementuj wszelkie niestandardowe metody lub właściwości, które zostaną dołączone do kontrolki.
 
-5. Naciśnij klawisz **F5** , aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**. Aby uzyskać więcej informacji, zobacz [jak: Przetestuj zachowanie elementu UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)w czasie wykonywania.
+5. Naciśnij klawisz **F5** , aby skompilować projekt i uruchomić formant w **kontenerze Test UserControl**. Aby uzyskać więcej informacji, zobacz [jak: testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Różne typy kontrolek niestandardowych](varieties-of-custom-controls.md)
-- [Instrukcje: Dziedzicz z klasy kontrolki](how-to-inherit-from-the-control-class.md)
-- [Instrukcje: Dziedzicz z istniejących kontrolek Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Instrukcje: Kontrolki autora dla Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Instrukcje: dziedziczenie z klasy kontrolek](how-to-inherit-from-the-control-class.md)
+- [Instrukcje: dziedziczenie z istniejących kontrolek formularzy Windows Forms](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Instrukcje: tworzenie kontrolek dla formularzy Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Rozwiązywanie problemów dziedziczonych programów obsługi zdarzeń w Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [Instrukcje: Testowanie zachowania elementu UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie dodatku, który zwraca interfejs użytkownika'
+title: Jak utworzyć dodatek, który zwraca interfejs użytkownika
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: e32987355a6c7ad32b5e0e8522dc4daa63783fdd
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d799c91b9abdf7882a0fcd3f0b656eac553b188c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291249"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460144"
 ---
-# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Instrukcje: Tworzenie dodatku, który zwraca interfejs użytkownika
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Jak utworzyć dodatek, który zwraca interfejs użytkownika
 Ten przykład pokazuje, jak utworzyć dodatek, który zwraca Windows Presentation Foundation (WPF) do aplikacji autonomicznej WPF hosta.  
   
  Dodatek zwraca interfejs użytkownika, który jest formantem użytkownika WPF. Zawartość kontrolki użytkownika to pojedynczy przycisk, który po kliknięciu wyświetla okno komunikatu. Aplikacja autonomiczna WPF obsługuje dodatek i wyświetla kontrolkę użytkownika (zwracaną przez dodatek) jako zawartość głównego okna aplikacji.  
@@ -25,7 +25,7 @@ Ten przykład pokazuje, jak utworzyć dodatek, który zwraca Windows Presentatio
   
  W tym przykładzie wyróżniono rozszerzenia WPF do modelu dodatku .NET Framework, który umożliwia ten scenariusz, i przyjmuje następujące elementy:  
   
-- Znajomość modelu dodatku .NET Framework, w tym potoku, dodatku i opracowywania hosta. Jeśli nie znasz tych pojęć, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Samouczek przedstawiający implementację potoku, dodatek i aplikację hosta zawiera [Przewodnik: Tworzenie aplikacji rozszerzalnej](../../add-ins/walkthrough-create-extensible-app.md).  
+- Znajomość modelu dodatku .NET Framework, w tym potoku, dodatku i opracowywania hosta. Jeśli nie znasz tych pojęć, zobacz [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)). Samouczek przedstawiający implementację potoku, dodatek i aplikację hosta zawiera [Przewodnik: Tworzenie aplikacji rozszerzalnej](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100)).  
   
 - Znajomość rozszerzeń WPF do modelu dodatku .NET Framework, który można znaleźć tutaj: [Omówienie dodatków WPF](wpf-add-ins-overview.md).  
   
@@ -62,7 +62,7 @@ Ten przykład pokazuje, jak utworzyć dodatek, który zwraca Windows Presentatio
   
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementowanie segmentu potoku karty po stronie hosta  
- Metoda Contract zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale aplikacja hosta oczekuje <xref:System.Windows.FrameworkElement> (określony przez widok hosta). W związku z tym <xref:System.AddIn.Contract.INativeHandleContract> musi być konwertowana na <xref:System.Windows.FrameworkElement> po przekroczeniu granicy izolacji. Ta operacja jest wykonywana przez adapter po stronie hosta, wywołując <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, jak pokazano w poniższym kodzie.  
+ Metoda Contract zwraca <xref:System.AddIn.Contract.INativeHandleContract>, ale aplikacja hosta oczekuje <xref:System.Windows.FrameworkElement> (określony przez widok hosta). W związku z tym <xref:System.AddIn.Contract.INativeHandleContract> musi być konwertowana na <xref:System.Windows.FrameworkElement> po przekroczeniu granicy izolacji. Ta operacja jest wykonywana przez adapter po stronie hosta przez wywołanie <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, jak pokazano w poniższym kodzie.  
   
  [!code-csharp[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/CSharp/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.cs#hostsideadaptercode)]
  [!code-vb[SimpleAddInReturnsAUISample#HostSideAdapterCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/HostSideAdapters/WPFAddIn_ContractToViewHostSideAdapter.vb#hostsideadaptercode)]  
@@ -91,4 +91,4 @@ Ten przykład pokazuje, jak utworzyć dodatek, który zwraca Windows Presentatio
 ## <a name="see-also"></a>Zobacz także
 
 - [Dodatki i rozszerzalność](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
-- [Omówienie dodatków WPF](wpf-add-ins-overview.md)
+- [Dodatki WPF — omówienie](wpf-add-ins-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: bf75677ee6a6a607a8779edf5af5e63f5c92b230
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920171"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460060"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Wskazówki: utwórz niestandardowy przycisk animowany
 Jak sugeruje nazwa, Windows Presentation Foundation (WPF) doskonale nadaje się do tworzenia bogatego środowiska prezentacji dla klientów. Te instruktaże pokazują, jak dostosować wygląd i zachowanie przycisku (w tym animacji). To dostosowanie odbywa się przy użyciu stylu i szablonu, dzięki czemu można łatwo zastosować ten niestandardowy przycisk do dowolnego przycisku w aplikacji. Na poniższej ilustracji przedstawiono dostosowany przycisk, który zostanie utworzony.
@@ -26,7 +26,7 @@ Jak sugeruje nazwa, Windows Presentation Foundation (WPF) doskonale nadaje się 
  [Tworzenie przycisku przy użyciu języka XAML](walkthrough-create-a-button-by-using-xaml.md) Pokazuje, jak tworzyć przyciski z zachowaniem niestandardowym przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i programu Visual Studio.
 
 ## <a name="related-sections"></a>Sekcje pokrewne
- [Style i tworzenia szablonów](styling-and-templating.md) Opisuje, w jaki sposób można używać stylów i szablonów do określania wyglądu i zachowania kontrolek.
+ [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Opisuje, w jaki sposób można używać stylów i szablonów do określania wyglądu i zachowania kontrolek.
 
  [Przegląd animacji](../graphics-multimedia/animation-overview.md) Opisuje sposób animowania obiektów przy użyciu animacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] i systemu chronometrażu.
 

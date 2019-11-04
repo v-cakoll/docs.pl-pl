@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608456"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422538"
 ---
 # <a name="query-keywords-c-reference"></a>Słowa kluczowe zapytaniaC# (odwołanie)
 
@@ -21,13 +21,13 @@ Ta sekcja zawiera kontekstowe słowa kluczowe używane w wyrażeniach zapytań.
 
 |Klauzula|Opis|
 |------------|-----------------|
-|[from](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak Zmienna iteracji).|
-|[miejscu](where-clause.md)|Filtruje elementy źródłowe na podstawie jednego lub kilku wyrażeń logicznych oddzielonych operatorami logicznymi `&&` i <code>&#124;&#124;</code> i lub (lub).|
+|[wniosek](from-clause.md)|Określa źródło danych i zmienną zakresu (podobnie jak Zmienna iteracji).|
+|[miejscu](where-clause.md)|Filtruje elementy źródłowe na podstawie co najmniej jednego wyrażenia logicznego oddzielonego operatorami logicznymi i i lub (`&&` lub <code>&#124;&#124;</code>).|
 |[zaznaczenia](select-clause.md)|Określa typ i kształt, które elementy w zwracanej sekwencji będą miały miejsce, gdy zapytanie zostanie wykonane.|
 |[Group](group-clause.md)|Grupuje wyniki zapytania zgodnie z określoną wartością klucza.|
 |[into](into.md)|Dostarcza identyfikator, który może być używany jako odwołanie do wyników klauzuli join, Group lub SELECT.|
-|[orderby](orderby-clause.md)|Sortuje wyniki zapytania w porządku rosnącym lub malejącym w oparciu o domyślną funkcję porównującą dla typu elementu.|
-|[join](join-clause.md)|Łączy dwa źródła danych na podstawie porównania równości między dwoma określonymi kryteriami dopasowywania.|
+|[OrderBy](orderby-clause.md)|Sortuje wyniki zapytania w porządku rosnącym lub malejącym w oparciu o domyślną funkcję porównującą dla typu elementu.|
+|[Złącza](join-clause.md)|Łączy dwa źródła danych na podstawie porównania równości między dwoma określonymi kryteriami dopasowywania.|
 |[wpuść](let-clause.md)|Wprowadza zmienną zakresu do przechowywania wyników podwyrażenia w wyrażeniu zapytania.|
 |[in](in.md)|Kontekstowe słowo kluczowe w klauzuli [Join](join-clause.md) .|
 |[on](on.md)|Kontekstowe słowo kluczowe w klauzuli [Join](join-clause.md) .|
@@ -40,5 +40,5 @@ Ta sekcja zawiera kontekstowe słowa kluczowe używane w wyrażeniach zapytań.
 
 - [Słowa kluczowe języka C#](index.md)
 - [LINQ (zapytanie zintegrowane z językiem)](../../programming-guide/concepts/linq/index.md)
-- [Wyrażenia zapytania LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Wprowadzenie do korzystania z LINQ w C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ w C#](../../linq/index.md)
+- [Wprowadzenie do korzystania z LINQ w C#](/dotnet/csharp/programming-guide/concepts/linq/)

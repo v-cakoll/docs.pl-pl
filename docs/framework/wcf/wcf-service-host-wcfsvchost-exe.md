@@ -2,12 +2,12 @@
 title: Host usługi WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: fce7d2babdf05cb55c287b4c29e642a7dd16f76f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321248"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423837"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
 
@@ -111,11 +111,11 @@ Hosta usługi WCF można zamknąć na następujące cztery sposoby:
 
 ## <a name="using-service-host-without-administrator-privilege"></a>Korzystanie z hosta usługi bez uprawnień administratora
 
-Aby umożliwić użytkownikom bez uprawnień administratora opracowywanie usług WCF, podczas instalacji programu Visual Studio dla przestrzeni nazw "http://+:8731/Design_Time_Addresses" zostanie utworzona lista kontroli dostępu (Access Control). Lista ACL jest ustawiona na (UI), która obejmuje wszystkich użytkowników interakcyjnych zalogowanych na komputerze. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy kontroli dostępu lub otwierać dodatkowe porty. Ta lista kontroli dostępu umożliwia użytkownikom korzystanie z funkcji Autohost usługi WCF (wcfSvcHost. exe) bez udzielania im uprawnień administratora.
+Aby umożliwić użytkownikom bez uprawnień administratora opracowywanie usług WCF, podczas instalacji programu Visual Studio jest tworzona lista kontroli dostępu (Access Control) dla przestrzeni nazw "http://+:8731/Design_Time_Addresses". Lista ACL jest ustawiona na (UI), która obejmuje wszystkich użytkowników interakcyjnych zalogowanych na komputerze. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy kontroli dostępu lub otwierać dodatkowe porty. Ta lista kontroli dostępu umożliwia użytkownikom korzystanie z funkcji Autohost usługi WCF (wcfSvcHost. exe) bez udzielania im uprawnień administratora.
 
-Dostęp za pomocą narzędzia Netsh. exe można modyfikować w [!INCLUDE[wv](../../../includes/wv-md.md)] w ramach konta administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia narzędzia Netsh. exe.
+Dostęp można modyfikować za pomocą narzędzia Netsh. exe w [!INCLUDE[wv](../../../includes/wv-md.md)] na koncie administratora z podwyższonym poziomem uprawnień. Poniżej przedstawiono przykład użycia narzędzia Netsh. exe.
 
-```
+```console
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 

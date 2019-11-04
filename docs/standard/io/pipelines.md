@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395932"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423675"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. potoki w środowisku .NET
 
@@ -91,7 +91,7 @@ W pierwszej pętli:
 
 * <xref:System.IO.Pipelines.PipeWriter.GetMemory(System.Int32)?displayProperty=nameWithType> jest wywoływana, aby uzyskać pamięć z bazowego składnika zapisywania.
 * <xref:System.IO.Pipelines.PipeWriter.Advance(System.Int32)?displayProperty=nameWithType> jest wywoływana w celu poinformowania o `PipeWriter` ilości danych w buforze.
-* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> jest wywoływana, aby udostępnić dane dla `PipeReader`.
+* <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A?displayProperty=nameWithType> jest wywoływana, aby udostępnić dane `PipeReader`.
 
 W drugiej pętli `PipeReader` zużywa bufory zapisywane przez `PipeWriter`. Bufory pochodzą z gniazda. Wywołanie `PipeReader.ReadAsync`:
 
@@ -123,7 +123,7 @@ W celu uzyskania optymalnej wydajności istnieje równowaga między częste Wstr
 
 Aby rozwiązać ten problem, `Pipe` ma dwa ustawienia do sterowania przepływem danych:
 
-* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: określa, ile danych ma być buforowanych przed wywołaniami <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> Pause.
+* <xref:System.IO.Pipelines.PipeOptions.PauseWriterThreshold>: określa, ile danych ma być buforowanych przed wywołaniami <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> wstrzymywania.
 * <xref:System.IO.Pipelines.PipeOptions.ResumeWriterThreshold>: określa, ile danych musi obserwować czytelnik przed wywołaniami `PipeWriter.FlushAsync` wznowić.
 
 ![Diagram z ResumeWriterThreshold i PauseWriterThreshold](./media/pipelines/resume-pause.png)
@@ -215,7 +215,7 @@ Poniższy kod odczytuje wszystkie komunikaty z `PipeReader` i wywołuje `Process
 
 * Obsługuje przekazywanie <xref:System.Threading.CancellationToken>.
 * Zgłasza <xref:System.OperationCanceledException>, jeśli `CancellationToken` zostanie anulowane, gdy istnieje oczekujące odczytanie.
-* Obsługuje sposób anulowania bieżącej operacji odczytu za pośrednictwem <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>, co pozwala uniknąć wywoływania wyjątku. Wywołanie `PipeReader.CancelPendingRead` powoduje, że bieżące lub następne wywołanie do `PipeReader.ReadAsync` zwróci <xref:System.IO.Pipelines.ReadResult> z `IsCanceled` ustawionym na `true`. Może to być przydatne w przypadku zatrzymania istniejącej pętli odczytu w nieniszczącej i niewyjątkowy sposób.
+* Obsługuje sposób anulowania bieżącej operacji odczytu za pośrednictwem <xref:System.IO.Pipelines.PipeReader.CancelPendingRead%2A?displayProperty=nameWithType>, co zapobiega wywoływaniu wyjątku. Wywołanie `PipeReader.CancelPendingRead` powoduje, że bieżące lub następne wywołanie do `PipeReader.ReadAsync` zwróci <xref:System.IO.Pipelines.ReadResult> z `IsCanceled` ustawionym na `true`. Może to być przydatne w przypadku zatrzymania istniejącej pętli odczytu w nieniszczącej i niewyjątkowy sposób.
 
 [!code-csharp[MyConnection](~/samples/snippets/csharp/pipelines/MyConnection.cs?name=snippet)]
 
@@ -239,7 +239,7 @@ Poniższy kod odczytuje wszystkie komunikaty z `PipeReader` i wywołuje `Process
 
 ❌ **utrata danych**
 
-@No__t-0 może zwrócić końcowy segment danych, gdy `IsCompleted` jest ustawiona na `true`. Nie można odczytać tych danych przed wyjściem z pętli odczytu spowoduje utratę danych.
+`ReadResult` może zwrócić końcowy segment danych, gdy `IsCompleted` jest ustawiona na `true`. Nie można odczytać tych danych przed wyjściem z pętli odczytu spowoduje utratę danych.
 
 [!INCLUDE [pipelines-do-not-use-1](../../../includes/pipelines-do-not-use-1.md)]
 
@@ -305,21 +305,21 @@ Podczas pisania pomocników odczytujących bufor należy skopiować wszystkie zw
 
 ## <a name="pipewriter"></a>PipeWriter
 
-@No__t-0 zarządza buforami do zapisu w imieniu obiektu wywołującego. `PipeWriter` implementuje [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` umożliwia uzyskanie dostępu do buforów w celu wykonywania operacji zapisu bez dodatkowych kopii buforów.
+<xref:System.IO.Pipelines.PipeWriter> zarządza buforami do zapisu w imieniu obiektu wywołującego. `PipeWriter` implementuje [`IBufferWriter<byte>`](xref:System.Buffers.IBufferWriter%601). `IBufferWriter<byte>` umożliwia uzyskanie dostępu do buforów w celu wykonywania operacji zapisu bez dodatkowych kopii buforów.
 
 [!code-csharp[MyPipeWriter](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet)]
 
 Poprzedni kod:
 
-* Żąda bufora co najmniej 5 bajtów z `PipeWriter` przy użyciu <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>.
-* Zapisuje bajty dla ciągu ASCII `"Hello"` do zwróconego `Span<byte>`.
-* Wywołania <xref:System.IO.Pipelines.PipeWriter.Advance%2A> wskazują, ile bajtów Zapisano w buforze.
+* Żąda bufora co najmniej 5 bajtów z `PipeWriter` przy użyciu <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>.
+* Zapisuje bajty dla ciągu ASCII `"Hello"` do zwróconego `Memory<byte>`.
+* Wywołuje <xref:System.IO.Pipelines.PipeWriter.Advance%2A>, aby wskazać, ile bajtów Zapisano w buforze.
 * Opróżnia `PipeWriter`, który wysyła bajty do urządzenia bazowego.
 
 Poprzednia metoda pisania używa buforów dostarczonych przez `PipeWriter`. Alternatywnie, <xref:System.IO.Pipelines.PipeWriter.WriteAsync%2A?displayProperty=nameWithType>:
 
 * Kopiuje istniejący bufor do `PipeWriter`.
-* Wywołania `GetSpan`, `Advance`, zgodnie z potrzebami, i wywołań <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>.
+* Wywołuje `GetSpan`, `Advance` odpowiednio i wywołuje <xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A>.
 
 [!code-csharp[MyPipeWriter#2](~/samples/snippets/csharp/pipelines/MyPipeWriter.cs?name=snippet2)]
 
@@ -333,16 +333,16 @@ Poprzednia metoda pisania używa buforów dostarczonych przez `PipeWriter`. Alte
 
 * <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A> i <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A> zwracają bufor z co najmniej żądaną ilością pamięci. **Nie** zakładaj dokładnie rozmiarów buforów.
 * Nie ma gwarancji, że kolejne wywołania będą zwracać ten sam bufor lub bufor o takim samym rozmiarze.
-* Przed wywołaniem <xref:System.IO.Pipelines.PipeWriter.Advance%2A> należy zażądać nowego buforu, aby kontynuować zapisywanie większej ilości danych. Nie można zapisać wcześniej uzyskanego buforu.
+* Należy zażądać nowego buforu po wywołaniu <xref:System.IO.Pipelines.PipeWriter.Advance%2A>, aby kontynuować zapisywanie większej ilości danych. Nie można zapisać wcześniej uzyskanego buforu.
 * Wywołanie `GetMemory` lub `GetSpan`, gdy istnieje niekompletne wywołanie `FlushAsync` nie jest bezpieczne.
 * Wywołanie `Complete` lub `CompleteAsync`, gdy nieopróżnione dane mogą spowodować uszkodzenie pamięci.
 
 ## <a name="iduplexpipe"></a>IDuplexPipe
 
-@No__t-0 to kontrakt dla typów, które obsługują odczyt i zapis. Na przykład połączenie sieciowe będzie reprezentowane przez `IDuplexPipe`.
+<xref:System.IO.Pipelines.IDuplexPipe> to kontrakt dla typów, które obsługują odczyt i zapis. Na przykład połączenie sieciowe będzie reprezentowane przez `IDuplexPipe`.
 
  W przeciwieństwie do `Pipe`, który zawiera `PipeReader` i `PipeWriter`, `IDuplexPipe` reprezentuje jedną część połączenia pełnego dupleksu. Oznacza to, co jest zapisywane w `PipeWriter` nie zostanie odczytany z `PipeReader`.
 
 ## <a name="streams"></a>Strumienie
 
-Podczas odczytywania lub zapisywania danych strumienia zwykle dane są odczytywane przy użyciu deserializatora i zapisu danych przy użyciu serializatora. Większość z tych interfejsów API odczytu i zapisu ma parametr `Stream`. Aby ułatwić integrację z tymi istniejącymi interfejsami API, `PipeReader` i `PipeWriter` uwidacznia <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> zwraca implementację `Stream` wokół `PipeReader` lub `PipeWriter`.
+Podczas odczytywania lub zapisywania danych strumienia zwykle dane są odczytywane przy użyciu deserializatora i zapisu danych przy użyciu serializatora. Większość z tych interfejsów API odczytu i zapisu ma parametr `Stream`. Aby ułatwić integrację z tymi istniejącymi interfejsami API, `PipeReader` i `PipeWriter` uwidaczniają <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> zwraca implementację `Stream` wokół `PipeReader` lub `PipeWriter`.

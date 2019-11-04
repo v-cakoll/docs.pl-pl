@@ -7,15 +7,15 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f860f5ee42b5c1df43c4ec2b1003408bc1c0d8e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938726"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458793"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>xml:space — Obsługa w XAML
-`xml:space` Atrybut jest definiowany w języku XML atrybut deklarujący zachowanie przetwarzania odstępu w obrębie elementu obiektu. To zachowanie jest odpowiednie dla całej zawartości (tekst wewnętrzny) zawartych w elemencie gdzie `xml:space` jest zadeklarowana, a także zakresów do elementów podrzędnych.  
+Atrybut `xml:space` jest atrybutem zdefiniowanym przez XML, który deklaruje znaczące zachowanie przetwarzania białych miejsc wewnątrz elementu obiektu. To zachowanie dotyczy całej zawartości (tekst wewnętrzny) zawartej w elemencie, gdzie `xml:space` jest zadeklarowana, a także zakresy do elementów podrzędnych.  
   
 ## <a name="xaml-attribute-usage"></a>Użycie atrybutu języka XAML  
   
@@ -23,24 +23,24 @@ ms.locfileid: "61938726"
 <object xml:space="preserve" />  
 ```  
   
- \- lub —  
+ \- lub-  
   
 ```xaml  
 <object xml:space="default" />  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Definicja `xml:space` atrybut w XAML, łącznie z jego dwóch wartości jest tworzony na podstawie `xml:space` zgodnie z definicją jako "specjalne atrybutu" specyfikacje W3C XML.  
+ Definicja atrybutu `xml:space` w języku XAML, w tym jej dwie możliwe wartości, pochodzi od `xml:space`, jak zdefiniowano jako "atrybut specjalny" przez specyfikacje W3C dla XML.  
   
- Wartość domyślna `xml:space` atrybut jest wartość literału `"default"`. Dla wartości `"default"`, lub jeśli `xml:space` nie wskazano, zachowanie analizowania znaczące odstępu jest domyślna obsługa, zgodnie z definicją w temacie [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).  
+ Wartość domyślna atrybutu `xml:space` jest wartością literału `"default"`. Dla wartości `"default"`, lub jeśli w ogóle nie określono `xml:space`, zachowanie znaczącej analizy białych znaków jest domyślną obsługą, zgodnie z definicją w temacie [Przetwarzanie bieli miejsca w języku XAML](whitespace-processing-in-xaml.md).  
   
- Aby zachować biały znak w zawartości elementu obiektu, należy określić `xml:space="preserve"` w elemencie tego obiektu.  
+ Aby zachować biały znak w zawartości elementu obiektu, należy określić `xml:space="preserve"` w tym elemencie obiektu.  
   
- W większości interpretacji `xml:space` efekty atrybutem i wartością atrybutu są ograniczone do elementów podrzędnych.  
+ W ramach większości interpretacji, `xml:space` efekty atrybutu i wartość atrybutu są zakresem elementów podrzędnych.  
   
- Wyczerpujące omówienie odstępu, przetwarzanie w XAML, zobacz [spacji w XAML na przetworzenie](whitespace-processing-in-xaml.md).  
+ Aby uzyskać pełną dyskusję na temat przetwarzania białych miejsc w języku XAML, zobacz artykuł [Przetwarzanie białych miejsc w języku XAML](whitespace-processing-in-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Znak odstępu przetwarzanie w XAML](whitespace-processing-in-xaml.md)
-- [Przegląd XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Przetwarzanie białych miejsc w języku XAML](whitespace-processing-in-xaml.md)
+- [Przegląd XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

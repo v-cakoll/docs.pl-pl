@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 5a2813b81490e7c2fcf1abcf5fd36ca89d9d7929
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933858"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424616"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameter — Tablice (Visual Basic)
 Zazwyczaj nie można wywołać procedury z więcej argumentów niż Deklaracja procedury. Jeśli potrzebujesz nieograniczonej liczby argumentów, możesz zadeklarować *tablicę parametrów*, która umożliwia procedurę akceptowania tablicy wartości dla parametru. Podczas definiowania procedury nie trzeba znać liczby elementów w tablicy parametrów. Rozmiar tablicy jest określany indywidualnie przez każde wywołanie procedury.  
@@ -34,19 +34,19 @@ Zazwyczaj nie można wywołać procedury z więcej argumentów niż Deklaracja p
 ## <a name="calling-a-paramarray"></a>Wywoływanie ParamArray  
  Po wywołaniu procedury, która definiuje tablicę parametrów, można podać argument w jednym z następujących sposobów:  
   
-- Nic — to znaczy, że można pominąć argument [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . W takim przypadku pusta tablica jest przenoszona do procedury. Możesz również przekazać słowo kluczowe [Nothing](../../../../visual-basic/language-reference/nothing.md) bez tego samego efektu.  
+- Nic — to znaczy, że można pominąć argument [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . W takim przypadku pusta tablica jest przenoszona do procedury. Jeśli jawnie przekażesz słowo kluczowe [Nothing](../../../../visual-basic/language-reference/nothing.md) , tablica o wartości null zostanie przekazana do procedury i może skutkować NullReferenceException, jeśli wywołana procedura nie sprawdza tego warunku.
   
-- Lista dowolnej liczby argumentów oddzielonych przecinkami. Typ danych każdego argumentu musi być niejawnie konwertowany na `ParamArray` typ elementu.  
+- Lista dowolnej liczby argumentów oddzielonych przecinkami. Typ danych każdego argumentu musi być niejawnie konwertowany na typ elementu `ParamArray`.  
   
 - Tablica z tym samym typem elementu co typ elementu tablicy parametrów.  
   
- We wszystkich przypadkach kod w procedurze traktuje tablicę parametrów jako tablicę jednowymiarową z elementami tego samego typu danych co `ParamArray` typ danych.  
+ We wszystkich przypadkach kod w procedurze traktuje tablicę parametrów jako tablicę jednowymiarową z elementami tego samego typu danych co typ danych `ParamArray`.  
   
 > [!IMPORTANT]
 > Za każdym razem, gdy zajmujesz się tablicą, która może być nienieskończona, istnieje ryzyko, że zachodzi taka Wewnętrzna pojemność aplikacji. Jeśli zaakceptujesz tablicę parametrów, należy sprawdzić rozmiar tablicy, do której przeszedł kod wywołujący. Wykonaj odpowiednie kroki, jeśli są zbyt duże dla aplikacji. Aby uzyskać więcej informacji, zobacz [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład definiuje i wywołuje funkcję `calcSum`. Modyfikator dla parametru `args` umożliwia funkcji akceptującej zmienną liczbę argumentów. `ParamArray`  
+ Poniższy przykład definiuje i wywołuje funkcję `calcSum`. Modyfikator `ParamArray` dla parametru `args` włącza funkcję do akceptowania zmiennej liczby argumentów.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   

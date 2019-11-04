@@ -9,23 +9,23 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9bdcfe785d6f5f81d721acd45eebb580b08b2d14
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ac2f2a33ce66813c009d475a1f7b2b27937a0c3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916075"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425160"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Sprawdzanie poprawności schematu XML (XSD) przy użyciu klasy XmlSchemaSet
-Dokumenty XML można sprawdzić pod kątem schematu języka definicji schematu XML (XSD) w <xref:System.Xml.Schema.XmlSchemaSet>.  
+Dokumenty XML można sprawdzić w oparciu o schemat języka definicji schematu XML (XSD) w <xref:System.Xml.Schema.XmlSchemaSet>.  
   
 ## <a name="validating-xml-documents"></a>Sprawdzanie poprawności dokumentów XML  
- Dokumenty XML są sprawdzane za <xref:System.Xml.XmlReader.Create%2A> pomocą metody <xref:System.Xml.XmlReader> klasy. Aby sprawdzić poprawność dokumentu XML, <xref:System.Xml.XmlReaderSettings> Utwórz obiekt, który zawiera schemat języka definicji schematu XML (XSD), za pomocą którego można sprawdzić poprawność dokumentu XML.  
+ Dokumenty XML są weryfikowane przez metodę <xref:System.Xml.XmlReader.Create%2A> klasy <xref:System.Xml.XmlReader>. Aby sprawdzić poprawność dokumentu XML, Utwórz obiekt <xref:System.Xml.XmlReaderSettings>, który zawiera schemat języka definicji schematu XML (XSD), za pomocą którego ma zostać zweryfikowany dokument XML.  
   
 > [!NOTE]
-> Przestrzeń nazw zawiera metody rozszerzające, które ułatwiają Weryfikowanie drzewa XML względem pliku XSD przy użyciu [LINQ to XMLC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). <xref:System.Xml.Schema> Aby uzyskać więcej informacji na temat sprawdzania poprawności dokumentów XML za [pomocą LINQ to XML, zobacz How to: Weryfikuj przy użyciu XSD (LINQ to XML)C#(](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) ) [i instrukcje: Sprawdź poprawność przy użyciu XSD (LINQ to XML](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)) (Visual Basic).  
+> Przestrzeń nazw <xref:System.Xml.Schema> zawiera metody rozszerzające, które ułatwiają Weryfikowanie drzewa XML względem pliku XSD przy użyciu [LINQ to XMLC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) i [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Aby uzyskać więcej informacji na temat sprawdzania poprawności dokumentów XML za pomocą LINQ to XML, zobacz [How to: Validate using XSDC#(LINQ to XML) ()](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) i [How to: Validate using XSD (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).  
   
- Pojedynczy schemat lub zestaw <xref:System.Xml.Schema.XmlSchemaSet>schematów (jako) można dodać do obiektu <xref:System.Xml.Schema.XmlSchemaSet> , przekazując jeden <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> jako <xref:System.Xml.Schema.XmlSchemaSet>parametr do metody. Należy pamiętać, że podczas walidacji dokumentu docelowa przestrzeń nazw dokumentu musi być zgodna z docelową przestrzenią nazw schematu w zestawie schematów.  
+ Pojedynczy schemat lub zestaw schematów (jako <xref:System.Xml.Schema.XmlSchemaSet>) można dodać do <xref:System.Xml.Schema.XmlSchemaSet>, przekazując jeden jako parametr do metody <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> <xref:System.Xml.Schema.XmlSchemaSet>. Należy pamiętać, że podczas walidacji dokumentu docelowa przestrzeń nazw dokumentu musi być zgodna z docelową przestrzenią nazw schematu w zestawie schematów.  
   
  Poniżej znajduje się przykładowy dokument XML.  
   
@@ -35,9 +35,9 @@ Dokumenty XML można sprawdzić pod kątem schematu języka definicji schematu X
   
  [!code-xml[XSDInference Examples#6](../../../../samples/snippets/xml/VS_Snippets_Data/XSDInference Examples/XML/contosoBooks.xsd#6)]  
   
- W poniższym przykładzie kodu schemat został dodany do <xref:System.Xml.Schema.XmlSchemaSet> <xref:System.Xml.XmlReaderSettings.Schemas%2A> właściwości <xref:System.Xml.XmlReaderSettings> obiektu. Obiekt jest przekazaniem jako parametr <xref:System.Xml.XmlReader.Create%2A> do metody <xref:System.Xml.XmlReader> obiektu, który sprawdza powyższy dokument XML. <xref:System.Xml.XmlReaderSettings>  
+ W poniższym przykładzie kodu schemat został dodany do właściwości <xref:System.Xml.Schema.XmlSchemaSet><xref:System.Xml.XmlReaderSettings.Schemas%2A> obiektu <xref:System.Xml.XmlReaderSettings>. Obiekt <xref:System.Xml.XmlReaderSettings> jest przenoszona jako parametr do metody <xref:System.Xml.XmlReader.Create%2A> obiektu <xref:System.Xml.XmlReader>, który sprawdza powyższy dokument XML.  
   
- `Schema` <xref:System.Xml.XmlReader.Create%2A> Właściwość obiektu jest ustawiona na tak, aby wymuszać walidację dokumentu XML przez metodę <xref:System.Xml.XmlReader> obiektu. <xref:System.Xml.XmlReaderSettings> <xref:System.Xml.XmlReaderSettings.ValidationType%2A> Element <xref:System.Xml.Schema.ValidationEventHandler> jest dodawany <xref:System.Xml.XmlReaderSettings> do obiektu, aby obsłużyć <xref:System.Xml.Schema.XmlSeverityType.Error> dowolne <xref:System.Xml.Schema.XmlSeverityType.Warning> lub zdarzenia zgłoszone przez błędy znalezione podczas procesu weryfikacji zarówno dokumentu XML, jak i schematu.  
+ Właściwość <xref:System.Xml.XmlReaderSettings.ValidationType%2A> obiektu <xref:System.Xml.XmlReaderSettings> jest ustawiona na `Schema` w celu wymuszenia walidacji dokumentu XML przez metodę <xref:System.Xml.XmlReader.Create%2A> obiektu <xref:System.Xml.XmlReader>. <xref:System.Xml.Schema.ValidationEventHandler> jest dodawany do obiektu <xref:System.Xml.XmlReaderSettings>, aby obsłużyć wszystkie zdarzenia <xref:System.Xml.Schema.XmlSeverityType.Warning> lub <xref:System.Xml.Schema.XmlSeverityType.Error> zgłoszone przez błędy znalezione podczas procesu weryfikacji zarówno dokumentu XML, jak i schematu.  
   
  [!code-cpp[XmlSchemaSetOverall Example#1](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaSetOverall Example/CPP/xmlschemasetexample.cpp#1)]
  [!code-csharp[XmlSchemaSetOverall Example#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaSetOverall Example/CS/xmlschemasetexample.cs#1)]

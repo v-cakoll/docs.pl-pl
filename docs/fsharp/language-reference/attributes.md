@@ -2,12 +2,12 @@
 title: Atrybuty
 description: Dowiedz F# się, jak atrybuty umożliwiają stosowanie metadanych do konstrukcji programistycznej.
 ms.date: 05/16/2016
-ms.openlocfilehash: 17822891109b8e8eaa10044f82f0b872ce9d30b5
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 223263f5789b0fc7eb2b3ef2905f6436980bd14a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736813"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424796"
 ---
 # <a name="attributes"></a>Atrybuty
 
@@ -35,11 +35,11 @@ Takie inicjalizacje właściwości mogą być w dowolnej kolejności, ale muszą
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-W tym przykładzie atrybut jest `DllImportAttribute`, w tym miejscu używanym w skróconej postaci. Pierwszy argument jest parametrem pozycyjnym, a drugi jest właściwością.
+W tym przykładzie atrybut jest `DllImportAttribute`w tym miejscu używany w skróconej postaci. Pierwszy argument jest parametrem pozycyjnym, a drugi jest właściwością.
 
 Atrybuty to konstrukcja programistyczna platformy .NET, która umożliwia obiektowi znanemu jako *atrybut* , który ma być skojarzony z typem lub innym elementem programu. Element programu, do którego zastosowano atrybut, jest określany jako *element docelowy atrybutu*. Ten atrybut zwykle zawiera metadane dotyczące jego obiektu docelowego. W tym kontekście metadane mogą zawierać dowolne dane dotyczące typu innego niż jego pola i elementy członkowskie.
 
-Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól parametry, parametry typu i wartości zwracane. Atrybuty są niedozwolone w powiązaniach `let` w klasach, wyrażeniach lub wyrażeniach przepływu pracy.
+Atrybuty w F# programie można stosować do następujących konstrukcji programistycznych: funkcji, metod, zestawów, modułów, typów (klas, rekordów, struktur, interfejsów, delegatów, wyliczeń, Unii itd.), konstruktorów, właściwości, pól parametry, parametry typu i wartości zwracane. Atrybuty nie są dozwolone dla powiązań `let` wewnątrz klas, wyrażeń ani wyrażeń przepływu pracy.
 
 Zwykle deklaracja atrybutu pojawia się bezpośrednio przed deklaracją obiektu docelowego atrybutu. Deklaracje wielu atrybutów mogą być używane razem w następujący sposób:
 
@@ -55,46 +55,46 @@ Zazwyczaj napotkane atrybuty obejmują atrybut `Obsolete`, atrybuty dla zagadnie
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Dla atrybutu targets `assembly` i `module` należy zastosować atrybuty do powiązania `do` najwyższego poziomu w zestawie. W deklaracji atrybutu można uwzględnić słowo `assembly` lub `module` w następujący sposób:
+Dla atrybutu targets `assembly` i `module`należy zastosować atrybuty do powiązania `do` najwyższego poziomu w zestawie. W deklaracji atrybutu można uwzględnić słowo `assembly` lub `module` w następujący sposób:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Jeśli pominięto element docelowy atrybutu dla atrybutu zastosowanego do powiązania `do`, F# kompilator próbuje określić obiekt docelowy atrybutu, który ma sens dla tego atrybutu. Wiele klas atrybutów ma atrybut typu `System.AttributeUsageAttribute`, który zawiera informacje o możliwych celach obsługiwanych przez ten atrybut. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje funkcje jako elementy docelowe, atrybut jest stosowany do głównego punktu wejścia programu. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje zestawy jako elementy docelowe, kompilator Pobiera atrybut, który ma zostać zastosowany do zestawu. Większość atrybutów nie ma zastosowania do obu funkcji i zestawów, ale w przypadkach, w których są one wykonywane, atrybut jest stosowany do funkcji Main programu. Jeśli obiekt docelowy atrybutu jest jawnie określony, atrybut jest stosowany do określonego celu.
+Jeśli pominięto element docelowy atrybutu dla atrybutu zastosowanego do powiązania `do`, F# kompilator próbuje określić obiekt docelowy atrybutu, który jest zrozumiały dla tego atrybutu. Wiele klas atrybutów ma atrybut typu `System.AttributeUsageAttribute`, który zawiera informacje o możliwych celach obsługiwanych przez ten atrybut. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje funkcje jako elementy docelowe, atrybut jest stosowany do głównego punktu wejścia programu. Jeśli `System.AttributeUsageAttribute` wskazuje, że atrybut obsługuje zestawy jako elementy docelowe, kompilator Pobiera atrybut, który ma zostać zastosowany do zestawu. Większość atrybutów nie ma zastosowania do obu funkcji i zestawów, ale w przypadkach, w których są one wykonywane, atrybut jest stosowany do funkcji Main programu. Jeśli obiekt docelowy atrybutu jest jawnie określony, atrybut jest stosowany do określonego celu.
 
 Mimo że zwykle nie trzeba określać obiektu docelowego atrybutu, prawidłowe wartości dla *elementu docelowego* w atrybucie oraz przykłady użycia przedstawiono w poniższej tabeli:
 
 <table>
   <tr>
     <th>Obiekt docelowy atrybutu</td>
-    <th>Przykład</td> 
+    <th>Przykład</td>
   </tr>
   <tr>
     <td>zestaw</td>
-    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;assembly: AssemblyVersionAttribute("1.0.0.0")&gt;]</code></pre></td>
   </tr>
   <tr>
     <td>return</td>
-    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td> 
+    <td><pre lang="fsharp"><code>let function1 x : [&lt;return: Obsolete&gt;] int = x + 1</code></pre></td>
   </tr>
   <tr>
     <td>pole</td>
-    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;field: DefaultValue&gt;] val mutable x: int</code></pre></td>
   </tr>
   <tr>
     <td>property</td>
-    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td> 
+    <td><pre lang="fsharp"><code>[&lt;property: Obsolete&gt;] this.MyProperty = x</code></pre></td>
   </tr>
   <tr>
     <td>Param</td>
-    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td> 
+    <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10</code></pre></td>
   </tr>
   <tr>
     <td>— typ</td>
     <td>
         <pre lang="fsharp"><code>
-[&lt;type: StructLayout(Sequential)&gt;] 
-type MyStruct = 
-struct 
+[&lt;type: StructLayout(Sequential)&gt;]
+type MyStruct =
+struct
 x : byte
 y : int
 end</code></pre>

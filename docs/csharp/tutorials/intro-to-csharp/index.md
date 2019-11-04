@@ -3,16 +3,18 @@ title: Wprowadzenie do C# interaktywnych samouczków
 description: Zapoznaj się C# z przeglądarką i Rozpocznij pracę z własnym środowiskiem programistycznym
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850765"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423101"
 ---
-# <a name="introduction-to-c"></a>Wprowadzenie do języka C\#
+# <a name="introduction-to-c"></a>Wprowadzenie do\# C
 
-Zapraszamy do wprowadzenia do C# samouczków. Rozpoczynają się one od interaktywnych lekcji, które można uruchomić w przeglądarce.
+Zapraszamy do wprowadzenia do C# samouczków. Rozpoczynają się one od interaktywnych lekcji, które można uruchomić w przeglądarce. Przed rozpoczęciem tych interaktywnych lekcji C# możesz poznać podstawy z [ C# serii wideo 101](https://aka.ms/dotnet3-csharp) .
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 Pierwsze lekcje objaśniają C# koncepcje dotyczące korzystania z małych fragmentów kodu. Poznasz podstawy C# składni i sposób pracy z typami danych, takimi jak ciągi, liczby i wartości logiczne. Jest to wszystko interaktywne, a ty będziesz pisać i uruchamiać kod w ciągu kilku minut. W tych pierwszej lekcji nie założono wcześniej znajomości programowania lub C# języka.
 
@@ -20,7 +22,7 @@ Wszystkie samouczki wprowadzające po lekcji Hello world są dostępne przy uży
 
 ## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
 
-W samouczku [Hello World](hello-world.yml) utworzysz najbardziej podstawowy C# program. Poznasz `string` typ i sposób pracy z tekstem.
+W samouczku [Hello World](hello-world.yml) utworzysz najbardziej podstawowy C# program. Poznasz typ `string` i sposób pracy z tekstem.
 
 ## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Liczby w języku C#](numbers-in-csharp.yml)
 

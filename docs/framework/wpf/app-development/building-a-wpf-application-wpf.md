@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197788"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424433"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 
@@ -136,13 +136,13 @@ Podstawowy krok kompilowania obejmuje kompilację plików kodu. Jest on zorganiz
 
 Na końcu procesu kompilacji, gdy wszystkie zestawy aplikacji i pliki zawartości są gotowe, są generowane manifesty ClickOnce dla aplikacji.
 
-Plik manifestu wdrożenia opisuje model wdrażania: bieżącą wersję, zachowanie aktualizacji i tożsamość wydawcy wraz z podpisem cyfrowym. Ten manifest jest przeznaczony dla administratorów, którzy obsługują wdrażanie. Rozszerzenie pliku to. XBAP (dla [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) i. aplikacja dla zainstalowanych aplikacji. Była to podyktowana przez właściwość projektu `HostInBrowser`, a w efekcie manifest identyfikuje aplikację jako obsługiwaną przez przeglądarkę.
+Plik manifestu wdrożenia opisuje model wdrażania: bieżącą wersję, zachowanie aktualizacji i tożsamość wydawcy wraz z podpisem cyfrowym. Ten manifest jest przeznaczony dla administratorów, którzy obsługują wdrażanie. Rozszerzenie pliku to. XBAP (dla aplikacji przeglądarki XAML (XBAP)) i aplikacji zainstalowanych aplikacji. Była to podyktowana przez właściwość projektu `HostInBrowser`, a w efekcie manifest identyfikuje aplikację jako obsługiwaną przez przeglądarkę.
 
 Manifest aplikacji (plik. exe. manifest) opisuje zestawy aplikacji i biblioteki zależne oraz listę uprawnień wymaganych przez aplikację. Ten plik jest przeznaczony dla deweloperów aplikacji. Aby można było uruchomić aplikację ClickOnce, użytkownik otwiera plik manifestu wdrażania aplikacji.
 
-Te pliki manifestu są zawsze tworzone dla [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. W przypadku zainstalowanych aplikacji nie są one tworzone, o ile Właściwość `GenerateManifests` nie zostanie określona w pliku projektu z wartością `true`.
+Te pliki manifestu są zawsze tworzone dla aplikacji XBAP. W przypadku zainstalowanych aplikacji nie są one tworzone, o ile Właściwość `GenerateManifests` nie zostanie określona w pliku projektu z wartością `true`.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] Uzyskaj dwa dodatkowe uprawnienia przed i powyżej tych uprawnień przypisanych do typowych aplikacji strefy internetowej: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. System kompilacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] deklaruje te uprawnienia w manifeście aplikacji.
+Aplikacje XBAP uzyskują dwa dodatkowe uprawnienia powyżej i powyżej tych uprawnień przypisanych do typowych aplikacji strefy internetowej: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. System kompilacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] deklaruje te uprawnienia w manifeście aplikacji.
 
 <a name="Incremental_Build_Support"></a>
 

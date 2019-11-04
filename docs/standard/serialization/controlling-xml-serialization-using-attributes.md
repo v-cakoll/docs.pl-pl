@@ -15,21 +15,21 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e089924900196ae369de1becfe3d0b8f0a00b79c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934512"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459275"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Kontrolowanie serializacji XML przy użyciu atrybutów
 
-Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny strumień XML z tego samego zestawu klas. Aby uzyskać więcej informacji na temat tworzenia alternatywne strumień XML, zobacz [jak: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
+Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny strumień XML z tego samego zestawu klas. Aby uzyskać więcej informacji na temat tworzenia alternatywnego strumienia XML, zobacz [How to: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md).
 
 > [!NOTE]
-> Jeśli wygenerowany kod XML musi być zgodna z części 5 dokumentu World Wide Web Consortium (W3C) [proste obiektu dostępu protokołu (protokołu SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), użyj atrybutów na liście [atrybuty czy kontroli kodowany protokołu SOAP Serializacja](attributes-that-control-encoded-soap-serialization.md).
+> Jeśli wygenerowany kod XML musi być zgodny z sekcją 5 dokumentu organizacja World Wide Web Consortium (W3C) zatytułowanego [Simple Object Access Protocol (SOAP) 1,1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/), użyj atrybutów wymienionych w [atrybutach, które kontrolują zaszyfrowane serializacji SOAP](attributes-that-control-encoded-soap-serialization.md).
 
-Domyślnie nazwa elementu XML jest określana przez nazwę klasy lub składowej. W klasie proste o nazwie `Book`, pole o nazwie `ISBN` dadzą tag elementu XML \<ISBN >, jak pokazano w poniższym przykładzie.
+Domyślnie nazwa elementu XML jest określana przez nazwę klasy lub składowej. W prostej klasie o nazwie `Book`pole o nazwie `ISBN` generuje tag elementu XML \<ISBN >, jak pokazano w poniższym przykładzie.
 
 ```vb
 Public Class Book
@@ -66,13 +66,13 @@ public class TaxRates {
 }
 ```
 
-Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../docs/standard/attributes/index.md). Aby uzyskać listę atrybutów, które kontrolują serializacji XML, zobacz [atrybutów, sterowania serializacji XML](attributes-that-control-xml-serialization.md).
+Aby uzyskać więcej informacji na temat atrybutów, zobacz [atrybuty](../../../docs/standard/attributes/index.md). Aby zapoznać się z listą atrybutów kontrolujących serializacji XML, zobacz atrybuty kontrolujące [serializacji XML](attributes-that-control-xml-serialization.md).
 
 ## <a name="controlling-array-serialization"></a>Kontrolowanie serializacji tablicy
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> i <xref:System.Xml.Serialization.XmlArrayItemAttribute> atrybuty są przeznaczone do sterowania serializacji tablic. Korzystając z tych atrybutów, można kontrolować nazwy elementu, nazw i typ danych schematu XML (XSD) (zgodnie z definicją w dokumencie World Wide Web Consortium [www.w3.org] zatytułowany "XML schematu część 2: Typy danych"). Można również określić typy, które mogły zostać uwzględnione w tablicy.
+<xref:System.Xml.Serialization.XmlArrayAttribute> i <xref:System.Xml.Serialization.XmlArrayItemAttribute> atrybuty są przeznaczone do sterowania serializacji tablic. Przy użyciu tych atrybutów, można kontrolować nazwy elementu, nazw i typ danych schematu XML (XSD) (zgodnie z definicją w dokumencie World Wide Web Consortium [www.w3.org] zatytułowany "XML schematu część 2: typy danych"). Można również określić typy, które mogły zostać uwzględnione w tablicy.
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> Ustali właściwości otaczającego element XML, który powstaje wtedy, gdy jest serializowana tablicy. Na przykład domyślnie serializację tablicy poniżej spowoduje element XML o nazwie `Employees`. `Employees` Element będzie zawierać szereg elementów o nazwie po typ tablicy `Employee`.
+<xref:System.Xml.Serialization.XmlArrayAttribute> Ustali właściwości otaczającego element XML, który powstaje wtedy, gdy jest serializowana tablicy. Na przykład domyślnie Serializowanie tablicy poniżej spowoduje, że element XML o nazwie `Employees`. `Employees` Element będzie zawierać szereg elementów o nazwie po typ tablicy `Employee`.
 
 ```vb
 Public Class Group
@@ -104,7 +104,7 @@ Zserializowany wystąpienie może wyglądać w następujący sposób.
 </Group>
 ```
 
-Stosując <xref:System.Xml.Serialization.XmlArrayAttribute>, nazwa elementu XML, można zmienić w następujący sposób.
+Stosując <xref:System.Xml.Serialization.XmlArrayAttribute>, można zmienić nazwę elementu XML w następujący sposób.
 
 ```vb
 Public Class Group
@@ -132,7 +132,7 @@ Wynikowy kod XML może wyglądać w następujący sposób.
 </Group>
 ```
 
-<xref:System.Xml.Serialization.XmlArrayItemAttribute>, Z drugiej strony, określa, jak są serializacji elementów znajdujących się w tablicy. Należy pamiętać, że jest stosowany do pola zwrócenie wartości tablicy.
+<xref:System.Xml.Serialization.XmlArrayItemAttribute>, Z drugiej strony, określa, jak są serializacji elementów znajdujących się w tablicy. Należy zauważyć, że atrybut jest stosowany do pola zwracającego tablicę.
 
 ```vb
 Public Class Group
@@ -160,7 +160,7 @@ Wynikowy kod XML może wyglądać w następujący sposób.
 
 ## <a name="serializing-derived-classes"></a>Klasy pochodne serializacji
 
-Używanie innego <xref:System.Xml.Serialization.XmlArrayItemAttribute> jest umożliwienie serializacji w klasach pochodnych. Na przykład inną klasę o nazwie `Manager` który pochodzi od klasy `Employee` mogą być dodawane do poprzedniego przykładu. Jeśli nie zastosujesz <xref:System.Xml.Serialization.XmlArrayItemAttribute>, kod będzie działać w czasie wykonywania, ponieważ nie zostanie rozpoznany typ klasy pochodnej. Aby rozwiązać ten problem, zastosuj atrybut dwa razy, każde ustawienie czasu <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> właściwości dla każdego typu dopuszczalnych (podstawową i pochodnej).
+Używanie innego <xref:System.Xml.Serialization.XmlArrayItemAttribute> jest umożliwienie serializacji w klasach pochodnych. Na przykład inną klasę o nazwie `Manager`, która pochodzi od `Employee`, można dodać do poprzedniego przykładu. Jeśli nie zastosujesz <xref:System.Xml.Serialization.XmlArrayItemAttribute>, kod zakończy się niepowodzeniem w czasie wykonywania, ponieważ typ klasy pochodnej nie zostanie rozpoznany. Aby rozwiązać ten stan, zastosuj atrybut dwa razy, za każdym razem, gdy właściwość <xref:System.Xml.Serialization.XmlArrayItemAttribute.Type%2A> dla każdego akceptowalnego typu (podstawowa i pochodna).
 
 ```vb
 Public Class Group
@@ -202,14 +202,14 @@ Zserializowany wystąpienie może wyglądać w następujący sposób.
     <Employee xsi:type = "Manager">
         <Name>Ann</Name>
         <Level>3</Level>
-    <Employee>
+    </Employee>
 </Employees>
 </Group>
 ```
 
 ## <a name="serializing-an-array-as-a-sequence-of-elements"></a>Szeregowanie tablicę jako sekwencję elementów
 
-Tablica może serializować jako prosty sekwencję elementów XML, stosując <xref:System.Xml.Serialization.XmlElementAttribute> do pola zwrócenie wartości tablicy w następujący sposób.
+Możesz również serializować tablicę jako płaską sekwencję elementów XML, stosując <xref:System.Xml.Serialization.XmlElementAttribute> do pola zwracającego tablicę w następujący sposób.
 
 ```vb
 Public Class Group
@@ -241,13 +241,13 @@ Zserializowany wystąpienie może wyglądać w następujący sposób.
 </Group>
 ```
 
-W inny sposób do odróżniania dwóch strumieni XML jest do generowania PLików dokumentów schematu XML (XSD) z skompilowany kod za pomocą narzędzia definicji schematu XML. (Aby uzyskać więcej informacji na temat korzystania z narzędzia, zobacz [narzędzie definicji schematu XML i serializacja XML](the-xml-schema-definition-tool-and-xml-serialization.md).) Gdy atrybut nie jest stosowane do pola, schemat opisuje elementu w następujący sposób.
+W inny sposób do odróżniania dwóch strumieni XML jest do generowania PLików dokumentów schematu XML (XSD) z skompilowany kod za pomocą narzędzia definicji schematu XML. (Aby uzyskać więcej informacji na temat korzystania z tego narzędzia, zobacz [narzędzie definicji schematu XML i SERIALIZACJA XML](the-xml-schema-definition-tool-and-xml-serialization.md)). Gdy żaden atrybut nie jest stosowany do pola, schemat opisuje element w następujący sposób.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
 ```
 
-Gdy <xref:System.Xml.Serialization.XmlElementAttribute> jest stosowany do pola, wynikowe schemat opisuje elementu w następujący sposób.
+Gdy <xref:System.Xml.Serialization.XmlElementAttribute> zostanie zastosowana do pola, powstaje schemat opisuje element w następujący sposób.
 
 ```xml
 <xs:element minOccurs="0" maxOccurs="unbounded" name="Employees" type="Employee" /> 
@@ -255,7 +255,7 @@ Gdy <xref:System.Xml.Serialization.XmlElementAttribute> jest stosowany do pola, 
 
 ## <a name="serializing-an-arraylist"></a>Serializacji ArrayList
 
-<xref:System.Collections.ArrayList> Klasy może zawierać kolekcji różnych obiektów. Korzystając z tego powodu <xref:System.Collections.ArrayList> , ile skorzystaj z tablicy. Używaj pola, która zwraca tablicę obiektów określonego typu, jednak można utworzyć pole, które zwraca pojedynczą <xref:System.Collections.ArrayList>. Jednak, podobnie jak w przypadku tablic, musi powiadomić <xref:System.Xml.Serialization.XmlSerializer> typów obiektów <xref:System.Collections.ArrayList> zawiera. W tym celu należy przypisać wiele wystąpień <xref:System.Xml.Serialization.XmlElementAttribute> do pola, jak pokazano w poniższym przykładzie.
+<xref:System.Collections.ArrayList> Klasy może zawierać kolekcji różnych obiektów. Korzystając z tego powodu <xref:System.Collections.ArrayList> , ile skorzystaj z tablicy. Używaj pola, która zwraca tablicę obiektów określonego typu, jednak można utworzyć pole, które zwraca pojedynczą <xref:System.Collections.ArrayList>. Jednak, podobnie jak w przypadku tablic, musi powiadomić <xref:System.Xml.Serialization.XmlSerializer> typów obiektów <xref:System.Collections.ArrayList> zawiera. Aby to osiągnąć, przypisz do pola wiele wystąpień <xref:System.Xml.Serialization.XmlElementAttribute>, jak pokazano w poniższym przykładzie.
 
 ```vb
 Public Class Group
@@ -275,11 +275,11 @@ public class Group {
 
 ## <a name="controlling-serialization-of-classes-using-xmlrootattribute-and-xmltypeattribute"></a>Kontrolowanie serializacji klas przy użyciu XmlRootAttribute i XmlTypeAttribute
 
-Istnieją dwa atrybuty, które mogą być stosowane do klasy (i tylko klasę): <xref:System.Xml.Serialization.XmlRootAttribute> i <xref:System.Xml.Serialization.XmlTypeAttribute>. Te atrybuty są bardzo podobne. <xref:System.Xml.Serialization.XmlRootAttribute> Można zastosować do tylko jednej klasy: klasy, że po serializacji, reprezentuje dokumentu XML na otwieranie i zamykanie elementu — innymi słowy, element główny. <xref:System.Xml.Serialization.XmlTypeAttribute>, Z drugiej strony, można zastosować do każdej klasy, łącznie z klasy głównego.
+Istnieją dwa atrybuty, które można zastosować do klasy (i tylko klasy): <xref:System.Xml.Serialization.XmlRootAttribute> i <xref:System.Xml.Serialization.XmlTypeAttribute>. Te atrybuty są bardzo podobne. <xref:System.Xml.Serialization.XmlRootAttribute> można stosować tylko do jednej klasy: Klasa, która, gdy jest serializowana, reprezentuje element otwierający i zamykający dokumentu XML — innymi słowy, element główny. <xref:System.Xml.Serialization.XmlTypeAttribute>, z drugiej strony, można zastosować do dowolnej klasy, łącznie z klasą główną.
 
-Na przykład w poprzednich przykładach `Group` klasy jest klasą głównego i wszystkich jego publiczny pola i właściwości stają się elementy XML znalezione w dokumencie XML. Dlatego może być tylko jeden katalog główny klasy. Stosując <xref:System.Xml.Serialization.XmlRootAttribute>, można kontrolować strumień XML generowanych przez <xref:System.Xml.Serialization.XmlSerializer>. Na przykład można zmienić nazwy elementu i przestrzeni nazw.
+Na przykład w poprzednich przykładach Klasa `Group` jest klasą główną, a wszystkie jej pola publiczne i właściwości stają się elementami XML, które znajdują się w dokumencie XML. Dlatego może być tylko jeden katalog główny klasy. Stosując <xref:System.Xml.Serialization.XmlRootAttribute>, można kontrolować strumień XML generowany przez <xref:System.Xml.Serialization.XmlSerializer>. Można na przykład zmienić nazwę elementu i przestrzeń nazw.
 
-<xref:System.Xml.Serialization.XmlTypeAttribute> Umożliwia sterowanie schemat wygenerowanego kodu XML. Ta funkcja jest przydatne, gdy należy opublikować schematu za pomocą usługi sieci Web XML. Następujący przykład dotyczy zarówno <xref:System.Xml.Serialization.XmlTypeAttribute> i <xref:System.Xml.Serialization.XmlRootAttribute> do tej samej klasy.
+<xref:System.Xml.Serialization.XmlTypeAttribute> Umożliwia sterowanie schemat wygenerowanego kodu XML. Ta funkcja jest przydatne, gdy należy opublikować schematu za pomocą usługi sieci Web XML. Poniższy przykład stosuje zarówno <xref:System.Xml.Serialization.XmlTypeAttribute>, jak i <xref:System.Xml.Serialization.XmlRootAttribute> do tej samej klasy.
 
 ```vb
 <XmlRoot("NewGroupName"), _
@@ -313,7 +313,7 @@ Z drugiej strony, jeśli zostały do serializacji wystąpienia klasy, tylko `New
 
 ## <a name="preventing-serialization-with-the-xmlignoreattribute"></a>Zapobieganie serializacji z XmlIgnoreAttribute
 
-Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne serializacji. Na przykład pole lub właściwość może służyć do zawiera metadanych. W takiej sytuacji należy zastosować <xref:System.Xml.Serialization.XmlIgnoreAttribute> pola lub właściwości i <xref:System.Xml.Serialization.XmlSerializer> pozwoli na pominięcie nad nim.
+Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne serializacji. Na przykład pole lub właściwość może służyć do przechowywania metadanych. W takich przypadkach należy zastosować <xref:System.Xml.Serialization.XmlIgnoreAttribute> do pola lub właściwości, a <xref:System.Xml.Serialization.XmlSerializer> zostanie on pominięty.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -321,6 +321,6 @@ Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne
 - [Atrybuty kontrolujące zakodowaną serializację SOAP](attributes-that-control-encoded-soap-serialization.md)
 - [Wprowadzenie do serializacji XML](introducing-xml-serialization.md)
 - [Przykłady serializacji XML](examples-of-xml-serialization.md)
-- [Instrukcje: Określ nazwę elementu alternatywny Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [Instrukcje: Serializacja obiektu](how-to-serialize-an-object.md)
-- [Instrukcje: Deserializacji obiektu](how-to-deserialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](how-to-deserialize-an-object.md)

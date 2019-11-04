@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MultipleView control pattern
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
-ms.openlocfilehash: edef213c0f4d43a15b7c6842ef6c62e95544da66
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 62f0ba1dc8b7836a3b4699699b91b567eb8051f3
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039496"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458190"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>Implementacja wzorca kontrolki MultipleView dla automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "73039496"
   
  <xref:System.Windows.Automation.MultipleViewPattern> wzorzec kontroli służy do obsługi kontrolek, które zapewniają i mogą przełączać się między wieloma reprezentacjami tego samego zestawu informacji lub formantów podrzędnych.  
   
- Przykłady formantów, które mogą przedstawić wiele widoków, obejmują widok listy (który może wyświetlać jego zawartość jako miniatury, kafelki, ikony lub szczegóły), [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] wykresy (kołowy, liniowy, słupkowy, wartość komórki z formułą), [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] dokumenty (normalne, układ sieci Web, układ wydruku, układ do czytania, konspekt), Microsoft Outlook Calendar (Year, month, Week, Day) i Microsoft Windows Media Player Skins. Obsługiwane widoki są określane przez dewelopera kontroli i są specyficzne dla każdej kontrolki.  
+ Przykłady formantów, które mogą przedstawić wiele widoków, obejmują widok listy (który może wyświetlać jego zawartość jako miniatury, kafelki, ikony lub szczegóły), wykresy programu Microsoft Excel (kołowy, liniowy, słupkowy, wartość komórki z formułą), dokumenty programu Microsoft Word (normalne, układ sieci Web, drukowanie układ, układ do czytania, konspekt), Microsoft Outlook Calendar (Year, month, Week, Day) i Microsoft Windows Media Player Skins. Obsługiwane widoki są określane przez dewelopera kontroli i są specyficzne dla każdej kontrolki.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  

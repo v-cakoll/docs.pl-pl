@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774465"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425242"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Samouczek: Tworzenie zalecenia dotyczącego filmu przy użyciu factorizaton macierzy z ML.NET
 
@@ -73,17 +73,17 @@ Istnieje kilka sposobów podejścia do problemów z zaleceniami, takich jak zale
 
 2. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy każdy z plików \*. csv i wybierz polecenie **Właściwości**. W obszarze **Zaawansowane**Zmień wartość opcji **Kopiuj do katalogu wyjściowego** na Kopiuj, **jeśli nowszy**.
 
-   ![Kopiuj, jeśli nowszy w programie VS](./media/movie-recommendation/copytoout.gif)
+   ![GIF użytkownika wybranie opcji Kopiuj, jeśli nowszy w programie VS.](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Ładowanie danych
 
 Pierwszym krokiem w procesie ML.NET jest przygotowanie i załadowanie modelu szkolenia i testowanie danych.
 
-Dane klasyfikacji zalecenia są podzielone na `Train` i `Test` zestawy danych. @No__t_0 dane są używane do dopasowania do modelu. @No__t_0 dane są używane do prognozowania z modelem szkolonym i oceny wydajności modelu. Typowym przykładem jest podział 80/20 z `Train` i `Test` danych.
+Dane klasyfikacji zalecenia są podzielone na `Train` i `Test` zestawy danych. `Train` dane są używane do dopasowania do modelu. `Test` dane są używane do prognozowania z modelem szkolonym i oceny wydajności modelu. Typowym przykładem jest podział 80/20 z `Train` i `Test` danych.
 
 Poniżej znajduje się podgląd danych z plików \*. CSV:
 
-![Podgląd danych](./media/movie-recommendation/csv-dataset-preview.png)
+![Zrzut ekranu przedstawiający Podgląd zestawu danych CVS.](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 W plikach \*. csv znajdują się cztery kolumny:
 
@@ -129,7 +129,7 @@ Utwórz klasę o nazwie `MovieRating`, usuwając istniejącą definicję klasy i
 
 [!code-csharp[MovieRatingClass](~/samples/machine-learning/tutorials/MovieRecommendation/MovieRatingData.cs#MovieRatingClass "Add the Movie Rating class")]
 
-`MovieRating` określa klasę danych wejściowych. Atrybut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) określa, które kolumny (według indeksu kolumn) w zestawie danych powinny zostać załadowane. @No__t_0 i `movieId` kolumny są `Features` (dane wejściowe będą nadawać modelowi przewidywalność `Label`), a kolumna Ocena to `Label`, który będzie przewidywalna (dane wyjściowe modelu).
+`MovieRating` określa klasę danych wejściowych. Atrybut [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) określa, które kolumny (według indeksu kolumn) w zestawie danych powinny zostać załadowane. `userId` i `movieId` kolumny są `Features` (dane wejściowe będą nadawać modelowi przewidywalność `Label`), a kolumna Ocena to `Label`, który będzie przewidywalna (dane wyjściowe modelu).
 
 Utwórz kolejną klasę `MovieRatingPrediction`, aby reprezentować przewidywane wyniki, dodając następujący kod po klasie `MovieRating` w *MovieRatingData.cs*:
 
@@ -171,11 +171,11 @@ Istnieją trzy główne koncepcje w ML.NET: [Data](../resources/glossary.md#data
 
 Algorytmy szkoleniowe dotyczące uczenia maszynowego wymagają danych w określonym formacie. `Transformers` są używane do przekształcania danych tabelarycznych w zgodny format.
 
-![obraz transformatora](./media/movie-recommendation/transformer.png)
+![Diagram przepływu danych transformatora.](./media/movie-recommendation/data-transformer-transformed.png)
 
 Tworzysz `Transformers` w ML.NET, tworząc `Estimators`. `Estimators` wykonać dane i zwrócić `Transformers`.
 
-![obraz szacowania](./media/movie-recommendation/estimator.png)
+![Diagram szacowania przepływu danych.](./media/movie-recommendation/data-estimator-transformer.png)
 
 Algorytm szkolenia rekomendacji, który będzie używany do uczenia modelu, jest przykładem `Estimator`.
 
@@ -220,7 +220,7 @@ Na przykład jeśli użytkownik 1 i użytkownik 2 oceniają szybkość filmów w
 | Użytkownik 1 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Film obserwowany i Niemnie |
 | Użytkownik 2 | Film obserwowany i Niemnie | Film obserwowany i Niemnie | Nie został obserwowany — ZALECAnym filmem |
 
-@No__t_0 Trainer ma kilka [opcji](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), które można dowiedzieć się więcej na temat w sekcji Moje [parametry algorytmu](#algorithm-hyperparameters) poniżej.
+`Matrix Factorization` Trainer ma kilka [opcji](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), które można dowiedzieć się więcej na temat w sekcji Moje [parametry algorytmu](#algorithm-hyperparameters) poniżej.
 
 Dopasuj model do danych `Train` i zwróć przeszkolony model, dodając następujący kod jako następny wiersz kodu w metodzie `BuildAndTrainModel()`:
 
@@ -297,7 +297,7 @@ RSquared: 0.412556298844873
 
 W tych danych wyjściowych występuje 20 iteracji. W każdej iteracji miara błędów jest zmniejszana i zbieżna bliżej i bliższa 0.
 
-@No__t_0 (RMS lub RMSE) służy do mierzenia różnic między wartościami przewidywanymi przez model i wartościami obserwowanymi testów zestawu danych. Jest to technicznie pierwiastek kwadratowy średniej kwadratów błędów. Im niższa wartość, tym lepszy jest model.
+`root of mean squared error` (RMS lub RMSE) służy do mierzenia różnic między wartościami przewidywanymi przez model i wartościami obserwowanymi testów zestawu danych. Jest to technicznie pierwiastek kwadratowy średniej kwadratów błędów. Im niższa wartość, tym lepszy jest model.
 
 `R Squared` wskazuje, jak dobre dane pasują do modelu. Zakresy z zakresu od 0 do 1. Wartość 0 oznacza, że dane są losowo lub w przeciwnym razie nie można dopasować do modelu. Wartość 1 oznacza, że model dokładnie pasuje do danych. Chcesz, aby wynik `R Squared` był możliwie blisko 1, jak to możliwe.
 

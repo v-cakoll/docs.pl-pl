@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 1a3c23a70bc7dc519c824426f8939cb15e87a7fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128055"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455595"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Zgodność wersji w .NET Framework
 
@@ -49,7 +49,7 @@ W tym celu zgodność może być uszkodzona przez pozornie zmiany w .NET Framewo
 
 Jeśli aplikacja lub składnik nie działa zgodnie z oczekiwaniami w .NET Framework 4,5 (łącznie z wersjami punktów, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 lub 4,8), użyj następujących list kontrolnych:
 
-- Jeśli aplikacja została opracowana tak, aby była uruchamiana w dowolnej wersji .NET Framework począwszy od .NET Framework 4,0, zobacz [zgodność aplikacji w .NET Framework](application-compatibility.md) , aby generować listy zmian między dodaną wersją .NET Framework i wersją, w której Twoja aplikacja jest uruchomiona.
+- Jeśli aplikacja została opracowana tak, aby była uruchamiana w dowolnej wersji .NET Framework począwszy od .NET Framework 4,0, zobacz [zgodność aplikacji](application-compatibility.md) , aby wygenerować listy zmian między dodaną wersją .NET Framework i wersją, w której uruchomiona jest aplikacja.
 
 - Jeśli masz aplikację .NET Framework 3,5, zobacz również problemy z [migracją .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 

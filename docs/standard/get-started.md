@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 05/01/2017
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 5c162258d6d365da8c6048590eb4c5eec6162973
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ac9ad7e3730f8c430d42c4c8c8b63ab3d9cd091f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70799305"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423824"
 ---
 # <a name="get-started"></a>Rozpocznij
 
@@ -21,7 +21,7 @@ Istnieje kilka sposobów na rozpoczęcie pracy z platformą .NET. Ponieważ plat
 
 * Wprowadzenie artykuły i [ C# samouczki](../csharp/tutorials/index.md) zapewniają kilka sposobów na rozpoczęcie pracy w C#sposób skoncentrowany. [ C# ](../csharp/getting-started/index.md)
 
-* Samouczki [ F# wprowadzenie](../fsharp/tutorials/getting-started/index.md) zawierają trzy podstawowe metody, których można F#użyć: z programem Visual Studio, Visual Studio Code lub narzędziami wiersza polecenia.
+* Samouczki [ F# wprowadzenie](../fsharp/get-started/index.md) zawierają trzy podstawowe metody, których można F#użyć: z programem Visual Studio, Visual Studio Code lub narzędziami wiersza polecenia.
 
 * Artykuły [Wprowadzenie Visual Basic](../visual-basic/getting-started/index.md) zawierają przewodniki dotyczące korzystania z Visual Basic w programie Visual Studio.
 

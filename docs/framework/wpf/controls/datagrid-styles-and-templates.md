@@ -9,165 +9,165 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: dacc1222958ab05971c9681d33a0c431b72d0531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912291"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460393"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid — Style i szablony
-W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DataGrid> kontroli. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> zapewnienie unikatowego wyglądu kontrolki. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.DataGrid>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="datagrid-parts"></a>Części DataGrid  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.DataGrid> kontroli.  
+## <a name="datagrid-parts"></a>DataGrid — części  
+ W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.DataGrid>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
-|PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Wiersz, który zawiera nagłówki kolumn.|  
+|PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|Wiersz zawierający nagłówki kolumn.|  
   
- Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DataGrid>, szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w ramach <xref:System.Windows.Controls.ScrollViewer>. ( <xref:System.Windows.Controls.ItemsPresenter> Wyświetla każdy element na <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednie podrzędne <xref:System.Windows.Controls.ScrollViewer>, należy podać <xref:System.Windows.Controls.ItemsPresenter> nazwę, `ItemsPresenter`.  
+ Po utworzeniu <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DataGrid>szablon może zawierać <xref:System.Windows.Controls.ItemsPresenter> w <xref:System.Windows.Controls.ScrollViewer>. (<xref:System.Windows.Controls.ItemsPresenter> wyświetla każdy element w <xref:System.Windows.Controls.DataGrid>; <xref:System.Windows.Controls.ScrollViewer> umożliwia przewijanie w kontrolce).  Jeśli <xref:System.Windows.Controls.ItemsPresenter> nie jest bezpośrednim elementem podrzędnym <xref:System.Windows.Controls.ScrollViewer>, należy nadać <xref:System.Windows.Controls.ItemsPresenter> nazwę `ItemsPresenter`.  
   
- Domyślny szablon dla <xref:System.Windows.Controls.DataGrid> zawiera <xref:System.Windows.Controls.ScrollViewer> kontroli. Aby uzyskać więcej informacji na temat częściami zdefiniowanymi przez <xref:System.Windows.Controls.ScrollViewer>, zobacz [scrollviewer — style i szablony](scrollviewer-styles-and-templates.md).  
+ Szablon domyślny <xref:System.Windows.Controls.DataGrid> zawiera kontrolkę <xref:System.Windows.Controls.ScrollViewer>. Aby uzyskać więcej informacji na temat części zdefiniowanych przez <xref:System.Windows.Controls.ScrollViewer>, zobacz [Style i szablony ScrollViewer](scrollviewer-styles-and-templates.md).  
   
 ## <a name="datagrid-states"></a>Stany DataGrid  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.DataGrid> kontroli.  
+ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Windows.Controls.DataGrid>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
+|Typow|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
-|InvalidFocused|ValidationStates|Kontrolka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Kontrolka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka jest nieprawidłowy.|  
+|InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
-## <a name="datagridcell-parts"></a>Części DataGridCell  
- <xref:System.Windows.Controls.DataGridCell> Element nie ma żadnych części o nazwie.  
+## <a name="datagridcell-parts"></a>DataGridCell części  
+ Element <xref:System.Windows.Controls.DataGridCell> nie zawiera żadnych nazwanych części.  
   
 ## <a name="datagridcell-states"></a>Stany DataGridCell  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.DataGridCell> elementu.  
+ Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.DataGridCell>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad komórką.|  
-|Fokus|FocusStates|Komórka jest ustawiony fokus.|  
-|Po przeniesieniu fokusu|FocusStates|Komórka nie ma fokusa|  
-|bieżący|CurrentStates|Komórka jest bieżącej komórki.|  
-|Regularne|CurrentStates|Komórka nie jest bieżącej komórki.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad komórką.|  
+|Fokus|FocusStates|Komórka ma fokus.|  
+|Bez fokusu|FocusStates|Komórka nie ma fokusu.|  
+|Obecne|CurrentStates|Komórka jest bieżącą komórką.|  
+|Ustalon|CurrentStates|Komórka nie jest bieżącą komórką.|  
 |Monitor|InteractionStates|Komórka jest w trybie wyświetlania.|  
 |Edytowanie|InteractionStates|Komórka jest w trybie edycji.|  
-|Wybrane|SelectionStates|Komórka jest zaznaczone.|  
-|Niezaznaczone|SelectionStates|Komórka nie jest zaznaczone.|  
-|InvalidFocused|ValidationStates|Komórka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Komórka jest nieprawidłowy.|  
+|Niezaznaczone|SelectionStates|Komórka jest zaznaczona.|  
+|Niezaznaczone|SelectionStates|Komórka nie jest zaznaczona.|  
+|InvalidFocused|ValidationStates|Komórka jest nieprawidłowa i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowa i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Komórka jest prawidłowa.|  
   
-## <a name="datagridrow-parts"></a>Części DataGridRow  
- <xref:System.Windows.Controls.DataGridRow> Element nie ma żadnych części o nazwie.  
+## <a name="datagridrow-parts"></a>DataGridRow części  
+ Element <xref:System.Windows.Controls.DataGridRow> nie zawiera żadnych nazwanych części.  
   
 ## <a name="datagridrow-states"></a>Stany DataGridRow  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.DataGridRow> elementu.  
+ Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.DataGridRow>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem.|  
-|MouseOver_Editing|CommonStates|Wskaźnik myszy jest umieszczony nad wiersz i wiersz jest w trybie edycji.|  
-|MouseOver_Selected|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem i zostanie wybrany wiersz.|  
-|MouseOver_Unfocused_Editing|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem, wiersza znajduje się w trybie edycji i nie ma fokusu.|  
-|MouseOver_Unfocused_Selected|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem, wiersz jest zaznaczone, a nie ma fokusu.|  
-|Normal_AlternatingRow|CommonStates|Wiersz jest wierszem przemienne.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad wierszem.|  
+|MouseOver_Editing|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest w trybie edycji.|  
+|MouseOver_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest zaznaczony.|  
+|MouseOver_Unfocused_Editing|CommonStates|Wskaźnik myszy znajduje się nad wierszem, wiersz jest w trybie edycji i nie ma fokusu.|  
+|MouseOver_Unfocused_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, wiersz jest zaznaczony i nie ma fokusu.|  
+|Normal_AlternatingRow|CommonStates|Wiersz jest przemiennym wierszem.|  
 |Normal_Editing|CommonStates|Wiersz jest w trybie edycji.|  
-|Normal_Selected|CommonStates|Wiersz jest zaznaczone.|  
+|Normal_Selected|CommonStates|Wiersz jest zaznaczony.|  
 |Unfocused_Editing|CommonStates|Wiersz jest w trybie edycji i nie ma fokusu.|  
-|Unfocused_Selected|CommonStates|Wiersz jest zaznaczone i nie ma fokusu.|  
-|InvalidFocused|ValidationStates|Kontrolka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Kontrolka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka jest nieprawidłowy.|  
+|Unfocused_Selected|CommonStates|Wiersz jest zaznaczony i nie ma fokusu.|  
+|InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
-## <a name="datagridrowheader-parts"></a>Części DataGridRowHeader  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elementu.  
+## <a name="datagridrowheader-parts"></a>DataGridRowHeader części  
+ Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
-|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który służy do zmiany rozmiaru nagłówka z góry.|  
-|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który służy do zmiany rozmiaru nagłówka z dołu.|  
+|PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od góry.|  
+|PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka wiersza od dołu.|  
   
 ## <a name="datagridrowheader-states"></a>Stany DataGridRowHeader  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.DataGridRowHeader> elementu.  
+ Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem.|  
-|MouseOver_CurrentRow|CommonStates|Wskaźnik myszy jest umieszczony nad wiersz i wiersz jest bieżący wiersz.|  
-|MouseOver_CurrentRow_Selected|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem, a wiersz jest bieżące i wybrane.|  
-|MouseOver_EditingRow|CommonStates|Wskaźnik myszy jest umieszczony nad wiersz i wiersz jest w trybie edycji.|  
-|MouseOver_Selected|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem i zostanie wybrany wiersz.|  
-|MouseOver_Unfocused_CurrentRow_Selected|CommonStates|Umieść wskaźnik myszy nad odpowiednim wierszem, są aktualne i wybrany wiersz, a nie ma fokusu.|  
-|MouseOver_Unfocused_EditingRow|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem, wiersza znajduje się w trybie edycji i nie ma fokusu.|  
-|MouseOver_Unfocused_Selected|CommonStates|Wskaźnik myszy jest umieszczony nad odpowiednim wierszem, wiersz jest zaznaczone, a nie ma fokusu.|  
-|Normal_CurrentRow|CommonStates|Wiersz jest bieżący wiersz.|  
-|Normal_CurrentRow_Selected|CommonStates|Wiersz jest bieżący wiersz i jest zaznaczone.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad wierszem.|  
+|MouseOver_CurrentRow|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest bieżącym wierszem.|  
+|MouseOver_CurrentRow_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest bieżący i wybrany.|  
+|MouseOver_EditingRow|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest w trybie edycji.|  
+|MouseOver_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest zaznaczony.|  
+|MouseOver_Unfocused_CurrentRow_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, wiersz jest bieżący i zaznaczony i nie ma fokusu.|  
+|MouseOver_Unfocused_EditingRow|CommonStates|Wskaźnik myszy znajduje się nad wierszem, wiersz jest w trybie edycji i nie ma fokusu.|  
+|MouseOver_Unfocused_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, wiersz jest zaznaczony i nie ma fokusu.|  
+|Normal_CurrentRow|CommonStates|Wiersz jest bieżącym wierszem.|  
+|Normal_CurrentRow_Selected|CommonStates|Wiersz jest bieżącym wierszem i jest wybrany.|  
 |Normal_EditingRow|CommonStates|Wiersz jest w trybie edycji.|  
-|Normal_Selected|CommonStates|Wiersz jest zaznaczone.|  
-|Unfocused_CurrentRow_Selected|CommonStates|Wiersz jest bieżący wiersz, jest zaznaczone, a nie ma fokusu.|  
+|Normal_Selected|CommonStates|Wiersz jest zaznaczony.|  
+|Unfocused_CurrentRow_Selected|CommonStates|Wiersz jest bieżącym wierszem, jest zaznaczony i nie ma fokusu.|  
 |Unfocused_EditingRow|CommonStates|Wiersz jest w trybie edycji i nie ma fokusu.|  
-|Unfocused_Selected|CommonStates|Wiersz jest zaznaczone i nie ma fokusu.|  
-|InvalidFocused|ValidationStates|Kontrolka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Kontrolka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka jest nieprawidłowy.|  
+|Unfocused_Selected|CommonStates|Wiersz jest zaznaczony i nie ma fokusu.|  
+|InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
-## <a name="datagridcolumnheaderspresenter-parts"></a>Części DataGridColumnHeadersPresenter  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elementu.  
+## <a name="datagridcolumnheaderspresenter-parts"></a>DataGridColumnHeadersPresenter części  
+ Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
-|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Symbol zastępczy dla nagłówków kolumn.|  
+|PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|Symbol zastępczy nagłówków kolumn.|  
   
 ## <a name="datagridcolumnheaderspresenter-states"></a>Stany DataGridColumnHeadersPresenter  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter> elementu.  
+ Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|InvalidFocused|ValidationStates|Komórka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Komórka jest nieprawidłowy.|  
+|InvalidFocused|ValidationStates|Komórka jest nieprawidłowa i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowa i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Komórka jest prawidłowa.|  
   
-## <a name="datagridcolumnheader-parts"></a>Części DataGridColumnHeader  
- Poniższa tabela zawiera listę nazwanych części do <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elementu.  
+## <a name="datagridcolumnheader-parts"></a>DataGridColumnHeader części  
+ Poniższa tabela zawiera listę nazwanych elementów dla elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Część|Typ|Opis|  
+|Części|Typ|Opis|  
 |-|-|-|  
-|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który służy do zmiany rozmiaru nagłówka kolumny z lewej strony.|  
-|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który służy do zmiany rozmiaru nagłówka kolumny z prawej strony.|  
+|PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z lewej strony.|  
+|PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|Element, który jest używany do zmiany rozmiaru nagłówka kolumny z prawej strony.|  
   
 ## <a name="datagridcolumnheader-states"></a>Stany DataGridColumnHeader  
- Poniższa tabela zawiera listę stanów wizualnych dla <xref:System.Windows.Controls.Primitives.DataGridColumnHeader> elementu.  
+ Poniższa tabela zawiera listę stanów wizualnych elementu <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Normalne|CommonStates|Stan domyślny.|  
-|MouseOver|CommonStates|Wskaźnik myszy jest umieszczony nad kontrolką.|  
-|Naciśnięto|CommonStates|Użytkownik naciśnie kontrolkę.|  
-|SortAscending|SortStates|Kolumna jest sortowany w kolejności rosnącej.|  
-|SortDescending|SortStates|Kolumna jest sortowany w kolejności malejącej.|  
+|Typow|CommonStates|Stan domyślny.|  
+|MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
+|Styczn|CommonStates|Kontrolka zostanie naciśnięty.|  
+|SortAscending|SortStates|Kolumna jest sortowana w kolejności rosnącej.|  
+|SortDescending|SortStates|Kolumna jest sortowana w kolejności malejącej.|  
 |Nieposortowane|SortStates|Kolumna nie jest posortowana.|  
-|InvalidFocused|ValidationStates|Kontrolka nie jest prawidłowy i ma fokus.|  
-|InvalidUnfocused|ValidationStates|Kontrolka jest nieprawidłowy i nie ma fokusu.|  
-|Prawidłowe|ValidationStates|Kontrolka jest nieprawidłowy.|  
+|InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
+|InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
+|Prawidłowe|ValidationStates|Formant jest prawidłowy.|  
   
 ## <a name="datagrid-controltemplate-example"></a>Przykład ControlTemplate DataGrid  
- Poniższy przykład pokazuje jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla <xref:System.Windows.Controls.DataGrid> kontrolki i ich skojarzone typy.  
+ Poniższy przykład pokazuje, jak zdefiniować <xref:System.Windows.Controls.ControlTemplate> dla kontrolki <xref:System.Windows.Controls.DataGrid> i skojarzonych z nią typów.  
   
  [!code-xaml[ControlTemplateExamples#DataGrid](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/datagrid.xaml#datagrid)]  
   
- W poprzednim przykładzie użyto co najmniej jeden z następujących zasobów.  
+ W poprzednim przykładzie jest użyty co najmniej jeden z poniższych zasobów.  
   
  [!code-xaml[ControlTemplateExamples#Resources](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/shared.xaml#resources)]  
   
- Aby uzyskać pełny przykład, zobacz [style przykład ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -175,5 +175,5 @@ W tym temacie opisano, style i szablony <xref:System.Windows.Controls.DataGrid> 
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
-- [Tworzenie szablonów i stylów](styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

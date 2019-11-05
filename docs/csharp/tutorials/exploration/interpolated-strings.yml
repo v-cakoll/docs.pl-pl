@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774034"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966977"
 items:
 - durationInMinutes: 2
   content: >
@@ -58,7 +58,7 @@ items:
     W poprzednim kroku użyto interpolacji ciągu do wstawienia jednego ciągu wewnątrz innego. Każde wyrażenie interpolacji, które jest częścią interpolowanego wyrażenia ciągu może być dowolnego typu danych, chociaż. Dołączmy wartości różnych wyrażeń typu danych w ciągu interpolowanym.
 
 
-    W poniższym przykładzie najpierw zdefiniujemy [krotkę](../../tuples.md) , która ma `Name`, `Price` i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
+    W poniższym przykładzie najpierw zdefiniujemy [krotkę](../../tuples.md) , która ma `Name`, `Price`i `perPackage` członków. Uruchom następujący kod w oknie interaktywnym:
 
 
     ```csharp
@@ -157,7 +157,7 @@ items:
 
     > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Ukończono Interaktywny samouczek interpolacji ciągów. Możesz kliknąć poniższe **kolekcje w C# ** linku, aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
+    Ukończono Interaktywny samouczek interpolacji ciągów. Możesz odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie.
 
 
     Aby uzyskać więcej informacji, zobacz [Interpolacja ciągów](../../language-reference/tokens/interpolated.md).

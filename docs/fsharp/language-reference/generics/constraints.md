@@ -2,12 +2,12 @@
 title: Ograniczenia
 description: Dowiedz F# się więcej o ograniczeniach, które mają zastosowanie do parametrów typu ogólnego, aby określić wymagania dla argumentu typu w ogólnym typie lub funkcji.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9912ba63138d893a7c616661dd2b1cbdbe51916c
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.openlocfilehash: 70a8bec1ad67d7e814cb7a96b1876bb22399c5e7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71736795"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425018"
 ---
 # <a name="constraints"></a>Ograniczenia
 
@@ -25,17 +25,17 @@ Istnieje kilka różnych ograniczeń, które można zastosować, aby ograniczyć
 
 |Typu|Składnia|Opis|
 |----------|------|-----------|
-|Ograniczenie typu|Typ *-parametr* : &gt; *Typ*|Dostarczony typ musi być równy lub pochodny od określonego typu lub, jeśli typ jest interfejsem, udostępniony typ musi implementować interfejs.|
+|Ograniczenie typu|*Typ parametru* : *Typ*&gt;|Dostarczony typ musi być równy lub pochodny od określonego typu lub, jeśli typ jest interfejsem, udostępniony typ musi implementować interfejs.|
 |Ograniczenie null|*typ — parametr* : null|Dostarczony typ musi obsługiwać literał o wartości null. Obejmuje to wszystkie typy obiektów .NET, ale F# nie listy, krotki, funkcje, klasy, rekordu lub Unii.|
 |Jawne ograniczenie elementu członkowskiego|[(]*typ — parametr* [lub... lub *parametru typu*)]: (*sygnatura elementu członkowskiego*)|Co najmniej jeden z podanych argumentów typu musi mieć element członkowski o określonej sygnaturze; nie przeznaczony do wspólnego użycia. Elementy członkowskie muszą być jawnie zdefiniowane w typie lub części niejawnego rozszerzenia typu, aby były prawidłowymi obiektami docelowymi dla jawnego ograniczenia elementu członkowskiego.|
 |Ograniczenie konstruktora|*parametr typu* : (New: unit-&gt; "a)|Dostarczony typ musi mieć konstruktora bez parametrów.|
 |Ograniczenie typu wartości|: Struktura|Udostępniony typ musi być typem wartości platformy .NET.|
 |Ograniczenie typu odwołania|: nie struktura|Podany typ musi być typem referencyjnym platformy .NET.|
-|Ograniczenie typu wyliczenia|: Wyliczenie @ no__t-0*bazowe-type*&gt;|Dostarczony typ musi być typem wyliczanym, który ma określony typ podstawowy; nie przeznaczony do wspólnego użycia.|
-|Delegowanie ograniczenia|: delegowanie @ no__t-0*krotka-typ parametru*, *zwracany typ*&gt;|Dostarczony typ musi być typem delegata, który ma określone argumenty i wartość zwracaną; nie przeznaczony do wspólnego użycia.|
+|Ograniczenie typu wyliczenia|: Wyliczenie&lt;*Typ podstawowy*&gt;|Dostarczony typ musi być typem wyliczanym, który ma określony typ podstawowy; nie przeznaczony do wspólnego użycia.|
+|Delegowanie ograniczenia|: delegowanie&lt;*krotki — typ parametru*, *Typ zwracany*&gt;|Dostarczony typ musi być typem delegata, który ma określone argumenty i wartość zwracaną; nie przeznaczony do wspólnego użycia.|
 |Ograniczenie porównania|: porównanie|Udostępniony typ musi obsługiwać porównanie.|
 |Ograniczenie równości|: równość|Dostarczony typ musi obsługiwać równość.|
-|Niezarządzany warunek ograniczający|: niezarządzane|Podany typ musi być typem niezarządzanym. Typy niezarządzane to pewne typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, 0, 1, 2 lub 3), typy wyliczeniowe, 4 lub nieogólne Struktura, której wszystkie pola są typami niezarządzanymi.|
+|Niezarządzany warunek ograniczający|: niezarządzane|Podany typ musi być typem niezarządzanym. Typy niezarządzane to pewne typy pierwotne (`sbyte`, `byte`, `char`, `nativeint`, `unativeint`, `float32`, `float`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint64`, lub `decimal`), typy wyliczeniowe, `nativeptr<_>`lub nieogólne struktury, których pola są wszystkie typy niezarządzane.|
 
 Musisz dodać ograniczenie, gdy kod musi używać funkcji, która jest dostępna w typie ograniczenia, ale nie dla typów ogólnie. Na przykład, jeśli używasz ograniczenia typu do określenia typu klasy, możesz użyć dowolnej z metod tej klasy w funkcji ogólnej lub w typie.
 
@@ -53,7 +53,7 @@ type Class1<'T when 'T :> System.Exception> =
 class end
 
 // Interface Type Constraint
-type Class2<'T when 'T :> System.IComparable> = 
+type Class2<'T when 'T :> System.IComparable> =
 class end
 
 // Null constraint

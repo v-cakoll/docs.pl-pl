@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: 'Instrukcje: korzystanie z przestrzeni nazw typu My'
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Typy wartości dopuszczające wartość null
-      items:
-        - name: Omówienie
-          href: programming-guide/nullable-types/index.md
-        - name: Korzystanie z typów wartości dopuszczających wartość null
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: 'Instrukcje: identyfikowanie typu wartości dopuszczającego wartość null'
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Niebezpieczny kod i wskaźniki
       items:
         - name: Omówienie i ograniczenia
@@ -1312,8 +1304,11 @@
                   href: language-reference/keywords/char.md
                 - name: enum
                   href: language-reference/keywords/enum.md
-                - name: struktura
+                - name: 'struktura '
                   href: language-reference/keywords/struct.md
+                - name: Typy wartości dopuszczające wartość null
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Typy odwołań
               items:
                 - name: Funkcje typów odwołań

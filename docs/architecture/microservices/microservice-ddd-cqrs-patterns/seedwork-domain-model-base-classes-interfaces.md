@@ -2,12 +2,12 @@
 title: Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj koncepcji seedwork jako punktu wyjścia, aby rozpocząć implementację modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093803"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737217"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (klasy bazowe wielokrotnego użytku i interfejsy na potrzeby modelu domeny)
 
@@ -15,7 +15,9 @@ Folder rozwiązania zawiera folder *SeedWork* . Ten folder zawiera niestandardow
 
 Rysunek 7-12 przedstawia klasy, które tworzą seedwork modelu domeny w mikrousłudze porządkowania. Zawiera kilka niestandardowych klas bazowych, takich jak Entity, Valueobject i Enumeration, oraz kilka interfejsów. Te interfejsy (IRepository i IUnitOfWork) informują warstwę infrastruktury o tym, co należy zaimplementować. Te interfejsy są również używane za pośrednictwem iniekcji zależności z warstwy aplikacji.
 
-![Szczegółowa zawartość folderu SeedWork zawierającego klasy podstawowe i interfejsy: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs i ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Zrzut ekranu klas znajdujących się w folderze SeedWork":::
+Szczegółowa zawartość folderu SeedWork zawierającego klasy podstawowe i interfejsy: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs i ValueObject.cs.
+:::image-end:::
 
 **Rysunek 7-12**. Przykładowy zestaw klas i interfejsów bazowych modelu domeny "seedwork"
 
@@ -142,4 +144,4 @@ public interface IRepository<T> where T : IAggregateRoot
 
 >[!div class="step-by-step"]
 >[Poprzedni](net-core-microservice-domain-model.md)
->[Następny](implement-value-objects.md)
+>[dalej](implement-value-objects.md)

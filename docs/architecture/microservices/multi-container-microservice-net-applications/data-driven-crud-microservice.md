@@ -2,12 +2,12 @@
 title: Tworzenie prostej mikrousługi CRUD na podstawie danych
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z tworzeniem prostej mikrousługi CRUD (opartej na danych) w kontekście aplikacji mikrousług.
 ms.date: 01/07/2019
-ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771205"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737343"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostej mikrousługi CRUD na podstawie danych
 
@@ -17,17 +17,17 @@ W tej części przedstawiono sposób tworzenia prostej mikrousługi, która wyko
 
 Z punktu widzenia projektu ten typ mikrousługi kontenera jest bardzo prosty. Prawdopodobnie problem, który należy rozwiązać, jest prosty lub że implementacja jest tylko dowodem koncepcji.
 
-![Prosta CRUD mikrousługa jest wewnętrznym wzorcem projektu.](./media/image4.png)
+![Diagram przedstawiający prosty Wzorzec projektowy mikrousług CRUD.](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
 
 **Rysunek 6-4**. Wewnętrzny projekt dla prostych mikrousług CRUD
 
 Przykładem tego rodzaju prostej usługi dysków danych jest mikrousługa katalogu z przykładowej aplikacji eShopOnContainers. Ten typ usługi implementuje wszystkie jej funkcje w jednym ASP.NET Core projekcie interfejsu API sieci Web, który zawiera klasy dla modelu danych, jego logiki biznesowej i kod dostępu do danych. Przechowuje także powiązane z nią dane w bazie danych działającej w SQL Server (jako inny kontener do celów deweloperskich/testowych), ale może to być również dowolny zwykły SQL Server hosta, jak pokazano na rysunku 6-5.
 
-![Mikrousługa wykazu logicznego obejmuje swoją bazę danych wykazu, która może być lub nie znajduje się na tym samym hoście platformy Docker. Baza danych znajdująca się na tym samym hoście platformy Docker jest dobrym rozwiązaniem do programowania, ale nie dla środowiska produkcyjnego.](./media/image5.png)
+![Diagram przedstawiający kontener mikrousług oparty na danych/CRUD.](./media/data-driven-crud-microservice/simple-data-driven-crud-microservice.png)
 
 **Rysunek 6-5**. Prosty projekt mikrousług oparty na danych/CRUD
 
-Podczas opracowywania tego rodzaju usługi wymagany jest tylko [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) i interfejs API dostępu do danych lub ORM, jak [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Możesz również generować metadane [struktury Swagger](https://swagger.io/) automatycznie za pomocą [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , aby podać opis oferty usługi, zgodnie z opisem w następnej sekcji.
+Poprzedni diagram przedstawia mikrousługę wykazu logicznego, która obejmuje jej bazę danych katalogu, która może być lub nie znajduje się na tym samym hoście platformy Docker. Posiadanie bazy danych na tym samym hoście platformy Docker może być dobrym rozwiązaniem do programowania, ale nie w środowisku produkcyjnym. Podczas opracowywania tego rodzaju usługi wymagany jest tylko [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) i interfejs API dostępu do danych lub ORM, jak [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Możesz również generować metadane [struktury Swagger](https://swagger.io/) automatycznie za pomocą [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , aby podać opis oferty usługi, zgodnie z opisem w następnej sekcji.
 
 Należy pamiętać, że uruchamianie serwera bazy danych, takiego jak SQL Server w kontenerze platformy Docker, jest doskonałe dla środowisk programistycznych, ponieważ wszystkie Twoje zależności mogą działać bez konieczności aprowizacji bazy danych w chmurze lub lokalnie. Jest to bardzo wygodne w przypadku uruchamiania testów integracji. Jednak w przypadku środowisk produkcyjnych nie zaleca się korzystania z serwera bazy danych w kontenerze, ponieważ zazwyczaj nie ma wysokiej dostępności. W środowisku produkcyjnym na platformie Azure zaleca się użycie usługi Azure SQL DB lub innej technologii bazy danych, która zapewnia wysoką dostępność i wysoką skalowalność. Na przykład w przypadku podejścia NoSQL można wybrać pozycję CosmosDB.
 
@@ -37,15 +37,17 @@ Na koniec edytując pliki metadanych pliku dockerfile i Docker-Compose. yml, mo�
 
 Aby zaimplementować prostą CRUD mikrousługi przy użyciu platformy .NET Core i programu Visual Studio, Zacznij od utworzenia prostego projektu interfejsu API sieci Web ASP.NET Core (działającego na platformie .NET Core, aby można go było uruchomić na hoście Docker systemu Linux), jak pokazano na rysunku 6-6.
 
-![Aby utworzyć projekt interfejsu API sieci Web ASP.NET Core, najpierw wybierz aplikację sieci Web ASP.NET Core, a następnie wybierz typ interfejsu API.](./media/image6.png)
+![Zrzut ekranu przedstawiający wizualizację Studios, która zawiera konfigurację projektu.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **Rysunek 6-6**. Tworzenie projektu interfejsu API sieci Web ASP.NET Core w programie Visual Studio
 
-Po utworzeniu projektu można zaimplementować kontrolery MVC w taki sam sposób jak w każdym innym projekcie interfejsu API sieci Web przy użyciu interfejsu API Entity Framework lub innego interfejsu API. W nowym projekcie interfejsu API sieci Web można zobaczyć, że jedyną zależnością w tej mikrousłudze jest ASP.NET Core samej. Wewnętrznie w ramach zależności *Microsoft. AspNetCore. All* odwołuje się do Entity Framework i wielu innych pakietów NuGet platformy .NET Core, jak pokazano na rysunku 6-7.
+Aby utworzyć projekt interfejsu API sieci Web ASP.NET Core, najpierw wybierz aplikację sieci Web ASP.NET Core, a następnie wybierz typ interfejsu API. Po utworzeniu projektu można zaimplementować kontrolery MVC w taki sam sposób jak w każdym innym projekcie interfejsu API sieci Web przy użyciu interfejsu API Entity Framework lub innego interfejsu API. W nowym projekcie interfejsu API sieci Web można zobaczyć, że jedyną zależnością w tej mikrousłudze jest ASP.NET Core samej. Wewnętrznie w ramach zależności *Microsoft. AspNetCore. All* odwołuje się do Entity Framework i wielu innych pakietów NuGet platformy .NET Core, jak pokazano na rysunku 6-7.
 
-![Projekt interfejsu API zawiera odwołania do pakietu NuGet Microsoft. AspNetCore. app, który zawiera odwołania do wszystkich najważniejszych pakietów. Może również zawierać inne pakiety.](./media/image8.png)
+![Zrzut ekranu przedstawiający narzędzia VS pokazujące zależności NuGet składnika Catalog. API.](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
 **Rysunek 6-7**. Zależności w prostej mikrousłudze CRUD Web API
+
+Projekt interfejsu API zawiera odwołania do pakietu NuGet Microsoft. AspNetCore. app, który zawiera odwołania do wszystkich najważniejszych pakietów. Może również zawierać inne pakiety.
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementowanie usług interfejsu API sieci Web CRUD za pomocą Entity Framework Core
 
@@ -248,7 +250,7 @@ catalog.api:
 
 Pliki Docker-Compose. yml na poziomie rozwiązania nie są bardziej elastyczne niż pliki konfiguracyjne na poziomie projektu lub mikrousług, ale również bezpieczniej, jeśli zastąpisz zmienne środowiskowe zadeklarowane w plikach tworzenia platformy Docker z wartościami ustawionymi z narzędzia do wdrażania, takie jak Azure DevOps Services zadań wdrażania platformy Docker.
 
-Na koniec można uzyskać tę wartość z kodu przy użyciu \[ konfiguracji "ConnectionString" \], jak pokazano w metodzie ConfigureServices w poprzednim przykładzie kodu.
+Na koniec można uzyskać tę wartość z kodu przy użyciu\[konfiguracji "ConnectionString"\], jak pokazano w metodzie ConfigureServices w poprzednim przykładzie kodu.
 
 Jednak w przypadku środowisk produkcyjnych warto zapoznać się z dodatkowymi sposobami przechowywania wpisów tajnych, takich jak parametry połączenia. Doskonałym sposobem na zarządzanie wpisami tajnymi aplikacji jest użycie [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
@@ -340,11 +342,11 @@ Swashbuckle łączy Eksploratora interfejsu API i struktury Swagger lub [Swagger
 
 Oznacza to, że możesz uzupełnić interfejs API za pomocą interfejsu użytkownika, aby ułatwić deweloperom korzystanie z interfejsu API. Wymaga bardzo małej ilości kodu i konserwacji, ponieważ jest automatycznie generowana, co pozwala skupić się na tworzeniu interfejsu API. Wynik dla Eksploratora interfejsu API wygląda jak rysunek 6-8.
 
-![Dokumentacja interfejsu API interfejsu użytkownika programu Swagger wygenerowanego przez Swashbuckle obejmuje wszystkie opublikowane akcje.](./media/image9.png)
+![Zrzut ekranu przedstawiający Eksplorator interfejsu API struktury Swagger wyświetlający interfejs API eShopOContainers.](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
 **Rysunek 6-8**. Eksplorator interfejsu API Swashbuckle na podstawie metadanych struktury Swagger — mikrousługa eShopOnContainers Catalog
 
-Eksplorator interfejsów API nie jest najważniejszym elementem w tym miejscu. Gdy dysponujesz interfejsem API sieci Web, który można opisać w metadanych struktury Swagger, interfejs API może być bezproblemowo używany z narzędzi opartych na strukturze Swagger, w tym generatory kodu klasy serwera proxy klienta, które mogą kierować wiele platform. Na przykład, jak wspomniano, [AutoRest](https://github.com/Azure/AutoRest) automatycznie generuje klasy klienckie platformy .NET. Jednak dostępne są również dodatkowe narzędzia, takie jak [Swagger-codegen](https://github.com/swagger-api/swagger-codegen) , które umożliwiają automatyczne generowanie kodu bibliotek klienckich interfejsu API, wycinków serwerów i dokumentacji.
+Dokumentacja interfejsu API interfejsu użytkownika programu Swagger wygenerowanego przez Swashbuckle obejmuje wszystkie opublikowane akcje. Eksplorator interfejsów API nie jest najważniejszym elementem w tym miejscu. Gdy dysponujesz interfejsem API sieci Web, który można opisać w metadanych struktury Swagger, interfejs API może być bezproblemowo używany z narzędzi opartych na strukturze Swagger, w tym generatory kodu klasy serwera proxy klienta, które mogą kierować wiele platform. Na przykład, jak wspomniano, [AutoRest](https://github.com/Azure/AutoRest) automatycznie generuje klasy klienckie platformy .NET. Jednak dostępne są również dodatkowe narzędzia, takie jak [Swagger-codegen](https://github.com/swagger-api/swagger-codegen) , które umożliwiają automatyczne generowanie kodu bibliotek klienckich interfejsu API, wycinków serwerów i dokumentacji.
 
 Obecnie Swashbuckle składa się z pięciu wewnętrznych pakietów NuGet w pakiecie meta-Package [Swashbuckle. AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) dla aplikacji ASP.NET Core.
 
@@ -401,13 +403,13 @@ Po wykonaniu tej czynności możesz uruchomić aplikację i przeglądać następ
 
 Wygenerowany interfejs użytkownika utworzony przez Swashbuckle został wcześniej wyświetlony dla adresu URL, takiego jak `http://<your-root-url>/swagger`. Na rysunku 6-9 można także sprawdzić, jak można testować dowolną metodę interfejsu API.
 
-![W szczegółach interfejsu API interfejsu użytkownika programu Swagger przedstawiono przykład odpowiedzi i można go użyć do wykonania rzeczywistego interfejsu API, który jest doskonałym rozwiązaniem do odnajdywania deweloperów.](./media/image10.png)
+![Zrzut ekranu przedstawiający interfejs użytkownika struktury Swagger pokazujący dostępne narzędzia do testowania.](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
 **Rysunek 6-9**. Swashbuckle interfejs użytkownika testowania metody katalogu/elementów interfejsu API
 
-Na rysunku 6-10 przedstawiono metadane JSON programu Swagger wygenerowane z mikrousługi eShopOnContainers (która jest używana przez narzędzia poniżej) podczas żądania `http://<your-root-url>/swagger/v1/swagger.json` przy użyciu programu [Poster](https://www.getpostman.com/).
+W szczegółach interfejsu API interfejsu użytkownika programu Swagger przedstawiono przykład odpowiedzi i można go użyć do wykonania rzeczywistego interfejsu API, który jest doskonałym rozwiązaniem do odnajdywania deweloperów. Na rysunku 6-10 przedstawiono metadane JSON programu Swagger wygenerowane z mikrousługi eShopOnContainers (która jest używana przez narzędzia poniżej) podczas żądania `http://<your-root-url>/swagger/v1/swagger.json` przy użyciu programu [Poster](https://www.getpostman.com/).
 
-![Przykładowy interfejs użytkownika programu Poster przedstawiający metadane JSON programu Swagger](./media/image11.png)
+![Zrzut ekranu przedstawiający przykładowego interfejsu użytkownika programu do wyświetlania metadanych w formacie JSON programu Swagger.](./media/data-driven-crud-microservice/swagger-json-metadata.png)
 
 **Rysunek 6-10**. Metadane JSON programu Swagger
 
@@ -426,4 +428,4 @@ Jest to proste. I ponieważ jest generowany automatycznie, podczas dodawania wi�
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-application-design.md)
-> [Następny](multi-container-applications-docker-compose.md)
+> [dalej](multi-container-applications-docker-compose.md)

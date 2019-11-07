@@ -1,19 +1,19 @@
 ---
-title: Kroki w przepływie pracy DevOps w pętli zewnętrznej dla aplikacji platformy Docker
+title: Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 description: Informacje na temat instrukcji "pętla zewnętrzna" przepływu pracy DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 5687caff0c635e7add135654a8f564b2c509cbf8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834559"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738234"
 ---
-# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki w przepływie pracy DevOps w pętli zewnętrznej dla aplikacji platformy Docker
+# <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Kroki przepływu pracy DevOps w zewnętrznej pętli dla aplikacji platformy Docker
 
-Ilustracja 5-1 przedstawia kompleksowe przedstawienie kroków obejmujących przepływ pracy pętli zewnętrznej DevOps.
+Ilustracja 5-1 przedstawia kompleksowe przedstawienie kroków obejmujących przepływ pracy pętli zewnętrznej DevOps. Pokazuje "pętlę zewnętrzną" DevOps. Gdy kod jest wypychany do repozytorium, uruchamiany jest potok elementu konfiguracji, a następnie rozpoczyna potok CD, gdzie aplikacja zostanie wdrożona. Metryki zebrane z wdrożonych aplikacji są przekazywane z powrotem do obciążenia programistycznego, w którym występuje "pętla wewnętrzna", więc zespoły programistyczne mają rzeczywiste dane, aby reagować na potrzeby użytkowników i firm.
 
-![Ten diagram przedstawia "pętlę zewnętrzną" DevOps. Gdy kod jest wypychany do repozytorium, uruchamiany jest potok elementu konfiguracji, a następnie rozpoczyna potok CD, gdzie aplikacja zostanie wdrożona. Metryki zebrane z wdrożonych aplikacji są przekazywane z powrotem do obciążenia programistycznego, w którym występuje "pętla wewnętrzna", więc zespoły programistyczne mają rzeczywiste dane, aby reagować na potrzeby użytkowników i firm.](./media/image1.png)
+![Diagram przedstawiający 6 kroków przepływu pracy pętli zewnętrznej DevOps.](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
 **Rysunek 5-1**. DevOps przepływ pracy pętli zewnętrznej dla aplikacji platformy Docker za pomocą narzędzi firmy Microsoft
 
@@ -45,9 +45,9 @@ Azure DevOps Services jako podstawy do kompilowania aplikacji oraz ustawiania po
 
 W przypadku korzystania z platformy Docker do wdrożenia "końcowe artefakty" zostaną wdrożone jako obrazy platformy Docker z aplikacją lub usługami osadzonymi w nich. Te obrazy są wypychane lub publikowane w *rejestrze platformy Docker* (prywatne repozytorium, takie jak te, które mogą znajdować się w Azure Container Registry, lub publiczne, takie jak rejestr usługi Docker Hub, który jest często używany do oficjalnych obrazów bazowych).
 
-Oto podstawowe koncepcje: potok CI zostanie rozpoczęty przez zatwierdzenie repozytorium SCC, takiego jak Git. Zatwierdzenie spowoduje Azure DevOps Services uruchomienie zadania kompilacji w kontenerze platformy Docker i po pomyślnym zakończeniu tego zadania wypchnięcie obrazu platformy Docker do rejestru platformy Docker, jak pokazano na rysunku 5-2.
+Oto podstawowe koncepcje: potok CI zostanie rozpoczęty przez zatwierdzenie repozytorium SCC, takiego jak Git. Zatwierdzenie spowoduje Azure DevOps Services uruchomienie zadania kompilacji w kontenerze platformy Docker i po pomyślnym zakończeniu tego zadania wypchnięcie obrazu platformy Docker do rejestru platformy Docker, jak pokazano na rysunku 5-2. Pierwsza część pętli zewnętrznej obejmuje kroki od 1 do 3, od kodu, uruchomienia, debugowania i walidacji, a następnie repozytorium kodu do kroku kompilowania i testowania elementu konfiguracji.
 
-![Pierwsza część pętli zewnętrznej obejmuje kroki od 1 do 3, od kodu, uruchomienia, debugowania i walidacji, a następnie repozytorium kodu w ramach kroku kompilowania i testowania elementu konfiguracji](./media/image2.png)
+![Diagram przedstawiający trzy kroki, które są związane z przepływem pracy CI.](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
 **Rysunek 5-2**. Kroki związane z
 
@@ -55,7 +55,7 @@ Oto podstawowe kroki przepływu pracy elementu konfiguracji z rozwiązaniami Doc
 
 1. Deweloper wypycha zatwierdzenie do repozytorium SCC (git/Azure DevOps Services, GitHub itp.).
 
-2. Jeśli używasz usługi Azure DevOps Services lub git, CI jest wbudowana w, co oznacza, że jest to proste, co pozwala zaznaczyć pole wyboru w Azure DevOps Services. Jeśli używasz zewnętrznego SCC (takiego jak GitHub), `webhook` będzie powiadamiać Azure DevOps Services aktualizacji lub wypychania do usługi git/GitHub.
+2. Jeśli używasz usługi Azure DevOps Services lub git, CI jest wbudowana w, co oznacza, że jest to proste, co pozwala zaznaczyć pole wyboru w Azure DevOps Services. Jeśli używasz zewnętrznego SCC (takiego jak GitHub), `webhook` powiadomi Azure DevOps Services aktualizacji lub wypychania do usługi git/GitHub.
 
 3. Azure DevOps Services ściąga repozytorium SCC, w tym pliku dockerfile opisujące obraz, a także kod aplikacji i testu.
 
@@ -69,7 +69,7 @@ Oto podstawowe kroki przepływu pracy elementu konfiguracji z rozwiązaniami Doc
 
 Program Visual Studio Azure DevOps Services zawiera szablony wydań & kompilacji, których można użyć w potoku ciągłej integracji/ciągłego wdrażania, za pomocą którego można tworzyć obrazy platformy Docker, wypychania obrazów platformy Docker do uwierzytelnionego rejestru platformy Docker, uruchamiania obrazów platformy Docker lub uruchamiania innych operacji oferowanych przez program Interfejs wiersza polecenia platformy Docker. Dodaje także zadanie Docker Compose, którego można użyć do kompilowania, wypychania i uruchamiania aplikacji platformy Docker obejmujących wiele kontenerów lub uruchamiania innych operacji oferowanych przez interfejs wiersza polecenia Docker Compose, jak pokazano na rysunku 5-3.
 
-![Widok przeglądarki potoku elementu Docker w usłudze Azure DevOps](./media/image3.png)
+![Zrzut ekranu przedstawiający potok elementu konfiguracji platformy Docker w usłudze Azure DevOps.](./media/docker-application-outer-loop-devops-workflow/docker-ci-pipeline-azure-devops.png)
 
 **Rysunek 5-3**. Potok elementu konfiguracji platformy Docker w Azure DevOps Services, w tym tworzenie szablonów wydań & i skojarzonych zadań.
 
@@ -77,7 +77,7 @@ Za pomocą tych szablonów i zadań można tworzyć artefakty ciągłej integrac
 
 Za pomocą tych Visual Studio Team Servicesych zadań kompilacja systemu Linux — Host platformy Docker/maszyna wirtualna, która została zainicjowana na platformie Azure i preferowany rejestr platformy Docker (Azure Container Registry, Hub Docker, prywatny moduł Docker DTR lub dowolny inny rejestr platformy Docker), można utworzyć potok elementu konfiguracji platformy Docker w bardzo spójny sposób.
 
-***Wymagania***
+***Wymagania:***
 
 - Azure DevOps Services lub dla instalacji lokalnych Team Foundation Server 2015 Update 3 lub nowszej.
 
@@ -122,17 +122,17 @@ Po przetestowaniu i zweryfikowaniu obrazów platformy Docker warto je oznaczyć 
 
 Podobnie jak kod aplikacji przechowywany w repozytorium SCC (git itp.) jest "źródłem prawdy", rejestrem platformy Docker jest "Źródło prawdy" dla aplikacji binarnej lub BITS do wdrożenia w środowiskach pytań i odpowiedzi.
 
-Zazwyczaj można chcieć mieć prywatne repozytoria dla obrazów niestandardowych w repozytorium prywatnym w Azure Container Registry lub w rejestrze lokalnym, takim jak zaufany rejestr platformy Docker, lub w rejestrze w chmurze publicznej z ograniczonym dostępem (np. W przypadku oprogramowania Docker Hub, chociaż w tym ostatnim przypadku kod nie jest otwarty, należy zaufać zabezpieczenia dostawcy. W obu przypadkach stosowana Metoda jest podobna i opiera się na `docker push` polecenia, jak pokazano na rysunku 5-4.
+Zazwyczaj można chcieć mieć prywatne repozytoria dla obrazów niestandardowych w repozytorium prywatnym w Azure Container Registry lub w rejestrze lokalnym, takim jak zaufany rejestr platformy Docker, lub w rejestrze w chmurze publicznej z ograniczonym dostępem (np. W przypadku oprogramowania Docker Hub, chociaż w tym ostatnim przypadku kod nie jest otwarty, należy zaufać zabezpieczenia dostawcy. W obu przypadkach stosowana Metoda jest podobna i opiera się na `docker push` polecenie, jak pokazano na rysunku 5-4.
 
-![W kroku 3, w przypadku tworzenia integracji i testowania (CI) można opublikować utworzone obrazy platformy Docker w rejestrze prywatnym lub publicznym.](./media/image4.png)
+![Diagram przedstawiający wypychanie obrazów niestandardowych do rejestru kontenerów.](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **Rysunek 5-4**. Publikowanie obrazów niestandardowych w rejestrze platformy Docker
 
-Istnieje wiele ofert rejestrów platformy Docker od dostawców chmury, takich jak Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Nabrzeż i tak dalej.
+W kroku 3, w przypadku tworzenia integracji i testowania (CI) można opublikować utworzone obrazy platformy Docker w rejestrze prywatnym lub publicznym. Istnieje wiele ofert rejestrów platformy Docker od dostawców chmury, takich jak Azure Container Registry, Amazon Web Services Container Registry, Google Container Registry, Nabrzeż i tak dalej.
 
 Korzystając z zadań platformy Docker, można wypchnąć zestaw obrazów usługi zdefiniowany przez plik `docker-compose.yml` z wieloma tagami do uwierzytelnionego rejestru platformy Docker (na przykład Azure Container Registry), jak pokazano na rysunku 5-5.
 
-![Widok przeglądarki kroku do publikowania obrazów w rejestrze z usługi Azure DevOps.](./media/image5.png)
+![Zrzut ekranu przedstawiający krok publikowania obrazów w rejestrze.](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **Rysunek 5-5**. Używanie Azure DevOps Services do publikowania niestandardowych obrazów w rejestrze platformy Docker
 
@@ -148,25 +148,25 @@ Jednak w tym momencie zależy od rodzaju wdrażanej aplikacji platformy Docker. 
 
 Najpierw przyjrzyjmy się w mniej skomplikowanym scenariuszu: wdrażanie na prostych hostach platformy Docker (maszyn wirtualnych lub serwerach) w jednym środowisku lub wielu środowiskach (pytań i odpowiedzi, przemieszczanie i produkcja). W tym scenariuszu wewnętrznie potok CD może używać narzędzia Docker-Zredaguj (z Azure DevOps Services zadań wdrażania), aby wdrożyć aplikacje platformy Docker za pomocą powiązanego zestawu kontenerów lub usług, jak pokazano na rysunku 5-6.
 
-![Krok wdrażania z dysku CD (#4) może publikować w różnych środowiskach, takich jak q & a, przejściowe i produkcyjne.](./media/image6.png)
+![Diagram przedstawiający etap wdrażania z dysku CD do trzech środowisk.](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **Rysunek 5-6**. Wdrażanie kontenerów aplikacji do prostych rejestrów środowisk hosta platformy Docker
 
 Rysunek 5-7. pokazuje, jak można połączyć swoją kompilację do środowisk pytań i odpowiedzi za pośrednictwem Azure DevOps Services, klikając Docker Compose w oknie dialogowym Dodawanie zadania. Jednak podczas wdrażania w środowisku przejściowym lub produkcyjnym zwykle używane są funkcje Release Management obsługujące wiele środowisk (na przykład pytań i odpowiedzi, przemieszczanie i produkcja). W przypadku wdrażania w ramach jednego hosta platformy Docker jest używane zadanie Azure DevOps Services "Docker Compose" (które wywołuje polecenie `docker-compose up` pod okapem). W przypadku wdrażania w usłudze Azure Kubernetes Service (AKS) usługa korzysta z zadania wdrażania platformy Docker, jak wyjaśniono w poniższej sekcji.
 
-![Widok przeglądarki służący do dodawania Docker Compose zadania.](./media/image7.png)
+![Zrzut ekranu przedstawiający okno dialogowe Dodawanie zadań zadania Docker Compose.](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **Rysunek 5-7**. Dodawanie Docker Compose zadania w potoku Azure DevOps Services
 
-Podczas tworzenia wydania w Azure DevOps Services pobiera on zestaw artefaktów wejściowych. Te artefakty są przeznaczone do niezmiennego okresu istnienia wersji we wszystkich środowiskach. Gdy wprowadzisz kontenery, artefakty wejściowe identyfikują obrazy w rejestrze do wdrożenia. W zależności od tego, jak te obrazy są identyfikowane, nie ma gwarancji, że przez cały czas trwania wydania jest to tak samo, jak w przypadku odwołania `myimage:latest` z pliku `docker-compose`.
+Podczas tworzenia wydania w Azure DevOps Services pobiera on zestaw artefaktów wejściowych. Te artefakty są przeznaczone do niezmiennego okresu istnienia wersji we wszystkich środowiskach. Gdy wprowadzisz kontenery, artefakty wejściowe identyfikują obrazy w rejestrze do wdrożenia. W zależności od tego, jak te obrazy są identyfikowane, nie ma gwarancji, że przez cały czas trwania wydania nie są one tak samo, jak w przypadku odniesienia `myimage:latest` z pliku `docker-compose`.
 
 Szablony Azure DevOps Services umożliwiają generowanie artefaktów kompilacji, które zawierają określone skróty obrazu rejestru, które są gwarantowane do jednoznacznego identyfikowania tego samego obrazu binarnego. Są one naprawdę potrzebne do wydania jako dane wejściowe.
 
 ### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Zarządzanie wersjami w środowiskach platformy Docker przy użyciu Azure DevOps Services Release Management
 
-Za pomocą szablonów Azure DevOps Services można utworzyć nowy obraz, opublikować go w rejestrze platformy Docker, uruchomić go na hostach z systemem Linux lub Windows, a następnie użyć poleceń, takich jak `docker-compose`, aby wdrożyć wiele kontenerów jako całą aplikację w Azure DevOps Services Funkcje Release Management zamierzone dla wielu środowisk, jak pokazano na rysunku 5-8.
+Za pomocą szablonów Azure DevOps Services można utworzyć nowy obraz, opublikować go w rejestrze platformy Docker, uruchomić go na hostach z systemem Linux lub Windows, a także użyć poleceń, takich jak `docker-compose` do wdrożenia wielu kontenerów jako całej aplikacji w Azure DevOps Services Funkcje Release Management zamierzone dla wielu środowisk, jak pokazano na rysunku 5-8.
 
-![Widok przeglądarki Azure DevOps, Konfigurowanie wydań programu Docker.](./media/image8.png)
+![Zrzut ekranu przedstawiający konfigurację wersji programu Docker.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
 **Rysunek 5-8**. Konfigurowanie zadań Docker Compose Azure DevOps Services Azure DevOps Services Release Management
 
@@ -180,23 +180,23 @@ Kontenery można wdrożyć ręcznie w tych klastrach za pomocą narzędzia CLI l
 
 Z punktu widzenia dysku CD, a Azure DevOps Services w szczególnie, można uruchomić specjalnie wykonane zadania wdrażania ze środowisk Azure DevOps Services Release Management, które będą wdrażać aplikacje z kontenerów w klastrach rozproszonych w kontenerze Usługa, jak pokazano na rysunku 5-9.
 
-![Krok wdrażania z dysku CD (#4) można także publikować w klastrach za pomocą programów Orchestrator.](./media/image9.png)
+![Diagram przedstawiający etap wdrażania dysku CD do programu Orchestrator.](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **Rysunek 5-9**. Wdrażanie aplikacji rozproszonych w usłudze Container Service
 
-Początkowo podczas wdrażania do określonych klastrów lub programów Orchestrator można tradycyjnie używać konkretnych skryptów i mechanizmów wdrażania dla każdego koordynatora (to jest, Kubernetes i Service Fabric mają różne mechanizmy wdrażania), a nie prostsze i łatwe w użyciu narzędzie `docker-compose` na podstawie pliku definicji `docker-compose.yml`. Jednak dzięki obsłudze Azure DevOps Services narzędzia Docker Deploy pokazano na rysunku 5-10, teraz można również wdrożyć je do obsługiwanych koordynatorów przez samo użycie znanego pliku `docker-compose.yml`, ponieważ narzędzie wykonuje "tłumaczenie" (z pliku `docker-compose.yml` do format wymagany przez program Orchestrator).
+Początkowo podczas wdrażania do określonych klastrów lub programów Orchestrator można tradycyjnie używać konkretnych skryptów i mechanizmów wdrażania dla każdego koordynatora (to jest, Kubernetes i Service Fabric mają różne mechanizmy wdrażania), a nie prostsze i łatwe w użyciu narzędzie `docker-compose` w oparciu o plik definicji `docker-compose.yml`. Jednak dzięki obsłudze Azure DevOps Services narzędzia Docker Deploy pokazano na rysunku 5-10, teraz można również wdrożyć je do obsługiwanych koordynatorów przez samo użycie znanego pliku `docker-compose.yml`, ponieważ narzędzie wykonuje to "tłumaczenie" (z pliku `docker-compose.yml` do format wymagany przez program Orchestrator).
 
-![Widok przeglądarki dla katalogu zadań w usłudze Azure DevOps, pokazujący zadanie Wdróż do Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
+![Zrzut ekranu przedstawiający zadanie Deploy to Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **Rysunek 5-10**. Dodawanie zadania Deploy to Kubernetes do środowiska
 
 Rysunek 5-11 pokazuje, w jaki sposób można edytować zadanie Deploy to Kubernetes z sekcjami dostępnymi dla konfiguracji. Jest to zadanie, które spowoduje pobranie gotowych do użycia niestandardowych obrazów platformy Docker, które zostaną wdrożone jako kontenery w klastrze.
 
-![Widok przeglądarki Azure DevOps, wdrażanie do Kubernetes definicji zadań.](./media/edit-deploy-to-kubernetes-task.png)
+![Zrzut ekranu przedstawiający konfigurację zadania Deploy to Kubernetes.](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **Rysunek 5-11**. Wdrażanie definicji zadania platformy Docker na platformie DC/OS usługi ACS
 
-> [! INFORMACJE] aby dowiedzieć się więcej na temat potoku dysku CD za pomocą Azure DevOps Services i platformy Docker, odwiedź stronę <https://azure.microsoft.com/services/devops/pipelines>
+> [! INFORMACJE] aby dowiedzieć się więcej na temat potoku dysku CD przy użyciu Azure DevOps Services i platformy Docker, odwiedź stronę <https://azure.microsoft.com/services/devops/pipelines>
 
 ## <a name="step-5-run-and-manage"></a>Krok 5. Uruchamianie i zarządzanie
 

@@ -2,22 +2,24 @@
 title: Implementowanie modelu domeny mikrousługi za pomocą platformy .NET Core
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami implementacji modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296757"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737234"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi przy użyciu platformy .NET Core
 
-W poprzedniej sekcji zostały wyjaśnione podstawowe zasady projektowania i wzorce projektowania modelu domeny. Teraz można poznać możliwe sposoby implementacji modelu domeny za pomocą platformy .NET Core (zwykłego kodu C\# ) i EF Core. Należy pamiętać, że model domeny będzie złożony po prostu swój kod. Będzie on miał tylko wymagania dotyczące modelu EF Core, ale nie rzeczywiste zależności w EF. Nie należy mieć sztywnych zależności ani odwołań do EF Core ani żadnych innych ORM w modelu domeny.
+W poprzedniej sekcji zostały wyjaśnione podstawowe zasady projektowania i wzorce projektowania modelu domeny. Teraz można poznać możliwe sposoby implementacji modelu domeny za pomocą platformy .NET Core (zwykłego kodu C\#) i EF Core. Należy pamiętać, że model domeny będzie złożony po prostu swój kod. Będzie on miał tylko wymagania dotyczące modelu EF Core, ale nie rzeczywiste zależności w EF. Nie należy mieć sztywnych zależności ani odwołań do EF Core ani żadnych innych ORM w modelu domeny.
 
 ## <a name="domain-model-structure-in-a-custom-net-standard-library"></a>Struktura modelu domeny w niestandardowej bibliotece .NET Standard
 
 Organizacja folderu używana dla aplikacji referencyjnej eShopOnContainers pokazuje model DDD dla aplikacji. Może się okazać, że inna organizacja folderu bardziej jasno komunikuje się z opcjami projektu dla aplikacji. Jak widać na rysunku 7-10, w modelu domeny porządkowania są dwie wartości zagregowane, zagregowana kolejność i agregacja kupująca. Każda agregacja jest grupą obiektów domeny i obiekty wartości, chociaż może istnieć agregacja złożona z pojedynczej jednostki domeny (jednostki zagregowanej lub głównej).
 
-![Widok Eksplorator rozwiązań dla projektu porządkowania. domeny, przedstawiający folder AggregatesModel zawierający foldery BuyerAggregate i OrderAggregate, każdy z nich zawierający klasy jednostki, pliki obiektów wartości i tak dalej. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Zrzut ekranu przedstawiający projekt porządkowanie. domena w Eksplorator rozwiązań.":::
+Widok Eksplorator rozwiązań dla projektu porządkowania. domeny, przedstawiający folder AggregatesModel zawierający foldery BuyerAggregate i OrderAggregate, każdy z nich zawierający klasy jednostki, pliki obiektów wartości i tak dalej.
+:::image-end:::
 
 **Rysunek 7-10**. Struktura modelu domeny dla mikrousługi porządkowania w eShopOnContainers
 
@@ -31,7 +33,9 @@ Agregacja odnosi się do klastra obiektów domeny zgrupowanych w celu dopasowani
 
 Spójność transakcyjna oznacza, że agregowanie ma zagwarantować spójność i aktualność na końcu działania biznesowego. Na przykład agregacja kolejności z modelu domeny mikrousługi eShopOnContainers porządkowania składa się, jak pokazano na rysunku 7-11.
 
-![Szczegółowy widok folderu OrderAggregate: Address.cs jest obiektem wartości, IOrderRepository jest interfejsem repozytorium, Order.cs jest zagregowanym elementem głównym, OrderItem.cs jest jednostką podrzędną, a OrderStatus.cs jest klasą wyliczania.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Zrzut ekranu przedstawiający folder OrderAggregate i jego klasy.":::
+Szczegółowy widok folderu OrderAggregate: Address.cs jest obiektem wartości, IOrderRepository jest interfejsem repozytorium, Order.cs jest elementem głównym agregacji, OrderItem.cs jest jednostką podrzędną, a OrderStatus.cs jest klasą wyliczania.
+:::image-end:::
 
 **Rysunek 7-11**. Agregacja kolejności w rozwiązaniu Visual Studio
 
@@ -91,7 +95,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Należy pamiętać, że jest to jednostka domeny zaimplementowana jako Klasa POCO. Nie ma żadnej bezpośredniej zależności od Entity Framework Core ani żadnych innych struktur infrastruktury. Ta implementacja jest tak samo jak w DDD, tylko kod C\# implementujący model domeny.
+Należy pamiętać, że jest to jednostka domeny zaimplementowana jako Klasa POCO. Nie ma żadnej bezpośredniej zależności od Entity Framework Core ani żadnych innych struktur infrastruktury. Ta implementacja jest tak, jakby była w DDD, tylko C\# kodzie implementującym model domeny.
 
 Ponadto Klasa ma interfejs o nazwie IAggregateRoot. Ten interfejs jest pustym interfejsem, czasami nazywany *interfejsem znacznika*, który jest używany tylko do wskazania, że ta klasa jednostki jest również zagregowanym elementem głównym.
 
@@ -150,7 +154,7 @@ Ponadto nowa operacja OrderItem (params) również będzie kontrolowana i wykony
 
 W przypadku korzystania z Entity Framework Core 1,1 lub nowszej jednostka DDD może być lepiej wyrażona, ponieważ umożliwia ona [Mapowanie do pól](https://docs.microsoft.com/ef/core/modeling/backing-field) oprócz właściwości. Jest to przydatne w przypadku ochrony kolekcji jednostek podrzędnych lub obiektów wartości. Dzięki temu ulepszeniu można używać prostych prywatnych pól zamiast właściwości i można zaimplementować dowolną aktualizację do kolekcji pól w metodach publicznych i zapewnić dostęp tylko do odczytu za pomocą metody AsReadOnly.
 
-W DDD chcesz zaktualizować jednostkę tylko za pomocą metod w jednostce (lub w konstruktorze) w celu kontrolowania wszelkich niezmiennej i spójności danych, dlatego właściwości są definiowane tylko przy użyciu metody dostępu get. Właściwości są obsługiwane przez pola prywatne. Dostęp do prywatnych elementów członkowskich można uzyskać tylko z poziomu klasy. Jednak jeden wyjątek: EF Core musi również ustawić te pola (aby można było zwrócić obiekt z prawidłowymi wartościami).
+W DDD chcesz zaktualizować jednostkę tylko za pomocą metod w jednostce (lub w konstruktorze) w celu kontrolowania wszelkich niezmiennej i spójności danych, dlatego właściwości są definiowane tylko przy użyciu metody dostępu get. Właściwości są obsługiwane przez pola prywatne. Dostęp do prywatnych elementów członkowskich można uzyskać tylko z poziomu klasy. Istnieje jednak jeden wyjątek: EF Core muszą także ustawiać te pola (aby można było zwrócić obiekt z prawidłowymi wartościami).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Właściwości mapy z dostępem tylko do pól w tabeli bazy danych
 
@@ -162,19 +166,19 @@ W przypadku korzystania z EF Core 1,0 lub nowszego w kontekście DbContext nale�
 
 Przy użyciu funkcji w EF Core 1,1 lub nowszej, aby zamapować kolumny na pola, można również nie używać właściwości. Zamiast tego można po prostu zmapować kolumny z tabeli do pól. Typowym przypadkiem użycia jest to pole prywatne dla stanu wewnętrznego, do którego nie trzeba uzyskiwać dostępu poza jednostką.
 
-Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól prywatnych, takich jak `_paymentMethodId` pole, które nie ma powiązanej właściwości dla metody ustawiającej lub pobierającej. To pole może być również obliczane w ramach logiki biznesowej i stosowane z metod zamówienia, ale muszą być również utrwalane w bazie danych. Tak więc w EF Core (od wersji 1.1) istnieje możliwość mapowania pola bez powiązanej właściwości do kolumny w bazie danych. Jest to również wyjaśnione w sekcji [warstwa infrastruktury](ddd-oriented-microservice.md#the-infrastructure-layer) tego przewodnika.
+Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól prywatnych, takich jak pole `_paymentMethodId`, które nie mają powiązanej właściwości metody ustawiającej lub pobierającej. To pole może być również obliczane w ramach logiki biznesowej i stosowane z metod zamówienia, ale muszą być również utrwalane w bazie danych. Tak więc w EF Core (od wersji 1.1) istnieje możliwość mapowania pola bez powiązanej właściwości do kolumny w bazie danych. Jest to również wyjaśnione w sekcji [warstwa infrastruktury](ddd-oriented-microservice.md#the-infrastructure-layer) tego przewodnika.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Vaughn Vernon. Modelowanie agregacji z DDD i Entity Framework.** Należy zauważyć, że *nie* jest to Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Punkty danych — kodowanie dla projektowania opartego na domenie: Wskazówki dotyczące deweloperzy ukierunkowanych na dane** \
+- **Julie Lerman. Punkty danych — kodowanie dla projektowania opartego na domenie: wskazówki dotyczące deweloperzy** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
+- **UDI Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](microservice-domain-model.md)Następny
-> [](seedwork-domain-model-base-classes-interfaces.md)
+> [Poprzedni](microservice-domain-model.md)
+> [dalej](seedwork-domain-model-base-classes-interfaces.md)

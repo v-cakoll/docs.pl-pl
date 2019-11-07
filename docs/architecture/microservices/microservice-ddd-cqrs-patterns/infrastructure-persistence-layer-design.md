@@ -2,16 +2,16 @@
 title: Projektowanie warstwy trwałości infrastruktury
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z wzorcem repozytorium w projekcie warstwy trwałości infrastruktury.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295909"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737948"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Zaprojektowanie warstwy trwałości infrastruktury
 
-Składniki trwałości danych zapewniają dostęp do danych znajdujących się w granicach mikrousługi (czyli bazy danych mikrousług). Zawierają one rzeczywistą implementację składników, takich jak repozytoria i klasy [jednostek pracy](https://martinfowler.com/eaaCatalog/unitOfWork.html) , takie jak niestandardowe obiekty Entity Framework ( <xref:Microsoft.EntityFrameworkCore.DbContext> EF). EF DbContext implementuje oba elementy, repozytorium i jednostki pracy.
+Składniki trwałości danych zapewniają dostęp do danych znajdujących się w granicach mikrousługi (czyli bazy danych mikrousług). Zawierają one rzeczywistą implementację składników, takich jak repozytoria i klasy [jednostek pracy](https://martinfowler.com/eaaCatalog/unitOfWork.html) , takie jak niestandardowe Entity Framework (EF) <xref:Microsoft.EntityFrameworkCore.DbContext> obiekty. EF DbContext implementuje oba elementy, repozytorium i jednostki pracy.
 
 ## <a name="the-repository-pattern"></a>Wzorzec repozytorium
 
@@ -33,13 +33,15 @@ Jeśli użytkownik wprowadza zmiany, dane, które mają zostać zaktualizowane, 
 
 Ważne jest, aby ponownie wyróżnić tylko jedno repozytorium dla każdego zagregowanego elementu głównego, jak pokazano na rysunku 7-17. Aby osiągnąć cel zagregowanego elementu głównego, aby zachować spójność transakcyjną między wszystkimi obiektami w ramach agregacji, nigdy nie należy tworzyć repozytorium dla każdej tabeli w bazie danych.
 
-![Relacje między warstwami domeny i infrastruktury: Agregacja kupująca zależy od IBuyerRepository i kolejności agregacji, zależnie od interfejsów IOrderRepository, te interfejsy są implementowane w warstwie infrastruktury przez odpowiednie repozytoria, które zależą od UnitOfWork, również zaimplementowane w tym miejscu. uzyskuje dostęp do tabel w warstwie danych.](./media/image18.png)
+![Diagram przedstawiający relacje między domeną a inną infrastrukturą.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Rysunek 7-17**. Relacja między repozytoriami, agregacjami i tabelami baz danych
 
+Na powyższym diagramie przedstawiono relacje między warstwami domeny i infrastruktury: agregacja kupująca zależy od IBuyerRepository, a agregacja kolejności zależy od interfejsów IOrderRepository, te interfejsy są zaimplementowane w warstwie infrastruktury przez odpowiednie repozytoria, które zależą od UnitOfWork, również zaimplementowane, które uzyskują dostęp do tabel w warstwie danych.
+
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Wymuszaj jeden zagregowany element główny na repozytorium
 
-Może być cenny do zaimplementowania projektu repozytorium w taki sposób, że wymusza regułę, że tylko agregowane elementy główne powinny mieć repozytoria. Można utworzyć typ repozytorium generycznego lub podstawowego, który ogranicza typ jednostek, z którymi współpracuje, aby upewnić się, że mają `IAggregateRoot` interfejs znacznika.
+Może być cenny do zaimplementowania projektu repozytorium w taki sposób, że wymusza regułę, że tylko agregowane elementy główne powinny mieć repozytoria. Można utworzyć typ repozytorium generycznego lub podstawowego, który ogranicza typ jednostek, z którymi współpracuje, aby upewnić się, że mają interfejs znacznika `IAggregateRoot`.
 
 W ten sposób każda klasa repozytorium zaimplementowana w warstwie infrastruktury implementuje swój własny kontrakt lub interfejs, jak pokazano w poniższym kodzie:
 
@@ -63,7 +65,7 @@ public interface IOrderRepository : IRepository<Order>
 }
 ```
 
-Jednak lepszym sposobem zapewnienia, że kod wymusza Konwencję, że każde repozytorium jest powiązane z pojedynczą agregacją, ma na celu implementację ogólnego typu repozytorium. Dzięki temu jest to jawne, że używasz repozytorium, aby określić wartość zagregowaną. Można to łatwo zrobić, implementując ogólny `IRepository` interfejs podstawowy, jak w poniższym kodzie:
+Jednak lepszym sposobem zapewnienia, że kod wymusza Konwencję, że każde repozytorium jest powiązane z pojedynczą agregacją, ma na celu implementację ogólnego typu repozytorium. Dzięki temu jest to jawne, że używasz repozytorium, aby określić wartość zagregowaną. Można to łatwo zrobić przez implementację ogólnego `IRepository` interfejsu podstawowego, jak w poniższym kodzie:
 
 ```csharp
 public interface IRepository<T> where T : IAggregateRoot
@@ -86,7 +88,7 @@ Repozytoria zaimplementowane w eShopOnContainers polegają EF Core na implementa
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Różnica między wzorcem repozytorium a wzorcem starszej klasy dostępu do danych (Klasa DAL)
 
-Obiekt dostępu do danych bezpośrednio wykonuje operacje dostępu do danych i trwałości w odniesieniu do magazynu. Repozytorium oznacza dane z operacjami, które mają być wykonywane w pamięci jednostki obiektu pracy (jak w EF w przypadku używania <xref:Microsoft.EntityFrameworkCore.DbContext> klasy), ale te aktualizacje nie są bezpośrednio wykonywane w bazie danych.
+Obiekt dostępu do danych bezpośrednio wykonuje operacje dostępu do danych i trwałości w odniesieniu do magazynu. Repozytorium oznacza dane z operacjami, które mają być wykonywane w pamięci jednostki obiektu pracy (jak w EF w przypadku używania klasy <xref:Microsoft.EntityFrameworkCore.DbContext>), ale te aktualizacje nie są natychmiast wykonywane do bazy danych.
 
 Jednostka pracy jest określana jako pojedyncza transakcja, która obejmuje wiele operacji wstawiania, aktualizowania lub usuwania. W prostym przypadku oznacza to, że dla konkretnej akcji użytkownika, takiej jak rejestracja w witrynie sieci Web, wszystkie operacje wstawiania, aktualizowania i usuwania są obsługiwane w jednej transakcji. Jest to bardziej wydajne niż obsługa wielu transakcji bazy danych w chattier sposób.
 
@@ -117,7 +119,7 @@ Repozytoria mogą być przydatne, ale nie są krytyczne dla Twojego projektu DDD
 - **Wzorzec repozytorium** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Projektowanie oparte na domenie: Zapełnianie się złożonością oprogramowania.** (Książka; zawiera omówienie wzorca repozytorium) \
+- **Eric Evans. Projektowanie oparte na domenie: zapełnianie złożoności w oprogramowaniu.** (Książka; zawiera omówienie wzorca repozytorium) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Wzorzec jednostki pracy
@@ -125,9 +127,9 @@ Repozytoria mogą być przydatne, ale nie są krytyczne dla Twojego projektu DDD
 - **Fowlera Martin. Wzorzec jednostki pracy.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **Implementacja wzorców repozytorium i jednostki pracy w aplikacji ASP.NET MVC** \
+- **Implementowanie wzorców repozytorium i jednostki pracy w aplikacji ASP.NET MVC** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[Poprzedni](domain-events-design-implementation.md)Następny
->[](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Poprzedni](domain-events-design-implementation.md)
+>[dalej](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

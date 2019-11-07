@@ -2,12 +2,12 @@
 title: Monitorowanie kondycji
 description: Poznaj jeden ze sposobów implementacji monitorowania kondycji.
 ms.date: 01/07/2019
-ms.openlocfilehash: 2d43efa7b6cfb855a033ee4d766c64c2472ceb36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1d63e04bbea95fcf0a9f9d3b50aef0e7d4a830e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094079"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732896"
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -123,7 +123,7 @@ Projekt Open Source [AspNetCore. Diagnostics. HealthChecks](https://github.com/X
 
 Na przykład w mikrousłudze `Catalog.API` dodano następujące pakiety NuGet:
 
-![Widok Eksploratora rozwiązań w projekcie katalogu. API, gdzie są przywoływane pakiety NuGet AspNetCore. Diagnostics. HealthChecks](./media/image6.png)
+![Zrzut ekranu przedstawiający pakiety NuGet AspNetCore. Diagnostics. HealthChecks.](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **Rysunek 8-7**. Niestandardowe kontrole kondycji zaimplementowane w wykazie. interfejs API przy użyciu AspNetCore. Diagnostics. HealthChecks
 
@@ -191,7 +191,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 Po skonfigurowaniu kontroli kondycji zgodnie z opisem w tym artykule, gdy w programie Docker jest uruchomiona mikrousługa, możesz bezpośrednio sprawdzić ją z poziomu przeglądarki, jeśli jest w dobrej kondycji. Należy opublikować port kontenera na hoście platformy Docker, aby można było uzyskać dostęp do kontenera za pomocą adresu IP zewnętrznego hosta platformy Docker lub za pomocą `localhost`, jak pokazano na rysunku 8-8.
 
-![Widok przeglądarki odpowiedzi JSON zwróconej przez kontrolę kondycji](./media/image7.png)
+![Zrzut ekranu przedstawiający odpowiedź JSON zwróconą przez kontrolę kondycji.](./media/monitor-app-health/health-check-json-response.png)
 
 **Rysunek 8-8**. Sprawdzanie stanu kondycji pojedynczej usługi z poziomu przeglądarki
 
@@ -205,7 +205,7 @@ Przykład eShopOnContainers zawiera stronę sieci Web, która wyświetla przykł
 
 Na szczęście [AspNetCore. Diagnostics. HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) udostępnia również pakiet NuGet [AspNetCore. HealthChecks. UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) , który może służyć do wyświetlania wyników kontroli kondycji ze skonfigurowanych identyfikatorów URI.
 
-![Widok przeglądarki aplikacji webstatus przedstawiający stan kondycji wszystkich mikrousług z eShopOnContainers](./media/image8.png)
+![Zrzut ekranu stanu eShopOnContainers kondycji interfejsu użytkownika kontroli kondycji.](./media/monitor-app-health/health-check-status-ui.png)
 
 **Rysunek 8-9**. Przykładowy raport sprawdzania kondycji w eShopOnContainers
 
@@ -284,4 +284,4 @@ Na koniec, Jeśli przechowujesz wszystkie strumienie zdarzeń, możesz użyć pr
 
 >[!div class="step-by-step"]
 >[Poprzedni](implement-circuit-breaker-pattern.md)
->[Następny](../secure-net-microservices-web-applications/index.md)
+>[dalej](../secure-net-microservices-web-applications/index.md)

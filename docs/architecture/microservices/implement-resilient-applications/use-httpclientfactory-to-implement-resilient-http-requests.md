@@ -2,12 +2,12 @@
 title: Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 description: Dowiedz się, jak korzystać z HttpClientFactory, dostępnego od platformy .NET Core 2,1, do tworzenia wystąpień `HttpClient`, ułatwiając korzystanie z nich w aplikacjach.
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094000"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737742"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Używanie elementu HttpClientFactory do implementowania odpornych na błędy żądań HTTP
 
@@ -56,11 +56,13 @@ Co to jest "klient z określonym typem"? Jest to tylko `HttpClient`, który jest
 
 Na poniższym diagramie pokazano, w jaki sposób typy klientów są używane z `HttpClientFactory`:
 
-![ClientService (używany przez kontroler lub kod klienta) używa HttpClient utworzonego przez zarejestrowany IHttpClientFactory. Ta fabryka przypisuje HttpClient HttpMessageHandler z puli, którą zarządza. HttpClient można skonfigurować przy użyciu zasad Polly podczas rejestrowania IHttpClientFactory w kontenerze DI z metodą rozszerzenia AddHttpClient.](./media/image3.5.png)
+![Diagram przedstawiający sposób używania z HttpClientFactory.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **Rysunek 8-4**. Korzystanie z HttpClientFactory z klasami klienta z typem.
 
-Najpierw zainstaluj `HttpClientFactory` w aplikacji, instalując pakiet NuGet `Microsoft.Extensions.Http`, który zawiera metodę rozszerzenia `AddHttpClient()` dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory`, które mają być używane jako pojedyncze dla `IHttpClientFactory` interfejsu. Definiuje ona przejściową konfigurację dla `HttpMessageHandlerBuilder`. Ten program obsługi komunikatów (`HttpMessageHandler` Object), pobrany z puli, jest używany przez `HttpClient` zwracaną z fabryki.
+Na powyższym obrazie ClientService (używany przez kontroler lub kod klienta) używa `HttpClient` utworzonego przez zarejestrowany `IHttpClientFactory`. Ta fabryka przypisuje `HttpClient` `HttpMessageHandler` z puli, którą zarządza. `HttpClient` można skonfigurować przy użyciu zasad Polly podczas rejestrowania `IHttpClientFactory` w kontenerze DI z metodą rozszerzenia `AddHttpClient`.
+
+Aby skonfigurować powyższą strukturę, Dodaj `HttpClientFactory` w aplikacji, instalując pakiet NuGet `Microsoft.Extensions.Http`, który zawiera metodę rozszerzenia `AddHttpClient()` dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory`, które mają być używane jako pojedyncze dla `IHttpClientFactory` interfejsu. Definiuje ona przejściową konfigurację dla `HttpMessageHandlerBuilder`. Ten program obsługi komunikatów (`HttpMessageHandler` Object), pobrany z puli, jest używany przez `HttpClient` zwracaną z fabryki.
 
 W następnym kodzie można zobaczyć, jak `AddHttpClient()` może służyć do rejestrowania klientów typu (agenci usługi), którzy muszą korzystać z `HttpClient`.
 
@@ -197,4 +199,4 @@ Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale
 
 >[!div class="step-by-step"]
 >[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)
->[Następny](implement-http-call-retries-exponential-backoff-polly.md)
+>[dalej](implement-http-call-retries-exponential-backoff-polly.md)

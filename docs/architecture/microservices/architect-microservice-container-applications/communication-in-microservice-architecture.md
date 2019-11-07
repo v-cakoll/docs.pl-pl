@@ -2,22 +2,22 @@
 title: Komunikacja w ramach architektury mikrousługi
 description: Poznaj różne sposoby komunikacji między mikrousługami, opisując implikacje synchronicznych i asynchronicznych metod.
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295567"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738039"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
-W aplikacji monolitycznej uruchomionej w pojedynczym procesie składniki są wywoływane nawzajem przy użyciu metody lub wywołania funkcji na poziomie języka. Te elementy mogą być silnie powiązane, jeśli tworzysz obiekty z kodem (na przykład `new ClassName()`) lub można je wywołać w oddzielnym sposobie, jeśli używasz iniekcji zależności przez odwołanie do abstrakcyjnych, a nie wystąpień konkretnych obiektów. W obu przypadkach obiekty są uruchomione w ramach tego samego procesu. Największe wyzwanie w przypadku zmiany z aplikacji monolitycznej na aplikację opartą na mikrousługach polega na zmianie mechanizmu komunikacji. Bezpośrednia konwersja z metod wywołujących wywołania wywołań RPC do usług spowoduje rozmowę i nie wydajną komunikację, która nie będzie działać w środowiskach rozproszonych. Problemy związane z projektowaniem rozproszonego systemu są dostatecznie znane, że istnieje nawet znana jako [fallacies rozproszonego przetwarzania](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) danych, która zawiera listę założeń, które deweloperzy często tworzą podczas przechodzenia z monolitycznych do projektów rozproszonych .
+W aplikacji monolitycznej uruchomionej w pojedynczym procesie składniki są wywoływane nawzajem przy użyciu metody lub wywołania funkcji na poziomie języka. Te elementy mogą być silnie powiązane, jeśli tworzysz obiekty z kodem (na przykład `new ClassName()`) lub można je wywołać w oddzielnym sposób, jeśli używasz iniekcji zależności przez odwołanie do abstrakcyjnych, a nie wystąpień konkretnych obiektów. W obu przypadkach obiekty są uruchomione w ramach tego samego procesu. Największe wyzwanie w przypadku zmiany z aplikacji monolitycznej na aplikację opartą na mikrousługach polega na zmianie mechanizmu komunikacji. Bezpośrednia konwersja z metod wywołujących wywołania wywołań RPC do usług spowoduje rozmowę i nie wydajną komunikację, która nie będzie działać w środowiskach rozproszonych. Problemy związane z projektowaniem rozproszonego systemu są dostatecznie znane, że istnieje nawet znana jako [fallacies rozproszonego przetwarzania](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) danych, która zawiera listę założeń, które deweloperzy często tworzą podczas przechodzenia z monolitycznych do projektów rozproszonych .
 
 Nie ma jednego rozwiązania, ale kilka. Jedno rozwiązanie wymaga odizolowania mikrousług, jak to możliwe. Następnie należy użyć asynchronicznej komunikacji między mikrousługami wewnętrznymi i zamienić szczegółową komunikację, która jest typowa w komunikacji wewnątrz procesów między obiektami z grubszą komunikacją. Można to zrobić przez grupowanie wywołań i zwrócenie danych, które agregują wyniki wielu wywołań wewnętrznych do klienta.
 
 Aplikacja oparta na mikrousługach jest systemem rozproszonym uruchomionym w wielu procesach lub usługach, zwykle nawet na wielu serwerach lub hostach. Każde wystąpienie usługi jest zazwyczaj procesem. W związku z tym usługi muszą korzystać z protokołu komunikacji między procesami, takiego jak HTTP, AMQP lub protokołu binarnego, takiego jak TCP, w zależności od rodzaju każdej usługi.
 
-Społeczność mikrousług promuje się do "[inteligentnych punktów końcowych i potoków Dumb](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)" to slogan zachęca do zaprojektowania, jak to możliwe, między mikrousługami i możliwie jak najbardziej spójny w ramach jednej mikrousługi. Jak wyjaśniono wcześniej, każda mikrousługa posiada własne dane i własną logikę domeny. Jednak mikrousługi składające się na kompleksową aplikację zazwyczaj choreographed się przy użyciu komunikacji REST zamiast złożonych protokołów, takich jak WS-\* i elastyczna komunikacja oparta na zdarzeniach, a nie scentralizowana Proces biznesowy — koordynatorzy.
+Społeczność mikrousług promuje się do "[inteligentnych punktów końcowych i potoków Dumb](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)" to slogan zachęca do zaprojektowania, jak to możliwe, między mikrousługami i możliwie jak najbardziej spójny w ramach jednej mikrousługi. Jak wyjaśniono wcześniej, każda mikrousługa posiada własne dane i własną logikę domeny. Jednak mikrousługi składające się na kompleksową aplikację zwykle choreographed przy użyciu komunikacji REST, a nie złożonych protokołów, takich jak WS-\* i elastyczna komunikacja oparta na zdarzeniach, a nie scentralizowana Proces biznesowy — koordynatorzy.
 
 Dwa najczęściej używane protokoły to żądania HTTP/odpowiedzi z interfejsami API zasobów (w przypadku wykonywania zapytań w większości) oraz lekkie komunikaty asynchroniczne podczas komunikacji między wieloma mikrousługami. Wyjaśniono je szczegółowo w poniższych sekcjach.
 
@@ -51,9 +51,11 @@ Ponadto, jeśli istnieją zależności HTTP między mikrousługami, takie jak po
 
 Im większa jest liczba synchronicznych zależności między mikrousługami, takimi jak żądania zapytań, tym gorszy jest całkowity czas odpowiedzi dla aplikacji klienckich.
 
-![W przypadku komunikacji synchronicznej "łańcuch" żądań jest tworzony między mikrousługami przy zachowaniu żądania klienta. Jest to antywzorców. W przypadku mikrousług komunikacji asynchronicznej używa komunikatów asynchronicznych lub sondowania protokołu HTTP do komunikacji z innymi mikrousługami, ale żądanie klienta jest od razu obsługiwane.](./media/image15.png)
+![Diagram przedstawiający trzy typy komunikacji między mikrousługami.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **Rysunek 4-15**. Antywzorce i wzorce komunikacji między mikrousługami
+
+Jak pokazano na powyższym diagramie, w przypadku komunikacji synchronicznej "łańcuch" żądań jest tworzony między mikrousługami przy zachowaniu żądania klienta. Jest to antywzorców. W przypadku mikrousług komunikacji asynchronicznej używa komunikatów asynchronicznych lub sondowania protokołu HTTP do komunikacji z innymi mikrousługami, ale żądanie klienta jest od razu obsługiwane.
 
 Jeśli mikrousługa musi podnieść dodatkową akcję w innej mikrousłudze, jeśli to możliwe, nie należy wykonywać tej akcji synchronicznie i w ramach oryginalnego żądania mikrousługi i operacji odpowiedzi. Zamiast tego należy to zrobić asynchronicznie (przy użyciu komunikatów asynchronicznych lub zdarzeń integracji, kolejek itp.). Jednak tak dużo jak to możliwe, nie wywołuj akcji synchronicznie w ramach oryginalnej operacji synchronicznego żądania i odpowiedzi.
 
@@ -75,7 +77,7 @@ Istnieje również wiele formatów komunikatów, takich jak JSON lub XML, a nawe
 
 Gdy klient używa komunikacji żądania/odpowiedzi, wysyła żądanie do usługi, a następnie usługa przetwarza żądanie i wysyła odpowiedź. Komunikacja żądania/odpowiedzi jest szczególnie przydatna w przypadku wykonywania zapytań dotyczących danych dla interfejsu użytkownika w czasie rzeczywistym (interfejsu użytkownika na żywo) z aplikacji klienckich. W związku z tym w architekturze mikrousług prawdopodobnie użyjesz tego mechanizmu komunikacji dla większości zapytań, jak pokazano na rysunku 4-16.
 
-![Możesz użyć komunikacji żądania/odpowiedzi dla zapytań na żywo, gdy klient wysyła żądanie do bramy interfejsu API, przy założeniu, że odpowiedź z mikrousług zostanie nastąpić w bardzo krótkim czasie.](./media/image16.png)
+![Diagram przedstawiający formy komunikacji żądania/odpowiedzi dla zapytań i aktualizacji na żywo.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **Rysunek 4-16**. Używanie komunikacji żądania/odpowiedzi HTTP (synchroniczna lub asynchroniczna)
 
@@ -87,7 +89,7 @@ W przypadku korzystania z usług REST protokołu HTTP jako języka definicji int
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Fowlera Martin. Model** dojrzałości Richardson opis modelu Rest. \
+- **Fowlera Martin. Model dojrzałości Richardson** opis modelu Rest. \
   <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - Struktura **Swagger** Oficjalna lokacja. \
@@ -99,12 +101,12 @@ Kolejną możliwością (zwykle w różnych celach niż REST) jest komunikacja w
 
 Jak pokazano na rysunku 4-17, komunikacja HTTP w czasie rzeczywistym oznacza, że można mieć kod serwerowy wypychania zawartości do podłączonych klientów, ponieważ dane staną się dostępne, zamiast czekać, aż klient zażąda nowych danych.
 
-![Sygnalizujący to dobry sposób na osiągnięcie komunikacji w czasie rzeczywistym na potrzeby wypychania zawartości do klientów z serwera zaplecza.](./media/image17.png)
+![Diagram przedstawiający wypychanie i formy komunikacji w czasie rzeczywistym na podstawie sygnału.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **Rysunek 4-17**. Komunikacja asynchroniczna między wiadomościami w czasie rzeczywistym
 
-Ze względu na to, że komunikacja jest w czasie rzeczywistym, aplikacje klienckie pokazują zmiany niemal natychmiast. Jest to zwykle obsługiwane przez protokół, taki jak WebSockets, przy użyciu wielu połączeń usługi WebSockets (jeden na klienta). Typowym przykładem jest to, że usługa komunikuje się ze zmianą w wyniku gry sportowe z wieloma aplikacjami sieci Web klienta jednocześnie.
+Sygnalizujący to dobry sposób na osiągnięcie komunikacji w czasie rzeczywistym na potrzeby wypychania zawartości do klientów z serwera zaplecza. Ze względu na to, że komunikacja jest w czasie rzeczywistym, aplikacje klienckie pokazują zmiany niemal natychmiast. Jest to zwykle obsługiwane przez protokół, taki jak WebSockets, przy użyciu wielu połączeń usługi WebSockets (jeden na klienta). Typowym przykładem jest to, że usługa komunikuje się ze zmianą w wyniku gry sportowe z wieloma aplikacjami sieci Web klienta jednocześnie.
 
 >[!div class="step-by-step"]
->[Poprzedni](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)Następny
->[](asynchronous-message-based-communication.md)
+>[Poprzedni](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[dalej](asynchronous-message-based-communication.md)

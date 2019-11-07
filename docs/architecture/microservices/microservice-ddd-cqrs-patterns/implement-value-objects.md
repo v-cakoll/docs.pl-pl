@@ -2,12 +2,12 @@
 title: Implementowanie obiektów wartości
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z informacjami i opcjami dotyczącymi implementowania obiektów wartości przy użyciu nowych funkcji Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295925"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739869"
 ---
 # <a name="implement-value-objects"></a>Implementowanie obiektów wartości
 
@@ -17,11 +17,11 @@ Obiekt wartości może odwoływać się do innych jednostek. Na przykład w apli
 
 Rysunek 7-13 pokazuje obiekt wartości adresu w ramach agregacji zamówienia.
 
-![Wartość adresu — obiekt wewnątrz agregacji zamówienia.](./media/image14.png)
+![Diagram przedstawiający wartość adresu — obiekt wewnątrz agregacji zamówienia.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Rysunek 7-13**. Obiekt wartości adresu w ramach agregacji zamówienia
 
-Jak pokazano na rysunku 7-13, jednostka jest zwykle składa się z wielu atrybutów. Na przykład `Order` jednostka może być modelowana jako jednostka z tożsamością i złożona wewnętrznie z zestawu atrybutów, takich jak IDZamówienia, DataZamówienia, OrderItems itp. Ale adres, który jest po prostu złożoną wartością składającą się z kraju/regionu, ulicy, miasta itp. i nie ma tożsamości w tej domenie, musi być modelowany i traktowany jako obiekt wartości.
+Jak pokazano na rysunku 7-13, jednostka jest zwykle składa się z wielu atrybutów. Na przykład jednostka `Order` może być modelowana jako jednostka z tożsamością i złożona wewnętrznie z zestawu atrybutów, takich jak IDZamówienia, DataZamówienia, OrderItems itp. Ale adres, który jest po prostu złożoną wartością składającą się z kraju/regionu, ulicy, miasta itp. i nie ma tożsamości w tej domenie, musi być modelowany i traktowany jako obiekt wartości.
 
 ## <a name="important-characteristics-of-value-objects"></a>Ważne cechy obiektów wartości
 
@@ -224,11 +224,11 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 }
 ```
 
-W poprzednim kodzie `orderConfiguration.OwnsOne(o => o.Address)` Metoda określa `Address` , że właściwość jest jednostką `Order` będącą własnością typu.
+W poprzednim kodzie Metoda `orderConfiguration.OwnsOne(o => o.Address)` określa, że właściwość `Address` jest obiektem należącym do typu `Order`.
 
-Domyślnie konwencje EF Core nazywają kolumny bazy danych dla właściwości typu `EntityProperty_OwnedEntityProperty`jednostki będącej własnością. `Address` `State` `ZipCode` `Address_Street` `Address_City` `Country` W związku z tym, wewnętrzne właściwości będą wyświetlane w tabeliznazwami(itakdalejdlai).`Orders`
+Domyślnie konwencje EF Core nazywają kolumny bazy danych dla właściwości typu jednostki będącej własnością, jako `EntityProperty_OwnedEntityProperty`. W związku z tym właściwości wewnętrzne `Address` będą wyświetlane w tabeli `Orders` z nazwami `Address_Street`, `Address_City` (itd. dla `State`, `Country` i `ZipCode`).
 
-Możesz dołączyć metodę Fluent `Property().HasColumnName()` , aby zmienić nazwy tych kolumn. W przypadku, gdy `Address` jest właściwością publiczną, mapowania byłyby podobne do następujących:
+Możesz dołączyć metodę `Property().HasColumnName()` Fluent, aby zmienić nazwy tych kolumn. W przypadku, gdy `Address` jest właściwością publiczną, mapowania byłyby podobne do następujących:
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.Address)
@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-Istnieje możliwość łańcucha `OwnsOne` metody w ramach mapowania Fluent. W poniższym przykładzie `OrderDetails` hipotetycznym są własnością `BillingAddress` i `ShippingAddress`, które są oba `Address` typy. Następnie `OrderDetails`należy do typu.`Order`
+Istnieje możliwość łańcucha metody `OwnsOne` w ramach mapowania Fluent. W poniższym hipotetycznym przykładzie `OrderDetails` są własnością `BillingAddress` i `ShippingAddress`, które są oba typy `Address`. A następnie `OrderDetails` należy do typu `Order`.
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -285,13 +285,13 @@ public class Address
 
 - Ładowanie eager jest wykonywane automatycznie w typach posiadanych, tzn. nie ma potrzeby wywoływania dyrektywy include () w zapytaniu.
 
-- Można skonfigurować przy użyciu atrybutu \[\], który należy do EF Core 2,1
+- Można skonfigurować z atrybutami \[własnością\], w EF Core 2,1
 
 #### <a name="owned-entities-limitations"></a>Ograniczenia jednostek będących własnością:
 
-- Nie można utworzyć nieogólnymi\<T\> dla typu posiadanego (według projektu).
+- Nie można utworzyć Nieogólnymi\<T\> należącego do typu (zgodnie z projektem).
 
-- Nie można wywołać metody element modelbuilder.\<Entity\>T () w typach posiadanych (obecnie według projektu).
+- Nie można wywołać metody element modelbuilder. Entity\<T\>() dla typów posiadanych (obecnie według projektu).
 
 - Nie ma jeszcze kolekcji posiadanych typów (w EF Core 2,1, ale będą one obsługiwane w 2,2).
 
@@ -307,10 +307,10 @@ public class Address
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Fowlera Martin. Valueobject — wzorzec** \
+- **Fowlera Martin. Wartość wzorca wartościobject** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans. Projektowanie oparte na domenie: Zapełnianie się złożonością oprogramowania.** (Książka; zawiera omówienie obiektów wartości) \
+- **Eric Evans. Projektowanie oparte na domenie: zapełnianie złożoności w oprogramowaniu.** (Książka; zawiera omówienie obiektów wartości) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 - **Vaughn Vernon. Implementowanie projektu opartego na domenie.** (Książka; zawiera omówienie obiektów wartości) \
@@ -329,5 +329,5 @@ public class Address
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs>
 
 > [!div class="step-by-step"]
-> [Poprzedni](seedwork-domain-model-base-classes-interfaces.md)Następny
-> [](enumeration-classes-over-enum-types.md)
+> [Poprzedni](seedwork-domain-model-base-classes-interfaces.md)
+> [dalej](enumeration-classes-over-enum-types.md)

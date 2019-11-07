@@ -2,12 +2,12 @@
 title: Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji konteneryzowanych
 description: Uzyskaj informacje o ofertach firmy Microsoft w celu obsługi cyklu życia aplikacji platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 1829ce1051f091065f543a6cadcf5d179a284834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094456"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738088"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Wprowadzenie do platformy i narzędzi firmy Microsoft dla aplikacji w kontenerze
 
@@ -15,7 +15,9 @@ ms.locfileid: "73094456"
 
 Rysunek 3-1 przedstawia główne filary w cyklu życia aplikacji platformy Docker sklasyfikowane według typu pracy dostarczonej przez wiele zespołów (Programowanie aplikacji, procesy infrastruktury DevOps oraz zarządzanie i operacje IT). Zwykle w przedsiębiorstwie profile "osoba" odpowiadające za poszczególne obszary są różne. Są to ich umiejętności.
 
-![Narzędzia firmy Microsoft. W przypadku obciążeń projektowanie/projektowanie: aparat platformy Docker dla systemu Windows, VS i VS Code, .NET Core, Azure Kubernetes Service. W przypadku obciążeń kompilowania/testowania/dostarczania: Azure DevOps, Team Foundation Server, interfejsu wiersza polecenia platformy Docker i usługi Azure Kubernetes. W przypadku uruchamiania/monitorowania/zarządzania obciążeniem: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, inne koordynatorzy.](./media/image1.png)
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Diagram przedstawiający narzędzia firmy Microsoft, które są konieczne do obsługi aplikacji platformy Docker.":::
+Narzędzia firmy Microsoft. W przypadku obciążeń projektowanie/projektowanie: aparat platformy Docker dla systemu Windows, VS i VS Code, .NET Core, Azure Kubernetes Service. W przypadku obciążeń kompilowania/testowania/dostarczania: Azure DevOps, Team Foundation Server, interfejsu wiersza polecenia platformy Docker i usługi Azure Kubernetes. W przypadku uruchamiania/monitorowania/zarządzania obciążeniem: Azure Monitor, Azure Portal Azure Kubernetes Services, Service Fabric, inne koordynatorzy.
+:::image-end:::
 
 **Rysunek 3-1.** Główne filary w cyklu życia dla kontenerów platformy Docker z platformą i narzędziami firmy Microsoft
 
@@ -55,4 +57,4 @@ W związku z tym firma Microsoft oferuje kompletną podstawę do kompleksowego c
 
 >[!div class="step-by-step"]
 >[Poprzedni](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
->[Następny](../design-develop-containerized-apps/index.md)
+>[dalej](../design-develop-containerized-apps/index.md)

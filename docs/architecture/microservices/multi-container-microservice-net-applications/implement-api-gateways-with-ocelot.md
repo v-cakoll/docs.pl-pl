@@ -2,12 +2,12 @@
 title: Wdrażanie bram interfejsu API za pomocą rozwiązania Ocelot
 description: Dowiedz się, jak zaimplementować bramy interfejsu API za pomocą Ocelot oraz jak używać Ocelot w środowisku opartym na kontenerach.
 ms.date: 10/02/2018
-ms.openlocfilehash: cb452c330712ecf536cdf09f41fdbf828a4e9314
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 6c576a17d784777557bfb8bd99438eb111e8ec2e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771185"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737704"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bram interfejsu API za pomocą Ocelot
 
@@ -22,7 +22,7 @@ Aplikacja mikrousługi referencyjnej [eShopOnContainers](https://github.com/dotn
 
 Na poniższym diagramie architektury pokazano, w jaki sposób bramy interfejsu API są implementowane za pomocą Ocelot w eShopOnContainers.
 
-![diagram architektury eShopOnContainers pokazujący aplikacje klienckie, mikrousługi i bramy interfejsu API między](./media/image28.png)
+![Diagram przedstawiający architekturę eShopOnContainers.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
 **Rysunek 6-28**. Architektura eShopOnContainers z bramami interfejsu API
 
@@ -46,7 +46,7 @@ Jako usługi Key wnioskiem, w przypadku wielu aplikacji średniej i o dużej wie
 
 Na przykład eShopOnContainers ma około sześć wewnętrznych typów mikrousług, które muszą być publikowane za pomocą bram interfejsu API, jak pokazano na poniższej ilustracji.
 
-![Za pomocą bramy interfejsu API są publikowane tylko usługi koszyk, katalog, lokalizacja, Marketing, porządkowanie i płatności.](./media/image29.png)
+![Zrzut ekranu przedstawiający folder usługi z podfolderami.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-microservice-folders.png)
 
 **Rysunek 6-29**. Foldery mikrousług w rozwiązaniu eShopOnContainers w programie Visual Studio
 
@@ -54,7 +54,7 @@ Informacje o usłudze tożsamości — w projekcie, który jest pozostawiony do 
 
 Wszystkie te usługi są obecnie implementowane jako ASP.NET Core usług interfejsu API sieci Web, co umożliwia poinformowanie o kodzie. Skupmy się na jednym z mikrousług, takimi jak kod mikrousług katalogu.
 
-![Widok Eksploratora rozwiązań w projekcie katalogu. API.](./media/image30.png)
+![Zrzut ekranu przedstawiający Eksplorator rozwiązań pokazujący zawartość projektu w katalogu. API.](./media/implement-api-gateways-with-ocelot/catalog-api-microservice-folders.png)
 
 **Rysunek 6-30**. Przykładowa usługa interfejsu API sieci Web (mikrousługa katalogu)
 
@@ -130,7 +130,7 @@ To polecenie uruchamia tylko wykaz. kontener usługi API i zależności, które 
 
 Następnie można bezpośrednio uzyskać dostęp do mikrousługi katalogu i wyświetlić jej metody za pomocą interfejsu użytkownika programu Swagger, uzyskując dostęp bezpośrednio przez ten port "zewnętrzny", w tym przypadku `http://localhost:5101/swagger`:
 
-![Widok wieku interfejsu użytkownika struktury Swagger dla interfejsu API REST katalogu. API.](./media/image31.png)
+![Zrzut ekranu przedstawiający interfejs użytkownika struktury Swagger z interfejsem API REST katalogu. API.](./media/implement-api-gateways-with-ocelot/test-catalog-microservice.png)
 
 **Rysunek 6-31**. Testowanie mikrousługi katalogu za pomocą interfejsu użytkownika struktury Swagger
 
@@ -152,7 +152,7 @@ Install-Package Ocelot
 
 W eShopOnContainers, jej implementacja bramy interfejsu API to ASP.NET Core prosty projekt usługi WebHost, a middlewares Ocelot obsługują wszystkie funkcje bramy interfejsu API, jak pokazano na poniższej ilustracji:
 
-![Widok Eksplorator rozwiązań projektu bramy interfejsu API Ocelot.](./media/image32.png)
+![Zrzut ekranu przedstawiający Eksplorator rozwiązań pokazujący projekt bramy interfejsu API Ocelot.](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
 **Rysunek 6-32**. Projekt podstawowy OcelotApiGw w eShopOnContainers
 
@@ -186,7 +186,7 @@ namespace OcelotApiGw
 }
 ```
 
-Ważną kwestią dla Ocelot jest plik `configuration.json`, który należy dostarczyć konstruktorowi za pomocą metody `AddJsonFile()`. @No__t_0 to miejsce, w którym należy określić wszystkie przekierowania bramy interfejsu API, co oznacza, że zewnętrzne punkty końcowe z określonymi portami i skorelowane wewnętrzne punkty końcowe zwykle korzystają z różnych portów.
+Ważną kwestią dla Ocelot jest plik `configuration.json`, który należy dostarczyć konstruktorowi za pomocą metody `AddJsonFile()`. `configuration.json` to miejsce, w którym należy określić wszystkie przekierowania bramy interfejsu API, co oznacza, że zewnętrzne punkty końcowe z określonymi portami i skorelowane wewnętrzne punkty końcowe zwykle korzystają z różnych portów.
 
 ```json
 {
@@ -266,7 +266,7 @@ DownstreamPathTemplate, schemat i DownstreamHostAndPorts tworzą wewnętrzny adr
 
 Port jest portem wewnętrznym używanym przez usługę. W przypadku korzystania z kontenerów port określony w pliku dockerfile.
 
-@No__t_0 to nazwa usługi, która zależy od używanego rozwiązania nazwy usługi. W przypadku korzystania z platformy Docker — Tworzenie nazw usług są udostępniane przez hosta platformy Docker, który korzysta z nazw usług udostępnianych w plikach tworzenia platformy Docker. W przypadku korzystania z programu Orchestrator, takiego jak Kubernetes lub Service Fabric, ta nazwa powinna być rozpoznawana przez system DNS lub rozpoznawanie nazw dostarczone przez każdego koordynatora.
+`Host` to nazwa usługi, która zależy od używanego rozwiązania nazwy usługi. W przypadku korzystania z platformy Docker — Tworzenie nazw usług są udostępniane przez hosta platformy Docker, który korzysta z nazw usług udostępnianych w plikach tworzenia platformy Docker. W przypadku korzystania z programu Orchestrator, takiego jak Kubernetes lub Service Fabric, ta nazwa powinna być rozpoznawana przez system DNS lub rozpoznawanie nazw dostarczone przez każdego koordynatora.
 
 DownstreamHostAndPorts to tablica zawierająca hosta i port wszystkich usług podrzędnych, do których mają być przekazywane żądania. Zwykle zawiera on tylko jeden wpis, ale czasami może zajść potrzeba zrównoważenia obciążenia żądaniami do usług podrzędnych i Ocelot umożliwia dodanie więcej niż jednego wpisu, a następnie wybranie modułu równoważenia obciążenia. Ale jeśli korzystasz z platformy Azure i dowolnego programu Orchestrator, prawdopodobnie lepszym rozwiązaniem jest zrównoważenie równoważenia obciążenia za pomocą infrastruktury chmury i programu Orchestrator.
 
@@ -280,7 +280,7 @@ Jeśli jednak na pewno chcesz mieć autonomiczne mikrousługi, jak zostało to o
 
 W eShopOnContainers korzystamy z jednego obrazu kontenera Docker z bramą interfejsu API Ocelot, a następnie w czasie wykonywania tworzymy różne usługi/kontenery dla każdego typu interfejsu API-Gateway/BFF, dostarczając inny plik Configuration. JSON przy użyciu woluminu Docker do Uzyskaj dostęp do innego folderu komputera dla każdej usługi.
 
-![Pojedynczy obraz platformy Docker dla bramy interfejsu API Ocelot jest używany dla wszystkich czterech bram interfejsu API](./media/image33.png)
+![Diagram jednego obrazu platformy Docker bramy Ocelot dla wszystkich bram interfejsu API.](./media/implement-api-gateways-with-ocelot/reusing-single-ocelot-docker-image.png)
 
 **Rysunek 6-33**. Ponowne używanie pojedynczego obrazu platformy Docker Ocelot w wielu typach bram interfejsu API
 
@@ -354,7 +354,7 @@ webmarketingapigw:
 
 Ze względu na ten poprzedni kod, jak pokazano w Eksploratorze programu Visual Studio, jedynym plikiem potrzebnym do zdefiniowania każdej konkretnej bramy interfejsu API Business/BFF jest tylko plik Configuration. JSON, ponieważ cztery bramy interfejsu API są oparte na tym samym obrazie platformy Docker.
 
-![Jedyną różnicą między wszystkimi bramami interfejsu API jest plik Configuration. JSON na każdym z nich.](./media/image34.png)
+![Zrzut ekranu przedstawiający wszystkie bramy interfejsu API z plikami Configuration. JSON.](./media/implement-api-gateways-with-ocelot/ocelot-configuration-files.png)
 
 **Rysunek 6-34**. Jedynym plikiem wymaganym do zdefiniowania każdej usługi API Gateway/BFF z Ocelot jest plik konfiguracji
 
@@ -364,13 +364,13 @@ Teraz, jeśli uruchomisz eShopOnContainers z bramami interfejsu API (zawartymi d
 
 Na przykład podczas odwiedzania adresu URL nadrzędnego `http://localhost:5202/api/v1/c/catalog/items/2/` obsługiwanego przez bramę interfejsu API webshoppingapigw można uzyskać ten sam wynik z wewnętrznego podrzędnego adresu URL `http://catalog.api/api/v1/2` na hoście platformy Docker, jak w poniższej przeglądarce.
 
-![Widok przeglądarki odpowiedzi z katalogu. interfejs API przechodzenia przez bramę interfejsu API.](./media/image35.png)
+![Zrzut ekranu przeglądarki wyświetlającej odpowiedź przechodzącą przez bramę interfejsu API.](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **Rysunek 6-35**. Uzyskiwanie dostępu do mikrousługi za pomocą adresu URL dostarczonego przez bramę interfejsu API
 
 Ze względu na testowanie lub debugowanie, jeśli chcesz uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym) bez przechodzenia przez bramę interfejsu API, ponieważ "katalog. API" jest wewnętrznym rozpoznawaniem nazw DNS dla hosta platformy Docker (usługa Odnajdywanie obsługiwane przez usługi platformy Docker — Tworzenie nazw usług — jedynym sposobem bezpośredniego dostępu do kontenera jest użycie portu zewnętrznego opublikowanego w Docker-Compose. override. yml, który jest dostępny tylko dla testów programistycznych, takich jak `http://localhost:5101/api/v1/Catalog/items/1` w poniższej przeglądarce.
 
-![Widok przeglądarki odpowiedzi z katalogu. interfejs API przechodzi bezpośrednio do katalogu Catalog. API, identyczne z tym, za pośrednictwem bramy interfejsu API.](./media/image36.png)
+![Zrzut ekranu przeglądarki wyświetlającej bezpośrednią odpowiedź do katalogu. API.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
 **Rysunek 6-36**. Bezpośredni dostęp do mikrousługi na potrzeby testowania
 
@@ -384,13 +384,13 @@ Zgodnie z tym podejściem diagram kompozycji bramy interfejsu API jest w rzeczyw
 
 Na poniższym diagramie można także zobaczyć, jak usługi agregatora współpracują z odpowiednimi bramami interfejsu API.
 
-![Architektura eShopOnContainers, pokazująca usługi agregatora.](./media/image37.png)
+![Diagram architektury eShopOnContainers, w którym są wyświetlane usługi agregatora.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture-aggregator-services.png)
 
 **Rysunek 6-37**. Architektura eShopOnContainers z usługami agregatora
 
 Dalsze powiększanie, w obszarze roboczym "zakupy" na poniższej ilustracji widać, że chattiness między aplikacjami klienckimi i mikrousługami zostanie zredukowany w przypadku korzystania z usług agregatora w bramach interfejsu API.
 
-![Powiększ architekturę eShopOnContainers, pokazując usługi agregatora, które "" łączy "odpowiedź z kilku mikrousług, aby zredukować chattiness z klientem końcowym.](./media/image38.png)
+![Diagram przedstawiający powiększenie architektury eShopOnContainers.](./media/implement-api-gateways-with-ocelot/zoom-in-vision-aggregator-services.png)
 
 **Rysunek 6-38**. Powiększ zalety usług agregatora
 
@@ -404,17 +404,17 @@ W bramie interfejsu API Ocelot można korzystać z usługi uwierzytelniania, tak
 
 Ponieważ eShopOnContainers korzysta z wielu bram interfejsu API z granicami opartymi na obszarach BFF i firmowych, Usługa tożsamość/uwierzytelnianie pozostaje poza bramami interfejsu API, jak zostało to wyróżnione na żółto na poniższym diagramie.
 
-![diagram architektury eShopOnContainers pokazujący mikrousługę tożsamości poniżej bramy interfejsu API.](./media/image39.png)
+![Diagram przedstawiający mikrousługę tożsamości poniżej bramy interfejsu API.](./media/implement-api-gateways-with-ocelot/eshoponcontainers-identity-service-position.png)
 
 **Rysunek 6-39**. Pozycja usługi tożsamości w eShopOnContainers
 
 Jednak Ocelot obsługuje także rolę mikrousługi tożsamości/uwierzytelniania w ramach granicy bramy interfejsu API, tak jak w przypadku tego innego diagramu.
 
-![Uwierzytelnianie przy użyciu mikrousługi tożsamości pod węzłem API Gateway (AG): 1) AG żąda tokenu uwierzytelniania od mikrousługi tożsamości, 2) usługa tożsamości zwraca Toke do AG, 3-4), a następnie przesyła żądania od mikrousług przy użyciu tokenu uwierzytelniania.](./media/image40.png)
+![Diagram przedstawiający uwierzytelnianie w bramie interfejsu API Ocelot.](./media/implement-api-gateways-with-ocelot/ocelot-authentication.png)
 
 **Rysunek 6-40**. Uwierzytelnianie w Ocelot
 
-Ze względu na to, że aplikacja eShopOnContainers podzieliła bramę interfejsu API na wiele BFF (zaplecza dla frontonu) i firmowych bram interfejsu API, kolejną opcją jest utworzenie dodatkowej bramy interfejsu API dla zagadnień związanych z wycinaniem. Wybór ten byłby atrakcyjny w bardziej złożonej architekturze opartej na mikrousługach z wieloma usługami. Ponieważ w eShopOnContainers występuje tylko jeden problem z wycinaniem, to zdecydowano o prostu obsłużyć usługę zabezpieczeń z obszaru bramy interfejsu API w celu uproszczenia.
+Jak pokazano na poprzednim diagramie, gdy mikrousługa tożsamości znajduje się poniżej bramy API Gateway (AG): 1), usługa AG żąda tokenu uwierzytelniania od mikrousługi tożsamości, 2) usługa Identity-Service zwraca token do AG, 3-4), żądania od mikrousług przy użyciu tokenu uwierzytelniania. Ze względu na to, że aplikacja eShopOnContainers podzieliła bramę interfejsu API na wiele BFF (zaplecza dla frontonu) i firmowych bram interfejsu API, kolejną opcją jest utworzenie dodatkowej bramy interfejsu API dla zagadnień związanych z wycinaniem. Wybór ten byłby atrakcyjny w bardziej złożonej architekturze opartej na mikrousługach z wieloma usługami. Ponieważ w eShopOnContainers występuje tylko jeden problem z wycinaniem, to zdecydowano o prostu obsłużyć usługę zabezpieczeń z obszaru bramy interfejsu API w celu uproszczenia.
 
 W każdym przypadku, jeśli aplikacja jest zabezpieczona na poziomie bramy interfejsu API, moduł uwierzytelniania bramy interfejsu API Ocelot jest najpierw odwiedzany przy próbie użycia dowolnej zabezpieczonej mikrousługi. Spowoduje to ponowne skierowanie żądania HTTP do odwiedzania tożsamości lub mikrousługi uwierzytelniania w celu uzyskania tokenu dostępu, aby można było odwiedzić chronione usługi za pomocą access_token.
 
@@ -540,11 +540,11 @@ Ruch przychodzący polega jednak jedynie na przekierowaniu żądań HTTP, ale ni
 
 Posiadanie warstwy Nginx w Kubernetes przed aplikacjami sieci Web, a kilka bram interfejsu API Ocelot/BFF jest idealną architekturą, jak pokazano na poniższym diagramie.
 
-![Ruch przychodzący Kubernetes działa jako zwrotny serwer proxy dla całego ruchu do aplikacji, w tym aplikacji sieci Web, które zwykle znajdują się poza zakresem bramy interfejsu API.](./media/image41.png)
+![Diagram przedstawiający sposób dopasowania warstwy ruchu przychodzącego do środowiska AKS.](./media/implement-api-gateways-with-ocelot/eshoponcontainer-ingress-tier.png)
 
 **Rysunek 6-41**. Warstwa transferu danych przychodzących w eShopOnContainers po wdrożeniu w Kubernetes
 
-Gdy wdrażasz eShopOnContainers w usłudze _Kubernetes,_ uwidaczniamy tylko kilka usług lub punktów końcowych za pośrednictwem transferu danych przychodzących, zasadniczo Poniższa lista przyrostów adresów URL:
+Ruch przychodzący Kubernetes działa jako zwrotny serwer proxy dla całego ruchu do aplikacji, w tym aplikacji sieci Web, które zwykle znajdują się poza zakresem bramy interfejsu API. Gdy wdrażasz eShopOnContainers w usłudze _Kubernetes,_ uwidaczniamy tylko kilka usług lub punktów końcowych za pośrednictwem transferu danych przychodzących, zasadniczo Poniższa lista przyrostów adresów URL:
 
 - `/` aplikacji sieci Web SPA klienta
 - `/webmvc` aplikacji sieci Web Client MVC
@@ -579,4 +579,4 @@ W przypadku korzystania z bramy interfejsu API Ocelot, która została opisana w
 
 > [!div class="step-by-step"]
 > [Poprzedni](background-tasks-with-ihostedservice.md)
-> [Następny](../microservice-ddd-cqrs-patterns/index.md)
+> [dalej](../microservice-ddd-cqrs-patterns/index.md)

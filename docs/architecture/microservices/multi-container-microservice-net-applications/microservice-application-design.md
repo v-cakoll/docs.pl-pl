@@ -2,12 +2,12 @@
 title: Projektowanie aplikacji opartej na mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z korzyściami i downsidesami aplikacji zorientowanych na mikrousługach, aby móc podejmować świadome decyzje.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772061"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739538"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji opartej na mikrousługach
 
@@ -65,9 +65,11 @@ Dzięki temu można skoncentrować się na architekturze i technologiach, zamias
 
 Aplikacja składa się z wielu podsystemów, w tym kilku frontonów interfejsu użytkownika magazynu (aplikacji sieci Web i natywnej aplikacji mobilnej) oraz mikrousług i kontenerów zaplecza dla wszystkich wymaganych operacji po stronie serwera z kilkoma bramami interfejsu API jako skonsolidowane punkty wejścia do mikrousług wewnętrznych. Rysunek 6-1 przedstawia architekturę aplikacji referencyjnej.
 
-![Klienci mobilni i SPA komunikują się z punktami końcowymi bramy interfejsu API, które następnie komunikują się z mikrousługami. Tradycyjni klienci sieci Web komunikują się z mikrousługą MVC, która komunikuje się z mikrousługami](./media/image1.png)
+![Diagram aplikacji klienckich korzystających z eShopOnContainers w ramach jednego hosta platformy Docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Rysunek 6-1**. Architektura aplikacji eShopOnContainers Reference dla środowiska programistycznego
+
+Powyższy diagram pokazuje, że klienci mobilni i SPA komunikują się z punktami końcowymi bramy interfejsu API Single, które następnie komunikują się z mikrousługami. Tradycyjni klienci sieci Web komunikują się z mikrousługą MVC, która komunikuje się z mikrousługami za pomocą bramy interfejsu API.
 
 **Środowisko hostingu**. Na rysunku 6-1 widzisz kilka kontenerów wdrożonych w ramach jednego hosta platformy Docker. W przypadku wdrożenia na pojedynczym hoście platformy Docker przy użyciu polecenia "Docker-Utwórz" w przypadku programu. Jeśli jednak używany jest program Orchestrator lub klaster kontenerów, każdy kontener może być uruchomiony na innym hoście (węzeł), a w każdym węźle można uruchomić dowolną liczbę kontenerów, jak wyjaśniono wcześniej w sekcji architektury.
 
@@ -140,7 +142,7 @@ Jak wspomniano w sekcji architektura podczas projektowania i kompilowania złoż
 
 Zewnętrzna architektura to architektura mikrousług złożona przez wiele usług, zgodnie z zasadami opisanymi w sekcji architektura tego przewodnika. Jednakże, w zależności od rodzaju mikrousług i niezależnie od wybranej architektury mikrousług, jest to typowy i czasami zaleca się posiadanie różnych wewnętrznych architektur, z których każda jest oparta na różnych wzorcach, dla różnych mikrousług. Mikrousługi mogą nawet korzystać z różnych technologii i języków programowania. Rysunek 6-2 ilustruje tę różnorodność.
 
-![Różnica między architekturą zewnętrzną: wzorce mikrousług, bramy interfejsu API, komunikacja odporna, publikacje/podpłaty, itp. i architektura wewnętrzna: oparte na danych/CRUD, wzorce DDD, iniekcja zależności, wiele bibliotek itd.](./media/image2.png)
+![Diagram porównujący wzorce architektury zewnętrznej i wewnętrznej.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Rysunek 6-2**. Zewnętrzna a wewnętrzna architektura i projekt
 
@@ -170,11 +172,11 @@ Można również tworzyć mikrousługi z wieloma technologiami i językami, taki
 
 Ważnym punktem jest to, że żaden wzorzec architektury lub styl ani żadna konkretna technologia nie są odpowiednie dla wszystkich sytuacji. Rysunek 6-3 zawiera kilka metod i technologii (choć nie w określonej kolejności), które mogą być używane w różnych mikrousługach.
 
-![Wieloarchitekturowy wzorzec i mikrousługi Polyglot oznacza, że można mieszać i dopasowywać Języki i technologie do potrzeb każdej mikrousługi i nadal muszą one się od siebie wzajemnie rozmawiać.](./media/image3.png)
+![Diagram przedstawiający 12 złożonych mikrousług w architekturze światowej Polyglot.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Rysunek 6-3**. Wzorce wieloarchitekturowe i Polyglot mikrousługi na świecie
 
-Jak pokazano na rysunku 6-3 w aplikacjach składających się z wielu mikrousług (powiązanych kontekstów w terminologii projektowej opartej na domenie lub po prostu "podsystemów" jako autonomicznych mikrousług), można zaimplementować każdą mikrousługę w inny sposób. Każdy z nich może mieć inny wzorzec architektury i używać różnych języków i baz danych w zależności od rodzaju aplikacji, wymagań firmy i priorytetów. W niektórych przypadkach mikrousługi mogą być podobne. Jednak zazwyczaj nie jest to przypadek, ponieważ granica i wymagania kontekstu każdego podsystemu są zwykle różne.
+Wieloarchitekturowy wzorzec i mikrousługi Polyglot oznacza, że można mieszać i dopasowywać Języki i technologie do potrzeb każdej mikrousługi i nadal muszą one się od siebie wzajemnie rozmawiać. Jak pokazano na rysunku 6-3 w aplikacjach składających się z wielu mikrousług (powiązanych kontekstów w terminologii projektowej opartej na domenie lub po prostu "podsystemów" jako autonomicznych mikrousług), można zaimplementować każdą mikrousługę w inny sposób. Każdy z nich może mieć inny wzorzec architektury i używać różnych języków i baz danych w zależności od rodzaju aplikacji, wymagań firmy i priorytetów. W niektórych przypadkach mikrousługi mogą być podobne. Jednak zazwyczaj nie jest to przypadek, ponieważ granica i wymagania kontekstu każdego podsystemu są zwykle różne.
 
 Na przykład w przypadku prostej aplikacji do konserwacji CRUD może nie mieć sensu projektowania i implementowania wzorców DDD. Jednak w przypadku podstawowej domeny lub podstawowej firmy może być konieczne zastosowanie bardziej zaawansowanych wzorców w celu zajęcia się złożonością biznesową z ciągle zmieniającymi się regułami biznesowymi.
 
@@ -184,4 +186,4 @@ Dla każdego z tych przypadków nie ma punktora Silver lub odpowiedniego wzorca 
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[Następny](data-driven-crud-microservice.md)
+>[dalej](data-driven-crud-microservice.md)

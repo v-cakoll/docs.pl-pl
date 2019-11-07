@@ -4,17 +4,17 @@ description: Dowiedz się, jak wybierać między tradycyjnymi aplikacjami sieci 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296403"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739457"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybór między tradycyjnymi Web Apps i aplikacjami jednostronicowymi (aplikacji jednostronicowych)
 
-> "Atwoodem: Każda aplikacja, którą można napisać w języku JavaScript, zostanie ostatecznie zapisywana w języku JavaScript.  
-> _\-Jan Atwoodem_
+> "Atwoodeme: Każda aplikacja, którą można napisać w języku JavaScript, zostanie ostatecznie zapisywana w języku JavaScript".  
+> _\- Jan Atwoodem_
 
 Obecnie istnieją dwa ogólne podejścia do tworzenia aplikacji sieci Web: tradycyjne aplikacje sieci Web, które wykonują większość logiki aplikacji na serwerze i aplikacje jednostronicowe (aplikacji jednostronicowych), które wykonują większość logiki interfejsu użytkownika w przeglądarce internetowej. Komunikacja z serwerem sieci Web polega głównie na użyciu interfejsów API sieci Web. Podejście hybrydowe jest również możliwe, najprostszym hostem co najmniej jednej aplikacji podrzędnej, podobnej do SPA, w ramach większej tradycyjnej aplikacji sieci Web.
 
@@ -40,7 +40,7 @@ Ulepszenia środowiska użytkownika wykonywane przez model SPA muszą zostać od
 
 ## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3,0 wprowadza nowy model umożliwiający tworzenie rozbudowanego, interaktywnego i składającego się interfejsu użytkownika o nazwie Blazor. Blazor po stronie serwera umożliwia deweloperom tworzenie interfejsu użytkownika przy użyciu Razor na serwerze i dla tego kodu do dostarczenia do przeglądarki i wykonywanie po stronie klienta przy użyciu biblioteki JavaScript o nazwie webassembly. ASP.NET Core 3,0 nadal jest w fazie opracowywania, ale powinno się oczekiwać, że więcej informacji na temat tej technologii znajduje się w aktualizacji 3,0 do tej książki elektronicznej. Aby uzyskać więcej informacji na temat Blazor, zobacz [Rozpoczynanie pracy z Blazor](https://blazor.net/docs/get-started.html).
+ASP.NET Core 3,0 wprowadza nowy model umożliwiający tworzenie rozbudowanego, interaktywnego i składającego się interfejsu użytkownika o nazwie Blazor. Po stronie serwera Blazor umożliwiają deweloperom tworzenie interfejsu użytkownika przy użyciu Razor na serwerze i dla tego kodu do dostarczenia do przeglądarki i wykonywanie po stronie klienta przy użyciu [zestawu webassembly](https://webassembly.org/). ASP.NET Core 3,0 nadal jest w fazie opracowywania, ale powinno się oczekiwać, że więcej informacji na temat tej technologii znajduje się w aktualizacji 3,0 do tej książki elektronicznej. Aby uzyskać więcej informacji na temat Blazor, zobacz [Rozpoczynanie pracy z Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Kiedy należy wybrać tradycyjne aplikacje sieci Web
 
@@ -90,10 +90,10 @@ Poniższa tabela decyzji podsumowuje niektóre podstawowe czynniki, które nale�
 | **1U**                                           | **Tradycyjna aplikacja internetowa** | **Aplikacja jednostronicowa** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
 | Wymagana znajomość zespołu w języku JavaScript/TypeScript | **Mniejsze**             | **Wymagane**                |
-| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwane**           | **Nieobsługiwane**           |
-| Minimalne zachowanie aplikacji po stronie klienta             | **Well-Suited**         | **Zbyt obszerne**                |
-| Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Separator**             | **Well-Suited**             |
+| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwał**           | **Nieobsługiwane**           |
+| Minimalne zachowanie aplikacji po stronie klienta             | **Dobrze dopasowane**         | **Zbyt obszerne**                |
+| Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Separator**             | **Dobrze dopasowane**             |
 
 >[!div class="step-by-step"]
->[Poprzedni](modern-web-applications-characteristics.md)Następny
->[](architectural-principles.md)
+>[Poprzedni](modern-web-applications-characteristics.md)
+>[dalej](architectural-principles.md)

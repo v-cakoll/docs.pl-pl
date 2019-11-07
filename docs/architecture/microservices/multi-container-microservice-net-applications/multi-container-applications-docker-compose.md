@@ -2,12 +2,12 @@
 title: Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 description: Jak określić kompozycję mikrousług dla aplikacji wielokontenera z Docker-Compose. yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416706"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737077"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji z wieloma kontenerami za pomocą pliku docker-compose.yml
 
@@ -177,9 +177,15 @@ Można użyć pojedynczego pliku Docker-Compose. yml, jak w przykładach uproszc
 
 Domyślnie Redaguj odczytuje dwa pliki, Docker-Compose. yml i opcjonalny plik Docker-Compose. override. yml. Jak pokazano na rysunku 6-11, podczas korzystania z programu Visual Studio i włączania obsługi platformy Docker program Visual Studio tworzy również dodatkowy plik Docker-Compose. vs. Debug. g. yml do debugowania aplikacji, można przyjrzeć się temu plikowi do folderu obj\\Docker\\ w folderze głównym rozwiązania.
 
-![Platforma Docker — Tworzenie struktury pliku projektu:. dockerignore, aby zignorować pliki; Docker-Compose. yml, aby tworzyć mikrousługi; Docker-Compose. override. yml, aby skonfigurować środowisko mikrousług.](./media/image12.png)
+![Zrzut ekranu przedstawiający pliki w projekcie platformy Docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Rysunek 6-11**. Docker — tworzenie plików w programie Visual Studio 2017
+
+Struktura pliku **platformy Docker — tworzenie** projektu:
+
+* *. dockerignore* — służy do ignorowania plików
+* *Docker-Compose. yml* — używany do tworzenia mikrousług
+* *Docker-Compose. override. yml* — służy do konfigurowania środowiska mikrousług
 
 Można edytować plik platformy Docker z dowolnym edytorem, takim jak Visual Studio Code lub subwapno, i uruchamiać aplikację przy użyciu polecenia Docker-Zredaguj w górę.
 
@@ -191,11 +197,11 @@ Plik Docker-Compose. override. yml, jak jego nazwa sugeruje, zawiera ustawienia 
 
 Typowym przypadkiem użycia jest definiowanie wielu plików redagowania, aby można było kierować wiele środowisk, takich jak produkcja, przemieszczanie, CI lub programowanie. Aby obsłużyć te różnice, można podzielić konfigurację redagowania na wiele plików, jak pokazano na rysunku 6-12.
 
-![Można połączyć wiele plików Docker-Compose*. FML, aby obsługiwać różne środowiska.](./media/image13.png)
+![Diagram trzech plików do redagowania platformy Docker, ustawiony w celu zastąpienia pliku podstawowego.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Rysunek 6-12**. Wiele plików programu Docker — tworzenie przesłania wartości w podstawowym pliku Docker-Compose. yml
 
-Zaczynasz od podstawowego pliku Docker-Compose. yml. Ten plik podstawowy musi zawierać podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład eShopOnContainers ma następujący plik Docker-Compose. yml (uproszczony z mniejszą ilością usług) jako plik podstawowy.
+Można połączyć wiele plików Docker-Compose*. yml, aby obsługiwać różne środowiska. Zaczynasz od podstawowego pliku Docker-Compose. yml. Ten plik podstawowy musi zawierać podstawowe lub statyczne ustawienia konfiguracji, które nie zmieniają się w zależności od środowiska. Na przykład eShopOnContainers ma następujący plik Docker-Compose. yml (uproszczony z mniejszą ilością usług) jako plik podstawowy.
 
 ```yml
 #docker-compose.yml (Base)

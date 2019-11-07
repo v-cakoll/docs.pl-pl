@@ -2,12 +2,12 @@
 title: Wprowadzenie do kontenerów i platformy Docker
 description: Zapoznaj się z ogólnymi omówieniem głównych korzyści płynących z używania platformy Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295673"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738177"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i platformy Docker
 
@@ -19,7 +19,7 @@ Kontenery izolują również aplikacje od siebie w udostępnionym systemie opera
 
 Każdy kontener może uruchamiać całą aplikację sieci Web lub usługę, jak pokazano na rysunku 1-1. W tym przykładzie Host platformy Docker jest hostem kontenera, a APP1, APP2, Svc1 i Svc2 są kontenerami aplikacjami lub usługami.
 
-![Dwie aplikacje i dwie usługi działające w systemie operacyjnym w maszynie wirtualnej lub serwerze fizycznym](./media/image1.png)
+![Diagram przedstawiający cztery kontenery działające na maszynie wirtualnej lub serwerze.](./media/index/multiple-containers-single-host.png)
 
 **Rysunek 1-1**. Wiele kontenerów uruchomionych na hoście kontenera
 

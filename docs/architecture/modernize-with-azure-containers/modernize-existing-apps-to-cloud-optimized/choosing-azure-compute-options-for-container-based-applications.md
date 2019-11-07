@@ -2,12 +2,12 @@
 title: Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 ms.date: 05/04/2018
-ms.openlocfilehash: 2262d2cf4e69e19e8b78c07c239602dd5dccc3cd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 079c9c5ca02b6dc75214d63cb59afdead03d3190
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318663"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736998"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Wybieranie platform obliczeniowych platformy Azure dla aplikacji opartych na kontenerach
 
@@ -27,8 +27,8 @@ Po dokładniejszej analizie potrzeb aplikacji wybrany produkt może być inny. J
 
 Na rysunku 1 można zobaczyć podział różnych rodzajów aplikacji i ich idealne scenariusze hostingu platformy Azure.
 
-![Rysunek 1](./media/image8.5.png)
+![Tabela, w której scenariusze hostingu platformy Azure są najlepsze dla różnych aplikacji.](./media/choosing-azure-compute-options-for-container-based-applications/azure-hosting-scenarios-for-apps.png)
 
 > [!div class="step-by-step"]
 > [Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-> [Następny](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

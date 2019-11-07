@@ -2,12 +2,12 @@
 title: Testowanie aplikacji internetowych i usług ASP.NET Core
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Poznaj architekturę testowania ASP.NET Core usług i aplikacji sieci Web w kontenerach.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772014"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739477"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie aplikacji internetowych i usług ASP.NET Core
 
@@ -144,7 +144,7 @@ Testy aplikacji referencyjnych (eShopOnContainers) zostały niedawno rozbudowane
 
 Test jednostkowy i integracji na mikrousług są zawarte w folderze testowym w każdej mikrousłudze i aplikacji testy obciążenia są zawarte w folderze testowym w folderze rozwiązania, jak pokazano na rysunku 6-25.
 
-![Struktura testów w eShopOnContainers: każda usługa ma folder "test", który zawiera testy jednostkowe i funkcjonalne. W folderze "test" rozwiązania istnieją testy funkcjonalne i test obciążenia na poziomie aplikacji.](./media/image42.png)
+![Zrzut ekranu przedstawiający a wskazujący niektóre projekty testowe w rozwiązaniu.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Rysunek 6-25**. Testuj strukturę folderów w eShopOnContainers
 
@@ -208,4 +208,4 @@ Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylk
 
 > [!div class="step-by-step"]
 > [Poprzedni](subscribe-events.md)
-> [Następny](background-tasks-with-ihostedservice.md)
+> [dalej](background-tasks-with-ihostedservice.md)

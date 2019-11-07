@@ -2,12 +2,12 @@
 title: Projektowanie mikrousługi zorientowanej na wzorzec DDD
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z tematem projektowanie mikrousługi porządkowania zorientowanego na DDD i jej warstw aplikacji.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295993"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739932"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projektowanie mikrousługi zorientowanej na DDD
 
@@ -37,13 +37,13 @@ Podczas rozwiązywania złożoności należy mieć model domeny kontrolowany prz
 
 Rysunek 7-5 pokazuje, w jaki sposób projekt warstwowy jest zaimplementowany w aplikacji eShopOnContainers.
 
-![Trzy warstwy w DDD mikrousługach, takie jak porządkowanie. Każda warstwa jest projektem programu VS: Warstwa aplikacji jest porządkowaniem. interfejsem API, warstwą domeną jest porządkowanie. domena i warstwa infrastruktury to porządkowanie. infrastruktura.](./media/image6.png)
+![Diagram przedstawiający warstwy w mikrousługach projektowania opartych na domenie.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Rysunek 7-5**. DDD warstwy w mikrousłudze porządkowania w eShopOnContainers
 
-Chcesz zaprojektować system w taki sposób, aby każda warstwa komunikuje się tylko z pewnymi innymi warstwami. Może to być łatwiejsze do wymuszenia, jeśli warstwy są implementowane jako różne biblioteki klas, ponieważ można jasno określić, jakie zależności są ustawiane między bibliotekami. Na przykład warstwa modelu domeny nie powinna przyjmować zależności od żadnej innej warstwy (klasy modelu domeny powinny być zwykłymi obiektami środowiska CLR lub [poco](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), Klasa). Jak pokazano na rysunku 7-6, **uporządkowana** Biblioteka warstw ma zależności tylko od bibliotek .NET Core lub pakietów NuGet, ale nie dla żadnej innej biblioteki niestandardowej, takiej jak biblioteka danych lub biblioteka trwałości.
+Trzy warstwy w DDD mikrousługach, takie jak porządkowanie. Każda warstwa jest projektem programu VS: warstwa aplikacji ma kolejność. interfejs API, warstwa domeny. Chcesz zaprojektować system w taki sposób, aby każda warstwa komunikuje się tylko z pewnymi innymi warstwami. Może to być łatwiejsze do wymuszenia, jeśli warstwy są implementowane jako różne biblioteki klas, ponieważ można jasno określić, jakie zależności są ustawiane między bibliotekami. Na przykład warstwa modelu domeny nie powinna przyjmować zależności od żadnej innej warstwy (klasy modelu domeny powinny być zwykłymi obiektami środowiska CLR lub [poco](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), Klasa). Jak pokazano na rysunku 7-6, **uporządkowana** Biblioteka warstw ma zależności tylko od bibliotek .NET Core lub pakietów NuGet, ale nie dla żadnej innej biblioteki niestandardowej, takiej jak biblioteka danych lub biblioteka trwałości.
 
-![Widok Eksplorator rozwiązań uporządkowania zależności domeny, który pokazuje, zależy tylko od bibliotek .NET Core.](./media/image7.png)
+![Zrzut ekranu przedstawiający kolejność. zależności domeny.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Rysunek 7-6**. Warstwy zaimplementowane jako biblioteki umożliwiają lepszą kontrolę zależności między warstwami
 
@@ -51,7 +51,7 @@ Chcesz zaprojektować system w taki sposób, aby każda warstwa komunikuje się 
 
 Model [oparty na domenie](https://domainlanguage.com/ddd/) "Eric Evans" zapewnia następujące informacje dotyczące warstwy modelu domeny i warstwy aplikacji.
 
-**Warstwa modelu domeny**: Odpowiedzialny za przedstawianie koncepcji firmy, informacji o sytuacji biznesowej i regułach biznesowych. Stan, który odzwierciedla sytuację biznesową, jest kontrolowany i używany w tym miejscu, mimo że szczegółowe informacje techniczne dotyczące przechowywania są delegowane do infrastruktury. Ta warstwa jest sercem oprogramowania biznesowego.
+**Warstwa modelu domeny**: odpowiada za reprezentowanie koncepcji firmy, informacji o sytuacji biznesowej i regułach biznesowych. Stan, który odzwierciedla sytuację biznesową, jest kontrolowany i używany w tym miejscu, mimo że szczegółowe informacje techniczne dotyczące przechowywania są delegowane do infrastruktury. Ta warstwa jest sercem oprogramowania biznesowego.
 
 Warstwa modelu domeny to miejsce, w którym jest wyrażana działalność firmy. W przypadku zaimplementowania warstwy modelu domeny mikrousług w programie .NET warstwa ta jest kodowana jako Biblioteka klas z jednostkami domeny, które przechwytują dane i zachowanie (metody z logiką).
 
@@ -85,23 +85,23 @@ Zgodnie z wcześniej wymienionymi zasadami [trwałości ignorujących](https://d
 
 W ten sposób warstwy lub biblioteki klas i projekty powinny ostatecznie zależeć od warstwy modelu domeny (biblioteki), a nie odwrotnie, jak pokazano na rysunku 7-7.
 
-![Zależności w usłudze DDD warstwa aplikacji zależy od domeny i infrastruktury, a infrastruktura zależy od domeny, ale domena nie jest zależna od żadnej warstwy.](./media/image8.png)
+![Diagram przedstawiający zależności między warstwami usługi DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Rysunek 7-7**. Zależności między warstwami w DDD
 
-Ten projekt warstwy powinien być niezależny dla każdej mikrousługi. Jak wspomniano wcześniej, można zaimplementować najbardziej złożone mikrousługi w formie wzorców DDD, jednocześnie implementując prostsze mikrousługi oparte na danych (proste CRUD w jednej warstwie) w prostszy sposób.
+Zależności w usłudze DDD warstwa aplikacji zależy od domeny i infrastruktury, a infrastruktura zależy od domeny, ale domena nie jest zależna od żadnej warstwy. Ten projekt warstwy powinien być niezależny dla każdej mikrousługi. Jak wspomniano wcześniej, można zaimplementować najbardziej złożone mikrousługi w formie wzorców DDD, jednocześnie implementując prostsze mikrousługi oparte na danych (proste CRUD w jednej warstwie) w prostszy sposób.
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **DevIQ. Zasada Ignorujących trwałości** \
+- **DevIQ. \ zasady trwałości Ignorujących**
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. Ignorujących infrastruktury** \
+- **Oren Eini. Infrastruktura Ignorujących** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez. Architektura warstwowa w projekcie opartym na domenie** \
+- **Angel Lopez. Architektura warstwowa w \ projektowania opartego na domenie**
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[Poprzedni](cqrs-microservice-reads.md)Następny
->[](microservice-domain-model.md)
+>[Poprzedni](cqrs-microservice-reads.md)
+>[dalej](microservice-domain-model.md)

@@ -2,12 +2,12 @@
 title: Implementowanie wzorca wyłącznika
 description: Dowiedz się, jak zaimplementować wzorzec wyłącznika jako uzupełniający system do ponawiania prób http.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094115"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732855"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementowanie wzorca wyłącznika
 
@@ -94,7 +94,7 @@ Na przykład, gdy aplikacja jest uruchomiona, można włączyć oprogramowanie p
 
 Następnie można sprawdzić stan przy użyciu identyfikatora URI `http://localhost:5103/failing`, jak pokazano na rysunku 8-5.
 
-![Widok przeglądarki wyniku sprawdzania stanu niepowodzenia symulacji oprogramowania pośredniczącego](./media/image4.png)
+![Zrzut ekranu przedstawiający sprawdzanie stanu niepowodzenia symulacji oprogramowania pośredniczącego.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Rysunek 8-5**. Sprawdzanie stanu ASP.NET oprogramowania pośredniczącego "Niepowodzenie" — w tym przypadku wyłączone.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Oto podsumowanie. Zasady ponawiania próbją kilka razy wykonać żądanie HTTP i pobierają błędy HTTP. Gdy liczba ponownych prób osiągnie maksymalną liczbę ustawioną dla zasad wyłącznika (w tym przypadku 5), aplikacja zgłasza BrokenCircuitException. Wynik jest przyjaznym komunikatem, jak pokazano na rysunku 8-6.
 
-![Widok przeglądarki aplikacji sieci Web MVC pokazujący komunikat "usługa koszyka" wyzwolony przez zasady wyłącznika](./media/image5.png)
+![Zrzut ekranu przedstawiający aplikację sieci Web MVC z niedziałającym błędem usługi koszyka.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Rysunek 8-6**. Wyłącznik zwraca błąd do interfejsu użytkownika
 
@@ -149,4 +149,4 @@ Kolejną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (które wy
 
 >[!div class="step-by-step"]
 >[Poprzedni](implement-http-call-retries-exponential-backoff-polly.md)
->[Następny](monitor-app-health.md)
+>[dalej](monitor-app-health.md)

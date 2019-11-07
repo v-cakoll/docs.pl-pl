@@ -2,22 +2,22 @@
 title: Co to jest Docker?
 description: Zapoznaj się z bardziej szczegółowymi informacjami na temat platformy Docker, ale proste analogowe rozwiązanie może Ci pomóc.
 ms.date: 02/15/2019
-ms.openlocfilehash: 7fd3c599afda2d59e0d56756bd61495f2d0370a0
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8636ae3b1ad32158e10ce2aa58423f9c9824d8c0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72770722"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738157"
 ---
 # <a name="what-is-docker"></a>Co to jest Docker?
 
 [Docker](https://www.docker.com/) to [projekt typu "open source"](https://github.com/docker/docker) służący do automatyzowania wdrażania aplikacji jako przenośne, samoobsługowe kontenery, które można uruchamiać w chmurze lub lokalnie. Platforma Docker to również [firma](https://www.docker.com/) , która wspiera i zmienia tę technologię, pracując w współpracy z dostawcami chmury, Linux i Windows, w tym z firmą Microsoft.
 
-![Kontenery platformy Docker mogą działać w dowolnym miejscu, lokalnie w centrum danych klienta, w zewnętrznym dostawcy usług lub w chmurze na platformie Azure.](./media/image2.png)
+![Diagram przedstawiający miejsca, w których można uruchamiać kontenery platformy Docker.](./media/what-is-docker/docker-containers-run-anywhere.png)
 
 **Rysunek 1-2**. Platforma Docker wdraża kontenery we wszystkich warstwach chmury hybrydowej
 
-Kontenery obrazów platformy Docker mogą działać natywnie w systemach Linux i Windows. Jednak obrazy systemu Windows można uruchamiać tylko na hostach z systemem Windows, a obrazy systemu Linux można uruchamiać na hostach z systemem Linux i hostach Windows (do tej pory przy użyciu maszyny wirtualnej funkcji Hyper-V z systemem Linux), gdzie host oznacza serwer lub maszynę wirtualną.
+Jak pokazano na powyższym diagramie, kontenery platformy Docker mogą działać w dowolnym miejscu, lokalnie w centrum danych klienta, w zewnętrznym dostawcy usług lub w chmurze na platformie Azure. Kontenery obrazów platformy Docker można również uruchamiać natywnie w systemach Linux i Windows. Jednak obrazy systemu Windows można uruchamiać tylko na hostach z systemem Windows, a obrazy systemu Linux można uruchamiać na hostach z systemem Linux i hostach Windows (do tej pory przy użyciu maszyny wirtualnej funkcji Hyper-V z systemem Linux), gdzie host oznacza serwer lub maszynę wirtualną.
 
 Deweloperzy mogą używać środowisk programistycznych w systemie Windows, Linux lub macOS. Na komputerze deweloperskim deweloper uruchamia Host platformy Docker, na którym są wdrażane obrazy platformy Docker, w tym aplikację i jej zależności. Deweloperzy, którzy pracują w systemie Linux lub na komputerach Mac, używają hosta platformy Docker, który jest oparty na systemie Linux i mogą tworzyć obrazy tylko dla kontenerów systemu Linux. (Deweloperzy pracujący na komputerze Mac mogą edytować kod lub uruchamiać interfejs wiersza polecenia platformy Docker z macOS, ale w przypadku tego zapisu kontenery nie są uruchamiane bezpośrednio na macOS). Deweloperzy, którzy pracują w systemie Windows, mogą tworzyć obrazy dla kontenerów systemu Linux lub Windows.
 
@@ -35,9 +35,11 @@ Obrazy dla tych kontenerów są tworzone i działają w taki sam sposób. Różn
 
 Rysunek 1-3 przedstawia porównanie między maszynami wirtualnymi i kontenerami platformy Docker.
 
-![W przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta, w dolnej części: infrastruktura, system operacyjny hosta i funkcja hypervisor oraz na wszystkich maszynach wirtualnych, które mają własny system operacyjny i wszystkie niezbędne biblioteki. Z drugiej strony, w przypadku platformy Docker, serwer hosta ma tylko infrastrukturę i system operacyjny oraz w tym, że aparat kontenera utrzymuje izolowany kontener, ale udostępnia podstawowe usługi systemu operacyjnego.](./media/image3.png)
+![Diagram przedstawiający Porównanie środowisk maszyn wirtualnych i kontenerów.](./media/what-is-docker/comparison-vms-docker-conatiners.png)
 
 **Rysunek 1-3**. Porównanie tradycyjnych maszyn wirtualnych z kontenerami platformy Docker
+
+Jak pokazano na powyższym diagramie, w przypadku maszyn wirtualnych istnieją trzy warstwy podstawowe na serwerze hosta. W dolnej części: infrastruktura, system operacyjny hosta i funkcja hypervisor. Na każdej maszynie wirtualnej każda maszyna wirtualna ma własny system operacyjny i wszystkie niezbędne biblioteki. Z drugiej strony, dla platformy Docker, serwer hosta ma tylko infrastrukturę i system operacyjny. W tym celu aparat kontenera utrzymuje izolowane kontenery, ale umożliwia im udostępnianie usług pojedynczej podstawowej systemu operacyjnego.
 
 Ponieważ kontenery wymagają znacznie mniejszej ilości zasobów (na przykład nie potrzebują pełnego systemu operacyjnego), można je łatwo wdrażać i uruchamiać szybko. Dzięki temu można uzyskać większą gęstość, co oznacza, że umożliwia uruchamianie więcej usług w tej samej jednostce sprzętowej, co zmniejsza koszty.
 
@@ -79,4 +81,4 @@ Podobnie można traktować kontener jako "komputer" z zainstalowanym dyskiem twa
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[Następny](docker-terminology.md)
+>[dalej](docker-terminology.md)

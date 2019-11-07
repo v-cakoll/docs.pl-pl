@@ -2,12 +2,12 @@
 title: Subskrybowanie zdarzeń
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami dotyczącymi publikowania i subskrypcji zdarzeń integracji.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035639"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737067"
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -139,7 +139,7 @@ Podczas wdrażania kroków publikowania zdarzeń można wybrać następujące op
 
 Rysunek 6-22 przedstawia architekturę dla pierwszego z tych metod.
 
-![Jedno podejście do obsługi niepodzielności podczas publikowania zdarzeń: Użyj jednej transakcji, aby zatwierdzić zdarzenie w tabeli dziennika zdarzeń, a następnie inna transakcja do opublikowania (używana w eShopOnContainers)](./media/image23.png)
+![Diagram niepodzielności podczas publikowania bez mikrousługi procesu roboczego.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Rysunek 6-22**. Niepodzielność przy publikowaniu zdarzeń do magistrali zdarzeń
 
@@ -147,7 +147,7 @@ Na rysunku 6-22 Brak dodatkowej mikrousługi roboczej, która jest odpowiedzialn
 
 Informacje o drugim podejściu: należy użyć tabeli EventLog jako kolejki i zawsze używać mikrousługi procesu roboczego do publikowania komunikatów. W takim przypadku proces jest podobny do przedstawionego na rysunku 6-23. Powoduje to wyświetlenie dodatkowej mikrousługi, a tabela jest pojedynczym źródłem przy publikowaniu zdarzeń.
 
-![Inne podejście do obsługi niepodzielności: Publikuj w tabeli dziennika zdarzeń, a następnie zapublikuj zdarzenie przy użyciu innej mikrousługi (proces roboczy w tle).](./media/image24.png)
+![Diagram niepodzielności podczas publikowania przy użyciu mikrousługi procesu roboczego.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Rysunek 6-23**. Niepodzielność przy publikowaniu zdarzeń do magistrali zdarzeń za pomocą mikrousługi procesu roboczego
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 Program obsługi zdarzeń musi sprawdzić, czy produkt istnieje w żadnym z wystąpień koszyka. Aktualizuje także cenę elementu dla każdego elementu powiązanego z wierszem koszyka. Na koniec tworzy alert, który będzie wyświetlany użytkownikowi w sprawie zmiany ceny, jak pokazano na rysunku 6-24.
 
-![Widok przeglądarki powiadamiania o zmianie procesu w koszyku użytkownika.](./media/image25.png)
+![Zrzut ekranu przedstawiający przeglądarkę z powiadomieniem o zmianie cen w koszyku użytkownika.](./media/subscribe-events/display-item-price-change.png)
 
 **Rysunek 6-24**. Wyświetlanie zmiany ceny elementu w koszyku, zgodnie z poinformowaniem o zdarzeniach integracji
 
@@ -381,4 +381,4 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
 
 > [!div class="step-by-step"]
 > [Poprzedni](rabbitmq-event-bus-development-test-environment.md)
-> [Następny](test-aspnet-core-services-web-apps.md)
+> [dalej](test-aspnet-core-services-web-apps.md)

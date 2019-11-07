@@ -2,12 +2,12 @@
 title: Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Użyj RabbitMQ, aby zaimplementować obsługę komunikatów usługi Event Bus dla zdarzeń integracji dla środowisk programistycznych lub testowych.
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089742"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739491"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich
 
@@ -17,11 +17,11 @@ Jedna z implementacji niestandardowej usługi Event Bus w eShopOnContainers jest
 
 Implementacja magistrali zdarzeń z RabbitMQ umożliwia mikrousługom subskrybowanie zdarzeń, publikowanie zdarzeń i odbieranie zdarzeń, jak pokazano na rysunku 6-21.
 
-![RabbitMQ działa jako pośrednik między wydawcą komunikatów i subskrybentami, aby obsłużyć dystrybucję.](./media/image22.png)
+![Diagram przedstawiający RabbitMQ między nadawcą wiadomości i odbiorcą wiadomości.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Rysunek 6-21.** RabbitMQ implementacja magistrali zdarzeń
 
-W kodzie Klasa EventBusRabbitMQ implementuje ogólny interfejs IEventBus. Jest to oparte na iniekcji zależności, co pozwala na zamianę z tej wersji deweloperskiej/testowej na wersję produkcyjną.
+RabbitMQ działa jako pośrednik między wydawcą komunikatów i subskrybentami, aby obsłużyć dystrybucję. W kodzie Klasa EventBusRabbitMQ implementuje ogólny interfejs IEventBus. Jest to oparte na iniekcji zależności, co pozwala na zamianę z tej wersji deweloperskiej/testowej na wersję produkcyjną.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -110,4 +110,4 @@ Metoda Subskrybuj akceptuje obiekt IIntegrationEventHandler, który przypomina m
 
 >[!div class="step-by-step"]
 >[Poprzedni](integration-event-based-microservice-communications.md)
->[Następny](subscribe-events.md)
+>[dalej](subscribe-events.md)

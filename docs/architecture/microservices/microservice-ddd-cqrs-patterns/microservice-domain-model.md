@@ -2,12 +2,12 @@
 title: Projektowanie modelu domeny mikrousługi
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z najważniejszymi pojęciami dotyczącymi projektowania zorientowanej na siebie modelu domeny.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296727"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737386"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -21,7 +21,7 @@ Jednostki reprezentują obiekty domeny i są głównie definiowane przez ich to�
 
 *Tożsamość jednostki może przekroczyć wiele mikrousług lub ograniczonych kontekstów.*
 
-Ta sama tożsamość (to jest taka sama `Id` wartość, chociaż prawdopodobnie nie jest to taka sama jednostka domeny), którą można modelować w wielu ograniczonych kontekstach lub mikrousługach. Nie oznacza to jednak, że ta sama jednostka z tymi samymi atrybutami i logiką zostałaby wdrożona w wielu powiązanych kontekstach. Zamiast tego obiekty w każdym ograniczonym kontekście ograniczają ich atrybuty i zachowania do tych, które są wymagane w domenie powiązanego kontekstu.
+Taka sama tożsamość (to samo `Id` wartość, chociaż prawdopodobnie nie jest to taka sama jednostka domeny) można modelować w wielu ograniczonych kontekstach lub mikrousługach. Nie oznacza to jednak, że ta sama jednostka z tymi samymi atrybutami i logiką zostałaby wdrożona w wielu powiązanych kontekstach. Zamiast tego obiekty w każdym ograniczonym kontekście ograniczają ich atrybuty i zachowania do tych, które są wymagane w domenie powiązanego kontekstu.
 
 Na przykład jednostka kupca może mieć większość atrybutów osób, które są zdefiniowane w jednostce użytkownika w ramach profilu lub mikrousługi tożsamości, w tym tożsamość. Jednak jednostka kupca w mikrousłudze porządkowania może mieć mniej atrybutów, ponieważ tylko niektóre dane dotyczące kupujących są powiązane z procesem zamówienia. Kontekst każdego mikrousługi lub ograniczonego kontekstu ma wpływ na model domeny.
 
@@ -31,11 +31,11 @@ Jednostka domeny w DDD musi implementować logikę domeny lub zachowanie związa
 
 Rysunek 7-8 pokazuje jednostkę domeny, która implementuje nie tylko atrybuty danych, ale operacje lub metody z powiązaną logiką domeny.
 
-![Jednostka modelu domeny implementuje zachowania za pomocą metod, czyli nie jest to model "Anemic".](./media/image9.png)
+![Diagram przedstawiający wzorzec jednostki domeny.](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **Rysunek 7-8**. Przykład projektu jednostki domeny implementującego dane oraz zachowanie
 
-Oczywiście czasami może istnieć jednostka, która nie implementuje żadnej logiki jako części klasy Entity. Może się to zdarzyć w jednostkach podrzędnych w ramach agregacji, jeśli jednostka podrzędna nie ma żadnej specjalnej logiki, ponieważ większość logiki jest zdefiniowana w zagregowanym elemencie głównym. Jeśli istnieje złożona mikrousługa, która ma wiele implementacji logiki w klasach usług, a nie w jednostkach domeny, można uwzględnić model domeny Anemic, wyjaśniony w poniższej sekcji.
+Jednostka modelu domeny implementuje zachowania za pomocą metod, czyli nie jest to model "Anemic". Oczywiście czasami może istnieć jednostka, która nie implementuje żadnej logiki jako części klasy Entity. Może się to zdarzyć w jednostkach podrzędnych w ramach agregacji, jeśli jednostka podrzędna nie ma żadnej specjalnej logiki, ponieważ większość logiki jest zdefiniowana w zagregowanym elemencie głównym. Jeśli istnieje złożona mikrousługa, która ma wiele implementacji logiki w klasach usług, a nie w jednostkach domeny, można uwzględnić model domeny Anemic, wyjaśniony w poniższej sekcji.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Bogaty model domeny a model domeny Anemic
 
@@ -55,7 +55,7 @@ Niektórzy użytkownicy mówią, że model domeny Anemic jest antywzorców. Jest
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **DevIQ. Jednostka domeny** \
+- **DevIQ. \ jednostki domeny**
   <https://deviq.com/entity/>
 
 - **Fowlera Martin. Model domeny** \
@@ -80,16 +80,16 @@ EF Core 2,0 zawiera funkcję [jednostek będących własnością](https://devblo
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Fowlera Martin. Wzorzec obiektu wartości** \
+- **Fowlera Martin. \ wzorca obiektu wartości**
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Obiekt wartości** \
+-  \ **obiektu wartości**
   <https://deviq.com/value-object/>
 
-- **Obiekty wartości w programowaniu sterowanym testami** \
+- **Obiekty wartości w programowaniu opartym na testach** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Projektowanie oparte na domenie: Zapełnianie się złożonością oprogramowania.** (Książka; zawiera omówienie obiektów wartości) \
+- **Eric Evans. Projektowanie oparte na domenie: zapełnianie złożoności w oprogramowaniu.** (Książka; zawiera omówienie obiektów wartości) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>Wzorzec agregacji
@@ -108,11 +108,11 @@ Celem zagregowanego elementu głównego jest zapewnienie spójności agregacji; 
 
 Na rysunku 7-9 można zobaczyć przykładowe zagregowane wartości, takie jak agregacja kupującego, która zawiera pojedynczą jednostkę (zagregowany główny kupujący). Zagregowana kolejność zawiera wiele jednostek i obiekt wartości.
 
-![Model domeny DDD składa się z agregacji, agregacja może mieć tylko jedną jednostkę lub wiele obiektów i może zawierać również obiekty wartości.](./media/image10.png)
+![Diagram porównujący zagregowaną sumę i agregację zamówienia.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Rysunek 7-9**. Przykład zagregowanych elementów z wieloma jednostkami lub pojedynczymi
 
-Należy pamiętać, że agregowanie kupującego może mieć dodatkowe jednostki podrzędne, w zależności od domeny, tak jak w przypadku mikrousługi porządkowania w aplikacji eShopOnContainers Reference. Rysunek 7-9 po prostu ilustruje przypadek, w którym kupujący ma pojedynczą jednostkę, jako przykład agregacji, która zawiera tylko zagregowany element główny.
+Model domeny DDD składa się z agregacji, agregacja może mieć tylko jedną jednostkę lub wiele obiektów i może zawierać również obiekty wartości. Należy pamiętać, że agregowanie kupującego może mieć dodatkowe jednostki podrzędne, w zależności od domeny, tak jak w przypadku mikrousługi porządkowania w aplikacji eShopOnContainers Reference. Rysunek 7-9 po prostu ilustruje przypadek, w którym kupujący ma pojedynczą jednostkę, jako przykład agregacji, która zawiera tylko zagregowany element główny.
 
 Aby zachować rozdzielenie agregacji i zachować jasne granice między nimi, dobrym sposobem w modelu domeny DDD jest uniemożliwienie bezpośredniej nawigacji między agregacjami i tylko posiadanie pola klucza obcego (FK) zgodnie z implementacją w [kolejności model domeny mikrousług](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) w eShopOnContainers. Jednostka Order ma tylko pole klucza obcego dla kupującego, ale nie EF Core właściwość nawigacji, jak pokazano w poniższym kodzie:
 
@@ -133,24 +133,24 @@ Identyfikowanie i praca z agregacjami wymaga badań i środowiska. Aby uzyskać 
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Vaughn Vernon. Efektywny zagregowany projekt — część I: Modelowanie pojedynczej** agregacji <http://dddcommunity.org/>(od) \
+- **Vaughn Vernon. Efektywny model agregacji — część I: Modelowanie pojedynczej agregacji** (z <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Efektywny projekt zagregowany — część II: Wykonywanie zagregowanych współdziałań** ( <http://dddcommunity.org/>z) \
+- **Vaughn Vernon. Efektywny projekt zagregowany — część II: wykonywanie zagregowanych współdziałań** (z <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Efektywny projekt zagregowany — część III: Uzyskiwanie wglądu w dane** poprzez odnajdywanie (od <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Efektywny projekt zagregowany — część III: uzyskiwanie wglądu w dane poprzez odnajdywanie** (od <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. Wzorce projektowe DDD** \
+- **Sergey Grybniak. Wzorce projektowe DDD taktyczne** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Krzysztof Richardson. Opracowywanie mikrousług transakcyjnych przy użyciu agregacji** \
+- **Krzysztof Richardson. Tworzenie mikrousług transakcyjnych przy użyciu agregacji** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. Wzorzec agregacji** \
+- **DevIQ. \ wzorca agregacji**
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[Poprzedni](ddd-oriented-microservice.md)Następny
->[](net-core-microservice-domain-model.md)
+>[Poprzedni](ddd-oriented-microservice.md)
+>[dalej](net-core-microservice-domain-model.md)

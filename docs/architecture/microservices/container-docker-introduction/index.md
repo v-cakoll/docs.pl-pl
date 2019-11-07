@@ -2,12 +2,12 @@
 title: Wprowadzenie do kontenerów i platformy Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Wprowadzenie do kontenerów i platformy Docker
 ms.date: 08/31/2018
-ms.openlocfilehash: cb6244939f6ae89ba1dc824b55a21d1e010cef5e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296160"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740069"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Wprowadzenie do kontenerów i platformy Docker
 
@@ -19,7 +19,7 @@ Kontenery izolują również aplikacje od siebie w udostępnionym systemie opera
 
 Każdy kontener może uruchamiać całą aplikację sieci Web lub usługę, jak pokazano na rysunku 2-1. W tym przykładzie Host platformy Docker jest hostem kontenerów, a APP1, APP2, SVC 1 i SVC 2 są kontenerami aplikacjami lub usługami.
 
-![Dwie aplikacje i dwie usługi działające w systemie operacyjnym w maszynie wirtualnej lub serwerze fizycznym](./media/image1.png)
+![Diagram przedstawiający cztery kontenery działające na maszynie wirtualnej lub serwerze.](./media/index/multiple-containers-single-host.png)
 
 **Rysunek 2-1**. Wiele kontenerów uruchomionych na hoście kontenera
 
@@ -28,5 +28,5 @@ Kolejną zaletą kontenerach jest skalowalność. Możesz szybko skalować w poz
 W krótkim czasie kontenery oferują zalety izolacji, przenośności, elastyczności, skalowalności i kontroli całego przepływu pracy cyklu życia aplikacji. Najważniejsze korzyści to izolacja środowiska udostępniana między tworzeniem i Ops.
 
 >[!div class="step-by-step"]
->[Poprzedni](../index.md)Następny
->[](docker-defined.md)
+>[Poprzedni](../index.md)
+>[dalej](docker-defined.md)

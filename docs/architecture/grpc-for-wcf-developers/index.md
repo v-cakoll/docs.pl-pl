@@ -1,14 +1,14 @@
 ---
 title: ASP.NET Core gRPC for WCF Developers — gRPC dla deweloperów WCF
-description: DO ZAPISANIA
+description: Wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 dla deweloperów WCF
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b89f5974dd18e7005c6479c5b9eead039364e654
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919377"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738073"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>Usługa gRPC platformy ASP.NET Core dla deweloperów WCF
 
@@ -50,23 +50,15 @@ Edytory
 
 ## <a name="introduction"></a>Wprowadzenie
 
-CZYNNOŚĆ
-
-## <a name="purpose"></a>Cel
-
-CZYNNOŚĆ
+gRPC to nowoczesne środowisko do tworzenia usług sieciowych i aplikacji rozproszonych. Wyobraź sobie wydajność powiązań NetTCP w programie WCF dzięki międzyplatformowej współdziałaniu protokołu SOAP. gRPC kompiluje na HTTP/2 i protokół kodowania komunikatów protobuf, aby zapewnić wysoką wydajność, komunikację o niskiej przepustowości między aplikacjami i usługami. Obsługuje ona generowanie kodu serwera i klienta w większości popularnych języków programowania i platform, w tym .NET, Java, Python, Node. js, go C++ i innych. Dzięki pierwszej klasie obsługi gRPC w ASP.NET Core 3,0 wraz z istniejącymi narzędziami i bibliotekami gRPC dla platformy .NET 4. x uważamy, że jest to znakomita alternatywa dla usługi WCF dla zespołów programistycznych, które chcą przyjąć platformę .NET Core w swoich organizacjach.
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien korzystać z tego przewodnika
 
-**ZAKTUALIZUJ TEN**
-
-Odbiorcy tego przewodnika są deweloperzy WCF, potencjalni klienci programistyczni i architektzy zainteresowani migrowaniem rozwiązań WCF w .NET Framework 4 i wcześniejszych, aby ASP.NET Core 3,0 przy użyciu usług gRPC Services.
+Ten przewodnik został utworzony dla deweloperów pracujących w .NET Framework lub .NET Core, którzy wcześniej korzystali z usług WCF i chcący migrować swoje aplikacje do nowoczesnego środowiska RPC dla programu .NET Core 3,0 i jego nowszych wersji. Przewodnik może być również bardziej używany w przypadku deweloperów uaktualniających lub rozważających uaktualnienie do programu .NET Core 3,0, którzy chcą korzystać z wbudowanych narzędzi gRPC.
 
 ## <a name="how-you-can-use-this-guide"></a>Jak można użyć tego przewodnika
 
-**ZAKTUALIZUJ TEN**
-
-Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 z konkretnym odwołaniem do programu WCF jako analogicznej platformy. Wyjaśniono zasady gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF i oferuje wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC. Jest on również przydatny dla deweloperów, którzy korzystają z programu WCF i poszukują gRPC w tworzeniu nowych usług. Przykładowa aplikacja może być używana jako szablon lub odwołanie do własnych projektów i możesz bezpłatnie kopiować i ponownie używać kodu z książki lub jej przykładów.
+Jest to krótkie wprowadzenie do tworzenia usług gRPC w ASP.NET Core 3,0 z konkretnym odwołaniem do programu WCF jako analogicznej platformy. Wyjaśniono zasady gRPC, odnoszące się do poszczególnych koncepcji funkcji WCF i oferuje wskazówki dotyczące migrowania istniejącej aplikacji WCF do gRPC. Jest on również przydatny dla deweloperów, którzy korzystają z programu WCF i poszukują gRPC w tworzeniu nowych usług. Przykładowe aplikacje mogą służyć jako szablon lub odwołanie do własnych projektów, a ty możesz kopiować i ponownie używać kodu z książki lub jej przykładów.
 
 Możesz przesłać dalej ten przewodnik do zespołu, aby pomóc w zapewnieniu powszechnej wiedzy na temat tych zagadnień i możliwości. Korzystanie ze wspólnego zestawu terminologii i podstawowych zasad pomaga zapewnić spójne stosowanie wzorców i praktyk architektury.
 

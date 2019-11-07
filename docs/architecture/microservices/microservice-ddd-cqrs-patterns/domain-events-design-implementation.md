@@ -2,12 +2,12 @@
 title: Zdarzenia domeny. Projektowanie i implementacja
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Uzyskaj szczegółowy widok zdarzeń domeny, kluczową koncepcję do ustanowienia komunikacji między agregacjami.
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093952"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739888"
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia w domenie: projektowanie i implementacja
 
@@ -47,11 +47,11 @@ Z tego względu Interfejs magistrali zdarzeń musi mieć pewną infrastrukturę,
 
 Jeśli wykonanie polecenia związanego z jednym wystąpieniem zagregowanym wymaga uruchomienia dodatkowych reguł domeny w jednej lub większej liczbie dodatkowych agregacji, należy zaprojektować i zaimplementować te efekty uboczne, aby były wyzwalane przez zdarzenia domeny. Jak pokazano na rysunku 7-14 i jako jeden z najważniejszych przypadków użycia, zdarzenie domeny powinno być używane do propagowania zmian stanu w wielu agregacjach w ramach tego samego modelu domeny.
 
-![Spójność między agregacjami jest osiągana przez zdarzenia domeny, zagregowana kolejność wysyła zdarzenie domeny OrderStarted, które jest obsługiwane w celu zaktualizowania agregacji nabywcy. ](./media/image15.png)
+![Diagram przedstawiający zdarzenia domeny kontrolujące dane do zagregowanego nabywcy.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Rysunek 7-14**. Zdarzenia domeny w celu wymuszenia spójności między wieloma agregacjami w tej samej domenie
 
-Na rysunku, gdy użytkownik inicjuje zamówienie, zdarzenie domeny OrderStarted wyzwala Tworzenie obiektu kupca w mikrousłudze porządkowania, na podstawie oryginalnych informacji o użytkowniku z mikrousługi tożsamości (z informacjami podanymi w poleceniu "Utwórz zamówienie"). Zdarzenie domeny jest generowane przez agregację zamówienia, gdy jest tworzona w pierwszym miejscu.
+Rysunek 7-14 pokazuje, jak spójność między agregacjami jest osiągana przez zdarzenia domeny. Gdy użytkownik inicjuje zamówienie, agregacja zamówienia wysyła zdarzenie `OrderStarted` domeny. Zdarzenie domeny OrderStarted jest obsługiwane przez agregację kupującego w celu utworzenia obiektu kupca w mikrousłudze porządkowania na podstawie oryginalnych informacji o użytkowniku z mikrousługi tożsamości (z informacjami podanymi w poleceniu "Utwórz zamówienie").
 
 Alternatywnie można mieć zagregowany katalog główny subskrybowany dla zdarzeń wywoływanych przez elementy członkowskie jego agregacji (jednostki podrzędne). Na przykład każda jednostka podrzędna OrderItem może zgłosić zdarzenie, gdy cena elementu jest wyższa niż określona kwota lub gdy ilość elementu produktu jest zbyt wysoka. Zagregowany element główny może następnie odbierać te zdarzenia i wykonywać globalne obliczenia lub agregację.
 
@@ -78,11 +78,11 @@ Z drugiej strony, jeśli używasz zdarzeń domeny, możesz utworzyć szczegóło
 
 Jak pokazano na rysunku 7-15, rozpoczynając od tego samego zdarzenia domeny, można obsługiwać wiele akcji związanych z innymi agregacjami w domenie lub dodatkowych akcjach aplikacji, które należy wykonać na mikrousługach łączących się ze zdarzeniami integracji i magistralą zdarzeń.
 
-![Może istnieć kilka programów obsługi dla tego samego zdarzenia domeny w warstwie aplikacji, jednak jedna procedura obsługi może rozwiązać spójność między agregacjami, a inna procedura obsługi może opublikować wydarzenie integracji, dzięki czemu inne mikrousługi mogą wykonać coś z nim.](./media/image16.png)
+![Diagram przedstawiający zdarzenie domeny przekazujące dane do kilku programów obsługi zdarzeń.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Rysunek 7-15**. Obsługa wielu akcji na domenę
 
-Programy obsługi zdarzeń zwykle znajdują się w warstwie aplikacji, ponieważ będziesz używać obiektów infrastruktury, takich jak repozytoria lub interfejs API aplikacji dla zachowania mikrousługi. W tym sensie programy obsługi zdarzeń są podobne do programów obsługi poleceń, więc obie są częścią warstwy aplikacji. Istotną różnicą jest to, że polecenie powinno być przetwarzane tylko raz. Zdarzenie domeny może być przetwarzane zero lub *n* razy, ponieważ może zostać odebrane przez wielu odbiorników lub obsługę zdarzeń z innym przeznaczeniem dla każdej procedury obsługi.
+Może istnieć kilka programów obsługi dla tego samego zdarzenia domeny w warstwie aplikacji, jednak jedna procedura obsługi może rozwiązać spójność między agregacjami, a inna procedura obsługi może opublikować wydarzenie integracji, dzięki czemu inne mikrousługi mogą wykonać coś z nim. Programy obsługi zdarzeń zwykle znajdują się w warstwie aplikacji, ponieważ będziesz używać obiektów infrastruktury, takich jak repozytoria lub interfejs API aplikacji dla zachowania mikrousługi. W tym sensie programy obsługi zdarzeń są podobne do programów obsługi poleceń, więc obie są częścią warstwy aplikacji. Istotną różnicą jest to, że polecenie powinno być przetwarzane tylko raz. Zdarzenie domeny może być przetwarzane zero lub *n* razy, ponieważ może zostać odebrane przez wielu odbiorników lub obsługę zdarzeń z innym przeznaczeniem dla każdej procedury obsługi.
 
 Posiadanie otwartej liczby programów obsługi na domenę umożliwia dodanie możliwie największej liczby reguł domeny bez wpływu na bieżący kod. Na przykład wdrożenie następującej reguły biznesowej może być równie proste, jak dodanie kilku programów obsługi zdarzeń (lub nawet jednego z nich):
 
@@ -244,7 +244,7 @@ Jednym z rozwiązań jest rzeczywisty system obsługi komunikatów, a nawet magi
 
 Innym sposobem mapowania zdarzeń do obsługi wielu zdarzeń jest użycie rejestracji typów w kontenerze IoC, dzięki czemu można dynamicznie wywnioskować, gdzie mają zostać wysłane zdarzenia. Innymi słowy, należy wiedzieć, jakie programy obsługi zdarzeń muszą uzyskać konkretne zdarzenie. Rysunek 7-16 pokazuje uproszczone podejście do tego podejścia.
 
-![Iniekcja zależności może służyć do kojarzenia zdarzeń z obsługą zdarzeń, która jest podejściem używanym przez MediatR](./media/image17.png)
+![Diagram przedstawiający wysyłanie zdarzeń przez dyspozytora zdarzeń domeny do odpowiednich programów obsługi.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Rysunek 7-16**. Dyspozytor zdarzeń domeny przy użyciu IoC
 
@@ -379,4 +379,4 @@ Jak wspomniano, użyj zdarzeń domeny w celu jawnego implementowania efektów ub
 
 >[!div class="step-by-step"]
 >[Poprzedni](client-side-validation.md)
->[Następny](infrastructure-persistence-layer-design.md)
+>[dalej](infrastructure-persistence-layer-design.md)

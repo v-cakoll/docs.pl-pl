@@ -2,14 +2,14 @@
 title: Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Twórz odporne na błędy usługi w chmurze. Obsługa przejściowych błędów w chmurze
 ms.date: 04/30/2018
-ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373971"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739397"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Tworzenie odpornych usług gotowych do pracy w chmurze: Obsługa przejściowych błędów w chmurze
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Twórz odporne usługi dla chmury: Zastąp błędy przejściowe w chmurze
 
 Odporność to zdolność do odzyskiwania po awarii i kontynuowania działania. Odporność nie ma na uniknięcie niepowodzeń, ale akceptuje fakt, że wystąpią błędy, a następnie odpowiada na nie w taki sposób, aby uniknąć przestoju lub utraty danych. Celem odporności jest przywrócenie aplikacji do stanu w pełni funkcjonalnym po awarii.
 
@@ -27,7 +27,7 @@ Podobny scenariusz może wystąpić w aplikacji, która korzysta z usług HTTP. 
 
 Odporna na błędy aplikacja, taka jak pokazana na rysunku 4-9, powinna implementować techniki takie jak "ponawianie prób z wykładniczą wycofywania", aby umożliwić aplikacji obsługę błędów przejściowych w zasobach. W aplikacjach należy również używać "wyłączników". Wyłącznik przerywa aplikacji próbuje uzyskać dostęp do zasobu, gdy jest to długotrwałe niepowodzenie. Korzystając z wyłącznika, aplikacja unika wywoływania odmowy usługi do siebie samej.
 
-![Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania](./media/image9.png)
+![Diagram częściowych błędów obsłużonych przez ponowną próbę przy użyciu wykładniczej wycofywania.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
 
 **Rysunek 4-9.** Częściowe błędy obsłużone przez ponowną próbę przy użyciu wykładniczej wycofywania
 
@@ -58,5 +58,5 @@ Aby dowiedzieć się, jak zaimplementować strategie obsługi częściowych awar
     https://github.com/App-vNext/Polly
 
 >[!div class="step-by-step"]
->[Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)Następny
->[](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+>[dalej](modernize-your-apps-with-monitoring-and-telemetry.md)

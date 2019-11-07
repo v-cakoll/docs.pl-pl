@@ -2,12 +2,12 @@
 title: Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z iniekcją zależności i wzorcami mediator oraz ich szczegóły implementacji w warstwie aplikacji internetowego interfejsu API.
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454849"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737536"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementowanie warstwy aplikacji mikrousług za pomocą internetowego interfejsu API
 
@@ -17,7 +17,9 @@ Jak wspomniano wcześniej, warstwa aplikacji może być implementowana w ramach 
 
 Na przykład kod warstwy aplikacji mikrousługi porządkowania jest bezpośrednio zaimplementowany jako część projektu **porządkowania. API** (projekt ASP.NET Core Web API), jak pokazano na rysunku 7-23.
 
-![Widok Eksplorator rozwiązań mikrousługi porządkowania. API, przedstawiający podfoldery w folderze Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, models, zapytania i walidacje.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Zrzut ekranu przedstawiający mikrousługę porządkowanie. API w Eksplorator rozwiązań.":::
+Widok Eksplorator rozwiązań mikrousługi porządkowania. API, przedstawiający podfoldery w folderze Application: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, models, zapytania i walidacje.
+:::image-end:::
 
 **Rysunek 7-23**. Warstwa aplikacji w projekcie interfejsu API sieci Web programu porządkowanie. API ASP.NET Core
 
@@ -181,9 +183,11 @@ Wzorzec polecenia jest wewnętrznie związany ze wzorcem CQRS, który został wp
 
 Jak pokazano na rysunku 7-24, wzorzec opiera się na akceptowaniu poleceń po stronie klienta, przetwarzaniu ich na podstawie reguł modelu domeny i na końcu utrzymywania Stanów z transakcjami.
 
-![Widok wysokiego poziomu po stronie zapisu w CQRS: aplikacja interfejsu użytkownika wysyła polecenie za pomocą interfejsu API, który jest przeznaczony do CommandHandler — obiekt, który zależy od modelu domeny i infrastruktury w celu zaktualizowania bazy danych.](./media/image21.png)
+![Diagram przedstawiający przepływ danych wysokiego poziomu od klienta do bazy danych.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **Rysunek 7-24**. Widok wysokiego poziomu poleceń lub "Strona transakcyjna" w wzorcu CQRS
+
+Rysunek 7-24 pokazuje, że aplikacja interfejsu użytkownika wysyła polecenie za pomocą interfejsu API, który jest do `CommandHandler`, który zależy od modelu domeny i infrastruktury, aby zaktualizować bazę danych.
 
 ### <a name="the-command-class"></a>Klasa polecenia
 
@@ -423,9 +427,11 @@ Pozostałe dwie główne opcje, które są zalecanymi opcjami, to:
 
 Jak pokazano na rysunku 7-25, w podejściu CQRS można użyć inteligentnego mediator, podobnego do magistrali w pamięci, która jest wystarczająco inteligentna, aby przekierować do prawej obsługi poleceń na podstawie typu polecenia lub DTO. Pojedyncze czarne strzałki między składnikami reprezentują zależności między obiektami (w wielu przypadkach, które są wprowadzane przez DI) wraz z ich powiązaniami.
 
-![Powiększanie w stosunku do poprzedniego obrazu: kontroler ASP.NET Core wysyła polecenie do potoku poleceń MediatR, aby uzyskać odpowiednie procedury obsługi.](./media/image22.png)
+![Diagram przedstawiający bardziej szczegółowy przepływ danych z klienta do bazy danych.](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **Rysunek 7-25**. Używanie wzorca mediator w procesie w jednej mikrousłudze CQRS
+
+Na powyższym diagramie przedstawiono powiększenie z obrazu 7-24: kontroler ASP.NET Core wysyła polecenie do potoku poleceń MediatR, dzięki czemu uzyskuje się do odpowiedniej procedury obsługi.
 
 Przyczyną użycia wzorca mediator jest to, że w aplikacjach dla przedsiębiorstw żądania przetwarzania mogą być skomplikowane. Chcesz mieć możliwość dodawania otwartej liczby zagadnień związanych z wycinaniem, takich jak rejestrowanie, walidacje, Inspekcja i zabezpieczenia. W takich przypadkach można polegać na potoku mediator (zobacz [wzorzec mediator](https://en.wikipedia.org/wiki/Mediator_pattern)), aby zapewnić możliwość wykonania tych dodatkowych zachowań lub obaw związanych z wycinaniem.
 
@@ -439,11 +445,11 @@ Na przykład w mikrousłudze porządkowania eShopOnContainers wprowadziliśmy dw
 
 Kolejną opcją jest użycie komunikatów asynchronicznych opartych na brokerach lub kolejkach komunikatów, jak pokazano na rysunku 7-26. Tę opcję można również połączyć ze składnikiem mediator bezpośrednio przed programem obsługi poleceń.
 
-![Potok poleceń może być również obsługiwany przez kolejkę komunikatów o wysokiej dostępności w celu dostarczenia poleceń do odpowiedniej procedury obsługi.](./media/image23.png)
+![Diagram przedstawiający przepływu danych przy użyciu kolejki komunikatów o dużej dostępności.](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **Rysunek 7-26**. Korzystanie z kolejek komunikatów (poza procesem i komunikacji między procesami) za pomocą poleceń CQRS
 
-Użycie kolejek komunikatów do akceptowania poleceń może dodatkowo zawęzić potoku poleceń, ponieważ prawdopodobnie trzeba będzie podzielić potok na dwa procesy połączone za pośrednictwem zewnętrznej kolejki komunikatów. Nadal powinien być używany, jeśli trzeba zwiększyć skalowalność i wydajność na podstawie asynchronicznych komunikatów. Należy wziąć pod uwagę, że w przypadku rysunku 7-26 kontroler po prostu przesyła komunikat polecenia do kolejki i zwraca. Następnie programy obsługi poleceń przetwarzają komunikaty we własnym tempie. Jest to świetna korzyść dla kolejek: Kolejka komunikatów może działać jako bufor w przypadkach, gdy wymagana jest skalowalność funkcji Hyper-, na przykład w przypadku zasobów lub dowolnego innego scenariusza z dużą ilością danych wejściowych.
+Potok poleceń może być również obsługiwany przez kolejkę komunikatów o wysokiej dostępności w celu dostarczenia poleceń do odpowiedniej procedury obsługi. Użycie kolejek komunikatów do akceptowania poleceń może dodatkowo zawęzić potoku poleceń, ponieważ prawdopodobnie trzeba będzie podzielić potok na dwa procesy połączone za pośrednictwem zewnętrznej kolejki komunikatów. Nadal powinien być używany, jeśli trzeba zwiększyć skalowalność i wydajność na podstawie asynchronicznych komunikatów. Należy wziąć pod uwagę, że w przypadku rysunku 7-26 kontroler po prostu przesyła komunikat polecenia do kolejki i zwraca. Następnie programy obsługi poleceń przetwarzają komunikaty we własnym tempie. Jest to świetna korzyść dla kolejek: Kolejka komunikatów może działać jako bufor w przypadkach, gdy wymagana jest skalowalność funkcji Hyper-, na przykład w przypadku zasobów lub dowolnego innego scenariusza z dużą ilością danych wejściowych.
 
 Jednak ze względu na asynchroniczny charakter kolejek komunikatów należy dowiedzieć się, jak komunikować się z aplikacją kliencką dotyczącą sukcesu lub niepowodzenia procesu polecenia. Jako regułę nie należy nigdy używać poleceń "Fire i zapomnij". Każda aplikacja biznesowa musi wiedzieć, czy polecenie zostało przetworzone pomyślnie, czy co najmniej zweryfikowane i zaakceptowane.
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: aa535c36b578e000ae6ddd7534838b07b0a5d756
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10bd924664a469be26174fadf3892ee56aa33856
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459989"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740638"
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 Ten temat definiuje warunki, które są używane do opisywania elementów składni języka XAML. Te warunki są często używane w całej pozostałej części tej dokumentacji, zarówno w przypadku dokumentacji WPF, jak i dla innych struktur, które używają języka XAML lub podstawowych pojęć XAML włączonych przez obsługę języka XAML na poziomie system. XAML. W tym temacie opisano podstawową terminologię wprowadzoną w temacie [Omówienie języka XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).  
@@ -52,7 +52,7 @@ Ten temat definiuje warunki, które są używane do opisywania elementów skład
 #### <a name="members-of-types-and-class-inheritance"></a>Elementy członkowskie typów i dziedziczenie klas  
  Właściwości i zdarzenia wyświetlane jako elementy członkowskie XAML typu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są często dziedziczone z typów podstawowych. Rozważmy na przykład ten przykład: `<Button Background="Blue" .../>`. Właściwość <xref:System.Windows.Controls.Control.Background%2A> nie jest bezpośrednio zadeklarowaną właściwością w klasie <xref:System.Windows.Controls.Button>, jeśli chcesz przejrzeć definicję klasy, wyniki odbicia lub dokumentację. Zamiast tego <xref:System.Windows.Controls.Control.Background%2A> jest dziedziczona z klasy podstawowej <xref:System.Windows.Controls.Control>.  
   
- Zachowanie dziedziczenia klas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów XAML jest znaczącym wyjściem ze interpretacji języka XML przez wymuszone schemat. Dziedziczenie klasy może stać się skomplikowany, szczególnie w przypadku, gdy pośrednie klasy bazowe są abstrakcyjne lub gdy są wykorzystywane interfejsy. Jest to jedną z przyczyn, że zestaw elementów XAML i ich dozwolonych atrybutów jest trudny do przedstawienia dokładnie i całkowicie przy użyciu typów schematów, które są zwykle używane do programowania [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], takich jak DTD lub XSD format. Kolejną przyczyną jest to, że rozszerzanie i funkcje mapowania typów w języku XAML wykluczają kompletność wszelkich stałych reprezentacji dozwolonych typów i elementów członkowskich.  
+ Zachowanie dziedziczenia klas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów XAML jest znaczącym wyjściem ze interpretacji języka XML przez wymuszone schemat. Dziedziczenie klasy może stać się skomplikowany, szczególnie w przypadku, gdy pośrednie klasy bazowe są abstrakcyjne lub gdy są wykorzystywane interfejsy. Jest to jedną z przyczyn, że zestaw elementów XAML i ich dopuszczalne atrybuty są trudne do przedstawienia dokładne i całkowicie przy użyciu typów schematów, które są zwykle używane do programowania XML, takie jak DTD lub XSD. Kolejną przyczyną jest to, że rozszerzanie i funkcje mapowania typów w języku XAML wykluczają kompletność wszelkich stałych reprezentacji dozwolonych typów i elementów członkowskich.  
   
 <a name="object_element_syntax"></a>   
 ## <a name="object-element-syntax"></a>Składnia elementu obiektu  

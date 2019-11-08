@@ -2,12 +2,12 @@
 title: Omówienie programu Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854342"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738507"
 ---
 # <a name="entity-framework-overview"></a>Przegląd Entity Framework
 
@@ -34,10 +34,10 @@ Entity Framework pozwala deweloperom na współpracę z danymi w postaci obiekt�
 
 Model magazynu i mapowania mogą ulegać zmianom w razie potrzeby bez konieczności wprowadzania zmian w modelu koncepcyjnym, klasach danych lub kodzie aplikacji. Ponieważ modele magazynu są specyficzne dla dostawcy, można korzystać ze spójnego modelu koncepcyjnego w różnych źródłach danych.
 
-Entity Framework używa tego modelu i mapowania plików do tworzenia, odczytywania, aktualizowania i usuwania operacji względem jednostek i relacji w modelu koncepcyjnym do równoważnych operacji w źródle danych. Entity Framework nawet obsługuje mapowanie jednostek w modelu koncepcyjnym na procedury składowane w źródle danych. Aby uzyskać więcej informacji, zobacz [specyfikacje CSDL, SSDL i MSL](./language-reference/csdl-ssdl-and-msl-specifications.md).
+Entity Framework używa tego modelu i mapowania plików do tworzenia, odczytywania, aktualizowania i usuwania operacji względem jednostek i relacji w modelu koncepcyjnym do równoważnych operacji w źródle danych. Entity Framework nawet obsługuje mapowanie jednostek w modelu koncepcyjnym na procedury składowane w źródle danych. Aby uzyskać więcej informacji, zobacz [specyfikacje CSDL, SSDL i MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Mapowanie obiektów na dane
- Programowanie zorientowane obiektowo stanowi wyzwanie dla współpracy z systemami magazynowania danych. Chociaż organizacja klas często odzwierciedla organizację tabel relacyjnych baz danych, dopasowanie nie jest idealne. Wiele znormalizowanych tabel często odpowiada pojedynczej klasie, a relacje między klasami są często reprezentowane inaczej niż reprezentowane są relacje między tabelami. Na przykład, aby reprezentować klienta dla zamówienia sprzedaży, `Order` Klasa może używać właściwości, która zawiera odwołanie do wystąpienia `Customer` klasy, natomiast `Order` wiersz tabeli w bazie danych zawiera kolumnę klucza obcego (lub zestaw kolumn) wartość, która odnosi się do wartości klucza podstawowego w `Customer` tabeli. Klasa może mieć właściwość o nazwie `Orders` , która zawiera `Order` kolekcję wystąpień klasy, podczas gdy `Customer` tabela w bazie danych nie ma porównywalnej kolumny. `Customer` Entity Framework zapewnia deweloperom elastyczność umożliwiającą reprezentowanie relacji w ten sposób lub bardziej ścisłe relacje między modelami, które są reprezentowane w bazie danych.
+ Programowanie zorientowane obiektowo stanowi wyzwanie dla współpracy z systemami magazynowania danych. Chociaż organizacja klas często odzwierciedla organizację tabel relacyjnych baz danych, dopasowanie nie jest idealne. Wiele znormalizowanych tabel często odpowiada pojedynczej klasie, a relacje między klasami są często reprezentowane inaczej niż reprezentowane są relacje między tabelami. Na przykład, aby reprezentować klienta dla zamówienia sprzedaży, Klasa `Order` może używać właściwości, która zawiera odwołanie do wystąpienia klasy `Customer`, natomiast wiersz tabeli `Order` w bazie danych zawiera kolumnę klucza obcego (lub zestaw kolumn) o wartości, która odnosi się do wartości klucza podstawowego w tabeli `Customer`. Klasa `Customer` może mieć właściwość o nazwie `Orders`, która zawiera kolekcję wystąpień klasy `Order`, podczas gdy tabela `Customer` w bazie danych nie ma porównywalnej kolumny. Entity Framework zapewnia deweloperom elastyczność umożliwiającą reprezentowanie relacji w ten sposób lub bardziej ścisłe relacje między modelami, które są reprezentowane w bazie danych.
 
  Istniejące rozwiązania podjęły próbę mostkowania tej przerwy, która jest często nazywana "niezgodnością", tylko mapując klasy zorientowane obiektowo i właściwości na relacyjne tabele i kolumny. Zamiast korzystać z tego tradycyjnego podejścia, Entity Framework mapuje tabele relacyjne, kolumny i ograniczenia klucza obcego w modelach logicznych na jednostki i relacje w modelu koncepcyjnym. Zapewnia to większą elastyczność zarówno w definiowaniu obiektów, jak i optymalizowaniu modelu logicznego. Narzędzia Entity Data Model generują rozszerzalne klasy danych na podstawie modelu koncepcyjnego. Klasy te są klasami częściowymi, które można rozszerzyć z dodatkowymi elementami członkowskimi dodawanymi przez dewelopera. Domyślnie klasy, które są generowane dla określonego modelu koncepcyjnego, pochodzą z klas podstawowych, które udostępniają usługi dla jednostek materializacji jako obiekty i do śledzenia i zapisywania zmian. Deweloperzy mogą używać tych klas do pracy z jednostkami i relacjami jako obiektami związanymi ze skojarzeniami. Deweloperzy mogą również dostosować klasy, które są generowane dla modelu koncepcyjnego. Aby uzyskać więcej informacji, zobacz [Praca z obiektami](working-with-objects.md).
 
@@ -47,7 +47,7 @@ Więcej niż tylko inne rozwiązanie do mapowania relacyjnego obiektów Entity F
 
 - LINQ to Entities. Zapewnia obsługę zapytań opartych na języku (LINQ) do wykonywania zapytań o typy jednostek, które są zdefiniowane w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależny od magazynu SQL, który działa bezpośrednio z jednostkami w modelu koncepcyjnym i obsługuje koncepcje Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)]jest używany zarówno z kwerendami obiektów, jak i kwerendami, które są wykonywane przy użyciu dostawcy EntityClient. Aby uzyskać więcej informacji, zobacz [Entity SQL przegląd](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]., Dialekt niezależny od magazynu SQL, który działa bezpośrednio z jednostkami w modelu koncepcyjnym i obsługuje koncepcje Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] jest używany zarówno z kwerendami obiektów, jak i kwerendami, które są wykonywane przy użyciu dostawcy EntityClient. Aby uzyskać więcej informacji, zobacz [Entity SQL przegląd](./language-reference/entity-sql-overview.md).
 
 Entity Framework obejmuje dostawcę danych EntityClient. Ten dostawca zarządza połączeniami, tłumaczy zapytania jednostek na zapytania specyficzne dla źródła danych i zwraca czytnik danych, którego Entity Framework używa do zmaterializowania danych jednostki w obiektach. Gdy obiekt materializację nie jest wymagany, Dostawca EntityClient może być również używany jako standardowy dostawca danych ADO.NET przez umożliwienie aplikacjom wykonywania [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań i używania zwróconego czytnika danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
@@ -55,11 +55,11 @@ Na poniższym diagramie przedstawiono architekturę Entity Framework do uzyskiwa
 
 ![Diagram architektury Entity Framework](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-Narzędzia Entity Data Model mogą generować klasę pochodną `System.Data.Objects.ObjectContext` lub `System.Data.Entity.DbContext` reprezentującą kontener jednostek w modelu koncepcyjnym. Ten kontekst obiektu udostępnia funkcje śledzenia zmian oraz zarządzania tożsamościami, współbieżnością i relacjami. Ta klasa udostępnia `SaveChanges` również metodę, która zapisuje operacje wstawiania, aktualizacji i usuwania do źródła danych. Podobnie jak w przypadku zapytań, te zmiany są wykonywane przez polecenia automatycznie generowane przez system lub przez procedury składowane, które są określone przez dewelopera.
+Narzędzia Entity Data Model mogą generować klasę pochodną `System.Data.Objects.ObjectContext` lub `System.Data.Entity.DbContext` reprezentującą kontener jednostek w modelu koncepcyjnym. Ten kontekst obiektu udostępnia funkcje śledzenia zmian oraz zarządzania tożsamościami, współbieżnością i relacjami. Ta klasa udostępnia również metodę `SaveChanges`, która zapisuje operacje wstawiania, aktualizacji i usuwania do źródła danych. Podobnie jak w przypadku zapytań, te zmiany są wykonywane przez polecenia automatycznie generowane przez system lub przez procedury składowane, które są określone przez dewelopera.
 
 ## <a name="data-providers"></a>Dostawcy danych
 
-`EntityClient` Dostawca rozszerza model dostawcy ADO.NET, uzyskując dostęp do danych pod względem jednostek koncepcyjnych i relacji. Wykonuje zapytania, które używają [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)]Program udostępnia podstawowy język zapytań umożliwiający `EntityClient` komunikację z bazą danych programu. Aby uzyskać więcej informacji, zobacz [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
+Dostawca `EntityClient` rozszerza model dostawcy ADO.NET, uzyskując dostęp do danych pod względem jednostek koncepcyjnych i relacji. Wykonuje zapytania, które używają [!INCLUDE[esql](../../../../../includes/esql-md.md)]. [!INCLUDE[esql](../../../../../includes/esql-md.md)] udostępnia podstawowy język zapytań, który umożliwia `EntityClient` komunikacji z bazą danych. Aby uzyskać więcej informacji, zobacz [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 Entity Framework obejmuje zaktualizowany Dostawca danych SqlClient obsługujący drzewa poleceń w postaci kanonicznej. Aby uzyskać więcej informacji, zobacz [SqlClient dla Entity Framework](sqlclient-for-the-entity-framework.md).
 

@@ -3,19 +3,19 @@ title: Historia C# - C# Przewodnik
 description: Jak wygląda ten język we wcześniejszych wersjach i jak został on rozwijający od?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423082"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739106"
 ---
 # <a name="the-history-of-c"></a>Historia języka C\#
 
 Ten artykuł zawiera historię poszczególnych głównych wersji C# języka. C# Zespół kontynuuje wprowadzanie innowacji i dodawanie nowych funkcji. Szczegółowy stan funkcji języka, w tym funkcje uwzględniane w przypadku przyszłych wersji, można znaleźć [w repozytorium dotnet/Roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) w witrynie GitHub.
 
 > [!IMPORTANT]
-> C# Język polega na typach i metodach, C# które definiuje Specyfikacja jako *standardowa biblioteka* dla niektórych funkcji. Platforma .NET dostarcza te typy i metody w wielu pakietach. Przykładem jest przetwarzanie wyjątków. Każda instrukcja i wyrażenie `throw` jest sprawdzane w celu upewnienia się, że zwracany obiekt jest pochodną <xref:System.Exception>. Podobnie każde `catch` jest zaznaczone, aby upewnić się, że przechwycony typ pochodzi od <xref:System.Exception>. Każda wersja może dodawać nowe wymagania. Aby korzystać z najnowszych funkcji języka w starszych środowiskach, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie dla każdej konkretnej wersji. Aby uzyskać więcej informacji na temat [relacji między językiem i biblioteką](relationships-between-language-and-library.md) w tle, należy zapoznać się z tematem dotyczącym tej zależności.
+> C# Język polega na typach i metodach, C# które definiuje Specyfikacja jako *standardowa biblioteka* dla niektórych funkcji. Platforma .NET dostarcza te typy i metody w wielu pakietach. Przykładem jest przetwarzanie wyjątków. Każda instrukcja `throw` lub wyrażenie jest sprawdzane w celu upewnienia się, że zwracany obiekt jest pochodną <xref:System.Exception>. Podobnie każde `catch` jest sprawdzane w celu upewnienia się, że przechwycony typ pochodzi od <xref:System.Exception>. Każda wersja może dodawać nowe wymagania. Aby korzystać z najnowszych funkcji języka w starszych środowiskach, może być konieczne zainstalowanie określonych bibliotek. Te zależności są udokumentowane na stronie dla każdej konkretnej wersji. Aby uzyskać więcej informacji na temat [relacji między językiem i biblioteką](relationships-between-language-and-library.md) w tle, należy zapoznać się z tematem dotyczącym tej zależności.
 
 Narzędzia C# kompilacji uwzględniają najnowszą wersję językową wersji językowej. Między wersjami głównymi mogą występować wersje punktów, które opisano w innych artykułach w tej sekcji. Aby użyć najnowszych funkcji w wersji próbnej, należy [skonfigurować wersję języka kompilatora](../language-reference/configure-language-version.md) i wybrać wersję. Istnieją trzy wersje punktów od C# 7,0:
 
@@ -57,7 +57,7 @@ Teraz można zacząć korzystać z interesujących rzeczy. Przyjrzyjmy się najw
 - [Typy ogólne](../programming-guide/generics/index.md)
 - [Typy częściowe](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Metody anonimowe](../language-reference/operators/delegate-operator.md)
-- [Typy wartości null](../programming-guide/nullable-types/index.md)
+- [Typy wartości null](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteratory](../programming-guide/concepts/iterators.md)
 - [Kowariancja i kontrawariancja](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -70,9 +70,9 @@ Inne C# funkcje 2,0 dodaliśmy możliwości do istniejących funkcji:
 
 Program C# mógł zostać uruchomiony jako ogólny język zorientowany obiektowo (oo) w C# wersji 2,0 zmienionej w pospiesz. Gdy miały swoje stopy w nich, zakończyły się po kilku poważnych punktach bólu deweloperów. I zostały one w znaczący sposób.
 
-W przypadku typów ogólnych typy i metody mogą działać na dowolnym typie przy zachowaniu bezpieczeństwa typu. Na przykład posiadanie <xref:System.Collections.Generic.List%601> umożliwia `List<string>` lub `List<int>` i wykonywanie operacji bezpiecznych dla typów w tych ciągach lub liczbach całkowitych podczas iteracji. Użycie typów ogólnych jest lepsze niż tworzenie `ListInt`, które wynikają z `ArrayList` lub rzutowania z `Object` dla każdej operacji.
+W przypadku typów ogólnych typy i metody mogą działać na dowolnym typie przy zachowaniu bezpieczeństwa typu. Na przykład posiadanie <xref:System.Collections.Generic.List%601> umożliwia `List<string>` lub `List<int>` i wykonywanie operacji bezpiecznych dla typów w tych ciągach lub liczbach całkowitych podczas iteracji. Używanie typów ogólnych jest lepszym rozwiązaniem niż tworzenie `ListInt`, które pochodzą od `ArrayList` lub do rzutowania z `Object` dla każdej operacji.
 
-C#Wersja 2,0 przenoszona Iteratory. Aby umieścić je w formie zwięzłej, Iteratory umożliwiają badanie wszystkich elementów w `List` (lub innych wyliczalnych typów) z pętlą `foreach`. Posiadanie iteratorów jako pierwszej klasy języka znacznie zwiększa czytelność języka i zdolności osób do uzyskania informacji o kodzie.
+C#Wersja 2,0 przenoszona Iteratory. Aby umieścić je w sposób zwięzły, Iteratory umożliwiają badanie wszystkich elementów w `List` (lub innych wyliczalnych typów) z pętlą `foreach`. Posiadanie iteratorów jako pierwszej klasy języka znacznie zwiększa czytelność języka i zdolności osób do uzyskania informacji o kodzie.
 
 Jeszcze w C# dalszym ciągu można odtworzyć nieco rozwiązania z technologią Java. Java wydano już wersje, które zawierały typy ogólne i Iteratory. Ale to wkrótce zmieni się, ponieważ Języki będą nadal rozliczane od siebie.
 
@@ -94,7 +94,7 @@ W programie Spoglądając wstecz wiele z tych funkcji sprawia, że są one nieun
 
 Dokładniejszy widok złożonych bada drzewa wyrażeń, wyrażenia lambda i typy anonimowe jako podstawę, na której jest konstruowany składnik LINQ. Jednak w obu przypadkach C# 3,0 przedstawiał koncepcję Rewolucyjne. C#3,0 rozpoczęto w celu określenia podstawę C# do przetworzenia hybrydowego języka programowania/funkcjonalności.
 
-W tym celu można teraz napisać w stylu SQL zapytania deklaracyjne, aby wykonywać operacje na kolekcjach, między innymi. Zamiast pisać pętlę `for` w celu obliczenia średniej listy liczb całkowitych, można to zrobić tak samo jak w przypadku `list.Average()`. Kombinacja wyrażeń zapytania i metod rozszerzających wygląda tak, jakby ta lista liczb całkowitych uzyskała całą dużą liczbę.
+W tym celu można teraz napisać w stylu SQL zapytania deklaracyjne, aby wykonywać operacje na kolekcjach, między innymi. Zamiast pisać pętlę `for`, aby obliczyć średnią z listy liczb całkowitych, można to zrobić tak samo jak `list.Average()`. Kombinacja wyrażeń zapytania i metod rozszerzających wygląda tak, jakby ta lista liczb całkowitych uzyskała całą dużą liczbę.
 
 Zajęło ci dużo czasu na opanujesz i integrację koncepcji, ale stopniowo. A teraz lata później, kod jest znacznie bardziej zwięzły, prosty i funkcjonalny.
 
@@ -111,7 +111,7 @@ Następna wersja wprowadziła interesujące nowe funkcje:
 
 Wbudowane typy międzyoperacyjności zmniejszają możliwości wdrożenia. Ogólna Kowariancja i kontrawariancja zapewniają większą moc do korzystania z typów ogólnych, ale są one nieco akademickie i prawdopodobnie najbardziej doceniane przez autorów struktury i biblioteki. Parametry nazwane i opcjonalne pozwalają wyeliminować wiele przeciążeń metod i zapewnić wygodę. Jednak żadna z tych funkcji nie ma dokładnej zmiany modelu.
 
-Funkcja główna była wprowadzeniem słowa kluczowego `dynamic`. Słowo kluczowe `dynamic` wprowadzone do C# wersji 4,0 umożliwia zastąpienie kompilatora podczas pisania w czasie kompilacji. Za pomocą słowa kluczowego Dynamic można tworzyć konstrukcje podobne do dynamicznie wpisanych języków, takich jak JavaScript. Można utworzyć `dynamic x = "a string"`, a następnie dodać do nich sześć, pozostawiając je w środowisku uruchomieniowym, aby określić, co powinno się odbywać w dalszej kolejności.
+Funkcja główna była wprowadzeniem słowa kluczowego `dynamic`. Słowo kluczowe `dynamic` wprowadzone do C# wersji 4,0 umożliwia zastąpienie kompilatora podczas pisania w czasie kompilacji. Za pomocą słowa kluczowego Dynamic można tworzyć konstrukcje podobne do dynamicznie wpisanych języków, takich jak JavaScript. Można utworzyć `dynamic x = "a string"` a następnie dodać do nich sześć, pozostawiając je w środowisku uruchomieniowym, aby określić, co powinno się odbywać w dalszej kolejności.
 
 Dynamiczne powiązanie zapewnia potencjalne błędy, ale również doskonale moc w języku.
 
@@ -128,7 +128,7 @@ C#wersja 5,0 wydana w programie Visual Studio 2012 była skoncentrowaną wersją
 
 Atrybut informacje o wywołującym pozwala łatwo pobrać informacje dotyczące kontekstu, w którym jest wykonywane, bez konieczności przeliczania się na tonę standardowego kodu odbicia. Ma wiele użycia w zadaniach diagnostycznych i dzienników.
 
-Ale `async` i `await` to rzeczywiste gwiazdki tej wersji. Gdy te funkcje zostały dostarczone w 2012, C# zmieniono grę ponownie, asynchroniczności jako uczestnika pierwszej klasy. Jeśli kiedykolwiek zdarzyło Ci się zająć długotrwałymi operacjami i implementacją sieci Web wywołania zwrotnego, prawdopodobnie uwielbiane tej funkcji językowej.
+Ale `async` i `await` są rzeczywistymi gwiazdkami tej wersji. Gdy te funkcje zostały dostarczone w 2012, C# zmieniono grę ponownie, asynchroniczności jako uczestnika pierwszej klasy. Jeśli kiedykolwiek zdarzyło Ci się zająć długotrwałymi operacjami i implementacją sieci Web wywołania zwrotnego, prawdopodobnie uwielbiane tej funkcji językowej.
 
 ## <a name="c-version-60"></a>C#wersja 6,0
 

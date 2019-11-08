@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455374"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736849"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funkcje lokalne (C# Przewodnik programowania)
 
@@ -43,11 +43,10 @@ Funkcje lokalne mogą używać modyfikatorów [Async](../../language-reference/k
 
 Należy zauważyć, że wszystkie zmienne lokalne, które są zdefiniowane w składowej zawierającej, łącznie z parametrami metody, są dostępne w funkcji lokalnej. 
 
-W przeciwieństwie do definicji metody lokalnej definicja funkcji nie może zawierać następujących elementów:
+W przeciwieństwie do definicji metody lokalnej definicja funkcji nie może zawierać modyfikatora dostępu do składowej. Ponieważ wszystkie funkcje lokalne są prywatne, w tym modyfikator dostępu, taki jak `private` słowo kluczowe, generuje błąd kompilatora CS0106 "modyfikator" Private "jest nieprawidłowy dla tego elementu".
 
-- Modyfikator dostępu składowej. Ponieważ wszystkie funkcje lokalne są prywatne, w tym modyfikator dostępu, taki jak `private` słowo kluczowe, generuje błąd kompilatora CS0106 "modyfikator" Private "jest nieprawidłowy dla tego elementu".
- 
-- [Static](../../language-reference/keywords/static.md) — słowo kluczowe. W tym `static` słowo kluczowe generuje błąd kompilatora CS0106, "modyfikator" static "jest nieprawidłowy dla tego elementu".
+> [!NOTE]
+> Przed C# 8,0 funkcja lokalna nie może zawierać modyfikatora `static`. W tym `static` słowo kluczowe generuje błąd kompilatora CS0106, "modyfikator" static "jest nieprawidłowy dla tego elementu".
 
 Ponadto atrybuty nie mogą być stosowane do funkcji lokalnej ani do jej parametrów i parametrów typu. 
  

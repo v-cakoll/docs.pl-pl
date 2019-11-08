@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 74d13de78369b13fbf970dce9a3ef5ae7cbaac7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698886"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736895"
 ---
 # <a name="null-c-reference"></a>null (C# Reference)
 
-Słowo kluczowe `null` jest literałem, która reprezentuje odwołanie o wartości null, która nie odwołuje się do żadnego obiektu. `null` jest wartością domyślną zmiennych typu odwołania. Zwykłe typy wartości nie mogą mieć wartości null, z wyjątkiem [typów wartości dopuszczających wartość null](../../programming-guide/nullable-types/index.md).
+Słowo kluczowe `null` jest literałem, która reprezentuje odwołanie o wartości null, która nie odwołuje się do żadnego obiektu. `null` jest wartością domyślną zmiennych typu odwołania. Zwykłe typy wartości nie mogą mieć wartości null, z wyjątkiem [typów wartości dopuszczających wartość null](../builtin-types/nullable-value-types.md).
 
 Poniższy przykład demonstruje niektóre zachowania słowa kluczowego null:
 

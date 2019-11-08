@@ -9,15 +9,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: acd9a6ef-b7ca-4146-abb6-60f3b366e9ec
-ms.openlocfilehash: d8fdeec8784c9a44c9b272a0a5a8b9c56ace5230
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e14ab0ebc7d44e2792307b16c7c0581ff7a71bc6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458817"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740825"
 ---
 # <a name="mcignorable-attribute"></a>mc:Ignorable — Atrybut
-Określa, które [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] prefiksy przestrzeni nazw napotkane w pliku znaczników mogą zostać zignorowane przez procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Atrybut `mc:Ignorable` obsługuje zgodność znaczników zarówno dla niestandardowego mapowania przestrzeni nazw, jak i dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wersji.  
+Określa, które prefiksy przestrzeni nazw XML, które można napotkać w pliku znaczników, mogą zostać zignorowane przez procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Atrybut `mc:Ignorable` obsługuje zgodność znaczników zarówno dla niestandardowego mapowania przestrzeni nazw, jak i dla [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wersji.  
   
 ## <a name="xaml-attribute-usage-single-prefix"></a>Użycie atrybutu języka XAML (pojedynczy prefiks)  
   
@@ -51,7 +51,7 @@ Określa, które [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-m
 |*ThisElementCanBeIgnored*|Element, który może być ignorowany przez implementacje procesora [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], jeśli nie można rozpoznać typu podstawowego.|  
   
 ## <a name="remarks"></a>Uwagi  
- Prefiks przestrzeni nazw [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] `mc` jest zalecaną konwencją prefiksu do użycia podczas mapowania `http://schemas.openxmlformats.org/markup-compatibility/2006`przestrzeni nazw zgodności [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Prefiks przestrzeni nazw XML `mc` jest zalecaną konwencją prefiksu do użycia podczas mapowania przestrzeni nazw zgodności [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] `http://schemas.openxmlformats.org/markup-compatibility/2006`.  
   
  Elementy lub atrybuty, w których części prefiksu nazwy elementu są identyfikowane jako `mc:Ignorable` nie będą powodować błędów podczas przetwarzania przez procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Jeśli ten atrybut nie może zostać rozpoznany jako typ podstawowy lub konstrukcja programistyczna, ten element jest ignorowany. Należy jednak zauważyć, że zignorowane elementy nadal mogą generować dodatkowe błędy analizy dla dodatkowych wymagań elementu, które są efektami ubocznymi tego elementu, który nie jest przetwarzany. Na przykład model zawartości określonego elementu może wymagać dokładnie jednego elementu podrzędnego, ale jeśli określony element podrzędny znajdował się w prefiksie `mc:Ignorable`, a określony element podrzędny nie mógł zostać rozpoznany jako typ, wówczas procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] może zgłosić błąd.  
   

@@ -1,24 +1,24 @@
 ---
-title: <message>elementu<netTcpBinding>
+title: <message> element <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 0cf4f66df43070cc90443e3a640915df46a5cccd
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 76c4a0a30b637bc168855b091029a959b858401e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400290"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739009"
 ---
-# <a name="message-element-of-nettcpbinding"></a>\<komunikat > elementu \<NetTcpBinding >
-Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla punktu końcowego skonfigurowanego przy użyciu [ \<> NetTcpBinding](nettcpbinding.md).  
+# <a name="message-element-of-nettcpbinding"></a>\<komunikat > elementu \<netTcpBinding >
+Definiuje typ wymagań dotyczących zabezpieczeń na poziomie wiadomości dla punktu końcowego skonfigurowanego przy użyciu [\<netTcpBinding >](nettcpbinding.md).  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netTcpBinding >** ](nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> komunikatu**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetTcpBinding**](nettcpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zabezpieczeń**](security-of-nettcpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<komunikat >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,10 +34,10 @@ Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla p
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|`algorithmSuite`|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Algorytmy i rozmiary kluczy są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasę. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Możliwe wartości przedstawiono w poniższej tabeli. Wartość domyślna to `Basic256`.<br /><br /> Jeśli powiązanie usługi określa `algorithmSuite` wartość, która nie jest równa wartości domyślnej, i generuje plik konfiguracji za pomocą Svcutil. exe, wówczas nie jest on generowany prawidłowo i trzeba ręcznie edytować plik konfiguracji, aby ustawić ten atrybut na wymagana wartość.|  
+|`algorithmSuite`|Ustawia szyfrowanie komunikatów i algorytmy zawijania kluczy. Algorytmy i rozmiary kluczy są określane przez klasę <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Te algorytmy są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> Możliwe wartości przedstawiono w poniższej tabeli. Wartość domyślna to `Basic256`.<br /><br /> Jeśli powiązanie usługi określa wartość `algorithmSuite`, która nie jest równa wartości domyślnej, a plik konfiguracji zostanie wygenerowany przy użyciu Svcutil. exe, wówczas nie zostanie prawidłowo wygenerowany i trzeba ręcznie edytować plik konfiguracji, aby ustawić żądany atrybut wartościami.|  
 |`clientCredentialType`|Określa typ poświadczeń, które mają być używane podczas uwierzytelniania klienta przy użyciu zabezpieczeń opartych na komunikatach. Możliwe wartości przedstawiono w poniższej tabeli. Wartość domyślna to `UserName`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
   
-## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
+## <a name="algorithmsuite-attribute"></a>algorithmSuite — atrybut  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -64,8 +64,8 @@ Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla p
 |-----------|-----------------|  
 |Brak|Dzięki temu usługa może korzystać z anonimowych klientów. W usłudze oznacza to, że usługa nie wymaga poświadczeń klienta. Na kliencie wskazuje, że klient nie dostarcza poświadczeń klienta.|  
 |Windows|Zezwala, aby wymiany SOAP były w ramach uwierzytelnionego kontekstu poświadczeń systemu Windows.|  
-|UserName|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu poświadczeń nazwy użytkownika. Usługa WCF nie obsługuje wysyłania skrótu hasła ani wyprowadzania kluczy przy użyciu hasła i używania tych kluczy do zabezpieczenia komunikatów. W związku z tym WCF wymusza, aby transport był zabezpieczony przy użyciu poświadczeń nazwy użytkownika. Ten tryb poświadczeń służy do samodzielnej wymiany lub negocjowania niewspółpracującego na podstawie `negotiateServiceCredential` atrybutu.|  
-|Certyfikatu|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu certyfikatu. Jeśli używany jest tryb zabezpieczeń wiadomości, a `negotiateServiceCredential` atrybut jest ustawiony na `false`, klient musi być zainicjowany przy użyciu certyfikatu usługi.|  
+|UserName|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu poświadczeń nazwy użytkownika. Usługa WCF nie obsługuje wysyłania skrótu hasła ani wyprowadzania kluczy przy użyciu hasła i używania tych kluczy do zabezpieczenia komunikatów. W związku z tym WCF wymusza, aby transport był zabezpieczony przy użyciu poświadczeń nazwy użytkownika. Ten tryb poświadczeń służy do samodzielnej wymiany lub negocjowania niewspółpracującego na podstawie atrybutu `negotiateServiceCredential`.|  
+|Certyfikatu|Zezwala usłudze na wymaganie uwierzytelniania klienta przy użyciu certyfikatu. Jeśli jest używany tryb zabezpieczeń wiadomości, a atrybut `negotiateServiceCredential` jest ustawiony na `false`, klient musi być zainicjowany przy użyciu certyfikatu usługi.|  
 |IssuedToken|Określa niestandardowy token, zazwyczaj wystawiony przez usługę tokenu zabezpieczającego (STS).|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -75,7 +75,7 @@ Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla p
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zabezpieczeń](security-of-nettcpbinding.md)|Definiuje funkcje zabezpieczeń dla programu <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[> zabezpieczeń \<](security-of-nettcpbinding.md)|Definiuje możliwości zabezpieczeń dla <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Uwagi  
  Komunikat używa zabezpieczeń na poziomie komunikatów dla integralności i poufności komunikatu protokołu SOAP oraz do wzajemnego uwierzytelniania elementów równorzędnych komunikacji. Jeśli w powiązaniu wybrano ten tryb zabezpieczeń, stos kanału jest konfigurowany z elementami powiązania zabezpieczeń wiadomości, a komunikaty protokołu SOAP są zabezpieczone zgodnie ze standardami WS-Security *.  
@@ -90,4 +90,4 @@ Definiuje typ wymagań dotyczących zabezpieczeń na poziomie komunikatów dla p
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> powiązania](../../../misc/binding.md)
+- [> powiązań \<](bindings.md)

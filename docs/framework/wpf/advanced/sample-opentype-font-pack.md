@@ -6,21 +6,21 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960970"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740769"
 ---
 # <a name="sample-opentype-font-pack"></a>Przykład pakietu czcionek OpenType
-Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystrybuowane z [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Przykładowe czcionki obsługują rozszerzone funkcje OpenType, które mogą być używane przez [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacje.  
+Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystrybuowane z Windows SDK. Przykładowe czcionki obsługują rozszerzone funkcje OpenType, które mogą być używane przez aplikacje [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Czcionki w pakiecie czcionek OpenType  
- Zawiera zestaw przykładowych czcionek OpenType, których można użyć podczas tworzenia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Przykładowe czcionki są dostarczane w ramach licencji od firmy Ascend Corporation. Te czcionki implementują tylko podzestaw całkowitej liczby funkcji zdefiniowanych przez format OpenType. W poniższej tabeli wymieniono nazwy przykładowych czcionek OpenType.  
+ Windows SDK zawiera zestaw przykładowych czcionek OpenType, których można użyć podczas tworzenia aplikacji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Przykładowe czcionki są dostarczane w ramach licencji od firmy Ascend Corporation. Te czcionki implementują tylko podzestaw całkowitej liczby funkcji zdefiniowanych przez format OpenType. W poniższej tabeli wymieniono nazwy przykładowych czcionek OpenType.  
   
-|**Nazwa**|**Plik**|  
+|**Nazwa**|**Rozszerzeniem**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -44,7 +44,7 @@ Ten temat zawiera omówienie przykładowych czcionek OpenType, które są dystry
 ## <a name="installing-the-fonts"></a>Instalowanie czcionek  
  Możesz zainstalować przykładowe czcionki OpenType w domyślnym katalogu czcionek systemu Windows, **\Windows\Fonts**. Za pomocą panelu sterowania czcionki Zainstaluj czcionki. Gdy te czcionki znajdują się na komputerze, są dostępne dla wszystkich aplikacji, które odwołują się do domyślnych czcionek systemu Windows. Można wyświetlić reprezentatywny zestaw znaków w kilku rozmiarach czcionek, podwajając kliknięcie pliku z czcionką. Poniższy zrzut ekranu przedstawia plik z czcionką Lindsey, Linds. ttf.  
   
- ![Lindsey font &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Czcionka &#40;Lindsey OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Wyświetlanie czcionki Lindsey  
   
 <a name="using_the_fonts"></a>   

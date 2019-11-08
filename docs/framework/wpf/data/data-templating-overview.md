@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: d088342a08076c69b34f6c3d39dce076cb3890d4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 377ee76e7e3537e9cae010189306611a503acbed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460049"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740624"
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model tworzenia szablonów danych WPF zapewnia dużą elastyczność definiowania prezentacji danych. Formanty WPF mają wbudowaną funkcję do obsługi dostosowywania prezentacji danych. W tym temacie najpierw przedstawiono sposób definiowania <xref:System.Windows.DataTemplate> a następnie wprowadzono inne funkcje tworzenia szablonówymi danych, takie jak wybór szablonów oparty na logiki niestandardowej i obsługa wyświetlania danych hierarchicznych.  
@@ -54,7 +54,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność definiowani
   
  ![Zrzut ekranu przedstawiający przykładowy tworzenia szablonów danych](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
- Jednak ograniczanie i elastyczność. Ponadto, jeśli tworzysz powiązanie z danymi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], nie będzie można przesłonić `ToString`.  
+ Jednak ograniczanie i elastyczność. Ponadto, jeśli tworzysz powiązanie z danymi XML, nie można przesłonić `ToString`.  
   
 <a name="defining_simple_datatemplate"></a>   
 ### <a name="defining-a-simple-datatemplate"></a>Definiowanie prostego szablonu DataTemplate  
@@ -62,7 +62,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność definiowani
   
  [!code-xaml[DataTemplatingIntro_snip#Inline](~/samples/snippets/csharp/VS_Snippets_Wpf/DataTemplatingIntro_snip/CSharp/Window1.xaml#inline)]  
   
- Dane bazowe dla przykładów w tym temacie są kolekcją obiektów CLR. Jeśli powiążesz się z danymi [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], podstawowe koncepcje są takie same, ale istnieje niewielka różnica składni. Na przykład zamiast `Path=TaskName`, należy ustawić <xref:System.Windows.Data.Binding.XPath%2A> na `@TaskName` (jeśli `TaskName` jest atrybutem węzła [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]).  
+ Dane bazowe dla przykładów w tym temacie są kolekcją obiektów CLR. W przypadku powiązań z danymi XML podstawowe koncepcje są takie same, ale istnieje niewielka różnica składni. Na przykład zamiast `Path=TaskName`, należy ustawić <xref:System.Windows.Data.Binding.XPath%2A> na `@TaskName` (jeśli `TaskName` jest atrybutem węzła XML).  
   
  Teraz nasza <xref:System.Windows.Controls.ListBox> wygląda następująco:  
   

@@ -3,12 +3,12 @@ title: Typy referencyjne dopuszczające wartość null
 description: Ten artykuł zawiera omówienie typów referencyjnych dopuszczających wartość null C# , które dodano w 8,0. Dowiesz się, jak funkcja zapewnia bezpieczeństwo przed wyjątkami odwołania o wartości null dla nowych i istniejących projektów.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039780"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737840"
 ---
 # <a name="nullable-reference-types"></a>Typy referencyjne dopuszczające wartość null
 
@@ -28,7 +28,7 @@ Ta nowa funkcja zapewnia znaczne korzyści w porównaniu z obsługą zmiennych r
 
 Przy dodawaniu typów odwołań do wartości null można zadeklarować cel dokładniej. Wartość `null` jest prawidłowym sposobem reprezentowania, że zmienna nie odwołuje się do wartości. Nie używaj tej funkcji, aby usunąć wszystkie wartości `null` z kodu. Zamiast tego należy zadeklarować intencję do kompilatora i innych deweloperów, które odczytują swój kod. Deklarując swój intencję, kompilator informuje, gdy piszesz kod, który jest niespójny z tym zamiarem.
 
-**Typ referencyjny dopuszczający wartość null** jest zanotowany przy użyciu tej samej składni co typ [wartości null](programming-guide/nullable-types/index.md): `?` jest dołączany do typu zmiennej. Na przykład następująca deklaracja zmiennej reprezentuje zmienną ciągu dopuszczającą wartość null, `name`:
+**Typ referencyjny dopuszczający wartość null** jest zanotowany przy użyciu tej samej składni co typ [wartości null](language-reference/builtin-types/nullable-value-types.md): `?` jest dołączany do typu zmiennej. Na przykład następująca deklaracja zmiennej reprezentuje zmienną ciągu dopuszczającą wartość null, `name`:
 
 ```csharp
 string? name;

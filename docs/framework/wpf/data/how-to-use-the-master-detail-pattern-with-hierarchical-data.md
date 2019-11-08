@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 2e7d9ceed3ab8385f07d87ecdb92c0a99d410b40
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e4183ddc3868a1568662853b46e05348df129092
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459082"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733483"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Jak użyć wzorca szczegółowego z danymi hierarchicznymi
 Ten przykład pokazuje, jak zaimplementować scenariusz wzorzec-szczegóły.  
@@ -31,7 +31,7 @@ Ten przykład pokazuje, jak zaimplementować scenariusz wzorzec-szczegóły.
   
 2. Należy ustawić właściwość <xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A> na `true` w kontrolkach <xref:System.Windows.Controls.ListBox>, dla których jest śledzone zaznaczenie. Ustawienie tej właściwości gwarantuje, że wybrany element jest zawsze ustawiany jako <xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>. Alternatywnie, jeśli <xref:System.Windows.Controls.ListBox> pobiera dane z <xref:System.Windows.Data.CollectionViewSource>, automatycznie synchronizuje wybór i walutę.  
   
- Technika jest nieco inna, gdy używasz danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. Aby zapoznać się z przykładem, zobacz [Używanie wzorca master-detail z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
+ Technika jest nieco inna w przypadku korzystania z danych XML. Aby zapoznać się z przykładem, zobacz [Używanie wzorca master-detail z danymi hierarchicznymi XML](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

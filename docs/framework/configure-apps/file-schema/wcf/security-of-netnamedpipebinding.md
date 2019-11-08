@@ -2,22 +2,22 @@
 title: <security> dla <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: cd3ff5d3983283f9b4783912b4b9525c5000df61
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 31ea31ce6880a770c966350cd931e487396c4d63
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399830"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736434"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<zabezpieczenia > \<NetNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<> zabezpieczeń \<netNamedPipeBinding >
 Definiuje ustawienia zabezpieczeń dla powiązania.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> zabezpieczeń**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetNamedPipeBinding**](netnamedpipebinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<zabezpieczenia >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,7 +38,7 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|tryb|Określa typ zabezpieczeń, które są stosowane do tego powiązania. Prawidłowe wartości to:<br /><br /> Dawaj Spowoduje to wyłączenie zabezpieczeń.<br />Transportu Zabezpieczenia są udostępniane przy użyciu podstawowych zabezpieczeń opartych na transportach. Istnieje możliwość kontrolowania poziomu ochrony w tym trybie.<br />— Wartość domyślna to transport. Ten atrybut jest typu <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|tryb|Określa typ zabezpieczeń, które są stosowane do tego powiązania. Prawidłowe wartości to:<br /><br /> -Brak: spowoduje to wyłączenie zabezpieczeń.<br />-Transport: zabezpieczenia są udostępniane przy użyciu podstawowych zabezpieczeń opartych na transportach. Istnieje możliwość kontrolowania poziomu ochrony w tym trybie.<br />— Wartość domyślna to transport. Ten atrybut jest typu <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
@@ -50,7 +50,7 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|powiązanie|Element Binding elementu [ \<NetNamedPipeBinding >](netnamedpipebinding.md).|  
+|powiązanie|Element powiązania [\<netNamedPipeBinding >](netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -63,4 +63,4 @@ Definiuje ustawienia zabezpieczeń dla powiązania.
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> powiązania](../../../misc/binding.md)
+- [> powiązań \<](bindings.md)

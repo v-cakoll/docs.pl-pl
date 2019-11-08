@@ -6,15 +6,15 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582591"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740740"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Ograniczenia serializacji XamlWriter.Save
-@No__t_0 interfejsu API może służyć do serializacji zawartości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji jako pliku [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Istnieją jednak pewne istotne ograniczenia w dokładnie tym, co jest serializowane. Te ograniczenia i niektóre ogólne zagadnienia zostały udokumentowane w tym temacie.  
+<xref:System.Windows.Markup.XamlWriter.Save%2A> interfejsu API może służyć do serializacji zawartości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji jako pliku [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Istnieją jednak pewne istotne ograniczenia w dokładnie tym, co jest serializowane. Te ograniczenia i niektóre ogólne zagadnienia zostały udokumentowane w tym temacie.  
 
 <a name="Run_Time__Not_Design_Time_Representation"></a>   
 ## <a name="run-time-not-design-time-representation"></a>Reprezentacja czasu wykonywania, nie projektowania  
@@ -30,7 +30,7 @@ ms.locfileid: "72582591"
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>Obsługa zdarzeń nie jest zachowywana  
- Gdy programy obsługi zdarzeń dodawane za poorednictwem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są serializowane, nie są zachowywane. nie ma żadnego sposobu serializacji logiki proceduralnej środowiska uruchomieniowego, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bez kodu (i bez powiązanego mechanizmu x:Code). Ponieważ Serializacja jest samodzielna i ograniczona do drzewa logicznego, nie ma możliwości przechowywania obsługi zdarzeń. W związku z tym atrybuty programu obsługi zdarzeń, zarówno sam atrybut, jak i wartość ciągu, która nazywają procedurę obsługi, są usuwane z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] danych wyjściowych.  
+ Gdy programy obsługi zdarzeń dodawane za poorednictwem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są serializowane, nie są zachowywane. nie ma żadnego sposobu serializacji logiki proceduralnej środowiska uruchomieniowego, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bez kodu (i bez powiązanego mechanizmu x:Code). Ponieważ Serializacja jest samodzielna i ograniczona do drzewa logicznego, nie ma możliwości przechowywania obsługi zdarzeń. W związku z tym atrybuty programu obsługi zdarzeń, zarówno sam atrybut, jak i wartość ciągu, która nazywają procedurę obsługi, są usuwane z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]danych wyjściowych.  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Realistyczne scenariusze korzystania z XAMLWriter. Save  
@@ -40,4 +40,4 @@ ms.locfileid: "72582591"
   
 - Teksty tekstu sformatowanego i przepływu: tekst i wszystkie elementy formatowania elementów i zawartych w nim elementów są zachowywane w danych wyjściowych. Może to być przydatne w przypadku mechanizmów, które mają przybliżoną funkcjonalność Schowka.  
   
-- Zachowywanie danych obiektu biznesowego: Jeśli dane są przechowywane w niestandardowych elementach, takich jak [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dane, tak długo, jak obiekty biznesowe są zgodne z podstawowymi regułami [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], takimi jak udostępnianie niestandardowych konstruktorów i konwersja na wartości właściwości przez odwołanie, te firmy obiekty mogą być perpetuated przez serializację.
+- Zachowywanie danych obiektu biznesowego: Jeśli dane są przechowywane w niestandardowych elementach, takich jak dane XML, tak długo, jak obiekty biznesowe są zgodne z podstawowymi [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] regułami, takimi jak udostępnianie niestandardowych konstruktorów i konwersja na wartości właściwości przez odwołanie, te firmy obiekty mogą być perpetuated przez serializację.

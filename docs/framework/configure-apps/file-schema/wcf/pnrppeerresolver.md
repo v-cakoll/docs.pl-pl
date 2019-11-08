@@ -2,21 +2,21 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: d7c6c8efa971fb60f0257cc1c74ceda72e31cb84
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: d3e88d7f2dd991091d3d7abdc715e125ddc9ac56
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400057"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738781"
 ---
-# <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
+# <a name="pnrppeerresolver"></a>\<pnrpPeerResolver >
 Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma być używany jako program rozpoznawania nazw. Ten element jest opcjonalny, ponieważ protokół PNRP jest domyślnym programem rozpoznawania nazw.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<pnrpResolver >**  
   
 ## <a name="syntax"></a>Składnia  
@@ -32,7 +32,7 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|resolverType|Ciąg określający, który mechanizm rozwiązywania konfliktów ma być używany. Ten atrybut jest opcjonalny. Jeśli nie jest ustawiona, lub jeśli jest ustawiona na pusty ciąg, używany jest protokół PNRP.|  
+|program rozpoznawania nazw|Ciąg określający, który mechanizm rozwiązywania konfliktów ma być używany. Ten atrybut jest opcjonalny. Jeśli nie jest ustawiona, lub jeśli jest ustawiona na pusty ciąg, używany jest protokół PNRP.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak  
@@ -41,7 +41,7 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
+|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="example"></a>Przykład  
   
@@ -57,5 +57,5 @@ Określa, że program rozpoznawania nazw PNRP (Peer Name Resolution Protocol) ma
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<niestandardowebinding >](custombinding.md)
 - [Mechanizmy rozpoznawania elementów równorzędnych](../../../wcf/feature-details/peer-resolvers.md)

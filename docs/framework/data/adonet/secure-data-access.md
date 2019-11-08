@@ -2,18 +2,18 @@
 title: Bezpieczny dostęp do danych
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782777"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735278"
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabezpieczeń dostępnymi w podstawowym magazynie danych lub w bazie danych. Należy również wziąć pod uwagę implikacje zabezpieczeń innych funkcji lub składników, które może zawierać aplikacja.  
   
 ## <a name="authentication-authorization-and-permissions"></a>Uwierzytelnianie, autoryzacja i uprawnienia  
- Podczas nawiązywania połączenia z usługą Microsoft SQL Server można używać uwierzytelniania systemu Windows, znanego również jako zabezpieczenia zintegrowane, które korzysta z tożsamości bieżącego aktywnego użytkownika systemu Windows zamiast przekazywania identyfikatora użytkownika i hasła. Korzystanie z uwierzytelniania systemu Windows jest zdecydowanie zalecane, ponieważ poświadczenia użytkownika nie są ujawniane w parametrach połączenia. Jeśli nie można użyć uwierzytelniania systemu Windows w celu nawiązania połączenia z SQL Server, rozważ utworzenie parametrów połączenia w czasie <xref:System.Data.SqlClient.SqlConnectionStringBuilder>wykonywania przy użyciu.  
+ Podczas nawiązywania połączenia z usługą Microsoft SQL Server można używać uwierzytelniania systemu Windows, znanego również jako zabezpieczenia zintegrowane, które korzysta z tożsamości bieżącego aktywnego użytkownika systemu Windows zamiast przekazywania identyfikatora użytkownika i hasła. Korzystanie z uwierzytelniania systemu Windows jest zdecydowanie zalecane, ponieważ poświadczenia użytkownika nie są ujawniane w parametrach połączenia. Jeśli nie można użyć uwierzytelniania systemu Windows w celu nawiązania połączenia z SQL Server, rozważ utworzenie parametrów połączenia w czasie wykonywania przy użyciu <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
   
  Poświadczenia używane do uwierzytelniania muszą być obsługiwane w różny sposób w zależności od typu aplikacji. Na przykład w aplikacji Windows Forms użytkownik może zostać poproszony o podanie informacji dotyczących uwierzytelniania lub można użyć poświadczeń systemu Windows użytkownika. Jednak aplikacja sieci Web często uzyskuje dostęp do danych przy użyciu poświadczeń dostarczonych przez samą aplikację, a nie przez użytkownika.  
   
@@ -55,7 +55,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Podstawy obsługi wyjątków](../../../standard/exceptions/exception-handling-fundamentals.md)|Opisuje podstawowe formy obsłudze wyjątków try/catch/finally.|  
+|[Obsługa i zgłaszanie wyjątków w programie .NET](../../../standard/exceptions/index.md)|Opisuje podstawowe formy obsłudze wyjątków try/catch/finally.|  
 |[Najlepsze rozwiązania dotyczące wyjątków](../../../standard/exceptions/best-practices-for-exceptions.md)|W tym artykule opisano najlepsze rozwiązania dotyczące obsługi wyjątków.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona dostępu do źródeł danych programu Microsoft Access i programu Excel  
@@ -68,8 +68,8 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
 |[Zagadnienia dotyczące zabezpieczeń i wskazówki dotyczące dostępu 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Opisuje techniki zabezpieczeń dotyczące dostępu 2007, takich jak szyfrowanie plików, administrowanie hasłami, konwertowanie baz danych do nowych formatów ACCDB i ACCDe oraz korzystanie z innych opcji zabezpieczeń.|  
 |[Informacje o roli plików informacyjnych grupy roboczej w zabezpieczeniach dostępu](https://support.microsoft.com/kb/305542)|Wyjaśnia rolę i relację pliku informacji o grupie roboczej w programie Access 2003 zabezpieczenia.|  
 |[Często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access dla programu Microsoft Access w wersji 2,0 do 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Wersja do pobrania, często zadawane pytania dotyczące zabezpieczeń programu Microsoft Access.|  
-## <a name="enterprise-services"></a>Enterprise Services  
- COM+ zawiera własny model zabezpieczeń, który opiera się na kontach systemu Windows NT i personifikacji procesu/wątku. Przestrzeń nazw zawiera otoki, które umożliwiają aplikacjom .NET integrację kodu zarządzanego z usługami zabezpieczeń modelu <xref:System.EnterpriseServices.ServicedComponent> com+ za pomocą klasy. <xref:System.EnterpriseServices>  
+## <a name="enterprise-services"></a>Usługi dla przedsiębiorstw  
+ COM+ zawiera własny model zabezpieczeń, który opiera się na kontach systemu Windows NT i personifikacji procesu/wątku. Przestrzeń nazw <xref:System.EnterpriseServices> zawiera otoki zezwalające aplikacjom .NET na integrację kodu zarządzanego z usługami zabezpieczeń modelu COM+ za pomocą klasy <xref:System.EnterpriseServices.ServicedComponent>.  
   
  Aby uzyskać więcej informacji, zobacz następujący zasób.  
   
@@ -78,7 +78,7 @@ Aby napisać bezpieczny kod ADO.NET, należy zapoznać się z mechanizmami zabez
 |[Zabezpieczenia oparte na rolach](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|W tym artykule omówiono sposób integrowania kodu zarządzanego z usługami zabezpieczeń modelu COM+.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
- .NET Framework zapewnia interakcję z niezarządzanym kodem, w tym składniki COM, usługi COM+, zewnętrzne biblioteki typów i wiele usług systemu operacyjnego. Praca z kodem niezarządzanym polega na przejściu poza obwód zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i dowolny kod, który wywołuje go musi mieć uprawnienia<xref:System.Security.Permissions.SecurityPermission> <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> do kodu niezarządzanego (z określoną flagą). Kod niezarządzany może wprowadzić niezamierzone luki w zabezpieczeniach do aplikacji. W związku z tym należy unikać współdziałania z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
+ .NET Framework zapewnia interakcję z niezarządzanym kodem, w tym składniki COM, usługi COM+, zewnętrzne biblioteki typów i wiele usług systemu operacyjnego. Praca z kodem niezarządzanym polega na przejściu poza obwód zabezpieczeń dla kodu zarządzanego. Zarówno kod, jak i kod, który je wywołuje, muszą mieć uprawnienia do kodu niezarządzanego (<xref:System.Security.Permissions.SecurityPermission> z określoną flagą <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>). Kod niezarządzany może wprowadzić niezamierzone luki w zabezpieczeniach do aplikacji. W związku z tym należy unikać współdziałania z kodem niezarządzanym, chyba że jest to absolutnie konieczne.  
   
  Aby uzyskać więcej informacji, zobacz następujące zasoby.  
   

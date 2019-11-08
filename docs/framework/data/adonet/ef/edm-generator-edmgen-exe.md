@@ -2,12 +2,12 @@
 title: Generator EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: e8bf82933d19c6b7e9ec90f70bfa990e0d08847c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 858525a81e7779e7631ee8ac959110ba946cf652
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738531"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 
@@ -45,8 +45,8 @@ W przypadku korzystania z narzędzia EdmGen. exe należy określić jeden z nast
 
 |Opcja|Opis|
 |------------|-----------------|
-|ciąg\<`/p[roject]:`|Określa nazwę projektu do użycia. Nazwa projektu jest używana jako wartość domyślna dla ustawienia przestrzeń nazw, nazwa modelu i pliki mapowania, nazwa pliku źródłowego obiektu i nazwa pliku źródłowego generacji widoku. Nazwa kontenera jednostek jest ustawiona na \<kontekstu > projektu.|
-|ciąg\<`/prov[ider]:`|Nazwa dostawcy danych .NET Framework, który ma zostać użyty do wygenerowania pliku modelu magazynu (SSDL). Domyślny dostawca to .NET Framework Dostawca danych dla SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|ciąg \<`/p[roject]:`|Określa nazwę projektu do użycia. Nazwa projektu jest używana jako wartość domyślna dla ustawienia przestrzeń nazw, nazwa modelu i pliki mapowania, nazwa pliku źródłowego obiektu i nazwa pliku źródłowego generacji widoku. Nazwa kontenera jednostek jest ustawiona na \<kontekstu > projektu.|
+|ciąg \<`/prov[ider]:`|Nazwa dostawcy danych .NET Framework, który ma zostać użyty do wygenerowania pliku modelu magazynu (SSDL). Domyślny dostawca to .NET Framework Dostawca danych dla SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<parametry połączenia >|Określa ciąg, który jest używany do nawiązywania połączenia ze źródłem danych.|
 |`/incsdl:`\<pliku >|Określa plik CSDL lub katalog, w którym znajdują się pliki. csdl. Ten argument można określić wiele razy, aby można było określić kilka katalogów lub plików CSDL. Określenie wielu katalogów może być przydatne w przypadku generowania klas (`/mode:EntityClassGeneration`) lub widoków (`/mode:ViewGeneration`), gdy model koncepcyjny jest podzielony między kilka plików. Może to być przydatne, jeśli chcesz sprawdzić poprawność wielu modeli (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<pliku >|Określa dodatkowy plik. csdl lub pliki używane do rozwiązywania wszelkich odwołań w źródłowym pliku CSDL. (Plik. CSDL jest plikiem określonym przez opcję `/incsdl`). Plik `/refcsdl` zawiera typy, od których zależy plik source. csdl. Ten argument można określić wiele razy.|
@@ -78,4 +78,4 @@ W przypadku korzystania z narzędzia EdmGen. exe należy określić jeden z nast
 
 - [Narzędzia Entity Data Model ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Model danych jednostki](../entity-data-model.md)
-- [Specyfikacje CSDL, SSDL i MSL](./language-reference/csdl-ssdl-and-msl-specifications.md)
+- [Specyfikacje CSDL, SSDL i MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)

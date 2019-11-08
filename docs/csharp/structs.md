@@ -4,12 +4,12 @@ description: Dowiedz się więcej na temat typu struktury i sposobu ich tworzeni
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423117"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739178"
 ---
 # <a name="structs"></a>Struktury
 
@@ -53,21 +53,9 @@ Struktury współużytkują większość tej samej składni co klasy, chociaż s
   
 - Struktura może implementować interfejsy.
 
-## <a name="literal-values"></a>Wartości literału
-
-W C#programie wartości literałów otrzymują typ z kompilatora. Możesz określić sposób wpisywania literału liczbowego, dołączając literę do końca liczby. Na przykład, aby określić, że wartość 4,56 powinna być traktowana jako zmiennoprzecinkowa, należy dołączyć "f" lub "F" po liczbie: `4.56f`. Jeśli nie zostanie dołączona żadna litera, kompilator wykryje typ `double` dla literału. Aby uzyskać więcej informacji na temat typów, które można określić za pomocą sufiksów liter, zobacz strony referencyjne dla poszczególnych typów w [typach wartości](./language-reference/keywords/value-types.md).  
-  
-Ponieważ wpisywane są literały, a wszystkie typy są ostatecznie z <xref:System.Object>, można napisać i skompilować kod, taki jak następujące:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-W ostatnich dwóch przykładach przedstawiono funkcje języka wprowadzone C# w 7,0. Pierwszy umożliwia użycie znaku podkreślenia jako *separatora cyfr* wewnątrz literałów liczbowych. Możesz umieścić je wszędzie tam, gdzie chcesz, aby zwiększyć czytelność. Nie mają one wpływu na wartość.
-
-Druga ilustruje *literały binarne*, które umożliwiają bezpośrednie Określanie wzorców bitowych zamiast używania notacji szesnastkowej.
-
 ## <a name="nullable-value-types"></a>Typy wartości dopuszczające wartość null
 
-Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](programming-guide/nullable-types/index.md).
+Typy wartości zwykłych nie mogą mieć wartości [null](language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](./language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null lub być niezdefiniowane. Aby uzyskać więcej informacji, zobacz [typy wartości null](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Zobacz także
 

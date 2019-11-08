@@ -3,12 +3,12 @@ title: Klasy i obiekty — wprowadzenie do C# samouczka
 description: Utwórz pierwszy C# program i Eksploruj koncepcje zorientowane obiektowo
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834104"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736832"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Eksploruj programowanie zorientowane obiektowo przy użyciu klas i obiektów
 
@@ -71,9 +71,9 @@ namespace classes
 }
 ```
 
-Przed rozpoczęciem przejdźmy do tego, co zostało skompilowane.  Deklaracja `namespace` umożliwia logicznie organizowanie kodu. Ten samouczek jest stosunkowo mały, więc umieścisz cały kod w jednej przestrzeni nazw. 
+Przed rozpoczęciem przejdźmy do tego, co zostało skompilowane.  Deklaracja `namespace` zapewnia sposób logicznego organizowania kodu. Ten samouczek jest stosunkowo mały, więc umieścisz cały kod w jednej przestrzeni nazw. 
 
-`public class BankAccount` definiuje klasę lub typ, który tworzysz. Wszystko w `{` i `}`, które następuje po deklaracji klasy, definiuje zachowanie klasy. Istnieje pięć ***członków*** klasy `BankAccount`. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
+`public class BankAccount` definiuje klasę lub typ, który tworzysz. Wszystko wewnątrz `{` i `}`, które następuje po deklaracji klasy definiuje zachowanie klasy. Istnieje pięć ***członków*** klasy `BankAccount`. Pierwsze trzy są ***właściwościami***. Właściwości są elementami danych i mogą mieć kod, który wymusza walidację lub inne reguły. Ostatnie dwa są ***metodami***. Metody to bloki kodu, które wykonują pojedynczą funkcję. Odczytywanie nazw każdego z członków powinno zapewnić wystarczającą ilość informacji dla Ciebie lub innego dewelopera, aby zrozumieć, co robi Klasa.
 
 ## <a name="open-a-new-account"></a>Otwórz nowe konto
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Konstruktory są wywoływane podczas tworzenia obiektu przy użyciu [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w *program.cs* następującym wierszem (zastąp `<name>` nazwą użytkownika):
+Konstruktory są wywoływane podczas tworzenia obiektu przy użyciu [`new`](../../language-reference/operators/new-operator.md). Zastąp wiersz `Console.WriteLine("Hello World!");` w *program.cs* następującym wierszem (zastąp `<name>` nazwą):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Dodaj następującą deklarację elementu członkowskiego do klasy `BankAccount`
 private static int accountNumberSeed = 1234567890;
 ```
 
-To jest element członkowski danych. Jest on `private`, co oznacza, że dostęp do niego jest możliwy tylko za pomocą kodu w klasie `BankAccount`. Jest to sposób oddzielenia publicznych obowiązków (na przykład numeru konta) od implementacji prywatnej (jak są generowane numery kont). Jest on również `static`, co oznacza, że jest współużytkowany przez wszystkie obiekty `BankAccount`. Wartość zmiennej niestatycznej jest unikatowa dla każdego wystąpienia obiektu `BankAccount`. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
+To jest element członkowski danych. Jest `private`, co oznacza, że dostęp do niego jest możliwy tylko przez kod wewnątrz klasy `BankAccount`. Jest to sposób oddzielenia publicznych obowiązków (na przykład numeru konta) od implementacji prywatnej (jak są generowane numery kont). Jest on również `static`, co oznacza, że jest współużytkowany przez wszystkie obiekty `BankAccount`. Wartość zmiennej niestatycznej jest unikatowa dla każdego wystąpienia obiektu `BankAccount`. Dodaj następujące dwa wiersze do konstruktora, aby przypisać numer konta:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ Zacznijmy od utworzenia nowego typu do reprezentowania transakcji. Jest to prost
 
 [!code-csharp[Transaction](~/samples/csharp/classes-quickstart/Transaction.cs)]
 
-Teraz Dodajmy do klasy `BankAccount` <xref:System.Collections.Generic.List%601> obiektów `Transaction`. Dodaj następującą deklarację:
+Teraz Dodajmy <xref:System.Collections.Generic.List%601> obiektów `Transaction` do klasy `BankAccount`. Dodaj następującą deklarację:
 
 [!code-csharp[TransactionDecl](~/samples/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -141,13 +141,13 @@ Ten przykład pokazuje istotny aspekt ***Właściwości***. Teraz trwa obliczani
 
 Następnie Zaimplementuj metody `MakeDeposit` i `MakeWithdrawal`. Te metody wymuszą dwie ostatnie reguły: początkowe saldo musi być dodatnie i że każde wycofanie nie może utworzyć salda ujemnego. 
 
-Wprowadza to koncepcję ***wyjątków***. Standardowy sposób wskazujący, że metoda nie może zakończyć pracy, to zgłosić wyjątek. Typ wyjątku i komunikat skojarzony z nim opisują błąd. W tym miejscu Metoda `MakeDeposit` zgłasza wyjątek, jeśli kwota kaucji jest ujemna. Metoda `MakeWithdrawal` zgłasza wyjątek, jeśli kwota wycofania jest ujemna lub w przypadku zastosowania wycofania powoduje ujemną wartość:
+Wprowadza to koncepcję ***wyjątków***. Standardowy sposób wskazujący, że metoda nie może zakończyć pracy, to zgłosić wyjątek. Typ wyjątku i komunikat skojarzony z nim opisują błąd. W tym miejscu Metoda `MakeDeposit` zgłasza wyjątek, jeśli kwota depozytu jest ujemna. Metoda `MakeWithdrawal` zgłasza wyjątek, jeśli kwota wycofania jest ujemna lub w przypadku zastosowania wycofania powoduje ujemne saldo:
 
 [!code-csharp[DepositAndWithdrawal](~/samples/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
 Instrukcja [`throw`](../../language-reference/keywords/throw.md) **zgłasza** wyjątek. Wykonanie bieżącego bloku i sterowanie transferami do pierwszego pasującego bloku `catch` znalezionego w stosie wywołań. Dodasz blok `catch`, aby przetestować ten kod nieco później.
 
-Konstruktor powinien otrzymać jedną zmianę, aby dodać początkową transakcję zamiast bezpośrednio aktualizować saldo. Ponieważ już zapisano metodę `MakeDeposit`, wywołaj ją z konstruktora. Gotowy Konstruktor powinien wyglądać następująco:
+Konstruktor powinien otrzymać jedną zmianę, aby dodać początkową transakcję zamiast bezpośrednio aktualizować saldo. Ponieważ zapisałeś już metodę `MakeDeposit`, wywołaj ją z konstruktora. Gotowy Konstruktor powinien wyglądać następująco:
 
 [!code-csharp[Constructor](~/samples/csharp/classes-quickstart/BankAccount.cs#Constructor)]
 
@@ -175,10 +175,10 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-[Instrukcje `try` i `catch`](../../language-reference/keywords/try-catch.md) umożliwiają oznaczenie bloku kodu, który może generować wyjątki i przechwytywać te błędy, których oczekujesz. Możesz użyć tej samej techniki, aby przetestować kod, który zgłasza wyjątek dla nieujemnego salda:
+[Instrukcje`try` i `catch`](../../language-reference/keywords/try-catch.md) umożliwiają oznaczenie bloku kodu, który może generować wyjątki i przechwytywać te błędy, których oczekujesz. Możesz użyć tej samej techniki, aby przetestować kod, który zgłasza wyjątek dla nieujemnego salda:
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
@@ -210,6 +210,6 @@ Wpisz `dotnet run`, aby wyświetlić wyniki.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli zawiesz, że możesz zobaczyć źródło tego samouczka [w naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
+Jeśli zawiesz, że możesz zobaczyć źródło tego samouczka [w naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
-Gratulacje, udało Ci się ukończyć wszystkie nasze wprowadzenie C# do samouczków. Jeśli eager chcesz dowiedzieć się więcej, wypróbuj więcej naszych [samouczków](../index.md)
+Gratulacje, udało Ci się ukończyć wszystkie nasze wprowadzenie C# do samouczków. Jeśli eager chcesz dowiedzieć się więcej, wypróbuj więcej naszych [samouczków](../index.md).

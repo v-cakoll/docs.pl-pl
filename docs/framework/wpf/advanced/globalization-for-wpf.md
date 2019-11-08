@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740865"
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
-Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji dla globalnego rynku. Elementy programistyczne globalizacji są zdefiniowane w .NET w przestrzeni nazw <xref:System.Globalization>.
+Ten temat zawiera informacje o problemach, które należy wziąć pod uwagę podczas pisania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji dla globalnego rynku. Elementy programistyczne globalizacji są zdefiniowane w programie .NET w przestrzeni nazw <xref:System.Globalization>.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalizacja XAML
- Extensible Application Markup Language (XAML) bazuje na [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] i wykorzystuje obsługę globalizacji zdefiniowaną w specyfikacji [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. W poniższych sekcjach opisano niektóre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] funkcje, których należy wiedzieć.
+ Extensible Application Markup Language (XAML) bazuje na kodzie XML i wykorzystuje obsługę globalizacji zdefiniowaną w specyfikacji XML. W poniższych sekcjach opisano niektóre [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] funkcje, których należy wiedzieć.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Odwołania do znaków
@@ -143,7 +143,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Wielojęzyczny interfejs użytkownika
- Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft dla przełączania interfejsów użytkownika z jednego języka do innego. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  moduł ładujący zasobów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z Menedżera zasobów [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy od <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bieżącego wątku.
+ Wielojęzycznego interfejsu użytkownika (MUI) to pomoc techniczna firmy Microsoft dla przełączania interfejsów użytkownika z jednego języka do innego. Aplikacja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa modelu zestawu do obsługi interfejsu MUI. Jedna aplikacja zawiera zestawy, które są niezależne od języka, a także zestawy zasobów satelitarnych zależne od języka. Punkt wejścia jest zarządzany. EXE w zestawie głównym.  moduł ładujący zasobów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] korzysta z Menedżera zasobów platformy do obsługi wyszukiwania i powrotu zasobów. Zestawy satelickie dla wielu języków współpracują z tym samym zestawem głównym. Załadowany zestaw zasobów zależy od <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> bieżącego wątku.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Lokalizowalny interfejs użytkownika
@@ -152,7 +152,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
  Z punktu widzenia zasobów, plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] zaprojektowany do opisywania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] zależnych od języka to element zasobów, dlatego jego końcowy format dystrybucji musi być Lokalizowalny do obsługi języków międzynarodowych. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie może obsługiwać zdarzeń wielu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacje zawierają bloki kodu, aby to zrobić. Aby uzyskać więcej informacji, zobacz [XAML — Omówienie (WPF)](../../../desktop-wpf/fundamentals/xaml.md). Kod jest usuwany i kompilowany do różnych plików binarnych, gdy plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest zadany przy użyciu tokenu w formie BAML języka XAML. Forma BAML plików XAML, obrazów i innych typów obiektów zasobów zarządzanych jest osadzona w zestawie zasobów satelitarnych, który można lokalizować w innych językach lub głównym zestawie, gdy lokalizacja nie jest wymagana.
 
 > [!NOTE]
-> aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługują wszystkie [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]zasoby środowiska CLR, w tym tabele ciągów, obrazy i tak dalej.
+> aplikacje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obsługują wszystkie zasoby FrameworkCLR, w tym tabele ciągów, obrazy i tak dalej.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Kompilowanie aplikacji lokalizowalnych
@@ -171,7 +171,7 @@ W poniższym przykładzie pokazano szesnastkowe odwołanie do znaku. Zwróć uwa
 ## <a name="using-clickonce-with-localized-applications"></a>Używanie technologii ClickOnce z zlokalizowanymi aplikacjami
  ClickOnce to nowa technologia wdrażania Windows Forms, która będzie dostarczana z programem Visual Studio 2005. Umożliwia instalowanie aplikacji i Uaktualnianie aplikacji sieci Web. Gdy aplikacja, która została wdrożona przy użyciu technologii ClickOnce, jest zlokalizowana, może być wyświetlana tylko w zlokalizowanej kulturze. Na przykład jeśli wdrożona aplikacja jest zlokalizowana w języku japońskim, można ją wyświetlać tylko w japońskim systemie Microsoft Windows, a nie w angielskiej wersji systemu Windows. Jest to problem, ponieważ typowym scenariuszem dla użytkowników japońskich jest uruchomienie angielskiej wersji systemu Windows.
 
- Rozwiązanie tego problemu powoduje ustawienie atrybutu rezerwy języka neutralnego. Deweloper aplikacji może opcjonalnie usunąć zasoby z głównego zestawu i określić, że zasoby można znaleźć w zestawie satelickim odpowiadającym określonej kulturze. Aby kontrolować ten proces, użyj <xref:System.Resources.NeutralResourcesLanguageAttribute>. Konstruktor klasy <xref:System.Resources.NeutralResourcesLanguageAttribute> ma dwa podpisy, jeden, który przyjmuje parametr <xref:System.Resources.UltimateResourceFallbackLocation>, aby określić lokalizację, w której <xref:System.Resources.ResourceManager> powinien wyodrębnić zasoby rezerwowe: zestaw główny lub zestaw satelicki. Poniższy przykład pokazuje, jak używać atrybutu. W przypadku ostatecznej lokalizacji rezerwowej kod powoduje, że <xref:System.Resources.ResourceManager> szuka zasobów w podkatalogu "de" katalogu aktualnie wykonywanego zestawu.
+ Rozwiązanie tego problemu powoduje ustawienie atrybutu rezerwy języka neutralnego. Deweloper aplikacji może opcjonalnie usunąć zasoby z głównego zestawu i określić, że zasoby można znaleźć w zestawie satelickim odpowiadającym określonej kulturze. Aby sterować tym procesem, użyj <xref:System.Resources.NeutralResourcesLanguageAttribute>. Konstruktor klasy <xref:System.Resources.NeutralResourcesLanguageAttribute> ma dwa podpisy, jeden, który przyjmuje parametr <xref:System.Resources.UltimateResourceFallbackLocation>, aby określić lokalizację, w której <xref:System.Resources.ResourceManager> powinien wyodrębnić zasoby rezerwowe: zestaw główny lub zestaw satelicki. Poniższy przykład pokazuje, jak używać atrybutu. W przypadku ostatecznej lokalizacji rezerwowej kod powoduje, że <xref:System.Resources.ResourceManager> szukać zasobów w podkatalogu "de" katalogu aktualnie wykonywanego zestawu.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(

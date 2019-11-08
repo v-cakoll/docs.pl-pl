@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: 6f8542be5a84a4b8b4cabf594c32d6fdfd3757d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 823c81bf6b21b88d719503387a68ce6e7d643d61
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453765"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740914"
 ---
 # <a name="base-elements-overview"></a>Przegląd Elementy bazy
-Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pochodzą od czterech klas, które są powszechnie określane w dokumentacji [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] jako klas podstawowych elementów. Te klasy to <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>i <xref:System.Windows.FrameworkContentElement>. Klasa <xref:System.Windows.DependencyObject> jest również związana, ponieważ jest wspólną klasą bazową obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  
+Wysoki procent klas w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pochodzą od czterech klas, które są powszechnie określane w dokumentacji zestawu SDK jako klas podstawowych elementów. Te klasy to <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>i <xref:System.Windows.FrameworkContentElement>. Klasa <xref:System.Windows.DependencyObject> jest również związana, ponieważ jest wspólną klasą bazową obu <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement>  
 
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>Interfejsy API elementu podstawowego w klasach WPF  

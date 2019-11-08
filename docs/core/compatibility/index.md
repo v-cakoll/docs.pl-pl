@@ -2,12 +2,12 @@
 title: Oszacowanie istotnych zmian — .NET Core
 description: Dowiedz się więcej na temat sposobu, w jaki platforma .NET Core próbuje zachować zgodność dla deweloperów w różnych wersjach programu .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739348"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Oszacowanie istotnych zmian w programie .NET Core
 
@@ -52,7 +52,7 @@ Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość
 - **✔️ zmienić typu [struktury](../../csharp/language-reference/keywords/struct.md) na typ `readonly struct`**
 
   Należy zauważyć, że zmiana typu `readonly struct` na typ `struct` jest niedozwolona.
-  
+
 - **✔️ dodawania [zapieczętowanego](../../csharp/language-reference/keywords/sealed.md) lub [abstrakcyjnego](../../csharp/language-reference/keywords/abstract.md) słowa kluczowego do typu, gdy nie ma *dostępnych* (publicznych lub chronionych) konstruktorów**
 
 - **✔️ Rozszerzanie widoczności typu**
@@ -138,9 +138,9 @@ Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość
 - **❌ zmianę nazwy parametru (w tym zmiana jego wielkości liter)**
 
   Jest to uważane za rozdzielenie z dwóch powodów:
-  
+
   - Dzieli scenariusze z późnym wiązaniem, takie jak funkcja późnego wiązania w Visual Basic C#i [dynamiczna](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) w.
-  
+
   - Jest ona podzielona na [zgodność źródłową](categories.md#source-compatibility) , gdy deweloperzy używają [nazwanych argumentów](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
 - **❌ zmienić z `ref` wartości zwracanej na `ref readonly` wartość zwracana**
@@ -153,9 +153,9 @@ Zmiany w tej kategorii *modyfikują* publiczną powierzchnię typu. Większość
 
   Chociaż często nie jest to istotna zmiana, C# ponieważ kompilator zamierza emitować instrukcje języka pośredniego (IL) elementu [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) do wywoływania metod niewirtualnych (`callvirt` wykonuje sprawdzanie wartości null, podczas gdy normalne wywołanie nie jest), to zachowanie nie jest Niezmienna z kilku powodów:
   - C#nie jest jedynym językiem, który jest obiektem docelowym platformy .NET.
-  
+
   - C# Kompilator coraz bardziej próbuje zoptymalizować `callvirt` do normalnego wywołania, gdy metoda docelowa nie jest wirtualna i prawdopodobnie nie ma wartości null (na przykład metodę dostępną za pomocą [operatora propagacji?. null](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
-  
+
   Zastosowanie metody wirtualnej oznacza, że kod konsumenta często kończy wywoływanie go niepraktycznie.
 
 - **❌ dodawania słowa kluczowego [Virtual](../../csharp/language-reference/keywords/virtual.md) do elementu członkowskiego**

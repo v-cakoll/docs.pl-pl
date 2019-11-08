@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ef25123ed53ecf3e03e4f4c969bed2ef570591ad
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 22544b3bf2acf6e397f2ad5ae3de576bf491bd2b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459031"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740735"
 ---
 # <a name="threading-model"></a>Model wątkowości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zaprojektowano w celu zaoszczędzenia deweloperom trudności związanych z wątkami. W związku z tym większość deweloperów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie będzie musiała pisać interfejsu, który używa więcej niż jednego wątku. Ponieważ programy wielowątkowe są skomplikowane i trudne do debugowania, należy je unikać, gdy istnieją rozwiązania jednowątkowe.  
@@ -49,7 +49,7 @@ ms.locfileid: "73459031"
   
  Jeśli tylko jeden wątek może zmodyfikować [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], jak wątki w tle współdziałają z użytkownikiem? Wątek w tle może zażądać wątku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], aby wykonać operację w jej imieniu. Robi to poprzez zarejestrowanie elementu pracy z <xref:System.Windows.Threading.Dispatcher> wątku [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Klasa <xref:System.Windows.Threading.Dispatcher> udostępnia dwie metody rejestrowania elementów roboczych: <xref:System.Windows.Threading.Dispatcher.Invoke%2A> i <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>. Obie metody planują delegata do wykonania. <xref:System.Windows.Threading.Dispatcher.Invoke%2A> jest wywołaniem synchronicznym — to oznacza, że nie zwraca do momentu, gdy wątek [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] rzeczywiście kończy wykonywanie delegata. <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> jest asynchroniczny i natychmiast wraca.  
   
- <xref:System.Windows.Threading.Dispatcher> Porządkuje elementy w kolejce według priorytetu. Istnieje dziesięć poziomów, które można określić podczas dodawania elementu do kolejki <xref:System.Windows.Threading.Dispatcher>. Te priorytety są utrzymywane w wyliczeniu <xref:System.Windows.Threading.DispatcherPriority>. Szczegółowe informacje na temat poziomów <xref:System.Windows.Threading.DispatcherPriority> można znaleźć w dokumentacji [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)].  
+ <xref:System.Windows.Threading.Dispatcher> Porządkuje elementy w kolejce według priorytetu. Istnieje dziesięć poziomów, które można określić podczas dodawania elementu do kolejki <xref:System.Windows.Threading.Dispatcher>. Te priorytety są utrzymywane w wyliczeniu <xref:System.Windows.Threading.DispatcherPriority>. Szczegółowe informacje na temat poziomów <xref:System.Windows.Threading.DispatcherPriority> można znaleźć w dokumentacji Windows SDK.  
   
 <a name="samples"></a>   
 ## <a name="threads-in-action-the-samples"></a>Wątki w akcji: przykłady  

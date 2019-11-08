@@ -13,80 +13,80 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: d2178a4cbf888baaf0ae84b03b3d463b0de658b1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740872"
 ---
-# <a name="collect-ink"></a>Zbieranie pisma odręcznego
+# <a name="collect-ink"></a>Zbierz atrament
 
-[Windows Presentation Foundation](../index.md) platformy zbiera cyfrowy atrament w ramach podstawowych jego funkcjonalność. W tym temacie omówiono metody do kolekcji pisma odręcznego w Windows Presentation Foundation (WPF).
+Platforma [Windows Presentation Foundation](../index.md) zbiera cyfrowy atrament jako rdzeń części swojej funkcjonalności. W tym temacie omówiono metody zbierania pisma odręcznego w Windows Presentation Foundation (WPF).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Aby użyć poniższych przykładów, należy najpierw zainstalować program Visual Studio i [!INCLUDE[TLA2#tla_winfxsdk](../../../../includes/tla2sharptla-winfxsdk-md.md)]. Należy również zrozumieć sposób pisania aplikacji dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy przy użyciu platformy WPF, zobacz [instruktażu: Mój pierwszy aplikacji klasycznej WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+Aby skorzystać z poniższych przykładów, należy najpierw zainstalować program Visual Studio i Windows SDK. Należy również zrozumieć, jak pisać aplikacje dla WPF. Aby uzyskać więcej informacji na temat rozpoczynania pracy z programem WPF, zobacz [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
 ## <a name="use-the-inkcanvas-element"></a>Użyj elementu InkCanvas
 
-<xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> Element udostępnia najprostszy sposób zbieranie pisma odręcznego na platformie WPF. Użyj <xref:System.Windows.Controls.InkCanvas> element do odbierania i wyświetlania danych wejściowych pisma odręcznego. Często danych wejściowych pisma odręcznego za pomocą pióra, która współdziała z dyskretyzatora, aby wygenerować pociągnięcia odręczne. Ponadto można użyć myszy zamiast pióra. Utworzono pociągnięć są reprezentowane jako <xref:System.Windows.Ink.Stroke> obiektów i ich można modyfikować programowo i przez użytkownika dane wejściowe. <xref:System.Windows.Controls.InkCanvas> Pozwala użytkownikom wybrać, zmodyfikować lub usunąć istniejące <xref:System.Windows.Ink.Stroke>.
+Element <xref:System.Windows.Controls.InkCanvas?displayProperty=fullName> zapewnia najprostszy sposób zbierania pisma odręcznego w WPF. Użyj elementu <xref:System.Windows.Controls.InkCanvas>, aby odbierać i wyświetlać dane wejściowe odręczne. Często wprowadzasz atrament za pomocą pióra, który współdziała z dyskretyzatoram do tworzenia pociągnięć odręcznych. Ponadto mysz może być używana zamiast pióra. Utworzone pociągnięcia są reprezentowane jako obiekty <xref:System.Windows.Ink.Stroke> i mogą być przetwarzane programowo i przez użytkownika. <xref:System.Windows.Controls.InkCanvas> umożliwia użytkownikom wybranie, zmodyfikowanie lub usunięcie istniejących <xref:System.Windows.Ink.Stroke>.
 
-Przy użyciu XAML, możesz skonfigurować zbieranie pisma odręcznego równie łatwo, jak dodawanie **InkCanvas** elementu z drzewa. W poniższym przykładzie dodano <xref:System.Windows.Controls.InkCanvas> do domyślnego projektu WPF w programie Visual Studio:
+Używając języka XAML, można tak szybko skonfigurować kolekcje farb, jak dodanie elementu **InkCanvas** do drzewa. Poniższy przykład dodaje <xref:System.Windows.Controls.InkCanvas> do domyślnego projektu WPF utworzonego w programie Visual Studio:
 
 [!code-xaml[DigitalInkTopics#6](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#6)]
 
-**InkCanvas** elementu może również zawierać elementy podrzędne, dzięki czemu można dodać możliwości adnotacji pisma odręcznego prawie żadnego typu elementu XAML. Na przykład, umożliwiające dodanie funkcji pisma odręcznego do elementów tekstowych, po prostu Uczyń elementem podrzędnym elementu <xref:System.Windows.Controls.InkCanvas>:
+Element **InkCanvas** może także zawierać elementy podrzędne, dzięki czemu można dodać możliwości adnotacji odręcznej do niemal dowolnego typu elementu XAML. Na przykład, aby dodać możliwości pisma odręcznego do elementu tekstowego, wystarczy, że jest on elementem podrzędnym <xref:System.Windows.Controls.InkCanvas>:
 
 [!code-xaml[DigitalInkTopics#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#5)]
 
-Dodano obsługę Oznaczanie obrazu z pisma odręcznego jest równie proste:
+Dodawanie obsługi oznaczania obrazu za pomocą pisma odręcznego jest równie proste:
 
 [!code-xaml[DigitalInkTopics#7](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window2.xaml#7)]
 
 ### <a name="inkcollection-modes"></a>Tryby InkCollection
 
-<xref:System.Windows.Controls.InkCanvas> Obsługuje różne dane wejściowe metody za pomocą jego <xref:System.Windows.Controls.InkCanvas.EditingMode%2A> właściwości.
+<xref:System.Windows.Controls.InkCanvas> zapewnia obsługę różnych trybów wprowadzania za pomocą właściwości <xref:System.Windows.Controls.InkCanvas.EditingMode%2A>.
 
-### <a name="manipulate-ink"></a>Manipulowanie pisma odręcznego
+### <a name="manipulate-ink"></a>Manipulowanie atramentem
 
-<xref:System.Windows.Controls.InkCanvas> Obsługuje wiele pisma odręcznego operacje edycji. Na przykład <xref:System.Windows.Controls.InkCanvas> wstecz pióra obsługuje wymazanie, a żaden dodatkowy kod nie jest potrzebna do dodawania funkcjonalności do elementu.
+<xref:System.Windows.Controls.InkCanvas> zapewnia obsługę wielu operacji edycji farb. Na przykład <xref:System.Windows.Controls.InkCanvas> obsługuje wymazywanie z tyłu pióra i nie jest wymagany żaden dodatkowy kod, aby dodać funkcje do elementu.
 
 #### <a name="selection"></a>Wybór
 
-Ustawienie trybu wyboru jest tak proste, jak ustawienie <xref:System.Windows.Controls.InkCanvasEditingMode> właściwości **wybierz**.
+Ustawienie tryb wyboru jest proste, ponieważ ustawia właściwość <xref:System.Windows.Controls.InkCanvasEditingMode> do **wybrania**.
 
-Poniższy kod ustawia tryb edycji, w oparciu o wartość <xref:System.Windows.Forms.CheckBox>:
+Poniższy kod ustawia tryb edycji na podstawie wartości <xref:System.Windows.Forms.CheckBox>:
 
 [!code-csharp[DigitalInkTopics#8](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#8)]
 [!code-vb[DigitalInkTopics#8](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#8)]
 
 #### <a name="drawingattributes"></a>DrawingAttributes
 
-Użyj <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> właściwości, aby zmienić wygląd pociągnięcia odręczne. Na przykład <xref:System.Windows.Ink.DrawingAttributes.Color%2A> członkiem <xref:System.Windows.Ink.DrawingAttributes> Ustawia kolor renderowanych <xref:System.Windows.Ink.Stroke>.
+Użyj właściwości <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>, aby zmienić wygląd pociągnięć odręcznych. Na przykład <xref:System.Windows.Ink.DrawingAttributes.Color%2A> element członkowski <xref:System.Windows.Ink.DrawingAttributes> ustawia kolor renderowanego <xref:System.Windows.Ink.Stroke>.
 
-Poniższy przykład umożliwia zmianę koloru wybranych pociągnięć czerwony:
+Poniższy przykład zmienia kolor wybranych pociągnięć na czerwony:
 
 [!code-csharp[DigitalInkTopics#9](~/samples/snippets/csharp/VS_Snippets_Wpf/DigitalInkTopics/CSharp/Window1.xaml.cs#9)]
 [!code-vb[DigitalInkTopics#9](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DigitalInkTopics/VisualBasic/Window1.xaml.vb#9)]
 
 ### <a name="defaultdrawingattributes"></a>DefaultDrawingAttributes
 
-<xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> Właściwości zapewnia dostęp do właściwości, takie jak wysokość, szerokość i kolor pociągnięć, które zostały utworzone w <xref:System.Windows.Controls.InkCanvas>. Po zmianie <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>, wszystkie przyszłe pociągnięć zawierana <xref:System.Windows.Controls.InkCanvas> są renderowane przy użyciu nowej wartości właściwości.
+Właściwość <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> zapewnia dostęp do właściwości, takich jak wysokość, Szerokość i kolor pociągnięć, które mają zostać utworzone w <xref:System.Windows.Controls.InkCanvas>. Po zmianie <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>wszystkie przyszłe pociągnięcia wprowadzane do <xref:System.Windows.Controls.InkCanvas> są renderowane z nowymi wartościami właściwości.
 
-Oprócz modyfikowania <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> w pliku związanym z kodem, składnia XAML można użyć do określenia <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> właściwości.
+Oprócz modyfikacji <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A> w pliku związanym z kodem, można użyć składni języka XAML do określania właściwości <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>.
 
-Następny przykład pokazuje, jak ustawić <xref:System.Windows.Ink.DrawingAttributes.Color%2A> właściwości. Aby użyć tego kodu, Utwórz nowy projekt WPF w programie Visual Studio o nazwie "HelloInkCanvas". Zastąp kod w *MainWindow.xaml* pliku następującym kodem:
+W następnym przykładzie pokazano, jak ustawić właściwość <xref:System.Windows.Ink.DrawingAttributes.Color%2A>. Aby użyć tego kodu, Utwórz nowy projekt WPF o nazwie "HelloInkCanvas" w programie Visual Studio. Zastąp kod w pliku *MainWindow. XAML* następującym kodem:
 
 [!code-xaml[HelloInkCanvas#1](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml#1)]
 
-Następnie dodaj poniższe procedury obsługi zdarzeń przycisku do kodzie pliku wewnątrz klasy MainWindow:
+Następnie Dodaj następujące programy obsługi zdarzeń przycisku do kodu związanego z kodem, wewnątrz klasy MainWindow:
 
 [!code-csharp[HelloInkCanvas#2](~/samples/snippets/csharp/VS_Snippets_Wpf/HelloInkCanvas/CSharp/Window1.xaml.cs#2)]
 
-Po skopiowaniu tego kodu, naciśnij klawisz **F5** w programie Visual Studio, aby uruchomić program w debugerze.
+Po skopiowaniu tego kodu naciśnij klawisz **F5** w programie Visual Studio, aby uruchomić program w debugerze.
 
-Zwróć uwagę sposób, w jaki <xref:System.Windows.Controls.StackPanel> umieszcza przycisków w górnej części <xref:System.Windows.Controls.InkCanvas>. Jeśli zostanie podjęta próba pisma odręcznego w górnej części przyciski, <xref:System.Windows.Controls.InkCanvas> zbiera i renderowanie pisma odręcznego za pomocą przycisków. Jest to spowodowane przyciski są elementy równorzędne <xref:System.Windows.Controls.InkCanvas> w przeciwieństwie do elementów podrzędnych. Przyciski są także wyżej w porządku, więc pisma odręcznego jest renderowany za ich.
+Zauważ, jak <xref:System.Windows.Controls.StackPanel> umieszcza przyciski na górze <xref:System.Windows.Controls.InkCanvas>. Jeśli spróbujesz użyć atramentu w górnej części przycisków, <xref:System.Windows.Controls.InkCanvas> zbiera i renderuje pismo odręczne za przyciskami. Dzieje się tak, ponieważ przyciski są elementami równorzędnymi <xref:System.Windows.Controls.InkCanvas>, a nie elementami podrzędnymi. Ponadto przyciski są wyższe w kolejności z, dlatego atrament jest renderowany w tle.
 
 ## <a name="see-also"></a>Zobacz także
 

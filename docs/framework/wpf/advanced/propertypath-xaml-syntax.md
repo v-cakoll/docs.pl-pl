@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740781"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 
@@ -32,7 +32,7 @@ Niektóre właściwości stylu i szablonu, takie jak <xref:System.Windows.Setter
 
 Powiązanie danych jest funkcją [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], za pomocą której można powiązać z wartością docelową dowolnej właściwości zależności. Jednak Źródło takich powiązań danych nie musi być właściwością zależności; może to być dowolny typ właściwości, który jest rozpoznawany przez odpowiedniego dostawcę danych. Ścieżki właściwości są szczególnie używane dla <xref:System.Windows.Data.ObjectDataProvider>, które są używane do uzyskiwania źródeł powiązań z obiektów środowiska uruchomieniowego języka wspólnego (CLR) i ich właściwości.
 
-Zwróć uwagę, że powiązanie danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] nie używa <xref:System.Windows.PropertyPath>, ponieważ nie używa <xref:System.Windows.Data.Binding.Path%2A> w <xref:System.Windows.Data.Binding>. Zamiast tego należy użyć <xref:System.Windows.Data.Binding.XPath%2A> i określić prawidłową składnię XPath do [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] danych. <xref:System.Windows.Data.Binding.XPath%2A> jest również określony jako ciąg, ale nie jest tutaj udokumentowany. Zobacz [powiąż z danymi XML przy użyciu XmlDataProvider i zapytań XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Należy zauważyć, że powiązanie danych z XML nie używa <xref:System.Windows.PropertyPath>, ponieważ nie używa <xref:System.Windows.Data.Binding.Path%2A> w <xref:System.Windows.Data.Binding>. Zamiast tego należy użyć <xref:System.Windows.Data.Binding.XPath%2A> i określić prawidłową składnię XPath w Document Object Model XML (DOM) danych. <xref:System.Windows.Data.Binding.XPath%2A> jest również określony jako ciąg, ale nie jest tutaj udokumentowany. Zobacz [powiąż z danymi XML przy użyciu XmlDataProvider i zapytań XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 Kluczem do interpretacji ścieżek właściwości w powiązaniu danych jest możliwość kierowania powiązania do pojedynczej wartości właściwości lub można utworzyć powiązanie z właściwościami docelowymi, które pobierają listy lub kolekcje. Jeśli kolekcje są powiązaniami, na przykład powiązanie <xref:System.Windows.Controls.ListBox>, które zostanie rozwinięte w zależności od liczby elementów danych w kolekcji, wówczas ścieżka właściwości powinna odwoływać się do obiektu kolekcji, a nie do poszczególnych elementów kolekcji. Aparat powiązań danych będzie pasował do kolekcji używanej jako źródło danych dla typu elementu docelowego powiązania automatycznie, co spowodowało zachowanie, takie jak wypełnianie <xref:System.Windows.Controls.ListBox> z tablicą Items.
 
@@ -76,7 +76,7 @@ W razie potrzeby można określić typ indeksu. Aby uzyskać szczegółowe infor
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Nawiasy wskazują, że ta właściwość w <xref:System.Windows.PropertyPath> powinna być skonstruowana przy użyciu częściowej kwalifikacji. Może użyć przestrzeni nazw XML, aby znaleźć typ z odpowiednim mapowaniem. `ownerType` wyszukuje typy, do których ma dostęp procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], za pomocą deklaracji <xref:System.Windows.Markup.XmlnsDefinitionAttribute> w każdym zestawie. Większość aplikacji ma domyślną przestrzeń nazw XML zamapowana na przestrzeń nazw [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], więc prefiks jest zwykle niezbędny tylko w przypadku typów niestandardowych lub typów poza tą przestrzenią nazw.  `propertyName` musi być rozpoznawana jako nazwa właściwości istniejącej w `ownerType`. Ta składnia jest zwykle używana w jednym z następujących przypadków:
+Nawiasy wskazują, że ta właściwość w <xref:System.Windows.PropertyPath> powinna być skonstruowana przy użyciu częściowej kwalifikacji. Może użyć przestrzeni nazw XML, aby znaleźć typ z odpowiednim mapowaniem. `ownerType` wyszukuje typy, do których ma dostęp procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], za pomocą deklaracji <xref:System.Windows.Markup.XmlnsDefinitionAttribute> w każdym zestawie. Większość aplikacji ma domyślną przestrzeń nazw XML zamapowana na przestrzeń nazw `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, więc prefiks jest zwykle niezbędny tylko w przypadku typów niestandardowych lub typów poza tą przestrzenią nazw.  `propertyName` musi być rozpoznawana jako nazwa właściwości istniejącej w `ownerType`. Ta składnia jest zwykle używana w jednym z następujących przypadków:
 
 - Ścieżka jest określona w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], która znajduje się w stylu lub szablonie, który nie ma określonego typu docelowego. Kwalifikowane użycie zwykle nie jest prawidłowe w przypadku przypadków innych niż to, ponieważ w przypadku braku szablonów, właściwość istnieje w wystąpieniu, a nie w typie.
 
@@ -97,7 +97,7 @@ Aby można było użyć jako elementu docelowego scenorysu, właściwość okre�
 Składnia/w tej składni jest używana do nawigowania w obrębie hierarchicznego obiektu źródła danych, a wiele kroków do hierarchii z kolejnymi/znakami są obsługiwane. Źródłowe konta przechodzenia dla bieżącego położenia wskaźnika rekordu, które są określane przez synchronizację danych z interfejsem użytkownika widoku. Aby uzyskać szczegółowe informacje na temat powiązania z obiektami hierarchicznych źródeł danych i koncepcji bieżącego wskaźnika rekordu w powiązaniu danych, zobacz [Korzystanie ze wzorca wzorzec-szczegóły z danymi hierarchicznymi lub z](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) [omówieniem powiązań danych](../../../desktop-wpf/data/data-binding-overview.md).
 
 > [!NOTE]
-> Ta składnia jest podobna do [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Wyrażenie True [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] dla powiązania ze źródłem danych [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] nie jest używane jako wartość <xref:System.Windows.Data.Binding.Path%2A> i powinno być używane dla wzajemnie wykluczających się właściwości <xref:System.Windows.Data.Binding.XPath%2A>.
+> Niemniej ta składnia przypomina wyrażenie XPath. Prawdziwe wyrażenie XPath dla powiązania ze źródłem danych XML nie jest używane jako wartość <xref:System.Windows.Data.Binding.Path%2A> i powinno być używane dla wzajemnie wykluczających się właściwości <xref:System.Windows.Data.Binding.XPath%2A>.
 
 ### <a name="collection-views"></a>Widoki kolekcji
 
@@ -204,7 +204,7 @@ Na przykład właściwość <xref:System.Windows.Controls.Panel.Background%2A> <
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Nawiasy wskazują, że ta właściwość w <xref:System.Windows.PropertyPath> powinna być skonstruowana przy użyciu częściowej kwalifikacji. Można użyć przestrzeni nazw XML, aby znaleźć typ. `ownerType` wyszukuje typy, do których ma dostęp procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], za pomocą deklaracji <xref:System.Windows.Markup.XmlnsDefinitionAttribute> w każdym zestawie. Większość aplikacji ma domyślną przestrzeń nazw XML zamapowana na przestrzeń nazw [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)], więc prefiks jest zwykle niezbędny tylko w przypadku typów niestandardowych lub typów poza tą przestrzenią nazw. `propertyName` musi być rozpoznawana jako nazwa właściwości istniejącej w `ownerType`. Właściwość określona jako `propertyName` musi być <xref:System.Windows.DependencyProperty>. (Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone właściwości są implementowane jako właściwości zależności, więc ten problem dotyczy tylko niestandardowych dołączanych właściwości.)
+Nawiasy wskazują, że ta właściwość w <xref:System.Windows.PropertyPath> powinna być skonstruowana przy użyciu częściowej kwalifikacji. Można użyć przestrzeni nazw XML, aby znaleźć typ. `ownerType` wyszukuje typy, do których ma dostęp procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], za pomocą deklaracji <xref:System.Windows.Markup.XmlnsDefinitionAttribute> w każdym zestawie. Większość aplikacji ma domyślną przestrzeń nazw XML zamapowana na przestrzeń nazw `http://schemas.microsoft.com/winfx/2006/xaml/presentation`, więc prefiks jest zwykle niezbędny tylko w przypadku typów niestandardowych lub typów poza tą przestrzenią nazw. `propertyName` musi być rozpoznawana jako nazwa właściwości istniejącej w `ownerType`. Właściwość określona jako `propertyName` musi być <xref:System.Windows.DependencyProperty>. (Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dołączone właściwości są implementowane jako właściwości zależności, więc ten problem dotyczy tylko niestandardowych dołączanych właściwości.)
 
 <a name="indexanim"></a>
 

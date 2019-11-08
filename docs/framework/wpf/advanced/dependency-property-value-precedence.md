@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458979"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740849"
 ---
 # <a name="dependency-property-value-precedence"></a>Następstwo zależności wartości właściwości
 <a name="introduction"></a>W tym temacie wyjaśniono, w jaki sposób działania systemu właściwości [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mogą wpływać na wartość właściwości zależności, a także określać priorytety, według których aspekty systemu właściwości mają zastosowanie do wartości efektywnej właściwości.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458979"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Wymuszone, animacje i wartość podstawowa  
- Wymuszone i animacje działają na wartości, która jest określana jako "wartość podstawowa" w tym [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Wartość podstawowa jest tak samo, jak każda wartość jest określana za pomocą oceny w górę elementów do momentu osiągnięcia elementu 2.  
+ Wymuszone i animacje działają na wartości, która jest określana jako "wartość podstawowa" w tym zestawie SDK. Wartość podstawowa jest tak samo, jak każda wartość jest określana za pomocą oceny w górę elementów do momentu osiągnięcia elementu 2.  
   
  W przypadku animacji wartość podstawowa może mieć wpływ na wartość animowaną, jeśli animacja nie określa zarówno "od", jak i "do" w przypadku niektórych zachowań, lub jeśli animacja celowo wraca do wartości podstawowej po zakończeniu. Aby to sprawdzić, należy uruchomić [przykład z wartościami docelowymi od, do i przez animację](https://go.microsoft.com/fwlink/?LinkID=159988). Spróbuj ustawić wartości lokalne wysokości prostokąta w przykładzie, tak że początkowa wartość lokalna różni się od dowolnego "od" w animacji. Zauważ, że animacje zaczynają od razu przy użyciu wartości "od" i Zastąp wartość bazową po rozpoczęciu. Animacja może wskazywać na powrót do wartości znalezionej przed wykonaniem animacji przez określenie <xref:System.Windows.Media.Animation.FillBehavior>zatrzymania. Następnie normalne pierwszeństwo jest używane do określania wartości podstawowych.  
   

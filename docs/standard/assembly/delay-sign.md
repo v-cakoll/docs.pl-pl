@@ -12,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 75c86c49f4d471452a7e8f56856d5437e84df307
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 113df1ad3fc3ac1e27ebfef572494c1f15a3dbb5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084345"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733163"
 ---
 # <a name="delay-sign-an-assembly"></a>Podpisywanie zestawu z opóźnieniem
 
@@ -89,4 +89,3 @@ Aby podpisać zestaw z opóźnieniem:
 - [Tworzenie zestawów](create.md)
 - [Instrukcje: Tworzenie pary kluczy publiczny-prywatny](create-public-private-key-pair.md)
 - [SN. exe (Narzędzie silnej nazwy)](../../framework/tools/sn-exe-strong-name-tool.md)
-- [Program z zestawami](program.md)

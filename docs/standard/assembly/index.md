@@ -12,16 +12,16 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 7ac9ea194095832f6c3825ce414350bca89c26fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107245"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733152"
 ---
 # <a name="assemblies-in-net"></a>Zestawy w środowisku .NET
 
-Zestawy stanowią podstawowe jednostki wdrożenia, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla programu. Aplikacje oparte na sieci. Zestaw jest kolekcją typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Zestawy mają postać plików wykonywalnych (*exe*) lub bibliotek dołączanych dynamicznie ( *. dll*) i są blokami konstrukcyjnymi aplikacji .NET. Udostępniają one środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Zestaw można traktować jako kolekcję typów i zasobów, które tworzą logiczną jednostkę funkcjonalności i są zbudowane do współdziałania ze sobą.
+Zestawy stanowią podstawowe jednostki wdrożenia, kontroli wersji, ponownego użycia, zakresu aktywacji i uprawnień zabezpieczeń dla programu. Aplikacje oparte na sieci. Zestaw jest kolekcją typów i zasobów, które są tworzone w celu współdziałania i tworzą logiczną jednostkę funkcjonalności. Zestawy mają postać plików wykonywalnych (*exe*) lub bibliotek dołączanych dynamicznie ( *. dll*) i są blokami konstrukcyjnymi aplikacji .NET. Udostępniają one środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów.
 
 W programie .NET Core i .NET Framework można skompilować zestaw z jednego lub większej liczby plików kodu źródłowego. W .NET Framework zestawy mogą zawierać co najmniej jeden moduł. Pozwala to na zaplanowanie większych projektów w taki sposób, aby kilku deweloperów mógł działać na oddzielnych plikach kodu źródłowego lub w modułach, które są łączone w celu utworzenia jednego zestawu. Aby uzyskać więcej informacji o modułach, zobacz [How to: Build a wieloplikowego zestawu](../../framework/app-domains/build-multifile-assembly.md).
 
@@ -35,33 +35,33 @@ Zestawy mają następujące właściwości:
 
 - Można programowo uzyskać informacje o zestawie przy użyciu odbicia. Aby uzyskać więcej informacji, zobacz [odbicie (C#)](../../csharp/programming-guide/concepts/reflection.md) lub [odbicie (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Możesz załadować zestaw po prostu, aby sprawdzić go przy użyciu klasy <xref:System.Reflection.MetadataLoadContext> w programie .NET Core i <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> metody w .NET Core i .NET Framework.
+- Możesz załadować zestaw, aby sprawdzić go przy użyciu klasy <xref:System.Reflection.MetadataLoadContext> w programie .NET Core i <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> lub <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> metod w .NET Core i .NET Framework.
 
 ## <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 
-Zestawy zapewniają środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Dla środowiska uruchomieniowego typ nie istnieje poza kontekstem zestawu. 
+Zestawy zapewniają środowisko uruchomieniowe języka wspólnego z informacjami, które muszą być świadome implementacji typów. Dla środowiska uruchomieniowego typ nie istnieje poza kontekstem zestawu.
 
-Zestaw definiuje następujące informacje:  
-  
+Zestaw definiuje następujące informacje:
+
 - Kod wykonywany przez środowisko uruchomieniowe języka wspólnego. Należy pamiętać, że każdy zestaw może mieć tylko jeden punkt wejścia: `DllMain`, `WinMain` lub `Main`.
-  
-- Granica zabezpieczeń. Zestaw jest jednostką, w której uprawnienia są żądane i udzielane. Aby uzyskać więcej informacji na temat granic zabezpieczeń w zestawach, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md).  
-  
-- Granica typu. Każda tożsamość typu zawiera nazwę zestawu, w którym znajduje się. Typ o nazwie `MyType`, który jest ładowany w zakresie jednego zestawu, nie jest taki sam jak typ o nazwie `MyType`, który jest ładowany w zakresie innego zestawu. 
-  
+
+- Granica zabezpieczeń. Zestaw jest jednostką, w której uprawnienia są żądane i udzielane. Aby uzyskać więcej informacji na temat granic zabezpieczeń w zestawach, zobacz [zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md).
+
+- Granica typu. Każda tożsamość typu zawiera nazwę zestawu, w którym znajduje się. Typ o nazwie `MyType`, który jest ładowany w zakresie jednego zestawu, nie jest taki sam jak typ o nazwie `MyType`, który jest ładowany w zakresie innego zestawu.
+
 - Granica zakresu odwołania. [Manifest zestawu](#assembly-manifest) zawiera metadane, który jest używany do rozpoznawania typów i spełniania żądań zasobów. Manifest określa typy i zasoby, które mają zostać ujawnione poza zestawem, i wylicza inne zestawy, na których zależą. Kod języka pośredniego (MSIL) firmy Microsoft w przenośnym pliku wykonywalnym (PE) nie zostanie wykonany, chyba że ma skojarzony [manifest zestawu](#assembly-manifest).
-  
-- Granica wersji. Zestaw jest najmniejszą wersją jednostki w środowisku uruchomieniowym języka wspólnego. Wszystkie typy i zasoby w tym samym zestawie są w wersji jako jednostka. [Manifest zestawu](#assembly-manifest) zawiera opis zależności wersji określonych dla wszystkich zestawów zależnych. Aby uzyskać więcej informacji na temat przechowywania wersji, zobacz [wersja zestawu](versioning.md).  
-  
-- Jednostka wdrożenia. Po uruchomieniu aplikacji, tylko zestawy, które początkowo wywołuje aplikacja, muszą być obecne. Inne zestawy, takie jak zestawy zawierające zasoby lokalizacyjne lub klasy narzędzi, można pobrać na żądanie. Dzięki temu aplikacje będą proste i cienkie podczas pierwszego pobierania. Aby uzyskać więcej informacji o wdrażaniu zestawów, zobacz [wdrażanie aplikacji](../../framework/deployment/index.md).  
-  
-- Jednostka wykonywania równoczesnego. Aby uzyskać więcej informacji na temat uruchamiania wielu wersji zestawu, zobacz [zestawy i wykonywanie równoczesne](side-by-side-execution.md).  
+
+- Granica wersji. Zestaw jest najmniejszą wersją jednostki w środowisku uruchomieniowym języka wspólnego. Wszystkie typy i zasoby w tym samym zestawie są w wersji jako jednostka. [Manifest zestawu](#assembly-manifest) zawiera opis zależności wersji określonych dla wszystkich zestawów zależnych. Aby uzyskać więcej informacji na temat przechowywania wersji, zobacz [wersja zestawu](versioning.md).
+
+- Jednostka wdrożenia. Po uruchomieniu aplikacji, tylko zestawy, które początkowo wywołuje aplikacja, muszą być obecne. Inne zestawy, takie jak zestawy zawierające zasoby lokalizacyjne lub klasy narzędzi, można pobrać na żądanie. Dzięki temu aplikacje będą proste i cienkie podczas pierwszego pobierania. Aby uzyskać więcej informacji o wdrażaniu zestawów, zobacz [wdrażanie aplikacji](../../framework/deployment/index.md).
+
+- Jednostka wykonywania równoczesnego. Aby uzyskać więcej informacji na temat uruchamiania wielu wersji zestawu, zobacz [zestawy i wykonywanie równoczesne](side-by-side-execution.md).
 
 ## <a name="create-an-assembly"></a>Tworzenie zestawu
 
-Zestawy mogą być statyczne lub dynamiczne. Zestawy statyczne są przechowywane na dysku w przenośnych plikach wykonywalnych (PE). Zestawy statyczne mogą zawierać interfejsy, klasy i zasoby, takie jak mapy bitowe, pliki JPEG i inne pliki zasobów. Można również tworzyć zestawy dynamiczne, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed wykonaniem. Zestawy dynamiczne można zapisać na dysku po ich wykonaniu.  
+Zestawy mogą być statyczne lub dynamiczne. Zestawy statyczne są przechowywane na dysku w przenośnych plikach wykonywalnych (PE). Zestawy statyczne mogą zawierać interfejsy, klasy i zasoby, takie jak mapy bitowe, pliki JPEG i inne pliki zasobów. Można również tworzyć zestawy dynamiczne, które są uruchamiane bezpośrednio z pamięci i nie są zapisywane na dysku przed wykonaniem. Zestawy dynamiczne można zapisać na dysku po ich wykonaniu.
 
-Istnieje kilka sposobów tworzenia zestawów. Możesz użyć narzędzi programistycznych, takich jak Visual Studio, które mogą tworzyć pliki *. dll* lub *. exe* . Korzystając z narzędzi dostępnych w Windows SDK, można tworzyć zestawy z modułami z innych środowisk programistycznych. Do tworzenia zestawów dynamicznych można także używać interfejsów API środowiska uruchomieniowego języka wspólnego, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>. 
+Istnieje kilka sposobów tworzenia zestawów. Możesz użyć narzędzi programistycznych, takich jak Visual Studio, które mogą tworzyć pliki *. dll* lub *. exe* . Korzystając z narzędzi dostępnych w Windows SDK, można tworzyć zestawy z modułami z innych środowisk programistycznych. Do tworzenia zestawów dynamicznych można także używać interfejsów API środowiska uruchomieniowego języka wspólnego, takich jak <xref:System.Reflection.Emit?displayProperty=nameWithType>.
 
 Kompiluj zestawy, tworząc je w programie Visual Studio, tworząc je przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core lub tworząc zestawy .NET Framework przy użyciu kompilatora wiersza polecenia. Aby uzyskać więcej informacji na temat kompilowania zestawów przy użyciu narzędzi interfejsu wiersza polecenia platformy .NET Core, zobacz [Narzędzia interfejsu wiersza polecenia platformy .NET Core](../../core/tools/index.md). Do kompilowania zestawów przy użyciu kompilatorów wiersza polecenia, zobacz wiersza polecenia [kompilacja z CSC. exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) dla C#lub [kompiluj z wiersza polecenia](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) dla Visual Basic.
 
@@ -90,23 +90,23 @@ Aby użyć zestawu w aplikacji, należy dodać do niego odwołanie. Po przywoły
 W C#programie można użyć dwóch wersji tego samego zestawu w pojedynczej aplikacji. Aby uzyskać więcej informacji, zobacz [alias zewnętrzny](../../csharp/language-reference/keywords/extern-alias.md).
 
 ## <a name="related-content"></a>Zawartość pokrewna
-  
-|Tytuł|Opis|  
-|-----------|-----------------|  
-|[Zawartość zestawu](contents.md)|Elementy wchodzące w skład zestawu.|  
-|[Manifest zestawu](manifest.md)|Dane w manifeście zestawu i sposób ich przechowywania w zestawach.|  
-|[Globalna pamięć podręczna zestawów](../../framework/app-domains/gac.md)|Sposób przechowywania i używania zestawów GAC.|  
-|[Zestawy o silnych nazwach](strong-named.md)|Charakterystyki zestawów o silnych nazwach.|  
-|[Zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md)|Sposób działania zabezpieczeń z zestawami.|  
-|[Przechowywanie wersji zestawu](versioning.md)|Omówienie zasad dotyczących wersji .NET Framework.|  
-|[Położenie zestawu](../../framework/app-domains/assembly-placement.md)|Gdzie można znaleźć zestawy.|  
-|[Zestawy i wykonywanie równoczesne](side-by-side-execution.md)|Używaj jednocześnie wielu wersji środowiska uruchomieniowego lub zestawu.|  
-|[Program z zestawami](program.md)|Tworzenie, podpisywanie i ustawianie atrybutów dla zestawów.|  
-|[Emituj metody dynamiczne i zestawy](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Tworzenie zestawów dynamicznych.|  
-|[Jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Jak .NET Framework rozwiązuje odwołania do zestawów w czasie wykonywania.|  
 
-## <a name="reference"></a>Tematy pomocy  
- <xref:System.Reflection.Assembly?displayProperty=nameWithType>
+|Tytuł|Opis|
+|-----------|-----------------|
+|[Zawartość zestawu](contents.md)|Elementy wchodzące w skład zestawu.|
+|[Manifest zestawu](manifest.md)|Dane w manifeście zestawu i sposób ich przechowywania w zestawach.|
+|[Globalna pamięć podręczna zestawów](../../framework/app-domains/gac.md)|Sposób przechowywania i używania zestawów GAC.|
+|[Zestawy o silnych nazwach](strong-named.md)|Charakterystyki zestawów o silnych nazwach.|
+|[Zagadnienia dotyczące zabezpieczeń zestawów](security-considerations.md)|Sposób działania zabezpieczeń z zestawami.|
+|[Przechowywanie wersji zestawu](versioning.md)|Omówienie zasad dotyczących wersji .NET Framework.|
+|[Położenie zestawu](../../framework/app-domains/assembly-placement.md)|Gdzie można znaleźć zestawy.|
+|[Zestawy i wykonywanie równoczesne](side-by-side-execution.md)|Używaj jednocześnie wielu wersji środowiska uruchomieniowego lub zestawu.|
+|[Emituj metody dynamiczne i zestawy](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Tworzenie zestawów dynamicznych.|
+|[Jak środowisko uruchomieniowe lokalizuje zestawy](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Jak .NET Framework rozwiązuje odwołania do zestawów w czasie wykonywania.|
+
+## <a name="reference"></a>Tematy pomocy
+
+<xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
 ## <a name="see-also"></a>Zobacz także
 

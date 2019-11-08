@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 2e975745c2124ab2834eb82ed9b94563b44642b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c18cce1898b8834c20d5e4af70c1b010e4b96e11
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453673"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740902"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Związane z kodem i XAML w WPF
 <a name="introduction"></a>Kod jest terminem używanym do opisania kodu, który jest dołączany do obiektów zdefiniowanych przez znaczników, gdy strona [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest skompilowana przy użyciu znaczników. W tym temacie opisano wymagania dotyczące kodu, a także alternatywny mechanizm kodu wbudowanego dla kodu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -50,7 +50,7 @@ ms.locfileid: "73453673"
   
 <a name="x_Code"></a>   
 ## <a name="xcode"></a>x:Code  
- [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) jest elementem dyrektywy zdefiniowanym w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Element dyrektywy `x:Code` może zawierać wbudowany kod programistyczny. Kod, który jest zdefiniowany w tekście, może współdziałać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na tej samej stronie. Poniższy przykład ilustruje kod wbudowany C# . Zwróć uwagę, że kod znajduje się wewnątrz elementu `x:Code` i że kod musi być otoczony `<CDATA[`...`]]>`, aby wypróbować zawartość dla [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], dzięki czemu procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretując schemat [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub schemat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) nie będzie Spróbuj interpretować zawartość dosłownie jako [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)].  
+ [x:Code](../../xaml-services/x-code-intrinsic-xaml-type.md) jest elementem dyrektywy zdefiniowanym w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Element dyrektywy `x:Code` może zawierać wbudowany kod programistyczny. Kod, który jest zdefiniowany w tekście, może współdziałać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] na tej samej stronie. Poniższy przykład ilustruje kod wbudowany C# . Zwróć uwagę, że kod znajduje się wewnątrz elementu `x:Code` i że kod musi być ujęty w `<CDATA[`...`]]>`, aby wypróbować zawartość pliku XML, dzięki czemu procesor [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (interpretując schemat [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] lub schemat [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]) nie podejmie próby Interpretuj zawartość dosłownie jako XML.  
   
  [!code-xaml[XAMLOvwSupport#ButtonWithInlineCode](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page4.xaml#buttonwithinlinecode)]  
   

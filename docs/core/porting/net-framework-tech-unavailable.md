@@ -3,16 +3,16 @@ title: Technologie .NET Framework niedostępne w programie .NET Core
 description: Informacje na temat technologii .NET Framework, które są niedostępne w programie .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846813"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739709"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Technologie .NET Framework niedostępne w programie .NET Core
 
-Niektóre technologie dostępne dla bibliotek .NET Framework nie są dostępne do użycia z platformą .NET Core, takich jak AppDomains, komunikacja zdalna, zabezpieczenia dostępu kodu (CAS) i przezroczystość zabezpieczeń. Jeśli biblioteki są zależne od co najmniej jednej z tych technologii, weź pod uwagę alternatywne podejścia opisane poniżej. Aby uzyskać więcej informacji na temat zgodności interfejsów API, zobacz artykuł [podstawowe zmiany w programie .NET Core](../compatibility/breaking-changes.md) .
+Niektóre technologie dostępne dla bibliotek .NET Framework nie są dostępne do użycia z platformą .NET Core, takich jak AppDomains, komunikacja zdalna, zabezpieczenia dostępu kodu (CAS), przezroczystość zabezpieczeń i system. EnterpriseServices. Jeśli biblioteki są zależne od co najmniej jednej z tych technologii, weź pod uwagę alternatywne podejścia opisane poniżej. Aby uzyskać więcej informacji na temat zgodności interfejsów API, zobacz artykuł [podstawowe zmiany w programie .NET Core](../compatibility/breaking-changes.md) .
 
 Tylko ponieważ interfejs API lub technologia nie jest obecnie zaimplementowana, nie oznacza to, że jest celowo nieobsługiwana. Najpierw należy przeszukać repozytoria usługi GitHub dla platformy .NET Core, aby zobaczyć, czy konkretny problem występuje w drodze projektu, ale jeśli nie można znaleźć takiego wskaźnika, należy zgłosić problem z [repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub w celu poproszenia o określone interfejsy API i informacyjn. [Żądania przenoszenia w ramach problemów](https://github.com/dotnet/corefx/labels/port-to-core) są oznaczane etykietą `port-to-core`.
 

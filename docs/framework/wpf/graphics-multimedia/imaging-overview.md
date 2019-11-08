@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039880"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733567"
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do składnika Microsoft Windows Presentation Foundation Imaging. Program WPF Imaging umożliwia deweloperom wyświetlanie, przekształcanie i formatowanie obrazów.  
@@ -165,7 +165,7 @@ Pędzle obrazu mogą wypełniać kształty, kontrolki, tekst i nie tylko
 ## <a name="image-metadata"></a>Metadane obrazu  
  Niektóre pliki obrazów zawierają metadane opisujące zawartość lub charakterystykę pliku. Na przykład większość kamer cyfrowych tworzy obrazy zawierające metadane dotyczące marki i modelu aparatu używane do przechwytywania obrazu. Każdy format obrazu obsługuje metadane inaczej, ale program WPF Imaging zapewnia jednolity sposób przechowywania i pobierania metadanych dla każdego obsługiwanego formatu obrazu.  
   
- Dostęp do metadanych jest dostarczany za pomocą właściwości <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> obiektu <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> zwraca obiekt <xref:System.Windows.Media.Imaging.BitmapMetadata>, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. Program WPF Imaging obsługuje następujące schematy metadanych obrazów: plik z programem Exchange (EXIF), tekst (dane tekstowe PNG), katalog plików obrazów (IFD), Międzynarodowa Rada telekomunikacyjna (IPTC) i [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ Dostęp do metadanych jest dostarczany za pomocą właściwości <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> obiektu <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> zwraca obiekt <xref:System.Windows.Media.Imaging.BitmapMetadata>, który zawiera wszystkie metadane zawarte w obrazie. Te dane mogą znajdować się w jednym schemacie metadanych lub w połączeniu z różnymi schematami. Program WPF Imaging obsługuje następujące schematy metadanych obrazów: plik z programem Exchange (EXIF), tekst (dane tekstowe PNG), katalog plików obrazów (IFD), międzynarodowa prasa telekomunikacyjna (IPTC) i rozszerzalna platforma metadanych (XMP).  
   
  Aby uprościć proces odczytywania metadanych, <xref:System.Windows.Media.Imaging.BitmapMetadata> udostępnia kilka nazwanych właściwości, które można łatwo uzyskać do nich dostęp, takich jak <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>i <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Wiele z tych nazwanych właściwości może również służyć do pisania metadanych. Dodatkowa obsługa odczytywania metadanych jest dostarczana przez czytelnika zapytania metadanych. Metoda <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> służy do pobierania czytnika zapytań metadanych przez podanie ciągu zapytania, takiego jak *"/APP1/EXIF/"* . W poniższym przykładzie <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> jest używany do uzyskania tekstu przechowywanego w lokalizacji *"/text/Description"* .  
   

@@ -1,16 +1,16 @@
 ---
 title: Ładowanie danych z plików i innych źródeł
 description: W tym przykładzie pokazano, jak załadować dane do przetwarzania i uczenia w programie ML.NET. Dane są początkowo przechowywane w plikach lub w innych źródłach danych, takich jak bazy danych, JSON, XML lub kolekcje w pamięci.
-ms.date: 09/11/2019
+ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 82a4d19a6296faa6d195e301016b1bf97d483a2c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 07b3e7f5302a03f5fa4c936679c8a3c00d19a7b0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040804"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740550"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Ładowanie danych z plików i innych źródeł
 
@@ -107,10 +107,10 @@ IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubF
 
 ## <a name="load-data-from-a-relational-database"></a>Ładowanie danych z relacyjnej bazy danych
 
-> [!NOTE]
-> DatabaseLoader jest obecnie w wersji zapoznawczej. Można go użyć, odwołując się do pakietów NuGet [Microsoft. ml. eksperymentalnych](https://www.nuget.org/packages/Microsoft.ML.Experimental/0.16.0-preview) i [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient/4.6.1) .
-
 ML.NET obsługuje ładowanie danych z różnych relacyjnych baz danych obsługiwanych przez [`System.Data`](xref:System.Data) , które obejmują SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, postęp, IBM DB2 i wiele innych.
+
+> [!NOTE]
+> Aby użyć `DatabaseLoader`, należy odwołać się do pakietu NuGet [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) .
 
 Nadana baza danych z tabelą o nazwie `House` i następującym schematem:
 

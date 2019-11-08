@@ -3,12 +3,12 @@ title: Cyfry w C# programie — wprowadzenie C# do samouczka
 description: Poznaj C# typy liczbowe, ich właściwości i metody.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039696"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739139"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipuluj liczby całkowite i zmiennoprzecinkowe w C \#
 
@@ -18,7 +18,11 @@ Ten samouczek oczekuje, że masz maszynę, której możesz użyć do programowan
 
 ## <a name="explore-integer-math"></a>Eksploruj liczbę całkowitą
 
-Utwórz katalog o nazwie *Numbers — szybki start*. Upewnij się, że bieżący katalog i uruchomiono `dotnet new console -n NumbersInCSharp -o .`.
+Utwórz katalog o nazwie *Numbers — szybki start*. Upewnij się, że bieżący katalog i uruchom następujące polecenie:
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 Otwórz *program.cs* w ulubionym edytorze i Zastąp wiersz `Console.WriteLine("Hello World!");` następującymi elementami:
 

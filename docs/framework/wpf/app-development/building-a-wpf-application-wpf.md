@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424433"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740668"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
 
@@ -46,7 +46,7 @@ Przed skompilowaniem program MSBuild określa lokalizację ważnych narzędzi i 
 
 - .NET Framework.
 
-- Katalogi [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].
+- Katalogi Windows SDK.
 
 - Lokalizacja zestawów odwołań [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
@@ -64,7 +64,7 @@ Proces kompilacji lokalizuje i wiąże zestawy wymagane do skompilowania projekt
 
 ### <a name="markup-compilationpass-1"></a>Kompilacja znaczników — Pass 1
 
-W tym kroku pliki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są analizowane i kompilowane, dzięki czemu środowisko uruchomieniowe nie poświęca czasu na analizowanie [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] i sprawdzanie poprawności wartości właściwości. Skompilowany plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest wstępnie oparty na tokenach, dzięki czemu w czasie wykonywania ładowanie go powinno być znacznie szybsze niż ładowanie pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+W tym kroku pliki [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] są analizowane i kompilowane, dzięki czemu środowisko uruchomieniowe nie poświęca czasu na analizowanie danych XML i sprawdzanie poprawności wartości właściwości. Skompilowany plik [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest wstępnie oparty na tokenach, dzięki czemu w czasie wykonywania ładowanie go powinno być znacznie szybsze niż ładowanie pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 W tym kroku następujące działania są wykonywane dla każdego pliku [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], który jest `Page` elementu kompilacji:
 

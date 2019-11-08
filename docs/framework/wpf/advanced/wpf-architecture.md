@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459606"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740693"
 ---
 # <a name="wpf-architecture"></a>Architektura WPF
 Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Foundation (WPF). Obejmuje to większość głównych podsystemów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]i opisuje sposób ich działania. Szczegółowo niektóre z opcji wybranych przez architektów [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -42,7 +42,7 @@ Ten temat zawiera Przewodnik dotyczący hierarchii klas Windows Presentation Fou
   
  Istnieją naprawdę dwa podstawowe koncepcje, które należy zrozumieć podczas omawiania współbieżności w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] — dla dyspozytora i koligacji wątku.  
   
- W fazie projektowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]celem było przechodzenie do pojedynczego wątku wykonywania, ale model "koligacja" bez wątku. Koligacja wątku występuje, gdy składnik używa tożsamości wykonywanego wątku do przechowywania pewnego typu stanu. Najbardziej powszechną formą jest użycie lokalnego magazynu wątków (TLS) do przechowywania stanu. Koligacja wątku wymaga, aby każdy logiczny wątek wykonywania należał do samego jednego wątku fizycznego w systemie operacyjnym, co może stać się intensywnym użyciem pamięci. Na końcu model wątkowości WPF został zsynchronizowany z istniejącym modelem wątkowości User32 z koligacją wątku. Zasadniczą przyczyną jest współdziałanie — systemy, takie jak [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], schowek i Internet Explorer, wymagają wykonania pojedynczego wątku koligacji (STA).  
+ W fazie projektowania [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]celem było przechodzenie do pojedynczego wątku wykonywania, ale model "koligacja" bez wątku. Koligacja wątku występuje, gdy składnik używa tożsamości wykonywanego wątku do przechowywania pewnego typu stanu. Najbardziej powszechną formą jest użycie lokalnego magazynu wątków (TLS) do przechowywania stanu. Koligacja wątku wymaga, aby każdy logiczny wątek wykonywania należał do samego jednego wątku fizycznego w systemie operacyjnym, co może stać się intensywnym użyciem pamięci. Na końcu model wątkowości WPF został zsynchronizowany z istniejącym modelem wątkowości User32 z koligacją wątku. Główną przyczyną takiego działania była współdziałanie — systemy, takie jak OLE 2,0, schowek i Internet Explorer, wymagają wykonania pojedynczego wątku koligacji (STA).  
   
  Mając na względzie, że masz obiekty z wątkami STA, musisz mieć możliwość komunikacji między wątkami i sprawdzić, czy jesteś w prawidłowym wątku. W tym dokumencie leży rola dyspozytora. Dyspozytor to podstawowy system wysyłania komunikatów z wieloma kolejkami o określonym priorytetyzacji. Przykłady komunikatów to nieprzetworzone powiadomienia wejściowe (przenoszone przez mysz), funkcje platformy (układ) lub polecenia użytkownika (wykonaj tę metodę). Dzięki wykorzystaniu z <xref:System.Windows.Threading.DispatcherObject>należy utworzyć obiekt CLR, który ma zachowanie STA i będzie miał wskaźnik do dyspozytora podczas tworzenia.  
   

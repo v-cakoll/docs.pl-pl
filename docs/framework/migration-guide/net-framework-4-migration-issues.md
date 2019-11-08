@@ -5,30 +5,16 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 889e63feb71682065641fcdc56ada017dcf6c58c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126045"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735120"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemy podczas migracji programu .NET Framework 4
 
-W tym temacie opisano problemy dotyczące migracji między .NET Framework wersja 3,5 z dodatkiem Service Pack 1 i .NET Framework wersja 4, w tym poprawki, zmiany zgodności ze standardami i zabezpieczenia oraz zmiany na podstawie opinii klientów. Większość tych zmian nie wymaga żadnych modyfikacji programistycznych w aplikacjach. Dla tych, które mogą zawierać modyfikacje, zobacz kolumnę zalecane zmiany w tabeli.
-
-W tym temacie opisano znaczące zmiany w następujących obszarach:
-
-- [ASP.NET i sieci Web](#aspnet-and-web)
-
-- [Funkcje podstawowe](#core)
-
-- [Dane](#data)
-
-- [Windows Communication Foundation (WCF)](#windows-communication-foundation-wcf)
-
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
+W tym temacie opisano problemy dotyczące migracji między .NET Framework wersja 3,5 z dodatkiem Service Pack 1 i .NET Framework wersja 4, w tym poprawki, zmiany zgodności ze standardami i zabezpieczenia oraz zmiany na podstawie opinii klientów. Większość tych zmian nie wymaga żadnych modyfikacji programistycznych w aplikacjach. Dla tych, które mogą zawierać modyfikacje, zobacz kolumnę zalecane zmiany w tabeli. Istotne zmiany są podzielone według obszaru, na przykład ASP.NET i Windows Presentation Foundation (WPF).
 
 Więcej informacji o problemach w tym temacie znajduje się w [przewodniku migracji do .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29).
 

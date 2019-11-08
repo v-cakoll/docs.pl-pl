@@ -1,57 +1,43 @@
 ---
-title: Tabela typów wartości - C# odwołania
+title: Tabela typów wartości — C# odwołanie
 ms.custom: seodec18
-ms.date: 08/24/2018
+ms.date: 11/06/2019
 helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
-- types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2e2897ff647140b58b3a1812e153a44a6fcdaef7
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 7e09d7ee223b6f8f4df0af2d71896a19ed3bac7c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859560"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736871"
 ---
-# <a name="value-types-table-c-reference"></a>Tabela typów wartości (odwołanie w C#)
+# <a name="value-types-table-c-reference"></a>Tabela typów wartości (C# odwołanie)
 
-W poniższej tabeli przedstawiono C# typów wartości:
+W poniższej tabeli przedstawiono typy C# wartości:
 
-|Typ wartości|Kategoria|Sufiksem typu|
-|----------------|--------------|-----------------|
-|[bool](bool.md)|Boolean||
-|`byte`|Nieoznaczona, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)||
-|[char](char.md)|Nieoznaczona, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)
-|`decimal`|Numeryczne, [zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md)|M lub m|
-|`double`|Numeryczne, [zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md)|D lub d|
-|[enum](enum.md)|Wyliczenie||
-|`float`|Numeryczne, [zmiennoprzecinkowych](../builtin-types/floating-point-numeric-types.md)|F lub f|
-|`int`|Podpisany, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)||
-|`long`|Podpisany, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)|L lub l|
-|`sbyte`|Podpisany, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)||
-|`short`|Podpisany, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)||
-|[struct](struct.md)|Struktura zdefiniowanych przez użytkownika||
-|`uint`|Nieoznaczona, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)|U lub u|
-|`ulong`|Nieoznaczona, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)|UL, Ul, uL, ul, LU, Lu, lU lub lu|
-|`ushort`|Nieoznaczona, numeryczne, [typu całkowitego](../builtin-types/integral-numeric-types.md)||
-
-## <a name="remarks"></a>Uwagi
-
-Sufiksem typu umożliwia określenie typu literał wartości liczbowych. Na przykład:
-
-```csharp
-decimal a = 0.1M;
-```
-
-Jeśli [literał numeryczny liczby całkowitej](~/_csharplang/spec/lexical-structure.md#integer-literals) nie sufiks ma pierwszy następujące typy, w których jej wartość może być reprezentowana: `int`, `uint`, `long`, `ulong`.
-
-Jeśli [literał liczby rzeczywistej wartości liczbowych](~/_csharplang/spec/lexical-structure.md#real-literals) nie sufiks jest typu `double`.
+|Typ wartości|Kategoria|
+|----------------|--------------|
+|[bool](bool.md)|Boolean|
+|`byte`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|[char](char.md)|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`decimal`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
+|`double`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
+|[enum](enum.md)|Wyliczenie|
+|`float`|Liczbowa, [zmiennoprzecinkowa](../builtin-types/floating-point-numeric-types.md)|
+|`int`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`long`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`sbyte`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|`short`|Podpisane, liczbowe, [całkowite](../builtin-types/integral-numeric-types.md)|
+|[struct](struct.md)|Struktura zdefiniowana przez użytkownika|
+|`uint`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`ulong`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
+|`ushort`|Unsigned, [numeric, Integer](../builtin-types/integral-numeric-types.md)|
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dokumentacja języka C#](../index.md)
-- [Przewodnik programowania w języku C#](../../programming-guide/index.md)
+- [C#odwoła](../index.md)
 - [Tabela wartości domyślnych](default-values-table.md)
 - [Typy wartości](value-types.md)
 - [Formatowanie tabeli wyników liczbowych](formatting-numeric-results-table.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417716"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739200"
 ---
 # <a name="types-c-programming-guide"></a>Typy (Przewodnik programowania w języku C#)
 
@@ -174,7 +174,7 @@ Jak wspomniano wcześniej, można niejawnie wpisać zmienną lokalną (ale nie s
 
 W niektórych przypadkach nie jest wygodne tworzenie nazwanego typu dla prostych zestawów powiązanych wartości, które nie mają być przechowywane ani przekazywane poza granicami metod. W tym celu można utworzyć *Typy anonimowe* . Aby uzyskać więcej informacji, zobacz [Typy anonimowe](../classes-and-structs/anonymous-types.md).
 
-Typy wartości zwykłych nie mogą mieć wartości [null](../../language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](../../language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601?displayProperty=nameWithType>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null. Aby uzyskać więcej informacji, zobacz [typy wartości null](../nullable-types/index.md).
+Typy wartości zwykłych nie mogą mieć wartości [null](../../language-reference/keywords/null.md). Można jednak utworzyć typy wartości null, umieszczając `?` po typie. Na przykład `int?` jest typem `int`, który może mieć również wartość [null](../../language-reference/keywords/null.md). Typy wartości null są wystąpieniami typu struktury generycznej <xref:System.Nullable%601?displayProperty=nameWithType>. Typy wartości null są szczególnie przydatne podczas przekazywania danych do i z baz danych, w których wartości liczbowe mogą mieć wartość null. Aby uzyskać więcej informacji, zobacz [typy wartości null](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 

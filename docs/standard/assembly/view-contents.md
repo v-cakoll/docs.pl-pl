@@ -14,28 +14,28 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 0b5e306d55bf38c28e2a68172c2a035b56e8d0af
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e59f58b5d7acc2c5501c7dc4037bd0e90620caba
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140173"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732918"
 ---
 # <a name="how-to-view-assembly-contents"></a>Instrukcje: wyświetlanie zawartości zestawu
 
-Do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w pliku można użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) . Jeśli rozpatrywany plik jest zestawem, te informacje mogą obejmować atrybuty zestawu, a także odwołania do innych modułów i zestawów. Te informacje mogą być pomocne w ustaleniu, czy plik jest zestawem lub częścią zestawu oraz czy plik zawiera odwołania do innych modułów lub zestawów.  
-  
-Aby wyświetlić zawartość zestawu przy użyciu *Ildasm. exe*, wpisz **Ildasm** \<*Assembly Name*> w wierszu polecenia. Na przykład następujące polecenie deasembleruje zestaw *Hello. exe* .  
+Do wyświetlania informacji o języku pośrednim (MSIL) firmy Microsoft w pliku można użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) . Jeśli rozpatrywany plik jest zestawem, te informacje mogą zawierać atrybuty zestawu i odwołania do innych modułów i zestawów. Te informacje mogą być pomocne w ustaleniu, czy plik jest zestawem lub częścią zestawu oraz czy plik zawiera odwołania do innych modułów lub zestawów.
+
+Aby wyświetlić zawartość zestawu przy użyciu programu *Ildasm. exe*, w wierszu polecenia wpisz **Ildasm \<nazwa zestawu >** . Na przykład następujące polecenie deasembleruje zestaw *Hello. exe* .
 
 ```cmd
-ildasm Hello.exe  
-```  
+ildasm Hello.exe
+```
 
-Aby wyświetlić informacje o manifeście zestawu, kliknij dwukrotnie ikonę **manifestu** w oknie MSIL dezasembler.  
-  
-## <a name="example"></a>Przykład  
+Aby wyświetlić informacje o manifeście zestawu, kliknij dwukrotnie ikonę **manifestu** w oknie MSIL dezasembler.
 
-Poniższy przykład rozpoczyna się od podstawowego programu "Hello world". Po skompilowaniu programu należy użyć *Ildasm. exe* do rozbudowy zestawu *Hello. exe* i wyświetlić manifest zestawu.  
+## <a name="example"></a>Przykład
+
+Poniższy przykład rozpoczyna się od podstawowego programu "Hello world". Po skompilowaniu programu należy użyć *Ildasm. exe* do rozbudowy zestawu *Hello. exe* i wyświetlić manifest zestawu.
 
 ```cpp
 using namespace System;
@@ -77,49 +77,52 @@ Class MainApp
 End Class
 ```
 
-Uruchomienie polecenia *Ildasm. exe* w zestawie *Hello. exe* i dwukrotne kliknięcie ikony **manifestu** w oknie MSIL dezasembler generuje następujące dane wyjściowe:  
+Uruchomienie polecenia *Ildasm. exe* w zestawie *Hello. exe* i dwukrotne kliknięcie ikony **manifestu** w oknie MSIL dezasembler generuje następujące dane wyjściowe:
 
 ```output
-// Metadata version: v4.0.30319  
-.assembly extern mscorlib  
-{  
-  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..  
-  .ver 4:0:0:0  
-}  
-.assembly Hello  
-{  
-  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 )   
-  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx  
-                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.  
-  .hash algorithm 0x00008004  
-  .ver 0:0:0:0  
-}  
-.module Hello.exe  
-// MVID: {7C2770DB-1594-438D-BAE5-98764C39CCCA}  
-.imagebase 0x00400000  
-.file alignment 0x00000200  
-.stackreserve 0x00100000  
-.subsystem 0x0003       // WINDOWS_CUI  
-.corflags 0x00000001    //  ILONLY  
-// Image base: 0x00600000  
-```  
-  
- W poniższej tabeli opisano każdą dyrektywę w manifeście zestawu zestawu *Hello. exe* użytego w tym przykładzie.  
-  
-|Dyrektywę|Opis|  
-|---------------|-----------------|  
-|*Nazwa zewnętrznego zestawu* **\<Assembly** **>**|Określa inny zestaw, który zawiera elementy, do których odwołuje się bieżący moduł (w tym przykładzie `mscorlib`).|  
-|**token \<. publickeytoken** **>**|Określa token rzeczywistego klucza przywoływanego zestawu.|  
-|*numer wersji* **\<. ver** **>**|Określa numer wersji przywoływanego zestawu.|  
-|*Nazwa zestawu* \<Assembly **>**|Określa nazwę zestawu.|  
-|**algorytm skrótu \<** *wartość Int32* **>**|Określa używany algorytm wyznaczania wartości skrótu.|  
-|*numer wersji* **\<. ver** **>**|Określa numer wersji zestawu.|  
-|*Nazwa pliku* **. module \<** **>**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się tylko z jednego pliku.|  
-|**>** *wartość* **. Subsystem \<**|Określa środowisko aplikacji wymagane dla programu. W tym przykładzie wartość 3 wskazuje, że ten plik wykonywalny jest uruchamiany z konsoli programu.|  
-|**. CorFlags**|Obecnie zarezerwowane pole w metadanych.|  
-  
- Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zawartości zestawu. Aby uzyskać obszerną listę dyrektyw w manifeście zestawu, zapoznaj się z dokumentacją ECMA, szczególnie "partycja II: definicja metadanych i semantyka" i "Partition III: zestaw instrukcji CIL". Dokumentacja jest dostępna w trybie online. Zobacz [standardy C# ECMA i Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) w MSDN i [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) w międzynarodowej witrynie internetowej ECMA.  
-  
+// Metadata version: v4.0.30319
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly Hello
+{
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 )
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+  .hash algorithm 0x00008004
+  .ver 0:0:0:0
+}
+.module Hello.exe
+// MVID: {7C2770DB-1594-438D-BAE5-98764C39CCCA}
+.imagebase 0x00400000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000001    //  ILONLY
+// Image base: 0x00600000
+```
+
+W poniższej tabeli opisano każdą dyrektywę w manifeście zestawu zestawu *Hello. exe* użytego w przykładzie:
+
+|Dyrektywę|Opis|
+|---------------|-----------------|
+|**Nazwa zewnętrznego zestawu \<Assembly >**|Określa inny zestaw, który zawiera elementy, do których odwołuje się bieżący moduł (w tym przykładzie `mscorlib`).|
+|**token \<. PublicKeyToken >**|Określa token rzeczywistego klucza przywoływanego zestawu.|
+|**Numer wersji \<. ver >**|Określa numer wersji przywoływanego zestawu.|
+|**Nazwa zestawu \<Assembly >**|Określa nazwę zestawu.|
+|**algorytm skrótu \<wartość Int32 >**|Określa używany algorytm wyznaczania wartości skrótu.|
+|**Numer wersji \<. ver >**|Określa numer wersji zestawu.|
+|**Nazwa pliku. module \<**|Określa nazwę modułów, które tworzą zestaw. W tym przykładzie zestaw składa się tylko z jednego pliku.|
+|**> wartość. Subsystem \<**|Określa środowisko aplikacji wymagane dla programu. W tym przykładzie wartość 3 wskazuje, że ten plik wykonywalny jest uruchamiany z konsoli programu.|
+|**. CorFlags**|Obecnie zarezerwowane pole w metadanych.|
+
+Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zawartości zestawu. Aby uzyskać obszerną listę dyrektyw w manifeście zestawu, zapoznaj się z dokumentacją ECMA, szczególnie "partycja II: definicja metadanych i semantyka" i "Partition III: zestaw instrukcji CIL":
+
+- [Standardy C# ECMA i Common Language Infrastructure](/dotnet/standard/components#applicable-standards)
+- [Standard ECMA-335-Common Language Infrastructure (interfejs wiersza polecenia)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
+
 ## <a name="see-also"></a>Zobacz także
 
 - [Domeny aplikacji i zestawy](../../framework/app-domains/application-domains.md#application-domains-and-assemblies)

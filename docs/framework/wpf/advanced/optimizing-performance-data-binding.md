@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458547"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740799"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optymalizacja wydajności: powiązanie danych
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązania danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów CLR i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązania danych zapewnia prosty i spójny sposób, w jaki aplikacje mogą być obecne i współpracujące z danymi. Elementy mogą być powiązane z danymi z różnych źródeł danych w postaci obiektów CLR i XML.  
   
  Ten temat zawiera zalecenia dotyczące wydajności powiązań danych.  
 
@@ -69,7 +69,7 @@ ms.locfileid: "73458547"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Nie należy konwertować obiektów CLR do formatu XML tylko dla powiązania danych.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pozwala na powiązanie danych z [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartością; jednak powiązanie danych z [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartością jest wolniejsze niż wiązanie danych z obiektami CLR. Nie Konwertuj danych obiektu CLR do formatu XML, jeśli jedynym celem jest powiązanie danych.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pozwala na powiązanie danych z zawartością XML; jednak powiązanie danych z zawartością XML jest wolniejsze niż wiązanie danych z obiektami CLR. Nie Konwertuj danych obiektu CLR do formatu XML, jeśli jedynym celem jest powiązanie danych.  
   
 ## <a name="see-also"></a>Zobacz także
 

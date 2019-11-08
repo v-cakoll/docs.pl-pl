@@ -1,18 +1,18 @@
 ---
-title: Uaktualnij interfejsy API z atrybutami, aby zdefiniować oczekiwania o wartości null
-description: W tym artykule wyjaśniono motywacje i techniki umożliwiające dodawanie opisowych atrybutów do opisu stanu wartości null argumentów oraz zwracanie wartości z interfejsów API
+title: Uaktualnij interfejsy API dla typów odwołań dopuszczających wartości null z atrybutami, które definiują oczekiwania dla wartości zerowych
+description: Dowiedz się, jak używać opisowych atrybutów AllowNull, DisallowNull, MaybeNull, NotNull i innych, aby w pełni opisać stan null interfejsów API.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 64dcc70565de0c3094ef1c10866aafce9e18a5c9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039377"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737882"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Aktualizowanie bibliotek do używania typów referencyjnych dopuszczających wartości null i przekazywanie reguł dopuszczających wartość null do wywoływania
 
-Dodanie [typów referencyjnych dopuszczających wartość null](nullable-references.md) oznacza, czy można zadeklarować, czy wartość `null` jest dozwolona dla każdej zmiennej. Zapewnia to doskonałe środowisko podczas pisania kodu. Pojawiają się ostrzeżenia, jeśli zmienna niedopuszczające wartości null może być ustawiona na `null`. Są wyświetlane ostrzeżenia, jeśli zmienna dopuszczająca wartość null nie jest sprawdzana przed usunięciem odwołania do niej. Aktualizowanie bibliotek może zająć trochę czasu, ale Payoffs. Więcej informacji udostępnianych kompilatorowi o tym, *kiedy* wartość `null` jest dozwolona lub zabroniona, będzie można uzyskać lepszych ostrzeżeń dotyczących użytkowników interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka zawiera następujący interfejs API do pobrania ciągu zasobu:
+Dodanie [typów referencyjnych dopuszczających wartość null](nullable-references.md) oznacza, czy można zadeklarować, czy wartość `null` jest dozwolona dla każdej zmiennej. Ponadto można zastosować wiele atrybutów: `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`i `NotNullWhenNotNull`, aby całkowicie opisać Stany null argumentu i wartości zwracane. Zapewnia to doskonałe środowisko podczas pisania kodu. Pojawiają się ostrzeżenia, jeśli zmienna niedopuszczające wartości null może być ustawiona na `null`. Są wyświetlane ostrzeżenia, jeśli zmienna dopuszczająca wartość null nie jest sprawdzana przed usunięciem odwołania do niej. Aktualizowanie bibliotek może zająć trochę czasu, ale Payoffs. Więcej informacji udostępnianych kompilatorowi o tym, *kiedy* wartość `null` jest dozwolona lub zabroniona, będzie można uzyskać lepszych ostrzeżeń dotyczących użytkowników interfejsu API. Zacznijmy od znanego przykładu. Wyobraź sobie, że biblioteka zawiera następujący interfejs API do pobrania ciągu zasobu:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

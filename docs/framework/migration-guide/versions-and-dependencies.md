@@ -5,26 +5,27 @@ ms.date: 04/18/2019
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: b852fbd09376995692e19d944619307d9c1057bd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: eadb456bafb1703c687e73c6aecc81c9dccae72c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458056"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739569"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework wersje i zależności
+
 Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka wspólnego (CLR), biblioteki klas bazowych i inne zarządzane biblioteki. W tym temacie opisano kluczowe funkcje programu .NET Framework według wersji, podano informacje o bazowych wersjach środowiska CLR i skojarzonych środowiskach deweloperskich oraz zidentyfikowano wersje, które są instalowane przez system operacyjny Windows.  
   
 > [!NOTE]
 > Aby uzyskać informacje na temat pobierania i instalowania .NET Framework, zobacz [instalowanie .NET Framework dla deweloperów](../install/guide-for-developers.md).  
   
- W poniższej tabeli zestawiono historię wersji .NET Framework i są skorelowane poszczególne wersje programu Visual Studio, Windows i Windows Server. Należy zauważyć, że program Visual Studio obsługuje określanie wielu platform docelowych kodu, więc nie trzeba ograniczać się do wersji programu .NET Framework, która jest aktualnie wyświetlona.  
+W poniższej tabeli zestawiono historię wersji .NET Framework i są skorelowane poszczególne wersje programu Visual Studio, Windows i Windows Server. Program Visual Studio zapewnia wiele obiektów docelowych, więc nie jest ograniczona do wersji wymienionej .NET Framework.  
   
- Każda nowa wersja programu .NET Framework zachowuje funkcje z poprzednich wersji i dodaje nowe funkcje. Środowisko CLR jest identyfikowane za pomocą własnego numeru wersji. Numer wersji programu .NET Framework jest zwiększany przy każdym wydaniu, chociaż wersja środowiska CLR nie zawsze jest zwiększana. Na przykład .NET Framework 4, 4,5 i nowsze wersje obejmują środowisko CLR 4, ale .NET Framework 2,0, 3,0 i 3,5 zawierają środowisko CLR 2,0. (Nie było wersji 3 środowiska CLR).  
+Każda nowa wersja programu .NET Framework zachowuje funkcje z poprzednich wersji i dodaje nowe funkcje. Środowisko CLR jest identyfikowane za pomocą własnego numeru wersji. Numer wersji programu .NET Framework jest zwiększany przy każdym wydaniu, chociaż wersja środowiska CLR nie zawsze jest zwiększana. Na przykład .NET Framework 4, 4,5 i nowsze wersje obejmują środowisko CLR 4, ale .NET Framework 2,0, 3,0 i 3,5 zawierają środowisko CLR 2,0. (Nie było wersji 3 środowiska CLR).  
   
- Aby uzyskać pełną listę obsługiwanych systemów operacyjnych, zobacz [wymagania systemowe](../get-started/system-requirements.md) . Aby uzyskać pliki do pobrania, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby określić, które wersje .NET Framework są zainstalowane na komputerze, zobacz [How to: Określanie, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md).  
+Aby uzyskać pełną listę obsługiwanych systemów operacyjnych, zobacz [wymagania systemowe](../get-started/system-requirements.md) . Aby uzyskać pliki do pobrania, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby określić, które wersje .NET Framework są zainstalowane na komputerze, zobacz [How to: Określanie, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md).  
   
- W tabeli znajdują się wersje .NET Framework zainstalowanych w systemie operacyjnym, które zostały oznaczone jako ✓ w dodatku w systemie **Windows** , a zawarte w/ **można zainstalować w kolumnach systemu Windows Server** , muszą być [włączone w kontrolce Panel](../install/dotnet-35-windows-10.md) (dla systemu Windows) lub włączony przy użyciu Menedżer serwera (dla systemu Windows Server).  
+W tabeli znajdują się wersje .NET Framework zainstalowanych w systemie operacyjnym, które zostały oznaczone jako ✓ w dodatku w systemie **Windows** , a zawarte w/ **można zainstalować w kolumnach systemu Windows Server** , muszą być [włączone w kontrolce Panel](../install/dotnet-35-windows-10.md) (dla systemu Windows) lub włączony przy użyciu Menedżer serwera (dla systemu Windows Server).  
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
  
@@ -47,28 +48,29 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
 |1.1<br/><br/>[Nowe funkcje](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/9wtde3k4\(v%3dvs.71\))|1.1|2003|-|✓ 2003|Zobacz [instrukcje](how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Visual Studio .NET|-|-|Zobacz [instrukcje](how-to-determine-which-versions-are-installed.md)|  
 
-**Uwagi**
+> [!NOTE]
+>
+> - .NET Framework musi być włączona w tym systemie operacyjnym za pomocą [Panelu sterowania (dla systemu Windows) lub Menedżer serwera (dla systemu Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+> - Ogólnie rzecz biorąc, nie należy odinstalowywać żadnych wersji programu .NET Framework, które są zainstalowane na komputerze, ponieważ używana aplikacja może zależeć od określonej wersji i usunięcie tej wersji mogłoby spowodować nieprawidłowe działanie. Jednocześnie można załadować wiele wersji programu .NET Framework na pojedynczym komputerze. Oznacza to, że można zainstalować .NET Framework bez konieczności odinstalowywania poprzednich wersji. Aby uzyskać więcej informacji, zobacz [wprowadzenie](../get-started/index.md).
 
-<sup>\*</sup>&nbsp;&nbsp;.NET Framework musi być włączona w tym systemie operacyjnym za pomocą [Panelu sterowania (dla systemu windows) lub Menedżer serwera (dla systemu Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+## <a name="target-and-run-apps-for-version-45-and-later"></a>Kierowanie i uruchamianie aplikacji dla wersji 4,5 i nowszych
 
- Ogólnie rzecz biorąc, nie należy odinstalowywać żadnych wersji programu .NET Framework, które są zainstalowane na komputerze, ponieważ używana aplikacja może zależeć od określonej wersji i usunięcie tej wersji mogłoby spowodować nieprawidłowe działanie. Jednocześnie można załadować wiele wersji programu .NET Framework na pojedynczym komputerze. Oznacza to, że można zainstalować .NET Framework bez konieczności odinstalowywania poprzednich wersji. Aby uzyskać więcej informacji, zobacz [wprowadzenie](../get-started/index.md).
-
-## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Kierowanie i uruchamianie aplikacji .NET Framework w wersji 4,5 i nowszych  
- .NET Framework 4,5 to aktualizacja w miejscu, która zastępuje .NET Framework 4 na komputerze, a podobnie, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8 to aktualizacje w miejscu do .NET Framework 4,5, co oznacza, że używają tego samego środowiska uruchomieniowego wersja, ale wersje zestawu są aktualizowane i zawierają nowe typy i elementy członkowskie. Po zainstalowaniu jednej z tych aktualizacji .NET Framework 4, .NET Framework 4,5, .NET Framework 4,6 lub .NET Framework 4,7 aplikacje powinny nadal działać bez konieczności ponownej kompilacji. Jednak odwrotna zależność nie istnieje. Nie zaleca się uruchamiania aplikacji przeznaczonych dla nowszej wersji .NET Framework we wcześniejszej wersji .NET Framework. Na przykład nie zalecamy uruchamiania aplikacji dla elementów docelowych .NET Framework 4,6 na .NET Framework 4,5. Należy przestrzegać następujących wytycznych:  
+.NET Framework 4,5 to aktualizacja w miejscu, która zastępuje .NET Framework 4 na komputerze, a podobnie, .NET Framework 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8 to aktualizacje w miejscu do .NET Framework 4,5, co oznacza, że używają tego samego środowiska uruchomieniowego wersja, ale wersje zestawu są aktualizowane i zawierają nowe typy i elementy członkowskie. Po zainstalowaniu jednej z tych aktualizacji .NET Framework 4, .NET Framework 4,5, .NET Framework 4,6 lub .NET Framework 4,7 aplikacje powinny nadal działać bez konieczności ponownej kompilacji. Jednak odwrotna zależność nie istnieje. Nie zaleca się uruchamiania aplikacji przeznaczonych dla nowszej wersji .NET Framework we wcześniejszej wersji .NET Framework. Na przykład nie zalecamy uruchamiania aplikacji dla elementów docelowych .NET Framework 4,6 na .NET Framework 4,5. Należy przestrzegać następujących wytycznych:  
   
 - W programie Visual Studio można wybrać .NET Framework 4,5 jako platformę docelową dla projektu (ustawia właściwość <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>) do kompilowania projektu jako zestawu .NET Framework 4,5 lub pliku wykonywalnego. Ten zestaw lub plik wykonywalny można następnie użyć na dowolnym komputerze z zainstalowanym .NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 lub 4,8.  
   
-- W programie Visual Studio można wybrać .NET Framework 4.5.1 jako platformę docelową dla projektu (ustawia właściwość <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>) do kompilowania projektu jako zestawu .NET Framework 4.5.1 lub pliku wykonywalnego. Ten zestaw lub plik wykonywalny powinien być uruchamiany tylko na komputerach, na których zainstalowano .NET Framework 4.5.1 lub nowszą wersję .NET Framework. Program wykonywalny przeznaczony dla .NET Framework 4.5.1 zostanie zablokowany na komputerze, na którym jest zainstalowana tylko wcześniejsza wersja .NET Framework, taka jak .NET Framework 4,5, a użytkownik zostanie poproszony o zainstalowanie .NET Framework 4.5.1. Ponadto nie należy wywoływać zestawów .NET Framework 4.5.1 z aplikacji, która jest przeznaczona dla starszej wersji .NET Framework, takiej jak .NET Framework 4,5.  
+- W programie Visual Studio można wybrać .NET Framework 4.5.1 jako platformę docelową dla projektu w celu skompilowania go jako zestawu .NET Framework 4.5.1 lub pliku wykonywalnego. Ten zestaw lub plik wykonywalny jest uruchamiany tylko na komputerach, na których zainstalowano .NET Framework 4.5.1 lub nowszy. Program wykonywalny przeznaczony dla .NET Framework 4.5.1 zostanie zablokowany na komputerze, na którym jest zainstalowana tylko wcześniejsza wersja .NET Framework, taka jak .NET Framework 4,5. Użytkownik zostanie poproszony o zainstalowanie .NET Framework 4.5.1. Ponadto nie należy wywoływać zestawów .NET Framework 4.5.1 z aplikacji, która jest przeznaczona dla starszej wersji .NET Framework, takiej jak .NET Framework 4,5.  
   
-     .NET Framework 4.5.1 i .NET Framework 4,5 są używane w tym miejscu tylko jako przykłady. Ta zasada ma zastosowanie do każdej aplikacji, która jest przeznaczona dla nowszej wersji .NET Framework niż zainstalowana w systemie, w którym jest uruchomiona.  
+  > [!NOTE]
+  > .NET Framework 4.5.1 i .NET Framework 4,5 są używane w tym miejscu tylko jako przykłady. Opisana zasada dotyczy każdej aplikacji, która jest przeznaczona dla nowszej wersji .NET Framework niż zainstalowana w systemie, na którym jest uruchomiona.  
   
- Niektóre zmiany w .NET Framework mogą wymagać zmian w kodzie aplikacji; Sprawdź [zgodność aplikacji](application-compatibility.md) przed uruchomieniem istniejących aplikacji z .NET Framework 4,5 lub nowszymi wersjami. Aby uzyskać więcej informacji na temat instalowania bieżącej wersji, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby uzyskać informacje o obsłudze .NET Framework, zobacz [Zasady cyklu życia programu Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) w witrynie sieci Web Pomoc techniczna firmy Microsoft.  
+Niektóre zmiany w .NET Framework mogą wymagać zmian w kodzie aplikacji. Jeśli używasz istniejącej aplikacji w .NET Framework 4,5 lub nowszej, zobacz [zgodność aplikacji](application-compatibility.md). Aby uzyskać informacje na temat instalowania bieżącej wersji, zobacz [Install the .NET Framework for Developers](../install/guide-for-developers.md). Aby uzyskać informacje o obsłudze .NET Framework, zobacz [Zasady cyklu życia programu Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework) w witrynie sieci Web Pomoc techniczna firmy Microsoft.  
   
-## <a name="targeting-and-running-apps-for-older-versions"></a>Określanie platformy docelowej i uruchamianie aplikacji dla starszych wersji  
+## <a name="target-and-run-apps-for-older-versions"></a>Kierowanie i uruchamianie aplikacji dla starszych wersji  
 
-.NET Framework wersje 2,0, 3,0 i 3,5 są kompilowane przy użyciu tej samej wersji środowiska CLR (CLR 2,0). Te wersje reprezentują kolejne warstwy jednej instalacji. Każda wersja jest kompilowana przyrostowo na poprzednich wersjach. Nie jest możliwe uruchomienie wersji 2.0, 3.0 i 3.5 równocześnie na komputerze. Po zainstalowaniu wersji 3.5 automatycznie są udostępniane warstwy 2.0 i 3.0, a aplikacje, które zostały zaprojektowane dla wersji 2.0, 3.0 i 3.5, można uruchamiać z użyciem wersji 3.5. Jednakże .NET Framework 4 kończy to podejście warstwowe i jego nowsze wersje (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8) również reprezentują kolejne warstwy pojedynczej instalacji.  Począwszy od .NET Framework 4, można użyć w procesie równoczesnego hostowania w celu uruchamiania wielu wersji środowiska CLR w pojedynczym procesie. Aby uzyskać więcej informacji, zobacz [zestawy i wykonywanie równoczesne](../../standard/assembly/side-by-side-execution.md).  
+.NET Framework wersje 2,0, 3,0 i 3,5 są kompilowane przy użyciu tej samej wersji środowiska CLR (CLR 2,0). Te wersje reprezentują kolejne warstwy jednej instalacji. Każda wersja jest kompilowana przyrostowo na poprzednich wersjach. Nie jest możliwe uruchamianie wersji 2,0, 3,0 i 3,5 obok siebie na komputerze. Po zainstalowaniu wersji 3.5 automatycznie są udostępniane warstwy 2.0 i 3.0, a aplikacje, które zostały zaprojektowane dla wersji 2.0, 3.0 i 3.5, można uruchamiać z użyciem wersji 3.5. Jednakże .NET Framework 4 kończy to podejście warstwowe i jego nowsze wersje (.NET Framework 4,5, 4.5.1, 4.5.2, 4,6, 4.6.1, 4.6.2, 4,7, 4.7.1, 4.7.2 i 4,8) również reprezentują kolejne warstwy pojedynczej instalacji. Począwszy od .NET Framework 4, można użyć funkcji w procesie, która obok siebie umożliwia uruchamianie wielu wersji środowiska CLR w pojedynczym procesie. Aby uzyskać więcej informacji, zobacz [zestawy i wykonywanie równoczesne](../../standard/assembly/side-by-side-execution.md).  
   
- Ponadto, jeśli aplikacja jest przeznaczona dla wersji 2,0, 3,0 lub 3,5, użytkownicy mogą być zobowiązani do włączenia .NET Framework 3,5 na komputerze z systemem Windows 8, Windows 8.1 lub Windows 10, zanim będą mogli uruchomić aplikację. Aby uzyskać więcej informacji, zobacz [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](../install/dotnet-35-windows-10.md).  
+Ponadto, jeśli aplikacja jest przeznaczona dla wersji 2,0, 3,0 lub 3,5, użytkownicy mogą być zobowiązani do włączenia .NET Framework 3,5 na komputerze z systemem Windows 8, Windows 8.1 lub Windows 10, zanim będą mogli uruchomić aplikację. Aby uzyskać więcej informacji, zobacz [instalowanie .NET Framework 3,5 w systemie Windows 10, Windows 8.1 i Windows 8](../install/dotnet-35-windows-10.md).  
   
 ## <a name="next-steps"></a>Następne kroki  
   
@@ -76,12 +78,12 @@ Każda wersja programu.NET Framework zawiera środowisko uruchomieniowe języka 
   
 - Nowe funkcje i ulepszenia w .NET Framework 4,5 i jego wydania punktowe znajdują się [w artykule Co nowego w .NET Framework](../whats-new/index.md).  
   
-- Aby uzyskać informacje na temat migrowania aplikacji z .NET Framework 4 do .NET Framework 4,5 i jego wydań punktów, zobacz [Przewodnik migracji](index.md).  
+- Aby uzyskać informacje na temat migrowania aplikacji do nowszej wersji .NET Framework, zobacz [Przewodnik migracji](index.md).
   
 - Aby uzyskać informacje dotyczące ustalania, które wersje lub aktualizacje są zainstalowane na komputerze, zobacz [How to: Określanie, które wersje .NET Framework są zainstalowane](how-to-determine-which-versions-are-installed.md) , i [instrukcje: Określanie, które aktualizacje .NET Framework są zainstalowane](how-to-determine-which-net-framework-updates-are-installed.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zgodność wersji](version-compatibility.md)
-- [Zasady cyklu życia obsługi Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)
+- [Zasady cyklu życia obsługi Microsoft .NET Framework](https://support.microsoft.com/help/17455/lifecycle-faq-net-framework)
 - [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)

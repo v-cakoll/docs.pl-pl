@@ -2,12 +2,12 @@
 title: Wartości zwracane ref i lokalne elementy ref (C# przewodnik)
 description: Dowiedz się, jak definiować i używać lokalnych wartości zwrotnych i ref
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114478"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736819"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Wartości zwracane ref i zmienne lokalne ref
 
@@ -25,7 +25,7 @@ Istnieją pewne ograniczenia dotyczące wyrażenia, które Metoda może zwróci�
 
 - Zwracana wartość nie może być literałem `null`. Zwracanie `null` generuje błąd kompilatora CS8156 "wyrażenie nie może być używane w tym kontekście, ponieważ może nie zostać zwrócone przez odwołanie".
 
-   Metoda ze zwróceniem ref może zwracać alias do zmiennej, której wartość jest obecnie wartością null (niebędącą wystąpieniem) lub [typem wartości null](../nullable-types/index.md) dla typu wartości.
+   Metoda ze zwróceniem ref może zwracać alias do zmiennej, której wartość jest obecnie wartością null (niebędącą wystąpieniem) lub [typem wartości null](../../language-reference/builtin-types/nullable-value-types.md) dla typu wartości.
 
 - Zwracana wartość nie może być stałą, składową wyliczenia, wartością zwracaną przez wartość z właściwości lub metodą `class` lub `struct`. Naruszenie tej reguły powoduje wygenerowanie błędu kompilatora CS8156, "nie można użyć wyrażenia w tym kontekście, ponieważ może ono nie zostać zwrócone przez odwołanie".
 

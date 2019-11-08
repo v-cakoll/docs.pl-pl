@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460574"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740651"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML
 W tym temacie wyjaśniono również obecność i cel dwóch mapowań przestrzeni nazw XAML, jak często znajdują się w tagu głównym pliku XAML WPF. Opisano w nim również, jak generować podobne mapowania dla elementów, które są zdefiniowane w własnym kodzie i/lub w różnych zestawach.  
@@ -39,7 +39,7 @@ W tym temacie wyjaśniono również obecność i cel dwóch mapowań przestrzeni
   
  Relacja między tymi deklaracjami polega na tym, że mapowanie prefiksu `x:` obsługuje elementy wewnętrzne, które są częścią definicji języka XAML, a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] to jedna implementacja, która używa języka XAML jako język i definiuje słownictwe obiektów dla języka XAML. Ze względu na to, że użycie słownictwa WPF będzie znacznie bardziej typowe niż użycie elementów wewnętrznych języka XAML, słownictwo WPF jest mapowane jako domyślne.  
   
- Konwencja prefiksu `x:` na potrzeby mapowania obsługi elementów wewnętrznych języka XAML jest przystosowana do szablonów projektu, przykładowego kodu i dokumentacji funkcji języka w tym [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. Przestrzeń nazw XAML definiuje wiele powszechnie używanych funkcji, które są niezbędne nawet dla podstawowych aplikacji WPF. Na przykład w celu dołączenia dowolnego kodu do pliku XAML za pomocą klasy częściowej należy nazwać tę klasę jako atrybut `x:Class` w elemencie głównym odpowiedniego pliku XAML. Lub każdy element zdefiniowany na stronie XAML, do którego chcesz uzyskać dostęp jako zasób z kluczem, powinien mieć ustawiony atrybut `x:Key` dla danego elementu. Aby uzyskać więcej informacji na temat tych i innych aspektów języka XAML, zobacz [Omówienie języka XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) lub [składni języka XAML](xaml-syntax-in-detail.md).  
+ Konwencja prefiksu `x:` na potrzeby mapowania obsługi elementów wewnętrznych języka XAML jest przystosowana do szablonów projektu, przykładowego kodu i dokumentacji funkcji języka w tym zestawie SDK. Przestrzeń nazw XAML definiuje wiele powszechnie używanych funkcji, które są niezbędne nawet dla podstawowych aplikacji WPF. Na przykład w celu dołączenia dowolnego kodu do pliku XAML za pomocą klasy częściowej należy nazwać tę klasę jako atrybut `x:Class` w elemencie głównym odpowiedniego pliku XAML. Lub każdy element zdefiniowany na stronie XAML, do którego chcesz uzyskać dostęp jako zasób z kluczem, powinien mieć ustawiony atrybut `x:Key` dla danego elementu. Aby uzyskać więcej informacji na temat tych i innych aspektów języka XAML, zobacz [Omówienie języka XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) lub [składni języka XAML](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Mapowanie na klasy niestandardowe i zestawy  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Mapowanie przestrzeni nazw CLR na przestrzenie nazw XML w zestawie  
- WPF definiuje atrybut CLR, który jest używany przez procesory XAML w celu mapowania wielu przestrzeni nazw CLR na pojedynczą przestrzeń nazw XAML. Ten atrybut, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, jest umieszczany na poziomie zestawu w kodzie źródłowym, który tworzy zestaw. Kod źródłowy zestawu WPF używa tego atrybutu do mapowania różnych wspólnych przestrzeni nazw, takich jak <xref:System.Windows> i <xref:System.Windows.Controls>, do przestrzeni nazw [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)].  
+ WPF definiuje atrybut CLR, który jest używany przez procesory XAML w celu mapowania wielu przestrzeni nazw CLR na pojedynczą przestrzeń nazw XAML. Ten atrybut, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, jest umieszczany na poziomie zestawu w kodzie źródłowym, który tworzy zestaw. Kod źródłowy zestawu WPF używa tego atrybutu do mapowania różnych wspólnych przestrzeni nazw, takich jak <xref:System.Windows> i <xref:System.Windows.Controls>, do przestrzeni nazw `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> przyjmuje dwa parametry: nazwa przestrzeni nazw XML/XAML i nazwa przestrzeni nazw środowiska CLR. Może istnieć więcej niż jeden <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, aby zmapować wiele przestrzeni nazw środowiska CLR do tego samego obszaru nazw XML. Po zmapowaniu, w razie potrzeby można odwoływać się do członków tych przestrzeni nazw bez pełnej kwalifikacji, dostarczając odpowiednią instrukcję `using`ową na stronie kodowej powiązanej z kodem częściowym. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   

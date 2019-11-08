@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459769"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733737"
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 
@@ -85,7 +85,7 @@ Za pomocą <xref:System.Windows.Controls.Page>można deklaratywnie zaimplementow
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-<xref:System.Windows.Controls.Page>, który jest implementowany w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup, ma `Page` jako element główny i wymaga deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)][!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. Element `Page` zawiera zawartość, do której chcesz przejść i wyświetlić. Aby dodać zawartość, należy ustawić `Page.Content` elementu właściwości, jak pokazano w poniższej tabeli.
+<xref:System.Windows.Controls.Page>, która jest zaimplementowana w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup, ma `Page` jako element główny i wymaga deklaracji przestrzeni nazw XML [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Element `Page` zawiera zawartość, do której chcesz przejść i wyświetlić. Aby dodać zawartość, należy ustawić `Page.Content` elementu właściwości, jak pokazano w poniższej tabeli.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ W takim przypadku `Page.Content` jest automatycznie ustawiana z elementami podrz
 
 Aby umożliwić współdziałanie pliku znaczników i pliku związanego z kodem, wymagana jest następująca konfiguracja:
 
-- W znaczniku element `Page` musi zawierać atrybut `x:Class`. Po skompilowaniu aplikacji, istnienie `x:Class` w pliku znaczników powoduje utworzenie klasy `partial`, która pochodzi z <xref:System.Windows.Controls.Page> i ma nazwę określoną przez atrybut `x:Class`. Wymaga to dodania deklaracji przestrzeni nazw [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] dla schematu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Wygenerowana Klasa `partial` implementuje `InitializeComponent`, który jest wywoływany, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.
+- W znaczniku element `Page` musi zawierać atrybut `x:Class`. Po skompilowaniu aplikacji, istnienie `x:Class` w pliku znaczników powoduje utworzenie klasy `partial`, która pochodzi z <xref:System.Windows.Controls.Page> i ma nazwę określoną przez atrybut `x:Class`. Wymaga to dodania deklaracji przestrzeni nazw XML dla schematu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). Wygenerowana Klasa `partial` implementuje `InitializeComponent`, który jest wywoływany, aby zarejestrować zdarzenia i ustawić właściwości zaimplementowane w znaczniku.
 
 - W kodzie, Klasa musi być klasą `partial` o tej samej nazwie, która jest określona przez atrybut `x:Class` w znaczniku i musi pochodzić od <xref:System.Windows.Controls.Page>. Pozwala to skojarzyć plik związany z kodem z klasą `partial`, która jest generowana dla pliku znaczników podczas kompilowania aplikacji (zobacz [Kompilowanie aplikacji WPF](building-a-wpf-application-wpf.md)).
 

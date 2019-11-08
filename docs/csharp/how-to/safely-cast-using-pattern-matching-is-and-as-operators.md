@@ -6,30 +6,30 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: d82c60374db637bb8ac879a23e2d74c39194ca18
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 8d090df1338c535b11a7fd3ec32f6d1cb00b338f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353723"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739685"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Instrukcje: bezpieczne rzutowanie przy użyciu dopasowania wzorca i operatory is i AS
 
 Ponieważ obiekty są polimorficzne, istnieje możliwość, aby zmienna typu klasy bazowej była przechowywana [typu](../programming-guide/types/index.md)pochodnego. Aby uzyskać dostęp do elementów członkowskich wystąpienia typu pochodnego, konieczne jest [rzutowanie](../programming-guide/types/casting-and-type-conversions.md) wartości z powrotem na typ pochodny. Jednak rzutowanie tworzy ryzyko wyrzucania <xref:System.InvalidCastException>. C#zawiera instrukcje [dopasowania wzorca](../pattern-matching.md) , które wykonują rzut warunkowy tylko wtedy, gdy powiedzie się. C#zawiera również operatory [is](../language-reference/operators/type-testing-and-cast.md#is-operator) i [as](../language-reference/operators/type-testing-and-cast.md#as-operator) do sprawdzenia, czy wartość jest określonego typu.
 
-Poniższy kod demonstruje dopasowanie wzorca `is` instrukcji. Zawiera metody, które testują argument metody w celu ustalenia, czy jest to jeden z możliwych zestawów typów pochodnych:
+Poniższy kod ilustruje dopasowanie wzorca `is` instrukcji. Zawiera metody, które testują argument metody w celu ustalenia, czy jest to jeden z możliwych zestawów typów pochodnych:
 
 [!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
-Powyższy przykład ilustruje kilka cech składni dopasowania do wzorca. Instrukcje `if (a is Mammal m)` i `if (o is Mammal m)` łączą test z przypisaniem inicjalizacji. Przypisanie występuje tylko wtedy, gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie w osadzonych instrukcjach `if`, do których została przypisana. Nie można uzyskać dostępu do `m` dalej w tej samej metodzie. Wypróbuj ją w oknie interaktywnym.
+Powyższy przykład ilustruje kilka cech składni dopasowania do wzorca. Instrukcje `if (a is Mammal m)` i `if (o is Mammal m)` łączą test z przypisaniem inicjalizacji. Przypisanie występuje tylko wtedy, gdy test zakończy się pomyślnie. Zmienna `m` jest tylko w zakresie w osadzonej instrukcji `if`, w której został przypisany. Nie można uzyskać dostępu do `m` później w tej samej metodzie. Wypróbuj ją w oknie interaktywnym.
 
-Można także użyć tej samej składni do testowania, jeśli [Typ wartości null](../programming-guide/nullable-types/index.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
+Można także użyć tej samej składni do testowania, jeśli [Typ wartości null](../language-reference/builtin-types/nullable-value-types.md) ma wartość, jak pokazano w poniższym przykładowym kodzie:
 
 [!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
-Powyższy przykład ilustruje inne funkcje dopasowania do wzorca do użycia z konwersjemi. Można testować zmienną dla wzorca o wartości null, sprawdzając dla wartości `null` wartość. Gdy wartość środowiska uruchomieniowego zmiennej wynosi `null`, sprawdzanie instrukcji `is` dla typu zawsze zwraca wartość `false`. Zgodna ze wzorcem instrukcja `is` nie zezwala na typ wartości null, taki jak `int?` lub `Nullable<int>`, ale można testować dla dowolnego innego typu wartości. Wzorce `is` z powyższego przykładu nie są ograniczone do typów wartości null. Można również użyć tych wzorców do sprawdzenia, czy zmienna typu referencyjnego ma wartość lub jest `null`.
+Powyższy przykład ilustruje inne funkcje dopasowania do wzorca do użycia z konwersjemi. Możesz przetestować zmienną dla wzorca o wartości null, sprawdzając, czy wartość `null`. Gdy wartość środowiska uruchomieniowego zmiennej jest `null`, sprawdzanie instrukcji `is` dla typu zawsze zwraca `false`. Zgodna ze wzorcem instrukcja `is` nie zezwala na typ wartości null, na przykład `int?` lub `Nullable<int>`, ale można testować dla dowolnego innego typu wartości. Wzorce `is` z poprzedniego przykładu nie są ograniczone do typów wartości dopuszczających wartość null. Można również użyć tych wzorców do sprawdzenia, czy zmienna typu referencyjnego ma wartość lub jest `null`.
 
-Powyższy przykład pokazuje również, jak używać wzorca zgodnego z wyrażeniem `is` w instrukcji `switch`, gdzie zmienna może być jednym z wielu różnych typów.
+Powyższy przykład pokazuje również, jak używać wyrażenia `is` pasującego do wzorca w instrukcji `switch`, gdzie zmienna może być jednym z wielu różnych typów.
 
 Jeśli chcesz sprawdzić, czy zmienna jest danym typem, ale nie jest przypisana do nowej zmiennej, można użyć operatorów `is` i `as` dla typów referencyjnych i typów dopuszczających wartość null. Poniższy kod pokazuje, jak używać instrukcji `is` i `as`, które były częścią C# języka przed wprowadzeniem dopasowania do wzorca w celu przetestowania, jeśli zmienna ma dany typ:
 

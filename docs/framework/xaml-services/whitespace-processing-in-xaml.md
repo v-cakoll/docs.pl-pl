@@ -7,19 +7,19 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 930e8a0013dd601aaafcd81340b3b9b8b69f8fdd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3661563dc7f5fa7346a12abab15013b56c376325
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458494"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740587"
 ---
 # <a name="white-space-processing-in-xaml"></a>Przetwarzanie spacji w XAML
 Reguły języka dla stanu XAML, które mają znaczący biały znak, muszą być przetwarzane przez implementację procesora [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]. Ten temat dokumentuje te reguły języka XAML. Zawiera również dodatkową obsługę odstępów, która jest definiowana przez [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementację procesora XAML i składnika zapisywania XAML do serializacji.  
   
 <a name="whitespace_definition"></a>   
 ## <a name="white-space-definition"></a>Definicja odstępu  
- Spójne z [!INCLUDE[TLA2#tla_xml](../../../includes/tla2sharptla-xml-md.md)], znaki białych znaków w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] to spacja, wysuw wiersza i tabulator. Odpowiadają odpowiednio wartościom Unicode 0020, 000A i 0009.  
+ Spójne z XML, znaki odstępu w [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] to Space, wysuw wiersza i tabulator. Odpowiadają odpowiednio wartościom Unicode 0020, 000A i 0009.  
   
 <a name="whitespace_normalization"></a>   
 ## <a name="white-space-normalization"></a>Normalizacja białych miejsc  

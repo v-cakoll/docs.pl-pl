@@ -2,21 +2,21 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e5f1d49e0e3bb5f52c5e18577d556d25539434a9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 00631ad88d771ed8f45638f28c84df05917fd3a0
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400164"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736587"
 ---
-# <a name="namedpipetransport"></a>\<namedPipeTransport>
+# <a name="namedpipetransport"></a>\<namedPipeTransport >
 Definiuje transport, który powoduje, że kanał przesyła komunikaty przy użyciu nazwanych potoków, gdy zostanie uwzględniony w niestandardowym powiązaniu.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<namedPipeTransport >**  
   
 ## <a name="syntax"></a>Składnia  
@@ -49,8 +49,8 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Pobiera lub ustawia wartość <xref:System.TimeSpan> określającą maksymalny czas, przez który kanał może być w stanie inicjowania przed rozłączeniem.|  
-|ConnectionBufferSize|Pobiera lub ustawia rozmiar buforu używany do przesyłania fragmentu serializowanego komunikatu w locie z klienta lub usługi.|  
+|channelInitializationTimeout|Pobiera lub ustawia <xref:System.TimeSpan>, który określa maksymalny czas, w którym kanał może być w stanie inicjowania przed rozłączeniem.|  
+|connectionBufferSize|Pobiera lub ustawia rozmiar buforu używany do przesyłania fragmentu serializowanego komunikatu w locie z klienta lub usługi.|  
 |hostNameComparisonMode|Pobiera lub ustawia wartość wskazującą, czy nazwa hosta jest używana do uzyskiwania dostępu do usługi podczas dopasowywania identyfikatora URI.|  
 |Opcję ManualAddressing|Pobiera lub ustawia wartość wskazującą, czy ręczne adresowanie wiadomości jest wymagane.|  
 |maxBufferPoolSize|Pobiera lub ustawia maksymalny rozmiar (w bajtach) wszystkich pul buforów używanych przez transport.|  
@@ -59,19 +59,19 @@ Brak.
 |maxPendingAccepts|Pobiera lub ustawia maksymalną liczbę kanałów, jaką usługa może oczekiwać na odbiorniku do przetwarzania połączeń przychodzących do usługi.|  
 |maxPendingConnections|Pobiera lub ustawia maksymalną liczbę połączeń oczekujących na wysłanie usługi.|  
 |maxReceivedMessageSize|Pobiera i ustawia maksymalny dopuszczalny rozmiar wiadomości (w bajtach), która może zostać odebrana.|  
-|transferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
+|Elementy TransferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
 |[\<connectionPoolSettings > \<namedPipeTransport >](connectionpoolsettings.md)|Określa dodatkowe ustawienia puli połączeń dla powiązania nazwanego potoku.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
+|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
 Ten transport używa identyfikatorów URI w postaci "net. pipe://hostname/Path". Inne składniki URI są opcjonalne.  
   
-`namedPipeTransport` Element jest punktem początkowym do tworzenia niestandardowego powiązania, które implementuje protokół transportu nazwanych potoków. Ten transport jest używany w przypadku komunikacji między maszynami Windows Communication Foundation (WCF).  
+Element `namedPipeTransport` jest punktem początkowym do tworzenia niestandardowego powiązania, które implementuje protokół transportu nazwanych potoków. Ten transport jest używany w przypadku komunikacji między maszynami Windows Communication Foundation (WCF).  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -84,4 +84,4 @@ Ten transport używa identyfikatorów URI w postaci "net. pipe://hostname/Path".
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<niestandardowebinding >](custombinding.md)

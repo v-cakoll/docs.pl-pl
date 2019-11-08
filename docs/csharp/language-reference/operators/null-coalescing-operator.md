@@ -11,12 +11,12 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 5262aa70bb5ec2f03dda9425194b89ec1e809d76
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038965"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739662"
 ---
 # <a name="-and--operators-c-reference"></a>?? i? = — OperatoryC# (odwołanie)
 
@@ -28,7 +28,7 @@ Dostępne w C# 8,0 i późniejszych, operator przypisania łączącej wartości 
 
 Argument operacji po lewej stronie operatora `??=` musi być zmienną, [właściwością](../../programming-guide/classes-and-structs/properties.md)lub elementem [indeksatora](../../programming-guide/indexers/index.md) .
 
-W C# 7,3 i starszych typach operandu po lewej stronie operatora`??`musi być typem referencyjnym lub [typem wartości null](../../programming-guide/nullable-types/index.md). Począwszy od C# 8,0, ten wymóg jest zastępowany następującymi: typem operandu po lewej stronie operatorów`??`i`??=`nie może być typ wartości niedopuszczający wartości null. W szczególności, począwszy od C# 8,0, można użyć operatorów łączenia wartości null z nieokreślonymi parametrami typu:
+W C# 7,3 i starszych typach operandu po lewej stronie operatora `??` musi być [typem referencyjnym](../keywords/reference-types.md) lub [typem wartości null](../builtin-types/nullable-value-types.md). Począwszy od C# 8,0, ten wymóg jest zastępowany następującymi: typem operandu po lewej stronie operatorów`??`i`??=`nie może być typ wartości niedopuszczający wartości null. W szczególności, począwszy od C# 8,0, można użyć operatorów łączenia wartości null z nieokreślonymi parametrami typu:
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -54,7 +54,7 @@ Operatory `??` i `??=` mogą być przydatne w następujących scenariuszach:
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- Podczas pracy z [typami wartości null](../../programming-guide/nullable-types/index.md) i musi podać wartość bazowego typu wartości, użyj operatora `??`, aby określić wartość, która ma zostać podana w przypadku, gdy wartość typu null jest `null`:
+- Podczas pracy z [typami wartości null](../builtin-types/nullable-value-types.md) i musi podać wartość bazowego typu wartości, użyj operatora `??`, aby określić wartość, która ma zostać podana w przypadku, gdy wartość typu null jest `null`:
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 

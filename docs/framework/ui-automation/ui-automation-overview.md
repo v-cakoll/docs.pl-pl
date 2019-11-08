@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: 6e5501b152c4662f1456786ba51fd3f25923b34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d803bd053acd876b3a38cfc52eb29818219e9423
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040543"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739587"
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -39,7 +39,7 @@ Automatyzacja interfejsu użytkownika zapewnia pełną funkcjonalność obsługi
 |Interfejs API dostawcy (UIAutomationProvider. dll i UIAutomationTypes. dll)|Zestaw definicji interfejsu, które są implementowane przez dostawców automatyzacji interfejsu użytkownika, obiektów, które zawierają informacje o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementach i reagują na wprowadzanie programistyczne.|  
 |Interfejs API klienta (UIAutomationClient. dll i UIAutomationTypes. dll)|Zestaw typów dla kodu zarządzanego, który umożliwia aplikacjom klienckim automatyzacji interfejsu użytkownika uzyskiwanie informacji o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] i wysyłanie danych wejściowych do kontrolek.|  
 |UiAutomationCore. dll|Kod źródłowy (nazywany czasem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] rdzeń), który obsługuje komunikację między dostawcami i klientami.|  
-|UIAutomationClientsideProviders. dll|Zestaw dostawców automatyzacji interfejsu użytkownika dla standardowych, starszych kontrolek. (formanty [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] mają natywną obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]). Ta obsługa jest automatycznie dostępna dla aplikacji klienckich.|  
+|UIAutomationClientsideProviders. dll|Zestaw dostawców automatyzacji interfejsu użytkownika dla standardowych, starszych kontrolek. (formanty[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] mają natywną obsługę [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]). Ta obsługa jest automatycznie dostępna dla aplikacji klienckich.|  
   
  Z punktu widzenia deweloperów oprogramowania istnieją dwa sposoby używania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]: Aby utworzyć obsługę niestandardowych kontrolek (przy użyciu interfejsu API dostawcy) i utworzyć aplikacje używające rdzenia [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] do komunikowania się z elementami [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] (przy użyciu interfejsu API klienta). W zależności od fokusu należy zapoznać się z różnymi częściami dokumentacji. Możesz dowiedzieć się więcej na temat koncepcji i uzyskać praktyczne informacje o wiedzy w poniższych sekcjach.  
   
@@ -72,7 +72,7 @@ Automatyzacja interfejsu użytkownika zapewnia pełną funkcjonalność obsługi
 > [!NOTE]
 > Między typami formantów i wzorcami formantów nie istnieje taka sama zgodność. Wzorzec kontrolki może być obsługiwany przez wiele typów formantów, a kontrolka może obsługiwać wiele wzorców kontroli, z których każdy ujawnia różne aspekty jego działania. Na przykład pole kombi ma co najmniej dwa wzorce kontroli: jeden, który reprezentuje jego zdolność do rozwijania i zwijania, i drugi, który reprezentuje mechanizm wyboru. Aby uzyskać szczegółowe informacje, zobacz [typy formantów automatyzacji interfejsu użytkownika](ui-automation-control-types.md).  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] udostępnia również informacje dotyczące aplikacji klienckich za poorednictwem zdarzeń. W przeciwieństwie do [!INCLUDE[TLA2#tla_winevents](../../../includes/tla2sharptla-winevents-md.md)]zdarzenia [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nie są oparte na mechanizmie emisji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienci rejestrują się do określonych powiadomień o zdarzeniach i mogą żądać, aby określone właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i informacje o wzorcu formantów były przekazywane do ich obsługi zdarzeń. Ponadto zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawiera odwołanie do elementu, który go spowodował. Dostawcy mogą zwiększyć wydajność, wybierając wybiórcze zdarzenia, w zależności od tego, czy klienci nasłuchuje.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] udostępnia również informacje dotyczące aplikacji klienckich za poorednictwem zdarzeń. W przeciwieństwie do WinEvents, zdarzenia [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nie są oparte na mechanizmie emisji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klienci rejestrują się do określonych powiadomień o zdarzeniach i mogą żądać, aby określone właściwości [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] i informacje o wzorcu formantów były przekazywane do ich obsługi zdarzeń. Ponadto zdarzenie [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zawiera odwołanie do elementu, który go spowodował. Dostawcy mogą zwiększyć wydajność, wybierając wybiórcze zdarzenia, w zależności od tego, czy klienci nasłuchuje.  
   
 ## <a name="see-also"></a>Zobacz także
 

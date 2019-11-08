@@ -2,23 +2,23 @@
 title: <transport> dla <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: 4ea60ccaba58bc0b3fa8f2263295bf1413d25e89
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 0cd20c607b0c4ddd3ecfd806d38ba63b4a5c5a25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399266"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732765"
 ---
-# <a name="transport-of-ws2007httpbinding"></a>\<Transport > \<WS2007HttpBinding >
+# <a name="transport-of-ws2007httpbinding"></a>\<Transport > \<ws2007HttpBinding >
 Definiuje ustawienia uwierzytelniania dla transportu HTTP.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ws2007HttpBinding >** ](ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> zabezpieczeń**](security-of-ws2007httpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> transportu**  
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WS2007HttpBinding**](ws2007httpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zabezpieczeń**](security-of-ws2007httpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<transport >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Używa uwierzytelniania podstawowego.|  
-|Szyfrowane|Używa uwierzytelniania szyfrowanego.|  
+|szyfrowane|Używa uwierzytelniania szyfrowanego.|  
 |NTLM|Używa uwierzytelniania NTLM jako rezerwy z domeną systemu Windows.|  
 |Windows|Używa zintegrowanego uwierzytelniania systemu Windows.|  
 |Certyfikatu|Uwierzytelnia klienta za pomocą certyfikatów X. 509.|  
@@ -59,7 +59,7 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 |-----------|-----------------|  
 |Brak|Zabezpieczenia są wyłączone.|  
 |Podstawowy|Używa uwierzytelniania podstawowego.|  
-|Szyfrowane|Używa uwierzytelniania szyfrowanego.|  
+|szyfrowane|Używa uwierzytelniania szyfrowanego.|  
 |NTLM|Używa protokołu NTLM jako rezerwy z domeną systemu Windows.|  
 |Windows|Używa zintegrowanego uwierzytelniania systemu Windows.|  
 |Certyfikatu|Uwierzytelnia klienta za pomocą certyfikatów X. 509.|  
@@ -71,7 +71,7 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> zabezpieczeń](security-of-ws2007httpbinding.md)|Reprezentuje możliwości [ \<zabezpieczeń elementu > WS2007HttpBinding](ws2007httpbinding.md) .|  
+|[> zabezpieczeń \<](security-of-ws2007httpbinding.md)|Reprezentuje możliwości zabezpieczeń [\<elementu > WS2007HttpBinding](ws2007httpbinding.md) .|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -83,4 +83,4 @@ Definiuje ustawienia uwierzytelniania dla transportu HTTP.
 - [Powiązania](../../../wcf/bindings.md)
 - [Konfigurowanie powiązań dostarczanych przez system](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Konfigurowanie usług i klientów za pomocą powiązań](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<> powiązania](../../../misc/binding.md)
+- [> powiązań \<](bindings.md)

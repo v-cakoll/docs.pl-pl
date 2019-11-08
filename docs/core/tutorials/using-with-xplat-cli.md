@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454738"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736994"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -43,7 +43,7 @@ Wykonajmy szybkie wskazówki:
 
    *Witaj. csproj*:
 
-   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i skompilowania programu.
 
@@ -52,9 +52,9 @@ Wykonajmy szybkie wskazówki:
 
    *Program.cs*:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   Program jest uruchamiany przez `using System`, co oznacza, że w zakresie dla tego pliku można przenieść wszystko w przestrzeni nazw `System`. Przestrzeń nazw `System` zawiera podstawowe konstrukcje, takie jak `string`lub typy liczbowe.
+   Program jest uruchamiany przez `using System`, co oznacza, że w zakresie dla tego pliku można przenieść wszystko w przestrzeni nazw `System`. Przestrzeń nazw `System` zawiera klasę `Console`.
 
    Następnie zdefiniujemy przestrzeń nazw o nazwie `Hello`. Możesz to zmienić w dowolny sposób. Klasa o nazwie `Program` jest zdefiniowana w tej przestrzeni nazw, z metodą `Main`, która pobiera tablicę ciągów jako argument. Ta tablica zawiera listę argumentów, które zostały przekazane podczas wywoływania skompilowanego programu. W takim przypadku ta tablica nie jest używana: cały program wykonuje zapis "Hello world!" do konsoli programu. Później wprowadzimy zmiany w kodzie, który będzie korzystał z tego argumentu.
 
@@ -116,7 +116,7 @@ Zmieńmy program na bit. Liczby Fibonacci są przyjemne, więc Dodajmy ten dodat
    15: 377
    ```
 
-I to wszystko!  Możesz rozszerzyć `Program.cs` w dowolny sposób.
+I to wszystko!  Możesz rozszerzyć *program.cs* w dowolny sposób.
 
 ## <a name="working-with-multiple-files"></a>Praca z wieloma plikami
 
@@ -125,11 +125,11 @@ Utwórzmy od poprzedniego przykładu Fibonacci przez buforowanie niektórych war
 
 1. Dodaj nowy plik w katalogu *Hello* o nazwie *FibonacciGenerator.cs* przy użyciu następującego kodu:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Zmień metodę `Main` w pliku *program.cs* , aby utworzyć wystąpienie nowej klasy i wywołać jej metodę, tak jak w poniższym przykładzie:
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Wykonaj [`dotnet build`](../tools/dotnet-build.md) , aby skompilować zmiany.
 

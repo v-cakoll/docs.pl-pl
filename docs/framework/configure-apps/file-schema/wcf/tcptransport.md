@@ -2,21 +2,21 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 409d2e47b411c0bfaa2b0fe46fc242bd8453a042
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 6761d090206e55e58001ea2bb885eaa69f26d9eb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399490"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738650"
 ---
-# <a name="tcptransport"></a>\<tcpTransport>
+# <a name="tcptransport"></a>\<tcpTransport >
 Definiuje transport TCP, który może być używany przez kanał do przesyłania komunikatów dla niestandardowego powiązania.  
   
-[ **\<> konfiguracji**](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> powiązań**](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<niestandardowy >Binding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> powiązania**\
+[ **\<configuration >** ](../configuration-element.md) \
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<powiązań**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<powiązania >** \
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tcpTransport >**  
   
 ## <a name="syntax"></a>Składnia  
@@ -53,7 +53,7 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 |channelInitializationTimeout|Pobiera lub ustawia limit czasu inicjowania kanału, który ma zostać zaakceptowany.  Maksymalny czas, w którym kanał może być w stanie inicjowania przed rozłączeniem w sekundach. Ten limit przydziału obejmuje czas, przez jaki połączenie TCP może być wykonywane w celu samodzielnego uwierzytelnienia przy użyciu protokołu ramki komunikatów .NET. Klient musi wysłać pewne dane początkowe, zanim serwer będzie miał wystarczającą ilość informacji do przeprowadzenia uwierzytelniania. Wartość domyślna to 30 sekund.|  
 |connectionBufferSize|Pobiera lub ustawia rozmiar buforu używany do przesyłania fragmentu serializowanego komunikatu w locie z klienta lub usługi.|  
 |hostNameComparisonMode|Pobiera lub ustawia wartość wskazującą, czy nazwa hosta jest używana do uzyskiwania dostępu do usługi podczas dopasowywania identyfikatora URI.|  
-|listenBacklog|Maksymalna liczba żądań połączeń umieszczonych w kolejce, które mogą być oczekujące dla usługi sieci Web. Ten `connectionLeaseTimeout` atrybut ogranicza czas, przez jaki klient będzie oczekiwał na połączenie przed wygenerowaniem wyjątku połączenia. Jest to właściwość poziomu gniazda, która kontroluje maksymalną liczbę oczekujących żądań połączeń w usłudze sieci Web. Gdy ListenBacklog jest zbyt niska, usługa WCF nie akceptuje żądań i w związku z tym porzuca nowe połączenia, dopóki serwer nie potwierdzi niektórych istniejących połączeń umieszczonych w kolejce. Wartość domyślna to 16 * liczba procesorów.|  
+|listenBacklog|Maksymalna liczba żądań połączeń umieszczonych w kolejce, które mogą być oczekujące dla usługi sieci Web. Atrybut `connectionLeaseTimeout` ogranicza czas, przez jaki klient będzie oczekiwał na połączenie przed wygenerowaniem wyjątku połączenia. Jest to właściwość poziomu gniazda, która kontroluje maksymalną liczbę oczekujących żądań połączeń w usłudze sieci Web. Gdy ListenBacklog jest zbyt niska, usługa WCF nie akceptuje żądań i w związku z tym porzuca nowe połączenia, dopóki serwer nie potwierdzi niektórych istniejących połączeń umieszczonych w kolejce. Wartość domyślna to 16 * liczba procesorów.|  
 |Opcję ManualAddressing|Pobiera lub ustawia wartość wskazującą, czy ręczne adresowanie wiadomości jest wymagane.|  
 |maxBufferPoolSize|Pobiera lub ustawia maksymalny rozmiar wszystkich pul buforów używanych przez transport.|  
 |maxBufferSize|Pobiera lub ustawia maksymalny rozmiar buforu do użycia. W przypadku komunikatów przesyłanych strumieniowo ta wartość powinna mieć co najmniej maksymalny możliwy rozmiar nagłówków komunikatów, które są odczytywane w trybie buforowanym.|  
@@ -61,9 +61,9 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 |maxPendingAccepts|Pobiera lub ustawia maksymalną liczbę oczekujących asynchronicznych operacji akceptujących, które są dostępne do przetwarzania przychodzących połączeń do usługi.|  
 |maxPendingConnections|Pobiera lub ustawia maksymalną liczbę połączeń oczekujących na wysłanie usługi.|  
 |maxReceivedMessageSize|Pobiera i ustawia maksymalny dopuszczalny rozmiar komunikatu, który można odbierać.|  
-|portSharingEnabled|Wartość logiczna określająca, czy włączone jest Udostępnianie portów TCP dla tego połączenia. `false`W takim przypadku każde powiązanie będzie używać własnego portu wyłącznego. Wartość domyślna to `false`.<br /><br /> To ustawienie dotyczy tylko usług. Nie dotyczy to klientów.<br /><br /> Użycie tego ustawienia wymaga włączenia usługi udostępniania portów TCP Windows Communication Foundation (WCF), zmieniając jej typ uruchamiania na ręczny lub automatyczny.|  
-|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko w [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] systemach [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]i. [!INCLUDE[wv](../../../../../includes/wv-md.md)]ma opcję konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
-|transferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
+|portSharingEnabled|Wartość logiczna określająca, czy włączone jest Udostępnianie portów TCP dla tego połączenia. Jeśli jest to `false`, każde powiązanie będzie używać własnego portu wyłącznego. Wartość domyślna to `false`.<br /><br /> To ustawienie dotyczy tylko usług. Nie dotyczy to klientów.<br /><br /> Użycie tego ustawienia wymaga włączenia usługi udostępniania portów TCP Windows Communication Foundation (WCF), zmieniając jej typ uruchamiania na ręczny lub automatyczny.|  
+|teredoEnabled|Wartość logiczna określająca, czy jest włączona funkcja Teredo (technologia do adresowania klientów znajdujących się za zaporą). Wartość domyślna to `false`.<br /><br /> Ta właściwość włącza protokół Teredo dla bazowego gniazda TCP. Aby uzyskać więcej informacji, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Ta właściwość ma zastosowanie tylko do [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] i [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] ma opcję konfiguracji całego komputera dla protokołu Teredo, więc w przypadku korzystania z systemu Vista Ta właściwość jest ignorowana. Protokół Teredo wymaga, aby komputery klienckie i usługi miały zainstalowany stos IPv6 firmy Microsoft i prawidłowo skonfigurowany do użycia w protokole Teredo. Aby uzyskać więcej informacji na temat konfigurowania protokołu Teredo, zobacz [Omówienie protokołu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Aby uzyskać więcej informacji, zobacz [centra technologiczne systemu Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|Elementy TransferMode|Pobiera lub ustawia wartość wskazującą, czy komunikaty są buforowane, czy przesyłane strumieniowo przy użyciu transportu zorientowanego na połączenia.|  
 |connectionPoolSettings|Określa dodatkowe ustawienia puli połączeń dla powiązania nazwanego potoku.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
@@ -73,12 +73,12 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<> powiązania](../../../misc/binding.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
+|[> powiązań \<](bindings.md)|Definiuje wszystkie możliwości powiązań niestandardowego powiązania.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten transport używa identyfikatorów URI w postaci "net. TCP://NazwaHosta: Port/Path". Inne składniki URI są opcjonalne.  
   
- `tcpTransport` Element jest punktem początkowym do tworzenia niestandardowego powiązania, które implementuje protokół transportowy TCP. Ten transport jest zoptymalizowany pod kątem komunikacji między WCF i WCF.  
+ Element `tcpTransport` jest punktem początkowym do tworzenia niestandardowego powiązania, które implementuje protokół transportowy TCP. Ten transport jest zoptymalizowany pod kątem komunikacji między WCF i WCF.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -91,4 +91,4 @@ Definiuje transport TCP, który może być używany przez kanał do przesyłania
 - [Powiązania](../../../wcf/bindings.md)
 - [Rozszerzanie powiązań](../../../wcf/extending/extending-bindings.md)
 - [Powiązania niestandardowe](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<niestandardowebinding >](custombinding.md)

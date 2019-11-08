@@ -2,17 +2,14 @@
 title: Krytyczne zmiany kryptografii, wersja 2,2 do 3,0-.NET Core
 description: Wymienia istotne zmiany z wersji 2,2 do wersji 3,0 programu .NET Core, ASP.NET Core i EF Core.
 ms.date: 09/10/2019
-ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b2894e6988c0b475e45c6d5602a7f54943f3ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089582"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739423"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>Istotne zmiany dotyczące migracji z wersji 2,2 do 3,0
-
-> [!IMPORTANT]
-> Ten artykuł jest w fazie tworzenia. Nie jest to kompletna lista podstawowych zmian w programie .NET Core. Aby uzyskać więcej informacji na temat podstawowych zmian w programie .NET Core, możesz zapoznać się [ze wszystkimi problemami dotyczącymi zmiany](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) w repozytorium dotnet/docs w witrynie GitHub. 
 
 W przypadku migrowania z wersji 2,2 do wersji 3,0 programu .NET Core, ASP.NET Core lub EF Core, zapoznaj się z następującymi tematami dotyczącymi istotnych zmian, które mogą mieć wpływ na aplikację:
 

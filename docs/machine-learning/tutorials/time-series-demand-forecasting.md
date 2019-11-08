@@ -1,17 +1,17 @@
 ---
 title: 'Samouczek: prognozowanie popytu na wypożyczenie rowerowe — seria czasu'
 description: W tym samouczku pokazano, jak prognozować zapotrzebowanie na usługę wynajmu roweru przy użyciu univariate analiz szeregów czasowych i ML.NET.
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: f30aac5f8467c2410e9008bafea3cf35af3f4e2a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425640"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740534"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Samouczek: prognozowanie popytu na usługę najmu roweru za pomocą analiz szeregów czasowych i ML.NET
 
@@ -26,9 +26,6 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 > * Oceń model prognozowania
 > * Zapisz model prognozowania
 > * Korzystanie z modelu prognozowania
-
-> [!NOTE]
-> W tym samouczku jest stosowana wersja zapoznawcza programu DatabaseLoader.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -49,13 +46,13 @@ Algorytm używany w tym samouczku jest [analizą pojedynczego spektrum (SSA)](ht
 ## <a name="create-console-application"></a>Tworzenie aplikacji konsolowej
 
 1. Utwórz nową  **C# aplikację konsolową .NET Core** o nazwie "BikeDemandForecasting".
-1. Zainstaluj pakiet NuGet **Microsoft.ml** w wersji **1.4.0-preview2**
+1. Zainstaluj pakiet NuGet **Microsoft.ml** w wersji **1.4.0**
     1. W Eksplorator rozwiązań kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Zarządzaj pakietami NuGet**.
     1. Wybierz pozycję "nuget.org" jako źródło pakietu, wybierz kartę **Przeglądaj** , wyszukaj pozycję **Microsoft.ml**.
     1. Zaznacz pole wyboru **Uwzględnij wersję wstępną** .
     1. Wybierz przycisk **Instaluj** .
     1. Wybierz przycisk **OK** w oknie dialogowym **Podgląd zmian** , a następnie **Wybierz przycisk** Akceptuję w oknie dialogowym akceptacji licencji, jeśli zgadzasz się z postanowieniami licencyjnymi dotyczącymi wymienionych pakietów.
-    1. Powtórz te kroki dla elementu **System. Data. SqlClient** w wersji **4.7.0**, **Microsoft. ml. wersja eksperymentalna** **0.16.0-preview2**i **Microsoft. ml. szeregów czasowych** wersja **1.4.0-preview2**.
+    1. Powtórz te kroki dla elementu **System. Data. SqlClient** w wersji **4.7.0** i **Microsoft. ml. szeregów czasowych** w wersji **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Przygotuj i poznanie danych
 

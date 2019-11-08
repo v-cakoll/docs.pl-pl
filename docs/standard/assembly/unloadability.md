@@ -4,64 +4,65 @@ description: Dowiedz się, jak używać programu AssemblyLoadContexte kolekcjono
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 52cd864393342e2bc31f872b9d09cb484c2c8463
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972992"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740448"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Sposób używania i debugowania funkcji zwolnienia zestawu w programie .NET Core
 
 Począwszy od platformy .NET Core 3,0, możliwość załadowania i późniejszego zwolnienia zestawu zestawów jest obsługiwana. W tym celu w .NET Framework użyto niestandardowych domen aplikacji, ale program .NET Core obsługuje tylko jedną domyślną domenę aplikacji.
 
-Program .NET Core 3,0 i jego nowsze wersje obsługują możliwości zwalniania w <xref:System.Runtime.Loader.AssemblyLoadContext>programie. Zestaw zestawów można załadować do `AssemblyLoadContext`w nich lub po prostu przeprowadzić ich kontrolę przy użyciu odbicia, a wreszcie `AssemblyLoadContext`Zwolnij. To zwalnia zestawy ładowane do tego `AssemblyLoadContext`.
+Program .NET Core 3,0 i jego nowsze wersje obsługują możliwości zwalniania za pomocą <xref:System.Runtime.Loader.AssemblyLoadContext>. Można załadować zestaw zestawów do `AssemblyLoadContext`kolekcjonowanych, wykonać metody w nich lub po prostu sprawdzić je przy użyciu odbicia, a następnie zwolnić `AssemblyLoadContext`. To zwalnia zestawy ładowane do `AssemblyLoadContext`.
 
-Istnieje jedna istotna różnica między zwalnianiem przy `AssemblyLoadContext` użyciu i używania domen aplikacji. W przypadku domen aplikacji wyładowywanie jest wymuszane. W czasie zwalniania wszystkie wątki działające w docelowej domenie AppDomain są przerywane, zarządzane obiekty COM utworzone w docelowej domenie AppDomain są niszczone itp. W `AssemblyLoadContext`programie jest to "Spółdzielnia". <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> Wywołanie metody po prostu inicjuje zwolnienie. Zwalnianie kończy się po:
+Istnieje jedna istotna różnica między rozładunkiem przy użyciu `AssemblyLoadContext` i używania domen aplikacji. W przypadku domen aplikacji wyładowywanie jest wymuszane. W czasie zwalniania wszystkie wątki działające w docelowej domenie AppDomain są przerywane, zarządzane obiekty COM utworzone w docelowej domenie AppDomain są niszczone i tak dalej. W przypadku `AssemblyLoadContext`Unload to "spółdzielnie". Wywołanie metody <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> po prostu inicjuje zwolnienie. Zwalnianie kończy się po:
 
-- Żadne wątki nie mają metod z zestawów załadowanych `AssemblyLoadContext` na stosy wywołań.
-- Żaden z typów zestawów nie został załadowany do `AssemblyLoadContext`, wystąpienia tych typów i zestawy same poza `AssemblyLoadContext` nie są przywoływane przez:
-  - Odwołania poza `AssemblyLoadContext`z, z wyjątkiem słabych odwołań (<xref:System.WeakReference> lub <xref:System.WeakReference%601>).
-  - Mocne uchwyty GC<xref:System.Runtime.InteropServices.GCHandleType>(.<xref:System.Runtime.InteropServices.GCHandleType.Normal> lub <xref:System.Runtime.InteropServices.GCHandleType>)zarównowewnątrz,jakipoza.<xref:System.Runtime.InteropServices.GCHandleType.Pinned> `AssemblyLoadContext`
+- Żadne wątki nie mają metod z zestawów załadowanych do `AssemblyLoadContext` na ich stosach wywołań.
+- Żaden z typów zestawów nie został załadowany do `AssemblyLoadContext`, wystąpienia tych typów i same zestawy są przywoływane przez:
+  - Odwołania poza `AssemblyLoadContext`, z wyjątkiem słabych odwołań (<xref:System.WeakReference> lub <xref:System.WeakReference%601>).
+  - Dojścia silnego modułu wyrzucania elementów bezużytecznych (GC) ([GCHandleType. Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) lub [GCHandleType. przypięto](xref:System.Runtime.InteropServices.GCHandleType.Pinned)) zarówno wewnątrz, jak i na zewnątrz `AssemblyLoadContext`.
 
 ## <a name="use-collectible-assemblyloadcontext"></a>Użyj AssemblyLoadContextów kolekcjonowanych
 
-Ta sekcja zawiera szczegółowy samouczek krok po kroku, w którym przedstawiono prosty sposób ładowania aplikacji platformy .NET Core do elementu "kolekcjonowania `AssemblyLoadContext`", wykonywania jego punktu wejścia, a następnie jego zwolnienia. Kompletny przykład można znaleźć pod adresem [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading).
+Ta sekcja zawiera szczegółowy samouczek krok po kroku, który pokazuje prosty sposób ładowania aplikacji .NET Core do `AssemblyLoadContext`ej kolekcjonowanej, wykonywania punktu wejścia, a następnie zwalniania go. Kompletny przykład można znaleźć w [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading).
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>Utwórz kolekcjonowaną AssemblyLoadContext
 
-Należy utworzyć klasę z <xref:System.Runtime.Loader.AssemblyLoadContext> i przeciążyć jej <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType> metodę. Ta metoda rozwiązuje odwołania do wszystkich zestawów, które są zależnościami zestawów ładowanych do `AssemblyLoadContext`tego elementu.
-Poniższy kod jest przykładem najprostszego niestandardowego `AssemblyLoadContext`:
+Należy utworzyć klasę z <xref:System.Runtime.Loader.AssemblyLoadContext> i przeciążyć jej metodę <xref:System.Runtime.Loader.AssemblyLoadContext.Load%2A?displayProperty=nameWithType>. Ta metoda rozwiązuje odwołania do wszystkich zestawów, które są zależnościami od zestawów ładowanych do tego `AssemblyLoadContext`.
+
+Poniższy kod jest przykładem najprostszego `AssemblyLoadContext`niestandardowego:
 
 [!code-csharp[Simple custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/simple_example.cs#1)]
 
-Jak widać, `Load` Metoda zwraca `null`. Oznacza to, że wszystkie zestawy zależności są ładowane do domyślnego kontekstu, a nowy kontekst zawiera tylko zestawy, które są w nim jawnie załadowane.
+Jak widać, Metoda `Load` zwraca `null`. Oznacza to, że wszystkie zestawy zależności są ładowane do domyślnego kontekstu, a nowy kontekst zawiera tylko zestawy, które są w nim jawnie załadowane.
 
-Jeśli chcesz załadować niektóre lub wszystkie zależności do tego `AssemblyLoadContext` , możesz `AssemblyDependencyResolver` użyć w `Load` metodzie. Program rozpoznaje nazwy zestawów dla bezwzględnych ścieżek plików zestawów przy użyciu pliku *. deps. JSON* zawartego w katalogu głównego zestawu załadowanym do kontekstu i przy użyciu plików zestawów w tym katalogu. `AssemblyDependencyResolver`
+Jeśli chcesz załadować niektóre lub wszystkie zależności do `AssemblyLoadContext`, możesz użyć `AssemblyDependencyResolver` w metodzie `Load`. `AssemblyDependencyResolver` rozwiązuje nazwy zestawów do bezwzględnych ścieżek plików zestawów. Mechanizm rozwiązywania konfliktów używa pliku *. deps. JSON* i plików zestawów w katalogu głównym zestawu załadowanym do kontekstu.
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
 ### <a name="use-a-custom-collectible-assemblyloadcontext"></a>Korzystanie z niestandardowego AssemblyLoadContextego kolekcjonowania
 
-W tej sekcji założono, że prostsza `TestAssemblyLoadContext` wersja jest używana.
+W tej sekcji założono, że prostsza wersja `TestAssemblyLoadContext` jest używana.
 
-Można utworzyć wystąpienie niestandardowego `AssemblyLoadContext` i załadować do niego zestaw w następujący sposób:
+Można utworzyć wystąpienie `AssemblyLoadContext` niestandardowego i załadować do niego zestaw w następujący sposób:
 
 [!code-csharp[Part 1](~/samples/snippets/standard/assembly/unloading/simple_example.cs#3)]
 
-Dla każdego z zestawów, do którego odwołuje się załadowany zestaw `TestAssemblyLoadContext.Load` , metoda jest wywoływana, aby `TestAssemblyLoadContext` można było określić miejsce, z którego ma zostać pobrany zestaw. W naszym przypadku zwraca wartość `null` wskazującą, że powinna zostać załadowana do domyślnego kontekstu z lokalizacji używanych przez środowisko uruchomieniowe do domyślnego ładowania zestawów.
+Dla każdego z zestawów, do którego odwołuje się załadowany zestaw, wywoływana jest metoda `TestAssemblyLoadContext.Load`, aby `TestAssemblyLoadContext` mógł zdecydować, skąd ma zostać pobrany zestaw. W naszym przypadku zwraca `null`, aby wskazać, że powinien zostać załadowany do domyślnego kontekstu z lokalizacji używanych przez środowisko uruchomieniowe do domyślnego ładowania zestawów.
 
-Teraz, gdy zestaw został załadowany, można wykonać z niego metodę. `Main` Uruchom metodę:
+Teraz, gdy zestaw został załadowany, można wykonać z niego metodę. Uruchom metodę `Main`:
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-Po powrocie `Unload` `AssemblyLoadContext` `AssemblyLoadContext`metody można zainicjować zwalnianie przez wywołanie metody na Custom lub pozbyć się odwołania do: `Main`
+Po powrocie metody `Main` można zainicjować zwalnianie, wywołując metodę `Unload` na niestandardowym `AssemblyLoadContext` lub pozbyć się odwołania do `AssemblyLoadContext`:
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
-Jest to wystarczające do zwolnienia zestawu testowego. W rzeczywistości przeniesiemy wszystkie te elementy do oddzielnej metody nieliniowej `TestAssemblyLoadContext`, aby upewnić się, że, `MethodInfo` `Assembly`i ( `Assembly.EntryPoint`) nie mogą być utrzymywane przez odwołania do gniazda stosu (wartości lokalne lub JIT). Może to prowadzić do `TestAssemblyLoadContext` utrzymania aktywności i uniemożliwić zwolnienie.
+Jest to wystarczające do zwolnienia zestawu testowego. W rzeczywistości przeniesiemy wszystkie te elementy do oddzielnej metody nieliniowej, aby upewnić się, że `TestAssemblyLoadContext`, `Assembly`i `MethodInfo` (`Assembly.EntryPoint`) nie mogą być utrzymywane przez odwołania do miejsca na stosie (dane lokalne w języku rzeczywistym lub JIT). Może to spowodować, że `TestAssemblyLoadContext` działa i uniemożliwia zwolnienie.
 
-Należy również zwrócić słabe odwołanie do, `AssemblyLoadContext` aby można było użyć go później do wykrywania zakończenia zwalniania.
+Należy również zwrócić słabe odwołanie do `AssemblyLoadContext`, aby można było użyć go później do wykrywania zakończenia zwalniania.
 
 [!code-csharp[Part 4](~/samples/snippets/standard/assembly/unloading/simple_example.cs#2)]
 
@@ -69,36 +70,36 @@ Teraz można uruchomić tę funkcję w celu załadowania, wykonania i zwolnienia
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-Jednak zwalnianie nie zakończy się natychmiast. Jak wspomniano wcześniej, opiera się on na GC, aby zebrać wszystkie obiekty z zestawu testowego. W wielu przypadkach nie trzeba czekać na ukończenie zwalniania. Istnieją jednak przypadki, w których warto wiedzieć, że zwolnienie zostało zakończone. Na przykład możesz chcieć usunąć plik zestawu, który został załadowany do niestandardowego `AssemblyLoadContext` z dysku. W takim przypadku można użyć poniższego fragmentu kodu. Wyzwala on GC i czeka na oczekujące finalizatory w pętli do momentu, gdy słabe odwołanie do `AssemblyLoadContext` niego jest `null`ustawione na, co wskazuje na to, że obiekt docelowy został zebrany. Należy pamiętać, że w większości przypadków wymagane jest tylko jedno przejście przez pętlę. Jednak w przypadku bardziej złożonych przypadków, w których obiekty utworzone przez kod działający `AssemblyLoadContext` w programie mają finalizatory, może być konieczne wykonanie większej liczby przebiegów.
+Jednak zwalnianie nie zakończy się natychmiast. Jak wspomniano wcześniej, polega na wykorzystaniu modułu wyrzucania elementów bezużytecznych w celu zebrania wszystkich obiektów z zestawu testowego. W wielu przypadkach nie trzeba czekać na ukończenie zwalniania. Istnieją jednak przypadki, w których warto wiedzieć, że zwolnienie zostało zakończone. Na przykład możesz chcieć usunąć plik zestawu, który został załadowany do `AssemblyLoadContext` niestandardowego z dysku. W takim przypadku można użyć poniższego fragmentu kodu. Wyzwala wyrzucanie elementów bezużytecznych i oczekuje na oczekujące finalizatory w pętli do momentu, gdy słabe odwołanie do `AssemblyLoadContext` niestandardowego zostanie ustawione na `null`, co wskazuje na to, że obiekt docelowy został zebrany. W większości przypadków wymagane jest tylko jedno przejście przez pętlę. Jednak w przypadku bardziej złożonych przypadków, gdy obiekty utworzone za pomocą kodu uruchomionego w `AssemblyLoadContext` mają finalizatory, może być konieczne wykonanie większej liczby przebiegów.
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>Zdarzenie wyładowywania
 
-W niektórych przypadkach może być konieczne, aby kod został załadowany do niestandardowym `AssemblyLoadContext` w celu wykonania pewnego oczyszczania po zainicjowaniu zwalniania. Na przykład może być konieczne zatrzymanie wątków, oczyszczenie niektórych silnych dojść GC itd. W takich przypadkach można użyć zdarzenia.`Unloading` Do tego zdarzenia można podłączyć procedurę obsługi, która wykonuje wymagane oczyszczanie.
+W niektórych przypadkach może być konieczne, aby kod został załadowany do niestandardowego `AssemblyLoadContext`, aby przeprowadzić oczyszczanie po zainicjowaniu zwalniania. Na przykład może być konieczne zatrzymanie wątków lub oczyszczenie silnych dojść GC. W takich przypadkach można użyć zdarzenia `Unloading`. Do tego zdarzenia można podłączyć procedurę obsługi, która wykonuje wymagane oczyszczanie.
 
 ### <a name="troubleshoot-unloadability-issues"></a>Rozwiązywanie problemów z możliwością ponownego ładowania
 
-Ze względu na spółdzielnię zwalniającą, można łatwo zapomnieć o odwołaniach, które ułatwiają odprowadzenie `AssemblyLoadContext` aktywności i uniemożliwiają zwolnienie. Poniżej znajduje się podsumowanie elementów (niektóre z nich nie są oczywiste), które mogą zawierać odwołania:
+Ze względu na spółdzielnię zwalniającą, można łatwo zapomnieć o odwołaniach, które mogą mieć na celu przechowywanie `AssemblyLoadContext` aktywności i zapobiegania zwolnieniu. Poniżej znajduje się podsumowanie jednostek (niektóre z nich nie są oczywiste), które mogą zawierać odwołania:
 
-- Regularne odwołania przechowywane poza firmą kolekcjonowaną `AssemblyLoadContext`, przechowywaną w gnieździe stosu lub w rejestrze procesora (metody lokalne, jawnie utworzone przez kod użytkownika lub niejawnie przez JIT), zmiennej statycznej lub dojścia do usługi GC o silnej lub przypinaniu. przechodnie wskazywanie:
-  - Zestaw załadowany do elementu "kolekcjonowane `AssemblyLoadContext`".
+- Regularne odwołania przechowywane z zewnątrz kolekcjonowanych `AssemblyLoadContext` przechowywanych w gnieździe stosu lub w rejestrze procesora (metody lokalne, jawnie utworzone przez kod użytkownika lub niejawnie przez kompilator just-in-Time (JIT), zmienna statyczna lub silne ( Przypinanie do uchwytu GC i przechodnie wskazywanie:
+  - Zestaw załadowany do `AssemblyLoadContext`u kolekcjonowanego.
   - Typ z takiego zestawu.
   - Wystąpienie typu z takiego zestawu.
-- Wątki uruchamiające kod z zestawu zostały załadowane do `AssemblyLoadContext`kolekcjonowania.
-- Wystąpienia niestandardowych niekolekcjonowanych `AssemblyLoadContext` typów utworzonych wewnątrz elementu kolekcjonowanego`AssemblyLoadContext`
-- Wystąpienia <xref:System.Threading.RegisteredWaitHandle> oczekujące z wywołaniami zwrotnymi ustawionymi na metody w niestandardowej`AssemblyLoadContext`
+- Wątki uruchamiające kod z zestawu załadowanego do `AssemblyLoadContext`kolekcjonowania.
+- Wystąpienia niestandardowych, niekolekcjonowanych typów `AssemblyLoadContext` utworzonych wewnątrz `AssemblyLoadContext`kolekcjonowanych.
+- Oczekujące wystąpienia <xref:System.Threading.RegisteredWaitHandle> z wywołaniami zwrotnymi ustawionymi na metody w `AssemblyLoadContext`niestandardowym.
 
-Wskazówki dotyczące znajdowania miejsca na stosie/rejestr procesora dla obiektu:
-
-- Przekazywanie wyników wywołania funkcji bezpośrednio do innej funkcji może utworzyć katalog główny, nawet jeśli nie istnieje zmienna lokalna utworzona przez użytkownika.
-- Jeśli odwołanie do obiektu było dostępne w dowolnym momencie w metodzie, kompilator JIT może postanowić o zachowaniu odwołania w gnieździe stosu/rejestrze procesora tak długo, jak w bieżącej funkcji.
+> [!TIP]
+> Odwołania do obiektów, które są przechowywane w gniazdach stosu lub rejestrach procesora i mogą uniemożliwiać zwolnienie `AssemblyLoadContext` mogą wystąpić w następujących sytuacjach:
+>
+> - Gdy wyniki wywołań funkcji są przesyłane bezpośrednio do innej funkcji, nawet jeśli nie istnieje zmienna lokalna utworzona przez użytkownika.
+> - Gdy kompilator JIT przechowuje odwołanie do obiektu, który był dostępny w pewnym momencie w metodzie.
 
 ## <a name="debug-unloading-issues"></a>Debuguj problemy z zwalnianiem
 
-Problemy z debugowaniem z rozładowywaniem mogą być żmudnym. Możesz się dowiedzieć, gdzie nie wiesz, co może być `AssemblyLoadContext` utrzymywane, ale zwolnienie nie powiedzie się.
-Najlepsza broń, która pomoże Ci to WinDbg (LLDB w systemie UNIX) z wtyczką SOS. Należy się dowiedzieć, co zachowuje `LoaderAllocator` się z konkretną `AssemblyLoadContext` aktywnością.
-Ta wtyczka umożliwia przeglądanie obiektów sterty GC, ich hierarchii i katalogów głównych.
+Problemy z debugowaniem z rozładowywaniem mogą być żmudnym. Możesz przejść do sytuacji, w których nie wiesz, co może być utrzymywane w `AssemblyLoadContext` aktywności, ale zwalnianie kończy się niepowodzeniem. Najlepsza broń, która pomoże Ci to WinDbg (LLDB w systemie UNIX) z wtyczką SOS. Należy się dowiedzieć, co zachowuje `LoaderAllocator` należące do konkretnej `AssemblyLoadContext` aktywności. Wtyczka SOS umożliwia przeglądanie obiektów sterty GC, ich hierarchii i katalogów głównych.
+
 Aby załadować wtyczkę do debugera, wprowadź następujące polecenie w wierszu polecenia debugera:
 
 W programie WinDbg (po załamaniu do aplikacji .NET Core) automatycznie
@@ -113,15 +114,16 @@ W LLDB:
 plugin load /path/to/libsosplugin.so
 ```
 
-Spróbujmy debugować Przykładowy program, który ma problemy z wyładunkiem. Kod źródłowy jest uwzględniony poniżej. Gdy uruchamiasz go w ramach usługi WinDbg, program przerwie się w debugerze po podjęciu próby sprawdzenia powodzenia zwolnienia. Następnie można rozpocząć wyszukiwanie culprits.
+Debugujmy Przykładowy program, który ma problemy z wyładunkiem. Kod źródłowy jest uwzględniony poniżej. Gdy uruchamiasz go w ramach usługi WinDbg, program przerwie się w debugerze po podjęciu próby sprawdzenia powodzenia zwolnienia. Następnie można rozpocząć wyszukiwanie culprits.
 
-Należy pamiętać, że jeśli debugujesz przy użyciu LLDB w systemie UNIX, polecenia sos w poniższych przykładach `!` nie mają przed nimi.
+> [!TIP]
+> Jeśli debugujesz przy użyciu LLDB w systemie UNIX, polecenia SOS w poniższych przykładach nie mają `!` przed nimi.
 
 ```console
 !dumpheap -type LoaderAllocator
 ```
 
-To polecenie zrzuca wszystkie obiekty o nazwie typu zawierającego `LoaderAllocator` te, które znajdują się w stercie GC. Oto przykład:
+To polecenie zrzuca wszystkie obiekty o nazwie typu zawierającego `LoaderAllocator`, które znajdują się na stercie GC. Oto przykład:
 
 ```console
          Address               MT     Size
@@ -135,17 +137,17 @@ Statistics:
 Total 2 objects
 ```
 
-W poniższym składniku "Statistics:" Sprawdź `MT` (`MethodTable`) należący do `System.Reflection.LoaderAllocator`obiektu, który jest obiektem, którego potrzebujemy. Następnie na liście na początku Znajdź wpis ze zgodną z `MT` nim i uzyskaj adres samego obiektu. W naszym przypadku jest to "000002b78000ce40"
+W poniższym składniku "Statistics:" Sprawdź `MT` (`MethodTable`) należących do `System.Reflection.LoaderAllocator`, który jest obiektem, którego potrzebujemy. Następnie na liście na początku Znajdź wpis z `MT` pasującym do tego samego obiektu i uzyskaj adres samego samego siebie. W naszym przypadku jest to "000002b78000ce40".
 
-Teraz, gdy wiemy adres `LoaderAllocator` obiektu, możemy użyć innego polecenia, aby znaleźć jego elementy główne GC
+Teraz, gdy wiemy, że znasz adres `LoaderAllocator` obiektu, można użyć innego polecenia, aby znaleźć jego elementy główne GC:
 
 ```console
-!gcroot -all 0x000002b78000ce40 
+!gcroot -all 0x000002b78000ce40
 ```
 
-To polecenie zrzuca łańcuch odwołań do obiektów, które prowadzą do `LoaderAllocator` wystąpienia. Lista rozpoczyna się od elementu głównego, który jest obiektem, który utrzymuje `LoaderAllocator` naszą aktywność i w ten sposób stanowi rdzeń debugowanego problemu. Katalogiem głównym może być gniazdo stosu, rejestr procesora, dojście GC lub zmienna statyczna.
+To polecenie zrzuca łańcuch odwołań do obiektów, które prowadzą do wystąpienia `LoaderAllocator`. Lista rozpoczyna się od elementu głównego, który jest jednostką, która utrzymuje `LoaderAllocator` aktywności i w ten sposób stanowi rdzeń problemu. Katalogiem głównym może być gniazdo stosu, rejestr procesora, dojście GC lub zmienna statyczna.
 
-Oto przykład danych wyjściowych `gcroot` polecenia:
+Oto przykład danych wyjściowych polecenia `gcroot`:
 
 ```console
 Thread 4ac:
@@ -172,22 +174,21 @@ HandleTable:
 Found 3 roots.
 ```
 
-Teraz musisz ustalić, gdzie znajduje się katalog główny, aby można go było usunąć. Najłatwiejszym przypadkiem jest to, że katalog główny to gniazdo stosu lub rejestr procesora. W takim przypadku `gcroot` pokazuje nazwę funkcji, której ramka zawiera element główny i wątek wykonujący tę funkcję. Trudnym przypadkiem jest to, że element główny jest zmienną statyczną lub dojściem GC. 
+Następnym krokiem jest określenie, gdzie znajduje się katalog główny, aby można go było usunąć. Najłatwiejszym przypadkiem jest to, że katalog główny to gniazdo stosu lub rejestr procesora. W takim przypadku `gcroot` wyświetla nazwę funkcji, której ramka zawiera element główny i wątek wykonujący tę funkcję. Trudnym przypadkiem jest to, że element główny jest zmienną statyczną lub dojściem GC.
 
-W poprzednim przykładzie pierwszy element główny jest lokalnym typem `System.Reflection.RuntimeMethodInfo` przechowywanym w ramce funkcji `example.Program.Main(System.String[])` pod adresem `rbp-20` (`rbp` jest to rejestr `rbp` procesora i-20 to szesnastkowe przesunięcie z tego rejestru).
+W poprzednim przykładzie pierwszy element główny jest lokalnym typem `System.Reflection.RuntimeMethodInfo` przechowywanym w ramce `example.Program.Main(System.String[])` funkcji pod adresem `rbp-20` (`rbp` jest rejestrem procesora `rbp` i-20 to szesnastkowe przesunięcie z tego rejestru).
 
-Drugi katalog główny to normalna (silna `GCHandle` ), która przechowuje odwołanie do wystąpienia `test.Test` klasy. 
+Drugi katalog główny to normalna (silna) `GCHandle`, która przechowuje odwołanie do wystąpienia klasy `test.Test`.
 
-Trzeci element główny jest przypięty `GCHandle`. Ten element jest w rzeczywistości zmienną statyczną. Niestety, nie ma możliwości poinformowania. Elementy statyczne dla typów referencyjnych są przechowywane w tablicy obiektów zarządzanych w wewnętrznych strukturach środowiska uruchomieniowego.
+Trzeci katalog główny jest przypięty `GCHandle`. Ten element jest w rzeczywistości zmienną statyczną, ale niestety, nie ma możliwości poinformowania. Elementy statyczne dla typów referencyjnych są przechowywane w tablicy obiektów zarządzanych w wewnętrznych strukturach środowiska uruchomieniowego.
 
-Innym przypadkiem, który może uniemożliwiać `AssemblyLoadContext` zwolnienie, jest, gdy wątek ma ramkę metody z zestawu załadowanego `AssemblyLoadContext` do obiektu na jego stosie. Można sprawdzić, czy są używane stosy wywołań zarządzanych wszystkich wątków:
+Innym przypadkiem, który może uniemożliwić wyładowywanie `AssemblyLoadContext`, jest to, kiedy wątek ma ramkę metody z zestawu załadowanego do `AssemblyLoadContext` na jego stosie. Można sprawdzić, czy są używane stosy wywołań zarządzanych wszystkich wątków:
 
 ```console
 ~*e !clrstack
 ```
 
-Polecenie oznacza "Zastosuj do wszystkich wątków `!clrstack` polecenia". Poniżej znajduje się dane wyjściowe tego polecenia dla przykładu. Niestety, LLDB w systemie UNIX nie ma żadnego sposobu, aby zastosować polecenie do wszystkich wątków, więc musisz ręcznie przełączać wątki i powtarzać `clrstack` polecenie.
-Ignoruj wszystkie wątki, w których ten debuger brzmi "nie można przeprowadzić zarządzanego stosu".
+Polecenie oznacza "Zastosuj do wszystkich wątków `!clrstack` polecenie". Poniżej znajduje się dane wyjściowe tego polecenia dla przykładu. Niestety, LLDB w systemie UNIX nie ma żadnego sposobu zastosowania polecenia do wszystkich wątków, więc musisz ręcznie przełączać wątki i powtórzyć `clrstack` polecenie. Ignoruj wszystkie wątki, w których debuger "nie może przeprowadzić zarządzanego stosu".
 
 ```console
 OS Thread Id: 0x6ba8 (0)
@@ -236,7 +237,7 @@ OS Thread Id: 0x60bc (7)
 
 ```
 
-Jak widać, ostatni wątek ma `test.Program.ThreadProc()`. Jest to funkcja z zestawu `AssemblyLoadContext`, która została załadowana do, i dlatego `AssemblyLoadContext` utrzymuje aktywności.
+Jak widać, ostatni wątek ma `test.Program.ThreadProc()`. Jest to funkcja z zestawu, która została załadowana do `AssemblyLoadContext`i dlatego utrzymuje `AssemblyLoadContext` aktywności.
 
 ## <a name="example-source-with-unloadability-issues"></a>Przykładowe źródło z problemami z możliwością załadowania
 
@@ -248,6 +249,6 @@ Poniższy kod jest używany w poprzednim przykładzie debugowania.
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>Program został załadowany do TestAssemblyLoadContext
 
-Poniższy kod przedstawia *test. dll* przekazaną do `ExecuteAndUnload` metody w głównym programie testowym.
+Poniższy kod przedstawia *test. dll* przekazaną do metody `ExecuteAndUnload` w głównym programie testowym.
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

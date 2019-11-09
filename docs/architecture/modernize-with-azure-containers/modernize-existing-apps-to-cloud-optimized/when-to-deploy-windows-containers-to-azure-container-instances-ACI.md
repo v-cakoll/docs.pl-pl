@@ -3,15 +3,15 @@ title: Kiedy należy wdrażać kontenery systemu Windows do Azure Container Inst
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Kiedy należy wdrażać kontenery systemu Windows do Azure Container Instances (ACI)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676908"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Kiedy należy wdrażać kontenery systemu Windows do Azure Container Instances (ACI)
 
-Azure Container Instances propozycja wartości głównej polega na tym, że możesz od razu wdrożyć kontenery i nie musisz obsługiwać tego środowiska, nie musisz uaktualniać ani poprawiać bazowego systemu operacyjnego lub maszyn wirtualnych, a wszystko to jest niewidoczne. kontenery w gotowym do użycia środowisku.
+Azure Container Instances propozycja wartości głównej polega na tym, że możesz od razu wdrożyć kontenery i nie musisz obsługiwać tego środowiska, nie musisz uaktualniać ani poprawiać bazowego systemu operacyjnego lub maszyn wirtualnych, a wszystko to jest widoczne, a dopiero po prostu wdrażasz kontenery w gotowym do użycia środowisku.
 
 Przyczyny i scenariusze, które należy stosować ACI, są podobne do głównych scenariuszy w przypadku używania maszyn wirtualnych platformy Azure z kontenerami, dlatego główne scenariusze używania Azure Container Instances są następujące:
 
@@ -35,5 +35,5 @@ Główne zalety Azure Container Instances (ACI) to:
 Krótko mówiąc, dzięki funkcji ACI można szybko opracowywać aplikacje bez konieczności zarządzania maszynami wirtualnymi ani uczenia się nowych narzędzi. Jest to tylko Twoja aplikacja w kontenerze działającym w chmurze.
 
 > [!div class="step-by-step"]
-> [Poprzedni](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)Następny
-> [](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Poprzedni](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+> [dalej](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

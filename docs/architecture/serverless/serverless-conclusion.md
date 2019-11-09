@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: ae9fc47bf07a7e28688942b856b4743ae7aadc36
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676689"
 ---
 # <a name="conclusion"></a>Wniosek
@@ -30,4 +30,4 @@ Poniższy temat Key wnioski to najważniejsze wnioski z tego przewodnika.
 **Bez serwera jako narzędzie, a nie Przybornik.** Bezserwerowe rozwiązanie nie jest rozwiązaniem wyłącznym dla architektury aplikacji. Jest to narzędzie, które można wykorzystać jako część aplikacji hybrydowej, która może zawierać tradycyjne warstwy, monolitu zaplecza i kontenery. W celu udoskonalenia istniejących rozwiązań nie jest to samo podejście do tworzenia aplikacji.
 
 >[!div class="step-by-step"]
->[Poprzednie](serverless-business-scenarios.md)
+>[Ubiegł](serverless-business-scenarios.md)

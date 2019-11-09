@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522635"
 ---
 # <a name="orchestration-patterns"></a>Wzorce aranżacji
@@ -158,4 +158,4 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 
 >[!div class="step-by-step"]
 >[Poprzedni](durable-azure-functions.md)
->[Następny](serverless-business-scenarios.md)
+>[dalej](serverless-business-scenarios.md)

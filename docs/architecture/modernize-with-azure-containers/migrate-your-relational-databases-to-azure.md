@@ -3,10 +3,10 @@ title: Migrowanie relacyjnych baz danych do platformy Azure
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Migrowanie relacyjnych baz danych do platformy Azure
 ms.date: 04/28/2018
 ms.openlocfilehash: efd1548c3f74fc27450f4949d71a1c4d61907ba5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73093612"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych do platformy Azure
@@ -126,4 +126,4 @@ Aby dowiedzieć się, jak migrować bazy danych za pomocą Azure Database Migrat
 
 > [!div class="step-by-step"]
 > [Poprzedni](lift-and-shift-existing-apps-azure-iaas.md)
-> [Następny](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->
+> [dalej](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

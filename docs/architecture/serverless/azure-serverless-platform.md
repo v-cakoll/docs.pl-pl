@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676803"
 ---
 # <a name="azure-serverless-platform"></a>Platforma bezserwerowa platformy Azure
@@ -22,5 +22,5 @@ Można również użyć Application Insights, platformy bezserwerowej do przechw
 Ten rozdział dzieli podstawowe informacje o poszczególnych składnikach.
 
 >[!div class="step-by-step"]
->[Poprzedni](serverless-design-examples.md)Następny
->[](azure-functions.md)
+>[Poprzedni](serverless-design-examples.md)
+>[dalej](azure-functions.md)

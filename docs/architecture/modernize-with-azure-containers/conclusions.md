@@ -3,10 +3,10 @@ title: Wnioski
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | zawarte
 ms.date: 10/26/2017
 ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68677106"
 ---
 # <a name="conclusions"></a>Wnioski
@@ -28,4 +28,4 @@ ms.locfileid: "68677106"
 - Microsoft Azure zapewnia najbardziej kompleksowe i kompletne środowisko do modernizacji istniejących aplikacji .NET Framework przy użyciu kontenerów systemu Windows, infrastruktury chmurowej i usług PaaS.
 
 >[!div class="step-by-step"]
->[Poprzednie](walkthroughs-technical-get-started-overview.md)
+>[Ubiegł](walkthroughs-technical-get-started-overview.md)

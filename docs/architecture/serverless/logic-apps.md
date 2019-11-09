@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676752"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
@@ -25,7 +25,7 @@ Podobnie jak Azure Functions, można rozpocząć przepływy pracy aplikacji logi
 
 ![Wyzwalacze Logic Apps](./media/logic-app-triggers.png)
 
-Po wyzwoleniu aplikacji możesz użyć projektanta wizualnego, aby skompilować kroki, pętle, warunki i akcje. Wszystkie dane pozyskane w poprzednim kroku są dostępne do użycia w kolejnych krokach. Następujący przepływ pracy ładuje adresy URL z bazy danych CosmosDB. Znajduje je na hoście `t.co` , a następnie wyszukuje je w serwisie Twitter. Jeśli znajdzie odpowiednie tweety, aktualizuje dokumenty za pomocą pokrewnych tweetów przez wywołanie funkcji.
+Po wyzwoleniu aplikacji możesz użyć projektanta wizualnego, aby skompilować kroki, pętle, warunki i akcje. Wszystkie dane pozyskane w poprzednim kroku są dostępne do użycia w kolejnych krokach. Następujący przepływ pracy ładuje adresy URL z bazy danych CosmosDB. Znajduje je na hoście `t.co` następnie wyszukuje je w serwisie Twitter. Jeśli znajdzie odpowiednie tweety, aktualizuje dokumenty za pomocą pokrewnych tweetów przez wywołanie funkcji.
 
 ![Przepływ pracy aplikacji logiki](./media/logic-app-workflow.png)
 
@@ -34,5 +34,5 @@ Pulpit nawigacyjny Logic Apps przedstawia historię uruchamiania przepływów pr
 Aby dowiedzieć się więcej, zobacz [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps).
 
 >[!div class="step-by-step"]
->[Poprzedni](application-insights.md)Następny
->[](event-grid.md)
+>[Poprzedni](application-insights.md)
+>[dalej](event-grid.md)

@@ -3,10 +3,10 @@ title: Kiedy należy wdrażać kontenery systemu Windows w celu Azure Container 
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Kiedy należy wdrażać kontenery systemu Windows w celu Azure Container Service (to jest Kubernetes)
 ms.date: 04/30/2018
 ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "68676911"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Kiedy należy wdrażać kontenery systemu Windows w celu Azure Container Service (to jest Kubernetes)
@@ -19,8 +19,8 @@ Wszystkie te koordynatorzy są dojrzałymi środowiskami, jeśli używasz konten
 
 Na przykład w Kubernetes, obsługa kontenerów jest natywna (obywatel pierwszej klasy), więc korzystanie z kontenerów systemu Windows na Kubernetes jest również skuteczne (w wersji zapoznawczej w usłudze ACS od początku 2018).
 
-Ważna Uwaga: "PaaS" i "więcej" wersji usług ACS (Azure Container Service) dla Kubernetes to AKS (usługa Azure Kubernetes), jednak kontenery systemu Windows nadal nie są obsługiwane na kwartał 2018, ale będą obsługiwane wkrótce.
+Ważna Uwaga: rozwijająca się i "więcej PaaS" wersja usług ACS (Azure Container Service) dla Kubernetes to AKS (usługa Azure Kubernetes Service), jednak kontenery systemu Windows nadal nie są obsługiwane w przypadku wersji Q2 2018, ale będzie ona dostępna wkrótce.
 
 >[!div class="step-by-step"]
->[Poprzedni](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)Następny
->[](choosing-azure-compute-options-for-container-based-applications.md)
+>[Poprzedni](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
+>[dalej](choosing-azure-compute-options-for-container-based-applications.md)

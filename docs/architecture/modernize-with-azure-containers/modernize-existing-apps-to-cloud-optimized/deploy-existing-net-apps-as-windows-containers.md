@@ -3,10 +3,10 @@ title: Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
 ms.date: 04/29/2018
 ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089558"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenerów systemu Windows
@@ -164,4 +164,4 @@ W następnych sekcjach można zapoznać się z zaleceniami firmy Microsoft dotyc
 
 >[!div class="step-by-step"]
 >[Poprzedni](what-about-cloud-native-applications.md)
->[Następny](when-not-to-deploy-to-windows-containers.md)
+>[dalej](when-not-to-deploy-to-windows-containers.md)

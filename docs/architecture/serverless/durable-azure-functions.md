@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72522863"
 ---
 # <a name="durable-azure-functions"></a>Trwałe funkcje platformy Azure
@@ -77,7 +77,7 @@ Ukończony `Task<string>` od `StartNewAsync` powinien zawierać unikatowy identy
 
 Funkcje działania to dyskretne operacje, które są tworzone razem w ramach funkcji aranżacji w celu utworzenia przepływu pracy. Oto miejsce, w którym ma miejsce najwięcej rzeczywistej pracy. Reprezentują one logikę biznesową, długotrwałe procesy i elementy układanki do większych rozwiązań.
 
-@No__t_0 jest używany do dodawania adnotacji do parametru funkcji typu `DurableActivityContext`. Użycie adnotacji informuje środowisko uruchomieniowe, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania są pobierane przy użyciu metody `GetInput<T>` parametru `DurableActivityContext`.
+`ActivityTriggerAttribute` jest używany do dodawania adnotacji do parametru funkcji typu `DurableActivityContext`. Użycie adnotacji informuje środowisko uruchomieniowe, że funkcja jest przeznaczona do użycia jako funkcja działania. Wartości wejściowe do funkcji działania są pobierane przy użyciu metody `GetInput<T>` parametru `DurableActivityContext`.
 
 Podobnie jak w przypadku funkcji aranżacji, zwracane typy funkcji działania muszą być typu void, Task lub wartości możliwy do serializacji JSON.
 
@@ -102,4 +102,4 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 >[!div class="step-by-step"]
 >[Poprzedni](event-grid.md)
->[Następny](orchestration-patterns.md)
+>[dalej](orchestration-patterns.md)

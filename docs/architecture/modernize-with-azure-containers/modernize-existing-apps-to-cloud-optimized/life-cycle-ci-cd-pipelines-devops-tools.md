@@ -3,10 +3,10 @@ title: Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integ
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Modernizacja cyklu życia aplikacji za pomocą potoków ciągłej integracji i ciągłego wdrażania oraz narzędzi DevOps w chmurze
 ms.date: 04/30/2018
 ms.openlocfilehash: d1aa2e156e87cafe99fb994233786f67bf7a81a1
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "72396216"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernizowanie cyklu życia aplikacji za pomocą potoków ciągłej integracji/ciągłego wdrażania i metodyki DevOps w chmurze
@@ -33,4 +33,4 @@ Rysunek 4-12 przedstawia potok ciągłego wdrażania, który jest wdrażany w kl
 
 >[!div class="step-by-step"]
 >[Poprzedni](modernize-your-apps-with-monitoring-and-telemetry.md)
->[Następny](migrate-to-hybrid-cloud-scenarios.md)
+>[dalej](migrate-to-hybrid-cloud-scenarios.md)

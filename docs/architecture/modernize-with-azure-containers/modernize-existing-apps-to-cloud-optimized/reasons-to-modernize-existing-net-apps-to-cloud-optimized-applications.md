@@ -3,10 +3,10 @@ title: Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymal
 description: Modernizacja istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows | Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
 ms.date: 04/28/2018
 ms.openlocfilehash: 55eb3fb9b0b6c91e25bcdb23056a8a8e51463ef7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73093634"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Przyczyny modernizacji istniejących aplikacji .NET do aplikacji zoptymalizowanych pod kątem chmury
@@ -67,4 +67,4 @@ W poniższych sekcjach te korzyści zostały omówione bardziej szczegółowo i 
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[Następny](microsoft-technologies-in-cloud-optimized-applications.md)
+>[dalej](microsoft-technologies-in-cloud-optimized-applications.md)

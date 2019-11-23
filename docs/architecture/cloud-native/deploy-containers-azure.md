@@ -21,8 +21,8 @@ Azure Container Registry (ACR) umożliwia tworzenie i przechowywanie obrazów we
 
 Można [utworzyć rejestr kontenerów za pomocą witryny Azure Portal](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) lub [za pomocą interfejsu wiersza polecenia platformy Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) lub [narzędzi programu PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). Utworzenie nowego rejestru kontenerów wymaga jedynie subskrypcji platformy Azure, grupy zasobów i unikatowej nazwy. Na rysunku 3-11 przedstawiono podstawowe opcje tworzenia rejestru, które będą hostowane w *rejestrzename*. azurecr.IO.
 
-![Utwórz kontener rejestru](./media/create-container-registry.png)
-Container**3-11**. Utwórz rejestr kontenerów
+![Utwórz rejestr kontenerów](./media/create-container-registry.png)
+**rysunek 3-11**. Utwórz rejestr kontenerów
 
 Po utworzeniu rejestru należy przeprowadzić jego uwierzytelnienie przed użyciem. Zazwyczaj należy zalogować się do rejestru przy użyciu polecenia interfejsu CLI platformy Azure:
 
@@ -36,7 +36,7 @@ Po utworzeniu rejestru w Azure Container Registry można użyć poleceń platfor
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Po oznakowaniu obrazu Użyj `docker push` polecenia, aby wypchnąć obraz do wystąpienia ACR.
+Po oznakowaniu obrazu Użyj polecenia `docker push`, aby wypchnąć obraz do wystąpienia ACR.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -57,7 +57,7 @@ Jeśli aplikacja oparta na kontenerach obejmuje wiele kontenerów, najprawdopodo
 Tak jak w przypadku większości zasobów platformy Azure, możesz tworzyć klastry usługi Azure Kubernetes za pomocą portalu lub narzędzi wiersza polecenia lub narzędzi do automatyzacji infrastruktury, takich jak Helm lub Terraform. Aby rozpocząć pracę z nowym klastrem, należy podać następujące informacje:
 
 - Subskrypcja platformy Azure
-- Resource group
+- Grupa zasobów
 - Nazwa klastra Kubernetes
 - Region
 - Wersja Kubernetes
@@ -67,11 +67,11 @@ Tak jak w przypadku większości zasobów platformy Azure, możesz tworzyć klas
 
 Te informacje są wystarczające, aby rozpocząć pracę. W ramach procesu tworzenia w witrynie Azure Portal można także skonfigurować opcje następujących funkcji klastra:
 
-- Skala
+- Skalowanie
 - Uwierzytelnianie
 - Obsługa sieci
 - Monitorowanie
-- Znaczniki
+- Tagi
 
 Ten [Przewodnik Szybki Start przeprowadzi Cię przez proces wdrażania klastra AKS przy użyciu Azure Portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal).
 
@@ -92,16 +92,16 @@ Proces pracy z Azure Dev Spaces obejmuje następujące kroki:
 3. Skonfiguruj podrzędną przestrzeń programistyczną (dla własnej wersji systemu).
 4. Nawiąż połączenie z obszarem dev.
 
-Wszystkie te kroki można wykonać przy użyciu interfejsu wiersza polecenia platformy Azure i `azds` nowych narzędzi wiersza poleceń. Na przykład, aby utworzyć nowe miejsce dla deweloperów platformy Azure dla danego klastra Kubernetes, użyj polecenia takiego jak ten:
+Wszystkie te kroki można wykonać przy użyciu interfejsu wiersza polecenia platformy Azure i narzędzi `azds`. Na przykład, aby utworzyć nowe miejsce dla deweloperów platformy Azure dla danego klastra Kubernetes, użyj polecenia takiego jak ten:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Następnie można użyć `azds prep` polecenia, aby wygenerować niezbędne zasoby platformy Docker i Helm na potrzeby uruchamiania aplikacji. Następnie uruchamiasz kod w AKS przy użyciu `azds up`. Przy pierwszym uruchomieniu tego polecenia Wykres Helm zostanie zainstalowany, a kontenery zostaną skompilowane i wdrożone zgodnie z instrukcjami. Wykonanie tej operacji może potrwać kilka minut po raz pierwszy. Jednak po wprowadzeniu zmian można nawiązać połączenie z własnym podrzędnym miejscem deweloperskim przy użyciu `azds space select` programu, a następnie wdrożyć i debugować aktualizacje w izolowanym obszarze podrzędnym. Po umieszczeniu miejsca na dev i uruchomieniu programu można wysłać do niego aktualizacje, ponownie `azds up` wykonując polecenie lub korzystając z wbudowanych narzędzi w programie Visual Studio lub Visual Studio Code. Za pomocą VS Code używasz palety poleceń do łączenia się z obszarem deweloperskim. Rysunek 3-12 pokazuje, jak uruchomić aplikację sieci Web przy użyciu Azure Dev Spaces w programie Visual Studio.
+Następnie można użyć polecenia `azds prep`, aby wygenerować niezbędne zasoby platformy Docker i Helm na potrzeby uruchamiania aplikacji. Następnie możesz uruchomić swój kod w AKS przy użyciu `azds up`. Przy pierwszym uruchomieniu tego polecenia Wykres Helm zostanie zainstalowany, a kontenery zostaną skompilowane i wdrożone zgodnie z instrukcjami. Wykonanie tej operacji może potrwać kilka minut po raz pierwszy. Jednak po wprowadzeniu zmian można nawiązać połączenie z własnym podrzędnym miejscem deweloperskim przy użyciu `azds space select`, a następnie wdrożyć i debugować aktualizacje w izolowanym miejscu potomnym. Po umieszczeniu miejsca na dev i uruchomieniu programu można wysłać do niego aktualizacje, ponownie wykonując polecenie `azds up` lub można użyć wbudowanych narzędzi w programie Visual Studio lub Visual Studio Code. Za pomocą VS Code używasz palety poleceń do łączenia się z obszarem deweloperskim. Rysunek 3-12 pokazuje, jak uruchomić aplikację sieci Web przy użyciu Azure Dev Spaces w programie Visual Studio.
 
-![Połącz się z Azure dev Spaces w programie](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-Visual Studio**rysunek 3-12**. Nawiązywanie połączenia z Azure Dev Spaces w programie Visual Studio
+![połączyć się z Azure Dev Spaces w programie Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+**rysunek 3-12**. Nawiązywanie połączenia z Azure Dev Spaces w programie Visual Studio
 
 ## <a name="references"></a>Odwołania
 

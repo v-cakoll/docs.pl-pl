@@ -111,7 +111,7 @@ W przypadku korzystania z funkcji DI w oprogramowaniu .NET Core warto mieć moż
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Matthew króla. Rejestrowanie usług z Scrutor** \
+- **Matthew króla. Rejestrowanie usług przy użyciu \ Scrutor**
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repozytorium GitHub. \
@@ -289,7 +289,7 @@ Zasadniczo Klasa Command zawiera wszystkie dane potrzebne do wykonania transakcj
 
 Jako dodatkową cechą polecenia są niezmienne, ponieważ oczekiwane użycie polega na tym, że są przetwarzane bezpośrednio przez model domeny. Nie trzeba zmieniać ich w przewidywanym okresie istnienia. W C# klasie niezmienności można osiągnąć, nie mając żadnych metod ustawiających ani innych, które zmieniają stan wewnętrzny.
 
-Należy pamiętać, że jeśli zamierzasz lub oczekiwać, że polecenia będą przechodzą przez proces serializowania/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą i atrybut `[DataMember]` (lub `[JsonProperty]`), w przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu w miejscu docelowym z wymaganymi wartościami.
+Należy pamiętać, że jeśli zamierzasz lub oczekiwać, że polecenia będą przechodzą przez proces serializacji/deserializacji, właściwości muszą mieć prywatną metodę ustawiającą i atrybut `[DataMember]` (lub `[JsonProperty]`), w przeciwnym razie Deserializator nie będzie w stanie odtworzyć obiektu w miejscu docelowym z wymaganymi wartościami.
 
 Na przykład Klasa poleceń do tworzenia zamówienia jest prawdopodobnie podobna pod względem danych do zamówienia, które chcesz utworzyć, ale prawdopodobnie nie potrzebujesz tych samych atrybutów. Na przykład `CreateOrderCommand` nie ma identyfikatora zamówienia, ponieważ zamówienie nie zostało jeszcze utworzone.
 
@@ -339,7 +339,7 @@ Ważnym punktem jest to, że podczas przetwarzania polecenia Cała logika domeny
 
 Gdy programy obsługi poleceń są złożone z zbyt dużą ilością logiki, która może być zapachem kodu. Zapoznaj się z nimi, a jeśli znajdziesz logikę domeny, Refaktoryzacja kodu, aby przenieść zachowanie domeny do metod obiektów domeny (agregacja elementu głównego i podrzędnego).
 
-Przykładem klasy obsługi poleceń jest Poniższy kod przedstawia tę samą klasę `CreateOrderCommandHandler`, która została wyświetlona na początku tego rozdziału. W tym przypadku chcemy wyróżnić metodę uchwytu i operacje przy użyciu obiektów modelu domeny/agregacji.
+Przykładem klasy procedury obsługi poleceń Poniższy kod przedstawia tę samą `CreateOrderCommandHandler` klasy, która została wyświetlona na początku tego rozdziału. W tym przypadku chcemy wyróżnić metodę uchwytu i operacje przy użyciu obiektów modelu domeny/agregacji.
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -457,7 +457,7 @@ W związku z tym, możliwość odpowiedzi na klienta po zweryfikowaniu komunikat
 
 Ponadto polecenia asynchroniczne są poleceniami jednokierunkowymi, które w wielu przypadkach mogą nie być konieczne, jak wyjaśniono w następującej interesującej wymianie między Burtsev Alexey i Gregem młodych w [konwersacji online](https://groups.google.com/forum/#!msg/dddcqrs/xhJHVxDx2pM/WP9qP8ifYCwJ):
 
-> \[Burtsev Alexey\] mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jednym sposobem obsługi komunikatów z poleceniami bez żadnych powodów (nie wykonują długotrwałej operacji, nie wykonują zewnętrznego kodu asynchronicznego, ale nie są nawet krzyżowe) granica aplikacji, która ma używać magistrali komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
+> \[Burtsev Alexey\] mogę znaleźć wiele kodów, w których ludzie wykorzystują obsługę poleceń asynchronicznych lub jeden sposób obsługi komunikatów z poleceniami bez żadnych powodów (nie wykonują długotrwałej operacji, nie wykonują zewnętrznego kodu asynchronicznego, ale nie są nawet granicami aplikacji, aby korzystać z magistrali komunikatów). Dlaczego wprowadzają tę niezbędną złożoność? W rzeczywistości nie widzę przykładu kodu CQRS z programami obsługi poleceń blokujących do tej pory, chociaż będzie ona działać tylko w większości przypadków.
 >
 > \[Gregować młode\] \[...\] polecenie asynchroniczne nie istnieje; jest to w rzeczywistości inne zdarzenie. Jeśli muszę zaakceptować to, co wyślę, i zgłosić wydarzenie, jeśli nie zgadzam się, nie jest już wiesz, jak to zrobić, \[nie jest to polecenie\]. Poinformujemy Cię o tym, że coś zostało już zrobione. Wydaje się to bardzo niewielką różnicą w pierwszej kolejności, ale ma wiele konsekwencji.
 
@@ -508,7 +508,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Implementowanie poleceń idempotentne
 
-W **eShopOnContainers**, bardziej zaawansowany przykład niż powyżej, przesyła obiekt CreateOrderCommand z mikrousługi porządkowania. Jednak ponieważ proces biznesowy porządkowania jest nieco bardziej skomplikowany i, w naszym przypadku, faktycznie zaczyna się w mikrousłudze koszyka, ta akcja przesyłania obiektu CreateOrderCommand jest wykonywana z programu obsługi zdarzeń Integration o nazwie [ UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) zamiast prostego kontrolera WebAPI wywołanego z aplikacji klienckiej tak jak w poprzednim, prostszym przykładzie.
+W **eShopOnContainers**, bardziej zaawansowany przykład niż powyżej, przesyła obiekt CreateOrderCommand z mikrousługi porządkowania. Jednak ponieważ proces biznesowy porządkowania jest nieco bardziej skomplikowany i, w naszym przypadku, faktycznie zaczyna się w mikrousłudze koszyka, ta akcja przesyłania obiektu CreateOrderCommand jest wykonywana z programu obsługi zdarzeń integracji o nazwie [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) zamiast prostego kontrolera WebAPI wywołana z poziomu aplikacji klienckiej, jak w poprzednim, prostszym przykładzie.
 
 Niemniej jednak akcja przesłania polecenia do MediatR jest bardzo podobna, jak pokazano w poniższym kodzie.
 
@@ -592,7 +592,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-Ponieważ IdentifiedCommand działa podobnie jak forma polecenia biznesowego, gdy trzeba przetworzyć polecenie biznesowe, ponieważ nie jest to powtórzony identyfikator, to wykonuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej. Uruchamianie `_mediator.Send(message.Command)`, z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
+Ponieważ IdentifiedCommand działa podobnie do formy polecenia biznesowego, gdy wymagane jest przetworzenie polecenia biznesowego, ponieważ nie jest to powtórzony identyfikator, to przyjmuje to wewnętrzne polecenie biznesowe i ponownie przesyła je do mediator, jak w ostatniej części kodu pokazanego powyżej podczas uruchamiania `_mediator.Send(message.Command)`, z [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs).
 
 W takim przypadku spowoduje to połączenie i uruchomienie programu obsługi poleceń firmy, w tym przypadku [CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs) , w którym są uruchomione transakcje względem bazy danych porządkowania, jak pokazano w poniższym kodzie.
 
@@ -668,7 +668,7 @@ public class MediatorModule : Autofac.Module
 
 Jest to miejsce, w którym występuje "Magic" z MediatR.
 
-Ponieważ każdy program obsługi poleceń implementuje interfejs ogólny `IAsyncRequestHandler<T>` podczas rejestrowania zestawów, kod rejestruje z `RegisteredAssemblyTypes` wszystkie typy oznaczone jako `IAsyncRequestHandler`, w odniesieniu do `CommandHandlers` z ich `Commands`, dzięki relacji określonej w `CommandHandler` Klasa, jak w poniższym przykładzie:
+Ponieważ każdy program obsługi poleceń implementuje interfejs ogólny `IAsyncRequestHandler<T>` podczas rejestrowania zestawów, kod rejestruje `RegisteredAssemblyTypes` wszystkie typy oznaczone jako `IAsyncRequestHandler`, a następnie odnoszący się do `CommandHandlers` z ich `Commands`, dzięki czemu jest to relacja określona w klasie `CommandHandler`, jak w poniższym przykładzie:
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -676,7 +676,7 @@ public class CreateOrderCommandHandler
 {
 ```
 
-Jest to kod, który służy do skorelowania poleceń z programami obsługi poleceń. Program obsługi jest tylko prostą klasą, ale dziedziczy po `RequestHandler<T>`, gdzie T jest typem polecenia, a MediatR sprawdza, czy jest wywoływana z prawidłowym ładunkiem (polecenie).
+Jest to kod, który służy do skorelowania poleceń z programami obsługi poleceń. Procedura obsługi jest tylko prostą klasą, ale dziedziczy po `RequestHandler<T>`, gdzie T jest typem polecenia, a MediatR się, że jest wywoływana z prawidłowym ładunkiem (poleceniem).
 
 ## <a name="apply-cross-cutting-concerns-when-processing-commands-with-the-behaviors-in-mediatr"></a>Stosuj problemy z wycinaniem podczas przetwarzania poleceń za pomocą zachowań w MediatR
 
@@ -803,12 +803,12 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 
 ##### <a name="the-mediator-pattern"></a>Wzorzec mediator
 
-- **Wzorzec Mediator** \
+-  \ **wzorca mediator**
   [https://en.wikipedia.org/wiki/Mediator\_pattern](https://en.wikipedia.org/wiki/Mediator_pattern)
 
 ##### <a name="the-decorator-pattern"></a>Wzorzec Dekoratora
 
-- **Wzorzec dekoratora** \
+-  \ **wzorca dekoratora**
   [https://en.wikipedia.org/wiki/Decorator\_pattern](https://en.wikipedia.org/wiki/Decorator_pattern)
 
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
@@ -816,13 +816,13 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 - **MediatR.** Repozytorium GitHub. \
   <https://github.com/jbogard/MediatR>
 
-- **CQRS z MediatR i automaper** \
+- **CQRS z MediatR i Automapowaniem** \
   <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **Umieść swoje kontrolery według pokarmu: wpisów i poleceń.** \
   <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
-- **Rozwiązywanie problemów z rozcinaniem przy użyciu potoku mediator** \
+- **Rozwiązywanie problemów z wycinaniem przy użyciu potoku mediator** \
   <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS i REST: idealne dopasowanie** \
@@ -834,7 +834,7 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 - **Armatura testu wycinka pionowego dla MediatR i ASP.NET Core** \
   <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
-- **Rozszerzenia MediatR dla iniekcji zależności firmy Microsoft wydane** \
+- **Wydano rozszerzenia MediatR dla iniekcji zależności firmy Microsoft** \
   <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Weryfikacja w programie Fluent
@@ -844,4 +844,4 @@ W podobny sposób można zaimplementować inne zachowania dla dodatkowych aspekt
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-application-layer-web-api-design.md)
-> [dalej](../implement-resilient-applications/index.md)
+> [Następny](../implement-resilient-applications/index.md)

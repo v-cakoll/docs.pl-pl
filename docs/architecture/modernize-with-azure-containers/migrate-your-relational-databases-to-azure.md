@@ -112,7 +112,7 @@ Aby dowiedzieć się, jak migrować bazy danych za pomocą Azure Database Migrat
 
     <https://channel9.msdn.com/Events/Build/2017/P4008>
 
-- **SQL Server migrację bazy danych do SQL Database w chmurze**
+- **Migracja bazy danych programu SQL Server do bazy danych SQL w chmurze**
 
     <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
@@ -126,4 +126,4 @@ Aby dowiedzieć się, jak migrować bazy danych za pomocą Azure Database Migrat
 
 > [!div class="step-by-step"]
 > [Poprzedni](lift-and-shift-existing-apps-azure-iaas.md)
-> [dalej](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->
+> [Następny](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

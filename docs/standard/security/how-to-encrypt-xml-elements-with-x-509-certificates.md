@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509'
+title: 'Porady: szyfrowanie elementów XML za pomocą certyfikatów X.509'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -23,14 +23,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71353863"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Instrukcje: Szyfrowanie elementów XML za pomocą certyfikatów X.509
-Można użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml> do szyfrowania elementu w dokumencie XML.  Szyfrowanie XML jest standardowym sposobem wymiany i przechowywania zaszyfrowanych danych XML bez obaw o dane, które są łatwo odczytywane.  Aby uzyskać więcej informacji na temat standardu szyfrowania XML, zobacz Specyfikacja organizacja World Wide Web Consortium (W3C) dla szyfrowania XML znajdującego się w <https://www.w3.org/TR/xmldsig-core/>.  
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Porady: szyfrowanie elementów XML za pomocą certyfikatów X.509
+Możesz użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml>, aby zaszyfrować element w dokumencie XML.  Szyfrowanie XML jest standardowym sposobem wymiany i przechowywania zaszyfrowanych danych XML bez obaw o dane, które są łatwo odczytywane.  Aby uzyskać więcej informacji na temat standardu szyfrowania XML, zobacz Specyfikacja organizacja World Wide Web Consortium (W3C) dla szyfrowania XML znajdującego się w <https://www.w3.org/TR/xmldsig-core/>.  
   
- Możesz użyć szyfrowania XML, aby zamienić dowolny element XML lub dokument z < `EncryptedData` > elementu, który zawiera zaszyfrowane dane XML. Element < `EncryptedData` > może zawierać elementy podrzędne, które zawierają informacje o kluczach i procesach używanych podczas szyfrowania.  Szyfrowanie XML pozwala dokument może zawierać wiele zaszyfrowanych elementów i umożliwia wielokrotne szyfrowanie elementu.  W przykładzie kodu w tej procedurze pokazano, jak utworzyć element < `EncryptedData` > wraz z kilkoma innymi elementami podrzędnymi, które można później użyć podczas odszyfrowywania.  
+ Możesz użyć szyfrowania XML, aby zamienić dowolny element XML lub dokument z <`EncryptedData`> elementu, który zawiera zaszyfrowane dane XML. Element <`EncryptedData`> może zawierać elementy podrzędne, które zawierają informacje o kluczach i procesach używanych podczas szyfrowania.  Szyfrowanie XML pozwala dokument może zawierać wiele zaszyfrowanych elementów i umożliwia wielokrotne szyfrowanie elementu.  Przykład kodu w tej procedurze pokazuje, jak utworzyć <`EncryptedData`> elementu wraz z kilkoma innymi elementami podrzędnymi, które można później użyć podczas odszyfrowywania.  
   
- Ten przykład szyfruje element XML przy użyciu dwóch kluczy. Generuje certyfikat testu X. 509 za pomocą narzędzia do [tworzenia certyfikatów (Makecert. exe)](/windows/desktop/SecCrypto/makecert) i zapisuje certyfikat w magazynie certyfikatów. Przykładowo program programowo pobiera certyfikat i używa go do szyfrowania elementu XML przy użyciu metody <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>. Wewnętrznie metoda <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> tworzy oddzielny klucz sesji i używa jej do szyfrowania dokumentu XML. Ta metoda szyfruje klucz sesji i zapisuje go wraz z zaszyfrowanym kodem XML w ramach nowego < `EncryptedData` > elementu.  
+ Ten przykład szyfruje element XML przy użyciu dwóch kluczy. Generuje certyfikat testu X. 509 za pomocą narzędzia do [tworzenia certyfikatów (Makecert. exe)](/windows/desktop/SecCrypto/makecert) i zapisuje certyfikat w magazynie certyfikatów. Przykładowo program programowo pobiera certyfikat i używa go do szyfrowania elementu XML przy użyciu metody <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A>. Wewnętrznie metoda <xref:System.Security.Cryptography.Xml.EncryptedXml.Encrypt%2A> tworzy oddzielny klucz sesji i używa jej do szyfrowania dokumentu XML. Ta metoda szyfruje klucz sesji i zapisuje go wraz z zaszyfrowanym kodem XML w ramach nowego <`EncryptedData`> elementu.  
   
- Aby odszyfrować element XML, po prostu wywołaj metodę <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>, która automatycznie pobiera certyfikat X. 509 ze sklepu i wykonuje wymagane odszyfrowywanie.  Aby uzyskać więcej informacji na temat odszyfrowywania elementu XML, który został zaszyfrowany przy użyciu tej procedury, zobacz [How: Odszyfruj elementy XML za pomocą certyfikatów X. 509 @ no__t-0.  
+ Aby odszyfrować element XML, po prostu wywołaj metodę <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A>, która automatycznie pobiera certyfikat X. 509 ze sklepu i wykonuje wymagane odszyfrowywanie.  Aby uzyskać więcej informacji na temat odszyfrowywania elementu XML, który został zaszyfrowany przy użyciu tej procedury, zobacz [How to: Deszyfruj elementy XML za pomocą certyfikatów X. 509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md).  
   
  Ten przykład jest odpowiedni dla sytuacji, w których wiele aplikacji musi udostępniać zaszyfrowane dane lub w przypadku, gdy aplikacja wymaga zapisywania zaszyfrowanych danych między uruchomionymi danymi.  
   
@@ -67,7 +67,7 @@ Można użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml> do
      [!code-csharp[HowToEncryptXMLElementX509#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementX509#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#6)]  
   
-7. Utwórz obiekt <xref:System.Xml.XmlDocument> przez załadowanie pliku XML z dysku.  Obiekt <xref:System.Xml.XmlDocument> zawiera element XML do zaszyfrowania.  
+7. Utwórz obiekt <xref:System.Xml.XmlDocument>, ładując plik XML z dysku.  Obiekt <xref:System.Xml.XmlDocument> zawiera element XML do zaszyfrowania.  
   
      [!code-csharp[HowToEncryptXMLElementX509#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementX509#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#7)]  
@@ -87,13 +87,13 @@ Można użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml> do
      [!code-csharp[HowToEncryptXMLElementX509#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementX509#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#10)]  
   
-11. Zapisz obiekt <xref:System.Xml.XmlDocument>.  
+11. Zapisz <xref:System.Xml.XmlDocument> obiektu.  
   
      [!code-csharp[HowToEncryptXMLElementX509#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementX509#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#11)]  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie przyjęto założenie, że plik o nazwie `"test.xml"` istnieje w tym samym katalogu co skompilowany program.  Zakłada również, że `"test.xml"` zawiera element `"creditcard"`.  Można umieścić następujący kod XML w pliku o nazwie `test.xml` i użyć go w tym przykładzie.  
+ W tym przykładzie przyjęto założenie, że plik o nazwie `"test.xml"` istnieje w tym samym katalogu co skompilowany program.  Zakłada również, że `"test.xml"` zawiera `"creditcard"` elementu.  Można umieścić następujący kod XML w pliku o nazwie `test.xml` i użyć go w tym przykładzie.  
   
 ```xml  
 <root>  
@@ -111,7 +111,7 @@ Można użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml> do
   
 - Aby skompilować ten przykład, należy dołączyć odwołanie do `System.Security.dll`.  
   
-- Uwzględnij następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography> i <xref:System.Security.Cryptography.Xml>.  
+- Uwzględnij następujące przestrzenie nazw: <xref:System.Xml>, <xref:System.Security.Cryptography>i <xref:System.Security.Cryptography.Xml>.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Certyfikat X. 509 użyty w tym przykładzie służy tylko do celów testowych.  Aplikacje powinny używać certyfikatu X. 509 wygenerowanego przez zaufany urząd certyfikacji lub użyć certyfikatu wygenerowanego przez serwer certyfikatów systemu Microsoft Windows.  
@@ -119,4 +119,4 @@ Można użyć klas w przestrzeni nazw <xref:System.Security.Cryptography.Xml> do
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Security.Cryptography.Xml>
-- [Instrukcje: Odszyfrowywanie elementów XML za pomocą certyfikatów X. 509 @ no__t-0
+- [Instrukcje: odszyfrowywanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

@@ -31,15 +31,15 @@ Rysunek 4-13 zawiera omówienie prawdziwej platformy chmury hybrydowej oferowane
 
 Azure Stack jest oferowana w dwóch opcjach wdrażania, aby zaspokoić Twoje potrzeby:
 
-- Systemy Azure Stack zintegrowane
+- Zintegrowane systemy usługi Azure Stack
 
-- Azure Stack Development Kit
+- Zestaw Azure Stack Development Kit
 
-### <a name="azure-stack-integrated-systems"></a>Systemy Azure Stack zintegrowane
+### <a name="azure-stack-integrated-systems"></a>Zintegrowane systemy usługi Azure Stack
 
 Systemy Azure Stack zintegrowane są oferowane przez partnerstwo partnerów firmy Microsoft i sprzętu. Partnerstwo tworzy rozwiązanie, które oferuje innowacyjność w chmurze, która jest zrównoważona prostoty zarządzania. Ponieważ Azure Stack jest oferowana jako zintegrowany system sprzętu i oprogramowania, uzyskuje się odpowiednią ilość elastyczności i kontroli, a jednocześnie wdraża innowacje z chmury. Azure Stack zakres zintegrowanych systemów w rozmiarze od 4 do 12 węzłów i są wspólnie obsługiwane przez partnera sprzętowego i firmę Microsoft. Użyj Azure Stack zintegrowanych systemów, aby zaimplementować nowe scenariusze dla obciążeń produkcyjnych.
 
-### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
+### <a name="azure-stack-development-kit"></a>Zestaw Azure Stack Development Kit
 
 Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stack, którego można użyć do obliczenia i poznania Azure Stack. Możesz również użyć Azure Stack Development Kit jako środowiska deweloperskiego, w którym można opracowywać przy użyciu interfejsów API i narzędzi, które są spójne z platformą Azure. Azure Stack Development Kit nie jest przeznaczona do użycia w środowisku produkcyjnym.
 
@@ -67,4 +67,4 @@ Microsoft Azure Stack Development Kit to wdrożenie z jednym węzłem Azure Stac
 
 >[!div class="step-by-step"]
 >[Poprzedni](life-cycle-ci-cd-pipelines-devops-tools.md)
->[dalej](../walkthroughs-technical-get-started-overview.md)
+>[Następny](../walkthroughs-technical-get-started-overview.md)

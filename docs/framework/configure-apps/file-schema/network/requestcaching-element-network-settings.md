@@ -15,12 +15,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697823"
 ---
-# <a name="requestcaching-element-network-settings"></a>\<requestCaching >, element (Ustawienia sieci)
+# <a name="requestcaching-element-network-settings"></a>\<element > requestCaching (Ustawienia sieci)
 Kontroluje mechanizm buforowania dla żądań sieci.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
   
 ## <a name="policylevel-attribute"></a>policyLevel — atrybut  
   
-|Wartość|Opis|  
+|Value|Opis|  
 |-----------|-----------------|  
 |`Default`|Zwraca buforowany zasób, jeśli zasób jest świeży, długość zawartości jest dokładna i atrybuty daty wygaśnięcia, modyfikacji i długości zawartości są obecne.|  
 |`BypassCache`|Zwraca zasób z serwera.|  
@@ -65,7 +65,7 @@ Kontroluje mechanizm buforowania dla żądań sieci.
 |Element|Opis|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Element opcjonalny.<br /><br /> Opisuje, czy buforowanie HTTP jest aktywne i opisuje domyślne zasady buforowania.|  
-|[\<defaultFtpCachePolicy >, element (Ustawienia sieci)](defaultftpcachepolicy-element-network-settings.md)|Element opcjonalny.<br /><br /> Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania.|  
+|[\<element > defaultFtpCachePolicy (Ustawienia sieci)](defaultftpcachepolicy-element-network-settings.md)|Element opcjonalny.<br /><br /> Opisuje, czy buforowanie FTP jest aktywne i opisuje domyślne zasady buforowania.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

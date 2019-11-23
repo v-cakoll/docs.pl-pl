@@ -23,4 +23,4 @@ Ważna Uwaga: rozwijająca się i "więcej PaaS" wersja usług ACS (Azure Contai
 
 >[!div class="step-by-step"]
 >[Poprzedni](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
->[dalej](choosing-azure-compute-options-for-container-based-applications.md)
+>[Następny](choosing-azure-compute-options-for-container-based-applications.md)

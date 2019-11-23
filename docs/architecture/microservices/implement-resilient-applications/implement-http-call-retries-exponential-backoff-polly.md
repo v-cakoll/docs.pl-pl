@@ -21,7 +21,7 @@ W poniższych krokach pokazano, jak można użyć ponownych prób http z Polly z
 
 **Odwoływanie się do pakietów ASP.NET Core 2,2**
 
-`HttpClientFactory` jest dostępna od programu .NET Core 2,1, ale zalecamy używanie najnowszych pakietów ASP.NET Core 2,2 z narzędzia NuGet w projekcie. Zwykle potrzebny jest pakiet `AspNetCore`, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
+`HttpClientFactory` jest dostępna od platformy .NET Core 2,1, ale zalecamy korzystanie z najnowszych pakietów ASP.NET Core 2,2 z narzędzia NuGet w projekcie. Zwykle potrzebny jest pakiet `AspNetCore`, a pakiet rozszerzenia `Microsoft.Extensions.Http.Polly`.
 
 **Konfigurowanie klienta przy użyciu zasad ponawiania Polly w programie startowym**
 

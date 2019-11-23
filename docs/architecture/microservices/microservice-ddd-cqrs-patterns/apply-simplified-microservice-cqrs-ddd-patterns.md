@@ -1,5 +1,5 @@
 ---
-title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousłudze
+title: Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z ogólną relacją między wzorcami CQRS i DDD.
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
@@ -35,11 +35,11 @@ Mikrousługa logiczna "porządkowanie" obejmuje jej bazę danych porządkowania,
 
 Warstwa aplikacji może być interfejsem API sieci Web. Ważnym aspektem projektowym jest to, że mikrousługa dzieli zapytania i modele widoków (modele danych specjalnie utworzone dla aplikacji klienckich) z poleceń, modelu domeny i transakcji po wzorcu CQRS. Takie podejście utrzymuje zapytania niezależne od ograniczeń i ograniczeń pochodzących z wzorców DDD, które mają sens tylko w przypadku transakcji i aktualizacji, jak wyjaśniono w kolejnych sekcjach.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Greg Young. Przechowywanie wersji w systemie źródła zdarzeń** (bezpłatny do odczytu online — książka elektroniczna) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Następny](eshoponcontainers-cqrs-ddd-microservice.md)

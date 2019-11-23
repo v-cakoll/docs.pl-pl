@@ -34,12 +34,12 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/c[lass]:``name`|Określa nazwę klasy dla poniższego arkusza stylów. Nazwa klasy może być w pełni kwalifikowana.<br /><br /> Nazwa klasy jest domyślnie nazwą arkusza stylów. Na przykład jeśli arkusz stylów są kompilowane. xsl, domyślna nazwa klasy to Customers.|  
-|`/debug[` +&#124;-`]`|Określa, czy informacje o debugowaniu mają być generowane.<br /><br /> Określenie `+` lub `/debug` powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych programu (PDB). Nazwa wygenerowanego pliku PDB jest @no__t -0. pdb.<br /><br /> Określenie `-`, która obowiązuje, jeśli nie określono `/debug`, nie powoduje utworzenia informacji o debugowaniu. Zestaw detaliczny jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania może znacząco wpłynąć na wydajność XSLT.|  
+|`/debug[`+&#124;-`]`|Określa, czy informacje o debugowaniu mają być generowane.<br /><br /> Określenie `+` lub `/debug`powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w pliku bazy danych programu (PDB). Nazwa wygenerowanego pliku PDB to `assemblyName`. pdb.<br /><br /> Określenie `-`, która obowiązuje, jeśli nie określono `/debug`, nie powoduje utworzenia informacji o debugowaniu. Zestaw detaliczny jest generowany. **Uwaga:**  Kompilowanie w trybie debugowania może znacząco wpłynąć na wydajność XSLT.|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija wyświetlanie komunikatu o prawach autorskich kompilatora.|  
-|`/platform:``string`|Określa platformy, na których można uruchomić zestaw. Poniżej opisano prawidłowe wartości platformy:<br /><br /> `x86` kompiluje zestaw do uruchomienia przez 32-bitowe, zgodne ze standardem x86 środowisko uruchomieniowe języka wspólnego<br /><br /> `x64` kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.<br /><br /> Procesor Itanium kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze z procesorem Itanium.<br /><br /> `anycpu` kompiluje zestaw do uruchamiania na dowolnej platformie. Domyślnie włączone.|  
-|`/out:``assemblyName`|Określa nazwę zestawu, który jest wynikiem. Nazwa zestawu jest domyślnie ustawiana na nazwę głównego arkusza stylów lub pierwszego arkusza stylów, jeśli istnieje wiele arkuszy stylów.<br /><br /> Jeśli arkusz stylów zawiera skrypty, skrypty są zapisywane w osobnym zestawie. Nazwy zestawów skryptów są generowane na podstawie głównej nazwy zestawu. Na przykład jeśli dla nazwy zestawu określono CustOrders. dll, pierwszy zestaw skryptu ma nazwę CustOrders_Script1. dll.|  
-|`/settings:``document+-, script+-, DTD+-,`|Określa, czy zezwalać na używanie funkcji `document()`, skryptu XSLT czy definicji typu dokumentu (DTD) w arkuszu stylów.<br /><br /> Zachowanie domyślne powoduje wyłączenie obsługi dla DTD, funkcji `document()` i skryptów.|  
+|`/platform:``string`|Określa platformy, na których można uruchomić zestaw. Poniżej opisano prawidłowe wartości platformy:<br /><br /> `x86` kompiluje zestaw do uruchomienia przez 32-bitowe, zgodne z architekturą x86 środowiska uruchomieniowego języka wspólnego<br /><br /> `x64` kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.<br /><br /> Procesor Itanium kompiluje zestaw do uruchomienia przez 64-bitowe środowisko uruchomieniowe języka wspólnego na komputerze z procesorem Itanium.<br /><br /> `anycpu` kompiluje zestaw do uruchamiania na dowolnej platformie. Domyślnie włączone.|  
+|`/out:``assemblyName`|Określa nazwę zestawu, który jest wynikiem. Nazwa zestawu jest domyślnie ustawiana na nazwę głównego arkusza stylów lub pierwszego arkusza stylów, jeśli istnieje wiele arkuszy stylów.<br /><br /> Jeśli arkusz stylów zawiera skrypty, skrypty są zapisywane w osobnym zestawie. Nazwy zestawów skryptów są generowane na podstawie głównej nazwy zestawu. Na przykład jeśli dla nazwy zestawu określono CustOrders. dll, pierwszy zestaw skryptu nosi nazwę CustOrders_Script1. dll.|  
+|`/settings:``document+-, script+-, DTD+-,`|Określa, czy zezwolić na `document()` funkcje, skrypt XSLT lub definicję typu dokumentu (DTD) w arkuszu stylów.<br /><br /> Zachowanie domyślne powoduje wyłączenie obsługi języka DTD, funkcji `document()` i skryptów.|  
 |`@``file`|Pozwala określić plik, który zawiera opcje kompilatora.|  
 |`?`|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -49,7 +49,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 > [!NOTE]
 > Należy również uwzględnić skompilowany zestaw jako odwołanie w aplikacji.  
   
- Narzędzie xsltc. exe nie sprawdza poprawności nazw klas (@no__t *-0)* ani zestawów (`/out:`*AssemblyName*). Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy są nieprawidłowe.  
+ Narzędzie xsltc. exe nie weryfikuje nazw klas ( *nazw`/class:`)* ani zestawów (`/out:`*AssemblyName*). Błędy są zgłaszane przez środowisko uruchomieniowe języka wspólnego, jeśli nazwy są nieprawidłowe.  
   
 ## <a name="examples"></a>Przykłady  
  Poniższe polecenie kompiluje arkusz stylów i tworzy zestaw o nazwie booksort. dll.  
@@ -70,7 +70,7 @@ xsltc booksort.xsl /debug
 xsltc /settings:script+ calc.xsl  
 ```  
   
- Następujące polecenie umożliwia przetwarzanie DTD i obsługę skryptów oraz tworzy dwa zestawy o nazwie myTest_Script1. dll i. dll.  
+ Następujące polecenie umożliwia przetwarzanie DTD i obsługę skryptów oraz tworzy dwa zestawy o nazwie "* test. dll i myTest_Script1. dll.  
   
 ```console  
 xsltc /settings:DTD+,script+ /out:myTest calc.xsl  

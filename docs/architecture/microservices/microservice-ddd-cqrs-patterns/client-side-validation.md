@@ -30,20 +30,20 @@ Implementacja weryfikacji po stronie klienta zależy od rodzaju kompilowanej apl
 - **Weryfikuj wprowadzanie tekstu i Wyświetlaj błędy** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Wywołanie zwrotne walidacji** \
+-  \ **wywołania zwrotnego walidacji**
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>Walidacja w aplikacjach ASP.NET Core
 
-- **Rick Anderson. Dodawanie walidacji** \
+- **Rick Anderson. Dodawanie \ weryfikacji**
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Walidacja w aplikacjach sieci Web SPA (kątowy 2, TypeScript, JavaScript)
 
-- **Ado Kukic. Walidacja formularza kątowego 2** \
+- **KuKic ADO. \ walidacji formularza** z kątem 2
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Walidacja formularza** \
+-  \ **walidacji formularza**
   <https://angular.io/guide/form-validation>
 
 - **Zatwierdzenia.** Dokumentacja Breeze. \
@@ -60,5 +60,5 @@ Podsumowując, są to najważniejsze koncepcje dotyczące weryfikacji:
 - W większości przypadków posiadanie nadmiarowej weryfikacji na stronie klienta jest dobre, ponieważ aplikacja może być aktywna.
 
 >[!div class="step-by-step"]
->[Poprzedni](domain-model-layer-validations.md)Następny
->[](domain-events-design-implementation.md)
+>[Poprzedni](domain-model-layer-validations.md)
+>[Następny](domain-events-design-implementation.md)

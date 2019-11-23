@@ -18,8 +18,8 @@ ms.locfileid: "71697507"
 # <a name="systemnet-element-network-settings"></a>\<system .net >, element (Ustawienia sieci)
 Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. net >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<system. net >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje
 |[defaultProxy](defaultproxy-element-network-settings.md)|Konfiguruje serwer proxy protokołu HTTP (Hypertext Transfer Protocol).|  
 |[mailSettings](mailsettings-element-network-settings.md)|Konfiguruje opcje wysyłania poczty SMTP (Simple Mail Transport Protocol).|  
 |[requestCaching](requestcaching-element-network-settings.md)|Kontroluje mechanizm buforowania dla żądań sieci.|  
-|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla klas w <xref:System.Net> i pokrewnych podrzędnych obszarach nazw.|  
+|[Ustawienia](settings-element-network-settings.md)|Konfiguruje podstawowe opcje sieci dla klas w <xref:System.Net> i powiązane z nimi podrzędne przestrzenie nazw.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Określa moduły, które mają być używane do żądania informacji z hostów internetowych.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
@@ -53,7 +53,7 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje
 |[skonfigurować](../configuration-element.md)|Zawiera ustawienia dla wszystkich przestrzeni nazw.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element [@no__t -1System. net >](system-net-element-network-settings.md) zawiera ustawienia dla klas w <xref:System.Net> i powiązanych przestrzeniach nazw. Ustawienia Konfiguruj moduły uwierzytelniania, zarządzanie połączeniami, ustawienia poczty, serwer proxy i moduły żądania internetowe, aby otrzymywać informacje z hostów internetowych.  
+ Element [\<system. net >](system-net-element-network-settings.md) zawiera ustawienia dla klas w <xref:System.Net> i powiązanych przestrzeniach nazw podrzędnych. Ustawienia Konfiguruj moduły uwierzytelniania, zarządzanie połączeniami, ustawienia poczty, serwer proxy i moduły żądania internetowe, aby otrzymywać informacje z hostów internetowych.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono typową konfigurację używaną przez klasy <xref:System.Net>.  

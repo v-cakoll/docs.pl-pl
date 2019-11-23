@@ -32,7 +32,7 @@ Natywna Chmura zapewnia dużą *szybkość* i *elastyczność*. Systemy biznesow
 
 Oto kilka firm, które wdrożyły te techniki. Pomyśl o szybkości, elastyczności i skalowalności, które zostały osiągnięte.
 
-| Przedsiębiorstwo | Systemu |
+| Firmy | Systemu |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | Ma ponad 600 usług w środowisku produkcyjnym. Wdraża setki razy dziennie. |
 | [Uber](https://eng.uber.com/micro-deploy/) | Ma 1000 usług przechowywanych w środowisku produkcyjnym. Wdraża kilka tysięcy kompilacji w każdym tygodniu. |
@@ -76,7 +76,7 @@ W przypadku aplikacji opartych na sieci Web wiele lekarzy traktuje ją jako soli
 
 W poniższej tabeli przedstawiono metodologię 12-czynnikową:
 
-|    |  1U | Wyjaśnienie  |
+|    |  współczynnik | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
 | 1 | Baza kodu | Pojedyncza baza kodu dla każdej mikrousługi, przechowywana we własnym repozytorium. Śledzone przy użyciu kontroli wersji, można je wdrożyć w wielu środowiskach (pytań i odpowiedzi, w środowisku produkcyjnym). |
 | 2 | Zależności | Każda mikrousługa izoluje i pakuje własne zależności, wdrażając zmiany bez wpływu na cały system. |
@@ -96,8 +96,8 @@ W książce [poza aplikacją 12-składnikową](https://content.pivotal.io/blog/
 |    |  Nowy czynnik | Wyjaśnienie  |
 | :-------- | :-------- | :-------- |
 | 13 | Najpierw interfejs API | Utwórz wszystko jako usługę. Załóżmy, że kod będzie używany przez klienta frontonu, bramę lub inną usługę. |
-| 14,5 | Telemetria | Na stacji roboczej masz wgląd w aplikację i jej zachowanie. W chmurze nie masz. Upewnij się, że projekt zawiera kolekcję monitorowanie, specyficzne dla domeny i kondycję/dane systemowe. |
-| 15000 | Uwierzytelnianie/autoryzacja  | Zaimplementuj tożsamość z poziomu uruchomienia. Zapoznaj się z funkcjami [RBAC (kontrola dostępu opartą na rolach)](https://docs.microsoft.com/azure/role-based-access-control/overview) dostępnymi w chmurach publicznych.  |
+| 14 | Telemetria | Na stacji roboczej masz wgląd w aplikację i jej zachowanie. W chmurze nie masz. Upewnij się, że projekt zawiera kolekcję monitorowanie, specyficzne dla domeny i kondycję/dane systemowe. |
+| 15 | Uwierzytelnianie/autoryzacja  | Zaimplementuj tożsamość z poziomu uruchomienia. Zapoznaj się z funkcjami [RBAC (kontrola dostępu opartą na rolach)](https://docs.microsoft.com/azure/role-based-access-control/overview) dostępnymi w chmurach publicznych.  |
 
 Odwołujemy się do wielu czynników 12 + w tym rozdziale i w całej książce.
 
@@ -131,7 +131,7 @@ Jak usługa będzie identyfikować użytkowników, którzy mają do nich dostęp
 
 Tożsamość jest szczegółowo omówione w rozdziale 8, *tożsamość*.
 
-## <a name="microservices"></a>Mikrousług
+## <a name="microservices"></a>Mikrousługi
 
 Systemy natywne w chmurze uwzględniają mikrousługi, popularny styl architektoniczny służący do konstruowania nowoczesnych aplikacji.
 
@@ -179,7 +179,7 @@ Program .NET Core jest wysoce wydajny i został dobrze oceniony w porównaniu do
 
 Platforma .NET Core jest obsługiwana przez firmę Microsoft i społeczność programu .NET w witrynie GitHub.
 
-## <a name="containers"></a>Kontenery
+## <a name="containers"></a>Containers
 
 Obecnie, że jest to naturalne, aby poznać termin *kontenera* wymieniony w dowolnej konwersacji dotyczącej *natywnej chmury*. W książce, [wzorce natywne chmury](https://www.manning.com/books/cloud-native-patterns), autor Cornelia Davis obserwuje, że "kontenery są doskonałym rozwiązaniem w przypadku oprogramowania natywnego w chmurze". Natywna platforma obliczeniowa w chmurze wprowadza mikrousługi kontenerach jako pierwszy krok w swojej [natywnej mapie w chmurze](https://raw.githubusercontent.com/cncf/trailmap/master/CNCF_TrailMap_latest.png) — wskazówki dla przedsiębiorstw, które rozpoczynają podróż w chmurze.
 
@@ -228,17 +228,17 @@ W poniższej tabeli opisano typowe zadania aranżacji.
 | Harmonogram | Automatyczne Inicjowanie obsługi wystąpień kontenerów.|
 | Koligacja/ochrona przed koligacją | Udostępniaj kontenery w pobliżu lub daleko od siebie, ułatwiając dostępność i wydajność. |
 | Monitorowanie kondycji | Automatycznie wykrywaj i Poprawiaj błędy.|
-| Pracy | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
-| Ponowne | Automatyczne dodanie lub usunięcie wystąpienia kontenera w celu spełnienia wymagań.|
+| Praca awaryjna | Automatyczne ponowne Inicjowanie obsługi administracyjnej wystąpienia nie powiodło się.|
+| Skalowanie | Automatyczne dodanie lub usunięcie wystąpienia kontenera w celu spełnienia wymagań.|
 | Obsługa sieci | Zarządzanie nakładką sieciową na potrzeby komunikacji kontenerowej.|
 | Odnajdowanie usług | Włącz kontenery, aby zlokalizować siebie nawzajem.|
 | Uaktualnienia stopniowe | Koordynuj uaktualnienia przyrostowe bez przestojów. Automatycznie przywracaj problematyczne zmiany.|
 
 Należy zauważyć, jak usługi Orchestrator wdrażają zasady disposability i współbieżności z [aplikacji 12-składnikowej](https://12factor.net/)omówionej wcześniej w rozdziale.
 
-> *Współczynnik \#9 określa, że "wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
+> *Współczynnik \#9 określa, że wystąpienia usługi powinny być jednorazowe, dzięki czemu można uzyskać szybkie uruchomienia w celu zwiększenia możliwości skalowalności i bezpiecznego zamykania systemu, aby pozostawić system w prawidłowym stanie. Kontenery platformy Docker wraz z koordynatorem niezgodne z tym wymaganiem ".*
 
-> *Współczynnik \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie skalowanie pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
+> *Współczynnik \#8 określa, że "usługi są skalowane w ramach dużej liczby niewielkich identycznych procesów (kopii), a nie do skalowania pojedynczego dużego wystąpienia na najbardziej wydajny dostępną maszynę".*
 
 Chociaż istnieje kilka koordynatorów kontenerów, [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) stał się de facto standardem dla świata natywnego w chmurze. Jest to przenośna, rozszerzalna platforma typu "open source" do zarządzania obciążeniami kontenera.
 
@@ -320,7 +320,7 @@ Na koniec wydana funkcja jest uruchamiana w docelowym środowisku wykonawczym. W
 
 Stosując te praktyki, organizacje mają radykalnie rozwój oprogramowania. Wiele przeniesiono od kwartalnych wersji do aktualizacji na żądanie. Celem jest przechwycenie problemów wczesnych w cyklu programowania, gdy są one tańsze do naprawienia. Im dłuższy czas między integracją, tym bardziej kosztowne problemy mają być rozwiązywane.  Ze spójnością w procesie integracji zespoły mogą częściej zatwierdzić zmiany kodu, co prowadzi do lepszej współpracy i jakości oprogramowania.
 
-### <a name="azure-pipelines"></a>Azure Pipelines
+### <a name="azure-pipelines"></a>Potoki usługi Azure
 
 Chmura platformy Azure obejmuje nową usługę ciągłej integracji/ciągłego dostarczania [Azure Pipelines](https://azure.microsoft.com/services/devops/pipelines/), która jest częścią oferty [usługi Azure DevOps](https://azure.microsoft.com/services/devops/) pokazanej na rysunku 1-9.
 

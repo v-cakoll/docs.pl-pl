@@ -10,7 +10,7 @@ ms.lasthandoff: 09/17/2019
 ms.locfileid: "71047609"
 ---
 # <a name="network-programming-samples"></a>Przykłady programowania sieciowego
-Ta sekcja zawiera opisy i linki do pobieranych przykładów programistycznych sieci, które używają klas <xref:System.Net>w <xref:System.Net.Cache> <xref:System.Net.Configuration>, <xref:System.Net.NetworkInformation> <xref:System.Net.Sockets> <xref:System.Net.Mail> <xref:System.Net.Mime> <xref:System.Net.Security>,,,,,, i powiązane przestrzenie nazw. 
+Ta sekcja zawiera opisy i linki do pobieranych przykładów programistycznych dla sieci, które używają klas w <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>i powiązanych przestrzeniach nazw. 
   
 > [!NOTE]
 > Wszystkie przykłady są dostępne w [zestawie .NET Framework SDK w wersji 2,0](https://www.microsoft.com/download/confirmation.aspx?id=22181)pobranej dla .NET Framework 2,0 i mogą być datowane.
@@ -25,8 +25,8 @@ Ta sekcja zawiera opisy i linki do pobieranych przykładów programistycznych si
  [Przykład technologii odbiornika HttpListener](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  Pokazuje, jak przetwarzać żądania HTTP z poziomu aplikacji.  
  
- [Przykład aplikacji hosta odbiornika HttpListener ASPX](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- Pokazuje, jak używać funkcji <xref:System.Net.HttpListener?displayProperty=nameWithType> klasy do tworzenia serwera http, który kieruje wywołania do hostowanej aplikacji ASP.NET.
+ [Przykład  aplikacji hosta odbiornika HTTPLISTENER aspx](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))  
+ Pokazuje, jak używać funkcji klasy <xref:System.Net.HttpListener?displayProperty=nameWithType> do tworzenia serwera HTTP, który kieruje wywołania do hostowanej aplikacji ASP.NET.
   
  [Przykład technologii pocztowych](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  Pokazuje, jak wysyłać wiadomości e-mail z aplikacji klienckiej.  
@@ -52,7 +52,7 @@ Ta sekcja zawiera opisy i linki do pobieranych przykładów programistycznych si
  [Przykład technologii FTP Explorer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  Pokazuje, jak wyświetlić listę zawartości serwera FTP.  
 
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Informacje ogólne  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  

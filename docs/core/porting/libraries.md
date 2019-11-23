@@ -22,7 +22,7 @@ W tym artykule przyjęto założenie, że:
 - Używa programu Visual Studio 2017 lub nowszego.
   - Platforma .NET Core nie jest obsługiwana we wcześniejszych wersjach programu Visual Studio
 - Zapoznaj się z [zalecanym procesem przenoszenia](index.md).
-- Rozwiązano wszelkie problemy związane [](third-party-deps.md)z zależnościami innych firm.
+- Rozwiązano wszelkie problemy związane z [zależnościami](third-party-deps.md)innych firm.
 
 Należy również zapoznać się z treścią następujących tematów:
 
@@ -32,13 +32,13 @@ W tym temacie opisano formalne specyfikacje interfejsów API platformy .NET, kt�
 [Pakiety, aplikacje i struktury](../packages.md)   
 W tym artykule omówiono sposób definiowania i używania pakietów przez platformę .NET Core oraz sposób obsługi kodu działającego w wielu implementacjach platformy .NET.
 
-[Tworzenie bibliotek przy użyciu narzędzi międzyplatformowych](../tutorials/libraries.md)   
+[Tworzenie bibliotek przy użyciu narzędzi Międzyplatformowych](../tutorials/libraries.md)   
 W tym temacie wyjaśniono, jak pisać biblioteki dla platformy .NET przy użyciu międzyplatformowych narzędzi interfejsu wiersza polecenia.
 
-[Dodatki do formatu *csproj* dla platformy .NET Core](../tools/csproj.md)   
+[Dodatki do formatu *csproj* dla programu .NET Core](../tools/csproj.md)   
 W tym artykule opisano zmiany, które zostały dodane do pliku projektu w ramach przenoszenia do *csproj* i MSBuild.
 
-[Przenoszenie do platformy .NET Core — analizowanie zależności innych firm](third-party-deps.md)   
+[Przenoszenie do platformy .NET Core — analizowanie zależności innych](third-party-deps.md) firm   
 W tym temacie omówiono przenośność zależności innych firm i czynności, które należy wykonać, gdy zależność pakietu NuGet nie jest uruchamiana na platformie .NET Core.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Przekieruj kod .NET Framework do .NET Framework 4.7.2
@@ -48,7 +48,7 @@ Jeśli Twój kod nie jest celem .NET Framework 4.7.2, zalecamy przekierowanie do
 Dla każdego projektu w programie Visual Studio należy wykonać następujące czynności:
 
 1. Kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości**.
-1. Na liście rozwijanej **platforma** docelowa wybierz pozycję **.NET Framework 4.7.2**.
+1. Na liście rozwijanej **platforma docelowa** wybierz pozycję **.NET Framework 4.7.2**.
 1. Ponowne Kompilowanie projektów.
 
 Ponieważ projekty są teraz docelowe .NET Framework 4.7.2, Użyj tej wersji .NET Framework jako podstawy do przenoszenia kodu.
@@ -91,8 +91,8 @@ Takie podejście może być najlepszym rozwiązaniem w przypadku większych i ba
    - Zrozumienie charakteru tych typów. Czy są one małe w liczbie, ale używane często? Czy są one duże w liczbie, ale używane rzadko? Czy ich użycie jest skoncentrowane lub czy jest rozłożone w całym kodzie?
    - Czy łatwo jest izolować kod, który nie jest przenośny, aby można było go bardziej efektywnie rozwiązać?
    - Czy musisz ponownie wykonać swój kod?
-   - Czy dla tych typów, które nie są przenośne, są alternatywne interfejsy API, które spełniają to samo zadanie? Na przykład jeśli korzystasz z <xref:System.Net.WebClient> klasy, możesz zamiast tego <xref:System.Net.Http.HttpClient> użyć klasy.
-   - Czy istnieją różne przenośne interfejsy API dostępne do wykonania zadania, nawet jeśli nie jest to zamiennik? Na przykład jeśli <xref:System.Xml.Schema.XmlSchema> używasz programu do analizowania kodu XML, ale nie wymagasz odnajdywania schematu XML, <xref:System.Xml.Linq> możesz używać interfejsów API i implementować analizę, zamiast korzystać z interfejsu API.
+   - Czy dla tych typów, które nie są przenośne, są alternatywne interfejsy API, które spełniają to samo zadanie? Na przykład jeśli korzystasz z klasy <xref:System.Net.WebClient>, możesz zamiast tego użyć klasy <xref:System.Net.Http.HttpClient>.
+   - Czy istnieją różne przenośne interfejsy API dostępne do wykonania zadania, nawet jeśli nie jest to zamiennik? Na przykład jeśli używasz <xref:System.Xml.Schema.XmlSchema> do analizowania kodu XML, ale nie wymagasz odnajdywania schematu XML, możesz używać <xref:System.Xml.Linq> interfejsów API i implementować analizę, zamiast korzystać z interfejsu API.
 1. Jeśli masz zestawy, które są trudne do portów, czy warto teraz pozostawić je na .NET Framework? Oto kilka kwestii, które należy wziąć pod uwagę:
    - W bibliotece mogą działać pewne funkcje, które są niezgodne z platformą .NET Core, ponieważ opierają się one zbyt mocno na .NET Framework lub funkcjach specyficznych dla systemu Windows. Czy ta funkcja jest powarta w tym momencie, i tymczasowo zwalniasz wersję biblioteki platformy .NET Core z mniejszą funkcjonalnością do momentu dostępności zasobów do przenoszenia funkcji?
    - Czy chcesz uzyskać pomoc dotyczącą refaktoryzacji?
@@ -122,7 +122,7 @@ Najlepszym sposobem, aby upewnić się, że wszystko działa, gdy Port został p
 
 ## <a name="recommended-approach-to-porting"></a>Zalecane podejście do przenoszenia
 
-W rezultacie nakłady pracy związane z przenoszeniem są zależne od tego, jak kod .NET Framework ma strukturę. Dobrym sposobem na port kodu jest rozpoczęcie od *podstaw* biblioteki, które są podstawowymi składnikami kodu. Mogą to być modele danych lub inne klasy podstawowe i metody, które pozostałe używają bezpośrednio lub pośrednio.
+W rezultacie nakłady pracy związane z przenoszeniem są zależne od tego, jak kod .NET Framework ma strukturę. Dobrym sposobem na port kodu jest rozpoczęcie od podstaw biblioteki, które są *podstawowymi* składnikami kodu. Mogą to być modele danych lub inne klasy podstawowe i metody, które pozostałe używają bezpośrednio lub pośrednio.
 
 1. Port projektu testowego, który testuje warstwę biblioteki aktualnie przeznaczoną do przenoszenia.
 1. Skopiuj bazę biblioteki do nowego projektu .NET Core i wybierz wersję .NET Standard, która ma być obsługiwana.

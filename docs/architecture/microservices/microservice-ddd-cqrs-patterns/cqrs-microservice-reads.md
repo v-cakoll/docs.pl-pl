@@ -2,12 +2,12 @@
 title: Implementowanie odczytów i zapytań w mikrousłudze CQRS
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się z implementacją zapytania CQRS na mikrousłudze porządkowania w eShopOnContainers przy użyciu Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739997"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972087"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementowanie operacji odczytu/zapytań w CQRS mikrousługi
 
@@ -45,17 +45,17 @@ Dapper to projekt typu "open source" (oryginalny utworzony przez sam Saffron) i 
 
 Należy również dodać instrukcję using, aby kod miał dostęp do metod rozszerzenia Dapper.
 
-W przypadku używania Dapper w kodzie należy bezpośrednio użyć klasy <xref:System.Data.SqlClient.SqlConnection> dostępnej w przestrzeni nazw <xref:System.Data.SqlClient>. Za pomocą metody QueryAsync i innych metod rozszerzenia, które rozszerzają klasę <xref:System.Data.SqlClient.SqlConnection>, można po prostu uruchamiać zapytania w sposób prosty i wydajny.
+Gdy używasz Dapper w kodzie, możesz bezpośrednio użyć klasy <xref:System.Data.SqlClient.SqlConnection> dostępnej w przestrzeni nazw <xref:System.Data.SqlClient>. Za pomocą metody QueryAsync i innych metod rozszerzenia, które rozszerzają klasę <xref:System.Data.SqlClient.SqlConnection>, można po prostu uruchamiać zapytania w sposób prosty i wydajny.
 
 ## <a name="dynamic-versus-static-viewmodels"></a>Dynamiczny a statyczny modele widoków
 
 Po powrocie modele widoków z serwera do aplikacji klienckich można myśleć o tych modele widoków jako DTO (Transfer danych obiektów), które mogą być różne dla wewnętrznych jednostek domeny modelu jednostki, ponieważ modele widoków przechowuje dane w sposób, w jaki aplikacja kliencka konieczne. Z tego względu w wielu przypadkach można agregować dane pochodzące z wielu jednostek domeny i precyzyjnie redagować modele widoków według sposobu, w jaki aplikacja kliencka wymaga tych danych.
 
-Te modele widoków lub DTO mogą być zdefiniowane jawnie (jako klasy posiadaczy danych), takie jak Klasa `OrderSummary` pokazana w późniejszym fragmencie kodu lub po prostu zwracają dynamiczne modele widoków lub dynamiczne DTO na podstawie atrybutów zwracanych przez zapytania jako typ dynamiczny.
+Te modele widoków lub DTO mogą być jawnie zdefiniowane (jako klasy posiadaczy danych), takie jak Klasa `OrderSummary` pokazana w późniejszym fragmencie kodu lub po prostu zwracają dynamiczne modele widoków lub dynamiczne DTO na podstawie atrybutów zwracanych przez zapytania jako typ dynamiczny.
 
 ### <a name="viewmodel-as-dynamic-type"></a>ViewModel jako typ dynamiczny
 
-Jak pokazano w poniższym kodzie, wartość `ViewModel` może być zwracana bezpośrednio przez zapytania przez zwrócenie samego typu *dynamicznego* , który wewnętrznie opiera się na atrybutach zwracanych przez zapytanie. Oznacza to, że podzbiór atrybutów do zwrócenia jest oparty na zapytaniu. W związku z tym, jeśli dodasz nową kolumnę do zapytania lub sprzężenia, dane te są dynamicznie dodawane do zwróconego `ViewModel`.
+Jak pokazano w poniższym kodzie, `ViewModel` mogą być zwracane bezpośrednio przez zapytania przez jedynie zwrócenie typu *dynamicznego* , który wewnętrznie opiera się na atrybutach zwracanych przez zapytanie. Oznacza to, że podzbiór atrybutów do zwrócenia jest oparty na zapytaniu. W związku z tym, jeśli dodasz nową kolumnę do zapytania lub sprzężenia, dane te są dynamicznie dodawane do zwróconego `ViewModel`.
 
 ```csharp
 using Dapper;
@@ -161,7 +161,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.API.Controllers
 }
 ```
 
-Jednak atrybut `ProducesResponseType` nie może używać wartości dynamicznej jako typu, ale wymaga użycia jawnych typów, takich jak `OrderSummary` ViewModel DTO, jak pokazano w następującym przykładzie:
+Jednak atrybut `ProducesResponseType` nie może używać elementu dynamicznego jako typu, ale wymaga użycia jawnych typów, takich jak `OrderSummary` ViewModel DTO, pokazane w następującym przykładzie:
 
 ```csharp
 public class OrderSummary
@@ -173,7 +173,7 @@ public class OrderSummary
 }
 ```
 
-Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne w długim okresie. Korzystając z atrybutu `ProducesResponseType`, można również określić, jaki jest oczekiwany wynik w odniesieniu do możliwych błędów/kodów HTTP, takich jak 200, 400 itd.
+Jest to kolejny powód, dla którego jawne zwracane typy są lepsze niż typy dynamiczne w długim okresie. Korzystając z atrybutu `ProducesResponseType`, można również określić oczekiwany wynik w odniesieniu do możliwych błędów/kodów HTTP, takich jak 200, 400 itd.
 
 Na poniższej ilustracji widać, jak interfejs użytkownika struktury Swagger wyświetla informacje o odpowiedzi.
 
@@ -189,11 +189,11 @@ Na obrazie można zobaczyć więcej przykładowych wartości na podstawie typów
  <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Punkty danych — Dapper, Entity Framework i aplikacje hybrydowe (artykuł z magazynu MSDN)**  
-  <https://msdn.microsoft.com/magazine/mt703432>
+  <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
 - **Strony pomocy dla interfejsu Web API platformy ASP.NET Core korzystające z programu Swagger**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[Poprzedni](eshoponcontainers-cqrs-ddd-microservice.md)
->[dalej](ddd-oriented-microservice.md)
+>[Następny](ddd-oriented-microservice.md)

@@ -19,7 +19,7 @@ Zgodnie z opisem w [rozdziale 1](introduction.md)rekomendacje dotyczące aplikac
 
 Aplikacja eShopOnContainers obejmuje lokalne pliki ustawień aplikacji z każdą mikrousługą. Te pliki są sprawdzane w kontroli źródła, ale nie zawierają wpisów tajnych produkcji, takich jak parametry połączenia lub klucze interfejsu API. W środowisku produkcyjnym poszczególne ustawienia mogą zostać zastąpione zmiennymi środowiskowymi dla poszczególnych usług. Jest to typowa procedura dla hostowanych aplikacji, ale nie zapewnia centralnego magazynu konfiguracji. Aby zapewnić obsługę scentralizowanego zarządzania ustawieniami konfiguracji, każda mikrousługa zawiera ustawienie umożliwiające przełączenie między użyciem ustawień lokalnych lub Azure Key Vault ustawień.
 
-## <a name="azure-key-vault"></a>W usłudze Azure Key Vault
+## <a name="azure-key-vault"></a>Usługa Azure Key Vault
 
 Azure Key Vault zapewnia bezpieczny magazyn tokenów, haseł, certyfikatów, kluczy interfejsu API i innych poufnych wpisów tajnych. Dostęp do Key Vault wymaga właściwego uwierzytelniania i autoryzacji wywołującego, co w przypadku mikrousług eShopOnContainers oznacza użycie kombinacji ClientId/ClientSecret. Nie sprawdzaj tych poświadczeń w kontroli źródła, ale zamiast tego ustaw je w środowisku aplikacji. Bezpośredni dostęp do Key Vault z AKS można osiągnąć przy użyciu [Key Vault FlexVolume](https://github.com/Azure/kubernetes-keyvault-flexvol).
 

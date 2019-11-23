@@ -28,22 +28,22 @@ Pakiet **Microsoft. Extensions. Configuration. AzureKeyVault** umożliwia aplika
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. Dołącz Magazyn kluczy jako źródło konfiguracji w aplikacji przez wywołanie <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> metody rozszerzenia podczas <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> tworzenia wystąpienia. Należy zauważyć, `AddAzureKeyVault` że wywołanie wymaga identyfikatora aplikacji, który został zarejestrowany i ma dostęp do magazynu kluczy w poprzednich krokach.
+3. Dołącz Magazyn kluczy jako źródło konfiguracji w aplikacji przez wywołanie metody rozszerzenia <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> podczas tworzenia wystąpienia <xref:Microsoft.Extensions.Configuration.IConfigurationRoot>. Należy zauważyć, że wywołanie `AddAzureKeyVault` wymaga identyfikatora aplikacji, który został zarejestrowany i ma dostęp do magazynu kluczy w poprzednich krokach.
 
-   Można również użyć przeciążenia `AddAzureKeyVault` , które ma certyfikat zamiast klucza tajnego klienta, tylko dołączając odwołanie do pakietu [Microsoft. IdentityModel. clients. ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) .
+   Można również użyć przeciążenia `AddAzureKeyVault`, które przyjmuje certyfikat zamiast klucza tajnego klienta, tylko dołączając odwołanie do pakietu [Microsoft. IdentityModel. clients. ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) .
 
 > [!IMPORTANT]
 > Zalecamy zarejestrowanie Azure Key Vault jako ostatni dostawca konfiguracji, aby można było zastąpić wartości konfiguracji od poprzednich dostawców.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Ochrona wpisów tajnych aplikacji przy użyciu Azure Key Vault** \
+- **Ochrona kluczy tajnych aplikacji przy użyciu Azure Key Vault** \
   [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
-- **Bezpieczne przechowywanie wpisów tajnych aplikacji podczas opracowywania** \
+- **Bezpieczny magazyn wpisów tajnych aplikacji podczas opracowywania** \
   [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
-- **Konfigurowanie ochrony danych** \
+- **Konfigurowanie \ ochrony danych**
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
 - **Zarządzanie kluczami i okres istnienia ochrony danych w ASP.NET Core** \
@@ -53,5 +53,5 @@ Pakiet **Microsoft. Extensions. Configuration. AzureKeyVault** umożliwia aplika
   <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
->[Poprzedni](developer-app-secrets-storage.md)Następny
->[](../key-takeaways.md)
+>[Poprzedni](developer-app-secrets-storage.md)
+>[Następny](../key-takeaways.md)

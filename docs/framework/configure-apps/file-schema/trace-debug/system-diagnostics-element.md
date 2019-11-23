@@ -15,11 +15,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699193"
 ---
-# <a name="systemdiagnostics-element"></a>\<system. Diagnostics > element
+# <a name="systemdiagnostics-element"></a>\<element > System. Diagnostics
 Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komunikaty oraz poziom, w którym ustawiono przełącznik śledzenia.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. diagnostics >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<system. diagnostics >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,12 +38,12 @@ Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komu
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1assert >](assert-element.md)|Określa, czy podczas wywoływania metody <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ma być wyświetlane okno komunikatu. określa również nazwę pliku, do którego mają być zapisane wiadomości.|  
-|[@no__t — 1performanceCounters >](performancecounters-element.md)|Określa rozmiar pamięci globalnej udostępnionej przez liczniki wydajności.|  
-|[@no__t — 1sharedListeners >](sharedlisteners-element.md)|Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace. Odbiorniki identyfikowane jako odbiorniki udostępnione mogą być dodawane do źródeł lub śladów według nazwy.|  
-|[@no__t — 1sources >](sources-element.md)|Określa źródła śledzenia, które inicjują komunikaty śledzenia.|  
-|[@no__t — 1switches >](switches-element.md)|Zawiera przełączniki śledzenia i poziomy, w których są ustawiane przełączniki śledzenia.|  
-|[@no__t — 1trace >](trace-element.md)|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty śledzenia.|  
+|[\<Assert >](assert-element.md)|Określa, czy podczas wywoływania metody <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ma być wyświetlane okno komunikatu. określa również nazwę pliku, do którego mają być zapisane wiadomości.|  
+|[\<liczniki wydajności >](performancecounters-element.md)|Określa rozmiar pamięci globalnej udostępnionej przez liczniki wydajności.|  
+|[\<sharedListeners >](sharedlisteners-element.md)|Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace. Odbiorniki identyfikowane jako odbiorniki udostępnione mogą być dodawane do źródeł lub śladów według nazwy.|  
+|[\<źródła >](sources-element.md)|Określa źródła śledzenia, które inicjują komunikaty śledzenia.|  
+|[\<przełączniki >](switches-element.md)|Zawiera przełączniki śledzenia i poziomy, w których są ustawiane przełączniki śledzenia.|  
+|[\<trace>](trace-element.md)|Zawiera detektory, które zbierają, przechowują i rozsyłają komunikaty śledzenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -52,10 +52,10 @@ Określa detektory śledzenia, które zbierają, przechowują i rozsyłają komu
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak osadzić przełącznik śledzenia i odbiornik śledzenia wewnątrz elementu **\<System. diagnostics >** . Przełącznik śledzenia `General` jest ustawiony na poziom <xref:System.Diagnostics.TraceLevel>. Odbiornik śledzenia `myListener` tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.  
+ Poniższy przykład pokazuje, jak osadzić przełącznik śledzenia i odbiornik śledzenia wewnątrz elementu **\<system. diagnostics >** . Przełącznik śledzenia `General` jest ustawiony na poziom <xref:System.Diagnostics.TraceLevel>. Odbiornik śledzenia `myListener` tworzy plik o nazwie `MyListener.log` i zapisuje dane wyjściowe do pliku.  
   
 > [!NOTE]
-> W .NET Framework w wersji 2,0 można użyć tekstu, aby określić wartość dla przełącznika. Na przykład można określić `true` dla <xref:System.Diagnostics.BooleanSwitch> lub użyć tekstu reprezentującego wartość wyliczenia, taką jak `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest odpowiednikiem `<add name="myTraceSwitch" value="1" />`.  
+> W .NET Framework w wersji 2,0 można użyć tekstu, aby określić wartość dla przełącznika. Na przykład można określić `true` dla <xref:System.Diagnostics.BooleanSwitch> lub użyć tekstu reprezentującego wartość wyliczenia, taką jak `Error` dla <xref:System.Diagnostics.TraceSwitch>. Wiersz `<add name="myTraceSwitch" value="Error" />` jest równoznaczny z `<add name="myTraceSwitch" value="1" />`.  
   
 ```xml  
 <configuration>  

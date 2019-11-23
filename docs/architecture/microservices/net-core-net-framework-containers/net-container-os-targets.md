@@ -46,4 +46,4 @@ Po dodaniu nazwy obrazu do pliku pliku dockerfile można wybrać system operacyj
 
 > [!div class="step-by-step"]
 > [Poprzedni](container-framework-choice-factors.md)
-> [dalej](official-net-docker-images.md)
+> [Następny](official-net-docker-images.md)

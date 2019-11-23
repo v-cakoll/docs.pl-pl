@@ -46,7 +46,7 @@ Trzecia aplikacja to 3-warstwowa aplikacja, która składa się z aplikacji WinF
 
 Wszystkie te aplikacje są dostępne w [repozytorium GitHub eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 Głównym celem tego przewodnika jest po prostu zaznajomienie się z tymi aplikacjami oraz ich kodem i konfiguracją. Aplikacje można skonfigurować w taki sposób, aby generowały i używały danych makiety bez używania bazy danych SQL do celów testowych. Ta opcjonalna konfiguracja jest oparta na iniekcji zależności w oddzielnym sposobie.
 
@@ -70,7 +70,7 @@ Na poniższej ilustracji przedstawiono prosty scenariusz oryginalnej starszej ap
 
 ![Prosty scenariusz architektury oryginalnej starszej aplikacji 3-warstwowej z usługą WCF i aplikacją kliencką WinForms](./media/image5-1.5.png)
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Zalety tego instruktażu są proste: po prostu zapoznaj się z kodem i początkowymi aplikacjami.
 
@@ -87,7 +87,7 @@ Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub 
 
 Użyj kontenerów systemu Windows, aby usprawnić wdrażanie istniejących aplikacji platformy .NET, takich jak te oparte na technologii MVC, Web Forms lub WCF, w środowiskach produkcyjnych, programistycznych i testowych.
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 Celem tego instruktażu jest wyświetlenie kilku opcji konteneryzowania istniejącej aplikacji .NET Framework. Można:
 
@@ -111,7 +111,7 @@ Na poniższej ilustracji przedstawiono scenariusz dla aplikacji 3-warstwowej z u
 
 ![Uproszczony diagram architektury usługi WCF w kontenerze w środowisku programistycznym](./media/image5-3.5.png)
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Istnieją zalety uruchamiania aplikacji monolitycznej w kontenerze. Najpierw utworzysz obraz dla aplikacji. Od tego momentu każde wdrożenie jest uruchamiane w tym samym środowisku. Każdy kontener używa tej samej wersji systemu operacyjnego, ma taką samą wersję zależności, korzysta z tej samej wersji programu .NET Framework i został skompilowany przy użyciu tego samego procesu. W zasadzie można kontrolować zależności aplikacji przy użyciu obrazu platformy Docker. Zależności są przesyłane wraz z aplikacją podczas wdrażania kontenerów.
 
@@ -138,7 +138,7 @@ Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopMo
 
 Wdrożenie na hoście Docker na maszynie wirtualnej z systemem Windows Server 2016 (VM) na platformie Azure pozwala szybko skonfigurować środowisko deweloperskie/testowe/przejściowe. Zapewnia również typowe miejsce dla testerów lub użytkowników firmowych w celu zweryfikowania aplikacji. Maszyny wirtualne mogą również być prawidłowymi środowiskami produkcyjnymi infrastruktury jako usługi (IaaS).
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 Celem tego przewodnika jest przedstawienie wielu alternatyw, które są używane podczas wdrażania kontenerów systemu Windows na maszynach wirtualnych platformy Azure, które są oparte na systemie Windows Server 2016 lub nowszym.
 
@@ -170,7 +170,7 @@ Maszyny wirtualne platformy Azure dla kontenerów systemu Windows są maszynami 
 
 Platforma Azure udostępnia teraz maszynę wirtualną o nazwie **Windows Server 2016 z kontenerami**. Za pomocą tej maszyny wirtualnej można wypróbować nową funkcję kontenera systemu Windows Server z systemem Windows Server Core lub Windows nano Server. Obrazy systemu operacyjnego kontenera są zainstalowane, a następnie maszyna wirtualna jest gotowa do użycia z platformą Docker.
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Chociaż kontenery systemu Windows można wdrażać na lokalnych maszynach wirtualnych z systemem Windows Server 2016, podczas wdrażania na platformie Azure można łatwiej rozpocząć pracę z gotowymi do użycia maszyn wirtualnych kontenerów systemu Windows Server. Możesz również uzyskać wspólną lokalizację online dostępną dla testerów oraz automatyczną skalowalność za pomocą zestawów skalowania maszyn wirtualnych platformy Azure.
 
@@ -192,7 +192,7 @@ Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopMo
 
 [Azure Container Instances (ACI)](https://docs.microsoft.com/azure/container-instances/) to najszybszy sposób tworzenia kontenerów w środowisku deweloperskim/testowym/przejściowym, w którym można wdrożyć pojedyncze wystąpienia kontenerów.
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 W tym instruktażu przedstawiono główne scenariusze wdrażania kontenerów systemu Windows w programie Azure Container Instances (ACI) oraz sposobu wdrażania aplikacji eShopModernizing w programie ACI.
 
@@ -202,7 +202,7 @@ Mogą istnieć różne odmiany dotyczące wdrażania aplikacji eShopModernizing 
 
 ![Wdrażanie w programie ACI z poziomu środowiska programistycznego](./media/image5-3.5.6.png)
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Azure Container Instances ułatwia tworzenie kontenerów platformy Docker na platformie Azure i zarządzanie nimi bez konieczności aprowizacji maszyn wirtualnych ani wdrażania usług wyższego poziomu. Za pomocą ACI można bezpośrednio wdrożyć kontener systemu Windows na platformie Azure i uwidocznić go w Internecie za pomocą w pełni kwalifikowanej nazwy domeny (FQDN) w ciągu kilku sekund (pod warunkiem, że obraz kontenera systemu Windows jest gotowy do użycia w rejestrze Docker, np. w usłudze Docker Hub lub kontenera platformy Azure) Rejestr).
 
@@ -230,7 +230,7 @@ Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopMo
 
 Aplikacja, która jest oparta na kontenerach systemu Windows, będzie szybko potrzebować do użycia Platform, a nawet dalej z maszyn wirtualnych IaaS. Jest to konieczne w celu łatwego osiągnięcia wysokiej skalowalności i lepszej automatycznej skalowalności oraz znaczących ulepszeń zautomatyzowanych wdrożeń i przechowywania wersji. Cele te można osiągnąć przy użyciu [Kubernetes](https://kubernetes.io/)programu Orchestrator, dostępnego w usłudze [Azure Container Services](https://azure.microsoft.com/services/container-service/).
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na kontenerach systemu Windows w usłudze Kubernetes (nazywanej również *K8s*) w Azure Container Service. Wdrażanie do Kubernetes od podstaw jest procesem dwuetapowym:
 
@@ -252,7 +252,7 @@ Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na
 
 **Rysunek 5-8.** Wdrażanie w klastrze Kubernetes z potoków ciągłej integracji/ciągłego wdrażania w Azure DevOps Services
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Wdrożenie w klastrze w programie Kubernetes ma wiele zalet. Największą korzyścią jest to, że możesz uzyskać gotowe do użycia środowisko produkcyjne, w którym można skalować aplikację na podstawie liczby wystąpień kontenerów, które mają być używane (skalowalność wewnętrzna w istniejących węzłach) i na podstawie liczby węzłów lub maszyn wirtualnych w klastrze ( globalna skalowalność klastra).
 
@@ -290,7 +290,7 @@ Pełny przewodnik techniczny jest dostępny na stronie wiki repozytorium eShopMo
 
 Prostą aplikację kontenerową korzystającą z kontenerów systemu Windows można łatwo wdrożyć do Azure App Service dla kontenerów. Jest to zalecane podejście dla większości aplikacji opartych na kontenerach systemu Windows.
 
-### <a name="goals"></a>Wyniki
+### <a name="goals"></a>Cele
 
 Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na kontenerach systemu Windows w celu Azure App Service kontenerów z rejestru (centrum Docker lub Azure Container Registry).
 
@@ -298,7 +298,7 @@ Celem tego instruktażu jest nauczenie się, jak wdrożyć aplikację opartą na
 
 ![Wdrażanie aplikacji opartej na kontenerze systemu Windows w celu Azure App Service dla kontenerów](./media/image5-11.png)
 
-### <a name="benefits"></a>Zalety
+### <a name="benefits"></a>Korzyści
 
 Wdrożenie do Azure App Service for Containers oferuje zalety kontenerów sparowanych z zaletami Azure App Service. Usługa App Service może być łatwo skalowana w pionie i w poziomie i można ją skonfigurować do automatycznego skalowania w celu spełnienia zmienionych wymagań. Aktualizacje mogą być przeprowadzane z zerowym przestojem, a Konfiguracja ciągłego wdrażania z rejestru jest również łatwa do skonfigurowania.
 
@@ -308,4 +308,4 @@ Więcej szczegółowych informacji na ten temat znajduje się w witrynie GitHub 
 
 > [!div class="step-by-step"]
 > [Poprzedni](modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md)
-> [dalej](conclusions.md) <!-- Next Chapter -->
+> [Następny](conclusions.md) <!-- Next Chapter -->

@@ -330,4 +330,4 @@ public class Address
 
 > [!div class="step-by-step"]
 > [Poprzedni](seedwork-domain-model-base-classes-interfaces.md)
-> [dalej](enumeration-classes-over-enum-types.md)
+> [Następny](enumeration-classes-over-enum-types.md)

@@ -1,5 +1,5 @@
 ---
-title: Odporność natywną w chmurze
+title: Odporność rozwiązań natywnych dla chmury
 description: Tworzenie architektury natywnych aplikacji .NET w chmurze dla platformy Azure | Natywna odporność w chmurze
 ms.date: 06/30/2019
 ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184842"
 ---
-# <a name="cloud-native-resiliency"></a>Odporność natywną w chmurze
+# <a name="cloud-native-resiliency"></a>Odporność rozwiązań natywnych dla chmury
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -26,7 +26,7 @@ Na poprzedniej ilustracji należy zwrócić uwagę na to, jak każdy klient, mik
 Co może być niewłaściwe?
 
 - Nieoczekiwane [opóźnienie sieci](https://www.techopedia.com/definition/8553/network-latency).
-- [Błędy przejściowe](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (tymczasowe błędy łączności sieciowej).
+- Błędy [przejściowe](https://docs.microsoft.com/azure/architecture/best-practices/transient-faults) (tymczasowe błędy łączności sieciowej).
 - Blokowanie przez długotrwałą operację synchroniczną.
 - Proces hosta, który uległ awarii i jest ponownie uruchamiany lub przenoszony.
 - Przeciążona mikrousługa, która nie może odpowiadać przez krótki czas.

@@ -31,7 +31,7 @@ Podczas testowania jednostek akcji kontrolera Pamiętaj, aby skoncentrować się
 
 Testy jednostkowe są implementowane na podstawie platform testowych, takich jak xUnit.net, MSTest, MOQ lub NUnit. W przypadku przykładowej aplikacji eShopOnContainers korzystamy z xUnit.
 
-Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego New w języku C \#, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
+Podczas pisania testu jednostkowego dla kontrolera interfejsu API sieci Web, można utworzyć wystąpienie klasy kontrolera bezpośrednio przy użyciu słowa kluczowego New w języku C\#, aby test działał tak szybko, jak to możliwe. Poniższy przykład pokazuje, jak to zrobić przy użyciu [xUnit](https://xunit.github.io/) jako środowiska testowego.
 
 ```csharp
 [Fact]
@@ -110,16 +110,16 @@ public class PrimeWebDefaultRequestShould
 - **Testowanie jednostkowe w programie .NET Core przy użyciu testu dotnet** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
-- **xUnit.NET**. Oficjalna lokacja. \
+- **xUnit.net**. Oficjalna lokacja. \
     <https://xunit.github.io/>
 
 - **Podstawowe informacje o teście jednostkowym.** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
-- **MOQ**. Repozytorium GitHub. \
+- **Moq**. Repozytorium GitHub. \
     <https://github.com/moq/moq>
 
-- **Nunit**. Oficjalna lokacja. \
+- **NUnit**. Oficjalna lokacja. \
     <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementowanie testów usługi w aplikacji wielokontenera
@@ -148,7 +148,7 @@ Test jednostkowy i integracji na mikrousług są zawarte w folderze testowym w k
 
 **Rysunek 6-25**. Testuj strukturę folderów w eShopOnContainers
 
-Testy funkcjonalne i funkcjonalne/integracji aplikacji są uruchamiane z programu Visual Studio przy użyciu modułu uruchamiającego testy regularne, ale najpierw należy uruchomić wymagane usługi infrastruktury, za pomocą zestawu plików do redagowania systemu Docker zawartego w folderze testowym rozwiązania. :
+Testy funkcjonalne i funkcjonalne/integracji aplikacji są uruchamiane z programu Visual Studio, przy użyciu modułu uruchamiającego testy regularne, ale najpierw należy uruchomić wymagane usługi infrastruktury za pomocą zestawu plików programu Docker, które znajdują się w folderze testowym rozwiązania:
 
 **Docker-Compose-test. yml**
 
@@ -166,7 +166,7 @@ services:
     image: mongo
 ```
 
-**Docker-Compose-test. override. yml**
+**docker-compose-test.override.yml**
 
 ```yml
 version: '3.4'
@@ -208,4 +208,4 @@ Jak widać, te pliki tworzące platformę Docker umożliwiają uruchamianie tylk
 
 > [!div class="step-by-step"]
 > [Poprzedni](subscribe-events.md)
-> [dalej](background-tasks-with-ihostedservice.md)
+> [Następny](background-tasks-with-ihostedservice.md)

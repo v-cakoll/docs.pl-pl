@@ -28,7 +28,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  Narzędzie można znaleźć w następującej lokalizacji  
   
- %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
+ %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
  Aby uzyskać więcej informacji na temat programu ComSvcConfig. exe, zobacz [How to: use a com+ Service Model Configuration Tool](./feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
@@ -36,24 +36,24 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`install`|Instaluje konfigurację interfejsu COM+ dla integracji modelu usług.<br /><br /> Krótka forma `/i`.|  
-|`uninstall`|Odinstalowuje konfigurację interfejsu COM+ z integracji modelu usług.<br /><br /> Krótka forma `/u`.|  
-|`list`|Wyświetla listę informacji dotyczących aplikacji i składników modelu COM+ z interfejsami skonfigurowanymi do integracji z modelem usług.<br /><br /> Krótka forma `/l`.|  
+|`install`|Instaluje konfigurację interfejsu COM+ dla integracji modelu usług.<br /><br /> Krótka `/i`formularza.|  
+|`uninstall`|Odinstalowuje konfigurację interfejsu COM+ z integracji modelu usług.<br /><br /> Krótka `/u`formularza.|  
+|`list`|Wyświetla listę informacji dotyczących aplikacji i składników modelu COM+ z interfejsami skonfigurowanymi do integracji z modelem usług.<br /><br /> Krótka `/l`formularza.|  
   
  W poniższej tabeli opisano flagi, które mogą być używane z ComSvcConfig. exe.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|`/application:` \< &#124; *ApplicationName*aplikacji \>|Określa aplikację COM+ do skonfigurowania.<br /><br /> Krótka forma `/a`.|  
-|`/contract:` \< &#124; *Identyfikator* &#124; ClassID \*,*InterfaceID* &#124; *InterfaceName* &#124; 1 @ no__t-12|Określa składnik i interfejs modelu COM+, który zostanie skonfigurowany jako kontrakt dla usługi.<br /><br /> Krótka forma `/c`.<br /><br /> Symbol wieloznaczny (\*) może być używany podczas określania nazw składników i interfejsów, dlatego zalecamy, aby nie używać go, ponieważ mogą ujawniać interfejsy, które nie zostały zamierzone.|  
-|`/hosting:` \<*ComPlus* &#124; *został*\>|Określa, czy ma być używany tryb hostingu modelu COM+ czy tryb hostingu w sieci Web.<br /><br /> Krótka forma `/h`.<br /><br /> Użycie trybu hostingu modelu COM+ wymaga jawnej aktywacji aplikacji modelu COM+. Użycie trybu hostingu w sieci Web umożliwia automatyczne Aktywowanie aplikacji COM+ w razie potrzeby. Jeśli aplikacja modelu COM+ jest aplikacją biblioteki, działa w procesie Internet Information Services (IIS). Jeśli aplikacja COM+ jest aplikacją serwerową, działa w procesie dllhost. exe.|  
-|`/webSite:` \<*websitename*\>|Określa witrynę sieci Web do hostowania, gdy jest używany tryb hostingu w sieci Web (patrz flaga `/hosting`).<br /><br /> Krótka forma `/w`.<br /><br /> Jeśli żadna witryna sieci Web nie zostanie określona, zostanie użyta domyślna witryna sieci Web.|  
-|`/webDirectory:` \<*Webdirectoryname*\>|Określa katalog wirtualny do hostowania, gdy jest używany hosting w sieci Web (patrz flaga `/hosting`).<br /><br /> Krótka forma `/d`.|  
-|`/mex`|Dodaje punkt końcowy usługi wymiany metadanych (MEX) do domyślnej konfiguracji usługi w celu obsługi klientów, którzy chcą pobrać definicję kontraktu z usługi.<br /><br /> Krótka forma `/x`.|  
-|`/id`|Wyświetla informacje o aplikacji, składniku i interfejsie jako identyfikatory.<br /><br /> Krótka forma `/k`.|  
-|`/nologo`|Uniemożliwia programowi ComSvcConfig. exe wyświetlanie jego logo.<br /><br /> Krótka forma `/n`.|  
-|`/verbose`|Oprócz napotkanych błędów są wyprowadzane wszystkie ostrzeżenia lub tekst informacyjny.<br /><br /> Krótka forma `/v`.|  
-|`/help`|Wyświetla komunikat o użyciu.<br /><br /> Krótka forma `/?`.|  
+|`/application:` \< &#124; *ApplicationName*\>|Określa aplikację COM+ do skonfigurowania.<br /><br /> Krótka `/a`formularza.|  
+|`/contract:` \< &#124; *ProgID* &#124; o identyfikatorze ClassID *\*InterfaceID* &#124; *InterfaceName* &#124; \*\>|Określa składnik i interfejs modelu COM+, który zostanie skonfigurowany jako kontrakt dla usługi.<br /><br /> Krótka `/c`formularza.<br /><br /> Symbol wieloznaczny (\*) może być używany podczas określania nazw składników i interfejsów, dlatego zalecamy, aby nie używać go, ponieważ mogą ujawniać interfejsy, które nie zostały zamierzone.|  
+|`/hosting:` \<*complus*  &#124; *was*\>|Określa, czy ma być używany tryb hostingu modelu COM+ czy tryb hostingu w sieci Web.<br /><br /> Krótka `/h`formularza.<br /><br /> Użycie trybu hostingu modelu COM+ wymaga jawnej aktywacji aplikacji modelu COM+. Użycie trybu hostingu w sieci Web umożliwia automatyczne Aktywowanie aplikacji COM+ w razie potrzeby. Jeśli aplikacja modelu COM+ jest aplikacją biblioteki, działa w procesie Internet Information Services (IIS). Jeśli aplikacja COM+ jest aplikacją serwerową, działa w procesie dllhost. exe.|  
+|`/webSite:` \<*websitename*\>|Określa witrynę sieci Web do hostowania, gdy jest używany tryb hostingu w sieci Web (patrz flaga `/hosting`).<br /><br /> Krótka `/w`formularza.<br /><br /> Jeśli żadna witryna sieci Web nie zostanie określona, zostanie użyta domyślna witryna sieci Web.|  
+|`/webDirectory:` \<*Webdirectoryname*\>|Określa katalog wirtualny do hostowania, gdy jest używany hosting w sieci Web (patrz flaga `/hosting`).<br /><br /> Krótka `/d`formularza.|  
+|`/mex`|Dodaje punkt końcowy usługi wymiany metadanych (MEX) do domyślnej konfiguracji usługi w celu obsługi klientów, którzy chcą pobrać definicję kontraktu z usługi.<br /><br /> Krótka `/x`formularza.|  
+|`/id`|Wyświetla informacje o aplikacji, składniku i interfejsie jako identyfikatory.<br /><br /> Krótka `/k`formularza.|  
+|`/nologo`|Uniemożliwia programowi ComSvcConfig. exe wyświetlanie jego logo.<br /><br /> Krótka `/n`formularza.|  
+|`/verbose`|Oprócz napotkanych błędów są wyprowadzane wszystkie ostrzeżenia lub tekst informacyjny.<br /><br /> Krótka `/v`formularza.|  
+|`/help`|Wyświetla komunikat o użyciu.<br /><br /> Krótka `/?`formularza.|  
 |`/partial`|Generuje konfigurację usługi, gdy określony interfejs zawiera jeden lub więcej podpisów metod, które mogą być uwidocznione. W czasie inicjalizacji usługi zgodne metody są wyświetlane jako operacje w kontrakcie usługi, a niezgodne metody są ignorowane i nie są obecne w kontrakcie usługi.<br /><br /> W przypadku braku tej flagi narzędzie nie generuje konfiguracji usługi, gdy określony interfejs zawiera co najmniej jedną niezgodną metodę.|  
   
 ## <a name="examples"></a>Przykłady  

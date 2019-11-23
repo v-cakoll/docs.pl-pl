@@ -23,4 +23,4 @@ Ten rozdział dzieli podstawowe informacje o poszczególnych składnikach.
 
 >[!div class="step-by-step"]
 >[Poprzedni](serverless-design-examples.md)
->[dalej](azure-functions.md)
+>[Następny](azure-functions.md)

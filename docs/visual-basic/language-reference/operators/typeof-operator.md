@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
 ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71701285"
@@ -37,13 +37,13 @@ result = TypeOf objectexpression IsNot typename
  Zwracać. Wartość `Boolean`.  
   
  `objectexpression`  
- Wymagany. Dowolne wyrażenie, którego wynikiem jest typ referencyjny.  
+ Wymagana. Dowolne wyrażenie, którego wynikiem jest typ referencyjny.  
   
  `typename`  
- Wymagany. Dowolna nazwa typu danych.  
+ Wymagana. Dowolna nazwa typu danych.  
   
 ## <a name="remarks"></a>Uwagi  
- Operator `TypeOf` Określa, czy typ czasu wykonywania `objectexpression` jest zgodny z `typename`. Zgodność zależy od kategorii typu `typename`. W poniższej tabeli przedstawiono sposób określania zgodności.  
+ Operator `TypeOf` określa, czy typ czasu wykonywania `objectexpression` jest zgodny z `typename`. Zgodność zależy od kategorii typu `typename`. W poniższej tabeli przedstawiono sposób określania zgodności.  
   
 |Kategoria typu `typename`|Kryterium zgodności|  
 |---------------------------------|-----------------------------|  
@@ -51,16 +51,16 @@ result = TypeOf objectexpression IsNot typename
 |Struktura|`objectexpression` jest typu `typename`|  
 |Interface|`objectexpression` implementuje `typename` lub dziedziczy z klasy implementującej `typename`|  
   
- Jeśli typ czasu wykonywania `objectexpression` spełnia kryteria zgodności, `result` jest `True`. W przeciwnym razie `result` jest `False`.  Jeśli `objectexpression` ma wartość null, wówczas `TypeOf`... `Is` zwraca `False`, i... `IsNot` zwraca `True`.  
+ Jeśli typ czasu wykonywania `objectexpression` spełnia kryterium zgodności, `result` jest `True`. W przeciwnym razie `result` jest `False`.  Jeśli `objectexpression` ma wartość null, `TypeOf`...`Is` zwraca `False`, a...`IsNot` zwraca `True`.  
   
- `TypeOf` jest zawsze używana ze słowem kluczowym `Is` do konstruowania wyrażenia `TypeOf`... `Is` lub za pomocą słowa kluczowego `IsNot`, aby utworzyć `TypeOf`... `IsNot` wyrażenie.  
+ `TypeOf` jest zawsze używana ze słowem kluczowym `Is` do konstruowania wyrażenia `TypeOf`...`Is`, lub za pomocą słowa kluczowego `IsNot` do konstruowania wyrażenia `TypeOf`...`IsNot`.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie są stosowane wyrażenia `TypeOf`... `Is` do testowania zgodności typów dwóch zmiennych odwołań do obiektów z różnymi typami danych.  
+ W poniższym przykładzie przedstawiono użycie wyrażeń `TypeOf`...`Is` w celu przetestowania zgodności typów dwóch zmiennych odwołań do obiektów z różnymi typami danych.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- Zmienna `refInteger` ma typ czasu wykonywania `Integer`. Jest on zgodny z `Integer`, ale nie z `Double`. Zmienna `refForm` ma typ czasu wykonywania <xref:System.Windows.Forms.Form>. Jest on zgodny z <xref:System.Windows.Forms.Form>, ponieważ jest to jego typ z <xref:System.Windows.Forms.Control>, ponieważ <xref:System.Windows.Forms.Form> dziedziczy z <xref:System.Windows.Forms.Control> i z <xref:System.ComponentModel.IComponent>, ponieważ <xref:System.ComponentModel.Component> dziedziczy z @no__t-, który implementuje <xref:System.ComponentModel.IComponent>. Jednak `refForm` nie jest zgodny z <xref:System.Windows.Forms.Label>.  
+ Zmienna `refInteger` ma typ `Integer`w czasie wykonywania. Jest on zgodny z `Integer`, ale nie z `Double`. Zmienna `refForm` ma typ <xref:System.Windows.Forms.Form>w czasie wykonywania. Jest on zgodny z <xref:System.Windows.Forms.Form>, ponieważ jest typem, z <xref:System.Windows.Forms.Control>, ponieważ <xref:System.Windows.Forms.Form> dziedziczy z <xref:System.Windows.Forms.Control>i z <xref:System.ComponentModel.IComponent>, ponieważ <xref:System.Windows.Forms.Form> dziedziczy z <xref:System.ComponentModel.Component>, który implementuje <xref:System.ComponentModel.IComponent>. Jednak `refForm` nie jest zgodny z <xref:System.Windows.Forms.Label>.  
   
 ## <a name="see-also"></a>Zobacz także
 

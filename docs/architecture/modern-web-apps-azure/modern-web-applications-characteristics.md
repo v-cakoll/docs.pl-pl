@@ -14,7 +14,7 @@ ms.locfileid: "70374087"
 # <a name="characteristics-of-modern-web-applications"></a>Charakterystyki nowoczesnych aplikacji sieci Web
 
 > "… przy odpowiednim projekcie funkcje są tanie. To podejście jest uciążliwy, ale nadal kończy się powodzeniem ".  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 Nowoczesne aplikacje sieci Web mają wyższy poziom oczekiwań użytkowników i większe wymagania niż kiedykolwiek wcześniej. Oczekuje się, że dzisiejsze aplikacje sieci Web będą dostępne 24/7 z dowolnego miejsca na świecie i mogą być używane praktycznie dla każdego urządzenia lub rozmiaru ekranu. Aplikacje sieci Web muszą być bezpieczne, elastyczne i skalowalne, aby sprostać wzrostom popytu. Coraz bardziej złożone scenariusze powinny być obsługiwane przez bogate środowiska użytkownika, które są tworzone na kliencie przy użyciu języka JavaScript, i wydajnie komunikują się za pośrednictwem interfejsów API sieci Web.
 
@@ -77,5 +77,5 @@ Oprócz ASP.NET Core, tradycyjne ASP.NET 4. x nadal są niezawodną i niezawodn�
 >   <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](choose-between-traditional-web-and-single-page-apps.md)
+>[Poprzedni](index.md)
+>[Następny](choose-between-traditional-web-and-single-page-apps.md)

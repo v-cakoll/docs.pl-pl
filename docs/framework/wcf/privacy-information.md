@@ -54,7 +54,7 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ## <a name="auditing"></a>Inspekcja  
  Inspekcja rejestruje sukces i niepowodzenie uwierzytelniania i zdarzeń autoryzacji. Rekordy inspekcji zawierają następujące dane: identyfikator URI usługi, identyfikator URI akcji i identyfikator obiektu wywołującego.  
   
- Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku [!INCLUDE[wxp](../../../includes/wxp-md.md)] rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W przypadku [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
+ Inspekcja jest rejestrowana także wtedy, gdy administrator modyfikuje konfigurację rejestrowania komunikatów (Włączanie lub wyłączanie), ponieważ rejestrowanie komunikatów może rejestrować dane specyficzne dla aplikacji w nagłówkach i treściach. W przypadku [!INCLUDE[wxp](../../../includes/wxp-md.md)]rekord jest rejestrowany w dzienniku zdarzeń aplikacji. W przypadku [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]rekord jest rejestrowany w dzienniku zdarzeń zabezpieczeń.  
   
 ## <a name="transactions"></a>Transakcje  
  Funkcja transakcji zapewnia usługi transakcyjne w aplikacji WCF.  
@@ -147,57 +147,57 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  wsse:BinarySecurityToken  
   
- \- dla xmlns: SAML = "urn: języka Oasis: names: TC: SAML: 1.0: Assertion" są usuwane elementy pogrubione (poniżej):  
+ \- dla xmlns: SAML = "urn: języka Oasis: names: TC: SAML: 1.0: Assertion" usunięto elementy pogrubione (poniżej):  
   
- @no__t — 0Assertion  
+ Potwierdzenie \<  
   
- MajorVersion = "1"  
+ MajorVersion="1"  
   
- MinorVersion = "1"  
+ MinorVersion="1"  
   
- AssertionId = "[ID]"  
+ AssertionId="[ID]"  
   
  Issuer = "[ciąg]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<Conditions NotBefore = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- @no__t — 0AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [URI] \</odbiorców > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</element AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition/> *  
   
- < @ no__t-1--abstrakcyjny typ podstawowy  
+ <\!— abstrakcyjny typ podstawowy  
   
- \<Condition/> *  
+ \<warunek/> *  
   
  -->  
   
- \</> warunków?  
+ \</Conditions >?  
   
- @no__t — 0Advice >  
+ \<wskazówki >  
   
- \<AssertionIDReference > [ID] \</Advice > *  
+ \<Advice > [ID]\</AssertionIDReference > *  
   
- \<Assertion > [Assertion] \</potwierdzenie > *  
+ \<Assertion > [Assertion]\</Assertion > *  
   
  [any] *  
   
- \</> porady?  
+ \</Advice >?  
   
- < @ no__t-1--abstrakcyjne typy podstawowe  
+ <\!— abstrakcyjne typy podstawowe  
   
- \<Statement/> *  
+ \<instrukcja/> *  
   
- @no__t — 0SubjectStatement >  
+ \<SubjectStatement>  
   
- @no__t — 0Subject >  
+ \<podmiot >  
   
  `<NameIdentifier`  
   
@@ -211,27 +211,27 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  `</NameIdentifier>?`  
   
- @no__t — 0SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyUri] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any] \</danych SubjectConfirmationData >?  
+ \<danych SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<DS: KeyInfo >... \</DS: KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</> podmiotu  
+ \</Subject>  
   
- \</SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
- @no__t — 0AuthenticationStatement  
+ \<AuthenticationStatement  
   
  Wartość uwierzytelniania = "[URI]"  
   
- AuthenticationInstant = "[dateTime]"  
+ AuthenticationInstant="[dateTime]"  
   
  >  
   
@@ -245,59 +245,59 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  `/>?`  
   
- < AuthorityBinding  
+ <AuthorityBinding  
   
- AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
  Location = "[URI]"  
   
- Binding = "[URI]"  
+ Binding="[uri]"  
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- @no__t — 0AttributeStatement >  
+ \<AttributeStatement>  
   
  Dawane  
   
- @no__t — 0Attribute  
+ Atrybut \<  
   
- AttributeName = "[ciąg]"  
+ AttributeName="[string]"  
   
- AttributeNamespace = "[URI]"  
+ AttributeNamespace="[uri]"  
   
  >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</atrybut > +  
+ \</Attribute>+  
   
- \</AttributeStatement > *  
+ \</AttributeStatement>*  
   
- @no__t — 0AuthorizationDecisionStatement  
+ \<AuthorizationDecisionStatement  
   
- Zasób = "[URI]"  
+ Resource="[uri]"  
   
- Decyzja = "[Zezwalaj&#124;na&#124;odmowę nieokreślony]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  Dawane  
   
- \<Action przestrzeń nazw = "[URI]" > [ciąg] \</Action > +  
+ \<akcji namespace = "[URI]" > [ciąg]\</Action > +  
   
- @no__t — 0Evidence >  
+ \<dowód >  
   
- \<AssertionIDReference > [ID] \</Advice > +  
+ \<Advice > [ID]\</AssertionIDReference > +  
   
- \<Assertion > [Assertion] \</potwierdzenie > +  
+ \<Assertion > [Assertion]\</Assertion > +  
   
- \</dowód >?  
+ \</Evidence >?  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- > \</potwierdzenie  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informacje usunięte z treści komunikatów podczas rejestrowania odszyfrowanych/nieszyfrowanych wiadomości  
  Jak opisano wcześniej, usługa WCF usuwa klucze i znane potencjalnie dane osobowe z nagłówków komunikatów dla rejestrowanych, odszyfrowanych/nieszyfrowanych wiadomości. Ponadto WCF usuwa klucze i znane potencjalnie dane osobowe z treści wiadomości dla elementów treści i działań na poniższej liście, które opisują komunikaty zabezpieczeń związane z wymianą kluczy.  
@@ -308,11 +308,11 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
   
  Informacje są usuwane dla tych elementów treści, które obejmują wymianę kluczy:  
   
- wst: RequestSecurityToken  
+ wst:RequestSecurityToken  
   
- wst: RequestSecurityTokenResponse  
+ wst:RequestSecurityTokenResponse  
   
- wst: RequestSecurityTokenResponsecollection  
+ wst:RequestSecurityTokenResponseCollection  
   
  Informacje są również usuwane dla każdej z następujących akcji:  
   
@@ -381,10 +381,10 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ### <a name="it-pro-tools"></a>Narzędzia Pro IT  
  Usługa WCF udostępnia również następujące narzędzia profesjonalne, które są dostarczane w Windows SDK.  
   
-#### <a name="svctraceviewerexe"></a>SvcTraceViewer. exe  
+#### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  W podglądzie są wyświetlane pliki śledzenia WCF. Podgląd pokazuje, jakie informacje są zawarte w śladach.  
   
-#### <a name="svcconfigeditorexe"></a>SvcConfigEditor. exe  
+#### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
  Edytor umożliwia użytkownikowi tworzenie i edytowanie plików konfiguracji WCF. Edytor pokazuje, jakie informacje są zawarte w plikach konfiguracji. To samo zadanie można wykonać za pomocą edytora tekstu.  
   
 #### <a name="servicemodel_reg"></a>ServiceModel_Reg  
@@ -404,4 +404,4 @@ Firma Microsoft jest zobowiązana do ochrony prywatności użytkowników końcow
 ## <a name="see-also"></a>Zobacz także
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [Zabezpieczenia](./feature-details/security.md)

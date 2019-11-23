@@ -9,16 +9,16 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834022"
 ---
-# <a name="serviceauthorization-element"></a>\<serviceAuthorization > elementu
+# <a name="serviceauthorization-element"></a>Element > \<ServiceAuthorization
 
 Określa ustawienia, które autoryzują dostęp do operacji usługi
 
-[ **\<configuration >** ](../configuration-element.md)\
-&nbsp; @ no__t-1[ **\<system. serviceModel >** ](system-servicemodel.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<behaviors >** ](behaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0behavior >** ](behavior-of-servicebehaviors.md)1
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8 @ no__t-9 **&nbsp;1serviceAuthorization >**  
+[ **\<> konfiguracji**](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**zachowania\<** ](behaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**serviceBehaviors**](servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<zachowanie**](behavior-of-servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ServiceAuthorization >**  
 
 ## <a name="syntax"></a>Składnia
 
@@ -56,13 +56,13 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1behavior >](behavior-of-endpointbehaviors.md)|Zawiera kolekcję ustawień zachowania usługi.|  
+|[zachowanie \<>](behavior-of-endpointbehaviors.md)|Zawiera kolekcję ustawień zachowania usługi.|  
 
 ## <a name="remarks"></a>Uwagi
 
 Ta sekcja zawiera elementy wpływające na autoryzację, niestandardowych dostawców ról i personifikacji.  
   
-Atrybut `principalPermissionMode` określa grupy użytkowników do użycia podczas autoryzowania używania metody chronionej. Wartość domyślna to `UseWindowsGroups` i określa, że grupy systemu Windows, takie jak "Administratorzy" lub "Użytkownicy", są wyszukiwane pod kątem tożsamości próbującej uzyskać dostęp do zasobu. Możesz również określić `UseAspNetRoles`, aby użyć niestandardowego dostawcy roli, który jest skonfigurowany w ramach elementu @no__t -1System. Web >, jak pokazano w poniższym kodzie:
+Atrybut `principalPermissionMode` określa grupy użytkowników do użycia podczas autoryzowania używania metody chronionej. Wartość domyślna to `UseWindowsGroups` i określa, że grupy systemu Windows, takie jak "Administratorzy" lub "Użytkownicy", są wyszukiwane pod kątem tożsamości próbującej uzyskać dostęp do zasobu. Możesz również określić `UseAspNetRoles`, aby użyć niestandardowego dostawcy roli, który jest skonfigurowany w ramach elementu \<system. Web >, jak pokazano w poniższym kodzie:
 
 ```xml
 <system.web>
@@ -85,7 +85,7 @@ Atrybut `principalPermissionMode` określa grupy użytkowników do użycia podcz
 </system.web>
 ```
   
-Poniższy kod ilustruje `roleProviderName` używany z atrybutem `principalPermissionMode`:
+Poniższy kod przedstawia `roleProviderName` używany z atrybutem `principalPermissionMode`:
   
 ```xml
 <behaviors>

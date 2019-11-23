@@ -12,7 +12,7 @@ ms.locfileid: "71834522"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5
 
-## <a name="applies-to"></a>Dotyczy:
+## <a name="applies-to"></a>Dotyczy
 
 - Microsoft® Windows® Identity Foundation (WIF) 3,5 i 4,5.
 
@@ -30,33 +30,33 @@ W tej sekcji opisano zmiany, które są wymagane do migrowania aplikacji WIF 3,5
 
 W WIF 3,5 wszystkie klasy WIF zostały zawarte w zestawie `Microsoft.IdentityModel` (Microsoft. identitymicrosoft. IdentityModel. dll). W WIF 4,5 klasy WIF zostały podzielone na następujące zestawy: `mscorlib` (mscorlib. dll), `System.IdentityModel` (System. IdentityModel. dll), `System.IdentityModel.Services` (System. IdentityModel. Services. dll) i `System.ServiceModel` (System. ServiceModel. dll).
 
-Wszystkie klasy WIF 3,5 zostały zawarte w jednej z przestrzeni nazw `Microsoft.IdentityModel`; na przykład `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web` i tak dalej. W WIF 4,5 klasy WIF są teraz rozmieszczane w przestrzeni nazw [System. IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) , przestrzeni nazw <xref:System.Security.Claims?displayProperty=nameWithType> i przestrzeni nazw <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Poza tą reorganizacją niektóre klasy WIF 3,5 zostały porzucone w WIF 4,5.
+Wszystkie klasy WIF 3,5 zostały zawarte w jednej z przestrzeni nazw `Microsoft.IdentityModel`; na przykład `Microsoft.IdentityModel`, `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Web`i tak dalej. W WIF 4,5 klasy WIF są teraz rozmieszczane w przestrzeniach nazw [System. IdentityModel](https://go.microsoft.com/fwlink/?LinkId=272004) , przestrzeń nazw <xref:System.Security.Claims?displayProperty=nameWithType> i przestrzeń nazw <xref:System.ServiceModel.Security?displayProperty=nameWithType>. Poza tą reorganizacją niektóre klasy WIF 3,5 zostały porzucone w WIF 4,5.
 
 W poniższej tabeli przedstawiono niektóre z ważniejszych przestrzeni nazw WIF 4,5 i rodzaj klas, które zawierają. Aby uzyskać bardziej szczegółowe informacje na temat sposobu mapowania przestrzeni nazw między WIF 3,5 i WIF 4,5 oraz o przestrzeniach nazw i klasach, które zostały porzucone w WIF 4,5, zobacz [mapowanie przestrzeni nazw między WIF 3,5 i WIF 4,5](namespace-mapping-between-wif-3-5-and-wif-4-5.md).
 
 |WIF 4,5 — przestrzeń nazw|Opis|
 |-----------------------|-----------------|
-|<xref:System.IdentityModel?displayProperty=nameWithType>|Zawiera klasy reprezentujące przekształcenia plików cookie, usługi tokenów zabezpieczających i wyspecjalizowane czytniki słownika XML. Zawiera klasy z następujących przestrzeni nazw WIF 3,5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService` i `Microsoft.IdentityModel.Threading`.|
+|<xref:System.IdentityModel?displayProperty=nameWithType>|Zawiera klasy reprezentujące przekształcenia plików cookie, usługi tokenów zabezpieczających i wyspecjalizowane czytniki słownika XML. Zawiera klasy z następujących przestrzeni nazw WIF 3,5: `Microsoft.IdentityModel`, `Microsoft.IdentityModel.SecurityTokenService`i `Microsoft.IdentityModel.Threading`.|
 |<xref:System.Security.Claims?displayProperty=nameWithType>|Zawiera klasy reprezentujące oświadczenia, tożsamości oparte na oświadczeniach, podmioty zabezpieczeń oparte na oświadczeniach oraz inne artefakty modelu tożsamości oparte na oświadczeniach. Zawiera klasy z przestrzeni nazw `Microsoft.IdentityModel.Claims`.|
-|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|Zawiera klasy reprezentujące tokeny zabezpieczające, programy obsługi tokenów zabezpieczających i inne artefakty tokenów zabezpieczających. Zawiera klasy z następujących przestrzeni nazw WIF 3,5: `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Tokens.Saml11` i `Microsoft.IdentityModel.Tokens.Saml2`.|
+|<xref:System.IdentityModel.Tokens?displayProperty=nameWithType>|Zawiera klasy reprezentujące tokeny zabezpieczające, programy obsługi tokenów zabezpieczających i inne artefakty tokenów zabezpieczających. Zawiera klasy z następujących przestrzeni nazw WIF 3,5: `Microsoft.IdentityModel.Tokens`, `Microsoft.IdentityModel.Tokens.Saml11`i `Microsoft.IdentityModel.Tokens.Saml2`.|
 |<xref:System.IdentityModel.Services?displayProperty=nameWithType>|Zawiera klasy, które są używane w scenariuszach pasywnych (WS-Federation). Zawiera klasy z przestrzeni nazw `Microsoft.IdentityModel.Web`.|
 |<xref:System.ServiceModel.Security?displayProperty=nameWithType>|Klasy reprezentujące kontrakty, kanały, hosty usług i inne artefakty, które są używane w scenariuszach Active (WS-Trust), są teraz w tej przestrzeni nazw. W WIF 3,5 te klasy znajdowały się w przestrzeni nazw `Microsoft.IdentityModel.Protocols.WSTrust`.|
 
 > [!IMPORTANT]
-> Następujące przestrzenie nazw `System.IdentityModel` zawierają klasy implementujące model tożsamości opartych na oświadczeniach WCF: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType> i <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>. Model zarządzania tożsamościami oparty na oświadczeniach stosowany w środowisku WCF jest zastąpiony modelem ze środowiska WIF. Nie należy używać klas w tych trzech przestrzeniach nazw podczas kompilowania rozwiązań opartych na WIF.
+> Poniższe przestrzenie nazw `System.IdentityModel` zawierają klasy implementujące model tożsamości opartych na oświadczeniach WCF: <xref:System.IdentityModel.Claims?displayProperty=nameWithType>, <xref:System.IdentityModel.Policy?displayProperty=nameWithType>i <xref:System.IdentityModel.Selectors?displayProperty=nameWithType>. Model zarządzania tożsamościami oparty na oświadczeniach stosowany w środowisku WCF jest zastąpiony modelem ze środowiska WIF. Nie należy używać klas w tych trzech przestrzeniach nazw podczas kompilowania rozwiązań opartych na WIF.
 
 ### <a name="changes-due-to-net-integration"></a>Zmiany ze względu na integrację z platformą .NET
 
 WIF jest teraz zintegrowana z .NET Framework. Większość tożsamości i klas głównych platformy .NET pochodzi teraz od <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>. Wynikiem są następujące zmiany w WIF 4,5:
 
-- Klasy WIF, które reprezentują oświadczenia, tożsamości i podmioty zabezpieczeń, teraz istnieją w przestrzeni nazw <xref:System.Security.Claims?displayProperty=nameWithType>.
+- Klasy WIF, które reprezentują oświadczenia, tożsamości i podmioty zabezpieczeń, znajdują się teraz w przestrzeni nazw <xref:System.Security.Claims?displayProperty=nameWithType>.
 
     > [!IMPORTANT]
     > Przestrzeń nazw <xref:System.IdentityModel.Claims?displayProperty=nameWithType> zawiera klasy reprezentujące artefakty w modelu tożsamości opartego na oświadczeniach programu WCF. Wiele z tych klas ma nazwy, które są takie same jak klasy WIF; na przykład `Claims`. Nie należy używać tych klas podczas kompilowania rozwiązań opartych na WIF.
 
-- Tożsamości platformy .NET i klasy główne teraz pochodzą bezpośrednio od <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>, które reprezentują tożsamości i podmioty zabezpieczeń oparte na oświadczeniach. Z tego powodu interfejsy WIF 3,5 `IClaimsIdentity` i `IClaimsPrincipal` nie są już potrzebne i nie są dostępne w WIF 4,5.
+- Klasy tożsamości i głównych klas platformy .NET pochodzą teraz bezpośrednio od <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> i <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType>, które reprezentują tożsamości i podmioty zabezpieczeń oparte na oświadczeniach. Z tego powodu `IClaimsIdentity` interfejsy WIF 3,5 i `IClaimsPrincipal` nie są już potrzebne i nie są dostępne w WIF 4,5.
 
-- Because.NET Identity i Principal Classes, takie jak <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> i <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType>, teraz pochodzą od <xref:System.Security.Claims.ClaimsIdentity> i <xref:System.Security.Claims.ClaimsPrincipal>, mają wbudowaną funkcję oświadczenia. Z tego powodu tożsamości specyficzne dla oświadczeń i klasy główne, takie jak `WindowsClaimsIdentity` i `WindowsClaimsPrincipal`, które były obecne w WIF 3,5, nie są już potrzebne i nie istnieją w WIF 4,5.
+- Because.NET tożsamość i główne klasy, takie jak <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> i <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> teraz pochodzą od <xref:System.Security.Claims.ClaimsIdentity> i <xref:System.Security.Claims.ClaimsPrincipal>, mają wbudowaną funkcję oświadczenia. Z tego powodu tożsamości specyficzne dla oświadczeń i klasy główne, takie jak `WindowsClaimsIdentity` i `WindowsClaimsPrincipal`, które były obecne w WIF 3,5, nie są już potrzebne i nie istnieją w WIF 4,5.
 
 ### <a name="other-changes-to-wif-functionality"></a>Inne zmiany w funkcji WIF
 
@@ -86,15 +86,15 @@ Ten wpis został zaktualizowany w WIF 4,5, aby uwzględnić nowe przestrzenie na
 
 Poniższa lista zawiera Wyliczenie najważniejszych zmian w pliku konfiguracji dla WIF 4,5.
 
-- Sekcja `<microsoft.identityModel>` jest teraz sekcją [> \<System. IdentityModel](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) .
+- Sekcja `<microsoft.identityModel>` to teraz sekcja [\<system. identityModel >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) .
 
-- Element `<service>` jest teraz elementem [> \<identityConfiguration](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) .
+- Element `<service>` jest teraz elementem [\<identityConfiguration >](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) .
 
-- Dodano nową sekcję [\<System. IdentityModel. services >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md), aby określić ustawienia kontrolujące zachowanie w scenariuszach pasywnych (WS-Federation).
+- Dodano nową sekcję [\<system. IdentityModel. services >](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md), aby określić ustawienia kontrolujące zachowanie w scenariuszach pasywnych (WS-Federation).
 
-- Element [\<federationConfiguration >](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) i jego elementy podrzędne zostały przeniesione z elementu `<service>` w WIF 3,5 do nowego elementu `<system.identityModel.services>`.
+- Element [\<federationConfiguration >](../configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) i jego elementy podrzędne zostały przeniesione z elementu `<service>` WIF 3,5 do nowego elementu `<system.identityModel.services>`.
 
-- Kilka elementów, które można określić na poziomie usług bezpośrednio pod elementem `<service>` w WIF 3,5, zostały ograniczone do określonych w elemencie [> \<securityTokenHandlerConfiguration](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) . (Mogą być one nadal określone w [@no__t 1identityConfiguration >](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu WIF 4,5 dla zgodności z poprzednimi wersjami).
+- Kilka elementów, które można określić na poziomie usług bezpośrednio pod elementem `<service>` w WIF 3,5, zostały ograniczone do określonych w [\<securityTokenHandlerConfiguration >](../configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md) elementu. (Mogą być one nadal określone w [\<identityConfiguration >](../configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elementu WIF 4,5 dla zgodności z poprzednimi wersjami).
 
 Aby uzyskać pełną listę elementów konfiguracji WIF 4,5, zobacz [WIF Configuration Schema](../configure-apps/file-schema/windows-identity-foundation/index.md).
 
@@ -120,15 +120,15 @@ Aby uzyskać więcej informacji na temat narzędzia tożsamości i dostępu, zob
 
 - Klasy w przestrzeni nazw `Microsoft.IdentityModel.Web.Configuration` zostały przeniesione do <xref:System.IdentityModel.Services.Configuration?displayProperty=nameWithType>. Klasy te reprezentują obiekty specyficzne dla konfiguracji w scenariuszach pasywnych.
 
-- @No__t-0 nie jest już obsługiwana; wszystkie klasy w przestrzeni nazw `Microsoft.IdentityModel.Web.Controls` zostały usunięte z WIF 4,5.
+- `FederatedPassiveSignInControl` nie jest już obsługiwana; wszystkie klasy w `Microsoft.IdentityModel.Web.Controls` przestrzeni nazw zostały usunięte z WIF 4,5.
 
-- Funkcja wylogowywania modułu uwierzytelniania WS-Federation (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) jest różna od WIF 3,5. Aby uzyskać więcej informacji na temat sposobu wylogowania w programie WIF 4,5, zobacz temat klasy <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>.
+- Funkcja wylogowywania modułu uwierzytelniania WS-Federation (<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>) jest różna od WIF 3,5. Aby uzyskać więcej informacji na temat sposobu wylogowania w programie WIF 4,5, zobacz temat Klasa <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>.
 
 ### <a name="active-wcfws-trust-scenarios"></a>Scenariusze aktywne (WCF/WS-Trust):
 
 - Przestrzeń nazw `Microsoft.IdentityModel.Protocols.WSTrust` została podzielona głównie na dwie przestrzenie nazw w WIF 4,5. Klasy reprezentujące artefakty, które są specyficzne dla protokołu WS-Trust, są teraz w <xref:System.IdentityModel.Protocols.WSTrust?displayProperty=nameWithType>. Obejmuje to takie klasy jak <xref:System.IdentityModel.Protocols.WSTrust.RequestSecurityToken>. Klasy reprezentujące kontrakty usługi, kanały, hosty usług i inne artefakty, które są związane z korzystaniem z protokołu WS-Trust w aplikacjach WCF, zostały przeniesione do <xref:System.ServiceModel.Security?displayProperty=nameWithType>; na przykład interfejs <xref:System.ServiceModel.Security.IWSTrust13AsyncContract>.
 
-- Konfigurowanie aplikacji WCF do użycia WIF zostało znacznie uproszczone. Wcześniej `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement` musiała zostać dodana jako rozszerzenie zachowania, a ta funkcja była używana do klinowania WIF do zachowania usługi przez określenie elementu `<federatedServiceHostConfiguration>`. WIF 4,5 jest ściśle zintegrowany z WCF. Teraz można włączyć WIF w usłudze WCF, określając atrybut `useIdentityConfiguration` w `<system.serviceModel>` @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7, jak w poniższym kodzie XML:
+- Konfigurowanie aplikacji WCF do użycia WIF zostało znacznie uproszczone. Wcześniej `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement` musiała zostać dodana jako rozszerzenie zachowania, a ta funkcja była używana do klinowania WIF do zachowania usługi przez określenie elementu `<federatedServiceHostConfiguration>`. WIF 4,5 jest ściśle zintegrowany z WCF. Teraz można włączyć WIF w usłudze WCF, określając atrybut `useIdentityConfiguration` na `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/, jak w poniższym kodzie XML:`<serviceCredentials>`
 
     ```xml
     <serviceCredentials useIdentityConfiguration="true">
@@ -137,13 +137,13 @@ Aby uzyskać więcej informacji na temat narzędzia tożsamości i dostępu, zob
     </serviceCredentials>
     ```
 
-- W WIF 4,5 należy określić certyfikat usługi używany przez aktywną usługę (WCF) na hoście usługi. W konfiguracji można to zrobić za pomocą `<system.serviceModel>` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 @ no__t-8, jak pokazano w poprzednim przykładzie. W WIF 3,5 można określić certyfikat usługi za pomocą elementu podrzędnego `<serviceCertificate>` elementu WIF `<service>`. Ta funkcja nie istnieje w WIF 4,5; w zamian Określ element `<serviceCertificate>` pod elementem `<serviceCredentials>`.
+- W WIF 4,5 należy określić certyfikat usługi używany przez aktywną usługę (WCF) na hoście usługi. W obszarze Konfiguracja można to zrobić za pomocą `<system.serviceModel>`/`<behaviors>`/`<serviceBehaviors>`/`<serviceCredentials>`/`<serviceCertificate>` elementu, jak pokazano w powyższym przykładzie. W WIF 3,5 można określić certyfikat usługi za pomocą elementu podrzędnego `<serviceCertificate>` elementu WIF `<service>`. Ta funkcja nie istnieje w WIF 4,5; w zamian Określ element `<serviceCertificate>` w elemencie `<serviceCredentials>`.
 
-- Klasy używane do klinowania WIF 3,5 do WCF już nie istnieją. Obejmuje to następujące klasy w przestrzeni nazw `Microsoft.IdentityModel.Tokens`: `FederatedSecurityTokenManager`, `FederatedServiceCredentials` i `IdentityModelServiceAuthorizationManager`, a także klasy `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement`.
+- Klasy używane do klinowania WIF 3,5 do WCF już nie istnieją. Obejmuje to następujące klasy w przestrzeni nazw `Microsoft.IdentityModel.Tokens`: `FederatedSecurityTokenManager`, `FederatedServiceCredentials`i `IdentityModelServiceAuthorizationManager`, a także klasy `Microsoft.IdentityModel.Configuration.ConfigureServiceHostBehaviorExtensionElement`.
 
 ## <a name="enabling-wif-35-in-windows-8"></a>Włączanie WIF 3,5 w systemie Windows 8
 
-Ponieważ WIF 4,5 jest częścią programu .NET 4,5, jest on automatycznie włączany na komputerach z systemem Windows 8 i Windows Server 2012, a aplikacje utworzone przy użyciu usługi WIF 4,5 będą domyślnie uruchamiane w systemie Windows 8 lub Windows Server 2012. Jednak może być konieczne uruchomienie aplikacji, które zostały skompilowane przy użyciu WIF 3,5 na komputerze z systemem Windows 8 lub Windows Server 2012. W takim przypadku należy włączyć WIF 3,5 na komputerze docelowym. Na komputerze z systemem Windows 8 można to zrobić za pomocą narzędzia Obsługa i zarządzanie obrazami wdrażania (DISM). Na komputerze z systemem Windows Server 2012 można użyć narzędzia DISM lub użyć polecenia cmdlet `Add-WindowsFeature` programu Windows PowerShell. W obu przypadkach odpowiednie polecenia można wywołać w wierszu polecenia lub w środowisku środowiska Windows PowerShell.
+Ponieważ WIF 4,5 jest częścią programu .NET 4,5, jest on automatycznie włączany na komputerach z systemem Windows 8 i Windows Server 2012, a aplikacje utworzone przy użyciu usługi WIF 4,5 będą domyślnie uruchamiane w systemie Windows 8 lub Windows Server 2012. Jednak może być konieczne uruchomienie aplikacji, które zostały skompilowane przy użyciu WIF 3,5 na komputerze z systemem Windows 8 lub Windows Server 2012. W takim przypadku należy włączyć WIF 3,5 na komputerze docelowym. Na komputerze z systemem Windows 8 można to zrobić za pomocą narzędzia Obsługa i zarządzanie obrazami wdrażania (DISM). Na komputerze z systemem Windows Server 2012 można użyć narzędzia DISM lub użyć polecenia cmdlet programu Windows PowerShell `Add-WindowsFeature`. W obu przypadkach odpowiednie polecenia można wywołać w wierszu polecenia lub w środowisku środowiska Windows PowerShell.
 
 Poniższe polecenia pokazują, jak używać narzędzia DISM z wiersza polecenia lub z wnętrza środowiska Windows PowerShell. Domyślnie moduł DISM programu PowerShell jest dołączony do systemu Windows 8 i Windows Server 2012 i nie musi zostać zaimportowany. Aby uzyskać więcej informacji na temat używania narzędzia DISM z programem Windows PowerShell, zobacz [jak używać narzędzia DISM w programie Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=254419).
 
@@ -165,7 +165,7 @@ Aby sprawdzić, które funkcje są włączone lub wyłączone za pomocą narzęd
 dism /online /get-features
 ```
 
-Alternatywnie na komputerach z systemem Windows Server 2012 można włączyć WIF 3,5 przy użyciu polecenia cmdlet `Add-WindowsFeature` programu Windows PowerShell. W tym celu w wierszu polecenia można wprowadzić następujące polecenie:
+Alternatywnie na komputerach z systemem Windows Server 2012 można włączyć WIF 3,5 przy użyciu polecenia cmdlet programu Windows PowerShell `Add-WindowsFeature`. W tym celu w wierszu polecenia można wprowadzić następujące polecenie:
 
 ```console
 powershell "add-windowsfeature windows-identity-foundation"

@@ -59,4 +59,4 @@ Aby dowiedzieć się, jak zaimplementować strategie obsługi częściowych awar
 
 >[!div class="step-by-step"]
 >[Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[dalej](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Następny](modernize-your-apps-with-monitoring-and-telemetry.md)

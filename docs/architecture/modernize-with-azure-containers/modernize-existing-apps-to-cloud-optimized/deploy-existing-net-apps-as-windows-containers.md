@@ -93,15 +93,15 @@ Po dodaniu nazwy obrazu do pliku pliku dockerfile można wybrać system operacyj
 
 > | **Seryjn** | **System i wersja** |
 > |---|---|
-> | **Microsoft/dotnet-Framework: 4. x-windowsservercore** | .NET Framework 4. x w systemie Windows Server Core |
-> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x z dodatkowym ASP.NET dostosowania w systemie Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x w systemie Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x z dodatkowym ASP.NET dostosowania w systemie Windows Server Core |
 
 W przypadku platformy .NET Core (międzyplatformowego dla systemów Linux i Windows) Tagi będą wyglądać następująco:
 
 > | **Seryjn** | **System i wersja**
 > |---|---|
-> | **Microsoft/dotnet: 2.0.0 — środowisko uruchomieniowe** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Linux |
-> | **Microsoft/dotnet: 2.0.0-Runtime-nanoserver** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Windows nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | Środowisko uruchomieniowe programu .NET Core 2,0 — tylko w systemie Windows nano Server |
 
 ### <a name="multi-arch-images"></a>Obrazy z obsługą wielodostępności
 
@@ -144,7 +144,7 @@ Jednak w przypadku środowiska wdrażania produkcyjnego, a nawet środowisk do t
 
 Z ekosystemu kontenerów na platformie Azure następujące produkty obsługujące kontenery, które są uważane za infrastrukturę:
 
-- **Azure Container Instances (ACI)**
+- **Usługa Azure Container Instances (ACI)**
 - **Virtual Machines platformy Azure** (z obsługą kontenera)
 - **Virtual Machine Scale Sets platformy Azure** (z obsługą kontenera)
 
@@ -152,7 +152,7 @@ Z tych trzech ACI zapewnia znakomitą korzyść, która jest faktem, że nie mus
 
 Produkty na platformie Azure obsługujące kontenery, które w tym samym czasie są rozmieszczone więcej na poziomie PaaS (platforma jako usługa):
 
-- **Azure App Service**
+- **Usługa Azure App Service**
 - **Usługa Azure Kubernetes Service (AKS i ACS)**
 - **Azure Batch**
 
@@ -164,4 +164,4 @@ W następnych sekcjach można zapoznać się z zaleceniami firmy Microsoft dotyc
 
 >[!div class="step-by-step"]
 >[Poprzedni](what-about-cloud-native-applications.md)
->[dalej](when-not-to-deploy-to-windows-containers.md)
+>[Następny](when-not-to-deploy-to-windows-containers.md)

@@ -17,7 +17,7 @@ ms.locfileid: "72291149"
 
 Aplikacja ASP.NET Core jest oparta na serii oprogramowania pośredniczącego. Middlewares są programami obsługi, które są rozmieszczone w potoku do obsługi żądań i odpowiedzi. W aplikacji formularzy sieci Web programy obsługi HTTP i moduły rozwiązują podobne problemy. W ASP.NET Core, moduły, programy obsługi, *Global.asax.cs*i cykl życia aplikacji są zastępowane przez oprogramowanie pośredniczące. W tym rozdziale dowiesz się, co to jest oprogramowanie pośredniczące w kontekście aplikacji Blazor.
 
-## <a name="overview"></a>Przegląd
+## <a name="overview"></a>Omówienie
 
 Potok żądania ASP.NET Core składa się z sekwencji delegatów żądań o nazwie jeden po drugim. Na poniższym diagramie przedstawiono koncepcję. Wątek wykonywania jest zgodny z czarnym strzałką.
 
@@ -45,14 +45,14 @@ W poniższej tabeli wymieniono zamienne oprogramowanie i składniki programu w A
 |Buforowanie plików           |`FileCacheModule`            |[Oprogramowanie pośredniczące buforowania odpowiedzi](/aspnet/core/performance/caching/middleware)|
 |Buforowanie HTTP           |`HttpCacheModule`            |[Oprogramowanie pośredniczące buforowania odpowiedzi](/aspnet/core/performance/caching/middleware)|
 |Rejestrowanie HTTP           |`HttpLoggingModule`          |[Rejestrowanie ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
-|Przekierowywanie HTTP       |`HttpRedirectionModule`      |[Ponowne zapisywanie przez adres URL oprogramowania pośredniczącego](/aspnet/core/fundamentals/url-rewriting)|
-|Filtry ISAPI          |`IsapiFilterModule`          |[Oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/index)|
-|INTERCEPTOR                  |`IsapiModule`                |[Oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/index)|
+|Przekierowywanie HTTP       |`HttpRedirectionModule`      |[Oprogramowanie pośredniczące ponownego zapisywania adresów URL](/aspnet/core/fundamentals/url-rewriting)|
+|ISAPI — Filtry          |`IsapiFilterModule`          |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
+|ISAPI                  |`IsapiModule`                |[Oprogramowanie pośredniczące](/aspnet/core/fundamentals/middleware/index)|
 |Filtrowanie żądań      |`RequestFilteringModule`     |[Ponowne zapisywanie adresów URL IRule oprogramowania pośredniczącego](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|
-|Ponowne zapisywanie adresów URL&#8224;   |`RewriteModule`              |[Ponowne zapisywanie przez adres URL oprogramowania pośredniczącego](/aspnet/core/fundamentals/url-rewriting)|
+|Ponowne zapisywanie adresów URL&#8224;   |`RewriteModule`              |[Oprogramowanie pośredniczące ponownego zapisywania adresów URL](/aspnet/core/fundamentals/url-rewriting)|
 |Kompresja statyczna     |`StaticCompressionModule`    |[Oprogramowanie pośredniczące kompresji odpowiedzi](/aspnet/core/performance/response-compression)|
 |Zawartość statyczna         |`StaticFileModule`           |[Oprogramowanie pośredniczące plików statycznych](/aspnet/core/fundamentals/static-files)|
-|Autoryzacja adresu URL      |`UrlAuthorizationModule`     |[ASP.NET Core tożsamość](/aspnet/core/security/authentication/identity)|
+|Autoryzacja adresu URL      |`UrlAuthorizationModule`     |[ASP.NET Core Identity](/aspnet/core/security/authentication/identity)|
 
 Ta lista nie jest wyczerpująca, ale powinna zawierać pomysł dotyczący tego, jakie mapowanie istnieje między tymi dwoma strukturami. Aby uzyskać bardziej szczegółową listę, zobacz [moduły usług IIS z ASP.NET Core](/aspnet/core/host-and-deploy/iis/modules).
 
@@ -88,8 +88,8 @@ public class Startup
 }
 ```
 
-Oprogramowanie pośredniczące może być również zdefiniowane jako Klasa przez implementację interfejsu `IMiddleware` lub z zastosowaniem następującej konwencji pośredniczącej. Aby uzyskać więcej informacji, zobacz [Zapisywanie niestandardowych ASP.NET Core oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/write).
+Oprogramowanie pośredniczące może być również zdefiniowane jako Klasa przez implementację interfejsu `IMiddleware` lub przez Konwencję pośredniczącą. Aby uzyskać więcej informacji, zobacz [Zapisywanie niestandardowych ASP.NET Core oprogramowania pośredniczącego](/aspnet/core/fundamentals/middleware/write).
 
 >[!div class="step-by-step"]
 >[Poprzedni](data.md)
->[dalej](config.md)
+>[Następny](config.md)

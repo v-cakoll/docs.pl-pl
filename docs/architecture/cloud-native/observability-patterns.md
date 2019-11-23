@@ -1,5 +1,5 @@
 ---
-title: Wzorce przestrzegania
+title: Wzorce wglądu
 description: Wzorce zauważalne dla aplikacji natywnych w chmurze
 ms.date: 09/23/2019
 ms.openlocfilehash: 23320144c03278d631b8a1fcc1d1c0954e907296
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184877"
 ---
-# <a name="observability-patterns"></a>Wzorce przestrzegania
+# <a name="observability-patterns"></a>Wzorce wglądu
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -25,7 +25,7 @@ Każdy język programowania zawiera narzędzia, które pozwalają na zapisywanie
 
 * Pełny
 * Debugowanie
-* Informacje
+* Information
 * Ostrzeżenie
 * Błąd
 * Krytyczn
@@ -34,7 +34,7 @@ Te różne poziomy dziennika zapewniają stopień szczegółowości rejestrowani
 
 Wysoka wydajność narzędzi rejestrowania i tunability szczegółowości powinny zachęcić deweloperów do częstego rejestrowania. Wiele preferuje wzorzec rejestrowania wejścia i wyjścia każdej z tych metod. Takie podejście może być zdrowe, jak zbyt obszerne, ale rzadko nie jest to konieczne, aby deweloperzy chcieli mniej logować się. W rzeczywistości nie zdarza się przeprowadzać wdrożeń wyłącznie w celu dodania rejestrowania do problematycznej metody. Błąd po stronie zbyt dużej liczby dzienników i nie jest on zbyt mały. Należy pamiętać, że niektóre narzędzia mogą służyć do automatycznego udostępniania tego rodzaju rejestrowania.
 
-W tradycyjnych aplikacjach pliki dziennika są zwykle przechowywane na komputerze lokalnym. W rzeczywistości w systemach operacyjnych działających w systemie UNIX istnieje struktura folderów zdefiniowana do przechowywania wszystkich dzienników, zwykle w obszarze `/var/log`. Użyteczność rejestrowania w pliku prostym na pojedynczym komputerze jest znacznie ograniczona w środowisku chmury. Dzienniki wyprodukowania aplikacji mogą nie mieć dostępu do dysku lokalnego lub dysk lokalny może być wysoce przejściowy, ponieważ kontenery są rozwiązane na maszynach fizycznych.
+W tradycyjnych aplikacjach pliki dziennika są zwykle przechowywane na komputerze lokalnym. W rzeczywistości w systemach operacyjnych działających w systemie UNIX istnieje struktura folderów zdefiniowana do przechowywania dzienników, zwykle w obszarze `/var/log`. Użyteczność rejestrowania w pliku prostym na pojedynczym komputerze jest znacznie ograniczona w środowisku chmury. Dzienniki wyprodukowania aplikacji mogą nie mieć dostępu do dysku lokalnego lub dysk lokalny może być wysoce przejściowy, ponieważ kontenery są rozwiązane na maszynach fizycznych.
 
 Aplikacje natywne w chmurze opracowane przy użyciu architektury mikrousług również stanowią pewne wyzwania dotyczące rejestratorów opartych na plikach. Żądania użytkowników mogą teraz obejmować wiele usług, które są uruchamiane na różnych maszynach i mogą obejmować funkcje bezserwerowe bez dostępu do lokalnego systemu plików. Bardzo trudne jest skorelowanie dzienników od użytkownika lub sesji przez te wiele usług i maszyn.
 
@@ -44,8 +44,8 @@ Na szczęście istnieją pewne fantastycznie alternatywy do korzystania z rejest
 
 Podczas tworzenia rejestrowania obejmującego wiele usług warto również stosować standardowe rozwiązania. Na przykład generowanie [identyfikatora korelacji](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) na początku interakcji o długim czasie, a następnie rejestrowanie go w każdym komunikacie związanym z tą interakcją ułatwia wyszukiwanie wszystkich powiązanych komunikatów. Jeden z nich musi znaleźć tylko jeden komunikat i wyodrębnić identyfikator korelacji, aby znaleźć wszystkie powiązane komunikaty. Innym przykładem jest upewnienie się, że format dziennika jest taki sam dla każdej usługi, niezależnie od używanej przez niego biblioteki języka lub rejestrowania. Ta Standaryzacja ułatwia znacznie łatwiejsze odczytywanie dzienników. Rysunek 7-1 pokazuje, jak architektura mikrousług może korzystać z scentralizowanego rejestrowania w ramach przepływu pracy.
 
-![Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników. **Rysunek 7-1**. ](./media/centralized-logging.png)
- Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.
+Dzienniki ![z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.](./media/centralized-logging.png)
+**rysunek 7-1**. Dzienniki z różnych źródeł są pozyskiwane w scentralizowanym magazynie dzienników.
 
 ## <a name="when-to-use-monitoring"></a>Kiedy należy używać monitorowania
 

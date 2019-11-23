@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419983"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966872"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach ASP.NET Core
 
@@ -282,7 +282,7 @@ Pierwszy DbContext to \_catalogContext, a drugi DbContext znajduje się w \_obie
 
 Chociaż EF Core to doskonały wybór w zakresie zarządzania trwałością, a w większości przypadków dane są hermetyzowane przez deweloperów aplikacji, nie jest to jedyne rozwiązanie. Kolejną popularną alternatywą typu open source jest [Dapper](https://github.com/StackExchange/Dapper), a więc nazywamy mikro-ORM. Mikro-ORM to lekkie, mniej funkcjonalne narzędzie do mapowania obiektów do struktur danych. W przypadku Dapper, jego cele projektowe koncentrują się na wydajności, a nie w pełni hermetyzowaniu podstawowych zapytań używanych do pobierania i aktualizowania danych. Ponieważ nie jest to abstrakcyjny kod SQL od dewelopera, Dapper jest "bliżej metalu" i umożliwia deweloperom pisanie dokładnych zapytań, których chcą używać dla danej operacji dostępu do danych.
 
-EF Core ma dwie znaczące funkcje, które zapewnia oddzielenie go od Dapper, ale również zwiększenie wydajności. Pierwszy to tłumaczenie z wyrażeń LINQ do SQL. Te tłumaczenia są przechowywane w pamięci podręcznej, ale nawet wtedy, gdy są wykonywane po raz pierwszy. Druga funkcja śledzenia zmian w jednostkach (tak, aby można było generować wydajne instrukcje Update). To zachowanie można wyłączyć dla konkretnych zapytań przy użyciu rozszerzenia AsNotTracking. EF Core generuje również zapytania SQL, które zwykle są bardzo wydajne i w każdym przypadku idealnie akceptowalne z punktu widzenia wydajności, ale jeśli potrzebujesz precyzyjnej kontroli nad precyzyjnym zapytaniem, można przekazać niestandardowe SQL (lub wykonać procedurę składowaną) przy użyciu EF Rdzeń. W takim przypadku Dapper nadal wykonuje EF Core, ale tylko nieco. Julie Lerman przedstawia pewne dane dotyczące wydajności, które mogą być 2016 artykułów MSDN [Dapper, Entity Framework i hybrydowych](https://msdn.microsoft.com/magazine/mt703432.aspx). Dodatkowe dane porównawcze wydajności dla różnych metod dostępu do danych można znaleźć w [witrynie Dapper](https://github.com/StackExchange/Dapper).
+EF Core ma dwie znaczące funkcje, które zapewnia oddzielenie go od Dapper, ale również zwiększenie wydajności. Pierwszy to tłumaczenie z wyrażeń LINQ do SQL. Te tłumaczenia są przechowywane w pamięci podręcznej, ale nawet wtedy, gdy są wykonywane po raz pierwszy. Druga funkcja śledzenia zmian w jednostkach (tak, aby można było generować wydajne instrukcje Update). To zachowanie można wyłączyć dla konkretnych zapytań przy użyciu rozszerzenia AsNotTracking. EF Core generuje również zapytania SQL, które zwykle są bardzo wydajne i w każdym przypadku idealnie akceptowalne z punktu widzenia wydajności, ale jeśli potrzebujesz precyzyjnej kontroli nad precyzyjnym zapytaniem, można przekazać niestandardowe SQL (lub wykonać procedurę składowaną) przy użyciu EF Rdzeń. W takim przypadku Dapper nadal wykonuje EF Core, ale tylko nieco. Julie Lerman przedstawia pewne dane dotyczące wydajności, które mogą być 2016 artykułów MSDN [Dapper, Entity Framework i hybrydowych](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps). Dodatkowe dane porównawcze wydajności dla różnych metod dostępu do danych można znaleźć w [witrynie Dapper](https://github.com/StackExchange/Dapper).
 
 Aby zobaczyć, jak składnia Dapper różni się od EF Core, należy wziąć pod uwagę te dwie wersje tej samej metody do pobierania listy elementów:
 
@@ -513,4 +513,4 @@ Buforowanie może znacząco poprawić wydajność stron sieci Web, które wielok
 
 >[!div class="step-by-step"]
 >[Poprzedni](develop-asp-net-core-mvc-apps.md)
->[dalej](test-asp-net-core-mvc-apps.md)
+>[Następny](test-asp-net-core-mvc-apps.md)

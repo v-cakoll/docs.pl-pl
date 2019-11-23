@@ -35,7 +35,7 @@ Nie można uruchamiać projektów usług systemu Windows bezpośrednio ze środo
 
 ### <a name="install-your-service-manually-using-installutilexe-utility"></a>Ręczne instalowanie usługi za pomocą narzędzia InstallUtil. exe
 
-1. Z menu **Start** wybierz pozycję **Visual Studio \<*wersja*>** , a następnie wybierz pozycję **wiersz polecenia dla deweloperów dla programu vs \< w*wersji*>** .
+1. Z menu **Start** wybierz pozycję **Visual Studio \<*wersja*>** directory, a następnie wybierz pozycję **wiersz polecenia dla deweloperów dla programu vs \<*Version*>** .
 
      Zostanie wyświetlony wiersz polecenia dla deweloperów dla programu Visual Studio.
 
@@ -47,7 +47,7 @@ Nie można uruchamiać projektów usług systemu Windows bezpośrednio ze środo
     installutil <yourproject>.exe
     ```
 
-     Jeśli używasz wiersz polecenia dla deweloperów dla programu Visual Studio, *Installutil. exe* powinien znajdować się na ścieżce systemowej. W przeciwnym razie możesz dodać go do ścieżki lub użyć w pełni kwalifikowanej ścieżki, aby wywołać ją. To narzędzie jest instalowane z .NET Framework w *%windir%\Microsoft.NET\Framework [64] \\ < framework_version @ no__t-2*.
+     Jeśli używasz wiersz polecenia dla deweloperów dla programu Visual Studio, *Installutil. exe* powinien znajdować się na ścieżce systemowej. W przeciwnym razie możesz dodać go do ścieżki lub użyć w pełni kwalifikowanej ścieżki, aby wywołać ją. To narzędzie jest instalowane z .NET Framework w *%windir%\Microsoft.NET\Framework [64]\\< framework_version\>* .
 
      Na przykład:
      - W przypadku 32-bitowej wersji .NET Framework 4 lub 4,5 lub nowszej, jeśli katalog instalacyjny systemu Windows to *C:\Windows*, domyślną ścieżką jest *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.
@@ -55,7 +55,7 @@ Nie można uruchamiać projektów usług systemu Windows bezpośrednio ze środo
 
 ### <a name="uninstall-your-service-manually-using-installutilexe-utility"></a>Ręczne odinstalowywanie usługi za pomocą narzędzia InstallUtil. exe
 
-1. Z menu **Start** wybierz pozycję **Visual Studio \<*wersja*>** , a następnie wybierz pozycję **wiersz polecenia dla deweloperów dla programu vs \< w*wersji*>** .
+1. Z menu **Start** wybierz pozycję **Visual Studio \<*wersja*>** directory, a następnie wybierz pozycję **wiersz polecenia dla deweloperów dla programu vs \<*Version*>** .
 
      Zostanie wyświetlony wiersz polecenia dla deweloperów dla programu Visual Studio.
 

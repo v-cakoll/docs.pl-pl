@@ -14,5 +14,5 @@ ms.locfileid: "70849273"
 Istnieją dwie obsługiwane struktury do kompilowania aplikacji platformy Docker po stronie serwera z platformą .NET: [.NET Framework i .NET Core](https://dotnet.microsoft.com/download). Współużytkują one wiele składników platformy .NET i można udostępniać kod w obu tych składnikach. Istnieją jednak podstawowe różnice między nimi i używane struktury zależą od tego, co chcesz osiągnąć. Ta sekcja zawiera wskazówki dotyczące sytuacji, w których należy wybrać poszczególne struktury.
 
 >[!div class="step-by-step"]
->[Poprzedni](../container-docker-introduction/docker-containers-images-registries.md)Następny
->[](general-guidance.md)
+>[Poprzedni](../container-docker-introduction/docker-containers-images-registries.md)
+>[Następny](general-guidance.md)

@@ -27,7 +27,7 @@ W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali
   
 5. [Moja usługa i klient są doskonałe, ale nie mogę ich używać, gdy klient znajduje się na innym komputerze? Co się dzieje?](#BKMK_q4)  
   
-6. [Gdy zgłaszam wyjątek FaultException @ no__t-1Exception >, gdzie typ jest wyjątkiem, zawsze otrzymuję ogólny typ Błęduexception na kliencie, a nie typ ogólny. Co się dzieje?](#BKMK_q5)  
+6. [Gdy zgłaszam wyjątek FaultException\<>, gdzie typ jest wyjątkiem, zawsze otrzymuję ogólny typ Błęduexception na kliencie, a nie typ ogólny. Co się dzieje?](#BKMK_q5)  
   
 7. [Wygląda na to, że operacje jednokierunkowe i typu żądanie-odpowiedź są zwracane z tą samą szybkością, gdy odpowiedź nie zawiera żadnych danych. Co się dzieje?](#BKMK_q6)  
   
@@ -59,7 +59,7 @@ W tym temacie wymieniono kilka znanych problemów, z którymi klienci korzystali
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Czy mogę załadować moją konfigurację usługi z innej lokalizacji niż plik konfiguracyjny aplikacji WCF?  
- Tak, jednak trzeba utworzyć niestandardową klasę <xref:System.ServiceModel.ServiceHost>, która zastępuje metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Wewnątrz tej metody można wywołać bazę, aby najpierw załadować konfigurację (Jeśli chcesz również załadować informacje o konfiguracji standardowej), ale możesz również całkowicie zastąpić system ładowania konfiguracji. Należy pamiętać, że jeśli chcesz załadować konfigurację z pliku konfiguracji, który jest inny niż plik konfiguracyjny aplikacji, musisz przeanalizować plik konfiguracji samodzielnie i załadować konfigurację.  
+ Tak, jednak trzeba utworzyć niestandardową klasę <xref:System.ServiceModel.ServiceHost>, która zastąpi metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Wewnątrz tej metody można wywołać bazę, aby najpierw załadować konfigurację (Jeśli chcesz również załadować informacje o konfiguracji standardowej), ale możesz również całkowicie zastąpić system ładowania konfiguracji. Należy pamiętać, że jeśli chcesz załadować konfigurację z pliku konfiguracji, który jest inny niż plik konfiguracyjny aplikacji, musisz przeanalizować plik konfiguracji samodzielnie i załadować konfigurację.  
   
  Poniższy przykład kodu pokazuje, jak zastąpić metodę <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> i bezpośrednio skonfigurować punkt końcowy.  
   
@@ -104,7 +104,7 @@ public class MyServiceHost : ServiceHost
   
 - Inne możliwe problemy można znaleźć w temacie przykłady z przykładami [Windows Communication Foundation](./samples/running-the-samples.md).  
   
-- Jeśli klient korzysta z poświadczeń systemu Windows, a wyjątkiem jest <xref:System.ServiceModel.Security.SecurityNegotiationException>, należy skonfigurować protokół Kerberos w następujący sposób.  
+- Jeśli klient korzysta z poświadczeń systemu Windows, a wyjątek jest <xref:System.ServiceModel.Security.SecurityNegotiationException>, Skonfiguruj protokół Kerberos w następujący sposób.  
   
     1. Dodaj poświadczenia tożsamości do elementu punktu końcowego w pliku App. config klienta:  
   
@@ -141,12 +141,12 @@ public class MyServiceHost : ServiceHost
 - [Objaśnienie protokołu Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Gdy zgłaszam wyjątek FaultException @ no__t-0Exception >, gdzie typ jest wyjątkiem, zawsze otrzymuję ogólny typ Błęduexception na kliencie, a nie typ ogólny. Co się dzieje?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Gdy zgłaszam wyjątek FaultException\<>, gdzie typ jest wyjątkiem, zawsze otrzymuję ogólny typ Błęduexception na kliencie, a nie typ ogólny. Co się dzieje?  
  Zdecydowanie zaleca się utworzenie własnego niestandardowego typu danych błędu i zadeklarowanie, że jako typ szczegółowy w umowie dotyczącej błędu. Przyczyną jest użycie typów wyjątków dostarczonych przez system:  
   
 - Tworzy zależność typu, która usuwa jedną z największych siły aplikacji zorientowanych na usługę.  
   
-- Nie może zależeć od wyjątków serializowanych w standardowy sposób. Niektóre — takie jak <xref:System.Security.SecurityException> — nie można serializować.  
+- Nie może zależeć od wyjątków serializowanych w standardowy sposób. Niektóre — takie jak <xref:System.Security.SecurityException>— nie można serializować.  
   
 - Udostępnia klientom szczegółowe informacje o implementacji wewnętrznej. Aby uzyskać więcej informacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](specifying-and-handling-faults-in-contracts-and-services.md).  
   
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Używam certyfikatu X. 509 z moją usługą i otrzymuję system. Security. Cryptography. CryptographicException. Co się dzieje?  
- Jest to często spowodowane zmianą konta użytkownika, pod którym działa proces roboczy usług IIS. Na przykład w [!INCLUDE[wxp](../../../includes/wxp-md.md)], jeśli zmienisz domyślne konto użytkownika, w ramach którego jest uruchamiany proces aspnet_wp. exe, w obszarze od ASPNET do niestandardowego konta użytkownika, ten błąd może zostać wyświetlony. W przypadku korzystania z klucza prywatnego proces korzystający z niego musi mieć uprawnienia dostępu do pliku przechowującego ten klucz.  
+ Jest to często spowodowane zmianą konta użytkownika, pod którym działa proces roboczy usług IIS. Na przykład w [!INCLUDE[wxp](../../../includes/wxp-md.md)], jeśli zmienisz domyślne konto użytkownika, na którym jest uruchamiany plik Aspnet_wp. exe, w obszarze od ASPNET do niestandardowego konta użytkownika, ten błąd może zostać wyświetlony. W przypadku korzystania z klucza prywatnego proces korzystający z niego musi mieć uprawnienia dostępu do pliku przechowującego ten klucz.  
   
  W takim przypadku należy nadać uprawnienia dostępu do odczytu kontu tego procesu dla pliku zawierającego klucz prywatny. Na przykład jeśli proces roboczy usług IIS jest uruchomiony na koncie Roberta, należy dać plikowi z dostępem do odczytu do pliku zawierającego klucz prywatny.  
   
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Używam jednego z narzędzi do śledzenia i otrzymuję EndpointNotFoundException. Co się dzieje?  
- Jeśli używasz narzędzia śledzenia, które nie jest mechanizmem śledzenia WCF dostarczonym przez system i otrzymujesz <xref:System.ServiceModel.EndpointNotFoundException> wskazujące niezgodność filtru adresów, należy użyć klasy <xref:System.ServiceModel.Description.ClientViaBehavior> do kierowania komunikatów do narzędzia śledzenia i uzyskiwania Narzędzie przekierowuje te komunikaty do adresu usługi. Klasa <xref:System.ServiceModel.Description.ClientViaBehavior> modyfikuje nagłówek adresowania `Via` w celu określenia następnego adresu sieciowego niezależnie od odbiorcy końcowego wskazywanego przez nagłówek adresowania `To`. W takim przypadku nie należy zmieniać adresu punktu końcowego, który jest używany do ustanowienia wartości `To`.  
+ Jeśli używasz narzędzia śledzenia, które nie jest mechanizmem śledzenia WCF dostarczonym przez system i otrzymujesz <xref:System.ServiceModel.EndpointNotFoundException>, który wskazuje, że wystąpił niezgodność filtru adresów, musisz użyć klasy <xref:System.ServiceModel.Description.ClientViaBehavior>, aby skierować komunikaty do narzędzia śledzenia, a narzędzie przekieruje te komunikaty do adresu usługi. Klasa <xref:System.ServiceModel.Description.ClientViaBehavior> zmienia nagłówek adresowania `Via` w celu określenia następnego adresu sieciowego niezależnie od odbiorcy końcowego, wskazanego przez `To` nagłówek adresowania. W takim przypadku nie należy zmieniać adresu punktu końcowego, który jest używany do ustanowienia wartości `To`.  
   
  Poniższy przykład kodu przedstawia przykładowy plik konfiguracji klienta.  
   
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Jaki jest adres podstawowy? Jak odnosi się do adresu punktu końcowego?  
- Adres podstawowy jest adresem głównym klasy <xref:System.ServiceModel.ServiceHost>. Domyślnie, jeśli dodasz klasę <xref:System.ServiceModel.Description.ServiceMetadataBehavior> do konfiguracji usługi, Web Services Description Language (WSDL) dla wszystkich punktów końcowych publikowanych przez hosta są pobierane z adresu podstawowego HTTP, a także adres względny do zachowania metadanych, a także "? WSDL ". Jeśli znasz usługi ASP.NET i IIS, adres podstawowy jest równoważny z katalogiem wirtualnym.  
+ Adres podstawowy jest adresem głównym klasy <xref:System.ServiceModel.ServiceHost>. Domyślnie, jeśli dodasz klasę <xref:System.ServiceModel.Description.ServiceMetadataBehavior> do konfiguracji usługi, Web Services Description Language (WSDL) dla wszystkich punktów końcowych publikowanych przez hosta są pobierane z adresu podstawowego HTTP, a także do wszystkich adresów względnych przekazywanych do zachowania metadanych, a także "? WSDL". Jeśli znasz usługi ASP.NET i IIS, adres podstawowy jest równoważny z katalogiem wirtualnym.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Udostępnianie portu między punktem końcowym usługi a punktem końcowym MEX przy użyciu NetTcpBinding  
  W przypadku określenia adresu podstawowego dla usługi jako net. TCP://MyServer: 8080/moje usługi i dodania następujących punktów końcowych:  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Podczas wywoływania aplikacji HTTP sieci Web WCF z aplikacji SOAP WCF usługa zwraca następujący błąd: Metoda 405 nie jest dozwolona  
- Wywołanie aplikacji HTTP sieci Web w programie WCF (usługa, która używa <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>) z usługi WCF, może wygenerować następujący wyjątek: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail utworzony]: serwer zdalny zwrócił nieoczekiwaną odpowiedź: (405) Metoda nie Dozwolony. "ten wyjątek występuje, ponieważ program WCF zastępuje wychodzące <xref:System.ServiceModel.OperationContext> z przychodzącą <xref:System.ServiceModel.OperationContext>. Aby rozwiązać ten problem, Utwórz <xref:System.ServiceModel.OperationContextScope> w ramach operacji usługi HTTP sieci Web WCF. Na przykład:  
+ Wywołanie aplikacji HTTP sieci Web w programie WCF (usługa, która używa <xref:System.ServiceModel.WebHttpBinding> i <xref:System.ServiceModel.Description.WebHttpBehavior>) z usługi WCF, może wygenerować następujący wyjątek: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail utworzony]: serwer zdalny zwrócił nieoczekiwaną odpowiedź: (405) Metoda niedozwolona. "ten wyjątek występuje, ponieważ program WCF zastępuje wychodzącą <xref:System.ServiceModel.OperationContext> z <xref:System.ServiceModel.OperationContext>przychodzącego. Aby rozwiązać ten problem, Utwórz <xref:System.ServiceModel.OperationContextScope> w ramach operacji usługi HTTP sieci Web w programie WCF. Na przykład:  
   
 ```csharp
 public string Echo(string input)  

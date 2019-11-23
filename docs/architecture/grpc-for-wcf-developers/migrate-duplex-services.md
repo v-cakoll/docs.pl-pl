@@ -1,14 +1,13 @@
 ---
 title: Migrowanie usług programu WCF Duplex do gRPC-gRPC dla deweloperów programu WCF
 description: Dowiedz się, jak migrować różne formy usługi programu WCF Duplex do usługi gRPC Streaming Services.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 1702c9f7659f056af9009e81847f28c6e65b277c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: e2248df20e5c2d8f96055d42ba684749251154bd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846602"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971881"
 ---
 # <a name="migrate-wcf-duplex-services-to-grpc"></a>Migrowanie usług dwukierunkowych WCF do usługi gRPC
 
@@ -18,7 +17,7 @@ Istnieje wiele sposobów używania usług dupleksowych w Windows Communication F
 
 ## <a name="server-streaming-rpc"></a>Serwer RPC przesyłania strumieniowego
 
-W [przykładowym rozwiązaniu SIMPLESTOCKTICKER WCF](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker) *SimpleStockPriceTicker*, dostępna jest usługa dupleksowa, w której klient uruchamia połączenie z listą symboli magazynowych, a serwer używa *interfejsu wywołania zwrotnego* do wysyłania aktualizacji staną się dostępne. Klient implementuje ten interfejs, aby odpowiedzieć na wywołania z serwera.
+W [przykładowym rozwiązaniu SIMPLESTOCKTICKER WCF](https://github.com/dotnet-architecture/grpc-for-wcf-developers/tree/master/SimpleStockTickerSample/wcf/SimpleStockTicker) *SimpleStockPriceTicker*jest usługa, w której klient uruchamia połączenie z listą symboli magazynowych, a serwer używa *interfejsu wywołania zwrotnego* do wysyłania aktualizacji, gdy staną się dostępne. Klient implementuje ten interfejs, aby odpowiedzieć na wywołania z serwera.
 
 ### <a name="the-wcf-solution"></a>Rozwiązanie WCF
 
@@ -164,15 +163,15 @@ public class StockTickerService : Protos.SimpleStockTicker.SimpleStockTickerBase
 }
 ```
 
-Jak widać, chociaż deklaracja w pliku `.proto` informuje o metodzie "zwraca" strumień komunikatów `StockTickerUpdate`, w rzeczywistości zwraca `Task` Wanili. Zadanie tworzenia strumienia jest obsługiwane przez wygenerowany kod i biblioteki środowiska uruchomieniowego gRPC, które zapewniają strumień odpowiedzi `IServerStreamWriter<StockTickerUpdate>`, gotowy do użycia.
+Jak widać, chociaż deklaracja w pliku `.proto` informuje o metodzie "zwraca" strumień komunikatów `StockTickerUpdate`, w rzeczywistości zwraca `Task`Wanili. Zadanie tworzenia strumienia jest obsługiwane przez wygenerowany kod i biblioteki środowiska uruchomieniowego gRPC, które zapewniają strumień odpowiedzi `IServerStreamWriter<StockTickerUpdate>`, gotowy do użycia.
 
 W przeciwieństwie do usługi WCF Duplex, w której wystąpienie klasy usługi jest utrzymywane, gdy połączenie jest otwarte, usługa gRPC używa zwracanego zadania, aby zachować aktywność usługi. Zadanie nie powinno zostać ukończone do momentu zamknięcia połączenia.
 
-Usługa może określić, kiedy klient zamknął połączenie przy użyciu `CancellationToken` z `ServerCallContext`. Prosta metoda statyczna `AwaitCancellation` jest używana do tworzenia zadania, które kończy się po anulowaniu tokenu.
+Usługa może określić, kiedy klient zamknął połączenie przy użyciu `CancellationToken` z `ServerCallContext`. Prosta metoda statyczna `AwaitCancellation`jest używana do tworzenia zadania, które kończy się po anulowaniu tokenu.
 
 W metodzie `Subscribe` należy uzyskać `StockPriceSubscriber` i dodać program obsługi zdarzeń, który zapisuje dane w strumieniu odpowiedzi. Następnie poczekaj na zamknięcie połączenia przed natychmiastowe usunięciem `subscriber`, aby zapobiec próbie zapisu danych do zamkniętego strumienia.
 
-Metoda `WriteUpdateAsync` ma `try` / `catch` bloku, aby obsłużyć wszelkie błędy, które mogą wystąpić podczas zapisywania komunikatu w strumieniu. Jest to ważne zagadnienie w przypadku trwałych połączeń za pośrednictwem sieci, które mogą być uszkodzone w dowolnym milisekundach, niezależnie od tego, czy wystąpił błąd w dowolnym miejscu.
+Metoda `WriteUpdateAsync` ma `try`/`catch` bloku, aby obsłużyć wszelkie błędy, które mogą wystąpić podczas zapisywania komunikatu w strumieniu. Jest to ważne zagadnienie w przypadku trwałych połączeń za pośrednictwem sieci, które mogą być uszkodzone w dowolnym milisekundach, niezależnie od tego, czy wystąpił błąd w dowolnym miejscu.
 
 ### <a name="using-the-stocktickerservice-from-a-client-application"></a>Korzystanie z StockTickerService z aplikacji klienckiej
 
@@ -346,7 +345,7 @@ private static Task AwaitCancellation(CancellationToken token)
 }
 ```
 
-Klasa `ActionMessage`, która gRPC wygenerowała gwarancje dla Stanów Zjednoczonych, że można ustawić tylko jedną z właściwości `Add` i `Remove` oraz znaleźć, która z nich nie `null` jest prawidłowym sposobem wyszukiwania, który typ komunikatu jest używany , ale istnieje lepszy sposób. Generowanie kodu spowodowało również utworzenie `enum ActionOneOfCase` w klasie `ActionMessage`, która wygląda następująco:
+Klasa `ActionMessage`, która gRPC wygenerowała gwarancje dla Stanów Zjednoczonych, że można ustawić tylko jedną z właściwości `Add` i `Remove` oraz ustalić, która z nich nie `null` jest prawidłowym sposobem wyszukiwania, który typ komunikatu jest używany, ale istnieje lepszy sposób. Generowanie kodu spowodowało również utworzenie `enum ActionOneOfCase` w klasie `ActionMessage`, która wygląda następująco:
 
 ```csharp
 public enum ActionOneofCase {

@@ -144,4 +144,4 @@ public interface IRepository<T> where T : IAggregateRoot
 
 >[!div class="step-by-step"]
 >[Poprzedni](net-core-microservice-domain-model.md)
->[dalej](implement-value-objects.md)
+>[Następny](implement-value-objects.md)

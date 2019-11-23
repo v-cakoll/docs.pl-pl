@@ -13,7 +13,7 @@ ms.locfileid: "70295779"
 
 Na rysunku 5-12 można zobaczyć kompleksowy scenariusz DevOps obejmujący Zarządzanie kodem, kompilację kodu, kompilację obrazów platformy Docker, wypychanie obrazów Docker do rejestru platformy Docker, a wreszcie Wdrożenie klastra Kubernetes na platformie Azure.
 
-![Utworzonego Uruchamiany na komputerze deweloperskim. Wypychanie do repozytorium rozpoczyna zadanie kompilacji/CI przy użyciu niestandardowego obrazu, który jest wypychany do rejestru platformy Docker, a następnie jest używany przez zadanie CD/Deploy w programie, a wreszcie wypychanie do AKS.](media/docker-workflow-ci-cd-aks.png)
+![Przepływ pracy: uruchamiany na komputerze deweloperskim. Wypychanie do repozytorium rozpoczyna zadanie kompilacji/CI przy użyciu niestandardowego obrazu, który jest wypychany do rejestru platformy Docker, a następnie jest używany przez zadanie CD/Deploy w programie, a wreszcie wypychanie do AKS.](media/docker-workflow-ci-cd-aks.png)
 
 **Rysunek 5-12**. Scenariusz ciągłej integracji/ciągłego tworzenia obrazów platformy Docker i wdrażania ich w klastrze Kubernetes na platformie Azure
 
@@ -37,5 +37,5 @@ Drugim etapem jest utworzenie potoku wdrożenia/wydania. W Azure DevOps Services
 ><https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 >[!div class="step-by-step"]
->[Poprzedni](docker-application-outer-loop-devops-workflow.md)Następny
->[](../run-manage-monitor-docker-environments/index.md)
+>[Poprzedni](docker-application-outer-loop-devops-workflow.md)
+>[Następny](../run-manage-monitor-docker-environments/index.md)

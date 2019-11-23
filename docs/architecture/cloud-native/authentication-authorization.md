@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183729"
 ---
-# <a name="authentication-and-authorization-in-cloud-native-apps"></a>Uwierzytelnianie i autoryzacja w aplikacjach natywnych w chmurze
+# <a name="authentication-and-authorization-in-cloud-native-apps"></a>Uwierzytelnianie i autoryzacja w aplikacjach natywnych dla chmury
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-*Uwierzytelnianie* to proces określania tożsamości podmiotu zabezpieczeń. *Autoryzacja* to czynność udzielenia uwierzytelnionego uprawnienia podmiotowi do wykonania akcji lub uzyskania dostępu do zasobu. Czasami uwierzytelnianie jest skracane `AuthN` i autoryzacja jest skracana do. `AuthZ` Aplikacje natywne w chmurze muszą polegać na otwartych protokołach opartych na protokole HTTP w celu uwierzytelniania podmiotów zabezpieczeń, ponieważ zarówno klienci, jak i aplikacje mogą działać w dowolnym miejscu na świecie na dowolnej platformie lub urządzeniu. Jedynym wspólnym czynnikiem jest protokół HTTP.
+*Uwierzytelnianie* to proces określania tożsamości podmiotu zabezpieczeń. *Autoryzacja* to czynność udzielenia uwierzytelnionego uprawnienia podmiotowi do wykonania akcji lub uzyskania dostępu do zasobu. Czasami uwierzytelnianie jest skracane do `AuthN` a Autoryzacja jest skracana do `AuthZ`. Aplikacje natywne w chmurze muszą polegać na otwartych protokołach opartych na protokole HTTP w celu uwierzytelniania podmiotów zabezpieczeń, ponieważ zarówno klienci, jak i aplikacje mogą działać w dowolnym miejscu na świecie na dowolnej platformie lub urządzeniu. Jedynym wspólnym czynnikiem jest protokół HTTP.
 
 W wielu organizacjach nadal opierają się lokalne usługi uwierzytelniania, takie jak Active Directory Federation Services (AD FS). Chociaż ta metoda ma tradycyjnie obsługiwane organizacje dotyczące lokalnych potrzeb związanych z uwierzytelnianiem, aplikacje natywne dla chmury korzystają z systemów zaprojektowanych specjalnie dla chmury. W ostatnim 2019 w Zjednoczonym Królestwie National cybernetycznymi Security Centre (NCSC) poradnik "Organizacje korzystające z usługi Azure AD jako podstawowego źródła uwierzytelniania" w rzeczywistości obniżą ryzyko w porównaniu z usługami ADFS ". Niektóre przyczyny przedstawione w [tej analizie](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) obejmują:
 

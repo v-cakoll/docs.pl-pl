@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-W przypadku korzystania z konfiguracji deklaracyjnej można wyświetlić podgląd zmian, które zostaną wprowadzone przed ich zatwierdzeniem, używając `kubectl diff -f FOLDERNAME` w odniesieniu do folderu, w którym znajdują się pliki konfiguracji. Po upewnieniu się, że chcesz zastosować zmiany, uruchom `kubectl apply -f FOLDERNAME`. Dodaj `-R`, aby rekursywnie przetworzyć hierarchię folderów.
+W przypadku korzystania z konfiguracji deklaracyjnej można wyświetlić podgląd zmian, które zostaną wprowadzone przed ich zatwierdzeniem za pomocą `kubectl diff -f FOLDERNAME` w folderze, w którym znajdują się pliki konfiguracji. Po upewnieniu się, że chcesz zastosować zmiany, uruchom `kubectl apply -f FOLDERNAME`. Dodaj `-R`, aby rekursywnie przetworzyć hierarchię folderów.
 
 Oprócz usług można użyć konfiguracji deklaracyjnej dla innych funkcji Kubernetes, takich jak *wdrożenia*. Wdrożenia deklaracyjne są używane przez kontrolery wdrażania do aktualizowania zasobów klastra. Wdrożenia są używane do tworzenia nowych zmian, skalowania w górę w celu obsługi większej liczby obciążeń lub wycofywania do poprzedniej poprawki. Jeśli klaster jest niestabilny, wdrożenia deklaracyjne zapewniają mechanizm automatycznego przełączenia klastra do żądanego stanu.
 
@@ -131,7 +131,7 @@ Wdrożenia Kubernetes zapewniają znakomitą wartość w środowiskach produkcyj
 
 Co to jest Minikube? W projekcie Minikube jest wyświetlany komunikat "Minikube implementuje lokalny klaster Kubernetes w systemach macOS, Linux i Windows". Głównym celem jest "to najlepsze narzędzie do tworzenia lokalnych aplikacji Kubernetes oraz do obsługi wszystkich funkcji Kubernetes." Instalowanie Minikube jest oddzielone od platformy Docker, ale Minikube obsługuje inne funkcje hypervisor niż obsługuje program Docker Desktop. Następujące funkcje Kubernetes są obecnie obsługiwane przez Minikube:
 
-- systemem DNS,
+- DNS
 - NodePorts
 - ConfigMaps i wpisy tajne
 - Pulpity nawigacyjne
@@ -159,7 +159,7 @@ Program Visual Studio obsługuje programowanie platformy Docker dla aplikacji si
 
 **Rysunek 3-5**. Program Visual Studio umożliwia obsługę platformy Docker
 
-Gdy ta opcja jest zaznaczona, projekt jest tworzony z `Dockerfile` w jego katalogu głównym, który może być używany do kompilowania i hostowania aplikacji w kontenerze platformy Docker. Przykład pliku dockerfile przedstawiono na rysunku 3-6.
+Gdy ta opcja jest zaznaczona, projekt jest tworzony z `Dockerfile` w jego katalogu głównym, który może służyć do kompilowania i hostowania aplikacji w kontenerze platformy Docker. Przykład pliku dockerfile przedstawiono na rysunku 3-6.
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -194,7 +194,7 @@ Domyślne zachowanie podczas uruchamiania aplikacji jest skonfigurowane do korzy
 
 Poza programowaniem lokalnym [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) zapewnia wygodny sposób pracy wielu programistów z własnymi konfiguracjami Kubernetes na platformie Azure. Jak widać na rysunku 3-7, można również uruchomić aplikację w Azure Dev Spaces.
 
-Jeśli nie dodasz obsługi platformy Docker do aplikacji ASP.NET Core podczas jej tworzenia, zawsze możesz dodać ją później. W Eksplorator rozwiązań programu Visual Studio kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Dodaj** **obsługę platformy Docker** > , jak pokazano na rysunku 3-8.
+Jeśli nie dodasz obsługi platformy Docker do aplikacji ASP.NET Core podczas jej tworzenia, zawsze możesz dodać ją później. W Eksplorator rozwiązań programu Visual Studio kliknij prawym przyciskiem myszy projekt i wybierz polecenie **dodaj** > **Obsługa platformy Docker**, jak pokazano na rysunku 3-8.
 
 ![Dodawanie obsługi platformy Docker w programie Visual Studio](./media/visual-studio-add-docker-support.png)
 

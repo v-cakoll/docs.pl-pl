@@ -119,8 +119,8 @@ Usługa Azure API Management jest dostępna w [czterech różnych warstwach](htt
 
 - Deweloper
 - Podstawowy
-- Standardowa
-- Tytułu
+- Standardowy
+- Premium
 
 Warstwa Deweloper jest przeznaczona dla obciążeń nieprodukcyjnych i oceny. Inne warstwy oferują coraz więcej mocy, funkcji i wyższych umów dotyczących poziomu usług (umowy SLA). Warstwa Premium zapewnia [platformę Azure Virtual Network](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview) i [obsługę wieloregionową](https://docs.microsoft.com/azure/api-management/api-management-howto-deploy-multi-region). Wszystkie warstwy mają stałą cenę za godzinę.
 

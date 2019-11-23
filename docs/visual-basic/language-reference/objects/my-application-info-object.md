@@ -1,32 +1,32 @@
 ---
-title: Obiekt My.Application.Info (Visual Basic)
+title: My.Application.Info — Obiekt
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: 59819eea7e98970a0800ca246bbc253874ed2281
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c5ccbe0932f31353bd075d57a648775e02313a30
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963747"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344144"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info — Obiekt
-Zawiera właściwości służące do uzyskiwania informacji o aplikacji, takich jak numer wersji, opis, ładowane zestawy itd.  
+Provides properties for getting the information about the application, such as the version number, description, loaded assemblies, and so on.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać informacje dotyczące metod i właściwości obiektu `My.Application.Info`, zobacz <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
+ For information about the methods and properties of the `My.Application.Info` object, see <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>.  
   
 > [!NOTE]
-> Właściwości <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> klasy można użyć, aby uzyskać informacje o pliku na dysku.  
+> You can use properties of the <xref:System.Diagnostics.FileVersionInfo?displayProperty=nameWithType> class to obtain information about a file on disk.  
   
 ## <a name="requirements"></a>Wymagania  
- **Przestrzeń nazw:** <xref:Microsoft.VisualBasic.ApplicationServices>  
+ **Namespace:** <xref:Microsoft.VisualBasic.ApplicationServices>  
   
- **Klasa:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
+ **Class:** <xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo>  
   
- **Hamulc** Visual Basic Runtime Library (w pliku Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -95,7 +95,7 @@ Po opublikowaniu zdarzeń integracji za pomocą rozproszonego systemu obsługi k
 
 W zasadzie mikrousługi są używane do tworzenia skalowalnych i wysoko dostępnych systemów. Uproszczenie, theorem CAP oznacza, że nie można utworzyć (rozproszonej) bazy danych (lub mikrousługi, która jest właścicielem modelu), która jest stale dostępna, silnie spójna *i* odporna na każdą partycję. Musisz wybrać dwie z tych trzech właściwości.
 
-W przypadku architektur opartych na mikrousługach należy wybrać dostępność i tolerancję, a także wyróżnić silną spójność. W związku z tym w większości nowoczesnych aplikacji opartych na mikrousługach zwykle nie ma potrzeby korzystania z transakcji rozproszonych w ramach komunikatów, tak jak podczas implementowania [transakcji rozproszonych](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) w oparciu o Distributed Transaction Coordinator systemu Windows (DTC). z [usługą MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
+W przypadku architektur opartych na mikrousługach należy wybrać dostępność i tolerancję, a także wyróżnić silną spójność. W związku z tym w większości nowoczesnych aplikacji opartych na mikrousługach zwykle nie ma potrzeby korzystania z transakcji rozproszonych w ramach komunikatów, jak w przypadku implementowania [transakcji rozproszonych](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) opartych na systemie Windows Distributed Transaction Coordinator (DTC) z [usługą MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx).
 
 Wróć do początkowego problemu i jego przykładu. Jeśli usługa ulegnie awarii po zaktualizowaniu bazy danych (w tym przypadku bezpośrednio po wierszu kodu z kontekstem \_. SaveChangesAsync ()), ale przed opublikowaniem zdarzenia integracji, ogólny system może stać się niespójny. Może to być krytyczne dla firmy, w zależności od konkretnej operacji biznesowej.
 
@@ -107,7 +107,7 @@ Jak wspomniano wcześniej w sekcji architektura, można mieć kilka metod postę
 
 - Przy użyciu [wzorca skrzynki nadawczej](https://www.kamilgrzybek.com/design/the-outbox-pattern/). Jest to tabela transakcyjna do przechowywania zdarzeń integracji (rozszerzających transakcję lokalną).
 
-W tym scenariuszu należy użyć wzorca źródeł pełnych zdarzeń, *Jeśli nie jest to najlepsze rozwiązanie.* Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
+W tym scenariuszu przy użyciu pełnej wzorca określania źródła zdarzeń (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji może nie być możliwe zaimplementowanie systemu całkowitego ES. ES oznacza przechowywanie tylko zdarzeń domeny w transakcyjnej bazie danych, a nie przechowywanie bieżących danych stanu. Przechowywanie tylko zdarzeń domeny może mieć znakomite korzyści, takie jak udostępnienie historii systemu i możliwość ustalenia stanu systemu w dowolnym momencie w przeszłości. Jednak wdrożenie systemu Full ES wymaga przeprowadzenia ponownej architektury większości systemów i wprowadzono wiele innych złożoności i wymagań. Można na przykład użyć bazy danych przeznaczonej do określania źródła zdarzeń, takich jak [Magazyn zdarzeń](https://eventstore.org/), lub bazy danych zorientowanej na dokumenty, takiej jak Azure Cosmos DB, MongoDB, Cassandra, CouchDB lub RavenDB. ES to doskonałe rozwiązanie tego problemu, ale nie najłatwiej, chyba że masz już doświadczenie ze źródłem zdarzeń.
 
 Opcja korzystania z wyszukiwania w dzienniku transakcji początkowo wygląda bardzo przejrzysta. Aby jednak korzystać z tego podejścia, mikrousługa musi być dołączona do dziennika transakcji RDBMS, na przykład dziennika transakcji SQL Server. Prawdopodobnie nie jest to pożądane. Kolejną wadą jest to, że aktualizacje niskiego poziomu rejestrowane w dzienniku transakcji mogą nie znajdować się na tym samym poziomie co zdarzenia integracji wysokiego poziomu. W takim przypadku proces odtwarzania tych operacji dziennika transakcji może być trudny.
 
@@ -316,7 +316,7 @@ Jednym ze sposobów, aby upewnić się, że zdarzenie jest przetwarzane tylko ra
 
 W przypadku sporadycznych awarii sieci można duplikować komunikaty, a odbiorca wiadomości musi być gotowy do obsługi tych zduplikowanych komunikatów. Jeśli to możliwe, odbiorcy powinny obsługiwać komunikaty w idempotentne sposób, który jest lepiej niż jawnie obsługujący deduplikację.
 
-Zgodnie z [dokumentacją RabbitMQ](https://www.rabbitmq.com/reliability.html#consumer)", jeśli wiadomość jest dostarczana do konsumenta, a następnie ponownie umieszczana w kolejce (ponieważ nie została potwierdzona przed porzuceniem połączenia przez klienta, na przykład), RabbitMQ ustawi na niej flagę ponownie dostarczone, gdy zostanie on dostarczony ponownie (niezależnie od tego, czy jest to ten sam Klient czy inny).
+Zgodnie z [dokumentacją RabbitMQ](https://www.rabbitmq.com/reliability.html#consumer)"Jeśli komunikat jest dostarczany do konsumenta, a następnie ponownie umieszczany w kolejce (ponieważ nie został potwierdzony przed porzuceniem połączenia przez klienta, na przykład), RabbitMQ ustawi ponownie flagę po jej dostarczeniu (niezależnie od tego, czy jest to ten sam Klient, czy inny).
 
 Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, ponieważ komunikat mógł już zostać przetworzony. Ale nie jest to gwarantowane; komunikat nigdy nie dotarł do odbiorcy po jego przejściu do brokera komunikatów, prawdopodobnie z powodu problemów z siecią. Z drugiej strony, jeśli flaga "redostarczany" nie została ustawiona, jest gwarantowane, że wiadomość nie została wysłana więcej niż raz. W związku z tym odbiornik musi deduplikowanie komunikatów lub przetwarzać komunikaty w idempotentne sposób tylko wtedy, gdy flaga "redostarczany" została ustawiona w komunikacie.
 
@@ -325,10 +325,10 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
 - **EShopOnContainers z rozwidleniem przy użyciu NServiceBus (konkretne oprogramowanie)**  \
     <https://go.particular.net/eShopOnContainers>
 
-- **Obsługa komunikatów opartych na zdarzeniach** \
+-  \ **komunikatów opartych na zdarzeniach**
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena sprzęgu** \
+- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena \ sprzęgu**
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 -  \ **kanału publikowania/subskrybowania**
@@ -381,4 +381,4 @@ Jeśli ustawiono flagę "redostarczony", odbiorca musi uwzględnić to konto, po
 
 > [!div class="step-by-step"]
 > [Poprzedni](rabbitmq-event-bus-development-test-environment.md)
-> [dalej](test-aspnet-core-services-web-apps.md)
+> [Następny](test-aspnet-core-services-web-apps.md)

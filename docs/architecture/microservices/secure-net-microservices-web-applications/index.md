@@ -69,16 +69,16 @@ Aby można było korzystać z uwierzytelniania zewnętrznego, należy uwzględni
 
 W poniższej tabeli przedstawiono popularne zewnętrzne dostawcy uwierzytelniania i powiązane z nimi pakiety NuGet.
 
-| **Dostawcy**  | **Pakiet**                                          |
+| **Dostawca**  | **Pakiet**                                          |
 | ------------- | ---------------------------------------------------- |
-| **Programu** | **Microsoft. AspNetCore. Authentication. MicrosoftAccount** |
-| **Usłudze**    | **Microsoft. AspNetCore. Authentication. Google**           |
-| **Serwis**  | **Microsoft. AspNetCore. Authentication. Facebook**         |
-| **Ekran**   | **Microsoft. AspNetCore. Authentication. Twitter**          |
+| **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
+| **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
+| **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
+| **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
 We wszystkich przypadkach oprogramowanie pośredniczące jest zarejestrowane z wywołaniem metody rejestracji podobnej do `app.Use{ExternalProvider}Authentication` w `Startup.Configure`. Te metody rejestracji przyjmują obiekt Options, który zawiera identyfikator aplikacji i informacje o kluczu tajnym (na przykład hasło), zgodnie z wymaganiami dostawcy. Zewnętrzni dostawcy uwierzytelniania wymagają rejestracji aplikacji (zgodnie z opisem w [dokumentacji ASP.NET Core](/aspnet/core/security/authentication/social/)), dzięki czemu mogą poinformować użytkownika, jakie aplikacje żąda dostępu do ich tożsamości.
 
-Po zarejestrowaniu oprogramowania pośredniczącego w `Startup.Configure` możesz monitować użytkowników o zalogowanie się z dowolnego działania kontrolera. W tym celu należy utworzyć obiekt `AuthenticationProperties`, który zawiera nazwę dostawcy uwierzytelniania i adres URL przekierowania. Następnie zwracasz odpowiedź wyzwania, która przekazuje obiekt `AuthenticationProperties`. Poniższy kod przedstawia przykład tego elementu.
+Po zarejestrowaniu oprogramowania pośredniczącego w `Startup.Configure`możesz monitować użytkowników o zalogowanie się z dowolnego działania kontrolera. W tym celu należy utworzyć obiekt `AuthenticationProperties`, który zawiera nazwę dostawcy uwierzytelniania i adres URL przekierowania. Następnie zwracasz odpowiedź wyzwania, która przekazuje obiekt `AuthenticationProperties`. Poniższy kod przedstawia przykład tego elementu.
 
 ```csharp
 var properties = _signInManager.ConfigureExternalAuthenticationProperties(provider,
@@ -139,7 +139,7 @@ Na przykład w interfejsie API sieci Web ASP.NET Core, który uwidacznia punkty 
 
 ### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>Uwierzytelnianie za pomocą dostawcy tożsamości OpenID Connect Connect lub OAuth 2,0
 
-Jeśli informacje o użytkowniku są przechowywane w Azure Active Directory lub inne rozwiązanie do obsługi tożsamości, które obsługuje OpenID Connect Connect lub OAuth 2,0, można użyć pakietu **Microsoft. AspNetCore. Authentication. OpenIdConnect** do uwierzytelniania przy użyciu połączenia OpenID Connect utworzonego. Na przykład w celu uwierzytelnienia w mikrousłudze Identity. API w eShopOnContainers, aplikacja sieci Web ASP.NET Core może korzystać z oprogramowania pośredniczącego z tego pakietu, jak pokazano w poniższym uproszczonym przykładzie w `Startup.cs`:
+Jeśli informacje o użytkowniku są przechowywane w Azure Active Directory lub inne rozwiązanie do obsługi tożsamości, które obsługuje OpenID Connect Connect lub OAuth 2,0, można użyć pakietu **Microsoft. AspNetCore. Authentication. OpenIdConnect** do uwierzytelniania za pomocą przepływu pracy OpenID Connect Connect. Na przykład w celu uwierzytelnienia w mikrousłudze Identity. API w eShopOnContainers, aplikacja sieci Web ASP.NET Core może korzystać z oprogramowania pośredniczącego z tego pakietu, jak pokazano w poniższym uproszczonym przykładzie w `Startup.cs`:
 
 ```csharp
 // Startup.cs
@@ -278,27 +278,27 @@ Oprogramowanie pośredniczące uwierzytelniania okaziciela JWT może również o
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Udostępnianie plików cookie między aplikacjami**  \
+- **Udostępnianie plików cookie między aplikacjami** \
   [https://docs.microsoft.com/aspnet/core/security/cookie-sharing](/aspnet/core/security/cookie-sharing)
 
-- **Wprowadzenie do tożsamości**  \
+- **Wprowadzenie do tożsamości** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Uwierzytelnianie dwuskładnikowe za pomocą SMS**  \
+- **Rick Anderson. Uwierzytelnianie dwuskładnikowe za pomocą SMS** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
-- **Włączanie uwierzytelniania przy użyciu usługi Facebook, Google i innych dostawców zewnętrznych**  \
+- **Włączanie uwierzytelniania przy użyciu usługi Facebook, Google i innych dostawców zewnętrznych** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. Wprowadzenie do  \ uwierzytelniania OAuth 2**
+- **Michell Anicas. Wprowadzenie do \ uwierzytelniania OAuth 2**
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **ASPNET. Security. OAuth. Providers** (repozytorium GitHub dla dostawców ASP.NET OAuth) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **Usługi identityserver4. Oficjalna dokumentacja**  \
+- **Usługi identityserver4. Oficjalna dokumentacja** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
 >[Poprzedni](../implement-resilient-applications/monitor-app-health.md)
->[dalej](authorization-net-microservices-web-applications.md)
+>[Następny](authorization-net-microservices-web-applications.md)

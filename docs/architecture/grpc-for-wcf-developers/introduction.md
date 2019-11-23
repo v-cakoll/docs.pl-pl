@@ -1,14 +1,13 @@
 ---
 title: Wprowadzenie — gRPC dla deweloperów WCF
 description: Wprowadzenie
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 9eb12d5060ddf4f345ebe095738c98238c6caab7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 3fb7ae440f65cc2daa2a2c984d01d0c0c1eac0aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846628"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967618"
 ---
 # <a name="introduction"></a>Wprowadzenie
 
@@ -37,7 +36,7 @@ Protokół SOAP definiuje reguły, za pomocą których elementy rozproszone apli
 
 Windows Communication Foundation to struktura do kompilowania usług. Została zaprojektowana na wczesnych wersjach 2000, aby ułatwić deweloperom korzystanie z wczesnego SOA do zarządzania złożonością pracy z protokołem SOAP. Mimo że eliminuje wymóg tworzenia własnych protokołów SOAP przez dewelopera, usługa WCF nadal używa protokołu SOAP do zapewnienia współdziałania z innymi systemami. Program WCF został również zaprojektowany w celu dostarczania rozwiązań między wieloma protokołami (HTTP/1.1, NetTCP itd.).
 
-## <a name="microservices"></a>Mikrousług
+## <a name="microservices"></a>Mikrousługi
 
 W przypadku architektur mikrousług duże aplikacje są kompilowane jako kolekcja mniejszych usług modułowych. Każdy składnik wykonuje określone zadanie lub proces, a składniki są przeznaczone do pracy, ale mogą być odizolowane w razie potrzeby.
 
@@ -52,7 +51,7 @@ Przejście do coraz większej wirtualizacji, przetwarzania danych w chmurze, kon
 
 Była w tym środowisku, że gRPC został uruchomiony, 10 lat po pierwszym wydaniu WCF przez firmę Microsoft. W przypadku rozwijającego się bezpośrednio z usługi RPC infrastruktury wewnętrznej firmy Google (stubby), gRPC nigdy nie opierał się na tych samych standardach i protokołach, które powiadomiły parametry wielu wcześniejszych wywołań RPC. Ponadto gRPC była kiedykolwiek oparta na protokole HTTP/2 i dlatego może nastąpić w przypadku nowych funkcji oferowanych przez zaawansowany protokół transportowy. W szczególności dwukierunkowe przesyłanie strumieniowe, obsługa komunikatów binarnych i multipleksowanie.
 
-## <a name="about-this-guide"></a>Informacje o tym przewodniku
+## <a name="about-this-guide"></a>O tym przewodniku
 
 Ten przewodnik obejmuje najważniejsze funkcje gRPC. Wczesne rozdziały mają ogólny wygląd głównych funkcji programu WCF i porównaj je z gRPC. Określa, gdzie są bezpośrednie korelacje między WCF i gRPC, a także miejsce, w którym gRPC oferuje zalety. W przypadku braku korelacji między usługą WCF i gRPC lub gRPC nie jest możliwe zaoferowanie równoważnego rozwiązania WCF, w tym przewodniku opisano obejścia lub miejsca, w których można znaleźć więcej informacji.
 

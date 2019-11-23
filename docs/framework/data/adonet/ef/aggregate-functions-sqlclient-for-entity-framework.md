@@ -20,11 +20,11 @@ Zwraca średnią wartości w kolekcji. Wartości null są ignorowane.
 
 **Argumenty**
 
-@No__t-0, `Int64`, `Double` i `Decimal`.
+`Int32`, `Int64`, `Double`i `Decimal`.
 
 **Wartość zwracana**
 
-Typ `expression`.
+Typ elementu `expression`.
 
 **Przykład**
 
@@ -40,7 +40,7 @@ Typ `expression`.
  
  **Wartość zwracana**
  
- @No__t-0.
+ `Int32`.
  
  **Przykład**
  
@@ -52,7 +52,7 @@ Zwraca liczbę elementów w kolekcji jako `Int32`.
 
 **Argumenty**
 
-Kolekcja @ no__t-0T >, gdzie T jest jednym z następujących typów:
+Kolekcja\<T >, gdzie T jest jednym z następujących typów:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Kolekcja @ no__t-0T >, gdzie T jest jednym z następujących typów:
 
 **Wartość zwracana**
 
-@No__t-0.
+`Int32`.
 
 **Przykład**
 
@@ -82,7 +82,7 @@ Zwraca liczbę elementów w kolekcji jako `bigint`.
 
 **Wartość zwracana**
 
-@No__t-0.
+`Int64`.
 
 **Przykład**
 
@@ -103,7 +103,7 @@ Kolekcja (T), gdzie T jest jednym z następujących typów:
 
 **Wartość zwracana**
 
-Typ `expression`.
+Typ elementu `expression`.
 
 **Przykład**
 
@@ -124,7 +124,7 @@ Kolekcja (T), gdzie T jest jednym z następujących typów:
 
 **Wartość zwracana**
 
-Typ `expression`.
+Typ elementu `expression`.
 
 **Przykład**
 
@@ -140,7 +140,7 @@ Kolekcja (`Double`).
 
 **Wartość zwracana**
 
-@No__t-0.
+A `Double`.
 
 **Przykład**
 
@@ -156,7 +156,7 @@ Kolekcja (`Double`).
 
 **Wartość zwracana**
 
-@No__t-0.
+A `Double`.
 
 **Przykład**
 
@@ -168,11 +168,11 @@ Zwraca sumę wszystkich wartości w kolekcji.
 
 **Argumenty**
 
-Kolekcja (T), gdzie T jest jednym z następujących typów: `Int32`, `Int64`, `Double`, `Decimal`.
+Kolekcja (T), gdzie T jest jednym z następujących typów: `Int32`, `Int64`, `Double``Decimal`.
 
 **Wartość zwracana**
 
-Typ `expression`.
+Typ elementu `expression`.
 
 **Przykład**
 
@@ -188,7 +188,7 @@ Kolekcja (`Double`).
 
 **Wartość zwracana**
 
-@No__t-0.
+A `Double`.
 
 **Przykład**
 
@@ -204,7 +204,7 @@ Kolekcja (`Double`).
 
 **Wartość zwracana**
 
-@No__t-0.
+A `Double`.
 
 **Przykład**
 
@@ -212,6 +212,6 @@ Kolekcja (`Double`).
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Funkcje agregujące (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
+- [Aggregate Functions (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 - [Jednostki języka SQL](./language-reference/entity-sql-language.md)
 - [Funkcje agregujące Canonical](./language-reference/aggregate-canonical-functions.md)

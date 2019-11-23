@@ -20,7 +20,7 @@ ms.locfileid: "72320052"
 Wzorzec kreskowania jest tworzony z dwóch kolorów: jeden dla tła i jeden dla linii, które tworzą wzorzec na tle. Aby wypełnić zamkniętego kształtu wzorcem kreskowania, użyj obiektu <xref:System.Drawing.Drawing2D.HatchBrush>. Poniższy przykład ilustruje sposób wypełnienia elipsy wzorkiem kreskowanym:  
   
 ## <a name="example"></a>Przykład  
- Konstruktor <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> przyjmuje trzy argumenty: styl kreskowania, kolor linii kreskowej i kolor tła. Argument stylu kreskowania może być dowolną wartością z wyliczenia <xref:System.Drawing.Drawing2D.HatchStyle>. W wyliczeniu <xref:System.Drawing.Drawing2D.HatchStyle> znajduje się więcej niż 50 elementów; Niektóre z tych elementów przedstawiono na poniższej liście:  
+ Konstruktor <xref:System.Drawing.Drawing2D.HatchBrush.%23ctor%2A> przyjmuje trzy argumenty: styl kreskowania, kolor linii kreski i kolor tła. Argument stylu kreskowania może być dowolną wartością z wyliczenia <xref:System.Drawing.Drawing2D.HatchStyle>. W wyliczeniu <xref:System.Drawing.Drawing2D.HatchStyle> znajduje się więcej niż 50 elementów; Niektóre z tych elementów przedstawiono na poniższej liście:  
   
 - <xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>  
   
@@ -42,7 +42,7 @@ Wzorzec kreskowania jest tworzony z dwóch kolorów: jeden dla tła i jeden dla 
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Poprzedni przykład jest przeznaczony do użytku z Windows Forms i wymaga <xref:System.Windows.Forms.PaintEventArgs> @ no__t-1, który jest parametrem programu obsługi zdarzeń <xref:System.Windows.Forms.Control.Paint>.  
+ Poprzedni przykład jest przeznaczony do użytku z Windows Forms i wymaga `e`<xref:System.Windows.Forms.PaintEventArgs>, który jest parametrem programu obsługi zdarzeń <xref:System.Windows.Forms.Control.Paint>.  
   
 ## <a name="see-also"></a>Zobacz także
 

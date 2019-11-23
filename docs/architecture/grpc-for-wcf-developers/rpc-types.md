@@ -1,14 +1,13 @@
 ---
 title: Typy RPC-gRPC dla deweloperów WCF
 description: Przegląd typów zdalnego wywołania procedury obsługiwanego przez program WCF i ich odpowiedników w gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: ce5bf03b01dff3f7bb201ff08c9065abc2e58360
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 64375236da17c0aedbafe1cb441e72a144203358
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846228"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967267"
 ---
 # <a name="types-of-rpc"></a>Typy zdalnych wywołań procedur
 
@@ -62,7 +61,7 @@ Jak widać, implementacja metody gRPC jednoargumentowej usługi RPC jest bardzo 
 
 ## <a name="wcf-duplex-one-way-to-client"></a>Tryb dupleksu WCF — jednokierunkowe dla klienta
 
-Aplikacje WCF (z pewnymi powiązaniami) mogą utworzyć trwałe połączenie między klientem i serwerem, a serwer może asynchronicznie wysyłać dane do klienta do momentu zamknięcia połączenia przy użyciu *interfejsu wywołania zwrotnego* określonego w <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> wartość.
+Aplikacje WCF (z określonymi powiązaniami) mogą utworzyć trwałe połączenie między klientem i serwerem, a serwer może wysyłać dane do klienta do momentu zamknięcia połączenia przy użyciu *interfejsu wywołania zwrotnego* określonego we właściwości <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>.
 
 usługi gRPC Services zapewniają podobną funkcjonalność przy użyciu strumieni komunikatów. Strumienie nie mapują *dokładnie* na usługi WCF w warunkach implementacji, ale można osiągnąć te same wyniki.
 

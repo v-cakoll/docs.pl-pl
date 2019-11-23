@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71332733"
 ---
-# <a name="what-is-f"></a>Co to jest F @ no__t-0
+# <a name="what-is-f"></a>Co to jest F\#
 
 F#to funkcjonalny język programowania, dzięki któremu można łatwo pisać kod poprawny i łatwiejszy w obsłudze.
 
@@ -42,7 +42,7 @@ F#ma wiele funkcji, w tym:
 * Wnioskowanie o typie i automatyczne uogólnianie
 * Funkcje pierwszoklasowe
 * Zaawansowane typy danych
-* Dopasowanie wzorca
+* Dopasowanie do wzorca
 * Programowanie asynchroniczne
 
 Pełny zestaw funkcji jest udokumentowany w [ F# dokumentacji języka](./language-reference/index.md).

@@ -32,5 +32,5 @@ Złożoność tworzenia kontenerów aplikacji jest stale rośnie w zależności 
 - Organizacje mogą łatwo udostępniać kontenery platformy Docker na podstawie obrazów prywatnych przechowywanych w Azure Container Registry wraz z każdą zależnością dotyczącą składników platformy Azure (danymi, PaaS itp.) przy użyciu szablonów Azure Resource Manager z narzędziami, które są już wygodne.
 
 >[!div class="step-by-step"]
->[Poprzedni](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)Następny
->[](docker-application-outer-loop-devops-workflow.md)
+>[Poprzedni](../design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
+>[Następny](docker-application-outer-loop-devops-workflow.md)

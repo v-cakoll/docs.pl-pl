@@ -28,5 +28,5 @@ Jeśli proces zakończy się niepowodzeniem, kontener kończy się, a koordynato
 Możesz znaleźć scenariusz, w którym wiele procesów działa w jednym kontenerze. W tym scenariuszu, ponieważ może istnieć tylko jeden punkt wejścia dla każdego kontenera, można uruchomić skrypt w kontenerze, który uruchamia dowolną liczbę programów w miarę potrzeb. Na przykład można użyć [opiekuna](http://supervisord.org/) lub podobnego narzędzia, aby zadbać o uruchomienie wielu procesów wewnątrz jednego kontenera. Jednak mimo że można znaleźć architektury, które przechowują wiele procesów na kontener, takie podejście nie jest bardzo powszechne.
 
 >[!div class="step-by-step"]
->[Poprzedni](../net-core-net-framework-containers/official-net-docker-images.md)Następny
->[](containerize-monolithic-applications.md)
+>[Poprzedni](../net-core-net-framework-containers/official-net-docker-images.md)
+>[Następny](containerize-monolithic-applications.md)

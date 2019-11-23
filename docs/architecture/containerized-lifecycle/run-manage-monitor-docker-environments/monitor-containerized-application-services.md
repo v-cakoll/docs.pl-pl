@@ -19,7 +19,7 @@ Najważniejsze dla aplikacji, które dzielą się na wiele kontenerów i mikrous
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Omówienie Azure Monitor** \
+- **Omówienie \ Azure monitor**
   <https://docs.microsoft.com/azure/azure-monitor/overview>
 
 - **Co to jest usługa Application Insights?** \
@@ -50,5 +50,5 @@ Platforma Azure oferuje narzędzia do zarządzania i zapewnienia ujednoliconego 
 - **Zasoby lokalne**. Dzięki [prawdziwie spójnej chmurze hybrydowej](https://azure.microsoft.com/resources/truly-consistent-hybrid-cloud-with-microsoft-azure/).
 
 >[!div class="step-by-step"]
->[Poprzedni](manage-production-docker-environments.md)Następny
->[](../key-takeaways/index.md)
+>[Poprzedni](manage-production-docker-environments.md)
+>[Następny](../key-takeaways/index.md)

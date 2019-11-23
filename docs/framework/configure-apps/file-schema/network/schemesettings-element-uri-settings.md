@@ -9,12 +9,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697771"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings >, element (ustawienia identyfikatora URI)
-Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych schematów.  
+# <a name="schemesettings-element-uri-settings"></a>\<element > schemeSettings (ustawienia identyfikatora URI)
+Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych 
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[adresu](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
+|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
   
 ## <a name="remarks"></a>Uwagi  
  Domyślnie Klasa <xref:System.Uri?displayProperty=nameWithType> cofa ograniczniki ścieżki kodowanej procentowo przed wykonaniem kompresji ścieżki. Ta implementacja została zaimplementowana jako mechanizm zabezpieczeń przed atakami podobnymi do następujących:  
@@ -52,7 +52,7 @@ Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych 
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Z tego powodu Klasa <xref:System.Uri?displayProperty=nameWithType> najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. Wynikiem przekazania złośliwego adresu URL powyżej do konstruktora klasy <xref:System.Uri?displayProperty=nameWithType> skutkuje następujący identyfikator URI:  
+ Z tego powodu <xref:System.Uri?displayProperty=nameWithType> klasie najpierw cofa ograniczniki ścieżki, a następnie stosuje kompresję ścieżki. W wyniku przekazania złośliwego adresu URL powyżej do <xref:System.Uri?displayProperty=nameWithType> konstruktora klasy wyniki mają następujący identyfikator URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   

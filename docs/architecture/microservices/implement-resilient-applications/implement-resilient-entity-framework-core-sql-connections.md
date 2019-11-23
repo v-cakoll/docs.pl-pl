@@ -49,7 +49,7 @@ Jeśli spróbujesz wykonać tę transakcję przy użyciu strategii wykonywania E
 
 > System. InvalidOperationException: skonfigurowana strategia wykonywania "SqlServerRetryingExecutionStrategy" nie obsługuje transakcji inicjowanych przez użytkownika. Użyj strategii wykonywania zwróconej przez obiekt "DbContext. Database. CreateExecutionStrategy ()", aby wykonać wszystkie operacje w transakcji jako jednostkę wywołały.
 
-Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania wywoła ponownie delegata. Na przykład poniższy kod pokazuje, w jaki sposób jest zaimplementowany w eShopOnContainers z dwoma wieloma atrybutami DbContext (\_catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania ProductPriceChangedIntegrationEvent Obiekt, który musi używać innego kontekstu DbContext.
+Rozwiązaniem jest ręczne Wywołaj strategię wykonywania EF z delegatem reprezentującym wszystkie elementy, które należy wykonać. Jeśli wystąpi błąd przejściowy, strategia wykonywania wywoła ponownie delegata. Na przykład poniższy kod pokazuje, w jaki sposób jest implementowany w eShopOnContainers przy użyciu dwóch wielu dbcontexts (\_catalogContext i IntegrationEventLogContext) podczas aktualizowania produktu, a następnie zapisywania obiektu ProductPriceChangedIntegrationEvent, który musi korzystać z innego DbContext.
 
 ```csharp
 public async Task<IActionResult> UpdateProduct(

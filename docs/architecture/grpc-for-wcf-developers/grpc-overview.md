@@ -1,14 +1,13 @@
 ---
 title: Omówienie gRPC-gRPC dla deweloperów programu WCF
 description: Dowiedz się więcej na temat zestawu zasad dotyczących opracowywania gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6980b473a6f9852a4e4f396355e98e2d3300cabe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a92fe7ca2f8e17126025362fcc3c190024ebf7d3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846654"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967765"
 ---
 # <a name="grpc-overview"></a>gRPC — Omówienie
 
@@ -16,7 +15,7 @@ Po przejrzeniu Genesis zarówno programu WCF, jak i gRPC w ostatnim rozdziale, t
 
 ASP.NET Core 3,0 to pierwsza wersja ASP.NET, która natywnie obsługuje gRPC jako obywatel pierwszej klasy, a firma Microsoft Teams uczestniczy w oficjalnej implementacji platformy .NET gRPC. Zaleca się, aby najlepszym podejściem do kompilowania aplikacji rozproszonych za pomocą platformy .NET było współdziałanie ze wszystkimi innymi głównymi językami programowania i strukturami.
 
-## <a name="key-principles"></a>Najważniejsze zasady
+## <a name="key-principles"></a>Podstawowe zasady
 
 Zgodnie z opisem w rozdziale 1 Firma Google chciała wykorzystać wprowadzenie protokołu HTTP/2 do zastępowania stubby, jego wewnętrznej infrastruktury usługi RPC ogólnego przeznaczenia. gRPC, w oparciu o stubby, teraz może wykorzystać standaryzację i spowodować jej zastosowanie do przetwarzania przenośnego, chmury i Internet rzeczy.
 

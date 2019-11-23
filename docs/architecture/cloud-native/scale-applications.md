@@ -15,7 +15,7 @@ ms.locfileid: "71184828"
 
 Jedną z najczęściej zachwalana korzyści związanych z przechodzeniem do środowiska hostingu w chmurze jest skalowalność. Skalowalność lub możliwość zaakceptowania przez aplikację dodatkowych obciążeń użytkowników bez nieuzasadnionego obniżenia wydajności dla każdego użytkownika, jest najczęściej realizowana przez rozdzielenie aplikacji na małe fragmenty, które mogą zostać przekazane do zasobów, których wymagają. W tym rozdziale wprowadzimy technologie umożliwiające skalowanie aplikacji natywnych w chmurze w celu spełnienia wymagań użytkownika. Te technologie obejmują:
 
-- Kontenery
+- Containers
 - Koordynatorów
 - Obliczanie bezserwerowe
 

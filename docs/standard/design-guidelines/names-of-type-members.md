@@ -68,11 +68,11 @@ public class Control {
   
  **✓ DO** nazwy zdarzeń za pomocą zlecenie lub zlecenia frazę.  
   
- Przykładami mogą być `Clicked`, `Painting`, `DroppedDown` i tak dalej.  
+ Przykłady obejmują `Clicked`, `Painting`, `DroppedDown`i tak dalej.  
   
  **✓ DO** nadać nazwy zdarzenia przy użyciu koncepcji przed i po nim, za pomocą obecny i czasy w przeszłości.  
   
- Na przykład zdarzenie zamknięcia, które jest wywoływane przed zamknięciem okna, zostanie wywołane `Closing`, a jeden, który jest wywoływany po zamknięciu okna, zostanie wywołany `Closed`.  
+ Na przykład zdarzenie zamykające wywoływane przed zamknięciem okna powinno być wywoływane `Closing`, a jeden, który jest wywoływany po zamknięciu okna, zostanie wywołany `Closed`.  
   
  **X DO NOT** Użyj "Before" lub "After" prefiksy lub postfixes, aby wskazać, przed i po zdarzenia. Użyj obecnych i ostatnich dziesiątek tak samo, jak zostało to opisane.  
   
@@ -97,9 +97,9 @@ public class Control {
   
  Na przykład nie umożliwia "g_" lub "s_" oznaczają pola statyczne.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Reprinted przez uprawnienie Pearson Education, Inc. od [Framework — wytyczne dotyczące projektowania: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, druga wersja @ no__t-0 przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

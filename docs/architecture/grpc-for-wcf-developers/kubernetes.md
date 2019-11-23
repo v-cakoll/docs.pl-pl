@@ -1,14 +1,13 @@
 ---
 title: Kubernetes — gRPC dla deweloperów WCF
 description: Uruchamianie ASP.NET Core gRPC Services w klastrze Kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846639"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967567"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -26,7 +25,7 @@ W tym rozdziale szczegółowo opisano sposób wdrażania usługi ASP.NET Core gR
 
 ## <a name="kubernetes-terminology"></a>Terminologia Kubernetes
 
-Kubernetes korzysta z *konfiguracji żądanego stanu*: interfejs API jest używany do opisywania *obiektów, takich jak*zbiory, *wdrożenia* i *usługi*, a *płaszczyzna kontroli* wymaga wdrożenia żądanego stanu we wszystkich *węzłach.* w *klastrze*. Klaster Kubernetes ma węzeł *główny* z uruchomionym *interfejsem API Kubernetes*, który może być przekazywany programowo lub za pomocą narzędzia wiersza polecenia `kubectl`. `kubectl` może tworzyć obiekty i zarządzać nimi za pomocą argumentów wiersza polecenia, ale najlepiej sprawdza się w przypadku plików YAML zawierających dane deklaracji dla obiektów Kubernetes.
+Kubernetes korzysta z *konfiguracji żądanego stanu*: interfejs API jest używany do opisywania *obiektów, takich jak*zbiory, *wdrożenia* i *usługi*, a *płaszczyzna kontroli* wymaga wdrożenia żądanego stanu dla wszystkich *węzłów* w *klastrze*. Klaster Kubernetes ma węzeł *główny* z uruchomionym *interfejsem API Kubernetes*, który może być przekazywany programowo lub za pomocą narzędzia wiersza polecenia `kubectl`. `kubectl` może tworzyć obiekty i zarządzać nimi za pomocą argumentów wiersza polecenia, ale najlepiej sprawdza się w przypadku plików YAML zawierających dane deklaracji dla obiektów Kubernetes.
 
 ### <a name="kubernetes-yaml-files"></a>Pliki YAML Kubernetes
 
@@ -39,7 +38,7 @@ metadata:
   # Object properties
 ```
 
-Właściwość `apiVersion` służy do określenia wersji (i interfejsu API), do której jest przeznaczony plik. Właściwość `kind` określa rodzaj obiektu reprezentowanego przez YAML. Właściwość `metadata` zawiera właściwości obiektu, takie jak `name`, `namespace` lub `labels`.
+Właściwość `apiVersion` służy do określenia wersji (i interfejsu API), do której jest przeznaczony plik. Właściwość `kind` określa rodzaj obiektu reprezentowanego przez YAML. Właściwość `metadata` zawiera właściwości obiektu, takie jak `name`, `namespace`lub `labels`.
 
 Większość plików YAML Kubernetes zawiera również sekcję `spec` opisującą zasoby i konfigurację niezbędne do utworzenia obiektu.
 
@@ -59,7 +58,7 @@ Wdrożenia są *opisanymi obiektami stanu* dla zasobników. Jeśli utworzysz ele
 
 Klasy, usługi i wdrożenia to trzy najbardziej podstawowe typy obiektów. Istnieją dziesiątki innych typów obiektów, które są zarządzane przez klaster Kubernetes. Aby uzyskać więcej informacji, zapoznaj się z dokumentacją dotyczącą [pojęć Kubernetes](https://kubernetes.io/docs/concepts/) .
 
-### <a name="namespaces"></a>Namespaces
+### <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}
 
 Klastry Kubernetes są przeznaczone do skalowania do setek lub tysięcy węzłów i uruchamiania podobnej liczby usług. Aby uniknąć konfliktów między nazwami obiektów, przestrzenie nazw są używane do grupowania obiektów razem w ramach większych aplikacji. Kubernetes własne usługi działają w przestrzeni nazw `default`. Wszystkie obiekty użytkownika należy utworzyć we własnych przestrzeniach nazw, aby uniknąć potencjalnych konfliktów z obiektami domyślnymi lub innymi dzierżawcami w klastrze.
 

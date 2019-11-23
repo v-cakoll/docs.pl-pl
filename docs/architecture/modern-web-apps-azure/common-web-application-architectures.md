@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332009"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972132"
 ---
 # <a name="common-web-application-architectures"></a>Typowe architektury aplikacji internetowych
 
@@ -155,7 +155,7 @@ Rdzeń aplikacji zawiera model biznesowy, który obejmuje jednostki, usługi i i
 - Usługi
 - DTO
 
-Projekt infrastruktury zazwyczaj obejmuje implementacje dostępu do danych. W typowej aplikacji sieci Web ASP.NET Core te implementacje obejmują Entity Framework (EF) DbContext, wszystkie EF Core `Migration` obiekty, które zostały zdefiniowane, oraz klasy implementacji dostępu do danych. Najbardziej typowym sposobem na abstrakcyjny kod implementacji dostępu do danych jest użycie [wzorca projektowego repozytorium](https://deviq.com/repository-pattern/).
+Projekt infrastruktury zazwyczaj obejmuje implementacje dostępu do danych. W typowej aplikacji sieci Web ASP.NET Core te implementacje obejmują Entity Framework (EF) DbContext, wszelkie EF Core `Migration` obiekty, które zostały zdefiniowane, oraz klasy implementacji dostępu do danych. Najbardziej typowym sposobem na abstrakcyjny kod implementacji dostępu do danych jest użycie [wzorca projektowego repozytorium](https://deviq.com/repository-pattern/).
 
 Oprócz implementacji dostępu do danych, projekt infrastruktury powinien zawierać implementacje usług, które muszą wchodzić w skład z obaw związanych z infrastrukturą. Te usługi powinny implementować interfejsy zdefiniowane w rdzeniu aplikacji, a więc infrastruktura powinna mieć odwołanie do projektu podstawowego aplikacji.
 
@@ -163,7 +163,7 @@ Oprócz implementacji dostępu do danych, projekt infrastruktury powinien zawier
 
 - Typy EF Core (`DbContext`, `Migration`)
 - Typy implementacji dostępu do danych (repozytoria)
-- Usługi specyficzne dla infrastruktury (na przykład `FileLogger` lub) `SmtpNotifier`
+- Usługi specyficzne dla infrastruktury (na przykład `FileLogger` lub `SmtpNotifier`)
 
 Warstwa interfejsu użytkownika w aplikacji ASP.NET Core MVC jest punktem wejścia dla aplikacji. Ten projekt powinien odwoływać się do projektu podstawowego aplikacji, a jego typy powinny współdziałać z infrastrukturą przez interfejsy zdefiniowane w podstawowym aplikacji. W warstwie interfejsu użytkownika nie powinny być dozwolone żadne bezpośrednie wystąpienia ani statyczne wywołania do typów warstw infrastruktury.
 
@@ -208,7 +208,7 @@ Wdrożenie na różnych hostach może być zarządzane przy użyciu tradycyjnych
 
 Istnieją zalety używania kontenerów do zarządzania wdrożeniami aplikacji monolitycznych. Skalowanie wystąpień kontenerów jest znacznie szybsze i łatwiejsze niż wdrażanie dodatkowych maszyn wirtualnych. Nawet w przypadku używania zestawów skalowania maszyn wirtualnych do skalowania maszyn wirtualnych trwają one czas. W przypadku wdrożenia jako wystąpienia aplikacji Konfiguracja aplikacji jest zarządzana w ramach maszyny wirtualnej.
 
-Wdrażanie aktualizacji jako obrazów platformy Docker odbywa się znacznie szybciej i wydajniej. Obrazy platformy Docker zwykle zaczynają się w ciągu sekund, co przyspiesza wprowadzanie. Przerywanie wystąpienia platformy Docker jest tak proste jak wydawanie `docker stop` polecenia, zwykle kończącego się w mniej niż drugim.
+Wdrażanie aktualizacji jako obrazów platformy Docker odbywa się znacznie szybciej i wydajniej. Obrazy platformy Docker zwykle zaczynają się w ciągu sekund, co przyspiesza wprowadzanie. Przerywanie wystąpienia platformy Docker jest tak proste jak wydawanie `docker stop` polecenia, zwykle kończącego się krócej niż w drugim.
 
 Ponieważ kontenery są z natury niezmienne przez zaprojektowanie, nigdy nie trzeba martwić się o uszkodzone maszyny wirtualne, natomiast skrypty aktualizacji mogą ulec zapomnieć na potrzeby konkretnej konfiguracji lub pliku pozostawionego na dysku.
 
@@ -224,7 +224,7 @@ Na wczesnym etapie opracowywania aplikacji może nie mieć jasnego pomysłu, w k
 
 Rozdzielenie aplikacji na wiele procesów dyskretnych powoduje również zwiększenie nakładu pracy. Istnieje większa złożoność oddzielająca funkcje do różnych procesów. Protokoły komunikacyjne stają się bardziej skomplikowane. Zamiast wywołań metod, należy używać komunikacji asynchronicznej między usługami. Podczas przechodzenia do architektury mikrousług należy dodać wiele bloków konstrukcyjnych zaimplementowanych w wersji mikrousług aplikacji eShopOnContainers: obsługa magistrali zdarzeń, odporność na wiadomości i ponawianie prób, spójność ostateczna i inne.
 
-Znacznie prostsze [aplikacje referencyjne eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) obsługują użycie kontenerów monolitycznych jednego kontenera. Aplikacja zawiera jedną aplikację sieci Web, która zawiera tradycyjne widoki MVC, interfejsy API sieci Web i Razor Pages. Ta aplikacja może być uruchamiana z poziomu głównego rozwiązania przy `docker-compose build` użyciu `docker-compose up` poleceń i. To polecenie umożliwia skonfigurowanie kontenera dla wystąpienia sieci Web przy użyciu `Dockerfile` znalezionego w katalogu głównym projektu sieci Web i uruchomienie kontenera na określonym porcie. Możesz pobrać źródło dla tej aplikacji z usługi GitHub i uruchomić ją lokalnie. Nawet ta monolityczna aplikacja nie będzie wdrażana w środowisku kontenera.
+Znacznie prostsze [aplikacje referencyjne eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb) obsługują użycie kontenerów monolitycznych jednego kontenera. Aplikacja zawiera jedną aplikację sieci Web, która zawiera tradycyjne widoki MVC, interfejsy API sieci Web i Razor Pages. Ta aplikacja może być uruchamiana z poziomu głównego rozwiązania przy użyciu poleceń `docker-compose build` i `docker-compose up`. To polecenie umożliwia skonfigurowanie kontenera dla wystąpienia sieci Web przy użyciu `Dockerfile` znajdującego się w katalogu głównym projektu sieci Web i uruchomienie kontenera na określonym porcie. Możesz pobrać źródło dla tej aplikacji z usługi GitHub i uruchomić ją lokalnie. Nawet ta monolityczna aplikacja nie będzie wdrażana w środowisku kontenera.
 
 W przypadku jednego z kontenerów wdrożenie to oznacza, że każde wystąpienie aplikacji działa w tym samym środowisku. Obejmuje to środowisko deweloperskie, w którym odbywa się wczesne testowanie i programowanie. Zespół programistyczny może uruchomić aplikację w środowisku kontenerów, które pasuje do środowiska produkcyjnego.
 
@@ -234,11 +234,11 @@ Na koniec konteneryzowania aplikacja wymusza rozdzielenie między logiką biznes
 
 ## <a name="docker-support"></a>Obsługa platformy Docker
 
-`eShopOnWeb` Projekt jest uruchamiany na platformie .NET Core. W związku z tym może działać w kontenerach opartych na systemie Linux lub Windows. Należy pamiętać, że w przypadku wdrożenia platformy Docker chcesz użyć tego samego typu hosta dla SQL Server. Kontenery oparte na systemie Linux umożliwiają mniejsze rozmiary i są preferowane.
+Projekt `eShopOnWeb` jest uruchamiany na platformie .NET Core. W związku z tym może działać w kontenerach opartych na systemie Linux lub Windows. Należy pamiętać, że w przypadku wdrożenia platformy Docker chcesz użyć tego samego typu hosta dla SQL Server. Kontenery oparte na systemie Linux umożliwiają mniejsze rozmiary i są preferowane.
 
-Aby dodać obsługę platformy Docker do istniejącej aplikacji, można użyć programu Visual Studio 2017 lub nowszego, klikając prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierając polecenie **Dodaj** > **obsługę platformy Docker**. Spowoduje to dodanie plików wymaganych i zmodyfikowanie projektu w celu ich użycia. Bieżący `eShopOnWeb` przykład ma już te pliki.
+Aby dodać obsługę platformy Docker do istniejącej aplikacji, można użyć programu Visual Studio 2017 lub nowszego. Kliknij prawym przyciskiem myszy projekt w **Eksplorator rozwiązań** i wybierz polecenie **Dodaj** > **Obsługa platformy Docker**. Spowoduje to dodanie plików wymaganych i zmodyfikowanie projektu w celu ich użycia. Bieżący przykład `eShopOnWeb` ma już te pliki.
 
-Plik poziomu `docker-compose.yml` rozwiązania zawiera informacje o obrazach do skompilowania oraz o kontenerach do uruchomienia. Plik umożliwia używanie `docker-compose` polecenia do uruchamiania wielu aplikacji w tym samym czasie. W tym przypadku uruchamia tylko projekt sieci Web. Można go również użyć do skonfigurowania zależności, takich jak oddzielny kontener bazy danych.
+Plik `docker-compose.yml` na poziomie rozwiązania zawiera informacje o obrazach do skompilowania oraz o kontenerach do uruchomienia. Plik umożliwia używanie `docker-compose` polecenia do uruchamiania wielu aplikacji w tym samym czasie. W tym przypadku uruchamia tylko projekt sieci Web. Można go również użyć do skonfigurowania zależności, takich jak oddzielny kontener bazy danych.
 
 ```yml
 version: '3'
@@ -260,13 +260,12 @@ networks:
       name: nat
 ```
 
-Plik odwołuje `Dockerfile` się`Web`doprojektu. `docker-compose.yml` `Dockerfile` Służy do określenia, który kontener bazowy będzie używany, oraz sposobu ich konfiguracji. `Web`" :`Dockerfile`
+Plik `docker-compose.yml` odwołuje się do `Dockerfile` w projekcie `Web`. `Dockerfile` służy do określenia, który kontener bazowy będzie używany, oraz sposobu ich konfiguracji. `Dockerfile``Web`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
@@ -285,7 +284,7 @@ ENTRYPOINT ["dotnet", "Web.dll"]
 
 ### <a name="troubleshooting-docker-problems"></a>Rozwiązywanie problemów z platformą Docker
 
-Po uruchomieniu aplikacji kontenera nadal będzie ona działać do momentu jej zatrzymania. Możesz zobaczyć, które kontenery są uruchomione przy `docker ps` użyciu polecenia. Można zatrzymać uruchomiony kontener przy użyciu `docker stop` polecenia i określając identyfikator kontenera.
+Po uruchomieniu aplikacji kontenera nadal będzie ona działać do momentu jej zatrzymania. Możesz zobaczyć, które kontenery są uruchomione przy użyciu polecenia `docker ps`. Można zatrzymać uruchomiony kontener za pomocą polecenia `docker stop` i określić identyfikator kontenera.
 
 Należy pamiętać, że uruchomione kontenery platformy Docker mogą być powiązane z portami, z których możesz próbować korzystać w środowisku deweloperskim. W przypadku próby uruchomienia lub debugowania aplikacji przy użyciu tego samego portu co uruchomiony kontener platformy Docker zostanie wyświetlony komunikat o błędzie informujący o tym, że serwer nie może powiązać z tym portem. Po ponownym zatrzymywaniu kontenera należy rozwiązać ten problem.
 

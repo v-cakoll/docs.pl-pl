@@ -19,4 +19,4 @@ ms.locfileid: "68676920"
 
 >[!div class="step-by-step"]
 >[Poprzedni](when-not-to-deploy-to-windows-containers.md)
->[dalej](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
+>[Następny](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)

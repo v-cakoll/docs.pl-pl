@@ -47,7 +47,7 @@ public static async Task<HttpResponseMessage> Run(
 
 Dodawanie adnotacji do funkcji z OrchestrationTriggerAttribute w Azure Functions oznacza, że działa jako funkcja programu Orchestrator. Jest on odpowiedzialny za zarządzanie różnymi działaniami, które tworzą swój stanowy przepływ pracy.
 
-Funkcje programu Orchestrator nie mogą używać powiązań innych niż OrchestrationTriggerAttribute. Tego atrybutu można używać tylko z typem parametru DurableOrchestrationContext. Nie można używać innych danych wejściowych, ponieważ deserializacja wejść w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta aranżacji, należy użyć metody getinput \<T \>.
+Funkcje programu Orchestrator nie mogą używać powiązań innych niż OrchestrationTriggerAttribute. Tego atrybutu można używać tylko z typem parametru DurableOrchestrationContext. Nie można używać innych danych wejściowych, ponieważ deserializacja wejść w sygnaturze funkcji nie jest obsługiwana. Aby uzyskać dane wejściowe dostarczone przez klienta aranżacji, należy użyć metody getinput\<T\>.
 
 Ponadto zwracane typy funkcji aranżacji muszą mieć wartość void, Task lub można serializować wartości JSON.
 
@@ -102,4 +102,4 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 >[!div class="step-by-step"]
 >[Poprzedni](event-grid.md)
->[dalej](orchestration-patterns.md)
+>[Następny](orchestration-patterns.md)

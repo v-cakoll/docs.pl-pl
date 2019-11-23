@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698173"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn >, element (ustawienia identyfikatora URI)
+# <a name="idn-element-uri-settings"></a>\<IDN > element (ustawienia identyfikatora URI)
 
 Określa, czy do nazwy domeny jest stosowane analizowanie międzynarodowych nazw domen (IDN).
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<URI >** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<idn >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,7 +42,7 @@ Brak
 
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[adresu](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
+|[uri](uri-element-uri-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).|  
 
 ## <a name="remarks"></a>Uwagi
 

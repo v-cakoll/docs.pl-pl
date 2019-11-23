@@ -30,7 +30,7 @@ Tabela 3-1 pokazuje, że zamiarem programu Microsoft DevOps dla kontenerów plat
 | Host | Technologie firmy Microsoft | Inne firmy — Podłączanie platformy Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Platforma dla aplikacji platformy Docker   | • Microsoft Visual Studio i Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> • Azure Container Registry<br /> | • Dowolny edytor kodu (na przykład subwapno)<br /> • Dowolny język (Node. js, Java, go itp.)<br /> • Wszystkie usługi Orchestrator i Scheduler<br /> • Dowolny rejestr platformy Docker<br /> |
-| DevOps dla aplikacji platformy Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Usługa Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> | • GitHub, Git, Subversion itp.<br /> • Jenkins, Chef, Puppet, prędkość, CircleCI, TravisCI itd.<br /> • Lokalne centrum danych platformy Docker, Docker Swarm, Mesos DC/OS, Kubernetes itd.<br /> |
+| DevOps dla aplikacji platformy Docker     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Usługa Azure Kubernetes Service (AKS)<br /> • Service Fabric platformy Azure<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Lokalne centrum danych platformy Docker, Docker Swarm, Mesos DC/OS, Kubernetes itd.<br /> |
 | Zarządzanie i monitorowanie  | • Azure Monitor | • Marathon, Chronos itp.<br />|
 
 Platforma i narzędzia firmy Microsoft dla kontenerów platformy Docker, zgodnie z definicją w tabeli 3-1, składają się z następujących składników:
@@ -49,7 +49,7 @@ Platforma i narzędzia firmy Microsoft dla kontenerów platformy Docker, zgodnie
 
     Nawet jeśli znasz polecenia systemu Linux, możesz zarządzać aplikacjami kontenera przy użyciu systemu Microsoft Windows i programu PowerShell z systemem operacyjnym z systemem Linux oraz z systemami (Docker, Kubernetes...) uruchomionymi w tej funkcji podsystemu Linux. Dowiesz się więcej na temat używania tych narzędzi w podsystemie Linux przy użyciu ulubionego systemu operacyjnego Microsoft Windows w dalszej części tego podręcznika.
 
-  - **Narzędzia typu "open source"**  , ponieważ AKS uwidacznia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, najpopularniejsze narzędzia są zgodne z AKS i, w większości przypadków, będą z niego korzystać — w tym Wizualizatory, monitorowanie, narzędzia wiersza polecenia. a nawet przyszłe narzędzia, gdy staną się dostępne.
+  - **Narzędzia typu "open source"**  , ponieważ AKS udostępnia standardowe punkty końcowe interfejsu API dla aparatu aranżacji, najpopularniejsze narzędzia są zgodne z AKS i, w większości przypadków, będą z niego korzystać — w tym Wizualizatory, monitorowanie, narzędzia wiersza polecenia, a nawet przyszłe narzędzia, gdy staną się dostępne.
 
   - **Azure monitor** To rozwiązanie platformy Azure do monitorowania każdego kąta w środowisku produkcyjnym. Aby monitorować produkcyjne aplikacje platformy Docker, wystarczy skonfigurować swój zestaw SDK w swoich usługach, aby można było uzyskać dane dziennika generowane przez system z aplikacji.
 
@@ -57,4 +57,4 @@ W związku z tym firma Microsoft oferuje kompletną podstawę do kompleksowego c
 
 >[!div class="step-by-step"]
 >[Poprzedni](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
->[dalej](../design-develop-containerized-apps/index.md)
+>[Następny](../design-develop-containerized-apps/index.md)

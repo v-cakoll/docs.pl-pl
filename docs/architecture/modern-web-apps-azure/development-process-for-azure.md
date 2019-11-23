@@ -16,7 +16,7 @@ ms.locfileid: "70849590"
 > _"Dzięki chmurze użytkownicy indywidualni i małe firmy mogą przyciągnąć swoje palce i natychmiast skonfigurować usługi klasy korporacyjnej"._  
 > _-Roy posta Stephan_
 
-## <a name="vision"></a>Wizja
+## <a name="vision"></a>Obraz
 
 > *Opracowuj dobrze zaprojektowane aplikacje ASP .NET Core w odpowiedni sposób, korzystając z programu Visual Studio lub interfejsu wiersza polecenia dotnet i Visual Studio Code lub dowolnego edytora.*
 
@@ -34,7 +34,7 @@ Bez względu na to, czy wolisz pełną i wydajną platformę IDE, czy też Edyto
 
 [Pobierz program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Interfejs wiersza polecenia Visual Studio Code i dotnet** (Narzędzia dla wielu platform dla systemów Mac, Linux i Windows). Jeśli wolisz uproszczony i Międzyplatformowy Edytor obsługujący dowolny język programowania, możesz użyć kodu Microsoft Visual Studio i interfejsu wiersza polecenia dotnet. Te produkty zapewniają proste, a jeszcze niezawodne środowisko, które usprawnia przepływ pracy dewelopera. Ponadto Visual Studio Code obsługuje rozszerzenia dla programowania C\# i sieci Web, które udostępnia funkcje IntelliSense i skróty w edytorze.
+**Interfejs wiersza polecenia Visual Studio Code i dotnet** (międzyplatformowe narzędzia dla systemów Mac, Linux i Windows). Jeśli wolisz uproszczony i Międzyplatformowy Edytor obsługujący dowolny język programowania, możesz użyć kodu Microsoft Visual Studio i interfejsu wiersza polecenia dotnet. Te produkty zapewniają proste, a jeszcze niezawodne środowisko, które usprawnia przepływ pracy dewelopera. Ponadto Visual Studio Code obsługuje rozszerzenia dla programu C\# i programowania w sieci Web, które udostępnia funkcje IntelliSense i skróty w edytorze.
 
 [Pobierz zestaw .NET Core SDK](https://dotnet.microsoft.com/download)
 
@@ -92,7 +92,7 @@ Gdy wszystko jest gotowe do udostępnienia kodu zespołowi, należy wypchnąć z
 
 Nowa kompilacja jest wyzwalana na serwerze kompilacji za każdym razem, gdy w repozytorium kodu aplikacji udostępnionej zostanie wykonane nowe zatwierdzenie. W ramach procesu CI kompilacja powinna w pełni kompilować aplikację i uruchamiać testy automatyczne, aby upewnić się, że wszystko działa zgodnie z oczekiwaniami. Wynik końcowy procesu CI powinien być spakowaną wersją aplikacji sieci Web, gotowa do wdrożenia.
 
-#### <a name="step-4-build-server-continuous-delivery"></a>Krok 4. Serwer kompilacji: Ciągłe dostarczanie
+#### <a name="step-4-build-server-continuous-delivery"></a>Krok 4. Serwer kompilacji: ciągłe dostarczanie
 
 Gdy kompilacja zakończyła się powodzeniem, proces tworzenia dysków CD zostanie pobrany z utworzonych artefaktów kompilacji. Obejmie to pakiet Web Deploy. Serwer kompilacji wdroży ten pakiet w Azure App Service, zastępując istniejącą usługę nowo utworzoną. Zazwyczaj ten krok jest przeznaczony dla środowiska przejściowego, ale niektóre aplikacje wdrażają bezpośrednio w środowisku produkcyjnym przez proces CD.
 
@@ -110,5 +110,5 @@ Gdy aplikacja sieci Web jest uruchomiona, można monitorować kondycję aplikacj
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[Poprzedni](test-asp-net-core-mvc-apps.md)Następny
->[](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[Poprzedni](test-asp-net-core-mvc-apps.md)
+>[Następny](azure-hosting-recommendations-for-asp-net-web-apps.md)

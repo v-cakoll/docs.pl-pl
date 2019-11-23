@@ -14,5 +14,5 @@ ms.locfileid: "70295367"
 *Cykl życia aplikacji kontenerowych to podróż, która zaczyna się od dewelopera. Deweloperzy wybierają implementację kontenerów i platformy Docker, ponieważ eliminuje to tarcie we wdrożeniach i operacjach IT, co ostatecznie pomaga wszystkim użytkownikom na bardziej elastyczne, wydajniejsze i szybsze działanie.*
 
 >[!div class="step-by-step"]
->[Poprzedni](../docker-containers-images-and-registries.md)Następny
->[](containers-foundation-for-devops-collaboration.md)
+>[Poprzedni](../docker-containers-images-and-registries.md)
+>[Następny](containers-foundation-for-devops-collaboration.md)

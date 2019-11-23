@@ -10,7 +10,7 @@ ms.lasthandoff: 10/03/2019
 ms.locfileid: "71833872"
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do języka Entity SQL
-Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
+Ten temat zawiera krótkie informacje dotyczące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytań. Zapytania w tym temacie są oparte na modelu sprzedaży AdventureWorks.  
   
 ## <a name="literals"></a>Literały  
   
@@ -27,7 +27,7 @@ Ten temat zawiera krótkie informacje o [!INCLUDE[esql](../../../../../../includ
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |Cześć|  
   
@@ -44,7 +44,7 @@ DATETIME '2006-12-25 01:01'
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
@@ -60,14 +60,14 @@ DATETIME '2006-12-25 01:01'
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
 |3|  
   
 ### <a name="other"></a>Inne  
- Inne literały obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] to GUID, Binary, float/Double, Decimal i `null`. Literały null w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] są uważane za zgodne z każdym innym typem w modelu koncepcyjnym.  
+ Inne literały obsługiwane przez [!INCLUDE[esql](../../../../../../includes/esql-md.md)] są identyfikatorami GUID, Binary, float/Double, Decimal i `null`. Literały o wartości null w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] są uznawane za zgodne z każdym innym typem w modelu koncepcyjnym.  
   
 ## <a name="type-constructors"></a>Konstruktory typów  
   
@@ -83,7 +83,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  Dane wyjściowe:  
   
-|Produktu|Nazwa|  
+|Identyfikator produktu|Nazwa|  
 |---------------|----------|  
 |1|Wyścigi regulowane|  
 |879|Podstawa roweru ogólnego przeznaczenia|  
@@ -103,9 +103,9 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  Dane wyjściowe:  
   
-|Produktu|Nazwa|ProductNumber|...|  
+|Identyfikator produktu|Nazwa|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Touring-Panniers, Large|PA-T100|...|  
+|842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Obiekt  
  Obiekty zdefiniowane przez użytkownika [(nazwane)](named-type-constructor-entity-sql.md) , takie jak `person("abc", 12)`.  
@@ -121,7 +121,7 @@ AS o
   
  Dane wyjściowe:  
   
-|SalesOrderDetailID|CarrierTrackingNumber|OrderQty|Produktu|...|  
+|SalesOrderDetailID|CarrierTrackingNumber|OrderQty|Identyfikator produktu|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
 |1|4911-403C-98|1|776|...|  
 |2|4911-403C-98|3|777|...|  
@@ -138,7 +138,7 @@ SELECT REF(o) AS OrderID FROM Orders AS o
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |1|  
 |2|  
@@ -156,7 +156,7 @@ SELECT VALUE REF(p).Name FROM
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |Wyścigi regulowane|  
 |Podstawa roweru ogólnego przeznaczenia|  
@@ -175,7 +175,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |Wyścigi regulowane|  
 |Podstawa roweru ogólnego przeznaczenia|  
@@ -194,7 +194,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
   
  Dane wyjściowe:  
   
-|Produktu|  
+|Identyfikator produktu|  
 |---------------|  
 |980|  
 |365|  
@@ -203,7 +203,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
   
 ## <a name="functions"></a>Funkcje  
   
-### <a name="canonical"></a>Postaci  
+### <a name="canonical"></a>Canonical  
  Przestrzeń nazw dla [funkcji kanonicznych](canonical-functions.md) to EDM, jak w `Edm.Length("string")`. Nie trzeba określać przestrzeni nazw, chyba że zostanie zaimportowana inna przestrzeń nazw, która zawiera funkcję o takiej samej nazwie jak funkcja kanoniczna. Jeśli dwie przestrzenie nazw mają tę samą funkcję, użytkownik powinien mieć określoną pełną nazwę.  
   
  Przykład:  
@@ -222,7 +222,7 @@ SELECT Length(c. FirstName) AS NameLen FROM
 |6|  
 |5|  
   
-### <a name="microsoft-provider-specific"></a>Specyficzne dla dostawcy firmy Microsoft  
+### <a name="microsoft-provider-specific"></a>Microsoft Provider-Specific  
  [Funkcje specyficzne dla dostawcy firmy Microsoft](../sqlclient-for-ef-functions.md) znajdują się w przestrzeni nazw `SqlServer`.  
   
  Przykład:  
@@ -239,9 +239,9 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 |--------------|  
 |27|  
 |27|  
-|25|  
+|26|  
   
-## <a name="namespaces"></a>Namespaces  
+## <a name="namespaces"></a>{1&gt;Przestrzenie nazw&lt;1}  
  [Użycie](using-entity-sql.md) określa przestrzenie nazw używane w wyrażeniu zapytania.  
   
  Przykład:  
@@ -252,7 +252,7 @@ using SqlServer; LOWER('AA');
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
 |aa|  
   
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>Nawigacja  
- Operator nawigacji relacji umożliwia nawigowanie po relacji od jednej jednostki (od końca) do innej (do końca). [Nawigowanie](navigate-entity-sql.md) przyjmuje typ relacji kwalifikowana jako \<namespace >. \<relationship typu >. Funkcja nawigacji zwraca wartość Ref @ no__t-0T >, jeśli Kardynalność do końca wynosi 1. Jeśli Kardynalność do końca to n, zostanie zwrócona kolekcja < ref @ no__t-0T > >.  
+ Operator nawigacji relacji umożliwia nawigowanie po relacji od jednej jednostki (od końca) do innej (do końca). [Nawigacja](navigate-entity-sql.md) przyjmuje typ relacji kwalifikowana jako \<przestrzeni nazw >. > nazwy typu relacji\<. Funkcja nawigacji zwraca wartość Ref\<T >, jeśli Kardynalność do końca jest równa 1. Jeśli Kardynalność do końca to n, kolekcja < ref\<T > > zostanie zwrócona.  
   
  Przykład:  
   
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>WYBIERZ POZYCJĘ WARTOŚĆ I WYBIERZ POZYCJĘ  
   
 ### <a name="select-value"></a>WYBIERZ WARTOŚĆ  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia klauzulę SELECT VALUE, aby pominąć konstrukcję niejawnego wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Gdy taka klauzula jest używana, żadna otoka wiersza nie jest zbudowana wokół elementów w klauzuli SELECT i można utworzyć kolekcję żądanego kształtu, na przykład: `SELECT VALUE a`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera klauzulę SELECT VALUE, aby pominąć konstrukcję niejawnego wiersza. W klauzuli SELECT VALUE można określić tylko jeden element. Gdy taka klauzula jest używana, żadna otoka wiersza nie jest zbudowana wokół elementów w klauzuli SELECT, a kolekcja żądanego kształtu może być generowana, na przykład: `SELECT VALUE a`.  
   
  Przykład:  
   
@@ -340,7 +340,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  Wybierz pozycję p.Name, p. ProductID z AdventureWorksEntities. Product jako p Output:  
   
-|Nazwa|Produktu|  
+|Nazwa|Identyfikator produktu|  
 |----------|---------------|  
 |Wyścigi regulowane|1|  
 |Podstawa roweru ogólnego przeznaczenia|879|  
@@ -358,9 +358,9 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
   
  Dane wyjściowe:  
   
-|Wartość|  
+|Value|  
 |-----------|  
-|OZNACZA|  
+|TRUE|  
   
 ## <a name="see-also"></a>Zobacz także
 

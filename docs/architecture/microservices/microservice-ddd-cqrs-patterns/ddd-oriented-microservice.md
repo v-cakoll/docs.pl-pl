@@ -104,4 +104,4 @@ Zależności w usłudze DDD warstwa aplikacji zależy od domeny i infrastruktury
 
 >[!div class="step-by-step"]
 >[Poprzedni](cqrs-microservice-reads.md)
->[dalej](microservice-domain-model.md)
+>[Następny](microservice-domain-model.md)

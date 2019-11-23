@@ -1,14 +1,13 @@
 ---
 title: Docker-gRPC dla deweloperów WCF
 description: Tworzenie obrazów platformy Docker dla ASP.NET Core aplikacji gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846682"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967839"
 ---
 # <a name="docker"></a>Docker
 
@@ -30,7 +29,7 @@ Dla każdego obrazu istnieją cztery warianty oparte na różnych dystrybucjach 
 | 3,0 – Buster, 3,0 | Debian 10 | Obraz domyślny, jeśli nie określono żadnego wariantu systemu operacyjnego. |
 | 3,0 — Alpine | Alpine 3,9 | Obrazy Alpine Base są znacznie mniejsze niż Debian lub Ubuntu. |
 | 3,0 – Disco | Ubuntu 19,04 | |
-| 3,0 – Bionic | Ubuntu 18,04 | |
+| 3,0 – Bionic | Ubuntu 18.04 | |
 
 Obraz Alpine Base ma około 100 MB, w porównaniu do 200 MB dla obrazów Debian i Ubuntu, ale niektóre pakiety oprogramowania lub biblioteki mogą nie być dostępne w usłudze Alpine Package Management. Jeśli nie masz pewności, którego obrazu użyć, najlepiej naDebian się na domyślne, chyba że masz atrakcyjną potrzebę używania innego dystrybucjiu.
 

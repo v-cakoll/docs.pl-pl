@@ -48,7 +48,7 @@ Szczególny nacisk na zarządzane usługi platformy Azure, które mogą pomóc w
 - [Kolejki usługi Azure Storage](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [Centrum zdarzeń platformy Azure](https://azure.microsoft.com/services/event-hubs/)
+- [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
 
 Następnie następnym przejdziemy do danych rozproszonych w systemach natywnych w chmurze oraz korzyści i wyzwania.
 

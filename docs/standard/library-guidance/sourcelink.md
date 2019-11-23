@@ -4,12 +4,12 @@ description: Zalecenia dotyczące najlepszych rozwiązań dotyczących używania
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928990"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089283"
 ---
 # <a name="source-link"></a>Link do źródła
 
@@ -23,7 +23,7 @@ Link źródłowy to technologia, która umożliwia debugowanie kodu źródłoweg
 
 Instrukcje dotyczące korzystania z linku źródłowego znajdują się w repozytorium [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) w witrynie GitHub.
 
-Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) , aby potwierdzić, że metadane linku źródłowego zostały pomyślnie osadzone w pakiecie. Sprawdź, `Repository` czy metadane są dostępne z identyfikatorem komentarza i czy pliki. pdb znajdują się w pliku. dll każdego elementu docelowego.
+Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) , aby potwierdzić, że metadane linku źródłowego zostały pomyślnie osadzone w pakiecie. Sprawdź, czy metadane `Repository` są obecne w identyfikatorze zatwierdzenia i czy pliki. pdb znajdują się w pliku. dll każdego elementu docelowego.
 
 ![Link źródłowy w Eksploratorze pakietów NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Link źródłowy w Eksploratorze pakietów NuGet")
 
@@ -32,14 +32,14 @@ Możesz użyć [Eksploratora pakietów NuGet](https://github.com/NuGetPackageExp
 > [!TIP]
 > Możesz bardziej usprawnić środowisko debugowania dewelopera, dodając do swoich typów atrybuty debugera.
 >
-> * <xref:System.Diagnostics.DebuggerDisplayAttribute>można dostosować sposób wyświetlania klasy lub pola w oknach zmiennych debugera.
-> * <xref:System.Diagnostics.DebuggerStepThroughAttribute>nakazuje debugerowi przechodzenie przez kod, a nie krokowe przechodzenie do kodu.
-> * <xref:System.Diagnostics.DebuggerBrowsableAttribute>Określa, czy element członkowski jest wyświetlany w oknach zmiennych debugera.
+> * <xref:System.Diagnostics.DebuggerDisplayAttribute> można dostosować sposób wyświetlania klasy lub pola w oknach zmiennych debugera.
+> * <xref:System.Diagnostics.DebuggerStepThroughAttribute> nakazuje debugerowi przechodzenie przez kod, a nie krokowe przechodzenie do kodu.
+> * <xref:System.Diagnostics.DebuggerBrowsableAttribute> kontroluje, czy element członkowski jest wyświetlany w oknach zmiennych debugera.
 
-**✔️ Rozważ** opublikowanie plików symboli`*.pdb`().
+**✔️ Rozważ** opublikowanie plików symboli (`*.pdb`).
 
 > W celu uzyskania najlepszego środowiska debugowania biblioteka powinna publikować pliki symboli, a także używać linku źródłowego. Aby uzyskać więcej informacji na temat plików symboli i pakietów symboli, zobacz [pakiety symboli](./nuget.md#symbol-packages).
 
 >[!div class="step-by-step"]
->[Poprzedni](dependencies.md)Następny
->[](publish-nuget-package.md)
+>[Poprzedni](dependencies.md)
+>[Następny](publish-nuget-package.md)

@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Element
+title: <nameEntry>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -15,14 +15,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699779"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > elementu
+# <a name="nameentry-element"></a>\<element > nameEntry
 Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie mieć wiele przyjaznych nazw.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,8 +37,8 @@ Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|**Nazwij**|Atrybut wymagany.<br /><br /> Określa przyjazną nazwę algorytmu, który implementuje Klasa kryptografii.|  
-|**class**|Atrybut wymagany.<br /><br /> Określa wartość atrybutu **name** w elemencie [\<cryptoClass >](cryptoclass-element.md) .|  
+|**name**|Atrybut wymagany.<br /><br /> Określa przyjazną nazwę algorytmu, który implementuje Klasa kryptografii.|  
+|**class**|Atrybut wymagany.<br /><br /> Określa wartość atrybutu **name** w [\<cryptoClass >](cryptoclass-element.md) elementu.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -51,10 +51,10 @@ Mapuje nazwę klasy na przyjazną nazwę algorytmu, która pozwala jednej klasie
 |`system.web`|Określa element główny dla sekcji konfiguracji ASP.NET.|  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybut **name** może być nazwą jednej z klas abstrakcyjnych znalezionych w przestrzeni nazw <xref:System.Security.Cryptography>. Po wywołaniu metody **Create** dla abstrakcyjnej klasy kryptograficznej nazwa klasy abstrakcyjnej jest przenoszona do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. Funkcja " **Nofrom** " zwraca wystąpienie typu wskazane przez atrybut **Class** . Jeśli atrybut **name** jest krótką nazwą, taką jak RSA, można **użyć tej nazwy podczas wywoływania metody.**  
+ Atrybut **name** może być nazwą jednej z klas abstrakcyjnych znalezionych w przestrzeni nazw <xref:System.Security.Cryptography>. Po wywołaniu metody **Create** dla abstrakcyjnej klasy kryptograficznej, nazwa klasy abstrakcyjnej jest przenoszona do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. Funkcja " **Nofrom** " zwraca wystąpienie typu wskazane przez atrybut **Class** . Jeśli atrybut **name** jest krótką nazwą, taką jak RSA, można **użyć tej nazwy podczas wywoływania metody.**  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak używać elementu **\<nameEntry >** do odwoływania się do klasy kryptografii i konfigurowania środowiska uruchomieniowego. Następnie można przekazać ciąg "RSA" do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> i użyć metody <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> do zwrócenia obiektu `MyCryptoRSAClass`.  
+ Poniższy przykład pokazuje, jak używać elementu **\<nameEntry >** , aby odwoływać się do klasy kryptografii i skonfigurować środowisko uruchomieniowe. Następnie można przekazać ciąg "RSA" do metody <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> i użyć metody <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> do zwrócenia obiektu `MyCryptoRSAClass`.  
   
 ```xml  
 <configuration>  

@@ -11,7 +11,7 @@ ms.locfileid: "73737704"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementowanie bram interfejsu API za pomocą Ocelot
 
-Aplikacja mikrousługi referencyjnej [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) korzysta z [Ocelot](https://github.com/ThreeMammals/Ocelot), prostej i uproszczonej bramy interfejsu API, którą można wdrożyć w dowolnym miejscu wraz z mikrousługami/kontenerami, takimi jak w przypadku dowolnego z następujących środowisk używanych przez program eShopOnContainers.
+Aplikacja mikrousługi referencyjnej [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) korzysta z [Ocelot](https://github.com/ThreeMammals/Ocelot), prostej i uproszczonej bramy interfejsu API, którą można wdrożyć w dowolnym miejscu wraz z mikrousługami/kontenerami, takimi jak w przypadku każdego z następujących środowisk używanych przez usługę eShopOnContainers.
 
 - Host platformy Docker na lokalnym komputerze deweloperskim, lokalnie lub w chmurze.
 - Klaster Kubernetes, lokalny lub w chmurze zarządzanej, taki jak usługa Azure Kubernetes Service (AKS).
@@ -120,7 +120,7 @@ Można zobaczyć, jak w konfiguracji Docker-Compose. override. yml port wewnętr
 
 Zwykle nie jest wdrażana przy użyciu platformy Docker — tworzenie w środowisku produkcyjnym, ponieważ odpowiednie środowisko wdrażania w środowisku produkcyjnym dla mikrousług jest koordynatorem, takim jak Kubernetes lub Service Fabric. W przypadku wdrażania w środowiskach korzystających z różnych plików konfiguracji, w których nie można publikować bezpośrednio żadnych portów zewnętrznych dla mikrousług, ale zawsze będziesz używać zwrotnego serwera proxy z bramy interfejsu API.
 
-Uruchom mikrousługę katalogu na lokalnym hoście platformy Docker, uruchamiając pełne rozwiązanie eShopOnContainers z programu Visual Studio (uruchamia wszystkie usługi w plikach do redagowania w systemie Docker) lub po prostu uruchamiając mikrousługę w katalogu przy użyciu poniższego narzędzia Docker-Zredaguj polecenie w CMD lub PowerShell jest umieszczone w folderze, w którym umieszczane są `docker-compose.yml` i Docker-Compose. override. yml.
+Uruchom mikrousługę katalogu na lokalnym hoście platformy Docker, uruchamiając pełne rozwiązanie eShopOnContainers z poziomu programu Visual Studio (uruchamia wszystkie usługi w plikach do redagowania w systemie Docker) lub uruchamiając mikrousługę z następującym poleceniem Docker-Zredaguj w programie CMD lub PowerShell umieszczonym w folderze, w którym znajdują się `docker-compose.yml` i Docker-Compose. override. yml.
 
 ```console
 docker-compose run --service-ports catalog.api
@@ -368,7 +368,7 @@ Na przykład podczas odwiedzania adresu URL nadrzędnego `http://localhost:5202/
 
 **Rysunek 6-35**. Uzyskiwanie dostępu do mikrousługi za pomocą adresu URL dostarczonego przez bramę interfejsu API
 
-Ze względu na testowanie lub debugowanie, jeśli chcesz uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym) bez przechodzenia przez bramę interfejsu API, ponieważ "katalog. API" jest wewnętrznym rozpoznawaniem nazw DNS dla hosta platformy Docker (usługa Odnajdywanie obsługiwane przez usługi platformy Docker — Tworzenie nazw usług — jedynym sposobem bezpośredniego dostępu do kontenera jest użycie portu zewnętrznego opublikowanego w Docker-Compose. override. yml, który jest dostępny tylko dla testów programistycznych, takich jak `http://localhost:5101/api/v1/Catalog/items/1` w poniższej przeglądarce.
+Ze względu na testowanie lub debugowanie, jeśli chcesz uzyskać bezpośredni dostęp do kontenera Docker katalogu (tylko w środowisku programistycznym) bez przechodzenia przez bramę interfejsu API, ponieważ element "Catalog. API" jest wewnętrznym rozpoznawaniem nazw DNS dla hosta platformy Docker (Odnajdywanie usług obsługiwane przez nazwy usług platformy Docker), jedynym sposobem bezpośredniego dostępu do kontenera jest port zewnętrzny opublikowany w Docker-Compose. override. yml, który jest dostępny tylko dla testów programistycznych, takich jak `http://localhost:5101/api/v1/Catalog/items/1` w poniższej przeglądarce.
 
 ![Zrzut ekranu przeglądarki wyświetlającej bezpośrednią odpowiedź do katalogu. API.](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -416,7 +416,7 @@ Jednak Ocelot obsługuje także rolę mikrousługi tożsamości/uwierzytelniania
 
 Jak pokazano na poprzednim diagramie, gdy mikrousługa tożsamości znajduje się poniżej bramy API Gateway (AG): 1), usługa AG żąda tokenu uwierzytelniania od mikrousługi tożsamości, 2) usługa Identity-Service zwraca token do AG, 3-4), żądania od mikrousług przy użyciu tokenu uwierzytelniania. Ze względu na to, że aplikacja eShopOnContainers podzieliła bramę interfejsu API na wiele BFF (zaplecza dla frontonu) i firmowych bram interfejsu API, kolejną opcją jest utworzenie dodatkowej bramy interfejsu API dla zagadnień związanych z wycinaniem. Wybór ten byłby atrakcyjny w bardziej złożonej architekturze opartej na mikrousługach z wieloma usługami. Ponieważ w eShopOnContainers występuje tylko jeden problem z wycinaniem, to zdecydowano o prostu obsłużyć usługę zabezpieczeń z obszaru bramy interfejsu API w celu uproszczenia.
 
-W każdym przypadku, jeśli aplikacja jest zabezpieczona na poziomie bramy interfejsu API, moduł uwierzytelniania bramy interfejsu API Ocelot jest najpierw odwiedzany przy próbie użycia dowolnej zabezpieczonej mikrousługi. Spowoduje to ponowne skierowanie żądania HTTP do odwiedzania tożsamości lub mikrousługi uwierzytelniania w celu uzyskania tokenu dostępu, aby można było odwiedzić chronione usługi za pomocą access_token.
+W każdym przypadku, jeśli aplikacja jest zabezpieczona na poziomie bramy interfejsu API, moduł uwierzytelniania bramy interfejsu API Ocelot jest najpierw odwiedzany przy próbie użycia dowolnej zabezpieczonej mikrousługi. Spowoduje to ponowne skierowanie żądania HTTP do odwiedzania tożsamości lub mikrousługi uwierzytelniania w celu uzyskania tokenu dostępu, aby można było odwiedzić chronione usługi przy użyciu access_token.
 
 Sposób zabezpieczania przy użyciu uwierzytelniania każdej usługi na poziomie bramy interfejsu API polega na ustawieniu AuthenticationProviderKey w ustawieniach pokrewnych w pliku Configuration. JSON.
 
@@ -562,21 +562,21 @@ W pliku z kodem źródłowym eShopOnContainers oryginalny plik "Configuration. J
 
 W przypadku korzystania z bramy interfejsu API Ocelot, która została opisana w poniższych linkach, istnieją inne ważne funkcje do badania i używania.
 
-- **Odnajdowanie usług po stronie klienta integrując Ocelot z Consul lub Eureka**  \
+- **Odnajdowanie usług po stronie klienta integrując Ocelot z Consul lub Eureka** \
   <https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html>
 
-- **Buforowanie w warstwie bramy interfejsu API**  \
+- **Buforowanie w warstwie bramy interfejsu API** \
   <https://ocelot.readthedocs.io/en/latest/features/caching.html>
 
-- **Rejestrowanie w warstwie bramy interfejsu API**  \
+- **Rejestrowanie w warstwie bramy interfejsu API** \
   <https://ocelot.readthedocs.io/en/latest/features/logging.html>
 
-- **Quality of Service (ponownych prób i wyłączników) w warstwie bramy interfejsu API**  \
+- **Quality of Service (ponownych prób i wyłączników) w warstwie bramy interfejsu API** \
   <https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html>
 
-- **Ograniczanie szybkości**  \
+- **Ograniczanie szybkości** \
   [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]
 > [Poprzedni](background-tasks-with-ihostedservice.md)
-> [dalej](../microservice-ddd-cqrs-patterns/index.md)
+> [Następny](../microservice-ddd-cqrs-patterns/index.md)

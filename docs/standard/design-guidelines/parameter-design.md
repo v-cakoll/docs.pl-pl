@@ -34,7 +34,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
   
  **✓ DO** Umieść wszystkie `out` po całej przez wartości parametrów i `ref` parametrów (z wyłączeniem tablice parametrów), nawet jeśli powoduje niespójność w parametrze kolejności między przeciążenia (zobacz [elementu członkowskiego Przeciążanie](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- Parametry `out` mogą być widoczne jako dodatkowe zwracane wartości i zgrupowanie ich razem sprawia, że podpis metody jest łatwiejszy do zrozumienia.  
+ Parametry `out` mogą być widoczne jako dodatkowe zwracane wartości, a grupowanie ich razem sprawia, że podpis metody jest łatwiejszy do zrozumienia.  
   
  **✓ DO** zachować spójność nazw parametrów, gdy zastępowanie elementów członkowskich lub wykonania członków interfejsu.  
   
@@ -50,7 +50,7 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
  **✓ CONSIDER** przy użyciu wartości logiczne są naprawdę dwustanowy wartości, które są używane do zainicjowania właściwości logicznych parametrów konstruktora.  
   
 ### <a name="validating-arguments"></a>Sprawdzanie poprawności argumentów  
- **✓ DO** Waliduj Argumenty przekazane do publicznych, chronionych lub jawnie implementowane elementy członkowskie. Zgłoś <xref:System.ArgumentException?displayProperty=nameWithType> lub jedną z jej podklas, jeśli sprawdzanie poprawności zakończy się niepowodzeniem.  
+ **✓ DO** Waliduj Argumenty przekazane do publicznych, chronionych lub jawnie implementowane elementy członkowskie. Zgłoś <xref:System.ArgumentException?displayProperty=nameWithType>lub jedną z jej podklas, jeśli sprawdzanie poprawności zakończy się niepowodzeniem.  
   
  Należy zauważyć, że rzeczywista weryfikacja nie musi występować w publicznej lub chronionej składowej. Może się to zdarzyć na niższym poziomie w pewnej prywatnej lub wewnętrznej procedurze. Głównym punktem jest to, że cały obszar powierzchni, który jest widoczny dla użytkowników końcowych, sprawdza argumenty.  
   
@@ -71,9 +71,9 @@ Ta sekcja zawiera szczegółowe wskazówki dotyczące projektowania parametrów,
   
  Gdy argument jest przenoszona przez parametr przez wartość, element członkowski otrzymuje kopię rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, kopia argumentu jest umieszczana na stosie. Jeśli argument jest typem referencyjnym, kopia odwołania jest umieszczana na stosie. Najpopularniejsze języki CLR, takie jak C#VB.NET, i C++domyślne do przekazywania parametrów według wartości.  
   
- Gdy argument jest przenoszona przez @no__t parametru, element członkowski otrzymuje odwołanie do rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, odwołanie do argumentu jest umieszczane na stosie. Jeśli argument jest typem referencyjnym, odwołanie do odwołania jest umieszczane na stosie. parametrów `Ref` można użyć, aby zezwolić elementowi członkowskiemu na modyfikowanie argumentów przekazaną przez obiekt wywołujący.  
+ Gdy argument jest przekazywane za pomocą parametru `ref`, element członkowski otrzymuje odwołanie do rzeczywistego argumentu przekazywane. Jeśli argument jest typem wartości, odwołanie do argumentu jest umieszczane na stosie. Jeśli argument jest typem referencyjnym, odwołanie do odwołania jest umieszczane na stosie. parametrów `Ref` można użyć, aby zezwolić elementowi członkowskiemu na modyfikowanie argumentów przekazane przez wywołującego.  
   
- parametry `Out` są podobne do parametrów `ref`, z niewielkimi różnicami. Parametr jest początkowo uznawany za nieprzypisany i nie może zostać odczytany w treści elementu członkowskiego przed przypisaniem pewnej wartości. Ponadto parametr musi mieć przypisaną pewną wartość przed zwróceniem elementu członkowskiego.  
+ `Out` parametry są podobne do `ref` parametrów, z niewielkimi różnicami. Parametr jest początkowo uznawany za nieprzypisany i nie może zostać odczytany w treści elementu członkowskiego przed przypisaniem pewnej wartości. Ponadto parametr musi mieć przypisaną pewną wartość przed zwróceniem elementu członkowskiego.  
   
  **X AVOID** przy użyciu `out` lub `ref` parametrów.  
   
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** użyj `varargs` metod, znanej także jako wielokropka.  
   
- Niektóre języki CLR, takie jak C++, obsługują alternatywną Konwencję do przekazywania list parametrów zmiennych o nazwie `varargs` metod. Konwencji nie należy używać w strukturach, ponieważ nie jest ona zgodna ze specyfikacją CLS.  
+ Niektóre języki CLR, takie jak C++, obsługują alternatywną Konwencję do przekazywania list parametrów zmiennych o nazwie `varargs` metody. Konwencji nie należy używać w strukturach, ponieważ nie jest ona zgodna ze specyfikacją CLS.  
   
 ### <a name="pointer-parameters"></a>Parametry wskaźnika  
  Ogólnie rzecz biorąc wskaźniki nie powinny znajdować się w obszarze publicznej powierzchni dobrze zaprojektowanej struktury kodu zarządzanego. W większości przypadków wskaźniki powinny być hermetyzowane. Jednak w niektórych przypadkach wskaźniki są wymagane ze względu na współdziałanie, a w takich przypadkach są odpowiednie wskaźniki.  
@@ -151,9 +151,9 @@ public class String {
   
  Na przykład nie ma potrzeby przekazywania indeksu początkowego, ponieważ można użyć prostej arytmetycznej wskaźnika, aby osiągnąć ten sam wynik.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Reprinted przez uprawnienie Pearson Education, Inc. od [Framework — wytyczne dotyczące projektowania: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, druga wersja @ no__t-0 przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

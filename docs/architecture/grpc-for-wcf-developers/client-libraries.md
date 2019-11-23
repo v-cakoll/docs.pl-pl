@@ -1,14 +1,13 @@
 ---
 title: Tworzenie bibliotek klienckich gRPC — gRPC dla deweloperów WCF
 description: Omówienie udostępnionych bibliotek klientów/pakietów dla usług gRPC Services.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419924"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967875"
 ---
 # <a name="create-grpc-client-libraries"></a>Tworzenie bibliotek klienckich gRPC
 
@@ -19,7 +18,7 @@ Jedną z zalet dystrybucji biblioteki klienta jest możliwość udoskonalenia wy
 > [!CAUTION]
 > **Nie** należy używać niestandardowego kodu w celu zapewnienia podstawowych funkcji, ponieważ oznacza to, że funkcje byłyby ograniczone do zespołów .NET korzystających z biblioteki udostępnionej, a nie do zespołów korzystających z innych języków lub platform, takich jak Python lub Java.
 
-W środowisku wieloplatformowym, w którym różne zespoły często korzystają z różnych języków programowania i struktur lub gdzie interfejs API jest dostępny zewnętrznie, wystarczy udostępnić pliki `.proto`, aby deweloperzy mogli generować własnych klientów, najlepszym sposobem na zapewnienie tak wiele zespołów, jak to możliwe, może uzyskać dostęp do usługi gRPC.
+W środowisku z wieloma platformami, w których różne zespoły często korzystają z różnych języków programowania i struktur lub gdzie interfejs API jest dostępny zewnętrznie, wystarczy udostępnić pliki `.proto`, aby deweloperzy mogli generować własnych klientów, najlepszym sposobem zapewnienia, że wiele zespołów może uzyskać dostęp do usługi gRPC.
 
 ## <a name="useful-extensions"></a>Przydatne rozszerzenia
 
@@ -152,4 +151,4 @@ Modele `IAsyncEnumerable` i `IObservable` są dobrze obsługiwane i dobrze udoku
 
 >[!div class="step-by-step"]
 >[Poprzedni](streaming-versus-repeated.md)
->[dalej](security.md)
+>[Następny](security.md)

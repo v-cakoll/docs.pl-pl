@@ -21,4 +21,4 @@ Jeśli Twoja organizacja korzysta z maszyn wirtualnych platformy Azure, nawet je
 
 >[!div class="step-by-step"]
 >[Poprzedni](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
->[dalej](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
+>[Następny](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)

@@ -24,11 +24,11 @@ Domyślnie `SignInAsync` zgłasza wyjątek dla podmiotów zabezpieczeń/tożsamo
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
-Stare zachowanie było przyczyną problemów, ponieważ domyślnie te podmioty zabezpieczeń zostały odrzucone przez `[Authorize]` @ no__t-1 @ no__t-2.
+Stare zachowanie było przyczyną problemów, ponieważ domyślnie te podmioty zabezpieczeń zostały odrzucone przez `[Authorize]` / `RequireAuthenticatedUser()`.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
-W ASP.NET Core 3,0 w wersji zapoznawczej 6 istnieje flaga `RequireAuthenticatedSignIn` w `AuthenticationOptions`, która domyślnie jest `true`. Ustaw tę flagę na `false`, aby przywrócić stare zachowanie.
+W ASP.NET Core 3,0 w wersji zapoznawczej 6 istnieje flaga `RequireAuthenticatedSignIn` na `AuthenticationOptions` `true` domyślnie. Ustaw tę flagę na `false`, aby przywrócić stare zachowanie.
 
 #### <a name="category"></a>Kategoria
 

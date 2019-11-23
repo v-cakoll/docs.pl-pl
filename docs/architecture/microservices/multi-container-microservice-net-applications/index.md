@@ -18,5 +18,5 @@ Wcześniej zgłoszono pytanie "czy platforma Docker jest konieczna podczas kompi
 Jeśli jednak wiesz, jak projektować i opracowywać aplikację opartą na mikrousługach, która jest również oparta na kontenerach platformy Docker, będziesz mieć możliwość projektowania i opracowywania dowolnego innego, prostszego modelu aplikacji. Na przykład można zaprojektować aplikację trójwarstwowej, która wymaga również podejścia obejmującego wiele kontenerów. Ze względu na to, że architektury mikrousług są istotną tendencją w obrębie świata kontenera, ta sekcja koncentruje się na implementacji architektury mikrousług przy użyciu kontenerów platformy Docker.
 
 >[!div class="step-by-step"]
->[Poprzedni](../docker-application-development-process/docker-app-development-workflow.md)Następny
->[](microservice-application-design.md)
+>[Poprzedni](../docker-application-development-process/docker-app-development-workflow.md)
+>[Następny](microservice-application-design.md)

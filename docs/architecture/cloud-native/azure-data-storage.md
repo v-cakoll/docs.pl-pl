@@ -35,7 +35,7 @@ Na rysunku 5-12 przedstawiono opcje wdrażania dla Azure SQL Database.
 
 Zanotuj alternatywy na poprzednim rysunku podczas wdrażania SQL Database:
 
-- [Pojedyncza baza danych](https://docs.microsoft.com/azure/sql-database/sql-database-single-database)  with swój własny zestaw zasobów zarządzanych przez [serwer SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Pojedyncza baza danych jest podobna do [zawartej w niej bazy danych](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)  in wdrożenia SQL Server lokalnych.
+- [Pojedyncza baza danych](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) z własnym zestawem zasobów zarządzanych przez [serwer SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Pojedyncza baza danych jest podobna do [zawartej w bazie danych](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) w lokalnym wdrożeniu SQL Server.
 
 - [Pula elastyczna](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) , w której kolekcja baz danych SQL współużytkuje jeden serwer SQL Database z ustawioną ceną. Pojedyncze bazy danych można przenieść do i z elastycznej puli w miarę potrzeby w celu zoptymalizowania wydajności cen dla grupy baz danych.
 
@@ -53,7 +53,7 @@ Oprócz tradycyjnego stosu Microsoft SQL Server platforma Azure oferuje także z
 
 ## <a name="azure-database-for-mysql"></a>Azure Database for MySQL
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL)  is [relacyjną bazę danych](https://en.wikipedia.org/wiki/Relational_database_management_system) [Open Source](https://en.wikipedia.org/wiki/Open-source_software). Jest to składnik ze [stosu oprogramowania lampy](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) i używany przez wiele dużych organizacji, w tym Facebook, Twitter i YouTube. Wersja Community jest dostępna bezpłatnie, a wersja Enterprise wymaga zakupu licencji. Pierwotnie utworzony w 1995, produkt został zakupiony przez firmę Sun Microsystems w 2008, który został uzyskany przez firmę Oracle w 2010.
+[MySQL](https://en.wikipedia.org/wiki/MySQL) to [relacyjna baza danych](https://en.wikipedia.org/wiki/Relational_database_management_system) [Open Source](https://en.wikipedia.org/wiki/Open-source_software). Jest to składnik ze [stosu oprogramowania lampy](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) i używany przez wiele dużych organizacji, w tym Facebook, Twitter i YouTube. Wersja Community jest dostępna bezpłatnie, a wersja Enterprise wymaga zakupu licencji. Pierwotnie utworzony w 1995, produkt został zakupiony przez firmę Sun Microsystems w 2008, który został uzyskany przez firmę Oracle w 2010.
 
 [Azure Database for MySQL](https://azure.microsoft.com/services/mysql/) to w pełni zarządzana usługa relacyjnej bazy danych w przedsiębiorstwie oparta na aparacie serwera MySQL typu open source. Wdrożenie programu MySQL Community Edition obejmuje następujące możliwości PaaS bez dodatkowych kosztów:
 
@@ -101,7 +101,7 @@ MariaDB jest silnie stosowana i jest używana przez wiele dużych przedsiębiors
 
 [PostgreSQL](https://www.postgresql.org/) to kolejna popularna relacyjna baza danych typu open source, która jest w ciągu 30 lat aktywnego programowania. Jest to system zarządzania bazami danych ogólnego przeznaczenia i obiektu. Jego Licencjonowanie jest uznawane za "zliberalizowane", a produkt jest bezpłatny do używania, modyfikowania i dystrybucji w dowolnej postaci. Wiele dużych przedsiębiorstw, takich jak Apple, Red Hat i Fujitsu, są zbudowane jako produkty korzystające z usługi PostgreSQL.
 
-[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) to w pełni zarządzana usługa relacyjnej bazy danych w oparciu o aparat bazy danych Postgres typu open source. Może obsłużyć obciążenia o znaczeniu krytycznym z przewidywalną wydajnością, bezpieczeństwem, wysoką dostępnością i dynamiczną skalowalnością. Obsługuje ona kilka języków i platform "open source", w C++tym Java, Python, Node, C \# i php. Umożliwia ona [migrację](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) baz danych PostgreSQL za pomocą interfejsu wiersza polecenia lub [usługi Azure Data Migration Service](https://azure.microsoft.com/services/database-migration/).
+[Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/) to w pełni zarządzana usługa relacyjnej bazy danych w oparciu o aparat bazy danych Postgres typu open source. Może obsłużyć obciążenia o znaczeniu krytycznym z przewidywalną wydajnością, bezpieczeństwem, wysoką dostępnością i dynamiczną skalowalnością. Obsługuje ona kilka języków i platform "open source", w C++tym Java, Python, Node, C\#i php. Umożliwia ona [migrację](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) baz danych PostgreSQL za pomocą interfejsu wiersza polecenia lub [usługi Azure Data Migration Service](https://azure.microsoft.com/services/database-migration/).
 
 Usługa zawiera [wbudowaną analizę](https://docs.microsoft.com/azure/postgresql/concepts-monitoring) , która umożliwia badanie unikatowych wzorców baz danych i udostępnia dostosowane zalecenia i szczegółowe informacje ułatwiające zmaksymalizowanie wydajności bazy danych PostgreSQL. [Zaawansowana ochrona przed zagrożeniami](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection) monitoruje bazę danych wokół zegara i wykrywa potencjalne złośliwe działania, co pozwala na natychmiastowe wykrycie.
 
@@ -109,7 +109,7 @@ Azure Database for PostgreSQL jest dostępna jako dwie opcje wdrażania: pojedyn
 
 - Opcja wdrożenia [pojedynczego serwera](https://docs.microsoft.com/azure/postgresql/concepts-servers) to centralny punkt administracyjny dla wielu baz danych. Jest to ten sam aparat serwera PostgreSQL, który jest dostępny dla wdrożeń lokalnych. Dzięki niej można utworzyć pojedynczą bazę danych na każdym serwerze, która będzie korzystała ze wszystkich zasobów, lub utworzyć wiele baz danych, aby udostępnić zasoby. Ceny są ustalane na podstawie rdzeni i magazynu.
 
-- [Opcja Citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) jest obsługiwana przez [Citus danych](https://www.citusdata.com/)  technology. Umożliwia skalowanie o wysokiej wydajności przez skalowanie pojedynczej bazy danych na setki węzłów w celu zapewnienia szybkiej wydajności i skalowania niezwykle. Ta opcja umożliwia aparatowi dopasowanie większej ilości danych do pamięci, zrównoleglanie zapytań na setki węzłów oraz szybsze indeksowanie danych. Funkcja przedskalowania jest zgodna z najnowszymi innowacje, wersjami i narzędziami dla programu PostgreSQL, dzięki czemu możesz korzystać z istniejącej ekspertyzy PostgreSQL.
+- [Opcja Citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) jest obsługiwana przez [Citus dane](https://www.citusdata.com/) technologii. Umożliwia skalowanie o wysokiej wydajności przez skalowanie pojedynczej bazy danych na setki węzłów w celu zapewnienia szybkiej wydajności i skalowania niezwykle. Ta opcja umożliwia aparatowi dopasowanie większej ilości danych do pamięci, zrównoleglanie zapytań na setki węzłów oraz szybsze indeksowanie danych. Funkcja przedskalowania jest zgodna z najnowszymi innowacje, wersjami i narzędziami dla programu PostgreSQL, dzięki czemu możesz korzystać z istniejącej ekspertyzy PostgreSQL.
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -157,7 +157,7 @@ Aplikacje przeznaczone dla usługi Azure Table Storage można migrować do Azure
 
 W scenariuszach aplikacji [brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) zespoły programistyczne mogą migrować istniejące bazy danych Mongo, Gremlin lub Cassandra do Cosmos DB z minimalnymi zmianami w istniejących danych lub kodzie aplikacji. W scenariuszach [Greenfield](https://en.wikipedia.org/wiki/Greenfield_project) zespoły deweloperów mogą wybrać model danych, który najlepiej spełnia ich wymagania i preferencje, w tym w pełni obsługiwane opcje "open source" dla platform MongoDB, Cassandra i Gremlin.
 
-### <a name="consistency-models"></a>Modele spójności
+### <a name="consistency-models"></a>Modeli spójności
 
 Wcześniej w sekcji *relacyjnej i NoSQL* został omówiony temat *spójności danych*, czyli termin odnoszący się do integralności danych. Rozproszone bazy danych korzystające z replikacji w celu zapewnienia wysokiej dostępności, małych opóźnień lub obu muszą mieć zasadnicze kompromisy między spójnością odczytu, dostępnością i opóźnieniem.
 

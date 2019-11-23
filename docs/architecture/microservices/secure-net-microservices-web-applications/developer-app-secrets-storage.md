@@ -21,7 +21,7 @@ Należy oddzielić wpisy tajne, aby uzyskać dostęp do zasobów deweloperskich 
 
 Jednym ze sposobów utrzymywania tajemnicy kodu źródłowego jest to, aby deweloperzy mogli ustawiać klucze tajne na podstawie ciągów jako [zmienne środowiskowe](/aspnet/core/security/app-secrets#environment-variables) na swoich maszynach deweloperskich. W przypadku używania zmiennych środowiskowych do przechowywania wpisów tajnych z nazwami hierarchicznymi, takimi jak zagnieżdżone w sekcjach konfiguracji, należy nazwać zmienne, aby uwzględnić pełną hierarchię jej sekcji, rozdzielaną średnikami (:).
 
-Na przykład ustawienie zmiennej `Logging:LogLevel:Default` środowiskowej na `Debug` wartość będzie równoważne wartości konfiguracji z następującego pliku JSON:
+Na przykład ustawienie zmiennej środowiskowej `Logging:LogLevel:Default` na wartość `Debug` będzie równoważne wartości konfiguracji z następującego pliku JSON:
 
 ```json
 {
@@ -39,9 +39,9 @@ Należy pamiętać, że zmienne środowiskowe są zwykle przechowywane jako zwyk
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>Przechowywanie wpisów tajnych za pomocą programu ASP.NET Core Secret Manager
 
-Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) zapewnia kolejną metodę utrzymywania wpisów tajnych z kodu źródłowego. Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft. Extensions. Configuration. SecretManager** w pliku projektu. Gdy ta zależność jest obecna i przywrócona, `dotnet user-secrets` polecenie może służyć do ustawiania wartości wpisów tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), a nie od kodu źródłowego.
+Narzędzie ASP.NET Core [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) zapewnia kolejną metodę utrzymywania wpisów tajnych z kodu źródłowego. Aby użyć narzędzia Secret Manager, zainstaluj pakiet **Microsoft. Extensions. Configuration. SecretManager** w pliku projektu. Gdy ta zależność jest obecna i przywrócona, polecenie `dotnet user-secrets` może służyć do ustawiania wartości wpisów tajnych z wiersza polecenia. Te wpisy tajne będą przechowywane w pliku JSON w katalogu profilu użytkownika (szczegóły różnią się w zależności od systemu operacyjnego), a nie od kodu źródłowego.
 
-Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są `UserSecretsId` zorganizowane według właściwości projektu, który używa wpisów tajnych. W związku z tym należy ustawić właściwość UserSecretsId w pliku projektu, jak pokazano w poniższym fragmencie kodu. Wartość domyślna to identyfikator GUID przypisany przez program Visual Studio, ale rzeczywisty ciąg nie jest ważny, o ile jest unikatowy na komputerze.
+Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są zorganizowane według właściwości `UserSecretsId` projektu, który używa wpisów tajnych. W związku z tym należy ustawić właściwość UserSecretsId w pliku projektu, jak pokazano w poniższym fragmencie kodu. Wartość domyślna to identyfikator GUID przypisany przez program Visual Studio, ale rzeczywisty ciąg nie jest ważny, o ile jest unikatowy na komputerze.
 
 ```xml
 <PropertyGroup>
@@ -49,10 +49,10 @@ Wpisy tajne ustawiane przez narzędzie tajnego Menedżera są `UserSecretsId` zo
 </PropertyGroup>
 ```
 
-Korzystanie z wpisów tajnych przechowywanych w ramach Menedżera wpisów tajnych w aplikacji `AddUserSecrets<T>` jest realizowane przez wywołanie wystąpienia ConfigurationBuilder w celu uwzględnienia wpisów tajnych aplikacji w konfiguracji. Parametr generyczny T powinien być typem z zestawu, do którego zastosowano UserSecretId. Zwykle korzystanie `AddUserSecrets<Startup>` z programu jest bardzo precyzyjne.
+Korzystanie z wpisów tajnych przechowywanych w ramach Menedżera wpisów tajnych w aplikacji jest realizowane przez wywołanie `AddUserSecrets<T>` w wystąpieniu ConfigurationBuilder w celu uwzględnienia wpisów tajnych aplikacji w konfiguracji. Parametr generyczny T powinien być typem z zestawu, do którego zastosowano UserSecretId. Zwykle używanie `AddUserSecrets<Startup>` jest dokładne.
 
-Program jest zawarty w domyślnych opcjach środowiska programistycznego, gdy jest `CreateDefaultBuilder` używana metoda w *program.cs*. `AddUserSecrets<Startup>()`
+`AddUserSecrets<Startup>()` jest uwzględniona w domyślnych opcjach środowiska programistycznego w przypadku używania metody `CreateDefaultBuilder` w *program.cs*.
 
 >[!div class="step-by-step"]
->[Poprzedni](authorization-net-microservices-web-applications.md)Następny
->[](azure-key-vault-protects-secrets.md)
+>[Poprzedni](authorization-net-microservices-web-applications.md)
+>[Następny](azure-key-vault-protects-secrets.md)

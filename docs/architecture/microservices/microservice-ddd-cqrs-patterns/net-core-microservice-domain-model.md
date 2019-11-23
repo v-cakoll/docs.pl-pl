@@ -2,12 +2,12 @@
 title: Implementowanie modelu domeny mikrousługi za pomocą platformy .NET Core
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Zapoznaj się ze szczegółami implementacji modelu domeny zorientowanego na DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972044"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi przy użyciu platformy .NET Core
 
@@ -174,11 +174,11 @@ Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól p
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Punkty danych — kodowanie dla projektowania opartego na domenie: wskazówki dotyczące deweloperzy** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **UDI Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-domain-model.md)
-> [dalej](seedwork-domain-model-base-classes-interfaces.md)
+> [Następny](seedwork-domain-model-base-classes-interfaces.md)

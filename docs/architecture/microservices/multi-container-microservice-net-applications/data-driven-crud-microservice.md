@@ -51,7 +51,7 @@ Projekt interfejsu API zawiera odwołania do pakietu NuGet Microsoft. AspNetCore
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementowanie usług interfejsu API sieci Web CRUD za pomocą Entity Framework Core
 
-Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej Entity Framework technologii dostępu do danych. EF Core to Mapowanie obiektowo-relacyjne (ORM), które umożliwia deweloperom platformy .NET współdziałanie z bazą danych przy użyciu obiektów .NET.
+Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej technologii dostępu do danych — Entity Framework. EF Core to Mapowanie obiektowo-relacyjne (ORM), które umożliwia deweloperom platformy .NET współdziałanie z bazą danych przy użyciu obiektów .NET.
 
 Mikrousługa katalogu używa EF i dostawcy SQL Server, ponieważ jego baza danych działa w kontenerze z SQL Server dla obrazu platformy Docker systemu Linux. Jednak bazę danych można wdrożyć w dowolnym SQL Server, na przykład lokalnie lub w usłudze Azure SQL DB. Jedyną czynnością, którą należy zmienić, są parametry połączenia w mikrousłudze ASP.NET Web API.
 
@@ -100,7 +100,7 @@ public class CatalogContext : DbContext
 
 Możesz mieć dodatkowe implementacje `DbContext`. Przykładowo w przypadku mikrousługi przykładowej katalogu. API istnieje druga `DbContext` o nazwie `CatalogContextSeed`, w której program automatycznie wypełnia przykładowe dane przy pierwszej próbie uzyskania dostępu do bazy danych. Ta metoda jest przydatna w przypadku danych demonstracyjnych i scenariuszy zautomatyzowanych testów.
 
-W `DbContext` Użyj metody `OnModelCreating`, aby dostosować mapowania jednostek obiektów/baz danych oraz inne [punkty rozszerzalności EF](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
+W `DbContext`Użyj metody `OnModelCreating`, aby dostosować mapowania jednostek obiektów/baz danych oraz inne [punkty rozszerzalności EF](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Wykonywanie zapytań dotyczących danych z kontrolerów interfejsu API sieci Web
 
@@ -157,7 +157,7 @@ public class CatalogController : ControllerBase
 
 ##### <a name="saving-data"></a>Zapisywanie danych
 
-Dane są tworzone, usuwane i modyfikowane w bazie danych przy użyciu wystąpień klas jednostek. Do kontrolerów interfejsu API sieci Web można dodać kod podobny do poniższego zakodowanego przykładu (w tym przypadku dane są w tym przypadku).
+Dane są tworzone, usuwane i modyfikowane w bazie danych za pomocą wystąpień klas jednostek. Do kontrolerów interfejsu API sieci Web można dodać kod podobny do poniższego zakodowanego przykładu (w tym przypadku dane są w tym przypadku).
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
@@ -207,10 +207,10 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wykonywanie zapytań dotyczących danych**  \
+- **Wykonywanie zapytań dotyczących danych** \
   [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
-- **Zapisywanie  \ danych**
+- **Zapisywanie \ danych**
   [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Parametry połączenia bazy danych i zmienne środowiskowe używane przez kontenery platformy Docker
@@ -291,13 +291,13 @@ Ten mechanizm przechowywania wersji jest prosty i zależy od serwera routingu ż
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Scott Hanselman. Łatwe  \ ASP.NET Core RESTful internetowego interfejsu API**
+- **Scott Hanselman. Łatwe \ ASP.NET Core RESTful internetowego interfejsu API**
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Przechowywanie wersji RESTful internetowego interfejsu API**  \
+- **Przechowywanie wersji RESTful internetowego interfejsu API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy. Przechowywanie wersji, przenośnika i REST**  \
+- **Roy. Przechowywanie wersji, przenośnika i REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generowanie metadanych opisu struktury Swagger z internetowego interfejsu API ASP.NET Core
@@ -330,7 +330,7 @@ Metadane struktury Swagger to Microsoft Flow, PowerApps i Azure Logic Apps używ
 
 Istnieje kilka opcji automatyzowania generowania metadanych struktury Swagger dla ASP.NET Core aplikacji interfejsu API REST, w formie stron pomocy interfejsu API funkcji, opartych na strukturze *Swagger-UI*.
 
-Prawdopodobnie najlepszą wiedzą, że jest to [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , która jest obecnie używana w [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) i w tym przewodniku zajmiemy się bardziej szczegółowym, ale również opcją użycia [NSwag](https://github.com/RSuter/NSwag), która może generować klientów języka TypeScript i języka C \#, a także Kontrolery \# C, ze specyfikacją Swagger lub OpenAPI, a nawet przez skanowanie pliku DLL zawierającego kontrolery przy użyciu [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
+Prawdopodobnie najlepszą wiedzą, że jest to [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) , która jest obecnie używana w [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) i w tym przewodniku zawarto szczegółowe informacje, ale istnieje również opcja użycia [NSwag](https://github.com/RSuter/NSwag), która może generować klientów języka TypeScript i języka C\#, a także kontrolerów c\#, z specyfikacji struktury Swagger lub openapi, a nawet przez skanowanie biblioteki DLL zawierającej kontrolery przy użyciu programu [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio).
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Jak zautomatyzować generowanie metadanych struktury Swagger interfejsu API za pomocą pakietu NuGet Swashbuckle
 
@@ -417,15 +417,15 @@ Jest to proste. I ponieważ jest generowany automatycznie, podczas dodawania wi�
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **ASP.NET stron pomocy interfejsu API sieci Web przy użyciu struktury Swagger**  \
+- **ASP.NET stron pomocy interfejsu API sieci Web przy użyciu struktury Swagger** \
   [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
-- **Wprowadzenie do Swashbuckle i ASP.NET Core**  \
+- **Wprowadzenie do Swashbuckle i ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
-- **Wprowadzenie do NSwag i ASP.NET Core**  \
+- **Wprowadzenie do NSwag i ASP.NET Core** \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
 > [Poprzedni](microservice-application-design.md)
-> [dalej](multi-container-applications-docker-compose.md)
+> [Następny](multi-container-applications-docker-compose.md)

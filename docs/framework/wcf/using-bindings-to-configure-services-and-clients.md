@@ -17,13 +17,13 @@ Powiązania są obiektami, które określają szczegóły komunikacji wymagane d
 ## <a name="what-a-binding-defines"></a>Co definiuje powiązanie  
  Informacje w powiązaniu mogą być bardzo proste lub bardzo złożone. Najbardziej podstawowe powiązanie określa tylko protokół transportowy (na przykład HTTP), który musi zostać użyty do nawiązania połączenia z punktem końcowym. Ogólnie rzecz biorąc, informacje, które wiążą się z tym, jak nawiązać połączenie z punktem końcowym, znajdują się w jednej z kategorii w poniższej tabeli.  
   
- Protokołów  
+ Protokoły  
  Określa używany mechanizm zabezpieczeń, niezawodne możliwości obsługi komunikatów lub ustawienia przepływu kontekstu transakcji.  
   
  Transportu  
  Określa podstawowy protokół transportowy do użycia (na przykład TCP lub HTTP).  
   
- Kody  
+ Kodowanie  
  Określa kodowanie wiadomości, na przykład tekst/XML, binarny lub mechanizm optymalizacji transmisji wiadomości (MTOM), który określa sposób reprezentowania komunikatów jako strumienie bajtów w sieci.  
   
 ## <a name="system-provided-bindings"></a>Wiązania dostarczane przez system  
@@ -33,14 +33,14 @@ Powiązania są obiektami, które określają szczegóły komunikacji wymagane d
   
 - <xref:System.ServiceModel.WSHttpBinding>: powiązanie protokołu HTTP odpowiednie do łączenia się z punktami końcowymi, które są zgodne z protokołami specyfikacji usług sieci Web.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: używa kodowania binarnego .NET i technologii ramek w połączeniu z transportem nazwanych potoków systemu Windows, aby nawiązać połączenie z innymi punktami końcowymi WCF na tym samym komputerze.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: używa kodowania binarnego platformy .NET i technologii obsługi ramek w połączeniu z transportem nazwanych potoków systemu Windows, aby nawiązać połączenie z innymi punktami końcowymi WCF na tym samym komputerze.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: używa kodowania binarnego .NET i technologii ramek w połączeniu z kolejką komunikatów (znanej również jako MSMQ) do tworzenia połączeń komunikatów umieszczonych w kolejce z innymi punktami końcowymi WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: używa kodowania binarnego .NET i technologii ramek w połączeniu z kolejką komunikatów (znanej także jako MSMQ) do tworzenia połączeń komunikatów umieszczonych w kolejce z innymi punktami końcowymi WCF.  
   
  Aby uzyskać pełną listę powiązań dostarczanych przez system z opisami, zobacz [powiązania dostarczone przez system](system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Powiązania niestandardowe  
- Jeśli kolekcja powiązań udostępniona przez system nie ma poprawnej kombinacji funkcji wymaganych przez aplikację usługi, można utworzyć powiązanie <xref:System.ServiceModel.Channels.CustomBinding>. Aby uzyskać więcej informacji o elementach powiązania <xref:System.ServiceModel.Channels.CustomBinding>, zapoznaj się z tematem [@no__t 2customBinding >](../configure-apps/file-schema/wcf/custombinding.md) i [powiązaniami niestandardowymi](./extending/custom-bindings.md).  
+ Jeśli kolekcja powiązań udostępniona przez system nie ma poprawnej kombinacji funkcji wymaganych przez aplikację usługi, można utworzyć powiązanie <xref:System.ServiceModel.Channels.CustomBinding>. Aby uzyskać więcej informacji o elementach powiązania <xref:System.ServiceModel.Channels.CustomBinding>, zobacz [\<custombinding >](../configure-apps/file-schema/wcf/custombinding.md) i [powiązań niestandardowych](./extending/custom-bindings.md).  
   
 ## <a name="using-bindings"></a>Używanie powiązań  
  Używanie powiązań obejmuje dwa podstawowe kroki:  
@@ -50,7 +50,7 @@ Powiązania są obiektami, które określają szczegóły komunikacji wymagane d
 2. Utwórz punkt końcowy, który używa tego powiązania.  
   
 ## <a name="code-and-configuration"></a>Kod i konfiguracja  
- Można definiować lub konfigurować powiązania za poorednictwem kodu lub konfiguracji. Te dwa podejścia są niezależne od typu użytego powiązania, na przykład niezależnie od tego, czy jest używane powiązanie dostarczone przez system lub <xref:System.ServiceModel.Channels.CustomBinding>. Ogólnie rzecz biorąc, przy użyciu kodu zapewnia pełną kontrolę nad definicją powiązania podczas kompilowania. Przy użyciu konfiguracji, z drugiej strony, umożliwia administratorowi systemu lub użytkownikowi usługi lub klientowi WCF zmianę parametrów powiązań. Taka elastyczność jest często pożądana, ponieważ nie ma możliwości przewidywania konkretnych wymagań dotyczących maszyn i warunków sieci, w których ma zostać wdrożona aplikacja platformy WCF. Oddzielenie informacji o powiązaniach (i adresowania) od kodu pozwala administratorom zmieniać szczegóły powiązań bez konieczności ponownego kompilowania lub wdrażania aplikacji. Należy pamiętać, że jeśli powiązanie jest zdefiniowane w kodzie, zastępuje wszelkie definicje oparte na konfiguracji w pliku konfiguracji. Przykłady tych metod można znaleźć w następujących tematach:  
+ Można definiować lub konfigurować powiązania za poorednictwem kodu lub konfiguracji. Te dwa podejścia są niezależne od typu użytego powiązania, na przykład niezależnie od tego, czy jest używane powiązanie dostarczone przez system czy <xref:System.ServiceModel.Channels.CustomBinding>. Ogólnie rzecz biorąc, przy użyciu kodu zapewnia pełną kontrolę nad definicją powiązania podczas kompilowania. Przy użyciu konfiguracji, z drugiej strony, umożliwia administratorowi systemu lub użytkownikowi usługi lub klientowi WCF zmianę parametrów powiązań. Taka elastyczność jest często pożądana, ponieważ nie ma możliwości przewidywania konkretnych wymagań dotyczących maszyn i warunków sieci, w których ma zostać wdrożona aplikacja platformy WCF. Oddzielenie informacji o powiązaniach (i adresowania) od kodu pozwala administratorom zmieniać szczegóły powiązań bez konieczności ponownego kompilowania lub wdrażania aplikacji. Należy pamiętać, że jeśli powiązanie jest zdefiniowane w kodzie, zastępuje wszelkie definicje oparte na konfiguracji w pliku konfiguracji. Przykłady tych metod można znaleźć w następujących tematach:  
   
 - [Instrukcje: Hostowanie usługi WCF w zarządzanej aplikacji](how-to-host-a-wcf-service-in-a-managed-application.md) zapewnia przykład tworzenia powiązań w kodzie.  
   

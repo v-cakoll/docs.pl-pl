@@ -23,4 +23,4 @@ Częściowe modernizacja aplikacji niekoniecznie oznacza pełną migrację i arc
 
 >[!div class="step-by-step"]
 >[Poprzedni](../migrate-your-relational-databases-to-azure.md)
->[dalej](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
+>[Następny](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)

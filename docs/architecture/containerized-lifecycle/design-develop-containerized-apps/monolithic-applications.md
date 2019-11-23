@@ -49,7 +49,7 @@ Możesz wdrożyć wiele maszyn wirtualnych jako hosty platformy Docker i uruchom
 
 Wdrożeniem hostów można zarządzać za pomocą tradycyjnych technik wdrażania.
 
-Kontenerów platformy Docker można zarządzać z poziomu wiersza polecenia, korzystając z poleceń takich jak `docker run` i `docker-compose up`. można również zautomatyzować ją w potokach ciągłego dostarczania (CD) i wdrożyć na hostach platformy Docker z Azure DevOps Services, na przykład.
+Kontenerów platformy Docker można zarządzać z poziomu wiersza polecenia, korzystając z poleceń takich jak `docker run` i `docker-compose up`, a także zautomatyzować je w potokach ciągłego dostarczania i wdrożyć na hostach platformy Docker z Azure DevOps Services na przykład.
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Aplikacja monolityczna wdrożona jako kontener
 
@@ -61,7 +61,7 @@ Ze względu na to, że kontenery są z natury niezmienne, przez zaprojektowanie,
 
 Chociaż aplikacje monolityczne mogą korzystać z platformy Docker, firma Microsoft wprowadza tylko porady dotyczące korzyści. Większe korzyści wynikające z zarządzania kontenerami nie są wdrażane za pomocą koordynatorów kontenerów, które zarządzają różnymi wystąpieniami i cyklem życia każdego wystąpienia kontenera. Rozdzielenie aplikacji monolitycznej na podsystemy, które mogą być skalowane, opracowywane i wdrażane, jest punktem wejścia do obszaru mikrousług.
 
-Aby dowiedzieć się, jak "podnieść i przeshift" aplikacje monolityczne z kontenerami i jak można przeprowadzić modernizację aplikacji, możesz przeczytać ten dodatkowy przewodnik firmy Microsoft, modernizowanie [istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows](../../modernize-with-azure-containers/index.md), można również pobrać plik PDF z <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Aby dowiedzieć się, jak "podnieść i przeshift" aplikacje monolityczne z kontenerami i jak można przeprowadzić modernizację aplikacji, możesz przeczytać ten dodatkowy przewodnik firmy Microsoft, modernizowania [istniejących aplikacji .NET za pomocą chmury platformy Azure i kontenerów systemu Windows](../../modernize-with-azure-containers/index.md), które można także pobrać jako plik PDF z <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publikowanie pojedynczej aplikacji kontenera Docker do Azure App Service
 

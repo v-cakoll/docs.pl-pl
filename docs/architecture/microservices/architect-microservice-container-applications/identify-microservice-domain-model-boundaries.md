@@ -1,5 +1,5 @@
 ---
-title: Identyfikowanie granic modelu domeny dla każdej mikrousługi
+title: Identyfikowanie ograniczeń modelu domeny dla poszczególnych mikrousług
 description: Zapoznaj się z istotą partycjonowania dużej aplikacji do mikrousług w celu osiągnięcia architektury dźwiękowej.
 ms.date: 09/20/2018
 ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
@@ -13,7 +13,7 @@ ms.locfileid: "71834413"
 
 Celem określania granic i rozmiaru modelu dla każdej mikrousługi nie jest uzyskanie bardziej szczegółowego rozdzielenia, chociaż jest to możliwe w przypadku małych mikrousług. Zamiast tego należy zapoznać się z najważniejszym rozdzieleniem podanym przez wiedzę o domenie. Ten nacisk nie jest rozmiarem, ale zamiast możliwości biznesowe. Ponadto, jeśli istnieje wyraźna spójność dla pewnego obszaru aplikacji w oparciu o dużą liczbę zależności, która wskazuje potrzebę tylko jednego mikrousługi. Spójność to sposób, aby określić, jak należy rozdzielić lub zgrupować wspólnie mikrousługi. Ostatecznie, podczas gdy uzyskasz więcej informacji na temat domeny, należy dostosować rozmiar mikrousługi, iteracyjnie. Znalezienie odpowiedniego rozmiaru nie jest procesem z jednym zrzutem.
 
-[Sam Newmana](https://samnewman.io/), rozpoznany podwyższanie poziomu mikrousług i autor [tworzenia mikrousług](https://samnewman.io/books/building_microservices/)w książce, oznacza, że należy zaprojektować mikrousługi na podstawie wzorca ograniczone kontekstu (BC) (część projektu opartego na domenie), jak to zostało wprowadzone. wyżej. Czasami może składać się z kilku usług fizycznych, ale nie odwrotnie.
+[Sam Newmana](https://samnewman.io/), rozpoznana podwyższania poziomu mikrousług i autora [mikrousług tworzących](https://samnewman.io/books/building_microservices/)książkę, podświetla, że należy zaprojektować mikrousługi na podstawie wzorca ograniczone kontekstu (BC) (części projektu opartego na domenie), zgodnie z wcześniejszym opisem. Czasami może składać się z kilku usług fizycznych, ale nie odwrotnie.
 
 Model domeny z określonymi jednostkami domeny ma zastosowanie w ramach konkretnej BC lub mikrousług. Funkcja BC ogranicza możliwość zastosowania modelu domeny i zapewnia członkom zespołu deweloperów jasne i wspólne zrozumienie, co musi być spójne i co może być opracowane niezależnie. Są to te same cele dla mikrousług.
 
@@ -51,4 +51,4 @@ Istnieje kilka korzyści, aby nie współużytkować tej samej jednostki użytko
 
 >[!div class="step-by-step"]
 >[Poprzedni](distributed-data-management.md)
->[dalej](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[Następny](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

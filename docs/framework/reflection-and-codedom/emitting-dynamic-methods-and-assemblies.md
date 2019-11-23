@@ -53,7 +53,7 @@ Pokazuje, jak tworzyć, emitować i wywoływać prostą metodę rodzajową.
 [Zestawy kolekcjonowane do generowania typów dynamicznych](collectible-assemblies.md)   
 Wprowadza zestawy kolekcjonowane, które są dynamicznymi zestawami, które można zwolnić bez zwalniania domeny aplikacji, w której zostały utworzone.
   
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Informacje ogólne  
 
 <xref:System.Reflection.Emit.OpCodes>  
 Kataloguje kody instrukcji MSIL, których można użyć do kompilowania treści metody.  

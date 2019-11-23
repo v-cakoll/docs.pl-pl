@@ -13,7 +13,7 @@ ms.locfileid: "72771981"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>WCF dotnet-Svcutil Tool dla platformy .NET Core
 
-Windows Communication Foundation (WCF) **dotnet-Svcutil** Tool to narzędzie interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL, i GENERUJE klasę WCF zawierającą metody serwera proxy klienta, które uzyskują dostęp do usługi sieci Web. składowa.
+Windows Communication Foundation (WCF) **dotnet-Svcutil** Tool to narzędzie interfejs wiersza polecenia platformy .NET Core, które pobiera metadane z usługi sieci Web w lokalizacji sieciowej lub z pliku WSDL, i GENERUJE klasę WCF zawierającą metody serwera proxy klienta, które uzyskują dostęp do operacji usługi sieci Web.
 
 Podobnie jak w przypadku narzędzi [**metadanych Svcutil modelu usług**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) dla projektów .NET Framework, **dotnet-Svcutil** to narzędzie wiersza polecenia do generowania odwołania usługi internetowej zgodnej z projektami .NET Core i .NET Standard.
 
@@ -26,12 +26,12 @@ Narzędzie **dotnet-Svcutil** jest alternatywną opcją dla [**usługi sieci Web
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-Svcutil 2. x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 - [.NET Core 2,1 SDK](https://dotnet.microsoft.com/download) lub nowsza wersja
 - Ulubiony Edytor kodu
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-Svcutil 1. x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 - [.NET Core 1.0.4 SDK](https://dotnet.microsoft.com/download) lub jego nowsze wersje
 - Ulubiony Edytor kodu
@@ -68,15 +68,15 @@ W oknie polecenia systemu Windows, macOS lub Linux wykonaj następujące czynno�
     dotnet new web
     ```
 
-3. Zainstaluj [pakiet NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) jako narzędzie interfejsu wiersza polecenia:  <!-- markdownlint-disable MD023 -->
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-Svcutil 2. x](#tab/dotnetsvcutil2x)
+3. Zainstaluj [pakiet NuGet`dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) jako narzędzie interfejsu wiersza polecenia:  <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet tool install --global dotnet-svcutil
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-Svcutil 1. x](#tab/dotnetsvcutil1x)
-    Otwórz plik projektu `HelloSvcutil.csproj` w edytorze, Edytuj element `Project` i Dodaj [pakiet NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzia interfejsu wiersza polecenia, używając następującego kodu:
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    Otwórz plik projektu `HelloSvcutil.csproj` w edytorze, Edytuj element `Project` i Dodaj [pakiet NuGet`dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) jako odwołanie narzędzia interfejsu wiersza polecenia, używając następującego kodu:
 
     ```xml
     <ItemGroup>
@@ -94,13 +94,13 @@ W oknie polecenia systemu Windows, macOS lub Linux wykonaj następujące czynno�
 
 4. Uruchom polecenie _dotnet-Svcutil_ , aby wygenerować plik referencyjny usługi sieci Web w następujący sposób:
 
-    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-Svcutil 2. x](#tab/dotnetsvcutil2x)
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
     dotnet-svcutil http://contoso.com/SayHello.svc
     ```
 
-    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-Svcutil 1. x](#tab/dotnetsvcutil1x)
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
     ```dotnetcli
     dotnet svcutil http://contoso.com/SayHello.svc
@@ -157,13 +157,13 @@ Wygenerowany plik zostanie zapisany jako _HelloSvcutil/ServiceReference/Referenc
 Powinny zostać wyświetlone następujące dane wyjściowe: "Hello dotnet-Svcutil!"
 
 Aby uzyskać szczegółowy opis parametrów narzędzia `dotnet-svcutil`, wywołaj narzędzie do przekazywania parametru pomocy w następujący sposób:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-Svcutil 2. x](#tab/dotnetsvcutil2x)
+# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
 ```dotnetcli
 dotnet-svcutil --help
 ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-Svcutil 1. x](#tab/dotnetsvcutil1x)
+# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
 ```dotnetcli
 dotnet svcutil --help
@@ -179,6 +179,6 @@ Jeśli masz jakieś pytania lub opinie, [Otwórz problem w usłudze GitHub](http
 
 - Zapoznaj się z informacjami o [wersji](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) dotyczącymi zaktualizowanych informacji o wersji, w tym znanych problemów.
 
-## <a name="information"></a>Informacje
+## <a name="information"></a>Information
 
 - [Pakiet NuGet dotnet-Svcutil](https://nuget.org/packages/dotnet-svcutil)

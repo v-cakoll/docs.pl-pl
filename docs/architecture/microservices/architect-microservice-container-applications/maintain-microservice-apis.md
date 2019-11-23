@@ -25,15 +25,15 @@ Na [koniec, jeśli](https://www.infoq.com/articles/mark-baker-hypermedia) używa
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Scott Hanselman. Łatwość ASP.NET Core RESTful internetowego interfejsu API** \
+- **Scott Hanselman. Łatwe \ ASP.NET Core RESTful internetowego interfejsu API**
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **Przechowywanie wersji interfejsu API sieci Web RESTful** \
+- **Przechowywanie wersji RESTful internetowego interfejsu API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy. Przechowywanie wersji, nośniki i REST** \
+- **Roy. Przechowywanie wersji, przenośnika i REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
->[Poprzedni](asynchronous-message-based-communication.md)Następny
->[](microservices-addressability-service-registry.md)
+>[Poprzedni](asynchronous-message-based-communication.md)
+>[Następny](microservices-addressability-service-registry.md)

@@ -114,7 +114,7 @@ Na rysunku 7-9 można zobaczyć przykładowe zagregowane wartości, takie jak ag
 
 Model domeny DDD składa się z agregacji, agregacja może mieć tylko jedną jednostkę lub wiele obiektów i może zawierać również obiekty wartości. Należy pamiętać, że agregowanie kupującego może mieć dodatkowe jednostki podrzędne, w zależności od domeny, tak jak w przypadku mikrousługi porządkowania w aplikacji eShopOnContainers Reference. Rysunek 7-9 po prostu ilustruje przypadek, w którym kupujący ma pojedynczą jednostkę, jako przykład agregacji, która zawiera tylko zagregowany element główny.
 
-Aby zachować rozdzielenie agregacji i zachować jasne granice między nimi, dobrym sposobem w modelu domeny DDD jest uniemożliwienie bezpośredniej nawigacji między agregacjami i tylko posiadanie pola klucza obcego (FK) zgodnie z implementacją w [kolejności model domeny mikrousług](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) w eShopOnContainers. Jednostka Order ma tylko pole klucza obcego dla kupującego, ale nie EF Core właściwość nawigacji, jak pokazano w poniższym kodzie:
+Aby zachować rozdzielenie agregacji i zachować jasne granice między nimi, dobrym sposobem w modelu domeny DDD jest uniemożliwienie bezpośredniej nawigacji między agregacjami i tylko posiadanie pola klucza obcego (FK), zgodnie z implementacją w [modelu domeny mikrousługi](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) w eShopOnContainers. Jednostka Order ma tylko pole klucza obcego dla kupującego, ale nie EF Core właściwość nawigacji, jak pokazano w poniższym kodzie:
 
 ```csharp
 public class Order : Entity, IAggregateRoot
@@ -153,4 +153,4 @@ Identyfikowanie i praca z agregacjami wymaga badań i środowiska. Aby uzyskać 
 
 >[!div class="step-by-step"]
 >[Poprzedni](ddd-oriented-microservice.md)
->[dalej](net-core-microservice-domain-model.md)
+>[Następny](net-core-microservice-domain-model.md)

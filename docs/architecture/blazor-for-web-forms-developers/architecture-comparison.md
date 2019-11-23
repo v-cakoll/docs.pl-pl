@@ -52,7 +52,7 @@ Gdy składnik obsługuje zdarzenie, Blazor renderuje składnik i śledzi zmiany 
 
 ![Blazor DOM](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Składniki mogą również ręcznie wskazywać, że powinny być renderowane, jeśli ich stan zmieni się poza normalnym zdarzeniem interfejsu użytkownika. Blazor używa `SynchronizationContext` w celu wymuszenia pojedynczego wątku logicznego wykonywania. Metody cyklu życia składnika i wszystkie wywołania zwrotne zdarzeń wywoływane przez Blazor są wykonywane na tym `SynchronizationContext`.
+Składniki mogą również ręcznie wskazywać, że powinny być renderowane, jeśli ich stan zmieni się poza normalnym zdarzeniem interfejsu użytkownika. Blazor używa `SynchronizationContext` do wymuszania pojedynczego logicznego wątku wykonywania. W tym `SynchronizationContext`są wykonywane metody cyklu życia składnika i wszystkie wywołania zwrotne zdarzeń wywoływane przez Blazor.
 
 >[!div class="step-by-step"]
 >[Poprzedni](introduction.md)

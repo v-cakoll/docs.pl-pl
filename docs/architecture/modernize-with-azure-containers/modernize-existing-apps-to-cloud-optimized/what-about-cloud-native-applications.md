@@ -67,4 +67,4 @@ W każdym przypadku pozostała część niniejszych wskazówek koncentruje się 
 
 > [!div class="step-by-step"]
 > [Poprzedni](microsoft-technologies-in-cloud-optimized-applications.md)
-> [dalej](deploy-existing-net-apps-as-windows-containers.md)
+> [Następny](deploy-existing-net-apps-as-windows-containers.md)

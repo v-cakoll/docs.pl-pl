@@ -33,7 +33,7 @@ Aby rozwiązać wspomniane problemy i ułatwić zarządzanie wystąpieniami `Htt
 
 - Podaj centralną lokalizację do nazywania i konfigurowania obiektów `HttpClient` logicznych. Można na przykład skonfigurować klienta (agenta usługi), który jest wstępnie skonfigurowany w celu uzyskania dostępu do konkretnej mikrousługi.
 - Codify koncepcji wychodzącego oprogramowania pośredniczącego przez delegowanie programów obsługi w `HttpClient` i implementowanie oprogramowania pośredniczącego opartego na Pollyach, aby wykorzystać zasady dotyczące odporności Polly.
-- `HttpClient` już ma koncepcję delegowania programów obsługi, które mogą być połączone ze sobą w przypadku wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
+- Klasa `HttpClient` ma już pojęcie delegowania programów obsługi, które można połączyć ze sobą dla wychodzących żądań HTTP. Klienci HTTP są rejestrowani w fabryce i można użyć procedury obsługi Polly, aby używać zasad Polly do ponawiania, CircuitBreakers itd.
 - Zarządzaj okresem istnienia `HttpClientMessageHandlers`, aby uniknąć wspomnianych problemów i problemów, które mogą wystąpić podczas samodzielnego zarządzania `HttpClient` okresów istnienia.
 
 > [!NOTE]
@@ -62,7 +62,7 @@ Na poniższym diagramie pokazano, w jaki sposób typy klientów są używane z `
 
 Na powyższym obrazie ClientService (używany przez kontroler lub kod klienta) używa `HttpClient` utworzonego przez zarejestrowany `IHttpClientFactory`. Ta fabryka przypisuje `HttpClient` `HttpMessageHandler` z puli, którą zarządza. `HttpClient` można skonfigurować przy użyciu zasad Polly podczas rejestrowania `IHttpClientFactory` w kontenerze DI z metodą rozszerzenia `AddHttpClient`.
 
-Aby skonfigurować powyższą strukturę, Dodaj `HttpClientFactory` w aplikacji, instalując pakiet NuGet `Microsoft.Extensions.Http`, który zawiera metodę rozszerzenia `AddHttpClient()` dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory`, które mają być używane jako pojedyncze dla `IHttpClientFactory` interfejsu. Definiuje ona przejściową konfigurację dla `HttpMessageHandlerBuilder`. Ten program obsługi komunikatów (`HttpMessageHandler` Object), pobrany z puli, jest używany przez `HttpClient` zwracaną z fabryki.
+Aby skonfigurować powyższą strukturę, Dodaj `HttpClientFactory` w aplikacji, instalując pakiet NuGet `Microsoft.Extensions.Http`, który zawiera metodę rozszerzenia `AddHttpClient()` dla `IServiceCollection`. Ta metoda rozszerzenia rejestruje `DefaultHttpClientFactory`, które mają być używane jako pojedyncze dla `IHttpClientFactory`interfejsu. Definiuje ona przejściową konfigurację dla `HttpMessageHandlerBuilder`. Ten program obsługi komunikatów (`HttpMessageHandler` Object), pobrany z puli, jest używany przez `HttpClient` zwracaną z fabryki.
 
 W następnym kodzie można zobaczyć, jak `AddHttpClient()` może służyć do rejestrowania klientów typu (agenci usługi), którzy muszą korzystać z `HttpClient`.
 
@@ -103,7 +103,7 @@ Więcej informacji o używaniu programu Polly można znaleźć w [następnym art
 
 ### <a name="httpclient-lifetimes"></a>HttpClient okresy istnienia
 
-Za każdym razem, gdy otrzymujesz obiekt `HttpClient` z `IHttpClientFactory`, zostanie zwrócone nowe wystąpienie. Jednak każdy `HttpClient` używa `HttpMessageHandler`, który jest w puli i ponownie używany przez `IHttpClientFactory` w celu zmniejszenia zużycia zasobów, o ile okres istnienia `HttpMessageHandler` nie wygasł.
+Za każdym razem, gdy otrzymujesz obiekt `HttpClient` z `IHttpClientFactory`, zostanie zwrócone nowe wystąpienie. Jednak każdy `HttpClient` używa `HttpMessageHandler`, który jest w puli i ponownie używany przez `IHttpClientFactory` w celu zmniejszenia zużycia zasobów, o ile okres istnienia `HttpMessageHandler`nie wygasł.
 
 Buforowanie programów obsługi jest pożądane, ponieważ każdy program obsługi zazwyczaj zarządza własnymi połączeniami HTTP; Utworzenie większej liczby programów obsługi niż to konieczne może skutkować opóźnieniami połączeń. Niektóre programy obsługi powodują również, że połączenia są otwarte w nieskończoność, co może uniemożliwić obsłużenie zmian DNS przez program obsługi.
 
@@ -119,7 +119,7 @@ Każdy klient z określonym typem może mieć własną skonfigurowaną wartość
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Zaimplementuj wpisane klasy klienta korzystające z wstrzykniętych i skonfigurowanych HttpClient
 
-W poprzednim kroku należy określić zdefiniowane klasy klienta, takie jak klasy w przykładowym kodzie, takie jak "BasketService", "CatalogService", "OrderingService" itp. — typ klienta jest klasą akceptującą obiekt `HttpClient` (wstrzyknięty przez jego Konstruktor) i używa go do wywoływania pewnej zdalnej usługi HTTP. Na przykład:
+W poprzednim kroku należy określić zdefiniowane klasy klienta, takie jak klasy w przykładowym kodzie, takie jak "BasketService", "CatalogService", "OrderingService" itd. — typ klienta jest klasą akceptującą obiekt `HttpClient` (wstrzyknięty za pomocą jego konstruktora) i używa go do wywołania pewnej zdalnej usługi HTTP. Na przykład:
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -152,7 +152,7 @@ Klient z określonym typem to, efektywnie, obiekt przejściowy, co oznacza, że 
 
 ### <a name="use-your-typed-client-classes"></a>Korzystanie z wpisanych klas klienta
 
-Na koniec po zaimplementowaniu klas wpisanych i zarejestrowaniu ich przy użyciu `AddHttpClient()` można ich używać wszędzie tam, gdzie można korzystać z usług wstrzykiwanych przez DI. Na przykład w kodzie lub kontrolerze strony Razor w aplikacji sieci Web MVC, jak w poniższym kodzie z eShopOnContainers:
+Na koniec po zaimplementowaniu klas wpisanych i zarejestrowaniu ich przy użyciu `AddHttpClient()`można ich używać wszędzie tam, gdzie można korzystać z usług wstrzykiwanych przez DI. Na przykład w kodzie lub kontrolerze strony Razor w aplikacji sieci Web MVC, jak w poniższym kodzie z eShopOnContainers:
 
 ```csharp
 namespace Microsoft.eShopOnContainers.WebMVC.Controllers
@@ -181,7 +181,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 }
 ```
 
-Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale "Magic" znajduje się w następujących sekcjach, w których po prostu przez dodanie zasad i delegowanie programów obsługi do zarejestrowanych klientów z określonym typem, wszystkie żądania HTTP, które mają zostać wykonane przez `HttpClient` będą działać uwzględniając zasady odporne na błędy, takie jak ponowne próby z wycofywania wykładniczych, wyłączników lub innych niestandardowych procedur delegowania do implementowania dodatkowych funkcji zabezpieczeń, takich jak używanie tokenów uwierzytelniania lub jakakolwiek inna funkcja niestandardowa.
+Do tego momentu pokazany kod właśnie wykonuje zwykłe żądania HTTP, ale "Magic" znajduje się w następujących sekcjach, gdzie, bezpośrednio przez dodanie zasad i delegowanie programów obsługi do zarejestrowanych klientów z określonym typem, wszystkie żądania HTTP, które mają zostać wykonane przez `HttpClient` będą zachowywać się w celu uwzględnienia odpornych zasad, takich jak ponowne próby z użyciem wykładniczych wycofywania, wyłączników lub innych niestandardowych funkcji delegowania do implementowania dodatkowych funkcji zabezpieczeń, takich jak tokeny uwierzytelniania lub jakakolwiek inna funkcja niestandardowa.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -199,4 +199,4 @@ Do tego momentu pokazany kod jest tylko wykonywanie zwykłych żądań HTTP, ale
 
 >[!div class="step-by-step"]
 >[Poprzedni](explore-custom-http-call-retries-exponential-backoff.md)
->[dalej](implement-http-call-retries-exponential-backoff-polly.md)
+>[Następny](implement-http-call-retries-exponential-backoff-polly.md)

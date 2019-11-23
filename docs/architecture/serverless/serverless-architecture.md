@@ -75,4 +75,4 @@ W efekcie usługi IoT wystąpiły różne produkty bezserwerowe, które koncentr
 
 >[!div class="step-by-step"]
 >[Poprzedni](architecture-approaches.md)
->[dalej](serverless-architecture-considerations.md)
+>[Następny](serverless-architecture-considerations.md)

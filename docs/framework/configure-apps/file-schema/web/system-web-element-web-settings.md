@@ -15,11 +15,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699092"
 ---
-# <a name="systemweb-element-web-settings"></a>@no__t -0system. Web > element (Ustawienia sieci Web)
+# <a name="systemweb-element-web-settings"></a>\<element > System. Web (Ustawienia sieci Web)
 Zawiera informacje o sposobie zarządzania zachowaniem całego procesu przez warstwę hostingu ASP.NET.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. web >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<system. web >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,17 +40,17 @@ Brak.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1applicationPool >](applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w pliku aspnet. config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Określa ustawienia konfiguracji dla pul aplikacji usług IIS w pliku aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1configuration >](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
+|[> konfiguracji \<](../configuration-element.md)|Określa element główny w każdym pliku konfiguracji, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacje .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
 
-Element `system.web` i jego element podrzędny `applicationPool` zostały dodane do .NET Framework w ramach .NET Framework 3,5 z dodatkiem SP1. W przypadku uruchamiania usług IIS 7,0 lub nowszych w trybie zintegrowanym Ta kombinacja elementów umożliwia skonfigurowanie sposobu, w jaki program ASP.NET zarządza wątkami i w jaki sposób kolejki są wysyłane w puli aplikacji usług IIS. W przypadku uruchomienia usług IIS 7,0 lub nowszych w trybie klasycznym lub ISAPI te ustawienia zostaną zignorowane.  
+Element `system.web` i jego element podrzędny `applicationPool` zostały dodane do .NET Framework w .NET Framework 3,5 SP1. W przypadku uruchamiania usług IIS 7,0 lub nowszych w trybie zintegrowanym Ta kombinacja elementów umożliwia skonfigurowanie sposobu, w jaki program ASP.NET zarządza wątkami i w jaki sposób kolejki są wysyłane w puli aplikacji usług IIS. W przypadku uruchomienia usług IIS 7,0 lub nowszych w trybie klasycznym lub ISAPI te ustawienia zostaną zignorowane.  
   
 ## <a name="example"></a>Przykład  
 
@@ -78,4 +78,4 @@ Poniższy przykład pokazuje, jak skonfigurować zachowanie ASP.NET całego proc
   
 ## <a name="see-also"></a>Zobacz także
 
-- [\<applicationPool >, element (Ustawienia sieci Web)](applicationpool-element-web-settings.md)
+- [\<element > applicationPool (Ustawienia sieci Web)](applicationpool-element-web-settings.md)

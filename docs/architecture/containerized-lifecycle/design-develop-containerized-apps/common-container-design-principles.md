@@ -20,5 +20,5 @@ W modelu kontenera kontener reprezentuje pojedynczy proces. Definiując kontener
 Możesz znaleźć scenariusz, w którym wiele procesów działa w jednym kontenerze. W dowolnym dokumencie architektury nigdy nie jest "nigdy", ani nie zawsze jest "zawsze". W przypadku scenariuszy wymagających wielu procesów typowym wzorcem jest użycie [opiekuna](http://supervisord.org/).
 
 >[!div class="step-by-step"]
->[Poprzedni](design-docker-applications.md)Następny
->[](monolithic-applications.md)
+>[Poprzedni](design-docker-applications.md)
+>[Następny](monolithic-applications.md)

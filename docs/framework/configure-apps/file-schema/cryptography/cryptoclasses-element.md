@@ -1,5 +1,5 @@
 ---
-title: <cryptoClasses> Element
+title: <cryptoClasses>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings/cryptoNameMapping/cryptoClasses
@@ -15,14 +15,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699754"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses > elementu
-Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w elemencie [\<nameEntry >](nameentry-element.md) .  
+# <a name="cryptoclasses-element"></a>\<cryptoClasses> Element
+Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazwy w [\<nameEntry >](nameentry-element.md) elementu.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<cryptoClasses >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoClasses >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,7 +41,7 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1cryptoClass >](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w elemencie **\<nameEntry >** .|  
+|[\<cryptoClass>](cryptoclass-element.md)|Zawiera klasę kryptografii, która ma mapowanie do przyjaznej nazwy w **\<nameEntry >** elementu.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -82,5 +82,5 @@ Zawiera listę klas kryptograficznych, które mają mapowanie do przyjaznej nazw
 - [Schemat pliku konfiguracji](../index.md)
 - [Schemat ustawień kryptografii](index.md)
 - [Usługi kryptograficzne](../../../../standard/security/cryptographic-services.md)
-- [System. Security. Cryptography. obiektu CryptoConfig. isfromname](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
 - [Konfigurowanie klas kryptografii](../../configure-cryptography-classes.md)

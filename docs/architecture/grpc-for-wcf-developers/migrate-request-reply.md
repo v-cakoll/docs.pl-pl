@@ -1,14 +1,13 @@
 ---
 title: Migrowanie usługi żądania WCF-odpowiedź do gRPC-gRPC dla deweloperów WCF
 description: Dowiedz się, jak migrować prostą usługę żądanie-odpowiedź z programu WCF do gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846611"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971784"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrowanie usługi żądania WCF-odpowiedź do gRPC jednoargumentowego wywołania procedury
 
@@ -281,7 +280,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-Pierwszy problem polega na tym, że `request.TraderId` jest ciągiem, a usługa wymaga `Guid`. Mimo że oczekiwany format ciągu jest `UUID`, kod musi zajmować się możliwością, że obiekt wywołujący wysłał nieprawidłową wartość i odpowiednio odpowiada. Usługa może odpowiedzieć z błędami przez wyrzucanie `RpcException` i użycie standardowego kodu stanu `InvalidArgument` do wyznaczania problemu.
+Pierwszy problem polega na tym, że `request.TraderId` jest ciągiem, a usługa wymaga `Guid`. Mimo że oczekiwany format ciągu jest `UUID`, kod musi zajmować się możliwością, że obiekt wywołujący wysłał nieprawidłową wartość i odpowiednio odpowiada. Usługa może odpowiedzieć z błędami przez wyrzucanie `RpcException`i użycie standardowego kodu stanu `InvalidArgument` do wyznaczania problemu.
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -306,7 +305,7 @@ Gdy istnieje właściwa `Guid` wartość dla `traderId`, można użyć repozytor
 
 ### <a name="map-internal-models-to-grpc-messages"></a>Mapowanie wewnętrznych modeli na komunikaty gRPC
 
-Poprzedni kod nie działa, ponieważ repozytorium zwraca własny model POCO `Portfolio`, ale *gRPC potrzebuje własnego* `Portfolio` komunikatów protobuf. Podobnie jak mapowanie typów Entity Framework do typów transferu danych, najlepszym rozwiązaniem jest zapewnienie konwersji między nimi. Dobrym miejscem, aby umieścić kod dla tego elementu, znajduje się w klasie wygenerowanej przez protobuf, która jest zadeklarowana jako Klasa `partial`, więc można ją rozszerzyć.
+Poprzedni kod nie działa, ponieważ repozytorium zwraca własny model POCO `Portfolio`, ale *gRPC potrzebuje własnego* `Portfolio`komunikatów protobuf. Podobnie jak mapowanie typów Entity Framework do typów transferu danych, najlepszym rozwiązaniem jest zapewnienie konwersji między nimi. Dobrym miejscem, aby umieścić kod dla tego elementu, znajduje się w klasie wygenerowanej przez protobuf, która jest zadeklarowana jako Klasa `partial`, więc można ją rozszerzyć.
 
 ```csharp
 namespace TraderSys.Portfolios.Protos
@@ -348,7 +347,7 @@ namespace TraderSys.Portfolios.Protos
 ```
 
 > [!NOTE]
-> Można użyć biblioteki, takiej jak [automapowania](https://automapper.org/) , do obsługi tej konwersji z klas wewnętrznych modelu do typów protobuf, o ile można skonfigurować konwersje typu niższego poziomu, takie jak `string` / `Guid` lub `decimal` / `double` i mapowanie listy.
+> Można użyć biblioteki, takiej jak [automapowania](https://automapper.org/) , do obsługi tej konwersji z klas wewnętrznych modelu do typów protobuf, o ile można skonfigurować konwersje typu niższego poziomu, takie jak `string`/`Guid` lub `decimal`/`double` i mapowanie listy.
 
 Przy użyciu kodu konwersji w miejscu można wykonać implementację metody `Get`.
 
@@ -409,7 +408,7 @@ Przejdź do pliku `portfolios.proto` w projekcie `TraderSys.Portfolios`, pozosta
 > [!TIP]
 > Należy zauważyć, że to okno dialogowe zawiera również pole adresu URL. Jeśli Twoja organizacja utrzymuje katalog `.proto` plików dostępny dla sieci Web, można utworzyć klientów bezpośrednio przez ustawienie tego adresu URL.
 
-W przypadku korzystania z funkcji **dodawania usługi połączonej** programu Visual Studio plik `portfolios.proto` jest dodawany do projektu biblioteki klas jako *plik połączony*, a nie skopiowane, więc zmiany w pliku w projekcie usługi zostaną automatycznie zastosowane na kliencie projektu. Element `<Protobuf>` w pliku `csproj` wygląda następująco:
+W przypadku korzystania z funkcji **dodawania usługi połączonej** programu Visual Studio plik `portfolios.proto` jest dodawany do projektu biblioteki klas jako *plik połączony*, a nie skopiowane, więc zmiany w pliku w projekcie usługi zostaną automatycznie zastosowane w projekcie klienta. Element `<Protobuf>` w pliku `csproj` wygląda następująco:
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">

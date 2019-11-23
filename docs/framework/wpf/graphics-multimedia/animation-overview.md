@@ -223,7 +223,7 @@ Ponieważ animacje generują wartości właściwości, istnieją różne typy an
 
 - *typ*\<> Podstawy animacji
 
-  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<* animacji.
+  Klasa abstrakcyjna, która podczas jej implementowania Animuj > wartość *typu*\<. Ta klasa służy jako klasa bazowa dla *typu*\<> Animacja i *typ*\<> klasy AnimationUsingKeyFrames. Musisz poradzić sobie bezpośrednio z tymi klasami tylko wtedy, gdy chcesz utworzyć własne animacje niestandardowe. W przeciwnym razie użyj *typu*\<> Animacja lub klatka *kluczowa\<>* animacji.
 
 W większości przypadków należy użyć \<*typu*> klas animacji, takich jak <xref:System.Windows.Media.Animation.DoubleAnimation> i <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -260,9 +260,9 @@ W poniższej tabeli przedstawiono kilka ustawień <xref:System.Windows.Duration>
 
 |Ustawienie|Wartość wyników|
 |-------------|---------------------|
-|0:0: 5,5|5,5 sekund.|
-|0:30:5,5|30 minut i 5,5 sekund.|
-|1:30:5,5|1 godzina, 30 minut i 5,5 sekund.|
+|0:0:5.5|5,5 sekund.|
+|0:30:5.5|30 minut i 5,5 sekund.|
+|1:30:5.5|1 godzina, 30 minut i 5,5 sekund.|
 
 Jednym ze sposobów określenia <xref:System.Windows.Duration> w kodzie jest użycie metody <xref:System.TimeSpan.FromSeconds%2A> w celu utworzenia <xref:System.TimeSpan>, a następnie zadeklarować nową strukturę <xref:System.Windows.Duration> przy użyciu tego <xref:System.TimeSpan>.
 
@@ -387,7 +387,7 @@ Poniższe przykłady ułatwiają rozpoczęcie dodawania animacji do aplikacji.
 
 <a name="reference"></a>
 
-## <a name="reference"></a>Tematy pomocy
+## <a name="reference"></a>Informacje ogólne
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

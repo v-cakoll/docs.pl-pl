@@ -1,14 +1,13 @@
 ---
 title: Dlaczego gRPC jest zalecane dla deweloperów WCF — gRPC dla deweloperów WCF
 description: Dyskusja o tym, dlaczego gRPC jest dobrze dopasowana dla deweloperów WCF, którzy chcą migrować do nowoczesnych architektur i platform.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: f96e9a059dc9f12a13c9eb5bb7184ee75d602458
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: da712e1ceee92f0a1a2661252dcda602f5dde9a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846071"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966946"
 ---
 # <a name="why-grpc-is-recommended-for-wcf-developers"></a>Dlaczego usługa gRPC jest zalecana dla deweloperów WCF
 

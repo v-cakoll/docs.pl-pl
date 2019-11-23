@@ -3,12 +3,12 @@ title: Komunikacja między usługami
 description: Dowiedz się, jak mikrousługi zaplecza w chmurze komunikują się z innymi mikrousługami zaplecza.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094624"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087595"
 ---
 # <a name="service-to-service-communication"></a>Komunikacja między usługami
 
@@ -30,7 +30,7 @@ Należy wziąć pod uwagę następujące typy interakcji:
 
 Systemy mikrousług zazwyczaj używają kombinacji tych typów interakcji podczas wykonywania operacji wymagających interakcji między usługami. Przyjrzyjmy się, jak można je wdrożyć.
 
-## <a name="queries"></a>Kwerendy
+## <a name="queries"></a>Zapytania
 
 Wiele mikrousług może wymagać wykonania *zapytania* do innej, co wymaga natychmiastowej reakcji na ukończenie operacji. Mikrousługa koszyka zakupów może potrzebować informacji o produkcie i ceny, aby dodać element do jego koszyka. Istnieje kilka podejścia do implementowania operacji zapytań.
 
@@ -50,7 +50,7 @@ Wykonywanie sporadycznego żądania, które powoduje, że jedno bezpośrednie wy
 
 **Rysunek 4-9**. Łączenie kwerend HTTP
 
-Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie w przypadku niepowodzenia kroku \#3? Lub krok \#8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić, jeśli krok \#6 jest wolny, ponieważ podstawowa usługa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
+Można wyobrazić ryzyko związane z projektem pokazanym na powyższym obrazie. Co się stanie, jeśli krok \#3 zakończy się niepowodzeniem? Lub krok \#8 kończy się niepowodzeniem? Jak odzyskać? Co zrobić w przypadku, gdy krok \#6 działa powoli, ponieważ usługa bazowa jest zajęta? Jak kontynuować? Nawet jeśli wszystkie działania działają prawidłowo, należy wziąć pod uwagę opóźnienie tego wywołania, czyli sumę opóźnienia każdego kroku.
 
 Duży stopień sprzęgania w poprzednim obrazie sugeruje, że usługi nie były optymalnie modelowane. Behoove zespół do ponownego odwiedzania projektu.
 
@@ -166,7 +166,7 @@ Dzięki zdarzeniom przechodźmy od technologii kolejkowania do *tematów*. [Tema
 
 **Rysunek 4-16**. Architektura tematu
 
-Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "onOrder" do subskrypcji \#1 i subskrypcji \#3, ale nie do subskrypcji \#2. Zdarzenie "OrderCompleted" zostanie wysłane do subskrypcji \#2 i subskrypcji \#3.
+Na powyższym rysunku wydawcy wysyłają komunikaty do tematu. Na koniec Subskrybenci odbierają wiadomości z subskrypcji. W środku tematu przekazuje komunikaty do subskrypcji na podstawie zestawu *reguł*, które są wyświetlane w ciemnych polach. Reguły działają jako filtr, który przekazuje dalej określone wiadomości do subskrypcji. W tym miejscu zostanie wysłane zdarzenie "Zamów" do subskrypcji \#1 i subskrypcji \#3, ale nie do subskrypcji \#2. Zdarzenie "OrderCompleted" zostanie wysłane do subskrypcji \#2 i subskrypcji \#3.
 
 Chmura systemu Azure obsługuje dwie różne usługi tematu: Tematy Azure Service Bus i Azure EventGrid.
 
@@ -208,19 +208,19 @@ Event Grid to w pełni zarządzana usługa w chmurze bezserwerowej. Dynamicznie 
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Przesyłanie strumieniowe komunikatów w chmurze platformy Azure
 
-Azure Service Bus i Event Grid zapewniają doskonałą pomoc techniczną dla aplikacji, które uwidaczniają pojedyncze, dyskretne zdarzenia, takie jak nowy dokument został wstawiony do Cosmos DB. Ale co zrobić, jeśli system natywny w chmurze musi przetworzyć *strumień powiązanych zdarzeń*? [Strumienie zdarzeń](https://msdn.microsoft.com/magazine/dn904671) są bardziej skomplikowane. Są one zazwyczaj uporządkowane według czasu, wzajemnie powiązane i muszą być przetwarzane jako Grupa.
+Azure Service Bus i Event Grid zapewniają doskonałą pomoc techniczną dla aplikacji, które uwidaczniają pojedyncze, dyskretne zdarzenia, takie jak nowy dokument został wstawiony do Cosmos DB. Ale co zrobić, jeśli system natywny w chmurze musi przetworzyć *strumień powiązanych zdarzeń*? [Strumienie zdarzeń](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) są bardziej skomplikowane. Są one zazwyczaj uporządkowane według czasu, wzajemnie powiązane i muszą być przetwarzane jako Grupa.
 
 [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/) to usługa przesyłania strumieniowego danych i usługi pozyskiwania zdarzeń, która gromadzi, przekształca i zapisuje zdarzenia. Jest to dostrajane do przechwytywania danych przesyłanych strumieniowo, takich jak ciągłe powiadomienia o zdarzeniach emitowane z kontekstu telemetrii. Usługa jest wysoce skalowalna i może przechowywać i [przetwarzać miliony zdarzeń na sekundę](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Pokazano na rysunku 4-18, często są to drzwi czołowe dla potoku zdarzeń, oddzielania strumienia pozyskiwania od zużycia zdarzeń.
 
-![Centrum zdarzeń platformy Azure](./media/azure-event-hub.png)
+![Azure Event Hub](./media/azure-event-hub.png)
 
-**Rysunek 4-18**. Centrum zdarzeń platformy Azure
+**Rysunek 4-18**. Azure Event Hub
 
 Centrum zdarzeń obsługuje małe opóźnienia i konfigurowalne przechowywanie czasu. W przeciwieństwie do kolejek i tematów Event Hubs zachować dane zdarzenia po ich odczytaniu przez konsumenta. Ta funkcja umożliwia innym usługom analitycznym danych, zarówno wewnętrznym, jak i zewnętrznym, odtwarzanie danych w celu dalszej analizy. Zdarzenia przechowywane w centrum zdarzeń są usuwane dopiero po upływie okresu przechowywania, który jest domyślnie jeden dzień, ale konfigurowalne.
 
 Centrum zdarzeń obsługuje typowe protokoły publikowania zdarzeń, w tym HTTPS i AMQP. Obsługuje także Kafka 1,0. [Istniejące aplikacje Kafka mogą komunikować się z centrum zdarzeń](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) przy użyciu protokołu Kafka, co zapewnia alternatywę dla zarządzania dużymi klastrami Kafka. Wiele systemów natywnych dla chmury "open source" obejmuje Kafka.
 
-Event Hubs implementuje przesyłanie strumieniowe komunikatów za pomocą [partycjonowanego modelu konsumenta](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , w którym każdy odbiorca odczytuje tylko konkretny podzbiór lub partycję strumienia komunikatów. Ten wzorzec zapewnia nieogromne skalowanie w poziomie na potrzeby przetwarzania zdarzeń oraz udostępnia inne funkcje ukierunkowane na przesyłanie strumieniowe, które są niedostępne w kolejkach i tematach. Partycja to uporządkowana sekwencja zdarzeń, które są przechowywane w centrum zdarzeń. Po nadejściu nowszych zdarzeń są one dodawane na końcu tej sekwencji. Rysunek 4-19 pokazuje partycjonowanie w centrum zdarzeń.
+Event Hubs implementuje przesyłanie strumieniowe komunikatów za pomocą [partycjonowanego modelu konsumenta](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) , w którym każdy odbiorca odczytuje tylko konkretny podzbiór lub partycję strumienia komunikatów. Ten wzorzec zapewnia nieogromne skalowanie w poziomie na potrzeby przetwarzania zdarzeń oraz udostępnia inne funkcje ukierunkowane na przesyłanie strumieniowe, które są niedostępne w kolejkach i tematach. Partycja to uporządkowana sekwencja zdarzeń przechowywana w centrum zdarzeń. Po nadejściu nowszych zdarzeń są one dodawane na końcu tej sekwencji. Rysunek 4-19 pokazuje partycjonowanie w centrum zdarzeń.
 
 ![Partycjonowanie centrum zdarzeń](./media/event-hub-partitioning.png)
 

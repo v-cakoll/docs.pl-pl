@@ -149,4 +149,4 @@ Kolejną możliwością `CircuitBreakerPolicy` jest użycie `Isolate` (które wy
 
 >[!div class="step-by-step"]
 >[Poprzedni](implement-http-call-retries-exponential-backoff-polly.md)
->[dalej](monitor-app-health.md)
+>[Następny](monitor-app-health.md)

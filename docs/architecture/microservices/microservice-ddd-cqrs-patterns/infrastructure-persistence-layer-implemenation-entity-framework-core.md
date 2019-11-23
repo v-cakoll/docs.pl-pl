@@ -17,7 +17,7 @@ Entity Framework ma długą historię w ramach .NET Framework. W przypadku korzy
 
 ## <a name="introduction-to-entity-framework-core"></a>Wprowadzenie do Entity Framework Core
 
-Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej Entity Framework technologii dostępu do danych. Wprowadzono ją z platformą .NET Core w połowie 2016.
+Entity Framework (EF) Core to lekka, rozszerzalna i wieloplatformowa wersja popularnej technologii dostępu do danych — Entity Framework. Wprowadzono ją z platformą .NET Core w połowie 2016.
 
 Ponieważ wprowadzenie do EF Core jest już dostępne w dokumentacji firmy Microsoft, tutaj udostępniamy linki do tych informacji.
 
@@ -469,4 +469,4 @@ Chociaż nie zaleca się zwracania platformy IQueryable z repozytorium, w celu u
 
 > [!div class="step-by-step"]
 > [Poprzedni](infrastructure-persistence-layer-design.md)
-> [dalej](nosql-database-persistence-infrastructure.md)
+> [Następny](nosql-database-persistence-infrastructure.md)

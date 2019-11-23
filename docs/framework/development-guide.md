@@ -48,7 +48,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowania, debugowania, zabezpiecza
  [Kompilowanie aplikacji z architekturą .NET Native](./net-native/index.md)  
  Wyjaśnia, jak używać technologii prekompilowania .NET Native do kompilowania i wdrażania aplikacji ze sklepu Windows. .NET Native kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i które są przeznaczone dla .NET Framework do kodu natywnego.  
   
- [Security](../standard/security/index.md)  
+ [Zabezpieczenia](../standard/security/index.md)  
  Zawiera informacje dotyczące klas i usług w .NET Framework, które ułatwiają tworzenie bezpiecznych aplikacji.  
   
  [Debugowanie, śledzenie i profilowanie](./debug-trace-profile/index.md)  
@@ -57,13 +57,13 @@ W tej sekcji opisano sposób tworzenia, konfigurowania, debugowania, zabezpiecza
  [Tworzenie aplikacji dla wielu platform](../standard/cross-platform/index.md)  
  Zawiera informacje o sposobach używania .NET Framework do kompilowania zestawów, które mogą być współużytkowane przez wiele platform i na wielu urządzeniach, takich jak telefony, komputery stacjonarne i sieci Web.  
   
- [Wdrażanie](./deployment/index.md)  
+ [Wdrożenie](./deployment/index.md)  
  W tym artykule wyjaśniono, jak spakować i dystrybuować aplikację .NET Framework, a także wskazówki dotyczące wdrażania dla deweloperów i administratorów.  
   
  [Wydajność](./performance/index.md)  
  Zawiera informacje na temat buforowania, inicjowania z opóźnieniem, niezawodności i zdarzeń ETW.  
  
-## <a name="reference"></a>Tematy pomocy  
+## <a name="reference"></a>Informacje ogólne  
  [Biblioteka klas .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Dostarcza składnię, przykłady kodu i informacje o użyciu dla każdej klasy, która jest zawarta w przestrzeni nazw .NET Framework.  
   

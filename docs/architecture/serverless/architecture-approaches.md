@@ -63,7 +63,7 @@ Istnieje kilka zalet podejścia do warstwy N, w tym:
 
 W celu zaimplementowania jednej lub kilku warstw może być używana bezserwerowa.
 
-## <a name="microservices"></a>Mikrousług
+## <a name="microservices"></a>Mikrousługi
 
 Architektury **[mikrousług](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)** zawierają wspólne cechy, które obejmują:
 
@@ -98,4 +98,4 @@ Ostatecznie istnieją rozwiązania, które należy spełnić przed wszystkimi ty
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](architecture-deployment-approaches.md)
+>[Następny](architecture-deployment-approaches.md)

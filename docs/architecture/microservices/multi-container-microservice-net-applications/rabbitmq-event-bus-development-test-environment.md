@@ -110,4 +110,4 @@ Metoda Subskrybuj akceptuje obiekt IIntegrationEventHandler, który przypomina m
 
 >[!div class="step-by-step"]
 >[Poprzedni](integration-event-based-microservice-communications.md)
->[dalej](subscribe-events.md)
+>[Następny](subscribe-events.md)

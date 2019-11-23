@@ -78,7 +78,7 @@ Brama interfejsu API zapewnia pojedynczy punkt wejścia dla klientów, a następ
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
-- [IoT Hub platformy Azure](https://docs.microsoft.com/azure/iot-hub)
+- [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 - [Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices/architect-microservice-container-applications/distributed-data-management.md)
 - [Projektowanie mikrousług: Identyfikowanie granic mikrousług](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
 - [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
@@ -86,8 +86,8 @@ Brama interfejsu API zapewnia pojedynczy punkt wejścia dla klientów, a następ
 - [Implementowanie wzorca wyłącznika](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
 - [IoT Hub](https://docs.microsoft.com/azure/iot-hub)
 - [Service Bus](https://docs.microsoft.com/azure/service-bus)
-- [Praca z obsługą kanału informacyjnego zmian w Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
+- [Praca ze zmianą Obsługa kanału informacyjnego w usłudze Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
 >[Poprzedni](serverless-architecture-considerations.md)
->[dalej](azure-serverless-platform.md)
+>[Następny](azure-serverless-platform.md)

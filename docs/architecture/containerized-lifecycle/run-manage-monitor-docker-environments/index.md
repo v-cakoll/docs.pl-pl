@@ -11,7 +11,7 @@ ms.locfileid: "70295630"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Uruchamianie i monitorowanie środowisk produkcyjnych platformy Docker oraz zarządzanie nimi
 
-Została Aplikacje dla przedsiębiorstw muszą działać z wysoką dostępnością i wysoką skalowalnością; Operacje IT muszą być w stanie zarządzać środowiskami i aplikacjami oraz monitorować je.
+Wizja: aplikacje dla przedsiębiorstw muszą działać z wysoką dostępnością i wysoką skalowalnością; Operacje IT muszą być w stanie zarządzać środowiskami i aplikacjami oraz monitorować je.
 
 Ten ostatni filar w cyklu życia aplikacji platformy Docker zawiera informacje na temat sposobu uruchamiania, zarządzania i monitorowania aplikacji w środowiskach produkcyjnych skalowalnych i wysokiej dostępności (HA).
 
@@ -20,5 +20,5 @@ Sposób uruchamiania aplikacji kontenerowych w środowisku produkcyjnym (archite
 Ten rozdział analizuje konkretne produkty i technologie firmy Microsoft i innych dostawców, których można użyć do wydajnego uruchamiania skalowalnych aplikacji rozproszonych o wysokiej dostępności, a także sposobu zarządzania nimi i monitorowania ich z perspektywy INFORMATYCZNej.
 
 >[!div class="step-by-step"]
->[Poprzedni](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)Następny
->[](run-microservices-based-applications-in-production.md)
+>[Poprzedni](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Następny](run-microservices-based-applications-in-production.md)

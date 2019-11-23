@@ -28,7 +28,7 @@ Architektura aplikacji może być logicznie skompilowana, aby przestrzegać tej 
 
 ### <a name="encapsulation"></a>Encapsulation
 
-Różne części aplikacji powinny używać **hermetyzacji** do izolowania ich od innych części aplikacji. Składniki aplikacji i warstwy powinny mieć możliwość dostosowania ich wewnętrznej implementacji bez przerywania współpracowników, tak długo, jak kontrakty zewnętrzne nie zostały naruszone. Odpowiednie użycie hermetyzacji pomaga osiągnąć swobodny sprzężenie i modułowość w projektach aplikacji, ponieważ obiekty i pakiety można zamienić na alternatywne implementacje, o ile ten sam interfejs jest obsługiwany.
+Różne części aplikacji powinny używać **hermetyzacji** do izolowania ich od innych części aplikacji. Składniki aplikacji i warstwy powinny mieć możliwość dostosowania ich wewnętrznej implementacji bez przerywania współpracowników, tak długo, jak kontrakty zewnętrzne nie zostały naruszone. Polecenia COUNT_BIG hermetyzacji pomaga osiągnąć luźne powiązania i Modułowość projektów aplikacji, ponieważ obiekty i pakietów można zastąpić za pomocą alternatywnych implementacji tak długo, jak długo jest obsługiwany przez ten sam interfejs.
 
 W klasach hermetyzacja jest realizowana przez ograniczenie poza dostępem do stanu wewnętrznego klasy. Jeśli aktor zewnętrzny chce manipulować stanem obiektu, należy to zrobić za pośrednictwem dobrze zdefiniowanej funkcji (lub metody ustawiającej właściwości), a nie bezpośredniego dostępu do stanu prywatnego obiektu. Podobnie składniki aplikacji i aplikacje powinny ujawniać dobrze zdefiniowane interfejsy dla współpracowników, zamiast zezwalać na bezpośrednie modyfikowanie ich stanu. Pozwala to na rozbicie projektu wewnętrznego aplikacji na czas bez obaw, że takie działanie spowoduje przerwanie współpracowników, dopóki są utrzymywane umowy publiczne.
 
@@ -40,7 +40,7 @@ Kierunek zależności w aplikacji powinien mieć kierunek abstrakcji, a nie szcz
 
 **Rysunek 4-1.** Wykres zależności bezpośredniej.
 
-Zastosowanie zasady Inversion dotyczącej zależności umożliwia wywoływanie metod na potrzeby abstrakcji, które B implementuje, dzięki czemu można wywołać B w czasie wykonywania, ale dla B, aby zależały od interfejsu kontrolowanego przez w czasie kompilacji (w rezultacie *odwrócić* typowe zależność czasu kompilacji). W czasie wykonywania przepływ wykonywania programu pozostaje niezmieniony, ale wprowadzenie interfejsów oznacza, że można łatwo podłączyć różne implementacje tych interfejsów.
+Zastosowanie zasady odróżniania zależności umożliwia wywoływanie metod w ramach abstrakcji, które B implementuje, dzięki czemu można wywołać B w czasie wykonywania, ale dla B, aby zależały od interfejsu kontrolowanego przez w czasie kompilacji (w rezultacie *odwrócić* typowy zależność czasu kompilacji). W czasie wykonywania przepływ wykonywania programu pozostaje niezmieniony, ale wprowadzenie interfejsów oznacza, że można łatwo podłączyć różne implementacje tych interfejsów.
 
 ![Wykres odwróconej zależności](./media/image4-2.png)
 
@@ -106,4 +106,4 @@ Co najmniej poszczególne aplikacje sieci Web powinny dążyć do własnego kont
 
 >[!div class="step-by-step"]
 >[Poprzedni](choose-between-traditional-web-and-single-page-apps.md)
->[dalej](common-web-application-architectures.md)
+>[Następny](common-web-application-architectures.md)

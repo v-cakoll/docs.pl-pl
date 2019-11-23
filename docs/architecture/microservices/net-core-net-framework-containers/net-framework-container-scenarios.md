@@ -2,12 +2,12 @@
 title: Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Kiedy należy wybrać .NET Framework kontenerów platformy Docker
 ms.date: 01/07/2019
-ms.openlocfilehash: 8316d17aae09ddbd70bd80af4f06d8cb029f2752
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e5b18e8e3482eb86c0d9dea5de56fb12f9d6256
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093763"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966893"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać oprogramowanie .NET Framework dla kontenerów Docker
 
@@ -21,7 +21,7 @@ W większości przypadków w tym scenariuszu nie ma potrzeby migrowania istniej�
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Korzystanie z bibliotek .NET innych firm lub pakietów NuGet niedostępnych dla platformy .NET Core
 
-Biblioteki innych firm umożliwiają szybkie wdrażanie [.NET Standard](../../../standard/net-standard.md), co umożliwia udostępnianie kodu we wszystkich wersjach .NET, w tym .NET Core. W przypadku biblioteki .NET Standard 2,0 i wykraczając poza zgodność urządzeń z interfejsem API w różnych strukturach znacznie większe i w aplikacjach .NET Core 2. x mogą również bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [.NET Framework 4.6.1 obsługa .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
+Biblioteki innych firm umożliwiają szybkie wdrażanie [.NET Standard](../../../standard/net-standard.md), co umożliwia udostępnianie kodu we wszystkich wersjach .NET, w tym .NET Core. W przypadku biblioteki .NET Standard 2,0 i wykraczających poza zgodność powierzchni interfejsu API między różnymi platformami stają się znacznie większe i aplikacje .NET Core 2. x mogą również bezpośrednio odwoływać się do istniejących bibliotek .NET Framework (zobacz [.NET Framework 4.6.1 obsługa .NET Standard 2,0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)).
 
 Ponadto [pakiet zgodności systemu Windows](../../../core/porting/windows-compat-pack.md) został opublikowany na lis-2017, aby zwiększyć powierzchnię interfejsu API dostępną dla .NET Standard 2,0 w systemie Windows. Ten pakiet umożliwia ponowne kompilowanie najbardziej istniejącego kodu do .NET Standard 2. x z małą lub bez modyfikacji, aby uruchomić program w systemie Windows.
 
@@ -51,15 +51,16 @@ W międzyczasie, jeśli jakakolwiek platforma lub usługa na platformie Azure na
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Przewodnik platformy .NET Core**  
+- **.NET Core — przewodnik** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
-- **Przenoszenie z .NET Framework do platformy .NET Core**  
+- **Przenoszenie z .NET Framework do programu .NET Core** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
-- **.NET Core w przewodniku docker** [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
+- **.NET Core w przewodniku docker** \
+  [https://docs.microsoft.com/dotnet/core/docker/introduction](../../../core/docker/introduction.md)
 
-- **Przegląd składników platformy .NET**  
+- **Przegląd składników platformy .net** \
   [https://docs.microsoft.com/dotnet/standard/components](../../../standard/components.md)
 
 >[!div class="step-by-step"]

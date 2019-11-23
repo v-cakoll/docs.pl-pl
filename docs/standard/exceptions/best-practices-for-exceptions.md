@@ -22,9 +22,9 @@ Dobrze zaprojektowana aplikacja obsługuje wyjątki i błędy, aby zapobiegać a
 
 ## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Użyj bloków try/catch/finally do odzyskania po błędach lub zwolnienia zasobów
 
-Użyj `try` @ no__t-1 @ no__t-2 bloków wokół kodu, który może potencjalnie generować wyjątek ***, a*** kod może zostać odzyskany od tego wyjątku. W blokach `catch` zawsze Porządkuj wyjątki od najbardziej pochodnych do najmniej pochodnych. Wszystkie wyjątki pochodzą z <xref:System.Exception>. Bardziej pochodne wyjątki nie są obsługiwane przez klauzulę catch, która poprzedza klauzulę catch dla bazowej klasy wyjątków. Jeśli kod nie może odzyskać z wyjątku, nie należy przechwytywać tego wyjątku. Włącz metody, aby zwiększyć stos wywołań, jeśli jest to możliwe.
+Użyj `try`/`catch` bloków wokół kodu, który może potencjalnie generować wyjątek ***, a*** kod można odzyskać z tego wyjątku. W blokach `catch` zawsze Porządkuj wyjątki od najbardziej pochodnych do najmniej pochodnych. Wszystkie wyjątki pochodzą z <xref:System.Exception>. Bardziej pochodne wyjątki nie są obsługiwane przez klauzulę catch, która poprzedza klauzulę catch dla bazowej klasy wyjątków. Jeśli kod nie może odzyskać z wyjątku, nie należy przechwytywać tego wyjątku. Włącz metody, aby zwiększyć stos wywołań, jeśli jest to możliwe.
 
-Wyczyść zasoby przydzieloną z użyciem instrukcji `using` lub bloków `finally`. Preferuj `using` instrukcji, aby automatycznie czyścić zasoby po zgłoszeniu wyjątków. Użyj bloków `finally`, aby wyczyścić zasoby, które nie implementują <xref:System.IDisposable>. Kod w klauzuli `finally` jest prawie zawsze wykonywany nawet wtedy, gdy są zgłaszane wyjątki.
+Wyczyść zasoby przyłączone do instrukcji `using` lub bloków `finally`. Preferuj instrukcje `using`, aby automatycznie czyścić zasoby po zgłoszeniu wyjątków. Aby wyczyścić zasoby, które nie implementują <xref:System.IDisposable>, użyj bloków `finally`. Kod w klauzuli `finally` jest prawie zawsze wykonywany nawet wtedy, gdy są zgłaszane wyjątki.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Obsługa typowych warunków bez zgłaszania wyjątków
 
@@ -34,7 +34,7 @@ W przypadku warunków, które mogą wystąpić, ale mogą wyzwolić wyjątek, na
 [!code-csharp[Conceptual.Exception.Handling#2](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#2)]
 [!code-vb[Conceptual.Exception.Handling#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#2)]
 
-Jeśli nie sprawdzasz stanu połączenia przed zamknięciem, możesz przechwycić wyjątek `InvalidOperationException`.
+Jeśli nie sprawdzasz stanu połączenia przed zamknięciem, możesz wychwycić wyjątek `InvalidOperationException`.
 
 [!code-cpp[Conceptual.Exception.Handling#3](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#3)]
 [!code-csharp[Conceptual.Exception.Handling#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#3)]
@@ -48,7 +48,7 @@ Metoda do wyboru zależy od częstotliwości wystąpienia zdarzenia.
 
 ## <a name="design-classes-so-that-exceptions-can-be-avoided"></a>Klasy projektowania umożliwiające uniknięcie wyjątków
 
-Klasa może udostępniać metody lub właściwości, które umożliwiają uniknięcie wywołania, które wywoła wyjątek. Na przykład Klasa <xref:System.IO.FileStream> zawiera metody, które ułatwiają określenie, czy osiągnięto koniec pliku. Można ich użyć, aby uniknąć zgłoszonego wyjątku w przypadku odczytu poza końcem pliku. Poniższy przykład pokazuje, jak odczytać na końcu pliku bez wyzwalania wyjątku.
+Klasa może udostępniać metody lub właściwości, które umożliwiają uniknięcie wywołania, które wywoła wyjątek. Na przykład Klasa <xref:System.IO.FileStream> dostarcza metody, które ułatwiają określenie, czy osiągnięto koniec pliku. Można ich użyć, aby uniknąć zgłoszonego wyjątku w przypadku odczytu poza końcem pliku. Poniższy przykład pokazuje, jak odczytać na końcu pliku bez wyzwalania wyjątku.
 
 [!code-cpp[Conceptual.Exception.Handling#5](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#5)]
 [!code-csharp[Conceptual.Exception.Handling#5](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
@@ -56,7 +56,7 @@ Klasa może udostępniać metody lub właściwości, które umożliwiają unikni
 
 Inny sposób, aby uniknąć wyjątków, ma zwrócić wartość null (lub wartość domyślną) dla skrajnie typowych przypadków błędów zamiast zgłaszać wyjątek. Ekstremalnie częste przypadki błędów należy traktować jako normalny przepływ sterowania. Zwracając wartość null (lub domyślną) w takich przypadkach można zminimalizować wpływ na wydajność aplikacji.
 
-W przypadku typów wartości, niezależnie od tego, czy dla konkretnej aplikacji ma być używany `Nullable<T>` czy jako wskaźnik błędu. Za pomocą `Nullable<Guid>`, `default` zostanie `null` zamiast `Guid.Empty`. Czasami dodanie `Nullable<T>` może sprawić, że jest to wyraźniejsze, gdy wartość jest obecna lub nieobecna. Czasami dodanie `Nullable<T>` może stworzyć dodatkowe przypadki, aby sprawdzić, czy nie są potrzebne, i służy tylko do tworzenia potencjalnych źródeł błędów. 
+W przypadku typów wartości, czy ma być używana `Nullable<T>`, czy wartość domyślna, jako wskaźnik błędu należy wziąć pod uwagę konkretną aplikację. Za pomocą `Nullable<Guid>`, `default` zostanie `null` zamiast `Guid.Empty`. Czasami dodanie `Nullable<T>` może być bardziej zrozumiałe, gdy wartość jest obecna lub nieobecna. Czasami dodanie `Nullable<T>` może stworzyć dodatkowe przypadki, aby sprawdzić, czy nie są potrzebne, i służy tylko do tworzenia potencjalnych źródeł błędów. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Zgłoś wyjątki zamiast zwracać kod błędu
 
@@ -68,11 +68,11 @@ Wprowadź nową klasę wyjątku tylko wtedy, gdy wstępnie zdefiniowany element 
 
 - Zgłoś wyjątek <xref:System.InvalidOperationException>, jeśli zestaw właściwości lub wywołanie metody nie jest odpowiedni dla bieżącego stanu obiektu.
 
-- Zgłoś wyjątek <xref:System.ArgumentException> lub jedną ze wstępnie zdefiniowanych klas, które pochodzą od <xref:System.ArgumentException>, jeśli przechodzą nieprawidłowe parametry.
+- Zgłoś wyjątek <xref:System.ArgumentException> lub jedną ze wstępnie zdefiniowanych klas, które pochodzą od <xref:System.ArgumentException>, jeśli są spełnione nieprawidłowe parametry.
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Zakończ nazwy klas wyjątków za pomocą słowa `Exception`
 
-Gdy niestandardowa jest konieczna, nadaj jej odpowiednią nazwę i pokieruj ją z klasy <xref:System.Exception>. Na przykład:
+Gdy niestandardowa jest konieczna, nadaj jej odpowiednią nazwę i utwórz ją z klasy <xref:System.Exception>. Na przykład:
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -98,7 +98,7 @@ Na przykład w przypadku implementacji platformy .NET obsługujących domeny apl
 
 - Umieszczając zestaw we wspólnej podstawie aplikacji współużytkowanej przez obie domeny aplikacji.
 
-    \- lub-
+    \- lub —
 
 - Jeśli domeny nie współużytkują podstawy aplikacji, można podpisać zestaw zawierający informacje o wyjątku, używając silnej nazwy, i wdrożyć ten zestaw w globalnej pamięci podręcznej zestawów.
 
@@ -108,7 +108,7 @@ Napisz jasne zdania i Dołącz kończące znaki interpunkcyjne. Każde zdanie w 
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>Dołącz zlokalizowany komunikat ciągu w każdym wyjątku
 
-Komunikat o błędzie, który użytkownik widzi, pochodzi od właściwości <xref:System.Exception.Message?displayProperty=nameWithType> zgłoszonego wyjątku, a nie z nazwy klasy wyjątku. Zwykle przypisujesz wartość do właściwości <xref:System.Exception.Message?displayProperty=nameWithType> przez przekazanie ciągu komunikatu do argumentu `message` [konstruktora wyjątków](xref:System.Exception.%23ctor%2A).
+Komunikat o błędzie, który widzi użytkownik, pochodzi od właściwości <xref:System.Exception.Message?displayProperty=nameWithType> zgłoszonego wyjątku, a nie z nazwy klasy wyjątku. Zwykle przypisujesz wartość do właściwości <xref:System.Exception.Message?displayProperty=nameWithType>, przekazując ciąg komunikatu do argumentu `message` [konstruktora wyjątków](xref:System.Exception.%23ctor%2A).
 
 W przypadku zlokalizowanych aplikacji należy podać zlokalizowany ciąg komunikatu dla każdego wyjątku, który aplikacja może zgłosić. Pliki zasobów są używane do udostępniania zlokalizowanych komunikatów o błędach. Aby uzyskać informacje na temat lokalizowania aplikacji i pobierania zlokalizowanych ciągów, zobacz następujące artykuły:
 
@@ -122,7 +122,7 @@ Podaj dodatkowe właściwości wyjątku (oprócz niestandardowego ciągu wiadomo
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Umieść instrukcje throw, aby ułatwić śledzenie stosu
 
-Ślad stosu rozpoczyna się w instrukcji, w której jest zgłaszany wyjątek i jest kończący na instrukcji `catch`, która przechwytuje wyjątek.
+Ślad stosu rozpoczyna się w instrukcji, w której wyjątek jest zgłaszany i kończący się na instrukcji `catch`, która przechwytuje wyjątek.
 
 ## <a name="use-exception-builder-methods"></a>Korzystanie z metod konstruktora wyjątków
 
@@ -187,7 +187,7 @@ Private Shared Sub TransferFunds(from As Account, [to] As Account, amount As Dec
 End Sub
 ```
 
-Ten przykład ilustruje użycie `throw` w celu ponownego wygenerowania oryginalnego wyjątku, co może ułatwić wywoływanie przez wywołujących problemów z rzeczywistą przyczyną problemu bez konieczności badania właściwości <xref:System.Exception.InnerException>. Alternatywą jest zgłoszenie nowego wyjątku i uwzględnienie pierwotnego wyjątku jako wyjątku wewnętrznego:
+Ten przykład ilustruje sposób użycia `throw`, aby ponownie zgłosić pierwotny wyjątek, co może ułatwić wywoływanie dla obiektów wywołujących w celu wyświetlenia rzeczywistej przyczyny problemu bez konieczności badania właściwości <xref:System.Exception.InnerException>. Alternatywą jest zgłoszenie nowego wyjątku i uwzględnienie pierwotnego wyjątku jako wyjątku wewnętrznego:
 
 ```csharp
 catch (Exception ex)

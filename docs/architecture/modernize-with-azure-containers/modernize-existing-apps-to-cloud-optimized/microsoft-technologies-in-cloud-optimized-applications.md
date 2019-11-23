@@ -37,4 +37,4 @@ Podobnie, jeśli aplikacje monolityczne mogą być aplikacjami zoptymalizowanymi
 
 >[!div class="step-by-step"]
 >[Poprzedni](reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)
->[dalej](what-about-cloud-native-applications.md)
+>[Następny](what-about-cloud-native-applications.md)

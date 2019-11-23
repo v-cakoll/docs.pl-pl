@@ -11,7 +11,7 @@ ms.locfileid: "71736838"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Pola jawne: val — Słowo kluczowe
 
-Słowo kluczowe `val` służy do deklarowania lokalizacji do przechowywania wartości w typie klasy lub struktury, bez jej inicjalizacji. Lokalizacje magazynu zadeklarowane w ten sposób są nazywane *jawnymi polami*. Inne użycie słowa kluczowego `val` jest w połączeniu ze słowem kluczowym `member` w celu zadeklarować właściwości, która jest implementowana. Aby uzyskać więcej informacji na temat właściwości, które są implementowane, zobacz [Właściwości](properties.md).
+Słowo kluczowe `val` jest używane do deklarowania lokalizacji do przechowywania wartości w typie klasy lub struktury, bez jej inicjalizacji. Lokalizacje magazynu zadeklarowane w ten sposób są nazywane *jawnymi polami*. Inne użycie słowa kluczowego `val` jest w połączeniu ze słowem kluczowym `member` do deklarowania właściwości, która jest implementowana. Aby uzyskać więcej informacji na temat właściwości, które są implementowane, zobacz [Właściwości](properties.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -21,9 +21,9 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 ## <a name="remarks"></a>Uwagi
 
-Typowym sposobem definiowania pól w klasie lub typie struktury jest użycie powiązania `let`. Jednakże powiązania `let` muszą być zainicjowane jako część konstruktora klasy, co nie zawsze jest możliwe, konieczne lub pożądane. Możesz użyć słowa kluczowego `val`, gdy chcesz, aby pole było niezainicjowane.
+Typowym sposobem definiowania pól w klasie lub typie struktury jest użycie powiązania `let`. Należy jednak zainicjować powiązania `let` w ramach konstruktora klasy, co nie zawsze jest możliwe, niezbędne lub pożądane. Możesz użyć słowa kluczowego `val`, jeśli chcesz, aby pole było niezainicjowane.
 
-Jawne pola mogą być statyczne lub niestatyczne. *Modyfikatorem dostępu* może być `public`, `private` lub `internal`. Domyślnie jawne pola są publiczne. Różni się to od powiązań `let` w klasach, które są zawsze prywatne.
+Jawne pola mogą być statyczne lub niestatyczne. *Modyfikator dostępu* może być `public`, `private`lub `internal`. Domyślnie jawne pola są publiczne. Różni się to od powiązań `let` w klasach, które są zawsze prywatne.
 
 Atrybut [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) jest wymagany w jawnych polach w typach klas, które mają Konstruktor podstawowy. Ten atrybut określa, że pole jest inicjowane na wartość zero. Typ pola musi obsługiwać inicjowanie o wartości zero. Typ obsługuje Inicjowanie zero, jeśli jest jedną z następujących:
 
@@ -32,18 +32,18 @@ Atrybut [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b10
 - Typ wartości .NET.
 - Struktura, której pola wszystkie obsługują domyślną wartość zerową.
 
-Na przykład niezmienne pole o nazwie `someField` ma pole zapasowe w reprezentacji skompilowanej .NET o nazwie `someField@` i uzyskuje dostęp do przechowywanej wartości przy użyciu właściwości o nazwie `someField`.
+Na przykład niezmienne pole o nazwie `someField` ma pole zapasowe w reprezentacji skompilowanej .NET z nazwą `someField@`i uzyskuje dostęp do przechowywanej wartości przy użyciu właściwości o nazwie `someField`.
 
 W przypadku pola modyfikowalnego skompilowana reprezentacja .NET jest polem platformy .NET.
 
 > [!WARNING]
 > .NET Framework przestrzeni nazw `System.ComponentModel` zawiera atrybut, który ma taką samą nazwę. Aby uzyskać informacje o tym atrybucie, zobacz <xref:System.ComponentModel.DefaultValueAttribute>.
 
-Poniższy kod przedstawia użycie jawnych pól i, w przypadku porównania, powiązanie `let` w klasie, która ma Konstruktor podstawowy. Należy zauważyć, że pole @no__t -0-Bound `myInt1` jest prywatne. Jeśli do @no__t pola powiązanego z -0EM `myInt1` jest przywoływany z metody składowej, identyfikator własny `this` nie jest wymagany. Ale jeśli odwołujesz się do pól jawnie `myInt2` i `myString`, wymagany jest identyfikator samoobsługowy.
+Poniższy kod przedstawia użycie jawnych pól i, w przypadku porównania, powiązanie `let` w klasie, która ma Konstruktor podstawowy. Należy zauważyć, że pole `let`powiązane `myInt1` jest prywatne. Gdy odwołuje się do `let``myInt1` pola powiązanego z elementem członkowskim, `this` samego identyfikatora nie jest wymagane. Ale jeśli odwołujesz się do pól jawnie `myInt2` i `myString`, wymagany jest identyfikator własny.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
-Dane wyjściowe są następujące:
+Wynik jest następujący:
 
 ```console
 11 12 abc
@@ -68,7 +68,7 @@ Dane wyjściowe są `11 xyz`.
 
 Jawne pola nie są przeznaczone do rutynowego użycia. Ogólnie, jeśli jest to możliwe, należy użyć powiązania `let` w klasie zamiast w jawnym polu. Jawne pola są przydatne w niektórych scenariuszach współdziałania, na przykład w sytuacji, gdy trzeba zdefiniować strukturę, która będzie używana w wywołaniu wywołania platformy do natywnego interfejsu API lub w scenariuszach międzyoperacyjnych modelu COM. Aby uzyskać więcej informacji, zobacz [funkcje zewnętrzne](../functions/external-functions.md). Inną sytuacją, w której może być wymagane jawne pole, jest to, że podczas F# pracy z generatorem kodu, który emituje klasy bez konstruktora podstawowego. Jawne pola są również przydatne w przypadku zmiennych statycznych wątków lub podobnych konstrukcji. Aby uzyskać więcej informacji, zobacz `System.ThreadStaticAttribute`.
 
-Gdy słowa kluczowe `member val` pojawiają się razem w definicji typu, jest to definicja automatycznie implementowanej właściwości. Aby uzyskać więcej informacji, zobacz [Właściwości](properties.md).
+Gdy słowa kluczowe `member val` są wyświetlane w definicji typu, jest to definicja automatycznie implementowanej właściwości. Aby uzyskać więcej informacji, zobacz [Właściwości](properties.md).
 
 ## <a name="see-also"></a>Zobacz także
 

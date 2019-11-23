@@ -13,7 +13,7 @@ ms.locfileid: "70296048"
 
 Poniżej przedstawiono strategie postępowania w przypadku awarii częściowych.
 
-**Używaj komunikacji asynchronicznej (na przykład komunikacja oparta na komunikatach) między mikrousługami wewnętrznymi**. Zdecydowanie zaleca się, aby nie tworzyć długich łańcuchów synchronicznych wywołań HTTP w ramach wewnętrznych mikrousług, ponieważ niewłaściwy projekt będzie ostatecznie stanowić główną przyczynę nieprawidłowej awarii. W przeciwieństwie do komunikacji frontonu między aplikacjami klienckimi a pierwszym poziomem mikrousług lub z szczegółowymi bramami interfejsu API zaleca się używanie tylko komunikacji asynchronicznej (opartej na komunikatach) po wcześniejszym żądaniu początkowym/ cykl odpowiedzi dla mikrousług wewnętrznych. Spójność ostateczna i architektury sterowane zdarzeniami pomogą zminimalizować skutki działania programu Ripple. Te podejścia powodują wymuszenie wyższego poziomu autonomii mikrousługi i w związku z tym uniemożliwiają zanotowanie tego problemu.
+**Używaj komunikacji asynchronicznej (na przykład komunikacja oparta na komunikatach) między mikrousługami wewnętrznymi**. Zdecydowanie zaleca się, aby nie tworzyć długich łańcuchów synchronicznych wywołań HTTP w ramach wewnętrznych mikrousług, ponieważ niewłaściwy projekt będzie ostatecznie stanowić główną przyczynę nieprawidłowej awarii. W przeciwieństwie do komunikacji frontonu między aplikacjami klienckimi a pierwszym poziomem mikrousług lub z szczegółowymi bramami interfejsu API zaleca się używanie tylko komunikacji asynchronicznej (opartej na komunikatach) po zakończeniu pierwszego cyklu żądania/odpowiedzi dla mikrousług wewnętrznych. Spójność ostateczna i architektury sterowane zdarzeniami pomogą zminimalizować skutki działania programu Ripple. Te podejścia powodują wymuszenie wyższego poziomu autonomii mikrousługi i w związku z tym uniemożliwiają zanotowanie tego problemu.
 
 **Użyj ponownych prób przy użyciu wykładniczej wycofywania**. Ta technika pozwala uniknąć krótkich i sporadycznych błędów przez wykonanie wywołania ponawianie próby określoną liczbę razy, na wypadek gdy usługa była niedostępna tylko przez krótki czas. Może to być spowodowane sporadycznymi problemami z siecią lub przeniesieniem mikrousługi/kontenera do innego węzła w klastrze. Jeśli jednak te ponowne próby nie są prawidłowo zaprojektowane z wyłącznikami, można pogłębić efekty programu Ripple, ostatecznie nawet powodując [odmowę usługi (DOS)](https://en.wikipedia.org/wiki/Denial-of-service_attack).
 
@@ -23,25 +23,25 @@ Obejść **limity czasu sieci**. Ogólnie rzecz biorąc klienci powinni być zap
 
 **Podaj rezerwy**. W tym podejściu proces klienta wykonuje logikę rezerwową, gdy żądanie nie powiedzie się, takie jak zwrócenie danych w pamięci podręcznej lub wartości domyślnej. Jest to podejście odpowiednie dla zapytań i jest bardziej skomplikowane dla aktualizacji lub poleceń.
 
-**Ogranicz liczbę żądań umieszczonych w kolejce**. Klienci powinni również wprowadzić górną granicę liczby oczekujących żądań wysyłanych przez mikrousługę klienta do określonej usługi. Jeśli limit został osiągnięty, najprawdopodobniej nie wskazuje to dodatkowych żądań, a te próby powinny natychmiast zakończyć się niepowodzeniem. W warunkach implementacji zasady [izolacji Polly grodzi](https://github.com/App-vNext/Polly/wiki/Bulkhead) mogą służyć do spełnienia tego wymagania. To podejście jest zasadniczo przetwarzanie równoległe ograniczeniem <xref:System.Threading.SemaphoreSlim> do wdrożenia. Umożliwia także "queue" poza grodzią. Można aktywnie powiększać nadmierne obciążenie nawet przed wykonaniem (na przykład, ponieważ pojemność jest uznawana za zapełnienie). Powoduje to, że odpowiedź na niektóre scenariusze awarii jest szybsza niż wyłącznika, ponieważ wyłącznik czeka na błędy. Obiekt BulkheadPolicy w [Polly](http://www.thepollyproject.org/) uwidacznia, jak pełen grodzię i kolejkę są, i oferuje zdarzenia w przepełnieniu, tak aby można go było również używać do tworzenia zautomatyzowanego skalowania w poziomie.
+**Ogranicz liczbę żądań umieszczonych w kolejce**. Klienci powinni również wprowadzić górną granicę liczby oczekujących żądań wysyłanych przez mikrousługę klienta do określonej usługi. Jeśli limit został osiągnięty, najprawdopodobniej nie wskazuje to dodatkowych żądań, a te próby powinny natychmiast zakończyć się niepowodzeniem. W warunkach implementacji zasady [izolacji Polly grodzi](https://github.com/App-vNext/Polly/wiki/Bulkhead) mogą służyć do spełnienia tego wymagania. To podejście jest zasadniczo przetwarzanie równoległe ograniczeniem <xref:System.Threading.SemaphoreSlim> jako implementacji. Umożliwia także "queue" poza grodzią. Można aktywnie powiększać nadmierne obciążenie nawet przed wykonaniem (na przykład, ponieważ pojemność jest uznawana za zapełnienie). Powoduje to, że odpowiedź na niektóre scenariusze awarii jest szybsza niż wyłącznika, ponieważ wyłącznik czeka na błędy. Obiekt BulkheadPolicy w [Polly](http://www.thepollyproject.org/) uwidacznia, jak pełen grodzię i kolejkę są, i oferuje zdarzenia w przepełnieniu, tak aby można go było również używać do tworzenia zautomatyzowanego skalowania w poziomie.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Wzorce odporności**\
+- **Wzorce Odporności**\
   [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
-- **Dodawanie odporności i Optymalizowanie wydajności**\
+- **Dodawanie odporności i optymalizowanie\ wydajności**
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead.** Repozytorium GitHub. Implementacja z zasadami Polly. \
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
-- **Projektowanie odpornych aplikacji na platformę Azure**\
+- **Projektowanie odpornych aplikacji dla platformy Azure**\
   [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
-- **Obsługa błędów przejściowych**\
+- **Przejściowa obsługa błędów**\
   [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
->[Poprzedni](handle-partial-failure.md)Następny
->[](implement-retries-exponential-backoff.md)
+>[Poprzedni](handle-partial-failure.md)
+>[Następny](implement-retries-exponential-backoff.md)

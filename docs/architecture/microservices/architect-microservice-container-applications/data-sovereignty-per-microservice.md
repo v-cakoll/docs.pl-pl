@@ -63,4 +63,4 @@ DDD zalety mikrousług, uzyskując rzeczywiste granice w postaci rozproszonych m
 
 >[!div class="step-by-step"]
 >[Poprzedni](microservices-architecture.md)
->[dalej](logical-versus-physical-architecture.md)
+>[Następny](logical-versus-physical-architecture.md)

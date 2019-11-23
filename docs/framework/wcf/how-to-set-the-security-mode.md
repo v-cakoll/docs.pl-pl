@@ -18,7 +18,7 @@ ms.locfileid: "72320893"
 ---
 # <a name="how-to-set-the-security-mode"></a>Instrukcje: Ustawianie trybu zabezpieczeń
 
-Zabezpieczenia Windows Communication Foundation (WCF) mają trzy popularne tryby zabezpieczeń, które znajdują się w większości wstępnie zdefiniowanych powiązań: transport, Message i "transport z poświadczeniami wiadomości". Dwa dodatkowe tryby są specyficzne dla dwóch powiązań: tryb "transport-Credential Only" znaleziony w <xref:System.ServiceModel.BasicHttpBinding> i tryb "oba", który znajduje się w <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech wspólnych trybach zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.
+Zabezpieczenia Windows Communication Foundation (WCF) mają trzy popularne tryby zabezpieczeń, które znajdują się w większości wstępnie zdefiniowanych powiązań: transport, Message i "transport z poświadczeniami wiadomości". Dwa dodatkowe tryby są specyficzne dla dwóch powiązań: tryb "transport-Credential Only" znaleziony w <xref:System.ServiceModel.BasicHttpBinding>i tryb "oba", który znajduje się w <xref:System.ServiceModel.NetMsmqBinding>. Jednak ten temat koncentruje się na trzech wspólnych trybach zabezpieczeń: <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message>i <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.
 
 Należy zauważyć, że nie każde wstępnie zdefiniowane powiązanie obsługuje wszystkie te tryby. Ten temat ustawia tryb z klasami <xref:System.ServiceModel.WSHttpBinding> i <xref:System.ServiceModel.NetTcpBinding> i pokazuje, jak ustawić tryb programowo i za pomocą konfiguracji.
 
@@ -50,13 +50,13 @@ Aby uzyskać więcej informacji, zobacz zabezpieczenia WCF, zobacz [Omówienie z
 
 ## <a name="setting-the-clientcredentialtype-property"></a>Ustawianie właściwości ClientCredentialtype
 
-Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właściwości `ClientCredentialType`. Na przykład przy użyciu klasy <xref:System.ServiceModel.WSHttpBinding> ustawienie Tryb na `Transport` oznacza, że właściwość <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> klasy <xref:System.ServiceModel.HttpTransportSecurity> ma mieć odpowiednią wartość.
+Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właściwości `ClientCredentialType`. Na przykład przy użyciu klasy <xref:System.ServiceModel.WSHttpBinding>, ustawienie trybu na `Transport` oznacza, że należy ustawić właściwość <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> klasy <xref:System.ServiceModel.HttpTransportSecurity> na odpowiednią wartość.
 
 ### <a name="to-set-the-clientcredentialtype-property-for-transport-mode"></a>Aby ustawić właściwość ClientCredentialtype dla trybu transportu
 
 1. Utwórz wystąpienie powiązania.
 
-2. Ustaw właściwość `Mode` na `Transport`.
+2. Ustaw `Mode` właściwość `Transport`.
 
 3. Ustaw właściwość `ClientCredential` na odpowiednią wartość. Poniższy kod ustawia właściwość na `Windows`.
 
@@ -67,7 +67,7 @@ Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właś
 
 1. Utwórz wystąpienie powiązania.
 
-2. Ustaw właściwość `Mode` na `Message`.
+2. Ustaw `Mode` właściwość `Message`.
 
 3. Ustaw właściwość `ClientCredential` na odpowiednią wartość. Poniższy kod ustawia właściwość na `Certificate`.
 
@@ -76,15 +76,15 @@ Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właś
 
 ### <a name="to-set-the-mode-and-clientcredentialtype-property-in-configuration"></a>Aby ustawić tryb i Właściwość ClientCredentialtype w konfiguracji
 
-1. Dodaj odpowiedni element powiązania do elementu [\<bindings >](../configure-apps/file-schema/wcf/bindings.md) pliku konfiguracji. Poniższy przykład dodaje element [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .
+1. Dodaj odpowiedni element powiązania do elementu [\<powiązania >](../configure-apps/file-schema/wcf/bindings.md) pliku konfiguracji. Poniższy przykład dodaje element [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .
 
 2. Dodaj element `<binding>` i ustaw jego atrybut `name` na odpowiednią wartość.
 
-3. Dodaj element `<security>` i ustaw atrybut `mode` na `Message`, `Transport` lub `TransportWithMessageCredential`.
+3. Dodaj element `<security>` i ustaw atrybut `mode` na `Message`, `Transport`lub `TransportWithMessageCredential`.
 
-4. Jeśli tryb jest ustawiony na `Transport`, Dodaj element `<transport>` i ustaw odpowiednią wartość atrybutu `clientCredential`.
+4. Jeśli tryb jest ustawiony na `Transport`, Dodaj element `<transport>` i ustaw dla atrybutu `clientCredential` odpowiednią wartość.
 
-     Poniższy przykład ustawia tryb na "`Transport"`, a następnie ustawia atrybut `clientCredentialType` elementu `<transport>` na" `Windows"`.
+     Poniższy przykład ustawia tryb na "`Transport"`, a następnie ustawia atrybut `clientCredentialType` elementu `<transport>` na"`Windows"`.
 
     ```xml
     <wsHttpBinding>
@@ -96,7 +96,7 @@ Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właś
     </wsHttpBinding >
     ```
 
-     Alternatywnie można ustawić wartość `security mode` na "`Message"`", po którym następuje element `<"message">`. Ten przykład ustawia wartość `clientCredentialType` na "`Certificate"`.
+     Alternatywnie można ustawić `security mode` na "`Message"`, po którym następuje element `<"message">`. Ten przykład ustawia `clientCredentialType` na "`Certificate"`.
 
     ```xml
     <wsHttpBinding>
@@ -112,7 +112,7 @@ Ustawienie trybu na jedną z trzech wartości określa sposób ustawiania właś
 
 ### <a name="using-transportwithmessagecredential"></a>Korzystanie z TransportWithMessageCredential
 
-Podczas ustawiania trybu zabezpieczeń na `TransportWithMessageCredential`, transport określa rzeczywisty mechanizm, który zapewnia zabezpieczenia na poziomie transportu. Na przykład protokół HTTP używa protokołu SSL (SSL) za pośrednictwem protokołu HTTP (HTTPS). W związku z tym ustawienie właściwości `ClientCredentialType` dowolnego obiektu zabezpieczeń transportu (takiego jak <xref:System.ServiceModel.HttpTransportSecurity>) jest ignorowane.  Innymi słowy, można ustawić tylko `ClientCredentialType` obiektu zabezpieczeń wiadomości (dla powiązania `WSHttpBinding`, obiektu <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).
+Podczas ustawiania trybu zabezpieczeń na `TransportWithMessageCredential`, transport określa rzeczywisty mechanizm, który zapewnia zabezpieczenia na poziomie transportu. Na przykład protokół HTTP używa protokołu SSL (SSL) za pośrednictwem protokołu HTTP (HTTPS). W związku z tym, ustawienie właściwości `ClientCredentialType` dowolnego obiektu zabezpieczeń transportu (takiego jak <xref:System.ServiceModel.HttpTransportSecurity>) jest ignorowane.  Innymi słowy, można ustawić tylko `ClientCredentialType` obiektu zabezpieczeń wiadomości (dla powiązania `WSHttpBinding`, obiektu <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>).
 
 Aby uzyskać więcej informacji, zobacz [jak: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](./feature-details/how-to-use-transport-security-and-message-credentials.md).
 
@@ -124,6 +124,6 @@ Aby uzyskać więcej informacji, zobacz [jak: korzystanie z zabezpieczeń transp
 - [Zabezpieczenia komunikatów](./feature-details/message-security-in-wcf.md)
 - [Przegląd zabezpieczeń](./feature-details/security-overview.md)
 - [Powiązania dostarczane przez system](system-provided-bindings.md)
-- [@no__t — 1security >](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [@no__t — 1security >](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [@no__t — 1security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [> zabezpieczeń \<](../configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [> zabezpieczeń \<](../configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [> zabezpieczeń \<](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

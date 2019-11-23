@@ -41,12 +41,12 @@ Następujące języki są obsługiwane w ogólnej dostępności (GA), w wersji z
 |**JavaScript**|POWSZECHNE          |Wersja zapoznawcza  |
 |**F#**        |POWSZECHNE          |         |
 |**Java**      |            |Wersja zapoznawcza  |
-|**Python**    |Głowonogów|         |
-|**Obsługa**       |Głowonogów|         |
-|**TypeScript**|Głowonogów|         |
-|**Sekwencja**     |Głowonogów|         |
-|**Bash**      |Głowonogów|         |
-|**Narzędzia**|Głowonogów|         |
+|**Python**    |Eksperymentalne|         |
+|**PHP**       |Eksperymentalne|         |
+|**TypeScript**|Eksperymentalne|         |
+|**Sekwencja**     |Eksperymentalne|         |
+|**Bash**      |Eksperymentalne|         |
+|**Program PowerShell**|Eksperymentalne|         |
 
 Aby uzyskać więcej informacji, zobacz [obsługiwane języki](https://docs.microsoft.com/azure/azure-functions/supported-languages).
 
@@ -127,7 +127,7 @@ Przykładem jest prosta funkcja, która przyjmuje nazwę pliku, który został z
 
 Aby zapoznać się z pełną listą wyzwalaczy i powiązań, zobacz temat [Azure Functions wyzwalacze i koncepcje powiązań](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings).
 
-## <a name="proxies"></a>Proxy
+## <a name="proxies"></a>Serwery proxy
 
 Serwery proxy zapewniają funkcję przekierowywania dla aplikacji. Serwery proxy uwidaczniają punkt końcowy i mapują ten punkt końcowy na inny zasób. Dzięki serwerom proxy można:
 
@@ -181,4 +181,4 @@ Aby uzyskać więcej informacji na temat serwerów proxy, zobacz [Work with serw
 
 >[!div class="step-by-step"]
 >[Poprzedni](azure-serverless-platform.md)
->[dalej](application-insights.md)
+>[Następny](application-insights.md)

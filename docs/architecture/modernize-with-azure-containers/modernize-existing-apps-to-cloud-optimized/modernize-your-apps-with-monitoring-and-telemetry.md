@@ -25,13 +25,13 @@ Na rysunku 4-10 przedstawiono przykład sposobu, w jaki Application Insights mon
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Monitorowanie infrastruktury platformy Docker przy użyciu Log Analytics i rozwiązania do monitorowania kontenerów
 
-[Usługa Azure log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) jest częścią [Microsoft Azure ogólnego rozwiązania do monitorowania](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Jest to również usługa [pakietu Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics monitoruje środowiska chmurowe i lokalne (OMS dla lokalnego) w celu zapewnienia dostępności i wydajności. Zbiera ona dane wygenerowane przez zasoby w środowiskach w chmurze i lokalnych oraz z innych narzędzi do monitorowania w celu zapewnienia analiz w wielu źródłach.
+[Usługa Azure log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview) jest częścią [Microsoft Azure ogólnego rozwiązania do monitorowania](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview). Jest to również usługa [pakietu Operations Management Suite (OMS)](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview). Log Analytics monitoruje środowiska chmurowe i lokalne (OMS dla lokalnego) w celu zapewnienia dostępności i wydajności. Zbiera ona dane generowane przez zasoby w środowiskach chmurowych i lokalnych oraz inne narzędzia do monitorowania, aby przeprowadzać analizę na podstawie wielu źródeł.
 
 W odniesieniu do dzienników infrastruktury platformy Azure, Log Analytics, jako usługi platformy Azure, pozyskuje dane dzienników i metryk z innych usług platformy Azure (za pośrednictwem [Azure monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)), maszyn wirtualnych platformy Azure, kontenerów Docker i lokalnych lub innych infrastruktury chmurowych. Log Analytics oferuje elastyczne wyszukiwanie w dzienniku i wbudowaną analizę na podstawie tych danych. Udostępnia ona zaawansowane narzędzia, których można użyć do analizowania danych między źródłami, umożliwia złożone zapytania dla wszystkich dzienników i może aktywnie otrzymywać alerty na podstawie określonych warunków. Możesz nawet zbierać dane niestandardowe w centralnym repozytorium Log Analytics, w którym można wykonywać zapytania i wizualizować je. Możesz również skorzystać z wbudowanych rozwiązań Log Analytics, aby natychmiast uzyskać wgląd w zabezpieczenia i funkcjonalność infrastruktury.
 
 Dostęp do Log Analytics można uzyskać za pomocą portalu pakietu OMS lub Azure Portal, który działa w dowolnej przeglądarce i zapewnia dostęp do ustawień konfiguracji oraz wielu narzędzi umożliwiających analizowanie zebranych danych i wykonywanie na nich działań.
 
-[Rozwiązanie do monitorowania kontenerów](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) w log Analytics ułatwia wyświetlanie hostów platformy Docker i kontenerów systemu Windows oraz zarządzanie nimi w jednej lokalizacji. Rozwiązanie pokazuje, które kontenery są uruchomione, jaki obraz kontenera jest uruchomiony, oraz miejsce, w którym są uruchomione kontenery. Można wyświetlić szczegółowe informacje o inspekcji, w tym polecenia, które są używane z kontenerami. Możesz również rozwiązywać problemy z kontenerami, wyświetlając i przeszukując scentralizowane dzienniki, bez konieczności zdalnego wyświetlania hostów platformy Docker lub Windows. Możesz znaleźć kontenery, które mogą być zakłóceniami i zużywać nadmierne zasoby na hoście. Ponadto można wyświetlić scentralizowane użycie procesora CPU, pamięci, magazynu i sieci oraz informacje o wydajności dla kontenerów. Na komputerach z systemem Windows można scentralizować i porównać dzienniki z systemu Windows Server, funkcji Hyper-V i kontenerów platformy Docker. Rozwiązanie obsługuje następujące Koordynatory kontenerów:
+[Rozwiązanie do monitorowania kontenerów](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers) w log Analytics ułatwia wyświetlanie hostów platformy Docker i kontenerów systemu Windows oraz zarządzanie nimi w jednej lokalizacji. Rozwiązanie pokazuje, które kontenery są uruchomione, jaki obraz kontenera jest uruchomiony, oraz miejsce, w którym są uruchomione kontenery. Można wyświetlić szczegółowe informacje o inspekcji, w tym polecenia, które są używane z kontenerami. Możesz również rozwiązywać problemy z kontenerami, wyświetlając i przeszukując scentralizowane dzienniki, bez konieczności zdalnego wyświetlania hostów platformy Docker lub Windows. Możesz znaleźć kontenery, które mogą być zakłóceniami i zużywać nadmierne zasoby na hoście. Ponadto można wyświetlić scentralizowane użycie procesora CPU, pamięci, magazynu i sieci oraz informacje o wydajności dla kontenerów. Na komputerach z systemem Windows, można scentralizować i porównać dzienników z systemu Windows Server, Hyper-V i kontenery platformy Docker. Rozwiązanie obsługuje następujące koordynatorów kontenerów:
 
 - Docker Swarm
 
@@ -67,7 +67,7 @@ Rozwiązania do monitorowania kontenerów Log Analytics można użyć do:
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
-- **Co to jest Application Insights?**
+- **Co to jest usługa Application Insights?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
@@ -89,4 +89,4 @@ Rozwiązania do monitorowania kontenerów Log Analytics można użyć do:
 
 >[!div class="step-by-step"]
 >[Poprzedni](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
->[dalej](life-cycle-ci-cd-pipelines-devops-tools.md)
+>[Następny](life-cycle-ci-cd-pipelines-devops-tools.md)

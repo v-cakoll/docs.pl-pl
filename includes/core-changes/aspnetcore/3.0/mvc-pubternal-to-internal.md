@@ -8,11 +8,11 @@ ms.locfileid: "72394035"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC: typy "Pubternal" zostały zmienione na wewnętrzne
 
-W ASP.NET Core 3,0 wszystkie typy "pubternal" w MVC zostały zaktualizowane do `public` w obsługiwanej przestrzeni nazw lub `internal`, zgodnie z potrzebami.
+W ASP.NET Core 3,0 wszystkie typy "pubternal" w MVC zostały zaktualizowane do `public` w obsługiwanej przestrzeni nazw lub `internal` zgodnie z potrzebami.
 
 #### <a name="change-description"></a>Zmień opis
 
-W ASP.NET Core typy "pubternal" są deklarowane jako `public`, ale znajdują się w @no__t przestrzeni nazw z sufiksem -1. Chociaż te typy są `public`, nie mają żadnych zasad pomocy technicznej i podlegają nieprzerwanym zmianom. Niestety, przypadkowe użycie tych typów było wspólne, co spowodowało istotne zmiany w tych projektach i ograniczenie możliwości utrzymania struktury.
+W ASP.NET Core typy "pubternal" są deklarowane jako `public`, ale znajdują się w przestrzeni nazw z sufiksem `.Internal`. Chociaż te typy są `public`, nie mają żadnych zasad pomocy technicznej i podlegają nieprzerwanym zmianom. Niestety, przypadkowe użycie tych typów było wspólne, co spowodowało istotne zmiany w tych projektach i ograniczenie możliwości utrzymania struktury.
 
 #### <a name="version-introduced"></a>Wprowadzona wersja
 
@@ -20,17 +20,17 @@ W ASP.NET Core typy "pubternal" są deklarowane jako `public`, ale znajdują si�
 
 #### <a name="old-behavior"></a>Stare zachowanie
 
-Niektóre typy w MVC zostały `public`, ale w przestrzeni nazw `.Internal`. Te typy nie miały zasad pomocy technicznej i podlegają istotnym zmianom.
+Niektóre typy w MVC były `public`, ale w przestrzeni nazw `.Internal`. Te typy nie miały zasad pomocy technicznej i podlegają istotnym zmianom.
 
 #### <a name="new-behavior"></a>Nowe zachowanie
 
-Wszystkie takie typy są aktualizowane do `public` w obsługiwanej przestrzeni nazw lub oznaczone jako `internal`.
+Wszystkie takie typy są aktualizowane, aby były `public` w obsługiwanej przestrzeni nazw lub oznaczone jako `internal`.
 
 #### <a name="reason-for-change"></a>Przyczyna zmiany
 
 Przypadkowe użycie typów "pubternal" jest wspólne, co skutkuje istotnymi zmianami w tych projektach i ograniczeniem możliwości utrzymania struktury.
 
-#### <a name="recommended-action"></a>Zalecana akcja
+#### <a name="recommended-action"></a>Zalecane działanie
 
 Jeśli używasz typów, które staną się naprawdę `public` i zostały przeniesione do nowej, obsługiwanej przestrzeni nazw, zaktualizuj odwołania, aby odpowiadały nowym przestrzeniom nazw.
 

@@ -16,5 +16,5 @@ ms.locfileid: "70296064"
 Istnieje wiele metod implementacji logiki ponownych prób przy użyciu wykładniczej wycofywania.
 
 >[!div class="step-by-step"]
->[Poprzedni](partial-failure-strategies.md)Następny
->[](implement-resilient-entity-framework-core-sql-connections.md)
+>[Poprzedni](partial-failure-strategies.md)
+>[Następny](implement-resilient-entity-framework-core-sql-connections.md)

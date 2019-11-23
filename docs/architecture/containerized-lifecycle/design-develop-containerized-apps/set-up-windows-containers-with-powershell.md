@@ -31,5 +31,5 @@ RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
->[Poprzedni](visual-studio-tools-for-docker.md)Następny
->[](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)
+>[Poprzedni](visual-studio-tools-for-docker.md)
+>[Następny](build-aspnet-core-applications-linux-containers-aks-kubernetes.md)

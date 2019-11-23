@@ -21,10 +21,10 @@ Ta książka należy do pakietu przewodników firmy Microsoft, który obejmuje w
 
 Dodatkowe książki elektroniczne firmy Microsoft dotyczące kontenerów platformy Docker można znaleźć na poniższej liście:
 
-- **Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .net**  \
+- **Mikrousługi platformy .NET: architektura dla kontenerów aplikacji .net** \
   [https://docs.microsoft.com/dotnet/architecture/microservices/](../microservices/index.md)
 
-- **Modernizacja istniejących aplikacji .NET za pomocą usług Azure Cloud i Windows containers**  \
+- **Modernizacja istniejących aplikacji .NET za pomocą usług Azure Cloud i Windows containers** \
   [https://docs.microsoft.com/dotnet/architecture/modernize-with-azure-containers/](../modernize-with-azure-containers/index.md)
 
 >[!div class="step-by-step"]

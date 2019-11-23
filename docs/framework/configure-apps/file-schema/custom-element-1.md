@@ -20,7 +20,7 @@ ms.locfileid: "73118835"
 Definiuje ustawienia w sekcji konfiguracji niestandardowej zdefiniowanej przez \<sekcję > elementu i używa klasy <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<> konfiguracji**](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionname >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Składnia
 

@@ -20,5 +20,5 @@ Kontenery platformy Docker są przydatne (ale nie są wymagane) dla tradycyjnych
 Na koniec dnia rozwiązania klastrowania kontenerów są przydatne dla tradycyjnej architektury SOA i bardziej zaawansowanej architektury mikrousług, w której każda mikrousługa jest właścicielem modelu danych. Dzięki wielu baz danych można także skalować warstwę danych zamiast pracować z monolitycznymi bazami danych udostępnionymi przez usługi SOA. Jednak dyskusja dotycząca podziału danych ma wyłącznie na celu architekturę i projektowanie.
 
 >[!div class="step-by-step"]
->[Poprzedni](state-and-data-in-docker-applications.md)Następny
->[](orchestrate-high-scalability-availability.md)
+>[Poprzedni](state-and-data-in-docker-applications.md)
+>[Następny](orchestrate-high-scalability-availability.md)

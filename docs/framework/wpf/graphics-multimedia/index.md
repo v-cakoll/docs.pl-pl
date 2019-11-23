@@ -41,11 +41,11 @@ Wprowadzono kilka zmian dotyczących grafiki i animacji.
 
 - Buforowana kompozycja
 
-  Przy użyciu nowych klas <xref:System.Windows.Media.BitmapCache> i <xref:System.Windows.Media.BitmapCacheBrush> można buforować złożoną część drzewa wizualnego jako mapę bitową i znacznie poprawić czas renderowania. Mapa bitowa pozostaje niezależna od danych wejściowych użytkownika, takich jak kliknięcia myszą i można ją malować na innych elementach, podobnie jak w przypadku dowolnego pędzla.
+  Korzystając z nowych klas <xref:System.Windows.Media.BitmapCache> i <xref:System.Windows.Media.BitmapCacheBrush>, można buforować złożoną część drzewa wizualnego jako mapę bitową i znacznie poprawić czas renderowania. Mapa bitowa pozostaje niezależna od danych wejściowych użytkownika, takich jak kliknięcia myszą i można ją malować na innych elementach, podobnie jak w przypadku dowolnego pędzla.
 
 - Obsługa programów do cieniowania pikseli 3
 
-  Program WPF 4 jest oparty na obsłudze <xref:System.Windows.Media.Effects.ShaderEffect> programu WPF 3,5 SP1, umożliwiając aplikacjom pisanie efektów przy użyciu programu Pixel Shader (PS) w wersji 3,0. Model cieniowania PS 3,0 jest bardziej zaawansowany niż PS 2,0, co pozwala na jeszcze większy wpływ na obsługiwany sprzęt.
+  Program WPF 4 jest oparty na <xref:System.Windows.Media.Effects.ShaderEffect> pomocy technicznej wprowadzonej w programie WPF 3,5 z dodatkiem SP1, umożliwiając aplikacjom pisanie efektów przy użyciu programu Pixel Shader (PS) w wersji 3,0. Model cieniowania PS 3,0 jest bardziej zaawansowany niż PS 2,0, co pozwala na jeszcze większy wpływ na obsługiwany sprzęt.
 
 - Zwalnianie funkcji
 
@@ -55,7 +55,7 @@ Wprowadzono kilka zmian dotyczących grafiki i animacji.
 
 ## <a name="graphics-and-rendering"></a>Grafika i renderowanie
 
-WPF obejmuje obsługę grafiki 2-D o wysokiej jakości. Funkcje obejmują pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [grafika](graphics.md). Renderowanie elementów graficznych zależy od klasy <xref:System.Windows.Media.Visual>. Struktura obiektów wizualizacji na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
+WPF obejmuje obsługę grafiki 2-D o wysokiej jakości. Funkcje obejmują pędzle, geometrie, obrazy, kształty i przekształcenia. Aby uzyskać więcej informacji, zobacz [grafika](graphics.md). Renderowanie elementów graficznych opiera się na klasie <xref:System.Windows.Media.Visual>. Struktura obiektów wizualizacji na ekranie jest opisana przez drzewo wizualne. Aby uzyskać więcej informacji, zobacz [Omówienie renderowania grafiki WPF](wpf-graphics-rendering-overview.md).
 
 ### <a name="2-d-shapes"></a>Kształty 2-D
 
@@ -137,7 +137,7 @@ Aby uzyskać więcej informacji, zobacz [Omówienie animacji](animation-overview
 
 <a name="media"></a>
 
-## <a name="media"></a>Multimedialny
+## <a name="media"></a>Nośnik
 
 Obrazy, wideo i audio to bogate w multimedia sposoby przekazywania informacji i środowiska użytkownika.
 

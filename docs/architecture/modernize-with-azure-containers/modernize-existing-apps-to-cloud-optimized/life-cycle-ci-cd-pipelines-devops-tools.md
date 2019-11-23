@@ -33,4 +33,4 @@ Rysunek 4-12 przedstawia potok ciągłego wdrażania, który jest wdrażany w kl
 
 >[!div class="step-by-step"]
 >[Poprzedni](modernize-your-apps-with-monitoring-and-telemetry.md)
->[dalej](migrate-to-hybrid-cloud-scenarios.md)
+>[Następny](migrate-to-hybrid-cloud-scenarios.md)

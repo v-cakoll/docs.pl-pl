@@ -22,7 +22,7 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 [ **\<> konfiguracji**](configuration-element.md)   
 &nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<wyczyść >**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,7 +34,7 @@ Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji.
 
 |           | Opis |
 | --------- | ----------- |
-| **Nazwij**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
+| **name**  | Atrybut wymagany.<br><br>Określa nazwę sekcji lub grupy sekcji do usunięcia. |
 
 ## <a name="parent-element"></a>Element nadrzędny
 

@@ -136,11 +136,11 @@ Bezserwerowe jest najczęściej omawiane w kontekście obliczeń, ale mogą rów
 
 Istnieje szeroki zakres dostępnych opcji architektury, w tym podejście hybrydowe. Bezserwerowy upraszcza podejście, zarządzanie i koszt funkcji aplikacji przy kosztach kontroli i przenośności. Jednak wiele platform bezserwerowych uwidacznia konfigurację, aby ułatwić dostosowanie rozwiązania. Dobre praktyki programistyczne mogą również prowadzić do bardziej przenośnego kodu i mniejszej blokady platformy bezserwerowej. W poniższej tabeli przedstawiono podejścia do architektury obok siebie. Wybierz opcję bezserwerowa zależna od potrzeb skalowania, niezależnie od tego, czy chcesz zarządzać środowiskiem uruchomieniowym, a także jak można przerwać obciążenia w małych składnikach. Zapoznaj się z potencjalnymi wyzwaniami dotyczącymi bezserwerowych i innych decyzji w następnym rozdziale.
 
-|         |IaaS     |PaaS     |wbudowane|Bezserwerowej|
+|         |IaaS     |PaaS     |Container|Bezserwerowej|
 |---------|---------|---------|---------|----------|
-|**Zasięgu**|MASZYN       |Wystąpienie |Aplikacje      |Funkcja  |
+|**Zasięgu**|VM       |Wystąpienie |Aplikacja      |Funkcja  |
 |**Streszczenia**|Sprzęt|Platforma|Host systemu operacyjnego|Środowisko uruchomieniowe   |
-|**Jednostka** |MASZYN       |Projekt  |Obraz    |Kod      |
+|**Unit** |VM       |{1&gt;Projekt&lt;1}  |Obraz    |Kod      |
 |**Cykl życia**|Od|Dni do miesięcy|Minuty na dni|Milisekundy na minuty|
 |**Odpowiedzialność za**|Aplikacje, zależności, środowisko uruchomieniowe i system operacyjny|Aplikacje i zależności|Aplikacje, zależności i środowisko uruchomieniowe|Funkcja
 
@@ -155,7 +155,7 @@ Następny rozdział koncentruje się na architekturze bezserwerowej, przypadków
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
 - [Przewodnik po architekturze aplikacji platformy Azure](https://docs.microsoft.com/azure/architecture/guide/)
-- [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
+- [Usługi Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
 - [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 - [Wzorzec architektury N-warstwowej](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 - [Kubernetes na platformie Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
@@ -167,4 +167,4 @@ Następny rozdział koncentruje się na architekturze bezserwerowej, przypadków
 
 >[!div class="step-by-step"]
 >[Poprzedni](architecture-approaches.md)
->[dalej](serverless-architecture.md)
+>[Następny](serverless-architecture.md)

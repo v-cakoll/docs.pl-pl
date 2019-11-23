@@ -1,14 +1,13 @@
 ---
 title: Własne hostowane aplikacje gRPC — gRPC dla deweloperów WCF
 description: Wdrażanie aplikacji ASP.NET Core gRPC jako usług samoobsługowych.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846117"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967212"
 ---
 # <a name="self-hosted-grpc-applications"></a>Własne hostowane aplikacje gRPC
 
@@ -78,7 +77,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 > [!NOTE]
 > Jeśli aplikacja nie działa jako usługa systemu Linux, Metoda `UseSystemd` nie wykonuje żadnego działania.
 
-Teraz Opublikuj swoją aplikację (zależną od platformy lub autonomiczną dla odpowiedniego środowiska uruchomieniowego systemu Linux, np. `linux-x64`), z poziomu programu Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając pozycję *Publikuj* z menu kontekstowego lub z interfejs wiersza polecenia platformy .NET Core za pomocą następującego polecenia.
+Teraz Opublikuj aplikację (zależną od platformy lub autonomiczną dla odpowiedniego środowiska uruchomieniowego systemu Linux, np. `linux-x64`), z poziomu programu Visual Studio, klikając prawym przyciskiem myszy projekt i wybierając pozycję *Publikuj* z menu kontekstowego lub z interfejs wiersza polecenia platformy .NET Core przy użyciu poniższego polecenia.
 
 ```console
 dotnet publish -c Release -r linux-x64 -o ./publish
@@ -153,7 +152,7 @@ Podczas uruchamiania aplikacji gRPC w środowisku produkcyjnym należy używać 
 
 Na hostach z systemem Windows certyfikat może zostać załadowany z bezpiecznego [magazynu certyfikatów](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) przy użyciu [klasy X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). Klasy `X509Store` można również używać z magazynem kluczy OpenSSL na niektórych hostach z systemem Linux.
 
-Certyfikaty mogą być również tworzone przy użyciu jednego z [konstruktorów X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), z pliku (na przykład pliku `.pfx` chronionego za pomocą silnego hasła) lub z danych binarnych pobranych z usługi bezpiecznego magazynu, takich jak [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) .
+Certyfikaty mogą być również tworzone przy użyciu jednego z [konstruktorów X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), z pliku (na przykład pliku `.pfx` chronionego za pomocą silnego hasła) lub z danych binarnych pobranych z usługi bezpiecznego magazynu, takich jak [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
 Kestrel można skonfigurować do korzystania z certyfikatu na dwa sposoby: od konfiguracji lub w kodzie.
 

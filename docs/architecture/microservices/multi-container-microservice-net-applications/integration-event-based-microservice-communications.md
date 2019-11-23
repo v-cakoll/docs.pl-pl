@@ -27,7 +27,7 @@ Zgodnie z opisem w sekcji architektura można wybrać jedną z wielu technologii
 
 W celu zaimplementowania tylko weryfikacji usługi Event Bus dla środowiska deweloperskiego, tak jak w przykładzie eShopOnContainers, prosta implementacja na RabbitMQ działa jako kontener może być wystarczająca. Jednak w przypadku systemów o znaczeniu krytycznym i produkcyjnym wymagających wysokiej skalowalności warto oszacować i użyć Azure Service Bus.
 
-Jeśli wymagane są abstrakcje wysokiego poziomu i bogatsze funkcje, takie jak [sagach](https://docs.particular.net/nservicebus/sagas/) dla długotrwałych procesów, które ułatwiają opracowywanie rozproszonego, inne komercyjne i typu "open source", takie jak NServiceBus, MassTransit i jaśniejszy oceny. W takim przypadku abstrakcje i interfejsy API, które mają być używane, zwykle są bezpośrednio podane przez te magistrale usług wyższego poziomu zamiast własnych streszczeń (takich jak [proste abstrakcje magistrali zdarzeń dostępne w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). W takim przypadku można zbadać [eShopOnContainers rozwidlenia przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe pochodne próbki zaimplementowane przez określone oprogramowanie)
+Jeśli wymagane są abstrakcje wysokiego poziomu i bogatsze funkcje, takie jak [sagach](https://docs.particular.net/nservicebus/sagas/) dla długotrwałych procesów, które ułatwiają opracowywanie rozproszonego, inne komercyjne i typu "open source", takie jak NServiceBus, MassTransit i jaśniejszy, oceniają. W takim przypadku abstrakcje i interfejsy API, które mają być używane, zwykle są bezpośrednio podane przez te magistrale usług wyższego poziomu zamiast własnych streszczeń (takich jak [proste abstrakcje magistrali zdarzeń dostępne w eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). W takim przypadku można zbadać [eShopOnContainers rozwidlenia przy użyciu NServiceBus](https://go.particular.net/eShopOnContainers) (dodatkowe pochodne próbki zaimplementowane przez określone oprogramowanie)
 
 Oczywiście można zawsze tworzyć własne funkcje usługi Service Bus na podstawie technologii niższego poziomu, takich jak RabbitMQ i Docker, ale pracy wymaganej do "odtworzenia kółka" może być zbyt kosztowne dla niestandardowej aplikacji przedsiębiorstwa.
 
@@ -129,4 +129,4 @@ Metody `Subscribe` (można mieć kilka implementacji w zależności od argument�
 
 > [!div class="step-by-step"]
 > [Poprzedni](database-server-container.md)
-> [dalej](rabbitmq-event-bus-development-test-environment.md)
+> [Następny](rabbitmq-event-bus-development-test-environment.md)

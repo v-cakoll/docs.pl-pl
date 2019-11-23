@@ -22,9 +22,9 @@ Za pomocą Windows Communication Foundation (WCF) usługa może określić, jak 
 
 2. Otwórz plik konfiguracji XML. Jeśli używasz narzędzia Svcutil. exe, domyślną nazwą pliku jest Output. config.
 
-3. Znajdź element **\<security >** z atrybutem **mode** ( **\<security mode =** `MessageOrTransport` **>** , gdzie `MessageOrTransport` jest ustawiony jeden z trybów zabezpieczeń.
+3. Znajdź element **\<security >** z atrybutem **mode** ( **\<Security Mode =** `MessageOrTransport` **>** , gdzie `MessageOrTransport` jest ustawiony na jeden z trybów zabezpieczeń.
 
-4. Znajdź element podrzędny, który jest zgodny z wartością trybu. Na przykład, jeśli tryb jest ustawiony na wartość **Message**, znajdź element **\<message >** zawarty w elemencie **> \<security** .
+4. Znajdź element podrzędny, który jest zgodny z wartością trybu. Na przykład, jeśli tryb jest ustawiony na wartość **Message**, Znajdź **\<komunikat >** element zawarty w elemencie **\<Security >** .
 
 5. Zwróć uwagę na wartość przypisaną do atrybutu **ClientCredentialType** . Rzeczywista wartość zależy od tego, który tryb jest używany, transport lub wiadomość.
 
@@ -58,13 +58,13 @@ Ten przykład ustawia tryb zabezpieczeń na transport i ustawia wartość poświ
 
 ### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>Aby określić wartość poświadczenia klienta w konfiguracji
 
-1. Dodaj element [\<behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) do elementu [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) .
+1. Dodaj [\<zachowanie >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) elementu do [> zachowań\<](../configure-apps/file-schema/wcf/behaviors.md) .
 
-2. Dodaj element [\<clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) do elementu [> \<behaviors](../configure-apps/file-schema/wcf/behaviors.md) . Upewnij się, że atrybut Required `name` został ustawiony na odpowiednią wartość.
+2. Dodaj element [\<clientcredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) do elementu [\<Behaviors >](../configure-apps/file-schema/wcf/behaviors.md) . Upewnij się, że atrybut Required `name` jest ustawiony na odpowiednią wartość.
 
-3. Dodaj element [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) do elementu [> \<clientCredentials](../configure-apps/file-schema/wcf/clientcredentials.md) .
+3. Dodaj element [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md) do elementu [\<ClientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md) .
 
-4. Ustaw następujące atrybuty na odpowiednie wartości: `storeLocation`, `storeName`, `x509FindType` i `findValue`, jak pokazano w poniższym kodzie. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](./feature-details/working-with-certificates.md).
+4. Ustaw następujące atrybuty na odpowiednie wartości: `storeLocation`, `storeName`, `x509FindType`i `findValue`, jak pokazano w poniższym kodzie. Aby uzyskać więcej informacji o certyfikatach, zobacz [Praca z certyfikatami](./feature-details/working-with-certificates.md).
 
     ```xml
     <behaviors>
@@ -81,7 +81,7 @@ Ten przykład ustawia tryb zabezpieczeń na transport i ustawia wartość poświ
     </behaviors>
     ```
 
-5. Podczas konfigurowania klienta określ zachowanie, ustawiając atrybut `behaviorConfiguration` elementu `<endpoint>`, jak pokazano w poniższym kodzie. Element Endpoint jest elementem podrzędnym elementu [\<client >](../configure-apps/file-schema/wcf/client.md) . Ponadto Określ nazwę konfiguracji powiązania, ustawiając atrybut `bindingConfiguration` na powiązanie dla klienta. Jeśli używasz wygenerowanego pliku konfiguracji, nazwa powiązania jest generowana automatycznie. W tym przykładzie nazwa jest `"tcpBindingWithCredential"`.
+5. Podczas konfigurowania klienta należy określić zachowanie, ustawiając atrybut `behaviorConfiguration` elementu `<endpoint>`, jak pokazano w poniższym kodzie. Element Endpoint jest elementem podrzędnym elementu [>\<Client](../configure-apps/file-schema/wcf/client.md) . Ponadto Określ nazwę konfiguracji powiązania, ustawiając atrybut `bindingConfiguration` na powiązanie dla klienta. Jeśli używasz wygenerowanego pliku konfiguracji, nazwa powiązania jest generowana automatycznie. W tym przykładzie nazwa jest `"tcpBindingWithCredential"`.
 
     ```xml
     <client>
@@ -105,10 +105,10 @@ Ten przykład ustawia tryb zabezpieczeń na transport i ustawia wartość poświ
 - [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Praca z certyfikatami](./feature-details/working-with-certificates.md)
 - [Instrukcje: tworzenie klienta](how-to-create-a-wcf-client.md)
-- [@no__t — 1netTcpBinding >](../configure-apps/file-schema/wcf/nettcpbinding.md)
-- [@no__t — 1security >](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
-- [@no__t — 1message >](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
-- [@no__t — 1behavior >](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
-- [@no__t — 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)
-- [@no__t — 1clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
-- [@no__t — 1clientCredentials >](../configure-apps/file-schema/wcf/clientcredentials.md)
+- [\<netTcpBinding>](../configure-apps/file-schema/wcf/nettcpbinding.md)
+- [> zabezpieczeń \<](../configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<message>](../configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
+- [zachowanie \<>](../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
+- [zachowania \<>](../configure-apps/file-schema/wcf/behaviors.md)
+- [\<clientCertificate >](../configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)
+- [\<clientCredentials>](../configure-apps/file-schema/wcf/clientcredentials.md)

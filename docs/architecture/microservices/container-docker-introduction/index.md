@@ -29,4 +29,4 @@ W krótkim czasie kontenery oferują zalety izolacji, przenośności, elastyczno
 
 >[!div class="step-by-step"]
 >[Poprzedni](../index.md)
->[dalej](docker-defined.md)
+>[Następny](docker-defined.md)

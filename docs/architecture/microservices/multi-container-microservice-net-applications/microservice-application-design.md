@@ -91,7 +91,7 @@ W związku z tym jednostki wdrożenia dla mikrousług (a nawet dla baz danych w 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **eShopOnContainers repozytorium GitHub. Kod źródłowy aplikacji odniesienia**  \
+- **eShopOnContainers repozytorium GitHub. Kod źródłowy aplikacji odniesienia** \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Zalety rozwiązań opartych na mikrousługach
@@ -148,7 +148,7 @@ Zewnętrzna architektura to architektura mikrousług złożona przez wiele usłu
 
 Przykładowo w naszym *eShopOnContainers* przykładzie, wykaz, koszyk i mikrousługi profilu użytkownika są proste (zasadniczo CRUD podsystemy). W związku z tym ich wewnętrzna architektura i projekt są proste. Mogą jednak istnieć inne mikrousługi, takie jak mikrousługa porządkowania, która jest bardziej złożona i reprezentuje wszelkie zmiany reguł firmy o wysokim stopniu złożoności domeny. W takich przypadkach można zaimplementować bardziej zaawansowane wzorce w ramach konkretnej mikrousługi, takie jak te, które zostały zdefiniowane z podejściem projektowania opartym na domenie (DDD), tak jak w przypadku mikrousługi porządkowania *eShopOnContainers* . (W dalszej części omówiono implementację mikrousługi porządkowania *eShopOnContainers* ).
 
-Kolejną przyczyną innej technologii na mikrousługi może być charakter każdej mikrousługi. Na przykład lepszym rozwiązaniem jest użycie języka programowania funkcjonalnego, takiego jak F \#, a nawet języka, takiego jak R, w przypadku docelowych domen systemu AI i uczenia maszynowego zamiast bardziej zorientowanego obiektowo języka programowania, takiego jak C \#.
+Kolejną przyczyną innej technologii na mikrousługi może być charakter każdej mikrousługi. Na przykład lepszym rozwiązaniem jest użycie języka programowania funkcjonalnego, takiego jak F\#, a nawet języka, takiego jak R, w przypadku docelowych domen systemu AI i uczenia maszynowego zamiast bardziej zorientowanego obiektowo języka programowania, takiego jak C\#.
 
 Dolna linia polega na tym, że każda mikrousługa może mieć inną architekturę wewnętrzną opartą na różnych wzorcach projektowych. Nie wszystkie mikrousługi powinny być implementowane przy użyciu zaawansowanych wzorców DDD, ponieważ byłyby one przekroczenia inżynierów. Podobnie złożone mikrousługi z kiedykolwiek zmieniającą się logiką biznesową nie należy implementować jako składniki CRUD lub można zakończyć przy użyciu kodu o niskiej jakości.
 
@@ -168,7 +168,7 @@ Istnieje wiele wzorców architektonicznych używanych przez architektów oprogra
 
 - [Architektura sterowana zdarzeniami](https://en.wikipedia.org/wiki/Event-driven_architecture) (EDA).
 
-Można również tworzyć mikrousługi z wieloma technologiami i językami, takimi jak ASP.NET Core Web API, NancyFx, ASP.NET Core Signaler (dostępne z .NET Core 2), F \#, Node. js, Python, Java C++,, GoLang i inne.
+Można również tworzyć mikrousługi z wieloma technologiami i językami, takimi jak ASP.NET Core Web API, NancyFx, ASP.NET Core Signaler (dostępne z .NET Core 2), F\#, Node. js, Python, Java C++,, GoLang i inne.
 
 Ważnym punktem jest to, że żaden wzorzec architektury lub styl ani żadna konkretna technologia nie są odpowiednie dla wszystkich sytuacji. Rysunek 6-3 zawiera kilka metod i technologii (choć nie w określonej kolejności), które mogą być używane w różnych mikrousługach.
 
@@ -186,4 +186,4 @@ Dla każdego z tych przypadków nie ma punktora Silver lub odpowiedniego wzorca 
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](data-driven-crud-microservice.md)
+>[Następny](data-driven-crud-microservice.md)

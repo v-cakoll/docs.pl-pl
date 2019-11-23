@@ -33,7 +33,7 @@ Ten przykład używa prostego projektu, który jest oparty na szablonie interfej
 
 **Rysunek 4-36**. Tworzenie aplikacji ASP.NET Core
 
-Aby utworzyć przykładowy projekt w programie Visual Studio, wybierz pozycję **plik** > **Nowy** > **projekt**, wybierz typy projektu **sieci Web** w lewym okienku, a następnie **ASP.NET Core aplikacji sieci Web**.
+Aby utworzyć przykładowy projekt w programie Visual Studio, wybierz pozycję **plik** > **Nowy** > **projekt**, wybierz typy projektu **sieci Web** w okienku po lewej stronie, a następnie **ASP.NET Core aplikację sieci Web**.
 
 Program Visual Studio Wyświetla listę szablonów dla projektów sieci Web. W naszym przykładzie wybierz pozycję **interfejs API** , aby utworzyć aplikację interfejsu API sieci Web ASP.NET.
 
@@ -43,11 +43,11 @@ Upewnij się, że wybrano ASP.NET Core 2,2 jako strukturę. Program .NET Core 2,
 
 **Rysunek 4-37**. Wybieranie ASP.NET CORE 2,2 i typ projektu interfejsu API sieci Web
 
-Jeśli masz poprzednią wersję programu .NET Core, możesz pobrać i zainstalować wersję 2,2 z <https://dotnet.microsoft.com/download>programu.
+Jeśli masz poprzednią wersję programu .NET Core, możesz pobrać i zainstalować wersję 2,2 z <https://dotnet.microsoft.com/download>.
 
-Możesz dodać obsługę platformy Docker podczas tworzenia projektu lub później, aby w dowolnym momencie można było "przekształcać". Aby dodać obsługę platformy Docker po utworzeniu projektu, kliknij prawym przyciskiem myszy węzeł projektu w Eksplorator rozwiązań a następnie wybierz polecenie **Dodaj** > **obsługę platformy Docker** w menu kontekstowym.
+Możesz dodać obsługę platformy Docker podczas tworzenia projektu lub później, aby w dowolnym momencie można było "przekształcać". Aby dodać obsługę platformy Docker po utworzeniu projektu, kliknij prawym przyciskiem myszy węzeł projektu w Eksplorator rozwiązań i wybierz polecenie **dodaj** > **Obsługa platformy Docker** w menu kontekstowym.
 
-![Opcja menu kontekstowego umożliwiająca dodanie obsługi platformy Docker do istniejącego projektu: Kliknij prawym przyciskiem myszy (na projekcie) > Dodaj > obsłudze platformy Docker.](media/add-docker-support-to-project.png)
+![Opcja menu kontekstowego umożliwiająca dodanie obsługi platformy Docker do istniejącego projektu: kliknij prawym przyciskiem myszy (na projekcie) > Dodaj obsługę platformy Docker >.](media/add-docker-support-to-project.png)
 
 **Rysunek 4-38**. Dodawanie obsługi platformy Docker do istniejącego projektu
 
@@ -63,13 +63,13 @@ Jak widać, integracja między programem Visual Studio 2017 i platformą Docker 
 
 Teraz możesz uruchomić aplikację przy użyciu klawisza **F5** lub przycisku **Odtwórz** .
 
-Po uruchomieniu projektu można wyświetlić listę obrazów przy użyciu `docker images` polecenia. Powinien zostać wyświetlony `mssampleapplication` obraz utworzony przez automatyczne wdrażanie naszego projektu przy użyciu programu Visual Studio 2017.
+Po uruchomieniu projektu można wyświetlić listę obrazów przy użyciu polecenia `docker images`. Powinien zostać wyświetlony obraz `mssampleapplication` utworzony przez automatyczne wdrażanie naszego projektu przy użyciu programu Visual Studio 2017.
 
 ```console
 docker images
 ```
 
-![Dane wyjściowe konsoli z polecenia Docker images pokazują listę z: Repozytorium, tag, identyfikator obrazu, utworzony (Date) i rozmiar.](media/docker-images-command.png)
+![Dane wyjściowe konsoli z polecenia Docker images, wyświetla listę z: Repository, tag, Image ID, Created (Date) i size.](media/docker-images-command.png)
 
 **Rysunek 4-40**. Widok obrazów platformy Docker
 
@@ -85,13 +85,13 @@ Teraz utworzysz obraz w trybie **wydania** (gotowy do produkcji), zmieniając do
 
 **Rysunek 4-41**. Wybieranie trybu wydania
 
-Jeśli wykonasz `docker image` polecenie, zobaczysz obu utworzonych obrazów, jeden dla `debug` i drugi dla `release` trybu.
+Jeśli wykonasz `docker image` polecenie, zobaczysz obu utworzonych obrazów, jeden dla `debug` i inne dla `release` tryb.
 
 ### <a name="create-a-new-tag-for-the-image"></a>Utwórz nowy tag dla obrazu
 
-Każdy obraz kontenera musi być oznaczony `loginServer` nazwą rejestru. Ten tag jest używany do routingu podczas wypychania obrazów kontenera do rejestru obrazów.
+Każdy obraz kontenera musi być oznaczony nazwą `loginServer` rejestru. Ten tag jest używany do routingu podczas wypychania obrazów kontenera do rejestru obrazów.
 
-Można wyświetlić `loginServer` nazwę z Azure Portal, pobierając informacje z Azure Container Registry
+Można wyświetlić nazwę `loginServer` z Azure Portal, pobierając informacje z Azure Container Registry
 
 ![Widok w przeglądarce Nazwa rejestru kontenerów platformy Azure znajduje się w prawym górnym rogu.](media/loginServer-name.png)
 
@@ -115,7 +115,7 @@ Teraz możesz oznaczyć obraz, pobierając najnowszą wersję obrazu (obraz wers
 docker tag mssampleaksapplication:latest mssampleacr.azurecr.io/mssampleaksapplication:v1
 ```
 
-Po uruchomieniu `docker tag` polecenia należy wyświetlić listę obrazów `docker images` za pomocą polecenia, a obraz z nowym tagiem.
+Po uruchomieniu polecenia `docker tag` należy wyświetlić listę obrazów za pomocą polecenia `docker images` i obraz z nowym tagiem.
 
 ![Dane wyjściowe konsoli z polecenia Docker images.](media/tagged-docker-images-list.png)
 
@@ -182,7 +182,7 @@ spec:
 ```
 
 > [!NOTE]
-> Aby uzyskać więcej informacji na temat wdrażania przy użyciu usługi Kubernetes, zobacz:<https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
+> Aby uzyskać więcej informacji na temat wdrażania za pomocą Kubernetes, zobacz: <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
 Teraz wszystko jest już prawie gotowe do wdrożenia przy użyciu **polecenia kubectl**, ale najpierw należy uzyskać poświadczenia do klastra AKS za pomocą tego polecenia:
 
@@ -190,11 +190,11 @@ Teraz wszystko jest już prawie gotowe do wdrożenia przy użyciu **polecenia ku
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Dane wyjściowe konsoli z powyższego polecenia: Scalono "MSSampleK8Cluster jako bieżący kontekst w/root/.Kube/config](media/getting-aks-credentials.png)
+![Dane wyjściowe konsoli z powyższego polecenia: scalone "MSSampleK8Cluster jako bieżący kontekst w/root/.Kube/config](media/getting-aks-credentials.png)
 
 **Rysunek 4-47**. pobieranie poświadczeń
 
-Następnie użyj `kubectl create` polecenia, aby uruchomić wdrożenie.
+Następnie użyj polecenia `kubectl create`, aby uruchomić wdrożenie.
 
 ```console
 kubectl create -f mssample-deploy.yml
@@ -210,7 +210,7 @@ Po zakończeniu wdrażania można uzyskać dostęp do konsoli Kubernetes z lokal
 az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-I uzyskując dostęp `http://127.0.0.1:8001`do adresu URL.
+I uzyskiwanie dostępu do adresu URL `http://127.0.0.1:8001`.
 
 ![Widok przeglądarki pulpitu nawigacyjnego Kubernetes, przedstawiający wdrożenia, zbiory, zestawy replik i usługi.](media/kubernetes-cluster-information.png)
 
@@ -222,5 +222,5 @@ Teraz aplikacja została wdrożona na platformie Azure, przy użyciu kontenera s
 > Aby dowiedzieć się, jak utworzyć klaster AKS dla tego przykładu, w sekcji [**wdrażanie w usłudze Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) w tym przewodniku.
 
 >[!div class="step-by-step"]
->[Poprzedni](set-up-windows-containers-with-powershell.md)Następny
->[](../docker-devops-workflow/index.md)
+>[Poprzedni](set-up-windows-containers-with-powershell.md)
+>[Następny](../docker-devops-workflow/index.md)

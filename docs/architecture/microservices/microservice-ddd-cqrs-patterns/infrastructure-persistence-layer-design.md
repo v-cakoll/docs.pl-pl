@@ -132,4 +132,4 @@ Repozytoria mogą być przydatne, ale nie są krytyczne dla Twojego projektu DDD
 
 >[!div class="step-by-step"]
 >[Poprzedni](domain-events-design-implementation.md)
->[dalej](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[Następny](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

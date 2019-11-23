@@ -11,11 +11,11 @@ ms.locfileid: "73737187"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementowanie zadań w tle w mikrousługach za pomocą IHostedService i klasy BackgroundService
 
-Zadania w tle i zaplanowane zadania to coś, co może wymagać wdrożenia, a ostatecznie, w aplikacji opartej na mikrousługach lub w dowolnym rodzaju aplikacji. Różnica w przypadku korzystania z architektury mikrousług polega na tym, że można zaimplementować pojedynczy proces mikrousług/kontener do obsługi tych zadań w tle, aby można było skalować go w dół lub w górę, a nawet mieć pewność, że uruchamia ono pojedyncze wystąpienie tego typu proces/kontener mikrousług.
+Zadania w tle i zaplanowane zadania to coś, co może wymagać wdrożenia, a ostatecznie, w aplikacji opartej na mikrousługach lub w dowolnym rodzaju aplikacji. Różnica w przypadku korzystania z architektury mikrousług polega na tym, że można zaimplementować pojedynczy proces mikrousług/kontener do obsługi tych zadań w tle, co pozwala na skalowanie w górę lub w górę w miarę potrzeb lub można nawet upewnić się, że uruchamia ono pojedyncze wystąpienie tego procesu mikrousługi/kontenera.
 
 Z ogólnego punktu widzenia w programie .NET Core wywołano te typy zadań *hostowanych usług*, ponieważ są one usługami/logiką hostowaną w ramach hosta/aplikacji/mikrousługi. Należy zauważyć, że w tym przypadku usługa hostowana po prostu oznacza klasę z logiką zadań w tle.
 
-Począwszy od platformy .NET Core 2,0, struktura zawiera nowy interfejs o nazwie <xref:Microsoft.Extensions.Hosting.IHostedService> pomagający w łatwym wdrażaniu usług hostowanych. Podstawowy pomysł polega na tym, że można zarejestrować wiele zadań w tle (usługi hostowane), które są uruchamiane w tle, podczas gdy host lub host sieci Web jest uruchomiony, jak pokazano na obrazie 6-26.
+Począwszy od platformy .NET Core 2,0, struktura zawiera nowy interfejs o nazwie <xref:Microsoft.Extensions.Hosting.IHostedService> ułatwiający zaimplementowanie usług hostowanych. Podstawowy pomysł polega na tym, że można zarejestrować wiele zadań w tle (usługi hostowane), które są uruchamiane w tle, podczas gdy host lub host sieci Web jest uruchomiony, jak pokazano na obrazie 6-26.
 
 ![Diagram przedstawiający porównanie ASP.NET Core IWebHost i .NET Core IHost.](./media/background-tasks-with-ihostedservice/ihosted-service-webhost-vs-host.png)
 
@@ -23,17 +23,17 @@ Począwszy od platformy .NET Core 2,0, struktura zawiera nowy interfejs o nazwie
 
 ASP.NET Core 1. x i 2. x obsługuje IWebHost dla procesów w tle w usłudze Web Apps. Platforma .NET Core 2,1 obsługuje IHost dla procesów w tle w przypadku zwykłych aplikacji konsolowych. Zwróć uwagę na różnice między `WebHost` i `Host`.
 
-`WebHost` (klasa bazowa implementująca `IWebHost`) w ASP.NET Core 2,0 to artefakt infrastruktury używany do udostępniania funkcji serwera HTTP dla procesu, na przykład w przypadku implementowania aplikacji sieci Web MVC lub usługi Web API. Zapewnia ona wszystkie nowe dobre działania dotyczące infrastruktury w ASP.NET Core, co pozwala na korzystanie z iniekcji zależności, wstawianie middlewares w potoku żądań itd. i precyzyjne użycie tych `IHostedServices` dla zadań w tle.
+`WebHost` (klasa bazowa implementująca `IWebHost`) w ASP.NET Core 2,0 to artefakt infrastruktury używany do udostępniania funkcji serwera HTTP dla procesu, na przykład w przypadku implementowania aplikacji sieci Web MVC lub usługi Web API. Zapewnia ona wszystkie nowe dobre działania dotyczące infrastruktury w ASP.NET Core, co pozwala na korzystanie z iniekcji zależności, wstawianie middlewares w potoku żądań itd. i precyzyjne korzystanie z tych `IHostedServices` na potrzeby zadań w tle.
 
-W programie .NET Core 2,1 wprowadzono `Host` (klasa bazowa implementująca `IHost`). W zasadzie `Host` umożliwia korzystanie z podobnej infrastruktury niż w przypadku `WebHost` (iniekcja zależności, usług hostowanych itp.), ale w tym przypadku wystarczy, że chcesz mieć prosty i jaśniejszy proces jako host, bez żadnych informacji związanych z MVC, interfejsem API sieci Web lub Funkcje serwera HTTP.
+`Host` (klasa bazowa implementująca `IHost`) został wprowadzony w programie .NET Core 2,1. W zasadzie `Host` umożliwia korzystanie z podobnej infrastruktury niż w przypadku `WebHost` (iniekcja zależności, usług hostowanych itp.), ale w tym przypadku wystarczy, że chcesz mieć prosty i jaśniejszy proces jako host, bez żadnych informacji związanych z funkcjami MVC, Web API lub HTTP Server.
 
-W związku z tym można wybrać i utworzyć wyspecjalizowany proces hosta z IHost w celu obsługi usług hostowanych, a nic innego nie ma na celu hostowania `IHostedServices` lub można również zwiększyć istniejące ASP.NET Core `WebHost`, takie jak istniejący ASP.NET Core Web API lub aplikacja MVC.
+W związku z tym można wybrać i utworzyć wyspecjalizowany proces hosta z IHost w celu obsługi usług hostowanych, a nic innego nie ma na celu hostowania `IHostedServices`lub można także rozciągnąć istniejące ASP.NET Core `WebHost`, takie jak istniejący ASP.NET Core internetowy interfejs API lub aplikacja MVC.
 
 Każde podejście ma wady i zalety w zależności od potrzeb firmy i skalowalności. Dolna linia jest zasadniczo taka, że jeśli zadania w tle nie mają nic robić z HTTP (IWebHost), należy użyć IHost.
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Rejestrowanie usług hostowanych w usłudze WebHost lub hoście
 
-Przejdźmy do dalszych etapów interfejsu `IHostedService`, ponieważ jego użycie jest dość podobne w `WebHost` lub `Host`.
+Przejdźmy na `IHostedService` interfejsie, ponieważ jego użycie jest dość podobne w `WebHost` lub w `Host`.
 
 Sygnalizujący to jeden przykład artefaktu korzystającego z usług hostowanych, ale można go również użyć do znacznie prostszego działania, takiego jak:
 
@@ -60,15 +60,15 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 }
 ```
 
-W tym kodzie usługa hostowana w `GracePeriodManagerService` to prawdziwy kod z mikrousługi w eShopOnContainers, a pozostałe dwa to dwie dodatkowe próbki.
+W tym kodzie usługa hostowana `GracePeriodManagerService` jest prawdziwym kodem z mikrousługi w eShopOnContainers, a pozostałe dwa są tylko dwoma dodatkowymi przykładami.
 
 Wykonywanie zadania w tle `IHostedService` jest koordynowane z okresem istnienia aplikacji (hosta lub mikrousługi). Zadania są rejestrowane, gdy aplikacja zostanie uruchomiona i masz możliwość wykonywania pewnych działań lub czyszczenia danych podczas zamykania aplikacji.
 
-Bez korzystania z `IHostedService` można zawsze uruchomić wątek w tle, aby uruchomić dowolne zadanie. Różnica jest precyzyjna w czasie zamykania aplikacji, gdy ten wątek zostanie po prostu zamknięty, bez możliwości uruchamiania łagodnych akcji oczyszczania.
+Bez korzystania z `IHostedService`można zawsze uruchomić wątek w tle, aby uruchomić dowolne zadanie. Różnica jest precyzyjna w czasie zamykania aplikacji, gdy ten wątek zostanie po prostu zamknięty, bez możliwości uruchamiania łagodnych akcji oczyszczania.
 
 ## <a name="the-ihostedservice-interface"></a>Interfejs IHostedService
 
-Po zarejestrowaniu `IHostedService` program .NET Core wywoła metody `StartAsync()` i `StopAsync()` typu `IHostedService` podczas uruchamiania i zatrzymywania aplikacji. Polecenie Start jest wywoływane po uruchomieniu serwera i wyzwoleniu `IApplicationLifetime.ApplicationStarted`.
+Po zarejestrowaniu `IHostedService`.NET Core wywoła metody `StartAsync()` i `StopAsync()` typu `IHostedService` podczas uruchamiania i zatrzymywania aplikacji. Polecenie Start jest wywoływane po uruchomieniu serwera i wyzwoleniu `IApplicationLifetime.ApplicationStarted`.
 
 `IHostedService`, zgodnie z definicją w programie .NET Core, wygląda następująco.
 
@@ -92,13 +92,13 @@ namespace Microsoft.Extensions.Hosting
 }
 ```
 
-Jak można wyobrazić, można utworzyć wiele implementacji IHostedService i zarejestrować je w metodzie "`ConfigureService()`" w kontenerze DI, jak pokazano wcześniej. Wszystkie te usługi hostowane zostaną uruchomione i zatrzymane wraz z aplikacją/mikrousługą.
+Jak można wyobrazić, można utworzyć wiele implementacji IHostedService i zarejestrować je w metodzie `ConfigureService()` w kontenerze DI, jak pokazano wcześniej. Wszystkie te usługi hostowane zostaną uruchomione i zatrzymane wraz z aplikacją/mikrousługą.
 
-Jako programista użytkownik jest odpowiedzialny za obsługę zatrzymania działania usług, gdy metoda `StopAsync()` jest wyzwalana przez hosta.
+Jako programista użytkownik jest odpowiedzialny za obsługę zatrzymania działania usług, gdy `StopAsync()` Metoda jest wyzwalana przez hosta.
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implementowanie IHostedService z niestandardową klasą usługi hostowanej pochodną z klasy podstawowej BackgroundService
 
-Można utworzyć niestandardową klasę usług hostowanych od podstaw i zaimplementować `IHostedService`, tak jak należy to zrobić w przypadku korzystania z platformy .NET Core 2,0.
+Można utworzyć niestandardową klasę usług hostowanych od podstaw i zaimplementować `IHostedService`, co należy zrobić w przypadku korzystania z platformy .NET Core 2,0.
 
 Jednak ponieważ większość zadań w tle będzie miała podobne potrzeby w odniesieniu do zarządzania tokenami anulowania i innych typowych operacji, istnieje wygodna abstrakcyjna klasa bazowa, o nazwie `BackgroundService` (dostępna od platformy .NET Core 2,1).
 
@@ -164,7 +164,7 @@ public abstract class BackgroundService : IHostedService, IDisposable
 }
 ```
 
-Podczas wyprowadzania z poprzedniej abstrakcyjnej klasy podstawowej, dzięki tej dziedziczonej implementacji, wystarczy zaimplementować metodę `ExecuteAsync()` we własnej niestandardowej klasie usługi hostowanej, jak w poniższym kodzie uproszczonym z eShopOnContainers, który sonduje w razie konieczności zdarzenia integracji bazy danych i publikowania w usłudze Event Bus.
+Podczas wyprowadzania z poprzedniej abstrakcyjnej klasy podstawowej, dzięki tej dziedziczonej implementacji, wystarczy zaimplementować metodę `ExecuteAsync()` we własnej niestandardowej klasie usługi hostowanej, jak w poniższym uproszczonym kodzie z eShopOnContainers, który sonduje bazę danych i publikuje zdarzenia integracji w usłudze Event Bus w razie potrzeby.
 
 ```csharp
 public class GracePeriodManagerService : BackgroundService
@@ -210,7 +210,7 @@ W tym konkretnym przypadku eShopOnContainers jest wykonywana metoda aplikacji, k
 
 Oczywiście możesz zamiast tego uruchomić dowolne inne zadanie w tle.
 
-Domyślnie token anulowania jest ustawiany z 5-sekundowym limitem czasu, ale można zmienić tę wartość podczas kompilowania `WebHost` przy użyciu rozszerzenia `UseShutdownTimeout` `IWebHostBuilder`. Oznacza to, że nasza usługa powinna zostać anulowana w ciągu 5 sekund, w przeciwnym razie będzie bardziej nieoczekiwanie zabity.
+Domyślnie token anulowania jest ustawiany z 5-sekundowym limitem czasu, chociaż można zmienić tę wartość podczas kompilowania `WebHost` przy użyciu rozszerzenia `UseShutdownTimeout` `IWebHostBuilder`. Oznacza to, że nasza usługa powinna zostać anulowana w ciągu 5 sekund, w przeciwnym razie będzie bardziej nieoczekiwanie zabity.
 
 Poniższy kod zmieni ten czas na 10 sekund.
 
@@ -232,7 +232,7 @@ Diagram klas: IWebHost i IHost mogą obsługiwać wiele usług, które dziedzicz
 
 ### <a name="deployment-considerations-and-takeaways"></a>Zagadnienia dotyczące wdrażania i wnioski
 
-Należy pamiętać, że sposób wdrażania ASP.NET Core `WebHost` lub .NET Core `Host` może mieć wpływ na ostateczne rozwiązanie. Na przykład w przypadku wdrożenia `WebHost` w usługach IIS lub regularnym Azure App Service można wyłączyć hosta z powodu odtwarzania puli aplikacji. Ale w przypadku wdrażania hosta jako kontenera do programu Orchestrator, takiego jak Kubernetes lub Service Fabric, można kontrolować zagwarantowaną liczbę wystąpień na żywo hosta. Ponadto można rozważyć inne podejścia w chmurze szczególnie dla tych scenariuszy, takie jak Azure Functions. Na koniec w przypadku konieczności uruchomienia usługi przez cały czas i wdrożenia na serwerze z systemem Windows można użyć usługi systemu Windows.
+Należy pamiętać, że sposób wdrażania `WebHost` ASP.NET Core lub .NET Core `Host` może mieć wpływ na ostateczne rozwiązanie. Na przykład w przypadku wdrażania `WebHost` w usługach IIS lub regularnym Azure App Service można wyłączyć hosta z powodu odtwarzania puli aplikacji. Ale w przypadku wdrażania hosta jako kontenera do programu Orchestrator, takiego jak Kubernetes lub Service Fabric, można kontrolować zagwarantowaną liczbę wystąpień na żywo hosta. Ponadto można rozważyć inne podejścia w chmurze szczególnie dla tych scenariuszy, takie jak Azure Functions. Na koniec w przypadku konieczności uruchomienia usługi przez cały czas i wdrożenia na serwerze z systemem Windows można użyć usługi systemu Windows.
 
 Jednak nawet w przypadku `WebHost` wdrożonych w puli aplikacji istnieją scenariusze, takie jak ponowne wypełnianie lub opróżnianie pamięci podręcznej w pamięci aplikacji, które nadal mogą być stosowane.
 
@@ -240,15 +240,15 @@ Interfejs `IHostedService` zapewnia wygodny sposób uruchamiania zadań w tle w 
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Tworzenie zaplanowanego zadania w ASP.NET Core/Standard 2,0** 
-   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Tworzenie zaplanowanego zadania w ASP.NET Core/Standard 2,0**
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementacja IHostedService w ASP.NET Core 2,0** 
-   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementacja IHostedService w ASP.NET Core 2,0**
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Przykład GenericHost przy użyciu ASP.NET Core 2,1** 
-   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **Przykład GenericHost przy użyciu ASP.NET Core 2,1**
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Poprzedni](test-aspnet-core-services-web-apps.md)
->[dalej](implement-api-gateways-with-ocelot.md)
+>[Następny](implement-api-gateways-with-ocelot.md)

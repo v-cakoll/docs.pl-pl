@@ -22,5 +22,5 @@ Mikrousługi pochodzą z SOA, ale SOA różni się od architektury mikrousług. 
 Ten przewodnik koncentruje się na mikrousługach, ponieważ podejście SOA jest mniej opisowe niż wymagania i techniki używane w architekturze mikrousług. Jeśli wiesz, jak utworzyć aplikację opartą na mikrousługach, wiesz również, jak utworzyć prostsze aplikacje zorientowane na usługę.
 
 >[!div class="step-by-step"]
->[Poprzedni](docker-application-state-data.md)Następny
->[](microservices-architecture.md)
+>[Poprzedni](docker-application-state-data.md)
+>[Następny](microservices-architecture.md)

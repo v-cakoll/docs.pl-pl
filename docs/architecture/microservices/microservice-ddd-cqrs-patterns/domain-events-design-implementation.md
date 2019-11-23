@@ -21,7 +21,7 @@ Ważną zaletą zdarzeń domeny jest to, że efekty uboczne mogą być wyrażone
 
 Na przykład jeśli korzystasz tylko z Entity Framework, a musisz być odpowiedzią na niektóre zdarzenie, prawdopodobnie kod, którego potrzebujesz blisko, co spowoduje Wyzwalanie zdarzenia. W związku z tym reguła jest połączona, niejawnie do kodu i trzeba będzie przyjrzeć się do kodu, miejmy nadzieję, aby zrealizować regułę.
 
-Z drugiej strony, korzystanie z zdarzeń domeny czyni koncepcję jawną, ponieważ występuje `DomainEvent` i co najmniej jeden `DomainEventHandler`.
+Z drugiej strony, korzystanie z zdarzeń domeny czyni koncepcję jawną, ponieważ istnieje `DomainEvent` i co najmniej jeden `DomainEventHandler`.
 
 Na przykład w aplikacji eShopOnContainers, gdy zamówienie zostanie utworzone, użytkownik zostaje kupujący, więc `OrderStartedDomainEvent` jest zgłaszane i obsługiwane w `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`, więc koncepcja bazowa jest oczywista.
 
@@ -61,7 +61,7 @@ Obsługa zdarzeń domeny jest problemem aplikacji. Warstwa modelu domeny powinna
 
 Zdarzenia domeny mogą również służyć do wyzwalania dowolnej liczby akcji aplikacji i co ważniejsze, muszą być otwarte, aby zwiększyć tę liczbę w przyszłości w niezależny sposób. Na przykład po rozpoczęciu zamówienia można opublikować zdarzenie domeny, aby propagować te informacje do innych agregacji, a nawet wywołać akcje aplikacji, takie jak powiadomienia.
 
-Punkt klucza to otwarta liczba akcji do wykonania w przypadku wystąpienia zdarzenia domeny. Ostatecznie akcje i reguły w domenie i aplikacji zostaną rozrastane. Złożoność lub liczba akcji związanych z efektem ubocznym, gdy wystąpi coś, ale jeśli kod został połączony z "klejem" (czyli tworzeniem określonych obiektów z `new`), a następnie za każdym razem, gdy trzeba dodać nową akcję, należy również zmienić pracę i kod przetestowany.
+Punkt klucza to otwarta liczba akcji do wykonania w przypadku wystąpienia zdarzenia domeny. Ostatecznie akcje i reguły w domenie i aplikacji zostaną rozrastane. Złożoność lub liczba akcji związanych ze skutkami ubocznymi, gdy wystąpi coś, ale jeśli kod został połączony z "klejem" (czyli tworzeniem określonych obiektów przy użyciu `new`), a następnie za każdym razem, gdy trzeba dodać nową akcję, należy również zmienić pracę i przetestowany kod.
 
 Ta zmiana może spowodować nowe błędy, a podejście to również odnosi się do [zasady otwarte/zamknięte](https://en.wikipedia.org/wiki/Open/closed_principle) z [pełnych](https://en.wikipedia.org/wiki/SOLID). Nie tylko, Oryginalna klasa, która była w trakcie organizowania operacji, rośnie i rośnie, która jest zgodna z [pojedynczą zasadą odpowiedzialności (SRP)](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
@@ -130,13 +130,13 @@ Należy tu zaznaczyć, że jeśli zdarzenia domeny mają być obsługiwane async
 
 Następnym pytaniem jest to, jak podnieść zdarzenie domeny, aby docierał do jego powiązanych programów obsługi zdarzeń. Można użyć wielu metod.
 
-UDI Dahan pierwotnie proponowane (na przykład w kilku powiązanych wpisach, takich jak [zdarzenia domeny — Zrób 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) przy użyciu klasy statycznej do zarządzania i wywoływania zdarzeń. Może to obejmować klasę statyczną o nazwie DomainEvents, która mogłaby podnieść zdarzenia domeny natychmiast po wywołaniu, używając składni takiej jak `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard zapisał wpis w blogu ([wzmacnianie domeny: zdarzenia domeny](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)), która zaleca podobne podejście.
+UDI Dahan pierwotnie proponowane (na przykład w kilku powiązanych wpisach, takich jak [zdarzenia domeny — Zrób 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) przy użyciu klasy statycznej do zarządzania i wywoływania zdarzeń. Może to obejmować klasę statyczną o nazwie DomainEvents, która wywołuje zdarzenia domeny natychmiast po wywołaniu, przy użyciu składni, takiej jak `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard zapisał wpis w blogu ([wzmacnianie domeny: zdarzenia domeny](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)), która zaleca podobne podejście.
 
 Jednak gdy klasa zdarzenia domeny jest statyczna, to również natychmiast wysyła do programów obsługi. Dzięki temu testy i debugowanie są trudniejsze, ponieważ programy obsługi zdarzeń z logiką efektów ubocznych są wykonywane natychmiast po wywołaniu zdarzenia. Podczas testowania i debugowania należy skoncentrować się na tym, co dzieje się w przypadku bieżących klas agregujących; nie chcesz nagle przekierowywać do innych programów obsługi zdarzeń w przypadku efektów ubocznych związanych z innymi agregacjami lub logiką aplikacji. Jest to dlatego, że inne podejścia zostały rozwinięte, jak wyjaśniono w następnej sekcji.
 
 #### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>Odroczone podejście do wywoływania i wysyłania zdarzeń
 
-Zamiast wysyłać do programu obsługi zdarzeń domeny natychmiast, lepszym rozwiązaniem jest dodanie zdarzeń domeny do kolekcji, a następnie wysłanie tych zdarzeń domeny *bezpośrednio przed* *lub po* *zatwierdzeniu* transakcji (jak w przypadku Metody SaveChanges w EF). (Takie podejście zostało opisane przez Jimmy Bogard w tym wpisie [lepszego wzorca zdarzeń domeny](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)).
+Zamiast wysyłać do programu obsługi zdarzeń domeny natychmiast, lepszym rozwiązaniem jest dodanie zdarzeń domeny do kolekcji, a następnie wysłanie tych zdarzeń domeny *bezpośrednio przed* *lub po* *zatwierdzeniu* transakcji (podobnie jak w przypadku metody SaveChanges w EF). (Takie podejście zostało opisane przez Jimmy Bogard w tym wpisie [lepszego wzorca zdarzeń domeny](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)).
 
 Wybór w przypadku wysyłania zdarzeń domeny bezpośrednio przed lub po zatwierdzeniu transakcji jest istotny, ponieważ określa, czy będzie uwzględniać efekty uboczne w ramach tej samej transakcji lub w różnych transakcjach. W tym drugim przypadku należy zaradzić sobie ze spójnością ostateczną w wielu agregacjach. Ten temat został omówiony w następnej sekcji.
 
@@ -224,7 +224,7 @@ To uzasadnienie opiera się na uwzględnieniu szczegółowych transakcji zamiast
 
 Jednak inni deweloperzy i architekty, takie jak Jimmy Bogard, są w trakcie łączenia jednej transakcji z wieloma agregacjami, ale tylko wtedy, gdy te dodatkowe agregaty są powiązane z efektami ubocznymi tego samego oryginalnego polecenia. Przykładowo w przypadku [lepszego wzorca zdarzeń domeny](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)Bogard brzmi:
 
-> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie podnoszenie poziomu zdarzenia domeny \[...\] tuż przed zatwierdzeniem naszej transakcji, wyślemy nasze zdarzenia do swoich odpowiednie programy obsługi.
+> Zazwyczaj chcę, aby skutki uboczne zdarzenia domeny miały miejsce w ramach tej samej transakcji logicznej, ale niekoniecznie w tym samym zakresie do podniesienia poziomu zdarzenia domeny \[...\] tuż przed zatwierdzeniem naszej transakcji Wysyłamy nasze zdarzenia do odpowiednich programów obsługi.
 
 Jeśli wysyłasz zdarzenia domeny bezpośrednio *przed* zatwierdzeniem oryginalnej transakcji, jest to spowodowane tym, że efekty uboczne tych zdarzeń mają być uwzględnione w tej samej transakcji. Na przykład jeśli metoda EF DbContext metody SaveChanges nie powiedzie się, transakcja wycofa wszystkie zmiany, w tym wynik wszelkich operacji ubocznych wdrożonych przez powiązane procedury obsługi zdarzeń domeny. Wynika to z faktu, że zakres istnienia kontekstu DbContext jest domyślnie zdefiniowany jako "objęty zakresem". W związku z tym obiekt DbContext jest współużytkowany przez wiele obiektów repozytorium, które są tworzone w ramach tego samego zakresu lub grafu obiektów. Ta sama zbieżność z zakresem HttpRequest podczas opracowywania aplikacji sieci Web API lub MVC.
 
@@ -347,13 +347,13 @@ Jak wspomniano, użyj zdarzeń domeny w celu jawnego implementowania efektów ub
 - **Greg Young. Co to jest zdarzenie domeny?** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf#page=25>
 
-- **Jan Stenberg. Zdarzenia domeny i spójność ostateczna** \
+- **Jan Stenberg. Zdarzenia domeny i \ spójności ostatecznej**
   <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard. Lepszy wzorzec zdarzeń domeny** \
   <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
-- **Vaughn Vernon. Efektywna agregowana część II: wykonywanie zagregowanych współdziałania** \
+- **Vaughn Vernon. Efektywna agregowana część II: wykonywanie agregacji współdziała** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Wzmacnianie domeny: zdarzenia domeny** \
@@ -365,7 +365,7 @@ Jak wspomniano, użyj zdarzeń domeny w celu jawnego implementowania efektów ub
 - **UDI Dahan. Jak utworzyć w pełni hermetyzowane modele domen** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
-- **UDI Dahan. Zdarzenia domeny — zajmiemy 2** \
+- **UDI Dahan. Zdarzenia domeny — Zrób 2** \
   <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **UDI Dahan. Zdarzenia domeny — Salvation** \
@@ -379,4 +379,4 @@ Jak wspomniano, użyj zdarzeń domeny w celu jawnego implementowania efektów ub
 
 >[!div class="step-by-step"]
 >[Poprzedni](client-side-validation.md)
->[dalej](infrastructure-persistence-layer-design.md)
+>[Następny](infrastructure-persistence-layer-design.md)

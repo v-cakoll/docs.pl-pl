@@ -1,14 +1,13 @@
 ---
 title: Protobuf wszystkie pola i oneof dla typów wariantów — gRPC dla deweloperów WCF
 description: Dowiedz się, jak używać dowolnego typu i słowa kluczowego oneof do reprezentowania typów obiektów Variant w komunikatach.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846388"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971616"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf wszystkie pola i oneof dla typów wariantów
 
@@ -16,7 +15,7 @@ Obsługa typów właściwości dynamicznych (czyli właściwości typu `object`)
 
 Protobuf udostępnia dwie prostsze opcje do pracy z wartościami, które mogą mieć więcej niż jeden typ. Typ `Any` może reprezentować dowolny znany typ komunikatu protobuf, podczas gdy słowo kluczowe `oneof` pozwala określić, że tylko jeden z zakresów pól można ustawić w danym komunikacie.
 
-## <a name="any"></a>Ile
+## <a name="any"></a>Dowolne
 
 `Any` to jeden z "dobrze znanych typów protobuf": Kolekcja przydatnych typów wiadomości wielokrotnego użytku z implementacjami we wszystkich obsługiwanych językach. Aby użyć typu `Any`, należy zaimportować definicję `google/protobuf/any.proto`.
 
@@ -39,7 +38,7 @@ message ChangeNotification {
 }
 ```
 
-W C# kodzie Klasa`Any`dostarcza metody służące do ustawiania pola, wyodrębniania komunikatu i sprawdzania typu.
+W C# kodzie Klasa `Any` dostarcza metody służące do ustawiania pola, wyodrębniania komunikatu i sprawdzania typu.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)

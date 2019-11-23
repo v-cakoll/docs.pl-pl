@@ -3,18 +3,18 @@ title: Aplikacje kandydujące dla chmury natywnej
 description: Dowiedz się, które typy aplikacji korzystają z podejścia natywnego w chmurze
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 127dca45ce8a5e025ca7511e6513afffe64e592d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087682"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968295"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplikacje kandydujące dla chmury natywnej
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Zobacz aplikacje w portfolio. Ile z nich kwalifikuje się do architektury natywnej w chmurze? Wszystkie z nich? Być może niektóre?
+Zobacz aplikacje w portfolio. Ile z nich kwalifikuje się do architektury natywnej w chmurze? Wszystkie? Być może niektóre?
 
 W przypadku analizy kosztów/korzyści istnieje dobry szansa, że najprawdopodobniej Obsługa znacznika ceny Hefty musi być natywna w chmurze. Koszt chmury w chmurze znacznie przekracza wartość biznesową aplikacji.
 
@@ -89,8 +89,6 @@ Po wprowadzeniu tych informacji szczegółowemy bardziej szczegółowy wgląd w 
 - [Jak Netflix wdraża kod](https://www.infoq.com/news/2013/06/netflix/)
 
 - [Kontrola przeciążenia na potrzeby skalowania mikrousług WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf)
-
-- [Rozwiązanie Raygun — analiza przypadku](https://raygun.com/case-study/ovation)
 
 >[!div class="step-by-step"]
 >[Poprzedni](definition.md)

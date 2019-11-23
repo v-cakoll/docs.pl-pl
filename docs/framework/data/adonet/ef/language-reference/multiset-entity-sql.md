@@ -24,11 +24,11 @@ MULTISET ( expression [{, expression }] )
  `expression`  
  Dowolna prawidłowa lista wartości.  
   
-## <a name="return-value"></a>Wartość zwracana  
- Kolekcja typu zestaw WIELOKROTNy @ no__t-0T >.  
+## <a name="return-value"></a>Wartość zwrócona  
+ Kolekcja zestawu WIELOKROTNego\<T >.  
   
 ## <a name="remarks"></a>Uwagi  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zawiera trzy rodzaje konstruktorów: konstruktory wierszy, konstruktory obiektów oraz konstruktory wielu zestawów (lub kolekcji). Aby uzyskać więcej informacji, zobacz [konstruowanie typów](constructing-types-entity-sql.md).  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] oferuje trzy rodzaje konstruktorów: konstruktory wierszy, konstruktory obiektów i konstruktory wielokrotnego (lub kolekcji). Aby uzyskać więcej informacji, zobacz [konstruowanie typów](constructing-types-entity-sql.md).  
   
  Konstruktor zestawów wielokrotnych tworzy wystąpienie zestawu wielokrotnego z listy wartości. Wszystkie wartości w konstruktorze muszą być zgodnego typu.  
   

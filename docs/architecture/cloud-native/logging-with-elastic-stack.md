@@ -64,7 +64,7 @@ Wyszukiwanie elastyczne to zaawansowany aparat wyszukiwania, który umożliwia i
 
 Komunikaty dziennika, które zostały spreparowane w celu zawierają parametry lub które zostały poddane podzielenia między nimi za pośrednictwem przetwarzania logstash, można zbadać bezpośrednio, ponieważ Elasticsearch zachowuje te informacje.
 
-Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@example.com` pojawia się na rysunku 7-4.
+Zapytanie wyszukujące 10 najważniejszych stron odwiedzonych przez `jill@example.com`znajduje się na rysunku 7-4.
 
 ```
 "query": {

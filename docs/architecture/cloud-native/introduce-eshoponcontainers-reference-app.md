@@ -32,7 +32,7 @@ Zacznijmy od przejrzenia funkcji i wymagań aplikacji. Aplikacja eShopOnContaine
 - Edytuj lub Usuń elementy z koszyka
 - Realizacji
 - Rejestrowanie konta
-- Rejestrowanie
+- Logowanie
 - Wyloguj
 - Przejrzyj zamówienia
 

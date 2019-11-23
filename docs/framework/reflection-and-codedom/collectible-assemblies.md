@@ -51,7 +51,7 @@ Jeśli istnieje tylko jeden element z tej listy tylko dla jednego typu lub jedne
 > [!NOTE]
 > Środowisko uruchomieniowe nie zwalnia zestawu, dopóki nie zostaną uruchomione finalizatory dla wszystkich elementów na liście.
 
-Dla celów śledzenia okresu istnienia, skonstruowany typ ogólny, taki jak `List<int>` C#(in) lub `List(Of Integer)` (w Visual Basic), który jest tworzony i używany w generacji zestawu kolekcjonowanego, jest uznawany za zdefiniowany w zestawie, który zawiera Definicja typu ogólnego lub zestawu, który zawiera definicję jednego z argumentów typu. Dokładny zestaw, który jest używany jest szczegółami implementacji i może ulec zmianie.
+W celach śledzenia okres istnienia, skonstruowany typ ogólny, taki jak `List<int>` C#(in) lub `List(Of Integer)` (w Visual Basic), który jest tworzony i używany w generacji zestawu kolekcjonowanego, jest uznawany za zdefiniowany w zestawie, który zawiera definicję typu ogólnego lub w zestawie, który zawiera definicję jednego z argumentów typu. Dokładny zestaw, który jest używany jest szczegółami implementacji i może ulec zmianie.
  
 ## <a name="restrictions-on-collectible-assemblies"></a>Ograniczenia dotyczące zestawów kolekcjonowanych
 

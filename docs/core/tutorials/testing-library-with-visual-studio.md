@@ -17,7 +17,7 @@ ms.locfileid: "73037966"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Testowanie biblioteki .NET Standard na platformie .NET Core w programie Visual Studio 2017
 
-W obszarze [Kompilowanie biblioteki .NET standard C# z programem i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md) lub [kompilowanie biblioteki .NET Standard z Visual Basic i .net core w programie Visual Studio 2017](vb-library-with-visual-studio.md)utworzono prostą bibliotekę klas, która dodaje metodę rozszerzenia do @no__t_ Klasa 3_. Teraz utworzysz test jednostkowy, aby upewnić się, że działa zgodnie z oczekiwaniami. Należy dodać projekt testu jednostkowego do rozwiązania utworzonego w poprzednim artykule.
+W obszarze [Kompilowanie biblioteki .NET standard C# z programem i .NET Core w programie Visual Studio 2017](library-with-visual-studio.md) lub [kompilowanie biblioteki .NET Standard z Visual Basic i .net core w programie Visual Studio 2017](vb-library-with-visual-studio.md)utworzono prostą bibliotekę klas, która dodaje metodę rozszerzenia do klasy <xref:System.String>. Teraz utworzysz test jednostkowy, aby upewnić się, że działa zgodnie z oczekiwaniami. Należy dodać projekt testu jednostkowego do rozwiązania utworzonego w poprzednim artykule.
 
 ## <a name="creating-a-unit-test-project"></a>Tworzenie projektu testu jednostkowego
 
@@ -52,7 +52,7 @@ Aby utworzyć projekt testu jednostkowego, wykonaj następujące czynności:
 
    ![Menu kontekstowe zależności StringLibraryTest —C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W oknie dialogowym **Menedżer odwołań** rozwiń węzeł **projekty** i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodanie odwołania do zestawu `StringLibrary` umożliwia kompilatorowi znalezienie metod **StringLibrary** . Wybierz przycisk **OK** . Spowoduje to dodanie odwołania do projektu biblioteki klas `StringLibrary`.
+1. W oknie dialogowym **Menedżer odwołań** rozwiń węzeł **projekty** i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodanie odwołania do zestawu `StringLibrary` umożliwia kompilatorowi znalezienie metod **StringLibrary** . Wybierz przycisk **OK**. Spowoduje to dodanie odwołania do projektu biblioteki klas `StringLibrary`.
 
    ![Okno dialogowe Dodawanie odwołania do projektu w programie Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
 
@@ -83,7 +83,7 @@ Aby utworzyć projekt testu jednostkowego, wykonaj następujące czynności:
 
    ![Menu kontekstowe zależności StringLibraryTest](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. W oknie dialogowym **Menedżer odwołań** rozwiń węzeł **projekty** i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodanie odwołania do zestawu `StringLibrary` umożliwia kompilatorowi znalezienie metod **StringLibrary** . Wybierz przycisk **OK** . Spowoduje to dodanie odwołania do projektu biblioteki klas `StringLibrary`.
+1. W oknie dialogowym **Menedżer odwołań** rozwiń węzeł **projekty** i zaznacz pole wyboru obok pozycji **StringLibrary**. Dodanie odwołania do zestawu `StringLibrary` umożliwia kompilatorowi znalezienie metod **StringLibrary** . Wybierz przycisk **OK**. Spowoduje to dodanie odwołania do projektu biblioteki klas `StringLibrary`.
 
    ![Okno dialogowe Dodawanie odwołania do projektu w programie Visual Studio — Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 
@@ -118,7 +118,7 @@ Aby utworzyć metody testowe:
 
    [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
 
-   Należy zauważyć, że test dużych znaków w metodzie `TestStartsWithUpper` obejmuje Wielka litera grecka (U + 0391) i Wielka litera cyrylicy (U + 041C), a test małych znaków w metodzie `TestDoesNotStartWithUpper` obejmuje małą literę alfa (U + 03B1) i mała litera cyrylicy GHE (U + 0433).
+   Należy zauważyć, że test napisanych wielką literą w metodzie `TestStartsWithUpper` obejmuje alfabet grecki (U + 0391) i wielką literę PAUZy (U + 041C), a test małych znaków w metodzie `TestDoesNotStartWithUpper` zawiera małą literę alfa (u + 03B1) i małą literę cyrylicy GHE (U + 0433).
 
 1. Na pasku menu wybierz pozycję **plik** > **Zapisz UnitTest1.cs jako**. W oknie dialogowym **Zapisz plik jako** wybierz strzałkę obok przycisku **Zapisz** , a następnie wybierz pozycję **Zapisz z kodowaniem**.
 
@@ -130,7 +130,7 @@ Aby utworzyć metody testowe:
 
     [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
-   Należy zauważyć, że test dużych znaków w metodzie `TestStartsWithUpper` obejmuje Wielka litera grecka (U + 0391) i Wielka litera cyrylicy (U + 041C), a test małych znaków w metodzie `TestDoesNotStartWithUpper` obejmuje małą literę alfa (U + 03B1) i mała litera cyrylicy GHE (U + 0433).
+   Należy zauważyć, że test napisanych wielką literą w metodzie `TestStartsWithUpper` obejmuje alfabet grecki (U + 0391) i wielką literę PAUZy (U + 041C), a test małych znaków w metodzie `TestDoesNotStartWithUpper` zawiera małą literę alfa (u + 03B1) i małą literę cyrylicy GHE (U + 0433).
 
 1. Na pasku menu wybierz pozycję **plik** > **Zapisz UnitTest1. vb jako**. W oknie dialogowym **Zapisz plik jako** wybierz strzałkę obok przycisku **Zapisz** , a następnie wybierz pozycję **Zapisz z kodowaniem**.
 

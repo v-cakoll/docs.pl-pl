@@ -56,7 +56,7 @@ Pakiet NuGet obsługuje wiele [właściwości metadanych](/nuget/reference/nuspe
 | `PackageTags`                      | `tags`                     | Rozdzielana spacjami Lista tagów i słów kluczowych, które opisują pakiet. Tagi są używane podczas wyszukiwania pakietów.             |
 | `PackageIconUrl`                   | `iconUrl`                  | Adres URL obrazu, który będzie używany jako ikona pakietu. Adres URL powinien być adresem HTTPS, a obraz powinien być 64x64 i mieć przezroczyste tło.             |
 | `PackageProjectUrl`                | `projectUrl`               | Adres URL dla strony głównej projektu lub repozytorium źródłowego.             |
-| `PackageLicenseExpression`         | `license`                  | [Identyfikator SPDX](https://spdx.org/licenses/)licencji projektu. Tylko zatwierdzone licencje OSI i FSF mogą używać identyfikatora. Inne licencje powinny używać `PackageLicenseFile`. Przeczytaj więcej na temat [metadanych `license`](/nuget/reference/nuspec#license). |
+| `PackageLicenseExpression`         | `license`                  | [Identyfikator SPDX](https://spdx.org/licenses/)licencji projektu. Tylko zatwierdzone licencje OSI i FSF mogą używać identyfikatora. Inne licencje powinny używać `PackageLicenseFile`. Przeczytaj więcej na temat [metadanych`license`](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
 > Projekt bez licencji jest domyślnie nieuprawniony do korzystania z [praw autorskich](https://choosealicense.com/no-permission/).

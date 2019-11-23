@@ -11,10 +11,10 @@ ms.locfileid: "70295296"
 ---
 # <a name="designing-and-developing-containerized-apps-using-docker-and-microsoft-azure"></a>Projektowanie i opracowywanie aplikacji kontenerowych przy użyciu platformy Docker i Microsoft Azure
 
-*Została Projektuj i opracowuj skalowalne rozwiązania z rozwiązaniem Docker.*
+*Wizja: projektowanie i opracowywanie skalowalnych rozwiązań z rozwiązaniem Docker.*
 
 *Istnieje wiele doskonałych przypadków użycia dla kontenerów, a nie tylko dla architektury zorientowanej na mikrousługi, ale również wtedy, gdy masz zwykłe usługi lub aplikacje sieci Web do uruchomienia, a chcesz zmniejszyć liczbę problemów między środowiskiem deweloperskim i produkcyjnym komputerów.*
 
 >[!div class="step-by-step"]
->[Poprzedni](../Microsoft-platform-tools-containerized-apps/index.md)Następny
->[](design-docker-applications.md)
+>[Poprzedni](../Microsoft-platform-tools-containerized-apps/index.md)
+>[Następny](design-docker-applications.md)

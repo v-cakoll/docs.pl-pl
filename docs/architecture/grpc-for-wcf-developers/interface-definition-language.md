@@ -1,14 +1,13 @@
 ---
 title: Język definicji interfejsu — gRPC dla deweloperów WCF
 description: Wprowadzenie do buforów protokołu IDL.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 00c73619c5c27003e200385d5f67d8b8b7546f9e
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 1f304502bd0091f753a3d2f7854298f4bbf983f1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846645"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967629"
 ---
 # <a name="interface-definition-language"></a>Język definicji interfejsu
 

@@ -1,5 +1,5 @@
 ---
-title: Wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi
+title: Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 description: Zapoznaj się z wyzwaniami i rozwiązaniami dotyczącymi rozproszonego zarządzania danymi na świecie mikrousług.
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
@@ -9,9 +9,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834457"
 ---
-# <a name="challenges-and-solutions-for-distributed-data-management"></a>Wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi
+# <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania dotyczące rozproszonego zarządzania danymi
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Wyzwanie \#1: jak definiować granice każdej mikrousługi
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Wyzwanie \#1: jak definiować granice poszczególnych mikrousług
 
 Definiowanie granic mikrousług jest prawdopodobnie pierwszym wyzwaniem. Każda mikrousługa musi być częścią aplikacji, a każda mikrousługa powinna być autonomiczna ze wszystkimi korzyściami i wyzwaniami, które przekazuje. Ale jak zidentyfikować te granice?
 
@@ -59,7 +59,7 @@ Ponadto w przypadku transakcji zatwierdzania w stylu KWASowym lub dwufazowym nie
 
 Dobrym rozwiązaniem dla tego problemu jest użycie ostatecznej spójności między mikrousługami przegubowymi przy użyciu komunikacji opartej na zdarzeniach i systemu publikowania i subskrybowania. Te tematy zostały omówione w sekcji [asynchroniczna komunikacja oparta na zdarzeniach](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) w dalszej części tego przewodnika.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Wyzwanie \#4: jak projektować komunikację między granicami mikrousług
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Wyzwanie \#4: projektowanie komunikacji między granicami mikrousług
 
 Komunikacja między granicami mikrousług jest rzeczywistym wyzwaniem. W tym kontekście komunikacja nie odnosi się do używanego protokołu (HTTP i REST, AMQP, Messaging itd.). Zamiast tego określa styl komunikacji, który powinien być używany, a zwłaszcza na to, jak to mikrousługi. W zależności od poziomu sprzęgu, gdy wystąpi awaria, wpływ tego błędu na system różni się znacznie.
 
@@ -77,36 +77,36 @@ Załóżmy na przykład, że aplikacja kliencka wysyła wywołanie interfejsu AP
 
 W rzeczywistości, jeśli wewnętrzne mikrousługi komunikują się przez tworzenie łańcuchów żądań HTTP zgodnie z opisem, można zatwierdzić, że masz wbudowaną aplikację, ale jedną opartą na protokole HTTP między procesami.
 
-W związku z tym w celu wymuszenia autonomii mikrousług i uzyskania lepszej odporności należy zminimalizować wykorzystanie łańcuchów komunikacji żądania/odpowiedzi między mikrousługami. Zaleca się używanie tylko asynchronicznej interakcji komunikacji między mikrousługą, przy użyciu asynchronicznej komunikacji komunikatów i zdarzeń albo za pomocą (asynchroniczne) sondowania HTTP niezależnie od oryginalnego żądania HTTP/ cykl odpowiedzi.
+W związku z tym w celu wymuszenia autonomii mikrousług i uzyskania lepszej odporności należy zminimalizować wykorzystanie łańcuchów komunikacji żądania/odpowiedzi między mikrousługami. Zaleca się używać tylko asynchronicznej interakcji w przypadku komunikacji między mikrousługami przy użyciu asynchronicznej komunikacji komunikatów i zdarzeń albo za pomocą (asynchroniczne) sondowania HTTP niezależnie od oryginalnego żądania HTTP/cyklu odpowiedzi.
 
 Korzystanie z komunikacji asynchronicznej jest wyjaśnione z dodatkowymi szczegółami w dalszej części tego przewodnika w sekcjach [asynchronicznej integracji mikrousług wymusza międzyusługową](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) i [asynchroniczną komunikację opartą na komunikatach](asynchronous-message-based-communication.md).
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Cap theorem** \
+-  \ **zakończenia theorem**
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- @No__t **spójności ostatecznej**— 1
+-  \ **spójności ostatecznej**
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- @No__t o **spójności danych**-1
+-  \er **spójności danych**
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Fowlera Martin. CQRS (Command and Query Responsibility Segregation)**  \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Widok z materiałami** \
+-  \ **widoku z materiałami**
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Charles wiersz. Kwas a BASE: przesunięcie pH przetwarzania transakcji bazy danych** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Kompensowanie transakcji** \
+- **Kompensowanie \ transakcji**
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **UDI Dahan. Składowe zorientowane na usługę** \
+- **UDI Dahan. \ kompozycji zorientowanej na usługę**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[Poprzedni](logical-versus-physical-architecture.md)
->[dalej](identify-microservice-domain-model-boundaries.md)
+>[Następny](identify-microservice-domain-model-boundaries.md)

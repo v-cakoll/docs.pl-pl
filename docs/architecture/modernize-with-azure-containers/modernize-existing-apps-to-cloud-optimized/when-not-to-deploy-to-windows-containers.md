@@ -43,4 +43,4 @@ Aby zapoznać się z dodatkowymi nieobsługiwanymi scenariuszami i żądaniami z
 
 > [!div class="step-by-step"]
 > [Poprzedni](deploy-existing-net-apps-as-windows-containers.md)
-> [dalej](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+> [Następny](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

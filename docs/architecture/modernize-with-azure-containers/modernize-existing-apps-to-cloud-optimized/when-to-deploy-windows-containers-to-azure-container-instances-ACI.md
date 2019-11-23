@@ -36,4 +36,4 @@ Krótko mówiąc, dzięki funkcji ACI można szybko opracowywać aplikacje bez k
 
 > [!div class="step-by-step"]
 > [Poprzedni](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [dalej](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Następny](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

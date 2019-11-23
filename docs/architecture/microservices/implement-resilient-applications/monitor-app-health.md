@@ -284,4 +284,4 @@ Na koniec, Jeśli przechowujesz wszystkie strumienie zdarzeń, możesz użyć pr
 
 >[!div class="step-by-step"]
 >[Poprzedni](implement-circuit-breaker-pattern.md)
->[dalej](../secure-net-microservices-web-applications/index.md)
+>[Następny](../secure-net-microservices-web-applications/index.md)

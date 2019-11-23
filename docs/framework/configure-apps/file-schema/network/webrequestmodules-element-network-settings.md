@@ -15,12 +15,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697463"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules >, element (Ustawienia sieci)
+# <a name="webrequestmodules-element-network-settings"></a>\<element > webRequestModules (Ustawienia sieci)
 Określa moduły, które mają być używane do żądania informacji z hostów sieciowych.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4system. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -50,9 +50,9 @@ Określa moduły, które mają być używane do żądania informacji z hostów s
 |[system.net](system-net-element-network-settings.md)|Zawiera ustawienia, które określają, w jaki sposób .NET Framework nawiązuje połączenie z siecią.|  
   
 ## <a name="remarks"></a>Uwagi  
- Element `webRequestModules` rejestruje elementy podrzędne klasy <xref:System.Net.WebRequest> do obsługi żądań informacji na hostach sieci. Moduły żądania sieci Web muszą implementować interfejs <xref:System.Net.IWebRequestCreate>.  
+ Element `webRequestModules` rejestruje elementy podrzędne klasy <xref:System.Net.WebRequest> do obsługi żądań informacji do hostów sieciowych. Moduły żądania sieci Web muszą implementować interfejs <xref:System.Net.IWebRequestCreate>.  
   
- .NET Framework obejmuje moduły żądania sieci Web dla identyfikatorów URI zaczynających się od `http://`, `https://` i `file://`. Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracji.  
+ .NET Framework obejmuje moduły żądania sieci Web dla identyfikatorów URI zaczynających się od `http://`, `https://`i `file://`. Moduły domyślne można zastąpić tylko przez zarejestrowanie modułu niestandardowego w pliku konfiguracji.  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Tego elementu można użyć w pliku konfiguracyjnym aplikacji lub pliku konfiguracji komputera (Machine. config).  

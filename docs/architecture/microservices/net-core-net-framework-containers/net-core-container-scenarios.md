@@ -52,5 +52,5 @@ Gdy system oparty na kontenerach wymaga najlepszej możliwej gęstości, szczeg�
 Jest to szczególnie istotne w przypadku architektury mikrousług, w których można korzystać z setek mikrousług (kontenerów). W przypadku obrazów ASP.NET Core (opartych na środowisku uruchomieniowym .NET Core) w systemie Linux lub Windows nano można uruchomić system z znacznie mniejszą liczbą serwerów lub maszyn wirtualnych, co ostatecznie oszczędza koszty infrastruktury i hostingu.
 
 >[!div class="step-by-step"]
->[Poprzedni](general-guidance.md)Następny
->[](net-framework-container-scenarios.md)
+>[Poprzedni](general-guidance.md)
+>[Następny](net-framework-container-scenarios.md)

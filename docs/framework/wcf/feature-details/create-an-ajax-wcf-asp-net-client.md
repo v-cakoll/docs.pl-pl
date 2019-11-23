@@ -17,9 +17,9 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Otwórz program Visual Studio.
 
-1. Z menu **plik** wybierz pozycję **Nowy** > **projekt**
+1. Z menu **plik** wybierz pozycję **Nowy** **projekt** > 
 
-1. W oknie dialogowym **Nowy projekt** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET (.NET Framework)** .
+1. W oknie dialogowym **Nowy projekt** rozwiń kategorię **zainstalowana** > **Visual C#**  > **Web** , a następnie wybierz pozycję **aplikacja sieci Web ASP.NET (.NET Framework)** .
 
 1. Nadaj projektowi nazwę **SandwichServices** i kliknij przycisk **OK**.
 
@@ -31,13 +31,13 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Kliknij prawym przyciskiem myszy projekt SandwichServices w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz szablon **formularza sieci Web** .
+1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną** > **Visual C#**  > **Web** , a następnie wybierz szablon **formularza sieci Web** .
 
 1. Zaakceptuj nazwę domyślną (**WebForm1**), a następnie wybierz pozycję **Dodaj**.
 
    W widoku **źródła** zostanie otwarty *formularz WebForm1. aspx* .
 
-1. Dodaj następujący znacznik wewnątrz tagów **@no__t 1body >** :
+1. Dodaj następujący znacznik w **\<treści >** tagów:
 
    ```html
    <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
@@ -49,7 +49,7 @@ W tym temacie przedstawiono sposób użycia programu Visual Studio do utworzenia
 
 1. Kliknij prawym przyciskiem myszy projekt SandwichServices w **Eksplorator rozwiązań** a następnie wybierz pozycję **Dodaj** > **nowy element**.
 
-1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną**@no__t-**2 C#Visual**  >  dla**sieci Web** , a następnie wybierz szablon **usługi WCF (z włączoną obsługą technologii AJAX)** .
+1. W oknie dialogowym **Dodaj nowy element** rozwiń kategorię **zainstalowaną** > **Visual C#**  > **Web** , a następnie wybierz szablon **usługi WCF (z włączoną obsługą technologii AJAX)** .
 
    ![Szablon elementu usługi WCF (z obsługą technologii AJAX) w programie Visual Studio](./media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
 

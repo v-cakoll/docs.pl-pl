@@ -33,11 +33,11 @@ Każda z tych mikrousług kompozycji jest podobna do niewielkiej bramy interfejs
 
 Złożone podejście interfejsu użytkownika, które jest oparte na mikrousługach, może być bardziej trudne lub mniejsze, w zależności od tego, jakie technologie interfejsu użytkownika są używane. Na przykład nie będziesz używać tych samych technik do kompilowania tradycyjnej aplikacji sieci Web, która jest używana do tworzenia SPA lub natywnej aplikacji mobilnej (np. podczas tworzenia aplikacji platformy Xamarin, które mogą być bardziej trudne dla tego podejścia).
 
-Przykładowa aplikacja [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) używa podejścia interfejsu użytkownika monolitycznego z wielu powodów. Po pierwsze jest to wprowadzenie do mikrousług i kontenerów. Złożony interfejs użytkownika jest bardziej zaawansowany, ale wymaga również dalszej złożoności podczas projektowania i opracowywania interfejsu użytkownika. Ponadto eShopOnContainers zapewnia natywną aplikację mobilną opartą na oprogramowaniu Xamarin, która czyni ją bardziej skomplikowaną na kliencie C @ no__t-0.
+Przykładowa aplikacja [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) używa podejścia interfejsu użytkownika monolitycznego z wielu powodów. Po pierwsze jest to wprowadzenie do mikrousług i kontenerów. Złożony interfejs użytkownika jest bardziej zaawansowany, ale wymaga również dalszej złożoności podczas projektowania i opracowywania interfejsu użytkownika. Ponadto eShopOnContainers udostępnia natywną aplikację mobilną opartą na platformie Xamarin, która czyni ją bardziej skomplikowaną na stronie klienta C\#.
 
 Zachęcamy jednak do korzystania z następujących odwołań, aby dowiedzieć się więcej na temat złożonego interfejsu użytkownika w oparciu o mikrousługi.
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Micro frontony (blog Martin Fowlera)**  
   <https://martinfowler.com/articles/micro-frontends.html>
@@ -62,4 +62,4 @@ Zachęcamy jednak do korzystania z następujących odwołań, aby dowiedzieć si
 
 >[!div class="step-by-step"]
 >[Poprzedni](microservices-addressability-service-registry.md)
->[dalej](resilient-high-availability-microservices.md)
+>[Następny](resilient-high-availability-microservices.md)

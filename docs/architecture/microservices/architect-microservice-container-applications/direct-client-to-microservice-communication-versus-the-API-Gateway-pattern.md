@@ -81,7 +81,7 @@ Należy zachować ostrożność podczas implementowania wzorca interfejsu API. Z
 
 W związku z tym bramy interfejsu API powinny być segregowane na podstawie granic firmy i aplikacji klienckich, a nie działają jako pojedyncze agregatory dla wszystkich mikrousług wewnętrznych.
 
-Podczas dzielenia warstwy bramy interfejsu API na wiele bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienckich, które mogą być głównym obszarem wystawcy podczas identyfikowania wielu typów bram interfejsu API, dzięki czemu można mieć inną fasadę dla potrzeb każdej aplikacji klienckiej. Ten przypadek jest wzorcem o nazwie "zaplecze dla frontonu" ([BFF](https://samnewman.io/patterns/architectural/bff/)), gdzie każda Brama interfejsu API może zapewnić inny interfejs API dostosowany do każdego typu aplikacji klienta, prawdopodobnie nawet w oparciu o współczynnik formularza klienta przez zaimplementowanie określonego kodu karty, który jest zgodny z wywołaniami wiele mikrousług wewnętrznych, jak pokazano na poniższej ilustracji:
+Podczas dzielenia warstwy bramy interfejsu API na wiele bram interfejsu API, jeśli aplikacja ma wiele aplikacji klienckich, które mogą być głównym obszarem wystawcy podczas identyfikowania wielu typów bram interfejsu API, dzięki czemu można mieć inną fasadę dla potrzeb każdej aplikacji klienckiej. Ten przypadek jest wzorcem o nazwie "zaplecze dla frontonu" ([BFF](https://samnewman.io/patterns/architectural/bff/)), gdzie każda Brama interfejsu API może zapewnić inny interfejs API dostosowany do każdego typu aplikacji klienta, prawdopodobnie nawet w oparciu o współczynnik formularza klienta przez zaimplementowanie określonego kodu karty, który jest zgodny z wieloma mikrousługami wewnętrznymi, jak pokazano na poniższej ilustracji:
 
 ![Diagram przedstawiający wiele niestandardowych bram interfejsu API.](./media/direct-client-to-microservice-communication-versus-the-API-Gateway-pattern/multiple-custom-api-gateways.png)
 
@@ -132,7 +132,7 @@ W zależności od implementacji można uzyskać wiele dodatkowych zagadnień zwi
 
 **Rysunek 4-14**. Korzystanie z API Management platformy Azure dla bramy interfejsu API
 
-Usługa Azure API Management rozwiązuje zarówno bramę interfejsu API, jak i potrzeby związane z zarządzaniem, takie jak rejestrowanie, zabezpieczenia, pomiary itp. W tym przypadku, gdy korzystasz z produktu, takiego jak Azure API Management, oznacza to, że użytkownik może mieć pojedynczą bramę interfejsu API, ponieważ nie jest to ryzykowne, ponieważ tego rodzaju bramy interfejsu API są "cieńsze" C# , co oznacza, że nie implementuje niestandardowego kodu, który może się rozwijać monolityczny składnik.
+Usługa Azure API Management rozwiązuje zarówno bramę interfejsu API, jak i potrzeby związane z zarządzaniem, takie jak rejestrowanie, zabezpieczenia, pomiary itp. W tym przypadku, gdy korzystasz z produktu, takiego jak Azure API Management, oznacza to, że użytkownik może mieć pojedynczą bramę interfejsu API, co nie jest ryzykowne, ponieważ tego rodzaju bramy interfejsu API są "cieńsze", C# co oznacza, że nie implementuje niestandardowego kodu, który może się rozwijać do składnika monolitycznego.
 
 Produkty bramy interfejsu API zwykle działają podobnie jak zwrotny serwer proxy dla komunikacji przychodzącej, gdzie można również filtrować interfejsy API z wewnętrznych mikrousług i stosować autoryzację do opublikowanych interfejsów API w tej pojedynczej warstwie.
 
@@ -146,7 +146,7 @@ W tym przewodniku i aplikacji przykładowej odniesienia (eShopOnContainers) arch
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) to uproszczona Brama interfejsu API, zalecana dla uproszczenia podejścia. Ocelot to brama interfejsu API typu open source oparta na platformie .NET Core, szczególnie dla architektury mikrousług, która wymaga ujednoliconych punktów wejścia w ich system. Jest to uproszczone, szybkie i skalowalne oraz zapewnia Routing i uwierzytelnianie między wieloma innymi funkcjami.
 
-Głównym powodem wyboru Ocelot [aplikacji referencyjnej eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) jest fakt, że Ocelot jest bramą interfejsu API platformy .NET Core, którą można wdrożyć w tym samym środowisku wdrażania aplikacji, w którym są wdrażane mikrousługi/ kontenery, takie jak Host platformy Docker, Kubernetes itp. I ponieważ jest ona oparta na platformie .NET Core, to na wielu platformach można wdrożyć w systemie Linux lub Windows.
+Głównym powodem wyboru Ocelot [aplikacji referencyjnej eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) jest fakt, że Ocelot jest bramą interfejsu API platformy .NET Core, którą można wdrożyć w tym samym środowisku wdrażania aplikacji, w którym są wdrażane mikrousługi/kontenery, takie jak Host platformy Docker, Kubernetes itp. I ponieważ jest ona oparta na platformie .NET Core, to na wielu platformach można wdrożyć w systemie Linux lub Windows.
 
 Poprzednie diagramy pokazujące niestandardowe bramy interfejsu API działające w kontenerach są precyzyjnie, jak można także uruchomić Ocelot w aplikacji opartej na kontenerach i mikrousługach.
 
@@ -170,13 +170,13 @@ Po wstępnym rozpoczęciu architektury i wzorców sekcjach w następnych sekcjac
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Krzysztof Richardson. Wzorzec: Brama interfejsu API/zaplecze dla frontonu**  \
+- **Krzysztof Richardson. Wzorzec: Brama interfejsu API/zaplecze dla frontonu** \
   <https://microservices.io/patterns/apigateway.html>
 
-- **Wzorzec bramy interfejsu API**  \
+- **Wzorzec bramy interfejsu API** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Agregacja i wzorzec kompozycji**  \
+- **Agregacja i wzorzec kompozycji** \
   <https://microservices.io/patterns/data/api-composition.html>
 
 -  \ **API Management platformy Azure**

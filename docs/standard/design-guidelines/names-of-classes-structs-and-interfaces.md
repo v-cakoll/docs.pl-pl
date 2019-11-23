@@ -35,11 +35,11 @@ Poniższe wskazówki dotyczące nazewnictwa mają zastosowanie do ogólnego naze
   
  **✓ CONSIDER** kończy nazwę klasy o nazwie klasy podstawowej pochodne.  
   
- Jest to bardzo czytelne i jasno wyjaśniono relację. Oto kilka przykładów tego kodu: `ArgumentOutOfRangeException`, który jest rodzajem `Exception` i `SerializableAttribute`, który jest rodzajem `Attribute`. Jednak ważne jest, aby użyć odpowiednich orzeczeń w zastosowaniu niniejszych wytycznych; na przykład Klasa `Button` jest rodzajem zdarzenia `Control`, chociaż `Control` nie pojawia się w jego nazwie.  
+ Jest to bardzo czytelne i jasno wyjaśniono relację. Przykładami tego kodu jest: `ArgumentOutOfRangeException`, który jest rodzajem `Exception`i `SerializableAttribute`, który jest rodzajem `Attribute`. Jednak ważne jest, aby użyć odpowiednich orzeczeń w zastosowaniu niniejszych wytycznych; na przykład Klasa `Button` jest rodzajem zdarzenia `Control`, chociaż `Control` nie pojawia się w jego nazwie.  
   
  **✓ DO** interfejsu prefiksu nazwy z literą I, aby wskazać, że typ jest interfejsem.  
   
- Na przykład, `IComponent` (opis rzeczownik), `ICustomAttributeProvider` (phrase rzeczownik) i `IPersistable` (przymiotnik) są odpowiednimi nazwami interfejsów. Podobnie jak w przypadku innych nazw typów, należy unikać skrótów.  
+ Na przykład, `IComponent` (rzeczownik opisowy), `ICustomAttributeProvider` (phrase rzeczownik) i `IPersistable` (przymiotnik) są odpowiednimi nazwami interfejsów. Podobnie jak w przypadku innych nazw typów, należy unikać skrótów.  
   
  **✓ DO** upewnij się, że nazwy są różne tylko przez "I" prefiksu nazwy interfejsu podczas definiowania parę klasy — interfejs klasy w przypadku standardowej implementacji interfejsu.  
   
@@ -78,7 +78,7 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 |`System.EventArgs`|**✓ DO** dodać sufiks "EventArgs."|  
 |`System.Enum`|**X DO NOT** pochodzi od tej klasy; użyj słowa kluczowego zamiast obsługiwane przez język; na przykład w języku C#, użyj `enum` — słowo kluczowe.<br /><br /> **X DO NOT** dodać sufiks "Enum" lub "Flaga".|  
 |`System.Exception`|**✓ DO** dodać sufiks "Wyjątku."|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** dodać sufiks "Słownik". Należy pamiętać, że `IDictionary` jest określonym typem kolekcji, ale wskazówki te mają pierwszeństwo przed bardziej ogólnymi wskazówkami dotyczącymi kolekcji.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** dodać sufiks "Słownik". Należy zauważyć, że `IDictionary` jest określonym typem kolekcji, ale wskazówki te mają pierwszeństwo przed bardziej ogólnymi wskazówkami dotyczącymi kolekcji.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** dodać sufiksem "Collection".|  
 |`System.IO.Stream`|**✓ DO** dodać sufiks "Strumień".|  
 |`CodeAccessPermission IPermission`|**✓ DO** dodać sufiks "Uprawnienia."|  
@@ -96,9 +96,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** Użyj prefiksu nazwy wartości wyliczenia (np. "ad" do wyliczenia obiektów ADO.), "format rtf" dla wyliczenia RTF itd.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Reprinted przez uprawnienie Pearson Education, Inc. od [Framework — wytyczne dotyczące projektowania: Konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, druga wersja @ no__t-0 przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
+ *Ponownie Wydrukowano przez uprawnienie Pearson Education, Inc. z [wytycznych dotyczących projektowania platformy: konwencje, idiomy i wzorce dla bibliotek .NET do wielokrotnego użytku, 2. wydanie](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) przez Krzysztof Cwalina i Brad Abrams, opublikowane 22, 2008 przez Addison-Wesley Professional w ramach serii Microsoft Windows Development.*  
   
 ## <a name="see-also"></a>Zobacz także
 

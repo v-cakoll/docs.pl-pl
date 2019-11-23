@@ -25,7 +25,7 @@ Zestaw .NET Core SDK nie jest zgodna z wersją semantyczną. Zestaw .NET Core SD
 
 Trzecia pozycja numeru wersji zestawu SDK komunikuje się zarówno z literą, jak i numerem poprawki. Wersja pomocnicza jest mnożona przez 100. Wersja pomocnicza 1, Poprawka wersja 2 byłaby reprezentowana jako 102. Ostatnie dwie cyfry reprezentują numer poprawki. Na przykład wydanie programu .NET Core 2,2 może tworzyć wersje, takie jak Następująca tabela:
 
-| Change                | Środowisko uruchomieniowe platformy .NET Core | Zestaw .NET Core SDK (*) |
+| Zmiana                | Środowisko uruchomieniowe platformy .NET Core | Zestaw .NET Core SDK (*) |
 |-----------------------|-------------------|-------------------|
 | Wersja początkowa       | 2.2.0             | 2.2.100           |
 | Poprawka zestawu SDK             | 2.2.0             | 2.2.101           |
@@ -43,13 +43,13 @@ Więcej szczegółów można znaleźć w wstępnej propozycji w repozytorium [do
 
 ## <a name="semantic-versioning"></a>Wersja semantyczna
 
-*Środowisko uruchomieniowe* programu .NET Core jest w przybliżeniu zgodne z [wersją semantyki (SemVer)](https://semver.org/)@no__t, przy użyciu różnych części numeru wersji do opisania stopnia i typu zmiany.
+*Środowisko uruchomieniowe* programu .NET Core jest w przybliżeniu zgodne z [wersją semantyki (SemVer)](https://semver.org/)`MAJOR.MINOR.PATCH`, przy użyciu różnych części numeru wersji do opisania stopnia i typu zmiany.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 ```
 
-Opcjonalne części `PRERELEASE` i `BUILDNUMBER` nigdy nie są częścią obsługiwanych wersji i istnieją tylko w przypadku nocnych kompilacji, lokalne kompilacje ze źródłowych elementów docelowych i nieobsługiwane wersje zapoznawcze.
+Opcjonalne `PRERELEASE` i `BUILDNUMBER` części nigdy nie są częścią obsługiwanych wersji i istnieją tylko w przypadku nocnych kompilacji, lokalne kompilacje ze źródłowych elementów docelowych i nieobsługiwane wersje zapoznawcze.
 
 ### <a name="understand-runtime-version-number-changes"></a>Informacje o zmianach numeru wersji środowiska uruchomieniowego
 
@@ -58,20 +58,20 @@ Opcjonalne części `PRERELEASE` i `BUILDNUMBER` nigdy nie są częścią obsłu
 - Wprowadzono znaczące zmiany w produkcie lub nowy kierunek produktu.
 - Wprowadzono istotne zmiany. Istnieje wysoki poziom akceptowania istotnych zmian.
 - Stara wersja nie jest już obsługiwana.
-- Zostanie przyjęta nowsza wersja `MAJOR` istniejącej zależności.
+- Przyjęto nowszą wersję `MAJOR` istniejącej zależności.
 
 `MINOR` jest zwiększana, gdy:
 
 - Dodano publiczny obszar powierzchni interfejsu API.
 - Zostanie dodane nowe zachowanie.
-- Zostanie przyjęta nowsza wersja `MINOR` istniejącej zależności.
+- Przyjęto nowszą wersję `MINOR` istniejącej zależności.
 - Zostanie wprowadzona nowa zależność.
 
 `PATCH` jest zwiększana, gdy:
 
 - Wprowadzono poprawki błędów.
 - Dodano obsługę nowszej platformy.
-- Zostanie przyjęta nowsza wersja `PATCH` istniejącej zależności.
+- Przyjęto nowszą wersję `PATCH` istniejącej zależności.
 - Jakakolwiek inna zmiana nie pasuje do jednego z poprzednich przypadków.
 
 W przypadku zmiany wielu zmian najwyższy element, na który wpływają poszczególne zmiany, jest zwiększany, a następujące są resetowane do zera. Na przykład gdy `MAJOR` jest zwiększana, `MINOR` i `PATCH` są resetowane do zera. Gdy `MINOR` jest zwiększana, `PATCH` jest resetowana do zera, podczas gdy `MAJOR` pozostanie nienaruszony.
@@ -82,17 +82,17 @@ Pliki pobrane dla platformy .NET Core przenoszą wersję, na przykład `dotnet-s
 
 ### <a name="preview-versions"></a>Wersje zapoznawcze
 
-Wersje zapoznawcze mają dołączoną do wersji `-preview[number]-([build]|"final")`. Na przykład `2.0.0-preview1-final`.
+Wersje zapoznawcze mają `-preview[number]-([build]|"final")` dołączone do wersji. Na przykład `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Wersje obsługi
 
-Po wyjściu z wersji, gałęzie wydań zwykle zatrzymują codzienne kompilacje i zamiast tego uruchamiają kompilacje obsługi. Wersje obsługi mają dołączoną do wersji `-servicing-[number]`. Na przykład `2.0.1-servicing-006924`.
+Po wyjściu z wersji, gałęzie wydań zwykle zatrzymują codzienne kompilacje i zamiast tego uruchamiają kompilacje obsługi. Wersje obsługi mają `-servicing-[number]` dołączone do wersji. Na przykład `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Relacja z wersjami .NET Standard
 
 .NET Standard składa się z zestawu odwołań platformy .NET. Istnieje wiele implementacji specyficznych dla każdej platformy. Zestaw odwołań zawiera definicję interfejsów API platformy .NET, które są częścią danej .NET Standard wersji. Każda implementacja spełnia umowę .NET Standard na określonej platformie. Więcej informacji na temat .NET Standard można znaleźć w artykule na [.NET Standard](../../standard/net-standard.md) w przewodniku po platformie .NET.
 
-Zestaw odwołań .NET Standard używa schematu obsługi wersji `MAJOR.MINOR`. poziom `PATCH` nie jest przydatny dla .NET Standard, ponieważ uwidacznia on tylko specyfikację interfejsu API (bez implementacji) i według definicji jakakolwiek zmiana w interfejsie API będzie reprezentować zmianę w zestawie funkcji, a w związku z tym nową wersję `MINOR`.
+Zestaw odwołań .NET Standard używa schematu obsługi wersji `MAJOR.MINOR`. poziom `PATCH` nie jest użyteczny w przypadku .NET Standard, ponieważ uwidacznia tylko specyfikację interfejsu API (bez implementacji) i według definicji jakakolwiek zmiana w interfejsie API będzie reprezentować zmianę zestawu funkcji, a tym samym nową wersję `MINOR`.
 
 Implementacje na każdej platformie mogą być aktualizowane, zazwyczaj jako część wersji platformy, i nie są widoczne dla programistów używających .NET Standard na tej platformie.
 
@@ -102,14 +102,14 @@ Każda wersja programu .NET Core implementuje wersję .NET Standard. Zaimplement
 |-----------|---------------|
 | 1.0       | do 1,6     |
 | 2.0       | do 2,0     |
-| 2,1       | do 2,0     |
-| 2,2       | do 2,0     |
+| 2.1       | do 2,0     |
+| 2.2       | do 2,0     |
 | 3.0       | do 2,1     |
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Platformy docelowe](../../standard/frameworks.md)
-- [Pakowanie dystrybucji .NET Core](../build/distribution-packaging.md)
+- [Tworzenie pakietów dystrybucji platformy .NET Core](../build/distribution-packaging.md)
 - [Arkusz faktów cyklu życia obsługi .NET Core](https://dotnet.microsoft.com/platform/support/policy)
 - [Powiązanie z platformą .NET Core 2 +](https://github.com/dotnet/designs/issues/3)
 - [Obrazy platformy Docker dla programu .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/)

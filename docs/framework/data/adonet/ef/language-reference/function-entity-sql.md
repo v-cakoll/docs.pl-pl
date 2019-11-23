@@ -36,12 +36,12 @@ FUNCTION function-name
  Nazwa parametru w funkcji.  
   
  `function_expression`  
- Prawidłowe wyrażenie Entity SQL, które jest funkcją. Polecenie w funkcji może działać na `parameter_name` parametrów przekazano do funkcji.  
+ Prawidłowe wyrażenie Entity SQL, które jest funkcją. Polecenie w funkcji może działać na `parameter_name` parametry przesłane do funkcji.  
   
  `data_type`  
  Nazwa obsługiwanego typu.  
   
- Kolekcja (< type_definition @ no__t-0)  
+ Kolekcja (< type_definition`>`)  
  Wyrażenie zwracające kolekcję obsługiwanych typów, wierszy lub odwołań.  
   
  REF **(** `data_type` **)**  
@@ -66,12 +66,12 @@ FUNCTION function-name
  Funkcje mogą być również deklarowane w samym modelu. Funkcje zadeklarowane w modelu są wykonywane w taki sam sposób jak funkcje zadeklarowane jako wbudowane w poleceniu. Aby uzyskać więcej informacji, zobacz [funkcje zdefiniowane przez użytkownika](user-defined-functions-entity-sql.md).  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie Entity SQL definiuje funkcję `Products`, która pobiera liczbę całkowitą do odfiltrowania zwróconych produktów.  
+ Następujące polecenie Entity SQL definiuje funkcję, `Products` która pobiera wartość całkowitą do odfiltrowania zwróconych produktów.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
 ## <a name="example"></a>Przykład  
- Następujące polecenie Entity SQL definiuje funkcję `StringReturnsCollection`, która pobiera kolekcję ciągów do filtrowania zwróconych kontaktów.  
+ Następujące polecenie Entity SQL definiuje funkcję, `StringReturnsCollection` która pobiera kolekcję ciągów do filtrowania zwróconych kontaktów.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   

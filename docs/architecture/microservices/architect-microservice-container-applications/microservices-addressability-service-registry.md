@@ -19,15 +19,15 @@ W przypadku niektórych środowisk wdrażania mikrousług (nazywanych klastrami,
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Krzysztof Richardson. Znaczne Rejestr usługi** \
+- **Krzysztof Richardson. Wzorzec: \ rejestru usługi**
   <https://microservices.io/patterns/service-registry.html>
 
-- **Rozwiązanie Auth0. Rejestr usługi** \
+- **Rozwiązanie Auth0. \ rejestru usługi**
   <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
-- **Gabriel Schenker. Odnajdowanie usług** \
+- **Gabriel Schenker. \ odnajdowania usług**
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
->[Poprzedni](maintain-microservice-apis.md)Następny
->[](microservice-based-composite-ui-shape-layout.md)
+>[Poprzedni](maintain-microservice-apis.md)
+>[Następny](microservice-based-composite-ui-shape-layout.md)

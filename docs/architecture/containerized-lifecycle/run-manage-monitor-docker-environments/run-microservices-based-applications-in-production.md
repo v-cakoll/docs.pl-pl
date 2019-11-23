@@ -32,5 +32,5 @@ Gdy aplikacje są skalowane w wielu systemach hosta, możliwość zarządzania k
 Możliwości zapewniane przez koordynatorów i harmonogramów są skomplikowane do tworzenia i opracowywania od podstaw, dlatego zazwyczaj warto używać rozwiązań aranżacji oferowanych przez dostawców.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](manage-production-docker-environments.md)
+>[Poprzedni](index.md)
+>[Następny](manage-production-docker-environments.md)

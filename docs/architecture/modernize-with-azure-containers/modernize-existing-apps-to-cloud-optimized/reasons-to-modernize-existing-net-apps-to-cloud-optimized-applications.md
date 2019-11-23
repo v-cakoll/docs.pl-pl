@@ -67,4 +67,4 @@ W poniższych sekcjach te korzyści zostały omówione bardziej szczegółowo i 
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Następny](microsoft-technologies-in-cloud-optimized-applications.md)

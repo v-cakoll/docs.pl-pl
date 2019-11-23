@@ -44,12 +44,12 @@ Istnieje tylko jedna architektura aplikacji: architektura projektowania aplikacj
 - **Fowlera Martin. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young. CQRS dokumenty** \
+- **Greg Young. \ dokumenty CQRS**
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan. Wyjaśniono CQRS** \
+- **UDI Dahan. Wyjaśniono \ CQRS**
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[Poprzedni](apply-simplified-microservice-cqrs-ddd-patterns.md)Następny
->[](cqrs-microservice-reads.md)
+>[Poprzedni](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Następny](cqrs-microservice-reads.md)

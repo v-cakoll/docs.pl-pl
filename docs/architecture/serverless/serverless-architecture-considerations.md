@@ -55,7 +55,7 @@ Sekwencja zmian zapewnia, że starszy kod będzie nadal działać "w stanie taki
 
 Aby uzyskać więcej informacji na temat danych w architekturach bezserwerowych, zobacz [wyzwania i rozwiązania dotyczące rozproszonego zarządzania danymi](../microservices/architect-microservice-container-applications/distributed-data-management.md).
 
-## <a name="scaling"></a>Ponowne
+## <a name="scaling"></a>Skalowanie
 
 Jest to typowa koncepcja, która bezserwerowo oznacza "Brak serwera". Jest to fakt "mniej serwera". Fakt, że istnieje infrastruktura zapasowa, jest ważne, aby zrozumieć, Kiedy przejdziesz do skalowania. Większość platform bezserwerowych udostępnia zestaw kontrolek do obsługi skalowalności infrastruktury, gdy zwiększa się gęstość zdarzeń. Można wybrać jedną z wielu opcji, ale strategia może się różnić w zależności od funkcji. Ponadto funkcje są zwykle uruchamiane w ramach pokrewnego hosta, dzięki czemu funkcje na tym samym hoście mają takie same opcje skalowania. W związku z tym konieczna jest organizacja i ułożeniu, które funkcje są hostowane razem na podstawie wymagań dotyczących skali.
 
@@ -83,4 +83,4 @@ Główną zaletą bezserwerową jest możliwość uaktualnienia określonej funk
 
 >[!div class="step-by-step"]
 >[Poprzedni](serverless-architecture.md)
->[dalej](serverless-design-examples.md)
+>[Następny](serverless-design-examples.md)

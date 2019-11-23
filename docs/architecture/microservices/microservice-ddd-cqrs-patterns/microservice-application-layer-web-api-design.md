@@ -35,7 +35,7 @@ Zajmiemy się kolejnymi szczegółami. W związku z tym ten przewodnik wymaga po
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **WYPEŁNIONE Podstawowe zasady OOP** \
+- **Stałe: podstawowe zasady OOP** \
   <https://deviq.com/solid/>
 
 - **Niewersja kontenerów sterowania i wzorzec iniekcji zależności** \
@@ -45,5 +45,5 @@ Zajmiemy się kolejnymi szczegółami. W związku z tym ten przewodnik wymaga po
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
-> [Poprzedni](nosql-database-persistence-infrastructure.md)Następny
-> [](microservice-application-layer-implementation-web-api.md)
+> [Poprzedni](nosql-database-persistence-infrastructure.md)
+> [Następny](microservice-application-layer-implementation-web-api.md)

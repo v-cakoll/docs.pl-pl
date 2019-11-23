@@ -71,4 +71,4 @@ Jak pokazano również na rysunku 4-4, przepływ publikowania wypychanie obrazu 
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](docker-application-state-data.md)
+>[Następny](docker-application-state-data.md)

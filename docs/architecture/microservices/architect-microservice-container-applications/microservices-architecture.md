@@ -41,18 +41,18 @@ Poniżej przedstawiono ważne aspekty umożliwiające pomyślne przechodzenie do
 
 Z tych wskazówek tylko pierwsze trzy zostały omówione lub wprowadzone w tym przewodniku. Ostatnie dwa punkty, które są związane z cyklem życia aplikacji, zostały omówione w dodatkowym [cyklu życia aplikacji platformy Docker z platformą i narzędziami firmy Microsoft](https://aka.ms/dockerlifecycleebook) .
 
-## <a name="additional-resources"></a>Zasoby dodatkowe
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Oznacz Russinovich. Mikrousługi: obroty aplikacji obsługiwane przez @no__t w chmurze**— 1
+- **Oznacz Russinovich. Mikrousługi: obroty aplikacji obsługiwane przez \ chmury**
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Fowlera Martin. Mikrousługi** \
+- **Fowlera Martin. \ mikrousług**
   <https://www.martinfowler.com/articles/microservices.html>
 
 - **Fowlera Martin. Wymagania wstępne mikrousług** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Przetwarzanie w chmurze fragmentu** \
+- **Jimmy Nilsson. \ przetwarzania w chmurze fragmentów**
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
 - **Cesar de La Torre. Cykl życia aplikacji platformy Docker w kontenerze z platformą i narzędziami firmy Microsoft (do** pobrania książek elektronicznych) \
@@ -60,4 +60,4 @@ Z tych wskazówek tylko pierwsze trzy zostały omówione lub wprowadzone w tym p
 
 >[!div class="step-by-step"]
 >[Poprzedni](service-oriented-architecture.md)
->[dalej](data-sovereignty-per-microservice.md)
+>[Następny](data-sovereignty-per-microservice.md)

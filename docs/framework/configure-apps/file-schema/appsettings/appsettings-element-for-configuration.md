@@ -21,7 +21,7 @@ ms.locfileid: "73119268"
 Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekcja konfiguracji udostępniona przez .NET Framework.
 
 [ **\<> konfiguracji**](../configuration-element.md)   
-&nbsp;&nbsp; **\<appSettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -47,9 +47,9 @@ Zawiera niestandardowe ustawienia aplikacji. Jest to wstępnie zdefiniowana sekc
 
 |     | Opis |
 | --- | ----------- |
-| [ **\<Dodaj >** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
-| [ **\<Wyczyść >** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
-| [ **\<Usuń >** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
+| [ **\<add>** ](add-element-for-appsettings.md) | Dodaje niestandardowe ustawienie aplikacji. |
+| [ **\<clear>** ](clear-element-for-appsettings.md) | Czyści wszystkie wcześniej zdefiniowane ustawienia aplikacji. |
+| [ **\<remove>** ](remove-element-for-appsettings.md) | Usuwa poprzednio zdefiniowane ustawienie aplikacji. |
 
 ## <a name="remarks"></a>Uwagi
 

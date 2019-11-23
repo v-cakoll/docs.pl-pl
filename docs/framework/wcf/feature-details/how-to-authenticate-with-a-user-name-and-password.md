@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: uwierzytelnianie za pomocą nazwy użytkownika i hasła'
+title: 'Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
@@ -11,7 +11,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834734"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: uwierzytelnianie za pomocą nazwy użytkownika i hasła
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
 
 W tym temacie przedstawiono sposób włączania usługi Windows Communication Foundation (WCF) do uwierzytelniania klienta przy użyciu nazwy użytkownika i hasła domeny systemu Windows. Przyjęto założenie, że masz działającą, samoobsługową usługę WCF. Aby zapoznać się z przykładem tworzenia podstawowej samohostowanej usługi WCF, zobacz [samouczek wprowadzenie](../../../../docs/framework/wcf/getting-started-tutorial.md). W tym temacie przyjęto założenie, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć przykład konfigurowania podobnej usługi za pomocą pliku konfiguracji, zobacz [Nazwa użytkownika zabezpieczeń wiadomości](../samples/message-security-user-name.md).
 
@@ -21,7 +21,7 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
 
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługę WCF do uwierzytelniania przy użyciu nazwy użytkownika i hasła domeny systemu Windows
 
-1. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding>, ustaw tryb zabezpieczeń powiązania na <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, ustaw `ClientCredentialType` powiązania z <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania z hostem usługi, jak pokazano w poniższym kodzie :
+1. Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding>, ustaw tryb zabezpieczeń powiązania na <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>, ustaw `ClientCredentialType` powiązania na <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania z hostem usługi, jak pokazano w poniższym kodzie:
 
     ```csharp
     // ...
@@ -92,5 +92,5 @@ Na kliencie należy monitować użytkownika o podanie nazwy użytkownika i hasł
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
 - [Zabezpieczenia transportu z uwierzytelnianiem podstawowym](transport-security-with-basic-authentication.md)
-- [Zabezpieczenia aplikacji rozproszonej](distributed-application-security.md)
-- [@no__t — 1wsHttpBinding >](../../configure-apps/file-schema/wcf/wshttpbinding.md)
+- [Rozproszone zabezpieczenia aplikacji](distributed-application-security.md)
+- [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)

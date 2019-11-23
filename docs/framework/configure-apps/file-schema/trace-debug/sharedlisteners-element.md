@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> Element
+title: <sharedListeners>, element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#sharedListeners
@@ -18,12 +18,12 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699304"
 ---
-# <a name="sharedlisteners-element"></a>\<sharedListeners > elementu
+# <a name="sharedlisteners-element"></a>\<element > sharedListeners
 Zawiera detektory, do których może odwoływać się każdy element źródłowy lub Trace.  Te odbiorniki nie odbierają domyślnie żadnych śladów i nie można ich pobrać w czasie wykonywania. Odbiorniki identyfikowane jako odbiorniki udostępnione mogą być dodawane do źródeł lub śladów według nazwy.  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<sharedListeners >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sharedListeners >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,7 +43,7 @@ Zawiera detektory, do których może odwoływać się każdy element źródłowy
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[@no__t — 1add >](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do kolekcji `sharedListeners`.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Dodaje odbiornik do kolekcji `sharedListeners`.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -58,7 +58,7 @@ Zawiera detektory, do których może odwoływać się każdy element źródłowy
  Ten element może być używany w pliku konfiguracji komputera (Machine. config) i w pliku konfiguracji aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak za pomocą elementu `<sharedListeners>` dodać odbiornik `console` do kolekcji `Listeners` dla klas <xref:System.Diagnostics.TraceSource> i <xref:System.Diagnostics.Trace>. Odbiornik śledzenia konsoli zapisuje informacje o śledzeniu do konsoli za pomocą wywołań do <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
+ Poniższy przykład pokazuje, jak używać elementu `<sharedListeners>`, aby dodać odbiornik `console` do kolekcji `Listeners` dla klas <xref:System.Diagnostics.TraceSource> i <xref:System.Diagnostics.Trace>. Odbiornik śledzenia konsoli zapisuje informacje o śledzeniu do konsoli za pomocą wywołań do <xref:System.Diagnostics.TraceSource> lub <xref:System.Diagnostics.Trace>.  
   
 ```xml  
 <configuration>  

@@ -59,7 +59,7 @@ Ważnym punktem jest to, że możesz chcieć komunikować się z wieloma mikrous
 
 W przypadku asynchronicznej komunikacji opartej na zdarzeniach jedna mikrousługa publikuje zdarzenia do magistrali zdarzeń, a wiele mikrousług może subskrybować ten element, aby otrzymywać powiadomienia i podejmować działania. Twoja implementacja określi, który protokół ma być używany na potrzeby komunikacji opartej na zdarzeniach. [AMQP](https://en.wikipedia.org/wiki/Advanced_Message_Queuing_Protocol) może pomóc w osiągnięciu niezawodnej komunikacji kolejkowanej.
 
-Korzystając z magistrali zdarzeń, można użyć poziomu abstrakcji (na przykład interfejsu magistrali zdarzeń) na podstawie powiązanej implementacji w klasach z kodem przy użyciu interfejsu API z brokera komunikatów, takiego jak [RabbitMQ](https://www.rabbitmq.com/) , lub usługi Service Bus, takiej jak [Azure Service Bus z tematami ](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie możesz chcieć użyć magistrali usług wyższego poziomu, takiej jak NServiceBus, MassTransit lub jaśniejszy, aby ideach swoją magistralę zdarzeń i system publikowania/subskrybowania.
+Korzystając z magistrali zdarzeń, można użyć poziomu abstrakcji (na przykład interfejsu magistrali zdarzeń) na podstawie powiązanej implementacji w klasach z kodem przy użyciu interfejsu API z brokera komunikatów, takiego jak [RabbitMQ](https://www.rabbitmq.com/) , lub usługi Service Bus, takiej jak [Azure Service Bus z tematami](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions). Alternatywnie możesz chcieć użyć magistrali usług wyższego poziomu, takiej jak NServiceBus, MassTransit lub jaśniejszy, aby ideach swoją magistralę zdarzeń i system publikowania/subskrybowania.
 
 ## <a name="a-note-about-messaging-technologies-for-production-systems"></a>Uwaga dotycząca technologii obsługi komunikatów w systemach produkcyjnych
 
@@ -83,13 +83,13 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Obsługa komunikatów opartych na zdarzeniach** \
+-  \ **komunikatów opartych na zdarzeniach**
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Kanał publikowania/subskrybowania** \
+-  \ **kanału publikowania/subskrypcji**
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **UDI Dahan. Wyjaśniono CQRS** \
+- **UDI Dahan. Wyjaśniono \ CQRS**
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Command and Query Responsibility Segregation (CQRS)**  \
@@ -101,9 +101,9 @@ Dodatkowe tematy, które należy wziąć pod uwagę podczas korzystania z komuni
 -  \ **spójności ostatecznej**
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena sprzęgu** \
+- **Jimmy Bogard. Refaktoryzacja do odporności: Ocena \ sprzęgu**
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
 > [Poprzedni](communication-in-microservice-architecture.md)
-> [dalej](maintain-microservice-apis.md)
+> [Następny](maintain-microservice-apis.md)

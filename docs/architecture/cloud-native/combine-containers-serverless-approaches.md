@@ -1,5 +1,5 @@
 ---
-title: Łączenie kontenerów i metod bezserwerowych
+title: Łączenie kontenerów i rozwiązań bezserwerowych
 description: Łączenie kontenerów i Kubernetes za pomocą podejścia bezserwerowego
 ms.date: 06/30/2019
 ms.openlocfilehash: 58aff43adbdd2e629370cc685f32c7b61c25f85e
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183435"
 ---
-# <a name="combining-containers-and-serverless-approaches"></a>Łączenie kontenerów i metod bezserwerowych
+# <a name="combining-containers-and-serverless-approaches"></a>Łączenie kontenerów i rozwiązań bezserwerowych
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -37,7 +37,7 @@ Wybierz z następujących opcji środowisko uruchomieniowe procesu roboczego:
 - `node` (JavaScript)
 - `python`
 
-Po utworzeniu projektu będzie on zawierał pliku dockerfile. Teraz można tworzyć i testować funkcję lokalnie. Kompiluj i uruchamiaj przy użyciu `docker build` poleceń `docker run` i. Aby uzyskać szczegółowe instrukcje dotyczące rozpoczynania tworzenia Azure Functions z obsługą platformy Docker, zobacz samouczek [Tworzenie funkcji w systemie Linux przy użyciu niestandardowego obrazu](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) .
+Po utworzeniu projektu będzie on zawierał pliku dockerfile. Teraz można tworzyć i testować funkcję lokalnie. Kompiluj i uruchamiaj za pomocą poleceń `docker build` i `docker run`. Aby uzyskać szczegółowe instrukcje dotyczące rozpoczynania tworzenia Azure Functions z obsługą platformy Docker, zobacz samouczek [Tworzenie funkcji w systemie Linux przy użyciu niestandardowego obrazu](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) .
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>Łączenie bezserwerowe i Kubernetes z KEDA
 

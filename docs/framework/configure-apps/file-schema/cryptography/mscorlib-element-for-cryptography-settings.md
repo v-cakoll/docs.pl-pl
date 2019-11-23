@@ -15,11 +15,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699744"
 ---
-# <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > elementu dla ustawień kryptografii
-Zawiera [element \<cryptographySettings >](cryptographysettings-element.md).  
+# <a name="mscorlib-element-for-cryptography-settings"></a>\<element > mscorlib dla ustawień kryptografii
+Zawiera [element\<cryptographySettings >](cryptographysettings-element.md).  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<mscorlib >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<mscorlib >**  
   
 ## <a name="syntax"></a>Składnia  
   

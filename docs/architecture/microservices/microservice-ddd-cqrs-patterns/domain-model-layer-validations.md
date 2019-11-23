@@ -53,15 +53,15 @@ Podobne podejście można użyć w konstruktorze jednostki, wywołując wyjątek
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Używanie atrybutów walidacji w modelu na podstawie adnotacji danych
 
-Adnotacje danych, takie jak atrybuty wymagane lub MaxLength, mogą służyć do konfigurowania właściwości pola EF Core bazy danych, jak wyjaśniono szczegółowo w sekcji [Mapowanie tabeli](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) , ale [nie będą już działać do sprawdzania poprawności jednostek w EF Core](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (nie są one <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> metody), jak to zrobiono od Ef 4. x w .NET Framework.
+Adnotacje danych, takie jak atrybuty wymagane lub MaxLength, mogą służyć do konfigurowania właściwości pola EF Core bazy danych, jak wyjaśniono szczegółowo w sekcji [Mapowanie tabeli](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping) , ale [nie będą już działać do sprawdzania poprawności jednostek w EF Core](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (żadna z metod <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), ponieważ zostały one wykonane od Ef 4. x w .NET Framework.
 
-Adnotacje danych i <xref:System.ComponentModel.DataAnnotations.IValidatableObject> interfejs nadal mogą być używane na potrzeby walidacji modelu podczas powiązania modelu przed wywoływaniem akcji kontrolera w zwykły sposób, ale ten model jest przeznaczony dla ViewModel lub DTO, a to nie dotyczy modelu MVC lub interfejsu API. szczególne.
+Adnotacje danych i interfejs <xref:System.ComponentModel.DataAnnotations.IValidatableObject> nadal mogą być używane do walidacji modelu podczas powiązania modelu, przed wywołaniem akcji kontrolera w zwykły sposób, ale ten model ma być ViewModel lub DTO, a to nie jest problemem z modelem MVC lub INTERFEJSem domeny.
 
-Po wyczyszczeniu różnicy pojęciowej można nadal używać adnotacji danych i `IValidatableObject` w klasie jednostki do walidacji, jeśli akcje odbierają parametr obiektu klasy jednostki, co nie jest zalecane. W takim przypadku Walidacja zostanie wykonana po powiązaniu modelu przed wywołaniem akcji i można sprawdzić Właściwość ModelState. IsValid kontrolera, aby sprawdzić wynik, ale następnie ponownie, dzieje się w kontrolerze, a nie przed utrwalaniem obiektu Entity w DbContext, jak zrobiono od EF 4. x.
+Po wyczyszczeniu różnicy pojęciowej można nadal używać adnotacji danych i `IValidatableObject` w klasie jednostek do walidacji, jeśli akcje odbierają parametr obiektu klasy jednostki, co nie jest zalecane. W takim przypadku Walidacja zostanie wykonana po powiązaniu modelu przed wywołaniem akcji i można sprawdzić Właściwość ModelState. IsValid kontrolera, aby sprawdzić wynik, ale następnie ponownie, dzieje się w kontrolerze, a nie przed utrwalaniem obiektu Entity w DbContext, jak zrobiono od EF 4. x.
 
-Nadal można zaimplementować niestandardowe sprawdzanie poprawności w klasie Entity przy użyciu adnotacji danych i `IValidatableObject.Validate` metody, zastępując metodę metody SaveChanges DbContext.
+Nadal można zaimplementować niestandardowe sprawdzanie poprawności w klasie Entity przy użyciu adnotacji danych i metody `IValidatableObject.Validate`, zastępując metodę metody SaveChanges DbContext.
 
-W witrynie GitHub można zobaczyć przykładową implementację sprawdzania poprawności `IValidatableObject` jednostek w [tym komentarzu](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539). Ten przykład nie wykonuje walidacji opartych na atrybutach, ale powinien być łatwy do wdrożenia przy użyciu odbicia w tym samym przesłonięciu.
+Możesz zobaczyć przykładową implementację sprawdzania poprawności jednostek `IValidatableObject` w [tym komentarzu w serwisie GitHub](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539). Ten przykład nie wykonuje walidacji opartych na atrybutach, ale powinien być łatwy do wdrożenia przy użyciu odbicia w tym samym przesłonięciu.
 
 Jednak z punktu widzenia, model domeny najlepiej utrzymuje się oszczędne przy użyciu wyjątków w metodach zachowań jednostki lub implementując wzorce specyfikacji i powiadomień w celu wymuszenia reguł walidacji.
 
@@ -88,10 +88,10 @@ Używanie weryfikacji pola z adnotacjami danych, na przykład, nie duplikuje def
 - **Rachel Appel. Wprowadzenie do walidacji modelu w ASP.NET Core MVC** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson. Dodawanie walidacji** \
+- **Rick Anderson. Dodawanie \ weryfikacji**
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Fowlera Martin. Zastępowanie zgłaszania wyjątków przy użyciu powiadomień w walidacji** \
+- **Fowlera Martin. Zastępowanie zgłaszania wyjątków przy użyciu powiadomień w ramach walidacji** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **Wzorce specyfikacji i powiadomień** \
@@ -100,12 +100,12 @@ Używanie weryfikacji pola z adnotacjami danych, na przykład, nie duplikuje def
 - **Lew Gorodinski. Walidacja w projekcie opartym na domenie (DDD)**  \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Wtyczka Colin. Walidacja modelu domeny** \
+- **Wtyczka Colin. Weryfikacja modelu domeny** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard. Walidacja w DDD** \
+- **Jimmy Bogard. Weryfikacja w \ DDD**
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [Poprzedni](enumeration-classes-over-enum-types.md)Następny
-> [](client-side-validation.md)
+> [Poprzedni](enumeration-classes-over-enum-types.md)
+> [Następny](client-side-validation.md)

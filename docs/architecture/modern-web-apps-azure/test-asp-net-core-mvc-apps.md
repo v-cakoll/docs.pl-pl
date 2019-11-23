@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089693"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971540"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testowanie aplikacji ASP.NET Core MVC
 
@@ -28,7 +28,7 @@ Test jednostkowy testów pojedynczej części logiki aplikacji. Jeden z nich mo�
 
 Testy jednostkowe, na mocy których testuje tylko jedną jednostkę kodu bez zależności zewnętrznych, powinny być wykonywane bardzo szybko. Z tego względu powinno być możliwe uruchamianie zestawów testów dla setek testów jednostkowych w ciągu kilku sekund. Uruchamiaj je często, najlepiej przed każdym wypchnięciem do udostępnionego repozytorium kontroli źródła i z pewnością przy każdej zautomatyzowanej kompilacji na serwerze kompilacji.
 
-### <a name="integration-tests"></a>Testy integracji
+### <a name="integration-tests"></a>Testy integracyjne
 
 Chociaż dobrym pomysłem jest Hermetyzowanie kodu, który współdziała z infrastrukturą, taką jak bazy danych i systemy plików, nadal będziesz mieć część tego kodu i prawdopodobnie chcesz go przetestować. Ponadto należy sprawdzić, czy warstwy kodu działają w oczekiwany sposób, gdy zależności aplikacji są w pełni rozwiązane. Jest to odpowiedzialność za testy integracji. Testy integracji są znacznie wolniejsze i trudniejsze do skonfigurowania niż testy jednostkowe, ponieważ często zależą od zewnętrznych zależności i infrastruktury. W tym celu należy unikać testowania, które mogą być testowane przy użyciu testów jednostkowych w testach integracji. Jeśli można testować dany scenariusz z testem jednostkowym, należy przetestować go z testem jednostkowym. Jeśli nie jest to możliwe, rozważ użycie testu integracji.
 
@@ -285,12 +285,16 @@ Ten test funkcjonalny wykonuje pełny ASP.NET Core stos aplikacji MVC/Razor Page
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>References — testowanie ASP.NET Core aplikacji MVC
 >
-> - **Testowanie w ASP.NET Core**  
+> - **Testowanie w ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Konwencja nazewnictwa testów jednostkowych**  
+> - **Konwencja nazewnictwa testów jednostkowych** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Testowanie EF Core**  
+> - **Testowanie EF Core** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - **Testy integracji w ASP.NET Core** \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - **ASP.NET Community standup-maj 15, 2018-MVC test z Javier C. Nelson** -YouTube wideo \
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Poprzedni](work-with-data-in-asp-net-core-apps.md)

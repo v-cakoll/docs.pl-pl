@@ -164,7 +164,7 @@ Szablony Azure DevOps Services umożliwiają generowanie artefaktów kompilacji,
 
 ### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Zarządzanie wersjami w środowiskach platformy Docker przy użyciu Azure DevOps Services Release Management
 
-Za pomocą szablonów Azure DevOps Services można utworzyć nowy obraz, opublikować go w rejestrze platformy Docker, uruchomić go na hostach z systemem Linux lub Windows, a także użyć poleceń, takich jak `docker-compose` do wdrożenia wielu kontenerów jako całej aplikacji w Azure DevOps Services Funkcje Release Management zamierzone dla wielu środowisk, jak pokazano na rysunku 5-8.
+Za pomocą szablonów Azure DevOps Services można utworzyć nowy obraz, opublikować go w rejestrze platformy Docker, uruchomić go na hostach z systemem Linux lub Windows, a także użyć poleceń, takich jak `docker-compose`, aby wdrożyć wiele kontenerów jako całą aplikację, a wszystko to za pomocą funkcji Azure DevOps Services Release Management przeznaczonych dla wielu środowisk, jak pokazano na rysunku 5-8.
 
 ![Zrzut ekranu przedstawiający konfigurację wersji programu Docker.](./media/docker-application-outer-loop-devops-workflow/configure-docker-compose-release.png)
 
@@ -184,7 +184,7 @@ Z punktu widzenia dysku CD, a Azure DevOps Services w szczególnie, można uruch
 
 **Rysunek 5-9**. Wdrażanie aplikacji rozproszonych w usłudze Container Service
 
-Początkowo podczas wdrażania do określonych klastrów lub programów Orchestrator można tradycyjnie używać konkretnych skryptów i mechanizmów wdrażania dla każdego koordynatora (to jest, Kubernetes i Service Fabric mają różne mechanizmy wdrażania), a nie prostsze i łatwe w użyciu narzędzie `docker-compose` w oparciu o plik definicji `docker-compose.yml`. Jednak dzięki obsłudze Azure DevOps Services narzędzia Docker Deploy pokazano na rysunku 5-10, teraz można również wdrożyć je do obsługiwanych koordynatorów przez samo użycie znanego pliku `docker-compose.yml`, ponieważ narzędzie wykonuje to "tłumaczenie" (z pliku `docker-compose.yml` do format wymagany przez program Orchestrator).
+Początkowo podczas wdrażania do określonych klastrów lub programów Orchestrator można tradycyjnie używać konkretnych skryptów i mechanizmów wdrażania dla każdego koordynatora (to jest, Kubernetes i Service Fabric mają różne mechanizmy wdrażania) zamiast prostszego i łatwego w użyciu `docker-compose` narzędzia opartego na pliku definicji `docker-compose.yml`. Jednak dzięki obsłudze Azure DevOps Services narzędzia Docker Deploy pokazano na rysunku 5-10, teraz można również wdrożyć je do obsługiwanych koordynatorów przez samo użycie znanego pliku `docker-compose.yml`, ponieważ narzędzie wykonuje to "tłumaczenie" (z pliku `docker-compose.yml` do formatu wymaganego przez program Orchestrator).
 
 ![Zrzut ekranu przedstawiający zadanie Deploy to Kubernetes.](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
@@ -210,4 +210,4 @@ Tylko wtedy, gdy monitorowanie i Diagnostyka są 100% w obszarze DevOps są proc
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
+>[Następny](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

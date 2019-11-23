@@ -21,27 +21,27 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="arguments"></a>Argumenty
 
-`instance-expression` wystąpienie jednostki.
+`instance-expression` wystąpienie obiektu.
 
-`relationship-type` nazwa typu relacji z pliku koncepcyjnego języka definicji schematu (CSDL). @No__t-0 jest kwalifikowana jako \<namespace >. \<relationship type name >.
+`relationship-type` nazwę typu relacji z pliku koncepcyjnego języka definicji schematu (CSDL). `relationship-type` jest kwalifikowana jako \<przestrzeni nazw >. > nazwy typu relacji\<.
 
 `to` koniec relacji.
 
-`from` początek relacji.
+`from` początku relacji.
 
-## <a name="return-value"></a>Wartość zwracana
+## <a name="return-value"></a>Wartość zwrócona
 
-Jeśli Kardynalność do końca wynosi 1, wartość zwracana będzie `Ref<T>`. Jeśli Kardynalność do końca to n, wartość zwracana będzie `Collection<Ref<T>>`.
+Jeśli Kardynalność do końca wynosi 1, wartość zwracana zostanie `Ref<T>`. Jeśli Kardynalność do końca to n, wartość zwracana zostanie `Collection<Ref<T>>`.
 
 ## <a name="remarks"></a>Uwagi
 
-Relacje to konstrukcje pierwszej klasy w Entity Data Model (EDM). Relacje można ustanawiać między dwoma lub większą liczbą typów jednostek, a użytkownicy mogą przechodzić przez relację od jednego końca (jednostki) do innej. `from` i `to` są warunkowo opcjonalne, gdy w ramach rozpoznawania nazw nie występuje niejednoznaczność.
+Relacje to konstrukcje pierwszej klasy w Entity Data Model (EDM). Relacje można ustanawiać między dwoma lub większą liczbą typów jednostek, a użytkownicy mogą przechodzić przez relację od jednego końca (jednostki) do innej. `from` i `to` są warunkowo opcjonalne, gdy w ramach rozpoznawania nazw nie ma niejednoznaczności.
 
 NAWIGOWANIe jest prawidłowe w miejscu i O i C.
 
 Ogólny formularz konstrukcji nawigacyjnej jest następujący:
 
-Przejdź do (`instance-expression`, `relationship-type`, [`to-end` [, `from-end`]])
+Nawigacja (`instance-expression`, `relationship-type`, [`to-end` [, `from-end`]])
 
 Na przykład:
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Gdzie OrderCustomer jest `relationship`, a klient i zamówienie to `to-end` (klient) i `from-end` (kolejność) relacji. Jeśli OrderCustomer była relacją n:1, typ wyniku wyrażenia nawigacji to ref @ no__t-0Customer >.
+Gdzie OrderCustomer jest `relationship`, a klient i zamówienie to `to-end` (klient) i `from-end` (zamówienie) relacji. Jeśli OrderCustomer była relacją n:1, typ wyniku wyrażenia nawigacji to ref\<Customer >.
 
 Prostszy formularz tego wyrażenia jest następujący:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-Podobnie w przypadku zapytania w następującej postaci wyrażenie nawigacji spowoduje utworzenie kolekcji < ref @ no__t-0Order > >.
+Podobnie w przypadku zapytania w następującej postaci wyrażenie nawigacji spowoduje utworzenie kolekcji < ref\<kolejności > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)

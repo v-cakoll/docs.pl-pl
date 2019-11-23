@@ -1,5 +1,5 @@
 ---
-title: Korzystanie z serwera bazy danych działającego jako kontener
+title: Korzystanie z serwera bazy danych uruchomionego jako kontener
 description: Architektura mikrousług platformy .NET dla aplikacji platformy .NET w kontenerze | Korzystasz z serwera bazy danych działającego jako kontener? tylko na potrzeby programowania! Dowiedz się, dlaczego.
 ms.date: 10/02/2018
 ms.openlocfilehash: a508ba734525b24e2f3f00408e2c59c8c00f1898
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/12/2019
 ms.locfileid: "72291306"
 ---
-# <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych działającego jako kontener
+# <a name="using-a-database-server-running-as-a-container"></a>Korzystanie z serwera bazy danych uruchomionego jako kontener
 
 Możesz mieć bazy danych (SQL Server, PostgreSQL, MySQL itp.) na zwykłych serwerach autonomicznych, w klastrach lokalnych lub w usługach PaaS Services w chmurze, takich jak Azure SQL DB. Jednak w środowiskach deweloperskich i testowych, które bazy danych działają jako kontenery są wygodne, ponieważ nie istnieje żadna zależność zewnętrzna i po prostu uruchomienie `docker-compose up` polecenie uruchamia całą aplikację. Posiadanie tych baz danych jako kontenerów jest również doskonałe dla testów integracji, ponieważ baza danych została uruchomiona w kontenerze i jest zawsze wypełniana tymi samymi przykładowymi danymi, dzięki czemu testy mogą być bardziej przewidywalne.
 
@@ -17,7 +17,7 @@ Możesz mieć bazy danych (SQL Server, PostgreSQL, MySQL itp.) na zwykłych serw
 
 W eShopOnContainers istnieje kontener o nazwie SQL. dane zdefiniowane w pliku [Docker-Compose. yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) , który działa SQL Server dla systemu Linux ze wszystkimi bazami danych SQL Server, które są zbędne dla mikrousług. (Możliwe jest również posiadanie jednego kontenera SQL Server dla każdej bazy danych, ale może to wymagać większej ilości pamięci przypisanej do platformy Docker). Ważnym punktem w mikrousług jest to, że każda mikrousługa jest właścicielem powiązanych danych, w związku z czym w tym przypadku jest związana z nią baza danych SQL. Jednak bazy danych mogą znajdować się w dowolnym miejscu.
 
-Kontener SQL Server w aplikacji przykładowej jest konfigurowany przy użyciu następującego kodu YAML w pliku Docker-Compose. yml, który jest wykonywany po uruchomieniu `docker-compose up`. Należy pamiętać, że kod YAML ma skonsolidowane informacje o konfiguracji z pliku Generic Docker-Compose. yml oraz pliku Docker-Compose. override. yml. (Zazwyczaj należy oddzielić ustawienia środowiska od podstawowej lub statycznej informacji powiązanej z obrazem SQL Server).
+Kontener SQL Server w przykładowej aplikacji jest skonfigurowany przy użyciu następującego kodu YAML w pliku Docker-Compose. yml, który jest wykonywany podczas uruchamiania `docker-compose up`. Należy pamiętać, że kod YAML ma skonsolidowane informacje o konfiguracji z pliku Generic Docker-Compose. yml oraz pliku Docker-Compose. override. yml. (Zazwyczaj należy oddzielić ustawienia środowiska od podstawowej lub statycznej informacji powiązanej z obrazem SQL Server).
 
 ```yml
   sql.data:
@@ -35,20 +35,20 @@ W podobny sposób, zamiast używać `docker-compose`, następujące polecenie `d
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-Jednak w przypadku wdrażania aplikacji z wieloma kontenerami, takich jak eShopOnContainers, wygodniejsze jest używanie `docker-compose up` polecenia, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
+Jednak w przypadku wdrażania aplikacji z wieloma kontenerami, takich jak eShopOnContainers, wygodniejsze jest użycie polecenia `docker-compose up`, aby wdrożyć wszystkie wymagane kontenery dla aplikacji.
 
-Po pierwszym uruchomieniu tego kontenera SQL Server Kontener inicjuje SQL Server przy użyciu podania hasła. Gdy SQL Server jest uruchomiony jako kontener, możesz zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego zwykłego połączenia SQL, takiego jak z SQL Server Management Studio, Visual Studio lub C @ no__t-0 Code.
+Po pierwszym uruchomieniu tego kontenera SQL Server Kontener inicjuje SQL Server przy użyciu podania hasła. Gdy SQL Server jest uruchomiony jako kontener, możesz zaktualizować bazę danych, łącząc się za pośrednictwem dowolnego zwykłego połączenia SQL, takiego jak z SQL Server Management Studio, Visual Studio lub C\# Code.
 
 Aplikacja eShopOnContainers inicjuje każdą mikrousługą bazę danych z przykładowymi danymi, umieszczając je w danych podczas uruchamiania, jak wyjaśniono w poniższej sekcji.
 
 Posiadanie SQL Server działającego jako kontenera nie jest samo przydatne w przypadku pokazu, w którym może nie mieć dostępu do wystąpienia SQL Server. Jak zauważono, jest to również idealne rozwiązanie w środowiskach deweloperskich i testowych, dzięki czemu można łatwo uruchomić testy integracji zaczynające się od czystego obrazu SQL Server i znanych danych, umieszczając nowe przykładowe dane.
 
-#### <a name="additional-resources"></a>Zasoby dodatkowe
+#### <a name="additional-resources"></a>Dodatkowe zasoby
 
 - **Uruchamianie obrazu SQL Server Docker w systemie Linux, Mac lub Windows** \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker](/sql/linux/sql-server-linux-setup-docker)
 
-- **Łączenie i SQL Server on Linux zapytań za pomocą narzędzia sqlcmd** \
+- **Łączenie i SQL Server on Linux zapytań przy użyciu narzędzia sqlcmd** \
     [https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd](/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Umieszczanie danych testowych przy uruchamianiu aplikacji sieci Web
@@ -199,4 +199,4 @@ Jak wspomniano wcześniej, nazwa "koszyka mikrousług" jest rozpoznawana przez s
 
 >[!div class="step-by-step"]
 >[Poprzedni](multi-container-applications-docker-compose.md)
->[dalej](integration-event-based-microservice-communications.md)
+>[Następny](integration-event-based-microservice-communications.md)

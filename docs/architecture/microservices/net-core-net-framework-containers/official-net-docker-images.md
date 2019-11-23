@@ -13,7 +13,7 @@ ms.locfileid: "71353868"
 
 Oficjalne obrazy platformy .NET Docker to obrazy platformy Docker utworzone i zoptymalizowane przez firmę Microsoft. Są one publicznie dostępne w repozytoriach firmy Microsoft w usłudze [Docker Hub](https://hub.docker.com/u/microsoft/). Każde repozytorium może zawierać wiele obrazów, w zależności od wersji .NET, a także w zależności od systemu operacyjnego i wersji (Linux Debian, .NET Alpine, Windows nano Server, Windows Server Core itp.).
 
-Od platformy .NET Core 2,1 wszystkie obrazy .NET Core, w tym dla ASP.NET Core są dostępne w usłudze Docker Hub w repozytorium obrazu platformy .NET Core <https://hub.docker.com/_/microsoft-dotnet-core/>:.
+Od platformy .NET Core 2,1 wszystkie obrazy .NET Core, w tym ASP.NET Core są dostępne w usłudze Docker Hub w repozytorium obrazów programu .NET Core: <https://hub.docker.com/_/microsoft-dotnet-core/>.
 
 Większość repozytoriów obrazów zapewnia szeroką tagowanie, która ułatwia wybranie nie tylko określonej wersji platformy, ale również wybranie systemu operacyjnego (Linux dystrybucji lub Windows version).
 
@@ -35,7 +35,7 @@ Dlaczego ten typ obrazu kompilacji jest ważny? Nie można wdrożyć tego obrazu
 
 ### <a name="in-production"></a>W środowisku produkcyjnym
 
-Co jest ważne w środowisku produkcyjnym — szybko można wdrożyć i uruchomić kontenery na podstawie obrazu produkcyjnego platformy .NET Core. W związku z tym obraz tylko w środowisku uruchomieniowym oparty na *MCR.Microsoft.com/dotnet/Core/ASPNET:2.2* jest mały, aby mógł szybko poruszać się w sieci z rejestru Docker do hostów platformy Docker. Zawartość jest gotowa do uruchomienia, co pozwala na najszybszy czas od rozpoczęcia kontenera do przetwarzania wyników. W modelu platformy Docker nie ma potrzeby kompilowania kodu języka C\# , ponieważ podczas korzystania z kontenera kompilacji jest uruchamiana kompilacja dotnet lub dotnet Publish.
+Co jest ważne w środowisku produkcyjnym — szybko można wdrożyć i uruchomić kontenery na podstawie obrazu produkcyjnego platformy .NET Core. W związku z tym obraz tylko w środowisku uruchomieniowym oparty na *MCR.Microsoft.com/dotnet/Core/ASPNET:2.2* jest mały, aby mógł szybko poruszać się w sieci z rejestru Docker do hostów platformy Docker. Zawartość jest gotowa do uruchomienia, co pozwala na najszybszy czas od rozpoczęcia kontenera do przetwarzania wyników. W modelu platformy Docker nie ma potrzeby kompilowania kodu w języku C\#, ponieważ podczas korzystania z programu dotnet Build lub dotnet publish w przypadku używania kontenera kompilacji.
 
 W tym zoptymalizowanym obrazie umieszczane są tylko pliki binarne i inne elementy potrzebne do uruchomienia aplikacji. Na przykład zawartość utworzona przez dotnet publish zawiera tylko skompilowane pliki binarne platformy .NET, obrazy,. js i. css. Z biegiem czasu zobaczysz obrazy zawierające przedtrybie JIT (kompilacja z IL do macierzystego, która występuje w czasie wykonywania).
 
@@ -43,7 +43,7 @@ Mimo że istnieje wiele wersji programu .NET Core i obrazów ASP.NET Core, wszys
 
 Podczas eksplorowania repozytoriów obrazów platformy .NET w usłudze Docker Hub można znaleźć wiele wersji obrazów sklasyfikowanych lub oznaczonych tagami. Tagi te pomagają określić, która z nich ma być używana, w zależności od używanej wersji, np. w poniższej tabeli:
 
-| Image | Komentarze |
+| Obraz | Komentarze |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/aspnet:**2,2** | ASP.NET Core, tylko w przypadku środowiska uruchomieniowego i optymalizacje ASP.NET Core, w systemach Linux i Windows (wiele archów) |
 | mcr.microsoft.com/dotnet/core/sdk:**2,2** | .NET Core, z dołączonymi zestawami SDK, w systemach Linux i Windows (wiele Arch) |

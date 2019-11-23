@@ -34,14 +34,14 @@ Jeśli skorzystasz ze wskazówek z ostatnich 15 lat, najprawdopodobniej utworzys
 
 Tworzysz dużą podstawową aplikację, która zawiera całą logikę domeny. Obejmuje to moduły, takie jak tożsamość, wykaz, porządkowanie i inne. Aplikacja podstawowa komunikuje się z dużą relacyjną bazą danych. Podstawowa funkcja udostępnia funkcje za pośrednictwem interfejsu HTML.
 
-Nabycia!  Właśnie utworzono aplikację monolityczną.
+Gratulacje!  Właśnie utworzono aplikację monolityczną.
 
 Nie wszystkie są nieprawidłowe. Monolitów oferują pewne różne zalety. Na przykład są one proste w...
 
 - kompilacja
 - test
 - Wdrażanie
-- Usunąć
+- usunąć
 - skala
 
 Wiele pomyślnych aplikacji, które już istnieją, zostały utworzone jako monolitów. Aplikacja jest trafień i w dalszym ciągu rozwija się, iteracji po iteracji, dodając więcej i większą funkcjonalność.

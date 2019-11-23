@@ -39,4 +39,4 @@ Ponadto istotne jest, aby zaprojektować mikrousługi i aplikacje klienckie w ce
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](partial-failure-strategies.md)
+>[Następny](partial-failure-strategies.md)

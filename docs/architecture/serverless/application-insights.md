@@ -59,4 +59,4 @@ Aby uzyskać więcej informacji, zobacz [Monitor Azure Functions](https://docs.m
 
 >[!div class="step-by-step"]
 >[Poprzedni](azure-functions.md)
->[dalej](logic-apps.md)
+>[Następny](logic-apps.md)

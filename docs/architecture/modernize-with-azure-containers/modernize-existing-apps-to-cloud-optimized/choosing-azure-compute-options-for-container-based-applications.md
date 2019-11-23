@@ -31,4 +31,4 @@ Na rysunku 1 można zobaczyć podział różnych rodzajów aplikacji i ich ideal
 
 > [!div class="step-by-step"]
 > [Poprzedni](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-> [dalej](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [Następny](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

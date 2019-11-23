@@ -94,11 +94,11 @@ import { Component } from '@angular/core';
 export class AppComponent { name = 'Angular'; }
 ```
 
-Składniki są definiowane za pomocą @Component funkcji dekoratora, która pobiera metadane dotyczące składnika. Właściwość selektora identyfikuje identyfikator elementu na stronie, w którym zostanie wyświetlony ten składnik. Właściwość szablonu to prosty szablon HTML, który zawiera symbol zastępczy, który odpowiada właściwości nazwy składnika zdefiniowanej w ostatnim wierszu.
+Składniki są definiowane przy użyciu funkcji dekoratora @Component, która pobiera metadane dotyczące składnika. Właściwość selektora identyfikuje identyfikator elementu na stronie, w którym zostanie wyświetlony ten składnik. Właściwość szablonu to prosty szablon HTML, który zawiera symbol zastępczy, który odpowiada właściwości nazwy składnika zdefiniowanej w ostatnim wierszu.
 
 Pracując ze składnikami i szablonami, a nie elementami modelu DOM, aplikacje kątowe mogą działać na wyższym poziomie abstrakcji i z mniej ogólnym kodem niż aplikacje zapisywane przy użyciu tylko języka JavaScript (nazywanego również "Wanili JS") lub jQuery. Kątowy nakłada również pewne kolejność organizowania plików skryptów po stronie klienta. Zgodnie z Konwencją aplikacje kątowe używają wspólnej struktury folderów z plikami skryptów modułów i składników znajdującymi się w folderze aplikacji. Skrypty kątowe związane z kompilowaniem, wdrażaniem i testowaniem aplikacji zwykle znajdują się w folderze wyższego poziomu.
 
-Kątowy sprawia również doskonałe użycie narzędzi interfejsu wiersza polecenia (CLI). Wprowadzenie do programowania kątowego lokalnie (przy założeniu, że masz już zainstalowaną usługę git i npm), składa się z `npm install` prostego `npm start`klonowania repozytorium z usługi GitHub i uruchamiania i. Poza tym, kątowy dostarcza własne narzędzie interfejsu wiersza polecenia, które może tworzyć projekty, dodawać pliki i pomagać w testowaniu, tworzeniu i wdrażaniu zadań. Ta wygodę dla narzędzi interfejsu wiersza polecenia sprawia, że jest to kątowe szczególnie zgodne z ASP.NET Core, które również oferuje doskonałą obsługę interfejsu wiersza polecenia.
+Kątowy sprawia również doskonałe użycie narzędzi interfejsu wiersza polecenia (CLI). Wprowadzenie do programowania kątowego lokalnie (przy założeniu, że masz już zainstalowaną usługę git i npm), składa się z prostego klonowania repozytorium z usługi GitHub i uruchamiania `npm install` i `npm start`. Poza tym, kątowy dostarcza własne narzędzie interfejsu wiersza polecenia, które może tworzyć projekty, dodawać pliki i pomagać w testowaniu, tworzeniu i wdrażaniu zadań. Ta wygodę dla narzędzi interfejsu wiersza polecenia sprawia, że jest to kątowe szczególnie zgodne z ASP.NET Core, które również oferuje doskonałą obsługę interfejsu wiersza polecenia.
 
 Firma Microsoft opracowała aplikację referencyjną [eShopOnContainers](https://aka.ms/MicroservicesArchitecture), która obejmuje implementację spa. Ta aplikacja obejmuje moduły kątowe służące do zarządzania koszykiem zakupów online, ładowania i wyświetlania elementów z wykazu oraz do obsługi tworzenia zamówień. Przykładową aplikację można wyświetlić i pobrać z witryny [GitHub](https://github.com/dotnet-architecture/eShopOnContainers/tree/master/src/Web/WebSPA).
 
@@ -166,5 +166,5 @@ Struktury JavaScript w dalszym ciągu rozwijają się z szybkością breakneck. 
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
->[Poprzedni](common-web-application-architectures.md)Następny
->[](develop-asp-net-core-mvc-apps.md)
+>[Poprzedni](common-web-application-architectures.md)
+>[Następny](develop-asp-net-core-mvc-apps.md)

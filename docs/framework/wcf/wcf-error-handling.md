@@ -18,7 +18,7 @@ Błędy napotykane przez aplikację WCF należą do jednej z trzech grup:
   
 3. Błędy aplikacji  
   
- Błędy komunikacji występują, gdy sieć jest niedostępna, klient używa nieprawidłowego adresu lub host usługi nie nasłuchuje komunikatów przychodzących. Błędy tego typu są zwracane do klienta jako <xref:System.ServiceModel.CommunicationException> lub @no__t klas pochodnych -1.  
+ Błędy komunikacji występują, gdy sieć jest niedostępna, klient używa nieprawidłowego adresu lub host usługi nie nasłuchuje komunikatów przychodzących. Błędy tego typu są zwracane do klienta jako <xref:System.ServiceModel.CommunicationException> lub klasy pochodne <xref:System.ServiceModel.CommunicationException>.  
   
  Błędy serwera proxy/kanału to błędy występujące w kanale lub serwerze proxy. Błędy tego typu obejmują: próba użycia serwera proxy lub kanału, który został zamknięty, występuje niezgodność kontraktu między klientem a usługą lub poświadczenia klienta są odrzucane przez usługę. W tej kategorii istnieje wiele typów błędów, które są zbyt duże, aby można je było wyświetlić w tym miejscu. Błędy tego typu są zwracane do klienta w taki sam sposób, w jaki jest (nie są wykonywane żadne przekształcenia w obiektach wyjątków).  
   
@@ -41,7 +41,7 @@ Błędy napotykane przez aplikację WCF należą do jednej z trzech grup:
  Interfejs <xref:System.ServiceModel.Dispatcher.IErrorHandler> umożliwia większą kontrolę nad sposobem, w jaki aplikacja WCF reaguje na błędy.  Zapewnia pełną kontrolę nad komunikatem o błędzie, który jest zwracany do klienta i umożliwia wykonywanie niestandardowych operacji przetwarzania, takich jak rejestrowanie.  Aby uzyskać więcej informacji na temat <xref:System.ServiceModel.Dispatcher.IErrorHandler> i [rozszerzania kontroli nad obsługą błędów i raportowaniem](./samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>Zdarzenia ServiceHost  
- Klasa <xref:System.ServiceModel.ServiceHost> zawiera usługi i definiuje kilka zdarzeń, które mogą być używane do obsługi błędów. Na przykład:  
+ Klasa <xref:System.ServiceModel.ServiceHost> obsługuje usługi i definiuje kilka zdarzeń, które mogą być odpowiednie do obsługi błędów. Na przykład:  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   

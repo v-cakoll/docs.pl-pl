@@ -72,4 +72,4 @@ Należy silnej nazwy bibliotek .NET Open Source. Silne nazewnictwo zestawu zapew
 
 >[!div class="step-by-step"]
 >[Poprzedni](cross-platform-targeting.md)
->[dalej](nuget.md)
+>[Następny](nuget.md)

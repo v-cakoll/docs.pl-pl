@@ -30,5 +30,5 @@ Poniższa tabela decyzji zawiera podsumowanie, czy należy używać .NET Framewo
 | Użycie usług platformy Azure | .NET Core <br/> (ostatecznie wszystkie usługi platformy Azure będą dostarczać zestawy SDK klienta dla platformy .NET Core) | .NET Framework <br/> .NET Core <br/> (ostatecznie wszystkie usługi platformy Azure będą dostarczać zestawy SDK klienta dla platformy .NET Core) |
 
 >[!div class="step-by-step"]
->[Poprzedni](net-framework-container-scenarios.md)Następny
->[](net-container-os-targets.md)
+>[Poprzedni](net-framework-container-scenarios.md)
+>[Następny](net-container-os-targets.md)

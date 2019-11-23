@@ -35,4 +35,4 @@ Aby dowiedzieć się więcej, zobacz [Azure Logic Apps](https://docs.microsoft.c
 
 >[!div class="step-by-step"]
 >[Poprzedni](application-insights.md)
->[dalej](event-grid.md)
+>[Następny](event-grid.md)

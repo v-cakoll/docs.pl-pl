@@ -20,5 +20,5 @@ Jest to trudne do zaprojektowania i wdrożenia aplikacji opartej na mikrousługa
 Wiele pojedynczych składników aplikacji powinna również zawierać funkcje monitorowania kondycji. Postępując zgodnie z wytycznymi w tym rozdziale, można utworzyć aplikację, która może działać bezproblemowo pomimo przejściowego przestoju lub normalnego hiccupsu w przypadku wdrożeń złożonych i opartych na chmurze.
 
 >[!div class="step-by-step"]
->[Poprzedni](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)Następny
->[](handle-partial-failure.md)
+>[Poprzedni](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Następny](handle-partial-failure.md)

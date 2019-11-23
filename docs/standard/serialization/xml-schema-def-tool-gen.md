@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML'
+title: 'Instrukcje: korzystanie z narzędzia definicji schematu XML do generowania klas i dokumentów schematu XML'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generating XML classes using XML Schema Definition tool
@@ -14,7 +14,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392862"
 ---
-# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Instrukcje: generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML
+# <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Instrukcje: korzystanie z narzędzia definicji schematu XML do generowania klas i dokumentów schematu XML
 Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML, która opisuje klasę lub do generowania klasy zdefiniowane przez schemat XML. Poniższe procedury pokazują, jak wykonywać te operacje.  
   
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>Do generowania klasy, które są zgodne z określonego schematu  
@@ -59,5 +59,5 @@ Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML,
 - [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)
 - [Narzędzie definicji schematu XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [Instrukcje: Serializacja obiektu @ no__t-0
-- [Instrukcje: Deserializacja obiektu @ no__t-0
+- [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -22,19 +22,19 @@ sgen [options]
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/a @ no__t-1ssembly @ no__t-2:** _filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
-|**/c @ no__t-1ompiler @ no__t-2:** _Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
-|**/d @ no__t-1ebug @ no__t-2**|Generuje obrazu, który może być używany z debugera.|  
-|**/f @ no__t-1orce @ no__t-2**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
+|**/a\[ssembly\]:** _filename_|Generuje kod serializacji dla wszystkich typów zawartych w zestawie lub pliku wykonywalnym określonym przez *filename*. Można uwzględnić tylko jeden PLik. Jeśli ten argument jest powtarzany, nazwisko PLik jest używany.|  
+|**/c\[ompiler\]:** _Opcje_|Określa opcje do przekazania do kompilatora C#. Wszystkie opcje csc.exe są obsługiwane, gdy przekazywane do kompilator. To może posłużyć do określenia zestawu powinny być podpisane i określ PLik klucza.|  
+|**/d\[ebug\]**|Generuje obrazu, który może być używany z debugera.|  
+|**/f\[Orce\]**|Wymusza zastępowanie istniejącego zestawu o tej samej nazwie. Wartość domyślna to **false**.|  
 |**/help lub/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/k @ no__t-1eep @ no__t-2**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
-|**/n @ no__t-1ologo @ no__t-2**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|**/o @ no__t-1ut @ no__t-2:** _ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
-|**/p @ no__t-1roxytypes @ no__t-2**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
-|**/r @ no__t-1eference @ no__t-2:** _assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
-|**/s @ no__t-1ilent @ no__t-2**|Pomija wyświetlanie komunikatów o sukcesie.|  
-|**/t @ no__t-1ype @ no__t-2:** _Typ_|Generuje kod serializacji tylko dla określonego typu.|  
-|**/v @ no__t-1erbose @ no__t-2**|Wyświetla pełne dane wyjściowe dla debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
+|**/k\[achowaj\]**|Pomija usuwanie wygenerowanych PLików źródłowych i innych PLików tymczasowych po zostały skompilowane do zestawu serializacji. To może posłużyć do określenia, czy to narzędzie jest generowania kodu serializacji dla danego typu.|  
+|**/n\[ologo\]**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/o\[ut\]:** _ścieżka_|Określa katalog, w którym chcesz zapisać wygenerowanego zestawu. **Uwaga:**  Nazwa wygenerowanego zestawu składa się z nazwy zestawu wejściowego i "XmlSerializers. dll".|  
+|**/p\[roxytypes\]**|Generuje kod serializacji tylko dla typów serwera proxy usług sieci Web XML.|  
+|**/r\[eference\]:** _assemblyfiles_|Określa zestawy, które są określone przez typy wymagające serializacji XML. Akceptuje wiele plików zestawów rozdzielonych przecinkami.|  
+|**/s\[ilent\]**|Pomija wyświetlanie komunikatów o sukcesie.|  
+|**/t\[typ\]:** _Typ_|Generuje kod serializacji tylko dla określonego typu.|  
+|**/v\[erbose\]**|Wyświetla pełne dane wyjściowe dla debugowania. Wyświetla listę typów z zestawu docelowego, który nie może być serializowany z <xref:System.Xml.Serialization.XmlSerializer>.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  

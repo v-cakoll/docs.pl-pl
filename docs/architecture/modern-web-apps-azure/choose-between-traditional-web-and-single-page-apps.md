@@ -90,10 +90,10 @@ Poniższa tabela decyzji podsumowuje niektóre podstawowe czynniki, które nale�
 | **1U**                                           | **Tradycyjna aplikacja internetowa** | **Aplikacja jednostronicowa** |
 | ---------------------------------------------------- | ----------------------- | --------------------------- |
 | Wymagana znajomość zespołu w języku JavaScript/TypeScript | **Mniejsze**             | **Wymagane**                |
-| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwał**           | **Nieobsługiwane**           |
-| Minimalne zachowanie aplikacji po stronie klienta             | **Dobrze dopasowane**         | **Zbyt obszerne**                |
-| Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Separator**             | **Dobrze dopasowane**             |
+| Obsługa przeglądarek bez obsługi skryptów                   | **Obsługiwane**           | **Nieobsługiwane**           |
+| Minimalne zachowanie aplikacji po stronie klienta             | **Well-Suited**         | **Zbyt obszerne**                |
+| Zaawansowane wymagania dotyczące interfejsu użytkownika            | **Separator**             | **Well-Suited**             |
 
 >[!div class="step-by-step"]
 >[Poprzedni](modern-web-applications-characteristics.md)
->[dalej](architectural-principles.md)
+>[Następny](architectural-principles.md)

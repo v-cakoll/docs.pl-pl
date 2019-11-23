@@ -17,7 +17,7 @@ ms.locfileid: "72520231"
 
 Aplikacje ASP.NET Web Forms składają się ze stron zdefiniowanych w plikach *. aspx* . Adres każdej strony jest oparty na fizycznej ścieżce pliku w projekcie. Gdy przeglądarka wysyła żądanie do strony, zawartość strony jest dynamicznie renderowana na serwerze. Konta renderowania zarówno dla znacznika HTML strony, jak i jego formantów serwerowych.
 
-W programie Blazor każda Strona w aplikacji jest składnikiem, zazwyczaj zdefiniowanym w pliku *. Razor* , z co najmniej jedną określoną trasą. Routing głównie odbywa się po stronie klienta bez udziału określonego żądania serwera. Przeglądarka najpierw wysyła żądanie do adresu głównego aplikacji. Składnik główny `Router` w aplikacji Blazor, a następnie obsługuje przechwycone żądania nawigacji i je do poprawnego składnika.
+W programie Blazor każda Strona w aplikacji jest składnikiem, zazwyczaj zdefiniowanym w pliku *. Razor* , z co najmniej jedną określoną trasą. Routing głównie odbywa się po stronie klienta bez udziału określonego żądania serwera. Przeglądarka najpierw wysyła żądanie do adresu głównego aplikacji. Główny składnik `Router` w aplikacji Blazor będzie obsługiwać przechwycone żądania nawigacji i je do poprawnego składnika.
 
 Blazor obsługuje również *głębokie łączenie*. Głębokie łączenie występuje, gdy przeglądarka wysyła żądanie do określonej trasy innej niż główna aplikacji. Żądania linków bezpośrednich wysyłanych do serwera są kierowane do aplikacji Blazor, która następnie kieruje żądanie po stronie klienta do właściwego składnika.
 
@@ -137,9 +137,9 @@ Routing w Blazor jest obsługiwany przez składnik `Router`. Składnik `Router` 
 </Router>
 ```
 
-Składnik `Router` odnajduje składniki routingu w określonym `AppAssembly` i opcjonalnie określony `AdditionalAssemblies`. Gdy przeglądarka nawiguje, `Router` przechwytuje nawigację i renderuje zawartość parametru `Found` z wyodrębnioną `RouteData`, jeśli trasa pasuje do adresu, w przeciwnym razie `Router` renderuje swój parametr `NotFound`.
+Składnik `Router` odnajduje składniki routingu w określonym `AppAssembly` i opcjonalnie określone `AdditionalAssemblies`. Po przejściu przeglądarki `Router` przechwytuje nawigację i renderuje zawartość parametru `Found` z wyodrębnionym `RouteData`, jeśli trasa pasuje do adresu, w przeciwnym razie `Router` renderuje swój `NotFound` parametr.
 
-Składnik `RouteView` obsługuje renderowanie dopasowanego składnika określonego przez `RouteData` z układem, jeśli go zawiera. Jeśli dopasowany składnik nie ma układu, opcjonalnie określono wartość `DefaultLayout`.
+Składnik `RouteView` obsługuje renderowanie dopasowanego składnika określonego przez `RouteData` z układem, jeśli go zawiera. Jeśli dopasowany składnik nie ma układu, zostanie użyta opcjonalnie określona `DefaultLayout`.
 
 Składnik `LayoutView` renderuje swoją zawartość podrzędną w ramach określonego układu. W dalszej części tego rozdziału przejdziemy do bardziej szczegółowych informacji o układach.
 
@@ -178,7 +178,7 @@ Aby przejść do innego adresu, użyj metody `NavigateTo`:
 }
 ```
 
-Aby uzyskać opis wszystkich elementów członkowskich `NavigationManager`, zobacz [identyfikatory URI i pomocnika stanu nawigacji](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
+Aby zapoznać się z opisem wszystkich elementów członkowskich `NavigationManager`, zobacz [Identyfikator URI i pomocników stanu nawigacji](/aspnet/core/blazor/routing#uri-and-navigation-state-helpers).
 
 ## <a name="base-urls"></a>Podstawowe adresy URL
 
@@ -190,7 +190,7 @@ Jeśli aplikacja Blazor jest wdrażana w ścieżce podstawowej, należy określi
 
 ## <a name="page-layout"></a>Układ strony
 
-Układ strony w formularzach sieci Web ASP.NET jest obsługiwany przez strony główne. Strony wzorcowe definiują szablon z co najmniej jednym symbolem zastępczym zawartości, który może zostać dostarczony przez poszczególne strony. Strony wzorcowe są zdefiniowane w plikach *. Master* i zaczynają się od dyrektywy `<%@ Master %>`. Zawartość plików *Master* jest kodowana jako strona *. aspx* , ale z dodaniem formantów `<asp:ContentPlaceHolder>` do oznaczania, gdzie strony mogą dostarczać zawartość.
+Układ strony w formularzach sieci Web ASP.NET jest obsługiwany przez strony główne. Strony wzorcowe definiują szablon z co najmniej jednym symbolem zastępczym zawartości, który może zostać dostarczony przez poszczególne strony. Strony wzorcowe są zdefiniowane w plikach *. Master* i zaczynają się od dyrektywy `<%@ Master %>`. Zawartość plików *. Master* jest zakodowana w taki sam sposób, jak w przypadku strony *. aspx* , ale przy dodawaniu `<asp:ContentPlaceHolder>` kontrolek do oznaczania, gdzie strony mogą dostarczać zawartość.
 
 *Site. Master*
 
@@ -220,7 +220,7 @@ Układ strony w formularzach sieci Web ASP.NET jest obsługiwany przez strony g�
 </html>
 ```
 
-W Blazor można obsłużyć układ strony przy użyciu składników układu. Składniki układu dziedziczą z `LayoutComponentBase`, który definiuje jedną właściwość `Body` typu `RenderFragment`, która może służyć do renderowania zawartości strony.
+W Blazor można obsłużyć układ strony przy użyciu składników układu. Składniki układu dziedziczą z `LayoutComponentBase`, który definiuje jedną właściwość `Body` typu `RenderFragment`, której można użyć do renderowania zawartości strony.
 
 *MainLayout. Razor*
 
@@ -276,9 +276,9 @@ Wyrenderowane dane wyjściowe dla strony byłyby następujące:
 </div>
 ```
 
-Układy w Blazor nie definiują zwykle elementów głównych HTML strony (`<html>`, `<body>`, `<head>` itd.). Główne elementy HTML są definiowane na stronie hosta aplikacji Blazor, która jest używana do renderowania początkowej zawartości HTML dla aplikacji (zobacz [Bootstrap Blazor](project-structure.md#bootstrap-blazor)). Na stronie hosta można renderować wiele składników głównych aplikacji z otaczającym znacznikiem.
+Układy w programie Blazor zazwyczaj nie definiują głównych elementów HTML dla strony (`<html>`, `<body>`, `<head>`itd.). Główne elementy HTML są definiowane na stronie hosta aplikacji Blazor, która jest używana do renderowania początkowej zawartości HTML dla aplikacji (zobacz [Bootstrap Blazor](project-structure.md#bootstrap-blazor)). Na stronie hosta można renderować wiele składników głównych aplikacji z otaczającym znacznikiem.
 
-Składniki w Blazor, w tym strony, nie mogą renderować tagów `<script>`. To ograniczenie renderowania istnieje, ponieważ Tagi `<script>` są ładowane raz, a następnie nie można ich zmienić. Jeśli spróbujesz renderować Tagi dynamicznie przy użyciu składnia Razor, może wystąpić nieoczekiwane zachowanie. Zamiast tego należy dodać wszystkie Tagi `<script>` do strony hosta aplikacji.
+Składniki w Blazor, w tym strony, nie mogą renderować tagów `<script>`. To ograniczenie renderowania istnieje, ponieważ Tagi `<script>` są ładowane jednokrotnie, a następnie nie można ich zmienić. Jeśli spróbujesz renderować Tagi dynamicznie przy użyciu składnia Razor, może wystąpić nieoczekiwane zachowanie. Zamiast tego należy dodać wszystkie Tagi `<script>` do strony hosta aplikacji.
 
 >[!div class="step-by-step"]
 >[Poprzedni](components.md)

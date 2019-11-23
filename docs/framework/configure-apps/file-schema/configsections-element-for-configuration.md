@@ -16,7 +16,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119021"
 ---
-# <a name="configsections-element-for-configuration"></a>\<element > configSections dla konfiguracji \<
+# <a name="configsections-element-for-configuration"></a>\<element > configSections dla konfiguracji \<>
 
 Zawiera sekcję konfiguracyjną i deklaracje przestrzeni nazw.
 
@@ -38,9 +38,9 @@ Brak
 |     | Opis |
 | --- | ----------- |
 | [ **\<sekcja >** ](section-element.md) | Zawiera deklarację sekcji konfiguracyjnej. |
-| [ **\<sekcji >** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
-| [ **\<Usuń >** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
-| [ **\<Wyczyść >** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Definiuje przestrzeń nazw dla sekcji konfiguracyjnych. |
+| [ **\<remove>** ](remove-element-for-configsections.md) | Usuwa wstępnie zdefiniowaną sekcję lub grupę sekcji. |
+| [ **\<clear>** ](clear-element-for-configsections.md) | Czyści wszystkie wcześniej zdefiniowane sekcje i grupy sekcji. |
 
 ## <a name="remarks"></a>Uwagi
 

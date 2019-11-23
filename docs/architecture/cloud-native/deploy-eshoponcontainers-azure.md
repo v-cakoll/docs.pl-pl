@@ -1,5 +1,5 @@
 ---
-title: Wdrażanie eShopOnContainers na platformie Azure
+title: Wdrażanie aplikacji eShopOnContainers na platformie Azure
 description: Wdrażanie aplikacji eShopOnContainers przy użyciu usługi Azure Kubernetes Service, Helm i DevSpaces.
 ms.date: 06/30/2019
 ms.openlocfilehash: 21033cc904dc595193c69f3452ce2522740f8ff6
@@ -9,7 +9,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183274"
 ---
-# <a name="deploying-eshoponcontainers-to-azure"></a>Wdrażanie eShopOnContainers na platformie Azure
+# <a name="deploying-eshoponcontainers-to-azure"></a>Wdrażanie aplikacji eShopOnContainers na platformie Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -27,22 +27,22 @@ Podstawowe wdrożenia do AKS mogą używać niestandardowych skryptów interfejs
 
 Wykresy eShopOnContainers Helm można znaleźć w folderze/k8s/Helm Rysunek 2-6 pokazuje, w jaki sposób różne składniki aplikacji są zorganizowane w strukturę folderów używaną przez Helm do definiowania wdrożeń i zarządzania nimi.
 
-![Rysunek architektury](./media/eshoponcontainers-helm-folder.png)
-eShopOnContainers**2-6**. Folder eShopOnContainers Helm.
+![architekturę eShopOnContainers](./media/eshoponcontainers-helm-folder.png)
+**rysunek 2-6**. Folder eShopOnContainers Helm.
 
-Każdy indywidualny składnik jest instalowany przy `helm install` użyciu polecenia. Te polecenia można łatwo zaskryptować, a eShopOnContainers zawiera skrypt "Deploy All", który przechodzi przez różne składniki i instaluje je przy użyciu odpowiednich wykresów Helm. Wynikiem jest powtarzalny proces, wersja z aplikacją w kontroli źródła, którą każdy członek zespołu może wdrożyć w klastrze AKS z jednowierszowym poleceniem skryptu. Szczególnie w połączeniu z Azure Dev Spaces, ułatwiają deweloperom diagnozowanie i testowanie indywidualnych zmian w aplikacjach natywnych w chmurze opartych na mikrousługach.
+Każdy indywidualny składnik jest instalowany przy użyciu polecenia `helm install`. Te polecenia można łatwo zaskryptować, a eShopOnContainers zawiera skrypt "Deploy All", który przechodzi przez różne składniki i instaluje je przy użyciu odpowiednich wykresów Helm. Wynikiem jest powtarzalny proces, wersja z aplikacją w kontroli źródła, którą każdy członek zespołu może wdrożyć w klastrze AKS z jednowierszowym poleceniem skryptu. Szczególnie w połączeniu z Azure Dev Spaces, ułatwiają deweloperom diagnozowanie i testowanie indywidualnych zmian w aplikacjach natywnych w chmurze opartych na mikrousługach.
 
 ## <a name="azure-dev-spaces"></a>Azure Dev Spaces
 
 Azure Dev Spaces pomaga indywidualnym deweloperom hostować własne, unikatowe wersje klastrów AKS na platformie Azure podczas opracowywania. Minimalizuje to wymagania komputera lokalnego i umożliwia członkom zespołu szybkie sprawdzenie, jak ich zmiany będą zachowywać się w rzeczywistym środowisku AKS. Azure Dev Spaces oferuje interfejs wiersza polecenia dla deweloperów, który umożliwia deweloperom zarządzanie miejscami deweloperskimi oraz wdrażanie ich w określonym podrzędnym miejscu deweloperskim zgodnie z potrzebami. Każde podrzędne miejsce dev jest przywoływana przy użyciu unikatowej poddomeny adresu URL, co umożliwia równoczesne wdrażanie zmodyfikowanych klastrów, dzięki czemu Indywidualni deweloperzy mogą uniknąć konfliktu ze sobą w toku. Na rysunku 2-7 można zobaczyć, w jaki sposób deweloper Susie wdrożył własną wersję mikrousługi programu Bikes do swojej przestrzeni dev. Następnie można testować zmiany przy użyciu niestandardowego adresu URL rozpoczynającego się od nazwy miejsca (susie.s.dev.myapp.eus.azds.io).
 
-![Rysunek architektury](./media/azure-devspaces-one.png)
-eShopOnContainers**2-7**. Susie dewelopera wdraża własną wersję mikrousługi programu Bikes i testuje ją.
+![architekturę eShopOnContainers](./media/azure-devspaces-one.png)
+**rysunek 2-7**. Susie dewelopera wdraża własną wersję mikrousługi programu Bikes i testuje ją.
 
 W tym samym czasie Developer Jan dostosowuje mikrousługę rezerwacji i wymaga przetestowania zmian. Jest w stanie wdrożyć zmiany w swoim własnym obszarze deweloperskim bez konfliktu ze zmianami Susie, jak pokazano na rysunku 2-8. Może testować swoje zmiany przy użyciu własnego adresu URL, który jest poprzedzony nazwą jego miejsca (john.s.dev.myapp.eus.azds.io).
 
-![Rysunek architektury](./media/azure-devspaces-two.png)
-eShopOnContainers**2-8**. Deweloperzy nie wdrażają własnej wersji mikrousługi rezerwacji i testują ją bez konfliktu z innymi deweloperami.
+![architekturę eShopOnContainers](./media/azure-devspaces-two.png)
+**rysunek 2-8**. Deweloperzy nie wdrażają własnej wersji mikrousługi rezerwacji i testują ją bez konfliktu z innymi deweloperami.
 
 Za pomocą Azure Dev Spaces zespoły mogą współpracować bezpośrednio z usługą AKS, niezależnie od zmieniania, wdrażania i testowania zmian. Takie podejście zmniejsza potrzebę korzystania z oddzielnych dedykowanych środowisk hostowanych, ponieważ każdy deweloper efektywnie ma własne środowisko AKS. Deweloperzy mogą korzystać z Azure Dev Spaces przy użyciu interfejsu wiersza polecenia lub uruchamiać aplikacje do Azure Dev Spaces bezpośrednio z programu Visual Studio. [Dowiedz się więcej o tym, jak działa Azure Dev Spaces i czy jest skonfigurowane.](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 
@@ -52,8 +52,8 @@ Przykład eShopOnContainers obejmuje obsługę śledzenia kampanii marketingowyc
 
 ## <a name="references"></a>Odwołania
 
-- [eShopOnContainers: Tworzenie klastra Kubernetes w AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
-- [eShopOnContainers: Usługa Azure Dev miejsca do magazynowania](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
+- [eShopOnContainers: Utwórz klaster Kubernetes w AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS)#create-kubernetes-cluster-in-aks)
+- [eShopOnContainers: Azure Dev Spaces](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)
 - [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/about)
 
 >[!div class="step-by-step"]

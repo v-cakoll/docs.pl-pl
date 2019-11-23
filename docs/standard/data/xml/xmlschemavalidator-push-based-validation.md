@@ -1,5 +1,5 @@
 ---
-title: XmlSchemaValidator weryfikacja oparta na wypychaniu
+title: Weryfikacja oparta na wypchnięciach przy użyciu klasy XmlSchemaValidator
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,13 +15,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/10/2019
 ms.locfileid: "72250042"
 ---
-# <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator weryfikacja oparta na wypychaniu
+# <a name="xmlschemavalidator-push-based-validation"></a>Weryfikacja oparta na wypchnięciach przy użyciu klasy XmlSchemaValidator
 
-Klasa <xref:System.Xml.Schema.XmlSchemaValidator> zapewnia wydajny mechanizm o wysokiej wydajności służący do sprawdzania poprawności danych XML w schematach XML w sposób oparty na wypychaniu. Na przykład Klasa <xref:System.Xml.Schema.XmlSchemaValidator> umożliwia sprawdzenie poprawności sprawdzonych XML, bez konieczności serializacji go jako dokumentu XML, a następnie ponowne przeanalizowanie dokumentu przy użyciu walidacji czytnika XML.
+Klasa <xref:System.Xml.Schema.XmlSchemaValidator> zapewnia wydajny mechanizm o wysokiej wydajności służący do sprawdzania poprawności danych XML w schematach XML w sposób oparty na wypychaniu. Na przykład Klasa <xref:System.Xml.Schema.XmlSchemaValidator> umożliwia weryfikowanie w miejscu XML sprawdzonych, bez konieczności serializacji go jako dokumentu XML, a następnie ponowne analizowanie dokumentu przy użyciu walidacji czytnika XML.
 
 Klasy <xref:System.Xml.Schema.XmlSchemaValidator> można używać w zaawansowanych scenariuszach, takich jak tworzenie aparatów walidacji w niestandardowych źródłach danych XML lub sposób tworzenia walidacji składnika zapisywania XML.
 
-Poniżej przedstawiono przykład użycia klasy <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji pliku `contosoBooks.xml` względem schematu `contosoBooks.xsd`. W przykładzie zastosowano klasę <xref:System.Xml.Serialization.XmlSerializer> w celu deserializacji pliku `contosoBooks.xml` i przekazania wartości węzłów do metod klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Poniżej znajduje się przykład użycia klasy <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji pliku `contosoBooks.xml` w schemacie `contosoBooks.xsd`. W przykładzie zastosowano klasę <xref:System.Xml.Serialization.XmlSerializer>, aby deserializować plik `contosoBooks.xml` i przekazać wartości węzłów do metod klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 > [!NOTE]
 > Ten przykład jest używany w części tego tematu.
@@ -29,7 +29,7 @@ Poniżej przedstawiono przykład użycia klasy <xref:System.Xml.Schema.XmlSchema
 [!code-csharp[XmlSchemaValidatorExamples#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaValidatorExamples/CS/XmlSchemaValidatorExamples.cs#1)]
 [!code-vb[XmlSchemaValidatorExamples#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaValidatorExamples/VB/XmlSchemaValidatorExamples.vb#1)]
 
-Przykład pobiera plik `contosoBooks.xml` jako dane wejściowe.
+Przykład pobiera `contosoBooks.xml` plik jako dane wejściowe.
 
 [!code-xml[XPathXMLExamples#2](../../../../samples/snippets/xml/VS_Snippets_Data/XPathXMLExamples/XML/contosoBooks.xml#2)]
 
@@ -71,29 +71,29 @@ Przykład pobiera również `contosoBooks.xsd` jako dane wejściowe.
 
 Aby rozpocząć walidację sprawdzonych XML, należy najpierw zainicjować nowe wystąpienie klasy <xref:System.Xml.Schema.XmlSchemaValidator> przy użyciu konstruktora <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A>.
 
-Konstruktor <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> przyjmuje <xref:System.Xml.XmlNameTable>, <xref:System.Xml.Schema.XmlSchemaSet> i <xref:System.Xml.XmlNamespaceManager> obiektów jako parametry, a także wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags> jako parametr. Obiekt <xref:System.Xml.XmlNameTable> służy do wyodrębnić dobrze znanych ciągów przestrzeni nazw, takich jak przestrzeń nazw schematu, przestrzeń nazw XML i tak dalej, i jest przenoszona do metody <xref:System.Xml.Schema.XmlSchemaDatatype.ParseValue%2A> podczas weryfikacji prostej zawartości. Obiekt <xref:System.Xml.Schema.XmlSchemaSet> zawiera schematy XML używane do sprawdzania poprawności sprawdzonych XML. Obiekt <xref:System.Xml.XmlNamespaceManager> służy do rozpoznawania przestrzeni nazw napotkanych podczas walidacji. Wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags> służy do wyłączania niektórych funkcji walidacji.
+Konstruktor <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> przyjmuje obiekty <xref:System.Xml.XmlNameTable>, <xref:System.Xml.Schema.XmlSchemaSet>i <xref:System.Xml.XmlNamespaceManager> jako parametry, a także wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags> jako parametr. Obiekt <xref:System.Xml.XmlNameTable> jest używany do wyodrębnić dobrze znanych ciągów przestrzeni nazw, takich jak przestrzeń nazw schematu, przestrzeń nazw XML i tak dalej, i jest przenoszona do metody <xref:System.Xml.Schema.XmlSchemaDatatype.ParseValue%2A> podczas weryfikacji prostej zawartości. Obiekt <xref:System.Xml.Schema.XmlSchemaSet> zawiera schematy XML używane do sprawdzania poprawności sprawdzonych XML. Obiekt <xref:System.Xml.XmlNamespaceManager> jest używany do rozpoznawania przestrzeni nazw napotkanych podczas walidacji. Wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags> służy do wyłączania niektórych funkcji weryfikacji.
 
 Więcej informacji na temat konstruktora <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 ### <a name="initializing-validation"></a>Inicjowanie walidacji
 
-Po skonstruowaniu obiektu <xref:System.Xml.Schema.XmlSchemaValidator> istnieją dwie przeciążone metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> służące do zainicjowania stanu obiektu <xref:System.Xml.Schema.XmlSchemaValidator>. Poniżej przedstawiono dwie metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.
+Po skonstruowaniu obiektu <xref:System.Xml.Schema.XmlSchemaValidator> są dwie przeciążone metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> użyte do zainicjowania stanu obiektu <xref:System.Xml.Schema.XmlSchemaValidator>. Poniżej przedstawiono dwie metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>
 
-Domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> inicjuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do jego stanu początkowego i przeciążonej metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>, która przyjmuje <xref:System.Xml.Schema.XmlSchemaObject> jako parametr inicjuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do stanu początkowego dla częściowej walidacji.
+Domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> inicjuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do jego stanu początkowego, a przeciążona metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>, która przyjmuje <xref:System.Xml.Schema.XmlSchemaObject> jako parametr inicjuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do stanu początkowego dla częściowej walidacji.
 
-Metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> można wywołać tylko natychmiast po skonstruowaniu obiektu <xref:System.Xml.Schema.XmlSchemaValidator> lub po wywołaniu <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>.
+Obie metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> mogą być wywoływane tylko natychmiast po skonstruowaniu obiektu <xref:System.Xml.Schema.XmlSchemaValidator> lub po wywołaniu <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>.
 
-Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> zawiera przykład we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType> zapoznaj się z przykładem we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 #### <a name="partial-validation"></a>Częściowe sprawdzanie poprawności
 
 Metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>, która przyjmuje <xref:System.Xml.Schema.XmlSchemaObject> jako parametr inicjuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do stanu początkowego dla częściowej walidacji.
 
-W poniższym przykładzie zainicjowano <xref:System.Xml.Schema.XmlSchemaObject> do walidacji częściowej przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>. Element schematu `orderNumber` jest przenoszona przez wybranie elementu schematu o <xref:System.Xml.XmlQualifiedName> w kolekcji <xref:System.Xml.Schema.XmlSchemaObjectTable> zwróconej przez właściwość <xref:System.Xml.Schema.XmlSchemaSet.GlobalElements%2A> obiektu <xref:System.Xml.Schema.XmlSchemaSet>. Obiekt <xref:System.Xml.Schema.XmlSchemaValidator> sprawdza poprawność tego określonego elementu.
+W poniższym przykładzie <xref:System.Xml.Schema.XmlSchemaObject> jest inicjowana do walidacji częściowej przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A?displayProperty=nameWithType>. Element schematu `orderNumber` jest przenoszona przez wybranie elementu schematu <xref:System.Xml.XmlQualifiedName> w kolekcji <xref:System.Xml.Schema.XmlSchemaObjectTable> zwróconej przez właściwość <xref:System.Xml.Schema.XmlSchemaSet.GlobalElements%2A> obiektu <xref:System.Xml.Schema.XmlSchemaSet>. Obiekt <xref:System.Xml.Schema.XmlSchemaValidator> następnie sprawdza poprawność tego określonego elementu.
 
 ```vb
 Dim schemaSet As XmlSchemaSet = New XmlSchemaSet()
@@ -135,20 +135,20 @@ Przykład pobiera Poniższy schemat XML jako dane wejściowe.
 </xs:schema>
 ```
 
-Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 ### <a name="adding-additional-schemas"></a>Dodawanie dodatkowych schematów
 
-Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> klasy <xref:System.Xml.Schema.XmlSchemaValidator> służy do dodawania schematu XML do zestawu schematów używanych podczas walidacji. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> może służyć do symulowania efektu napotkania wbudowanego schematu XML w kodzie XML sprawdzonych.
+Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> klasy <xref:System.Xml.Schema.XmlSchemaValidator> służy do dodawania schematu XML do zestawu schematów używanych podczas walidacji. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> może służyć do symulowania efektu napotkania wbudowanego schematu XML w języku XML sprawdzonych.
 
 > [!NOTE]
 > Docelowa przestrzeń nazw parametru <xref:System.Xml.Schema.XmlSchema> nie może być zgodna z elementem lub atrybutem już napotkanym przez obiekt <xref:System.Xml.Schema.XmlSchemaValidator>.
 >
-> Jeśli wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> nie została przekazano jako parametr do konstruktora <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A>, Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> nie wykonuje żadnych operacji.
+> Jeśli wartość <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessInlineSchema?displayProperty=nameWithType> nie została przeniesiona jako parametr do konstruktora <xref:System.Xml.Schema.XmlSchemaValidator.%23ctor%2A>, Metoda <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> nie wykonuje żadnych operacji.
 
-Wynik metody <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> zależy od bieżącego kontekstu węzła XML, który jest sprawdzany. Aby uzyskać więcej informacji na temat kontekstów walidacji, zobacz sekcję "kontekst walidacji" w tym temacie.
+Wynik metody <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> jest zależny od bieżącego kontekstu węzła XML, który jest sprawdzany. Aby uzyskać więcej informacji na temat kontekstów walidacji, zobacz sekcję "kontekst walidacji" w tym temacie.
 
-Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 ### <a name="validating-elements-attributes-and-content"></a>Walidacja elementów, atrybutów i zawartości
 
@@ -158,25 +158,25 @@ Klasa <xref:System.Xml.Schema.XmlSchemaValidator> udostępnia kilka metod służ
 |------------|-----------------|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Sprawdza poprawność nazwy elementu w bieżącym kontekście.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Sprawdza poprawność atrybutu w kontekście bieżącego elementu lub względem obiektu <xref:System.Xml.Schema.XmlSchemaAttribute> przekazaną jako parametr do metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|Sprawdza, czy wszystkie wymagane atrybuty w kontekście elementu są obecne i przygotowuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji zawartości podrzędnej elementu.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|Sprawdza, czy wszystkie wymagane atrybuty w kontekście elementu są obecne i przygotowuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator>, aby sprawdzić poprawność zawartości podrzędnej elementu.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Sprawdza, czy tekst jest dozwolony w kontekście bieżącego elementu i gromadzi tekst do walidacji, jeśli bieżący element ma prostą zawartość.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Sprawdza, czy w bieżącym kontekście elementu jest dozwolone białe miejsce, i gromadzi białe miejsce do walidacji, czy bieżący element ma prostą zawartość.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|Sprawdza, czy zawartość tekstowa elementu jest prawidłowa przy uwzględnieniu jego typu danych dla elementów z prostą zawartością i sprawdza, czy zawartość bieżącego elementu jest kompletna dla elementów z zawartością złożoną.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Pomija sprawdzanie poprawności zawartości bieżącego elementu i przygotowuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji zawartości w kontekście elementu nadrzędnego.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Zakończenie walidacji i sprawdza ograniczenia tożsamości dla całego dokumentu XML, jeśli ustawiono opcję walidacji <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints>.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Wykonuje walidację i sprawdza ograniczenia tożsamości dla całego dokumentu XML, jeśli ustawiono opcję walidacji <xref:System.Xml.Schema.XmlSchemaValidationFlags.ProcessIdentityConstraints>.|
 
 > [!NOTE]
-> Klasa <xref:System.Xml.Schema.XmlSchemaValidator> ma zdefiniowane przejście stanu, które wymusza sekwencję i wystąpienie wywołań wykonanych dla każdej z metod opisanych w poprzedniej tabeli. Przejście określonego stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator> zostało opisane w sekcji "przechodzenie stanu XmlSchemaValidator" w tym temacie.
+> Klasa <xref:System.Xml.Schema.XmlSchemaValidator> ma zdefiniowane przejście stanu, które wymusza sekwencję i wystąpienia wywołań wykonanych dla każdej z metod opisanych w poprzedniej tabeli. Przejście określonego stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator> zostało opisane w sekcji "przechodzenie stanu XmlSchemaValidator" w tym temacie.
 
-Przykład metod używanych do sprawdzania poprawności elementów, atrybutów i zawartości w sprawdzonych XML zawiera przykład w poprzedniej sekcji. Więcej informacji o tych metodach znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Przykład metod używanych do sprawdzania poprawności elementów, atrybutów i zawartości w sprawdzonych XML zawiera przykład w poprzedniej sekcji. Więcej informacji o tych metodach znajduje się w dokumentacji dotyczącej klas <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 #### <a name="validating-content-using-an-xmlvaluegetter"></a>Sprawdzanie poprawności zawartości przy użyciu XmlValueGetter
 
-@No__t-0 @ no__t-1 może służyć do przekazywania wartości węzłów atrybutów, tekstu lub białych miejsc jako typów środowiska uruchomieniowego języka wspólnego (CLR) zgodnych z typem języka definicji schematu XML (XSD) atrybutu, tekstu lub odstępu. @No__t-0 @ no__t-1 jest przydatna, jeśli wartość CLR atrybutu, tekstu lub węzła białego miejsca jest już dostępna, i unika kosztu konwersji na `string`, a następnie ponowne przeanalizowanie go w celu weryfikacji.
+`delegate` <xref:System.Xml.Schema.XmlValueGetter>może służyć do przekazywania wartości węzłów atrybutów, tekstu lub białych miejsc jako typów środowiska uruchomieniowego języka wspólnego (CLR) zgodnych z typem języka definicji schematu XML (XSD) atrybutu, tekstu lub odstępu. <xref:System.Xml.Schema.XmlValueGetter>`delegate` jest przydatne, jeśli wartość CLR węzła atrybutu, tekstu lub białego miejsca jest już dostępna, i unika kosztu konwersji na `string`, a następnie ponowne przeanalizowanie go w celu sprawdzenia poprawności.
 
-Metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> i <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> są przeciążone i akceptują wartości węzłów atrybutów, tekstu lub białych miejsc jako `string` lub <xref:System.Xml.Schema.XmlValueGetter> @ no__t-5.
+Metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>i <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> są przeciążone i akceptują wartości węzłów atrybutów, tekstu lub białych miejsc jako `string` lub <xref:System.Xml.Schema.XmlValueGetter>`delegate`.
 
-Następujące metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptują <xref:System.Xml.Schema.XmlValueGetter> @ no__t-2 jako parametr.
+Następujące metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptują <xref:System.Xml.Schema.XmlValueGetter>`delegate` jako parametr.
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>
 
@@ -184,7 +184,7 @@ Następujące metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptuj�
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>
 
-Poniżej przedstawiono przykład <xref:System.Xml.Schema.XmlValueGetter> @ no__t-1 pobrane z przykładu klasy <xref:System.Xml.Schema.XmlSchemaValidator> we wprowadzeniu. @No__t-0 @ no__t-1 zwraca wartość atrybutu jako obiekt <xref:System.DateTime>. Aby sprawdzić poprawność tego obiektu <xref:System.DateTime> zwróconego przez <xref:System.Xml.Schema.XmlValueGetter>, obiekt <xref:System.Xml.Schema.XmlSchemaValidator> najpierw konwertuje go na element ValueType (ValueType jest domyślnym mapowaniem CLR dla typu XSD) dla typu danych atrybutu, a następnie sprawdza aspekty w skonwertowanej wartości.
+Poniżej przedstawiono przykład <xref:System.Xml.Schema.XmlValueGetter>`delegate` pobrany z przykładu klasy <xref:System.Xml.Schema.XmlSchemaValidator> we wprowadzeniu. `delegate` <xref:System.Xml.Schema.XmlValueGetter>zwraca wartość atrybutu jako obiekt <xref:System.DateTime>. Aby sprawdzić poprawność tego obiektu <xref:System.DateTime> zwróconego przez <xref:System.Xml.Schema.XmlValueGetter>, obiekt <xref:System.Xml.Schema.XmlSchemaValidator> najpierw konwertuje go na element ValueType (ValueType jest domyślnym mapowaniem CLR dla typu XSD) dla typu danych atrybutu, a następnie sprawdza aspekty w skonwertowanej wartości.
 
 ```vb
 Shared dateTimeGetterContent As Object
@@ -214,13 +214,13 @@ static XmlValueGetter DateTimeGetter(DateTime dateTime)
 }
 ```
 
-Aby zapoznać się z kompletnym przykładem <xref:System.Xml.Schema.XmlValueGetter> @ no__t-1, zobacz przykład we wprowadzeniu. Więcej informacji na temat <xref:System.Xml.Schema.XmlValueGetter> @ no__t-1 można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlValueGetter> i <xref:System.Xml.Schema.XmlSchemaValidator>.
+Aby zapoznać się z kompletnym przykładem `delegate`<xref:System.Xml.Schema.XmlValueGetter>, zobacz przykład we wprowadzeniu. Więcej informacji na temat `delegate`<xref:System.Xml.Schema.XmlValueGetter>można znaleźć w dokumentacji dotyczącej klas <xref:System.Xml.Schema.XmlValueGetter>i <xref:System.Xml.Schema.XmlSchemaValidator>.
 
-#### <a name="post-schema-validation-information"></a>Po zaweryfikacji schematu — informacje
+#### <a name="post-schema-validation-information"></a>Post-Schema-Validation-Information
 
-Klasa <xref:System.Xml.Schema.XmlSchemaInfo> reprezentuje niektóre z podanych po schemacie walidacji węzła XML zweryfikowanego przez klasę <xref:System.Xml.Schema.XmlSchemaValidator>. Różne metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptują obiekt <xref:System.Xml.Schema.XmlSchemaInfo> jako opcjonalny parametr (`null`) `out`.
+Klasa <xref:System.Xml.Schema.XmlSchemaInfo> reprezentuje niektóre z podanych po schemacie walidacji węzła XML zweryfikowanego przez klasę <xref:System.Xml.Schema.XmlSchemaValidator>. Różne metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptują obiekt <xref:System.Xml.Schema.XmlSchemaInfo> jako opcjonalny parametr `out` (`null`).
 
-Po pomyślnej weryfikacji właściwości obiektu <xref:System.Xml.Schema.XmlSchemaInfo> są ustawiane z wynikami walidacji. Na przykład po pomyślnej weryfikacji atrybutu przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> obiekt <xref:System.Xml.Schema.XmlSchemaInfo> (jeśli jest określony) <xref:System.Xml.Schema.XmlSchemaInfo.SchemaAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A>, <xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A> i <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> właściwości są ustawiane z wynikami walidacji.
+Po pomyślnej weryfikacji właściwości obiektu <xref:System.Xml.Schema.XmlSchemaInfo> są ustawiane z wynikami walidacji. Na przykład po pomyślnym sprawdzeniu atrybutu przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> obiekt <xref:System.Xml.Schema.XmlSchemaInfo> (jeśli określony) <xref:System.Xml.Schema.XmlSchemaInfo.SchemaAttribute%2A>, <xref:System.Xml.Schema.XmlSchemaInfo.SchemaType%2A>, <xref:System.Xml.Schema.XmlSchemaInfo.MemberType%2A>i <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> właściwości są ustawione z wynikami walidacji.
 
 Następujące metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptują obiekt <xref:System.Xml.Schema.XmlSchemaInfo> jako parametr out.
 
@@ -240,22 +240,22 @@ Następujące metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> akceptuj�
 
 - <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>
 
-Pełny przykład klasy <xref:System.Xml.Schema.XmlSchemaInfo> zawiera przykład we wprowadzeniu. Aby uzyskać więcej informacji na temat klasy <xref:System.Xml.Schema.XmlSchemaInfo>, zapoznaj się z dokumentacją dotyczącą klasy <xref:System.Xml.Schema.XmlSchemaInfo>.
+Aby zapoznać się z kompletnym przykładem klasy <xref:System.Xml.Schema.XmlSchemaInfo>, zobacz przykład we wprowadzeniu. Więcej informacji na temat klasy <xref:System.Xml.Schema.XmlSchemaInfo> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaInfo>.
 
 ### <a name="retrieving-expected-particles-attributes-and-unspecified-default-attributes"></a>Pobieranie oczekiwanych cząsteczek, atrybutów i nieokreślonych atrybutów domyślnych
 
-Klasa <xref:System.Xml.Schema.XmlSchemaValidator> udostępnia metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> i <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>, aby pobrać oczekiwane cząstki, atrybuty i nieokreślone atrybuty domyślne w bieżącym kontekście walidacji.
+Klasa <xref:System.Xml.Schema.XmlSchemaValidator> dostarcza metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>i <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>, aby pobrać oczekiwane cząstki, atrybuty i nieokreślone atrybuty domyślne w bieżącym kontekście walidacji.
 
 #### <a name="retrieving-expected-particles"></a>Pobieranie oczekiwanych cząsteczek
 
-Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę obiektów <xref:System.Xml.Schema.XmlSchemaParticle> zawierających oczekiwane cząstki w bieżącym kontekście elementu. Prawidłowe cząstki, które mogą być zwracane przez metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, są wystąpieniami <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaAny> klas.
+Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę obiektów <xref:System.Xml.Schema.XmlSchemaParticle> zawierających oczekiwane cząstki w bieżącym kontekście elementu. Prawidłowe cząstki, które mogą być zwracane przez metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, są wystąpieniami klas <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaAny>.
 
 Gdy compositor dla modelu zawartości jest `xs:sequence`, zwracana jest tylko Następna cząstka w sekwencji. Jeśli compositor dla modelu zawartości to `xs:all` lub `xs:choice`, zwracane są wszystkie prawidłowe cząstki, które mogą się pojawić w kontekście bieżącego elementu.
 
 > [!NOTE]
 > Jeśli metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest wywoływana natychmiast po wywołaniu metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwróci wszystkie elementy globalne.
 
-Na przykład, w schemacie języka definicji schematu XML (XSD) i w poniższym dokumencie XML po walidacji elementu `book` element `book` jest bieżącym kontekstem elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę zawierającą jeden obiekt <xref:System.Xml.Schema.XmlSchemaElement> reprezentujący element `title`. Gdy kontekst walidacji jest elementem `title`, Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę. Jeśli metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest wywoływana po sprawdzeniu poprawności elementu `title`, ale przed zweryfikowaniem elementu `description` zwraca tablicę zawierającą pojedynczy obiekt <xref:System.Xml.Schema.XmlSchemaElement> reprezentujący element `description`. Jeśli metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest wywoływana po sprawdzeniu poprawności elementu `description`, zwraca tablicę zawierającą pojedynczy obiekt <xref:System.Xml.Schema.XmlSchemaAny> reprezentujący symbol wieloznaczny.
+Na przykład, w schemacie języka definicji schematu XML (XSD) i w poniższym dokumencie XML, po walidacji elementu `book`, element `book` jest bieżącym kontekstem elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę zawierającą pojedynczy obiekt <xref:System.Xml.Schema.XmlSchemaElement> reprezentujący element `title`. Gdy kontekst walidacji jest elementem `title`, Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę. Jeśli metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest wywoływana po zweryfikowaniu elementu `title`, ale przed zweryfikowaniem elementu `description`, zwraca tablicę zawierającą pojedynczy obiekt <xref:System.Xml.Schema.XmlSchemaElement> reprezentujący element `description`. Jeśli metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest wywoływana po zweryfikowaniu elementu `description`, zwraca tablicę zawierającą pojedynczy obiekt <xref:System.Xml.Schema.XmlSchemaAny> reprezentujący symbol wieloznaczny.
 
 ```vb
 Dim reader As XmlReader =  XmlReader.Create("input.xml")
@@ -372,36 +372,36 @@ Przykład pobiera następujący schemat XSD jako dane wejściowe:
 ```
 
 > [!NOTE]
-> Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany. Aby uzyskać więcej informacji, zobacz sekcję "kontekst walidacji" w tym temacie.
+> Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany. Aby uzyskać więcej informacji, zobacz sekcję "kontekst walidacji" w tym temacie.
 
-Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zawiera przykład we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zapoznaj się z przykładem we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 #### <a name="retrieving-expected-attributes"></a>Pobieranie oczekiwanych atrybutów
 
-Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca tablicę obiektów <xref:System.Xml.Schema.XmlSchemaAttribute> zawierających oczekiwane atrybuty w kontekście bieżącego elementu.
+Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca tablicę obiektów <xref:System.Xml.Schema.XmlSchemaAttribute> zawierających oczekiwane atrybuty w bieżącym kontekście elementu.
 
-Na przykład w przykładzie we wprowadzeniu Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> służy do pobierania wszystkich atrybutów elementu `book`.
+Na przykład w przykładzie we wprowadzeniu Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> jest używana do pobierania wszystkich atrybutów elementu `book`.
 
-Jeśli wywołasz metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> bezpośrednio po metodzie <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>, zwracane są wszystkie atrybuty, które mogą pojawić się w dokumencie XML. Jeśli jednak wywołasz metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> po jednym lub większej liczbie wywołań metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, zwracane są atrybuty, które nie zostały jeszcze zweryfikowane dla bieżącego elementu.
+Jeśli wywołasz metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> bezpośrednio po metodzie <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>, zwracane są wszystkie atrybuty, które mogą pojawić się w dokumencie XML. Jeśli jednak wywołasz metodę <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> po jednym lub kilku wywołaniach metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>, zwracane są atrybuty, które nie zostały jeszcze zweryfikowane dla bieżącego elementu.
 
 > [!NOTE]
-> Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany. Aby uzyskać więcej informacji, zobacz sekcję "kontekst walidacji" w tym temacie.
+> Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany. Aby uzyskać więcej informacji, zobacz sekcję "kontekst walidacji" w tym temacie.
 
-Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zawiera przykład we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Przykład metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zapoznaj się z przykładem we wprowadzeniu. Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 #### <a name="retrieving-unspecified-default-attributes"></a>Pobieranie nieokreślonych atrybutów domyślnych
 
-Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> wypełnia <xref:System.Collections.ArrayList> określone za pomocą obiektów <xref:System.Xml.Schema.XmlSchemaAttribute> dla wszystkich atrybutów z wartościami domyślnymi, które nie zostały wcześniej zweryfikowane przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> w kontekście elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> powinna być wywoływana po wywołaniu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> dla każdego atrybutu w kontekście elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> powinna zostać użyta do określenia, jakie atrybuty domyślne mają zostać wstawione do zweryfikowanego dokumentu XML.
+Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> wypełnia <xref:System.Collections.ArrayList> określone za pomocą obiektów <xref:System.Xml.Schema.XmlSchemaAttribute> dla wszystkich atrybutów z wartościami domyślnymi, które nie zostały wcześniej zweryfikowane przy użyciu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> w kontekście elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> powinna być wywoływana po wywołaniu metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> dla każdego atrybutu w kontekście elementu. Metoda <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> powinna służyć do określenia, jakie atrybuty domyślne mają być wstawiane do zweryfikowanego dokumentu XML.
 
-Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> znajduje się w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+Więcej informacji o metodzie <xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A> można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
 ### <a name="handling-schema-validation-events"></a>Obsługa zdarzeń walidacji schematu
 
 Ostrzeżenia i błędy walidacji schematu napotkane podczas walidacji są obsługiwane przez zdarzenie <xref:System.Xml.Schema.XmlSchemaValidator.ValidationEventHandler> klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
-Ostrzeżenia @no__t dotyczące walidacji schematu mają wartość <xref:System.Xml.Schema.XmlSeverityType> i błędy walidacji schematu mają wartość <xref:System.Xml.Schema.XmlSeverityType> <xref:System.Xml.Schema.XmlSeverityType.Error>. Jeśli nie przypisano <xref:System.Xml.Schema.XmlSchemaValidator.ValidationEventHandler>, zostanie zgłoszony <xref:System.Xml.Schema.XmlSchemaValidationException> dla wszystkich błędów walidacji schematu z wartością <xref:System.Xml.Schema.XmlSeverityType> <xref:System.Xml.Schema.XmlSeverityType.Error>. Jednak <xref:System.Xml.Schema.XmlSchemaValidationException> nie jest generowany w przypadku ostrzeżeń dotyczących sprawdzania poprawności schematu z wartością <xref:System.Xml.Schema.XmlSeverityType> <xref:System.Xml.Schema.XmlSeverityType.Warning>.
+Ostrzeżenia dotyczące walidacji schematu mają <xref:System.Xml.Schema.XmlSeverityType> wartość <xref:System.Xml.Schema.XmlSeverityType.Warning> i błędy walidacji schematu mają <xref:System.Xml.Schema.XmlSeverityType> wartość <xref:System.Xml.Schema.XmlSeverityType.Error>. Jeśli nie przypisano <xref:System.Xml.Schema.XmlSchemaValidator.ValidationEventHandler>, zostanie zgłoszony <xref:System.Xml.Schema.XmlSchemaValidationException> dla wszystkich błędów walidacji schematu z wartością <xref:System.Xml.Schema.XmlSeverityType> <xref:System.Xml.Schema.XmlSeverityType.Error>. Niemniej jednak <xref:System.Xml.Schema.XmlSchemaValidationException> nie jest generowany w przypadku ostrzeżeń dotyczących sprawdzania poprawności schematu z wartością <xref:System.Xml.Schema.XmlSeverityType> <xref:System.Xml.Schema.XmlSeverityType.Warning>.
 
-Poniżej znajduje się przykład <xref:System.Xml.Schema.ValidationEventHandler>, który odbiera ostrzeżenia i błędy walidacji schematu, które zostały wykryte podczas walidacji schematu z przykładu we wprowadzeniu.
+Poniżej znajduje się przykład <xref:System.Xml.Schema.ValidationEventHandler>, który odbiera ostrzeżenia i błędy walidacji schematu napotkane podczas walidacji schematu wykonane z przykładu we wprowadzeniu.
 
 ```vb
 Shared Sub SchemaValidationEventHandler(sender As Object, e As ValidationEventArgs)
@@ -432,7 +432,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 }
 ```
 
-Pełny przykład <xref:System.Xml.Schema.ValidationEventHandler> zawiera przykład we wprowadzeniu. Więcej informacji można znaleźć w dokumentacji dotyczącej klasy <xref:System.Xml.Schema.XmlSchemaInfo>.
+Aby zapoznać się z kompletnym przykładem <xref:System.Xml.Schema.ValidationEventHandler>, zobacz przykład we wprowadzeniu. Więcej informacji można znaleźć w dokumentacji dotyczącej klas <xref:System.Xml.Schema.XmlSchemaInfo>.
 
 ## <a name="xmlschemavalidator-state-transition"></a>XmlSchemaValidator stanu przejścia
 
@@ -440,21 +440,21 @@ Klasa <xref:System.Xml.Schema.XmlSchemaValidator> ma zdefiniowane przejście sta
 
 W poniższej tabeli opisano przechodzenie stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator> oraz sekwencję i wystąpienia wywołań metod, które można wykonać w każdym stanie.
 
-|Stan|Przejście|
+|Stan|Transition|
 |-----------|----------------|
-|Walidacja|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel *) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
-|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; elementu|
-|Element|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> * (w <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> zawartość @ no__t-3)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> @ no__t-2 <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> @ no__t-2 <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> zawartość @ no__t-4 <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
-|Zawartość|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; elementu|
+|legalizacj|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> &#124; TopLevel *) <xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|
+|TopLevel|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
+|Element|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>* (<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> zawartości\*)? <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> &#124;<br /><br /> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A> <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>\* <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A> zawartości\* <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>&#124;|
+|Zawartość|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A> &#124; <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A> &#124; Element|
 
 > [!NOTE]
-> @No__t-0 jest generowany przez każdą metodę w powyższej tabeli, gdy wywołanie metody jest wykonywane w niepoprawnej sekwencji zgodnie z bieżącym stanem obiektu <xref:System.Xml.Schema.XmlSchemaValidator>.
+> <xref:System.InvalidOperationException> jest generowany przez każdą z metod w powyższej tabeli, gdy wywołanie metody jest wykonywane w niepoprawnej sekwencji, zgodnie z bieżącym stanem <xref:System.Xml.Schema.XmlSchemaValidator> obiektu.
 
-W powyższej tabeli przechodzenia stanu są używane symbole interpunkcyjne do opisywania metod i innych stanów, które mogą być wywoływane dla każdego stanu przejścia stanu dla klasy <xref:System.Xml.Schema.XmlSchemaValidator>. Używane symbole są tymi samymi symbolami, które znajdują się w dokumentacji XML Standards dla definicji typu dokumentu (DTD).
+W powyższej tabeli przechodzenia stanu są używane symbole interpunkcyjne do opisywania metod i innych stanów, które mogą być wywoływane dla każdego stanu przejścia stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator>. Używane symbole są tymi samymi symbolami, które znajdują się w dokumentacji XML Standards dla definicji typu dokumentu (DTD).
 
-W poniższej tabeli opisano, jak symbole interpunkcji Znalezione w powyższej tabeli przejścia stanu mają wpływ na metody i inne Stany, które mogą być wywoływane dla każdego stanu w fazie przejścia stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
+W poniższej tabeli opisano, jak symbole interpunkcji Znalezione w powyższej tabeli przejścia stanu mają wpływ na metody i inne Stany, które mogą być wywoływane dla każdego stanu w ramach przejścia stanu klasy <xref:System.Xml.Schema.XmlSchemaValidator>.
 
-|Symboliczn|Opis|
+|Symbol|Opis|
 |------------|-----------------|
 |&#124;|Można wywołać metodę lub stan (jeden przed paskiem lub po nim).|
 |?|Metoda lub stan, który poprzedza znak zapytania, jest opcjonalne, ale jeśli jest wywoływana, może być wywoływana tylko raz.|
@@ -462,23 +462,23 @@ W poniższej tabeli opisano, jak symbole interpunkcji Znalezione w powyższej ta
 
 ## <a name="validation-context"></a>Kontekst walidacji
 
-Metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> używane do walidacji elementów, atrybutów i zawartości w sprawdzonych XML, zmiana kontekstu walidacji obiektu <xref:System.Xml.Schema.XmlSchemaValidator>. Na przykład Metoda <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> pomija walidację zawartości bieżącego elementu i przygotowuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji zawartości w kontekście elementu nadrzędnego. jest równoważne pominięciu weryfikacji dla wszystkich elementów podrzędnych bieżącego elementu, a następnie wywołania metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.
+Metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> używane do sprawdzania poprawności elementów, atrybutów i zawartości w sprawdzonych XML, zmiany kontekstu walidacji obiektu <xref:System.Xml.Schema.XmlSchemaValidator>. Na przykład Metoda <xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A> pomija walidację zawartości bieżącego elementu i przygotowuje obiekt <xref:System.Xml.Schema.XmlSchemaValidator> do walidacji zawartości w kontekście elementu nadrzędnego; jest równoważne pominięciu weryfikacji dla wszystkich elementów podrzędnych bieżącego elementu, a następnie wywołania metody <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.
 
-Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany.
+Wyniki <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A>i <xref:System.Xml.Schema.XmlSchemaValidator.AddSchema%2A> metody klasy <xref:System.Xml.Schema.XmlSchemaValidator> są zależne od bieżącego kontekstu, który jest sprawdzany.
 
-W poniższej tabeli opisano wyniki wywołania tych metod po wywołaniu jednej z metod klasy <xref:System.Xml.Schema.XmlSchemaValidator> używanej do sprawdzania poprawności elementów, atrybutów i zawartości w sprawdzonych XML.
+W poniższej tabeli opisano wyniki wywoływania tych metod po wywołaniu jednej z metod klasy <xref:System.Xml.Schema.XmlSchemaValidator> używanej do walidacji elementów, atrybutów i zawartości w sprawdzonych XML.
 
 |Metoda|GetExpectedParticles|GetExpectedAttributes|AddSchema|
 |------------|--------------------------|---------------------------|---------------|
-|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>|Jeśli domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> jest wywoływana, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę zawierającą wszystkie elementy globalne.<br /><br /> Jeśli przeciążona metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> pobierająca <xref:System.Xml.Schema.XmlSchemaObject> jako parametr jest wywoływana w celu zainicjowania częściowej walidacji elementu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tylko element, do którego zainicjowano obiekt <xref:System.Xml.Schema.XmlSchemaValidator>.|Jeśli zostanie wywołana domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwróci pustą tablicę.<br /><br /> W przypadku przeciążenia metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> pobierającej <xref:System.Xml.Schema.XmlSchemaObject> jako parametr w celu zainicjowania częściowej walidacji atrybutu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca tylko atrybut, do którego zainicjowano obiekt <xref:System.Xml.Schema.XmlSchemaValidator>.|Dodaje schemat do <xref:System.Xml.Schema.XmlSchemaSet> obiektu <xref:System.Xml.Schema.XmlSchemaValidator>, jeśli nie ma żadnych błędów przetwarzania wstępnego.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Jeśli element kontekstu jest prawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych jako elementy podrzędne elementu kontekstu.<br /><br /> Jeśli element context jest nieprawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.|Jeśli element context jest prawidłowy i jeśli żadne wywołanie do <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> nie zostało wcześniej wykonane, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę wszystkich atrybutów zdefiniowanych w elemencie Context.<br /><br /> Jeśli niektóre atrybuty zostały już sprawdzone, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę pozostałych atrybutów do zweryfikowania.<br /><br /> Jeśli element context jest nieprawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.|Tak samo jak powyżej.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Jeśli atrybut kontekstu jest atrybutem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych jako pierwszy element podrzędny elementu kontekstu.|Jeśli atrybut kontekstu jest atrybutem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę pozostałych atrybutów do zweryfikowania.|Tak samo jak powyżej.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>|Jeśli domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> jest wywoływana, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tablicę zawierającą wszystkie elementy globalne.<br /><br /> Jeśli przeciążona metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, która przyjmuje <xref:System.Xml.Schema.XmlSchemaObject> jako parametr jest wywoływana w celu zainicjowania częściowej walidacji elementu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca tylko element, do którego zainicjowano obiekt <xref:System.Xml.Schema.XmlSchemaValidator>.|Jeśli domyślna metoda <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A> jest wywoływana, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.<br /><br /> Jeśli przeciążanie metody <xref:System.Xml.Schema.XmlSchemaValidator.Initialize%2A>, która przyjmuje <xref:System.Xml.Schema.XmlSchemaObject> jako parametr jest wywoływana w celu zainicjowania częściowej walidacji atrybutu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwróci tylko atrybut, do którego zainicjowano obiekt <xref:System.Xml.Schema.XmlSchemaValidator>.|Dodaje schemat do <xref:System.Xml.Schema.XmlSchemaSet> obiektu <xref:System.Xml.Schema.XmlSchemaValidator>, jeśli nie ma żadnych błędów przetwarzania wstępnego.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateElement%2A>|Jeśli element context jest prawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych jako elementy podrzędne elementu Context.<br /><br /> Jeśli element context jest nieprawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.|Jeśli element context jest prawidłowy i jeśli żadne wywołanie do <xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A> nie zostało wcześniej wykonane, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę wszystkich atrybutów zdefiniowanych w elemencie Context.<br /><br /> Jeśli niektóre atrybuty zostały już sprawdzone, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę pozostałych atrybutów do zweryfikowania.<br /><br /> Jeśli element context jest nieprawidłowy, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.|Tak samo jak powyżej.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateAttribute%2A>|Jeśli atrybut kontekstu jest atrybutem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwaną jako pierwszy element podrzędny elementu kontekstu.|Jeśli atrybut kontekstu jest atrybutem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę pozostałych atrybutów do zweryfikowania.|Tak samo jak powyżej.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.GetUnspecifiedDefaultAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwaną jako pierwszy element podrzędny elementu kontekstu.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę wymaganych i opcjonalnych atrybutów, które nie zostały jeszcze zweryfikowane dla elementu kontekstu.|Tak samo jak powyżej.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndOfAttributes%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwaną jako pierwszy element podrzędny elementu kontekstu.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.|Tak samo jak powyżej.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Jeśli element ContentType elementu context jest mieszany, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych w następnym położeniu.<br /><br /> Jeśli element ContentType elementu ContextType ma wartość textOnly lub Empty, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.<br /><br /> Jeśli element ContentType elementu ContextType to ElementOnly, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych w następnej pozycji, ale wystąpił błąd sprawdzania poprawności.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę niezweryfikowanych elementów kontekstu.|Tak samo jak powyżej.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>|Jeśli element ContentType elementu context jest mieszany, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych w następnym położeniu.<br /><br /> Jeśli element ContentType elementu ContextType ma wartość textOnly lub Empty, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.<br /><br /> Jeśli element ContentType elementu ContextType to ElementOnly, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych w następnym miejscu, ale wystąpił błąd sprawdzania poprawności.|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę atrybutów elementu kontekstu, które nie zostały zweryfikowane.|Tak samo jak powyżej.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.ValidateWhitespace%2A>|Jeśli odstępy między kontekstami jest odstępem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie zachowanie metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> jest takie samo jak w <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Jeśli odstępy między kontekstami jest odstępem najwyższego poziomu, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą tablicę.<br /><br /> W przeciwnym razie zachowanie metody <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> jest takie samo jak w <xref:System.Xml.Schema.XmlSchemaValidator.ValidateText%2A>.|Tak samo jak powyżej.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych po elemencie kontekstu (możliwe elementy równorzędne).|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę niezweryfikowanych elementów kontekstu.<br /><br /> Jeśli element kontekstu nie ma elementu nadrzędnego, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę pustą (element context jest obiektem nadrzędnym bieżącego elementu, w którym wywołano <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>).|Tak samo jak powyżej.|
-|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Wartość taka sama jak <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Wartość taka sama jak <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Tak samo jak powyżej.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedParticles%2A> zwraca sekwencję elementów oczekiwanych po elemencie kontekstu (możliwe elementy równorzędne).|<xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca listę atrybutów elementu kontekstu, które nie zostały zweryfikowane.<br /><br /> Jeśli element kontekstu nie ma elementu nadrzędnego, <xref:System.Xml.Schema.XmlSchemaValidator.GetExpectedAttributes%2A> zwraca pustą listę (element context jest elementem nadrzędnym bieżącego elementu, w którym <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A> został wywołany).|Tak samo jak powyżej.|
+|<xref:System.Xml.Schema.XmlSchemaValidator.SkipToEndElement%2A>|Taki sam jak <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Taki sam jak <xref:System.Xml.Schema.XmlSchemaValidator.ValidateEndElement%2A>.|Tak samo jak powyżej.|
 |<xref:System.Xml.Schema.XmlSchemaValidator.EndValidation%2A>|Zwraca pustą tablicę.|Zwraca pustą tablicę.|Tak samo jak powyżej.|
 
 > [!NOTE]

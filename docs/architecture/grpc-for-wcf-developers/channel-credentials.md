@@ -1,14 +1,13 @@
 ---
 title: Poświadczenia kanału — gRPC dla deweloperów WCF
 description: Jak zaimplementować i używać poświadczeń kanału gRPC w ASP.NET Core 3,0.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 61141dc4143f36f9ac511c3369c3fde668c9d703
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b424db49337a2dc6e3d0245d36349e3f408cdf6c
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846708"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967963"
 ---
 # <a name="channel-credentials"></a>Poświadczenia kanałów
 
@@ -49,7 +48,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 ```
 
-Ustawienie `ClientCertificateMode.RequireCertificate` spowoduje natychmiastowe odrzucanie wszystkich żądań połączenia, które nie zawierają certyfikatu klienta, ale nie sprawdza poprawności certyfikatu. Dodanie wywołania zwrotnego `ClientCertificateValidation` umożliwia Kestrel Weryfikowanie certyfikatu klienta (w tym przypadku, aby upewnić się, że został wystawiony przez ten sam *urząd certyfikacji* co certyfikat serwera) w momencie nawiązywania połączenia, przed potokiem ASP.NET Core jest zaangażowany.
+Ustawienie `ClientCertificateMode.RequireCertificate` spowoduje natychmiastowe odrzucanie wszystkich żądań połączenia, które nie zawierają certyfikatu klienta, ale nie sprawdza poprawności certyfikatu. Dodanie wywołania zwrotnego `ClientCertificateValidation` umożliwia Kestrel Weryfikowanie certyfikatu klienta (w tym przypadku, aby upewnić się, że został wystawiony przez ten sam *urząd certyfikacji* co certyfikat serwera) w momencie nawiązywania połączenia, przed przeprowadzeniem potoku ASP.NET Core.
 
 ### <a name="adding-aspnet-core-certificate-authentication"></a>Dodawanie ASP.NET Core uwierzytelniania certyfikatów
 

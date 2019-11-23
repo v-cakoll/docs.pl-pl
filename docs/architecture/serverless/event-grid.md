@@ -92,23 +92,23 @@ Główną zaletą korzystania z Event Grid są automatyczne komunikaty generowan
 
 | Zasób platformy Azure | Typ zdarzenia | Opis |
 | -------------- | ---------- | ----------- |
-| Subskrypcja platformy Azure | Microsoft. resources. ResourceWriteSuccess | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie zakończona pomyślnie. |
-| | Microsoft. resources. ResourceWriteFailure | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu nie powiedzie się. |
-| | Microsoft. resources. ResourceWriteCancel | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie anulowana. |
-|  | Microsoft. resources. ResourceDeleteSuccess | Uruchamiany, gdy operacja usunięcia zasobu zostanie zakończona pomyślnie. |
-|  | Microsoft. resources. ResourceDeleteFailure | Uruchamiany, gdy operacja usunięcia zasobu nie powiedzie się. |
-| | Microsoft. resources. ResourceDeleteCancel | Uruchamiany, gdy operacja usunięcia zasobu zostanie anulowana. To zdarzenie występuje, gdy wdrożenie szablonu zostało anulowane. |
-| Blob Storage | Microsoft. Storage. BlobCreated | Uruchamiany po utworzeniu obiektu BLOB. |
-| | Microsoft. Storage. BlobDeleted | Uruchamiany, gdy obiekt BLOB zostanie usunięty. |
-| Centra zdarzeń | Microsoft. EventHub. CaptureFileCreated | Uruchamiany podczas tworzenia pliku przechwytywania.
-| IoT Hub | Microsoft. Devices. DeviceCreated | Opublikowano, gdy urządzenie jest zarejestrowane w usłudze IoT Hub. |
-| | Microsoft. Devices. DeviceDeleted | Opublikowano, gdy urządzenie zostanie usunięte z Centrum IoT Hub. |
-| Grupy zasobów | Microsoft. resources. ResourceWriteSuccess | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie zakończona pomyślnie. |
-| | Microsoft. resources. ResourceWriteFailure | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu nie powiedzie się. |
-| | Microsoft. resources. ResourceWriteCancel | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie anulowana. |
-| | Microsoft. resources. ResourceDeleteSuccess | Uruchamiany, gdy operacja usunięcia zasobu zostanie zakończona pomyślnie. |
-| | Microsoft. resources. ResourceDeleteFailure | Uruchamiany, gdy operacja usunięcia zasobu nie powiedzie się. |
-| | Microsoft. resources. ResourceDeleteCancel | Uruchamiany, gdy operacja usunięcia zasobu zostanie anulowana. To zdarzenie występuje, gdy wdrożenie szablonu zostało anulowane. |
+| Subskrypcja platformy Azure | Microsoft.Resources.ResourceWriteSuccess | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie zakończona pomyślnie. |
+| | Microsoft.Resources.ResourceWriteFailure | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu nie powiedzie się. |
+| | Microsoft.Resources.ResourceWriteCancel | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie anulowana. |
+|  | Microsoft.Resources.ResourceDeleteSuccess | Uruchamiany, gdy operacja usunięcia zasobu zostanie zakończona pomyślnie. |
+|  | Microsoft.Resources.ResourceDeleteFailure | Uruchamiany, gdy operacja usunięcia zasobu nie powiedzie się. |
+| | Microsoft.Resources.ResourceDeleteCancel | Uruchamiany, gdy operacja usunięcia zasobu zostanie anulowana. To zdarzenie występuje, gdy wdrożenie szablonu zostało anulowane. |
+| Blob Storage | Microsoft.Storage.BlobCreated | Uruchamiany po utworzeniu obiektu BLOB. |
+| | Microsoft.Storage.BlobDeleted | Uruchamiany, gdy obiekt BLOB zostanie usunięty. |
+| Usługa Event Hubs | Microsoft.EventHub.CaptureFileCreated | Uruchamiany podczas tworzenia pliku przechwytywania.
+| Centrum IoT | Microsoft.Devices.DeviceCreated | Opublikowano, gdy urządzenie jest zarejestrowane w usłudze IoT Hub. |
+| | Microsoft.Devices.DeviceDeleted | Opublikowano, gdy urządzenie zostanie usunięte z Centrum IoT Hub. |
+| Grupy zasobów | Microsoft.Resources.ResourceWriteSuccess | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie zakończona pomyślnie. |
+| | Microsoft.Resources.ResourceWriteFailure | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu nie powiedzie się. |
+| | Microsoft.Resources.ResourceWriteCancel | Uruchamiany, gdy operacja tworzenia lub aktualizowania zasobu zostanie anulowana. |
+| | Microsoft.Resources.ResourceDeleteSuccess | Uruchamiany, gdy operacja usunięcia zasobu zostanie zakończona pomyślnie. |
+| | Microsoft.Resources.ResourceDeleteFailure | Uruchamiany, gdy operacja usunięcia zasobu nie powiedzie się. |
+| | Microsoft.Resources.ResourceDeleteCancel | Uruchamiany, gdy operacja usunięcia zasobu zostanie anulowana. To zdarzenie występuje, gdy wdrożenie szablonu zostało anulowane. |
 
 Aby uzyskać więcej informacji, zobacz [Azure Event Grid schemacie zdarzeń](https://docs.microsoft.com/azure/event-grid/event-schema).
 
@@ -126,12 +126,12 @@ W tym rozdziale przedstawiono platformę bezserwerową platformy Azure, która s
 - [Azure: Przenieś swoją aplikację do chmury, korzystając z bezserwerowego Azure Functions](https://channel9.msdn.com/events/Connect/2017/E102)
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 - [Schemat zdarzeń Azure Event Grid](https://docs.microsoft.com/azure/event-grid/event-schema)
-- [Event Hubs platformy Azure](https://docs.microsoft.com/azure/event-hubs)
+- [Azure Event Hubs](https://docs.microsoft.com/azure/event-hubs)
 - [Dokumentacja Azure Functions](https://docs.microsoft.com/azure/azure-functions)
 - [Pojęcia związane z wyzwalaczami i powiązaniami Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings)
 - [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps)
 - [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging)
-- [Table Storage platformy Azure](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
+- [Azure Table Storage](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)
 - [Porównaj funkcje 1. x i 2. x](https://docs.microsoft.com/azure/azure-functions/functions-versions)
 - [Łączenie z lokalnymi źródłami danych za pomocą lokalnej bramy danych platformy Azure](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway)
 - [Tworzenie pierwszej funkcji w Azure Portal](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)
@@ -143,4 +143,4 @@ W tym rozdziale przedstawiono platformę bezserwerową platformy Azure, która s
 
 >[!div class="step-by-step"]
 >[Poprzedni](logic-apps.md)
->[dalej](durable-azure-functions.md)
+>[Następny](durable-azure-functions.md)

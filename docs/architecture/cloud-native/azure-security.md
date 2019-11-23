@@ -86,7 +86,7 @@ Większość zasobów platformy Azure PaaS ma tylko najbardziej podstawową i ni
 
 Na szczęście większość zasobów platformy Azure można umieścić w Virtual Network platformy Azure, która umożliwia dokładniejszą kontrolę dostępu. Podobnie jak w przypadku sieci lokalnych, które są chronione za pośrednictwem szerszego świata, sieci wirtualne to wyspy prywatnych adresów IP, które znajdują się w sieci platformy Azure.
 
-![Figure 10-1 sieci wirtualnej na platformie Azure ](./media/virtual-network.png)
+![rysunek 10-1 sieci wirtualnej na platformie Azure](./media/virtual-network.png)
 **rysunek 10-1**. Sieć wirtualna na platformie Azure.
 
 W taki sam sposób, w jaki sieci lokalne mają zaporę, która zarządza dostępem do sieci, można nawiązać podobną zaporę na granicy sieci wirtualnej. Domyślnie wszystkie zasoby w sieci wirtualnej mogą nadal komunikować się z Internetem. Jest to tylko połączenia przychodzące wymagające pewnej postaci jawnego wyjątku zapory.
@@ -109,7 +109,7 @@ RBAC to system, który zapewnia tożsamość dla aplikacji działających na pla
 
 Pierwszy składnik w RBAC jest podmiotem zabezpieczeń. Podmiotem zabezpieczeń może być użytkownik, Grupa, nazwa główna usługi lub tożsamość zarządzana.
 
-![Figure 10-2 różne typy podmiotów zabezpieczeń ](./media/rbac-security-principal.png)
+![rysunek 10-2 różne typy podmiotów zabezpieczeń](./media/rbac-security-principal.png)
 **rysunek 10-2**. Różne typy podmiotów zabezpieczeń.
 
 - Użytkownik — każdy użytkownik, który ma konto w Azure Active Directory jest użytkownikiem.
@@ -119,11 +119,11 @@ Pierwszy składnik w RBAC jest podmiotem zabezpieczeń. Podmiotem zabezpieczeń 
 
 Podmiot zabezpieczeń można zastosować do większości zasobów. Oznacza to, że istnieje możliwość przypisania podmiotu zabezpieczeń do kontenera działającego w usłudze Azure Kubernetes, co umożliwia mu dostęp do wpisów tajnych przechowywanych w Key Vault. Funkcja platformy Azure może podejmować uprawnienia zezwalające na komunikowanie się z wystąpieniem Active Directory w celu sprawdzenia poprawności tokenu JWT dla użytkownika wywołującego. Gdy usługi są włączone przy użyciu nazwy głównej usługi, ich uprawnienia mogą być zarządzane w sposób szczegółowy przy użyciu ról i zakresów.
 
-## <a name="roles"></a>Pełnione
+## <a name="roles"></a>Role
 
 Podmiot zabezpieczeń może przejąć wiele ról lub, przy użyciu bardziej sartorialych analogowych, zużywać wiele systemyów. Każda rola definiuje serię uprawnień, takich jak "Odczyt wiadomości z Azure Service Bus punktu końcowego". Obowiązującym zestawem uprawnień podmiotu zabezpieczeń jest kombinacja wszystkich uprawnień przypisanych do wszystkich ról, które ma podmiot zabezpieczeń. Platforma Azure ma wiele wbudowanych ról, a użytkownicy mogą definiować własne role.
 
-![Figure 10-3 definicje ról RBAC ](./media/rbac-role-definition.png)
+![rysunek 10-3 definicje ról RBAC](./media/rbac-role-definition.png)
 **rysunek 10-3**. Definicje ról RBAC.
 
 Wbudowana w platformę Azure to również szereg ról wysokiego poziomu, takich jak właściciel, współautor, czytelnik i administrator konta użytkownika. Przy użyciu roli właściciela podmiot zabezpieczeń może uzyskać dostęp do wszystkich zasobów i przypisać uprawnienia innym użytkownikom. Współautor ma ten sam poziom dostępu do wszystkich zasobów, ale nie może przypisywać uprawnień. Czytelnik może wyświetlać tylko istniejące zasoby platformy Azure, a administrator konta użytkownika może zarządzać dostępem do zasobów platformy Azure.
@@ -148,7 +148,7 @@ Reguły odmowy mają pierwszeństwo przed regułami Zezwalaj. Teraz reprezentuj�
 
 Jak można wyobrazić, posiadanie dużej liczby ról i zakresów może sprawiać, że efektywne uprawnienia jednostki usługi są dość trudne. Piling reguły odmowy na tym, tylko w celu zwiększenia złożoności. Na szczęście istnieje Kalkulator uprawnień, który może wyświetlać czynne uprawnienia dla każdej jednostki usługi. Zazwyczaj znajduje się on na karcie IAM w portalu, jak pokazano na rysunku 10-3.
 
-Kalkulator uprawnień ![Figure 10-4 dla usługi App Service ](./media/check-rbac.png)
+![rysunek 10-4 Kalkulator uprawnień dla usługi App Service](./media/check-rbac.png)
 **rysunek 10-4**. Kalkulator uprawnień dla usługi App Service.
 
 ## <a name="securing-secrets"></a>Zabezpieczanie wpisów tajnych
@@ -157,7 +157,7 @@ Hasła i certyfikaty są typowym wektorem ataków dla osób atakujących. Sprzę
 
 Wielu ekspertów ds. zabezpieczeń [sugeruje](https://www.troyhunt.com/password-managers-dont-have-to-be-perfect-they-just-have-to-be-better-than-not-having-one/) , że korzystanie z Menedżera haseł w celu zachowania własnych haseł jest najlepszym rozwiązaniem. Podczas scentralizowania haseł w jednej lokalizacji można także używać wysoce złożonych haseł i zapewnić, że są one unikatowe dla każdego konta. Ten sam system istnieje na platformie Azure: Magazyn centralny dla wpisów tajnych.
 
-## <a name="azure-key-vault"></a>Azure Key Vault
+## <a name="azure-key-vault"></a>Usługa Azure Key Vault
 
 Azure Key Vault zapewnia scentralizowaną lokalizację do przechowywania haseł dla elementów, takich jak bazy danych, klucze interfejsu API i certyfikaty. Po wprowadzeniu wpisu tajnego do magazynu nigdy nie jest on ponownie wyświetlany, a polecenia wyodrębniania i wyświetlania są celowo całkowicie skomplikowane. Informacje w bezpiecznym obszarze są chronione za pomocą modułów zabezpieczeń sprzętowych lub FIPS 140-2 Level 2.
 
@@ -215,7 +215,7 @@ To sprawdzenie może odbywać się przez zewnętrzną usługę, taką jak test s
 
 Nawet usług takich jak bazy danych Azure SQL Database używa szyfrowania TLS, aby zachować ukryte dane. Interesująca część dotycząca szyfrowania danych przesyłanych przy użyciu protokołu TLS nie jest możliwa, nawet w przypadku firmy Microsoft, nasłuchiwanie połączenia między komputerami z uruchomionym protokołem TLS. Zapewnia to wygodę dla firm, które mogą być narażone na ryzyko ze strony firmy Microsoft, a nawet aktora stanu z większą liczbą zasobów niż w przypadku standardowej osoby atakującej.
 
-Raport laboratoria SSL ![Figure 10-5 przedstawiający ocenę dla Service Bus punktu końcowego. ](./media/ssl-report.png)
+![rysunek 10-5 protokołu SSL Labs przedstawiający ocenę dla Service Bus punktu końcowego.](./media/ssl-report.png)
 **rysunek 10-5**. Raport laboratoriów SSL przedstawiający ocenę dla punktu końcowego Service Bus.
 
 Ten poziom szyfrowania nie będzie wystarczający przez cały czas, dlatego należy mieć pewność, że połączenia protokołu TLS platformy Azure są bardzo bezpieczne. Platforma Azure będzie nadal rozwijać standardy zabezpieczeń jako udoskonalenia szyfrowania. Warto wiedzieć, że ktoś ogląda standardy zabezpieczeń i aktualizuje platformę Azure w miarę ich ulepszania.
@@ -244,7 +244,7 @@ Część "przezroczyste" strumienia TDS pochodzi z faktu, że nie są potrzebne 
 
 Skonfigurowanie tej warstwy szyfrowania wymaga uruchomienia przez kreatora w SQL Server Management Studio, aby wybrać sortowanie szyfrowania i miejsce, w którym w Key Vault mają być przechowywane skojarzone klucze.
 
-![Figure 10-6 wybranie kolumn w tabeli, które mają być szyfrowane przy użyciu Always Encrypted ](./media/always-encrypted.png)
+![rysunek 10-6 Wybieranie kolumn w tabeli, które mają być szyfrowane przy użyciu Always Encrypted](./media/always-encrypted.png)
 **rysunek 10-6**. Wybieranie kolumn w tabeli do zaszyfrowania przy użyciu Always Encrypted.
 
 Aplikacje klienckie, które odczytują informacje z tych zaszyfrowanych kolumn, muszą wprowadzić specjalne Dodatki do odczytu zaszyfrowanych danych. Parametry połączenia muszą zostać zaktualizowane przy użyciu `Column Encryption Setting=Enabled` a poświadczenia klienta muszą zostać pobrane z Key Vault. Klient SQL Server musi być następnie przy użyciu kluczy szyfrowania kolumn. Po wykonaniu tej czynności pozostałe akcje używają standardowych interfejsów do programu SQL Client. Oznacza to, że narzędzia takie jak Dapper i Entity Framework, które są tworzone na podstawie klienta SQL, będą nadal działały bez zmian. Always Encrypted mogą jeszcze nie być dostępne dla każdego sterownika SQL Server w każdym języku.
@@ -255,7 +255,7 @@ Kombinacja TDE i Always Encrypted, które mogą być używane z kluczami specyfi
 
 Cosmos DB to najnowsza baza danych udostępniona przez firmę Microsoft na platformie Azure. Została skompilowana od podstaw z myślą o zabezpieczeniach i kryptografii. Szyfrowanie AES-256bit jest standardem dla wszystkich baz danych Cosmos DB i nie można go wyłączyć. W połączeniu z wymaganiami protokołu TLS 1,2 do komunikacji, całe rozwiązanie magazynu jest zaszyfrowane.
 
-![Figure 10-7 przepływ szyfrowania danych w Cosmos DB ](./media/cosmos-encryption.png)
+![rysunek 10-7 przepływ szyfrowania danych w Cosmos DB](./media/cosmos-encryption.png)
 **rysunek 10-7**. Przepływ szyfrowania danych w Cosmos DB.
 
 Mimo że Cosmos DB nie zapewnia do dostarczania kluczy szyfrowania klienta, w celu zapewnienia, że zespół pozostanie niezgodny ze standardem PCI-DSS. Cosmos DB również nie obsługuje żadnego sortowania szyfrowania pojedynczej kolumny podobnej do Always Encrypted usługi Azure SQL.

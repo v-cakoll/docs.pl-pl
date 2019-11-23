@@ -1,20 +1,19 @@
 ---
 title: Wywołania poświadczeń — gRPC dla deweloperów WCF
 description: Jak zaimplementować i używać poświadczeń wywołań gRPC w ASP.NET Core 3,0.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5f29d69ec37fe60bcd7ca01391001ea9eb71e7e4
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2588fe3590a63ea6071b85ff29b3685efbfa25db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846686"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967996"
 ---
 # <a name="call-credentials"></a>Poświadczenia wywołań
 
 Poświadczenia wywołań są wszystkie na podstawie pewnego rodzaju tokenu przekazaną w metadanych przy użyciu każdego żądania.
 
-## <a name="ws-federation"></a>Usługa WS-Federation
+## <a name="ws-federation"></a>WS-Federation
 
 ASP.NET Core obsługuje protokół WS-Federation przy użyciu pakietu NuGet [WsFederation](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.WsFederation) . Usługa WS-Federation to najbliższa dostępna alternatywa dla uwierzytelniania systemu Windows, która nie jest obsługiwana w przypadku protokołu HTTP/2. Użytkownicy są uwierzytelniani przy użyciu Active Directory Federation Services (AD FS), która zapewnia token, którego można użyć do uwierzytelniania za pomocą ASP.NET Core.
 

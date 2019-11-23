@@ -35,4 +35,4 @@ Prywatne rejestry obrazów, hostowane lokalnie lub w chmurze, są zalecane w prz
 
 >[!div class="step-by-step"]
 >[Poprzedni](docker-terminology.md)
->[dalej](../net-core-net-framework-containers/index.md)
+>[Następny](../net-core-net-framework-containers/index.md)

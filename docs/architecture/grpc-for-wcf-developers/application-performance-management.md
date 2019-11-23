@@ -1,14 +1,13 @@
 ---
 title: Zarządzanie wydajnością aplikacji — gRPC dla deweloperów WCF
 description: Rejestrowanie, metryki i śledzenie dla ASP.NET Core aplikacji gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846722"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968180"
 ---
 # <a name="application-performance-management"></a>Zarządzanie wydajnością aplikacji
 
@@ -56,7 +55,7 @@ Aby uzyskać więcej informacji na temat pisania komunikatów dziennika i dostę
 
 Środowisko uruchomieniowe programu .NET Core udostępnia zestaw składników służących do emitowania i obserwowania metryk, które obejmują interfejsy API, takie jak <xref:System.Diagnostics.Tracing.EventSource> i klasy <xref:System.Diagnostics.Tracing.EventCounter>. Za pomocą tych interfejsów API można emitować podstawowe dane liczbowe, które mogą być używane przez procesy zewnętrzne, takie jak [globalne narzędzie liczników dotnet](https://github.com/dotnet/diagnostics/blob/master/documentation/dotnet-counters-instructions.md)lub śledzenie zdarzeń systemu Windows. Aby uzyskać więcej informacji na temat używania `EventCounter` w własnym kodzie, zobacz samouczek [wprowadzenie do EventCounter](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md) .
 
-W przypadku bardziej zaawansowanych metryk i zapisywania danych metryk w szerszym zakresie magazynów danych istnieje doskonały projekt typu "open source" o nazwie [metryki aplikacji](https://www.app-metrics.io). Ten pakiet bibliotek zawiera rozbudowany zestaw typów służący do Instrumentacji kodu. Oferuje również pakiety do zapisywania metryk do różnych rodzajów obiektów docelowych, które obejmują bazy danych szeregów czasowych, takich jak Prometheus i InfluxDB, [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)i wiele innych. Pakiet NuGet [App. Metrics. AspNetCore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) dodatkowo dodaje kompleksowy zestaw podstawowych metryk, które są automatycznie generowane przez integrację z platformą ASP.NET Core, a witryna sieci Web udostępnia [Szablony](https://www.app-metrics.io/samples/grafana/) do wyświetlania tych metryk za pomocą platformy wizualizacji [Grafana](https://grafana.com/) .
+W przypadku bardziej zaawansowanych metryk i zapisywania danych metryk w szerszym zakresie magazynów danych istnieje doskonały projekt typu "open source" o nazwie [metryki aplikacji](https://www.app-metrics.io). Ten pakiet bibliotek zawiera rozbudowany zestaw typów służący do Instrumentacji kodu. Oferuje również pakiety do zapisywania metryk do różnych rodzajów obiektów docelowych, które obejmują bazy danych szeregów czasowych, takich jak Prometheus i InfluxDB, [Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)i wiele innych. Pakiet NuGet [App. Metrics. AspNetCore. MVC](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) dodatkowo dodaje kompleksowy zestaw podstawowych metryk, które są automatycznie generowane przez integrację z platformą ASP.NET Core, a witryna sieci Web udostępnia [Szablony](https://www.app-metrics.io/samples/grafana/) do wyświetlania tych metryk przy użyciu platformy wizualizacji [Grafana](https://grafana.com/) .
 
 Aby uzyskać więcej informacji i dokumentacji dotyczącej metryk aplikacji, zobacz witrynę sieci Web [App-Metrics.IO](https://app-metrics.io) .
 
@@ -67,8 +66,8 @@ Większość platform metryk obsługuje pięć podstawowych typów metryk, któr
 | Typ metryki | Opis |
 | ----------- | ----------- |
 | Licznik     | Śledzi, jak często coś się dzieje, takich jak żądania, błędy i tak dalej. |
-| Urządzeń       | Rejestruje pojedynczą wartość, która zmienia się w czasie, na przykład aktywne połączenia. |
-| Razem   | Mierzy rozkład wartości w ramach dowolnych limitów. Na przykład histogram może śledzić rozmiar zestawu danych, zliczać, ile zawiera < 10 rekordów, liczbę 11-100 i 101-1000 i > 1000 rekordów. |
+| Miernik       | Rejestruje pojedynczą wartość, która zmienia się w czasie, na przykład aktywne połączenia. |
+| Histogram   | Mierzy rozkład wartości w ramach dowolnych limitów. Na przykład histogram może śledzić rozmiar zestawu danych, zliczać, ile zawiera < 10 rekordów, liczbę 11-100 i 101-1000 i > 1000 rekordów. |
 | Wyższy       | Mierzy szybkość, z jaką zdarzenie występuje w różnych przedziałach czasowych. |
 | Czasomierz       | Śledzi czas trwania zdarzeń i szybkość ich występowania, przechowywane jako histogram. |
 

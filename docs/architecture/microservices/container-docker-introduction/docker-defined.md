@@ -84,4 +84,4 @@ Podobnie można traktować kontener jako "komputer" z zainstalowanym dyskiem twa
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](docker-terminology.md)
+>[Następny](docker-terminology.md)

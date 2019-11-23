@@ -17,7 +17,7 @@ Wystąpienie <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayP
 
 ## <a name="host-configured-probing-properties"></a>Host skonfigurował właściwości sondowania
 
-Po uruchomieniu środowiska uruchomieniowego host środowiska uruchomieniowego udostępnia zestaw nazwanych właściwości, które konfigurują ścieżki sondowania <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.
+Po uruchomieniu środowiska uruchomieniowego host środowiska uruchomieniowego udostępnia zestaw nazwanych właściwości, które konfigurują <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> ścieżki sondowania.
 
 Każda właściwość sondowania jest opcjonalna. Jeśli jest obecny, Każda właściwość jest wartością ciągu, która zawiera rozdzielaną listę ścieżek bezwzględnych. Ogranicznik to ";" w systemie Windows i ":" na wszystkich innych platformach.
 
@@ -31,12 +31,12 @@ Każda właściwość sondowania jest opcjonalna. Jeśli jest obecny, Każda wł
 
 ### <a name="how-are-the-properties-populated"></a>Jak są wypełniane właściwości?
 
-Istnieją dwa główne scenariusze wypełniania właściwości w zależności od tego, czy istnieje plik *\<myapp >. deps. JSON* .
+Istnieją dwa główne scenariusze wypełniania właściwości w zależności od tego, czy istnieje plik *\<mojaapl >. deps. JSON* .
 
-- Gdy plik *@no__t -1. deps. JSON* jest obecny, jest analizowany w celu wypełnienia właściwości sondowania.
-- Gdy plik *@no__t -1. deps. JSON* nie istnieje, zakłada się, że katalog aplikacji zawiera wszystkie zależności. Zawartość katalogu służy do wypełniania właściwości sondowania.
+- Gdy plik *\*. deps. JSON* jest obecny, jest analizowany w celu wypełnienia właściwości sondowania.
+- Gdy plik *\*. deps. JSON* nie istnieje, zakłada się, że katalog aplikacji zawiera wszystkie zależności. Zawartość katalogu służy do wypełniania właściwości sondowania.
 
-Ponadto pliki *@no__t -1. deps. JSON* dla dowolnych struktur, do których istnieją odwołania, są podobnie analizowane.
+Ponadto pliki *\*. deps. JSON* dla wszystkich platform, do których istnieją odwołania, są podobnie analizowane.
 
 Na koniec zmienna środowiskowa `ADDITIONAL_DEPS` może służyć do dodawania dodatkowych zależności.
 
@@ -56,10 +56,10 @@ Host środowiska uruchomieniowego platformy .NET Core będzie wyprowadzać przyd
 
 ## <a name="managed-assembly-default-probing"></a>Domyślna sondowanie zestawu zarządzanego
 
-Podczas sondowania w celu zlokalizowania zestawu zarządzanego, <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> wygląda w kolejności na:
+Podczas sondowania w celu zlokalizowania zestawu zarządzanego <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> wygląda następująco:
 
 - Pliki pasujące do <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> w `TRUSTED_PLATFORM_ASSEMBLIES` (po usunięciu rozszerzeń plików).
-- Pliki zestawu obrazów natywnych w `APP_NI_PATHS` ze wspólnymi rozszerzeniami plików.
+- Pliki zestawu obrazów natywnych w `APP_NI_PATHS` z typowymi rozszerzeniami plików.
 - Pliki zestawów w `APP_PATHS` ze wspólnymi rozszerzeniami plików.
 
 ## <a name="satellite-resource-assembly-probing"></a>Sonda zestawu (zasobów) dla satelity
@@ -72,4 +72,4 @@ Jeśli istnieje odpowiedni plik, spróbuj załadować i zwrócić go.
 
 ## <a name="unmanaged-native-library-probing"></a>Badanie biblioteki niezarządzanej (natywnej)
 
-Podczas sondowania w celu zlokalizowania biblioteki niezarządzanej `NATIVE_DLL_SEARCH_DIRECTORIES` szuka pasującej biblioteki.
+Podczas sondowania w celu zlokalizowania biblioteki niezarządzanej `NATIVE_DLL_SEARCH_DIRECTORIES` są przeszukiwane w poszukiwaniu zgodnej biblioteki.

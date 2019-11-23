@@ -43,14 +43,14 @@ Windows Communication Foundation (WCF) konfiguruje zachowania na dwa sposoby: w 
 ```  
   
 ## <a name="using-behaviors-programmatically"></a>Programistyczne używanie zachowań  
- Można również programowo skonfigurować lub wstawić zachowania poprzez znalezienie odpowiedniej właściwości `Behaviors` w obiekcie klienta Windows Communication Foundation (WCF) lub w obiekcie fabryki kanału klienta przed otwarciem klienta.  
+ Można również programowo skonfigurować lub wstawić zachowania, lokalizując odpowiednią właściwość `Behaviors` w obiekcie klienta Windows Communication Foundation (WCF) lub w obiekcie fabryki kanału klienta przed otwarciem klienta.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu pokazuje, jak programowo wstawić zachowanie, uzyskując dostęp do właściwości <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> na <xref:System.ServiceModel.Description.ServiceEndpoint> zwróconym przez właściwość <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> przed utworzeniem obiektu kanału.  
+ Poniższy przykład kodu pokazuje, jak programowo wstawić zachowanie, uzyskując dostęp do właściwości <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> na <xref:System.ServiceModel.Description.ServiceEndpoint> zwróconej przez właściwość <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> przed utworzeniem obiektu kanału.  
   
  [!code-csharp[ChannelFactoryBehaviors#10](../../../samples/snippets/csharp/VS_Snippets_CFX/channelfactorybehaviors/cs/client.cs#10)]
  [!code-vb[ChannelFactoryBehaviors#10](../../../samples/snippets/visualbasic/VS_Snippets_CFX/channelfactorybehaviors/vb/client.vb#10)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [@no__t — 1behaviors >](../configure-apps/file-schema/wcf/behaviors.md)
+- [zachowania \<>](../configure-apps/file-schema/wcf/behaviors.md)

@@ -32,7 +32,7 @@ Można również użyć klienta testowego WCF do ułatwienia debugowania projekt
 
 Możesz również wywołać klienta testowego WCF (WcfTestClient. exe) poza programem Visual Studio, aby przetestować dowolną usługę w Internecie. Aby zlokalizować narzędzie, przejdź do następującej lokalizacji:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (gdzie społeczność może być jednym z "Enterprise", "Professional" lub "Community" w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany na komputerze)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (gdzie społeczność może być jednym z "przedsiębiorstwa", "Professional" lub "społeczność" w zależności od tego, jaki poziom programu Visual Studio jest zainstalowany na komputerze)
 
 Aby użyć narzędzia, kliknij dwukrotnie nazwę pliku, aby otworzyć ją z tej lokalizacji, lub uruchom ją z wiersza polecenia.
 
@@ -73,7 +73,7 @@ Jeśli określono konkretną operację jako jednokierunkową podczas tworzenia k
 
 Pole wyboru **Uruchom nowy serwer proxy** na karcie operacji usługi umożliwia przełączenie obsługi sesji. To pole jest domyślnie wyczyszczone.
 
-Po wprowadzeniu parametrów testu dla określonej operacji (lub innej operacji w tym samym punkcie końcowym usługi) i kliknięciu opcji **Wywołaj** wiele razy, gdy pole wyboru jest wyczyszczone, te operacje współużytkują jeden serwer proxy i stan usługi są utrwalane w wielu składowa.
+Po wprowadzeniu parametrów testu dla określonej operacji (lub innej operacji w tym samym punkcie końcowym usługi) i kliknięciu opcji **Wywołaj** wiele razy z wyczyszczonym polem wyboru te operacje współdzielą jeden serwer proxy i stan usługi są utrwalane w wielu operacjach.
 
 Jeśli zaznaczone jest pole wyboru **Uruchom nowy serwer proxy** , zostanie uruchomiony nowy serwer proxy dla każdego **wywołania**, zostanie zakończony poprzedni scenariusz sesji i stan usługi zostanie zresetowany.
 
@@ -103,7 +103,7 @@ Podczas generowania serwera proxy, kompilowania danych binarnych lub wywoływani
 
 #### <a name="persist-client-configuration"></a>Utrwalanie konfiguracji klienta
 
-Opcje **narzędzia**->->**Konfiguracja klienta** zawiera **zawsze ponownie Generuj konfigurację podczas uruchamiania usług** , która jest domyślnie włączona. Ta opcja określa, że za każdym razem, gdy klient testu WCF ładuje usługę, generuje plik konfiguracji na podstawie najnowszego kontraktu usługi i plików App. config.
+Karta **narzędzia**->**Opcje**->**Konfiguracja klienta** zawiera opcję **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** , która jest domyślnie włączona. Ta opcja określa, że za każdym razem, gdy klient testu WCF ładuje usługę, generuje plik konfiguracji na podstawie najnowszego kontraktu usługi i plików App. config.
 
 Jeśli edytowano konfigurację klienta usługi WCF i chcesz, aby zawsze używała tego zaktualizowanego pliku do debugowania usługi, można usunąć zaznaczenie opcji **Regenerate** . Dzięki temu nawet w przypadku aktualizowania usługi i ponownego otwarcia klienta testowego WCF, plik Client. dll. config jest tym, który wcześniej był aktualizowany, zamiast wygenerowanej ponownie na podstawie zaktualizowanej usługi.
 
@@ -112,13 +112,13 @@ Jednak może być konieczne edytowanie pliku konfiguracji, aby był on spójny z
 > [!CAUTION]
 > Jeśli zmodyfikowano plik konfiguracji klienta i wybierzesz go ponownie w przyszłości, można znaleźć plik w następującej lokalizacji:
 >
-> \Dokumenty i ustawienia @ no__t-0 [konto użytkownika] \Moje Documents\Test projekty klientów.
+> \Documents and Settings\\[konto użytkownika] \Moje projekty klientów Documents\Test.
 >
 > Wszystkie zaktualizowane informacje o poświadczeniach przechowywanych w pliku konfiguracji klienta są chronione przez listę Access Control (ACL) tego folderu.
 
 ### <a name="adding-removing-and-refreshing-services"></a>Dodawanie, usuwanie i odświeżanie usług
 
-#### <a name="add-service"></a>Dodaj usługę
+#### <a name="add-service"></a>Dodawanie usługi
 
 Kliknij pozycję **plik**->**Dodaj usługę** , aby dodać usługę do klienta testowego WCF. Następnie wymagane jest wpisanie identyfikatora URI (adresu punktu końcowego) usługi, która ma zostać dodana. Adres usługi może być adresem w formacie MEX lub WSDL.
 
@@ -142,7 +142,7 @@ Podczas generowania serwera proxy, kompilowania danych binarnych lub wywołania 
 
 ## <a name="location-of-files-generated-by-the-test-client"></a>Lokalizacja plików wygenerowanych przez klienta testowego
 
-Domyślnie klient testowy WCF przechowuje wygenerowany kod klienta i pliki konfiguracji w folderze "%appdata%\Local\temp\Test Client projects". Ten folder jest usuwany po zakończeniu działania klienta testowego WCF. Jeśli plik konfiguracji jest modyfikowany w kliencie testowym WCF i opcja **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** jest wyłączona, zmodyfikowany plik jest kopiowany do folderu "CachedConfig" w obszarze "Moje Documents\Test projekty klienta" z mapowaniem ( plik XML z metadanymi-Address-to-File-Name) jako indeks.
+Domyślnie klient testowy WCF przechowuje wygenerowany kod klienta i pliki konfiguracji w folderze "%appdata%\Local\temp\Test Client projects". Ten folder jest usuwany po zakończeniu działania klienta testowego WCF. Jeśli plik konfiguracji jest modyfikowany w kliencie testowym WCF i opcja **zawsze Generuj ponownie konfigurację podczas uruchamiania usług** jest wyłączona, zmodyfikowany plik jest kopiowany do folderu "CachedConfig" w obszarze "Moje Documents\Test projekty klienta" przy użyciu mapowania (Metadata-Address-to-File-Name) jako indeksu.
 
 Możesz również uruchomić klienta testowego WCF w wierszu polecenia, użyj przełącznika `/ProjectPath`, aby określić nową ścieżkę do przechowywania wygenerowanych plików, lub Użyj przełącznika `/RestoreProjectPath`, aby przywrócić domyślną lokalizację. Składnia jest następująca:
 
@@ -166,7 +166,7 @@ Poniżej znajduje się lista funkcji obsługiwanych przez klienta testowego WCF:
 
 Poniżej znajduje się lista funkcji nieobsługiwanych przez klienta testowego WCF:
 
-- Typy: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, typy implementujące interfejs <xref:System.Xml.Serialization.IXmlSerializable>, łącznie z powiązanym atrybutem <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> i <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement>.
+- Typy: <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message>, <xref:System.Xml.XmlElement>, <xref:System.Xml.XmlAttribute>, <xref:System.Xml.XmlNode>, typy implementujące interfejs <xref:System.Xml.Serialization.IXmlSerializable>, łącznie z powiązanym atrybutem <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> oraz typy <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> oraz typ <xref:System.Data.DataTable> ADO.NET.
 
 - Kontrakt dupleksowy.
 

@@ -26,7 +26,7 @@ W poniższych akapitach opisano różnice między standardowymi operatorami zapy
 
 ### <a name="concat"></a>Concat
 
-Metoda <xref:System.Linq.Enumerable.Concat%2A> jest definiowana dla uporządkowanych zestawów wielozbiorów, w których kolejność odbiornika i kolejność argumentu są takie same. <xref:System.Linq.Enumerable.Concat%2A> działa jako `UNION ALL` w przypadku zestawów wielozbiorów, po których następuje typowa kolejność.
+Metoda <xref:System.Linq.Enumerable.Concat%2A> jest definiowana dla uporządkowanych zestawów wielozbiorów, w których kolejność odbiornika i kolejność argumentu są takie same. <xref:System.Linq.Enumerable.Concat%2A> działa jako `UNION ALL` za pośrednictwem wielozestawów, a następnie według typowej kolejności.
 
 Ostatnim krokiem jest porządkowanie w języku SQL, zanim zostaną wygenerowane wyniki. <xref:System.Linq.Enumerable.Concat%2A> nie zachowuje kolejności argumentów. Aby zapewnić odpowiednią kolejność, należy jawnie zastanowić się nad wynikami <xref:System.Linq.Enumerable.Concat%2A>.
 
@@ -36,9 +36,9 @@ Metody <xref:System.Linq.Enumerable.Intersect%2A> i <xref:System.Linq.Enumerable
 
 Metoda <xref:System.Linq.Enumerable.Union%2A> jest definiowana dla wielozbiorów jako nieuporządkowane łączenie wielozestawów (w efekcie w wyniku klauzuli UNION ALL w języku SQL).
 
-### <a name="take-skip"></a>Zrób, Pomiń
+### <a name="take-skip"></a>Take, Skip
 
-Metody <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> są dobrze zdefiniowane tylko w odniesieniu do *uporządkowanych zestawów*. Semantyka nieuporządkowanych zestawów lub zestawów wielozbiorówowych nie jest zdefiniowana.
+Metody <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> są dobrze zdefiniowane tylko względem *uporządkowanych zestawów*. Semantyka nieuporządkowanych zestawów lub zestawów wielozbiorówowych nie jest zdefiniowana.
 
 > [!NOTE]
 > <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> mają pewne ograniczenia, gdy są używane w zapytaniach do SQL Server 2000. Aby uzyskać więcej informacji, zobacz wpis "Pomiń i przejmowanie wyjątków w SQL Server 2000" w [temacie Rozwiązywanie problemów](troubleshooting.md).
@@ -68,7 +68,7 @@ ORDER BY [t0].[CustomerID]
 
 Jest oczywiste, że wszystkie określone porządkowanie musi być spójne, gdy <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> są połączone łańcuchowo. W przeciwnym razie wyniki są niezdefiniowane.
 
-Zarówno <xref:System.Linq.Enumerable.Take%2A>, jak i <xref:System.Linq.Enumerable.Skip%2A> są dobrze zdefiniowane dla nieujemnych, stałych argumentów całkowitych opartych na standardowej specyfikacji operatora zapytań.
+Zarówno <xref:System.Linq.Enumerable.Take%2A> i <xref:System.Linq.Enumerable.Skip%2A> są dobrze zdefiniowane dla nieujemnych, stałych argumentów całkowitych na podstawie specyfikacji standardowego operatora zapytań.
 
 ### <a name="operators-with-no-translation"></a>Operatory bez tłumaczenia
 
@@ -77,8 +77,8 @@ Następujące metody nie są tłumaczone przez [!INCLUDE[vbtecdlinq](../../../..
 |Operatory|Ich uzasadnienie|
 |---------------|---------------|
 |<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|Zapytania SQL działają na wielozestawach, a nie na sekwencjach. `ORDER BY` musi być ostatnią klauzulą zastosowana do wyników. Z tego powodu nie istnieje tłumaczenie ogólnego przeznaczenia dla tych dwóch metod.|
-|<xref:System.Linq.Enumerable.Reverse%2A>|Tłumaczenie tej metody jest możliwe dla uporządkowanego zestawu, ale nie jest obecnie przetłumaczone przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|Tłumaczenie tych metod jest możliwe dla uporządkowanego zestawu, ale nie jest obecnie przetłumaczone przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
+|<xref:System.Linq.Enumerable.Reverse%2A>|Tłumaczenie tej metody jest możliwe dla zestawu uporządkowanego, ale nie jest obecnie przetłumaczone przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
+|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|Tłumaczenie tych metod jest możliwe dla zestawu uporządkowanego, ale nie jest obecnie przetłumaczone przez [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].|
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|Zapytania SQL działają na wielozestawach, a nie w sekwencjach z indeksem.|
 |<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (Przeciążenie z argumentem domyślnym)|Ogólnie rzecz biorąc nie można określić wartości domyślnej dla dowolnej krotki. W niektórych przypadkach wartości null dla krotek są możliwe przez sprzężenia zewnętrzne.|
 
@@ -86,7 +86,7 @@ Następujące metody nie są tłumaczone przez [!INCLUDE[vbtecdlinq](../../../..
 
 ### <a name="null-semantics"></a>Semantyka o wartości null
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie nakłada semantyki porównania o wartości null na SQL. Operatory porównania są syntaktycznie przetłumaczone na ich odpowiedniki języka SQL. Z tego powodu semantyka odzwierciedla semantykę SQL, która jest zdefiniowana przez ustawienia serwera lub połączenia. Na przykład dwie wartości null są uznawane za nierówne w domyślnych ustawieniach SQL Server, ale można zmienić ustawienia, aby zmienić semantykę. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie uwzględnia ustawień serwera podczas tłumaczenia zapytań.
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie nakłada semantyki porównania o wartości null na serwerze SQL. Operatory porównania są syntaktycznie przetłumaczone na ich odpowiedniki języka SQL. Z tego powodu semantyka odzwierciedla semantykę SQL, która jest zdefiniowana przez ustawienia serwera lub połączenia. Na przykład dwie wartości null są uznawane za nierówne w domyślnych ustawieniach SQL Server, ale można zmienić ustawienia, aby zmienić semantykę. podczas translacji zapytań [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie uwzględnia ustawień serwera.
 
 Porównanie z literałem null jest tłumaczone na odpowiednią wersję SQL (`is null` lub `is not null`).
 
@@ -94,11 +94,11 @@ Wartość `null` w sortowaniu jest definiowana przez SQL Server. [!INCLUDE[vbtec
 
 ### <a name="aggregates"></a>Agregaty
 
-Metoda agregująca standardowego operatora zapytania <xref:System.Linq.Enumerable.Sum%2A> szacuje się na zero dla pustej sekwencji lub dla sekwencji zawierającej tylko wartości null. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] semantyka SQL pozostaje niezmieniona, a <xref:System.Linq.Enumerable.Sum%2A> daje do `null` zamiast zero dla pustej sekwencji lub dla sekwencji zawierającej tylko wartości null.
+Metoda agregująca standardowego operatora zapytania <xref:System.Linq.Enumerable.Sum%2A> ma wartość zero dla pustej sekwencji lub dla sekwencji zawierającej tylko wartości null. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], semantyka SQL pozostaje niezmieniona, a <xref:System.Linq.Enumerable.Sum%2A> oblicza `null` zamiast zero dla pustej sekwencji lub dla sekwencji zawierającej tylko wartości null.
 
-Ograniczenia SQL dotyczące wyników pośrednich stosują się do agregacji w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. @No__t-0 z 32-bitowe liczby całkowite nie są obliczane przy użyciu 64-bitowych wyników. Przepełnienie może wystąpić w przypadku [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translacji <xref:System.Linq.Enumerable.Sum%2A>, nawet jeśli implementacja standardowego operatora zapytań nie powoduje przepełnienia odpowiedniej sekwencji w pamięci.
+Ograniczenia SQL dotyczące wyników pośrednich stosują się do agregacji w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. <xref:System.Linq.Enumerable.Sum%2A> 32-bitowe liczby całkowite nie są obliczane przy użyciu 64-bitowych wyników. Przepełnienie może wystąpić w przypadku [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]go tłumaczenia <xref:System.Linq.Enumerable.Sum%2A>, nawet jeśli implementacja standardowego operatora zapytań nie powoduje przepełnienia odpowiedniej sekwencji w pamięci.
 
-Analogicznie, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translacja <xref:System.Linq.Enumerable.Average%2A> wartości całkowitych jest obliczana jako `integer`, a nie jako `double`.
+Analogicznie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translacja <xref:System.Linq.Enumerable.Average%2A> wartości całkowitych jest obliczana jako `integer`, a nie jako `double`.
 
 ### <a name="entity-arguments"></a>Argumenty jednostek
 
@@ -149,7 +149,7 @@ Metody konwersji:
 
 |||||
 |-|-|-|-|
-|ToBoolean|ToSByte —|ToByte —|ToChar —|
+|ToBoolean|ToSByte —|ToByte —|ToChar|
 |ToCharArrayRankOne|ToDate|ToDecimal —|ToDouble —|
 |ToInteger|ToUInteger|ToLong|ToULong|
 |ToShort|ToUShort|ToSingle —|ToString|
@@ -162,17 +162,17 @@ Aby uzyskać więcej informacji, zobacz [How to: map dziedziczenia hierarchii](h
 
 ### <a name="inheritance-in-queries"></a>Dziedziczenie w zapytaniach
 
-C#rzutowania są obsługiwane tylko w projekcji. Rzutowania, które są używane w innym miejscu, nie są tłumaczone i są ignorowane. Oprócz nazw funkcji SQL, SQL naprawdę wykonuje tylko odpowiednik środowiska uruchomieniowego języka wspólnego (CLR) <xref:System.Convert>. Oznacza to, że SQL może zmienić wartość jednego typu na inny. Nie istnieje odpowiednik rzutowania CLR, ponieważ nie ma koncepcji dotyczącej reinterpretacji tych samych bitów, co w przypadku innych typów. To dlatego, że C# rzutowanie działa tylko lokalnie. Nie jest ona zdalna.
+C#rzutowania są obsługiwane tylko w projekcji. Rzutowania, które są używane w innym miejscu, nie są tłumaczone i są ignorowane. Oprócz nazw funkcji SQL, język SQL naprawdę wykonuje jedynie odpowiednik <xref:System.Convert>środowiska uruchomieniowego języka wspólnego (CLR). Oznacza to, że SQL może zmienić wartość jednego typu na inny. Nie istnieje odpowiednik rzutowania CLR, ponieważ nie ma koncepcji dotyczącej reinterpretacji tych samych bitów, co w przypadku innych typów. To dlatego, że C# rzutowanie działa tylko lokalnie. Nie jest ona zdalna.
 
-Operatory, `is` i `as`, a metoda `GetType` nie są ograniczone do operatora `Select`. Mogą one być używane w innych operatorach zapytań.
+Operatory, `is` i `as`i Metoda `GetType` nie są ograniczone do operatora `Select`. Mogą one być używane w innych operatorach zapytań.
 
-## <a name="sql-server-2008-support"></a>Obsługa SQL Server 2008
+## <a name="sql-server-2008-support"></a>SQL Server 2008 Support
 
 Począwszy od .NET Framework 3,5 z dodatkiem SP1, LINQ to SQL obsługuje mapowanie do nowych typów dat i godzin wprowadzonych w SQL Server 2008. Istnieją jednak ograniczenia dotyczące LINQ to SQL operatorów zapytań, których można używać podczas pracy z wartościami mapowanymi na te nowe typy.
 
 ### <a name="unsupported-query-operators"></a>Nieobsługiwane operatory zapytań
 
-Następujące operatory zapytań nie są obsługiwane w przypadku wartości zamapowanych na nowe SQL Server typy daty i godziny: `DATETIME2`, `DATE`, `TIME` i `DATETIMEOFFSET`.
+Następujące operatory zapytań nie są obsługiwane w przypadku wartości mapowanych na nowe SQL Server typy daty i godziny: `DATETIME2`, `DATE`, `TIME`i `DATETIMEOFFSET`.
 
 - `Aggregate`
 
@@ -196,7 +196,7 @@ Aby uzyskać więcej informacji na temat mapowania na te SQL Server typy daty i 
 
 - Funkcje zapytania XML.
 
-## <a name="sql-server-2000-support"></a>Obsługa SQL Server 2000
+## <a name="sql-server-2000-support"></a>SQL Server 2000 Support
 
 Następujące ograniczenia SQL Server 2000 (w porównaniu do Microsoft SQL Server 2005) wpływają na obsługę [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
 
@@ -204,13 +204,13 @@ Następujące ograniczenia SQL Server 2000 (w porównaniu do Microsoft SQL Serve
 
 Te operatory nie są dostępne w SQL Server 2000. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] próbuje serię zastąpień, aby zamienić je na odpowiednie sprzężenia.
 
-dla nawigacji relacji są generowane `Cross Apply` i `Outer Apply`. Zestaw zapytań, dla których takie ponowne zapisywanie jest możliwe, nie jest dobrze zdefiniowany. Z tego powodu minimalny zestaw zapytań, który jest obsługiwany przez SQL Server 2000, jest zestawem, który nie obejmuje nawigacji między relacjami.
+`Cross Apply` i `Outer Apply` są generowane dla nawigacji relacji. Zestaw zapytań, dla których takie ponowne zapisywanie jest możliwe, nie jest dobrze zdefiniowany. Z tego powodu minimalny zestaw zapytań, który jest obsługiwany przez SQL Server 2000, jest zestawem, który nie obejmuje nawigacji między relacjami.
 
 ### <a name="text--ntext"></a>tekst/ntext
 
-Typów danych `text` @ no__t-1 @ no__t-2 nie można używać w niektórych operacjach zapytania dla `varchar(max)` @ no__t-4 @ no__t-5, które są obsługiwane przez Microsoft SQL Server 2005.
+Typów danych `text` / `ntext` nie można używać w niektórych operacjach zapytań dotyczących `varchar(max)` / `nvarchar(max)`, które są obsługiwane przez Microsoft SQL Server 2005.
 
-Dla tego ograniczenia nie jest dostępne żadne rozwiązanie. W związku z tym nie można użyć `Distinct()` w żadnym wyniku, który zawiera elementy członkowskie, które są zmapowane do kolumn `text` lub `ntext`.
+Dla tego ograniczenia nie jest dostępne żadne rozwiązanie. W związku z tym nie można użyć `Distinct()` w żadnym wyniku, który zawiera elementy członkowskie, które są mapowane do kolumn `text` lub `ntext`.
 
 ### <a name="behavior-triggered-by-nested-queries"></a>Zachowanie wyzwalane przez zapytania zagnieżdżone
 
@@ -226,7 +226,7 @@ Materializację tworzy obiekty CLR z wierszy, które są zwracane przez co najmn
 
 - Następujące wywołania są *wykonywane lokalnie* jako część materializację:
 
-  - Konstruktorów
+  - Konstruktorzy
 
   - Metody `ToString` w projekcjach
 
@@ -234,7 +234,7 @@ Materializację tworzy obiekty CLR z wierszy, które są zwracane przez co najmn
 
 - Metody, które przestrzegają metody <xref:System.Linq.Enumerable.AsEnumerable%2A> są *wykonywane lokalnie*. Ta metoda nie powoduje natychmiastowego wykonania.
 
-- Można użyć `struct` jako zwracany typ wyniku zapytania lub jako element członkowski typu wynik. Jednostki muszą być klasami. Typy anonimowe są materiałowe jako wystąpienia klas, ale nazwanych struktur (niebędących jednostkami) można używać w projekcji.
+- Można użyć `struct` jako zwracanego typu wyniku zapytania lub jako elementu członkowskiego typu wynik. Jednostki muszą być klasami. Typy anonimowe są materiałowe jako wystąpienia klas, ale nazwanych struktur (niebędących jednostkami) można używać w projekcji.
 
 - Element członkowski typu zwracanego wyniku zapytania może być typu <xref:System.Linq.IQueryable%601>. Jest on materiałowy jako kolekcja lokalna.
 
@@ -248,7 +248,7 @@ Materializację tworzy obiekty CLR z wierszy, które są zwracane przez co najmn
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tematy pomocy](reference.md)
+- [Dokumentacja](reference.md)
 - [Zwracanie lub pomijanie elementów w sekwencji](return-or-skip-elements-in-a-sequence.md)
 - [Łączenie dwóch sekwencji](concatenate-two-sequences.md)
 - [Zwracanie zestawu różnic między dwoma sekwencjami](return-the-set-difference-between-two-sequences.md)

@@ -107,4 +107,4 @@ Rysunek 2-3 przedstawia wykonywanie wielu migracji maszyn wirtualnych przy użyc
 
 >[!div class="step-by-step"]
 >[Poprzedni](index.md)
->[dalej](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->
+>[Następny](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->

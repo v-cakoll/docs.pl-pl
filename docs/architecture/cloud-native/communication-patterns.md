@@ -44,7 +44,7 @@ Chociaż zapewniają wiele korzyści, mikrousługi nie są bezpłatnymi obiadami
 
 - Szyfrowanie lub odszyfrowywanie wiadomości jest ważne.
 
-Mikrousługi [książki .NET: Architektura kontenerów aplikacji](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)platformy .NET, które są dostępne bezpłatnie od firmy Microsoft, zapewnia szczegółowe pokrycie wzorców komunikacji dla aplikacji mikrousług. W tym rozdziale udostępniamy ogólne omówienie tych wzorców wraz z opcjami implementacji dostępnymi w chmurze platformy Azure.
+Usługa Książka oparta na [platformie .NET: architektura dla kontenerów aplikacji platformy .NET](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), dostępna bezpłatnie od firmy Microsoft, zapewnia szczegółowe pokrycie wzorców komunikacji dla aplikacji mikrousług. W tym rozdziale udostępniamy ogólne omówienie tych wzorców wraz z opcjami implementacji dostępnymi w chmurze platformy Azure.
 
 W tym rozdziale będziemy najpierw rozwiązywać komunikaty między aplikacjami frontonu a mikrousługami zaplecza. Następnie będziemy informować o mikrousługach zaplecza. Będziemy poznać technologię komunikacji w górę i w gRPC. Na koniec będziemy szukać nowych innowacyjnych wzorców komunikacji przy użyciu technologii siatki usług. Zobaczymy również, w jaki sposób usługa Azure Cloud oferuje różne rodzaje *usług zapasowych* w celu obsługi komunikacji natywnej w chmurze.
 

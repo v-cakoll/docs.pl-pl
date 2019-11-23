@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 53f446d4aad8517d758e936d2d2881071f319423
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142180"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977208"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Samouczek: klasyfikowanie ważności naruszeń kondycji restauracji przy użyciu konstruktora modelu
 
@@ -35,7 +35,7 @@ Z tego samouczka dowiesz się, jak wykonywać następujące czynności:
 
 Listę wymagań wstępnych i instrukcji instalacji można znaleźć w [podręczniku instalacji programu model Builder](../how-to-guides/install-model-builder.md).
 
-## <a name="model-builder-multiclass-classification-overview"></a>Omówienie klasyfikacji wieloklasowej konstruktora modelu 
+## <a name="model-builder-multiclass-classification-overview"></a>Omówienie klasyfikacji wieloklasowej konstruktora modelu
 
 Ten przykład służy do C# tworzenia aplikacji konsolowej .NET Core, która klasyfikuje ryzyko naruszeń kondycji przy użyciu modelu uczenia maszynowego skompilowanego za pomocą konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
@@ -58,7 +58,7 @@ Każdy wiersz w zestawie danych zawiera informacje dotyczące naruszeń zaobserw
 | Procedura — niezaplanowana | Czyszczenie tkanin nieoczyszczonych lub nieprawidłowo przechowywanych lub niewystarczających Sanitizer | Niskie ryzyko |
 
 - **Inspekcja**: typ inspekcji. Może to być jednorazowa Inspekcja dla nowego zakładu, inspekcji rutynowej, inspekcji skargi i wielu innych typów.
-- **ViolationDescription**: Opis naruszenia wykryty podczas inspekcji. 
+- **ViolationDescription**: Opis naruszenia wykryty podczas inspekcji.
 - **RiskCategory**: ważność ryzyka narusza kondycję publiczną i bezpieczeństwo.
 
 `label` to kolumna, która ma zostać przewidywalna. Podczas wykonywania zadania klasyfikacji celem jest przypisanie kategorii (tekst lub liczbowy). W tym scenariuszu klasyfikacji ważność naruszenia ma przypisaną wartość niski, średni lub wysokie ryzyko. W związku z tym **RiskCategory** jest etykietą. `features` to dane wejściowe, które dają model do przewidywania `label`. W tym przypadku elementy **inspekcje** i **ViolationDescription** są używane jako funkcje lub dane wejściowe do przewidywania **RiskCategory**.
@@ -78,10 +78,10 @@ Konstruktor modelu akceptuje dane z bazy danych SQL Server lub pliku lokalnego w
 
 1. W kroku dane narzędzia model Builder wybierz pozycję **SQL Server** z listy rozwijanej Źródło danych.
 1. Zaznacz przycisk obok pola tekstowego **Połącz z bazą danych SQL Server** .
-    1. W oknie dialogowym **Wybierz dane** wybierz pozycję **plik bazy danych Microsoft SQL Server**. 
+    1. W oknie dialogowym **Wybierz dane** wybierz pozycję **plik bazy danych Microsoft SQL Server**.
     1. Usuń zaznaczenie pola wyboru **zawsze używaj tego zaznaczenia** i wybierz pozycję **Kontynuuj**.
     1. W oknie dialogowym **Właściwości połączenia** wybierz pozycję **Przeglądaj** i wybierz pobrany plik *RestaurantScores. mdf* .
-    1. Wybierz **przycisk OK**.
+    1. Wybierz **OK**.
 1. Wybierz pozycję **naruszenia** z listy rozwijanej **Nazwa tabeli** .
 1. Wybierz pozycję **RiskCategory** w **kolumnie do przewidywania (etykieta)** listy rozwijanej.
 1. Pozostaw domyślne zaznaczenia kolumn, **Inspekcja** i **ViolationDescription**, zaznaczone na liście rozwijanej **kolumny wejściowe (funkcje)** .
@@ -124,11 +124,11 @@ W wyniku procesu szkolenia tworzone są dwa projekty.
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. Aby przeprowadzić prognozowanie nowych danych przy użyciu modelu, Utwórz nowe wystąpienie klasy `ModelInput` w ramach metody `Main` aplikacji. Należy zauważyć, że Kategoria ryzyka nie jest częścią danych wejściowych. Jest to spowodowane tym, że model generuje dla niego prognozę. 
+1. Aby przeprowadzić prognozowanie nowych danych przy użyciu modelu, Utwórz nowe wystąpienie klasy `ModelInput` wewnątrz metody `Main` aplikacji. Należy zauważyć, że Kategoria ryzyka nie jest częścią danych wejściowych. Jest to spowodowane tym, że model generuje dla niego prognozę.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. Użyj metody `Predict` z klasy `ConsumeModel`. Metoda `Predict` ładuje przeszkolony model, tworzy [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) dla modelu i używa go do prognozowania nowych danych. 
+1. Użyj metody `Predict` z klasy `ConsumeModel`. Metoda `Predict` ładuje przeszkolony model, tworzy [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) dla modelu i używa go do prognozowania nowych danych.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 
@@ -144,7 +144,7 @@ W wyniku procesu szkolenia tworzone są dwa projekty.
 
 Jeśli musisz odwoływać się do wygenerowanych projektów w późniejszym czasie w innym rozwiązaniu, możesz je znaleźć w katalogu `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-Nabycia! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
+Gratulacje! Pomyślnie skompilowano model uczenia maszynowego w celu kategoryzacji ryzyka naruszeń kondycji przy użyciu konstruktora modeli. Kod źródłowy dla tego samouczka można znaleźć w repozytorium usługi GitHub [/machinelearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 

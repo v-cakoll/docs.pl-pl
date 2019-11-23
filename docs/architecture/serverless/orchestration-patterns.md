@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 W niektórych przypadkach przepływy pracy mogą zawierać działania, które trwają stosunkowo długi czas. Wyobraź sobie proces, który umożliwia rozpoczęcie tworzenia kopii zapasowych plików multimedialnych w usłudze BLOB Storage. W zależności od rozmiaru i liczby plików multimedialnych proces tworzenia kopii zapasowej może trwać kilka godzin.
 
-W tym scenariuszu `DurableOrchestrationClient` możliwości sprawdzenia stanu uruchomionego przepływu pracy staną się przydatne. Przy użyciu `HttpTrigger` do uruchomienia przepływu pracy, Metoda `CreateCheckStatusResponse` może być używana do zwracania wystąpienia `HttpResponseMessage`. Ta odpowiedź zapewnia klientowi identyfikator URI w ładunku, którego można użyć do sprawdzenia stanu uruchomionego procesu.
+W tym scenariuszu `DurableOrchestrationClient`możliwości sprawdzenia stanu uruchomionego przepływu pracy staną się przydatne. Przy użyciu `HttpTrigger` do uruchomienia przepływu pracy, Metoda `CreateCheckStatusResponse` może być używana do zwracania wystąpienia `HttpResponseMessage`. Ta odpowiedź zapewnia klientowi identyfikator URI w ładunku, którego można użyć do sprawdzenia stanu uruchomionego procesu.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext` `CreateTimer` Metoda konfiguruje harmonogram następnego wywołania pętli w celu sprawdzenia, czy zmieniają się ceny giełdowe. `DurableOrchestrationContext` ma również właściwość `CurrentUtcDateTime`, aby uzyskać bieżącą wartość DateTime w formacie UTC. Lepiej jest używać tej właściwości zamiast `DateTime.UtcNow`, ponieważ jest ona łatwo zastosowana do testowania.
+`DurableOrchestrationContext``CreateTimer` Metoda konfiguruje harmonogram następnego wywołania pętli w celu sprawdzenia, czy zmieniają się ceny giełdowe. `DurableOrchestrationContext` ma również właściwość `CurrentUtcDateTime`, aby uzyskać bieżącą wartość DateTime w formacie UTC. Lepiej jest używać tej właściwości zamiast `DateTime.UtcNow`, ponieważ jest ona łatwo zastosowana do testowania.
 
 ## <a name="recommended-resources"></a>Zalecane zasoby
 
@@ -158,4 +158,4 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 
 >[!div class="step-by-step"]
 >[Poprzedni](durable-azure-functions.md)
->[dalej](serverless-business-scenarios.md)
+>[Następny](serverless-business-scenarios.md)

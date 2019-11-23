@@ -13,10 +13,10 @@ ms.locfileid: "70295864"
 
 Rozdział 1 wprowadził podstawowe koncepcje dotyczące kontenerów i platformy Docker. Te informacje to podstawowy poziom informacji, które należy wykonać, aby rozpocząć pracę. Jednak aplikacje dla przedsiębiorstw mogą być złożone i składać się z wielu usług zamiast jednej usługi lub kontenera. W przypadku tych opcjonalnych przypadków użycia należy poznać dodatkowe podejścia do projektowania, takie jak architektura zorientowana na usługę (SOA) i bardziej zaawansowane koncepcje mikrousług i koncepcje aranżacji kontenerów. Zakres tego dokumentu nie jest ograniczony do mikrousług, ale do dowolnego cyklu życia aplikacji platformy Docker, dlatego nie sprawdza architektury mikrousług, ponieważ można również używać kontenerów i platformy Docker z regularnym elementem SOA, zadaniami w tle lub zadaniami, a nawet ze podejściami do wdrożenia aplikacji monolitycznych.
 
-**Więcej informacji** Aby dowiedzieć się więcej na temat architektury aplikacji i mikrousług dla przedsiębiorstw, przeczytaj przewodniki [dotyczące mikrousług w sieci: Architektura kontenerów aplikacji](../../microservices/index.md) platformy .NET, z <https://aka.ms/MicroservicesEbook>których można pobrać program.
+**Więcej informacji** Aby dowiedzieć się więcej na temat architektury aplikacji i mikrousług dla przedsiębiorstw, zapoznaj się z przewodnikiem [dotyczącym mikrousług w sieci: architekturą dla kontenerów aplikacji .NET](../../microservices/index.md) , które można również pobrać z <https://aka.ms/MicroservicesEbook>.
 
 Jednak zanim przejdziemy do cyklu życia aplikacji i DevOps, ważne jest, aby wiedzieć, w jaki sposób planujesz projektowanie i konstruowanie aplikacji oraz jakie są opcje projektowania.
 
 >[!div class="step-by-step"]
->[Poprzedni](index.md)Następny
->[](common-container-design-principles.md)
+>[Poprzedni](index.md)
+>[Następny](common-container-design-principles.md)

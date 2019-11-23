@@ -4,12 +4,12 @@ description: Tworzenie architektury nowoczesnych aplikacji sieci Web przy użyci
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 19d1d5f81b5be9b843698b6e61d8571d4edfa66f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71181940"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971586"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Opracowywanie aplikacji ASP.NET Core MVC
 
@@ -20,7 +20,7 @@ ASP.NET Core to międzyplatformowa platforma typu "open source" służąca do tw
 
 ## <a name="mvc-and-razor-pages"></a>MVC i Razor Pages
 
-ASP.NET Core MVC oferuje wiele funkcji, które są przydatne do tworzenia interfejsów API i aplikacji opartych na sieci Web. Termin MVC oznacza "Model-View-Controller", wzorzec interfejsu użytkownika, który dzieli obowiązki odpowiedzi na żądania użytkowników do kilku części. Oprócz tego wzorca można także zaimplementować funkcje w ASP.NET Core aplikacji jako Razor Pages. Razor Pages są wbudowane w ASP.NET Core MVC i używają tych samych funkcji routingu, powiązania modeli itp. Jednak zamiast oddzielnych folderów i plików dla kontrolerów, widoków itp. i przy użyciu routingu opartego na atrybutach Razor Pages są umieszczane w pojedynczym folderze ("/Pages"), trasie na podstawie ich lokalizacji względnej w tym folderze i obsługi żądań z obsługą zamiast akcji kontrolerów.
+ASP.NET Core MVC oferuje wiele funkcji, które są przydatne do tworzenia interfejsów API i aplikacji opartych na sieci Web. Termin MVC oznacza "Model-View-Controller", wzorzec interfejsu użytkownika, który dzieli obowiązki odpowiedzi na żądania użytkowników do kilku części. Oprócz tego wzorca można także zaimplementować funkcje w ASP.NET Core aplikacji jako Razor Pages. Razor Pages są wbudowane w ASP.NET Core MVC i używają tych samych funkcji routingu, powiązania modeli itp. Jednak zamiast oddzielnych folderów i plików dla kontrolerów, widoków itp. i przy użyciu routingu opartego na atrybutach Razor Pages są umieszczane w pojedynczym folderze ("/Pages"), trasie na podstawie ich lokalizacji względnej w tym folderze i obsługi żądań z obsługą, a nie akcją kontrolera.
 
 Podczas tworzenia nowej aplikacji ASP.NET Core należy mieć plan na uwadze dla rodzaju aplikacji, którą chcesz skompilować. W programie Visual Studio będziesz wybierać spośród kilku szablonów. Trzy najpopularniejsze szablony projektów to Web API, aplikacja sieci Web i aplikacja sieci Web (Model-View-Controller). Chociaż tę decyzję można podjąć tylko podczas pierwszego tworzenia projektu, nie jest to nieodwołalna decyzja. Projekt interfejsu API sieci Web używa standardowych kontrolerów kontrolera widoku modelu — tylko domyślnie nie ma widoków. Podobnie szablon domyślnej aplikacji sieci Web używa Razor Pages, a zatem nie ma folderu widoki. Możesz później dodać folder widoki do tych projektów, aby obsługiwać zachowanie oparte na widoku. Projekty Web API i Model-View-Controller nie zawierają domyślnie folderu Pages, ale można je później dodać do obsługi zachowania opartego na Razor Pages. Te trzy szablony można traktować jako obsługujące trzy różne rodzaje domyślnej interakcji użytkownika: dane (internetowy interfejs API), oparte na stronach i widoku. Można jednak mieszać i dopasować dowolne lub wszystkie z nich w ramach pojedynczego projektu, jeśli chcesz.
 
@@ -76,13 +76,13 @@ public class ProductsController : Controller
 }
 ```
 
-Razor Pages nie używa routingu atrybutów. Jako część swojej `@page` dyrektywy można określić dodatkowe informacje o szablonie trasy dla strony Razor:
+Razor Pages nie używa routingu atrybutów. Możesz określić dodatkowe informacje o szablonie trasy dla strony Razor w ramach swojej dyrektywy `@page`:
 
 ```csharp
 @page "{id:int}"
 ```
 
-W poprzednim przykładzie dana strona będzie pasowała do trasy z parametrem Integer `id` . Na przykład strona *Products. cshtml* znajdująca się w folderze głównym `/Pages` ma następującą trasę:
+W poprzednim przykładzie dana strona będzie pasowała do trasy z liczbą całkowitą `id` parametru. Na przykład strona *Products. cshtml* znajdująca się w folderze głównym `/Pages` byłaby taka trasa:
 
 ```csharp
 "/Products/123"
@@ -96,20 +96,20 @@ W przypadku korzystania z walidacji modelu należy zawsze sprawdzić, czy model 
 
 W przypadku interfejsów API sieci Web ASP.NET Core MVC obsługuje [_negocjowanie zawartości_](/aspnet/core/mvc/models/formatting), umożliwiając żądanie określenia sposobu formatowania odpowiedzi. W oparciu o nagłówki podane w żądaniu akcje zwracające dane spowodują sformatowanie odpowiedzi w formacie XML, JSON lub innym obsługiwanym formacie. Ta funkcja umożliwia korzystanie z tego samego interfejsu API przez wielu klientów z różnymi wymaganiami dotyczącymi formatu danych.
 
-Projekty interfejsu API sieci Web należy rozważyć `[ApiController]` przy użyciu atrybutu, który można zastosować do poszczególnych kontrolerów, do podstawowej klasy kontrolera lub do całego zestawu. Ten atrybut dodaje Automatyczne sprawdzanie poprawności modelu, a każda akcja z nieprawidłowym modelem zwróci nieprawidłowego żądania z informacjami o błędach walidacji. Ten atrybut wymaga również, aby wszystkie akcje miały atrybut trasy, zamiast używać trasy konwencjonalnej i zwracają bardziej szczegółowe informacje ProblemDetails w odpowiedzi na błędy.
+Projekty interfejsu API sieci Web należy rozważyć przy użyciu atrybutu `[ApiController]`, który można zastosować do poszczególnych kontrolerów, do podstawowej klasy kontrolera lub do całego zestawu. Ten atrybut dodaje Automatyczne sprawdzanie poprawności modelu, a każda akcja z nieprawidłowym modelem zwróci nieprawidłowego żądania z informacjami o błędach walidacji. Ten atrybut wymaga również, aby wszystkie akcje miały atrybut trasy, zamiast używać trasy konwencjonalnej i zwracają bardziej szczegółowe informacje ProblemDetails w odpowiedzi na błędy.
 
 > ### <a name="references--mapping-requests-to-responses"></a>References — mapowanie żądań na odpowiedzi
 >
 > - **Routing do akcji kontrolera**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Powiązanie modelu**
- > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **Walidacja modelu**
- > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+> - <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > **powiązania modelu**
+> - <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > **weryfikacji modelu**
 > - **Filtry**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController — atrybut**
- > <https://docs.microsoft.com/aspnet/core/web-api/>
+> - **ApiController
+ > atrybutu** <https://docs.microsoft.com/aspnet/core/web-api/>
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
@@ -117,7 +117,7 @@ ASP.NET Core ma wbudowaną obsługę i wewnętrznie wykorzystuje technikę znan�
 
 Statyczne cling występuje, gdy klasy umożliwiają wywoływanie metod statycznych lub dostęp do właściwości statycznych, które mają efekty uboczne lub zależności dotyczące infrastruktury. Na przykład jeśli masz metodę, która wywołuje metodę statyczną, która z kolei zapisuje dane w bazie danych, metoda jest ściśle sprzężona z bazą danych. Wszystkie elementy, które dzielą się tym wywołaniem bazy danych, spowodują uszkodzenie metody. Testowanie takich metod jest trudne, ponieważ takie testy wymagają, aby komercyjne biblioteki do zasymulować wywołania statyczne lub mogły być testowane tylko z testową bazą danych. Wywołania statyczne, które nie są zależne od infrastruktury, szczególnie te, które są całkowicie bezstanowe, są bardzo ważne do wywołania i nie mają wpływu na sprzęganie ani testowanie (poza kodem sprzęgania do samego wywołania statycznego).
 
-Wielu programistów zna ryzyko związane ze statycznym clingm i globalnym stanem, ale nadal ściśle połączy swój kod z określonymi implementacjami za pośrednictwem bezpośredniego tworzenia wystąpienia. "New to Glue" to przypomnienie dotyczące sprzęgu, a nie ogólne Condemnation użycia `new` słowa kluczowego. Podobnie jak w przypadku wywołań metod statycznych, nowe wystąpienia typów, które nie mają zależności zewnętrznych, zazwyczaj nie umożliwiają ścisłego podzielenia kodu na szczegóły implementacji lub sprawiają, że testowanie jest trudniejsze. Ale za każdym razem, gdy Klasa jest tworzona, Poświęć nieco chwilę, aby rozważyć, czy ma to sens, że ma to na celu wyznaczenie, że ma to miejsce w konkretnym miejscu w danej lokalizacji, czy też będzie lepszym rozwiązaniem do żądania tego wystąpienia jako zależności.
+Wielu programistów zna ryzyko związane ze statycznym clingm i globalnym stanem, ale nadal ściśle połączy swój kod z określonymi implementacjami za pośrednictwem bezpośredniego tworzenia wystąpienia. "New to Glue" to przypomnienie dotyczące sprzęgu, a nie ogólne Condemnation użycia słowa kluczowego `new`. Podobnie jak w przypadku wywołań metod statycznych, nowe wystąpienia typów, które nie mają zależności zewnętrznych, zazwyczaj nie umożliwiają ścisłego podzielenia kodu na szczegóły implementacji lub sprawiają, że testowanie jest trudniejsze. Ale za każdym razem, gdy Klasa jest tworzona, Poświęć nieco chwilę, aby rozważyć, czy ma to sens, że ma to na celu wyznaczenie, że ma to miejsce w konkretnym miejscu w danej lokalizacji, czy też będzie lepszym rozwiązaniem do żądania tego wystąpienia jako zależności.
 
 ### <a name="declare-your-dependencies"></a>Deklarowanie zależności
 
@@ -172,7 +172,7 @@ Inne podejście do oddzielenia aplikacji od szczegółów implementacji ma na ce
 
 ### <a name="feature-organization"></a>Organizacja funkcji
 
-Domyślnie aplikacje ASP.NET Core organizują strukturę folderów w taki sposób, aby obejmowały kontrolery i widoki oraz często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera jest zazwyczaj przechowywany osobno w folderze wwwroot. Jednak duże aplikacje mogą napotkać problemy z tą organizacją, ponieważ praca nad daną funkcją często wymaga przechodzenia między tymi folderami. Jest to bardziej trudne i trudniejsze w miarę zwiększania się liczby plików i podfolderów w każdym folderze, dzięki czemu można przewijać Eksplorator rozwiązań. Jednym z rozwiązań tego problemu jest organizowanie kodu aplikacji według _funkcji_ zamiast według typu plików. Ten styl organizacyjny jest zwykle określany jako foldery funkcji lub [wycinki funkcji](https://msdn.microsoft.com/magazine/mt763233.aspx) (Zobacz również: [Wycinków pionowych](https://deviq.com/vertical-slices/)).
+Domyślnie aplikacje ASP.NET Core organizują strukturę folderów w taki sposób, aby obejmowały kontrolery i widoki oraz często modele widoków. Kod po stronie klienta do obsługi tych struktur po stronie serwera jest zazwyczaj przechowywany osobno w folderze wwwroot. Jednak duże aplikacje mogą napotkać problemy z tą organizacją, ponieważ praca nad daną funkcją często wymaga przechodzenia między tymi folderami. Jest to bardziej trudne i trudniejsze w miarę zwiększania się liczby plików i podfolderów w każdym folderze, dzięki czemu można przewijać Eksplorator rozwiązań. Jednym z rozwiązań tego problemu jest organizowanie kodu aplikacji według _funkcji_ zamiast według typu plików. Ten styl organizacyjny jest zwykle określany jako foldery funkcji lub [wycinki funkcji](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (Zobacz również: [wycinki pionowe](https://deviq.com/vertical-slices/)).
 
 ASP.NET Core MVC obsługuje obszary do tego celu. Korzystając z obszarów, można utworzyć osobne zestawy kontrolerów i folderów widoków (oraz wszelkich skojarzonych modeli) w każdym folderze obszaru. Rysunek 7-1 pokazuje przykładową strukturę folderów przy użyciu obszarów.
 
@@ -237,7 +237,7 @@ Następnie należy określić tę Konwencję jako opcję po dodaniu obsługi MVC
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC używa również Konwencji do lokalizowania widoków. Można zastąpić go Konwencją niestandardową, aby widoki znajdowały się w folderach funkcji (przy użyciu nazwy funkcji dostarczonej przez FeatureConvention). Aby dowiedzieć się więcej na temat tego podejścia i pobrać przykład roboczy z artykułu MSDN, [wycinki funkcji dla ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
+ASP.NET Core MVC używa również Konwencji do lokalizowania widoków. Można zastąpić go Konwencją niestandardową, aby widoki znajdowały się w folderach funkcji (przy użyciu nazwy funkcji dostarczonej przez FeatureConvention). Aby dowiedzieć się więcej na temat tego podejścia i pobrać przykład roboczy z artykułu MSDN, [wycinki funkcji dla ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc).
 
 ### <a name="cross-cutting-concerns"></a>Zagadnienia dotyczące wycinania
 
@@ -247,7 +247,7 @@ Po rozbudowywaniu aplikacji coraz bardziej ważne jest, aby wyeliminować proble
 
 **Rysunek 7-2**. Zażądaj wykonania przez filtry i potok żądań.
 
-Filtry są zwykle zaimplementowane jako atrybuty, więc można je stosować do kontrolerów lub akcji (lub nawet globalnie). Po dodaniu w ten sposób filtry określone na poziomie akcji przesłaniają lub kompilują przy użyciu filtrów określonych na poziomie kontrolera, które same przesłaniają filtry globalne. Na przykład \[atrybut trasy\] może służyć do tworzenia tras między kontrolerami i akcjami. Podobnie można skonfigurować autoryzację na poziomie kontrolera, a następnie przesłonić poszczególne akcje, jak pokazano w poniższym przykładzie:
+Filtry są zwykle zaimplementowane jako atrybuty, więc można je stosować do kontrolerów lub akcji (lub nawet globalnie). Po dodaniu w ten sposób filtry określone na poziomie akcji przesłaniają lub kompilują przy użyciu filtrów określonych na poziomie kontrolera, które same przesłaniają filtry globalne. Na przykład atrybut \[Route\] może służyć do tworzenia tras między kontrolerami i akcjami. Podobnie można skonfigurować autoryzację na poziomie kontrolera, a następnie przesłonić poszczególne akcje, jak pokazano w poniższym przykładzie:
 
 ```csharp
 [Authorize]
@@ -297,7 +297,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-Można dodać `ValidateModelAttribute` do projektu jako zależność NuGet, dołączając pakiet [Ardalis. ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) . W przypadku interfejsów API można użyć `ApiController` atrybutu, aby wymusić to zachowanie bez potrzeby osobnego `ValidateModel` filtru.
+`ValidateModelAttribute` można dodać do projektu jako zależność NuGet, dołączając pakiet [Ardalis. ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) . W przypadku interfejsów API można użyć atrybutu `ApiController`, aby wymusić to zachowanie bez potrzeby oddzielnego filtrowania `ValidateModel`.
 
 Analogicznie, filtr może służyć do sprawdzenia, czy rekord istnieje i zwrócić 404 przed wykonaniem akcji, eliminując konieczność wykonywania tych testów w akcji. Po pobraniu wspólnych Konwencji i zorganizowaniu rozwiązania w celu oddzielenia kodu infrastruktury i logiki biznesowej od interfejsu użytkownika, metody akcji MVC powinny być niezwykle cienkie:
 
@@ -311,18 +311,18 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykład roboczy z artykułu MSDN, [rzeczywistych filtrów ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt767699.aspx).
+Aby dowiedzieć się więcej na temat implementowania filtrów i pobrać przykład roboczy z artykułu MSDN, [rzeczywistych filtrów ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters).
 
 > ### <a name="references--structuring-applications"></a>References — Tworzenie struktury aplikacji
 >
 > - **Obszary**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **Magazyn MSDN — wycinki funkcji dla ASP.NET Core MVC**  
->   <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
 > - **Filtry**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — Real World ASP.NET Core Filters**  
->   <https://msdn.microsoft.com/magazine/mt767699.aspx>
+>   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>Zabezpieczenia
 
@@ -371,7 +371,7 @@ Więcej informacji na temat [konfigurowania uwierzytelniania dwuskładnikowego](
 
 ### <a name="authorization"></a>Autoryzacja
 
-Najprostsza forma autoryzacji obejmuje ograniczenie dostępu do użytkowników anonimowych. Można to osiągnąć przez zastosowanie \[\] atrybutu Autoryzuj do określonych kontrolerów lub akcji. Jeśli role są używane, atrybut można rozszerzyć, aby ograniczyć dostęp do użytkowników, którzy należą do określonych ról, jak pokazano poniżej:
+Najprostsza forma autoryzacji obejmuje ograniczenie dostępu do użytkowników anonimowych. Można to osiągnąć, po prostu stosując \[Autoryzuj\] atrybutu do określonych kontrolerów lub akcji. Jeśli role są używane, atrybut można rozszerzyć, aby ograniczyć dostęp do użytkowników, którzy należą do określonych ról, jak pokazano poniżej:
 
 ```csharp
 [Authorize(Roles = "HRManager,Finance")]
@@ -383,7 +383,7 @@ public class SalaryController : Controller
 
 W takim przypadku użytkownicy należący do roli HRManager lub finanse (lub obie) będą mieli dostęp do SalaryController. Aby wymagać, aby użytkownik należał do wielu ról (nie tylko jeden z kilku), można zastosować atrybut wielokrotnie, określając wymaganą rolę za każdym razem.
 
-Określanie niektórych zestawów ról jako ciągów w wielu różnych kontrolerach i akcjach może prowadzić do niepożądanego powtórzenia. Istnieje możliwość skonfigurowania zasad autoryzacji, które hermetyzują reguły autoryzacji, a następnie określania zasad zamiast poszczególnych ról przy zastosowaniu \[\] atrybutu Autoryzuj:
+Określanie niektórych zestawów ról jako ciągów w wielu różnych kontrolerach i akcjach może prowadzić do niepożądanego powtórzenia. Istnieje możliwość skonfigurowania zasad autoryzacji, które hermetyzują reguły autoryzacji, a następnie określania zasad zamiast poszczególnych ról przy zastosowaniu atrybutu \[Autoryzuj\]:
 
 ```csharp
 [Authorize(Policy = "CanViewPrivateReport")]
@@ -393,9 +393,9 @@ public IActionResult ExecutiveSalaryReport()
 }
 ```
 
-Korzystając z zasad w ten sposób, można oddzielić rodzaje akcji, które są ograniczone z określonych ról lub reguł, które mają zastosowanie. Później, jeśli utworzysz nową rolę, która musi mieć dostęp do określonych zasobów, można po prostu zaktualizować zasady, zamiast aktualizować każdą listę ról przy każdym \[\] autoryzowanym atrybucie.
+Korzystając z zasad w ten sposób, można oddzielić rodzaje akcji, które są ograniczone z określonych ról lub reguł, które mają zastosowanie. Później, jeśli utworzysz nową rolę, która musi mieć dostęp do określonych zasobów, można po prostu zaktualizować zasady, zamiast aktualizować każdą listę ról na każdej \[Autoryzuj atrybut\].
 
-#### <a name="claims"></a>Oświadczeń
+#### <a name="claims"></a>oświadczeń
 
 Oświadczenia są parami wartości nazw, które reprezentują właściwości uwierzytelnionego użytkownika. Na przykład użytkownik może przechowywać numer pracownika jako roszczeń. Oświadczenia mogą być następnie używane jako część zasad autoryzacji. Można utworzyć zasady o nazwie "EmployeeOnly", które wymagają istnienia żądania o nazwie "EmployeeNumber", jak pokazano w poniższym przykładzie:
 
@@ -410,7 +410,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-Te zasady mogą być następnie używane z \[\] atrybutem Autoryzuj do ochrony dowolnego kontrolera i/lub akcji, zgodnie z powyższym opisem.
+Tych zasad można następnie użyć z atrybutem \[Autoryzuj\], aby chronić każdy kontroler i/lub akcję, zgodnie z powyższym opisem.
 
 #### <a name="securing-web-apis"></a>Zabezpieczanie interfejsów API sieci Web
 

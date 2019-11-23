@@ -1,5 +1,5 @@
 ---
-title: Architektura logiczna w porównaniu z architekturą fizyczną
+title: Architektura logiczna a architektura fizyczna
 description: Zapoznaj się z różnicami między architekturami logicznymi a fizycznymi.
 ms.date: 09/20/2018
 ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
@@ -9,13 +9,13 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/03/2019
 ms.locfileid: "71834402"
 ---
-# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna w porównaniu z architekturą fizyczną
+# <a name="logical-architecture-versus-physical-architecture"></a>Architektura logiczna a architektura fizyczna
 
 Jest to przydatne w tym momencie, aby zatrzymywać i omawiać rozróżnienie między architekturą logiczną i architekturą fizyczną oraz jak ma to zastosowanie do projektowania aplikacji opartych na mikrousługach.
 
 Aby rozpocząć, tworzenie mikrousług nie wymaga zastosowania żadnej konkretnej technologii. Na przykład kontenery platformy Docker nie są wymagane do utworzenia architektury opartej na mikrousługach. Te mikrousługi mogą być również uruchamiane jako zwykłe procesy. Mikrousługi są architekturą logiczną.
 
-Ponadto nawet w przypadku, gdy mikrousługa może być fizycznie zaimplementowana jako jedna usługa, proces lub kontener (w przypadku uproszczenia jest to podejście wykonywane w początkowej wersji [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), ta różnica między mikrousługą biznesową w przypadku tworzenia dużej i złożonej aplikacji składającej się z wielu dziesiątek lub nawet setek usług usługa fizyczna lub kontener nie musi być wymagana we wszystkich przypadkach.
+Ponadto nawet wtedy, gdy mikrousługa może być fizycznie zaimplementowana jako jedna usługa, proces lub kontener (dla uproszczenia, to podejście wykonywane w początkowej wersji [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), ta różnica między mikrousługą biznesową a usługą fizyczną lub kontenerem nie musi być konieczna we wszystkich przypadkach podczas tworzenia dużej i złożonej aplikacji składającej się z wielu dziesiątek lub nawet setek usług.
 
 Jest to sytuacja, w której istnieje różnica między architekturą logiczną aplikacji a architekturą fizyczną. Architektura logiczna i granice logiczne systemu nie zawsze mapują jeden do jednego na architekturę fizyczną lub rozmieszczenia. Może się tak zdarzyć, ale często nie.
 
@@ -35,4 +35,4 @@ W skrócie logicznej architekturze mikrousług nie zawsze jest konieczna zbieżn
 
 >[!div class="step-by-step"]
 >[Poprzedni](data-sovereignty-per-microservice.md)
->[dalej](distributed-data-management.md)
+>[Następny](distributed-data-management.md)

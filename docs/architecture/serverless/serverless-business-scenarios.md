@@ -99,4 +99,4 @@ Aby uzyskać więcej informacji, zobacz [Azure IoT Hub ping](https://azure.micro
 
 >[!div class="step-by-step"]
 >[Poprzedni](orchestration-patterns.md)
->[dalej](serverless-conclusion.md)
+>[Następny](serverless-conclusion.md)

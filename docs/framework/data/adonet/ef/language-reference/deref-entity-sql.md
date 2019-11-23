@@ -22,11 +22,11 @@ SELECT DEREF ( o.expression ) FROM Table AS o;
  `expression`  
  Każde prawidłowe wyrażenie zapytania, które zwraca kolekcję.  
   
-## <a name="return-value"></a>Wartość zwracana  
+## <a name="return-value"></a>Wartość zwrócona  
  Wartość obiektu, do którego istnieje odwołanie.  
   
 ## <a name="remarks"></a>Uwagi  
- Operator DEREF odwołuje się do wartości odniesienia i tworzy wynik tego odwołania. Na przykład jeśli `r` jest odwołaniem typu ref @ no__t-1T >, `Deref(r)` jest wyrażeniem typu `T`, które zwraca jednostkę, do której odwołuje się `r`. Jeśli wartość odwołania ma wartość null lub jest zawieszonego (oznacza to, że obiekt docelowy odwołania nie istnieje), wynik operatora DEREF ma wartość null.  
+ Operator DEREF odwołuje się do wartości odniesienia i tworzy wynik tego odwołania. Na przykład jeśli `r` jest odwołaniem typu ref\<T >, `Deref(r)` jest wyrażeniem typu `T`, które zwraca jednostkę, do której odwołuje się `r`. Jeśli wartość odwołania ma wartość null lub jest zawieszonego (oznacza to, że obiekt docelowy odwołania nie istnieje), wynik operatora DEREF ma wartość null.  
   
 ## <a name="example"></a>Przykład  
  Poniższe zapytanie [!INCLUDE[esql](../../../../../../includes/esql-md.md)] używa operatora DEREF, aby usunąć odwołanie do wartości odniesienia i utworzyć wynik tego odwołania. Zapytanie jest oparte na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  

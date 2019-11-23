@@ -22,7 +22,7 @@ Jeśli wolisz lekki Edytor Międzyplatformowy obsługujący dowolny język progr
 > [!NOTE]
 > Aby pobrać Visual Studio Code, przejdź do <https://code.visualstudio.com/download>.
 >
-> Aby pobrać platformę Docker dla komputerów Mac i Windows <https://www.docker.com/products/docker>, przejdź do.
+> Aby pobrać platformę Docker dla komputerów Mac i Windows, przejdź do <https://www.docker.com/products/docker>.
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio z narzędziami platformy Docker (komputer deweloperski systemu Windows)
 

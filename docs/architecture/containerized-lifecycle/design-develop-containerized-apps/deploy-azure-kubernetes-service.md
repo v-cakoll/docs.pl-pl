@@ -24,9 +24,9 @@ Przed użyciem AKS są spełnione wymagania wstępne:
 > [!NOTE]
 > Aby uzyskać pełne informacje na temat:
 >
-> Azure — interfejs wiersza polecenia:<https://docs.microsoft.com/cli/azure/index>
+> Azure — interfejs wiersza polecenia: <https://docs.microsoft.com/cli/azure/index>
 >
-> Podsystem Windows dla systemu Linux:<https://docs.microsoft.com/windows/wsl/about>
+> Podsystem Windows dla systemu Linux: <https://docs.microsoft.com/windows/wsl/about>
 
 ## <a name="create-the-aks-environment-in-azure"></a>Tworzenie środowiska AKS na platformie Azure
 
@@ -56,7 +56,7 @@ Klaster AKS:
 
 **Rysunek 4-18**. Widok AKS na platformie Azure.
 
-Można również wyświetlić węzeł utworzony przy użyciu `Azure-CLI` i. `Kubectl`
+Można również wyświetlić węzeł utworzony przy użyciu `Azure-CLI` i `Kubectl`.
 
 Po pierwsze, pobieranie poświadczeń:
 
@@ -64,9 +64,9 @@ Po pierwsze, pobieranie poświadczeń:
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Dane wyjściowe konsoli z powyższego polecenia: Scalono "MsSampleK8Cluster jako bieżący kontekst w/root/.Kube/config.](media/get-credentials-command-result.png)
+![Dane wyjściowe konsoli z powyższego polecenia: scalone "MsSampleK8Cluster jako bieżący kontekst w/root/.Kube/config.](media/get-credentials-command-result.png)
 
-**Rysunek 4-19**. `aks get-credentials`wynik polecenia.
+**Rysunek 4-19**. `aks get-credentials` wynik polecenia.
 
 A następnie pobieranie węzłów z polecenia kubectl:
 
@@ -74,9 +74,9 @@ A następnie pobieranie węzłów z polecenia kubectl:
 kubectl get nodes
 ```
 
-![Dane wyjściowe konsoli z powyższego polecenia: Lista węzłów o stanie, wieku (czasie wykonywania) i wersji](media/kubectl-get-nodes-command-result.png)
+![Dane wyjściowe konsoli z powyższego polecenia: lista węzłów ze stanem, wiek (czas działania) i wersja](media/kubectl-get-nodes-command-result.png)
 
-**Rysunek 4-20**. `kubectl get nodes`wynik polecenia.
+**Rysunek 4-20**. `kubectl get nodes` wynik polecenia.
 
 >[!div class="step-by-step"]
 >[Poprzedni](orchestrate-high-scalability-availability.md)

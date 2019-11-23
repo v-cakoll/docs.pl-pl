@@ -16,7 +16,7 @@ ms.locfileid: "72321174"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>Wyjątek komentarza XML musi mieć atrybut „cref”
 
-Tag \<exception > umożliwia dokumentowanie wyjątków, które mogą być zgłaszane przez metodę. Wymagany atrybut `cref` Określa nazwę elementu członkowskiego, który jest sprawdzany przez generator dokumentacji. Jeśli element członkowski istnieje, jest tłumaczony na nazwę elementu kanonicznego w pliku dokumentacji.
+Tag \<Exception > umożliwia dokumentowanie wyjątków, które mogą być zgłaszane przez metodę. Wymagany atrybut `cref` wyznacza nazwę elementu członkowskiego, który jest sprawdzany przez generator dokumentacji. Jeśli element członkowski istnieje, jest tłumaczony na nazwę elementu kanonicznego w pliku dokumentacji.
 
 **Identyfikator błędu:** BC42319
 
@@ -30,6 +30,6 @@ Dodaj atrybut `cref` do wyjątku w następujący sposób:
 
 ## <a name="see-also"></a>Zobacz także
 
-- [@no__t — 1exception >](../../../visual-basic/language-reference/xmldoc/exception.md)
+- [\<wyjątek >](../../../visual-basic/language-reference/xmldoc/exception.md)
 - [Instrukcje: tworzenie dokumentacji XML](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)

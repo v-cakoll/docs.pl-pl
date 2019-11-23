@@ -13,7 +13,7 @@ ms.locfileid: "70296122"
 
 Aby utworzyć odporne mikrousługi, musisz obsługiwać możliwe scenariusze błędów HTTP. Jednym ze sposobów obsługi tych niepowodzeń, chociaż nie jest to zalecane, jest utworzenie własnej implementacji ponownych prób przy użyciu wykładniczej wycofywania.
 
-**Ważna Uwaga:** W tej sekcji pokazano, jak utworzyć własny kod niestandardowy w celu zaimplementowania ponownych prób wywołania HTTP. Nie jest to jednak zalecane, ale w celu użycia bardziej wydajnego i niezawodnego korzystania z mechanizmów, takich jak `HttpClientFactory` Polly, dostępnych od platformy .NET Core 2,1. Te zalecane podejścia wyjaśniono w następnych sekcjach.
+**Ważna Uwaga:** W tej sekcji pokazano, jak utworzyć własny kod niestandardowy w celu zaimplementowania ponownych prób wywołania HTTP. Nie zaleca się jednak wykonywania własnych czynności, ale do korzystania z bardziej wydajnych i niezawodnych funkcji, takich jak `HttpClientFactory` z Polly, dostępne od platformy .NET Core 2,1. Te zalecane podejścia wyjaśniono w następnych sekcjach.
 
 Jako wstępna Eksploracja można zaimplementować własny kod z klasą narzędzi dla wykładniczej wycofywania, jak w [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), oraz kod podobny do poniższego.
 
@@ -88,7 +88,7 @@ public struct ExponentialBackoff
 }
 ```
 
-Korzystanie z tego kodu w aplikacji klient\# C (inna mikrousługa klienta internetowego interfejsu API, aplikacja ASP.NET MVC lub nawet aplikacja środowiska Xamarin\# w języku C) jest prosta. Poniższy przykład pokazuje, jak za pomocą klasy HttpClient.
+Używanie tego kodu w aplikacji C\# Client (inna mikrousługa klienta internetowego interfejsu API, aplikacja ASP.NET MVC lub nawet aplikacja platformy C\# Xamarin) jest prosta. Poniższy przykład pokazuje, jak za pomocą klasy HttpClient.
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -114,5 +114,5 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 Należy pamiętać, że ten kod jest odpowiedni tylko jako Weryfikacja koncepcji. W następnych sekcjach wyjaśniono, jak używać bardziej złożonych metod, przy użyciu HttpClientFactory. HttpClientFactory jest dostępny od platformy .NET Core 2,1 z sprawdzonymi bibliotekami odporności, takimi jak Polly.
 
 >[!div class="step-by-step"]
->[Poprzedni](implement-resilient-entity-framework-core-sql-connections.md)Następny
->[](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[Poprzedni](implement-resilient-entity-framework-core-sql-connections.md)
+>[Następny](use-httpclientfactory-to-implement-resilient-http-requests.md)

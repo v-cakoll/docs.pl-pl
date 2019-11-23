@@ -63,13 +63,13 @@ config.Save();
   
  Można zmienić ilość pamięci licznika wydajności dla kategorii WCF w rejestrze. Aby to zrobić, należy dodać nową wartość DWORD o nazwie `FileMappingSize` do trzech następujących lokalizacji i ustawić ją na żądaną wartość w bajtach. Uruchom ponownie maszynę, aby zmiany zostały wprowadzone.  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0 \ wydajność  
+- HKLM\System\CurrentControlSet\Services\ServiceModelEndpoint 4.0.0.0\Performance  
   
-- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0 \ wydajność  
+- HKLM\System\CurrentControlSet\Services\ServiceModelOperation 4.0.0.0\Performance  
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0 \ wydajność  
   
- W przypadku usunięcia dużej liczby obiektów (na przykład ServiceHost), ale oczekujących na odtworzenie elementów bezużytecznych, licznik wydajności `PrivateBytes` będzie rejestrował nietypowo dużą liczbę. Aby rozwiązać ten problem, można dodać własne liczniki specyficzne dla aplikacji lub użyć atrybutu `performanceCounters` w celu włączenia tylko liczników poziomu usługi.  
+ Gdy duża liczba obiektów (na przykład ServiceHost) jest usuwana, ale oczekiwanie na ich zebranie, licznik wydajności `PrivateBytes` będzie rejestrował nietypowo dużą liczbę. Aby rozwiązać ten problem, można dodać własne liczniki specyficzne dla aplikacji lub użyć atrybutu `performanceCounters`, aby włączyć tylko liczniki poziomu usługi.  
   
 ## <a name="types-of-performance-counters"></a>Typy liczników wydajności  
  Liczniki wydajności są objęte zakresem trzech różnych poziomów: usługi, punktu końcowego i operacji.  
@@ -112,7 +112,7 @@ config.Save();
   
  Ten licznik umożliwia pomiar sposobu użycia wywołania oraz sposobu wykonywania operacji.  
   
- Gdy liczniki są widoczne w wielu zakresach, dane zbierane z wyższego zakresu są agregowane przy użyciu danych z niższych zakresów. Na przykład `Calls` w punkcie końcowym reprezentuje sumę wszystkich wywołań operacji w punkcie końcowym; `Calls` w ramach usługi reprezentuje sumę wszystkich wywołań wszystkich punktów końcowych w ramach usługi.  
+ Gdy liczniki są widoczne w wielu zakresach, dane zbierane z wyższego zakresu są agregowane przy użyciu danych z niższych zakresów. Na przykład `Calls` w punkcie końcowym reprezentuje sumę wszystkich wywołań operacji w punkcie końcowym; `Calls` w usłudze reprezentuje sumę wszystkich wywołań wszystkich punktów końcowych w ramach usługi.  
   
 > [!NOTE]
 > Jeśli na kontrakcie istnieją zduplikowane nazwy operacji, tylko jeden z nich jest odbierany dla obu operacji.  
@@ -121,11 +121,11 @@ config.Save();
 
 Kilka plików jest zainstalowanych w folderze instalacyjnym zestawu SDK, dzięki czemu można programowo uzyskać dostęp do liczników wydajności programu WCF. Te pliki są wymienione w następujący sposób:
   
-- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
-- *@no__t -1ServiceModelOperationPerfCounters. VRG*
-- *@no__t -1ServiceModelServicePerfCounters. VRG*  
-- *@no__t -1SMSvcHostPerfCounters. VRG*
-- *@no__t -1TransactionBridgePerfCounters. VRG*
+- *\_ServiceModelEndpointPerfCounters. VRG*
+- *\_ServiceModelOperationPerfCounters. VRG*
+- *\_ServiceModelServicePerfCounters. VRG*  
+- *\_SMSvcHostPerfCounters. VRG*
+- *\_TransactionBridgePerfCounters. VRG*
   
 Aby uzyskać więcej informacji na temat programistycznego uzyskiwania dostępu do liczników, zobacz [Architektura programowania liczników wydajności](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

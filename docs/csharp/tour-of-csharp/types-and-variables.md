@@ -106,4 +106,4 @@ W programie istnieją różne rodzaje *zmiennych* , w C#tym pola, elementy tabli
 
 > [!div class="step-by-step"]
 > [Poprzedni](program-structure.md)
-> [dalej](expressions.md)
+> [Następny](expressions.md)

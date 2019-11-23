@@ -89,9 +89,9 @@ Kluczem głównym tego pliku są usługi. W tym kluczu należy zdefiniować usł
 | webmvc       | Kontener obejmujący aplikację ASP.NET Core MVC korzystającą z mikrousług z\# C po stronie serwera|
 | Katalog. API  | Kontener, w tym wykaz ASP.NET Core sieci Web API mikrousługi |
 | Porządkowanie. API | Kontener obejmujący porządkowanie ASP.NET Core sieci Web API mikrousług |
-| SQL. Data     | Kontener SQL Server dla systemu Linux, który utrzymuje bazy danych mikrousług |
+| sql.data     | Kontener SQL Server dla systemu Linux, który utrzymuje bazy danych mikrousług |
 | koszyk. API   | Kontener z koszykiem ASP.NET Core mikrousługi interfejsu Web API |
-| koszyk. dane  | Kontener z uruchomioną usługą pamięci podręcznej REDIS z bazą danych koszyka jako pamięć podręczną REDIS |
+| basket.data  | Kontener z uruchomioną usługą pamięci podręcznej REDIS z bazą danych koszyka jako pamięć podręczną REDIS |
 
 ### <a name="a-simple-web-service-api-container"></a>Prosty kontener interfejsu API usługi sieci Web
 
@@ -129,7 +129,7 @@ Ponieważ parametry połączenia są zdefiniowane przez zmienną środowiskową,
 
 - Łączy usługę sieci Web z usługą SQL. Data (wystąpienie SQL Server dla bazy danych systemu Linux działającej w kontenerze). W przypadku określenia tej zależności kontener Catalog. API nie zostanie uruchomiony, dopóki nie zostanie już uruchomiony kontener SQL. Data. jest to ważne, ponieważ katalog. interfejs API musi mieć najpierw bazę danych SQL Server. Jednak tego rodzaju zależność kontenera jest zbyt mała w wielu przypadkach, ponieważ platforma Docker sprawdza tylko na poziomie kontenera. Czasami usługa (w tym przypadku SQL Server) nadal może nie być gotowa, dlatego zaleca się wdrożenie logiki ponawiania przy użyciu wykładniczej wycofywania w mikrousługach klienta. W ten sposób, jeśli kontener zależności nie jest gotowy przez krótki czas, aplikacja nadal będzie odporna na błędy.
 
-- Jest skonfigurowany tak, aby zezwalał na dostęp do serwerów zewnętrznych: ustawienie dodatkowe\_hosty umożliwia dostęp do zewnętrznych serwerów lub maszyn poza hostem platformy Docker (czyli poza domyślną maszyną wirtualną z systemem Linux, która jest hostem platformy Docker), takim jak lokalna SQL Server na komputerze deweloperskim.
+- Jest skonfigurowany do zezwalania na dostęp do serwerów zewnętrznych: ustawienie dodatkowe\_hosty umożliwia dostęp do zewnętrznych serwerów lub maszyn poza hostem platformy Docker (czyli poza domyślną maszyną wirtualną z systemem Linux, która jest hostem platformy Docker), takim jak lokalne wystąpienie SQL Server na komputerze deweloperskim.
 
 Istnieją również inne zaawansowane ustawienia Docker-Compose. yml, które będziemy omawiać w poniższych sekcjach.
 
@@ -175,7 +175,7 @@ W przypadku określania różnych środowisk należy używać wielu plików reda
 
 Można użyć pojedynczego pliku Docker-Compose. yml, jak w przykładach uproszczonych przedstawionych w poprzednich sekcjach. Jednak nie jest to zalecane w przypadku większości aplikacji.
 
-Domyślnie Redaguj odczytuje dwa pliki, Docker-Compose. yml i opcjonalny plik Docker-Compose. override. yml. Jak pokazano na rysunku 6-11, podczas korzystania z programu Visual Studio i włączania obsługi platformy Docker program Visual Studio tworzy również dodatkowy plik Docker-Compose. vs. Debug. g. yml do debugowania aplikacji, można przyjrzeć się temu plikowi do folderu obj\\Docker\\ w folderze głównym rozwiązania.
+Domyślnie Redaguj odczytuje dwa pliki, Docker-Compose. yml i opcjonalny plik Docker-Compose. override. yml. Jak pokazano na rysunku 6-11, gdy korzystasz z programu Visual Studio i włączasz obsługę platformy Docker, Visual Studio tworzy również dodatkowy plik Docker-Compose. vs. Debug. g. yml do debugowania aplikacji, można przyjrzeć się temu plikowi w folderze obj\\Docker\\ w folderze głównym rozwiązania.
 
 ![Zrzut ekranu przedstawiający pliki w projekcie platformy Docker.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
@@ -477,4 +477,4 @@ W celu przyspieszenia uruchamiania obrazy środowiska uruchomieniowego są równ
 
 > [!div class="step-by-step"]
 > [Poprzedni](data-driven-crud-microservice.md)
-> [dalej](database-server-container.md)
+> [Następny](database-server-container.md)

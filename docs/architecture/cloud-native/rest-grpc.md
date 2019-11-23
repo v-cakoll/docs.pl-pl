@@ -73,4 +73,4 @@ Patrząc na przyszłość, gRPC może odgrywać główną rolę w dethroning dom
 
 >[!div class="step-by-step"]
 >[Poprzedni](service-to-service-communication.md)
->[dalej](service-mesh-communication-infrastructure.md)
+>[Następny](service-mesh-communication-infrastructure.md)

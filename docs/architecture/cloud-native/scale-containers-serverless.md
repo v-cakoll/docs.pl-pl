@@ -42,7 +42,7 @@ Azure Functions automatycznie obsługuje skalowanie w górę. Domyślny plan zu�
 
 - [AKS pul wielu węzłów](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [Automatyczne skalowanie klastra AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Samouczek: Skalowanie aplikacji w AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
+- [Samouczek: skalowanie aplikacji w AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
 - [Azure Functions skalowanie i hosting](https://docs.microsoft.com/azure/azure-functions/functions-scale)
 
 >[!div class="step-by-step"]

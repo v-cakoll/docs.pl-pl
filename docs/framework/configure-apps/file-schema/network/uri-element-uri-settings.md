@@ -9,11 +9,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697441"
 ---
-# <a name="uri-element-uri-settings"></a>\<uri >, element (ustawienia identyfikatora URI)
+# <a name="uri-element-uri-settings"></a>\<> elementu URI (ustawienia identyfikatora URI)
 Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje adresy sieci Web wyrażone przy użyciu Uniform Resource Identifier (URI).  
   
-[ **@no__t — 2configuration >** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<uri >**  
+[ **> konfiguracji \<** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<uri >**  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,8 +33,8 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
 |[IDN](idn-element-uri-settings.md)|Określa, czy do nazw domen są stosowane analizowanie międzynarodowych nazw domen (IDN).|  
-|[iriParsing](iriparsing-element-uri-settings.md)|Określa, czy do <xref:System.Uri> ma być stosowana analiza międzynarodowego identyfikatora zasobów (IRI) i czy mają być stosowane reguły analizy IRI.|  
-|[schemeSettings](schemesettings-element-uri-settings.md)|Określa sposób, w jaki <xref:System.Uri> będzie analizowana dla określonych schematów.|  
+|[iriParsing](iriparsing-element-uri-settings.md)|Określa, czy do <xref:System.Uri> jest stosowana analiza międzynarodowego identyfikatora zasobów (IRI) i czy mają być stosowane reguły analizy IRI.|  
+|[schemeSettings](schemesettings-element-uri-settings.md)|Określa, w jaki sposób <xref:System.Uri> będzie analizowana dla określonych schematów.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -48,7 +48,7 @@ Zawiera ustawienia, które określają, w jaki sposób .NET Framework obsługuje
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi IRI analizy nazw i IDN. W przykładzie zostanie również wyczyszczone wszystkie ustawienia schematu, a następnie dodano obsługę ograniczników ścieżek o wartości procentowo zakodowanych w schemacie protokołu HTTP.  
+ W poniższym przykładzie przedstawiono konfigurację używaną przez klasę <xref:System.Uri> do obsługi analizy IRI i nazw IDN. W przykładzie zostanie również wyczyszczone wszystkie ustawienia schematu, a następnie dodano obsługę ograniczników ścieżek o wartości procentowo zakodowanych w schemacie protokołu HTTP.  
   
 ### <a name="code"></a>Kod  
   

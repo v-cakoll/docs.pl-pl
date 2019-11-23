@@ -11,11 +11,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183939"
 ---
-# <a name="data-access-and-management"></a><span data-ttu-id="0a6f0-103">Dostęp do danych i zarządzanie nimi</span><span class="sxs-lookup"><span data-stu-id="0a6f0-103">Data access and management</span></span>
+# <a name="data-access-and-management"></a><span data-ttu-id="1f2ec-103">Dostęp do danych i zarządzanie nimi</span><span class="sxs-lookup"><span data-stu-id="1f2ec-103">Data access and management</span></span>
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-<span data-ttu-id="0a6f0-104">*Ta zawartość zostanie wkrótce udostępniona.*</span><span class="sxs-lookup"><span data-stu-id="0a6f0-104">*This content is coming soon.*</span></span>
+<span data-ttu-id="1f2ec-104">*Ta zawartość zostanie wkrótce udostępniona.*</span><span class="sxs-lookup"><span data-stu-id="1f2ec-104">*This content is coming soon.*</span></span>
 
 <!--
 - Entity Framework
@@ -25,6 +25,6 @@ ms.locfileid: "71183939"
 -->
 
 >[!div class="step-by-step"]
-><span data-ttu-id="0a6f0-105">[Poprzedni](forms-validation.md)
->[Następny](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="0a6f0-105">[Previous](forms-validation.md)
+><span data-ttu-id="1f2ec-105">[Poprzedni](forms-validation.md)
+>[Następny](middleware.md)</span><span class="sxs-lookup"><span data-stu-id="1f2ec-105">[Previous](forms-validation.md)
 [Next](middleware.md)</span></span>

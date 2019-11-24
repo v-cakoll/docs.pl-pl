@@ -970,15 +970,15 @@
         - name: Nie można utworzyć składnika ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: 'Nie można odwołać się do elementu „<name>”, ponieważ jest to składowa pola „<name>”, którego typem jest typ wartości, z klasy „<classname>”, której klasą podstawową jest „System.MarshalByRefObject”.'
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: Do składowej wystąpienia klasy nie można odwołać się z obrębu udostępnionej metody lub udostępnionego inicjatora składowej bez jawnego wystąpienia klasy
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: Nie można utworzyć niezbędnego pliku tymczasowego
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: Nie można otworzyć „<filename>" do zapisu
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: Nie można odnaleźć klasy „<classname>”
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: Klasa nie obsługuje automatyzacji lub oczekiwanego interfejsu
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: Instrukcja „Class” musi być zakończona odpowiadającą jej instrukcją „End Class”

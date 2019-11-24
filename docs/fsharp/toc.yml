@@ -7,12 +7,12 @@
       href: get-started/install-fsharp.md
     - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio'
       href: get-started/get-started-visual-studio.md
-    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio dla komputerów Mac'
-      href: get-started/get-started-with-visual-studio-for-mac.md
-    - name: 'Rozpoczynanie pracy z językiem F# w programach Visual Studio Code i Ionide'
+    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio Code'
       href: get-started/get-started-vscode.md
     - name: 'Rozpoczynanie pracy z językiem F# i interfejsem wiersza polecenia platformy .NET Core'
       href: get-started/get-started-command-line.md
+    - name: 'Rozpoczynanie pracy z językiem F# w programie Visual Studio dla komputerów Mac'
+      href: get-started/get-started-with-visual-studio-for-mac.md
 - name: 'Co to jest F#'
   href: what-is-fsharp.md
 - name: 'Przewodnik po środowisku F#'

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6505995b128e31ed2a18881d31afa0bb1bfe150e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779424"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431870"
 ---
-# <a name="imetadataassemblyemitsetfileprops-method"></a><span data-ttu-id="1c92c-102">IMetaDataAssemblyEmit::SetFileProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="1c92c-102">IMetaDataAssemblyEmit::SetFileProps Method</span></span>
-<span data-ttu-id="1c92c-103">Modyfikuje określonego `File` struktury metadanych.</span><span class="sxs-lookup"><span data-stu-id="1c92c-103">Modifies the specified `File` metadata structure.</span></span>  
+# <a name="imetadataassemblyemitsetfileprops-method"></a><span data-ttu-id="0fd93-102">IMetaDataAssemblyEmit::SetFileProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="0fd93-102">IMetaDataAssemblyEmit::SetFileProps Method</span></span>
+<span data-ttu-id="0fd93-103">Modifies the specified `File` metadata structure.</span><span class="sxs-lookup"><span data-stu-id="0fd93-103">Modifies the specified `File` metadata structure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1c92c-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="1c92c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0fd93-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0fd93-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetFileProps (  
@@ -38,31 +36,31 @@ HRESULT SetFileProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1c92c-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="1c92c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0fd93-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0fd93-105">Parameters</span></span>  
  `file`  
- <span data-ttu-id="1c92c-106">[in] Token metadanych, który określa `File` struktury metadanych do zmodyfikowania.</span><span class="sxs-lookup"><span data-stu-id="1c92c-106">[in] The metadata token that specifies the `File` metadata structure to be modified.</span></span>  
+ <span data-ttu-id="0fd93-106">[in] The metadata token that specifies the `File` metadata structure to be modified.</span><span class="sxs-lookup"><span data-stu-id="0fd93-106">[in] The metadata token that specifies the `File` metadata structure to be modified.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="1c92c-107">[in] Wskaźnik do danych wyznaczania wartości skrótu, skojarzone z plikiem.</span><span class="sxs-lookup"><span data-stu-id="1c92c-107">[in] A pointer to the hash data associated with the file.</span></span>  
+ <span data-ttu-id="0fd93-107">[in] A pointer to the hash data associated with the file.</span><span class="sxs-lookup"><span data-stu-id="0fd93-107">[in] A pointer to the hash data associated with the file.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="1c92c-108">[in] Rozmiar w bajtach `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="1c92c-108">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="0fd93-108">[in] The size in bytes of `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="0fd93-108">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwFileFlags`  
- <span data-ttu-id="1c92c-109">[in] Bitowa kombinacja [corfileflags —](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) wartości, które określają różne atrybuty pliku.</span><span class="sxs-lookup"><span data-stu-id="1c92c-109">[in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.</span></span>  
+ <span data-ttu-id="0fd93-109">[in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.</span><span class="sxs-lookup"><span data-stu-id="0fd93-109">[in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1c92c-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="1c92c-110">Remarks</span></span>  
- <span data-ttu-id="1c92c-111">Aby utworzyć `File` struktury metadanych, użyj [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="1c92c-111">To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0fd93-110">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0fd93-110">Remarks</span></span>  
+ <span data-ttu-id="0fd93-111">To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="0fd93-111">To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1c92c-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="1c92c-112">Requirements</span></span>  
- <span data-ttu-id="1c92c-113">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c92c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0fd93-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0fd93-112">Requirements</span></span>  
+ <span data-ttu-id="0fd93-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0fd93-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1c92c-114">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="1c92c-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0fd93-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0fd93-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="1c92c-115">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1c92c-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0fd93-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0fd93-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="1c92c-116">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c92c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="0fd93-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0fd93-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1c92c-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="1c92c-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0fd93-117">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0fd93-117">See also</span></span>
 
-- [<span data-ttu-id="1c92c-118">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="1c92c-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="0fd93-118">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="0fd93-118">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

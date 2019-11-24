@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 212625fd460e88201dd4799754297861826d3aa7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afb0c09c09236267be2a999ce5c130feebb52b6f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777147"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447905"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta — Metoda
-Zapisuje zmiany z bieżącej sesji Edytuj i Kontynuuj do określonego pliku.  
+Saves changes from the current edit-and-continue session to the specified file.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT SaveDelta (
   
 ## <a name="parameters"></a>Parametry  
  `szFile`  
- [in] Nazwa pliku, pod którym chcesz zapisać zmiany.  
+ [in] The file name under which to save changes.  
   
  `dwSaveFlags`  
- [in] Zastrzeżone. Musi mieć wartość zero.  
+ [in] Reserved. Must be zero.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

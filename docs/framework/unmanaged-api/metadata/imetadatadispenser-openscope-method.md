@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e157c758b472ea89e21c1ed1ba8c17693c20a3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5ce1af82631531f8f7105fbf92ba78db3cca437b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777792"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442330"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope — Metoda
-Otwiera istniejący plik na dysku i mapuje jego metadane do pamięci.  
+Opens an existing, on-disk file and maps its metadata into memory.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,36 +38,36 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parametry  
  `szScope`  
- [in] Nazwa pliku, który ma zostać otwarty. Plik musi zawierać wspólnego języka wspólnego (CLR) metadanych.  
+ [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
   
  `dwOpenFlags`  
- [in] Wartość [coropenflags —](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) wyliczeniu, aby określić tryb (Odczyt, zapis i tak dalej) otwierania.  
+ [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
   
  `riid`  
- [in] IID interfejsu żądaną metadanych ma zostać zwrócona; obiekt wywołujący użyje interfejsu do zaimportowania (odczyt) lub emitować metadane (Zapisz).  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
   
- Wartość `riid` należy określić jeden z interfejsów "import" lub "Dodaj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 lub IID_IMetaDataImport2.  
+ The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] Wskaźnik do interfejsu zwrócone.  
+ [out] The pointer to the returned interface.  
   
 ## <a name="remarks"></a>Uwagi  
- Kopia w pamięci metadanych mogą być przeszukiwane przy użyciu metod z jednego z interfejsów "import" lub dodane do przy użyciu metod z jednego z interfejsów "Dodaj".  
+ The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
   
- Jeśli plik docelowy nie zawiera metadanych CLR `OpenScope` metoda zakończy się niepowodzeniem.  
+ If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
   
- W programie .NET Framework w wersji 1.0 i w wersji 1.1, jeśli zakres jest otwierany przy użyciu `dwOpenFlags` wartość ofRead, jest uprawniony do udostępniania. Oznacza to jeśli jest to kolejne wywołania `OpenScope` — dostęp próbny nazwę pliku, który był wcześniej otwarty, istniejący zakres jest ponownie i nie powstaje nowy zestaw struktur danych. Jednak problemy mogą wystąpić z powodu udostępnianie to.  
+ In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
   
- W programie .NET Framework 2.0, zakresy otwartej z `dwOpenFlags` równa ofRead nie będą udostępniane. Użyj wartości ofReadOnly, aby zezwolić na zakres, który ma zostać udostępniony. Po udostępnieniu zakres zapytań, które używają "odczytu/zapisu" interfejsy metadanych nie powiedzie się.  
+ In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

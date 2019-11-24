@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f165200e-3a91-47f7-88fc-13ff10c8babc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc3ec00f11582ede1dc4b3d481a4eb9dcc4dd1d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a83f8566dfe8e1b612f67d95a0e69947b72704ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963916"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439600"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences — Metoda
-Raportuje układ obiektów w stercie w wyniku niekompaktowego wyrzucania elementów bezużytecznych.  
+Reports the layout of objects in the heap as a result of a non-compacting garbage collection.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,45 +38,45 @@ HRESULT SurvivingReferences(
   
 ## <a name="parameters"></a>Parametry  
  `cSurvivingObjectIDRanges`  
- podczas Liczba bloków ciągłych obiektów, które przeżyły jako wynik niekompaktowego wyrzucania elementów bezużytecznych. Oznacza to `cSurvivingObjectIDRanges` , że wartość jest rozmiarem `objectIDRangeStart` tablic i `cObjectIDRangeLength` , które przechowują `ObjectID` odpowiednio długość i dla każdego bloku obiektów.  
+ [in] The number of blocks of contiguous objects that survived as the result of the non-compacting garbage collection. That is, the value of `cSurvivingObjectIDRanges` is the size of the `objectIDRangeStart` and `cObjectIDRangeLength` arrays, which store an `ObjectID` and a length, respectively, for each block of objects.  
   
- Dwa następne argumenty `SurvivingReferences` są równoległymi tablicami. Innymi słowy `objectIDRangeStart` i `cObjectIDRangeLength` dotyczy tego samego bloku sąsiadujących obiektów.  
+ The next two arguments of `SurvivingReferences` are parallel arrays. In other words, `objectIDRangeStart` and `cObjectIDRangeLength` concern the same block of contiguous objects.  
   
  `objectIDRangeStart`  
- podczas Tablica `ObjectID` wartości, z których każdy jest adresem początkowym bloku ciągłego, na żywo obiektów w pamięci.  
+ [in] An array of `ObjectID` values, each of which is the starting address of a block of contiguous, live objects in memory.  
   
  `cObjectIDRangeLength`  
- podczas Tablica liczb całkowitych, z których każdy jest rozmiarem ciągłego bloku ciągłych obiektów w pamięci.  
+ [in] An array of integers, each of which is the size of a surviving block of contiguous objects in memory.  
   
- Dla każdego bloku, do którego odwołuje `objectIDRangeStart` się tablica, jest określony rozmiar.  
+ A size is specified for each block that is referenced in the `objectIDRangeStart` array.  
   
 ## <a name="remarks"></a>Uwagi  
   
 > [!IMPORTANT]
-> Ta metoda zgłasza rozmiary `MAX_ULONG` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych. W przypadku obiektów, które są większe niż 4 GB, zamiast tego użyj metody [ICorProfilerCallback4:: SurvivingReferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) .  
+> This method reports sizes as `MAX_ULONG` for objects that are greater than 4 GB on 64-bit platforms. For objects that are larger than 4 GB, use the [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) method instead.  
   
- Elementy `objectIDRangeStart` tablic i `cObjectIDRangeLength` powinny być interpretowane w następujący sposób, aby określić, czy obiekt przeżyje odzyskiwanie pamięci. Załóżmy, że `ObjectID` wartość (`ObjectID`) znajduje się w następującym zakresie:  
+ The elements of the `objectIDRangeStart` and `cObjectIDRangeLength` arrays should be interpreted as follows to determine whether an object survived the garbage collection. Assume that an `ObjectID` value (`ObjectID`) lies within the following range:  
   
  `ObjectIDRangeStart[i]` <= `ObjectID` < `ObjectIDRangeStart[i]` + `cObjectIDRangeLength[i]`  
   
- Dla każdej wartości `i` , która znajduje się w następującym zakresie, obiekt przeżyły odzyskiwanie pamięci:  
+ For any value of `i` that is in the following range, the object has survived the garbage collection:  
   
  0 <= `i` < `cSurvivingObjectIDRanges`  
   
- Niekompaktowe wyrzucanie elementów bezużytecznych przejmuje pamięć zajmowaną przez obiekty "martwe", ale nie kompaktuje ilości wolnego miejsca. W efekcie do sterty jest zwracana pamięć, ale nie są przenoszone żadne obiekty "na żywo".  
+ A non-compacting garbage collection reclaims the memory occupied by "dead" objects, but does not compact that freed space. As a result, memory is returned to the heap, but no "live" objects are moved.  
   
- Wywołania `SurvivingReferences` środowiska uruchomieniowego języka wspólnego (CLR) dla niekompaktowych kolekcji elementów bezużytecznych. W przypadku kompaktowania kolekcji elementów bezużytecznych zamiast niej wywoływana jest [ICorProfilerCallback:: MovedReferences —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) . Pojedyncze wyrzucanie elementów bezużytecznych może być kompaktowania dla jednej generacji i niekompaktowania dla innych. W przypadku wyrzucania elementów bezużytecznych na określonej generacji Profiler otrzyma `SurvivingReferences` wywołanie zwrotne `MovedReferences` lub wywołanie zwrotne, ale nie oba.  
+ The common language runtime (CLR) calls `SurvivingReferences` for non-compacting garbage collections. For compacting garbage collections, [ICorProfilerCallback::MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) is called instead. A single garbage collection can be compacting for one generation and non-compacting for another. For a garbage collection on any particular generation, the profiler will receive either a `SurvivingReferences` callback or a `MovedReferences` callback, but not both.  
   
- Podczas `SurvivingReferences` konkretnego wyrzucania elementów bezużytecznych może zostać odebranych wiele wywołań zwrotnych z powodu ograniczonego wewnętrznego buforowania, wiele wątków zgłasza w przypadku wyrzucania elementów bezużytecznych serwera i z innych przyczyn. W przypadku wielu wywołań zwrotnych podczas wyrzucania elementów bezużytecznych informacje są kumulowane — wszystkie odwołania, które są `SurvivingReferences` zgłaszane w przypadku wywołania zwrotnego w czasie odzyskiwania pamięci.  
+ Multiple `SurvivingReferences` callbacks might be received during a particular garbage collection, due to limited internal buffering, multiple threads reporting in the case of server garbage collection, and other reasons. In the case of multiple callbacks during a garbage collection, the information is cumulative — all references that are reported in any `SurvivingReferences` callback survive the garbage collection.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorProf. idl, CorProf. h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteki** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

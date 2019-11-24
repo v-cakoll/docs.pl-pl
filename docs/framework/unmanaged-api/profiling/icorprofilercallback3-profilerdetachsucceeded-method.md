@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05164966-16ce-4cc9-a530-43a640c00711
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8cff277179be761bb0dc78b02702e7d35ad4b6a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b044c493649b73566a2e70db2e19977a6a7b877d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779248"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439448"
 ---
 # <a name="icorprofilercallback3profilerdetachsucceeded-method"></a>ICorProfilerCallback3::ProfilerDetachSucceeded — Metoda
-Powiadamia program profilujący, że środowisko uruchomieniowe języka wspólnego (CLR) zostanie zwolnienia biblioteki DLL profilera.  
+Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,23 +32,23 @@ HRESULT ProfilerDetachSucceeded();
 ```  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Wartość zwrócona przez to wywołanie zwrotne jest ignorowany.  
+ The return value from this callback is ignored.  
   
 ## <a name="remarks"></a>Uwagi  
- `ProfilerDetachSucceeded` Wywołanie zwrotne zostało wydane po zamknięciu wszystkich wątków programu profilującego kodu. Gdy ta metoda jest wywoływana, program profilujący, należy wykonać wszelkie zadania ostatniej chwili, które nie są odpowiednie dla jego destruktor, takie jak jego interfejsu użytkownika lub składnik rejestrowania zgłaszające. Jednakże program profilujący nie mogą wywoływać funkcje dla interfejsów, które są dostarczane przez środowisko CLR Podczas tego wywołania zwrotnego (takie jak [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) lub `IMetaData*` interfejsów).  
+ The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code. When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component. However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).  
   
- Środowisko CLR tworzy wpis w dzienniku zdarzeń aplikacji Windows, aby wskazać, czy operacja odłączenia powiodła się.  
+ The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.  
   
- Po profiler zwraca z to wywołanie zwrotne, środowisko CLR zwalnia obiekt profilera i wyładowuje profiler DLL. W związku z tym program profilujący nie musi wykonywać wszystkie akcje, które mogłoby spowodować wykonanie zapytania wewnątrz biblioteki DLL profilera po zwraca od to wywołanie zwrotne. Na przykład nie musi tworzyć wątków lub rejestrowanie wywołań zwrotnych czasomierza.  
+ After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL. Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback. For example, it must not create threads or register timer callbacks.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

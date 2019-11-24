@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d81d7275d197de1dfc99b135377459f509c2651f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779242"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439440"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters — Metoda
-Umożliwia programowi profilującemu kodu Ustaw flagi generowania kodu alternatywnej dla nowej treści metody ponownej kompilacji.  
+Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,25 +33,25 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>Parametry  
  `moduleID`  
- [in] Moduł, który zawiera metodę, która CLR musi mieć parametry ponownej kompilacji JIT.  
+ [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
   
  `methodId`  
- [in] `MethodDef` Metody, dla którego CLR wymaga parametrów ponownej kompilacji JIT.  
+ [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
   
  `pFunctionControl`  
- [in] Wskaźnik do [icorprofilerfunctioncontrol —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interfejsu używanego przez program profilujący do podawania kompilację JIT dla metody są ponownie kompilowane.  
+ [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
   
 ## <a name="remarks"></a>Uwagi  
- Problemy dotyczące środowiska CLR `GetReJITParameters` wywołania zwrotnego, aby program profilujący można określić parametry ponownej kompilacji danej metody. `GetReJITParameters` Wywołania zwrotnego jest wydawane tylko raz dla każdej funkcji; parametry dostarczane przez program profilujący Zastosuj do wszystkich wystąpień tej funkcji.  
+ The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

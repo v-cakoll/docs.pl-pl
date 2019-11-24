@@ -157,21 +157,21 @@ helpviewer_keywords:
 - Windows Runtime Metadata Export Tool, error messages
 - error messages, Winmdexp.exe
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
-ms.openlocfilehash: 5d75f60cb96ddb7bd9e24a7cdc4b8d2b61aff8f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e99bdd106c845964f63915c87617e30eb51488f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104187"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447301"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
-Proces kompilacji wywołuje [Winmdexp. exe (narzędzie eksportu metadanych środowisko wykonawcze systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md) w przypadku używania szablonu **składnika Środowisko wykonawcze systemu Windows** w programie Visual Studio 2012, dlatego w **Lista błędów**są wyświetlane komunikaty o błędach Winmdexp. exe. Winmdexp. exe działa na module, który jest kompilowany przy użyciu opcji `/target:winmdobj`. Ponieważ wymaga skompilowanego modułu jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
+The build process calls [Winmdexp.exe (Windows Runtime Metadata Export Tool)](winmdexp-exe-windows-runtime-metadata-export-tool.md) when you use the **Windows Runtime Component** template in Visual Studio 2012, so Winmdexp.exe error messages appear in the **Error List**. Winmdexp.exe operates on a module that is compiled with the `/target:winmdobj` option. Because it requires a compiled module as input, its error messages don't appear unless compilation succeeds.  
   
- Komunikaty o błędach zostały zaprojektowane tak, aby zawierały wszystkie informacje potrzebne do rozwiązania warunków błędów zgłaszanych przez użytkownika. Jednak niektóre problemy wymagają więcej informacji niż mieści się w komunikacie. Dodatkowe informacje można znaleźć w temacie [diagnozowanie środowisko wykonawcze systemu Windowsych warunków błędów składników](https://go.microsoft.com/fwlink/p/?LinkId=251127) w centrum deweloperów systemu Windows.  
+ The error messages are designed to contain all the information you need to address the error conditions they report. However, some problems require more information than will fit in the message. You can find additional information in [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110)).  
   
- Jeśli błąd nie został omówiony w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, Użyj linku opinii znajdującego się w tym artykule i Dołącz komunikat o błędzie. Alternatywnie możesz zgłosić usterkę w [witrynie sieci Web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Możesz również wyszukać więcej informacji na [forach firmy Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ If your error is not discussed in that article, and you feel that the message doesn't contain sufficient information to address the issue, please use the feedback link in that article and include the error message. Alternatively, you can file a bug at the [Developer Community website](https://developercommunity.visualstudio.com/). You can also look for more information on the [Microsoft Forums](https://social.msdn.microsoft.com/Forums/).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](winmdexp-exe-windows-runtime-metadata-export-tool.md)
-- [Diagnozowanie warunków błędów składników środowisko wykonawcze systemu Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127)
+- [Diagnosing Windows Runtime component error conditions](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2d64315a-1af1-4c60-aedf-f8a781914aea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34ecfc2f01f22971e135358806adeea632e02f8b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757643"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448028"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd — Metoda
 
-Scala do bieżącego zakresu zakresy metadanych określone przez co najmniej jeden poprzedniego wywołania [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
+Merges into the current scope all the metadata scopes specified by one or more prior calls to [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md).
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,43 +34,43 @@ HRESULT MergeEnd ();
 
 ## <a name="parameters"></a>Parametry
 
-Ta metoda nie przyjmuje żadnych parametrów.
+This method takes no parameters.
 
 ## <a name="remarks"></a>Uwagi
 
-Ta procedura wyzwala rzeczywiste Scalanie metadanych, wszystkich Importuj zakresy określone w tym celu przed wywołania `IMetaDataEmit::Merge`, w bieżącym zakresie danych wyjściowych.
+This routine triggers the actual merge of metadata, of all import scopes specified by preceding calls to `IMetaDataEmit::Merge`, into the current output scope.
 
-Scalenie stosują się następujące warunki specjalne:
+The following special conditions apply to the merge:
 
-- Identyfikator wersji modułu (identyfikatorem MVID) nigdy nie jest importowany, ponieważ jest on unikatowy dla metadanych w zakresie importowania.
+- A module version identifier (MVID) is never imported, because it is unique to the metadata in the import scope.
 
-- Nie istniejących właściwości całego modułu zostaną zastąpione.
+- No existing module-wide properties are overwritten.
 
-  Jeśli moduł właściwości zostały skonfigurowane dla bieżącego zakresu, zostaną zaimportowane żadnych właściwości modułu. Jednakże jeśli nie ustawiono właściwości modułu w bieżącym zakresie, zaimportowaniu tylko raz, po ich pierwszym napotkaniu. Jeśli te właściwości modułu wystąpi ponownie, są one duplikaty. Jeśli są porównywane wartości wszystkich właściwości modułu (z wyjątkiem identyfikatora MVID) i duplikaty nie zostaną znalezione, zgłaszany jest błąd.
+  If module properties were already set for the current scope, no module properties are imported. However, if module properties have not been set in the current scope, they are imported only once, when they are first encountered. If those module properties are encountered again, they are duplicates. If the values of all module properties (except MVID) are compared and no duplicates are found, an error is raised.
 
-- Aby uzyskać definicje typów (`TypeDef`), bez duplikatów są scalane w bieżącym zakresie. `TypeDef` obiekty są sprawdzane duplikatów w odniesieniu do każdego *obiektu w pełni kwalifikowana nazwa* + *GUID* + *numer wersji*. Jeśli są zgodne na nazwę lub identyfikator GUID i inne elementy są różne, zgłaszany jest błąd. W przeciwnym razie, jeśli wszystkie trzy elementy są zgodne, `MergeEnd` wykonuje sprawdzenie pobieżną, aby upewnić się, wpisy są rzeczywiście duplikaty; w przeciwnym razie występuje błąd. To sprawdzenie pobieżną szuka:
+- For type definitions (`TypeDef`), no duplicates are merged into the current scope. `TypeDef` objects are checked for duplicates against each *fully-qualified object name* + *GUID* + *version number*. If there is a match on either name or GUID, and any of the other two elements is different, an error is raised. Otherwise, if all three items match, `MergeEnd` does a cursory check to ensure the entries are indeed duplicates; if not, an error is raised. This cursory check looks for:
 
-  - Ten sam element członkowski deklaracji, pojawiają się w tej samej kolejności. Elementy członkowskie, które są oznaczane jako `mdPrivateScope` (zobacz [cormethodattr —](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) wyliczenie) nie są uwzględnione w tym wyboru; są one scalane specjalnie.
+  - The same member declarations, occurring in the same order. Members that are flagged as `mdPrivateScope` (see the [CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md) enumeration) are not included in this check; they are merged specially.
 
-  - Taki sam układ klasy.
+  - The same class layout.
 
-  Oznacza to, że `TypeDef` obiektu muszą zawsze być spójnie i w pełni zdefiniowana w każdym zakresie metadanych w której jest zadeklarowana; jeśli jego implementacji elementu członkowskiego (dla klasy) są rozmieszczone w wielu jednostkach kompilacji, pełna definicja zakłada się, że obecny w każdym zakresie, a nie przyrostowa każdego zakresu. Na przykład jeśli nazwy parametrów są istotne dla kontraktu, ich musi być emitowane taki sam sposób do każdego zakresu; Jeśli nie są istotne, nie należy ich wydane do metadanych.
+  This means that a `TypeDef` object must always be fully and consistently defined in every metadata scope in which it is declared; if its member implementations (for a class) are spread across multiple compilation units, the full definition is assumed to be present in every scope and not incremental to each scope. For example, if parameter names are relevant to the contract, they must be emitted the same way into every scope; if they are not relevant, they should not be emitted into metadata.
 
-  Wyjątkiem jest to, że `TypeDef` obiekt może mieć przyrostowe składowe oznaczone jako `mdPrivateScope`. Po wystąpieniu, `MergeEnd` przyrostowo dodaje je do bieżącego zakresu, bez względu na duplikaty. Ponieważ kompilator rozpoznaje zakres prywatnych, kompilator musi być odpowiedzialne za wymuszanie stosowania zasad.
+  The exception is that a `TypeDef` object can have incremental members flagged as `mdPrivateScope`. On encountering these, `MergeEnd` incrementally adds them to the current scope without regard for duplicates. Because the compiler understands the private scope, the compiler must be responsible for enforcing rules.
 
-- Względnych adresów wirtualnych (RVA) nie są importowane lub scalić; kompilator powinien ponownie wyemitować tych informacji.
+- Relative virtual addresses (RVAs) are not imported or merged; the compiler is expected to re-emit this information.
 
-- Atrybuty niestandardowe są scalane, tylko wtedy, gdy jest scalany elementu, do której są dołączone. Na przykład niestandardowe atrybuty powiązane z klasą zostaną scalone, po pierwszym napotkaniu klasy. Jeśli atrybutów niestandardowych, które są skojarzone z `TypeDef` lub `MemberDef` jest specyficzne dla jednostki kompilacji (takich jak sygnatura czasowa kompilacji elementu członkowskiego), nie są one scalane i zależy od kompilator, aby usunąć lub zaktualizować takie metadane.
+- Custom attributes are merged only when the item to which they are attached is merged. For example, custom attributes associated with a class are merged when the class is first encountered. If custom attributes are associated with a `TypeDef` or `MemberDef` that is specific to the compilation unit (such as the time stamp of a member compile), they are not merged and it is up to the compiler to remove or update such metadata.
 
 ## <a name="requirements"></a>Wymagania
 
-**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
 
-**Nagłówek:** COR.h
+**Header:** Cor.h
 
-**Biblioteka:** Używany jako zasób w MSCorEE.dll
+**Library:** Used as a resource in MSCorEE.dll
 
-**Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

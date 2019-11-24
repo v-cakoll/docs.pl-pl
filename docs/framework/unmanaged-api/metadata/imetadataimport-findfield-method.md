@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 38cd4e16-fbb2-471c-aa73-ac51a1931ad2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1baee71b5b8575f51eb54fbc8a037a5dddd24500
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 842d6c0deb90bc45cb59454fb30fcc3544d742f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782523"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437942"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField — Metoda
-Pobiera wskaźnik do FieldDef tokenu dla pola, który jest ujęty w określonym <xref:System.Type> i ma określoną sygnaturą nazwy i metadane.  
+Gets a pointer to the FieldDef token for the field that is enclosed by the specified <xref:System.Type> and that has the specified name and metadata signature.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,35 +39,35 @@ HRESULT FindField (
   
 ## <a name="parameters"></a>Parametry  
  `td`  
- [in] Token element TypeDef dla klasy lub interfejsu, który otacza pole wyszukiwania. Jeśli ta wartość jest `mdTokenNil`, wyszukiwanie jest wykonywane dla zmiennej globalnej.  
+ [in] The TypeDef token for the class or interface that encloses the field to search for. If this value is `mdTokenNil`, the lookup is done for a global variable.  
   
  `szName`  
- [in] Nazwa pola do wyszukania.  
+ [in] The name of the field to search for.  
   
  `pvSigBlob`  
- [in] Wskaźnik do podpisu metadanych binarne pola.  
+ [in] A pointer to the binary metadata signature of the field.  
   
  `cbSigBlob`  
- [in] Rozmiar w bajtach `pvSigBlob`.  
+ [in] The size in bytes of `pvSigBlob`.  
   
  `pmb`  
- [out] Wskaźnik do zgodnego tokenu FieldDef.  
+ [out] A pointer to the matching FieldDef token.  
   
 ## <a name="remarks"></a>Uwagi  
- Określ pola przy użyciu jego otaczającej klasy lub interfejsu (`td`), jego nazwę (`szName`) i opcjonalnie jeho signatura (`pvSigBlob`).  
+ You specify the field using its enclosing class or interface (`td`), its name (`szName`), and optionally its signature (`pvSigBlob`).  
   
- Podpis jest przekazywany do `FindField` musi zostać wygenerowane w bieżącym zakresie ponieważ podpisy są powiązane z określonego zakresu. Podpis można osadzić token, który identyfikuje typ otaczający klasy lub wartości. (Token jest to indeks w lokalnej tabeli TypeDef). Nie można tworzenia sygnatury czasu wykonywania poza kontekstem bieżącego zakresu i używać tego podpisu jako dane wejściowe `FindField`.  
+ The signature passed to `FindField` must have been generated in the current scope, because signatures are bound to a particular scope. A signature can embed a token that identifies the enclosing class or value type. (The token is an index into the local TypeDef table). You cannot build a run-time signature outside the context of the current scope and use that signature as input to `FindField`.  
   
- `FindField` Umożliwia znalezienie tylko pola, które zostały zdefiniowane bezpośrednio klasę lub interfejs; nie odnajdzie odziedziczonego pola.  
+ `FindField` finds only fields that were defined directly in the class or interface; it does not find inherited fields.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

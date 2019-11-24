@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755067"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438293"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>ISymUnmanagedWriter2::DefineLocalVariable2 — Metoda
-Definiuje pojedynczą zmienną w bieżącym zakresie leksykalnym. Tę metodę można wywoływać wielokrotnie dla zmiennej o tej samej nazwie, który ma wiele domów w całym zakresie. W takim jednak wartości `startOffset` i `endOffset` parametry nie mogą się nakładać.  
+Defines a single variable in the current lexical scope. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] Lokalna nazwa zmiennej.  
+ [in] The local variable name.  
   
  `attributes`  
- [in] Lokalne atrybuty zmiennej.  
+ [in] The local variable attributes.  
   
  `sigToken`  
- [in] Token metadanych podpisu.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- [in] Typ adresu.  
+ [in] The address type.  
   
  `addr1`  
- [in] Pierwszy adres specyfikację parametru.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Drugi adres specyfikację parametru.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Trzeci adres specyfikację parametru.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] Przesunięcie początku dla zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany, a zmienna jest zdefiniowana w całym cały zakres. Jeśli jest wartość różną od zera, zmienna mieści się w przesunięcia bieżącego zakresu.  
+ [in] The start offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] Przesunięcie zakończenia dla zmiennej. Ten parametr jest opcjonalny. Jeśli jest 0, ten parametr jest ignorowany, a zmienna jest zdefiniowana w całym cały zakres. Jeśli jest wartość różną od zera, zmienna mieści się w przesunięcia bieżącego zakresu.  
+ [in] The end offset for the variable. This parameter is optional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>Zobacz także
 

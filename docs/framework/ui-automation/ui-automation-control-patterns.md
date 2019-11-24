@@ -7,18 +7,18 @@ helpviewer_keywords:
 - control patterns, UI Automation
 - UI Automation, control patterns
 ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
-ms.openlocfilehash: 75ce2d997efbc465c8a98bce1d42296b37f84f64
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d86397fc49ad1fe04c4c3b4565b2cab850dfb695
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71042332"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441458"
 ---
 # <a name="ui-automation-control-patterns"></a>Wzorce kontrolek automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Ta sekcja zawiera szczegółowe informacje na temat używania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] wzorców kontroli.  
+ This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Implementacja wzorca kontrolki dokowania automatyzacji interfejsu użytkownika](implementing-the-ui-automation-dock-control-pattern.md)  

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776284"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440208"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile — Metoda
-Tworzy `File` struktury metadanych zawierający metadane zestawu odwołuje się ten zestaw i zwraca token skojarzone metadane.  
+Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +39,31 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [in] Nazwa pliku do użycia.  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in] Wskaźnik do danych wyznaczania wartości skrótu, skojarzone z zestawem.  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in] Rozmiar w bajtach `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Bitowa kombinacja `FileFlags` wartości, które określają ustawienia właściwości.  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out] Wskaźnik do zwracanego `File` tokenu.  
+ [out] A pointer to the returned `File` token.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeden `File` struktury metadanych musi być zdefiniowana dla każdego pliku, które było częścią tego zestawu w czasie, który został zbudowany tego zestawu, z wyjątkiem pliku który zawiera metadane.  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

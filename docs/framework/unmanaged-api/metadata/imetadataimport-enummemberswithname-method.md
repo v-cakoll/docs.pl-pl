@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 737ccc8af41c9eca765a7ea06f29d1aec1ccfad6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758855"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441662"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName — Metoda
-Wylicza tokenów MemberDef reprezentujących elementy członkowskie określonego typu o określonej nazwie.  
+Enumerates MemberDef tokens representing members of the specified type with the specified name.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,41 +40,41 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] TypeDef token reprezentujący typ z elementami członkowskimi do wyliczenia.  
+ [in] A TypeDef token representing the type with members to enumerate.  
   
  `szName`  
- [in] Nazwa elementu członkowskiego, który ogranicza zakres modułu wyliczającego.  
+ [in] The member name that limits the scope of the enumerator.  
   
  `rMembers`  
- [out] Tablica do przechowywania tokenów MemberDef.  
+ [out] The array used to store the MemberDef tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rMembers` tablicy.  
+ [in] The maximum size of the `rMembers` array.  
   
  `pcTokens`  
- [out] Rzeczywista liczba tokenów MemberDef zwracane w `rMembers`.  
+ [out] The actual number of MemberDef tokens returned in `rMembers`.  
   
 ## <a name="remarks"></a>Uwagi  
- Ta metoda wylicza pola i metody, ale nie do właściwości lub zdarzenia. W odróżnieniu od [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` odrzuca wszystkie tokeny pól i elementów członkowskich, które nie mają określonej nazwy.  
+ This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny MemberDef do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ae6cfb29-bc2c-4606-af86-1d32ebd31020
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 35dd8dd272ea8b4fc21cb9d7dce6899ceb836265
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9407942b81c5318509f2b026fa5db1cdd163e02d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777004"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448277"
 ---
-# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="7bd58-102">ISymUnmanagedReader::GetMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="7bd58-102">ISymUnmanagedReader::GetMethod Method</span></span>
-<span data-ttu-id="7bd58-103">Pobiera metodę czytnika symboli podany token metody.</span><span class="sxs-lookup"><span data-stu-id="7bd58-103">Gets a symbol reader method, given a method token.</span></span>  
+# <a name="isymunmanagedreadergetmethod-method"></a><span data-ttu-id="0564b-102">ISymUnmanagedReader::GetMethod — Metoda</span><span class="sxs-lookup"><span data-stu-id="0564b-102">ISymUnmanagedReader::GetMethod Method</span></span>
+<span data-ttu-id="0564b-103">Gets a symbol reader method, given a method token.</span><span class="sxs-lookup"><span data-stu-id="0564b-103">Gets a symbol reader method, given a method token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7bd58-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="7bd58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0564b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0564b-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethod (  
@@ -35,19 +33,19 @@ HRESULT GetMethod (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7bd58-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="7bd58-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0564b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0564b-105">Parameters</span></span>  
  `token`  
- <span data-ttu-id="7bd58-106">[in] Token metody.</span><span class="sxs-lookup"><span data-stu-id="7bd58-106">[in] The method token.</span></span>  
+ <span data-ttu-id="0564b-106">[in] The method token.</span><span class="sxs-lookup"><span data-stu-id="0564b-106">[in] The method token.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="7bd58-107">[out] Wskaźnik do interfejsu zwrócone.</span><span class="sxs-lookup"><span data-stu-id="7bd58-107">[out] A pointer to the returned interface.</span></span>  
+ <span data-ttu-id="0564b-107">[out] A pointer to the returned interface.</span><span class="sxs-lookup"><span data-stu-id="0564b-107">[out] A pointer to the returned interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7bd58-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="7bd58-108">Return Value</span></span>  
- <span data-ttu-id="7bd58-109">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="7bd58-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0564b-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="0564b-108">Return Value</span></span>  
+ <span data-ttu-id="0564b-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="0564b-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7bd58-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="7bd58-110">Requirements</span></span>  
- <span data-ttu-id="7bd58-111">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7bd58-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0564b-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0564b-110">Requirements</span></span>  
+ <span data-ttu-id="0564b-111">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0564b-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7bd58-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="7bd58-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0564b-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="0564b-112">See also</span></span>
 
-- [<span data-ttu-id="7bd58-113">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="7bd58-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="0564b-113">ISymUnmanagedReader, interfejs</span><span class="sxs-lookup"><span data-stu-id="0564b-113">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 65a4ad49-fa49-4b36-8ed1-76dd6a185ab4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84de8e3c688a23198762fca5219d317fabb69c1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 00f2aa3364b8b707d4100f8d2574ff3765d106da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777456"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450167"
 ---
-# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="f642f-102">IMetaDataEmit::DeleteClassLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="f642f-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
-<span data-ttu-id="f642f-103">Niszczy podpisu metadanych układ klasy dla typu reprezentowanego przez określony token.</span><span class="sxs-lookup"><span data-stu-id="f642f-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
+# <a name="imetadataemitdeleteclasslayout-method"></a><span data-ttu-id="e9914-102">IMetaDataEmit::DeleteClassLayout — Metoda</span><span class="sxs-lookup"><span data-stu-id="e9914-102">IMetaDataEmit::DeleteClassLayout Method</span></span>
+<span data-ttu-id="e9914-103">Destroys the class layout metadata signature for the type represented by the specified token.</span><span class="sxs-lookup"><span data-stu-id="e9914-103">Destroys the class layout metadata signature for the type represented by the specified token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f642f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f642f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9914-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e9914-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DeleteClassLayout (  
@@ -35,20 +33,20 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f642f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f642f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e9914-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e9914-105">Parameters</span></span>  
  `td`  
- <span data-ttu-id="f642f-106">[in] `mdTypeDef` Token metadanych, który reprezentuje typ, dla którego układ klasy zostaną usunięte.</span><span class="sxs-lookup"><span data-stu-id="f642f-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
+ <span data-ttu-id="e9914-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span><span class="sxs-lookup"><span data-stu-id="e9914-106">[in] An `mdTypeDef` metadata token that represents the type for which the class layout will be deleted.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f642f-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f642f-107">Requirements</span></span>  
- <span data-ttu-id="f642f-108">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f642f-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9914-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e9914-107">Requirements</span></span>  
+ <span data-ttu-id="e9914-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9914-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f642f-109">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="f642f-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e9914-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e9914-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f642f-110">**Biblioteka:** Używany jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f642f-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e9914-110">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9914-110">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f642f-111">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f642f-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e9914-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9914-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f642f-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f642f-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e9914-112">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e9914-112">See also</span></span>
 
-- [<span data-ttu-id="f642f-113">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="f642f-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f642f-114">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f642f-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e9914-113">IMetaDataEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="e9914-113">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e9914-114">IMetaDataEmit2, interfejs</span><span class="sxs-lookup"><span data-stu-id="e9914-114">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

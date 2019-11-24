@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434882"
 ---
-# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="82b60-102">ICeeGen::GetSectionBlock — Metoda</span><span class="sxs-lookup"><span data-stu-id="82b60-102">ICeeGen::GetSectionBlock Method</span></span>
-<span data-ttu-id="82b60-103">Pobiera blok części bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="82b60-103">Gets a section block of the code base.</span></span>  
+# <a name="iceegengetsectionblock-method"></a><span data-ttu-id="6a0fe-102">ICeeGen::GetSectionBlock — Metoda</span><span class="sxs-lookup"><span data-stu-id="6a0fe-102">ICeeGen::GetSectionBlock Method</span></span>
+<span data-ttu-id="6a0fe-103">Gets a section block of the code base.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-103">Gets a section block of the code base.</span></span>  
   
- <span data-ttu-id="82b60-104">Ta metoda jest przestarzała i nie powinna być używana.</span><span class="sxs-lookup"><span data-stu-id="82b60-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="6a0fe-104">This method is obsolete and should not be used.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82b60-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="82b60-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a0fe-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="6a0fe-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetSectionBlock (  
@@ -40,31 +38,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="82b60-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="82b60-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a0fe-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="6a0fe-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="82b60-107">[in] Sekcja, z których mają być pobierane blok bazy kodu.</span><span class="sxs-lookup"><span data-stu-id="82b60-107">[in] The section from which to retrieve a block of the code base.</span></span>  
+ <span data-ttu-id="6a0fe-107">[in] The section from which to retrieve a block of the code base.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-107">[in] The section from which to retrieve a block of the code base.</span></span>  
   
  `len`  
- <span data-ttu-id="82b60-108">[in] Długość bloku, które mają zostać pobrane.</span><span class="sxs-lookup"><span data-stu-id="82b60-108">[in] The length of the block to be retrieved.</span></span>  
+ <span data-ttu-id="6a0fe-108">[in] The length of the block to be retrieved.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-108">[in] The length of the block to be retrieved.</span></span>  
   
  `align`  
- <span data-ttu-id="82b60-109">[in] Bajt względem początku sekcji, z którą ma zostać wyrównywanie pierwszego bajtu bloku.</span><span class="sxs-lookup"><span data-stu-id="82b60-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="82b60-110">Jest to pozycja bloku, w ramach tej sekcji.</span><span class="sxs-lookup"><span data-stu-id="82b60-110">This is the position of the block within the section.</span></span>  
+ <span data-ttu-id="6a0fe-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-109">[in] The byte, relative to the beginning of the section, with which to align the first byte of the block.</span></span> <span data-ttu-id="6a0fe-110">This is the position of the block within the section.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-110">This is the position of the block within the section.</span></span>  
   
  `ppBytes`  
- <span data-ttu-id="82b60-111">[out] Wskaźnik do lokalizacji, która otrzymuje adres bloku pobrane.</span><span class="sxs-lookup"><span data-stu-id="82b60-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
+ <span data-ttu-id="6a0fe-111">[out] A pointer to a location that receives the address of the retrieved block.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-111">[out] A pointer to a location that receives the address of the retrieved block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="82b60-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="82b60-112">Remarks</span></span>  
- <span data-ttu-id="82b60-113">Wywołaj `GetSectionBlock` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.</span><span class="sxs-lookup"><span data-stu-id="82b60-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6a0fe-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6a0fe-112">Remarks</span></span>  
+ <span data-ttu-id="6a0fe-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span><span class="sxs-lookup"><span data-stu-id="6a0fe-113">Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82b60-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="82b60-114">Requirements</span></span>  
- <span data-ttu-id="82b60-115">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82b60-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6a0fe-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6a0fe-114">Requirements</span></span>  
+ <span data-ttu-id="6a0fe-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6a0fe-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82b60-116">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="82b60-116">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="6a0fe-116">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6a0fe-116">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="82b60-117">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="82b60-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="6a0fe-117">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="6a0fe-117">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="82b60-118">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82b60-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="6a0fe-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6a0fe-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82b60-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="82b60-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6a0fe-119">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6a0fe-119">See also</span></span>
 
-- [<span data-ttu-id="82b60-120">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="82b60-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="6a0fe-120">ICeeGen, interfejs</span><span class="sxs-lookup"><span data-stu-id="6a0fe-120">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

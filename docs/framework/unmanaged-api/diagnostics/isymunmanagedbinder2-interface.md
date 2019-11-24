@@ -14,32 +14,30 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9fbb8364fb967e739eb9807b26cbc65f0ebec1d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8300e3a7b324a2ff4acabeb30b30d2cdabc7c776
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944189"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449324"
 ---
-# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="9bbfb-102">ISymUnmanagedBinder2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="9bbfb-102">ISymUnmanagedBinder2 Interface</span></span>
-<span data-ttu-id="9bbfb-103">Reprezentuje spinacz symboliczny dla kodu niezarządzanego i rozszerza interfejs [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="9bbfb-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
+# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="19c53-102">ISymUnmanagedBinder2 — Interfejs</span><span class="sxs-lookup"><span data-stu-id="19c53-102">ISymUnmanagedBinder2 Interface</span></span>
+<span data-ttu-id="19c53-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="19c53-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="9bbfb-104">Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych programu (PDB) z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="9bbfb-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+> <span data-ttu-id="19c53-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span><span class="sxs-lookup"><span data-stu-id="19c53-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="9bbfb-105">Metody</span><span class="sxs-lookup"><span data-stu-id="9bbfb-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="19c53-105">Metody</span><span class="sxs-lookup"><span data-stu-id="19c53-105">Methods</span></span>  
   
-|<span data-ttu-id="9bbfb-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="9bbfb-106">Method</span></span>|<span data-ttu-id="9bbfb-107">Opis</span><span class="sxs-lookup"><span data-stu-id="9bbfb-107">Description</span></span>|  
+|<span data-ttu-id="19c53-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="19c53-106">Method</span></span>|<span data-ttu-id="19c53-107">Opis</span><span class="sxs-lookup"><span data-stu-id="19c53-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="9bbfb-108">GetReaderForFile2, metoda</span><span class="sxs-lookup"><span data-stu-id="9bbfb-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="9bbfb-109">Podanym interfejsem metadanych i nazwą pliku zwraca poprawny interfejs [ISymUnmanagedReader](isymunmanagedreader-interface.md) , który odczytuje symbole debugowania skojarzone z modułem.</span><span class="sxs-lookup"><span data-stu-id="9bbfb-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="9bbfb-110">Zapewnia bardziej rozległe wyszukiwanie niż Metoda [ISymUnmanagedBinder:: GetReaderForFile —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) .</span><span class="sxs-lookup"><span data-stu-id="9bbfb-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
+|[<span data-ttu-id="19c53-108">GetReaderForFile2, metoda</span><span class="sxs-lookup"><span data-stu-id="19c53-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="19c53-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span><span class="sxs-lookup"><span data-stu-id="19c53-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="19c53-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="19c53-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="9bbfb-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9bbfb-111">Requirements</span></span>  
- <span data-ttu-id="9bbfb-112">**Nagłówki** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9bbfb-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19c53-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="19c53-111">Requirements</span></span>  
+ <span data-ttu-id="19c53-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="19c53-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9bbfb-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9bbfb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19c53-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="19c53-113">See also</span></span>
 
-- [<span data-ttu-id="9bbfb-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="9bbfb-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="9bbfb-115">ISymUnmanagedBinder, interfejs</span><span class="sxs-lookup"><span data-stu-id="9bbfb-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="9bbfb-116">ISymUnmanagedBinder3, interfejs</span><span class="sxs-lookup"><span data-stu-id="9bbfb-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+- [<span data-ttu-id="19c53-114">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="19c53-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="19c53-115">ISymUnmanagedBinder, interfejs</span><span class="sxs-lookup"><span data-stu-id="19c53-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="19c53-116">ISymUnmanagedBinder3, interfejs</span><span class="sxs-lookup"><span data-stu-id="19c53-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

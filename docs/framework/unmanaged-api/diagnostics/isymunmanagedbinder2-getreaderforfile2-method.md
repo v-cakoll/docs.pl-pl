@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: dd92dcaf-403c-464d-a254-21594985dddd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db917820de92b2e347385afc5217c0ca190825cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 756ba2e71ca2e3e817a0a8b89165bb807368c1f9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776835"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449334"
 ---
-# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="f71a1-102">ISymUnmanagedBinder2::GetReaderForFile2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="f71a1-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
-<span data-ttu-id="f71a1-103">Podany interfejs metadanych i nazwę pliku, zwraca poprawny [isymunmanagedreader —](isymunmanagedreader-interface.md) interfejs, który zostanie odczytany symbole debugowania, skojarzone z modułem.</span><span class="sxs-lookup"><span data-stu-id="f71a1-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
+# <a name="isymunmanagedbinder2getreaderforfile2-method"></a><span data-ttu-id="ceabe-102">ISymUnmanagedBinder2::GetReaderForFile2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="ceabe-102">ISymUnmanagedBinder2::GetReaderForFile2 Method</span></span>
+<span data-ttu-id="ceabe-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span><span class="sxs-lookup"><span data-stu-id="ceabe-103">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span>  
   
- <span data-ttu-id="f71a1-104">Ta metoda zapewnia bardziej rozbudowane wyszukiwanie pliku bazy danych (PDB) programu niż [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) metody.</span><span class="sxs-lookup"><span data-stu-id="f71a1-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
+ <span data-ttu-id="ceabe-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span><span class="sxs-lookup"><span data-stu-id="ceabe-104">This method provides a more extensive search for the program database (PDB) file than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f71a1-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="f71a1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ceabe-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="ceabe-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetReaderForFile2(  
@@ -40,32 +38,32 @@ HRESULT GetReaderForFile2(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f71a1-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="f71a1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ceabe-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="ceabe-106">Parameters</span></span>  
  `importer`  
- <span data-ttu-id="f71a1-107">[in] Wskaźnik do interfejsu Importowanie metadanych.</span><span class="sxs-lookup"><span data-stu-id="f71a1-107">[in] A pointer to the metadata import interface.</span></span>  
+ <span data-ttu-id="ceabe-107">[in] A pointer to the metadata import interface.</span><span class="sxs-lookup"><span data-stu-id="ceabe-107">[in] A pointer to the metadata import interface.</span></span>  
   
  `fileName`  
- <span data-ttu-id="f71a1-108">[in] Wskaźnik na nazwę pliku.</span><span class="sxs-lookup"><span data-stu-id="f71a1-108">[in] A pointer to the file name.</span></span>  
+ <span data-ttu-id="ceabe-108">[in] A pointer to the file name.</span><span class="sxs-lookup"><span data-stu-id="ceabe-108">[in] A pointer to the file name.</span></span>  
   
  `searchPath`  
- <span data-ttu-id="f71a1-109">[in] Wskaźnik do ścieżki wyszukiwania.</span><span class="sxs-lookup"><span data-stu-id="f71a1-109">[in] A pointer to the search path.</span></span>  
+ <span data-ttu-id="ceabe-109">[in] A pointer to the search path.</span><span class="sxs-lookup"><span data-stu-id="ceabe-109">[in] A pointer to the search path.</span></span>  
   
  `searchPolicy`  
- <span data-ttu-id="f71a1-110">[in] Wartość [corsymsearchpolicyattributes —](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) wyliczenie, które określa zasady, które ma być używany podczas wyszukiwania dla czytnika symboli.</span><span class="sxs-lookup"><span data-stu-id="f71a1-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
+ <span data-ttu-id="ceabe-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="ceabe-110">[in] A value of the [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md) enumeration that specifies the policy to be used when doing a search for a symbol reader.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="f71a1-111">[out] Wskaźnik, który jest ustawiony do zwracanego [isymunmanagedreader —](isymunmanagedreader-interface.md) interfejsu.</span><span class="sxs-lookup"><span data-stu-id="f71a1-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
+ <span data-ttu-id="ceabe-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="ceabe-111">[out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f71a1-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f71a1-112">Return Value</span></span>  
- <span data-ttu-id="f71a1-113">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="f71a1-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ceabe-112">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ceabe-112">Return Value</span></span>  
+ <span data-ttu-id="ceabe-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="ceabe-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f71a1-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f71a1-114">Requirements</span></span>  
- <span data-ttu-id="f71a1-115">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f71a1-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ceabe-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ceabe-114">Requirements</span></span>  
+ <span data-ttu-id="ceabe-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ceabe-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f71a1-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f71a1-116">Remarks</span></span>  
- <span data-ttu-id="f71a1-117">Ta wersja metody wyszukać plik PDB w obszarach innych niż obok modułu.</span><span class="sxs-lookup"><span data-stu-id="f71a1-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="f71a1-118">Zasady wyszukiwania mogą być kontrolowane przez łączenie [corsymsearchpolicyattributes —](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="f71a1-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="f71a1-119">Na przykład `AllowReferencePathAccess | AllowSymbolServerAccess` szuka pliku PDB, obok pliku wykonywalnego i na serwerze symboli, nie wykonaj zapytanie dotyczące rejestru lub użyj ścieżki w pliku wykonywalnym.</span><span class="sxs-lookup"><span data-stu-id="f71a1-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="f71a1-120">Jeśli `searchPath` parametr zostanie podany, zawsze będą przeszukiwane te katalogi.</span><span class="sxs-lookup"><span data-stu-id="f71a1-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ceabe-116">Uwagi</span><span class="sxs-lookup"><span data-stu-id="ceabe-116">Remarks</span></span>  
+ <span data-ttu-id="ceabe-117">This version of the method can search for the PDB file in areas other than right next to the module.</span><span class="sxs-lookup"><span data-stu-id="ceabe-117">This version of the method can search for the PDB file in areas other than right next to the module.</span></span> <span data-ttu-id="ceabe-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="ceabe-118">The search policy can be controlled by combining [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md).</span></span> <span data-ttu-id="ceabe-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span><span class="sxs-lookup"><span data-stu-id="ceabe-119">For example, `AllowReferencePathAccess | AllowSymbolServerAccess` looks for the PDB next to the executable file and on a symbol server, but does not query the registry or use the path in the executable file.</span></span> <span data-ttu-id="ceabe-120">If the `searchPath` parameter is provided, those directories will always be searched.</span><span class="sxs-lookup"><span data-stu-id="ceabe-120">If the `searchPath` parameter is provided, those directories will always be searched.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f71a1-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f71a1-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ceabe-121">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ceabe-121">See also</span></span>
 
-- [<span data-ttu-id="f71a1-122">ISymUnmanagedBinder2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f71a1-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
-- [<span data-ttu-id="f71a1-123">GetReaderForFile, metoda</span><span class="sxs-lookup"><span data-stu-id="f71a1-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)
+- [<span data-ttu-id="ceabe-122">ISymUnmanagedBinder2, interfejs</span><span class="sxs-lookup"><span data-stu-id="ceabe-122">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
+- [<span data-ttu-id="ceabe-123">GetReaderForFile, metoda</span><span class="sxs-lookup"><span data-stu-id="ceabe-123">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

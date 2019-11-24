@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772670"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448228"
 ---
-# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="77829-102">IMetaDataAssemblyImport::GetAssemblyRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="77829-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
-<span data-ttu-id="77829-103">Pobiera zbiór właściwości odwołanie do zestawu za pomocą podpisu określonych metadanych.</span><span class="sxs-lookup"><span data-stu-id="77829-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
+# <a name="imetadataassemblyimportgetassemblyrefprops-method"></a><span data-ttu-id="83689-102">IMetaDataAssemblyImport::GetAssemblyRefProps — Metoda</span><span class="sxs-lookup"><span data-stu-id="83689-102">IMetaDataAssemblyImport::GetAssemblyRefProps Method</span></span>
+<span data-ttu-id="83689-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span><span class="sxs-lookup"><span data-stu-id="83689-103">Gets the set of properties for the assembly reference with the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77829-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="77829-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="83689-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="83689-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
@@ -44,49 +42,49 @@ HRESULT GetAssemblyRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="77829-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="77829-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="83689-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="83689-105">Parameters</span></span>  
  `mdar`  
- <span data-ttu-id="77829-106">[in] `mdAssemblyRef` Token metadanych, który reprezentuje odwołanie do zestawu dla którego należy pobrać właściwości.</span><span class="sxs-lookup"><span data-stu-id="77829-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
+ <span data-ttu-id="83689-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span><span class="sxs-lookup"><span data-stu-id="83689-106">[in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.</span></span>  
   
  `ppbPublicKeyOrToken`  
- <span data-ttu-id="77829-107">[out] Wskaźnik do tokenu metadanych lub klucza publicznego.</span><span class="sxs-lookup"><span data-stu-id="77829-107">[out] A pointer to the public key or the metadata token.</span></span>  
+ <span data-ttu-id="83689-107">[out] A pointer to the public key or the metadata token.</span><span class="sxs-lookup"><span data-stu-id="83689-107">[out] A pointer to the public key or the metadata token.</span></span>  
   
  `pcbPublicKeyOrToken`  
- <span data-ttu-id="77829-108">[out] Liczba bajtów zwróconych publicznego klucza lub tokenu.</span><span class="sxs-lookup"><span data-stu-id="77829-108">[out] The number of bytes in the returned public key or token.</span></span>  
+ <span data-ttu-id="83689-108">[out] The number of bytes in the returned public key or token.</span><span class="sxs-lookup"><span data-stu-id="83689-108">[out] The number of bytes in the returned public key or token.</span></span>  
   
  `szName`  
- <span data-ttu-id="77829-109">[out] Prosta nazwa zestawu.</span><span class="sxs-lookup"><span data-stu-id="77829-109">[out] The simple name of the assembly.</span></span>  
+ <span data-ttu-id="83689-109">[out] The simple name of the assembly.</span><span class="sxs-lookup"><span data-stu-id="83689-109">[out] The simple name of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="77829-110">[in] Rozmiar w szerokie znaki z `szName`.</span><span class="sxs-lookup"><span data-stu-id="77829-110">[in] The size, in wide chars, of `szName`.</span></span>  
+ <span data-ttu-id="83689-110">[in] The size, in wide chars, of `szName`.</span><span class="sxs-lookup"><span data-stu-id="83689-110">[in] The size, in wide chars, of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="77829-111">[out] Wskaźnik do liczby szerokie znaki rzeczywistego zwrotu w `szName`.</span><span class="sxs-lookup"><span data-stu-id="77829-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
+ <span data-ttu-id="83689-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span><span class="sxs-lookup"><span data-stu-id="83689-111">[out] A pointer to the number of wide chars actually returned in `szName`.</span></span>  
   
  `pMetaData`  
- <span data-ttu-id="77829-112">[out] Wskaźnik do assemblymetadata — struktura, która zawiera metadane zestawu.</span><span class="sxs-lookup"><span data-stu-id="77829-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
+ <span data-ttu-id="83689-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span><span class="sxs-lookup"><span data-stu-id="83689-112">[out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.</span></span>  
   
  `ppbHashValue`  
- <span data-ttu-id="77829-113">[out] Wskaźnik do wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="77829-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="77829-114">Jest to skrót, przy użyciu algorytmu SHA-1 z `PublicKey` właściwości zestawu, do którego nastąpiło odwołanie, chyba że flagę arfFullOriginator [assemblyrefflags —](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) ma ustawioną wartość wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="77829-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
+ <span data-ttu-id="83689-113">[out] A pointer to the hash value.</span><span class="sxs-lookup"><span data-stu-id="83689-113">[out] A pointer to the hash value.</span></span> <span data-ttu-id="83689-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span><span class="sxs-lookup"><span data-stu-id="83689-114">This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.</span></span>  
   
  `pcbHashValue`  
- <span data-ttu-id="77829-115">[out] Liczba szerokie znaki w wartości zwracane wyznaczania wartości skrótu.</span><span class="sxs-lookup"><span data-stu-id="77829-115">[out] The number of wide chars in the returned hash value.</span></span>  
+ <span data-ttu-id="83689-115">[out] The number of wide chars in the returned hash value.</span><span class="sxs-lookup"><span data-stu-id="83689-115">[out] The number of wide chars in the returned hash value.</span></span>  
   
  `pdwAssemblyRefFlags`  
- <span data-ttu-id="77829-116">[out] Wskaźnik flagi, które opisują metadane zastosowany do zestawu.</span><span class="sxs-lookup"><span data-stu-id="77829-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="77829-117">Wartość flagi składa się z co najmniej jeden [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości.</span><span class="sxs-lookup"><span data-stu-id="77829-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
+ <span data-ttu-id="83689-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span><span class="sxs-lookup"><span data-stu-id="83689-116">[out] A pointer to flags that describe the metadata applied to an assembly.</span></span> <span data-ttu-id="83689-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span><span class="sxs-lookup"><span data-stu-id="83689-117">The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="77829-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="77829-118">Return Value</span></span>  
- <span data-ttu-id="77829-119">Ta metoda zwraca wartość S_OK, jeśli się powiedzie; w przeciwnym razie zwraca jeden z kodów błędów zdefiniowanych w pliku nagłówka w pliku Winerror.h.</span><span class="sxs-lookup"><span data-stu-id="77829-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="83689-118">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="83689-118">Return Value</span></span>  
+ <span data-ttu-id="83689-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span><span class="sxs-lookup"><span data-stu-id="83689-119">This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77829-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="77829-120">Requirements</span></span>  
- <span data-ttu-id="77829-121">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="77829-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="83689-120">Wymagania</span><span class="sxs-lookup"><span data-stu-id="83689-120">Requirements</span></span>  
+ <span data-ttu-id="83689-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="83689-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77829-122">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="77829-122">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="83689-122">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="83689-122">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="77829-123">**Biblioteka:** Używany jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="77829-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="83689-123">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="83689-123">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="77829-124">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77829-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="83689-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="83689-124">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77829-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="77829-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83689-125">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="83689-125">See also</span></span>
 
-- [<span data-ttu-id="77829-126">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="77829-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [<span data-ttu-id="83689-126">IMetaDataAssemblyImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="83689-126">IMetaDataAssemblyImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774622"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449984"
 ---
-# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="e9587-102">IMetaDataImport::EnumTypeRefs — Metoda</span><span class="sxs-lookup"><span data-stu-id="e9587-102">IMetaDataImport::EnumTypeRefs Method</span></span>
-<span data-ttu-id="e9587-103">Wylicza tokeny TypeRef zdefiniowane w bieżącym zakresie metadanych.</span><span class="sxs-lookup"><span data-stu-id="e9587-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
+# <a name="imetadataimportenumtyperefs-method"></a><span data-ttu-id="f623f-102">IMetaDataImport::EnumTypeRefs — Metoda</span><span class="sxs-lookup"><span data-stu-id="f623f-102">IMetaDataImport::EnumTypeRefs Method</span></span>
+<span data-ttu-id="f623f-103">Enumerates TypeRef tokens defined in the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="f623f-103">Enumerates TypeRef tokens defined in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9587-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e9587-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f623f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f623f-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumTypeRefs (  
@@ -38,39 +36,39 @@ HRESULT EnumTypeRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e9587-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e9587-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f623f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f623f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="e9587-106">[out w] Wskaźnik do modułu wyliczającego.</span><span class="sxs-lookup"><span data-stu-id="e9587-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="e9587-107">Musi to być wartość NULL dla pierwszego wywołania tej metody.</span><span class="sxs-lookup"><span data-stu-id="e9587-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="f623f-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="f623f-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="f623f-107">This must be NULL for the first call of this method.</span><span class="sxs-lookup"><span data-stu-id="f623f-107">This must be NULL for the first call of this method.</span></span>  
   
  `rTypeRefs`  
- <span data-ttu-id="e9587-108">[out] Tablica do przechowywania tokenów TypeRef.</span><span class="sxs-lookup"><span data-stu-id="e9587-108">[out] The array used to store the TypeRef tokens.</span></span>  
+ <span data-ttu-id="f623f-108">[out] The array used to store the TypeRef tokens.</span><span class="sxs-lookup"><span data-stu-id="f623f-108">[out] The array used to store the TypeRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="e9587-109">[in] Maksymalny rozmiar `rTypeRefs` tablicy.</span><span class="sxs-lookup"><span data-stu-id="e9587-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
+ <span data-ttu-id="f623f-109">[in] The maximum size of the `rTypeRefs` array.</span><span class="sxs-lookup"><span data-stu-id="f623f-109">[in] The maximum size of the `rTypeRefs` array.</span></span>  
   
  `pcTypeRefs`  
- <span data-ttu-id="e9587-110">[out] Wskaźnik do liczby tokenów TypeRef zwracane w `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="e9587-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
+ <span data-ttu-id="f623f-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span><span class="sxs-lookup"><span data-stu-id="f623f-110">[out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e9587-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e9587-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f623f-111">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f623f-111">Return Value</span></span>  
   
-|<span data-ttu-id="e9587-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e9587-112">HRESULT</span></span>|<span data-ttu-id="e9587-113">Opis</span><span class="sxs-lookup"><span data-stu-id="e9587-113">Description</span></span>|  
+|<span data-ttu-id="f623f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f623f-112">HRESULT</span></span>|<span data-ttu-id="f623f-113">Opis</span><span class="sxs-lookup"><span data-stu-id="f623f-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="e9587-114">`EnumTypeRefs` pomyślnie zwrócił.</span><span class="sxs-lookup"><span data-stu-id="e9587-114">`EnumTypeRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="e9587-115">Nie ma żadnych tokeny do wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="e9587-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="e9587-116">W takim przypadku `pcTypeRefs` wynosi zero.</span><span class="sxs-lookup"><span data-stu-id="e9587-116">In that case, `pcTypeRefs` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="f623f-114">`EnumTypeRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="f623f-114">`EnumTypeRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="f623f-115">There are no tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="f623f-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="f623f-116">In that case, `pcTypeRefs` is zero.</span><span class="sxs-lookup"><span data-stu-id="f623f-116">In that case, `pcTypeRefs` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e9587-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="e9587-117">Remarks</span></span>  
- <span data-ttu-id="e9587-118">TypeRef token reprezentuje odwołanie do typu.</span><span class="sxs-lookup"><span data-stu-id="e9587-118">A TypeRef token represents a reference to a type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f623f-117">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f623f-117">Remarks</span></span>  
+ <span data-ttu-id="f623f-118">A TypeRef token represents a reference to a type.</span><span class="sxs-lookup"><span data-stu-id="f623f-118">A TypeRef token represents a reference to a type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9587-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e9587-119">Requirements</span></span>  
- <span data-ttu-id="e9587-120">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9587-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f623f-119">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f623f-119">Requirements</span></span>  
+ <span data-ttu-id="f623f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f623f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9587-121">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="e9587-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="f623f-121">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f623f-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e9587-122">**Biblioteka:** Dołączony jako zasób w MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e9587-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f623f-122">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f623f-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e9587-123">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9587-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f623f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f623f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e9587-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e9587-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f623f-124">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f623f-124">See also</span></span>
 
-- [<span data-ttu-id="e9587-125">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="e9587-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="e9587-126">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="e9587-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="f623f-125">IMetaDataImport, interfejs</span><span class="sxs-lookup"><span data-stu-id="f623f-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="f623f-126">IMetaDataImport2, interfejs</span><span class="sxs-lookup"><span data-stu-id="f623f-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

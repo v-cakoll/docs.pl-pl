@@ -15,29 +15,27 @@ helpviewer_keywords:
 ms.assetid: 67985a22-88a2-4c54-8d99-4bcde9d6213e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 63719d0c6e13768e9dc7ed80e52e2a293e32a8a1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787479"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449345"
 ---
-# <a name="getalinkmessagedll-function"></a><span data-ttu-id="45986-102">GetALinkMessageDll — Funkcja</span><span class="sxs-lookup"><span data-stu-id="45986-102">GetALinkMessageDll Function</span></span>
-<span data-ttu-id="45986-103">Umożliwia znalezienie i załadowanie biblioteki DLL komunikatów.</span><span class="sxs-lookup"><span data-stu-id="45986-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="45986-104">Zwraca wartość 0, jeśli nie można odnaleźć lub załadować biblioteki DLL komunikatu.</span><span class="sxs-lookup"><span data-stu-id="45986-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="45986-105">Biblioteka DLL komunikatów powinna znajdować się w podkatalogu, którego nazwa jest IDENTYFIKATORem języka lub w bieżącym katalogu.</span><span class="sxs-lookup"><span data-stu-id="45986-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
+# <a name="getalinkmessagedll-function"></a><span data-ttu-id="d3596-102">GetALinkMessageDll — Funkcja</span><span class="sxs-lookup"><span data-stu-id="d3596-102">GetALinkMessageDll Function</span></span>
+<span data-ttu-id="d3596-103">Finds and loads the message DLL.</span><span class="sxs-lookup"><span data-stu-id="d3596-103">Finds and loads the message DLL.</span></span> <span data-ttu-id="d3596-104">Returns 0 if the message DLL could not be located or loaded.</span><span class="sxs-lookup"><span data-stu-id="d3596-104">Returns 0 if the message DLL could not be located or loaded.</span></span> <span data-ttu-id="d3596-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span><span class="sxs-lookup"><span data-stu-id="d3596-105">The message DLL should be either in a subdirectory whose name is a language ID, or in the current directory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45986-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="45986-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3596-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="d3596-106">Syntax</span></span>  
   
 ```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="45986-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="45986-107">Requirements</span></span>  
- <span data-ttu-id="45986-108">**Nagłówek:** Alink. h</span><span class="sxs-lookup"><span data-stu-id="45986-108">**Header:** alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3596-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d3596-107">Requirements</span></span>  
+ <span data-ttu-id="d3596-108">**Header:** alink.h</span><span class="sxs-lookup"><span data-stu-id="d3596-108">**Header:** alink.h</span></span>  
   
- <span data-ttu-id="45986-109">**Biblioteka**: Alink. dll</span><span class="sxs-lookup"><span data-stu-id="45986-109">**Library**: alink.dll</span></span>  
+ <span data-ttu-id="d3596-109">**Library**: alink.dll</span><span class="sxs-lookup"><span data-stu-id="d3596-109">**Library**: alink.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45986-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="45986-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3596-110">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="d3596-110">See also</span></span>
 
-- [<span data-ttu-id="45986-111">Al.exe (konsolidator zestawów)</span><span class="sxs-lookup"><span data-stu-id="45986-111">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)
+- [<span data-ttu-id="d3596-111">Al.exe (konsolidator zestawów)</span><span class="sxs-lookup"><span data-stu-id="d3596-111">Al.exe (Assembly Linker)</span></span>](../../tools/al-exe-assembly-linker.md)

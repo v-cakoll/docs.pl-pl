@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776369"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444223"
 ---
-# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="8a7c2-102">AssemblyRefFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="8a7c2-102">AssemblyRefFlags Enumeration</span></span>
-<span data-ttu-id="8a7c2-103">Zawiera wartości, które opisano funkcje odwołania do zestawu.</span><span class="sxs-lookup"><span data-stu-id="8a7c2-103">Contains values that describe features of an assembly reference.</span></span>  
+# <a name="assemblyrefflags-enumeration"></a><span data-ttu-id="e4d85-102">AssemblyRefFlags — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="e4d85-102">AssemblyRefFlags Enumeration</span></span>
+<span data-ttu-id="e4d85-103">Contains values that describe features of an assembly reference.</span><span class="sxs-lookup"><span data-stu-id="e4d85-103">Contains values that describe features of an assembly reference.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8a7c2-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8a7c2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4d85-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e4d85-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -34,21 +32,21 @@ typedef enum {
 } AssemblyRefFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8a7c2-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="8a7c2-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e4d85-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="e4d85-105">Members</span></span>  
   
-|<span data-ttu-id="8a7c2-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="8a7c2-106">Member</span></span>|<span data-ttu-id="8a7c2-107">Opis</span><span class="sxs-lookup"><span data-stu-id="8a7c2-107">Description</span></span>|  
+|<span data-ttu-id="e4d85-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="e4d85-106">Member</span></span>|<span data-ttu-id="e4d85-107">Opis</span><span class="sxs-lookup"><span data-stu-id="e4d85-107">Description</span></span>|  
 |------------|-----------------|  
-|`arfFullOriginator`|<span data-ttu-id="8a7c2-108">Określa, że odwołanie do zestawu zawiera pełną, bez haszowania informacji o wydawcy zestawu.</span><span class="sxs-lookup"><span data-stu-id="8a7c2-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
+|`arfFullOriginator`|<span data-ttu-id="e4d85-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span><span class="sxs-lookup"><span data-stu-id="e4d85-108">Specifies that the assembly reference contains full, unhashed information about the publisher of the assembly.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8a7c2-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8a7c2-109">Requirements</span></span>  
- <span data-ttu-id="8a7c2-110">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8a7c2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4d85-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e4d85-109">Requirements</span></span>  
+ <span data-ttu-id="e4d85-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e4d85-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8a7c2-111">**Nagłówek:** COR.h</span><span class="sxs-lookup"><span data-stu-id="8a7c2-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e4d85-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e4d85-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8a7c2-112">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8a7c2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e4d85-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4d85-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a7c2-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="8a7c2-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e4d85-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="e4d85-113">See also</span></span>
 
-- [<span data-ttu-id="8a7c2-114">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="8a7c2-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="8a7c2-115">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="8a7c2-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [<span data-ttu-id="8a7c2-116">DefineAssemblyRef, metoda</span><span class="sxs-lookup"><span data-stu-id="8a7c2-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)
+- [<span data-ttu-id="e4d85-114">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="e4d85-114">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="e4d85-115">IMetaDataAssemblyEmit, interfejs</span><span class="sxs-lookup"><span data-stu-id="e4d85-115">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="e4d85-116">DefineAssemblyRef, metoda</span><span class="sxs-lookup"><span data-stu-id="e4d85-116">DefineAssemblyRef Method</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)

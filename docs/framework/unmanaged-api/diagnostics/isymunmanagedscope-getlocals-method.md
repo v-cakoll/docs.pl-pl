@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e45f5411d48032b86403e35358d7ce83d5f97c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777911"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446327"
 ---
-# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="20ea5-102">ISymUnmanagedScope::GetLocals — Metoda</span><span class="sxs-lookup"><span data-stu-id="20ea5-102">ISymUnmanagedScope::GetLocals Method</span></span>
-<span data-ttu-id="20ea5-103">Pobiera zmienne lokalne zdefiniowane w tym zakresie.</span><span class="sxs-lookup"><span data-stu-id="20ea5-103">Gets the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="57b27-102">ISymUnmanagedScope::GetLocals — Metoda</span><span class="sxs-lookup"><span data-stu-id="57b27-102">ISymUnmanagedScope::GetLocals Method</span></span>
+<span data-ttu-id="57b27-103">Gets the local variables defined within this scope.</span><span class="sxs-lookup"><span data-stu-id="57b27-103">Gets the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20ea5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="20ea5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="57b27-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="57b27-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLocals(  
@@ -37,22 +35,22 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20ea5-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="20ea5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="57b27-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="57b27-105">Parameters</span></span>  
  `cLocals`  
- <span data-ttu-id="20ea5-106">[in] A `ULONG32` oznacza rozmiar `locals` tablicy.</span><span class="sxs-lookup"><span data-stu-id="20ea5-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
+ <span data-ttu-id="57b27-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span><span class="sxs-lookup"><span data-stu-id="57b27-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="20ea5-107">[out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać zmiennych lokalnych.</span><span class="sxs-lookup"><span data-stu-id="20ea5-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
+ <span data-ttu-id="57b27-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span><span class="sxs-lookup"><span data-stu-id="57b27-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
   
  `locals`  
- <span data-ttu-id="20ea5-108">[out] Tablica, która odbiera zmiennych lokalnych.</span><span class="sxs-lookup"><span data-stu-id="20ea5-108">[out] The array that receives the local variables.</span></span>  
+ <span data-ttu-id="57b27-108">[out] The array that receives the local variables.</span><span class="sxs-lookup"><span data-stu-id="57b27-108">[out] The array that receives the local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="20ea5-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="20ea5-109">Return Value</span></span>  
- <span data-ttu-id="20ea5-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="20ea5-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="57b27-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="57b27-109">Return Value</span></span>  
+ <span data-ttu-id="57b27-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="57b27-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20ea5-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="20ea5-111">Requirements</span></span>  
- <span data-ttu-id="20ea5-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="20ea5-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="57b27-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="57b27-111">Requirements</span></span>  
+ <span data-ttu-id="57b27-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="57b27-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20ea5-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="20ea5-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57b27-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="57b27-113">See also</span></span>
 
-- [<span data-ttu-id="20ea5-114">ISymUnmanagedScope, interfejs</span><span class="sxs-lookup"><span data-stu-id="20ea5-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="57b27-114">ISymUnmanagedScope, interfejs</span><span class="sxs-lookup"><span data-stu-id="57b27-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

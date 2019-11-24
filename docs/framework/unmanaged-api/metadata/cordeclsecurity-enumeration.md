@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767007"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443741"
 ---
-# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="ecc05-102">CorDeclSecurity — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="ecc05-102">CorDeclSecurity Enumeration</span></span>
-<span data-ttu-id="ecc05-103">Określa akcje zabezpieczeń, które mogą być wykonywane przy użyciu zabezpieczeń deklaratywnych.</span><span class="sxs-lookup"><span data-stu-id="ecc05-103">Specifies the security actions that can be performed using declarative security.</span></span>  
+# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="90af5-102">CorDeclSecurity — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="90af5-102">CorDeclSecurity Enumeration</span></span>
+<span data-ttu-id="90af5-103">Specifies the security actions that can be performed using declarative security.</span><span class="sxs-lookup"><span data-stu-id="90af5-103">Specifies the security actions that can be performed using declarative security.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ecc05-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ecc05-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90af5-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="90af5-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorDeclSecurity {  
@@ -56,39 +54,39 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ecc05-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="ecc05-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="90af5-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="90af5-105">Members</span></span>  
   
-|<span data-ttu-id="ecc05-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="ecc05-106">Member</span></span>|<span data-ttu-id="ecc05-107">Opis</span><span class="sxs-lookup"><span data-stu-id="ecc05-107">Description</span></span>|  
+|<span data-ttu-id="90af5-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="90af5-106">Member</span></span>|<span data-ttu-id="90af5-107">Opis</span><span class="sxs-lookup"><span data-stu-id="90af5-107">Description</span></span>|  
 |------------|-----------------|  
-|`dclActionMask`|<span data-ttu-id="ecc05-108">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-108">Reserved.</span></span>|  
-|`dclActionNil`|<span data-ttu-id="ecc05-109">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-109">Reserved.</span></span>|  
-|`dclRequest`|<span data-ttu-id="ecc05-110">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-110">Reserved.</span></span>|  
-|`dclDemand`|<span data-ttu-id="ecc05-111">Wszystkie podmioty wywołujące wyżej w stosie wywołań są wymagane do udzielono uprawnienia określone przez bieżący obiekt uprawnień.</span><span class="sxs-lookup"><span data-stu-id="ecc05-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
-|`dclAssert`|<span data-ttu-id="ecc05-112">Kod wywołujący może uzyskać dostępu do zasobu, identyfikowane przez bieżący obiekt uprawnienia, nawet wtedy, gdy wyżej w stosie wywołań nie przyznano uprawnień dostępu do zasobu</span><span class="sxs-lookup"><span data-stu-id="ecc05-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
-|`dclDeny`|<span data-ttu-id="ecc05-113">Możliwość dostępu do zasobu, określony przez bieżący obiekt uprawnień nie jest możliwy obiektów wywołujących, nawet wtedy, gdy przyznano im uprawnienia dostępu do niego.</span><span class="sxs-lookup"><span data-stu-id="ecc05-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
-|`dclPermitOnly`|<span data-ttu-id="ecc05-114">Tylko zasoby, które zostały określone przez ten obiekt uprawnień są dostępne, nawet jeśli kod ma uprawnienia dostępu do innych zasobów.</span><span class="sxs-lookup"><span data-stu-id="ecc05-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
-|`dclLinktimeCheck`|<span data-ttu-id="ecc05-115">Do bezpośredniego wywołującego jest wymagana do przyznano określone uprawnienie dla danego okresu czasu.</span><span class="sxs-lookup"><span data-stu-id="ecc05-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
-|`dclInheritanceCheck`|<span data-ttu-id="ecc05-116">Klasa pochodna dziedziczy innej klasy lub zastępowania metody jest wymagany do przyznano określone uprawnienie.</span><span class="sxs-lookup"><span data-stu-id="ecc05-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
-|`dclRequestMinimum`|<span data-ttu-id="ecc05-117">Obiekt wywołujący może żądać minimalne uprawnienia wymagane do kod wymagany do uruchomienia.</span><span class="sxs-lookup"><span data-stu-id="ecc05-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="ecc05-118">Tej akcji należy używać tylko w ramach zakresu zestawu.</span><span class="sxs-lookup"><span data-stu-id="ecc05-118">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestOptional`|<span data-ttu-id="ecc05-119">Obiekt wywołujący może żądać uzyskać dodatkowe uprawnienia, które są opcjonalne (nie wymaga do uruchomienia).</span><span class="sxs-lookup"><span data-stu-id="ecc05-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="ecc05-120">To żądanie niejawnie odmawia innych uprawnień nie jest wymagane.</span><span class="sxs-lookup"><span data-stu-id="ecc05-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="ecc05-121">Tej akcji należy używać tylko w ramach zakresu zestawu.</span><span class="sxs-lookup"><span data-stu-id="ecc05-121">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestRefuse`|<span data-ttu-id="ecc05-122">Żądanie obiektu wywołującego uprawnienia, które mogą być używane nie zostaną przyznane.</span><span class="sxs-lookup"><span data-stu-id="ecc05-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="ecc05-123">Tej akcji należy używać tylko w ramach zakresu zestawu.</span><span class="sxs-lookup"><span data-stu-id="ecc05-123">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclPrejitGrant`|<span data-ttu-id="ecc05-124">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-124">Reserved.</span></span>|  
-|`dclPrejitDenied`|<span data-ttu-id="ecc05-125">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-125">Reserved.</span></span>|  
-|`dclNonCasDemand`|<span data-ttu-id="ecc05-126">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-126">Reserved.</span></span>|  
-|`dclNonCasLinkDemand`|<span data-ttu-id="ecc05-127">Bezpośredniego obiektu wywołującego jest wymagana do przyznano określone uprawnienie.</span><span class="sxs-lookup"><span data-stu-id="ecc05-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
-|`dclNonCasInheritance`|<span data-ttu-id="ecc05-128">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-128">Reserved.</span></span>|  
-|`dclLinkDemandChoice`|<span data-ttu-id="ecc05-129">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-129">Reserved.</span></span>|  
-|`dclInheritanceDemandChoice`|<span data-ttu-id="ecc05-130">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-130">Reserved.</span></span>|  
-|`dclDemandChoice`|<span data-ttu-id="ecc05-131">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-131">Reserved.</span></span>|  
-|`dclMaximumValue`|<span data-ttu-id="ecc05-132">Zastrzeżone.</span><span class="sxs-lookup"><span data-stu-id="ecc05-132">Reserved.</span></span>|  
+|`dclActionMask`|<span data-ttu-id="90af5-108">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-108">Reserved.</span></span>|  
+|`dclActionNil`|<span data-ttu-id="90af5-109">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-109">Reserved.</span></span>|  
+|`dclRequest`|<span data-ttu-id="90af5-110">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-110">Reserved.</span></span>|  
+|`dclDemand`|<span data-ttu-id="90af5-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span><span class="sxs-lookup"><span data-stu-id="90af5-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
+|`dclAssert`|<span data-ttu-id="90af5-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span><span class="sxs-lookup"><span data-stu-id="90af5-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
+|`dclDeny`|<span data-ttu-id="90af5-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span><span class="sxs-lookup"><span data-stu-id="90af5-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
+|`dclPermitOnly`|<span data-ttu-id="90af5-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span><span class="sxs-lookup"><span data-stu-id="90af5-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
+|`dclLinktimeCheck`|<span data-ttu-id="90af5-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span><span class="sxs-lookup"><span data-stu-id="90af5-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
+|`dclInheritanceCheck`|<span data-ttu-id="90af5-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span><span class="sxs-lookup"><span data-stu-id="90af5-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
+|`dclRequestMinimum`|<span data-ttu-id="90af5-117">The caller can request for the minimum permissions required for code to run.</span><span class="sxs-lookup"><span data-stu-id="90af5-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="90af5-118">This action can only be used within the scope of the assembly.</span><span class="sxs-lookup"><span data-stu-id="90af5-118">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestOptional`|<span data-ttu-id="90af5-119">The caller can request for additional permissions that are optional (not required to run).</span><span class="sxs-lookup"><span data-stu-id="90af5-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="90af5-120">This request implicitly refuses all other permissions not specifically requested.</span><span class="sxs-lookup"><span data-stu-id="90af5-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="90af5-121">This action can only be used within the scope of the assembly.</span><span class="sxs-lookup"><span data-stu-id="90af5-121">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestRefuse`|<span data-ttu-id="90af5-122">The caller's request for permissions that might be misused will not be granted.</span><span class="sxs-lookup"><span data-stu-id="90af5-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="90af5-123">This action can only be used within the scope of the assembly.</span><span class="sxs-lookup"><span data-stu-id="90af5-123">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclPrejitGrant`|<span data-ttu-id="90af5-124">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-124">Reserved.</span></span>|  
+|`dclPrejitDenied`|<span data-ttu-id="90af5-125">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-125">Reserved.</span></span>|  
+|`dclNonCasDemand`|<span data-ttu-id="90af5-126">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-126">Reserved.</span></span>|  
+|`dclNonCasLinkDemand`|<span data-ttu-id="90af5-127">The immediate caller is required to have been granted the specified permission.</span><span class="sxs-lookup"><span data-stu-id="90af5-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
+|`dclNonCasInheritance`|<span data-ttu-id="90af5-128">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-128">Reserved.</span></span>|  
+|`dclLinkDemandChoice`|<span data-ttu-id="90af5-129">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-129">Reserved.</span></span>|  
+|`dclInheritanceDemandChoice`|<span data-ttu-id="90af5-130">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-130">Reserved.</span></span>|  
+|`dclDemandChoice`|<span data-ttu-id="90af5-131">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-131">Reserved.</span></span>|  
+|`dclMaximumValue`|<span data-ttu-id="90af5-132">Reserved.</span><span class="sxs-lookup"><span data-stu-id="90af5-132">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ecc05-133">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ecc05-133">Requirements</span></span>  
- <span data-ttu-id="ecc05-134">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ecc05-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90af5-133">Wymagania</span><span class="sxs-lookup"><span data-stu-id="90af5-133">Requirements</span></span>  
+ <span data-ttu-id="90af5-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90af5-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ecc05-135">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ecc05-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="90af5-135">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="90af5-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ecc05-136">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ecc05-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="90af5-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="90af5-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ecc05-137">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="ecc05-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90af5-137">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="90af5-137">See also</span></span>
 
-- [<span data-ttu-id="ecc05-138">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="ecc05-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="90af5-138">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="90af5-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

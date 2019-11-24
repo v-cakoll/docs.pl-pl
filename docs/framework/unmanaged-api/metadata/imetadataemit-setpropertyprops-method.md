@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782052"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440547"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps — Metoda
-Ustawia funkcje przechowywany w metadanych dla właściwości zdefiniowane przez wcześniejsze wywołanie [defineproperty — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
+Sets the features stored in metadata for a property defined by a prior call to [DefineProperty Method](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,37 +42,37 @@ HRESULT SetPropertyProps (
   
 ## <a name="parameters"></a>Parametry  
  `pr`  
- [in] Token dla właściwości, które mają być zmienione  
+ [in] The token for the property to be changed  
   
  `dwPropFlags`  
- [in] Flagi właściwości.  
+ [in] Property flags.  
   
  `dwCPlusTypeFlag`  
- [in] Typ wartości domyślnej właściwości.  
+ [in] The type of the property's default value.  
   
  `pValue`  
- [in] Wartość domyślna dla właściwości.  
+ [in] The default value for the property.  
   
  `cchValue`  
- [in] Liczba (Unicode) znaki w `pValue`.  
+ [in] The count of (Unicode) characters in `pValue`.  
   
  `mdSetter`  
- [in] Metoda, która ustawia wartości właściwości.  
+ [in] The method that sets the property value.  
   
  `mdGetter`  
- [in] Metoda, która pobiera wartość właściwości.  
+ [in] The method that gets the property value.  
   
  `rmdOtherMethods[]`  
- [in] Tablica innych metod skojarzony z właściwością. Zakończenie tej tablicy przy użyciu `mdTokenNil` tokenu.  
+ [in] An array of other methods associated with the property. Terminate this array with an `mdTokenNil` token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

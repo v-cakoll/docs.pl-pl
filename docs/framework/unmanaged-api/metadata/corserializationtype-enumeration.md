@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6b1fcd11-c7fb-4be2-8910-abc862d4caf4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 064374285216e9fb054b299937087f1ca7c351a4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781591"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432874"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType — Wyliczenie
-Określa, jak obiekt jest serializowany przez środowisko uruchomieniowe języka wspólnego.  
+Specifies how an object is serialized by the common language runtime.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -59,33 +57,33 @@ typedef enum CorSerializationType {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serializacja obiektu nie jest zdefiniowana.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Obiekt jest serializowany jako typu Boolean|  
-|`SERIALIZATION_TYPE_CHAR`|Obiekt jest serializowany jako typ znaku.|  
-|`SERIALIZATION_TYPE_I1`|Obiekt jest serializowany jako liczba całkowita ze znakiem 1-bajtowe.|  
-|`SERIALIZATION_TYPE_U1`|Obiekt jest serializowany jako liczba całkowita bez znaku 1-bajtowe.|  
-|`SERIALIZATION_TYPE_I2`|Obiekt jest serializowany jako liczba całkowita ze znakiem 2-bajtowych.|  
-|`SERIALIZATION_TYPE_U2`|Obiekt jest serializowany jako liczba całkowita bez znaku 2-bajtowych.|  
-|`SERIALIZATION_TYPE_I4`|Obiekt jest serializowany jako liczbę całkowitą 4-bajtowych ze znakiem.|  
-|`SERIALIZATION_TYPE_U4`|Obiekt jest serializowany jako liczba całkowita bez znaku 4-bajtowe.|  
-|`SERIALIZATION_TYPE_I8`|Obiekt jest serializowany jako liczba całkowita 8-bajtowych ze znakiem.|  
-|`SERIALIZATION_TYPE_U8`|Obiekt jest serializowany jako liczba całkowita 8 bajtów bez znaku.|  
-|`SERIALIZATION_TYPE_R4`|Obiekt jest serializowany jako 4-bajtowych zmiennoprzecinkowych.|  
-|`SERIALIZATION_TYPE_R8`|Obiekt jest serializowany jako 8-bajtowych wartości zmiennoprzecinkowych.|  
-|`SERIALIZATION_TYPE_STRING`|Obiekt jest serializowany jako typ System.String.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Obiekt jest serializowany jako jednowymiarowe, zerowego dolną granicę tablicy.|  
-|`SERIALIZATION_TYPE_TYPE`|Obiekt jest serializowany jako typu ogólnego.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Obiekt jest serializowany jako obiekt oznakowane.|  
-|`SERIALIZATION_TYPE_FIELD`|Obiekt jest serializowany jako pole.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Obiekt jest serializowany jako właściwość.|  
-|`SERIALIZATION_TYPE_ENUM`|Obiekt jest serializowany jako wyliczenie.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
+|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
+|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
+|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
+|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
+|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
+|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
+|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
+|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
+|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
+|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
+|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
+|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
+|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
+|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
+|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
+|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
+|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

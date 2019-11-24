@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3b4d143d8dd5391283736d0140e8f1ced1dec53e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775328"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432070"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType — Metoda
-Tworzy `ExportedType` struktury zawierającej metadanych dla określonego wyeksportować typu, a następnie zwraca token skojarzone metadane.  
+Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [in] Nazwa typu do wyeksportowania. Dla wersji 1.1 środowisko uruchomieniowe języka wspólnego, nazwa typu wyeksportowanego musi dokładnie odpowiadać nazwa nadana `TypeDef` dla typu.  
+ [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
   
  `tkImplementation`  
- [in] Token, określający, gdzie typ eksportowany jest zaimplementowana. Prawidłowe wartości i ich znaczenie skojarzone są:  
+ [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
   
-- `mdFile` Typ jest zaimplementowana w innym pliku w tym zestawie.  
+- `mdFile` The type is implemented in a different file within this assembly.  
   
-- `mdAssemblyRef` Typ jest zaimplementowana w innym zestawie.  
+- `mdAssemblyRef` The type is implemented in a different assembly.  
   
-- `mdExportedTYpe` Typ jest zagnieżdżony w ramach innego typu.  
+- `mdExportedTYpe` The type is nested within some other type.  
   
-- `mdFileNil` Typ znajduje się w tym samym pliku manifestu i nie jest typem zagnieżdżonym.  
+- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
   
  `tkTypeDef`  
- [in] Token metadanych, który określa typ do wyeksportowania. Ta wartość jest wprowadzana w `TypeDef` tabeli w pliku, który implementuje ten typ. i ma zastosowanie tylko wtedy, gdy ten plik znajduje się w tym zestawie.  
+ [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
   
  `dwExportedTypeFlags`  
- [in] Bitowa kombinacja [cortypeattr —](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) wartości wyliczenia, które definiują ustawienia właściwości typu wyeksportowanego.  
+ [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
   
  `pmdct`  
- [out] Wskaźnik do tokenu zwróconych metadanych, który określa typ eksportowany.  
+ [out] A pointer to the returned metadata token that indicates the exported type.  
   
 ## <a name="remarks"></a>Uwagi  
- `ExportedType` Struktury metadanych musi być zdefiniowana dla każdego typu, który jest udostępniany przez ten zestaw i jest implementowana w module innym niż zawierającego manifest.  
+ An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

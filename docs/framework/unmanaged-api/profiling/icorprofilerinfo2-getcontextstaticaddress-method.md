@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b374116-0972-416a-8cf5-79213129be9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2c5c8165d44cc3a305820f8e97c07da37f2a0693
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5d7da343148d5f1c2aa9b2b639b094f8269199b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775807"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433203"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a>ICorProfilerInfo2::GetContextStaticAddress — Metoda
-Pobiera adres dla określonego pola statyczne kontekstu, który znajduje się w zakresie określonego kontekstu.  
+Gets the address for the specified context-static field that is in the scope of the specified context.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,34 +37,34 @@ HRESULT GetContextStaticAddress(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, która zawiera żądane pole statyczne kontekstu.  
+ [in] The ID of the class that contains the requested context-static field.  
   
  `fieldToken`  
- [in] Token metadanych dla żądanego pola statyczne kontekstu.  
+ [in] The metadata token for the requested context-static field.  
   
  `contextId`  
- [in] Identyfikator kontekstu, która jest zakresem dla żądanego pola statyczne kontekstu.  
+ [in] The ID of the context that is the scope for the requested context-static field.  
   
  `ppAddress`  
- [out] Wskaźnik na adres pole statyczne, który znajduje się w określonym kontekście.  
+ [out] A pointer to the address of the static field that is within the specified context.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetContextStaticAddress` Metoda może zwracać jedną z następujących czynności:  
+ The `GetContextStaticAddress` method may return one of the following:  
   
-- HRESULT CORPROF_E_DATAINCOMPLETE, jeśli nie przypisano danego pola statycznego adresu w określonym kontekście.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stają się nieprawidłowe po wyrzucania elementów bezużytecznych, więc po wyrzucania elementów bezużytecznych profilowania nie należy zakładać, że są prawidłowe.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection, profilers should not assume that they are valid.  
   
- Przed ukończeniem konstruktora klasy klasy `GetContextStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może być zainicjowany i zakorzenienia wyrzucania elementów kolekcji obiektów.  
+ Before a class’s class constructor is completed, `GetContextStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f8c18935069e4162236f99c411312087ce73bdc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443053"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress — Metoda
-Pobiera adres określone pole statyczne wątku, który znajduje się w zakresie określonego wątku.  
+Gets the address of the specified thread-static field that is in the scope of the specified thread.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,34 +37,34 @@ HRESULT GetThreadStaticAddress(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, która zawiera żądane pole statyczne wątku.  
+ [in] The ID of the class that contains the requested thread-static field.  
   
  `fieldToken`  
- [in] Token metadanych dla żądanego pola statyczne wątku.  
+ [in] The metadata token for the requested thread-static field.  
   
  `threadId`  
- [in] Identyfikator wątku, która jest zakresem dla żądanego pola statyczne.  
+ [in] The ID of the thread that is the scope for the requested static field.  
   
  `ppAddress`  
- [out] Wskaźnik na adres pole statyczne, który znajduje się w określonym wątku.  
+ [out] A pointer to the address of the static field that is within the specified thread.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetThreadStaticAddress` Metoda może zwracać jedną z następujących czynności:  
+ The `GetThreadStaticAddress` method may return one of the following:  
   
-- HRESULT CORPROF_E_DATAINCOMPLETE, jeśli nie przypisano danego pola statycznego adresu w określonym kontekście.  
+- A CORPROF_E_DATAINCOMPLETE HRESULT if the given static field has not been assigned an address in the specified context.  
   
-- Adresy obiektów, które mogą znajdować się w stercie wyrzucania elementów bezużytecznych. Te adresy mogą stać się nieprawidłowe po wyrzucania elementów bezużytecznych, dlatego po wyrzucania elementów kolekcji profilowania nie należy zakładać, że są prawidłowe.  
+- The addresses of objects that may be in the garbage collection heap. These addresses may become invalid after garbage collection, so after garbage collection profilers should not assume that they are valid.  
   
- Przed ukończeniem konstruktora klasy klasy `GetThreadStaticAddress` zwróci CORPROF_E_DATAINCOMPLETE dla wszystkich jego pól statycznych, mimo że niektóre pola statyczne już może być zainicjowany i zakorzenienia wyrzucania elementów kolekcji obiektów.  
+ Before a class’s class constructor is completed, `GetThreadStaticAddress` will return CORPROF_E_DATAINCOMPLETE for all its static fields, although some of the static fields may already be initialized and rooting garbage collection objects.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

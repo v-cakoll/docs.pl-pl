@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50cbe557-2322-41aa-8e0d-f967602eaa0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 662b628f3cc6d2d7138f56820beaccee9c5d9e81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781360"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426659"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo — Metoda
-Pobiera nazwę, rozmiar wiersza, liczba wierszy, liczba kolumn, a kolumny klucza indeksu w określonej tabeli.  
+Gets the name, row size, number of rows, number of columns, and key column index of the specified table.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT GetTableInfo (
   
 ## <a name="parameters"></a>Parametry  
  `ixTbl`  
- [in] Identyfikator tabeli, którego właściwości do zwrócenia.  
+ [in] The identifier of the table whose properties to return.  
   
  `pcbRow`  
- [out] Wskaźnik do rozmiaru, w bajtach wiersza tabeli.  
+ [out] A pointer to the size, in bytes, of a table row.  
   
  `pcRows`  
- [out] Wskaźnik do liczby wierszy w tabeli.  
+ [out] A pointer to the number of rows in the table.  
   
  `pcCols`  
- [out] Wskaźnik do liczby kolumn w tabeli.  
+ [out] A pointer to the number of columns in the table.  
   
  `piKey`  
- [out] Wskaźnik do indeksu kolumny klucza lub wartość -1, jeśli tabela nie ma kolumny klucza.  
+ [out] A pointer to the index of the key column, or -1 if the table has no key column.  
   
  `ppName`  
- [out] Wskaźnik do wskaźnika do nazwy tabeli.  
+ [out] A pointer to a pointer to the table name.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

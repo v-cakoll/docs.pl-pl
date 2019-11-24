@@ -6,48 +6,48 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 28179ecd27c98f1de5662908ced3ea0e49cb87ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 03df282022c39673a7e160dd5d79bdadd0c7adda
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043947"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433991"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- Niektóre różne [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] platformy są używane w systemach operacyjnych firmy Microsoft, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]i [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]przedstawia informacje o elementach interfejsu użytkownika dla klientów programu. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Jednakże nie jest to jednak świadomość różnych typów formantów, które istnieją w tych strukturach, oraz technik, które są potrzebne do wyodrębnienia z nich informacji. Zamiast tego pozostawi to zadanie w obiektach o nazwie Providers. Dostawca wyodrębnia informacje z konkretnej kontrolki i udostępnia te informacje [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], które przedstawiają go klientowi w spójny sposób.  
+ Several different [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] frameworks are in use within Microsoft operating systems, including [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], and [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] exposes information about UI elements to clients. However, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] does not itself have awareness of the different types of controls that exist in these frameworks and the techniques that are needed to extract information from them. Instead, it leaves this task to objects called providers. A provider extracts information from a specific control and hands that information to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], which then presents it to the client in a consistent manner.  
   
- Dostawcy mogą istnieć zarówno po stronie serwera, jak i po stronie klienta. Dostawca po stronie serwera jest implementowany przez sam formant. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]elementy implementujące dostawców, jak mogą dowolnie dowolnych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] kontrolek innych firm.  
+ Providers can exist either on the server side or on the client side. A server-side provider is implemented by the control itself. [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] elements implement providers, as can any third-party controls written with [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in mind.  
   
- Jednak starsze kontrolki, takie jak te [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] w [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] i nie są bezpośrednio [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]obsługiwane. Te kontrolki są obsługiwane zamiast dostawców, którzy istnieją w procesie klienta i uzyskują informacje o kontrolkach korzystających z komunikacji między procesami; na przykład przez monitorowanie komunikatów systemu Windows do i z kontrolek. Tacy dostawcy po stronie klienta są czasami nazywane serwerami proxy.  
+ However, older controls such as those in [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] and [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] do not directly support [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. These controls are served instead by providers that exist in the client process and obtain information about controls using cross-process communication; for example, by monitoring windows messages to and from the controls. Such client-side providers are sometimes called proxies.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]dostarcza dostawców dla kontrolek standardowych [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] i Windows Formsowych. Dodatkowo dostawca rezerwowy zapewnia częściową [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] obsługę każdej kontroli, która nie jest obsługiwana przez innego dostawcę po stronie serwera lub serwer proxy, ale ma implementację Microsoft Active Accessibility. Wszyscy dostawcy są automatycznie załadowana i dostępni dla aplikacji klienckich.  
+ Windows Vista supplies providers for standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] and Windows Forms controls. In addition, a fallback provider gives partial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] support to any control that is not served by another server-side provider or proxy but has a Microsoft Active Accessibility implementation. All these providers are automatically loaded and available to client applications.  
   
- Aby uzyskać więcej informacji na temat [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] obsługi formantów i Windows Forms, zobacz [Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek](ui-automation-support-for-standard-controls.md).  
+ For more information on support for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] and Windows Forms controls, see [UI Automation Support for Standard Controls](ui-automation-support-for-standard-controls.md).  
   
- Aplikacje mogą także rejestrować innych dostawców po stronie klienta.  
+ Applications can also register other client-side providers.  
   
 <a name="Distributing_Client-Side_Providers"></a>   
-## <a name="distributing-client-side-providers"></a>Dystrybuowanie dostawców po stronie klienta  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]oczekuje, że dostawcy po stronie klienta mają znajdować się w zestawie kodu zarządzanego. Przestrzeń nazw w tym zestawie powinna mieć taką samą nazwę jak zestaw. Na przykład zestaw o nazwie ContosoProxies. dll będzie zawierać przestrzeń nazw ContosoProxies. W przestrzeni nazw Utwórz <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> klasę. W implementacji pola statycznego <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> Utwórz <xref:System.Windows.Automation.ClientSideProviderDescription> tablicę struktur opisującą dostawców.  
+## <a name="distributing-client-side-providers"></a>Distributing Client-Side Providers  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] expects to find client-side providers in a managed-code assembly. The namespace in this assembly should have the same name as the assembly. For example, an assembly called ContosoProxies.dll would contain the ContosoProxies namespace. Within the namespace, create a <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> class. In the implementation of the static <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> field, create an array of <xref:System.Windows.Automation.ClientSideProviderDescription> structures describing the providers.  
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
-## <a name="registering-and-configuring-client-side-providers"></a>Rejestrowanie i Konfigurowanie dostawców po stronie klienta  
- Dostawcy po stronie klienta w bibliotece dołączanej dynamicznie (DLL) są załadowane przez <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>wywołanie. Żadna dodatkowa akcja nie jest wymagana przez aplikację kliencką do korzystania z dostawców.  
+## <a name="registering-and-configuring-client-side-providers"></a>Registering and Configuring Client-Side Providers  
+ Client-side providers in a dynamic-link library (DLL) are loaded by calling <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>. No further action is required by a client application to make use of the providers.  
   
- Dostawcy zaimplementowani w własnym kodzie klienta są rejestrowani przy użyciu <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Ta metoda przyjmuje jako argument tablicę <xref:System.Windows.Automation.ClientSideProviderDescription> struktur, z których każdy określa następujące właściwości:  
+ Providers implemented in the client's own code are registered by using <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. This method takes as an argument an array of <xref:System.Windows.Automation.ClientSideProviderDescription> structures, each of which specifies the following properties:  
   
-- Funkcja wywołania zwrotnego, która tworzy obiekt dostawcy.  
+- A callback function that creates the provider object.  
   
-- Nazwa klasy kontrolek, która będzie obsługiwała dostawca.  
+- The class name of the controls that the provider will serve.  
   
-- Nazwa obrazu aplikacji (zazwyczaj pełna nazwa pliku wykonywalnego), który będzie obsługiwany przez dostawcę.  
+- The image name of the application (usually the full name of the executable file) that the provider will serve.  
   
-- Flagi określające sposób dopasowania nazwy klasy do klas okien znalezionych w aplikacji docelowej.  
+- Flags that govern how the class name is matched against window classes found in the target application.  
   
- Ostatnie dwa parametry są opcjonalne. Klient może określić nazwę obrazu aplikacji docelowej, gdy chce używać różnych dostawców dla różnych aplikacji. Na przykład klient może użyć jednego dostawcy dla [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] kontrolki widok listy w znanej aplikacji, która obsługuje wzorzec wielu widoków i drugi dla podobnej kontroli w innej znanej aplikacji, która nie.  
+ The last two parameters are optional. The client might specify the image name of the target application when it wants to use different providers for different applications. For example, the client might use one provider for a [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] list view control in a known application that supports the Multiple View pattern, and another for a similar control in another known application that does not.  
   
 ## <a name="see-also"></a>Zobacz także
 

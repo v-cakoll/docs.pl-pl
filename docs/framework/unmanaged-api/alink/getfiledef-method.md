@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4e3fbe6c-b82a-4181-ab17-7faa1263f5b3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db205993bc1a0665dc0003948ce805813251f48
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a561205602920123176bd421ca2ef1b601166c1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787449"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426047"
 ---
 # <a name="getfiledef-method"></a>GetFileDef — Metoda
-Pobiera rzeczywisty token FileDef używany w metadanych (w przeciwieństwie do tokenu przypisanego przez ALink).  
+Retrieves the actual FileDef token used in metadata (as opposed to the token assigned by ALink).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT GetFileDef(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu.  
+ ID of the assembly.  
   
  `TargetFile`  
- Token dodanego pliku, który został pobrany z metody AddFile lub addimport.  
+ Token of the added file as retrieved from AddFile Method or AddImport Method.  
   
  `pScope`  
- Odbiera token FileDef.  
+ Receives the FileDef token.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

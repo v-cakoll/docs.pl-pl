@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fadc54d74ce6027bd021e148a14cb0c432eb41fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782342"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437492"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps — Metoda
-Pobiera metadane skojarzone z elementem członkowskim odwołuje się określony token.  
+Gets metadata associated with the member referenced by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,34 +41,34 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `mr`  
- [in] Token MemberRef do zwrócenia skojarzone metadane.  
+ [in] The MemberRef token to return associated metadata for.  
   
  `ptk`  
- [out] Token TypeDef TypeRef i/lub elementu TypeSpec, który reprezentuje klasę, która deklaruje element członkowski lub token element ModuleRef, który reprezentuje klasę modułu, która deklaruje element członkowski lub MethodDef, który reprezentuje element członkowski.  
+ [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
   
  `szMember`  
- [out] Buforu ciągu dla nazwy elementu członkowskiego.  
+ [out] A string buffer for the member's name.  
   
  `cchMember`  
- [in] Żądany rozmiar w znaków `szMember`.  
+ [in] The requested size in wide characters of `szMember`.  
   
  `pchMember`  
- [out] Rozmiar zwrócony w znaków `szMember`.  
+ [out] The returned size in wide characters of `szMember`.  
   
  `ppvSibBlob`  
- [out] Wskaźnik do podpisu metadanych binarnych dla elementu członkowskiego.  
+ [out] A pointer to the binary metadata signature for the member.  
   
  `pbSig`  
- [out] Rozmiar w bajtach `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

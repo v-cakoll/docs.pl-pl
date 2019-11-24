@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f7c5378490dce93599086819ee6fc806c707aa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777494"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428249"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet — Metoda
-Tworzy zestaw uprawnień zabezpieczeń, aby dołączyć do obiektu odwołuje się określony token.  
+Creates a set of security permissions to attach to the object referenced by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +38,25 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Parametry  
  `tkObj`  
- [in] Token, do której jest dołączony informacji o zabezpieczeniach.  
+ [in] The token to which the security information is attached.  
   
  `rSecAttrs`  
- [in] Tablica `COR_SECATTR` struktury.  
+ [in] An array of `COR_SECATTR` structures.  
   
  `cSecAttrs`  
- [in] Liczba elementów w `rSecAttrs`.  
+ [in] The number of elements in `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] Jeśli metoda nie powiedzie się, określa indeks w `rSecAttrs` elementu, który spowodował problem.  
+ [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

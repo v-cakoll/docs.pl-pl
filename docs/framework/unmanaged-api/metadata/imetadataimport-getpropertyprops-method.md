@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e83afcf6c872927e614fce33ca96e93f0da4f497
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778871"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437061"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps — Metoda
-Pobiera metadane dla właściwości reprezentowanej przez określony token.  
+Gets the metadata for the property represented by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,61 +50,61 @@ HRESULT GetPropertyProps (
   
 ## <a name="parameters"></a>Parametry  
  `prop`  
- [in] Token, który reprezentuje właściwość, można zwrócić metadanych dla.  
+ [in] A token that represents the property to return metadata for.  
   
  `pClass`  
- [out] Wskaźnik do TypeDef token, który reprezentuje typ, który implementuje właściwości.  
+ [out] A pointer to the TypeDef token that represents the type that implements the property.  
   
  `szProperty`  
- [out] Bufor do przechowywania nazwy właściwości.  
+ [out] A buffer to hold the property name.  
   
  `cchProperty`  
- [in] Rozmiar w znaków `szProperty`.  
+ [in] The size in wide characters of `szProperty`.  
   
  `pchProperty`  
- [out] Liczba znaków dwubajtowych zwracane w `szProperty`.  
+ [out] The number of wide characters returned in `szProperty`.  
   
  `pdwPropFlags`  
- [out] Wskaźnik do flag atrybut stosowany do właściwości. Ta wartość jest z [corpropertyattr —](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) wyliczenia.  
+ [out] A pointer to any attribute flags applied to the property. This value is a bitmask from the [CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md) enumeration.  
   
  `ppvSig`  
- [out] Wskaźnik do podpisania metadanych właściwości.  
+ [out] A pointer to the metadata signature of the property.  
   
  `pbSig`  
- [out] Liczba bajtów zwróconych w `ppvSig`.  
+ [out] The number of bytes returned in `ppvSig`.  
   
  `pdwCPlusTypeFlag`  
- [out] Flaga określająca typ stałej, która jest wartością domyślną właściwości. Ta wartość pochodzi z corelementtype — wyliczenie.  
+ [out] A flag specifying the type of the constant that is the default value of the property. This value is from the CorElementType enumeration.  
   
  `ppDefaultValue`  
- [out] Wskaźnik na bajty, które przechowują wartość domyślna tej właściwości.  
+ [out] A pointer to the bytes that store the default value for this property.  
   
  `pcchDefaultValue`  
- [out] Rozmiar w znaków `ppDefaultValue`, jeśli `pdwCPlusTypeFlag` jest ELEMENT_TYPE_STRING; w przeciwnym razie ta wartość nie jest ważna. W takim przypadku długość `ppDefaultValue` jest wnioskowany z typu, który jest określony przez `pdwCPlusTypeFlag`.  
+ [out] The size in wide characters of `ppDefaultValue`, if `pdwCPlusTypeFlag` is ELEMENT_TYPE_STRING; otherwise, this value is not relevant. In that case, the length of `ppDefaultValue` is inferred from the type that is specified by `pdwCPlusTypeFlag`.  
   
  `pmdSetter`  
- [out] Wskaźnik do tokenu MethodDef, który reprezentuje metody dostępu set dla właściwości.  
+ [out] A pointer to the MethodDef token that represents the set accessor method for the property.  
   
  `pmdGetter`  
- [out] Wskaźnik do tokenu MethodDef, który reprezentuje metody dostępu get dla właściwości.  
+ [out] A pointer to the MethodDef token that represents the get accessor method for the property.  
   
  `rmdOtherMethod`  
- [out] Tablica MethodDef, które reprezentują inne metody skojarzony z właściwością.  
+ [out] An array of MethodDef tokens that represent other methods associated with the property.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rmdOtherMethod` tablicy. Jeśli nie podasz, tablica jest wystarczająco duży, aby pomieścić wszystkie metody, są one pomijane bez ostrzeżenia.  
+ [in] The maximum size of the `rmdOtherMethod` array. If you do not provide an array large enough to hold all the methods, they are skipped without warning.  
   
  `pcOtherMethod`  
- [out] Liczba tokenów MethodDef zwracane w `rmdOtherMethod`.  
+ [out] The number of MethodDef tokens returned in `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

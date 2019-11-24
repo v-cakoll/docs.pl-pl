@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952871"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440588"
 ---
 # <a name="functionleave-function"></a>FunctionLeave — Funkcja
-Powiadamia profiler, że funkcja ma zwrócić do obiektu wywołującego.  
+Notifies the profiler that a function is about to return to the caller.  
   
 > [!NOTE]
-> `FunctionLeave` Funkcja jest przestarzała w .NET Framework 2,0. Będzie ona nadal działała, ale nastąpi spadek wydajności. Zamiast tego użyj funkcji [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
+> The `FunctionLeave` function is deprecated in the .NET Framework 2.0. It will continue to work, but will incur a performance penalty. Use the [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) function instead.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,29 +37,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parametry  
  `funcID`  
- podczas Identyfikator zwracanej funkcji.  
+ [in] The identifier of the function that is returning.  
   
 ## <a name="remarks"></a>Uwagi  
- `FunctionLeave` Funkcja jest wywołaniem zwrotnym, należy ją zaimplementować. Implementacja musi używać `__declspec`atrybutu klasy magazynu`naked`().  
+ The `FunctionLeave` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
   
- Aparat wykonywania nie zapisuje żadnych rejestrów przed wywołaniem tej funkcji.  
+ The execution engine does not save any registers before calling this function.  
   
-- We wpisie należy zapisać wszystkie używane rejestry, w tym te w jednostce zmiennoprzecinkowej (FPU).  
+- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
   
-- Po zakończeniu należy przywrócić stos, usuwanie wyłączyć wszystkie parametry, które zostały wypchnięte przez jego obiekt wywołujący.  
+- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
   
- Implementacja `FunctionLeave` nie powinna być blokowana, ponieważ spowoduje opóźnienie wyrzucania elementów bezużytecznych. Implementacja nie powinna podejmować próby wyrzucania elementów bezużytecznych, ponieważ stos może nie znajdować się w stanie przyjaznym do wyrzucania elementów bezużytecznych. W przypadku próby wyrzucania elementów bezużytecznych środowisko uruchomieniowe `FunctionLeave` zostanie zablokowane do momentu powracania.  
+ The implementation of `FunctionLeave` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave` returns.  
   
- `FunctionLeave` Ponadto funkcja nie może wywołać kodu zarządzanego lub w jakikolwiek sposób może spowodować alokację pamięci zarządzanej.  
+ Also, the `FunctionLeave` function must not call into managed code or in any way cause a managed memory allocation.  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **Biblioteki** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **.NET Framework wersje:** 1,1, 1,0  
+ **.NET Framework Versions:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Zobacz także
 

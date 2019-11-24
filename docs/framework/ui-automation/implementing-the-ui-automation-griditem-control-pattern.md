@@ -6,38 +6,38 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: fdaac3cad61f6047201587e48d4377fa61b868af
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 832a53e072afc5533f2eeb7feb0cc326771cf23d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043404"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435254"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Implementacja wzorca kontrolki GridItem dla automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IGridItemProvider>dotyczące wdrażania, w tym informacje o właściwościach. Linki do dodatkowych odwołań znajdują się na końcu przeglądu.  
+ This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IGridItemProvider>, including information about properties. Links to additional references are listed at the end of the overview.  
   
- Wzorzec kontrolki służy do obsługi poszczególnych kontrolek podrzędnych kontenerów, które implementują <xref:System.Windows.Automation.Provider.IGridProvider>. <xref:System.Windows.Automation.GridItemPattern> Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
+ The <xref:System.Windows.Automation.GridItemPattern> control pattern is used to support individual child controls of containers that implement <xref:System.Windows.Automation.Provider.IGridProvider>. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
- Podczas wdrażania <xref:System.Windows.Automation.Provider.IGridProvider>należy zwrócić uwagę na następujące wytyczne i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
+ When implementing <xref:System.Windows.Automation.Provider.IGridProvider>, note the following guidelines and conventions:  
   
-- Współrzędne siatki są równe zero, a lewa górna komórka ma współrzędne (0, 0).  
+- Grid coordinates are zero-based with the upper left cell having coordinates (0, 0).  
   
-- Scalone komórki będą raportować <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> ich <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> i właściwości w oparciu o ich źródłową komórkę zakotwiczenia, zgodnie z definicją dostawcy automatyzacji interfejsu użytkownika. Zwykle jest to pierwszy wiersz lub kolumna najwyższego poziomu.  
+- Merged cells will report their <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> and <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> properties based on their underlying anchor cell as defined by the UI Automation provider. Typically, it will be the topmost and leftmost row or column.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider>nie zapewnia aktywnego manipulowania siatką, taką jak scalanie lub dzielenie komórek.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> does not provide for active manipulation of the grid such as merging or splitting cells.  
   
-- Kontrolki implementujące <xref:System.Windows.Automation.Provider.IGridItemProvider> zwykle mogą być przenoszone (oznacza to, że klient automatyzacji interfejsu użytkownika można przenieść do sąsiednich kontrolek) przy użyciu klawiatury.  
+- Controls that implement <xref:System.Windows.Automation.Provider.IGridItemProvider> can typically be traversed (that is, a UI Automation client can move to adjacent controls) by using the keyboard.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
-## <a name="required-members-for-igriditemprovider"></a>Wymagane elementy członkowskie dla IGridItemProvider  
- Następujące właściwości i metody są wymagane do zaimplementowania <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+## <a name="required-members-for-igriditemprovider"></a>Required Members for IGridItemProvider  
+ The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
   
-|Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
+|Required members|Member type|Uwagi|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Właściwość|Brak|  
@@ -45,11 +45,11 @@ ms.locfileid: "71043404"
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Właściwość|Brak|  
   
- Ten wzorzec kontroli nie ma skojarzonych metod lub zdarzeń.  
+ This control pattern has no associated methods or events.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Ten wzorzec kontrolki nie ma żadnych skojarzonych wyjątków.  
+ This control pattern has no associated exceptions.  
   
 ## <a name="see-also"></a>Zobacz także
 

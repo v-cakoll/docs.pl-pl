@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8844d0dd-730e-4592-8a7b-c1462d312c70
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c7b512de76b5ada882b1d81c2968b4ead5c8c20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06b81615565a04db7d6cfef4da9b5372a85afd68
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775934"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450349"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs — Metoda
-Wylicza `mdAssemblyRef` wystąpień, które są zdefiniowane w manifeście zestawu.  
+Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +38,32 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość null wartość przy `EnumAssemblyRefs` metoda jest wywoływana po raz pierwszy.  
+ [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
   
  `rAssemblyRefs`  
- [out] Wyliczanie `mdAssemblyRef` tokeny metadanych.  
+ [out] The enumeration of `mdAssemblyRef` metadata tokens.  
   
  `cMax`  
- [in] Maksymalna liczba tokenów, które można umieścić w `rAssemblyRefs` tablicy.  
+ [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
   
  `pcTokens`  
- [out] Liczba tokenów faktycznie umieszczone w `rAssemblyRefs`.  
+ [out] The number of tokens actually placed in `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W tym przypadku `pcTokens` jest równa zero.|  
+|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

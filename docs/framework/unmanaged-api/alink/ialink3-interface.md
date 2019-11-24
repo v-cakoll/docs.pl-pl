@@ -6,28 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - IALink3 interface
 ms.assetid: a96bf3cc-75a0-49c9-bf5e-4d7ad5dab716
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c4989fd403e78558b415ba29e31e6a3a4e5bbe59
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b9d727348f9706ad0b2127feab466df299ec2314
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787286"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441794"
 ---
 # <a name="ialink3-interface"></a>IALink3 — Interfejs
-Udostępnia pojedynczą metodę, `SetManifestFile`która umożliwia określenie lub zresetowanie pliku manifestu, który będzie używany przez konsolidator podczas tworzenia zestawu.  
+Provides a single method, `SetManifestFile`, which enables you to specify or reset the manifest file the linker will use when it creates an assembly.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [SetManifestFile, metoda](setmanifestfile-method.md)  
- Umożliwia określenie lub zresetowanie pliku manifestu, który będzie używany przez konsolidator podczas tworzenia zestawu.  
+ Enables you to specify or reset the manifest file that the linker will use when it creates the assembly.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [ALink, interfejs API](index.md)  
- Obsługuje tworzenie zestawów .NET Framework i niezwiązanych modułów.  
+ Supports creating .NET Framework assemblies and unbound modules.  
   
  [IALink, interfejs](ialink-interface.md)  
- Pomaga w konstruowaniu zestawów .NET Framework.  
+ Helps in constructing .NET Framework assemblies.  
   
  [Al.exe (konsolidator zestawów)](../../tools/al-exe-assembly-linker.md)  
- Generuje plik z manifestem zestawu z co najmniej jednego pliku, który jest modułem lub plikami zasobów.
+ Generates a file that has an assembly manifest from one or more files that are either modules or resource files.

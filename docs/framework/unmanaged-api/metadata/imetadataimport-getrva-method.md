@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a3a5cadc1b5a9df7967aae271ff10296843121dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778885"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436959"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA — Metoda
-Pobiera względnych adresów wirtualnych (RVA) i flagi implementacji metody lub pola, reprezentowane przez określony token.  
+Gets the relative virtual address (RVA) and the implementation flags of the method or field represented by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] MethodDef lub FieldDef metadanych token, który reprezentuje obiekt kodu, aby zwrócić adres RVA dla. Jeśli token jest FieldDef, pole musi być zmienną globalną.  
+ [in] A MethodDef or FieldDef metadata token that represents the code object to return the RVA for. If the token is a FieldDef, the field must be a global variable.  
   
  `pulCodeRVA`  
- [out] Wskaźnik względne wirtualnym adresem kod obiektu reprezentowanego przez ten token.  
+ [out] A pointer to the relative virtual address of the code object represented by the token.  
   
  `pdwImplFlags`  
- [out] Wskaźnik flagi implementacji metody. Ta wartość jest z [cormethodimpl —](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) wyliczenia. Wartość `pdwImplFlags` jest prawidłowa tylko wtedy, gdy `tk` jest tokenem MethodDef.  
+ [out] A pointer to the implementation flags for the method. This value is a bitmask from the [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md) enumeration. The value of `pdwImplFlags` is valid only if `tk` is a MethodDef token.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

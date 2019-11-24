@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 01837955-ce1e-4068-b338-fd473bd77d1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4d8829c9cb2818eafe98809c9a0d5fd8109d076
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea7605e062eb77e0488b3a9561c4d83be16fa7d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778822"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436708"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>IMetaDataImport::GetTypeRefProps — Metoda
-Pobiera metadane skojarzone z <xref:System.Type> odwołuje się określony token TypeRef.  
+Gets the metadata associated with the <xref:System.Type> referenced by the specified TypeRef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT GetTypeRefProps (
   
 ## <a name="parameters"></a>Parametry  
  `tr`  
- [in] Token TypeRef, który reprezentuje typ, można zwrócić metadanych dla.  
+ [in] The TypeRef token that represents the type to return metadata for.  
   
  `ptkResolutionScope`  
- [out] Wskaźnik do zakresu, w którym odniesienia. Ta wartość jest token elementu AssemblyRef lub element ModuleRef.  
+ [out] A pointer to the scope in which the reference is made. This value is an AssemblyRef or ModuleRef token.  
   
  `szName`  
- [out] Bufor zawierający nazwę typu.  
+ [out] A buffer containing the type name.  
   
  `cchName`  
- [in] Żądany rozmiar w znaków `szName`.  
+ [in] The requested size in wide characters of `szName`.  
   
  `pchName`  
- [out] Rozmiar zwrócony w znaków `szName`.  
+ [out] The returned size in wide characters of `szName`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781897"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450305"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr — Wyliczenie
-Zawiera wartości, które opisują metadane dotyczące pola.  
+Contains values that describe metadata about a field.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,32 +60,32 @@ typedef enum CorFieldAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Określa informacje o ułatwieniach dostępu.|  
-|`fdPrivateScope`|Określa, że pole nie może być przywoływany.|  
-|`fdPrivate`|Określa, że pole jest dostępne tylko dla typu nadrzędnego.|  
-|`fdFamANDAssem`|Określa, że pole jest dostępny przez klasy pochodne w jego zestawie.|  
-|`fdAssembly`|Określa, że pole jest dostępne dla wszystkich typów w jego zestawie.|  
-|`fdFamily`|Określa, że pole jest dostępne tylko dla jego typu i klasach pochodnych.|  
-|`fdFamORAssem`|Określa, że pole jest dostępne, przez klasy pochodne, jak również wszystkie typy w jego zestawie.|  
-|`fdPublic`|Określa, że pole jest dostępne dla wszystkich typów za pomocą widoczność tego zakresu.|  
-|`fdStatic`|Określa, że pole jest elementem członkowskim jego typu, a nie składową wystąpienia.|  
-|`fdInitOnly`|Określa, że pole nie można zmienić po jego zainicjowaniu.|  
-|`fdLiteral`|Określa, że wartość pola jest stałą czasu kompilacji.|  
-|`fdNotSerialized`|Określa, czy pole nie jest serializowana, gdy jej typ jest zdalny.|  
-|`fdSpecialName`|Określa, czy pole ma specjalne i że jego nazwę w tym artykule opisano sposób.|  
-|`fdPinvokeImpl`|Określa, że implementacja pola jest przekazywany za pomocą usług PInvoke.|  
-|`fdReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`fdRTSpecialName`|Określa, że typowe metadanych środowiska wykonawczego języka wewnętrznych interfejsach API należy sprawdzać kodowanie nazwy.|  
-|`fdHasFieldMarshal`|Określa, czy pole zawiera informacje dotyczące organizowania.|  
-|`fdHasDefault`|Określa, że pole ma wartość domyślną.|  
-|`fdHasFieldRVA`|Określa, że pole ma względny adres wirtualny.|  
+|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdPrivateScope`|Specifies that the field cannot be referenced.|  
+|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
+|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
+|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
+|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
+|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
+|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
+|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
+|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
+|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
+|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
+|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
+|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
+|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
+|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdHasDefault`|Specifies that the field has a default value.|  
+|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

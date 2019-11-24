@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 16dc49cb-2c60-4ac8-9c35-020e9afba3f8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d1db08dfcd2adf1247dd717d6c826bce4726b8a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4590d2734ea89bc1bc8a30db1c7ecac5effafd7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777036"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429755"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables — Metoda
-Zwraca wartość zmiennej inną niż lokalna, na jej nadrzędnej i nazwę.  
+Returns a non-local variable, given its parent and name.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT GetVariables (
   
 ## <a name="parameters"></a>Parametry  
  `parent`  
- [in] Element nadrzędny zmiennej.  
+ [in] The parent of the variable.  
   
  `cVars`  
- [in] Rozmiar `pVars` tablicy.  
+ [in] The size of the `pVars` array.  
   
  `pcVars`  
- [out] Wskaźnik do zmiennej, która odbiera liczbę zwracanych w zmiennych `pVars`.  
+ [out] A pointer to the variable that receives the number of variables returned in `pVars`.  
   
  `pVars`  
- [out] Wskaźnik do zmiennej, która odbiera zmienne.  
+ [out] A pointer to the variable that receives the variables.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

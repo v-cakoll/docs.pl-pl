@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8d746e0a-d158-4983-88da-db0a0856bc0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0076b70c85c21f0c4b1fb140b15000f99dbff742
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cb0af78092822875204f45ec3dca1484e5b5fc90
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755137"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427468"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace — Metoda
-Określa, że dany w pełni kwalifikowanej nazwy obszaru nazw jest używany w zakresie leksykalnym aktualnie otwarte. Przestrzeń nazw będzie używany w ramach wszystkie zakresy, które dziedziczą z aktualnie otwartego zakresu. Zamyka bieżący zakres spowoduje również przerwanie użycie przestrzeni nazw.  
+Specifies that the given fully qualified namespace name is being used within the currently open lexical scope. The namespace will be used within all scopes that inherit from the currently open scope. Closing the current scope will also stop the use of the namespace.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +34,13 @@ HRESULT UsingNamespace(
   
 ## <a name="parameters"></a>Parametry  
  `fullName`  
- [in] Wskaźnik do w pełni kwalifikowaną nazwę przestrzeni nazw.  
+ [in] A pointer to the fully qualified name of the namespace.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

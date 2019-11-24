@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e27a83b5-2698-4996-9032-1e0fed8b91ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 831f4665967f2cd07a7ebb4de750fbe456a82261
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ad582fc2fd1bd1d2fc9d5a0d483fdb3a51309a10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781687"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436506"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags — Wyliczenie
-Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
+Contains flag values that control metadata behavior upon opening manifest files.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,26 +50,26 @@ typedef enum CorOpenFlags
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ofRead`|Wskazuje, czy można otworzyć pliku do odczytu tylko.|  
-|`ofWrite`|Wskazuje, że plik powinien zostać otwarty do zapisu.<br /><br /> Jeśli używasz `ofWrite` Flaga podczas otwierania pliku winmd, należy także przekazać `ofNoTransform` flagi.|  
-|`ofReadWriteMask`|Maska do odczytu i zapisu.|  
-|`ofCopyMemory`|Wskazuje, że można odczytać pliku do pamięci. Metadane należy zachować własną kopię.|  
-|`ofCacheImage`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofManifestMetadata`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofReadOnly`|Wskazuje, że dla odczytu, które można otworzyć pliku wywołanie `QueryInterface` dla [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) nie może zostać wykonana.|  
-|`ofTakeOwnership`|Wskazuje, że pamięć została przydzielona za pomocą wywołania [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) i zostanie zwolniona w metadanych.|  
-|`ofNoTypeLib`|Nieaktualne. Ta flaga jest ignorowana.|  
-|`ofNoTransform`|Wskazuje, należy wyłączyć automatyczne transformacje plików winmd. Innymi słowy należy wyłączyć projekcji typu środowiska wykonawczego Windows, aby typ .NET Framework. Aby uzyskać więcej informacji, zobacz [środowiska uruchomieniowego Windows i środowisko CLR - poniżej składniki przy użyciu platformy .NET i środowiska wykonawczego Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
-|`ofReserved1`|Zarezerwowane do użytku wewnętrznego.|  
-|`ofReserved2`|Zarezerwowane do użytku wewnętrznego.|  
-|`ofReserved`|Zarezerwowane do użytku wewnętrznego.|  
+|`ofRead`|Indicates that the file should be opened for reading only.|  
+|`ofWrite`|Indicates that the file should be opened for writing.<br /><br /> If you are using the `ofWrite` flag when opening a .winmd file, you should also pass the `ofNoTransform` flag.|  
+|`ofReadWriteMask`|A mask for reading and writing.|  
+|`ofCopyMemory`|Indicates that the file should be read into memory. Metadata should maintain its own copy.|  
+|`ofCacheImage`|Nieaktualne. This flag is ignored.|  
+|`ofManifestMetadata`|Nieaktualne. This flag is ignored.|  
+|`ofReadOnly`|Indicates that the file should be opened for reading, and that a call to `QueryInterface` for an [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) cannot be made.|  
+|`ofTakeOwnership`|Indicates that the memory was allocated using a call to [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) and will be freed by the metadata.|  
+|`ofNoTypeLib`|Nieaktualne. This flag is ignored.|  
+|`ofNoTransform`|Indicates that automatic transforms of .winmd files should be disabled. In other words, the projection of a Windows Runtime type to a .NET Framework type should be disabled. For more information, see [Windows Runtime and the CLR - Underneath the Hood with .NET and the Windows Runtime](https://docs.microsoft.com/archive/msdn-magazine/2012/windows-8-special-issue/windows-runtime-and-the-clr-underneath-the-hood-with-net-and-the-windows-runtime).|  
+|`ofReserved1`|Reserved for internal use.|  
+|`ofReserved2`|Reserved for internal use.|  
+|`ofReserved`|Reserved for internal use.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

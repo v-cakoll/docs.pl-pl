@@ -1,5 +1,5 @@
 ---
-title: enum — słowo C# kluczowe-odwołanie
+title: enum keyword - C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,83 +8,83 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771864"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428523"
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 
-Słowo kluczowe `enum` jest używane do deklarowania wyliczenia, odrębnego typu, który składa się z zestawu nazwanych stałych nazywanych listą Enumerator.
+The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.
 
-Zazwyczaj najlepszym rozwiązaniem jest zdefiniowanie wyliczenia bezpośrednio w przestrzeni nazw, tak aby wszystkie klasy w przestrzeni nazw mogły uzyskać do nich dostęp z taką samą wygodą. Jednak Wyliczenie może być również zagnieżdżone w obrębie klasy lub struktury.
+Usually it is best to define an enum directly within a namespace so that all classes in the namespace can access it with equal convenience. However, an enum can also be nested within a class or struct.
 
-Domyślnie pierwszy moduł wyliczający ma wartość 0, a wartość każdego kolejnego modułu wyliczającego jest zwiększana o 1. Na przykład w poniższym wyliczeniu `Sat` jest `0`, `Sun` jest `1`, `Mon` jest `2`i tak dalej.
+By default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1. For example, in the following enumeration, `Sat` is `0`, `Sun` is `1`, `Mon` is `2`, and so forth.
 
 ```csharp
 enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Moduły wyliczające mogą używać inicjatorów, aby przesłonić wartości domyślne, jak pokazano w poniższym przykładzie.
+Enumerators can use initializers to override the default values, as shown in the following example.
 
 ```csharp
 enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-W tym wyliczeniu kolejność elementów musi rozpoczynać się od `1`, a nie `0`. Jednakże, w tym stała o wartości 0 jest zalecana. Aby uzyskać więcej informacji, zobacz [typy wyliczeniowe](../../programming-guide/enumeration-types.md).
+In this enumeration, the sequence of elements is forced to start from `1` instead of `0`. However, including a constant that has the value of 0 is recommended. For more information, see [Enumeration Types](../../programming-guide/enumeration-types.md).
 
-Każdy typ wyliczeniowy ma typ podstawowy, który może być dowolnym [typem liczb całkowitych](../builtin-types/integral-numeric-types.md). Typ [char](char.md) nie może być podstawowym typem wyliczenia. Domyślny typ podstawowy elementów wyliczenia to [int](../builtin-types/integral-numeric-types.md). Aby zadeklarować Wyliczenie innego typu całkowitego, takiego jak [Byte](../builtin-types/integral-numeric-types.md), Użyj dwukropka po identyfikatorze, po którym następuje typ, jak pokazano w poniższym przykładzie.
+Every enumeration type has an underlying type, which can be any [integral numeric type](../builtin-types/integral-numeric-types.md). The [char](../builtin-types/char.md) type cannot be an underlying type of an enum. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Do zmiennej typu wyliczenia można przypisać dowolną wartość z zakresu typu bazowego; wartości nie są ograniczone do nazwanych stałych.
+A variable of an enumeration type can be assigned any value in the range of the underlying type; the values are not limited to the named constants.
 
-Wartość domyślna `enum E` jest wartością wygenerowaną przez wyrażenie `(E)0`.
+The default value of an `enum E` is the value produced by the expression `(E)0`.
 
 > [!NOTE]
-> Moduł wyliczający nie może zawierać białych znaków w nazwie.
+> An enumerator cannot contain white space in its name.
 
-Typ podstawowy określa, ile miejsca do magazynowania przydzielono dla każdego modułu wyliczającego. Jednak jawne rzutowanie jest niezbędne do konwersji z typu `enum` na typ całkowity. Na przykład poniższa instrukcja przypisuje moduł wyliczający `Sun` do zmiennej typu [int](../builtin-types/integral-numeric-types.md) przy użyciu rzutowania do konwersji z `enum` do `int`.
+The underlying type specifies how much storage is allocated for each enumerator. However, an explicit cast is necessary to convert from `enum` type to an integral type. For example, the following statement assigns the enumerator `Sun` to a variable of the type [int](../builtin-types/integral-numeric-types.md) by using a cast to convert from `enum` to `int`.
 
 ```csharp
 int x = (int)Day.Sun;
 ```
 
-Po zastosowaniu <xref:System.FlagsAttribute?displayProperty=nameWithType> do wyliczenia zawierającego elementy, które mogą być połączone z operacją bitową `OR`, atrybut ma wpływ na zachowanie `enum`, gdy jest używany z niektórymi narzędziami. Te zmiany można zauważyć przy użyciu narzędzi, takich jak metody klasy <xref:System.Console> i ewaluatora wyrażeń. (Zobacz trzeci przykład).
+When you apply <xref:System.FlagsAttribute?displayProperty=nameWithType> to an enumeration that contains elements that can be combined with a bitwise `OR` operation, the attribute affects the behavior of the `enum` when it is used with some tools. You can notice these changes when you use tools such as the <xref:System.Console> class methods and the Expression Evaluator. (See the third example.)
 
-## <a name="robust-programming"></a>Niezawodne programowanie
+## <a name="robust-programming"></a>Robust programming
 
-Podobnie jak w przypadku każdej stałej, wszystkie odwołania do poszczególnych wartości wyliczenia są konwertowane na literały numeryczne w czasie kompilacji. Może to powodować problemy z wersjami, jak opisano w [stałych](../../programming-guide/classes-and-structs/constants.md).
+Just as with any constant, all references to the individual values of an enum are converted to numeric literals at compile time. This can create potential versioning issues as described in [Constants](../../programming-guide/classes-and-structs/constants.md).
 
-Przypisanie dodatkowych wartości do nowych wersji wyliczeń lub zmiana wartości elementów członkowskich wyliczenia w nowej wersji może spowodować problemy z zależnym kodem źródłowym. Wartości wyliczeniowe często są używane w instrukcjach [Switch](switch.md) . Jeśli dodano dodatkowe elementy do typu `enum`, sekcja domyślna instrukcji switch może zostać nieoczekiwanie wybrana.
+Assigning additional values to new versions of enums, or changing the values of the enum members in a new version, can cause problems for dependent source code. Enum values often are used in [switch](switch.md) statements. If additional elements have been added to the `enum` type, the default section of the switch statement can be selected unexpectedly.
 
-Jeśli inni deweloperzy używają kodu, należy podać wskazówki dotyczące sposobu reakcji ich kodu, jeśli nowe elementy są dodawane do dowolnego typu `enum`.
+If other developers use your code, you should provide guidelines about how their code should react if new elements are added to any `enum` types.
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie jest zadeklarowane Wyliczenie `Day`. Dwa moduły wyliczające są jawnie konwertowane na liczbę całkowitą i są przypisane do zmiennych całkowitych.
+In the following example, an enumeration, `Day`, is declared. Two enumerators are explicitly converted to integer and assigned to integer variables.
 
 [!code-csharp[csrefKeywordsTypes#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#10)]
 
 ## <a name="example"></a>Przykład
 
-W poniższym przykładzie opcja typu podstawowego służy do deklarowania `enum`, których składowe są typu `long`. Należy zauważyć, że mimo że typ podstawowy wyliczenia jest `long`, elementy członkowskie wyliczenia nadal muszą być jawnie konwertowane na typ `long` za pomocą rzutowania.
+In the following example, the base-type option is used to declare an `enum` whose members are of type `long`. Notice that even though the underlying type of the enumeration is `long`, the enumeration members still must be explicitly converted to type `long` by using a cast.
 
 [!code-csharp[csrefKeywordsTypes#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#11)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu ilustruje użycie i efekt atrybutu <xref:System.FlagsAttribute?displayProperty=nameWithType> w deklaracji `enum`.
+The following code example illustrates the use and effect of the <xref:System.FlagsAttribute?displayProperty=nameWithType> attribute on an `enum` declaration.
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
 ## <a name="comments"></a>Komentarze
 
-W przypadku usunięcia `Flags`przykład zostanie wyświetlona następująca wartość:
+If you remove `Flags`, the example displays the following values:
 
 `5`
 
@@ -96,9 +96,9 @@ W przypadku usunięcia `Flags`przykład zostanie wyświetlona następująca wart
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#Odwoła](../index.md)
+- [C# Reference](../index.md)
 - [Typy wyliczeniowe](../../programming-guide/enumeration-types.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Typy całkowite](../builtin-types/integral-numeric-types.md)
+- [Integral types](../builtin-types/integral-numeric-types.md)
 - [Tabela typów wbudowanych](built-in-types-table.md)
-- [Wyliczeniowe konwencje nazewnictwa](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Enum Naming Conventions](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dc29c6a-e2ba-41d8-a1e0-0fdd21421e0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eecb2a5da9dddaccbab7fcc6d74af6e4c6bfb72c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d8c0f69ce407638aed6475c4d84d0e032cc6a8f5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775126"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435980"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a>ICorProfilerModuleEnum::Skip — Metoda
-Przesuwa kursor modułu wyliczającego z jego bieżącej pozycji, tak, aby określoną liczbę elementów są pomijane.  
+Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -35,27 +33,27 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba elementów, które mają zostać pominięte.  
+ [in] The number of elements to be skipped.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`celt` elementy zostały pominięte.|  
-|S_FALSE|Mniej niż `celt` elementy zostały pominięte, co oznacza, że nie istnieją żadne więcej elementów.|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
 ## <a name="remarks"></a>Uwagi  
- Nowe położenie kursora ten moduł wyliczający jest (bieżącej pozycji) + `celt`.  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

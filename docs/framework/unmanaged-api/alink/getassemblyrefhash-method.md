@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d19eebaa3aa0ebb6f9807f0cf277b7ed6183c148
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777192"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433877"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash — Metoda
-Pobiera obiekt BLOB mieszania dla danego zestawu.  
+Retrieves a hash blob for a given assembly.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT GetAssemblyRefHash(
   
 ## <a name="parameters"></a>Parametry  
  `FileToken`  
- Identyfikator zestawu, do którego odwołuje się skrót.  
+ ID of assembly to which the hash will refer.  
   
  `ppvHash`  
- Odbiera wynikowy obiekt BLOB.  
+ Receives the resulting hash blob.  
   
  `pcbHash`  
- Odbiera rozmiar, w bajtach, obiektu BLOB mieszania.  
+ Receives size, in bytes, of hash blob.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

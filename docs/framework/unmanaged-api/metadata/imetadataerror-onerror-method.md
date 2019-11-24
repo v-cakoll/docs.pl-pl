@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1e744b8-a6fb-4d9c-a971-8babc875d8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 42cc0896dce713daed310f07d39a02bfb7386030
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f10c55abcc044b5bbdbb940001a25f530a4688e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777094"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431221"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError — Metoda
-Zapewnia powiadomienie błędów występujących podczas scalania metadanych.  
+Provides notification of errors that occur during the metadata merge.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT OnError (
   
 ## <a name="parameters"></a>Parametry  
  `hrError`  
- [in] Wartość błędu HRESULT zwracane do wywoływania metody.  
+ [in] The HRESULT error value returned to the calling method.  
   
  `token`  
- [in] Token metadanych obiektu kod, który został scalane, gdy wystąpił błąd.  
+ [in] The metadata token of the code object that was being merged when the error occurred.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

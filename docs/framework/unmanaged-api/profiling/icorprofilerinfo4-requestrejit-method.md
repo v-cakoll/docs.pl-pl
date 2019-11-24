@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 781ed736-f30c-4816-920e-3552e36542c6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f4ad89c821e9b8e9b52e3369a347eae27ab2231
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: eb4d5e1c4efd67914df95868b67ec5cc3fe6139a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748674"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444817"
 ---
 # <a name="icorprofilerinfo4requestrejit-method"></a>ICorProfilerInfo4::RequestReJIT — Metoda
-Żąda JIT — rekompilacja wszystkich wystąpień określonych funkcji.  
+Requests a JIT recompilation of all instances of the specified functions.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,39 +36,39 @@ HRESULT RequestReJIT (
   
 ## <a name="parameters"></a>Parametry  
  `cFunctions`  
- [in] Liczba funkcji ponownej kompilacji.  
+ [in] The number of functions to recompile.  
   
  `moduleIds`  
- [in] Określa `moduleId` część (`module`, `methodDef`) pary, które identyfikują funkcji, które mają być ponownie kompilowane.  
+ [in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.  
   
  `methodIds`  
- [in] Określa `methodId` część (`module`, `methodDef`) pary, które identyfikują funkcji, które mają być ponownie kompilowane.  
+ [in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be recompiled.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Aby oznaczyć wszystkie metody JIT — rekompilacja nastąpiła próba. Program profilujący musi zaimplementować [icorprofilercallback4::rejiterror —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) metodę pozwala ustalić metody, które zostały pomyślnie oznaczona do ponownej kompilacji JIT.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Program profilujący musi zaimplementować [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfejsu dla tego wywołania są obsługiwane.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT — rekompilacja nie została włączona. JIT — rekompilacja podczas inicjowania należy włączyć, używając [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby ustawić `COR_PRF_ENABLE_REJIT` flagi.|  
-|E_INVALIDARG|`cFunctions` ma wartość 0, lub `moduleIds` lub `methodIds` jest `NULL`.|  
+|S_OK|An attempt was made to mark all the methods for JIT recompilation. The profiler must implement the [ICorProfilerCallback4::ReJITError](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejiterror-method.md) method to determine which methods were successfully marked for JIT recompilation.|  
+|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JIT recompilation has not been enabled. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
+|E_INVALIDARG|`cFunctions` is 0, or `moduleIds` or `methodIds` is `NULL`.|  
 |||  
-|E_OUTOFMEMORY|Nie można ukończyć żądania, ponieważ zabrakło jej pamięci CLR.|  
+|E_OUTOFMEMORY|The CLR was unable to complete the request because it ran out of memory.|  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `RequestReJIT` do środowiska uruchomieniowego określony zestaw funkcji, należy ponownie skompilować. Profiler kodu może używać [icorprofilerfunctioncontrol —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interfejsu, aby dopasować kod, który jest generowany, gdy funkcje są ponownie kompilowane. To nie wpływa na aktualnie wykonywanej funkcji, wywołania tylko przyszłych funkcji. Jeśli dowolny z określonych funkcji poprzednio ponownie skompilowana JIT, żądanie ponownej kompilacji jest odpowiednikiem Przywracanie i konieczności ponownego kompilowania funkcji. Aby zachować stosownie, kiedy kompilator JIT kompiluje oryginalnej wersji funkcji, traktuje oryginalnej wersji jego wywoływane dla wbudowanie decyzji. Gdy kompilator JIT, następuje rekompilacja funkcji, uzna aktualne wersje (oryginalna lub ponownie skompilowanymi) jej wywoływane dla wbudowanie.  
+ Call `RequestReJIT` to have the runtime recompile a specified set of functions. A code profiler can then use the [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface to adjust the code that is generated when the functions are recompiled. This does not affect currently executing functions, only future function invocations. If any of the specified functions has previously been JIT-recompiled, requesting a recompilation is equivalent to reverting and recompiling the function. To preserve reversibility, when the JIT compiler compiles the original version of a function, it considers only the original versions of its callees for inlining decisions. When the JIT compiler recompiles a function, it considers the current versions (recompiled or original) of its callees for inlining.  
   
- Program profilujący zazwyczaj wywołuje `RequestReJIT` w odpowiedzi na żądanie, czy programu profilującego Instrumentację co najmniej jedną metodę wprowadzania danych przez użytkownika. `RequestReJIT` Zazwyczaj wstrzymuje działanie środowiska uruchomieniowego w celu wykonania niektórych prac i może potencjalnie wyzwalacza wyrzucania elementów bezużytecznych. W efekcie program profilujący powinien wywoływać `RequestReJIT` z wątku on wcześniej utworzony, a nie z utworzonego przez CLR wątku, jest w trakcie wykonywania zwrotnym profilera.  
+ A profiler typically calls `RequestReJIT` in response to user input requesting that the profiler instrument one or more methods. `RequestReJIT` typically suspends the runtime in order to do some of its work, and can potentially trigger a garbage collection. As such, the profiler should call `RequestReJIT` from a thread it previously created, and not from a CLR-created thread that is currently executing a profiler callback.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

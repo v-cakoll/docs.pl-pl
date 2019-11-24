@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bda75017-739f-4ce5-9000-f3b526e8473c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ebf8c736cdd1362cae1b1e0b734ce14bea49b18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b127c9a6aac0a0fefe25faf294791dcd2c8e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751887"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436035"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo — Metoda
-Pobiera szczegółowe informacje dotyczące obiektu array.  
+Gets detailed information about an array object.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,31 +38,31 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parametry  
  `objectId`  
- [in] Identyfikator obiektu prawidłową tablicą.  
+ [in] The ID of a valid array object.  
   
  `cDimensions`  
- [in] Ranga (liczba wymiarów) tablicy.  
+ [in] The rank (number of dimensions) of the array.  
   
  `pDimensionSizes`  
- [out] Tablica, która zawiera liczby całkowite, każdy reprezentuje rozmiar wymiaru tablicy.  
+ [out] An array that contains integers, each representing the size of a dimension of the array.  
   
  `pDimensionLowerBounds`  
- [out] Tablica, która zawiera liczby całkowite, każda reprezentująca dolna granica wymiaru tablicy.  
+ [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
   
  `ppData`  
- [out] Wskaźnik na adres surowy bufor dla tablicy, która jest poukładany zgodnie z opisem w C++ Konwencji.  
+ [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
   
 ## <a name="remarks"></a>Uwagi  
- `pDimensionSizes` i `pDimensionLowerBounds` są równoległe tablic, więc elementy znajdujące się w ten sam indeks tablic są właściwości tego samego obiektu.  
+ The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

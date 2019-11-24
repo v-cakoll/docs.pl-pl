@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c714915651d8660a739d8ee6518fc3814af4c08d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782415"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437650"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>IMetaDataImport::GetCustomAttributeProps — Metoda
-Pobiera wartość atrybutu niestandardowego, biorąc pod uwagę jego token metadanych.  
+Gets the value of the custom attribute, given its metadata token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,31 +39,31 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parametry  
  `cv`  
- [in] Token metadanych, który reprezentuje atrybut niestandardowy do pobrania.  
+ [in] A metadata token that represents the custom attribute to be retrieved.  
   
  `ptkObj`  
- [out, opcjonalny] Token metadanych reprezentujący obiekt, który modyfikuje atrybutu niestandardowego. Ta wartość może być dowolnego typu tokenu metadanych z wyjątkiem `mdCustomAttribute`.  
+ [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
   
  `ptkType`  
- [out, opcjonalny] `mdMethodDef` Lub `mdMemberRef` metadanych token reprezentujący <xref:System.Type> zwrócone atrybutu niestandardowego.  
+ [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
   
  `ppBlob`  
- [out, opcjonalny] Wskaźnik do tablicy danych, która jest wartością atrybutu niestandardowego.  
+ [out, optional] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbSize`  
- [out, opcjonalny] Rozmiar w bajtach dane zwrócone w *`ppBlob`.  
+ [out, optional] The size in bytes of the data returned in *`ppBlob`.  
   
 ## <a name="remarks"></a>Uwagi  
- Atrybut niestandardowy jest przechowywany jako tablicę danych, formatu, który zrozumieniu przez aparat metadanych.  
+ A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,86 +1,86 @@
 ---
-title: Aplikacja .NET Core Hello world z Visual Basic w programie Visual Studio 2017
-description: Dowiedz się, jak utworzyć prostą aplikację konsolową platformy .NET Core z Visual Basic przy użyciu programu Visual Studio 2017.
+title: .NET Core Hello World application with Visual Basic in Visual Studio 2017
+description: Learn how to build a simple .NET Core console application with Visual Basic using Visual Studio 2017.
 ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f5b422f1d5c4843d6fadb5973eaf16e50ee961
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100875"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428566"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Tworzenie aplikacji Hello world Visual Basic przy użyciu zestaw .NET Core SDK w programie Visual Studio 2017
+# <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Build a Visual Basic Hello World application with the .NET Core SDK in Visual Studio 2017
 
-W tym temacie przedstawiono krok po kroku wprowadzenie do kompilowania, debugowania i publikowania prostej aplikacji konsolowej platformy .NET Core przy użyciu Visual Basic w programie Visual Studio 2017. Program Visual Studio 2017 udostępnia w pełni funkcjonalne środowisko programistyczne do tworzenia aplikacji platformy .NET Core. Tak długo, jak aplikacja nie ma zależności specyficznych dla platformy, aplikacja może działać na dowolnej platformie, która jest przeznaczona dla platformy .NET Core i w dowolnym systemie, w którym zainstalowano program .NET Core.
+This topic provides a step-by-step introduction to building, debugging, and publishing a simple .NET Core console application using Visual Basic in Visual Studio 2017. Visual Studio 2017 provides a full-featured development environment for building .NET Core applications. As long as the application doesn't have platform-specific dependencies, the application can run on any platform that .NET Core targets and on any system that has .NET Core installed.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-[Program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) z zainstalowanym obciążeniem "Programowanie dla wielu platform w środowisku .NET Core". Aplikację można opracowywać przy użyciu platformy .NET Core 2,1 lub nowszej.
+[Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) with the ".NET Core cross-platform development" workload installed. You can develop your app with .NET Core 2.1 or later versions.
 
-Aby uzyskać więcej informacji, zobacz [wymagania wstępne dotyczące platformy .NET Core w systemie Windows](../windows-prerequisites.md).
+For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-## <a name="a-simple-hello-world-application"></a>Prosta aplikacja Hello world
+## <a name="a-simple-hello-world-application"></a>A simple Hello World application
 
-Zacznij od utworzenia prostej aplikacji konsolowej "Hello world". Wykonaj następujące kroki:
+Begin by creating a simple "Hello World" console application. Wykonaj następujące kroki:
 
-1. Uruchom program Visual Studio 2017. Wybierz pozycję **plik** > **Nowy** > **projekt** na pasku menu. W oknie dialogowym *Nowy projekt** wybierz węzeł **Visual Basic** , po którym następuje węzeł **.NET Core** . Następnie wybierz szablon projektu **aplikacja konsoli (.NET Core)** . W polu tekstowym **Nazwa** wpisz "HelloWorld". Wybierz przycisk **OK** .
+1. Launch Visual Studio 2017. Select **File** > **New** > **Project** from the menu bar. In the *New Project** dialog, select the **Visual Basic** node followed by the **.NET Core** node. Then select the **Console App (.NET Core)** project template. In the **Name** text box, type "HelloWorld". Select the **OK** button.
 
-   ![Okno dialogowe nowego projektu z wybraną aplikacją konsolową](./media/vb-with-visual-studio/visual-studio-new-project.png)
+   ![New Project dialog with Console App selected](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
-1. Program Visual Studio używa szablonu do utworzenia projektu. Szablon aplikacji konsoli Visual Basic dla platformy .NET Core automatycznie definiuje klasę, `Program`, przy użyciu pojedynczej metody, `Main`, która przyjmuje tablicę <xref:System.String> jako argument. `Main` jest punktem wejścia aplikacji, metoda, która jest wywoływana automatycznie przez środowisko uruchomieniowe podczas uruchamiania aplikacji. Wszystkie argumenty wiersza polecenia dostarczone podczas uruchamiania aplikacji są dostępne w tablicy *args* .
+1. Visual Studio uses the template to create your project. The Visual Basic Console Application template for .NET Core automatically defines a class, `Program`, with a single method, `Main`, that takes a <xref:System.String> array as an argument. `Main` is the application entry point, the method that's called automatically by the runtime when it launches the application. Any command-line arguments supplied when the application is launched are available in the *args* array.
 
-   ![Program Visual Studio i nowy projekt HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
+   ![Visual Studio and the new HelloWorld project](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
-   Szablon tworzy prostą aplikację "Hello world". Wywołuje metodę <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>, aby wyświetlić ciąg literału "Hello world!" w oknie konsoli. Wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi, można uruchomić program w trybie debugowania. Jeśli to zrobisz, okno konsoli będzie widoczne tylko dla krótkiego interwału czasu przed jego zamknięciem. Dzieje się tak, ponieważ metoda `Main` kończy działanie, a aplikacja kończy się zaraz po wykonaniu pojedynczej instrukcji w metodzie `Main`.
+   The template creates a simple "Hello World" application. It calls the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method to display the literal string "Hello World!" in the console window. By selecting the **HelloWorld** button with the green arrow on the toolbar, you can run the program in Debug mode. If you do, the console window is visible for only a brief time interval before it closes. This occurs because the `Main` method terminates and the application ends as soon as the single statement in the `Main` method executes.
 
-1. Aby spowodować wstrzymanie aplikacji przed zamknięciem okna konsoli, Dodaj następujący kod bezpośrednio po wywołaniu metody <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType>:
+1. To cause the application to pause before it closes the console window, add the following code immediately after the call to the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method:
 
    ```vb
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
 
-   Ten kod poprosi użytkownika o naciśnięcie dowolnego klawisza, a następnie wstrzymuje program do momentu naciśnięcia klawisza.
+   This code prompts the user to press any key and then pauses the program until a key is pressed.
 
-1. Na pasku menu wybierz kolejno opcje **kompiluj** > **Kompiluj rozwiązanie**. Spowoduje to skompilowanie programu do języka pośredniego (IL), który jest konwertowany na kod binarny przez kompilator just-in-Time (JIT).
+1. On the menu bar, select **Build** > **Build Solution**. This compiles your program into an intermediate language (IL) that's converted into binary code by a just-in-time (JIT) compiler.
 
-1. Uruchom program, wybierając przycisk **HelloWorld** z zieloną strzałką na pasku narzędzi.
+1. Run the program by selecting the **HelloWorld** button with the green arrow on the toolbar.
 
-   ![Okno konsoli z pokazanymi Hello world naciśnij dowolny klawisz, aby kontynuować](./media/with-visual-studio/hello-world-console.png)
+   ![Console window showing Hello World Press any key to continue](./media/with-visual-studio/hello-world-console.png)
 
-1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
+1. Press any key to close the console window.
 
-## <a name="enhancing-the-hello-world-application"></a>Ulepszanie aplikacji Hello world
+## <a name="enhancing-the-hello-world-application"></a>Enhancing the Hello World application
 
-Zwiększ swoją aplikację, aby monitować użytkownika o jego nazwę i wyświetlić ją wraz z datą i godziną. Aby zmodyfikować i przetestować program, wykonaj następujące czynności:
+Enhance your application to prompt the user for his or her name and to display it along with the date and time. To modify and test the program, do the following:
 
-1. Wprowadź następujący kod Visual Basic w oknie kodu bezpośrednio po nawiasie otwierającym, który następuje po wierszu `Sub Main(args As String())` i przed pierwszym nawiasem zamykającym:
+1. Enter the following Visual Basic code in the code window immediately after the opening bracket that follows the `Sub Main(args As String())` line and before the first closing bracket:
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   Ten kod zastępuje zawartość metody `Main`.
+   This code replaces the contents of the `Main` method.
 
-   ![Plik programu Visual Studio ze zaktualizowaną metodą Main](./media/vb-with-visual-studio/visual-basic-code-window.png)
+   ![Visual Studio Program file with updated Main method](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
-   Ten kod wyświetla "co to jest Twoja nazwa?" w oknie konsoli i czeka, aż użytkownik wprowadzi ciąg, a następnie klawisz ENTER. Ten ciąg jest przechowywany w zmiennej o nazwie `name`. Pobiera również wartość właściwości <xref:System.DateTime.Now?displayProperty=nameWithType>, która zawiera bieżący czas lokalny i przypisuje go do zmiennej o nazwie `currentDate`. Na koniec używa [ciągu interpolowanego](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) , aby wyświetlić te wartości w oknie konsoli.
+   This code displays "What is your name?" in the console window and waits until the user enters a string followed by the Enter key. It stores this string into a variable named `name`. It also retrieves the value of the <xref:System.DateTime.Now?displayProperty=nameWithType> property, which contains the current local time, and assigns it to a variable named `currentDate`. Finally, it uses an [interpolated string](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) to display these values in the console window.
 
-1. Skompiluj program, wybierając opcję **kompiluj** > **Kompiluj rozwiązanie**.
+1. Compile the program by choosing **Build** > **Build Solution**.
 
-1. Uruchom program w trybie debugowania w programie Visual Studio, wybierając zieloną strzałkę na pasku narzędzi, naciskając klawisz F5 lub wybierając element menu **debuguj** > **Rozpocznij debugowanie** . Odpowiedz na monit, wprowadzając nazwę i naciskając klawisz ENTER.
+1. Run the program in Debug mode in Visual Studio by selecting the green arrow on the toolbar, pressing F5, or choosing the **Debug** > **Start Debugging** menu item. Respond to the prompt by entering a name and pressing the Enter key.
 
-   ![Okno konsoli ze zmodyfikowanym wyjściem programu](./media/with-visual-studio/hello-world-update.png)
+   ![Console window with modified program output](./media/with-visual-studio/hello-world-update.png)
 
-1. Naciśnij dowolny klawisz, aby zamknąć okno konsoli.
+1. Press any key to close the console window.
 
-Aplikacja została utworzona i uruchomiona. Aby opracować profesjonalną aplikację, wykonaj kilka dodatkowych czynności, aby przygotować aplikację do wydania:
+You've created and run your application. To develop a professional application, take some additional steps to make your application ready for release:
 
-- Aby debugować aplikację, zobacz [debugowanie aplikacji .NET Core Hello World przy użyciu programu Visual Studio 2017](debugging-with-visual-studio.md).
+- To debug your application, see [Debug your .NET Core Hello World application using Visual Studio 2017](debugging-with-visual-studio.md).
 
-- Aby opublikować wersję dystrybucyjną aplikacji, zobacz temat [publikowanie aplikacji .NET Core Hello World przy użyciu programu Visual Studio 2017](publishing-with-visual-studio.md).
+- To publish a distributable version of your application, see [Publish your .NET Core Hello World application with Visual Studio 2017](publishing-with-visual-studio.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-Zamiast aplikacji konsolowej, można również utworzyć bibliotekę klas .NET Standard z Visual Basic, .NET Core i Visual Studio 2017. Aby zapoznać się z krok po kroku, zobacz [Tworzenie biblioteki .NET Standard z Visual Basic i zestaw .NET Core SDK w programie Visual Studio 2017](vb-library-with-visual-studio.md).
+Instead of a console application, you can also build a .NET Standard class library with Visual Basic, .NET Core, and Visual Studio 2017. For a step-by-step introduction, see [Build a .NET Standard library with Visual Basic and .NET Core SDK in Visual Studio 2017](vb-library-with-visual-studio.md).

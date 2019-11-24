@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e5d777c5-d450-4c0f-999c-b3953ee22cfb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ef32a963b73f2109b9747ef303e8ccd6a729838
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4ac1fc0b3567c49dfb36d2886926bee72d62a8dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778260"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446066"
 ---
 # <a name="isymunmanagedvariablegetendoffset-method"></a>ISymUnmanagedVariable::GetEndOffset — Metoda
-Pobiera końcowy przesunięcie tej zmiennej w ramach jego elementu nadrzędnego. Jeśli jest to zmienna lokalna w zakresie, przesunięcia końcowego będą wchodzić w przesunięcia zdefiniowana dla zakresu.  
+Gets the end offset of this variable within its parent. If this is a local variable within a scope, the end offset will fall within the offsets defined for the scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +34,13 @@ HRESULT GetEndOffset(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do `ULONG32` odbierająca przesunięcia końcowego.  
+ [out] A pointer to a `ULONG32` that receives the end offset.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

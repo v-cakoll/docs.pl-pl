@@ -1,64 +1,64 @@
 ---
 title: Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
-description: W tym temacie omówiono tworzenie prostej aplikacji konsolowej przy użyciu Visual Studio dla komputerów Mac i .NET Core.
+description: This topic walks you through building a simple console application using Visual Studio for Mac and .NET Core.
 author: mairaw
 ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 77e676c327b62369e7ddb9444bf8f246d3c5c2e8
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182502"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428585"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Rozpoczynanie pracy z platformą .NET Core w systemie macOS przy użyciu programu Visual Studio dla komputerów Mac
 
-Visual Studio dla komputerów Mac udostępnia w pełni funkcjonalne zintegrowane środowisko programistyczne (IDE) do tworzenia aplikacji platformy .NET Core. W tym temacie omówiono tworzenie prostej aplikacji konsolowej przy użyciu Visual Studio dla komputerów Mac i .NET Core.
+Visual Studio for Mac provides a full-featured Integrated Development Environment (IDE) for developing .NET Core applications. This topic walks you through building a simple console application using Visual Studio for Mac and .NET Core.
 
 > [!NOTE]
-> Opinie są wysoce wyceniane. Istnieją dwa sposoby przekazywania opinii zespołowi programistycznemu na Visual Studio dla komputerów Mac:
+> Your feedback is highly valued. There are two ways you can provide feedback to the development team on Visual Studio for Mac:
 >
-> * W Visual Studio dla komputerów Mac wybierz pozycję **Pomoc** > **Zgłoś problem** z menu lub **Zgłoś problem** na ekranie powitalnym, co spowoduje otwarcie okna do zgłoszenia usterki. Swoje opinie możesz śledzić w portalu [Społeczność deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html).
-> * Aby skorzystać z sugestii, wybierz pozycję **Pomoc** > **Podaj sugestię** z menu lub **Podaj sugestię** na ekranie powitalnym, co spowoduje przejście do [strony internetowej społeczność deweloperów Visual Studio dla komputerów Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
+> * In Visual Studio for Mac, select **Help** > **Report a Problem** from the menu or **Report a Problem** from the Welcome screen, which will open a window for filing a bug report. Swoje opinie możesz śledzić w portalu [Społeczność deweloperów](https://developercommunity.visualstudio.com/spaces/8/index.html).
+> * To make a suggestion, select **Help** > **Provide a Suggestion** from the menu or **Provide a Suggestion** from the Welcome screen, which will take you to the [Visual Studio for Mac Developer Community webpage](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Zapoznaj się z tematem [wymagania wstępne dotyczące programu .NET Core w systemie Mac](../macos-prerequisites.md) .
+See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
 
-Zapoznaj się z artykułem [obsługi .NET Core](/visualstudio/mac/net-core-support) , aby upewnić się, że używasz obsługiwanej wersji programu .NET Core.
+Check the [.NET Core Support](/visualstudio/mac/net-core-support) article to ensure you're using a supported version of .NET Core.
 
 ## <a name="get-started"></a>Wprowadzenie
 
-Jeśli zainstalowano już wymagania wstępne i Visual Studio dla komputerów Mac, Pomiń tę sekcję i Kontynuuj, aby [utworzyć projekt](#creating-a-project). Wykonaj następujące kroki, aby zainstalować wymagania wstępne i Visual Studio dla komputerów Mac:
+If you've already installed the prerequisites and Visual Studio for Mac, skip this section and proceed to [Creating a project](#creating-a-project). Follow these steps to install the prerequisites and Visual Studio for Mac:
 
-Pobierz [instalatora Visual Studio dla komputerów Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Uruchom Instalatora. Przeczytaj i zaakceptuj umowę licencyjną. Podczas instalacji wybierz opcję zainstalowania platformy .NET Core. Masz możliwość zainstalowania platformy Xamarin, wieloplatformowej technologii tworzenia aplikacji mobilnych. Instalowanie programu Xamarin i powiązanych z nim składników jest opcjonalne w przypadku programowania w środowisku .NET Core. Aby zapoznać się z procesem instalacji Visual Studio dla komputerów Mac, zobacz [dokumentację usługi Visual Studio dla komputerów Mac](/visualstudio/mac/). Po zakończeniu instalacji uruchom Visual Studio dla komputerów Mac IDE.
+Download the [Visual Studio for Mac installer](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Run the installer. Read and accept the license agreement. During the install, select the option to install .NET Core. You're provided the opportunity to install Xamarin, a cross-platform mobile app development technology. Installing Xamarin and its related components is optional for .NET Core development. For a walk-through of the Visual Studio for Mac install process, see [Visual Studio for Mac documentation](/visualstudio/mac/). When the install is complete, start the Visual Studio for Mac IDE.
 
-## <a name="creating-a-project"></a>Tworzenie projektu
+## <a name="creating-a-project"></a>Creating a project
 
-1. W oknie uruchamiania wybierz pozycję **Nowy** .
+1. Select **New** on the Start Window.
 
-   ![Przycisk Nowy na ekranie startowym Visual Studio dla komputerów Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![New button on the Visual Studio for Mac Start screen](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. W oknie dialogowym **Nowy projekt** wybierz pozycję **aplikacja** w węźle **.NET Core** . Wybierz szablon **aplikacji konsolowej** , a następnie przycisk **dalej**.
+1. In the **New Project** dialog, select **App** under the **.NET Core** node. Select the **Console Application** template followed by **Next**.
 
-   ![Lista nowych szablonów projektu](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+   ![New project templates list](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
-1. Jeśli masz zainstalowaną więcej niż jedną wersję programu .NET Core, Wybierz platformę docelową dla projektu.
+1. If you have more than one version of .NET Core installed, select the target framework for your project.
 
-1. Wpisz "HelloWorld" dla **nazwy projektu**. Wybierz pozycję **Utwórz**.
+1. Type "HelloWorld" for the **Project Name**. Select **Create**.
 
-   ![Okno dialogowe Konfigurowanie nowej aplikacji konsolowej](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
+   ![Configure your new Console Application dialog](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
-1. Zaczekaj na przywrócenie zależności projektu. Projekt ma C# jeden plik, *program.cs* `Program` , zawierający klasę z `Main` metodą. `Console.WriteLine` Instrukcja zwróci wartość "Hello World!" do konsoli programu, gdy aplikacja jest uruchomiona.
+1. Wait while the project's dependencies are restored. The project has a single C# file, *Program.cs*, containing a `Program` class with a `Main` method. The `Console.WriteLine` statement will output "Hello World!" to the console when the app is run.
 
-   ![Okno główne z otwartym plikiem Program.cs](./media/using-on-mac-vs/visual-studio-mac-editor.png)
+   ![Main window with the Program.cs file open](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 
-## <a name="run-the-application"></a>Uruchamianie aplikacji
+## <a name="run-the-application"></a>Run the application
 
-Uruchom aplikację w trybie debugowania za pomocą polecenia ⌘ ↵ (Command + Enter) lub w trybie wydania przy użyciu ⌥ ⌘ ↵ (Option + Command + Enter).
+Run the app in Debug mode using ⌘ ↵ (command + enter) or in Release mode using ⌥ ⌘ ↵ (option + command + enter).
 
-![W okienku danych wyjściowych aplikacji zostanie wyświetlona Hello world!](./media/using-on-mac-vs/visual-studio-mac-output.png)
+![The Application Output pane shows Hello World!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 
 ## <a name="next-step"></a>Następny krok
 
-[Tworzenie kompletnego rozwiązania .NET Core w systemie macOS za pomocą Visual Studio dla komputerów Mac](using-on-mac-vs-full-solution.md) tematu pokazuje, jak utworzyć kompletne rozwiązanie .NET Core, które obejmuje bibliotekę wielokrotnego użytku i testy jednostkowe.
+The [Building a complete .NET Core solution on macOS using Visual Studio for Mac](using-on-mac-vs-full-solution.md) topic shows you how to build a complete .NET Core solution that includes a reusable library and unit testing.

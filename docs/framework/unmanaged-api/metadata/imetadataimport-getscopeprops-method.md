@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8ba42d2-d9fa-43cb-bbc0-f33e1e592cb6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 061c482a7e674fd425fe627c741a11b39864ba5c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: af1c3d599c5280e584ffb842c96c70a7c3d4ed08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778863"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436878"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>IMetaDataImport::GetScopeProps — Metoda
-Pobiera nazwę i opcjonalnie identyfikator wersji zestaw lub moduł w bieżącym zakresie metadanych.  
+Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,28 +38,28 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- [out] Bufor nazwy zestawu lub modułu.  
+ [out] A buffer for the assembly or module name.  
   
  `cchName`  
- [in] Rozmiar w znaków `szName`.  
+ [in] The size in wide characters of `szName`.  
   
  `pchName`  
- [out] Liczba znaków dwubajtowych zwracane w `szName`.  
+ [out] The number of wide characters returned in `szName`.  
   
  `pmvid`  
- [out, opcjonalny] Wskaźnik na identyfikator GUID, który unikatowo identyfikuje wersję zestawu lub modułu.  
+ [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
   
 ## <a name="remarks"></a>Uwagi  
- [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) metoda jest używana do ustawiania tych właściwości.  
+ The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

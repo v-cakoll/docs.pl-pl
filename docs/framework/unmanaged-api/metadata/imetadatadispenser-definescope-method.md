@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1763f9341af2d90cf465cb554bf7f282a4d92058
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 381c38542dcde242c0a1a4e71e9b99316328159d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777808"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436245"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope — Metoda
-Tworzy nowy obszar w pamięci, w którym można tworzyć nowe metadane.  
+Creates a new area in memory in which you can create new metadata.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +38,32 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>Parametry  
  `rclsid`  
- [in] Identyfikator CLSID wersję struktury metadanych, ma zostać utworzony. Ta wartość musi być CLSID_CorMetaDataRuntime dla platformy .NET Framework w wersji 2.0.  
+ [in] The CLSID of the version of metadata structures to be created. This value must be CLSID_CorMetaDataRuntime for the .NET Framework version 2.0.  
   
  `dwCreateFlags`  
- [in] Flagi, które określają opcje. Ta wartość musi mieć wartość zero dla programu .NET Framework 2.0.  
+ [in] Flags that specify options. This value must be zero for the .NET Framework 2.0.  
   
  `riid`  
- [in] IID interfejsu żądaną metadanych ma zostać zwrócona; obiekt wywołujący użyje interfejsu można utworzyć nowego metadanych.  
+ [in] The IID of the desired metadata interface to be returned; the caller will use the interface to create the new metadata.  
   
- Wartość `riid` należy określić jeden z interfejsów "Dodaj". Prawidłowe wartości to IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit lub IID_IMetaDataEmit2.  
+ The value of `riid` must specify one of the "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataAssemblyEmit, or IID_IMetaDataEmit2.  
   
  `ppIUnk`  
- [out] Wskaźnik do interfejsu zwrócone.  
+ [out] The pointer to the returned interface.  
   
 ## <a name="remarks"></a>Uwagi  
- `DefineScope` Tworzy zestaw tabel metadanych w pamięci, a następnie generuje unikatowy identyfikator GUID (identyfikator wersji modułu lub identyfikatora MVID) metadanych i tworzy wpis w tabeli modułu dla jednostki kompilacji jest emitowane.  
+ `DefineScope` creates a set of in-memory metadata tables, generates a unique GUID (module version identifier, or MVID) for the metadata, and creates an entry in the module table for the compilation unit being emitted.  
   
- Możesz dołączyć atrybuty do zakresu metadanych jako całość przy użyciu [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) lub [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) metodę, zgodnie z potrzebami.  
+ You can attach attributes to the metadata scope as a whole by using the [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) or [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md) method, as appropriate.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

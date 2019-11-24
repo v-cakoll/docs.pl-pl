@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2060a70e2a3ce355f43ade67e6d6843670e00ad3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778848"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436847"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken — Metoda
-Pobiera podpisu binarne metadane skojarzone z określonym tokenem.  
+Gets the binary metadata signature associated with the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parametry  
  `mdSig`  
- [in] Token, który zwraca podpis binarne metadanych dla.  
+ [in] The token to return the binary metadata signature for.  
   
  `ppvSig`  
- [out] Wskaźnik do podpisu zwróconych metadanych.  
+ [out] A pointer to the returned metadata signature.  
   
  `pcbSig`  
- [out] Rozmiar w bajtach sygnatura binarne metadanych.  
+ [out] The size in bytes of the binary metadata signature.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

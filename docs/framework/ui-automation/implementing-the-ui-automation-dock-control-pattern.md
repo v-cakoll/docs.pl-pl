@@ -6,54 +6,54 @@ helpviewer_keywords:
 - dock control pattern
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
-ms.openlocfilehash: b72d7f9a68c2309f2bd1a73741ac621cde1f3115
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 1e2084483a34709392b9d3ceab02472c36944132
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043472"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435439"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementacja wzorca formantu dokowania automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych <xref:System.Windows.Automation> w przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]programie, [Zobacz interfejs API usługi Windows Automation: Automatyzacja](https://go.microsoft.com/fwlink/?LinkID=156746)interfejsu użytkownika.  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie przedstawiono wskazówki i konwencje <xref:System.Windows.Automation.Provider.IDockProvider>dotyczące wdrażania, w tym informacje o właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
+ This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IDockProvider>, including information about properties. Links to additional references are listed at the end of the topic.  
   
- Wzorzec <xref:System.Windows.Automation.DockPattern> kontrolki służy do uwidaczniania właściwości dokowania kontrolki wewnątrz kontenera dokowania. Kontener dokowania jest formantem, który umożliwia rozmieszczenie elementów podrzędnych w poziomie i w pionie względem siebie. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
+ The <xref:System.Windows.Automation.DockPattern> control pattern is used to expose the dock properties of a control within a docking container. A docking container is a control that allows you to arrange child elements horizontally and vertically, relative to each other. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Dokowanie kontenera z dwoma zadokowanymi elementami podrzędnymi.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
-Przykład dokowania z programu Visual Studio, w którym znajduje się okno "Widok klasy". DockPosition. Right i okno "Lista błędów" to DockPosition. Bottom  
+ ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+Docking Example from Visual Studio Where "Class View" Window Is DockPosition.Right and "Error List" Window Is DockPosition.Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
- Podczas implementowania wzorca kontroli dokowania należy zwrócić uwagę na następujące wytyczne i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
+ When implementing the Dock control pattern, note the following guidelines and conventions:  
   
-- <xref:System.Windows.Automation.Provider.IDockProvider>nie uwidacznia żadnych właściwości kontenera Docker ani żadnych właściwości formantów, które są zadokowane sąsiadująco z bieżącą kontrolką w kontenerze dokowania.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> does not expose any properties of the docking container or any properties of controls that are docked adjacent to the current control within the docking container.  
   
-- Kontrolki są zadokowane względem siebie w oparciu o ich bieżącą kolejność z. im wyższe położenie porządku osi z, tym więcej są umieszczane z określonej krawędzi kontenera dokowania.  
+- Controls are docked relative to each other based on their current z-order; the higher their z-order placement, the farther they are placed from the specified edge of the docking container.  
   
-- Jeśli rozmiar kontenera dokowania zostanie zmieniony, wszystkie kontrolki zadokowane w kontenerze zostaną przesunięte do tej samej krawędzi, w której zostały pierwotnie zadokowane. Rozmiar zadokowanych kontrolek również zmieni się, aby wypełnić dowolne miejsce w kontenerze zgodnie z zachowaniem <xref:System.Windows.Automation.DockPosition>dokowania. Na przykład jeśli <xref:System.Windows.Automation.DockPosition.Top> jest określony, po lewej i prawej stronie kontrolki zostanie rozwinięte, aby wypełnić dostępne miejsce. Jeśli <xref:System.Windows.Automation.DockPosition.Fill> jest określony, wszystkie cztery strony kontrolki zostaną rozwinięte w celu wypełnienia dostępnego miejsca.  
+- If the docking container is resized, any docked controls within the container will be repositioned flush to the same edge to which they were originally docked. The docked controls will also resize to fill any space within the container according to the docking behavior of their <xref:System.Windows.Automation.DockPosition>. For example, if <xref:System.Windows.Automation.DockPosition.Top> is specified, the left and right sides of the control will expand to fill any available space. If <xref:System.Windows.Automation.DockPosition.Fill> is specified, all four sides of the control will expand to fill any available space.  
   
-- W systemie z obsługą kilku monitorów kontrolki powinny być zadokowane po lewej lub prawej stronie bieżącego monitora. Jeśli nie jest to możliwe, powinny one zostać zadokowane po lewej stronie monitora z lewym przyciskiem myszy lub po prawej stronie monitora z najprawej strony.  
+- On a multi-monitor system, controls should dock to the left or right side of the current monitor. If that is not possible, they should dock to the left side of the leftmost monitor or the right side of the rightmost monitor.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
-## <a name="required-members-for-idockprovider"></a>Wymagane elementy członkowskie dla IDockProvider  
- Do zaimplementowania interfejsu IDockProvider są wymagane następujące właściwości i metody.  
+## <a name="required-members-for-idockprovider"></a>Required Members for IDockProvider  
+ The following properties and methods are required for implementing the IDockProvider interface.  
   
-|Wymagane elementy członkowskie|Typ elementu członkowskiego|Uwagi|  
+|Required members|Member type|Uwagi|  
 |----------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Właściwość|Brak|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Metoda|Brak|  
   
- Ten wzorzec kontrolki nie ma skojarzonych zdarzeń.  
+ This control pattern has no associated events.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawcy muszą zgłosić następujące wyjątki.  
+ Providers must throw the following exceptions.  
   
 |Typ wyjątku|Warunek|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> — Gdy kontrolka nie może wykonać żądanego stylu dokowania.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
   
 ## <a name="see-also"></a>Zobacz także
 

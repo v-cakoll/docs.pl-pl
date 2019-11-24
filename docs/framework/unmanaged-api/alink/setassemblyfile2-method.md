@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: eedb9125-1ef1-4000-abfc-7de86e5a1f17
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aba11ccd61b65d2a779b39db8e0e082cf4d4015b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4f710ef9741869a2b4fd8473ed3ecf379cfcc56d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787219"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445582"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 — Metoda
-Ustawia nazwę i opcje dla nowego zestawu. Nie wywołuj tej metody podczas tworzenia niezwiązanych modułów.  
+Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Parametry  
  `pszFilename`  
- Nazwa pliku manifestu.  
+ Name of manifest file.  
   
  `pEmitter`  
- Interfejs [IMetaDataEmit2 interfejsu](../metadata/imetadataemit2-interface.md) dla tego pliku.  
+ [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
   
  `afFlags`  
- Opcje reprezentowane przez [Wyliczenie AssemblyFlags —](../metadata/assemblyflags-enumeration.md).  
+ Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Odbiera unikatowy identyfikator konstruowanego zestawu.  
+ Receives unique ID for the assembly being constructed.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ddb0631-4569-41b3-93e4-50fdfaa486dc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f3210f0186401729a5bc95369e88b290ae49a634
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d5f42e5ed3ce7829cfcf921f3002c238985710a9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776993"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426749"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion — Metoda
-Pobiera metodę czytnika symboli podany token metody i numeru wersji edycji i kopiowania. Numery wersji są liczone od 1 i są zwiększane, każdym razem, gdy metoda zostanie zmieniony w wyniku operacji Edytuj i kopiowania.  
+Gets a symbol reader method, given a method token and an edit-and-copy version number. Version numbers start at 1 and are incremented each time the method is changed as a result of an edit-and-copy operation.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT GetMethodByVersion (
   
 ## <a name="parameters"></a>Parametry  
  `token`  
- [in] Token metody.  
+ [in] The method token.  
   
  `version`  
- [in] Wersja metody.  
+ [in] The method version.  
   
  `pRetVal`  
- [out] Wskaźnik do interfejsu zwrócone.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

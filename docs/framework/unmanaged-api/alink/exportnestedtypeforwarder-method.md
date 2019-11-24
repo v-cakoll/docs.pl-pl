@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787473"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438412"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>ExportNestedTypeForwarder — Metoda
-Dodaje funkcję przesyłania dalej typu dla typu zagnieżdżonego do tabeli typów danego zestawu.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu do wyeksportowania.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Token pliku lub identyfikator zestawu, który definiuje typ.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- Token dla tego typu.  
+ Token for the type.  
   
  `ParentType`  
- Token typu nadrzędnego.  
+ Token of parent type.  
   
  `pszTypename`  
- W pełni kwalifikowana nazwa typu do eksportowania.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`flagi takie jak `tdPublic` lub `tdNested`.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- Odbiera token typu eksportu. Jest to konieczne tylko w przypadku emitowania typów zagnieżdżonych.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 166b0761-ed80-4ccd-9973-dc20e61bf8fa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f08b3d9634362d47615fe14287ab9ec35e78ee65
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 077e6d729eb98ddad25cd0c0cccf6d4641e2602c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775054"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428256"
 ---
 # <a name="icorprofilerobjectenumgetcount-method"></a>ICorProfilerObjectEnum::GetCount — Metoda
-Pobiera całkowitą liczbę zamrożone obiekty w kolekcji.  
+Gets the total number of frozen objects in the collection.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,18 +35,18 @@ HRESULT GetCount (
   
 ## <a name="parameters"></a>Parametry  
  `pcelt`  
- [out] Wskaźnik do liczby zamrożone obiekty w kolekcji.  
+ [out] A pointer to the number of frozen objects in the collection.  
   
- Ta metoda zawsze zwraca zero w .NET Framework w wersji 3.5 z dodatkiem Service Pack 1 (SP1) i nowszych wersjach.  
+ This method will always return zero in the .NET Framework version 3.5 Service Pack 1 (SP1) and later versions.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4789d08f-8683-45d3-ac30-73d48c61e470
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 92e40dbe8892d48dba1c54d9cd16faa409440b24
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744357"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438119"
 ---
-# <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER — Wyliczenie
-Identyfikuje wywołań zwrotnych debugera funkcji. Aby uzyskać więcej informacji, zobacz [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) metody.  
+# <a name="notify_filter-enumeration"></a>NOTIFY_FILTER — Wyliczenie
+Identifies callbacks for debugger functions. For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,16 +43,16 @@ enum tagNOTIFY_FILTER
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|Oznacza to, że [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) powinna ona zostać wywołana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|Oznacza to, że [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) powinna ona zostać wywołana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Oznacza to, że [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) powinna ona zostać wywołana metoda.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Oznacza to, że [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) powinna ona zostać wywołana metoda.|  
-|`NOTIFY_FILTER_ALLSYNC`|Oznacza to, że wszystkie [inotifysink2 —](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) metody powinna ona zostać wywołana.|  
-|`NOTIFY_FILTER_ALL`|Aktywuje wszystkich istniejących i przyszłych powiadomień.|  
-|`NOTIFY_FILTER_NONE`|Wskazuje, czy można wywołać metody nie powiadamiania.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|Indicates that the [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|Indicates that the [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|Indicates that the [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|Indicates that the [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) method should be invoked.|  
+|`NOTIFY_FILTER_ALLSYNC`|Indicates that all of the [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) methods should be invoked.|  
+|`NOTIFY_FILTER_ALL`|Activates all existing and future notifications.|  
+|`NOTIFY_FILTER_NONE`|Indicates that no notification methods should be invoked.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Zobacz także
 

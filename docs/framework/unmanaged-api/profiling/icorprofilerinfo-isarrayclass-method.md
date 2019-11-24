@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f230961-23a6-4d56-ad2d-7a876d65705f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e00e7f39bc2f8c14db0676102a52089c7710bd6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57515ac4670b9b7e25bb496851347a62e1b246df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438707"
 ---
 # <a name="icorprofilerinfoisarrayclass-method"></a>ICorProfilerInfo::IsArrayClass — Metoda
-Określa, czy określona klasa jest klasą tablicy.  
+Determines whether the specified class is an array class.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,28 +37,28 @@ HRESULT IsArrayClass(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy do badania.  
+ [in] The ID of the class to be examined.  
   
  `pBaseElemType`  
- [out] Wskaźnik do wartości corelementtype — wyliczenie, który wskazuje na typ elementów tablicy.  
+ [out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.  
   
  `pBaseClassId`  
- [out] Wskaźnik do Identyfikatora klasy elementów tablicy, jeśli jest dostępna.  
+ [out] A pointer to the class ID of the array elements, when available.  
   
  `pcRank`  
- [out] Wskaźnik na liczbę całkowitą, która określa rangę tablicy (oznacza to, że liczba wymiarów).  
+ [out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli określona klasa jest klasą tablicy `IsArrayClass` metoda zwraca wartość HRESULT S_OK i wartości dla parametrów innych niż null w danych wyjściowych. W przeciwnym razie zwraca wartość S_FALSE.  
+ If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters. Otherwise, it returns S_FALSE.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

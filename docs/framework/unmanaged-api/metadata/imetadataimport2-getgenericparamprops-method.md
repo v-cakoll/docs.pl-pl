@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbb21e67-712b-49e7-a27c-a1e73ffd46c5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a8c5dd263401002deaee3d21f1e41b41a29faec2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755340"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427299"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps — Metoda
-Pobiera metadane skojarzone z parametru ogólnego, reprezentowane przez określony token.  
+Gets the metadata associated with the generic parameter represented by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,37 +42,37 @@ HRESULT GetGenericParamProps (
   
 ## <a name="parameters"></a>Parametry  
  `gp`  
- [in] Token, który reprezentuje parametr ogólny, dla której ma zostać zwrócone metadanych.  
+ [in] The token that represents the generic parameter for which to return metadata.  
   
  `pulParamSeq`  
- [out] Numer porządkowy położenie `Type` parametr w Konstruktorze nadrzędnej lub metody.  
+ [out] The ordinal position of the `Type` parameter in the parent constructor or method.  
   
  `pdwParamFlags`  
- [out] Wartość [corgenericparamattr —](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) wyliczenie opisujące `Type` dla parametru ogólnego.  
+ [out] A value of the [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeration that describes the `Type` for the generic parameter.  
   
  `ptOwner`  
- [out] Element TypeDef lub MethodDef token reprezentujący właściciela parametru.  
+ [out] A TypeDef or MethodDef token that represents the owner of the parameter.  
   
  `reserved`  
- [out] Zarezerwowane dla przyszłej rozszerzalności.  
+ [out] Reserved for future extensibility.  
   
  `wzName`  
- [out] Nazwa parametru ogólnego.  
+ [out] The name of the generic parameter.  
   
  `cchName`  
- [in] Rozmiar `wzName` buforu.  
+ [in] The size of the `wzName` buffer.  
   
  `pchName`  
- [out] Rozmiar zwróconego nazwę w znaki dwubajtowe.  
+ [out] The returned size of the name, in wide characters.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

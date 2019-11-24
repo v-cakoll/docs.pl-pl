@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: cca4a9a1-731b-4411-9e04-00cffe7a56d8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ce8e96a588036297794238650af9ef84fc9aaa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0dafa741634cc88f8a7d86247e4fa8681d7c4305
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750567"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436378"
 ---
 # <a name="iceegengenerateceefile-method"></a>ICeeGen::GenerateCeeFile — Metoda
-Generuje plik bazy kodu, który zawiera kod podstawowy obecnie załadowane w tym [iceegen —](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.  
+Generates a code-base file that contains the code base currently loaded into this [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,16 +34,16 @@ HRESULT GenerateCeeFile ();
 ```  
   
 ## <a name="parameters"></a>Parametry  
- `GenerateCeeFile` nie przyjmuje żadnych parametrów.  
+ `GenerateCeeFile` takes no parameters.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

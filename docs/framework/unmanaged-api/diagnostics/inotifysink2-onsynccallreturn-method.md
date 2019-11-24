@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1bda761-6292-4750-a14b-7d5db8f33456
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84fd40dbecf9a866a4ec0889cbb62c475c063475
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d90d33ce7a8135f40a0fb4039a2418dd1987ac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736222"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435971"
 ---
 # <a name="inotifysink2onsynccallreturn-method"></a>INotifySink2::OnSyncCallReturn — Metoda
-Pobiera wywoływane, gdy wywołanie zwraca.  
+Gets invoked when a call returns.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT OnSyncCallReturn
   
 ## <a name="parameters"></a>Parametry  
  `in_CallID`  
- [in] Identyfikator wywołania zwracanego. Zobacz [call_id — struktura](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
+ [in] ID of the call being returned from. See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).  
   
  `in_pBuffer`  
- [in] Bufor wywołań.  
+ [in] Call buffer.  
   
  `in_BufferSize`  
- [in] Rozmiar buforu wywołania, w bajtach.  
+ [in] Size of the call buffer, in bytes.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** ProtocolNotify2.idl  
+ **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Zobacz także
 

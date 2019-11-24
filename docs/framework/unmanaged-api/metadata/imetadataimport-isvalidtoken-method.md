@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: aeb0fc63-9eff-4384-9284-cb9900572d74
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753449924f3415eb826b59d3a887eb69b9efba39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: edf24de8ae38aab97e41a53cc86ae5aa6c592c50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778784"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434692"
 ---
 # <a name="imetadataimportisvalidtoken-method"></a>IMetaDataImport::IsValidToken — Metoda
-Pobiera wartość wskazującą, czy określony token zawiera prawidłowe odwołanie do obiektu kodu.  
+Gets a value indicating whether the specified token holds a valid reference to a code object.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +35,19 @@ BOOL IsValidToken (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] Token do sprawdzania poprawności odwołania dla.  
+ [in] The token to check the reference validity for.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- `true` Jeśli `tk` jest tokenem poprawności metadanych w bieżącym zakresie. W przeciwnym razie `false`.  
+ `true` if `tk` is a valid metadata token within the current scope. Otherwise, `false`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

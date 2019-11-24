@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787473"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438412"
 ---
-# <a name="exportnestedtypeforwarder-method"></a><span data-ttu-id="9302f-102">ExportNestedTypeForwarder — Metoda</span><span class="sxs-lookup"><span data-stu-id="9302f-102">ExportNestedTypeForwarder Method</span></span>
-<span data-ttu-id="9302f-103">Dodaje funkcję przesyłania dalej typu dla typu zagnieżdżonego do tabeli typów danego zestawu.</span><span class="sxs-lookup"><span data-stu-id="9302f-103">Adds a type forwarder for a nested type to the type table of the given assembly.</span></span>  
+# <a name="exportnestedtypeforwarder-method"></a><span data-ttu-id="196bd-102">ExportNestedTypeForwarder — Metoda</span><span class="sxs-lookup"><span data-stu-id="196bd-102">ExportNestedTypeForwarder Method</span></span>
+<span data-ttu-id="196bd-103">Adds a type forwarder for a nested type to the type table of the given assembly.</span><span class="sxs-lookup"><span data-stu-id="196bd-103">Adds a type forwarder for a nested type to the type table of the given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9302f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9302f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="196bd-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="196bd-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ExportNestedTypeForwarder(  
@@ -40,36 +38,36 @@ HRESULT ExportNestedTypeForwarder(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9302f-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="9302f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="196bd-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="196bd-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="9302f-106">Identyfikator zestawu do wyeksportowania.</span><span class="sxs-lookup"><span data-stu-id="9302f-106">ID of the assembly to export from.</span></span>  
+ <span data-ttu-id="196bd-106">ID of the assembly to export from.</span><span class="sxs-lookup"><span data-stu-id="196bd-106">ID of the assembly to export from.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="9302f-107">Token pliku lub identyfikator zestawu, który definiuje typ.</span><span class="sxs-lookup"><span data-stu-id="9302f-107">File token or assembly ID of file that defines the type.</span></span>  
+ <span data-ttu-id="196bd-107">File token or assembly ID of file that defines the type.</span><span class="sxs-lookup"><span data-stu-id="196bd-107">File token or assembly ID of file that defines the type.</span></span>  
   
  `TypeToken`  
- <span data-ttu-id="9302f-108">Token dla tego typu.</span><span class="sxs-lookup"><span data-stu-id="9302f-108">Token for the type.</span></span>  
+ <span data-ttu-id="196bd-108">Token for the type.</span><span class="sxs-lookup"><span data-stu-id="196bd-108">Token for the type.</span></span>  
   
  `ParentType`  
- <span data-ttu-id="9302f-109">Token typu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="9302f-109">Token of parent type.</span></span>  
+ <span data-ttu-id="196bd-109">Token of parent type.</span><span class="sxs-lookup"><span data-stu-id="196bd-109">Token of parent type.</span></span>  
   
  `pszTypename`  
- <span data-ttu-id="9302f-110">W pełni kwalifikowana nazwa typu do eksportowania.</span><span class="sxs-lookup"><span data-stu-id="9302f-110">Fully qualified type name to export.</span></span>  
+ <span data-ttu-id="196bd-110">Fully qualified type name to export.</span><span class="sxs-lookup"><span data-stu-id="196bd-110">Fully qualified type name to export.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="9302f-111">`ComType`flagi takie jak `tdPublic` lub `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="9302f-111">`ComType` flags such as `tdPublic` or `tdNested`.</span></span>  
+ <span data-ttu-id="196bd-111">`ComType` flags such as `tdPublic` or `tdNested`.</span><span class="sxs-lookup"><span data-stu-id="196bd-111">`ComType` flags such as `tdPublic` or `tdNested`.</span></span>  
   
  `pType`  
- <span data-ttu-id="9302f-112">Odbiera token typu eksportu.</span><span class="sxs-lookup"><span data-stu-id="9302f-112">Receives token of export type.</span></span> <span data-ttu-id="9302f-113">Jest to konieczne tylko w przypadku emitowania typów zagnieżdżonych.</span><span class="sxs-lookup"><span data-stu-id="9302f-113">This is necessary only for emitting nested types.</span></span>  
+ <span data-ttu-id="196bd-112">Receives token of export type.</span><span class="sxs-lookup"><span data-stu-id="196bd-112">Receives token of export type.</span></span> <span data-ttu-id="196bd-113">This is necessary only for emitting nested types.</span><span class="sxs-lookup"><span data-stu-id="196bd-113">This is necessary only for emitting nested types.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9302f-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="9302f-114">Return Value</span></span>  
- <span data-ttu-id="9302f-115">Zwraca S_OK, jeśli metoda zakończy się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="9302f-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="196bd-114">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="196bd-114">Return Value</span></span>  
+ <span data-ttu-id="196bd-115">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="196bd-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9302f-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9302f-116">Requirements</span></span>  
- <span data-ttu-id="9302f-117">Wymaga Alink. h</span><span class="sxs-lookup"><span data-stu-id="9302f-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="196bd-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="196bd-116">Requirements</span></span>  
+ <span data-ttu-id="196bd-117">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="196bd-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9302f-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="9302f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="196bd-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="196bd-118">See also</span></span>
 
-- [<span data-ttu-id="9302f-119">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="9302f-119">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="9302f-120">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="9302f-120">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="9302f-121">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="9302f-121">ALink API</span></span>](index.md)
+- [<span data-ttu-id="196bd-119">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="196bd-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="196bd-120">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="196bd-120">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="196bd-121">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="196bd-121">ALink API</span></span>](index.md)

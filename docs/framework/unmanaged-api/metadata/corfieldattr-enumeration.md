@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6ae2c4be-212c-4e74-9288-40a11dc26522
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d28a0c8b7ee85f023026dde6f3cc8f3a8406aa64
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781897"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450305"
 ---
-# <a name="corfieldattr-enumeration"></a><span data-ttu-id="dd4c1-102">CorFieldAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="dd4c1-102">CorFieldAttr Enumeration</span></span>
-<span data-ttu-id="dd4c1-103">Zawiera wartości, które opisują metadane dotyczące pola.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-103">Contains values that describe metadata about a field.</span></span>  
+# <a name="corfieldattr-enumeration"></a><span data-ttu-id="008d0-102">CorFieldAttr — Wyliczenie</span><span class="sxs-lookup"><span data-stu-id="008d0-102">CorFieldAttr Enumeration</span></span>
+<span data-ttu-id="008d0-103">Contains values that describe metadata about a field.</span><span class="sxs-lookup"><span data-stu-id="008d0-103">Contains values that describe metadata about a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dd4c1-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="dd4c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="008d0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="008d0-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorFieldAttr {  
@@ -58,37 +56,37 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="dd4c1-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="dd4c1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="008d0-105">Elementy członkowskie</span><span class="sxs-lookup"><span data-stu-id="008d0-105">Members</span></span>  
   
-|<span data-ttu-id="dd4c1-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="dd4c1-106">Member</span></span>|<span data-ttu-id="dd4c1-107">Opis</span><span class="sxs-lookup"><span data-stu-id="dd4c1-107">Description</span></span>|  
+|<span data-ttu-id="008d0-106">Element członkowski</span><span class="sxs-lookup"><span data-stu-id="008d0-106">Member</span></span>|<span data-ttu-id="008d0-107">Opis</span><span class="sxs-lookup"><span data-stu-id="008d0-107">Description</span></span>|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|<span data-ttu-id="dd4c1-108">Określa informacje o ułatwieniach dostępu.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-108">Specifies accessibility information.</span></span>|  
-|`fdPrivateScope`|<span data-ttu-id="dd4c1-109">Określa, że pole nie może być przywoływany.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-109">Specifies that the field cannot be referenced.</span></span>|  
-|`fdPrivate`|<span data-ttu-id="dd4c1-110">Określa, że pole jest dostępne tylko dla typu nadrzędnego.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-110">Specifies that the field is accessible only by its parent type.</span></span>|  
-|`fdFamANDAssem`|<span data-ttu-id="dd4c1-111">Określa, że pole jest dostępny przez klasy pochodne w jego zestawie.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
-|`fdAssembly`|<span data-ttu-id="dd4c1-112">Określa, że pole jest dostępne dla wszystkich typów w jego zestawie.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
-|`fdFamily`|<span data-ttu-id="dd4c1-113">Określa, że pole jest dostępne tylko dla jego typu i klasach pochodnych.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
-|`fdFamORAssem`|<span data-ttu-id="dd4c1-114">Określa, że pole jest dostępne, przez klasy pochodne, jak również wszystkie typy w jego zestawie.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
-|`fdPublic`|<span data-ttu-id="dd4c1-115">Określa, że pole jest dostępne dla wszystkich typów za pomocą widoczność tego zakresu.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
-|`fdStatic`|<span data-ttu-id="dd4c1-116">Określa, że pole jest elementem członkowskim jego typu, a nie składową wystąpienia.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
-|`fdInitOnly`|<span data-ttu-id="dd4c1-117">Określa, że pole nie można zmienić po jego zainicjowaniu.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
-|`fdLiteral`|<span data-ttu-id="dd4c1-118">Określa, że wartość pola jest stałą czasu kompilacji.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-118">Specifies that the field value is a compile-time constant.</span></span>|  
-|`fdNotSerialized`|<span data-ttu-id="dd4c1-119">Określa, czy pole nie jest serializowana, gdy jej typ jest zdalny.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
-|`fdSpecialName`|<span data-ttu-id="dd4c1-120">Określa, czy pole ma specjalne i że jego nazwę w tym artykule opisano sposób.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-120">Specifies that the field is special, and that its name describes how.</span></span>|  
-|`fdPinvokeImpl`|<span data-ttu-id="dd4c1-121">Określa, że implementacja pola jest przekazywany za pomocą usług PInvoke.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
-|`fdReservedMask`|<span data-ttu-id="dd4c1-122">Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-122">Reserved for internal use by the common language runtime.</span></span>|  
-|`fdRTSpecialName`|<span data-ttu-id="dd4c1-123">Określa, że typowe metadanych środowiska wykonawczego języka wewnętrznych interfejsach API należy sprawdzać kodowanie nazwy.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
-|`fdHasFieldMarshal`|<span data-ttu-id="dd4c1-124">Określa, czy pole zawiera informacje dotyczące organizowania.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-124">Specifies that the field contains marshaling information.</span></span>|  
-|`fdHasDefault`|<span data-ttu-id="dd4c1-125">Określa, że pole ma wartość domyślną.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-125">Specifies that the field has a default value.</span></span>|  
-|`fdHasFieldRVA`|<span data-ttu-id="dd4c1-126">Określa, że pole ma względny adres wirtualny.</span><span class="sxs-lookup"><span data-stu-id="dd4c1-126">Specifies that the field has a relative virtual address.</span></span>|  
+|`fdFieldAccessMask`|<span data-ttu-id="008d0-108">Specifies accessibility information.</span><span class="sxs-lookup"><span data-stu-id="008d0-108">Specifies accessibility information.</span></span>|  
+|`fdPrivateScope`|<span data-ttu-id="008d0-109">Specifies that the field cannot be referenced.</span><span class="sxs-lookup"><span data-stu-id="008d0-109">Specifies that the field cannot be referenced.</span></span>|  
+|`fdPrivate`|<span data-ttu-id="008d0-110">Specifies that the field is accessible only by its parent type.</span><span class="sxs-lookup"><span data-stu-id="008d0-110">Specifies that the field is accessible only by its parent type.</span></span>|  
+|`fdFamANDAssem`|<span data-ttu-id="008d0-111">Specifies that the field is accessible by derived classes in its assembly.</span><span class="sxs-lookup"><span data-stu-id="008d0-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
+|`fdAssembly`|<span data-ttu-id="008d0-112">Specifies that the field is accessible by all types in its assembly.</span><span class="sxs-lookup"><span data-stu-id="008d0-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
+|`fdFamily`|<span data-ttu-id="008d0-113">Specifies that the field is accessible only by its type and derived classes.</span><span class="sxs-lookup"><span data-stu-id="008d0-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
+|`fdFamORAssem`|<span data-ttu-id="008d0-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span><span class="sxs-lookup"><span data-stu-id="008d0-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
+|`fdPublic`|<span data-ttu-id="008d0-115">Specifies that the field is accessible by all types with visibility of this scope.</span><span class="sxs-lookup"><span data-stu-id="008d0-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
+|`fdStatic`|<span data-ttu-id="008d0-116">Specifies that the field is a member of its type rather than an instance member.</span><span class="sxs-lookup"><span data-stu-id="008d0-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
+|`fdInitOnly`|<span data-ttu-id="008d0-117">Specifies that the field cannot be changed after it is initialized.</span><span class="sxs-lookup"><span data-stu-id="008d0-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
+|`fdLiteral`|<span data-ttu-id="008d0-118">Specifies that the field value is a compile-time constant.</span><span class="sxs-lookup"><span data-stu-id="008d0-118">Specifies that the field value is a compile-time constant.</span></span>|  
+|`fdNotSerialized`|<span data-ttu-id="008d0-119">Specifies that the field is not serialized when its type is remoted.</span><span class="sxs-lookup"><span data-stu-id="008d0-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
+|`fdSpecialName`|<span data-ttu-id="008d0-120">Specifies that the field is special, and that its name describes how.</span><span class="sxs-lookup"><span data-stu-id="008d0-120">Specifies that the field is special, and that its name describes how.</span></span>|  
+|`fdPinvokeImpl`|<span data-ttu-id="008d0-121">Specifies that the field implementation is forwarded through PInvoke.</span><span class="sxs-lookup"><span data-stu-id="008d0-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
+|`fdReservedMask`|<span data-ttu-id="008d0-122">Reserved for internal use by the common language runtime.</span><span class="sxs-lookup"><span data-stu-id="008d0-122">Reserved for internal use by the common language runtime.</span></span>|  
+|`fdRTSpecialName`|<span data-ttu-id="008d0-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span><span class="sxs-lookup"><span data-stu-id="008d0-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
+|`fdHasFieldMarshal`|<span data-ttu-id="008d0-124">Specifies that the field contains marshaling information.</span><span class="sxs-lookup"><span data-stu-id="008d0-124">Specifies that the field contains marshaling information.</span></span>|  
+|`fdHasDefault`|<span data-ttu-id="008d0-125">Specifies that the field has a default value.</span><span class="sxs-lookup"><span data-stu-id="008d0-125">Specifies that the field has a default value.</span></span>|  
+|`fdHasFieldRVA`|<span data-ttu-id="008d0-126">Specifies that the field has a relative virtual address.</span><span class="sxs-lookup"><span data-stu-id="008d0-126">Specifies that the field has a relative virtual address.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="dd4c1-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="dd4c1-127">Requirements</span></span>  
- <span data-ttu-id="dd4c1-128">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dd4c1-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="008d0-127">Wymagania</span><span class="sxs-lookup"><span data-stu-id="008d0-127">Requirements</span></span>  
+ <span data-ttu-id="008d0-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="008d0-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dd4c1-129">**Nagłówek:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="dd4c1-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="008d0-129">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="008d0-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="dd4c1-130">**Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dd4c1-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="008d0-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="008d0-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dd4c1-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="dd4c1-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="008d0-131">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="008d0-131">See also</span></span>
 
-- [<span data-ttu-id="dd4c1-132">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="dd4c1-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="008d0-132">Wyliczenia metadanych</span><span class="sxs-lookup"><span data-stu-id="008d0-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

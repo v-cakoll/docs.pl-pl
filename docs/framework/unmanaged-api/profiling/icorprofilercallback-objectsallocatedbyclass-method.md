@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4229332ef3a079a5a294e27b624dde0e1fb46691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445859"
 ---
-# <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="3aa87-102">ICorProfilerCallback::ObjectsAllocatedByClass — Metoda</span><span class="sxs-lookup"><span data-stu-id="3aa87-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
-<span data-ttu-id="3aa87-103">Powiadamia program profilujący o liczbę wystąpień każdej określonej klasy, które zostały utworzone od najnowszych wyrzucania elementów bezużytecznych.</span><span class="sxs-lookup"><span data-stu-id="3aa87-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  
+# <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="6c57e-102">ICorProfilerCallback::ObjectsAllocatedByClass — Metoda</span><span class="sxs-lookup"><span data-stu-id="6c57e-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
+<span data-ttu-id="6c57e-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span><span class="sxs-lookup"><span data-stu-id="6c57e-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3aa87-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3aa87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6c57e-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="6c57e-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT ObjectsAllocatedByClass(  
@@ -36,32 +34,32 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3aa87-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3aa87-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6c57e-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="6c57e-105">Parameters</span></span>  
  `cClassCount`  
- <span data-ttu-id="3aa87-106">[in] Rozmiar `classIds` i `cObjects` tablic.</span><span class="sxs-lookup"><span data-stu-id="3aa87-106">[in] The size of the `classIds` and `cObjects` arrays.</span></span>  
+ <span data-ttu-id="6c57e-106">[in] The size of the `classIds` and `cObjects` arrays.</span><span class="sxs-lookup"><span data-stu-id="6c57e-106">[in] The size of the `classIds` and `cObjects` arrays.</span></span>  
   
  `classIds`  
- <span data-ttu-id="3aa87-107">[in] Tablica identyfikatorów, w którym każdy identyfikator Określa klasę z co najmniej jednego wystąpienia klasy.</span><span class="sxs-lookup"><span data-stu-id="3aa87-107">[in] An array of class IDs, where each ID specifies a class with one or more instances.</span></span>  
+ <span data-ttu-id="6c57e-107">[in] An array of class IDs, where each ID specifies a class with one or more instances.</span><span class="sxs-lookup"><span data-stu-id="6c57e-107">[in] An array of class IDs, where each ID specifies a class with one or more instances.</span></span>  
   
  `cObjects`  
- <span data-ttu-id="3aa87-108">[in] Tablica liczb całkowitych, gdzie każda liczba całkowita określa liczbę wystąpień dla odpowiedniej klasy w `classIds` tablicy.</span><span class="sxs-lookup"><span data-stu-id="3aa87-108">[in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.</span></span>  
+ <span data-ttu-id="6c57e-108">[in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.</span><span class="sxs-lookup"><span data-stu-id="6c57e-108">[in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3aa87-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="3aa87-109">Remarks</span></span>  
- <span data-ttu-id="3aa87-110">`classIds` i `cObjects` tablic są tablicami równoległych.</span><span class="sxs-lookup"><span data-stu-id="3aa87-110">The `classIds` and `cObjects` arrays are parallel arrays.</span></span> <span data-ttu-id="3aa87-111">Na przykład `classIds[i]` i `cObjects[i]` odwoływać się do tej samej klasy.</span><span class="sxs-lookup"><span data-stu-id="3aa87-111">For example, `classIds[i]` and `cObjects[i]` reference the same class.</span></span> <span data-ttu-id="3aa87-112">Jeśli żadne wystąpienie klasy został utworzony od czasu poprzedniego wyrzucania elementów bezużytecznych, klasa jest pomijana.</span><span class="sxs-lookup"><span data-stu-id="3aa87-112">If no instance of a class has been created since the previous garbage collection, the class is omitted.</span></span> <span data-ttu-id="3aa87-113">`ObjectsAllocatedByClass` Wywołanie zwrotne nie będą zgłaszać obiekty przydzielone w stosie dużego obiektu.</span><span class="sxs-lookup"><span data-stu-id="3aa87-113">The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6c57e-109">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6c57e-109">Remarks</span></span>  
+ <span data-ttu-id="6c57e-110">The `classIds` and `cObjects` arrays are parallel arrays.</span><span class="sxs-lookup"><span data-stu-id="6c57e-110">The `classIds` and `cObjects` arrays are parallel arrays.</span></span> <span data-ttu-id="6c57e-111">For example, `classIds[i]` and `cObjects[i]` reference the same class.</span><span class="sxs-lookup"><span data-stu-id="6c57e-111">For example, `classIds[i]` and `cObjects[i]` reference the same class.</span></span> <span data-ttu-id="6c57e-112">If no instance of a class has been created since the previous garbage collection, the class is omitted.</span><span class="sxs-lookup"><span data-stu-id="6c57e-112">If no instance of a class has been created since the previous garbage collection, the class is omitted.</span></span> <span data-ttu-id="6c57e-113">The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.</span><span class="sxs-lookup"><span data-stu-id="6c57e-113">The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.</span></span>  
   
- <span data-ttu-id="3aa87-114">Liczby zgłoszonych przez `ObjectsAllocatedByClass` są jedynie do oszacowania.</span><span class="sxs-lookup"><span data-stu-id="3aa87-114">The numbers reported by `ObjectsAllocatedByClass` are only estimates.</span></span> <span data-ttu-id="3aa87-115">Dokładna liczba użyć [icorprofilercallback::objectallocated —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span><span class="sxs-lookup"><span data-stu-id="3aa87-115">For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span></span>  
+ <span data-ttu-id="6c57e-114">The numbers reported by `ObjectsAllocatedByClass` are only estimates.</span><span class="sxs-lookup"><span data-stu-id="6c57e-114">The numbers reported by `ObjectsAllocatedByClass` are only estimates.</span></span> <span data-ttu-id="6c57e-115">For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span><span class="sxs-lookup"><span data-stu-id="6c57e-115">For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span></span>  
   
- <span data-ttu-id="3aa87-116">`classIds` Macierzy może zawierać co najmniej jeden wpis o wartości null, jeśli odpowiedni `cObjects` tablica zawiera typy, które są zwalniane.</span><span class="sxs-lookup"><span data-stu-id="3aa87-116">The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.</span></span>  
+ <span data-ttu-id="6c57e-116">The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.</span><span class="sxs-lookup"><span data-stu-id="6c57e-116">The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3aa87-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3aa87-117">Requirements</span></span>  
- <span data-ttu-id="3aa87-118">**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3aa87-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6c57e-117">Wymagania</span><span class="sxs-lookup"><span data-stu-id="6c57e-117">Requirements</span></span>  
+ <span data-ttu-id="6c57e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6c57e-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3aa87-119">**Nagłówek:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3aa87-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="6c57e-119">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6c57e-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3aa87-120">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3aa87-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6c57e-120">**Library:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6c57e-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3aa87-121">**Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3aa87-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="6c57e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6c57e-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3aa87-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="3aa87-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c57e-122">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="6c57e-122">See also</span></span>
 
-- [<span data-ttu-id="3aa87-123">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="3aa87-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="6c57e-123">ICorProfilerCallback, interfejs</span><span class="sxs-lookup"><span data-stu-id="6c57e-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

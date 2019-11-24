@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e686e332cf1d35537e5d4306a3a9cbf9d46c47e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752369"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438126"
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="f59e3-102">ISymUnmanagedWriter3::OpenMethod2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="f59e3-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="f59e3-103">Otwiera metody i zawiera przesunięcie rzeczywistych sekcji w obrazie.</span><span class="sxs-lookup"><span data-stu-id="f59e3-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="073fe-102">ISymUnmanagedWriter3::OpenMethod2 — Metoda</span><span class="sxs-lookup"><span data-stu-id="073fe-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="073fe-103">Opens a method and provides its real section offset in the image.</span><span class="sxs-lookup"><span data-stu-id="073fe-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f59e3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f59e3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="073fe-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="073fe-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenMethod2(   
@@ -36,23 +34,23 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f59e3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f59e3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="073fe-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="073fe-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="f59e3-106">[in] Token metadanych dla metody, które ma zostać otwarty.</span><span class="sxs-lookup"><span data-stu-id="f59e3-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="073fe-106">[in] The metadata token for the method to be opened.</span><span class="sxs-lookup"><span data-stu-id="073fe-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="f59e3-107">[in] Przesunięcie sekcji w obrazie.</span><span class="sxs-lookup"><span data-stu-id="f59e3-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="073fe-107">[in] The section offset in the image.</span><span class="sxs-lookup"><span data-stu-id="073fe-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="f59e3-108">[in] Przesunięcie w obrazie.</span><span class="sxs-lookup"><span data-stu-id="f59e3-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="073fe-108">[in] The offset in the image.</span><span class="sxs-lookup"><span data-stu-id="073fe-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f59e3-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="f59e3-109">Return Value</span></span>  
- <span data-ttu-id="f59e3-110">S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.</span><span class="sxs-lookup"><span data-stu-id="f59e3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="073fe-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="073fe-109">Return Value</span></span>  
+ <span data-ttu-id="073fe-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="073fe-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f59e3-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f59e3-111">Requirements</span></span>  
- <span data-ttu-id="f59e3-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f59e3-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="073fe-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="073fe-111">Requirements</span></span>  
+ <span data-ttu-id="073fe-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="073fe-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f59e3-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="f59e3-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="073fe-113">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="073fe-113">See also</span></span>
 
-- [<span data-ttu-id="f59e3-114">ISymUnmanagedWriter3, interfejs</span><span class="sxs-lookup"><span data-stu-id="f59e3-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [<span data-ttu-id="f59e3-115">OpenMethod, metoda</span><span class="sxs-lookup"><span data-stu-id="f59e3-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [<span data-ttu-id="073fe-114">ISymUnmanagedWriter3, interfejs</span><span class="sxs-lookup"><span data-stu-id="073fe-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="073fe-115">OpenMethod, metoda</span><span class="sxs-lookup"><span data-stu-id="073fe-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

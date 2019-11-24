@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 154b2460-59ce-4874-a9f2-1b3353486ac5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3de3a9c152f3074339dba330b7827cf795a7e537
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c3c3a0168216902e5982b7d0193e72acc2bdf47
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745980"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448096"
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate — Metoda
-Generuje i pobiera sekcję kodu przy użyciu określonej nazwy i wartości flag.  
+Generates and gets a code section using the specified name and flag values.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT GetSectionCreate (
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] Wskaźnik na ciąg określający nazwę sekcji, który ma zostać utworzony.  
+ [in] A pointer to a string that specifies the name of the section to be created.  
   
  `flags`  
- [in] Flagi, które określają opcje.  
+ [in] Flags that specify options.  
   
  `section`  
- [out] Wskaźnik do nowo utworzonego kodu sekcji.  
+ [out] A pointer to the newly created code section.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `GetSectionCreate` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
+ Call `GetSectionCreate` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

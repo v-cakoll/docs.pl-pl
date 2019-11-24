@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 753c3b38187dd69593dcb0520acef9ce4b137039
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40efe81f72a2043503bf521e3e47dad1a7f4530c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751897"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448453"
 ---
-# <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE — Wyliczenie
-Wskazuje, czy pole jest statyczna, a jeśli tak, statycznej jakości, która odnosi się do pola. Te wartości można łączyć, używając operacja bitowa lub w celu wskazania, że pole ma wiele różnych klas statycznych.  
+# <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE — Wyliczenie
+Indicates whether a field is static and, if so, the static quality that applies to the field. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,20 +40,20 @@ typedef enum {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|Pole nie jest statyczne.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|Pole nie jest statyczna domeny aplikacji.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|Pole nie jest statyczna wątku.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|Pole nie jest statyczna kontekstu.|  
-|`COR_PRF_FIELD_RVA_STATIC`|To pole jest względnych adresów wirtualnych (RVA) — statyczne.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
+|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

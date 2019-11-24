@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4068b6ec-525f-4446-8818-0296178cbd19
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1a72f76f1cd6f6571eaebff3a8046de8dcd3d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a193c4e9e87616217efc90286032944d05d766c0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751458"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446400"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount — Metoda
-Pobiera liczbę informacji wyszukiwania symboli.  
+Gets a count of symbol search information.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +34,13 @@ HRESULT GetSymbolSearchInfoCount(
   
 ## <a name="parameters"></a>Parametry  
  `pcSearchInfo`  
- ] out] wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać informacje dotyczące wyszukiwania.  
+ ]out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the search information.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

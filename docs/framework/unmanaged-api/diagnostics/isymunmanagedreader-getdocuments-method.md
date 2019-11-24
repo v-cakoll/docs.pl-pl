@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763351"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448327"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>ISymUnmanagedReader::GetDocuments — Metoda
-Zwraca tablicę wszystkich dokumentów, które są zdefiniowane w magazynie symboli.  
+Returns an array of all the documents defined in the symbol store.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +37,19 @@ HRESULT GetDocuments (
   
 ## <a name="parameters"></a>Parametry  
  `cDocs`  
- [in] Rozmiar `pDocs` tablicy.  
+ [in] The size of the `pDocs` array.  
   
  `pcDocs`  
- [out] Wskaźnik do zmiennej, która odbiera długość tablicy.  
+ [out] A pointer to a variable that receives the array length.  
   
  `pDocs`  
- [out] Wskaźnik do zmiennej, która odbiera tablicy dokumentu.  
+ [out] A pointer to a variable that receives the document array.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

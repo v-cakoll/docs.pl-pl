@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4fedf8a0-08c8-43d0-aa00-20f2a521c991
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aed70a78e2513f4d63fbf8ca8868f26efbac9ae8
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 52e52ac62e2dcfeb182da3014a863409f640274e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787663"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446655"
 ---
 # <a name="addimport-method"></a>AddImport — Metoda
-Dodaje Importy do zestawu.  
+Adds imports to the assembly.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT AddImport(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Unikatowy identyfikator zestawu, który ma zostać rozszerzony.  
+ Unique ID of assembly to be augmented.  
   
  `ImportToken`  
- Unikatowy identyfikator, pobrany z [metody ImportFile —](importfile-method.md), pliku do zaimportowania.  
+ Unique ID, retrieved from [ImportFile Method](importfile-method.md), of file to be imported.  
   
  `dwFlags`  
- Flagi FileDef modelu COM+, `ffContainsNoMetaData` takie `ffWriteable`jak i. `dwFlags`jest przenoszona do [metody DefineFile —](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pFileToken`  
- Wskaźnik do tokenu, który odbiera identyfikator dla tworzonego pliku.  
+ Pointer to token that receives the ID for the resulting file.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5ead38d54d470c3f443ae5e27e4a2d045bc27c79
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783034"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449670"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 — Metoda
-Podany identyfikator modułu zwraca nazwę pliku modułu, identyfikator elementu nadrzędnego modułu zestawu i masek bitowych, który opisuje właściwości modułu.  
+Given a module ID, returns the file name of the module, the ID of the module's parent assembly, and a bitmask that describes the properties of the module.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,43 +41,43 @@ HRESULT GetModuleInfo2(
   
 ## <a name="parameters"></a>Parametry  
  `moduleId`  
- [in] Identyfikator modułu, dla którego będą pobierane informacje.  
+ [in] The ID of the module for which information will be retrieved.  
   
  `ppBaseLoadAddress`  
- [out] Adres podstawowy, ładowania modułu.  
+ [out] The base address at which the module is loaded.  
   
  `cchName`  
- [in] Długość w znakach, z `szName` buforze.  
+ [in] The length, in characters, of the `szName` return buffer.  
   
  `pcchName`  
- [out] Wskaźnik do łączna liczba znaków nazwy pliku modułu, który jest zwracany.  
+ [out] A pointer to the total character length of the module's file name that is returned.  
   
  `szName`  
- [out] Bufor dostarczane przez obiekt wywołujący znaku dwubajtowego. Po powrocie z metody tego buforu zawiera nazwę pliku modułu.  
+ [out] A caller-provided wide character buffer. When the method returns, this buffer contains the file name of the module.  
   
  `pAssemblyId`  
- [out] Wskaźnik do Identyfikatora modułu nadrzędnego zestawu.  
+ [out] A pointer to the ID of the module's parent assembly.  
   
  `pdwModuleFlags`  
- [out] Maska bitów wartości z [cor_prf_module_flags —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) wyliczenie, które umożliwia określenie właściwości modułu.  
+ [out] A bitmask of values from the [COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md) enumeration that specify the properties of the module.  
   
 ## <a name="remarks"></a>Uwagi  
- Dla modułów dynamicznych `szName` parametr jest nazwa metadane modułu, a adres podstawowy ma wartość 0 (zero). Nazwa metadanych jest wartością w kolumnie Nazwa z tabeli modułu w metadanych. Jest to również widoczne jako <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> właściwości z kodem zarządzanym i jako `szName` parametru [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) metoda metadanych niezarządzanego kodu klienta.  
+ For dynamic modules, the `szName` parameter is the metadata name of the module, and the base address is 0 (zero). The metadata name is the value in the Name column from the Module table inside metadata. This is also exposed as the <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> property to managed code, and as the `szName` parameter of the [IMetaDataImport::GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md) method to unmanaged metadata client code.  
   
- Mimo że `GetModuleInfo2` można wywołać metody, jak istnieje identyfikator modułu, identyfikator zestawu nadrzędnego nie będą dostępne, dopóki program profilujący nie otrzyma [icorprofilercallback::moduleattachedtoassembly —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) wywołania zwrotnego.  
+ Although the `GetModuleInfo2` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
   
- Gdy `GetModuleInfo2` zwróci wartość, należy sprawdzić, czy `szName` bufor jest wystarczająco duży, aby zawierały nazwę pełnego pliku modułu. Aby to zrobić, porównaj wartość która `pcchName` wskazuje z wartością `cchName` parametru. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większego `szName` buforu, zaktualizuj `cchName` przy użyciu nowych, większy rozmiar i Wywołaj `GetModuleInfo2` ponownie.  
+ When `GetModuleInfo2` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo2` again.  
   
- Alternatywnie, można wywołać `GetModuleInfo2` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić rozmiar buforu do wartości zwracanej w `pcchName` i wywołać `GetModuleInfo2` ponownie.  
+ Alternatively, you can first call `GetModuleInfo2` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo2` again.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

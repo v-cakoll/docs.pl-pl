@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9a6be861-c260-4a35-acea-3372ea515a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a03fc24e5ef932d13c0d195f53c703cdd3ff45ff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 17f158167d4075783d1aa594fb61cc9e28d30dd7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776941"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446985"
 ---
 # <a name="importfile2-method"></a>ImportFile2 — Metoda
-Importuje zestawy i niepowiązane moduły. Ta metoda jest taka sama jak [Metoda ImportFile —](importfile-method.md), ale działa nawet wtedy, gdy importowany plik nie istnieje na dysku.  
+Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>Parametry  
  `pszFilename`  
- Nazwa pliku do zaimportowania.  
+ Name of file to be imported.  
   
  `pszTargetName`  
- Opcjonalna nazwa pliku wyjściowego, która może zostać użyta do zmiany nazwy pliku, ponieważ jest on połączony z zestawem.  
+ Optional output file name that can be used to rename the file as it is linked into the assembly.  
   
  `pAssemblyScopeIn`  
- Opcjonalny zakres interfejsu [IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) .  
+ Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
   
  `fSmartImport`  
- Jeśli wartość jest równa TRUE, używane są wartości, w przeciwnym razie importowanie należy wykonać ręcznie.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `pImportToken`  
- Odbiera identyfikator dla pliku lub zestawu.  
+ Receives the ID for the file or assembly.  
   
  `ppAssemblyScope`  
- Odbiera Interfejs [interfejsu IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . Wartość NULL, jeśli plik nie jest zestawem.  
+ Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
   
  `pdwCountOfScopes`  
- Odbiera znalezione pliki i/lub zakresy zaimportowane.  
+ Receives the found of files and/or scopes imported.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
 

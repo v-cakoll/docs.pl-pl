@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3ef841c2-cade-42ee-ba34-2ef91d6d0879
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 12f31d0bf224e38418818122dad3586ec687b2ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769861"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448579"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind — Wyliczenie
-Wskazuje typ adresu pamięci.  
+Indicates the type of memory address.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,19 +46,19 @@ typedef enum CorSymAddrKind
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|Wskazuje Microsoft intermediate language (MSIL) lokalnej zmiennej lub parametru indeksu.|  
-|`ADDR_NATIVE_RVA`|Oznacza względny adres wirtualny do modułu.|  
-|`ADDR_NATIVE_REGISTER`|Wskazuje rejestru procesora CPU.|  
-|`ADDR_NATIVE_REGREL`|Wskazuje, czy pierwszy adres jest rejestru, a drugi adres jest przesunięcie.|  
-|`ADDR_NATIVE_OFFSET`|Określa przesunięcie od adres podstawowy.|  
-|`ADDR_NATIVE_REGREG`|Wskazuje, że pierwszy adres jest niski część rejestr i drugi adres jest wysokiej część.|  
-|`ADDR_NATIVE_REGSTK`|Wskazuje, że pierwszy adres jest niski część rejestr, druga jest wysokiej część i trzeci to przesunięcie.|  
-|`ADDR_NATIVE_STKREG`|Wskazuje, że pierwszy adres jest rejestr, drugą jest wartość przesunięcia i trzeci jest wysoka części rejestru.|  
-|`ADDR_BITFIELD`|Wskazuje, czy pierwszy adres jest początku pola, a drugi adres jest długość pola.|  
-|`ADDR_NATIVE_ISECTOFFSET`|Wskazuje, czy pierwszy adres jest sekcji, a drugi adres jest przesunięta.|  
+|`ADDR_IL_OFFSET`|Indicates a Microsoft intermediate language (MSIL) local variable or parameter index.|  
+|`ADDR_NATIVE_RVA`|Indicates a relative virtual address into a module.|  
+|`ADDR_NATIVE_REGISTER`|Indicates a CPU register.|  
+|`ADDR_NATIVE_REGREL`|Indicates that the first address is a register and the second address is an offset.|  
+|`ADDR_NATIVE_OFFSET`|Indicates an offset from a base address.|  
+|`ADDR_NATIVE_REGREG`|Indicates that the first address is the low portion of a register, and the second address is the high portion.|  
+|`ADDR_NATIVE_REGSTK`|Indicates that the first address is the low portion of a register, the second is the high portion, and the third is an offset.|  
+|`ADDR_NATIVE_STKREG`|Indicates that the first address is a register, the second is an offset, and the third is the high portion of the register.|  
+|`ADDR_BITFIELD`|Indicates that the first address is the start of a field and the second address is the field length.|  
+|`ADDR_NATIVE_ISECTOFFSET`|Indicates that the first address is the section and the second address is an offset.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

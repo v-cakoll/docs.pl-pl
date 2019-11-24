@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: ac193b6b78434245b8f11a4f627b4e1992feb8a7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449852"
 ---
-# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences, Metoda
+# <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10::EnumerateObjectReferences Method
 
-Podanym identyfikatorem ObjectID, wywołaniem zwrotnym i clientData, wylicza każde odwołanie do obiektu (jeśli istnieje).
+Given an ObjectID, callback and clientData, enumerates each object reference (if any).
 
 ## <a name="syntax"></a>Składnia
 
@@ -33,28 +33,28 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 #### <a name="parameters"></a>Parametry
 
 `objectId` \
-podczas Obiekt, na którym mają zostać wyliczone odwołania.
+[in] The object to enumerate references on.
 
 `callback` \
-podczas Funkcja, która będzie wywoływana z odwołaniami dla obiektu.
+[in] The function that will be called with the references for the object.
 
 `clientData` \
-podczas Dane dostarczone przez `callback` Profiler do przekazania do funkcji.
+[in] Profiler-provided data to pass to the `callback` function.
 
 ## <a name="remarks"></a>Uwagi
 
-Metoda jest podobna do ObjectReferences —, z tą różnicą, że przeprowadza odwołania na żądanie dla profilera zamiast wstępnie przydzielić tablicę do przechowywania odwołań. [](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md) `EnumerateObjectReferences`
+The `EnumerateObjectReferences` method is similar to [ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md), except that it walks the references on demand for the profiler instead of pre-allocating an array to store the references.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Nagłówki** CorProf. idl, CorProf. h
+**Header:** CorProf.idl, CorProf.h
 
-**Biblioteki** CorGuids.lib
+**Library:** CorGuids.lib
 
-**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo10, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

@@ -6,69 +6,67 @@ helpviewer_keywords:
 - enumerations [.NET Framework profiling]
 - unmanaged enumerations [.NET Framework], profiling
 ms.assetid: 8d5f9570-9853-4ce8-8101-df235d5b258e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 996352637f34b0b6c0d12e611a6d9e70ab85230e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc90743fb348c31bd2f7487c1573ec38a43bd3af
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757576"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447449"
 ---
 # <a name="profiling-enumerations"></a>Profilowanie — Wyliczenia
-W tej sekcji opisano niezarządzane wyliczenia, których używa interfejs profilowania API.  
+This section describes the unmanaged enumerations that the profiling API uses.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [COR_PRF_CLAUSE_TYPE, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md)  
- Wskazuje typ klauzuli wyjątek, który po prostu wprowadzony kod lub po lewej stronie.  
+ Indicates the type of exception clause that the code has just entered or left.  
   
  [COR_PRF_CODEGEN_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-codegen-flags-enumeration.md)  
- Określa flagi generowania kodu, które można ustawić za pomocą [icorprofilerfunctioncontrol::setcodegenflags —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) metody.  
+ Defines the code generation flags that can be set with the [ICorProfilerFunctionControl::SetCodegenFlags](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setcodegenflags-method.md) method.  
   
  [COR_PRF_FINALIZER_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)  
- W tym artykule opisano finalizatora obiektu.  
+ Describes the finalizer for an object.  
   
  [COR_PRF_GC_GENERATION, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)  
- Identyfikuje generacjach wyrzucania.  
+ Identifies a garbage collection generation.  
   
  [COR_PRF_GC_REASON, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-reason-enumeration.md)  
- Wskazuje powód, że odbywa się wyrzucanie elementów bezużytecznych.  
+ Indicates the reason that garbage collection is occurring.  
   
  [COR_PRF_GC_ROOT_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)  
- Określa właściwości głównego modułu zbierającego elementy bezużyteczne.  
+ Indicates properties of a garbage collector root.  
   
  [COR_PRF_GC_ROOT_KIND, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)  
- Wskazuje rodzaj głównego modułu odśmiecania pamięci, który jest udostępniany przez [icorprofilercallback2::rootreferences2 —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) wywołania zwrotnego.  
+ Indicates the kind of garbage collector root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
   
  [Wyliczenie COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)  
- Zawiera flagi, oprócz tych dostępnych w [cor_prf_monitor —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) wyliczenie, które można określić profiler [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) metodą podczas wczytywania.  
+ Provides flags in addition to those found in the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration that the profiler can specify to the [ICorProfilerInfo5::SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) method when it is loading.  
   
  [COR_PRF_JIT_CACHE, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-jit-cache-enumeration.md)  
- Wskazuje wynik wyszukiwania funkcję pamięci podręcznej.  
+ Indicates the result of a cached function search.  
   
  [COR_PRF_MISC, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-misc-enumeration.md)  
- Zawiera wartości stałych, które określają specjalne identyfikatory.  
+ Contains constant values that specify special identifiers.  
   
  [COR_PRF_MODULE_FLAGS, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md)  
- Określa właściwości modułu.  
+ Specifies the properties of a module.  
   
  [COR_PRF_MONITOR, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)  
- Zawiera wartości, które są używane do określania zachowania, funkcji lub zdarzeń do których program profilujący chce subskrypcji.  
+ Contains values that are used to specify behavior, capabilities, or events to which the profiler wishes to subscribe.  
   
  [COR_PRF_RUNTIME_TYPE, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-runtime-type-enumeration.md)  
- Zawiera wartości, które wskazują wersję środowiska uruchomieniowego języka wspólnego.  
+ Contains values that indicate the version of the common language runtime.  
   
  [COR_PRF_SNAPSHOT_INFO, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md)  
- Określa, ile danych do przekazania z powrotem przy użyciu migawek w każdym wywołaniu do programu profilującego stosu `StackSnapshotCallback` funkcji.  
+ Specifies how much data to pass back with a stack snapshot in each call to the profiler's `StackSnapshotCallback` function.  
   
  [COR_PRF_STATIC_TYPE, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md)  
- Wskazuje, czy pole jest statyczna, a jeśli tak, statycznej jakości, która odnosi się do pola.  
+ Indicates whether a field is static and, if so, the static quality that applies to the field.  
   
  [COR_PRF_SUSPEND_REASON, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-suspend-reason-enumeration.md)  
- Wskazuje powód, że środowisko uruchomieniowe zostało wstrzymane.  
+ Indicates the reason that the runtime was suspended.  
   
  [COR_PRF_TRANSITION_REASON, wyliczenie](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)  
- Wskazuje przyczynę przejścia z zarządzanego do kodu niezarządzanego lub na odwrót.  
+ Indicates the reason for a transition from managed to unmanaged code, or vice versa.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Omówienie profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  

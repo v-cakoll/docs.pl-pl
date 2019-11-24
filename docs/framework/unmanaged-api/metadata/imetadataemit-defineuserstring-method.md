@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25e35fd9afd2ce4dc60e23ccd64e0630a008bf39
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777438"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450174"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString — Metoda
-Pobiera metadane token dla określonego ciągu literału.  
+Gets a metadata token for the specified literal string.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT DefineUserString (
   
 ## <a name="parameters"></a>Parametry  
  `szString`  
- [in] Ciąg użytkowników do przechowywania.  
+ [in] The user string to store.  
   
  `cchString`  
- [in] Liczba znaków dwubajtowych w `szString`.  
+ [in] The count of wide characters in `szString`.  
   
  `pstk`  
- [out] Token ciągu przypisany.  
+ [out] The string token assigned.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

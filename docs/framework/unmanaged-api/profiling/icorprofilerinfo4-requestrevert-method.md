@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 70261da5-5933-4e25-9de0-ddf51cba56cc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c7ced05692e3030bace10dab9a6793a29fac6c26
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67748664"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444837"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert — Metoda
-Przywraca wszystkie wystąpienia określonych funkcji do ich oryginalnej wersji.  
+Reverts all instances of the specified functions to their original versions.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,50 +37,50 @@ HRESULT RequestRevert (
   
 ## <a name="parameters"></a>Parametry  
  `cFunctions`  
- [in] Liczba funkcji do przywrócenia.  
+ [in] The number of functions to revert.  
   
  `moduleIds`  
- [in] Określa `moduleId` część (`module`, `methodDef`) pary, które identyfikują funkcji, które mają zostać przywrócone.  
+ [in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
   
  `methodIds`  
- [in] Określa `methodId` część (`module`, `methodDef`) pary, które identyfikują funkcji, które mają zostać przywrócone.  
+ [in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
   
  `status`  
- [out] Tablica wartości HRESULT wymienionych w sekcji "Wartości HRESULT stanu" w dalszej części tego tematu. Każda wartość HRESULT wskazuje powodzenie lub niepowodzenie próbę przywrócenia każdej funkcji, które określono w tablicach równoległe `moduleIds` i `methodIds`.  
+ [out] An array of HRESULTs listed in the "Status HRESULTs" section later in this topic. Each HRESULT indicates the success or failure of trying to revert each function specified in the parallel arrays `moduleIds` and `methodIds`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Próbowano przywrócić wszystkie żądania; Jednak tablica zwrócona stanu musi być zaznaczone do określenia, które funkcje zostały pomyślnie przywrócone.|  
-|CORPROF_E_CALLBACK4_REQUIRED|Program profilujący musi zaimplementować [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfejsu dla tego wywołania są obsługiwane.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT — rekompilacja nie została włączona. JIT — rekompilacja podczas inicjowania należy włączyć, używając [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) metodę, aby ustawić `COR_PRF_ENABLE_REJIT` flagi.|  
-|E_INVALIDARG|`cFunctions` ma wartość 0, lub `moduleIds` lub `methodIds` jest `NULL`.|  
-|E_OUTOFMEMORY|Nie można ukończyć żądania, ponieważ zabrakło jej pamięci CLR.|  
+|S_OK|An attempt was made to revert all requests; however, the returned status array must be checked to determine which functions were successfully reverted.|  
+|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JIT recompilation has not been enabled. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
+|E_INVALIDARG|`cFunctions` is 0, or `moduleIds` or `methodIds` is `NULL`.|  
+|E_OUTOFMEMORY|The CLR was unable to complete the request because it ran out of memory.|  
   
-## <a name="status-hresults"></a>Stan HRESULTS  
+## <a name="status-hresults"></a>Status HRESULTS  
   
-|Stan macierzy HRESULT|Opis|  
+|Status array HRESULT|Opis|  
 |--------------------------|-----------------|  
-|S_OK|Odpowiednich funkcji została pomyślnie przywrócona.|  
-|E_INVALIDARG|`moduleID` Lub `methodDef` parametr `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|Moduł nie jest jeszcze w pełni załadowany lub jest właśnie Trwa zwalnianie.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|Określony moduł dynamicznie został wygenerowany (np. przez `Reflection.Emit`). W związku z tym nie jest obsługiwane przez tę metodę.|  
-|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|Środowisko CLR nie można przywrócić określonej funkcji, ponieważ nie znaleziono odpowiedniego żądania active ponownej kompilacji. Nigdy nie zażądano ponowną kompilację albo funkcja została już przywrócona.|  
-|Inne|System operacyjny zwrócił błąd poza kontrolą środowiska CLR. Na przykład jeśli wywołanie systemowe, aby zmienić ustawienia ochrony dostępu do strony pamięci nie powiedzie się, zostanie wyświetlony błąd systemu operacyjnego.|  
+|S_OK|The corresponding function was successfully reverted.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` parameter is `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example by `Reflection.Emit`). Therefore, it is not supported by this method.|  
+|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|The CLR could not revert the specified function, because a corresponding active recompilation request was not found. Either the recompilation was never requested or the function was already reverted.|  
+|Inne|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error will be displayed.|  
   
 ## <a name="remarks"></a>Uwagi  
- Przy następnym noszą nazwę wszystkich wystąpień funkcji revereted, oryginalnym wersje funkcji zostanie uruchomiony. Funkcja jest już uruchomiona, zostanie ono ukończone, wykonywanie wersję, która jest uruchomiona.  
+ The next time any of the revereted function instances are called, the original versions of the functions will be run. If a function is already running, it will finish executing the version that is running.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 80571933bc8d91c074dbee62aad50cece6277d51
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69665510"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444717"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses, Metoda
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
 
-Mając functionId i rejitId, wylicza natywny adres początkowy kodu dla wszystkich wersji trybie JIT tego kodu, który już istnieje.
+Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,34 +35,34 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Parametry
 
 `functionId` \
-podczas Identyfikator funkcji, której powinny zostać zwrócone adresy początkowe kodu natywnego.
+[in] The ID of the function whose native code start addresses should be returned.
 
 `reJitId` \
-podczas Tożsamość funkcji ponownie skompilowanej JIT.
+[in] The identity of the JIT-recompiled function.
 
 `cCodeStartAddresses` \
-podczas Maksymalny rozmiar `codeStartAddresses` tablicy.
+[in] The maximum size of the `codeStartAddresses` array.
 
 `pcCodeStartAddresses` \
-określoną Liczba dostępnych adresów.
+[out] The number of available addresses.
 
 `codeStartAddresses` \
-określoną Tablica, z `UINT_PTR`której każdy jest adresem początkowym dla określonej funkcji.
+[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy kompilacja warstwowa jest włączona, funkcja może mieć więcej niż jedną treść kodu natywnego.
+When tiered compilation is enabled, a function may have more than one native code body.
 
 ## <a name="requirements"></a>Wymagania
 
-**Poszczególnych** Zobacz [obsługiwane systemy operacyjne .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Nagłówki** CorProf. idl, CorProf. h
+**Header:** CorProf.idl, CorProf.h
 
-**Biblioteki** CorGuids.lib
+**Library:** CorGuids.lib
 
-**Wersje .NET:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 
-- [ICorProfilerInfo9, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

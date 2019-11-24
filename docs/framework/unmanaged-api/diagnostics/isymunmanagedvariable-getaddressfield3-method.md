@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d834721-ad8d-439d-b356-c6b4aef022fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 76199dd18799c9f51f37d5b92e589effd7f45a57
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3bdc79a6b6d81f6f0998f052f8bea1bf8af55402
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778303"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446110"
 ---
 # <a name="isymunmanagedvariablegetaddressfield3-method"></a>ISymUnmanagedVariable::GetAddressField3 — Metoda
-Pobiera trzecim polu adresów dla tej zmiennej. Znaczenia, zależy od rodzaju adresu.  
+Gets the third address field for this variable. Its meaning depends on the kind of address.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +34,13 @@ HRESULT GetAddressField3(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do `ULONG32` odbierająca trzecim polu adresu.  
+ [out] A pointer to a `ULONG32` that receives the third address field.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

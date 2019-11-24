@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 08dff60c-f01b-4050-8865-ea3f95361c9f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8827f46a12bd090fa27e71072d833607d34677
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6a5b3f1e9bf1444feb73949ef7133fbd9ae35134
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777352"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446473"
 ---
 # <a name="enumcustomattributes-method"></a>EnumCustomAttributes — Metoda
-Pobiera niestandardowe atrybuty na poziomie zestawu.  
+Retrieves assembly-level custom attributes.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT EnumCustomAttributes(
   
 ## <a name="parameters"></a>Parametry  
  `hEnum`  
- Uchwyt modułu wyliczającego.  
+ Handle of enumerator.  
   
  `tkType`  
- Typ atrybutów do wyliczenia. Używać `mdTokenNill` dla wszystkich atrybutów.  
+ Type of attributes to be enumerated. Use `mdTokenNill` for all attributes.  
   
  `rCustomValues`  
- Odbiera tokeny atrybutów niestandardowych.  
+ Receives custom attributes tokens.  
   
  `cMax`  
- Określa rozmiar `rCustomValues` tablicy.  
+ Specifies size of `rCustomValues` array.  
   
  `pcCustomValues`  
- Opcjonalnie otrzymuje liczbę wartości tokenu.  
+ Optionally receives count of token values.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

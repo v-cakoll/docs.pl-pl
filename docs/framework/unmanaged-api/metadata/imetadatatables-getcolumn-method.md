@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1032055b-cabb-45c5-a50e-7e853201b175
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 853f137d91e1b3eb4f3f65a06522618f8441dcb3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 376b9ff09ad38ca43d57fcf064458e0331da8aad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053673"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441998"
 ---
 # <a name="imetadatatablesgetcolumn-method"></a>IMetaDataTables::GetColumn — Metoda
-Pobiera wskaźnik do wartości zawartej w komórce określonej kolumny i wiersza w danej tabeli.  
+Gets a pointer to the value contained in the cell of the specified column and row in the given table.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,46 +39,46 @@ HRESULT GetColumn (
 ## <a name="parameters"></a>Parametry
 
  `ixTbl`  
- podczas Indeks tabeli.  
+ [in] The index of the table.  
   
  `ixCol`  
- podczas Indeks kolumny w tabeli.  
+ [in] The index of the column in the table.  
   
  `rid`  
- podczas Indeks wiersza w tabeli.  
+ [in] The index of the row in the table.  
   
  `pVal`  
- określoną Wskaźnik do wartości w komórce.  
+ [out] A pointer to the value in the cell.  
  
 ## <a name="remarks"></a>Uwagi
 
-Interpretacja wartości zwracanej przez `pVal` jest zależna od typu kolumny. Typ kolumny można określić przez wywołanie metody [IMetaDataTables. GetColumnInfo](imetadatatables-getcolumninfo-method.md).
+The interpretion of the value returned through `pVal` depends on the column's type. The column type can be determined by calling [IMetaDataTables.GetColumnInfo](imetadatatables-getcolumninfo-method.md).
 
-- Metoda **GetColumn** automatycznie konwertuje kolumny typu **RID** lub **CodedToken** na pełne wartości 32-bitowe `mdToken` .
-- Automatycznie konwertuje wartości 8-bitowe lub 16-bitowe na pełne wartości 32-bitowe. 
-- W przypadku kolumn typu *sterty* zwracany *Pval* będzie indeksem do odpowiedniej sterty.
+- The **GetColumn** method automatically converts columns of type **Rid** or **CodedToken** to full 32-bit `mdToken` values.
+- It also automatically converts 8-bit or 16-bit values to full 32-bit values. 
+- For *heap* type columns, the returned *pVal* will be an index into the corresponding heap.
 
-| Typ kolumny              | pVal zawiera | Komentarz                          |
+| Column type              | pVal contains | Komentarz                          |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0.. 63)  | mdToken     | *Pval* będzie zawierać pełny token. Funkcja automatycznie konwertuje identyfikator RID na pełny token. |
-| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | mdToken | Po powrocie *Pval* będzie zawierać pełny token. Funkcja automatycznie dekompresuje CodedToken do pełnego tokenu. |
-| `iSHORT`(96)            | Int16         | Automatycznie Podpisz do 32-bitowego.  |
-| `iUSHORT`(97)           | UInt16        | Automatycznie Podpisz do 32-bitowego.  |
-| `iLONG`(98)             | Int32         |                                        | 
-| `iULONG`(99)            | UInt32        |                                        |
-| `iBYTE`(100)            | Byte          | Automatycznie Podpisz do 32-bitowego.  |
-| `iSTRING`(101)          | Indeks sterty ciągu | *Pval* jest indeksem do sterty ciągu. Użyj [IMetadataTables:: GetString](imetadatatables-getstring-method.md) , aby uzyskać rzeczywistą wartość ciągu kolumny. |
-| `iGUID`(102)            | Indeks sterty identyfikatora GUID | *Pval* jest indeksem do sterty identyfikatora GUID. Użyj [IMetadataTables:: GetGuid](imetadatatables-getguid-method.md) , aby uzyskać rzeczywistą wartość identyfikatora GUID kolumny. |
-| `iBLOB`(103)            | Indeks sterty obiektu BLOB | *Pval* jest indeksem do sterty obiektu BLOB. Użyj [IMetadataTables:: GetBlob](imetadatatables-getblob-method.md) , aby uzyskać rzeczywistą wartość obiektu BLOB kolumny. |
+| `0`..`iRidMax`<br>(0..63)  | mdToken     | *pVal* will contain a full Token. The function automatically converts the Rid into a full token. |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | mdToken | Upon return, *pVal* will contain a full Token. The function automatically decompresses the CodedToken into a full token. |
+| `iSHORT` (96)            | Int16         | Automatically sign-extended to 32-bit.  |
+| `iUSHORT` (97)           | UInt16        | Automatically sign-extended to 32-bit.  |
+| `iLONG` (98)             | Int32         |                                        | 
+| `iULONG` (99)            | UInt32        |                                        |
+| `iBYTE` (100)            | Byte          | Automatically sign-extended to 32-bit.  |
+| `iSTRING` (101)          | String heap index | *pVal* is an index into the String heap. Use [IMetadataTables::GetString](imetadatatables-getstring-method.md) to get the actual column String value. |
+| `iGUID` (102)            | Guid heap index | *pVal* is an index into the Guid heap. Use [IMetadataTables::GetGuid](imetadatatables-getguid-method.md) to get the actual column Guid value. |
+| `iBLOB` (103)            | Blob heap index | *pVal* is an index into the Blob heap. Use [IMetadataTables::GetBlob](imetadatatables-getblob-method.md) to get the actual column Blob value. |
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje .NET Framework**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aaaae5bda88d1fbc9949a080c5765127fd112bde
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448256"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName — Metoda
-Pobiera wskaźnik do zasobu manifestu o podanej nazwie.  
+Gets a pointer to the manifest resource with the specified name.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,22 +36,22 @@ HRESULT FindManifestResourceByName (
   
 ## <a name="parameters"></a>Parametry  
  `szName`  
- podczas Nazwa zasobu.  
+ [in] The name of the resource.  
   
  `ptkManifestResource`  
- określoną Tablica służąca do przechowywania `mdManifestResource` tokenów metadanych, z których każdy reprezentuje zasób manifestu.  
+ [out] The array used to store the `mdManifestResource` metadata tokens, each of which represents a manifest resource.  
   
 ## <a name="remarks"></a>Uwagi  
- `FindManifestResourceByName` Metoda używa standardowych reguł używanych przez środowisko uruchomieniowe języka wspólnego do rozpoznawania odwołań.  
+ The `FindManifestResourceByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformach** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

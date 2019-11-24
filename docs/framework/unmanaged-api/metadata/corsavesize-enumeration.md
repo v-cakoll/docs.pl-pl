@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781599"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450100"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize — Wyliczenie
-Zawiera wartości wskazujące poziom precyzji wymagany podczas wykonywania zapytania dla rozmiaru zapisywania operacji.  
+Contains values indicating the level of precision required when querying for the size of a save operation.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,18 +38,18 @@ typedef enum CorSaveSize {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`cssAccurate`|Określa, że zwracana wartość powinna być dokładna.|  
-|`cssQuick`|Określa, że należy obliczyć wartość zwracaną.|  
-|`cssDiscardTransientCAs`|Określa, czy typy discardable powinny zostać usunięte.|  
+|`cssAccurate`|Specifies that the return value should be exact.|  
+|`cssQuick`|Specifies that the return value should be estimated.|  
+|`cssDiscardTransientCAs`|Specifies that discardable types should be removed.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

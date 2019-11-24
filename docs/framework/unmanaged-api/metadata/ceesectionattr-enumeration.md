@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776336"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444247"
 ---
 # <a name="ceesectionattr-enumeration"></a>CeeSectionAttr — Wyliczenie
-Zawiera wartości, które określają atrybuty sekcji na potrzeby używania przez [iceegen —](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.  
+Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -43,19 +41,19 @@ typedef enum  {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`sdNone`|Sekcja nie ma żadnych atrybutów.|  
-|`sdReadOnly`|Sekcja zawiera zainicjowane dane, które mogą być odczytane tylko, nie zaktualizowano.|  
-|`sdReadWrite`|Sekcja zawiera zainicjowane danych, który może odczytać lub zaktualizować.|  
-|`sdExecute`|Sekcja zawiera kod wykonywalny, który może odczytać i wykonywane.|  
+|`sdNone`|Section has no attributes.|  
+|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
+|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
+|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

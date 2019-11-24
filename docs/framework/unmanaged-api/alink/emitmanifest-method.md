@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdebc1f3-b62e-4d9e-b775-8ccaa8ecb250
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bdab1fd10be8fd245f4348798232964721b4487a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f3bb978b8358992fd9aa7da922e28efc1ed1a951
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777343"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446480"
 ---
 # <a name="emitmanifest-method"></a>EmitManifest — Metoda
-Emituje końcowy manifest. Wywołaj tę metodę po zaimportowaniu wszystkich pozostałych plików i ustawieniu wszystkich opcji. Nie wywołuj tej metody dla modułów niepowiązanych.  
+Emits the final manifest. Call this method after importing all other files and setting all options. Do not call this method for unbound modules.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +37,19 @@ HRESULT EmitManifest(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu.  
+ ID of the assembly.  
   
  `pdwReserveSize`  
- Odbiera rozmiar do zarezerwowania w pliku zestawu pobranym z [funkcji StrongNameSignatureSize —](../strong-naming/strongnamesignaturesize-function.md).  
+ Receives the size to reserve in the assembly file, retrieved from [StrongNameSignatureSize Function](../strong-naming/strongnamesignaturesize-function.md).  
   
  `ptkManifest`  
- Opcjonalnie odbiera token manifestu zestawu.  
+ Optionally receives the assembly manifest token.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
 

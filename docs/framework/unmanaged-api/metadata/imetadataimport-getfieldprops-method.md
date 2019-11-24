@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 574ac706a07e7fcd701ab04f923d5171bea6f64a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782387"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437996"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps — Metoda
-Pobiera metadane skojarzone z polem odwołuje się określona FieldDef token.  
+Gets metadata associated with the field referenced by the specified FieldDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [in] Token FieldDef, który reprezentuje pole, które można pobrać skojarzone metadane.  
+ [in] A FieldDef token that represents the field to get associated metadata for.  
   
  `pClass`  
- [out] Wskaźnik do TypeDef token, który reprezentuje typ klasy, które pole należy do.  
+ [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
   
  `szField`  
- [out] Nazwa pola.  
+ [out] The name of the field.  
   
  `cchField`  
- [in] Rozmiar w znaki dwubajtowe buforu dla *szField*.  
+ [in] The size in wide characters of the buffer for *szField*.  
   
  `pchField`  
- [out] Rzeczywisty rozmiar buforu zwrócony.  
+ [out] The actual size of the returned buffer.  
   
  `pdwAttr`  
- [out] Flagi skojarzone ze pola metadanych.  
+ [out] Flags associated with the field's metadata.  
   
  `ppvSigBlob`  
- [in] Wskaźnik do wartości binarne metadanych, opisujący pola.  
+ [in] A pointer to the binary metadata value that describes the field.  
   
  `pcbSigBlob`  
- [out] Rozmiar w bajtach `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] Flaga, która określa typ wartości pola.  
+ [out] A flag that specifies the value type of the field.  
   
  `ppValue`  
- [out] Stała wartość dla pola.  
+ [out] A constant value for the field.  
   
  `pcchValue`  
- [out] Rozmiar w znaki z `ppValue`, lub zero, jeśli ciąg nie istnieje.  
+ [out] The size in chars of `ppValue`, or zero if no string exists.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

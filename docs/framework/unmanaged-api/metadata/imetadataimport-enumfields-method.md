@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1d23247e-c58c-45db-afd8-83aa89cde18e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 65f59d3df96f46ad65650183bdb6f631356a4d0b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d32dc8ae59fc1a4a189d849437cc95ea3b94a4d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775529"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449540"
 ---
 # <a name="imetadataimportenumfields-method"></a>IMetaDataImport::EnumFields — Metoda
-Wylicza FieldDef tokeny dla danego typu odwołuje się określony token TypeDef.  
+Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,35 +39,35 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] Token TypeDef klasy, których pola są do wyliczenia.  
+ [in] The TypeDef token of the class whose fields are to be enumerated.  
   
  `rFields`  
- [out] Lista tokenów FieldDef.  
+ [out] The list of FieldDef tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rFields` tablicy.  
+ [in] The maximum size of the `rFields` array.  
   
  `pcTokens`  
- [out] Rzeczywista liczba tokenów FieldDef zwracane w `rFields`.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych pól do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumFields` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

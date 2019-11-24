@@ -6,57 +6,57 @@ helpviewer_keywords:
 - UI Automation, Selection control pattern
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
-ms.openlocfilehash: 39baadbad4bf5aff1cc2cd7877489f43581e0fa0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 754af531a20805c53785a37695dce97bb7967a53
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458160"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447119"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>Implementacja wzorca formantu wyboru automatyzacji interfejsu użytkownika
 > [!NOTE]
-> Ta dokumentacja jest przeznaczona dla .NET Framework deweloperów, którzy chcą korzystać z zarządzanych klas [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zdefiniowanych w przestrzeni nazw <xref:System.Windows.Automation>. Aby uzyskać najnowsze informacje na temat [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejs API usługi Windows Automation: Automatyzacja interfejsu użytkownika](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace. For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).  
   
- W tym temacie przedstawiono wytyczne i konwencje dotyczące implementowania <xref:System.Windows.Automation.Provider.ISelectionProvider>, w tym informacje o zdarzeniach i właściwościach. Linki do dodatkowych odwołań znajdują się na końcu tematu.  
+ This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.ISelectionProvider>, including information about events and properties. Links to additional references are listed at the end of the topic.  
   
- <xref:System.Windows.Automation.SelectionPattern> wzorzec kontroli służy do obsługi kontrolek, które działają jako kontenery dla kolekcji elementów podrzędnych, które można wybrać. Elementy podrzędne tego elementu muszą implementować <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. Aby zapoznać się z przykładami formantów implementujących ten wzorzec kontrolek, zobacz [Mapowanie wzorców formantów dla klientów automatyzacji interfejsu użytkownika](control-pattern-mapping-for-ui-automation-clients.md).  
+ The <xref:System.Windows.Automation.SelectionPattern> control pattern is used to support controls that act as containers for a collection of selectable child items. The children of this element must implement <xref:System.Windows.Automation.Provider.ISelectionItemProvider>. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Wytyczne i konwencje dotyczące implementacji  
- Podczas implementowania wzorca kontroli zaznaczania należy zwrócić uwagę na następujące wytyczne i konwencje:  
+## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
+ When implementing the Selection control pattern, note the following guidelines and conventions:  
   
-- Kontrolki implementujące <xref:System.Windows.Automation.Provider.ISelectionProvider> umożliwiają wybranie jednego lub wielu elementów podrzędnych. Na przykład pole listy, widok listy i widok drzewa obsługują wiele zaznaczeń, natomiast Grupa przycisków kombi, suwak i przycisk radiowy obsługują pojedyncze zaznaczenie.  
+- Controls that implement <xref:System.Windows.Automation.Provider.ISelectionProvider> allow either single or multiple child items to be selected. For example, list box, list view, and tree view support multiple selections whereas combo box, slider, and radio button group support single selection.  
   
-- Kontrolki, które mają minimalny, maksymalny i ciągły zakres, takie jak kontrolka suwaka **głośności** , powinny implementować <xref:System.Windows.Automation.Provider.IRangeValueProvider> zamiast <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
+- Controls that have a minimum, maximum, and continuous range, such as the **Volume** slider control, should implement <xref:System.Windows.Automation.Provider.IRangeValueProvider> instead of <xref:System.Windows.Automation.Provider.ISelectionProvider>.  
   
-- Kontrolki pojedynczego wyboru, które zarządzają kontrolkami podrzędnymi, które implementują <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, takie jak suwak **rozdzielczość ekranu** w oknie dialogowym **właściwości wyświetlania** lub kontrolka wyboru **selektora kolorów** z programu Microsoft Word (przedstawiony poniżej ) powinien implementować <xref:System.Windows.Automation.Provider.ISelectionProvider>; ich elementy podrzędne powinny implementować zarówno <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>, jak i <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
+- Single-selection controls that manage child controls that implement <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>, such as the **Screen Resolution** slider in the **Display Properties** dialog box or the **Color Picker** selection control from Microsoft Word (illustrated below), should implement <xref:System.Windows.Automation.Provider.ISelectionProvider>; their children should implement both <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider>.  
   
- ![Selektor kolorów z wyróżnioną żółtą opcją.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
-Przykład mapowania ciągu próbnika kolorów  
+ ![Color picker with yellow highlighted.](./media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
+Example of Color Swatch String Mapping  
   
-- Menu nie obsługują <xref:System.Windows.Automation.SelectionPattern>. Jeśli pracujesz z elementami menu, które zawierają zarówno grafikę, jak i tekst (takie jak elementy **okienka podglądu** w menu **Widok** w programie Microsoft Outlook) i chcesz przekazać stan, należy zaimplementować <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+- Menus do not support <xref:System.Windows.Automation.SelectionPattern>. If you are working with menu items that include both graphics and text (such as the **Preview Pane** items in the **View** menu in Microsoft Outlook) and need to convey state, you should implement <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
-## <a name="required-members-for-iselectionprovider"></a>Wymagane elementy członkowskie dla ISelectionProvider  
- Dla interfejsu <xref:System.Windows.Automation.Provider.ISelectionProvider> są wymagane następujące właściwości, metody i zdarzenia.  
+## <a name="required-members-for-iselectionprovider"></a>Required Members for ISelectionProvider  
+ The following properties, methods, and events are required for the <xref:System.Windows.Automation.Provider.ISelectionProvider> interface.  
   
-|Wymagane elementy członkowskie|Typ|Uwagi|  
+|Required members|Typ|Uwagi|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Właściwość|Powinien obsługiwać zdarzenia zmiany właściwości przy użyciu <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> i <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Właściwość|Powinien obsługiwać zdarzenia zmiany właściwości przy użyciu <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> i <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|Właściwość|Should support property changed events using <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> and <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|Właściwość|Should support property changed events using <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> and <xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|Metoda|Brak|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Zdarzenie|Uruchamiany, gdy zaznaczenie w kontenerze znacząco uległo zmianie i wymaga wysyłania większej liczby zdarzeń dodawania i usuwania niż <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> stałej.|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|Zdarzenie|Raised when a selection in a container has changed significantly and requires sending more addition and removal events than the <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> constant permits.|  
   
- Właściwości <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> i <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> mogą być dynamiczne. Na przykład stan początkowy kontrolki może nie mieć żadnych elementów zaznaczonych domyślnie, co oznacza, że <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> jest `false`. Jednak po zaznaczeniu elementu kontrolka musi zawsze mieć wybrany co najmniej jeden element. Podobnie, w rzadkich przypadkach, formant może zezwolić na wybranie wielu elementów podczas inicjalizacji, ale w dalszym ciągu zezwala na tylko pojedyncze wybory.  
+ The <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> and <xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A> properties can be dynamic. For example, the initial state of a control might not have any items selected by default, indicating that <xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A> is `false`. However, after an item is selected, the control must always have at least one item selected. Similarly, in rare cases, a control might allow multiple items to be selected on initialization, but subsequently allow only single selections to be made.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Wyjątki  
- Dostawcy muszą zgłosić następujące wyjątki.  
+ Providers must throw the following exceptions.  
   
-|Typ wyjątku|Warunek|  
+|Exception Type|Warunek|  
 |--------------------|---------------|  
-|<xref:System.Windows.Automation.ElementNotEnabledException>|Jeśli formant nie jest włączony.|  
-|<xref:System.InvalidOperationException>|Jeśli kontrolka jest ukryta.|  
+|<xref:System.Windows.Automation.ElementNotEnabledException>|If the control is not enabled.|  
+|<xref:System.InvalidOperationException>|If the control is hidden.|  
   
 ## <a name="see-also"></a>Zobacz także
 

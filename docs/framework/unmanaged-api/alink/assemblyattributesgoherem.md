@@ -1,5 +1,5 @@
 ---
-title: Assemblyattributesgoherem — klasa (System.Runtime.CompilerServices)
+title: AssemblyAttributesGoHereM Class (System.Runtime.CompilerServices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereM
@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: caaa8ba9-b4bb-4dd6-934d-57e436b2f3e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69167fda194e9d916f44751fd1f9dcee92822377
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15b9445aa3eabbd14541cfe5481bfb553c8c0347
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790146"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446631"
 ---
-# <a name="assemblyattributesgoherem-class"></a>Assemblyattributesgoherem — klasa
+# <a name="assemblyattributesgoherem-class"></a>AssemblyAttributesGoHereM Class
 
-Używane przez ALink, jako symbol zastępczy do przechowywania informacji na temat atrybutów niestandardowych.
+Used by ALink as a placeholder to store information about custom attributes.
 
 ## <a name="syntax"></a>Składnia
 
@@ -36,11 +34,11 @@ internal sealed class AssemblyAttributesGoHereM
 
 ## <a name="remarks"></a>Uwagi
 
-Odwołania do tego typu może być osadzony wewnątrz modułów sieciowych, których źródła zawierają zestaw atrybutów niestandardowych. Podczas tworzenia manifestu zestawu z jednego lub więcej modułów sieciowych, które zawierają odwołania do tych typów, ALink używa informacji o dołączonych do tych odwołań do emitowania rzeczywiste niestandardowych atrybutów. W efekcie tego typu nigdy nie zostanie uruchomiony, a odwołania do niego są używane tylko jako część procesu kompilacji i spełniać nie zadania w końcowym zestawie.
+References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
 
-Odwołania do tego typu wskazują atrybutów niestandardowych, które nie są związane z zabezpieczeniami, ale są wielokrotnego użytku.
+References to this type indicate custom attributes that are not security related but are multiple-use.
 
-Te typy są oznaczone jako "internal" w ramach programu .NET Framework i znajdują się w <xref:System.Runtime.CompilerServices> przestrzeni nazw.
+These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
 
 ## <a name="requirements"></a>Wymagania
 

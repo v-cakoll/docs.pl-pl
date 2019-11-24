@@ -6,156 +6,154 @@ helpviewer_keywords:
 - metadata enumerations [.NET Framework]
 - unmanaged enumerations [.NET Framework], metadata
 ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92f2419070738a49f78c1f1497652cc0b89f3b21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042201"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447858"
 ---
 # <a name="metadata-enumerations"></a>Wyliczenia metadanych
-W tej sekcji opisano niezarządzane wyliczenia, których używa interfejsów API metadanych.  
+This section describes the unmanaged enumerations that the metadata API uses.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [AssemblyFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/assemblyflags-enumeration.md)  
- Zawiera wartości, które opisują funkcji wykonawczej zestawu.  
+ Contains values that describe the run-time features of an assembly.  
   
  [AssemblyRefFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)  
- Zawiera wartości, które opisano funkcje odwołania do zestawu.  
+ Contains values that describe the features of an assembly reference.  
   
  [CeeSectionAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- Zawiera wartości, które określają atrybuty sekcji na potrzeby używania przez [iceegen —](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfejsu.  
+ Provides values that specify the attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
  [CeeSectionRelocType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- Udostępnia wartości w celu wywierania wpływu na typ `reloc` instrukcji emitowane w wywołaniu [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) metody.  
+ Provides values to influence the type of `reloc` instruction emitted in a call to the [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) method.  
   
  [COINITICOR, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
- Określa stałe używane przez [coinitializecor —](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.  
+ Specifies constants used by [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) when initializing the common language runtime.  
   
  [COINITIEE, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/coinitiee-enumeration.md)  
- Określa stałe używane przez [coinitializeee —](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.  
+ Specifies constants used by [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) when initializing the common language runtime.  
   
  [CorArgType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corargtype-enumeration.md)  
- Zawiera wartości, które opisują typ macierzysty dojścia środowiska uruchomieniowego.  
+ Contains values that describe the native type of a runtime handle.  
   
  [CorAssemblyFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)  
- Zawiera wartości, które opisują metadane stosowane do kompilacji zestawu.  
+ Contains values that describe the metadata applied to an assembly compilation.  
   
  [CorAttributeTargets, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corattributetargets-enumeration.md)  
- Określa elementy aplikacji, na których jest on prawidłowy, aby zastosować atrybut.  
+ Specifies the application elements on which it is valid to apply an attribute.  
   
  [CorCallingConvention, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corcallingconvention-enumeration.md)  
- Zawiera wartości, które opisują rodzaje konwencji wywoływania, które zostały wprowadzone w kodzie zarządzanym.  
+ Contains values that describe the types of calling conventions that are made in managed code.  
   
  [CorCheckDuplicatesFor, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md)  
- Zawiera wartości, używana podczas kontroli dla duplikatów.  
+ Contains values used during checks for duplications.  
   
  [CorDeclSecurity, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)  
- Zawiera wartości, które opisują rodzaje Zabezpieczenia deklaracyjne używane przez środowisko uruchomieniowe języka wspólnego.  
+ Contains values that describe the types of declarative security used by the common language runtime.  
   
- Corelementtype —  
- Zawiera wartości, które opisują podstawowy typ natywnego środowiska uruchomieniowego języka wspólnego <xref:System.Type>.  
+ CorElementType  
+ Contains values that describe the underlying native type of a common language runtime <xref:System.Type>.  
   
  [CorErrorIfEmitOutOfOrder, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corerrorifemitoutoforder-enumeration.md)  
- Zawiera wartości flagi, które określają warunki, w których mają być generowane metadanych jest emitowane poza kolejnością komunikat o błędzie.  
+ Contains flag values that indicate the conditions under which an error message should be generated when metadata is emitted out of order.  
   
  [CorEventAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/coreventattr-enumeration.md)  
- Zawiera wartości, które opisują metadane zdarzenie.  
+ Contains values that describe the metadata of an event.  
   
  [CorFieldAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corfieldattr-enumeration.md)  
- Zawiera wartości, które opisują metadane dotyczące pola.  
+ Contains values that describe metadata about a field.  
   
  [CorFileFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- Zawiera wartości, które opisują typ zdefiniowany w wywołaniu pliku [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) metody.  
+ Contains values that describe the type of file defined in a call to the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
   
  [CorFileMapping, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- Zawiera wartości, które opisują typ mapowania pliku, który jest zwracany po wywołaniu [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) metody.  
+ Contains values that describe the type of file mapping that is returned from a call to the [IMetaDataInfo::GetFileMapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) method.  
   
  [CorGenericParamAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- Zawiera wartości, które opisują <xref:System.Type> parametrów dla typów ogólnych, jako używane wywołania [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) metody.  
+ Contains values that describe the <xref:System.Type> parameters for generic types, as used in calls to the [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) method.  
   
  [CorImportOptions, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
- Zawiera wartości flagi, które kontrolują zachowanie podczas Importowanie zestawu poza bieżącym zakresem.  
+ Contains flag values that control the behavior during importation of an assembly outside the current scope.  
   
  [CorLinkerOptions, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corlinkeroptions-enumeration.md)  
- Określa flagi, aby wybrać opcje do konsolidatora metadanych.  
+ Specifies flags to select options for the metadata linker.  
   
  [CorLocalRefPreservation, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corlocalrefpreservation-enumeration.md)  
- Zawiera wartości flagi dla przetwarzania lokalnego odwołania.  
+ Contains flag values for the treatment of local references.  
   
  [CorManifestResourceFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)  
- Zawiera wartości, które opisują widoczność zasobów zakodowane w manifeście zestawu.  
+ Contains values that describe the visibility of resources encoded in an assembly manifest.  
   
  [CorMethodAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)  
- Zawiera wartości, które opisują metadane dotyczące metody.  
+ Contains values that describe metadata about a method.  
   
  [CorMethodImpl, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)  
- Zawiera wartości, które opisano funkcje implementacji metody.  
+ Contains values that describe method implementation features.  
   
  [CorMethodSemanticsAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cormethodsemanticsattr-enumeration.md)  
- Zawiera wartości, które opisują relację między metodą i skojarzonej właściwości lub zdarzenia.  
+ Contains values that describe the relationship between a method and an associated property or event.  
   
  [CorNativeLinkFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)  
- Udostępnia wartości flagi używane przez konsolidator, podczas łączenia kodu natywnego.  
+ Provides flag values used by the linker when linking native code.  
   
  [CorNativeLinkType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)  
- Zawiera wartości wskazujące typ połączone w kodzie natywnym.  
+ Provides values that indicate the type linked in native code.  
   
  [CorNativeType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornativetype-enumeration.md)  
- Zawiera wartości, które opisują typy natywne niezarządzanych.  
+ Contains values that describe native unmanaged types.  
   
  [CorNotificationForTokenMovement, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cornotificationfortokenmovement-enumeration.md)  
- Zawiera wartości flagi, które mają wpływ na powiadomienia podczas przenoszenia tokenu.  
+ Contains flag values that influence notifications upon token movement.  
   
  [CorOpenFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)  
- Zawiera wartości flagi, które kontrolują zachowanie metadanych podczas otwierania plików manifestu.  
+ Contains flag values that control metadata behavior upon opening manifest files.  
   
  [CorParamAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corparamattr-enumeration.md)  
- Zawiera wartości, które opisują metadane parametrem metody.  
+ Contains values that describe the metadata of a method parameter.  
   
  [CorPEKind, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- Zawiera wartości, które opisują przenośny plik wykonywalny, zwrócone w wyniku wywołania [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) metody.  
+ Contains values that describe a portable executable file, as returned from a call to the [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) method.  
   
  [CorPinvokeMap, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
- Zawiera wartości, które opisano funkcje wywołań PInvoke.  
+ Contains values that describe features of a PInvoke call.  
   
  [CorPropertyAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)  
- Zawiera wartości, które opisują metadane właściwości.  
+ Contains values that describe the metadata of a property.  
   
  [CorRefToDefCheck, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md)  
- Określa flagi do kontroli, do którego istnieje odwołanie elementy, które są konwertowane na ich definicji w celu optymalizacji kodu.  
+ Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.  
   
  [CorRegFlags, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corregflags-enumeration.md)  
- Udostępnia wartości flagi używane do rejestracji podczas instalowania modułu lub złożone.  
+ Provides flag values used for registration when installing a module or composite.  
   
  [CorSaveSize, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)  
- Zawiera wartości wskazujące poziom precyzji wymagany podczas wykonywania zapytania dla rozmiaru zapisywania operacji.  
+ Contains values indicating the level of precision required when querying for the size of a save operation.  
   
  [CorSerializationType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corserializationtype-enumeration.md)  
- Zawiera wartości, które opisują, jak obiekt jest serializowany przez środowisko uruchomieniowe języka wspólnego. Te wartości zwykle odpowiadają wartościom corelementtype —.  
+ Contains values that describe how an object is serialized by the common language runtime. These values generally correspond to CorElementType values.  
   
  [CorSetENC, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corsetenc-enumeration.md)  
- Zawiera wartości używane do wywierania wpływu na zachowanie podczas generowania metadanych.  
+ Contains values used to influence behavior during the generation of metadata.  
   
  [CorThreadSafetyOptions, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corthreadsafetyoptions-enumeration.md)  
- Określa flagi, aby wybrać opcje bezpieczeństwo wątkowe.  
+ Specifies flags to select options for thread safety.  
   
  [CorTokenType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cortokentype-enumeration.md)  
- Zawiera wartości wskazujące rodzaj obiektu, który odwołuje się do tokenu metadanych.  
+ Contains values that indicate the kind of object that a metadata token references.  
   
  [CorTypeAttr, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)  
- Zawiera wartości, które wskazują metadanych typu.  
+ Contains values that indicate type metadata.  
   
  [CorUnmanagedCallingConvention, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corunmanagedcallingconvention-enumeration.md)  
- Zawiera wartości, które opisują konwencji wywoływania niezarządzanego.  
+ Contains values that describe unmanaged calling conventions.  
   
  [CorValidatorModuleType, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- Dostarcza wartości stosowane przez [imetadatavalidate —](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interfejsu do określania typu modułu (plik PE a pliku .obj).  
+ Provides values used by the [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) interface to specify the type of the module (PE file vs. .obj file).  
   
  [COUNINITIEE, wyliczenie](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
- Określa stałe używane przez [couninitializeee —](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) podczas inicjowania środowiska uruchomieniowego języka wspólnego.  
+ Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  

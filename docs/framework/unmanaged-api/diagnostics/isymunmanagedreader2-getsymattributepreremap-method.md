@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 46c608a644619c28709de135d7c062175b012d80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777379"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446419"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap — Metoda
-Pobiera atrybut niestandardowy na podstawie jego nazwy. W przeciwieństwie do metadanych atrybutów niestandardowych te atrybuty są przechowywane w magazynie symboli.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttributePreRemap(
   
 ## <a name="parameters"></a>Parametry  
  `parent`  
- [in] Token metadanych elementu nadrzędnego.  
+ [in] The metadata token of the parent.  
   
  `name`  
- [in] Wskaźnik do `WCHAR` zawierający nazwę.  
+ [in] A pointer to a `WCHAR` that contains the name.  
   
  `cBuffer`  
- [in] A `ULONG32` oznacza rozmiar `buffer` tablicy.  
+ [in] A `ULONG32` that indicates the size of the `buffer` array.  
   
  `pcBuffer`  
- [out] Wskaźnik do `ULONG32` odbierająca rozmiar buforu, muszą zawierać bajtów atrybutu.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the attribute bytes.  
   
  `buffer`  
- [out] Wskaźnik do buforu, który otrzymuje bajtów atrybutu.  
+ [out] A pointer to the buffer that receives the attribute bytes.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

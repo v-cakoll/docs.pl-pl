@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d0d65060-6f90-42a2-95cf-6ffb04352996
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58fa2a6d34f1f3627378c1355a1a292b665899ee
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9dbbdcc9d0fb9f0a8d2a64edfa4a0ad92570933c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756411"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450008"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>IMetaDataImport::EnumSignatures — Metoda
-Wylicza tokenów sygnatur reprezentujący autonomicznej podpisów w bieżącym zakresie.  
+Enumerates Signature tokens representing stand-alone signatures in the current scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,35 +38,35 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rSignatures`  
- [out] Tablica do przechowywania tokenów sygnatur.  
+ [out] The array used to store the Signature tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rSignatures` tablicy.  
+ [in] The maximum size of the `rSignatures` array.  
   
  `pcSignatures`  
- [out] Liczba tokenów sygnatur zwracane w `rSignatures`.  
+ [out] The number of Signature tokens returned in `rSignatures`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcSignatures` wynosi zero.|  
+|`S_OK`|`EnumSignatures` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tokeny sygnatury są tworzone przez [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) metody.  
+ The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

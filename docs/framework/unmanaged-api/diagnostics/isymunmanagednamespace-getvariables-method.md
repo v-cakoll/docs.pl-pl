@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea7c1617-f3ce-4220-8288-f2b50eaf0f0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 98ed5556020b93fb1f31d1dde84690fc33092627
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895048"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448371"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables — Metoda
-Zwraca wszystkie zmienne zdefiniowane w zakresie globalnym w tej przestrzeni nazw.  
+Returns all variables defined at global scope within this namespace.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +37,19 @@ HRESULT GetVariables(
   
 ## <a name="parameters"></a>Parametry  
  `cVars`  
- podczas `ULONG32` Wskazuje rozmiar`pVars` tablicy.  
+ [in] A `ULONG32` that indicates the size of the `pVars` array.  
   
  `pcVars`  
- określoną Wskaźnik do `ULONG32` obiektu, który odbiera rozmiar buforu wymaganego do przechowywania przestrzeni nazw.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `pVars`  
- określoną Wskaźnik do buforu, który zawiera przestrzenie nazw.  
+ [out] A pointer to a buffer that contains the namespaces.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie, E_FAIL lub inny kod błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówki** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 8653bd4c-2290-43d2-a3e1-cbbd50033f4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 66bd56a332dc34fd35f3129256cc0e3d6c5d4508
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af881d23ff77f05dadbbc745b973979e35ebe9f7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636702"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447568"
 ---
 # <a name="imethodmallocalloc-method"></a>IMethodMalloc::Alloc — Metoda
 
-Próbuje przydzielić określonej ilości pamięci dla nowej treści funkcji Microsoft intermediate language (MSIL).
+Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
 
 ## <a name="syntax"></a>Składnia
 
@@ -39,22 +37,22 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parametry
 
 `cb`\
-[in] Liczba bajtów do przydzielenia dla treści metody.
+[in] The number of bytes to allocate for the method body.
 
 ## <a name="remarks"></a>Uwagi
 
- Ilość przydzielonej pamięci rozpocznie się pod adresem większy niż adres podstawowy moduł, który jest skojarzony z tym alokatora. Innymi słowy każdy alokatora jest tworzona dla danego modułu i podejmie próbę przydzielenia pamięci na dodatnią przesunięcie z adresu podstawowego. Jeśli `Alloc` nie może przydzielić żądanej liczby bajtów pod adresem większy niż adres podstawowy moduł, zwraca E_OUTOFMEMORY niezależnie od rzeczywistej ilości miejsca w pamięci.
+ The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
 
- `Alloc` Metoda powinna służyć w połączeniu z [icorprofilerinfo::setilfunctionbody —](icorprofilerinfo-setilfunctionbody-method.md) metody.
+ The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
 
 ## <a name="requirements"></a>Wymagania
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).
 
- **Nagłówek:** CorProf.idl, CorProf.h
+ **Header:** CorProf.idl, CorProf.h
 
- **Biblioteka:** CorGuids.lib
+ **Library:** CorGuids.lib
 
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>Zobacz także
 

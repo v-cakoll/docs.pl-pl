@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8bf3cb62-89bf-4159-ad53-de606aba89e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f7993ebc15f95df97a9b45523717f318d8c435ce
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769436"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448945"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset — Metoda
-Zwraca przesunięcie w ramach tej metody, która odnosi się do określonej pozycji w dokumencie.  
+Returns the offset within this method that corresponds to a given position within a document.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT GetOffset(
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] Wskaźnik do dokumentu, dla którego żądana jest przesunięcie.  
+ [in] A pointer to the document for which the offset is requested.  
   
  `line`  
- [in] Wiersz dokumentu, dla którego żądana jest przesunięcie.  
+ [in] The document line for which the offset is requested.  
   
  `column`  
- [in] Kolumna dokumentu, dla którego żądana jest przesunięcie.  
+ [in] The document column for which the offset is requested.  
   
  `pRetVal`  
- [out] Wskaźnik do `ULONG32` odbierająca przesunięcia.  
+ [out] A pointer to a `ULONG32` that receives the offsets.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

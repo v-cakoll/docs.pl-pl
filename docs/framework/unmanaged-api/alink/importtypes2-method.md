@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787255"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445667"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 — Metoda
-Inicjuje importowanie typów. Wywołaj tę metodę, aby rozpocząć importowanie typów z każdego zakresu zaimportowanego za pomocą [metody ImportFile —](importfile-method.md).  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu do zaimportowania.  
+ ID of assembly into which to import.  
   
  `FileToken`  
- Identyfikator pliku, z którego ma zostać zaimportowany.  
+ ID of file to from which to import.  
   
  `dwScope`  
- Zakres od zera, z którego ma zostać zaimportowany.  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- Odbiera dojście modułu wyliczającego dla typów w danym zakresie.  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- Opcjonalnie odbiera Interfejs [interfejsu IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Opcjonalnie otrzymuje liczbę typów w określonym zakresie.  
+ Optionally receives count of types in the specified scope.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

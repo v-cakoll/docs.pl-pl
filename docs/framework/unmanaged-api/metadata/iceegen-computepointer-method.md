@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782011"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448745"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer — Metoda
-Określa bufor dla sekcji określonego kodu.  
+Determines the buffer for the specified code section.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,22 +39,22 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcję kodu, dla której ma zostać zwrócone do buforu.  
+ [in] The code section for which to return a buffer.  
   
  `RVA`  
- [in] Wirtualny adres względny metody, do których chcesz uzyskać wskaźnika.  
+ [in] The relative virtual address of the method for which to get a pointer.  
   
  `lpBuffer`  
- [out] Wskaźnik do buforu zwrócone.  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

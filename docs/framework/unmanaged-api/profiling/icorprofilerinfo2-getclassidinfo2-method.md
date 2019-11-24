@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0141d582-d066-4d49-8d1f-ae82129a1960
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 892379d3281a98821b7feb5250973fac74f1f4f6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ce02b8b44074bed2da9e302f95a67a528601bf8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751846"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433440"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>ICorProfilerInfo2::GetClassIDInfo2 — Metoda
-Pobiera moduł nadrzędny i metadane token otwarte ogólne definicji określonej klasy `ClassID` klasy nadrzędnej, a `ClassID` dla każdego typu argumentu, jeśli jest obecny, klasy.  
+Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,43 +40,43 @@ HRESULT GetClassIDInfo2(
   
 ## <a name="parameters"></a>Parametry  
  `classId`  
- [in] Identyfikator klasy, dla którego będą pobierane informacje.  
+ [in] The ID of the class for which information will be retrieved.  
   
  `pModuleId`  
- [out] Wskaźnik do Identyfikatora modułu nadrzędnego otwarte ogólne definicji określonej klasy.  
+ [out] Pointer to the ID of the parent module for the open generic definition of the specified class.  
   
  `pTypeDefToken`  
- [out] Wskaźnik do tokenu metadanych otwarte ogólne definicji określonej klasy.  
+ [out] Pointer to the metadata token for the open generic definition of the specified class.  
   
  `pParentClassId`  
- [out] Wskaźnik do Identyfikatora klasy nadrzędnej.  
+ [out] Pointer to the ID of the parent class.  
   
  `cNumTypeArgs`  
- [in] Rozmiar `typeArgs` tablicy.  
+ [in] The size of the `typeArgs` array.  
   
  `pcNumTypeArgs`  
- [out] Wskaźnik na całkowitą liczbę dostępnych elementów.  
+ [out] Pointer to the total number of available elements.  
   
  `typeArgs`  
- [out] Tablica `ClassID` wartości, z których każdy reprezentuje identyfikator argument typu klasy. Po powrocie z metody `typeArgs` będzie zawierać niektórych lub wszystkich dostępnych `ClassID` wartości.  
+ [out] An array of `ClassID` values, each of which represents the ID of a type argument of the class. When the method returns, `typeArgs` will contain some or all the available `ClassID` values.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetClassIDInfo2` Metoda jest podobna do [icorprofilerinfo::getclassidinfo —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) metody, ale `GetClassIDInfo2` uzyskuje dodatkowe informacje na temat typu ogólnego.  
+ The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.  
   
- Program profilujący kodu może wywołać [icorprofilerinfo::getmodulemetadata —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) uzyskać [metadanych](../../../../docs/framework/unmanaged-api/metadata/index.md) interfejs dla danego modułu. Token metadanych, które są zwracane do lokalizacji, odwołuje się `pTypeDefToken` następnie może służyć do uzyskania dostępu do klasy metadanych.  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.  
   
- Po `GetClassIDInfo2` zwróci wartość, należy sprawdzić, czy `typeArgs` bufor jest wystarczająco duży, aby zawierała wszystkich `ClassID` wartości. Aby to zrobić, porównaj wartość która `pcNumTypeArgs` wskazuje z wartością `cNumTypeArgs` parametru. Jeśli `pcNumTypeArgs` wskazuje wartość, która jest większa niż `cNumTypeArgs`, Przydziel większego `typeArgs` buforu, zaktualizuj `cNumTypeArgs` przy użyciu nowych, większy rozmiar i Wywołaj `GetClassIDInfo2` ponownie.  
+ After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values. To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter. If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.  
   
- Alternatywnie, można wywołać `GetClassIDInfo2` o zerowej długości `typeArgs` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić `typeArgs` rozmiar do wartości zwracanej w buforu `pcNumTypeArgs` i wywołać `GetClassIDInfo2` ponownie.  
+ Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size. You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

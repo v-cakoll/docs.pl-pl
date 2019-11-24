@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60573ad7-8821-4721-a068-3f7a6d25926a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4fed7dbe4ec8343a3854d1f277e3228b14c0bf21
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756490"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450022"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties — Metoda
-Wylicza tokenów właściwości reprezentujących właściwości typu odwołuje się określony token TypeDef.  
+Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,35 +39,35 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in] TypeDef token reprezentujący typ z właściwościami do wyliczenia.  
+ [in] A TypeDef token representing the type with properties to enumerate.  
   
  `rProperties`  
- [out] Tablica do przechowywania tokenów właściwości.  
+ [out] The array used to store the PropertyDef tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rProperties` tablicy.  
+ [in] The maximum size of the `rProperties` array.  
   
  `pcProperties`  
- [out] Liczba tokenów właściwości zwracane w `rProperties`.  
+ [out] The number of PropertyDef tokens returned in `rProperties`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcProperties` wynosi zero.|  
+|`S_OK`|`EnumProperties` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

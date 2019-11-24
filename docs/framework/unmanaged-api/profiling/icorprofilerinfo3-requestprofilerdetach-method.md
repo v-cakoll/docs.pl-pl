@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ab203fc054298971fadfd9abe4e787844313898b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3256f6f64e2ee4678b2627eea81e12cb4a02fd1e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765327"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449620"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach — Metoda
-Powoduje, że środowisko uruchomieniowe, aby odłączyć profiler.  
+Instructs the runtime to detach the profiler.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,35 +34,35 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="parameters"></a>Parametry  
  `dwExpectedCompletionMilliseconds`  
- [in] Czas w milisekundach, środowisko uruchomieniowe języka wspólnego (CLR) powinien odczekać przez sprawdzanie, czy jest bezpieczne zwolnić profiler.  
+ [in] The length of time, in milliseconds, the common language runtime (CLR) should wait before checking to see whether it is safe to unload the profiler.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Żądanie odłączenia jest prawidłowy, i procedury Odłącz jest teraz kontynuowane w innym wątku. Podczas odłączania zostanie całkowicie zakończona, `ProfilerDetachSucceeded` zdarzenie.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|Wystąpił błąd profilera [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) spróbować uzyskać [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interfejs, który muszą implementować do obsługi operacji odłączania. Odłączanie nie podjęto próby.|  
-|CORPROF_E_IMMUTABLE_FLAGS_SET|Odłączenie jest niemożliwe, ponieważ program profilujący Ustaw flagi niezmienne przy uruchamianiu. Nie podjęto próby odłączenie; profiler jest nadal w pełni dołączony.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Odłączenie jest niemożliwe, ponieważ program profilujący używane Instrumentacji kod intermediate language (MSIL) firmy Microsoft lub wstawiono `enter` / `leave` punkty zaczepienia. Nie podjęto próby odłączenie; profiler jest nadal w pełni dołączony.<br /><br /> **Uwaga** Instrumentacji MSIL jest kod kod, który jest dostarczany przez profiler przy użyciu [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|Środowisko wykonawcze nie została jeszcze zainicjowana w aplikacji zarządzanej. (Oznacza to, środowisko wykonawcze nie został w pełni załadowany.) Tego kodu błędu mogą być zwrócone zleconą odłączenie wewnątrz wywołania zwrotnego profilera [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) metody.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` została wywołana w chwili nieobsługiwany. Dzieje się tak Jeśli metoda jest wywoływana wątków zarządzanych, ale nie z poziomu [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody lub z poziomu [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) metody, które nie tolerują wyrzucania elementów bezużytecznych. Aby uzyskać więcej informacji, zobacz [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|S_OK|The detach request is valid, and the detach procedure is now continuing on another thread. When the detach is fully complete, a `ProfilerDetachSucceeded` event is issued.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|The profiler failed an [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) attempt for the [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, which it must implement to support the detach operation. Detach was not attempted.|  
+|CORPROF_E_IMMUTABLE_FLAGS_SET|Detachment is impossible because the profiler set immutable flags at startup. Detachment was not attempted; the profiler is still fully attached.|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Detachment is impossible because the profiler used instrumented Microsoft intermediate language (MSIL) code, or inserted `enter`/`leave` hooks. Detachment was not attempted; the profiler is still fully attached.<br /><br /> **Note** Instrumented MSIL is code is code that is provided by the profiler using the [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|The runtime has not been initialized yet in the managed application. (That is, the runtime has not been fully loaded.) This error code may be returned when detachment is requested inside the profiler callback's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` was called at an unsupported time. This occurs if the method is called on a managed thread but not from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method or from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method that cannot tolerate a garbage collection. For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Uwagi  
- Podczas wykonywania procedury Odłącz, odłącz wątku (wątek służących do odłączenia profilera) od czasu do czasu sprawdza, czy wszystkie wątki zamknięciu programu profilującego kodu. Program profilujący powinien udostępniać oszacowanie, o ile to za pośrednictwem `dwExpectedCompletionMilliseconds` parametru. Dobrej wartość do wykorzystania jest typowy ilość czasu, program profilujący korzystało z wewnątrz każdego podane `ICorProfilerCallback*` metody; Metoda ta wartość nie powinna być części mniejszej od połowy maksymalną ilość czasu profiler oczekuje, że do wydania.  
+ During the detach procedure, the detach thread (the thread created specifically for detaching the profiler) occasionally checks whether all threads have exited the profiler’s code. The profiler should provide an estimate of how long this should take through the `dwExpectedCompletionMilliseconds` parameter. A good value to use is the typical amount of time the profiler spends inside any given `ICorProfilerCallback*` method; this value should not be less than half of the maximum amount of time the profiler expects to spend.  
   
- Używa wątku Odłącz `dwExpectedCompletionMilliseconds` zdecydować, jak długo do stanu uśpienia przed sprawdzeniem, czy kod wywołania zwrotnego profilera został zabrany ze stosów wszystkich. Chociaż szczegóły następującego algorytmu mogą ulec zmianie w przyszłych wersjach środowiska CLR, przedstawia on jeden ze sposobów `dwExpectedCompletionMilliseconds` mogą być używane podczas ustalania, kiedy jest bezpieczne zwolnić profiler. Wątek Odłącz najpierw zostanie uśpiony `dwExpectedCompletionMilliseconds` milisekund. Jeśli po aktywności ze stanu uśpienia, środowiska CLR stwierdzi, że jest nadal obecny kod wywołania zwrotnego profilera, wątek Odłącz przejścia w tryb uśpienia, obecnie dwa razy `dwExpectedCompletionMilliseconds` milisekund. Jeśli po aktywności z tego drugiego uśpienia, wątek Odłącz stwierdzi, że kod wywołania zwrotnego profilera nadal istnieje, zostanie uśpiony na 10 minut przed ponownym sprawdzeniem. Wątek Odłącz w dalszym ciągu Sprawdź ponownie co 10 minut.  
+ The detach thread uses `dwExpectedCompletionMilliseconds` to decide how long to sleep before checking whether profiler callback code has been popped off all stacks. Although the details of the following algorithm may change in future releases of the CLR, it illustrates one way `dwExpectedCompletionMilliseconds` can be used when determining when it is safe to unload the profiler. The detach thread first sleeps for `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from the sleep, the CLR finds that profiler callback code is still present, the detach thread sleeps again, this time for two times `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from this second sleep, the detach thread finds that profiler callback code is still present, it sleeps for 10 minutes before checking again. The detach thread continues to recheck every 10 minutes.  
   
- Jeśli program profilujący Określa `dwExpectedCompletionMilliseconds` jako 0 (zero), środowisko CLR używa domyślnie wynosi 5000, co oznacza, że zostanie przeprowadzone sprawdzanie po 5 sekundach ponownie po 10 sekund, a następnie co 10 minut po tej dacie.  
+ If the profiler specifies `dwExpectedCompletionMilliseconds` as 0 (zero), the CLR uses a default value of 5000, which means that it will perform a check after 5 seconds, again after 10 seconds, and then every 10 minutes thereafter.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0eaa4aa9-9441-444a-920c-e4b2a2db899e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ec04588bd1cc21e585d89c734c152a86fb835b15
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3c57074ae53e2e1d8d41aa04cb6eb6089db58b5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772722"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449441"
 ---
 # <a name="imetadataassemblyimportgetassemblyprops-method"></a>IMetaDataAssemblyImport::GetAssemblyProps — Metoda
-Pobiera zbiór właściwości dla zestawu podpisem określonych metadanych.  
+Gets the set of properties for the assembly with the specified metadata signature.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,40 +43,40 @@ HRESULT GetAssemblyProps (
   
 ## <a name="parameters"></a>Parametry  
  `mda`  
- [in]. `mdAssembly` Token metadanych, który reprezentuje zestaw, dla którego można pobrać właściwości.  
+ [in]. The `mdAssembly` metadata token that represents the assembly for which to get the properties.  
   
  `ppbPublicKey`  
- [out] Wskaźnik do tokenu metadanych lub klucza publicznego.  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKey`  
- [out] Liczba bajtów zwróconych klucza publicznego.  
+ [out] The number of bytes in the returned public key.  
   
  `pulHashAlgId`  
- [out] Wskaźnik do algorytm wyznaczania wartości skrótu dla plików w zestawie.  
+ [out] A pointer to the algorithm used to hash the files in the assembly.  
   
  `szName`  
- [out] Prosta nazwa zestawu.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] Rozmiar w szerokie znaki z `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Liczba szerokie znaki rzeczywistego zwrotu w `szName`.  
+ [out] The number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out] Wskaźnik do assemblymetadata — struktura, która zawiera metadane zestawu.  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `pdwAssemblyFlags`  
- [out] Flagi, które opisują metadane zastosowany do zestawu. Ta wartość składa się z co najmniej jeden [corassemblyflags —](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) wartości.  
+ [out] Flags that describe the metadata applied to an assembly. This value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

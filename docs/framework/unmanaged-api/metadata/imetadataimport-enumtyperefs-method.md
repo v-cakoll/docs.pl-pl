@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774622"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449984"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs — Metoda
-Wylicza tokeny TypeRef zdefiniowane w bieżącym zakresie metadanych.  
+Enumerates TypeRef tokens defined in the current metadata scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,35 +38,35 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rTypeRefs`  
- [out] Tablica do przechowywania tokenów TypeRef.  
+ [out] The array used to store the TypeRef tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rTypeRefs` tablicy.  
+ [in] The maximum size of the `rTypeRefs` array.  
   
  `pcTypeRefs`  
- [out] Wskaźnik do liczby tokenów TypeRef zwracane w `rTypeRefs`.  
+ [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTypeRefs` wynosi zero.|  
+|`S_OK`|`EnumTypeRefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
   
 ## <a name="remarks"></a>Uwagi  
- TypeRef token reprezentuje odwołanie do typu.  
+ A TypeRef token represents a reference to a type.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

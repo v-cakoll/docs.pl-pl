@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf2a1bca6115902d96f72c19dc469d0a1c8588cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756215"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450113"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags — Wyliczenie
-Udostępnia wartości flagi używane do rejestracji podczas instalowania modułu lub obrazu złożonego.  
+Provides flag values used for registration when installing a module or composite image.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,18 +39,18 @@ typedef enum
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`regNoCopy`|Określa, że nie można skopiować pliki do miejsca docelowego.|  
-|`regConfig`|Określa, czy modułu lub złożone jest konfiguracja.|  
-|`regHasRefs`|Określa, czy moduł lub złożone ma odwołań do klas.|  
+|`regNoCopy`|Specifies that files should not be copied into the destination.|  
+|`regConfig`|Specifies that the module or composite is a configuration.|  
+|`regHasRefs`|Specifies that the module or composite has class references.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: d16703fd-518f-412e-92cb-74433d11032e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c6ac7dabd2dfcc7829fd42389c0a6c261fe456d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c315e2ae2753b59b4e277764d27c3fb3388b515c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781865"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445420"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags — Wyliczenie
-Zawiera wartości, które opisują typ zdefiniowany w wywołaniu pliku [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+Contains values that describe the type of file defined in a call to [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,15 +39,15 @@ typedef enum CorFileFlags {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`ffContainsMetaData`|Wskazuje, że plik nie jest plikiem zasobów.|  
-|`ffContainsNoMetaData`|Wskazuje, czy plik, ewentualnie pliku zasobów, nie zawiera metadanych.|  
+|`ffContainsMetaData`|Indicates that the file is not a resource file.|  
+|`ffContainsNoMetaData`|Indicates that the file, possibly a resource file, does not contain metadata.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

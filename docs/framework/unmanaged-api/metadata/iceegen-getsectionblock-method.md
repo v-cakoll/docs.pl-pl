@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 84ccbd7a8be7d90a541fb2d54baa3d7f66d3d31e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434882"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock — Metoda
-Pobiera blok części bazy kodu.  
+Gets a section block of the code base.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,28 +40,28 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcja, z których mają być pobierane blok bazy kodu.  
+ [in] The section from which to retrieve a block of the code base.  
   
  `len`  
- [in] Długość bloku, które mają zostać pobrane.  
+ [in] The length of the block to be retrieved.  
   
  `align`  
- [in] Bajt względem początku sekcji, z którą ma zostać wyrównywanie pierwszego bajtu bloku. Jest to pozycja bloku, w ramach tej sekcji.  
+ [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
   
  `ppBytes`  
- [out] Wskaźnik do lokalizacji, która otrzymuje adres bloku pobrane.  
+ [out] A pointer to a location that receives the address of the retrieved block.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `GetSectionBlock` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
+ Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

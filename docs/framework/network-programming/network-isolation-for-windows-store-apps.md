@@ -2,34 +2,34 @@
 title: Izolacja sieci dla aplikacji ze sklepu Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642272"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447422"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Izolacja sieci dla aplikacji ze sklepu Windows Store
-Klasy w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzeni nazw może służyć do tworzenia aplikacji Windows Store lub aplikacjami pulpitu. W przypadku użycia w aplikacji Windows Store, klas w tych obszarach nazw dotyczy izolacji sieci, częścią modelu zabezpieczeń aplikacji, które są używane przez [!INCLUDE[win8](../../../includes/win8-md.md)]. Możliwości odpowiedniej sieci musi być włączony w manifeście aplikacji dla aplikacji Windows Store dla systemu zezwolić na dostęp do sieci.  
+Classes in the <xref:System.Net>,  <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces can be used to develop Windows Store  apps  or desktop apps. When used in a Windows Store app, classes in these namespaces are affected by network isolation, part of the application security model used by the [!INCLUDE[win8](../../../includes/win8-md.md)]. The appropriate network capabilities must be enabled in the app manifest for a Windows Store app for the system to allow network access.  
   
-## <a name="checklist-for-network-isolation"></a>Lista kontrolna na potrzeby izolacji sieciowej  
- Użyj tej listy kontrolnej, należy upewnić się, że izolacja sieciowa jest skonfigurowany dla aplikacji Windows Store.  
+## <a name="checklist-for-network-isolation"></a>Checklist for Network Isolation  
+ Use this checklist to be sure that network isolation is configured for your Windows Store app.  
   
-1. Określ kierunek żądań dostępu do sieci wymagane przez aplikację. Może to być wychodzącego zainicjowane przez klienta żądania lub żądania przychodzące niechciane lub może być kombinację obu tych typów żądań sieci.  
+1. Determine the direction of network access requests needed by the app. This can be either outbound client-initiated requests or inbound unsolicited requests or it could be a combination of both of these network request types.  
   
-2. Określanie typu aplikacji będą komunikować się z zasobów sieciowych. Aplikacja może być konieczne do komunikowania się z zaufanych zasobów w domu lub pracy sieci. Aplikacja może być konieczne do komunikowania się z zasobami przez Internet. Aplikacja może potrzebować dostępu do obu rodzajów zasobów sieciowych.  
+2. Determine the type of network resources that the app will communicate with. An app may need to communicate with trusted resources on a Home or Work network. An app might need to communicate with resources on the Internet. An app might need access to both types of network resources.  
   
-3. Skonfiguruj minimalną wymaganą możliwości izolacji sieci w manifeście aplikacji.  
+3. Configure the minimum-required networking isolation capabilities in the app manifest.  
   
-4. Wdrażanie i uruchamianie aplikacji, aby przetestować go za pomocą narzędzia izolacji sieci, które są dostarczane do rozwiązywania problemów.  
+4. Deploy and run your app to test it using the network isolation tools provided for troubleshooting.  
   
- Aby uzyskać bardziej szczegółowe informacje dotyczące sposobu konfigurowania funkcji sieciowych i izolacji narzędzi używanych do rozwiązywania problemów izolacji sieci, zobacz [sposobu konfigurowania możliwości izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265) w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla deweloperów dokumentacja.  
+ For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Łączenie z usługą sieci web](https://go.microsoft.com/fwlink/?LinkID=245696)
-- [Wskazówki i listy kontrolne do izolacji sieci](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [Szybki start: Łączenie za pomocą elementu HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)
-- [Jak używać klasy HttpClient obsługi](https://go.microsoft.com/fwlink/?LinkId=245699)
-- [Jak zabezpieczyć HttpClient połączeń](https://go.microsoft.com/fwlink/?LinkId=245698)
-- [Przykładowe klasy HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Connecting to a web service](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [Guidelines and checklist for network isolation](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Quickstart: Connecting using HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [How to use HttpClient handlers](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [How to secure HttpClient connections](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [HttpClient Sample](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

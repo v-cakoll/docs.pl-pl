@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7188c516d3d0a5192251697ec743e9d41f8d9072
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4fd31e6b752e13a5c43198760e9a4d62a8f77d10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69913742"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448565"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes — Wyliczenie
-Określa zasady, które mają być używane podczas wyszukiwania czytnika symboli. Te stałe są używane przez metody [ISymUnmanagedBinder2:: GetReaderForFile2 —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) i [ISymUnmanagedBinder3:: GetReaderFromCallback —](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .  
+Specifies the policy to be used when doing a search for a symbol reader. These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.  
   
 > [!IMPORTANT]
-> Jest to zagrożenie bezpieczeństwa, aby otworzyć plik bazy danych programu (PDB) z niezaufanego źródła.  
+> It is a security risk to open a program database (PDB) file from an untrusted source.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,13 +43,13 @@ typedef enum CorSymSearchPolicyAttributes
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|Wysyła zapytanie do rejestru pod kątem ścieżek wyszukiwania symboli.|  
-|`AllowSymbolServerAccess`|Uzyskuje dostęp do serwera symboli.|  
-|`AllowOriginalPathAccess`|Przeszukuje ścieżkę określoną w katalogu debugowania.|  
-|`AllowReferencePathAccess`|Wyszukuje PDB w miejscu, gdzie plik. exe jest.|  
+|`AllowRegistryAccess`|Queries the registry for symbol search paths.|  
+|`AllowSymbolServerAccess`|Accesses a symbol server.|  
+|`AllowOriginalPathAccess`|Searches the path specified in the Debug directory.|  
+|`AllowReferencePathAccess`|Searches for the PDB in the place where the .exe file is.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówki** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32b7505a9e512f3c3e3e7a9fcbff40276e98ecf4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759350"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448346"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument — Metoda
-Umożliwia znalezienie dokumentu. Język dokumentu, dostawcy i typ są opcjonalne.  
+Finds a document. The document language, vendor, and type are optional.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,25 +38,25 @@ HRESULT GetDocument (
   
 ## <a name="parameters"></a>Parametry  
  `url`  
- [in] Adres URL, który identyfikuje dokumentu.  
+ [in] The URL that identifies the document.  
   
  `language`  
- [in] Język dokumentu. Ten parametr jest opcjonalny.  
+ [in] The document language. This parameter is optional.  
   
  `languageVendor`  
- [in] Tożsamość dostawcy języka dokumentu. Ten parametr jest opcjonalny.  
+ [in] The identity of the vendor for the document language. This parameter is optional.  
   
  `documentType`  
- [in] Typ dokumentu. Ten parametr jest opcjonalny.  
+ [in] The type of the document. This parameter is optional.  
   
  `pRetVal`  
- [out] Wskaźnik do interfejsu zwrócone.  
+ [out] A pointer to the returned interface.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

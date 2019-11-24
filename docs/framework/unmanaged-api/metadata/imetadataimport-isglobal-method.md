@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 44cf6908-f555-4ae8-b2cf-24bd974bf2fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f8a50f3fcbe9d6e7602ca3bbeb36587ecff32c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a5dda5861343865a139f6b6b9e2794179b0727a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778801"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434716"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal — Metoda
-Pobiera wartość wskazującą, czy pola, metody lub typu reprezentowanego przez token metadanych w określonym zakresie globalnym.  
+Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,19 +36,19 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>Parametry  
  `pd`  
- [in] Token metadanych, który reprezentuje typ, polem ani metodą.  
+ [in] A metadata token that represents a type, field, or method.  
   
  `pbGlobal`  
- [out] 1, jeśli obiekt ma zakres globalny; w przeciwnym razie 0 (zero).  
+ [out] 1 if the object has global scope; otherwise, 0 (zero).  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747173"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446945"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown — Metoda
-Powiadamia program profilujący, że aplikacja jest zamykana.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -34,20 +32,20 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Kod profilera nie można bezpiecznie wywołać metody [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interfejsu po `Shutdown` metoda jest wywoływana. Wszelkie wywołania `ICorProfilerInfo` metody spowodować niezdefiniowane zachowanie po `Shutdown` metoda zwraca. Niektóre zdarzenia niezmiennego nadal mogą wystąpić po zamknięciu systemu; Program profilujący powinien zajmie się do zwrócenia natychmiast w takiej sytuacji.  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- `Shutdown` Metoda zostanie wywołana tylko wtedy, gdy w aplikacji zarządzanej, która jest profilowana pracę jako kod zarządzany (czyli początkowej ramki na stosie proces odbywa się). Jeśli aplikacja uruchomiona jako kod niezarządzany, ale później wyniósł wywołanie kodu zarządzanego, tworząc wystąpienie środowisko uruchomieniowe języka wspólnego (CLR), następnie `Shutdown` nie zostaną wywołane. W takich przypadkach program profilujący powinien zawierać w swojej bibliotece `DllMain` procedura, która używa komunikat DLL_PROCESS_DETACH wartość zwolnić wszystkie zasoby do wykonywania oczyszczania przetwarzania swoich danych, takich jak opróżniania danych śledzenia na dysku, i tak dalej.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- Ogólnie rzecz biorąc program profilujący musi sprostać nieoczekiwanego zamknięcia systemu. Na przykład proces może zostać wstrzymane przez firmy Win32 `TerminateProcess` — metoda (deklaracja w Winbase.h). W innych przypadkach CLR zostanie zatrzymany niektórych zarządzanych wątków (tła) bez dostarczanie wiadomości uporządkowany zniszczenie ich.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

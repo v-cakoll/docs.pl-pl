@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fcf32c4b27324ccc54eabbb248e8c9906cf693b6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc5bbba2fa4a95955e52a2e083a2097178b5d96a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782361"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437514"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps — Metoda
-Pobiera informacje przechowywane w metadanych dla definicji określonego elementu członkowskiego, w tym m.in. nazwy, podpis binarny i względny adres wirtualny, <xref:System.Type> odwołuje się token metadanych określonego elementu członkowskiego. Jest to metoda pomocnika proste: Jeśli *mb* jest MethodDef **getmethodprops —** nosi nazwę; Jeśli *mb* jest FieldDef **getfieldprops —** jest wywoływana. Zobacz te inne metody, aby uzyskać szczegółowe informacje. 
+Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token. This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called. See these other methods for details. 
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,52 +47,52 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>Parametry  
  `mb`  
- [in] Token, który odwołuje się do elementu członkowskiego, który można pobrać skojarzone metadane.  
+ [in] The token that references the member to get the associated metadata for.  
   
  `pClass`  
- [out] Wskaźnik do tokenu metadanych, który reprezentuje klasę elementu członkowskiego.  
+ [out] A pointer to the metadata token that represents the class of the member.  
   
  `szMember`  
- [out] Nazwa elementu członkowskiego.  
+ [out] The name of the member.  
   
  `cchMember`  
- [in] Rozmiar w znaków `szMember` buforu.  
+ [in] The size in wide characters of the `szMember` buffer.  
   
  `pchMember`  
- [out] Rozmiar w znaki dwubajtowe zwrócone nazwy.  
+ [out] The size in wide characters of the returned name.  
   
  `pdwAttr`  
- [out] Wartości flagi zastosowane do elementu członkowskiego.  
+ [out] Any flag values applied to the member.  
   
  `ppvSigBlob`  
- [out] Wskaźnik do podpisu binarne metadanych elementu członkowskiego.  
+ [out] A pointer to the binary metadata signature of the member.  
   
  `pcbSigBlob`  
- [out] Rozmiar w bajtach `ppvSigBlob`.  
+ [out] The size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Wskaźnik do wirtualnej adres względny elementu członkowskiego.  
+ [out] A pointer to the relative virtual address of the member.  
   
  `pdwImplFlags`  
- [out] Wszystkie skojarzone z elementem flagi implementacji metody.  
+ [out] Any method implementation flags associated with the member.  
   
  `pdwCPlusTypeFlag`  
- [out] Flaga, która oznacza <xref:System.ValueType>. Jest to jeden z `ELEMENT_TYPE_*` wartości.
+ [out] A flag that marks a <xref:System.ValueType>. It is one of the `ELEMENT_TYPE_*` values.
   
  `ppValue`  
- [out] Wartość stała ciągu zwracane przez ten element członkowski.  
+ [out] A constant string value returned by this member.  
   
  `pcchValue`  
- [out] Rozmiar w znakach `ppValue`, lub zero, jeśli `ppValue` nie zawiera ciągu.  
+ [out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

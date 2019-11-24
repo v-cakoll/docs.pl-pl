@@ -1,62 +1,62 @@
 ---
 title: Biblioteki platformy
-description: Dowiedz się, w jaki sposób biblioteki zapewniają implementacje dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmów i funkcji narzędzi.
+description: Learn how libraries provide implementations for many general and app-specific types, algorithms, and utility functionality.
 author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 9c0b5a07277de6e87e2692ebb7c4f73c03702801
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ba3d5209571019f8ac38702939332fd953307202
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424970"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447998"
 ---
 # <a name="framework-libraries"></a>Biblioteki platformy
 
-Platforma .NET ma standardowy zestaw klas rozległych, nazywanych bibliotekami klas podstawowych (zestaw podstawowy) lub bibliotekami klas platformy (kompletna). Te biblioteki zapewniają implementacje dla wielu typów ogólnych i specyficznych dla aplikacji, algorytmy i funkcje narzędzia. Biblioteki komercyjne i społecznościowe są tworzone na podstawie bibliotek klas platformy, co pozwala łatwo korzystać z bibliotek znajdujących się poza półkami dla szerokiego zestawu zadań obliczeniowych.
+.NET has an expansive standard set of class libraries, referred to as either the base class libraries (core set) or framework class libraries (complete set). These libraries provide implementations for many general and app-specific types, algorithms and utility functionality. Both commercial and community libraries build on top of the framework class libraries, providing easy to use off-the-shelf libraries for a wide set of computing tasks.
 
-Podzbiór tych bibliotek jest dostarczany z każdą implementacją platformy .NET. Interfejsy API biblioteki podstawowej klasy (BCL) są oczekiwane w przypadku każdej implementacji platformy .NET, ponieważ chcą, aby były one potrzebne. Biblioteki specyficzne dla aplikacji powyżej BCL, takie jak ASP.NET, nie będą dostępne we wszystkich implementacjach platformy .NET.
+A subset of these libraries are provided with each .NET implementation. Base Class Library (BCL) APIs are expected with any .NET implementation, both because developers will want them and because popular libraries will need them to run. App-specific libraries above the BCL, such as ASP.NET, will not be available on all .NET implementations.
 
-## <a name="base-class-libraries"></a>Biblioteki klas bazowych
+## <a name="base-class-libraries"></a>Base Class Libraries
 
-BCL zapewnia najpopularniejsze typy i funkcje narzędziowe oraz są podstawą wszystkich innych bibliotek klas platformy .NET. Mają one na celu dostarczenie bardzo ogólnych implementacji bez jakichkolwiek postanowień w obciążeniu. Wydajność jest zawsze ważnym zagadnieniem, ponieważ aplikacje mogą preferować konkretne zasady, takie jak niskie opóźnienie do wysokiej przepływności lub niskiej ilości pamięci do użycia w niskich PROCESORAch. Te biblioteki mają ogólne znaczenie dla wysokiej wydajności i przyjmują podejście środkowe w zależności od tego, jakie są problemy z wydajnością. W przypadku większości aplikacji to podejście zostało wykonane prawidłowo.
+The BCL provides the most foundational types and utility functionality and are the base of all other .NET class libraries. They aim to provide very general implementations without any bias to any workload. Performance is always an important consideration, since apps might prefer a particular policy, such as low-latency to high-throughput or low-memory to low-CPU usage. These libraries are intended to be high-performance generally, and take a middle-ground approach according to these various performance concerns. For most apps, this approach has been quite successful.
 
 ## <a name="primitive-types"></a>Typy pierwotne
 
-Platforma .NET zawiera zestaw typów pierwotnych, które są używane (w różnym stopniu) w przypadku wszystkich programów. Te typy zawierają dane, takie jak liczby, ciągi, bajty i dowolnych obiektów. C# Język zawiera słowa kluczowe dla tych typów. Przykładowy zestaw tych typów jest wymieniony poniżej z pasującymi C# słowami kluczowymi.
+.NET includes a set of primitive types, which are used (to varying degrees) in all programs. These types contain data, such as numbers, strings, bytes and arbitrary objects. The C# language includes keywords for these types. A sample set of these types is listed below, with the matching C# keywords.
 
-* <xref:System.Object?displayProperty=nameWithType> ([Object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) — Klasa podstawowa klasy podstawowej w systemie typów CLR. Jest to katalog główny hierarchii typów.
-* <xref:System.Int16?displayProperty=nameWithType> ([Krótki](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 16-bitowy typ liczby całkowitej ze znakiem. Niepodpisany <xref:System.UInt16> również istnieje.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md))-A 32-bitowy Typ Liczba całkowita ze znakiem. Wartość [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) nie jest również dostępna.
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 32-bitowy typ zmiennoprzecinkowy.
-* <xref:System.Decimal?displayProperty=nameWithType> ([Decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md))-A 128-bitowy typ dziesiętny.
-* <xref:System.Byte?displayProperty=nameWithType> ([bajt](../csharp/language-reference/builtin-types/integral-numeric-types.md)) — 8-bitowa liczba całkowita bez znaku reprezentująca bajt pamięci.
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) — typ Boolean reprezentujący `true` lub `false`.
-* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)) — 16-bitowy typ liczbowy reprezentujący znak Unicode.
-* <xref:System.String?displayProperty=nameWithType> ([String](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) — reprezentuje serię znaków. Inna niż `char[]`, ale umożliwia indeksowanie poszczególnych `char` w `string`.
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)) - The ultimate base class in the CLR type system. It is the root of the type hierarchy.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - A 16-bit signed integer type. The unsigned <xref:System.UInt16> also exists.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - A 32-bit signed integer type. The unsigned [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) also exists.
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - A 32-bit floating-point type.
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - A 128-bit decimal type.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - An unsigned 8-bit integer that represents a byte of memory.
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)) - A boolean type that represents `true` or `false`.
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - A 16-bit numeric type that represents a Unicode character.
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - Represents a series of characters. Different than a `char[]`, but enables indexing into each individual `char` in the `string`.
 
-## <a name="data-structures"></a>Struktury danych
+## <a name="data-structures"></a>Data Structures
 
-Platforma .NET zawiera zestaw struktur danych, które są workhorsesą prawie wszystkich aplikacji platformy .NET. Są to najczęściej kolekcje, ale również zawierają inne typy.
+.NET includes a set of data structures that are the workhorses of almost any .NET apps. These are mostly collections, but also include other types.
 
-* <xref:System.Array> — reprezentuje tablicę obiektów silnie typach, do których można uzyskać dostęp za pomocą indeksu. Ma stały rozmiar dla swojej konstrukcji.
-* <xref:System.Collections.Generic.List%601> — reprezentuje silnie wpisaną listę obiektów, do których można uzyskać dostęp za pomocą indeksu. Rozmiar jest zmieniany automatycznie zgodnie z wymaganiami.
-* <xref:System.Collections.Generic.Dictionary%602> — reprezentuje kolekcję wartości, które są indeksowane przez klucz. Do wartości można uzyskać dostęp za pośrednictwem klucza. Rozmiar jest zmieniany automatycznie zgodnie z wymaganiami.
-* <xref:System.Uri> — zapewnia reprezentację obiektu o jednolitym identyfikatorze zasobów (URI) i łatwy dostęp do części identyfikatora URI.
-* <xref:System.DateTime> — reprezentuje czas natychmiastowy, zwykle wyrażony jako dzień i godzinę.
+* <xref:System.Array> - Represents an array of strongly types objects that can be accessed by index. Has a fixed size, per its construction.
+* <xref:System.Collections.Generic.List%601> - Represents a strongly typed list of objects that can be accessed by index. Is automatically resized as needed.
+* <xref:System.Collections.Generic.Dictionary%602> - Represents a collection of values that are indexed by a key. Values can be accessed via key. Is automatically resized as needed.
+* <xref:System.Uri> - Provides an object representation of a uniform resource identifier (URI) and easy access to the parts of the URI.
+* <xref:System.DateTime> - Represents an instant in time, typically expressed as a date and time of day.
 
-## <a name="utility-apis"></a>Interfejsy API narzędzi
+## <a name="utility-apis"></a>Utility APIs
 
-Platforma .NET zawiera zestaw interfejsów API narzędzi, które udostępniają funkcje dla wielu ważnych zadań.
+.NET includes a set of utility APIs that provide functionality for many important tasks.
 
-* <xref:System.Net.Http.HttpClient> — interfejs API służący do wysyłania żądań HTTP i otrzymywania odpowiedzi HTTP z zasobu identyfikowanego przez identyfikator URI.
-* <xref:System.Xml.Linq.XDocument> — interfejs API służący do ładowania i wykonywania zapytań o dokumenty XML za pomocą LINQ.
-* <xref:System.IO.StreamReader> — interfejs API służący do odczytywania plików. 
-* <xref:System.IO.StreamWriter> — interfejs API służący do zapisywania plików.
+* <xref:System.Net.Http.HttpClient> - An API for sending HTTP requests and receiving HTTP responses from a resource identified by a URI.
+* <xref:System.Xml.Linq.XDocument> - An API for loading, and querying XML documents with LINQ.
+* <xref:System.IO.StreamReader> - An API for reading files. 
+* <xref:System.IO.StreamWriter> - An API for writing files.
 
-## <a name="app-model-apis"></a>Interfejsy API modelu aplikacji
+## <a name="app-model-apis"></a>App-Model APIs
 
-Istnieje wiele modeli aplikacji, których można używać w połączeniu z platformą .NET.
+There are many app-models that can be used with .NET, provided by several companies.
 
-* [ASP.NET](https://www.asp.net) — udostępnia platformę internetową do tworzenia witryn i usług sieci Web. Obsługiwane w systemach Windows, Linux i macOS (zależy od wersji ASP.NET).
+* [ASP.NET](https://www.asp.net) - Provides a web framework for building Web sites and services. Supported on Windows, Linux and macOS (depends on ASP.NET version).

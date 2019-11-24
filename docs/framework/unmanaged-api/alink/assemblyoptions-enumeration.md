@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 84f83921-64cb-49e3-ac8b-22a0b77b18a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed45e06297b77ea60304cdcfe1b08e97f9e4c085
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777481"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446584"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions — Wyliczenie
-Wylicza opcje zestawu.  
+Enumerates the assembly options.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,31 +56,31 @@ typedef enum _AssemblyOptions {
   
 |Pole|Opis|  
 |-----------|-----------------|  
-|optAssemTitle|String — reprezentuje tytuł zestawu.|  
-|optAssemDescription|Ciąg — zawiera opis zestawu.|  
-|optAssemConfig|String — zawiera konfigurację zestawu.|  
-|optAssemOS|Zakodowany ciąg jako: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
+|optAssemTitle|String - Represents the assembly title.|  
+|optAssemDescription|String - Contains the assembly description.|  
+|optAssemConfig|String - Contains the assembly configuration.|  
+|optAssemOS|String - Encoded as: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
-|optAssemLocale|Ciąg — zawiera ustawienia regionalne zestawu.|  
-|optAssemVersion|Zakodowany ciąg jako: "Główna. pomocnicza. kompilacja. poprawka".|  
-|optAssemCompany|Ciąg — zawiera firmę.|  
-|optAssemProduct|String — zawiera nazwę produktu.|  
-|optAssemProductVersion|Ciąg (znany również jako InformationalVersion).|  
-|optAssemCopyright|Ciąg — zawiera informacje o prawach autorskich.|  
-|optAssemTrademark|Ciąg — zawiera informacje o znakach towarowych.|  
-|optAssemKeyFile|Ciąg (nazwa pliku).|  
-|optAssemKeyName|Ciąg (nazwa klucza).|  
+|optAssemLocale|String - Contains the assembly locale.|  
+|optAssemVersion|String - Encoded as: "Major.Minor.Build.Revision".|  
+|optAssemCompany|String - Contains the company.|  
+|optAssemProduct|String - Contains the product name.|  
+|optAssemProductVersion|String (also known as InformationalVersion).|  
+|optAssemCopyright|String - Contains the copyright information.|  
+|optAssemTrademark|String - Contains the trademark information.|  
+|optAssemKeyFile|String (file name).|  
+|optAssemKeyName|String (The key name).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|Bool (znany również jako DelaySign).|  
-|optAssemFileVersion|Zakodowana ciągowo jako "główna. pomocnicza. kompilacja. poprawka" — taka sama jak ProductVersion.|  
-|optAssemSatelliteVer|Kodowanie ciągu jako "główna. pomocnicza. kompilacja. poprawka".|  
-|optLastAssemOption|Licznik liczby elementów.|  
+|optAssemHalfSign|Bool (Also known as DelaySign).|  
+|optAssemFileVersion|String - Encoded as "Major.Minor.Build.Revision"--same as ProductVersion.|  
+|optAssemSatelliteVer|String - Encoded as "Major.Minor.Build.Revision".|  
+|optLastAssemOption|A counter of the number of elements.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** Alink. h  
+ **Header:** alink.h  
   
- **Biblioteka**: Alink. dll  
+ **Library**: alink.dll  
   
 ## <a name="see-also"></a>Zobacz także
 

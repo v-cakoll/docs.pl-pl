@@ -7,38 +7,38 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91abd9e6f31380b7e8cd3df1a14aa5c5722901ba
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3f0e968053c87319bf90bf3de0f21d750ec899ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046518"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447631"
 ---
 # <a name="exception-thrown_v1-etw-event"></a>Zdarzenia wyjątku ETW Thrown_V1
-To zdarzenie przechwytuje informacje o wygenerowanych wyjątkach.  
+This event captures information about the exceptions that are thrown.  
   
- W poniższej tabeli przedstawiono słowo kluczowe, pod którym zdarzenie jest zgłaszane, oraz poziom zdarzenia. (Aby uzyskać więcej informacji, zobacz [słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)).  
+ The following table shows the keyword under which the event is raised, and the level of the event. (For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)  
   
-|Słowo kluczowe do podniesienia zdarzenia|Poziom|  
+|Keyword for raising the event|Poziom|  
 |-----------------------------------|-----------|  
-|`ExceptionKeyword`0x8000|Ostrzeżenie (2)|  
+|`ExceptionKeyword` (0x8000)|Warning (2)|  
   
- W poniższej tabeli przedstawiono informacje o zdarzeniach.  
+ The following table shows event information.  
   
-|Zdarzenie|Identyfikator zdarzenia|Wywoływane, gdy|  
+|Zdarzenie|Event ID|Raised when|  
 |-----------|--------------|-----------------|  
-|`ExceptionThrown_V1`|80|Generowany jest wyjątek zarządzany.|  
+|`ExceptionThrown_V1`|80|A managed exception is thrown.|  
   
- W poniższej tabeli przedstawiono dane zdarzenia.  
+ The following table shows event data.  
   
-|Nazwa pola|Typ danych|Opis|  
+|Field name|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Typ wyjątku|win: UnicodeString|Typ wyjątku; na przykład `System.NullReferenceException`.|  
-|Komunikat o wyjątku|win: UnicodeString|Rzeczywisty komunikat o wyjątku.|  
-|EIPCodeThrow|win: wskaźnik|Wskaźnik instrukcji, w którym wystąpił wyjątek.|  
-|ExceptionHR|win: UInt32|Wyjątek [HRESULT](https://go.microsoft.com/fwlink/?LinkId=179679).|  
-|ExceptionFlags|win: UInt16|0x01: HasInnerException (zobacz [zdarzenia ETW CLR](clr-etw-events.md) w dokumentacji Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (wskazuje, że stan procesu jest uszkodzony; zobacz [Obsługa wyjątków uszkodzonych Stanów](https://go.microsoft.com/fwlink/?LinkId=179681) w witrynie MSDN).<br /><br /> 0x10 IsCLSCompliant (wyjątek pochodzący z <xref:System.Exception> jest zgodny ze specyfikacją CLS; w przeciwnym razie nie jest zgodny ze specyfikacją CLS).|  
-|ClrInstanceID|win: UInt16|Unikatowy identyfikator wystąpienia CLR lub CoreCLR.|  
+|Exception Type|win:UnicodeString|Type of the exception; for example, `System.NullReferenceException`.|  
+|Exception Message|win:UnicodeString|Actual exception message.|  
+|EIPCodeThrow|win:Pointer|Instruction pointer where exception occurred.|  
+|ExceptionHR|win:UInt32|Exception [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (see [CLR ETW Events](clr-etw-events.md) in the Visual Basic documentation).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (an exception that derives from <xref:System.Exception> is CLS-compliant; otherwise, it is not CLS-compliant).|  
+|ClrInstanceID|win:UInt16|Unique ID for the instance of CLR or CoreCLR.|  
   
 ## <a name="see-also"></a>Zobacz także
 

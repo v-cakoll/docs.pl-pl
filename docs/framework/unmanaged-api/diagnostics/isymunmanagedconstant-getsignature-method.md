@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3eb41151-a228-43e3-ba8f-e6dd3ceb8542
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d479e9f55cf7d7a13fef99f302bfd8d9d89d47f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 401dfbea0da309db24f3052f462daa66e8bbef4a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776955"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449266"
 ---
 # <a name="isymunmanagedconstantgetsignature-method"></a>ISymUnmanagedConstant::GetSignature — Metoda
-Pobiera podpisu stałej.  
+Gets the signature of the constant.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,19 +37,19 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parametry  
  `cSig`  
- [in] Długość buforu, `pcSig` parametr wskazuje.  
+ [in] The length of the buffer that the `pcSig` parameter points to.  
   
  `pcSig`  
- [out] Wskaźnik do `ULONG32` rozmiar, który odbiera w postaci, buforu, muszą zawierać podpis.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.  
   
  `sig`  
- [out] Bufor, który przechowuje podpisu.  
+ [out] The buffer that stores the signature.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

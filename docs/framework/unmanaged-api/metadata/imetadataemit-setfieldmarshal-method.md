@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a55a8575a3f8ae04bcc4a148b588cd2361f81cf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751498"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442271"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal — Metoda
-Ustawia PInvoke organizowanie informacji dla parametru pola, metody zwrotu lub metoda odwołuje się określony token.  
+Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] Token do docelowego elementu danych. Jest to `mdFieldDef` lub `mdParamDef` tokenu.  
+ [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
   
  `pvNativeType`  
- [in] Podpis dla typu niezarządzanego.  
+ [in] The signature for unmanaged type.  
   
  `cbNativeType`  
- [in] Liczba bajtów w `pvNativeType`.  
+ [in] The count of bytes in `pvNativeType`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

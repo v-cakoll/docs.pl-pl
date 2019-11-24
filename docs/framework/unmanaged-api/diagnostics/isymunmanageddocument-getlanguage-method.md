@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6639418-e9f2-4a99-8ce2-ec9876e0bc79
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 167eb9ae550454afee05cf1e724ba4afa4f95430
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cea18fefa2d356cbb5857db5133b1086c38ac6ff
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776734"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449181"
 ---
 # <a name="isymunmanageddocumentgetlanguage-method"></a>ISymUnmanagedDocument::GetLanguage — Metoda
-Pobiera identyfikator języka w tym dokumencie  
+Gets the language identifier of this document  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +34,10 @@ HRESULT GetLanguage(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do zmiennej, która odbiera identyfikator języka.  
+ [out] A pointer to a variable that receives the language identifier.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Zobacz także
 

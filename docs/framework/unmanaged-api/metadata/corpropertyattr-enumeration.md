@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781625"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450142"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr — Wyliczenie
-Zawiera wartości, które opisują metadane właściwości.  
+Contains values that describe the metadata of a property.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,18 +42,18 @@ typedef enum CorPropertyAttr {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`prSpecialName`|Określa, czy właściwość jest specjalne i że jego nazwę w tym artykule opisano sposób.|  
-|`prReservedMask`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`prRTSpecialName`|Określa, że typowe metadanych środowiska wykonawczego języka wewnętrznych interfejsach API należy sprawdzać kodowanie nazwy właściwości.|  
-|`prHasDefault`|Określa, że właściwość ma wartość domyślną.|  
-|`prUnused`|Nieużywane.|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prHasDefault`|Specifies that the property has a default value.|  
+|`prUnused`|Unused.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

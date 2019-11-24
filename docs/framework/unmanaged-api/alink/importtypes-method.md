@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777093"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445678"
 ---
 # <a name="importtypes-method"></a>ImportTypes — Metoda
-Inicjuje importowanie typów z każdego zakresu zaimportowanego za pomocą [metody ImportFile —](importfile-method.md).  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parametry  
  `AssemblyID`  
- Identyfikator zestawu do zaimportowania.  
+ ID of the assembly to import to.  
   
  `FileToken`  
- Identyfikator pliku do zaimportowania.  
+ ID of the file to import from.  
   
  `dwScope`  
- Zakres od zera do zaimportowania.  
+ Zero-based scope to import.  
   
  `phEnum`  
- Odbiera dojście modułu wyliczającego dla typów w tym zakresie.  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- Opcjonalnie odbiera Interfejs [interfejsu IMetaDataImport](../metadata/imetadataimport-interface.md) .  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Opcjonalnie otrzymuje liczbę typów we wskazanym zakresie.  
+ Optionally receives count of types in the indicated scope.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Zobacz także
 

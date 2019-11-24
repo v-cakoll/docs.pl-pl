@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 69156fbf-7219-43bf-b4b8-b13f1a2fcb86
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 576fb8632818a6b8ffc3e2c0acc50eaafd074de3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d4690cb6adedc77717e577d409cb52b18b1b5ca
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766969"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443836"
 ---
 # <a name="corcallingconvention-enumeration"></a>CorCallingConvention — Wyliczenie
-Zawiera wartości, które opisują rodzaje konwencji wywoływania, które zostały wprowadzone w kodzie zarządzanym.  
+Contains values that describe the types of calling conventions that are made in managed code.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,26 +52,26 @@ typedef enum CorCallingConvention
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Wskazuje domyślną konwencję wywoływania.|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|Wskazuje, że ta metoda przyjmuje zmienną liczbę parametrów.|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|Wskazuje, że wywołanie się do pola.|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Wskazuje wywołanie do metody lokalnej.|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Wskazuje, że wywołanie jest właściwością.|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Wskazuje, że wywołanie jest niezarządzany.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Wskazuje wystąpienia metody rodzajowej.|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Wskazuje wywołania metody, która przyjmuje zmienną liczbę parametrów funkcji PInvoke 64-bitowych.|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|W tym artykule opisano nieprawidłową wartość 4-bitowy.|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|Wskazuje, że Konwencja wywołania jest opisana przez dolnej cztery bity.|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Wskazuje, który opisuje bitu najwyższego `this` parametru.|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Oznacza to, że `this` parametr jest jawnie opisany w podpisie.|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Wskazuje sygnaturę metody ogólnej przy użyciu jawne liczby argumentów typu. To poprzedza liczba zwykłych parametrów.|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indicates a default calling convention.|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|Indicates that the method takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|Indicates that the call is to a field.|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|Indicates that the call is to a local method.|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|Indicates that the call is to a property.|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|Indicates that the call is unmanaged.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|Indicates a generic method instantiation.|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|Describes an invalid 4-bit value.|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|Indicates that the calling convention is described by the bottom four bits.|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|Indicates that the top bit describes a `this` parameter.|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indicates that a `this` parameter is explicitly described in the signature.|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indicates a generic method signature with an explicit number of type arguments. This precedes an ordinary parameter count.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

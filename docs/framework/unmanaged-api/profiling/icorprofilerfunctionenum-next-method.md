@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d51f26e6d3fa2c37e1588d255f04578dce5bc24
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780289"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447787"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next — Metoda
-Pobiera określoną liczbę funkcji ciągłego z sekwencyjną kolekcją funkcji, zaczynając od modułu wyliczającego bieżąca pozycja w sekwencji.  
+Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,30 +36,30 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba funkcji do pobrania.  
+ [in] The number of functions to retrieve.  
   
  `ids`  
- [out] Tablica `COR_PRF_FUNCTION` wartości, z których każdy reprezentuje funkcję pobrane.  
+ [out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby rzeczywistego zwrotu w funkcji `ids` tablicy.  
+ [out] A pointer to the number of functions actually returned in the `ids` array.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Ta metoda zwraca następujące specyficzne wyniki HRESULT, a także HRESULT błędów wskazujących Niepowodzenie metody.  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|`celt` elementy zostały zwrócone.|  
-|S_FALSE|Mniej niż `celt` zwróconych elementów, co oznacza, że wyliczanie zostało zakończone.|  
+|S_OK|`celt` elements were returned.|  
+|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

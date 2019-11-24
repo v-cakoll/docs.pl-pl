@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ffbb3caf-20da-4a4b-8983-77376e72b990
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c88c12646a13e5a24f2475bd2db04c8c831141c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a76a7a2d4ad68e367e38e175377aff40ce399346
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781766"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450206"
 ---
 # <a name="cormethodimpl-enumeration"></a>CorMethodImpl — Wyliczenie
-Zawiera wartości, które opisano funkcje implementacji metody.  
+Contains values that describe method implementation features.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -58,29 +56,29 @@ typedef enum CorMethodImpl {
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flagi, które opisują typ kodu.|  
-|`miIL`|Określa, że implementacja metody języka Microsoft intermediate language (MSIL).|  
-|`miNative`|Określa, że implementacja metody natywnej.|  
-|`miOPTIL`|Określa, że implementacja metody OPTIL.|  
-|`miRuntime`|Określa, że implementacja metody jest świadczona przez środowisko uruchomieniowe języka wspólnego.|  
-|`miManagedMask`|Flagi, które wskazują, czy kod jest zarządzany lub niezarządzany.|  
-|`miUnmanaged`|Określa, że implementacja metody niezarządzanego.|  
-|`miManaged`|Określa, że implementacja metody jest zarządzana.|  
-|`miForwardRef`|Określa, że metoda jest zdefiniowana. Ta flaga jest używana głównie w scenariuszach scalania.|  
-|`miPreserveSig`|Określa, że podpis metody nie zniekształcone konwersji HRESULT.|  
-|`miInternalCall`|Zarezerwowane do użytku wewnętrznego przez środowisko uruchomieniowe języka wspólnego.|  
-|`miSynchronized`|Określa, że metoda jest jednowątkowym za pośrednictwem jej treści.|  
-|`miNoInlining`|Określa, że metoda nie może być śródwierszowa.|  
-|`miAggressiveInlining`|Określa, że metoda powinna być śródwierszowa, jeśli jest to możliwe.|  
-|`miNoOptimization`|Określa metody nie powinny być zoptymalizowany.|  
-|`miMaxMethodImplVal`|Maksymalna prawidłowa wartość dla `CorMethodImpl`.|  
+|`miCodeTypeMask`|Flags that describe code type.|  
+|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miNative`|Specifies that the method implementation is native.|  
+|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
+|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
+|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
+|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
+|`miManaged`|Specifies that the method implementation is managed.|  
+|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
+|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
+|`miInternalCall`|Reserved for internal use by the common language runtime.|  
+|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miNoInlining`|Specifies that the method cannot be inlined.|  
+|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
+|`miNoOptimization`|Specifies that the method should not be optimized.|  
+|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorHdr.h  
+ **Header:** CorHdr.h  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

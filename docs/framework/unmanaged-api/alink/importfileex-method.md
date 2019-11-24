@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777112"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446952"
 ---
 # <a name="importfileex-method"></a>ImportFileEx — Metoda
-Importuje wskazany zestaw lub niezwiązany moduł.  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parametry  
  `pszFilename`  
- W pełni kwalifikowana nazwa pliku, z którego ma zostać zaimportowana.  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- Opcjonalna nazwa pliku docelowego.  
+ Optional name of target file.  
   
  `fSmartImport`  
- Jeśli wartość jest równa TRUE, używane są wartości, w przeciwnym razie importowanie należy wykonać ręcznie.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- Flagi do przesłania do [metody OpenScope —](../metadata/imetadatadispenser-openscope-method.md).  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Odbiera identyfikator importowanego pliku.  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- Odbiera Interfejs [IMetaDataAssemblyImporty](../metadata/imetadataassemblyimport-interface.md) zakresu importu zestawu. Jest ustawiona na wartość NULL, jeśli plik nie jest zestawem.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- Odbiera liczbę zaimportowanych plików i/lub zakresów.  
+ Receives count of imported files and/or scopes.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- Zwraca S_OK, jeśli metoda zakończy się pomyślnie.  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Wymagania  
- Wymaga Alink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Zobacz także
 

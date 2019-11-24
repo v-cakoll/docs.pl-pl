@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6bf5a04-e03e-44f0-917a-96f6a6d3cc96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70ab6a94d19f1411e1f79a9f3912158ec02059ed
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c13ce443037d706f9eba49760ba76f47c5a6538
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780230"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448173"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo — Metoda
-Akceptuje identyfikator domeny aplikacji. Zwraca nazwę domeny aplikacji i identyfikator procesu, który go zawiera.  
+Accepts an application domain ID. Returns an application domain name and the ID of the process that contains it.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,33 +39,33 @@ HRESULT GetAppDomainInfo(
   
 ## <a name="parameters"></a>Parametry  
  `appDomainId`  
- [in] Identyfikator domeny aplikacji.  
+ [in] The ID of the application domain.  
   
  `cchName`  
- [in] Długość w znakach, z `szName` buforze.  
+ [in] The length, in characters, of the `szName` return buffer.  
   
  `pcchName`  
- [out] Wskaźnik do łączna liczba znaków nazwy domeny aplikacji.  
+ [out] A pointer to the total character length of the application domain name.  
   
  `szName`  
- [out] Bufor dostarczane przez obiekt wywołujący znaku dwubajtowego. Po powrocie z metody `szName` będzie zawierać nazwę domeny aplikacji pełnej lub częściowej.  
+ [out] A caller-provided wide character buffer. When the method returns, `szName` will contain the full or partial application domain name.  
   
  `pProcessId`  
- [out] Wskaźnik do Identyfikatora procesu, który zawiera domeny aplikacji.  
+ [out] A pointer to the ID of the process that contains the application domain.  
   
 ## <a name="remarks"></a>Uwagi  
- Po powrocie z tej metody należy sprawdzić, czy `szName` bufor jest wystarczająco duży, aby zawierała pełną nazwę domeny aplikacji. Aby to zrobić, porównaj wartość która `pcchName` wskazuje z wartością `cchName` parametru. Jeśli `pcchName` wskazuje wartość, która jest większa niż `cchName`, Przydziel większego `szName` buforu, zaktualizuj `cchName` przy użyciu nowych, większy rozmiar i Wywołaj `GetAppDomainInfo` ponownie.  
+ After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.  
   
- Alternatywnie, można wywołać `GetAppDomainInfo` o zerowej długości `szName` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić rozmiar buforu do wartości zwracanej w `pcchName` i wywołać `GetAppDomainInfo` ponownie.  
+ Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

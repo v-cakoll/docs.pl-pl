@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7d9874d4a609c353ae772b75a48af632bf4e85d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9d0f443b5b7d2d358534e888c3fc84ad3f554119
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756545"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450046"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets — Metoda
-Wylicza uprawnienia dla obiektów w zakresie określonych metadanych.  
+Enumerates permissions for the objects in a specified metadata scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,38 +40,38 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `tk`  
- [in] Token metadanych, który ogranicza zakres wyszukiwania lub wartość NULL, wyszukiwanie najszerszego zakresu możliwe.  
+ [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
   
  `dwActions`  
- [in] Flagi reprezentujący <xref:System.Security.Permissions.SecurityAction> wartości, które mają zostać objęte `rPermission`, lub wartość zero, aby zwrócić wszystkie akcje.  
+ [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
   
  `rPermission`  
- [out] Tablica do przechowywania tokenów uprawnień.  
+ [out] The array used to store the Permission tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rPermission` tablicy.  
+ [in] The maximum size of the `rPermission` array.  
   
  `pcTokens`  
- [out] Liczba tokenów uprawnienie zwracane w `rPermission`.  
+ [out] The number of Permission tokens returned in `rPermission`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny do wyliczenia. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumPermissionSets` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

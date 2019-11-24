@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780713"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440006"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents — Metoda
-Wylicza tokenów definicji zdarzeń dla określonego tokenu TypeDef.  
+Enumerates event definition tokens for the specified TypeDef token.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,35 +39,35 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego.  
+ [in, out] A pointer to the enumerator.  
   
  `td`  
- [in] Token TypeDef, których definicje zdarzeń są do wyliczenia.  
+ [in] The TypeDef token whose event definitions are to be enumerated.  
   
  `rEvents`  
- [out] Tablica zwrócona zdarzenia.  
+ [out] The array of returned events.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rEvents` tablicy.  
+ [in] The maximum size of the `rEvents` array.  
   
  `pcEvents`  
- [out] Rzeczywista liczba zdarzeń zwróconych w `rEvents`.  
+ [out] The actual number of events returned in `rEvents`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` pomyślnie zwrócił.|  
-|`S_FALSE`|Brak zdarzeń do wyliczenia. W takim przypadku `pcEvents` wynosi zero.|  
+|`S_OK`|`EnumEvents` returned successfully.|  
+|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

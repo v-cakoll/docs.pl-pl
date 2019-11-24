@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d64a1ef21cd4fa4224609c7cd415c1611313769
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777547"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431690"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam — Metoda
-Tworzy definicję parametrów o określonej sygnaturze metody odwołuje się określony token, a następnie pobiera token dla tej definicji parametru.  
+Creates a parameter definition with the specified signature for the method referenced by the specified token, and gets a token for that parameter definition.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,40 +42,40 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>Parametry  
  `md`  
- [in] Token dla metody, w której parametr jest definiowany.  
+ [in] The token for the method whose parameter is being defined.  
   
  `ulParamSeq`  
- [in] Numer sekwencji parametru.  
+ [in] The parameter sequence number.  
   
  `szName`  
- [in] Nazwa parametru w formacie Unicode.  
+ [in] The name of the parameter in Unicode.  
   
  `dwParamFlags`  
- [in] Flagi unikatowe dla parametru. Jest to z `CorParamAttr` wartości.  
+ [in] Flags for the parameter. This is a bitmask of `CorParamAttr` values.  
   
  `dwCPlusTypeFlag`  
- [in] `ELEMENT_TYPE_` *\** wartości stałej.  
+ [in] `ELEMENT_TYPE_` *\** for the constant value.  
   
  `pValue`  
- [in] Stała wartość dla parametru.  
+ [in] The constant value for the parameter.  
   
  `cchValue`  
- [in] Rozmiar w znaki Unicode z `pValue`.  
+ [in] The size, in Unicode characters, of `pValue`.  
   
  `ppd`  
- [out] `mdParamDef` Token przypisany.  
+ [out] The `mdParamDef` token assigned.  
   
 ## <a name="remarks"></a>Uwagi  
- Sekwencja wartości w `ulParamSeq` zaczynają się od 1 dla parametrów. Wartość zwracana ma kolejny numer 0.  
+ The sequence values in `ulParamSeq` begin with 1 for parameters. A return value has a sequence number of 0.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

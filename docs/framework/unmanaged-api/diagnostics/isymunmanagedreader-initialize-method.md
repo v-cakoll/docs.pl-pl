@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f2dceeb2f0b3aa9f3147157e77087dffbf2d5f85
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939027"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429738"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize — Metoda
-Inicjuje czytnik symboli z interfejsem importera metadanych, z którym zostanie skojarzony ten czytnik, wraz z nazwą pliku modułu.  
+Initializes the symbol reader with the metadata importer interface that this reader will be associated with, along with the file name of the module.  
   
 > [!NOTE]
-> Tę metodę można wywołać tylko raz i muszą one zostać wywołane przed innymi metodami czytnika.  
+> This method can be called only once, and must be called before any other reader methods.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,25 +40,25 @@ HRESULT Initialize (
   
 ## <a name="parameters"></a>Parametry  
  `importer`  
- podczas Interfejs programu do importowania metadanych, z którym ten czytnik zostanie skojarzony.  
+ [in] The metadata importer interface with which this reader will be associated.  
   
  `filename`  
- podczas Nazwa pliku modułu. Zamiast tego można użyć `pIStream` parametru.  
+ [in] The file name of the module. You can use the `pIStream` parameter instead.  
   
  `searchPath`  
- podczas Ścieżka do wyszukania. Ten parametr jest opcjonalny.  
+ [in] The path to search. This parameter is optional.  
   
  `pIStream`  
- podczas Strumień pliku używany jako alternatywa dla parametru filename.  
+ [in] The file stream, used as an alternative to the filename parameter.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie, E_FAIL lub inny kod błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy określić tylko jeden z `filename` `pIStream` parametrów lub. `searchPath` Parametr jest opcjonalny.  
+ You need to specify only one of the `filename` or the `pIStream` parameters, not both. The `searchPath` parameter is optional.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówki** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

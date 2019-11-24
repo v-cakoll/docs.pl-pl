@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781719"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436614"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType — Wyliczenie
-Zawiera wartości wskazujące typ połączone w kodzie natywnym.  
+Provides values that indicate the type linked in native code.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,21 +42,21 @@ typedef enum
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`nltNone`|Wskazuje brak słów kluczowych określony.|  
-|`nltAnsi`|Wskazuje, że zostanie określone słowo kluczowe ANSI.|  
-|`nltUnicode`|Wskazuje, że określono Unicode — słowo kluczowe|  
-|`nltAuto`|Wskazuje, że określono auto — słowo kluczowe.|  
-|`nltOle`|Wskazuje, że zostanie określone słowo kluczowe OLE.|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|Nie używany.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

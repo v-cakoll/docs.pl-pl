@@ -1,5 +1,5 @@
 ---
-title: <runtime>, element
+title: <runtime> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#runtime
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: e703b9739ea93d3c7bf08371bc264bbdcb05b716
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3825ae7c3e35193cb835981600fe1ef83097cd2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252329"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430459"
 ---
-# <a name="runtime-element"></a>\<Element > środowiska uruchomieniowego
+# <a name="runtime-element"></a>\<runtime> Element
 
-Zawiera informacje używane przez środowisko uruchomieniowe języka wspólnego do konfigurowania aplikacji.
+Provides information used by the common language runtime to configure applications.
 
-[ **\<> konfiguracji**](../configuration-element.md)  
-&nbsp;&nbsp; **\<runtime>**  
+[\<configuration>](../configuration-element.md)\
+&nbsp;&nbsp;\<runtime>
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,7 +32,7 @@ Zawiera informacje używane przez środowisko uruchomieniowe języka wspólnego 
 
 ## <a name="attributes-and-elements"></a>Atrybuty i elementy
 
-W poniższych sekcjach opisano elementy podrzędne i elementy nadrzędne.
+The following sections describe child elements and parent elements.
 
 ### <a name="attributes"></a>Atrybuty
 
@@ -42,44 +42,48 @@ Brak.
 
 |Element|Opis|
 |-------------|-----------------|
-|[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|Określa, że tożsamość systemu Windows jest zawsze przepływów między punktami asynchronicznymi, niezależnie od tego, jak personifikacja została wykonana.|
-|[\<AppContextSwitchOverrides>](appcontextswitchoverrides-element.md)|Definiuje jeden lub więcej przełączników używanych przez <xref:System.AppContext> klasę, aby zapewnić mechanizm rezygnacji dla nowych funkcji.|
-|[\<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)|Określa zestaw, który udostępnia Menedżer domeny aplikacji dla domyślnej domeny aplikacji w procesie.|
-|[\<appDomainManagerType>](appdomainmanagertype-element.md)|Określa typ, który służy jako Menedżer domeny aplikacji dla domyślnej domeny aplikacji.|
-|[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)|Powoduje, że środowisko uruchomieniowe zbiera statystyki dotyczące wszystkich domen aplikacji w procesie przez cały czas trwania procesu.|
-|[\<> zestawubinding](assemblybinding-element-for-runtime.md)|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|
-|[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)|Określa, czy należy pominąć weryfikację silnej nazwy dla zaufanych zestawów.|
-|[\<CompatSortNLSVersion >](compatsortnlsversion-element.md)|Określa, że środowisko uruchomieniowe ma używać starszego zachowania sortowania podczas porównywania ciągów.|
-|[\<> developmentmode](developmentmode-element.md)|Określa, czy środowisko uruchomieniowe wyszukuje zestawy w katalogach określonych przez zmienną środowiskową DEVPATH.|
-|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|Określa, czy buforowanie błędów powiązań, które jest domyślnym zachowaniem w .NET Framework w wersji 2,0, jest wyłączone.|
-|[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)|Określa, czy pełny stos wątków jest zatwierdzany podczas uruchamiania wątku.|
-|[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)|Określa, czy domyślne zachowanie, które umożliwia hostowi środowiska uruchomieniowego przesłonięcie ustawień konfiguracji dla domeny aplikacji, jest wyłączone.|
-|[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)|Określa, czy metody analizowania dat i godzin używają skorygowanego zestawu reguł do analizowania ciągów dat, które zawierają tylko oznaczenie Day, month, Hour i AM/PM.|
-|[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)|Określa, czy należy wymusić wymaganie konfiguracji komputera, że algorytmy kryptograficzne muszą być zgodne z FIPS (Federal Information Processing Standards).|
-|[\<etwEnable>](etwenable-element.md)|Określa, czy włączyć śledzenie zdarzeń systemu Windows (ETW) dla zdarzeń środowiska uruchomieniowego języka wspólnego.|
-|[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)|Określa, czy funkcja kończąca PerfCounter. dll używa ustawienia rejestru CategoryOptions w aplikacji .NET Framework w wersji 1,1, aby określić, czy ładować dane liczników wydajności z pamięci współdzielonej określonej dla kategorii, czy z pamięci globalnej.|
-|[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|Na platformach 64-bitowych program umożliwia korzystanie z tablic o rozmiarze większym niż 2 gigabajty (GB).|
-|[\<gcConcurrent>](gcconcurrent-element.md)|Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci jednocześnie.|
-|[\<GCCpuGroup>](gccpugroup-element.md)|Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów.|
-|[\<gcServer>](gcserver-element.md)|Określa, czy środowisko uruchomieniowe języka wspólnego uruchamia odzyskiwanie pamięci serwera.|
-|[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|Określa, czy środowisko uruchomieniowe używa zasad wydawcy zabezpieczeń dostępu kodu (CAS).|
-|[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|Określa, czy środowisko uruchomieniowe umożliwia kodowi zarządzanemu przechwytywanie naruszeń dostępu i innych wyjątków uszkodzonych Stanów.|
-|[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Określa, że tożsamość systemu Windows nie przepływa między punktami asynchronicznymi, niezależnie od ustawień przepływu dla kontekstu wykonywania w bieżącym wątku.|
-|[\<loadfromRemoteSources>](loadfromremotesources-element.md)|Określa, czy zestawy ze źródeł zdalnych są ładowane jako pełne zaufanie.|
-|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|Określa, czy środowisko uruchomieniowe korzysta ze starszych zasad zabezpieczeń dostępu kodu (CAS).|
-|[\<NetFx40_PInvokeStackResilience >](netfx40-pinvokestackresilience-element.md)|Określa, czy środowisko uruchomieniowe automatycznie naprawia nieprawidłowe deklaracje wywołania platformy w czasie wykonywania, kosztem wolniejszych przejść między zarządzanym i niezarządzanym kodem.|
-|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Określa, czy środowisko uruchomieniowe używa stałej ilości pamięci do obliczenia kodów skrótów dla <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> metody.|
-|[\<PreferComInsteadOfRemoting >](prefercominsteadofmanagedremoting-element.md)|Określa, że środowisko uruchomieniowe będzie używać międzyoperacyjności modelu COM zamiast komunikacji zdalnej między granicami domeny aplikacji.|
-|[\<relativeBindForResources>](relativebindforresources-element.md)|Optymalizuje sondę dla zestawów satelickich.|
-|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|Określa, czy kopiowanie w tle używa domyślnego zachowania uruchamiania wprowadzonego w .NET Framework 4, czy przywraca zachowanie uruchamiania wcześniejszych wersji .NET Framework.|
-|[\<Tag supportportability >](supportportability-element.md)|Określa, że aplikacja może odwoływać się do tego samego zestawu w dwóch różnych implementacjach .NET Framework, przez wyłączenie domyślnego zachowania, które traktuje zestawy jako równoważne do celów przenośności aplikacji.|
-|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Zawiera informacje o konfiguracji domyślnej pamięci podręcznej obiektów w pamięci.|
-|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|Określa, czy środowisko uruchomieniowe dystrybuuje wątki zarządzane we wszystkich grupach procesora.|
-|[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|Określa, czy Nieobsłużone wyjątki zadań powinny kończyć uruchomiony proces.|
-|[\<TimeSpan_LegacyFormatMode>](timespan-legacyformatmode-element.md)|Określa, czy środowisko uruchomieniowe używa starszej wersji formatowania dla <xref:System.TimeSpan> wartości.|
-|[\<useLegacyJit>](uselegacyjit-element.md)|Określa, czy środowisko uruchomieniowe języka wspólnego korzysta ze starszego 64-bitowego kompilatora JIT dla kompilacji just in Time.|
-|[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|Określa, czy środowisko uruchomieniowe oblicza kody skrótów dla ciągów na podstawie poszczególnych domen aplikacji.|
-|[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|Żąda, aby środowisko uruchomieniowe używało jawnych rozmiarów stosu, gdy tworzy pewne wątki używane wewnętrznie, zamiast domyślnego rozmiaru stosu.|
+|[\<alwaysFlowImpersonationPolicy>](alwaysflowimpersonationpolicy-element.md)|Specifies that the Windows identity always flows across asynchronous points, regardless of how impersonation was performed.|
+|[\<AppContextSwitchOverrides>](appcontextswitchoverrides-element.md)|Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.|
+|[\<appDomainManagerAssembly>](appdomainmanagerassembly-element.md)|Specifies the assembly that provides the application domain manager for the default application domain in the process.|
+|[\<appDomainManagerType>](appdomainmanagertype-element.md)|Specifies the type that serves as the application domain manager for the default application domain.|
+|[\<appDomainResourceMonitoring>](appdomainresourcemonitoring-element.md)|Instructs the runtime to collect statistics on all application domains in the process for the life of the process.|
+|[\<assemblyBinding>](assemblybinding-element-for-runtime.md)|Zawiera informacje o przekierowaniu wersji zestawu i lokalizacji zestawów.|
+|[\<bypassTrustedAppStrongNames>](bypasstrustedappstrongnames-element.md)|Specifies whether strong name verification for trusted assemblies should be bypassed.|
+|[\<CompatSortNLSVersion>](compatsortnlsversion-element.md)|Specifies that the runtime should use legacy sorting behavior when performing string comparisons.|
+|[\<developmentMode>](developmentmode-element.md)|Specifies whether the runtime searches for assemblies in directories specified by the DEVPATH environment variable.|
+|[\<disableCachingBindingFailures>](disablecachingbindingfailures-element.md)|Specifies whether the caching of binding failures, which is the default behavior in the .NET Framework version 2.0, is disabled.|
+|[\<disableCommitThreadStack>](disablecommitthreadstack-element.md)|Specifies whether the full thread stack is committed when a thread is started.|
+|[\<disableFusionUpdatesFromADManager>](disablefusionupdatesfromadmanager-element.md)|Specifies whether the default behavior, which is to allow the runtime host to override configuration settings for an application domain, is disabled.|
+|[\<EnableAmPmParseAdjustment>](enableampmparseadjustment-element.md)|Determines whether date and time parsing methods use an adjusted set of rules to parse date strings that contain only a day, month, hour, and AM/PM designator.|
+|[\<enforceFIPSPolicy>](enforcefipspolicy-element.md)|Specifies whether to enforce a computer configuration requirement that cryptographic algorithms must comply with the Federal Information Processing Standards (FIPS).|
+|[\<etwEnable>](etwenable-element.md)|Specifies whether to enable event tracing for Windows (ETW) for common language runtime events.|
+|[\<forcePerformanceCounterUniqueSharedMemoryReads>](forceperformancecounteruniquesharedmemoryreads-element.md)|Specifies whether PerfCounter.dll uses the CategoryOptions registry setting in a .NET Framework version 1.1 application to determine whether to load performance counter data from category-specific shared memory or global memory.|
+|[\<gcAllowVeryLargeObjects>](gcallowverylargeobjects-element.md)|On 64-bit platforms, enables arrays that are greater than 2 gigabytes (GB) in total size.|
+|[\<gcConcurrent>](gcconcurrent-element.md)|Specifies whether the common language runtime runs garbage collection concurrently.|
+|[\<GCCpuGroup>](gccpugroup-element.md)|Specifies whether garbage collection supports multiple CPU groups.|
+|[\<GCHeapAffinitizeMask>](gcheapaffinitizemask-element.md)|Defines the affinity between garbage collection heaps and individual processors.|
+|[\<GCHeapCount>](gcheapcount-element.md)|Specifies the number of heaps/threads to use for server garbage collection.|
+|[\<GCLOHThreshold>](gclohthreshold-element.md)|Specifies the threshold size that causes the garbage collector to put objects on the large object heap.|
+|[\<GCNoAffinitize>](gcnoaffinitize-element.md)|Specifies whether or not to affinitize server garbage collection threads with CPUs.|
+|[\<gcServer>](gcserver-element.md)|Specifies whether the common language runtime runs server garbage collection.|
+|[\<generatePublisherEvidence>](generatepublisherevidence-element.md)|Specifies whether the runtime uses code access security (CAS) publisher policy.|
+|[\<legacyCorruptedStateExceptionsPolicy>](legacycorruptedstateexceptionspolicy-element.md)|Specifies whether the runtime allows managed code to catch access violations and other corrupted state exceptions.|
+|[\<legacyImpersonationPolicy>](legacyimpersonationpolicy-element.md)|Specifies that the Windows identity does not flow across asynchronous points, regardless of the flow settings for the execution context on the current thread.|
+|[\<loadfromRemoteSources>](loadfromremotesources-element.md)|Specifies whether assemblies from remote sources are loaded as full trust.|
+|[\<NetFx40_LegacySecurityPolicy>](netfx40-legacysecuritypolicy-element.md)|Specifies whether the runtime uses legacy code access security (CAS) policy.|
+|[\<NetFx40_PInvokeStackResilience>](netfx40-pinvokestackresilience-element.md)|Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.|
+|[\<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](netfx45-cultureawarecomparergethashcode-longstrings-element.md)|Specifies whether the runtime uses a fixed amount of memory to calculate hash codes for the <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> method.|
+|[\<PreferComInsteadOfRemoting>](prefercominsteadofmanagedremoting-element.md)|Specifies that the runtime will use COM interop instead of remoting across application domain boundaries.|
+|[\<relativeBindForResources>](relativebindforresources-element.md)|Optimizes the probe for satellite assemblies.|
+|[\<shadowCopyVerifyByTimeStamp>](shadowcopyverifybytimestamp-element.md)|Specifies whether shadow copying uses the default startup behavior introduced in the .NET Framework 4, or reverts to the startup behavior of earlier versions of the .NET Framework.|
+|[\<supportPortability>](supportportability-element.md)|Specifies that an application can reference the same assembly in two different implementations of the .NET Framework, by disabling the default behavior that treats the assemblies as equivalent for application portability purposes.|
+|[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Provides configuration information for the default in-memory object cache.|
+|[\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md)|Specifies whether the runtime distributes managed threads across all CPU groups.|
+|[\<ThrowUnobservedTaskExceptions>](throwunobservedtaskexceptions-element.md)|Specifies whether unhandled task exceptions should terminate a running process.|
+|[\<TimeSpan_LegacyFormatMode>](timespan-legacyformatmode-element.md)|Specifies whether the runtime uses legacy formatting for <xref:System.TimeSpan> values.|
+|[\<useLegacyJit>](uselegacyjit-element.md)|Determines whether the common language runtime uses the legacy 64-bit JIT compiler for just-in-time compilation.|
+|[\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md)|Specifies whether the runtime calculates hash codes for strings on a per application domain basis.|
+|[\<UseSmallInternalThreadStacks>](usesmallinternalthreadstacks-element.md)|Requests that the runtime use explicit stack sizes when it creates certain threads that it uses internally, instead of the default stack size.|
 
 ### <a name="parent-elements"></a>Elementy nadrzędne
 
@@ -89,9 +93,9 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Elementy podrzędne w [ \<sekcji > środowiska uruchomieniowego](runtime-element.md) pliku konfiguracji są używane przez środowisko uruchomieniowe języka wspólnego do konfigurowania sposobu wykonywania aplikacji. Na przykład [ \<element gcServer >](gcserver-element.md) określa, czy moduł zbierający elementy bezużyteczne używa odzyskiwania pamięci stacji roboczej lub [ \<](userandomizedstringhashalgorithm-element.md) wyrzucania elementów bezużytecznych serwera, elementu UseRandomizedStringHashAlgorithm > Określa, czy środowisko uruchomieniowe języka wspólnego oblicza kody skrótów dla ciągów na podstawie aplikacji lub domeny dla poszczególnych aplikacji, a `AppContextSwitchOverrides` element umożliwia użytkownikom biblioteki wybór lub rezygnację z zmieniających się funkcji udostępnionych przez bibliotekę.
+The child elements in the [\<runtime>](runtime-element.md) section of a configuration file are used by the common language runtime to configure how an application executes. For example, the [\<gcServer>](gcserver-element.md) element determines whether the garbage collector uses workstation garbage collection or server garbage collection, the [\<UseRandomizedStringHashAlgorithm>](userandomizedstringhashalgorithm-element.md) element determines whether the common language runtime calculates hash codes for string on a per-application or a per-application domain basis, and the `AppContextSwitchOverrides` element allows library users to opt in or opt out of changed  functionality provided by a library.
 
-Elementy w [ \<sekcji > środowiska uruchomieniowego](runtime-element.md) są odczytywane automatycznie przez środowisko uruchomieniowe języka wspólnego podczas uruchamiania aplikacji. Możesz również zdefiniować plik konfiguracyjny dla domeny aplikacji innej niż domyślna, dostarczając jej nazwę do <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> właściwości; jej ustawienia są odczytywane automatycznie podczas ładowania domeny aplikacji. Jeśli kiedykolwiek wcześniej, koniecznie należy bezpośrednio odczytać ustawienia w [ \<sekcji > środowiska uruchomieniowego](runtime-element.md) w pliku konfiguracyjnym aplikacji.
+The elements in the [\<runtime>](runtime-element.md) section are read automatically by the common language runtime at application startup. You can also define the configuration file for a non-default application domain by supplying its name to the <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> property; its settings are read automatically when the application domain is loaded. You should rarely, if ever, have a need to directly read the settings in the [\<runtime>](runtime-element.md) section in your application's configuration file.
 
 ## <a name="see-also"></a>Zobacz także
 

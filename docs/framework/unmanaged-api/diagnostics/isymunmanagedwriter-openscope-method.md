@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dbea0644-3873-4329-90b8-624163e87467
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa6d563873045b4b5b427f06f0caa5420d31590b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 915b05d0d2ac611678fdcc94dd42bbb1962e6ceb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777208"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427892"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope — Metoda
-Zostanie otwarty nowy zakres leksykalne w bieżącej metodzie. Zakres staje się nowy zakres bieżący i są wypychane na stosie zakresów. Zakresy należy tworzą hierarchię. Elementy równorzędne są niedozwolone nakładają się na siebie.  
+Opens a new lexical scope in the current method. The scope becomes the new current scope and is pushed onto a stack of scopes. Scopes must form a hierarchy. Siblings are not allowed to overlap.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,19 +35,19 @@ HRESULT OpenScope(
   
 ## <a name="parameters"></a>Parametry  
  `startOffset`  
- [in] Przesunięcie pierwsza instrukcja w zakresie leksykalnym, w bajtach od początku metody.  
+ [in] The offset of the first instruction in the lexical scope, in bytes, from the beginning of the method.  
   
  `pRetVal`  
- [out] Wskaźnik do `ULONG32` , która otrzymuje identyfikator zakresu.  
+ [out] A pointer to a `ULONG32` that receives the scope identifier.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="remarks"></a>Uwagi  
- `ISymUnmanagedWriter::OpenScope` Zwraca identyfikator nieprzezroczysty zakres, który może być używany z [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) Aby zdefiniować zakres użytkownika początkowe i końcowe przesunięcie w późniejszym czasie. W tym przypadku przesunięcia przekazany do `ISymUnmanagedWriter::OpenScope` i [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) są ignorowane. Zakres identyfikatorów są prawidłowe tylko w bieżącej metodzie.  
+ `ISymUnmanagedWriter::OpenScope` returns an opaque scope identifier that can be used with [ISymUnmanagedWriter::SetScopeRange](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-setscoperange-method.md) to define a scope's starting and ending offset at a later time. In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored. Scope identifiers are valid only in the current method.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -8,63 +8,63 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6798a83973f94f07a2a215d5208aa55f0f9ae929
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046747"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428166"
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
-W tematach w tej sekcji opisano zdarzenia śledzenia zdarzeń systemu Windows (ETW). Każde zdarzenie ma skojarzone słowo kluczowe i poziom, które są opisane w temacie [słowa kluczowe ETW środowiska CLR i poziomy](clr-etw-keywords-and-levels.md) . Środowisko CLR ma dwóch dostawców dla zdarzeń:  
+The topics in this section describe event tracing for Windows (ETW) events. Each event has an associated keyword and level, which are described in the [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md) topic. The CLR has two providers for the events:  
   
-- Dostawca środowiska uruchomieniowego, który wywołuje zdarzenia w zależności od tego, które słowa kluczowe (kategorie zdarzeń) są włączone. Identyfikator GUID dostawcy środowiska uruchomieniowego CLR to e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
+- The runtime provider, which raises events depending on which keywords (categories of events) are enabled. The CLR runtime provider GUID is e13c0d23-ccbc-4e12-931b-d9cc2eee27e4.  
   
-- Dostawca uwalniania, który ma specjalne zastosowania. Identyfikator GUID dostawcy uwalniania CLR to a669021c-c450-4609-a035-5af59af4df18.  
+- The rundown provider, which has special-purpose uses. The CLR rundown provider GUID is a669021c-c450-4609-a035-5af59af4df18.  
   
- Więcej informacji o dostawcach znajduje się w temacie [dostawcy CLR ETW](clr-etw-providers.md).  
+ For more information about the providers, see [CLR ETW Providers](clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Informacje o zdarzeniach środowiska uruchomieniowego](runtime-information-etw-events.md)  
- Przechwytuje informacje o środowisku uruchomieniowym, w tym jednostkę SKU, numer wersji, sposób aktywowania środowiska uruchomieniowego, parametry wiersza polecenia, które zostały uruchomione, identyfikator GUID (jeśli dotyczy) i inne istotne informacje.  
+ Captures information about the runtime, including the SKU, version number, the manner in which the runtime was activated, the command-line parameters it was started with, the GUID (if applicable), and other relevant information.  
   
  [Zdarzenie wyjątku ETW Thrown_V1](exception-thrown-v1-etw-event.md)  
- Przechwytuje informacje o wygenerowanych wyjątkach.  
+ Captures information about exceptions that are thrown.  
   
  [Zdarzenia rywalizacji](contention-etw-events.md)  
- Przechwytuje informacje o rywalizacji o blokady monitora lub blokady natywne używane przez środowisko uruchomieniowe.  
+ Captures information about contention for monitor locks or native locks that the runtime uses.  
   
  [Zdarzenia puli wątków](thread-pool-etw-events.md)  
- Przechwytuje informacje o pulach wątków roboczych i pulach wątków we/wy.  
+ Captures information about worker thread pools and I/O thread pools.  
   
  [Zdarzenia modułu ładującego](loader-etw-events.md)  
- Przechwytuje informacje dotyczące ładowania i zwalniania domen aplikacji, zestawów i modułów.  
+ Captures information about loading and unloading application domains, assemblies, and modules.  
   
  [Zdarzenia metod](method-etw-events.md)  
- Przechwytuje informacje o metodach CLR rozpoznawania symboli.  
+ Captures information about CLR methods for symbol resolution.  
   
  [Zdarzenia odzyskiwania pamięci](garbage-collection-etw-events.md)  
- Przechwytuje informacje dotyczące wyrzucania elementów bezużytecznych, aby ułatwić diagnostykę i debugowanie.  
+ Captures information pertaining to garbage collection, to help in diagnostics and debugging.  
   
  [Zdarzenia śledzenia JIT](jit-tracing-etw-events.md)  
- Przechwytuje informacje o wywołaniach deokładzinowych i końcowych just-in-Time (JIT).  
+ Captures information about just-in-time (JIT) inlining and tail calls.  
   
  [Zdarzenia międzyoperacyjności](interop-etw-events.md)  
- Przechwytuje informacje o generacji i buforowaniu klasy języka pośredniego firmy Microsoft (MSIL).  
+ Captures information about Microsoft intermediate language (MSIL) stub generation and caching.  
   
  [Zdarzenia ARM](application-domain-resource-monitoring-arm-etw-events.md)  
- Przechwytuje szczegółowe informacje diagnostyczne o stanie domeny aplikacji.  
+ Captures detailed diagnostic information about the state of an application domain.  
   
  [Zdarzenia zabezpieczeń](security-etw-events.md)  
- Przechwytuje informacje o silnych nazwach i weryfikacji Authenticode.  
+ Captures information about strong name and Authenticode verification.  
   
  [Zdarzenie stosu](stack-etw-event.md)  
- Przechwytuje informacje, które są używane z innymi zdarzeniami do generowania śladów stosu po podniesieniu zdarzenia.  
+ Captures information that is used with other events to generate stack traces after an event is raised.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Ulepszanie debugowania i dostrajania wydajności za pomocą funkcji ETW](https://go.microsoft.com/fwlink/?LinkId=179696)
-- [Blog o wydajności systemu Windows](https://go.microsoft.com/fwlink/?LinkId=179509)
+- [Improve Debugging And Performance Tuning With ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [Windows Performance Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [Kontrolowanie logowania w programie .NET Framework](controlling-logging.md)
 - [Dostawcy CLR ETW](clr-etw-providers.md)
 - [Słowa kluczowe i poziomy ETW CLR](clr-etw-keywords-and-levels.md)

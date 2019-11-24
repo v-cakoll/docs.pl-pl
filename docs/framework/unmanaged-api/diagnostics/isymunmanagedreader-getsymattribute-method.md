@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c675ce7e-76e7-45ff-8273-3b6489a2767c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 26458e2512f331ff7a8c41868c99d092cfd30977
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7f04b5c100f1fd9c44e671b883fe469b16d33fa6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737238"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440139"
 ---
 # <a name="isymunmanagedreadergetsymattribute-method"></a>ISymUnmanagedReader::GetSymAttribute — Metoda
-Pobiera atrybut niestandardowy na podstawie jego nazwy. W przeciwieństwie do metadanych atrybutów niestandardowych te atrybuty niestandardowe są przechowywane w magazynie symboli.  
+Gets a custom attribute based upon its name. Unlike metadata custom attributes, these custom attributes are held in the symbol store.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,25 +39,25 @@ HRESULT GetSymAttribute (
   
 ## <a name="parameters"></a>Parametry  
  `parent`  
- [in] Token metadanych dla obiektu, dla którego żądana jest atrybut.  
+ [in] The metadata token for the object for which the attribute is requested.  
   
  `name`  
- [in] Wskaźnik do zmiennej, która wskazuje atrybut do pobrania.  
+ [in] A pointer to the variable that indicates the attribute to retrieve.  
   
  `cBuffer`  
- [in] Rozmiar `buffer` tablicy.  
+ [in] The size of the `buffer` array.  
   
  `pcBuffer`  
- [out] Wskaźnik do zmiennej, która odbiera długość danych atrybutu.  
+ [out] A pointer to the variable that receives the length of the attribute data.  
   
  `buffer`  
- [out] Wskaźnik do zmiennej, która odbiera dane atrybutu.  
+ [out] A pointer to the variable that receives the attribute data.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

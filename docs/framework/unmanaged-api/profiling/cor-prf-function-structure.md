@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57520b4a67eb164c8f8631dc4d63d32c655dafa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753823"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428329"
 ---
-# <a name="corprffunction-structure"></a>COR_PRF_FUNCTION — Struktura
-Udostępnia reprezentację unikatową funkcję, łącząc się jego Identyfikatorem jego ponownej kompilacji wersji.  
+# <a name="cor_prf_function-structure"></a>COR_PRF_FUNCTION — Struktura
+Provides a unique representation of a function by combining its ID with the ID of its recompiled version.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,19 +34,19 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 |Element członkowski|Opis|  
 |------------|-----------------|  
-|`functionId`|Identyfikator funkcji.|  
-|`reJitId`|Identyfikator funkcji ponownej kompilacji. Wartość 0 (zero) reprezentuje oryginalną wersję funkcji.|  
+|`functionId`|The ID of the function.|  
+|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
   
 ## <a name="remarks"></a>Uwagi  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl  
+ **Header:** CorProf.idl  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

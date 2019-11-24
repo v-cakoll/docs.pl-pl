@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f77e6e9711f05262e494f2814750af8ef7cd9f64
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 53a75b8e7edd15cd233577e0a3714fb5d981495f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750904"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432325"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps — Metoda
-Ustawia lub aktualizuje funkcji podpisu metadanych zestawu uprawnień, zdefiniowane przez wcześniejsze wywołanie [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
+Sets or updates features of the metadata signature of a permission set defined by a prior call to [IMetaDataEmit::DefinePermissionSet](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>Parametry  
  `tk`  
- [in] Token metadanych, który reprezentuje obiekt umożliwiający posiadać.  
+ [in] A metadata token that represents the object to be decorated.  
   
  `dwAction`  
- [in] A [cordeclsecurity —](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) wartość, która określa typ zabezpieczenia deklaratywne ma być używany.  
+ [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
   
  `pvPermission`  
- [in] Uprawnienie obiektu BLOB.  
+ [in] The permission BLOB.  
   
  `cbPermission`  
- [in] Rozmiar w bajtach z `pvPermission`.  
+ [in] The size, in bytes, of `pvPermission`.  
   
  `ppm`  
- [out] `mdPermission` Token metadanych, który reprezentuje zaktualizowanymi uprawnieniami.  
+ [out] An `mdPermission` metadata token that represents the updated permissions.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

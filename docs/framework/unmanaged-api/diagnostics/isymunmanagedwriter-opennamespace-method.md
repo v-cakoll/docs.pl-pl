@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 426f4e4f-e60d-4ad1-b546-a10e3c55c283
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5bd07411acd074bf5a25148110dbdf28a004551a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: acbd49de7362d9c05a609a2d870af100637e10ab
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777246"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427904"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace — Metoda
-Zostanie otwarty nowy obszar nazw. Tę metodę należy wywołać przed zdefiniowaniem metody lub zmienne, które zajmują przestrzeni nazw. Przestrzenie nazw mogą być zagnieżdżone.  
+Opens a new namespace. Call this method before defining methods or variables that occupy a namespace. Namespaces can be nested.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,13 +34,13 @@ HRESULT OpenNamespace(
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] Wskaźnik na nazwę nowej przestrzeni nazw.  
+ [in] A pointer to the name of the new namespace.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

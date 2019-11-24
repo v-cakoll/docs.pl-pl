@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55773dbc-9053-46e3-8a3c-86caa9d91fb4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5afd48b36355835647ab8d06691f2bd2058b00cb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776977"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426736"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition — Metoda
-Zwraca metodę, która zawiera punkt przerwania na pozycji w dokumencie.  
+Returns the method that contains the breakpoint at the given position in a document.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>Parametry  
  `document`  
- [in] Określony dokument.  
+ [in] The specified document.  
   
  `line`  
- [in] Wiersz określonego dokumentu.  
+ [in] The line of the specified document.  
   
  `column`  
- [in] Kolumna określonego dokumentu.  
+ [in] The column of the specified document.  
   
  `pRetVal`  
- [out] Wskaźnik na adres [isymunmanagedmethod — interfejs](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) obiekt, który reprezentuje metodę zawierającego punkt przerwania.  
+ [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

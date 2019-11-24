@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745882"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426133"
 ---
 # <a name="iceegentruncatesection-method"></a>ICeeGen::TruncateSection — Metoda
-Obcina sekcję kodu określonego przez określony czas.  
+Truncates the specified code section by the specified length.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Parametry  
  `section`  
- [in] Sekcja obcięcia.  
+ [in] The section to truncate.  
   
  `len`  
- [in] Długość w bajtach, według którego ma zostać obcięta sekcji.  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>Uwagi  
- Wywołaj `TruncateSection` tylko wtedy, gdy masz sekcją wymagań, które nie są obsługiwane przy użyciu innych metod.  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

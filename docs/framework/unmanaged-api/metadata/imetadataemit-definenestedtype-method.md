@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7676c83e8b231606896cb6d1224633b4fa15e725
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777559"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431706"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType — Metoda
-Tworzy podpisu metadanych w definicji typu, zwraca `mdTypeDef` tokenu dla tego typu i określa, że typ zdefiniowany jest elementem członkowskim typu odwołuje się `tdEncloser` parametru.  
+Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,31 +40,31 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parametry  
  `szTypeDef`  
- [in] Nazwa typu w formacie Unicode.  
+ [in] The name of the type in Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` atrybutów. Jest to z `CorTypeAttr` wartości.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] Token klasy bazowej. Jest to `mdTypeDef` lub `mdTypeRef` tokenu.  
+ [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
   
  `rtkImplements`[]  
- [in] Tablica tokenów, które określają interfejsy, które implementuje tej klasy lub interfejsu.  
+ [in] An array of tokens that specify the interfaces that this class or interface implements.  
   
  `tdEncloser`  
- [in] Token typ otaczający. Ostatni element tablicy muszą być `mdTokenNil`.  
+ [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
   
  `ptd`  
- [out] `mdTypeDef` Token przypisany.  
+ [out] The `mdTypeDef` token assigned.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

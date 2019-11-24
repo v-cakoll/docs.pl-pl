@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b8be30e8c3b6bc7c03ede5f897f176e04153003b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781963"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427491"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls — Metoda
-Wylicza MethodBody i MethodDeclaration tokenów reprezentujący metody określonego typu.  
+Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -42,38 +40,38 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parametry  
  `phEnum`  
- [out w] Wskaźnik do modułu wyliczającego. Musi to być wartość NULL dla pierwszego wywołania tej metody.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `td`  
- [in] Element TypeDef dla typu tokenu implementacje metod, których można wyliczyć.  
+ [in] A TypeDef token for the type whose method implementations to enumerate.  
   
  `rMethodBody`  
- [out] Tablica do przechowywania tokenów MethodBody.  
+ [out] The array to store the MethodBody tokens.  
   
  `rMethodDecl`  
- [out] Tablica do przechowywania tokenów MethodDeclaration.  
+ [out] The array to store the MethodDeclaration tokens.  
   
  `cMax`  
- [in] Maksymalny rozmiar `rMethodBody` i `rMethodDecl` tablic.  
+ [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
   
  `pcTokens`  
- [in] Rzeczywista liczba zwracanych w metodach `rMethodBody` i `rMethodDecl`.  
+ [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
   
 ## <a name="return-value"></a>Wartość zwracana  
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` pomyślnie zwrócił.|  
-|`S_FALSE`|Nie ma żadnych tokeny metoda wyliczania. W takim przypadku `pcTokens` wynosi zero.|  
+|`S_OK`|`EnumMethodImpls` returned successfully.|  
+|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Dołączony jako zasób w MsCorEE.dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

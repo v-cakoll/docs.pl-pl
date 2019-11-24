@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8aea2e2c-23a3-4cda-9a06-e19f97383830
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7337222f7f419c68ae21d604d1673158acca85ba
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 125a63638a41707b8eed918253cb1f93abb907eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777392"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434335"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize — Metoda
-Szacowany rozmiar binarne zestawu i jego metadane są pobierane w bieżącym zakresie.  
+Gets the estimated binary size of the assembly and its metadata in the current scope.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,32 +36,32 @@ HRESULT GetSaveSize (
   
 ## <a name="parameters"></a>Parametry  
  `fSave`  
- [in] Wartość [corsavesize —](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) wyliczenie, które określa, czy uzyskać dokładne lub Przybliżony rozmiar. Tylko dla trzech wartości są prawidłowe: cssAccurate, cssQuick i cssDiscardTransientCAs:  
+ [in] A value of the [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md) enumeration that specifies whether to get an accurate or approximate size. Only three values are valid: cssAccurate, cssQuick, and cssDiscardTransientCAs:  
   
-- cssAccurate zwraca dokładnie Zapisz rozmiar, ale trwa dłużej do obliczenia.  
+- cssAccurate returns the exact save size but takes longer to calculate.  
   
-- cssQuick zwraca rozmiar, uzupełniona na potrzeby bezpieczeństwa, ale zajmuje mniej czasu, aby obliczyć.  
+- cssQuick returns a size, padded for safety, but takes less time to calculate.  
   
-- informuje cssDiscardTransientCAs `GetSaveSize` , może ona zgłosić natychmiast discardable atrybutów niestandardowych.  
+- cssDiscardTransientCAs tells `GetSaveSize` that it can throw away discardable custom attributes.  
   
  `pdwSaveSize`  
- [out] Wskaźnik do rozmiaru który jest wymagany, aby zapisać plik.  
+ [out] A pointer to the size that is required to save the file.  
   
 ## <a name="remarks"></a>Uwagi  
- `GetSaveSize` Obliczanie miejsca wymaganego w bajtach, można zapisać zestawu i wszystkich jego metadane w bieżącym zakresie. (Po wywołaniu [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) metoda może emitować to liczba bajtów.)  
+ `GetSaveSize` calculates the space required, in bytes, to save the assembly and all its metadata in the current scope. (A call to the [IMetaDataEmit::SaveToStream](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetostream-method.md) method would emit this number of bytes.)  
   
- Jeśli obiekt wywołujący implementuje [imaptoken —](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interfejsu (za pośrednictwem [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) lub [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` wykona dwa przebiegi za pośrednictwem metadane do optymalizacji i skompresować je. W przeciwnym razie są wykonywane nie optymalizacji.  
+ If the caller implements the [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) interface (through [IMetaDataEmit::SetHandler](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-sethandler-method.md) or [IMetaDataEmit::Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)), `GetSaveSize` will perform two passes over the metadata to optimize and compress it. Otherwise, no optimizations are performed.  
   
- Jeśli będzie przeprowadzana Optymalizacja, pierwszym przebiegu po prostu sortuje struktur metadanych, aby dostosować wydajność wyszukiwania w trakcie importu. Zazwyczaj ten krok powoduje przeniesienie rekordów wokół, za pomocą efekt uboczny, że tokeny zachowywane przez narzędzie do użytku w przyszłości nie są unieważniane. Metadane nie informuje obiekt wywołujący o tych zmianach token aż do po drugim — dostęp próbny, jednak. W drugim przebiegu, wykonywane są różne optymalizacje, które są przeznaczone do redukowania łącznego rozmiaru metadane, takie jak Optymalizacja odkładania (wczesne powiązania) `mdTypeRef` i `mdMemberRef` tokenów w przypadku odwołania do typu lub elementu członkowskiego, które są zadeklarowane w bieżący zakres metadanych. W tym przebiegu kolejną porcję tokenu mapowanie występuje. Po tym przebiegu aparatu metadanych powiadamia obiekt wywołujący, za pośrednictwem jego `IMapToken` interfejsu dowolnego zmienione wartości tokenu.  
+ If optimization is performed, the first pass simply sorts the metadata structures to tune the performance of import-time searches. This step typically results in moving records around, with the side effect that tokens retained by the tool for future reference are invalidated. The metadata does not inform the caller of these token changes until after the second pass, however. In the second pass, various optimizations are performed that are intended to reduce the overall size of the metadata, such as optimizing away (early binding) `mdTypeRef` and `mdMemberRef` tokens when the reference is to a type or member that is declared in the current metadata scope. In this pass, another round of token mapping occurs. After this pass, the metadata engine notifies the caller, through its `IMapToken` interface, of any changed token values.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

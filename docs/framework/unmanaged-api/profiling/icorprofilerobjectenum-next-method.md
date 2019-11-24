@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c938c7c51c867d8e8d8d23390a3c16a23084fbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b58b7131d015353c2276b6f422e93e5d6a09109
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775011"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428152"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next — Metoda
-Pobiera określoną liczbę obiektów sąsiadujących z sekwencyjną kolekcją obiektów, zaczynając od modułu wyliczającego bieżąca pozycja w sekwencji.  
+Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,22 +38,22 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parametry  
  `celt`  
- [in] Liczba obiektów, które mają zostać pobrane.  
+ [in] The number of objects to be retrieved.  
   
  `objects`  
- [out] Tablica `ObjectID` wartości, z których każdy reprezentuje pobrano obiekt.  
+ [out] An array of `ObjectID` values, each of which represents a retrieved object.  
   
  `pceltFetched`  
- [out] Wskaźnik do liczby elementów zwracanych w rzeczywistości w `objects` tablicy.  
+ [out] A pointer to the number of elements actually returned in the `objects` array.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

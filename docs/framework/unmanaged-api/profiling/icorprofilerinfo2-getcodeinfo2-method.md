@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1acdc5d094fe93118e6cc62774f1cbf47a357dfc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751804"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433288"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 — Metoda
-Pobiera zakres kodu natywnego skojarzonego z określonym `FunctionID`.  
+Gets the extents of native code associated with the specified `FunctionID`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,32 +38,32 @@ HRESULT GetCodeInfo2(
   
 ## <a name="parameters"></a>Parametry  
  `functionID`  
- [in] Identyfikator funkcji, z którą jest skojarzony kod macierzysty.  
+ [in] The ID of the function with which the native code is associated.  
   
  `cCodeInfos`  
- [in] Rozmiar `codeInfos` tablicy.  
+ [in] The size of the `codeInfos` array.  
   
  `pcCodeInfos`  
- [out] Wskaźnik do liczby całkowitej [cor_prf_code_info —](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) struktury dostępne.  
+ [out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.  
   
  `codeInfos`  
- [out] Bufor dostarczane przez obiekt wywołujący. Po powrocie z metody zawiera tablicę `COR_PRF_CODE_INFO` struktur, z których każdy zawiera opis bloku kodu natywnego.  
+ [out] A caller-provided buffer. After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.  
   
 ## <a name="remarks"></a>Uwagi  
- Zakresy są sortowane w kolejności rosnącej przesunięcia języka pośredniego (MSIL) firmy Microsoft.  
+ The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.  
   
- Po `GetCodeInfo2` zwróci wartość, należy sprawdzić, czy `codeInfos` bufor jest wystarczająco duży, aby zawierała wszystkich `COR_PRF_CODE_INFO` struktury. Aby to zrobić, porównanie wartości `cCodeInfos` z wartością `cchName` parametru. Jeśli `cCodeInfos` podzielonej przez rozmiar `COR_PRF_CODE_INFO` struktury jest mniejszy niż `pcCodeInfos`, Przydziel większego `codeInfos` buforu, zaktualizuj `cCodeInfos` przy użyciu nowych, większy rozmiar i Wywołaj `GetCodeInfo2` ponownie.  
+ After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures. To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter. If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.  
   
- Alternatywnie, można wywołać `GetCodeInfo2` o zerowej długości `codeInfos` buforu w celu uzyskania rozmiar buforu poprawne. Następnie można ustawić `codeInfos` rozmiar do wartości zwracanej w buforu `pcCodeInfos`, pomnożone przez rozmiar `COR_PRF_CODE_INFO` struktury i wywołania `GetCodeInfo2` ponownie.  
+ Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size. You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

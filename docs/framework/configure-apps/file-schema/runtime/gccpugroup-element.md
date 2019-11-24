@@ -5,20 +5,20 @@ helpviewer_keywords:
 - GCCpuGroup element
 - <GCCpuGroup> element
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
-ms.openlocfilehash: 352890519c1a227d664d877c3123866e5e4e1657
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae9c96c9d49cf3f6be94da3f77b91423cab12e0b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116833"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430482"
 ---
-# <a name="gccpugroup-element"></a>\<element > GCCpuGroup
+# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
 
-Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów.
+Specifies whether garbage collection supports multiple CPU groups.
 
-[ **\<configuration >** ](../configuration-element.md) \
-&nbsp;&nbsp;[ **\<środowiska uruchomieniowego >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
 
 ## <a name="syntax"></a>Składnia
 
@@ -35,14 +35,14 @@ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzęd
 
 |Atrybut|Opis|
 |---------------|-----------------|
-|`enabled`|Atrybut wymagany.<br /><br /> Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów.|
+|`enabled`|Atrybut wymagany.<br /><br /> Specifies whether garbage collection supports multiple CPU groups.|
 
 ## <a name="enabled-attribute"></a>Atrybut włączony
 
 |Wartość|Opis|
 |-----------|-----------------|
-|`false`|Wyrzucanie elementów bezużytecznych nie obsługuje wielu grup procesorów. Domyślnie włączone.|
-|`true`|Wyrzucanie elementów bezużytecznych obsługuje wiele grup procesorów, jeśli jest włączone odzyskiwanie pamięci serwera.|
+|`false`|Garbage collection does not support multiple CPU groups. Domyślnie włączone.|
+|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
 
 ### <a name="child-elements"></a>Elementy podrzędne
 
@@ -57,14 +57,14 @@ Brak.
 
 ## <a name="remarks"></a>Uwagi
 
-Gdy komputer ma wiele grup CPU i jest włączone odzyskiwanie pamięci serwera (zobacz [\<gcServer >](gcserver-element.md) element), włączenie tego elementu rozszerza wyrzucanie elementów bezużytecznych we wszystkich grupach procesora i pobiera wszystkie rdzenie do konta podczas tworzenia i Zrównoważ sterty.
+When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
 
 > [!NOTE]
-> Ten element ma zastosowanie tylko do wątków wyrzucania elementów bezużytecznych. Aby umożliwić środowisko uruchomieniowe dystrybuowanie wątków użytkownika między wszystkimi grupami CPU, należy również włączyć [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) elementu.
+> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak włączyć odzyskiwanie pamięci dla wielu grup procesorów.
+The following example shows how to enable garbage collection for multiple CPU groups.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ Poniższy przykład pokazuje, jak włączyć odzyskiwanie pamięci dla wielu gru
 
 - [Schemat ustawień środowiska uruchomieniowego](index.md)
 - [Schemat pliku konfiguracji](../index.md)
-- [Aby wyłączyć współbieżne wyrzucanie elementów bezużytecznych](gcconcurrent-element.md#to-disable-background-garbage-collection)
-- [Stacja robocza i odzyskiwanie pamięci serwera](../../../../standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Workstation and server garbage collection](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31782b36-d311-4518-8f45-25f65385af5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5ba90ce4523fcc55fca3f84a78fa4cfeb6a93f0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 96ab77a36c0a0bddda0fca342433666dd19082d3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782828"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426196"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a>ICorProfilerCallback::JITCompilationStarted — Metoda
-Powiadamia program profilujący, że kompilator just-in-time (JIT) została uruchomiona kompilować funkcję.  
+Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,26 +35,26 @@ HRESULT JITCompilationStarted(
   
 ## <a name="parameters"></a>Parametry  
  `functionId`  
- [in] Identyfikator funkcji, dla których jest uruchamiana kompilacja.  
+ [in] The ID of the function for which the compilation is starting.  
   
  `fIsSafeToBlock`  
- [in] Wartość do programu profilującego wskazującą, czy blokowanie wpłynie na funkcjonowanie środowiska uruchomieniowego. Wartość jest `true` Jeśli blokowanie może spowodować, że środowisko uruchomieniowe oczekiwania na wątek wywołujący, zostać zwrócony przez to wywołanie zwrotne; w przeciwnym razie `false`.  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- Mimo, że wartość `true` nie uszkodzi środowiska uruchomieniowego, jego pochylanie wyniki profilowania.  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="remarks"></a>Uwagi  
- Jest to możliwe, aby otrzymać więcej niż jedną parę `JITCompilationStarted` i [icorprofilercallback::jitcompilationfinished —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) wywołuje dla każdej funkcji ze względu na sposób środowisko wykonawcze obsługuje Konstruktory klasy. Na przykład środowisko uruchomieniowe rozpoczyna się skompilować wg JIT metody A, ale konstruktora klasy dla klasy B musi zostać uruchomione. W związku z tym, środowisko uruchomieniowe kompiluje JIT konstruktora dla klasy B i uruchamia go. Konstruktor jest uruchomiona, tworzy wywołanie metody A, co powoduje, że metoda ponownie być kompilowany dokładnie na czas. W tym scenariuszu pierwszy kompilację JIT metody A jest zatrzymywana. Jednak zarówno próby metoda skompilować wg JIT są zgłaszane ze zdarzeniami kompilacja JIT. Jeśli program profilujący ma zastąpić kod intermediate language (MSIL) firmy Microsoft dla metody element przez wywołanie metody [icorprofilerinfo::setilfunctionbody —](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) metody, należy wykonać czynności dla obu `JITCompilationStarted` zdarzenia, ale mogą używać tego samego bloku MSIL dla obu przypadków.  
+ It is possible to receive more than one pair of `JITCompilationStarted` and [ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) calls for each function because of the way the runtime handles class constructors. For example, the runtime starts to JIT-compile method A, but the class constructor for class B needs to be run. Therefore, the runtime JIT-compiles the constructor for class B and runs it. While the constructor is running, it makes a call to method A, which causes method A to be JIT-compiled again. In this scenario, the first JIT compilation of method A is halted. However, both attempts to JIT-compile method A are reported with JIT-compilation events. If the profiler is going to replace Microsoft intermediate language (MSIL) code for method A by calling the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, it must do so for both `JITCompilationStarted` events, but it may use the same MSIL block for both.  
   
- Profilery muszą obsługiwać sekwencję wywołań zwrotnych JIT w przypadkach, w której dwa wątki jednocześnie wykorzystują wywołania zwrotne. Na przykład, wywołania wątku A `JITCompilationStarted`. Jednak przed wywołań wątku A `JITCompilationFinished`, wywołań wątku B [icorprofilercallback::exceptionsearchfunctionenter —](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) identyfikatorem funkcji z wątku, A `JITCompilationStarted` wywołania zwrotnego. Wydaje się, że identyfikator funkcji nie powinny jeszcze być prawidłowy ponieważ wywołanie `JITCompilationFinished` nie ma jeszcze odebrane przez profiler. Jednak w przypadku podobny do tego identyfikator funkcji jest nieprawidłowy.  
+ Profilers must support the sequence of JIT callbacks in cases where two threads are simultaneously making callbacks. For example, thread A calls `JITCompilationStarted`. However, before thread A calls `JITCompilationFinished`, thread B calls [ICorProfilerCallback::ExceptionSearchFunctionEnter](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md) with the function ID from thread A's `JITCompilationStarted` callback. It might appear that the function ID should not yet be valid because a call to `JITCompilationFinished` had not yet been received by the profiler. However, in a case like this one, the function ID is valid.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteka:** CorGuids.lib  
+ **Library:** CorGuids.lib  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

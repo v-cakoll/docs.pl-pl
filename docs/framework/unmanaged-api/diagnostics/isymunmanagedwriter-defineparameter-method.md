@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: a8e3dd32-6a44-4371-9a74-f417b11998c8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d5b82415635980f5bd4e13e87a0a03ec5b7032bb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bc1b65de026a674a3dff183050a5a205fd7052c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777325"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427995"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>ISymUnmanagedWriter::DefineParameter — Metoda
-Definiuje pojedynczy parametr w bieżącej metodzie. Typ parametru jest pobierana z parametru pozycji (kolejny) w podpisie metody.  
+Defines a single parameter in the current method. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
   
- Parametry są definiowane w metadanych dla danej metody, nie trzeba je ponownie zdefiniować za pomocą tej metody. Czytelnicy symbol musi sprawdzić normalne metadane parametrów przed sprawdzeniem magazynu symboli.  
+ If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -44,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parametry  
  `name`  
- [in] Nazwa parametru.  
+ [in] The parameter name.  
   
  `attributes`  
- [in] Atrybuty parametru.  
+ [in] The parameter attributes.  
   
  `sequence`  
- [in] Podpis parametru.  
+ [in] The parameter signature.  
   
  `addrKind`  
- [in] Typ adresu.  
+ [in] The address type.  
   
  `addr1`  
- [in] Pierwszy adres specyfikację parametru.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] Drugi adres specyfikację parametru.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] Trzeci adres specyfikację parametru.  
+ [in] The third address for the parameter specification.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

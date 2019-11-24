@@ -1,5 +1,5 @@
 ---
-title: C#odwoła
+title: C# reference
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,64 +8,61 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771843"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428604"
 ---
-# <a name="c-reference"></a>C#odwoła
+# <a name="c-reference"></a>C# reference
 
-Ta sekcja zawiera materiały referencyjne C# dotyczące słów kluczowych, operatorów, znaków specjalnych, dyrektyw preprocesora, opcji kompilatora i błędów i ostrzeżeń kompilatora.  
+This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.  
   
 ## <a name="in-this-section"></a>W tej sekcji
 
  [Słowa kluczowe języka C#](./keywords/index.md)  
- Zawiera łącza do informacji o C# słowach kluczowych i składni.  
+ Provides links to information about C# keywords and syntax.  
   
  [Operatory języka C#](./operators/index.md)  
- Zawiera łącza do informacji na C# temat operatorów i składni.  
+ Provides links to information about C# operators and syntax.  
 
  [Znaki specjalne języka C#](./tokens/index.md)  
- Zawiera łącza do informacji na temat specjalnych znaków kontekstowych w programie C# i ich użycia.  
+ Provides links to information about special contextual characters in C# and their usage.  
 
  [Dyrektywy preprocesora C#](./preprocessor-directives/index.md)  
- Zawiera łącza do informacji o poleceniach kompilatora osadzania w C# kodzie źródłowym.  
+ Provides links to information about compiler commands for embedding in C# source code.  
   
  [Opcje kompilatora C#](./compiler-options/index.md)  
- Zawiera informacje o opcjach kompilatora i sposobach ich użycia.  
+ Includes information about compiler options and how to use them.  
   
  [Błędy kompilatora C#](./compiler-messages/index.md)  
- Zawiera fragmenty kodu, które pokazują przyczynę i korekcję C# błędów i ostrzeżeń kompilatora.  
+ Includes code snippets that demonstrate the cause and correction of C# compiler errors and warnings.  
   
- [C#Specyfikacja języka](../../../_csharplang/spec/introduction.md)  
- Specyfikacja C# języka 6,0. Jest to wersja robocza propozycja C# języka 6,0. Ten dokument zostanie rafinowany przez współpracę z Komitetem standardowym C# ECMA. Wersja 5,0 została wydana w grudniu 2017 jako standardowy dokument [ECMA-334 5](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) .
+ [C# Language Specification](../../../_csharplang/spec/introduction.md)  
+ The C# 6.0 language specification. This is a draft proposal for the C# 6.0 language. This document will be refined through work with the ECMA C# standards committee. Version 5.0 has been released in December 2017 as the [Standard ECMA-334 5th Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) document.
 
-Funkcje, które zostały zaimplementowane w C# wersjach po 6,0 są reprezentowane w propozycjach specyfikacji języka. Te dokumenty opisują różnice w specyfikacji języka w celu dodania tych nowych funkcji. Są one w wersji roboczej formularza propozycji. Te specyfikacje zostaną ulepszone i przesłane do Komitetu standardów ECMA dla formalnego przeglądu i w przyszłych wersjach C# Standard.
+The features that have been implemented in C# versions after 6.0 are represented in language specification proposals. These documents describe the deltas to the language spec in order to add these new features. These are in draft proposal form. These specifications will be refined and submitted to the ECMA standards committee for formal review and incorporation into a future version of the C# Standard.
 
- [C#7,0 propozycja specyfikacji](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
- Istnieje kilka nowych funkcji wdrożonych w C# 7,0. Obejmują one Dopasowywanie wzorców, funkcje lokalne, deklaracje zmiennych wyjściowych, wyrażenia throw, literały binarne i separatory cyfr. Ten folder zawiera specyfikacje dla każdej z tych funkcji.
+ [C# 7.0 Specification Proposals](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ There are a number of new features implemented in C# 7.0. They include pattern matching, local functions, out variable declarations, throw expressions, binary literals, and digit separators. This folder contains the specifications for each of those features.
   
- [C#7,1 propozycja specyfikacji](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
- Dodano nowe funkcje w C# 7,1. Najpierw można napisać metodę `Main`, która zwraca `Task` lub `Task<int>`. Pozwala to na dodanie modyfikatora `async` do `Main`. Wyrażenia `default` można używać bez typu w lokalizacjach, w których można wywnioskować typ. Ponadto można wywnioskować nazwy elementów członkowskich krotki. Na koniec dopasowanie do wzorca może być używane z typami ogólnymi.
+ [C# 7.1 Specification Proposals](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
+ There are new features added in C# 7.1. First, you can write a `Main` method that returns `Task` or `Task<int>`. This enables you to add the `async` modifier to `Main`. The `default` expression can be used without a type in locations where the type can be inferred. Also, tuple member names can be inferred. Finally, pattern matching can be used with generics.
 
- [C#7,2 Propozycja specyfikacji](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
- C#7,2 dodano wiele małych funkcji. Argumenty można przekazać przez odwołanie tylko do odczytu za pomocą słowa kluczowego `in`. Istnieją pewne zmiany niskiego poziomu, które umożliwiają obsługę bezpieczeństwa w czasie kompilacji dla `Span` i typów pokrewnych. Można użyć nazwanych argumentów, jeśli późniejsze argumenty są pozycjonowane w niektórych sytuacjach. Modyfikator dostępu `private protected` umożliwia określenie, że wywołania są ograniczone do typów pochodnych wdrożonych w tym samym zestawie. Operator `?:` może rozpoznać odwołanie do zmiennej. Możesz również sformatować liczby szesnastkowe i binarne przy użyciu wiodącego separatora cyfr.
+ [C# 7.2 Specification Proposals](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
+ C# 7.2 added a number of small features. You can pass arguments by readonly reference using the `in` keyword. There are a number of low-level changes to support compile-time safety for `Span` and related types. You can use named arguments where later arguments are positional, in some situations. The `private protected` access modifier enables you to specify that callers are limited to derived types implemented in the same assembly. The `?:` operator can resolve to a reference to a variable. You can also format hexadecimal and binary numbers using a leading digit separator.
 
- [C#7,3 propozycja specyfikacji](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C#7,3 to kolejna wersja punktu, która obejmuje kilka małych aktualizacji. Możesz użyć nowych ograniczeń dla parametrów typu ogólnego. Inne zmiany ułatwiają współpracę z polami `fixed`, w tym przy użyciu przydziałów [`stackalloc`](./operators/stackalloc.md) . Zmienne lokalne zadeklarowane za pomocą słowa kluczowego `ref` mogą być reasssigned w celu odwoływania się do nowego magazynu. Można umieścić atrybuty dla automatycznie implementowanych właściwości, które są przeznaczone dla pola zapasowego wygenerowanego przez kompilator. Zmiennych wyrażeń można używać w inicjatorach. Krotki można porównać pod kątem równości (lub nierówności). Wprowadzono również pewne ulepszenia dotyczące rozpoznawania przeciążenia.
+ [C# 7.3 Specification Proposals](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
+ C# 7.3 is another point release that includes several small updates. You can use new constraints on generic type parameters. Other changes make it easier to work with `fixed` fields, including using [`stackalloc`](./operators/stackalloc.md) allocations. Local variables declared with the `ref` keyword may be reassigned to refer to new storage. You can place attributes on auto-implemented properties that target the compiler-generated backing field. Expression variables can be used in initializers. Tuples can be compared for equality (or inequality). There have also been some improvements to overload resolution.
   
- [C#8,0 propozycja specyfikacji](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0 jest dostępny z platformą .NET Core 3,0. Funkcje obejmują typy referencyjne dopuszczające wartość null, cykliczne dopasowywanie do wzorca, domyślne metody interfejsu, strumienie asynchroniczne, zakresy i indeksy, wzorzec oparty na używaniu i używaniu deklaracji, przypisywaniu łączenia zerowego i elementów członkowskich wystąpień tylko do odczytu.
+ [C# 8.0 Specification Proposals](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
+ C# 8.0 is available with .NET Core 3.0. The features include nullable reference types, recursive pattern matching, default interface methods, async streams, ranges and indexes, pattern based using and using declarations, null coalescing assignment, and readonly instance members.
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
 
- [Przewodnik dla języka C#](../index.md)  
- Udostępnia Portal dokumentacji wizualnej C# .  
-  
  [Używanie środowiska programistycznego Visual Studio dla C#](/visualstudio/get-started/csharp)  
- Zawiera łącza do tematów dotyczących pojęć i zadań, które opisują środowisko IDE i edytor.  
+ Provides links to conceptual and task topics that describe the IDE and Editor.  
   
  [Przewodnik programowania w języku C#](../programming-guide/index.md)  
- Zawiera informacje o sposobach korzystania z C# języka programowania.
+ Includes information about how to use the C# programming language.

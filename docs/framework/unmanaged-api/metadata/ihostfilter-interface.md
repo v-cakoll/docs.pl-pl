@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: e79456b1-045b-4a84-9714-2ea560ff75ea
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c437d1856e1aa9526516c0a1d1ca931d8ed25c80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 90f7899beea204ea53a587200807ccd807cd6c11
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965788"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426134"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter — Interfejs
-Zapewnia metodę wskazującą, że określony token zostanie przetworzony.  
+Provides a method to indicate that a specified token will be processed.  
   
 > [!NOTE]
-> `IHostFilter` Interfejs musi być zaimplementowany przez klienta.  
+> The `IHostFilter` interface must be implemented by the client.  
   
 ## <a name="methods"></a>Metody  
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[MarkToken, metoda](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Wskazuje, że określony token metadanych zostanie przetworzony.|  
+|[MarkToken, metoda](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-marktoken-method.md)|Indicates that the specified metadata token will be processed.|  
   
 ## <a name="requirements"></a>Wymagania  
- **Poszczególnych** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówki** Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteki** Używany jako zasób w bibliotece MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **.NET Framework wersje:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776600"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427866"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange — Metoda
-Określa wartość true, początek i koniec okresu metody w pliku źródłowym. Ta metoda umożliwia określenie stopnia metody, niezależnie od punktów sekwencji, które istnieją w metodzie.  
+Specifies the true start and end of a method within a source file. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>Parametry  
  `startDoc`  
- [in] Wskaźnik do dokumentu zawierającego pozycja początkowa.  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in] Numer wiersza początkowego.  
+ [in] The starting line number.  
   
  `startColumn`  
- [in] Kolumna początkowa.  
+ [in] The starting column.  
   
  `endDoc`  
- [in] Wskaźnik do dokumentu zawierającego pozycji końcowej.  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in] Końcowy numer wiersza.  
+ [in] The ending line number.  
   
  `endColumn`  
- [in] Numer kolumny końcowej.  
+ [in] The ending column number.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda się powiedzie; w przeciwnym razie E_FAIL lub innego kodu błędu.  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Wymagania  
- **Nagłówek:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Zobacz także
 

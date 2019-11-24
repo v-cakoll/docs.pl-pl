@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: kompilowanie zestawu wieloplikowego'
+title: 'How to: Build a multifile assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,25 +17,25 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119939"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429568"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Instrukcje: kompilowanie zestawu wieloplikowego
+# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
 
-W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, który ilustruje każdy krok w procedurze.
+This article explains how to create a multifile assembly and provides code that illustrates each step in the procedure.
 
 > [!NOTE]
-> Środowisko IDE programu Visual Studio C# dla i Visual Basic może być używane tylko do tworzenia zestawów jednoplikowych. Jeśli chcesz utworzyć zestawy wieloplikowe, musisz użyć kompilatorów wiersza polecenia lub programu Visual Studio z wizualizacją C++. Zestawy wieloplikowe są obsługiwane tylko przez .NET Framework.
+> The Visual Studio IDE for C# and Visual Basic can only be used to create single-file assemblies. If you want to create multifile assemblies, you must use the command-line compilers or Visual Studio with Visual C++. Multifile assemblies are supported by .NET Framework only.
 
-## <a name="create-a-multifile-assembly"></a>Tworzenie zestawu wieloplikowego
+## <a name="create-a-multifile-assembly"></a>Create a multifile assembly
 
-1. Kompiluj wszystkie pliki, które zawierają przestrzenie nazw, do których odwołują się inne moduły w zestawie, do modułów kodu. Domyślnym rozszerzeniem modułów kodu jest *. module*.
+1. Compile all files that contain namespaces referenced by other modules in the assembly into code modules. The default extension for code modules is *.netmodule*.
 
-   Załóżmy na przykład, że plik `Stringer` ma przestrzeń nazw o nazwie `myStringer`, która zawiera klasę o nazwie `Stringer`. Klasa `Stringer` zawiera metodę o nazwie `StringerMethod`, która zapisuje jeden wiersz w konsoli.
+   For example, let's say the `Stringer` file has a namespace called `myStringer`, which includes a class called `Stringer`. The `Stringer` class contains a method called `StringerMethod` that writes a single line to the console.
 
    ```cpp
    // Assembly building example in the .NET Framework.
@@ -72,8 +72,6 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -83,7 +81,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    End Namespace
    ```
 
-2. Użyj następującego polecenia, aby skompilować ten kod:
+2. Use the following command to compile this code:
 
    ```cpp
    cl /clr:pure /LN Stringer.cpp
@@ -97,11 +95,11 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    vbc /t:module Stringer.vb
    ```
 
-   Określenie parametru *modułu* z opcją **/t:** kompilator wskazuje, że plik powinien zostać skompilowany jako moduł, a nie jako zestaw. Kompilator tworzy moduł o nazwie *Stringer. webmodule*, który można dodać do zestawu.
+   Specifying the *module* parameter with the **/t:** compiler option indicates that the file should be compiled as a module rather than as an assembly. The compiler produces a module called *Stringer.netmodule*, which can be added to an assembly.
 
-3. Kompiluj wszystkie inne moduły przy użyciu niezbędnych opcji kompilatora, aby wskazać inne moduły, do których istnieją odwołania w kodzie. W tym kroku jest stosowana opcja kompilatora **/addmodule** .
+3. Compile all other modules, using the necessary compiler options to indicate the other modules that are referenced in the code. This step uses the **/addmodule** compiler option.
 
-   W poniższym przykładzie moduł kodu o nazwie *Client* ma punkt wejścia `Main` metodę, która odwołuje się do metody w module *Stringer. dll* utworzonym w kroku 1.
+   In the following example, a code module called *Client* has an entry point `Main` method that references a method in the *Stringer.dll* module created in step 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -144,7 +142,6 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -157,7 +154,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    End Class
    ```
 
-4. Użyj następującego polecenia, aby skompilować ten kod:
+4. Use the following command to compile this code:
 
    ```cpp
    cl /clr:pure /FUStringer.netmodule /LN Client.cpp
@@ -171,12 +168,12 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   Określ opcję **/t: module** , ponieważ ten moduł zostanie dodany do zestawu w przyszłym kroku. Określ opcję **/addmodule** , ponieważ kod w *kliencie* odwołuje się do przestrzeni nazw utworzonej przez kod w *Stringer. module*. Kompilator generuje moduł o nazwie *Client. webmodule* , który zawiera odwołanie do innego modułu, *Stringer. webmodule*.
+   Specify the **/t:module** option because this module will be added to an assembly in a future step. Specify the **/addmodule** option because the code in *Client* references a namespace created by the code in *Stringer.netmodule*. The compiler produces a module called *Client.netmodule* that contains a reference to another module, *Stringer.netmodule*.
 
    > [!NOTE]
-   > Kompilatory C# i Visual Basic obsługują bezpośrednie tworzenie zestawów wieloplikowych przy użyciu następujących dwóch różnych składni.
+   > The C# and Visual Basic compilers support directly creating multifile assemblies using the following two different syntaxes.
    >
-   > Dwie kompilacje tworzą zestaw dwóch plików:
+   > Two compilations create a two-file assembly:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -193,7 +190,7 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    >   vbc Client.vb /addmodule:Stringer.netmodule
    >   ```
    >
-   > Jedna kompilacja tworzy zestaw dwóch plików:
+   > One compilation creates a two-file assembly:
    >
    >   ```cpp
    >   cl /clr:pure /LN Stringer.cpp
@@ -208,25 +205,25 @@ W tym artykule opisano sposób tworzenia zestawu wieloplikowego i zawiera kod, k
    >   vbc /out:Client.exe Client.vb /out:Stringer.netmodule Stringer.vb
    >   ```
 
-5. Użyj [konsolidatora zestawu (Al. exe)](../tools/al-exe-assembly-linker.md) , aby utworzyć plik wyjściowy, który zawiera manifest zestawu. Ten plik zawiera informacje referencyjne dotyczące wszystkich modułów lub zasobów, które są częścią zestawu.
+5. Use the [Assembly Linker (Al.exe)](../tools/al-exe-assembly-linker.md) to create the output file that contains the assembly manifest. This file contains reference information for all modules or resources that are part of the assembly.
 
     W wierszu polecenia wpisz następujące polecenie:
 
-    *Nazwa modułu* **Al** \<> *Nazwa modułu*\<>... **/Main:** \<*Nazwa metody*>  **/out:** \<*Nazwa pliku*>  **/target:** \<*Typ pliku zestawu*>
+    **al** \<*module name*> \<*module name*> … **/main:** \<*method name*>  **/out:** \<*file name*>  **/target:** \<*assembly file type*>
 
-    W tym poleceniu argumenty *nazwy modułu* określają nazwę każdego modułu, który ma zostać uwzględniony w zestawie. **/Main:** opcja określa nazwę metody, która jest punktem wejścia zestawu. **/Out:** opcja określa nazwę pliku wyjściowego, który zawiera metadane zestawu. **/Target:** opcja określa, że zestaw to plik wykonywalny aplikacji konsoli (*exe*), plik wykonywalny systemu Windows ( *. win*) lub plik biblioteki ( *. lib*).
+    In this command, the *module name* arguments specify the name of each module to include in the assembly. The **/main:** option specifies the method name that is the assembly's entry point. The **/out:** option specifies the name of the output file, which contains assembly metadata. The **/target:** option specifies that the assembly is a console application executable ( *.exe*) file, a Windows executable ( *.win*) file, or a library ( *.lib*) file.
 
-    W poniższym przykładzie *Al. exe* tworzy zestaw, który jest plikiem wykonywalnym aplikacji konsoli o nazwie mój *Assembly. exe*. Aplikacja składa się z dwóch modułów o nazwie *Client. webmodule* i *Stringer. webmodule*, a plik wykonywalny o nazwie *. exe*, który zawiera tylko metadane zestawu. Punkt wejścia zestawu jest metodą `Main` w klasie `MainClientApp`, która znajduje się w *pliku Client. dll*.
+    In the following example, *Al.exe* creates an assembly that is a console application executable called *myAssembly.exe*. The application consists of two modules called *Client.netmodule* and *Stringer.netmodule*, and the executable file called *myAssembly.exe*, which contains only assembly metadata. The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in *Client.dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
     ```
 
-    Aby sprawdzić zawartość zestawu lub określić, czy plik jest zestawem lub modułem, można użyć [Dezasembler MSIL (Ildasm. exe)](../tools/ildasm-exe-il-disassembler.md) .
+    You can use the [MSIL Disassembler (Ildasm.exe)](../tools/ildasm-exe-il-disassembler.md) to examine the contents of an assembly, or determine whether a file is an assembly or a module.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie zestawów](../../standard/assembly/create.md)
-- [Instrukcje: wyświetlanie zawartości zestawu](../../standard/assembly/view-contents.md)
-- [Jak środowisko uruchomieniowe lokalizuje zestawy](../deployment/how-the-runtime-locates-assemblies.md)
-- [Zestawy wieloplikowe](multifile-assemblies.md)
+- [Create assemblies](../../standard/assembly/create.md)
+- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [How the runtime locates assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Multifile assemblies](multifile-assemblies.md)

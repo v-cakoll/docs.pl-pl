@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 38e4928ad0f3560698cbecab81a11630d67e4db2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777613"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431819"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef — Metoda
-Określa odwołanie do elementu członkowskiego modułu poza bieżącym zakresem, a następnie pobiera token do tej definicji odwołania.  
+Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -41,28 +39,28 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parametry  
  `tkImport`  
- [in] Tokenu dla docelowego elementu członkowskiego klasy lub interfejsu, jeśli element nie jest globalne; Jeśli element jest globalnym, `mdModuleRef` tokenu dla tego innego pliku.  
+ [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
   
  `szName`  
- [in] Nazwa elementu docelowego.  
+ [in] The name of the target member.  
   
  `pvSigBlob`  
- [in] Podpis elementu docelowego.  
+ [in] The signature of the target member.  
   
  `cbSigBlob`  
- [in] Liczba bajtów w `pvSigBlob`.  
+ [in] The count of bytes in `pvSigBlob`.  
   
  `pmr`  
- [out] `mdMemberRef` Token przypisany.  
+ [out] The `mdMemberRef` token assigned.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MSCorEE.dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

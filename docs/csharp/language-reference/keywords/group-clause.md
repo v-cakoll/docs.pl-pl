@@ -1,5 +1,5 @@
 ---
-title: Klauzula grupy — C# odwołanie
+title: group clause - C# Reference
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,82 +9,82 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422765"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428504"
 ---
 # <a name="group-clause-c-reference"></a>group — Klauzula (odwołanie w C#)
 
-Klauzula `group` zwraca sekwencję obiektów <xref:System.Linq.IGrouping%602>, które zawierają zero lub więcej elementów, które pasują do wartości klucza dla grupy. Na przykład można grupować sekwencję ciągów zgodnie z pierwszą literą w każdym ciągu. W tym przypadku pierwsza litera jest kluczem i ma typ [char](char.md)i jest przechowywana we właściwości `Key` każdego <xref:System.Linq.IGrouping%602> obiektu. Kompilator wnioskuje typ klucza.
+The `group` clause returns a sequence of <xref:System.Linq.IGrouping%602> objects that contain zero or more items that match the key value for the group. For example, you can group a sequence of strings according to the first letter in each string. In this case, the first letter is the key and has a type [char](../builtin-types/char.md), and is stored in the `Key` property of each <xref:System.Linq.IGrouping%602> object. The compiler infers the type of the key.
 
-Możesz zakończyć wyrażenie zapytania z klauzulą `group`, jak pokazano w następującym przykładzie:
+You can end a query expression with a `group` clause, as shown in the following example:
 
 [!code-csharp[cscsrefQueryKeywords#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#10)]
 
-Jeśli chcesz wykonać dodatkowe operacje zapytań dla każdej grupy, możesz określić tymczasowy identyfikator przy użyciu słowa kluczowego [into](into.md) . Gdy używasz `into`, musisz kontynuować zapytania i ostatecznie zakończyć je za pomocą instrukcji `select` lub innej klauzuli `group`, jak pokazano na poniższym fragmencie fragmentu:
+If you want to perform additional query operations on each group, you can specify a temporary identifier by using the [into](into.md) contextual keyword. When you use `into`, you must continue with the query, and eventually end it with either a `select` statement or another `group` clause, as shown in the following excerpt:
 
 [!code-csharp[cscsrefQueryKeywords#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#11)]
 
-Dokładniejsze przykłady użycia `group` z i bez `into` są podane w przykładowej sekcji tego artykułu.
+More complete examples of the use of `group` with and without `into` are provided in the Example section of this article.
 
-## <a name="enumerating-the-results-of-a-group-query"></a>Wyliczanie wyników zapytania grupy
+## <a name="enumerating-the-results-of-a-group-query"></a>Enumerating the results of a group query
 
-Ponieważ obiekty <xref:System.Linq.IGrouping%602> utworzone przez zapytanie `group` są zasadniczo listą list, należy użyć zagnieżdżonej pętli [foreach](foreach-in.md) , aby uzyskać dostęp do elementów w każdej grupie. Pętla zewnętrzna wykonuje iterację na klucze grupy, a pętla wewnętrzna wykonuje iterację nad każdym elementem w samej grupie. Grupa może mieć klucz, ale nie elementy. Poniżej znajduje się pętla `foreach`, która wykonuje zapytanie w poprzednim przykładzie kodu:
+Because the <xref:System.Linq.IGrouping%602> objects produced by a `group` query are essentially a list of lists, you must use a nested [foreach](foreach-in.md) loop to access the items in each group. The outer loop iterates over the group keys, and the inner loop iterates over each item in the group itself. A group may have a key but no elements. The following is the `foreach` loop that executes the query in the previous code examples:
 
 [!code-csharp[cscsrefQueryKeywords#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#12)]
 
-## <a name="key-types"></a>Typy kluczy
+## <a name="key-types"></a>Key types
 
-Klucze grup mogą być dowolnego typu, takich jak ciąg, wbudowany typ liczbowy lub zdefiniowany przez użytkownika typ nazwany lub typ anonimowy.
+Group keys can be any type, such as a string, a built-in numeric type, or a user-defined named type or anonymous type.
 
-### <a name="grouping-by-string"></a>Grupowanie według ciągu
+### <a name="grouping-by-string"></a>Grouping by string
 
-W poprzednich przykładach kodu użyto `char`. Zamiast tego można określić klucz ciągu, na przykład pełną nazwę:
+The previous code examples used a `char`. A string key could easily have been specified instead, for example the complete last name:
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-### <a name="grouping-by-bool"></a>Grupowanie według wartości logicznej
+### <a name="grouping-by-bool"></a>Grouping by bool
 
-W poniższym przykładzie pokazano użycie wartości logicznej dla klucza w celu podzielenia wyników na dwie grupy. Należy zauważyć, że wartość jest generowana przez Podwyrażenie w klauzuli `group`.
+The following example shows the use of a bool value for a key to divide the results into two groups. Note that the value is produced by a sub-expression in the `group` clause.
 
 [!code-csharp[cscsrefQueryKeywords#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#14)]
 
-### <a name="grouping-by-numeric-range"></a>Grupowanie według zakresu liczbowego
+### <a name="grouping-by-numeric-range"></a>Grouping by numeric range
 
-W następnym przykładzie używane jest wyrażenie do tworzenia liczbowych kluczy grup reprezentujących zakres percentylu. Zwróć uwagę na użycie metody [Let](let-clause.md) jako wygodnej lokalizacji do przechowywania wyniku wywołania metody, tak aby nie trzeba było wywoływać metodę dwa razy w klauzuli `group`. Aby uzyskać więcej informacji o sposobie bezpiecznego używania metod w wyrażeniach zapytań, zobacz [How to: Handle Exceptions in Expressions](../../linq/handle-exceptions-in-query-expressions.md).
+The next example uses an expression to create numeric group keys that represent a percentile range. Note the use of [let](let-clause.md) as a convenient location to store a method call result, so that you don't have to call the method two times in the `group` clause. For more information about how to safely use methods in query expressions, see [How to: Handle Exceptions in Query Expressions](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
-### <a name="grouping-by-composite-keys"></a>Grupowanie według kluczy złożonych
+### <a name="grouping-by-composite-keys"></a>Grouping by composite keys
 
-Użyj klucza złożonego, gdy chcesz grupować elementy zgodnie z więcej niż jednym kluczem. Można utworzyć klucz złożony przy użyciu typu anonimowego lub nazwanego typu w celu przechowywania elementu klucza. W poniższym przykładzie Załóżmy, że Klasa `Person` została zadeklarowana z elementami członkowskimi o nazwie `surname` i `city`. Klauzula `group` powoduje utworzenie oddzielnej grupy dla każdego zestawu osób o tej samej nazwie i o tej samej miejscowości.
+Use a composite key when you want to group elements according to more than one key. You create a composite key by using an anonymous type or a named type to hold the key element. In the following example, assume that a class `Person` has been declared with members named `surname` and `city`. The `group` clause causes a separate group to be created for each set of persons with the same last name and the same city.
 
 ```csharp
 group person by new {name = person.surname, city = person.city};
 ```
 
-Użyj nazwanego typu, jeśli musisz przekazać zmienną zapytania do innej metody. Utwórz specjalną klasę przy użyciu wstępnie wdrożonych właściwości kluczy, a następnie zastąp metody <xref:System.Object.Equals%2A> i <xref:System.Object.GetHashCode%2A>. Można również użyć struktury, w tym przypadku nie trzeba przesłonić tych metod. Aby uzyskać więcej informacji, zobacz [instrukcje: implementowanie klasy lekkiej przy użyciu właściwości](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) , które są implementowane, i [instrukcje: zapytanie o zduplikowane pliki w drzewie katalogów](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). Ten ostatni artykuł zawiera przykład kodu, który demonstruje sposób użycia klucza złożonego z nazwanym typem.
+Use a named type if you must pass the query variable to another method. Create a special class using auto-implemented properties for the keys, and then override the <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> methods. You can also use a struct, in which case you do not strictly have to override those methods. For more information see [How to implement a lightweight class with auto-implemented properties](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) and [How to: Query for Duplicate Files in a Directory Tree](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). The latter article has a code example that demonstrates how to use a composite key with a named type.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje standardowy wzorzec służący do porządkowania danych źródłowych do grup, gdy żadna dodatkowa logika kwerendy nie zostanie zastosowana do grup. Jest to nazywane grupowaniem bez kontynuacji. Elementy w tablicy ciągów są pogrupowane według ich pierwszej litery. Wynikiem zapytania jest typ <xref:System.Linq.IGrouping%602>, który zawiera publiczną właściwość `Key` typu `char` oraz kolekcję <xref:System.Collections.Generic.IEnumerable%601>, która zawiera wszystkie elementy w grupowaniu.
+The following example shows the standard pattern for ordering source data into groups when no additional query logic is applied to the groups. This is called a grouping without a continuation. The elements in an array of strings are grouped according to their first letter. The result of the query is an <xref:System.Linq.IGrouping%602> type that contains a public `Key` property of type `char` and an <xref:System.Collections.Generic.IEnumerable%601> collection that contains each item in the grouping.
 
-Wynikiem klauzuli `group` jest sekwencja sekwencji. W związku z tym, aby uzyskać dostęp do poszczególnych elementów w każdej zwróconej grupie, Użyj zagnieżdżonej pętli `foreach` wewnątrz pętli, która iteruje klucze grupy, jak pokazano w poniższym przykładzie.
+The result of a `group` clause is a sequence of sequences. Therefore, to access the individual elements within each returned group, use a nested `foreach` loop inside the loop that iterates the group keys, as shown in the following example.
 
 [!code-csharp[cscsrefQueryKeywords#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#16)]
 
 ## <a name="example"></a>Przykład
 
-Ten przykład pokazuje, jak wykonać dodatkową logikę dla grup po ich utworzeniu przy użyciu *kontynuacji* `into`. Aby uzyskać więcej informacji, zobacz [do](into.md). Poniższy przykład wysyła zapytanie do każdej grupy, aby wybrać tylko te, których wartość klucza jest samodzielna.
+This example shows how to perform additional logic on the groups after you have created them, by using a *continuation* with `into`. For more information, see [into](into.md). The following example queries each group to select only those whose key value is a vowel.
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
 ## <a name="remarks"></a>Uwagi
 
-W czasie kompilacji klauzule `group` są tłumaczone na wywołania metody <xref:System.Linq.Enumerable.GroupBy%2A>.
+At compile time, `group` clauses are translated into calls to the <xref:System.Linq.Enumerable.GroupBy%2A> method.
 
 ## <a name="see-also"></a>Zobacz także
 

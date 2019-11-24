@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce015713ca7ed26c97348aa39f8170a85c8aa93c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745920"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426168"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString — Metoda
-Pobiera ciąg przechowywaną w określonej względny adres wirtualny.  
+Gets the string stored at the specified relative virtual address.  
   
- Ta metoda jest przestarzała i nie powinna być używana.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,19 +38,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parametry  
  `RVA`  
- [in] Wirtualny adres względny ciągu do zwrócenia.  
+ [in] The relative virtual address of the string to return.  
   
  `lpString`  
- [out] Zwracanego ciągu.  
+ [out] The returned string.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

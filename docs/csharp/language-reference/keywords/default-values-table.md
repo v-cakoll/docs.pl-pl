@@ -1,46 +1,46 @@
 ---
-title: Tabela wartości domyślnych — C# odwołanie
+title: Default values table - C# reference
 ms.custom: seodec18
-description: Dowiedz się, jakie są wartości C# domyślne typów.
+description: Learn what are the default values of C# types.
 ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 02f86ef8ee73ff31a6c5c9d17a44a443f72ef05e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739283"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428537"
 ---
-# <a name="default-values-table-c-reference"></a>Tabela wartości domyślnych (C# odwołanie)
+# <a name="default-values-table-c-reference"></a>Default values table (C# reference)
 
-W poniższej tabeli przedstawiono wartości domyślne C# typów:
+The following table shows the default values of C# types:
 
 |Typ|Wartość domyślna|
 |---------|------------------|
-|Dowolny typ referencyjny|`null`|
-|Dowolny [wbudowany typ liczbowy całkowity](../builtin-types/integral-numeric-types.md)|0 (zero)|
-|Dowolny [wbudowany typ liczbowy zmiennoprzecinkowy](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
+|Any reference type|`null`|
+|Any [built-in integral numeric type](../builtin-types/integral-numeric-types.md)|0 (zero)|
+|Any [built-in floating-point numeric type](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](bool.md)|`false`|
-|[char](char.md)|`'\0'` (U + 0000)|
-|[enum](enum.md)|Wartość wygenerowana przez wyrażenie `(E)0`, gdzie `E` jest identyfikatorem wyliczenia.|
-|[struct](struct.md)|Wartość wygenerowana przez ustawienie wszystkich pól typu wartość na wartości domyślne i wszystkie pola typu odwołania do `null`.|
-|Dowolny [Typ wartości null](../builtin-types/nullable-value-types.md)|Wystąpienie, dla którego właściwość <xref:System.Nullable%601.HasValue%2A> jest `false` i Właściwość <xref:System.Nullable%601.Value%2A> jest niezdefiniowana. Ta wartość domyślna jest również znana jako wartość *null* typu wartości null.|
+|[char](../builtin-types/char.md)|`'\0'` (U+0000)|
+|[enum](enum.md)|The value produced by the expression `(E)0`, where `E` is the enum identifier.|
+|[struct](struct.md)|The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.|
+|Any [nullable value type](../builtin-types/nullable-value-types.md)|An instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined. That default value is also known as the *null* value of a nullable value type.|
 
-Użyj [operatora domyślnego](../operators/default.md) , aby utworzyć wartość domyślną typu, jak pokazano w poniższym przykładzie:
+Use the [default operator](../operators/default.md) to produce the default value of a type, as the following example shows:
 
 ```csharp
 int a = default(int);
 ```
 
-Począwszy od C# 7,1, można użyć [literału`default`](../operators/default.md#default-literal) , aby zainicjować zmienną o wartości domyślnej typu:
+Beginning with C# 7.1, you can use the [`default` literal](../operators/default.md#default-literal) to initialize a variable with the default value of its type:
 
 ```csharp
 int a = default;
 ```
 
-Dla typu wartości niejawny Konstruktor bez parametrów tworzy również wartość domyślną typu, jak pokazano w poniższym przykładzie:
+For a value type, the implicit parameterless constructor also produces the default value of the type, as the following example shows:
 
 ```csharp-interactive
 var n = new System.Numerics.Complex();
@@ -49,14 +49,14 @@ Console.WriteLine(n);  // output: (0, 0)
 
 ## <a name="c-language-specification"></a>specyfikacja języka C#
 
-Aby uzyskać więcej informacji, zobacz następujące sekcje [ C# specyfikacji języka](~/_csharplang/spec/introduction.md):
+For more information, see the following sections of the [C# language specification](~/_csharplang/spec/introduction.md):
 
-- [Wartości domyślne](~/_csharplang/spec/variables.md#default-values)
-- [Konstruktory domyślne](~/_csharplang/spec/types.md#default-constructors)
+- [Default values](~/_csharplang/spec/variables.md#default-values)
+- [Default constructors](~/_csharplang/spec/types.md#default-constructors)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [C#odwoła](../index.md)
+- [C# reference](../index.md)
 - [Słowa kluczowe języka C#](index.md)
-- [Tabela typów wbudowanych](built-in-types-table.md)
+- [Built-in types table](built-in-types-table.md)
 - [Konstruktory](../../programming-guide/classes-and-structs/constructors.md)

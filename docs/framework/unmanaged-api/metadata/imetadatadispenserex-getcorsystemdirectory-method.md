@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9e0f3b6-e106-4820-bada-5bfba34ce360
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f03a2dfa60f2fbdce317d96a9e5b23c6f017dc3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da9a13a3dea34f6681f47e95c5b352a710d7458b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777744"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431214"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory — Metoda
-Pobiera katalog, który zawiera bieżące środowisko uruchomieniowe języka wspólnego (CLR). Ta metoda jest obsługiwana tylko do użytku przez debugery spoza procesu. Wywoływana z innego składnika, zwróci E_NOTIMPL.  
+Gets the directory that holds the current common language runtime (CLR). This method is supported only for use by out-of-process debuggers. If called from another component, it will return E_NOTIMPL.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -39,22 +37,22 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>Parametry  
  `szBuffer`  
- [out] Bufor odbioru nazwę katalogu.  
+ [out] The buffer to receive the directory name.  
   
  `cchBuffer`  
- [in] Rozmiar w bajtach z `szBuffer`.  
+ [in] The size, in bytes, of `szBuffer`.  
   
  `pchBuffer`  
- [out] Liczba bajtów zwróconych w rzeczywistości w `szBuffer`.  
+ [out] The number of bytes actually returned in `szBuffer`.  
   
 ## <a name="requirements"></a>Wymagania  
- **Platforma:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** COR.h  
+ **Header:** Cor.h  
   
- **Biblioteka:** Używany jako zasób w MsCorEE.dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
- **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

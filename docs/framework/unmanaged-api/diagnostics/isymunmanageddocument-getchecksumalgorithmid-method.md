@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7f941cd-e25b-4b85-b1ce-5f77c9208fa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b631b16334b7e5019376fbb9a3f65d7fc2ced7dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2bc673d2e331cd32d5317cb20f9418eb3a3b144a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776756"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431069"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId — Metoda
-Pobiera identyfikator algorytmu sumy kontrolnej lub zwraca identyfikator GUID same zera, jeśli nie określono żadnych sumy kontrolnej.  
+Gets the checksum algorithm identifier, or returns a GUID of all zeros if there is no checksum.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -36,10 +34,10 @@ HRESULT GetCheckSumAlgorithmId(
   
 ## <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Wskaźnik do zmiennej, która odbiera identyfikator algorytmu sumy kontrolnej.  
+ [out] A pointer to a variable that receives the checksum algorithm identifier.  
   
 ## <a name="return-value"></a>Wartość zwracana  
- S_OK, jeśli metoda zakończy się powodzeniem.  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Zobacz także
 

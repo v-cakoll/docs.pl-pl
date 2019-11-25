@@ -1,21 +1,21 @@
 ---
-title: Wykonywanie zapytania dotyczącego elementu XDocument a zapytania dotyczącego elementu XElement (Visual Basic)
+title: Querying an XDocument vs. Querying an XElement
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 4aba08319abeb21de79b3b8511044b8272402984
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5cee2c841f391bfb6fc410421108656680880616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834944"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346559"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Wykonywanie zapytania dotyczącego elementu XDocument a zapytania dotyczącego elementu XElement (Visual Basic)
-Podczas ładowania dokumentu za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> należy zauważyć, że trzeba pisać zapytania nieco inaczej niż w przypadku ładowania za pośrednictwem <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>Querying an XDocument vs. Querying an XElement (Visual Basic)
+When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.  
   
-## <a name="comparison-of-xdocumentload-and-xelementload"></a>Porównanie elementów XDocument. Load i XElement. Load  
- Podczas ładowania dokumentu XML do <xref:System.Xml.Linq.XElement> za pośrednictwem <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement> w katalogu głównym drzewa XML zawiera element główny załadowanego dokumentu. Jednak podczas ładowania tego samego dokumentu XML do <xref:System.Xml.Linq.XDocument> za pośrednictwem <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> katalog główny drzewa jest węzłem <xref:System.Xml.Linq.XDocument>, a głównym elementem załadowanego dokumentu jest jeden dozwolony węzeł podrzędny <xref:System.Xml.Linq.XElement> węzła <xref:System.Xml.Linq.XDocument>. Osie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] działają względem węzła głównego.  
+## <a name="comparison-of-xdocumentload-and-xelementload"></a>Comparison of XDocument.Load and XElement.Load  
+ When you load an XML document into an <xref:System.Xml.Linq.XElement> via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>, the <xref:System.Xml.Linq.XElement> at the root of the XML tree contains the root element of the loaded document. However, when you load the same XML document into an <xref:System.Xml.Linq.XDocument> via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, the root of the tree is an <xref:System.Xml.Linq.XDocument> node, and the root element of the loaded document is the one allowed child <xref:System.Xml.Linq.XElement> node of the <xref:System.Xml.Linq.XDocument>. The [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] axes operate relative to the root node.  
   
- Ten pierwszy przykład ładuje drzewo XML przy użyciu <xref:System.Xml.Linq.XElement.Load%2A>. Następnie wykonuje zapytanie dotyczące elementów podrzędnych katalogu głównego drzewa.  
+ This first example loads an XML tree using <xref:System.Xml.Linq.XElement.Load%2A>. It then queries for the child elements of the root of the tree.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -36,7 +36,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Zgodnie z oczekiwaniami ten przykład generuje następujące dane wyjściowe:  
+ As expected, this example produces the following output:  
   
 ```console
 Querying tree loaded with XElement.Load  
@@ -46,7 +46,7 @@ Querying tree loaded with XElement.Load
 <Child3>3</Child3>  
 ```  
   
- Poniższy przykład jest taki sam jak powyżej, z wyjątkiem tego, że drzewo XML jest załadowane do <xref:System.Xml.Linq.XDocument> zamiast <xref:System.Xml.Linq.XElement>.  
+ The following example is the same as the one above, with the exception that the XML tree is loaded into an <xref:System.Xml.Linq.XDocument> instead of an <xref:System.Xml.Linq.XElement>.  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -67,7 +67,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe:  
+ Ten przykład generuje następujące wyniki:  
   
 ```console
 Querying tree loaded with XDocument.Load  
@@ -79,9 +79,9 @@ Querying tree loaded with XDocument.Load
 </Root>  
 ```  
   
- Zwróć uwagę, że to samo zapytanie zwróciło jeden `Root` węzeł zamiast z trzech węzłów podrzędnych.  
+ Notice that the same query returned the one `Root` node instead of the three child nodes.  
   
- Jednym z metod postępowania z tym jest użycie właściwości <xref:System.Xml.Linq.XDocument.Root%2A> przed uzyskaniem dostępu do metody osi w następujący sposób:  
+ One approach to dealing with this is to use the <xref:System.Xml.Linq.XDocument.Root%2A> property before accessing the axes methods, as follows:  
   
 ```vb  
 ' Create a simple document and  write it to a file  
@@ -102,7 +102,7 @@ For Each e As XElement In childList
 Next  
 ```  
   
- To zapytanie jest teraz wykonywane w taki sam sposób, jak zapytanie w drzewie root w <xref:System.Xml.Linq.XElement>. Przykład generuje następujące dane wyjściowe:  
+ This query now performs in the same way as the query on the tree rooted in <xref:System.Xml.Linq.XElement>. The example produces the following output:  
   
 ```console
 Querying tree loaded with XDocument.Load  
@@ -114,4 +114,4 @@ Querying tree loaded with XDocument.Load
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

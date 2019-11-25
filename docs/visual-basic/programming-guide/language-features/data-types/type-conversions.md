@@ -1,5 +1,5 @@
 ---
-title: Konwersje plików w Visual Basic
+title: Konwersje typu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -10,38 +10,38 @@ helpviewer_keywords:
 - changing data types [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 1cdacd21-ba31-4b62-b5be-395e41eeaa17
-ms.openlocfilehash: 026b2a250abfac0782feb0946bc50a94f504f7ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbf0c9877cf9a9b4364c8c058c61e847ad7bf049
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663287"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348721"
 ---
 # <a name="type-conversions-in-visual-basic"></a>Konwersje plików w Visual Basic
-Proces zmiany wartości z jednego typu danych na inny typ jest nazywany *konwersji*. Konwersje są albo *rozszerzanie* lub *zawężanie*, w zależności od pojemności danych typów, które są zaangażowani. Są one również *niejawne* lub *jawne*, w zależności od składni w kodzie źródłowym.  
+The process of changing a value from one data type to another type is called *conversion*. Conversions are either *widening* or *narrowing*, depending on the data capacities of the types involved. They are also *implicit* or *explicit*, depending on the syntax in the source code.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- W tym artykule wyjaśniono konwersji niejawnych, czy typ docelowy może przechowywać dane.  
+ Explains conversions classified by whether the destination type can hold the data.  
   
  [Konwersje jawne i niejawne](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- W tym artykule omówiono konwersji niejawnych, czy Visual Basic wykonuje je automatycznie.  
+ Discusses conversions classified by whether Visual Basic performs them automatically.  
   
  [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- Ilustruje Konwertowanie pomiędzy ciągami a numeryczne, `Boolean`, lub wartości daty/godziny.  
+ Illustrates converting between strings and numeric, `Boolean`, or date/time values.  
   
- [Instrukcje: Konwertowanie obiektu na inny typ w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- Pokazuje sposób konwertowania `Object` zmiennej do jakichkolwiek innych typów danych.  
+ [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ Shows how to convert an `Object` variable to any other data type.  
   
  [Konwersje tablic](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- Przeprowadzi Cię przez proces konwersji między macierzami z różnych typów danych.  
+ Steps you through the process of converting between arrays of different data types.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- Wprowadza typy danych Visual Basic i zawiera opis sposobu ich używania.  
+ Introduces the Visual Basic data types and describes how to use them.  
   
  [Typy danych](../../../../visual-basic/language-reference/data-types/index.md)  
- Wyświetla listę typów podstawowych danych pochodzącego z języka Visual Basic.  
+ Lists the elementary data types supplied by Visual Basic.  
   
  [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- W tym artykule omówiono niektóre typowe problemy, które mogą wystąpić podczas pracy z typami danych.
+ Discusses some common problems that can arise when working with data types.

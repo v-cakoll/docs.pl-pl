@@ -1,5 +1,5 @@
 ---
-title: Procedury w Visual Basic
+title: Procedury
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,62 +8,62 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635630"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345992"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedury w Visual Basic
-A *procedury* to blok instrukcji ujęta w instrukcji deklaracji (`Function`, `Sub`, `Operator`, `Get`, `Set`) i pasującą `End` deklaracji. Niektóre procedury musi być wszystkich instrukcji wykonywalnych w języku Visual Basic.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
-## <a name="calling-a-procedure"></a>Wywoływanie procedury  
- Można wywołać procedury z innym miejscu w kodzie. Jest to nazywane *wywołanie procedury*. Po zakończeniu procedury uruchomiona, przekazuje sterowanie do kodu, który wywołana, i jest znany jako *wywoływanie kodu*. Kod wywołujący jest instrukcję lub wyrażenie w instrukcji, określa procedurę według nazwy, która przekazuje sterowanie do niego.  
+## <a name="calling-a-procedure"></a>Calling a Procedure  
+ You invoke a procedure from some other place in the code. This is known as a *procedure call*. When the procedure is finished running, it returns control to the code that invoked it, which is known as the *calling code*. The calling code is a statement, or an expression within a statement, that specifies the procedure by name and transfers control to it.  
   
-## <a name="returning-from-a-procedure"></a>Zwracanie z procedury  
- Procedury zwraca kontrolę do kodu wywołującego, po zakończeniu działania. Aby to zrobić, można użyć [instrukcji Return](../../../../visual-basic/language-reference/statements/return-statement.md), odpowiednie [instrukcji zakończenia](../../../../visual-basic/language-reference/statements/exit-statement.md) poufności informacji dla procedury lub procedury [zakończenia \<— słowo kluczowe > instrukcji](../../../../visual-basic/language-reference/statements/end-keyword-statement.md)instrukcji. Następnie sterowanie przechodzi do kodu wywołującego, zgodnie z pkt po wywołaniu procedury.  
+## <a name="returning-from-a-procedure"></a>Returning from a Procedure  
+ A procedure returns control to the calling code when it has finished running. To do this, it can use a [Return Statement](../../../../visual-basic/language-reference/statements/return-statement.md), the appropriate [Exit Statement](../../../../visual-basic/language-reference/statements/exit-statement.md) statement for the procedure, or the procedure's [End \<keyword> Statement](../../../../visual-basic/language-reference/statements/end-keyword-statement.md) statement. Control then passes to the calling code following the point of the procedure call.  
   
-- Za pomocą `Return` instrukcji, sterowanie powraca niezwłocznie do wywołującego kodu. Następujące instrukcje `Return` instrukcji nie działają. Masz więcej niż jedną `Return` instrukcji w tej samej procedury.  
+- With a `Return` statement, control returns immediately to the calling code. Statements following the `Return` statement do not run. You can have more than one `Return` statement in the same procedure.  
   
-- Za pomocą `Exit Sub` lub `Exit Function` instrukcji, sterowanie powraca niezwłocznie do wywołującego kodu. Następujące instrukcje `Exit` instrukcji nie działają. Masz więcej niż jedną `Exit` można łączyć instrukcji w tej samej procedury, a `Return` i `Exit` instrukcje w tej samej procedury.  
+- With an `Exit Sub` or `Exit Function` statement, control returns immediately to the calling code. Statements following the `Exit` statement do not run. You can have more than one `Exit` statement in the same procedure, and you can mix `Return` and `Exit` statements in the same procedure.  
   
-- Jeśli nie ma procedury `Return` lub `Exit` instrukcji zawiera z `End Sub` lub `End Function`, `End Get`, lub `End Set` instrukcji następującej po ostatnim instrukcji treści procedury. `End` Instrukcja zwraca kontroli od razu do wywołującego kodu. Może mieć tylko jeden `End` instrukcji procedury.  
+- If a procedure has no `Return` or `Exit` statements, it concludes with an `End Sub` or `End Function`, `End Get`, or `End Set` statement following the last statement of the procedure body. The `End` statement returns control immediately to the calling code. You can have only one `End` statement in a procedure.  
   
 ## <a name="parameters-and-arguments"></a>Parametry i argumenty  
- W większości przypadków procedura musi działać na różnych danych każdorazowo, należy wywołać. Te informacje można przekazać do procedury jako część wywołania procedury. Procedura określa zero lub więcej *parametry*, każdy z których reprezentuje wartość oczekuje przekazania do niej. Odpowiadający każdego parametru w definicji procedury jest *argument* w wywołaniu procedury. Argument reprezentuje wartość, które przekazujesz do odpowiedniego parametru w wywołaniu procedury danego.  
+ In most cases, a procedure needs to operate on different data each time you call it. You can pass this information to the procedure as part of the procedure call. The procedure defines zero or more *parameters*, each of which represents a value it expects you to pass to it. Corresponding to each parameter in the procedure definition is an *argument* in the procedure call. An argument represents the value you pass to the corresponding parameter in a given procedure call.  
   
-## <a name="types-of-procedures"></a>Rodzaje procedur  
- Visual Basic korzysta z kilku typów procedur:  
+## <a name="types-of-procedures"></a>Types of Procedures  
+ Visual Basic uses several types of procedures:  
   
-- [Procedury Sub](./sub-procedures.md) wykonywać działania, ale nie zwraca wartości do wywołującego kodu.  
+- [Sub Procedures](./sub-procedures.md) perform actions but do not return a value to the calling code.  
   
-- Procedury obsługi zdarzeń są `Sub` procedur, które są wykonywane w odpowiedzi na zdarzenie zgłaszane przez akcję użytkownika lub w przypadku wystąpienia w programie.  
+- Event-handling procedures are `Sub` procedures that execute in response to an event raised by user action or by an occurrence in a program.  
   
-- [Funkcja procedury](./function-procedures.md) zwracają wartość do wywołującego kodu. Przed zwróceniem mogli wykonywać inne czynności.
+- [Function Procedures](./function-procedures.md) return a value to the calling code. They can perform other actions before returning.
 
-    Niektóre funkcje, napisany w C# zwracają *odwoływać się do wartości zwracanej*. Wywołań funkcji, można zmodyfikować zwracanej wartości, a ta zmiana jest odzwierciedlana w stan obiektu o nazwie. Począwszy od 2017 Visual Basic, kod języka Visual Basic mogą wykorzystywać wartości zwracane przez odwołanie, ale go nie może zwracać wartości przez odwołanie. Aby uzyskać więcej informacji, zobacz [wartości zwracane odwołanie](ref-return-values.md).
+    Some functions written in C# return a *reference return value*. Function callers can modify the return value, and this modification is reflected in the state of the called object. Starting with Visual Basic 2017, Visual Basic code can consume reference return values, although it cannot return a value by reference. For more information, see [Reference return values](ref-return-values.md).
   
-- [Procedury własności](./property-procedures.md) wróć i przypisać wartości właściwości do obiektów lub moduły.  
+- [Property Procedures](./property-procedures.md) return and assign values of properties on objects or modules.  
   
-- [Procedury operatorów](./operator-procedures.md) Definiowanie zachowania standardowego operatora, gdy przynajmniej jeden z operandów jest nowo zdefiniowane przez klasę lub strukturę.  
+- [Operator Procedures](./operator-procedures.md) define the behavior of a standard operator when one or both of the operands is a newly-defined class or structure.  
   
-- [Procedury ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) definiują jedną lub więcej *parametry typu* oprócz ich normalne parametrów, aby kod wywołujący może przekazać określone typy danych poszczególnych czasu nawiązuje połączenie.  
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md) define one or more *type parameters* in addition to their normal parameters, so the calling code can pass specific data types each time it makes a call.  
   
-## <a name="procedures-and-structured-code"></a>Procedury składowane i węzeł strukturalny  
- Każdy wiersz kodu wykonywalnego w aplikacji musi znajdować się wewnątrz niektóre procedury, takich jak `Main`, `calculate`, lub `Button1_Click`. Jeśli dzielisz dużych procedury na mniejsze, aplikacja jest bardziej czytelne.  
+## <a name="procedures-and-structured-code"></a>Procedures and Structured Code  
+ Every line of executable code in your application must be inside some procedure, such as `Main`, `calculate`, or `Button1_Click`. If you subdivide large procedures into smaller ones, your application is more readable.  
   
- Procedury są przydatne w przypadku wykonywania powtórzonych lub udostępnione zadania, takie jak często używanych obliczeń, tekstu i sterującymi manipulacji i operacji w bazie danych. Możesz wywołać procedurę z wielu różnych miejsc w kodzie, dzięki czemu można użyć procedury jako bloków konstrukcyjnych dla aplikacji.  
+ Procedures are useful for performing repeated or shared tasks, such as frequently used calculations, text and control manipulation, and database operations. You can call a procedure from many different places in your code, so you can use procedures as building blocks for your application.  
   
- Tworzenie struktury kodu za pomocą procedury zapewnia następujące korzyści:  
+ Structuring your code with procedures gives you the following benefits:  
   
-- Procedury umożliwiają Podziel programów na osobne jednostki logiczne. Możesz łatwo debugować oddzielne zespoły więcej nie można debugować całego programu, bez procedur.  
+- Procedures allow you to break your programs into discrete logical units. You can debug separate units more easily than you can debug an entire program without procedures.  
   
-- Po tworzenia procedur do użytku w jednym programie można ich używać w innych programów, często z niewielkich modyfikacji. Dzięki temu można uniknąć zduplikowania kodu.  
+- After you develop procedures for use in one program, you can use them in other programs, often with little or no modification. This helps you avoid code duplication.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Tworzenie procedury](./how-to-create-a-procedure.md)
+- [Instrukcje: tworzenie procedury](./how-to-create-a-procedure.md)
 - [Sub, procedury](./sub-procedures.md)
 - [Procedury funkcji](./function-procedures.md)
 - [Procedury właściwości](./property-procedures.md)
@@ -71,5 +71,5 @@ A *procedury* to blok instrukcji ujęta w instrukcji deklaracji (`Function`, `Su
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Procedury rekursywne](./recursive-procedures.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
-- [Procedury ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
 - [Obiekty i klasy](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

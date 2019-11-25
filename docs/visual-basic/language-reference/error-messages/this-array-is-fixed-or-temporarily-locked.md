@@ -1,32 +1,32 @@
 ---
-title: Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
+title: Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: c7b5372b6046e25aad87131ba141cb71c580e12c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625942"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350789"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Ta tablica ma ustalony rozmiar lub jest tymczasowo zablokowana (Visual Basic)
-Ten błąd ma następujące możliwe przyczyny:  
+This error has the following possible causes:  
   
-- Za pomocą `ReDim` Aby zmienić liczbę elementów tablicy o stałym rozmiarze.  
+- Using `ReDim` to change the number of elements of a fixed-size array.  
   
-- Redimensioning tablic dynamicznych poziom modułu, w którym jeden element został przekazany jako argument do procedury. Jeśli element jest przekazywany, tablica jest zablokowane, aby uniemożliwić cofanie przydziału pamięci dla parametru odwołania w ramach procedury.  
+- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
   
-- Próba przypisania wartości do `Variant` zmienną, która zawiera tablicę, ale `Variant` jest obecnie zablokowany.  
+- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Utworzyć tablicy oryginalnej dynamiczną, zamiast stałej deklarując ją za pomocą `ReDim` (Jeśli tablica jest zadeklarowana w obrębie procedury), lub deklarując ją bez określania liczby elementów (Jeśli tablica jest zadeklarowana na poziomie modułu.  
+1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
   
-2. Ustal, czy naprawdę potrzebujesz przekazać elementu, ponieważ jest ona widoczna w ramach wszystkich procedur w module.  
+2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
   
-3. Określić, co blokuje `Variant` i usunięcia go.  
+3. Determine what is locking the `Variant` and remedy it.  
   
 ## <a name="see-also"></a>Zobacz także
 

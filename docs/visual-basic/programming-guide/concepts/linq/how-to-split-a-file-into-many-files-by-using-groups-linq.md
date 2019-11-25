@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)'
+title: 'Porady: dzielenie pliku na kilka plików za pomocą grup (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: d438da7eb50e13c23a9c1b77a74f19fba8d95e04
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bd210f5119540bd35c18a07a21fc836339222bd0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524060"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341361"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)
 
-Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plików, a następnie utworzyć zestaw nowych plików, które organizują dane w nowy sposób.
+This example shows one way to merge the contents of two files and then create a set of new files that organize the data in a new way.
 
-### <a name="to-create-the-data-files"></a>Aby utworzyć pliki danych
+### <a name="to-create-the-data-files"></a>To create the data files
 
-1. Skopiuj te nazwy do pliku tekstowego o nazwie names1. txt i Zapisz go w folderze projektu:
+1. Copy these names into a text file that is named names1.txt and save it in your project folder:
 
     ```text
     Bankov, Peter
@@ -30,7 +30,7 @@ Ten przykład pokazuje jeden ze sposobów, aby scalić zawartość dwóch plikó
     Garcia, Debra
     ```
 
-2. Skopiuj te nazwy do pliku tekstowego o nazwie names2. txt i Zapisz go w folderze projektu: należy pamiętać, że te dwa pliki mają nazwy wspólne.
+2. Copy these names into a text file that is named names2.txt and save it in your project folder: Note that the two files have some names in common.
 
     ```text
     Liu, Jinghao
@@ -114,13 +114,13 @@ End Class
 '    Toyoshima, Tim
 ```
 
-Program zapisuje oddzielny plik dla każdej grupy w tym samym folderze co pliki danych.
+The program writes a separate file for each group in the same folder as the data files.
 
 ## <a name="compiling-the-code"></a>Kompilowanie kodu
 
-Utwórz projekt aplikacji konsolowej VB.NET z instrukcją `Imports` dla przestrzeni nazw System. LINQ.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ i ciągi (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ i katalogi plików (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and File Directories (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

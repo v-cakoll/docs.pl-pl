@@ -1,32 +1,32 @@
 ---
-title: Operacje projekcji (Visual Basic)
+title: Operacje rzutowania
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: 9db8284d59baa764a5509b1acef0c4d315fb28a7
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524101"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346629"
 ---
-# <a name="projection-operations-visual-basic"></a>Operacje projekcji (Visual Basic)
+# <a name="projection-operations-visual-basic"></a>Projection Operations (Visual Basic)
 
-Projekcja odnosi się do operacji przekształcenia obiektu w nowy formularz, który często składa się tylko z tych właściwości, które zostaną następnie użyte. Korzystając z projekcji, można utworzyć nowy typ, który jest zbudowany z każdego obiektu. Można projektować Właściwość i wykonywać na niej funkcję matematyczną. Możesz również projektować oryginalny obiekt bez zmieniania go.
+Projection refers to the operation of transforming an object into a new form that often consists only of those properties that will be subsequently used. By using projection, you can construct a new type that is built from each object. You can project a property and perform a mathematical function on it. You can also project the original object without changing it.
 
-W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują projekcję.
+The standard query operator methods that perform projection are listed in the following section.
 
 ## <a name="methods"></a>Metody
 
-|Nazwa metody|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|
+|Method Name|Opis|Visual Basic Query Expression Syntax|Więcej informacji|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|Wybierz|Project wartości, które są oparte na funkcji transformacji.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
-|SelectMany|Projektuje sekwencje wartości, które są oparte na funkcji transformacji, a następnie spłaszcza je w jedną sekwencję.|Użyj wielu klauzul `From`|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
+|Wybierz|Projects values that are based on a transform function.|`Select`|<xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType>|
+|SelectMany|Projects sequences of values that are based on a transform function and then flattens them into one sequence.|Use multiple `From` clauses|<xref:System.Linq.Enumerable.SelectMany%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SelectMany%2A?displayProperty=nameWithType>|
 
-## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażeń zapytania
+## <a name="query-expression-syntax-examples"></a>Query Expression Syntax Examples
 
 ### <a name="select"></a>Wybierz
 
-W poniższym przykładzie zastosowano klauzulę `Select`, aby zaprojektować pierwszą literę z każdego ciągu na liście ciągów.
+The following example uses the `Select` clause to project the first letter from each string in a list of strings.
 
 ```vb
 Dim words = New List(Of String) From {"an", "apple", "a", "day"}
@@ -52,7 +52,7 @@ MsgBox(sb.ToString())
 
 ### <a name="selectmany"></a>SelectMany
 
-W poniższym przykładzie zastosowano wiele klauzul `From`, aby zaprojektować każdy wyraz z każdego ciągu na liście ciągów.
+The following example uses multiple `From` clauses to project each word from each string in a list of strings.
 
 ```vb
 Dim phrases = New List(Of String) From {"an apple a day", "the quick brown fox"}
@@ -81,23 +81,23 @@ MsgBox(sb.ToString())
 ' fox
 ```
 
-## <a name="select-versus-selectmany"></a>Wybierz i SelectMany
+## <a name="select-versus-selectmany"></a>Select versus SelectMany
 
-Prace obu `Select()` i `SelectMany()` to generowanie wartości wyniku (lub wartości) z wartości źródłowych. `Select()` tworzy jedną wartość wynikową dla każdej wartości źródłowej. Ogólny wynik to kolekcja, która ma taką samą liczbę elementów jak kolekcja źródłowa. Natomiast `SelectMany()` generuje pojedynczy wynik ogólny, który zawiera połączone podkolekcje z każdej wartości źródłowej. Funkcja transformacji, która jest przenoszona jako argument do `SelectMany()` musi zwracać wyliczalną sekwencję wartości dla każdej wartości źródłowej. Te wyliczalne sekwencje są następnie łączone przez `SelectMany()`, aby utworzyć jedną dużą sekwencję.
+The work of both `Select()` and `SelectMany()` is to produce a result value (or values) from source values. `Select()` produces one result value for every source value. The overall result is therefore a collection that has the same number of elements as the source collection. In contrast, `SelectMany()` produces a single overall result that contains concatenated sub-collections from each source value. The transform function that is passed as an argument to `SelectMany()` must return an enumerable sequence of values for each source value. These enumerable sequences are then concatenated by `SelectMany()` to create one large sequence.
 
-Poniższe dwa ilustracje pokazują różnicę koncepcyjną między działaniami tych dwóch metod. W każdym przypadku Załóżmy, że funkcja selektor (Transform) wybiera tablicę kwiatów z każdej wartości źródłowej.
+The following two illustrations show the conceptual difference between the actions of these two methods. In each case, assume that the selector (transform) function selects the array of flowers from each source value.
 
-Na tej ilustracji przedstawiono sposób, w jaki `Select()` zwraca kolekcję, która ma taką samą liczbę elementów jak kolekcja źródłowa.
+This illustration depicts how `Select()` returns a collection that has the same number of elements as the source collection.
 
-![Ilustracja przedstawiająca akcję wyboru&#40;&#41;](./media/projection-operations/select-action-graphic.png)
+![Graphic that shows the action of Select&#40;&#41;](./media/projection-operations/select-action-graphic.png)
 
-Ta ilustracja przedstawia sposób, w jaki `SelectMany()` łączy pośrednią sekwencję tablic w jedną końcową wartość wynikową, która zawiera każdą wartość z każdej tablicy pośredniej.
+This illustration depicts how `SelectMany()` concatenates the intermediate sequence of arrays into one final result value that contains each value from each intermediate array.
 
-![Ilustracja przedstawiająca akcję SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )
+![Graphic showing the action of SelectMany&#40;&#41;.](./media/projection-operations/select-many-action-graphic.png )
 
 ### <a name="code-example"></a>Przykład kodu
 
-Poniższy przykład porównuje zachowanie `Select()` i `SelectMany()`. Kod tworzy "bukiet" kwiatów, pobierając pierwsze dwa elementy z każdej listy nazw kwiatów w kolekcji źródłowej. W tym przykładzie "pojedyncza wartość", którą funkcja transformacji <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> używa, jest sama kolekcją wartości. Wymaga to dodatkowej pętli `For Each`, aby wyliczyć każdy ciąg w każdej sekwencji podrzędnej.
+The following example compares the behavior of `Select()` and `SelectMany()`. The code creates a "bouquet" of flowers by taking the first two items from each list of flower names in the source collection. In this example, the "single value" that the transform function <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> uses is itself a collection of values. This requires the extra `For Each` loop in order to enumerate each string in each sub-sequence.
 
 ```vb
 Class Bouquet
@@ -178,9 +178,9 @@ End Sub
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select, klauzula](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [Instrukcje: łączenie danych z sprzężeniami](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [How to: Combine Data with Joins](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [How to: Populate Object Collections from Multiple Sources (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
 - [Instrukcje: zwracanie wyniku zapytania LINQ jako określonego typu](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

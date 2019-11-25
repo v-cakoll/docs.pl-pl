@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Filtrowanie wyników zapytania za pomocą LINQ (Visual Basic)'
+title: 'How to: Filter Query Results by Using LINQ'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - filtering [Visual Basic]
@@ -11,70 +11,70 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - filtering data [Visual Basic]
 ms.assetid: ef103092-9bed-4134-97f4-2db696e83c12
-ms.openlocfilehash: 1250f2fe0ccd7661b9bc1986000143ec4a15a9f0
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2ea8a852a2f012ddb25ec1198c66e09df880ff47
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053286"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344989"
 ---
-# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Instrukcje: Filtrowanie wyników zapytania za pomocą LINQ (Visual Basic)
+# <a name="how-to-filter-query-results-by-using-linq-visual-basic"></a>Porady: filtrowanie wyników zapytania za pomocą LINQ (Visual Basic)
 
-Program Query Integrated Language (LINQ) ułatwia dostęp do informacji o bazie danych i wykonywanie zapytań.
+Language-Integrated Query (LINQ) makes it easy to access database information and execute queries.
 
-Poniższy przykład pokazuje, jak utworzyć nową aplikację, która wykonuje zapytania względem bazy danych SQL Server i filtruje wyniki według określonej wartości przy użyciu `Where` klauzuli. Aby uzyskać więcej informacji, zobacz [klauzula WHERE](../../../../visual-basic/language-reference/queries/where-clause.md).
+The following example shows how to create a new application that performs queries against a SQL Server database and filters the results by a particular value by using the `Where` clause. For more information, see [Where Clause](../../../../visual-basic/language-reference/queries/where-clause.md).
 
-Przykłady w tym temacie korzystają z przykładowej bazy danych Northwind. Jeśli nie masz tej bazy danych na komputerze deweloperskim, możesz ją pobrać z centrum pobierania Microsoft. Aby uzyskać instrukcje, zobacz [Pobieranie przykładowych baz danych](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
+The examples in this topic use the Northwind sample database. If you do not have this database on your development computer, you can download it from the Microsoft Download Center. For instructions, see [Downloading Sample Databases](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-a-connection-to-a-database"></a>Aby utworzyć połączenie z bazą danych
+## <a name="to-create-a-connection-to-a-database"></a>To create a connection to a database
 
-1. W programie Visual Studio Otwórz**Eksplorator bazy danych** **Eksplorator serwera**/, klikając pozycję **Eksplorator serwera**/**Eksplorator bazy danych** w menu **Widok** .
+1. In Visual Studio, open **Server Explorer**/**Database Explorer** by clicking **Server Explorer**/**Database Explorer** on the **View** menu.
 
-2. Kliknij prawym przyciskiem myszy pozycję **połączenia danych** w **Eksplorator serwera**/**Eksplorator bazy danych** a następnie kliknij pozycję **Dodaj połączenie**.
+2. Right-click **Data Connections** in **Server Explorer**/**Database Explorer** and then click **Add Connection**.
 
-3. Określ prawidłowe połączenie z przykładową bazą danych Northwind.
+3. Specify a valid connection to the Northwind sample database.
 
-## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>Aby dodać projekt, który zawiera plik LINQ to SQL
+## <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>To add a project that contains a LINQ to SQL file
 
-1. W programie Visual Studio na **pliku** menu wskaż **New** a następnie kliknij przycisk **projektu**. Wybierz Visual Basic **Windows Forms aplikacji** jako typ projektu.
+1. In Visual Studio, on the **File** menu, point to **New** and then click **Project**. Select Visual Basic **Windows Forms Application** as the project type.
 
-2. W menu **projekt** kliknij polecenie **Dodaj nowy element**. Wybierz szablon elementu **LINQ to SQL klas** .
+2. On the **Project** menu, click **Add New Item**. Select the **LINQ to SQL Classes** item template.
 
-3. Nazwij plik `northwind.dbml`. Kliknij przycisk **Dodaj**. Object Relational Designer (Projektant/R) zostanie otwarty dla pliku Northwind. dbml.
+3. Name the file `northwind.dbml`. Kliknij przycisk **Dodaj**. The Object Relational Designer (O/R Designer) opens for the northwind.dbml file.
 
-## <a name="to-add-tables-to-query-to-the-or-designer"></a>Aby dodać tabele do zapytania do projektanta O/R
+## <a name="to-add-tables-to-query-to-the-or-designer"></a>To add tables to query to the O/R Designer
 
-1. W**Eksplorator bazy danych** **Eksplorator serwera**/rozwiń połączenie z bazą danych Northwind. Rozwiń folder **tabele** .
+1. In **Server Explorer**/**Database Explorer**, expand the connection to the Northwind database. Expand the **Tables** folder.
 
-     Jeśli zamknąłeś projektanta O/R, możesz otworzyć go ponownie, dwukrotnie klikając dodany wcześniej plik Northwind. dbml.
+     If you have closed the O/R Designer, you can reopen it by double-clicking the northwind.dbml file that you added earlier.
 
-2. Kliknij tabelę Customers i przeciągnij ją do lewego okienka projektanta. Kliknij tabelę Orders (zamówienia) i przeciągnij ją do okienka po lewej stronie projektanta.
+2. Click the Customers table and drag it to the left pane of the designer. Click the Orders table and drag it to the left pane of the designer.
 
-     Projektant tworzy nowe `Customer` i `Order` obiekty dla projektu. Zauważ, że projektant automatycznie wykrywa relacje między tabelami i tworzy właściwości podrzędne dla powiązanych obiektów. Na przykład technologia IntelliSense pokazuje, że `Customer` obiekt `Orders` ma właściwość dla wszystkich zamówień związanych z tym klientem.
+     The designer creates new `Customer` and `Order` objects for your project. Notice that the designer automatically detects relationships between the tables and creates child properties for related objects. For example, IntelliSense will show that the `Customer` object has an `Orders` property for all orders related to that customer.
 
-3. Zapisz zmiany i zamknij projektanta.
+3. Save your changes and close the designer.
 
-4. Zapisz projekt.
+4. Save your project.
 
-## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>Aby dodać kod do zapytania do bazy danych i wyświetlić wyniki
+## <a name="to-add-code-to-query-the-database-and-display-the-results"></a>To add code to query the database and display the results
 
-1. Z **przybornika**przeciągnij <xref:System.Windows.Forms.DataGridView> kontrolkę na domyślny formularz systemu Windows dla projektu, formularz Form1.
+1. From the **Toolbox**, drag a <xref:System.Windows.Forms.DataGridView> control onto the default Windows Form for your project, Form1.
 
-2. Kliknij dwukrotnie przycisk Form1, aby dodać kod do `Load` zdarzenia formularza.
+2. Double-click Form1 to add code to the `Load` event of the form.
 
-3. Po dodaniu tabel do projektanta O/R Projektant dodał <xref:System.Data.Linq.DataContext> obiekt dla projektu. Ten obiekt zawiera kod, który musi być konieczny, aby uzyskać dostęp do tych tabel, oprócz pojedynczych obiektów i kolekcji dla każdej tabeli. <xref:System.Data.Linq.DataContext> Obiekt dla projektu jest nazwany na podstawie nazwy pliku. dbml. Dla tego projektu <xref:System.Data.Linq.DataContext> obiekt ma nazwę `northwindDataContext`.
+3. When you added tables to the O/R Designer, the designer added a <xref:System.Data.Linq.DataContext> object for your project. This object contains the code that you must have to access those tables, in addition to individual objects and collections for each table. The <xref:System.Data.Linq.DataContext> object for your project is named based on the name of your .dbml file. For this project, the <xref:System.Data.Linq.DataContext> object is named `northwindDataContext`.
 
-    Można utworzyć wystąpienie <xref:System.Data.Linq.DataContext> w kodzie i zbadać tabele określone przez projektanta O/R.
+    You can create an instance of the <xref:System.Data.Linq.DataContext> in your code and query the tables specified by the O/R Designer.
 
-    Dodaj następujący kod do `Load` zdarzenia, aby wykonać zapytanie dotyczące tabel, które są uwidocznione jako właściwości kontekstu danych. Zapytanie filtruje wyniki i zwraca tylko klientów, którzy znajdują się `London`w.
+    Add the following code to the `Load` event to query the tables that are exposed as properties of your data context. The query filters the results and returns only customers that are located in `London`.
 
     [!code-vb[VbLINQToSQLHowTos#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#11)]
 
-4. Naciśnij klawisz F5, aby uruchomić projekt i wyświetlić wyniki.
+4. Press F5 to run your project and view the results.
 
-5. Poniżej znajdują się inne filtry, które można wypróbować.
+5. Following are some other filters that you can try.
 
     [!code-vb[VbLINQToSQLHowTos#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form5.vb#12)]
 

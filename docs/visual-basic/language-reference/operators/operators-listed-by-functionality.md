@@ -1,32 +1,32 @@
 ---
-title: Operatory według funkcji (Visual Basic)
+title: Operatory według funkcji
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
-ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9060c6396ce011f4684e4a94c05c6b620ab4f5e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028655"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348267"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>Operatory według funkcji (Visual Basic)
-Zobacz jeden z poniższych kategorii lub Otwórz ta część pomocy spis treści, aby zobaczyć alfabetyczną listę operatorów języka Visual Basic.  
+See one of the categories listed below, or open this portion of the Help table of contents to see an alphabetical list of Visual Basic operators.  
   
-## <a name="categories-of-operators"></a>Kategorie operatorów  
+## <a name="categories-of-operators"></a>Categories of Operators  
   
 |Operatory|Opis|  
 |---------------|-----------------|  
-|[Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|Te operatory wykonywanie obliczeń matematycznych.|  
-|[Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)|Te operatory wykonać operacji przypisania.|  
-|[Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)|Te operatory wykonują porównania.|  
-|[Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)|Te operatory łączenia ciągów.|  
-|[Operatory logiczne/bitowe](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|Te operatory wykonywać operacje logiczne.|  
-|[Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|Te operatory przeprowadzania arytmetycznego przesunięcia wzorców.|  
-|[Różne operatory](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|Te operatory wykonywać różne operacje.|  
+|[Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)|These operators perform mathematical calculations.|  
+|[Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)|These operators perform assignment operations.|  
+|[Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)|These operators perform comparisons.|  
+|[Operatory łączenia](../../../visual-basic/language-reference/operators/concatenation-operators.md)|These operators combine strings.|  
+|[Logical/Bitwise Operators](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)|These operators perform logical operations.|  
+|[Operatory Bit Shift](../../../visual-basic/language-reference/operators/bit-shift-operators.md)|These operators perform arithmetic shifts on bit patterns.|  
+|[Różne operatory](../../../visual-basic/language-reference/operators/miscellaneous-operators.md)|These operators perform miscellaneous operations.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [Pierwszeństwo operatorów w języku Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

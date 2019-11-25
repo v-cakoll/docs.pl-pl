@@ -1,25 +1,25 @@
 ---
-title: Opcja <keyword> — instrukcja (Visual Basic)
+title: Opcja <keyword> — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784023"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353776"
 ---
-# <a name="option-keyword-statement"></a>Opcja \<— słowo kluczowe > — instrukcja
-Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie do całego pliku źródłowego.  
+# <a name="option-keyword-statement"></a>Option \<keyword> Statement
+Introduces a statement that specifies a compiler option that applies to the entire source file.  
   
 ## <a name="remarks"></a>Uwagi  
- Opcje kompilatora można kontrolować, czy wszystkie zmienne musi być zadeklarowany w sposób jawny, czy zwężanie konwersji typu musi być jawne lub czy powinny być porównywane ciągi jako tekstowe lub binarne ilości.  
+ The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
   
- Instrukcja `Option` <słowo kluczowe> może być używana w następujących kontekstach:  
+ The `Option` keyword can be used in these contexts:  
   
  [Option Compare, instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   

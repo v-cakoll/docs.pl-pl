@@ -1,5 +1,5 @@
 ---
-title: Group Join — Klauzula (Visual Basic)
+title: Group Join — Klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryGroupJoinIn
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 184077f2689eb64e4373d407913eefcc03b795c2
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0546c86322663ce6c56a89e63311d0f02f88cfe4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005720"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346845"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join — Klauzula (Visual Basic)
-Łączy dwie kolekcje w jedną hierarchiczną kolekcję. Operacja join zależy od pasujących kluczy.  
+Combines two collections into a single hierarchical collection. The join operation is based on matching keys.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -33,31 +33,31 @@ Group Join element [As type] In collection _
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagany. Zmienna kontroli dla połączonej kolekcji.|  
-|`type`|Opcjonalny. Typ `element`. Jeśli nie określono `type`, typ `element` jest wnioskowany z `collection`.|  
-|`collection`|Wymagany. Kolekcja, która ma zostać połączona z kolekcją znajdującą się po lewej stronie operatora `Group Join`. Klauzula `Group Join` może być zagnieżdżona w klauzuli `Join` lub w innej klauzuli `Group Join`.|  
-|`key1` `Equals` `key2`|Wymagany. Identyfikuje klucze dla kolekcji, które są sprzężone. Należy użyć operatora `Equals`, aby porównać klucze z kolekcji, które są sprzężone. Możesz połączyć warunki sprzężenia przy użyciu operatora `And`, aby zidentyfikować wiele kluczy. Parametr `key1` musi znajdować się w kolekcji po lewej stronie operatora `Join`. Parametr `key2` musi znajdować się w kolekcji po prawej stronie operatora `Join`.<br /><br /> Klucze używane w warunku sprzężenia mogą być wyrażeniami, które zawierają więcej niż jeden element z kolekcji. Jednak każde wyrażenie klucza może zawierać tylko elementy z odpowiedniej kolekcji.|  
-|`expressionList`|Wymagany. Co najmniej jedno wyrażenie określające sposób agregowania grup elementów z kolekcji. Aby zidentyfikować nazwę elementu członkowskiego pogrupowanych wyników, użyj słowa kluczowego `Group` (`<alias> = Group`). Można również dołączyć funkcje agregujące, które mają zostać zastosowane do grupy.|  
+|`element`|Wymagany. The control variable for the collection being joined.|  
+|`type`|Opcjonalny. The type of `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|Wymagany. The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
+|`key1` `Equals` `key2`|Wymagany. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
+|`expressionList`|Wymagany. One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). You can also include aggregate functions to apply to the group.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klauzula `Group Join` łączy dwie kolekcje na podstawie pasujących wartości klucza z kolekcji, które są sprzężone. Kolekcja wyników może zawierać element członkowski, który odwołuje się do kolekcji elementów z drugiej kolekcji, która pasuje do wartości klucza z pierwszej kolekcji. Można również określić funkcje agregujące, które mają być stosowane do zgrupowanych elementów z drugiej kolekcji. Aby uzyskać informacje o funkcjach agregujących, zobacz [klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Rozważmy na przykład kolekcję menedżerów i kolekcję pracowników. Elementy z obu kolekcji mają właściwość ManagerID, która identyfikuje pracowników, którzy raportują do określonego Menedżera. Wyniki operacji JOIN zawierają wyniki dla każdego menedżera i pracownika o pasującej wartości ManagerID. Wyniki operacji `Group Join` będą zawierać pełną listę menedżerów. Każdy wynik menedżera będzie miał element członkowski, który odwołuje się do listy pracowników, którzy byli zgodni z określonym menedżerem.  
+ Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
   
- Kolekcja będąca wynikiem operacji `Group Join` może zawierać dowolną kombinację wartości z kolekcji identyfikowanej w klauzuli `From` i wyrażeń zidentyfikowanych w klauzuli `Into` klauzuli `Group Join`. Aby uzyskać więcej informacji na temat prawidłowych wyrażeń dla klauzuli `Into`, zobacz [Aggregate — klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Operacja `Group Join` zwróci wszystkie wyniki z kolekcji identyfikowanej po lewej stronie operatora `Group Join`. Ta wartość jest prawdziwa nawet wtedy, gdy nie ma żadnych dopasowań w kolekcji. Jest to podobne do `LEFT OUTER JOIN` w SQL.  
+ A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
   
- Do łączenia kolekcji z jedną kolekcją można użyć klauzuli `Join`. Jest to odpowiednik `INNER JOIN` w SQL.  
+ You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu łączy dwie kolekcje przy użyciu klauzuli `Group Join`.  
+ The following code example joins two collections by using the `Group Join` clause.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

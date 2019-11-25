@@ -1,5 +1,5 @@
 ---
-title: Odtwarzanie dźwięków (Visual Basic)
+title: Odtwarzanie dźwięków
 ms.date: 07/20/2015
 helpviewer_keywords:
 - system sounds, playing
@@ -11,57 +11,62 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: ac890a4cc6024ae43af4146d1d8f43af70ae3ff0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 416fedd011ff35d2b32d1b64932e3908a73ed14e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803912"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345521"
 ---
 # <a name="playing-sounds-visual-basic"></a>Odtwarzanie dźwięków (Visual Basic)
-`My.Computer.Audio` Obiekt zapewnia metody do odtwarzania dźwięku.  
+
+The `My.Computer.Audio` object provides methods for playing sounds.  
   
 ## <a name="playing-sounds"></a>Odtwarzanie dźwięków  
- Odtwarzanie tła umożliwia aplikacji wykonywanie innego kodu, podczas odtwarzania dźwięku. `My.Computer.Audio.Play` Metody umożliwia aplikacji Odtwórz tylko jedno tło dźwięk w czasie; gdy aplikacja odtwarza dźwięk nowe tło, zatrzymuje odtwarzanie dźwięku poprzedniego tła. Możesz odtwarzać dźwięk i poczekaj na jej zakończenie.  
+
+ Background playing lets the application execute other code while the sound plays. The `My.Computer.Audio.Play` method allows the application to play only one background sound at a time; when the application plays a new background sound, it stops playing the previous background sound. You can also play a sound and wait for it to complete.  
   
- W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk. Gdy `AudioPlayMode.WaitToComplete` jest określony, `My.Computer.Audio.Play` oczekuje na zakończenie przed kontynuowaniem wywoływanie kodu dźwięku. Korzystając z tego przykładu, należy upewnić się, że nazwa pliku odwołuje się do pliku dźwiękowego .wav, która znajduje się na komputerze  
+ In the following example, the `My.Computer.Audio.Play` method plays a sound. When `AudioPlayMode.WaitToComplete` is specified, `My.Computer.Audio.Play` waits until the sound completes before calling code continues. When using this example, you should ensure that the file name refers to a .wav sound file that is on your computer  
   
  [!code-vb[VbVbalrMyComputer#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#15)]  
   
- W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk. Korzystając z tego przykładu, należy upewnić się, że zasoby aplikacji obejmują plik dźwiękowy wav, o nazwie wykres kaskadowy.  
+ In the following example, the `My.Computer.Audio.Play` method plays a sound. When using this example, you should ensure that the application resources include a .wav sound file that is named Waterfall.  
   
  [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
-## <a name="playing-looping-sounds"></a>Odtwarzanie dźwięków pętli  
- W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk określony w tle podczas `PlayMode.BackgroundLoop` jest określony. Korzystając z tego przykładu, należy upewnić się, że nazwa pliku odwołuje się do pliku dźwiękowego .wav, która znajduje się na komputerze.  
+## <a name="playing-looping-sounds"></a>Playing Looping Sounds  
+
+ In the following example, the `My.Computer.Audio.Play` method plays the specified sound in the background when `PlayMode.BackgroundLoop` is specified. When using this example, you should ensure that the file name refers to a .wav sound file that is on your computer.  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
- W poniższym przykładzie `My.Computer.Audio.Play` metoda odtwarza dźwięk określony w tle podczas `PlayMode.BackgroundLoop` jest określony. Korzystając z tego przykładu, należy upewnić się, że zasoby aplikacji obejmują plik dźwiękowy wav, o nazwie wykres kaskadowy.  
+ In the following example, the `My.Computer.Audio.Play` method plays the specified sound in the background when `PlayMode.BackgroundLoop` is specified. When using this example, you should ensure that the application resources include a .wav sound file that is named Waterfall.  
   
  [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   
- W poprzednim przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > dźwięk**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+ The preceding code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Sound**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
   
- Ogólnie rzecz biorąc gdy aplikacja odtwarza zapętlony dźwięk, powinien po pewnym czasie zatrzymał dźwięku.  
+ In general, when an application plays a looping sound, it should eventually stop the sound.  
   
-## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Zatrzymywanie odtwarzanie dźwięku w tle  
- Użyj `My.Computer.Audio.Stop` metodę, aby zatrzymać aplikacji obecnie odtwarzanie w tle lub odtwarzanie dźwięku w pętli.  
+## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Stopping the Playing of Sounds in the Background  
+
+ Use the `My.Computer.Audio.Stop` method to stop the application's currently playing background or looping sound.  
   
- Ogólnie rzecz biorąc gdy aplikacja odtwarza zapętlony dźwięk, należy zatrzymać dźwięk w pewnym momencie.  
+ In general, when an application plays a looping sound, it should stop the sound at some point.  
   
- Poniższy przykład powoduje zatrzymanie dźwięk jest odtwarzany w tle.  
+ The following example stops a sound that is playing in the background.  
   
  [!code-vb[VbVbalrMyComputer#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#18)]  
   
- W poprzednim przykładzie kodu jest również dostępny jako fragment kodu IntelliSense. W selektorze fragmentów kodu, znajduje się w **aplikacji z formularzem Windows > dźwięk**. Aby uzyskać więcej informacji, zobacz [fragmenty kodu](/visualstudio/ide/code-snippets).  
+ The preceding code example is also available as an IntelliSense code snippet. In the code snippet picker, it is located in **Windows Forms Applications > Sound**. For more information, see [Code Snippets](/visualstudio/ide/code-snippets).  
   
-## <a name="playing-system-sounds"></a>Odtwarzanie dźwięków systemu  
- Użyj `My.Computer.Audio.PlaySystemSound` metodę, aby odtworzyć dźwięk określonego systemu.  
+## <a name="playing-system-sounds"></a>Playing System Sounds  
+
+ Use the `My.Computer.Audio.PlaySystemSound` method to play the specified system sound.  
   
- `My.Computer.Audio.PlaySystemSound` Metoda przyjmuje jako parametr, jedną z udostępnionych elementów członkowskich z <xref:System.Media.SystemSound> klasy. Dźwięku systemowego <xref:System.Media.SystemSounds.Asterisk%2A> zwykle wskazuje błędy.  
+ The `My.Computer.Audio.PlaySystemSound` method takes as a parameter one of the shared members from the <xref:System.Media.SystemSound> class. The system sound <xref:System.Media.SystemSounds.Asterisk%2A> generally denotes errors.  
   
- W poniższym przykładzie użyto `My.Computer.Audio.PlaySystemSound` metodę, aby odtworzyć dźwięk systemu.  
+ The following example uses the `My.Computer.Audio.PlaySystemSound` method to play a system sound.  
   
  [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   

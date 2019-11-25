@@ -1,20 +1,20 @@
 ---
-title: -Platforma (Visual Basic)
+title: -platform
 ms.date: 03/13/2018
 helpviewer_keywords:
 - platform compiler option [Visual Basic]
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 741c36473d80b2581718d969a7037f6c81ff4bf5
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a6226b73d5d5d4d48a71afe39e8a546019d4c0bc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775585"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352344"
 ---
-# <a name="-platform-visual-basic"></a>-Platforma (Visual Basic)
-Określa, która wersja platformy środowiska uruchomieniowego języka wspólnego (CLR) może uruchomić plik wyjściowy.  
+# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+Specifies which platform version of common language runtime (CLR) can run the output file.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,56 +26,56 @@ Określa, która wersja platformy środowiska uruchomieniowego języka wspólneg
   
 |Termin|Definicja|  
 |---|---|  
-|`x86`|Kompiluje zestaw do uruchomienia przez 32-bitowe środowisko CLR zgodne z architekturą x86.|  
-|`x64`|Kompiluje zestaw do uruchomienia przez 64-bitowe środowisko CLR na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T.|  
-|`Itanium`|Kompiluje zestaw do uruchomienia przez 64-bitowe środowisko CLR na komputerze z procesorem Itanium.|  
-|`arm`|Kompiluje zestaw do uruchomienia na komputerze z procesorem ARM (Advanced RISC Machine).|  
-|`anycpu`|Kompiluje zestaw do uruchomienia na dowolnej platformie. Aplikacja będzie działać jako aplikacja 32-bitowa w 32-bitowych wersjach systemu Windows i jako aplikacja 64-bitowa w systemie 64-bitowe wersje systemu Windows. Ta flaga jest wartością domyślną.|  
-|`anycpu32bitpreferred`|Kompiluje zestaw do uruchomienia na dowolnej platformie. Aplikacja będzie działać jako aplikacja 32-bitowa na 32-bitowych i 64-bitowych wersjach systemu Windows. Ta flaga jest prawidłowa tylko dla plików wykonywalnych (. EXE) i wymaga .NET Framework 4,5.|  
+|`x86`|Compiles your assembly to be run by the 32-bit, x86-compatible CLR.|  
+|`x64`|Compiles your assembly to be run by the 64-bit CLR on a computer that supports the AMD64 or EM64T instruction set.|  
+|`Itanium`|Compiles your assembly to be run by the 64-bit CLR on a computer with an Itanium processor.|  
+|`arm`|Compiles your assembly to be run on a computer with an ARM (Advanced RISC Machine) processor.|  
+|`anycpu`|Compiles your assembly to run on any platform. The application will run as a 32-bit application on 32-bit versions of Windows and as a 64-bit application on 64-bit versions of Windows. This flag is the default value.|  
+|`anycpu32bitpreferred`|Compiles your assembly to run on any platform. The application will run as a 32-bit application on both 32-bit and 64-bit versions of Windows. This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj opcji `-platform`, aby określić typ procesora docelowego dla pliku wyjściowego.  
+ Use the `-platform` option to specify the type of processor targeted by the output file.  
   
- Ogólnie rzecz biorąc, zestawy .NET Framework, które zapisały w Visual Basic, będą uruchamiane niezależnie od platformy. Jednak istnieją sytuacje, które zachowują się inaczej na różnych platformach. Te typowe przypadki są następujące:  
+ In general, .NET Framework assemblies written in Visual Basic will run the same regardless of the platform. However, there are some cases that behave differently on different platforms. These common cases are:  
   
-- Struktury zawierające elementy członkowskie, które zmieniają rozmiar w zależności od platformy, takie jak dowolny typ wskaźnika.  
+- Structures that contain members that change size depending on the platform, such as any pointer type.  
   
-- Arytmetyczny wskaźnik obejmujący stałe rozmiary.  
+- Pointer arithmetic that includes constant sizes.  
   
-- Nieprawidłowe wywołanie platformy lub deklaracje COM używające `Integer` dla dojść zamiast <xref:System.IntPtr>.  
+- Incorrect platform invoke or COM declarations that use `Integer` for handles instead of <xref:System.IntPtr>.  
   
-- Rzutowanie <xref:System.IntPtr> na `Integer`.  
+- Casting <xref:System.IntPtr> to `Integer`.  
   
-- Użycie wywołania platformy lub międzyoperacyjności modelu COM ze składnikami, które nie istnieją na wszystkich platformach.  
+- Using platform invoke or COM interop with components that do not exist on all platforms.  
   
- Opcja **-platform** ogranicza niektóre problemy, Jeśli wiesz, że masz założeń dotyczących architektury, w której kod będzie uruchamiany. Opracowany  
+ The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. Specifically:  
   
-- Jeśli zdecydujesz się na użycie platformy 64-bitowej, a aplikacja jest uruchamiana na komputerze 32-bitowym, komunikat o błędzie jest bardzo wcześniejszy i jest bardziej ukierunkowany na problem niż błąd, który wystąpi bez użycia tego przełącznika.  
+- If you decide to target a 64-bit platform, and the application is run on a 32-bit machine, the error message comes much earlier and is more targeted at the problem than the error that occurs without using this switch.  
   
-- Jeśli ustawisz flagę `x86` dla opcji, a aplikacja zostanie uruchomiona na komputerze 64-bitowym, aplikacja zostanie uruchomiona w podsystemie WOW zamiast uruchamiać natywnie.  
+- If you set the `x86` flag on the option and the application is subsequently run on a 64-bit machine, the application will run in the WOW subsystem instead of running natively.  
   
- W 64-bitowym systemie operacyjnym Windows:  
+ On a 64-bit Windows operating system:  
   
-- Zestawy skompilowane z `-platform:x86` będą wykonywane na 32-bitowym CLR uruchomionym w emulatorze WOW64.  
+- Assemblies compiled with `-platform:x86` will execute on the 32-bit CLR running under WOW64.  
   
-- Pliki wykonywalne skompilowane z `-platform:anycpu` będą wykonywane na 64-bitowym CLR.  
+- Executables compiled with the `-platform:anycpu` will execute on the 64-bit CLR.  
   
-- Biblioteka DLL skompilowana z `-platform:anycpu` będzie wykonywana w tym samym środowisku CLR co proces, w którym został załadowany.  
+- A DLL compiled with the `-platform:anycpu` will execute on the same CLR as the process into which it loaded.  
   
-- Pliki wykonywalne, które są kompilowane przy użyciu `-platform:anycpu32bitpreferred`, będą wykonywane na 32-bitowym środowisku CLR.  
+- Executables that are compiled with `-platform:anycpu32bitpreferred` will execute on the 32-bit CLR.  
   
- Aby uzyskać więcej informacji na temat sposobu tworzenia aplikacji do uruchamiania w 64-bitowej wersji systemu Windows, zobacz [64-bitowe aplikacje](../../../framework/64-bit-apps.md).  
+ For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Aby ustawić platformę w środowisku IDE programu Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
   
-1. W **Eksplorator rozwiązań**wybierz projekt, otwórz menu **projekt** , a następnie kliknij przycisk **Właściwości**.  
+1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
   
-2. Na karcie **kompilacja** zaznacz lub wyczyść pole wyboru **Preferuj 32-bitowe** , lub na liście **docelowy procesor CPU** wybierz wartość.  
+2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
   
-     Aby uzyskać więcej informacji, zobacz [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład ilustruje sposób użycia opcji kompilatora `-platform`.  
+ The following example illustrates how to use the `-platform` compiler option.  
   
 ```console
 vbc -platform:x86 myFile.vb  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [-Target (Visual Basic)](target.md)
-- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [-target (Visual Basic)](target.md)
+- [Visual Basic Command-Line Compiler](index.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

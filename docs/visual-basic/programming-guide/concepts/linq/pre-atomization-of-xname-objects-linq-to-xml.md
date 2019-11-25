@@ -1,23 +1,23 @@
 ---
-title: Wstępne rozproszenie obiektów XName (LINQ to XML) (Visual Basic)
+title: Wstępne rozproszenie obiektów XName (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 06ea104b-f44c-4bb2-9c34-889ae025c80d
-ms.openlocfilehash: 250b7aa8060c8196c28725fded090e2a63a0ee54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a87a37c5fe2fc29ca980c77d9c775b2b1e909cc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665848"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353116"
 ---
-# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Wstępne rozproszenie obiektów XName (LINQ to XML) (Visual Basic)
-Jednym ze sposobów, aby zwiększyć wydajność w składniku LINQ to XML jest wstępnie wyodrębnić <xref:System.Xml.Linq.XName> obiektów. Wstępne rozproszenie oznacza, że możesz przypisać ciąg <xref:System.Xml.Linq.XName> obiekt przed przystąpieniem do tworzenia drzewa XML za pomocą konstruktorów z <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XAttribute> klasy. Następnie, zamiast przekazywać ciąg do konstruktora, który użyć niejawna konwersja ciągu na <xref:System.Xml.Linq.XName>, należy przekazać zainicjowanej <xref:System.Xml.Linq.XName> obiektu.  
+# <a name="pre-atomization-of-xname-objects-linq-to-xml-visual-basic"></a>Pre-Atomization of XName Objects (LINQ to XML) (Visual Basic)
+One way to improve performance in LINQ to XML is to pre-atomize <xref:System.Xml.Linq.XName> objects. Pre-atomization means that you assign a string to an <xref:System.Xml.Linq.XName> object before you create the XML tree by using the constructors of the <xref:System.Xml.Linq.XElement> and  <xref:System.Xml.Linq.XAttribute> classes. Then, instead of passing a string to the constructor, which would use the implicit conversion from string to <xref:System.Xml.Linq.XName>, you pass the initialized <xref:System.Xml.Linq.XName> object.  
   
- Poprawia to wydajność, podczas tworzenia dużych drzewa XML, w którym są powtarzane określonej nazwy. Aby to zrobić, możesz zadeklarować i zainicjować <xref:System.Xml.Linq.XName> obiektów przed konstruowania drzewa XML, a następnie użyj <xref:System.Xml.Linq.XName> obiektów zamiast określania ciągów nazw elementów i atrybutów. Ta technika może przynieść znaczący wzrost wydajności w przypadku tworzenia dużej liczby elementów (lub atrybutów) o takiej samej nazwie.  
+ This improves performance when you create a large XML tree in which specific names are repeated. To do this, you declare and initialize <xref:System.Xml.Linq.XName> objects before you construct the XML tree, and then use the <xref:System.Xml.Linq.XName> objects instead of specifying strings for the element and attribute names. This technique can yield significant performance gains if you are creating a large number of elements (or attributes) with the same name.  
   
- Wstępne rozproszenie należy przetestować przy użyciu danego scenariusza, aby zdecydować, czy należy jej używać.  
+ You should test pre-atomization with your scenario to decide if you should use it.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia to.  
+ The following example demonstrates this.  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -39,7 +39,7 @@ Console.WriteLine(root__2)
 </Root>  
 ```  
   
- Poniższy przykład pokazuje tę samą technikę, w którym dokument XML jest w przestrzeni nazw:  
+ The following example shows the same technique where the XML document is in a namespace:  
   
 ```vb  
 Dim aw As XNamespace = "http://www.adventure-works.com"  
@@ -62,7 +62,7 @@ Console.WriteLine(root__2)
 </aw:Root>  
 ```  
   
- Poniższy przykład jest bardziej przypominające, co prawdopodobnie wystąpi w świecie rzeczywistym. W tym przykładzie zawartość elementu jest dostarczana przez kwerendę:  
+ The following example is more similar to what you will likely encounter in the real world. In this example, the content of the element is supplied by a query:  
   
 ```vb  
 Dim Root__1 As XName = "Root"  
@@ -76,7 +76,7 @@ Dim t2 As DateTime = DateTime.Now
 Console.WriteLine("Time to construct:{0}", t2 - t1)  
 ```  
   
- Poprzedni przykład działa lepiej niż poniższy przykład, w których nazwy są nie wstępnie rozproszone obiekty:  
+ The previous example performs better than the following example, in which names are not pre-atomized:  
   
 ```vb  
 Dim t1 As DateTime = DateTime.Now  
@@ -88,5 +88,5 @@ Console.WriteLine("Time to construct:{0}", t2 - t1)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wydajność (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
-- [Rozproszone obiekty XName i Xnamespace (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)
+- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Atomized XName and XNamespace Objects (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

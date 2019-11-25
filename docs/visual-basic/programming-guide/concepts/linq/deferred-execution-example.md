@@ -1,21 +1,21 @@
 ---
-title: Przykład wykonania odroczonego (Visual Basic)
+title: Przykład wykonania odroczonego
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583330"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354227"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Przykład wykonania odroczonego (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
 
-W tym temacie pokazano, w jaki sposób odroczone wykonywanie i Ocena z opóźnieniem wpływają na wykonywanie zapytań LINQ to XML.
+This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje kolejność wykonywania przy użyciu metody rozszerzenia, która korzysta z odroczonego wykonania. Przykład deklaruje tablicę trzech ciągów. Następnie wykonuje iterację w kolekcji zwróconej przez `ConvertCollectionToUpperCase`.
+The following example shows the order of execution when using an extension method that uses deferred execution. The example declares an array of three strings. It then iterates through the collection returned by `ConvertCollectionToUpperCase`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -57,10 +57,10 @@ ToUpper: source ghi
 Main: str GHI
 ```
 
-Należy zauważyć, że podczas iteracji kolekcji zwróconej przez `ConvertCollectionToUpperCase` każdy element zostanie pobrany z tablicy ciągów źródłowych i przekonwertowany na wielkie litery przed pobraniem następnego elementu z tablicy ciągów źródłowych.
+Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.
 
-Można zobaczyć, że cała tablica ciągów nie jest konwertowana na wielkie przed każdym elementem w zwróconej kolekcji, w pętli `foreach` w `Main`.
+You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: wykonywanie odroczone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

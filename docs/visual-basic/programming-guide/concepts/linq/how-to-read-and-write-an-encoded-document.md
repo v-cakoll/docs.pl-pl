@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: odczytywanie i pisanie zakodowanego dokumentu (Visual Basic)'
+title: 'How to: Read and Write an Encoded Document'
 ms.date: 07/20/2015
 ms.assetid: 159d868f-5ac8-40f2-95ca-07dd925f35c6
-ms.openlocfilehash: 02311a572afac427329b051251639a10d2e7f5f8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 913b08d91b8d4886bc74cbe538df8e27826a6cca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582812"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347629"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>Instrukcje: odczytywanie i pisanie zakodowanego dokumentu (Visual Basic)
+# <a name="how-to-read-and-write-an-encoded-document-visual-basic"></a>How to: Read and Write an Encoded Document (Visual Basic)
 
-Aby utworzyć zakodowany dokument XML, należy dodać <xref:System.Xml.Linq.XDeclaration> do drzewa XML, ustawiając kodowanie na żądaną nazwę strony kodowej.
+To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.
 
-Każda wartość zwrócona przez <xref:System.Text.Encoding.WebName%2A> jest prawidłową wartością.
+Any value returned by <xref:System.Text.Encoding.WebName%2A> is a valid value.
 
-Jeśli odczytasz zakodowany dokument, właściwość <xref:System.Xml.Linq.XDeclaration.Encoding%2A> zostanie ustawiona na nazwę strony kodowej.
+If you read an encoded document, the <xref:System.Xml.Linq.XDeclaration.Encoding%2A> property will be set to the code page name.
 
-Jeśli ustawisz <xref:System.Xml.Linq.XDeclaration.Encoding%2A> na poprawną nazwę strony kodowej, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zostanie Zserializowany z określonym kodowaniem.
+If you set <xref:System.Xml.Linq.XDeclaration.Encoding%2A> to a valid code page name, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] will serialize with the specified encoding.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład tworzy dwa dokumenty, jeden z kodowaniem UTF-8 i jeden z kodowaniem UTF-16. Następnie ładuje dokumenty i drukuje kodowanie do konsoli programu.
+The following example creates two documents, one with utf-8 encoding, and one with utf-16 encoding. It then loads the documents and prints the encoding to the console.
 
 ```vb
 Console.WriteLine("Creating a document with utf-8 encoding")
@@ -81,4 +81,4 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [Zaawansowane programowanie LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

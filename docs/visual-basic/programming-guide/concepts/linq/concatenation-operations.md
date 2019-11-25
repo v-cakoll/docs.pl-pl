@@ -1,31 +1,31 @@
 ---
-title: Operacje łączenia (Visual Basic)
+title: Operacje łączenia
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 054f9253cead4d2632f6f4b5631da64159a6de48
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: db9bebb967faf3791fd28c4fd4dac9591fd2c9f8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054135"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345677"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Operacje łączenia (Visual Basic)
-Łączenie odnosi się do operacji dołączania jednej sekwencji do innego.  
+# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
+Concatenation refers to the operation of appending one sequence to another.  
   
- Poniższa ilustracja przedstawia operację łączenia dwóch sekwencji znaków.  
+ The following illustration depicts a concatenation operation on two sequences of characters.  
   
- ![Grafika przedstawiająca łączenie dwóch sekwencji.](./media/concatenation-operations/concatenation-two-sequences.png)  
+ ![Graphic showing concatenation of two sequences.](./media/concatenation-operations/concatenation-two-sequences.png)  
   
- Metody standardowego operatora zapytań, które wykonują łączenia są wymienione w poniższej sekcji.  
+ The standard query operator methods that perform concatenation are listed in the following section.  
   
 ## <a name="methods"></a>Metody  
   
-|Nazwa metody|Opis|Składnia wyrażeń języka Visual Basic|Więcej informacji|  
+|Method Name|Opis|Visual Basic Query Expression Syntax|Więcej informacji|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|concat|Łączy dwie sekwencje w celu utworzenia jednej sekwencji.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
+|Concat|Concatenates two sequences to form one sequence.|Nie dotyczy.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Omówienie operatorów standardowej kwerendy (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

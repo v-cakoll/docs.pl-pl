@@ -1,31 +1,31 @@
 ---
-title: 'Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)'
+title: 'How to: Perform Streaming Transform of Large XML Documents'
 ms.date: 07/20/2015
 ms.assetid: 3d954cc9-4b3c-4b47-8132-ff7541cff53b
-ms.openlocfilehash: 8761f5fbf4e6137c1ae6b202b6717579c6f78d4f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 58bc76e6f2a269b0baac009f1247d5e94d508cbd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789132"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344509"
 ---
-# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>Instrukcje: Wykonywanie przekształceń strumieniowych dużych dokumentów XML (Visual Basic)
-Czasami trzeba Przekształcanie dużych plików XML i pisania aplikacji, więc, że zużycie pamięci aplikacji jest przewidywalne. Jeśli zostanie podjęta próba wypełnianie drzewa XML z bardzo dużego pliku XML, wykorzystanie pamięci będzie proporcjonalny do rozmiaru pliku (oznacza to, że nadmierne). W związku z tym należy zamiast tego użyj technika przesyłania strumieniowego.  
+# <a name="how-to-perform-streaming-transform-of-large-xml-documents-visual-basic"></a>How to: Perform Streaming Transform of Large XML Documents (Visual Basic)
+Sometimes you have to transform large XML files, and write your application so that the memory footprint of the application is predictable. If you try to populate an XML tree with a very large XML file, your memory usage will be proportional to the size of the file (that is, excessive). Therefore, you should use a streaming technique instead.  
   
- Techniki przesyłania strumieniowego najlepiej są stosowane w sytuacji, gdy trzeba przetworzyć tylko jeden raz w dokumencie źródłowym i pozwala na przetwarzanie elementów w kolejności dokumentu. Niektóre standardowe zapytanie operatorów, takich jak <xref:System.Linq.Enumerable.OrderBy%2A>iteracji ich źródła, zbieraj wszystkie dane, ją posortować i na koniec uzyskanie pierwszego elementu w sekwencji. Należy pamiętać, że użycie operatora zapytania, który materializuje źródła przed reaguje na pierwszy element, możesz nie zostaną zachowane zużycie pamięci aplikacji.  
+ Streaming techniques are best applied in situations where you need to process the source document only once, and you can process the elements in document order. Certain standard query operators, such as <xref:System.Linq.Enumerable.OrderBy%2A>, iterate their source, collect all of the data, sort it, and then finally yield the first item in the sequence. Note that if you use a query operator that materializes its source before yielding the first item, you will not retain a small memory footprint for your application.  
   
- Nawet w przypadku używania techniki opisanej w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), Jeśli spróbujesz utworzyć drzewa XML zawierający przekształcone dokumentu jest zbyt duże użycie pamięci.  
+ Even if you use the technique described in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md), if you try to assemble an XML tree that contains the transformed document, memory usage will be too great.  
   
- Dostępne są dwie główne opcje. Jedno z podejść jest użycie właściwości przetwarzanie odroczone <xref:System.Xml.Linq.XStreamingElement>. Innym rozwiązaniem jest utworzenie <xref:System.Xml.XmlWriter>oraz korzystać z możliwości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do zapisania elementów <xref:System.Xml.XmlWriter>. W tym temacie przedstawiono oba podejścia.  
+ There are two main approaches. One approach is to use the deferred processing characteristics of <xref:System.Xml.Linq.XStreamingElement>. Another approach is to create an <xref:System.Xml.XmlWriter>, and use the capabilities of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>. This topic demonstrates both approaches.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład opiera się na przykład w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- W tym przykładzie użyto funkcji odroczonego wykonania <xref:System.Xml.Linq.XStreamingElement> do przesyłania strumieniowego danych wyjściowych. W tym przykładzie można przekształcać bardzo dużych dokumentów przy zachowaniu zużycie pamięci.  
+ This example uses the deferred execution capabilities of <xref:System.Xml.Linq.XStreamingElement> to stream the output. This example can transform a very large document while maintaining a small memory footprint.  
   
- Należy pamiętać, że niestandardowe osi (`StreamCustomerItem`) napisano specjalnie tak, aby oczekuje, że dokument zawierający `Customer`, `Name`, i `Item` elementów i że tak jak w następującym dokumencie Source.xml rozmieszczenia tych elementów. Bardziej niezawodna implementacji będzie jednak przygotowane przeanalizować nieprawidłowy dokument.  
+ Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document. A more robust implementation, however, would be prepared to parse an invalid document.  
   
- Dokument źródłowy Source.xml jest następująca:  
+ The following is the source document, Source.xml:  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>   
@@ -246,15 +246,15 @@ End Class
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład opiera się również na przykład w [jak: Stream strumieniowe fragmentów z dostępem do informacji o nagłówku (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
+ The following example also builds on the example in [How to: Stream XML Fragments with Access to Header Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md).  
   
- W tym przykładzie użyto możliwości [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do zapisania elementów <xref:System.Xml.XmlWriter>. W tym przykładzie można przekształcać bardzo dużych dokumentów przy zachowaniu zużycie pamięci.  
+ This example uses the capability of [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to write elements to an <xref:System.Xml.XmlWriter>. This example can transform a very large document while maintaining a small memory footprint.  
   
- Należy pamiętać, że niestandardowe osi (`StreamCustomerItem`) napisano specjalnie tak, aby oczekuje, że dokument zawierający `Customer`, `Name`, i `Item` elementów i że tak jak w następującym dokumencie Source.xml rozmieszczenia tych elementów. Jednak implementacja bardziej niezawodne, albo czy sprawdzanie poprawności dokumentu źródłowego przy użyciu XSD lub jest gotowy do analizowania nieprawidłowy dokument.  
+ Note that the custom axis (`StreamCustomerItem`) is specifically written so that it expects a document that has `Customer`, `Name`, and `Item` elements, and that those elements will be arranged as in the following Source.xml document. A more robust implementation, however, would either validate the source document with an XSD, or would be prepared to parse an invalid document.  
   
- W tym przykładzie użyto tego samego dokumentu źródłowego Source.xml, jak w poprzednim przykładzie w tym temacie. Generuje ten sam wynik.  
+ This example uses the same source document, Source.xml, as the previous example in this topic. It also produces exactly the same output.  
   
- Za pomocą <xref:System.Xml.Linq.XStreamingElement> dla przesyłania strumieniowego wyjściowy plik XML jest preferowana względem zapisywania <xref:System.Xml.XmlWriter>.  
+ Using <xref:System.Xml.Linq.XStreamingElement> for streaming the output XML is preferred over writing to an <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Module Module1  
@@ -441,4 +441,4 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

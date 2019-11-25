@@ -1,5 +1,5 @@
 ---
-title: Partial (Visual Basic)
+title: Częściowe
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Partial
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: acfe47f52ede289093b3554a7dd190ef3f0e2c80
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: df85571b757fd54496677bad1195fab9690b79cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592116"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351358"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
-Wskazuje, że deklaracja typu jest częściową definicją typu.  
+Indicates that a type declaration is a partial definition of the type.  
   
- Można podzielić definicję typu między kilka deklaracji za pomocą słowa kluczowego `Partial`. Możesz użyć dowolną liczbę deklaracji częściowych, tak jak wiele różnych plików źródłowych. Wszystkie deklaracje muszą jednak znajdować się w tym samym zestawie i w tej samej przestrzeni nazw.  
+ You can divide the definition of a type among several declarations by using the `Partial` keyword. You can use as many partial declarations as you want, in as many different source files as you want. However, all the declarations must be in the same assembly and the same namespace.  
   
 > [!NOTE]
-> Visual Basic obsługuje *metody częściowe*, które zwykle są implementowane w klasach częściowych. Aby uzyskać więcej informacji, zobacz [częściowe metody](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) i [Sub instrukcji](../../../visual-basic/language-reference/statements/sub-statement.md).  
+> Visual Basic supports *partial methods*, which are typically implemented in partial classes. For more information, see [Partial Methods](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) and [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -45,53 +45,53 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Termin|Definicja|  
 |---|---|  
-|`attrlist`|Opcjonalny. Lista atrybutów, które są stosowane do tego typu. Należy ująć [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md) w nawiasy kątowe (`< >`).|  
-|`accessmodifier`|Opcjonalny. Określa kod, który może uzyskać dostęp do tego typu. Zobacz [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcjonalne. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Opcjonalny. Zobacz [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Opcjonalny. Zobacz [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Wymagany. Nazwa tego typu. Musi odpowiadać nazwie zdefiniowanej we wszystkich innych deklaracjach częściowych tego samego typu.|  
-|`Of`|Opcjonalny. Określa, że jest to typ ogólny. Zobacz [typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Wymagane w przypadku użycia [programu](../../../visual-basic/language-reference/statements/of-clause.md). Zobacz [Lista typów](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcjonalny. Zobacz [instrukcje Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
-|`classname`|Wymagane w przypadku użycia `Inherits`. Nazwa klasy lub interfejsu, z której pochodzi ta klasa.|  
-|`Implements`|Opcjonalny. Zobacz [Implements, instrukcja](../../../visual-basic/language-reference/statements/implements-statement.md).|  
-|`interfacenames`|Wymagane w przypadku użycia `Implements`. Nazwy interfejsów implementowanych przez ten typ.|  
-|`variabledeclarations`|Opcjonalny. Instrukcje, które deklarują dodatkowe zmienne i zdarzenia dla typu.|  
-|`proceduredeclarations`|Opcjonalny. Instrukcje, które deklarują i definiują dodatkowe procedury dla typu.|  
-|`End Class` lub `End Structure`|Zakończenie tej częściowej `Class` lub `Structure` definicji.|  
+|`attrlist`|Opcjonalny. List of attributes that apply to this type. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets (`< >`).|  
+|`accessmodifier`|Opcjonalny. Specifies what code can access this type. See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`Shadows`|Opcjonalny. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Opcjonalny. See [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Opcjonalny. See [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`name`|Wymagany. Name of this type. Must match the name defined in all other partial declarations of the same type.|  
+|`Of`|Opcjonalny. Specifies that this is a generic type. See [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Required if you use [Of](../../../visual-basic/language-reference/statements/of-clause.md). See [Type List](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Opcjonalny. See [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`classname`|Required if you use `Inherits`. The name of the class or interface from which this class derives.|  
+|`Implements`|Opcjonalny. See [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`interfacenames`|Required if you use `Implements`. The names of the interfaces this type implements.|  
+|`variabledeclarations`|Opcjonalny. Statements which declare additional variables and events for the type.|  
+|`proceduredeclarations`|Opcjonalny. Statements which declare and define additional procedures for the type.|  
+|`End Class` or `End Structure`|Ends this partial `Class` or `Structure` definition.|  
   
 ## <a name="remarks"></a>Uwagi  
- Visual Basic używa definicji klasy częściowej do oddzielenia wygenerowanego kodu od kodu napisanego przez użytkownika w oddzielnych plikach źródłowych. Na przykład **Projektant formularzy systemu Windows** definiuje klasy częściowe dla kontrolek, takich jak <xref:System.Windows.Forms.Form>. Nie należy modyfikować wygenerowanego kodu w tych kontrolkach.  
+ Visual Basic uses partial-class definitions to separate generated code from user-authored code in separate source files. For example, the **Windows Form Designer** defines partial classes for controls such as <xref:System.Windows.Forms.Form>. You should not modify the generated code in these controls.  
   
- W przypadku tworzenia typu częściowego stosowane są wszystkie reguły tworzenia klas, struktur, interfejsów i modułów, takie jak te dla modyfikatorów użycia i dziedziczenia.  
+ All the rules for class, structure, interface, and module creation, such as those for modifier usage and inheritance, apply when creating a partial type.  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
   
-- W normalnych warunkach nie należy dzielić na rozwój jednego typu między dwie lub więcej deklaracji. W związku z tym w większości przypadków nie jest potrzebne słowo kluczowe `Partial`.  
+- Under normal circumstances, you should not split the development of a single type across two or more declarations. Therefore, in most cases you do not need the `Partial` keyword.  
   
-- W celu zapewnienia czytelności każda częściowa deklaracja typu powinna zawierać słowo kluczowe `Partial`. Kompilator zezwala przynajmniej jednej deklaracji częściowej na pominięcie słowa kluczowego; Jeśli dwa lub więcej pomijają, kompilator sygnalizuje błąd.  
+- For readability, every partial declaration of a type should include the `Partial` keyword. The compiler allows at most one partial declaration to omit the keyword; if two or more omit it the compiler signals an error.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- **Związek deklaracji.** Kompilator traktuje typ jako związek wszystkich jego częściowych deklaracji. Każdy modyfikator od każdej częściowej definicji ma zastosowanie do całego typu, a każdy element członkowski z każdej częściowej definicji jest dostępny dla całego typu.  
+- **Union of Declarations.** The compiler treats the type as the union of all its partial declarations. Every modifier from every partial definition applies to the entire type, and every member from every partial definition is available to the entire type.  
   
-- **Promocja typu nie jest dozwolona dla typów częściowych w modułach.** Jeśli częściowa definicja znajduje się w module, podwyższanie poziomu tego typu jest automatycznie obniżane. W takim przypadku zestaw częściowych definicji może spowodować nieoczekiwane wyniki, a nawet błędy kompilatora. Aby uzyskać więcej informacji, zobacz [Promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Type Promotion Not Allowed For Partial Types in Modules.** If a partial definition is inside a module, type promotion of that type is automatically defeated. In such a case, a set of partial definitions can cause unexpected results and even compiler errors. For more information, see [Type Promotion](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
-     Kompilator Scala definicje częściowe tylko wtedy, gdy ich w pełni kwalifikowane ścieżki są identyczne.  
+     The compiler merges partial definitions only when their fully qualified paths are identical.  
   
- Słowa kluczowego `Partial` można używać w następujących kontekstach:  
+ The `Partial` keyword can be used in these contexts:  
   
  [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)  
   
  [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład dzieli definicję klasy `sampleClass` na dwie deklaracje, z których każdy definiuje inną procedurę `Sub`.  
+ The following example splits the definition of class `sampleClass` into two declarations, each of which defines a different `Sub` procedure.  
   
  [!code-vb[VbVbalrKeywords#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#3)]  
   
- Dwie częściowe definicje w poprzednim przykładzie mogą znajdować się w tym samym pliku źródłowym lub w dwóch różnych plikach źródłowych.  
+ The two partial definitions in the preceding example could be in the same source file or in two different source files.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -99,5 +99,5 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
 - [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Promocja typu](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Metody częściowe](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

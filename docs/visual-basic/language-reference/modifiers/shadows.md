@@ -1,5 +1,5 @@
 ---
-title: Shadows (Visual Basic)
+title: Shadows
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Shadows
@@ -11,40 +11,40 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: c9dfff99e2634b79ad6b44721f40583d21c9b98e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e9a423fa69ad1dcd8c1d4a5b7085e5b5da548f93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664130"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351263"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
-Określa, że zadeklarowany element programistyczny ponownie deklaruje i ukrywa element o identycznej nazwie, lub zestaw przeciążonych elementów w klasie bazowej.
+Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
 
 ## <a name="remarks"></a>Uwagi
 
-Głównym celem cieniowania (który jest również nazywany *ukrycie przez nazwę*) jest zachowanie definicji usługi składowych klasy. Klasy bazowej może przechodzić zmianę, która tworzy element o takiej samej nazwie jako jeden, który został już zdefiniowany. W takim przypadku `Shadows` wymusza modyfikator odwołuje się do swojej klasy, które mają zostać rozwiązane do elementu członkowskiego zdefiniowane, zamiast na nowy element klasy bazowej.
+The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
 
-Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego elementu, ale istnieją znaczne różnice między dwa podejścia. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
-## <a name="rules"></a>reguły
+## <a name="rules"></a>Rules
 
-- **Kontekst deklaracji.** Możesz użyć `Shadows` tylko na poziomie klasy. Oznacza to, że kontekst deklaracji `Shadows` element musi być klasą i nie może być plik źródłowy, przestrzeń nazw, interfejsu, moduł, struktura lub procedury.
+- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
 
-  Można zadeklarować tylko jeden element przesłaniania w instrukcji jednej deklaracji.
+  You can declare only one shadowing element in a single declaration statement.
 
-- **Modyfikatory połączone.** Nie można określić `Shadows` wraz z `Overloads`, `Overrides`, lub `Static` w tej samej deklaracji.
+- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
 
-- **Typy elementów.** Można w tle dowolnego typu element zadeklarowany za pomocą dowolnego typu. Jeśli użytkownik w tle, właściwość lub procedura z inną właściwość lub procedura, parametry oraz zwracany typ musi odpowiadać znajdującymi się na właściwości klasy bazowej lub procedury.
+- **Element Types.** You can shadow any kind of declared element with any other kind. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
 
-- **Uzyskiwanie dostępu do.** Element zasłonięte w klasie bazowej niedostępności zwykle od w klasie pochodnej, która przesłania go. Jednak mają zastosowanie następujące kwestie.
+- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
 
-  - Jeśli element przesłaniania nie jest dostępne z kodu, odwołując się do niego, odwołanie zostaje rozpoznany tekst z cieniem elementu. Na przykład jeśli `Private` element zasłania elementu klasy podstawowej, kod, który nie ma uprawnień dostępu do `Private` element uzyskuje dostęp do elementu klasy podstawowej zamiast tego.
+  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
 
-  - Jeśli w tle elementu możesz uzyskiwać dostęp element zasłonięte przez obiekt, który zadeklarowane z typem klasy bazowej. Możesz również do niego dostęp za pośrednictwem `MyBase`.
+  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
 
-`Shadows` Modyfikator mogą być używane w tych kontekstach:
+The `Shadows` modifier can be used in these contexts:
 
 - [Class, instrukcja](../../../visual-basic/language-reference/statements/class-statement.md)
 
@@ -62,9 +62,9 @@ Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego element
 
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Instrukcja Interface](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface, instrukcja](../../../visual-basic/language-reference/statements/interface-statement.md)
 
-- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
 
 - [Structure, instrukcja](../../../visual-basic/language-reference/statements/structure-statement.md)
 
@@ -82,4 +82,4 @@ Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego element
 - [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

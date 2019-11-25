@@ -1,21 +1,21 @@
 ---
-title: Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
+title: Przykład, który wyprowadza części dokumentu Office Open XML Document
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 47a4ac649fb370145962247e07e1d8841411cac0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61931573"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353496"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Przykład, który wyprowadza części dokumentu programu Office Open XML (Visual Basic)
-W tym temacie przedstawiono sposób Otwórz dokument XML otwórz pakietu Office i przejdź do części znajdujący się w nim.  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Example that Outputs Office Open XML Document Parts (Visual Basic)
+This topic shows how to open an Office Open XML document and access parts within it.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład spowoduje otwarcie dokumentu Office Open XML i drukuje dokument i część stylu do konsoli.  
+ The following example opens an Office Open XML document, and prints the document part and the style part to the console.  
   
- W tym przykładzie użyto klasy z zestawu WindowsBase. Używa typów w <xref:System.IO.Packaging?displayProperty=nameWithType> przestrzeni nazw.  
+ This example uses classes from the WindowsBase assembly. It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -66,4 +66,4 @@ End Using
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Szczegóły pakietu Office otwieranie dokumentów WordprocessingML XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+- [Details of Office Open XML WordprocessingML Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wywoływanie kompilatora wiersza polecenia (Visual Basic)'
+title: 'Porady: wywoływanie kompilatora wiersza polecenia'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,58 +7,58 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: a81d5b4f4eae76b0306e2d27475cb8527bda0ff2
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b34ebba68c9c9b2a8335822d0ffaef2a9b06d7c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054218"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344258"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Instrukcje: Wywoływanie kompilatora wiersza polecenia (Visual Basic)
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Porady: wywoływanie kompilatora wiersza polecenia (Visual Basic)
 
-Kompilator wiersza polecenia można wywołać, wpisując nazwę pliku wykonywalnego w wierszu polecenia, znanego również jako monit MS-DOS. Jeśli kompilujesz z domyślnego wiersza polecenia systemu Windows, musisz wpisać w pełni kwalifikowaną ścieżkę do pliku wykonywalnego. Aby zastąpić to zachowanie domyślne, można użyć wiersz polecenia dla deweloperów dla programu Visual Studio lub zmodyfikować zmienną środowiskową PATH. Oba umożliwiają kompilowanie z dowolnego katalogu przez wpisanie nazwy kompilatora.
+You can invoke the command-line compiler by typing the name of its executable file into the command line, also known as the MS-DOS prompt. If you compile from the default Windows Command Prompt, you must type the fully qualified path to the executable file. To override this default behavior, you can either use the Developer Command Prompt for Visual Studio, or modify the PATH environment variable. Both allow you to compile from any directory by simply typing the compiler name.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Aby wywołać kompilator przy użyciu wiersz polecenia dla deweloperów dla programu Visual Studio
+## <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>To invoke the compiler using the Developer Command Prompt for Visual Studio
 
-1. Otwórz folder programu Visual Studio Tools w grupie programów Microsoft Visual Studio.
+1. Open the Visual Studio Tools program folder within the Microsoft Visual Studio program group.
 
-2. Możesz użyć wiersz polecenia dla deweloperów dla programu Visual Studio, aby uzyskać dostęp do kompilatora z dowolnego katalogu na komputerze, jeśli jest zainstalowany program Visual Studio.
+2. You can use the Developer Command Prompt for Visual Studio to access the compiler from any directory on your machine, if Visual Studio is installed.
 
-3. Wywołaj wiersz polecenia dla deweloperów dla programu Visual Studio.
+3. Invoke the Developer Command Prompt for Visual Studio.
 
-4. W wierszu polecenia wpisz `vbc.exe` *sourceFileName* , a następnie naciśnij klawisz ENTER.
+4. At the command line, type `vbc.exe` *sourceFileName* and then press ENTER.
 
-    Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles`, należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb`, można go skompilować, wpisując. `vbc.exe Source.vb`
+    For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
-## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>Aby ustawić zmienną środowiskową PATH na kompilator dla wiersza polecenia systemu Windows
+## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>To set the PATH environment variable to the compiler for the Windows Command Prompt
 
-1. Użyj funkcji wyszukiwania systemu Windows, aby znaleźć VBC. exe na dysku lokalnym.
+1. Use the Windows Search feature to find Vbc.exe on your local disk.
 
-    Dokładna nazwa katalogu, w którym znajduje się kompilator, zależy od lokalizacji katalogu systemu Windows i zainstalowanej wersji programu ".NET Framework". Jeśli masz zainstalowaną więcej niż jedną wersję ".NET Framework", musisz określić, która wersja ma być używana (zazwyczaj Najnowsza wersja).
+    The exact name of the directory where the compiler is located depends on the location of the Windows directory and the version of the ".NET Framework" installed. If you have more than one version of the ".NET Framework" installed, you must determine which version to use (typically the latest version).
 
-2. W menu **Start** kliknij prawym przyciskiem myszy pozycję **mój komputer**, a następnie kliknij polecenie **Właściwości** w menu skrótów.
+2. From your **Start** Menu, right-click **My Computer**, and then click **Properties** from the shortcut menu.
 
-3. Kliknij kartę **Zaawansowane** , a następnie kliknij pozycję **zmienne środowiskowe**.
+3. Click the **Advanced** tab, and then click **Environment Variables**.
 
-4. W okienku zmienne **systemowe** wybierz pozycję **ścieżka** z listy, a następnie kliknij pozycję **Edytuj**.
+4. In the **System** variables pane, select **Path** from the list and click **Edit**.
 
-5. W oknie dialogowym **Edycja zmiennej systemowej** przesuń punkt wstawiania do końca ciągu w polu **wartość zmiennej** i wpisz średnika (;) a następnie pełna nazwa katalogu znaleziona w kroku 1.
+5. In the **Edit System** Variable dialog box, move the insertion point to the end of the string in the **Variable Value** field and type a semicolon (;) followed by the full directory name found in Step 1.
 
-6. Kliknij przycisk **OK** , aby potwierdzić zmiany i zamknąć okna dialogowe.
+6. Click **OK** to confirm your edits and close the dialog boxes.
 
-     Po zmianie zmiennej środowiskowej PATH można uruchomić kompilator Visual Basic w wierszu polecenia systemu Windows z dowolnego katalogu na komputerze.
+     After you change the PATH environment variable, you can run the Visual Basic compiler at the Windows Command Prompt from any directory on the computer.
 
-## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>Aby wywołać kompilator przy użyciu wiersza polecenia systemu Windows
+## <a name="to-invoke-the-compiler-using-the-windows-command-prompt"></a>To invoke the compiler using the Windows Command Prompt
 
-1. W menu **Start** kliknij folder **akcesoria** , a następnie otwórz **wiersz polecenia systemu Windows**.
+1. From the **Start** menu, click on the **Accessories** folder, and then open the **Windows Command Prompt**.
 
-2. W wierszu polecenia wpisz `vbc.exe` *sourceFileName* , a następnie naciśnij klawisz ENTER.
+2. At the command line, type `vbc.exe`*sourceFileName* and then press ENTER.
 
-     Na przykład jeśli kod źródłowy został zapisany w katalogu o nazwie `SourceFiles`, należy otworzyć wiersz polecenia i wpisać `cd SourceFiles` zmiany w tym katalogu. Jeśli katalog zawiera plik źródłowy o nazwie `Source.vb`, można go skompilować, wpisując. `vbc.exe Source.vb`
+     For example, if you stored your source code in a directory called `SourceFiles`, you would open the Command Prompt and type `cd SourceFiles` to change to that directory. If the directory contained a source file named `Source.vb`, you could compile it by typing `vbc.exe Source.vb`.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

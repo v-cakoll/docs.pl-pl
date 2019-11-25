@@ -1,19 +1,19 @@
 ---
-title: Klonowanie a Dołączanie (Visual Basic)
+title: Cloning vs. Attaching
 ms.date: 07/20/2015
 ms.assetid: 3c3bd105-c9d3-49bd-875b-27ab4e8bc7a3
-ms.openlocfilehash: 2849c648d8d280200d742663cbc7188b344d8306
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 22e86ee78d5c3fa0a7b80ae559c39f424fc9d61a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352968"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345689"
 ---
-# <a name="cloning-vs-attaching-visual-basic"></a>Klonowanie a Dołączanie (Visual Basic)
-Po dodaniu <xref:System.Xml.Linq.XNode> (w tym <xref:System.Xml.Linq.XElement>) lub <xref:System.Xml.Linq.XAttribute> obiektów do nowego drzewa, jeśli nowa zawartość nie ma elementu nadrzędnego, obiekty są po prostu dołączone do drzewa XML. Jeśli nowa zawartość jest już nadrzędna i jest częścią innego drzewa XML, Nowa zawartość jest klonowana. Nowo sklonowana zawartość jest następnie dołączona do drzewa XML.  
+# <a name="cloning-vs-attaching-visual-basic"></a>Cloning vs. Attaching (Visual Basic)
+When adding <xref:System.Xml.Linq.XNode> (including <xref:System.Xml.Linq.XElement>) or <xref:System.Xml.Linq.XAttribute> objects to a new tree, if the new content has no parent, the objects are simply attached to the XML tree. If the new content already is parented, and is part of another XML tree, the new content is cloned. The newly cloned content is then attached to the XML tree.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod ilustruje zachowanie po dodaniu elementu nadrzędnego do drzewa i po dodaniu elementu z elementem nadrzędnym do drzewa.  
+ The following code demonstrates the behavior when you add a parented element to a tree, and when you add an element with no parent to a tree.  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -52,4 +52,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [Creating XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

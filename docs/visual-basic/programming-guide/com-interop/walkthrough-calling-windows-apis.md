@@ -1,5 +1,5 @@
 ---
-title: 'Przewodnik: Wywoływanie interfejsów API systemu Windows (Visual Basic)'
+title: 'Wskazówki: wywoływanie Windows API'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DLLs, calling
@@ -11,141 +11,141 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8e6d3e7f84c96d145a48daa27918cbb2cb3b61ac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ec6b8ddc8769fadde52aaebd6ad3701183fac77a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958308"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338667"
 ---
-# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Przewodnik: Wywoływanie interfejsów API systemu Windows (Visual Basic)
-Interfejsy API systemu Windows to biblioteki dołączane dynamicznie (dll), które są częścią systemu operacyjnego Windows. Są one używane do wykonywania zadań, gdy trudno jest pisać równoważne procedury. Na przykład system Windows udostępnia funkcję o nazwie `FlashWindowEx` , która umożliwia zmianę paska tytułu aplikacji między jasnym i ciemnym cieniami.  
+# <a name="walkthrough-calling-windows-apis-visual-basic"></a>Wskazówki: wywoływanie Windows API (Visual Basic)
+Windows APIs are dynamic-link libraries (DLLs) that are part of the Windows operating system. You use them to perform tasks when it is difficult to write equivalent procedures of your own. For example, Windows provides a function named `FlashWindowEx` that lets you make the title bar for an application alternate between light and dark shades.  
   
- Zalety używania interfejsów API systemu Windows w kodzie polega na tym, że mogą one zaoszczędzić czas opracowywania, ponieważ zawierają dziesiątki użytecznych funkcji, które są już zapisane i oczekują na użycie. Wadą jest to, że interfejsy API systemu Windows mogą być trudne do pracy z i Unforgiving, gdy coś się nie stało.  
+ The advantage of using Windows APIs in your code is that they can save development time because they contain dozens of useful functions that are already written and waiting to be used. The disadvantage is that Windows APIs can be difficult to work with and unforgiving when things go wrong.  
   
- Interfejsy API systemu Windows reprezentują specjalną kategorię współdziałania. Interfejsy API systemu Windows nie korzystają z kodu zarządzanego, nie mają wbudowanych bibliotek typów i używają typów danych, które są inne niż używane w programie Visual Studio. Ze względu na te różnice, ponieważ interfejsy API systemu Windows nie są obiektami COM, współdziałanie z interfejsami API systemu Windows i .NET Framework odbywa się przy użyciu funkcji Invoke platformy lub PInvoke. Wywołanie platformy to usługa, która umożliwia kodowi zarządzanemu wywoływanie funkcji niezarządzanych wdrożonych w bibliotekach DLL. Aby uzyskać więcej informacji, zobacz wykorzystywanie [niezarządzanych funkcji DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md). Możesz użyć funkcji PInvoke w Visual Basic, używając `Declare` instrukcji lub `DllImport` stosując atrybut do pustej procedury.  
+ Windows APIs represent a special category of interoperability. Windows APIs do not use managed code, do not have built-in type libraries, and use data types that are different than those used with Visual Studio. Because of these differences, and because Windows APIs are not COM objects, interoperability with Windows APIs and the .NET Framework is performed using platform invoke, or PInvoke. Platform invoke is a service that enables managed code to call unmanaged functions implemented in DLLs. For more information, see [Consuming Unmanaged DLL Functions](../../../framework/interop/consuming-unmanaged-dll-functions.md). You can use PInvoke in Visual Basic by using either the `Declare` statement or applying the `DllImport` attribute to an empty procedure.  
   
- Wywołania interfejsu API systemu Windows były istotną częścią programowania Visual Basic w przeszłości, ale rzadko są konieczne w przypadku Visual Basic .NET. Jeśli to możliwe, należy używać kodu zarządzanego z .NET Framework do wykonywania zadań, zamiast wywołań interfejsu API systemu Windows. Ten Instruktaż zawiera informacje dotyczące tych sytuacji, w których jest wymagane korzystanie z interfejsów API systemu Windows.  
+ Windows API calls were an important part of Visual Basic programming in the past, but are seldom necessary with Visual Basic .NET. Whenever possible, you should use managed code from the .NET Framework to perform tasks, instead of Windows API calls. This walkthrough provides information for those situations in which using Windows APIs is necessary.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-## <a name="api-calls-using-declare"></a>Wywołania interfejsu API za pomocą deklaracji DECLARE  
- Najbardziej typowym sposobem wywołania interfejsów API systemu Windows jest użycie `Declare` instrukcji.  
+## <a name="api-calls-using-declare"></a>API Calls Using Declare  
+ The most common way to call Windows APIs is by using the `Declare` statement.  
   
-### <a name="to-declare-a-dll-procedure"></a>Aby zadeklarować procedurę DLL  
+### <a name="to-declare-a-dll-procedure"></a>To declare a DLL procedure  
   
-1. Określ nazwę funkcji, która ma zostać wywołana, oraz jej argumenty, typy argumentów i wartość zwracaną, a także nazwę i lokalizację biblioteki DLL, która ją zawiera.  
+1. Determine the name of the function you want to call, plus its arguments, argument types, and return value, as well as the name and location of the DLL that contains it.  
   
     > [!NOTE]
-    > Aby uzyskać pełne informacje na temat interfejsów API systemu Windows, zobacz dokumentację zestawu Win32 SDK w interfejsie API systemu Windows zestawu SDK platformy. Aby uzyskać więcej informacji na temat stałych używanych przez interfejsy API systemu Windows, należy przejrzeć pliki nagłówkowe, takie jak Windows. h, dołączone do zestawu SDK platformy.  
+    > For complete information about the Windows APIs, see the Win32 SDK documentation in the Platform SDK Windows API. For more information about the constants that Windows APIs use, examine the header files such as Windows.h included with the Platform SDK.  
   
-2. Otwórz nowy projekt aplikacji systemu Windows, klikając pozycję **Nowy** w menu **plik** , a następnie klikając pozycję **projekt**. **Nowy projekt** pojawi się okno dialogowe.  
+2. Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**. The **New Project** dialog box appears.  
   
-3. Wybierz pozycję **aplikacja systemu Windows** z listy Visual Basic szablonów projektu. Zostanie wyświetlony nowy projekt.  
+3. Select **Windows Application** from the list of Visual Basic project templates. The new project is displayed.  
   
-4. Dodaj następującą `Declare` funkcję do klasy lub modułu, w którym ma być używana biblioteka DLL:  
+4. Add the following `Declare` function either to the class or module in which you want to use the DLL:  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
-### <a name="parts-of-the-declare-statement"></a>Części instrukcji DECLARE  
- `Declare` Instrukcja zawiera następujące elementy.  
+### <a name="parts-of-the-declare-statement"></a>Parts of the Declare Statement  
+ The `Declare` statement includes the following elements.  
   
-#### <a name="auto-modifier"></a>Modyfikator Autokorekty  
- `Auto` Modyfikator instruuje środowisko uruchomieniowe, aby przekonwertował ciąg na podstawie nazwy metody zgodnie z regułami środowiska uruchomieniowego języka wspólnego (lub nazwą aliasu, jeśli jest określona).  
+#### <a name="auto-modifier"></a>Auto modifier  
+ The `Auto` modifier instructs the runtime to convert the string based on the method name according to common language runtime rules (or alias name if specified).  
   
-#### <a name="lib-and-alias-keywords"></a>Lib i słowa kluczowe aliasu  
- Nazwa po `Function` słowie kluczowym jest nazwą używaną przez program w celu uzyskania dostępu do zaimportowanej funkcji. Może być taka sama jak prawdziwa nazwa wywoływanej funkcji lub można użyć dowolnej prawidłowej nazwy procedury, a następnie zastosować `Alias` słowo kluczowe, aby określić rzeczywistą nazwę wywoływanej funkcji.  
+#### <a name="lib-and-alias-keywords"></a>Lib and Alias keywords  
+ The name following the `Function` keyword is the name your program uses to access the imported function. It can be the same as the real name of the function you are calling, or you can use any valid procedure name and then employ the `Alias` keyword to specify the real name of the function you are calling.  
   
- `Lib` Określ słowo kluczowe, a następnie nazwę i lokalizację biblioteki DLL zawierającej wywoływaną funkcję. Nie trzeba określać ścieżki dla plików znajdujących się w katalogach systemu Windows.  
+ Specify the `Lib` keyword, followed by the name and location of the DLL that contains the function you are calling. You do not need to specify the path for files located in the Windows system directories.  
   
- `Alias` Użyj słowa kluczowego, jeśli nazwa wywoływanej funkcji nie jest prawidłową nazwą procedury Visual Basic lub powoduje konflikt z nazwą innych elementów w aplikacji. `Alias`wskazuje rzeczywistą nazwę wywoływanej funkcji.  
+ Use the `Alias` keyword if the name of the function you are calling is not a valid Visual Basic procedure name, or conflicts with the name of other items in your application. `Alias` indicates the true name of the function being called.  
   
-#### <a name="argument-and-data-type-declarations"></a>Deklaracje typu argumentu i danych  
- Zadeklaruj argumenty i ich typy danych. Ta część może być trudne, ponieważ typy danych używane przez system Windows nie odpowiadają typom danych programu Visual Studio. Visual Basic wykonuje dużą część pracy przez konwersję argumentów na zgodne typy danych, proces o nazwie Marshaling. Można jawnie kontrolować sposób, w jaki argumenty są organizowane przy użyciu <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu zdefiniowanego <xref:System.Runtime.InteropServices> w przestrzeni nazw.  
+#### <a name="argument-and-data-type-declarations"></a>Argument and Data Type Declarations  
+ Declare the arguments and their data types. This part can be challenging because the data types that Windows uses do not correspond to Visual Studio data types. Visual Basic does a lot of the work for you by converting arguments to compatible data types, a process called *marshaling*. You can explicitly control how arguments are marshaled by using the <xref:System.Runtime.InteropServices.MarshalAsAttribute> attribute defined in the <xref:System.Runtime.InteropServices> namespace.  
   
 > [!NOTE]
-> Poprzednie wersje Visual Basic mogły zadeklarować parametry `As Any`, co oznacza, że można użyć danych dowolnego typu danych. Visual Basic wymaga użycia określonego typu danych dla wszystkich `Declare` instrukcji.  
+> Previous versions of Visual Basic allowed you to declare parameters `As Any`, meaning that data of any data type could be used. Visual Basic requires that you use a specific data type for all `Declare` statements.  
   
-#### <a name="windows-api-constants"></a>Stałe interfejsu API systemu Windows  
- Niektóre argumenty są kombinacją stałych. Na przykład `MessageBox` interfejs API przedstawiony w tym instruktażu akceptuje argument liczby całkowitej o `Typ` nazwie, który kontroluje sposób wyświetlania okna komunikatu. Możesz określić wartość liczbową tych stałych, sprawdzając `#define` instrukcje w pliku Winuser. h. Wartości liczbowe są zwykle wyświetlane w formacie szesnastkowym, więc możesz chcieć użyć kalkulatora, aby dodać je i przekonwertować na wartość typu Decimal. Na przykład, jeśli chcesz połączyć stałe dla 0x00000030 stylu `MB_ICONEXCLAMATION` wykrzyknika i tak/bez stylu `MB_YESNO` 0x00000004, można dodać liczby i uzyskać wynik 0x00000034 lub 52 dziesiętnych. Mimo że można użyć bezpośredniego wyniku dziesiętnego, lepiej jest zadeklarować te wartości jako stałe w aplikacji i połączyć je za pomocą `Or` operatora.  
+#### <a name="windows-api-constants"></a>Windows API Constants  
+ Some arguments are combinations of constants. For example, the `MessageBox` API shown in this walkthrough accepts an integer argument called `Typ` that controls how the message box is displayed. You can determine the numeric value of these constants by examining the `#define` statements in the file WinUser.h. The numeric values are generally shown in hexadecimal, so you may want to use a calculator to add them and convert to decimal. For example, if you want to combine the constants for the exclamation style `MB_ICONEXCLAMATION` 0x00000030 and the Yes/No style `MB_YESNO` 0x00000004, you can add the numbers and get a result of 0x00000034, or 52 decimal. Although you can use the decimal result directly, it is better to declare these values as constants in your application and combine them using the `Or` operator.  
   
-##### <a name="to-declare-constants-for-windows-api-calls"></a>Aby zadeklarować stałe dla wywołań interfejsu API systemu Windows  
+##### <a name="to-declare-constants-for-windows-api-calls"></a>To declare constants for Windows API calls  
   
-1. Zapoznaj się z dokumentacją dla wywoływanej funkcji systemu Windows. Określ nazwę stałych, z których korzysta, i nazwę pliku h, który zawiera wartości liczbowe dla tych stałych.  
+1. Consult the documentation for the Windows function you are calling. Determine the name of the constants it uses and the name of the .h file that contains the numeric values for these constants.  
   
-2. Użyj edytora tekstu, takiego jak Notatnik, aby wyświetlić zawartość pliku nagłówkowego (. h) i znaleźć wartości skojarzone z używanymi przez Ciebie stałych. Na przykład `MessageBox` interfejs API używa stałej `MB_ICONQUESTION` do wyświetlania znaku zapytania w oknie komunikatu. Definicja programu `MB_ICONQUESTION` jest w Winuser. h i wygląda następująco:  
+2. Use a text editor, such as Notepad, to view the contents of the header (.h) file, and find the values associated with the constants you are using. For example, the `MessageBox` API uses the constant `MB_ICONQUESTION` to show a question mark in the message box. The definition for `MB_ICONQUESTION` is in WinUser.h and appears as follows:  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3. Dodaj równoważne `Const` instrukcje do klasy lub modułu, aby udostępnić te stałe aplikacji. Przykład:  
+3. Add equivalent `Const` statements to your class or module to make these constants available to your application. Na przykład:  
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
-###### <a name="to-call-the-dll-procedure"></a>Aby wywołać procedurę DLL  
+###### <a name="to-call-the-dll-procedure"></a>To call the DLL procedure  
   
-1. Dodaj przycisk o nazwie `Button1` do formularza startowego dla projektu, a następnie kliknij go dwukrotnie, aby wyświetlić jego kod. Zostanie wyświetlony program obsługi zdarzeń dla przycisku.  
+1. Add a button named `Button1` to the startup form for your project, and then double-click it to view its code. The event handler for the button is displayed.  
   
-2. Dodaj kod do `Click` programu obsługi zdarzeń dla przycisku, który został dodany, aby wywołać procedurę i podać odpowiednie argumenty:  
+2. Add code to the `Click` event handler for the button you added, to call the procedure and provide the appropriate arguments:  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3. Uruchom projekt, naciskając klawisz F5. Zostanie wyświetlone okno komunikatu z przyciskami **tak** i **bez** odpowiedzi. Kliknij jeden z nich.  
+3. Run the project by pressing F5. The message box is displayed with both **Yes** and **No** response buttons. Click either one.  
   
-#### <a name="data-marshaling"></a>Kierowanie danych  
- Visual Basic automatycznie konwertuje typy danych parametrów i wartości zwracane dla wywołań interfejsu API systemu Windows, ale można użyć `MarshalAs` atrybutu, aby jawnie określić niezarządzane typy danych, których oczekuje interfejs API. Aby uzyskać więcej informacji na temat organizowania międzyoperacyjności, zobacz [organizowanie](../../../framework/interop/interop-marshaling.md)międzyoperacyjnych.  
+#### <a name="data-marshaling"></a>Data Marshaling  
+ Visual Basic automatically converts the data types of parameters and return values for Windows API calls, but you can use the `MarshalAs` attribute to explicitly specify unmanaged data types that an API expects. For more information about interop marshaling, see [Interop Marshaling](../../../framework/interop/interop-marshaling.md).  
   
-##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>Aby użyć DECLARE i MarshalAs w wywołaniu interfejsu API  
+##### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>To use Declare and MarshalAs in an API call  
   
-1. Określ nazwę funkcji, którą chcesz wywołać, oraz jej argumenty, typy danych i wartość zwracaną.  
+1. Determine the name of the function you want to call, plus its arguments, data types, and return value.  
   
-2. Aby uprościć dostęp do `MarshalAs` atrybutu, `Imports` Dodaj instrukcję do górnej części kodu dla klasy lub modułu, jak w poniższym przykładzie:  
+2. To simplify access to the `MarshalAs` attribute, add an `Imports` statement to the top of the code for the class or module, as in the following example:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3. Dodaj prototyp funkcji dla zaimportowanej funkcji do używanej klasy lub modułu i Zastosuj `MarshalAs` atrybut do parametrów lub wartości zwracanej. W poniższym przykładzie wywołanie interfejsu API, które oczekuje typu `void*` , jest organizowane jako: `AsAny`  
+3. Add a function prototype for the imported function to the class or module you are using, and apply the `MarshalAs` attribute to the parameters or return value. In the following example, an API call that expects the type `void*` is marshaled as `AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
-## <a name="api-calls-using-dllimport"></a>Wywołania interfejsu API używające DllImport  
- Ten `DllImport` atrybut stanowi drugi sposób wywoływania funkcji w bibliotekach DLL bez bibliotek typów. `DllImport`jest w przybliżeniu równy użyciu instrukcji `Declare` , ale zapewnia większą kontrolę nad sposobem wywołania funkcji.  
+## <a name="api-calls-using-dllimport"></a>API Calls Using DllImport  
+ The `DllImport` attribute provides a second way to call functions in DLLs without type libraries. `DllImport` is roughly equivalent to using a `Declare` statement but provides more control over how functions are called.  
   
- Można używać `DllImport` z większością wywołań interfejsu API systemu Windows, o ile wywołanie odwołuje się do udostępnionej metody (nazywanej czasem *statyczną*). Nie można użyć metod, które wymagają wystąpienia klasy. W przeciwieństwie `Declare` do `DllImport` instrukcji, wywołania nie `MarshalAs` mogą używać atrybutu.  
+ You can use `DllImport` with most Windows API calls as long as the call refers to a shared (sometimes called *static*) method. You cannot use methods that require an instance of a class. Unlike `Declare` statements, `DllImport` calls cannot use the `MarshalAs` attribute.  
   
-### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>Aby wywołać interfejs API systemu Windows przy użyciu atrybutu DllImport  
+### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>To call a Windows API using the DllImport attribute  
   
-1. Otwórz nowy projekt aplikacji systemu Windows, klikając pozycję **Nowy** w menu **plik** , a następnie klikając pozycję **projekt**. **Nowy projekt** pojawi się okno dialogowe.  
+1. Open a new Windows Application project by clicking **New** on the **File** menu, and then clicking **Project**. The **New Project** dialog box appears.  
   
-2. Wybierz pozycję **aplikacja systemu Windows** z listy Visual Basic szablonów projektu. Zostanie wyświetlony nowy projekt.  
+2. Select **Windows Application** from the list of Visual Basic project templates. The new project is displayed.  
   
-3. Dodaj przycisk o nazwie `Button2` do formularza startowego.  
+3. Add a button named `Button2` to the startup form.  
   
-4. Kliknij `Button2` dwukrotnie, aby otworzyć widok kodu dla formularza.  
+4. Double-click `Button2` to open the code view for the form.  
   
-5. Aby uprościć dostęp `DllImport`do programu, `Imports` Dodaj instrukcję na początku kodu dla klasy formularza startowego:  
+5. To simplify access to `DllImport`, add an `Imports` statement to the top of the code for the startup form class:  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6. Zadeklaruj pustą funkcję poprzedzającą `End Class` instrukcję dla formularza i nazwij funkcję. `MoveFile`  
+6. Declare an empty function preceding the `End Class` statement for the form, and name the function `MoveFile`.  
   
-7. Zastosuj Modyfikatory `Shared` `MoveFile` i do deklaracji funkcji i ustaw parametry na podstawie argumentów używanych przez funkcję interfejsu API systemu Windows: `Public`  
+7. Apply the `Public` and `Shared` modifiers to the function declaration and set parameters for `MoveFile` based on the arguments the Windows API function uses:  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
-     Funkcja może mieć dowolną poprawną nazwę procedury; Ten `DllImport` atrybut określa nazwę w bibliotece DLL. Obsługuje ona również kierowanie współdziałania dla parametrów i wartości zwracanych, dzięki czemu można wybrać typy danych programu Visual Studio, które są podobne do typów danych używanych przez interfejs API.  
+     Your function can have any valid procedure name; the `DllImport` attribute specifies the name in the DLL. It also handles interoperability marshaling for the parameters and return values, so you can choose Visual Studio data types that are similar to the data types the API uses.  
   
-8. `DllImport` Zastosuj atrybut do pustej funkcji. Pierwszy parametr jest nazwą i lokalizacją biblioteki DLL zawierającej wywoływaną funkcję. Nie trzeba określać ścieżki dla plików znajdujących się w katalogach systemu Windows. Drugi parametr jest argumentem nazwanym, który określa nazwę funkcji w interfejsie API systemu Windows. W tym przykładzie `DllImport` atrybut wymusza przekazywanie `MoveFile` wywołań `MoveFileW` do w programie Kernel32. Bibliotece. Metoda kopiuje plik ze ścieżki `src` do ścieżki `dst`. `MoveFileW`  
+8. Apply the `DllImport` attribute to the empty function. The first parameter is the name and location of the DLL containing the function you are calling. You do not need to specify the path for files located in the Windows system directories. The second parameter is a named argument that specifies the name of the function in the Windows API. In this example, the `DllImport` attribute forces calls to `MoveFile` to be forwarded to `MoveFileW` in KERNEL32.DLL. The `MoveFileW` method copies a file from the path `src` to the path `dst`.  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
-9. Dodaj kod do `Button2_Click` programu obsługi zdarzeń, aby wywołać funkcję:  
+9. Add code to the `Button2_Click` event handler to call the function:  
   
      [!code-vb[VbVbalrInterop#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#18)]  
   
-10. Utwórz plik o nazwie test. txt i umieść go w katalogu C:\Tmp na dysku twardym. W razie potrzeby Utwórz katalog tmp.  
+10. Create a file named Test.txt and place it in the C:\Tmp directory on your hard drive. Create the Tmp directory if necessary.  
   
-11. Naciśnij klawisz F5, aby uruchomić aplikację. Zostanie wyświetlony formularz główny.  
+11. Press F5 to start the application. The main form appears.  
   
-12. Kliknij pozycję **Button2**. Komunikat "pomyślnie przeniesiono plik" jest wyświetlany, jeśli plik może zostać przeniesiony.  
+12. Click **Button2**. The message "The file was moved successfully" is displayed if the file can be moved.  
   
 ## <a name="see-also"></a>Zobacz także
 

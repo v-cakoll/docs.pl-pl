@@ -1,5 +1,5 @@
 ---
-title: My. WebServices — obiekt (Visual Basic)
+title: My.WebServices — Obiekt
 ms.date: 07/20/2015
 f1_keywords:
 - My.WebServices
@@ -7,46 +7,46 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: c887f9b7c5a41c0aa02016354c46d5507b103d25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 290d025985663bc45fe605a2e9904fc90fb2bc63
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69918177"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350337"
 ---
 # <a name="mywebservices-object"></a>My.WebServices — Obiekt
-Zawiera właściwości służące do tworzenia i uzyskiwania dostępu do pojedynczego wystąpienia każdej usługi sieci Web XML, do której odwołuje się bieżący projekt.  
+Provides properties for creating and accessing a single instance of each XML Web service referenced by the current project.  
   
 ## <a name="remarks"></a>Uwagi  
- `My.WebServices` Obiekt zawiera wystąpienie każdej usługi sieci Web, do której odwołuje się bieżący projekt. Każde wystąpienie jest tworzone na żądanie. Dostęp do tych usług sieci Web można uzyskać za pomocą właściwości `My.WebServices` obiektu. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, do której uzyskuje dostęp właściwość. Każda klasa, która dziedziczy <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> z, jest usługą sieci Web. Aby uzyskać informacje na temat dodawania usług sieci Web do projektu, zobacz [Uzyskiwanie dostępu do usług sieci Web aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ The `My.WebServices` object provides an instance of each Web service referenced by the current project. Each instance is instantiated on demand. You can access these Web services through the properties of the `My.WebServices` object. The name of the property is the same as the name of the Web service that the property accesses. Any class that inherits from <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> is a Web service. For information about adding Web services to a project, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- `My.WebServices` Obiekt uwidacznia tylko usługi sieci Web skojarzone z bieżącym projektem. Nie zapewnia dostępu do usług sieci Web zadeklarowanych w przywoływanych bibliotekach DLL. Aby uzyskać dostęp do usługi sieci Web udostępnianej przez bibliotekę DLL, należy użyć kwalifikowanej nazwy usługi sieci Web w formularzu *nazwa_pliku_dll*.WebServiceName. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usług sieci Web aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ The `My.WebServices` object exposes only the Web services associated with the current project. It does not provide access to Web services declared in referenced DLLs. To access a Web service that a DLL provides, you must use the qualified name of the Web service, in the form *DllName*.*WebServiceName*. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Obiekt i jego właściwości nie są dostępne dla aplikacji sieci Web.  
+ The object and its properties are not available for Web applications.  
   
 ## <a name="properties"></a>Właściwości  
- Każda właściwość `My.WebServices` obiektu zapewnia dostęp do wystąpienia usługi sieci Web, do której odwołuje się bieżący projekt. Nazwa właściwości jest taka sama jak nazwa usługi sieci Web, do której uzyskuje dostęp właściwość, a typ właściwości jest taka sama jak typ usługi sieci Web.  
+ Each property of the `My.WebServices` object provides access to an instance of a Web service referenced by the current project. The name of the property is the same as the name of the Web service that the property accesses, and the property type is the same as the Web service's type.  
   
 > [!NOTE]
-> W przypadku kolizji nazw nazwa właściwości służącej do uzyskiwania dostępu do usługi sieci Web to *RootNamespace*_*przestrzeń nazw*\_*ServiceName*. Rozważmy na przykład dwie usługi sieci Web `Service1`o nazwie. Jeśli jedna z tych usług znajduje się w głównej przestrzeni `WindowsApplication1` nazw i w przestrzeni `Namespace1`nazw, można uzyskać dostęp do tej usługi `My.WebServices.WindowsApplication1_Namespace1_Service1`za pomocą programu.  
+> If there is a name collision, the property name for accessing a Web service is *RootNamespace*_*Namespace*\_*ServiceName*. For example, consider two Web services named `Service1`. If one of these services is in the root namespace `WindowsApplication1` and in the namespace `Namespace1`, you would access that service by using `My.WebServices.WindowsApplication1_Namespace1_Service1`.  
   
- Gdy po raz pierwszy uzyskujesz dostęp `My.WebServices` do jednej z właściwości obiektu, tworzy nowe wystąpienie usługi sieci Web i zapisuje je. Kolejne dostęp do tej właściwości zwracają to wystąpienie usługi sieci Web.  
+ When you first access one of the `My.WebServices` object's properties, it creates a new instance of the Web service and stores it. Subsequent accesses of that property return that instance of the Web service.  
   
- Usługę sieci Web można usunąć, przypisując `Nothing` do właściwości tej usługi sieci Web. Metoda ustawiająca Właściwość `Nothing` przypisuje do przechowywanej wartości. Jeśli przypiszesz dowolną wartość inną `Nothing` niż właściwość, Metoda ustawiająca <xref:System.ArgumentException> zgłosi wyjątek.  
+ You can dispose of a Web service by assigning `Nothing` to the property for that Web service. The property setter assigns `Nothing` to the stored value. If you assign any value other than `Nothing` to the property, the setter throws an <xref:System.ArgumentException> exception.  
   
- Można sprawdzić, czy właściwość `My.WebServices` obiektu przechowuje wystąpienie usługi sieci Web za `Is` pomocą operatora or `IsNot` . Można użyć tych operatorów do sprawdzenia, czy wartość właściwości jest `Nothing`.  
+ You can test whether a property of the `My.WebServices` object stores an instance of the Web service by using the `Is` or `IsNot` operator. You can use those operators to check if the value of the property is `Nothing`.  
   
 > [!NOTE]
-> Zazwyczaj operator `IsNot` or musi odczytywać wartość właściwości w celu przeprowadzenia porównania. `Is` Jeśli jednak właściwość jest obecnie przechowywana `Nothing`, Właściwość tworzy nowe wystąpienie usługi sieci Web, a następnie zwraca to wystąpienie. Jednak kompilator Visual Basic traktuje właściwości `My.WebServices` obiektu specjalnie i `Is` umożliwia operatorowi or `IsNot` sprawdzenie stanu właściwości bez zmiany jego wartości.  
+> Typically, the `Is` or `IsNot` operator has to read the value of the property to perform the comparison. However, if the property currently stores `Nothing`, the property creates a new instance of the Web service and then returns that instance. However, the Visual Basic compiler treats the properties of the `My.WebServices` object specially, and allows the `Is` or `IsNot` operator to check the status of the property without altering its value.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład wywołuje `FahrenheitToCelsius` metodę `TemperatureConverter` usługi sieci Web XML i zwraca wynik.  
+ This example calls the `FahrenheitToCelsius` method of the `TemperatureConverter` XML Web service, and returns the result.  
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- Aby ten przykład działał, projekt musi odwoływać się do usługi sieci Web `Converter`o nazwie, a usługa sieci Web musi `ConvertTemperature` uwidocznić metodę. Aby uzyskać więcej informacji, zobacz [Uzyskiwanie dostępu do usług sieci Web aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
+ For this example to work, your project must reference a Web service named `Converter`, and that Web service must expose the `ConvertTemperature` method. For more information, see [Accessing Application Web Services](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md).  
   
- Ten kod nie działa w projekcie aplikacji sieci Web.  
+ This code does not work in a Web application project.  
   
 ## <a name="requirements"></a>Wymagania  
   
@@ -54,12 +54,12 @@ Zawiera właściwości służące do tworzenia i uzyskiwania dostępu do pojedyn
   
 |Typ projektu|Dostępne|  
 |---|---|  
-|Aplikacja systemu Windows|**Tak**|  
-|Biblioteka klas|**Tak**|  
-|Aplikacja konsoli|**Tak**|  
-|Biblioteka formantów systemu Windows|**Tak**|  
-|Biblioteka formantów sieci Web|**Tak**|  
-|Usługa systemu Windows|**Tak**|  
+|Windows Application|**Yes**|  
+|Biblioteka klas|**Yes**|  
+|Aplikacja konsoli|**Yes**|  
+|Windows Control Library|**Yes**|  
+|Biblioteka formantów sieci Web|**Yes**|  
+|Usługa systemu Windows|**Yes**|  
 |Witryna sieci Web|Nie|  
   
 ## <a name="see-also"></a>Zobacz także

@@ -1,28 +1,28 @@
 ---
-title: Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
+title: Tworzenie źródłowego dokumentu Office Open XML
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 75030f3d1c2940cc84f81b85dca921497137439f
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5f7a9baebd2d1db73ab17924e0ff8a7408637ee8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71352946"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346415"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Tworzenie źródłowego dokumentu Office Open XML (Visual Basic)
-W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML WordprocessingML, który jest używany przez inne przykłady w tym samouczku. Jeśli wykonasz te instrukcje, dane wyjściowe będą zgodne z danymi wyjściowymi podanymi w każdym przykładzie.  
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+This topic shows how to create the Office Open XML WordprocessingML document that the other examples in this tutorial use. If you follow these instructions, your output will match the output provided in each example.  
   
- Jednak przykłady w tym samouczku będą działały z dowolnym prawidłowym dokumentem WordprocessingML.  
+ However, the examples in this tutorial will work with any valid WordprocessingML document.  
   
- Aby utworzyć dokument, który jest wykorzystywany przez ten samouczek, musisz mieć zainstalowany Microsoft Office 2007 lub nowszy lub mieć Microsoft Office 2003 z pakietem zgodności Microsoft Office dla formatów plików programów Word, Excel i PowerPoint 2007.  
+ To create the document that this tutorial uses, you must either have Microsoft Office 2007 or later installed, or you must have Microsoft Office 2003 with the Microsoft Office Compatibility Pack for Word, Excel, and PowerPoint 2007 File Formats.  
   
-## <a name="creating-the-wordprocessingml-document"></a>Tworzenie dokumentu WordprocessingML  
+## <a name="creating-the-wordprocessingml-document"></a>Creating the WordprocessingML Document  
   
-#### <a name="to-create-the-wordprocessingml-document"></a>Aby utworzyć dokument WordprocessingML  
+#### <a name="to-create-the-wordprocessingml-document"></a>To create the WordprocessingML document  
   
-1. Utwórz nowy dokument programu Microsoft Word.  
+1. Create a new Microsoft Word document.  
   
-2. Wklej następujący tekst do nowego dokumentu:  
+2. Paste the following text into the new document:  
   
     ```text  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,17 +42,17 @@ W tym temacie przedstawiono sposób tworzenia dokumentu Office Open XML Wordproc
     Hello World  
     ```  
   
-3. Sformatuj pierwszy wiersz za pomocą stylu "Nagłówek 1".  
+3. Format the first line with the style "Heading 1".  
   
-4. Wybierz wiersze, które zawierają kod Visual Basic. Pierwszy wiersz rozpoczyna się od słowa kluczowego `Imports`. Ostatnim wierszem jest "End Class". Sformatuj linie przy użyciu czcionki Courier. Sformatuj je przy użyciu nowego stylu i nazwij nowy styl "Code".  
+4. Select the lines that contain the Visual Basic code. The first line starts with the `Imports` keyword. The last line is "End Class". Format the lines with the courier font. Format them with a new style, and name the new style "Code".  
   
-5. Na koniec zaznacz cały wiersz zawierający dane wyjściowe i sformatuj go przy użyciu stylu `Code`.  
+5. Finally, select the entire line that contains the output, and format it with the `Code` style.  
   
-6. Zapisz dokument i nadaj mu nazwę SampleDoc. docx.  
+6. Save the document, and name it SampleDoc.docx.  
   
     > [!NOTE]
-    > Jeśli używasz programu Microsoft Word 2003, wybierz pozycję **dokument programu Word 2007** na liście rozwijanej **Zapisz jako typ** .  
+    > If you are using Microsoft Word 2003, select **Word 2007 Document** in the **Save as Type** drop-down list.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Manipulowanie zawartością w dokumencie WordprocessingML (Visual Basic) ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

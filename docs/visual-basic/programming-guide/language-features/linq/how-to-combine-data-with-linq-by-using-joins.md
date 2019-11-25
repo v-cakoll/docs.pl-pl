@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)'
+title: 'How to: Combine Data with LINQ by Using Joins'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], joins
@@ -9,83 +9,83 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7279908c5d262b65f4c4da9cd9b6c1b4117bc402
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345003"
 ---
-# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Instrukcje: Łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)
-Visual Basic oferuje `Join` i `Group Join` klauzul, aby umożliwić łączenie zawartości wielu kolekcji na podstawie wartości typowych między kolekcjami zapytania. Wartości te są znane jako *klucz* wartości. Deweloperzy znasz koncepcji relacyjnych baz danych będzie także rozpoznawał `Join` klauzuli jako INNER JOIN i `Group Join` klauzuli jako skutecznie, z LEFT OUTER JOIN.  
+# <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Porady: łączenie danych w LINQ za pomocą sprzężeń (Visual Basic)
+Visual Basic provides the `Join` and `Group Join` query clauses to enable you to combine the contents of multiple collections based on common values between the collections. These values are known as *key* values. Developers familiar with relational database concepts will recognize the `Join` clause as an INNER JOIN and the `Group Join` clause as, effectively, a LEFT OUTER JOIN.  
   
- W przykładach w tym temacie pokazano kilka sposobów na łączenie danych za pomocą `Join` i `Group Join` klauzul zapytania.  
+ The examples in this topic demonstrate a few ways to combine data by using the `Join` and `Group Join` query clauses.  
   
-## <a name="create-a-project-and-add-sample-data"></a>Tworzenie projektu i Dodawanie przykładowych danych  
+## <a name="create-a-project-and-add-sample-data"></a>Create a Project and Add Sample Data  
   
-#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>Aby utworzyć projekt, który zawiera przykładowe dane i typy  
+#### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>To create a project that contains sample data and types  
   
-1. Aby uruchomić przykłady w tym temacie, Otwórz program Visual Studio i Dodaj nowy projekt aplikacji konsoli Visual Basic. Kliknij dwukrotnie plik Module1.vb utworzone przez program Visual Basic.  
+1. To run the samples in this topic, open Visual Studio and add a new Visual Basic Console Application project. Double-click the Module1.vb file created by Visual Basic.  
   
-2. Przykłady w tym temacie `Person` i `Pet` typów i danych w poniższym przykładzie kodu. Skopiuj ten kod jest to domyślna `Module1` modułu utworzony przez program Visual Basic.  
+2. The samples in this topic use the `Person` and `Pet` types and data from the following code example. Copy this code into the default `Module1` module created by Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#1)]  
     [!code-vb[VbLINQHowTos#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#2)]  
   
-## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Wykonania sprzężenia wewnętrznego przy użyciu klauzuli Join  
- INNER JOIN łączy dane z dwóch kolekcji. Elementy, dla których odpowiada określonej wartości klucza są uwzględniane. Wszystkie elementy z kolekcji lub kolekcji, które nie mają pasujący element w innej kolekcji są wyłączone.  
+## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Perform an Inner Join by Using the Join Clause  
+ An INNER JOIN combines data from two collections. Items for which the specified key values match are included. Any items from either collection that do not have a matching item in the other collection are excluded.  
   
- W języku Visual Basic LINQ oferuje dwie opcje umożliwiające wykonywanie sprzężenia wewnętrznego: sprzężenie niejawne i jawne sprzężenia.  
+ In Visual Basic, LINQ provides two options for performing an INNER JOIN: an implicit join and an explicit join.  
   
- Sprzężenie niejawne Określa, kolekcji, który ma zostać umieszczony `From` klauzuli i identyfikuje dopasowania pól klucza w `Where` klauzuli. Visual Basic niejawnie łączy dwie kolekcje, w oparciu o określone pola klucza.  
+ An implicit join specifies the collections to be joined in a `From` clause and identifies the matching key fields in a `Where` clause. Visual Basic implicitly joins the two collections based on the specified key fields.  
   
- Należy określić jawnego łączenia za pomocą `Join` klauzuli, gdy użytkownik chce konkretnym pola, który klucz do użycia w sprzężeniu. W tym przypadku `Where` klauzuli nadal może służyć do filtrowania wyników zapytania.  
+ You can specify an explicit join by using the `Join` clause when you want to be specific about which key fields to use in the join. In this case, a `Where` clause can still be used to filter the query results.  
   
-#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>Aby wykonać Inner Join przy użyciu klauzuli Join  
+#### <a name="to-perform-an-inner-join-by-using-the-join-clause"></a>To perform an Inner Join by using the Join clause  
   
-1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady zarówno jawne i niejawne sprzężenia wewnętrznego.  
+1. Add the following code to the `Module1` module in your project to see examples of both an implicit and explicit inner join.  
   
      [!code-vb[VbLINQHowTos#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#4)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Przeprowadź lewe sprzężenie zewnętrzne, używając Group Join — klauzula  
- LEWE sprzężenie zewnętrzne zawiera wszystkie elementy z kolekcji po lewej stronie, sprzężenia i tylko pasujących wartości z kolekcji po prawej stronie sprzężenia. Wszystkie elementy z kolekcji po prawej stronie sprzężenia, które nie mają pasujący element w kolekcji po lewej stronie są wykluczane z wyników kwerendy.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Perform a Left Outer Join by Using the Group Join Clause  
+ A LEFT OUTER JOIN includes all the items from the left-side collection of the join and only matching values from the right-side collection of the join. Any items from the right-side collection of the join that do not have a matching item in the left-side collection are excluded from the query result.  
   
- `Group Join` Klauzuli wykonuje w praktyce z LEFT OUTER JOIN. Różnica między zwykle określane jako LEWE sprzężenie zewnętrzne i jakie `Group Join` klauzula zwraca, jest to, że `Group Join` klauzuli grupy wyników z kolekcji po prawej stronie sprzężenia dla każdego elementu w kolekcji po lewej stronie. W relacyjnej bazie danych LEWE sprzężenie zewnętrzne zwraca wynik niezgrupowane, w której wynik każdego elementu w zapytaniu zawiera pasujące elementy z obu kolekcji sprzężenia. W tym przypadku elementy z kolekcji po lewej stronie sprzężenia są powtarzane dla każdego pasującego elementu z kolekcji po prawej stronie. Zobaczysz, jak to wygląda po zakończeniu następnej procedury.  
+ The `Group Join` clause performs, in effect, a LEFT OUTER JOIN. The difference between what is typically known as a LEFT OUTER JOIN and what the `Group Join` clause returns is that the `Group Join` clause groups results from the right-side collection of the join for each item in the left-side collection. In a relational database, a LEFT OUTER JOIN returns an ungrouped result in which each item in the query result contains matching items from both collections in the join. In this case, the items from the left-side collection of the join are repeated for each matching item from the right-side collection. You will see what this looks like when you complete the next procedure.  
   
- Możesz pobrać wyniki `Group Join` zapytania, ponieważ wynik niezgrupowane, rozszerzając swoje zapytanie, aby zwrócić element dla każdego wyniku kwerendy zgrupowane. Aby to osiągnąć, należy upewnić się, czy wysyłać zapytania o `DefaultIfEmpty` metoda zgrupowaną kolekcję. Daje to gwarancję, że elementy z kolekcji po lewej stronie sprzężenia, nadal będą uwzględniane w wyniku zapytania, nawet jeśli mają one nie pasujących wyników z kolekcji po prawej stronie. Można dodać kod do zapytania Podaj wartość wyniku domyślną, gdy nie ma dopasowania wartości z kolekcji po prawej stronie sprzężenia.  
+ You can retrieve the results of a `Group Join` query as an ungrouped result by extending your query to return an item for each grouped query result. To accomplish this, you have to ensure that you query on the `DefaultIfEmpty` method of the grouped collection. This ensures that items from the left-side collection of the join are still included in the query result even if they have no matching results from the right-side collection. You can add code to your query to provide a default result value when there is no matching value from the right-side collection of the join.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Aby wykonać Left Outer Join przy użyciu klauzuli Join grupy  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>To perform a Left Outer Join by using the Group Join clause  
   
-1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady pogrupowanych lewe sprzężenie zewnętrzne i niezgrupowane lewego sprzężenia zewnętrznego.  
+1. Add the following code to the `Module1` module in your project to see examples of both a grouped left outer join and an ungrouped left outer join.  
   
      [!code-vb[VbLINQHowTos#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#3)]  
   
-## <a name="perform-a-join-by-using-a-composite-key"></a>Przeprowadź sprzężenia, używając klucz złożony  
- Możesz użyć `And` — słowo kluczowe w `Join` lub `Group Join` klauzulę, aby zidentyfikować wiele pól klucza do użycia podczas dopasowywania wartości z kolekcji jest dołączony. `And` — Słowo kluczowe Określa, że wszystkie określone pola klucza musi być zgodna dla elementów, które ma zostać umieszczony.  
+## <a name="perform-a-join-by-using-a-composite-key"></a>Perform a Join by Using a Composite Key  
+ You can use the `And` keyword in a `Join` or `Group Join` clause to identify multiple key fields to use when matching values from the collections being joined. The `And` keyword specifies that all specified key fields must match for items to be joined.  
   
-#### <a name="to-perform-a-join-by-using-a-composite-key"></a>Do wykonania sprzężenia, przy użyciu klucza złożonego  
+#### <a name="to-perform-a-join-by-using-a-composite-key"></a>To perform a Join by using a composite key  
   
-1. Dodaj następujący kod do `Module1` modułu w projekcie, aby zobaczyć przykłady sprzężenia, który używa klucza złożonego.  
+1. Add the following code to the `Module1` module in your project to see examples of a join that uses a composite key.  
   
      [!code-vb[VbLINQHowTos#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#5)]  
   
-## <a name="run-the-code"></a>Uruchamianie kodu  
+## <a name="run-the-code"></a>Run the Code  
   
-#### <a name="to-add-code-to-run-the-examples"></a>Aby dodać kod, aby uruchomić przykłady  
+#### <a name="to-add-code-to-run-the-examples"></a>To add code to run the examples  
   
-1. Zastąp `Sub Main` w `Module1` modułu w projekcie, używając następującego kodu, aby uruchomić przykłady w tym temacie.  
+1. Replace the `Sub Main` in the `Module1` module in your project with the following code to run the examples in this topic.  
   
      [!code-vb[VbLINQHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQHowTos/VB/Module1.vb#6)]  
   
-2. Naciśnij klawisz F5, aby uruchomić przykłady.  
+2. Press F5 to run the examples.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Join, klauzula](../../../../visual-basic/language-reference/queries/join-clause.md)
-- [Klauzula Group Join](../../../../visual-basic/language-reference/queries/group-join-clause.md)
+- [Group Join, klauzula](../../../../visual-basic/language-reference/queries/group-join-clause.md)
 - [From, klauzula](../../../../visual-basic/language-reference/queries/from-clause.md)
 - [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Zapytania](../../../../visual-basic/language-reference/queries/index.md)
-- [Przekształcanie danych za pomocą LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Data Transformations with LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

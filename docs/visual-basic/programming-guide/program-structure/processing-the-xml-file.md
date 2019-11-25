@@ -1,43 +1,43 @@
 ---
-title: Przetwarzanie pliku XML (Visual Basic)
+title: Przetwarzanie pliku XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 91583612940282b05ebbf38bd5f0a59d6af5bbcd
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4230fd88b4b60c631135f5b7fb15f4b6272b5351
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524451"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347301"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>Przetwarzanie pliku XML (Visual Basic)
-Kompilator generuje ciąg identyfikatora dla każdej konstrukcji w kodzie, który jest oznaczony do generowania dokumentacji. (Aby uzyskać informacje na temat znakowania kodu, zobacz [Tagi komentarza XML](../../../visual-basic/language-reference/xmldoc/index.md)). Ciąg identyfikatora jednoznacznie identyfikuje konstrukcję. Programy, które przetwarzają plik XML, mogą używać ciągu identyfikatora do identyfikowania odpowiednich .NET Framework metadanych/elementu odbicia.  
+The compiler generates an ID string for each construct in your code that is tagged to generate documentation. (For information on how to tag your code, see [XML Comment Tags](../../../visual-basic/language-reference/xmldoc/index.md).) The ID string uniquely identifies the construct. Programs that process the XML file can use the ID string to identify the corresponding .NET Framework metadata/reflection item.  
   
- Plik XML nie jest hierarchiczną reprezentacją kodu; jest to płaska lista z wygenerowanym IDENTYFIKATORem dla każdego elementu.  
+ The XML file is not a hierarchical representation of your code; it is a flat list with a generated ID for each element.  
   
- Podczas generowania ciągów identyfikatorów kompilator przestrzega następujących reguł:  
+ The compiler observes the following rules when it generates the ID strings:  
   
-- Brak białego znaku w ciągu.  
+- No white space is placed in the string.  
   
-- Pierwsza część ciągu identyfikatora identyfikuje rodzaj identyfikowanego elementu członkowskiego z pojedynczym znakiem, po którym następuje dwukropek. Używane są następujące typy elementów członkowskich.  
+- The first part of the ID string identifies the kind of member being identified, with a single character followed by a colon. The following member types are used.  
   
 |Znak|Opis|  
 |---|---|  
-|N|— przestrzeń nazw<br /><br /> Nie można dodać komentarzy do dokumentacji do przestrzeni nazw, ale możesz wprowadzić do nich odwołania CREF, jeśli są obsługiwane.|  
-|T|wpisz: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
-|F|pole: `Dim`|  
-|P|Właściwość: `Property` (łącznie z właściwościami domyślnymi)|  
-|M|Metoda: `Sub`, `Function`, `Declare`, `Operator`|  
-|E|zdarzenie: `Event`|  
-|!|ciąg błędu<br /><br /> Pozostała część ciągu zawiera informacje o błędzie. Kompilator Visual Basic generuje informacje o błędach dla linków, których nie można rozpoznać.|  
+|N|— przestrzeń nazw<br /><br /> You cannot add documentation comments to a namespace, but you can make CREF references to them, where supported.|  
+|T|type: `Class`, `Module`, `Interface`, `Structure`, `Enum`, `Delegate`|  
+|F|field: `Dim`|  
+|P|property: `Property` (including default properties)|  
+|M|method: `Sub`, `Function`, `Declare`, `Operator`|  
+|E|event: `Event`|  
+|!|error string<br /><br /> The rest of the string provides information about the error. The Visual Basic compiler generates error information for links that cannot be resolved.|  
   
-- Druga część `String` to w pełni kwalifikowana nazwa elementu, rozpoczynając od elementu głównego przestrzeni nazw. Nazwa elementu, jego typy otaczające i przestrzeń nazw są oddzielone kropkami. Jeśli nazwa samego elementu zawiera okresy, są one zastępowane znakiem numeru (#). Przyjęto założenie, że żaden element nie ma znaku cyfry bezpośrednio w nazwie. Na przykład w pełni kwalifikowana nazwa konstruktora `String` byłaby `System.String.#ctor`.  
+- The second part of the `String` is the fully qualified name of the item, starting at the root of the namespace. The name of the item, its enclosing type(s), and the namespace are separated by periods. If the name of the item itself contains periods, they are replaced by the number sign (#). It is assumed that no item has a number sign directly in its name. For example, the fully qualified name of the `String` constructor would be `System.String.#ctor`.  
   
-- W przypadku właściwości i metod, jeśli istnieją argumenty metody, lista argumentów ujęta w nawiasy. Jeśli nie ma żadnych argumentów, nie ma nawiasów. Argumenty są rozdzielone przecinkami. Kodowanie każdego argumentu następuje bezpośrednio po zakodowaniu w sygnaturze .NET Framework.  
+- For properties and methods, if there are arguments to the method, the argument list enclosed in parentheses follows. If there are no arguments, no parentheses are present. The arguments are separated by commas. The encoding of each argument follows directly how it is encoded in a .NET Framework signature.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod pokazuje, jak generowane są ciągi identyfikatorów dla klasy i jej elementów członkowskich.  
+ The following code shows how the ID strings for a class and its members are generated.  
   
  [!code-vb[VbVbcnXmlDocComments#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#10)]  
   

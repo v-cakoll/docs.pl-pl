@@ -1,67 +1,68 @@
 ---
-title: 'Instrukcje: Rejestruje wyjątki w języku Visual Basic'
+title: 'Porady: wyjątki rejestru'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe6949d727fae0c230ce7421b32fdaf2a498edbc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934384"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352084"
 ---
-# <a name="how-to-log-exceptions-in-visual-basic"></a>Instrukcje: Rejestruje wyjątki w języku Visual Basic
-Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informacji o wyjątkach, które występują w aplikacji. Te przykłady pokazują, jak używać `My.Application.Log.WriteException` metody do rejestrowania wyjątków, które można jawnie przechwycić i wyjątki, które są nieobsługiwane.  
+# <a name="how-to-log-exceptions-in-visual-basic"></a>Porady: wyjątki rejestru w Visual Basic
+
+You can use the `My.Application.Log` and `My.Log` objects to log information about exceptions that occur in your application. These examples show how to use the `My.Application.Log.WriteException` method to log exceptions that you catch explicitly and exceptions that are unhandled.  
   
- Rejestrowanie informacji śledzenia, użyj `My.Application.Log.WriteEntry` metody. Aby uzyskać więcej informacji zobacz <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
+ For logging tracing information, use the `My.Application.Log.WriteEntry` method. For more information, see <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>  
   
-### <a name="to-log-a-handled-exception"></a>Aby rejestrować obsługiwanego wyjątku  
+### <a name="to-log-a-handled-exception"></a>To log a handled exception  
   
-1. Utwórz metodę, która będzie generować informacje o wyjątku.  
+1. Create the method that will generate the exception information.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2. Użyj `Try...Catch` bloku, aby przechwycić wyjątek.  
+2. Use a `Try...Catch` block to catch the exception.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3. Umieść kod, który można wygenerować wyjątek `Try` bloku.  
+3. Put the code that could generate an exception in the `Try` block.  
   
-     Usuń znaczniki komentarza `Dim` i `MsgBox` wierszy, aby spowodować, że <xref:System.NullReferenceException> wyjątku.  
+     Uncomment the `Dim` and `MsgBox` lines to cause a <xref:System.NullReferenceException> exception.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4. W `Catch` blokowania, należy użyć `My.Application.Log.WriteException` metodę, aby zapisać informacje o wyjątku.  
+4. In the `Catch` block, use the `My.Application.Log.WriteException` method to write the exception information.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
-     Poniższy przykład pokazuje kompletny kod dla rejestrowania obsługiwanego wyjątku.  
+     The following example shows the complete code for logging a handled exception.  
   
      [!code-vb[VbVbalrMyApplicationLog#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#10)]  
   
-### <a name="to-log-an-unhandled-exception"></a>Do logowania się nieobsłużonego wyjątku  
+### <a name="to-log-an-unhandled-exception"></a>To log an unhandled exception  
   
-1. Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, wybierz **właściwości**.  
+1. Have a project selected in **Solution Explorer**. On the **Project** menu, choose **Properties**.  
   
-2. Kliknij przycisk **aplikacji** kartę.  
+2. Click the **Application** tab.  
   
-3. Kliknij przycisk **Wyświetl zdarzenia aplikacji** przycisk, aby otworzyć Edytor kodu.  
+3. Click the **View Application Events** button to open the Code Editor.  
   
-     Spowoduje to otwarcie pliku ApplicationEvents.vb.  
+     This opens the ApplicationEvents.vb file.  
   
-4. ApplicationEvents.vb plik zostać otwarty w edytorze kodu. Na **ogólne** menu, wybierz **zdarzenia MojaAplikacja**.  
+4. Have the ApplicationEvents.vb file open in the Code Editor. On the **General** menu, choose **MyApplication Events**.  
   
-5. Na **deklaracje** menu, wybierz **UnhandledException**.  
+5. On the **Declarations** menu, choose **UnhandledException**.  
   
-     Wywołuje aplikację <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzeń przed uruchomieniem aplikacji głównej.  
+     The application raises the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> event before the main application runs.  
   
-6. Dodaj `My.Application.Log.WriteException` metody `UnhandledException` programu obsługi zdarzeń.  
+6. Add the `My.Application.Log.WriteException` method to the `UnhandledException` event handler.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   
-     Poniższy przykład pokazuje kompletny kod dla rejestrowania nieobsługiwany wyjątek.  
+     The following example shows the complete code for logging an unhandled exception.  
   
      [!code-vb[VbVbalrMyApplicationLog#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#5)]  
   
@@ -71,6 +72,6 @@ Możesz użyć `My.Application.Log` i `My.Log` obiekty do rejestrowania informac
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Instrukcje: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
-- [Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
-- [Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+- [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [Przewodnik: ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

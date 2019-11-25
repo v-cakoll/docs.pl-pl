@@ -1,5 +1,5 @@
 ---
-title: Instrukcja wnioskowania opcji (Visual Basic)
+title: Option Infer — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.OptionInfer
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 4dcca0f0ed9989577ded27bab7cf3b16f3036964
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 53bc9d41f28f63061db2012395480aa6be7515dd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775458"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346500"
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 
-Umożliwia użycie wnioskowania o typie lokalnym podczas deklarowania zmiennych.
+Enables the use of local type inference in declaring variables.
 
 ## <a name="syntax"></a>Składnia
 
@@ -32,72 +32,72 @@ Option Infer { On | Off }
 
 |Termin|Definicja|
 |---|---|
-|`On`|Opcjonalny. Włącza wnioskowanie o typie lokalnym.|
-|`Off`|Opcjonalny. Wyłącza wnioskowanie o typie lokalnym.|
+|`On`|Opcjonalny. Enables local type inference.|
+|`Off`|Opcjonalny. Disables local type inference.|
 
 ## <a name="remarks"></a>Uwagi
 
-Aby ustawić `Option Infer` w pliku, wpisz `Option Infer On` lub `Option Infer Off` w górnej części pliku przed jakimkolwiek innym kodem źródłowym. Jeśli wartość ustawiona dla `Option Infer` w pliku powoduje konflikt z wartością ustawioną w środowisku IDE lub w wierszu polecenia, wartość w pliku ma pierwszeństwo.
+To set `Option Infer` in a file, type `Option Infer On` or `Option Infer Off` at the top of the file, before any other source code. If the value set for `Option Infer` in a file conflicts with the value set in the IDE or on the command line, the value in the file has precedence.
 
-Po ustawieniu `Option Infer` na `On` można zadeklarować zmienne lokalne bez jawnego wypełniania typu danych. Kompilator wnioskuje typ danych zmiennej z typu wyrażenia inicjującego.
+When you set `Option Infer` to `On`, you can declare local variables without explicitly stating a data type. The compiler infers the data type of a variable from the type of its initialization expression.
 
-Na poniższej ilustracji `Option Infer` jest włączona. Zmienna w deklaracji `Dim someVar = 2` jest zadeklarowana jako liczba całkowita przez wnioskowanie o typie.
+In the following illustration, `Option Infer` is turned on. The variable in the declaration `Dim someVar = 2` is declared as an integer by type inference.
 
-Poniższy zrzut ekranu przedstawia technologię IntelliSense, gdy jest włączona opcja wnioskowanie:
+The following screenshot shows IntelliSense when Option Infer is on:
 
-![Zrzut ekranu przedstawiający widok IntelliSense, gdy opcja wnioskowanie jest włączona.](./media/option-infer-statement/option-infer-as-integer-on.png)
+![Screenshot showing IntelliSense view when Option Infer is on.](./media/option-infer-statement/option-infer-as-integer-on.png)
 
-Na poniższej ilustracji `Option Infer` jest wyłączone. Zmienna w deklaracji `Dim someVar = 2` jest zadeklarowana jako `Object` przez wnioskowanie o typie. W tym przykładzie ustawienie **Option Strict** jest **wyłączone** na [stronie kompilacja, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
+In the following illustration, `Option Infer` is turned off. The variable in the declaration `Dim someVar = 2` is declared as an `Object` by type inference. In this example, the **Option Strict** setting is set to **Off** on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).
 
-Poniższy zrzut ekranu przedstawia funkcję IntelliSense, gdy wywnioskowanie opcji jest wyłączone:
+The following screenshot shows IntelliSense when Option Infer is off:
 
-![Zrzut ekranu przedstawiający widok IntelliSense, gdy wywnioskowanie opcji jest wyłączone.](./media/option-infer-statement/option-infer-as-object-off.png)
+![Screenshot showing IntelliSense view when Option Infer is off.](./media/option-infer-statement/option-infer-as-object-off.png)
 
 > [!NOTE]
-> Gdy zmienna jest zadeklarowana jako `Object`, typ czasu wykonywania może ulec zmianie, gdy program jest uruchomiony. Visual Basic wykonuje operacje nazywane *opakowaniem* i *rozpakowywaniem* w celu konwersji między `Object` i typem wartości, co powoduje wolniejsze wykonywanie. Aby uzyskać informacje na temat pakowania i rozpakowywania, zobacz [Specyfikacja języka Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).
+> When a variable is declared as an `Object`, the run-time type can change while the program is running. Visual Basic performs operations called *boxing* and *unboxing* to convert between an `Object` and a value type, which makes execution slower. For information about boxing and unboxing, see the [Visual Basic Language Specification](~/_vblang/spec/conversions.md#value-type-conversions).
 
-Wnioskowanie o typie ma zastosowanie na poziomie procedury i nie ma zastosowania poza procedurą w klasie, strukturze, module lub interfejsie.
+Type inference applies at the procedure level, and does not apply outside a procedure in a class, structure, module, or interface.
 
-Aby uzyskać dodatkowe informacje, zobacz temat [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
+For additional information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).
 
-## <a name="when-an-option-infer-statement-is-not-present"></a>Gdy nie ma instrukcji wnioskowania o opcji
+## <a name="when-an-option-infer-statement-is-not-present"></a>When an Option Infer Statement Is Not Present
 
-Jeśli kod źródłowy nie zawiera instrukcji `Option Infer`, zostanie użyta **opcja wnioskowanie** dotyczące ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli jest używany kompilator wiersza polecenia, opcja kompilatora [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) jest używana.
+If the source code does not contain an `Option Infer` statement, the **Option Infer** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If the command-line compiler is used, the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option is used.
 
-#### <a name="to-set-option-infer-in-the-ide"></a>Aby ustawić wnioskowanie opcji w środowisku IDE
+#### <a name="to-set-option-infer-in-the-ide"></a>To set Option Infer in the IDE
 
-1. W **Eksplorator rozwiązań**wybierz projekt. W menu **projekt** kliknij polecenie **Właściwości**.
+1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.
 
-2. Kliknij kartę **kompilacja** .
+2. Click the **Compile** tab.
 
-3. Ustaw wartość w polu **wnioskowanie dotyczące opcji** .
+3. Set the value in the **Option infer** box.
 
-Podczas tworzenia nowego projektu, **opcja wnioskowanie opcji** na karcie **Kompilowanie** ma ustawioną wartość ustawienia **wnioskowania** w oknie dialogowym **Ustawienia domyślne języka vb** . Aby uzyskać dostęp do okna dialogowego **Ustawienia domyślne VB** , w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** domyślnie jest `On`.
+When you create a new project, the **Option Infer** setting on the **Compile** tab is set to the **Option Infer** setting in the **VB Defaults** dialog box. To access the **VB Defaults** dialog box, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is `On`.
 
-#### <a name="to-set-option-infer-on-the-command-line"></a>Aby ustawić wnioskowanie opcji w wierszu polecenia
+#### <a name="to-set-option-infer-on-the-command-line"></a>To set Option Infer on the command line
 
-Dołącz opcję kompilatora [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) w poleceniu **VBC** .
+Include the [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) compiler option in the **vbc** command.
 
-## <a name="default-data-types-and-values"></a>Domyślne typy danych i wartości
+## <a name="default-data-types-and-values"></a>Default Data Types and Values
 
-W poniższej tabeli opisano wyniki różnych kombinacji określania typu danych i inicjatora w instrukcji `Dim`.
+The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.
 
-|Określono typ danych?|Określono inicjator?|Przykład|Wynik|
+|Data type specified?|Initializer specified?|Przykład|Wynik|
 |---|---|---|---|
-|Nie|Nie|`Dim qty`|Jeśli `Option Strict` jest wyłączone (wartość domyślna), zmienna jest ustawiona na `Nothing`.<br /><br /> Jeśli `Option Strict` jest włączona, wystąpi błąd w czasie kompilacji.|
-|Nie|Tak|`Dim qty = 5`|Jeśli `Option Infer` jest włączone (wartość domyślna), zmienna Pobiera typ danych inicjatora. Zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> Jeśli `Option Infer` jest wyłączone i `Option Strict` jest wyłączone, zmienna Pobiera typ danych `Object`.<br /><br /> Jeśli `Option Infer` jest wyłączona i `Option Strict` jest włączona, wystąpi błąd w czasie kompilacji.|
-|Tak|Nie|`Dim qty As Integer`|Zmienna jest inicjowana do wartości domyślnej dla typu danych. Aby uzyskać więcej informacji, zobacz [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
-|Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych inicjatora nie zostanie przekonwertowany na określony typ danych, wystąpi błąd w czasie kompilacji.|
+|Nie|Nie|`Dim qty`|If `Option Strict` is off (the default), the variable is set to `Nothing`.<br /><br /> If `Option Strict` is on, a compile-time error occurs.|
+|Nie|Tak|`Dim qty = 5`|If `Option Infer` is on (the default), the variable takes the data type of the initializer. See [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).<br /><br /> If `Option Infer` is off and `Option Strict` is off, the variable takes the data type of `Object`.<br /><br /> If `Option Infer` is off and `Option Strict` is on, a compile-time error occurs.|
+|Tak|Nie|`Dim qty As Integer`|The variable is initialized to the default value for the data type. For more information, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).|
+|Tak|Tak|`Dim qty  As Integer = 5`|If the data type of the initializer is not convertible to the specified data type, a compile-time error occurs.|
 
 ## <a name="example"></a>Przykład
 
-W poniższych przykładach pokazano, jak instrukcja `Option Infer` włącza wnioskowanie typu lokalnego.
+The following examples demonstrate how the `Option Infer` statement enables local type inference.
 
 [!code-vb[VbVbalrTypeInference#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#6)]
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, że typ czasu wykonywania może się różnić, gdy zmienna jest identyfikowana jako `Object`.
+The following example demonstrates that the run-time type can differ when a variable is identified as an `Object`.
 
 [!code-vb[VbVbalrTypeInference#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#11)]
 

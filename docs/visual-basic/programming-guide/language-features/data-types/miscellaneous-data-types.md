@@ -1,34 +1,34 @@
 ---
-title: Różne typy danych (Visual Basic)
+title: Różne typy danych
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc6262b5bb305bb839917e222d831fa3340a1b14
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008244"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346336"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Różne typy danych (Visual Basic)
-Visual Basic dostarcza kilka typów danych, które nie są opracowane głównie pod kątem liczby lub znaki. Zamiast tego mają do czynienia wyspecjalizowane danych takich jak tak/nie wartości, wartości daty/godziny i adresy obiektów.  
+Visual Basic supplies several data types that are not oriented toward numbers or characters. Instead, they deal with specialized data such as yes/no values, date/time values, and object addresses.  
   
- Aby uzyskać tabelę przedstawiającą porównanie side-by-side typy danych Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
+ For a table showing a side-by-side comparison of the Visual Basic data types, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-## <a name="boolean-type"></a>Typ wartości logicznej  
- [Typ danych Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) jest wartością bez znaku, który jest interpretowany jako `True` lub `False`. Szerokość danych zależy od platformy implementującej. Jeśli zmienna może zawierać tylko dwoma stanami wartości, takich jak PRAWDA/FAŁSZ, tak/nie lub włączenia/wyłączenia, Zadeklaruj go jako `Boolean`.  
+## <a name="boolean-type"></a>Boolean Type  
+ The [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) is an unsigned value that is interpreted as either `True` or `False`. Its data width depends on the implementing platform. If a variable can contain only two-state values such as true/false, yes/no, or on/off, declare it as `Boolean`.  
   
-## <a name="date-type"></a>Date — typ  
- [Date — typ danych](../../../../visual-basic/language-reference/data-types/date-data-type.md) jest wartość 64-bitową, która przechowuje informacje daty i godziny. Każdy przyrost reprezentuje 100 nanosekund czas, który upłynął od początku (12:00 AM) od 1 stycznia 1 roku w kalendarzu gregoriańskim. Jeśli zmienna może zawierać wartość typu date i/lub wartość czasu, Zadeklaruj go jako `Date`.  
+## <a name="date-type"></a>Date Type  
+ The [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) is a 64-bit value that holds both date and time information. Each increment represents 100 nanoseconds of elapsed time since the beginning (12:00 AM) of January 1 of the year 1 in the Gregorian calendar. If a variable can contain a date value, a time value, or both, declare it as `Date`.  
   
-## <a name="object-type"></a>Typ obiektu  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md) jest 32-bitowy adres, który wskazuje na wystąpienie obiektu w aplikacji lub w innej aplikacji. `Object` Zmiennej może odwoływać się do dowolnego obiektu, aplikacja rozpoznaje lub danymi dowolnego typu danych. Dotyczy to zarówno *typy wartości*, takich jak `Integer`, `Boolean`i wystąpienia struktury i *typy odwołań*, służą do wystąpienia obiektów, utworzone na podstawie klasy takie jak `String`i <xref:System.Windows.Forms.Form>, a tablica wystąpień.  
+## <a name="object-type"></a>Object Type  
+ The [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) is a 32-bit address that points to an object instance within your application or in some other application. An `Object` variable can refer to any object your application recognizes, or to data of any data type. This includes both *value types*, such as `Integer`, `Boolean`, and structure instances, and *reference types*, which are instances of objects created from classes such as `String` and <xref:System.Windows.Forms.Form>, and array instances.  
   
- Jeśli zmienna przechowuje wskaźnik do wystąpienia klasy, która nie wiesz, w czasie kompilacji lub może wskazywać danych różnych typów danych, Zadeklaruj go jako `Object`.  
+ If a variable stores a pointer to an instance of a class that you do not know at compile time, or if it can point to data of various data types, declare it as `Object`.  
   
- Zaletą `Object` typ danych jest, że służy do przechowywania danych dowolnego typu danych. Wadą jest to pociągnąć za sobą dodatkowych operacji, które zająć więcej czasu wykonywania i aplikacja działać wolniej. Jeśli używasz `Object` zmiennej dla typów wartości, wiąże się z *pakowania* i *Rozpakowywanie*. Jeśli używasz dla typów odwołań wiąże się z *późnym wiązaniu*.  
+ The advantage of the `Object` data type is that you can use it to store data of any data type. The disadvantage is that you incur extra operations that take more execution time and make your application perform slower. If you use an `Object` variable for value types, you incur *boxing* and *unboxing*. If you use it for reference types, you incur *late binding*.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Narrowing (Visual Basic)
+title: Narrowing
 ms.date: 07/20/2015
 f1_keywords:
 - vb.narrowing
@@ -10,24 +10,24 @@ helpviewer_keywords:
 - Narrowing keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: a207ee91-aca4-4771-b4e2-713f029bf2bb
-ms.openlocfilehash: eb5f021371291483b8eb2a13727a9fda94540638
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b252f7939e812f31103d4bd98ffd50953679f042
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920643"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351473"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Oznacza to, że operator konwersji (`CType`) konwertuje klasę lub strukturę do typu, który może nie posiadać pewnych możliwych wartości oryginalnej klasy lub struktury.  
+Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Konwertowanie za pomocą słowa kluczowego zawężającej  
- Należy określić procedury konwersji `Public Shared` oprócz `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
+ The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
   
- Konwersje zawężające nie zawsze sukces w czasie wykonywania i może zakończyć się niepowodzeniem lub pociągnąć za sobą utratę danych. Należą do nich `Long` do `Integer`, `String` do `Date`, a typ podstawowy typu pochodnego. Ta ostatnia konwersja jest zawężenie, ponieważ typ podstawowy nie może zawierać wszystkie elementy członkowskie w typie pochodnym i dlatego nie jest wystąpieniem typu pochodnego.  
+ Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
   
- Jeśli `Option Strict` jest `On`, wykorzystywanie kodu należy użyć `CType` dla wszystkich konwersji zawężających.  
+ If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
   
- Słowa kluczowego `Narrowing` można użyć w tym kontekście:  
+ The `Narrowing` keyword can be used in this context:  
   
  [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
@@ -36,6 +36,6 @@ Oznacza to, że operator konwersji (`CType`) konwertuje klasę lub strukturę do
 - [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
 - [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [Instrukcje: Definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [Instrukcje: definiowanie operatora](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [Funkcja CType](../../../visual-basic/language-reference/functions/ctype-function.md)
 - [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)

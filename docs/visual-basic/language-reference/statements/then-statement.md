@@ -1,25 +1,25 @@
 ---
-title: Then — instrukcja (Visual Basic)
+title: Then — Instrukcja
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
-ms.openlocfilehash: d7e62e5a36abe917d8b16177fe76715f915ee769
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d3f02794868ea6db8e7c780b393f7ccf0f30534
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61958824"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352799"
 ---
 # <a name="then-statement"></a>Then — Instrukcja
-Wprowadza blok instrukcji do kompilacji lub wykonania, jeśli testowany warunek zostaje spełniony.  
+Introduces a statement block to be compiled or executed if a tested condition is true.  
   
 ## <a name="remarks"></a>Uwagi  
- Słowa kluczowego `Then` można używać w następujących kontekstach:  
+ The `Then` keyword can be used in these contexts:  
   
  [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
- [Dyrektywa #If...Then...#Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [If...Then...Else, instrukcja](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
 ## <a name="see-also"></a>Zobacz także
 

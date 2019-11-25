@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 403c4e76e302536513b9de0694ab7b0de621d5d2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f4e8ea9fb0643a4a434bf20fa719c3fd2d01435b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455521"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089331"
 ---
 # <a name="attached-properties-overview"></a>Przegląd Właściwości dołączone
 
@@ -60,7 +60,7 @@ Typowy scenariusz, w którym WPF definiuje dołączoną właściwość, gdy elem
 
 ## Dołączone właściwości w kodzie<a name="attached_properties_code"></a>
 
-Dołączone właściwości w WPF nie mają typowych metod "otoki" środowiska CLR w celu ułatwienia dostępu do usługi get/set. Wynika to z faktu, że dołączona właściwość nie musi być częścią przestrzeni nazw CLR dla wystąpień, w których właściwość jest ustawiona. Jednak procesor XAML musi mieć możliwość ustawiania tych wartości podczas analizowania kodu XAML. Aby można było obsługiwać efektywne dołączone właściwości, typ właściciela dołączonej właściwości musi implementować metody dostępu dedykowanego w postaci **Get_PropertyName_** i **Set_PropertyName_** . Te dedykowane metody dostępu są również przydatne do pobierania lub ustawiania dołączonej właściwości w kodzie. W perspektywie kodu dołączona właściwość jest podobna do pola zapasowego, które ma metody dostępu do właściwości, i że pole zapasowe może istnieć na dowolnym obiekcie, a nie musi być jawnie zdefiniowane.
+Dołączone właściwości w WPF nie mają typowych metod "otoki" środowiska CLR w celu ułatwienia dostępu do usługi get/set. Wynika to z faktu, że dołączona właściwość nie musi być częścią przestrzeni nazw CLR dla wystąpień, w których właściwość jest ustawiona. Jednak procesor XAML musi mieć możliwość ustawiania tych wartości podczas analizowania kodu XAML. Aby można było obsługiwać efektywne dołączone właściwości, typ właściciela dołączonej właściwości musi implementować metody dostępu dedykowanego w formularzu **Get_PropertyName_** i **Set_PropertyName_** . Te dedykowane metody dostępu są również przydatne do pobierania lub ustawiania dołączonej właściwości w kodzie. W perspektywie kodu dołączona właściwość jest podobna do pola zapasowego, które ma metody dostępu do właściwości, i że pole zapasowe może istnieć na dowolnym obiekcie, a nie musi być jawnie zdefiniowane.
 
 Poniższy przykład pokazuje, jak można ustawić przyłączoną właściwość w kodzie. W tym przykładzie `myCheckBox` jest wystąpieniem klasy <xref:System.Windows.Controls.CheckBox>.
 
@@ -91,7 +91,7 @@ Jak wspomniano wcześniej, należy zarejestrować się jako właściwość doł�
 
 Jeśli klasa definiuje dołączoną Właściwość wyłącznie do użycia w innych typach, Klasa nie musi dziedziczyć z <xref:System.Windows.DependencyObject>. Jednak należy utworzyć od <xref:System.Windows.DependencyObject>, jeśli zostanie umieszczony ogólny model WPF, że dołączona właściwość również jest właściwością zależności.
 
-Zdefiniuj załączoną właściwość jako właściwość zależności przez zadeklarowanie pola `public static readonly` typu <xref:System.Windows.DependencyProperty>. To pole jest definiowane przy użyciu wartości zwracanej metody <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. Nazwa pola musi być zgodna z nazwą dołączonej właściwości, dołączona przy użyciu ciągu `Property`, aby postępować zgodnie z ustalonym wzorcem WPF określającym nazwy pól identyfikujących i właściwości, które reprezentuje. Dostawca dołączonej właściwości musi także podawać statyczne metody **Get_PropertyName_** i **Set_PropertyName_** jako metod dostępu dla dołączonej właściwości; Niewykonanie tej czynności spowoduje, że system właściwości nie będzie mógł użyć dołączonej właściwości.
+Zdefiniuj załączoną właściwość jako właściwość zależności przez zadeklarowanie pola `public static readonly` typu <xref:System.Windows.DependencyProperty>. To pole jest definiowane przy użyciu wartości zwracanej metody <xref:System.Windows.DependencyProperty.RegisterAttached%2A>. Nazwa pola musi być zgodna z nazwą dołączonej właściwości, dołączona przy użyciu ciągu `Property`, aby postępować zgodnie z ustalonym wzorcem WPF określającym nazwy pól identyfikujących i właściwości, które reprezentuje. Dostawca właściwości dołączonej musi również udostępniać statyczne **Get_PropertyName_** i **Set_PropertyName_** metod jako metody dostępu dla dołączonej właściwości; Niewykonanie tej czynności spowoduje, że system właściwości nie będzie mógł użyć dołączonej właściwości.
 
 > [!NOTE]
 > Jeśli pominięto metodę dostępu get dołączonej właściwości, powiązanie danych dla właściwości nie będzie działało w narzędziach projektowania, takich jak Visual Studio i Blend for Visual Studio.
@@ -123,7 +123,7 @@ Poniższy przykład przedstawia rejestrację właściwości zależności (przy u
 
 #### <a name="attached-property-attributes"></a>Atrybuty dołączonej właściwości
 
-WPF definiuje kilka [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], które są przeznaczone do dostarczania informacji o właściwościach dołączonych do procesów odbicia oraz typowych użytkowników odbicia i informacji o właściwościach, takich jak projektanci. Ponieważ dołączone właściwości mają typ nieograniczonego zakresu, projektanci muszą mieć możliwość uniknięcia przeciążania użytkowników z globalną listą wszystkich dołączonych właściwości, które są zdefiniowane w określonej implementacji technologicznej, która używa języka XAML. [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)], które definiuje WPF dla dołączonych właściwości, może służyć do określania zakresu sytuacji, w których dana dołączona właściwość powinna być wyświetlana w oknie właściwości. Można rozważyć zastosowanie tych atrybutów do własnych niestandardowych właściwości dołączanych. Składnia [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)] jest opisana na odpowiednich stronach odniesienia:
+WPF definiuje kilka atrybutów platformy .NET, które są przeznaczone do przekazywania informacji o właściwościach dołączonych do procesów odbicia, oraz do typowych użytkowników odbicia i informacji o właściwościach, takich jak projektanci. Ponieważ dołączone właściwości mają typ nieograniczonego zakresu, projektanci muszą mieć możliwość uniknięcia przeciążania użytkowników z globalną listą wszystkich dołączonych właściwości, które są zdefiniowane w określonej implementacji technologicznej, która używa języka XAML. Atrybuty .NET, które program WPF definiuje dla dołączonych właściwości, mogą służyć do określania zakresu sytuacji, w których dana dołączona właściwość powinna być wyświetlana w oknie właściwości. Można rozważyć zastosowanie tych atrybutów do własnych niestandardowych właściwości dołączanych. Zastosowanie i składnia atrybutów .NET jest opisana na odpowiednich stronach odniesienia:
 
 - <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 

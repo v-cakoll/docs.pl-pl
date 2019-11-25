@@ -2,12 +2,12 @@
 title: Operacje Set (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: cea0c0ba4dd6c7f874f69e3ec4a179248397b67d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 7fd61e17c37c3d9056159cf4ec3ccfafa2ceb871
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591120"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140931"
 ---
 # <a name="set-operations-c"></a>Operacje Set (C#)
 Operacje Set w LINQ odnoszą się do operacji zapytania, które tworzą zestaw wyników, który jest oparty na obecności lub braku równoważnych elementów w obrębie tych samych lub oddzielnych kolekcji (lub zestawów).  
@@ -26,17 +26,17 @@ Operacje Set w LINQ odnoszą się do operacji zapytania, które tworzą zestaw w
 ## <a name="comparison-of-set-operations"></a>Porównanie operacji ustawiania  
   
 ### <a name="distinct"></a>Distinct  
- Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> metody dla sekwencji znaków. Zwracana sekwencja zawiera unikatowe elementy z sekwencji wejściowej.  
+ Poniższa ilustracja przedstawia zachowanie metody <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> na sekwencji znaków. Zwracana sekwencja zawiera unikatowe elementy z sekwencji wejściowej.  
   
  ![Ilustracja przedstawiająca zachowanie różnych&#40;&#41;elementów.](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>Ale  
- Na poniższej ilustracji przedstawiono zachowanie <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera tylko elementy z pierwszej sekwencji wejściowej, które nie znajdują się w drugiej sekwencji wejściowej.  
+ Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera tylko elementy z pierwszej sekwencji wejściowej, które nie znajdują się w drugiej sekwencji wejściowej.  
   
  ![Ilustracja przedstawiająca akcję z wyjątkiem&#40;&#41;.](./media/set-operations/except-behavior-graphic.png "Pokazuje zachowanie z wyjątkiem.")  
   
 ### <a name="intersect"></a>Wspólnej  
- Na poniższej ilustracji przedstawiono zachowanie <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera elementy, które są wspólne dla obu sekwencji wejściowych.  
+ Poniższa ilustracja przedstawia zachowanie <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType>. Zwracana sekwencja zawiera elementy, które są wspólne dla obu sekwencji wejściowych.  
   
  ![Ilustracja przedstawiająca przecięcie dwóch sekwencji.](./media/set-operations/intersection-two-sequences.png)  
  
@@ -48,5 +48,5 @@ Operacje Set w LINQ odnoszą się do operacji zapytania, które tworzą zestaw w
 
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()](./how-to-combine-and-compare-string-collections-linq.md)
-- [Instrukcje: Znajdź różnicę między dwoma listami (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)
+- [Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)
+- [Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (C#)](./how-to-find-the-set-difference-between-two-lists-linq.md)

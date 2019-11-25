@@ -8,47 +8,46 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee35ce1016d9e0a825254fad4b08d4b94da16943
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: d534553fcc6ee63d560e731a535d44c3acd1a214
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170953"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347898"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>Przekształcenia XSLT przy użyciu klasy XslTransform
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzała w programie .NET Framework 2.0. Można przeprowadzić rozszerzalny język arkusza stylów dla przekształceń przekształcenia (XSLT) przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy. Zobacz [używanie klasy XslCompiledTransform](using-the-xslcompiledtransform-class.md) i [Migrowanie z klasy XslTransform](migrating-from-the-xsltransform-class.md) Aby uzyskać więcej informacji.
+> The <xref:System.Xml.Xsl.XslTransform> class is obsolete in the .NET Framework 2.0. You can perform Extensible Stylesheet Language for Transformations (XSLT) transformations using the <xref:System.Xml.Xsl.XslCompiledTransform> class. See [Using the XslCompiledTransform Class](using-the-xslcompiledtransform-class.md) and [Migrating From the XslTransform Class](migrating-from-the-xsltransform-class.md) for more information.
 
-Celem XSLT jest do przekształcania zawartości w dokumencie źródłowym XML do innego dokumentu, która różni się w formacie lub struktury (na przykład Przekształcanie kodu XML w kodzie HTML do użycia w witrynie sieci Web lub Przekształcanie dokumentu, który zawiera tylko b wymagane pola y aplikacji). Ten proces przekształcania określono przez konsorcjum World Wide Web (W3C)[XSLT w wersji 1.0 zalecenie](https://www.w3.org/TR/1999/REC-xslt-19991116). W .NET Framework <xref:System.Xml.Xsl.XslTransform> znaleziono w klasy <xref:System.Xml.Xsl> przestrzeni nazw jest procesora XSLT, który implementuje funkcje tej specyfikacji. Istnieje kilka małych funkcji, które nie zostały wdrożone z zaleceniem W3C specyfikacji XSLT 1.0, na liście [dane wyjściowe z klasy XslTransform](outputs-from-an-xsltransform.md). Na poniższej ilustracji przedstawiono architekturę przekształcania programu .NET Framework.
+The goal of the XSLT is to transform the content of a source XML document into another document that is different in format or structure (for example, to transform XML into HTML for use on a Web site or to transform it into a document that contains only the fields required by an application). This transformation process is specified by the World Wide Web Consortium (W3C)[XSLT version 1.0 recommendation](https://www.w3.org/TR/1999/REC-xslt-19991116). In the .NET Framework, the <xref:System.Xml.Xsl.XslTransform> class, found in the <xref:System.Xml.Xsl> namespace, is the XSLT processor that implements the functionality of this specification. There are a small number of features that have not been implemented from the W3C XSLT 1.0 recommendation, listed in [Outputs from an XslTransform](outputs-from-an-xsltransform.md). The following figure shows the transformation architecture of the .NET Framework.
 
 ## <a name="overview"></a>Omówienie
 
-![Diagram przedstawiający architekturę transformację XSLT.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
+![Diagram that shows the XSLT transformation architecture.](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
-Zalecenie XSLT używa XML Path Language (XPath), aby wybrać części dokumentu XML, gdy wyrażenie XPath jest język zapytań, używany do przechodzenia węzłów w drzewie dokumentu. Jak pokazano na diagramie, wdrożenia programu .NET Framework, XPath jest używany do wybierania części XML przechowywane w kilka klas, takie jak <xref:System.Xml.XmlDocument>, <xref:System.Xml.XmlDataDocument>i <xref:System.Xml.XPath.XPathDocument>. <xref:System.Xml.XPath.XPathDocument> Jest magazynem danych zoptymalizowanych XSLT i gdy jest używane z <xref:System.Xml.Xsl.XslTransform>, zapewnia przekształcenia XSLT przy użyciu dobrą wydajność.
+The XSLT recommendation uses XML Path Language (XPath) to select parts of an XML document, where XPath is a query language used to navigate nodes of a document tree. As shown in the diagram, the .NET Framework implementation of XPath is used to select parts of XML stored in several classes, such as an <xref:System.Xml.XmlDocument>, an <xref:System.Xml.XmlDataDocument>, and an <xref:System.Xml.XPath.XPathDocument>. An <xref:System.Xml.XPath.XPathDocument> is an optimized XSLT data store, and when used with <xref:System.Xml.Xsl.XslTransform>, it provides XSLT transformations with good performance.
 
-Podczas pracy z poniższej listy tabel często używa klas <xref:System.Xml.Xsl.XslTransform> i XPath i ich funkcji.
+The following table list commonly uses classes when working with <xref:System.Xml.Xsl.XslTransform> and XPath and their function.
 
-|Klasy lub interfejsu|Funkcja|
+|Class or Interface|Funkcja|
 |------------------------|--------------|
-|<xref:System.Xml.XPath.XPathNavigator>|To interfejs API, który udostępnia model styl kursor do nawigowania w sklepie, wraz z pomocy technicznej kwerendy XPath. Nie zapewnia edytowanie podstawowego magazynu. W przypadku edytowania, użyj <xref:System.Xml.XmlDocument> klasy.|
-|<xref:System.Xml.XPath.IXPathNavigable>|To interfejs, który udostępnia `CreateNavigator` metody <xref:System.Xml.XPath.XPathNavigator> dla magazynu.|
-|<xref:System.Xml.XmlDocument>|Umożliwia edytowanie tego dokumentu. Implementuje <xref:System.Xml.XPath.IXPathNavigable>, dzięki czemu scenariuszy edytowanie dokumentów, których następnie wymagane są przekształcenia XSLT. Aby uzyskać więcej informacji, zobacz [dane wejściowe obiektu XmlDocument klasy xsltransform](xmldocument-input-to-xsltransform.md).|
-|<xref:System.Xml.XmlDataDocument>|Jest pochodną <xref:System.Xml.XmlDocument>. Tworzy ono relacyjnej i cech XML przy użyciu <xref:System.Data.DataSet> do optymalizacji magazynowania ustrukturyzowanych danych w dokumencie XML, zgodnie z określonym mapowania na <xref:System.Data.DataSet>. Implementuje <xref:System.Xml.XPath.IXPathNavigable>, dzięki czemu scenariuszy, w którym przekształcenia XSLT mogą być wykonywane na danych relacyjnych, pobierane z bazy danych. Aby uzyskać więcej informacji, zobacz [Integracja XML z danymi relacyjnymi i ADO.NET](xml-integration-with-relational-data-and-adonet.md).|
-|<xref:System.Xml.XPath.XPathDocument>|Ta klasa jest zoptymalizowana pod kątem <xref:System.Xml.Xsl.XslTransform> przetwarzania i zapytań XPath i oferuje pamięć podręczną tylko do odczytu o wysokiej wydajności. Implementuje <xref:System.Xml.XPath.IXPathNavigable> i jest to preferowany magazyn na potrzeby przekształceń XSLT.|
-|<xref:System.Xml.XPath.XPathNodeIterator>|Zapewnia on nawigacji przez zestawy węzła XPath. Wszystkie metody wyboru XPath w <xref:System.Xml.XPath.XPathNavigator> zwracają <xref:System.Xml.XPath.XPathNodeIterator>. Wiele <xref:System.Xml.XPath.XPathNodeIterator> obiekty mogą być tworzone za pośrednictwem tego samego magazynu, reprezentujący wybrany zestaw węzłów.|
+|<xref:System.Xml.XPath.XPathNavigator>|It is an API that provides a cursor style model for navigating over a store, along with XPath query support. It does not provide editing of the underlying store. For editing, use the <xref:System.Xml.XmlDocument> class.|
+|<xref:System.Xml.XPath.IXPathNavigable>|It is an interface that provides a `CreateNavigator` method to an <xref:System.Xml.XPath.XPathNavigator> for the store.|
+|<xref:System.Xml.XmlDocument>|It enables editing of this document. It implements <xref:System.Xml.XPath.IXPathNavigable>, allowing document-editing scenarios where XSLT transformations are subsequently required. For more information, see [XmlDocument Input to XslTransform](xmldocument-input-to-xsltransform.md).|
+|<xref:System.Xml.XmlDataDocument>|It is derived from the <xref:System.Xml.XmlDocument>. It bridges the relational and XML worlds by using a <xref:System.Data.DataSet> to optimize storage of structured data within the XML document according to specified mappings on the <xref:System.Data.DataSet>. It implements <xref:System.Xml.XPath.IXPathNavigable>, allowing scenarios where XSLT transformations can be performed over relational data retrieved from a database. For more information, see [XML Integration with Relational Data and ADO.NET](xml-integration-with-relational-data-and-adonet.md).|
+|<xref:System.Xml.XPath.XPathDocument>|This class is optimized for <xref:System.Xml.Xsl.XslTransform> processing and XPath queries, and it provides a read-only high performance cache. It implements <xref:System.Xml.XPath.IXPathNavigable> and is the preferred store to use for XSLT transformations.|
+|<xref:System.Xml.XPath.XPathNodeIterator>|It provides navigation over XPath node sets. All XPath selection methods on the <xref:System.Xml.XPath.XPathNavigator> return an <xref:System.Xml.XPath.XPathNodeIterator>. Multiple <xref:System.Xml.XPath.XPathNodeIterator> objects can be created over the same store, each representing a selected set of nodes.|
 
-## <a name="msxml-xslt-extensions"></a>Rozszerzenia programu MSXML XSLT
+## <a name="msxml-xslt-extensions"></a>MSXML XSLT Extensions
 
-`msxsl:script` i `msxsl:node-set` funkcje są tylko rozszerzenia XSLT Microsoft XML Core Services (MSXML), obsługiwane przez <xref:System.Xml.Xsl.XslTransform> klasy.
+The `msxsl:script` and `msxsl:node-set` functions are the only Microsoft XML Core Services (MSXML) XSLT extensions supported by the <xref:System.Xml.Xsl.XslTransform> class.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład kodu ładuje arkusz stylów XSLT odczytuje plik o nazwie mojedane.XML do <xref:System.Xml.XPath.XPathDocument>i wykonuje przekształcenie danych na fikcyjnej plik o nazwie myStyleSheet.xsl, wysyłając sformatowane dane wyjściowe do konsoli.
+The following code example loads an XSLT style sheet, reads a file called mydata.xml into an <xref:System.Xml.XPath.XPathDocument>, and performs a transformation on the data on a fictitious file called myStyleSheet.xsl, sending the formatted output to the console.
 
 ```vb
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.XPath

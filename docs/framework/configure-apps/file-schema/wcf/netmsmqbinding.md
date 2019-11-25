@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738834"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140750"
 ---
 # <a name="netmsmqbinding"></a>\<> usługi Msmqbinding
 Definiuje powiązanie kolejkowane odpowiednie dla komunikacji między komputerami.  
@@ -75,7 +75,7 @@ Definiuje powiązanie kolejkowane odpowiednie dla komunikacji między komputeram
 |`maxBufferPoolSize`|Liczba całkowita określająca maksymalny rozmiar puli buforów dla tego powiązania. Wartość domyślna to 8.|  
 |`maxReceivedMessageSize`|Dodatnia liczba całkowita, która określa maksymalny rozmiar komunikatu (w bajtach, włącznie z nagłówkami) przetwarzanych przez to powiązanie. Nadawca komunikatu przekraczającego ten limit otrzyma błąd protokołu SOAP. Odbiorca odrzuca komunikat i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536. Ta wartość związana z rozmiarem komunikatu jest przeznaczona do ograniczania narażenia na ataki typu "odmowa usługi" (DoS).|  
 |`maxRetryCycles`|Liczba całkowita, która wskazuje liczbę ponownych prób używanych przez funkcję wykrywania skażonych komunikatów. Komunikat jest skażony komunikatem, gdy nie powiedzie się wszystkie próby dostarczenia wszystkich cykli. Wartość domyślna to 3. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Atrybut wymagany. Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Atrybut wymagany. Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od .NET Framework 4, powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Wartość <xref:System.TimeSpan>, która określa interwał czasu podanego do ukończenia operacji otwierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |`QueueTransferProtocol`|Prawidłowa <xref:System.ServiceModel.QueueTransferProtocol> wartość, która określa transport kanału komunikacyjnego znajdującego się w kolejce, którego używa to powiązanie. Usługa MSMQ nie obsługuje adresowania Active Directory w przypadku korzystania z protokołu niezawodnej obsługi komunikatów protokołu SOAP. W związku z tym nie należy ustawiać tego atrybutu do `Srmp` lub `Srmps`, gdy atrybut `useActiveDirectory` jest ustawiony na `true`.|  
 |`receiveErrorHandling`|Wartość <xref:System.ServiceModel.ReceiveErrorHandling>, która określa sposób obsługi komunikatów trujących i niewysyłających.|  

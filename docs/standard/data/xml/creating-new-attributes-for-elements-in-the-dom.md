@@ -8,122 +8,124 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9445f16b6470b1d2066fcae749b1623ec5e11ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647933"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138946"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Tworzenie nowych atrybutów dla elementów w modelu DOM
-Tworzenie nowych atrybutów różni się od tworzenia innych typów węzła, ponieważ atrybutów nie są węzłami, ale są właściwości węzeł elementu i są zawarte w **XmlAttributeCollection** skojarzone z elementem. Istnieje wiele sposobów, aby utworzyć atrybut i dołączyć go do elementu:  
-  
-- Pobierz węzeł elementu i użyć **SetAttribute** Dodawanie atrybutu do kolekcji atrybutu tego elementu.  
-  
-- Tworzenie **XmlAttribute** za pomocą węzła **CreateAttribute** metody, Pobierz węzła elementu, a następnie użyj **SetAttributeNode** można dodać węzła do kolekcji atrybutów tego element.  
-  
- Poniższy przykład przedstawia sposób dodawania atrybutu do elementu za pomocą **SetAttribute** metody.  
-  
-```vb  
-Imports System  
-Imports System.IO  
-Imports System.Xml  
-  
-public class Sample  
-  
-  public shared sub Main()  
-  
-  Dim doc as XmlDocument = new XmlDocument()  
-  doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" & _  
-              "<title>Pride And Prejudice</title>" & _  
-              "</book>")  
-  Dim root as XmlElement = doc.DocumentElement  
-  
-  'Add a new attribute.  
-  root.SetAttribute("genre", "urn:samples", "novel")  
-  
-  Console.WriteLine("Display the modified XML...")  
-  Console.WriteLine(doc.InnerXml)  
-  
-  end sub  
-end class  
+
+Tworzenie nowych atrybutów jest inne niż tworzenie innych typów węzłów, ponieważ atrybuty nie są węzłami, ale są właściwościami węzła elementu i są zawarte w **XmlAttributeCollection** skojarzonym z elementem. Istnieje wiele sposobów utworzenia atrybutu i dołączenia go do elementu:
+
+- Pobierz węzeł elementu i Użyj **Właściwości SetAttribute** , aby dodać atrybut do kolekcji atrybutów tego elementu.
+
+- Utwórz węzeł **XmlAttribute** przy użyciu metody **CreateAttribute** , Pobierz węzeł elementu, a następnie użyj **SetAttributeNode** , aby dodać węzeł do kolekcji atrybutów tego elementu.
+
+Poniższy przykład pokazuje, jak dodać atrybut do elementu przy użyciu metody **SetAttribute** :
+
+```vb
+Imports System.IO
+Imports System.Xml
+
+Public Class Sample
+
+    Public Shared Sub Main()
+
+        Dim doc As New XmlDocument()
+        doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" & _
+                    "<title>Pride And Prejudice</title>" & _
+                    "</book>")
+        Dim root As XmlElement = doc.DocumentElement
+
+        ' Add a new attribute.
+        root.SetAttribute("genre", "urn:samples", "novel")
+
+        Console.WriteLine("Display the modified XML...")
+        Console.WriteLine(doc.InnerXml)
+    End Sub
+End Class
 ```  
   
-```csharp  
-using System;  
-using System.IO;  
-using System.Xml;  
+```csharp
+using System;
+using System.IO;
+using System.Xml;
+
+public class Sample
+{
+    public static void Main()
+    {
+        var doc = new XmlDocument();
+        doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" +
+                    "<title>Pride And Prejudice</title>" +
+                    "</book>");
+        XmlElement root = doc.DocumentElement;
+
+        // Add a new attribute.
+        root.SetAttribute("genre", "urn:samples", "novel");
+
+        Console.WriteLine("Display the modified XML...");
+        Console.WriteLine(doc.InnerXml);
+    }
+}
+```
+
+Poniższy przykład przedstawia nowy atrybut tworzony przy użyciu metody **CreateAttribute** . Następnie pokazuje atrybut dodany do kolekcji atrybutów elementu **Book** przy użyciu metody **SetAttributeNode** .
+
+Uwzględniając następujący kod XML:
   
-public class Sample  
-{  
-  public static void Main()  
-  {  
-    XmlDocument doc = new XmlDocument();  
-    doc.LoadXml("<book xmlns:bk='urn:samples' bk:ISBN='1-861001-57-5'>" +  
-                "<title>Pride And Prejudice</title>" +  
-                "</book>");  
-    XmlElement root = doc.DocumentElement;  
-  
-    // Add a new attribute.  
-    root.SetAttribute("genre", "urn:samples", "novel");  
-  
-    Console.WriteLine("Display the modified XML...");  
-    Console.WriteLine(doc.InnerXml);  
-  }  
-```  
-  
- W poniższym przykładzie pokazano nową atrybutu tworzone przy użyciu **CreateAttribute** metody. Następnie wyświetla atrybut dodawane do kolekcji atrybut **książki** elementu za pomocą **SetAttributeNode** metody.  
-  
- Biorąc pod uwagę następujący kod XML:  
-  
-```xml  
-<book genre='novel' ISBN='1-861001-57-5'>  
-<title>Pride And Prejudice</title>  
-</book>  
-```  
-  
- Utwórz nowy atrybut i wartości:  
-  
-```vb  
-Dim attr As XmlAttribute = doc.CreateAttribute("publisher")  
-   attr.Value = "WorldWide Publishing"  
-```  
-  
-```csharp  
-XmlAttribute attr = doc.CreateAttribute("publisher");  
-attr.Value = "WorldWide Publishing";  
-```  
-  
- i dołączyć go do elementu:  
-  
-```vb  
-doc.DocumentElement.SetAttributeNode(attr)  
-```  
-  
-```csharp  
-doc.DocumentElement.SetAttributeNode(attr);  
-```  
-  
- **Output**  
-  
-```xml  
-<book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
-<title>Pride And Prejudice</title>  
-</book>  
-```  
-  
- Przykładowe pełny kod znajduje się w temacie <xref:System.Xml.XmlDocument.CreateAttribute%2A>.  
-  
- Można również utworzyć **XmlAttribute** węzła i użyj **InsertBefore** lub **InsertAfter** metody, aby umieścić go w odpowiedniej pozycji w kolekcji. Jeśli atrybut o tej samej nazwie istnieje już w kolekcji atrybutów istniejących **XmlAttribute** węzeł zostanie usunięty z kolekcji, a nowe **XmlAttribute** wstawić węzła. Spowoduje to wykonanie taki sam sposób jak **SetAttribute** metody. Te metody przyjmują jako parametru, istniejący węzeł jako punkt odniesienia w celu **InsertBefore** i **InsertAfter**. Jeśli nie podasz węzeł odniesienia, wskazując, skąd można wstawić nowy węzeł, wartość domyślna dla **InsertAfter** metoda polega na Wstaw nowy węzeł na początku kolekcji. Domyślne położenie **InsertBefore**, jeśli nie podano żadnego węzła odwołanie, znajduje się na końcu kolekcji.  
-  
- Jeśli utworzono **XmlNamedNodeMap** atrybutów, można dodać atrybutu przy użyciu nazwy <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Aby uzyskać więcej informacji, zobacz [kolekcje węzłów: namednodemaps i NodeLists](../../../../docs/standard/data/xml/node-collections-in-namednodemaps-and-nodelists.md).  
-  
-## <a name="default-attributes"></a>Atrybuty domyślne  
- Jeśli utworzysz element, który jest zadeklarowany ma atrybut domyślny, nowy domyślny atrybut o jego wartość domyślna jest tworzone przez XML Document Object Model (DOM) i dołączony do elementu. Węzły podrzędne domyślnego atrybutu są również tworzone w tej chwili.  
-  
-## <a name="attribute-child-nodes"></a>Węzły podrzędne atrybutu  
- Wartość węzła atrybutu staje się jego węzłów podrzędnych. Istnieją tylko dwa typy węzłów prawidłowy element podrzędny: **XmlText** węzłów i **XmlEntityReference** węzłów. Są węzły podrzędne, w tym sensie, że metody, takie jak **FirstChild** i **LastChild** przetwarzać je jako węzły podrzędne. Wykonywania tego rozróżnienia atrybutu o węzłów podrzędnych jest ważne, podczas próby usunięcia atrybutów i węzłów podrzędnych atrybutu. Aby uzyskać więcej informacji, zobacz [usuwanie atrybutów z węzła elementu w modelu DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
-  
+```xml
+<book genre='novel' ISBN='1-861001-57-5'>
+<title>Pride And Prejudice</title>
+</book>
+```
+
+Utwórz nowy atrybut i nadaj mu wartość:
+
+```vb
+Dim attr As XmlAttribute = doc.CreateAttribute("publisher")
+attr.Value = "WorldWide Publishing"
+```
+
+```csharp
+XmlAttribute attr = doc.CreateAttribute("publisher");
+attr.Value = "WorldWide Publishing";
+```
+
+i Dołącz do elementu:
+
+```vb
+doc.DocumentElement.SetAttributeNode(attr)
+```
+
+```csharp
+doc.DocumentElement.SetAttributeNode(attr);
+```
+
+**Output**
+
+```xml
+<book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
+<title>Pride And Prejudice</title>
+</book>
+```
+
+Pełny przykładowy kod można znaleźć w <xref:System.Xml.XmlDocument.CreateAttribute%2A>.
+
+Można również utworzyć węzeł **XmlAttribute** i użyć metod **InsertBefore** lub **InsertAfter** , aby umieścić go w odpowiedniej pozycji w kolekcji. Jeśli atrybut o tej samej nazwie już istnieje w kolekcji atrybutów, istniejący węzeł **XmlAttribute** zostanie usunięty z kolekcji, a nowy węzeł **XmlAttribute** zostanie wstawiony. Jest to tak samo samo jak Metoda **SetAttribute** . Metody te przyjmują jako parametr, istniejący węzeł jako punkt odniesienia do wykonania **InsertBefore** i **InsertAfter**. Jeśli nie podasz węzła referencyjnego wskazującego, gdzie wstawić nowy węzeł, wartość domyślna dla metody **InsertAfter** polega na wstawieniu nowego węzła na początku kolekcji. Domyślna pozycja **InsertBefore**, jeśli nie podano węzła odwołania, znajduje się na końcu kolekcji.
+
+Jeśli utworzono **XmlNamedNodeMap** atrybutów, można dodać atrybut według nazwy przy użyciu metody <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>. Aby uzyskać więcej informacji, zobacz [kolekcje węzłów w NamedNodeMaps i aktualizacja](node-collections-in-namednodemaps-and-nodelists.md).
+
+## <a name="default-attributes"></a>Atrybuty domyślne
+
+Jeśli utworzysz element, który jest zadeklarowany jako mający atrybut domyślny, wówczas nowy domyślny atrybut z jego wartością domyślną jest tworzony przez XML Document Object Model (DOM) i dołączony do elementu. Węzły podrzędne atrybutu domyślnego są również tworzone w tym momencie.
+
+## <a name="attribute-child-nodes"></a>Węzły podrzędne atrybutu
+
+Wartość węzła atrybutu staną się węzłami podrzędnymi. Istnieją tylko dwa typy prawidłowych węzłów podrzędnych: węzły **XmlText** i **XmlEntityReference** . Są to węzły podrzędne w sensie, że metody, takie jak **FirstChild** i **LastChild** , przetwarzają je jako węzły podrzędne. Takie rozróżnienie atrybutu z węzłami podrzędnymi jest ważne przy próbie usunięcia atrybutów lub węzłów podrzędnych atrybutu. Aby uzyskać więcej informacji, zobacz [usuwanie atrybutów z węzła elementu w modelu dom](removing-attributes-from-an-element-node-in-the-dom.md).
+
 ## <a name="see-also"></a>Zobacz także
 
-- [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [Model DOM (XML Document Object Model)](xml-document-object-model-dom.md)

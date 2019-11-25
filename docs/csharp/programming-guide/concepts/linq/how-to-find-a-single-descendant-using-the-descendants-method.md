@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Znajdź pojedynczy element podrzędny przy użyciu metody Descendants (C#)'
+title: Jak znaleźć pojedynczy element podrzędny przy użyciu metody Descendants (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: 29cac5a666f7e9a560c550ad20a5bb68d02ee1ea
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 59d8cfb93ec527a6ceaa58b422a154e16d712533
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253796"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141197"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Instrukcje: Znajdź pojedynczy element podrzędny przy użyciu metody Descendants (C#)
-Możesz użyć metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A> , aby szybko napisać kod w celu znalezienia pojedynczego elementu z unikatowymi nazwami. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć konkretny element podrzędny o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale jest on często szybszy i łatwiejszy w pisaniu kodu przy użyciu <xref:System.Xml.Linq.XContainer.Descendants%2A> osi.  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Jak znaleźć pojedynczy element podrzędny przy użyciu metody Descendants (C#)
+Za pomocą metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A> można szybko napisać kod, aby znaleźć jeden unikatowy element. Ta technika jest szczególnie przydatna, gdy chcesz znaleźć konkretny element podrzędny o określonej nazwie. Można napisać kod, aby przejść do żądanego elementu, ale jest on często szybszy i łatwiejszy w pisaniu kodu przy użyciu osi <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Przykład  
- W <xref:System.Linq.Enumerable.First%2A> tym przykładzie użyto standardowego operatora zapytania.  
+ W tym przykładzie użyto standardowego operatora zapytania <xref:System.Linq.Enumerable.First%2A>.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  

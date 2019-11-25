@@ -2,77 +2,77 @@
 title: LINQ i ciągi (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667408"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140895"
 ---
 # <a name="linq-and-strings-c"></a>LINQ i ciągi (C#)
 
-LINQ mogą służyć do wykonywania zapytań i przekształcanie ciągów i zbiorów ciągów. Może być szczególnie przydatne w przypadku danych z częściową strukturą w plikach tekstowych. Zapytania LINQ można łączyć z funkcji tradycyjnego ciągów i wyrażeń regularnych. Na przykład, można użyć <xref:System.String.Split%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> metodę, aby utworzyć tablicę ciągów, które można zbadać lub zmodyfikować za pomocą LINQ. Możesz użyć <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> method in Class metoda `where` klauzula zapytania LINQ. I LINQ umożliwia zapytania lub zmodyfikować <xref:System.Text.RegularExpressions.MatchCollection> wyniki zwrócone przez wyrażenie regularne.
+LINQ może służyć do wykonywania zapytań i przekształcania ciągów i kolekcji ciągów. Może być szczególnie przydatne w przypadku danych z częściową strukturą w plikach tekstowych. Zapytania LINQ można łączyć z tradycyjnymi funkcjami ciągów i wyrażeniami regularnymi. Na przykład można użyć metody <xref:System.String.Split%2A?displayProperty=nameWithType> lub <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType>, aby utworzyć tablicę ciągów, które można następnie wykonać zapytania lub zmodyfikować przy użyciu LINQ. Metody <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> można użyć w klauzuli `where` zapytania LINQ. I można użyć LINQ do zapytania lub zmodyfikować wyniki <xref:System.Text.RegularExpressions.MatchCollection> zwrócone przez wyrażenie regularne.
 
-Metod opisanych w tej sekcji służy również do przekształcania tekstu lub częściową strukturą danych do pliku XML. Aby uzyskać więcej informacji, zobacz [jak: Generowanie kodu XML z plików CSV](how-to-generate-xml-from-csv-files.md).
+Można również użyć technik opisanych w tej sekcji, aby przekształcić dane z częściową strukturą do formatu XML. Aby uzyskać więcej informacji, zobacz [How to: Generate XML from pliki CSV](how-to-generate-xml-from-csv-files.md).
 
-Przykłady w tej sekcji można podzielić na dwie kategorie:
+Przykłady w tej sekcji należą do dwóch kategorii:
 
-## <a name="querying-a-block-of-text"></a>Wykonywanie zapytań w bloku tekstu
+## <a name="querying-a-block-of-text"></a>Wykonywanie zapytania dotyczącego bloku tekstu
 
-Zapytanie, analizowania i zmodyfikować bloków tekstu, dzieląc je na odpytywalny tablicę ciągów mniejszych przy użyciu <xref:System.String.Split%2A?displayProperty=nameWithType> metody lub <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> metody. Można podzielić tekst źródłowy słów, zdań, akapitów, stron lub innych kryteriów, a następnie wykonać dodatkowe dzieli dane, jeśli są one wymagane w kwerendzie.
+Można wykonywać zapytania, analizować i modyfikować bloki tekstu, dzieląc je na tablicę Queryable mniejszych ciągów przy użyciu metody <xref:System.String.Split%2A?displayProperty=nameWithType> lub metody <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType>. Możesz podzielić tekst źródłowy na słowa, zdania, akapity, strony lub inne kryteria, a następnie wykonać dodatkowe podziały, jeśli są one wymagane w zapytaniu.
 
-- [Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
-  Pokazuje, jak używać programu LINQ do wykonywania prostych zapytań nad tekstem.
+- [Jak zliczyć wystąpienia wyrazu w ciągu (LINQ) (C#)](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
+  Pokazuje, jak używać LINQ do prostego wykonywania zapytań względem tekstu.
 
-- [Instrukcje: Zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+- [Instrukcje: zapytanie o zdania zawierające określony zestaw wyrazów (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
 
-  Pokazuje, jak podzielić pliki tekstowe na odgórnych ograniczeń i poznać sposoby wykonywania zapytań względem każdej części.
+  Pokazuje sposób dzielenia plików tekstowych na dowolne granice oraz wykonywania zapytań dotyczących poszczególnych części.
 
-- [Instrukcje: Zapytanie o znaki w ciągu (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
+- [Instrukcje: zapytanie o znaki w ciągu (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
 
-  Pokazuje, czy ciąg jest typem odpytywalnym.
+  Pokazuje, że ciąg jest typem queryable.
 
-- [Instrukcje: Łączenie zapytań LINQ z wyrażeniami regularnymi (C#)](how-to-combine-linq-queries-with-regular-expressions.md)
+- [Jak połączyć zapytania LINQ z wyrażeniami regularnymiC#()](how-to-combine-linq-queries-with-regular-expressions.md)
 
-  Pokazuje, jak używać wyrażeń regularnych w zapytaniach LINQ dla złożonych dopasowania do wzorca w wynikach zapytania filtrowanego.
+  Pokazuje, jak używać wyrażeń regularnych w zapytaniach LINQ dla złożonego dopasowania do wzorca na filtrowanych wynikach zapytań.
 
-## <a name="querying-semi-structured-data-in-text-format"></a>Podczas badania częściowo ustrukturyzowanych danych w formacie tekstowym
+## <a name="querying-semi-structured-data-in-text-format"></a>Wykonywanie zapytania dotyczącego danych z częściową strukturą w formacie tekstowym
 
-Wiele różnych typów plików tekstowych składają się z szeregu wiersze, często z podobnego formatowania, takie jak karty lub przecinkami pliki lub wiersze o stałej długości. Po przeczytaniu pliku tekstowego do pamięci można użyć LINQ do zapytań i/lub modyfikowania wierszy. Zapytania LINQ również uprościć zadanie połączenie danych z wielu źródeł.
+Wiele różnych typów plików tekstowych składa się z szeregu wierszy, często z podobnym formatowaniem, takim jak pliki rozdzielane znakami tabulacji lub rozdzielonymi długościami. Po przeczytaniu takiego pliku tekstowego do pamięci można użyć LINQ do wykonywania zapytań i/lub modyfikowania wierszy. Zapytania LINQ upraszczają także zadanie łączenia danych z wielu źródeł.
 
 - [Instrukcje: Wyszukiwanie zestawu różnic między dwoma listami (LINQ) (C#)](how-to-find-the-set-difference-between-two-lists-linq.md)
 
-  Pokazuje, jak znaleźć wszystkie ciągi, które znajdują się w jednej liście, ale nie drugiej.
+  Pokazuje, jak znaleźć wszystkie ciągi, które znajdują się na jednej liście, ale nie w drugim.
 
-- [Instrukcje: Sortowanie lub filtrowanie danych tekstowych według dowolnego słowa lub pola (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (C#)](how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
 
-  Pokazuje sposób sortowania wierszy tekstu, w oparciu o dowolnego słowa lub pola.
+  Pokazuje, jak sortować wiersze tekstu na podstawie dowolnego wyrazu lub pola.
 
 - [Instrukcje: Zmienianie kolejności pól w rozdzielonym pliku (LINQ) (C#)](how-to-reorder-the-fields-of-a-delimited-file-linq.md)
 
-  Pokazuje, jak zmienianie kolejności pól w wierszu w pliku CSV.
+  Pokazuje, jak zmienić kolejność pól w wierszu w pliku CSV.
 
-- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
+- [Instrukcje: łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](how-to-combine-and-compare-string-collections-linq.md)
 
-  Pokazuje, jak łączyć listy parametrów na różne sposoby.
+  Pokazuje, jak łączyć listy ciągów na różne sposoby.
 
-- [Instrukcje: Wypełnianie kolekcji Object z wielu źródeł (LINQ) (C#)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [Instrukcje: wypełnianie kolekcji obiektów z wielu źródeł (LINQ)C#()](how-to-populate-object-collections-from-multiple-sources-linq.md)
 
   Pokazuje, jak tworzyć kolekcje obiektów przy użyciu wielu plików tekstowych jako źródła danych.
 
-- [Instrukcje: Łączenie zawartości niepodobnych plików (LINQ) (C#)](how-to-join-content-from-dissimilar-files-linq.md)
+- [Instrukcje: dołączanie zawartości z niepodobnych plików (LINQC#) ()](how-to-join-content-from-dissimilar-files-linq.md)
   
-  Pokazuje, jak połączyć dwie listy ciągów w jeden ciąg przy użyciu zgodnego klucza.
+  Pokazuje, w jaki sposób połączyć ciągi w dwóch listach w jeden ciąg za pomocą pasującego klucza.
 
-- [Instrukcje: Dzielenie pliku na kilka plików za pomocą grup (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Instrukcje: dzielenie pliku na wiele plików przy użyciu grup (LINQ) (C#)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)
   
-  Pokazuje, jak utworzyć nowe pliki przy użyciu pojedynczego pliku jako źródło danych.
+  Pokazuje, jak tworzyć nowe pliki przy użyciu pojedynczego pliku jako źródła danych.
 
-- [Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [Jak obliczyć wartości kolumn w pliku tekstowym CSV (LINQ) (C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
-  Pokazuje sposób wykonywania obliczeń matematycznych na danych tekstu w plikach CSV.
+  Pokazuje, jak wykonywać obliczenia matematyczne na danych tekstowych w plikach CSV.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Zapytanie o języku zintegrowanym (LINQ) (C#)](index.md)
-- [Instrukcje: Generowanie kodu XML z plików CSV](how-to-generate-xml-from-csv-files.md)
+- [Zapytanie zintegrowane z językiem (LINQ)C#()](index.md)
+- [Instrukcje: generowanie kodu XML z plików CSV](how-to-generate-xml-from-csv-files.md)

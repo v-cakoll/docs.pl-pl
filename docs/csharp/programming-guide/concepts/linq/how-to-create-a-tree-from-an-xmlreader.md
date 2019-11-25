@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (C#)'
+title: Jak utworzyć drzewo na podstawie elementu XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 196779a10678bdd3aa5399cf883af8c4b074e5df
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418322"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141315"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Instrukcje: Tworzenie drzewa na podstawie elementu XmlReader (C#)
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Jak utworzyć drzewo na podstawie elementu XmlReader (C#)
 W tym temacie pokazano, jak utworzyć drzewo XML bezpośrednio z <xref:System.Xml.XmlReader>. Aby utworzyć <xref:System.Xml.Linq.XElement> z <xref:System.Xml.XmlReader>, należy umieścić <xref:System.Xml.XmlReader> w węźle elementu. <xref:System.Xml.XmlReader> pominie Komentarze i instrukcje przetwarzania, ale jeśli <xref:System.Xml.XmlReader> jest umieszczony w węźle tekstowym, zostanie zgłoszony błąd. Aby uniknąć takich błędów, należy zawsze umieścić <xref:System.Xml.XmlReader> w elemencie przed utworzeniem drzewa XML z <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Przykład  

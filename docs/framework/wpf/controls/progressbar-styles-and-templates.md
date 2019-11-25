@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ProgressBar
 - states [WPF], ProgressBar
 ms.assetid: 935aa600-16e6-4947-a905-37a189a583dd
-ms.openlocfilehash: 3a1bea39ba9b6d2cff9937a3fee1d1de41daf16b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6551701e86dd6abcd42f143f146c7bdadfeabbcf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459873"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283455"
 ---
 # <a name="progressbar-styles-and-templates"></a>ProgressBar — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ProgressBar>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ProgressBar>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="progressbar-parts"></a>Składniki ProgressBar  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ProgressBar>.  
@@ -33,8 +33,8 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |----------------------|---------------------------|-----------------|  
-|Przerwij|CommonStates|<xref:System.Windows.Controls.ProgressBar> raportuje postęp na podstawie właściwości <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.|  
-|Określona|CommonStates|<xref:System.Windows.Controls.ProgressBar> raportuje ogólny postęp z powtarzalnym wzorcem.|  
+|Określony|CommonStates|<xref:System.Windows.Controls.ProgressBar> raportuje postęp na podstawie właściwości <xref:System.Windows.Controls.Primitives.RangeBase.Value%2A>.|  
+|Nieokreślony|CommonStates|<xref:System.Windows.Controls.ProgressBar> raportuje ogólny postęp z powtarzalnym wzorcem.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
 |InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
@@ -57,4 +57,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

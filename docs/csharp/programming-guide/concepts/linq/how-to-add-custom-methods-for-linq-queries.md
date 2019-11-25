@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: Dodaj niestandardowe metody dla zapytań LINQ (C#)'
+title: Jak dodać metody niestandardowe dla zapytań LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: fcf6814c8b3076a18e807a378796094a9ce2cf84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e16175d3332b6ce36458eaa78af093e4f8772723
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594149"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141471"
 ---
-# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Instrukcje: Dodaj niestandardowe metody dla zapytań LINQ (C#)
+# <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Jak dodać metody niestandardowe dla zapytań LINQ (C#)
 
-Można rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzających do <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład oprócz standardowej średniej lub maksymalnej operacji można utworzyć niestandardową metodę agregującą, aby obliczyć pojedynczą wartość z sekwencji wartości. Możesz również utworzyć metodę, która działa jako filtr niestandardowy lub Przekształć dane dla sekwencji wartości i zwraca nową sekwencję. Przykładami takich metod są <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>, i <xref:System.Linq.Enumerable.Reverse%2A>.
+Można rozszerzać zestaw metod, których można użyć dla zapytań LINQ przez dodanie metod rozszerzających do interfejsu <xref:System.Collections.Generic.IEnumerable%601>. Na przykład oprócz standardowej średniej lub maksymalnej operacji można utworzyć niestandardową metodę agregującą, aby obliczyć pojedynczą wartość z sekwencji wartości. Możesz również utworzyć metodę, która działa jako filtr niestandardowy lub Przekształć dane dla sekwencji wartości i zwraca nową sekwencję. Przykładami takich metod są <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A>i <xref:System.Linq.Enumerable.Reverse%2A>.
 
-Rozszerzając <xref:System.Collections.Generic.IEnumerable%601> interfejs, można zastosować niestandardowe metody do dowolnej wyliczalnej kolekcji. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../classes-and-structs/extension-methods.md).
+Rozszerzając interfejs <xref:System.Collections.Generic.IEnumerable%601>, można zastosować własne metody do dowolnej wyliczalnej kolekcji. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../classes-and-structs/extension-methods.md).
 
 ## <a name="adding-an-aggregate-method"></a>Dodawanie metody agregującej
 
-Metoda agregująca oblicza pojedynczą wartość z zestawu wartości. LINQ zawiera kilka metod agregujących, <xref:System.Linq.Enumerable.Average%2A>w <xref:System.Linq.Enumerable.Min%2A>tym, <xref:System.Linq.Enumerable.Max%2A>i. Można utworzyć własną metodę agregującą, dodając metodę rozszerzenia do <xref:System.Collections.Generic.IEnumerable%601> interfejsu.
+Metoda agregująca oblicza pojedynczą wartość z zestawu wartości. LINQ zawiera kilka metod agregujących, w tym <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Min%2A>i <xref:System.Linq.Enumerable.Max%2A>. Można utworzyć własną metodę agregującą, dodając metodę rozszerzenia do interfejsu <xref:System.Collections.Generic.IEnumerable%601>.
 
-Poniższy przykład kodu pokazuje, jak utworzyć metodę rozszerzenia wywołana `Median` , aby obliczyć medianę dla sekwencji liczb typu. `double`
+Poniższy przykład kodu pokazuje, jak utworzyć metodę rozszerzenia o nazwie `Median`, aby obliczyć medianę dla sekwencji liczb typu `double`.
 
 ```csharp
 public static class LINQExtension
@@ -51,9 +51,9 @@ public static class LINQExtension
 }
 ```
 
-Ta metoda rozszerzenia jest wywoływana dla każdej wyliczalnej kolekcji w taki sam sposób, w jaki wywołujemy <xref:System.Collections.Generic.IEnumerable%601> inne metody agregacji z interfejsu.
+Ta metoda rozszerzenia jest wywoływana dla każdej wyliczalnej kolekcji w taki sam sposób, w jaki wywołujemy inne metody agregacji z interfejsu <xref:System.Collections.Generic.IEnumerable%601>.
 
-Poniższy przykład kodu pokazuje, `Median` jak używać metody dla tablicy typu. `double`
+Poniższy przykład kodu pokazuje, jak używać metody `Median` dla tablicy typu `double`.
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -77,7 +77,7 @@ Można przeciążyć metodę agregacji, aby akceptować sekwencje różnych typ�
 
 #### <a name="to-create-an-overload-for-each-type"></a>Aby utworzyć Przeciążenie dla każdego typu
 
-Można utworzyć określone Przeciążenie dla każdego typu, który ma być obsługiwany. Poniższy przykład kodu przedstawia Przeciążenie `Median` metody `integer` dla typu.
+Można utworzyć określone Przeciążenie dla każdego typu, który ma być obsługiwany. Poniższy przykład kodu przedstawia Przeciążenie metody `Median` dla typu `integer`.
 
 ```csharp
 //int overload
@@ -88,7 +88,7 @@ public static double Median(this IEnumerable<int> source)
 }
 ```
 
-Teraz można wywoływać `Median` przeciążenia dla obu `integer` typów i `double` typy, jak pokazano w poniższym kodzie:
+Teraz można wywoływać przeciążenia `Median` dla typów `integer` i `double`, jak pokazano w poniższym kodzie:
 
 ```csharp
 double[] numbers1 = { 1.9, 2, 8, 4, 5.7, 6, 7.2, 0 };
@@ -119,7 +119,7 @@ Console.WriteLine("int: Median = " + query2);
 
 Można również utworzyć Przeciążenie, które akceptuje sekwencję obiektów ogólnych. To przeciążenie przyjmuje delegat jako parametr i używa go do konwersji sekwencji obiektów typu ogólnego do określonego typu.
 
-Poniższy kod przedstawia Przeciążenie `Median` metody, która <xref:System.Func%602> przyjmuje delegat jako parametr. Ten delegat pobiera obiekt typu ogólnego T i zwraca obiekt typu `double`.
+Poniższy kod przedstawia Przeciążenie metody `Median`, która przyjmuje <xref:System.Func%602> delegat jako parametr. Ten delegat pobiera obiekt typu ogólnego T i zwraca obiekt typu `double`.
 
 ```csharp
 // Generic overload.
@@ -131,9 +131,9 @@ public static double Median<T>(this IEnumerable<T> numbers,
 }
 ```
 
-Teraz można wywołać `Median` metodę dla sekwencji obiektów dowolnego typu. Jeśli typ nie ma własnego przeciążenia metody, należy przekazać parametr delegata. W C#programie można użyć wyrażenia lambda do tego celu. Ponadto, tylko w Visual Basic, jeśli używasz `Aggregate` klauzuli or `Group By` zamiast wywołania metody, można przekazać dowolną wartość lub wyrażenie, które znajduje się w zakresie tej klauzuli.
+Teraz można wywołać metodę `Median` dla sekwencji obiektów dowolnego typu. Jeśli typ nie ma własnego przeciążenia metody, należy przekazać parametr delegata. W C#programie można użyć wyrażenia lambda do tego celu. Ponadto, tylko w Visual Basic, jeśli używasz klauzuli `Aggregate` lub `Group By` zamiast wywołania metody, można przekazać dowolną wartość lub wyrażenie, które znajduje się w zakresie tej klauzuli.
 
-Poniższy przykładowy kod pokazuje, `Median` jak wywołać metodę dla tablicy liczb całkowitych i tablicy ciągów. Dla ciągów, mediany dla długości ciągów w tablicy jest obliczany. W przykładzie pokazano, <xref:System.Func%602> jak przekazać parametr delegata `Median` do metody dla każdego przypadku.
+Poniższy przykładowy kod pokazuje, jak wywołać metodę `Median` dla tablicy liczb całkowitych i tablicy ciągów. Dla ciągów, mediany dla długości ciągów w tablicy jest obliczany. W przykładzie pokazano, jak przekazać parametr delegata <xref:System.Func%602> do metody `Median` dla każdego przypadku.
 
 ```csharp
 int[] numbers3 = { 1, 2, 3, 4, 5 };
@@ -166,9 +166,9 @@ Console.WriteLine("String: Median = " + query4);
 
 ## <a name="adding-a-method-that-returns-a-collection"></a>Dodawanie metody zwracającej kolekcję
 
-<xref:System.Collections.Generic.IEnumerable%601> Interfejs można rozszerzyć za pomocą niestandardowej metody zapytania, która zwraca sekwencję wartości. W tym przypadku metoda musi zwracać kolekcję typu <xref:System.Collections.Generic.IEnumerable%601>. Takie metody mogą służyć do zastosowania filtrów lub transformacji danych do sekwencji wartości.
+Interfejs <xref:System.Collections.Generic.IEnumerable%601> można zwiększyć przy użyciu niestandardowej metody zapytania, która zwraca sekwencję wartości. W takim przypadku metoda musi zwracać kolekcję typu <xref:System.Collections.Generic.IEnumerable%601>. Takie metody mogą służyć do zastosowania filtrów lub transformacji danych do sekwencji wartości.
 
-Poniższy przykład pokazuje, jak utworzyć metodę rozszerzenia o nazwie `AlternateElements` , która zwraca każdy inny element w kolekcji, rozpoczynając od pierwszego elementu.
+Poniższy przykład pokazuje, jak utworzyć metodę rozszerzenia o nazwie `AlternateElements`, która zwraca każdy inny element w kolekcji, rozpoczynając od pierwszego elementu.
 
 ```csharp
 // Extension method for the IEnumerable<T> interface.
@@ -194,7 +194,7 @@ public static IEnumerable<T> AlternateElements<T>(this IEnumerable<T> source)
 }
 ```
 
-Można wywołać tę metodę rozszerzenia dla każdej wyliczalnej kolekcji tak samo jak w przypadku wywołania innych metod <xref:System.Collections.Generic.IEnumerable%601> z interfejsu, jak pokazano w poniższym kodzie:
+Można wywołać tę metodę rozszerzenia dla każdej wyliczalnej kolekcji tak samo jak w przypadku wywołania innych metod z interfejsu <xref:System.Collections.Generic.IEnumerable%601>, jak pokazano w poniższym kodzie:
 
 ```csharp
 string[] strings = { "a", "b", "c", "d", "e" };

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: 49d9ced42572ac06a4ff824ec41a59c14497d215
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 64cb62a3459a3eeea6aa5e91b433a58a88ab08ea
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460927"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283561"
 ---
 # <a name="calendar-styles-and-templates"></a>Style i szablony kalendarza
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Calendar>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Calendar>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="calendar-parts"></a>Części kalendarza  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.Calendar>.  
@@ -72,17 +72,17 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarDayButton> jest wyłączona.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Styczn|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
-|Niezaznaczone|SelectionStates|Przycisk jest wybrany.|  
+|Naciśnięto|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
+|Wybrane|SelectionStates|Przycisk jest wybrany.|  
 |Niezaznaczone|SelectionStates|Przycisk nie jest zaznaczony.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Przycisk ma fokus.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Przycisk nie ma fokusu.|  
 |Fokus|FocusStates|Przycisk ma fokus.|  
 |Bez fokusu|FocusStates|Przycisk nie ma fokusu.|  
-|Wyprzedzeni|ActiveStates|Przycisk jest aktywny.|  
+|Aktywne|ActiveStates|Przycisk jest aktywny.|  
 |Nieaktywne|ActiveStates|Przycisk jest nieaktywny.|  
 |RegularDay|DayStates|Przycisk nie reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Obecnych|DayStates|Przycisk reprezentuje <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
@@ -100,17 +100,17 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|<xref:System.Windows.Controls.Primitives.CalendarButton> jest wyłączona.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Styczn|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
-|Niezaznaczone|SelectionStates|Przycisk jest wybrany.|  
+|Naciśnięto|CommonStates|Zostanie naciśnięty <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
+|Wybrane|SelectionStates|Przycisk jest wybrany.|  
 |Niezaznaczone|SelectionStates|Przycisk nie jest zaznaczony.|  
 |CalendarButtonFocused|CalendarButtonFocusStates|Przycisk ma fokus.|  
 |CalendarButtonUnfocused|CalendarButtonFocusStates|Przycisk nie ma fokusu.|  
 |Fokus|FocusStates|Przycisk ma fokus.|  
 |Bez fokusu|FocusStates|Przycisk nie ma fokusu.|  
-|Wyprzedzeni|ActiveStates|Przycisk jest aktywny.|  
+|Aktywne|ActiveStates|Przycisk jest aktywny.|  
 |Nieaktywne|ActiveStates|Przycisk jest nieaktywny.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
@@ -134,4 +134,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

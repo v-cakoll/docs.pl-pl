@@ -1,24 +1,25 @@
 ---
-title: Argument nie jest opcjonalny (Visual Basic)
+title: Argument nie jest opcjonalny
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
-ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 043d126b07838f1a98788021048e5f22e3bc42ed
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751582"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353904"
 ---
 # <a name="argument-not-optional-visual-basic"></a>Argument nie jest opcjonalny (Visual Basic)
-Liczba i typy argumentów musi odpowiadać wartości oczekiwanych. Nieprawidłowa liczba argumentów jest albo pominięty argument nie jest opcjonalna. Argument tylko wtedy można pominąć po wywołaniu procedury zdefiniowanych przez użytkownika, jeśli została zadeklarowana `Optional` w definicji procedury.  
+
+The number and types of arguments must match those expected. Either there is an incorrect number of arguments, or an omitted argument is not optional. An argument can only be omitted from a call to a user-defined procedure if it was declared `Optional` in the procedure definition.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Należy podać wszystkie wymagane argumenty.  
+1. Supply all necessary arguments.  
   
-2. Upewnij się, został pominięty argumenty są opcjonalne. Jeśli nie, albo podać argument w wywołaniu lub Zadeklaruj parametr `Optional` w definicji.  
+2. Make sure omitted arguments are optional. If they are not, either supply the argument in the call, or declare the parameter `Optional` in the definition.  
   
 ## <a name="see-also"></a>Zobacz także
 

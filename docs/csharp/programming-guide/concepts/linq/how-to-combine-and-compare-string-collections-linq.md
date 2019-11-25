@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()'
+title: Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 414d9764d8de0a1d7cd395a3192a097d48983856
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205367"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141414"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)
 Ten przykład pokazuje, jak scalać pliki zawierające wiersze tekstu, a następnie sortować wyniki. W związku z tym pokazuje, jak wykonać prostą metodę łączenia, Unii i przecięcia na dwóch zestawach wierszy tekstu.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>Aby skonfigurować projekt i pliki tekstowe  
@@ -169,7 +169,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 

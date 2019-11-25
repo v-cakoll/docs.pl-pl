@@ -9,16 +9,16 @@ helpviewer_keywords:
 - PasswordBox [WPF], styles and templates
 - parts [WPF], PasswordBox
 ms.assetid: deb52107-959f-4a60-b303-d21a0a933060
-ms.openlocfilehash: 227ccbda8d570868258508935a5d95f0f40663ab
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 4ba90182468466773644c7375059f0cc01675b33
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458840"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283465"
 ---
 # <a name="passwordbox-styles-and-templates"></a>PasswordBox — Style i szablony
 
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.PasswordBox>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.PasswordBox>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="passwordbox-parts"></a>PasswordBox części
 
@@ -34,7 +34,7 @@ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Wi
 
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|
 |-|-|-|
-|Typow|CommonStates|Stan domyślny.|
+|Normalne|CommonStates|Stan domyślny.|
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|
 |Fokus|FocusStates|Kontrolka ma fokus.|
@@ -62,4 +62,4 @@ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTempl
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

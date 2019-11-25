@@ -1,5 +1,5 @@
 ---
-title: Wyrażenia osadzone w XML (Visual Basic)
+title: Wyrażenia osadzone w XML
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlEmbeddedExpression
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: 525fa04db86a299d88e1612aac76d014f35124eb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0cdb960160457108ddf18c554dae5f5993269833
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332355"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Wyrażenia osadzone w XML (Visual Basic)
-Wyrażenia osadzone umożliwiają tworzenie literałów XML zawierających wyrażenia, które są oceniane w czasie wykonywania. Składnia wyrażenia osadzonego jest `<%=` `expression` `%>`taka sama jak składnia użyta w ASP.NET.  
+Embedded expressions enable you to create XML literals that contain expressions that are evaluated at run time. The syntax for an embedded expression is `<%=` `expression` `%>`, which is the same as the syntax used in ASP.NET.  
   
- Na przykład można utworzyć literał elementu XML, łącząc osadzone wyrażenia z zawartością tekstu literalnego.  
+ For example, you can create an XML element literal, combining embedded expressions with literal text content.  
   
  [!code-vb[VbXMLSamples#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#27)]  
   
- Jeśli `isbnNumber` zawiera liczbę całkowitą 12345 i `modifiedDate` zawiera datę 3/5/2006, gdy ten kod `book` jest wykonywany, wartość jest:  
+ If `isbnNumber` contains the integer 12345 and `modifiedDate` contains the date 3/5/2006, when this code executes, the value of `book` is:  
   
 ```xml  
 <book category="fiction" isbn="12345">  
@@ -30,59 +30,59 @@ Wyrażenia osadzone umożliwiają tworzenie literałów XML zawierających wyra�
 </book>  
 ```  
   
-## <a name="embedded-expression-location-and-validation"></a>Lokalizacja i walidacja wyrażenia osadzonego  
- Wyrażenia osadzone mogą występować tylko w określonych lokalizacjach w wyrażeniach literałów XML. Lokalizacja wyrażenia kontroluje, które typy mogą być zwracane przez wyrażenie i `Nothing` jak są obsługiwane. W poniższej tabeli opisano dozwolone lokalizacje i typy osadzonych wyrażeń.  
+## <a name="embedded-expression-location-and-validation"></a>Embedded Expression Location and Validation  
+ Embedded expressions can appear only at certain locations within XML literal expressions. The expression location controls which types the expression can return and how `Nothing` is handled. The following table describes the allowed locations and types of embedded expressions.  
   
-|Lokalizacja w literale|Typ wyrażenia|Obsługa`Nothing`|  
+|Location in literal|Type of expression|Handling of `Nothing`|  
 |---|---|---|  
-|Nazwa elementu XML|<xref:System.Xml.Linq.XName>|Błąd|  
-|Zawartość elementu XML|`Object`lub tablica`Object`|Ignorowane|  
-|Nazwa atrybutu elementu XML|<xref:System.Xml.Linq.XName>|Błąd, chyba że wartość atrybutu jest również`Nothing`|  
-|Wartość atrybutu elementu XML|`Object`|Zignorowano deklarację atrybutu|  
-|Atrybut elementu XML|<xref:System.Xml.Linq.XAttribute>lub kolekcja<xref:System.Xml.Linq.XAttribute>|Ignorowane|  
-|Element główny dokumentu XML|<xref:System.Xml.Linq.XElement>lub kolekcja jednego <xref:System.Xml.Linq.XElement> obiektu i dowolnej <xref:System.Xml.Linq.XProcessingInstruction> liczby obiektów i <xref:System.Xml.Linq.XComment>|Ignorowane|  
+|XML element name|<xref:System.Xml.Linq.XName>|Błąd|  
+|XML element content|`Object` or array of `Object`|Ignorowane|  
+|XML element attribute name|<xref:System.Xml.Linq.XName>|Error, unless the attribute value is also `Nothing`|  
+|XML element attribute value|`Object`|Attribute declaration ignored|  
+|XML element attribute|<xref:System.Xml.Linq.XAttribute> or a collection of <xref:System.Xml.Linq.XAttribute>|Ignorowane|  
+|XML document root element|<xref:System.Xml.Linq.XElement> or a collection of one <xref:System.Xml.Linq.XElement> object and an arbitrary number of <xref:System.Xml.Linq.XProcessingInstruction> and <xref:System.Xml.Linq.XComment> objects|Ignorowane|  
   
-- Przykład wyrażenia osadzonego w nazwie elementu XML:  
+- Example of an embedded expression in an XML element name:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
-- Przykład wyrażenia osadzonego w zawartości elementu XML:  
+- Example of an embedded expression in the content of an XML element:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
-- Przykład wyrażenia osadzonego w nazwie atrybutu XML elementu:  
+- Example of an embedded expression in an XML element attribute name:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
-- Przykład wyrażenia osadzonego w wartości atrybutu elementu XML:  
+- Example of an embedded expression in an XML element attribute value:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
-- Przykład wyrażenia osadzonego w atrybucie elementu XML:  
+- Example of an embedded expression in an XML element attribute:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
-- Przykład wyrażenia osadzonego w elemencie głównym dokumentu XML:  
+- Example of an embedded expression in an XML document root element:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   
- W przypadku włączenia `Option Strict`programu kompilator sprawdza, czy typ każdego osadzonego wyrażenia jest rozszerzony do wymaganego typu. Jedynym wyjątkiem jest element główny dokumentu XML, który jest sprawdzany, gdy kod jest uruchomiony. Jeśli kompilujesz bez `Option Strict`, możesz osadzić wyrażenia typu `Object` i ich typ jest weryfikowany w czasie wykonywania.  
+ If you enable `Option Strict`, the compiler checks that the type of each embedded expression widens to the required type. The only exception is for the root element of an XML document, which is verified when the code runs. If you compile without `Option Strict`, you can embed expressions of type `Object` and their type is verified at run time.  
   
- W lokalizacjach, w których zawartość jest opcjonalna, `Nothing` osadzone wyrażenia, które zawierają są ignorowane. Oznacza to, że nie trzeba sprawdzać zawartości elementu, wartości atrybutów ani elementów `Nothing` tablicy przed użyciem literału XML. Wymagane wartości, takie jak nazwy elementów i atrybutów, nie mogą `Nothing`być.  
+ In locations where content is optional, embedded expressions that contain `Nothing` are ignored. This means you do not have to check that element content, attribute values, and array elements are not `Nothing` before you use an XML literal. Required values, such as element and attribute names, cannot be `Nothing`.  
   
- Aby uzyskać więcej informacji o używaniu wyrażenia osadzonego w określonym typie literału, zobacz [literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+ For more information about using an embedded expression in a particular type of literal, see [XML Document Literal](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md), [XML Element Literal](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
-## <a name="scoping-rules"></a>Reguły określania zakresu  
- Kompilator konwertuje każdy literał XML na wywołanie konstruktora dla odpowiedniego typu literału. Zawartość literału i osadzone wyrażenia w literale XML są przekazane jako argumenty do konstruktora. Oznacza to, że wszystkie Visual Basic elementy programistyczne dostępne dla literału XML są również dostępne dla jego osadzonych wyrażeń.  
+## <a name="scoping-rules"></a>Scoping Rules  
+ The compiler converts each XML literal into a constructor call for the appropriate literal type. The literal content and embedded expressions in an XML literal are passed as arguments to the constructor. This means that all Visual Basic programming elements available to an XML literal are also available to its embedded expressions.  
   
- W literale XML można uzyskać dostęp do prefiksów przestrzeni nazw XML zadeklarowanych za `Imports` pomocą instrukcji. Można zadeklarować nowy prefiks przestrzeni nazw XML lub zaobserwować istniejący prefiks przestrzeni nazw XML w elemencie przy użyciu `xmlns` atrybutu. Nowa przestrzeń nazw jest dostępna dla węzłów podrzędnych tego elementu, ale nie do literałów XML w wyrażeniach osadzonych.  
+ Within an XML literal, you can access the XML namespace prefixes declared with the `Imports` statement. You can declare a new XML namespace prefix, or shadow an existing XML namespace prefix, in an element by using the `xmlns` attribute. The new namespace is available to the child nodes of that element, but not to XML literals in embedded expressions.  
   
 > [!NOTE]
-> W przypadku deklarowania prefiksu przestrzeni nazw XML przy `xmlns` użyciu atrybutu Namespace wartość atrybutu musi być ciągiem stałym. W tym zakresie użycie `xmlns` atrybutu jest podobne do `Imports` użycia instrukcji w celu zadeklarowania przestrzeni nazw XML. Nie można użyć wyrażenia osadzonego do określenia wartości przestrzeni nazw XML.  
+> When you declare an XML namespace prefix by using the `xmlns` namespace attribute, the attribute value must be a constant string. In this regard, using the `xmlns` attribute is like using the `Imports` statement to declare an XML namespace. You cannot use an embedded expression to specify the XML namespace value.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Tworzenie kodu XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [Literał dokumentu XML](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [Literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
 - [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

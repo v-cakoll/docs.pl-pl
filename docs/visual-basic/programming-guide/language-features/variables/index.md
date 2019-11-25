@@ -1,43 +1,43 @@
 ---
-title: Zmienne w Visual Basic
+title: Zmienne
 ms.date: 07/20/2015
 helpviewer_keywords:
 - variables [Visual Basic]
 - values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 30baab24c54b5158da53f1ba88206d8f1564ebaf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 26433acea2b98ad0e67b9c35bec4eb8e88f7b7b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953349"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352414"
 ---
 # <a name="variables-in-visual-basic"></a>Zmienne w Visual Basic
-Często należy przechowywać wartości podczas wykonywania obliczeń z Visual Basic. Na przykład możesz chcieć obliczyć kilka wartości, porównać je i wykonywać na nich różne operacje, w zależności od wyniku porównania. Należy zachować wartości, jeśli chcesz je porównać.  
+You often have to store values when you perform calculations with Visual Basic. For example, you might want to calculate several values, compare them, and perform different operations on them, depending on the result of the comparison. You have to retain the values if you want to compare them.  
   
 ## <a name="usage"></a>Użycie  
- Visual Basic, podobnie jak większość języków programowania, używa zmiennych do przechowywania wartości. *Zmienna* ma nazwę (wyraz używany do odwoływania się do wartości, która zawiera zmienna). Zmienna ma również typ danych (który określa rodzaj danych, które mogą być przechowywane w zmiennej). Zmienna może reprezentować tablicę, jeśli musi przechowywać indeksowany zestaw ściśle powiązanych elementów danych.  
+ Visual Basic, just like most programming languages, uses variables for storing values. A *variable* has a name (the word that you use to refer to the value that the variable contains). A variable also has a data type (which determines the kind of data that the variable can store). A variable can represent an array if it has to store an indexed set of closely related data items.  
   
- Wnioskowanie o typie lokalnym umożliwia deklarowanie zmiennych bez jawnego określenia typu danych. Zamiast tego, kompilator wnioskuje typ zmiennej z typu wyrażenia inicjowania. Aby uzyskać więcej informacji, zobacz [lokalne wnioskowanie o typie](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) i zestawienie [opcji](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Local type inference enables you to declare variables without explicitly stating a data type. Instead, the compiler infers the type of the variable from the type of the initialization expression. For more information, see [Local Type Inference](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) and [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
-## <a name="assigning-values"></a>Przypisywanie wartości  
- Instrukcje przypisania służą do wykonywania obliczeń i przypisywania wyniku do zmiennej, jak pokazano w poniższym przykładzie.  
+## <a name="assigning-values"></a>Assigning Values  
+ You use assignment statements to perform calculations and assign the result to a variable, as the following example shows.  
   
  [!code-vb[VbVbalrVariables#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#1)]  
   
 > [!NOTE]
-> Znak równości (`=`) w tym przykładzie jest operatorem przypisania, a nie operatorem równości. Wartość jest przypisana do zmiennej `applesSold`.  
+> The equal sign (`=`) in this example is an assignment operator, not an equality operator. The value is being assigned to the variable `applesSold`.  
   
- Aby uzyskać więcej informacji, zobacz [jak: Przenoszenie danych do zmiennej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)i z niej.  
+ For more information, see [How to: Move Data Into and Out of a Variable](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md).  
   
-## <a name="variables-and-properties"></a>Zmienne i właściwości  
- Podobnie jak zmienna, *Właściwość* reprezentuje wartość, do której można uzyskać dostęp. Jest to jednak bardziej złożone niż zmienna. Właściwość używa bloków kodu, które kontrolują sposób ustawiania i pobierania jego wartości. Aby uzyskać więcej informacji, zobacz [różnice między właściwościami i zmiennymi w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
+## <a name="variables-and-properties"></a>Variables and Properties  
+ Like a variable, a *property* represents a value that you can access. However, it is more complex than a variable. A property uses code blocks that control how to set and retrieve its value. For more information, see [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Rozwiązywanie problemów związanych ze zmiennymi](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)
-- [Instrukcje: Przenoszenie danych do zmiennej i z niej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
-- [Różnice między właściwościami i zmiennymi w Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
+- [Instrukcje: przenoszenie danych do zmiennej i z niej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
+- [Differences Between Properties and Variables in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)
 - [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

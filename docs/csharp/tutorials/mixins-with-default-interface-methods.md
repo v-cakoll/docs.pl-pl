@@ -3,14 +3,14 @@ title: Tworzenie typów domieszki przy użyciu domyślnych metod interfejsu
 description: Przy użyciu domyślnych elementów członkowskich interfejsu można rozciągnąć interfejsy z opcjonalnymi implementacjami domyślnymi dla realizatorów.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039273"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140848"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Samouczek: mieszanie funkcji podczas tworzenia klas przy użyciu interfejsów z domyślnymi metodami interfejsu
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Samouczek: mieszanie funkcji w przypadku tworzenia klas przy użyciu interfejsów z domyślnymi metodami interfejsu
 
 Począwszy od C# 8,0 na platformie .net Core 3,0, można zdefiniować implementację w przypadku deklarowania elementu członkowskiego interfejsu. Ta funkcja udostępnia nowe możliwości, w których można definiować domyślne implementacje funkcji zadeklarowanych w interfejsach. Klasy mogą być wybierane podczas przesłonięcia funkcji, kiedy używać funkcji domyślnych i gdy nie należy deklarować obsługi funkcji dyskretnych.
 
@@ -28,7 +28,7 @@ Musisz skonfigurować maszynę do uruchamiania programu .NET Core, w tym kompila
 
 ## <a name="limitations-of-extension-methods"></a>Ograniczenia metod rozszerzających
 
-Jednym ze sposobów implementacji zachowania, które pojawia się jako część interfejsu, jest zdefiniowanie [metod rozszerzających](../programming-guide/classes-and-structs/extension-methods.md) , które zapewniają zachowanie domyślne. Interfejsy deklarują minimalny zestaw elementów członkowskich, zapewniając większą powierzchnię dla każdej klasy, która implementuje ten interfejs. Na przykład metody rozszerzające w <xref:System.Linq.Enumerable> zapewniają implementację dowolnej sekwencji jako źródła zapytania LINQ.
+Jednym ze sposobów implementacji zachowania, które pojawia się jako część interfejsu, jest zdefiniowanie [metod rozszerzających](../programming-guide/classes-and-structs/extension-methods.md) , które zapewniają zachowanie domyślne. Interfejsy deklarują minimalny zestaw elementów członkowskich, zapewniając większą powierzchnię dla każdej klasy, która implementuje ten interfejs. Na przykład metody rozszerzające w <xref:System.Linq.Enumerable> zapewniają implementację dowolnej sekwencji, która będzie źródłem zapytania LINQ.
 
 Metody rozszerzające są rozwiązane w czasie kompilacji, przy użyciu zadeklarowanego typu zmiennej. Klasy implementujące interfejs mogą zapewnić lepszą implementację dowolnej metody rozszerzenia. Deklaracje zmiennych muszą być zgodne z typem implementującym, aby umożliwić kompilatorowi wybranie tej implementacji. Gdy typ czasu kompilacji jest zgodny z interfejsem, wywołania metody są rozpoznawane jako Metoda rozszerzenia. Innym problemem z metodami rozszerzania jest to, że te metody są dostępne wszędzie tam, gdzie klasy zawierającej metody rozszerzające są dostępne. Klasy nie mogą deklarować, jeśli powinny lub nie muszą dostarczać funkcji zadeklarowanych w metodach rozszerzających.
 
@@ -65,11 +65,11 @@ Następnie zdefiniujemy interfejs dla światła, który może być automatycznie
 
 [!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
-Można dodać podstawową implementację do światła narzutowego, ale lepszym rozwiązaniem jest zmodyfikowanie tej definicji interfejsu w celu udostępnienia domyślnej implementacji `virtual`:
+Można dodać podstawową implementację do światła narzutowego, ale lepszym rozwiązaniem jest zmodyfikowanie tej definicji interfejsu w celu udostępnienia `virtual` domyślnej implementacji:
 
 [!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
-Po dodaniu tej zmiany Klasa `OverheadLight` może zaimplementować funkcję Timer, deklarując obsługę interfejsu:
+Dodając tę zmianę, Klasa `OverheadLight` może zaimplementować funkcję Timer, deklarując obsługę interfejsu:
 
 ```csharp
 public class OverheadLight : ITimerLight { }
@@ -91,7 +91,7 @@ Domyślna implementacja umożliwia migotanie. Światełko narzutu można dodać 
 
 [!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
-Nowy typ światła, `LEDLight` obsługuje zarówno funkcję Timer, jak i funkcję Blink. Ten styl jasny implementuje interfejsy `ITimerLight` i `IBlinkingLight` i przesłania metodę `Blink`:
+Nowy typ światła, `LEDLight` obsługuje zarówno funkcję Timer, jak i funkcję Blink. Ten styl jasny implementuje interfejsy `ITimerLight` i `IBlinkingLight` i zastępuje metodę `Blink`:
 
 [!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
@@ -99,7 +99,7 @@ Nowy typ światła, `LEDLight` obsługuje zarówno funkcję Timer, jak i funkcj�
 
 [!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
-Utworzony wcześniej `HalogenLight` nie obsługuje migania. Dlatego nie należy dodawać `IBlinkingLight` do listy obsługiwanych interfejsów.
+Utworzone wcześniej `HalogenLight` nie obsługują migania. Dlatego nie należy dodawać `IBlinkingLight` do listy obsługiwanych interfejsów.
 
 ## <a name="detect-the-light-types-using-pattern-matching"></a>Wykrywanie typów świateł przy użyciu dopasowania wzorca
 
@@ -107,7 +107,7 @@ Następnie Napiszmy kod testowy. Możesz użyć C#funkcji [dopasowania do wzorca
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
-Poniższy kod w metodzie `Main` tworzy każdy typ światła w sekwencji i testy, które są jasne:
+Poniższy kod w metodzie `Main` tworzy każdy typ światła w sekwencji i sprawdza, czy jest to jasne:
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
@@ -121,8 +121,8 @@ Domyślna implementacja zakłada zasilanie AC:
 
 [!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
-Te zmiany kompilują się w sposób przejrzysty, mimo że `ExtraFancyLight` deklaruje obsługę interfejsu `ILight` i obu interfejsów pochodnych, `ITimerLight` i `IBlinkingLight`. W interfejsie `ILight` jest zadeklarowana tylko jedna implementacja "najbliższy". Każda klasa, która zadeklarowała przesłonięcie, stanie się jedną "najbliższą" implementacją. Przykłady z poprzednich klas, które overrodeą elementy członkowskie innych interfejsów pochodnych.
+Te zmiany kompilują się w sposób przejrzysty, mimo że `ExtraFancyLight` deklaruje obsługę interfejsu `ILight` i zarówno interfejsów pochodnych, `ITimerLight` i `IBlinkingLight`. W interfejsie `ILight` istnieje tylko jedna "najbliżej" implementacja. Każda klasa, która zadeklarowała przesłonięcie, stanie się jedną "najbliższą" implementacją. Przykłady z poprzednich klas, które overrodeą elementy członkowskie innych interfejsów pochodnych.
 
-Unikaj zastępowania tej samej metody w wielu interfejsach pochodnych. Wykonanie tej operacji tworzy niejednoznaczne wywołanie metody za każdym razem, gdy klasa implementuje oba interfejsy pochodne. Kompilator nie może wybrać jednej lepszej metody, aby wystawić błąd. Na przykład jeśli dla `IBlinkingLight` i `ITimerLight` zaimplementowano przesłonięcie `PowerStatus`, `OverheadLight` musi dostarczyć bardziej szczegółowe przesłonięcie. W przeciwnym razie kompilator nie może wybrać między implementacjami w dwóch interfejsach pochodnych. Zazwyczaj można uniknąć tej sytuacji, zachowując definicje interfejsu jako małe i skoncentrowane na jednej funkcji. W tym scenariuszu każda funkcja światła jest własnym interfejsem; wiele interfejsów jest dziedziczonych tylko przez klasy.
+Unikaj zastępowania tej samej metody w wielu interfejsach pochodnych. Wykonanie tej operacji tworzy niejednoznaczne wywołanie metody za każdym razem, gdy klasa implementuje oba interfejsy pochodne. Kompilator nie może wybrać jednej lepszej metody, aby wystawić błąd. Na przykład, jeśli zarówno `IBlinkingLight` i `ITimerLight` zaimplementował przesłonięcie `PowerStatus`, `OverheadLight` będzie musiał podać bardziej szczegółowe przesłonięcie. W przeciwnym razie kompilator nie może wybrać między implementacjami w dwóch interfejsach pochodnych. Zazwyczaj można uniknąć tej sytuacji, zachowując definicje interfejsu jako małe i skoncentrowane na jednej funkcji. W tym scenariuszu każda funkcja światła jest własnym interfejsem; wiele interfejsów jest dziedziczonych tylko przez klasy.
 
 Ten przykład pokazuje jeden scenariusz, w którym można zdefiniować osobne funkcje, które mogą być mieszane w klasy. Deklaruje dowolny zestaw obsługiwanych funkcji, deklarując interfejsy obsługiwane przez klasę. Użycie wirtualnych metod interfejsu wirtualnego umożliwia używanie klas lub Definiowanie innej implementacji dla dowolnych lub wszystkich metod interfejsu. Ta funkcja językowa udostępnia nowe sposoby modelowania kompilowanych systemów rzeczywistych. Domyślne metody interfejsu zapewniają wyraźniejszy sposób wyznaczania pokrewnych klas, które mogą mieszać i odpowiadać różnym funkcjom przy użyciu wirtualnych implementacji tych funkcji.

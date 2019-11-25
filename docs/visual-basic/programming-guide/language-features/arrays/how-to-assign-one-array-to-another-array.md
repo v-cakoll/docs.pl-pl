@@ -1,27 +1,27 @@
 ---
-title: 'Instrukcje: Przypisywanie tablicy do innej tablicy (Visual Basic)'
+title: 'Porady: przypisywanie tablicy do innej tablicy'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - covariance, arrays
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: a39888f19e5033a5c6622313fb7451d6463b2f7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: be5337e36c2cc7ad9f9b32182b8575ac66bb4a50
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64858885"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351889"
 ---
-# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Instrukcje: Przypisywanie tablicy do innej tablicy (Visual Basic)
+# <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Porady: przypisywanie tablicy do innej tablicy (Visual Basic)
 
-Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania, podobnie jak inne typy obiektów. Zmienną tablicową mieści wskaźnik do danych stanowiące elementów tablicy i informacji Ranga i długość i przypisania kopiuje tylko ten wskaźnik.
+Because arrays are objects, you can use them in assignment statements like other object types. An array variable holds a pointer to the data constituting the array elements and the rank and length information, and an assignment copies only this pointer.
 
-### <a name="to-assign-one-array-to-another-array"></a>Aby przypisać jednej tablicy do innej tablicy
+### <a name="to-assign-one-array-to-another-array"></a>To assign one array to another array
 
-1. Upewnij się, że dwie tablice mają tę samą rangę (liczba wymiarów) i typy danych zgodne elementu.
+1. Ensure that the two arrays have the same rank (number of dimensions) and compatible element data types.
 
-2. Używać instrukcji przypisania standardowych można przypisać tablica źródłowa do tablicy docelowej. Nie wykonuj obu nazwa tablicy za pomocą nawiasów.
+2. Use a standard assignment statement to assign the source array to the destination array. Do not follow either array name with parentheses.
 
     ```vb
     Dim formArray() As System.Windows.Forms.Form
@@ -29,19 +29,19 @@ Ponieważ tablice są obiektami, będziesz ich używać w instrukcji przypisania
     controlArray = formArray
     ```
 
-Podczas przypisywania tablicy do innej, obowiązują następujące reguły:
+When you assign one array to another, the following rules apply:
 
-- **Równe rangę.** Ranga tablicy docelowej (liczba wymiarów) musi być taka sama jak tablica źródłowa.
+- **Equal Ranks.** The rank (number of dimensions) of the destination array must be the same as that of the source array.
 
-  Podana rangę dwie tablice są równe, wymiary nie są równe. Liczba elementów w określonym wymiarze, które można zmienić podczas przypisywania.
+  Provided the ranks of the two arrays are equal, the dimensions do not need to be equal. The number of elements in a given dimension can change during assignment.
 
-- **Typy elementów.** Musi mieć albo obu tablicach *odwołania do typu* elementów lub obu tablicach, musi mieć *typu wartości* elementów. Aby uzyskać więcej informacji, zobacz [typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
+- **Element Types.** Either both arrays must have *reference type* elements or both arrays must have *value type* elements. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).
 
-  - Jeśli elementy typu wartości obu tablicach, typów danych elementów musi być dokładnie takie same. Jedynym wyjątkiem jest, którą można przypisać tablicę `Enum` elementów do tablicy typu podstawowego `Enum`.
+  - If both arrays have value type elements, the element data types must be exactly the same. The only exception to this is that you can assign an array of `Enum` elements to an array of the base type of that `Enum`.
 
-  - Jeśli obu tablicach ma odwołanie do typu elementów, typ elementu źródłowego musi pochodzić od typu elementu docelowego. W przypadku dwóch tablic mają ten sam relację dziedziczenia jako ich elementy. Jest to nazywane *Kowariancja tablicy*.
+  - If both arrays have reference type elements, the source element type must derive from the destination element type. When this is the case, the two arrays have the same inheritance relationship as their elements. This is called *array covariance*.
 
-Kompilator zgłasza błąd, jeśli powyższe zasady są naruszone, na przykład jeśli typy danych nie są zgodne lub rangę są nierówne. Możesz dodać obsługę błędów do kodu w taki sposób, aby upewnić się, że tablice są zgodne, przed podjęciem próby wykonania przypisania. Można również użyć [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) — słowo kluczowe, jeśli chcesz uniknąć, zostanie zgłoszony wyjątek.
+The compiler reports an error if the above rules are violated, for example if the data types are not compatible or the ranks are unequal. You can add error handling to your code to make sure that the arrays are compatible before attempting an assignment. You can also use the [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) keyword if you want to avoid throwing an exception.
 
 ## <a name="see-also"></a>Zobacz także
 

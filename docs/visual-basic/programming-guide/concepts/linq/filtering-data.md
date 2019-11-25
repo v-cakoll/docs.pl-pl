@@ -1,34 +1,34 @@
 ---
-title: Filtrowanie danych (Visual Basic)
+title: Filtrowanie danych
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
-ms.openlocfilehash: 27765247daa2155e685b1cd2bfccebb3216ca672
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 81e207e451055fb2952e4bf393db067f0851afb4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582437"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353495"
 ---
-# <a name="filtering-data-visual-basic"></a>Filtrowanie danych (Visual Basic)
+# <a name="filtering-data-visual-basic"></a>Filtering Data (Visual Basic)
 
-Filtrowanie odwołuje się do operacji ograniczającej zestaw wyników tak, aby zawierała tylko te elementy, które spełniają określony warunek. Jest on również znany jako wybór.
+Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition. It is also known as selection.
 
-Na poniższej ilustracji przedstawiono wyniki filtrowania sekwencji znaków. Predykat dla operacji filtrowania określa, że znak musi mieć wartość "A".
+The following illustration shows the results of filtering a sequence of characters. The predicate for the filtering operation specifies that the character must be 'A'.
 
-![Diagram przedstawiający operację filtrowania LINQ](./media/filtering-data/linq-filter-operation.png)
+![Diagram that shows a LINQ filtering operation](./media/filtering-data/linq-filter-operation.png)
 
-W poniższej sekcji przedstawiono standardowe metody operatorów zapytań, które wykonują zaznaczenie.
+The standard query operator methods that perform selection are listed in the following section.
 
 ## <a name="methods"></a>Metody
 
-|Nazwa metody|Opis|Składnia wyrażenia zapytania Visual Basic|Więcej informacji|
+|Method Name|Opis|Visual Basic Query Expression Syntax|Więcej informacji|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|OfType|Wybiera wartości, w zależności od możliwości przerzutowania do określonego typu.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|Gdzie|Wybiera wartości, które są oparte na funkcji predykatu.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
+|OfType|Selects values, depending on their ability to be cast to a specified type.|Nie dotyczy.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|Gdzie|Selects values that are based on a predicate function.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
 
-## <a name="query-expression-syntax-example"></a>Przykład składni wyrażenia zapytania
+## <a name="query-expression-syntax-example"></a>Query Expression Syntax Example
 
-Poniższy przykład używa `Where` do filtrowania z tablicy te ciągi mające określoną długość.
+The following example uses the `Where` to filter from an array those strings that have a specific length.
 
 ```vb
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}
@@ -54,9 +54,9 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Linq>
-- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Where, klauzula](../../../../visual-basic/language-reference/queries/where-clause.md)
-- [Instrukcje: filtrowanie wyników zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [Instrukcje: wykonywanie zapytania dotyczącego metadanych zestawu przy użyciu odbicia (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Instrukcje: zapytanie o pliki o określonym atrybucie lub nazwie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Instrukcje: sortowanie lub filtrowanie danych tekstowych według dowolnego wyrazu lub pola (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [How to: Filter Query Results](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
+- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [How to: Query for Files with a Specified Attribute or Name (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

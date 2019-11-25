@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Zablokuj więcej niż jedną wartość w zmiennej (Visual Basic)'
+title: 'Porady: utrzymywanie więcej niż jednej wartości w zmiennej'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic], composite data types
@@ -11,36 +11,36 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 8d07a34a98303f9d220dba0a3c955120b421340e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d452fbf35f9d200348234b38c40f8636f0ec4b4e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350022"
 ---
-# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Instrukcje: Zablokuj więcej niż jedną wartość w zmiennej (Visual Basic)
+# <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Porady: utrzymywanie więcej niż jednej wartości w zmiennej (Visual Basic)
 
-Zmienna zawiera więcej niż jedną wartość, jeśli deklaruje ją jako *złożony typ danych*.
+A variable holds more than one value if you declare it to be of a *composite data type*.
 
-[Złożone typy danych](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) obejmują struktury, tablice i klasy. Zmienna złożonego typu danych może zawierać kombinację podstawowych typów danych i innych typów złożonych. Struktury i klasy mogą przechowywać kod oraz dane.
+[Composite Data Types](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) include structures, arrays, and classes. A variable of a composite data type can hold a combination of elementary data types and other composite types. Structures and classes can hold code as well as data.
 
-## <a name="to-hold-more-than-one-value-in-a-variable"></a>Aby przechowywać więcej niż jedną wartość w zmiennej
+## <a name="to-hold-more-than-one-value-in-a-variable"></a>To hold more than one value in a variable
 
-1. Określ typ danych złożonych, który ma być używany dla zmiennej.
+1. Determine what composite data type you want to use for your variable.
 
-2. Jeśli złożony typ danych nie jest jeszcze zdefiniowany, zdefiniuj go tak, aby zmienna mogła z niego korzystać.
+2. If the composite data type is not already defined, define it so that your variable can use it.
 
-    - Zdefiniuj strukturę przy użyciu [instrukcji struktury](../../../../visual-basic/language-reference/statements/structure-statement.md).
+    - Define a structure with a [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md).
 
-    - Zdefiniuj tablicę z [instrukcją Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).
+    - Define an array with a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md).
 
-    - Zdefiniuj klasę z [instrukcją klasy](../../../../visual-basic/language-reference/statements/class-statement.md).
+    - Define a class with a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md).
 
-3. Zadeklaruj zmienną za pomocą `Dim` instrukcji.
+3. Declare your variable with a `Dim` statement.
 
-4. Postępuj według nazwy zmiennej z `As` klauzulą.
+4. Follow the variable name with an `As` clause.
 
-5. `As` Użyj słowa kluczowego z nazwą odpowiedniego złożonego typu danych.
+5. Follow the `As` keyword with the name of the appropriate composite data type.
 
 ## <a name="see-also"></a>Zobacz także
 

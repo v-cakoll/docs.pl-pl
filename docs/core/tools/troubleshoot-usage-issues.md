@@ -3,12 +3,12 @@ title: Rozwiązywanie problemów z użyciem narzędzia .NET Core
 description: Poznaj typowe problemy występujące podczas uruchamiania narzędzi .NET Core i możliwych rozwiązań.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318290"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282500"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Rozwiązywanie problemów z użyciem narzędzia .NET Core
 
@@ -25,7 +25,7 @@ W przypadku niepowodzenia uruchomienia narzędzia .NET Core najprawdopodobniej w
 
 Jeśli plik wykonywalny nie zostanie znaleziony, zostanie wyświetlony komunikat podobny do następującego:
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -44,12 +44,12 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
 
     Narzędzia globalne można zainstalować w katalogu domyślnym lub w określonej lokalizacji. Domyślne katalogi są następujące:
 
-    | Macintosh          | Ścieżka                          |
+    | System operacyjny          | Ścieżka                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    Jeśli próbujesz uruchomić narzędzie globalne, sprawdź, czy zmienna środowiskowa `PATH` na komputerze zawiera ścieżkę, w której zainstalowano narzędzie globalne, a plik wykonywalny znajduje się w tej ścieżce.
+    Jeśli próbujesz uruchomić narzędzie globalne, sprawdź, czy zmienna środowiskowa `PATH` na komputerze zawiera ścieżkę, w której zainstalowano narzędzie globalne i czy plik wykonywalny znajduje się w tej ścieżce.
 
     Interfejs wiersza polecenia platformy .NET Core próbuje dodać domyślne lokalizacje do zmiennej środowiskowej PATH przy pierwszym użyciu. Istnieje jednak kilka scenariuszy, w których lokalizacja może nie być automatycznie dodawana do ścieżki, dlatego należy edytować ścieżkę, aby skonfigurować ją w następujących przypadkach:
 
@@ -63,7 +63,7 @@ Nazwa pliku wykonywalnego określa sposób wywołania narzędzia. W poniższej t
 
 * Narzędzia lokalne
 
-  Jeśli próbujesz uruchomić narzędzie lokalne, sprawdź, czy istnieje plik manifestu o nazwie *dotnet-Tools. JSON* w bieżącym katalogu lub dowolnym z jego katalogów nadrzędnych. Ten plik może również znajdować się w folderze o nazwie *. config* gdziekolwiek w hierarchii folderów projektu, a nie w folderze głównym. Jeśli istnieje polecenie *dotnet-Tools. JSON* , otwórz je i sprawdź, czy narzędzie, które chcesz uruchomić. Jeśli plik nie zawiera wpisu dla `"isRoot": true`, należy również zapoznać się z tematem dalszej hierarchii plików dla dodatkowych plików manifestu narzędzia.
+  Jeśli próbujesz uruchomić narzędzie lokalne, sprawdź, czy istnieje plik manifestu o nazwie *dotnet-Tools. JSON* w bieżącym katalogu lub dowolnym z jego katalogów nadrzędnych. Ten plik może również znajdować się w folderze o nazwie *. config* gdziekolwiek w hierarchii folderów projektu, a nie w folderze głównym. Jeśli istnieje polecenie *dotnet-Tools. JSON* , otwórz je i sprawdź, czy narzędzie, które chcesz uruchomić. Jeśli plik nie zawiera wpisu dla `"isRoot": true`, Sprawdź również dalsze hierarchie plików dla dodatkowych plików manifestu narzędzia.
 
   Jeśli próbujesz uruchomić narzędzie .NET Core, które zostało zainstalowane z określoną ścieżką, musisz dołączyć tę ścieżkę podczas korzystania z narzędzia. Przykładem użycia narzędzia z zainstalowaną ścieżką narzędzia jest:
 
@@ -95,13 +95,13 @@ dotnet --info
 
 Jeśli uważasz, że narzędzie powinno obsługiwać aktualnie zainstalowaną wersję środowiska uruchomieniowego, możesz skontaktować się z autorem narzędzia i sprawdzić, czy może zaktualizować numer wersji lub wiele obiektów docelowych. Po ponownym skompilowaniu i ponownym opublikowaniu pakietu narzędzi do NuGet przy użyciu zaktualizowanego numeru wersji można zaktualizować kopię. Chociaż to się nie dzieje, najszybszym rozwiązaniem jest zainstalowanie wersji środowiska uruchomieniowego, która będzie działać z narzędziem, które próbujesz uruchomić. Aby pobrać konkretną wersję środowiska uruchomieniowego platformy .NET Core, odwiedź [stronę pobierania programu .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
-W przypadku zainstalowania zestaw .NET Core SDK w lokalizacji innej niż domyślna należy ustawić zmienną środowiskową `DOTNET_ROOT` do katalogu, który zawiera plik wykonywalny `dotnet`.
+W przypadku zainstalowania zestaw .NET Core SDK w lokalizacji innej niż domyślna należy ustawić zmienną środowiskową `DOTNET_ROOT` do katalogu, który zawiera `dotnet` plik wykonywalny.
 
 ## <a name="net-core-tool-installation-fails"></a>Instalacja narzędzia .NET Core kończy się niepowodzeniem
 
 Istnieje kilka powodów, dla których instalacja narzędzia globalnego lub lokalnego programu .NET Core może zakończyć się niepowodzeniem. Gdy instalacja narzędzia nie powiedzie się, zostanie wyświetlony komunikat podobny do następującego:
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.
@@ -129,7 +129,7 @@ W miarę aktualizowania identyfikatorów pakietów należy zmienić identyfikato
 
 ### <a name="preview-releases"></a>Wersje zapoznawcze
 
-* Podjęto próbę zainstalowania wersji zapoznawczej i nie użyto opcji `--version` w celu określenia wersji.
+* Podjęto próbę zainstalowania wersji zapoznawczej i nie użyto opcji `--version`, aby określić wersję.
 
 Narzędzia .NET Core, które są w wersji zapoznawczej, muszą być określone przy użyciu części nazwy, aby wskazać, że są one w wersji zapoznawczej. Nie musisz zawierać całej wersji zapoznawczej. Przy założeniu, że numery wersji mają oczekiwany format, można użyć podobnej do poniższego przykładu:
 
@@ -152,7 +152,7 @@ Jeśli spróbujesz zainstalować pakiet NuGet, który jest regularnym pakietem N
 
 * Nie można uzyskać dostępu do wymaganego kanału informacyjnego NuGet, prawdopodobnie z powodu problemu z połączeniem internetowym.
 
-Instalacja narzędzia wymaga dostępu do źródła danych NuGet zawierającego pakiet narzędzi. Nie powiedzie się, jeśli źródło danych nie jest dostępne. Można zmienić źródła danych z `nuget.config`, zażądać określonego pliku `nuget.config` lub określić dodatkowe źródła przy użyciu przełącznika `--add-source`. Domyślnie NuGet zgłasza błąd dla każdego źródła danych, które nie może nawiązać połączenia. Flaga `--ignore-failed-sources` może pominąć te źródła nieosiągalne.
+Instalacja narzędzia wymaga dostępu do źródła danych NuGet zawierającego pakiet narzędzi. Nie powiedzie się, jeśli źródło danych nie jest dostępne. Można zmienić źródła danych za pomocą `nuget.config`, zażądać określonego pliku `nuget.config` lub określić dodatkowe źródła danych za pomocą przełącznika `--add-source`. Domyślnie NuGet zgłasza błąd dla każdego źródła danych, które nie może nawiązać połączenia. Flaga `--ignore-failed-sources` może pominąć te źródła nieosiągalne.
 
 ### <a name="package-id-incorrect"></a>Nieprawidłowy identyfikator pakietu
 

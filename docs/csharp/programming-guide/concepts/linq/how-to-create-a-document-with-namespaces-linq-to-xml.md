@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Tworzenie dokumentu z przestrzeniami nazwC#() (LINQ to XML)'
+title: Jak utworzyć dokument z przestrzeniami nazw (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593885"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141323"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Instrukcje: Tworzenie dokumentu z przestrzeniami nazwC#() (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Jak utworzyć dokument z przestrzeniami nazw (C#) (LINQ to XML)
 W tym temacie pokazano, jak tworzyć dokumenty z przestrzeniami nazw.  
   
 ## <a name="example"></a>Przykład  
- Aby utworzyć element lub atrybut, który znajduje się w przestrzeni nazw, należy najpierw zadeklarować i zainicjować <xref:System.Xml.Linq.XNamespace> obiekt. Następnie należy użyć przeciążenia operatora dodawania, aby połączyć przestrzeń nazw z nazwą lokalną wyrażoną jako ciąg.  
+ Aby utworzyć element lub atrybut, który znajduje się w przestrzeni nazw, należy najpierw zadeklarować i zainicjować obiekt <xref:System.Xml.Linq.XNamespace>. Następnie należy użyć przeciążenia operatora dodawania, aby połączyć przestrzeń nazw z nazwą lokalną wyrażoną jako ciąg.  
   
- Poniższy przykład tworzy dokument z jedną przestrzenią nazw. Domyślnie program [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializować ten dokument przy użyciu domyślnej przestrzeni nazw.  
+ Poniższy przykład tworzy dokument z jedną przestrzenią nazw. Domyślnie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] serializować tego dokumentu przy użyciu domyślnej przestrzeni nazw.  
   
 ```csharp  
 // Create an XML tree in a namespace.  
@@ -35,7 +35,7 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy dokument z jedną przestrzenią nazw. Tworzy również atrybut, który deklaruje przestrzeń nazw z prefiksem przestrzeni nazw. Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym nazwa atrybutu jest prefiksem przestrzeni nazw, a ta nazwa znajduje się w <xref:System.Xml.Linq.XNamespace.Xmlns%2A> przestrzeni nazw. Wartość tego atrybutu jest identyfikatorem URI przestrzeni nazw.  
+ Poniższy przykład tworzy dokument z jedną przestrzenią nazw. Tworzy również atrybut, który deklaruje przestrzeń nazw z prefiksem przestrzeni nazw. Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym nazwa atrybutu jest prefiksem przestrzeni nazw, a ta nazwa znajduje się w przestrzeni nazw <xref:System.Xml.Linq.XNamespace.Xmlns%2A>. Wartość tego atrybutu jest identyfikatorem URI przestrzeni nazw.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -58,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak utworzyć dokument zawierający dwie przestrzenie nazw. Jest to domyślna przestrzeń nazw. Innym jest przestrzenią nazw z prefiksem.  
   
- Uwzględniając atrybuty przestrzeni nazw w elemencie głównym, przestrzenie nazw są serializowane, `http://www.adventure-works.com` więc jest to domyślna przestrzeń nazw `www.fourthcoffee.com` i jest serializowany z prefiksem "FC". Aby utworzyć atrybut, który deklaruje domyślną przestrzeń nazw, należy utworzyć atrybut o nazwie "xmlns" bez przestrzeni nazw. Wartość atrybutu jest domyślnym identyfikatorem URI przestrzeni nazw.  
+ Uwzględniając atrybuty przestrzeni nazw w elemencie głównym, przestrzenie nazw są serializowane, tak aby `http://www.adventure-works.com` jest domyślną przestrzenią nazw, a `www.fourthcoffee.com` jest serializowany z prefiksem "FC". Aby utworzyć atrybut, który deklaruje domyślną przestrzeń nazw, należy utworzyć atrybut o nazwie "xmlns" bez przestrzeni nazw. Wartość atrybutu jest domyślnym identyfikatorem URI przestrzeni nazw.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  
@@ -119,9 +119,9 @@ Console.WriteLine(root);
 ```  
   
 ## <a name="example"></a>Przykład  
- Innym sposobem osiągnięcia tego samego wyniku jest użycie rozwiniętych nazw zamiast deklarowania i tworzenia <xref:System.Xml.Linq.XNamespace> obiektu.  
+ Innym sposobem osiągnięcia tego samego wyniku jest użycie rozwiniętych nazw zamiast deklarowania i tworzenia obiektu <xref:System.Xml.Linq.XNamespace>.  
   
- Takie podejście ma wpływ na wydajność. Za każdym razem, gdy przekazujesz ciąg, który zawiera rozwiniętą [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nazwę [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], należy przeanalizować nazwę, znaleźć wykorzystaną przestrzeń nazw i znaleźć nazwę atomową. Ten proces pobiera czas procesora CPU. Jeśli wydajność jest ważna, warto zadeklarować obiekt i używać go <xref:System.Xml.Linq.XNamespace> jawnie.  
+ Takie podejście ma wpływ na wydajność. Za każdym razem, gdy przekazujesz ciąg zawierający rozwiniętą nazwę do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] musi przeanalizować nazwę, znaleźć wykorzystaną przestrzeń nazw i znaleźć nazwę atomową. Ten proces pobiera czas procesora CPU. Jeśli wydajność jest ważna, możesz chcieć jawnie zadeklarować i użyć obiektu <xref:System.Xml.Linq.XNamespace>.  
   
  Jeśli wydajność jest ważnym problemem, zobacz [pre-rozproszenie of XName Objects (LINQ to XML)C#(),](./pre-atomization-of-xname-objects-linq-to-xml.md) Aby uzyskać więcej informacji  
   

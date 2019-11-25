@@ -1,20 +1,20 @@
 ---
-title: -Imports (Visual Basic)
+title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 380e71e462f736d4564a37b83567007fa9461b05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005562"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332966"
 ---
-# <a name="-imports-visual-basic"></a>-Imports (Visual Basic)
-Importuje przestrzenie nazw z określonego zestawu.  
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+Imports namespaces from a specified assembly.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,19 +26,19 @@ Importuje przestrzenie nazw z określonego zestawu.
   
 |Termin|Definicja|  
 |---|---|  
-|`namespaceList`|Wymagany. Rozdzielana przecinkami lista przestrzeni nazw do zaimportowania.|  
+|`namespaceList`|Wymagany. Comma-delimited list of namespaces to be imported.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-imports` importuje wszystkie przestrzenie nazw zdefiniowane w bieżącym zestawie plików źródłowych lub z dowolnego przywoływanego zestawu.  
+ The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
   
- Elementy członkowskie w przestrzeni nazw określonej przy użyciu `-imports` są dostępne dla wszystkich plików kodu źródłowego w kompilacji. Użyj [instrukcji Imports (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) , aby użyć przestrzeni nazw w jednym pliku kodu źródłowego.  
+ The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
   
-|Aby ustawić/Imports — w zintegrowanym środowisku programistycznym programu Visual Studio|  
+|To set /imports in the Visual Studio integrated development environment|  
 |---|  
-|1. zaznaczono projekt w **Eksplorator rozwiązań**. W menu **projekt** kliknij polecenie **Właściwości**. <br />2. Kliknij kartę **odwołania** .<br />3. Wprowadź nazwę przestrzeni nazw w polu obok przycisku **Dodaj użytkownika importowania** .<br />4. kliknij przycisk **Dodaj Import użytkownika** .|  
+|1.  Have a project selected in **Solution Explorer**. On the **Project** menu, click **Properties**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje, gdy zostanie określony `/imports:system.globalization`. Niepowodzenie kompilacji wymaga, aby instrukcja `Imports System.Globalization` była uwzględniona na początku pliku kodu źródłowego lub że właściwość jest w pełni kwalifikowana jako `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example
@@ -50,6 +50,6 @@ End Module
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

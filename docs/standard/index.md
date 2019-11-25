@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 93dbc711e38c17c2f502c4d04239d037ff015059
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6ce570460984d975b19fd2a696b668bc41e9054e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425191"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283842"
 ---
 # <a name="net-guide"></a>.NET — przewodnik
 
@@ -57,7 +57,7 @@ Jeśli interesuje Cię niektóre główne koncepcje platformy .NET, zapoznaj si�
 
 Ponadto zapoznaj się z każdym przewodnikiem dotyczącym języka, aby dowiedzieć się więcej o trzech głównych językach .NET:
 
-* [Przewodnik dla języka C#](../csharp/index.md)
+* [Przewodnik dla języka C#](../csharp/index.yml)
 * [Podręcznik języka F#](../fsharp/index.md)
 * [Przewodnik po Visual Basic](../visual-basic/index.md)
 

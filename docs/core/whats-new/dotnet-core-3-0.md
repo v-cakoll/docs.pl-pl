@@ -3,16 +3,15 @@ title: Co nowego w programie .NET Core 3.0
 description: Dowiedz się więcej o nowych funkcjach dostępnych w programie .NET Core 3,0.
 dev_langs:
 - csharp
-- vb
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: dcbf1073c12650101efdcf6022db0b29ace2eb3f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420758"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140679"
 ---
 # <a name="whats-new-in-net-core-30"></a>Co nowego w programie .NET Core 3.0
 
@@ -57,7 +56,7 @@ Jeśli używasz programu Visual Studio, potrzebujesz [programu Visual studio 201
 
 Platforma .NET Core teraz domyślnie kompiluje [pliki wykonywalne zależne od platformy](../deploying/index.md#framework-dependent-executables-fde) . To zachowanie jest nowe w przypadku aplikacji korzystających z zainstalowanej globalnie wersji platformy .NET Core. Wcześniej tylko [wstępnie zawarte wdrożenia](../deploying/index.md#self-contained-deployments-scd) spowodują utworzenie pliku wykonywalnego.
 
-W trakcie `dotnet build` lub `dotnet publish` tworzony jest plik wykonywalny zgodny ze środowiskiem i platformą używanego zestawu SDK. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
+W trakcie `dotnet build` lub `dotnet publish`, tworzony jest plik wykonywalny zgodny ze środowiskiem i platformą używanego zestawu SDK. Można oczekiwać, że te same elementy wykonywalne są takie same jak w przypadku innych natywnych plików wykonywalnych, takich jak:
 
 - Możesz kliknąć dwukrotnie plik wykonywalny.
 - Aplikację można uruchomić bezpośrednio z poziomu wiersza polecenia, na przykład `myapp.exe` w systemie Windows i `./myapp` w systemie Linux i macOS.
@@ -66,7 +65,7 @@ W trakcie `dotnet build` lub `dotnet publish` tworzony jest plik wykonywalny zgo
 
 Polecenie `dotnet publish` obsługuje pakowanie aplikacji do pliku wykonywalnego określonego dla konkretnej platformy. Plik wykonywalny jest samowyodrębniający się i zawiera wszystkie zależności (w tym natywne) wymagane do uruchomienia aplikacji. Gdy aplikacja jest uruchamiana po raz pierwszy, aplikacja zostanie wyodrębniona do katalogu na podstawie nazwy aplikacji i identyfikatora kompilacji. Uruchamianie jest szybsze, gdy aplikacja jest uruchamiana ponownie. Aplikacja nie musi wyodrębniać siebie po raz drugi, chyba że została użyta Nowa wersja.
 
-Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` w projekcie lub w wierszu polecenia z poleceniem `dotnet publish`:
+Aby opublikować plik wykonywalny pojedynczego pliku, ustaw `PublishSingleFile` w projekcie lub w wierszu polecenia za pomocą polecenia `dotnet publish`:
 
 ```xml
 <PropertyGroup>
@@ -89,7 +88,7 @@ Zestaw SDK platformy .NET Core 3,0 zawiera narzędzie, które pozwala zmniejszy�
 
 Aplikacje samodzielne obejmują wszystko, co jest potrzebne do uruchomienia kodu, bez konieczności instalowania programu .NET na komputerze-hoście. Jednak wiele razy aplikacja wymaga tylko małego podzestawu platformy do działania, a inne nieużywane biblioteki mogą zostać usunięte.
 
-Platforma .NET Core zawiera teraz ustawienie, które będzie używać narzędzia [konsolidatora Il](https://github.com/mono/linker) do skanowania Il aplikacji. to narzędzie wykrywa wymagany kod, a następnie przycina nieużywane biblioteki. To narzędzie może znacznie zmniejszyć rozmiar wdrożenia niektórych aplikacji.
+Platforma .NET Core zawiera teraz ustawienie, które będzie używać narzędzia [konsolidatora Il](https://github.com/mono/linker) do skanowania Il aplikacji. To narzędzie wykrywa wymagany kod, a następnie przycina nieużywane biblioteki. To narzędzie może znacznie zmniejszyć rozmiar wdrożenia niektórych aplikacji.
 
 Aby włączyć to narzędzie, należy dodać ustawienie `<PublishTrimmed>` w projekcie i opublikować samodzielną aplikację:
 
@@ -103,7 +102,7 @@ Aby włączyć to narzędzie, należy dodać ustawienie `<PublishTrimmed>` w pro
 dotnet publish -r <rid> -c Release
 ```
 
-Na przykład podstawowy "Hello World" nowy szablon projektu konsoli, który jest dostępny po opublikowaniu, trafień o rozmiarze 70 MB. Przy użyciu `<PublishTrimmed>` rozmiar ten jest zmniejszany do około 30 MB.
+Na przykład podstawowy "Hello World" nowy szablon projektu konsoli, który jest dostępny po opublikowaniu, trafień o rozmiarze 70 MB. Przy użyciu `<PublishTrimmed>`rozmiar jest zmniejszany do około 30 MB.
 
 Należy wziąć pod uwagę, że aplikacje lub struktury (w tym ASP.NET Core i WPF), które wykorzystują odbicie lub powiązane funkcje dynamiczne, często będą przerywane po przycięciu. To uszkodzenie występuje, ponieważ konsolidator nie wie o tym zachowaniu dynamicznym i nie może określić, które typy struktur są wymagane do odbicia. Narzędzie konsolidatora IL można skonfigurować pod kątem tego scenariusza.
 
@@ -117,19 +116,32 @@ Aby uzyskać więcej informacji na temat narzędzia konsolidatora IL, zapoznaj s
 
 Główną zaletą TC jest włączenie (re-) metod jitting z niską jakością, ale szybszym lub wyższą warstwą. Pozwala to zwiększyć wydajność aplikacji, która przechodzi przez różne etapy wykonywania, od uruchamiania do stanu stałego. Jest to kontrast z podejściem innym niż TC, gdzie każda metoda jest skompilowana w jeden sposób (taka sama jak warstwa wysokiej jakości), która jest obciążona niestabilnym stanem w porównaniu z wydajnością uruchamiania.
 
-Aby włączyć funkcję szybkiego JIT (kod 0 trybie JIT), użyj tego ustawienia w pliku projektu:
+Gdy TC jest włączona, podczas uruchamiania dla metody, która jest wywoływana:
+
+- Jeśli metoda zawiera kod skompilowany przez drzewo obiektów (ReadyToRun), zostanie użyty wygenerowany kod.
+- W przeciwnym razie metoda zostanie trybie JIT. Zazwyczaj te metody są obecnie ogólne względem typów wartościowych.
+  - Szybkie JIT umożliwia szybsze generowanie kodu o niższej jakości. Szybka JIT jest domyślnie włączona w programie .NET Core 3,0 dla metod, które nie zawierają pętli i są preferowane podczas uruchamiania.
+  - W pełni Optymalizacja JIT powoduje szybsze generowanie kodu o wyższej jakości. Dla metod, w których nie można użyć metody szybkiej JIT (na przykład jeśli metoda ma atrybut `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), używana jest pełna optymalizacja JIT.
+
+Na koniec po wywołaniu metod są one trybie JIT z pełnym optymalizacją JIT w tle.
+
+Kod wygenerowany przez szybką JIT może działać wolniej, przydzielać więcej pamięci lub używać większej ilości miejsca na stosie. Jeśli występują problemy, szybkie JIT można wyłączyć przy użyciu tego ustawienia w pliku projektu:
 
 ```xml
 <PropertyGroup>
-  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
 </PropertyGroup>
 ```
 
 Aby całkowicie wyłączyć TC, użyj tego ustawienia w pliku projektu:
 
 ```xml
-<TieredCompilation>false</TieredCompilation>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
+
+Wszystkie zmiany powyższych ustawień w pliku projektu mogą wymagać odtworzenia czystej kompilacji w celu odzwierciedlenia (usunięcie `obj` i `bin` katalogów i przebudowywanie).
 
 ### <a name="readytorun-images"></a>Obrazy ReadyToRun
 
@@ -193,7 +205,7 @@ Oprócz ustawienia **Wyłącz** wszystkie ustawienia będą używać najwyższej
 
 ### <a name="build-copies-dependencies"></a>Zależności kompilacji kopii
 
-Polecenie `dotnet build` kopiuje teraz zależności NuGet dla aplikacji z pamięci podręcznej NuGet do folderu danych wyjściowych kompilacji. Wcześniej zależności były kopiowane tylko w ramach `dotnet publish`.
+Polecenie `dotnet build` teraz kopiuje zależności NuGet dla aplikacji z pamięci podręcznej NuGet do folderu danych wyjściowych kompilacji. Wcześniej zależności były kopiowane tylko jako część `dotnet publish`.
 
 Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, które nadal wymagają publikacji.
 
@@ -202,13 +214,13 @@ Istnieją pewne operacje, takie jak łączenie i publikowanie stron Razor, któr
 Środowisko .NET Core 3,0 zawiera wprowadzenie do narzędzi lokalnych. Narzędzia lokalne są podobne do [narzędzi globalnych](../tools/global-tools.md) , ale są skojarzone z konkretną lokalizacją na dysku. Narzędzia lokalne nie są dostępne globalnie i są dystrybuowane jako pakiety NuGet.
 
 > [!WARNING]
-> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3,0 w wersji zapoznawczej 1, takiej jak uruchamianie `dotnet tool restore` lub `dotnet tool install`, Usuń folder pamięci podręcznej narzędzi lokalnych. W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
+> Jeśli podjęto próbę skorzystania z narzędzi lokalnych w programie .NET Core 3,0 w wersji zapoznawczej 1, takiej jak uruchamianie `dotnet tool restore` lub `dotnet tool install`, Usuń folder pamięci podręcznej lokalnych narzędzi W przeciwnym razie narzędzia lokalne nie będą działały w żadnej nowszej wersji. Ten folder znajduje się w lokalizacji:
 >
 > W systemie macOS, Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
 > W systemie Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 
-Narzędzia lokalne polegają na nazwach plików manifestu `dotnet-tools.json` w bieżącym katalogu. Ten plik manifestu definiuje narzędzia do udostępnienia w tym folderze i poniżej. Plik manifestu można dystrybuować z kodem, aby upewnić się, że każda osoba, która współpracuje z kodem, będzie mogła przywrócić i korzystać z tych samych narzędzi.
+Narzędzia lokalne są zależne od nazwy pliku manifestu `dotnet-tools.json` w bieżącym katalogu. Ten plik manifestu definiuje narzędzia do udostępnienia w tym folderze i poniżej. Plik manifestu można dystrybuować z kodem, aby upewnić się, że każda osoba, która współpracuje z kodem, będzie mogła przywrócić i korzystać z tych samych narzędzi.
 
 W przypadku narzędzi globalnych i lokalnych wymagana jest zgodna wersja środowiska uruchomieniowego. Wiele narzędzi obecnie na NuGet.org docelowym środowiska uruchomieniowego .NET Core 2,1. Aby zainstalować te narzędzia globalnie lub lokalnie, nadal trzeba zainstalować [środowisko uruchomieniowe NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
@@ -249,7 +261,7 @@ Aby uzyskać więcej informacji na temat sposobu przenoszenia istniejącej aplik
 
 #### <a name="winforms-high-dpi"></a>Bardzo wysokie wartości DPI
 
-Aplikacje .NET Core Windows Forms mogą ustawiać tryb wysokiej rozdzielczości DPI z <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. Metoda `SetHighDpiMode` ustawia odpowiedni tryb wysokiej rozdzielczości DPI, chyba że ustawienie zostało ustawione w inny sposób, na przykład `App.Manifest` lub P/Invoke przed `Application.Run`.
+Aplikacje .NET Core Windows Forms mogą ustawiać tryb wysokiej rozdzielczości DPI z <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. Metoda `SetHighDpiMode` ustawia odpowiedni tryb wysokiej rozdzielczości DPI, chyba że ustawienie zostało ustawione za pomocą innych metod, takich jak `App.Manifest` lub P/Invoke przed `Application.Run`.
 
 Możliwe wartości `highDpiMode` wyrażone przez Wyliczenie <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> są następujące:
 
@@ -332,12 +344,12 @@ Platforma .NET Core wykorzystuje teraz zalety [protokołu TLS 1,3 w OpenSSL 1.1.
 
 Jeśli jest dostępny, program .NET Core 3,0 używa **OpenSSL 1.1.1**, **OpenSSL 1.1.0**lub **OpenSSL 1.0.2** w systemie Linux. Gdy **OpenSSL 1.1.1** jest dostępny, typy <xref:System.Net.Security.SslStream?displayProperty=nameWithType> i <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> będą używały **protokołu TLS 1,3** (przy założeniu, że zarówno klient, jak i serwer obsługują **protokół TLS 1,3**).
 
->[!IMPORTANT]
->Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1,3**. Platforma .NET Core 3,0 będzie obsługiwać **protokół TLS 1,3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
+> [!IMPORTANT]
+> Systemy Windows i macOS nie obsługują jeszcze **protokołu TLS 1,3**. Platforma .NET Core 3,0 będzie obsługiwać **protokół TLS 1,3** w tych systemach operacyjnych, gdy będzie dostępna pomoc techniczna.
 
 Poniższy C# przykład 8,0 ilustruje platformę .net Core 3,0 na Ubuntu 18,10 z <https://www.cloudflare.com>:
 
-[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Szyfrowanie kryptografii
 
@@ -345,7 +357,7 @@ Program .NET 3,0 dodaje obsługę szyfrów **AES-GCM** i **AES-CCM** , wdrożony
 
 Poniższy kod ilustruje użycie szyfru `AesGcm` do szyfrowania i odszyfrowywania danych losowych.
 
-[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>Import/Eksport klucza kryptograficznego
 
@@ -370,9 +382,9 @@ Klucze RSA obsługują również:
 
 Metody eksportowania generują dane binarne kodowane algorytmem DER, a metody importowe oczekują na to samo. Jeśli klucz jest przechowywany w formacie PEM przyjaznym dla tekstu, wywołujący będzie musiał odkodować zawartość przed wywołaniem metody Import.
 
-[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
-Pliki **PKCS # 8** można sprawdzić za pomocą plików <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType>, a pliki **PFX/PKCS # 12** można sprawdzić za pomocą <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Pliki **PFX/PKCS # 12** można manipulować przy użyciu <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
+Pliki **PKCS # 8** można sprawdzić za pomocą <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType>, a pliki **PFX/PKCS # 12** można sprawdzić przy użyciu <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Pliki **PFX/PKCS # 12** można manipulować przy użyciu <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
 ## <a name="net-core-30-api-changes"></a>Zmiany interfejsu API programu .NET Core 3,0
 
@@ -387,7 +399,7 @@ int[] a = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 Console.WriteLine($"{a[i1]}, {a[i2]}"); // "3, 6"
 ```
 
-Istnieje również typ <xref:System.Range?displayProperty=nameWithType>, który składa się z dwóch wartości `Index`, jeden dla początku i jeden dla końca, i może być zapisany przy użyciu wyrażenia zakresu `x..y` (C#). Następnie można indeksować za pomocą `Range`, co powoduje utworzenie wycinka:
+Istnieje również typ <xref:System.Range?displayProperty=nameWithType>, który składa się z dwóch `Index` wartości, jeden dla początku i jeden dla końca, i może być zapisany z wyrażeniem zakresu `x..y` (C#). Następnie można indeksować za pomocą `Range`, co spowoduje utworzenie wycinka:
 
 ```csharp
 var slice = a[i1..i2]; // { 3, 4, 5 }
@@ -397,7 +409,7 @@ Aby uzyskać więcej informacji, zobacz [Samouczek dotyczący zakresów i indeks
 
 ### <a name="async-streams"></a>Strumienie asynchroniczne
 
-Typ <xref:System.Collections.Generic.IAsyncEnumerable%601> to nowa asynchroniczna wersja <xref:System.Collections.Generic.IEnumerable%601>. Język umożliwia `await foreach` w przypadku `IAsyncEnumerable<T>` do korzystania z ich elementów i używania `yield return` do tworzenia elementów.
+Typ <xref:System.Collections.Generic.IAsyncEnumerable%601> to nowa asynchroniczna wersja <xref:System.Collections.Generic.IEnumerable%601>. Język pozwala `await foreach` za pośrednictwem `IAsyncEnumerable<T>` do korzystania z ich elementów, a następnie używać `yield return` do tworzenia elementów.
 
 Poniższy przykład ilustruje produkcję i zużycie strumieni asynchronicznych. Instrukcja `foreach` jest asynchroniczna i sama używa `yield return` do tworzenia strumienia asynchronicznego dla obiektów wywołujących. Ten wzorzec (przy użyciu `yield return`) jest zalecanym modelem do tworzenia strumieni asynchronicznych.
 
@@ -411,7 +423,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 }
 ```
 
-Oprócz możliwości `await foreach` można także tworzyć Iteratory asynchroniczne, na przykład iterator, który zwraca `IAsyncEnumerable/IAsyncEnumerator`, który można `await` i `yield` w. W przypadku obiektów, które muszą zostać usunięte, można użyć `IAsyncDisposable`, które mają różne implementacje typów BCL, na przykład `Stream` i `Timer`.
+Poza możliwością `await foreach`można także tworzyć Iteratory asynchroniczne, na przykład iterator, który zwraca `IAsyncEnumerable/IAsyncEnumerator`, które można `await` i `yield` w. W przypadku obiektów, które muszą zostać usunięte, można użyć `IAsyncDisposable`, które mają różne implementacje typów BCL, takie jak `Stream` i `Timer`.
 
 Aby uzyskać więcej informacji, zobacz [Samouczek dotyczący strumieni asynchronicznych](../../csharp/tutorials/generate-consume-asynchronous-stream.md).
 
@@ -423,30 +435,30 @@ Poprawki dotyczące analizowania i formatowania obejmują:
 
 - Poprawnie Analizuj i Zaokrąglij dane wejściowe o dowolnej długości.
 - Prawidłowo Przeanalizuj i sformatuj ujemną wartość zero.
-- Prawidłowo Przeanalizuj `Infinity` i `NaN`, wykonując kontrolę bez uwzględniania wielkości liter i zezwalając na opcjonalną wcześniejszą `+`, jeśli ma to zastosowanie.
+- Prawidłowo Przeanalizuj `Infinity` i `NaN`, wykonując kontrolę bez uwzględniania wielkości liter i zezwalając na opcjonalne, poprzednia `+`, jeśli ma to zastosowanie.
 
-Nowe interfejsy API <xref:System.Math?displayProperty=nameWithType> obejmują:
+Nowe <xref:System.Math?displayProperty=nameWithType> interfejsy API obejmują:
 
 - <xref:System.Math.BitIncrement(System.Double)> i <xref:System.Math.BitDecrement(System.Double)>\
-Odpowiada za operacje IEEE `nextUp` i `nextDown`. Zwracają one najmniejszą liczbę zmiennoprzecinkową, która porównuje większe lub mniejsze niż dane wejściowe (odpowiednio). Na przykład `Math.BitIncrement(0.0)` zwróci `double.Epsilon`.
+Odnosi się do `nextUp` i `nextDown` operacji IEEE. Zwracają one najmniejszą liczbę zmiennoprzecinkową, która porównuje większe lub mniejsze niż dane wejściowe (odpowiednio). Na przykład `Math.BitIncrement(0.0)` zwróci `double.Epsilon`.
 
 - <xref:System.Math.MaxMagnitude(System.Double,System.Double)> i <xref:System.Math.MinMagnitude(System.Double,System.Double)>\
-Odpowiada za operacje IEEE `maxNumMag` i `minNumMag`, zwracają wartość, która jest większa lub mniejsza o wielkości dwóch danych wejściowych (odpowiednio). Na przykład `Math.MaxMagnitude(2.0, -3.0)` zwróci `-3.0`.
+Odnosi się do `maxNumMag` i `minNumMag` operacji IEEE, zwracają wartość, która jest większa lub mniejsza o wielkości dwóch danych wejściowych (odpowiednio). Na przykład `Math.MaxMagnitude(2.0, -3.0)` zwróci `-3.0`.
 
 - <xref:System.Math.ILogB(System.Double)>\
-Odnosi się do operacji IEEE `logB`, która zwraca wartość całkowitą, zwracająca podstawowy dziennik Base-2 parametru wejściowego. Ta metoda jest efektywnie taka sama jak `floor(log2(x))`, ale została wykonana z minimalnym błędem zaokrąglania.
+Odnosi się do `logB` operacji IEEE, która zwraca wartość całkowitą, zwracająca podstawowy dziennik Base-2 parametru wejściowego. Ta metoda jest efektywnie taka sama jak `floor(log2(x))`, ale została wykonana z minimalnym błędem zaokrąglania.
 
 - <xref:System.Math.ScaleB(System.Double,System.Int32)>\
-Odnosi się do operacji IEEE `scaleB`, która przyjmuje wartość całkowitą, zwraca skuteczną `x * pow(2, n)`, ale jest wykonywana z minimalnym błędem zaokrąglania.
+Odnosi się do `scaleB` operacji IEEE, która przyjmuje wartość całkowitą, która zwraca efektywnie `x * pow(2, n)`, ale jest wykonywana z minimalnym błędem zaokrąglania.
 
 - <xref:System.Math.Log2(System.Double)>\
-Odnosi się do operacji IEEE `log2`, która zwraca logarytm o podstawie 2. Minimalizuje błąd zaokrąglania.
+Odnosi się do `log2` operacji IEEE, która zwraca logarytm o podstawie 2. Minimalizuje błąd zaokrąglania.
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Odnosi się do operacji IEEE `fma`, która wykonuje odrzucane mnożenie dodawania. Oznacza to, że `(x * y) + z` w ramach jednej operacji, a tym samym minimalizowanie błędu zaokrąglania. Przykładem może być `FusedMultiplyAdd(1e308, 2.0, -1e308)`, który zwraca `1e308`. Regularna `(1e308 * 2.0) - 1e308` zwraca `double.PositiveInfinity`.
+Odnosi się do `fma` operacji IEEE, dlatego wykonuje odrzucane, wielokrotne Dodawanie. Oznacza to, że `(x * y) + z` w ramach jednej operacji, co minimalizuje błąd zaokrąglania. Przykładem może być `FusedMultiplyAdd(1e308, 2.0, -1e308)`, które zwraca `1e308`. Regularne `(1e308 * 2.0) - 1e308` zwraca `double.PositiveInfinity`.
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
-Odnosi się do operacji IEEE `copySign`, która zwraca wartość `x`, ale ze znakiem `y`.
+Odnosi się do `copySign` operacji IEEE, która zwraca wartość `x`, ale ze znakiem `y`.
 
 ### <a name="net-platform-dependent-intrinsics"></a>Elementy wewnętrzne zależne od platformy .NET
 
@@ -495,15 +507,15 @@ Typ <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> obsługuje pr
 
 Domyślnym protokołem jest protokół HTTP/1.1, ale protokół HTTP/2 można włączyć na dwa różne sposoby. Najpierw można ustawić komunikat żądania HTTP na potrzeby używania protokołu HTTP/2:
 
-[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
 
 Następnie można zmienić <xref:System.Net.Http.HttpClient>, aby domyślnie używać protokołu HTTP/2:
 
-[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
 W wielu przypadkach podczas tworzenia aplikacji chcesz użyć nieszyfrowanego połączenia. Jeśli wiesz, że docelowy punkt końcowy będzie używać protokołu HTTP/2, możesz włączyć nieszyfrowane połączenia dla protokołu HTTP/2. Można ją włączyć, ustawiając zmienną środowiskową `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` na `1` lub włączając ją w kontekście aplikacji:
 
-[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Następne kroki
 

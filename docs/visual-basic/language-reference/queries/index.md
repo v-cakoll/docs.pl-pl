@@ -1,64 +1,64 @@
 ---
-title: Zapytania (Visual Basic)
+title: Kwerendy
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a4a926d089a8bec1abaa47404f6c9112687e6df2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052147"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350442"
 ---
 # <a name="queries-visual-basic"></a>Zapytania (Visual Basic)
-Visual Basic umożliwia tworzenie [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] wyrażeń w kodzie.  
+Visual Basic enables you to create [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- W tym artykule opisano `Aggregate` zdanie, które stosuje jedną lub więcej funkcji agregujących do kolekcji.  
+ [Aggregate, klauzula](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ Describes the `Aggregate` clause, which applies one or more aggregate functions to a collection.  
   
  [Distinct, klauzula](../../../visual-basic/language-reference/queries/distinct-clause.md)  
- W tym artykule opisano `Distinct` klauzula, która ogranicza wartości bieżącej zmiennej zakresu w celu wyeliminowania zduplikowanych wartości w wynikach kwerendy.  
+ Describes the `Distinct` clause, which restricts the values of the current range variable to eliminate duplicate values in query results.  
   
  [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)  
- W tym artykule opisano `From` zdanie, które określa kolekcję i zmienną zakresu dla zapytania.  
+ Describes the `From` clause, which specifies a collection and a range variable for a query.  
   
- [Klauzula Group By](../../../visual-basic/language-reference/queries/group-by-clause.md)  
- W tym artykule opisano `Group By` klauzula, która grupuje elementy wyników zapytań i może służyć do zastosowania funkcji agregujących do każdej grupy.  
+ [Group By, klauzula](../../../visual-basic/language-reference/queries/group-by-clause.md)  
+ Describes the `Group By` clause, which groups the elements of a query result and can be used to apply aggregate functions to each group.  
   
- [Klauzula Group Join](../../../visual-basic/language-reference/queries/group-join-clause.md)  
- W tym artykule opisano `Group Join` zdanie, które łączy dwie kolekcje w jedną hierarchiczną kolekcję.  
+ [Group Join, klauzula](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ Describes the `Group Join` clause, which combines two collections into a single hierarchical collection.  
   
  [Join, klauzula](../../../visual-basic/language-reference/queries/join-clause.md)  
- W tym artykule opisano `Join` zdanie, które łączy dwie kolekcje w jedną kolekcję.  
+ Describes the `Join` clause, which combines two collections into a single collection.  
   
  [Let, klauzula](../../../visual-basic/language-reference/queries/let-clause.md)  
- W tym artykule opisano `Let` zdanie, które oblicza wartość i przypisuje go do nowej zmiennej w zapytaniu.  
+ Describes the `Let` clause, which computes a value and assigns it to a new variable in the query.  
   
  [Order By, klauzula](../../../visual-basic/language-reference/queries/order-by-clause.md)  
- W tym artykule opisano `Order By` klauzula, która określa porządek sortowania dla kolumn w zapytaniu.  
+ Describes the `Order By` clause, which specifies the sort order for columns in a query.  
   
  [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)  
- W tym artykule opisano `Select` klauzula, która deklaruje zestaw zmiennych zakresu zapytania.  
+ Describes the `Select` clause, which declares a set of range variables for a query.  
   
  [Skip, klauzula](../../../visual-basic/language-reference/queries/skip-clause.md)  
- W tym artykule opisano `Skip` zdanie, które pomija określoną liczbę elementów w kolekcji, a następnie zwraca pozostałe elementy.  
+ Describes the `Skip` clause, which bypasses a specified number of elements in a collection and then returns the remaining elements.  
   
  [Skip While, klauzula](../../../visual-basic/language-reference/queries/skip-while-clause.md)  
- W tym artykule opisano `Skip While` zdanie, które pomija elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` , a następnie zwraca pozostałe elementy.  
+ Describes the `Skip While` clause, which bypasses elements in a collection as long as a specified condition is `true` and then returns the remaining elements.  
   
  [Take, klauzula](../../../visual-basic/language-reference/queries/take-clause.md)  
- W tym artykule opisano `Take` klauzula, która zwraca określoną liczbę elementów sąsiadujących z początku kolekcji.  
+ Describes the `Take` clause, which returns a specified number of contiguous elements from the start of a collection.  
   
  [Take While, klauzula](../../../visual-basic/language-reference/queries/take-while-clause.md)  
- W tym artykule opisano `Take While` zdanie, które obejmuje elementy w kolekcji, tak długo, jak długo określony warunek przyjmuje `true` i pomija pozostałe elementy.  
+ Describes the `Take While` clause, which includes elements in a collection as long as a specified condition is `true` and bypasses the remaining elements.  
   
  [Where, klauzula](../../../visual-basic/language-reference/queries/where-clause.md)  
- W tym artykule opisano `Where` klauzula, która określa warunek filtrowania dla zapytania.  
+ Describes the `Where` clause, which specifies a filtering condition for a query.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

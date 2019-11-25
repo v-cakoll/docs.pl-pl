@@ -2,12 +2,12 @@
 title: Operacje równości (C#)
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: afcc2715f088896fb3c669524f17bb22ef873b01
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594377"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141495"
 ---
 # <a name="equality-operations-c"></a>Operacje równości (C#)
 Dwie sekwencje, których odpowiednie elementy są równe i które mają taką samą liczbę elementów, są uważane za równe.  
@@ -22,4 +22,4 @@ Dwie sekwencje, których odpowiednie elementy są równe i które mają taką sa
 
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [Instrukcje: Porównaj zawartość dwóch folderów (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)
+- [Jak porównać zawartość dwóch folderów (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)

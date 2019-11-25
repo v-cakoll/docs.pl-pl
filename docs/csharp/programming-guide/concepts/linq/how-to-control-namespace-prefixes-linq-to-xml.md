@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Przekontrolowanie prefiksówC#przestrzeni nazw () (LINQ to XML)'
+title: Jak kontrolować prefiksy przestrzeni nazw (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 9f43c0804d8c830fa75f1e1390cb578c5f5d5106
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710162"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141380"
 ---
-# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Instrukcje: Przekontrolowanie prefiksówC#przestrzeni nazw () (LINQ to XML)
+# <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Jak kontrolować prefiksy przestrzeni nazw (C#) (LINQ to XML)
 W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw podczas serializacji drzewa XML.  
   
  W wielu sytuacjach nie trzeba kontrolować prefiksów przestrzeni nazw.  
@@ -18,14 +18,14 @@ W tym temacie opisano, jak można kontrolować prefiksy przestrzeni nazw podczas
   
  Jest to najbardziej typowy powód kontrolowania prefiksów przestrzeni nazw.  
   
- Kolejną częstą przyczyną kontrolowania prefiksów przestrzeni nazw jest to, że użytkownicy będą mogli ręcznie edytować dokument XML i utworzyć prefiksy przestrzeni nazw, które są wygodne dla użytkownika. Na przykład może być generowany dokument XSD. Konwencje dla schematów sugerują użycie albo `xs` `xsd` jako prefiksu przestrzeni nazw schematu.  
+ Kolejną częstą przyczyną kontrolowania prefiksów przestrzeni nazw jest to, że użytkownicy będą mogli ręcznie edytować dokument XML i utworzyć prefiksy przestrzeni nazw, które są wygodne dla użytkownika. Na przykład może być generowany dokument XSD. Konwencje dla schematów sugerują, że jako prefiks przestrzeni nazw schematu należy używać `xs` lub `xsd`.  
   
- Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybuty, które deklarują przestrzenie nazw. W przypadku deklarowania przestrzeni nazw z określonymi prefiksami [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] program podejmie próbę zahonorowania prefiksów przestrzeni nazw podczas serializacji.  
+ Aby kontrolować prefiksy przestrzeni nazw, należy wstawić atrybuty, które deklarują przestrzenie nazw. Jeśli zadeklarujesz przestrzenie nazw z określonymi prefiksami, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podejmie próbę zahonorowania prefiksów przestrzeni nazw podczas serializacji.  
   
- Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym przestrzeń nazw atrybutu jest <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwa atrybutu jest prefiksem przestrzeni nazw. Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.  
+ Aby utworzyć atrybut, który deklaruje przestrzeń nazw z prefiksem, utworzysz atrybut, w którym przestrzeń nazw nazwy atrybutu jest <xref:System.Xml.Linq.XNamespace.Xmlns%2A>, a nazwa atrybutu jest prefiksem przestrzeni nazw. Wartość atrybutu jest identyfikatorem URI przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład deklaruje dwie przestrzenie nazw. Określa, że `http://www.adventure-works.com` przestrzeń nazw ma `aw`prefiks i że `www.fourthcoffee.com` przestrzeń nazw ma prefiks `fc`.  
+ Ten przykład deklaruje dwie przestrzenie nazw. Określa, że przestrzeń nazw `http://www.adventure-works.com` ma prefiks `aw`i że przestrzeń nazw `www.fourthcoffee.com` ma prefiks `fc`.  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  

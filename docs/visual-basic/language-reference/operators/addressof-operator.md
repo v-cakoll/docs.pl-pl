@@ -1,5 +1,5 @@
 ---
-title: AddressOf — Operator (Visual Basic)
+title: Operator AddressOf
 ms.date: 07/20/2015
 f1_keywords:
 - AddressOf
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
-ms.openlocfilehash: 2ebadf5ded1a23fe46b8e16cf18ae265b5d3c255
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: e88520bd7e731a35b98c1d40c5210dc5d1314911
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591654"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350284"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf — Operator (Visual Basic)
-Tworzy wystąpienie delegata, które odwołuje się do określonej procedury.  
+Creates a delegate instance that references the specific procedure.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,20 +26,20 @@ AddressOf procedurename
   
 ## <a name="parts"></a>Części  
  `procedurename`  
- Wymagany. Określa procedurę, do której odwołuje się nowo utworzony delegat.  
+ Wymagany. Specifies the procedure to be referenced by the newly created delegate.  
   
 ## <a name="remarks"></a>Uwagi  
- Operator `AddressOf` tworzy delegata, który wskazuje na podrzędną lub funkcję określoną przez `procedurename`. Gdy określona procedura jest metodą wystąpienia, delegat odwołuje się zarówno do wystąpienia, jak i metody. Następnie, gdy obiekt delegowany jest wywoływany, wywoływana jest określona metoda określonego wystąpienia.  
+ The `AddressOf` operator creates a delegate that points to the sub or function specified by `procedurename`. When the specified procedure is an instance method then the delegate refers to both the instance and the method. Then, when the  delegate is invoked the specified method of the specified instance is called.  
   
- Operatora `AddressOf` można użyć jako operandu konstruktora delegata lub można go użyć w kontekście, w którym typ delegata może być określony przez kompilator.  
+ The `AddressOf` operator can be used as the operand of a delegate constructor or it can be used in a context in which the type of the delegate can be determined by the compiler.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie używa operatora `AddressOf`, aby wyznaczyć delegata do obsługi zdarzenia `Click` przycisku.  
+ This example uses the `AddressOf` operator to designate a delegate to handle the `Click` event of a button.  
   
  [!code-vb[VbVbalrDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#8)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa operatora `AddressOf`, aby wyznaczyć funkcję uruchamiania wątku.  
+ The following example uses the `AddressOf` operator to designate the startup function for a thread.  
   
  [!code-vb[VbVbalrDelegates#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#9)]  
   
@@ -48,4 +48,4 @@ AddressOf procedurename
 - [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Delegaty](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)

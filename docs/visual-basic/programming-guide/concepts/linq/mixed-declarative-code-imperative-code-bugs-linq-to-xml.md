@@ -1,38 +1,38 @@
 ---
-title: Mieszane błędy kod deklaratywny kodu i Imperatywnego (LINQ to XML) (Visual Basic)
+title: Mieszane błędy kodu deklaratywnego i imperatywnego (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
-ms.openlocfilehash: e7b3b624bb91525d2cda9477c29291e25eba1b07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 369fae59516df785ac686645d47e74e69a8f1457
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331644"
 ---
-# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mieszane błędy kodu deklaratywnego/Imperatywne (LINQ to XML) (Visual Basic)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zawiera różne metody, które umożliwiają modyfikowanie drzewa XML bezpośrednio. Można dodać elementy, usuwanie elementów, zmienić zawartość elementu, dodawanie atrybutów i tak dalej. Ten interfejs programowania jest opisana w [modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Jeśli użytkownik są iteracji w jednej osi, takie jak <xref:System.Xml.Linq.XContainer.Elements%2A>i są modyfikowanie drzewa XML jako iterację osi, użytkownik może wystąpić pewne błędy otrzymano nieoczekiwany.  
+# <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Mixed Declarative Code/Imperative Code Bugs (LINQ to XML) (Visual Basic)
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contains various methods that allow you to modify an XML tree directly. You can add elements, delete elements, change the contents of an element, add attributes, and so on. This programming interface is described in [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). If you are iterating through one of the axes, such as <xref:System.Xml.Linq.XContainer.Elements%2A>, and you are modifying the XML tree as you iterate through the axis, you can end up with some strange bugs.  
   
- Ten problem jest czasami określany jako "Halloween Problem".  
+ This problem is sometimes known as "The Halloween Problem".  
   
-## <a name="definition-of-the-problem"></a>Definicja problemu  
- Podczas pisania kodu za pomocą LINQ, który iteruje po kolekcji pisania kodu w stylu deklaratywnego. Jest więcej podobnie opisujące *co* chcesz, a które *jak* chcesz wykonywania pracy. Jeśli piszesz kod, który (1) pierwszego elementu, 2) testy dla jakiś warunek 3) modyfikuje je i 4) umieszcza go z powrotem do listy, a następnie będzie to kodu imperatywnego. Sprawi, że komputer *jak* zrobić lepiej będzie gotowe.  
+## <a name="definition-of-the-problem"></a>Definition of the Problem  
+ When you write some code using LINQ that iterates through a collection, you are writing code in a declarative style. It is more akin to describing *what* you want, rather that *how* you want to get it done. If you write code that 1) gets the first element, 2) tests it for some condition, 3) modifies it, and 4) puts it back into the list, then this would be imperative code. You are telling the computer *how* to do what you want done.  
   
- Mieszanie te style kodu w tej samej operacji jest o tym, co prowadzi do problemów. Rozważ następujące opcje:  
+ Mixing these styles of code in the same operation is what leads to problems. Rozważ następujące opcje:  
   
- Załóżmy, że masz listę połączoną z trzema elementami w nim (, b i c):  
+ Suppose you have a linked list with three items in it (a, b, and c):  
   
  `a -> b -> c`  
   
- Załóżmy, że chcesz przenieść za pośrednictwem połączonej listy dodawania trzech nowych elementów (", b", a c "). Chcesz, aby wynikowe listy dwukierunkowej, aby wyglądał następująco:  
+ Now, suppose that you want to move through the linked list, adding three new items (a', b', and c'). You want the resulting linked list to look like this:  
   
  `a -> a' -> b -> b' -> c -> c'`  
   
- Dlatego napisać kod, który wykonuje iterację na liście, a następnie dla każdego elementu dodaje nowe uprawnienie elementu po nim. Co się stanie, to najpierw zostanie wyświetlony kod `a` elementu i Wstaw `a'` po nim. Teraz kod przejdzie do kolejnego węzła na liście, która jest teraz `a'`! Trafem korzysta dodaje nowy element do listy, `a''`.  
+ So you write code that iterates through the list, and for every item, adds a new item right after it. What happens is that your code will first see the `a` element, and insert `a'` after it. Now, your code will move to the next node in the list, which is now `a'`! It happily adds a new item to the list, `a''`.  
   
- Jak będzie można rozwiązać ten problem w rzeczywistych warunkach? Dobrze Utwórz kopię oryginalnego połączonej listy i Utwórz całkowicie nową listę. Lub jeśli piszesz kodu czysto imperatywnego, może się okazać, pierwszy element, Dodaj nowy element, a następnie przejdź dwa razy na liście połączonej, przesuwania nad elementem, który właśnie został dodany.  
+ How would you solve this in the real world? Well, you might make a copy of the original linked list, and create a completely new list. Or if you are writing purely imperative code, you might find the first item, add the new item, and then advance twice in the linked list, advancing over the element that you just added.  
   
-## <a name="adding-while-iterating"></a>Dodawanie podczas iteracja  
- Na przykład załóżmy, że chcesz pisanie kodu dla każdego elementu w drzewie chcesz utworzyć zduplikowany element:  
+## <a name="adding-while-iterating"></a>Adding While Iterating  
+ For example, suppose you want to write some code that for every element in a tree, you want to create a duplicate element:  
   
 ```vb  
 Dim root As XElement = _  
@@ -46,9 +46,9 @@ For Each e As XElement In root.Elements()
 Next  
 ```  
   
- Ten kod przechodzi w pętli nieskończonej. `foreach` Iteruje po instrukcji `Elements()` osi, dodawanie nowych elementów do `doc` elementu. Kończy się ono również iteracji na elementach, który właśnie został dodany. A ponieważ są przydzielane nowych obiektów wraz z każdą iteracją pętli, po pewnym czasie zużyje całą dostępną pamięć.  
+ This code goes into an infinite loop. The `foreach` statement iterates through the `Elements()` axis, adding new elements to the `doc` element. It ends up iterating also through the elements it just added. And because it allocates new objects with every iteration of the loop, it will eventually consume all available memory.  
   
- Możesz rozwiązać ten problem przez pobieranie kolekcji w pamięci, używając <xref:System.Linq.Enumerable.ToList%2A> standardowego operatora zapytania, w następujący sposób:  
+ You can fix this problem by pulling the collection into memory using the <xref:System.Linq.Enumerable.ToList%2A> standard query operator, as follows:  
   
 ```vb  
 Dim root As XElement = _  
@@ -63,7 +63,7 @@ Next
 Console.WriteLine(root)  
 ```  
   
- Teraz kod działa. Wynikowe drzewo składni XML jest następująca:  
+ Now the code works. The resulting XML tree is the following:  
   
 ```xml  
 <Root>  
@@ -76,8 +76,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-## <a name="deleting-while-iterating"></a>Usuwanie podczas iteracja  
- Jeśli chcesz usunąć wszystkie węzły, na pewnym etapie, możesz chcieć wykorzystać do pisania kodu, jak pokazano poniżej:  
+## <a name="deleting-while-iterating"></a>Deleting While Iterating  
+ If you want to delete all nodes at a certain level, you might be tempted to write code like the following:  
   
 ```vb  
 Dim root As XElement = _  
@@ -92,9 +92,9 @@ Next
 Console.WriteLine(root)  
 ```  
   
- Jednak to nie należy. W takiej sytuacji po usunięciu pierwszy element, A, zostanie on usunięty z drzewa XML znajdujących się w katalogu głównym, a kod w metodzie elementów, który wykonuje iteracja nie można odnaleźć następnego elementu.  
+ However, this does not do what you want. In this situation, after you have removed the first element, A, it is removed from the XML tree contained in root, and the code in the Elements method that is doing the iterating cannot find the next element.  
   
- Powyższy kod generuje następujące wyniki:  
+ The preceding code produces the following output:  
   
 ```xml  
 <Root>  
@@ -103,7 +103,7 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
- To rozwiązanie jest ponownie wywołanie <xref:System.Linq.Enumerable.ToList%2A> do zmaterializowania kolekcji, w następujący sposób:  
+ The solution again is to call <xref:System.Linq.Enumerable.ToList%2A> to materialize the collection, as follows:  
   
 ```vb  
 Dim root As XElement = _  
@@ -118,13 +118,13 @@ Next
 Console.WriteLine(root)  
 ```  
   
- To generuje następujące wyniki:  
+ This produces the following output:  
   
 ```xml  
 <Root />  
 ```  
   
- Alternatywnie, można wyeliminować iteracji całkowicie przez wywołanie metody <xref:System.Xml.Linq.XElement.RemoveAll%2A> elementu nadrzędnego:  
+ Alternatively, you can eliminate the iteration altogether by calling <xref:System.Xml.Linq.XElement.RemoveAll%2A> on the parent element:  
   
 ```vb  
 Dim root As XElement = _  
@@ -137,10 +137,10 @@ root.RemoveAll()
 Console.WriteLine(root)  
 ```  
   
-## <a name="why-cant-linq-automatically-handle-this"></a>Dlaczego nie mogę LINQ automatycznie obsługiwać to?  
- Jedno z podejść jest zawsze Przenieś wszystko do pamięci, zamiast wykonywania obliczanie z opóźnieniem. Jednakże może być bardzo kosztowna pod względem wydajności i użycia pamięci. W rzeczywistości gdyby LINQ i (LINQ to XML) do zastosowania tego podejścia, przestaną działać w rzeczywistych warunkach.  
+## <a name="why-cant-linq-automatically-handle-this"></a>Why Can't LINQ Automatically Handle This?  
+ One approach would be to always bring everything into memory instead of doing lazy evaluation. However, it would be very expensive in terms of performance and memory use. In fact, if LINQ and (LINQ to XML) were to take this approach, it would fail in real-world situations.  
   
- Innym podejściem możliwe będzie umieścić w jakieś składni transakcji na składnika LINQ i mają kompilatora próba przeanalizowania kodu i określenia, czy żadnej określonej kolekcji jest wymagana do być zmaterializowany. Próba ustalenia cały kod, który ma efekty uboczne jest jednak bardzo złożone. Rozważmy poniższy kod:  
+ Another possible approach would be to put in some sort of transaction syntax into LINQ, and have the compiler attempt to analyze the code and determine if any particular collection needed to be materialized. However, attempting to determine all code that has side-effects is incredibly complex. Consider the following code:  
   
 ```vb  
 Dim z = _  
@@ -149,20 +149,20 @@ Dim z = _
     Select DoMyProjection(e)  
 ```  
   
- Taki kod analizy należałoby analizowanie metod TestSomeCondition i DoMyProjection i wszystkie metody, które wywołały tych metod, aby określić, jeśli dowolny kod ma efekty uboczne. Jednak kod analizy nie można po prostu szukać wszelki kod, który ma efekty uboczne. Należałoby w celu wybrania tylko kod, który ma efekty uboczne na elementy podrzędne `root` w takiej sytuacji.  
+ Such analysis code would need to analyze the methods TestSomeCondition and DoMyProjection, and all methods that those methods called, to determine if any code had side-effects. But the analysis code could not just look for any code that had side-effects. It would need to select for just the code that had side-effects on the child elements of `root` in this situation.  
   
- LINQ to XML nie próbuje wykonywać takie analizę.  
+ LINQ to XML does not attempt to do any such analysis.  
   
- Jest on do Ciebie, aby uniknąć tych problemów.  
+ It is up to you to avoid these problems.  
   
 ## <a name="guidance"></a>Wskazówki  
- Po pierwsze nie należy mieszać kodu deklaratywnego i imperatywnego.  
+ First, do not mix declarative and imperative code.  
   
- Nawet wtedy, gdy znasz dokładnie semantyki kolekcji i semantyka metody, które modyfikowanie drzewa XML, jeśli piszesz niektóre inteligentne kod, który pozwala uniknąć tych kategorii problemów, Twój kod będzie muszą być przechowywane przez innych programistów w przyszłości , i nie może być jako zwykły na problemy. Po przemieszaniu deklaratywnego i imperatywnego kodowania style, Twój kod będzie bardziej kruchy.  
+ Even if you know exactly the semantics of your collections and the semantics of the methods that modify the XML tree, if you write some clever code that avoids these categories of problems, your code will need to be maintained by other developers in the future, and they may not be as clear on the issues. If you mix declarative and imperative coding styles, your code will be more brittle.  
   
- Jeśli piszesz kod, który materializuje kolekcji, tak aby uniknąć tych problemów, należy pamiętać, go z komentarzami, zgodnie z potrzebami w swoim kodzie, aby programiści obsługi będzie zrozumiałe dla problemu.  
+ If you write code that materializes a collection so that these problems are avoided, note it with comments as appropriate in your code, so that maintenance programmers will understand the issue.  
   
- Po drugie jeśli zezwala na wydajność i innych zagadnień, należy użyć tylko kod deklaratywny. Nie należy modyfikować swoje istniejące drzewa XML. Generuj nowe hasło.  
+ Second, if performance and other considerations allow, use only declarative code. Don't modify your existing XML tree. Generate a new one.  
   
 ```vb  
 Dim root As XElement = _  
@@ -178,4 +178,4 @@ Console.WriteLine(newRoot)
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Zaawansowane LINQ to XML programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

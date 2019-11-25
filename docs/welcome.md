@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274331"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283936"
 ---
 # <a name="welcome-to-net"></a>.NET — Zapraszamy!
 
@@ -47,7 +47,7 @@ Ta dokumentacja obejmuje szeroki zakres platformy .NET dla różnych platform i 
 - [.NET — przewodnik](standard/index.md)
 - [Przewodnik platformy .NET Core](core/index.md)
 - [.NET framework — przewodnik](framework/index.md)
-- [Przewodnik dla języka C#](csharp/index.md)
+- [Przewodnik dla języka C#](csharp/index.yml)
 - [Podręcznik języka F#](fsharp/index.md)
 - [Przewodnik po Visual Basic](visual-basic/index.md)
 - [Przewodnik po strukturze ML.NET](machine-learning/index.yml)

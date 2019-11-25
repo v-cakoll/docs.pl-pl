@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104356"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138962"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Narzędzie silnych nazw)
 Narzędzie silnych nazw (SN. exe) pomaga podpisywać zestawy o [silnych nazwach](../../standard/assembly/strong-named.md). Sn.exe dostarcza opcje do zarządzania kluczami, generowania podpisów i ich weryfikacji.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|Wyodrębnia klucz publiczny z *infile* i zapisuje go w pliku CSV. Poszczególne bajty klucza publicznego są rozdzielone przecinkami. Ten format jest użyteczny dla trwale zakodowanych odwołań do kluczy, takich jak zainicjowane tablice w kodzie źródłowym. Jeśli nie określisz *pliku*, ta opcja umieszcza dane wyjściowe w Schowku. **Uwaga:**  Ta opcja nie sprawdza, czy dane wejściowe są tylko kluczem publicznym. Jeśli `infile` zawiera parę kluczy z kluczem prywatnym, klucz prywatny również zostanie wyodrębniony.|  
 |`-p infile outfile [hashalg]`|Wyodrębnia klucz publiczny z pary kluczy w *pliku infile* i zapisuje go w *pliku*, opcjonalnie używając algorytmu RSA określonego przez *hashAlg*. Ten klucz publiczny może służyć do opóźnienia podpisywania zestawu przy użyciu opcji **/delaysign +** i **/KeyFile** [konsolidatora zestawu (Al. exe)](al-exe-assembly-linker.md). Gdy zestaw jest podpisany z opóźnieniem, w czasie kompilacji ustawiany jest tylko klucz publiczny i rezerwowana jest przestrzeń w pliku na późniejsze dodanie podpisu, gdy znany będzie klucz prywatny.|  
 |`-pc container outfile [hashalg]`|Wyodrębnia klucz publiczny z pary kluczy w *kontenerze* i zapisuje je w *pliku*. W przypadku użycia opcji *hashAlg* algorytm RSA jest używany do wyodrębniania klucza publicznego.|  
-|`-Pb [y &#124; n]`|Określa, czy wymuszona jest zasada obejścia silnej nazwy. Jeśli określisz wartość *y*, silne nazwy dla zestawów pełnego zaufania nie są weryfikowane podczas ładowania do <xref:System.AppDomain>pełnego zaufania. Jeśli określisz *n*, silne nazwy są weryfikowane pod kątem poprawności, ale nie dla określonej silnej nazwy. <xref:System.Security.Permissions.StrongNameIdentityPermission> nie ma wpływu na zestawy z pełnym zaufaniem. Musisz wykonać swoje własne sprawdzenie dopasowania silnej nazwy.<br /><br /> Jeśli nie `y` ani `n` jest określony, ta opcja wyświetla bieżące ustawienie. Wartość domyślna to `y`. **Uwaga:**  Na komputerach 64-bitowych należy ustawić ten parametr zarówno w przypadku wystąpienia 32-bitowego, jak i 64-bit programu SN. exe.|  
+|`-Pb [y|n]`|Określa, czy wymuszona jest zasada obejścia silnej nazwy. Jeśli określisz wartość *y*, silne nazwy dla zestawów pełnego zaufania nie są weryfikowane podczas ładowania do <xref:System.AppDomain>pełnego zaufania. Jeśli określisz *n*, silne nazwy są weryfikowane pod kątem poprawności, ale nie dla określonej silnej nazwy. <xref:System.Security.Permissions.StrongNameIdentityPermission> nie ma wpływu na zestawy z pełnym zaufaniem. Musisz wykonać swoje własne sprawdzenie dopasowania silnej nazwy.<br /><br /> Jeśli nie `y` ani `n` jest określony, ta opcja wyświetla bieżące ustawienie. Wartość domyślna to `y`. **Uwaga:**  Na komputerach 64-bitowych należy ustawić ten parametr zarówno w przypadku wystąpienia 32-bitowego, jak i 64-bit programu SN. exe.|  
 |`-q[uiet]`|Określa tryb cichy; pomija wyświetlanie komunikatów o powodzeniu.|  
 |`-R[a] assembly infile`|Podpisuje wcześniej podpisany lub podpisany z opóźnieniem zestaw za pomocą pary kluczy w *pliku infile*.<br /><br /> Jeśli jest używany **-RA** , skróty są ponownie obliczane dla wszystkich plików w zestawie.|  
 |`-Rc[a] assembly container`|Podpisuje wcześniej podpisany lub podpisany z opóźnieniem zestaw za pomocą pary kluczy w *kontenerze*.<br /><br /> If **-RCA** jest używany, skróty są ponownie obliczane dla wszystkich plików w zestawie.|  

@@ -1,5 +1,5 @@
 ---
-title: Zadeklarowana charakterystyka elementów (Visual Basic)
+title: Zadeklarowana charakterystyka elementów
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], lifetime
@@ -13,53 +13,53 @@ helpviewer_keywords:
 - data types [Visual Basic], declared elements
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
-ms.openlocfilehash: f0ec2c56403e43f2ce04b394a1a4a59eafaa7311
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4e03cd28fed5e0ae109337739251c11a0ff3424a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912986"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331624"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>Zadeklarowana charakterystyka elementów (Visual Basic)
-A *cechy* zadeklarowany element jest elementem tego elementu, który ma wpływ na sposób kod może korzystać z niego. Każdy element zadeklarowany ma co najmniej jeden z następujących właściwości, które są skojarzone z nią:  
+A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it. Every declared element has one or more of the following characteristics associated with it:  
   
-- *Typ danych* — może zawierać wartości elementu i jak przechowuje te wartości. Aby uzyskać więcej informacji, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/index.md).  
+- *Data type* — the values the element can hold, and how it stores those values. For more information, see [Data Types](../../../../visual-basic/language-reference/data-types/index.md).  
   
-- *Okres istnienia* — okres czasu, przez który element jest dostępny do użytku. Aby uzyskać więcej informacji, zobacz [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+- *Lifetime* — the period of execution time during which the element is available for use. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
-- *Zakres* — zestaw cały kod, który może odwoływać się do elementu bez kwalifikowania nazwy. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
+- *Scope* — the set of all code that can refer to the element without qualifying its name. For more information, see [How to: Control the Scope of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md).  
   
-- *Poziom dostępu* — uprawnienia dla kod, aby użyć tego elementu. Aby uzyskać więcej informacji, zobacz [jak: Kontrolowanie dostępności zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
+- *Access level* — the permission for code to make use of the element. For more information, see [How to: Control the Availability of a Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-availability-of-a-variable.md).  
   
-## <a name="characteristics-of-the-elements"></a>Właściwości elementów  
- W poniższej tabeli przedstawiono deklarowanych elementów i właściwości, które są stosowane do każdego z nich.  
+## <a name="characteristics-of-the-elements"></a>Characteristics of the Elements  
+ The following table shows the declared elements and the characteristics that apply to each one.  
   
-|Element|Typ danych|Okres istnienia|Zakres <sup>1</sup>|Poziom dostępu|  
+|Element|Typ danych|Okres istnienia|Scope <sup>1</sup>|Access Level|  
 |-------------|---------------|--------------|------------------------|------------------|  
-|Zmienna|Tak|Yes|Yes|Tak|  
-|Stała|Tak|Nie|Yes|Yes|  
-|Wyliczenie|Tak|Nie|Yes|Tak|  
-|Struktura|Nie|Nie|Yes|Tak|  
-|Właściwość|Tak|Yes|Yes|Yes|  
-|Metoda|Nie|Yes|Yes|Tak|  
-|Procedura (`Sub` lub `Function`)|Nie|Yes|Yes|Tak|  
-|Parametr procedury|Yes|Yes|Yes|Nie|  
-|Return — funkcja|Tak|Yes|Yes|Nie|  
-|Operator|Yes|Nie|Yes|Tak|  
-|Interface|Nie|Nie|Yes|Tak|  
-|Class|Nie|Nie|Yes|Tak|  
-|Zdarzenie|Nie|Nie|Yes|Yes|  
-|Delegate|Nie|Nie|Yes|Tak|  
+|Zmienna|Tak|Tak|Tak|Tak|  
+|Stała|Tak|Nie|Tak|Tak|  
+|Wyliczenie|Tak|Nie|Tak|Tak|  
+|Struktura|Nie|Nie|Tak|Tak|  
+|Właściwość|Tak|Tak|Tak|Tak|  
+|Metoda|Nie|Tak|Tak|Tak|  
+|Procedure (`Sub` or `Function`)|Nie|Tak|Tak|Tak|  
+|Procedure parameter|Tak|Tak|Tak|Nie|  
+|Function return|Tak|Tak|Tak|Nie|  
+|Operator|Tak|Nie|Tak|Tak|  
+|Interface|Nie|Nie|Tak|Tak|  
+|Class|Nie|Nie|Tak|Tak|  
+|Zdarzenie|Nie|Nie|Tak|Tak|  
+|Delegate|Nie|Nie|Tak|Tak|  
   
- <sup>1</sup> zakres jest czasami określane jako *widoczność*.  
+ <sup>1</sup> Scope is sometimes referred to as *visibility*.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zadeklarowane elementy](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [Nazwy zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Okres istnienia w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Typy danych](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Deklaracja zmiennej](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

@@ -2,17 +2,18 @@
 title: Wyliczenie COR_PRF_HIGH_MONITOR
 ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
-ms.openlocfilehash: 03fa33e0e2b4175d9f82bc6021731d58805da258
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fc0251624738a06d1be7081ebd099e97f7278a15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123994"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283142"
 ---
 # <a name="cor_prf_high_monitor-enumeration"></a>Wyliczenie COR_PRF_HIGH_MONITOR
+
 [Obsługiwane w .NET Framework 4.5.2 i nowszych wersjach]  
   
- Oferuje flagi oprócz tych, które znajdują się w [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) wyliczenia, które profiler może określić do metody [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) podczas ładowania.  
+Oferuje flagi oprócz tych, które znajdują się w wyliczeniu [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) , który profiler może określić do metody [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) podczas ładowania.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -52,21 +53,23 @@ typedef enum {
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Reprezentuje wszystkie flagi `COR_PRF_HIGH_MONITOR`, które można ustawić po dołączeniu profilera do uruchomionej aplikacji.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Reprezentuje wszystkie flagi `COR_PRF_HIGH_MONITOR`, które można ustawić tylko podczas inicjowania. Próba zmiany którejkolwiek z tych flag w innym miejscu powoduje, że wartość `HRESULT`, która wskazuje na błąd.|  
   
-## <a name="remarks"></a>Uwagi  
- Flagi `COR_PRF_HIGH_MONITOR` są używane z parametrem `pdwEventsHigh` metod [ICorProfilerInfo5:: GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) i [ICorProfilerInfo5:: SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) .  
+## <a name="remarks"></a>Uwagi
+
+Flagi `COR_PRF_HIGH_MONITOR` są używane z parametrem `pdwEventsHigh` metod [ICorProfilerInfo5:: GetEventMask2](icorprofilerinfo5-geteventmask2-method.md) i [ICorProfilerInfo5:: SetEventMask2](icorprofilerinfo5-seteventmask2-method.md) .  
   
 Począwszy od .NET Framework 4.6.1 wartość `COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH` zmieniona z 0 na `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` (0x00000002). Począwszy od .NET Framework 4.7.2, jego wartość zmieniła się z `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED` na `COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`.   
 
 `COR_PRF_HIGH_MONITOR_IMMUTABLE` ma być maską bitowej, która reprezentuje wszystkie flagi, które można ustawić tylko podczas inicjowania. Próba zmiany którejkolwiek z tych flag w innym miejscu powoduje niepowodzenie `HRESULT`.
 
-## <a name="requirements"></a>Wymagania  
- **Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Wymagania
+
+**Platformy:** Zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Nagłówek:** CorProf. idl, CorProf. h  
+**Nagłówek:** CorProf. idl, CorProf. h  
   
- **Biblioteka:** CorGuids. lib  
+**Biblioteka:** CorGuids. lib  
   
- **Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+**Wersje .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz także
 

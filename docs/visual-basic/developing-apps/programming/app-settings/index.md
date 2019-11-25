@@ -1,34 +1,37 @@
 ---
-title: Uzyskiwanie dostępu do ustawień aplikacji (Visual Basic)
+title: Accessing application settings
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
 - examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
-ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49f65e9c39a29056cb1c552f0d577fcf0d75d658
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014417"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353244"
 ---
-# <a name="accessing-application-settings-visual-basic"></a>Uzyskiwanie dostępu do ustawień aplikacji (Visual Basic)
-Ta sekcja zawiera tematy opisujące `My.Settings` obiektu i zadania, umożliwia ona wykonywania.  
+# <a name="accessing-application-settings-visual-basic"></a>Accessing application settings (Visual Basic)
+
+This section contains topics describing the `My.Settings` object and the tasks it enables you to accomplish.  
   
 ## <a name="mysettings"></a>My.Settings  
- Właściwości obiektu `My.Settings` zapewniają dostęp do ustawień aplikacji. Aby dodać lub usunąć ustawienia, należy użyć **ustawienia** okienku **projektanta projektu**.  
+
+ The properties of the `My.Settings` object provide access to your application's settings. To add or remove settings, use the **Settings** pane of the **Project Designer**.  
   
- Metody `My.Settings` obiektu umożliwiają zapisać bieżące ustawienia użytkownika lub Przywróć ustawienia użytkownika, aby ostatnio zapisane wartości.  
+ The methods of the `My.Settings` object allow you to save the current user settings or revert the user settings to the last saved values.  
   
 ## <a name="tasks"></a>Zadania  
- W poniższej tabeli wymieniono przykłady pokazujące sposób dostępu do formularzy aplikacji.  
+
+ The following table lists examples showing how to access an application's forms.  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |--------|---------|  
-|Zaktualizuj wartość ustawienia użytkownika|[Instrukcje: Zmienianie ustawień użytkownika w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|Wyświetl ustawienia aplikacji i użytkownika w siatce właściwości|[Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
-|Zapisz zaktualizowane ustawienia wartości|[Instrukcje: Utrwalanie ustawień użytkownika w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|Określa wartości ustawień użytkownika|[Instrukcje: Odczytywanie ustawień aplikacji w języku Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|Update the value of a user setting|[How to: Change User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|Display application and user settings in a property grid|[How to: Create Property Grids for User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|Save updated user setting values|[How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|Determine the values of user settings|[How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

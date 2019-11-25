@@ -8,30 +8,30 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3224250b08a780b87b9b7f96547830b0563daadf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027254"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351940"
 ---
 # <a name="extending-the-dom"></a>Rozszerzanie modelu DOM
 
-Microsoft .NET Framework zawiera podstawowy zestaw klas, która dostarcza implementację XML Document Object Model (DOM). <xref:System.Xml.XmlNode>i ich pochodne klasy, udostępnia metody i właściwości, które umożliwiają przechodzenie, zapytań i modyfikowanie zawartości i struktury dokumentu XML.
+The Microsoft .NET Framework includes a base set of classes that provides an implementation of the XML Document Object Model (DOM). The <xref:System.Xml.XmlNode>, and its derived classes, provides methods and properties that allow you to navigate, query, and modify the content and structure of an XML document.
 
-Gdy zawartość XML jest ładowany do pamięci przy użyciu modelu DOM, węzłów tworzonych zawierają informacje, takie jak nazwa węzła, typ węzła i tak dalej. Mogą wystąpić sytuacje, gdy wymagają informacji określonego węzła, które klasy bazowe nie są oferowane. Na przykład można wyświetlić numer wiersza i pozycja węzła. W takim przypadku może wyprowadzać nowe klasy z istniejących klas modelu DOM i dodają dodatkową funkcję.
+When XML content is loaded into memory using the DOM, the nodes created contain information such as node name, node type, and so on. There may be occasions where you require specific node information that the base classes do not provide. For example, you may want to see the line number and position of the node. In this case, you can derive new classes from the existing DOM classes and add additional functionality.
 
-Istnieją dwa ogólne wytyczne podczas wyprowadzania nowe klasy:
+There are two general guidelines when deriving new classes:
 
-- Zalecane jest, że nigdy nie klasy wyprowadzonej z <xref:System.Xml.XmlNode> klasy. Zamiast tego zaleca się pochodną klasy z klasy odpowiadający typ węzła, który Cię interesuje. Na przykład, jeśli chcesz zostały zwrócone informacje dodatkowe na węzłów atrybutu, użytkownik może pochodzić z <xref:System.Xml.XmlAttribute> klasy.
+- It is recommended that you never derive from the <xref:System.Xml.XmlNode> class. Instead, it is recommended that you derive classes from the class corresponding to the node type that you are interested in. For example, if you want to return additional information on attribute nodes, you can derive from the <xref:System.Xml.XmlAttribute> class.
 
-- Z wyjątkiem metody tworzenia węzła zalecane jest, że podczas zastępowania funkcję, należy zawsze wywołać funkcję w wersji podstawowej i następnie dodaj wszelkie dodatkowe przetwarzanie.
+- Except for the node creation methods, it is recommended that when overriding a function, you should always call the base version of the function and then add any additional processing.
 
-## <a name="creating-your-own-node-instances"></a>Tworzenie wystąpień węzła
+## <a name="creating-your-own-node-instances"></a>Creating Your Own Node Instances
 
-<xref:System.Xml.XmlDocument> Klasa zawiera metody tworzenia węzła. Po załadowaniu pliku XML, te metody są wywoływane w celu tworzenia węzłów. Tak, aby wystąpieniami danego węzła są tworzone podczas ładowania dokumentu, można zastąpić tych metod. Na przykład, jeśli został rozszerzony <xref:System.Xml.XmlElement> klasa będzie dziedziczyć <xref:System.Xml.XmlDocument> klasy, a także Przesłoń <xref:System.Xml.XmlDocument.CreateElement%2A> metody.
+The <xref:System.Xml.XmlDocument> class contains node creation methods. When an XML file is loaded, these methods are called to create the nodes. You can override these methods so that your node instances are created when a document is loaded. For example, if you have extended the <xref:System.Xml.XmlElement> class, you would inherit the <xref:System.Xml.XmlDocument> class and override the <xref:System.Xml.XmlDocument.CreateElement%2A> method.
 
-Poniższy przykład przedstawia sposób przesłonięcia <xref:System.Xml.XmlDocument.CreateElement%2A> metodę, aby zwrócić implementacji <xref:System.Xml.XmlElement> klasy.
+The following example shows how to override the <xref:System.Xml.XmlDocument.CreateElement%2A> method to return your implementation of the <xref:System.Xml.XmlElement> class.
 
 ```vb
 Class LineInfoDocument
@@ -54,11 +54,11 @@ class LineInfoDocument : XmlDocument
 }
 ```
 
-## <a name="extending-a-class"></a>Rozszerzania klasy
+## <a name="extending-a-class"></a>Extending a Class
 
-Aby rozszerzyć klasę, dziedziczyć klasy jeden z istniejących klas DOM. Następnie można przesłonić wirtualnej metody lub właściwości w klasie bazowej lub dodać własne.
+To extend a class, derive your class from one of the existing DOM classes. You can then override any of the virtual methods or properties in the base class, or add your own.
 
-W poniższym przykładzie jest tworzony nową klasę, która implementuje <xref:System.Xml.XmlElement> klasy i <xref:System.Xml.IXmlLineInfo> interfejsu. Dodatkowe metody i właściwości są zdefiniowane, co pozwala użytkownikom zebrać informacje wiersza.
+In the following example, a new class is created, which implements the <xref:System.Xml.XmlElement> class and the <xref:System.Xml.IXmlLineInfo> interface. Additional methods and properties are defined which allows users to gather line information.
 
 ```vb
 Class LineInfoElement
@@ -124,10 +124,9 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 
 ### <a name="example"></a>Przykład
 
-Poniższy przykład zlicza liczbę elementów w dokumencie XML:
+The following example counts the number of elements in an XML document:
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -225,7 +224,7 @@ public class Test {
 
 #### <a name="input"></a>Dane wejściowe
 
-Book.XML
+book.xml
 
 ```xml
 <!--sample XML fragment-->
@@ -241,17 +240,17 @@ Book.XML
 Number of elements in book.xml: 3
 ```
 
-## <a name="node-event-handler"></a>Program obsługi zdarzeń węzła
+## <a name="node-event-handler"></a>Node Event Handler
 
-Wdrożenia programu .NET Framework w modelu DOM zawiera także system zdarzeń, która pozwala na otrzymywanie i obsługę zdarzeń, gdy zmienią się węzły w dokumencie XML. Za pomocą <xref:System.Xml.XmlNodeChangedEventHandler> i <xref:System.Xml.XmlNodeChangedEventArgs> klasy, można przechwycić `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, i `NodeRemoving` zdarzenia.
+The .NET Framework implementation of the DOM also includes an event system that enables you to receive and handle events when nodes in an XML document change. Using the <xref:System.Xml.XmlNodeChangedEventHandler> and <xref:System.Xml.XmlNodeChangedEventArgs> classes, you can capture `NodeChanged`, `NodeChanging`, `NodeInserted`, `NodeInserting`, `NodeRemoved`, and `NodeRemoving` events.
 
-Proces obsługi zdarzeń działa tak samo w klasach pochodnych, tak jak w oryginalnym klasy modelu DOM.
+The event-handling process works exactly the same in derived classes as it would in the original DOM classes.
 
-Aby uzyskać więcej informacji na temat obsługi zdarzeń węzła, zobacz [zdarzenia](../../../../docs/standard/events/index.md) i <xref:System.Xml.XmlNodeChangedEventHandler>.
+For more information regarding node event handling, see [Events](../../../../docs/standard/events/index.md) and <xref:System.Xml.XmlNodeChangedEventHandler>.
 
-## <a name="default-attributes-and-the-createelement-method"></a>Atrybuty domyślne, a także metoda CreateElement
+## <a name="default-attributes-and-the-createelement-method"></a>Default Attributes and the CreateElement Method
 
-Jeśli są zastępują <xref:System.Xml.XmlDocument.CreateElement%2A> metody w klasie pochodnej, domyślne atrybuty nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Ten problem występuje tylko podczas edytowania. Ponieważ <xref:System.Xml.XmlDocument.CreateElement%2A> metodą jest odpowiedzialny za dodawanie atrybutów, które domyślne mają <xref:System.Xml.XmlDocument>, musi kodu tę funkcję w <xref:System.Xml.XmlDocument.CreateElement%2A> metody. Jeśli są ładowane <xref:System.Xml.XmlDocument> zawierającej atrybutów domyślnych, będą one poprawnie obsługiwane. Aby uzyskać więcej informacji na temat atrybutów domyślnych, zobacz [tworzenie nowych atrybutów dla elementów w modelu DOM](creating-new-attributes-for-elements-in-the-dom.md).
+If you are overriding the <xref:System.Xml.XmlDocument.CreateElement%2A> method in a derived class, default attributes are not added when you are creating new elements while editing the document. This is only an issue while editing. Because the <xref:System.Xml.XmlDocument.CreateElement%2A> method is responsible for adding default attributes to an <xref:System.Xml.XmlDocument>, you must code this functionality in the <xref:System.Xml.XmlDocument.CreateElement%2A> method. If you are loading an <xref:System.Xml.XmlDocument> that includes default attributes, they will be handled correctly. For more information on default attributes, see [Creating New Attributes for Elements in the DOM](creating-new-attributes-for-elements-in-the-dom.md).
 
 ## <a name="see-also"></a>Zobacz także
 

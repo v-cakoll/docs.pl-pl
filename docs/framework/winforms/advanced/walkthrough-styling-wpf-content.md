@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460947"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138928"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Przewodnik: zawartość w stylu WPF
 
@@ -61,7 +61,7 @@ Możesz zastosować różne style do kontrolki WPF, aby zmienić jej wygląd i z
 
    `UserControl1` zostanie otwarty w projektancie WPF.
 
-1. W widoku XAML Wstaw następujący kod XAML po tagu otwierającym `<UserControl>`. Ten kod XAML tworzy gradient z kontrastowym obramowaniem gradientu. Gdy formant zostanie kliknięty, gradienty są zmieniane w celu wygenerowania naciśniętego przycisku. Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../../wpf/controls/styling-and-templating.md).
+1. W widoku XAML Wstaw następujący kod XAML po tagu otwierającym `<UserControl>`. Ten kod XAML tworzy gradient z kontrastowym obramowaniem gradientu. Gdy formant zostanie kliknięty, gradienty są zmieniane w celu wygenerowania naciśniętego przycisku. Aby uzyskać więcej informacji, zobacz [Style i tworzenia szablonów](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ Możesz zastosować różne style do kontrolki WPF, aby zmienić jej wygląd i z
 - [Korzystanie z kontrolek WPF](using-wpf-controls.md)
 - [Projektowanie XAML w programie Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Przegląd XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Tworzenie szablonów i stylów](../../wpf/controls/styling-and-templating.md)
+- [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

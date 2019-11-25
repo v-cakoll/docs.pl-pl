@@ -1,37 +1,37 @@
 ---
-title: Operatory (Visual Basic)
+title: Operatory
 ms.date: 10/17/2018
 helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: 3d3421df-fcc5-4888-9249-d78f16774ce6
-ms.openlocfilehash: a2a9fb5343c4e07fa28d87bc991beea4c390b042
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 1398b58c1e95bfb172c9b314e562262003632713
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035588"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330991"
 ---
 # <a name="operators-visual-basic"></a>Operatory (Visual Basic)
 
 ## <a name="in-this-section"></a>W tej sekcji
 
-- [Pierwszeństwo operatorów w Visual Basic](operator-precedence.md)
-- [Operatory wymienione przez funkcję](operators-listed-by-functionality.md)
-- [Typy danych wyników operatora](data-types-of-operator-results.md)
-- [Operator DirectCast](directcast-operator.md)
-- [Operator TryCast](trycast-operator.md)
-- [Operator NameOf](nameof.md)
-- [Operator new](new-operator.md)
-- [Operatory warunkowe o wartości null](null-conditional-operators.md)
-- [Operatory arytmetyczne](arithmetic-operators.md)
-- [Operatory przypisania](assignment-operators.md)
-- [Bit Shift — operatory](bit-shift-operators.md)
-- [Operatory porównania](comparison-operators.md)
-- [Operatory łączenia](concatenation-operators.md)
-- [Operatory logiczne/bitowe](logical-bitwise-operators.md)
-- [Operatory różne](miscellaneous-operators.md)
+- [Operator precedence in Visual Basic](operator-precedence.md)
+- [Operators listed by functionality](operators-listed-by-functionality.md)
+- [Data types of operator results](data-types-of-operator-results.md)
+- [DirectCast operator](directcast-operator.md)
+- [TryCast operator](trycast-operator.md)
+- [NameOf operator](nameof.md)
+- [New operator](new-operator.md)
+- [Null-conditional operators](null-conditional-operators.md)
+- [Arithmetic operators](arithmetic-operators.md)
+- [Assignment operators](assignment-operators.md)
+- [Bit Shift operators](bit-shift-operators.md)
+- [Comparison operators](comparison-operators.md)
+- [Concatenation operators](concatenation-operators.md)
+- [Logical/Bitwise operators](logical-bitwise-operators.md)
+- [Miscellaneous operators](miscellaneous-operators.md)
 
-## <a name="related-sections"></a>Sekcje pokrewne
+## <a name="related-sections"></a>Related sections
 
-- [Dokumentacja języka Visual Basic](../index.md)
+- [Visual Basic language reference](../index.md)
 - [Visual Basic](../../index.md)

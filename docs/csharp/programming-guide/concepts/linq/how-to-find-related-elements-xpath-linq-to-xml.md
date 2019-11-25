@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Znajdź elementy pokrewne (XPath-LINQ to XML) (C#)'
+title: Jak znaleźć elementy pokrewne (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 2aa3f6c6c2c2ac327ff2dffc206cdd294e12d7a2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253641"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141032"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź elementy pokrewne (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Jak znaleźć elementy pokrewne (XPath-LINQ to XML) (C#)
 W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest określany przez wartość innego elementu.  
   
  Wyrażenie XPath:  
@@ -17,11 +17,11 @@ W tym temacie pokazano, jak uzyskać element, wybierając atrybut, który jest o
  `.//Customer[@CustomerID=/Root/Orders/Order[12]/CustomerID]`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład znajduje dwunasty `Order` element, a następnie wyszukuje klienta dla tego zamówienia.  
+ Ten przykład znajduje 12 `Order` elementu, a następnie wyszukuje klienta dla tej kolejności.  
   
  Należy zauważyć, że indeksowanie do listy w .NET jest oparte na "zero". Indeksowanie do kolekcji węzłów w predykacie XPath jest oparte na "jednej". Ten przykład odzwierciedla tę różnicę.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Znajdź element z określonym elementem podrzędnym (C#)'
+title: Jak znaleźć element z określonym elementem podrzędnym (C#)
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
-ms.openlocfilehash: f007bddcbecc1cb938d05c7d444d29b6047749e8
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253744"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141144"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Instrukcje: Znajdź element z określonym elementem podrzędnym (C#)
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>Jak znaleźć element z określonym elementem podrzędnym (C#)
 W tym temacie pokazano, jak znaleźć konkretny element, który ma element podrzędny o określonej wartości.  
   
 ## <a name="example"></a>Przykład  
- Przykład znajduje `Test` element, który `CommandLine` ma element podrzędny o wartości "Examp2. exe".  
+ Przykład umożliwia znalezienie elementu `Test`, który ma `CommandLine` element podrzędny o wartości "Examp2. EXE".  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Konfiguracja testu (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testu (LINQ to XML)](./sample-xml-file-test-configuration-linq-to-xml.md).  
   
 ```csharp  
 XElement root = XElement.Load("TestConfig.xml");  
@@ -37,7 +37,7 @@ foreach (XElement el in tests)
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Konfiguracja testowa w przestrzeni nazw](./sample-xml-file-test-configuration-in-a-namespace1.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Konfiguracja testowa w przestrzeni nazw](./sample-xml-file-test-configuration-in-a-namespace1.md).  
   
 ```csharp  
 XElement root = XElement.Load("TestConfigInNamespace.xml");  

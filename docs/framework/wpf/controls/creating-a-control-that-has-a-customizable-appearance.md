@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: c98035ef0b4ea1add22b09fb9927bcd49c00cd9b
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d9cf092cf47d4fb70b15033d039777d3279b633a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920041"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283572"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Tworzenie formantu, którego wygląd można dostosować
 
@@ -54,7 +54,7 @@ Ten temat zawiera następujące sekcje:
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-W tym temacie przyjęto założenie, że wiesz, jak utworzyć nowy <xref:System.Windows.Controls.ControlTemplate> dla istniejącej kontrolki, dobrze zapoznaj się z elementami kontraktu kontrolki, a także zrozumieć koncepcje omówione w temacie [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+W tym temacie przyjęto założenie, że wiesz, jak utworzyć nowy <xref:System.Windows.Controls.ControlTemplate> dla istniejącej kontrolki, dobrze zapoznaj się z informacjami o tym, co są elementami kontraktu kontrolki, i sprawdź koncepcje omówione w temacie [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 > [!NOTE]
 > Aby utworzyć kontrolkę, która może mieć dostosowany wygląd, należy utworzyć kontrolkę, która dziedziczy z klasy <xref:System.Windows.Controls.Control> lub jednej z jej podklas innych niż <xref:System.Windows.Controls.UserControl>.  Formant, który dziedziczy po <xref:System.Windows.Controls.UserControl> jest formantem, który można szybko utworzyć, ale nie używa <xref:System.Windows.Controls.ControlTemplate> i nie można dostosować jego wyglądu.
@@ -77,7 +77,7 @@ Gdy zdefiniujesz strukturę wizualizacji i zachowanie wizualizacji w <xref:Syste
 
 ## <a name="defining-the-visual-structure-and-visual-behavior-of-a-control-in-a-controltemplate"></a>Definiowanie struktury wizualizacji i wizualnego zachowania kontrolki w ControlTemplate
 
-Podczas tworzenia kontrolki niestandardowej przy użyciu modelu części i Stanów należy zdefiniować strukturę wizualizacji i zachowanie wizualizacji formantu w <xref:System.Windows.Controls.ControlTemplate> zamiast w jego logice.  Struktura wizualizacji formantu jest złożona <xref:System.Windows.FrameworkElement> obiektów, które tworzą formant.  Zachowanie wizualizacji jest sposobem, w jaki formant pojawia się, gdy jest w określonym stanie.   Aby uzyskać więcej informacji na temat tworzenia <xref:System.Windows.Controls.ControlTemplate>, który określa strukturę wizualizacji i wizualne zachowanie kontrolki, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Podczas tworzenia kontrolki niestandardowej przy użyciu modelu części i Stanów należy zdefiniować strukturę wizualizacji i zachowanie wizualizacji formantu w <xref:System.Windows.Controls.ControlTemplate> zamiast w jego logice.  Struktura wizualizacji formantu jest złożona <xref:System.Windows.FrameworkElement> obiektów, które tworzą formant.  Zachowanie wizualizacji jest sposobem, w jaki formant pojawia się, gdy jest w określonym stanie.   Aby uzyskać więcej informacji na temat tworzenia <xref:System.Windows.Controls.ControlTemplate>, który określa strukturę wizualizacji i wizualne zachowanie kontrolki, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 W przykładzie formantu `NumericUpDown`, struktura wizualizacji zawiera dwie kontrolki <xref:System.Windows.Controls.Primitives.RepeatButton> i <xref:System.Windows.Controls.TextBlock>.  Jeśli dodasz te kontrolki w kodzie kontrolki `NumericUpDown`, na przykład, nie można zmieniać pozycji tych kontrolek.  Zamiast definiować strukturę wizualizacji i zachowanie wizualizacji kontrolki w kodzie, należy ją zdefiniować w <xref:System.Windows.Controls.ControlTemplate>.  Następnie Deweloper aplikacji, aby dostosować pozycję przycisków i <xref:System.Windows.Controls.TextBlock> i określić, jakie zachowanie występuje, gdy `Value` jest ujemna, ponieważ <xref:System.Windows.Controls.ControlTemplate> może zostać zamieniony.
 
@@ -85,7 +85,7 @@ W poniższym przykładzie pokazano strukturę wizualizacji `NumericUpDown` kontr
 
 [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]
 
-Wizualne zachowanie kontrolki `NumericUpDown` polega na tym, że wartość jest czcionką czerwoną, jeśli jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> w kodzie, gdy `Value` jest ujemna, `NumericUpDown` będzie zawsze wyświetlać czerwoną wartość ujemną. Należy określić zachowanie wizualizacji kontrolki w <xref:System.Windows.Controls.ControlTemplate> przez dodanie obiektów <xref:System.Windows.VisualState> do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów dla `Positive` i `Negative` Stanów.  `Positive` i `Negative` wzajemnie się wykluczają (formant jest zawsze dokładnie w jednym z dwóch), więc przykład umieszcza obiekty <xref:System.Windows.VisualState> w jednym <xref:System.Windows.VisualStateGroup>.  Gdy formant przechodzi w stan `Negative`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> zmieni kolor na czerwony.  Gdy kontrolka jest w stanie `Positive`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> powraca do oryginalnej wartości.  Definiowanie <xref:System.Windows.VisualState> obiektów w <xref:System.Windows.Controls.ControlTemplate> jest dokładniej omówione w sekcji [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Wizualne zachowanie kontrolki `NumericUpDown` polega na tym, że wartość jest czcionką czerwoną, jeśli jest ujemna.  Jeśli zmienisz <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> w kodzie, gdy `Value` jest ujemna, `NumericUpDown` będzie zawsze wyświetlać czerwoną wartość ujemną. Należy określić zachowanie wizualizacji kontrolki w <xref:System.Windows.Controls.ControlTemplate> przez dodanie obiektów <xref:System.Windows.VisualState> do <xref:System.Windows.Controls.ControlTemplate>.  W poniższym przykładzie przedstawiono <xref:System.Windows.VisualState> obiektów dla `Positive` i `Negative` Stanów.  `Positive` i `Negative` wzajemnie się wykluczają (formant jest zawsze dokładnie w jednym z dwóch), więc przykład umieszcza obiekty <xref:System.Windows.VisualState> w jednym <xref:System.Windows.VisualStateGroup>.  Gdy formant przechodzi w stan `Negative`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> <xref:System.Windows.Controls.TextBlock> zmieni kolor na czerwony.  Gdy kontrolka jest w stanie `Positive`, <xref:System.Windows.Controls.TextBlock.Foreground%2A> powraca do oryginalnej wartości.  Definiowanie <xref:System.Windows.VisualState> obiektów w <xref:System.Windows.Controls.ControlTemplate> jest dokładniej omówione w temacie [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 > [!NOTE]
 > Upewnij się, że właściwość dołączona <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> została ustawiona na <xref:System.Windows.FrameworkElement> głównej <xref:System.Windows.Controls.ControlTemplate>.
@@ -168,7 +168,7 @@ Pojedyncza Metoda, która aktualizuje wszystkie Stany scentralizowanie wywołań
 
 Jeśli przekażesz nazwę stanu do <xref:System.Windows.VisualStateManager.GoToState%2A>, gdy kontrolka jest już w tym stanie, <xref:System.Windows.VisualStateManager.GoToState%2A> nic nie robi, więc nie musisz sprawdzać bieżącego stanu formantu.  Na przykład jeśli `Value` zmiany z jednej liczby ujemnej na inną liczbę ujemną, scenorys dla stanu `Negative` nie zostanie przerwany i użytkownik nie zobaczy zmiany w kontrolce.
 
-<xref:System.Windows.VisualStateManager> używa obiektów <xref:System.Windows.VisualStateGroup> do określenia stanu, który ma zostać zakończony po wywołaniu <xref:System.Windows.VisualStateManager.GoToState%2A>. Formant jest zawsze w jednym stanie dla każdego <xref:System.Windows.VisualStateGroup>, który jest zdefiniowany w jego <xref:System.Windows.Controls.ControlTemplate> i pozostawia stan tylko wtedy, gdy przejdzie do innego stanu z tego samego <xref:System.Windows.VisualStateGroup>. Na przykład <xref:System.Windows.Controls.ControlTemplate> kontrolki `NumericUpDown` definiuje `Positive` i `Negative`obiekty<xref:System.Windows.VisualState> w jednej <xref:System.Windows.VisualStateGroup>, a `Focused` i `Unfocused`<xref:System.Windows.VisualState> obiekty w innym. (`Focused` i `Unfocused`<xref:System.Windows.VisualState> zdefiniowane w sekcji [kompletny przykład](#complete_example) w tym temacie, gdy formant przechodzi ze stanu `Positive` do stanu `Negative` lub na odwrót, formant pozostaje w `Focused` lub `Unfocused` Państwu.
+<xref:System.Windows.VisualStateManager> używa obiektów <xref:System.Windows.VisualStateGroup> do określenia stanu, który ma zostać zakończony po wywołaniu <xref:System.Windows.VisualStateManager.GoToState%2A>. Formant jest zawsze w jednym stanie dla każdego <xref:System.Windows.VisualStateGroup>, który jest zdefiniowany w jego <xref:System.Windows.Controls.ControlTemplate> i pozostawia stan tylko wtedy, gdy przejdzie do innego stanu z tego samego <xref:System.Windows.VisualStateGroup>. Na przykład <xref:System.Windows.Controls.ControlTemplate> kontrolki `NumericUpDown` definiuje `Positive` i `Negative`obiekty <xref:System.Windows.VisualState> w jednej <xref:System.Windows.VisualStateGroup>, a `Focused` i `Unfocused`<xref:System.Windows.VisualState> obiekty w innym. (`Focused` i `Unfocused`<xref:System.Windows.VisualState> zdefiniowane w sekcji [kompletny przykład](#complete_example) w tym temacie, gdy formant przechodzi ze stanu `Positive` do stanu `Negative` lub na odwrót, formant pozostaje w stanie `Focused` lub `Unfocused`.
 
 Istnieją trzy typowe miejsca, w których można zmienić stan kontrolki:
 
@@ -255,5 +255,5 @@ Poniższy przykład pokazuje logikę dla `NumericUpDown`.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)

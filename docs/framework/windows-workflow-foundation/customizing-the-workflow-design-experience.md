@@ -4,30 +4,30 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 41be55391ae9481f6c2e4feb76443f7fb676b69d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637261"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141929"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Dostosowywanie środowiska projektowania przepływu pracy
 
-Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] zostały znacznie uproszczone w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Programowania i wdrażania są teraz łatwiejsze i bardziej elastyczne. Zmian infrastrukturalnych klucza jest, że nowy model programowania projektanta działań bazuje na Windows Presentation Foundation (WPF). Daje to możliwość definiowania Projektanci działań w sposób deklaratywny i rehost [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w innych aplikacjach przy użyciu porównawczej łatwe. Kiedy ponowny hosting, edytora wyrażeń niestandardowych mogą być tworzone do obsługi technologii IntelliSense lub domeny uproszczone wyrażenia. Integracja za pomocą programu Windows Communication Foundation (WCF) stał się aby usprawnić przy użyciu usług przepływu pracy. Projektanci działań niestandardowych i drzewo elementów modelu może służyć do zwiększenia projektowania czasu środowiska w projektantach rehostowanym przepływu pracy.
+Scenariusze projektowania działań niestandardowych i przeprowadzenia [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] są znacznie uproszczone w .NET Framework 4. Opracowywanie i wdrażanie jest teraz łatwiejsze i bardziej elastyczne. Infrastruktury Key Change polega na tym, że nowy model programowania projektanta działań jest oparty na Windows Presentation Foundation (WPF). Dzięki temu można z łatwością definiować projektantów działań i ponownie hostować [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w innych aplikacjach z porównywalną. Podczas rehostowania można opracować Edytor wyrażeń niestandardowych do obsługi technologii IntelliSense lub uproszczonej domeny wyrażeń. Integracja z usługą Windows Communication Foundation (WCF) stała się bardziej bezproblemowe dzięki użyciu usług przepływu pracy. Projektanci działań niestandardowych i drzewo elementów modelu mogą służyć do ulepszania środowiska projektowania dla projektantów przepływów pracy.
 
 ## <a name="in-this-section"></a>W tej sekcji
 
  [Używanie niestandardowych szablonów i projektantów działań](using-custom-activity-designers-and-templates.md)
 
- W tym artykule opisano sposób tworzenia nowego niestandardowi Projektanci działań i szablony.
+ Opisuje sposób tworzenia nowych projektantów i szablonów działań niestandardowych.
 
  [Rehostowanie projektanta przepływu pracy](rehosting-the-workflow-designer.md)
 
- Opisuje sposób ponownego hostowania [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] poza programem Visual Studio i sposób wyświetlania błędów sprawdzania poprawności.
+ Opisuje, jak ponownie hostować [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] poza programem Visual Studio oraz jak wyświetlać błędy walidacji.
 
  [Używanie edytora wyrażeń niestandardowych](using-a-custom-expression-editor.md)
 
- Opisuje sposób implementacji edytora wyrażeń niestandardowych do korzystania z przepływu pracy projektanci rehostowanym poza programem Visual Studio 2010.
+ Zawiera opis sposobu implementowania niestandardowego edytora wyrażeń do użycia z projektantami przepływu pracy przemieszczonymi poza programem Visual Studio 2010.
 
 ## <a name="reference"></a>Tematy pomocy
 

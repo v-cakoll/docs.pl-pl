@@ -1,17 +1,17 @@
 ---
-title: 'Instrukcje: Znajdź elementy w przestrzeni nazw (XPath-LINQ to XML) (C#)'
+title: Jak znaleźć elementy w przestrzeni nazw (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: cae1c4ac-6cd5-46cf-9b1c-bd85bc9b7ea9
-ms.openlocfilehash: d85426cf7a7073c35b51157e59687e2b3bcdcf8a
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: da9d819be5234a2429b6eab276f89bd0d877d4a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253677"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141065"
 ---
-# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź elementy w przestrzeni nazw (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-elements-in-a-namespace-xpath-linq-to-xml-c"></a>Jak znaleźć elementy w przestrzeni nazw (XPath-LINQ to XML) (C#)
 
-Wyrażenia XPath mogą znajdować węzły w określonej przestrzeni nazw. Wyrażenia XPath używają prefiksów przestrzeni nazw do określania przestrzeni nazw. Aby przeanalizować wyrażenie XPath, które zawiera prefiksy przestrzeni nazw, należy przekazać obiekt do metody XPath implementującej <xref:System.Xml.IXmlNamespaceResolver>. Ten przykład używa <xref:System.Xml.XmlNamespaceManager>.
+Wyrażenia XPath mogą znajdować węzły w określonej przestrzeni nazw. Wyrażenia XPath używają prefiksów przestrzeni nazw do określania przestrzeni nazw. Aby przeanalizować wyrażenie XPath, które zawiera prefiksy przestrzeni nazw, należy przekazać obiekt do metod XPath, które implementują <xref:System.Xml.IXmlNamespaceResolver>. Ten przykład używa <xref:System.Xml.XmlNamespaceManager>.
 
 Wyrażenie XPath:
 
@@ -19,7 +19,7 @@ Wyrażenie XPath:
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład odczytuje drzewo XML zawierające dwie przestrzenie nazw. Używa <xref:System.Xml.XmlReader> do odczytywania dokumentu XML. <xref:System.Xml.XmlNameTable> Następnie pobiera <xref:System.Xml.XmlReader>z i <xref:System.Xml.XmlNamespaceManager> z.<xref:System.Xml.XmlNameTable> Używa <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.
+Poniższy przykład odczytuje drzewo XML zawierające dwie przestrzenie nazw. W celu odczytania dokumentu XML używa <xref:System.Xml.XmlReader>. Następnie pobiera <xref:System.Xml.XmlNameTable> z <xref:System.Xml.XmlReader>i <xref:System.Xml.XmlNamespaceManager> z <xref:System.Xml.XmlNameTable>. Używa <xref:System.Xml.XmlNamespaceManager> podczas wybierania elementów.
 
 ```csharp
 XmlReader reader = XmlReader.Create("ConsolidatedPurchaseOrders.xml");

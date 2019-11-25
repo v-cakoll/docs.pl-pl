@@ -6,63 +6,63 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a59e47e529a5002c806e37dba7267b2cf8318a35
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: cbae03c52f3cc39f7afd422a34b16e99a60d9f3a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912712"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283218"
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
-Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zlokalizować i zidentyfikować punkt końcowy. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w modelu programowania Windows Communication Foundation (WCF) przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, wymiany wiadomości z nim i zestaw opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które definiują innych nagłówków protokołu SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zapewnić dodatkowe i bardziej szczegółowe informacje dotyczące adresowania do identyfikacji lub interakcji z punktu końcowego usługi. Adres punktu końcowego jest reprezentowany w sieci jako odwołanie WS-Addressing punktu końcowego (EPR).  
+Z każdym punktem końcowym jest skojarzony adres, który jest używany do lokalizowania i identyfikowania punktu końcowego. Ten adres składa się głównie z Uniform Resource Identifier (URI), który określa lokalizację punktu końcowego. Adres punktu końcowego jest reprezentowany w modelu programowania Windows Communication Foundation (WCF) przez klasę <xref:System.ServiceModel.EndpointAddress>, która zawiera opcjonalną Właściwość <xref:System.ServiceModel.EndpointAddress.Identity%2A>, która umożliwia uwierzytelnianie punktów końcowych przez inne punkty końcowe, które wymieniają z nią wiadomości, oraz zestaw opcjonalnych właściwości <xref:System.ServiceModel.EndpointAddress.Headers%2A>, które definiują inne nagłówki protokołu SOAP wymagane do uzyskania dostępu do usługi. Opcjonalne nagłówki zapewniają dodatkowe i bardziej szczegółowe informacje dotyczące adresowania w celu identyfikowania punktu końcowego usługi lub korzystania z niego. Adres punktu końcowego jest reprezentowany w sieci jako odwołanie WS-Addressing punktu końcowego (EPR).  
   
-## <a name="uri-structure-of-an-address"></a>Identyfikator URI struktury adresu  
- Adres URI dla większości transportu ma cztery części. Na przykład czterech części identyfikatora URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` może być wyszczególnione w następujący sposób:  
+## <a name="uri-structure-of-an-address"></a>Struktura identyfikatora URI adresu  
+ Identyfikator URI adresu dla większości transportów ma cztery części. Na przykład cztery części identyfikatora URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` mogą być wyszczególnione w następujący sposób:  
   
 - Schemat: `http:`
   
-- Maszyny: `www.fabrikam.com`  
+- Maszyna: `www.fabrikam.com`  
   
-- (opcjonalnie) Port: 322  
+- obowiązkowe Port: 322  
   
 - Path: /mathservice.svc/secureEndpoint  
   
-## <a name="defining-an-address-for-a-service"></a>Definiowanie adres usługi  
- Adres punktu końcowego usługi można określić obowiązkowo za pomocą kodu lub deklaratywne za pomocą konfiguracji. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie sporządzana. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Zachowanie powiązania i adresowanie z kodu pozwala zmienić bez konieczności ponownego kompilowania lub ponownego wdrażania aplikacji.  
+## <a name="defining-an-address-for-a-service"></a>Definiowanie adresu dla usługi  
+ Adres punktu końcowego dla usługi można określić za pomocą kodu lub deklaratywnie za pośrednictwem konfiguracji. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne, ponieważ powiązania i adresy dla wdrożonej usługi są zwykle inne niż te używane podczas tworzenia usługi. Ogólnie rzecz biorąc, bardziej praktyczne jest zdefiniowanie punktów końcowych usługi przy użyciu konfiguracji zamiast kodu. Przechowywanie informacji o powiązaniach i adresowaniu poza kodem pozwala im zmieniać bez konieczności ponownego kompilowania lub wdrażania aplikacji.  
   
 ### <a name="defining-an-address-in-configuration"></a>Definiowanie adresu w konfiguracji  
- Aby zdefiniować punkt końcowy w pliku konfiguracji, należy użyć [ \<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elementu. Aby uzyskać szczegółowe informacje i obejrzeć przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Aby zdefiniować punkt końcowy w pliku konfiguracji, użyj elementu [\<punktu końcowego >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) . Aby uzyskać szczegółowe informacje i przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="defining-an-address-in-code"></a>Definiowanie adresu w kodzie  
- Adres punktu końcowego można utworzyć w kodzie za pomocą <xref:System.ServiceModel.EndpointAddress> klasy. Aby uzyskać szczegółowe informacje i obejrzeć przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Adres punktu końcowego można utworzyć w kodzie z klasą <xref:System.ServiceModel.EndpointAddress>. Aby uzyskać szczegółowe informacje i przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-### <a name="endpoints-in-wsdl"></a>Punkty końcowe w formacie WSDL  
- Adres punktu końcowego również może być reprezentowany w języku WSDL jako elementu WS-Addressing EPR wewnątrz odpowiedni punkt końcowy `wsdl:port` elementu. EPR zawiera adres punktu końcowego oraz wszelkie właściwości adresu. Aby uzyskać szczegółowe informacje i obejrzeć przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+### <a name="endpoints-in-wsdl"></a>Punkty końcowe w języku WSDL  
+ Adres punktu końcowego może być również reprezentowany w języku WSDL jako element EPR WS-Addressing wewnątrz odpowiadającego elementu punktu końcowego `wsdl:port`. EPR zawiera adres punktu końcowego, a także wszystkie właściwości adresu. Aby uzyskać szczegółowe informacje i przykład, zobacz [Określanie adresu punktu końcowego](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Wiele usług IIS, powiązanie pomocy technicznej w programie .NET Framework 3.5  
- Usługodawcy internetowi często hostować wiele aplikacji na tym samym serwerze i lokacji zwiększenie gęstości lokacji i niższy całkowity koszt posiadania. Te aplikacje zwykle są powiązane z różnymi adresami podstawowej. Witrynę sieci Web usług Internet Information Services (IIS) może zawierać wiele aplikacji. Aplikacje w lokacji jest możliwy za pośrednictwem jednego lub więcej powiązań usług IIS.  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Obsługa wielu powiązań usług IIS w .NET Framework 3,5  
+ Dostawcy usług internetowych często obsługują wiele aplikacji na tym samym serwerze i w każdej lokacji, aby zwiększyć gęstość lokacji i obniżyć całkowity koszt posiadania. Te aplikacje są zwykle powiązane z różnymi adresami podstawowymi. Witryna sieci Web programu Internet Information Services (IIS) może zawierać wiele aplikacji. Dostęp do aplikacji w lokacji można uzyskać za pomocą co najmniej jednego powiązania usług IIS.  
   
- Powiązania usługi IIS zapewniają dwóch rodzajów informacji: Protokół powiązania, a informacje o powiązaniu. Protokół powiązania definiuje schemat, przez który dane są przesyłane, a informacje o powiązaniu informacji używanych do uzyskiwania dostępu do witryny.  
+ Powiązania usług IIS udostępniają dwie informacje: Protokół powiązania i informacje o powiązaniu. Protokół powiązania definiuje schemat, w którym odbywa się komunikacja, a informacje o powiązaniu są informacjami używanymi do uzyskiwania dostępu do witryny.  
   
- Poniższy przykład przedstawia składniki, które mogą być obecne w powiązaniu usługi IIS:  
+ W poniższym przykładzie przedstawiono składniki, które mogą być obecne w powiązaniu IIS:  
   
 - Protokół powiązania: HTTP  
   
-- Informacje o powiązaniu: Adres IP, portu i nagłówka hosta  
+- Informacje o powiązaniu: adres IP, port, nagłówek hosta  
   
- Usługi IIS można określić wiele powiązań dla każdej lokacji, co skutkuje z wieloma adresami podstawowymi dla każdego schematu. Przed [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF nie obsługują wielu adresów dla schematu i, jeśli zostały określone, zgłosił <xref:System.ArgumentException> podczas aktywacji.  
+ Usługi IIS mogą określić wiele powiązań dla każdej lokacji, co skutkuje wieloma adresami podstawowymi dla każdego schematu. Przed .NET Framework 3,5 funkcja WCF nie obsługiwała wielu adresów schematu i, jeśli zostały określone, wywołała <xref:System.ArgumentException> podczas aktywacji.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] Umożliwia usługodawców internetowych do hostowania wielu aplikacji przy użyciu różnych adresami podstawowymi dla tego samego schematu w tej samej lokacji.  
+ .NET Framework 3,5 umożliwia dostawcom usług internetowych hostowanie wielu aplikacji z różnymi adresami podstawowymi dla tego samego schematu w tej samej lokacji.  
   
- Na przykład lokacji może zawierać następujące adresy podstawowy:  
+ Na przykład lokacja może zawierać następujące adresy podstawowe:  
   
 - `http://payroll.myorg.com/Service.svc`
   
 - `http://shipping.myorg.com/Service.svc`
   
- Za pomocą [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], określić filtr prefiksu na poziomie elementu AppDomain w pliku konfiguracji. W tym z [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, który zawiera listę prefiksów. Przychodzące adres podstawowy, dostarczone przez usługi IIS, są filtrowane w oparciu o listę prefiksów opcjonalne. Domyślnie jeśli prefiks, który nie jest określony, wszystkie adresy są przekazywane za pośrednictwem. Określenie prefiksu wyniki w tylko pasujących adres podstawowy dla tego schematu, które zostaną przekazane za pośrednictwem.  
+ W .NET Framework 3,5 należy określić filtr prefiksu na poziomie domeny w pliku konfiguracji. Można to zrobić za pomocą elementu [\<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) , który zawiera listę prefiksów. Przychodzące adresy podstawowe, dostarczane przez usługi IIS, są filtrowane na podstawie opcjonalnej listy prefiksów. Domyślnie, gdy prefiks nie jest określony, wszystkie adresy są przesyłane przez. Określenie prefiksu spowoduje przekazanie tylko pasującego adresu podstawowego dla tego schematu.  
   
- Oto przykład kodu konfiguracji, który używa filtry prefiks.  
+ Poniżej znajduje się przykładowy kod konfiguracji, który używa filtrów prefiksu.  
   
 ```xml  
 <system.serviceModel>  
@@ -75,16 +75,16 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
 </system.serviceModel>  
 ```  
   
- W powyższym przykładzie `net.tcp://payroll.myorg.com:8000` i `http://shipping.myorg.com:8000` są tylko podstawowy adres, ich systemów, które są przekazywane.  
+ W poprzednim przykładzie `net.tcp://payroll.myorg.com:8000` i `http://shipping.myorg.com:8000` są jedynymi adresami podstawowymi dla odpowiednich schematów, które są przenoszone przez.  
   
- `baseAddressPrefixFilter` Nie obsługuje symboli wieloznacznych.  
+ `baseAddressPrefixFilter` nie obsługuje symboli wieloznacznych.  
   
- Adres podstawowy, dostarczone przez usługi IIS wiążące adresy powiązany z innych systemów, które nie znajduje się w `baseAddressPrefixFilters` listy. Te adresy nie są odfiltrowywane.  
+ Adresy podstawowe podane przez usługi IIS mogą mieć adresy powiązane z innymi schematami nieobecnymi na liście `baseAddressPrefixFilters`. Te adresy nie są odfiltrowane.  
   
-## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Usługi IIS powiązanie obsługi wielu w programie .NET Framework 4 lub nowszy  
- Począwszy od .NET 4, zostanie włączona obsługa wielu powiązań w usługach IIS bez konieczności pobrania pojedynczy adres podstawowy, ustawiając <xref:System.ServiceModel.ServiceHostingEnvironment>firmy <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> ustawienie na wartość true. Ta obsługa jest ograniczona do schematy protokołu HTTP.  
+## <a name="multiple-iis-binding-support-in-net-framework-4-and-later"></a>Obsługa wielu powiązań usług IIS w .NET Framework 4 i nowszych  
+ Począwszy od platformy .NET 4, można włączyć obsługę wielu powiązań w usługach IIS bez konieczności wybierania pojedynczego adresu podstawowego, ustawiając ustawienie <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A> <xref:System.ServiceModel.ServiceHostingEnvironment>wartość true. Ta obsługa jest ograniczona do schematów protokołu HTTP.  
   
- Oto przykład kodu konfiguracji, który używa multipleSiteBindingsEnabled na [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
+ Poniżej znajduje się przykładowy kod konfiguracji, który używa multipleSiteBindingsEnabled na [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md).  
   
 ```xml  
 <system.serviceModel>  
@@ -93,49 +93,49 @@ Każdy punkt końcowy ma adres skojarzony z nim, który jest używany, aby zloka
 </system.serviceModel>  
 ```  
   
- Wszystkie ustawienia baseAddressPrefixFilters są ignorowane, zarówno dla protokołu HTTP i protokołów innych niż HTTP, po włączeniu wielu powiązań witryny przy użyciu tego ustawienia.  
+ Wszystkie ustawienia baseAddressPrefixFilters są ignorowane dla protokołów HTTP i innych niż HTTP, gdy w ramach tego ustawienia włączono wiele powiązań witryny.  
   
  Aby uzyskać szczegółowe informacje i przykłady, zobacz [Obsługa wielu powiązań witryny usług IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) i <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
-## <a name="extending-addressing-in-wcf-services"></a>Rozszerzanie adresowania w usługach WCF  
- Domyślne adresowania modelu usług WCF używa adres URI punktu końcowego w następujących celach:  
+## <a name="extending-addressing-in-wcf-services"></a>Rozszerzanie adresów w usługach WCF  
+ Domyślny model adresowania usług WCF używa identyfikatora URI adresu punktu końcowego w następujących celach:  
   
-- Aby określić usługi adresu nasłuchiwania, lokalizacji, w jakim punkt końcowy będzie nasłuchiwać pod kątem wiadomości,  
+- Aby określić adres nasłuchiwania usługi, lokalizacja, w której punkt końcowy nasłuchuje komunikatów,  
   
-- Aby określić filtr adresu protokołu SOAP, adres punktu końcowego oczekuje jako nagłówek SOAP.  
+- Aby określić filtr adresów protokołu SOAP, adres punktu końcowego jest oczekiwany jako nagłówek protokołu SOAP.  
   
- Wartości dla każdej z tych celów można określić osobno, dzięki czemu kilka rozszerzeń adresowania tego obejmują scenariusze przydatne:  
+ Wartości dla każdego z tych celów można określić oddzielnie, zezwalając na kilka rozszerzeń adresów, które obejmują przydatne scenariusze:  
   
-- Pośredników SOAP: wiadomości wysłane przez klienta przechodzi przez jeden lub więcej dodatkowych usług, które przetworzyć komunikatu przed osiągnięciem przez nią miejsca przeznaczenia. Pośredników SOAP można wykonywać różne zadania, takie jak weryfikacja buforowania, routingu, równoważenia obciążenia lub schemat dla wiadomości. W tym scenariuszu odbywa się przez wysyłanie komunikatów do osobnych adresów fizycznych (`via`) który jest przeznaczony dla pośrednie, a nie po prostu adres logiczny (`wsa:To`) który jest przeznaczony dla docelowego ultimate.  
+- Pośrednik protokołu SOAP: komunikat wysyłany przez klienta przechodzi przez jedną lub więcej dodatkowych usług, które przetwarzają komunikat, zanim osiągnie on ostateczną lokalizację docelową. Pośrednicy protokołu SOAP mogą wykonywać różne zadania, takie jak buforowanie, routing, równoważenie obciążenia lub sprawdzanie poprawności schematu dla komunikatów. Ten scenariusz jest realizowany przez wysyłanie komunikatów do oddzielnego adresu fizycznego (`via`), który jest przeznaczony dla pośredników, a nie tylko do adresu logicznego (`wsa:To`), który jest przeznaczony dla ostatecznego miejsca docelowego.  
   
-- Nasłuchiwania adres punktu końcowego jest prywatny identyfikator URI i jest ustawiona na wartość inną niż jego `listenURI` właściwości.  
+- Adres nasłuchiwania punktu końcowego jest prywatnym identyfikatorem URI i ma ustawioną inną wartość niż jego właściwość `listenURI`.  
   
- Transport adresu, który `via` Określa lokalizację, do którego wiadomość początkowo powinny być wysyłane na drodze do zdalny adres określoną przez `to` parametru, w której znajduje się usługa. W większości scenariuszy Internetu `via` identyfikatora URI jest taka sama jak <xref:System.ServiceModel.EndpointAddress.Uri%2A> właściwość końcowe `to` adres usługi. Rozróżnienie tylko te dwa adresy, gdy należy wykonać ręczne trasowanie.  
+ Adres transportu, który `via` określa, jest lokalizacją, w której należy początkowo wysłać komunikat do innego adresu zdalnego określonego przez parametr `to`, w którym znajduje się usługa. W większości scenariuszy internetowych `via` identyfikator URI jest taka sama jak Właściwość <xref:System.ServiceModel.EndpointAddress.Uri%2A> końcowego adresu `to` usługi. Rozróżniane są tylko te dwa adresy, gdy konieczne jest ręczne rozsyłanie.  
   
 ### <a name="addressing-headers"></a>Nagłówki adresów  
- Punkt końcowy może zostać zlikwidowane przez jeden lub więcej nagłówków protokołu SOAP, oprócz jego podstawowego identyfikatora URI. Jeden zestaw scenariuszy, w których jest to przydatne to zestaw scenariuszy pośrednie protokołu SOAP, gdzie punktu końcowego wymaga od klientów zawiera nagłówków protokołu SOAP, przeznaczona dla pośredników tego punktu końcowego.  
+ Punkt końcowy może być rozkierowany przy użyciu co najmniej jednego nagłówka SOAP oprócz podstawowego identyfikatora URI. Jednym z zestawów scenariuszy, w których jest to przydatne, jest zestaw scenariuszy pośrednich protokołu SOAP, w których punkt końcowy wymaga od klientów tego punktu końcowego dołączenia nagłówków protokołu SOAP przeznaczonych dla pośredników.  
   
- Można zdefiniować nagłówki niestandardowe adresów na dwa sposoby — przy użyciu kodu lub konfiguracji:  
+ Niestandardowe nagłówki adresów można definiować na dwa sposoby — przy użyciu kodu lub konfiguracji:  
   
-- W kodzie, należy utworzyć niestandardowy adres nagłówki przy użyciu <xref:System.ServiceModel.Channels.AddressHeader> klasy, a następnie używany do budowy <xref:System.ServiceModel.EndpointAddress>.  
+- W obszarze kod Utwórz niestandardowe nagłówki adresów przy użyciu klasy <xref:System.ServiceModel.Channels.AddressHeader>, a następnie użyte w konstrukcji <xref:System.ServiceModel.EndpointAddress>.  
   
-- W konfiguracji niestandardowej [ \<nagłówki >](../../configure-apps/file-schema/wcf/headers.md) są określane jako elementy podrzędne [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elementu.  
+- W obszarze Konfiguracja [\<nagłówki niestandardowe >](../../configure-apps/file-schema/wcf/headers.md) są określone jako elementy podrzędne [\<elementu > punktu końcowego](../../configure-apps/file-schema/wcf/endpoint-of-client.md) .  
   
- Konfiguracja jest zazwyczaj kod, jako umożliwia zmienianie nagłówków po wdrożeniu.  
+ Konfiguracja jest zwykle preferowana w kodzie, ponieważ pozwala na zmianę nagłówków po wdrożeniu.  
   
-### <a name="custom-listening-addresses"></a>Niestandardowe adresy do nasłuchiwania  
- Można ustawić adresu nasłuchiwania na wartość inną niż identyfikator URI punktu końcowego. Jest to przydatne w scenariuszach pośrednie, gdzie adres protokołu SOAP ujawnianie jest, które publiczny protokołu SOAP, pośrednie, adres, gdzie faktycznie nasłuchuje punkt końcowy jest adresem sieci prywatnej.  
+### <a name="custom-listening-addresses"></a>Niestandardowe adresy nasłuchiwania  
+ Adres nasłuchiwania można ustawić na inną wartość niż identyfikator URI punktu końcowego. Jest to przydatne w scenariuszach pośrednich, w których adres protokołu SOAP, który ma być narażony, jest publicznym pośrednikiem protokołu SOAP, natomiast adres, na który faktycznie nasłuchuje punkt końcowy, jest prywatnym adresem sieciowym.  
   
- Można określić niestandardowego adresu nasłuchiwania, za pomocą kodu lub konfiguracji:  
+ Możesz określić niestandardowy adres nasłuchiwania przy użyciu kodu lub konfiguracji:  
   
-- W kodzie, należy określić niestandardowe adresu nasłuchiwania, dodając <xref:System.ServiceModel.Description.ClientViaBehavior> klasy kolekcji zachowanie punktu końcowego.  
+- W polu kod Określ niestandardowy adres nasłuchiwania, dodając klasę <xref:System.ServiceModel.Description.ClientViaBehavior> do kolekcji zachowań punktu końcowego.  
   
-- W konfiguracji, należy określić niestandardowe adresu nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](../../configure-apps/file-schema/wcf/endpoint-element.md) elementu.  
+- W obszarze Konfiguracja Określ niestandardowy adres nasłuchiwania z atrybutem `ListenUri` elementu Service [\<endpoint >](../../configure-apps/file-schema/wcf/endpoint-element.md) .  
   
-### <a name="custom-soap-address-filter"></a>Filtr adresów niestandardowego protokołu SOAP  
- <xref:System.ServiceModel.EndpointAddress.Uri%2A> Jest używany w połączeniu ze wszystkimi <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, aby zdefiniować punkt końcowy protokołu SOAP adres filtru (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Domyślnie ten filtr sprawdza, czy wiadomości przychodzące ma `To` nagłówka wiadomości, odpowiadającą punktowi przez identyfikator URI i czy wszystkie nagłówki wymaganego punktu końcowego w wiadomości.  
+### <a name="custom-soap-address-filter"></a>Niestandardowy filtr adresów SOAP  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A> jest używany w połączeniu z dowolną właściwością <xref:System.ServiceModel.EndpointAddress.Headers%2A> do definiowania filtru adresu SOAP punktu końcowego (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Domyślnie ten filtr sprawdza, czy komunikat przychodzący ma `To` nagłówek komunikatu, który odpowiada identyfikatorowi URI punktu końcowego i czy wszystkie wymagane nagłówki punktów końcowych znajdują się w komunikacie.  
   
- W niektórych scenariuszach punktu końcowego odbiera wszystkie komunikaty przychodzące do transportu źródłowego i nie tylko te z odpowiednią `To` nagłówka. Aby je włączyć, użytkownik może użyć <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> klasy.  
+ W niektórych scenariuszach punkt końcowy odbiera wszystkie komunikaty, które docierają do podstawowego transportu, a nie tylko te z odpowiednimi nagłówkami `To`. Aby włączyć tę opcję, użytkownik może użyć klasy <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>.  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Parameter — Tablice (Visual Basic)
+title: Parameter — Tablice
 ms.date: 07/20/2015
 helpviewer_keywords:
 - parameter arrays [Visual Basic], about parameter arrays
@@ -10,47 +10,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ffb532fbac70b9aa8ab210450e4d9207f5e0291f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424616"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351125"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Parameter — Tablice (Visual Basic)
-Zazwyczaj nie można wywołać procedury z więcej argumentów niż Deklaracja procedury. Jeśli potrzebujesz nieograniczonej liczby argumentów, możesz zadeklarować *tablicę parametrów*, która umożliwia procedurę akceptowania tablicy wartości dla parametru. Podczas definiowania procedury nie trzeba znać liczby elementów w tablicy parametrów. Rozmiar tablicy jest określany indywidualnie przez każde wywołanie procedury.  
+Usually, you cannot call a procedure with more arguments than the procedure declaration specifies. When you need an indefinite number of arguments, you can declare a *parameter array*, which allows a procedure to accept an array of values for a parameter. You do not have to know the number of elements in the parameter array when you define the procedure. The array size is determined individually by each call to the procedure.  
   
-## <a name="declaring-a-paramarray"></a>Deklarowanie ParamArray  
- Za pomocą słowa kluczowego [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) można zauważyć tablicę parametrów na liście parametrów. Mają zastosowanie następujące zasady:  
+## <a name="declaring-a-paramarray"></a>Declaring a ParamArray  
+ You use the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) keyword to denote a parameter array in the parameter list. Mają zastosowanie następujące zasady:  
   
-- Procedura może definiować tylko jedną tablicę parametrów i musi być ostatnim parametrem w definicji procedury.  
+- A procedure can define only one parameter array, and it must be the last parameter in the procedure definition.  
   
-- Tablica parametrów musi być przenoszona przez wartość. Dobrym sposobem programowania jest jawne dołączenie słowa kluczowego [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) w definicji procedury.  
+- The parameter array must be passed by value. It is good programming practice to explicitly include the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword in the procedure definition.  
   
-- Tablica parametrów jest automatycznie opcjonalna. Jego wartość domyślna to pusta Jednowymiarowa tablica typu elementu tablicy parametrów.  
+- The parameter array is automatically optional. Its default value is an empty one-dimensional array of the parameter array's element type.  
   
-- Wszystkie parametry poprzedzające tablicę parametrów muszą być wymagane. Tablica parametrów musi być jedynym opcjonalnym parametrem.  
+- All parameters preceding the parameter array must be required. The parameter array must be the only optional parameter.  
   
-## <a name="calling-a-paramarray"></a>Wywoływanie ParamArray  
- Po wywołaniu procedury, która definiuje tablicę parametrów, można podać argument w jednym z następujących sposobów:  
+## <a name="calling-a-paramarray"></a>Calling a ParamArray  
+ When you call a procedure that defines a parameter array, you can supply the argument in any one of the following ways:  
   
-- Nic — to znaczy, że można pominąć argument [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . W takim przypadku pusta tablica jest przenoszona do procedury. Jeśli jawnie przekażesz słowo kluczowe [Nothing](../../../../visual-basic/language-reference/nothing.md) , tablica o wartości null zostanie przekazana do procedury i może skutkować NullReferenceException, jeśli wywołana procedura nie sprawdza tego warunku.
+- Nothing — that is, you can omit the [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argument. In this case, an empty array is passed to the procedure. If you explicitly pass the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, a null array is passed to the procedure and may result in a NullReferenceException if the called procedure does not check for this condition.
   
-- Lista dowolnej liczby argumentów oddzielonych przecinkami. Typ danych każdego argumentu musi być niejawnie konwertowany na typ elementu `ParamArray`.  
+- A list of an arbitrary number of arguments, separated by commas. The data type of each argument must be implicitly convertible to the `ParamArray` element type.  
   
-- Tablica z tym samym typem elementu co typ elementu tablicy parametrów.  
+- An array with the same element type as the parameter array's element type.  
   
- We wszystkich przypadkach kod w procedurze traktuje tablicę parametrów jako tablicę jednowymiarową z elementami tego samego typu danych co typ danych `ParamArray`.  
+ In all cases, the code within the procedure treats the parameter array as a one-dimensional array with elements of the same data type as the `ParamArray` data type.  
   
 > [!IMPORTANT]
-> Za każdym razem, gdy zajmujesz się tablicą, która może być nienieskończona, istnieje ryzyko, że zachodzi taka Wewnętrzna pojemność aplikacji. Jeśli zaakceptujesz tablicę parametrów, należy sprawdzić rozmiar tablicy, do której przeszedł kod wywołujący. Wykonaj odpowiednie kroki, jeśli są zbyt duże dla aplikacji. Aby uzyskać więcej informacji, zobacz [tablice](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array, you should test for the size of the array that the calling code passed to it. Take appropriate steps if it is too large for your application. For more information, see [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład definiuje i wywołuje funkcję `calcSum`. Modyfikator `ParamArray` dla parametru `args` włącza funkcję do akceptowania zmiennej liczby argumentów.  
+ The following example defines and calls the function `calcSum`. The `ParamArray` modifier for the parameter `args` enables the function to accept a variable number of arguments.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- Poniższy przykład definiuje procedurę z tablicą parametrów i wyprowadza wartości wszystkich elementów tablicy przekazaną do tablicy parametrów.  
+ The following example defines a procedure with a parameter array, and outputs the values of all the array elements passed to the parameter array.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   

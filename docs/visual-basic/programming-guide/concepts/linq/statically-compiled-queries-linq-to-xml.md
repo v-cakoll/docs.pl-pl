@@ -1,23 +1,23 @@
 ---
-title: Zapytania skompilowane statycznie (LINQ to XML) (Visual Basic)
+title: Zapytania skompilowane statycznie (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: f295e8aa8b747b90933d6a35e5352f66740ef071
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: e9f56366f1566f831f1e0ea5bd5a06775d698c3d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582904"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350579"
 ---
-# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Zapytania skompilowane statycznie (LINQ to XML) (Visual Basic)
+# <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Statically Compiled Queries (LINQ to XML) (Visual Basic)
 
-Jedną z najważniejszych korzyści związanych z wydajnością LINQ to XML, w przeciwieństwie do <xref:System.Xml.XmlDocument>, jest to, że zapytania w LINQ to XML są kompilowane statycznie, podczas gdy zapytania XPath muszą być interpretowane w czasie wykonywania. Ta funkcja jest wbudowana w LINQ to XML, więc nie trzeba wykonywać dodatkowych czynności, aby korzystać z nich, ale warto zrozumieć rozróżnienie podczas wybierania dwóch technologii. W tym temacie opisano różnicę.
+One of the most important performance benefits LINQ to XML, as opposed to <xref:System.Xml.XmlDocument>, is that queries in LINQ to XML are statically compiled, whereas XPath queries must be interpreted at run time. This feature is built in to LINQ to XML, so you do not have to perform extra steps to take advantage of it, but it is helpful to understand the distinction when choosing between the two technologies. This topic explains the difference.
 
-## <a name="statically-compiled-queries-vs-xpath"></a>Zapytania skompilowane statycznie a XPath
+## <a name="statically-compiled-queries-vs-xpath"></a>Statically Compiled Queries vs. XPath
 
-Poniższy przykład pokazuje, jak uzyskać elementy podrzędne o określonej nazwie i z atrybutem o określonej wartości.
+The following example shows how to get the descendant elements with a specified name, and with an attribute with a specified value.
 
-Poniżej znajduje się równoważne wyrażenie XPath:
+The following is the equivalent XPath expression:
 
 ```vb
 //Address[@Type='Shipping']
@@ -34,7 +34,7 @@ For Each el In list1
 Next
 ```
 
-Wyrażenie zapytania w tym przykładzie jest ponownie zapisywane przez kompilator do składni zapytania opartej na metodzie. Poniższy przykład, który został zapisany w składni zapytania opartej na metodzie, daje takie same wyniki jak poprzedni:
+The query expression in this example is re-written by the compiler to method-based query syntax. The following example, which is written in method-based query syntax, produces the same results as the previous one:
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")
@@ -46,7 +46,7 @@ For Each el In list1
 Next
 ```
 
-@No__t_0 Metoda jest metodą rozszerzenia. Aby uzyskać więcej informacji, zobacz [metody rozszerzenia](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Ponieważ <xref:System.Linq.Enumerable.Where%2A> jest metodą rozszerzenia, zapytanie powyżej jest kompilowane, tak jakby były zapisywane w następujący sposób:
+The <xref:System.Linq.Enumerable.Where%2A> method is an extension method. For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md). Because <xref:System.Linq.Enumerable.Where%2A> is an extension method, the query above is compiled as though it were written as follows:
 
 ```vb
 Dim po = XDocument.Load("PurchaseOrders.xml")
@@ -58,14 +58,14 @@ For Each el In list1
 Next
 ```
 
-Ten przykład daje dokładnie te same wyniki co dwa poprzednie przykłady. Ilustruje to fakt, że zapytania są efektywnie kompilowane na wywołania metod połączonych statycznie. W połączeniu z odroczoną semantyką wykonywania iteratorów, zwiększa wydajność. Aby uzyskać więcej informacji o odroczonej semantyki wykonywania iteratorów, zobacz [odroczone wykonywanie i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+This example produces exactly the same results as the previous two examples. This illustrates the fact that queries are effectively compiled into statically linked method calls. This, combined with the deferred execution semantics of iterators, improves performance. For more information about the deferred execution semantics of iterators, see [Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
 
 > [!NOTE]
-> Te przykłady są reprezentatywne dla kodu, który kompilator może napisać. Rzeczywista implementacja może się nieco różnić od tych przykładów, ale wydajność będzie taka sama lub podobna do tych przykładów.
+> These examples are representative of the code that the compiler might write. The actual implementation might differ slightly from these examples, but the performance will be the same or similar to these examples.
 
-## <a name="executing-xpath-expressions-with-xmldocument"></a>Wykonywanie wyrażeń XPath przy użyciu elementu XmlDocument
+## <a name="executing-xpath-expressions-with-xmldocument"></a>Executing XPath Expressions with XmlDocument
 
-Poniższy przykład używa <xref:System.Xml.XmlDocument>, aby wykonać te same wyniki co w poprzednich przykładach:
+The following example uses <xref:System.Xml.XmlDocument> to accomplish the same results as the previous examples:
 
 ```vb
 Dim reader = Xml.XmlReader.Create("PurchaseOrders.xml")
@@ -78,20 +78,20 @@ Next
 reader.Close()
 ```
 
-To zapytanie zwraca te same dane wyjściowe jak przykłady, które używają LINQ to XML; Jedyną różnicą jest to, że LINQ to XML wcięcia drukowanego kodu XML, a <xref:System.Xml.XmlDocument> nie.
+This query returns the same output as the examples that use LINQ to XML; the only difference is that LINQ to XML indents the printed XML, whereas <xref:System.Xml.XmlDocument> does not.
 
-Jednak <xref:System.Xml.XmlDocument> podejście ogólnie nie wykonuje ani LINQ to XML, ponieważ metoda <xref:System.Xml.XmlNode.SelectNodes%2A> musi wykonać następujące czynności wewnętrznie przy każdym wywołaniu:
+However, the <xref:System.Xml.XmlDocument> approach generally does not perform as well as LINQ to XML, because the <xref:System.Xml.XmlNode.SelectNodes%2A> method must do the following internally every time it is called:
 
-- Analizuje ciąg zawierający wyrażenie XPath, dzieląc ciąg na tokeny.
+- It parses the string that contains the XPath expression, breaking the string into tokens.
 
-- Sprawdza tokeny, aby upewnić się, że wyrażenie XPath jest prawidłowe.
+- It validates the tokens to make sure that the XPath expression is valid.
 
-- Tłumaczy wyrażenie na wewnętrzne drzewo wyrażeń.
+- It translates the expression into an internal expression tree.
 
-- Wykonuje iterację w węzłach, odpowiednio wybierając węzły dla zestawu wyników na podstawie oceny wyrażenia.
+- It iterates through the nodes, appropriately selecting the nodes for the result set based on the evaluation of the expression.
 
-Jest to znacznie więcej niż pracy wykonanej przez odpowiednie LINQ to XML zapytanie. Określona różnica wydajności różni się w zależności od różnych typów zapytań, ale w ogólnych zapytaniach LINQ to XML wykonuje mniej pracy i w związku z tym wykonuje lepsze, niż ocenianie wyrażeń XPath przy użyciu <xref:System.Xml.XmlDocument>.
+This is significantly more than the work done by the corresponding LINQ to XML query. The specific performance difference varies for different types of queries, but in general LINQ to XML queries do less work, and therefore perform better, than evaluating XPath expressions using <xref:System.Xml.XmlDocument>.
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Wydajność (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)
+- [Performance (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/performance-linq-to-xml.md)

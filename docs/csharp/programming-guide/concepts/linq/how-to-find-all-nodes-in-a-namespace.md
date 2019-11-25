@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Znajdź wszystkie węzły w przestrzeni nazw (C#)'
+title: Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
-ms.openlocfilehash: f8a6f33084417e0dd489002eaa5d2de509e30d39
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 408f4207798720428d0dd3821d33fd3edf2f897e
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253790"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141180"
 ---
-# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Instrukcje: Znajdź wszystkie węzły w przestrzeni nazw (C#)
+# <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Jak znaleźć wszystkie węzły w przestrzeni nazw (C#)
 Można filtrować według przestrzeni nazw każdego elementu lub atrybutu, aby znaleźć wszystkie węzły w danej przestrzeni nazw.  
   
 ## <a name="example"></a>Przykład  
@@ -46,7 +46,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Przykład  
  Plik XML, do którego uzyskuje się następujące zapytanie, zawiera zamówienia zakupu w dwóch różnych przestrzeniach nazw. Zapytanie tworzy nowe drzewo zawierające tylko elementy w jednej z przestrzeni nazw.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Skonsolidowane zamówienia](./sample-xml-file-consolidated-purchase-orders.md)zakupu.  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: skonsolidowane zamówienia zakupu](./sample-xml-file-consolidated-purchase-orders.md).  
   
 ```csharp  
 XDocument cpo = XDocument.Load("ConsolidatedPurchaseOrders.xml");  

@@ -1,44 +1,44 @@
 ---
-title: Zmienianie, gdzie my. Application. Log zapisuje informacje (Visual Basic)
+title: zmienianie lokalizacji, w której element My.Application.Log zapisuje informacje
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 358638d50e347334487665b950b33a045b6a39f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524409"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74336735"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: zmienianie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. W tym instruktażu pokazano, jak zastąpić ustawienia domyślne i spowodować, że obiekt `Log` ma zapisywać w innych detektorach dzienników.
+You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application. This walkthrough shows how to override the default settings and cause the `Log` object to write to other log listeners.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Obiekt `Log` może zapisywać informacje do kilku odbiorników dzienników. Przed zmianą konfiguracji należy określić bieżącą konfigurację odbiorników dziennika. Aby uzyskać więcej informacji, zobacz [Przewodnik: Określanie, gdzie my. Application. Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
+The `Log` object can write information to several log listeners. You need to determine the current configuration of the log listeners before changing the configurations. For more information, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 
-Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) lub [instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
+You may want to review [How to: Write Event Information to a Text File](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md) or [How to: Write to an Application Event Log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md).
 
-### <a name="to-add-listeners"></a>Aby dodać detektory
+### <a name="to-add-listeners"></a>To add listeners
 
-1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.
+1. Right-click app.config in **Solution Explorer** and choose **Open**.
 
-     \- lub-
+     \- or -
 
-     Jeśli nie ma pliku App. config:
+     If there is no app.config file:
 
-    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
+    1. On the **Project** menu, choose **Add New Item**.
 
-    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
+    2. From the **Add New Item** dialog box, select **Application Configuration File**.
 
     3. Kliknij przycisk **Dodaj**.
 
-2. Znajdź sekcję `<listeners>` w sekcji `<source>` z atrybutem `name` "DefaultSource" w sekcji `<sources>`. Sekcja `<sources>` znajduje się w sekcji `<system.diagnostics>`, w sekcji `<configuration>` najwyższego poziomu.
+2. Locate the `<listeners>` section, under the `<source>` section with the `name` attribute "DefaultSource", in the `<sources>` section. The `<sources>` section is in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
 
-3. Dodaj te elementy do tej sekcji `<listeners>`.
+3. Add these elements to that `<listeners>` section.
 
     ```xml
     <!-- Uncomment to connect the application file log. -->
@@ -53,11 +53,11 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
     <!-- <add name="Console" /> -->
     ```
 
-4. Usuń znaczniki komentarza z odbiorników dziennika, które mają zostać odebrane `Log` komunikatów.
+4. Uncomment the log listeners that you want to receive `Log` messages.
 
-5. Znajdź sekcję `<sharedListeners>` w sekcji `<system.diagnostics>` w sekcji `<configuration>` najwyższego poziomu.
+5. Locate the `<sharedListeners>` section, in the `<system.diagnostics>` section, in the top-level `<configuration>` section.
 
-6. Dodaj te elementy do tej sekcji `<sharedListeners>`.
+6. Add these elements to that `<sharedListeners>` section.
 
     ```xml
     <add name="FileLog"
@@ -88,7 +88,7 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
          initializeData="true" />
     ```
 
-7. Zawartość pliku App. config powinna wyglądać podobnie do następującego kodu XML:
+7. The content of the app.config file should be similar to the following XML:
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -147,39 +147,39 @@ Warto zapoznać się z [tematem: zapisywanie informacji o zdarzeniach w pliku te
     </configuration>
     ```
 
-### <a name="to-reconfigure-a-listener"></a>Aby zmienić konfigurację odbiornika
+### <a name="to-reconfigure-a-listener"></a>To reconfigure a listener
 
-1. Znajdź element `<add>` odbiornika z sekcji `<sharedListeners>`.
+1. Locate the listener's `<add>` element from the `<sharedListeners>` section.
 
-2. @No__t_0 atrybut zawiera nazwę typu odbiornika. Ten typ musi dziedziczyć z klasy <xref:System.Diagnostics.TraceListener>. Użyj silnie nazwanego typu, aby upewnić się, że jest używany właściwy typ. Aby uzyskać więcej informacji, zobacz sekcję "Aby odwołać się do silnie nazwanego typu" poniżej.
+2. The `type` attribute gives the name of the listener type. This type must inherit from the <xref:System.Diagnostics.TraceListener> class. Use the strongly named type name to ensure that the right type is used. For more information, see the "To reference a strongly named type" section below.
 
-     Niektóre typy, których można użyć, to:
+     Some types that you can use are:
 
-    - Odbiornik <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, który zapisuje dane w dzienniku plików.
+    - A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> listener, which writes to a file log.
 
-    - Odbiornik <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, który zapisuje informacje w dzienniku zdarzeń komputera określonym przez parametr `initializeData`.
+    - A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> listener, which writes information to the computer event log specified by the `initializeData` parameter.
 
-    - @No__t_0 i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> detektory, które zapisują w pliku określonym w parametrze `initializeData`.
+    - The <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> and <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> listeners, which write to the file specified in the `initializeData` parameter.
 
-    - Odbiornik <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, który zapisuje dane w konsoli wiersza polecenia.
+    - A <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> listener, which writes to the command-line console.
 
-     Aby uzyskać informacje o tym, gdzie inne typy odbiorników dzienników zapisują informacje, zapoznaj się z dokumentacją tego typu.
+     For information about where other types of log listeners write information, consult that type's documentation.
 
-3. Gdy aplikacja tworzy obiekt odbiornika log, przekazuje atrybut `initializeData` jako parametr konstruktora. Znaczenie atrybutu `initializeData` zależy od odbiornika śledzenia.
+3. When the application creates the log-listener object, it passes the `initializeData` attribute as the constructor parameter. The meaning of the `initializeData` attribute depends on the trace listener.
 
-4. Po utworzeniu odbiornika dziennika aplikacja ustawia właściwości odbiornika. Te właściwości są definiowane przez inne atrybuty elementu `<add>`. Aby uzyskać więcej informacji na temat właściwości określonego odbiornika, zapoznaj się z dokumentacją typu tego odbiornika.
+4. After creating the log listener, the application sets the listener's properties. These properties are defined by the other attributes in the `<add>` element. For more information on the properties for a particular listener, see the documentation for that listener's type.
 
-### <a name="to-reference-a-strongly-named-type"></a>Aby odwołać się do silnie nazwanego typu
+### <a name="to-reference-a-strongly-named-type"></a>To reference a strongly named type
 
-1. Aby upewnić się, że odpowiedni typ jest używany dla odbiornika dzienników, upewnij się, że używasz w pełni kwalifikowanej nazwy typu i silnie nazwanego zestawu. Składnia silnie nazwanego typu jest następująca:
+1. To ensure that the right type is used for your log listener, make sure to use the fully qualified type name and the strongly named assembly name. The syntax of a strongly named type is as follows:
 
-     *Nazwa typu*\< >, \<*Nazwa zestawu*>, \<*numer wersji*>, \<*kultur*>, \<*silnej nazwy* 0
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
-2. Ten przykład kodu pokazuje, jak w tym przypadku określić silnie nazwanego typu dla w pełni kwalifikowanego typu — "System. Diagnostics. FileLogTraceListener".
+2. This code example shows how to determine the strongly named type name for a fully qualified type—"System.Diagnostics.FileLogTraceListener" in this case.
 
      [!code-vb[VbVbalrMyApplicationLog#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#15)]
 
-     Jest to dane wyjściowe i mogą być używane do unikatowego odwoływania się do silnie nazwanego typu, tak jak w powyższej procedurze "Dodaj odbiorniki".
+     This is the output, and it can be used to uniquely reference a strongly named type, as in the "To add listeners" procedure above.
 
      `Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a`
 

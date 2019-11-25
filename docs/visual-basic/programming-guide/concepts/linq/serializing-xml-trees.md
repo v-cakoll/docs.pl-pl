@@ -1,28 +1,28 @@
 ---
-title: Serializowanie drzew XML (Visual Basic)
+title: Serializowanie drzew XML
 ms.date: 07/20/2015
 ms.assetid: 2c340695-a726-4030-85be-6975d8a149cf
-ms.openlocfilehash: ddcd82a3fe8beea87913227ed0ff86fa3974bd11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b91078ff7f1b0410f97be9bc9ed3601f3ca0733
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786454"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351048"
 ---
-# <a name="serializing-xml-trees-visual-basic"></a>Serializowanie drzew XML (Visual Basic)
-Serializacji drzewa XML oznacza, że Generowanie XML z drzewa XML. Może wykonywać serializację do pliku, aby konkretną implementację <xref:System.IO.TextWriter> klasy, lub na konkretną implementację <xref:System.Xml.XmlWriter>.  
+# <a name="serializing-xml-trees-visual-basic"></a>Serializing XML Trees (Visual Basic)
+Serializing an XML tree means generating XML from the XML tree. You can serialize to a file, to a concrete implementation of the <xref:System.IO.TextWriter> class, or to a concrete implementation of an <xref:System.Xml.XmlWriter>.  
   
- Można kontrolować różne aspekty serializacji. Na przykład można kontrolować, czy zwiększyć wcięcie serializacji XML i można zapisać deklaracji XML.  
+ You can control various aspects of serialization. For example, you can control whether to indent the serialized XML, and whether to write an XML declaration.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Zachowywanie białych znaków podczas serializowania](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Zawiera opis sposobu kontrolowania zachowania biały znak, gdy serializowanie drzew XML.|  
-|[Serializowanie przy użyciu deklaracji XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|W tym artykule opisano, jak do serializacji drzewa XML, który zawiera deklaracji XML.|  
-|[Serializowanie do plików, elementów TextWriter i elementów XmlWriter](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|W tym artykule opisano jak do serializacji dokument <xref:System.IO.File>, <xref:System.IO.TextWriter>, lub <xref:System.Xml.XmlWriter>.|  
-|[Serializowanie do elementu XmlReader (wywoływanie XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|W tym artykule opisano sposób tworzenia <xref:System.Xml.XmlReader> inny moduł odczytać zawartość drzewa XML, który umożliwia.|  
+|[Zachowywanie białych znaków podczas serializowania](../../../../visual-basic/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)|Describes how to control white space behavior when you serialize XML trees.|  
+|[Serializing with an XML Declaration (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-with-an-xml-declaration.md)|Describes how to serialize an XML tree that includes an XML declaration.|  
+|[Serializowanie do plików, elementów TextWriter i elementów XmlWriter](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-files-textwriters-and-xmlwriters.md)|Describes how to serialize a document to a <xref:System.IO.File>, a <xref:System.IO.TextWriter>, or an <xref:System.Xml.XmlWriter>.|  
+|[Serializing to an XmlReader (Invoking XSLT) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-to-an-xmlreader-invoking-xslt.md)|Describes how to create a <xref:System.Xml.XmlReader> that enables another module to read the contents of an XML tree.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

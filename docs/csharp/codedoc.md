@@ -4,12 +4,12 @@ description: Dowiedz się, jak udokumentować kod za pomocą komentarzy dokument
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037652"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140665"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Dokumentowanie kodu za pomocą komentarzy XML
 
@@ -21,16 +21,16 @@ Komentarze dokumentacji XML, podobnie jak wszystkie inne komentarze, są ignorow
 
 Plik XML można wygenerować w czasie kompilacji, wykonując jedną z następujących czynności:
 
-- Jeśli tworzysz aplikację przy użyciu platformy .NET Core z wiersza polecenia, możesz dodać [element DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) do sekcji `<PropertyGroup>` pliku projektu. csproj. Poniższy przykład generuje plik XML w katalogu projektu z tą samą nazwą pliku głównego co zestaw:
+- Jeśli tworzysz aplikację przy użyciu platformy .NET Core z wiersza polecenia, możesz dodać element `GenerateDocumentationFile` do sekcji `<PropertyGroup>` pliku projektu. csproj. Możesz również określić ścieżkę do pliku dokumentacji bezpośrednio przy użyciu [elementu`DocumentationFile`](/visualstudio/msbuild/common-msbuild-project-properties). Poniższy przykład generuje plik XML w katalogu projektu z tą samą nazwą pliku głównego co zestaw:
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   Jest to równoważne z następującymi:
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-   ```
-
-   Można również określić dokładną ścieżkę bezwzględną lub względną i nazwę pliku XML. Poniższy przykład generuje plik XML w tym samym katalogu, w którym znajduje się wersja do debugowania aplikacji:
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Jeśli tworzysz aplikację przy użyciu programu Visual Studio, kliknij prawym przyciskiem myszy projekt i wybierz polecenie **Właściwości**. W oknie dialogowym właściwości wybierz kartę **kompilacja** i sprawdź **plik dokumentacji XML**. Możesz również zmienić lokalizację, w której kompilator zapisuje plik.

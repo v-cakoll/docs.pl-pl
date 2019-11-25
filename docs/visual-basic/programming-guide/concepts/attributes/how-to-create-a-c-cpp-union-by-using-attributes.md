@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: TworzenieC++ Unii C przy użyciu atrybutów (Visual Basic)'
+title: 'How to: Create a C-C++ Union by Using Attributes'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: 6595d6477d9d0838745e19eb2a44d26f6e534c70
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: acb8dc781e2872ae46e5aa058a98b3dd98f3e064
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524272"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349497"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Instrukcje: Tworzenie elementu C/C++ Union przy użyciu atrybutów (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>How to: Create a C/C++ Union by Using Attributes (Visual Basic)
 
-Przy użyciu atrybutów można dostosować sposób, w jaki struktury są ułożone w pamięci. Na przykład można utworzyć element, który jest znany jako Unia w C/C++ przy użyciu atrybutów `StructLayout(LayoutKind.Explicit)` i `FieldOffset`.
+By using attributes you can customize how structs are laid out in memory. For example, you can create what is known as a union in C/C++ by using the `StructLayout(LayoutKind.Explicit)` and `FieldOffset` attributes.
 
 ## <a name="example"></a>Przykład
 
-W tym segmencie kodu wszystkie pola `TestUnion` są uruchamiane w tej samej lokalizacji w pamięci.
+In this code segment, all of the fields of `TestUnion` start at the same location in memory.
 
 ```vb
 ' Add an Imports statement for System.Runtime.InteropServices.
@@ -39,7 +39,7 @@ End Structure
 
 ## <a name="example"></a>Przykład
 
-Poniżej znajduje się kolejny przykład, w którym pola zaczynają się od różnych jawnie ustawionych lokalizacji.
+The following is another example where fields start at different explicitly set locations.
 
 ```vb
 ' Add an Imports statement for System.Runtime.InteropServices.
@@ -67,15 +67,15 @@ Structure TestExplicit
  End Structure
 ```
 
-Pola dwóch liczb całkowitych, `i1` i `i2`, współużytkują te same lokalizacje pamięci co `lg`. Ten rodzaj kontroli nad układem struktury jest przydatny podczas korzystania z wywołania platformy.
+The two integer fields, `i1` and `i2`, share the same memory locations as `lg`. This sort of control over struct layout is useful when using platform invocation.
 
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Przewodnik programowania Visual Basic](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic Programming Guide](../../../../visual-basic/programming-guide/index.md)
 - [Atrybuty](../../../../standard/attributes/index.md)
-- [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Uzyskiwanie dostępu do atrybutów przy użyciu odbicia (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
+- [Attributes (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
+- [Creating Custom Attributes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [Accessing Attributes by Using Reflection (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

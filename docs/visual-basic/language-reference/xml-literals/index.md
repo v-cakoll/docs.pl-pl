@@ -1,5 +1,5 @@
 ---
-title: Literały XML (Visual Basic)
+title: Literały XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declaring XML literals [Visual Basic]
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - XML literals [Visual Basic], reference
 - literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
-ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf70486c1c33013d84f68c9ea9dbc9463a751ad7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649806"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349406"
 ---
 # <a name="xml-literals-visual-basic"></a>Literały XML (Visual Basic)
-Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składnia literał XML umożliwia dołączenie XML bezpośrednio w kodzie.  
+The topics in this section document the syntax of XML literals in Visual Basic. The XML literal syntax enables you to incorporate XML directly in your code.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XElement> obiektów.|  
-|[Literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XDocument> obiektów.|  
-|[Literał CDATA XML](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XCData> obiektów.|  
-|[Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XComment> obiektów.|  
-|[Literał instrukcji przetwarzającej kod XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XProcessingInstruction> obiektów.|  
+|[Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XElement> objects.|  
+|[Literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XDocument> objects.|  
+|[Literał CDATA XML](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XCData> objects.|  
+|[Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XComment> objects.|  
+|[Literał instrukcji przetwarzającej kod XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|Describes the syntax for literals that represent <xref:System.Xml.Linq.XProcessingInstruction> objects.|  
   
 ## <a name="see-also"></a>Zobacz także
 

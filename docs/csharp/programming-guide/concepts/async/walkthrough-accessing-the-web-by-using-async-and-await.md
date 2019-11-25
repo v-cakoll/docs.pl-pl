@@ -2,12 +2,12 @@
 title: 'Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 30677be2299dfa4411263dc5c61093fc0ca0f442
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195651"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281783"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Przewodnik: uzyskiwanie dostępu do sieci Web za pomocą AsyncC#i Await ()
 
@@ -26,9 +26,9 @@ Jeśli nie chcesz samodzielnie kompilować aplikacji, możesz pobrać [próbkę 
 
 1. Uruchom program Visual Studio.
 
-2. Na pasku menu wybierz kolejno pozycje **plik**  > **Nowy**  > **projekt**.
+2. Na pasku menu wybierz **pliku** > **New** > **projektu**.
 
-     Zostanie otwarte okno dialogowe **Nowy projekt** .
+     **Nowy projekt** zostanie otwarte okno dialogowe.
 
 3. W okienku **zainstalowane szablony** wybierz pozycję Wizualizacja C#, a następnie wybierz pozycję **Aplikacja WPF** z listy typów projektów.
 
@@ -254,7 +254,7 @@ Należy zauważyć, że wyświetlanie liczników zajmuje kilka sekund. W tym cza
 
      Wywołanie `webReq.GetResponseAsync` zwraca `Task(Of WebResponse)` lub `Task<WebResponse>`. Następnie do zadania zostanie zastosowany operator await, aby pobrać wartość `WebResponse`.
 
-     Jeśli metoda async działa tak, aby nie zależała od ukończenia zadania, Metoda może kontynuować działanie między tymi dwiema instrukcjami po wywołaniu metody asynchronicznej i przed zastosowaniem operatora `await`. Aby zapoznać się z przykładami, zobacz [How to: równoległe wykonywanie wielu żądań sieci Web zaC#pomocą Async i Await ()](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) i [instrukcje: rozszerzonie procedury asynchronicznej zaC#pomocą metody Task. WhenAll ()](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+     Jeśli metoda async działa tak, aby nie zależała od ukończenia zadania, Metoda może kontynuować działanie między tymi dwiema instrukcjami po wywołaniu metody asynchronicznej i przed zastosowaniem operatora `await`. Aby zapoznać się z przykładami, zobacz [jak wykonywać wiele żądań sieci Web równolegle przy użyciu metodC#Async i Await ()](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) oraz [jak rozłożyć Instruktaż asynchroniczny za pomocąC#metody Task. WhenAll ()](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 3. Ponieważ dodano operator `await` w poprzednim kroku, wystąpi błąd kompilatora. Operatora można używać tylko w metodach, które są oznaczone modyfikatorem [Async](../../../language-reference/keywords/async.md) . Zignoruj błąd podczas powtarzania kroków konwersji, aby zastąpić wywołanie do `CopyTo` z wywołaniem `CopyToAsync`.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Przykład asynchroniczny: uzyskiwanie dostępu doC# przewodnika sieci Web (i Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Przykład asynchroniczny: uzyskiwanie dostępu doC# przewodnika sieci Web (i Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)
 - [Programowanie asynchroniczne z Async i Await (C#)](./index.md)
 - [Asynchroniczne typy zwracane (C#)](./async-return-types.md)
 - [Programowanie asynchroniczne oparte na zadaniach (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)
-- [Instrukcje: Rozszerzonie procedury asynchronicznej za pomocą Task. WhenAll (C#)](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Instrukcje: równoległe żądania sieci Web za pomocą Async i Await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Jak rozłożyć Instruktaż asynchroniczny za pomocą metody Task. WhenAllC#()](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Jak wykonać równolegle wiele żądań sieci Web za pomocą Async i Await (C#)](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

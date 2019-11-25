@@ -2,12 +2,12 @@
 title: Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: bb0989fb8747a5065ce3d7332311cdefba95b80d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425290"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281670"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Narzędzie rejestracji usług przepływu pracy (WFServicesReg.exe)
 Narzędzie rejestracji usług przepływu pracy (WFServicesReg. exe) to autonomiczne narzędzie, które służy do dodawania, usuwania lub naprawiania elementów konfiguracji dla usług Windows Workflow Foundation (WF).  
@@ -19,7 +19,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Narzędzie to można znaleźć w lokalizacji instalacji [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], w%windir%\Microsoft.NET\Framework\v3.5 lub w%windir%\Microsoft.NET\Framework64\v3.5 na maszynach 64-bitowych.  
+ Narzędzie to można znaleźć w lokalizacji instalacji .NET Framework 3,5, w tym%windir%\Microsoft.NET\Framework\v3.5 lub w%windir%\Microsoft.NET\Framework64\v3.5 na maszynach z 64-bitowym.  
   
  W poniższych tabelach opisano opcje, które mogą być używane z narzędziem rejestracji usług przepływu pracy (WFServicesReg. exe).  
   
@@ -34,7 +34,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="registration"></a>Rejestracja  
  Narzędzie sprawdza plik Web. config i rejestruje następujące elementy:  
   
-- zestawy odwołań [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].  
+- Zestawy odwołań .NET Framework 3,5.  
   
 - Dostawca kompilacji dla plików xoml.  
   
@@ -70,7 +70,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
 ## <a name="usage-scenarios"></a>Scenariusze użycia  
   
 ### <a name="installing-iis-after-net-framework-35-is-installed"></a>Instalowanie usług IIS po zainstalowaniu .NET Framework 3,5  
- Na komputerze [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] jest instalowany przed instalacją usług IIS. Ze względu na niedostępność metabazy usług IIS instalacja programu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] zakończona pomyślnie bez instalowania. xoml i. rules.  
+ Na komputerze z systemem [!INCLUDE[ws2003](../../../includes/ws2003-md.md)] .NET Framework 3,5 jest instalowany przed instalacją usług IIS. Ze względu na niedostępność metabazy usług IIS instalacja programu .NET Framework 3,5 kończy się niepowodzeniem bez instalowania. xoml i. rules.  
   
  Po zainstalowaniu usług IIS można użyć narzędzia WFServicesReg. exe z przełącznikiem `/c`, aby zainstalować te konkretne mapy skryptów.  
   
@@ -85,4 +85,4 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
  Aby naprawić usunięte programy obsługi dla określonej witryny sieci Web, należy uruchomić polecenie "WFServicesReg. exe/r", aby usunąć programy obsługi ze wszystkich witryn sieci Web, a następnie uruchomić polecenie "WFServicesReg. exe/c" w celu utworzenia odpowiednich programów obsługi dla wszystkich witryn sieci Web.  
   
 ### <a name="configuring-handlers-after-switching-iis-mode"></a>Konfigurowanie programów obsługi po przełączeniu trybu usług IIS  
- Gdy usługi IIS są w trybie konfiguracji udostępnionej i zainstalowano [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], metabaza usług IIS jest konfigurowana w lokalizacji udostępnionej. W przypadku przełączenia usług IIS do trybu konfiguracji nieudostępnionej, lokalna metabaza nie będzie zawierać wymaganych programów obsługi. Aby prawidłowo skonfigurować lokalną metabazę, możesz zaimportować udostępnioną metabazę do lokalnego lub uruchomić polecenie "WFServicesReg. exe/c", które konfiguruje lokalną metabazę.
+ Gdy usługi IIS są w trybie konfiguracji udostępnionej i zainstalowano .NET Framework 3,5, metabaza usług IIS jest konfigurowana w lokalizacji udostępnionej. W przypadku przełączenia usług IIS do trybu konfiguracji nieudostępnionej, lokalna metabaza nie będzie zawierać wymaganych programów obsługi. Aby prawidłowo skonfigurować lokalną metabazę, możesz zaimportować udostępnioną metabazę do lokalnego lub uruchomić polecenie "WFServicesReg. exe/c", które konfiguruje lokalną metabazę.

@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Debuguj puste zestawy wyników zapytania (C#)'
+title: Jak debugować puste zestawy wyników zapytania (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 12d2132f1f088050fdd109d067069870b82f2661
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 2716f7c525ac6bee8d2fb374e4ecc4c975d852a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205315"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141293"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>Instrukcje: Debuguj puste zestawy wyników zapytania (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>Jak debugować puste zestawy wyników zapytania (C#)
 Jednym z najczęstszych problemów związanych z kwerendą drzewa XML jest to, że jeśli drzewo XML ma domyślną przestrzeń nazw, deweloper czasami zapisuje zapytanie tak, jakby kod XML nie był w przestrzeni nazw.  
   
  Pierwszy zestaw przykładów w tym temacie przedstawia typowy sposób ładowania kodu XML w domyślnej przestrzeni nazw i jest on nieprawidłowo przeszukiwany.  
@@ -50,7 +50,7 @@ End of result set
 ## <a name="example"></a>Przykład  
  Ten przykład pokazuje tworzenie kodu XML w przestrzeni nazw oraz zakodowane prawidłowo zapytanie.  
   
- Rozwiązaniem jest zadeklarowanie i zainicjowanie <xref:System.Xml.Linq.XNamespace> obiektu oraz użycie go podczas określania <xref:System.Xml.Linq.XName> obiektów. W tym przypadku argument <xref:System.Xml.Linq.XContainer.Elements%2A> metody <xref:System.Xml.Linq.XName> jest obiektem.  
+ Rozwiązaniem jest Zadeklaruj i zainicjuj obiekt <xref:System.Xml.Linq.XNamespace> i użyj go podczas określania obiektów <xref:System.Xml.Linq.XName>. W tym przypadku argument metody <xref:System.Xml.Linq.XContainer.Elements%2A> jest obiektem <xref:System.Xml.Linq.XName>.  
   
 ```csharp  
 XElement root = XElement.Parse(  

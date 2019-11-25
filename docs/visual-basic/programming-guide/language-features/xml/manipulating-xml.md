@@ -1,49 +1,49 @@
 ---
-title: Manipulowanie XML w Visual Basic
+title: Manipulowanie XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ to XML [Visual Basic], manipulating XML
 - Visual Basic code, XML
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
-ms.openlocfilehash: 7ed045b79460b3f1b3178d6bc85de9358d61f116
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2565f43c1014bf0fa9fab1618fedfd1bd6bdb7ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780531"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330442"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Manipulowanie XML w Visual Basic
-Możesz użyć *literałów XML* załadować XML z zewnętrznego źródła, takich jak ciąg, pliku lub strumienia. Następnie można użyć [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do manipulowania XML i użyć [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] kwerendy XML.  
+You can use *XML literals* to load XML from an external source such as a string, file, or stream. You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Ładowanie kodu XML z pliku, ciągu lub Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
- Pokazuje, jak załadować XML <xref:System.Xml.Linq.XDocument> lub <xref:System.Xml.Linq.XElement> obiektu z pliku tekstowego, ciągu lub strumienia.  
+ [Instrukcje: ładowanie kodu XML z pliku, ciągu lub strumienia](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)  
+ Demonstrates how to load XML into an <xref:System.Xml.Linq.XDocument> or <xref:System.Xml.Linq.XElement> object from a text file, string, or stream.  
   
- [Instrukcje: Przekształcanie XML za pomocą LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
- Pokazuje, jak przekształcić zawartość <xref:System.Xml.Linq.XDocument> obiektu do nowego dokumentu XML.  
+ [Instrukcje: przekształcanie kodu XML za pomocą LINQ](../../../../visual-basic/programming-guide/language-features/xml/how-to-transform-xml-by-using-linq.md)  
+ Demonstrates how to transform the contents of an <xref:System.Xml.Linq.XDocument> object into a new XML document.  
   
- [Instrukcje: Modyfikowanie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
- Przedstawia sposób modyfikowania elementów, atrybutów i wartości w literał XML.  
+ [Instrukcje: modyfikowanie literałów XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-modify-xml-literals.md)  
+ Demonstrates how to modify the elements, attributes, and values in an XML literal.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Właściwości osi XML](../../../../visual-basic/language-reference/xml-axis/index.md)  
- Zawiera łącza do sekcje, w których opisano różne właściwości dostępu do XML.  
+ Provides links to sections that describe the various XML access properties.  
   
- [Przegląd interfejsu LINQ to XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- Zawiera wprowadzenie do korzystania z [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] w języku Visual Basic.  
+ [Overview of LINQ to XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
+ Provides an introduction to using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
- [Tworzenie XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- Wprowadzenie do korzystania z literałów XML w Visual Basic.  
+ [Creating XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
+ Provides an introduction to using XML literals in Visual Basic.  
   
- [Uzyskiwanie dostępu do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
- Pokazuje, jak dostęp do części — element XML lub dokumentu w języku Visual Basic.  
+ [Accessing XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)  
+ Demonstrates how to access parts of an XML element or document in Visual Basic.  
   
  [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)  
- Zawiera łącza do sekcjach zawierających opis sposobu używania [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] w języku Visual Basic.  
+ Provides links to sections that describe how to use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] in Visual Basic.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

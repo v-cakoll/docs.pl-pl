@@ -1,34 +1,34 @@
 ---
-title: 'Instrukcje: Grupowanie związanych wartości stałych razem (Visual Basic)'
+title: 'Porady: grupowanie związanych wartości stałych'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic], constants
 - constants [Visual Basic], grouping together
 ms.assetid: 09d61da5-c940-4126-a79f-ba93c36653dc
-ms.openlocfilehash: a4f74e48cfdd5c0bc0f745d0f32eb39442f5bd83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 151eefee4f69e1db8ba40f91334da8a051b95732
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906766"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354029"
 ---
-# <a name="how-to-group-related-constant-values-together-visual-basic"></a>Instrukcje: Grupowanie związanych wartości stałych razem (Visual Basic)
-Wyliczenie to najlepszy sposób, aby zgrupować pokrewnych stałych. Utwórz wyliczenie z `Enum` instrukcji w sekcji deklaracji klasy lub modułu. Aby uzyskać więcej informacji, zobacz [jak: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
+# <a name="how-to-group-related-constant-values-together-visual-basic"></a>Porady: grupowanie związanych wartości stałych (Visual Basic)
+An enumeration is the best way to group related constants together. You create an enumeration with the `Enum` statement in the declarations section of a class or a module. For more information, see [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
   
-### <a name="to-group-related-constant-values"></a>Do grupy powiązanych wartości stałych  
+### <a name="to-group-related-constant-values"></a>To group related constant values  
   
-1. Zapis deklarację, że obejmuje poziom dostępu do kodu, `Enum` — słowo kluczowe i prawidłową nazwę. Ten przykład tworzy `Private` wyliczenia, `temperatureValues`.  
+1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name. This example creates the `Private` enumeration, `temperatureValues`.  
   
      [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
-2. Definiowanie stałych w wyliczeniu. Ten przykład tworzy `Public` wyliczenie `temperatureValues` i przypisuje jej wartości.  
+2. Define the constants in the enumeration. This example creates the `Public` enumeration `temperatureValues` and assigns its values.  
   
      [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

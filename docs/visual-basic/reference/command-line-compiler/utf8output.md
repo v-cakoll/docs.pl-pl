@@ -1,20 +1,20 @@
 ---
-title: -utf8output — (Visual Basic)
+title: -utf8output
 ms.date: 07/20/2015
 helpviewer_keywords:
 - -utf8output compiler option [Visual Basic]
 - utf8output compiler option [Visual Basic]
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
-ms.openlocfilehash: adcb518cbe8397549c3ae3b3a8ca9f0ecf9dc38e
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5cdc60888cd872940afc1b03febd879bb6d87c2e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350835"
 ---
-# <a name="-utf8output-visual-basic"></a>-utf8output — (Visual Basic)
-Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.  
+# <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
+Displays compiler output using UTF-8 encoding.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -24,16 +24,16 @@ Wyświetla dane wyjściowe kompilatora przy użyciu kodowania UTF-8.
   
 ## <a name="arguments"></a>Argumenty  
  `+` &#124; `-`  
- Opcjonalny. Wartość domyślna dla tej opcji to `-utf8output-`, co oznacza, że wyjście kompilatora nie używa kodowania UTF-8. Określanie `-utf8output` jest taka sama jak w przypadku określenia `-utf8output+`.  
+ Opcjonalny. The default for this option is `-utf8output-`, which means compiler output does not use UTF-8 encoding. Specifying `-utf8output` is the same as specifying `-utf8output+`.  
   
 ## <a name="remarks"></a>Uwagi  
- W niektórych konfiguracjach międzynarodowych dane wyjściowe kompilatora nie mogą być prawidłowo wyświetlane w konsoli programu. W takich sytuacjach należy używać `-utf8output` i przekierować dane wyjściowe kompilatora do pliku.  
+ In some international configurations, compiler output cannot be displayed correctly in the console. In such situations, use `-utf8output` and redirect compiler output to a file.  
   
 > [!NOTE]
-> Opcja `-utf8output` nie jest dostępna w środowisku deweloperskim programu Visual Studio. jest on dostępny tylko w przypadku kompilowania z wiersza polecenia.  
+> The `-utf8output` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.  
   
 ## <a name="example"></a>Przykład  
- Poniższy kod kompiluje `In.vb` i kieruje kompilator do wyświetlenia danych wyjściowych przy użyciu kodowania UTF-8.  
+ The following code compiles `In.vb` and directs the compiler to display output using UTF-8 encoding.  
   
 ```console  
 vbc -utf8output in.vb  
@@ -41,5 +41,5 @@ vbc -utf8output in.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

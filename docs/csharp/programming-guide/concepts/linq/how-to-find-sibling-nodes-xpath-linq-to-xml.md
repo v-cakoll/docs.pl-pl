@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Znajdź węzły równorzędne (XPath-LINQ to XML)C#()'
+title: Jak znaleźć węzły równorzędne (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 6c7509ea0667bb84d62ee804f4d232d74fa7f6e0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253612"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141014"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź węzły równorzędne (XPath-LINQ to XML)C#()
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>Jak znaleźć węzły równorzędne (XPath-LINQ to XML) (C#)
 Możesz chcieć znaleźć wszystkie elementy równorzędne węzła o określonej nazwie. Utworzona kolekcja może zawierać węzeł kontekstu, jeśli węzeł kontekstu ma również określoną nazwę.  
   
  Wyrażenie XPath:  
@@ -17,9 +17,9 @@ Możesz chcieć znaleźć wszystkie elementy równorzędne węzła o określonej
  `../Book`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład najpierw odnajduje `Book` element, a następnie znajduje wszystkie elementy równorzędne `Book`o nazwie. Kolekcja wyników zawiera węzeł kontekstu.  
+ Ten przykład najpierw odnajduje `Book` element, a następnie znajduje wszystkie elementy równorzędne o nazwie `Book`. Kolekcja wyników zawiera węzeł kontekstu.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Książki (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Ten przykład używa następującego dokumentu XML: [przykładowy plik XML: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

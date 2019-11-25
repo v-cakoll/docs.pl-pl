@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (C#)'
+title: Jak zliczyć wystąpienia wyrazu w ciągu (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f8e6f546-7c14-4aa1-8a75-e8d09f3b8ccd
-ms.openlocfilehash: 12118c6322df0cfb93cb3d4a4dbbc02d68a0c776
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 0411b0c17b57a49e031f078412b9e45692c619fe
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593917"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141340"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Instrukcje: Liczenie wystąpień wyrazu w ciągu (LINQ) (C#)
-Ten przykład pokazuje, jak używać zapytania LINQ do zliczania wystąpień określonego wyrazu w ciągu. Należy pamiętać, że aby wykonać licznik, najpierw <xref:System.String.Split%2A> wywoływana jest metoda, aby utworzyć tablicę wyrazów. <xref:System.String.Split%2A> Metoda jest kosztem wydajności. Jeśli jedyną operacją na ciągu jest Liczenie wyrazów, należy rozważyć użycie <xref:System.Text.RegularExpressions.Regex.Matches%2A> metod lub. <xref:System.String.IndexOf%2A> Jeśli jednak wydajność nie jest problemem krytycznym lub zostało już podzielone zdanie w celu wykonywania innych typów zapytań na nim, warto użyć LINQ do zliczania wyrazów lub fraz.  
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-c"></a>Jak zliczyć wystąpienia wyrazu w ciągu (LINQ) (C#)
+Ten przykład pokazuje, jak używać zapytania LINQ do zliczania wystąpień określonego wyrazu w ciągu. Należy pamiętać, że aby wykonać licznik, najpierw wywoływana jest metoda <xref:System.String.Split%2A>, aby utworzyć tablicę wyrazów. Metoda <xref:System.String.Split%2A> ma koszt wydajności. Jeśli jedyną operacją na ciągu jest Liczenie wyrazów, należy rozważyć użycie metod <xref:System.Text.RegularExpressions.Regex.Matches%2A> lub <xref:System.String.IndexOf%2A>. Jeśli jednak wydajność nie jest problemem krytycznym lub zostało już podzielone zdanie w celu wykonywania innych typów zapytań na nim, warto użyć LINQ do zliczania wyrazów lub fraz.  
   
 ## <a name="example"></a>Przykład  
   
@@ -55,7 +55,7 @@ class CountWords
 ```  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 

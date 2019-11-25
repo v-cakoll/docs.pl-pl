@@ -1,300 +1,273 @@
 ---
-title: Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
-description: Dowiedz się, jak działa moduł zbierający elementy bezużyteczne i jak można go skonfigurować pod kątem optymalnej wydajności.
-ms.date: 03/08/2018
+title: Fundamentals of garbage collection
+description: Learn how the garbage collector works and how it can be configured for optimum performance.
+ms.date: 11/15/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
-- garbage collection, background garbage collection
-- garbage collection, concurrent garbage collection
-- garbage collection, server garbage collection
-- garbage collection, workstation garbage collection
+- garbage collection, background
+- garbage collection, concurrent
+- garbage collection, server
+- garbage collection, workstation
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
-ms.openlocfilehash: 840fe972192c6beb5d84017c288455f1cdf52177
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ea8aef03d2f5837f35ecb31209e57853c0c8257b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121232"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330416"
 ---
-# <a name="fundamentals-of-garbage-collection"></a>Podstawowe informacje dotyczące wyrzucania elementów bezużytecznych
+# <a name="fundamentals-of-garbage-collection"></a>Fundamentals of garbage collection
 
-<a name="top"></a>W środowisku uruchomieniowym języka wspólnego (CLR) Moduł wyrzucania elementów bezużytecznych służy jako automatyczne Menedżera pamięci. Zapewnia następujące korzyści:
+In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. It provides the following benefits:
 
-- Umożliwia tworzenie aplikacji bez konieczności ręcznego zwalniania pamięci dla utworzonych obiektów.
+- Enables you to develop your application without having to manually free memory.
 
-- Efektywnie przydziela obiekty na stosie zarządzanym.
+- Allocates objects on the managed heap efficiently.
 
-- Reoświadczenia obiektów, które nie są już używane, czyści ich pamięć i utrzymuje dostępną pamięć do przyszłych alokacji. Obiekty zarządzane automatycznie pobierają czystą zawartość do początku, więc ich konstruktory nie muszą inicjować każdego pola danych.
+- Reclaims objects that are no longer being used, clears their memory, and keeps the memory available for future allocations. Managed objects automatically get clean content to start with, so their constructors do not have to initialize every data field.
 
-- Zapewnia bezpieczeństwo pamięci, upewniając się, że obiekt nie może użyć zawartości innego obiektu.
+- Provides memory safety by making sure that an object cannot use the content of another object.
 
- W tym temacie opisano podstawowe pojęcia dotyczące wyrzucania elementów bezużytecznych.
+This article describes the core concepts of garbage collection.
 
-<a name="fundamentals_of_memory"></a>
+## <a name="fundamentals-of-memory"></a>Fundamentals of memory
 
-## <a name="fundamentals-of-memory"></a>Podstawowe informacje o pamięci
+The following list summarizes important CLR memory concepts.
 
-Poniższa lista zawiera podsumowanie ważnych pojęć dotyczących pamięci środowiska CLR.
+- Each process has its own, separate virtual address space. All processes on the same computer share the same physical memory and the page file, if there is one.
 
-- Każdy proces ma własną, oddzielną wirtualną przestrzeń adresową. Wszystkie procesy na tym samym komputerze współużytkują tę samą pamięć fizyczną i udostępniają plik stronicowania, jeśli taki istnieje.
+- By default, on 32-bit computers, each process has a 2-GB user-mode virtual address space.
 
-- Domyślnie na komputerach 32-bitowych każdy proces ma 2 GB wirtualnej przestrzeni adresowej w trybie użytkownika.
+- As an application developer, you work only with virtual address space and never manipulate physical memory directly. The garbage collector allocates and frees virtual memory for you on the managed heap.
 
-- Jako deweloper aplikacji pracujesz tylko z wirtualną przestrzenią adresową i nigdy nie manipulujesz bezpośrednio pamięci fizycznej. Moduł wyrzucania elementów bezużytecznych przydziela i zwalnia pamięć wirtualną na zarządzanym stosie.
+  If you are writing native code, you use Windows functions to work with the virtual address space. These functions allocate and free virtual memory for you on native heaps.
 
-  Jeśli piszesz kod natywny, używasz funkcji Win32 do pracy z wirtualną przestrzenią adresową. Te funkcje przydzielą i zwalniają pamięć wirtualną na stertach natywnych.
+- Virtual memory can be in three states:
 
-- Pamięć wirtualna może mieć trzy stany:
+  - Free. The block of memory has no references to it and is available for allocation.
 
-  - Zwolniony. Blok pamięci nie ma odwołań do niego i jest dostępny do alokacji.
+  - Reserved. The block of memory is available for your use and cannot be used for any other allocation request. However, you cannot store data to this memory block until it is committed.
 
-  - Rezerwacj. Blok pamięci jest dostępny do użycia i nie może być używany w żadnym innym żądaniu alokacji. Nie można jednak przechowywać danych w tym bloku pamięci, dopóki nie zostanie on zatwierdzony.
+  - Committed. The block of memory is assigned to physical storage.
 
-  - Prowadzono. Blok pamięci jest przypisany do magazynu fizycznego.
+- Virtual address space can get fragmented. This means that there are free blocks, also known as holes, in the address space. When a virtual memory allocation is requested, the virtual memory manager has to find a single free block that is large enough to satisfy that allocation request. Even if you have 2 GB of free space, the allocation that requires 2 GB will be unsuccessful unless all of that free space is in a single address block.
 
-- Wirtualne przestrzenie adresowe mogą zostać pofragmentowane. Oznacza to, że w przestrzeni adresowej istnieją wolne bloki, znane także jako otwory. Po zażądaniu alokacji pamięci wirtualnej Menedżer pamięci wirtualnej musi znaleźć pojedynczy bezpłatny blok, który jest wystarczająco duży, aby spełnić to żądanie alokacji. Nawet jeśli masz 2 GB wolnego miejsca, alokacja, która wymaga 2 GB, nie powiedzie się, chyba że wszystkie te wolne miejsca znajdują się w jednym bloku adresów.
+- You can run out of memory if there isn't enough virtual address space to reserve or physical space to commit.
 
-- Można wypróbować za mało pamięci, jeśli zabrakło wirtualnej przestrzeni adresowej do zarezerwowania lub miejsca fizycznego do zatwierdzenia.
+  The page file is used even if physical memory pressure (that is, demand for physical memory) is low. The first time physical memory pressure is high, the operating system must make room in physical memory to store data, and it backs up some of the data that is in physical memory to the page file. That data is not paged until it's needed, so it's possible to encounter paging in situations where the physical memory pressure is low.
 
-Plik stronicowania jest używany nawet w przypadku niskiej ilości pamięci fizycznej (to jest zapotrzebowanie na ilość pamięci fizycznej). Gdy wykorzystanie pamięci fizycznej odbywa się po raz pierwszy, system operacyjny musi zwolnić miejsce w pamięci fizycznej do przechowywania danych, a następnie tworzy kopię zapasową niektórych danych znajdujących się w pamięci fizycznej do pliku stronicowania. Te dane nie są stronicowane, dopóki nie jest to konieczne, więc można napotkać stronicowanie w sytuacjach, gdy wykorzystanie pamięci fizycznej jest bardzo niskie.
+## <a name="conditions-for-a-garbage-collection"></a>Conditions for a garbage collection
 
-[Powrót do początku](#top)
+Garbage collection occurs when one of the following conditions is true:
 
-<a name="conditions_for_a_garbage_collection"></a>
+- The system has low physical memory. This is detected by either the low memory notification from the OS or low memory as indicated by the host.
 
-## <a name="conditions-for-a-garbage-collection"></a>Warunki dla wyrzucania elementów bezużytecznych
+- The memory that is used by allocated objects on the managed heap surpasses an acceptable threshold. This threshold is continuously adjusted as the process runs.
 
-Odzyskiwanie pamięci występuje, gdy spełniony jest jeden z następujących warunków:
+- The <xref:System.GC.Collect%2A?displayProperty=nameWithType> method is called. In almost all cases, you do not have to call this method, because the garbage collector runs continuously. This method is primarily used for unique situations and testing.
 
-- System ma małą ilość pamięci fizycznej. Jest on wykrywany przez powiadomienie o braku pamięci z systemu operacyjnego lub małej ilości pamięci wskazanej przez hosta.
+## <a name="the-managed-heap"></a>The managed heap
 
-- Pamięć używana przez przydzielone obiekty na zarządzanej stercie przekracza akceptowalny próg. Ten próg jest ciągle dostosowywany podczas uruchamiania procesu.
+After the garbage collector is initialized by the CLR, it allocates a segment of memory to store and manage objects. This memory is called the managed heap, as opposed to a native heap in the operating system.
 
-- Metoda <xref:System.GC.Collect%2A?displayProperty=nameWithType> jest wywoływana. W prawie wszystkich przypadkach nie trzeba wywoływać tej metody, ponieważ moduł wyrzucania elementów bezużytecznych działa w sposób ciągły. Ta metoda jest używana głównie do unikatowych sytuacji i testowania.
+There is a managed heap for each managed process. All threads in the process allocate memory for objects on the same heap.
 
-[Powrót do początku](#top)
-
-<a name="the_managed_heap"></a>
-
-## <a name="the-managed-heap"></a>Zarządzane sterty
-
-Po zainicjowaniu modułu wyrzucania elementów bezużytecznych przez środowisko CLR przydziela on segment pamięci do przechowywania obiektów i zarządzania nimi. Ta pamięć jest nazywana stertą zarządzaną, w przeciwieństwie do sterty natywnej w systemie operacyjnym.
-
-Istnieje sterta zarządzana dla każdego procesu zarządzanego. Wszystkie wątki w procesie przydzielają pamięć dla obiektów na tym samym stosie.
-
-W celu zarezerwowania pamięci moduł zbierający elementy bezużyteczne wywołuje funkcję Win32 [Funkcja VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) i rezerwuje jeden segment pamięci w czasie dla aplikacji zarządzanych. Moduł wyrzucania elementów bezużytecznych rezerwuje również segmenty w miarę potrzeby i zwalnia segmenty z powrotem do systemu operacyjnego (po wyczyszczeniu ich z dowolnego obiektu), wywołując funkcję Win32 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) .
+To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) function and reserves one segment of memory at a time for managed applications. The garbage collector also reserves segments, as needed, and releases segments back to the operating system (after clearing them of any objects) by calling the Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) function.
 
 > [!IMPORTANT]
-> Rozmiar segmentów przydzielone przez moduł wyrzucania elementów bezużytecznych jest specyficzny dla implementacji i może ulec zmianie w dowolnym momencie, łącznie z okresowymi aktualizacjami. Aplikacja nigdy nie powinna mieć założeń lub zależeć od określonego rozmiaru segmentu ani nie powinna próbować skonfigurować ilości pamięci dostępnej dla alokacji segmentu.
+> The size of segments allocated by the garbage collector is implementation-specific and is subject to change at any time, including in periodic updates. Your app should never make assumptions about or depend on a particular segment size, nor should it attempt to configure the amount of memory available for segment allocations.
 
-Im mniejsza liczba obiektów przypadających na stosie, tym mniejsza ilość pracy do wykonania przez moduł zbierający elementy bezużyteczne. W przypadku przydzielania obiektów nie należy używać wartości zaokrąglonych, które przekraczają Twoje potrzeby, na przykład przydzielając tablicę 32 bajtów, gdy potrzebne są tylko 15 bajtów.
+The fewer objects allocated on the heap, the less work the garbage collector has to do. When you allocate objects, do not use rounded-up values that exceed your needs, such as allocating an array of 32 bytes when you need only 15 bytes.
 
-Po wyzwoleniu wyrzucania elementów bezużytecznych moduł zbierający elementy bezużyteczne odzyskuje pamięć, która jest zajęta przez obiekty martwe. Proces odzyskiwania kompaktuje obiekty na żywo, dzięki czemu są one przenoszone razem, a wolne miejsce zostaje usunięte, co sprawia, że sterta jest mniejsza. Dzięki temu obiekty, które są przydzielane razem, pozostają razem na zarządzanym stosie, aby zachować ich miejscowość.
+When a garbage collection is triggered, the garbage collector reclaims the memory that is occupied by dead objects. The reclaiming process compacts live objects so that they are moved together, and the dead space is removed, thereby making the heap smaller. This ensures that objects that are allocated together stay together on the managed heap, to preserve their locality.
 
-Nietrwałość (częstotliwość i czas trwania) wyrzucania elementów bezużytecznych to wynik ilości alokacji i ilości pamięci przeprowadzonej w zarządzanym stosie.
+The intrusiveness (frequency and duration) of garbage collections is the result of the volume of allocations and the amount of survived memory on the managed heap.
 
-Sterta może być traktowana jako akumulacja dwóch stert: [sterty dużych obiektów](large-object-heap.md) i sterty małego obiektu.
+The heap can be considered as the accumulation of two heaps: the [large object heap](large-object-heap.md) and the small object heap.
 
-[Sterta dużego obiektu](large-object-heap.md) zawiera bardzo duże obiekty, które są 85 000 bajtów i większych. Obiekty na stosie dużego obiektu są zazwyczaj tablicami. Wystąpienie obiektu wystąpienia jest rzadkim zdarzeniem bardzo duże.
+The [large object heap](large-object-heap.md) contains very large objects that are 85,000 bytes and larger. The objects on the large object heap are usually arrays. It is rare for an instance object to be extremely large.
 
-[Powrót do początku](#top)
+> [!TIP]
+> You can [configure the threshold size](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) for objects to go on the large object heap.
 
-<a name="generations"></a>
+## <a name="generations"></a>Generations
 
-## <a name="generations"></a>Generacje
+The heap is organized into generations so it can handle long-lived and short-lived objects. Garbage collection primarily occurs with the reclamation of short-lived objects that typically occupy only a small part of the heap. There are three generations of objects on the heap:
 
-Stos jest zorganizowany do generacji, aby mógł obsługiwać długotrwałe i krótkotrwałe obiekty. Wyrzucanie elementów bezużytecznych odbywa się głównie z odzyskiwaniem obiektów krótkoterminowych, które zwykle zajmują tylko małą część sterty. Na stercie znajdują się trzy generacje obiektów:
+- **Generation 0**. This is the youngest generation and contains short-lived objects. An example of a short-lived object is a temporary variable. Garbage collection occurs most frequently in this generation.
 
-- **Generacja 0**. Jest to najmłodsze generowanie i zawiera obiekty krótkotrwałe. Przykładem obiektu krótkotrwałego jest zmienna tymczasowa. Wyrzucanie elementów bezużytecznych występuje najczęściej w tej generacji.
+  Newly allocated objects form a new generation of objects and are implicitly generation 0 collections. However, if they are large objects, they go on the large object heap in a generation 2 collection.
 
-  Nowo przydzielono obiekty tworzą nową generację obiektów i wyrzucają niejawnie kolekcje 0, chyba że są to duże obiekty, w takim przypadku przechodzą na stertę dużego obiektu w kolekcji generacji 2.
+  Most objects are reclaimed for garbage collection in generation 0 and do not survive to the next generation.
 
-  Większość obiektów jest odzyskiwana do wyrzucania elementów bezużytecznych w generacji 0 i nie przechodzenia do nowej generacji.
+- **Generation 1**. This generation contains short-lived objects and serves as a buffer between short-lived objects and long-lived objects.
 
-- **Generacja 1**. Ta generacja zawiera obiekty krótkoterminowe i służy jako bufor między obiektami krótko-i długotrwałymi.
+- **Generation 2**. This generation contains long-lived objects. An example of a long-lived object is an object in a server application that contains static data that's live for the duration of the process.
 
-- **Generacja 2**. Ta generacja zawiera obiekty długotrwałe. Przykładem obiektu o długim czasie istnienia jest obiekt w aplikacji serwera, który zawiera dane statyczne na żywo na czas trwania procesu.
+Garbage collections occur on specific generations as conditions warrant. Collecting a generation means collecting objects in that generation and all its younger generations. A generation 2 garbage collection is also known as a full garbage collection, because it reclaims all objects in all generations (that is, all objects in the managed heap).
 
-Wyrzucanie elementów bezużytecznych odbywa się w określonych generacjach, gdy jest to warunki Zbieranie generacji oznacza gromadzenie obiektów w tej generacji i wszystkich jej młodszych generacjach. Wyrzucanie elementów bezużytecznych generacji 2 jest również znane jako pełne wyrzucanie elementów bezużytecznych, ponieważ przejmuje wszystkie obiekty we wszystkich generacjach (czyli wszystkie obiekty w stercie zarządzanym).
+### <a name="survival-and-promotions"></a>Survival and promotions
 
-### <a name="survival-and-promotions"></a>Przeżycia i promocja
+Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation. Objects that survive a generation 0 garbage collection are promoted to generation 1; objects that survive a generation 1 garbage collection are promoted to generation 2; and objects that survive a generation 2 garbage collection remain in generation 2.
 
-Obiekty, które nie są odzyskiwane w wyrzucaniu elementów bezużytecznych, są znane jako osoby do wygenerowania i są promowane do następnej generacji. Obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 0, zostały podwyższone do generacji 1; obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 1, są podwyższane do generacji 2; i obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 2, pozostają w generacji 2.
+When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
 
-Gdy moduł wyrzucania elementów bezużytecznych wykryje, że stopień przeżycia jest wysoki w generacji, zwiększa próg alokacji dla tej generacji, więc Następna kolekcja pobiera znaczny rozmiar odzyskiwanej pamięci. Środowisko CLR ciągle równoważy dwa priorytety: nie pozwala to na zbyt duże działanie zestawu roboczego przez opóźnione wyrzucanie elementów bezużytecznych i niezezwalanie na wyrzucanie elementów bezużytecznych.
+### <a name="ephemeral-generations-and-segments"></a>Ephemeral generations and segments
 
-### <a name="ephemeral-generations-and-segments"></a>Pokoleń tymczasowych i segmentów
+Because objects in generations 0 and 1 are short-lived, these generations are known as the ephemeral generations.
 
-Ponieważ obiekty w generacji 0 i 1 są krótkoterminowe, te generacje są znane jako generacja tymczasowych.
+Ephemeral generations must be allocated in the memory segment that is known as the ephemeral segment. Each new segment acquired by the garbage collector becomes the new ephemeral segment and contains the objects that survived a generation 0 garbage collection. The old ephemeral segment becomes the new generation 2 segment.
 
-Pokoleń tymczasowych należy przydzielić w segmencie pamięci, który jest znany jako segment tymczasowych. Każdy nowy segment uzyskany przez moduł wyrzucania elementów bezużytecznych stał się nowym segmentem tymczasowych i zawiera obiekty, które przeżyły wyrzucanie elementów bezużytecznych generacji 0. Stary segment tymczasowych zostanie segmentem nowej generacji 2.
-
-Rozmiar segmentu tymczasowych różni się w zależności od tego, czy system jest 32-czy 64-bitowy, i na typie modułu wyrzucania elementów bezużytecznych, który jest uruchomiony. Wartości domyślne są pokazane w poniższej tabeli.
+The size of the ephemeral segment varies depending on whether a system is 32-bit or 64-bit, and on the type of garbage collector it is running. Default values are shown in the following table.
 
 ||32-bitowa|64-bitowy|
 |-|-------------|-------------|
-|Stacja robocza GC|16 MB|256 MB|
-|Serwer GC|64 MB|4 GB|
-|Serwer GC z procesorami logicznymi > 4|32 MB|2 GB|
-|Serwer GC z > 8 procesorami logicznymi|16 MB|1 GB|
+|Workstation GC|16 MB|256 MB|
+|Server GC|64 MB|4 GB|
+|Server GC with > 4 logical CPUs|32 MB|2 GB|
+|Server GC with > 8 logical CPUs|16 MB|1 GB|
 
-Segment tymczasowych może obejmować obiekty generacji 2. Obiekty generacji 2 mogą korzystać z wielu segmentów (tyle, ile wymaga proces i czy pamięć zezwala na system).
+The ephemeral segment can include generation 2 objects. Generation 2 objects can use multiple segments (as many as your process requires and memory allows for).
 
-Ilość zwolnionej pamięci z tymczasowego wyrzucania elementów bezużytecznych jest ograniczona do rozmiaru segmentu tymczasowych. Ilość wolnej pamięci jest proporcjonalna do miejsca, które było zajęte przez obiekty martwe.
+The amount of freed memory from an ephemeral garbage collection is limited to the size of the ephemeral segment. The amount of memory that is freed is proportional to the space that was occupied by the dead objects.
 
-[Powrót do początku](#top)
+## <a name="what-happens-during-a-garbage-collection"></a>What happens during a garbage collection
 
-<a name="what_happens_during_a_garbage_collection"></a>
+A garbage collection has the following phases:
 
-## <a name="what-happens-during-a-garbage-collection"></a>Co się dzieje podczas wyrzucania elementów bezużytecznych
+- A marking phase that finds and creates a list of all live objects.
 
-Wyrzucanie elementów bezużytecznych ma następujące fazy:
+- A relocating phase that updates the references to the objects that will be compacted.
 
-- Faza oznaczania, która wyszukuje i tworzy listę wszystkich obiektów na żywo.
+- A compacting phase that reclaims the space occupied by the dead objects and compacts the surviving objects. The compacting phase moves objects that have survived a garbage collection toward the older end of the segment.
 
-- Faza zmiany lokalizacji, która aktualizuje odwołania do obiektów, które zostaną skompaktowane.
+  Because generation 2 collections can occupy multiple segments, objects that are promoted into generation 2 can be moved into an older segment. Both generation 1 and generation 2 survivors can be moved to a different segment, because they are promoted to generation 2.
 
-- Faza kompaktowania, która odzyskuje miejsce zajęte przez obiekty martwe i kompaktuje pozostałe obiekty. Faza kompaktowania przenosi obiekty, które przeżyły wyrzucanie elementów bezużytecznych do starszych końców segmentu.
+  Ordinarily, the large object heap (LOH) is not compacted, because copying large objects imposes a performance penalty. However, in .NET Core and in .NET Framework 4.5.1 and later, you can use the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to compact the large object heap on demand. In addition, the LOH is automatically compacted when a hard limit is set by specifying either:
 
-  Ponieważ kolekcje generacji 2 mogą zajmować wiele segmentów, obiekty, które są promowane do generacji 2 można przenieść do starszego segmentu. Zarówno osoby przestające 1, jak i 2 mogą zostać przeniesione do innego segmentu, ponieważ są one podwyższane do generacji 2.
+  - a memory limit on a container, or
+  - the [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) or [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) run-time configuration options
 
-  Zwykle sterta dużego obiektu nie jest kompaktowa, ponieważ kopiowanie dużych obiektów nakłada spadek wydajności. Jednak rozpoczynając od .NET Framework 4.5.1, można użyć właściwości <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType>, aby skompaktować stertę dużego obiektu na żądanie.
+The garbage collector uses the following information to determine whether objects are live:
 
-Moduł wyrzucania elementów bezużytecznych używa następujących informacji, aby określić, czy obiekty są aktywne:
+- **Stack roots**. Stack variables provided by the just-in-time (JIT) compiler and stack walker. JIT optimizations can lengthen or shorten regions of code within which stack variables are reported to the garbage collector.
 
-- Elementy **Główne stosu**. Zmienne stosu udostępniane przez kompilator just-in-Time (JIT) i Analizator stosu. Należy zauważyć, że optymalizacje JIT mogą wydłużać lub skracać regiony kodu, w których zmienne stosu są zgłaszane do modułu wyrzucania elementów bezużytecznych.
+- **Garbage collection handles**. Handles that point to managed objects and that can be allocated by user code or by the common language runtime.
 
-- **Dojść do wyrzucania elementów bezużytecznych**. Obsługuje obiekty zarządzane, które mogą być przydzielone przez kod użytkownika lub przez środowisko uruchomieniowe języka wspólnego.
+- **Static data**. Static objects in application domains that could be referencing other objects. Each application domain keeps track of its static objects.
 
-- **Dane statyczne**. Obiekty statyczne w domenach aplikacji, które mogą odwoływać się do innych obiektów. Każda domena aplikacji śledzi swoje obiekty statyczne.
+Before a garbage collection starts, all managed threads are suspended except for the thread that triggered the garbage collection.
 
-Przed uruchomieniem odzyskiwania pamięci wszystkie zarządzane wątki są zawieszane z wyjątkiem wątku, który wyzwolił wyrzucanie elementów bezużytecznych.
+The following illustration shows a thread that triggers a garbage collection and causes the other threads to be suspended.
 
-Na poniższej ilustracji przedstawiono wątek wyzwalający wyrzucanie elementów bezużytecznych i powoduje zawieszenie innych wątków.
+![When a thread triggers a Garbage Collection](./media/gc-triggered.png)
 
-![Gdy wątek wyzwala odzyskiwanie pamięci](../../../docs/standard/garbage-collection/media/gc-triggered.png "Gdy wątek wyzwala odzyskiwanie pamięci")
+## <a name="manipulate-unmanaged-resources"></a>Manipulate unmanaged resources
 
-[Powrót do początku](#top)
+If managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because the garbage collector only tracks memory on the managed heap.
 
-<a name="manipulating_unmanaged_resources"></a>
+Users of the managed object may not dispose the native resources used by the object. To perform the cleanup, you can make the managed object finalizable. Finalization consists of cleanup actions that execute when the object is no longer in use. When the managed object dies, it performs cleanup actions that are specified in its finalizer method.
 
-## <a name="manipulating-unmanaged-resources"></a>Manipulowanie niezarządzanymi zasobami
+When a finalizable object is discovered to be dead, its finalizer is put in a queue so that its cleanup actions are executed, but the object itself is promoted to the next generation. Therefore, you have to wait until the next garbage collection that occurs on that generation (which is not necessarily the next garbage collection) to determine whether the object has been reclaimed.
 
-Jeśli obiekty zarządzane odwołują się do niezarządzanych obiektów przy użyciu natywnych uchwytów plików, należy jawnie zwolnić obiekty niezarządzane, ponieważ moduł wyrzucania elementów bezużytecznych śledzi pamięć tylko na stercie zarządzanym.
+For more information about finalization, see <xref:System.Object.Finalize?displayProperty=nameWithType>.
 
-Użytkownicy obiektu zarządzanego nie mogą zlikwidować zasobów natywnych używanych przez obiekt. Aby przeprowadzić oczyszczanie, można sprawić, aby obiekt zarządzany został sfinalizowany. Finalizowanie składa się z akcji oczyszczania, które są wykonywane, gdy obiekt nie jest już używany. Gdy zarządzany obiekt jest realizowany, wykonuje akcje oczyszczania, które są określone w jego metodzie finalizatora.
+## <a name="workstation-and-server-garbage-collection"></a>Workstation and server garbage collection
 
-Gdy odnaleziony obiekt jest niemartwy, jego finalizator jest umieszczany w kolejce, aby zostały wykonane akcje oczyszczania, ale sam obiekt zostanie podwyższony do nowej generacji. W związku z tym należy poczekać na następne wyrzucanie elementów bezużytecznych w tej generacji (co nie musi być następną kolekcją elementów bezużytecznych), aby określić, czy obiekt został odrzucony.
+The garbage collector is self-tuning and can work in a wide variety of scenarios. You can use a [configuration file setting](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) to set the type of garbage collection based on the characteristics of the workload. The CLR provides the following types of garbage collection:
 
-[Powrót do początku](#top)
+- Workstation garbage collection (GC) is designed for client apps. It is the default GC flavor for standalone apps. For hosted apps, for example, those hosted by ASP.NET, the host determines the default GC flavor.
 
-<a name="workstation_and_server_garbage_collection"></a>
+  Workstation garbage collection can be concurrent or non-concurrent. Concurrent garbage collection enables managed threads to continue operations during a garbage collection. [Background garbage collection](#background-workstation-garbage-collection) replaces [concurrent garbage collection](#concurrent-garbage-collection) in .NET Framework 4 and later versions.
 
-## <a name="workstation-and-server-garbage-collection"></a>Stacja robocza i odzyskiwanie pamięci serwera
+- Server garbage collection, which is intended for server applications that need high throughput and scalability.
 
-Moduł wyrzucania elementów bezużytecznych jest samodostrajania i może współpracować w wielu różnych scenariuszach. Możesz użyć ustawienia pliku konfiguracji, aby ustawić typ wyrzucania elementów bezużytecznych na podstawie charakterystyki obciążenia. Środowisko CLR udostępnia następujące typy wyrzucania elementów bezużytecznych:
+  - In .NET Core, server garbage collection can be non-concurrent or background.
 
-- Wyrzucanie elementów bezużytecznych stacji roboczej dla wszystkich stacji roboczych klienta i komputerów autonomicznych. Jest to ustawienie domyślne dla [elementu \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) w schemacie konfiguracji środowiska uruchomieniowego.
+  - In .NET Framework 4.5 and later versions, server garbage collection can be non-concurrent or background (background garbage collection replaces concurrent garbage collection). In .NET Framework 4 and previous versions, server garbage collection is non-concurrent.
 
-  Wyrzucanie elementów bezużytecznych stacji roboczej może być współbieżne lub niewspółbieżne. Współbieżne wyrzucanie elementów bezużytecznych umożliwia zarządzanym wątkom kontynuowanie operacji podczas odzyskiwania pamięci.
+The following illustration shows the dedicated threads that perform the garbage collection on a server:
 
-  Począwszy od .NET Framework 4, wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne odzyskiwanie pamięci.
+![Server Garbage Collection Threads](./media/gc-server.png)
 
-- Odzyskiwanie pamięci serwera, które jest przeznaczone dla aplikacji serwerowych, które potrzebują dużej przepływności i skalowalności. Zbieranie elementów bezużytecznych serwera może być niewspółbieżne lub niezgodne.
+### <a name="compare-workstation-and-server-garbage-collection"></a>Compare workstation and server garbage collection
 
-Na poniższej ilustracji przedstawiono dedykowane wątki, które wykonują wyrzucanie elementów bezużytecznych na serwerze.
+The following are threading and performance considerations for workstation garbage collection:
 
-![Wątki odzyskiwania pamięci serwera](../../../docs/standard/garbage-collection/media/gc-server.png "Wątki odzyskiwania pamięci serwera")
+- The collection occurs on the user thread that triggered the garbage collection and remains at the same priority. Because user threads typically run at normal priority, the garbage collector (which runs on a normal priority thread) must compete with other threads for CPU time. (Threads that run native code are not suspended on either server or workstation garbage collection.)
 
-### <a name="configuring-garbage-collection"></a>Konfigurowanie wyrzucania elementów bezużytecznych
+- Workstation garbage collection is always used on a computer that has only one processor, regardless of the [configuration setting](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
-Można użyć [elementu \<gcServer >](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) schematu konfiguracji środowiska uruchomieniowego, aby określić typ wyrzucania elementów bezużytecznych, które ma wykonywać środowisko CLR. Gdy atrybut `enabled` tego elementu ma ustawioną wartość `false` (wartość domyślna), środowisko CLR wykonuje wyrzucanie elementów bezużytecznych stacji roboczej. Po ustawieniu atrybutu `enabled` na `true` środowisko CLR wykonuje wyrzucanie elementów bezużytecznych serwera.
+The following are threading and performance considerations for server garbage collection:
 
-Współbieżne wyrzucanie elementów bezużytecznych jest określone za pomocą [elementu \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) schemacie konfiguracji środowiska uruchomieniowego. Ustawieniem domyślnym jest `enabled`. To ustawienie określa współbieżne i wyrzucanie elementów bezużytecznych w tle.
+- The collection occurs on multiple dedicated threads that are running at `THREAD_PRIORITY_HIGHEST` priority level.
 
-Można również określić wyrzucanie elementów bezużytecznych serwera za pomocą niezarządzanych interfejsów hostingu. Należy pamiętać, że ASP.NET i SQL Server Włącz automatyczne odzyskiwanie serwera, jeśli aplikacja jest hostowana w jednym z tych środowisk.
+- A heap and a dedicated thread to perform garbage collection are provided for each CPU, and the heaps are collected at the same time. Each heap contains a small object heap and a large object heap, and all heaps can be accessed by user code. Objects on different heaps can refer to each other.
 
-### <a name="comparing-workstation-and-server-garbage-collection"></a>Porównywanie wyrzucania elementów roboczych stacji roboczej i serwera
+- Because multiple garbage collection threads work together, server garbage collection is faster than workstation garbage collection on the same size heap.
 
-Poniżej przedstawiono zagadnienia dotyczące wątkowości i wydajności dotyczące wyrzucania elementów bezużytecznych stacji roboczej:
+- Server garbage collection often has larger size segments. However, this is only a generalization: segment size is implementation-specific and is subject to change. Don't make assumptions about the size of segments allocated by the garbage collector when tuning your app.
 
-- Kolekcja odbywa się w wątku użytkownika, który wyzwolił wyrzucanie elementów bezużytecznych i pozostaje na tym samym priorytecie. Ponieważ wątki użytkownika zwykle działają przy normalnym priorytecie, Moduł wyrzucania elementów bezużytecznych (który jest uruchamiany w wątku o normalnym priorytecie) musi konkurować z innymi wątkami czasu procesora CPU.
+- Server garbage collection can be resource-intensive. For example, imagine that there are 12 processes that use server GC running on a computer that has 4 processors. If all the processes happen to collect garbage at the same time, they would interfere with each other, as there would be 12 threads scheduled on the same processor. If the processes are active, it's not a good idea to have them all use server GC.
 
-  Wątki, na których działa kod natywny, nie są wstrzymane.
+If you're running hundreds of instances of an application, consider using workstation garbage collection with concurrent garbage collection disabled. This will result in less context switching, which can improve performance.
 
-- Wyrzucanie elementów bezużytecznych stacji roboczej jest zawsze używane na komputerze, który ma tylko jeden procesor, niezależnie od ustawienia [> \<gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) . W przypadku określenia wyrzucania elementów bezużytecznych serwera środowisko CLR używa wyrzucania elementów bezużytecznych stacji roboczej z wyłączonym
+## <a name="background-workstation-garbage-collection"></a>Background workstation garbage collection
 
-Poniżej przedstawiono zagadnienia związane z wątkami i wydajnością dla wyrzucania elementów bezużytecznych serwera:
+In background workstation garbage collection, ephemeral generations (0 and 1) are collected as needed while the collection of generation 2 is in progress. Background workstation garbage collection is performed on a dedicated thread and applies only to generation 2 collections.
 
-- Kolekcja odbywa się na wielu dedykowanych wątkach, które są uruchomione na poziomie priorytetu `THREAD_PRIORITY_HIGHEST`.
-
-- Sterta i dedykowany wątek służący do wykonywania wyrzucania elementów bezużytecznych są udostępniane dla każdego procesora, a sterty są zbierane w tym samym czasie. Każda sterta zawiera niewielką stertę obiektu i stertę dużego obiektu, a wszystkie sterty są dostępne przez kod użytkownika. Obiekty na różnych stertach mogą odwoływać się do siebie nawzajem.
-
-- Ponieważ wielokrotne wątki odzyskiwania pamięci współpracują ze sobą, wyrzucanie elementów bezużytecznych serwera jest szybsze niż wyrzucanie elementów bezużytecznych stacji roboczej.
-
-- Wyrzucanie elementów bezużytecznych serwera często ma większe rozmiary segmentów. Należy jednak pamiętać, że jest to tylko Generalizacja: rozmiar segmentu jest specyficzny dla implementacji i może ulec zmianie. Nie należy wprowadzać żadnych założeń dotyczących rozmiaru segmentów przydzielonej przez moduł zbierający elementy bezużyteczne podczas dostrajania aplikacji.
-
-- Zbieranie elementów bezużytecznych serwera może być czasochłonne. Na przykład jeśli masz 12 procesów uruchomionych na komputerze, który ma 4 procesory, będzie 48 dedykowane wątki wyrzucania elementów bezużytecznych, jeśli wszystkie używają wyrzucania elementów bezużytecznych serwera. W przypadku dużej ilości pamięci, jeśli wszystkie procesy uruchamiają wyrzucanie elementów bezużytecznych, Moduł wyrzucania elementów bezużytecznych będzie miał 48 wątków do zaplanowania.
-
-Jeśli używasz setek wystąpień aplikacji, rozważ użycie wyrzucania elementów bezużytecznych stacji roboczej z wyłączonym współbieżnym wyrzucaniem elementów bezużytecznych. Spowoduje to przełączenie do mniej kontekstu, co może poprawić wydajność.
-
-[Powrót do początku](#top)
-
-<a name="concurrent_garbage_collection"></a>
-
-## <a name="concurrent-garbage-collection"></a>Jednoczesne wyrzucanie elementów bezużytecznych
-
-W systemie stacja robocza lub wyrzucanie elementów bezużytecznych serwera można włączyć współbieżne wyrzucanie elementów bezużytecznych, dzięki czemu wątki mogą działać równolegle z dedykowanym wątkiem, który wykonuje wyrzucanie elementów bezużytecznych przez większość czasu trwania kolekcji. Ta opcja ma wpływ tylko na wyrzucanie elementów bezużytecznych w generacji 2; generacji 0 i 1 są zawsze niewspółbieżne, ponieważ kończą się bardzo szybko.
-
-Współbieżne wyrzucanie elementów bezużytecznych umożliwia lepsze reagowanie aplikacji interaktywnych przez zminimalizowanie przerw w kolekcji. Zarządzane wątki mogą nadal uruchamiać większość czasu, gdy wątek współbieżnego odzyskiwania pamięci jest uruchomiony. Powoduje to krótsze pauzy podczas wyrzucania elementów bezużytecznych.
-
-Aby zwiększyć wydajność w przypadku uruchomienia kilku procesów, należy wyłączyć współbieżne wyrzucanie elementów bezużytecznych. Można to zrobić przez dodanie [elementu \<gcConcurrent >](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) do pliku konfiguracji aplikacji i ustawienie wartości jego atrybutu `enabled` do `"false"`.
-
-Współbieżne wyrzucanie elementów bezużytecznych jest wykonywane w ramach dedykowanego wątku. Domyślnie środowisko CLR uruchamia odzyskiwanie pamięci stacji roboczej z włączonym współbieżnym wyrzucaniem elementów bezużytecznych. Dotyczy to komputerów z pojedynczym procesorem i wieloprocesorem.
-
-Możliwość przydzielenia małych obiektów na stercie podczas współbieżnego wyrzucania elementów bezużytecznych jest ograniczona przez obiekty pozostawione w segmencie tymczasowych podczas uruchamiania współbieżnego wyrzucania elementów bezużytecznych. Gdy tylko osiągniesz koniec segmentu, musisz poczekać na zakończenie równoczesnego wyrzucania elementów bezużytecznych, gdy zarządzane wątki, które muszą zapewnić alokacje małych obiektów, będą zawieszone.
-
-Współbieżne wyrzucanie elementów bezużytecznych ma nieco większy zestaw roboczy (w porównaniu z niewspółbieżnym wyrzucaniem elementów bezużytecznych), ponieważ obiekty można przydzielić podczas współbieżnych kolekcji. Może to jednak mieć wpływ na wydajność, ponieważ obiekty przydzielone stają się częścią zestawu roboczego. Zasadniczo współbieżne wyrzucanie elementów bezużytecznych wymienia kilka procesorów i pamięci w celu skrócenia czasu wstrzymania.
-
-Na poniższej ilustracji przedstawiono współbieżne wyrzucanie elementów bezużytecznych wykonywane w osobnym dedykowanym wątku.
-
-![Współbieżne wątki odzyskiwania pamięci](../../../docs/standard/garbage-collection/media/gc-concurrent.png "Współbieżne wątki odzyskiwania pamięci")
-
-[Powrót do początku](#top)
-
-<a name="background_garbage_collection"></a>
-
-## <a name="background-workstation-garbage-collection"></a>Wyrzucanie elementów bezużytecznych stacji roboczej
-
-Wyrzucanie elementów bezużytecznych w tle zastępuje współbieżne wyrzucanie elementów bezużytecznych stacji roboczej, rozpoczynając od .NET Framework 4 i zastępuje współbieżne wyrzucanie elementów bez4,5 .NET Framework użytecznych serwera  W wyrzucaniu elementów bezużytecznych w tle generacje tymczasowe (0 i 1) są zbierane zgodnie z wymaganiami, gdy trwa zbieranie danych generacji 2. Jest wykonywane w ramach dedykowanego wątku i ma zastosowanie tylko do kolekcji generacji 2. Automatyczne wyrzucanie elementów bezużytecznych w tle jest domyślnie włączone i można je włączyć lub wyłączyć za pomocą ustawienia konfiguracji [> \<gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) w .NET Framework aplikacjach. 
+Background garbage collection is enabled by default and can be enabled or disabled with the [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration setting in .NET Framework apps or the [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) setting in .NET Core apps.
 
 > [!NOTE]
-> Wyrzucanie elementów bezużytecznych w tle jest dostępne tylko w .NET Framework 4 i nowszych wersjach. W .NET Framework 4 jest obsługiwana tylko w przypadku wyrzucania elementów bezużytecznych stacji roboczej. Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych w tle jest dostępne zarówno dla stacji roboczej, jak i serwera.
+> Background garbage collection replaces [concurrent garbage collection](#concurrent-garbage-collection) and is available in .NET Framework 4 and later versions. In .NET Framework 4, it's supported only for workstation garbage collection. Starting with .NET Framework 4.5, background garbage collection is available for both workstation and server garbage collection.
 
-Kolekcja tymczasowych generacji podczas wyrzucania elementów bezużytecznych w tle jest znana jako wyrzucanie elementów bezużytecznych pierwszego planu. Gdy wystąpią wyrzucanie elementów bezużytecznych pierwszego planu, wszystkie zarządzane wątki są zawieszane.
+A collection on ephemeral generations during background garbage collection is known as foreground garbage collection. When foreground garbage collections occur, all managed threads are suspended.
 
-Gdy wyrzucanie elementów bezużytecznych w tle jest w toku i przydzielono wystarczającą liczbę obiektów w generacji 0, środowisko CLR wykonuje wyrzucanie elementów bezużytecznych generacji 0 lub generacji 1. Nieznaczny wątek wyrzucania elementów bezużytecznych w tle sprawdza, czy występuje żądanie wyrzucania elementów bezużytecznych na pierwszym planie. Jeśli istnieje, kolekcja w tle zawiesza się tak, aby mogły wystąpić wyrzucanie elementów bezużytecznych na pierwszym planie. Po ukończeniu wyrzucania elementów bezużytecznych na pierwszym planie wątek i wątki użytkownika są wznawiane.
+When background garbage collection is in progress and you've allocated enough objects in generation 0, the CLR performs a generation 0 or generation 1 foreground garbage collection. The dedicated background garbage collection thread checks at frequent safe points to determine whether there is a request for foreground garbage collection. If there is, the background collection suspends itself so that foreground garbage collection can occur. After the foreground garbage collection is completed, the dedicated background garbage collection thread and user threads resume.
 
-Wyrzucanie elementów bezużytecznych w tle usuwa ograniczenia alokacji narzucone przez współbieżne wyrzucanie elementów bezużytecznych, ponieważ tymczasowe wyrzucanie elementów bezużytecznych Oznacza to, że wyrzucanie elementów bezużytecznych w tle umożliwia usuwanie martwych obiektów z pokoleń tymczasowych i rozszerza stertę, jeśli jest to potrzebne podczas wyrzucania elementów bezużytecznych generacji 1.
+Background garbage collection removes allocation restrictions imposed by concurrent garbage collection, because ephemeral garbage collections can occur during background garbage collection. Background garbage collection can remove dead objects in ephemeral generations. It can also expand the heap if needed during a generation 1 garbage collection.
 
-Poniższa ilustracja przedstawia wyrzucanie elementów bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na stacji roboczej:
+The following illustration shows background garbage collection performed on a separate dedicated thread on a workstation:
 
-![Diagram przedstawiający wyrzucanie elementów bezużytecznych stacji roboczej.](./media/fundamentals/background-workstation-garbage-collection.png "Diagram przedstawiający wyrzucanie elementów bezużytecznych stacji roboczej.")
+![Background workstation garbage collection](./media/fundamentals/background-workstation-garbage-collection.png)
 
-[Powrót do początku](#top)
+### <a name="background-server-garbage-collection"></a>Background server garbage collection
 
-<a name="background_server_garbage_collection"></a>
+Starting with .NET Framework 4.5, background server garbage collection is the default mode for server garbage collection.
 
-## <a name="background-server-garbage-collection"></a>Odzyskiwanie pamięci serwera w tle
+Background server garbage collection functions similarly to background workstation garbage collection, described in the previous section, but there are a few differences:
 
-Począwszy od .NET Framework 4,5, wyrzucanie elementów bezużytecznych serwera w tle jest trybem domyślnym dla wyrzucania elementów bezużytecznych serwera. Aby wybrać ten tryb, ustaw atrybut `enabled` [> elementu \<gcServer](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) na `true` w schemacie konfiguracji środowiska uruchomieniowego. Ten tryb działa podobnie do wyrzucania elementów bezużytecznych stacji roboczej w tle, opisanych w poprzedniej sekcji, ale istnieje kilka różnic. Wyrzucanie elementów bezużytecznych stacji roboczej w tle używa jednego dedykowanego wątku wyrzucania elementów bezużytecznych w tle, natomiast wyrzucanie elementów bezużytecznych serwera w tle używa wielu wątków, zwykle W przeciwieństwie do wątku wyrzucania elementów bezużytecznych w tle stacji roboczej te wątki nie przekroczą limitu czasu.
+- Background workstation garbage collection uses one dedicated background garbage collection thread, whereas background server garbage collection uses multiple threads. Typically, there's a dedicated thread for each logical processor.
 
-Poniższa ilustracja przedstawia wyrzucanie elementów bezużytecznych w tle wykonywane w osobnym dedykowanym wątku na serwerze:
+- Unlike the workstation background garbage collection thread, these threads do not time out.
 
-![Diagram przedstawiający wyrzucanie elementów bezużytecznych serwera w tle.](./media/fundamentals/background-server-garbage-collection.png "Diagram przedstawiający wyrzucanie elementów bezużytecznych serwera w tle.")
+The following illustration shows background garbage collection performed on a separate dedicated thread on a server:
+
+![Background server garbage collection](./media/fundamentals/background-server-garbage-collection.png)
+
+## <a name="concurrent-garbage-collection"></a>Concurrent garbage collection
+
+> [!TIP]
+> This section applies to:
+>
+> - .NET Framework 3.5 and earlier for workstation garbage collection
+> - .NET Framework 4 and earlier for server garbage collection
+>
+> Concurrent garbage is replaced by [background garbage collection](#background-workstation-garbage-collection) in later versions.
+
+In workstation or server garbage collection, you can [enable concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection. This option affects only garbage collections in generation 2; generations 0 and 1 are always non-concurrent because they finish very fast.
+
+Concurrent garbage collection enables interactive applications to be more responsive by minimizing pauses for a collection. Managed threads can continue to run most of the time while the concurrent garbage collection thread is running. This results in shorter pauses while a garbage collection is occurring.
+
+Concurrent garbage collection is performed on a dedicated thread. By default, the CLR runs workstation garbage collection with concurrent garbage collection enabled. This is true for single-processor and multi-processor computers.
+
+The following illustration shows concurrent garbage collection performed on a separate dedicated thread.
+
+![Concurrent Garbage Collection Threads](./media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)
+- [Configuration options for GC](../../core/run-time-config/garbage-collector.md)
+- [Garbage collection](index.md)

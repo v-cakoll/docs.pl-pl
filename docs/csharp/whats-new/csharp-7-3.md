@@ -1,53 +1,53 @@
 ---
-title: Co nowego w C# 7,3
-description: Omówienie nowych funkcji w C# 7,3
+title: What's new in C# 7.3
+description: An overview of new features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433525"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204556"
 ---
-# <a name="whats-new-in-c-73"></a>Co nowego w C# 7,3
+# <a name="whats-new-in-c-73"></a>What's new in C# 7.3
 
-W C# wersji 7,3 istnieją dwa główne motywy. Jeden motyw udostępnia funkcje, które umożliwiają bezpieczny kod, tak jak kod niebezpieczny. Drugi motyw zawiera ulepszenia przyrostowe istniejących funkcji. Ponadto w tej wersji dodano nowe opcje kompilatora.
+There are two main themes to the C# 7.3 release. One theme provides features that enable safe code to be as performant as unsafe code. The second theme provides incremental improvements to existing features. In addition, new compiler options were added in this release.
 
-Poniższe nowe funkcje obsługują motyw lepszej wydajności dla bezpiecznego kodu:
+The following new features support the theme of better performance for safe code:
 
-- Można uzyskać dostęp do stałych pól bez przypinania.
-- Zmienne lokalne można przypisywać ponownie `ref` .
-- Inicjatorów można używać w `stackalloc` tablicach.
-- Można używać `fixed` instrukcji z dowolnym typem, który obsługuje wzorzec.
-- Można użyć dodatkowych ograniczeń ogólnych.
+- You can access fixed fields without pinning.
+- You can reassign `ref` local variables.
+- You can use initializers on `stackalloc` arrays.
+- You can use `fixed` statements with any type that supports a pattern.
+- You can use additional generic constraints.
 
-W istniejących funkcjach wprowadzono następujące ulepszenia:
+The following enhancements were made to existing features:
 
-- Można testować `==` i `!=` z typami krotek.
-- Zmiennych wyrażeń można używać w większej liczbie lokalizacji.
-- Możesz dołączyć atrybuty do pola zapasowego właściwości, które są implementowane automatycznie.
-- Ulepszono metodę rozdzielczości, gdy `in` argumenty różnią się od.
-- Rozwiązanie przeciążenia ma teraz mniej niejednoznaczne przypadki.
+- You can test `==` and `!=` with tuple types.
+- You can use expression variables in more locations.
+- You may attach attributes to the backing field of auto-implemented properties.
+- Method resolution when arguments differ by `in` has been improved.
+- Overload resolution now has fewer ambiguous cases.
 
-Nowe opcje kompilatora są następujące:
+The new compiler options are:
 
-- `-publicsign`Aby włączyć podpisywanie zestawów przez oprogramowanie typu Open Source (OSS).
-- `-pathmap`w celu zapewnienia mapowania dla katalogów źródłowych.
+- `-publicsign` to enable Open Source Software (OSS) signing of assemblies.
+- `-pathmap` to provide a mapping for source directories.
 
-Pozostała część tego artykułu zawiera szczegółowe informacje i linki, aby dowiedzieć się więcej na temat poszczególnych ulepszeń. Te funkcje można eksplorować w środowisku za pomocą `dotnet try` narzędzia globalnego:
+The remainder of this article provides details and links to learn more about each of the improvements. You can explore these features in your environment using the `dotnet try` global tool:
 
-1. Zainstaluj narzędzie [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) Global.
-1. Sklonuj repozytorium [dotnet/try-Samples](https://github.com/dotnet/try-samples) .
-1. Ustaw bieżący katalog na podkatalog *csharp7* dla repozytorium *try-Samples* .
-1. Uruchom `dotnet try`.
+1. Install the [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) global tool.
+1. Clone the [dotnet/try-samples](https://github.com/dotnet/try-samples) repository.
+1. Set the current directory to the *csharp7* subdirectory for the *try-samples* repository.
+1. Run `dotnet try`.
 
-## <a name="enabling-more-efficient-safe-code"></a>Włączanie bardziej wydajnego bezpiecznego kodu
+## <a name="enabling-more-efficient-safe-code"></a>Enabling more efficient safe code
 
-Powinien być w stanie bezpiecznie napisać C# kod, który wykonuje, a także kod niebezpieczny. Bezpieczny kod unika klas błędów, takich jak przekroczenia buforu, nieużywane wskaźniki i inne błędy dostępu do pamięci. Te nowe funkcje rozszerzają możliwości zweryfikowania bezpiecznego kodu. Staraj się pisać więcej kodu przy użyciu bezpiecznych konstrukcji. Te funkcje ułatwiają to.
+You should be able to write C# code safely that performs as well as unsafe code. Safe code avoids classes of errors, such as buffer overruns, stray pointers, and other memory access errors. These new features expand the capabilities of verifiable safe code. Strive to write more of your code using safe constructs. These features make that easier.
 
-### <a name="indexing-fixed-fields-does-not-require-pinning"></a>Pola `fixed` indeksowania nie wymagają przypinania
+### <a name="indexing-fixed-fields-does-not-require-pinning"></a>Indexing `fixed` fields does not require pinning
 
-Rozważmy tę strukturę:
+Consider this struct:
 
 ```csharp
 unsafe struct S
@@ -56,7 +56,7 @@ unsafe struct S
 }
 ```
 
-We wcześniejszych wersjach programu C#wymagało przypinania zmiennej w celu uzyskania dostępu do jednej z liczb całkowitych, które są `myFixedField`częścią. Teraz Poniższy kod kompiluje bez przypinania zmiennej `p` wewnątrz oddzielnej `fixed` instrukcji:
+In earlier versions of C#, you needed to pin a variable to access one of the integers that are part of `myFixedField`. Now, the following code compiles without pinning the variable `p` inside a separate `fixed` statement:
 
 ```csharp
 class C
@@ -70,7 +70,7 @@ class C
 }
 ```
 
-Zmienna `p` uzyskuje dostęp do jednego elementu `myFixedField`w. Nie musisz deklarować odrębnej `int*` zmiennej. Pamiętaj, że nadal potrzebujesz `unsafe` kontekstu. We wcześniejszych wersjach programu C#należy zadeklarować drugi stały wskaźnik:
+The variable `p` accesses one element in `myFixedField`. You don't need to declare a separate `int*` variable. Note that you still need an `unsafe` context. In earlier versions of C#, you need to declare a second fixed pointer:
 
 ```csharp
 class C
@@ -87,29 +87,29 @@ class C
 }
 ```
 
-Aby uzyskać więcej informacji, zobacz artykuł na temat [ `fixed` instrukcji](../language-reference/keywords/fixed-statement.md).
+For more information, see the article on the [`fixed` statement](../language-reference/keywords/fixed-statement.md).
 
-### <a name="ref-local-variables-may-be-reassigned"></a>`ref`zmienne lokalne mogą zostać ponownie przypisane
+### <a name="ref-local-variables-may-be-reassigned"></a>`ref` local variables may be reassigned
 
-Teraz elementy `ref` lokalne mogą zostać ponownie przypisane, aby odwoływać się do różnych wystąpień po zainicjowaniu. Poniższy kod jest teraz kompilowany:
+Now, `ref` locals may be reassigned to refer to different instances after being initialized. The following code now compiles:
 
 ```csharp
 ref VeryLargeStruct refLocal = ref veryLargeStruct; // initialization
 refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to different storage.
 ```
 
-Aby uzyskać więcej informacji, zobacz artykuł dotyczący [ `ref` zwrotów i `ref` elementów lokalnych](../programming-guide/classes-and-structs/ref-returns.md)oraz artykuł w [`foreach`](../language-reference/keywords/foreach-in.md)artykule.
+For more information, see the article on [`ref` returns and `ref` locals](../programming-guide/classes-and-structs/ref-returns.md), and the article on [`foreach`](../language-reference/keywords/foreach-in.md).
 
-### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc`Tablice obsługują inicjatory
+### <a name="stackalloc-arrays-support-initializers"></a>`stackalloc` arrays support initializers
 
-Po zainicjowaniu można określić wartości dla elementów w tablicy:
+You've been able to specify the values for elements in an array when you initialize it:
 
 ```csharp
 var arr = new int[3] {1, 2, 3};
 var arr2 = new int[] {1, 2, 3};
 ```
 
-Teraz tę samą składnię można zastosować do tablic, które są zadeklarowane `stackalloc`za pomocą:
+Now, that same syntax can be applied to arrays that are declared with `stackalloc`:
 
 ```csharp
 int* pArr = stackalloc int[3] {1, 2, 3};
@@ -117,62 +117,62 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-Aby uzyskać więcej informacji, zobacz [ `stackalloc` ](../language-reference/operators/stackalloc.md) artykuł dotyczący operatorów.
+For more information, see the [`stackalloc` operator](../language-reference/operators/stackalloc.md) article.
 
-### <a name="more-types-support-the-fixed-statement"></a>Więcej typów obsługuje `fixed` instrukcja
+### <a name="more-types-support-the-fixed-statement"></a>More types support the `fixed` statement
 
-`fixed` Instrukcja obsługuje ograniczony zestaw typów. Począwszy od C# 7,3, dowolny typ, który zawiera `GetPinnableReference()` `ref T` metodę zwracającą lub `ref readonly T` może być `fixed`. Dodanie tej funkcji oznacza, `fixed` że mogą być używane <xref:System.Span%601?displayProperty=nameWithType> z i powiązane typy.
+The `fixed` statement supported a limited set of types. Starting with C# 7.3, any type that contains a `GetPinnableReference()` method that returns a `ref T` or `ref readonly T` may be `fixed`. Adding this feature means that `fixed` can be used with <xref:System.Span%601?displayProperty=nameWithType> and related types.
 
-Aby uzyskać więcej informacji, zobacz [ `fixed` artykuł instrukcji](../language-reference/keywords/fixed-statement.md) w dokumentacji języka.
+For more information, see the [`fixed` statement](../language-reference/keywords/fixed-statement.md) article in the language reference.
 
-### <a name="enhanced-generic-constraints"></a>Ulepszone ograniczenia ogólne
+### <a name="enhanced-generic-constraints"></a>Enhanced generic constraints
 
-Teraz można określić typ <xref:System.Enum?displayProperty=nameWithType> lub <xref:System.Delegate?displayProperty=nameWithType> jako ograniczenia klasy bazowej dla parametru typu.
+You can now specify the type <xref:System.Enum?displayProperty=nameWithType> or <xref:System.Delegate?displayProperty=nameWithType> as base class constraints for a type parameter.
 
-Można również użyć nowego `unmanaged` ograniczenia, aby określić, że parametr typu musi być typem niezarządzanym. [](../language-reference/builtin-types/unmanaged-types.md)
+You can also use the new `unmanaged` constraint, to specify that a type parameter must be a non-nullable [unmanaged type](../language-reference/builtin-types/unmanaged-types.md).
 
-Aby uzyskać więcej informacji, zobacz artykuły dotyczące [ `where` ograniczeń ogólnych](../language-reference/keywords/where-generic-type-constraint.md) i [ograniczeń dla parametrów typu](../programming-guide/generics/constraints-on-type-parameters.md).
+For more information, see the articles on [`where` generic constraints](../language-reference/keywords/where-generic-type-constraint.md) and [constraints on type parameters](../programming-guide/generics/constraints-on-type-parameters.md).
 
-Dodanie tych ograniczeń do istniejących typów jest niezgodną [zmianą](version-update-considerations.md#incompatible-changes). Zamknięte typy ogólne nie mogą już odpowiadać tym nowym ograniczeniom.
+Adding these constraints to existing types is an [incompatible change](version-update-considerations.md#incompatible-changes). Closed generic types may no longer meet these new constraints.
 
-## <a name="make-existing-features-better"></a>Ulepszanie istniejących funkcji
+## <a name="make-existing-features-better"></a>Make existing features better
 
-Drugi motyw zawiera ulepszenia funkcji w języku. Te funkcje zwiększają produktywność C#podczas pisania.
+The second theme provides improvements to features in the language. These features improve productivity when writing C#.
 
-### <a name="tuples-support--and-"></a>Krotki obsługują `==` i`!=`
+### <a name="tuples-support--and-"></a>Tuples support `==` and `!=`
 
-Typy C# krotek obsługują `==` teraz i `!=`. Aby uzyskać więcej informacji, zobacz sekcję dotyczącą [równości](../tuples.md#equality-and-tuples) w artykule na temat [krotek](../tuples.md).
+The C# tuple types now support `==` and `!=`. For more information, see the section covering [equality](../tuples.md#equality-and-tuples) in the article on [tuples](../tuples.md).
 
-### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Dołącz atrybuty do pól zapasowych dla automatycznie implementowanych właściwości
+### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Attach attributes to the backing fields for auto-implemented properties
 
-Ta składnia jest teraz obsługiwana:
+This syntax is now supported:
 
 ```csharp
 [field: SomeThingAboutFieldAttribute]
 public int SomeProperty { get; set; }
 ```
 
-Ten atrybut `SomeThingAboutFieldAttribute` jest stosowany do pola zapasowego wygenerowanego `SomeProperty`przez kompilator dla. Aby uzyskać więcej informacji, zobacz [atrybuty](../programming-guide/concepts/attributes/index.md) w C# przewodniku programowania.
+The attribute `SomeThingAboutFieldAttribute` is applied to the compiler generated backing field for `SomeProperty`. For more information, see [attributes](../programming-guide/concepts/attributes/index.md) in the C# programming guide.
 
-### <a name="in-method-overload-resolution-tiebreaker"></a>`in`wczesnego przeciążania metody
+### <a name="in-method-overload-resolution-tiebreaker"></a>`in` method overload resolution tiebreaker
 
-Po dodaniu modyfikatora argumentu te dwie metody spowodują niejednoznaczność: `in`
+When the `in` argument modifier was added, these two methods would cause an ambiguity:
 
 ```csharp
 static void M(S arg);
 static void M(in S arg);
 ```
 
-Teraz Przeciążenie wartości (najpierw w poprzednim przykładzie) przeciążenia jest lepsze niż wersja odwołania do tylko do odczytu. Aby wywołać wersję z argumentem odwołania tylko do odczytu, należy dołączyć `in` modyfikator podczas wywoływania metody.
+Now, the by value (first in the preceding example) overload is better than the by readonly reference version. To call the version with the readonly reference argument, you must include the `in` modifier when calling the method.
 
 > [!NOTE]
-> Ta implementacja została zaimplementowana jako Poprawka błędu. To nie jest już niejednoznaczne nawet w przypadku wersji językowej ustawionej na "7,2".
+> This was implemented as a bug fix. This no longer is ambiguous even with the language version set to "7.2".
 
-Aby uzyskać więcej informacji, zobacz artykuł dotyczący [ `in` modyfikatora parametru](../language-reference/keywords/in-parameter-modifier.md).
+For more information, see the article on the [`in` parameter modifier](../language-reference/keywords/in-parameter-modifier.md).
 
-### <a name="extend-expression-variables-in-initializers"></a>Rozszerzone zmienne wyrażeń w inicjatorach
+### <a name="extend-expression-variables-in-initializers"></a>Extend expression variables in initializers
 
-Składnia dodana w C# 7,0 umożliwia `out` przełączenie deklaracji zmiennych w taki sposób, aby zawierały inicjatory pól, inicjatory właściwości, inicjatory konstruktorów i klauzule zapytań. Umożliwia to wykonywanie kodu, takiego jak Poniższy przykład:
+The syntax added in C# 7.0 to allow `out` variable declarations has been extended to include field initializers, property initializers, constructor initializers, and query clauses. It enables code such as the following example:
 
 ```csharp
 public class B
@@ -194,26 +194,26 @@ public class D : B
 
 ### <a name="improved-overload-candidates"></a>Ulepszone kandydujące metody rozwiązywania przeciążenia
 
-W każdej wersji reguły rozpoznawania przeciążenia zostały zaktualizowane w celu rozwiązania sytuacji, w których niejednoznaczne wywołania metod mają oczywisty wybór. W tej wersji dodano trzy nowe reguły, które ułatwiają wybór oczywisty przez kompilator:
+In every release, the overload resolution rules get updated to address situations where ambiguous method invocations have an "obvious" choice. This release adds three new rules to help the compiler pick the obvious choice:
 
-1. Gdy grupa metod zawiera zarówno wystąpienie, jak i statyczne elementy członkowskie, kompilator odrzuca elementy członkowskie wystąpienia, jeśli metoda została wywołana bez odbiorcy wystąpienia lub kontekstu. Kompilator odrzuca statyczne elementy członkowskie, jeśli metoda została wywołana z odbiornikiem wystąpienia. Gdy nie ma odbiornika, kompilator zawiera tylko statyczne elementy członkowskie w kontekście statycznym, w przeciwnym razie elementy członkowskie statyczne i wystąpienia. Gdy odbiorca jest niejednoznacznie wystąpieniem lub typem, kompilator zawiera oba te elementy. Statyczny kontekst, w którym niejawny `this` odbiornik wystąpienia nie może być używany, zawiera treść członków, gdzie nie `this` jest zdefiniowany, takich jak statyczne elementy członkowskie, a także `this` miejsca, w których nie można ich używać, takich jak inicjatory pola i Konstruktor-inicjatory.
-1. Gdy grupa metod zawiera kilka metod ogólnych, których argumenty typu nie spełniają ograniczeń, te elementy członkowskie są usuwane z zestawu kandydatów.
-1. Dla konwersji grup metod, metody kandydujące, których typ zwracany nie jest zgodny z typem zwracanym delegata, są usuwane z zestawu.
+1. When a method group contains both instance and static members, the compiler discards the instance members if the method was invoked without an instance receiver or context. The compiler discards the static members if the method was invoked with an instance receiver. When there is no receiver, the compiler includes only static members in a static context, otherwise both static and instance members. When the receiver is ambiguously an instance or type, the compiler includes both. A static context, where an implicit `this` instance receiver cannot be used, includes the body of members where no `this` is defined, such as static members, as well as places where `this` cannot be used, such as field initializers and constructor-initializers.
+1. When a method group contains some generic methods whose type arguments do not satisfy their constraints, these members are removed from the candidate set.
+1. For a method group conversion, candidate methods whose return type doesn't match up with the delegate's return type are removed from the set.
 
-Ta zmiana zostanie wykorzystana tylko dlatego, że w przypadku niejednoznacznych przeciążeń metod znajdziesz mniej błędów kompilatora, gdy masz pewność, która metoda jest lepsza.
+You'll only notice this change because you'll find fewer compiler errors for ambiguous method overloads when you are sure which method is better.
 
-## <a name="new-compiler-options"></a>Nowe opcje kompilatora
+## <a name="new-compiler-options"></a>New compiler options
 
-Nowe opcje kompilatora obsługują nowe scenariusze kompilacji i DevOps dla C# programów.
+New compiler options support new build and DevOps scenarios for C# programs.
 
-### <a name="public-or-open-source-signing"></a>Podpisywanie publiczne lub Open Source
+### <a name="public-or-open-source-signing"></a>Public or Open Source signing
 
-Opcja `-publicsign` kompilatora instruuje kompilator do podpisania zestawu przy użyciu klucza publicznego. Zestaw jest oznaczony jako podpisany, ale podpis jest pobierany z klucza publicznego. Ta opcja umożliwia tworzenie podpisanych zestawów z projektów typu "open source" przy użyciu klucza publicznego.
+The `-publicsign` compiler option instructs the compiler to sign the assembly using a public key. The assembly is marked as signed, but the signature is taken from the public key. This option enables you to build signed assemblies from open-source projects using a public key.
 
-Aby uzyskać więcej informacji, zobacz [publicsign opcji kompilatora](../language-reference/compiler-options/publicsign-compiler-option.md) .
+For more information, see the [-publicsign compiler option](../language-reference/compiler-options/publicsign-compiler-option.md) article.
 
-### <a name="pathmap"></a>elemencie pathmap
+### <a name="pathmap"></a>pathmap
 
-Opcja `-pathmap` kompilatora instruuje kompilator, aby zamieniać ścieżki źródłowe ze środowiska kompilacji z zamapowanymi ścieżkami źródłowymi. Opcja steruje ścieżką źródłową zapisaną przez kompilator do plików PDB lub <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>dla. `-pathmap`
+The `-pathmap` compiler option instructs the compiler to replace source paths from the build environment with mapped source paths. The `-pathmap` option controls the source path written by the compiler to PDB files or for the <xref:System.Runtime.CompilerServices.CallerFilePathAttribute>.
 
-Aby uzyskać więcej informacji, zobacz [elemencie pathmap opcji kompilatora](../language-reference/compiler-options/pathmap-compiler-option.md) .
+For more information, see the [-pathmap compiler option](../language-reference/compiler-options/pathmap-compiler-option.md) article.

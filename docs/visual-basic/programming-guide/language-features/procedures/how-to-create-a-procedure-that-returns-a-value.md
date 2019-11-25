@@ -1,38 +1,38 @@
 ---
-title: 'Instrukcje: Utwórz procedurę, która zwraca wartość (Visual Basic)'
+title: 'Porady: tworzenie procedury, która zwraca wartość'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], defining
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 218dbb52abc0100724d38d10be91ef24252d5226
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863730"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349723"
 ---
-# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Instrukcje: Utwórz procedurę, która zwraca wartość (Visual Basic)
-Możesz użyć `Function` procedury w celu zwrócenia wartości do wywołującego kodu.  
+# <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Porady: tworzenie procedury, która zwraca wartość (Visual Basic)
+You use a `Function` procedure to return a value to the calling code.  
   
-### <a name="to-create-a-procedure-that-returns-a-value"></a>Aby utworzyć procedurę, która nie zwraca wartości  
+### <a name="to-create-a-procedure-that-returns-a-value"></a>To create a procedure that returns a value  
   
-1. Poza innej procedury, należy użyć `Function` instrukcji, następuje `End Function` instrukcji.  
+1. Outside any other procedure, use a `Function` statement, followed by an `End Function` statement.  
   
-2. W `Function` instrukcji, postępuj zgodnie z `Function` — słowo kluczowe o nazwie procedury oraz lista parametrów w nawiasach.  
+2. In the `Function` statement, follow the `Function` keyword with the name of the procedure, and then the parameter list in parentheses.  
   
-3. Postępuj zgodnie z nawiasów za pomocą `As` klauzuli, aby określić typ danych zwróconej wartości.  
+3. Follow the parentheses with an `As` clause to specify the data type of the returned value.  
   
-4. Umieść instrukcje kod procedury między `Function` i `End Function` instrukcji.  
+4. Place the procedure's code statements between the `Function` and `End Function` statements.  
   
-5. Użyj `Return` instrukcji, aby zwrócić wartości do wywołującego kodu.  
+5. Use a `Return` statement to return the value to the calling code.  
   
-     Następujące `Function` procedury oblicza najdłuższy bok lub przeciwprostokątnej trójkąta prostokątnego, biorąc pod uwagę wartości dla obu stron.  
+     The following `Function` procedure calculates the longest side, or hypotenuse, of a right triangle, given the values for the other two sides.  
   
      [!code-vb[VbVbcnProcedures#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#1)]  
   
-     W poniższym przykładzie przedstawiono typowe wywołanie `hypotenuse`.  
+     The following example shows a typical call to `hypotenuse`.  
   
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
@@ -44,5 +44,5 @@ Możesz użyć `Function` procedury w celu zwrócenia wartości do wywołująceg
 - [Procedury operatorów](./operator-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Instrukcje: Zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Instrukcje: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)
+- [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

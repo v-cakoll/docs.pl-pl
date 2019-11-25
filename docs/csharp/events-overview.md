@@ -3,12 +3,12 @@ title: Wprowadzenie do zdarzeń
 description: Zapoznaj się z informacjami o zdarzeniach w programie .NET Core i naszych celach projektowania języka dla zdarzeń w tym omówieniu.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771918"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138522"
 ---
 # <a name="introduction-to-events"></a>Wprowadzenie do zdarzeń
 
@@ -26,13 +26,13 @@ Subskrybowanie zdarzenia również tworzy sprzężenie między dwoma obiektami (
 
 ## <a name="design-goals-for-event-support"></a>Cele projektu dotyczące obsługi zdarzeń
 
-Projektowanie języka dla zdarzeń przeznaczonych dla tych celów.
+Projektowanie języka dla zdarzeń przeznaczonych dla następujących celów:
 
-Najpierw włącz bardzo minimalne sprzęganie między źródłem zdarzenia a obiektem sink zdarzenia. Te dwa składniki mogą nie być zapisywane w tej samej organizacji i mogą nawet być aktualizowane w odniesieniu do całkowicie różnych harmonogramów.
+- Włącz bardzo minimalne sprzęganie między źródłem zdarzenia a obiektem sink zdarzenia. Te dwa składniki mogą nie być zapisywane w tej samej organizacji i mogą nawet być aktualizowane w odniesieniu do całkowicie różnych harmonogramów.
 
-Po drugie, powinno być bardzo proste, aby subskrybować wydarzenie i anulować subskrypcję tego samego zdarzenia.
+- Subskrybowanie zdarzeń powinno być bardzo proste i anulowanie subskrypcji tego samego zdarzenia.
 
-Ponadto źródła zdarzeń powinny obsługiwać wielu subskrybentów zdarzeń. Dział IT powinien również obsługiwać niedołączone Subskrybenci zdarzeń.
+- Źródła zdarzeń powinny obsługiwać wielu subskrybentów zdarzeń. Dział IT powinien również obsługiwać niedołączone Subskrybenci zdarzeń.
 
 Można zobaczyć, że cele dla zdarzeń są bardzo podobne do celów delegatów.
 Dlatego obsługa języka zdarzeń jest oparta na obsłudze języka delegatów.
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-Metoda obsługi zazwyczaj jest prefiksem "on", po którym następuje nazwa zdarzenia, jak pokazano powyżej.
+Metoda obsługi zazwyczaj ma prefiks "on", po którym następuje nazwa zdarzenia, jak pokazano powyżej.
 
 Anulowanie subskrypcji przy użyciu operatora `-=`:
 

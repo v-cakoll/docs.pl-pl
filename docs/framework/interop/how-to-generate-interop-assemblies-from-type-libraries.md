@@ -8,12 +8,12 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
-ms.openlocfilehash: 7cca21630bd1dbd6896f882d058f288f603e95df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f4f099dfaf5ff02edd3958d7eab9354ce727a239
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123897"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281805"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Porada: generowanie zestawów międzyoperacyjnych z bibliotek typów
 [Importer biblioteki typów (Tlbimp. exe)](../tools/tlbimp-exe-type-library-importer.md) jest narzędziem wiersza polecenia, które konwertuje klasy coclass i interfejsy zawarte w bibliotece typów modelu COM na metadane. To narzędzie tworzy zestaw międzyoperacyjny i przestrzeń nazw dla informacji o typie automatycznie. Po udostępnieniu metadanych klasy zarządzani klienci mogą tworzyć wystąpienia typu COM i wywoływać metody, tak jakby były wystąpieniem programu .NET. Tlbimp. exe konwertuje całą bibliotekę typów na metadane jednocześnie i nie może generować informacji o typie dla podzbioru typów zdefiniowanych w bibliotece typów.  
@@ -29,13 +29,13 @@ ms.locfileid: "73123897"
 ## <a name="example"></a>Przykład  
  Następujące polecenie generuje zestaw LOANLib. dll w przestrzeni nazw `Loanlib`.  
   
-```  
+```console  
 tlbimp Loanlib.tlb  
 ```  
   
  Następujące polecenie tworzy zestaw międzyoperacyjny z zmienioną nazwą (LOANLib. dll).  
   
-```  
+```console  
 tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   

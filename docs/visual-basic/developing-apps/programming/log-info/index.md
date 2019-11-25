@@ -1,5 +1,5 @@
 ---
-title: Rejestrowanie informacji z aplikacji (Visual Basic)
+title: Rejestrowanie informacji z aplikacji
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -9,36 +9,37 @@ helpviewer_keywords:
 - My.Application.Log object
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052511"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353253"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>Rejestrowanie informacji z aplikacji (Visual Basic)
-Ta sekcja zawiera tematy, które opisano, jak rejestrowanie informacji z aplikacji przy użyciu `My.Application.Log` lub `My.Log` obiektu i jak rozszerzyć możliwości rejestrowania zdarzeń aplikacji.  
+
+This section contains topics that cover how to log information from your application using the `My.Application.Log` or `My.Log` object, and how to extend the application's logging capabilities.  
   
- `Log` Obiekt zapewnia metody do zapisywania informacji odbiorniki logu aplikacji, a `Log` zaawansowane obiektu `TraceSource` właściwość zawiera szczegółowe informacje. `Log` Obiekt jest skonfigurowany w pliku konfiguracji aplikacji.  
+ The `Log` object provides methods for writing information to the application's log listeners, and the `Log` object's advanced `TraceSource` property provides detailed configuration information. The `Log` object is configured by the application's configuration file.  
   
- `My.Log` Obiekt jest dostępny tylko w przypadku aplikacji ASP.NET. Dla aplikacji klienckich, należy użyć `My.Application.Log`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Logging.Log>.  
+ The `My.Log` object is available only for ASP.NET applications. For client applications, use `My.Application.Log`. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Zadania  
   
-|Zadanie|Zobacz|  
+|Do|Zobacz|  
 |--------|---------|  
-|Zapisywanie informacji o zdarzeniach dzienników aplikacji.|[Instrukcje: Zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
-|Zapisać informacje o wyjątku do dzienników aplikacji.|[Instrukcje: Rejestruje wyjątki](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
-|Zapisać informacje o śledzeniu Dzienniki aplikacji, gdy aplikacja rozpoczyna się i kończy pracę.|[Instrukcje: Komunikaty dziennika podczas uruchamiania aplikacji lub zamknięciu](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
-|Konfigurowanie `My.Application.Log` mogła zapisać informacji do pliku tekstowego.|[Instrukcje: Zapisywanie informacji zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
-|Konfigurowanie `My.Application.Log` mogła zapisać informacji do dziennika zdarzeń.|[Instrukcje: Zapisywanie w rejestrze zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
-|Gdzie zmienić `My.Application.Log` zapisuje informacje.|[Przewodnik: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
-|Określenie miejsca `My.Application.Log` zapisuje informacje.|[Przewodnik: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
-|Tworzenie odbiornika dzienników niestandardowych na potrzeby `My.Application.Log`.|[Przewodnik: Tworzenie odbiorników logu niestandardowego](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
-|Filtrowanie danych wyjściowych `My.Application.Log` dzienniki.|[Przewodnik: Filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
+|Write event information to the application's logs.|[Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
+|Write exception information to the application's logs.|[Instrukcje: wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  
+|Write trace information to the application's logs when the application starts and shuts down.|[Instrukcje: rejestrowanie komunikatów podczas uruchamiania lub zamykania aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-messages-when-the-application-starts-or-shuts-down.md)|  
+|Configure `My.Application.Log` to write information to a text file.|[Instrukcje: zapisywanie informacji o zdarzeniach w pliku tekstowym](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)|  
+|Configure `My.Application.Log` to write information to an event log.|[Instrukcje: zapisywanie w dzienniku zdarzeń aplikacji](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)|  
+|Change where `My.Application.Log` writes information.|[Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)|  
+|Determine where `My.Application.Log` writes information.|[Przewodnik: ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)|  
+|Create a custom log listener for `My.Application.Log`.|[Przewodnik: tworzenie odbiorców dzienników niestandardowych](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)|  
+|Filter the output of the `My.Application.Log` logs.|[Przewodnik: filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [Rozwiązywanie problemów: Odbiorniki logu](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+- [Rozwiązywanie problemów: odbiorcy dzienników](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

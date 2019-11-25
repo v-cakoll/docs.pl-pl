@@ -1,5 +1,5 @@
 ---
-title: Yield — Instrukcja (Visual Basic)
+title: Yield — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Yield
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: 57b36bb32e1a575a645f7a15045bf0898dd10dfd
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 72a8dafdc5aa834a644e1e70a309cfc0827b5fdf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582216"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352727"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield — Instrukcja (Visual Basic)
-Wysyła następny element kolekcji do instrukcji `For Each...Next`.  
+Sends the next element of a collection to a `For Each...Next` statement.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -28,43 +28,43 @@ Yield expression
   
 |Termin|Definicja|  
 |---|---|  
-|`expression`|Wymagany. Wyrażenie, które jest niejawnie konwertowane na typ funkcji iteratora lub metody dostępu `Get`, która zawiera instrukcję `Yield`.|  
+|`expression`|Wymagany. An expression that is implicitly convertible to the type of the iterator function or `Get` accessor that contains the `Yield` statement.|  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja `Yield` zwraca jeden element kolekcji w danym momencie. Instrukcja `Yield` jest zawarta w funkcji iteratora lub metodzie dostępu `Get`, która wykonuje niestandardowe iteracje w kolekcji.  
+ The `Yield` statement returns one element of a collection at a time. The `Yield` statement is included in an iterator function or `Get` accessor, which perform custom iterations over a collection.  
   
- Używasz funkcji iteratora przy użyciu [for each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md) lub zapytanie LINQ. Każda iteracja pętli `For Each` wywołuje funkcję iteratora. Po osiągnięciu instrukcji `Yield` w funkcji iteratora zwracana jest wartość `expression`, a bieżąca lokalizacja w kodzie jest zachowywana. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.  
+ You consume an iterator function by using a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md) or a LINQ query. Each iteration of the `For Each` loop calls the iterator function. When a `Yield` statement is reached in the iterator function, `expression` is returned, and the current location in code is retained. Wykonanie jest uruchamiane ponownie z tej lokalizacji przy następnym wywołaniu funkcji iteratora.  
   
- Niejawna konwersja musi istnieć na podstawie typu `expression` w instrukcji `Yield` do zwracanego typu iteratora.  
+ An implicit conversion must exist from the type of `expression` in the `Yield` statement to the return type of the iterator.  
   
- Aby zakończyć iterację, można użyć instrukcji `Exit Function` lub `Return`.  
+ You can use an `Exit Function` or `Return` statement to end the iteration.  
   
- "Yield" nie jest słowem zastrzeżonym i ma specjalne znaczenie tylko wtedy, gdy jest używany w funkcji `Iterator` lub metodzie dostępu `Get`.  
+ "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` function or `Get` accessor.  
   
- Aby uzyskać więcej informacji na temat funkcji iteratora i metod dostępu `Get`, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
+ For more information about iterator functions and `Get` accessors, see [Iterators](../../programming-guide/concepts/iterators.md).  
   
-## <a name="iterator-functions-and-get-accessors"></a>Funkcje iteratora i metody uzyskiwania dostępu  
- Deklaracja funkcji iteratora lub metody dostępu `Get` musi spełniać następujące wymagania:  
+## <a name="iterator-functions-and-get-accessors"></a>Iterator Functions and Get Accessors  
+ The declaration of an iterator function or `Get` accessor must meet the following requirements:  
   
-- Musi zawierać modyfikator [iteratora](../../../visual-basic/language-reference/modifiers/iterator.md) .  
+- It must include an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.  
   
-- Typem zwracanym musi być <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> lub <xref:System.Collections.Generic.IEnumerator%601>.  
+- The return type must be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.  
   
-- Nie może mieć żadnych parametrów `ByRef`.  
+- It cannot have any `ByRef` parameters.  
   
- Nie można wykonać funkcji iteratora w zdarzeniu, konstruktorze wystąpień, konstruktorze statycznym lub destruktorze statycznym.  
+ An iterator function cannot occur in an event, instance constructor, static constructor, or static destructor.  
   
- Funkcja iteratora może być funkcją anonimową. Aby uzyskać więcej informacji, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
+ An iterator function can be an anonymous function. For more information, see [Iterators](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Obsługa wyjątków  
- Instrukcja `Yield` może znajdować się wewnątrz bloku `Try` [try... Catch... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). Blok `Try`, który zawiera instrukcję `Yield` może mieć `Catch` bloków i może mieć blok `Finally`.  
+ A `Yield` statement can be inside a `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.  
   
- Instrukcja `Yield` nie może znajdować się wewnątrz bloku `Catch` lub bloku `Finally`.  
+ A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.  
   
- Jeśli treść `For Each` (poza funkcją iteratora) zgłasza wyjątek, blok `Catch` w funkcji iteratora nie zostanie wykonany, ale jest wykonywany blok `Finally` w funkcji iteratora. Blok `Catch` wewnątrz funkcji iteratora przechwytuje tylko wyjątki występujące wewnątrz funkcji iteratora.  
+ If the `For Each` body (outside of the iterator function) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed. A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.  
   
 ## <a name="technical-implementation"></a>Realizacja techniczna  
- Poniższy kod zwraca `IEnumerable (Of String)` z funkcji iteratora, a następnie iteruje elementy `IEnumerable (Of String)`.  
+ The following code returns an `IEnumerable (Of String)` from an iterator function and then iterates through the elements of the `IEnumerable (Of String)`.  
   
 ```vb  
 Dim elements As IEnumerable(Of String) = MyIteratorFunction()  
@@ -73,25 +73,25 @@ For Each element As String In elements
 Next  
 ```  
   
- Wywołanie `MyIteratorFunction` nie wykonuje treści funkcji. Zamiast tego wywołanie zwraca `IEnumerable(Of String)` do zmiennej `elements`.  
+ The call to `MyIteratorFunction` doesn't execute the body of the function. Instead the call returns an `IEnumerable(Of String)` into the `elements` variable.  
   
- W przypadku iteracji pętli `For Each` Metoda <xref:System.Collections.IEnumerator.MoveNext%2A> jest wywoływana dla `elements`. To wywołanie wykonuje treść `MyIteratorFunction` do momentu osiągnięcia następnej instrukcji `Yield`. Instrukcja `Yield` zwraca wyrażenie, które określa nie tylko wartość zmiennej `element` do użycia przez treść pętli, ale również właściwość <xref:System.Collections.Generic.IEnumerator%601.Current%2A> elementów, która jest `IEnumerable (Of String)`.  
+ On an iteration of the `For Each` loop, the <xref:System.Collections.IEnumerator.MoveNext%2A> method is called for `elements`. This call executes the body of `MyIteratorFunction` until the next `Yield` statement is reached. The `Yield` statement returns an expression that determines not only the value of the `element` variable for consumption by the loop body but also the <xref:System.Collections.Generic.IEnumerator%601.Current%2A> property of elements, which is an `IEnumerable (Of String)`.  
   
- W każdej kolejnej iteracji pętli `For Each` wykonywanie treści iteratora jest kontynuowane od miejsca, w którym została pozostawiona, i ponownie zatrzymywane, gdy dociera do instrukcji `Yield`. Pętla `For Each` kończy się, gdy zostanie osiągnięty koniec funkcji iteratora lub `Return` lub `Exit Function`.  
+ On each subsequent iteration of the `For Each` loop, the execution of the iterator body continues from where it left off, again stopping when it reaches a `Yield` statement. The `For Each` loop completes when the end of the iterator function or a `Return` or `Exit Function` statement is reached.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zawiera instrukcję `Yield`, która znajduje się wewnątrz elementu [... Następna](../../../visual-basic/language-reference/statements/for-next-statement.md) pętla. Każda iteracja [dla każdej](../../../visual-basic/language-reference/statements/for-each-next-statement.md) treści instrukcji w `Main` tworzy wywołanie funkcji iteratora `Power`. Każde wywołanie funkcji iteratora przechodzi do następnego wykonania instrukcji `Yield`, która występuje w następnej iteracji pętli `For…Next`.  
+ The following example has a `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop. Each iteration of the [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement body in `Main` creates a call to the `Power` iterator function. Each call to the iterator function proceeds to the next execution of the `Yield` statement, which occurs during the next iteration of the `For…Next` loop.  
   
- Zwracany typ metody iteratora to <xref:System.Collections.Generic.IEnumerable%601>, typ interfejsu iteratora. Kiedy metoda iteratora jest wywoływana, zwraca obiekt wyliczeniowy, który zawiera potęgi liczb.  
+ The return type of the iterator method is <xref:System.Collections.Generic.IEnumerable%601>, an iterator interface type. Kiedy metoda iteratora jest wywoływana, zwraca obiekt wyliczeniowy, który zawiera potęgi liczb.  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład demonstruje metodę dostępu `Get`, która jest iteratorem. Deklaracja właściwości zawiera modyfikator `Iterator`.  
+ The following example demonstrates a `Get` accessor that is an iterator. The property declaration includes an `Iterator` modifier.  
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- Aby uzyskać więcej przykładów, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
+ For additional examples, see [Iterators](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

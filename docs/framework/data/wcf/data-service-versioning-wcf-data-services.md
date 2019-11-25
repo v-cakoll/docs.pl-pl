@@ -6,15 +6,15 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: f2007e5c2fa638d64c5c1e0d6879e12c7bcc901d
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 730a7e4b58d544af9ebc58317cda336be8e946e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854103"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283036"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Przechowywanie wersji usługi danych (Usługi danych programu WCF)
-[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Umożliwia tworzenie usług danych, dzięki czemu klienci mogą uzyskiwać dostęp do danych jako zasoby przy użyciu identyfikatorów URI opartych na modelu danych. Protokół OData obsługuje również definicje operacji usługi. Po wstępnym wdrożeniu i potencjalnie kilka razy w okresie istnienia tych usług mogą być konieczne zmiany w przypadku różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub Rozwiązywanie innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych należy wziąć pod uwagę, czy należy zdefiniować nową wersję usługi danych i jak najlepiej zminimalizować wpływ istniejących aplikacji klienckich. Ten temat zawiera wskazówki dotyczące tego, kiedy i jak utworzyć nową wersję usługi danych. Opisano w nim również, w jaki sposób Usługi danych programu WCF obsługuje wymianę między klientami i usługami danych, które obsługują różne wersje protokołu OData.
+Protokół Open Data Protocol (OData) umożliwia tworzenie usług danych w taki sposób, aby klienci mogli uzyskiwać dostęp do danych jako zasoby przy użyciu identyfikatorów URI opartych na modelu danych. Protokół OData obsługuje również definicje operacji usługi. Po wstępnym wdrożeniu i potencjalnie kilka razy w okresie istnienia tych usług mogą być konieczne zmiany w przypadku różnych powodów, takich jak zmiana potrzeb firmy, wymagania dotyczące technologii informatycznych lub Rozwiązywanie innych problemów. Po wprowadzeniu zmian w istniejącej usłudze danych należy wziąć pod uwagę, czy należy zdefiniować nową wersję usługi danych i jak najlepiej zminimalizować wpływ istniejących aplikacji klienckich. Ten temat zawiera wskazówki dotyczące tego, kiedy i jak utworzyć nową wersję usługi danych. Opisano w nim również, w jaki sposób Usługi danych programu WCF obsługuje wymianę między klientami i usługami danych, które obsługują różne wersje protokołu OData.
 
 ## <a name="versioning-a-wcf-data-service"></a>Przechowywanie wersji usługi danych programu WCF
  Po wdrożeniu usługi danych i wykorzystaniu danych, zmiany w usłudze danych mogą powodować problemy ze zgodnością z istniejącymi aplikacjami klienckimi. Jednak ze względu na to, że zmiany są często wymagane przez ogólne potrzeby biznesowe usługi, należy wziąć pod uwagę, kiedy i jak utworzyć nową wersję usługi danych z minimalnym wpływem na aplikacje klienckie.
@@ -39,24 +39,24 @@ ms.locfileid: "70854103"
 
  <sup>1</sup> może zależeć od tego, jak ścisła aplikacja kliencka korzysta z uzyskiwania określonego kodu błędu.
 
- <sup>2</sup> można ustawić <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> Właściwość `true` na, aby klient ignorował wszystkie nowe właściwości wysyłane przez usługę danych, które nie są zdefiniowane na kliencie. Jednak po wykonaniu operacji wstawiania właściwości nieuwzględnione przez klienta w żądaniu POST są ustawiane na wartości domyślne. W przypadku aktualizacji wszystkie istniejące dane we właściwości nieznanej dla klienta mogą zostać zastąpione wartościami domyślnymi. W takim przypadku należy wysłać aktualizację jako żądanie scalania, co jest ustawieniem domyślnym. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md).
+ <sup>2</sup> można ustawić właściwość <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A> na `true`, aby klient ignorował wszystkie nowe właściwości wysyłane przez usługę danych, które nie są zdefiniowane na kliencie. Jednak po wykonaniu operacji wstawiania właściwości nieuwzględnione przez klienta w żądaniu POST są ustawiane na wartości domyślne. W przypadku aktualizacji wszystkie istniejące dane we właściwości nieznanej dla klienta mogą zostać zastąpione wartościami domyślnymi. W takim przypadku należy wysłać aktualizację jako żądanie scalania, co jest ustawieniem domyślnym. Aby uzyskać więcej informacji, zobacz [zarządzanie kontekstem usługi danych](managing-the-data-service-context-wcf-data-services.md).
 
 ### <a name="how-to-version-a-data-service"></a>Jak uzyskać wersję usługi danych
- W razie potrzeby Nowa wersja usługi danych jest definiowana przez utworzenie nowego wystąpienia usługi z zaktualizowanym kontraktem usługi lub modelem danych. Ta nowa usługa zostanie udostępniona przy użyciu nowego punktu końcowego URI, który odróżnia go od poprzedniej wersji. Przykład:
+ W razie potrzeby Nowa wersja usługi danych jest definiowana przez utworzenie nowego wystąpienia usługi z zaktualizowanym kontraktem usługi lub modelem danych. Ta nowa usługa zostanie udostępniona przy użyciu nowego punktu końcowego URI, który odróżnia go od poprzedniej wersji. Na przykład:
 
-- Stara wersja:`http://services.odata.org/Northwind/v1/Northwind.svc/`
+- Stara wersja: `http://services.odata.org/Northwind/v1/Northwind.svc/`
 
-- Nowa wersja:`http://services.odata.org/Northwind/v2/Northwind.svc/`
+- Nowa wersja: `http://services.odata.org/Northwind/v2/Northwind.svc/`
 
  Podczas uaktualniania usługi danych należy zaktualizować klientów na podstawie nowych metadanych usługi danych i użyć nowego głównego identyfikatora URI. Jeśli to możliwe, należy zachować poprzednią wersję usługi danych, aby obsługiwała klientów, którzy nie zostali jeszcze uaktualnioni do korzystania z nowej wersji. Starsze wersje usługi danych mogą być usuwane, gdy nie są już potrzebne. Należy rozważyć utrzymywanie identyfikatora URI punktu końcowego usługi danych w zewnętrznym pliku konfiguracji.
 
 ## <a name="odata-protocol-versions"></a>Wersje protokołu OData
  Po udostępnieniu nowych wersji usługi OData aplikacje klienckie mogą nie używać tej samej wersji protokołu OData obsługiwanej przez usługę danych. Starsza aplikacja kliencka może uzyskać dostęp do usługi danych, która obsługuje nowszą wersję protokołu OData. Aplikacja kliencka może również korzystać z nowszej wersji biblioteki klienta Usługi danych programu WCF, która obsługuje nowszą wersję protokołu OData niż usługa danych, do której uzyskuje się dostęp.
 
- Usługi danych programu WCF wykorzystuje pomoc techniczną dostępną przez usługi OData do obsługi takich scenariuszy przechowywania wersji. Obsługiwane jest również generowanie metadanych modelu danych i używanie ich do tworzenia klas usługi danych klienta, gdy klient korzysta z innej wersji protokołu OData niż używana przez usługę danych. Aby uzyskać więcej informacji, [zobacz OData: Przechowywanie wersji](https://go.microsoft.com/fwlink/?LinkId=186071)protokołu.
+ Usługi danych programu WCF wykorzystuje pomoc techniczną dostępną przez usługi OData do obsługi takich scenariuszy przechowywania wersji. Obsługiwane jest również generowanie metadanych modelu danych i używanie ich do tworzenia klas usługi danych klienta, gdy klient korzysta z innej wersji protokołu OData niż używana przez usługę danych. Aby uzyskać więcej informacji, zobacz Usługa [OData: obsługa wersji protokołu](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ### <a name="version-negotiation"></a>Negocjowanie wersji
- Usługę danych można skonfigurować w celu zdefiniowania najwyższej wersji protokołu OData, który będzie używany przez usługę, niezależnie od wersji żądanej przez klienta. Można to zrobić, określając <xref:System.Data.Services.Common.DataServiceProtocolVersion> wartość <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> właściwości <xref:System.Data.Services.DataServiceBehavior> używanej przez usługę danych. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
+ Usługę danych można skonfigurować w celu zdefiniowania najwyższej wersji protokołu OData, który będzie używany przez usługę, niezależnie od wersji żądanej przez klienta. Można to zrobić, określając <xref:System.Data.Services.Common.DataServiceProtocolVersion> wartość właściwości <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> <xref:System.Data.Services.DataServiceBehavior> używanej przez usługę danych. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](configuring-the-data-service-wcf-data-services.md).
 
  Gdy aplikacja korzysta z Usługi danych programu WCFch bibliotek klienckich w celu uzyskania dostępu do usługi danych, biblioteki automatycznie ustawiają te nagłówki na prawidłowe wartości, w zależności od wersji protokołu OData i funkcji używanych w aplikacji. Domyślnie Usługi danych programu WCF używa najniższej wersji protokołu, która obsługuje żądaną operację.
 
@@ -64,14 +64,14 @@ ms.locfileid: "70854103"
 
 |Wersja protokołu OData|Obsługa wprowadzona w...|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Wersja 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Dodatek Service Pack 1 (SP1)<br />— Silverlight w wersji 3|
-|Wersja 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />— Aktualizacja [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] programu SP1. Aktualizację można pobrać i zainstalować z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />— Silverlight w wersji 4|
+|Wersja 1|-.NET Framework 3,5 z dodatkiem Service Pack 1 (SP1)<br />— Silverlight w wersji 3|
+|Wersja 2|-.NET Framework 4<br />-Aktualizacja do .NET Framework 3,5 z dodatkiem SP1. Aktualizację można pobrać i zainstalować z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />— Silverlight w wersji 4|
 |Wersja 3|— Możesz pobrać i zainstalować wersję wstępną, która obsługuje protokół OData w wersji 3 z [Centrum pobierania Microsoft](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Wersje metadanych
  Domyślnie program Usługi danych programu WCF reprezentuje model danych przy użyciu wersji 1,1 CSDL. Jest to zawsze przypadek dla modeli danych opartych na dostawcy odbicia lub niestandardowym dostawcy usługi danych. Jeśli jednak model danych jest zdefiniowany przy użyciu Entity Framework, zwracana wersja usługi CSDL jest taka sama jak wersja używana przez Entity Framework. Wersja CSDL jest określana na podstawie przestrzeni nazw [elementu schematu (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#schema-element-csdl).
 
- Element zwracanych metadanych również `DataServiceVersion` zawiera atrybut, który ma taką samą wartość jak `DataServiceVersion` nagłówek w komunikacie odpowiedzi. `DataServices` Aplikacje klienckie, takie jak okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, wykorzystują te informacje w celu wygenerowania klas usługi danych klienta, które działają poprawnie z wersją usługi danych programu WCF, która obsługuje usługę danych. Aby uzyskać więcej informacji, [zobacz OData: Przechowywanie wersji](https://go.microsoft.com/fwlink/?LinkId=186071)protokołu.
+ Element `DataServices` zwracanych metadanych również zawiera atrybut `DataServiceVersion`, który ma taką samą wartość jak nagłówek `DataServiceVersion` w komunikacie odpowiedzi. Aplikacje klienckie, takie jak okno dialogowe **Dodaj odwołanie do usługi** w programie Visual Studio, wykorzystują te informacje w celu wygenerowania klas usługi danych klienta, które działają poprawnie z wersją usługi danych programu WCF, która obsługuje usługę danych. Aby uzyskać więcej informacji, zobacz Usługa [OData: obsługa wersji protokołu](https://go.microsoft.com/fwlink/?LinkId=186071).
 
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: Filtruj dla elementu opcjonalnego (C#)'
+title: Jak odfiltrować element opcjonalny (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253818"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141255"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Instrukcje: Filtruj dla elementu opcjonalnego (C#)
-Czasami chcesz odfiltrować element, chociaż nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno zostać wykonane, aby Jeśli określony element nie ma elementu podrzędnego, nie zostanie wyzwolony wyjątek odwołania o wartości null przez filtrowanie dla niego. W poniższym przykładzie `Child5` element nie `Type` ma elementu podrzędnego, ale zapytanie jest nadal wykonywane poprawnie.  
+# <a name="how-to-filter-on-an-optional-element-c"></a>Jak odfiltrować element opcjonalny (C#)
+Czasami chcesz odfiltrować element, chociaż nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno zostać wykonane, aby Jeśli określony element nie ma elementu podrzędnego, nie zostanie wyzwolony wyjątek odwołania o wartości null przez filtrowanie dla niego. W poniższym przykładzie element `Child5` nie ma `Type` elementu podrzędnego, ale zapytanie jest nadal wykonywane poprawnie.  
   
 ## <a name="example"></a>Przykład  
- Ten przykład używa <xref:System.Xml.Linq.Extensions.Elements%2A> metody rozszerzenia.  
+ W tym przykładzie zastosowano metodę rozszerzenia <xref:System.Xml.Linq.Extensions.Elements%2A>.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root>  

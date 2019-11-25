@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 95942e9818eccc018c123148949c6f2dee4fa6e0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736624"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140767"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding >
 Definiuje powiązanie, które zapewnia obsługę kolejkowania przez kierowanie komunikatów za pośrednictwem usługi MSMQ.  
@@ -62,7 +62,7 @@ Definiuje powiązanie, które zapewnia obsługę kolejkowania przez kierowanie k
 |exactlyOnce|Wartość logiczna wskazująca, czy każdy komunikat jest dostarczany tylko raz. Nadawca zostanie powiadomiony o błędach dostawy. Gdy `durable` jest `false`, ten atrybut jest ignorowany i komunikaty są przesyłane bez gwarancji dostarczania. Wartość domyślna to `true`. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Dodatnia liczba całkowita, która określa maksymalny rozmiar komunikatu (w bajtach, włącznie z nagłówkami) przetwarzanych przez to powiązanie. Nadawca komunikatu przekraczającego ten limit otrzyma błąd protokołu SOAP. Odbiorca odrzuca komunikat i tworzy wpis zdarzenia w dzienniku śledzenia. Wartość domyślna to 65536. Ta wartość związana z rozmiarem komunikatu jest przeznaczona do ograniczania narażenia na ataki typu "odmowa usługi" (DoS).|  
 |maxRetryCycles|Liczba całkowita, która wskazuje liczbę ponownych prób używanych przez funkcję wykrywania skażonych komunikatów. Komunikat jest skażony komunikatem, gdy nie powiedzie się wszystkie próby dostarczenia wszystkich cykli. Wartość domyślna to 2. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|nazwa|Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|nazwa|Ciąg zawierający nazwę konfiguracji powiązania. Ta wartość powinna być unikatowa, ponieważ jest używana jako identyfikacja dla powiązania. Począwszy od .NET Framework 4, powiązania i zachowania nie muszą mieć nazwy. Aby uzyskać więcej informacji na temat konfiguracji domyślnej i powiązań pustego i zachowań, zobacz [Uproszczona konfiguracja](../../../wcf/simplified-configuration.md) i [Uproszczona konfiguracja dla usług WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Wartość <xref:System.TimeSpan>, która określa interwał czasu podanego do ukończenia operacji otwierania. Ta wartość powinna być większa lub równa <xref:System.TimeSpan.Zero>. Wartość domyślna to 00:01:00.|  
 |receiveErrorHandling|Wartość <xref:System.ServiceModel.ReceiveErrorHandling>, która określa sposób obsługi komunikatów trujących i niewysyłających.|  
 |receiveRetryCount|Liczba całkowita określająca maksymalną liczbę natychmiastowych ponownych prób, która powinna zostać podjęta przez Menedżera kolejki, jeśli transmisja komunikatu z kolejki aplikacji do aplikacji zakończy się niepowodzeniem.<br /><br /> Jeśli zostanie osiągnięta maksymalna liczba prób dostarczenia, a wiadomość nie jest używana przez aplikację, komunikat jest wysyłany do kolejki ponownych prób w celu ponownego dostarczenia w późniejszym czasie. Czas, po którym komunikat jest przesyłany z powrotem do kolejki wysyłania, jest kontrolowany przez `retryCycleDelay`. Jeśli cykle ponowień osiągną wartość `maxRetryCycles`, komunikat jest wysyłany do kolejki trujących komunikatów lub do nadawcy zostanie wysłane negatywne potwierdzenie.|  

@@ -2,12 +2,12 @@
 title: Operacje łączenia (C#)
 ms.date: 07/20/2015
 ms.assetid: 890ee104-c590-457e-8a7f-b2b5da0fb417
-ms.openlocfilehash: 43fb9c2768dd3b055b693967a548cc2826972f9c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: f02e323e673e46f4e7ba4a6005c86b7f9050f8ef
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594675"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141525"
 ---
 # <a name="concatenation-operations-c"></a>Operacje łączenia (C#)
 Konkatenacja odnosi się do operacji dołączania jednej sekwencji do innej.  
@@ -28,4 +28,4 @@ Konkatenacja odnosi się do operacji dołączania jednej sekwencji do innej.
 
 - <xref:System.Linq>
 - [Standardowe operatory zapytań — OmówienieC#()](./standard-query-operators-overview.md)
-- [Instrukcje: Łączenie i porównywanie kolekcji ciągów (LINQ)C#()](./how-to-combine-and-compare-string-collections-linq.md)
+- [Łączenie i porównywanie kolekcji ciągów (LINQ) (C#)](./how-to-combine-and-compare-string-collections-linq.md)

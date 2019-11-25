@@ -1,30 +1,30 @@
 ---
-title: 'Usługa: Błędy walidacji zabezpieczeń i uwierzytelniania'
+title: 'Usługa: Błędy walidacji i uwierzytelniania'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613573"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204582"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Usługa: Błędy walidacji zabezpieczeń i uwierzytelniania
-Nazwa komputera: Błędy walidacji zabezpieczeń i uwierzytelniania  
+# <a name="service-security-validation-and-authentication-failures"></a>Usługa: Błędy walidacji i uwierzytelniania
+Counter name: Security Validation and Authentication Failures  
   
 ## <a name="description"></a>Opis  
- Ten licznik jest zwiększany, gdy komunikat zostanie odrzucony, ze względu na problem z zabezpieczeniami nie pasuje do żadnego licznika "Zabezpieczenia połączeń nie masz praw". Takie problemy obejmują:  
+ This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
   
-- Nie można odczytać tokenu klienta z komunikatu.  
+- Client token cannot be read from the message.  
   
-- Token klienta nie powiodło się uwierzytelnianie (na przykład,, nieprawidłowe hasło).  
+- Client token has failed authentication (for example, bad password).  
   
-- Weryfikacja podpisu nie powiodła się (na przykład,, wiadomości zostały zmodyfikowane).  
+- Signature verification has failed (for example, the message has been tampered).  
   
-- Komunikat jest duplikatem z poprzedniej wersji, która może się zdarzyć podczas ataku powtarzania.  
+- The message is a duplicate from a previous one, which can happen during a replay attack.  
   
-- Wystąpił błąd odszyfrowywania.  
+- A decryption failure has occurred.  
   
-- Niektóre wymagane elementy (na przykład,, brak sygnatur czasowych lub zaszyfrowanych danych, blokowanie) brakuje wiadomości.  
+- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
   
-- Wystąpił błąd podczas uzgadniania TLSNEGO/SPNEGO.
+- Errors have occurred during TLSNEGO/SPNEGO handshake.

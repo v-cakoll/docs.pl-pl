@@ -1,29 +1,29 @@
 ---
-title: Tworzenie drzew XML (Visual Basic)
+title: Tworzenie drzew XML
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 971b1a31c016eb88c80a8898cb92d7e6ad28d34e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62028489"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354282"
 ---
-# <a name="creating-xml-trees-visual-basic"></a>Tworzenie drzew XML (Visual Basic)
-Jednym z najbardziej typowych zadań XML jest Konstruowanie drzewa XML. W tej sekcji opisano kilka sposobów, aby je tworzyli.  
+# <a name="creating-xml-trees-visual-basic"></a>Creating XML Trees (Visual Basic)
+One of the most common XML tasks is constructing an XML tree. This section describes several ways to create them.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|Zawiera omówienie konstrukcja funkcjonalna w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Konstrukcja funkcjonalna umożliwia tworzenie całości lub części drzewa XML w pojedynczej instrukcji. Tym temacie przedstawiono również sposób osadzania zapytania podczas tworzenia drzewa XML.|  
-|[Wprowadzenie do literałów XML w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)|Zawiera szybkie wprowadzenie do tworzenia drzew w języku Visual Basic przy użyciu literałów XML. Ten temat zawiera łącza do dokumentacji języka Visual Basic literałów XML.|  
-|[Klonowanie a Trwa dołączanie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/cloning-vs-attaching.md)|Ilustruje różnicę między dodawania węzłów z istniejącym drzewie XML (węzły są klonowane, a następnie dodawany) i węzły z elementu nadrzędnego (są one po prostu dołączone).|  
-|[Analizowanie kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)|Pokazuje, jak przeanalizować kodu XML z różnych źródeł. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] stanowi warstwę w górnej części <xref:System.Xml.XmlReader>, który jest używany do nemohla analyzovat kód XML.|  
-|[Instrukcje: Wypełnianie drzewa XML elementem XmlWriter (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|Pokazuje, jak wypełnianie drzewa XML przy użyciu <xref:System.Xml.XmlWriter>.|  
-|[Instrukcje: Weryfikowanie przy użyciu XSD (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Przedstawiono sposób sprawdzania poprawności drzewa XML przy użyciu XSD.|  
-|[Weryfikowanie zawartości obiektów XElement i XDocument](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|W tym artykule opisano prawidłowe argumenty, które mogą być przekazywane do konstruktorów i metod, które są używane do dodawania zawartości do elementów i dokumentów.|  
+|[Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)|Provides an overview of functional construction in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Functional construction enables you to create all or part of your XML tree in a single statement. This topic also shows how to embed queries when constructing an XML tree.|  
+|[Introduction to XML Literals in Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-xml-literals.md)|Provides a quick introduction to creating trees in Visual Basic by using XML literals. This topic includes links to the Visual Basic documentation of XML literals.|  
+|[Cloning vs. Attaching (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/cloning-vs-attaching.md)|Demonstrates the difference between adding nodes from an existing XML tree (nodes are cloned and then added) and adding nodes with no parent (they are simply attached).|  
+|[Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)|Shows how to parse XML from a variety of sources. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] is layered on top of <xref:System.Xml.XmlReader>, which is used to parse the XML.|  
+|[How to: Populate an XML Tree with an XmlWriter (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md)|Shows how to populate an XML tree by using an <xref:System.Xml.XmlWriter>.|  
+|[How to: Validate Using XSD (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Shows how to validate an XML tree using XSD.|  
+|[Weryfikowanie zawartości obiektów XElement i XDocument](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|Describes the valid arguments that can be passed to the constructors and methods that are used to add content to elements and documents.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Przewodnik programowania (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

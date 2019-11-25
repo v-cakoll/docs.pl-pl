@@ -1,15 +1,15 @@
 ---
-title: 'Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)'
+title: Jak obliczyć wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594035"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141374"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Instrukcje: Obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Jak obliczyć wartości kolumn w pliku tekstowym CSV (LINQ) (C#)
 Ten przykład pokazuje, jak wykonywać obliczenia zagregowane, takie jak sum, Average, min i Max w kolumnach pliku CSV. Przykładowe zasady, które są wyświetlane w tym miejscu, można zastosować do innych typów tekstu strukturalnego.  
   
 ## <a name="to-create-the-source-file"></a>Aby utworzyć plik źródłowy  
@@ -156,10 +156,10 @@ class SumColumns
  */  
 ```  
   
- Zapytanie działa przy użyciu <xref:System.String.Split%2A> metody, aby przekonwertować każdy wiersz tekstu na tablicę. Każdy element tablicy reprezentuje kolumnę. Na koniec tekst w każdej kolumnie jest konwertowany na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielanym tabulatorami, po prostu zaktualizuj argument w `Split` metodzie do. `\t`  
+ Zapytanie działa przy użyciu metody <xref:System.String.Split%2A>, aby przekonwertować każdy wiersz tekstu na tablicę. Każdy element tablicy reprezentuje kolumnę. Na koniec tekst w każdej kolumnie jest konwertowany na jego reprezentację liczbową. Jeśli plik jest plikiem rozdzielanym tabulatorami, po prostu zaktualizuj argument w metodzie `Split`, aby `\t`.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. LINQ i system.IO.  
+ Utwórz projekt C# aplikacji konsolowej z `using` dyrektywami dotyczącymi przestrzeni nazw System. Linq i system.IO.  
   
 ## <a name="see-also"></a>Zobacz także
 

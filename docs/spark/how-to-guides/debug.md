@@ -4,12 +4,12 @@ description: Dowiedz się, jak debugować aplikację .NET for Apache Spark w sys
 ms.date: 08/15/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: dcaca96f6eb871c15a37adc18190b073c63c8e93
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 098c7519fe99ef04773c5e4b81685ca0f06f1272
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206142"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281528"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>Debugowanie aplikacji .NET dla Apache Spark
 
@@ -29,13 +29,13 @@ spark-submit \
 
 Po uruchomieniu polecenia są wyświetlane następujące dane wyjściowe:
 
-```
+```console
 ***********************************************************************
 * .NET Backend running debug mode. Press enter to exit *
 ***********************************************************************
 ```
 
-W tym trybie debugowania program `DotnetRunner` nie uruchamia aplikacji .NET, ale czeka na nawiązanie połączenia. Pozostaw otwarte okno wiersza polecenia.
+W tym trybie debugowania `DotnetRunner` nie uruchomi aplikacji .NET, ale oczekuje na nawiązanie połączenia. Pozostaw otwarte okno wiersza polecenia.
 
 Teraz można uruchomić aplikację .NET z dowolnym debugerem w celu debugowania aplikacji.
 
@@ -54,7 +54,7 @@ spark-submit \
 
 Po uruchomieniu polecenia Dołącz debuger do uruchomionego procesu za pomocą [IntelliJ](https://www.jetbrains.com/help/idea/attaching-to-local-process.html).
 
-## <a name="next-steps"></a>Następne kroki
+## <a name="next-steps"></a>Kolejne kroki
 
 * [Wprowadzenie do platformy .NET dla Apache Spark](../tutorials/get-started.md)
 * [Wdrażanie aplikacji platformy .NET dla Apache Spark w usłudze Azure HDInsight](../tutorials/hdinsight-deployment.md)

@@ -1,45 +1,47 @@
 ---
-title: Programowanie w Visual Basic
+title: Programming
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352106"
 ---
 # <a name="programming-in-visual-basic"></a>Programowanie w Visual Basic
-W tej sekcji omówiono zadania programistyczne, które warto dowiedzieć się, jak utworzyć aplikację Visual Basic.  
+
+This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
+
  [Uzyskiwanie dostępu do zasobów komputera](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- Zawiera dokumentację dotyczącą sposobu korzystania z obiektu `My.Computer` w celu uzyskania dostępu do informacji o komputerze, na którym działa aplikacja, oraz o sposobie sterowania komputerem.  
+ Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.  
   
  [Rejestrowanie informacji z aplikacji](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- Zawiera dokumentację dotyczącą rejestrowania informacji z aplikacji przy użyciu obiektów `My.Application.Log` i `My.Log` oraz sposobu, w jaki można zwiększyć możliwości rejestrowania aplikacji.  
+ Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.  
   
  [Uzyskiwanie dostępu do danych użytkownika](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- Zawiera dokumentację zadań, które można wykonać przy użyciu obiektu `My.User`.  
+ Contains documentation on tasks that you can accomplish using the `My.User` object.  
   
  [Uzyskiwanie dostępu do formularzy aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- Zawiera dokumentację dotyczącą uzyskiwania dostępu do formularzy aplikacji przy użyciu obiektów `My.Forms` i `My.Application`.  
+ Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.  
   
  [Uzyskiwanie dostępu do usług sieci Web aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- Zawiera dokumentację dotyczącą sposobu uzyskiwania dostępu do usług sieci Web, do których odwołuje się aplikacja, przy użyciu obiektu `My.WebServices`.  
+ Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.  
   
  [Uzyskiwanie dostępu do ustawień aplikacji](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- Zawiera dokumentację dotyczącą uzyskiwania dostępu do ustawień aplikacji za pomocą obiektu `My.Settings`.  
+ Contains documentation on accessing an application's settings using the `My.Settings` object.  
   
  [Przetwarzanie dysków, katalogów i plików](drives-directories-files/index.md)  
- Zawiera dokumentację dotyczącą sposobu uzyskiwania dostępu do systemu plików przy użyciu obiektu `My.Computer.FileSystem`.  
+ Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Funkcje języka Visual Basic](../../../visual-basic/programming-guide/language-features/index.md)
+- [Visual Basic Language Features](../../../visual-basic/programming-guide/language-features/index.md)
 - [Pojęcia związane z programowaniem](../../../visual-basic/programming-guide/concepts/index.md)
 - [Kolekcje](../../../visual-basic/programming-guide/concepts/collections.md)
-- [Tworzenie aplikacji za pomocą Visual Basic](../../../visual-basic/developing-apps/index.md)
+- [Developing Applications with Visual Basic](../../../visual-basic/developing-apps/index.md)

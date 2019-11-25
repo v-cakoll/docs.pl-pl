@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic'
+title: 'How to: Declare and Call a Default Property'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,86 +10,86 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01188ed8a9ff4da95a6975dcac3509625fdffb2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665770"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349680"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic
-A *właściwość domyślna* jest właściwością klasy lub struktury, których Twój kod może uzyskać dostęp bez określania go. Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, Visual Basic jest rozpoznawana jako dostęp do tej klasy lub struktury domyślnej właściwości jeśli taka istnieje.  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic
+A *default property* is a class or structure property that your code can access without specifying it. When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.  
   
- Klasa lub struktura może mieć co najwyżej jeden domyślny właściwości. Jednak można przeciążać właściwości domyślne i mieć więcej niż jedną wersję.  
+ A class or structure can have at most one default property. However, you can overload a default property and have more than one version of it.  
   
- Aby uzyskać więcej informacji, zobacz temat [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
+ For more information, see [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### <a name="to-declare-a-default-property"></a>Aby zadeklarować właściwość domyślną  
+### <a name="to-declare-a-default-property"></a>To declare a default property  
   
-1. Zadeklaruj właściwość w normalny sposób. Nie określaj `Shared` lub `Private` — słowo kluczowe.  
+1. Declare the property in the normal way. Do not specify the `Shared` or `Private` keyword.  
   
-2. Obejmują `Default` — słowo kluczowe w deklaracji właściwości.  
+2. Include the `Default` keyword in the property declaration.  
   
-3. Określ co najmniej jeden parametr dla właściwości. Nie można zdefiniować domyślnej właściwości, które nie wymaga co najmniej jednego argumentu.  
+3. Specify at least one parameter for the property. You cannot define a default property that does not take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
-### <a name="to-call-a-default-property"></a>Aby wywoływanie w właściwości domyślnej  
+### <a name="to-call-a-default-property"></a>To call a default property  
   
-1. Zadeklaruj zmienną typu zawierającego klasy lub struktury.  
+1. Declare a variable of the containing class or structure type.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2. Użyj nazwy zmiennej wyłącznie w wyrażeniu, w których zwykle zawierałoby nazwę właściwości.  
+2. Use the variable name alone in an expression where you would normally include the property name.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3. Postępuj zgodnie z nazwą zmiennej listy argumentów w nawiasach. Domyślna właściwość musi mieć co najmniej jednego argumentu.  
+3. Follow the variable name with an argument list in parentheses. A default property must take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4. Aby pobrać wartość właściwości domyślne, za pomocą nazwę zmiennej listy argumentów, w wyrażeniu lub równości (`=`) Zaloguj się w instrukcji przypisania.  
+4. To retrieve the default property value, use the variable name, with an argument list, in an expression or following the equal (`=`) sign in an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5. Aby ustawić właściwości wartość domyślna, nazwa zmiennej za pomocą listy argumentów, po lewej stronie instrukcji przypisania.  
+5. To set the default property value, use the variable name, with an argument list, on the left side of an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6. Zawsze można określić nazwę właściwości domyślnej wraz z nazwą zmiennej, tak jak dostęp do wszystkich innych właściwości.  
+6. You can always specify the default property name together with the variable name, just as you would do to access any other property.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład deklaruje właściwości domyślnej klasy.  
+ The following example declares a default property on a class.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład pokazuje, jak wywoływanie w właściwości domyślnej `myProperty` klasy `class1`. Instrukcje przypisania trzy przechowywać wartości w `myProperty`i <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> wywołanie odczytuje wartości.  
+ The following example demonstrates how to call the default property `myProperty` on class `class1`. The three assignment statements store values in `myProperty`, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> call reads the values.  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
- Najczęściej właściwości domyślnej jest <xref:Microsoft.VisualBasic.Collection.Item%2A> właściwość różnych klas kolekcji.  
+ The most common use of a default property is the <xref:Microsoft.VisualBasic.Collection.Item%2A> property on various collection classes.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Właściwości domyślnych może spowodować zmniejszenie małe znaki kodu źródłowego, ale mogą robić więjsze kodu czytelność. Jeśli kod wywołujący nie są zaznajomieni z klasy lub struktury, jeśli go nawiązuje odwołanie do nazwy klasy lub struktury nie może być określone czy tego odwołania uzyskuje dostęp do, klasa lub struktura lub domyślnej właściwości. Może to prowadzić do błędów kompilatora lub błędy subtelne logiki czasu wykonywania.  
+ Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
   
- Trochę zmniejsza ryzyko wystąpienia błędów właściwości domyślne przy użyciu zawsze [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md) ustawienie typu kompilatora sprawdzanie `On`.  
+ You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
   
- Jeśli planujesz użyć wstępnie zdefiniowanych klasy lub struktury w kodzie, należy określić, czy ma ona właściwości domyślnej, a jeśli tak, jakie jego nazwa jest.  
+ If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
   
- Z powodu niedogodności należy rozważyć nie definiuje właściwości domyślnych. Aby zwiększyć czytelność kodu należy również wziąć pod uwagę zawsze odwołujące się do wszystkich właściwości jawnie, nawet domyślne właściwości.  
+ Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Default](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
-- [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
-- [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [Instrukcje: Umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
-- [Instrukcje: Pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
+- [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
+- [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)
+- [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

@@ -1,78 +1,78 @@
 ---
-title: 'Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego (Visual Basic)'
+title: 'Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inferring property names [Visual Basic]
 - anonymous types [Visual Basic], inferring property names and types
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
-ms.openlocfilehash: 5bd4e0a760bcedf8f5e96c2cebe3a71b9050a420
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 89a39e8e9cd66b1d774da70be47c7c6824cccef2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582281"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350035"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego (Visual Basic)
 
-Typy anonimowe nie zapewniają mechanizmu bezpośredniego określania typów danych właściwości. Typy wszystkich właściwości są wywnioskowane. W poniższym przykładzie typy `Name` i `Price` są wywnioskowane bezpośrednio z wartości, które są używane do ich zainicjowania.
+Anonymous types provide no mechanism for directly specifying the data types of properties. Types of all properties are inferred. In the following example, the types of `Name` and `Price` are inferred directly from the values that are used to initialize them.
 
 [!code-vb[VbVbalrAnonymousTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#1)]
 
-Typy anonimowe mogą również wywnioskować nazwy właściwości i typy z innych źródeł. Poniższe sekcje zawierają listę warunków, w których można wywnioskować, oraz przykłady sytuacji, w których nie jest.
+Anonymous types can also infer property names and types from other sources. The sections that follow provide a list of the circumstances where inference is possible, and examples of situations where it is not.
 
-## <a name="successful-inference"></a>Pomyślne wnioskowanie
+## <a name="successful-inference"></a>Successful Inference
 
-#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Typy anonimowe mogą wywnioskować nazwy właściwości i typy z następujących źródeł:
+#### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>Anonymous types can infer property names and types from the following sources:
 
-- Z nazw zmiennych. @No__t_0 typu anonimowego będą mieć dwie właściwości, `productName` i `productPrice`. Ich typy danych będą odpowiednio do oryginalnych zmiennych, `String` i `Double`.
+- From variable names. Anonymous type `anonProduct` will have two properties, `productName` and `productPrice`. Their data types will be those of the original variables, `String` and `Double`, respectively.
 
   [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]
 
-- Z nazw właściwości lub pól innych obiektów. Rozważmy na przykład obiekt `car` typu `CarClass`, który zawiera `Name` i `ID` właściwości. Aby utworzyć nowe wystąpienie typu anonimowego, `car1`, z właściwościami `Name` i `ID`, które są inicjowane za pomocą wartości z obiektu `car`, można napisać następujące elementy:
+- From property or field names of other objects. For example, consider a `car` object of a `CarClass` type that includes `Name` and `ID` properties. To create a new anonymous type instance, `car1`, with `Name` and `ID` properties that are initialized with the values from the `car` object, you can write the following:
 
   [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]
 
-  Poprzednia deklaracja jest równoznaczna z dłuższym wierszem kodu, który definiuje typ anonimowy `car2`.
+  The previous declaration is equivalent to the longer line of code that defines anonymous type `car2`.
 
   [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]
 
-- Z nazw elementów członkowskich XML.
+- From XML member names.
 
   [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]
 
-  Typ otrzymany dla `anon` będzie miał jedną właściwość, `Book`, typu <xref:System.Collections.IEnumerable> (z XElement).
+  The resulting type for `anon` would have one property, `Book`, of type <xref:System.Collections.IEnumerable>(Of XElement).
 
-- Z funkcji, która nie ma parametrów, takich jak `SomeFunction`, w poniższym przykładzie.
+- From a function that has no parameters, such as `SomeFunction` in the following example.
 
   ```vb
   Dim sc As New SomeClass
   Dim anon1 = New With {Key sc.SomeFunction()}
   ```
 
-  Zmienna `anon2` w poniższym kodzie jest typem anonimowym, który ma jedną właściwość, znak o nazwie `First`. Ten kod będzie wyświetlał literę "E", która jest zwracana przez funkcję <xref:System.Linq.Enumerable.First%2A>.
+  The variable `anon2` in the following code is an anonymous type that has one property, a character named `First`. This code will display a letter "E," the letter that is returned by function <xref:System.Linq.Enumerable.First%2A>.
 
   [!code-vb[VbVbalrAnonymousTypes#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#13)]
 
-## <a name="inference-failures"></a>Błędy wnioskowania
+## <a name="inference-failures"></a>Inference Failures
 
-#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Wnioskowanie o nazwach zakończy się niepowodzeniem w wielu sytuacjach, w tym:
+#### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>Name inference will fail in many circumstances, including the following:
 
-- Wnioskowanie pochodzi z wywołania metody, konstruktora lub właściwości sparametryzowanej, która wymaga argumentów. Poprzednia deklaracja `anon1` kończy się niepowodzeniem, jeśli `someFunction` ma jeden lub więcej argumentów.
+- The inference derives from the invocation of a method, a constructor, or a parameterized property that requires arguments. The previous declaration of `anon1` fails if `someFunction` has one or more arguments.
 
   ```vb
   ' Not valid.
   ' Dim anon3 = New With {Key sc.someFunction(someArg)}
   ```
 
-  Przypisanie do nowej nazwy właściwości rozwiązuje problem.
+  Assignment to a new property name solves the problem.
 
   ```vb
   ' Valid.
   Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}
   ```
 
-- Wnioskowanie pochodzi z wyrażenia złożonego.
+- The inference derives from a complex expression.
 
   ```vb
   Dim aString As String = "Act "
@@ -80,22 +80,22 @@ Typy anonimowe mogą również wywnioskować nazwy właściwości i typy z innyc
   ' Dim label = New With {Key aString & "IV"}
   ```
 
-  Błąd można rozwiązać, przypisując wynik wyrażenia do nazwy właściwości.
+  The error can be resolved by assigning the result of the expression to a property name.
 
   [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]
 
-- Wnioskowanie dla wielu właściwości tworzy dwie lub więcej właściwości, które mają taką samą nazwę. Odwołując się do deklaracji we wcześniejszych przykładach, nie można wyświetlić jednocześnie `product.Name` i `car1.Name` jako właściwości tego samego typu anonimowego. Wynika to z faktu, że wywnioskowany identyfikator dla każdego z nich będzie `Name`.
+- Inference for multiple properties produces two or more properties that have the same name. Referring back to declarations in earlier examples, you cannot list both `product.Name` and `car1.Name` as properties of the same anonymous type. This is because the inferred identifier for each of these would be `Name`.
 
   ```vb
   ' Not valid.
   ' Dim anon5 = New With {Key product.Name, Key car1.Name}
   ```
 
-  Problem można rozwiązać, przypisując wartości do nazw odrębnych właściwości.
+  The problem can be solved by assigning the values to distinct property names.
 
   [!code-vb[VbVbalrAnonymousTypes#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#36)]
 
-  Należy pamiętać, że zmiany w wielkości liter (zmiany między dużymi i małymi literami) nie tworzą odrębnych nazw.
+  Note that changes in case (changes between uppercase and lowercase letters) do not make two names distinct.
 
   ```vb
   Dim price = 0
@@ -103,18 +103,18 @@ Typy anonimowe mogą również wywnioskować nazwy właściwości i typy z innyc
   ' Dim anon7 = New With {Key product.Price, Key price}
   ```
 
-- Typ początkowy i wartość jednej właściwości zależy od innej właściwości, która nie została jeszcze ustanowiona. Na przykład `.IDName = .LastName` nie jest prawidłowy w deklaracji typu anonimowego, chyba że `.LastName` jest już zainicjowany.
+- The initial type and value of one property depends on another property that is not yet established. For example, `.IDName = .LastName` is not valid in an anonymous type declaration unless `.LastName` is already initialized.
 
   ```vb
   ' Not valid.
   ' Dim anon8 = New With {Key .IDName = .LastName, Key .LastName = "Jones"}
   ```
 
-  W tym przykładzie można rozwiązać ten problem, odwracając kolejność, w której są zadeklarowane właściwości.
+  In this example, you can fix the problem by reversing the order in which the properties are declared.
 
   [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]
 
-- Nazwa właściwości typu anonimowego jest taka sama jak nazwa elementu członkowskiego <xref:System.Object>. Na przykład następująca deklaracja kończy się niepowodzeniem, ponieważ `Equals` jest metodą <xref:System.Object>.
+- A property name of the anonymous type is the same as the name of a member of <xref:System.Object>. For example, the following declaration fails because `Equals` is a method of <xref:System.Object>.
 
   ```vb
   ' Not valid.
@@ -122,7 +122,7 @@ Typy anonimowe mogą również wywnioskować nazwy właściwości i typy z innyc
   '                       "greater than", Key .Less = "less than"}
   ```
 
-  Problem można rozwiązać, zmieniając nazwę właściwości:
+  You can fix the problem by changing the property name:
 
   [!code-vb[VbVbalrAnonymousTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#16)]
 

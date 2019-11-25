@@ -1,49 +1,49 @@
 ---
-title: 'Porady: zapisywanie informacji o zdarzeniach w pliku tekstowym (Visual Basic)'
+title: 'Porady: zapisywanie informacji o zdarzeniach w pliku tekstowym'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: 54169f1133ed4f77026c4332493a7b5f4532aec0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583284"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352070"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Porady: zapisywanie informacji o zdarzeniach w pliku tekstowym (Visual Basic)
 
-Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informacje o zdarzeniach występujących w aplikacji. W tym przykładzie pokazano, jak za pomocą metody `My.Application.Log.WriteEntry` rejestrować informacje o śledzeniu do pliku dziennika.
+You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application. This example shows how to use the `My.Application.Log.WriteEntry` method to log tracing information to a log file.
 
-### <a name="to-add-and-configure-the-file-log-listener"></a>Aby dodać i skonfigurować odbiornik dziennika plików
+### <a name="to-add-and-configure-the-file-log-listener"></a>To add and configure the file log listener
 
-1. Kliknij prawym przyciskiem myszy plik App. config w **Eksplorator rozwiązań** i wybierz polecenie **Otwórz**.
+1. Right-click app.config in **Solution Explorer** and choose **Open**.
 
-     \- lub-
+     \- or -
 
-     Jeśli nie ma pliku App. config:
+     If there is no app.config file:
 
-    1. W menu **projekt** wybierz polecenie **Dodaj nowy element**.
+    1. On the **Project** menu, choose **Add New Item**.
 
-    2. W oknie dialogowym **Dodaj nowy element** wybierz pozycję **plik konfiguracji aplikacji**.
+    2. From the **Add New Item** dialog box, choose **Application Configuration File**.
 
     3. Kliknij przycisk **Dodaj**.
 
-2. Znajdź sekcję `<listeners>` w pliku konfiguracyjnym aplikacji.
+2. Locate the `<listeners>` section in the application configuration file.
 
-     Sekcja \<listeners >a znajduje się w sekcji \<source > z atrybutem Name "DefaultSource", który jest zagnieżdżony w sekcji \<system. Diagnostics >, która jest zagnieżdżona w obszarze \<configuration najwyższego poziomu > Paragraf.
+     You will find the \<listeners> section in the \<source> section with the name attribute "DefaultSource", which is nested under the \<system.diagnostics> section, which is nested under the top-level \<configuration> section.
 
-3. Dodaj ten element do `<listeners>` sekcji:
+3. Add this element to that `<listeners>` section:
 
     ```xml
     <add name="FileLogListener" />
     ```
 
-4. Znajdź sekcję `<sharedListeners>` w sekcji `<system.diagnostics>` zagnieżdżoną w sekcji `<configuration>` najwyższego poziomu.
+4. Locate the `<sharedListeners>` section in the `<system.diagnostics>` section, nested under the top-level `<configuration>` section.
 
-5. Dodaj ten element do `<sharedListeners>` sekcji:
+5. Add this element to that `<sharedListeners>` section:
 
     ```xml
     <add name="FileLogListener"
@@ -55,16 +55,16 @@ Za pomocą obiektów `My.Application.Log` i `My.Log` można rejestrować informa
         customlocation="c:\temp\" />
     ```
 
-     Zmień wartość atrybutu `customlocation` na katalog dziennika.
+     Change the value of the `customlocation` attribute to the log directory.
 
     > [!NOTE]
-    > Aby ustawić wartość właściwości odbiornika, Użyj atrybutu, który ma taką samą nazwę jak właściwość, z wszystkimi literami w nazwie małymi literami. Na przykład atrybuty `location` i `customlocation` ustawiają wartości <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> i <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> właściwości.
+    > To set the value of a listener property, use an attribute that has the same name as the property, with all letters in the name lowercase. For example, the `location` and `customlocation` attributes set the values of the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> and <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A> properties.
 
-### <a name="to-write-event-information-to-the-file-log"></a>Aby zapisać informacje o zdarzeniu w dzienniku plików
+### <a name="to-write-event-information-to-the-file-log"></a>To write event information to the file log
 
-Użyj metody `My.Application.Log.WriteEntry` lub `My.Application.Log.WriteException` w celu zapisania informacji w dzienniku plików. Aby uzyskać więcej informacji, zobacz [How to: Write log messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
+Use the `My.Application.Log.WriteEntry` or `My.Application.Log.WriteException` method to write information to the file log. For more information, see [How to: Write Log Messages](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md) and [How to: Log Exceptions](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md).
 
-Po skonfigurowaniu odbiornika dziennika plików dla zestawu otrzymuje on wszystkie komunikaty, które `My.Application.Log` zapisu z tego zestawu.
+After you configure the file log listener for an assembly, it receives all messages that `My.Application.Log` writes from that assembly.
 
 ## <a name="see-also"></a>Zobacz także
 

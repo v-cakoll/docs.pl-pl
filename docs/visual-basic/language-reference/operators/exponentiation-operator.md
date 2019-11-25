@@ -1,5 +1,5 @@
 ---
-title: ^ — Operator (Visual Basic)
+title: ^ — Operator
 ms.date: 07/20/2015
 f1_keywords:
 - vb.^
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - powers
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
-ms.openlocfilehash: 8cdfbec917608211e19c39eb37bd12dbc7c4d33f
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: b9860b7b6e076fc9c0288818aa9e4f2c0fc4c356
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592222"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331107"
 ---
 # <a name="-operator-visual-basic"></a>^ — Operator (Visual Basic)
 
-Podnosi liczbę do potęgi innej liczby.
+Raises a number to the power of another number.
 
 ## <a name="syntax"></a>Składnia
 
@@ -34,60 +34,60 @@ number ^ exponent
 ## <a name="parts"></a>Części
 
 `number`\
-Wymagany. Dowolne wyrażenie liczbowe.
+Wymagany. Any numeric expression.
 
 `exponent`\
-Wymagany. Dowolne wyrażenie liczbowe.
+Wymagany. Any numeric expression.
 
 ## <a name="result"></a>Wynik
 
-Wynikiem jest `number` podniesioną do potęgi `exponent`, zawsze jako wartość `Double`.
+The result is `number` raised to the power of `exponent`, always as a `Double` value.
 
-## <a name="supported-types"></a>Obsługiwane typy
+## <a name="supported-types"></a>Supported Types
 
-`Double`. Operandy dowolnego typu są konwertowane na `Double`.
+`Double`., Operands of any different type are converted to `Double`.
 
 ## <a name="remarks"></a>Uwagi
 
-Visual Basic zawsze wykonuje potęgowanie w [podwójnym typie danych](../../../visual-basic/language-reference/data-types/double-data-type.md).
+Visual Basic always performs exponentiation in the [Double Data Type](../../../visual-basic/language-reference/data-types/double-data-type.md).
 
-Wartość `exponent` może być ułamkowa, ujemna lub jednocześnie.
+The value of `exponent` can be fractional, negative, or both.
 
-Gdy w jednym wyrażeniu jest wykonywanych więcej niż jedna potęga, operator `^` jest oceniany, ponieważ występuje od lewej do prawej.
+When more than one exponentiation is performed in a single expression, the `^` operator is evaluated as it is encountered from left to right.
 
 > [!NOTE]
-> Operator `^` może być *przeciążony*, co oznacza, że Klasa lub struktura może przedefiniować jej zachowanie, gdy operand ma typ tej klasy lub struktury. Jeśli Twój kod używa tego operatora dla takiej klasy lub struktury, pamiętaj o tym, aby zrozumieć jego ponownie zdefiniowane zachowanie. Aby uzyskać więcej informacji, zobacz [procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
+> The `^` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład używa operatora `^`, aby podnieść liczbę do potęgi wykładnika. Wynikiem jest pierwszy operand podniesiony do potęgi sekundy.
+The following example uses the `^` operator to raise a number to the power of an exponent. The result is the first operand raised to the power of the second.
 
 [!code-vb[VbVbalrOperators#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#20)]
 
-Poprzedni przykład daje następujące wyniki:
+The preceding example produces the following results:
 
-wartość `exp1` to 4 (2 kwadraty).
+`exp1` is set to 4 (2 squared).
 
-`exp2` jest ustawiona na 19683 (3 Cubed, a następnie wartość cubed).
+`exp2` is set to 19683 (3 cubed, then that value cubed).
 
-`exp3` jest ustawiona na-125 (-5 cubed).
+`exp3` is set to -125 (-5 cubed).
 
-`exp4` jest ustawiona na 625 (-5 do czwartej potęgi).
+`exp4` is set to 625 (-5 to the fourth power).
 
-`exp5` jest ustawiona na 2 (korzeń modułu 8).
+`exp5` is set to 2 (cube root of 8).
 
-`exp6` jest ustawiony na 0,5 (1,0 podzielony przez korzeń modułu 8).
+`exp6` is set to 0.5 (1.0 divided by the cube root of 8).
 
-Zanotuj znaczenie nawiasów w wyrażeniach w poprzednim przykładzie. Ze względu na *pierwszeństwo operatorów*, Visual Basic zwykle wykonuje operator `^` przed innymi, nawet jednoargumentowy operator `–`. Jeśli `exp4` i `exp6` zostały obliczone bez nawiasów, zostałyby utworzone następujące wyniki:
+Note the importance of the parentheses in the expressions in the preceding example. Because of *operator precedence*, Visual Basic normally performs the `^` operator before any others, even the unary `–` operator. If `exp4` and `exp6` had been calculated without parentheses, they would have produced the following results:
 
-`exp4 = -5 ^ 4` zostałyby obliczone jako – (5 do czwartej potęgi), co spowodowałoby 625.
+`exp4 = -5 ^ 4` would be calculated as –(5 to the fourth power), which would result in -625.
 
-`exp6 = 8 ^ -1.0 / 3.0` zostałaby obliczona jako (8 do potęgi – 1 lub 0,125) podzielona przez 3,0, co spowodowałoby 0.041666666666666666666666666666667.
+`exp6 = 8 ^ -1.0 / 3.0` would be calculated as (8 to the –1 power, or 0.125) divided by 3.0, which would result in 0.041666666666666666666666666666667.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [^=, operator](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Operatory arytmetyczne](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Pierwszeństwo operatorów w Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Operator Precedence in Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operatory arytmetyczne w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], DataGrid
 - parts [WPF], DataGrid
 ms.assetid: 9cb31d63-f148-4d25-b079-816e73f988c7
-ms.openlocfilehash: d1ef962132f4c057229c8150a8d49809ce8c7430
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 066e8c9ce1112399be8128d0821498f0d56a3dc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460393"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283803"
 ---
 # <a name="datagrid-styles-and-templates"></a>DataGrid — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.DataGrid>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.DataGrid>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="datagrid-parts"></a>DataGrid — części  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.DataGrid>.  
@@ -35,7 +35,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
 |InvalidFocused|ValidationStates|Formant jest nieprawidłowy i ma fokus.|  
 |InvalidUnfocused|ValidationStates|Formant jest nieprawidłowy i nie ma fokusu.|  
@@ -49,7 +49,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad komórką.|  
 |Fokus|FocusStates|Komórka ma fokus.|  
 |Bez fokusu|FocusStates|Komórka nie ma fokusu.|  
@@ -57,7 +57,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Ustalon|CurrentStates|Komórka nie jest bieżącą komórką.|  
 |Monitor|InteractionStates|Komórka jest w trybie wyświetlania.|  
 |Edytowanie|InteractionStates|Komórka jest w trybie edycji.|  
-|Niezaznaczone|SelectionStates|Komórka jest zaznaczona.|  
+|Wybrane|SelectionStates|Komórka jest zaznaczona.|  
 |Niezaznaczone|SelectionStates|Komórka nie jest zaznaczona.|  
 |InvalidFocused|ValidationStates|Komórka jest nieprawidłowa i ma fokus.|  
 |InvalidUnfocused|ValidationStates|Komórka jest nieprawidłowa i nie ma fokusu.|  
@@ -71,7 +71,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad wierszem.|  
 |MouseOver_Editing|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest w trybie edycji.|  
 |MouseOver_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest zaznaczony.|  
@@ -99,7 +99,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad wierszem.|  
 |MouseOver_CurrentRow|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest bieżącym wierszem.|  
 |MouseOver_CurrentRow_Selected|CommonStates|Wskaźnik myszy znajduje się nad wierszem, a wiersz jest bieżący i wybrany.|  
@@ -148,9 +148,9 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
-|Styczn|CommonStates|Kontrolka zostanie naciśnięty.|  
+|Naciśnięto|CommonStates|Kontrolka zostanie naciśnięty.|  
 |SortAscending|SortStates|Kolumna jest sortowana w kolejności rosnącej.|  
 |SortDescending|SortStates|Kolumna jest sortowana w kolejności malejącej.|  
 |Nieposortowane|SortStates|Kolumna nie jest posortowana.|  
@@ -176,4 +176,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

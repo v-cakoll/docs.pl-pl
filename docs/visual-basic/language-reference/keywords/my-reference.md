@@ -1,32 +1,32 @@
 ---
-title: Moje odwołanie (Visual Basic)
+title: Moje odwołanie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0dbec31504563e581d6d5a97ef7b4b2ac3ee189
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802391"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351697"
 ---
 # <a name="my-reference-visual-basic"></a>Moje odwołanie (Visual Basic)
-`My` Programowania, szybsze i prostsze dzięki funkcji dzięki zapewnieniu intuicyjnych dostępu do najczęściej używanych metod, właściwości i zdarzeń. Poniższa tabela zawiera listę obiektów znajdujących się w `My`i akcji, które mogą być wykonywane przez poszczególne.  
+The `My` feature makes programming faster and easier by giving you intuitive access to commonly used methods, properties, and events. This table lists the objects contained in `My`, and the actions that can be performed with each.  
   
-|**Akcja**|**Obiekt**|  
+|**Action**|**Object**|  
 |----------------|----------------|  
-|Uzyskiwanie dostępu do informacji o aplikacji i usług.|`My.Application` Obiekt składa się z następujących klas:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> zawiera elementy członkowskie, które są dostępne we wszystkich projektach.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> zawiera elementy członkowskie dostępne w aplikacjach Windows Forms.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> zawiera elementy członkowskie dostępne w aplikacji konsoli.|  
-|Uzyskiwanie dostępu do komputera hosta i jej zasobów, usług i danych.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
-|Uzyskiwanie dostępu do formularzy w bieżącym projekcie.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
-|Uzyskiwanie dostępu do dziennika aplikacji.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
-|Uzyskiwanie dostępu do bieżącego żądania sieci web.|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|  
-|Uzyskiwanie dostępu do zasobu elementów.|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
-|Dostęp do bieżącej odpowiedzi sieci web.|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|  
-|Uzyskiwanie dostępu do ustawienia poziomu użytkownika i aplikacji.|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
-|Uzyskiwanie dostępu do kontekstu zabezpieczeń bieżącego użytkownika.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
-|Uzyskiwanie dostępu do usług sieci Web XML odwołuje się do bieżącego projektu.|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
+|Accessing application information and services.|The `My.Application` object consists of the following classes:<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> provides members that are available in all projects.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> provides members available in Windows Forms applications.<br /><br /> <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> provides members available in console applications.|  
+|Accessing the host computer and its resources, services, and data.|`My.Computer` (<xref:Microsoft.VisualBasic.Devices.Computer>)|  
+|Accessing the forms in the current project.|[My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|Accessing the application log.|`My.Application.Log` (<xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log%2A>)|  
+|Accessing the current web request.|[My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)|  
+|Accessing resource elements.|[My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)|  
+|Accessing the current web response.|[My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)|  
+|Accessing user and application level settings.|[My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)|  
+|Accessing the current user's security context.|`My.User` (<xref:Microsoft.VisualBasic.ApplicationServices.User>)|  
+|Accessing XML Web services referenced by the current project.|[My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 

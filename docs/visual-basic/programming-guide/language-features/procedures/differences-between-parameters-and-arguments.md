@@ -1,5 +1,5 @@
 ---
-title: Różnice pomiędzy parametrami i argumentami (Visual Basic)
+title: Różnice pomiędzy parametrami i argumentami
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedures [Visual Basic], arguments
@@ -11,31 +11,31 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4249dbf86bd1bfa7ef08e94059d2880333e9a92
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864250"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341373"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>Różnice pomiędzy parametrami i argumentami (Visual Basic)
-W większości przypadków procedura musi mieć pewne informacje o sytuacjach, w których została wywołana. Procedura, która wykonuje zadania powtórzonych lub udostępnione używa różne informacje dla każdego wywołania. Ten zawiera zmienne, stałe i wyrażeń, które przekazujesz do procedury, gdy wywołujesz ją.  
+In most cases, a procedure must have some information about the circumstances in which it has been called. A procedure that performs repeated or shared tasks uses different information for each call. This information consists of variables, constants, and expressions that you pass to the procedure when you call it.  
   
- Do przekazywania tych informacji do procedury, definiuje procedurę *parametru*, i kod wywołujący przekazuje *argument* do tego parametru. Można traktować jako odstępu parametr i argument jako samochodów. Tak samo, jak różnych samochodów można zrezygnować w odstępu w różnym czasie, kod wywołujący może przekazać innego argumentu do tego samego parametru, za każdym razem, gdy jej wywołuje procedurę.  
+ To communicate this information to the procedure, the procedure defines a *parameter*, and the calling code passes an *argument* to that parameter. You can think of the parameter as a parking space and the argument as an automobile. Just as different automobiles can park in a parking space at different times, the calling code can pass a different argument to the same parameter every time that it calls the procedure.  
   
 ## <a name="parameters"></a>Parametry  
- A *parametr* reprezentuje wartość, która procedura oczekuje przekazania podczas jego wywoływania. Deklaracja procedury definiuje jego parametrów.  
+ A *parameter* represents a value that the procedure expects you to pass when you call it. The procedure's declaration defines its parameters.  
   
- Podczas definiowania `Function` lub `Sub` procedury, należy określić *listy parametrów* w nawiasach bezpośrednio po Nazwa procedury. Dla każdego parametru, należy określić nazwę, typ danych i mechanizm przekazywania ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). Można również określić, że parametr jest opcjonalny. Oznacza to, że kod wywołujący nie ma przekazać wartości.  
+ When you define a `Function` or `Sub` procedure, you specify a *parameter list* in parentheses immediately following the procedure name. For each parameter, you specify a name, a data type, and a passing mechanism ([ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)). You can also indicate that a parameter is optional. This means that the calling code does not have to pass a value for it.  
   
- Nazwa każdego parametru służy jako *zmienna lokalna* w procedurze. Użyj nazwy parametru tak samo jak inne zmienne.  
+ The name of each parameter serves as a *local variable* in the procedure. You use the parameter name the same way you use any other variable.  
   
 ## <a name="arguments"></a>Argumenty  
- *Argument* reprezentuje wartość, którą przekazać do parametru procedury po wywołaniu procedury. Kod wywołujący dostarcza argumentów, gdy wywołuje procedurę.  
+ An *argument* represents the value that you pass to a procedure parameter when you call the procedure. The calling code supplies the arguments when it calls the procedure.  
   
- Gdy wywołujesz `Function` lub `Sub` procedury obejmują *listy argumentów* w nawiasach bezpośrednio po Nazwa procedury. Każdy argument odnosi się do parametru w tej samej pozycji na liście.  
+ When you call a `Function` or `Sub` procedure, you include an *argument list* in parentheses immediately following the procedure name. Each argument corresponds to the parameter in the same position in the list.  
   
- W przeciwieństwie do definicji parametru argumentów nie ma nazwy. Każdy argument jest wyrażenia, które może zawierać zero lub więcej zmiennych, stałych i literały. Typ danych obliczane wyrażenie zazwyczaj powinna być zgodna z typem danych zdefiniowanym dla odpowiedniego parametru, a w każdym przypadku musi być konwertowany na typ parametru.  
+ In contrast to parameter definition, arguments do not have names. Each argument is an expression, which can contain zero or more variables, constants, and literals. The data type of the evaluated expression should typically match the data type defined for the corresponding parameter, and in any case it must be convertible to the parameter type.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -44,8 +44,8 @@ W większości przypadków procedura musi mieć pewne informacje o sytuacjach, w
 - [Procedury funkcji](./function-procedures.md)
 - [Procedury właściwości](./property-procedures.md)
 - [Procedury operatorów](./operator-procedures.md)
-- [Instrukcje: Definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)
-- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Instrukcje: definiowanie parametru dla procedury](./how-to-define-a-parameter-for-a-procedure.md)
+- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
 - [Przekazywanie argumentów według wartości i według odwołania](./passing-arguments-by-value-and-by-reference.md)
 - [Procedury rekursywne](./recursive-procedures.md)
 - [Przeciążanie procedury](./procedure-overloading.md)

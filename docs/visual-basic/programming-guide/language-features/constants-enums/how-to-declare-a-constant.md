@@ -1,5 +1,5 @@
 ---
-title: 'Porady: deklarowanie stałej (Visual Basic)'
+title: 'Porady: deklarowanie stałej'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.constant
@@ -23,43 +23,43 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 8b84ab5e8edebba3048c5cddf723198cf3f28858
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5054d4a4fc02d8bd22efceb01770fc54167d8cb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579923"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347470"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Porady: deklarowanie stałej (Visual Basic)
-Użyj instrukcji `Const`, aby zadeklarować stałą i ustawić jej wartość. Deklarując stałą, należy przypisać do wartości nazwę zrozumiałą. Po zadeklarowaniu stałej nie można jej modyfikować ani przypisywać nowej wartości.  
+You use the `Const` statement to declare a constant and set its value. By declaring a constant, you assign a meaningful name to a value. Once a constant is declared, it cannot be modified or assigned a new value.  
   
- Należy zadeklarować stałą w ramach procedury lub w sekcji deklaracji modułu, klasy lub struktury. Stałe klasy lub struktury są domyślnie `Private`, ale mogą być również deklarowane jako `Public`, `Friend`, `Protected` lub `Protected Friend` dla odpowiedniego poziomu dostępu kodu.  
+ You declare a constant within a procedure or in the declarations section of a module, class, or structure. Class or structure-level constants are `Private` by default, but may also be declared as `Public`, `Friend`, `Protected`, or `Protected Friend` for the appropriate level of code access.  
   
- Stała musi mieć prawidłową nazwę symboliczną (reguły są takie same jak w przypadku tworzenia nazw zmiennych) i wyrażenie składające się ze stałych liczbowych lub ciągów oraz operatorów (ale bez wywołań funkcji).  
+ The constant must have a valid symbolic name (the rules are the same as those for creating variable names) and an expression composed of numeric or string constants and operators (but no function calls).  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-declare-a-constant"></a>Aby zadeklarować stałą  
+### <a name="to-declare-a-constant"></a>To declare a constant  
   
-- Napisz deklarację zawierającą specyfikator dostępu, słowo kluczowe `Const` i wyrażenie, jak w następujących przykładach:  
+- Write a declaration that includes an access specifier, the `Const` keyword, and an expression, as in the following examples:  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     Gdy [opcja wnioskowanie](../../../../visual-basic/language-reference/statements/option-infer-statement.md) jest `Off` i [opcja Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) jest `On`, należy jawnie zadeklarować stałą, określając typ danych (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, 0 , 1, 2, 3 lub 4).  
+     When [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) is `Off` and [Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) is `On`, you must declare a constant explicitly by specifying a data type (`Boolean`, `Byte`, `Char`, `DateTime`, `Decimal`, `Double`, `Integer`, `Long`, `Short`, `Single`, or `String`).  
   
-     Gdy `Option Infer` jest `On` lub `Option Strict` jest `Off`, można zadeklarować stałą bez określania typu danych z klauzulą `As`. Kompilator określa typ stałej z typu wyrażenia. Aby uzyskać więcej informacji, zobacz [typy danych stałej i literału](constant-and-literal-data-types.md).  
+     When `Option Infer` is `On` or `Option Strict` is `Off`, you can declare a constant without specifying a data type with an `As` clause. The compiler determines the type of the constant from the type of the expression. For more information, see [Constant and Literal Data Types](constant-and-literal-data-types.md).  
   
-### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>Aby zadeklarować stałą, która ma jawnie zadeklarowany typ danych  
+### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>To declare a constant that has an explicitly stated data type  
   
-- Napisz deklarację zawierającą słowo kluczowe `As` i jawny typ danych, jak w następujących przykładach:  
+- Write a declaration that includes the `As` keyword and an explicit data type, as in the following examples:  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
-     Można zadeklarować wiele stałych w pojedynczym wierszu, chociaż kod jest bardziej czytelny, Jeśli zadeklarujesz tylko jedną stałą na wiersz. Jeśli zadeklarujesz wiele stałych w pojedynczym wierszu, muszą one mieć taki sam poziom dostępu (`Public`, `Private`, `Friend`, `Protected` lub `Protected Friend`).  
+     You can declare multiple constants on a single line, although your code is more readable if you declare only a single constant per line. If you declare multiple constants on a single line, they must all have the same access level (`Public`, `Private`, `Friend`, `Protected`, or `Protected Friend`).  
   
-### <a name="to-declare-multiple-constants-on-a-single-line"></a>Aby zadeklarować wiele stałych w pojedynczym wierszu  
+### <a name="to-declare-multiple-constants-on-a-single-line"></a>To declare multiple constants on a single line  
   
-- Oddziel deklaracje przecinkami i spacjami, tak jak w poniższym przykładzie:  
+- Separate the declarations with a comma and a space, as in the following example:  
   
     ```vb  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  
@@ -84,7 +84,7 @@ Użyj instrukcji `Const`, aby zadeklarować stałą i ustawić jej wartość. De
 
 - [Wyliczenia — przegląd](enumerations-overview.md)
 - [Stałe — przegląd](constants-overview.md)
-- [Instrukcje: deklarowanie wyliczenia](how-to-declare-enumerations.md)
+- [How to: Declare an Enumeration](how-to-declare-enumerations.md)
 - [Wyliczenia i kwalifikacja nazw](enumerations-and-name-qualification.md)
 - [Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)

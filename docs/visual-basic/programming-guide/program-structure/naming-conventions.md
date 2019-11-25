@@ -1,5 +1,5 @@
 ---
-title: Visual Basic — Konwencje nazewnictwa
+title: Konwencje nazewnictwa
 ms.date: 07/20/2015
 helpviewer_keywords:
 - names [Visual Basic], Visual Basic rules
@@ -10,40 +10,40 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ce8d4c5ede0d722d2c1768b9c2cd7929f296114e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 98fdda2934c9df1b33f41b6e0442a39246efe168
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651234"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347309"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic — Konwencje nazewnictwa
-Nazwa elementu w aplikacji Visual Basic, musi być pierwszym znakiem tej nazwy, litery alfabetu lub znaku podkreślenia. Należy jednak pamiętać, że nazwy rozpoczynające się od znaku podkreślenia nie są zgodne z [niezależność od języka i składniki niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
+When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore. Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
   
- Poniższe sugestie dotyczą nazewnictwa.  
+ The following suggestions apply to naming.  
   
-- Rozpoczęcie każdego wyrazu oddzielne nazwę wielką literą, podobnie jak w `FindLastRecord` i `RedrawMyForm`.  
+- Begin each separate word in a name with a capital letter, as in `FindLastRecord` and `RedrawMyForm`.  
   
-- Rozpocznij nazwy funkcji i metody z zlecenie, podobnie jak w `InitNameArray` lub `CloseDialog`.  
+- Begin function and method names with a verb, as in `InitNameArray` or `CloseDialog`.  
   
-- Rozpocznij klasy, struktury, moduł i nazwy właściwości zawierające rzeczownik, podobnie jak w `EmployeeName` lub `CarAccessory`.  
+- Begin class, structure, module, and property names with a noun, as in `EmployeeName` or `CarAccessory`.  
   
-- Rozpocznij interfejsu nazw z prefiksem "I", następuje rzeczownik lub frazy rzeczownik, takie jak `IComponent`, lub przymiotnikiem, opisujący zachowanie interfejsu, takie jak `IPersistable`. Nie używać znaku podkreślenia i skróty oszczędnie, ponieważ skróty może spowodować błąd.  
+- Begin interface names with the prefix "I", followed by a noun or a noun phrase, like `IComponent`, or with an adjective describing the interface's behavior, like `IPersistable`. Do not use the underscore, and use abbreviations sparingly, because abbreviations can cause confusion.  
   
-- Nazwy programów obsługi zdarzeń zaczynać się od opisujące typ zdarzenia następuje rzeczownik "`EventHandler`"sufiksu, jak w"`MouseEventHandler`".  
+- Begin event handler names with a noun describing the type of event followed by the "`EventHandler`" suffix, as in "`MouseEventHandler`".  
   
-- W polu nazwy klas argument zdarzeń zawierają "`EventArgs`" sufiks.  
+- In names of event argument classes, include the "`EventArgs`" suffix.  
   
-- Jeśli zdarzenie utworzono według koncepcji "before" lub "after", użyj przyrostka, w chwili obecnej czasu teraźniejszego lub przeszłego, podobnie jak w "`ControlAdd`"or"`ControlAdded`".  
+- If an event has a concept of "before" or "after," use a suffix in present or past tense, as in "`ControlAdd`" or "`ControlAdded`".  
   
-- Długa lub często używanych terminów Użyj skrótów zapewnienie długości nazwy rozsądne, na przykład, "HTML", a nie "Formacie HTML". Ogólnie rzecz biorąc nazwy zmiennych, które są większe niż 32 znaki są trudne do odczytania na monitorze równa niskiej rozdzielczości. Ponadto upewnij się, że Twoje skróty są spójne w całej aplikacji. Losowo przełączania w projekcie między "HTML" i "Formacie HTML" można wprowadzać w błąd.  
+- For long or frequently used terms, use abbreviations to keep name lengths reasonable, for example, "HTML", instead of "Hypertext Markup Language". In general, variable names greater than 32 characters are difficult to read on a monitor set to a low resolution. Also, make sure your abbreviations are consistent throughout the entire application. Randomly switching in a project between "HTML" and "Hypertext Markup Language" can lead to confusion.  
   
-- Unikaj używania nazw w zakresie wewnętrznym, które są takie same jak nazwy w zewnętrznym zakresie. Jeśli problem wchodzisz, mogą wystąpić błędy. Jeśli występuje konflikt między zmienną i słowo kluczowe o takiej samej nazwie, należy określić słowo kluczowe, poprzedzając je za pomocą biblioteki odpowiedniego typu. Na przykład, jeśli masz zmienną o nazwie `Date`, można użyć wewnętrznego `Date` funkcji tylko przez wywołanie metody <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
+- Avoid using names in an inner scope that are the same as names in an outer scope. Errors can result if the wrong variable is accessed. If a conflict occurs between a variable and the keyword of the same name, you must identify the keyword by preceding it with the appropriate type library. For example, if you have a variable called `Date`, you can use the intrinsic `Date` function only by calling <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Słowa kluczowe jako nazwy elementów w kodzie](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase i MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Nazwy zadeklarowanych elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Konwencje dotyczące struktury programów i kodu](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
+- [Struktura programu i konwencje związane z kodami](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

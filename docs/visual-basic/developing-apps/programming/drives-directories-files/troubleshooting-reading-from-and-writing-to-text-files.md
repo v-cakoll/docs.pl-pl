@@ -1,5 +1,5 @@
 ---
-title: 'Rozwiązywanie problemów: odczytywanie z oraz zapisywanie w plikach tekstowych (Visual Basic)'
+title: 'Troubleshooting: reading from and writing to text files'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -9,27 +9,32 @@ helpviewer_keywords:
 - writing to files [Visual Basic], troubleshooting
 - reading text files [Visual Basic], troubleshooting
 ms.assetid: a8e9b44d-facb-4718-8c0f-466537171182
-ms.openlocfilehash: 90a04d9de2ac77c28a92d99e1fe118a1f8ecf448
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbc53ca3cc9ae9b2d14b925f891d0409b2b7debd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650053"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333797"
 ---
-# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Rozwiązywanie problemów: odczytywanie z oraz zapisywanie w plikach tekstowych (Visual Basic)
-W tym temacie omówiono typowe problemy występujące podczas pracy z tekstem pliki i sugeruje podejścia do każdego.  
+# <a name="troubleshooting-reading-from-and-writing-to-text-files-visual-basic"></a>Troubleshooting: reading from and writing to text files (Visual Basic)
+
+This topic discusses common problems encountered when working with text files and suggests an approach to each.  
   
-## <a name="common-problems"></a>Typowe problemy  
- Typowe problemy występujące podczas pracy z plikami tekstowymi obejmują wyjątki zabezpieczeń, kodowanie pliku lub nieprawidłowe ścieżki.  
+## <a name="common-problems"></a>Common problems  
+
+ The most common issues encountered when working with text files include security exceptions, file encodings, or invalid paths.  
   
-### <a name="security-exceptions"></a>Wyjątki zabezpieczeń  
- Element <xref:System.Security.SecurityException> jest zgłaszany, gdy wystąpi błąd zabezpieczeń. Często jest to wynik użytkownika, których nie ma wymaganych uprawnień, które mogą zostać rozwiązane przez dodanie uprawnień lub Praca z plikami w wydzielonej pamięci masowej.  
+### <a name="security-exceptions"></a>Security exceptions  
+
+ A <xref:System.Security.SecurityException> is thrown when a security error occurs. This is often a result of the user lacking necessary permissions, which may be solved by adding permissions or working with files in isolated storage.  
   
-### <a name="file-encodings"></a>Kodowanie pliku  
- Określ kodowanie pliku, znany także jako kodowanie znaków do reprezentowania znaków, kiedy przetwarzanie tekstu. Nieoczekiwane znaki w pliku tekstowym mogą wynikać z Nieprawidłowe kodowanie. Dla większości plików jednego formatu kodowania może być preferowane zamiast innego pod względem znaki języków, które mogą lub nie może obsłużyć, chociaż Unicode jest zwykle preferowany. Aby uzyskać więcej informacji, zobacz [kodowanie pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) i <xref:System.Text.Encoding>.  
+### <a name="file-encodings"></a>File encodings  
+
+ File encodings, also known as character encodings, specify how to represent characters when text processing. Unexpected characters in a text file may result from incorrect encoding. For most files, one encoding may be preferable over another in terms of which language characters it can or cannot handle, although Unicode is usually preferred. For more information, see [File Encodings](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md) and <xref:System.Text.Encoding>.  
   
-### <a name="incorrect-paths"></a>Nieprawidłowe ścieżki  
- Podczas analizowania ścieżki plików, szczególnie względnej ścieżki jest łatwe przekazywanie niewłaściwej danych. Można rozwiązać wiele problemów, upewniając się, że są podawania poprawnej ścieżki. Aby uzyskać więcej informacji, zobacz [jak: Analizowanie ścieżek pliku](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
+### <a name="incorrect-paths"></a>Incorrect paths  
+
+ When parsing file paths, particularly relative paths, it is easy to supply the wrong data. Many problems can be corrected by making sure you are supplying the correct path. For more information, see [How to: Parse File Paths](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

@@ -1,5 +1,5 @@
 ---
-title: Char — Typ danych (Visual Basic)
+title: Char — Typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Char
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 8313c2282a3b4b7b035f9f3b685a786c4471f53a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1ed5b19a307d094fc1d5a6bb0251c57052dc9bc1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630143"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344048"
 ---
 # <a name="char-data-type-visual-basic"></a>Char — Typ danych (Visual Basic)
 
-Przechowuje 16-bitowe (2-bajtowe) punkty kodu bez znaku w zakresie wartości z zakresu od 0 do 65535. Każdy *punkt kodu*lub znak, reprezentuje pojedynczy znak Unicode.
+Holds unsigned 16-bit (2-byte) code points ranging in value from 0 through 65535. Each *code point*, or character code, represents a single Unicode character.
 
 ## <a name="remarks"></a>Uwagi
 
-Użyj typu `String`danych, gdy musisz przechowywać tylko jeden znak i nie potrzebujesz nakładu pracy. `Char` W niektórych przypadkach można użyć `Char()` `Char` tablicy elementów, aby przechowywać wiele znaków.
+Use the `Char` data type when you need to hold only a single character and do not need the overhead of `String`. In some cases you can use `Char()`, an array of `Char` elements, to hold multiple characters.
 
-Wartość `Char` domyślna to znak z punktem kodu równym 0.
+The default value of `Char` is the character with a code point of 0.
 
-## <a name="unicode-characters"></a>Znaki Unicode
+## <a name="unicode-characters"></a>Unicode Characters
 
-Pierwsze 128 punktów kodowych (0 – 127) Unicode odpowiada literom i symbolom na standardowej klawiaturze amerykańskiej. Te pierwsze 128 punktów kodowych są takie same jak w zestawie znaków ASCII. Drugie 128 punktów kodowych (128 – 255) reprezentuje znaki specjalne, takie jak litery alfabetu łacińskiego, akcenty, symbole waluty i ułamki. Unicode używa pozostałych punktów kodowych (256-65535) dla wielu różnych symboli, w tym na całym świecie, znaki diakrytyczne i symbole matematyczne i techniczne.
+The first 128 code points (0–127) of Unicode correspond to the letters and symbols on a standard U.S. keyboard. These first 128 code points are the same as those the ASCII character set defines. The second 128 code points (128–255) represent special characters, such as Latin-based alphabet letters, accents, currency symbols, and fractions. Unicode uses the remaining code points (256-65535) for a wide variety of symbols, including worldwide textual characters, diacritics, and mathematical and technical symbols.
 
-Aby określić swoją klasyfikację <xref:System.Char.IsDigit%2A> Unicode <xref:System.Char.IsPunctuation%2A> , można `Char` użyć metod takich jak i na zmiennej.
+You can use methods like <xref:System.Char.IsDigit%2A> and <xref:System.Char.IsPunctuation%2A> on a `Char` variable to determine its Unicode classification.
 
 ## <a name="type-conversions"></a>Konwersje typu
 
-Visual Basic nie konwertuje bezpośrednio między `Char` i typu liczbowego. Można użyć <xref:Microsoft.VisualBasic.Strings.Asc%2A> funkcji lub <xref:Microsoft.VisualBasic.Strings.AscW%2A> , `Char` Aby`Integer` przekonwertować wartość na, która reprezentuje swój punkt kodu. Można użyć <xref:Microsoft.VisualBasic.Strings.Chr%2A> funkcji lub <xref:Microsoft.VisualBasic.Strings.ChrW%2A> , `Integer` Aby`Char` przekonwertować wartość na, która ma ten punkt kodu.
+Visual Basic does not convert directly between `Char` and the numeric types. You can use the <xref:Microsoft.VisualBasic.Strings.Asc%2A> or <xref:Microsoft.VisualBasic.Strings.AscW%2A> function to convert a `Char` value to an `Integer` that represents its code point. You can use the <xref:Microsoft.VisualBasic.Strings.Chr%2A> or <xref:Microsoft.VisualBasic.Strings.ChrW%2A> function to convert an `Integer` value to a `Char` that has that code point.
 
-Jeśli przełącznik sprawdzania typu ( [instrukcja Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest włączona, należy dołączyć znak literału typu do literału ciągu pojedynczego znaku, aby zidentyfikować go jako `Char` typ danych. Ilustruje to poniższy przykład. Pierwsze przypisanie do `charVar` zmiennej generuje błąd kompilatora [BC30512](../../misc/bc30512.md) , ponieważ `Option Strict` jest on włączony. Druga kompilacja powiodła się, ponieważ `c` znak typu literału identyfikuje literał `Char` jako wartość.
+If the type checking switch (the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)) is on, you must append the literal type character to a single-character string literal to identify it as the `Char` data type. Ilustruje to poniższy przykład. The first assignment to the `charVar` variable generates compiler error [BC30512](../../misc/bc30512.md) because `Option Strict` is on. The second compiles successfully because the `c` literal type character identifies the literal as a `Char` value.
 
 ```vb
 Option Strict On
@@ -57,15 +57,15 @@ End Module
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Liczby ujemne.** `Char`jest typem bez znaku i nie może reprezentować wartości ujemnej. W każdym przypadku nie należy używać `Char` do przechowywania wartości numerycznych.
+- **Negative Numbers.** `Char` is an unsigned type and cannot represent a negative value. In any case, you should not use `Char` to hold numeric values.
 
-- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli interfejs zawiera składniki, które nie są przeznaczone dla .NET Framework, na przykład obiekty Automation lub COM, należy pamiętać, że typy znaków mają różną szerokość danych (8 bitów) w innych środowiskach. W przypadku przekazania do takiego składnika argumentu 8-bitowego należy zadeklarować go jako `Byte` `Char` zamiast w nowym kodzie Visual Basic.
+- **Interop Considerations.** If you interface with components not written for the .NET Framework, for example Automation or COM objects, remember that character types have a different data width (8 bits) in other environments. If you pass an 8-bit argument to such a component, declare it as `Byte` instead of `Char` in your new Visual Basic code.
 
-- **Rozszerzającą.** Typ `Char` danych jest rozszerzany do `String`. Oznacza to, że można `Char` przeprowadzić `String` konwersję do <xref:System.OverflowException?displayProperty=nameWithType>i nie napotkasz.
+- **Widening.** The `Char` data type widens to `String`. This means you can convert `Char` to `String` and will not encounter a <xref:System.OverflowException?displayProperty=nameWithType>.
 
-- **Znaki typu.** Dołączanie znaku `C` typu literału do literału ciągu z pojedynczym znakiem wymusza `Char` do tego typu danych. `Char`nie ma znaku typu identyfikatora.
+- **Type Characters.** Appending the literal type character `C` to a single-character string literal forces it to the `Char` data type. `Char` has no identifier type character.
 
-- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.Char?displayProperty=nameWithType> strukturą.
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Char?displayProperty=nameWithType> structure.
 
 ## <a name="see-also"></a>Zobacz także
 
@@ -78,5 +78,5 @@ End Module
 - [String, typ danych](../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Instrukcje: wywoływanie funkcji systemu Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

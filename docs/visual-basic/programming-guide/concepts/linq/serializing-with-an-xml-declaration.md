@@ -1,24 +1,24 @@
 ---
-title: Serializowanie przy użyciu deklaracji XML (Visual Basic)
+title: Serializowanie przy użyciu deklaracji XML
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 96c95b4c94290016684721a194ca31a836a49740
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786441"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350634"
 ---
-# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializowanie przy użyciu deklaracji XML (Visual Basic)
-W tym temacie opisano sposób kontroluje, czy serializacji generuje deklaracji XML.  
+# <a name="serializing-with-an-xml-declaration-visual-basic"></a>Serializing with an XML Declaration (Visual Basic)
+This topic describes how to control whether serialization generates an XML declaration.  
   
-## <a name="xml-declaration-generation"></a>Generowanie deklaracji XML  
- Serializowanie do <xref:System.IO.File> lub <xref:System.IO.TextWriter> przy użyciu <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> metody lub <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> metoda generuje deklaracji XML. Podczas serializacji do <xref:System.Xml.XmlWriter>, ustawień edytora (określony w <xref:System.Xml.XmlWriterSettings> obiektu) określić, czy deklaracja XML jest generowany, czy nie.  
+## <a name="xml-declaration-generation"></a>XML Declaration Generation  
+ Serializing to a <xref:System.IO.File> or a <xref:System.IO.TextWriter> using the <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType> method or the <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType> method generates an XML declaration. When you serialize to an <xref:System.Xml.XmlWriter>, the writer settings (specified in an <xref:System.Xml.XmlWriterSettings> object) determine whether an XML declaration is generated or not.  
   
- Jeśli są serializacji na ciąg za pośrednictwem `ToString` metody, wynikowy kod XML nie zostaną uwzględnione w deklaracji XML.  
+ If you are serializing to a string using the `ToString` method, the resulting XML will not include an XML declaration.  
   
 ### <a name="serializing-with-an-xml-declaration"></a>Serializowanie przy użyciu deklaracji XML  
- Poniższy przykład tworzy <xref:System.Xml.Linq.XElement>, zapisuje dokument do pliku, a następnie drukuje pliku do konsoli:  
+ The following example creates an <xref:System.Xml.Linq.XElement>, saves the document to a file, and then prints the file to the console:  
   
 ```vb  
 Dim root As XElement = <Root>  
@@ -38,8 +38,8 @@ Console.WriteLine(str)
 </Root>  
 ```  
   
-### <a name="serializing-without-an-xml-declaration"></a>Serializacja bez deklaracji XML  
- Poniższy przykład pokazuje, jak zapisać <xref:System.Xml.Linq.XElement> do <xref:System.Xml.XmlWriter>.  
+### <a name="serializing-without-an-xml-declaration"></a>Serializing without an XML Declaration  
+ The following example shows how to save an <xref:System.Xml.Linq.XElement> to an <xref:System.Xml.XmlWriter>.  
   
 ```vb  
 Dim sb As StringBuilder = New StringBuilder()  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString())
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Serializowanie drzew XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [Serializing XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

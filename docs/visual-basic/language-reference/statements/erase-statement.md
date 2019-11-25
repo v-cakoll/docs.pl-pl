@@ -1,5 +1,5 @@
 ---
-title: Erase — Instrukcja (Visual Basic)
+title: Erase — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Erase
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Erase keyword [Visual Basic]
 - Erase statement [Visual Basic]
 ms.assetid: 7a8133d7-b750-4d74-8b66-ba1dd9778d4b
-ms.openlocfilehash: 7dec2a859f664ee8dcbb305082ec33aeacbaccb4
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6d2052ceccbecd772c4e4bb18052aed74223a36e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583388"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343699"
 ---
 # <a name="erase-statement-visual-basic"></a>Erase — Instrukcja (Visual Basic)
-Używane do zwalniania zmiennych tablicowych i cofania alokacji pamięci używanej dla ich elementów.  
+Used to release array variables and deallocate the memory used for their elements.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,15 +25,15 @@ Erase arraylist
   
 ## <a name="parts"></a>Części  
  `arraylist`  
- Wymagany. Lista zmiennych tablicowych, które mają zostać wymazane. Wiele zmiennych jest oddzielonych przecinkami.  
+ Wymagany. List of array variables to be erased. Multiple variables are separated by commas.  
   
 ## <a name="remarks"></a>Uwagi  
- Instrukcja `Erase` może występować tylko na poziomie procedury. Oznacza to, że można zwolnić tablice wewnątrz procedury, ale nie na poziomie klasy lub modułu.  
+ The `Erase` statement can appear only at procedure level. This means you can release arrays inside a procedure but not at class or module level.  
   
- Instrukcja `Erase` jest równoważna przypisaniu `Nothing` do każdej zmiennej tablicowej.  
+ The `Erase` statement is equivalent to assigning `Nothing` to each array variable.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa instrukcji `Erase`, aby wyczyścić dwie tablice i zwolnić pamięć (odpowiednio 1000 i 100 elementów magazynu). Następnie instrukcja `ReDim` przypisuje nowe wystąpienie tablicy do trójwymiarowej tablicy.  
+ The following example uses the `Erase` statement to clear two arrays and free their memory (1000 and 100 storage elements, respectively). The `ReDim` statement then assigns a new array instance to the three-dimensional array.  
   
  [!code-vb[VbVbalrStatements#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#19)]  
   

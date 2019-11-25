@@ -1,22 +1,22 @@
 ---
-title: Sprawdzanie poprawności złożoności haseł (Visual Basic)
+title: Validating Passwords Complexity
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663626"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348329"
 ---
-# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Przewodnik: Sprawdzanie poprawności hasła złożoności (Visual Basic)
-Ta metoda sprawdza, czy niektóre cechy silnego hasła i aktualizuje jako parametr ciągu przy użyciu informacji o tym, które sprawdza, czy hasła nie powiodło się.  
+# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Wskazówki: sprawdzanie poprawności złożoności haseł (Visual Basic)
+This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
   
- Hasła mogą być wykorzystywane w bezpieczny system do autoryzacji użytkownika. Jednak musi być trudne dla nieautoryzowanych użytkowników w celu odgadnięcia hasła. Osoby atakujące mogą wykorzystać *atak słownikowy* program, który wykonuje iterację przez wszystkie wyrazy w słowniku (lub słowniki wielu w różnych językach) i sprawdza, czy dowolny wyraz działać jako hasło tego użytkownika. Szybko można złamać słabe hasła, takie jak "Yankees" lub "Mustang". Silniejszych haseł, takich jak "? Użytkownik "L1N3vaFiNdMeyeP@sSWerd!", są znacznie mniej prawdopodobne złamać. System chronionych hasłem należy upewnić się, że użytkownicy wybierać silne hasła.  
+ Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
   
- Silne hasło jest złożony (zawierającego kombinację wielkie litery, małe litery, cyfry i znaki specjalne) i nie jest wyrazem. W tym przykładzie pokazano, jak sprawdzić, co do złożoności.  
+ A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
   
 ## <a name="example"></a>Przykład  
   
@@ -24,26 +24,26 @@ Ta metoda sprawdza, czy niektóre cechy silnego hasła i aktualizuje jako parame
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Wywołaj tę metodę, przekazując ciąg, który zawiera to hasło.  
+ Call this method by passing the string that contains that password.  
   
  Ten przykład wymaga:  
   
-- Dostęp do elementów członkowskich <xref:System.Text.RegularExpressions> przestrzeni nazw. Dodaj `Imports` instrukcji, jeśli użytkownik są nie pełni kwalifikujących się nazwy elementów członkowskich w kodzie. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Access to the members of the <xref:System.Text.RegularExpressions> namespace. Add an `Imports` statement if you are not fully qualifying member names in your code. For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Zabezpieczenia  
- Jeśli przenosisz hasła przez sieć, należy użyć metody bezpiecznego przesyłania danych. Aby uzyskać więcej informacji, zobacz [zabezpieczenia aplikacji sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- Można zwiększyć dokładność `ValidatePassword` funkcja poprzez dodanie dodatkowej złożoności kontroli:  
+ You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
   
-- Porównaj hasło i jego podciągów przed nazwę użytkownika, identyfikator użytkownika i słownika zdefiniowanego przez aplikację. Ponadto należy traktować podobnych znaków jako równoważne podczas przeprowadzania porównania. Na przykład zaliczenie litery "l" i "e" odpowiednikiem cyfry "1" i "3".  
+- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
   
-- Jeśli ma tylko jedną wielką literę, upewnij się, że nie jest pierwszym znakiem hasła.  
+- If there is only one uppercase character, make sure it is not the password's first character.  
   
-- Upewnij się, że ostatnich dwóch znaków hasła są znaki.  
+- Make sure that the last two characters of the password are letter characters.  
   
-- Nie zezwalaj na hasła, w których wszystkie symbole są wprowadzane z klawiatury w górnym wierszu.  
+- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:System.Text.RegularExpressions.Regex>
-- [Zabezpieczenia aplikacji sieci Web platformy ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))
+- [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

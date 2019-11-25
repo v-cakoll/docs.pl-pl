@@ -1,23 +1,23 @@
 ---
-title: Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)
+title: Korzystanie z wariancji dla delegatów Func i Action
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: a85d6ae2fa32547958e557bbe45b9405e9b660ef
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 2678abd03f55224720d00509dc44f2db16551193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524243"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349049"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Korzystanie z wariancji dla delegatów "Func" i "Action Generic" (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Using Variance for Func and Action Generic Delegates (Visual Basic)
 
-W poniższych przykładach pokazano, jak używać kowariancji i kontrawariancja w `Func` i `Action` delegatów ogólnych, aby umożliwić ponowne użycie metod i zapewnić większą elastyczność w kodzie.
+These examples demonstrate how to use covariance and contravariance in the `Func` and `Action` generic delegates to enable reuse of methods and provide more flexibility in your code.
 
-Aby uzyskać więcej informacji na temat kowariancji i kontrawariancja, zobacz [Wariancja w delegatach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+For more information about covariance and contravariance, see [Variance in Delegates (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
-## <a name="using-delegates-with-covariant-type-parameters"></a>Używanie delegatów z parametrami typu współwariantowego
+## <a name="using-delegates-with-covariant-type-parameters"></a>Using Delegates with Covariant Type Parameters
 
-Poniższy przykład ilustruje zalety wsparcia kowariancji w ogólnych delegatach `Func`. Metoda `FindByTitle` przyjmuje parametr typu `String` i zwraca obiekt typu `Employee`. Można jednak przypisać tę metodę do delegata `Func(Of String, Person)`, ponieważ `Employee` dziedziczy `Person`.
+The following example illustrates the benefits of covariance support in the generic `Func` delegates. The `FindByTitle` method takes a parameter of the `String` type and returns an object of the `Employee` type. However, you can assign this method to the `Func(Of String, Person)` delegate because `Employee` inherits `Person`.
 
 ```vb
 ' Simple hierarchy of classes.
@@ -54,9 +54,9 @@ Class Finder
 End Class
 ```
 
-## <a name="using-delegates-with-contravariant-type-parameters"></a>Korzystanie z delegatów z parametrami typu kontrawariantne
+## <a name="using-delegates-with-contravariant-type-parameters"></a>Using Delegates with Contravariant Type Parameters
 
-Poniższy przykład ilustruje zalety obsługi kontrawariancja w delegatach ogólnych `Action`. Metoda `AddToContacts` przyjmuje parametr typu `Person`. Można jednak przypisać tę metodę do delegata `Action(Of Employee)`, ponieważ `Employee` dziedziczy `Person`.
+The following example illustrates the benefits of contravariance support in the generic `Action` delegates. The `AddToContacts` method takes a parameter of the `Person` type. However, you can assign this method to the `Action(Of Employee)` delegate because `Employee` inherits `Person`.
 
 ```vb
 Public Class Person
@@ -94,5 +94,5 @@ End Class
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kowariancja i kontrawariancja (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
+- [Covariance and Contravariance (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
 - [Typy ogólne](../../../../standard/generics/index.md)

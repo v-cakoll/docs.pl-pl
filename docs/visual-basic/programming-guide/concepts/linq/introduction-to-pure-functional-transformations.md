@@ -1,27 +1,27 @@
 ---
-title: Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)
+title: Wprowadzenie do czystych przekształceń funkcjonalnych
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
-ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a76fa4031b8f5a00f14d4a8854a2d6c44972381f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614404"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338811"
 ---
-# <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Wprowadzenie do czystych przekształceń funkcjonalnych (Visual Basic)
-Ta sekcja wprowadza przekształceń funkcjonalnych, w tym podstawowe pojęcia i konstrukcje językowe pomocniczych. Różni się znacząco przekształcania zorientowane obiektowo i funkcjonalności sposoby programowania, w tym porady na temat przechodzenia do nich. Mimo że przekształceń funkcjonalnych mogą być używane w wielu scenariuszach programowania, transformacje XML jest używany tutaj jako konkretny przykład.  
+# <a name="introduction-to-pure-functional-transformations-visual-basic"></a>Introduction to Pure Functional Transformations (Visual Basic)
+This section introduces functional transformations, including the underlying concepts and supporting language constructs. It contrasts the object-oriented and functional transformation approaches to programming, including advice on how to transition to the latter. Although functional transformations can be used in many programming scenarios, XML transformation is used here as a concrete example.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Wprowadza pojęcia i terminologia czystych przekształceń funkcjonalnych.|  
-|[Programowanie funkcjonalne a Programowanie imperatywne (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Porównano i przeciwstawiono sobie programowania funkcjonalnego, aby bardziej tradycyjny imperatywnego (proceduralne).|  
-|[Refaktoryzacja do czystych funkcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Wprowadza czystych funkcji i przedstawiono przykłady i czysty i oczyścić zanieczyszczony funkcji.|  
-|[Zastosowanie przekształcania funkcjonalnego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|W tym artykule opisano typowe scenariusze dotyczące przekształceń funkcjonalnych.|  
-|[Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|W tym artykule opisano Przekształcanie funkcjonalne w kontekście Przekształcanie drzew XML.|  
+|[Concepts and Terminology (Functional Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)|Introduces the concepts and terminology of pure functional transformations.|  
+|[Functional Programming vs. Imperative Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)|Compares and contrasts functional programming to more traditional imperative (procedural) programming.|  
+|[Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)|Introduces pure functions, and shows examples of and pure and impure functions.|  
+|[Applicability of Functional Transformation (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Describes typical scenarios for functional transformations.|  
+|[Functional Transformation of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Describes functional transformations in the context of transforming XML trees.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Czyste Przekształcanie funkcjonalne kodu XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+- [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

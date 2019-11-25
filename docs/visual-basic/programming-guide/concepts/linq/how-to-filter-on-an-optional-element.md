@@ -1,19 +1,19 @@
 ---
-title: 'Instrukcje: filtrowanie dla elementu opcjonalnego (Visual Basic)'
+title: 'How to: Filter on an Optional Element'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: 01ab143dd48b0cb0ff74aa039fa292501654056a
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: e67cb58710d49a19f322b3555efa96ac69b9f654
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250003"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353043"
 ---
-# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Instrukcje: filtrowanie dla elementu opcjonalnego (Visual Basic)
-Czasami chcesz odfiltrować element, chociaż nie masz pewności, że istnieje w dokumencie XML. Wyszukiwanie powinno zostać wykonane, aby Jeśli określony element nie ma elementu podrzędnego, nie zostanie wyzwolony wyjątek odwołania o wartości null przez filtrowanie dla niego. W poniższym przykładzie element `Child5` nie ma elementu podrzędnego `Type`, ale zapytanie jest nadal wykonywane poprawnie.  
+# <a name="how-to-filter-on-an-optional-element-visual-basic"></a>How to: Filter on an Optional Element (Visual Basic)
+Sometimes you want to filter for an element even though you are not sure it exists in your XML document. The search should be executed so that if the particular element does not have the child element, you do not trigger a null reference exception by filtering for it. In the following example, the `Child5` element does not have a `Type` child element, but the query still executes correctly.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie zastosowano metodę rozszerzenia <xref:System.Xml.Linq.Extensions.Elements%2A>.  
+ This example uses the <xref:System.Xml.Linq.Extensions.Elements%2A> extension method.  
   
 ```vb  
 Dim root As XElement = _   
@@ -57,7 +57,7 @@ Child Four Text
 ```  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw — omówienie (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ The following example shows the same query for XML that is in a namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -111,9 +111,9 @@ Child Four Text
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
-- [Zapytania podstawowe (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
-- [Właściwość osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
-- [Właściwość osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Właściwości osi elementu podrzędnego XML](../../../../visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
+- [Właściwości osi atrybutu XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 - [Właściwość wartości XML](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
-- [Standardowe operatory zapytań — Omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Operacje projekcji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Standard Query Operators Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)

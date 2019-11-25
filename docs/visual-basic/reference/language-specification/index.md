@@ -1,26 +1,26 @@
 ---
-title: Specyfikacja języka Visual Basic
+title: Specyfikacja języka
 ms.date: 08/02/2017
 helpviewer_keywords:
 - resources [Visual Basic], specifications
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 399bc15f3249c99f1c94338869e77befc8c26015
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0df3f0a49d1dc84f5a6f3218b23f20ce3d43a1fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766433"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352866"
 ---
 # <a name="visual-basic-language-specification"></a>Specyfikacja języka Visual Basic
-Specyfikacja języka Visual Basic jest autorytatywne źródło dla odpowiedzi na wszystkie pytania o gramatyki języka Visual Basic i składni. Zawiera szczegółowe informacje na temat języka, łącznie z wieloma punktami nieuwzględnione w dokumentacji języka Visual Basic.  
+The Visual Basic Language Specification is the authoritative source for answers to all questions about Visual Basic grammar and syntax. It contains detailed information about the language, including many points not covered in the Visual Basic reference documentation.  
   
- Specyfikacja jest dostępna w [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=188623).  
+ The specification is available on the [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
-Ta witryna zawiera [specyfikacji VB 11](../../../../_vblang/spec/introduction.md). Jest zbudowany pliki Markdown znajdujące się w [repozytorium dotnet/vblang GitHub](https://github.com/dotnet/vblang/blob/master/spec/README.md).
+This site contains the [VB 11 specification](../../../../_vblang/spec/introduction.md). It's built from the Markdown files contained in [the dotnet/vblang GitHub repository](https://github.com/dotnet/vblang/blob/master/spec/README.md).
 
-Problemy na specyfikacji powinny zostać utworzone w [dotnet/vblang](https://github.com/dotnet/vblang/issues) repozytorium. Lub, jeśli interesują Cię poprawiania błędów można znaleźć, możesz przesłać [żądania ściągnięcia](https://github.com/dotnet/vblang/pulls) na tym samym repozytorium.
+Issues on the specification should be created in the [dotnet/vblang](https://github.com/dotnet/vblang/issues) repository. Or, if you're interested in fixing any errors you find, you may submit a [Pull Request](https://github.com/dotnet/vblang/pulls) to the same repository.
 
 ## <a name="see-also"></a>Zobacz także
 

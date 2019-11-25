@@ -1,5 +1,5 @@
 ---
-title: Przeciążanie procedury (Visual Basic)
+title: Przeciążanie procedury
 ms.date: 07/20/2015
 helpviewer_keywords:
 - signatures
@@ -17,74 +17,74 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 91e76e8c051b1d6f8b6fc1604018a26b23b4945b
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663309"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352589"
 ---
 # <a name="procedure-overloading-visual-basic"></a>Przeciążanie procedury (Visual Basic)
 
-*Przeciążanie* procedury oznacza zdefiniowaniem go w wielu wersjach, przy użyciu takiej samej nazwie, ale listy różnych parametrów. Przeciążanie ma na celu zdefiniować kilka wersji ściśle powiązanych procedury bez konieczności odróżnić je według nazwy. Można to zrobić przez zróżnicowanie listy parametrów.
+*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists. The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name. You do this by varying the parameter list.
 
-## <a name="overloading-rules"></a>Przeciążanie reguły
+## <a name="overloading-rules"></a>Overloading Rules
 
-Po użytkownik przeciążanie procedury, obowiązują następujące reguły:
+When you overload a procedure, the following rules apply:
 
-- **Tej samej nazwie**. Każda przeciążona wersja należy użyć tej samej nazwy procedury.
+- **Same Name**. Each overloaded version must use the same procedure name.
 
-- **Inny podpis**. Każda wersja przeciążona muszą różnić się od wszystkich innych przeciążone wersje w co najmniej jeden z następujących aspektach:
+- **Different Signature**. Each overloaded version must differ from all other overloaded versions in at least one of the following respects:
 
-  - Liczba parametrów
+  - Number of parameters
 
-  - Kolejność parametrów
+  - Order of the parameters
 
-  - Typy danych parametrów
+  - Data types of the parameters
 
-  - Liczba parametrów typu (w przypadku ogólnych procedura)
+  - Number of type parameters (for a generic procedure)
 
-  - Zwracany typ (tylko dla operatora konwersji)
+  - Return type (only for a conversion operator)
 
-  Wraz z nazwą procedury poprzednie elementy są nazywane *podpisu* procedury. Po wywołaniu procedury przeciążenia, kompilator używa sygnatury do sprawdzenia, czy wywołanie odpowiada poprawnie definicji.
+  Together with the procedure name, the preceding items are collectively called the *signature* of the procedure. When you call an overloaded procedure, the compiler uses the signature to check that the call correctly matches the definition.
 
-- **Elementy nie jest częścią podpisu**. Procedury nie mogą przeciążać bez zróżnicowanie podpis. W szczególności nie mogą przeciążać procedury przez zróżnicowanie tylko jeden lub więcej z następujących elementów:
+- **Items Not Part of Signature**. You cannot overload a procedure without varying the signature. In particular, you cannot overload a procedure by varying only one or more of the following items:
 
-  - Słowa kluczowe modyfikator procedury, takich jak `Public`, `Shared`, i `Static`
+  - Procedure modifier keywords, such as `Public`, `Shared`, and `Static`
 
-  - Parametr lub typ nazwy parametrów
+  - Parameter or type parameter names
 
-  - Ograniczenia parametru typu (w przypadku ogólnych procedura)
+  - Type parameter constraints (for a generic procedure)
 
-  - Słowa kluczowe modyfikator parametrów, takich jak `ByRef` i `Optional`
+  - Parameter modifier keywords, such as `ByRef` and `Optional`
 
-  - Czy wartość jest zwracana
+  - Whether it returns a value
 
-  - Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)
+  - The data type of the return value (except for a conversion operator)
 
-  Elementy na powyższej liście nie są częścią podpis. Mimo że nie można ich użyć do rozróżnienia między przeciążone wersje, można je różnią przeciążone wersje, które są właściwie zróżnicowane według ich podpisy.
+  The items in the preceding list are not part of the signature. Although you cannot use them to differentiate between overloaded versions, you can vary them among overloaded versions that are properly differentiated by their signatures.
 
-- **Z późnym wiązaniem argumenty**. Jeśli zamierzasz przekazać późno zmiennej powiązany obiekt do przeciążoną wersją, należy zadeklarować odpowiedni parametr jako <xref:System.Object>.
+- **Late-Bound Arguments**. If you intend to pass a late bound object variable to an overloaded version, you must declare the appropriate parameter as <xref:System.Object>.
 
-## <a name="multiple-versions-of-a-procedure"></a>Wielu wersji procedury
+## <a name="multiple-versions-of-a-procedure"></a>Multiple Versions of a Procedure
 
-Załóżmy, że piszesz `Sub` procedury, aby transakcję przed saldo odbiorcy, a ma być dostępna do odwoływania się do klienta, według nazwy lub numer konta. Aby to umożliwić, należy zdefiniować dwa różne `Sub` procedury jak w poniższym przykładzie:
+Suppose you are writing a `Sub` procedure to post a transaction against a customer's balance, and you want to be able to refer to the customer either by name or by account number. To accommodate this, you can define two different `Sub` procedures, as in the following example:
 
 [!code-vb[VbVbcnProcedures#73](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#73)]
 
-### <a name="overloaded-versions"></a>Przeciążone wersje
+### <a name="overloaded-versions"></a>Overloaded Versions
 
-Alternatywą jest nazwa jednej procedury przeciążenia. Możesz użyć [przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md) — słowo kluczowe, aby zdefiniować wersję procedurę dla każdej listy parametrów w następujący sposób:
+An alternative is to overload a single procedure name. You can use the [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) keyword to define a version of the procedure for each parameter list, as follows:
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
-#### <a name="additional-overloads"></a>Dodatkowe przeciążenia
+#### <a name="additional-overloads"></a>Additional Overloads
 
-Jeśli chcesz również zaakceptować ilości transakcji, albo `Decimal` lub `Single`, można dodatkowo przeciążenia `post` umożliwia dla tej odmiany. Jeśli tak, to nie do poszczególnych przeciążeń w poprzednim przykładzie należałoby cztery `Sub` procedury, wszystkie o takiej samej nazwie, ale z czterech różnych podpisów.
+If you also wanted to accept a transaction amount in either `Decimal` or `Single`, you could further overload `post` to allow for this variation. If you did this to each of the overloads in the preceding example, you would have four `Sub` procedures, all with the same name but with four different signatures.
 
-## <a name="advantages-of-overloading"></a>Korzyści wynikające z przeciążenia
+## <a name="advantages-of-overloading"></a>Advantages of Overloading
 
-Zaletą przeciążanie procedury trwa elastyczność wywołania. Do użycia `post` procedury zadeklarowane w poprzednim przykładzie, kod wywołujący można uzyskać identyfikator klienta jako `String` lub `Integer`, a następnie wywołać tę samą procedurę w obu przypadkach. Ilustruje to poniższy przykład:
+The advantage of overloading a procedure is in the flexibility of the call. To use the `post` procedure declared in the preceding example, the calling code can obtain the customer identification as either a `String` or an `Integer`, and then call the same procedure in either case. The following example illustrates this:
 
 [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]
 
@@ -93,11 +93,11 @@ Zaletą przeciążanie procedury trwa elastyczność wywołania. Do użycia `pos
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury](./index.md)
-- [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
 - [Rozpoznanie przeciążenia](./overload-resolution.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Typy ogólne w Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

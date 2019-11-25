@@ -1,27 +1,27 @@
 ---
-title: Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)
+title: In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 5b43d28390927fa1426f914fa6fd88a1a5d00b9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15c38cdf7ce860b34d8d3e9d59b8f06d80f6edd8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613618"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344435"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Modyfikowanie drzewa XML w pamięci a Konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)
-Modyfikowanie drzewa XML w miejscu jest tradycyjne podejście na zmieniające się kształt dokumentu XML. Typowa aplikacja ładuje dokumentu do magazynu danych, takich jak modelu DOM lub [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; używa interfejsu programowania wstawić węzłów, usuń węzły lub zmienić zawartość węzłów; a następnie zapisuje w pliku XML lub przesyła je za pośrednictwem sieci.  
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)
+Modifying an XML tree in place is a traditional approach to changing the shape of an XML document. A typical application loads a document into a data store such as DOM or [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; uses a programming interface to insert nodes, delete nodes, or change the content of nodes; and then saves the XML to a file or transmits it over a network.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia innym rozwiązaniem, które są przydatne w wielu scenariuszach *: konstrukcja funkcjonalna*. Konstrukcja funkcjonalna modyfikowania dane są traktowane jako problem transformacji, a nie jako szczegółowe manipulowania magazynu danych. Jeśli możesz wykonać reprezentację danych i przekształcić je wydajnie z jednego formularza do innego, wynik jest taki sam, tak, jakby miały jeden magazyn danych i modyfikować je w jakiś sposób, aby móc innego kształtu. Klucz podejścia konstrukcja funkcjonalna służy do przekazywania wyniki zapytania w celu <xref:System.Xml.Linq.XDocument> i <xref:System.Xml.Linq.XElement> konstruktorów.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enables another approach that is useful in many scenarios *: functional construction*. Functional construction treats modifying data as a problem of transformation, rather than as detailed manipulation of a data store. If you can take a representation of data and transform it efficiently from one form to another, the result is the same as if you took one data store and manipulated it in some way to take another shape. A key to the functional construction approach is to pass the results of queries to <xref:System.Xml.Linq.XDocument> and <xref:System.Xml.Linq.XElement> constructors.  
   
- W wielu przypadkach można napisać kod innowacyjne w zaledwie ułamku czasu, który zajmie się do manipulowania magazynu danych, a ten kod jest bardziej niezawodne i łatwiejsze w utrzymaniu. W takich przypadkach pomimo innowacyjne podejście może zająć więcej mocy obliczeniowej, jest bardziej efektywny sposób modyfikowania danych. Jeśli deweloper jest dobrze znanych funkcjonalności podejście, wynikowy kod w wielu przypadkach jest łatwiejsze do zrozumienia. Jest to łatwe do znalezienia kod, który modyfikuje każdej części drzewa.  
+ In many cases you can write the transformational code in a fraction of the time that it would take to manipulate the data store, and that code is more robust and easier to maintain. In these cases, even though the transformational approach can take more processing power, it is a more effective way to modify data. If a developer is familiar with the functional approach, the resulting code in many cases is easier to understand. It is easy to find the code that modifies each part of the tree.  
   
- Podejścia, w którym można zmodyfikować XML drzewa w miejscu jest bardziej znane dużą liczbą programistów modelu DOM, natomiast kod napisany za pomocą funkcjonalne podejście może być nieznane dla deweloperów, którzy jeszcze nie rozpoznaje tego podejścia. Jeśli konieczne będzie jedynie wprowadzenie niewielkiej modyfikacji do dużych drzewa XML, podejście, gdzie można modyfikować drzewa w miejscu, w wielu przypadkach zajmie mniej czasu procesora CPU.  
+ The approach where you modify an XML tree in-place is more familiar to many DOM programmers, whereas code written using the functional approach might look unfamiliar to a developer who doesn't yet understand that approach. If you have to only make a small modification to a large XML tree, the approach where you modify a tree in place in many cases will take less CPU time.  
   
- Ten temat zawiera przykład, który jest implementowane za pomocą obu metod.  
+ This topic provides an example that is implemented with both approaches.  
   
-## <a name="transforming-attributes-into-elements"></a>Przekształcanie atrybutów do elementów  
- Na przykład załóżmy, że chcesz zmodyfikować prostego następujący dokument XML, dzięki czemu atrybuty stają się elementy. W tym temacie przedstawiono pierwsze podejście tradycyjnych modyfikacji w miejscu. Następnie prezentuje podejście konstrukcja funkcjonalna.  
+## <a name="transforming-attributes-into-elements"></a>Transforming Attributes into Elements  
+ For this example, suppose you want to modify the following simple XML document so that the attributes become elements. This topic first presents the traditional in-place modification approach. It then shows the functional construction approach.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -30,8 +30,8 @@ Modyfikowanie drzewa XML w miejscu jest tradycyjne podejście na zmieniające si
 </Root>  
 ```  
   
-### <a name="modifying-the-xml-tree"></a>Modyfikowanie drzewa XML  
- Napisanie kodu procedur do tworzenia elementów z atrybutów i następnie usuwanie atrybutów, w następujący sposób:  
+### <a name="modifying-the-xml-tree"></a>Modifying the XML Tree  
+ You can write some procedural code to create elements from the attributes, and then delete the attributes, as follows:  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -52,8 +52,8 @@ Console.WriteLine(root)
 </Root>  
 ```  
   
-### <a name="functional-construction-approach"></a>Konstrukcja funkcjonalna podejście  
- Z drugiej strony funkcjonalne podejście składa się z kodu w celu utworzenia nowego drzewa, pobierania i wybierania elementów i atrybutów w drzewie źródła i przekształcanie ich odpowiednie zostaną one dodane do nowego drzewa. Funkcjonalne podejście wygląda podobnie do poniższego:  
+### <a name="functional-construction-approach"></a>Functional Construction Approach  
+ By contrast, a functional approach consists of code to form a new tree, picking and choosing elements and attributes from the source tree, and transforming them as appropriate as they are added to the new tree. The functional approach looks like the following:  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -66,14 +66,14 @@ Dim newTree As XElement = _
 Console.WriteLine(newTree)  
 ```  
   
- W tym przykładzie generuje ten sam kod XML jako pierwszy przykład. Jednak należy zauważyć, może faktycznie zobaczysz Wynikowa struktura nowym XML w ujęciu funkcjonalności. Możesz zobaczyć tworzenie `Root` element, kod, który ściąga `Child1` elementu w drzewie źródła i kod, który przekształca atrybuty z drzewa źródłowego do elementów w nowym drzewie.  
+ This example outputs the same XML as the first example. However, notice that you can actually see the resulting structure of the new XML in the functional approach. You can see the creation of the `Root` element, the code that pulls the `Child1` element from the source tree, and the code that transforms the attributes from the source tree to elements in the new tree.  
   
- Przykład funkcjonalności w tym przypadku nie jest żadnym krótszy niż pierwszy przykład i nie jest tak naprawdę wszelkie prostsze. Jednak w przypadku wielu zmiany do drzewa XML bez funkcjonalne podejście staną się dość skomplikowane i nieco obtuse. Korzystając z podejścia funkcjonalności, natomiast nadal formularza po prostu żądanego pliku XML osadzania zapytań i wyrażeń, zgodnie z potrzebami pobrać żądaną zawartość. Funkcjonalne podejście dwuoddziałowe zapewnia kod, który jest łatwiejszy w utrzymaniu.  
+ The functional example in this case is not any shorter than the first example, and it is not really any simpler. However, if you have many changes to make to an XML tree, the non functional approach will become quite complex and somewhat obtuse. In contrast, when using the functional approach, you still just form the desired XML, embedding queries and expressions as appropriate, to pull in the desired content. The functional approach yields code that is easier to maintain.  
   
- Należy zauważyć, że w tym przypadku funkcjonalne podejście prawdopodobnie nie wykona dość oraz podejście manipulowania drzewa. Główny problem polega na tym, że funkcjonalne podejście tworzy więcej krótki czas życia obiektów. Jednak kosztem jest skuteczne Jeśli funkcjonalne podejście pozwala uzyskać większą wydajność pracy programisty.  
+ Notice that in this case the functional approach probably would not perform quite as well as the tree manipulation approach. The main issue is that the functional approach creates more short lived objects. However, the tradeoff is an effective one if using the functional approach allows for greater programmer productivity.  
   
- Jest to bardzo prosty przykład, ale służy do pokazania różnicy w filozofia dwa podejścia. Funkcjonalne podejście dwuoddziałowe zapewnia większą produktywność w przypadku transformacji dokumentów XML większe.  
+ This is a very simple example, but it serves to show the difference in philosophy between the two approaches. The functional approach yields greater productivity gains for transforming larger XML documents.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Modyfikowanie drzew XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modifying XML Trees (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -4,61 +4,65 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347998"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348928"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
-W poniższej tabeli wymieniono klasy często używane dla .NET Framework w pliku we/wy, podzielone na kategorie klas we/wy pliku klasy służące do tworzenia strumieni i klas używanych do odczytu i zapisu do strumieni.  
+
+The following tables list the classes commonly used for .NET Framework file I/O, categorized into file I/O classes, classes used for creating streams, and classes used to read and write to streams.  
   
-Bardziej złożone lista znajduje się [Przegląd biblioteki klas](../../../../standard/class-library-overview.md).  
+For a more comprehensive listing, see [Class Library Overview](../../../../standard/class-library-overview.md).  
   
-## <a name="basic-io-classes-for-files-drives-and-directories"></a>Klasy podstawowe operacje We/Wy do plików, dysków i katalogów  
- Poniższej tabeli wymieniono i opisano główne klasy używany dla we/wy pliku.  
-  
-|Class|Opis|  
-|-----------|-----------------|  
-|<xref:System.IO.Directory?displayProperty=nameWithType>|Zawiera metody statyczne służące do tworzenia, przenoszenia i wyliczania katalogów i podkatalogów.|  
-|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Zawiera metody wystąpień służące do tworzenia, przenoszenia i wyliczania katalogów i podkatalogów.|  
-|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Zawiera metody wystąpień służące do tworzenia, przenoszenia i wyliczania dysków.|  
-|<xref:System.IO.File?displayProperty=nameWithType>|Zawiera metody statyczne służące do tworzenia, kopiowania, usuwania, przenoszenia i otwierania plików, a także pomaga w tworzeniu `FileStream`.|  
-|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Definiuje stałe do odczytu, zapisu lub odczytu i zapisu do pliku.|  
-|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Zawiera atrybuty dla plików i katalogów, takich jak `Archive`, `Hidden`, i `ReadOnly`.|  
-|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Zawiera metody statyczne służące do tworzenia, kopiowania, usuwania, przenoszenia i otwierania plików, a także pomaga w tworzeniu `FileStream`.|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|Określa, jak plik jest otwarty. Ten parametr jest określony w wielu konstruktory dla `FileStream` i `IsolatedStorageFileStream`oraz `Open` metody <xref:System.IO.File> i <xref:System.IO.FileInfo>.|  
-|<xref:System.IO.FileShare?displayProperty=nameWithType>|Definiuje stałe do kontrolowania typ dostępu do innych strumieni plików może mieć tego samego pliku.|  
-|<xref:System.IO.Path?displayProperty=nameWithType>|Udostępnia metody i właściwości dla przetwarzania ciągów katalogów.|  
-|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Kontroluje dostęp do plików i folderów, definiując <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> i <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> uprawnienia.|  
-  
-## <a name="classes-used-to-create-streams"></a>Klasy stosowane do tworzenia strumieni  
- Poniższej tabeli wymieniono i opisano głównych klas, które są używane do tworzenia strumieni.  
+## <a name="basic-io-classes-for-files-drives-and-directories"></a>Basic I/O Classes for Files, Drives, and Directories  
+
+ The following table lists and describes the main classes used for file I/O.  
   
 |Class|Opis|  
 |-----------|-----------------|  
-|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Dodaje buforowania warstwę do odczytu i zapisu w innej usłudze stream.|  
-|<xref:System.IO.FileStream?displayProperty=nameWithType>|Obsługuje losowe dostęp do plików za pomocą jego <xref:System.IO.FileStream.Seek%2A> metody. <xref:System.IO.FileStream> pliki synchronicznie domyślnie otwierany, ale również obsługuje operację asynchroniczną.|  
-|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Tworzy strumień jest którego zapasowy magazyn w pamięci, a nie plikiem.|  
-|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Zasadniczy strumień danych zapewnia dostęp do sieci.|  
-|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Definiuje strumień, który łączy strumieni danych z przekształceniami kryptograficznymi.|  
+|<xref:System.IO.Directory?displayProperty=nameWithType>|Provides static methods for creating, moving, and enumerating through directories and subdirectories.|  
+|<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Provides instance methods for creating, moving, and enumerating through directories and subdirectories.|  
+|<xref:System.IO.DriveInfo?displayProperty=nameWithType>|Provides instance methods for creating, moving, and enumerating through drives.|  
+|<xref:System.IO.File?displayProperty=nameWithType>|Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.|  
+|<xref:System.IO.FileAccess?displayProperty=nameWithType>|Defines constants for read, write, or read/write access to a file.|  
+|<xref:System.IO.FileAttributes?displayProperty=nameWithType>|Provides attributes for files and directories such as `Archive`, `Hidden`, and `ReadOnly`.|  
+|<xref:System.IO.FileInfo?displayProperty=nameWithType>|Provides static methods for creating, copying, deleting, moving, and opening files, and aids in the creation of a `FileStream`.|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|Controls how a file is opened. This parameter is specified in many of the constructors for `FileStream` and `IsolatedStorageFileStream`, and for the `Open` methods of <xref:System.IO.File> and <xref:System.IO.FileInfo>.|  
+|<xref:System.IO.FileShare?displayProperty=nameWithType>|Defines constants for controlling the type of access other file streams can have to the same file.|  
+|<xref:System.IO.Path?displayProperty=nameWithType>|Provides methods and properties for processing directory strings.|  
+|<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controls the access of files and folders by defining <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> and <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> permissions.|  
   
-## <a name="classes-used-to-read-from-and-write-to-streams"></a>Klasy stosowane do odczytu i zapisu do strumieni  
- W poniższej tabeli przedstawiono określone klasy, służące do odczytywanie z oraz zapisywanie do plików strumieni.  
+## <a name="classes-used-to-create-streams"></a>Classes Used to Create Streams  
+
+ The following table lists and describes the main classes used to create streams.  
+  
+|Class|Opis|  
+|-----------|-----------------|  
+|<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adds a buffering layer to read and write operations on another stream.|  
+|<xref:System.IO.FileStream?displayProperty=nameWithType>|Supports random access to files through its <xref:System.IO.FileStream.Seek%2A> method. <xref:System.IO.FileStream> opens files synchronously by default but also supports asynchronous operation.|  
+|<xref:System.IO.MemoryStream?displayProperty=nameWithType>|Creates a stream whose backing store is memory, rather than a file.|  
+|<xref:System.Net.Sockets.NetworkStream?displayProperty=nameWithType>|Provides the underlying stream of data for network access.|  
+|<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Defines a stream that links data streams to cryptographic transformations.|  
+  
+## <a name="classes-used-to-read-from-and-write-to-streams"></a>Classes Used to Read from and Write to Streams  
+
+ The following table shows the specific classes used for reading from and writing to files with streams.  
   
 |**Class**|**Opis**|  
 |---------------|---------------------|  
-|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Odczytuje ciągi zakodowane i typów danych pierwotnych z <xref:System.IO.FileStream>.|  
-|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Zapisuje ciągi zakodowane oraz pierwotne typy danych do <xref:System.IO.FileStream>.|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Odczytuje znaki z <xref:System.IO.FileStream>przy użyciu <xref:System.IO.StreamReader.CurrentEncoding%2A> Aby skonwertować znaki do i z bajtów. <xref:System.IO.StreamReader> ma Konstruktor, który podejmuje próbę ustalenia prawidłowych <xref:System.IO.StreamReader.CurrentEncoding%2A> dla danego strumienia na podstawie obecności <xref:System.IO.StreamReader.CurrentEncoding%2A>-określonych preambuły, takich jak znacznik kolejności bajtów.|  
-|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Zapisuje znaki `FileStream`przy użyciu <xref:System.IO.StreamWriter.Encoding%2A> Aby skonwertować znaki bajtów.|  
-|<xref:System.IO.StringReader?displayProperty=nameWithType>|Odczytuje znaki z `String`. Dane wyjściowe mogą być strumień w kodowanie lub `String`.|  
-|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Zapisuje znaki `String`. Dane wyjściowe mogą być strumień w kodowanie lub `String`.|  
+|<xref:System.IO.BinaryReader?displayProperty=nameWithType>|Reads encoded strings and primitive data types from a <xref:System.IO.FileStream>.|  
+|<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|Writes encoded strings and primitive data types to a <xref:System.IO.FileStream>.|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|Reads characters from a <xref:System.IO.FileStream>, using <xref:System.IO.StreamReader.CurrentEncoding%2A> to convert characters to and from bytes. <xref:System.IO.StreamReader> has a constructor that attempts to ascertain the correct <xref:System.IO.StreamReader.CurrentEncoding%2A> for a given stream, based on the presence of a <xref:System.IO.StreamReader.CurrentEncoding%2A>-specific preamble, such as a byte order mark.|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|Writes characters to a `FileStream`, using <xref:System.IO.StreamWriter.Encoding%2A> to convert characters to bytes.|  
+|<xref:System.IO.StringReader?displayProperty=nameWithType>|Reads characters from a `String`. Output can be either a stream in any encoding or a `String`.|  
+|<xref:System.IO.StringWriter?displayProperty=nameWithType>|Writes characters to a `String`. Output can be either a stream in any encoding or a `String`.|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Tworzenie strumieni](../../../../standard/io/composing-streams.md)
 - [We/Wy plików i strumieni](../../../../standard/io/index.md)
 - [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)
-- [Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

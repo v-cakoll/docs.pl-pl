@@ -1,5 +1,5 @@
 ---
-title: Manipulowanie plikami i katalogami w Visual Basic
+title: Manipulowanie plikami i katalogami
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,147 +15,150 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052524"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333807"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Przewodnik: Manipulowanie plikami i katalogami w Visual Basic
-Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją opisuje sposób tworzenia mała aplikacja, która zawiera listę i sprawdza, czy pliki tekstowe, w katalogu. Dla każdego pliku zaznaczony tekst aplikacji zawiera atrybuty pliku i pierwszego wiersza zawartości. Istnieje możliwość zapisywania informacji w pliku dziennika.  
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Wskazówki: manipulowanie plikami i katalogami w Visual Basic
+
+This walkthrough provides an introduction to the fundamentals of file I/O in Visual Basic. It describes how to create a small application that lists and examines text files in a directory. For each selected text file, the application provides file attributes and the first line of content. There is an option to write information to a log file.  
   
- W tym instruktażu wykorzystano członkowie `My.Computer.FileSystem Object`, które są dostępne w języku Visual Basic. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Na końcu tego przewodnika, równoważne to na przykład pod warunkiem, że używa klasy z <xref:System.IO> przestrzeni nazw.  
+ This walkthrough uses members of the `My.Computer.FileSystem Object`, which are available in Visual Basic. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>. At the end of the walkthrough, an equivalent example is provided that uses classes from the <xref:System.IO> namespace.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1. Na **pliku** menu, kliknij przycisk **nowy projekt**.  
+1. On the **File** menu, click **New Project**.  
   
-     **Nowy projekt** pojawi się okno dialogowe.  
+     The **New Project** dialog box appears.  
   
-2. W **zainstalowane szablony** okienku rozwiń **języka Visual Basic**, a następnie kliknij przycisk **Windows**. W **szablony** okienku kliknięcie środkowym przyciskiem myszy, **aplikacja interfejsu Windows Forms**.  
+2. In the **Installed Templates** pane, expand **Visual Basic**, and then click **Windows**. In the **Templates** pane in the middle, click **Windows Forms Application**.  
   
-3. W **nazwa** wpisz `FileExplorer` Ustaw nazwę projektu, a następnie kliknij przycisk **OK**.  
+3. In the **Name** box, type `FileExplorer` to set the project name, and then click **OK**.  
   
-     Program Visual Studio dodaje projekt do **Eksploratora rozwiązań**, i otwiera Windows Forms Designer.  
+     Visual Studio adds the project to **Solution Explorer**, and the Windows Forms Designer opens.  
   
-4. Dodaj formanty w poniższej tabeli do formularza i ustaw odpowiednie wartości ich właściwości.  
+4. Add the controls in the following table to the form, and set the corresponding values for their properties.  
   
     |formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nazwa**|`filesListBox`|  
-    |**Przycisk**|**Nazwa**<br /><br /> **Text**|`browseButton`<br /><br /> **Przeglądaj**|  
-    |**Przycisk**|**Nazwa**<br /><br /> **Text**|`examineButton`<br /><br /> **Sprawdź**|  
-    |**CheckBox**|**Nazwa**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **Zapisz wyniki**|  
+    |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`browseButton`<br /><br /> **Browse**|  
+    |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`examineButton`<br /><br /> **Examine**|  
+    |**CheckBox**|**Nazwa**<br /><br /> **Tekst**|`saveCheckBox`<br /><br /> **Save Results**|  
     |**FolderBrowserDialog**|**Nazwa**|`FolderBrowserDialog1`|  
   
-### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Wybierz folder i wyświetlać listę plików w folderze  
+### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>To select a folder, and list files in a folder  
   
-1. Tworzenie `Click` program obsługi zdarzeń dla `browseButton` przez dwukrotne kliknięcie formantu w formularzu. Zostanie otwarty Edytor kodu.  
+1. Create a `Click` event handler for `browseButton` by double-clicking the control on the form. The Code Editor opens.  
   
-2. Dodaj następujący kod do `Click` programu obsługi zdarzeń.  
+2. Add the following code to the `Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` Wywołanie zostanie otwarta **przeglądanie w poszukiwaniu folderu** okno dialogowe. Po użytkownik klika **OK**, <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> właściwość jest wysyłany jako argument do `ListFiles` metody, która jest dodawana w następnym kroku.  
+     The `FolderBrowserDialog1.ShowDialog` call opens the **Browse For Folder** dialog box. After the user clicks **OK**, the <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> property is sent as an argument to the `ListFiles` method, which is added in the next step.  
   
-3. Dodaj następujący kod `ListFiles` metody.  
+3. Add the following `ListFiles` method.  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
-     Ten kod najpierw wyczyści **ListBox**.  
+     This code first clears the **ListBox**.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> Metoda pobiera następnie Kolekcja ciągów, jeden dla każdego pliku w katalogu. `GetFiles` Metoda przyjmuje argumentu pattern wyszukiwania, aby pobrać pliki, które pasują do wzorca określonego. W tym przykładzie zwracane są tylko pliki mające rozszerzenie .txt.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFiles%2A> method then retrieves a collection of strings, one for each file in the directory. The `GetFiles` method accepts a search pattern argument to retrieve files that match a particular pattern. In this example, only files that have the extension .txt are returned.  
   
-     Ciągi, które są zwracane przez `GetFiles` metody zostaną następnie dodane do **ListBox**.  
+     The strings that are returned by the `GetFiles` method are then added to the **ListBox**.  
   
-4. Uruchom aplikację. Kliknij przycisk **Przeglądaj** przycisku. W **przeglądanie w poszukiwaniu folderu** okno dialogowe, przejdź do folderu, który zawiera pliki txt, wybierz folder, a następnie kliknij polecenie **OK**.  
+4. Uruchom aplikację. Click the **Browse** button. In the **Browse For Folder** dialog box, browse to a folder that contains .txt files, and then select the folder and click **OK**.  
   
-     `ListBox` Zawiera listę plików txt w wybranym folderze.  
+     The `ListBox` contains a list of .txt files in the selected folder.  
   
-5. Zatrzymywanie, uruchamianie aplikacji.  
+5. Stop running the application.  
   
-### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>Aby uzyskać atrybuty pliku i zawartości z pliku tekstowego  
+### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>To obtain attributes of a file, and content from a text file  
   
-1. Tworzenie `Click` program obsługi zdarzeń dla `examineButton` przez dwukrotne kliknięcie formantu w formularzu.  
+1. Create a `Click` event handler for `examineButton` by double-clicking the control on the form.  
   
-2. Dodaj następujący kod do `Click` programu obsługi zdarzeń.  
+2. Add the following code to the `Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
-     Kod sprawdza, czy element jest zaznaczony na `ListBox`. Następnie uzyskuje wpis ścieżki pliku z `ListBox`. <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> Metoda jest używana w celu sprawdzenia, czy plik nadal istnieje.  
+     The code verifies that an item is selected in the `ListBox`. It then obtains the file path entry from the `ListBox`. The <xref:Microsoft.VisualBasic.FileIO.FileSystem.FileExists%2A> method is used to check whether the file still exists.  
   
-     Ścieżka pliku jest wysyłany jako argument do `GetTextForOutput` metody, która jest dodawana w następnym kroku. Ta metoda zwraca ciąg, który zawiera informacje o pliku. Informacje o pliku, który pojawia się w **MessageBox**.  
+     The file path is sent as an argument to the `GetTextForOutput` method, which is added in the next step. This method returns a string that contains file information. The file information appears in a **MessageBox**.  
   
-3. Dodaj następujący kod `GetTextForOutput` metody.  
+3. Add the following `GetTextForOutput` method.  
   
      [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
-     Kod używa <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> metodę, aby uzyskać plik parametrów. Parametry pliku są dodawane do <xref:System.Text.StringBuilder>.  
+     The code uses the <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method to obtain file parameters. The file parameters are added to a <xref:System.Text.StringBuilder>.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> Metoda odczytuje zawartość pliku do <xref:System.IO.StreamReader>. Pierwszy wiersz zawartości jest uzyskiwana z `StreamReader` i jest dodawany do `StringBuilder`.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> method reads the file contents into a <xref:System.IO.StreamReader>. The first line of the contents is obtained from the `StreamReader` and is added to the `StringBuilder`.  
   
-4. Uruchom aplikację. Kliknij przycisk **Przeglądaj**, a następnie przejdź do folderu zawierającego pliki txt. Kliknij przycisk **OK**.  
+4. Uruchom aplikację. Click **Browse**, and browse to a folder that contains .txt files. Kliknij przycisk **OK**.  
   
-     Wybierz plik w `ListBox`, a następnie kliknij przycisk **Sprawdź**. Element `MessageBox` zawiera informacje o pliku.  
+     Select a file in the `ListBox`, and then click **Examine**. A `MessageBox` shows the file information.  
   
-5. Zatrzymywanie, uruchamianie aplikacji.  
+5. Stop running the application.  
   
-### <a name="to-add-a-log-entry"></a>Aby dodać wpis dziennika  
+### <a name="to-add-a-log-entry"></a>To add a log entry  
   
-1. Dodaj następujący kod na końcu `examineButton_Click` programu obsługi zdarzeń.  
+1. Add the following code to the end of the `examineButton_Click` event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
-     Kod ustawia ścieżka pliku dziennika, aby umieścić ten plik dziennika w tym samym katalogu co w przypadku wybranego pliku. Tekst wpisu dziennika jest ustawiona na bieżącą datę i godzinę, o których następuje informacji o pliku.  
+     The code sets the log file path to put the log file in the same directory as that of the selected file. The text of the log entry is set to the current date and time followed by the file information.  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> Metoda, za pomocą `append` argument wartość `True`, służy do tworzenia wpisu dziennika.  
+     The <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> method, with the `append` argument set to `True`, is used to create the log entry.  
   
-2. Uruchom aplikację. Przejdź do pliku tekstowego, wybierz ją w `ListBox`, wybierz opcję **Zapisz wyniki** pole wyboru, a następnie kliknij przycisk **Sprawdź**. Sprawdź, czy wpis dziennika są zapisywane do `log.txt` pliku.  
+2. Uruchom aplikację. Browse to a text file, select it in the `ListBox`, select the **Save Results** check box, and then click **Examine**. Verify that the log entry is written to the `log.txt` file.  
   
-3. Zatrzymywanie, uruchamianie aplikacji.  
+3. Stop running the application.  
   
-### <a name="to-use-the-current-directory"></a>Aby użyć bieżącego katalogu  
+### <a name="to-use-the-current-directory"></a>To use the current directory  
   
-1. Utwórz procedurę obsługi zdarzeń dla `Form1_Load` przez dwukrotne kliknięcie formularza.  
+1. Create an event handler for `Form1_Load` by double-clicking the form.  
   
-2. Dodaj następujący kod do narzędzia obsługi zdarzeń.  
+2. Add the following code to the event handler.  
   
      [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
-     Ten kod ustawia domyślny katalog przeglądarkę folderów w bieżącym katalogu.  
+     This code sets the default directory of the folder browser to the current directory.  
   
-3. Uruchom aplikację. Po kliknięciu **Przeglądaj** po raz pierwszy, **przeglądanie w poszukiwaniu folderu** zostanie otwarte okno dialogowe w bieżącym katalogu.  
+3. Uruchom aplikację. When you click **Browse** the first time, the **Browse For Folder** dialog box opens to the current directory.  
   
-4. Zatrzymywanie, uruchamianie aplikacji.  
+4. Stop running the application.  
   
-### <a name="to-selectively-enable-controls"></a>Aby selektywnie włączyć kontrolki  
+### <a name="to-selectively-enable-controls"></a>To selectively enable controls  
   
-1. Dodaj następujący kod `SetEnabled` metody.  
+1. Add the following `SetEnabled` method.  
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
-     `SetEnabled` Metoda włącza lub wyłącza kontrolek, w zależności od tego, czy element jest zaznaczony na `ListBox`.  
+     The `SetEnabled` method enables or disables controls depending on whether an item is selected in the `ListBox`.  
   
-2. Tworzenie `SelectedIndexChanged` program obsługi zdarzeń dla `filesListBox` przez dwukrotne kliknięcie `ListBox` formant w formularzu.  
+2. Create a `SelectedIndexChanged` event handler for `filesListBox` by double-clicking the `ListBox` control on the form.  
   
-3. Dodaj wywołanie do `SetEnabled` w nowym `filesListBox_SelectedIndexChanged` programu obsługi zdarzeń.  
+3. Add a call to `SetEnabled` in the new `filesListBox_SelectedIndexChanged` event handler.  
   
-4. Dodaj wywołanie do `SetEnabled` na końcu `browseButton_Click` programu obsługi zdarzeń.  
+4. Add a call to `SetEnabled` at the end of the `browseButton_Click` event handler.  
   
-5. Dodaj wywołanie do `SetEnabled` na końcu `Form1_Load` programu obsługi zdarzeń.  
+5. Add a call to `SetEnabled` at the end of the `Form1_Load` event handler.  
   
-6. Uruchom aplikację. **Zapisz wyniki** pole wyboru i **Sprawdź** przycisk są wyłączone, jeśli element nie jest wybrane w `ListBox`.  
+6. Uruchom aplikację. The **Save Results** check box and the **Examine** button are disabled if an item is not selected in the `ListBox`.  
   
-## <a name="full-example-using-mycomputerfilesystem"></a>Pełny przykład za pomocą My.Computer.FileSystem  
- Oto kompletny przykład.  
+## <a name="full-example-using-mycomputerfilesystem"></a>Full example using My.Computer.FileSystem  
+
+ Following is the complete example.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
-## <a name="full-example-using-systemio"></a>Pełny przykład za pomocą System.IO  
- W poniższym przykładzie równoważne użyto klas z <xref:System.IO> przestrzeni nazw, zamiast `My.Computer.FileSystem` obiektów.  
+## <a name="full-example-using-systemio"></a>Full example using System.IO  
+
+ The following equivalent example uses classes from the <xref:System.IO> namespace instead of using `My.Computer.FileSystem` objects.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   
@@ -164,4 +167,4 @@ Ten przewodnik zawiera wprowadzenie do podstaw we/wy pliku w Visual Basic. Ją o
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Przewodnik: manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

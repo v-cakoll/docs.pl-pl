@@ -1,5 +1,5 @@
 ---
-title: Take — Klauzula (Visual Basic)
+title: Take — Klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryTake
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - queries [Visual Basic], Take
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
-ms.openlocfilehash: 32a4c7fd7f1e2f6fe640f3f53f15579f014759d5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3082954ef84560ccb70f7a47cd3532f622829392
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004715"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349644"
 ---
 # <a name="take-clause-visual-basic"></a>Take — Klauzula (Visual Basic)
-Zwraca określoną liczbę elementów sąsiadujących od początku kolekcji.  
+Returns a specified number of contiguous elements from the start of a collection.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -26,25 +26,25 @@ Take count
   
 ## <a name="parts"></a>Części  
  `count`  
- Wymagany. Wartość lub wyrażenie, które oblicza liczbę elementów sekwencji do zwrócenia.  
+ Wymagany. A value or an expression that evaluates to the number of elements of the sequence to return.  
   
 ## <a name="remarks"></a>Uwagi  
- Klauzula `Take` powoduje, że zapytanie zawiera określoną liczbę elementów sąsiadujących od początku listy wyników. Liczba elementów do dołączenia jest określona przez parametr `count`.  
+ The `Take` clause causes a query to include a specified number of contiguous elements from the start of a results list. The number of elements to include is specified by the `count` parameter.  
   
- Można użyć klauzuli `Take` z klauzulą `Skip`, aby zwrócić zakres danych z dowolnego segmentu zapytania. W tym celu Przekaż indeks pierwszego elementu zakresu do klauzuli `Skip` i rozmiaru zakresu do klauzuli `Take`. W takim przypadku klauzula `Take` musi być określona po klauzuli `Skip`.  
+ You can use the `Take` clause with the `Skip` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause. In this case, the `Take` clause must be specified after the `Skip` clause.  
   
- Jeśli w zapytaniu jest używana klauzula `Take`, może być również konieczne upewnienie się, że wyniki są zwracane w kolejności, w której zostanie włączona klauzula `Take` w celu uwzględnienia zamierzonych wyników. Aby uzyskać więcej informacji na temat porządkowania wyników zapytania, zobacz [klauzula Order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ When you use the `Take` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Take` clause to include the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Można użyć klauzuli `TakeWhile`, aby określić, że tylko niektóre elementy mają być zwracane, w zależności od podanego warunku.  
+ You can use the `TakeWhile` clause to specify that only certain elements be returned, depending on a supplied condition.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kodu używa klauzuli `Take` razem z klauzulą `Skip` do zwracania danych z zapytania na stronach. Funkcja getcustomerss używa klauzuli `Skip` w celu obejścia klientów na liście do momentu podanej wartości indeksu początkowego i użycia klauzuli `Take` do zwrócenia strony klientów zaczynających się od tej wartości indeksu.  
+ The following code example uses the `Take` clause together with the `Skip` clause to return data from a query in pages. The GetCustomers function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)
 - [From, klauzula](../../../visual-basic/language-reference/queries/from-clause.md)

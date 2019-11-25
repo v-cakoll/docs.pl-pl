@@ -1,35 +1,35 @@
 ---
-title: Podstawowe zapytania (LINQ to XML) (Visual Basic)
+title: Podstawowe zapytania (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e733681fe7bf1a26a1b3bfb806f9b6d43d9cfd8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903529"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345741"
 ---
-# <a name="basic-queries-linq-to-xml-visual-basic"></a>Podstawowe zapytania (LINQ to XML) (Visual Basic)
-Ta sekcja zawiera przykłady podstawowych zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+# <a name="basic-queries-linq-to-xml-visual-basic"></a>Basic Queries (LINQ to XML) (Visual Basic)
+This section provides examples of basic [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Instrukcje: Wyszukiwanie elementu o określonym atrybucie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Pokazuje, jak znaleźć konkretny element, który ma atrybut o określonej wartości.|  
-|[Instrukcje: Wyszukiwanie elementu o określonym elemencie podrzędnym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Pokazuje, jak znaleźć konkretny element, który ma element podrzędny z określoną wartością.|  
-|[Tworzenie zapytań dla klasy XDocument lub XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Wyjaśnienie różnic między tworzeniem zapytań dla drzewa XML osadzonego w klasie <xref:System.Xml.Linq.XElement> albo <xref:System.Xml.Linq.XDocument>.|  
-|[Instrukcje: Wyszukiwanie elementów potomnych o określonej nazwie elementu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Pokazuje, jak znaleźć wszystkie obiekty podrzędne elementu, które mają określoną nazwę. W tym przykładzie użyto osi <xref:System.Xml.Linq.XContainer.Descendants%2A>.|  
-|[Instrukcje: Znajdź pojedynczego elementu potomnego przy użyciu metody elementów potomnych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Przedstawia sposób użycia metody osi <xref:System.Xml.Linq.XContainer.Descendants%2A> do znalezienia pojedynczego elementu o unikatowej nazwie.|  
-|[Instrukcje: Pisanie zapytań z zaawansowanym filtrowaniem (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Wyjaśnia, jak napisać zapytanie z bardziej złożonym filtrowaniem.|  
-|[Instrukcje: Filtrowanie elementu opcjonalnego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Pokazuje, jak znaleźć węzły w nieregularnie uformowanym drzewie.|  
-|[Instrukcje: Znajdź wszystkie węzły w Namespace (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Pokazuje, jak znaleźć wszystkie węzły znajdujące się w określonej przestrzeni nazw.|  
-|[Instrukcje: Sortowanie elementów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|Pokazuje, jak napisać zapytanie sortujące wyniki.|  
-|[Instrukcje: Sortowanie elementów na wielu kluczach (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Pokazuje, jak sortować według wielu kluczy.|  
-|[Instrukcje: Obliczanie wartości pośrednich (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Przedstawia sposób użycia klauzuli `Let` do obliczania wartości pośrednich w zapytaniach [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Instrukcje: Pisanie zapytania odnajdującego elementy na podstawie kontekstu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Pokazuje sposób wybierania elementów na podstawie innych elementach drzewa.|  
-|[Instrukcje: Debugowanie zestawów wyników zapytania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Pokazuje, jakiego rozwiązania trzeba użyć podczas debugowania zapytań XML, które znajdują się w domyślnej przestrzeni nazw.|  
+|[How to: Find an Element with a Specific Attribute (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)|Shows how to find a particular element that has an attribute that has a specific value.|  
+|[How to: Find an Element with a Specific Child Element (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-child-element.md)|Shows how to find a particular element that has a child element that has a specific value.|  
+|[Querying an XDocument vs. Querying an XElement (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-an-xdocument-vs-querying-an-xelement.md)|Explains the differences between writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XElement> and writing queries on an XML tree that is rooted in <xref:System.Xml.Linq.XDocument>.|  
+|[How to: Find Descendants with a Specific Element Name (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendants-with-a-specific-element-name.md)|Shows how to find all the descendants of an element that have a specific name. This example uses the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.|  
+|[How to: Find a Single Descendant Using the Descendants Method (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-single-descendant-using-the-descendants-method.md)|Shows how to use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to find a single uniquely named element.|  
+|[How to: Write Queries with Complex Filtering (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)|Shows how to write a query with a more complex filter.|  
+|[How to: Filter on an Optional Element (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-optional-element.md)|Shows how to find nodes in an irregularly shaped tree.|  
+|[How to: Find All Nodes in a Namespace (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-all-nodes-in-a-namespace.md)|Shows how to find all nodes that are in a specific namespace.|  
+|[How to: Sort Elements (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements.md)|Shows how to write a query that sorts its results.|  
+|[How to: Sort Elements on Multiple Keys (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md)|Shows how to sort on multiple keys.|  
+|[How to: Calculate Intermediate Values (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-calculate-intermediate-values.md)|Shows how to use the `Let` clause to calculate intermediate values in a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query.|  
+|[How to: Write a Query that Finds Elements Based on Context (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-query-that-finds-elements-based-on-context.md)|Shows how to select elements based on other elements in the tree.|  
+|[How to: Debug Empty Query Results Sets (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|Shows the appropriate fix when debugging queries on XML that is in a default namespace.|  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Wykonywanie zapytań do drzewa XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
+- [Querying XML Trees (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

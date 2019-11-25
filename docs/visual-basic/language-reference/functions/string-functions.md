@@ -1,89 +1,89 @@
 ---
-title: Funkcje ciągów (Visual Basic)
+title: Funkcje ciągów
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583004"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349980"
 ---
 # <a name="string-functions-visual-basic"></a>Funkcje ciągów (Visual Basic)
 
-Poniższa tabela zawiera listę funkcji, które Visual Basic zapewnia w klasie <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> do wyszukiwania ciągów i manipulowania nimi. Mogą być uznawane za Visual Basic funkcje wewnętrzne; oznacza to, że nie trzeba wywoływać ich jako jawnych elementów członkowskich klasy, jak pokazano w przykładzie. Dodatkowe metody, a w niektórych przypadkach metody uzupełniające są dostępne w klasie <xref:System.String?displayProperty=nameWithType>.
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
-|.NET Framework, Metoda|Opis|
+|.NET Framework method|Opis|
 |---------------------------|-----------------|
-|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Zwraca wartość `Integer` reprezentującą kod znaku odpowiadający znakowi.|
-|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Zwraca znak skojarzony z podanym kodem znaku.|
-|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Zwraca tablicę opartą na zero, zawierającą podzbiór `String` tablicy na podstawie określonych kryteriów filtrowania.|
-|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Zwraca ciąg sformatowany zgodnie z instrukcjami zawartymi w formacie `String` wyrażenia.|
-|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Zwraca wyrażenie sformatowane jako wartość walutowa przy użyciu symbolu waluty zdefiniowanego w panelu sterowania systemem.|
-|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Zwraca wyrażenie ciągu reprezentujące wartość daty/godziny.|
-|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Zwraca wyrażenie sformatowane jako liczba.|
-|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Zwraca wyrażenie sformatowane jako wartość procentowa (czyli pomnożona przez 100) z końcowym znakiem%.|
-|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Zwraca liczbę całkowitą określającą pozycję początkową pierwszego wystąpienia jednego ciągu w innym.|
-|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Zwraca pozycję pierwszego wystąpienia jednego ciągu w innym, rozpoczynając od prawej strony ciągu.|
-|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Zwraca ciąg utworzony przez przyłączenie kilku podciągów zawartych w tablicy.|
-|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Zwraca ciąg lub znak przekonwertowany na małe litery.|
-|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Zwraca ciąg zawierający określoną liczbę znaków z lewej strony ciągu.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Zwraca liczbę całkowitą, która zawiera numer znaków w ciągu.|
-|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Zwraca ciąg wyrównany do lewej zawierający określony ciąg dostosowany do określonej długości.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji wiodących.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Zwraca ciąg zawierający określoną liczbę znaków z ciągu.|
-|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Zwraca ciąg, w którym określony podciąg został zamieniony na inny podciąg określoną liczbę razy.|
-|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Zwraca ciąg zawierający określoną liczbę znaków z prawej strony ciągu.|
-|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Zwraca ciąg wyrównany do prawej zawierający określony ciąg dostosowany do określonej długości.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji końcowych.|
-|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Zwraca ciąg zawierający podaną liczbę spacji.|
-|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Zwraca tablicę jednowymiarową (od zera) zawierającą określoną liczbę podciągów.|
-|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Zwraca wartość-1, 0 lub 1, na podstawie wyniku porównania ciągów.|
-|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Zwraca ciąg przekonwertowany jako określony.|
-|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Zwraca ciąg lub obiekt składający się z określonego znaku Powtórzonego określoną liczbę razy.|
-|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Zwraca ciąg, w którym kolejność znaków określonego ciągu jest odwrócona.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Zwraca ciąg zawierający kopię określonego ciągu bez spacji wiodących i końcowych.|
-|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Zwraca ciąg lub znak zawierający określony ciąg przekonwertowany na wielkie litery.|
+|<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Returns an `Integer` value representing the character code corresponding to a character.|
+|<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Returns the character associated with the specified character code.|
+|<xref:Microsoft.VisualBasic.Strings.Filter%2A>|Returns a zero-based array containing a subset of a `String` array based on specified filter criteria.|
+|<xref:Microsoft.VisualBasic.Strings.Format%2A>|Returns a string formatted according to instructions contained in a format `String` expression.|
+|<xref:Microsoft.VisualBasic.Strings.FormatCurrency%2A>|Returns an expression formatted as a currency value using the currency symbol defined in the system control panel.|
+|<xref:Microsoft.VisualBasic.Strings.FormatDateTime%2A>|Returns a string expression representing a date/time value.|
+|<xref:Microsoft.VisualBasic.Strings.FormatNumber%2A>|Returns an expression formatted as a number.|
+|<xref:Microsoft.VisualBasic.Strings.FormatPercent%2A>|Returns an expression formatted as a percentage (that is, multiplied by 100) with a trailing % character.|
+|<xref:Microsoft.VisualBasic.Strings.InStr%2A>|Returns an integer specifying the start position of the first occurrence of one string within another.|
+|<xref:Microsoft.VisualBasic.Strings.InStrRev%2A>|Returns the position of the first occurrence of one string within another, starting from the right side of the string.|
+|<xref:Microsoft.VisualBasic.Strings.Join%2A>|Returns a string created by joining a number of substrings contained in an array.|
+|<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Returns a string or character converted to lowercase.|
+|<xref:Microsoft.VisualBasic.Strings.Left%2A>|Returns a string containing a specified number of characters from the left side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
+|<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Returns a left-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
+|<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Returns a string in which a specified substring has been replaced with another substring a specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.Right%2A>|Returns a string containing a specified number of characters from the right side of a string.|
+|<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Returns a right-aligned string containing the specified string adjusted to the specified length.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Space%2A>|Returns a string consisting of the specified number of spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Split%2A>|Returns a zero-based, one-dimensional array containing a specified number of substrings.|
+|<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Returns -1, 0, or 1, based on the result of a string comparison.|
+|<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Returns a string converted as specified.|
+|<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Returns a string or object consisting of the specified character repeated the specified number of times.|
+|<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Returns a string in which the character order of a specified string is reversed.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
+|<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Returns a string or character containing the specified string converted to uppercase.|
 
-Możesz użyć instrukcji [Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) , aby określić, czy ciągi są porównywane przy użyciu kolejności sortowania tekstu nieuwzględniającego wielkości liter, określonego przez ustawienia regionalne systemu (`Text`) lub wewnętrzne reprezentacje binarne znaków (`Binary`). Domyślna metoda porównywania tekstu to `Binary`.
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). The default text comparison method is `Binary`.
 
-## <a name="example-ucase"></a>Przykład: UCase
+## <a name="example-ucase"></a>Example: UCase
 
-W tym przykładzie funkcja `UCase` zwraca wielką wersję ciągu.
+This example uses the `UCase` function to return an uppercase version of a string.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Przykład: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
-W tym przykładzie funkcja `LTrim` służy do rozdzielania spacji wiodących i funkcji `RTrim`, aby rozdzielić spacje z zmiennej ciągu. Używa funkcji `Trim` w celu rozdzielenia obu typów spacji.
+This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Przykład: Mid
+## <a name="example-mid"></a>Example: Mid
 
-W tym przykładzie funkcja `Mid` zwraca określoną liczbę znaków z ciągu.
+This example uses the `Mid` function to return a specified number of characters from a string.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Przykład: Len
+## <a name="example-len"></a>Example: Len
 
-W tym przykładzie używa `Len`, aby zwrócić liczbę znaków w ciągu.
+This example uses `Len` to return the number of characters in a string.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Przykład: InStr
+## <a name="example-instr"></a>Example: InStr
 
-W tym przykładzie funkcja `InStr` zwraca pozycję pierwszego wystąpienia jednego ciągu w innym.
+This example uses the `InStr` function to return the position of the first occurrence of one string within another.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Przykład: format
+## <a name="example-format"></a>Example: Format
 
-W tym przykładzie przedstawiono różne zastosowania funkcji `Format` do formatowania wartości przy użyciu zarówno formatów `String`, jak i formatów zdefiniowanych przez użytkownika. W przypadku separatora daty (`/`), separatora czasu (`:`) i wskaźników AM/PM (`t` i `tt`) rzeczywiste sformatowane dane wyjściowe wyświetlane przez system zależą od ustawień regionalnych, których używa kod. Gdy godziny i daty są wyświetlane w środowisku deweloperskim, używany jest format krótki czas i krótki format daty dla ustawień regionalnych.
+This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
 
 > [!NOTE]
-> Dla ustawień regionalnych, które używają zegara 24-godzinnego, wskaźniki AM/PM (`t` i `tt`) nie wyświetlają niczego.
+> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
@@ -92,4 +92,4 @@ W tym przykładzie przedstawiono różne zastosowania funkcji `Format` do format
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
 - [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Manipulowanie ciągami — podsumowanie](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [Metody klasy System. String](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

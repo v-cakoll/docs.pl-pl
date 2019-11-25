@@ -1,24 +1,24 @@
 ---
-title: Dostęp do ciągu liczonego od zera a Dostęp do ciągu liczonego od jednego w języku Visual Basic
+title: Zero-based vs. One-based String Access
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: cc8f286de41d7e44225e889e73ff3c7b1fdbd881
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e60038bc7ec0f030939d0980b786bffebcfb9a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591751"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354297"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Dostęp do ciągu liczonego od zera a Dostęp do ciągu liczonego od jednego w języku Visual Basic
-W tym temacie przedstawiono porównanie, w jaki Visual Basic i .NET Framework zapewnia dostęp do znaków w ciągu. .NET Framework zawsze udostępnia liczony od zera znaków w ciągu, natomiast języka Visual Basic udostępnia liczony od zera i jednobazowa, w zależności od funkcji.  
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Dostęp do ciągów opartych na zerze i na jedynce w Visual Basic
+This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
   
-## <a name="one-based"></a>Liczonego od jednego  
- Na przykład funkcję liczonego od jednego języka Visual Basic należy wziąć pod uwagę `Mid` funkcji. Trwa argument, który wskazuje pozycję znaku, w którym podciąg rozpocznie się, zaczynając od pozycji 1. .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> metoda przyjmuje indeks znaku w ciągu, w którym podciąg jest uruchomienie, zaczynając od pozycji 0. W związku z tym, jeśli ciąg "ABCDE", pojedyncze znaki są numerowane 1,2,3,4,5 do użytku z programem `Mid` funkcji, ale 0,1,2,3,4 do użytku z programem <xref:System.String.Substring%2A?displayProperty=nameWithType> metody.  
+## <a name="one-based"></a>One-Based  
+ For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
   
-## <a name="zero-based"></a>Liczony od zera  
- Na przykład liczony od zera funkcja języka Visual Basic należy wziąć pod uwagę `Split` funkcji. On dzieli ciąg i zwraca tablicę zawierającą podciągów. .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> metoda również dzieli ciąg i zwraca tablicę zawierającą podciągów. Ponieważ `Split` funkcji i <xref:System.String.Split%2A> metody zwracają tablice platformy .NET Framework, muszą one być liczony od zera.  
+## <a name="zero-based"></a>Zero-Based  
+ For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -26,4 +26,4 @@ W tym temacie przedstawiono porównanie, w jaki Visual Basic i .NET Framework za
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>
 - <xref:System.String.Split%2A>
-- [Wprowadzenie do ciągów w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Introduction to Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

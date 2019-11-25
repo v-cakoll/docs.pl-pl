@@ -1,5 +1,5 @@
 ---
-title: Przetwarzanie dysków, katalogów i plików (Visual Basic)
+title: Przetwarzanie dysków, katalogów i plików
 ms.date: 07/20/2015
 helpviewer_keywords:
 - drives
@@ -9,32 +9,35 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 7c0e412f9b9ccb8d425aae1e3985e7492e452fd9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593406"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333952"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Przetwarzanie dysków, katalogów i plików (Visual Basic)
-Visual Basic umożliwia przetwarzanie dysków, folderów i plików za pomocą `My.Computer.FileSystem` obiektu, który zapewnia lepszą wydajność i jest łatwiejszy w obsłudze niż tradycyjne metody takie jak `FileOpen` i `Write` funkcji (mimo że są one nadal dostępne). W poniższych sekcjach omówiono te metody szczegółowo.  
+
+You can use Visual Basic to process drives, folders, and files with the `My.Computer.FileSystem` object, which provides better performance and is easier to use than traditional methods such as the `FileOpen` and `Write` functions (although they are still available). The following sections discuss these methods in detail.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
+
  [Dostęp do plików za pomocą Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)  
- W tym artykule omówiono sposób używania `My.Computer.FileSystem` obiekt do pracy z plikami, dyski i foldery.  
+ Discusses how to use the `My.Computer.FileSystem` object to work with files, drives, and folders.  
   
- [Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
- Omówienie pojęć operacji We/Wy pliku w .NET Framework, m.in. strumieni wydzielonej pamięci masowej, plikowymi, atrybuty pliku i uzyskiwania dostępu do plików.  
+ [Basics of .NET Framework File I/O and the File System (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)  
+ Provides an overview of file I/O concepts in the .NET Framework, including streams, isolated storage, file events, file attributes, and file access.  
   
- [Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Pokazuje, jak używać programu .NET Framework do manipulowania plikami i folderami.  
+ [Przewodnik: manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Demonstrates how to use the .NET Framework to manipulate files and folders.  
   
- [Przewodnik: Manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Pokazuje sposób użycia `My.Computer.FileSystem` obiekt do manipulowania plikami i folderami.  
+ [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Demonstrates how to use the `My.Computer.FileSystem` object to manipulate files and folders.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Konwencje dotyczące struktury programów i kodu](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Zawiera wytyczne dotyczące fizycznej strukturze i wygląd programów.  
+
+ [Struktura programu i konwencje związane z kodami](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
+ Provides guidelines for the physical structure and appearance of programs.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- Dokumentacji dla `My.Computer.FileSystem` obiektu i jego członków.
+ Reference documentation for the `My.Computer.FileSystem` object and its members.

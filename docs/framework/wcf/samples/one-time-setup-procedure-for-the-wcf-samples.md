@@ -2,12 +2,12 @@
 title: Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 90463a83b8a10085d4df90a2832886e43c51c734
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424927"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141855"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 
@@ -22,7 +22,7 @@ Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania
 
 1. Upewnij się, że ASP.NET został skonfigurowany. Aby uzyskać więcej informacji na temat sposobu konfigurowania usługi ASP.NET, zobacz [instrukcje hostingu internetowych usług informacyjnych](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md).
 
-2. Upewnij się, że zainstalowano [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]. Wyszukaj w następującym katalogu dla wersji v 4.0 (lub nowszej): **\Windows\Microsoft.NET\Framework**
+2. Upewnij się, że zainstalowano .NET Framework 4. Wyszukaj w następującym katalogu dla wersji v 4.0 (lub nowszej): **\Windows\Microsoft.NET\Framework**
 
 3. Jeśli nie zainstalowano programu Visual Studio 2012 i system operacyjny nie jest systemem Windows Server 2008 z dodatkiem SP2 lub nowszym, należy zainstalować [poprawkę 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
 
@@ -37,15 +37,15 @@ Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania
     ```
 
     > [!WARNING]
-    > Uruchomienie polecenia `aspnet_regiis –i –enable` spowoduje, że domyślna pula aplikacji zostanie uruchomiona przy użyciu [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], co może spowodować problemy ze zgodnością dla innych aplikacji na tym samym komputerze.
+    > Uruchomienie polecenia `aspnet_regiis –i –enable` spowoduje, że domyślna pula aplikacji zostanie uruchomiona przy użyciu .NET Framework 4, co może spowodować problemy ze zgodnością dla innych aplikacji na tym samym komputerze.
 
 5. Postępuj zgodnie z [instrukcjami zapory](../../../../docs/framework/wcf/samples/firewall-instructions.md) dotyczącymi włączania portów używanych przez przykłady.
 
-6. Sprawdź następujący katalog domyślny: \<InstallDrive >: **\WF_WCF_Samples**. Jeśli wcześniej zainstalowano przykłady, jest to katalog domyślny.
+6. Sprawdź następujący katalog domyślny: \<InstallDrive >: **\ WF_WCF_Samples**. Jeśli wcześniej zainstalowano przykłady, jest to katalog domyślny.
 
 7. Jeśli przykłady nie są zainstalowane, zainstaluj je z lokalizacji pobierania próbek dla programu [C#](https://go.microsoft.com/fwlink/?LinkId=190939).
 
-8. Po zainstalowaniu przykładów przejdź do: \<InstallDrive >: **\WF_WCF_Samples\WCF\Setup\\**
+8. Po zainstalowaniu przykładów przejdź do: \<InstallDrive >: **\ WF_WCF_Samples \wcf\setup\\**
 
 9. Uruchom plik wsadowy **Setupvroot. bat** . Wykonywane są następujące czynności:
 
@@ -65,7 +65,7 @@ Katalog wirtualny **servicemodelsamples** służy do kompilowania i uruchamiania
 
 11. Utwórz katalog C:\LOGS na komputerze; Niektóre przykłady mogą oczekiwać. Upewnij się, że odpowiednie konto ma przyznany dostęp do zapisu dla tego folderu. W przypadku systemów Windows 7, [!INCLUDE[wv](../../../../includes/wv-md.md)]i Windows Server 2008 R2 to konto jest **usługą sieciową**. W przypadku [!INCLUDE[lserver](../../../../includes/lserver-md.md)]konto to NT Authority\Network Service. W przypadku [!INCLUDE[wxp](../../../../includes/wxp-md.md)] i [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]konto jest ASPNET.
 
-12. Uruchom plik Setupcerttool. bat. Ten plik znajduje się w folderze \<InstallPath > \WF_WCF_Samples\WCF\Setup\.  Ten skrypt wykona następujące zadania:
+12. Uruchom plik Setupcerttool. bat. Ten plik znajduje się w folderze \<InstallPath > \ WF_WCF_Samples \WCF\Setup\.  Ten skrypt wykona następujące zadania:
 
     - Utwórz narzędzie FindPrivateKey.
 

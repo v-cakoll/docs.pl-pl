@@ -1,22 +1,22 @@
 ---
-title: 'Instrukcje: Wywoływanie metody rozszerzenia (Visual Basic)'
+title: 'Porady: wywoływanie metody rozszerzenia'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512673"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340397"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Instrukcje: Wywoływanie metody rozszerzenia (Visual Basic)
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Porady: wywoływanie metody rozszerzenia (Visual Basic)
 
-Metody rozszerzające umożliwiają dodawanie metod do istniejącej klasy. Po zadeklarowaniu i wejściu do zakresu metody rozszerzenia można wywołać ją jak metodę wystąpienia typu, który rozszerza. Aby uzyskać więcej informacji na temat pisania metody rozszerzenia, zobacz [How to: Napisz metodę](./how-to-write-an-extension-method.md)rozszerzenia.
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- Poniższe instrukcje odnoszą się do metody `PrintAndPunctuate`rozszerzającej, która wyświetla wystąpienie ciągu, które wywołuje ten element, a następnie dowolną wartość jest wysyłana w dla drugiego `punc`parametru,.
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-Metoda musi znajdować się w zakresie, gdy jest wywoływana.
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>Aby wywołać metodę rozszerzenia
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. Zadeklaruj zmienną, która ma typ danych pierwszego parametru metody rozszerzenia. Dla `PrintAndPunctuate`, potrzebna jest <xref:System.String> zmienna:
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Ta zmienna wywoła metodę rozszerzającą, a jej wartość jest powiązana z pierwszym parametrem `aString`. Zostanie wyświetlona `Ready?`następująca instrukcja wywołująca.
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Zwróć uwagę, że wywołanie tej metody rozszerzenia wygląda tak samo jak wywołanie jednej z <xref:System.String> metod instancji, które wymagają jednego parametru:
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Zadeklaruj inną zmienną ciągu i Wywołaj metodę ponownie, aby zobaczyć, że działa z dowolnym ciągiem.
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     Wynik tego czasu: `or not!!!`.
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>Przykład
- Poniższy kod stanowi kompletny przykład tworzenia i używania prostej metody rozszerzenia.
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -97,6 +97,6 @@ End Module
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Napisz metodę rozszerzenia](./how-to-write-an-extension-method.md)
+- [Instrukcje: zapisywanie metody rozszerzenia](./how-to-write-an-extension-method.md)
 - [Metody rozszerzeń](./extension-methods.md)
-- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

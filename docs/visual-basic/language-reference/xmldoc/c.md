@@ -1,19 +1,19 @@
 ---
-title: <c> (Visual Basic)
+title: <c>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 4ea19ed5330dcbb8fcd84708d1546a81d909b04e
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 857ea1ccca4d74daf65bba03845004561afefd55
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523943"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348509"
 ---
-# <a name="c-visual-basic"></a>> \<c (Visual Basic)
-Wskazuje, że tekst w opisie ma kod.  
+# <a name="c-visual-basic"></a>\<c> (Visual Basic)
+Indicates that text within a description is code.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -25,15 +25,15 @@ Wskazuje, że tekst w opisie ma kod.
   
 |Parametr|Opis|  
 |---|---|  
-|`text`|Tekst, który ma być wskazywany jako kod.|  
+|`text`|The text you would like to indicate as code.|  
   
 ## <a name="remarks"></a>Uwagi  
- Tag `<c>` umożliwia wskazanie, że tekst w opisie powinien być oznaczony jako kod. Użyj [> \<code](../../../visual-basic/language-reference/xmldoc/code.md) , aby wskazać wiele wierszy jako kod.  
+ The `<c>` tag gives you a way to indicate that text within a description should be marked as code. Use [\<code>](../../../visual-basic/language-reference/xmldoc/code.md) to indicate multiple lines as code.  
   
- Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zastosowano tag `<c>` w sekcji Podsumowanie, aby wskazać, że `Counter` jest kodem.  
+ This example uses the `<c>` tag in the summary section to indicate that `Counter` is code.  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   

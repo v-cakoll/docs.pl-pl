@@ -1,182 +1,182 @@
 ---
-title: Obiekty i klasy w języku Visual Basic
+title: Obiekty i klasy
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755166"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346705"
 ---
-# <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w języku Visual Basic
+# <a name="objects-and-classes-in-visual-basic"></a>Objects and classes in Visual Basic
 
-*Obiektu* składa się z kodu i danych, które mogą być traktowane jako jednostka. Obiekt może być częścią aplikacji, takich jak formularz lub formant. Można także obiekt całej aplikacji.
+An *object* is a combination of code and data that can be treated as a unit. An object can be a piece of an application, like a control or a form. An entire application can also be an object.
 
-Po utworzeniu aplikacji w języku Visual Basic stale pracy z obiektami. Możesz użyć obiekty dostarczane w języku Visual Basic, takich jak uzyskiwanie dostępu do obiektów formantów, formularzy i danych. Umożliwia także obiekty z innymi aplikacjami w swojej aplikacji Visual Basic. Można nawet tworzenia własnych obiektów i zdefiniować dodatkowe właściwości i metody dla nich. Obiekty zachowywać się jak prefabrykowanych bloków konstrukcyjnych dla programów — umożliwiają Napisz raz, fragment kodu i ponownie używać jej wielokrotnie.
+When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. You can even create your own objects and define additional properties and methods for them. Objects act like prefabricated building blocks for programs — they let you write a piece of code once and reuse it over and over.
 
-W tym temacie omówiono obiektów szczegółowo.
+This topic discusses objects in detail.
 
 ## <a name="objects-and-classes"></a>Obiekty i klasy
 
-Każdy obiekt w języku Visual Basic jest definiowany przez *klasy*. Klasa opisuje zmiennych, właściwości, procedur i zdarzeń obiektu. Obiekty są wystąpieniami klasy; można utworzyć dowolną liczbę obiektów, czego potrzebujesz, aby po zdefiniowaniu klasy.
+Each object in Visual Basic is defined by a *class*. A class describes the variables, properties, procedures, and events of an object. Objects are instances of classes; you can create as many objects you need once you have defined a class.
 
-Aby zrozumieć relację między obiektem i jego klasa, pomyśl o zielonki plików cookie i plików cookie. Krajarki plik cookie jest klasą. Definiuje właściwości poszczególnych plików cookie, na przykład rozmiar i kształt. Klasa jest używana do tworzenia obiektów. Obiekty są pliki cookie.
+To understand the relationship between an object and its class, think of cookie cutters and cookies. The cookie cutter is the class. It defines the characteristics of each cookie, for example size and shape. The class is used to create objects. The objects are the cookies.
 
-Aby korzystać z jej elementów członkowskich, należy utworzyć obiekt.
+You must create an object before you can access its members.
 
-### <a name="to-create-an-object-from-a-class"></a>Aby utworzyć obiekt z klasy
+### <a name="to-create-an-object-from-a-class"></a>To create an object from a class
 
-1. Określ, z której klasy, którą chcesz utworzyć obiekt.
+1. Determine from which class you want to create an object.
 
-2. Zapis [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) do utworzenia zmiennej, do której można przypisać wystąpienia klasy. Zmienna powinna być typu odpowiednią klasę.
+2. Write a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) to create a variable to which you can assign a class instance. The variable should be of the type of the desired class.
 
    ```vb
    Dim nextCustomer As customer
    ```
 
-3. Dodaj [operatora New](../../../../visual-basic/language-reference/operators/new-operator.md) — słowo kluczowe, aby zainicjalizować zmienną do nowego wystąpienia klasy.
+3. Add the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword to initialize the variable to a new instance of the class.
 
    ```vb
    Dim nextCustomer As New customer
    ```
 
-4. Elementy członkowskie klasy można teraz uzyskiwać dostęp za pośrednictwem zmiennej obiektu.
+4. You can now access the members of the class through the object variable.
 
    ```vb
    nextCustomer.accountNumber = lastAccountNumber + 1
    ```
 
 > [!NOTE]
-> Jeśli to możliwe, należy zadeklarować zmienną typu klasy, które chcesz przypisać do niej. Jest to nazywane *wczesne powiązania*. Jeśli nie znasz klasy typu w czasie kompilacji, można wywołać *późnym wiązaniu* przez zadeklarowanie zmiennej będzie [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md). Jednak późnym wiązaniu można wprowadzić wydajności wolniejszy i ograniczyć dostęp do elementów członkowskich w obiekcie środowiska wykonawczego. Aby uzyskać więcej informacji, zobacz [deklaracja zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md).
+> Whenever possible, you should declare the variable to be of the class type you intend to assign to it. This is called *early binding*. If you don't know the class type at compile time, you can invoke *late binding* by declaring the variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). However, late binding can make performance slower and limit access to the run-time object's members. For more information, see [Object Variable Declaration](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md).
 
-### <a name="multiple-instances"></a>Wiele wystąpień
+### <a name="multiple-instances"></a>Multiple instances
 
-Obiekty nowo utworzone na podstawie klasy często są identyczne z siebie nawzajem. Gdy istnieją jako pojedyncze obiekty, jednak ich zmienne i właściwości można zmienić niezależnie od innych wystąpień. Na przykład jeśli dodasz trzy pola wyboru do formularza, każdy obiekt pole wyboru jest wystąpieniem <xref:System.Windows.Forms.CheckBox> klasy. Poszczególne <xref:System.Windows.Forms.CheckBox> obiekty współużytkują wspólny zbiór właściwości oraz możliwości (właściwości, zmienne, procedur i zdarzeń), zdefiniowane przez klasę. Jednak każdy ma własną nazwę, oddzielnie włączone i wyłączone, a można umieścić w innym miejscu w formularzu.
+Objects newly created from a class are often identical to each other. Once they exist as individual objects, however, their variables and properties can be changed independently of the other instances. For example, if you add three check boxes to a form, each check box object is an instance of the <xref:System.Windows.Forms.CheckBox> class. The individual <xref:System.Windows.Forms.CheckBox> objects share a common set of characteristics and capabilities (properties, variables, procedures, and events) defined by the class. However, each has its own name, can be separately enabled and disabled, and can be placed in a different location on the form.
 
-## <a name="object-members"></a>Elementach członkowskich obiektu
+## <a name="object-members"></a>Object members
 
-Obiekt jest elementem aplikacji, reprezentująca *wystąpienia* klasy. Pola, właściwości, metody i zdarzenia są blokami konstrukcyjnymi obiektów i stanowią ich *członków*.
+An object is an element of an application, representing an *instance* of a class. Fields, properties, methods, and events are the building blocks of objects and constitute their *members*.
 
 ### <a name="member-access"></a>Dostęp do elementu członkowskiego
 
-Możesz uzyskać dostęp do członka obiektu, określając w kolejności, nazwa zmiennej obiektu okres (`.`) i nazwę elementu członkowskiego. Poniższy przykład ustawia <xref:System.Windows.Forms.Control.Text%2A> właściwość <xref:System.Windows.Forms.Label> obiektu.
+You access a member of an object by specifying, in order, the name of the object variable, a period (`.`), and the name of the member. The following example sets the <xref:System.Windows.Forms.Control.Text%2A> property of a <xref:System.Windows.Forms.Label> object.
 
 ```vb
 warningLabel.Text = "Data not saved"
 ```
 
-#### <a name="intellisense-listing-of-members"></a>Funkcja IntelliSense listę elementów członkowskich
+#### <a name="intellisense-listing-of-members"></a>IntelliSense listing of members
 
-Funkcja IntelliSense wyświetla elementy członkowskie klasy po wywołaniu jego opcji listę elementów członkowskich, na przykład gdy wpiszesz kropkę (`.`) jako operatora dostępu do elementu członkowskiego. Jeśli wpiszesz okres, po nazwie zmiennej zadeklarowanej jako wystąpienie tej klasy, funkcja IntelliSense wyświetla wszystkie składowe wystąpienia i żaden z udostępnionych elementów członkowskich. Jeśli wpiszesz okresie następującym sama nazwa klasy, funkcja IntelliSense wyświetla wszystkie udostępnione elementy członkowskie i żaden z elementów członkowskich wystąpienia. Aby uzyskać więcej informacji, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
+IntelliSense lists members of a class when you invoke its List Members option, for example when you type a period (`.`) as a member-access operator. If you type the period following the name of a variable declared as an instance of that class, IntelliSense lists all the instance members and none of the shared members. If you type the period following the class name itself, IntelliSense lists all the shared members and none of the instance members. For more information, see [Using IntelliSense](/visualstudio/ide/using-intellisense).
 
-### <a name="fields-and-properties"></a>Pola i właściwości
+### <a name="fields-and-properties"></a>Fields and properties
 
-*Pola* i *właściwości* przedstawiania informacji przechowywanych w obiekcie. Pobierz i ustaw ich wartości za pomocą instrukcji przypisania taki sam sposób pobierania i ustawiania zmiennych lokalnych w procedurze. Poniższy przykład pobiera <xref:System.Windows.Forms.Control.Width%2A> właściwość i zestawach <xref:System.Windows.Forms.Control.ForeColor%2A> właściwość <xref:System.Windows.Forms.Label> obiektu.
+*Fields* and *properties* represent information stored in an object. You retrieve and set their values with assignment statements the same way you retrieve and set local variables in a procedure. The following example retrieves the <xref:System.Windows.Forms.Control.Width%2A> property and sets the <xref:System.Windows.Forms.Control.ForeColor%2A> property of a <xref:System.Windows.Forms.Label> object.
 
 ```vb
 Dim warningWidth As Integer = warningLabel.Width
 warningLabel.ForeColor = System.Drawing.Color.Red
 ```
 
-Należy pamiętać, że pole jest również nazywany *zmiennej składowej*.
+Note that a field is also called a *member variable*.
 
-Użyj procedur właściwości, gdy:
+Use property procedures when:
 
-- Wymagane jest sterowanie, kiedy i jak wartość jest ustawiona lub pobrać.
+- You need to control when and how a value is set or retrieved.
 
-- Właściwość ma dobrze zdefiniowanego zestawu wartości, które muszą być weryfikowane.
+- The property has a well-defined set of values that need to be validated.
 
-- Ustawienie tej wartości powoduje, że niektóre widocznych zmian w stan obiektu, takie jak `IsVisible` właściwości.
+- Setting the value causes some perceptible change in the object's state, such as an `IsVisible` property.
 
-- Ustawianie właściwości powoduje, że zmiany do innych wewnętrznych zmiennych lub wartości innych właściwości.
+- Setting the property causes changes to other internal variables or to the values of other properties.
 
-- Zestaw kroków należy wykonać, zanim właściwość można ustawić lub pobrać.
+- A set of steps must be performed before the property can be set or retrieved.
 
-Użyj pola, gdy:
+Use fields when:
 
-- Wartość jest typu własnym sprawdzania poprawności. Na przykład komunikat o błędzie lub konwersja danych automatycznego występuje, gdy wartość inną niż `True` lub `False` jest przypisany do `Boolean` zmiennej.
+- The value is of a self-validating type. For example, an error or automatic data conversion occurs if a value other than `True` or `False` is assigned to a `Boolean` variable.
 
-- Dowolna wartość poza zasięgiem obsługiwanym przez typ danych jest prawidłowy. Ta zasada obowiązuje wielu właściwości typu `Single` lub `Double`.
+- Any value in the range supported by the data type is valid. This is true of many properties of type `Single` or `Double`.
 
-- Właściwość jest `String` typu danych i brak ograniczeń dotyczących rozmiaru lub wartość ciągu.
+- The property is a `String` data type, and there is no constraint on the size or value of the string.
 
-- Aby uzyskać więcej informacji, zobacz [procedury właściwości](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
+- For more information, see [Property Procedures](../../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md).
 
 ### <a name="methods"></a>Metody
 
-A *metoda* to działanie, którą obiekt może wykonywać. Na przykład <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> to metoda <xref:System.Windows.Forms.ComboBox> obiektu, który dodaje nowy wpis do pola kombi.
+A *method* is an action that an object can perform. For example, <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A> is a method of the <xref:System.Windows.Forms.ComboBox> object that adds a new entry to a combo box.
 
-W poniższym przykładzie pokazano <xref:System.Windows.Forms.Timer.Start%2A> metody <xref:System.Windows.Forms.Timer> obiektu.
+The following example demonstrates the <xref:System.Windows.Forms.Timer.Start%2A> method of a <xref:System.Windows.Forms.Timer> object.
 
 ```vb
 Dim safetyTimer As New System.Windows.Forms.Timer
 safetyTimer.Start()
 ```
 
-Należy zauważyć, że metoda jest po prostu *procedury* , jest uwidaczniany za pomocą obiektu.
+Note that a method is simply a *procedure* that is exposed by an object.
 
-Aby uzyskać więcej informacji, zobacz [procedury](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
+For more information, see [Procedures](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
 
 ### <a name="events"></a>Zdarzenia
 
-Zdarzenie jest Akcja rozpoznawana przez obiekt, takie jak kliknięcie myszą lub naciskając klawisz i dla którego można napisać kod odpowiedzi. Zdarzenia może wystąpić w wyniku akcji przez użytkownika lub kod programu, lub może być spowodowane przez system. Kod, który sygnalizuje zdarzenie jest nazywany *podnieść* zdarzeń i kod, który odpowiada do niego jest nazywany *obsługi* go.
+An event is an action recognized by an object, such as clicking the mouse or pressing a key, and for which you can write code to respond. Events can occur as a result of a user action or program code, or they can be caused by the system. Code that signals an event is said to *raise* the event, and code that responds to it is said to *handle* it.
 
-Możesz również tworzyć niestandardowe zdarzenia wygenerowane przez obiekty i obsługiwane przez inne obiekty. Aby uzyskać więcej informacji, zobacz [zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md).
+You can also develop your own custom events to be raised by your objects and handled by other objects. For more information, see [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).
 
-### <a name="instance-members-and-shared-members"></a>Elementy członkowskie wystąpień i udostępniane elementy członkowskie
+### <a name="instance-members-and-shared-members"></a>Instance members and shared members
 
-Podczas tworzenia obiektu z klasą, wynik jest wystąpieniem tej klasy. Elementy członkowskie, które nie są zadeklarowane za pomocą [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) — słowo kluczowe są *wystąpieniami elementów członkowskich*, które należą wyłącznie do tego konkretnego wystąpienia. W jednym wystąpieniu elementu członkowskiego wystąpienia jest niezależna od jednego elementu członkowskiego w innym wystąpieniu tej samej klasy. Zmienną elementu członkowskiego, na przykład mogą mieć różne wartości w różnych wystąpieniach.
+When you create an object from a class, the result is an instance of that class. Members that are not declared with the [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) keyword are *instance members*, which belong strictly to that particular instance. An instance member in one instance is independent of the same member in another instance of the same class. An instance member variable, for example, can have different values in different instances.
 
-Elementy członkowskie są zadeklarowane za pomocą `Shared` — słowo kluczowe są *udostępniane elementy członkowskie*, które należą do klasy jako całości, a nie dowolne wystąpienie. Składnik współużytkowany istnieje tylko raz, niezależnie od tego, ile wystąpień klasy można tworzyć lub nawet wtedy, gdy tworzysz żadnych wystąpień. Zmienną członkowską udostępnionej, na przykład ma tylko jedną wartość, która jest dostępna dla całego kodu, które mogą uzyskiwać dostęp do tej klasy.
+Members declared with the `Shared` keyword are *shared members*, which belong to the class as a whole and not to any particular instance. A shared member exists only once, no matter how many instances of its class you create, or even if you create no instances. A shared member variable, for example, has only one value, which is available to all code that can access the class.
 
-#### <a name="accessing-nonshared-members"></a>Uzyskiwanie dostępu do elementów nieudostępnionych
+#### <a name="accessing-nonshared-members"></a>Accessing nonshared members
 
-##### <a name="to-access-a-nonshared-member-of-an-object"></a>Do uzyskania dostępu do członka nieudostępnionych obiektu
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>To access a nonshared member of an object
 
-1. Upewnij się, że obiekt został utworzony od swojej klasy i przypisane do zmiennej obiektu.
+1. Make sure the object has been created from its class and assigned to an object variable.
 
    ```vb
    Dim secondForm As New System.Windows.Forms.Form
    ```
 
-2. W instrukcji, która uzyskuje dostęp do elementu członkowskiego, postępuj zgodnie z obiektu nazwą zmiennej *operator dostępu do elementu członkowskiego* (`.`) i następnie nazwę elementu członkowskiego.
+2. In the statement that accesses the member, follow the object variable name with the *member-access operator* (`.`) and then the member name.
 
    ```vb
    secondForm.Show()
    ```
 
-#### <a name="accessing-shared-members"></a>Uzyskiwanie dostępu do udostępnionych elementów członkowskich
+#### <a name="accessing-shared-members"></a>Accessing shared members
 
-##### <a name="to-access-a-shared-member-of-an-object"></a>Do uzyskania dostępu do członka udostępnionego obiektu
+##### <a name="to-access-a-shared-member-of-an-object"></a>To access a shared member of an object
 
-- Postępuj zgodnie z nazwą klasy *operator dostępu do elementu członkowskiego* (`.`) i następnie nazwę elementu członkowskiego. Należy zawsze dostęp do `Shared` członka obiektu bezpośrednio za pomocą nazwy klasy.
+- Follow the class name with the *member-access operator* (`.`) and then the member name. You should always access a `Shared` member of the object directly through the class name.
 
    ```vb
    MsgBox("This computer is called " & Environment.MachineName)
    ```
 
-- Jeśli utworzono już obiekt z klasy, możesz również uzyskać dostęp `Shared` elementu członkowskiego za pośrednictwem zmiennej obiektu.
+- If you have already created an object from the class, you can alternatively access a `Shared` member through the object's variable.
 
-### <a name="differences-between-classes-and-modules"></a>Różnice między klasami i modułów
+### <a name="differences-between-classes-and-modules"></a>Differences between classes and modules
 
-Główną różnicą między klasami i modułów jest, że klasy mogą być utworzone jako obiekty podczas standardowych modułów nie. Ponieważ istnieje tylko jedną kopię standardowego modułu danych zmiennej publicznej w module standardowym zmianie jednej części programu, innych części programu pobiera tę samą wartość, jeśli następnie odczytuje tę zmienną. Z kolei obiekt istnieją dane osobno dla poszczególnych wystąpień obiektu. Inny różnica polega na tym, że w przeciwieństwie do standardowych modułów klasy mogą implementować interfejsy.
+The main difference between classes and modules is that classes can be instantiated as objects while standard modules cannot. Because there is only one copy of a standard module's data, when one part of your program changes a public variable in a standard module, any other part of the program gets the same value if it then reads that variable. In contrast, object data exists separately for each instantiated object. Another difference is that unlike standard modules, classes can implement interfaces.
 
 > [!NOTE]
-> Gdy `Shared` modyfikator jest stosowany do składowej klasy, jest skojarzony z klasą sama zamiast konkretnego wystąpienia klasy. Element członkowski odbywa się bezpośrednio przy użyciu nazwy klasy, są używane te same elementy członkowskie modułu sposób.
+> When the `Shared` modifier is applied to a class member, it is associated with the class itself instead of a particular instance of the class. The member is accessed directly by using the class name, the same way module members are accessed.
 
-Klasy i moduły także użyć różnych zakresów dla swoich elementów członkowskich. Elementy członkowskie zdefiniowane w obrębie klasy są ograniczone w ramach określonego wystąpienia klasy i istnieje tylko w przypadku istnienia obiektu. Aby uzyskać dostęp do członków klasy z poza klasą, należy użyć w pełni kwalifikowane nazwy w formacie *obiektu*. *Element członkowski*.
+Classes and modules also use different scopes for their members. Members defined within a class are scoped within a specific instance of the class and exist only for the lifetime of the object. To access class members from outside a class, you must use fully qualified names in the format of *Object*.*Member*.
 
-Z drugiej strony elementów członkowskich zadeklarowanych w module są dostępne publicznie domyślnie i może zostać oceniony przez każdy kod, który można uzyskać dostęp do modułu. Oznacza to, że zmienne w module standardowym są zmienne globalne skutecznie, ponieważ są one widoczne w dowolnym miejscu w projekcie, a istnieją przez cały okres istnienia programu.
+On the other hand, members declared within a module are publicly accessible by default, and can be accessed by any code that can access the module. This means that variables in a standard module are effectively global variables because they are visible from anywhere in your project, and they exist for the life of the program.
 
-## <a name="reusing-classes-and-objects"></a>Ponowne używanie klas i obiektów
+## <a name="reusing-classes-and-objects"></a>Reusing classes and objects
 
-Obiekty umożliwiają deklarowanie zmiennych i procedur raz i korzystać z nich je zawsze, gdy potrzebne. Na przykład jeśli chcesz dodać sprawdzania pisowni do aplikacji można zdefiniować wszystkie zmienne i obsługują funkcje umożliwiają korzystanie z funkcji sprawdzania pisowni. Jeśli tworzysz swoje sprawdzania pisowni, jako klasę, możesz użyć w innych aplikacjach, dodając odwołanie do zestawu skompilowanego. Można jeszcze lepiej, możesz zaoszczędzić pewnej pracy za pomocą klasy modułu sprawdzania pisowni, że ktoś już został opracowany.
+Objects let you declare variables and procedures once and then reuse them whenever needed. For example, if you want to add a spelling checker to an application you could define all the variables and support functions to provide spell-checking functionality. If you create your spelling checker as a class, you can then reuse it in other applications by adding a reference to the compiled assembly. Better yet, you may be able to save yourself some work by using a spelling checker class that someone else has already developed.
 
-.NET Framework oferuje wiele przykładów składników, które są dostępne do użycia. W poniższym przykładzie użyto <xref:System.TimeZone> klasy w <xref:System> przestrzeni nazw. <xref:System.TimeZone> zawiera elementy członkowskie, które umożliwiają pobieranie informacji o strefie czasowej bieżącego systemu komputera.
+The .NET Framework provides many examples of components that are available for use. The following example uses the <xref:System.TimeZone> class in the <xref:System> namespace. <xref:System.TimeZone> provides members that allow you to retrieve information about the time zone of the current computer system.
 
 ```vb
 Public Sub examineTimeZone()
@@ -192,37 +192,37 @@ Public Sub examineTimeZone()
 End Sub
 ```
 
-W powyższym przykładzie pierwsze [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) deklaruje zmienną obiektu typu <xref:System.TimeZone> i przypisuje do niego <xref:System.TimeZone> obiektu zwróconego przez <xref:System.TimeZone.CurrentTimeZone%2A> właściwości.
+In the preceding example, the first [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) declares an object variable of type <xref:System.TimeZone> and assigns to it a <xref:System.TimeZone> object returned by the <xref:System.TimeZone.CurrentTimeZone%2A> property.
 
-## <a name="relationships-among-objects"></a>Relacje między obiektami
+## <a name="relationships-among-objects"></a>Relationships among objects
 
-Obiekty mogą być powiązane ze sobą na kilka sposobów. Główne rodzaje relacji są *hierarchiczne* i *zawierania*.
+Objects can be related to each other in several ways. The principal kinds of relationship are *hierarchical* and *containment*.
 
-### <a name="hierarchical-relationship"></a>Hierarchiczna relacja
+### <a name="hierarchical-relationship"></a>Hierarchical relationship
 
-Klasy pochodne więcej podstawowe klasy, są one określane jako mają *hierarchiczną relację*. Hierarchie klasy są przydatne podczas opisywania elementy, które są podtypem bardziej ogólnej klasy.
+When classes are derived from more fundamental classes, they are said to have a *hierarchical relationship*. Class hierarchies are useful when describing items that are a subtype of a more general class.
 
-W poniższym przykładzie załóżmy, że chcesz zdefiniować specjalny rodzaj <xref:System.Windows.Forms.Button> czy działa jak normalne <xref:System.Windows.Forms.Button> , ale udostępnia również metody, która Odwraca kolory pierwszego planu i tła.
+In the following example, suppose you want to define a special kind of <xref:System.Windows.Forms.Button> that acts like a normal <xref:System.Windows.Forms.Button> but also exposes a method that reverses the foreground and background colors.
 
-#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Aby zdefiniować klasę jest tworzony na podstawie już istniejącej klasy
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>To define a class is derived from an already existing class
 
-1. Użyj [Class — instrukcja](../../../../visual-basic/language-reference/statements/class-statement.md) Aby zdefiniować klasę, z którego można utworzyć obiektu potrzebny.
+1. Use a [Class Statement](../../../../visual-basic/language-reference/statements/class-statement.md) to define a class from which to create the object you need.
 
    ```vb
    Public Class reversibleButton
    ```
 
-   Upewnij się, `End Class` instrukcji następuje ostatni wiersz kodu w klasie. Domyślnie automatycznie generuje zintegrowanego środowiska programistycznego (IDE) `End Class` po wprowadzeniu `Class` instrukcji.
+   Be sure an `End Class` statement follows the last line of code in your class. By default, the integrated development environment (IDE) automatically generates an `End Class` when you enter a `Class` statement.
 
-2. Postępuj zgodnie z `Class` instrukcją natychmiast [dziedziczy instrukcję](../../../../visual-basic/language-reference/statements/inherits-statement.md). Określ klasę, z którego pochodzi nowej klasie.
+2. Follow the `Class` statement immediately with an [Inherits Statement](../../../../visual-basic/language-reference/statements/inherits-statement.md). Specify the class from which your new class derives.
 
    ```vb
    Inherits System.Windows.Forms.Button
    ```
 
-   Twoja nowa klasa dziedziczy wszystkie elementy członkowskie zdefiniowane przez klasę bazową.
+   Your new class inherits all the members defined by the base class.
 
-3. Dodaj kod, aby uzyskać dodatkowe elementy członkowskie ujawnia swojej klasy pochodnej. Na przykład można dodać `reverseColors` metoda i Klasa pochodna może wyglądać w następujący sposób:
+3. Add the code for the additional members your derived class exposes. For example, you might add a `reverseColors` method, and your derived class might look as follows:
 
    ```vb
    Public Class reversibleButton
@@ -235,41 +235,41 @@ W poniższym przykładzie załóżmy, że chcesz zdefiniować specjalny rodzaj <
    End Class
    ```
 
-   Jeśli tworzysz obiekt z `reversibleButton` klasy, będzie miał dostęp do wszystkich członków <xref:System.Windows.Forms.Button> klasy, jak również `reverseColors` metody i innych nowych członków, należy zdefiniować na `reversibleButton`.
+   If you create an object from the `reversibleButton` class, it can access all the members of the <xref:System.Windows.Forms.Button> class, as well as the `reverseColors` method and any other new members you define on `reversibleButton`.
 
-Klasy pochodne dziedziczy członków klasy, które są one oparte na, dzięki czemu możesz do zwiększenia złożoności jak postępy w hierarchii klas. Aby uzyskać więcej informacji, zobacz [podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
+Derived classes inherit members from the class they are based on, allowing you to add complexity as you progress in a class hierarchy. For more information, see [Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Kompilowanie kodu
+### <a name="compiling-the-code"></a>Compiling the code
 
-Upewnij się, że kompilator mogą uzyskiwać dostęp do klasy, z którego mają pochodzić nowej klasie. Może to oznaczać pełni kwalifikujących się jego nazwę, jak w poprzednim przykładzie lub identyfikowanie jego przestrzeń nazw w [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Klasa znajduje się w innym projekcie, może być konieczne Dodaj odwołanie do tego projektu. Aby uzyskać więcej informacji, zobacz [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project).
+Be sure the compiler can access the class from which you intend to derive your new class. This might mean fully qualifying its name, as in the preceding example, or identifying its namespace in an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). If the class is in a different project, you might need to add a reference to that project. For more information, see [Managing references in a project](/visualstudio/ide/managing-references-in-a-project).
 
-### <a name="containment-relationship"></a>Relacja zawierania
+### <a name="containment-relationship"></a>Containment relationship
 
-Innym sposobem może być powiązanych obiektów jest *relacji zawierania*. Obiekty kontenera hermetyzować logicznie innych obiektów. Na przykład <xref:System.OperatingSystem> obiekt logicznie zawiera <xref:System.Version> obiektu, który zwraca za pośrednictwem jego <xref:System.OperatingSystem.Version%2A> właściwości. Należy pamiętać, że obiekt kontenera nie zawiera fizycznie jakiegokolwiek innego obiektu.
+Another way that objects can be related is a *containment relationship*. Container objects logically encapsulate other objects. For example, the <xref:System.OperatingSystem> object logically contains a <xref:System.Version> object, which it returns through its <xref:System.OperatingSystem.Version%2A> property. Note that the container object does not physically contain any other object.
 
 #### <a name="collections"></a>Kolekcje
 
-Jeden typ określonego obiektu zawierania jest reprezentowany przez *kolekcje*. Kolekcje są grupami podobnymi obiektami, które mogą być wyliczane. Visual Basic obsługuje określonej składni w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) pozwala do iteracji przez elementy kolekcji. Ponadto kolekcji często umożliwiają używanie <xref:Microsoft.VisualBasic.Collection.Item%2A> można pobrać elementów za pomocą ich indeksu lub przez skojarzenie ich z unikatowym ciągiem. Kolekcje mogą być łatwiejszy w obsłudze niż tablice, ponieważ umożliwiają dodawanie lub usuwanie elementów bez używania indeksów. Ze względu na ich łatwość użycia kolekcje są często używane do przechowywania formularzy i kontrolek.
+One particular type of object containment is represented by *collections*. Collections are groups of similar objects that can be enumerated. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. Additionally, collections often allow you to use an <xref:Microsoft.VisualBasic.Collection.Item%2A> to retrieve elements by their index or by associating them with a unique string. Collections can be easier to use than arrays because they allow you to add or remove items without using indexes. Because of their ease of use, collections are often used to store forms and controls.
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
-[Przewodnik: Definiowanie klas](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
-Instrukcje krok po kroku opisano sposób tworzenia klasy.
+[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+Provides a step-by-step description of how to create a class.
 
-[Przeciążone właściwości i metody](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 Przeciążone właściwości i metody
 
-[Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
-Obejmuje modyfikatorów dziedziczenie, zastępowanie metod "i" właściwości "," MyClass "i" MyBase.
+[Inheritance Basics](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
+Covers inheritance modifiers, overriding methods and properties, MyClass, and MyBase.
 
-[Okres istnienia obiektów: Jak obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
-W tym artykule omówiono tworzenie i usuwanie wystąpień klas.
+[Object Lifetime: How Objects Are Created and Destroyed](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+Discusses creating and disposing of class instances.
 
-[Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
-Opisuje sposób tworzenia i używania typów anonimowych, które umożliwiają tworzenie obiektów bez konieczności pisania definicji klasy dla typu danych.
+[Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
+Describes how to create and use anonymous types, which allow you to create objects without writing a class definition for the data type.
 
-[Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
-W tym artykule omówiono inicjatorów obiektów, które są używane do tworzenia wystąpień nazwanych i anonimowych typów przy użyciu pojedynczego wyrażenia.
+[Object Initializers: Named and Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+Discusses object initializers, which are used to create instances of named and anonymous types by using a single expression.
 
-[Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
-Wyjaśnia, jak wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego. Zawiera przykłady wnioskowania zakończone powodzeniem i niepowodzeniem.
+[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+Explains how to infer property names and types in anonymous type declarations. Provides examples of successful and unsuccessful inference.

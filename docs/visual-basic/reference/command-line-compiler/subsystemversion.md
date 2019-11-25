@@ -1,24 +1,24 @@
 ---
-title: -subsystemversion — (Visual Basic)
+title: -subsystemversion
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /subsystemversion compiler option [Visual Basic]
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: a977bc4cff822de551bf82d0f31707e9b2b6ea41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380321"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348534"
 ---
-# <a name="-subsystemversion-visual-basic"></a>-subsystemversion — (Visual Basic)
+# <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
-Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowany plik wykonywalny, określając w ten sposób wersje systemu Windows, na którym można uruchomić pliku wykonywalnego. Najczęściej ta opcja zapewnia, że plik wykonywalny mogą korzystać z funkcji zabezpieczeń, które nie są dostępne ze starszymi wersjami systemu Windows.
+Specifies the minimum version of the subsystem on which the generated executable file can run, thereby determining the versions of Windows on which the executable file can run. Most commonly, this option ensures that the executable file can leverage particular security features that aren’t available with older versions of Windows.
 
 > [!NOTE]
-> Aby określić samego podsystemu, użyj [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) — opcja kompilatora.
+> To specify the subsystem itself, use the [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) compiler option.
 
 ## <a name="syntax"></a>Składnia
 
@@ -30,15 +30,15 @@ Określa minimalną wersję podsystemu, na którym można uruchomić wygenerowan
 
 `major.minor`
 
-Minimalna wymagana wersja podsystemu, wyrażone w notacji z kropką dla wersji głównych i pomocniczych. Na przykład można określić, że aplikacja nie może działać w system operacyjny starszy niż Windows 7 po ustawieniu wartości tej opcji na 6.01, zgodnie z opisem w tabeli w dalszej części tego tematu. Należy określić wartości dla `major` i `minor` jako liczby całkowite.
+The minimum required version of the subsystem, as expressed in a dot notation for major and minor versions. For example, you can specify that an application can't run on an operating system that's older than Windows 7 if you set the value of this option to 6.01, as the table later in this topic describes. You must specify the values for `major` and `minor` as integers.
 
-Wiodące wyzerowania `minor` wersji nie zmieniają wersji, ale czy końcowe zera. Na przykład 6.1 i 6.01 odwołują się do tej samej wersji, ale 6.10 odwołuje się do innej wersji. Zaleca się, wyrażanie wersję pomocniczą w postaci dwóch cyfr, aby uniknąć mylenia go.
+Leading zeroes in the `minor` version don't change the version, but trailing zeroes do. For example, 6.1 and 6.01 refer to the same version, but 6.10 refers to a different version. We recommend expressing the minor version as two digits to avoid confusion.
 
 ## <a name="remarks"></a>Uwagi
 
-W poniższej tabeli wymieniono typowe wersji podsystemu Windows.
+The following table lists common subsystem versions of Windows.
 
-|Wersja Windows|Wersję podsystemu|
+|Windows version|Subsystem version|
 |---------------------|-----------------------|
 |Windows 2000|5.00|
 |Windows XP|5.01|
@@ -50,9 +50,9 @@ W poniższej tabeli wymieniono typowe wersji podsystemu Windows.
 
 ## <a name="default-values"></a>Wartości domyślne
 
-Wartość domyślna **- subsystemversion** — opcja kompilatora jest zależna od warunki na poniższej liście:
+The default value of the **-subsystemversion** compiler option depends on the conditions in the following list:
 
-- Wartość domyślna to 6.02, jeśli jest ustawiona na poniższej liście wszelkie — opcja kompilatora:
+- The default value is 6.02 if any compiler option in the following list is set:
 
   - [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)
 
@@ -60,16 +60,16 @@ Wartość domyślna **- subsystemversion** — opcja kompilatora jest zależna o
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- Wartość domyślna to 6.00, jeśli używasz programu MSBuild, są przeznaczone dla .NET Framework 4.5 i nie został ustawiony opcji kompilatora, które zostały określone we wcześniejszej części tej listy.
+- The default value is 6.00 if you're using MSBuild, you're targeting .NET Framework 4.5, and you haven't set any of the compiler options that were specified earlier in this list.
 
-- Wartość domyślna to 4.00, jeśli żaden z poprzednich warunków jest spełniony.
+- The default value is 4.00 if none of the previous conditions is true.
 
 ## <a name="setting-this-option"></a>Ustawienie tej opcji
 
-Aby ustawić **- subsystemversion** — opcja kompilatora w programie Visual Studio, należy otworzyć pliku .vbproj i określić wartość dla `SubsystemVersion` właściwość MSBuild XML. Nie można ustawić tę opcję w środowisku IDE programu Visual Studio. Aby uzyskać więcej informacji, zobacz "Wartości domyślnej" wcześniej w tym temacie lub [wspólne właściwości projektów MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).
+To set the **-subsystemversion** compiler option in Visual Studio, you must open the .vbproj file and specify a value for the `SubsystemVersion` property in the MSBuild XML. You can't set this option in the Visual Studio IDE. For more information, see "Default values" earlier in this topic or [Common MSBuild Project Properties](/visualstudio/msbuild/common-msbuild-project-properties).
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic Command-Line Compiler](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [Właściwości programu MSBuild](/visualstudio/msbuild/msbuild-properties)

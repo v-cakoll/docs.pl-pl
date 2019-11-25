@@ -1,5 +1,5 @@
 ---
-title: Object — typ danych (Visual Basic)
+title: Object — typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Object
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 1ac906494c49810e3d389591b1044f412e7320bc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 2ccb9b69b865c259d078ed9642d63c7f83514756
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513049"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343964"
 ---
 # <a name="object-data-type"></a>Object — typ danych
 
-Przechowuje adresy odwołujące się do obiektów. Do `Object` zmiennej można przypisać dowolny typ referencyjny (ciąg, tablicę, klasę lub interfejs). Zmienna może również odwoływać się do danych dowolnego typu wartości (numeryczne `Boolean`, `Char`, `Date`,, struktura lub Wyliczenie). `Object`
+Holds addresses that refer to objects. You can assign any reference type (string, array, class, or interface) to an `Object` variable. An `Object` variable can also refer to data of any value type (numeric, `Boolean`, `Char`, `Date`, structure, or enumeration).
 
 ## <a name="remarks"></a>Uwagi
 
-Typ `Object` danych może wskazywać na dane dowolnego typu danych, łącznie z każdym wystąpieniem obiektu rozpoznawanym przez aplikację. Użyj `Object` , gdy w czasie kompilacji nie wiesz, jaki typ danych może wskazywać zmienna.
+The `Object` data type can point to data of any data type, including any object instance your application recognizes. Use `Object` when you do not know at compile time what data type the variable might point to.
 
-Wartość `Object` domyślna to `Nothing` (odwołanie o wartości null).
+The default value of `Object` is `Nothing` (a null reference).
 
 ## <a name="data-types"></a>Typy danych
 
-Do `Object` zmiennej można przypisać zmienną, stałą lub wyrażenie dowolnego typu danych. Aby określić typ `Object` danych, do której obecnie odwołuje się zmienna, można <xref:System.Type.GetTypeCode%2A> użyć metody <xref:System.Type?displayProperty=nameWithType> klasy. Ilustruje to poniższy przykład.
+You can assign a variable, constant, or expression of any data type to an `Object` variable. To determine the data type an `Object` variable currently refers to, you can use the <xref:System.Type.GetTypeCode%2A> method of the <xref:System.Type?displayProperty=nameWithType> class. Ilustruje to poniższy przykład.
 
 ```vb
 Dim myObject As Object
@@ -38,31 +38,31 @@ Dim datTyp As Integer
 datTyp = Type.GetTypeCode(myObject.GetType())
 ```
 
-Typ `Object` danych jest typem referencyjnym. Jednakże Visual Basic traktuje `Object` zmienną jako typ wartości, gdy odwołuje się ona do danych typu wartości.
+The `Object` data type is a reference type. However, Visual Basic treats an `Object` variable as a value type when it refers to data of a value type.
 
 ## <a name="storage"></a>Magazyn
 
-Niezależnie od typu danych, do którego się `Object` odwołuje, zmienna nie zawiera samej wartości danych, ale raczej wskaźnikiem do wartości. Zawsze używa czterech bajtów w pamięci komputera, ale nie obejmuje to magazynu dla danych reprezentujących wartość zmiennej. Ze względu na kod, który używa wskaźnika do lokalizowania danych `Object` , zmienne o typach wartości są nieco wolniejsze w celu uzyskania dostępu niż jawnie wpisane zmienne.
+Whatever data type it refers to, an `Object` variable does not contain the data value itself, but rather a pointer to the value. It always uses four bytes in computer memory, but this does not include the storage for the data representing the value of the variable. Because of the code that uses the pointer to locate the data, `Object` variables holding value types are slightly slower to access than explicitly typed variables.
 
 ## <a name="programming-tips"></a>Porady dla programistów
 
-- **Zagadnienia dotyczące międzyoperacyjnych.** Jeśli masz połączenie ze składnikami niezapisanymi dla .NET Framework, na przykład obiekty automatyzacji lub com, pamiętaj, że typy wskaźnika w innych środowiskach nie są zgodne z typem Visual Basic `Object` .
+- **Interop Considerations.** If you are interfacing with components not written for the .NET Framework, for example Automation or COM objects, keep in mind that pointer types in other environments are not compatible with the Visual Basic `Object` type.
 
-- **Wydajność.** Zmienna zadeklarowana z `Object` typem jest wystarczająco elastyczny, aby zawierała odwołanie do dowolnych obiektów. Jednak po wywołaniu metody lub właściwości w takiej zmiennej zawsze naliczane są *późne powiązania* (w czasie wykonywania). Aby wymusić *wczesne wiązanie* (w czasie kompilacji) i lepszą wydajność, należy zadeklarować zmienną z określoną nazwą klasy lub rzutować ją na określony typ danych.
+- **Performance.** A variable you declare with the `Object` type is flexible enough to contain a reference to any object. However, when you invoke a method or property on such a variable, you always incur *late binding* (at run time). To force *early binding* (at compile time) and better performance, declare the variable with a specific class name, or cast it to the specific data type.
 
-  Podczas deklarowania zmiennej obiektu spróbuj użyć konkretnego typu klasy, na przykład <xref:System.OperatingSystem>, zamiast `Object` typu uogólnionego. Należy również użyć najbardziej konkretnej dostępnej klasy, takiej jak <xref:System.Windows.Forms.TextBox> <xref:System.Windows.Forms.Control>zamiast, aby można było uzyskać dostęp do jej właściwości i metod. Zazwyczaj można użyć listy **klas** w **Przeglądarka obiektów** , aby znaleźć dostępne nazwy klas.
+  When you declare an object variable, try to use a specific class type, for example <xref:System.OperatingSystem>, instead of the generalized `Object` type. You should also use the most specific class available, such as <xref:System.Windows.Forms.TextBox> instead of <xref:System.Windows.Forms.Control>, so that you can access its properties and methods. You can usually use the **Classes** list in the **Object Browser** to find available class names.
 
-- **Rozszerzającą.** Wszystkie typy danych i wszystkie typy odwołań rozszerzają się `Object` do typu danych. Oznacza to, że można skonwertować dowolny typ `Object` do bez napotkania <xref:System.OverflowException?displayProperty=nameWithType> błędu.
+- **Widening.** All data types and all reference types widen to the `Object` data type. This means you can convert any type to `Object` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-  Jednak w przypadku konwersji między typami wartości i `Object`, Visual Basic wykonuje operacje nazywane *opakowaniem* i rozpakowywaniem, co powoduje wolniejsze wykonywanie.
+  However, if you convert between value types and `Object`, Visual Basic performs operations called *boxing* and *unboxing*, which make execution slower.
 
-- **Znaki typu.** `Object`nie ma znaku typu literału lub znaku typu identyfikatora.
+- **Type Characters.** `Object` has no literal type character or identifier type character.
 
-- **Typ struktury.** Odpowiedni typ w .NET Framework jest <xref:System.Object?displayProperty=nameWithType> klasą.
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Object?displayProperty=nameWithType> class.
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład ilustruje `Object` zmienną wskazującą wystąpienie obiektu.
+The following example illustrates an `Object` variable pointing to an object instance.
 
 ```vb
 Dim objDb As Object
@@ -78,5 +78,5 @@ objDb = myCollection.Item(1)
 - [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [Instrukcje: Określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Instrukcje: Określanie, czy dwa obiekty są identyczne](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Instrukcje: określanie, czy dwa obiekty są powiązane](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Instrukcje: określanie, czy dwa obiekty są jednakowe](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

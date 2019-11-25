@@ -1,5 +1,5 @@
 ---
-title: Tablice w Visual Basic
+title: Tablice
 ms.date: 12/06/2017
 f1_keywords:
 - vb.Array
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
-ms.openlocfilehash: 12846b80f04e9fa6d1188485ad55b061cd2863fa
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 9dfe7814b00b4d060fa4ab9aa594faa948217d8d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758853"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351862"
 ---
 # <a name="arrays-in-visual-basic"></a>Tablice w Visual Basic
 
-Tablica to zbiór wartości, które są określane jako *elementy*, które są logicznie powiązane ze sobą. Na przykład tablicy może składać się z liczby studentów każdej grupy zaszeregowania w liceum; Każdy element tablicy jest liczba uczniów w jednej klasy korporacyjnej. Podobnie Tablica może składać się z ocen studenta dla klasy; Każdy element tablicy jest jednej klasy korporacyjnej.
+An array is a set of values, which are termed *elements*, that are logically related to each other. For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade. Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.
 
-Jest możliwe poszczególnych zmiennych do przechowywania wszystkich naszych elementów danych. Na przykład, jeśli nasza aplikacja analizuje ocen studentów, możemy użyć osobnej zmiennej dla każdego ucznia klasy korporacyjnej, takich jak `englishGrade1`, `englishGrade2`itp. Takie podejście ma trzy główne ograniczenia:
+It is possible individual variables to store each of our data items. For example, if our application analyzes student grades, we can use a separate variable for each student's grade, such as `englishGrade1`, `englishGrade2`, etc. This approach has three major limitations:
 
-- Musimy znać w czasie projektowania, dokładnie ile ocen mamy do obsługi.
-- Obsługę dużej liczby klas szybko staje się niewydolna. To z kolei sprawia, że aplikacja będzie mieć poważne błędy.
-- Jest trudne w utrzymaniu. Każdego nowe klasy korporacyjnej, które możemy dodać wymaga aplikacji można modyfikować, ponownie skompilowana i ponownego wdrażania.
+- We have to know at design time exactly how many grades we have to handle.
+- Handling large numbers of grades quickly becomes unwieldy. This in turn makes an application much more likely to have serious bugs.
+- It is difficult to maintain. Each new grade that we add requires that the application be modified, recompiled, and redeployed.
 
-Za pomocą tablicowego, możesz odwoływać się do tych powiązanych wartości o tej samej nazwie i użyć numeru, który jest nazywany *indeksu* lub *indeks dolny* do identyfikacji pojedynczego elementu na podstawie jego położenia w tablicy. Indeksy tablicy z zakresu od 0 do jednego mniejsza niż całkowita liczba elementów w tablicy. Gdy używasz składni języka Visual Basic można zdefiniować rozmiar tablicy, należy określić jego najwyższy indeks nie całkowitą liczbę elementów w tablicy. Możesz pracować z tablicy jako jednostki, a możliwość iterować jej elementy zwalnia musi wiedzieć dokładnie tak jak wiele elementów zawiera się on w czasie projektowania.
+By using an array, you can refer to these related values by the same name, and use a number that’s called an *index* or *subscript* to identify an individual element based on its position in the array. The indexes of an array range from 0 to one less than the total number of elements in the array. When you use Visual Basic syntax to define the size of an array, you specify its highest index, not the total number of elements in the array. You can work with the array as a unit, and the ability to iterate its elements frees you from needing to know exactly how many elements it contains at design time.
 
-Przykłady szybkich przed wyjaśnienie:
+Some quick examples before explanation:
 
 ```vb
 ' Declare a single-dimension array of 5 numbers.
@@ -51,258 +51,258 @@ Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 Dim sales()() As Double = New Double(11)() {}
 ```
 
-## <a name="array-elements-in-a-simple-array"></a>Elementy tablicy w prostej tablicy
+## <a name="array-elements-in-a-simple-array"></a>Array elements in a simple array
 
-Utwórz tablicę o nazwie `students` do przechowywania liczby studentów każdej grupy zaszeregowania w liceum. Indeksy zakres elementów z zakresu od 0 do 6. Za pomocą tej tablicy jest prostsze niż zadeklarowanie siedmiu zmiennych.
+Let's create an array named `students` to store the number of students in each grade in a grammar school. The indexes of the elements range from 0 through 6. Using this array is simpler than declaring seven variables.
 
-Poniższa ilustracja przedstawia `students` tablicy. Dla każdego elementu tablicy:
+The following illustration shows the `students` array. For each element of the array:
 
-- Indeks elementu reprezentuje grupę zaszeregowania (indeks 0 reprezentuje przedszkole).
+- The index of the element represents the grade (index 0 represents kindergarten).
 
-- Wartość, która jest zawarta w elemencie reprezentuje liczbę studentów w tej klasie.
+- The value that’s contained in the element represents the number of students in that grade.
 
-![Diagram przedstawiający tablicy liczb studentów](./media/index/students-array-elements.gif)
+![Diagram showing an array of the numbers of students](./media/index/students-array-elements.gif)
 
-Poniższy przykład zawiera kod języka Visual Basic, który tworzy i używa tablicy:
+The following example contains the Visual Basic code that creates and uses the array:
 
 [!code-vb[simple-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]
 
-Przykład wykonuje trzy rzeczy:
+The example does three things:
 
-- Deklaruje `students` tablicy przy użyciu siedem elementów. Liczba `6` w tablicy deklaracja wskazuje, której ostatni indeks w tablicy; jest to jeden mniejsza niż liczba elementów w tablicy.
-- Przypisuje wartości do każdego elementu w tablicy. Elementy tablicy są dostępne przy użyciu nazwy tablicy i tym indeks pojedynczego elementu w nawiasach.
-- Wyświetla listę każdej wartości w tablicy. W przykładzie użyto [ `For` ](../../../language-reference/statements/for-next-statement.md) instrukcji, które umożliwiają dostęp do każdego elementu tablicy za pomocą numeru indeksu.
+- It declares a `students` array with seven elements. The number `6` in the array declaration indicates the last index in the array; it is one less than the number of elements in the array.
+- It assigns values to each element in the array. Array elements are accessed by using the array name and including the index of the individual element in parentheses.
+- It lists each value of the array. The example uses a [`For`](../../../language-reference/statements/for-next-statement.md) statement to access each element of the array by its index number.
 
-`students` Tablica w poprzednim przykładzie to Jednowymiarowa tablica, ponieważ używa jednego indeksu. Nosi nazwę tablicy, która używa więcej niż jednego indeksu lub indeksu dolnego *wielowymiarowe*. Aby uzyskać więcej informacji, zobacz pozostałej części tego artykułu i [wymiary tablicy w języku Visual Basic](../../language-features/arrays/array-dimensions.md).
+The `students` array in the preceding example is a one-dimensional array because it uses one index. An array that uses more than one index or subscript is called *multidimensional*. For more information, see the rest of this article and [Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md).
 
-## <a name="creating-an-array"></a>Tworzenie tablicy
+## <a name="creating-an-array"></a>Creating an array
 
-Można zdefiniować rozmiar tablicy na kilka sposobów:
+You can define the size of an array in several ways:
 
-- Można określić rozmiar, gdy tablica jest zadeklarowana:
+- You can specify the size when the array is declared:
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- Możesz użyć `New` klauzuli, aby dostarczyć rozmiaru tablicy podczas jej tworzenia:
+- You can use a `New` clause to supply the size of an array when it’s created:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-W przypadku istniejącej tablicy można ponownie zdefiniować jej rozmiar za pomocą [ `ReDim` ](../../../language-reference/statements/redim-statement.md) instrukcji. Można określić, że `ReDim` instrukcji przechowywać wartości, które znajdują się w tablicy, lub można określić, że utworzona pusta tablica. W poniższym przykładzie pokazano różne sposoby zastosowania `ReDim` instrukcję, aby zmienić rozmiar istniejącej tablicy.
+If you have an existing array, you can redefine its size by using the [`ReDim`](../../../language-reference/statements/redim-statement.md) statement. You can specify that the `ReDim` statement keep the values that are in the array, or you can specify that it create an empty array. The following example shows different uses of the `ReDim` statement to modify the size of an existing array.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-Aby uzyskać więcej informacji, zobacz [instrukcji ReDim](../../../language-reference/statements/redim-statement.md).
+For more information, see the [ReDim Statement](../../../language-reference/statements/redim-statement.md).
 
-## <a name="storing-values-in-an-array"></a>Przechowywanie wartości w tablicy
+## <a name="storing-values-in-an-array"></a>Storing values in an array
 
-Dostęp do każdej lokalizacji tablicy przy użyciu indeksu typu `Integer`. Można przechowywać i pobierać wartości w tablicy, odwołując się do każdej lokalizacji tablicy przy użyciu jej indeksu w nawiasach. Indeksy dla wielowymiarowych tablic są oddzielone przecinkami (,). Potrzebujesz jednego indeksu dla każdego wymiaru tablicy.
+You can access each location in an array by using an index of type `Integer`. You can store and retrieve values in an array by referencing each array location by using its index enclosed in parentheses. Indexes for multidimensional arrays are separated by commas (,). You need one index for each array dimension.
 
-Poniższy przykład ukazuje niektóre instrukcje, które przechowywać i pobierać wartości w tablicach.
+The following example shows some statements that store and retrieve values in arrays.
 
 [!code-vb[store-and-retrieve](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]
 
-## <a name="populating-an-array-with-array-literals"></a>Wypełnianie tablicy przy użyciu literałów tablicy
+## <a name="populating-an-array-with-array-literals"></a>Populating an array with array literals
 
-Za pomocą literału tablicowego, możesz wypełnić tablicy o liczbie początkowy zestaw wartości w tym samym czasie, które możesz utworzyć. Literał tablicowy składa się z listy wartości rozdzielanych przecinkami, które są ujęte w nawiasy klamrowe (`{}`).
+By using an array literal, you can populate an array with an initial set of values at the same time that you create it. An array literal consists of a list of comma-separated values that are enclosed in braces (`{}`).
 
-Tworząc tablicę przy użyciu literału tablicowego, możesz podać typ tablicy lub użyć wnioskowania typu, aby określić typ tablicy. Poniższy kod przedstawia obie opcje.
+When you create an array by using an array literal, you can either supply the array type or use type inference to determine the array type. The following example shows both options.
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-Gdy używasz wnioskowania, typ tablicy zależy od *Typ dominujący* na liście wartości literału. Typ dominujący jest typem, do którego można rozszerzyć wszystkie inne typy w tablicy. Jeśli nie można ustalić tego typu unikatowego, Typ dominujący to unikatowy typ, do którego można zawęzić wszystkie inny typy w tablicy. Jeśli żadna z tych typów unikatowych nie można ustalić, typem dominującym jest `Object`. Na przykład, jeśli lista wartości, które jest dostarczane do literału tablicowego zawiera wartości typu `Integer`, `Long`, i `Double`, tablica wynikowa jest typu `Double`. Ponieważ `Integer` i `Long` rozszerzone tylko do `Double`, `Double` jest typem dominującym. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../language-features/data-types/widening-and-narrowing-conversions.md).
+When you use type inference, the type of the array is determined by the *dominant type* in the list of literal values. The dominant type is the type to which all other types in the array can widen. If this unique type can’t be determined, the dominant type is the unique type to which all other types in the array can narrow. If neither of these unique types can be determined, the dominant type is `Object`. For example, if the list of values that’s supplied to the array literal contains values of type `Integer`, `Long`, and `Double`, the resulting array is of type `Double`. Because `Integer` and `Long` widen only to `Double`, `Double` is the dominant type. For more information, see [Widening and Narrowing Conversions](../../language-features/data-types/widening-and-narrowing-conversions.md).
 
 > [!NOTE]
-> Wnioskowanie o typie można użyć tylko dla tablic, które są zdefiniowane jako zmiennych lokalnych w przypadku składowej typu. Jeśli definicja jawnego typu jest nieobecne, tablice zdefiniowane przy użyciu literałów tablicy na poziomie klasy mają wartości typu `Object[]`. Aby uzyskać więcej informacji, zobacz [wnioskowanie o typie lokalnym](../variables/local-type-inference.md).
+> You can use type inference only for arrays that are defined as local variables in a type member. If an explicit type definition is absent, arrays defined with array literals at the class level are of type `Object[]`. For more information, see [Local type inference](../variables/local-type-inference.md).
 
-Należy zauważyć, że w poprzednim przykładzie zdefiniowano `values` jako tablicę typu `Double` , mimo że literały tablicowe są typu `Integer`. Można utworzyć tej tablicy, ponieważ wartości w literale tablicy można mogą zostać poszerzone do `Double` wartości.
+Note that the previous example defines `values` as an array of type `Double` even though all the array literals are of type `Integer`. You can create this array because the values in the array literal can widen to `Double` values.
 
-Można również utworzyć i wypełnić tablicę wielowymiarową przy użyciu *zagnieżdżone literały tablicowe*. Zagnieżdżone literały tablicowe muszą mieć liczbę wymiarów, który jest zgodny z tablicą wynikową. Poniższy przykład tworzy tablicę dwuwymiarową liczb całkowitych przy użyciu zagnieżdżonych literałów tablicy.
+You can also create and populate a multidimensional array by using *nested array literals*. Nested array literals must have a number of dimensions that’s consistent with the resulting array. The following example creates a two-dimensional array of integers by using nested array literals.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-Przy użyciu zagnieżdżonych literałów tablicy, aby utworzyć i wypełnić tablicę, błąd występuje, jeśli liczba elementów w zagnieżdżonych literałach tablicowych nie są zgodne. Jeśli jawnie deklarować zmienną tablicy mają różną liczbę wymiarów niż literały tablicowe również wystąpi błąd.
+When using nested array literals to create and populate an array, an error occurs if the number of elements in the nested array literals don't match. An error also occurs if you explicitly declare the array variable to have a different number of dimensions than the array literals.
 
-Podobnie jak w przypadku tablic jednowymiarowych, tworząc tablicę wielowymiarową przy użyciu zagnieżdżonych literałów tablicy może polegać na wnioskowanie o typie. Wnioskowany typ to typ dominujący dla wszystkich wartości w literałach tablicowych dla wszystkich poziomów zagnieżdżenia. Poniższy przykład tworzy tablicę dwuwymiarową typu `Double[,]` z wartości typu `Integer` i `Double`.
+Just as you can for one-dimensional arrays, you can rely on type inference when creating a multidimensional array with nested array literals. The inferred type is the dominant type for all the values in all the array literals for all nesting level. The following example creates a two-dimensional array of type `Double[,]` from values that are of type `Integer` and `Double`.
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Aby uzyskać więcej przykładów, zobacz [jak: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+For additional examples, see [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
-## <a name="iterating-through-an-array"></a>Iterowanie przez tablicę
+## <a name="iterating-through-an-array"></a>Iterating through an array
 
-Podczas iteracji przez tablicę dostęp każdy element w tablicy, od najniższego indeksu do najwyższego lub od najwyższego do najniższego. Zwykle, użyj jednej [dla... Następna instrukcja](../../../language-reference/statements/for-next-statement.md) lub [For Each... Następna instrukcja](../../../language-reference/statements/for-each-next-statement.md) do iterowania po elementach tablicy. Jeśli nie znasz górne granice tablicy, możesz wywołać <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> metodę, aby uzyskać najwyższą wartość indeksu. Mimo że najniższa wartość indeksu jest prawie zawsze 0, możesz wywołać <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> metodę, aby uzyskać najniższa wartość indeksu.
+When you iterate through an array, you access each element in the array from the lowest index to the highest or from the highest to the lowest. Typically, use either the [For...Next Statement](../../../language-reference/statements/for-next-statement.md) or the [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md) to iterate through the elements of an array. When you don't know the upper bounds of the array, you can call the <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> method to get the highest value of the index. Although lowest index value is almost always 0, you can call the <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> method to get the lowest value of the index.
 
-Poniższy przykład wykonuje iterację przez tablicę jednowymiarową za pomocą [ `For...Next` ](../../../language-reference/statements/for-next-statement.md) instrukcji.
+The following example iterates through a one-dimensional array by using the [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement.
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-Poniższy przykład wykonuje iterację przez tablicę wielowymiarową przy użyciu [ `For...Next` ](../../../language-reference/statements/for-next-statement.md) instrukcji. <xref:System.Array.GetUpperBound%2A> Metoda ma parametr, który określa wymiar. `GetUpperBound(0)` Zwraca najwyższy indeks pierwszego wymiaru i `GetUpperBound(1)` zwraca najwyższy indeks drugiego wymiaru.
+The following example iterates through a multidimensional array by using a [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement. The <xref:System.Array.GetUpperBound%2A> method has a parameter that specifies the dimension. `GetUpperBound(0)` returns the highest index of the first dimension, and `GetUpperBound(1)` returns the highest index of the second dimension.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-W poniższym przykładzie użyto [For Each... Następna instrukcja](../../../language-reference/statements/for-each-next-statement.md)do iteracji przez tablicę jednowymiarową i dwuwymiarową tablicę.
+The following example uses a [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md)to iterate through a one-dimensional array and a two-dimensional array.
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
-## <a name="array-size"></a>Rozmiar tablicy
+## <a name="array-size"></a>Array size
 
-Rozmiar tablicy jest produktem długości wszystkich jej wymiarów. Reprezentuje całkowitą liczbę elementów aktualnie znajdujących się w tablicy.  Na przykład poniższy przykład deklaruje 2-wymiarowej tablicy z czterema elementami w każdym wymiarze. Dane wyjściowe z przykładu pokazują, rozmiar tablicy to 16 (lub (3 + 1) * (3 + 1).
+The size of an array is the product of the lengths of all its dimensions. It represents the total number of elements currently contained in the array.  For example, the following example declares a 2-dimensional array with four elements in each dimension. As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
-> Tablice nieregularne nie obejmuje tej dyskusji rozmiar tablicy. Aby uzyskać informacje na temat Tablice nieregularne i określenie rozmiaru tablicy nieregularnej, zobacz [nierówne tablic](#jagged-arrays) sekcji.
+> This discussion of array size does not apply to jagged arrays. For information on jagged arrays and determining the size of a jagged array, see the [Jagged arrays](#jagged-arrays) section.
 
-Możesz znaleźć rozmiar tablicy za pomocą <xref:System.Array.Length%2A?displayProperty=nameWithType> właściwości. Możesz znaleźć długość każdego wymiaru tablicy wielowymiarowej za pomocą <xref:System.Array.GetLength%2A?displayProperty=nameWithType> metody.
+You can find the size of an array by using the <xref:System.Array.Length%2A?displayProperty=nameWithType> property. You can find the length of each dimension of a multidimensional array by using the <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
 
-Możesz zmienić rozmiar zmiennej tablicy, przypisując do niej nowy obiekt tablicy lub za pomocą [ `ReDim` instrukcji](../../../language-reference/statements/redim-statement.md) instrukcji. W poniższym przykładzie użyto `ReDim` instrukcję, aby zmienić 100-elementowej tablicy 51-elementowej tablicy.
+You can resize an array variable by assigning a new array object to it or by using the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md) statement. The following example uses the `ReDim` statement to change a 100-element array to a 51-element array.
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
-Istnieje kilka kwestii, które należy pamiętać podczas zajmowania się rozmiarem tablicy.
+There are several things to keep in mind when dealing with the size of an array.
 
 |||
 |---|---|
-|Długość wymiaru|Indeks każdego wymiaru jest oparty na 0, co oznacza, że waha się od 0 do jego górnej granicy. W związku z tym długość danego wymiaru jest większa o jeden od deklarowanej górnej granicy tego wymiaru.|
-|Limity długości|Długość każdego wymiaru tablicy jest ograniczona do maksymalnej wartości `Integer` typ danych, który jest <xref:System.Int32.MaxValue?displayProperty=nameWithType> lub (2 ^ 31) - 1. Jednakże całkowity rozmiar tablicy również jest ograniczony przez ilość pamięci dostępnej w systemie. Jeśli użytkownik podejmie próbę zainicjowania tablicy przekraczającej ilość dostępnej pamięci, środowisko wykonawcze zgłasza <xref:System.OutOfMemoryException>.|
-|Rozmiar i rozmiar elementu|Rozmiar tablicy nie zależy od typu danych jej elementów. Rozmiar zawsze odzwierciedla całkowitą liczbę elementów, nie liczbę bajtów, które zajmują w pamięci.|
-|Użycie pamięci|Nie jest bezpieczne robić założenia dotyczące, jak tablica jest przechowywana w pamięci. Magazyn różni się na platformach o różnych szerokościach danych, aby sama tablica może zużywać więcej pamięci w systemie 64-bitowym niż w przypadku 32-bitowego systemu. W zależności od konfiguracji systemu podczas inicjowania tablicy, środowisko uruchomieniowe języka wspólnego (CLR) można przypisać pamięci masowej do spakowania elementów tak blisko siebie jak to możliwe lub dostosować je wszystkie naturalnych ograniczeń sprzętowych. Również tablica wymaga magazynowania obciążenie dla informacji o kontroli i zwiększa to obciążenie z każdym dodanym wymiarem.|
+|Dimension Length|The index of each dimension is 0-based, which means it ranges from 0 to its upper bound. Therefore, the length of a given dimension is one greater than the declared upper bound of that dimension.|
+|Length Limits|The length of every dimension of an array is limited to the maximum value of the `Integer` data type, which is <xref:System.Int32.MaxValue?displayProperty=nameWithType> or (2 ^ 31) - 1. However, the total size of an array is also limited by the memory available on your system. If you attempt to initialize an array that exceeds the amount of available memory, the runtime throws an <xref:System.OutOfMemoryException>.|
+|Size and Element Size|An array's size is independent of the data type of its elements. The size always represents the total number of elements, not the number of bytes that they consume in memory.|
+|Memory Consumption|It is not safe to make any assumptions regarding how an array is stored in memory. Storage varies on platforms of different data widths, so the same array can consume more memory on a 64-bit system than on a 32-bit system. Depending on system configuration when you initialize an array, the common language runtime (CLR) can assign storage either to pack elements as close together as possible, or to align them all on natural hardware boundaries. Also, an array requires a storage overhead for its control information, and this overhead increases with each added dimension.|
 
-## <a name="the-array-type"></a>Typ tablicy
+## <a name="the-array-type"></a>The array type
 
-Każda tablica ma typ danych, która różni się od typu danych jej elementów. Nie ma żadnych single — typ danych dla wszystkich tablic. Zamiast tego typ danych tablicy zależy od liczby wymiarów, lub *ranga*, tablicy i typ danych elementów w tablicy. Dwie tablice zmiennych są te same dane typu, tylko gdy mają tę samą rangę, a ich elementy mają ten sam typ danych. Długości wymiarów tablicy nie wpływają na typ danych tablicy.
+Every array has a data type, which differs from the data type of its elements. There is no single data type for all arrays. Instead, the data type of an array is determined by the number of dimensions, or *rank*, of the array, and the data type of the elements in the array. Two array variables are of the same data type only when they have the same rank and their elements have the same data type. The lengths of the dimensions of an array do not influence the array data type.
 
-Każda tablica dziedziczy z <xref:System.Array?displayProperty=nameWithType> klasy, a użytkownik może zadeklarować zmienną typu `Array`, ale nie można utworzyć tablicy typu `Array`. Na przykład mimo że poniższy kod deklaruje `arr` zmienną typu `Array` i wywołuje <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> metodę, aby utworzyć wystąpienie tablicy typu tablicy okaże się, że obiekt [].
+Every array inherits from the <xref:System.Array?displayProperty=nameWithType> class, and you can declare a variable to be of type `Array`, but you cannot create an array of type `Array`. For example, although the following code declares the `arr` variable to be of type `Array` and calls the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method to instantiate the array, the array's type proves to be Object[].
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-Ponadto [instrukcji ReDim](../../../language-reference/statements/redim-statement.md) nie może działać na zmiennej zadeklarowanej jako typ `Array`. Z tych powodów i dla zabezpieczeń typów zaleca się deklarować każdą tablicę jako określonego typu.
+Also, the [ReDim Statement](../../../language-reference/statements/redim-statement.md) cannot operate on a variable declared as type `Array`. For these reasons, and for type safety, it is advisable to declare every array as a specific type.
 
-Można sprawdzić typ danych tablicy lub jej elementów na kilka sposobów.
+You can find out the data type of either an array or its elements in several ways.
 
-- Możesz wywołać <xref:System.Object.GetType%2A> metody w zmiennej, aby pobrać <xref:System.Type> obiekt, który reprezentuje typu run-time w zmiennej. <xref:System.Type> Obiektu zawiera wyczerpujące informacje we właściwościach i metodach.
-- Możesz przekazać zmienną do <xref:Microsoft.VisualBasic.Information.TypeName%2A> funkcję w celu uzyskania `String` nazwę typu run-time.
+- You can call the <xref:System.Object.GetType%2A> method on the variable to get a <xref:System.Type> object that represents the run-time type of the variable. The <xref:System.Type> object holds extensive information in its properties and methods.
+- You can pass the variable to the <xref:Microsoft.VisualBasic.Information.TypeName%2A> function to get a `String` with the name of run-time type.
 
-Poniższy przykład wywołuje zarówno `GetType` metody i `TypeName` funkcję, aby określić typ tablicy. Typ tablicy to `Byte(,)`. Należy pamiętać, że <xref:System.Type.BaseType%2A?displayProperty=nameWithType> właściwość wskazuje, że typ podstawowy tej tablicy bajtowej jest <xref:System.Array> klasy.
+The following example calls the both the `GetType` method and the `TypeName` function to determine the type of an array. The array type is `Byte(,)`. Note that the <xref:System.Type.BaseType%2A?displayProperty=nameWithType> property also indicates that the base type of the byte array is the <xref:System.Array> class.
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>Tablice jako wartości zwracane i parametry
+## <a name="arrays-as-return-values-and-parameters"></a>Arrays as return values and parameters
 
-Aby zwrócić tablicę z `Function` procedury, określ typ danych tablicy i liczbę wymiarów jako typ zwracany [Function — instrukcja](../../../language-reference/statements/function-statement.md). Wewnątrz funkcji Zadeklaruj zmienną lokalnej tablicy przy użyciu tego samego typu danych i liczbie wymiarów. W [instrukcji Return](../../../language-reference/statements/return-statement.md), obejmują zmienną lokalnej tablicy bez nawiasów.
+To return an array from a `Function` procedure, specify the array data type and the number of dimensions as the return type of the [Function Statement](../../../language-reference/statements/function-statement.md). Within the function, declare a local array variable with same data type and number of dimensions. In the [Return Statement](../../../language-reference/statements/return-statement.md), include the local array variable without parentheses.
 
-Aby określić tablicę jako parametr do `Sub` lub `Function` procedury, zdefiniuj parametr jako tablicę przy użyciu określonego typu danych i liczbie wymiarów. W wywołaniu procedury należy przekazać zmienną tablicową o takim samym typie danych i liczbie wymiarów.
+To specify an array as a parameter to a `Sub` or `Function` procedure, define the parameter as an array with a specified data type and number of dimensions. In the call to the procedure, pass an array variable with the same data type and number of dimensions.
 
-W poniższym przykładzie `GetNumbers` funkcja zwraca `Integer()`, Jednowymiarowa tablica typu `Integer`. `ShowNumbers` Akceptuje procedury `Integer()` argumentu.
+In the following example, the `GetNumbers` function returns an `Integer()`, a one-dimensional array of type `Integer`. The `ShowNumbers` procedure accepts an `Integer()` argument.
 
 [!code-vb[return-value-and-params](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]
 
-W poniższym przykładzie `GetNumbersMultiDim` funkcja zwraca `Integer(,)`, tablicę dwuwymiarową typu `Integer`.  `ShowNumbersMultiDim` Akceptuje procedury `Integer(,)` argumentu.
+In the following example, the `GetNumbersMultiDim` function returns an `Integer(,)`, a two-dimensional array of type `Integer`.  The `ShowNumbersMultiDim` procedure accepts an `Integer(,)` argument.
 
 [!code-vb[multidimensional-return-value](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]
 
-## <a name="jagged-arrays"></a>Tablice nieregularne
+## <a name="jagged-arrays"></a>Jagged arrays
 
-Czasami struktury danych w aplikacji są dwuwymiarowe, ale nie prostokątny. Może na przykład, skorzystaj z tablicy, do przechowywania danych dotyczących temperatura każdego dnia miesiąca. Pierwszego wymiaru tablicy reprezentuje miesiąca, ale drugiego wymiaru reprezentuje liczbę dni, a liczba dni w miesiącu nie jest jednolite. A *tablicy nieregularnej*, który jest również nazywany *tablicy tablic*, zaprojektowano pod kątem takich scenariuszy. Nieregularna tablica jest tablicą, której elementy są również tablic. Tablica nieregularna i każdy element w tablicy nieregularnej może mieć jeden lub więcej wymiarów.
+Sometimes the data structure in your application is two-dimensional but not rectangular. For example, you might use an array to store data about the high temperature of each day of the month. The first dimension of the array represents the month, but the second dimension represents the number of days, and the number of days in a month is not uniform. A *jagged array*, which is also called an *array of arrays*, is designed for such scenarios. A jagged array is an array whose elements are also arrays. A jagged array and each element in a jagged array can have one or more dimensions.
 
-W poniższym przykładzie użyto tablicę miesięcy, której każdy element jest tablicą dni. W przykładzie użyto tablicy nieregularnej, ponieważ różne miesiące mają różną liczbę dni.  W przykładzie pokazano sposób tworzenia tablicy nieregularnej, przypisać wartości do niego i pobrać i wyświetlić jego wartości.
+The following example uses an array of months, each element of which is an array of days. The example uses a jagged array because different months have different numbers of days.  The example shows how to create a jagged array, assign values to it, and retrieve and display its values.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-Poprzedni przykład przypisuje wartości do tablicy nieregularnej, na podstawie element po elemencie przy użyciu `For...Next` pętli. Można także przypisać wartości do elementów tablicy nieregularnej, przy użyciu zagnieżdżonych literałów tablicy. Jednak próbę użycia zagnieżdżonych literałów tablicy (na przykład `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generuje błąd kompilatora [BC30568](../../../,,/../misc/bc30568.md). Aby poprawić ten błąd, należy umieścić wewnętrzne literały tablicowe w nawiasach. Nawiasy wymuszają wyrażeniu literalnym tablicy, mogło zostać ocenione, a wyniki są używane z zewnętrznym literałem tablicy, jak pokazano w poniższym przykładzie.
+The previous example assigns values to the jagged array on an element-by-element basis by using a `For...Next` loop. You can also assign values to the elements of a jagged array by using nested array literals. However, the attempt to use nested array literals (for example, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generates compiler error [BC30568](../../../,,/../misc/bc30568.md). To correct the error, enclose the inner array literals in parentheses. The parentheses force the array literal expression to be evaluated, and the resulting values are used with the outer array literal, as the following example shows.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-Nieregularna Tablica to Jednowymiarowa tablica, której elementy zawierają tablic. W związku z tym <xref:System.Array.Length%2A?displayProperty=nameWithType> właściwości i `Array.GetLength(0)` metoda zwraca liczbę elementów w tablicy jednowymiarowej, i `Array.GetLength(1)` zgłasza <xref:System.IndexOutOfRangeException> ponieważ nie jest wielowymiarowej tablicy nieregularnej. Należy określić liczbę elementów w każdy element członkowski podtablicy poprzez pobranie wartości każdy element członkowski podtablicy <xref:System.Array.Length%2A?displayProperty=nameWithType> właściwości. Poniższy przykład ilustruje sposób określić liczbę elementów w tablicy nieregularnej.
+A jagged array is a one-dimensional array whose elements contain arrays. Therefore, the <xref:System.Array.Length%2A?displayProperty=nameWithType> property and the `Array.GetLength(0)` method return the number of elements in the one-dimensional array, and `Array.GetLength(1)` throws an <xref:System.IndexOutOfRangeException> because a jagged array is not multidimensional. You determine the number of elements in each subarray by retrieving the value of each subarray's <xref:System.Array.Length%2A?displayProperty=nameWithType> property. The following example illustrates how to determine the number of elements in a jagged array.
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
-## <a name="zero-length-arrays"></a>Tablice o zerowej długości
+## <a name="zero-length-arrays"></a>Zero-length arrays
 
-Visual Basic rozróżnia między tablicą niezainicjowanej (tablicę, której wartość jest `Nothing`) i *tablicę o zerowej długości* lub pusta tablica (tablicę, która nie ma żadnych elementów.) Tablica niezainicjowanej jest taki, który nie został wymiary lub miał wszystkie wartości przypisane do niego. Na przykład:
+Visual Basic differentiates between a uninitialized array (an array whose value is `Nothing`) and a *zero-length array* or empty array (an array that has no elements.) An uninitialized array is one that has not been dimensioned or had any values assigned to it. Na przykład:
 
 ```vb
 Dim arr() As String
 ```
 
-Tablicę o zerowej długości jest zadeklarowana za pomocą wymiaru-1. Na przykład:
+A zero-length array is declared with a dimension of -1. Na przykład:
 
 ```vb
 Dim arrZ(-1) As String
 ```
 
-Może być konieczne utworzyć tablicę o zerowej długości w następujących okolicznościach:
+You might need to create a zero-length array under the following circumstances:
 
-- Bez ryzyka <xref:System.NullReferenceException> wyjątek, kod musi mieć dostęp członkowie <xref:System.Array> klasy, takie jak <xref:System.Array.Length%2A> lub <xref:System.Array.Rank%2A>, lub wywołać funkcję języka Visual Basic, taką jak <xref:Microsoft.VisualBasic.Information.UBound%2A>.
+- Without risking a <xref:System.NullReferenceException> exception, your code must access members of the <xref:System.Array> class, such as <xref:System.Array.Length%2A> or <xref:System.Array.Rank%2A>, or call a Visual Basic function such as <xref:Microsoft.VisualBasic.Information.UBound%2A>.
 
-- Chcesz uprościć kod, nie ma pod kątem `Nothing` w szczególnych przypadkach.
+- You want to keep your code simple by not having to check for `Nothing` as a special case.
 
-- Twój kod współdziała z interfejs programowania aplikacji (API), który wymaga przekazania tablicę o zerowej długości do jednej lub kilku procedur albo zwraca tablicę o zerowej długości z jedną lub kilkoma procedurami.
+- Your code interacts with an application programming interface (API) that either requires you to pass a zero-length array to one or more procedures or returns a zero-length array from one or more procedures.
 
-## <a name="splitting-an-array"></a>Podział tablicy
+## <a name="splitting-an-array"></a>Splitting an array
 
-W niektórych przypadkach może być konieczne podzielić pojedynczą tablicę wiele tablic. Obejmuje to identyfikowanie punkt lub punkty, w których tablica jest rozliczany, a następnie plucie tablicy do co najmniej dwóch oddzielnych tablic.
+In some cases, you may need to split a single array into multiple arrays. This involves identifying the point or points at which the array is to be split, and then spitting the array into two or more separate arrays.
 
 > [!NOTE]
-> W tej sekcji omówiono w nim dzielenie pojedynczego ciągu na tablicę ciągów, w oparciu o ogranicznika. Aby uzyskać informacji na temat dzielenia ciągu, zobacz <xref:System.String.Split%2A?displayProperty=nameWithType> metody.
+> This section does not discuss splitting a single string into a string array based on some delimiter. For information on splitting a string, see the <xref:System.String.Split%2A?displayProperty=nameWithType> method.
 
-Najbardziej typowe kryteria podział tablicy są:
+The most common criteria for splitting an array are:
 
-- Liczba elementów w tablicy. Na przykład można podzielić tablicę więcej niż określoną liczbę elementów w przybliżeniu równe części. W tym celu można użyć wartości zwrócone przez <xref:System.Array.Length%2A?displayProperty=nameWithType> lub <xref:System.Array.GetLength%2A?displayProperty=nameWithType> metody.
+- Liczba elementów w tablicy. For example, you might want to split an array of more than a specified number of elements into a number of approximately equal parts. For this purpose, you can use the value returned by either the <xref:System.Array.Length%2A?displayProperty=nameWithType> or <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
 
-- Wartość elementu, który służy jako ogranicznika, która wskazuje, gdzie można podzielić tablicy. Można wyszukać określoną wartość, przez wywołanie metody <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> i <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> metody.
+- The value of an element, which serves as a delimiter that indicates where the array should be split. You can search for a specific value by calling the <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> and <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> methods.
 
-Po określeniu indeksu lub indeksów, w których można podzielić tablicy, będzie można utworzyć poszczególnych tablic, wywołując <xref:System.Array.Copy%2A?displayProperty=nameWithType> metody.
+Once you've determined the index or indexes at which the array should be split, you can then create the individual arrays by calling the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
 
-Poniższy przykład dzieli tablicę na dwóch tablicach w przybliżeniu taki sam rozmiar. (Jeśli łączna liczba elementów tablicy jest nieparzysta, pierwsza tablica ma jeden element więcej od drugiego).
+The following example splits an array into two arrays of approximately equal size. (If the total number of array elements is odd, the first array has one more element than the second.)
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-Poniższy przykład dzieli tablicę ciągów na dwóch tablicach, na podstawie obecności elementu, którego wartością jest "zzz", która służy jako ogranicznika tablicy. Nowe tablice nie dołączaj elementu, który zawiera ogranicznik.
+The following example splits a string array into two arrays based on the presence of an element whose value is "zzz", which serves as the array delimiter. The new arrays do not include the element that contains the delimiter.
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Dołączenie do tablic
+## <a name="joining-arrays"></a>Joining arrays
 
-Liczba macierzy można także połączyć w jedną większe. Aby to zrobić, należy również użyć <xref:System.Array.Copy%2A?displayProperty=nameWithType> metody.
+You can also combine a number of arrays into a single larger array. To do this, you also use the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
 
 > [!NOTE]
-> W tej sekcji omówiono w nim dołączenie do tablicy ciągów w jeden ciąg. Aby uzyskać informacji na temat dołączania tablicę ciągów, zobacz <xref:System.String.Join%2A?displayProperty=nameWithType> metody.
+> This section does not discuss joining a string array into a single string. For information on joining a string array, see the <xref:System.String.Join%2A?displayProperty=nameWithType> method.
 
-Przed skopiowaniem elementów tablic do nowej tablicy, należy się najpierw upewnić już zainicjować tablicy, aby był wystarczająco dużą do obsługi nowej tablicy. Można to zrobić na jeden z dwóch sposobów:
+Before copying the elements of each array into the new array, you must first ensure that you have initialized the array so that it is large enough to accommodate the new array. Można to zrobić na jeden z dwóch sposobów:
 
-- Użyj [ `ReDim Preserve` ](../../../language-reference/statements/redim-statement.md) instrukcję, aby dynamicznie rozwiń tablicy przed dodaniem nowych elementów. Jest to najprostszy technika, ale może powodować spadek wydajności i zużycia zbyt dużej ilości pamięci, kopiując duże tablice.
-- Oblicz sumę elementów potrzebnych do nowej tablicy dużych, a następnie dodaj elementy tablicy każdego źródła do niego.
+- Use the [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) statement to dynamically expand the array before adding new elements to it. This is the easiest technique, but it can result in performance degradation and excessive memory consumption when you are copying large arrays.
+- Calculate the total number of elements needed for the new large array, then add the elements of each source array to it.
 
-W poniższym przykładzie użyto drugiej metody, aby dodać czterech tablic dziesięć elementów do pojedynczej macierzy.
+The following example uses the second approach to add four arrays with ten elements each to a single array.
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
-Ponieważ w tym przypadku tablic źródła są wszystkie małe, firma Microsoft jest również dynamicznie rozwiń tablicy dodanie do niej elementy każdej nowej tablicy. Poniższy przykład robi to.
+Since in this case the source arrays are all small, we can also dynamically expand the array as we add the elements of each new array to it. The following example does that.
 
 [!code-vb[joining-an-array-dynamically](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)]
 
-## <a name="collections-as-an-alternative-to-arrays"></a>Kolekcje jako alternatywa dla tablic
+## <a name="collections-as-an-alternative-to-arrays"></a>Collections as an alternative to arrays
 
-Tablice są najbardziej przydatne do tworzenia i pracy ze stałą liczbą jednoznacznie silnych obiektów. Kolekcje zapewniają bardziej elastyczny sposób pracy z grupami obiektów. W odróżnieniu od tablic, które wymagają jawnie zmienić rozmiar tablicy o liczbie [ `ReDim` instrukcji](../../../language-reference/statements/redim-statement.md), kolekcje rosnąć i maleć dynamicznie, wraz z aplikacji zmienia się zapotrzebowanie.
+Arrays are most useful for creating and working with a fixed number of strongly typed objects. Collections provide a more flexible way to work with groups of objects. Unlike arrays, which require that you explicitly change the size of an array with the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md), collections grow and shrink dynamically as the needs of an application change.
 
-Kiedy używasz `ReDim` do redimension tablicę, Visual Basic tworzy nową tablicę i zwalnia poprzednią. Spowoduje to przejście czasu wykonywania. W związku z tym jeśli liczba elementów, który aktualnie pracuje ulega częstym zmianom, lub nie można przewidzieć maksymalną liczbę elementów, których potrzebujesz, zazwyczaj będzie uzyskać lepszą wydajność, używając kolekcji.
+When you use `ReDim` to redimension an array, Visual Basic creates a new array and releases the previous one. This takes execution time. Therefore, if the number of items you are working with changes frequently, or you cannot predict the maximum number of items you need, you'll usually obtain better performance by using a collection.
 
-W niektórych kolekcjach można przypisać klawisz do dowolnych obiektów umieszczonych do kolekcji, tak aby pozwala na szybkie pobranie obiektu przy użyciu klucza.
+For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.
 
-Jeśli kolekcja zawiera elementy tylko jednego typu danych, możesz użyć jednej z klas w <xref:System.Collections.Generic?displayProperty=nameWithType> przestrzeni nazw. Ogólna kolekcja wymusza typ bezpieczeństwa tak, aby żaden typ danych można dodać do niego.
+If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. A generic collection enforces type safety so that no other data type can be added to it.
 
-Aby uzyskać więcej informacji na temat kolekcji, zobacz [kolekcje](../../concepts/collections.md).
+For more information about collections, see [Collections](../../concepts/collections.md).
 
 ## <a name="related-topics"></a>Tematy pokrewne
 
 |Termin|Definicja|
 |----------|----------------|
-|[Wymiary tablic w języku Visual Basic](../../language-features/arrays/array-dimensions.md)|Wyjaśnia rangę i wymiary w tablicach.|
-|[Instrukcje: Inicjowanie zmiennej tablicy w języku Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Zawiera opis sposobu wypełniania tablic z wartościami początkowymi.|
-|[Instrukcje: Sortowanie tablicy w języku Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Pokazuje jak alfabetycznie sortować elementy tablicy.|
-|[Instrukcje: Przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|W tym artykule opisano zasady i czynności podczas przypisywania tablicy do innej zmiennej tablicy.|
-|[Rozwiązywanie problemów związanych z tablicami](../../language-features/arrays/troubleshooting-arrays.md)|W tym artykule omówiono niektóre typowe problemy, które występują podczas pracy z tablicami.|
+|[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explains rank and dimensions in arrays.|
+|[How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Describes how to populate arrays with initial values.|
+|[How to: Sort An Array in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Shows how to sort the elements of an array alphabetically.|
+|[Instrukcje: przypisywanie tablicy do innej tablicy](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Describes the rules and steps for assigning an array to another array variable.|
+|[Rozwiązywanie problemów związanych z tablicami](../../language-features/arrays/troubleshooting-arrays.md)|Discusses some common problems that arise when working with arrays.|
 
 ## <a name="see-also"></a>Zobacz także
 

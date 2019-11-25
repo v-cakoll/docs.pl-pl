@@ -1,5 +1,5 @@
 ---
-title: Single — Typ danych (Visual Basic)
+title: Single — Typ danych
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Single
@@ -20,32 +20,34 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: af75f5eb5a4281f6efae8ec3c9442ce2b28f595e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343916"
 ---
 # <a name="single-data-type-visual-basic"></a>Single — Typ danych (Visual Basic)
-Przechowuje podpisany IEEE 32-bitowe (4-bajtową) pojedynczej precyzji liczb zmiennoprzecinkowych z zakresu od - 3.4028235E + 38 do - 1, 401298E-45 dla wartości ujemnych i 1, 401298E-45 za pośrednictwem 3.4028235E + 38 dla wartości dodatnich. Liczby o pojedynczej precyzji przechowywać przybliżeniem liczbą rzeczywistą.  
+
+Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj `Single` typu danych, które zawierają wartości zmiennoprzecinkowych, które nie wymagają szerokość pełnych danych `Double`. W niektórych przypadkach środowiska uruchomieniowego języka wspólnego może być możliwe umieszczenie usługi `Single` zmienne ściśle współpracują, a następnie zapisz zużycie pamięci.  
+
+ Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
   
- Wartość domyślna `Single` wynosi 0.  
+ The default value of `Single` is 0.  
   
 ## <a name="programming-tips"></a>Porady dla programistów  
   
-- **Dokładność.** Podczas pracy z liczb zmiennoprzecinkowych, należy pamiętać o tym, że nie zawsze mają dokładne reprezentacji w pamięci. Może to spowodować nieoczekiwane wyniki z niektórych operacji, takich jak porównania wartości i `Mod` operatora. Aby uzyskać więcej informacji, zobacz [Rozwiązywanie problemów z typów danych](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Rozszerzanie.** `Single` — Typ danych rozszerza się na `Double`. Oznacza to, że możesz przekonwertować `Single` do `Double` nie powodując <xref:System.OverflowException?displayProperty=nameWithType> błędu.  
+- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
   
-- **Końcowe zera.** Typy danych zmiennopozycyjnych nie ma żadnych wewnętrznej reprezentacji końcowych 0 znaków. Na przykład ich nie dokonuje rozróżnienia między 4.2000 i 4.2. W związku z tym końcowych 0 znaków nie są wyświetlane, gdy możesz wyświetlić lub wydrukować różne wartości zmiennoprzecinkowe.  
+- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
   
-- **Znaki typu.** Dołączanie znaku typu literał `F` do literału wymusza `Single` typu danych. Dołączanie znaku typu identyfikator `!` do jakiegokolwiek identyfikatora wymusza `Single`.  
+- **Type Characters.** Appending the literal type character `F` to a literal forces it to the `Single` data type. Appending the identifier type character `!` to any identifier forces it to `Single`.  
   
-- **Typ Framework.** Odpowiedni typ w .NET Framework jest <xref:System.Single?displayProperty=nameWithType> struktury.  
+- **Framework Type.** The corresponding type in the .NET Framework is the <xref:System.Single?displayProperty=nameWithType> structure.  
   
 ## <a name="see-also"></a>Zobacz także
 

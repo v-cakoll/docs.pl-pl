@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: generowanie plików tekstowych z pliku XML (Visual Basic)'
+title: 'How to: Generate Text Files from XML'
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
-ms.openlocfilehash: 1b383a0f3656558286bfe449ed72c633426b9410
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b30596df1a490d78d1333c688a23ed4ab30bcb82
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320536"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344576"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>Instrukcje: generowanie plików tekstowych z pliku XML (Visual Basic)
-Ten przykład pokazuje, jak generować plik wartości rozdzielanych przecinkami (CSV) z pliku XML.  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a>How to: Generate Text Files from XML (Visual Basic)
+This example shows how to generate a comma-separated values (CSV) file from an XML file.  
   
 ## <a name="example"></a>Przykład  
- Wersja Visual Basic używa kodu proceduralnego do agregowania kolekcji ciągów do jednego ciągu.  
+ The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -53,4 +53,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Projekcje i przekształcenia (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -1,5 +1,5 @@
 ---
-title: From — Klauzula (Visual Basic)
+title: From — Klauzula
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryFrom
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: 781902f1bf28bd029c8d9825aee155a6691cbae9
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a63fb41fc2b0ad885acf76ad5d56e446922f5b90
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004781"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343779"
 ---
 # <a name="from-clause-visual-basic"></a>From — Klauzula (Visual Basic)
-Określa co najmniej jedną zmienną zakresu i kolekcję do zapytania.  
+Specifies one or more range variables and a collection to query.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,48 +31,48 @@ From element [ As type ] In collection [ _ ]
   
 |Termin|Definicja|  
 |---|---|  
-|`element`|Wymagany. *Zmienna zakresu* używana do iteracji elementów kolekcji. Zmienna zakresu służy do odwoływania się do każdego elementu członkowskiego `collection`, ponieważ zapytanie wykonuje iterację przez `collection`. Musi być typem wyliczalnym.|  
-|`type`|Opcjonalny. Typ `element`. Jeśli nie określono `type`, typ `element` jest wnioskowany z `collection`.|  
-|`collection`|Wymagany. Odwołuje się do kolekcji, do której mają być wysyłane zapytania. Musi być typem wyliczalnym.|  
+|`element`|Wymagany. A *range variable* used to iterate through the elements of the collection. A range variable is used to refer to each member of the `collection` as the query iterates through the `collection`. Must be an enumerable type.|  
+|`type`|Opcjonalny. The type of `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
+|`collection`|Wymagany. Refers to the collection to be queried. Must be an enumerable type.|  
   
 ## <a name="remarks"></a>Uwagi  
- Klauzula `From` służy do identyfikowania danych źródłowych zapytania i zmiennych, które są używane do odwoływania się do elementu z kolekcji źródłowej. Te zmienne są nazywane *zmiennymi zakresu*. Klauzula `From` jest wymagana dla zapytania, z wyjątkiem sytuacji, gdy klauzula `Aggregate` służy do identyfikowania zapytania, które zwraca tylko zagregowane wyniki. Aby uzyskać więcej informacji, zobacz [klauzula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ The `From` clause is used to identify the source data for a query and the variables that are used to refer to an element from the source collection. These variables are called *range variables*. The `From` clause is required for a query, except when the `Aggregate` clause is used to identify a query that returns only aggregated results. For more information, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Można określić wiele klauzul `From` w zapytaniu, aby zidentyfikować wiele kolekcji do przyłączenia. Jeśli określono wiele kolekcji, są one powtarzane niezależnie lub można je przyłączać, jeśli są powiązane. Kolekcje można sprzęgać niejawnie za pomocą klauzuli `Select` lub jawnie za pomocą klauzul `Join` lub `Group Join`. Alternatywnie można określić wiele zmiennych zakresów i kolekcji w pojedynczej klauzuli `From`, z każdą pokrewną zmienną zakresu i kolekcją oddzieloną od innych, przecinkiem. Poniższy przykład kodu pokazuje obie opcje składni dla klauzuli `From`.  
+ You can specify multiple `From` clauses in a query to identify multiple collections to be joined. When multiple collections are specified, they are iterated over independently, or you can join them if they are related. You can join collections implicitly by using the `Select` clause, or explicitly by using the `Join` or `Group Join` clauses. As an alternative, you can specify multiple range variables and collections in a single `From` clause, with each related range variable and collection separated from the others by a comma. The following code example shows both syntax options for the `From` clause.  
   
  [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- Klauzula `From` definiuje zakres zapytania, który jest podobny do zakresu pętli `For`. W związku z tym Każda zmienna zakresu `element` w zakresie zapytania musi mieć unikatową nazwę. Ponieważ można określić wiele klauzul `From` dla zapytania, kolejne klauzule `From` mogą odwoływać się do zmiennych zakresu w klauzuli `From` lub mogą odwoływać się do zmiennych zakresu w poprzedniej klauzuli `From`. Na przykład poniższy przykład pokazuje zagnieżdżoną klauzulę `From`, gdzie kolekcja w drugiej klauzuli jest oparta na właściwości zmiennej zakresu w pierwszej klauzuli.  
+ The `From` clause defines the scope of a query, which is similar to the scope of a `For` loop. Therefore, each `element` range variable in the scope of a query must have a unique name. Because you can specify multiple `From` clauses for a query, subsequent `From` clauses can refer to range variables in the `From` clause, or they can refer to range variables in a previous `From` clause. For example, the following example shows a nested `From` clause where the collection in the second clause is based on a property of the range variable in the first clause.  
   
  [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- Każda klauzula `From` może następować dowolną kombinacją dodatkowych klauzul zapytania, aby uściślić zapytanie. Zapytanie można uściślić w następujący sposób:  
+ Each `From` clause can be followed by any combination of additional query clauses to refine the query. You can refine the query in the following ways:  
   
-- Połącz wiele kolekcji niejawnie za pomocą klauzul `From` i `Select` lub jawnie za pomocą klauzul `Join` lub `Group Join`.  
+- Combine multiple collections implicitly by using the `From` and `Select` clauses, or explicitly by using the `Join` or `Group Join` clauses.  
   
-- Użyj klauzuli `Where`, aby odfiltrować wynik zapytania.  
+- Use the `Where` clause to filter the query result.  
   
-- Posortuj wynik przy użyciu klauzuli `Order By`.  
+- Sort the result by using the `Order By` clause.  
   
-- Grupuj podobne wyniki przy użyciu klauzuli `Group By`.  
+- Group similar results together by using the `Group By` clause.  
   
-- Użyj klauzuli `Aggregate`, aby zidentyfikować funkcje agregujące do obliczenia dla całego wyniku zapytania.  
+- Use the `Aggregate` clause to identify aggregate functions to evaluate for the whole query result.  
   
-- Użyj klauzuli `Let`, aby wprowadzić zmienną iteracji, której wartość jest określana przez wyrażenie zamiast kolekcji.  
+- Use the `Let` clause to introduce an iteration variable whose value is determined by an expression instead of a collection.  
   
-- Użyj klauzuli `Distinct` do ignorowania zduplikowanych wyników zapytania.  
+- Use the `Distinct` clause to ignore duplicate query results.  
   
-- Zidentyfikuj części wyniku do zwrócenia przy użyciu klauzul `Skip`, `Take`, `Skip While` i `Take While`.  
+- Identify parts of the result to return by using the `Skip`, `Take`, `Skip While`, and `Take While` clauses.  
   
 ## <a name="example"></a>Przykład  
- Następujące wyrażenie zapytania używa klauzuli `From`, aby zadeklarować zmienną zakresu `cust` dla każdego obiektu `Customer` w kolekcji `customers`. Klauzula `Where` używa zmiennej zakresu w celu ograniczenia danych wyjściowych do klientów z określonego regionu. Pętla `For Each` Wyświetla nazwę firmy dla każdego klienta w wyniku zapytania.  
+ The following query expression uses a `From` clause to declare a range variable `cust` for each `Customer` object in the `customers` collection. The `Where` clause uses the range variable to restrict the output to customers from the specified region. The `For Each` loop displays the company name for each customer in the query result.  
   
  [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Zapytania](../../../visual-basic/language-reference/queries/index.md)
-- [Wprowadzenie do LINQ w Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next, instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
 - [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Select, klauzula](../../../visual-basic/language-reference/queries/select-clause.md)

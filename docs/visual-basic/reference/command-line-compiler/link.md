@@ -1,5 +1,5 @@
 ---
-title: -Link (Visual Basic)
+title: -link
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 0a6a6b6436210e699d8fd176dc1ba6e4aded7c8d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ecb7b0448b8ee9c1c1fc1eb9542b693d60a38ffd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523978"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335846"
 ---
-# <a name="-link-visual-basic"></a>-Link (Visual Basic)
-Powoduje, że kompilator udostępnia informacje o typie COM w określonych zestawach, które są dostępne dla aktualnie kompilowanego projektu.  
+# <a name="-link-visual-basic"></a>-link (Visual Basic)
+Causes the compiler to make COM type information in the specified assemblies available to the project that you are currently compiling.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -37,53 +37,53 @@ lub
   
 |Termin|Definicja|  
 |---|---|  
-|`fileList`|Wymagany. Rozdzielana przecinkami lista nazw plików zestawu. Jeśli nazwa pliku zawiera spację, należy ująć ją w cudzysłów.|  
+|`fileList`|Wymagany. Comma-delimited list of assembly file names. If the file name contains a space, enclose the name in quotation marks.|  
   
 ## <a name="remarks"></a>Uwagi  
- Opcja `-link` umożliwia wdrożenie aplikacji, która ma informacje o typie osadzonym. Aplikacja może następnie użyć typów w zestawie środowiska uruchomieniowego, który implementuje informacje o typie osadzonym, bez konieczności odwoływania się do zestawu środowiska uruchomieniowego. Jeśli są publikowane różne wersje zestawu środowiska uruchomieniowego, aplikacja zawierająca informacje o typie osadzonym może współdziałać z różnymi wersjami bez konieczności ponownego kompilowania. Aby zapoznać się z przykładem, zobacz [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md).  
+ The `-link` option enables you to deploy an application that has embedded type information. The application can then use types in a runtime assembly that implement the embedded type information without requiring a reference to the runtime assembly. If various versions of the runtime assembly are published, the application that contains the embedded type information can work with the various versions without having to be recompiled. For an example, see [Walkthrough: Embedding Types from Managed Assemblies](../../../standard/assembly/embed-types-visual-studio.md).  
   
- Użycie opcji `-link` jest szczególnie przydatne podczas pracy z międzyoperacyjną obsługą modelu COM. Można osadzić typy COM, aby aplikacja nie wymagała już podstawowego zestawu międzyoperacyjnego (PIA) na komputerze docelowym. Opcja `-link` instruuje kompilator, aby osadzi informacje o typie COM z przywoływanego zestawu międzyoperacyjnego do w wyniku skompilowanego kodu. Typ COM jest identyfikowany przez wartość CLSID (GUID). W związku z tym aplikacja może działać na komputerze docelowym, na którym zainstalowano te same typy COM z tymi samymi wartościami CLSID. Aplikacje automatyzujące Microsoft Office są dobrym przykładem. Ponieważ aplikacje takie jak pakiet Office zwykle zachowują tę samą wartość CLSID w różnych wersjach, aplikacja może używać typów COM, których dotyczy odwołanie, tak długo, jak .NET Framework 4 lub nowszy jest zainstalowany na komputerze docelowym, a aplikacja korzysta z metod, właściwości lub zdarzenia, które są zawarte w przywoływanych typach COM.  
+ Using the `-link` option is especially useful when you are working with COM interop. You can embed COM types so that your application no longer requires a primary interop assembly (PIA) on the target computer. The `-link` option instructs the compiler to embed the COM type information from the referenced interop assembly into the resulting compiled code. The COM type is identified by the CLSID (GUID) value. As a result, your application can run on a target computer that has installed the same COM types with the same CLSID values. Applications that automate Microsoft Office are a good example. Because applications like Office usually keep the same CLSID value across different versions, your application can use the referenced COM types as long as .NET Framework 4 or later is installed on the target computer and your application uses methods, properties, or events that are included in the referenced COM types.  
   
- Opcja `-link` umożliwia osadzanie tylko interfejsów, struktur i delegatów. Osadzanie klas COM nie jest obsługiwane.  
+ The `-link` option embeds only interfaces, structures, and delegates. Embedding COM classes is not supported.  
   
 > [!NOTE]
-> Podczas tworzenia wystąpienia osadzonego typu COM w kodzie, należy utworzyć wystąpienie przy użyciu odpowiedniego interfejsu. Próba utworzenia wystąpienia osadzonego typu COM przy użyciu klasy coclass powoduje wystąpienie błędu.  
+> When you create an instance of an embedded COM type in your code, you must create the instance by using the appropriate interface. Attempting to create an instance of an embedded COM type by using the CoClass causes an error.  
   
- Aby ustawić opcję `-link` w programie Visual Studio, Dodaj odwołanie do zestawu i ustaw właściwość `Embed Interop Types` na **wartość true**. Wartością domyślną dla właściwości `Embed Interop Types` jest **false**.  
+ To set the `-link` option in Visual Studio, add an assembly reference and set the `Embed Interop Types` property to **true**. The default for the `Embed Interop Types` property is **false**.  
   
- Jeśli utworzysz link do zestawu COM (zestawu A), który sam odwołuje się do innego zestawu COM (zestawu B), musisz także połączyć się z zestawem B, jeśli jest spełniony jeden z następujących warunków:  
+ If you link to a COM assembly (Assembly A) which itself references another COM assembly (Assembly B), you also have to link to Assembly B if either of the following is true:  
   
-- Typ z zestawu A dziedziczy po typie lub implementuje interfejs z zestawu B.  
+- A type from Assembly A inherits from a type or implements an interface from Assembly B.  
   
-- Wywołano pole, właściwość, zdarzenie lub metodę z typem zwracanym lub typem parametru z zestawu B.  
+- A field, property, event, or method that has a return type or parameter type from Assembly B is invoked.  
   
- Użyj [-LIBPATH](libpath.md) , aby określić katalog, w którym znajduje się co najmniej jedno odwołanie do zestawu.  
+ Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
   
- Podobnie jak w przypadku opcji kompilatora [referencyjnego](reference.md) , opcja kompilatora `-link` używa pliku odpowiedzi VBC. rsp, który odwołuje się do często używanych .NET Framework zestawów. Użyj opcji kompilatora [-noconfig](noconfig.md) , jeśli nie chcesz, aby kompilator używał pliku VBC. rsp.  
+ Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
   
- Krótka forma `-link` jest `-l`.  
+ The short form of `-link` is `-l`.  
   
-## <a name="generics-and-embedded-types"></a>Typy ogólne i osadzone  
- W poniższych sekcjach opisano ograniczenia dotyczące używania typów ogólnych w aplikacjach, które osadzają typy międzyoperacyjnych.  
+## <a name="generics-and-embedded-types"></a>Generics and Embedded Types  
+ The following sections describe the limitations on using generic types in applications that embed interop types.  
   
 ### <a name="generic-interfaces"></a>Interfejsy ogólne  
- Nie można użyć ogólnych interfejsów, które są osadzone z zestawu międzyoperacyjnego. Pokazano to w poniższym przykładzie.  
+ Generic interfaces that are embedded from an interop assembly cannot be used. This is shown in the following example.  
   
  [!code-vb[VbLinkCompiler#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#1)]  
   
-### <a name="types-that-have-generic-parameters"></a>Typy, które mają parametry ogólne  
- Typów, które mają parametr generyczny, którego typ jest osadzony z zestawu międzyoperacyjnego nie można użyć, jeśli ten typ pochodzi z zewnętrznego zestawu. To ograniczenie nie ma zastosowania do interfejsów. Rozważmy na przykład interfejs <xref:Microsoft.Office.Interop.Excel.Range>, który jest zdefiniowany w zestawie <xref:Microsoft.Office.Interop.Excel>. Jeśli biblioteka osadza typy międzyoperacyjnych z zestawu <xref:Microsoft.Office.Interop.Excel> i uwidacznia metodę zwracającą typ ogólny, który ma parametr, którego typem jest interfejs <xref:Microsoft.Office.Interop.Excel.Range>, ta metoda musi zwracać interfejs ogólny, jak pokazano w poniższym przykładzie kodu.  
+### <a name="types-that-have-generic-parameters"></a>Types That Have Generic Parameters  
+ Types that have a generic parameter whose type is embedded from an interop assembly cannot be used if that type is from an external assembly. This restriction does not apply to interfaces. For example, consider the <xref:Microsoft.Office.Interop.Excel.Range> interface that is defined in the <xref:Microsoft.Office.Interop.Excel> assembly. If a library embeds interop types from the <xref:Microsoft.Office.Interop.Excel> assembly and exposes a method that returns a generic type that has a parameter whose type is the <xref:Microsoft.Office.Interop.Excel.Range> interface, that method must return a generic interface, as shown in the following code example.  
   
  [!code-vb[VbLinkCompiler#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/utility.vb#2)]  
 [!code-vb[VbLinkCompiler#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/utility.vb#3)]  
 [!code-vb[VbLinkCompiler#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/utility.vb#4)]  
   
- W poniższym przykładzie kod klienta może wywołać metodę, która zwraca interfejs ogólny <xref:System.Collections.IList> bez błędu.  
+ In the following example, client code can call the method that returns the <xref:System.Collections.IList> generic interface without error.  
   
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy wiersz polecenia kompiluje plik źródłowy `OfficeApp.vb` i zestawów referencyjnych z `COMData1.dll` i `COMData2.dll`, aby utworzyć `OfficeApp.exe`.  
+ The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -91,9 +91,9 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Kompilator wiersza polecenia Visual Basic](index.md)
+- [Visual Basic Command-Line Compiler](index.md)
 - [Przewodnik: osadzanie typów z zarządzanych zestawów](../../../standard/assembly/embed-types-visual-studio.md)
-- [-Reference (Visual Basic)](reference.md)
+- [-reference (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

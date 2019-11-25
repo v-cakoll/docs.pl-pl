@@ -1,28 +1,28 @@
 ---
-title: Wprowadzenie do ciągów w Visual Basic
+title: Wprowadzenie do ciągów
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], about strings
 ms.assetid: c1b0f6b4-9717-426b-a3db-957e57a60764
-ms.openlocfilehash: 4da64b1cb25fe1a681e5790aad6abc3a478b229a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07018bd9b3df19ca489887e6ab707049a92d6978
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938297"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344310"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Wprowadzenie do ciągów w Visual Basic
-W tej sekcji opisano podstawowe pojęcia dotyczące używania ciągów w Visual Basic.  
+This section describes the basic concepts behind using strings in Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Podstawowe informacje o ciągach](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Wprowadzono podstawowe pojęcia dotyczące przy użyciu parametrów i zmiennych ciągu.  
+ Introduces the basic concepts behind using strings and string variables.  
   
- [Typy metod manipulowania ciągami w Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Wprowadzono kilka różnych metod analizowania ciągów i manipulowania nimi.  
+ [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Introduces several different ways to analyze and manipulate strings.  
   
- [Wpływ kultury na ciągi w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- W tym artykule omówiono, jak Visual Basic używa informacji o kulturze przeprowadzenie ciąg konwersje i porównań.  
+ [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
   
 ## <a name="see-also"></a>Zobacz także
 

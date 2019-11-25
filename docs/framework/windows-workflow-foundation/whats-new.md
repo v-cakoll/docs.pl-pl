@@ -5,54 +5,55 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656108"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142005"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Co nowego w programie Windows Workflow Foundation
-Windows Workflow Foundation (WF) w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] kilka paradygmatów rozwoju zmienia się z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, wykonywania, obsługa i zaimplementować wiele nowych funkcji. Aby uzyskać więcej informacji na temat migrowania aplikacji .NET 3.0 i .NET 3.5 przepływu pracy można korzystać z najnowszej wersji, zobacz [wskazówek dotyczących migracji](migration-guidance.md).  
+
+Windows Workflow Foundation (WF) w .NET Framework 4 zmienia kilka odmian programistycznych z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, wykonywania i konserwowania oraz implementowania hosta nowych funkcji. Aby uzyskać więcej informacji na temat migrowania aplikacji przepływu pracy .NET 3,0 i .NET 3,5 do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](migration-guidance.md).  
   
-## <a name="workflow-activity-model"></a>Model działania przepływu pracy  
- Działanie jest teraz podstawowej jednostce tworzenia przepływu pracy, a nie przy użyciu <xref:System.Workflow.Activities.SequentialWorkflowActivity> lub <xref:System.Workflow.Activities.StateMachineWorkflowActivity> klasy. <xref:System.Activities.Activity> Klasa stanowi podstawowy abstrakcji działania przepływu pracy. Działanie autorzy mogą implementować albo <xref:System.Activities.CodeActivity> funkcji podstawowych, niestandardowe działanie lub <xref:System.Activities.NativeActivity> dla funkcji niestandardowego działania, które korzysta z zakresem środowiska uruchomieniowego. <xref:System.Activities.Activity> jest klasą używaną przez autorów działania programu express nowych zachowań w sposób deklaratywny pod względem innych <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, lub <xref:System.Activities.DynamicActivity> obiektów, czy są one niestandardowej lub składnikach uwzględnionych w [wbudowanego działania Biblioteka](net-framework-4-5-built-in-activity-library.md).  
+## <a name="workflow-activity-model"></a>Model działań przepływu pracy  
+ Działanie jest teraz jednostką podstawową tworzenia przepływu pracy, a nie przy użyciu klas <xref:System.Workflow.Activities.SequentialWorkflowActivity> i <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Klasa <xref:System.Activities.Activity> zapewnia podstawowe abstrakcję zachowania przepływu pracy. Autorzy działań mogą następnie zaimplementować <xref:System.Activities.CodeActivity> dla podstawowych funkcji działania niestandardowego lub <xref:System.Activities.NativeActivity> dla funkcji niestandardowego działania, która używa szerokości środowiska uruchomieniowego. <xref:System.Activities.Activity> jest klasą używaną przez autorów działań do wyrażania nowych zachowań w sposób deklaratywny w odniesieniu do innych <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>lub <xref:System.Activities.DynamicActivity> obiektów, niezależnie od tego, czy są one niestandardowe, czy dołączone do [wbudowanej biblioteki działań](net-framework-4-5-built-in-activity-library.md).  
   
-## <a name="rich-composite-activity-options"></a>Opcje działania złożonego zaawansowane  
- <xref:System.Activities.Statements.Flowchart> to zaawansowane nowe działanie przepływu sterowania, umożliwia autorom modelu dowolnego pętli i rozgałęzień warunkowych. <xref:System.Activities.Statements.Flowchart> zapewnia oparte na zdarzeniach model programowania, który mógł wcześniej tylko można zaimplementować przy użyciu <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Proceduralne przepływy pracy korzystają z nowych działań sterowania przepływem, które modelują sterowanie przepływem tradycyjnych struktur, takich jak <xref:System.Activities.Statements.TryCatch> i <xref:System.Activities.Statements.Switch%601>.  
+## <a name="rich-composite-activity-options"></a>Zaawansowane opcje działań złożonych  
+ <xref:System.Activities.Statements.Flowchart> jest zaawansowanym nowym działaniem przepływu sterowania, które pozwala autorom na modelowanie arbitralnych pętli i rozgałęzianie warunkowe. <xref:System.Activities.Statements.Flowchart> zapewnia oparty na zdarzeniach model programowania, który wcześniej był możliwy do wdrożenia przy użyciu <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Przepływy pracy proceduralnej korzystają z nowych działań związanych z kontrolą przepływu, które modelują tradycyjne struktury kontroli przepływu, takie jak <xref:System.Activities.Statements.TryCatch> i <xref:System.Activities.Statements.Switch%601>.  
   
-## <a name="expanded-built-in-activity-library"></a>Rozwinięte wbudowana biblioteka działań  
- Nowe funkcje biblioteki działań:  
+## <a name="expanded-built-in-activity-library"></a>Rozwinięta wbudowana Biblioteka działań  
+ Nowe funkcje biblioteki działań obejmują:  
   
-- Nowy przepływ sterowania działań, takich jak <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>, i <xref:System.Activities.Statements.ParallelForEach%601>.  
+- Nowe działania sterowania przepływem, takie jak, <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.Pick>, <xref:System.Activities.Statements.TryCatch>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.Switch%601>i <xref:System.Activities.Statements.ParallelForEach%601>.  
   
-- Działania do manipulowania element członkowski danych, takich jak <xref:System.Activities.Statements.Assign> i działań kolekcji, takie jak <xref:System.Activities.Statements.AddToCollection%601>.  
+- Działania dotyczące manipulowania danymi elementu członkowskiego, takie jak <xref:System.Activities.Statements.Assign> i działania dotyczące kolekcji, takie jak <xref:System.Activities.Statements.AddToCollection%601>.  
   
-- Działania związane z kontrolowania transakcji, takich jak <xref:System.Activities.Statements.TransactionScope> i <xref:System.Activities.Statements.Compensate>.  
+- Działania do kontrolowania transakcji, takie jak <xref:System.Activities.Statements.TransactionScope> i <xref:System.Activities.Statements.Compensate>.  
   
-- Nowe działania dotyczące komunikatów takich jak <xref:System.ServiceModel.Activities.SendContent> i <xref:System.ServiceModel.Activities.ReceiveReply>.  
+- Nowe działania dotyczące obsługi komunikatów, takie jak <xref:System.ServiceModel.Activities.SendContent> i <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
-## <a name="explicit-activity-data-model"></a>Model danych aktywności jawne  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zawiera nowe opcje przechowywania lub przenoszenia danych. Dane mogą być przechowywane w działanie przy użyciu <xref:System.Activities.Variable>. Podczas przenoszenia danych do i z działania, typy argumentów specjalne są używane do ustalenia, które dane kierunek jest przenoszenie. Te typy są <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>, i <xref:System.Activities.OutArgument>. Aby uzyskać więcej informacji, zobacz [modelu danych programu Windows Workflow Foundation](data-model.md).  
+## <a name="explicit-activity-data-model"></a>Jawny model danych działań  
+ .NET Framework 4 zawiera nowe opcje przechowywania lub przeniesienia danych. Dane mogą być przechowywane w działaniu przy użyciu <xref:System.Activities.Variable>. W przypadku przeniesienia danych do i z działania, wyspecjalizowane typy argumentów są używane do określania, które dane kierunku są przenoszone. Te typy są <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument>i <xref:System.Activities.OutArgument>. Aby uzyskać więcej informacji, zobacz [Windows Workflow Foundation model danych](data-model.md).  
   
-## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Ulepszone hostingu, trwałości, opcje i śledzenia  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] zawiera ulepszenia trwałości, takie jak następujące:  
+## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Ulepszone opcje hostingu, trwałości i śledzenia  
+ .NET Framework 4 zawiera usprawnienia trwałości, takie jak następujące:  
   
-- Istnieją dodatkowe opcje do uruchamiania przepływów pracy, w tym <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>, i <xref:System.Activities.WorkflowInvoker>.  
+- Dostępne są więcej opcji uruchamiania przepływów pracy, w tym <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication>i <xref:System.Activities.WorkflowInvoker>.  
   
-- Dane o stanie przepływu pracy może być jawnie utrwalony, za pomocą <xref:System.Activities.Statements.Persist> działania.  
+- Dane stanu przepływu pracy mogą być jawnie utrwalane przy użyciu działania <xref:System.Activities.Statements.Persist>.  
   
-- Hosta można utrwalić <xref:System.Activities.ActivityInstance> bez rozładowywania go.  
+- Host może utrzymywać <xref:System.Activities.ActivityInstance> bez wyładowywania.  
   
-- Przepływ pracy można określić nie utrwalić stref podczas pracy z danymi, które nie może zostać utrwalona, tak aby trwałości zostanie odłożona do momentu strefy no-persist kończy działanie.  
+- Przepływ pracy może określać strefy nie utrwalania podczas pracy z danymi, które nie mogą być utrwalane, dzięki czemu trwałość zostanie odroczona do momentu opuszczenia strefy braku utrwalania.  
   
-- Transakcje mogą przepływać do przepływu pracy przy użyciu <xref:System.Activities.Statements.TransactionScope>.  
+- Transakcje można przepływać do przepływu pracy przy użyciu <xref:System.Activities.Statements.TransactionScope>.  
   
-- Śledzenie łatwiej odbywa się przy użyciu <xref:System.Activities.Tracking.TrackingParticipant>.  
+- Śledzenie jest łatwiejsze w użyciu <xref:System.Activities.Tracking.TrackingParticipant>.  
   
-- Śledzenie w dzienniku zdarzeń systemowych znajduje się za pomocą <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+- Śledzenie do dziennika zdarzeń systemu jest obsługiwane przy użyciu <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
   
-- Wznawianie oczekujące przepływu pracy są teraz zarządzane za pomocą <xref:System.Activities.Bookmark> obiektu.  
+- Wznawianie oczekującego przepływu pracy jest teraz zarządzane przy użyciu obiektu <xref:System.Activities.Bookmark>.  
   
-## <a name="easier-ability-to-extend-wf-designer-experience"></a>Łatwiejsze mogą rozszerzyć środowisko projektanta WF  
- Nowy Designer WF jest zbudowany na Windows Presentation Foundation (WPF) i udostępnia model łatwiejsze do użycia podczas rehostowanie projektanta WF poza programem Visual Studio i udostępnia także łatwiej mechanizmy do tworzenia Projektanci działań niestandardowych. Aby uzyskać więcej informacji, zobacz [Dostosowywanie środowiska projektowania przepływu pracy](customizing-the-workflow-design-experience.md).
+## <a name="easier-ability-to-extend-wf-designer-experience"></a>Łatwiejsza obsługa środowiska Projektant WF  
+ Nowy Projektant WF jest oparty na Windows Presentation Foundation (WPF) i oferuje łatwiejszy model do użycia podczas ponownego hostowania projektanta WF poza programem Visual Studio, a także oferuje łatwiejsze mechanizmy tworzenia niestandardowych projektantów działań. Aby uzyskać więcej informacji, zobacz [Dostosowywanie środowiska projektowania przepływu pracy](customizing-the-workflow-design-experience.md).

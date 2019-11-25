@@ -1,23 +1,23 @@
 ---
-title: 'Instrukcje: Znajdowanie listy elementów podrzędnych (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find a List of Child Elements (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2868abfd-9f7b-412a-9cb5-f643f0fed146
-ms.openlocfilehash: aab185cd4c157c7ee671418368668d46b4bb2a4a
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 899252e7aacdec00ad75611ee4d149a53e71f95e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249974"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353007"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>Instrukcje: Znajdowanie listy elementów podrzędnych (XPath-LINQ to XML) (Visual Basic)
-W tym temacie porównano oś elementów podrzędnych XPath z osią [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-visual-basic"></a>How to: Find a List of Child Elements (XPath-LINQ to XML) (Visual Basic)
+This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.  
   
- Wyrażenie XPath: `./*`  
+ The XPath expression is: `./*`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład umożliwia znalezienie wszystkich elementów podrzędnych elementu `Address`.  
+ This example finds all of the child elements of the `Address` element.  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim cpo As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -40,7 +40,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe:  
+ Ten przykład generuje następujące wyniki:  
   
 ```console
 Results are identical  
@@ -54,4 +54,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

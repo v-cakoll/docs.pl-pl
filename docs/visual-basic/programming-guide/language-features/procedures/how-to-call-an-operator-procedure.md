@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Wywoływanie procedury operatora (Visual Basic)'
+title: 'Porady: wywoływanie procedury operatora'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operator procedures [Visual Basic], calling
@@ -11,53 +11,53 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a685be7cc3b346b271413e2c29faae5a839313f4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863938"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340245"
 ---
-# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Instrukcje: Wywoływanie procedury operatora (Visual Basic)
-Za pomocą symbol operatora w wyrażeniu jest wywoływanie procedury operatora. W przypadku operatora konwersji, należy wywołać [funkcja CType](../../../../visual-basic/language-reference/functions/ctype-function.md) można przekonwertować wartości z jednego typu danych.  
+# <a name="how-to-call-an-operator-procedure-visual-basic"></a>Porady: wywoływanie procedury operatora (Visual Basic)
+You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
   
- Procedury operatorów nie zostanie jawnie wywołana. Po prostu użyć operatora, lub `CType` funkcji w instrukcji przypisania lub wyrażenia, taki sam sposób, zwykle używany jest operator. Visual Basic sprawia, że wywołanie procedury operatora.  
+ You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
   
- Definiowanie operatora dla klasy lub struktury jest również nazywany *przeciążenie* operatora.  
+ Defining an operator on a class or structure is also called *overloading* the operator.  
   
-### <a name="to-call-an-operator-procedure"></a>Aby wywoływanie procedury operatora  
+### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
   
-1. Symbol operatora należy używać w wyrażeniach w zwykły sposób.  
+1. Use the operator symbol in an expression in the ordinary way.  
   
-2. Upewnij się, że typy danych argumentów są właściwe dla operatora i w odpowiedniej kolejności.  
+2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
   
-3. Operator przyczynia się do wartości wyrażenia, zgodnie z oczekiwaniami.  
+3. The operator contributes to the value of the expression as expected.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>Aby wywołać procedurę operatora konwersji  
+### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
   
-1. Użyj `CType` wewnątrz wyrażenia.  
+1. Use `CType` inside an expression.  
   
-2. Upewnij się, że typy danych argumentów są odpowiednie, konwersji i w odpowiedniej kolejności.  
+2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
   
-3. `CType` wywołuje procedurę operatora konwersji i zwraca wartość przekonwertowana.  
+3. `CType` calls the conversion operator procedure and returns the converted value.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład tworzy dwie <xref:System.TimeSpan> struktury, dodaje je ze sobą i zapisuje wynik w trzecim <xref:System.TimeSpan> struktury. <xref:System.TimeSpan> Struktury definiuje operator procedury przeciążenia kilka standardowych operatorów.  
+ The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Ponieważ <xref:System.TimeSpan> przeciążenia standard `+` operatora, poprzedni przykład wywołuje procedury operatora podczas obliczania wartości `combinedSpan`.  
+ Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
   
- Aby uzyskać przykład wywoływanie procedury operatora konwersacji, zobacz [jak: Używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md).  
+ For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Upewnij się, że klasy lub struktury, którego używasz, określa operator, który chcesz użyć.  
+ Be sure the class or structure you are using defines the operator you want to use.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Procedury operatorów](./operator-procedures.md)
-- [Instrukcje: Definiowanie operatora](./how-to-define-an-operator.md)
-- [Instrukcje: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
+- [Instrukcje: definiowanie operatora](./how-to-define-an-operator.md)
+- [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)
 - [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)

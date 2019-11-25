@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Kontrolowanie typu projekcji (C#)'
+title: Jak kontrolować typ projekcji (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: a44f7616beba3e07f6e44cc279c67468abc779e3
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: cb7c272fbe67c0700b5740691befc483993f4e29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204094"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141352"
 ---
-# <a name="how-to-control-the-type-of-a-projection-c"></a>Instrukcje: Kontrolowanie typu projekcji (C#)
-Projekcja to proces przejmowania jednego zestawu danych, filtrowanie go, zmiana jego kształtu, a nawet zmiana jego typu. Większość wyrażeń zapytania wykonuje projekcje. Większość wyrażeń zapytania przedstawionych w tej sekcji szacuje się <xref:System.Collections.Generic.IEnumerable%601> na <xref:System.Xml.Linq.XElement>, ale można kontrolować typ projekcji, aby tworzyć Kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  
+# <a name="how-to-control-the-type-of-a-projection-c"></a>Jak kontrolować typ projekcji (C#)
+Projekcja to proces przejmowania jednego zestawu danych, filtrowanie go, zmiana jego kształtu, a nawet zmiana jego typu. Większość wyrażeń zapytania wykonuje projekcje. Większość wyrażeń zapytania przedstawionych w tej sekcji szacuje się <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, ale można kontrolować typ projekcji, aby tworzyć Kolekcje innych typów. W tym temacie pokazano, jak to zrobić.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie zdefiniowano nowy typ, `Customer`. Wyrażenie zapytania następnie tworzy wystąpienie nowych `Customer` obiektów `Select` w klauzuli. Powoduje to, że typ wyrażenia zapytania ma być <xref:System.Collections.Generic.IEnumerable%601>. `Customer`  
+ W poniższym przykładzie zdefiniowano nowy typ `Customer`. Wyrażenie zapytania następnie tworzy wystąpienie nowych obiektów `Customer` w klauzuli `Select`. Powoduje to, że typ wyrażenia zapytania ma być <xref:System.Collections.Generic.IEnumerable%601> `Customer`.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 public class Customer  

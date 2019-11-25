@@ -2,12 +2,12 @@
 title: 'Instrukcje: analizowanie ciągu (C#)'
 ms.date: 07/20/2015
 ms.assetid: 81e5686c-9658-42d8-a7e3-b11be0a2c98b
-ms.openlocfilehash: 16310e37afec950c372c7b47637986bb0eb399b8
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 086a4baecee9ee927b08d6da53d16324ef32e8a8
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956607"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140979"
 ---
 # <a name="how-to-parse-a-string-c"></a>Instrukcje: analizowanie ciągu (C#)
 
@@ -47,7 +47,7 @@ XElement contacts = XElement.Parse(
 Console.WriteLine(contacts);
 ```
 
-Węzeł główny `Contacts` ma dwa węzły `Contact`. Aby uzyskać dostęp do określonych danych w analizowanym formacie XML, należy użyć metody [XElement. elementy ()](xref:System.Xml.Linq.XContainer.Elements) , która w tym przypadku zwraca elementy podrzędne węzła głównego `Contacts`. Poniższy przykład drukuje pierwszy węzeł `Contact` do konsoli:
+Węzeł główny `Contacts` ma dwa węzły `Contact`. Aby uzyskać dostęp do określonych danych w analizowanym formacie XML, należy użyć metody [XElement. elementy ()](xref:System.Xml.Linq.XContainer.Elements) , która w tym przypadku zwraca elementy podrzędne głównego węzła `Contacts`. Poniższy przykład drukuje pierwszy węzeł `Contact` w konsoli programu:
 
 ```csharp
 List<XElement> contactNodes = contacts.Elements("Contact").ToList();
@@ -56,4 +56,4 @@ Console.WriteLine(contactNodes[0]);
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcje: Znajdowanie elementu z określonym atrybutem (C#)](how-to-find-an-element-with-a-specific-attribute.md)
+- [Jak znaleźć element z określonym atrybutem (C#)](how-to-find-an-element-with-a-specific-attribute.md)

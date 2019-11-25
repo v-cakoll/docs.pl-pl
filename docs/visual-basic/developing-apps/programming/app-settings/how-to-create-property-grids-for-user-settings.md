@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika w Visual Basic'
+title: 'How to: Create Property Grids for User Settings'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -7,52 +7,54 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: 4a31b44cca61caea5fdf725405646f628b5430b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bed4e8a2b50f0115c3b8d9d6abf427df5f216388
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968394"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329610"
 ---
-# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Instrukcje: Tworzenie siatek właściwości dla ustawień użytkownika w Visual Basic
-Można utworzyć siatkę właściwości dla ustawień użytkownika, wypełniając <xref:System.Windows.Forms.PropertyGrid> kontrolkę właściwościami `My.Settings` ustawienia użytkownika obiektu.  
+# <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>Porady: tworzenie siatek właściwości dla ustawień użytkownika w Visual Basic
+
+You can create a property grid for user settings by populating a <xref:System.Windows.Forms.PropertyGrid> control with the user setting properties of the `My.Settings` object.  
   
 > [!NOTE]
-> Aby ten przykład działał, aplikacja musi mieć skonfigurowane ustawienia użytkownika. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> In order for this example to work, your application must have its user settings configured. For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- `My.Settings` Obiekt uwidacznia każde ustawienie jako właściwość. Nazwa właściwości jest taka sama jak nazwa ustawienia, a typ właściwości jest taki sam jak typ ustawienia. **Zakres** ustawienia określa, czy właściwość jest tylko do odczytu; Właściwość dla ustawienia zakresu **aplikacji**jest tylko do odczytu, podczas gdy właściwość dla ustawienia zakresu **użytkownika**ma wartość odczyt i zapis. Aby uzyskać więcej informacji, zobacz [My. Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
+ The `My.Settings` object exposes each setting as a property. The property name is the same as the setting name, and the property type is the same as the setting type. The setting's **Scope** determines if the property is read-only; the property for an **Application**-scope setting is read-only, while the property for a **User**-scope setting is read-write. For more information, see [My.Settings Object](../../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 > [!NOTE]
-> Nie można zmienić ani zapisać wartości ustawień zakresu aplikacji w czasie wykonywania. Ustawienia zakresu aplikacji można zmienić tylko podczas tworzenia aplikacji (za pomocą **projektanta projektu**) lub edytując plik konfiguracyjny aplikacji. Aby uzyskać więcej informacji, zobacz [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
+> You cannot change or save the values of application-scope settings at run time. Application-scope settings can be changed only when creating the application (through the **Project Designer**) or by editing the application's configuration file. For more information, see [Managing Application Settings (.NET)](/visualstudio/ide/managing-application-settings-dotnet).  
   
- Ten przykład używa <xref:System.Windows.Forms.PropertyGrid> formantu, aby uzyskać dostęp do właściwości `My.Settings` ustawień użytkownika obiektu. Domyślnie program <xref:System.Windows.Forms.PropertyGrid> wyświetla wszystkie właściwości `My.Settings` obiektu. Jednak właściwości ustawienia użytkownika mają <xref:System.Configuration.UserScopedSettingAttribute> atrybut. Ten przykład ustawia <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> właściwość na <xref:System.Configuration.UserScopedSettingAttribute> , <xref:System.Windows.Forms.PropertyGrid> aby wyświetlić tylko właściwości ustawienia użytkownika.  
+ This example uses a <xref:System.Windows.Forms.PropertyGrid> control to access the user-setting properties of the `My.Settings` object. By default, the <xref:System.Windows.Forms.PropertyGrid> shows all the properties of the `My.Settings` object. However, the user-setting properties have the <xref:System.Configuration.UserScopedSettingAttribute> attribute. This example sets the <xref:System.Windows.Forms.PropertyGrid.BrowsableAttributes%2A> property of the <xref:System.Windows.Forms.PropertyGrid> to <xref:System.Configuration.UserScopedSettingAttribute> to display only the user-setting properties.  
   
-### <a name="to-add-a-user-setting-property-grid"></a>Aby dodać siatkę właściwości ustawienia użytkownika  
+### <a name="to-add-a-user-setting-property-grid"></a>To add a user setting property grid  
   
-1. Dodaj kontrolkę **PropertyGrid** z **przybornika** do powierzchni projektowej aplikacji, założono, że jest to możliwe `Form1`.  
+1. Add the **PropertyGrid** control from the **Toolbox** to the design surface for your application, assumed here to be `Form1`.  
   
-     Domyślną nazwą kontrolki siatki właściwości jest `PropertyGrid1`.  
+     The default name of the property-grid control is `PropertyGrid1`.  
   
-2. Kliknij dwukrotnie powierzchnię `Form1` projektową, aby otworzyć kod dla programu obsługi zdarzeń w formie załadowanej.  
+2. Double-click the design surface for `Form1` to open the code for the form-load event handler.  
   
-3. `My.Settings` Ustaw obiekt jako wybrany obiekt dla siatki właściwości.  
+3. Set the `My.Settings` object as the selected object for the property grid.  
   
      [!code-vb[VbVbalrMyResources#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#11)]  
   
-4. Skonfiguruj siatkę właściwości w taki sposób, aby były wyświetlane tylko ustawienia użytkownika.  
+4. Configure the property grid to show only the user settings.  
   
      [!code-vb[VbVbalrMyResources#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#12)]  
   
     > [!NOTE]
-    > Aby wyświetlić tylko ustawienia zakresu aplikacji, należy użyć <xref:System.Configuration.ApplicationScopedSettingAttribute> atrybutu <xref:System.Configuration.UserScopedSettingAttribute>zamiast.  
+    > To show only the application-scope settings, use the <xref:System.Configuration.ApplicationScopedSettingAttribute> attribute instead of  <xref:System.Configuration.UserScopedSettingAttribute>.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Aplikacja zapisuje ustawienia użytkownika po zamknięciu aplikacji. Aby natychmiast zapisać ustawienia, wywołaj `My.Settings.Save` metodę. Aby uzyskać więcej informacji, zobacz [jak: Utrwalaj ustawienia użytkownika w](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)Visual Basic.  
+
+ The application saves the user settings when the application shuts down. To save the settings immediately, call the `My.Settings.Save` method. For more information, see [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [My.Settings, obiekt](../../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [Instrukcje: Odczytaj ustawienia aplikacji w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [Instrukcje: Zmień ustawienia użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [Instrukcje: Utrwalanie ustawień użytkownika w Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [How to: Read Application Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [How to: Change User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [How to: Persist User Settings in Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
 - [Zarządzanie ustawieniami aplikacji (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

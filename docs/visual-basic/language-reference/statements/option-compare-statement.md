@@ -1,5 +1,5 @@
 ---
-title: Option Compare — Instrukcja (Visual Basic)
+title: Option Compare — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: efd033e6c12637b8dc12fb886f46a267e677aa42
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7538466c8f4b90e2e655a2ec762d8c545546a481
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775508"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344431"
 ---
 # <a name="option-compare-statement"></a>Option Compare — Instrukcja
-Deklaruje domyślną metodę porównania do użycia podczas porównywania danych ciągu.  
+Declares the default comparison method to use when comparing string data.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -38,52 +38,52 @@ Option Compare { Binary | Text }
   
 |Termin|Definicja|  
 |---|---|  
-|`Binary`|Opcjonalny. Wyniki porównywania ciągów na podstawie kolejności sortowania pochodzącej z wewnętrznych reprezentacji binarnych znaków.<br /><br /> Ten typ porównania jest przydatny zwłaszcza wtedy, gdy ciągi mogą zawierać znaki, które nie są interpretowane jako tekst. W tym przypadku nie chcesz porównań z odpowiednikami alfabetycznymi, na przykład bez uwzględniania wielkości liter.|  
-|`Text`|Opcjonalny. Wyniki porównywania ciągów na podstawie kolejności sortowania tekstu niezależnego od wielkości liter, ustalonej przez ustawienia regionalne systemu.<br /><br /> Ten typ porównania jest przydatny, jeśli ciągi zawierają wszystkie znaki tekstowe i chcesz je porównać przy uwzględnieniu równoważności alfabetycznej, takich jak nieuwzględnianie wielkości liter i ściśle powiązane litery. Przykładowo warto rozważyć, `A` i `a` być równe, a `Ä` i `ä` przed `B` i `b`.|  
+|`Binary`|Opcjonalny. Results in string comparisons based on a sort order derived from the internal binary representations of the characters.<br /><br /> This type of comparison is useful especially if the strings can contain characters that are not to be interpreted as text. In this case, you do not want to bias comparisons with alphabetical equivalences, such as case insensitivity.|  
+|`Text`|Opcjonalny. Results in string comparisons based on a case-insensitive text sort order determined by your system's locale.<br /><br /> This type of comparison is useful if your strings contain all text characters, and you want to compare them taking into account alphabetic equivalences such as case insensitivity and closely related letters. For example, you might want to consider `A` and `a` to be equal, and `Ä` and `ä` to come before `B` and `b`.|  
   
 ## <a name="remarks"></a>Uwagi  
- Jeśli jest używana, instrukcja `Option Compare` musi znajdować się w pliku przed wszelkimi innymi instrukcjami kodu źródłowego.  
+ If used, the `Option Compare` statement must appear in a file before any other source code statements.  
   
- Instrukcja `Option Compare` określa metodę porównania ciągów (`Binary` lub `Text`).  Domyślna metoda porównywania tekstu to `Binary`.  
+ The `Option Compare` statement specifies the string comparison method (`Binary` or `Text`).  The default text comparison method is `Binary`.  
   
- Porównanie `Binary` porównuje wartość liczbową Unicode każdego znaku w każdym ciągu. Porównanie `Text` porównuje każdy znak Unicode w oparciu o jego leksykalne znaczenie w bieżącej kulturze.  
+ A `Binary` comparison compares the numeric Unicode value of each character in each string. A `Text` comparison compares each Unicode character based on its lexical meaning in the current culture.  
   
- W systemie Microsoft Windows kolejność sortowania jest określana przez stronę kodową. Aby uzyskać więcej informacji, zobacz [stronę kodową](/cpp/c-runtime-library/code-pages).  
+ In Microsoft Windows, sort order is determined by the code page. For more information, see [Code Pages](/cpp/c-runtime-library/code-pages).  
   
- W poniższym przykładzie znaki na stronie kodowej angielski/Europa (ANSI 1252) są sortowane przy użyciu `Option Compare Binary`, co daje typowy binarny porządek sortowania.  
+ In the following example, characters in the English/European code page (ANSI 1252) are sorted by using `Option Compare Binary`, which produces a typical binary sort order.  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Gdy te same znaki na tej samej stronie kodowej są sortowane przy użyciu `Option Compare Text`, generowany jest następujący porządek sortowania tekstu.  
+ When the same characters in the same code page are sorted by using `Option Compare Text`, the following text sort order is produced.  
   
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-## <a name="when-an-option-compare-statement-is-not-present"></a>Gdy nie ma instrukcji Compare  
- Jeśli kod źródłowy nie zawiera instrukcji `Option Compare`, zostanie użyta **opcja porównanie** ustawienia na [stronie kompilowania, projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) . Jeśli używasz kompilatora wiersza polecenia, ustawienie określone przez opcję kompilatora [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) jest używane.  
+## <a name="when-an-option-compare-statement-is-not-present"></a>When an Option Compare Statement Is Not Present  
+ If the source code does not contain an `Option Compare` statement, the **Option Compare** setting on the [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) is used. If you use the command-line compiler, the setting specified by the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option is used.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-#### <a name="to-set-option-compare-in-the-ide"></a>Aby ustawić opcję Porównaj w środowisku IDE  
+#### <a name="to-set-option-compare-in-the-ide"></a>To set Option Compare in the IDE  
   
-1. W **Eksplorator rozwiązań**wybierz projekt. W menu **projekt** kliknij polecenie **Właściwości**.  
+1. In **Solution Explorer**, select a project. On the **Project** menu, click **Properties**.  
   
-2. Kliknij kartę **kompilacja** .  
+2. Click the **Compile** tab.  
   
-3. Ustaw wartość w polu **Compare (porównanie opcji** ).  
+3. Set the value in the **Option Compare** box.  
   
- Podczas tworzenia projektu **opcja Porównaj** ustawienie na karcie **kompilowania** jest ustawiona na **opcję Porównaj** ustawienia w oknie dialogowym **Opcje** . Aby zmienić to ustawienie, w menu **Narzędzia** kliknij polecenie **Opcje**. W oknie dialogowym **Opcje** rozwiń węzeł **projekty i rozwiązania**, a następnie kliknij pozycję **Ustawienia domyślne w języku VB**. Początkowe domyślne ustawienie w **języku VB** jest wartością **binarną**.  
+ When you create a project, the **Option Compare** setting on the **Compile** tab is set to the **Option Compare** setting in the **Options** dialog box. To change this setting, on the **Tools** menu, click **Options**. In the **Options** dialog box, expand **Projects and Solutions**, and then click **VB Defaults**. The initial default setting in **VB Defaults** is **Binary**.  
   
-#### <a name="to-set-option-compare-on-the-command-line"></a>Aby ustawić opcję Compare w wierszu polecenia  
+#### <a name="to-set-option-compare-on-the-command-line"></a>To set Option Compare on the command line  
   
-- Dołącz opcję kompilatora [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) w poleceniu **VBC** .  
+- Include the [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) compiler option in the **vbc** command.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa instrukcji `Option Compare`, aby ustawić porównanie binarne jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, Usuń komentarz instrukcji `Option Compare Binary` i umieść go w górnej części pliku źródłowego.  
+ The following example uses the `Option Compare` statement to set the binary comparison as the default string comparison method. To use this code, uncomment the `Option Compare Binary` statement, and put it at the top of the source file.  
   
  [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład używa instrukcji `Option Compare`, aby ustawić kolejność sortowania tekstu bez uwzględniania wielkości liter jako domyślną metodę porównywania ciągów. Aby użyć tego kodu, Usuń komentarz instrukcji `Option Compare Text` i umieść go w górnej części pliku źródłowego.  
+ The following example uses the `Option Compare` statement to set the case-insensitive text sort order as the default string comparison method. To use this code, uncomment the `Option Compare Text` statement, and put it at the top of the source file.  
   
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
@@ -96,7 +96,7 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [Operatory porównania](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Operatory porównania w Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)
 - [Funkcje ciągów](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)

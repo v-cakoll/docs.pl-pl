@@ -1,5 +1,5 @@
 ---
-title: Rozpoznanie przeciążenia (Visual Basic)
+title: Rozpoznanie przeciążenia
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,53 +10,53 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e69136b1e3015055cad9852bf04151f57558b88
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792024"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352645"
 ---
 # <a name="overload-resolution-visual-basic"></a>Rozpoznanie przeciążenia (Visual Basic)
-Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest zdefiniowana w kilku przeciążone wersje, kompilator należy zdecydować, której przeciążenia do wywołania. Dzieje się tak, wykonując następujące czynności:  
+When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call. It does this by performing the following steps:  
   
-1. **Ułatwienia dostępu.** Eliminuje to żadnego przeciążenia z poziomem dostępu, który uniemożliwia jej wywołanie kodu wywołującego.  
+1. **Ułatwienia dostępu.** It eliminates any overload with an access level that prevents the calling code from calling it.  
   
-2. **Liczba parametrów.** Eliminuje to wszystkie przeciążenia, które definiuje szereg różnych parametrów nie są określane w wywołaniu.  
+2. **Number of Parameters.** It eliminates any overload that defines a different number of parameters than are supplied in the call.  
   
-3. **Typ danych parametru.** Kompilator preferuje wystąpienia metod za pośrednictwem metody rozszerzenia. Jeśli zostanie znaleziony dowolnej metody wystąpienia, która wymaga tylko poszerzeniem konwersji, w celu dopasowania wywołania procedury, wszystkie metody rozszerzenia są odrzucane i kompilator będzie kontynuowane z użyciem kandydatów metody wystąpienia. Jeśli żadna metoda wystąpienia zostanie znaleziony, jest kontynuowane przy użyciu wystąpienia i metody rozszerzenia.  
+3. **Parameter Data Types.** The compiler gives instance methods preference over extension methods. If any instance method is found that requires only widening conversions to match the procedure call, all extension methods are dropped and the compiler continues with only the instance method candidates. If no such instance method is found, it continues with both instance and extension methods.  
   
-     W tym kroku pozwala wyeliminować żadnego przeciążenia, dla którego typy danych, wywoływania argumentów nie można przekonwertować na typy parametrów zdefiniowanych w przeciążenia.  
+     In this step, it eliminates any overload for which the data types of the calling arguments cannot be converted to the parameter types defined in the overload.  
   
-4. **Konwersje zawężające.** Eliminuje to żadnego przeciążenia, który wymaga konwersji zawężającej od wywołującego typy argumentów do parametrów zdefiniowanych typów. Jest to istotne, czy przełączyć kontrola typów ([Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) jest `On` lub `Off`.  
+4. **Narrowing Conversions.** It eliminates any overload that requires a narrowing conversion from the calling argument types to the defined parameter types. This is true whether the type checking switch ([Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) is `On` or `Off`.  
   
-5. **Co najmniej rozszerzanie.** Kompilator traktuje pozostałe przeciążeń w pary. Dla każdej pary porównuje typy danych zdefiniowanych parametrów. Jeśli jedno z przeciążeń wszystkich typów są rozszerzane odpowiadające typy w innym, kompilator eliminuje te ostatnie. Oznacza to, że zachowuje przeciążenia, które wymaga minimalnej liczbie rozszerzanie.  
+5. **Least Widening.** The compiler considers the remaining overloads in pairs. For each pair, it compares the data types of the defined parameters. If the types in one of the overloads all widen to the corresponding types in the other, the compiler eliminates the latter. That is, it retains the overload that requires the least amount of widening.  
   
-6. **Pojedynczy Release Candidate.** Kontynuuje considering przeciążenia w parach, dopóki tylko jeden przeciążenia pozostaje i jest rozpoznawana jako wywołanie tego przeciążenia. Jeśli kompilator nie może ograniczyć przeciążenia do pojedynczego Release candidate, spowoduje wygenerowanie błędu.  
+6. **Single Candidate.** It continues considering overloads in pairs until only one overload remains, and it resolves the call to that overload. If the compiler cannot reduce the overloads to a single candidate, it generates an error.  
   
- Na poniższej ilustracji przedstawiono proces, który określa, który zestaw przeciążone wersje do wywołania.  
+ The following illustration shows the process that determines which of a set of overloaded versions to call.  
   
- ![Diagram przepływu procesu rozpoznawania przeciążenia](./media/overload-resolution/determine-overloaded-version.gif "rozpoznawanie między przeciążone wersje")    
+ ![Flow diagram of overload resolution process](./media/overload-resolution/determine-overloaded-version.gif "Resolving among overloaded versions")    
   
- Poniższy przykład ilustruje ten proces rozpoznawania przeciążenia.  
+ The following example illustrates this overload resolution process.  
   
  [!code-vb[VbVbcnProcedures#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#62)]  
   
  [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]  
   
- W pierwszym wywołaniu kompilator eliminuje pierwsze przeciążenie, ponieważ typ pierwszego argumentu (`Short`) powoduje zawężenie typu odpowiadającego mu parametru (`Byte`). Następnie eliminuje trzecie przeciążenie ponieważ każdy argument typu w drugie przeciążenie (`Short` i `Single`) rozszerza się na odpowiedni typ w trzecie przeciążenie (`Integer` i `Single`). Drugie przeciążenie wymaga mniej rozszerzenia, dlatego kompilator używa go na potrzeby wywołania.  
+ In the first call, the compiler eliminates the first overload because the type of the first argument (`Short`) narrows to the type of the corresponding parameter (`Byte`). It then eliminates the third overload because each argument type in the second overload (`Short` and `Single`) widens to the corresponding type in the third overload (`Integer` and `Single`). The second overload requires less widening, so the compiler uses it for the call.  
   
- W drugim wywołaniu kompilator nie może wyeliminować żadnego przeciążenia na podstawie zawężanie. Eliminuje to trzecie przeciążenie dla tego samego powodu, tak jak w pierwszym wywołaniu, ponieważ może wywołać drugie przeciążenie z mniej rozszerzanie typy argumentów. Jednak kompilator nie może rozpoznać między przeciążeniami pierwszego i drugiego. Każda z nich ma jeden typ zdefiniowany parametr, który rozszerza się na odpowiedni typ w innym (`Byte` do `Short`, ale `Single` do `Double`). Kompilator generuje w związku z tym błędem rozpoznawania przeciążenia.  
+ In the second call, the compiler cannot eliminate any of the overloads on the basis of narrowing. It eliminates the third overload for the same reason as in the first call, because it can call the second overload with less widening of the argument types. However, the compiler cannot resolve between the first and second overloads. Each has one defined parameter type that widens to the corresponding type in the other (`Byte` to `Short`, but `Single` to `Double`). The compiler therefore generates an overload resolution error.  
   
-## <a name="overloaded-optional-and-paramarray-arguments"></a>Przeciążone opcjonalne i ParamArray-argumenty  
- Jeśli dwa przeciążenia procedury, posiadające identyczne oznaczenie, z tą różnicą, że ostatni parametr jest zadeklarowana [opcjonalnie](../../../../visual-basic/language-reference/modifiers/optional.md) w jednym i [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) w innych, kompilator rozpoznaje wywołania tej procedury jako następujące:  
+## <a name="overloaded-optional-and-paramarray-arguments"></a>Overloaded Optional and ParamArray Arguments  
+ If two overloads of a procedure have identical signatures except that the last parameter is declared [Optional](../../../../visual-basic/language-reference/modifiers/optional.md) in one and [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) in the other, the compiler resolves a call to that procedure as follows:  
   
-|Jeśli wywołanie dostarcza ostatni argument jako|Kompilator rozpoznaje wywołania przeciążenia deklarowanie ostatni argument jako|  
+|If the call supplies the last argument as|The compiler resolves the call to the overload declaring the last argument as|  
 |---|---|  
-|Brak wartości (pominięty argument)|`Optional`|  
-|Pojedyncza wartość|`Optional`|  
-|Dwie lub więcej wartości na liście rozdzielanej przecinkami|`ParamArray`|  
-|Tablica o dowolnej długości (w tym pusta tablica)|`ParamArray`|  
+|No value (argument omitted)|`Optional`|  
+|A single value|`Optional`|  
+|Two or more values in a comma-separated list|`ParamArray`|  
+|An array of any length (including an empty array)|`ParamArray`|  
   
 ## <a name="see-also"></a>Zobacz także
 
@@ -64,10 +64,10 @@ Gdy kompilator języka Visual Basic napotyka wywołanie procedury, która jest z
 - [Tablice parametrów](./parameter-arrays.md)
 - [Przeciążanie procedury](./procedure-overloading.md)
 - [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)
-- [Instrukcje: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Instrukcje: Przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)
+- [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Zagadnienia dotyczące przeciążania procedur](./considerations-in-overloading-procedures.md)
 - [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Metody rozszerzeń](./extension-methods.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 29b5c351031b799c148c1e4f525e7bdcf96480bb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460773"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283788"
 ---
 # <a name="combobox-styles-and-templates"></a>ComboBox — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ComboBox>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ComboBox>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="combobox-parts"></a>Elementy ComboBox  
  W poniższej tabeli wymieniono nazwane części formantu <xref:System.Windows.Controls.ComboBox>.  
@@ -34,7 +34,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką <xref:System.Windows.Controls.ComboBox>.|  
 |Fokus|FocusStates|Kontrolka ma fokus.|  
@@ -43,7 +43,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
 |InvalidUnfocused|ValidationStates|Dołączona właściwość <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true`, która nie ma fokusu.|  
-|modyfikować|EditStates|Właściwość <xref:System.Windows.Controls.ComboBox.IsEditable%2A> jest `true`.|  
+|Modyfikować|EditStates|Właściwość <xref:System.Windows.Controls.ComboBox.IsEditable%2A> jest `true`.|  
 |Umożliwia edycji|EditStates|Właściwość <xref:System.Windows.Controls.ComboBox.IsEditable%2A> jest `false`.|  
   
 ## <a name="comboboxitem-parts"></a>ComboBoxItem części  
@@ -54,12 +54,12 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką <xref:System.Windows.Controls.ComboBox>.|  
 |Fokus|FocusStates|Kontrolka ma fokus.|  
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|  
-|Niezaznaczone|SelectionStates|Element jest obecnie zaznaczony.|  
+|Wybrane|SelectionStates|Element jest obecnie zaznaczony.|  
 |Niezaznaczone|SelectionStates|Nie wybrano elementu.|  
 |SelectedUnfocused|SelectionStates|Element jest zaznaczony, ale nie ma fokusu.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
@@ -84,4 +84,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

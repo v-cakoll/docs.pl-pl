@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Usuwanie klucza rejestru w Visual Basic'
+title: 'Porady: usuwanie klucza rejestru'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting
@@ -11,39 +11,42 @@ helpviewer_keywords:
 - registry [Visual Basic], deleting keys
 - examples [Visual Basic], registry
 ms.assetid: ab9aca0e-42b0-4ff7-8ff9-845a4bfdf9f2
-ms.openlocfilehash: 2e0c8990fcc55bc4208b1c23690ff748b7167002
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f38301a3a717a35b98e55804d6435d046bbbbab4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662770"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345656"
 ---
-# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Instrukcje: Usuwanie klucza rejestru w Visual Basic
-<xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> i <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> metody służy do usuwania kluczy rejestru.  
+# <a name="how-to-delete-a-registry-key-in-visual-basic"></a>Porady: usuwanie klucza rejestru w Visual Basic
+
+The <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> and <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%2CSystem.Boolean%29> methods can be used to delete registry keys.  
   
 ## <a name="procedure"></a>Procedura  
   
-#### <a name="to-delete-a-registry-key"></a>Aby usunąć klucz rejestru  
+#### <a name="to-delete-a-registry-key"></a>To delete a registry key  
   
-- Użyj `DeleteSubKey` metodę, aby usunąć klucza rejestru. W tym przykładzie usuwa klucz oprogramowania/TestApp w gałęzi CurrentUser. Możesz zmienić w kodzie na odpowiedni ciąg lub jego opierają się na informacjach dostarczonych przez użytkownika.  
+- Use the `DeleteSubKey` method to delete a registry key. This example deletes the key Software/TestApp in the CurrentUser hive. You can change this in the code to the appropriate string, or have it rely on user-supplied information.  
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- `DeleteSubKey` Metoda zwraca pusty ciąg, jeśli para klucza i wartości nie istnieje.  
+
+ The `DeleteSubKey` method returns an empty string if the key/value pair does not exist.  
   
  Następujące warunki mogą spowodować wyjątek:  
   
-- Nazwa klucza jest `Nothing` (<xref:System.ArgumentNullException>).  
+- The name of the key is `Nothing` (<xref:System.ArgumentNullException>).  
   
-- Użytkownik nie ma uprawnień do usuwania kluczy rejestru (<xref:System.Security.SecurityException>).  
+- The user does not have permissions to delete registry keys (<xref:System.Security.SecurityException>).  
   
-- Nazwa klucza przekracza limit 255 znaków (<xref:System.ArgumentException>).  
+- The key name exceeds the 255-character limit (<xref:System.ArgumentException>).  
   
-- Klucz rejestru jest tylko do odczytu (<xref:System.UnauthorizedAccessException>).  
+- The registry key is read-only (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
- Wywołania rejestru kończyć się niepowodzeniem, jeśli nie są przyznawane albo wystarczające uprawnienia środowiska wykonawczego (<xref:System.Security.Permissions.RegistryPermission>) lub jeśli użytkownik nie ma prawidłowy dostęp (zgodnie z ustaleniami listy ACL), tworzenia i zapisywania ustawień. Na przykład lokalnych aplikacji, które ma uprawnienia zabezpieczeń dostępu kodu ma uprawnienie systemu operacyjnego.  
+
+ Registry calls fail if either sufficient run-time permissions are not granted (<xref:System.Security.Permissions.RegistryPermission>) or if the user does not have the correct access (as determined by the ACLs) for creating or writing to settings. For example, a local application that has the code access security permission might not have operating system permission.  
   
 ## <a name="see-also"></a>Zobacz także
 

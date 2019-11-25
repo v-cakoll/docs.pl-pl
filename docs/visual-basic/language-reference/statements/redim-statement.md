@@ -1,5 +1,5 @@
 ---
-title: ReDim — Instrukcja (Visual Basic)
+title: ReDim — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ReDim
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: a9384ba118df2a84fbd2581e6a8bacb58e41ddcc
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: fabfd9a45d47cc1b881b3743181a03e89158f939
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346736"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim — Instrukcja (Visual Basic)
-Ponownie przydziela miejsce do magazynowania dla zmiennej tablicowej.  
+Reallocates storage space for an array variable.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -46,59 +46,59 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Termin|Definicja|  
 |----------|----------------|  
-|`Preserve`|Opcjonalny. Modyfikator używany do zachowania danych w istniejącej tablicy po zmianie rozmiaru tylko ostatniego wymiaru.|  
-|`name`|Wymagany. Nazwa zmiennej tablicowej. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Wymagany. Lista granic każdego wymiaru ponownie zdefiniowanej tablicy.|  
+|`Preserve`|Opcjonalny. Modifier used to preserve the data in the existing array when you change the size of only the last dimension.|  
+|`name`|Wymagany. Name of the array variable. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Wymagany. List of bounds of each dimension of the redefined array.|  
   
 ## <a name="remarks"></a>Uwagi  
- Za pomocą instrukcji `ReDim` można zmienić rozmiar co najmniej jednego wymiaru tablicy, która została już zadeklarowana. Jeśli masz dużą tablicę i nie potrzebujesz już niektórych jej elementów, `ReDim` może zwolnić pamięć, zmniejszając rozmiar tablicy. Z drugiej strony, jeśli tablica wymaga więcej elementów, `ReDim` mogą je dodać.  
+ You can use the `ReDim` statement to change the size of one or more dimensions of an array that has already been declared. If you have a large array and you no longer need some of its elements, `ReDim` can free up memory by reducing the array size. On the other hand, if your array needs more elements, `ReDim` can add them.  
   
- Instrukcja `ReDim` jest przeznaczona tylko dla tablic. Nie jest on prawidłowy w przypadku wartości skalarnych (zmiennych, które zawierają tylko jedną wartość), kolekcji lub struktur. Należy pamiętać, że Jeśli zadeklarujesz zmienną do typu `Array`, instrukcja `ReDim` nie zawiera wystarczających informacji o typie, aby utworzyć nową tablicę.  
+ The `ReDim` statement is intended only for arrays. It's not valid on scalars (variables that contain only a single value), collections, or structures. Note that if you declare a variable to be of type `Array`, the `ReDim` statement doesn't have sufficient type information to create the new array.  
   
- @No__t_0 można użyć tylko na poziomie procedury. W związku z tym, kontekst deklaracji dla zmiennej musi być procedurą; nie może być plikiem źródłowym, przestrzenią nazw, interfejsem, klasą, strukturą, modułem lub blokiem. Aby uzyskać więcej informacji, zobacz [konteksty deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ You can use `ReDim` only at procedure level. Therefore, the declaration context for the variable must be a procedure; it can't be a source file, a namespace, an interface, a class, a structure, a module, or a block. For more information, see [Declaration Contexts and Default Access Levels](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="rules"></a>Przepisy  
+## <a name="rules"></a>Rules  
   
-- **Wiele zmiennych.** Można zmienić rozmiar kilku zmiennych tablicowych w jednej instrukcji deklaracji i określić `name` i `boundlist` części dla każdej zmiennej. Wiele zmiennych jest oddzielonych przecinkami.  
+- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Multiple variables are separated by commas.  
   
-- **Granice tablicy.** Każdy wpis w `boundlist` może określać dolną i górną granicę tego wymiaru. Dolna granica jest zawsze równa 0 (zero). Górna granica to najwyższa możliwa wartość indeksu dla tego wymiaru, a nie długość wymiaru (jest to górna granica plus jeden). Indeks każdego wymiaru może się różnić od 0 za pośrednictwem jego górnej wartości powiązanej.  
+- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. The lower bound is always 0 (zero). The upper bound is the highest possible index value for that dimension, not the length of the dimension (which is the upper bound plus one). The index for each dimension can vary from 0 through its upper bound value.  
   
-     Liczba wymiarów w `boundlist` musi być zgodna z oryginalną liczbą wymiarów (rangą) tablicy.  
+     The number of dimensions in `boundlist` must match the original number of dimensions (rank) of the array.  
   
-- **Typy danych.** Instrukcja `ReDim` nie może zmienić typu danych zmiennej tablicowej ani jej elementów.  
+- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
   
-- **Zainicjować.** Instrukcja `ReDim` nie może udostępniać nowych wartości inicjujących dla elementów tablicy.  
+- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
   
-- **Stopni.** Instrukcja `ReDim` nie może zmienić rangi (liczby wymiarów) tablicy.  
+- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
   
-- **Zmienianie rozmiarów przy zachowaniu.** Jeśli używasz `Preserve`, możesz zmienić rozmiar tylko ostatniego wymiaru tablicy. Dla każdego innego wymiaru należy określić granicę istniejącej tablicy.  
+- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. For every other dimension, you must specify the bound of the existing array.  
   
-     Na przykład jeśli tablica ma tylko jeden wymiar, można zmienić rozmiar tego wymiaru i nadal zachować całą zawartość tablicy, ponieważ zmieniany jest ostatni i tylko wymiar. Jeśli jednak tablica ma dwa lub więcej wymiarów, można zmienić rozmiar tylko ostatniego wymiaru, jeśli używasz `Preserve`.  
+     For example, if your array has only one dimension, you can resize that dimension and still preserve all the contents of the array, because you are changing the last and only dimension. However, if your array has two or more dimensions, you can change the size of only the last dimension if you use `Preserve`.  
   
-- **Aœciwoœci.** @No__t_0 można użyć na właściwości, która przechowuje tablicę wartości.  
+- **Properties.** You can use `ReDim` on a property that holds an array of values.  
   
 ## <a name="behavior"></a>Zachowanie  
   
-- **Zastępowanie tablicy.** `ReDim` zwalnia istniejącą tablicę i tworzy nową tablicę o tej samej rangi. Nowa tablica zastępuje wydaną tablicę w zmiennej tablicowej.  
+- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. The new array replaces the released array in the array variable.  
   
-- **Inicjalizacja bez zachowania.** Jeśli nie określisz `Preserve`, `ReDim` inicjuje elementy nowej tablicy przy użyciu wartości domyślnej dla ich typu danych.  
+- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
   
-- **Inicjowanie z zachowaniem.** Jeśli określisz `Preserve`, Visual Basic Kopiuje elementy z istniejącej tablicy do nowej tablicy.  
+- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład zwiększa rozmiar ostatniego wymiaru tablicy dynamicznej bez utraty istniejących danych w tablicy, a następnie zmniejsza rozmiar ze częściową utratą danych. Na koniec zmniejsza rozmiar z powrotem do pierwotnej wartości i ponownie inicjuje wszystkie elementy tablicy.  
+ The following example increases the size of the last dimension of a dynamic array without losing any existing data in the array, and then decreases the size with partial data loss. Finally, it decreases the size back to its original value and reinitializes all the array elements.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- Instrukcja `Dim` tworzy nową tablicę z trzema wymiarami. Każdy wymiar jest zadeklarowany z granicą 10, więc indeks tablicy dla każdego wymiaru może nastąpić z przedziału od 0 do 10. W poniższej dyskusji trzy wymiary są określane jako warstwy, wiersze i kolumny.  
+ The `Dim` statement creates a new array with three dimensions. Each dimension is declared with a bound of 10, so the array index for each dimension can range from 0 through 10. In the following discussion, the three dimensions are referred to as layer, row, and column.  
   
- Pierwszy `ReDim` tworzy nową tablicę, która zastępuje istniejącą tablicę w zmiennej `intArray`. `ReDim` kopiuje wszystkie elementy z istniejącej tablicy do nowej tablicy. Dodaje także 10 większej liczby kolumn do końca każdego wiersza w każdej warstwie i inicjuje elementy w tych nowych kolumnach do 0 (wartość domyślna `Integer`, która jest typem elementu tablicy).  
+ The first `ReDim` creates a new array which replaces the existing array in variable `intArray`. `ReDim` copies all the elements from the existing array into the new array. It also adds 10 more columns to the end of every row in every layer and initializes the elements in these new columns to 0 (the default value of `Integer`, which is the element type of the array).  
   
- Druga `ReDim` tworzy kolejną nową tablicę i kopiuje wszystkie elementy, które pasują do siebie. Jednak pięć kolumn zostanie utraconych od końca każdego wiersza w każdej warstwie. Nie jest to problem, Jeśli zakończysz korzystanie z tych kolumn. Zmniejszenie rozmiaru dużej tablicy może zwolnić pamięć, która nie jest już potrzebna.  
+ The second `ReDim` creates another new array and copies all the elements that fit. However, five columns are lost from the end of every row in every layer. This is not a problem if you have finished using these columns. Reducing the size of a large array can free up memory that you no longer need.  
   
- Trzeci `ReDim` tworzy kolejną nową tablicę i usuwa kolejne pięć kolumn z końca każdego wiersza w każdej warstwie. Tym razem nie kopiuje żadnych istniejących elementów. Ta instrukcja przywraca pierwotny rozmiar tablicy. Ponieważ instrukcja nie zawiera modyfikatora `Preserve`, ustawia wszystkie elementy tablicy na ich pierwotne wartości domyślne.  
+ The third `ReDim` creates another new array and removes another five columns from the end of every row in every layer. This time it does not copy any existing elements. This statement reverts the array to its original size. Because the statement doesn't include the `Preserve` modifier, it sets all array elements to their original default values.  
   
- Aby uzyskać więcej przykładów, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Zobacz także
 

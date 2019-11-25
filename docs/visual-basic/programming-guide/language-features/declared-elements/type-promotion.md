@@ -1,5 +1,5 @@
 ---
-title: Promocja typu (Visual Basic)
+title: Promocja typu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declared elements [Visual Basic], scope
@@ -10,59 +10,59 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: 02d53770186f7600b190231dc73938ff1589cef6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa05bd7dc87510aedb0facadf4b7590c8ec57d1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610356"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345273"
 ---
 # <a name="type-promotion-visual-basic"></a>Promocja typu (Visual Basic)
-Kiedy Deklarujesz element programowania w module, Visual Basic promuje jego zakres, do obszaru nazw, zawierającej moduł. Jest to nazywane *wpisz podwyższania poziomu*.  
+When you declare a programming element in a module, Visual Basic promotes its scope to the namespace containing the module. This is known as *type promotion*.  
   
- Poniższy kod przedstawia definicję szkielet modułu i dwa elementy członkowskie tego modułu.  
+ The following example shows a skeleton definition of a module and two members of that module.  
   
  [!code-vb[VbVbalrDeclaredElements#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#1)]  
   
- W ramach `projModule`, programowania elementy zadeklarowane na poziomie modułu są promowane do `projNamespace`. W powyższym przykładzie `basicEnum` i `innerClass` są promowane, ale `numberSub` jest, ponieważ nie zadeklarowano na poziomie modułu.  
+ Within `projModule`, programming elements declared at module level are promoted to `projNamespace`. In the preceding example, `basicEnum` and `innerClass` are promoted, but `numberSub` is not, because it is not declared at module level.  
   
-## <a name="effect-of-type-promotion"></a>Efekt promocja typu  
- Promocja typu powoduje, ciąg kwalifikacji nie musi zawierać nazwę modułu. Poniższy przykład wykonuje dwa wywołania do procedury w poprzednim przykładzie.  
+## <a name="effect-of-type-promotion"></a>Effect of Type Promotion  
+ The effect of type promotion is that a qualification string does not need to include the module name. The following example makes two calls to the procedure in the preceding example.  
   
  [!code-vb[VbVbalrDeclaredElements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#2)]  
   
- W powyższym przykładzie pierwsze wywołanie używa ciągów pełną kwalifikacji. Jednak nie jest to konieczne ze względu na typ podwyższania poziomu. Drugi wywołują również uzyskuje dostęp do modułu elementy członkowskie bez uwzględniania `projModule` w ciągach kwalifikacji.  
+ In the preceding example, the first call uses complete qualification strings. However, this is not necessary because of type promotion. The second call also accesses the module's members without including `projModule` in the qualification strings.  
   
-## <a name="defeat-of-type-promotion"></a>Zakłócające promocja typu  
- Jeśli przestrzeń nazw ma już element członkowski o takiej samej nazwie jako członek modułu, promocji typu jest bezcelowe dla tego elementu członkowskiego modułu. Poniższy przykład pokazuje szkielet definicji wyliczenia i modułu w ramach tej samej przestrzeni nazw.  
+## <a name="defeat-of-type-promotion"></a>Defeat of Type Promotion  
+ If the namespace already has a member with the same name as a module member, type promotion is defeated for that module member. The following example shows a skeleton definition of an enumeration and a module within the same namespace.  
   
  [!code-vb[VbVbalrDeclaredElements#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#3)]  
   
- W powyższym przykładzie Visual Basic nie można podwyższyć poziomu klasa `abc` do `thisNameSpace` ponieważ wyliczenie o takiej samej nazwie na poziomie przestrzeni nazw już istnieje. Aby uzyskać dostęp do `abcSub`, należy użyć ciągu pełnej kwalifikacji `thisNamespace.thisModule.abc.abcSub`. Jednak klasy `xyz` nadal jest podwyższany, oraz uzyskiwać dostęp `xyzSub` przy użyciu krótszego ciągu kwalifikacji `thisNamespace.xyz.xyzSub`.  
+ In the preceding example, Visual Basic cannot promote class `abc` to `thisNameSpace` because there is already an enumeration with the same name at namespace level. To access `abcSub`, you must use the full qualification string `thisNamespace.thisModule.abc.abcSub`. However, class `xyz` is still promoted, and you can access `xyzSub` with the shorter qualification string `thisNamespace.xyz.xyzSub`.  
   
-### <a name="defeat-of-type-promotion-for-partial-types"></a>Zakłócające promocja typu dla typów częściowych  
- Jeśli korzysta z klasy lub struktury wewnątrz modułu [częściowe](../../../../visual-basic/language-reference/modifiers/partial.md) — słowo kluczowe, promocji typu jest automatycznie bezcelowe dla tej klasy lub struktury, czy przestrzeń nazw ma składową o tej samej nazwie. Inne elementy w module są nadal uprawnieni do skorzystania z promocji typu.  
+### <a name="defeat-of-type-promotion-for-partial-types"></a>Defeat of Type Promotion for Partial Types  
+ If a class or structure inside a module uses the [Partial](../../../../visual-basic/language-reference/modifiers/partial.md) keyword, type promotion is automatically defeated for that class or structure, whether or not the namespace has a member with the same name. Other elements in the module are still eligible for type promotion.  
   
- **Konsekwencje.** Zakłócające promocji typu częściowa definicja może spowodować nieoczekiwane wyniki, a nawet błędy kompilatora. Poniższy przykład pokazuje szkielet definicje częściowe klasy, z których jedna jest wewnątrz modułu.  
+ **Consequences.** Defeat of type promotion of a partial definition can cause unexpected results and even compiler errors. The following example shows skeleton partial definitions of a class, one of which is inside a module.  
   
  [!code-vb[VbVbalrDeclaredElements#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDeclaredElements/VB/Class1.vb#4)]  
   
- W poprzednim przykładzie, deweloper może oczekiwać kompilator, aby scalić dwie definicje częściowe `sampleClass`. Jednak kompilator nie bierze pod uwagę promocji częściowa definicja wewnątrz `sampleModule`. W rezultacie próby kompilacji dwie odrębne i niezależne klasy, o nazwie `sampleClass` , ale z kwalifikacji różnych ścieżek.  
+ In the preceding example, the developer might expect the compiler to merge the two partial definitions of `sampleClass`. However, the compiler does not consider promotion for the partial definition inside `sampleModule`. As a result, it attempts to compile two separate and distinct classes, both named `sampleClass` but with different qualification paths.  
   
- Kompilator scala definicje częściowe, tylko wtedy, gdy ich w pełni kwalifikowanej ścieżki są identyczne.  
+ The compiler merges partial definitions only when their fully qualified paths are identical.  
   
-## <a name="recommendations"></a>Zalecenia  
- Poniższe zalecenia reprezentują dobrą praktykę programistyczną.  
+## <a name="recommendations"></a>Recommendations  
+ The following recommendations represent good programming practice.  
   
-- **Unikatowe nazwy.** Jeśli masz pełną kontrolę nad nazw elementów programowania, zawsze jest dobry pomysł, aby użyć wszędzie, gdzie unikatowe nazwy. Identyczne nazwy wymagają dodatkowych kwalifikacji i kod może być trudniejsze do odczytu. Również może prowadzić do powstawania błędów i nieoczekiwane wyniki.  
+- **Unique Names.** When you have full control over the naming of programming elements, it is always a good idea to use unique names everywhere. Identical names require extra qualification and can make your code harder to read. They can also lead to subtle errors and unexpected results.  
   
-- **Pełnej kwalifikacji.** Podczas pracy z modułów i innych elementów w tej samej przestrzeni nazw najbezpieczniejszy podejściem jest zawsze używać pełnej kwalifikacji dla wszystkich elementów programowania. Promocja typu jest bezcelowe członka modułu, ten element członkowski nie pełnej kwalifikacji można przypadkowo uzyskać dostępu do innego elementu programistycznego.  
+- **Full Qualification.** When you are working with modules and other elements in the same namespace, the safest approach is to always use full qualification for all programming elements. If type promotion is defeated for a module member and you do not fully qualify that member, you could inadvertently access a different programming element.  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Instrukcja Module](../../../../visual-basic/language-reference/statements/module-statement.md)
+- [Module, instrukcja](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace, instrukcja](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)
-- [Zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [Instrukcje: Kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Instrukcje: kontrolowanie zakresu zmiennej](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

@@ -1,24 +1,24 @@
 ---
-title: Za mało miejsca na ciąg (Visual Basic)
+title: Za mało miejsca na ciąg
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-ms.openlocfilehash: 119d17e1aea974a0c40451260e671994653cee46
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5e44b44c63ed23697ffc639cc4f42c6424409b1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946565"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349174"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Za mało miejsca na ciąg (Visual Basic)
-Za pomocą Visual Basic można użyć bardzo dużych ciągów. Wymagania dotyczące innych programów i sposób pracy z Twoimi ciągami nadal może jednak spowodować tego błędu.  
+With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1. Upewnij się, konieczności tworzenia tymczasowych ciągu podczas obliczania wyrażenia nie powoduje błąd.  
+1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
   
-2. Usuń wszelkie niepotrzebne aplikacje z pamięci, aby utworzyć więcej miejsca.  
+2. Remove any unnecessary applications from memory to create more space.  
   
 ## <a name="see-also"></a>Zobacz także
 

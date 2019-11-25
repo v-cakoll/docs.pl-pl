@@ -1,5 +1,5 @@
 ---
-title: Overloads (Visual Basic)
+title: Overloads
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Overloads
@@ -10,68 +10,68 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 838207fe3ac5b8f57d030617546b9b7fa25dc939
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663540"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351412"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
-Określa, że właściwość lub procedura redeclares istniejących właściwości lub procedur o takiej samej nazwie.
+Specifies that a property or procedure redeclares one or more existing properties or procedures with the same name.
 
 ## <a name="remarks"></a>Uwagi
 
-*Przeciążanie* w praktyce podawania więcej niż jedną definicję dla danej nazwy właściwość lub procedura w tym samym zakresie. Redeclaring właściwość lub procedura z innym podpisem jest czasami nazywane *ukrywanie poprzez podpis*.
+*Overloading* is the practice of supplying more than one definition for a given property or procedure name in the same scope. Redeclaring a property or procedure with a different signature is sometimes called *hiding by signature*.
 
-## <a name="rules"></a>reguły
+## <a name="rules"></a>Rules
 
-- **Kontekst deklaracji.** Możesz użyć `Overloads` tylko w instrukcji deklaracji właściwość lub procedura.
+- **Declaration Context.** You can use `Overloads` only in a property or procedure declaration statement.
 
-- **Modyfikatory połączone.** Nie można określić `Overloads` wraz z [cieni](../../../visual-basic/language-reference/modifiers/shadows.md) w tej samej deklaracji procedury.
+- **Combined Modifiers.** You cannot specify `Overloads` together with [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) in the same procedure declaration.
 
-- **Wymagane różnice.** *Podpisu* w tej deklaracji musi się różnić od podpisu co właściwość lub procedura, która przeciąża. Podpis składa się nazwa właściwość lub procedura wraz z następujących czynności:
+- **Required Differences.** The *signature* in this declaration must be different from the signature of every property or procedure that it overloads. The signature comprises the property or procedure name together with the following:
 
-  - Liczba parametrów
+  - the number of parameters
 
-  - kolejność parametrów
+  - the order of the parameters
 
-  - typy danych parametrów
+  - the data types of the parameters
 
-  - Liczba parametrów typu (w przypadku ogólnych procedura)
+  - the number of type parameters (for a generic procedure)
 
-  - zwracany typ (tylko dla procedury operatora konwersji)
+  - the return type (only for a conversion operator procedure)
 
-  Wszystkie przeciążenia musi mieć taką samą nazwę, ale każdy musi różnić się od wszystkich innych w co najmniej jednej poprzedniej aspektach. Dzięki temu kompilator, aby odróżnić wyborze wersji do użycia, gdy kod wywołuje właściwość lub procedura.
+  All overloads must have the same name, but each must differ from all the others in one or more of the preceding respects. This allows the compiler to distinguish which version to use when code calls the property or procedure.
 
-- **Niedozwolone różnice.** Zmiana co najmniej jeden z następujących jest nieprawidłowa dla przeciążania właściwość lub procedura, ponieważ nie są one częścią podpisu:
+- **Disallowed Differences.** Changing one or more of the following is not valid for overloading a property or procedure, because they are not part of the signature:
 
-  - Określa, czy zwraca wartość (w przypadku procedura)
+  - whether or not it returns a value (for a procedure)
 
-  - Typ danych wartości zwracanej (z wyjątkiem operatora konwersji)
+  - the data type of the return value (except for a conversion operator)
 
-  - nazwy parametrów lub parametrów typu
+  - the names of the parameters or type parameters
 
-  - ograniczenia dotyczące parametrów typu (w przypadku ogólnych procedura)
+  - the constraints on the type parameters (for a generic procedure)
 
-  - słowa kluczowe modyfikator parametrów (takie jak `ByRef` lub `Optional`)
+  - parameter modifier keywords (such as `ByRef` or `Optional`)
 
-  - Właściwość lub procedura modyfikator słowa kluczowe (takie jak `Public` lub `Shared`)
+  - property or procedure modifier keywords (such as `Public` or `Shared`)
 
-- **Opcjonalny modyfikator właściwy.** Nie trzeba używać `Overloads` modyfikator podczas definiowania wielu przeciążone właściwości i procedury z tej samej klasy. Jednak jeśli używasz `Overloads` w jednej deklaracji, musisz ją wykorzystać we wszystkich z nich.
+- **Optional Modifier.** You do not have to use the `Overloads` modifier when you are defining multiple overloaded properties or procedures in the same class. However, if you use `Overloads` in one of the declarations, you must use it in all of them.
 
-- **Przesłanianie i przeciążeniu.** `Overloads` można również w tle istniejącego elementu członkowskiego lub zestawu przeciążone elementy członkowskie w klasie bazowej. Kiedy używasz `Overloads` w ten sposób możesz deklarować właściwość lub metoda o tej samej nazwie i tę samą listę parametrów jako składowej klasy bazowej i nie trzeba dostarczać `Shadows` — słowo kluczowe.
+- **Shadowing and Overloading.** `Overloads` can also be used to shadow an existing member, or set of overloaded members, in a base class. When you use `Overloads` in this way, you declare the property or method with the same name and the same parameter list as the base class member, and you do not supply the `Shadows` keyword.
 
-Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby pracować z interfejsów API biblioteki C# łatwiejsze.
+If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
 
-`Overloads` Modyfikator mogą być używane w tych kontekstach:
+The `Overloads` modifier can be used in these contexts:
 
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 
 - [Operator, instrukcja](../../../visual-basic/language-reference/statements/operator-statement.md)
 
-- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
 
 - [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -79,6 +79,6 @@ Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby pr
 
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Przeciążanie procedury](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Procedury operatorów](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [Instrukcje: Definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Instrukcje: definiowanie operatora konwersji](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

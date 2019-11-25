@@ -1,5 +1,5 @@
 ---
-title: Wartości zmiennej obiektu (Visual Basic)
+title: Wartości zmiennej obiektu
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], values
@@ -7,35 +7,35 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: 728f097b3c084e5292cb2d2bf5a0c1d20bdad922
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 8b93063d2d97802b1a7fdbc93e01040ff3337753
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004585"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351800"
 ---
 # <a name="object-variable-values-visual-basic"></a>Wartości zmiennej obiektu (Visual Basic)
-Zmienna [typu danych obiektu](../../../../visual-basic/language-reference/data-types/object-data-type.md) może odwoływać się do danych dowolnego typu. Wartość przechowywana w zmiennej `Object` jest przechowywana w innym miejscu w pamięci, podczas gdy zmienna sama zawiera wskaźnik do danych.  
+A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
   
-## <a name="object-classifier-functions"></a>Funkcje klasyfikatora obiektów  
- Visual Basic dostarcza funkcje, które zwracają informacje o tym, do czego odnosi się zmienna `Object`, jak pokazano w poniższej tabeli.  
+## <a name="object-classifier-functions"></a>Object Classifier Functions  
+ Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
   
-|Funkcja|Zwraca wartość PRAWDA, jeśli zmienna obiektu odwołuje się do|  
+|Funkcja|Returns True if the Object variable refers to|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Tablica wartości, a nie pojedyncza wartość|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Wartość [typu danych Data](../../../../visual-basic/language-reference/data-types/date-data-type.md) lub ciąg, który może być interpretowany jako wartość daty i godziny.|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Obiekt typu <xref:System.DBNull>, który reprezentuje brakujące lub nieistniejące dane|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Obiekt wyjątku, który pochodzi od <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nic](../../../../visual-basic/language-reference/nothing.md), oznacza to, że żaden obiekt nie jest obecnie przypisany do zmiennej|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Liczba lub ciąg, który może być interpretowany jako liczba|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Typ referencyjny (na przykład ciąg, tablica, delegat lub typ klasy)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
   
- Tych funkcji można użyć, aby uniknąć przesyłania nieprawidłowej wartości do operacji lub procedury.  
+ You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
   
 ## <a name="typeof-operator"></a>TypeOf — Operator  
- Można również użyć [operatora typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) , aby określić, czy zmienna obiektu aktualnie odwołuje się do określonego typu danych. Wyrażenie `TypeOf`... `Is` daje w wyniku `True`, jeśli typ uruchomienia operandu jest pochodną lub implementuje określony typ.  
+ You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
   
- W poniższym przykładzie zastosowano `TypeOf` dla zmiennych obiektów odnoszących się do typów wartości i odwołań.  
+ The following example uses `TypeOf` on object variables referring to value and reference types.  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- Powyższy przykład zapisuje następujące wiersze do okna **debugowania** :  
+ The preceding example writes the following lines to the **Debug** window:  
   
  `num is Integer`  
   
@@ -61,10 +61,10 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- Zmienna obiektu `num` odwołuje się do danych typu `Integer`, a `frm` odwołuje się do obiektu klasy <xref:System.Windows.Forms.Form>.  
+ The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
   
-## <a name="object-arrays"></a>Tablice obiektów  
- Można zadeklarować tablicę zmiennych `Object` i używać jej. Jest to przydatne, gdy konieczne jest obsługę różnych typów danych i klas obiektów. Wszystkie elementy w tablicy muszą mieć ten sam zadeklarowany typ danych. Deklarowanie tego typu danych jako `Object` umożliwia przechowywanie obiektów i wystąpień klas wraz z innymi typami danych w tablicy.  
+## <a name="object-arrays"></a>Object Arrays  
+ You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
   
 ## <a name="see-also"></a>Zobacz także
 

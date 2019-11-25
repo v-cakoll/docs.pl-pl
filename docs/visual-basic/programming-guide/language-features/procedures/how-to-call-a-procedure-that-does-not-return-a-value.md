@@ -1,30 +1,30 @@
 ---
-title: 'Instrukcje: Wywoływanie procedury, która nie zwraca wartości (Visual Basic)'
+title: 'Porady: wywoływanie procedury, która nie zwraca wartości'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - procedure calls [Visual Basic], returning values
 - Visual Basic code, procedures
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
-ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a5de98c6edf795a11bd9f0465aa6919f09eebfa
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864237"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340958"
 ---
-# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Instrukcje: Wywoływanie procedury, która nie zwraca wartości (Visual Basic)
-A `Sub` procedury nie zwraca wartości do wywołującego kodu. Możesz wywołać ją jawnie za pomocą autonomicznego instrukcji wywołujące. Nie można jej wywołać przy użyciu jego nazwy w wyrażeniu.  
+# <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Porady: wywoływanie procedury, która nie zwraca wartości (Visual Basic)
+A `Sub` procedure does not return a value to the calling code. You call it explicitly with a stand-alone calling statement. You cannot call it by simply using its name within an expression.  
   
-### <a name="to-call-a-sub-procedure"></a>Aby wywołać procedurę Sub  
+### <a name="to-call-a-sub-procedure"></a>To call a Sub procedure  
   
-1. Określ nazwę `Sub` procedury.  
+1. Specify the name of the `Sub` procedure.  
   
-2. Postępuj zgodnie z nazwą procedury należy umieścić na liście argumentów za pomocą nawiasów. Jeśli nie ma żadnych argumentów, opcjonalnie można pominąć nawiasów. Jednak przy użyciu nawiasów sprawia, że Twój kod łatwiejsza do odczytania.  
+2. Follow the procedure name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses. However, using the parentheses makes your code easier to read.  
   
-3. Argumenty należy umieścić na liście argumentów w nawiasie rozdzielone przecinkami. Należy podać argumenty w tej samej kolejności, `Sub` procedura określa odpowiednich parametrów.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the `Sub` procedure defines the corresponding parameters.  
   
-     Poniższy przykład wywołuje Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> funkcję, aby aktywować okna aplikacji. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> pobiera tytuł okna jako jedyny argument. Nie zwraca wartości do wywołującego kodu. Jeśli nie jest uruchomiony proces Notatnik, przykład generuje <xref:System.ArgumentException>. `Shell` Procedurze przyjęto założenie, znajdują się w określonej ścieżce.  
+     The following example calls the Visual Basic <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> function to activate an application window. <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A> takes the window title as its sole argument. It does not return a value to the calling code. If a Notepad process is not running, the example throws an <xref:System.ArgumentException>. The `Shell` procedure assumes the applications are in the paths specified.  
   
      [!code-vb[VbVbalrCatRef#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCatRef/VB/Class1.vb#11)]  
   
@@ -36,6 +36,6 @@ A `Sub` procedury nie zwraca wartości do wywołującego kodu. Możesz wywołać
 - [Sub, procedury](./sub-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
 - [Sub, instrukcja](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Instrukcje: Tworzenie procedury](./how-to-create-a-procedure.md)
-- [Instrukcje: Wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
-- [Instrukcje: Wywoływanie programu do obsługi zdarzeń w języku Visual Basic](./how-to-call-an-event-handler.md)
+- [Instrukcje: tworzenie procedury](./how-to-create-a-procedure.md)
+- [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

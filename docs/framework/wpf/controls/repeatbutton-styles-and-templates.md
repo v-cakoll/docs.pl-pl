@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], RepeatButton
 - states [WPF], RepeatButton
 ms.assetid: fd340743-f44f-4990-9077-085301469670
-ms.openlocfilehash: 9c6a8ad0a954d244fb693e25965ab52dda114068
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8585e98536fd908daa11f21da395cab44924d612
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459847"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283427"
 ---
 # <a name="repeatbutton-styles-and-templates"></a>RepeatButton — Style i szablony
 
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Primitives.RepeatButton>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Primitives.RepeatButton>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="repeatbutton-parts"></a>RepeatButton części
 
@@ -30,9 +30,9 @@ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Wi
 
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|
 |-|-|-|
-|Typow|CommonStates|Stan domyślny.|
+|Normalne|CommonStates|Stan domyślny.|
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|
-|Styczn|CommonStates|Kontrolka zostanie naciśnięty.|
+|Naciśnięto|CommonStates|Kontrolka zostanie naciśnięty.|
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|
 |Fokus|FocusStates|Kontrolka ma fokus.|
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|
@@ -59,4 +59,4 @@ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTempl
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

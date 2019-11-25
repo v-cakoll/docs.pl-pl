@@ -1,27 +1,27 @@
 ---
-title: Informacje o wywołującym (Visual Basic)
+title: Informacje o wywołującym
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c87b540a68f4d0219918fed66de6c1b635104a9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642367"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349474"
 ---
-# <a name="caller-information-visual-basic"></a>Informacje o wywołującym (Visual Basic)
+# <a name="caller-information-visual-basic"></a>Caller Information (Visual Basic)
 Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę. Można uzyskać ścieżkę pliku kodu źródłowego, numer wiersza kodu źródłowego i nazwę elementu członkowskiego obiektu wywołującego. Te informacje są przydatne do śledzenia, debugowania i tworzenia narzędzi diagnostycznych.  
   
- Aby uzyskać te informacje, należy użyć atrybutów stosowanych do opcjonalnych parametrów, z których każdy ma wartość domyślną. W poniższej tabeli przedstawiono atrybuty informacji o obiekcie wywołującym, które są zdefiniowane w <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw:  
+ Aby uzyskać te informacje, należy użyć atrybutów stosowanych do opcjonalnych parametrów, z których każdy ma wartość domyślną. The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:  
   
 |Atrybut|Opis|Typ|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Pełna ścieżka pliku źródłowego zawierającego obiekt wywołujący. Jest to ścieżka pliku w czasie kompilacji.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Numer wiersza w pliku źródłowym, w którym to wierszu jest wywoływana metoda.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nazwa metody lub właściwości obiektu wywołującego. Zobacz [nazwy elementów członkowskich](#MEMBERNAMES) w dalszej części tego tematu.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nazwa metody lub właściwości obiektu wywołującego. See [Member Names](#MEMBERNAMES) later in this topic.|`String`|  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia, jak używać atrybutów informacji o obiekcie wywołującym. Przy każdym wywołaniu `TraceMessage` metody, informacje o wywołującym są podstawiane jako argumenty opcjonalnych parametrów.  
+ Poniższy przykład przedstawia, jak używać atrybutów informacji o obiekcie wywołującym. On each call to the `TraceMessage` method, the caller information is substituted as arguments to the optional parameters.  
   
 ```vb  
 Private Sub DoProcessing()  
@@ -51,18 +51,18 @@ End Sub
   
  Atrybuty informacji o obiekcie wywołującym nie czynią parametru opcjonalnym. Zamiast tego wpływają na domyślną wartość, która jest przekazywana, gdy argument zostanie pominięty.  
   
- Wartości informacji o obiekcie wywołującym są emitowane jako literały do języka pośredniego (IL, Intermediate Language) w czasie kompilacji. W przeciwieństwie do wyników <xref:System.Exception.StackTrace%2A> właściwość dla wyjątków, na wyniki nie ma wpływu zasłanianie.  
+ Wartości informacji o obiekcie wywołującym są emitowane jako literały do języka pośredniego (IL, Intermediate Language) w czasie kompilacji. Unlike the results of the <xref:System.Exception.StackTrace%2A> property for exceptions, the results aren't affected by obfuscation.  
   
  Można jawnie dostarczyć opcjonalne argumenty do sterowania informacjami o obiekcie wywołującym lub ukryć te informacje.  
   
-### <a name="MEMBERNAMES"></a> Nazwy elementów członkowskich  
- Możesz użyć `CallerMemberName` atrybutu, aby uniknąć określania nazwy elementu członkowskiego jako `String` argument wywoływanej metody. Korzystając z tej techniki, można uniknąć problemu, **Refaktoryzacja zmiany nazwy** nie zmienia `String` wartości. Jest to szczególnie przydatne w następujących zadaniach:  
+### <a name="MEMBERNAMES"></a> Member Names  
+ You can use the `CallerMemberName` attribute to avoid specifying the member name as a `String` argument to the called method. By using this technique, you avoid the problem that **Rename Refactoring** doesn't change the `String` values. Jest to szczególnie przydatne w następujących zadaniach:  
   
 - Używanie procedur do śledzenia i diagnostycznych.  
   
-- Implementowanie <xref:System.ComponentModel.INotifyPropertyChanged> interfejs podczas wiązania danych. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. Bez `CallerMemberName` atrybutu, należy określić nazwę właściwości jako literał.  
+- Implementing the <xref:System.ComponentModel.INotifyPropertyChanged> interface when binding data. Ten interfejs umożliwia właściwości obiektu powiadamianie powiązanego formantu, że właściwość zmieniła się, dzięki czemu formant może wyświetlić zaktualizowane informacje. Without the `CallerMemberName` attribute, you must specify the property name as a literal.  
   
- W poniższej tabeli przedstawiono składowej, nazwy, które są zwracane, gdy używasz `CallerMemberName` atrybutu.  
+ The following chart shows the member names that are returned when you use the `CallerMemberName` attribute.  
   
 |Wywołanie ma miejsce w|Wynikowa nazwa elementu członkowskiego|  
 |-------------------------|------------------------|  
@@ -76,7 +76,7 @@ End Sub
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Atrybuty (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
-- [Atrybuty wspólne (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [Attributes (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [Common Attributes (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [Parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+- [Programming Concepts (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

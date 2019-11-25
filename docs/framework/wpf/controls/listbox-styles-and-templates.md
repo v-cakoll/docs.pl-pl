@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cb7043a21020193a4b2a2569ec610f311834a698
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459293"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283754"
 ---
 # <a name="listbox-styles-and-templates"></a>ListBox — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ListBox>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.ListBox>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="listbox-parts"></a>ListBox — części  
  Formant <xref:System.Windows.Controls.ListBox> nie zawiera żadnych nazwanych części.  
@@ -41,13 +41,13 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |-|-|-|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|  
 |Wyłączone|CommonStates|Element jest wyłączony.|  
 |Fokus|FocusStates|Element ma fokus.|  
 |Bez fokusu|FocusStates|Element nie ma fokusu.|  
 |Niezaznaczone|SelectionStates|Nie wybrano elementu.|  
-|Niezaznaczone|SelectionStates|Element jest zaznaczony jako currentlyplate.|  
+|Wybrane|SelectionStates|Element jest zaznaczony jako currentlyplate.|  
 |SelectedUnfocused|SelectionStates|Element jest zaznaczony, ale nie ma fokusu.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
 |InvalidFocused|ValidationStates|Właściwość dołączona <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> jest `true` ma fokus.|  
@@ -71,4 +71,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

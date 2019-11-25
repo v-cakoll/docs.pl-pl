@@ -4,12 +4,12 @@ description: Odkryj zestaw .NET Core SDK funkcje telemetrii, które zbierają in
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133698"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281775"
 ---
 # <a name="net-core-sdk-telemetry"></a>Dane telemetryczne zestaw .NET Core SDK
 
@@ -17,9 +17,9 @@ ms.locfileid: "70133698"
 
 Zebrane dane są anonimowe i publikowane jako zagregowane w ramach [licencji Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/). 
 
-## <a name="scope"></a>Scope
+## <a name="scope"></a>Zakres
 
-`dotnet`Program ma dwie funkcje: do uruchamiania aplikacji i wykonywania poleceń interfejsu wiersza polecenia. Dane telemetryczne *nie są zbierane* podczas korzystania `dotnet` z programu w celu uruchomienia aplikacji w następującym formacie:
+`dotnet` ma dwie funkcje: do uruchamiania aplikacji i wykonywania poleceń interfejsu wiersza polecenia. Dane telemetryczne *nie są zbierane* w przypadku używania `dotnet` do uruchamiania aplikacji w następującym formacie:
 
 - `dotnet [path-to-app].dll`
 
@@ -31,9 +31,9 @@ Dane telemetryczne *są zbierane* przy użyciu dowolnego [polecenia interfejs wi
 
 ## <a name="how-to-opt-out"></a>Jak zrezygnować
 
-Funkcja telemetrii zestaw .NET Core SDK jest domyślnie włączona. Aby zrezygnować z funkcji telemetrii, należy `DOTNET_CLI_TELEMETRY_OPTOUT` ustawić zmienną środowiskową `true`na `1` lub. 
+Funkcja telemetrii zestaw .NET Core SDK jest domyślnie włączona. Aby zrezygnować z funkcji telemetrii, Ustaw zmienną środowiskową `DOTNET_CLI_TELEMETRY_OPTOUT` na `1` lub `true`. 
 
-W przypadku pomyślnej instalacji wysyłany jest również pojedynczy wpis telemetrii przez Instalatora zestaw .NET Core SDK. Aby zrezygnować z programu, `DOTNET_CLI_TELEMETRY_OPTOUT` należy ustawić zmienną środowiskową przed zainstalowaniem zestaw .NET Core SDK.
+W przypadku pomyślnej instalacji wysyłany jest również pojedynczy wpis telemetrii przez Instalatora zestaw .NET Core SDK. Aby zrezygnować z programu, przed zainstalowaniem zestaw .NET Core SDK należy ustawić zmienną środowiskową `DOTNET_CLI_TELEMETRY_OPTOUT`.
 
 ## <a name="disclosure"></a>Mogąc
 
@@ -51,7 +51,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 Funkcja telemetrii nie zbiera danych osobowych, takich jak nazwy użytkowników lub adresy e-mail. Nie skanuje kodu i nie wyodrębnia danych na poziomie projektu, takich jak Name, Repository lub Author. Dane są bezpiecznie przesyłane do serwerów firmy Microsoft przy użyciu technologii [Azure monitor](https://azure.microsoft.com/services/monitor/) , w ramach ograniczonego dostępu, i publikowane w ramach ścisłych kontroli zabezpieczeń z bezpiecznych systemów [usługi Azure Storage](https://azure.microsoft.com/services/storage/) .
 
-Ochrona prywatności jest dla nas ważna. Jeśli podejrzewasz, że Telemetria zbiera dane poufne lub dane są w sposób niezabezpieczony lub niewłaściwie obsłużone, należy rozwiązać problem w repozytorium [dotnet/CLI](https://github.com/dotnet/cli/issues) lub wysłać wiadomość e-mail do [dotnet@microsoft.com](mailto:dotnet@microsoft.com) badania.
+Ochrona prywatności jest dla nas ważna. Jeśli podejrzewasz, że Telemetria zbiera dane poufne lub dane są w sposób niezabezpieczony lub niewłaściwie obsłużone, należy rozwiązać problem w repozytorium [dotnet/CLI](https://github.com/dotnet/cli/issues) lub wysłać wiadomość e-mail do [dotnet@microsoft.com](mailto:dotnet@microsoft.com) w celu zbadania problemu.
 
 Funkcja telemetrii zbiera następujące dane:
 
@@ -66,14 +66,14 @@ Funkcja telemetrii zbiera następujące dane:
 | Wszystkie          | Profil telemetrii: opcjonalna wartość używana tylko z jawnym zapytaniem użytkownika i używana wewnętrznie w firmie Microsoft. |
 | > = 2.0        | Argumenty polecenia i opcje: zbierane są kilka argumentów i opcji (nie dowolnych ciągów). Zobacz [zebrane opcje](#collected-options). Skrót po 2.1.300. |
 | > = 2.0         | Czy zestaw SDK działa w kontenerze. |
-| > = 2.0         | Platformy docelowe (ze `TargetFramework` zdarzenia), które zostały zmieszane, począwszy od 2,1. |
+| > = 2.0         | Platformy docelowe (ze zdarzenia `TargetFramework`), które są zmieszane, począwszy od 2,1. |
 | > = 2.0         | Adres MAC w postaci skrótu Access Control: kryptograficzny (SHA256) anonimowy i unikatowy identyfikator dla komputera. |
 | > = 2.0         | Skrót bieżącego katalogu roboczego. |
 | > = 2.0         | Zainstaluj Raport z sukcesem z nazwą pliku exe Instalatora. |
 | > = 2.1.300     | Wersja jądra. |
 | > = 2.1.300     | Libc wydanie/wersja. |
 | > = 3.0.100     | Czy dane wyjściowe zostały przekierowane (wartość true lub false). |
-| > = 3.0.100     | W przypadku awarii interfejsu wiersza polecenia/zestawu SDK typ wyjątku i jego ślad stosu (kod interfejsu wiersza polecenia/zestawu SDK jest dołączony do wysyłanego śladu stosu). Aby uzyskać więcej informacji, zobacz dane telemetryczne [wyjątku awarii interfejs wiersza polecenia platformy .NET Core/SDK](#net-core-clisdk-crash-exception-telemetry-collected). |
+| > = 3.0.100     | W przypadku awarii interfejsu wiersza polecenia/zestawu SDK typ wyjątku i jego ślad stosu (kod interfejsu wiersza polecenia/zestawu SDK jest dołączony do wysyłanego śladu stosu). Aby uzyskać więcej informacji, zobacz dane [telemetryczne wyjątku awarii interfejs wiersza polecenia platformy .NET Core/SDK](#net-core-clisdk-crash-exception-telemetry-collected). |
 
 ### <a name="collected-options"></a>Zebrane opcje
 
@@ -83,11 +83,11 @@ Niektóre polecenia wysyłają dodatkowe dane. Podzbiór poleceń wysyła pierws
 |-----------------------|-----------------------------------------|
 | `dotnet help <arg>`   | Trwa kwerenda pomocy dla polecenia.  |
 | `dotnet new <arg>`    | Nazwa szablonu (wartość skrótu).             |
-| `dotnet add <arg>`    | Słowo `package` lub .`reference`      |
-| `dotnet remove <arg>` | Słowo `package` lub .`reference`      |
-| `dotnet list <arg>`   | Słowo `package` lub .`reference`      |
-| `dotnet sln <arg>`    | Słowo `add`, `list`, lub `remove`.    |
-| `dotnet nuget <arg>`  | Słowo `delete`, `locals`, lub `push`. |
+| `dotnet add <arg>`    | Słowo `package` lub `reference`.      |
+| `dotnet remove <arg>` | Słowo `package` lub `reference`.      |
+| `dotnet list <arg>`   | Słowo `package` lub `reference`.      |
+| `dotnet sln <arg>`    | Słowo `add`, `list`lub `remove`.    |
+| `dotnet nuget <arg>`  | Słowo `delete`, `locals`lub `push`. |
 
 Podzbiór poleceń wysyła wybrane opcje, jeśli są używane, wraz z ich wartościami:
 
@@ -97,12 +97,12 @@ Podzbiór poleceń wysyła wybrane opcje, jeśli są używane, wraz z ich warto�
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
 | `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
-| `--runtime`             | `dotnet build`,`dotnet publish`                                                              |
+| `--runtime`             | `dotnet build`, `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |
 
-Z wyjątkiem `--sdk-package-version`i, wszystkie inne wartości są zmieszane, począwszy od platformy .NET Core 2.1.100 SDK. `--verbosity`
+Z wyjątkiem `--verbosity` i `--sdk-package-version`wszystkie inne wartości są zmieszane, począwszy od platformy .NET Core 2.1.100 SDK.
 
 ## <a name="net-core-clisdk-crash-exception-telemetry-collected"></a>Zebrane dane telemetryczne wyjątku awarii interfejs wiersza polecenia platformy .NET Core/SDK
 
@@ -114,7 +114,7 @@ Interfejs wiersza polecenia platformy .NET Core zbiera informacje tylko dla wyj�
 
 Poniższy przykład przedstawia rodzaj zbieranych danych:
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

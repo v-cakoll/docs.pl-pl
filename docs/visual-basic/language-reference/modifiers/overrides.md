@@ -1,5 +1,5 @@
 ---
-title: Overrides (Visual Basic)
+title: Overrides
 ms.date: 07/20/2015
 f1_keywords:
 - Overrides
@@ -13,50 +13,50 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 7fff91d993743574d13030aa3d5cc1e462e76838
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04f1cb27d6a8366c2dd13f8fdc1d975d382f1cfd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751029"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351386"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 
-Określa, że właściwość lub procedura przesłania właściwość o identycznej nazwie lub dziedziczone z klasy bazowej procedury.
+Specifies that a property or procedure overrides an identically named property or procedure inherited from a base class.
 
-## <a name="rules"></a>reguły
+## <a name="rules"></a>Rules
 
-- **Kontekst deklaracji.** Możesz użyć `Overrides` tylko w instrukcji deklaracji właściwość lub procedura.
+- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
 
-- **Modyfikatory połączone.** Nie można określić `Overrides` wraz z `Shadows` lub `Shared` w tej samej deklaracji. Ponieważ element nadrzędnych jest niejawnie możliwym do zastąpienia, nie można połączyć `Overridable` z `Overrides`.
+- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.
 
-- **Podpisów dopasowania.** Podpis tej deklaracji musi dokładnie odpowiadać *podpisu* właściwość lub procedurę, która zastępuje ona. Oznacza to, list parametrów muszą mieć taką samą liczbę parametrów, w tej samej kolejności, z tymi samymi typami danych.
+- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. This means the parameter lists must have the same number of parameters, in the same order, with the same data types.
 
-  Oprócz podpisu nadrzędnych deklaracji musi również dokładnie odpowiadać następujące czynności:
+  In addition to the signature, the overriding declaration must also exactly match the following:
 
-  - Poziom dostępu
+  - The access level
 
-  - Typ zwracany, jeśli istnieje
+  - The return type, if any
 
-- **Sygnatur ogólnych.** Procedury ogólne podpis zawiera liczbę parametrów typu. W związku z tym nadrzędnych deklaracja musi odpowiadać wersją klasy bazowej, w tym zakresie, a także.
+- **Generic Signatures.** For a generic procedure, the signature includes the number of type parameters. Therefore, the overriding declaration must match the base class version in that respect as well.
 
-- **Dodatkowe dopasowywania.** Oprócz dopasowania podpis wersją klasy bazowej, ta deklaracja musi być również zgodna go pod następującymi względami:
+- **Additional Matching.** In addition to matching the signature of the base class version, this declaration must also match it in the following respects:
 
-  - Modyfikator poziom dostępu (takich jak [publicznych](../../../visual-basic/language-reference/modifiers/public.md))
+  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Przekazywanie mechanizm każdego parametru ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
-  - Ograniczenie listy dla każdego parametru typu ogólnego procedury
+  - Constraint lists on each type parameter of a generic procedure
 
-- **Przesłanianiem i zastępowaniem.** Zarówno przesłanianiem i zastępowaniem przedefiniować dziedziczonego elementu, ale istnieją znaczne różnice między dwa podejścia. Aby uzyskać więcej informacji, zobacz [przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Shadowing and Overriding.** Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
-Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby pracować z interfejsów API biblioteki C# łatwiejsze.
+If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
 
-`Overrides` Modyfikator mogą być używane w tych kontekstach:
+The `Overrides` modifier can be used in these contexts:
 
 - [Function, instrukcja](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Instrukcja Property](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property, instrukcja](../../../visual-basic/language-reference/statements/property-statement.md)
 
 - [Sub, instrukcja](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -66,6 +66,6 @@ Jeśli używasz `Overrides`, kompilator niejawnie dodaje `Overloads` tak, aby pr
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)
-- [Przesłanianie w Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [Typy ogólne w Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Lista typów](../../../visual-basic/language-reference/statements/type-list.md)

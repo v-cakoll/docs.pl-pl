@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Znajdź poprzednie elementy równorzędne (XPath-LINQ to XML)C#()'
+title: Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
-ms.openlocfilehash: 2af2e08fa692142d2932a427f48ba5d323d7a848
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253659"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141059"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Instrukcje: Znajdź poprzednie elementy równorzędne (XPath-LINQ to XML)C#()
-W tym temacie porównano `preceding-sibling` oś XPath [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] z osią <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> podrzędną.  
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>Jak znaleźć poprzednie elementy równorzędne (XPath-LINQ to XML) (C#)
+W tym temacie porównano oś `preceding-sibling` XPath z osią [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] podrzędnej <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType>.  
   
  Wyrażenie XPath:  
   
@@ -19,9 +19,9 @@ W tym temacie porównano `preceding-sibling` oś XPath [!INCLUDE[sqltecxlinq](~/
  Zwróć uwagę, że wyniki obu <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> i <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> są w kolejności dokumentu.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład umożliwia znalezienie `FullAddress` elementu, a następnie pobranie poprzednich elementów `preceding-sibling` przy użyciu osi.  
+ Poniższy przykład umożliwia znalezienie elementu `FullAddress`, a następnie pobranie poprzednich elementów przy użyciu osi `preceding-sibling`.  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Klienci i zamówienia (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: Customers i Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement co = XElement.Load("CustomersOrders.xml");  

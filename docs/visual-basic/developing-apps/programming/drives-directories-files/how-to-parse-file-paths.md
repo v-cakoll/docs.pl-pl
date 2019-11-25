@@ -1,37 +1,38 @@
 ---
-title: 'Instrukcje: Analizowanie ścieżek pliku w Visual Basic'
+title: 'Porady: analizowanie ścieżek pliku'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file names [Visual Basic], parsing [Visual Basic]
 - parsing, file paths [Visual Basic]
 ms.assetid: c1bd99c9-8160-456a-b5ab-60a49139b923
-ms.openlocfilehash: 6961f481126d34b18c5a11d83c4c6c37c2c81c71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a959994be3a57795dc9f7e3447fa54bf075d3ec
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629166"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335352"
 ---
-# <a name="how-to-parse-file-paths-in-visual-basic"></a>Instrukcje: Analizowanie ścieżek pliku w Visual Basic
-<xref:Microsoft.VisualBasic.FileIO.FileSystem> Obiektu udostępnia szereg metod przydatne podczas analizowania ścieżki do plików.  
+# <a name="how-to-parse-file-paths-in-visual-basic"></a>Porady: analizowanie ścieżek pliku w Visual Basic
+
+The <xref:Microsoft.VisualBasic.FileIO.FileSystem> object offers a number of useful methods when parsing file paths.  
   
-- <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> Metoda przyjmuje dwie ścieżki i zwraca poprawnie sformatowanym połączonych ścieżkę.  
+- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A> method takes two paths and returns a properly formatted combined path.  
   
-- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> Metoda zwraca ścieżkę bezwzględną podana ścieżka elementu nadrzędnego.  
+- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetParentPath%2A> method returns the absolute path of the parent of the provided path.  
   
-- <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> Metoda zwraca <xref:System.IO.FileInfo> obiektu, który może być odpytywany, aby określić właściwości pliku, takie jak jego nazwa i ścieżka.  
+- The <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A> method returns a <xref:System.IO.FileInfo> object that can be queried to determine the file's properties, such as its name and path.  
   
- Nie należy podejmować decyzji dotyczących zawartości pliku na podstawie rozszerzenia nazwy pliku. Na przykład plik Form1.vb może nie być plik źródłowy w języku Visual Basic.  
+ Do not make decisions about the contents of the file based on the file name extension. For example, the file Form1.vb may not be a Visual Basic source file.  
   
-### <a name="to-determine-a-files-name-and-path"></a>Aby określić nazwę i ścieżkę pliku  
+### <a name="to-determine-a-files-name-and-path"></a>To determine a file's name and path  
   
-- Użyj <xref:System.IO.FileInfo.DirectoryName%2A> i <xref:System.IO.FileInfo.Name%2A> właściwości <xref:System.IO.FileInfo> obiektu, aby określić nazwę i ścieżkę pliku. W tym przykładzie określa nazwę i ścieżkę i wyświetla je.  
+- Use the <xref:System.IO.FileInfo.DirectoryName%2A> and <xref:System.IO.FileInfo.Name%2A> properties of the <xref:System.IO.FileInfo> object to determine a file's name and path. This example determines the name and path and displays them.  
   
      [!code-vb[VbVbcnMyFileSystem#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#54)]  
   
-### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>Aby połączyć nazwę i katalog, aby utworzyć pełną ścieżkę pliku  
+### <a name="to-combine-a-files-name-and-directory-to-create-the-full-path"></a>To combine a file's name and directory to create the full path  
   
-- Użyj `CombinePath` metodę dostarczania katalogu i nazwa. W tym przykładzie pobiera ciągi `folderPath` i `fileName` utworzony w poprzednim przykładzie, łączy je i wyświetla wynik.  
+- Use the `CombinePath` method, supplying the directory and name. This example takes the strings `folderPath` and `fileName` created in the previous example, combines them, and displays the result.  
   
      [!code-vb[VbVbcnMyFileSystem#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#55)]  
   
@@ -41,4 +42,4 @@ ms.locfileid: "64629166"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CombinePath%2A>
 - <xref:System.IO.FileInfo>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetFileInfo%2A>
-- [Instrukcje: Pobieranie kolekcji plików w katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Instrukcje: pobieranie kolekcji plików z katalogu](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

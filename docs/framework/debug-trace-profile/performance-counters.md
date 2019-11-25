@@ -6,33 +6,17 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121598"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281808"
 ---
-# <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w oprogramowaniu .NET Framework
+# <a name="performance-counters-in-the-net-framework"></a>Liczniki wydajności w .NET Framework
+
 Ten temat zawiera listę liczników wydajności, które można znaleźć w [monitorze wydajności systemu Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
-  
-- [Liczniki wydajności wyjątków](#exception)  
-  
-- [Liczniki wydajności międzyoperacyjności](#interop)  
-  
-- [Liczniki wydajności JIT](#jit)  
-  
-- [Ładowanie liczników wydajności](#loading)  
-  
-- [Liczniki wydajności blokady i wątku](#lockthread)  
-  
-- [Liczniki wydajności pamięci](#memory)  
-  
-- [Liczniki wydajności sieci](#networking)  
-  
-- [Liczniki wydajności zabezpieczeń](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>Liczniki wydajności wyjątków  
  Kategoria wyjątków środowiska CLR programu .NET Console zawiera liczniki, które zawierają informacje o wyjątkach zgłaszanych przez aplikację. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -43,8 +27,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**liczba filtrów/s**|Wyświetla liczbę filtrów wyjątków programu .NET wykonywanych w ciągu sekundy. Filtr wyjątku jest obliczany niezależnie od tego, czy wyjątek jest obsługiwany.<br /><br /> Ten licznik nie jest średnią w czasie; Wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
 |**Liczba finally/s**|Wyświetla liczbę bloków finally wykonywanych w ciągu sekundy. Blok finally jest gwarantowany do wykonania niezależnie od tego, jak został zakończony blok try.  Zliczane są tylko bloki finally wykonane dla wyjątku; bloki finally w normalnych ścieżkach kodu nie są zliczane przez ten licznik.<br /><br /> Ten licznik nie jest średnią w czasie; Wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
 |**Rzutowanie na głębokość catch/s**|Wyświetla liczbę ramek stosu przepływających od klatki, która zgłosiła wyjątek do ramki, która obsługiwała wyjątek, na sekundę. Ten licznik resetuje do zera, gdy zostanie wprowadzona procedura obsługi wyjątków, więc zagnieżdżone wyjątki pokazują głębokość stosu obsługi do obsługi.<br /><br /> Ten licznik nie jest średnią w czasie; Wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>Liczniki wydajności międzyoperacyjności  
  Kategoria programu .NET Interop dla środowiska URUCHOMIENIOWego w konsoli wydajności zawiera liczniki, które zawierają informacje o interakcjach aplikacji ze składnikami modelu COM, usługami COM+ i zewnętrznymi bibliotekami typów. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -55,8 +38,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**Liczba wycinków**|Przedstawia bieżącą liczbę wycinków utworzonych przez środowisko uruchomieniowe języka wspólnego. Wycinki są odpowiedzialne za kierowanie argumentów i zwracanie wartości z zarządzanego do niezarządzanego kodu, a na odwrót — w trakcie wywołania międzyoperacyjnego modelu COM lub wywołania platformy.|  
 |**Liczba operacji eksportu TLB/s**|Zarezerwowane do użytku w przyszłości.|  
 |**Liczba importowanych buforów TLB/s**|Zarezerwowane do użytku w przyszłości.|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>liczniki wydajności JIT  
  Kategoria kompilatora wydajności JIT środowiska .NET CLR zawiera liczniki, które zawierają informacje o kodzie, który został skompilowany przez JIT. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -68,8 +50,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**Bajty IL trybie JIT/s**|Wyświetla liczbę bajtów MSIL, które są kompilowane w trybie JIT na sekundę. Ten licznik nie jest średnią w czasie; Wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
 |**Standardowe błędy JIT**|Wyświetla szczytową liczbę metod, które kompilator JIT nie mógł skompilować od momentu uruchomienia aplikacji. Ten błąd może wystąpić, jeśli nie można zweryfikować MSIL lub wystąpił błąd wewnętrzny kompilatora JIT.|  
 |**Łączna liczba bajtów trybie JIT IL**|Przedstawia łączną liczbę bajtów MSIL skompilowanych JIT od momentu uruchomienia aplikacji. Ten licznik jest równoważny licznikowi **trybie JIT bajtów Il** .|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>Ładowanie liczników wydajności  
  Kategoria ładowania CLR programu .NET Console zawiera liczniki, które zawierają informacje o zestawach, klasach i domenach aplikacji, które są ładowane. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -91,8 +72,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**Łączna liczba domen aplikacji zwolnionych**|Przedstawia łączną liczbę zwolnionych domen aplikacji od momentu uruchomienia aplikacji. Jeśli domena aplikacji zostanie załadowana i zwolniona wielokrotnie, ten licznik rośnie za każdym razem, gdy domena aplikacji zostanie zwolniona.|  
 |**Łączna liczba zestawów**|Wyświetla łączną liczbę zestawów załadowanych od momentu uruchomienia aplikacji. Jeśli zestaw jest ładowany jako neutralny dla domeny z wielu domen aplikacji, ten licznik jest zwiększany tylko raz.|  
 |**Łączna liczba załadowanych klas**|Przedstawia skumulowaną liczbę klas załadowanych we wszystkich zestawach od momentu uruchomienia aplikacji.|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>Liczniki wydajności blokady i wątku  
  Kategoria programu .NET CLR LocksAndThreads z konsolą wydajności zawiera liczniki, które zawierają informacje o zarządzanych blokadach i wątkach używanych przez aplikację. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -108,8 +88,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**Szczytowa długość kolejki**|Przedstawia łączną liczbę wątków, które oczekują na uzyskanie blokady zarządzanej od momentu uruchomienia aplikacji.|  
 |**częstotliwość rozpoznanych wątków/s**|Przedstawia liczbę wątków na sekundę, które zostały rozpoznane przez środowisko uruchomieniowe. Te wątki są skojarzone z odpowiednim obiektem zarządzanego wątku. Środowisko uruchomieniowe nie tworzy tych wątków, ale zostały uruchomione w środowisku uruchomieniowym co najmniej raz.<br /><br /> Śledzone są tylko unikatowe wątki; wątki z tym samym IDENTYFIKATORem wątku, który ponownie wprowadzają środowisko uruchomieniowe lub są ponownie tworzone po zakończeniu wątku, nie są zliczane dwa razy.<br /><br /> Ten licznik nie jest średnią w czasie; Wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
 |**Łączna liczba rywalizacji**|Przedstawia łączną liczbę przypadków, w których wątki w czasie wykonywania próbowały uzyskać zarządzaną blokadę, która nie powiodła się.|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>Liczniki wydajności pamięci  
  Kategoria pamięci CLR programu .NET Console zawiera liczniki, które dostarczają informacji na temat modułu wyrzucania elementów bezużytecznych. W poniższej tabeli opisano te liczniki wydajności.  
   
@@ -133,15 +112,15 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
 |**Rozmiar sterty generacji 1**|Wyświetla bieżącą liczbę bajtów w generacji 1; Ten licznik nie wyświetla maksymalnego rozmiaru generacji 1. Obiekty nie są bezpośrednio przydzielne w tej generacji; są one promowane z wyrzucania elementów bezużytecznych poprzedniej generacji 0. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, a nie przy każdej alokacji.|  
 |**Wyróżnione bajty generacji 1/s**|Wyświetla liczbę bajtów na sekundę, które są podwyższane z generacji 1 do generacji 2. Obiekty, które są promowane tylko dlatego, że oczekują na sfinalizowanie, nie są uwzględnione w tym liczniku.<br /><br /> Pamięć jest podwyższana, gdy przeżyje odzyskiwanie pamięci. Brak promocji z generacji 2, ponieważ jest to najstarsza generacja. Ten licznik jest wskaźnikiem bardzo długotrwałych obiektów tworzonych w ciągu sekundy.<br /><br /> Ten licznik wyświetla różnicę między wartościami obserwowanymi w ostatnich dwóch próbkach podzieloną przez czas trwania interwału próbkowania.|  
 |**Rozmiar sterty generacji 2**|Wyświetla bieżącą liczbę bajtów w generacji 2. Obiekty nie są bezpośrednio przydzielne w tej generacji; są one promowane od generacji 1 w trakcie odzyskiwania pamięci poprzedniej generacji 1. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, a nie przy każdej alokacji.|  
-|**Rozmiar sterty dla dużego obiektu**|Wyświetla bieżący rozmiar sterty dużego obiektu w bajtach. Obiekty, które są większe niż około 85 000 bajtów są traktowane jako duże obiekty przez moduł wyrzucania elementów bezużytecznych i są bezpośrednio przydzielane w specjalnej stercie; nie są one promowane w ramach generacji. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, a nie przy każdej alokacji.|  
+|**Rozmiar sterty dla dużego obiektu**|Wyświetla bieżący rozmiar sterty dużego obiektu w bajtach. Obiekty, które są większe niż około 85 000 bajtów są traktowane jako duże obiekty przez moduł wyrzucania elementów bezużytecznych i są bezpośrednio przydzielane w specjalnej stercie. Nie są one promowane w ramach generacji. Ten licznik jest aktualizowany na końcu wyrzucania elementów bezużytecznych, a nie przy każdej alokacji.|  
 |**Identyfikator procesu**|Wyświetla identyfikator procesu monitorowanego wystąpienia procesu CLR.|  
 |**Awansowana finalizowanie pamięci z generacji 0**|Wyświetla bajty pamięci, które są podwyższane z generacji 0 do generacji 1 tylko ponieważ oczekują na sfinalizowanie. Ten licznik nie jest skumulowany; Wyświetla wartość zaobserwowana na końcu ostatniego wyrzucania elementów bezużytecznych.|  
 |**Podwyższona ilość pamięci z generacji 0**|Wyświetla bajty pamięci, które przeżyły do wyrzucania elementów bezużytecznych i są podwyższane z generacji 0 do generacji 1. Obiekty, które są promowane tylko dlatego, że oczekują na sfinalizowanie, nie są uwzględnione w tym liczniku. Ten licznik nie jest skumulowany; Wyświetla wartość zaobserwowana na końcu ostatniego wyrzucania elementów bezużytecznych.|  
 |**Podwyższona ilość pamięci z generacji 1**|Wyświetla bajty pamięci, które przeżyły do wyrzucania elementów bezużytecznych i zostały podwyższone z generacji 1 do generacji 2. Obiekty, które są promowane tylko dlatego, że oczekują na sfinalizowanie, nie są uwzględnione w tym liczniku. Ten licznik nie jest skumulowany; Wyświetla wartość zaobserwowana na końcu ostatniego wyrzucania elementów bezużytecznych. Ten licznik jest resetowany do wartości 0, jeśli ostatnie wyrzucanie elementów bezużytecznych było tylko kolekcjami generacji 0.|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>Liczniki wydajności sieci  
- Kategoria sieci środowiska CLR programu .NET Console zawiera liczniki, które zawierają informacje o danych wysyłanych i odbieranych przez sieć. W poniższej tabeli opisano te liczniki wydajności.  
+
+Kategoria sieci środowiska CLR programu .NET Console zawiera liczniki, które zawierają informacje o danych wysyłanych i odbieranych przez sieć. W poniższej tabeli opisano te liczniki wydajności.  
   
 |Licznik wydajności|Opis|  
 |-------------------------|-----------------|  
@@ -167,7 +146,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
 - Liczniki dla interwałów, które mierzą liczbę obiektów tworzących określone przejście na interwał (zwykle na sekundę).  
   
- Dostępne są następujące liczniki wydajności sieci dla zdarzeń:  
+Dostępne są następujące liczniki wydajności sieci dla zdarzeń:  
   
 - **Nawiązano połączenia**  
   
@@ -175,7 +154,7 @@ Ten temat zawiera listę liczników wydajności, które można znaleźć w [moni
   
 - **Wysłane datagramy**  
   
- Te liczniki wydajności udostępniają liczby od momentu rozpoczęcia procesu. Liczba ustanowionych połączeń <xref:System.Net.Sockets.Socket> obejmuje jawne wywołania metody <xref:System.Net.Sockets.Socket> przez aplikację dla połączenia gniazda usługi Stream, które zostało nawiązane, a także wywołania wewnętrzne wykonane przez inne klasy (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>i <xref:System.Net.Sockets.TcpClient>na przykład) do klasy <xref:System.Net.Sockets.Socket>  
+ Te liczniki wydajności udostępniają liczby od momentu rozpoczęcia procesu. Liczba ustanowionych połączeń <xref:System.Net.Sockets.Socket> obejmuje jawne wywołania metody <xref:System.Net.Sockets.Socket> przez aplikację dla połączenia gniazda usługi Stream, które zostało nawiązane, a także wywołania wewnętrzne wykonane przez inne klasy (na przykład<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, <xref:System.Net.WebClient>i <xref:System.Net.Sockets.TcpClient>) do klasy <xref:System.Net.Sockets.Socket>  
   
  Liczby odbieranych i **wysyłanych** **datagramów obejmują pakiety datag** wysłane lub odebrane przy użyciu jawnej metody <xref:System.Net.Sockets.Socket> wywołań przez aplikację, a także wywołania wewnętrzne wykonane przez inne klasy (na przykład<xref:System.Net.Sockets.UdpClient>) do <xref:System.Net.Sockets.Socket>. Określonej. Liczba **odebranych datagramów** i **wysłanych** datagramy mogą być również używane w celu zapewnienia bardzo surowej miary liczby bajtów wysłanych lub odebranych za pomocą datagramy przy założeniu, że średni rozmiar datagramu.  
   
@@ -236,8 +215,7 @@ for (int i = 0; i < Array.Length; i++)
 - ".NET CLR Networking 4.0.0.0" — wszystkie powyższe liczniki gniazda oraz nowe liczniki wydajności obsługiwane w .NET Framework wersji 4 i nowszych. Te nowe liczniki zawierają informacje o wydajności dotyczące <xref:System.Net.HttpWebRequest> obiektów.  
   
  Aby uzyskać więcej informacji na temat uzyskiwania dostępu do liczników wydajności i zarządzania nimi w aplikacji, zobacz [liczniki wydajności](performance-counters.md).  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>Liczniki wydajności zabezpieczeń  
  Kategoria zabezpieczeń programu .NET CLR konsoli wydajności zawiera liczniki, które dostarczają informacji o sprawdzaniu zabezpieczeń wykonywanych przez środowisko uruchomieniowe języka wspólnego dla aplikacji. W poniższej tabeli opisano te liczniki wydajności.  
   

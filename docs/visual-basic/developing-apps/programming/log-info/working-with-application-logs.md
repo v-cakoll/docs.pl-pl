@@ -1,65 +1,65 @@
 ---
-title: Praca z dziennikami aplikacji w Visual Basic
+title: Praca z dziennikami aplikacji
 ms.date: 07/20/2015
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 617b940d2cf15779ae3c10e4663b63c9771d44b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61712100"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345899"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 
-`My.Application.Log` i `My.Log` obiektów ułatwiają zapisu rejestrowania i śledzenia informacji w dziennikach.
+The `My.Application.Log` and `My.Log` objects make it easy to write logging and tracing information to logs.
 
-## <a name="how-messages-are-logged"></a>Jak komunikaty są rejestrowane.
+## <a name="how-messages-are-logged"></a>How Messages are Logged
 
-Najpierw ważności komunikatu został sprawdzony i <xref:System.Diagnostics.TraceSource.Switch%2A> właściwości dziennika <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> właściwości. Przez domyślne, tylko komunikaty o ważności "Informacje" i nowszej są przekazywane do detektorów śledzenia określony w dzienniku `TraceListener` kolekcji. Następnie każdego odbiornika porównuje ważność wiadomości do odbiornika <xref:System.Diagnostics.TraceSource.Switch%2A> właściwości. Jeśli ważność komunikatu jest wystarczająco wysoka, odbiornik zapisuje się komunikatu.
+First, the severity of the message is checked with the <xref:System.Diagnostics.TraceSource.Switch%2A> property of the log's <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A> property. By default, only messages of severity "Information" and higher are passed on to the trace listeners, specified in the log's `TraceListener` collection. Then, each listener compares the severity of the message to the listener's <xref:System.Diagnostics.TraceSource.Switch%2A> property. If the message's severity is high enough, the listener writes out the message.
 
-Na poniższym diagramie przedstawiono, w jaki sposób wiadomość zapisywane `WriteEntry` przekazywane do metody `WriteLine` obiekty nasłuchujące śledzenia metody dziennika:
+The following diagram shows how a message written to the `WriteEntry` method gets passed to the `WriteLine` methods of the log's trace listeners:
 
-![Diagram przedstawiający Moje wywołania dziennika.](./media/working-with-application-logs/my-log-call-messages.png)
+![Diagram that shows My log call.](./media/working-with-application-logs/my-log-call-messages.png)
 
-Możesz zmienić zachowanie dziennika i śledzenia słuchaczy, zmieniając pliku konfiguracji aplikacji. Na poniższym diagramie przedstawiono związek między częściami dziennika i pliku konfiguracji.
+You can change the behavior of the log and the trace listeners by changing the application's configuration file. The following diagram shows the correspondence between the parts of the log and the configuration file.
 
-![Diagram przedstawiający konfigurację dziennika.](./media/working-with-application-logs/my-log-configuration.png)
+![Diagram that shows My log configuration.](./media/working-with-application-logs/my-log-configuration.png)
 
-## <a name="where-messages-are-logged"></a>Gdzie są rejestrowane komunikaty
+## <a name="where-messages-are-logged"></a>Where Messages are Logged
 
-Jeśli zestaw ma plik konfiguracji nie `My.Application.Log` i `My.Log` obiektów zapisywać dane wyjściowe debugowania aplikacji (za pośrednictwem <xref:System.Diagnostics.DefaultTraceListener> klasy). Ponadto `My.Application.Log` obiekt zapisuje do pliku dziennika zestawu (za pośrednictwem <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> klasy), gdy `My.Log` obiekt zapisuje dane wyjściowe strony sieci Web platformy ASP.NET (za pośrednictwem <xref:System.Web.WebPageTraceListener> klasy).
+If the assembly has no configuration file, the `My.Application.Log` and `My.Log` objects write to the application's debug output (through the <xref:System.Diagnostics.DefaultTraceListener> class). In addition, the `My.Application.Log` object writes to the assembly's log file (through the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> class), while the `My.Log` object writes to the ASP.NET Web page's output (through the <xref:System.Web.WebPageTraceListener> class).
 
-Dane wyjściowe debugowania mogą być wyświetlane w programie Visual Studio **dane wyjściowe** okna podczas uruchamiania aplikacji w trybie debugowania. Aby otworzyć **dane wyjściowe** okna, kliknij przycisk **debugowania** elementu menu, wskaż **Windows**, a następnie kliknij przycisk **dane wyjściowe**. W **dane wyjściowe** wybierz **debugowania** z **Pokaż dane wyjściowe z** pole.
+The debug output can be viewed in the Visual Studio **Output** window when running your application in debug mode. To open the **Output** window, click the **Debug** menu item, point to **Windows**, and then click **Output**. In the **Output** window, select **Debug** from the **Show output from** box.
 
-Domyślnie `My.Application.Log` zapisuje plik dziennika w ścieżce dla danych aplikacji użytkownika. Możesz uzyskać ścieżkę z <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> właściwość <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> obiektu. Format tej ścieżki jest następująca:
+By default, `My.Application.Log` writes the log file in the path for the user's application data. You can get the path from the <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> property of the <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> object. The format of that path is as follows:
 
 `BasePath`\\`CompanyName`\\`ProductName`\\`ProductVersion`
 
-Typowa wartość dla `BasePath` jest następujący.
+A typical value for `BasePath` is as follows.
 
-C:\Documents and Settings\\`username`\Application danych
+C:\Documents and Settings\\`username`\Application Data
 
-Wartości `CompanyName`, `ProductName`, i `ProductVersion` pochodzą z informacjami o zestawie aplikacji. Nazwa pliku dziennika jest *AssemblyName*.log, gdzie *AssemblyName* jest nazwą pliku zestawu bez rozszerzenia. Jeśli potrzebna jest więcej niż jeden plik dziennika, np. gdy oryginalny plik dziennika jest niedostępny podczas aplikacja próbuje zapisać w dzienniku, formularz dla nazwy pliku dziennika jest *AssemblyName*-*iteracji* .log, gdzie `iteration` jest dodatni `Integer`.
+The values of `CompanyName`, `ProductName`, and `ProductVersion` come from the application's assembly information. The form of the log file name is *AssemblyName*.log, where *AssemblyName* is the file name of the assembly without the extension. If more than one log file is needed, such as when the original log is unavailable when the application attempts to write to the log, the form for the log file name is *AssemblyName*-*iteration*.log, where `iteration` is a positive `Integer`.
 
-Zachowanie domyślne można przesłonić, przez dodanie lub zmiana plik konfiguracji komputera i aplikacji. Aby uzyskać więcej informacji, zobacz [instruktażu: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
+You can override the default behavior by adding or changing the computer's and the application's configuration files. For more information, see [Walkthrough: Changing Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md).
 
-## <a name="configuring-log-settings"></a>Konfigurowanie ustawień dziennika
+## <a name="configuring-log-settings"></a>Configuring Log Settings
 
-`Log` Obiekt ma domyślną implementację, która działa bez pliku konfiguracji aplikacji, pliku app.config. Aby zmienić ustawienia domyślne, należy dodać plik konfiguracji z nowymi ustawieniami. Aby uzyskać więcej informacji, zobacz [instruktażu: Filtrowanie danych wyjściowych My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+The `Log` object has a default implementation that works without an application configuration file, app.config. To change the defaults, you must add a configuration file with the new settings. For more information, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
-W sekcjach konfiguracji dziennika znajdują się w `<system.diagnostics>` węzła w głównym `<configuration>` węzła pliku app.config. Informacje w dzienniku jest zdefiniowana w kilka węzłów:
+The log configuration sections are located in the `<system.diagnostics>` node in the main `<configuration>` node of the app.config file. Log information is defined in several nodes:
 
-- Detektory `Log` obiektu są zdefiniowane w `<sources>` węzeł o nazwie DefaultSource.
+- The listeners for the `Log` object are defined in the `<sources>` node named DefaultSource.
 
-- Filtr ważność `Log` obiekt jest zdefiniowany w `<switches>` węzeł o nazwie DefaultSwitch.
+- The severity filter for the `Log` object is defined in the `<switches>` node named DefaultSwitch.
 
-- Odbiorniki logu są zdefiniowane w `<sharedListeners>` węzła.
+- The log listeners are defined in the `<sharedListeners>` node.
 
- Przykłady `<sources>`, `<switches>`, i `<sharedListeners>` węzły są wyświetlane w następującym kodzie:
+ Examples of `<sources>`, `<switches>`, and `<sharedListeners>` nodes are shown in the following code:
 
 ```xml
 <configuration>
@@ -86,25 +86,25 @@ W sekcjach konfiguracji dziennika znajdują się w `<system.diagnostics>` węzł
 </configuration>
 ```
 
-## <a name="changing-log-settings-after-deployment"></a>Zmiana ustawień dziennika po wdrożeniu
+## <a name="changing-log-settings-after-deployment"></a>Changing Log Settings after Deployment
 
-Podczas opracowywania aplikacji, jego ustawienia konfiguracji są przechowywane w pliku app.config, jak pokazano w przykładach. Po wdrożeniu aplikacji będzie możliwe skonfigurowanie dziennika, edytując plik konfiguracji. W przypadku aplikacji z systemem Windows jest nazwę tego pliku *applicationName*. exe.config i musi znajdować się w tym samym folderze co plik wykonywalny. Dla aplikacji sieci Web jest skojarzony z projektem pliku Web.config.
+When you develop an application, its configuration settings are stored in the app.config file, as shown in the examples above. After you deploy your application, you can still configure the log by editing the configuration file. In a Windows-based application, this file's name is *applicationName*.exe.config, and it must reside in the same folder as the executable file. For a Web application, this is the Web.config file associated with the project.
 
-Gdy aplikacja wykonuje kod, który tworzy wystąpienie klasy po raz pierwszy, sprawdza plik konfiguracji, aby uzyskać informacje o obiekcie. Aby uzyskać `Log` obiektu, dzieje się po raz pierwszy `Log` dostępu do obiektu. System sprawdza, czy plik konfiguracyjny tylko raz dla każdego określonego obiektu — aplikacja tworzy obiekt po raz pierwszy. Dlatego może być konieczne ponowne uruchomienie aplikacji, aby zmiany zaczęły obowiązywać.
+When your application executes the code that creates an instance of a class for the first time, it checks the configuration file for information about the object. For the `Log` object, this happens the first time the `Log` object is accessed. The system examines the configuration file only once for any particular object—the first time your application creates the object. Therefore, you may need to restart the application for the changes to take effect.
 
-We wdrożonej aplikacji włączysz kod śledzenia przez ponowne skonfigurowanie obiektami przełącznika, przed uruchomieniem aplikacji. Zazwyczaj ten proces obejmuje Włączanie obiektami przełącznika i wyłączyć lub zmieniając poziomy śledzenia, a następnie ponownie uruchomić aplikację.
+In a deployed application, you enable trace code by reconfiguring switch objects before your application starts. Typically, this involves turning the switch objects on and off or by changing the tracing levels, and then restarting your application.
 
 ## <a name="security-considerations"></a>Zagadnienia dotyczące zabezpieczeń
 
-Podczas zapisywania danych w dzienniku, należy wziąć pod uwagę następujące czynności:
+Consider the following when writing data to the log:
 
-- **Wyciekiem informacje o użytkowniku.** Upewnij się, że zapisów aplikacji tylko zatwierdzone informacji w dzienniku. Na przykład może być możliwa do dziennika aplikacji, które ma zawierać nazwy użytkownika, ale nie hasło użytkownika.
+- **Avoid leaking user information.** Ensure that your application writes only approved information to the log. For example, it may be acceptable for the application log to contain user names, but not user passwords.
 
-- **Lokalizacje dziennika zapewnić bezpieczeństwo.** Żadnych dzienników, która zawiera potencjalnie poufne informacje powinny być przechowywane w bezpiecznej lokalizacji.
+- **Make log locations secure.** Any log that contains potentially sensitive information should be stored in a secure location.
 
-- **Należy unikać mylących informacji.** Ogólnie rzecz biorąc aplikację należy zweryfikować wszystkie dane wprowadzane przez użytkownika przed rozpoczęciem korzystania z tych danych. Obejmuje to zapisywanie danych w dzienniku aplikacji.
+- **Avoid misleading information.** In general, your application should validate all data entered by a user before using that data. This includes writing data to the application log.
 
-- **Należy unikać "odmowa usługi".** Jeśli aplikacja zapisuje zbyt dużej ilości informacji w dzienniku, jest wypełnienie dziennika lub ułatwić znajdowanie trudne do ważnych informacji.
+- **Avoid denial of service.** If your application writes too much information to the log, it could fill the log or make finding important information difficult.
 
 ## <a name="see-also"></a>Zobacz także
 

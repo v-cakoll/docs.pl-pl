@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Znajdowanie w pełni kwalifikowanej nazwy zestawu'
+title: "How to: Find an assembly's fully qualified name"
 ms.date: 08/20/2019
 helpviewer_keywords:
 - names [.NET Framework], fully qualified type names
@@ -10,24 +10,24 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: bf24db03ca1dc4fbf3041f5e83d740029d87928f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740499"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348195"
 ---
-# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>Instrukcje: Znajdowanie w pełni kwalifikowanej nazwy zestawu
+# <a name="how-to-find-an-assemblys-fully-qualified-name"></a>How to: Find an assembly's fully qualified name
 
-Aby odnaleźć w pełni kwalifikowaną nazwę zestawu .NET Framework w globalnej pamięci podręcznej zestawów, użyj narzędzia globalnej pamięci podręcznej zestawów ([Gacutil. exe](../../framework/tools/gacutil-exe-gac-tool.md)). Zobacz [jak to zrobić: wyświetlanie zawartości globalnej pamięci podręcznej zestawów](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
+To discover the fully qualified name of a .NET Framework assembly in the global assembly cache, use the Global Assembly Cache tool ([Gacutil.exe](../../framework/tools/gacutil-exe-gac-tool.md)). See [How to: View the contents of the global assembly cache](../../framework/app-domains/how-to-view-the-contents-of-the-gac.md).
 
-W przypadku zestawów .NET Core i dla zestawów .NET Framework, które nie znajdują się w globalnej pamięci podręcznej zestawów, można uzyskać w pełni kwalifikowaną nazwę zestawu na wiele sposobów:
+For .NET Core assemblies, and for .NET Framework assemblies that aren't in the global assembly cache, you can get the fully qualified assembly name in a number of ways:
 
-- Można użyć kodu do wyprowadzania informacji do konsoli lub do zmiennej lub użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) do sprawdzenia metadanych zestawu, który zawiera w pełni kwalifikowaną nazwę.
+- You can use code to output the information to the console or to a variable, or you can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.
 
-- Jeśli zestaw jest już załadowany przez aplikację, możesz pobrać wartość właściwości <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>, aby uzyskać w pełni kwalifikowaną nazwę. Można użyć właściwości <xref:System.Type.Assembly> <xref:System.Type> zdefiniowanej w tym zestawie, aby pobrać odwołanie do obiektu <xref:System.Reflection.Assembly>. Przykład stanowi ilustrację.
+- If the assembly is already loaded by the application, you can retrieve the value of the <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> property to get the fully qualified name. You can use the <xref:System.Type.Assembly> property of a <xref:System.Type> defined in that assembly to retrieve a reference to the <xref:System.Reflection.Assembly> object. Przykład stanowi ilustrację.
 
-- Jeśli znasz ścieżkę systemu plików zestawu, możesz `static` wywołać metodę <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> (C#) lub `Shared` (Visual Basic), aby uzyskać w pełni kwalifikowaną nazwę zestawu. Poniżej przedstawiono prosty przykład.
+- If you know the assembly's file system path, you can call the `static` (C#) or `Shared` (Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> method to get the fully qualified assembly name. The following is a simple example.
 
   ```csharp
   using System;
@@ -56,13 +56,13 @@ W przypadku zestawów .NET Core i dla zestawów .NET Framework, które nie znajd
   '   UtilityLibrary, Version=1.1.0.0, Culture=neutral, PublicKeyToken=null
   ```
 
-- Do sprawdzenia metadanych zestawu, który zawiera w pełni kwalifikowaną nazwę, można użyć [Ildasm. exe (Il dezasembler)](../../framework/tools/ildasm-exe-il-disassembler.md) .
+- You can use the [Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) to examine the assembly's metadata, which contains the fully qualified name.
 
-Aby uzyskać więcej informacji na temat ustawiania atrybutów zestawu, takich jak wersja, kultura i nazwa zestawu, zobacz [Ustawianie atrybutów zestawu](set-attributes.md). Aby uzyskać więcej informacji na temat nadawania silnej nazwy zestawu, zobacz [Tworzenie i używanie zestawów o silnej nazwie](create-use-strong-named.md).
+For more information about setting assembly attributes such as version, culture, and assembly name, see [Set assembly attributes](set-attributes.md). For more information about giving an assembly a strong name, see [Create and use strong-named assemblies](create-use-strong-named.md).
 
 ## <a name="example"></a>Przykład
 
-Poniższy przykład pokazuje, jak wyświetlić w pełni kwalifikowaną nazwę zestawu zawierającego określoną klasę w konsoli programu. Używa właściwości <xref:System.Type.Assembly?displayProperty=nameWithType>, aby pobrać odwołanie do zestawu z typu, który jest zdefiniowany w tym zestawie.
+The following example shows how to display the fully qualified name of an assembly containing a specified class to the console. It uses the <xref:System.Type.Assembly?displayProperty=nameWithType> property to retrieve a reference to an assembly from a type that's defined in that assembly.
 
 ```cpp
 #using <System.dll>
@@ -106,7 +106,6 @@ class asmname
 ```
 
 ```vb
-Imports System
 Imports System.Reflection
 
 Class asmname
@@ -121,8 +120,8 @@ End Class
 
 ## <a name="see-also"></a>Zobacz także
 
-- [Nazwy zestawów](names.md)
-- [Tworzenie zestawów](create.md)
-- [Tworzenie i używanie zestawów o silnych nazwach](create-use-strong-named.md)
-- [Globalna pamięć podręczna zestawów](../../framework/app-domains/gac.md)
-- [Jak środowisko uruchomieniowe lokalizuje zestawy](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Assembly names](names.md)
+- [Create assemblies](create.md)
+- [Create and use strong-named assemblies](create-use-strong-named.md)
+- [Global assembly cache](../../framework/app-domains/gac.md)
+- [How the runtime locates assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md)

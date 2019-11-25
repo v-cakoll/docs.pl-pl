@@ -2,12 +2,12 @@
 title: Rozwiązywanie problemów dotyczących konfiguracji
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321354"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281610"
 ---
 # <a name="troubleshooting-setup-issues"></a>Rozwiązywanie problemów dotyczących konfiguracji
 W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem programu Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem progra
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SMSvcHost 3.0.0.0  
   
-- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC mostek 3.0.0.0  
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
  Klucze nie są ponownie tworzone w przypadku uruchomienia naprawy przy użyciu Instalatora .NET Framework 3,0 uruchomionego z apletu **Dodaj/Usuń programy** w **Panelu sterowania**. Aby poprawnie utworzyć te klucze, użytkownik musi odinstalować i ponownie zainstalować .NET Framework 3,0.  
   
@@ -57,17 +57,17 @@ W tym temacie opisano sposób rozwiązywania problemów z konfigurowaniem progra
  Napraw instalację .NET Framework 3,0 przy użyciu apletu **Dodaj/Usuń programy** znajdującego się w **Panelu sterowania**lub odinstaluj/ponownie zainstaluj .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Naprawianie .NET Framework 3,0 po zainstalowaniu .NET Framework 3,5 usuwa elementy konfiguracji wprowadzone przez .NET Framework 3,5 w pliku Machine. config  
- Jeśli nastąpi naprawa .NET Framework 3,0 po zainstalowaniu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], elementy konfiguracji wprowadzone przez [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] w pliku Machine. config zostaną usunięte. Plik Web. config pozostaje jednak nienaruszony. Obejście polega na naprawieniu [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] po tym za pośrednictwem protokołu ARP lub użyciu [narzędzia rejestracji usługi przepływu pracy (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) z przełącznikiem `/c`.  
+ W przypadku naprawienia .NET Framework 3,0 po zainstalowaniu .NET Framework 3,5 elementy konfiguracji wprowadzone przez .NET Framework 3,5 w pliku Machine. config zostaną usunięte. Plik Web. config pozostaje jednak nienaruszony. Obejście polega na naprawieniu .NET Framework 3,5 po tym za pośrednictwem protokołu ARP lub użyciu [narzędzia rejestracji usługi przepływu pracy (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) z przełącznikiem `/c`.  
   
  [Narzędzie rejestracji usługi przepływu pracy (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) można znaleźć pod adresem%windir%\Microsoft.NET\framework\v3.5\ lub%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Skonfiguruj prawidłowo usługi IIS dla programu WCF/WF webhost po zainstalowaniu .NET Framework 3,5  
- W przypadku instalacji [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] nie można skonfigurować dodatkowych ustawień konfiguracji usług IIS związanych z usługą WCF, rejestruje błąd w dzienniku instalacji i kontynuuje działanie. Każda próba uruchomienia aplikacji obiektów WorkflowService zakończy się niepowodzeniem, ponieważ brakuje wymaganych ustawień konfiguracji. Na przykład ładowanie usługi xoml lub reguł może zakończyć się niepowodzeniem.  
+ W przypadku instalacji .NET Framework 3,5 nie można skonfigurować dodatkowych ustawień konfiguracji usług IIS związanych z WCF, rejestruje błąd w dzienniku instalacji i kontynuuje działanie. Każda próba uruchomienia aplikacji obiektów WorkflowService zakończy się niepowodzeniem, ponieważ brakuje wymaganych ustawień konfiguracji. Na przykład ładowanie usługi xoml lub reguł może zakończyć się niepowodzeniem.  
   
  Aby obejść ten problem, użyj [narzędzia rejestracji usługi przepływu pracy (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) z przełącznikiem `/c`, aby prawidłowo skonfigurować mapy skryptów usług IIS na tym komputerze. [Narzędzie rejestracji usługi przepływu pracy (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) można znaleźć pod adresem%windir%\Microsoft.NET\framework\v3.5\ lub%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Nie można załadować typu "System. ServiceModel. Activation. HttpModule" z zestawu "System. ServiceModel, Version 3.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089"  
- Ten błąd występuje, gdy zainstalowano [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], a następnie Aktywacja HTTP WCF jest włączona. Aby rozwiązać problem, uruchom następujący wiersz polecenia z wewnątrz wiersz polecenia dla deweloperów programu Visual Studio:  
+ Ten błąd występuje, gdy zainstalowano .NET Framework 4, a następnie Aktywacja HTTP WCF jest włączona. Aby rozwiązać problem, uruchom następujący wiersz polecenia z wewnątrz wiersz polecenia dla deweloperów programu Visual Studio:  
   
 ```console
 aspnet_regiis.exe -i -enable  

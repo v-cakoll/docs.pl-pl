@@ -1,19 +1,19 @@
 ---
-title: <permission> (Visual Basic)
+title: <permission>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 904d573514bf35b773d47321b7fd3b6a86e90262
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524703"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352261"
 ---
-# <a name="permission-visual-basic"></a>> \<permission (Visual Basic)
-Określa wymagane uprawnienie dla elementu członkowskiego.  
+# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
+Specifies a required permission for the member.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -23,18 +23,18 @@ Określa wymagane uprawnienie dla elementu członkowskiego.
   
 ## <a name="parameters"></a>Parametry  
  `member`  
- Odwołanie do elementu członkowskiego lub pola, które jest dostępne do wywołania z bieżącego środowiska kompilacji. Kompilator sprawdza, czy dany element kodu istnieje i tłumaczy `member` na nazwę elementu kanonicznego w wyjściowym kodzie XML. Ujmij `member` w cudzysłów ("").  
+ A reference to a member or field that is available to be called from the current compilation environment. The compiler checks that the given code element exists and translates `member` to the canonical element name in the output XML. Enclose `member` in quotation marks (" ").  
   
  `description`  
- Opis dostępu do elementu członkowskiego.  
+ A description of the access to the member.  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj znacznika `<permission>`, aby udokumentować dostęp do elementu członkowskiego. Użyj klasy <xref:System.Security.PermissionSet>, aby określić dostęp do elementu członkowskiego.  
+ Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
   
- Kompiluj z [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) , aby przetwarzać komentarze dokumentacji do pliku.  
+ Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.  
   
 ## <a name="example"></a>Przykład  
- W tym przykładzie używa znacznika `<permission>`, aby opisać, że <xref:System.Security.Permissions.FileIOPermission> jest wymagany przez metodę `ReadFile`.  
+ This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

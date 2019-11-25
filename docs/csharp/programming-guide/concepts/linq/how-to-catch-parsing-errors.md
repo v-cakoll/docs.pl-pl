@@ -1,18 +1,18 @@
 ---
-title: 'Instrukcje: Błędy analizy catch (C#)'
+title: Jak przechwytywać błędy analizy (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 4195ff50d1b4d23cd9eb07fc27f20861d1504672
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1a05037892061dec85e7837472e8ec13e076724b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70204146"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141479"
 ---
-# <a name="how-to-catch-parsing-errors-c"></a>Instrukcje: Błędy analizy catch (C#)
+# <a name="how-to-catch-parsing-errors-c"></a>Jak przechwytywać błędy analizy (C#)
 W tym temacie pokazano, jak wykryć źle sformułowany lub nieprawidłowy kod XML.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]jest zaimplementowany przy <xref:System.Xml.XmlReader>użyciu. Jeśli nieprawidłowo sformułowany lub nieprawidłowy kod XML jest [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]przenoszona do <xref:System.Xml.XmlReader> , Klasa bazowa zgłosi wyjątek. Różne metody, które analizują XML, takie <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>jak, nie przechwytują wyjątku; wyjątek może zostać przechwycony przez aplikację.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest implementowana przy użyciu <xref:System.Xml.XmlReader>. Jeśli nieprawidłowo sformułowany lub nieprawidłowy kod XML jest przenoszona do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], bazowa Klasa <xref:System.Xml.XmlReader> zgłosi wyjątek. Różne metody, które analizują XML, takie jak <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, nie przechwytują wyjątku; wyjątek może następnie być przechwytywany przez aplikację.  
   
 ## <a name="example"></a>Przykład  
  Następujący kod próbuje przeanalizować nieprawidłowego kodu XML:  
@@ -40,5 +40,5 @@ catch (System.Xml.XmlException e)
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   
- Informacje o <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>wyjątkach <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> <xref:System.Xml.XmlReader> , <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>wktórych można oczekiwać,, ,imetodzgłaszania,znajdująsięwdokumentacji.<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
+ Informacje o wyjątkach, w których można oczekiwać, że <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>, <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>i <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> metod zgłaszania, zapoznaj się z dokumentacją <xref:System.Xml.XmlReader>.  
   

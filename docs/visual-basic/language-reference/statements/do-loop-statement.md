@@ -1,5 +1,5 @@
 ---
-title: Do...Loop — Instrukcja (Visual Basic)
+title: Do...Loop — Instrukcja
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Do
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - loops, exiting
 - Loop keyword [Visual Basic], Do...Loop statement
 ms.assetid: 892f9096-b3e2-4aee-834d-83bc4e2c379d
-ms.openlocfilehash: eff5239e07ca27f40ece5af68f46c491be91cf09
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9384cbb355189be448fa4b8d274721b4a7ca6a20
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583439"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351254"
 ---
 # <a name="doloop-statement-visual-basic"></a>Do...Loop — Instrukcja (Visual Basic)
-Powtarza blok instrukcji, gdy warunek `Boolean` jest `True` lub do momentu, aż stanie się `True`.  
+Repeats a block of statements while a `Boolean` condition is `True` or until the condition becomes `True`.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -54,55 +54,55 @@ Loop { While | Until } condition
   
 |Termin|Definicja|  
 |---|---|  
-|`Do`|Wymagany. Uruchamia definicję pętli `Do`.|  
-|`While`|Wymagane, chyba że zostanie użyta `Until`. Powtarzaj pętlę do momentu `False` `condition`.|  
-|`Until`|Wymagane, chyba że zostanie użyta `While`. Powtarzaj pętlę do momentu `True` `condition`.|  
-|`condition`|Opcjonalny. wyrażenie `Boolean`. Jeśli `condition` jest `Nothing`, Visual Basic traktuje ją jako `False`.|  
-|`statements`|Opcjonalny. Co najmniej jednej instrukcji, która jest powtarzana w czasie lub do, `condition` jest `True`.|  
-|`Continue Do`|Opcjonalny. Przenosi formant do następnej iteracji pętli `Do`.|  
-|`Exit Do`|Opcjonalny. Przenosi kontrolę z pętli `Do`.|  
-|`Loop`|Wymagany. Kończy definicję pętli `Do`.|  
+|`Do`|Wymagany. Starts the definition of the `Do` loop.|  
+|`While`|Required unless `Until` is used. Repeat the loop until `condition` is `False`.|  
+|`Until`|Required unless `While` is used. Repeat the loop until `condition` is `True`.|  
+|`condition`|Opcjonalny. `Boolean` expression. If `condition` is `Nothing`, Visual Basic treats it as `False`.|  
+|`statements`|Opcjonalny. One or more statements that are repeated while, or until, `condition` is `True`.|  
+|`Continue Do`|Opcjonalny. Transfers control to the next iteration of the `Do` loop.|  
+|`Exit Do`|Opcjonalny. Transfers control out of the `Do` loop.|  
+|`Loop`|Wymagany. Terminates the definition of the `Do` loop.|  
   
 ## <a name="remarks"></a>Uwagi  
- Użyj struktury `Do...Loop`, gdy chcesz powtarzać zestaw instrukcji przez nieokreśloną liczbę razy, aż warunek zostanie spełniony. Jeśli chcesz powtórzyć instrukcje określoną liczbę razy, [dla... Kolejną instrukcją](../../../visual-basic/language-reference/statements/for-next-statement.md) jest zwykle lepszy wybór.  
+ Use a `Do...Loop` structure when you want to repeat a set of statements an indefinite number of times, until a condition is satisfied. If you want to repeat the statements a set number of times, the [For...Next Statement](../../../visual-basic/language-reference/statements/for-next-statement.md) is usually a better choice.  
   
- Aby określić `condition`, ale nie oba te elementy, można użyć opcji `While` lub `Until`.  
+ You can use either `While` or `Until` to specify `condition`, but not both.  
   
- @No__t_0 można testować tylko raz, na początku lub na końcu pętli. Jeśli testujesz `condition` na początku pętli (w instrukcji `Do`), pętla może nie działać nawet jeden raz. Jeśli testujesz na końcu pętli (w instrukcji `Loop`), pętla zawsze jest uruchamiana co najmniej jeden raz.  
+ You can test `condition` only one time, at either the start or the end of the loop. If you test `condition` at the start of the loop (in the `Do` statement), the loop might not run even one time. If you test at the end of the loop (in the `Loop` statement), the loop always runs at least one time.  
   
- Warunek zazwyczaj wynika z porównania dwóch wartości, ale może to być dowolne wyrażenie, które daje w wyniku wartość [typu Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md) (`True` lub `False`). Obejmuje to wartości innych typów danych, takich jak typy liczbowe, które zostały przekonwertowane na `Boolean`.  
+ The condition usually results from a comparison of two values, but it can be any expression that evaluates to a [Boolean Data Type](../../../visual-basic/language-reference/data-types/boolean-data-type.md) value (`True` or `False`). This includes values of other data types, such as numeric types, that have been converted to `Boolean`.  
   
- Pętle `Do` można zagnieżdżać, umieszczając jedną pętlę w innej. Można również zagnieżdżać różne rodzaje struktur kontroli w obrębie siebie. Aby uzyskać więcej informacji, zobacz [struktury formantów zagnieżdżonych](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
+ You can nest `Do` loops by putting one loop within another. You can also nest different kinds of control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).  
   
 > [!NOTE]
-> Struktura `Do...Loop` zapewnia większą elastyczność niż [while... Instrukcja End while](../../../visual-basic/language-reference/statements/while-end-while-statement.md) , ponieważ umożliwia podjęcie decyzji, czy przerwać pętlę, gdy `condition` przestaje być `True` lub gdy po raz pierwszy stanie się `True`. Umożliwia również przetestowanie `condition` na początku lub na końcu pętli.  
+> The `Do...Loop` structure gives you more flexibility than the [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) because it enables you to decide whether to end the loop when `condition` stops being `True` or when it first becomes `True`. It also enables you to test `condition` at either the start or the end of the loop.  
   
-## <a name="exit-do"></a>Zakończ działanie  
- Instrukcja [exiter](../../../visual-basic/language-reference/statements/exit-statement.md) może zapewnić alternatywny sposób wyjścia `Do…Loop`. `Exit Do` natychmiast przenosi kontrolę do instrukcji, która następuje po instrukcji `Loop`.  
+## <a name="exit-do"></a>Exit Do  
+ The [Exit Do](../../../visual-basic/language-reference/statements/exit-statement.md) statement can provide an alternative way to exit a `Do…Loop`. `Exit Do` transfers control immediately to the statement that follows the `Loop` statement.  
   
- `Exit Do` jest często używana po ocenie pewnego warunku, na przykład w strukturze `If...Then...Else`. Możesz chcieć zakończyć pętlę, jeśli wykryjesz warunek, który sprawia, że nie jest to konieczne lub niemożliwe do kontynuowania iteracji, na przykład błędnej wartości lub żądania zakończenia. Jednym z `Exit Do` jest przetestowanie stanu, który może spowodować nieskończoną *pętlę*, która jest pętlą, która może uruchamiać dużą lub nawet nieskończoną liczbę razy. Możesz użyć `Exit Do`, aby wyjść z pętli.  
+ `Exit Do` is often used after some condition is evaluated, for example in an `If...Then...Else` structure. You might want to exit a loop if you detect a condition that makes it unnecessary or impossible to continue iterating, such as an erroneous value or a termination request. One use of `Exit Do` is to test for a condition that could cause an *endless loop*, which is a loop that could run a large or even infinite number of times. You can use `Exit Do` to escape the loop.  
   
- Możesz dołączyć dowolną liczbę instrukcji `Exit Do` w dowolnym miejscu `Do…Loop`.  
+ You can include any number of `Exit Do` statements anywhere in a `Do…Loop`.  
   
- Gdy jest używany w zagnieżdżonych pętlach `Do`, `Exit Do` transferuje kontrolę z wewnętrznej pętli i na następny wyższy poziom zagnieżdżenia.  
+ When used within nested `Do` loops, `Exit Do` transfers control out of the innermost loop and into the next higher level of nesting.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie instrukcje w pętli są nadal wykonywane, dopóki zmienna `index` nie będzie większa niż 10. Klauzula `Until` znajduje się na końcu pętli.  
+ In the following example, the statements in the loop continue to run until the `index` variable is greater than 10. The `Until` clause is at the end of the loop.  
   
  [!code-vb[VbVbalrStatements#131](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#131)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie jest używana klauzula `While` zamiast klauzuli `Until`, a `condition` jest testowana na początku pętli, a nie na końcu.  
+ The following example uses a `While` clause instead of an `Until` clause, and `condition` is tested at the start of the loop instead of at the end.  
   
  [!code-vb[VbVbalrStatements#132](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#132)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie `condition` przerywa pętlę, gdy zmienna `index` jest większa niż 100. Instrukcja `If` w pętli, jednak powoduje, że instrukcja `Exit Do` przerywa pętlę, gdy zmienna indeksu jest większa niż 10.  
+ In the following example, `condition` stops the loop when the `index` variable is greater than 100. The `If` statement in the loop, however, causes the `Exit Do` statement to stop the loop when the index variable is greater than 10.  
   
  [!code-vb[VbVbalrStatements#133](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#133)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład odczytuje wszystkie wiersze w pliku tekstowym. Metoda <xref:System.IO.File.OpenText%2A> otwiera plik i zwraca <xref:System.IO.StreamReader>, który odczytuje znaki. W warunku `Do...Loop` Metoda <xref:System.IO.StreamReader.Peek%2A> `StreamReader` określa, czy istnieją dodatkowe znaki.  
+ The following example reads all lines in a text file. The <xref:System.IO.File.OpenText%2A> method opens the file and returns a <xref:System.IO.StreamReader> that reads the characters. In the `Do...Loop` condition, the <xref:System.IO.StreamReader.Peek%2A> method of the `StreamReader` determines whether there are any additional characters.  
   
  [!code-vb[VbVbalrStatements#134](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class10.vb#134)]  
   

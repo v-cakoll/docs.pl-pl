@@ -1,16 +1,16 @@
 ---
-title: 'Instrukcje: Zmień przestrzeń nazw dla całego drzewa XML (C#)'
+title: Jak zmienić przestrzeń nazw dla całego drzewa XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 1584ff3b-c77d-4241-ab62-80adfb7bfc1b
-ms.openlocfilehash: 80ab1f3b1a6df1debc3d94e89d3e0f3a8d78de7f
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 6462cbb5001682b6a464c1446f8ae6de3c5669d1
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709978"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141509"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Instrukcje: Zmień przestrzeń nazw dla całego drzewa XML (C#)
-Czasami trzeba programistycznie zmienić przestrzeń nazw dla elementu lub atrybutu. Ułatwia to LINQ to XML. <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> Właściwość może być ustawiona. Nie można ustawić <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> właściwości,alemożnałatwoskopiowaćatrybutydo,usunąćistniejąceatrybuty,anastępniedodaćnoweatrybuty,któreznajdująsięwnowymżądanym<xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType> obszarze nazw.  
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-c"></a>Jak zmienić przestrzeń nazw dla całego drzewa XML (C#)
+Czasami trzeba programistycznie zmienić przestrzeń nazw dla elementu lub atrybutu. Ułatwia to LINQ to XML. Właściwość <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType> można ustawić. Nie można ustawić właściwości <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, ale można łatwo skopiować atrybuty do <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, usunąć istniejące atrybuty, a następnie dodać nowe atrybuty, które znajdują się w nowym żądanym obszarze nazw.  
   
  Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   

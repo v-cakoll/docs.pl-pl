@@ -1,5 +1,5 @@
 ---
-title: Odczyt z plików w Visual Basic
+title: Odczyt z plików
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data [Visual Basic], reading from files
@@ -8,60 +8,64 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: afba0df89aabad7ddf8b641fbab421800718deb3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593370"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333821"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Odczyt z plików w Visual Basic
-W tej sekcji opisano sposób wykonywania zadań, które są skojarzone z odczyt z plików.  
+
+This section explains how to perform tasks that are associated with reading from files.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Instrukcje: Odczyt z plików tekstowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
- Pokazuje, jak można odczytać z pliku tekstowego.  
+
+ [How to: Read from Text Files](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)  
+ Demonstrates how to read from a text file.  
   
- [Instrukcje: Odczyt z plików tekstowych rozdzielonych przecinkami](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
- Pokazuje, jak odczytywać rozdzielany plik tekstowy.  
+ [Instrukcje: odczyt z rozdzielonych przecinkami plików testowych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)  
+ Demonstrates how to read from a delimited text file.  
   
- [Instrukcje: Odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
- Pokazuje, jak Odczyt z plików testowych o stałej szerokości.  
+ [Instrukcje: odczyt z plików testowych o stałej szerokości](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+ Demonstrates how to read from a fixed-width text file.  
   
- [Instrukcje: Odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
- Pokazuje, jak można odczytać z pliku tekstowego w wielu formatach.  
+ [Instrukcje: odczyt z plików tekstowych w wielu formatach](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)  
+ Demonstrates how to read from a text file with multiple formats.  
   
- [Instrukcje: Odczyt z plików binarnych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
- Pokazuje, jak można odczytać z pliku binarnego.  
+ [Instrukcje: odczyt z plików binarnych](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-binary-files.md)  
+ Demonstrates how to read from a binary file.  
   
- [Instrukcje: Odczytywanie tekstu z plików za pomocą StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
- Pokazuje sposób użycia <xref:System.IO.StreamReader> można odczytać z pliku.  
+ [Instrukcje: odczyt tekstu z plików za pomocą StreamReader](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
+ Demonstrates how to use a <xref:System.IO.StreamReader> to read from a file.  
   
 ## <a name="reference"></a>Tematy pomocy  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- W tym artykule opisano `My.Computer.FileSystem` obiektu i jego członków.  
+ Describes the `My.Computer.FileSystem` object and its members.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>  
- W tym artykule opisano `ReadAllText` metody.  
+ Describes the `ReadAllText` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>  
- W tym artykule opisano `ReadAllBytes` metody.  
+ Describes the `ReadAllBytes` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>  
- W tym artykule opisano `OpenTextFieldParser` metody.  
+ Describes the `OpenTextFieldParser` method.  
   
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
- W tym artykule opisano `OpenTextFileReader` metody.  
+ Describes the `OpenTextFileReader` method.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
+
  [Zapisywanie danych w schowku i odczytywanie ich z niego](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
- Wyjaśnia, jak wykonywać zadania, które są skojarzone z `My.Computer.Clipboard`, takich jak Odczyt danych z lub zapisu danych do Schowka.  
+ Explains how to perform tasks that are associated with `My.Computer.Clipboard`, such as reading data from or writing data to the Clipboard.  
   
  [Analizowanie plików tekstowych za pomocą obiektu TextFieldParser](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
- Zawiera omówienie odczyt plików tekstowych za pomocą `TextFieldParser` obiektu.  
+ Provides an overview of reading text files with the `TextFieldParser` object.  
   
- [Przewodnik: Manipulowanie plikami i katalogami w Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
- Pokazuje sposób użycia `My` funkcji z plikami i katalogami.  
+ [Walkthrough: Manipulating Files and Directories in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
+ Demonstrates how to use the `My` feature with files and directories.  
   
- [Przewodnik: Manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Pokazuje sposób użycia metod .NET Framework z plikami i katalogami.
+ [Przewodnik: manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ Demonstrates how to use .NET Framework methods with files and directories.

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0d0d88e3b527beacfa5f879027e696aa75b18147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458238"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283681"
 ---
 # <a name="thumb-styles-and-templates"></a>Style i szablony miniatury
 
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Primitives.Thumb>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.Primitives.Thumb>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="thumb-parts"></a>Części kciuka
 
@@ -30,9 +30,9 @@ Poniższa tabela zawiera listę stanów wizualnych dla kontrolki <xref:System.Wi
 
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|
 |-|-|-|
-|Typow|CommonStates|Stan domyślny.|
+|Normalne|CommonStates|Stan domyślny.|
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad kontrolką.|
-|Styczn|CommonStates|Kontrolka zostanie naciśnięty.|
+|Naciśnięto|CommonStates|Kontrolka zostanie naciśnięty.|
 |Wyłączone|CommonStates|Kontrolka jest wyłączona.|
 |Fokus|FocusStates|Kontrolka ma fokus.|
 |Bez fokusu|FocusStates|Kontrolka nie ma fokusu.|
@@ -59,4 +59,4 @@ Aby uzyskać pełny przykład, zobacz [Style z przykładem elementy ControlTempl
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

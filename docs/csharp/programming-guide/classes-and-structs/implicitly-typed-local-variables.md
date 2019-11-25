@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dab708bfbc33458bc2664c0d04757f0badcc2575
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419385"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141599"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Niejawnie wpisane zmienne lokalneC# (Przewodnik programowania)
 
@@ -30,13 +30,13 @@ Słowo kluczowe `var` może być używane w następujących kontekstach:
 - W instrukcji [for](../../language-reference/keywords/for.md) inicjującej.
 
     ```csharp
-    for(var x = 1; x < 10; x++)
+    for (var x = 1; x < 10; x++)
     ```
 
 - W instrukcji inicjującej [foreach](../../language-reference/keywords/foreach-in.md) .
 
     ```csharp
-    foreach(var item in list){...}
+    foreach (var item in list) {...}
     ```
 
 - W instrukcji [using](../../language-reference/keywords/using-statement.md) .
@@ -45,7 +45,7 @@ Słowo kluczowe `var` może być używane w następujących kontekstach:
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Aby uzyskać więcej informacji, zobacz [jak: użyć niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Aby uzyskać więcej informacji, zobacz [jak używać niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>typy var i Anonymous
 
@@ -63,7 +63,7 @@ Następujące ograniczenia dotyczą deklaracji zmiennej o typie określonym niej
 
 - nie można używać `var` dla pól w zakresie klasy.
 
-- Zmienne zadeklarowane za pomocą `var` nie mogą być używane w wyrażeniu inicjalizacji. Innymi słowy, to wyrażenie jest prawne`: int i = (i = 20);` ale to wyrażenie powoduje błąd czasu kompilacji: `var i = (i = 20);`
+- Zmienne zadeklarowane za pomocą `var` nie mogą być używane w wyrażeniu inicjalizacji. Innymi słowy, to wyrażenie jest dozwolone: `int i = (i = 20);` ale to wyrażenie powoduje błąd czasu kompilacji: `var i = (i = 20);`
 
 - W tej samej instrukcji nie można zainicjować wielu niejawnie wpisanych zmiennych.
 
@@ -95,7 +95,7 @@ Jednak użycie `var` ma co najmniej potencjał, aby kod był trudniejszy do zroz
 
 - [C#Odwoła](../../language-reference/index.md)
 - [Niejawnie wpisane tablice](../arrays/implicitly-typed-arrays.md)
-- [Instrukcje: użycie niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Jak używać niejawnie wpisanych zmiennych lokalnych i tablic w wyrażeniu zapytania](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Typy anonimowe](anonymous-types.md)
 - [Inicjatory obiektów i kolekcji](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)

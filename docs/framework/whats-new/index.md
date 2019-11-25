@@ -8,21 +8,21 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454986"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281653"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co nowego w .NET Framework
 
 Ten artykuł podsumowuje najważniejsze nowe funkcje i ulepszenia w następujących wersjach .NET Framework:
 
-- [.NET Framework 4,8](#v48)
+- [.NET Framework 4.8](#v48)
 - [.NET Framework 4.7.2](#v472)
 - [.NET Framework 4.7.1](#v471)
-- [.NET Framework 4,7](#v47)
+- [.NET Framework 4.7](#v47)
 - [.NET Framework 4.6.2](#v462)
 - [.NET Framework 4.6.1](#v461)
 - [.NET 2015 i .NET Framework 4,6](#v46)
@@ -69,7 +69,7 @@ Ulepszony ułatwienia dostępu, dzięki czemu aplikacja zapewnia odpowiednie śr
 
 #### <a name="base-classes"></a>Klas podstawowych
 
-**Zredukowany wpływ na Szyfrowanie FIPS**. W poprzednich wersjach .NET Framework zarządzane klasy dostawcy usług kryptograficznych, takie jak <xref:System.Security.Cryptography.SHA256Managed> zgłaszają <xref:System.Security.Cryptography.CryptographicException>, gdy biblioteki kryptograficzne systemu są skonfigurowane w trybie FIPS. Te wyjątki są zgłaszane, ponieważ zarządzane wersje klas dostawcy usług kryptograficznych, w przeciwieństwie do bibliotek kryptograficznych systemu, nie zostały poddane FIPS (Federal Information Processing Standards) 140-2 certyfikacji. Ponieważ kilku deweloperów ma swoje komputery deweloperskie w trybie FIPS, wyjątki są często zgłaszane w systemach produkcyjnych.
+**Zredukowany wpływ na Szyfrowanie FIPS**. W poprzednich wersjach .NET Framework zarządzane klasy dostawcy usług kryptograficznych, takie jak <xref:System.Security.Cryptography.SHA256Managed> zgłaszają <xref:System.Security.Cryptography.CryptographicException> w przypadku skonfigurowania systemowych bibliotek kryptograficznych w trybie FIPS. Te wyjątki są zgłaszane, ponieważ zarządzane wersje klas dostawcy usług kryptograficznych, w przeciwieństwie do bibliotek kryptograficznych systemu, nie zostały poddane FIPS (Federal Information Processing Standards) 140-2 certyfikacji. Ponieważ kilku deweloperów ma swoje komputery deweloperskie w trybie FIPS, wyjątki są często zgłaszane w systemach produkcyjnych.
 
 Domyślnie w aplikacjach, które są przeznaczone .NET Framework 4,8, następujące zarządzane klasy kryptograficzne nie zgłaszają już <xref:System.Security.Cryptography.CryptographicException> w tym przypadku:
 
@@ -80,7 +80,7 @@ Domyślnie w aplikacjach, które są przeznaczone .NET Framework 4,8, następuj�
 - <xref:System.Security.Cryptography.RIPEMD160Managed>
 - <xref:System.Security.Cryptography.SHA256Managed>
 
-Zamiast tego te klasy przekierowują operacje kryptograficzne do biblioteki kryptografii systemu. Ta zmiana skutecznie usuwa potencjalne różnice między środowiskami deweloperskimi i środowiskami produkcyjnymi oraz sprawia, że składniki natywne i składniki zarządzane działają w ramach tych samych zasad kryptograficznych. Aplikacje, które są zależne od tych wyjątków, mogą przywrócić poprzednie zachowanie przez ustawienie przełącznika AppContext `Switch.System.Security.Cryptography.UseLegacyFipsThrow` na `true`. Aby uzyskać więcej informacji, zobacz [zarządzane klasy kryptografii nie zgłaszają wyjątku kryptografii w trybie FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
+Zamiast tego te klasy przekierowują operacje kryptograficzne do biblioteki kryptografii systemu. Ta zmiana skutecznie usuwa potencjalne różnice między środowiskami deweloperskimi i środowiskami produkcyjnymi oraz sprawia, że składniki natywne i składniki zarządzane działają w ramach tych samych zasad kryptograficznych. Aplikacje, które są zależne od tych wyjątków, mogą przywrócić poprzednie zachowanie przez ustawienie przełącznika AppContext `Switch.System.Security.Cryptography.UseLegacyFipsThrow` `true`. Aby uzyskać więcej informacji, zobacz [zarządzane klasy kryptografii nie zgłaszają wyjątku kryptografii w trybie FIPS](../migration-guide/retargeting/4.7.2-4.8.md#managed-cryptography-classes-do-not-throw-a-cryptographyexception-in-fips-mode).
 
 **Korzystanie z zaktualizowanej wersji programu ZLib**
 
@@ -98,7 +98,7 @@ Punkty końcowe kondycji są szeroko używane przez narzędzia aranżacji do zar
 
 - Zwraca stan kondycji usługi z kodami odpowiedzi HTTP. W ciągu zapytania można określić kod stanu HTTP dla żądania sondowania kondycji HTTP/GET.
 
-- Publikuje informacje o kondycji usługi. Szczegóły dotyczące usługi, w tym stan usługi, liczniki ograniczenia i pojemność, można wyświetlić za pomocą żądania HTTP/GET z ciągiem zapytania `?health`. Łatwość dostępu do tych informacji jest ważna podczas rozwiązywania problemów z usługą błędna WCF.
+- Publikuje informacje o kondycji usługi. Szczegóły dotyczące usługi, w tym stan usługi, liczniki ograniczenia i pojemność, można wyświetlić za pomocą żądania HTTP/GET z `?health` ciągu zapytania. Łatwość dostępu do tych informacji jest ważna podczas rozwiązywania problemów z usługą błędna WCF.
 
 Istnieją dwa sposoby uwidocznienia punktu końcowego kondycji i publikowania informacji o kondycji usługi WCF:
 
@@ -136,7 +136,7 @@ Istnieją dwa sposoby uwidocznienia punktu końcowego kondycji i publikowania in
   </behaviors>
   ```
 
-Można zbadać stan kondycji usługi za pomocą parametrów zapytania, takich jak `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`), a dla każdego parametru zapytania można określić kod odpowiedzi HTTP. Jeśli kod odpowiedzi HTTP zostanie pominięty dla parametru zapytania, domyślnie używany jest kod odpowiedzi HTTP 503. Na przykład:
+Stan kondycji usługi można zbadać przy użyciu parametrów zapytania, takich jak `OnServiceFailure`, `OnDispatcherFailure`, `OnListenerFailure`, `OnThrottlePercentExceeded`) i dla każdego parametru zapytania można określić kod odpowiedzi HTTP. Jeśli kod odpowiedzi HTTP zostanie pominięty dla parametru zapytania, domyślnie używany jest kod odpowiedzi HTTP 503. Na przykład:
 
 - OnServiceFailure: `https://contoso:81/Service1?health&OnServiceFailure=450`
 
@@ -149,7 +149,7 @@ Parametry zapytania i przykłady:
 
 - OnListenerFailure: `https://contoso:81/Service1?health&OnListenerFailure=465`
 
-  Kod stanu odpowiedzi HTTP 465 jest zwracany, gdy stan dowolnego odbiornika kanałów jest większy niż <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
+  Kod stanu odpowiedzi HTTP 465 jest zwracany, gdy stan któregokolwiek z odbiorników kanału jest większy niż <xref:System.ServiceModel.CommunicationState.Opened?displayProperty=nameWithType>.
 
 - OnThrottlePercentExceeded: `https://contoso:81/Service1?health&OnThrottlePercentExceeded= 70:350,95:500`
 
@@ -161,7 +161,7 @@ Parametry zapytania i przykłady:
 
   - W przeciwnym razie jest zwracana 200.
 
-Stan kondycji usługi może być wyświetlany w formacie HTML przez określenie ciągu zapytania, takiego jak `https://contoso:81/Service1?health` lub w kodzie XML przez określenie ciągu zapytania, takiego jak `https://contoso:81/Service1?health&Xml`. Ciąg zapytania, taki jak `https://contoso:81/Service1?health&NoContent` zwraca pustą stronę HTML.
+Stan kondycji usługi może być wyświetlany w formacie HTML przez określenie ciągu zapytania, takiego jak `https://contoso:81/Service1?health` lub w XML, przez określenie ciągu zapytania, takiego jak `https://contoso:81/Service1?health&Xml`. Ciąg zapytania, taki jak `https://contoso:81/Service1?health&NoContent`, zwraca pustą stronę HTML.
 
 <a name="wpf48" />
 
@@ -171,7 +171,7 @@ Stan kondycji usługi może być wyświetlany w formacie HTML przez określenie 
 
 W .NET Framework 4,8, WPF dodaje obsługę skalowania DPI na poziomie v2 i trybu mieszanego. Dodatkowe informacje na temat programowania wysokiej rozdzielczości DPI można znaleźć [w temacie Tworzenie aplikacji klasycznych o wysokiej rozdzielczości DPI w systemie Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) .
 
-.NET Framework 4,8 usprawnia obsługę hostowanych funkcji HWND i Windows Forms współdziałania w aplikacjach WPF o wysokiej rozdzielczości DPI na platformach obsługujących skalowanie DPI w trybie mieszanym (począwszy od aktualizacji systemu Windows 10 kwietnia 2018). W przypadku, gdy w trybie mieszanym skalowanie wartościowe lub kontrolki Windows Forms są tworzone jako okna z funkcją rozdzielczości DPI, wywoływanie funkcji [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) i [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext)może być obsługiwane w aplikacji WPF w wersji 2 dla monitora i ma rozmiar i odpowiednio skalowane. Taka hostowana zawartość nie jest renderowana w natywnej rozdzielczości DPI; Zamiast tego system operacyjny skaluje hostowaną zawartość do odpowiedniego rozmiaru. Obsługa trybu sygnalizacji DPI na monitor v2 umożliwia również hostowanie formantów WPF (tj. nadrzędnych) w oknie macierzystym w aplikacji o wysokiej rozdzielczości DPI.
+.NET Framework 4,8 usprawnia obsługę hostowanych funkcji HWND i Windows Forms współdziałania w aplikacjach WPF o wysokiej rozdzielczości DPI na platformach obsługujących skalowanie DPI w trybie mieszanym (począwszy od aktualizacji systemu Windows 10 kwietnia 2018). W przypadku, gdy obsługiwane są tryby HWND lub Windows Forms formantów w trybie mieszanym (DPI) przez wywoływanie funkcji [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) i [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), mogą one być hostowane w aplikacji WPF w wersji 2 i odpowiednio skalowane. Taka hostowana zawartość nie jest renderowana w natywnej rozdzielczości DPI; Zamiast tego system operacyjny skaluje hostowaną zawartość do odpowiedniego rozmiaru. Obsługa trybu sygnalizacji DPI na monitor v2 umożliwia również hostowanie formantów WPF (tj. nadrzędnych) w oknie macierzystym w aplikacji o wysokiej rozdzielczości DPI.
 
 Aby włączyć obsługę skalowania wysokiej rozdzielczości DPI w trybie mieszanym, można ustawić następujące przełączniki [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) w pliku konfiguracyjnym aplikacji:
 
@@ -201,7 +201,7 @@ Aby włączyć obsługę skalowania wysokiej rozdzielczości DPI w trybie miesza
 
 - [Klasy bazowe](#core-472)
 - [ASP.NET](#asp-net472)
-- [Sieci](#net472)
+- [Sieć](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
 - [ClickOnce](#clickonce)
@@ -252,7 +252,7 @@ Using rsa = RSA.Create(rsaParameters)
 End Using
 ```
 
-Metody <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> i <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> pozwalają generować nowe klucze <xref:System.Security.Cryptography.DSA> lub <xref:System.Security.Cryptography.RSA> o określonym rozmiarze klucza. Na przykład:
+Metody <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> i <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> pozwalają generować nowe klucze <xref:System.Security.Cryptography.DSA> lub <xref:System.Security.Cryptography.RSA> z określonym rozmiarem klucza. Na przykład:
 
 ```csharp
 using (DSA dsa = DSA.Create(2048))
@@ -314,7 +314,7 @@ Import PFX może opcjonalnie załadować klucze prywatne bezpośrednio z pamięc
 
 - Klucze ładowane w ten sposób są prawie zawsze ładowane za pośrednictwem systemu Windows CNG. W związku z tym obiekty wywołujące muszą uzyskać dostęp do klucza prywatnego przez wywoływanie metod rozszerzających, takich jak [certyfikat. GetRSAPrivateKey ()](xref:System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey%2A). Właściwość <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> nie działa.
 
-- Ponieważ Starsza Właściwość <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> nie działa z certyfikatami, deweloperzy powinni wykonać rygorystyczne testy przed przełączeniem do kluczy tymczasowych.
+- Ponieważ właściwość starszej <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType> nie działa z certyfikatami, deweloperzy powinni wykonać rygorystyczne testy przed przełączeniem do kluczy tymczasowych.
 
 **Programowe tworzenie certyfikatów podpisywania certyfikatów PKCS # 10 oraz certyfikaty klucza publicznego X. 509**
 
@@ -328,7 +328,7 @@ Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.Pkc
 
 **Pozostawienie opakowanego strumienia otwartego po usunięciu CryptoStream**
 
-Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.CryptoStream> ma dodatkowy Konstruktor, który umożliwia <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> nie zamyka zapakowanego strumienia. Aby opuścić zawinięty strumień otwarty po usunięciu wystąpienia <xref:System.Security.Cryptography.CryptoStream>, wywołaj nowy Konstruktor <xref:System.Security.Cryptography.CryptoStream> w następujący sposób:
+Począwszy od .NET Framework 4.7.2, Klasa <xref:System.Security.Cryptography.CryptoStream> ma dodatkowy Konstruktor, który umożliwia <xref:System.Security.Cryptography.CryptoStream.Dispose%2A> nie zamyka zapakowanego strumienia. Aby pozostawić zawinięty strumień otwarty po usunięciu wystąpienia <xref:System.Security.Cryptography.CryptoStream>, wywołaj nowy Konstruktor <xref:System.Security.Cryptography.CryptoStream> w następujący sposób:
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -340,7 +340,7 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **Dekompresja zmian w DeflateStream**
 
-Począwszy od .NET Framework 4.7.2, implementacja operacji dekompresji w klasie <xref:System.IO.Compression.DeflateStream> zmieniła się na domyślnie używać natywnych interfejsów API systemu Windows. Zwykle powoduje to znaczne zwiększenie wydajności.
+Począwszy od .NET Framework 4.7.2, implementacja operacji dekompresji w klasie <xref:System.IO.Compression.DeflateStream> została zmieniona w taki sposób, aby domyślnie używała natywnych interfejsów API systemu Windows. Zwykle powoduje to znaczne zwiększenie wydajności.
 
 Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączona domyślnie dla aplikacji, które są przeznaczone .NET Framework 4.7.2. Aplikacje, które są przeznaczone dla wcześniejszych wersji .NET Framework ale działają w ramach .NET Framework 4.7.2, mogą przystąpić do tego zachowania, dodając następujący [przełącznik AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) do pliku konfiguracji aplikacji:
 
@@ -350,7 +350,7 @@ Obsługa dekompresji przy użyciu interfejsów API systemu Windows jest włączo
 
 **Dodatkowe interfejsy API kolekcji**
 
-.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich następujące elementy:
+.NET Framework 4.7.2 dodaje wiele nowych interfejsów API do typów <xref:System.Collections.Generic.SortedSet%601> i <xref:System.Collections.Generic.HashSet%601>. Należą do nich:
 
 - Metody `TryGetValue`, które zwiększają wzorzec try użyty w innych typach kolekcji do tych dwóch typów. Metody są następujące:
 
@@ -383,7 +383,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 <a name="asp-net472" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 **Obsługa iniekcji zależności w formularzach sieci Web**
 
@@ -397,7 +397,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 **Obsługa plików cookie tego samego miejsca**
 
-[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) zapobiega wysyłaniu plików cookie przez przeglądarkę wraz z żądaniem między lokacjami. .NET Framework 4.7.2 dodaje właściwość <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType>, której wartość jest elementem członkowskim wyliczenia <xref:System.Web.SameSiteMode?displayProperty=nameWithType>. Jeśli wartość jest <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> lub <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET dodaje atrybut `SameSite` do nagłówka Set-cookie. Obsługa SameSite ma zastosowanie do obiektów <xref:System.Web.HttpCookie>, a także do <xref:System.Web.Security.FormsAuthentication> i <xref:System.Web.SessionState> plików cookie.
+[SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) zapobiega wysyłaniu plików cookie przez przeglądarkę wraz z żądaniem między lokacjami. .NET Framework 4.7.2 dodaje właściwość <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType>, której wartość jest <xref:System.Web.SameSiteMode?displayProperty=nameWithType> elementu członkowskiego wyliczenia. Jeśli wartość jest <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> lub <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET dodaje atrybut `SameSite` do nagłówka Set-cookie. Obsługa SameSite ma zastosowanie do obiektów <xref:System.Web.HttpCookie>, a także do <xref:System.Web.Security.FormsAuthentication> i <xref:System.Web.SessionState> plików cookie.
 
 Można ustawić SameSite dla obiektu <xref:System.Web.HttpCookie> w następujący sposób:
 
@@ -451,7 +451,7 @@ Można dodać SameSite dla plików cookie <xref:System.Web.Security.FormsAuthent
 
 Rosnące wymagania dotyczące zgodności i zabezpieczeń wymagają, aby wielu klientów korzystało z uwierzytelniania wieloskładnikowego (MFA). Ponadto obecnie najlepsze rozwiązania uniemożliwiają uwzględnienie haseł użytkowników bezpośrednio w parametrach połączenia. Aby można było obsługiwać te zmiany, .NET Framework 4.7.2 rozszerza [Parametry połączenia SqlClient](xref:System.Data.SqlClient.SqlConnection.ConnectionString) przez dodanie nowej wartości "Active Directory Interactive" dla istniejącego słowa kluczowego "Authentication" do obsługi uwierzytelniania MFA i [usługi Azure AD](/azure/sql-database/sql-database-aad-authentication-configure). Nowa metoda interaktywna obsługuje natywnych i federacyjnych użytkowników usługi Azure AD, a także użytkowników-Gości usługi Azure AD. Gdy ta metoda jest używana, uwierzytelnianie MFA narzucone przez usługę Azure AD jest obsługiwane dla baz danych SQL. Ponadto proces uwierzytelniania żąda hasła użytkownika w celu przestrzegania najlepszych rozwiązań w zakresie zabezpieczeń.
 
-W poprzednich wersjach .NET Framework łączność SQL obsługuje tylko opcje <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> i <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType>. Oba te elementy są częścią nieinteraktywnego [protokołu ADAL](/azure/active-directory/develop/active-directory-authentication-libraries), który nie obsługuje usługi MFA. Dzięki nowej opcji <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> łączność SQL obsługuje uwierzytelnianie MFA, a także istniejące metody uwierzytelniania (hasło i uwierzytelnianie zintegrowane), dzięki czemu użytkownicy mogą interaktywnie wprowadzać hasła użytkowników bez utrwalania haseł w parametrach połączenia.
+W poprzednich wersjach .NET Framework łączność SQL obsługuje tylko opcje <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> i <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType>. Oba te elementy są częścią nieinteraktywnego [protokołu ADAL](/azure/active-directory/develop/active-directory-authentication-libraries), który nie obsługuje usługi MFA. Dzięki nowej opcji <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> łączność SQL obsługuje uwierzytelnianie MFA, a także istniejące metody uwierzytelniania (hasło i uwierzytelnianie zintegrowane), które umożliwiają użytkownikom interaktywne wprowadzanie haseł użytkowników bez utrwalania haseł w parametrach połączenia.
 
 Aby uzyskać więcej informacji i zapoznać się z przykładem, zobacz "SQL--usługa Azure AD Universal and wieloskładnikowe Authentication Support" w [blogu platformy .NET](https://devblogs.microsoft.com/dotnet/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/).
 
@@ -503,7 +503,7 @@ Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może zlokalizować 
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-Asystent diagnostyczny, który edytuje oryginalny znacznik w *MyRD. xaml* can Użyj nowej funkcji, aby zlokalizować słownik. Funkcja jest implementowana przez nową metodę statyczną, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Asystent diagnostyczny wywołuje nową metodę przy użyciu bezwzględnego identyfikatora URI, który identyfikuje oryginalne znaczniki, jak pokazano w poniższym kodzie:
+Asystent diagnostyczny, który edytuje oryginalny znacznik w *MyRD. xaml* może użyć nowej funkcji w celu zlokalizowania słownika. Funkcja jest implementowana przez nową metodę statyczną, <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>. Asystent diagnostyczny wywołuje nową metodę przy użyciu bezwzględnego identyfikatora URI, który identyfikuje oryginalne znaczniki, jak pokazano w poniższym kodzie:
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -531,7 +531,7 @@ Te metody zwracają pustą wartość wyliczalną, chyba że <xref:System.Window
 
 **Znajdowanie odwołań StaticResource**
 
-Asystent diagnostyczny może teraz odbierać powiadomienie za każdym razem, gdy zostanie rozpoznane odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . (Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, może chcieć zaktualizować wszystkie zastosowania zasobu, gdy jego wartość zostanie zmieniona na <xref:Windows.UI.Xaml.ResourceDictionary>. WPF robi to automatycznie w odniesieniu do [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , ale celowo nie robi to w odniesieniu do [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może użyć tych powiadomień, aby zlokalizować te zastosowania zasobu statycznego.
+Asystent diagnostyczny może teraz odbierać powiadomienie za każdym razem, gdy zostanie rozpoznane odwołanie [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . (Funkcja jest używana przez asystentów diagnostycznych, a nie przez aplikacje produkcyjne). Asystent diagnostyczny, taki jak funkcja "Edytuj i Kontynuuj" programu Visual Studio, może chcieć zaktualizować wszystkie zastosowania zasobu, gdy jego wartość w <xref:Windows.UI.Xaml.ResourceDictionary> ulegnie zmianie. WPF robi to automatycznie w odniesieniu do [DynamicResource —](../wpf/advanced/dynamicresource-markup-extension.md) , ale celowo nie robi to w odniesieniu do [StaticResource](../wpf/advanced/staticresource-markup-extension.md) . Począwszy od .NET Framework 4.7.2, asystent diagnostyczny może użyć tych powiadomień, aby zlokalizować te zastosowania zasobu statycznego.
 
 Powiadomienie jest implementowane przez nowe zdarzenie <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
@@ -589,7 +589,7 @@ W przypadku aplikacji Windows Forms poprzednie obejście ustawienia rozpoznawani
 
 - [Klasy bazowe](#core471)
 - [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
-- [Sieci](#net471)
+- [Sieć](#net471)
 - [ASP.NET](#asp-net471)
 
 Ponadto najważniejszym fokusem w .NET Framework 4.7.1 jest ulepszony ułatwienia dostępu, dzięki czemu aplikacja może zapewnić odpowiednie środowisko dla użytkowników technologii pomocniczej. Informacje o ulepszeniach ułatwień dostępu w programie .NET Framework 4.7.1 można znaleźć w temacie [co nowego w ułatwieniach dostępu w .NET Framework](whats-new-in-accessibility.md).
@@ -614,7 +614,7 @@ Klasa <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameW
 
 **Typy krotek wartości można serializować**
 
-Począwszy od .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> i skojarzonych z nimi typów ogólnych są oznaczone jako możliwe do [serializacji](xref:System.SerializableAttribute), co umożliwia serializacji binarnej. Powinno to ułatwić Migrowanie typów krotek, takich jak <xref:System.Tuple%603> i <xref:System.Tuple%604>, do typów krotek wartości. Aby uzyskać więcej informacji, zobacz "kompilator--ValueTuple jest możliwy do serializacji" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i funkcje kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
+Począwszy od .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> i powiązane typy ogólne są oznaczone jako możliwe do [serializacji](xref:System.SerializableAttribute), co umożliwia serializacji binarnej. Powinno to ułatwić Migrowanie typów krotek, takich jak <xref:System.Tuple%603> i <xref:System.Tuple%604>, do typów krotek wartości. Aby uzyskać więcej informacji, zobacz "kompilator--ValueTuple jest możliwy do serializacji" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i funkcje kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 **Obsługa odwołań tylko do odczytu**
 
@@ -626,7 +626,7 @@ Począwszy od .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=name
 
 **Udoskonalenia wydajności odzyskiwania pamięci**
 
-Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 poprawić ogólną wydajność, szczególnie w przypadku alokacji dużego obiektu sterty (LOH). W .NET Framework 4.7.1, osobne blokady są używane dla sterty małego obiektu i alokacji LOH, co umożliwia przydzielanie LOH, gdy w tle GC (BGC) jest czyszczony raport o kondycji. W związku z tym aplikacje, które tworzą dużą liczbę alokacji LOH, powinny mieć zmniejszenie rywalizacji o blokadę alokacji i lepszą wydajność. Aby uzyskać więcej informacji, zobacz sekcję "ulepszenia wydajności środowiska uruchomieniowego GC" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i funkcji kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
+Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 poprawić ogólną wydajność, szczególnie w przypadku alokacji dużego obiektu sterty (LOH). W .NET Framework 4.7.1, osobne blokady są używane dla sterty małego obiektu i alokacji LOH, co umożliwia przydzielanie LOH, gdy w tle jest czyszczony raport o kondycji. W związku z tym aplikacje, które tworzą dużą liczbę alokacji LOH, powinny mieć zmniejszenie rywalizacji o blokadę alokacji i lepszą wydajność. Aby uzyskać więcej informacji, zobacz sekcję "ulepszenia wydajności środowiska uruchomieniowego GC" w blogu [.NET Framework środowiska uruchomieniowego 4.7.1 i funkcji kompilatora](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/) .
 
 <a name="net471"/>
 
@@ -634,15 +634,15 @@ Zmiany w wyrzucaniu elementów bezużytecznych (GC) w .NET Framework 4.7.1 popra
 
 **Obsługa algorytmu SHA-2 dla komunikatu. algorytm**
 
-W .NET Framework 4,7 i starszych wersjach Właściwość <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> obsługuje tylko wartości <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> i <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType>. Począwszy od .NET Framework 4.7.1, <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> i <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType> są również obsługiwane. Określa, czy ta wartość jest faktycznie używana, zależy od usługi MSMQ, ponieważ wystąpienie <xref:System.Messaging.Message> nie wykonuje mieszania, ale po prostu przekazuje wartości do usługi MSMQ. Aby uzyskać więcej informacji, zobacz sekcję "Obsługa protokołu SHA-2 dla komunikatu. algorytm" w wpisie w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
+W .NET Framework 4,7 i starszych wersjach Właściwość <xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> obsługuje tylko wartości <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> i <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType>. Obsługiwane są również .NET Framework 4.7.1, <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>, <xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType>i <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>. Określa, czy ta wartość jest faktycznie używana, zależy od usługi MSMQ, ponieważ samo wystąpienie <xref:System.Messaging.Message> nie wykonuje mieszania, ale po prostu przekazuje wartości do usługi MSMQ. Aby uzyskać więcej informacji, zobacz sekcję "Obsługa protokołu SHA-2 dla komunikatu. algorytm" w wpisie w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
 
 <a name="asp-net471" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 **Kroki wykonywania w aplikacjach ASP.NET**
 
-ASP.NET przetwarza żądania we wstępnie zdefiniowanym potoku zawierającym 23 zdarzenia. ASP.NET wykonuje każdy program obsługi zdarzeń jako krok wykonania. W wersjach programu ASP.NET do .NET Framework 4,7 ASP.NET nie można przepływać kontekstu wykonywania z powodu przełączenia między wątkami macierzystymi i zarządzanymi. Zamiast tego ASP.NET selektywnie przepływa tylko <xref:System.Web.HttpContext>. Począwszy od .NET Framework 4.7.1, Metoda <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> umożliwia również modułom przywracanie danych otoczenia. Ta funkcja jest przeznaczona dla bibliotek objętych śledzeniem, profilem, diagnostyką lub transakcjami, na przykład z myślą o przepływie wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz "funkcja kroku wykonywania ASP.NET" w wpisie w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
+ASP.NET przetwarza żądania we wstępnie zdefiniowanym potoku zawierającym 23 zdarzenia. ASP.NET wykonuje każdy program obsługi zdarzeń jako krok wykonania. W wersjach programu ASP.NET do .NET Framework 4,7 ASP.NET nie można przepływać kontekstu wykonywania z powodu przełączenia między wątkami macierzystymi i zarządzanymi. Zamiast tego ASP.NET selektywnie przepływy tylko <xref:System.Web.HttpContext>. Począwszy od .NET Framework 4.7.1, Metoda <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> umożliwia również modułom przywracanie danych otoczenia. Ta funkcja jest przeznaczona dla bibliotek objętych śledzeniem, profilem, diagnostyką lub transakcjami, na przykład z myślą o przepływie wykonywania aplikacji. Aby uzyskać więcej informacji, zobacz "funkcja kroku wykonywania ASP.NET" w wpisie w blogu [.NET Framework 4.7.1 ASP.NET i Configuration Features](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/) .
 
 **Analiza ASP.NET HttpCookie**
 
@@ -671,7 +671,7 @@ W .NET Framework 4,7 i wcześniejszych wersjach ASP.NET zezwolenie deweloperom n
 .NET Framework 4,7 zawiera nowe funkcje w następujących obszarach:
 
 - [Klasy bazowe](#Core47)
-- [Sieci](#net47)
+- [Sieć](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
 - [Windows Forms](#wf47)
@@ -683,7 +683,7 @@ Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4,7, zoba
 
 #### <a name="base-classes"></a>Klas podstawowych
 
-.NET Framework 4,7 zwiększa serializację przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
+.NET Framework 4,7 usprawnia serializację przez <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:
 
 **Rozszerzona funkcjonalność przy użyciu kryptografii eliptyczna Cryptography (ECC)** *
 
@@ -695,7 +695,7 @@ W .NET Framework 4,7 metody `ImportParameters(ECParameters)` zostały dodane do 
 
 **Lepsza obsługa znaków kontrolnych przez Klasa DataContractJsonSerializer**
 
-W .NET Framework 4,7, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> serializować znaki kontrolne zgodne ze standardem ECMAScript 6. To zachowanie jest domyślnie włączone dla aplikacji, które są przeznaczone dla .NET Framework 4,7 i jest funkcją wyboru dla aplikacji, które działają w ramach .NET Framework 4,7, ale celem jest poprzednia wersja .NET Framework. Aby uzyskać więcej informacji, zobacz [przekierowywanie zmian w .NET Framework 4,7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+W .NET Framework 4,7 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> deserializacji znaki sterujące zgodne ze standardem ECMAScript 6. To zachowanie jest domyślnie włączone dla aplikacji, które są przeznaczone dla .NET Framework 4,7 i jest funkcją wyboru dla aplikacji, które działają w ramach .NET Framework 4,7, ale celem jest poprzednia wersja .NET Framework. Aby uzyskać więcej informacji, zobacz [przekierowywanie zmian w .NET Framework 4,7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="net47" />
 
@@ -705,11 +705,11 @@ W .NET Framework 4,7, <xref:System.Runtime.Serialization.Json.DataContractJsonSe
 
 **Domyślna obsługa systemu operacyjnego dla protokołów TLS***
 
-Stos protokołu TLS, który jest używany przez <xref:System.Net.Security.SslStream?displayProperty=nameWithType> i stosują do góry składniki, takie jak HTTP, FTP i SMTP, umożliwiają deweloperom korzystanie z domyślnych protokołów TLS obsługiwanych przez system operacyjny. Deweloperzy nie muszą już wykodować wersji TLS.
+Stos protokołu TLS używany przez <xref:System.Net.Security.SslStream?displayProperty=nameWithType> i składniki stosujące do góry, takie jak HTTP, FTP i SMTP, umożliwia deweloperom Używanie domyślnych protokołów TLS obsługiwanych przez system operacyjny. Deweloperzy nie muszą już wykodować wersji TLS.
 
 <a name="ASP-NET47" />
 
-#### <a name="aspnet"></a>Platforma ASP.NET
+#### <a name="aspnet"></a>ASP.NET
 
 W .NET Framework 4,7 ASP.NET zawiera następujące nowe funkcje:
 
@@ -741,7 +741,7 @@ Począwszy od .NET Framework 4,7, usługa WCF umożliwia skonfigurowanie program
 
 **Zwiększona niezawodność aplikacji WCF i serializacji WCF**
 
-Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich następujące elementy:
+Program WCF zawiera szereg zmian w kodzie, które eliminują sytuacje wyścigu, co poprawia wydajność i niezawodność opcji serializacji. Należą do nich:
 
 - Lepsza obsługa mieszania kodu asynchronicznego i synchronicznego w wywołaniach **SocketConnection. BeginRead** i **SocketConnection. Read**.
 - Zwiększona niezawodność podczas przerywania połączenia z **SharedConnectionListener** i **DuplexChannelBinder**.
@@ -758,7 +758,7 @@ W .NET Framework 4,7 Windows Forms Ulepszona obsługa monitorów o wysokiej rozd
 
 Począwszy od aplikacji, które są przeznaczone dla .NET Framework 4,7, .NET Framework funkcje o wysokiej rozdzielczości DPI i dynamicznej rozdzielczości DPI dla aplikacji Windows Forms. Obsługa wysokiej rozdzielczości DPI usprawnia układ i wygląd formularzy i kontrolek na monitorach o wysokiej rozdzielczości DPI. Dynamiczne DPI zmienia układ i wygląd formularzy i kontrolek, gdy użytkownik zmienia wartość DPI lub współczynnik skali wyświetlania uruchomionej aplikacji.
 
-Obsługa wysokiej rozdzielczości DPI to funkcja, która została skonfigurowana przez zdefiniowanie [\<System. Windows. Forms. ConfigurationSection >](../configure-apps/file-schema/winforms/index.md) sekcji w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji na temat dodawania obsługi wysokiej rozdzielczości DPI i dynamicznej rozdzielczości DPI do aplikacji Windows Forms, zobacz [Obsługa wysokiej rozdzielczości DPI w Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).
+Obsługa wysokiej rozdzielczości DPI to funkcja, która została skonfigurowana przez zdefiniowanie [\<system. Windows. Forms. ConfigurationSection >](../configure-apps/file-schema/winforms/index.md) sekcji w pliku konfiguracyjnym aplikacji. Aby uzyskać więcej informacji na temat dodawania obsługi wysokiej rozdzielczości DPI i dynamicznej rozdzielczości DPI do aplikacji Windows Forms, zobacz [Obsługa wysokiej rozdzielczości DPI w Windows Forms](../winforms/high-dpi-support-in-windows-forms.md).
 
 <a name="WPF47" />
 
@@ -768,7 +768,7 @@ W .NET Framework 4,7, WPF obejmuje następujące udoskonalenia:
 
 **Obsługa stosu dotykowego/pióra opartego na komunikatach WM_POINTER systemu Windows**
 
-Masz teraz możliwość używania stosu dotykowego/pióra na podstawie [komunikatów WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) zamiast platformy Windows Ink Services (roamingu). Jest to funkcja opcjonalna w .NET Framework. Aby uzyskać więcej informacji, zobacz [przekierowywanie zmian w .NET Framework 4,7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
+Masz teraz możliwość używania stosu dotykowego/pióra na podstawie [komunikatów WM_POINTER](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages) zamiast platformy Windows Ink Services (roaming). Jest to funkcja opcjonalna w .NET Framework. Aby uzyskać więcej informacji, zobacz [przekierowywanie zmian w .NET Framework 4,7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 **Nowa Implementacja interfejsów API drukowania WPF**
 
@@ -792,7 +792,7 @@ Interfejsy API drukowania WPF w klasie <xref:System.Printing.PrintQueue?displayP
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
-- [Windows Workflow Foundation (WF)](#WF462)
+- {1&gt;Program Windows Workflow Foundation (WF)&lt;1}
 
 - [ClickOnce](#clickonce-1)
 
@@ -804,7 +804,7 @@ Aby uzyskać listę nowych interfejsów API dodanych do .NET Framework 4.6.2, zo
 
 <a name="ASPNET462" />
 
-### <a name="aspnet"></a>Platforma ASP.NET
+### <a name="aspnet"></a>ASP.NET
 
 W .NET Framework 4.6.2 ASP.NET obejmuje następujące udoskonalenia:
 
@@ -816,7 +816,7 @@ Moduły sprawdzania poprawności adnotacji danych umożliwiają wykonanie walida
 
 2. Plik zasobów jest przechowywany w folderze App_LocalResources.
 
-3. Nazwa zlokalizowanego pliku zasobów ma postać `DataAnnotation.Localization.{`*nazwa*`}.resx`, gdzie *name* jest nazwą kultury w formacie *languageCode*`-`*Country/regionCode* lub *languageCode*.
+3. Nazwa zlokalizowanego pliku zasobów ma postać `DataAnnotation.Localization.{`*nazwą*`}.resx`, gdzie *name* jest nazwą kultury w formacie *languageCode*`-`*Country/regionCode* lub *languageCode*.
 
 4. Nazwa klucza zasobu jest ciągiem przypisanym do atrybutu <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType>, a jego wartość jest zlokalizowanym komunikatem o błędzie.
 
@@ -845,11 +845,11 @@ Następnie można utworzyć plik zasobów, DataAnnotation. lokalizacja. fr. resx
 | ------------------------------------ | ----------------------------------------- |
 | Klasyfikacja musi zawierać się w przedziale od 1 do 10. | La uwagi doit être obejmuje Entre 1 et 10. |
 
- Ponadto lokalizacja adnotacji danych jest rozszerzalna. Deweloperzy mogą podłączyć własnego dostawcę parametrów, implementując interfejs <xref:System.Web.Globalization.IStringLocalizerProvider> w celu przechowywania ciągu lokalizacji w innym miejscu niż w pliku zasobów.
+ Ponadto lokalizacja adnotacji danych jest rozszerzalna. Deweloperzy mogą podłączyć własnego dostawcę lokalizatora ciągów przez implementację interfejsu <xref:System.Web.Globalization.IStringLocalizerProvider> do przechowywania ciągu lokalizacji w innym miejscu niż w pliku zasobów.
 
  **Obsługa asynchroniczna z dostawcami magazynu stanów sesji**
 
- ASP.NET teraz zezwala na używanie metod zwracających zadania z dostawcami magazynu stanów sesji, co umożliwia aplikacjom ASP.NET uzyskanie korzyści z skalowalności asynchronicznej. Aby obsługiwał operacje asynchroniczne z dostawcami magazynu stanów sesji, ASP.NET obejmuje nowy interfejs, <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>, który dziedziczy po <xref:System.Web.IHttpModule> i umożliwia deweloperom implementację własnych modułów stanu sesji i dostawców magazynu sesji asynchronicznych. Interfejs jest zdefiniowany w następujący sposób:
+ ASP.NET teraz zezwala na używanie metod zwracających zadania z dostawcami magazynu stanów sesji, co umożliwia aplikacjom ASP.NET uzyskanie korzyści z skalowalności asynchronicznej. Aby obsługiwał operacje asynchroniczne z dostawcami magazynu stanów sesji, ASP.NET obejmuje nowy interfejs, <xref:System.Web.SessionState.ISessionStateModule?displayProperty=nameWithType>, który dziedziczy po <xref:System.Web.IHttpModule> i umożliwia deweloperom wdrażanie własnych modułów stanu sesji i dostawców magazynu sesji asynchronicznych. Interfejs jest zdefiniowany w następujący sposób:
 
 ```csharp
 public interface ISessionStateModule : IHttpModule {
@@ -909,7 +909,7 @@ Zmiany w kategoriach znakowych z Unicode 6,0 na Unicode 7,0 można znaleźć [w 
 
 Oprócz obsługi większych rozmiarów standardu FIPS 186-3 .NET Framework 4.6.2 umożliwia obliczanie sygnatur przy użyciu rodziny SHA-2 algorytmów wyznaczania wartości skrótu (SHA256, SHA384 i SHA512). Obsługa standardu FIPS 186-3 jest zapewniana przez nową klasę <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType>.
 
-W przypadku niedawnej zmiany klasy <xref:System.Security.Cryptography.RSA> w .NET Framework 4,6 i klasie <xref:System.Security.Cryptography.ECDsa> w .NET Framework 4.6.1, abstrakcyjna klasa bazowa <xref:System.Security.Cryptography.DSA> w .NET Framework 4.6.2 ma dodatkowe metody umożliwiające wywołujących używanie tej funkcji bez rzutowania. Można wywołać metodę rozszerzenia <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType>, aby podpisać dane, jak pokazano w poniższym przykładzie.
+W przypadku niedawnych zmian w klasie <xref:System.Security.Cryptography.RSA> w .NET Framework 4,6 i klasie <xref:System.Security.Cryptography.ECDsa> w .NET Framework 4.6.1, <xref:System.Security.Cryptography.DSA> abstrakcyjna klasa bazowa w .NET Framework 4.6.2 ma dodatkowe metody umożliwiające wywołujących używanie tej funkcji bez rzutowania. Można wywołać metodę rozszerzenia <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType>, aby podpisać dane, jak pokazano w poniższym przykładzie.
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -953,7 +953,7 @@ End Function
 
 .NET Framework 3,5 dodano obsługę dla uzgadniania klucza diff-Hellmana z trzema różnymi procedurami funkcji wyprowadzania klucza (KDF). Dane wejściowe procedur i same procedury, zostały skonfigurowane za pomocą właściwości w obiekcie <xref:System.Security.Cryptography.ECDiffieHellmanCng>. Jednak ponieważ nie każda procedura odczytuje każdą właściwość wejściową, istniało bardzo dużo miejsca do mylenia w przeszłości deweloperów.
 
-Aby rozwiązać ten wpływ na .NET Framework 4.6.2, do klasy podstawowej <xref:System.Security.Cryptography.ECDiffieHellman> dodano następujące trzy metody, aby dokładniej przedstawić te procedury KDF i ich dane wejściowe:
+Aby rozwiązać ten wpływ na .NET Framework 4.6.2, dodano następujące trzy metody do <xref:System.Security.Cryptography.ECDiffieHellman> klasy bazowej, aby dokładniej przedstawić te procedury KDF i ich dane wejściowe:
 
 |ECDiffieHellman, Metoda|Opis|
 |----------------------------|-----------------|
@@ -1006,7 +1006,7 @@ End Function
 
 **SignedXml obsługa tworzenia skrótów SHA-2**
 
-.NET Framework 4.6.2 dodaje obsługę do klasy <xref:System.Security.Cryptography.Xml.SignedXml> dla RSA-SHA256, RSA-SHA384, i RSA-SHA512 PKCS # 1, a SHA256, SHA384 i SHA512 algorytmów Digest Reference.
+.NET Framework 4.6.2 dodaje obsługę klasy <xref:System.Security.Cryptography.Xml.SignedXml> w przypadku metod RSA-SHA256, RSA-SHA384, i RSA-SHA512 PKCS # 1 oraz SHA256, SHA384 i SHA512 algorytmów Digest Reference.
 
 Stałe dla identyfikatora URI są uwidocznione na <xref:System.Security.Cryptography.Xml.SignedXml>:
 
@@ -1019,7 +1019,7 @@ Stałe dla identyfikatora URI są uwidocznione na <xref:System.Security.Cryptogr
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigSHA512Url>|"http://www.w3.org/2001/04/xmlenc#sha512"|
 |<xref:System.Security.Cryptography.Xml.SignedXml.XmlDsigRSASHA512Url>|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"|
 
- Wszystkie programy, w przypadku których zarejestrowano niestandardową procedurę obsługi <xref:System.Security.Cryptography.SignatureDescription> do <xref:System.Security.Cryptography.CryptoConfig> w celu dodania obsługi tych algorytmów, będą nadal działać tak jak w przeszłości, ale ponieważ teraz istnieją wartości domyślne platformy, rejestracja <xref:System.Security.Cryptography.CryptoConfig> nie jest już potrzebna.
+ Wszystkie programy, w których zarejestrowano niestandardową procedurę obsługi <xref:System.Security.Cryptography.SignatureDescription> na <xref:System.Security.Cryptography.CryptoConfig> w celu dodania obsługi tych algorytmów, będą nadal działać tak samo jak w przeszłości, ale ponieważ teraz istnieją domyślne ustawienia platformy, rejestracja <xref:System.Security.Cryptography.CryptoConfig> nie jest już konieczna.
 
 <a name="SQLClient" />
 
@@ -1039,13 +1039,13 @@ Dodanie nowego słowa kluczowego `PoolBlockingPeriod` umożliwia wybranie okresu
 
 Okres blokowania puli połączeń dla aplikacji, która łączy się z Azure SQL Database, jest wyłączony, a okres blokowania puli połączeń dla aplikacji łączącej się z jakimkolwiek innym wystąpieniem SQL Server jest włączony. Jest to wartość domyślna. Jeśli nazwa punktu końcowego serwera zostanie zakończona z dowolnego z poniższych, są one uznawane za bazy danych SQL Azure:
 
-- . database.windows.net
+- .database.windows.net
 
-- . database.chinacloudapi.cn
+- .database.chinacloudapi.cn
 
-- . database.usgovcloudapi.net
+- .database.usgovcloudapi.net
 
-- . database.cloudapi.de
+- .database.cloudapi.de
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
@@ -1073,7 +1073,7 @@ W .NET Framework 4.6.2 Windows Communication Foundation została ulepszona w nas
 
 Zabezpieczenia transportu WCF obsługują certyfikaty przechowywane przy użyciu biblioteki kryptografii systemu Windows (CNG). W .NET Framework 4.6.2 ta obsługa jest ograniczona do używania certyfikatów z kluczem publicznym, który ma wykładnik nie więcej niż 32 bitów. Gdy aplikacja jest przeznaczona dla .NET Framework 4.6.2, ta funkcja jest domyślnie włączona.
 
-W przypadku aplikacji, które są przeznaczone dla .NET Framework 4.6.1 i starszych, ale są uruchomione na .NET Framework 4.6.2, tę funkcję można włączyć, dodając następujący wiersz do sekcji [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) pliku App. config lub Web. config.
+W przypadku aplikacji, które są przeznaczone dla .NET Framework 4.6.1 i starszych, ale są uruchomione na .NET Framework 4.6.2, tę funkcję można włączyć, dodając następujący wiersz [\<do sekcji > Runtime środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku App. config lub Web. config.
 
 ```xml
 <AppContextSwitchOverrides
@@ -1103,18 +1103,18 @@ Klienci mogą używać ustawienia konfiguracji aplikacji, aby określić, czy Kl
 </runtime>
 ```
 
-Gdy ta funkcja jest włączona, obiekt <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> używa typu <xref:System.TimeZoneInfo> zamiast typu <xref:System.TimeZone> do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo> obsługuje wiele reguł korygowania, co umożliwia współpracę z danymi strefy czasowej historycznej;   <xref:System.TimeZone> nie.
+Gdy ta funkcja jest włączona, obiekt <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> używa typu <xref:System.TimeZoneInfo> zamiast typu <xref:System.TimeZone> do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo> obsługuje wiele reguł dostosowawczych, co umożliwia współpracę z danymi strefy czasowej historycznej.   <xref:System.TimeZone> nie.
 
 Aby uzyskać więcej informacji na temat struktury <xref:System.TimeZoneInfo> i dostosowań strefy czasowej, zobacz [Omówienie strefy czasowej](../../standard/datetime/time-zone-overview.md).
 
 **NetNamedPipeBinding najlepsze dopasowanie**
 
-Funkcja WCF ma nowe ustawienie aplikacji, które można ustawić w aplikacjach klienckich, aby upewnić się, że zawsze łączą się z usługą nasłuchiwanie na identyfikatorze URI, który najlepiej pasuje do tego, który z nich żąda. Gdy to ustawienie aplikacji ma wartość `false` (ustawienie domyślne), możliwe jest, aby klienci korzystający z <xref:System.ServiceModel.NetNamedPipeBinding> próbowały nawiązać połączenie z usługą nasłuchiwania na identyfikatorze URI, który jest podciągiem żądanego identyfikatora URI.
+Funkcja WCF ma nowe ustawienie aplikacji, które można ustawić w aplikacjach klienckich, aby upewnić się, że zawsze łączą się z usługą nasłuchiwanie na identyfikatorze URI, który najlepiej pasuje do tego, który z nich żąda. Gdy to ustawienie aplikacji ma ustawioną wartość `false` (domyślnie), klienci korzystający z usługi <xref:System.ServiceModel.NetNamedPipeBinding> mogą próbować połączyć się z usługą nasłuchiwanie na identyfikatorze URI, który jest podciągiem żądanego identyfikatora URI.
 
-Na przykład klient próbuje nawiązać połączenie z usługą nasłuchiwania przy `net.pipe://localhost/Service1`, ale inna usługa na tym komputerze z uprawnieniami administratora nasłuchuje w `net.pipe://localhost`. Gdy to ustawienie aplikacji ma wartość `false`, klient podejmie próbę nawiązania połączenia z niewłaściwą usługą. Po ustawieniu ustawienia aplikacji na `true` klient zawsze będzie łączył się z najlepszą zgodną usługą.
+Na przykład klient próbuje nawiązać połączenie z usługą nasłuchującą w `net.pipe://localhost/Service1`, ale inna usługa na tym komputerze z uprawnieniami administratora nasłuchuje w `net.pipe://localhost`. Gdy to ustawienie aplikacji ma wartość `false`, klient podejmie próbę nawiązania połączenia z niewłaściwą usługą. Po ustawieniu ustawienia aplikacji na `true`, klient zawsze będzie łączył się z najlepszą zgodną usługą.
 
 > [!NOTE]
-> Klienci korzystający z programu <xref:System.ServiceModel.NetNamedPipeBinding> Znajdź usługi oparte na adresie podstawowym usługi (jeśli istnieje), a nie pełny adres punktu końcowego. Aby zapewnić, że to ustawienie zawsze działa, usługa powinna używać unikatowego adresu podstawowego.
+> Klienci korzystający z <xref:System.ServiceModel.NetNamedPipeBinding> znajdowania usług w oparciu o adres podstawowy usługi (jeśli istnieje), a nie pełny adres punktu końcowego. Aby zapewnić, że to ustawienie zawsze działa, usługa powinna używać unikatowego adresu podstawowego.
 
 Aby włączyć tę zmianę, Dodaj następujące ustawienie aplikacji do pliku App. config lub Web. config aplikacji klienckiej:
 
@@ -1134,9 +1134,9 @@ W przypadku korzystania z NetTcp z zabezpieczeniami transportu i typem poświadc
 
 - Właściwość <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType>
 
-- Sekcja [\<transport >](../configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) sekcji [\<netTcpBinding >](../configure-apps/file-schema/wcf/nettcpbinding.md)
+- Sekcja [> transportu\<](../configure-apps/file-schema/wcf/transport-of-nettcpbinding.md) w sekcji [\<NetTcpBinding >](../configure-apps/file-schema/wcf/nettcpbinding.md)
 
-- Sekcja [\<sslStreamSecurity >](../configure-apps/file-schema/wcf/sslstreamsecurity.md) sekcji [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md)
+- Sekcja [\<sslStreamSecurity >](../configure-apps/file-schema/wcf/sslstreamsecurity.md) sekcji [\<CustomBinding >](../configure-apps/file-schema/wcf/custombinding.md)
 
 <a name="WPF462" />
 
@@ -1178,9 +1178,9 @@ W poprzednich wersjach .NET Framework aplikacje WPF nie mogą należeć do śled
 
 Aby obsłużyć najnowsze rozprzestrzenianie środowisk o wysokiej rozdzielczości DPI i hybrydowych DPI dla aplikacji WPF, WPF w .NET Framework 4.6.2 umożliwia świadomość poszczególnych monitorów. Zapoznaj się z [przykładami i przewodnikiem dewelopera](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) w witrynie GitHub, aby uzyskać więcej informacji na temat sposobu włączania aplikacji platformy WPF do monitorowania według rozdzielczości DPI.
 
-We wcześniejszych wersjach .NET Framework aplikacje WPF są oparte na systemie DPI. Innymi słowy, interfejs użytkownika aplikacji jest skalowany w odpowiednim systemie operacyjnym, w zależności od wartości DPI monitora, na którym jest renderowana aplikacja. ,
+We wcześniejszych wersjach .NET Framework aplikacje WPF są oparte na systemie DPI. Innymi słowy, interfejs użytkownika aplikacji jest skalowany w odpowiednim systemie operacyjnym, w zależności od wartości DPI monitora, na którym jest renderowana aplikacja.
 
-W przypadku aplikacji uruchamianych w .NET Framework 4.6.2 można wyłączyć zmiany DPI dla poszczególnych monitorów w aplikacjach WPF przez dodanie instrukcji konfiguracji do sekcji [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) pliku konfiguracyjnego aplikacji w następujący sposób:
+W przypadku aplikacji uruchamianych w ramach .NET Framework 4.6.2 można wyłączyć zmiany DPI dla poszczególnych monitorów w aplikacjach WPF przez dodanie instrukcji konfiguracji\<do sekcji [> środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku konfiguracyjnym aplikacji w następujący sposób:
 
 ```xml
 <runtime>
@@ -1236,11 +1236,11 @@ Skonwertowane aplikacje klasyczne uzyskują tożsamość aplikacji podobną do t
 
 ### <a name="debugging-improvements"></a>Ulepszenia debugowania
 
-*Niezarządzany interfejs API debugowania* został ulepszony w .NET Framework 4.6.2 do wykonania dodatkowej analizy, gdy zostanie zgłoszony <xref:System.NullReferenceException>, aby można było określić, która zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby obsłużyć ten scenariusz, dodano następujące interfejsy API do niezarządzanego interfejsu API debugowania.
+*Niezarządzany interfejs API debugowania* został ulepszony w .NET Framework 4.6.2 do wykonania dodatkowej analizy, gdy zostanie zgłoszony <xref:System.NullReferenceException>, dzięki czemu można określić, która zmienna w jednym wierszu kodu źródłowego jest `null`.   Aby obsłużyć ten scenariusz, dodano następujące interfejsy API do niezarządzanego interfejsu API debugowania.
 
-- Interfejsy [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)i [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) , które uwidaczniają natywne domy zmiennych zarządzanych. Dzięki temu debugery mogą wykonywać pewne analizy przepływu kodu, gdy występuje <xref:System.NullReferenceException> i aby przejść do tyłu, aby określić zmienną zarządzaną, która odnosi się do lokalizacji natywnej `null`.
+- Interfejsy [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md), [ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)i [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) , które uwidaczniają natywne domy zmiennych zarządzanych. Dzięki temu debugery mogą wykonywać pewne analizy przepływu kodu, gdy występuje <xref:System.NullReferenceException> i aby przejść do tyłu, aby określić zmienną zarządzaną, która odnosi się do lokalizacji natywnej, która została `null`.
 
-- Metoda [ICorDebugType2:: GetTypeId](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) zapewnia mapowanie dla ICorDebugType do [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), dzięki czemu debuger może uzyskać [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) bez wystąpienia ICorDebugType. Istniejące interfejsy API w [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) można następnie użyć do określenia układu klasy typu.
+- Metoda [ICorDebugType2:: GetTypeId](../unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) zapewnia mapowanie dla ICorDebugType do [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md), co umożliwia debugerowi uzyskanie [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) bez wystąpienia ICorDebugType. Istniejące interfejsy API w [COR_TYPEID](../unmanaged-api/debugging/cor-typeid-structure.md) mogą być następnie używane do określenia układu klasy typu.
 
 <a name="v461" />
 
@@ -1300,7 +1300,7 @@ Klienci muszą zainstalować dostawcę usług kryptograficznych dostarczonych pr
 
 **Ulepszone zachowanie <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> połączenia dla funkcji AlwaysOn**
 
-Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja wymagała ustawienia parametrów połączenia w celu uwzględnienia `"MultisubnetFailover=true"` w celu wskazania, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia do `true` w przypadku nawiązywania połączenia z grupą dostępności zawsze może wystąpić limit czasu aplikacji. W tej wersji aplikacja *nie musi ustawiać* <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>, aby `true`. Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
+Klient SqlClient teraz automatycznie zapewnia szybsze połączenia z grupą dostępności AlwaysOn (AG). W sposób niewidoczny dla użytkownika wykryje, czy aplikacja nawiązuje połączenie z grupą dostępności AlwaysOn (AG) w innej podsieci, i szybko odnajduje bieżący aktywny serwer i zapewnia połączenie z serwerem. Przed tą wersją aplikacja musiała ustawić parametry połączenia tak, aby zawierały `"MultisubnetFailover=true"` wskazujący, że nastąpiło połączenie z grupą dostępności AlwaysOn. Bez ustawienia słowa kluczowego połączenia do `true`, podczas nawiązywania połączenia z grupą dostępności AlwaysOn aplikacja może napotkać limit czasu. W tej wersji aplikacja *nie musi ustawiać* <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>, aby `true`. Aby uzyskać więcej informacji na temat obsługi klienta z zawsze włączonymi grupami dostępności, zobacz temat [Obsługa klienta w przypadku wysokiej dostępności i odzyskiwania po awarii](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
 
@@ -1310,7 +1310,7 @@ Windows Presentation Foundation obejmuje wiele udoskonaleń i zmian.
 
 **Zwiększona wydajność**
 
-Opóźnienie w przypadku uruchamiania zdarzeń Touch zostało rozwiązane w .NET Framework 4.6.1. Ponadto wpisywanie kontrolki <xref:System.Windows.Controls.RichTextBox> nie powoduje już powiązania wątku renderowania podczas szybkiego wprowadzania danych.
+Opóźnienie w przypadku uruchamiania zdarzeń Touch zostało rozwiązane w .NET Framework 4.6.1. Ponadto wpisywanie w kontrolce <xref:System.Windows.Controls.RichTextBox> nie powoduje już powiązania wątku renderowania podczas szybkiego wprowadzania danych.
 
 **Ulepszenia sprawdzania pisowni**
 
@@ -1365,7 +1365,7 @@ Metoda <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?disp
 
 - <xref:System.Transactions.TransactionInterop.GetTransmitterPropagationToken%2A?displayProperty=nameWithType>
 
-Po zapisaniu podwyższania poziomu usługi MSDTC należy go używać na potrzeby przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. <xref:System.Guid> podwyższania poziomu transakcji można uzyskać za pomocą właściwości <xref:System.Transactions.Transaction.PromoterType%2A>. Gdy transakcja promuje, podwyższanie poziomu transakcji zapewnia tablicę <xref:System.Byte>, która reprezentuje podwyższony token. Aplikacja może uzyskać podwyższony token dla transakcji, która nie jest podwyższana dla usługi MSDTC, za pomocą metody <xref:System.Transactions.Transaction.GetPromotedToken%2A>.
+Po zapisaniu podwyższania poziomu usługi MSDTC należy go używać na potrzeby przyszłych trwałych rejestracji przy użyciu protokołów, które definiuje. <xref:System.Guid> podwyższania poziomu transakcji można uzyskać za pomocą właściwości <xref:System.Transactions.Transaction.PromoterType%2A>. Gdy transakcja promuje, podwyższanie poziomu transakcji zapewnia <xref:System.Byte> tablicę, która reprezentuje podwyższony token. Aplikacja może uzyskać podwyższony token dla transakcji, która nie jest podwyższana dla usługi MSDTC, za pomocą metody <xref:System.Transactions.Transaction.GetPromotedToken%2A>.
 
 Użytkownicy nowego przeciążenia <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> muszą wykonać określoną sekwencję wywołań, aby można było pomyślnie ukończyć operację podwyższania poziomu. Te reguły są udokumentowane w dokumentacji metody.
 
@@ -1377,11 +1377,11 @@ Niezarządzany interfejs API profilowania został ulepszony w następujący spos
 
 - Lepsza obsługa dostępu do plików PDB w interfejsie [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) .
 
-  W ASP.NET Core staje się znacznie bardziej powszechny dla zestawów do skompilowania w pamięci przez Roslyn. W przypadku deweloperów tworzących narzędzia profilowania oznacza to, że nie można już wyplików PDB, że na dysku mogły być serializowane historyczne. Narzędzia profilera często używają plików PDB do mapowania kodu z powrotem do wierszy źródłowych dla zadań, takich jak pokrycie kodu lub analiza wydajności linia po wierszu. Interfejs [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) zawiera teraz dwie nowe metody, [ICorProfilerInfo7:: GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) i [ICorProfilerInfo7:: ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), aby udostępnić te narzędzia profilera z dostępem do danych PDB znajdujących się w pamięci. Korzystając z nowych interfejsów API, profiler może uzyskać zawartość PDB w pamięci jako tablicę bajtową, a następnie przetworzyć ją lub serializować do dysku.
+  W ASP.NET Core staje się znacznie bardziej powszechny dla zestawów do skompilowania w pamięci przez Roslyn. W przypadku deweloperów tworzących narzędzia profilowania oznacza to, że nie można już wyplików PDB, że na dysku mogły być serializowane historyczne. Narzędzia profilera często używają plików PDB do mapowania kodu z powrotem do wierszy źródłowych dla zadań, takich jak pokrycie kodu lub analiza wydajności linia po wierszu. Interfejs [ICorProfilerInfo7](../unmanaged-api/profiling/icorprofilerinfo7-interface.md) zawiera teraz dwie nowe metody, [ICorProfilerInfo7:: GetInMemorySymbolsLength](../unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) i [ICorProfilerInfo7:: ReadInMemorySymbols](../unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), aby udostępnić te narzędzia profilera z dostępem do danych PDB znajdujących się w pamięci za pomocą nowych interfejsów API, profiler może uzyskać zawartość pliku PDB w pamięci jako tablicę bajtową, a następnie przetworzyć je lub serializować na dysku.
 
 - Lepsza Instrumentacja przy użyciu interfejsu ICorProfiler.
 
-  Profilowani, którzy korzystają z interfejsów API `ICorProfiler` ReJit funkcję Instrumentacji dynamicznej, mogą teraz modyfikować niektóre metadane. Wcześniej takie narzędzia mogły w dowolnej chwili instrumentować IL, ale metadane można modyfikować tylko w czasie ładowania modułu. Ponieważ IL odwołuje się do metadanych, ogranicza to typy instrumentacji, które mogą zostać wykonane. Niektóre z tych limitów zostały zniesione przez dodanie metody [ICorProfilerInfo7:: ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) , aby obsługiwała podzbiór zmian metadanych po załadowaniu modułu, w szczególności przez dodanie nowych `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` i `UserString` rekordów. Ta zmiana zapewnia znacznie szerszy zakres Instrumentacji na bieżąco.
+  Profilowani, którzy używają `ICorProfiler` interfejsów API ReJit funkcje Instrumentacji dynamicznej, mogą teraz modyfikować niektóre metadane. Wcześniej takie narzędzia mogły w dowolnej chwili instrumentować IL, ale metadane można modyfikować tylko w czasie ładowania modułu. Ponieważ IL odwołuje się do metadanych, ogranicza to typy instrumentacji, które mogą zostać wykonane. Niektóre z tych limitów zostały zniesione przez dodanie metody [ICorProfilerInfo7:: ApplyMetaData](../unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) do obsługi podzbioru zmian metadanych po załadowaniu modułu, w szczególności przez dodanie nowych `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec`i `UserString` rekordów. Ta zmiana zapewnia znacznie szerszy zakres Instrumentacji na bieżąco.
 
 <a name="NGEN461" />
 
@@ -1389,7 +1389,7 @@ Niezarządzany interfejs API profilowania został ulepszony w następujący spos
 
 Śledzenie zdarzeń między maszynami umożliwia klientom profilowanie programu na maszynie A i przyjrzyj się zdarzeniom profilowania z mapowaniem wierszy źródłowych na komputerze B. korzystając z poprzednich wersji .NET Framework, użytkownik skopiuje wszystkie moduły i obrazy natywne z PROFILOWANEGO maszynę z maszyną analizy, która zawiera plik PDB języka IL, aby utworzyć mapowanie źródła do kodu natywnego. Chociaż ten proces może działać prawidłowo, gdy pliki są stosunkowo małe, na przykład w przypadku aplikacji na telefon, pliki mogą być bardzo duże w systemach komputerowych i wymagają znaczącego czasu na skopiowanie.
 
-Za pomocą narzędzia NGen plików PDB można utworzyć plik PDB zawierający mapowanie IL-to-native bez zależności w pliku PDB IL. W naszym scenariuszu śledzenia zdarzeń między maszynami konieczne jest skopiowanie pliku PDB obrazu natywnego, który jest generowany przez maszynę A na komputerze B i użycie [interfejsów API dostępu do interfejsu debugowania](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) w celu odczytania mapowania Source-to-IL języka IL i kodu Il-to-native obrazu natywnego zmianę. Połączenie obu mapowań zapewnia mapowanie między źródłami. Ponieważ plik PDB obrazu natywnego jest znacznie mniejszy niż wszystkie moduły i obrazy natywne, proces kopiowania z maszyny A na maszynę B jest znacznie szybszy.
+Za pomocą narzędzia NGen plików PDB można utworzyć plik PDB zawierający mapowanie IL-to-native bez zależności w pliku PDB IL. W naszym scenariuszu śledzenia zdarzeń między maszynami konieczne jest skopiowanie pliku PDB obrazu natywnego, który jest generowany przez maszynę A na maszynę B i użycie [interfejsów API dostępu do interfejsu debugowania](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) w celu odczytania mapowania Source-to-Il w pliku PDB języka IL oraz mapowania Il-to-native obrazu macierzystego. Połączenie obu mapowań zapewnia mapowanie między źródłami. Ponieważ plik PDB obrazu natywnego jest znacznie mniejszy niż wszystkie moduły i obrazy natywne, proces kopiowania z maszyny A na maszynę B jest znacznie szybszy.
 
 <a name="v46" />
 
@@ -1405,7 +1405,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Aby uzyskać więcej informacji, zobacz [ASP.NET Core](/aspnet/core/).
 
-- **Aktualizacje ASP.NET**
+- **ASP.NET Updates**
 
   - **Interfejs API oparty na zadaniach dla opróżniania odpowiedzi asynchronicznej**
 
@@ -1423,7 +1423,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
     </appSettings>
     ```
 
-    W przypadku aplikacji docelowych .NET Framework 4,6 domyślna wartość to `true`. W przypadku aplikacji uruchomionych na .NET Framework 4,6, które są przeznaczone dla starszej wersji .NET Framework, domyślnie `false`. Można ją włączyć, ustawiając ustawienie konfiguracji na `true`.
+    W przypadku aplikacji przeznaczonych dla .NET Framework 4,6 wartość domyślna to `true`. W przypadku aplikacji uruchomionych na .NET Framework 4,6, które są przeznaczone dla starszej wersji .NET Framework, zostanie ona domyślnie `false`. Można ją włączyć, ustawiając ustawienia konfiguracji na `true`.
 
   - **Obsługa protokołu HTTP/2 (system Windows 10)**
 
@@ -1464,7 +1464,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   .NET Framework 4,6 zawiera nową wersję 64-bitowego kompilatora JIT (pierwotnie kod o nazwie RyuJIT). Nowy kompilator 64-bitowy zapewnia znaczące ulepszenia wydajności w porównaniu do starszego, 64-bitowego kompilatora JIT. Nowy kompilator 64-bitowy jest włączony dla procesów 64-bitowych uruchomionych w oparciu o .NET Framework 4,6. Aplikacja będzie działać w procesie 64-bitowym, jeśli zostanie skompilowana jako 64-bit lub AnyCPU i uruchomiona w 64-bitowym systemie operacyjnym. Należy zachować ostrożność, aby przechodzenie do nowego kompilatora było możliwie przejrzyste. zmiany w zachowaniu są możliwe. Chcemy bezpośrednio poznać wszelkie problemy, które wystąpiły podczas korzystania z nowego kompilatora JIT. Skontaktuj się z nami za pomocą [programu Microsoft Connect](https://connect.microsoft.com/) , jeśli wystąpi problem, który może być związany z nowym kompilatorem 64-bitowym JIT.
 
-  Nowy 64-bitowy kompilator JIT obejmuje również funkcje SIMD przyspieszania sprzętowego w połączeniu z typami z obsługą SIMD w przestrzeni nazw <xref:System.Numerics>, co może przynieść dobre ulepszenia wydajności.
+  Nowy kompilator 64-bitowy JIT zawiera również funkcje przyspieszania sprzętowego SIMD, w połączeniu z typami z obsługą SIMD w przestrzeni nazw <xref:System.Numerics>, co może przynieść dobre ulepszenia wydajności.
 
 - **Udoskonalenia modułu ładującego zestawy**
 
@@ -1480,7 +1480,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **CultureInfo. CurrentCulture i CultureInfo. CurrentUICulture**
 
-    Właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> są teraz do odczytu i zapisu, a nie tylko do odczytu. Jeśli do tych właściwości przypiszesz nowy obiekt <xref:System.Globalization.CultureInfo>, bieżąca kultura wątku zdefiniowana przez właściwość `Thread.CurrentThread.CurrentCulture` i kulturę wątku bieżącego interfejsu użytkownika zdefiniowana przez właściwości `Thread.CurrentThread.CurrentUICulture` również zmienią się.
+    Właściwości <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> i <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> są teraz do odczytu i zapisu, a nie tylko do odczytu. Jeśli do tych właściwości przypiszesz nowy obiekt <xref:System.Globalization.CultureInfo>, bieżąca kultura wątku zdefiniowana przez właściwość `Thread.CurrentThread.CurrentCulture` i kulturę wątku interfejsu użytkownika, która jest definiowana przez właściwości `Thread.CurrentThread.CurrentUICulture`, również się zmienią.
 
   - **Udoskonalenia do wyrzucania elementów bezużytecznych (GC)**
 
@@ -1490,17 +1490,17 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Typy z obsługą SIMD**
 
-    Przestrzeń nazw <xref:System.Numerics> zawiera teraz wiele typów z obsługą SIMD, takich jak <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> i <xref:System.Numerics.Vector4>.
+    Przestrzeń nazw <xref:System.Numerics> teraz zawiera wiele typów z obsługą SIMD, takich jak <xref:System.Numerics.Matrix3x2>, <xref:System.Numerics.Matrix4x4>, <xref:System.Numerics.Plane>, <xref:System.Numerics.Quaternion>, <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3>i <xref:System.Numerics.Vector4>.
 
     Ponieważ nowy kompilator 64-bitowy JIT obejmuje również funkcje sprzętowego przyspieszania SIMD, istnieją szczególnie znaczące ulepszenia wydajności w przypadku używania typów z obsługą SIMD z nowym, 64-bitowym kompilatorem JIT.
 
   - **Aktualizacje kryptografii**
 
-    Interfejs API <xref:System.Security.Cryptography?displayProperty=nameWithType> jest aktualizowany do obsługi [interfejsów API kryptografii CNG systemu Windows](/windows/desktop/SecCNG/cng-reference). Poprzednie wersje .NET Framework były używane całkowicie we [wcześniejszej wersji interfejsów API kryptografii systemu Windows](/windows/desktop/SecCrypto/cryptography-portal) jako podstawy dla implementacji <xref:System.Security.Cryptography?displayProperty=nameWithType>. Mamy żądania obsługi interfejsu API CNG, ponieważ obsługuje on [nowoczesne algorytmy kryptografii](/windows/desktop/SecCNG/cng-features#suite-b-support), które są ważne w przypadku niektórych kategorii aplikacji.
+    Interfejs API <xref:System.Security.Cryptography?displayProperty=nameWithType> jest aktualizowany do obsługi [interfejsów API kryptografii CNG systemu Windows](/windows/desktop/SecCNG/cng-reference). Poprzednie wersje .NET Framework były używane całkowicie we [wcześniejszej wersji interfejsów API kryptografii systemu Windows](/windows/desktop/SecCrypto/cryptography-portal) jako podstawy implementacji <xref:System.Security.Cryptography?displayProperty=nameWithType>. Mamy żądania obsługi interfejsu API CNG, ponieważ obsługuje on [nowoczesne algorytmy kryptografii](/windows/desktop/SecCNG/cng-features#suite-b-support), które są ważne w przypadku niektórych kategorii aplikacji.
 
     .NET Framework 4,6 zawiera następujące nowe ulepszenia do obsługi interfejsów API kryptografii CNG systemu Windows:
 
-    - Zestaw metod rozszerzających certyfikaty x509, `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` i `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`, które zwracają implementację opartą na protokole CNG, a nie implementację w trybie CAPI, gdy jest to możliwe. (Niektóre karty inteligentne itp.) nadal wymagają użycia programu CAPI, a interfejsy API obsługują rezerwę.
+    - Zestaw metod rozszerzających certyfikaty x509, `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPublicKey(System.Security.Cryptography.X509Certificates.X509Certificate2)` i `System.Security.Cryptography.X509Certificates.RSACertificateExtensions.GetRSAPrivateKey(System.Security.Cryptography.X509Certificates.X509Certificate2)`, które zwracają implementację opartą na protokole CNG, a nie implementację opartą na protokole CAPI, gdy jest to możliwe. (Niektóre karty inteligentne itp.) nadal wymagają użycia programu CAPI, a interfejsy API obsługują rezerwę.
 
     - Klasa <xref:System.Security.Cryptography.RSACng?displayProperty=nameWithType>, która zapewnia implementację algorytmu RSA w języku CNG.
 
@@ -1530,9 +1530,9 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
     Nowa Klasa <xref:System.AppContext> dodaje nową funkcję zgodności, która umożliwia autorom biblioteki zapewnia jednolity mechanizm rezygnacji dla nowych funkcji dla swoich użytkowników. Tworzy luźno rozłączoną umowę między składnikami w celu przekazywania żądania rezygnacji. Ta funkcja jest zwykle ważna w przypadku zmiany istniejącej funkcji. Z drugiej strony istnieje już niejawny wybór dla nowych funkcji.
 
-    W przypadku <xref:System.AppContext> biblioteki definiują i uwidaczniają przełączniki zgodności, podczas gdy kod, który zależy od nich, mogą ustawiać te przełączniki na wpływ na zachowanie biblioteki. Domyślnie biblioteki udostępniają nowe funkcje i zmieniają je (to oznacza, że zapewniają poprzednie funkcje), jeśli przełącznik jest ustawiony.
+    W przypadku <xref:System.AppContext>biblioteki definiują i uwidaczniają przełączniki zgodności, podczas gdy kod, który zależy od nich, mogą ustawiać te przełączniki na wpływ na zachowanie biblioteki. Domyślnie biblioteki udostępniają nowe funkcje i zmieniają je (to oznacza, że zapewniają poprzednie funkcje), jeśli przełącznik jest ustawiony.
 
-    Aplikacja (lub biblioteka) może zadeklarować wartość przełącznika (zawsze wartość <xref:System.Boolean>), którą definiuje Biblioteka zależna. Przełącznik jest zawsze niejawnie `false`. Ustawienie przełącznika na `true` włącza go. Jawne ustawienie przełącznika `false` zapewnia nowe zachowanie.
+    Aplikacja (lub biblioteka) może zadeklarować wartość przełącznika (która jest zawsze <xref:System.Boolean> wartość), którą definiuje Biblioteka zależna. Przełącznik jest zawsze niejawnie `false`. Ustawienie przełącznika na `true` włącza go. Jawne ustawienie przełącznika do `false` zapewnia nowe zachowanie.
 
     ```csharp
     AppContext.SetSwitch("Switch.AmazingLib.ThrowOnException", true);
@@ -1588,7 +1588,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Zmiany wzorca asynchronicznego opartego na zadaniach (TAP)**
 
-    W przypadku aplikacji przeznaczonych dla .NET Framework 4,6, <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kulturę i kultury interfejsu użytkownika wątku wywołującego. Nie dotyczy to zachowania aplikacji przeznaczonych dla poprzednich wersji .NET Framework lub nie przeznaczonych dla określonej wersji .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję "kultury i operacje asynchroniczne oparte na zadaniach" w temacie dotyczącym klas <xref:System.Globalization.CultureInfo>.
+    W przypadku aplikacji przeznaczonych dla .NET Framework 4,6, <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty dziedziczą kulturę i kultury interfejsu użytkownika wątku wywołującego. Nie dotyczy to zachowania aplikacji przeznaczonych dla poprzednich wersji .NET Framework lub nie przeznaczonych dla określonej wersji .NET Framework. Aby uzyskać więcej informacji, zobacz sekcję "kultury i operacje asynchroniczne oparte na zadaniach" w temacie klasy <xref:System.Globalization.CultureInfo>.
 
     Klasa <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> pozwala reprezentować dane otoczenia, które są lokalne dla danego przepływu kontroli asynchronicznej, takie jak Metoda `async`. Może służyć do utrwalania danych w wątkach. Można również zdefiniować metodę wywołania zwrotnego, która jest przekazywana za każdym razem, gdy dane otoczenia ulegną zmianie, ponieważ właściwość <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> została jawnie zmieniona lub wątek napotkał przejście kontekstu.
 
@@ -1620,7 +1620,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Udoskonalenia HDPI**
 
-    Obsługa HDPI w programie WPF jest teraz lepsza w .NET Framework 4,6. Wprowadzono zmiany układu zaokrąglania, aby zmniejszyć liczbę wystąpień wycinków w kontrolkach z obramowaniem. Domyślnie ta funkcja jest włączona tylko wtedy, gdy dla <xref:System.Runtime.Versioning.TargetFrameworkAttribute> ustawiono wartość .NET 4,6.  Aplikacje, które są przeznaczone dla wcześniejszych wersji platformy, ale działają w .NET Framework 4,6, mogą zrezygnować z nowego zachowania, dodając następujący wiersz do sekcji [\<runtime >](../configure-apps/file-schema/runtime/runtime-element.md) pliku App. config:
+    Obsługa HDPI w programie WPF jest teraz lepsza w .NET Framework 4,6. Wprowadzono zmiany układu zaokrąglania, aby zmniejszyć liczbę wystąpień wycinków w kontrolkach z obramowaniem. Domyślnie ta funkcja jest włączona tylko wtedy, gdy <xref:System.Runtime.Versioning.TargetFrameworkAttribute> jest ustawiona na .NET 4,6.  Aplikacje, które są przeznaczone dla wcześniejszych wersji platformy, ale działają w .NET Framework 4,6, mogą zrezygnować z nowego zachowania, dodając następujący wiersz\<do sekcji [> środowiska uruchomieniowego](../configure-apps/file-schema/runtime/runtime-element.md) w pliku App. config:
 
     ```xml
     <AppContextSwitchOverrides
@@ -1628,13 +1628,13 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
     />
     ```
 
-    Środowiska WPF systemu Windows na rozgałęzieniu wielu monitorów z różnymi ustawieniami DPI (Konfiguracja z wieloma DPI) są teraz całkowicie renderowane bez czarnego regionu. Możesz zrezygnować z tego zachowania, dodając następujący wiersz do sekcji `<appSettings>` pliku App. config, aby wyłączyć to nowe zachowanie:
+    Środowiska WPF systemu Windows na rozgałęzieniu wielu monitorów z różnymi ustawieniami DPI (Konfiguracja z wieloma DPI) są teraz całkowicie renderowane bez czarnego regionu. Możesz zrezygnować z tego zachowania, dodając następujący wiersz do `<appSettings>` sekcji pliku App. config, aby wyłączyć to nowe zachowanie:
 
     ```xml
     <add key="EnableMultiMonitorDisplayClipping" value="true"/>
     ```
 
-    Obsługa automatycznego ładowania prawego kursora na podstawie ustawienia DPI została dodana do <xref:System.Windows.Input.Cursor?displayProperty=nameWithType>.
+    Dodano obsługę automatycznego ładowania prawego kursora na podstawie ustawienia DPI do <xref:System.Windows.Input.Cursor?displayProperty=nameWithType>.
 
   - **Lepsza obsługa dotyku**
 
@@ -1665,7 +1665,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - **Wysyłanie komunikatów przy użyciu różnych połączeń HTTP**
 
-    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby wykonania tej czynności:
+    Usługa WCF umożliwia teraz użytkownikom zapewnienie, że niektóre komunikaty są wysyłane przy użyciu różnych podstawowych połączeń HTTP. Istnieją dwa sposoby, w tym celu:
 
     - **Używanie prefiksu nazwy grupy połączeń**
 
@@ -1673,7 +1673,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
     - **Korzystanie z różnych fabryk kanałów**
 
-      Użytkownicy mogą również włączyć funkcję, która zapewnia, że komunikaty wysyłane przy użyciu kanałów utworzonych przez różne fabryki kanałów będą używać różnych podstawowych połączeń HTTP. Aby włączyć tę funkcję, użytkownicy muszą ustawić następujące `appSetting` do `true`:
+      Użytkownicy mogą również włączyć funkcję, która zapewnia, że komunikaty wysyłane przy użyciu kanałów utworzonych przez różne fabryki kanałów będą używać różnych podstawowych połączeń HTTP. Aby włączyć tę funkcję, użytkownicy muszą ustawić następujące `appSetting`, aby `true`:
 
       ```xml
       <appSettings>
@@ -1689,7 +1689,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
   <add key="microsoft:WorkflowServices:FilterResumeTimeoutInSeconds" value="60"/>
   ```
 
-  Wartość domyślna to 60 sekund. Jeśli wartość `value` jest równa 0, żądania poza kolejnością zostaną natychmiast odrzucone z powodu błędu z tekstem, który wygląda następująco:
+  Wartość domyślna to 60 sekund. Jeśli wartość `value` jest równa 0, żądania poza kolejnością są natychmiast odrzucane z powodu błędu z tekstem, który wygląda następująco:
 
   ```console
   Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
@@ -1697,7 +1697,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Jest to ten sam komunikat, który jest wyświetlany po odebraniu komunikatu o operacji poza kolejnością i braku zakładek innych niż protokoły.
 
-  Jeśli wartość elementu `FilterResumeTimeoutInSeconds` jest różna od zera, istnieją zakładki inne niż protokoły i przekroczenie limitu czasu, operacja kończy się niepowodzeniem z komunikatem o przekroczeniu limitu czasu.
+  Jeśli wartość `FilterResumeTimeoutInSeconds` elementu jest różna od zera, istnieją zakładki bez protokołu, a interwał limitu czasu wygaśnie, operacja kończy się niepowodzeniem z komunikatem o limicie czasu.
 
 - **Transakcje**
 
@@ -1709,7 +1709,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Wartość domyślna to `false`.
 
-- **Sieci**
+- **Sieć**
 
   - **Ponowne użycie gniazda**
 
@@ -1721,7 +1721,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
     - Właściwość <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType>.
 
-    Domyślnie właściwość <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> jest `false`, chyba że wartość `HWRPortReuseOnSocketBind` klucza rejestru `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` jest ustawiona na 0x1. Aby włączyć ponowne używanie portów lokalnych dla połączeń HTTP, ustaw właściwość <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> na `true`. Powoduje to, że wszystkie wychodzące połączenia gniazda TCP z <xref:System.Net.Http.HttpClient> i <xref:System.Net.HttpWebRequest> do korzystania z nowej opcji gniazda systemu Windows 10 [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options), która umożliwia ponowne użycie portów lokalnych.
+    Domyślnie właściwość <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> jest `false`, chyba że wartość `HWRPortReuseOnSocketBind` klucza rejestru `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` jest ustawiona na 0x1. Aby włączyć ponowne używanie portów lokalnych dla połączeń HTTP, ustaw właściwość <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> na `true`. Powoduje to, że wszystkie wychodzące połączenia gniazda TCP z <xref:System.Net.Http.HttpClient> i <xref:System.Net.HttpWebRequest> do korzystania z nowej opcji gniazda systemu Windows 10, [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options), która umożliwia ponowne użycie portów lokalnych.
 
     Deweloperzy piszący aplikację tylko do gniazd mogą określić opcję <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> podczas wywoływania metody, takiej jak <xref:System.Net.Sockets.Socket.SetSocketOption%2A?displayProperty=nameWithType>, aby gniazda wychodzące ponownie używały portów lokalnych podczas wiązania.
 
@@ -1733,7 +1733,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   Ta funkcja została rozwinięta w .NET Framework 4,6, aby uwzględnić typy <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.ToolStripSplitButton> oraz prostokąt określony przez właściwość <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> używaną podczas rysowania <xref:System.Drawing.Design.UITypeEditor>.
 
-  Jest to funkcja opcjonalna. Aby ją włączyć, ustaw dla elementu `EnableWindowsFormsHighDpiAutoResizing` wartość `true` w pliku konfiguracji aplikacji (App. config):
+  Jest to funkcja opcjonalna. Aby ją włączyć, należy ustawić `EnableWindowsFormsHighDpiAutoResizing` elementu `true` w pliku konfiguracji aplikacji (App. config):
 
   ```xml
   <appSettings>
@@ -1755,7 +1755,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
 - **Pakiety .NET Framework Open Source**
 
-  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety Open Source w witrynie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [CoreFx w witrynie GitHub](https://github.com/dotnet/corefx). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
+  Pakiety .NET Core, takie jak Niezmienne kolekcje, [interfejsy API SIMD](https://go.microsoft.com/fwlink/?LinkID=518639)i interfejsy API sieci, takie jak te, które znajdują się w przestrzeni nazw <xref:System.Net.Http>, są teraz dostępne jako pakiety Open Source w serwisie [GitHub](https://github.com/). Aby uzyskać dostęp do kodu, zobacz [CoreFx w witrynie GitHub](https://github.com/dotnet/corefx). Aby uzyskać więcej informacji i dowiedzieć się, jak współtworzyć te pakiety, zobacz stronę główną platformy .NET [Core i Open Source](../get-started/net-core-and-open-source.md) [w witrynie GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -1776,7 +1776,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
   - <xref:System.Windows.Forms.DataGridView>
   - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
-  Jest to funkcja opcjonalna. Aby ją włączyć, ustaw dla elementu `EnableWindowsFormsHighDpiAutoResizing` wartość `true` w pliku konfiguracji aplikacji (App. config):
+  Jest to funkcja opcjonalna. Aby ją włączyć, należy ustawić `EnableWindowsFormsHighDpiAutoResizing` elementu `true` w pliku konfiguracji aplikacji (App. config):
 
   ```xml
   <appSettings>
@@ -1788,7 +1788,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
 
   - Podnieś poziom transakcji do transakcji usługi Microsoft Distributed Transaction Coordinator (MSDTC).
 
-  - Zastąp <xref:System.Transactions.IPromotableSinglePhaseNotification> za<xref:System.Transactions.ISinglePhaseNotification>, który jest trwałą rejestracją, która obsługuje zatwierdzanie pojedynczej fazy.
+  - Zastąp <xref:System.Transactions.IPromotableSinglePhaseNotification> <xref:System.Transactions.ISinglePhaseNotification>, czyli rejestracją trwałą, która obsługuje zatwierdzanie jednofazowe.
 
   Można to zrobić w ramach tej samej domeny aplikacji i nie jest wymagany żaden dodatkowy kod niezarządzany do współpracy z usługą MSDTC w celu przeprowadzenia promocji. Nową metodę można wywołać tylko wtedy, gdy istnieje oczekujące wywołanie z <xref:System.Transactions?displayProperty=nameWithType> do metody <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote`, która jest implementowana przez rejestrację promocji.
 
@@ -1801,7 +1801,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
   - [SetEventMask2, metoda](../unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
   - [AddAssemblyReference, metoda](../unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
-  Poprzednie implementacje `ICorProfiler` obsługują ładowanie zestawów zależnych z opóźnieniem. Nowe interfejsy API profilowania wymagają zestawów zależnych, które są wstrzykiwane przez profiler, aby można je było załadować natychmiast, zamiast ładować po całkowitym zainicjowaniu aplikacji. Ta zmiana nie ma wpływu na użytkowników istniejących interfejsów API `ICorProfiler`.
+  Poprzednie implementacje `ICorProfiler` obsługiwane z opóźnieniem ładowania zestawów zależnych. Nowe interfejsy API profilowania wymagają zestawów zależnych, które są wstrzykiwane przez profiler, aby można je było załadować natychmiast, zamiast ładować po całkowitym zainicjowaniu aplikacji. Ta zmiana nie ma wpływu na użytkowników istniejących `ICorProfiler` interfejsów API.
 
 - **Ulepszenia debugowania.** Poniższe nowe niezarządzane interfejsy API debugowania zapewniają lepszą integrację z profilerem. Teraz możesz uzyskiwać dostęp do metadanych wstawianych przez profiler, a także zmiennych lokalnych i kodu wytworzonych przez ReJIT kompilatora w przypadku debugowania zrzutów.
 
@@ -1834,7 +1834,7 @@ W programie .NET 2015 wprowadzono .NET Framework 4,6 i .NET Core. Niektóre nowe
                                           enlistmentOptions As EnlistmentOptions) As Enlistment
   ```
 
-  Metoda może być używana przez rejestrację, która została wcześniej utworzona przez <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> w odpowiedzi na metodę <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Prosi o `System.Transactions`, aby podwyższyć poziom transakcji do transakcji MSDTC i "Konwertuj" rejestrację w postaci trwałej rejestracji. Po pomyślnym zakończeniu tej metody interfejs <xref:System.Transactions.IPromotableSinglePhaseNotification> nie będzie już przywoływany przez `System.Transactions`, a wszystkie przyszłe powiadomienia będą docierać do podanego interfejsu <xref:System.Transactions.ISinglePhaseNotification>. Dana Rejestracja musi pełnić rolę trwałej rejestracji, obsługującej rejestrowanie i odzyskiwanie transakcji. Aby uzyskać szczegółowe informacje, zobacz <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>. Ponadto Rejestracja musi obsługiwać <xref:System.Transactions.ISinglePhaseNotification>.  Tę metodę można wywołać *tylko* podczas przetwarzania wywołania <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Jeśli tak się nie dzieje, zostanie zgłoszony wyjątek <xref:System.Transactions.TransactionException>.
+  Metoda może być używana przez rejestrację, która została wcześniej utworzona przez <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> w odpowiedzi na metodę <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Prosi o `System.Transactions` podwyższenie poziomu transakcji do transakcji MSDTC i "Konwertuj" rejestrację promocji na trwałą rejestrację. Po pomyślnym zakończeniu tej metody interfejs <xref:System.Transactions.IPromotableSinglePhaseNotification> nie będzie już przywoływany przez `System.Transactions`i wszelkie przyszłe powiadomienia będą docierać do podanego interfejsu <xref:System.Transactions.ISinglePhaseNotification>. Dana Rejestracja musi pełnić rolę trwałej rejestracji, obsługującej rejestrowanie i odzyskiwanie transakcji. Aby uzyskać szczegółowe informacje, zobacz <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>. Ponadto Rejestracja musi obsługiwać <xref:System.Transactions.ISinglePhaseNotification>.  Tę metodę można wywołać *tylko* podczas przetwarzania wywołania <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType>. Jeśli tak się nie dzieje, zostanie zgłoszony wyjątek <xref:System.Transactions.TransactionException>.
 
 <a name="v451" />
 
@@ -1894,7 +1894,7 @@ Ulepszenia podczas debugowania aplikacji .NET Framework w Visual Studio 2013 obe
 
 - Lepsza obsługa wyjątków dla składników środowisko wykonawcze systemu Windows. W [!INCLUDE[win81](../../../includes/win81-md.md)]wyjątki, które powstają w aplikacjach ze sklepu Windows, zachowują informacje o błędzie, który spowodował wyjątek, nawet między granicami języka. Informacje o tej funkcji można znaleźć w sekcji "Programowanie aplikacji ze sklepu Windows" w [ogłoszeniu .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-Począwszy od Visual Studio 2013, można użyć narzędzia do optymalizacji opartej na [profilach zarządzanych (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) do optymalizowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, a także aplikacji klasycznych.
+Począwszy od Visual Studio 2013, można użyć [narzędzia optymalizacji zarządzanego profilu (Mpgo. exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) w celu zoptymalizowania aplikacji do sklepu Windows 8. x, a także aplikacji klasycznych.
 
 Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and Web Tools for Visual Studio 2013 informacji o wersji](/aspnet/visual-studio/overview/2013/release-notes).
 
@@ -1928,11 +1928,11 @@ Nowe funkcje w programie ASP.NET 4.5.1 można znaleźć w temacie [ASP.NET and W
 
 - Obsługa wersji 2008 międzynarodowych nazw domen w programie Applications (IDNA) standard, gdy Klasa <xref:System.Globalization.IdnMapping?displayProperty=nameWithType> jest używana w [!INCLUDE[win8](../../../includes/win8-md.md)].
 
-- Delegowanie porównania ciągów do systemu operacyjnego, który implementuje Unicode 6,0, gdy .NET Framework jest używany w [!INCLUDE[win8](../../../includes/win8-md.md)]. W przypadku uruchamiania na innych platformach .NET Framework obejmuje własne dane porównania ciągów, które implementują standard Unicode 5. x. Zapoznaj się z klasą <xref:System.String> i sekcją uwagi klasy <xref:System.Globalization.SortVersion>.
+- Delegowanie porównania ciągów do systemu operacyjnego, który implementuje Unicode 6,0, gdy .NET Framework jest używany w [!INCLUDE[win8](../../../includes/win8-md.md)]. W przypadku uruchamiania na innych platformach .NET Framework obejmuje własne dane porównania ciągów, które implementują standard Unicode 5. x. Zobacz klasę <xref:System.String> i sekcję Uwagi klasy <xref:System.Globalization.SortVersion>.
 
 - Możliwość obliczania kodów skrótów dla ciągów na podstawie poszczególnych domen aplikacji. Zobacz [\<UseRandomizedStringHashAlgorithm > elementu](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md).
 
-- Obsługa odbicia typu jest dzielona między klasy <xref:System.Type> i <xref:System.Reflection.TypeInfo>. Zobacz [odbicie w .NET Framework dla aplikacji ze sklepu Windows](../reflection-and-codedom/reflection-for-windows-store-apps.md).
+- Obsługa odbicia typu jest dzielona między <xref:System.Type> i <xref:System.Reflection.TypeInfo> klas. Zobacz [odbicie w .NET Framework dla aplikacji ze sklepu Windows](../reflection-and-codedom/reflection-for-windows-store-apps.md).
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
@@ -1944,7 +1944,7 @@ W .NET Framework 4,5 Managed Extensibility Framework (MEF) udostępnia następuj
 
 - Wiele zakresów.
 
-- Podzbiór MEF, którego można używać podczas tworzenia aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Ten podzestaw jest dostępny jako [pakiet do pobrania](https://go.microsoft.com/fwlink/?LinkId=256238) z galerii NuGet. Aby zainstalować pakiet, Otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu **projekt** i Wyszukaj w trybie online pakiet `Microsoft.Composition`.
+- Podzbiór MEF, którego można używać podczas tworzenia aplikacji do sklepu Windows 8. x. Ten podzestaw jest dostępny jako [pakiet do pobrania](https://go.microsoft.com/fwlink/?LinkId=256238) z galerii NuGet. Aby zainstalować pakiet, Otwórz projekt w programie Visual Studio, wybierz polecenie **Zarządzaj pakietami NuGet** z menu **projekt** i Wyszukaj w trybie online pakiet `Microsoft.Composition`.
 
 Aby uzyskać więcej informacji, zobacz [Managed Extensibility Framework (MEF)](../mef/index.md).
 
@@ -1956,9 +1956,9 @@ W .NET Framework 4,5 nowe funkcje asynchroniczne zostały dodane do języków C#
 
 ### <a name="tools"></a>Narzędzia
 
-W .NET Framework 4,5, Generator plików zasobów (Resgen. exe) umożliwia utworzenie pliku. resw do użycia w aplikacjach [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] z pliku Resources osadzonego w zestawie .NET Framework. Aby uzyskać więcej informacji, zobacz [Resgen. exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md).
+W .NET Framework 4,5, Generator plików zasobów (Resgen. exe) umożliwia utworzenie pliku. resw do użycia w aplikacjach do sklepu Windows 8. x z pliku Resources osadzonego w .NET Framework zestawie. Aby uzyskać więcej informacji, zobacz [Resgen. exe (Generator plików zasobów)](../tools/resgen-exe-resource-file-generator.md).
 
-Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skrócenie czasu uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepływność przez optymalizację zestawów obrazów natywnych. Narzędzie wiersza polecenia generuje dane profilowe dla zestawów aplikacji obrazu natywnego. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, a także aplikacji klasycznych.
+Optymalizacja z przewodnikiem zarządzanym profilem (Mpgo. exe) umożliwia skrócenie czasu uruchamiania aplikacji, wykorzystanie pamięci (rozmiar zestawu roboczego) i przepływność przez optymalizację zestawów obrazów natywnych. Narzędzie wiersza polecenia generuje dane profilowe dla zestawów aplikacji obrazu natywnego. Zobacz [Mpgo. exe (Narzędzie optymalizacji zarządzanego profilu)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Począwszy od Visual Studio 2013, można użyć programu Mpgo. exe do optymalizowania aplikacji ze sklepu Windows 8. x, a także aplikacji klasycznych.
 
 <a name="parallel" />
 
@@ -1978,9 +1978,9 @@ ASP.NET 4,5 i 4.5.1 Dodawanie powiązania modelu dla formularzy sieci Web, obsł
 
 ### <a name="networking-a-namenetworking-"></a><a name="networking" /> sieci
 
-.NET Framework 4,5 udostępnia nowy interfejs programowania dla aplikacji HTTP. Aby uzyskać więcej informacji, zobacz nowe przestrzenie nazw <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
+.NET Framework 4,5 udostępnia nowy interfejs programowania dla aplikacji HTTP. Aby uzyskać więcej informacji, zobacz przestrzenie nazw New <xref:System.Net.Http?displayProperty=nameWithType> i <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
-Pomoc techniczna jest również dostępna dla nowego interfejsu programowania do akceptowania i korzystania z połączenia WebSocket przy użyciu istniejących <xref:System.Net.HttpListener> i powiązanych klas. Aby uzyskać więcej informacji, zobacz nową przestrzeń nazw <xref:System.Net.WebSockets> i Klasa <xref:System.Net.HttpListener>.
+Pomoc techniczna jest również dostępna dla nowego interfejsu programowania do akceptowania i korzystania z połączenia WebSocket przy użyciu istniejących <xref:System.Net.HttpListener> i powiązanych klas. Aby uzyskać więcej informacji, zobacz Przestrzeń nazw New <xref:System.Net.WebSockets> i klasy <xref:System.Net.HttpListener>.
 
 Ponadto .NET Framework 4,5 obejmuje następujące udoskonalenia sieci:
 
@@ -2000,7 +2000,7 @@ Ponadto .NET Framework 4,5 obejmuje następujące udoskonalenia sieci:
 
 W .NET Framework 4,5 Windows Presentation Foundation (WPF) zawiera zmiany i usprawnienia w następujących obszarach:
 
-- Nowa kontrolka <xref:System.Windows.Controls.Ribbon.Ribbon>, która umożliwia implementację interfejsu użytkownika wstążki, który obsługuje pasek narzędzi Szybki dostęp, menu aplikacji i karty.
+- Nowy formant <xref:System.Windows.Controls.Ribbon.Ribbon>, który umożliwia implementację interfejsu użytkownika wstążki, który hostuje pasek narzędzi Szybki dostęp, menu aplikacji i karty.
 
 - Nowy interfejs <xref:System.ComponentModel.INotifyDataErrorInfo> obsługujący synchroniczną i asynchroniczną weryfikację danych.
 
@@ -2074,7 +2074,7 @@ W .NET Framework 4,5 dodano kilka nowych funkcji do Windows Workflow Foundation 
 
   - Obsługa tworzenia przejść między udostępnionymi wyzwalaczami przez projektanta.
 
-  - Działania związane z tworzeniem przepływów pracy automatu Stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> i <xref:System.Activities.Statements.Transition>.
+  - Działania służące do tworzenia przepływów pracy automatu Stanów, w tym: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>i <xref:System.Activities.Statements.Transition>.
 
 - Ulepszone Projektant przepływu pracy funkcje, takie jak następujące:
 
@@ -2118,7 +2118,7 @@ Aby uzyskać więcej informacji, zobacz [co nowego w Windows Workflow Foundation
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-aplikacje [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] są przeznaczone do określonych współczynników formularzy i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] dla systemu Windows za pomocą programu C# lub Visual Basic. Ten podzbiór jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [omówieniu](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
+Aplikacje ze sklepu Windows 8. x są przeznaczone do określonych współczynników i wykorzystują możliwości systemu operacyjnego Windows. Podzestaw .NET Framework 4,5 lub 4.5.1 jest dostępny do kompilowania aplikacji ze sklepu Windows 8. x dla systemu Windows przy użyciu C# programu lub Visual Basic. Ten podzbiór jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] i został omówiony w [omówieniu](https://go.microsoft.com/fwlink/?LinkId=228491) w centrum deweloperów systemu Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Przenośne biblioteki klas <a name="portable" />
 
@@ -2130,4 +2130,4 @@ Przenośna biblioteka klas w programie Visual Studio 2012 (i nowszych wersjach) 
 - [Co nowego w ułatwieniach dostępu w .NET Framework](whats-new-in-accessibility.md)
 - [Co nowego w programie Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017)
 - [ASP.NET](/aspnet)
-- [Co nowego w wizualizacjiC++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+- [Co nowego C++ w programie Visual Studio](/cpp/what-s-new-for-visual-cpp-in-visual-studio)

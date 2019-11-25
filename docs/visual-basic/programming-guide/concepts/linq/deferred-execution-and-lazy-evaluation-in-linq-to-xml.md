@@ -1,38 +1,38 @@
 ---
-title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)
+title: Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 31998eed-b95e-47fb-a865-9de1f337d1fb
-ms.openlocfilehash: a8d3bec16fa8ca7f5c587a9fdbb6caac53b74efe
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8e94b9133a2d2dd287fba91600c94460a5204b2c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346405"
 ---
-# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Wykonanie odroczone i obliczanie z opóźnieniem w LINQ to XML (Visual Basic)
-Operacje zapytań i osi są często stosowane do użycia odroczonego wykonania. W tym temacie opisano wymagania i zalety wykonanie odroczone i kilka kwestii dotyczących wdrażania.  
+# <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-visual-basic"></a>Deferred Execution and Lazy Evaluation in LINQ to XML (Visual Basic)
+Query and axis operations are often implemented to use deferred execution. This topic explains the requirements and advantages of deferred execution, and some implementation considerations.  
   
 ## <a name="deferred-execution"></a>Wykonanie odroczone  
- Odroczone wykonania oznacza wyniku obliczenia wyrażenia jest opóźnione aż do jego *zrealizowany* faktycznie wymagana jest wartość. Wykonanie odroczone może znacznie zwiększyć wydajność, gdy masz do manipulowania kolekcji dużych ilości danych, szczególnie w programach, które zawierają szereg zapytań łańcuchowych lub manipulacje. W przypadku najlepszych odroczonego wykonania umożliwia jednej iteracji za pomocą kolekcji źródłowej.  
+ Deferred execution means that the evaluation of an expression is delayed until its *realized* value is actually required. Deferred execution can greatly improve performance when you have to manipulate large data collections, especially in programs that contain a series of chained queries or manipulations. In the best case, deferred execution enables only a single iteration through the source collection.  
   
- Technologii LINQ wykorzystać rozbudowane odroczonego wykonania w przypadku członków podstawowych <xref:System.Linq?displayProperty=nameWithType> klas i metod rozszerzenia w różnych obszarach nazw LINQ, takich jak <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
+ The LINQ technologies make extensive use of deferred execution in both the members of core <xref:System.Linq?displayProperty=nameWithType> classes and in the extension methods in the various LINQ namespaces, such as <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
   
-## <a name="eager-vs-lazy-evaluation"></a>Zapoznamy programu vs. Obliczanie z opóźnieniem  
- Podczas pisania metody, która implementuje odroczonym należy zdecydować, czy zaimplementować metodę, przy użyciu opóźnieniem lub eager oceny.  
+## <a name="eager-vs-lazy-evaluation"></a>Eager vs. Lazy Evaluation  
+ When you write a method that implements deferred execution, you also have to decide whether to implement the method using lazy evaluation or eager evaluation.  
   
-- W *opóźnieniem*, jeden element z kolekcji źródłowej jest przetwarzany w każdym wywołaniu iteratora. Jest to typowy sposób, w którym są implementowane Iteratory.  
+- In *lazy evaluation*, a single element of the source collection is processed during each call to the iterator. This is the typical way in which iterators are implemented.  
   
-- W *eager oceny*, pierwsze wywołanie funkcji iteratora spowoduje całą kolekcję przetwarzany. Tymczasową kopię kolekcji źródłowej, mogą być także wymagane. Na przykład <xref:System.Linq.Enumerable.OrderBy%2A> metoda ma sortowania całą kolekcję przed zwróceniem pierwszego elementu.  
+- In *eager evaluation*, the first call to the iterator will result in the entire collection being processed. A temporary copy of the source collection might also be required. For example, the <xref:System.Linq.Enumerable.OrderBy%2A> method has to sort the entire collection before it returns the first element.  
   
- Obliczanie leniwe zwykle daje lepszą wydajność, ponieważ dystrybuuje obciążenie przetwarzania równomiernie w całej oceny kolekcji, a minimalizuje wykorzystanie danych tymczasowych. Oczywiście w przypadku niektórych operacji nie ma innych opcji niż celu zmaterializowania wyników pośrednich.  
+ Lazy evaluation usually yields better performance because it distributes overhead processing evenly throughout the evaluation of the collection and minimizes the use of temporary data. Of course, for some operations, there is no other option than to materialize intermediate results.  
   
 ## <a name="next-steps"></a>Następne kroki  
- Następny temat w tym samouczku przedstawiono odroczonego wykonania:  
+ The next topic in this tutorial illustrates deferred execution:  
   
-- [Przykład wykonania odroczonego (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
+- [Deferred Execution Example (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-example.md)  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [Samouczek: Wykonanie odroczone (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
-- [Pojęcia i terminologia (Przekształcanie funkcjonalne) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Operacje agregacji (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Concepts and Terminology (Functional Transformation) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
+- [Aggregation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)

@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835278"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283919"
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -88,7 +88,7 @@ Masz dostęp do obszernego zestawu narzędzi i składników infrastruktury, któ
 
 Specyfikacje C# języka i Common Language Infrastructure (CLI) są znormalizowane przez standard [Ecma International®](https://www.ecma-international.org/). Pierwsze wersje tych standardów zostały opublikowane przez ECMA w grudniu 2001.
 
-Kolejne wersje standardów zostały opracowane przez grupy zadań TC49-TG2 (C#) i TC49-TG3 (CLI) w ramach języka programowania ([TC49](https://www.ecma-international.org/memento/tc49.htm)), a następnie zgodnie z ogólnym zestawem ECMA, a następnie ISO/IEC JTC 1 za pośrednictwem procesu szybkiego śledzenia obrazu ISO.
+Kolejne wersje standardów zostały opracowane przez grupy zadań TC49-TG2 (C#) i TC49-TG3 (CLI) w ramach języka programowania ([TC49](https://www.ecma-international.org/memento/tc49.htm)), a następnie zgodnie z ogólnym zestawem ECMA, a następnie ISO/IEC JTC 1 za pośrednictwem procesu szybkiej ścieżki ISO.
 
 ### <a name="latest-standards"></a>Najnowsze standardy
 
@@ -110,6 +110,6 @@ Oficjalne dokumenty ISO/IEC są dostępne na stronie [standardy dostępne public
 - [.NET Standard](net-standard.md)
 - [Przewodnik platformy .NET Core](../core/index.md)
 - [.NET framework — przewodnik](../framework/index.md)
-- [Przewodnik dla języka C#](../csharp/index.md)
+- [Przewodnik dla języka C#](../csharp/index.yml)
 - [Podręcznik języka F#](../fsharp/index.md)
-- [Przewodnik VB.NET](../visual-basic/index.md)
+- [VB.NET Guide](../visual-basic/index.md)

@@ -1,25 +1,25 @@
 ---
-title: 'Instrukcje: filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Filter on an Attribute (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ffefb9d6-45ec-4677-a396-dd9c2b36298f
-ms.openlocfilehash: 4ee90e90e1087ffeeeefb475b637f3307a179bff
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: f8a804fa7937d8d27b38bba7a294f1c760101de8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72250025"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353056"
 ---
-# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>Instrukcje: filtrowanie atrybutu (XPath-LINQ to XML) (Visual Basic)
-W tym temacie pokazano, jak uzyskać elementy podrzędne o określonej nazwie i z atrybutem o określonej wartości.  
+# <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-visual-basic"></a>How to: Filter on an Attribute (XPath-LINQ to XML) (Visual Basic)
+This topic shows how to get the descendant elements with a specified name, and with an attribute with a specified value.  
   
- Wyrażenie XPath:  
+ The XPath expression is:  
   
  `.//Address[@Type='Shipping']`  
   
 ## <a name="example"></a>Przykład  
- Ten przykład umożliwia znalezienie wszystkich elementów potomnych o nazwie `Address` i z atrybutem `Type` o wartości "wysyłka".  
+ This example finds all descendants elements with the name of `Address`, and with a `Type` attribute with a value of "Shipping".  
   
- W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: wiele zamówień zakupu (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -45,7 +45,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- Ten przykład generuje następujące dane wyjściowe:  
+ Ten przykład generuje następujące wyniki:  
   
 ```console
 Results are identical  
@@ -77,4 +77,4 @@ Results are identical
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML dla użytkowników XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -1,27 +1,27 @@
 ---
-title: Definicja typu anonimowego (Visual Basic)
+title: Definicja typu anonimowego
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f8ac26577a7fbef865605a7ecf643fa733b2c2c0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755213"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344917"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definicja typu anonimowego (Visual Basic)
 
-W odpowiedzi na deklarację wystąpienia typu anonimowego kompilator utworzy nową definicję klasy, która zawiera określone właściwości typu.
+In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
 
-## <a name="compiler-generated-code"></a>Kod wygenerowany przez kompilator
+## <a name="compiler-generated-code"></a>Compiler-Generated Code
 
-Dla następujących definicji `product`, kompilator utworzy nową definicję klasy, który zawiera właściwości `Name`, `Price`, i `OnHand`.
+For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-Definicja klasy zawiera podobne do następujących definicji właściwości. Zwróć uwagę, że ma nie `Set` metody dla właściwości klucza. Wartości właściwości klucza są tylko do odczytu.
+The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
 
 ```vb
 Public Class $Anonymous1
@@ -52,38 +52,38 @@ Public Class $Anonymous1
 End Class
 ```
 
-Ponadto definicje typów anonimowych zawierać konstruktora bez parametrów. Konstruktory, które są wymagane parametry nie są dozwolone.
+In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
 
-Jeśli deklaracja typu anonimowego zawiera co najmniej jedną właściwość klucza, definicja typu zastępuje trzech członków dziedziczonych po elemencie <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, i <xref:System.Object.ToString%2A>. Jeśli nie właściwości klucza nie został zadeklarowany, tylko <xref:System.Object.ToString%2A> zostanie zastąpiona. Zastąpienia są dostępne następujące funkcje:
+If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
 
-- `Equals` Zwraca `True` czy dwa wystąpienia typu anonimowego są tego samego wystąpienia, czy są spełnione następujące warunki:
+- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
 
-  - Mają one taką samą liczbę właściwości.
+  - They have the same number of properties.
 
-  - Właściwości są deklarowane w tej samej kolejności, przy użyciu tych samych nazw i wywnioskować takie same typy. Nazwa porównania nie jest rozróżniana wielkość liter.
+  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
 
-  - Co najmniej jedna z właściwości jest właściwość klucza i `Key` — słowo kluczowe jest stosowany do tej samej właściwości.
+  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
 
-  - Zwraca porównania parom odpowiednie właściwości klucza `True`.
+  - Comparison of each corresponding pair of key properties returns `True`.
 
-    Na przykład w poniższych przykładach `Equals` zwraca `True` tylko w przypadku `employee01` i `employee08`. Komentarz przed każdy wiersz określa przyczyny, dlaczego nie pasuje nowe wystąpienie `employee01`.
+    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` zawiera unikatowy odpowiednio algorytm GetHashCode. Algorytm używa tylko właściwości klucza do Oblicz wartość skrótu.
+- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
 
-- `ToString` Zwraca ciąg wartości właściwości połączonych, jak pokazano w poniższym przykładzie. Zarówno klucz, jak i właściwości klucza nie są uwzględniane.
+- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Jawnie nazwane właściwości typu anonimowego nie może powodować konflikt z tych metod wygenerowany. Oznacza to, że nie można użyć `.Equals`, `.GetHashCode`, lub `.ToString` nazwę właściwości.
+Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
 
-Definicje typu anonimowego, które obejmują co najmniej jednej właściwości klucza również implementują <xref:System.IEquatable%601?displayProperty=nameWithType> interfejsu, gdzie `T` to rodzaj typu anonimowego.
+Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
 
 > [!NOTE]
-> Deklaracjach typu anonimowego utworzyć ten sam typ anonimowy, tylko wtedy, gdy występują one w tym samym zestawie, ich właściwości o tych samych nazwach wywnioskować takie same typy, właściwości są deklarowane w tej samej kolejności i te same właściwości są oznaczone jako właściwości klucza.
+> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
 
 ## <a name="see-also"></a>Zobacz także
 
 - [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Instrukcje: Wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

@@ -1,26 +1,26 @@
 ---
-title: Rejestr — Podsumowanie (Visual Basic)
+title: Rejestr — Podsumowanie
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-ms.openlocfilehash: 88b9c530da3da39c0d70d9d8e90626bd5e133cf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6564b4c3ad2025da4ebaeaca84e23c97a85f007d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802433"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351682"
 ---
 # <a name="registry-summary-visual-basic"></a>Rejestr — Podsumowanie (Visual Basic)
-Słowa kluczowe języka Visual Studio i elementy członkowskie biblioteki wykonawczej są uszeregowane według celu i użycia.  
+Visual Studio language keywords and run-time library members are organized by purpose and use.  
   
- Za pomocą `My` funkcji zapewnia większą produktywność i wydajność w operacjach rejestru niż te elementy. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Using the `My` feature provides you with greater productivity and performance in registry operations than these elements. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
-|**Akcja**|**Element języka**|  
+|**Action**|**Language element**|  
 |----------------|--------------------------|  
-|Usuń ustawienia programu.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
-|Odczytaj ustawienia programu.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
-|Zapisz ustawienia programu.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
+|Delete program settings.|<xref:Microsoft.VisualBasic.Interaction.DeleteSetting%2A>|  
+|Read program settings.|<xref:Microsoft.VisualBasic.Interaction.GetSetting%2A>, <xref:Microsoft.VisualBasic.Interaction.GetAllSettings%2A>|  
+|Save program settings.|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>Zobacz także
 

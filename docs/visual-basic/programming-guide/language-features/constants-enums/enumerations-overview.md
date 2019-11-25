@@ -1,37 +1,37 @@
 ---
-title: Enumerations — Przegląd (Visual Basic)
+title: Enumerations — Przegląd
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623a3db818f589fb98f2c7efb02ea2f4a3b5b0ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907403"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347487"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Enumerations — Przegląd (Visual Basic)
-Wyliczenia zapewniają wygodny sposób pracy z zestawami pokrewnych stałych i skojarzyć wartości stałych o nazwach. Na przykład można zadeklarować wyliczenie zbiór stałe całkowite skojarzone z dni tygodnia, a w kodzie następnie używać nazwy dni, a nie ich wartości całkowitych.  
+Enumerations provide a convenient way to work with sets of related constants and to associate constant values with names. For example, you can declare an enumeration for a set of integer constants associated with the days of the week, and then use the names of the days rather than their integer values in your code.  
   
-## <a name="tasks-involving-enumerations"></a>Zadania obejmujące wyliczenia  
- W poniższej tabeli wymieniono typowe zadania dotyczące wyliczenia.  
+## <a name="tasks-involving-enumerations"></a>Tasks involving Enumerations  
+ The following table lists common tasks involving enumerations.  
   
 |Wymagana czynność|Zobacz|  
 |----------------|---------|  
-|Znajdź wstępnie zdefiniowanych wyliczenia|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
-|Deklarowanie wyliczeń|[Instrukcje: Deklarowanie wyliczeń](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
-|Pełnej nazwy wyliczenia|[Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
-|Odnoszą się do elementu członkowskiego wyliczenia|[Instrukcje: Odnoszą się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
-|Iterowanie za pomocą wyliczania|[Instrukcje: Iterowanie za pomocą wyliczania w Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
-|Określanie ciągu skojarzonego z wyliczeniem|[Instrukcje: Określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
-|Zdecyduj, kiedy stosować wyliczanie|[Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
+|Find a pre-defined enumeration|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|  
+|Declare an enumeration|[How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)|  
+|Fully qualify an enumeration's name|[Wyliczenia i kwalifikacja nazw](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)|  
+|Refer to an enumeration member|[Instrukcje: odwoływanie się do elementu członkowskiego wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)|  
+|Iterate through an enumeration|[How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)|  
+|Determine the string associated with an enumeration|[Instrukcje: określanie ciągu skojarzonego z wartością wyliczenia](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)|  
+|Decide when to use an enumeration|[Kiedy stosować wyliczanie](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Zobacz także
 
 - [Stałe — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
-- [Instrukcje: Deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
+- [Instrukcje: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
 - [Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Enum, instrukcja](../../../../visual-basic/language-reference/statements/enum-statement.md)

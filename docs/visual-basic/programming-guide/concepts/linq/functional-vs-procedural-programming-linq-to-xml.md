@@ -1,45 +1,45 @@
 ---
-title: Programowanie funkcjonalne a Proceduralne (LINQ to XML) (Visual Basic)
+title: Functional vs. Procedural Programming (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
-ms.openlocfilehash: f7e57ab2db5fa20a3a8414058573ca96e30e80d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3d1e3cf01b30454d29836f176afcd39cb2b55b73
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618255"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353413"
 ---
-# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Programowanie funkcjonalne a Proceduralne (LINQ to XML) (Visual Basic)
-Istnieją różne rodzaje aplikacji XML:  
+# <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>Functional vs. Procedural Programming (LINQ to XML) (Visual Basic)
+There are various types of XML applications:  
   
-- Niektóre aplikacje źródła dokumentów XML i tworzące nowe dokumenty XML znajdujących się w innym kształcie niż dokumentów źródłowych.  
+- Some applications take source XML documents, and produce new XML documents that are in a different shape than the source documents.  
   
-- Niektóre aplikacje źródła dokumentów XML i tworzące dokumenty wynik w postaci zupełnie innego, takich jak pliki tekst HTML lub CSV.  
+- Some applications take source XML documents, and produce result documents in an entirely different form, such as HTML or CSV text files.  
   
-- Niektóre aplikacje zająć dokumentów XML źródła i wstawiania rekordów do bazy danych.  
+- Some applications take source XML documents, and insert records into a database.  
   
-- Niektóre aplikacje pobierają dane z innego źródła, takich jak bazy danych i tworzenie dokumentów XML z niego.  
+- Some applications take data from another source, such as a database, and create XML documents from it.  
   
- Nie są to wszystkie typy aplikacji XML, ale są to reprezentatywny zestaw typów, funkcji, który musi zaimplementować programista XML.  
+ These are not all of the types of XML applications, but these are a representative set of the types of functionality that an XML programmer has to implement.  
   
- W przypadku wszystkich tych rodzajów aplikacji istnieją dwie metody kontrastujące deweloper może potrwać:  
+ With all of these types of applications, there are two contrasting approaches that a developer can take:  
   
-- Konstrukcja funkcjonalna przy użyciu podejścia deklaratywnego.  
+- Functional construction using a declarative approach.  
   
-- Za pomocą kod proceduralny modyfikowanie drzewa XML w pamięci.  
+- In-memory XML tree modification using procedural code.  
   
- LINQ to XML obsługuje oba podejścia.  
+ LINQ to XML supports both approaches.  
   
- Korzystając z podejścia funkcjonalności, można napisać przekształcenia używające dokumentów źródłowych i generować zupełnie nowe dokumenty wyniku żądanego kształtu.  
+ When using the functional approach, you write transformations that take the source documents and generate completely new result documents with the desired shape.  
   
- Podczas modyfikowania drzewa XML w miejscu, pisania kodu, który przechodzi przez i przechodzi przez węzły w drzewie XML w pamięci, wstawianie, usuwanie i modyfikowanie węzłów, zgodnie z potrzebami.  
+ When modifying an XML tree in place, you write code that traverses and navigates through nodes in an in-memory XML tree, inserting, deleting, and modifying nodes as necessary.  
   
- Za pomocą LINQ to XML każda z tych metod. Użyj tych samych klas, a w niektórych przypadkach te same metody. Struktury i celów dwie metody są jednak bardzo różnią się. Na przykład w różnych sytuacjach co najmniej inne podejście będzie często mają lepszą wydajność i używać więcej lub mniej pamięci. Ponadto co najmniej inne podejście będzie można łatwiej napisać i uzyskanie więcej kodu łatwego w utrzymaniu.  
+ You can use LINQ to XML with either approach. You use the same classes, and in some cases the same methods. However, the structure and goals of the two approaches are very different. For example, in different situations, one or the other approach will often have better performance, and use more or less memory. In addition, one or the other approach will be easier to write and yield more maintainable code.  
   
- Aby wyświetlić dwa podejścia porównanie, zobacz [vs modyfikowanie drzewa XML w pamięci. Konstrukcja funkcjonalna (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
+ To see the two approaches contrasted, see [In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction.md).  
   
- Samouczek na temat pisania przekształceń funkcjonalnych, zobacz [czystego funkcjonalności przekształcenia XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ For a tutorial on writing functional transformations, see [Pure Functional Transformations of XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
   
 ## <a name="see-also"></a>Zobacz także
 
-- [LINQ to XML — przegląd programowania (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

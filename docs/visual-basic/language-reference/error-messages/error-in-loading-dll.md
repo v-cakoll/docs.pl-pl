@@ -1,36 +1,36 @@
 ---
-title: Błąd ładowania biblioteki DLL (Visual Basic)
+title: Błąd ładowania biblioteki DLL
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 5a26443a49b0b853f2f2188fb58d7ed907d671b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36452cc6ff03042939cd4066aef76129b5bb8f0a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659625"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329559"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>Błąd ładowania biblioteki DLL (Visual Basic)
-Biblioteki dołączanej (dynamicznie DLL) jest biblioteką, określone w `Lib` klauzuli `Declare` instrukcji. Możliwe przyczyny tego błędu to:  
+A dynamic-link library (DLL) is a library specified in the `Lib` clause of a `Declare` statement. Possible causes for this error include:  
   
-- Plik nie jest wykonywalny biblioteki DLL.  
+- The file is not DLL executable.  
   
-- Plik nie jest biblioteką DLL Windows firmy Microsoft.  
+- The file is not a Microsoft Windows DLL.  
   
-- Biblioteka DLL odwołuje się do innej biblioteki DLL, która nie jest obecny.  
+- The DLL references another DLL that is not present.  
   
-- Plik DLL lub biblioteki DLL do którego istnieje odwołanie nie jest w katalogu określonego w ścieżce.  
+- The DLL or referenced DLL is not in a directory specified in the path.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-- Jeśli plik znajduje się tekst źródłowy plik, a w związku z tym nie plik wykonywalny biblioteki DLL, musi być skompilowane i połączone do postaci pliku wykonywalnego biblioteki DLL.  
+- If the file is a source-text file and therefore not DLL executable, it must be compiled and linked to a DLL-executable form.  
   
-- Jeśli plik nie jest biblioteką DLL Windows firmy Microsoft, należy uzyskać równoważne Windows firmy Microsoft.  
+- If the file is not a Microsoft Windows DLL, obtain the Microsoft Windows equivalent.  
   
-- Jeśli biblioteka DLL odwołuje się do innej biblioteki DLL, która nie jest obecny, Uzyskaj DLL do którego istnieje odwołanie i udostępnić go.  
+- If the DLL references another DLL that is not present, obtain the referenced DLL and make it available.  
   
-- Jeśli biblioteka DLL lub biblioteki DLL do którego istnieje odwołanie nie jest w katalogu określony przez ścieżkę, Przenieś bibliotekę DLL do katalogu, do którego istnieje odwołanie.  
+- If the DLL or referenced DLL is not in a directory specified by the path, move the DLL to a referenced directory.  
   
 ## <a name="see-also"></a>Zobacz także
 

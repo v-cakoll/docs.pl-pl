@@ -1,30 +1,30 @@
 ---
-title: Ciągi interpolowane (Visual Basic)
+title: Ciągi interpolowane
 ms.date: 10/31/2017
-ms.openlocfilehash: b9dd055154c86da370a984a465ed412f1fd9908c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d1220f3804d571f6da229dc5dfa099a22ab1478d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666950"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344327"
 ---
-# <a name="interpolated-strings-visual-basic-reference"></a>Ciągi interpolowane (odwołanie Visual Basic)
+# <a name="interpolated-strings-visual-basic-reference"></a>Interpolated Strings (Visual Basic Reference)
 
-Używane do konstruowania ciągów.  Ciąg interpolowany wygląda jak ciąg szablonu, który zawiera *interpolowane wyrażenia*.  Ciąg interpolowany zwraca ciąg, który zastępuje interpolowane wyrażenia, które zawiera z ich reprezentacją ciągu. Ta funkcja jest dostępna w wersji Visual Basic 14 i nowszych.
+Used to construct strings.  An interpolated string looks like a template string that contains *interpolated expressions*.  An interpolated string returns a string that replaces the interpolated expressions that it contains with their string representations. This feature is available in Visual Basic 14 and later versions.
 
-Argumenty interpolowanego ciągu są łatwiejsze do zrozumienia niż [ciąg formatu złożonego](../../../../standard/base-types/composite-formatting.md#composite-format-string).  Na przykład ciąg interpolowany
+The arguments of an interpolated string are easier to understand than a [composite format string](../../../../standard/base-types/composite-formatting.md#composite-format-string).  For example, the interpolated string
 
 ```vb
 Console.WriteLine($"Name = {name}, hours = {hours:hh}")
 ```
 
-zawiera dwa wyrażenia interpolowane "{name}" i "{hours: gg}". Równoważny ciąg formatu złożonego to:
+contains two interpolated expressions, '{name}' and '{hours:hh}'. The equivalent composite format string is:
 
 ```vb
-Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours);
+Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours)
 ```
 
-Struktura ciągu interpolowanego jest:
+The structure of an interpolated string is:
 
 ```vb
 $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text> ..."
@@ -32,48 +32,48 @@ $"<text> {<interpolated-expression> [,<field-width>] [:<format-string>] } <text>
 
 gdzie:
 
-- *pole-Width* jest ze znakiem liczby całkowitej, która wskazuje liczbę znaków w polu. Jeśli wartość jest dodatnia, pole jest wyrównane do prawej; w przypadku wartości ujemnych wyrównanych do lewej.
+- *field-width* is a signed integer that indicates the number of characters in the field. If it is positive, the field is right-aligned; if negative, left-aligned.
 
-- *ciąg formatu* jest ciągiem formatu odpowiednim dla typu formatowanego obiektu. Na przykład dla <xref:System.DateTime> wartości może to być [standardowy ciąg formatu daty i godziny](../../../../standard/base-types/standard-date-and-time-format-strings.md) , taki jak "d" lub "d".
+- *format-string* is a format string appropriate for the type of object being formatted. For example, for a <xref:System.DateTime> value, it could be a [standard date and time format string](../../../../standard/base-types/standard-date-and-time-format-strings.md) such as "D" or "d".
 
 > [!IMPORTANT]
-> Nie można mieć żadnego odstępu między `$` `"` i, który uruchamia ciąg. Powoduje to błąd kompilatora.
+> You cannot have any white space between the `$` and the `"` that starts the string. Doing so causes a compiler error.
 
-Możesz użyć ciągu interpolowanego wszędzie tam, gdzie można użyć literału ciągu.  Ciąg interpolowany jest oceniany za każdym razem, gdy wykonywany jest kod z ciągiem interpolowanym. Pozwala to na oddzielenie definicji i oceny ciągu interpolowanego.
+You can use an interpolated string anywhere you can use a string literal.  The interpolated string is evaluated each time the code with the interpolated string executes. This allows you to separate the definition and evaluation of an interpolated string.
 
-Aby dołączyć nawias klamrowy ("{" lub "}") w ciągu interpolowanym, użyj dwóch nawiasów klamrowych "{{" lub "}}".  Aby uzyskać więcej informacji, zobacz sekcję konwersje niejawne.
+To include a curly brace ("{" or "}") in an interpolated string, use two curly braces, "{{" or "}}".  See the Implicit Conversions section for more details.
 
-Jeśli ciąg interpolowany zawiera inne znaki o specjalnym znaczeniu w ciągu interpolowanym, takim jak cudzysłów ("), dwukropek (:) lub przecinek (,), powinny być wyprowadzane w przypadku wystąpienia tekstu w postaci literału lub powinny być zawarte w wyrażeniu ograniczonym przez nawiasy, jeśli są elementami języka zawartymi w wyrażeniu interpolowanym. Poniższy przykład wyprowadza znaki cudzysłowu, aby uwzględnić je w ciągu wynikowym, i używa nawiasów, aby rozdzielić wyrażenie `(age == 1 ? "" : "s")` tak, aby dwukropek nie był interpretowany jako początkowy ciąg formatu.
+If the interpolated string contains other characters with special meaning in an interpolated string, such as the quotation mark ("), colon (:), or comma (,), they should be escaped if they occur in literal text, or they should be included in an expression delimited by parentheses if they are language elements included in an interpolated expression. The following example escapes quotation marks to include them in the result string, and it uses parentheses to delimit the expression `(age == 1 ? "" : "s")` so that the colon is not interpreted as beginning a format string.
 
 [!code-vb[interpolated-strings](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings4.vb)]
 
-## <a name="implicit-conversions"></a>Niejawne konwersje
+## <a name="implicit-conversions"></a>Implicit Conversions
 
-Istnieją trzy niejawne konwersje typów z ciągu interpolowanego:
+There are three implicit type conversions from an interpolated string:
 
-1. Konwersja ciągu interpolowanego na <xref:System.String>. Poniższy przykład zwraca ciąg, którego interpolowane wyrażenia ciągu zostały zastąpione ich reprezentacją ciągu. Na przykład:
+1. Conversion of an interpolated string to a <xref:System.String>. The following example returns a string whose interpolated string expressions have been replaced with their string representations. Na przykład:
 
    [!code-vb[interpolated-strings1](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings1.vb)]
 
-   Jest to ostateczny wynik interpretacji ciągu. Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") są konwertowane na pojedynczy nawias klamrowy.
+   This is the final result of a string interpretation. All occurrences of double curly braces ("{{" and "}}") are converted to a single curly brace.
 
-2. Konwersja ciągu interpolowanego na <xref:System.IFormattable> zmienną, która umożliwia tworzenie wielu ciągów wynikowych z zawartością specyficzną dla kultury z jednego <xref:System.IFormattable> wystąpienia. Jest to przydatne do uwzględniania takich elementów jak poprawne formaty liczbowe i daty dla poszczególnych kultur.  Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe do momentu formatowania ciągu przez jawne lub niejawne wywołanie <xref:System.Object.ToString> metody.  Wszystkie zawarte wyrażenia interpolacji są konwertowane na {0}, {1}, i tak dalej.
+2. Conversion of an interpolated string to an <xref:System.IFormattable> variable that allows you create multiple result strings with culture-specific content from a single <xref:System.IFormattable> instance. This is useful for including such things as the correct numeric and date formats for individual cultures.  All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format the string by explicitly or implicitly calling the <xref:System.Object.ToString> method.  All contained interpolation expressions are converted to {0}, {1}, and so on.
 
-   Poniższy przykład używa odbicia, aby wyświetlić elementy członkowskie, a także wartości <xref:System.IFormattable> pól i właściwości zmiennej, która jest tworzona na podstawie interpolowanego ciągu. Przekazuje <xref:System.IFormattable> również zmienną <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> do metody.
+   The following example uses reflection to display the members as well as the field and property values of an <xref:System.IFormattable> variable that is created from an interpolated string. It also passes the <xref:System.IFormattable> variable to the <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> method.
 
    [!code-vb[interpolated-strings2](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings2.vb)]
 
-   Należy zauważyć, że ciąg interpolowany może być sprawdzany tylko przy użyciu odbicia. Jeśli zostanie przekazana do metody formatowania ciągu, na przykład <xref:System.Console.WriteLine(System.String)>, jego elementy formatu są rozwiązane i zwracany jest ciąg wynikowy.
+   Note that the interpolated string can be inspected only by using reflection. If it is passed to a string formatting method, such as <xref:System.Console.WriteLine(System.String)>, its format items are resolved and the result string returned.
 
-3. Konwersja ciągu interpolowanego na <xref:System.FormattableString> zmienną, która reprezentuje ciąg formatu złożonego. Sprawdzanie ciągu formatu złożonego i sposób renderowania jako ciąg wynikowy może na przykład ułatwić ochronę przed atakami polegającymi na iniekcji w przypadku tworzenia zapytania. Obejmuje <xref:System.FormattableString> również:
+3. Conversion of an interpolated string to a <xref:System.FormattableString> variable that represents a composite format string. Inspecting the composite format string and how it renders as a result string might, for example, help you protect against an injection attack if you were building a query. A <xref:System.FormattableString> also includes:
 
-      - Przeciążenie generujące ciąg wynikowy <xref:System.Globalization.CultureInfo.CurrentCulture>dla. <xref:System.FormattableString.ToString>
+      - A <xref:System.FormattableString.ToString> overload that produces a result string for the <xref:System.Globalization.CultureInfo.CurrentCulture>.
 
-      - Metoda, która tworzy ciąg <xref:System.Globalization.CultureInfo.InvariantCulture>dla elementu. <xref:System.FormattableString.Invariant%2A>
+      - A <xref:System.FormattableString.Invariant%2A> method that produces a string for the <xref:System.Globalization.CultureInfo.InvariantCulture>.
 
-      - <xref:System.FormattableString.ToString(System.IFormatProvider)> Metoda, która tworzy ciąg wynikowy dla określonej kultury.
+      - A <xref:System.FormattableString.ToString(System.IFormatProvider)> method that produces a result string for a specified culture.
 
-    Wszystkie wystąpienia podwójnych nawiasów klamrowych ("{{" i "}}") pozostają jako podwójne nawiasy klamrowe, dopóki nie sformatujesz.  Wszystkie zawarte wyrażenia interpolacji są konwertowane na {0}, {1}, i tak dalej.
+    All occurrences of double curly braces ("{{" and "}}") remain as double curly braces until you format.  All contained interpolation expressions are converted to {0}, {1}, and so on.
 
    [!code-vb[interpolated-strings3](../../../../../samples/snippets/visualbasic/programming-guide/language-features/strings/interpolated-strings3.vb)]
 

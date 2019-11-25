@@ -1,5 +1,5 @@
 ---
-title: Przekazywanie argumentów według wartości i według odwołania (Visual Basic)
+title: Przekazywanie argumentów według wartości i według odwołania
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ByRef keyword [Visual Basic], passing arguments by reference
@@ -9,61 +9,61 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: eb2260c6547d4f1cd7d9c23445ac38ac600e3535
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28e59753a35ab67b15fbc549df5bb8a3489aba5a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638867"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352603"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>Przekazywanie argumentów według wartości i według odwołania (Visual Basic)
-W języku Visual Basic można przekazać argument do procedury *według wartości* lub *przez odwołanie*. Jest to nazywane *mechanizm przekazywania*, i określa, czy procedurę można zmodyfikować elementu programistycznego, bazowy argumentu w wywoływanym kodzie. Deklaracja procedury określa mechanizm przekazywania dla każdego parametru, określając [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) lub [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) — słowo kluczowe.  
+In Visual Basic, you can pass an argument to a procedure *by value* or *by reference*. This is known as the *passing mechanism*, and it determines whether the procedure can modify the programming element underlying the argument in the calling code. The procedure declaration determines the passing mechanism for each parameter by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword.  
   
-## <a name="distinctions"></a>Różnice  
- Podczas przekazywania argumentów do procedury, należy pamiętać o kilku różnych różnice, które współdziałają ze sobą:  
+## <a name="distinctions"></a>Distinctions  
+ When passing an argument to a procedure, be aware of several different distinctions that interact with each other:  
   
-- Czy jest podstawowym elementem programowania, modyfikowalnymi i niemodyfikowalnymi  
+- Whether the underlying programming element is modifiable or nonmodifiable  
   
-- Czy z samym argumentem jest modyfikowalnymi i niemodyfikowalnymi  
+- Whether the argument itself is modifiable or nonmodifiable  
   
-- Czy argument jest przekazywany przez wartość lub przez odwołanie  
+- Whether the argument is being passed by value or by reference  
   
-- Czy typ danych argumentu, który jest typem wartości lub typem referencyjnym  
+- Whether the argument data type is a value type or a reference type  
   
- Aby uzyskać więcej informacji, zobacz [różnice między modyfikowalnymi i niemodyfikowalnymi argumenty](./differences-between-modifiable-and-nonmodifiable-arguments.md) i [różnice pomiędzy przekazywaniem argumentu według wartości i według odwołania](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
+ For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](./differences-between-modifiable-and-nonmodifiable-arguments.md) and [Differences Between Passing an Argument By Value and By Reference](./differences-between-passing-an-argument-by-value-and-by-reference.md).  
   
-## <a name="choice-of-passing-mechanism"></a>Wybór mechanizm przekazywania  
- Wybierz mechanizm przekazywania dokładnie dla każdego argumentu.  
+## <a name="choice-of-passing-mechanism"></a>Choice of Passing Mechanism  
+ You should choose the passing mechanism carefully for each argument.  
   
-- **Ochrona**. Wybierając między mechanizmy dwóch przekazywania, najbardziej istotna jest narażenie wywołaniem zmienne, aby zmienić. Zaletą przekazywaniem argumentu `ByRef` jest procedura może zwracać wartość do wywołującego kodu za pomocą tego argumentu. Zaletą przekazywaniem argumentu `ByVal` jest chroni zmienną, przed zmianami przez procedurę.  
+- **Protection**. In choosing between the two passing mechanisms, the most important criterion is the exposure of calling variables to change. The advantage of passing an argument `ByRef` is that the procedure can return a value to the calling code through that argument. The advantage of passing an argument `ByVal` is that it protects a variable from being changed by the procedure.  
   
-- **Wydajność**. Mimo że mechanizm przekazywania może mieć wpływ na wydajność kodu, różnica polega na zwykle nieistotne. Jedynym wyjątkiem jest typ wartości przekazane `ByVal`. W tym przypadku języka Visual Basic kopiuje zawartość danych całej argumentu. W związku z tym, dla typu duża wartość, takie jak struktury, może być bardziej efektywne w celu przekazania jej `ByRef`.  
+- **Performance**. Although the passing mechanism can affect the performance of your code, the difference is usually insignificant. One exception to this is a value type passed `ByVal`. In this case, Visual Basic copies the entire data contents of the argument. Therefore, for a large value type such as a structure, it can be more efficient to pass it `ByRef`.  
   
-     Dla typów referencyjnych tylko wskaźnik do danych jest skopiowany (cztery bajty na platformach 32-bitowych, 8 bajtów na platformach 64-bitowych). W związku z tym, można przekazać argumenty typu `String` lub `Object` według wartości bez szkody wydajności.  
+     For reference types, only the pointer to the data is copied (four bytes on 32-bit platforms, eight bytes on 64-bit platforms). Therefore, you can pass arguments of type `String` or `Object` by value without harming performance.  
   
-## <a name="determination-of-the-passing-mechanism"></a>Oznaczanie mechanizm przekazywania  
- Deklaracja procedury określa mechanizm przekazywania dla każdego parametru. Nie można przesłonić, kod wywołujący `ByVal` mechanizm.  
+## <a name="determination-of-the-passing-mechanism"></a>Determination of the Passing Mechanism  
+ The procedure declaration specifies the passing mechanism for each parameter. The calling code can't override a `ByVal` mechanism.  
   
- Jeśli parametr jest zadeklarowana za pomocą `ByRef`, kod wywołujący może wymusić mechanizm `ByVal` , umieszczając nazwę argumentu w nawiasach w wywołaniu. Aby uzyskać więcej informacji, zobacz [jak: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md).  
+ If a parameter is declared with `ByRef`, the calling code can force the mechanism to `ByVal` by enclosing the argument name in parentheses in the call. For more information, see [How to: Force an Argument to Be Passed by Value](./how-to-force-an-argument-to-be-passed-by-value.md).  
   
- Domyślnie w języku Visual Basic nie jest przekazywanie argumentów według wartości.  
+ The default in Visual Basic is to pass arguments by value.  
   
-## <a name="when-to-pass-an-argument-by-value"></a>Gdy do przekazywania argumentu przez wartość  
+## <a name="when-to-pass-an-argument-by-value"></a>When to Pass an Argument by Value  
   
-- W przypadku wywoływania elementu kodu bazowego argument jest elementem niemodyfikowalnymi, Zadeklaruj odpowiadającego mu parametru [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). Brak kodu można zmienić wartości elementu niemodyfikowalnymi.  
+- If the calling code element underlying the argument is a nonmodifiable element, declare the corresponding parameter [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md). No code can change the value of a nonmodifiable element.  
   
-- Jeśli element podstawowy jest modyfikowalny, ale nie chcesz, aby procedury, aby można było zmienić jego wartość, Zadeklaruj parametr `ByVal`. Kod wywołujący można zmienić wartość elementu można modyfikować, przekazać przez wartość.  
+- If the underlying element is modifiable, but you do not want the procedure to be able to change its value, declare the parameter `ByVal`. Only the calling code can change the value of a modifiable element passed by value.  
   
-## <a name="when-to-pass-an-argument-by-reference"></a>Kiedy należy przekazywać argumentów przez odwołanie  
+## <a name="when-to-pass-an-argument-by-reference"></a>When to Pass an Argument by Reference  
   
-- Jeśli procedura ma oryginalnych trzeba zmieniać element podstawowy w wywoływanym kodzie, należy zadeklarować odpowiadającego mu parametru [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
+- If the procedure has a genuine need to change the underlying element in the calling code, declare the corresponding parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md).  
   
-- Jeśli prawidłowe wykonanie kodu jest zależna od procedury, zmieniając element podstawowy w wywoływanym kodzie, Zadeklaruj parametr `ByRef`. W przypadku przekazania według wartości lub kod wywołujący zastępuje `ByRef` przekazywanie mechanizm umieszczając argument w nawiasach, po wywołaniu procedury może dawać nieoczekiwane wyniki.  
+- If the correct execution of the code depends on the procedure changing the underlying element in the calling code, declare the parameter `ByRef`. If you pass it by value, or if the calling code overrides the `ByRef` passing mechanism by enclosing the argument in parentheses, the procedure call might produce unexpected results.  
   
 ## <a name="example"></a>Przykład  
   
 ### <a name="description"></a>Opis  
- Poniższy przykład ilustruje, kiedy należy przekazywać argumentów przez wartość i kiedy do przekazywania ich przez odwołanie. Procedura `Calculate` znajdują się oba `ByVal` i `ByRef` parametru. Biorąc pod uwagę stopy procentowej `rate`i sumę pieniądze, `debt`, zadaniem procedura jest obliczyć nową wartość dla `debt` oznacza to wynik zastosowania stopę do oryginalnej wartości elementu `debt`. Ponieważ `debt` jest `ByRef` parametrów, nowa suma znajduje odzwierciedlenie w wartości argumentu w wywoływanym kodzie, który odpowiada `debt`. Parametr `rate` jest `ByVal` parametru ponieważ `Calculate` nie należy zmieniać jego wartość.  
+ The following example illustrates when to pass arguments by value and when to pass them by reference. Procedure `Calculate` has both a `ByVal` and a `ByRef` parameter. Given an interest rate, `rate`, and a sum of money, `debt`, the task of the procedure is to calculate a new value for `debt` that is the result of applying the interest rate to the original value of `debt`. Because `debt` is a `ByRef` parameter, the new total is reflected in the value of the argument in the calling code that corresponds to `debt`. Parameter `rate` is a `ByVal` parameter because `Calculate` should not change its value.  
   
 ### <a name="code"></a>Kod  
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
@@ -72,9 +72,9 @@ W języku Visual Basic można przekazać argument do procedury *według wartośc
 
 - [Procedury](./index.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Instrukcje: Przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
-- [Instrukcje: Zmień wartość argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)
-- [Instrukcje: Chronienie argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [Instrukcje: Wymuszanie być przekazywany przez wartość argumentu](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [Instrukcje: przekazywanie argumentów do procedury](./how-to-pass-arguments-to-a-procedure.md)
+- [Instrukcje: zmiana wartości argumentu procedury](./how-to-change-the-value-of-a-procedure-argument.md)
+- [Instrukcje: ochrona argumentu procedury przed zmianami wartości](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [Instrukcje: wymuszanie przekazywania argumentu przez wartość](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [Przekazywanie argumentów według pozycji i według nazwy](./passing-arguments-by-position-and-by-name.md)
 - [Typy wartości i odwołań](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: Znajdź element z określonym atrybutem (C#)'
+title: Jak znaleźć element z określonym atrybutem (C#)
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593606"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141160"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Instrukcje: Znajdź element z określonym atrybutem (C#)
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>Jak znaleźć element z określonym atrybutem (C#)
 W tym temacie pokazano, jak znaleźć element, który ma atrybut o określonej wartości.  
   
 ## <a name="example"></a>Przykład  
- W przykładzie pokazano, jak znaleźć `Address` element, który `Type` ma atrybut o wartości "rozliczenia".  
+ W przykładzie pokazano, jak znaleźć element `Address`, który ma atrybut `Type` o wartości "rozliczenia".  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -43,7 +43,7 @@ foreach (XElement el in address)
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano to samo zapytanie dla kodu XML, który znajduje się w przestrzeni nazw. Aby uzyskać więcej informacji, zobacz temat [przestrzenie nazw —C#omówienie (LINQ to XML) ()](namespaces-overview-linq-to-xml.md).  
   
- W tym przykładzie zastosowano następujący dokument XML: [Przykładowy plik XML: Typowe zamówienie zakupu w przestrzeni nazw](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ W tym przykładzie zastosowano następujący dokument XML: [przykładowy plik XML: typowe zamówienie zakupu w przestrzeni nazw](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  

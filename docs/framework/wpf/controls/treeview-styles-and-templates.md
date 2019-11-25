@@ -9,15 +9,15 @@ helpviewer_keywords:
 - styles [WPF], TreeView
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
-ms.openlocfilehash: f6dbe54324a5ad5e2f85719d819c035abfd644b1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 45276d23380fe956fc3d59b90d5baae23ee8a7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460184"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283633"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView — Style i szablony
-W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.TreeView>. Możesz zmodyfikować wartość domyślną <xref:System.Windows.Controls.ControlTemplate>, aby dać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu istniejącej kontrolki przez utworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Controls.TreeView>. Możesz zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate>, aby nadać formantowi unikatowy wygląd. Aby uzyskać więcej informacji, zobacz [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="treeview-parts"></a>Elementy TreeView  
  Formant <xref:System.Windows.Controls.TreeView> nie zawiera żadnych nazwanych części.  
@@ -45,7 +45,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
   
 |Nazwa stanu wizualnego|Nazwa element VisualStateGroup|Opis|  
 |----------------------|---------------------------|-----------------|  
-|Typow|CommonStates|Stan domyślny.|  
+|Normalne|CommonStates|Stan domyślny.|  
 |MouseOver|CommonStates|Wskaźnik myszy znajduje się nad <xref:System.Windows.Controls.TreeViewItem>.|  
 |Wyłączone|CommonStates|<xref:System.Windows.Controls.TreeViewItem> jest wyłączona.|  
 |Fokus|FocusStates|<xref:System.Windows.Controls.TreeViewItem> ma fokus.|  
@@ -54,7 +54,7 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 |Zwinięte|ExpansionStates|Formant <xref:System.Windows.Controls.TreeViewItem> jest zwinięty.|  
 |Do odczytu HasItems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> zawiera elementy.|  
 |Noitems|HasItemsStates|<xref:System.Windows.Controls.TreeViewItem> nie ma elementów.|  
-|Niezaznaczone|SelectionStates|Wybrano <xref:System.Windows.Controls.TreeViewItem>.|  
+|Wybrane|SelectionStates|Wybrano <xref:System.Windows.Controls.TreeViewItem>.|  
 |SelectedInactive|SelectionStates|<xref:System.Windows.Controls.TreeViewItem> jest zaznaczone, ale nie jest aktywne.|  
 |Niezaznaczone|SelectionStates|Nie wybrano <xref:System.Windows.Controls.TreeViewItem>.|  
 |Prawidłowe|ValidationStates|Kontrolka używa klasy <xref:System.Windows.Controls.Validation> i <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> dołączonej właściwości jest `false`.|  
@@ -79,4 +79,4 @@ W tym temacie opisano style i szablony dla kontrolki <xref:System.Windows.Contro
 - [Style i szablony kontrolek](control-styles-and-templates.md)
 - [Niestandardowe dostosowywanie kontrolki](control-customization.md)
 - [Tworzenie szablonów i stylów](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Tworzenie szablonu dla kontrolki](../../../desktop-wpf/themes/how-to-create-apply-template.md)

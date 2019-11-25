@@ -1,5 +1,5 @@
 ---
-title: 'Instrukcje: Umieszczanie wartości we właściwości (Visual Basic)'
+title: 'Porady: umieszczanie wartości we właściwości'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad0d0e81f94dd3dead50f21c3bd6ff580c004dd6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863899"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346053"
 ---
-# <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Instrukcje: Umieszczanie wartości we właściwości (Visual Basic)
-Wartość jest przechowywana we właściwości, umieszczając nazwę właściwości po lewej stronie instrukcji przypisania.  
+# <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Porady: umieszczanie wartości we właściwości (Visual Basic)
+You store a value in a property by putting the property name on the left side of an assignment statement.  
   
- Właściwości `Set` procedury przechowuje wartość, ale nie zostanie jawnie wywołana je według nazwy. Użyj właściwości, tak samo, jak należy użyć zmiennej. Visual Basic sprawia, że wywołania procedur właściwość.  
+ The property's `Set` procedure stores a value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
   
-### <a name="to-store-a-value-in-a-property"></a>Do przechowywania wartości we właściwości  
+### <a name="to-store-a-value-in-a-property"></a>To store a value in a property  
   
-1. Po lewej stronie instrukcji przypisania, należy użyć nazwy właściwości.  
+1. Use the property name on the left side of an assignment statement.  
   
-     W poniższym przykładzie ustawiono wartość języka Visual Basic `TimeOfDay` właściwość południe, niejawnie wywoływania jego `Set` procedury.  
+     The following example sets the value of the Visual Basic `TimeOfDay` property to noon, implicitly calling its `Set` procedure.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. Jeśli właściwość przyjmuje argumenty, postępuj zgodnie z nazwą właściwości, za pomocą nawiasów, aby ująć listy argumentów. Jeśli nie ma żadnych argumentów, opcjonalnie można pominąć nawiasów.  
+2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
   
-3. Argumenty należy umieścić na liście argumentów w nawiasie rozdzielone przecinkami. Upewnij się, że podajesz argumentów w tej samej kolejności, że właściwość definiuje odpowiednich parametrów.  
+3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
   
-4. Wartość generowane po prawej stronie instrukcji przypisania są przechowywane we właściwości.  
+4. The value generated on the right side of the assignment statement is stored in the property.  
   
 ## <a name="see-also"></a>Zobacz także
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Procedury właściwości](./property-procedures.md)
 - [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)
-- [Instrukcja Property](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Różnice między właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)
-- [Instrukcje: Tworzenie właściwości](./how-to-create-a-property.md)
-- [Instrukcje: Deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Instrukcje: Wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
-- [Instrukcje: Deklarowanie i wywoływanie w właściwości domyślnej w języku Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Instrukcje: Pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+- [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)
+- [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

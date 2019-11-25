@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0ffae2c5803324d4941581855d5dc10224e07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795229"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353850"
 ---
 # <a name="decrypting-data"></a>Odszyfrowywanie danych
 
-Odszyfrowywanie jest odwrotna operacji szyfrowania. Klucz tajny szyfrowania musisz wiedzieć, zarówno klucz, jak i IV, które były używane do szyfrowania danych. Do szyfrowania klucza publicznego należy znać klucza publicznego (jeśli zostały zaszyfrowane przy użyciu klucza prywatnego) lub klucza prywatnego (jeśli zostały zaszyfrowane przy użyciu klucza publicznego).
+Decryption is the reverse operation of encryption. For secret-key encryption, you must know both the key and IV that were used to encrypt the data. For public-key encryption, you must know either the public key (if the data was encrypted using the private key) or the private key (if the data was encrypted using the public key).
 
-## <a name="symmetric-decryption"></a>Odszyfrowanie symetryczne
+## <a name="symmetric-decryption"></a>Symmetric Decryption
 
-Odszyfrowywanie danych zaszyfrowanych przy użyciu algorytmów symetrycznych jest podobny do procesu, używany do szyfrowania danych przy użyciu algorytmów symetrycznych. <xref:System.Security.Cryptography.CryptoStream> Klasa jest używana z klasami Kryptografia symetryczna dostarczane przez program .NET Framework do odszyfrowania danych odczytanych z dowolnego obiektu zarządzanego strumienia.
+The decryption of data encrypted with symmetric algorithms is similar to the process used to encrypt data with symmetric algorithms. The <xref:System.Security.Cryptography.CryptoStream> class is used with symmetric cryptography classes provided by the .NET Framework to decrypt data read from any managed stream object.
 
-Poniższy przykład ilustruje sposób tworzenia nowego wystąpienia <xref:System.Security.Cryptography.RijndaelManaged> klasy i użyć go do przeprowadzania odszyfrowywania <xref:System.Security.Cryptography.CryptoStream> obiektu. W tym przykładzie najpierw tworzy nowe wystąpienie klasy **RijndaelManaged** klasy. Następnie tworzy **CryptoStream** obiektu i inicjuje ją na wartość zarządzany strumień o nazwie `myStream`. Następnie **CreateDecryptor** metody z **RijndaelManaged** klasy jest przekazywany w ten sam klucz i IV, który został użyty do szyfrowania i jest następnie przekazywany do **CryptoStream** Konstruktor. Na koniec **CryptoStreamMode.Read** wyliczenia jest przekazywany do **CryptoStream** konstruktora, aby określić strumień do odczytu.
+The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class and use it to perform decryption on a <xref:System.Security.Cryptography.CryptoStream> object. This example first creates a new instance of the **RijndaelManaged** class. Next it creates a **CryptoStream** object and initializes it to the value of a managed stream called `myStream`. Next, the **CreateDecryptor** method from the **RijndaelManaged** class is passed the same key and IV that was used for encryption and is then passed to the **CryptoStream** constructor. Finally, the **CryptoStreamMode.Read** enumeration is passed to the **CryptoStream** constructor to specify read access to the stream.
 
 ```vb
 Dim rmCrypto As New RijndaelManaged()
@@ -40,15 +40,14 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
 ```
 
-Poniższy przykład pokazuje cały proces tworzenia strumienia, odszyfrowywania strumienia, odczytywania ze strumienia i zamyka strumieni. A <xref:System.Net.Sockets.TcpListener> tworzony jest obiekt, który inicjuje strumień sieciowych po nawiązaniu połączenia z obiektem nasłuchiwania. Strumień sieciowych jest odszyfrowywany za pomocą **CryptoStream** klasy i **RijndaelManaged** klasy. W tym przykładzie przyjęto założenie, że klucza i wartości IV mają została pomyślnie przeniesiona lub wcześniej uzgodnione. Kod potrzebny do szyfrowania i przenieść te wartości nie są wyświetlane.
+The following example shows the entire process of creating a stream, decrypting the stream, reading from the stream, and closing the streams. A <xref:System.Net.Sockets.TcpListener> object is created that initializes a network stream when a connection to the listening object is made. The network stream is then decrypted using the **CryptoStream** class and the **RijndaelManaged** class. This example assumes that the key and IV values have been either successfully transferred or previously agreed upon. It does not show the code needed to encrypt and transfer these values.
 
 ```vb
-Imports System
-Imports System.Net.Sockets
-Imports System.Threading
 Imports System.IO
 Imports System.Net
+Imports System.Net.Sockets
 Imports System.Security.Cryptography
+Imports System.Threading
 
 Module Module1
     Sub Main()
@@ -105,11 +104,11 @@ End Module
 
 ```csharp
 using System;
-using System.Net.Sockets;
-using System.Threading;
 using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Security.Cryptography;
+using System.Threading;
 
 class Class1
 {
@@ -171,15 +170,15 @@ class Class1
 }
 ```
 
-Do działania poprzedniego przykładu należy dokonać szyfrowanego połączenia do odbiornika. Połączenia należy użyć tego samego klucza, IV i algorytm używany w odbiornika. Jeśli takie połączenie, komunikat jest odszyfrowywany i wyświetlana w konsoli.
+For the previous sample to work, an encrypted connection must be made to the listener. The connection must use the same key, IV, and algorithm used in the listener. If such a connection is made, the message is decrypted and displayed to the console.
 
-## <a name="asymmetric-decryption"></a>Odszyfrowanie asymetryczne
+## <a name="asymmetric-decryption"></a>Asymmetric Decryption
 
-Zazwyczaj strona (strona: A) generuje zarówno klucz publiczny i prywatny, a przechowuje klucz w pamięci lub w kontenerze kluczy kryptograficznych. Innych firm, następnie wysyła klucz publiczny do innej strony (strona B). Przy użyciu klucza publicznego, strona B szyfruje dane i wysyła dane do firmy A. Po otrzymaniu danych, A strona odszyfrowuje je przy użyciu klucza prywatnego, który odpowiada. Odszyfrowywanie zakończą się pomyślnie, tylko wtedy, gdy strona A używa klucza prywatnego, który odnosi się do klucza publicznego, który B innych firm używane do szyfrowania danych.
+Typically, a party (party A) generates both a public and private key and stores the key either in memory or in a cryptographic key container. Party A then sends the public key to another party (party B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. Decryption will be successful only if party A uses the private key that corresponds to the public key Party B used to encrypt the data.
 
-Aby uzyskać informacje na temat przechowywania klucza asymetrycznego, w bezpiecznej kontenera kluczy kryptograficznych i jak można później pobrać klucza asymetrycznego, zobacz [jak: Store kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+For information on how to store an asymmetric key in secure cryptographic key container and how to later retrieve the asymmetric key, see [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
-Poniższy przykład ilustruje odszyfrowywania dwie tablice bajtów reprezentujących klucz symetryczny i IV. Aby uzyskać informacje dotyczące można wyodrębnić klucza publicznego asymetrycznego z <xref:System.Security.Cryptography.RSACryptoServiceProvider> obiekt w formacie, który umożliwia łatwe wysyłanie do innej, zobacz [szyfrowania danych](../../../docs/standard/security/encrypting-data.md).
+The following example illustrates the decryption of two arrays of bytes that represent a symmetric key and IV. For information on how to extract the asymmetric public key from the <xref:System.Security.Cryptography.RSACryptoServiceProvider> object in a format that you can easily send to a third party, see [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.

@@ -1,21 +1,21 @@
 ---
-title: 'Instrukcje: wyszukiwanie bezpośrednio poprzedzającego elementu równorzędnego (XPath-LINQ to XML) (Visual Basic)'
+title: 'How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: 46f5b0d2d32e8dcba5f8c9e164a027a8e8118f4d
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b2cb9efba0ef65a1b1ab1d7dadd54759f7d2a26b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582690"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344622"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="b588b-102">Instrukcje: wyszukiwanie bezpośrednio poprzedzającego elementu równorzędnego (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b588b-102">How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (Visual Basic)</span></span>
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="a661e-102">How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a661e-102">How to: Find the Immediate Preceding Sibling (XPath-LINQ to XML) (Visual Basic)</span></span>
 
-<span data-ttu-id="b588b-103">Czasami chcesz znaleźć bezpośrednio poprzedni element równorzędny do węzła.</span><span class="sxs-lookup"><span data-stu-id="b588b-103">Sometimes you want to find the immediate preceding sibling to a node.</span></span> <span data-ttu-id="b588b-104">Ze względu na różnicę w semantyce predykatów pozycyjnych dla poprzedzających osi elementów równorzędnych w XPath, w przeciwieństwie do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], jest to jedno z bardziej interesujących porównań.</span><span class="sxs-lookup"><span data-stu-id="b588b-104">Due to the difference in the semantics of positional predicates for the preceding sibling axes in XPath as opposed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], this is one of the more interesting comparisons.</span></span>
+<span data-ttu-id="a661e-103">Sometimes you want to find the immediate preceding sibling to a node.</span><span class="sxs-lookup"><span data-stu-id="a661e-103">Sometimes you want to find the immediate preceding sibling to a node.</span></span> <span data-ttu-id="a661e-104">Due to the difference in the semantics of positional predicates for the preceding sibling axes in XPath as opposed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], this is one of the more interesting comparisons.</span><span class="sxs-lookup"><span data-stu-id="a661e-104">Due to the difference in the semantics of positional predicates for the preceding sibling axes in XPath as opposed to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], this is one of the more interesting comparisons.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b588b-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="b588b-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="a661e-105">Przykład</span><span class="sxs-lookup"><span data-stu-id="a661e-105">Example</span></span>
 
-<span data-ttu-id="b588b-106">W tym przykładzie zapytanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] używa operatora <xref:System.Linq.Enumerable.Last%2A>, aby znaleźć ostatni węzeł w kolekcji zwróconej przez <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>.</span><span class="sxs-lookup"><span data-stu-id="b588b-106">In this example, the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query uses the <xref:System.Linq.Enumerable.Last%2A> operator to find the last node in the collection returned by <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>.</span></span> <span data-ttu-id="b588b-107">Z kolei wyrażenie XPath używa predykatu o wartości 1, aby znaleźć bezpośrednio poprzedzający element.</span><span class="sxs-lookup"><span data-stu-id="b588b-107">By contrast, the XPath expression uses a predicate with a value of 1 to find the immediately preceding element.</span></span>
+<span data-ttu-id="a661e-106">In this example, the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query uses the <xref:System.Linq.Enumerable.Last%2A> operator to find the last node in the collection returned by <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>.</span><span class="sxs-lookup"><span data-stu-id="a661e-106">In this example, the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] query uses the <xref:System.Linq.Enumerable.Last%2A> operator to find the last node in the collection returned by <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>.</span></span> <span data-ttu-id="a661e-107">By contrast, the XPath expression uses a predicate with a value of 1 to find the immediately preceding element.</span><span class="sxs-lookup"><span data-stu-id="a661e-107">By contrast, the XPath expression uses a predicate with a value of 1 to find the immediately preceding element.</span></span>
 
 ```vb
 Dim root As XElement = _
@@ -43,13 +43,13 @@ End If
 Console.WriteLine(el1)
 ```
 
-<span data-ttu-id="b588b-108">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="b588b-108">This example produces the following output:</span></span>
+<span data-ttu-id="a661e-108">Ten przykład generuje następujące wyniki:</span><span class="sxs-lookup"><span data-stu-id="a661e-108">This example produces the following output:</span></span>
 
 ```console
 Results are identical
 <Child3 />
 ```
 
-## <a name="see-also"></a><span data-ttu-id="b588b-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="b588b-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a661e-109">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="a661e-109">See also</span></span>
 
-- [<span data-ttu-id="b588b-110">LINQ to XML dla użytkowników XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b588b-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="a661e-110">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a661e-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

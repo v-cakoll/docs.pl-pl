@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="c3753-101">Hello world — wprowadzenie do C# interaktywnego C# samouczka</span><span class="sxs-lookup"><span data-stu-id="c3753-101">Hello World - Introduction to C# interactive C# tutorial</span></span>
+title: Hello world — wprowadzenie do C# interaktywnego C# samouczka
 metadata:
   title: Hello world — wprowadzenie do C# interaktywnego C# samouczka
   description: W tym samouczku będziesz używać przeglądarki do interaktywnego nauczenia się C# . Napiszesz C# kod i zobaczysz wyniki kompilacji i uruchomienia kodu bezpośrednio w przeglądarce.
@@ -7,24 +7,24 @@ metadata:
   level: Beginner
   ms.date: 08/24/2018
   nextTutorialHref: numbers-in-csharp.yml
-  nextTutorialTitle: <span data-ttu-id="c3753-105">Liczby w języku C#</span><span class="sxs-lookup"><span data-stu-id="c3753-105">Numbers in C#</span></span>
+  nextTutorialTitle: Liczby w języku C#
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850800"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969408"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="c3753-106">Ten samouczek przeprowadzi Cię C# interaktywnie przy użyciu przeglądarki do pisania C# i wyświetlania wyników kompilowania i uruchamiania kodu.</span><span class="sxs-lookup"><span data-stu-id="c3753-106">This tutorial teaches you C# interactively, using your browser to write C# and see the results of compiling and running your code.</span></span> <span data-ttu-id="c3753-107">Zawiera szereg lekcji rozpoczynających się od programu "Hello world".</span><span class="sxs-lookup"><span data-stu-id="c3753-107">It contains a series of lessons that begin with a "Hello World" program.</span></span> <span data-ttu-id="c3753-108">Te lekcje uczyją się podstaw C# języka.</span><span class="sxs-lookup"><span data-stu-id="c3753-108">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="c3753-109">Uruchamianie pierwszego C# programu</span><span class="sxs-lookup"><span data-stu-id="c3753-109">Run your first C# program</span></span>
+    Ten samouczek przeprowadzi Cię C# interaktywnie przy użyciu przeglądarki do pisania C# i wyświetlania wyników kompilowania i uruchamiania kodu. Zawiera szereg lekcji rozpoczynających się od programu "Hello world". Te lekcje uczyją się podstaw C# języka.
+- title: Uruchamianie pierwszego C# programu
   durationInMinutes: 2
   content: >
-    <span data-ttu-id="c3753-110">Uruchom następujący kod w oknie interaktywnym.</span><span class="sxs-lookup"><span data-stu-id="c3753-110">Run the following code in the interactive window.</span></span> <span data-ttu-id="c3753-111">Aby to zrobić, wpisz poniższy blok kodu w oknie interaktywnym i kliknij przycisk **Uruchom** :</span><span class="sxs-lookup"><span data-stu-id="c3753-111">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Uruchom następujący kod w oknie interaktywnym. Wybierz przycisk **Przejdź do trybu koncentracji uwagi** . Następnie wpisz poniższy blok kodu w oknie interaktywnym i wybierz polecenie **Uruchom**:
 
 
     ```csharp
@@ -34,29 +34,29 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-112">Gratulacje!</span><span class="sxs-lookup"><span data-stu-id="c3753-112">Congratulations!</span></span> <span data-ttu-id="c3753-113">Uruchomiono pierwszy C# program.</span><span class="sxs-lookup"><span data-stu-id="c3753-113">You've run your first C# program.</span></span> <span data-ttu-id="c3753-114">Jest to prosty program, który drukuje komunikat "Hello world!".</span><span class="sxs-lookup"><span data-stu-id="c3753-114">It's a simple program that prints the message "Hello World!".</span></span> <span data-ttu-id="c3753-115">Wykorzystano <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metodę, aby wydrukować ten komunikat.</span><span class="sxs-lookup"><span data-stu-id="c3753-115">It used the <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> method to print that message.</span></span> <span data-ttu-id="c3753-116">`Console`jest typem, który reprezentuje okno konsoli.</span><span class="sxs-lookup"><span data-stu-id="c3753-116">`Console` is a type that represents the console window.</span></span> <span data-ttu-id="c3753-117">`WriteLine`to metoda `Console` typu, która drukuje wiersz tekstu w tej konsoli tekstu.</span><span class="sxs-lookup"><span data-stu-id="c3753-117">`WriteLine` is a method of the `Console` type that prints a line of text to that text console.</span></span>
+    Nabycia! Uruchomiono pierwszy C# program. Jest to prosty program, który drukuje komunikat "Hello world!". Wykorzystano metodę <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby wydrukować ten komunikat. `Console` jest typem, który reprezentuje okno konsoli. `WriteLine` to metoda typu `Console`, która drukuje wiersz tekstu w tej konsoli tekstu.
 
 
-    <span data-ttu-id="c3753-118">Przejdźmy i Dowiedz się więcej.</span><span class="sxs-lookup"><span data-stu-id="c3753-118">Let's move on and explore more.</span></span> <span data-ttu-id="c3753-119">Pozostała część tej lekcji analizuje pracę z `string` typem, który reprezentuje tekst w. C#</span><span class="sxs-lookup"><span data-stu-id="c3753-119">The rest of this lesson explores working with the `string` type, which represents text in C#.</span></span> <span data-ttu-id="c3753-120">Podobnie jak `string` typ, typ ma metody. `Console`</span><span class="sxs-lookup"><span data-stu-id="c3753-120">Like the `Console` type, the `string` type has methods.</span></span> <span data-ttu-id="c3753-121">`string` Metody współpracują z tekstem.</span><span class="sxs-lookup"><span data-stu-id="c3753-121">The `string` methods work with text.</span></span>
+    Przejdźmy i Dowiedz się więcej. Pozostała część tej lekcji analizuje pracę z typem `string`, który reprezentuje tekst w C#. Podobnie jak typ `Console`, typ `string` ma metody. Metody `string` współpracują z tekstem.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-122">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-122">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-123">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-123">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c3753-124">Deklarowanie i Używanie zmiennych</span><span class="sxs-lookup"><span data-stu-id="c3753-124">Declare and use variables</span></span>
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Deklarowanie i Używanie zmiennych
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="c3753-125">Pierwszy program wydrukował `string` "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="c3753-125">Your first program printed the `string` "Hello World!"</span></span> <span data-ttu-id="c3753-126">na ekranie.</span><span class="sxs-lookup"><span data-stu-id="c3753-126">on the screen.</span></span>
+    Pierwszy program wydrukował `string` "Hello world!" na ekranie.
 
 
     > [!TIP]
 
-    > <span data-ttu-id="c3753-127">Podczas eksplorowania C# (lub dowolnego języka programowania) nastąpi pomyłki podczas pisania kodu.</span><span class="sxs-lookup"><span data-stu-id="c3753-127">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="c3753-128">**Kompilator** odnajdzie te błędy i zgłosi je do użytkownika.</span><span class="sxs-lookup"><span data-stu-id="c3753-128">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="c3753-129">Gdy dane wyjściowe zawierają komunikaty o błędach, należy dokładnie zapoznać się z przykładowym kodem i kodem w oknie interaktywnym, aby zobaczyć, co należy naprawić.</span><span class="sxs-lookup"><span data-stu-id="c3753-129">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > Podczas eksplorowania C# (lub dowolnego języka programowania) nastąpi pomyłki podczas pisania kodu. **Kompilator** odnajdzie te błędy i zgłosi je do użytkownika. Gdy dane wyjściowe zawierają komunikaty o błędach, należy dokładnie zapoznać się z przykładowym kodem i kodem w oknie interaktywnym, aby zobaczyć, co należy naprawić.
 
-    > <span data-ttu-id="c3753-130">To ćwiczenie pomoże Ci poznać strukturę C# kodu.</span><span class="sxs-lookup"><span data-stu-id="c3753-130">That exercise will help you learn the structure of C# code.</span></span>
+    > To ćwiczenie pomoże Ci poznać strukturę C# kodu.
 
 
-    <span data-ttu-id="c3753-131">Pierwszy program jest ograniczony do drukowania jednej wiadomości.</span><span class="sxs-lookup"><span data-stu-id="c3753-131">Your first program is limited to printing one message.</span></span> <span data-ttu-id="c3753-132">Można napisać bardziej przydatne programy przy użyciu **zmiennych**.</span><span class="sxs-lookup"><span data-stu-id="c3753-132">You can write more useful programs by using **variables**.</span></span> <span data-ttu-id="c3753-133">**Zmienna** jest symbolem, którego można użyć do uruchomienia tego samego kodu z różnymi wartościami.</span><span class="sxs-lookup"><span data-stu-id="c3753-133">A **variable** is a symbol you can use to run the same code with different values.</span></span> <span data-ttu-id="c3753-134">Wypróbujmy!</span><span class="sxs-lookup"><span data-stu-id="c3753-134">Let's try it!</span></span> <span data-ttu-id="c3753-135">Zastąp kod zapisany w oknie interaktywnym następującym kodem:</span><span class="sxs-lookup"><span data-stu-id="c3753-135">Replace the code you've written in the interactive window with the following code:</span></span>
+    Pierwszy program jest ograniczony do drukowania jednej wiadomości. Można napisać bardziej przydatne programy przy użyciu **zmiennych**. **Zmienna** jest symbolem, którego można użyć do uruchomienia tego samego kodu z różnymi wartościami. Wypróbujmy! Zastąp kod zapisany w oknie interaktywnym następującym kodem:
 
 
     ```csharp
@@ -68,10 +68,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-136">Pierwszy wiersz deklaruje zmienną `aFriend` i przypisuje jej wartość, "Bill".</span><span class="sxs-lookup"><span data-stu-id="c3753-136">The first line declares a variable, `aFriend` and assigns it a value, "Bill".</span></span> <span data-ttu-id="c3753-137">Drugi wiersz drukuje nazwę.</span><span class="sxs-lookup"><span data-stu-id="c3753-137">The second line prints out the name.</span></span>
+    Pierwszy wiersz deklaruje zmienną, `aFriend` i przypisuje jej wartość "Bill". Drugi wiersz drukuje nazwę.
 
 
-    <span data-ttu-id="c3753-138">Można przypisać różne wartości do każdej zadeklarowanej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="c3753-138">You can assign different values to any variable you declare.</span></span> <span data-ttu-id="c3753-139">Możesz zmienić nazwę na jednego z znajomych.</span><span class="sxs-lookup"><span data-stu-id="c3753-139">You can change the name to one of your friends.</span></span> <span data-ttu-id="c3753-140">Dodaj te dwa wiersze w oknie interaktywnym po dodanym już kodzie:</span><span class="sxs-lookup"><span data-stu-id="c3753-140">Add these two lines in the interactive window following the code you've already added:</span></span>
+    Można przypisać różne wartości do każdej zadeklarowanej zmiennej. Możesz zmienić nazwę na jednego z znajomych. Dodaj te dwa wiersze w oknie interaktywnym po dodanym już kodzie:
 
 
     ```csharp
@@ -83,10 +83,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-141">Zauważ, że ten sam wiersz kodu drukuje dwa różne komunikaty na podstawie wartości przechowywanej w `aFriend` zmiennej.</span><span class="sxs-lookup"><span data-stu-id="c3753-141">Notice that the same line of code prints two different messages, based on the value stored in the `aFriend` variable.</span></span>
+    Zauważ, że ten sam wiersz kodu drukuje dwa różne komunikaty na podstawie wartości przechowywanej w zmiennej `aFriend`.
 
 
-    <span data-ttu-id="c3753-142">Być może zawarto również zauważyć, że w ostatnich dwóch komunikatach brakuje słowa "Hello".</span><span class="sxs-lookup"><span data-stu-id="c3753-142">You may have also noticed that the word "Hello" was missing in the last two messages.</span></span> <span data-ttu-id="c3753-143">Naprawmy to teraz.</span><span class="sxs-lookup"><span data-stu-id="c3753-143">Let's fix that now.</span></span>  <span data-ttu-id="c3753-144">Zmodyfikuj wiersze, które drukują komunikat w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="c3753-144">Modify the lines that print the message to the following:</span></span>
+    Być może zawarto również zauważyć, że w ostatnich dwóch komunikatach brakuje słowa "Hello". Naprawmy to teraz.  Zmodyfikuj wiersze, które drukują komunikat w następujący sposób:
 
 
     ```csharp
@@ -96,18 +96,18 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-145">Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki.</span><span class="sxs-lookup"><span data-stu-id="c3753-145">Click **Run** again to see the results.</span></span>
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki.
 
 
-    <span data-ttu-id="c3753-146">Użyto do kompilowania ciągów ze **zmiennych** i stałych ciągów. \*\*\*\* `+`</span><span class="sxs-lookup"><span data-stu-id="c3753-146">You've been using `+` to build strings from **variables** and **constant** strings.</span></span> <span data-ttu-id="c3753-147">Istnieje lepszy sposób.</span><span class="sxs-lookup"><span data-stu-id="c3753-147">There's a better way.</span></span>
+    Używasz `+` do kompilowania ciągów ze **zmiennych** i ciągów **stałych** . Istnieje lepszy sposób.
 
-    <span data-ttu-id="c3753-148">Można umieścić zmienną między `{` i `}` znakami, aby powiedzieć C# , aby zamienić ten tekst na wartość zmiennej.</span><span class="sxs-lookup"><span data-stu-id="c3753-148">You can place a variable between `{` and `}` characters to tell C# to replace that text with the value of the variable.</span></span>
-
-
-    <span data-ttu-id="c3753-149">Jest to nazywane [interpolacją ciągu](../../language-reference/tokens/interpolated.md).</span><span class="sxs-lookup"><span data-stu-id="c3753-149">This is called [String interpolation](../../language-reference/tokens/interpolated.md).</span></span>
+    Można umieścić zmienną między `{` i `}` znaków, aby powiedzieć C# , aby zamienić ten tekst na wartość zmiennej.
 
 
-    <span data-ttu-id="c3753-150">Jeśli dodasz `$` przed cudzysłowem otwierającym ciąg, możesz dołączyć zmienne, takie jak `aFriend`w ciągu między nawiasami klamrowymi.</span><span class="sxs-lookup"><span data-stu-id="c3753-150">If you add a `$` before the opening quote of the string, you can then include variables, like `aFriend`, inside the string between curly braces.</span></span> <span data-ttu-id="c3753-151">Wypróbuj:</span><span class="sxs-lookup"><span data-stu-id="c3753-151">Give it a try:</span></span>
+    Jest to nazywane [interpolacją ciągu](../../language-reference/tokens/interpolated.md).
+
+
+    Jeśli dodasz `$` przed cudzysłowem otwierającym ciąg, możesz dołączyć zmienne, takie jak `aFriend`, wewnątrz ciągu między nawiasami klamrowymi. Wypróbuj:
 
 
 
@@ -118,19 +118,19 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-152">Kliknij przycisk **Uruchom** ponownie, aby zobaczyć wyniki.</span><span class="sxs-lookup"><span data-stu-id="c3753-152">Click **Run** again to see the results.</span></span> <span data-ttu-id="c3753-153">Zamiast "Hello {aFriend}" komunikat powinien mieć wartość "Hello Maira".</span><span class="sxs-lookup"><span data-stu-id="c3753-153">Instead of "Hello {aFriend}", the message should be "Hello Maira".</span></span>
+    Wybierz pozycję **Uruchom** ponownie, aby wyświetlić wyniki. Zamiast "Hello {aFriend}" komunikat powinien mieć wartość "Hello Maira".
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-154">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-154">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-155">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-155">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c3753-156">Pracuj z ciągami</span><span class="sxs-lookup"><span data-stu-id="c3753-156">Work with strings</span></span>
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Pracuj z ciągami
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="c3753-157">Twoja Ostatnia edycja była pierwszym zajrzeć na to, co możesz zrobić z ciągami.</span><span class="sxs-lookup"><span data-stu-id="c3753-157">Your last edit was our first look at what you can do with strings.</span></span> <span data-ttu-id="c3753-158">Dowiedz się więcej.</span><span class="sxs-lookup"><span data-stu-id="c3753-158">Let's explore more.</span></span>
+    Twoja Ostatnia edycja była pierwszym zajrzeć na to, co możesz zrobić z ciągami. Dowiedz się więcej.
 
 
-    <span data-ttu-id="c3753-159">Nie ograniczono do pojedynczej zmiennej między nawiasami klamrowymi.</span><span class="sxs-lookup"><span data-stu-id="c3753-159">You're not limited to a single variable between the curly braces.</span></span> <span data-ttu-id="c3753-160">Wypróbuj:</span><span class="sxs-lookup"><span data-stu-id="c3753-160">Try this:</span></span>
+    Nie ograniczono do pojedynczej zmiennej między nawiasami klamrowymi. Wypróbuj:
 
 
     ```csharp
@@ -144,7 +144,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-161">W miarę eksplorowania ciągów można znaleźć, że ciągi są więcej niż kolekcją liter.</span><span class="sxs-lookup"><span data-stu-id="c3753-161">As you explore more with strings, you'll find that strings are more than a collection of letters.</span></span> <span data-ttu-id="c3753-162">Można znaleźć długość ciągu przy użyciu `Length`.</span><span class="sxs-lookup"><span data-stu-id="c3753-162">You can find the length of a string using `Length`.</span></span> <span data-ttu-id="c3753-163">`Length`jest **właściwością** ciągu i zwraca liczbę znaków w tym ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-163">`Length` is a **property** of a string and it returns the number of characters in that string.</span></span> <span data-ttu-id="c3753-164">Dodaj następujący kod w dolnej części okna interaktywnego:</span><span class="sxs-lookup"><span data-stu-id="c3753-164">Add the following code at the bottom of the interactive window:</span></span>
+    W miarę eksplorowania ciągów można znaleźć, że ciągi są więcej niż kolekcją liter. Długość ciągu można znaleźć za pomocą `Length`. `Length` jest **właściwością** ciągu i zwraca liczbę znaków w tym ciągu. Dodaj następujący kod w dolnej części okna interaktywnego:
 
 
     ```csharp
@@ -158,21 +158,21 @@ items:
 
     > [!TIP]
 
-    > <span data-ttu-id="c3753-165">Jest to dobry czas na samodzielne Eksplorowanie.</span><span class="sxs-lookup"><span data-stu-id="c3753-165">This is a good time to explore on your own.</span></span> <span data-ttu-id="c3753-166">Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie.</span><span class="sxs-lookup"><span data-stu-id="c3753-166">You've learned that `Console.WriteLine()` writes text to the screen.</span></span> <span data-ttu-id="c3753-167">Wiesz już, jak deklarować zmienne i łączyć ciągi.</span><span class="sxs-lookup"><span data-stu-id="c3753-167">You've learned how to declare variables and concatenate strings together.</span></span> <span data-ttu-id="c3753-168">Eksperymentuj w oknie interaktywnym.</span><span class="sxs-lookup"><span data-stu-id="c3753-168">Experiment in the interactive window.</span></span> <span data-ttu-id="c3753-169">Okno zawiera funkcję **IntelliSense** , która udostępnia sugestie dotyczące tego, co można zrobić.</span><span class="sxs-lookup"><span data-stu-id="c3753-169">The window has a feature called **IntelliSense** that makes suggestions for what you can do.</span></span> <span data-ttu-id="c3753-170">Wpisz a `.` `d` po .`firstFriend`</span><span class="sxs-lookup"><span data-stu-id="c3753-170">Type a `.` after the `d` in `firstFriend`.</span></span> <span data-ttu-id="c3753-171">Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.</span><span class="sxs-lookup"><span data-stu-id="c3753-171">You'll see a list of suggestions for properties and methods you can use.</span></span>
+    > Jest to dobry czas na samodzielne Eksplorowanie. Wiesz już, że `Console.WriteLine()` zapisuje tekst na ekranie. Wiesz już, jak deklarować zmienne i łączyć ciągi. Eksperymentuj w oknie interaktywnym. Okno zawiera funkcję **IntelliSense** , która udostępnia sugestie dotyczące tego, co można zrobić. Wpisz `.` po `d` w `firstFriend`. Zobaczysz listę sugestii dotyczących właściwości i metod, których można użyć.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-172">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-172">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-173">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-173">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c3753-174">Zrób więcej z użyciem ciągów</span><span class="sxs-lookup"><span data-stu-id="c3753-174">Do more with strings</span></span>
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Zrób więcej z użyciem ciągów
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="c3753-175">Używasz **metody**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby drukować wiadomości.</span><span class="sxs-lookup"><span data-stu-id="c3753-175">You've been using a **method**, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, to print messages.</span></span> <span data-ttu-id="c3753-176">**Metoda** jest blokiem kodu, który implementuje niektóre akcje.</span><span class="sxs-lookup"><span data-stu-id="c3753-176">A **method** is a block of code that implements some action.</span></span> <span data-ttu-id="c3753-177">Ma nazwę, więc możesz uzyskać do niej dostęp.</span><span class="sxs-lookup"><span data-stu-id="c3753-177">It has a name, so you can access it.</span></span>
+    Używasz **metody**<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, aby drukować komunikaty. **Metoda** jest blokiem kodu, który implementuje niektóre akcje. Ma nazwę, więc możesz uzyskać do niej dostęp.
 
 
-    <span data-ttu-id="c3753-178">Załóżmy, że ciągi zawierają początkowe lub końcowe spacje, które nie mają być wyświetlane.</span><span class="sxs-lookup"><span data-stu-id="c3753-178">Suppose your strings have leading or trailing spaces that you don't want to display.</span></span> <span data-ttu-id="c3753-179">Chcesz **przyciąć** spacje z ciągów.</span><span class="sxs-lookup"><span data-stu-id="c3753-179">You want to **trim** the spaces from the strings.</span></span>
+    Załóżmy, że ciągi zawierają początkowe lub końcowe spacje, które nie mają być wyświetlane. Chcesz **przyciąć** spacje z ciągów.
 
-    <span data-ttu-id="c3753-180">Metody i powiązane metody <xref:System.String.TrimStart%2A> i <xref:System.String.TrimEnd%2A> wykonują tę czynność. <xref:System.String.Trim%2A></span><span class="sxs-lookup"><span data-stu-id="c3753-180">The <xref:System.String.Trim%2A> method and related methods <xref:System.String.TrimStart%2A> and <xref:System.String.TrimEnd%2A> do that work.</span></span> <span data-ttu-id="c3753-181">Możesz użyć tych metod, aby usunąć spacje wiodące i końcowe.</span><span class="sxs-lookup"><span data-stu-id="c3753-181">You can just use those methods to remove leading and trailing spaces.</span></span> <span data-ttu-id="c3753-182">Wypróbuj następujący kod:</span><span class="sxs-lookup"><span data-stu-id="c3753-182">Try the following code:</span></span>
+    Metoda <xref:System.String.Trim%2A> i powiązane metody <xref:System.String.TrimStart%2A> i <xref:System.String.TrimEnd%2A> wykonać to działanie. Możesz użyć tych metod, aby usunąć spacje wiodące i końcowe. Wypróbuj następujący kod:
 
 
     ```csharp
@@ -199,10 +199,10 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-183">Ten przykład wzmacnia kilka ważnych koncepcji związanych z pracą z ciągami.</span><span class="sxs-lookup"><span data-stu-id="c3753-183">This sample reinforces a couple of important concepts for working with strings.</span></span> <span data-ttu-id="c3753-184">Metody służące do manipulowania ciągami zwracają nowe obiekty String zamiast wprowadzania modyfikacji.</span><span class="sxs-lookup"><span data-stu-id="c3753-184">The methods that manipulate strings return new string objects rather than making modifications in place.</span></span> <span data-ttu-id="c3753-185">Można zobaczyć, że każde wywołanie `Trim` metody zwraca nowy ciąg, ale nie zmienia oryginalnego komunikatu.</span><span class="sxs-lookup"><span data-stu-id="c3753-185">You can see that each call to any of the `Trim` methods returns a new string but doesn't change the original message.</span></span>
+    Ten przykład wzmacnia kilka ważnych koncepcji związanych z pracą z ciągami. Metody służące do manipulowania ciągami zwracają nowe obiekty String zamiast wprowadzania modyfikacji. Można zobaczyć, że każde wywołanie dowolnej metody `Trim` zwraca nowy ciąg, ale nie zmienia oryginalnego komunikatu.
 
 
-    <span data-ttu-id="c3753-186">Istnieją inne metody do pracy z ciągiem.</span><span class="sxs-lookup"><span data-stu-id="c3753-186">There are other methods available to work with a string.</span></span> <span data-ttu-id="c3753-187">Można na przykład użyć polecenia Wyszukaj i Zastąp w edytorze lub Edytor tekstów przed.</span><span class="sxs-lookup"><span data-stu-id="c3753-187">For example, you've probably used a search and replace command in an editor or word processor before.</span></span> <span data-ttu-id="c3753-188"><xref:System.String.Replace%2A> Metoda wykonuje coś podobnego w ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-188">The <xref:System.String.Replace%2A> method does something similar in a string.</span></span> <span data-ttu-id="c3753-189">Wyszukuje podciąg i zastępuje go innym tekstem.</span><span class="sxs-lookup"><span data-stu-id="c3753-189">It searches for a substring and replaces it with different text.</span></span> <span data-ttu-id="c3753-190">Metoda przyjmuje dwa **parametry.** <xref:System.String.Replace%2A></span><span class="sxs-lookup"><span data-stu-id="c3753-190">The <xref:System.String.Replace%2A> method takes two **parameters**.</span></span> <span data-ttu-id="c3753-191">Są to ciągi między nawiasami.</span><span class="sxs-lookup"><span data-stu-id="c3753-191">These are the strings between the parentheses.</span></span> <span data-ttu-id="c3753-192">Pierwszy ciąg to tekst do wyszukania.</span><span class="sxs-lookup"><span data-stu-id="c3753-192">The first string is the text to search for.</span></span> <span data-ttu-id="c3753-193">Drugi ciąg to tekst, w którym ma zostać zamieniony.</span><span class="sxs-lookup"><span data-stu-id="c3753-193">The second string is the text to replace it with.</span></span> <span data-ttu-id="c3753-194">Wypróbuj ją samodzielnie.</span><span class="sxs-lookup"><span data-stu-id="c3753-194">Try it for yourself.</span></span> <span data-ttu-id="c3753-195">Dodaj ten kod.</span><span class="sxs-lookup"><span data-stu-id="c3753-195">Add this code.</span></span> <span data-ttu-id="c3753-196">Wpisz je w, aby wyświetlić wskazówki `.Re` `sayHello` po rozpoczęciu wpisywania po zmiennej:</span><span class="sxs-lookup"><span data-stu-id="c3753-196">Type it in to see the hints as you start typing `.Re` after the `sayHello` variable:</span></span>
+    Istnieją inne metody do pracy z ciągiem. Można na przykład użyć polecenia Wyszukaj i Zastąp w edytorze lub Edytor tekstów przed. Metoda <xref:System.String.Replace%2A> wykonuje coś podobnego w ciągu. Wyszukuje podciąg i zastępuje go innym tekstem. Metoda <xref:System.String.Replace%2A> przyjmuje dwa **Parametry**. Są to ciągi między nawiasami. Pierwszy ciąg to tekst do wyszukania. Drugi ciąg to tekst, w którym ma zostać zamieniony. Wypróbuj ją samodzielnie. Dodaj ten kod. Wpisz je w, aby wyświetlić wskazówki po rozpoczęciu wpisywania `.Re` po zmiennej `sayHello`:
 
 
     ```csharp
@@ -218,7 +218,7 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-197">Dwie inne przydatne metody tworzą ciąg WERSALIKów lub małych liter.</span><span class="sxs-lookup"><span data-stu-id="c3753-197">Two other useful methods make a string ALL CAPS or all lower case.</span></span> <span data-ttu-id="c3753-198">Wypróbuj następujący kod.</span><span class="sxs-lookup"><span data-stu-id="c3753-198">Try the following code.</span></span> <span data-ttu-id="c3753-199">Wpisz go, aby zobaczyć, w jaki sposób **technologia IntelliSense** udostępnia wskazówki podczas `To`uruchamiania, aby wpisać:</span><span class="sxs-lookup"><span data-stu-id="c3753-199">Type it in to see how **IntelliSense** provides hints as you start to type `To`:</span></span>
+    Dwie inne przydatne metody tworzą ciąg WERSALIKów lub małych liter. Wypróbuj następujący kod. Wpisz go, aby zobaczyć, w jaki sposób **technologia IntelliSense** udostępnia wskazówki podczas uruchamiania, aby wpisać `To`:
 
 
     ```csharp
@@ -232,11 +232,11 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-200">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-200">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-201">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-201">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c3753-202">Wyszukiwanie ciągów</span><span class="sxs-lookup"><span data-stu-id="c3753-202">Search strings</span></span>
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Wyszukiwanie ciągów
   durationInMinutes: 10
   content: >
-    <span data-ttu-id="c3753-203">Druga część operacji *wyszukiwania i zamieniania* polega na znalezieniu tekstu w ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-203">The other part of a *search and replace* operation is to find text in a string.</span></span> <span data-ttu-id="c3753-204">Możesz użyć <xref:System.String.Contains%2A> metody do wyszukania.</span><span class="sxs-lookup"><span data-stu-id="c3753-204">You can use the  <xref:System.String.Contains%2A> method for searching.</span></span> <span data-ttu-id="c3753-205">Informuje o tym, czy ciąg zawiera podciąg.</span><span class="sxs-lookup"><span data-stu-id="c3753-205">It tells you if a string contains a substring inside it.</span></span> <span data-ttu-id="c3753-206">Wypróbuj następujący kod, aby eksplorować <xref:System.String.Contains%2A>:</span><span class="sxs-lookup"><span data-stu-id="c3753-206">Try the following code to explore <xref:System.String.Contains%2A>:</span></span>
+    Druga część operacji *wyszukiwania i zamieniania* polega na znalezieniu tekstu w ciągu. Aby wyszukać, można użyć metody <xref:System.String.Contains%2A>. Informuje o tym, czy ciąg zawiera podciąg. Wypróbuj następujący kod, aby eksplorować <xref:System.String.Contains%2A>:
 
 
     ```csharp
@@ -250,30 +250,30 @@ items:
     ```
 
 
-    <span data-ttu-id="c3753-207">Metoda zwraca wartość logiczną, która informuje o tym, czy wyszukiwany ciąg został znaleziony. \*\*\*\* <xref:System.String.Contains%2A></span><span class="sxs-lookup"><span data-stu-id="c3753-207">The <xref:System.String.Contains%2A> method returns a **boolean** value which tells you if the string you were searching for was found.</span></span> <span data-ttu-id="c3753-208">`false` Wartość **logiczna** jest przechowywana albo `true` lub.</span><span class="sxs-lookup"><span data-stu-id="c3753-208">A **boolean** stores either a `true` or a `false` value.</span></span> <span data-ttu-id="c3753-209">Dowiesz się więcej o wartościach **logicznych** w późniejszej lekcji.</span><span class="sxs-lookup"><span data-stu-id="c3753-209">You'll learn more about **boolean** values in a later lesson.</span></span>
+    Metoda <xref:System.String.Contains%2A> zwraca wartość **logiczną** , która informuje o tym, czy wyszukiwany ciąg został znaleziony. Wartość **logiczna** przechowuje `true` lub `false`. Dowiesz się więcej o wartościach **logicznych** w późniejszej lekcji.
 
 
-    <span data-ttu-id="c3753-210">***Sprawdz***</span><span class="sxs-lookup"><span data-stu-id="c3753-210">***Challenge***</span></span>
+    ***Sprawdz***
 
 
-    <span data-ttu-id="c3753-211">Istnieją dwie podobne metody, <xref:System.String.StartsWith%2A> <xref:System.String.EndsWith%2A> które również szukają podciągów w ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-211">There are two similar methods, <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> that also search for sub-strings in a string.</span></span> <span data-ttu-id="c3753-212">Znajdują się one w podciągu na początku lub na końcu ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-212">These find a substring at the beginning or the end of the string.</span></span> <span data-ttu-id="c3753-213">Spróbuj zmodyfikować poprzedni przykład, aby użyć <xref:System.String.StartsWith%2A> polecenia i <xref:System.String.EndsWith%2A> zamiast. <xref:System.String.Contains%2A></span><span class="sxs-lookup"><span data-stu-id="c3753-213">Try to modify the previous sample to use <xref:System.String.StartsWith%2A> and <xref:System.String.EndsWith%2A> instead of <xref:System.String.Contains%2A>.</span></span> <span data-ttu-id="c3753-214">Wyszukaj "ty" lub "Pożegnanie" na początku ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-214">Search for "You" or "goodbye" at the beginning of a string.</span></span> <span data-ttu-id="c3753-215">Wyszukaj ciąg "Hello" lub "Pożegnanie" na końcu ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-215">Search for "hello" or "goodbye" at the end of a string.</span></span>
-
-
-    > [!NOTE]
-
-    > <span data-ttu-id="c3753-216">Obejrzyj interpunkcję po przetestowaniu tekstu na końcu ciągu.</span><span class="sxs-lookup"><span data-stu-id="c3753-216">Watch your punctuation when you test for the text at the end of the string.</span></span> <span data-ttu-id="c3753-217">Jeśli ciąg jest zakończony kropką, należy wyszukać ciąg kończący się kropką.</span><span class="sxs-lookup"><span data-stu-id="c3753-217">If the string ends with a period, you must check for a string that ends with a period.</span></span>
-
-
-    <span data-ttu-id="c3753-218">Należy zacząć `true` od "ty" i kończyć się ciągiem "Hello" i fałszem, aby rozpocząć od lub kończąc na "Pożegnanie".</span><span class="sxs-lookup"><span data-stu-id="c3753-218">You should get `true` for starting with "You" and ending with "hello" and false for starting with or ending with "goodbye".</span></span>
+    Istnieją dwie podobne metody, <xref:System.String.StartsWith%2A> i <xref:System.String.EndsWith%2A>, które również szukają podciągów w ciągu. Znajdują się one w podciągu na początku lub na końcu ciągu. Spróbuj zmodyfikować poprzedni przykład, aby użyć <xref:System.String.StartsWith%2A> i <xref:System.String.EndsWith%2A> zamiast <xref:System.String.Contains%2A>. Wyszukaj "ty" lub "Pożegnanie" na początku ciągu. Wyszukaj ciąg "Hello" lub "Pożegnanie" na końcu ciągu.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-219">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-219">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-220">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-220">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="c3753-221">Ukończ wyzwanie</span><span class="sxs-lookup"><span data-stu-id="c3753-221">Complete challenge</span></span>
+    > Obejrzyj interpunkcję po przetestowaniu tekstu na końcu ciągu. Jeśli ciąg jest zakończony kropką, należy wyszukać ciąg kończący się kropką.
+
+
+    Należy uzyskać `true` do rozpoczęcia od "ty" i kończąc na "Hello", a wartość false, aby rozpocząć od lub kończąc na "Pożegnanie".
+
+
+    > [!NOTE]
+
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
+- title: Ukończ wyzwanie
   durationInMinutes: 3
   content: >
-    <span data-ttu-id="c3753-222">Czy udało Ci się to zrobić?</span><span class="sxs-lookup"><span data-stu-id="c3753-222">Did you come up with something like this?</span></span>
+    Czy udało Ci się to zrobić?
 
 
     ```csharp
@@ -294,13 +294,13 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="c3753-223">To środowisko kodowania online jest w trybie podglądu.</span><span class="sxs-lookup"><span data-stu-id="c3753-223">This online coding experience is in preview mode.</span></span> <span data-ttu-id="c3753-224">Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="c3753-224">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
+    > To środowisko kodowania online jest w trybie podglądu. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    <span data-ttu-id="c3753-225">Wprowadzenie do C# samouczka zostało zakończone C#.</span><span class="sxs-lookup"><span data-stu-id="c3753-225">You've completed the "Hello C#" introduction to C# tutorial.</span></span> <span data-ttu-id="c3753-226">Możesz kliknąć poniższe \*\*numery C# \*\* , aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie.</span><span class="sxs-lookup"><span data-stu-id="c3753-226">You can click the **Numbers in C#** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="c3753-227">Sekcja "następne kroki" umożliwia powrót do tych samouczków.</span><span class="sxs-lookup"><span data-stu-id="c3753-227">The "Next steps" section brings you back to these tutorials.</span></span>
+    Wprowadzenie do C# samouczka zostało zakończone C#. Możesz wybrać poniższe **numery C# ** , aby uruchomić następny Interaktywny samouczek lub odwiedzić [witrynę programu .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) , aby pobrać zestaw .NET Core SDK, utworzyć projekt na maszynie i zachować kodowanie. Sekcja "następne kroki" umożliwia powrót do tych samouczków.
 
 
-    <span data-ttu-id="c3753-228">Aby uzyskać więcej informacji na `string` temat typu:</span><span class="sxs-lookup"><span data-stu-id="c3753-228">For further reading on the `string` type:</span></span>
+    Aby uzyskać więcej informacji na temat typu `string`:
 
-    - <span data-ttu-id="c3753-229">Temat Przewodnik programowania na [ciągach](../../programming-guide/strings/index.md). [ C# ](../../programming-guide/index.md)</span><span class="sxs-lookup"><span data-stu-id="c3753-229">[C# Programming Guide](../../programming-guide/index.md) topic on [strings](../../programming-guide/strings/index.md).</span></span>
+    - Temat Przewodnik programowania na [ciągach](../../programming-guide/strings/index.md). [ C# ](../../programming-guide/index.md)
 
-    - <span data-ttu-id="c3753-230">[Porady dotyczące pracy z ciągami](../../how-to/index.md#working-with-strings).</span><span class="sxs-lookup"><span data-stu-id="c3753-230">[How to tips on working with strings](../../how-to/index.md#working-with-strings).</span></span>
+    - [Porady dotyczące pracy z ciągami](../../how-to/index.md#working-with-strings).
